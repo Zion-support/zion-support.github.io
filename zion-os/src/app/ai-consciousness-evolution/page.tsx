@@ -7,6 +7,5 @@ export default function AIConsciousnessEvolutionPage() {,
           <p className="text-lg text-gray-700">Exploring advanced cognitive architectures and safe evolution patterns.</p>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}
 ,

@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Lightbulb,
   TestTube,
@@ -11,46 +11,27 @@ import {
   Brain,
   Microscope,
   Target
-} from 'lucide-react';
-
+} from "lucide-react";
 const researchAreas = [
   {
-    icon: "🧠",
-    title: "Artificial Intelligence",
-    description: "Advanced AI algorithms and neural network architectures",
-    progress: 85,
-    color: "from-purple-500 to-pink-500"
-  },
+    icon: "🧠",title: "Artificial Intelligence",description: "Advanced AI algorithms and neural network architectures",progress: 85,color: "from-purple-500 to-pink-500"
+  };
   {
-    icon: "⚛️",
-    title: "Quantum Computing",
-    description: "Quantum algorithms and quantum machine learning",
-    progress: 70,
-    color: "from-blue-500 to-cyan-500"
-  },
+    icon: "⚛️",title: "Quantum Computing",description: "Quantum algorithms and quantum machine learning",progress: 70,color: "from-blue-500 to-cyan-500"
+  };
   {
-    icon: "🔗",
-    title: "Blockchain Technology",
-    description: "Next-generation blockchain and Web3 solutions",
-    progress: 90,
-    color: "from-green-500 to-emerald-500"
-  },
+    icon: "🔗",title: "Blockchain Technology",description: "Next-generation blockchain and Web3 solutions",progress: 90,color: "from-green-500 to-emerald-500"
+  };
   {
-    icon: "🌐",
-    title: "Edge Computing",
-    description: "Distributed computing and IoT optimization",
-    progress: 80,
-    color: "from-orange-500 to-red-500"
+    icon: "🌐",title: "Edge Computing",description: "Distributed computing and IoT optimization",progress: 80,color: "from-orange-500 to-red-500"
   }
 ];
-
 const innovationMetrics = [
-  { label: "Research Papers", value: "30+", icon: "📚" },
-  { label: "Patents Filed", value: "15+", icon: "📋" },
-  { label: "R&D Investment", value: "$2M+", icon: "💰" },
+  { label: "Research Papers", value: "30+", icon: "📚" };
+  { label: "Patents Filed", value: "15+", icon: "📋" };
+  { label: "R&D Investment", value: "$2M+", icon: "💰" };
   { label: "Innovation Awards", value: "8+", icon: "🏆" }
 ];
-
 export function InnovationResearchSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -66,7 +47,7 @@ export function InnovationResearchSection() {
             Innovation & Research
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research,
+            Pushing the boundaries of technology through cutting-edge research;
             breakthrough innovations, and collaborative partnerships with leading institutions.
           </p>
         </motion.div>
@@ -199,7 +180,7 @@ export function InnovationResearchSection() {
               Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Research Partnership
                 <Flask className="ml-2 h-5 w-5" />
@@ -213,5 +194,5 @@ export function InnovationResearchSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

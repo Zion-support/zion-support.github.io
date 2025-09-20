@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import Card from '../../components/ui/Card',
 export const metadata = {,
-  title: 'Quantum Computing 2026 Ultimate - The Next Computing Revolution';
-  description: 'Explore the ultimate quantum computing breakthroughs of 2026 that are revolutionizing computation, cryptography, and problem-solving capabilities.';
-  keywords: ['quantum computing 2026quantum supremacy', 'quantum algorithmsquantum cryptography', 'quantum AI'],
-};
+  title: 'Quantum Computing 2026 Ultimate - The Next Computing Revolution',
+  description: 'Explore the ultimate quantum computing breakthroughs of 2026 that are revolutionizing computation, cryptography, and problem-solving capabilities.',
+  keywords: ['quantum computing 2026quantum supremacyquantum algorithmsquantum cryptography', 'quantum AI']
+},
 export default function QuantumComputing2026Ultimate() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 text-white">,
@@ -47,7 +47,7 @@ export default function QuantumComputing2026Ultimate() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Breakthroughs Section */,}
+      {/* Quantum Breakthroughs Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Computing Breakthroughs</h2>,
@@ -82,7 +82,7 @@ export default function QuantumComputing2026Ultimate() {,
               <div className="text-4xl mb-4">🧮</div>,
               <h3 className="text-2xl font-bold mb-4">Quantum Algorithms</h3>,
               <p className="text-gray-200 mb-6">,
-                Revolutionary quantum algorithms that solve complex optimization problems;
+                Revolutionary quantum algorithms that solve complex optimization problems,
                 machine learning tasks, and scientific simulations with unprecedented speed.,
               </p>,
               <ul className="text-sm text-gray-300 space-y-2">,
@@ -154,7 +154,7 @@ export default function QuantumComputing2026Ultimate() {,
           </div>,
         </div>,
       </section>,
-      {/* Performance Metrics */,}
+      {/* Performance Metrics */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Performance</h2>,
@@ -178,7 +178,7 @@ export default function QuantumComputing2026Ultimate() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-6">Enter the Quantum Era</h2>,
@@ -202,5 +202,4 @@ export default function QuantumComputing2026Ultimate() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

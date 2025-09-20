@@ -1,34 +1,34 @@
 <<<<<<< HEAD
-  y: 30 ;
+  y: 30 
 
 }}
-  y: 0 ;
+  y: 0 
 
 }}
-  delay: 0.6 ;
+  delay: 0.6 
 
 }}
-  y: 30 ;
+  y: 30 
 
 }}
-  y: 0 ;
+  y: 0 
 
 }}
-  delay: 0.8 ;
+  delay: 0.8 
 
 }}
-  delay: 1 ;
+  delay: 1 
 
 }}
 =======
-;
+,
 const CTASection: React.FC = (): JSX.Element => {
 
-    },;
-    {;
-      icon: Star,;"
-      title: "Proven Results",;"
-      description: "Trusted by industry leaders worldwide"};  ];
+    },
+    {,
+      icon: Star,"
+      title: "Proven Results","
+      description: "Trusted by industry leaders worldwide"},  ],
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">
@@ -112,7 +112,7 @@ const CTASection: React.FC = (): JSX.Element => {
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8"
 
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.</motion.p>
-        </div>;
+        </div>,
 
         {/* Feature Grid */}
         <motion.div"
@@ -131,7 +131,7 @@ const CTASection: React.FC = (): JSX.Element => {
   delay: 0.6 }}
           viewport={{ once: true }}
         >
-          {features.map((feature, index (;
+          {features.map((feature, index (,
             <motion.div
               key={feature.title}"
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20"
@@ -161,7 +161,7 @@ const CTASection: React.FC = (): JSX.Element => {
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
               <p className="text-zion-slate-light text-sm">{feature.description}</p>
-            </motion.div>;
+            </motion.div>,
           ))}
         </motion.div>
 
@@ -214,12 +214,12 @@ const CTASection: React.FC = (): JSX.Element => {
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>"
             <div className="text-zion-blue font-bold text-lg">Startups</div>"
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>"
-            <div className="text-zion-cyan font-bold text-lg">Government</div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  )};
+            <div className="text-zion-cyan font-bold text-lg">Government</div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,
+  )},
 
 export default CTASection}}'"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

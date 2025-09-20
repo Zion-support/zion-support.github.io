@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Star, Quote export const AppTestimonials = () => {
   const testimonials = [{
 
@@ -36,7 +36,7 @@ import { Star, Quote export const AppTestimonials = () => {
       content: "Managing multiple AI projects used to be a nightmare.With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.","
       avatar: "/images/testimonials/david-kim.jpg"
 
-  ];
+  ],
 
   const renderStars = (rating) => {
 
@@ -46,7 +46,7 @@ import { Star, Quote export const AppTestimonials = () => {
         className={`h-5 w-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'`
         }`}
       />
-    ))};
+    ))},
 
   return ("
     <section className="py-20 bg-gradient-to-br from-gray-900 to-slate-900">"
@@ -86,7 +86,7 @@ import { Star, Quote export const AppTestimonials = () => {
                   {testimonial.content}
                 </p>
               </div>
-            </div>;
+            </div>,
           ))}
         </div>
 "
@@ -97,12 +97,12 @@ import { Star, Quote export const AppTestimonials = () => {
             </h3>"
             <p className="text-gray-300 mb-6">
               See why thousands of professionals choose Zion for their AI talent and project management needs.</p>"
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300">
               Read More Reviews
             </button>
           </div>
         </div>
       </div>
-    </section>;
-  )};
+    </section>,
+  )},
 '"`

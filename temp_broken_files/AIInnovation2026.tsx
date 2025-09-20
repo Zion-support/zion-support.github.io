@@ -1,18 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Zap, Target, Users, Shield, Lightbulb } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Brain, Zap, Target, Users, Shield, Lightbulb } from 'lucide-react',
 const AIInnovation2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto px-4 py-20">,
           <motion.div,
             className="text-center mb-16",
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >,
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
               🚀 BREAKTHROUGH 2026 • JANUARY 2026,
@@ -34,14 +34,14 @@ const AIInnovation2026: React.FC = () => {,
           </motion.div>,
         </div>,
       </section>,
-      {/* Key Innovations */,}
+      {/* Key Innovations */}
       <section className="py-16 px-4">,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
             className="text-center mb-16",
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.2 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >,
             <h2 className="text-4xl font-bold text-white mb-6">Revolutionary AI Innovations</h2>,
             <p className="text-xl text-purple-100 max-w-3xl mx-auto">,
@@ -51,47 +51,46 @@ const AIInnovation2026: React.FC = () => {,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {[,
               {,
-                icon: Brain;
-                title: "Conscious AI Systems";
-                description: "AI that possesses genuine self-awareness and consciousness, capable of independent thought and decision-making.",
-              };
+                icon: Brain,
+                title: "Conscious AI Systems",
+                description: "AI that possesses genuine self-awareness and consciousness, capable of independent thought and decision-making."
+              },
               {,
-                icon: Zap;
-                title: "Quantum AI Processing";
-                description: "Quantum-enhanced AI that processes information at unprecedented speeds using quantum computing principles.",};
+                icon: Zap,
+                title: "Quantum AI Processing",
+                description: "Quantum-enhanced AI that processes information at unprecedented speeds using quantum computing principles."},
               {,
-                icon: Target;
-                title: "Predictive Intelligence";
-                description: "AI that can predict future events with 99.7% accuracy across multiple domains and timeframes.",};
+                icon: Target,
+                title: "Predictive Intelligence",
+                description: "AI that can predict future events with 99.7% accuracy across multiple domains and timeframes."},
               {,
-                icon: Users;
-                title: "Human-AI Collaboration";
-                description: "Seamless integration between human creativity and AI capabilities for enhanced productivity.",};
+                icon: Users,
+                title: "Human-AI Collaboration",
+                description: "Seamless integration between human creativity and AI capabilities for enhanced productivity."},
               {,
-                icon: Shield;
-                title: "Ethical AI Framework";
-                description: "Built-in ethical reasoning and decision-making capabilities that ensure responsible AI behavior.",};
+                icon: Shield,
+                title: "Ethical AI Framework",
+                description: "Built-in ethical reasoning and decision-making capabilities that ensure responsible AI behavior."},
               {,
-                icon: Lightbulb;
-                title: "Creative AI Generation";
-                description: "AI that can generate original art, music, literature, and innovative solutions with human-level creativity.",
+                icon: Lightbulb,
+                title: "Creative AI Generation",
+                description: "AI that can generate original art, music, literature, and innovative solutions with human-level creativity."
               }
             ].map((innovation, index) => (,
               <motion.div,
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300 group",
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 ,}}
-                whileHover={{ scale: 1.02 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
               >,
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300">,
                   <innovation.icon className="w-8 h-8 text-white" />,
                 </div>,
-                <h3 className="text-xl font-bold text-white mb-3">{innovation.title,}</h3>,
+                <h3 className="text-xl font-bold text-white mb-3">{innovation.title}</h3>,
                 <p className="text-purple-100">{innovation.description}</p>,
-              </motion.div>,
-            ))}
+              </motion.div>))}
           </div>,
         </div>,
       </section>,
@@ -100,9 +99,9 @@ const AIInnovation2026: React.FC = () => {,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
             className="text-center mb-16",
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >,
             <h2 className="text-4xl font-bold text-white mb-6">Transformative Impact</h2>,
             <p className="text-xl text-purple-100 max-w-3xl mx-auto">,
@@ -112,9 +111,9 @@ const AIInnovation2026: React.FC = () => {,
           <div className="grid md: grid-cols-3 gap-8">,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
             >,
               <div className="text-5xl font-bold text-white mb-2">300%</div>,
               <div className="text-xl text-purple-100 mb-4">Efficiency Increase</div>,
@@ -122,9 +121,9 @@ const AIInnovation2026: React.FC = () => {,
             </motion.div>,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.4 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >,
               <div className="text-5xl font-bold text-white mb-2">99.7%</div>,
               <div className="text-xl text-purple-100 mb-4">Accuracy Rate</div>,
@@ -132,9 +131,9 @@ const AIInnovation2026: React.FC = () => {,
             </motion.div>,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.6, delay: 0.6 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >,
               <div className="text-5xl font-bold text-white mb-2">50+</div>,
               <div className="text-xl text-purple-100 mb-4">Industries Served</div>,
@@ -148,9 +147,9 @@ const AIInnovation2026: React.FC = () => {,
         <div className="max-w-7xl mx-auto">,
           <motion.div,
             className="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-white",
-            initial={{ opacity: 0, y: 20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >,
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>,
             <p className="text-xl mb-8 opacity-90">,
@@ -168,5 +167,5 @@ const AIInnovation2026: React.FC = () => {,
         </div>,
       </section>,
     </div>,
-  ),};
-export default AIInnovation2026;
+  )},
+export default AIInnovation2026,

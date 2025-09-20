@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI2025UltimateBreakthroughBanner() {,
   return (,
     <section className="bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 text-white py-20 relative overflow-hidden">,
@@ -28,7 +28,7 @@ export default function AI2025UltimateBreakthroughBanner() {,
             Experience the most advanced AI breakthrough of 2025. Our revolutionary autonomous systems are delivering unprecedented results that were once thought impossible.,
           </p>,
         </div>,
-        {/* Breakthrough Features */,}
+        {/* Breakthrough Features */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,
           <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">,
             <div className="text-5xl mb-6">🤖</div>,
@@ -84,7 +84,7 @@ export default function AI2025UltimateBreakthroughBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Industry Impact */,}
+        {/* Industry Impact */}
         <div className="mb-16">,
           <h3 className="text-3xl font-bold text-center mb-12">Transforming Industries Worldwide</h3>,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
@@ -110,7 +110,7 @@ export default function AI2025UltimateBreakthroughBanner() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <div className="mb-8">,
             <p className="text-xl text-gray-200 mb-4">,
@@ -134,7 +134,7 @@ export default function AI2025UltimateBreakthroughBanner() {,
               See Real Results,
             </Link>,
           </div>,
-          {/* Trust Badge */,}
+          {/* Trust Badge */}
           <div className="mt-12 pt-8 border-t border-white border-opacity-20">,
             <p className="text-gray-300 mb-4">Trusted by industry leaders</p>,
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">,
@@ -146,6 +146,5 @@ export default function AI2025UltimateBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  );
+    </section>),
 }

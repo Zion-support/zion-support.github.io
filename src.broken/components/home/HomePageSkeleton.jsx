@@ -1,5 +1,5 @@
-import React from 'react';
-import { Skeleton } from '@/components/ui/skeleton';
+import React from 'react',
+import { Skeleton } from '@/components/ui/skeleton',
 export default function Page() {
 "
                 className="bg-zion-blue border border-zion-blue-light rounded-lg p-4"
@@ -82,13 +82,13 @@ export default function Page() {
         <div className="container mx-auto px-4 text-center">"
           <Skeleton className="h-10 w-80 mx-auto mb-3 bg-white/20" />"
           <Skeleton className="h-6 w-96 mx-auto mb-6 bg-white/20" />"
-          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">"
+          <div className="flex flex-col sm: flex-row justify-center gap-4 max-w-md mx-auto">"
             <Skeleton className="h-12 w-full bg-white/20" />"
             <Skeleton className="h-12 w-32 bg-white/20" />
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
 '"

@@ -1,113 +1,113 @@
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles  } from 'lucide-react';
+import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles  } from 'lucide-react',
 export default function Page() {
 ,
                 {
                     name: 'AI - Powered Threat Detection',
                     description: 'Advanced threat detection with machine learning',
                     price: '$3,200 / month',
-                    features['Real - time detection', 'Behavioral analytics', 'Automated response'],;
+                    features['Real - time detectionBehavioral analytics', 'Automated response'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Cloud Security Posture Management',
                     description: 'Multi - cloud security monitoring and optimization',
                     price: '$2,400 / month',
-                    features['Multi - cloud monitoring', 'Configuration management', 'Compliance'],;
+                    features['Multi - cloud monitoringConfiguration management', 'Compliance'],
                     path: '/comprehensive - services - showcase'
 
-            ];
-        },;
+            ]
+        },
         {
             id: 'devops - cloud',
             title: 'DevOps & Cloud Services',
             icon: Cloud,
             color: 'from - blue - 500 to - indigo - 500',
             description: 'Modern DevOps practices and cloud infrastructure solutions',
-            services[;
+            services[,
                 {
                     name: 'GitOps Platform & Infrastructure Automation',
                     description: 'Complete GitOps platform for infrastructure management',
                     price: '$2,200 / month',
-                    features['Infrastructure as Code', 'Git - based deployments', 'Drift detection'],;
+                    features['Infrastructure as CodeGit - based deployments', 'Drift detection'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Multi - Cloud Management Platform',
                     description: 'Unified management across AWS, Azure, GCP, and more',
                     price: '$2,800 / month',
-                    features['Cost optimization', 'Resource monitoring', 'Compliance management'],;
+                    features['Cost optimizationResource monitoring', 'Compliance management'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Enterprise Kubernetes Management',
                     description: 'Comprehensive Kubernetes operations and security',
                     price: '$2,500 / month',
-                    features['Multi - cluster management', 'Security policies', 'Monitoring'],;
+                    features['Multi - cluster managementSecurity policies', 'Monitoring'],
                     path: '/comprehensive - services - showcase'
 
-            ];
-        },;
+            ]
+        },
         {
             id: 'data - analytics',
             title: 'Data Analytics & BI',
             icon: BarChart3,
             color: 'from - green - 500 to - teal - 500',
             description: 'Powerful analytics and business intelligence solutions',
-            services[;
+            services[,
                 {
                     name: 'Real - Time Data Streaming Platform',
                     description: 'High-performance real - time data processing and analytics',
                     price: '$3,200 / month',
-                    features['Real - time processing', 'Stream analytics', 'Live dashboards'],;
+                    features['Real - time processingStream analytics', 'Live dashboards'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'AI - Powered Predictive Analytics',
                     description: 'Advanced forecasting and pattern recognition',
                     price: '$2,800 / month',
-                    features['Machine learning models', 'Time series forecasting', 'Anomaly detection'],;
+                    features['Machine learning modelsTime series forecasting', 'Anomaly detection'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Customer Analytics Platform',
                     description: '360 - degree customer view and behavioral analysis',
                     price: '$2,100 / month',
-                    features['Customer segmentation', 'Behavioral analysis', 'Personalization'],;
+                    features['Customer segmentationBehavioral analysis', 'Personalization'],
                     path: '/comprehensive - services - showcase'
 
-            ];
-        },;
+            ]
+        },
         {
             id: 'industry - solutions',
             title: 'Industry - Specific Solutions',
             icon: Building,
             color: 'from - gray - 500 to - blue - 500',
             description: 'Tailored solutions for specific industry verticals',
-            services[;
+            services[,
                 {
                     name: 'Healthcare AI & Clinical Support',
                     description: 'Comprehensive healthcare AI platform for patient care',
                     price: '$4,500 / month',
-                    features['Clinical decision support', 'Patient monitoring', 'Predictive analytics'],;
+                    features['Clinical decision supportPatient monitoring', 'Predictive analytics'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Financial Services AI & Risk Management',
                     description: 'AI - powered risk assessment and fraud detection',
                     price: '$3,800 / month',
-                    features['Risk assessment', 'Fraud detection', 'Compliance automation'],;
+                    features['Risk assessmentFraud detection', 'Compliance automation'],
                     path: '/comprehensive - services - showcase'
                 },
                 {
                     name: 'Manufacturing IoT & Smart Factory',
                     description: 'IoT platform for manufacturing optimization',
                     price: '$3,200 / month',
-                    features['Predictive maintenance', 'Quality control', 'Production monitoring'],;
+                    features['Predictive maintenanceQuality control', 'Production monitoring'],
                     path: '/comprehensive - services - showcase'
 
-            ];
+            ],
 
-    ];
+    ],
     const benefits = [{
             icon: Brain,
             title: 'AI - First Approach',
@@ -132,12 +132,12 @@ export default function Page() {
             description: '24 / 7 technical support and dedicated success managers',
             color: 'text-yellow-400'
 
-    ];
+    ],
     const stats = [{ icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
         { icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery' },
         { icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise' },
         { icon: GlobeIcon, value: '25+', label: 'Countries Served', description: 'Global reach and support' }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue -900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

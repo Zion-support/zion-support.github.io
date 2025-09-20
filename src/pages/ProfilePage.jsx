@@ -10,22 +10,22 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 export default function ProfilePage() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const { profileId } = useParams();
-    const [profileData, setProfileData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(false);
+    const { profileId } = useParams(),
+    const [profileData, setProfileData] = useState(null),
+    const [isLoading, setIsLoading] = useState(true),
+    const [isError, setIsError] = useState(false),
     useEffect(() => {
         const fetchProfile = async () => {
-            setIsLoading(true);
-            setIsError(false);
+            setIsLoading(true),
+            setIsError(false),
             try {
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
-                    .single();
+                    .single(),
                 if (error) {
-                    throw error;
+                    throw error,
                 }
                 setProfileData(data);
             }
@@ -33,28 +33,26 @@ export default function ProfilePage() {
                 console.error("Error fetching profile:", error);
                 setIsError(true);
                 toast({
-                    title: "Error",
-                    description: "Failed to load profile. Please try again later.",
-                    variant: "destructive",
+                    title: "Error",description: "Failed to load profile. Please try again later.",variant: "destructive"
                 });
             }
             finally {
-                setIsLoading(false);
+                setIsLoading(false),
             }
-        };
+        },
         if (profileId) {
-            fetchProfile();
+            fetchProfile(),
         }
-    }, [profileId]);
+    }, [profileId]),
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
-      </div>);
+      </div>),
     }
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
-      </div>);
+      </div>),
     }
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
@@ -119,7 +117,7 @@ export default function ProfilePage() {
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
-                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (profileData.portfolio_links.map((link, index) => (<a key={index} href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-zion-cyan hover:text-white transition-colors">
+                {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (profileData.portfolio_links.map((link, index) => (<a key={index} href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-zion-cyan hover: text-white transition-colors">
                       <LinkIcon className="h-4 w-4 mr-2"/>
                       {link}
                     </a>))) : (<p className="text-zion-slate-light">No portfolio links provided.</p>)}
@@ -152,10 +150,7 @@ export default function ProfilePage() {
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA talentProfile={{
-            id: profileData?.id || '',
-            full_name: profileData?.full_name || '',
-            professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
+            id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0
         }}/>
             {/* Placeholder for other sidebar elements */}
           </div>

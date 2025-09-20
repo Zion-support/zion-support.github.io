@@ -1,4 +1,4 @@
-import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3  } from 'lucide-react';
+import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3  } from 'lucide-react',
 
 export default function Page() {
       <section className="py-20 bg-gradient - to - br from - slate - 900 via - red - 900 to - slate -900">
@@ -182,5 +182,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

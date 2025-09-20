@@ -1,3 +1,3 @@
 const FeatureHighlights: React.FC = () => {,
-  return (,};
-export default FeatureHighlights;)
+  return (},
+export default FeatureHighlights,)

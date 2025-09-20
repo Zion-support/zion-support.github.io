@@ -1,2 +1,2 @@
 export default function BlogPostPage({ params }: Params) {
-  const post = getPostById(params.id);
+  const post = getPostById(params.id),

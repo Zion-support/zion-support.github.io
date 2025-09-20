@@ -1,29 +1,29 @@
 <<<<<<< HEAD
 
-import { useState, useEffect } from "react";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { TalentCard } from "@/components/talent/TalentCard";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { TalentCard } from "@/components/talent/TalentCard",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
 
 export default function SavedTalentsPage() {
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const navigate = useNavigate();
+  const { user } = useAuth(),
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const navigate = useNavigate(),
 
   useEffect(() => {
     const fetchSavedTalents = async () => {
-      setIsLoading(true);
+      setIsLoading(true),
       try {
         if (!user) {
-          console.warn("User not authenticated.");
-          return;
+          console.warn("User not authenticated."),
+          return,
         }
 
         const { data, error } = await supabase
@@ -47,51 +47,51 @@ export default function SavedTalentsPage() {
             )
           `
           )
-          .eq("user_id", user.id);
+          .eq("user_id", user.id),
 
         if (error) {
-          throw error;
+          throw error,
         }
 
         if (data) {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             item => item.talent_profile as unknown as TalentProfile
-          );
-          setSavedTalents(talentProfiles);
+          ),
+          setSavedTalents(talentProfiles),
         }
       } catch (error) {
-        console.error("Error fetching saved talents:", error);
+        console.error("Error fetching saved talents:", error),
         toast({
           title: "Error",
           description: "Failed to load saved talents. Please try again later.",
-          variant: "destructive",
-        });
+          variant: "destructive"
+        }),
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
-    };
+    },
 
-    fetchSavedTalents();
-  }, [user]);
+    fetchSavedTalents(),
+  }, [user]),
 
   const handleViewProfile = (talentId: string) => {
-    navigate(`/talent/${talentId}`);
-  };
+    navigate(`/talent/${talentId}`),
+  },
 
   const handleRequestHire = (talent: TalentProfile) => {
-    console.log("Request to hire:", talent);
+    console.log("Request to hire:", talent),
     toast({
       title: "Hire Request Sent",
-      description: `A hire request has been sent to ${talent.full_name}.`,
-    });
-  };
+      description: `A hire request has been sent to ${talent.full_name}.`
+    }),
+  },
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
-        console.warn("User not authenticated.");
-        return;
+        console.warn("User not authenticated."),
+        return
       }
   
       if (isCurrentlySaved) {
@@ -100,27 +100,27 @@ export default function SavedTalentsPage() {
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
-          .eq('talent_id', talentId);
+          .eq('talent_id', talentId),
   
         if (error) {
-          throw error;
+          throw error,
         }
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
-        );
+        ),
         toast({
           title: "Talent Removed",
-          description: "Talent removed from saved list.",
-        });
+          description: "Talent removed from saved list."
+        }),
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
-          .insert([{ user_id: user.id, talent_id: talentId }]);
+          .insert([{ user_id: user.id, talent_id: talentId }]),
   
         if (error) {
-          throw error;
+          throw error,
         }
   
         // Fetch the updated talent profile and add it to the list
@@ -128,35 +128,35 @@ export default function SavedTalentsPage() {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-          .single();
+          .single(),
   
         if (talentError) {
-          console.error("Error fetching talent profile:", talentError);
+          console.error("Error fetching talent profile:", talentError),
           toast({
             title: "Error",
             description: "Failed to update saved talents. Please try again later.",
-            variant: "destructive",
-          });
-          return;
+            variant: "destructive"
+          }),
+          return,
         }
   
         if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
-            description: "Talent saved to your list.",
-          });
+            description: "Talent saved to your list."
+          }),
         }
       }
     } catch (error) {
-      console.error("Error toggling saved talent:", error);
+      console.error("Error toggling saved talent:", error),
       toast({
         title: "Error",
         description: "Failed to update saved talents. Please try again later.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -194,13 +194,13 @@ export default function SavedTalentsPage() {
       <Footer />
     </>
 =======
-import React from 'react';
+import React from 'react',
 export function SavedTalentsPage() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

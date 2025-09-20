@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
 import { Check } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 
-      };
-    };
-  };
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { opacity: 0, y: 30,
@@ -23,9 +23,9 @@ import { cn } from "@/lib/utils";
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      };
-    };
-  };
+      },
+    },
+  },
 
   const achievementVariants = {
   hidden: { opacity: 0,
@@ -35,9 +35,9 @@ import { cn } from "@/lib/utils";
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 };
-    };
-  };
+      transition: { duration: 0.5 },
+    },
+  },
 
   const techVariants = {
   hidden: { opacity: 0,
@@ -47,9 +47,9 @@ import { cn } from "@/lib/utils";
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5 };
-    };
-  };
+      transition: { duration: 0.5 },
+    },
+  },
 
         <motion.div
 
@@ -59,12 +59,12 @@ import { cn } from "@/lib/utils";
 
         <motion.div
 =======
-},;
-  {;"
-    icon: "📊",;"
-    title: "Real-Time Analytics",;"
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
-]}}}}}}}}};
+},
+  {,"
+    icon: "📊","
+    title: "Real-Time Analytics","
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"},
+]}}}}}}}}},
 export function FeatureHighlights() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -133,7 +133,7 @@ export function FeatureHighlights() {
               <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>;
+            </motion.div>,
           ))}
         </div>
 
@@ -151,11 +151,11 @@ export function FeatureHighlights() {
         >"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,
   )}
 
 

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -8,88 +8,87 @@ import {,
   BarChart3,
   Image,
   Shield,
-  Globe;
+  Globe,
   ArrowRight,
   Star,
-  Users;
-  CheckCircle;
-  X;
-  Play;
-  Rocket;
-  TrendingUp;
-  Award;
-  Sparkles,
-} from 'lucide-react';
+  Users,
+  CheckCircle,
+  X,
+  Play,
+  Rocket,
+  TrendingUp,
+  Award,
+  Sparkles
+} from 'lucide-react',
 const AIToolsUltimateShowcase2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentToolsetCurrentTool] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-rotate tools,
     const interval = setInterval(() => {,
-      setCurrentTool(prev => (prev + 1) % tools.length);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTool(prev => (prev + 1) % tools.length),
+    }2500),
+    return () => clearInterval(interval),
+  }[]),
   const tools = [,
     {,
-      icon: Brain;
-      name: 'AI Code Generator';
-      category: 'Development';
-      rating: 4.9;
-      users: '200K+';
-      color: 'from-green-500 to-emerald-500',};
+      icon: Brain,
+      name: 'AI Code Generator',
+      category: 'Development',
+      rating: 4.9,
+      users: '200K+',
+      color: 'from-green-500 to-emerald-500'},
     {,
-      icon: Zap;
-      name: 'Smart Task Manager';
-      category: 'Productivity';
-      rating: 4.8;
-      users: '150K+';
-      color: 'from-blue-500 to-cyan-500',};
+      icon: Zap,
+      name: 'Smart Task Manager',
+      category: 'Productivity',
+      rating: 4.8,
+      users: '150K+',
+      color: 'from-blue-500 to-cyan-500'},
     {,
-      icon: BarChart3;
-      name: 'Predictive Analytics';
-      category: 'Analytics';
-      rating: 4.9;
-      users: '90K+';
-      color: 'from-purple-500 to-pink-500',};
+      icon: BarChart3,
+      name: 'Predictive Analytics',
+      category: 'Analytics',
+      rating: 4.9,
+      users: '90K+',
+      color: 'from-purple-500 to-pink-500'},
     {,
-      icon: Image;
-      name: 'AI Image Creator';
-      category: 'Multimedia';
-      rating: 4.9;
-      users: '500K+';
-      color: 'from-orange-500 to-red-500',};
+      icon: Image,
+      name: 'AI Image Creator',
+      category: 'Multimedia',
+      rating: 4.9,
+      users: '500K+',
+      color: 'from-orange-500 to-red-500'},
     {,
-      icon: Shield;
-      name: 'Threat Detector';
-      category: 'Security';
-      rating: 4.8;
-      users: '100K+';
-      color: 'from-red-500 to-rose-500',};
+      icon: Shield,
+      name: 'Threat Detector',
+      category: 'Security',
+      rating: 4.8,
+      users: '100K+',
+      color: 'from-red-500 to-rose-500'},
     {,
-      icon: Globe;
-      name: 'Translation Hub';
-      category: 'Communication';
-      rating: 4.9;
-      users: '300K+';
-      color: 'from-indigo-500 to-blue-500',}
-  ];
+      icon: Globe,
+      name: 'Translation Hub',
+      category: 'Communication',
+      rating: 4.9,
+      users: '300K+',
+      color: 'from-indigo-500 to-blue-500'}
+  ],
   const categories = [,
-    { name: ''Productivitycount: '12 'toolsicon: Zap ,};
-    { name: ''Developmentcount: '15 'toolsicon: Code ,};
-    { name: ''Analyticscount: '8 'toolsicon: BarChart3 ,};
-    { name: ''Multimediacount: '10 'toolsicon: Image ,};
-    { name: ''Securitycount: '6 'toolsicon: Shield ,};
-    { name: ''Communicationcount: '9 'toolsicon: Globe ,}
-  ];
+    { name: ''Productivitycount: '12 'toolsicon: Zap },
+    { name: ''Developmentcount: '15 'toolsicon: Code },
+    { name: ''Analyticscount: '8 'toolsicon: BarChart3 },
+    { name: ''Multimediacount: '10 'toolsicon: Image },
+    { name: ''Securitycount: '6 'toolsicon: Shield },
+    { name: ''Communicationcount: '9 'toolsicon: Globe }
+  ],
   const features = [,
-    '50+ AI Tools Available';
-    '1M+ Active Users99.9% Uptime Guarantee';
-    'Free Trial Available',
-  ];
-  if (isDismissed) return null;
+    '50+ AI Tools Available1M+ Active Users99.9% Uptime Guarantee',
+    'Free Trial Available'
+  ],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -102,7 +101,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-indigo-600/20 animate-pulse"></div>,
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">,
                   <div className="flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30">,
@@ -111,8 +110,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                   </div>,
                   <div className="flex items-center text-yellow-400">,
                     {[...Array(5)].map((_i) => (,
-                      <Star key={i,} className="w-4 h-4 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-4 h-4 fill-current" />))}
                     <span className="ml-2 text-sm font-medium">4.8/5 Rating</span>,
                   </div>,
                 </div>,
@@ -127,10 +125,10 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                   developmentanalyticsmultimediasecurityand communication.,
                   <span className="text-yellow-400 font-bold"> Start your free trial today!</span>,
                 </p>,
-                {/* Tool Rotation */,}
+                {/* Tool Rotation */}
                 <div className="flex items-center justify-center lg: justify-start gap-4 mb-6">,
                     <div,
-                      key={currentTool,}
+                      key={currentTool}
                       className="flex items-center gap-3",
                     >,
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${tools[currentTool].color}`}>,
@@ -148,11 +146,10 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                 {/* Features */}
                 <div className="flex flex-wrap items-center justify-center lg: justify-start gap-4 mb-6">,
                   {features.map((featureindex) => (,
-                    <div key={index,} className="flex items-center text-sm text-gray-300">,
+                    <div key={index} className="flex items-center text-sm text-gray-300">,
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />,
                       <span>{feature}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start">,
@@ -167,7 +164,7 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Right Content - Interactive Preview */,}
+              {/* Right Content - Interactive Preview */}
               <div className="flex-shrink-0">,
                 <div className="relative">,
                   {/* Main Card */}
@@ -184,14 +181,13 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">,
                       {categories.slice(04).map((categoryindex) => {,
-                        const CategoryIcon = category.icon;
+                        const CategoryIcon = category.icon,
                         return (,
                           <div key={index} className="bg-white/5 rounded-lg p-3 text-center">,
                             <CategoryIcon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />,
                             <div className="text-sm font-bold text-white">{category.name}</div>,
                             <div className="text-xs text-gray-400">{category.count}</div>,
-                          </div>,
-                        );
+                          </div>),
                       })}
                     </div>,
                     {/* Active Tool */}
@@ -219,41 +215,40 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                         <div,
                           key={index}
                           className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                            index === currentTool ? 'bg-indigo-400 w-6' : 'bg-gray-600',
+                            index === currentTool ? 'bg-indigo-400 w-6' : 'bg-gray-600'
                           }`}
-                        />,
-                      ))}
+                        />))}
                     </div>,
                   </div>,
                   {/* Floating Elements */}
                   <div,
-                      y: [0-10];
-                      rotate: [050],}}
-                      duration: 3;
-                      repeat: Infinity;
-                      ease: "easeInOut",}}
+                      y: [0-10],
+                      rotate: [050]}}
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"}}
                     className="absolute -top-4 -right-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg",
                   >,
                     NEW!,
                   </div>,
                   <div,
-                      y: [010];
-                      x: [050],}}
-                      duration: 4;
-                      repeat: Infinity;
-                      ease: "easeInOut";
-                      delay: 1,}}
+                      y: [010],
+                      x: [050]}}
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1}}
                     className="absolute -bottom-4 -left-4 bg-gradient-to-r from-green-400 to-emerald-400 text-black px-3 py-1 rounded-full text-sm font-bold shadow-lg",
                   >,
                     1M+ Users,
                   </div>,
                   <div,
-                      scale: [1.1];
-                      opacity: [0.710.7],}}
-                      duration: 2;
-                      repeat: Infinity;
-                      ease: "easeInOut";
-                      delay: 0.5,}}
+                      scale: [1.1],
+                      opacity: [0.710.7]}}
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5}}
                     className="absolute top-1/2 -left-4 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg",
                   >,
                     Free Trial,
@@ -269,10 +264,10 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
           >,
             <X className="w-5 h-5" />,
           </button>,
-          {/* Bottom Gradient */,}
+          {/* Bottom Gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500"></div>,
         </div>,
       )}
     </div>,
-  );
-export default AIToolsUltimateShowcase2026PromotionBanner;
+  ),
+export default AIToolsUltimateShowcase2026PromotionBanner,

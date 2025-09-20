@@ -1,7 +1,7 @@
 <<<<<<< HEAD
   const [formData, setFormData] = useState ({
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = () => {
   const [formData, setFormData] = useState({
 
@@ -11,37 +11,37 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     comp: '',
     service: '',
     message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const services = ['
     'IT Support & Maintenance',Network Setup & Security',Hardware Installation',Data Recovery',Cloud Migration',Custom Solution'
-  ];
+  ],
 
   const handleChange = (e) => {
 
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
 
       ...prev,
       [name]: value
-    }) ) };
+    }) ) },
 
   const handleSubmit = async(e) => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
 
     // Simulate API call
-    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
-    setIsSubmitting(false) ;
-    setIsSubmitted(true) ;
+    setIsSubmitting(false) ,
+    setIsSubmitted(true) ,
 
     // Reset form after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false),
       setFormData({
 
         name: '',
@@ -50,7 +50,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         comp: '',
         service: '',
         message: ''
-      }) }, 5000) };
+      }) }, 5000) },
 
   if(isSubmitted) {
 
@@ -247,9 +247,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
               <button"
                 type="submit"
                 disabled={isSubmitting}"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
 
-                {isSubmitting ? (;
+                {isSubmitting ? (,
                   <>"
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                     <span>Submitting...</span>
@@ -267,9 +267,9 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 We'll never share your information with third parties.</p>
             </form>
           </div>
-        </div>;
+        </div>,
       </div>
     </section>
-  )};
+  )},
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

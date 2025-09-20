@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-];
-;
+],
+,
 const competitiveAdvantages = [{
 "
     title: "AI-Powered Intelligence","
@@ -32,13 +32,13 @@ const competitiveAdvantages = [{
     icon: <Users className="w-6 h-6" />,"
     color: "from-orange-500 to-red-600"
   }
-];
-;
+],
+,
 const marketComparison = [{
 "
     category: "AI Business Intelligence","
-    competitors["Tableau", "Power BI", "Looker"],;"
-    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],;"
+    competitors["Tableau", "Power BI", "Looker"],"
+    competitorPricing["$70/user/month", "$9.99/user/month", "$30/user/month"],"
     ourPricing: "$299/month","
     savings: "Up to 80%","
     advantage: "AI-powered insights, natural language queries, predictive analytics"
@@ -46,8 +46,8 @@ const marketComparison = [{
   {
 "
     category: "Customer Success Platform","
-    competitors["Gainsight", "Totango", "ChurnZero"],;"
-    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],;"
+    competitors["Gainsight", "Totango", "ChurnZero"],"
+    competitorPricing["$500/user/month", "$500/user/month", "$500/user/month"],"
     ourPricing: "$349/month","
     savings: "Up to 90%","
     advantage: "AI-powered predictions, affordable pricing, easy setup"
@@ -55,14 +55,14 @@ const marketComparison = [{
   {
 "
     category: "Zero-Trust Security","
-    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],;"
-    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],;"
+    competitors["Palo Alto Networks", "CrowdStrike", "Zscaler"],"
+    competitorPricing["$50,000/year", "$100,000/year", "$50,000/year"],"
     ourPricing: "$599/month","
     savings: "Up to 85%","
     advantage: "AI-powered detection, comprehensive zero-trust implementation"
   }
-];
-;
+],
+,
 const successStories = [{
 "
     comp: "TechCorp Solutions","
@@ -90,7 +90,7 @@ const successStories = [{
     results: "Automated 90% of reporting, improved accuracy by 99.5%","
     roi: "400% in 6 months"
   }
-];
+],
 
   const containerVariants = {
 
@@ -104,7 +104,7 @@ const successStories = [{
         delayChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
 
@@ -122,7 +122,7 @@ const successStories = [{
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const cardVariants = {
 
@@ -140,7 +140,7 @@ const successStories = [{
         ease: "easeOut"
       }
     }
-  };
+  },
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
@@ -231,7 +231,7 @@ const successStories = [{
                 whileHover = {
 "
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,"
-  0.3)" ;
+  0.3)" ,
 
 }}
               >`

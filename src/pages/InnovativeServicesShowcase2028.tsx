@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   TrendingUp, 
@@ -26,86 +26,79 @@ import {
   Phone,
   Mail,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-import { EMERGING_TECH_INNOVATIVE_SERVICES_2028 } from '../data/emergingTechInnovativeServices2028';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
+import { EMERGING_TECH_INNOVATIVE_SERVICES_2028 } from "../data/emergingTechInnovativeServices2028";
 export default function InnovativeServicesShowcase2028() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('All'),
 
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2028,
     ...EMERGING_TECH_INNOVATIVE_SERVICES_2028
-  ];
+  ],
 
-  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
-  const innovationLevels = ['All', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
+  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))],
+  const innovationLevels = ['All', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
     const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.innovationLevel === selectedInnovationLevel;
-    
     return matchesSearch && matchesCategory && matchesInnovationLevel;
   });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum Computing & AI':
         return <Brain className="w-6 h-6" />;
       case 'Manufacturing & AI':
-        return <Zap className="w-6 h-6" />;
+        return <Zap className="w-6 h-6" />,
       case 'Healthcare & AI':
-        return <Shield className="w-6 h-6" />;
+        return <Shield className="w-6 h-6" />,
       case 'Financial Services & AI':
-        return <DollarSign className="w-6 h-6" />;
+        return <DollarSign className="w-6 h-6" />,
       case 'Smart Cities & AI':
-        return <Globe className="w-6 h-6" />;
+        return <Globe className="w-6 h-6" />,
       case 'Agriculture & AI':
-        return <Leaf className="w-6 h-6" />;
+        return <Leaf className="w-6 h-6" />,
       case 'Legal Services & AI':
-        return <Shield className="w-6 h-6" />;
+        return <Shield className="w-6 h-6" />,
       case 'Education & AI':
-        return <Brain className="w-6 h-6" />;
+        return <Brain className="w-6 h-6" />,
       case 'Real Estate & AI':
-        return <Globe className="w-6 h-6" />;
+        return <Globe className="w-6 h-6" />,
       case 'Blockchain & Supply Chain':
-        return <Network className="w-6 h-6" />;
+        return <Network className="w-6 h-6" />,
       case 'Autonomous Vehicles & AI':
-        return <Car className="w-6 h-6" />;
+        return <Car className="w-6 h-6" />,
       case 'Space Technology & AI':
-        return <Satellite className="w-6 h-6" />;
+        return <Satellite className="w-6 h-6" />,
       case 'Biotechnology & AI':
-        return <Dna className="w-6 h-6" />;
+        return <Dna className="w-6 h-6" />,
       case 'Renewable Energy & AI':
-        return <Wind className="w-6 h-6" />;
+        return <Wind className="w-6 h-6" />,
       case 'Climate Technology & AI':
-        return <Cloud className="w-6 h-6" />;
+        return <Cloud className="w-6 h-6" />,
       case 'Quantum Internet & AI':
-        return <Network className="w-6 h-6" />;
-      default:
-        return <Rocket className="w-6 h-6" />;
+        return <Network className="w-6 h-6" />,
+      default: return <Rocket className="w-6 h-6" />
     }
   };
-
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Revolutionary':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
-        return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+        return 'bg-gradient-to-r from-blue-600 to-cyan-600',
       case 'Innovative':
-        return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default:
-        return 'bg-gradient-to-r from-gray-600 to-slate-600';
+        return 'bg-gradient-to-r from-green-600 to-emerald-600',
+      default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -319,7 +312,7 @@ export default function InnovativeServicesShowcase2028() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors group"
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover: bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors group"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -346,7 +339,7 @@ export default function InnovativeServicesShowcase2028() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations, 
+              Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations;
               increase efficiency, and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

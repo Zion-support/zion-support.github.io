@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 export default function Page() {
 </title>
@@ -61,7 +61,7 @@ export default function Page() {
                 "contactType": "customer service","
                 "email": "kleber@ziontechgroup.com"
             },"
-            "sameAs"[;"
+            "sameAs"[,"
                 "https://linkedin.com/company/ziontechgroup","
                 "https://twitter.com/ziontechgroup","
                 "https://github.com/Zion-Holdings"
@@ -71,5 +71,5 @@ export default function Page() {
             "keywords": "AI, artificial intelligence, cybersecurity, cloud computing, IT services"
         }) }
       </script>
-    </Helmet>)};
+    </Helmet>)},
 '"`

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
         ],
@@ -33,7 +33,7 @@ export default function Page() {
         duration: '8 months',
         team: '12 experts',
         technologies['Blockchain',Microservices',Advanced Security',Real-time Processing'],
-        testimonial: 'The platform Zion built for us exceeded all expectations.It\'s not just a technical solution; it\'s a business enabler.',
+        testimonial: 'The platform Zion built for us exceeded all expectations.It\'s not just a technical solution, it\'s a business enabler.',
         author: 'Michael Rodriguez',
         role: 'CTO',
         rating: 5,
@@ -94,7 +94,7 @@ export default function Page() {
         videoUrl: '/videos/manufacturing-case-study.mp4',
         imageUrl: '/images/manufacturing-iot.jpg'
 
-];
+],
 const industries = ['"
     { name: 'Healthcare', count: 25, icon: <Shield className="w-5 h-5"/> },"
     { name: 'Finance', count: 32, icon: <TrendingUp className="w-5 h-5"/> },"
@@ -102,9 +102,9 @@ const industries = ['"
     { name: 'Manufacturing', count: 15, icon: <Zap className="w-5 h-5"/> },"
     { name: 'Education', count: 12, icon: <Users className="w-5 h-5"/> },"
     { name: 'Government', count: 8, icon: <Building className="w-5 h-5"/> }
-];
-    const [selectedCase, setSelectedCase] = useState(null);
-    const [hoveredCase, setHoveredCase] = useState(null);
+],
+    const [selectedCase, setSelectedCase] = useState(null),
+    const [hoveredCase, setHoveredCase] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -116,7 +116,7 @@ const industries = ['"
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -132,7 +132,7 @@ const industries = ['"
                 duration: 0.6,"
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

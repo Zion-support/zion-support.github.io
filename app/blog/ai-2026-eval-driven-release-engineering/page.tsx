@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Eval‑Driven Release Engineering';
-  description: 'How to ship safer AI with evaluation-gated releases, metrics, and automation.',
-};
+  title: 'AI 2026: Eval‑Driven Release Engineering',
+  description: 'How to ship safer AI with evaluation-gated releases, metrics, and automation.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -31,6 +31,5 @@ export default function Page() {,
         <Link href="/content/ai-2026-evaluation-hub" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Evaluation Hub</Link>,
         <Link href="/blog/ai-2026-eval-gated-autonomy" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Eval‑Gated Autonomy</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

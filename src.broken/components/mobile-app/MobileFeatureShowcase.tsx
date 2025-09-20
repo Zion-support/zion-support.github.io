@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 
 export const MobileFeatureShowcase: React.FC = () => {
@@ -29,7 +29,7 @@ export const MobileFeatureShowcase: React.FC = () => {
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
-  ];
+  ],
 
   return (
     <section id="features" className="py-16 bg-zion-blue">
@@ -59,5 +59,5 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},

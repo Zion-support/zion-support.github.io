@@ -1,5 +1,5 @@
-// Hook for useLogout;
+// Hook for useLogout,
 export const useUseLogout: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Button } from './ui/Button';
+import React, { useState } from 'react',
+import { Button } from './ui/Button',
 export default function Page() {
-;
+,
   const handleSubmit = async e => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+    e.preventDefault(),
+    setIsSubmitting(true),
+    setSubmitStatus('idle'),
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
       // Reset form on success
       setFormData({
 
@@ -19,23 +19,23 @@ export default function Page() {
         comp: '',
         phone: '',
         service: '',
-        message: ''});
-      setSubmitStatus('success');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+        message: ''}),
+      setSubmitStatus('success'),
+      setTimeout(() => setSubmitStatus('idle'), 5000),
     } catch(error) {
 
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      setSubmitStatus('error'),
+      setTimeout(() => setSubmitStatus('idle'), 5000),
     } finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
   const isFormValid =
     formData.firstName &&
     formData.lastName &&
     formData.email &&
-    formData.message;
+    formData.message,
   return ()
     <div className="max-w-2xl mx-auto">
       {submitStatus === 'success' && ("
@@ -244,14 +244,14 @@ export default function Page() {
           and{' '}
           <a"
             href="/terms"
-            className="text-blue-400 hover:text-blue-300 underline"
+            className="text-blue-400 hover: text-blue-300 underline"
           >
             Terms of Service
           </a>
           .</p>
       </form>
     </div>
-  );
-};
-export default ContactForm;
+  )
+},
+export default ContactForm,
 '"

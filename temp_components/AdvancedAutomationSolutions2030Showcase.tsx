@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Bot
   Zap
@@ -26,11 +26,11 @@ import {
   Wrench,
   Gauge,
   Layers
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AdvancedAutomationSolutions2030Showcase = () => {
-  const [activeTabsetActiveTab] = useState('overview');
-  const [currentSolutionsetCurrentSolution] = useState(0);
+  const [activeTabsetActiveTab] = useState('overview'),
+  const [currentSolutionsetCurrentSolution] = useState(0),
 
   const solutions = [
     {
@@ -38,10 +38,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       title: 'Autonomous Business Operations',
       description: 'Fully autonomous business systems that can run entire operations without human interventionadapting and optimizing in real-time.',
       features: [
-        'Self-healing systems',
-        'Predictive maintenance',
-        'Autonomous decision making',
-        'Real-time optimization'
+        'Self-healing systemsPredictive maintenance',
+        'Autonomous decision makingReal-time optimization'
       ],
       impact: 'Reduce operational costs by 80% while increasing efficiency by 300%',
       icon: Bot,
@@ -53,10 +51,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       title: 'Intelligent Workflow Automation',
       description: 'AI-powered workflow systems that learnadaptand optimize business processes automatically across all departments.',
       features: [
-        'Process mining and optimization',
-        'Dynamic workflow adaptation',
-        'Cross-departmental coordination',
-        'Intelligent task routing'
+        'Process mining and optimizationDynamic workflow adaptation',
+        'Cross-departmental coordinationIntelligent task routing'
       ],
       impact: 'Streamline operations and eliminate bottlenecks automatically',
       icon: Workflow,
@@ -68,10 +64,8 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       title: 'Predictive Analytics Engine',
       description: 'Advanced AI systems that predict future trendsrisksand opportunities with unprecedented accuracy.',
       features: [
-        'Real-time trend analysis',
-        'Risk prediction and mitigation',
-        'Opportunity identification',
-        'Automated reporting'
+        'Real-time trend analysisRisk prediction and mitigation',
+        'Opportunity identificationAutomated reporting'
       ],
       impact: 'Make data-driven decisions with 95% accuracy',
       icon: BarChart3,
@@ -83,24 +77,22 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       title: 'Cognitive Process Automation',
       description: 'AI systems that can understandlearnand execute complex cognitive tasks that previously required human intelligence.',
       features: [
-        'Natural language processing',
-        'Document understanding',
-        'Decision tree automation',
-        'Exception handling'
+        'Natural language processingDocument understanding',
+        'Decision tree automationException handling'
       ],
       impact: 'Automate complex cognitive tasks with human-level accuracy',
       icon: Brain,
       color: 'from-orange-500 to-red-500',
       roi: '700% ROI'
     }
-  ];
+  ],
 
   const automationStats = [
     { label: 'Process Efficiency'value: '95%'icon: Gaugedescription: 'Average improvement' },
     { label: 'Cost Reduction'value: '80%'icon: TrendingUpdescription: 'Operational savings' },
     { label: 'Error Reduction'value: '99%'icon: Shieldescription: 'Human error elimination' },
     { label: 'Time Savings'value: '90%'icon: Zapdescription: 'Task completion time' }
-  ];
+  ],
 
   const industries = [
     {
@@ -135,7 +127,7 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       icon: Users,
       savings: '$3M+ annually'
     }
-  ];
+  ],
 
   const automationFeatures = [
     {
@@ -166,14 +158,14 @@ const AdvancedAutomationSolutions2030Showcase = () => {
       icon: Shield,
       capabilities: ['End-to-end encryption'Access control'Audit trails'Compliance monitoring']
     }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSolution((prev) => (prev + 1) % solutions.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentSolution((prev) => (prev + 1) % solutions.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
 
 const AdvancedAutomationSolutions2030Showcase: React.FC = () => {
   return (
@@ -181,7 +173,7 @@ const AdvancedAutomationSolutions2030Showcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AdvancedAutomationSolutions2030Showcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AdvancedAutomationSolutions2030Showcase;
+export default AdvancedAutomationSolutions2030Showcase,

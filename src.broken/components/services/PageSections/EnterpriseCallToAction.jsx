@@ -1,5 +1,5 @@
-import React from 'react';
-import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle  } from 'lucide-react';
+import React from 'react',
+import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle  } from 'lucide-react',
 export default function Page() {
 "
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
@@ -45,7 +45,7 @@ export default function Page() {
                 <span>{method.action}</span>"
                 <ArrowRight className="w-4 h-4" />
               </a>
-            </div>;
+            </div>,
           ))}
         </div>
 
@@ -58,7 +58,7 @@ export default function Page() {
             Join hundreds of enterprise organizations that trust Zion with their critical IT operations.'
             Let's discuss how we can help you achieve your technology goals.</p>
 "
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+          <div className="flex flex-col sm: flex-row gap-6 justify-center mb-8">
             <a"
               href="#enterprise-demo"
               className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-lg"
@@ -87,10 +87,10 @@ export default function Page() {
               <div className="text-blue-100">Enterprise Support</div>
             </div>
           </div>
-        </div>;
+        </div>,
 
         {/* Enterprise Process */}"
-        <div className="mt-20">;"
+        <div className="mt-20">,"
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Our Enterprise Engagement Process
           </h3>"
@@ -135,7 +135,7 @@ export default function Page() {
         </div>
 
         {/* Bottom CTA */}"
-        <div className="text-center mt-20">;"
+        <div className="text-center mt-20">,"
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-3xl mx-auto border border-white/20">"
             <h3 className="text-2xl font-bold text-white mb-4">
               Start Your Enterprise Journey
@@ -161,5 +161,5 @@ export default function Page() {
         </div>
       </div>
     </section>
-  )};
+  )},
 '"`

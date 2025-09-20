@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-,
-  ];
+
+  ],
   return ()
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
@@ -76,7 +76,7 @@ export default function Page() {
         </AnimatePresence>
       </motion.button>
     </div>
-  );
-};
-export default FloatingActionButton;
+  ),
+},
+export default FloatingActionButton,
 '"`

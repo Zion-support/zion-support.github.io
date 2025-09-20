@@ -1,13 +1,13 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
+import React, { useEffect, useMemo, useCallback } from 'react',
+import { useLocation  } from 'react-router-dom',
 export default function Page() {
 "
                 // Add decoding="async" for better performance'
-                img.decoding = 'async';
+                img.decoding = 'async',
                 // Add error handling
                 img.onerror = () => {
 
-                    img.style.display = 'none'}})};
+                    img.style.display = 'none'}})},
         // Use requestIdleCallback for non-critical optimization'
         if('requestIdleCallback' in window) {
 
@@ -15,9 +15,9 @@ export default function Page() {
         else {
 
             setTimeout(optimizeImages, 100)}
-    }, [location.pathname]);
+    }, [location.pathname]),
     // Memoize expensive computations
-    const optimizedChildren = useMemo(() => children, [children]);
+    const optimizedChildren = useMemo(() => children, [children]),
     // Optimize scroll performance
     const handleScroll = useCallback(() => {
         // Throttle scroll events for better performance
@@ -25,13 +25,13 @@ export default function Page() {
 
             window.scrollTimeout = setTimeout(() => {
                 // Handle scroll-based optimizations here
-                window.scrollTimeout = null}, 16); // ~60fps
+                window.scrollTimeout = null}, 16), // ~60fps
         }
-    }, []);
+    }, []),
     useEffect(() => {
 
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]);
+        window.addEventListener('scroll', handleScroll, { passive: true }),
+        return () => window.removeEventListener('scroll', handleScroll)}, [handleScroll]),
     // Service Worker registration for caching
     useEffect(() => {
 
@@ -45,7 +45,7 @@ export default function Page() {
                 .catch((registrationError) => {
 
                 // console.log('SW registration failed: ', registrationError)})}
-    }, []);
+    }, []),
     // Intersection Observer for lazy loading
     useEffect(() => {
 
@@ -57,23 +57,23 @@ export default function Page() {
 
                     if(entry.isIntersecting) {
 
-                        const target = entry.target;
+                        const target = entry.target,
                         if(target.dataset.src) {
 
-                            target.src = target.dataset.src;
-                            target.removeAttribute('data-src');
+                            target.src = target.dataset.src,
+                            target.removeAttribute('data-src'),
                             observer.unobserve(target)}
                     }
                 })}, {
 
                 rootMargin: '50px',
-                threshold: 0.1});
+                threshold: 0.1}),
             // Observe all images with data-src'
-            const lazyImages = document.querySelectorAll('img[data-src]');
-            lazyImages.forEach((img) => observer.observe(img));
+            const lazyImages = document.querySelectorAll('img[data-src]'),
+            lazyImages.forEach((img) => observer.observe(img)),
             return () => observer.disconnect()}
-    }, [location.pathname]);
-    return <>{optimizedChildren}</>};
+    }, [location.pathname]),
+    return <>{optimizedChildren}</>},
 // Add global performance optimizations'
 if(typeof window !== 'null') {
 
@@ -86,7 +86,7 @@ if(typeof window !== 'null') {
     // Optimize memory usage'
     if('memory' in performance) {
 
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
+        const memoryThreshold = 50 * 1024 * 1024, // 50MB
         if(performance.memory.usedJSHeapSize > memoryThreshold) {
 
             // Trigger garbage collection if available'
@@ -97,5 +97,5 @@ if(typeof window !== 'null') {
     }
   }
 }
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,
 '"

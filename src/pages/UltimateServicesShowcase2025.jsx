@@ -1,59 +1,57 @@
-import React, { useState } from 'react';
-// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
+import React, { useState } from "react";
+// import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "../data/ultimateMicroSaasServices2025";
+// import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from "../data/innovativeEnterpriseSolutions2025";
+// import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from "../data/emergingTechnologySolutions2025";
 const UltimateServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('name');
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [sortBy, setSortBy] = useState('name'),
     // Combine all services
     const allServices = [
         ...ULTIMATE_MICRO_SAAS_SERVICES_2025,
         ...INNOVATIVE_ENTERPRISE_SOLUTIONS_2025,
         ...EMERGING_TECHNOLOGY_SOLUTIONS_2025
-    ];
+    ],
     // Get unique categories
-    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+    const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
     // Filter and sort services
     const filteredServices = allServices
         .filter(service => {
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory,
         const priceMatch = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'low' && service.price < 5000) ||
             (selectedPriceRange === 'medium' && service.price >= 5000 && service.price < 15000) ||
-            (selectedPriceRange === 'high' && service.price >= 15000);
+            (selectedPriceRange === 'high' && service.price >= 15000),
         const searchMatch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return categoryMatch && priceMatch && searchMatch;
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+        return categoryMatch && priceMatch && searchMatch,
     })
         .sort((a, b) => {
         switch (sortBy) {
             case 'price':
-                return a.price - b.price;
+                return a.price - b.price,
             case 'name':
-                return a.title.localeCompare(b.title);
+                return a.title.localeCompare(b.title),
             case 'category':
-                return a.category.localeCompare(b.category);
-            default:
-                return 0;
+                return a.category.localeCompare(b.category),
+            default: return 0
         }
     });
     const formatPrice = (price) => {
         if (price >= 1000) {
-            return `$${(price / 1000).toFixed(1)}K`;
+            return `$${(price / 1000).toFixed(1)}K`,
         }
-        return `$${price}`;
-    };
+        return `$${price}`,
+    },
     const getSupportLevelColor = (level) => {
         switch (level) {
             case 'enterprise':
-                return 'bg-purple-600';
+                return 'bg-purple-600',
             case 'premium':
-                return 'bg-blue-600';
-            default:
-                return 'bg-green-600';
+                return 'bg-blue-600',
+            default: return 'bg-green-600'
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -257,7 +255,7 @@ const UltimateServicesShowcase2025 = () => {
               Our team of experts is ready to help you implement these cutting-edge solutions. 
               Get in touch today to discuss how we can accelerate your digital transformation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Schedule Consultation
               </a>
@@ -268,6 +266,6 @@ const UltimateServicesShowcase2025 = () => {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 };
 export default UltimateServicesShowcase2025;

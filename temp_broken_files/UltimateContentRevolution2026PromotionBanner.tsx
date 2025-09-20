@@ -1,30 +1,30 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   Zap,
   Brain,
   Rocket,
   ArrowRight,
-  X;
-  Play;
-  Star;
-  TrendingUp;
-  Users;
-  Award,
-} from 'lucide-react';
+  X,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
+  Award
+} from 'lucide-react',
 const UltimateContentRevolution2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)1000),
+    return () => clearTimeout(timer),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -56,7 +56,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
                   </h3>,
                 </div>,
               </div>,
-              {/* Center Content - Mobile */,}
+              {/* Center Content - Mobile */}
               <div className="md: hidden text-center">,
                 <div className="flex items-center justify-center gap-2 mb-1">,
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-2 py-1 rounded-full text-xs font-bold">,
@@ -70,7 +70,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
                   Experience the Future,
                 </h3>,
               </div>,
-              {/* Right Content */,}
+              {/* Right Content */}
               <div className="flex items-center gap-3">,
                 {/* Stats */}
                 <div className="hidden lg: flex items-center gap-4 text-sm">,
@@ -87,7 +87,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
                     <span>5★ Rated</span>,
                   </div>,
                 </div>,
-                {/* CTA Buttons */,}
+                {/* CTA Buttons */}
                 <div className="flex items-center gap-2">,
                   <button,
                     className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover: shadow-lg transition-all duration-300",
@@ -103,7 +103,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
                     <ArrowRight className="w-4 h-4" />,
                   </button>,
                 </div>,
-                {/* Dismiss Button */,}
+                {/* Dismiss Button */}
                 <button,
                   onClick={handleDismiss}
                   className="text-gray-400 hover: text-white transition-colors duration-300 p-1",
@@ -112,7 +112,7 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Mobile Stats */,}
+            {/* Mobile Stats */}
             <div className="lg: hidden mt-3 pt-3 border-t border-purple-500/30">,
               <div className="flex justify-center gap-6 text-xs">,
                 <div className="flex items-center gap-1 text-green-400">,
@@ -130,39 +130,38 @@ const UltimateContentRevolution2026PromotionBanner = () => {,
               </div>,
             </div>,
           </div>,
-          {/* Animated Background Elements */,}
+          {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">,
             <div,
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-400 rounded-full",
-                y: [0-10];
-                opacity: [0.510.5],}}
-                duration: 2;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                y: [0-10],
+                opacity: [0.510.5]}}
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"}}
             />,
             <div,
               className="absolute top-3 right-8 w-1 h-1 bg-pink-400 rounded-full",
-                y: [0-80];
-                opacity: [0.30.80.3],}}
-                duration: 1.5;
-                repeat: Infinity;
-                ease: "easeInOut";
-                delay: 0.5,}}
+                y: [0-80],
+                opacity: [0.30.80.3]}}
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.5}}
             />,
             <div,
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full",
-                y: [0-60];
-                opacity: [0.40.90.4],}}
-                duration: 2.5;
-                repeat: Infinity;
-                ease: "easeInOut";
-                delay: 1,}}
+                y: [0-60],
+                opacity: [0.40.90.4]}}
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1}}
             />,
           </div>,
-        </div>,
-      )}
+        </div>)}
     </div>,
-  );
-};
-export default UltimateContentRevolution2026PromotionBanner;
+  ),
+},
+export default UltimateContentRevolution2026PromotionBanner,
 </div></div></div></div></div></div>,

@@ -1,31 +1,31 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useAuth } from "@/hooks/useAuth";
-import { LoginModal } from "@/components/auth/LoginModal";
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { useAuth } from "@/hooks/useAuth",
+import { LoginModal } from "@/components/auth/LoginModal",
 
 export function RewardsWidget() {
-  const { user } = useAuth();
-  const [open, setOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth(),
+  const [open, setOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
 
-  const points = (user && typeof user !== 'boolean') ? user.points ?? 0 : 0;
+  const points = (user && typeof user !== 'boolean') ? user.points ?? 0 : 0,
 
   const getTier = (pts: number) => {
-    if (pts >= 500) return "Gold";
-    if (pts >= 100) return "Silver";
-    return "Bronze";
-  };
+    if (pts >= 500) return "Gold",
+    if (pts >= 100) return "Silver",
+    return "Bronze"
+  },
 
-  const tasks = ["Complete your profile", "Invite a friend", "Buy any service"];
+  const tasks = ["Complete your profile", "Invite a friend", "Buy any service"],
 
   const handleClick = () => {
     if (user) {
-      setOpen(true);
+      setOpen(true),
     } else {
-      setLoginOpen(true);
+      setLoginOpen(true),
     }
-  };
+  },
 
   return (
     <>
@@ -51,5 +51,5 @@ export function RewardsWidget() {
       </Dialog>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );
+  ),
 }

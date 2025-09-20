@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Zero-Trust Agent Architecture | Zion Tech Group';
+  title: 'AI 2026: Zero-Trust Agent Architecture | Zion Tech Group',
   description:,
-    'A practical blueprint for zero-trust autonomous agents with isolation domains, policy-as-code, permissions, and runtime guards.',
-};
+    'A practical blueprint for zero-trust autonomous agents with isolation domains, policy-as-code, permissions, and runtime guards.'
+},
 export default function ZeroTrustAgentArchitecturePage() {,
   return (,
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -69,7 +69,6 @@ export default function ZeroTrustAgentArchitecturePage() {,
           Secure Architecture →,
         </Link>,
       </footer>,
-    </main>,
-  );
+    </main>),
 }
 ,

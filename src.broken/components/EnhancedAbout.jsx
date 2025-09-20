@@ -1,29 +1,29 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
         {
 
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise['Deep Learning',NLP',Computer Vision'],;
+            expertise['Deep Learning',NLP',Computer Vision'],
             avatar: '🤖'
         },
         {
 
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise['AWS/Azure',Kubernetes',CI/CD'],;
+            expertise['AWS/Azure',Kubernetes',CI/CD'],
             avatar: '☁️'
         },
         {
 
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise['Threat Detection',Compliance',Penetration Testing'],;
+            expertise['Threat Detection',Compliance',Penetration Testing'],
             avatar: '🔒'
 
-    ];
+    ],
     const milestones = [{
 
             year: '2020',
@@ -59,7 +59,7 @@ export default function Page() {
             description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
 
-    ];
+    ],
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ export default function Page() {
 
                 staggerChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 20,
@@ -86,7 +86,7 @@ export default function Page() {
                 duration: 0.6,
                 ease: "easeOut"
 
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.9,
@@ -112,7 +112,7 @@ export default function Page() {
                 duration: 0.3,"
                 ease: "easeOut"
 
-    };
+    },
     const timelineVariants = {
 
   hidden: { opacity: 0,
@@ -128,10 +128,10 @@ export default function Page() {
                 duration: 0.8,"
                 ease: "easeOut"
 
-    };"
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">;
+    },"
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">,
       {/* Hero Section */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,"
         <motion.div className="max-w-7xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" variants={itemVariants}>
             About{' '}"
@@ -142,7 +142,7 @@ export default function Page() {
           <motion.p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto" variants={itemVariants}>
             Leading the future of technology innovation through AI-powered solutions, cloud expertise, and digital transformation.We help businesses thrive in the digital age.</motion.p>"
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>"
-            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group">
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 group">
               Get Started"
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"/>
             </Link>"
@@ -151,10 +151,10 @@ export default function Page() {
             </Link>
           </motion.div>
         </motion.div>
-      </section>;
+      </section>,
 
       {/* Mission & Vision */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,"
         <div className="max-w-7xl mx-auto">"
           <motion.div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div variants={itemVariants}>"
@@ -185,7 +185,7 @@ export default function Page() {
       </section>
 
       {/* Comp Values */}"
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;"
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">,"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -209,7 +209,7 @@ export default function Page() {
       </section>
 
       {/* Team Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,"
         <div className="max-w-7xl mx-auto">"
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -237,7 +237,7 @@ export default function Page() {
       </section>
 
       {/* Comp Timeline */}"
-      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;"
+      <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">,"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
           <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -273,7 +273,7 @@ export default function Page() {
       </section>
 
       {/* Stats Section */}"
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,"
         <div className="max-w-7xl mx-auto">"
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
             <motion.div className="text-center" variants={itemVariants}>"
@@ -300,7 +300,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;"
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">,"
         <motion.div className="max-w-4xl mx-auto text-center" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>"
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work with Us?
@@ -319,5 +319,5 @@ export default function Page() {
           </div>
         </motion.div>
       </section>
-    </div>)};
+    </div>)},
 '"`

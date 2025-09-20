@@ -1,13 +1,13 @@
 
-import { ContractTemplate } from "@/types/contracts";
-import { Button } from "@/components/ui/button";
-import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate, useLocation } from "react-router-dom";
+import { ContractTemplate } from "@/types/contracts",
+import { Button } from "@/components/ui/button",
+import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate, useLocation } from "react-router-dom",
 import {
   AlertDialog,
   AlertDialogAction,
@@ -16,15 +16,15 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { useState } from "react";
+  AlertDialogTitle
+} from "@/components/ui/alert-dialog",
+import { useState } from "react",
 
 interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-  onEdit: (template: ContractTemplate) => void;
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
 }
 
 export function TemplateList({
@@ -33,37 +33,37 @@ export function TemplateList({
   onSelect,
   onEdit
 }: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const location = useLocation(),
 
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId);
-  };
+    setTemplateToDelete(templateId)
+  },
 
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete);
-      setTemplateToDelete(null);
+      await deleteTemplate.mutateAsync(templateToDelete),
+      setTemplateToDelete(null),
     }
-  };
+  },
 
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
-      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
-      return;
+      navigate(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
+      return,
     }
-    await setDefaultTemplate.mutateAsync(templateId);
-  };
+    await setDefaultTemplate.mutateAsync(templateId),
+  },
 
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">
         <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
       </div>
-    );
+    ),
   }
 
   if (!templates.length) {
@@ -72,7 +72,7 @@ export function TemplateList({
         <p className="text-muted-foreground">No templates found.</p>
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -156,5 +156,5 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  );
+  ),
 }

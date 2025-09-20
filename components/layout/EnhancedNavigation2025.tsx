@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight } from 'lucide-react',
 
 export default function EnhancedNavigation2025() {
-	const [isOpen, setIsOpen] = useState(false);
-	const [isScrolled, setIsScrolled] = useState(false);
-	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+	const [isOpen, setIsOpen] = useState(false),
+	const [isScrolled, setIsScrolled] = useState(false),
+	const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
 	useEffect(() => {
-		const handleScroll = () => setIsScrolled(window.scrollY > 20);
-		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+		const handleScroll = () => setIsScrolled(window.scrollY > 20),
+		window.addEventListener('scroll', handleScroll),
+		return () => window.removeEventListener('scroll', handleScroll),
+	}, []),
 
 	const navigation = [
 		{
@@ -22,7 +22,7 @@ export default function EnhancedNavigation2025() {
 				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
 				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
 				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
-				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
+				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' }
 			]
 		},
 		{
@@ -32,7 +32,7 @@ export default function EnhancedNavigation2025() {
 				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
 				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
 				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
-				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
+				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' }
 			]
 		},
 		{
@@ -42,21 +42,21 @@ export default function EnhancedNavigation2025() {
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
 				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
 				{ name: 'Careers', href: '/careers', description: 'Join our team' },
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' }
 			]
 		},
 		{ name: 'Blog', href: '/blog' },
-		{ name: 'Pricing', href: '/pricing' },
-	];
+		{ name: 'Pricing', href: '/pricing' }
+	],
 
 	const toggleDropdown = (name: string) => {
-		setActiveDropdown(activeDropdown === name ? null : name);
-	};
+		setActiveDropdown(activeDropdown === name ? null : name)
+	},
 
 	const closeMobileMenu = () => {
-		setIsOpen(false);
-		setActiveDropdown(null);
-	};
+		setIsOpen(false),
+		setActiveDropdown(null),
+	},
 
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -234,5 +234,5 @@ export default function EnhancedNavigation2025() {
 				</div>
 			)}
 		</nav>
-	);
+	),
 }

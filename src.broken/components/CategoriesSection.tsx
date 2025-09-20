@@ -7,41 +7,41 @@
         <motion.div
           className="mt-12"
 =======
-import { GradientHeading } from "./GradientHeading";
-import Link from "next/link";
+import { GradientHeading } from "./GradientHeading",
+import Link from "next/link",
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
-import { cn } from "@/lib/utils";
+import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+import { cn } from "@/lib/utils",
 
 const categories = [{
     title: "AI Services",
     description: "Cutting - edge AI solutions, chatbots, and machine learning",
     icon: "🤖",
     link: "/ai - services",
-    color: "from - purple - 500 to - indigo - 600",
+    color: "from - purple - 500 to - indigo - 600"
   },
   {
     title: "Micro SAAS",
     description: "Cloud - based software solutions for modern businesses",
     icon: "☁️",
     link: "/micro - saas",
-    color: "from - cyan - 500 to - blue - 600",
+    color: "from - cyan - 500 to - blue - 600"
   },
   {
     title: "IT Services",
     description: "Infrastructure, security, and technical consulting",
     icon: "⚡",
     link: "/all - services",
-    color: "from - amber - 500 to - orange - 600",
+    color: "from - amber - 500 to - orange - 600"
   },
   {
     title: "Digital Transformation",
     description: "Business modernization and digital strategy",
     icon: "📈",
     link: "/all - services",
-    color: "from - emerald - 500 to - green - 600",
-  },
-];
+    color: "from - emerald - 500 to - green - 600"
+  }
+],
 
 const specialServices = [{
     title: "IT Onsite Services",
@@ -55,10 +55,10 @@ const specialServices = [{
     title: "Services Comparison",
     link: "/services - comparison"
   }
-];
+],
 =======
 
-;
+,
 
 interface CategoriesSectionProps
   extends React.HTMLAttributes<HTMLElement> {
@@ -92,7 +92,7 @@ export function CategoriesSection({
             <p className="text-gray-300 text-lg mt-4 max-w-2xl mx-auto">
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation
             </p>
-          </motion.div>;) }
+          </motion.div>,) }
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category) => (
@@ -136,13 +136,13 @@ export function CategoriesSection({
         <div className="mt-12 flex justify-center">
           <Link
             to="/categories/all" // Changed href to to
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
           >
             View All Categories"
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
           </Link>
         </motion.div>
       </div>
-    </section>;
+    </section>,
   )}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

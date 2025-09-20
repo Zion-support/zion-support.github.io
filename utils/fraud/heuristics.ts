@@ -9,4 +9,4 @@
   }
 ,
   return {,
-    flagged: reasons.length > 0reasons,}
+    flagged: reasons.length > 0reasons}

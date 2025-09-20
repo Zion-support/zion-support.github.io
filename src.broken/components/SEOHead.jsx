@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 export default function Page() {
-`;
+`,
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -66,7 +66,7 @@ export default function Page() {
                 "contactType": "customer service","
                 "email": "kleber@ziontechgroup.com"
             },"
-            "sameAs"[;"
+            "sameAs"[,"
                 "https://linkedin.com/company/ziontechgroup","
                 "https://twitter.com/ziontechgroup","
                 "https://github.com/ziontechgroup"
@@ -107,6 +107,6 @@ export default function Page() {
 
             })}
         </script>)}
-    </Helmet>)};
-export default SEOHead;
+    </Helmet>)},
+export default SEOHead,
 }}'"`

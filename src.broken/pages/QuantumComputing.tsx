@@ -1,76 +1,67 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: Brain,
       title: 'AI Enhancement',
       description: 'Quantum machine learning and neural networks',
-      color: 'from - green - 500 to - emerald - 500',
+      color: 'from - green - 500 to - emerald - 500'
     },
     {
       icon: Shield,
       title: 'Quantum Security',
       description: 'Unbreakable encryption and secure communications',
-      color: 'from - red - 500 to - pink - 500',
+      color: 'from - red - 500 to - pink - 500'
     },
     {
       icon: Target,
       title: 'Precision Computing',
       description: 'Ultra - accurate simulations and calculations',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
-  ];
+      color: 'from - indigo - 500 to - blue - 500'
+    }
+  ],
 
   const applications = [{
       title: 'Cryptography',
       description: 'Quantum - resistant encryption and secure communications',
       icon: Lock,
       benefits: [
-        'Post - quantum cryptography',
-        'Quantum key distribution',
-        'Secure protocols',
-      ],
+        'Post - quantum cryptographyQuantum key distribution',
+        'Secure protocols'
+      ]
     },
     {
       title: 'Drug Discovery',
       description: 'Molecular modeling and pharmaceutical research',
       icon: Activity,
-      benefits: ['Molecular simulation',
-        'Drug optimization',
-        'Protein folding',
-      ],
+      benefits: ['Molecular simulationDrug optimization',
+        'Protein folding'
+      ]
     },
     {
       title: 'Financial Modeling',
       description: 'Portfolio optimization and risk assessment',
       icon: TrendingUp,
-      benefits: ['Risk analysis',
-        'Portfolio optimization',
-        'Market simulation',
-      ],
+      benefits: ['Risk analysisPortfolio optimization',
+        'Market simulation'
+      ]
     },
     {
       title: 'Climate Science',
       description: 'Climate modeling and environmental prediction',
       icon: Globe,
-      benefits: ['Weather forecasting',
-        'Climate modeling',
-        'Environmental analysis',
-      ],
-    },
-  ];
+      benefits: ['Weather forecastingClimate modeling',
+        'Environmental analysis'
+      ]
+    }
+  ],
 
-  const technologies = ['Superconducting Qubits',
-    'Trapped Ions',
-    'Topological Qubits',
-    'Quantum Error Correction',
-    'Quantum Gates',
-    'Quantum Circuits',
-    'Quantum Memory',
-    'Quantum Networks',
-    'Quantum Sensors',
-    'Quantum Metrology',
-  ];
+  const technologies = ['Superconducting QubitsTrapped Ions',
+    'Topological QubitsQuantum Error Correction',
+    'Quantum GatesQuantum Circuits',
+    'Quantum MemoryQuantum Networks',
+    'Quantum SensorsQuantum Metrology'
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -242,7 +233,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
               Ready for the Quantum Revolution?
             </h2>
             <p className="text-xl text-gray - 300 max - w-3xl mx - auto mb-8">
@@ -269,5 +260,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

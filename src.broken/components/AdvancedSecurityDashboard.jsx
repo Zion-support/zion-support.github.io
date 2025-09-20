@@ -2,8 +2,8 @@
 export function AdvancedSecurityDashboard () {
 
 =======
-import React, { useState, useRef, useEffect } from 'react';
-import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react',
+import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react',
 ,
     {
 
@@ -11,107 +11,107 @@ import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, 
         threatType: 'Phishing Attack',
         description: 'Sophisticated phishing campaign using executive impersonation.',
         riskScore: 7.8,
-        affectedSystems['Email Systems',User Workstations'],;
-        mitigationSteps['Enhanced email filtering',User awareness training',Multi-factor authentication'],;
+        affectedSystems['Email Systems',User Workstations'],
+        mitigationSteps['Enhanced email filtering',User awareness training',Multi-factor authentication'],
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8
 
-];
+],
 export function AdvancedSecurityDashboard() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedSeverity, setSelectedSeverity] = useState('all');
-    const [selectedFramework, setSelectedFramework] = useState('all');
-    const [autoRefresh, setAutoRefresh] = useState(true);
-    const [showResolved, setShowResolved] = useState(false);
-    const [securityEvents, setSecurityEvents] = useState(mockSecurityEvents);
-    const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements);
-    const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
-    const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const severities = ['all',critical',high',medium',low',info'];
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [isFullscreen, setIsFullscreen] = useState(false),
+    const [activeTab, setActiveTab] = useState('overview'),
+    const [selectedSeverity, setSelectedSeverity] = useState('all'),
+    const [selectedFramework, setSelectedFramework] = useState('all'),
+    const [autoRefresh, setAutoRefresh] = useState(true),
+    const [showResolved, setShowResolved] = useState(false),
+    const [securityEvents, setSecurityEvents] = useState(mockSecurityEvents),
+    const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements),
+    const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics),
+    const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence),
+    const [isRefreshing, setIsRefreshing] = useState(false),
+    const containerRef = useRef(null),
+    const severities = ['all',critical',high',medium',low',info'],
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
-        : complianceRequirements.filter(req => req.framework === selectedFramework) ;
+        : complianceRequirements.filter(req => req.framework === selectedFramework) ,
     const refreshData = async () => {
-        setIsRefreshing(true) ;
+        setIsRefreshing(true) ,
         // Simulate API call
-        await new Promise(resolve => setTimeout (resolve, 1500) ) ;
-        setIsRefreshing(false) };
+        await new Promise(resolve => setTimeout (resolve, 1500) ) ,
+        setIsRefreshing(false) },
     useEffect(() => {
         if(autoRefresh) {
 
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+            const interval = setInterval(refreshData, 30000), // Refresh every 30 seconds
             return () => clearInterval(interval)}
-    }, [autoRefresh]);
+    }, [autoRefresh]),
     const getSeverityColor = (severity) => {
 
         switch(severity) {
 
             case 'critical':'
-                return 'bg-red-500 text-white';
+                return 'bg-red-500 text-white',
             case 'high':'
-                return 'bg-orange-500 text-white';
+                return 'bg-orange-500 text-white',
             case 'medium':'
-                return 'bg-yellow-500 text-white';
+                return 'bg-yellow-500 text-white',
             case 'low':'
-                return 'bg-blue-500 text-white';
+                return 'bg-blue-500 text-white',
             default:'
                 return 'bg-gray-500 text-white'}
-    };
+    },
     const getStatusColor = (status) => {
 
         switch(status) {
 
             case 'compliant':'
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
+                return 'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300',
             case 'non_compliant':'
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300',
             case 'in_progress':'
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300',
             default:'
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
-    };
+    },
     const getRiskLevelColor = (riskLevel) => {
 
         switch(riskLevel) {
 
             case 'high':'
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+                return 'bg-red-100 text-red-700 dark: bg-red-900/30 dark:text-red-300',
             case 'medium':'
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300',
             default:'
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
-    };
+    },
     const getTrendIcon = (trend) => {
 
         switch(trend) {
 
             case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
+                return <TrendingUp className="w-4 h-4 text-green-500"/>,
             case 'down':"
-                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
+                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>,
             default:"
                 return <Activity className="w-4 h-4 text-gray-500"/>}
-    };
+    },
     const getEventIcon = (type) => {
 
         switch(type) {
 
             case 'threat':"
-                return <AlertTriangle className="w-5 h-5 text-red-500"/>;
+                return <AlertTriangle className="w-5 h-5 text-red-500"/>,
             case 'vulnerability':"
-                return <Bug className="w-5 h-5 text-orange-500"/>;
+                return <Bug className="w-5 h-5 text-orange-500"/>,
             case 'compliance':"
-                return <FileText className="w-5 h-5 text-blue-500"/>;
+                return <FileText className="w-5 h-5 text-blue-500"/>,
             case 'access':"
-                return <Users className="w-5 h-5 text-purple-500"/>;
+                return <Users className="w-5 h-5 text-purple-500"/>,
             default:"
                 return <Server className="w-5 h-5 text-gray-500"/>}
-    };
+    },
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">"
@@ -196,7 +196,7 @@ export function AdvancedSecurityDashboard() {
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
 
-            const Icon = tab.icon;`
+            const Icon = tab.icon,`
             return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
                     ? 'border-zion-red text-zion-red bg-zion-red/5''`
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
@@ -266,7 +266,7 @@ export function AdvancedSecurityDashboard() {
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>
                       </div>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_',)}
+                        {req.status.replace('_')}
                       </span>
                     </div>) ) }
                 </div>
@@ -293,7 +293,7 @@ export function AdvancedSecurityDashboard() {
                     <p className="text-zion-slate-light mb-3">{event.description}</p>"
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span>Source: {event.source}</span>
-                      <span>Status: {event.status.replace('_',)}</span>
+                      <span>Status: {event.status.replace('_')}</span>
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>
                     </div>
@@ -312,7 +312,7 @@ export function AdvancedSecurityDashboard() {
                     <div className="flex items-center gap-3 mb-2">"
                       <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
-                        {req.status.replace('_',)}
+                        {req.status.replace('_')}
                       </span>`
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>
                         {req.riskLevel} Risk

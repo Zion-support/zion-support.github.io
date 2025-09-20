@@ -1,16 +1,16 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { CartProvider } from './context'; // Added CartProvider
-import { ErrorBoundary } from './components/ErrorBoundary';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { ConsentProvider } from "./context/ConsentContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import OfflineToast from "./components/OfflineToast";
-import PwaInstallButton from "./components/PwaInstallButton";
-import { CookieBanner } from "./components/CookieBanner";
+import React, { Suspense } from 'react',
+import { Routes, Route } from 'react-router-dom',
+import { CartProvider } from './context', // Added CartProvider
+import { ErrorBoundary } from './components/ErrorBoundary',
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
+import { ConsentProvider } from "./context/ConsentContext",
+import { Toaster } from "./components/ui/toaster",
+import { Toaster as SonnerToaster } from "./components/ui/sonner",
+import OfflineToast from "./components/OfflineToast",
+import PwaInstallButton from "./components/PwaInstallButton",
+import { CookieBanner } from "./components/CookieBanner",
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -23,40 +23,40 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import { CommunityProvider } from './context';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
+} from './routes',
+import Home from './pages/Home',
+import AIMatcherPage from './pages/AIMatcher',
+import TalentDirectory from './pages/TalentDirectory',
+import TalentsPage from './pages/TalentsPage',
+import ServicesPage from './pages/ServicesPage',
+import EquipmentPage from './pages/EquipmentPage',
+import EquipmentDetail from './pages/EquipmentDetail',
+import Analytics from './pages/Analytics',
+import MobileLaunchPage from './pages/MobileLaunchPage',
+import CommunityPage from './pages/CommunityPage',
+import { CommunityProvider } from './context',
+import Categories from './pages/Categories',
+import Blog from './pages/Blog',
+import BlogPost from './pages/BlogPost',
+import NewProductsPage from './pages/NewProductsPage',
 erpabg-codex/add-new-products-page-with-10-items
-import NewServicesPage from './pages/NewServicesPage';
+import NewServicesPage from './pages/NewServicesPage',
 main
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Help from './pages/Help';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import SimpleSignup from './pages/SimpleSignup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-import WishlistPage from './pages/Wishlist';
-import CartPage from './pages/Cart';
-import Checkout from './pages/Checkout';
-import { SupportChatbot } from './components/SupportChatbot';
+import Sitemap from './pages/Sitemap',
+import PartnersPage from './pages/Partners',
+import Help from './pages/Help',
+import Login from './pages/Login',
+import Signup from './pages/Signup',
+import SimpleSignup from './pages/SimpleSignup',
+import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage',
+import OpenAppRedirect from './pages/OpenAppRedirect',
+import ContactPage from './pages/Contact',
+import ZionHireAI from './pages/ZionHireAI',
+import RequestQuotePage from './pages/RequestQuote',
+import WishlistPage from './pages/Wishlist',
+import CartPage from './pages/Cart',
+import Checkout from './pages/Checkout',
+import { SupportChatbot } from './components/SupportChatbot',
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -83,7 +83,7 @@ const baseRoutes = [
       <CommunityProvider>
         <CommunityPage />
       </CommunityProvider>
-    ),
+    )
   },
   { path: '/contact', element: <ContactPage /> },
   { path: '/partners', element: <PartnersPage /> },
@@ -96,14 +96,14 @@ const baseRoutes = [
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
-  { path: '/checkout', element: <Checkout /> },
-];
+  { path: '/checkout', element: <Checkout /> }
+],
 
 const App = () => {
-  console.log("App.tsx: Start");
+  console.log("App.tsx: Start"),
   // Ensure each navigation starts at the top of the page
-  useScrollToTop();
-  console.log("App.tsx: Rendering Tree");
+  useScrollToTop(),
+  console.log("App.tsx: Rendering Tree"),
   return (
     <WhitelabelProvider>
       <ConsentProvider>
@@ -136,7 +136,7 @@ const App = () => {
       </ThemeProvider>
         </WalletProvider> {/* Added WalletProvider closing tag */}
     </WhitelabelProvider>
-  );
+  ),
 }
 
-export default App;
+export default App,

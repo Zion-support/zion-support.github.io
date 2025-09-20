@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Brain, 
   Target, 
   BarChart3, 
@@ -25,50 +25,33 @@ import {
   Shield,
   Users,
   Fingerprint
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousForensics: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Investigation',
-      description: 'Advanced machine learning for autonomous incident investigation and evidence analysis'
-    },
+      icon: Brain,title: 'AI-Powered Investigation',description: 'Advanced machine learning for autonomous incident investigation and evidence analysis'
+    };
     {
-      icon: Search,
-      title: 'Evidence Collection',
-      description: 'Automated collection and preservation of digital evidence across multiple sources'
-    },
+      icon: Search,title: 'Evidence Collection',description: 'Automated collection and preservation of digital evidence across multiple sources'
+    };
     {
-      icon: Target,
-      title: 'Pattern Recognition',
-      description: 'AI-driven pattern recognition to identify connections and anomalies in evidence'
-    },
+      icon: Target,title: 'Pattern Recognition',description: 'AI-driven pattern recognition to identify connections and anomalies in evidence'
+    };
     {
-      icon: BarChart3,
-      title: 'Forensic Analytics',
-      description: 'Comprehensive analysis and reporting of forensic findings with AI insights'
-    },
+      icon: BarChart3,title: 'Forensic Analytics',description: 'Comprehensive analysis and reporting of forensic findings with AI insights'
+    };
     {
-      icon: Shield,
-      title: 'Chain of Custody',
-      description: 'Secure chain of custody tracking with blockchain verification'
-    },
+      icon: Shield,title: 'Chain of Custody',description: 'Secure chain of custody tracking with blockchain verification'
+    };
     {
-      icon: Fingerprint,
-      title: 'Digital Fingerprinting',
-      description: 'Advanced digital fingerprinting and evidence correlation'
+      icon: Fingerprint,title: 'Digital Fingerprinting',description: 'Advanced digital fingerprinting and evidence correlation'
     }
   ];
-
   const benefits = [
-    'Reduce investigation time by 70%',
-    'Improve evidence discovery by 80%',
-    'Enhance forensic accuracy by 90%',
-    'Automate routine forensics tasks',
-    '24/7 autonomous operation',
-    'Real-time incident response'
-  ];
+    'Reduce investigation time by 70%Improve evidence discovery by 80%',
+    'Enhance forensic accuracy by 90%Automate routine forensics tasks',
+    '24/7 autonomous operationReal-time incident response'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,7 +193,7 @@ const AIAutonomousForensics: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Digital Forensics?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -228,7 +211,6 @@ const AIAutonomousForensics: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousForensics;

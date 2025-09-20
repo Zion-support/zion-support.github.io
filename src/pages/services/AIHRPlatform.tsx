@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import {
   Users,
   Brain,
@@ -25,42 +25,28 @@ import {
   MessageSquare,
   UserCheck,
   GraduationCap
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIHRPlatform() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Recruitment",
-      description: "Intelligent candidate sourcing, screening, and matching with job requirements."
+      icon: Brain,title: "AI-Powered Recruitment",description: "Intelligent candidate sourcing, screening, and matching with job requirements."
     },
     {
-      icon: Users,
-      title: "Talent Management",
-      description: "Comprehensive employee lifecycle management from hire to retire."
-    },
+      icon: Users,title: "Talent Management",description: "Comprehensive employee lifecycle management from hire to retire."
+    };
     {
-      icon: Target,
-      title: "Performance Analytics",
-      description: "AI-driven performance tracking and employee development insights."
-    },
+      icon: Target,title: "Performance Analytics",description: "AI-driven performance tracking and employee development insights."
+    };
     {
-      icon: Zap,
-      title: "HR Automation",
-      description: "Intelligent automation of HR processes and workflows."
-    },
+      icon: Zap,title: "HR Automation",description: "Intelligent automation of HR processes and workflows."
+    };
     {
-      icon: BarChart3,
-      title: "Workforce Analytics",
-      description: "Data-driven insights into workforce trends and optimization."
-    },
+      icon: BarChart3,title: "Workforce Analytics",description: "Data-driven insights into workforce trends and optimization."
+    };
     {
-      icon: Shield,
-      title: "Compliance Management",
-      description: "Automated compliance monitoring and regulatory adherence."
+      icon: Shield,title: "Compliance Management",description: "Automated compliance monitoring and regulatory adherence."
     }
   ];
-
   const benefits = [
     "Reduce hiring time by 50-70% with AI-powered recruitment",
     "Improve employee retention by 30-50% through better engagement",
@@ -68,64 +54,49 @@ export default function AIHRPlatform() {
     "Reduce HR costs by 25-40% through process optimization",
     "Improve decision-making with data-driven insights",
     "Ensure 100% compliance with automated monitoring"
-  ];
+  ],
 
   const hrModules = [
     {
-      module: "Recruitment & Onboarding",
-      description: "AI-powered job matching, candidate screening, and automated onboarding",
+      module: "Recruitment & Onboarding",description: "AI-powered job matching, candidate screening, and automated onboarding",
       icon: UserCheck
-    },
+    };
     {
-      module: "Performance Management",
-      description: "Goal setting, performance tracking, and development planning",
+      module: "Performance Management",description: "Goal setting, performance tracking, and development planning",
       icon: Target
-    },
+    };
     {
-      module: "Learning & Development",
-      description: "Personalized training programs and skill development tracking",
-      icon: GraduationCap
-    },
+      module: "Learning & Development",description: "Personalized training programs and skill development tracking",icon: GraduationCap
+    };
     {
-      module: "Employee Engagement",
-      description: "Pulse surveys, feedback systems, and engagement analytics",
+      module: "Employee Engagement",description: "Pulse surveys, feedback systems, and engagement analytics",
       icon: MessageSquare
-    },
+    };
     {
-      module: "Payroll & Benefits",
-      description: "Automated payroll processing and benefits administration",
-      icon: FileText
-    },
+      module: "Payroll & Benefits",description: "Automated payroll processing and benefits administration",icon: FileText
+    };
     {
-      module: "HR Analytics",
-      description: "Workforce insights, predictive analytics, and reporting",
+      module: "HR Analytics",description: "Workforce insights, predictive analytics, and reporting",
       icon: BarChart3
     }
   ];
-
   const useCases = [
     {
-      industry: "Technology",
-      description: "Developer recruitment, skill assessment, and remote team management"
+      industry: "Technology",description: "Developer recruitment, skill assessment, and remote team management"
     },
     {
-      industry: "Healthcare",
-      description: "Medical staff recruitment, credentialing, and compliance management"
+      industry: "Healthcare",description: "Medical staff recruitment, credentialing, and compliance management"
     },
     {
-      industry: "Manufacturing",
-      description: "Skilled worker recruitment, safety training, and performance tracking"
+      industry: "Manufacturing",description: "Skilled worker recruitment, safety training, and performance tracking"
     },
     {
-      industry: "Financial Services",
-      description: "Compliance training, performance management, and talent development"
+      industry: "Financial Services",description: "Compliance training, performance management, and talent development"
     },
     {
-      industry: "Retail",
-      description: "Seasonal hiring, employee scheduling, and customer service training"
+      industry: "Retail",description: "Seasonal hiring, employee scheduling, and customer service training"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -391,7 +362,7 @@ export default function AIHRPlatform() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover: bg-blue-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -400,5 +371,5 @@ export default function AIHRPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-export default InnovativeServices;}}
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default InnovativeServices,}}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -9,13 +9,11 @@ export default function Page() {
       title: 'IoT Edge Computing',
       description: 'Intelligent IoT solutions with edge computing for real - time processing',
       icon: Wifi,
-      features[;
-        'Edge AI processing',
-        'Real - time analytics',
-        'Predictive maintenance',
-        'Smart city solutions'
-      ],;
-      benefits['Reduced latency', 'Lower bandwidth costs', 'Enhanced security'],;
+      features[,
+        'Edge AI processingReal - time analytics',
+        'Predictive maintenanceSmart city solutions'
+      ],
+      benefits['Reduced latencyLower bandwidth costs', 'Enhanced security'],
       color: 'from - zion - green to - zion - emerald'
     },
     {
@@ -23,13 +21,11 @@ export default function Page() {
       title: 'Zero Trust Security',
       description: 'Advanced cybersecurity platform with zero - trust architecture',
       icon: Shield,
-      features[;
-        'Multi - factor authentication',
-        'Behavioral analytics',
-        'Threat intelligence',
-        'Incident response automation'
-      ],;
-      benefits['99.99% threat prevention', 'Real - time monitoring', 'Compliance ready'],;
+      features[,
+        'Multi - factor authenticationBehavioral analytics',
+        'Threat intelligenceIncident response automation'
+      ],
+      benefits['99.99% threat preventionReal - time monitoring', 'Compliance ready'],
       color: 'from - zion - emerald to - zion - cyan'
     },
     {
@@ -37,13 +33,11 @@ export default function Page() {
       title: 'Digital Twin Technology',
       description: 'Create virtual replicas of physical systems for simulation and optimization',
       icon: Eye,
-      features[;
-        '3D modeling and simulation',
-        'Real - time monitoring',
-        'Predictive maintenance',
-        'Performance optimization'
-      ],;
-      benefits['Reduced downtime', 'Optimized performance', 'Cost savings'],;
+      features[,
+        '3D modeling and simulationReal - time monitoring',
+        'Predictive maintenancePerformance optimization'
+      ],
+      benefits['Reduced downtimeOptimized performance', 'Cost savings'],
       color: 'from - zion - cyan to - zion - purple'
     },
     {
@@ -51,13 +45,11 @@ export default function Page() {
       title: 'Metaverse & VR',
       description: 'Immersive virtual reality and metaverse development platform',
       icon: Globe2,
-      features[;
-        'VR application development',
-        'Metaverse platform creation',
-        '3D content creation',
-        'Virtual event hosting'
-      ],;
-      benefits['Enhanced user engagement', 'New revenue streams', 'Innovative experiences'],;
+      features[,
+        'VR application developmentMetaverse platform creation',
+        '3D content creationVirtual event hosting'
+      ],
+      benefits['Enhanced user engagementNew revenue streams', 'Innovative experiences'],
       color: 'from - zion - purple to - zion - blue'
     },
     {
@@ -65,24 +57,23 @@ export default function Page() {
       title: 'Green Tech Solutions',
       description: 'Sustainable technology solutions for environmental impact reduction',
       icon: Leaf,
-      features[;
-        'Renewable energy optimization',
-        'Carbon footprint tracking',
-        'Sustainable infrastructure',
-    };
-        'Green data centers';
-      ],;
-      benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
-      color: 'from - zion - blue to - zion - green';
-    };
-  ];
+      features[,
+        'Renewable energy optimizationCarbon footprint tracking',
+        'Sustainable infrastructure'
+    },
+        'Green data centers',
+      ],
+      benefits: ['Environmental impactCost savings', 'Regulatory compliance'],
+      color: 'from - zion - blue to - zion - green'
+    },
+  ],
 
-  const stats = [;
-    { label: 'Innovation Projects', value: '500+', icon: Rocket },;
-    { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
-    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
-    { label: 'Client Success Rate', value: '99.8%', icon: Award };
-  ];
+  const stats = [,
+    { label: 'Innovation Projects', value: '500+', icon: Rocket },
+    { label: 'AI Models Deployed', value: '1000+', icon: Brain },
+    { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },
+    { label: 'Client Success Rate', value: '99.8%', icon: Award },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -118,17 +109,17 @@ export default function Page() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion - cyan text-zion - cyan font - semibold rounded-xl hover:bg-zion - cyan hover:text-white transition - all duration -300"
+                className="px-8 py-4 border-2 border-zion - cyan text-zion - cyan font - semibold rounded-xl hover: bg-zion - cyan hover:text-white transition - all duration -300"
 
                 Schedule Demo
               </motion.button>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max - w-7xl mx -auto">
           <div className="grid grid - cols - 2 md: grid - cols - 4 gap-8">
             {stats.map ( (stat, index) => (<motion.div
@@ -155,13 +146,13 @@ export default function Page() {
                 </div>
                 <div className="text-3xl font - bold text-white mb-2">{stat.value}</div>
                 <div className="text-zion - slate -light">{stat.label}</div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Innovations Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max - w-7xl mx -auto">
           <motion.div
             initial = {
@@ -241,18 +232,18 @@ export default function Page() {
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full py-3 bg-gradient - to - r from - zion - cyan / 20 to - zion - purple / 20 border border-zion - cyan / 30 text-zion - cyan font - semibold rounded-xl hover:bg-gradient - to - r hover:from - zion - cyan / 30 hover:to - zion - purple / 30 transition - all duration -300"
+                    className="w-full py-3 bg-gradient - to - r from - zion - cyan / 20 to - zion - purple / 20 border border-zion - cyan / 30 text-zion - cyan font - semibold rounded-xl hover: bg-gradient - to - r hover:from - zion - cyan / 30 hover:to - zion - purple / 30 transition - all duration -300"
 
                     Learn More
                   </motion.button>
-                </div>;
+                </div>,
               </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max - w-4xl mx - auto text-center">
           <motion.div
             initial = {
@@ -283,13 +274,13 @@ export default function Page() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion - cyan text-zion - cyan font - semibold rounded-xl hover:bg-zion - cyan hover:text-white transition - all duration -300"
+                className="px-8 py-4 border-2 border-zion - cyan text-zion - cyan font - semibold rounded-xl hover: bg-zion - cyan hover:text-white transition - all duration -300"
 
                 Contact Our Team
               </motion.button>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

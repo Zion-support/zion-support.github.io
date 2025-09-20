@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Autonomous Business Operations 2025: The Future of Self-Managing Enterprises';
-  description: 'Discover how autonomous business operations are revolutionizing enterprises with self-managing systems, intelligent decision-making, and 24/7 optimization.';
-  keywords: ['autonomous operationsbusiness automation', 'self-managing systemsAI operations', 'enterprise automationautonomous business'],
-};
+  title: 'Autonomous Business Operations 2025: The Future of Self-Managing Enterprises',
+  description: 'Discover how autonomous business operations are revolutionizing enterprises with self-managing systems, intelligent decision-making, and 24/7 optimization.',
+  keywords: ['autonomous operationsbusiness automationself-managing systemsAI operations', 'enterprise automationautonomous business']
+},
 export default function AutonomousBusinessOperations2025() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">,
@@ -38,7 +38,7 @@ export default function AutonomousBusinessOperations2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Autonomous Capabilities */,}
+      {/* Autonomous Capabilities */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white bg-opacity-10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -49,7 +49,7 @@ export default function AutonomousBusinessOperations2025() {,
               <div className="text-4xl mb-4">🧠</div>,
               <h3 className="text-2xl font-bold mb-4">Intelligent Decision Making</h3>,
               <p className="text-lg opacity-90 mb-4">,
-                AI systems that make complex business decisions autonomously;
+                AI systems that make complex business decisions autonomously,
                 analyzing data and optimizing outcomes in real-time.,
               </p>,
               <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold">,
@@ -93,7 +93,7 @@ export default function AutonomousBusinessOperations2025() {,
               <div className="text-4xl mb-4">🛡️</div>,
               <h3 className="text-2xl font-bold mb-4">Autonomous Security</h3>,
               <p className="text-lg opacity-90 mb-4">,
-                Self-managing security systems that continuously monitor;
+                Self-managing security systems that continuously monitor,
                 detect threats, and respond to security incidents autonomously.,
               </p>,
               <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold">,
@@ -237,14 +237,14 @@ export default function AutonomousBusinessOperations2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">,
             Ready to Transform Your Business with Autonomous Operations?,
           </h2>,
           <p className="text-xl text-gray-200 mb-8">,
-            Join the autonomous revolution and experience unprecedented efficiency;
+            Join the autonomous revolution and experience unprecedented efficiency,
             reliability, and cost savings. The future of business is autonomous.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -263,5 +263,4 @@ export default function AutonomousBusinessOperations2025() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

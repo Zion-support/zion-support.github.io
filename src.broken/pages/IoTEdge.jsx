@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Wide - area IoT",
     reliability: "Medium"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "50% improvement in delivery times, 35% reduction in fuel costs",
     logo: "LN"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,16 +76,16 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "2 - 4 weeks"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'IoT Platform', 'Edge Computing', 'Analytics', 'Smart Cities', 'Industrial IoT', 'Security'];
+  const categories = ['AllIoT Platform', 'Edge ComputingAnalytics', 'Smart CitiesIndustrial IoT', 'Security'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? iotEdgeSolutions
-    : iotEdgeSolutions.filter(solution => solution.category === selectedCategory) ;
+    : iotEdgeSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -155,10 +155,10 @@ const processSteps = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* IoT Technologies */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -216,13 +216,13 @@ const processSteps = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -278,13 +278,13 @@ const processSteps = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -384,7 +384,7 @@ const processSteps = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -455,13 +455,13 @@ const processSteps = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

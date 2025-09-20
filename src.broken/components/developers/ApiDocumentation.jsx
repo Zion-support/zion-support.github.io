@@ -1,16 +1,16 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { useState } from 'react';
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
- from 'react';"
-import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Alert, AlertDescription } from '@/components/ui/alert';"
-import { Badge } from '@/components/ui/badge';"
-import CodeBlock from "./CodeBlock";
+import React, { useState } from 'react',
+import { useState } from 'react',
+import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Alert, AlertDescription } from '@/components/ui/alert',
+import { Badge } from '@/components/ui/badge',
+ from 'react',"
+import { BookOpen, Terminal import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Alert, AlertDescription } from '@/components/ui/alert',"
+import { Badge } from '@/components/ui/badge',"
+import CodeBlock from "./CodeBlock",
 export function ApiDocumentation() {
 "
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -93,9 +93,9 @@ export function ApiDocumentation() {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 headers = {
 
@@ -107,7 +107,7 @@ response = requests.get('
 
   'limit': 10,category': 'development'
 },
-    headers = headers;
+    headers = headers,
 )
 data = response.json()`
 print(data)`
@@ -156,7 +156,7 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
   -H "Content-Type: application/json"`,`
-  javascript: `const jobId = 'job_abc123';`
+  javascript: `const jobId = 'job_abc123',`
 const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`
 }\`, {
 
@@ -164,9 +164,9 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId`
   headers: {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 headers = {
 
@@ -175,7 +175,7 @@ headers = {
 job_id = 'job_abc123'
 response = requests.get('
     f'https://ziontechgroup.com/api/v1/jobs/{job_id},
-    headers = headers;
+    headers = headers,
 )
 data = response.json()`
 print(data)`
@@ -260,9 +260,9 @@ print(data)`
     },
     deadline: '2025-06-30T23:59:59Z'
   })
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 import json
 headers = {
@@ -332,9 +332,9 @@ print(data)`
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 headers = {
 
@@ -347,7 +347,7 @@ response = requests.get('
   'skills': 'react,
   typescript'
 },
-    headers = headers;
+    headers = headers,
 )
 data = response.json()`
 print(data)`
@@ -389,7 +389,7 @@ print(data)`
             curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
   -H "Content-Type: application/json"`,`
-  javascript: `const talentId = 'talent_abc123';`
+  javascript: `const talentId = 'talent_abc123',`
 const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId`
 }\`, {
 
@@ -397,9 +397,9 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
   headers: {
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 headers = {
 
@@ -408,7 +408,7 @@ headers = {
 talent_id = 'talent_abc123'
 response = requests.get('
     f'https://ziontechgroup.com/api/v1/talent/{talent_id},
-    headers = headers;
+    headers = headers,
 )
 data = response.json()`
 print(data)`
@@ -499,9 +499,9 @@ print(data)`
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 import json
 headers = {
@@ -566,9 +566,9 @@ print(data)`
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 }
-});
-const data = await response.json();`
-// // // // // // // // console.log(data);`,`
+}),
+const data = await response.json(),`
+// // // // // // // // console.log(data),`,`
             python: `import requests
 headers = {
 
@@ -576,7 +576,7 @@ headers = {
 }
 response = requests.get('
     'https://ziontechgroup.com/api/v1/quotes',
-    headers = headers;
+    headers = headers,
 )
 data = response.json()`
 print(data)`
@@ -619,12 +619,12 @@ print(data)`
                 <code className="bg-zinc-800 px-1 py-0.5 rounded">X-Zion-Signature</code> header.This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.</p>
               <CodeBlock code = {
 '`
-  `import crypto from 'crypto';
-// Function to verify webhook signature;
+  `import crypto from 'crypto',
+// Function to verify webhook signature,
 function verifyWebhookSignature(payload, signature, secret) {
 
-  const hmac = crypto.createHmac('sha256', secret);
-  const expectedSignature = hmac.update(payload).digest('hex');
+  const hmac = crypto.createHmac('sha256', secret),
+  const expectedSignature = hmac.update(payload).digest('hex'),
   return crypto.timingSafeEqual()
     Buffer.from(signature),"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

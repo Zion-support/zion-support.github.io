@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function BlogPost() {,
   return (,
     <article className="prose prose-invert max-w-3xl mx-auto px-4 py-16">,
@@ -33,6 +33,6 @@ export default function BlogPost() {,
         auditable.,
       </p>,
     </article>,
-  );
+  ),
 }
 ,

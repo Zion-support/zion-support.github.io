@@ -1,47 +1,47 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Rocket,
   ArrowRight,
   Star,
   Brain,
   Zap,
-  Globe;
-  TrendingUp;
-  Users;
-  Award;
-  ChevronRight;
-  CheckCircle;
-  Lightbulb;
-  Target;
-  Shield;
-  Cpu;
-  Sparkles,
-} from 'lucide-react';
+  Globe,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Lightbulb,
+  Target,
+  Shield,
+  Cpu,
+  Sparkles
+} from 'lucide-react',
 const FutureTechnologyShowcase2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const technologies = [,
-    { icon: Rocketitle: 'Quantum 'Computingcolor: 'from-purple-500 to-pink-500' ,};
-    { icon: Braintitle: 'Neural 'Interfacescolor: 'from-blue-500 to-cyan-500' ,};
-    { icon: Globetitle: 'Space 'Technologycolor: 'from-green-500 to-emerald-500' ,};
-    { icon: Zaptitle: 'Biotech 'AIcolor: 'from-orange-500 to-red-500' ,}
-  ];
+    { icon: Rocketitle: 'Quantum 'Computingcolor: 'from-purple-500 to-pink-500' },
+    { icon: Braintitle: 'Neural 'Interfacescolor: 'from-blue-500 to-cyan-500' },
+    { icon: Globetitle: 'Space 'Technologycolor: 'from-green-500 to-emerald-500' },
+    { icon: Zaptitle: 'Biotech 'AIcolor: 'from-orange-500 to-red-500' }
+  ],
   const benefits = [,
-    { icon: TrendingUptext: '1000x Performance' ,};
-    { icon: Userstext: 'Global Impact' ,};
-    { icon: Awardtext: '200+ Patents' ,};
-    { icon: Lightbulbtext: '50+ Technologies' ,}
-  ];
+    { icon: TrendingUptext: '1000x Performance' },
+    { icon: Userstext: 'Global Impact' },
+    { icon: Awardtext: '200+ Patents' },
+    { icon: Lightbulbtext: '50+ Technologies' }
+  ],
   const stats = [,
-    { value: '50+'label: 'Technologies' ,};
-    { value: '200+'label: 'Patents' ,};
-    { value: '500+'label: 'Research Papers' ,};
-    { value: '1M+'label: 'Global Impact' ,}
-  ];
+    { value: '50+'label: 'Technologies' },
+    { value: '200+'label: 'Patents' },
+    { value: '500+'label: 'Research Papers' },
+    { value: '1M+'label: 'Global Impact' }
+  ],
   return (,
     <div className="relative bg-gradient-to-r from-indigo-900 via-purple-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -52,7 +52,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
       <div className="relative z-10 py-16 px-4">,
         <div className="container mx-auto">,
           <div className="grid lg: grid-cols-2 gap-12 items-center">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div,
               className="space-y-8",
             >,
@@ -63,13 +63,13 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
                 <Sparkles className="w-4 h-4" />,
                 NEW: FUTURE TECHNOLOGY SHOWCASE 2026,
               </div>,
-              {/* Main Heading */,}
+              {/* Main Heading */}
               <divh2,
                 className="text-4xl md: text-6xl font-bold text-white leading-tight",
               >,
                 Next-Generation,
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">,
-                  {' ',}Technologies,
+                  {' '}Technologies,
                 </span>,
                 <br />,
                 Shaping Tomorrow,
@@ -91,8 +91,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
                       <tech.icon className="w-5 h-5 text-white" />,
                     </div>,
                     <span className="text-white font-semibold">{tech.title}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Benefits */}
               <div,
@@ -102,8 +101,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
                   <div key={index} className="flex items-center gap-3">,
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                     <span className="text-gray-300">{benefit.text}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* CTA Buttons */}
               <div,
@@ -121,7 +119,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Right Content - Stats & Visual */,}
+            {/* Right Content - Stats & Visual */}
             <div,
               className="space-y-8",
             >,
@@ -132,10 +130,9 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
                     key={index}
                     className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover: border-indigo-400/50 transition-all duration-300",
                   >,
-                    <div className="text-3xl font-bold text-white mb-2">{stat.value,}</div>,
+                    <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
                     <div className="text-gray-300 text-sm">{stat.label}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Visual Element */}
               <div,
@@ -175,7 +172,7 @@ const FutureTechnologyShowcase2026PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default FutureTechnologyShowcase2026PromotionBanner;
+  ),
+},
+export default FutureTechnologyShowcase2026PromotionBanner,
 </div></div>,

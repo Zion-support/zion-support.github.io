@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
 import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
-import { useSmartContracts } from "@/hooks/useSmartContracts";
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
+import { useSmartContracts } from "@/hooks/useSmartContracts",
+import { toast } from "sonner",
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 // Placeholder ABIs - these should be generated from compiled contracts
 const SIMPLE_AGREEMENT_ABI: ethers.InterfaceAbi = ["constructor(address client, address talent, string projectDetailsIPFSHash)",
   "function client() view returns(address)",
   "function talent() view returns(address)",
-  "function projectDetailsIPFSHash() view returns(string)",
-];
+  "function projectDetailsIPFSHash() view returns(string)"
+],
 
 const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
   "constructor(address initialOwner)",
@@ -37,22 +37,22 @@ const ESCROW_AGREEMENT_ABI: ethers.InterfaceAbi = [// From Ownable
   "function depositFunds() payable",
   "function releaseFunds()",
   "function markAsDelivered()",
-  "function raiseDispute()",
-];
+  "function raiseDispute()"
+],
 
 interface SmartContractBuilderProps {
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string; // Assuming clientName is passed as a prop
-  onContractGenerated?: (contractContent: string) => void; // For Solidity
-  onLegalDraftGenerated?: (markdownContent: string) => void; // For Markdown
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string, // Assuming clientName is passed as a prop
+  onContractGenerated?: (contractContent: string) => void, // For Solidity
+  onLegalDraftGenerated?: (markdownContent: string) => void, // For Markdown
   onDeploy?: (contractContent: string) => void}
 
 // Helper to ensure milestones are always an array
 
   }
-  return []};
+  return []},
 
 export function SmartContractBuilder({
   isOpen,
@@ -63,42 +63,42 @@ export function SmartContractBuilder({
   onLegalDraftGenerated, // New prop for the markdown draft
   onDeploy
 }: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form");
+  const [activeTab, setActiveTab] = useState<string>("form"),
 
   // State for Solidity contract(existing)
-  const [generatedSolidityContract, setGeneratedSolidityContract] = useState<string | null>(null);
+  const [generatedSolidityContract, setGeneratedSolidityContract] = useState<string | null>(null),
 
   // New state for Markdown legal draft
-  const [generatedMarkdownContract, setGeneratedMarkdownContract] = useState<string | null>(null);
-  const [isLoadingLegalDraft, setIsLoadingLegalDraft] = useState<boolean>(false);
-  const [legalDraftError, setLegalDraftError] = useState<string | null>(null);
+  const [generatedMarkdownContract, setGeneratedMarkdownContract] = useState<string | null>(null),
+  const [isLoadingLegalDraft, setIsLoadingLegalDraft] = useState<boolean>(false),
+  const [legalDraftError, setLegalDraftError] = useState<string | null>(null),
 
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined);
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined),
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
 
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
     useEscrow: true,
     deployToChain: false // Default to not deploying to chain immediately
-  });
-  const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
+  }),
+  const [deployStatus, setDeployStatus] = useState<string>(''), // e.g., 'deployingdeployed', 'error'
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null), // Existing from Solidity part
   
   // States for on-chain agreement UI and deployment
-  const [enableOnChainAgreement, setEnableOnChainAgreement] = useState<boolean>(false);
-  const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>('');
+  const [enableOnChainAgreement, setEnableOnChainAgreement] = useState<boolean>(false),
+  const [selectedNetwork, setSelectedNetwork] = useState<'ethereum' | 'polygon' | ''>(''),
   // clientWalletAddress and talentWalletAddress might be part of formValues or separate state
   // For now, let's assume they can be part of formValues or derived if prefilled.// We'll use formValues.clientWalletAddress and formValues.talentWalletAddress
 
-  const [onChainDeploymentStatus, setOnChainDeploymentStatus] = useState<'idle' | 'connecting' | 'fetching_code' | 'deploying' | 'success' | 'error'>('idle');
-  const [transactionHash, setTransactionHash] = useState<string | null>(null);
-  const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null);
-  const [deploymentError, setDeploymentError] = useState<string | null>(null);
+  const [onChainDeploymentStatus, setOnChainDeploymentStatus] = useState<'idle' | 'connecting' | 'fetching_code' | 'deploying' | 'success' | 'error'>('idle'),
+  const [transactionHash, setTransactionHash] = useState<string | null>(null),
+  const [deployedContractAddress, setDeployedContractAddress] = useState<string | null>(null),
+  const [deploymentError, setDeploymentError] = useState<string | null>(null),
   
-  const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null); // Bytecode from generate-smart-contract
-  const [contractAbi, setContractAbi] = useState<any | null>(null); // ABI based on contractType
+  const [populatedSolidityCode, setPopulatedSolidityCode] = useState<string | null>(null), // Bytecode from generate-smart-contract
+  const [contractAbi, setContractAbi] = useState<any | null>(null), // ABI based on contractType
 
-  // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts();
+  // This hook might be for the older Solidity template system.// We are now using supabase function 'generate-smart-contract' for Solidity for deployment.const { generateSolidityContract: generateSolidityFromHook, deploySmartContract: deployViaHook } = useSmartContracts(),
 
   // Prefill form with talent and client name(existing useEffect)
   useEffect(() => {
@@ -119,93 +119,93 @@ export function SmartContractBuilder({
         currency: prev?.currency || 'USD',
         deadline: prev?.deadline || '',
         governingLaw: prev?.governingLaw || '',
-        disputeResolution: prev?.disputeResolution || '',
+        disputeResolution: prev?.disputeResolution || ''
       }))}
-  }, [talent, clientName, isOpen]); // Re-run if talent, clientName, or isOpen changes and formValues not set.// Clear any previously generated contracts when a new template is loaded
-    setGeneratedMarkdownContract(null);
-    setGeneratedSolidityContract(null);
-    setLegalDraftError(null);
-    setActiveTab("form")};
+  }, [talent, clientName, isOpen]), // Re-run if talent, clientName, or isOpen changes and formValues not set.// Clear any previously generated contracts when a new template is loaded
+    setGeneratedMarkdownContract(null),
+    setGeneratedSolidityContract(null),
+    setLegalDraftError(null),
+    setActiveTab("form")},
 
   // For generating Solidity(existing logic, adapted)
   
       return}
     try {
       // Assuming generateSolidityContract now primarily uses formValues
-      // and talent/clientName are for context or specific template variables.setGeneratedSolidityContract(solidityCode);
+      // and talent/clientName are for context or specific template variables.setGeneratedSolidityContract(solidityCode),
       if(onContractGenerated) { // Existing prop for Solidity
         onContractGenerated(solidityCode)}
       // Potentially switch to a Solidity preview tab if that's different
       // For now, let's assume the main "Preview" tab can show Solidity if deployOptions.deployToChain is true
       // Or if there's a specific action for "Preview Solidity"
-      toast.success("Solidity code generated (simulated).");
-      // setActiveTab("preview"); // Or a specific solidity preview tab
+      toast.success("Solidity code generated (simulated)."),
+      // setActiveTab("preview"), // Or a specific solidity preview tab
     } catch(error) {
-      console.error("Error generating Solidity contract:", error);
+      console.error("Error generating Solidity contract:", error),
       toast.error("Failed to generate Solidity contract.")}
-  };
+  },
   
   // New function for generating Markdown legal draft
   
       return}
-    setIsLoadingLegalDraft(true);
-    setLegalDraftError(null);
-    setGeneratedMarkdownContract(null);
+    setIsLoadingLegalDraft(true),
+    setLegalDraftError(null),
+    setGeneratedMarkdownContract(null),
 
     try {
       
       const { data, error } = await supabase.functions.invoke('generate-contract', {
-        body: payload,
-      });
+        body: payload
+      }),
 
       if(error) {
         throw error}
 
       if(data && data.markdownContent) { // Assuming your Supabase func returns { markdownContent: "..." }
-        setGeneratedMarkdownContract(data.markdownContent);
+        setGeneratedMarkdownContract(data.markdownContent),
         if(onLegalDraftGenerated) {
           onLegalDraftGenerated(data.markdownContent)}
-        setActiveTab("preview_markdown"); // Switch to a new tab for Markdown preview
+        setActiveTab("preview_markdown"), // Switch to a new tab for Markdown preview
         toast.success("Legal draft generated successfully!")} else {
         throw new Error("No content received from draft generator.")}
     } catch(err: any) {
-      console.error("Error generating legal draft:", err);
-      setLegalDraftError(err.message || "Failed to generate legal draft.");
+      console.error("Error generating legal draft:", err),
+      setLegalDraftError(err.message || "Failed to generate legal draft."),
       toast.error(err.message || "Failed to generate legal draft.")} finally {
       setIsLoadingLegalDraft(false)}
-  };
+  },
 
-      toast.info("Generating PDF...");
+      toast.info("Generating PDF..."),
       html2pdf().from(element).set(opt).save()
         .then(() => toast.success("PDF downloaded successfully!"))
         .catch((err) => {
-          toast.error("PDF generation failed.");
+          toast.error("PDF generation failed."),
           console.error("Error generating PDF:", err)})} else {
       toast.warn("No draft content available to download or form values missing.")}
-  };
+  },
 
       return}
 
-    setOnChainDeploymentStatus('connecting');
-    setDeploymentError(null);
-    setTransactionHash(null);
-    setDeployedContractAddress(null);
-    setPopulatedSolidityCode(null);
+    setOnChainDeploymentStatus('connecting'),
+    setDeploymentError(null),
+    setTransactionHash(null),
+    setDeployedContractAddress(null),
+    setPopulatedSolidityCode(null),
 
     try {
       if(!window.ethereum) {
         throw new Error("MetaMask is not installed.Please install it to continue.")}
 
-      await window.ethereum.request({ method: 'eth_requestAccounts' });
+      await window.ethereum.request({ method: 'eth_requestAccounts' }),
 
-      const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89'; // 1 for Ethereum Mainnet, 137 for Polygon
+      const targetChainId = selectedNetwork === 'ethereum' ? '0x1' : '0x89', // 1 for Ethereum Mainnet, 137 for Polygon
 
       if(currentNetwork.chainId.toString() !== BigInt(targetChainId).toString()) {
         try {
           await window.ethereum.request({
             method: 'wallet_switchEthereumChain',
-            params: [{ chainId: targetChainId }],
-          });
+            params: [{ chainId: targetChainId }]
+          }),
           // Re-initialize provider and signer after network switch
           // 
           // signer = await newProvider.getSigner()} catch(switchError: any) {
@@ -214,33 +214,33 @@ export function SmartContractBuilder({
           throw new Error(`Failed to switch network: ${switchError.message}`)}
       }
 
-      setOnChainDeploymentStatus('fetching_code');
+      setOnChainDeploymentStatus('fetching_code'),
       // Determine contractType(e.g. from a form field if it's selectable, or default)
-      // For now, let's assume it's part of formValues or a fixed choice for this flow.const contractTypeToDeploy: ContractType = formValues.contractType || 'simple'; // Default to 'simple'
+      // For now, let's assume it's part of formValues or a fixed choice for this flow.const contractTypeToDeploy: ContractType = formValues.contractType || 'simple', // Default to 'simple'
 
       // Create a temporary projectDetailsIPFSHash(replace with actual IPFS hashing later)
       
-      const projectDetailsIPFSHash = ethers.id(projectDetailsString); // Simple hash
+      const projectDetailsIPFSHash = ethers.id(projectDetailsString), // Simple hash
 
       const { data, error: funcError } = await supabase.functions.invoke('generate-smart-contract', {
         body: {
           contractType: contractTypeToDeploy,
           clientAddress: formValues.clientWalletAddress,
           talentAddress: formValues.talentWalletAddress,
-          projectDetailsIPFSHash: projectDetailsIPFSHash,
-        },
-      });
+          projectDetailsIPFSHash: projectDetailsIPFSHash
+        }
+      }),
 
-      if(funcError) throw new Error(`Failed to fetch contract code: ${funcError.message}`);
-      if(!data || !data.solidityCode) throw new Error("No Solidity code received from generator.");
+      if(funcError) throw new Error(`Failed to fetch contract code: ${funcError.message}`),
+      if(!data || !data.solidityCode) throw new Error("No Solidity code received from generator."),
 
-      setPopulatedSolidityCode(data.solidityCode); // This is actually bytecode if Supabase func compiles
-      // For now, assuming data.solidityCode IS the bytecode.This is a placeholder.// In reality, the Supabase function should return bytecode and ABI.// Or, if it returns Solidity, we'd compile it client-side(not recommended for production).setContractAbi(currentAbi);
+      setPopulatedSolidityCode(data.solidityCode), // This is actually bytecode if Supabase func compiles
+      // For now, assuming data.solidityCode IS the bytecode.This is a placeholder.// In reality, the Supabase function should return bytecode and ABI.// Or, if it returns Solidity, we'd compile it client-side(not recommended for production).setContractAbi(currentAbi),
 
-      setOnChainDeploymentStatus('deploying');
-      toast.info("Deploying contract... This may take a moment.Please confirm in MetaMask.");
+      setOnChainDeploymentStatus('deploying'),
+      toast.info("Deploying contract... This may take a moment.Please confirm in MetaMask."),
 
-      // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode.let contract;
+      // IMPORTANT: populatedSolidityCode here should be BYTECODE.// The current 'generate-smart-contract' returns Solidity source.This will not work.// This is a placeholder for the actual deployment flow.// We need a compile step or the Supabase function must return bytecode.// For now, this will fail if populatedSolidityCode is not bytecode.let contract,
       // Adjust constructor arguments based on contractTypeToDeploy
       if(contractTypeToDeploy === 'simple') {
         contract = await factory.deploy(formValues.clientWalletAddress, formValues.talentWalletAddress, projectDetailsIPFSHash)} else { // escrow
@@ -248,21 +248,21 @@ export function SmartContractBuilder({
         // The Ownable(_client) is handled by OpenZeppelin's constructor if `initialOwner` is the first arg to Ownable's constructor.// Or, if our EscrowAgreement's constructor directly calls Ownable(_client), then that's fine.// Based on EscrowAgreement.sol: constructor(address _talent, address _client, string memory _projectDetailsIPFSHash) Ownable(_client)
         // The ethers.js deploy will pass these args to the Solidity constructor.contract = await factory.deploy(formValues.talentWalletAddress, formValues.clientWalletAddress, projectDetailsIPFSHash)}
 
-      await contract.waitForDeployment();
+      await contract.waitForDeployment(),
       
-      setDeployedContractAddress(deployedAddr);
-      setTransactionHash(contract.deploymentTransaction()?.hash || null);
-      setOnChainDeploymentStatus('success');
+      setDeployedContractAddress(deployedAddr),
+      setTransactionHash(contract.deploymentTransaction()?.hash || null),
+      setOnChainDeploymentStatus('success'),
       toast.success(`Contract deployed successfully at ${deployedAddr}`)} catch(err: any) {
-      console.error("Deployment error:", err);
-      setDeploymentError(err.message || "An unknown error occurred during deployment.");
-      setOnChainDeploymentStatus('error');
+      console.error("Deployment error:", err),
+      setDeploymentError(err.message || "An unknown error occurred during deployment."),
+      setOnChainDeploymentStatus('error'),
       toast.error(err.message || "Deployment failed.")}
-  };
+  },
 
   // This function is passed to ContractForm.// We now decide what "generate" means in this context.// The subtask asks for a "Generate Legal Draft" button.// Let's assume ContractForm's onContractGenerated is for the primary action, which could be Solidity or data pass-through.// For clarity, we will add a dedicated "Generate Legal Draft" button in SmartContractBuilder's JSX.// The onContractGenerated from ContractForm might be re-purposed or trigger our Solidity generation.const handleFormSubmitFromContractForm = (values: ContractFormValues) => {
-    // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow.setFormValues(values); // Update formValues state first
-    handleGenerateSolidity(); // Then generate Solidity.};
+    // This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow.setFormValues(values), // Update formValues state first
+    handleGenerateSolidity(), // Then generate Solidity.},
 
   return (<Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -405,7 +405,7 @@ export function SmartContractBuilder({
                       {onChainDeploymentStatus === 'deploying' && <><Loader2 className="mr-2 h-4 w-4 animate-spin" />Deploying to {selectedNetwork}...</>}
                       {onChainDeploymentStatus === 'success' && <CheckCircle className="mr-2 h-4 w-4 text-green-500"  />}
                       {onChainDeploymentStatus === 'error' && <XCircle className="mr-2 h-4 w-4 text-red-500"  />}
-                      {onChainDeploymentStatus.charAt(0).toUpperCase() + onChainDeploymentStatus.slice(1).replace('_', ' ')}
+                      {onChainDeploymentStatus.charAt(0).toUpperCase() + onChainDeploymentStatus.slice(1).replace('_ ')}
                     </p>
                     {transactionHash && (
                       <p>Transaction Hash: <a href={selectedNetwork === 'ethereum' ? `https://etherscan.io/tx/${transactionHash}` : `https://polygonscan.com/tx/${transactionHash}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline flex items-center gap-1">{transactionHash.substring(0,10)}...{transactionHash.substring(transactionHash.length-8)} <ExternalLink className="h-3 w-3" /></a></p>

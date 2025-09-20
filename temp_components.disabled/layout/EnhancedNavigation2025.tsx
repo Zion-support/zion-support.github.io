@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, ChevronDown, Search, 
   Brain, Cpu, Rocket, Shield, 
@@ -8,18 +8,18 @@ import {
   Target, Microscope, Atom, Database,
   Lock, Cloud, BarChart3, Settings,
   TrendingUp, Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react';
-import SearchComponent from '../SearchComponent';
-import ThemeToggle from '../ThemeToggle';
+} from 'lucide-react',
+import SearchComponent from '../SearchComponent',
+import ThemeToggle from '../ThemeToggle',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -293,27 +293,27 @@ const navigationItems: NavigationItem[] = [
       { name: 'Status Page', href: '/status', description: 'Service status' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about', description: 'Our mission and vision' },
   { name: 'Careers', href: '/careers', description: 'Join our team' },
   { name: 'News & Updates', href: '/news', description: 'Latest company news' },
   { name: 'Contact', href: '/contact', description: 'Get in touch' }
-];
+],
 
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   // Removed unused isScrolled state and duplicate scroll handler
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
 
   const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
 
 
@@ -323,7 +323,7 @@ const EnhancedNavigation2025: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedNavigation2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedNavigation2025;
+export default EnhancedNavigation2025,

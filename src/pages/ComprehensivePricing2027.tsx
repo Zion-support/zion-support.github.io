@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-
+} from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "@/data/innovativeMicroSaasServices2027";
+import { EMERGING_TECH_SERVICES_2027 } from "@/data/emergingTechServices2027";
 export default function ComprehensivePricing2027() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [sortBy, setSortBy] = useState<'price' | 'aiScore' | 'rating'>('price'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
-  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027],
 
-  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))],
 
   const filteredServices = allServices
     .filter(service =>
@@ -29,64 +28,50 @@ export default function ComprehensivePricing2027() {
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
     )
     .sort((a, b) => {
-      if (sortBy === 'price') return a.price - b.price;
+      if (sortBy === 'price') return a.price - b.price,
       if (sortBy === 'aiScore') return b.aiScore - a.aiScore;
       return b.rating - a.rating;
     });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
+      y: 0,opacity: 1,transition: {
+        duration: 0.5,ease: "easeOut"
       }
     }
   };
-
   const cardVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
+    hidden: { scale: 0.8, opacity: 0 };
     visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        ease: "easeOut"
+      scale: 1,opacity: 1,transition: {
+        duration: 0.3,ease: "easeOut"
       }
-    },
+    };
     hover: {
-      scale: 1.02,
-      y: -5,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
+      scale: 1.02,y: -5,transition: {
+        duration: 0.2,ease: "easeOut"
       }
     }
   };
-
   const getPriceColor = (price: number) => {
     if (price < 1000) return 'text-green-400';
-    if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400';
-  };
+    if (price < 2500) return 'text-yellow-400',
+    return 'text-red-400'
+  },
 
   const getPriceTier = (price: number) => {
     if (price < 1000) return 'Starter';
-    if (price < 2500) return 'Professional';
-    return 'Enterprise';
-  };
+    if (price < 2500) return 'Professional',
+    return 'Enterprise'
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -99,9 +84,9 @@ export default function ComprehensivePricing2027() {
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`;
+                animationDelay: `${Math.random() * 3}s`;
                 animationDuration: `${3 + Math.random() * 2}s`
               }}
             />
@@ -143,9 +128,9 @@ export default function ComprehensivePricing2027() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
-              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' };
+              { label: 'Starting Price', value: `$${Math.min(...allServices.map(s => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' };
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s) => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' };
               { label: 'Rating Avg', value: `${(allServices.reduce((acc, s) => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' }
             ].map((stat, index) => (
               <div key={index} className="text-center group">
@@ -476,7 +461,7 @@ export default function ComprehensivePricing2027() {
             <p className="text-xl text-gray-300 mb-8">
               Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
@@ -494,5 +479,5 @@ export default function ComprehensivePricing2027() {
         </div>
       </motion.section>
     </div>
-  );
+  )
 }

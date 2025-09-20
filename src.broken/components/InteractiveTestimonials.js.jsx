@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2  } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2  } from 'lucide-react',
 ,
   {
 
@@ -57,53 +57,53 @@ import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, Thu
     category: 'Global Operations',
     date: '2 months ago',
     likes: 94,
-    verified: true},
-];
+    verified: true}
+],
 const categories = ['
-  'All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations',
-];
+  'All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'
+],
 export function InteractiveTestimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [likedTestimonials, setLikedTestimonials] = useState(new Set());
+  const [currentIndex, setCurrentIndex] = useState(0),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+  const [likedTestimonials, setLikedTestimonials] = useState(new Set()),
   const filteredTestimonials ='
     selectedCategory === 'All'
       ? testimonials
       : testimonials.filter()
           testimonial => testimonial.category === selectedCategory
-        );
+        ),
   useEffect(() => {
-    if(!isAutoPlaying) return;
+    if(!isAutoPlaying) return,
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, filteredTestimonials.length]);
+      setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, [isAutoPlaying, filteredTestimonials.length]),
   const nextTestimonial = () => {
-    setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);
-  };
+    setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length),
+  },
   const prevTestimonial = () => {
     setCurrentIndex()
       prev =>
         (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length
-    );
-  };
+    ),
+  },
   const toggleLike = testimonialId => {
 
     setLikedTestimonials(prev => {
 
-      const newSet = new Set(prev);
+      const newSet = new Set(prev),
       if(newSet.has(testimonialId)) {
 
-        newSet.delete(testimonialId);
+        newSet.delete(testimonialId),
       } else {
 
-        newSet.add(testimonialId);
+        newSet.add(testimonialId),
       }
-      return newSet;
-    });
-  };
+      return newSet,
+    }),
+  },
   const renderStars = rating => {
 
     return Array.from({ length: 5 }, (_, i) => (
@@ -111,8 +111,8 @@ export function InteractiveTestimonials() {
         key={i}
         className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
       />
-    ));
-  };
+    )),
+  },
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -122,7 +122,7 @@ export function InteractiveTestimonials() {
       transition: {
 
         staggerChildren: 0.1,
-        delayChildren: 0.2}}};
+        delayChildren: 0.2}}},
   const itemVariants = {
 
     hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -134,7 +134,7 @@ export function InteractiveTestimonials() {
       transition: {
 
         duration: 0.5,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}"
@@ -425,7 +425,7 @@ export function InteractiveTestimonials() {
               clients rave about
             </p>
 "
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 Start Your Journey"
                 <ChevronRight className="w-5 h-5" />
@@ -440,6 +440,6 @@ export function InteractiveTestimonials() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 '"`

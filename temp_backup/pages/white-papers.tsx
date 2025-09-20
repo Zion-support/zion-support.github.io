@@ -1,16 +1,16 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  FileText, 
+  FileText,
   Download, 
   Calendar, 
   User, 
   ArrowRight, 
   Tag, 
   ExternalLink 
-} from 'lucide-react';
+} from 'lucide-react',
 
 const whitePapers = [
   {
@@ -49,7 +49,7 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
-];
+],
 
 export default function WhitePapersPage() {
   return (
@@ -66,6 +66,6 @@ export default function WhitePapersPage() {
         </div>
       </div>
     </div>
-  );
-};
-export default white-papers;
+  ),
+},
+export default white-papers,

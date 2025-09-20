@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -11,19 +11,19 @@ export default function Page() {
             description: "GDPR, HIPAA, SOC 2, and industry - specific compliance",
             icon: <Shield className="h-8 w-8 text-zion -blue"/>
 
-    ];
+    ],
     const pricingPlans = [{
             name: "Basic Security",
             price: "$299",
             period: "/month",
             description: "Essential cybersecurity for small businesses",
-            features[;
+            features[,
                 "Security assessment",
                 "Basic monitoring",
                 "Monthly reports",
                 "Email support",
                 "Security training"
-            ],;
+            ],
             popular: false
         },
         {
@@ -31,14 +31,14 @@ export default function Page() {
             price: "$799",
             period: "/month",
             description: "Comprehensive protection for growing businesses",
-            features[;
+            features[,
                 "Full security audit",
                 "24 / 7 monitoring",
                 "Incident response",
                 "Priority support",
                 "Advanced training",
                 "Compliance assistance"
-            ],;
+            ],
             popular: true
         },
         {
@@ -46,17 +46,17 @@ export default function Page() {
             price: "$1,999",
             period: "/month",
             description: "Full - scale cybersecurity for large organizations",
-            features[;
+            features[,
                 "Custom security solutions",
                 "Dedicated security team",
                 "Advanced threat hunting",
                 "White - label solutions",
                 "Custom integrations",
                 "Executive reporting"
-            ],;
+            ],
             popular: false
 
-    ];
+    ],
     const testimonials = [{
             name: "Michael Chen",
             role: "CISO, FinTech Solutions",
@@ -75,7 +75,7 @@ export default function Page() {
             content: "24 / 7 incident response gives us peace of mind.Zion's team responds faster than  other provider we've used.",
             rating: 5
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
       <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com / cybersecurity - services"/>
 

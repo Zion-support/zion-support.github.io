@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Cloud, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredCloudInfrastructure: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
       title: 'Multi-cloud Support',
       description: 'Infrastructure management across various cloud providers'
     }
-  ];
+  ],
 
   const infrastructureCapabilities = [
     {
       area: 'Resource Management',
-      capabilities: ['Auto-scaling', 'Load balancing', 'Resource optimization', 'Cost management'],
+      capabilities: ['Auto-scalingLoad balancing', 'Resource optimizationCost management'],
       improvement: '40% cost savings',
       efficiency: 'Automated'
     },
     {
       area: 'Performance Optimization',
-      capabilities: ['Performance monitoring', 'Bottleneck detection', 'Auto-tuning', 'Capacity planning'],
+      capabilities: ['Performance monitoringBottleneck detection', 'Auto-tuningCapacity planning'],
       improvement: '60% performance boost',
       reliability: 'Enhanced'
     },
     {
       area: 'Security & Compliance',
-      capabilities: ['Threat detection', 'Access control', 'Compliance monitoring', 'Security automation'],
+      capabilities: ['Threat detectionAccess control', 'Compliance monitoringSecurity automation'],
       improvement: 'Zero breaches',
       security: 'Maximum'
     },
     {
       area: 'Disaster Recovery',
-      capabilities: ['Backup automation', 'Recovery testing', 'Failover systems', 'Business continuity'],
+      capabilities: ['Backup automationRecovery testing', 'Failover systemsBusiness continuity'],
       improvement: '99.99% uptime',
       reliability: 'Enterprise-grade'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Enterprise Cloud',
       description: 'AI-powered cloud infrastructure for large enterprise applications and services',
-      benefits: ['Scalability', 'Cost optimization', 'Security', 'Compliance']
+      benefits: ['ScalabilityCost optimization', 'SecurityCompliance']
     },
     {
       title: 'Microservices Architecture',
       description: 'Cloud infrastructure for microservices and containerized applications',
-      benefits: ['Auto-scaling', 'Load balancing', 'Service discovery', 'Monitoring']
+      benefits: ['Auto-scalingLoad balancing', 'Service discoveryMonitoring']
     },
     {
       title: 'Big Data Processing',
       description: 'Cloud infrastructure for large-scale data processing and analytics',
-      benefits: ['Elastic scaling', 'Resource optimization', 'Cost management', 'Performance tuning']
+      benefits: ['Elastic scalingResource optimization', 'Cost managementPerformance tuning']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Cloud infrastructure for development and deployment automation',
-      benefits: ['Automated deployment', 'Environment management', 'Testing automation', 'Rollback capabilities']
+      benefits: ['Automated deploymentEnvironment management', 'Testing automationRollback capabilities']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with cloud infrastructure',
       features: [
-        'Up to 100 instances',
-        'Basic auto-scaling',
-        'Standard monitoring',
-        'Email support',
+        'Up to 100 instancesBasic auto-scaling',
+        'Standard monitoringEmail support',
         'Basic security'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced cloud infrastructure needs',
       features: [
-        'Up to 1,000 instances',
-        'Advanced auto-scaling',
-        'Custom optimization',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 1,000 instancesAdvanced auto-scaling',
+        'Custom optimizationPriority support',
+        'Advanced analyticsAPI access',
         'Multi-cloud support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex cloud infrastructure requirements',
       features: [
-        'Unlimited instances',
-        'Custom infrastructure development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited instancesCustom infrastructure development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
       position: "DevOps Director",
       company: "Advanced Software Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Build with AI-Powered Cloud Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredCloudInfrastructure: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredCloudInfrastructure;
+export default AIPoweredCloudInfrastructure,

@@ -1,5 +1,5 @@
-import React, { memo, useEffect, useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { memo, useEffect, useState } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 }"
         role="region"`
@@ -26,18 +26,18 @@ export default function Page() {
       </div>
     ))}
   </div>
-));
+)),
 const PerformanceOptimizedHero = memo(() => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isLoaded, setIsLoaded] = useState(false),
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    const loadTimer = setTimeout(() => setIsLoaded(true), 500);
+    const timer = setTimeout(() => setIsVisible(true), 100),
+    const loadTimer = setTimeout(() => setIsLoaded(true), 500),
     return () => {
-      clearTimeout(timer);
-      clearTimeout(loadTimer);
-    };
-  }, []);
+      clearTimeout(timer),
+      clearTimeout(loadTimer),
+    },
+  }, []),
   const stats = [{
 
       number: '100+',
@@ -61,8 +61,8 @@ const PerformanceOptimizedHero = memo(() => {
       number: 'Global',
       label: 'Service Coverage',
       icon: '🌍',
-      color: 'from-green-400 to-teal-400'},
-  ];
+      color: 'from-green-400 to-teal-400'}
+  ],
   if(!isVisible) {
 
     return ("
@@ -74,7 +74,7 @@ const PerformanceOptimizedHero = memo(() => {
           </p>
         </div>
       </section>
-    );
+    ),
   }
   return ()
     <section"
@@ -183,8 +183,8 @@ const PerformanceOptimizedHero = memo(() => {
         </>
       )}
     </section>
-  );
-});
-PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
-export default PerformanceOptimizedHero;
+  ),
+}),
+PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero',
+export default PerformanceOptimizedHero,
 '"`

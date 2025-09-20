@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
-  Workflow, 
+  Workflow,
   Brain, 
   Zap, 
   Shield, 
@@ -23,42 +23,28 @@ import {
   Cpu,
   Server,
   ShoppingCart
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIWorkflowOrchestrator = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Intelligent Decision Making",
-      description: "AI-powered workflow decisions based on real-time data analysis and predictive modeling"
+      icon: Brain,title: "Intelligent Decision Making",description: "AI-powered workflow decisions based on real-time data analysis and predictive modeling"
+    };
+    {
+      icon: Zap,title: "Lightning Fast Execution",description: "Optimized workflow execution with parallel processing and intelligent resource allocation"
+    };
+    {
+      icon: Shield,title: "Enterprise Security",description: "Bank-level security with encryption, access controls, and compliance monitoring"
     },
     {
-      icon: Zap,
-      title: "Lightning Fast Execution",
-      description: "Optimized workflow execution with parallel processing and intelligent resource allocation"
-    },
+      icon: Cloud,title: "Scalable Infrastructure",description: "Auto-scaling cloud infrastructure that grows with your business needs"
+    };
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, access controls, and compliance monitoring"
-    },
+      icon: BarChart3,title: "Advanced Analytics",description: "Comprehensive insights into workflow performance and optimization opportunities"
+    };
     {
-      icon: Cloud,
-      title: "Scalable Infrastructure",
-      description: "Auto-scaling cloud infrastructure that grows with your business needs"
-    },
-    {
-      icon: BarChart3,
-      title: "Advanced Analytics",
-      description: "Comprehensive insights into workflow performance and optimization opportunities"
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless team coordination with real-time updates and communication tools"
+      icon: Users,title: "Team Collaboration",description: "Seamless team coordination with real-time updates and communication tools"
     }
   ];
-
   const benefits = [
     "Reduce manual workflow processing by up to 80%",
     "Improve decision accuracy with AI-powered insights",
@@ -66,39 +52,28 @@ const AIWorkflowOrchestrator = () => {
     "Ensure compliance and audit trail maintenance",
     "Real-time monitoring and alerting capabilities",
     "Seamless integration with existing systems"
-  ];
+  ],
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Automate loan processing, fraud detection, and compliance workflows",
+      title: "Financial Services",description: "Automate loan processing, fraud detection, and compliance workflows",
       icon: BarChart3
-    },
+    };
     {
-      title: "Healthcare",
-      description: "Streamline patient care coordination and medical record management",
-      icon: Users
-    },
+      title: "Healthcare",description: "Streamline patient care coordination and medical record management",icon: Users
+    };
     {
-      title: "Manufacturing",
-      description: "Optimize production scheduling and quality control processes",
-      icon: Settings
-    },
+      title: "Manufacturing",description: "Optimize production scheduling and quality control processes",icon: Settings
+    };
     {
-      title: "Retail",
-      description: "Automate inventory management and customer service workflows",
-      icon: ShoppingCart
+      title: "Retail",description: "Automate inventory management and customer service workflows",icon: ShoppingCart
     }
   ];
-
   const pricing = [
     {
-      name: "Starter",
-      price: "$2,500",
-      period: "/month",
-      description: "Perfect for small teams getting started with workflow automation",
-      features: [
-        "Up to 100 workflow executions/month",
+      name: "Starter",price: "$2,500",
+      period: "/month",description: "Perfect for small teams getting started with workflow automation",features: [
+        "Up to 100 workflow executions/month";
         "Basic AI decision making",
         "Standard security features",
         "Email support",
@@ -106,11 +81,8 @@ const AIWorkflowOrchestrator = () => {
       ]
     },
     {
-      name: "Professional",
-      price: "$7,500",
-      period: "/month",
-      description: "Ideal for growing businesses with complex workflow needs",
-      features: [
+      name: "Professional",price: "$7,500",
+      period: "/month",description: "Ideal for growing businesses with complex workflow needs",features: [
         "Up to 1,000 workflow executions/month",
         "Advanced AI capabilities",
         "Enhanced security & compliance",
@@ -119,14 +91,10 @@ const AIWorkflowOrchestrator = () => {
         "Custom integrations"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations with specific requirements",
-      features: [
-        "Unlimited workflow executions",
+      name: "Enterprise",price: "Custom",period: "",description: "Tailored solutions for large organizations with specific requirements",features: [
+        "Unlimited workflow executions";
         "Custom AI model training",
         "Dedicated security team",
         "24/7 phone support",
@@ -134,7 +102,7 @@ const AIWorkflowOrchestrator = () => {
         "On-premise deployment options"
       ]
     }
-  ];
+  ],
 
   return (
     <>
@@ -348,7 +316,7 @@ const AIWorkflowOrchestrator = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Workflows?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
@@ -368,7 +336,6 @@ const AIWorkflowOrchestrator = () => {
         </section>
       </div>
     </>
-  );
+  )
 };
-
 export default AIWorkflowOrchestrator;

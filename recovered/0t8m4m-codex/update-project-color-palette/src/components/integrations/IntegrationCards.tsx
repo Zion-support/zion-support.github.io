@@ -1,17 +1,17 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check, ExternalLink } from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
 interface IntegrationCardProps {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  status?: "connected" | "disconnected" | "pending",
+  href?: string,
+  onConnect?: () => void
 }
 
 export function IntegrationCard({
@@ -20,7 +20,7 @@ export function IntegrationCard({
   icon,
   status = "disconnected",
   href,
-  onConnect,
+  onConnect
 }: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -65,7 +65,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  );
+  ),
 }
 
 export function IntegrationCards() {
@@ -73,5 +73,5 @@ export function IntegrationCards() {
     <div className="grid md:grid-cols-3 gap-6">
       {/* Integration cards would go here */}
     </div>
-  );
+  ),
 }

@@ -1,2 +1,2 @@
 
-export default analytics-dashboard;
+export default analytics-dashboard,

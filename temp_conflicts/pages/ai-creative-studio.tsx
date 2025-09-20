@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Palette, Image, Video, Music, FileText, Brain, 
   CheckCircle, ArrowRight, Zap, Target, Award,
   Users, Clock, Shield, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AICreativeStudio: React.FC = () => {
   const features = [
@@ -39,7 +39,7 @@ const AICreativeStudio: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Multi-user creative workflows with version control'
     }
-  ];
+  ],
 
   const creativeTools = [
     {
@@ -74,30 +74,30 @@ const AICreativeStudio: React.FC = () => {
         { name: 'Script Writer', description: 'Video scripts and storytelling', accuracy: '97.8%' }
       ]
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Marketing & Advertising',
       description: 'Create compelling campaigns, social media content, and brand materials',
-      benefits: ['10x faster content creation', 'Consistent brand voice', 'A/B testing automation']
+      benefits: ['10x faster content creationConsistent brand voice', 'A/B testing automation']
     },
     {
       title: 'E-commerce & Retail',
       description: 'Generate product visuals, descriptions, and marketing materials',
-      benefits: ['Unlimited product imagery', 'Localized content', 'Seasonal campaign automation']
+      benefits: ['Unlimited product imageryLocalized content', 'Seasonal campaign automation']
     },
     {
       title: 'Entertainment & Media',
       description: 'Produce videos, music, and creative content for various platforms',
-      benefits: ['Rapid content production', 'Style customization', 'Multi-format output']
+      benefits: ['Rapid content productionStyle customization', 'Multi-format output']
     },
     {
       title: 'Education & Training',
       description: 'Create engaging educational materials and visual learning content',
-      benefits: ['Interactive content creation', 'Multilingual support', 'Accessibility features']
+      benefits: ['Interactive content creationMultilingual support', 'Accessibility features']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -106,10 +106,8 @@ const AICreativeStudio: React.FC = () => {
       period: '/month',
       description: 'Perfect for individual creators and small teams',
       features: [
-        'Up to 100 creations/month',
-        'Basic AI tools',
-        'Standard templates',
-        'Email support',
+        'Up to 100 creations/monthBasic AI tools',
+        'Standard templatesEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -120,12 +118,9 @@ const AICreativeStudio: React.FC = () => {
       period: '/month',
       description: 'Ideal for creative agencies and growing businesses',
       features: [
-        'Up to 500 creations/month',
-        'Advanced AI algorithms',
-        'Custom templates',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
+        'Up to 500 creations/monthAdvanced AI algorithms',
+        'Custom templatesPriority support',
+        'Advanced analyticsTeam collaboration',
         'API access'
       ],
       popular: true
@@ -136,17 +131,14 @@ const AICreativeStudio: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations',
       features: [
-        'Unlimited creations',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited creationsCustom AI model training',
+        'White-label solutionsDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -167,7 +159,7 @@ const AICreativeStudio: React.FC = () => {
       position: "Content Producer",
       company: "Media Studio Inc"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -494,7 +486,7 @@ const AICreativeStudio: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Unleash Your Creativity?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -516,7 +508,7 @@ const AICreativeStudio: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AICreativeStudio;
+export default AICreativeStudio,

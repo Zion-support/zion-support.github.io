@@ -1,105 +1,61 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Users, 
+  Users,
   Globe, 
   Award,
   TrendingUp,
   Building,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
+} from "lucide-react";
 export default function Partners() {
   const partnershipTypes = [
     {
-      title: 'Technology Partners',
-      description: 'Collaborate with leading tech companies to deliver cutting-edge solutions',
-      icon: '🔧',
-      benefits: ['Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']
+      title: 'Technology Partners',description: 'Collaborate with leading tech companies to deliver cutting-edge solutions',icon: '🔧',benefits: ['Access to latest technologiesJoint product development', 'Shared marketing opportunities']
     },
     {
-      title: 'Channel Partners',
-      description: 'Expand your reach through our global network of resellers and distributors',
-      icon: '🌐',
-      benefits: ['Increased market presence', 'Revenue sharing programs', 'Training and certification']
+      title: 'Channel Partners',description: 'Expand your reach through our global network of resellers and distributors',icon: '🌐',benefits: ['Increased market presenceRevenue sharing programs', 'Training and certification']
     },
     {
-      title: 'Strategic Partners',
-      description: 'Form long-term alliances for mutual growth and market expansion',
-      icon: '🤝',
-      benefits: ['Joint ventures', 'Market expansion support', 'Shared R&D initiatives']
+      title: 'Strategic Partners',description: 'Form long-term alliances for mutual growth and market expansion',icon: '🤝',benefits: ['Joint venturesMarket expansion support', 'Shared R&D initiatives']
     },
     {
-      title: 'Academic Partners',
-      description: 'Partner with universities and research institutions for innovation',
-      icon: '🎓',
-      benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
+      title: 'Academic Partners',description: 'Partner with universities and research institutions for innovation',icon: '🎓',benefits: ['Research collaborationTalent pipeline', 'Innovation programs']
     }
-  ];
+  ],
   const existingPartners = [
     {
-      name: 'Microsoft',
-      logo: 'https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop',
-      category: 'Technology Partner',
-      description: 'Leading cloud and AI solutions provider',
-      year: '2020'
-    },
+      name: 'Microsoft',logo: 'https://images.unsplash.com/photo-1634942537034-2531766767d9?w=200&h=200&fit=crop',category: 'Technology Partner',description: 'Leading cloud and AI solutions provider',year: '2020'
+    };
     {
-      name: 'Amazon Web Services',
-      logo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop',
-      category: 'Cloud Partner',
-      description: 'World\'s most comprehensive cloud platform',
-      year: '2021'
-    },
+      name: 'Amazon Web Services',logo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop',category: 'Cloud Partner',description: 'World\'s most comprehensive cloud platform',year: '2021'
+    };
     {
-      name: 'Google Cloud',
-      logo: 'https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop',
-      category: 'AI Partner',
-      description: 'Advanced AI and machine learning solutions',
-      year: '2022'
-    },
+      name: 'Google Cloud',logo: 'https://images.unsplash.com/photo-1611162617213-2d3e1baee311?w=200&h=200&fit=crop',category: 'AI Partner',description: 'Advanced AI and machine learning solutions',year: '2022'
+    };
     {
-      name: 'IBM',
-      logo: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop',
-      category: 'Enterprise Partner',
-      description: 'Enterprise AI and quantum computing',
-      year: '2021'
-    },
+      name: 'IBM',logo: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=200&h=200&fit=crop',category: 'Enterprise Partner',description: 'Enterprise AI and quantum computing',year: '2021'
+    };
     {
-      name: 'Stanford University',
-      logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop',
-      category: 'Academic Partner',
-      description: 'Research collaboration in AI and technology',
-      year: '2023'
-    },
+      name: 'Stanford University',logo: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=200&h=200&fit=crop',category: 'Academic Partner',description: 'Research collaboration in AI and technology',year: '2023'
+    };
     {
-      name: 'MIT',
-      logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop',
-      category: 'Research Partner',
-      description: 'Innovation in emerging technologies',
-      year: '2022'
+      name: 'MIT',logo: 'https://images.unsplash.com/photo-1562774053-701939374585?w=200&h=200&fit=crop',category: 'Research Partner',description: 'Innovation in emerging technologies',year: '2022'
     }
   ];
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Revenue Growth',
-      description: 'Access new markets and customer segments through our global network'
-    },
+      icon: TrendingUp,title: 'Revenue Growth',description: 'Access new markets and customer segments through our global network'
+    };
     {
-      icon: Users,
-      title: 'Network Expansion',
-      description: 'Connect with industry leaders and potential customers worldwide'
-    },
+      icon: Users,title: 'Network Expansion',description: 'Connect with industry leaders and potential customers worldwide'
+    };
     {
-      icon: Award,
-      title: 'Brand Recognition',
-      description: 'Leverage our established reputation in the tech industry'
-    },
+      icon: Award,title: 'Brand Recognition',description: 'Leverage our established reputation in the tech industry'
+    };
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Expand your business presence across multiple countries and regions'
+      icon: Globe,title: 'Global Reach',description: 'Expand your business presence across multiple countries and regions'
     }
   ];
   return (
@@ -252,7 +208,7 @@ export default function Partners() {
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Let's explore how we can work together to create innovative solutions and drive mutual success in the technology industry.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link to="/contact">
               <button className="px-8 py-4 bg-white text-zion-blue rounded-lg font-semibold hover:scale-105 transition-transform flex items-center space-x-2">
                 <span>Start Partnership Discussion</span>
@@ -268,5 +224,5 @@ export default function Partners() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Globe, Gamepad2, Brain, Users, Shield, Target, 
   Palette, BarChart3, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
   Cpu, Database, Network, Server, Monitor, Camera
-} from 'lucide-react';
+} from 'lucide-react',
 
 const MetaverseDevelopmentStudio: React.FC = () => {
   const features = [
@@ -40,18 +40,14 @@ const MetaverseDevelopmentStudio: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Track user engagement, behavior patterns, and virtual world performance metrics.'
     }
-  ];
+  ],
 
   const useCases = [
-    'Virtual Events & Conferences',
-    'Gaming & Entertainment',
-    'Virtual Real Estate',
-    'Education & Training',
-    'Social Networking',
-    'E-commerce & Retail',
-    'Healthcare & Therapy',
-    'Corporate Collaboration'
-  ];
+    'Virtual Events & ConferencesGaming & Entertainment',
+    'Virtual Real EstateEducation & Training',
+    'Social NetworkingE-commerce & Retail',
+    'Healthcare & TherapyCorporate Collaboration'
+  ],
 
   const pricing = [
     {
@@ -59,10 +55,8 @@ const MetaverseDevelopmentStudio: React.FC = () => {
       price: '$2,299',
       period: 'month',
       features: [
-        'Basic 3D world creation',
-        'Up to 100 concurrent users',
-        'Standard templates',
-        'Email support',
+        'Basic 3D world creationUp to 100 concurrent users',
+        'Standard templatesEmail support',
         'Basic analytics'
       ]
     },
@@ -71,12 +65,9 @@ const MetaverseDevelopmentStudio: React.FC = () => {
       price: '$4,999',
       period: 'month',
       features: [
-        'Advanced world building',
-        'Up to 1000 concurrent users',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access'
+        'Advanced world buildingUp to 1000 concurrent users',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access'
       ],
       popular: true
     },
@@ -85,15 +76,12 @@ const MetaverseDevelopmentStudio: React.FC = () => {
       price: '$9,999',
       period: 'month',
       features: [
-        'Full metaverse suite',
-        'Unlimited users',
-        'Custom AI integration',
-        'Dedicated support team',
-        'White-label solutions',
-        'SLA guarantees'
+        'Full metaverse suiteUnlimited users',
+        'Custom AI integrationDedicated support team',
+        'White-label solutionsSLA guarantees'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -293,7 +281,7 @@ const MetaverseDevelopmentStudio: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Build the Metaverse?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -315,7 +303,7 @@ const MetaverseDevelopmentStudio: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default MetaverseDevelopmentStudio;
+export default MetaverseDevelopmentStudio,

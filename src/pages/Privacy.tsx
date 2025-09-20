@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Shield,
   Lock,
@@ -16,12 +16,10 @@ import {
   Calendar,
   CheckCircle,
   AlertTriangle
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import SEO from "../components/SEO";
 const Privacy: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -489,7 +487,7 @@ const Privacy: React.FC = () => {
               Contact Us
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights,
+              If you have questions about this privacy policy or want to exercise your rights;
               please contact our privacy team.
             </p>
           </motion.div>
@@ -533,7 +531,7 @@ const Privacy: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="mailto:privacy@ziontechgroup.com"
+                href="mailto: privacy@ziontechgroup.com"
                 className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
               >
                 Contact Privacy Team
@@ -549,7 +547,6 @@ const Privacy: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Privacy;

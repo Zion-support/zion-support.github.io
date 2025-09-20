@@ -109,14 +109,14 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return {
       redirect: {
         destination: '/auth/login',
-        permanent: false,
-      },
+        permanent: false
+      }
     }
   }
 
   return {
     props: {
-      user: data.user,
-    },
+      user: data.user
+    }
   }
 } 

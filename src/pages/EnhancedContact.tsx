@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Phone, 
+  Phone,
   Mail, 
   MapPin, 
   Clock, 
@@ -21,63 +21,50 @@ import {
   Database,
   Network,
   Rocket
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const EnhancedContact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: '',email: '',company: '',phone: '',service: '',message: ''
   });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData,
+      ...formData;
       [e.target.name]: e.target.value
-    });
-  };
+    }),
+  },
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     
-    setIsSubmitted(true);
-    setIsSubmitting(false);
+    setIsSubmitted(true),
+    setIsSubmitting(false),
     
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false),
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        name: '',email: '',company: '',phone: '',service: '',message: ''
       });
-    }, 3000);
-  };
+    }, 3000),
+  },
 
   const services = [
-    { id: 'ai-analytics', name: 'AI & Analytics Solutions', icon: <Brain className="w-5 h-5" /> },
-    { id: 'quantum-computing', name: 'Quantum Computing Services', icon: <Cpu className="w-5 h-5" /> },
-    { id: 'blockchain', name: 'Blockchain Solutions', icon: <Database className="w-5 h-5" /> },
-    { id: 'iot-smart-cities', name: 'IoT & Smart Cities', icon: <Network className="w-5 h-5" /> },
-    { id: 'cybersecurity', name: 'Cybersecurity Services', icon: <Shield className="w-5 h-5" /> },
-    { id: 'metaverse', name: 'Metaverse Solutions', icon: <Globe className="w-5 h-5" /> },
+    { id: 'ai-analytics', name: 'AI & Analytics Solutions', icon: <Brain className="w-5 h-5" /> };
+    { id: 'quantum-computing', name: 'Quantum Computing Services', icon: <Cpu className="w-5 h-5" /> };
+    { id: 'blockchain', name: 'Blockchain Solutions', icon: <Database className="w-5 h-5" /> };
+    { id: 'iot-smart-cities', name: 'IoT & Smart Cities', icon: <Network className="w-5 h-5" /> };
+    { id: 'cybersecurity', name: 'Cybersecurity Services', icon: <Shield className="w-5 h-5" /> };
+    { id: 'metaverse', name: 'Metaverse Solutions', icon: <Globe className="w-5 h-5" /> };
     { id: 'custom', name: 'Custom Solution', icon: <Rocket className="w-5 h-5" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -360,7 +347,7 @@ const EnhancedContact: React.FC = () => {
               Don't wait to transform your business. Contact us today to discuss your project 
               and discover how our innovative solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
@@ -380,7 +367,6 @@ const EnhancedContact: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default EnhancedContact;

@@ -1,5 +1,5 @@
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import SellerDashboard from '@/pages/SellerDashboard';
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import SellerDashboard from '@/pages/SellerDashboard',
 export default function SellerRoutes() {,
   return (,
     <Routes>,
@@ -8,10 +8,9 @@ export default function SellerRoutes() {,
         element={,
           <ProtectedRoute>,
             <SellerDashboard />,
-          </ProtectedRoute>,
+          </ProtectedRoute>
         }
       />,
-    </Routes>,
-  );
+    </Routes>),
 }
 ,

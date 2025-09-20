@@ -1,2 +1,2 @@
 
-export default FloatingActionButton;
+export default FloatingActionButton,

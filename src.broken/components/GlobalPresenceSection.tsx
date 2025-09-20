@@ -9,9 +9,9 @@ function GlobalPresenceSection () {
         <motion.div
           className="text-center mb-16"
         <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
+          className="grid grid - cols - 2 md: grid - cols - 4 gap-8 mb-16"
         <motion.div
-          className="mb-16";
+          className="mb-16",
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {globalOffices.map((office, index) => (<motion.div
@@ -48,10 +48,10 @@ function GlobalPresenceSection () {
   Star,
   Award,
   CheckCircle'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      established: '2022'};
-  ];
+      established: '2022'},
+  ],
 const globalOffices = [{
 
     city: "Middletown, DE","
@@ -76,13 +76,13 @@ const globalOffices = [{
     icon: "🇸🇬","
     description: "APAC market expansion and support"
   },
-  {;"
-    city: "Toronto",;"
-    country: "Canada",;"
-    type: "North American Hub",;"
-    icon: "🇨🇦",;"
-    description: "Canadian market and development center"};
-];
+  {,"
+    city: "Toronto","
+    country: "Canada","
+    type: "North American Hub","
+    icon: "🇨🇦","
+    description: "Canadian market and development center"},
+],
 
 =======
 export function GlobalPresenceSection() {
@@ -135,8 +135,8 @@ export function GlobalPresenceSection() {
   delay: 0.2
 
 }}
-        >;
-          {globalStats.map ( (stat, index) => {;
+        >,
+          {globalStats.map ( (stat, index) => {,
             
             return ("
               <div key = {stat.label} className="text-center">"
@@ -163,7 +163,7 @@ export function GlobalPresenceSection() {
 
         {/* Global Offices */}
         <motion.div "
-          className="mb-16";
+          className="mb-16",
           initial = {
 
   { opacity: 0,
@@ -294,7 +294,7 @@ export function GlobalPresenceSection() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise,
               our global presence ensures you get the support you need, when you need it.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Find Your Local Team"
                 <MapPin className="ml-2 h-5 w-5"  />
@@ -305,16 +305,16 @@ export function GlobalPresenceSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default GlobalPresenceSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default GlobalPresenceSection;
-export default GlobalPresenceSection;
+export default GlobalPresenceSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default GlobalPresenceSection,
+export default GlobalPresenceSection,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

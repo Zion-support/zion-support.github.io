@@ -10,11 +10,11 @@ export default function Page() {
         { name: "Data Management", href: "/it-services/data" }
 =======
       ]
-    },;
+    },
     {
 "
       title: "Solutions",
-      links[;"
+      links[,"
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
         { name: "Edge Computing", href: "/emerging-tech/edge" },"
@@ -24,11 +24,11 @@ export default function Page() {
         { name: "Green Technology", href: "/green-it" },"
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
+    },
     {
 "
       title: "Comp",
-      links[;"
+      links[,"
         { name: "About Us", href: "/about" },"
         { name: "Our Team", href: "/about#team" },"
         { name: "Careers", href: "/careers" },"
@@ -38,26 +38,26 @@ export default function Page() {
         { name: "Investor Relations", href: "/investors" },"
         { name: "Sustainability", href: "/sustainability" }
       ]
-    },;
+    },
     {
 "
       title: "Resources",
-      links[;"
+      links[,"
         { name: "Documentation", href: "/docs" },"
         { name: "API Reference", href: "/api" },"
         { name: "Developer Portal", href: "/developer" },"
-        { name: "Support Center", href: "/support" },;"
-        { name: "FAQ", href: "/faq" },;"
-        { name: "Contact Us", href: "/contact" },;"
-        { name: "Case Studies", href: "/case-studies" },;"
-        { name: "Marketplace", href: "/marketplace" };
-      ]};
-  ];
-  const socialLinks = [;"
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;"
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;"
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
-  ];
+        { name: "Support Center", href: "/support" },"
+        { name: "FAQ", href: "/faq" },"
+        { name: "Contact Us", href: "/contact" },"
+        { name: "Case Studies", href: "/case-studies" },"
+        { name: "Marketplace", href: "/marketplace" },
+      ]},
+  ],
+  const socialLinks = [,"
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },"
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },"
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+  ],
   return ("
     <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
       {/* Background Effects */}"
@@ -152,10 +152,10 @@ export default function Page() {
 
                           {link.name}
                         </Link>
-                      </li>;) ) }
+                      </li>,) ) }
                   </ul>
                 </motion.div>
-              </div>;) ) }
+              </div>,) ) }
           </div>
           {/* Additional Quick Access Section */}
           <motion.div
@@ -180,7 +180,7 @@ export default function Page() {
 }}"
             className="border-t border-zion-slate/30 mt-12 pt-8"
 "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               <div>"
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">"
                   <Zap className="w-5 h-5 mr-2 text-zion-cyan"  />                  Quick Actions
@@ -218,7 +218,7 @@ export default function Page() {
                       System Status
                     </Link>
                   </li>
-                </ul>;
+                </ul>,
               </div>
             </div>
           </motion.div>
@@ -236,29 +236,28 @@ export default function Page() {
   { duration: 0.6,
   delay: 0.5 }}"            className="border-t border-zion-slate/30 mt-12 pt-8"
 "
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">;
+            <div className="flex flex-col lg: flex-row items-center justify-between space-y-4 lg:space-y-0">,
               {/* Copyright */}"
-              <div className="text-zion-slate-light text-sm">;
-                © {currentYear} ZION TECH GROUP.All rights reserved.;"
-                <span className="ml-2 flex items-center">;"
-                  Made with <Heart className="w-4 h-4 mx-1 text-red-400"  /> for innovation;                </span>;
+              <div className="text-zion-slate-light text-sm">,
+                © {currentYear} ZION TECH GROUP.All rights reserved.,"
+                <span className="ml-2 flex items-center">,"
+                  Made with <Heart className="w-4 h-4 mx-1 text-red-400"  /> for innovation,                </span>,
               </div>
               {/* Social Links */}"
-              <div className="flex items-center space-x-4">;
-                {socialLinks.map((social) => (;
+              <div className="flex items-center space-x-4">,
+                {socialLinks.map((social) => (,
                   <a
                     key={social.name}
                     href={social.href}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
+                    className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover: text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
 "
                     <social.icon className="w-5 h-5" />
-                  </a>;
-                ))}
+                  </a>))}
               </div>
               {/* Legal Links */}"
-              <div className="flex items-center space-x-6 text-sm">;"
+              <div className="flex items-center space-x-6 text-sm">,"
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   Privacy Policy
                 </Link>"
@@ -279,11 +278,11 @@ export default function Page() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
 "
-          <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300"  />        </motion.button>;
-      </div>;
-      {/* Bottom Border Glow */};"
-      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
-    </footer>;
-  )};
+          <ArrowUp className="w-6 h-6 group-hover: -translate-y-0.5 transition-transform duration-300"  />        </motion.button>,
+      </div>,
+      {/* Bottom Border Glow */},"
+      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />,
+    </footer>,
+  )},
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

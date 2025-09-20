@@ -2,21 +2,21 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                 <span>24-Hour Response</span>,
               </motion.div>,
               <motion.div initial = {,
-  { opacity: 0;
-  y: 20,}} animate = {,
-  { opacity: 1;
-  y: 0,}} transition = {,
-  { duration: 0.6;
-  delay: 0.2,}} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400" />,
+  { opacity: 0,
+  y: 20}} animate = {,
+  { opacity: 1,
+  y: 0}} transition = {,
+  { duration: 0.6,
+  delay: 0.2}} className="flex items-center justify-center space-x-3 text-white/80">                <CheckCircle className="w-5 h-5 text-green-400" />,
                 <span>Free Consultation</span>,
               </motion.div>,
               <motion.div initial = {,
-  { opacity: 0;
-  y: 20,}} animate = {,
-  { opacity: 1;
-  y: 0,}} transition = {,
-  { duration: 0.6;
-  delay: 0.3,}} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400" />,
+  { opacity: 0,
+  y: 20}} animate = {,
+  { opacity: 1,
+  y: 0}} transition = {,
+  { duration: 0.6,
+  delay: 0.3}} className="flex items-center justify-center space-x-3 text-white/80">                <Calculator className="w-5 h-5 text-purple-400" />,
                 <span>Detailed Estimate</span>,
               </motion.div>,
             </div>,
@@ -27,48 +27,48 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
       <section className="py-20 px-6">",
         <div className="max-w-6xl mx-auto">",
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-12">,
-            {/* Form */,}",
+            {/* Form */}",
             <div className="lg: col-span-2">,
               <motion.div initial = {,
-  { opacity: 0;
-  x: -30,}} whileInView = {,
-  { opacity: 1;
-  x: 0,}} viewport={{ once: true ,}} transition={{ duration: 0.8 ,}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>,
+  { opacity: 0,
+  x: -30}} whileInView = {,
+  { opacity: 1,
+  x: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">                <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>,
 ",
                 <form onSubmit={handleSubmit} className="space-y-6">,
                   {/* Personal Information */}",
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
                     <div>",
                       <label className="block text-white font-medium mb-2">First Name *</label>",
-                      <input type="text" name="firstName" value={formData.firstName,} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your first name"  />,
+                      <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your first name"  />,
                     </div>,
                     <div>",
                       <label className="block text-white font-medium mb-2">Last Name *</label>",
-                      <input type="text" name="lastName" value={formData.lastName,} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your last name"  />,
+                      <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your last name"  />,
                     </div>,
                   </div>,
 ",
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,
                     <div>",
                       <label className="block text-white font-medium mb-2">Email *</label>",
-                      <input type="email" name="email" value={formData.email,} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your email"  />,
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} required className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your email"  />,
                     </div>,
                     <div>",
                       <label className="block text-white font-medium mb-2">Phone</label>",
-                      <input type="tel" name="phone" value={formData.phone,} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your phone number"  />,
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your phone number"  />,
                     </div>,
                   </div>,
                   <div>",
                     <label className="block text-white font-medium mb-2">Company</label>",
-                    <input type="text" name="comp" value={formData.comp,} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"  />,
+                    <input type="text" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-400 transition-colors" placeholder="Enter your comp name"  />,
                   </div>,
-                  {/* Project Type */,}
+                  {/* Project Type */}
                   <div>",
                     <label className="block text-white font-medium mb-4">Project Type *</label>",
                     <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
-                      {projectTypes.map((type) => (<label key={type.value,} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value',
+                      {projectTypes.map((type) => (<label key={type.value} className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${formData.projectType === type.value',
                 ? 'border-cyan-400 bg-cyan-400/20''`,
-                : 'border-white/20 hover: border-cyan-400/50',}`}>",
+                : 'border-white/20 hover: border-cyan-400/50'}`}>",
                           <input type="radio" name="projectType" value={type.value} checked={formData.projectType === type.value} onChange={handleInputChange} className="sr-only"  />",
                           <div className="flex items-start space-x-3">",
                             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">",
@@ -86,9 +86,9 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
                     <div>",
                       <label className="block text-white font-medium mb-4">Budget Range</label>",
-                      <select name="budget" value={formData.budget,} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors">",
+                      <select name="budget" value={formData.budget} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors">",
                         <option value="">Select budget range</option>,
-                        {budgetRanges.map((budget) => (<option key={budget.value,} value={budget.value}>,
+                        {budgetRanges.map((budget) => (<option key={budget.value} value={budget.value}>,
                             {budget.label} - {budget.description}
                           </option>))}
                       </select>,
@@ -97,7 +97,7 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                       <label className="block text-white font-medium mb-4">Timeline</label>",
                       <select name="timeline" value={formData.timeline} onChange={handleInputChange} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 transition-colors">",
                         <option value="">Select timeline</option>,
-                        {timelineOptions.map((timeline) => (<option key={timeline.value,} value={timeline.value}>,
+                        {timelineOptions.map((timeline) => (<option key={timeline.value} value={timeline.value}>,
                             {timeline.label} - {timeline.description}
                           </option>))}
                       </select>,
@@ -107,9 +107,9 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                   <div>",
                     <label className="block text-white font-medium mb-4">Project Urgency</label>",
                     <div className="grid grid-cols-2 md: grid-cols-4 gap-4">`,
-                      {urgencyLevels.map((level) => (<label key={level.value,} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value',
+                      {urgencyLevels.map((level) => (<label key={level.value} className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${formData.urgency === level.value',
                 ? 'border-cyan-400 bg-cyan-400/20''`,
-                : 'border-white/20 hover: border-cyan-400/50',}`}>",
+                : 'border-white/20 hover: border-cyan-400/50'}`}>",
                           <input type="radio" name="urgency" value={level.value} checked={formData.urgency === level.value} onChange={handleInputChange} className="sr-only"  />",
                           <div className="text-center w-full">`,
                             <div className={`font-medium ${level.color}`}>{level.label}</div>",
@@ -126,7 +126,7 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                   {/* Submit Button */}'"`,
                   <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting'',
             ? 'bg-gray-600 text-gray-400 cursor-not-allowed''`,
-            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25',}`}>,
+            : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>,
                     {submissionStatus === 'submitting' ? (<>",
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>,
                         <span>Submitting...</span>,
@@ -140,19 +140,19 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
                   </button>,
                   {/* Status Messages */}
                   {submissionStatus === 'success' && (<motion.div initial = {,
-  { opacity: 0;
-  y: 10,}} animate = {,
-  { opacity: 1;
-  y: 0,}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">,
+  { opacity: 0,
+  y: 10}} animate = {,
+  { opacity: 1,
+  y: 0}} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">,
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />                      <span className="text-green-400">,
                         Thank you! We've received your quote request and will respond within 24 hours.</span>,
                     </motion.div>)}
 ,
                   {submissionStatus === 'error' && (<motion.div initial = {,
-  { opacity: 0;
-  y: 10,}} animate = {,
-  { opacity: 1;
-  y: 0,}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">,
+  { opacity: 0,
+  y: 10}} animate = {,
+  { opacity: 1,
+  y: 0}} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">,
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3" />                      <span className="text-red-400">,
                         Something went wrong.Please try again or contact us directly.</span>,
                     </motion.div>)}
@@ -163,10 +163,10 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
             <div className="space-y-8">,
               {/* Contact Information */}
               <motion.div initial = {,
-  { opacity: 0;
-  x: 30,}} whileInView = {,
-  { opacity: 1;
-  x: 0,}} viewport={{ once: true ,}} transition={{ duration: 0.8 ,}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
+  { opacity: 0,
+  x: 30}} whileInView = {,
+  { opacity: 1,
+  x: 0}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>,
                 <div className="space-y-4">,
                   <a href="tel: +13024640950" className="flex items-center text-white/80 hover:text-cyan-400 transition-colors">                    <Phone className="w-5 h-5 mr-3 text-cyan-400" />,
@@ -184,12 +184,12 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
               </motion.div>,
               {/* Why Choose Us */}
               <motion.div initial = {,
-  { opacity: 0;
-  x: 30,}} whileInView = {,
-  { opacity: 1;
-  x: 0,}} viewport={{ once: true ,}} transition = {,
-  { duration: 0.8;
-  delay: 0.2,}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
+  { opacity: 0,
+  x: 30}} whileInView = {,
+  { opacity: 1,
+  x: 0}} viewport={{ once: true }} transition = {,
+  { duration: 0.8,
+  delay: 0.2}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>,
                 <div className="space-y-4">,
                   <div className="flex items-start">                    <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />,
@@ -223,12 +223,12 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
               </motion.div>,
               {/* Process */}
               <motion.div initial = {,
-  { opacity: 0;
-  x: 30,}} whileInView = {,
-  { opacity: 1;
-  x: 0,}} viewport={{ once: true ,}} transition = {,
-  { duration: 0.8;
-  delay: 0.4,}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
+  { opacity: 0,
+  x: 30}} whileInView = {,
+  { opacity: 1,
+  x: 0}} viewport={{ once: true }} transition = {,
+  { duration: 0.8,
+  delay: 0.4}} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">,
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>,
                 <div className="space-y-4">,
                   <div className="flex items-start">                    <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>,
@@ -265,11 +265,11 @@ import React, {useState} from 'react',                <Clock className="w-5 h-5 
         </div>,
       </section>,
     </div>)}
-export {RequestQuote};
-export {RequestQuote};
-export {RequestQuote};
-export {RequestQuote};
-export {RequestQuote};
+export {RequestQuote},
+export {RequestQuote},
+export {RequestQuote},
+export {RequestQuote},
+export {RequestQuote},
 </motion>,
 </motion>,
 </motion>,

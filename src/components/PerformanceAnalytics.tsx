@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
 import { 
-  Activity, 
+  Activity,
   TrendingUp, 
   TrendingDown, 
   Clock, 
@@ -13,145 +13,98 @@ import {
   HardDrive,
   Network,
   Monitor
-} from 'lucide-react';
-
+} from "lucide-react";
 interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  status: 'good' | 'warning' | 'critical';
-  icon: React.ComponentType<any>;
+  name: string,value: number,unit: string,trend: 'up' | 'down' | 'stable',status: 'good' | 'warning' | 'critical',icon: React.ComponentType<any>
 }
 
 interface PerformanceData {
-  timestamp: number;
-  metrics: PerformanceMetric[];
-  alerts: string[];
-  recommendations: string[];
+  timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[]
 }
 
 const PerformanceAnalytics: React.FC = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
+  const [isMonitoring, setIsMonitoring] = useState(false),
+  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
 
   // Simulated performance data
   const generatePerformanceData = useCallback((): PerformanceData => {
-    const now = Date.now();
+    const now = Date.now(),
     const metrics: PerformanceMetric[] = [
       {
-        name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
-        icon: Clock
-      },
+        name: 'Page Load Time',value: Math.random() * 2000 + 500,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Clock
+      };
       {
-        name: 'Memory Usage',
-        value: Math.random() * 40 + 60,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',
-        icon: HardDrive
-      },
+        name: 'Memory Usage',value: Math.random() * 40 + 60,unit: '%',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',icon: HardDrive
+      };
       {
-        name: 'CPU Usage',
-        value: Math.random() * 30 + 20,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
-        icon: Cpu
-      },
+        name: 'CPU Usage',value: Math.random() * 30 + 20,unit: '%',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Cpu
+      };
       {
-        name: 'Network Latency',
-        value: Math.random() * 100 + 20,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',
-        icon: Network
-      },
+        name: 'Network Latency',value: Math.random() * 100 + 20,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.6 ? 'good' : Math.random() > 0.3 ? 'warning' : 'critical',icon: Network
+      };
       {
-        name: 'Error Rate',
-        value: Math.random() * 2,
-        unit: '%',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
-        icon: AlertTriangle
-      },
+        name: 'Error Rate',value: Math.random() * 2,unit: '%',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',icon: AlertTriangle
+      };
       {
-        name: 'Response Time',
-        value: Math.random() * 500 + 100,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
-        icon: Zap
+        name: 'Response Time',value: Math.random() * 500 + 100,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Zap
       }
     ];
-
     const alerts = [
-      'High memory usage detected',
-      'Network latency increased by 15%',
-      'CPU usage spike at 14:30'
+      'High memory usage detectedNetwork latency increased by 15%',
+      'CPU usage spike at 14: 30'
     ].filter(() => Math.random() > 0.7);
-
     const recommendations = [
-      'Consider implementing lazy loading for images',
-      'Optimize database queries',
-      'Enable CDN for static assets',
-      'Implement caching strategy'
-    ].filter(() => Math.random() > 0.6);
+      'Consider implementing lazy loading for imagesOptimize database queries',
+      'Enable CDN for static assetsImplement caching strategy'
+    ].filter(() => Math.random() > 0.6),
 
     return {
-      timestamp: now,
+      timestamp: now;
       metrics,
       alerts,
       recommendations
-    };
-  }, []);
+    },
+  }, []),
 
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {
-        setPerformanceData(generatePerformanceData());
-      }, 5000);
+        setPerformanceData(generatePerformanceData()),
+      }, 5000),
 
-      return () => clearInterval(interval);
+      return () => clearInterval(interval),
     }
-  }, [isMonitoring, generatePerformanceData]);
+  }, [isMonitoring, generatePerformanceData]),
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'critical': return 'text-red-400';
-      default: return 'text-gray-400';
+      case 'warning': return 'text-yellow-400',
+      case 'critical': return 'text-red-400',
+      default: return 'text-gray-400'
     }
   };
-
   const getStatusBgColor = (status: string) => {
     switch (status) {
       case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20';
-      case 'critical': return 'bg-red-500/20';
-      default: return 'bg-gray-500/20';
+      case 'warning': return 'bg-yellow-500/20',
+      case 'critical': return 'bg-red-500/20',
+      default: return 'bg-gray-500/20'
     }
   };
-
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
-      default: return <Activity className="w-4 h-4 text-blue-400" />;
+      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />,
+      default: return <Activity className="w-4 h-4 text-blue-400" />
     }
   };
-
   const formatValue = (value: number, unit: string) => {
     if (unit === '%') return `${value.toFixed(1)}%`;
-    if (unit === 'ms') return `${Math.round(value)}ms`;
-    return `${value.toFixed(2)}${unit}`;
-  };
+    if (unit === 'ms') return `${Math.round(value)}ms`,
+    return `${value.toFixed(2)}${unit}`,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -175,7 +128,7 @@ const PerformanceAnalytics: React.FC = () => {
               {' '}Monitoring
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Monitor your application's performance in real-time with advanced analytics, 
+              Monitor your application's performance in real-time with advanced analytics;
               automated alerts, and intelligent recommendations.
             </p>
           </motion.div>
@@ -346,7 +299,7 @@ const PerformanceAnalytics: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Optimize Your Application Performance
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -363,7 +316,6 @@ const PerformanceAnalytics: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default PerformanceAnalytics;

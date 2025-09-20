@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const AISEOOptimizer: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -38,7 +37,7 @@ const AISEOOptimizer: React.FC = () => {
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
-                <li><a className="hover:underline" href="https://developers.google.com/search/docs" target="_blank" rel="noreferrer">Google Search Central</a></li>
+                <li><a className="hover: underline" href="https://developers.google.com/search/docs" target="_blank" rel="noreferrer">Google Search Central</a></li>
                 <li><a className="hover:underline" href="https://pagespeed.web.dev/" target="_blank" rel="noreferrer">PageSpeed Insights</a></li>
                 <li><a className="hover:underline" href="https://schema.org/docs/" target="_blank" rel="noreferrer">Schema.org</a></li>
               </ul>
@@ -54,8 +53,7 @@ const AISEOOptimizer: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+  )
 }
 
 export default AISEOOptimizer;
-

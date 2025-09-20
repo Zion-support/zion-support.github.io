@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agent Risk Management Framework';
-  description: 'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.';
-  keywords: ['AI 2026risk management', 'agent securitygovernance', 'controls'],
-};
+  title: 'AI 2026: Agent Risk Management Framework',
+  description: 'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.',
+  keywords: ['AI 2026risk managementagent securitygovernance', 'controls']
+},
 export default function AgentRiskManagementFramework2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -63,6 +63,5 @@ export default function AgentRiskManagementFramework2026Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

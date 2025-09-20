@@ -1,42 +1,42 @@
 export interface NextGenerationAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
@@ -47,16 +47,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI platform that interfaces directly with neural signals, enabling breakthrough discoveries and cognitive enhancement with unprecedented accuracy.',
     features: [
-      'Quantum neural signal processing',
-      'Real-time brain activity monitoring',
-      'AI-powered cognitive enhancement',
-      'Neural pattern recognition',
-      'Secure quantum encryption',
-      'Multi-modal interface support',
-      'Advanced analytics dashboard',
-      'API for research integration',
-      'Compliance with medical standards',
-      '24/7 quantum AI support'
+      'Quantum neural signal processingReal-time brain activity monitoring',
+      'AI-powered cognitive enhancementNeural pattern recognition',
+      'Secure quantum encryptionMulti-modal interface support',
+      'Advanced analytics dashboardAPI for research integration',
+      'Compliance with medical standards24/7 quantum AI support'
     ],
     popular: true,
     icon: '🧠',
@@ -69,11 +64,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Neuroscience',
     realService: true,
-    technology: ['Quantum Computing', 'Neural Networks', 'Brain-Computer Interface', 'Quantum Encryption', 'Machine Learning', 'Signal Processing'],
-    integrations: ['Research databases', 'Medical imaging systems', 'AI platforms', 'Cloud computing', 'Security systems', 'Analytics platforms'],
-    useCases: ['Cognitive research', 'Medical diagnosis', 'Neural rehabilitation', 'AI training', 'Security authentication', 'Performance optimization'],
+    technology: ['Quantum ComputingNeural Networks', 'Brain-Computer InterfaceQuantum Encryption', 'Machine LearningSignal Processing'],
+    integrations: ['Research databasesMedical imaging systems', 'AI platformsCloud computing', 'Security systemsAnalytics platforms'],
+    useCases: ['Cognitive researchMedical diagnosis', 'Neural rehabilitationAI training', 'Security authenticationPerformance optimization'],
     roi: 'Average customer sees 1000% ROI within 6 months through breakthrough discoveries and research acceleration.',
-    competitors: ['Neuralink', 'Kernel', 'Paradromics', 'Synchron', 'Blackrock Neurotech'],
+    competitors: ['NeuralinkKernel', 'ParadromicsSynchron', 'Blackrock Neurotech'],
     marketSize: '$1.5B BCI market',
     growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
@@ -98,16 +93,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that autonomously analyzes, invests, and manages venture capital portfolios with quantum-level precision and market prediction accuracy.',
     features: [
-      'Autonomous investment decision making',
-      'Quantum market prediction algorithms',
-      'Real-time portfolio optimization',
-      'AI-driven due diligence',
-      'Risk assessment automation',
-      'Market trend analysis',
-      'Portfolio rebalancing',
-      'Performance tracking',
-      'Regulatory compliance',
-      'Multi-fund management'
+      'Autonomous investment decision makingQuantum market prediction algorithms',
+      'Real-time portfolio optimizationAI-driven due diligence',
+      'Risk assessment automationMarket trend analysis',
+      'Portfolio rebalancingPerformance tracking',
+      'Regulatory complianceMulti-fund management'
     ],
     popular: true,
     icon: '💰',
@@ -120,11 +110,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '1 month',
     category: 'AI Finance & Investment',
     realService: true,
-    technology: ['Quantum AI', 'Machine Learning', 'Natural Language Processing', 'Blockchain', 'Big Data Analytics', 'Predictive Modeling'],
-    integrations: ['Bloomberg Terminal', 'Reuters', 'Crunchbase', 'PitchBook', 'SEC filings', 'Market data feeds'],
-    useCases: ['Startup evaluation', 'Portfolio management', 'Market analysis', 'Risk assessment', 'Investment timing', 'Exit strategy planning'],
+    technology: ['Quantum AIMachine Learning', 'Natural Language ProcessingBlockchain', 'Big Data AnalyticsPredictive Modeling'],
+    integrations: ['Bloomberg TerminalReuters', 'CrunchbasePitchBook', 'SEC filingsMarket data feeds'],
+    useCases: ['Startup evaluationPortfolio management', 'Market analysisRisk assessment', 'Investment timingExit strategy planning'],
     roi: 'Average customer sees 500% ROI within 12 months through superior investment decisions and automated portfolio optimization.',
-    competitors: ['Sequoia Capital', 'Andreessen Horowitz', 'Y Combinator', 'SoftBank Vision Fund', 'Tiger Global'],
+    competitors: ['Sequoia CapitalAndreessen Horowitz', 'Y CombinatorSoftBank Vision Fund', 'Tiger Global'],
     marketSize: '$300B venture capital market',
     growthRate: '200% annual growth',
     variant: 'quantum-financial-advanced',
@@ -149,16 +139,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI platform that accelerates drug discovery by analyzing molecular interactions at quantum scales, reducing development time from years to months.',
     features: [
-      'Quantum molecular simulation',
-      'AI drug candidate screening',
-      'Protein folding prediction',
-      'Drug interaction modeling',
-      'Clinical trial optimization',
-      'Regulatory pathway guidance',
-      'Collaborative research tools',
-      'Real-time analytics',
-      'API for research integration',
-      'Multi-omics data analysis'
+      'Quantum molecular simulationAI drug candidate screening',
+      'Protein folding predictionDrug interaction modeling',
+      'Clinical trial optimizationRegulatory pathway guidance',
+      'Collaborative research toolsReal-time analytics',
+      'API for research integrationMulti-omics data analysis'
     ],
     popular: true,
     icon: '🧬',
@@ -171,11 +156,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '2 months',
     category: 'Quantum AI & Healthcare',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Molecular Dynamics', 'Bioinformatics', 'Cloud Computing', 'High-Performance Computing'],
-    integrations: ['PubChem', 'ChEMBL', 'PDB', 'Clinical trial databases', 'FDA systems', 'Research platforms'],
-    useCases: ['Drug discovery', 'Target identification', 'Lead optimization', 'Clinical trial design', 'Regulatory compliance', 'Research collaboration'],
+    technology: ['Quantum ComputingAI/ML', 'Molecular DynamicsBioinformatics', 'Cloud ComputingHigh-Performance Computing'],
+    integrations: ['PubChemChEMBL', 'PDBClinical trial databases', 'FDA systemsResearch platforms'],
+    useCases: ['Drug discoveryTarget identification', 'Lead optimizationClinical trial design', 'Regulatory complianceResearch collaboration'],
     roi: 'Average customer sees 1000% ROI within 18 months through accelerated drug development and reduced research costs.',
-    competitors: ['Insitro', 'Recursion', 'Atomwise', 'BenevolentAI', 'Exscientia'],
+    competitors: ['InsitroRecursion', 'AtomwiseBenevolentAI', 'Exscientia'],
     marketSize: '$150B AI in healthcare market',
     growthRate: '250% annual growth',
     variant: 'quantum-biotech-advanced',
@@ -200,16 +185,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI platform that autonomously manages space missions, satellite operations, and interplanetary exploration with unprecedented accuracy and reliability.',
     features: [
-      'Autonomous mission planning',
-      'Quantum orbital calculations',
-      'Real-time satellite control',
-      'Space weather prediction',
-      'Launch vehicle optimization',
-      'Ground station management',
-      'Space debris tracking',
-      'Mission analytics',
-      'Regulatory compliance',
-      'Multi-mission coordination'
+      'Autonomous mission planningQuantum orbital calculations',
+      'Real-time satellite controlSpace weather prediction',
+      'Launch vehicle optimizationGround station management',
+      'Space debris trackingMission analytics',
+      'Regulatory complianceMulti-mission coordination'
     ],
     popular: true,
     icon: '🚀',
@@ -222,11 +202,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '3 months',
     category: 'Quantum AI & Space Technology',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Orbital Mechanics', 'Satellite Technology', 'Space Weather', 'Mission Control Systems'],
-    integrations: ['NASA systems', 'ESA platforms', 'SpaceX APIs', 'Satellite networks', 'Ground stations', 'Weather services'],
-    useCases: ['Satellite operations', 'Mission planning', 'Launch optimization', 'Space exploration', 'Defense operations', 'Research missions'],
+    technology: ['Quantum ComputingAI/ML', 'Orbital MechanicsSatellite Technology', 'Space WeatherMission Control Systems'],
+    integrations: ['NASA systemsESA platforms', 'SpaceX APIsSatellite networks', 'Ground stationsWeather services'],
+    useCases: ['Satellite operationsMission planning', 'Launch optimizationSpace exploration', 'Defense operationsResearch missions'],
     roi: 'Average customer sees 800% ROI within 24 months through autonomous operations and mission success optimization.',
-    competitors: ['SpaceX', 'OneWeb', 'Blue Origin', 'Virgin Galactic', 'Rocket Lab'],
+    competitors: ['SpaceXOneWeb', 'Blue OriginVirgin Galactic', 'Rocket Lab'],
     marketSize: '$469B space economy',
     growthRate: '400% annual growth',
     variant: 'quantum-space-advanced',
@@ -251,16 +231,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI cybersecurity platform that provides unbreakable encryption, real-time threat detection, and autonomous security response with quantum-level protection.',
     features: [
-      'Quantum encryption algorithms',
-      'AI threat detection',
-      'Autonomous incident response',
-      'Zero-trust architecture',
-      'Real-time monitoring',
-      'Threat intelligence',
-      'Compliance automation',
-      'Security analytics',
-      'API protection',
-      'Multi-cloud security'
+      'Quantum encryption algorithmsAI threat detection',
+      'Autonomous incident responseZero-trust architecture',
+      'Real-time monitoringThreat intelligence',
+      'Compliance automationSecurity analytics',
+      'API protectionMulti-cloud security'
     ],
     popular: true,
     icon: '🛡️',
@@ -273,11 +248,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '2 weeks',
     category: 'Quantum AI & Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Quantum Encryption', 'Zero-Trust Security', 'Threat Intelligence', 'Incident Response'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Cloud providers', 'Identity providers', 'Network devices', 'Security tools'],
-    useCases: ['Threat detection', 'Incident response', 'Data protection', 'Compliance management', 'Security monitoring', 'Risk assessment'],
+    technology: ['Quantum ComputingAI/ML', 'Quantum EncryptionZero-Trust Security', 'Threat IntelligenceIncident Response'],
+    integrations: ['SIEM systemsEDR platforms', 'Cloud providersIdentity providers', 'Network devicesSecurity tools'],
+    useCases: ['Threat detectionIncident response', 'Data protectionCompliance management', 'Security monitoringRisk assessment'],
     roi: 'Average customer sees 400% ROI within 12 months through threat prevention and security automation.',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'SentinelOne', 'Cylance', 'Darktrace'],
+    competitors: ['CrowdStrikePalo Alto Networks', 'SentinelOneCylance', 'Darktrace'],
     marketSize: '$200B cybersecurity market',
     growthRate: '180% annual growth',
     variant: 'quantum-cyberpunk-advanced',
@@ -302,16 +277,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary quantum AI platform that autonomously optimizes global supply chains, logistics operations, and transportation networks with quantum-level efficiency.',
     features: [
-      'Autonomous route optimization',
-      'Quantum demand forecasting',
-      'Real-time tracking',
-      'Inventory optimization',
-      'Supplier management',
-      'Cost optimization',
-      'Sustainability analytics',
-      'Risk assessment',
-      'Compliance management',
-      'Multi-modal transport'
+      'Autonomous route optimizationQuantum demand forecasting',
+      'Real-time trackingInventory optimization',
+      'Supplier managementCost optimization',
+      'Sustainability analyticsRisk assessment',
+      'Compliance managementMulti-modal transport'
     ],
     popular: true,
     icon: '🚛',
@@ -324,11 +294,11 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     setupTime: '1 month',
     category: 'Quantum AI & Logistics',
     realService: true,
-    technology: ['Quantum Computing', 'AI/ML', 'Supply Chain Optimization', 'Route Planning', 'Demand Forecasting', 'Real-time Analytics'],
-    integrations: ['ERP systems', 'WMS platforms', 'Transportation APIs', 'Weather services', 'Customs systems', 'Financial platforms'],
-    useCases: ['Route optimization', 'Inventory management', 'Demand forecasting', 'Supplier optimization', 'Cost reduction', 'Sustainability tracking'],
+    technology: ['Quantum ComputingAI/ML', 'Supply Chain OptimizationRoute Planning', 'Demand ForecastingReal-time Analytics'],
+    integrations: ['ERP systemsWMS platforms', 'Transportation APIsWeather services', 'Customs systemsFinancial platforms'],
+    useCases: ['Route optimizationInventory management', 'Demand forecastingSupplier optimization', 'Cost reductionSustainability tracking'],
     roi: 'Average customer sees 600% ROI within 18 months through operational efficiency and cost optimization.',
-    competitors: ['Flexport', 'Convoy', 'Uber Freight', 'C.H. Robinson', 'DHL'],
+    competitors: ['FlexportConvoy', 'Uber FreightC.H. Robinson', 'DHL'],
     marketSize: '$15T global logistics market',
     growthRate: '150% annual growth',
     variant: 'quantum-logistics-advanced',
@@ -345,4 +315,4 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     rating: 4.8,
     reviews: 298
   }
-];
+],

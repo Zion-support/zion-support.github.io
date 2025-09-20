@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react',
 
 export default function Page() {
     if(!user) {
@@ -31,8 +31,8 @@ export default function Page() {
                 <h2 className="text-xl font - bold text-white">{user.displayName || "User"}</h2>
                 <p className="text-zion - slate - light mb-4">{user.email}</p>
                 <Button onClick={ () => {
-            logout () ;
-            router("/") ;
+            logout () ,
+            router("/") ,
         }} variant="outline" className="border-zion - blue - light text-zion - slate - light hover:bg-zion - blue - light hover:text-white">
                   Logout
                 </Button>
@@ -43,5 +43,5 @@ export default function Page() {
       </div>
 
     </>) }
-;
+,
 }}}}

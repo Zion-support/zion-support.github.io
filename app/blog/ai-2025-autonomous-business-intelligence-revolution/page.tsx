@@ -1,25 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { Brain, TrendingUp, Zap, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
+import { Brain, TrendingUp, Zap, Clock, Users, ArrowRight, CheckCircle } from 'lucide-react',
 export const metadata: Metadata = {,
-  title: 'AI 2025: The Autonomous Business Intelligence Revolution - 1,800% ROI Through Self-Managing Analytics';
-  description: 'Discover how Fortune 500 companies are achieving 1,800% ROI through autonomous business intelligence systems that operate independently and deliver predictive insights in real-time.';
-  keywords: ['Autonomous BIAI Analytics', 'Business IntelligenceROI', 'Enterprise AIData Analytics', 'Predictive AnalyticsMachine Learning'];
+  title: 'AI 2025: The Autonomous Business Intelligence Revolution - 1,800% ROI Through Self-Managing Analytics',
+  description: 'Discover how Fortune 500 companies are achieving 1,800% ROI through autonomous business intelligence systems that operate independently and deliver predictive insights in real-time.',
+  keywords: ['Autonomous BIAI AnalyticsBusiness IntelligenceROI', 'Enterprise AIData AnalyticsPredictive AnalyticsMachine Learning'],
   openGraph: {,
-    title: 'AI 2025: The Autonomous Business Intelligence Revolution';
-    description: '1,800% ROI Through Self-Managing Analytics - Fortune 500 companies achieving extraordinary results with autonomous BI systems.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Autonomous BIAI Analytics', 'Business IntelligenceROI', 'Enterprise AI'],
-  };
+    title: 'AI 2025: The Autonomous Business Intelligence Revolution',
+    description: '1,800% ROI Through Self-Managing Analytics - Fortune 500 companies achieving extraordinary results with autonomous BI systems.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Autonomous BIAI AnalyticsBusiness IntelligenceROI', 'Enterprise AI']
+  },
   twitter: {,
-    card: 'summary_large_image';
-    title: 'AI 2025: The Autonomous Business Intelligence Revolution';
-    description: '1,800% ROI Through Self-Managing Analytics - Transform your business with autonomous BI systems.',
+    card: 'summary_large_image',
+    title: 'AI 2025: The Autonomous Business Intelligence Revolution',
+    description: '1,800% ROI Through Self-Managing Analytics - Transform your business with autonomous BI systems.'
   }
-};
+},
 export default function AutonomousBIRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -275,7 +275,7 @@ export default function AutonomousBIRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Resources */,}
+      {/* Related Resources */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Resources</h2>,
@@ -314,4 +314,4 @@ export default function AutonomousBIRevolutionPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

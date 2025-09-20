@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'node:path'
 import { SAMPLE_SERVICES } from './src/data/sampleServices'
 
-// https://vitejs.dev/config/
+// https: //vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -19,16 +19,16 @@ export default defineConfig({
             if (q && !item.title.toLowerCase().includes(q)) return false
             return true
           })
-          res.setHeader('Content-Type', 'application/json')
+          res.setHeader('Content-Typeapplication/json')
           res.end(JSON.stringify(data))
         })
-      },
-    },
+      }
+    }
   ],
   build: {
     rollupOptions: {
-      external: ['react-markdown'],
-    },
+      external: ['react-markdown']
+    }
   },
   resolve: {
     alias: {

@@ -1,22 +1,22 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from 'lucide-react'
 
-type UserRole = "talent" | "client" | null;
+type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
-  onSelect: (role: UserRole) => void;
+  onSelect: (role: UserRole) => void
 }
 
 export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
 
   const handleSelect = (role: UserRole) => {
-    setSelectedRole(role);
-    onSelect(role);
-  };
+    setSelectedRole(role),
+    onSelect(role)
+  },
 
   return (
     <div className="space-y-4 px-4">
@@ -73,5 +73,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  );
+  ),
 }

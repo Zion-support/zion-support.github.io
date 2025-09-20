@@ -32,5 +32,5 @@ export default function AgentEvidenceVault11Page() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}
 ,

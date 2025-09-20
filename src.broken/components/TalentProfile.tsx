@@ -2,7 +2,7 @@
 interface TalentProfileProps extends TalentProfileType {}
 
 export default function TalentProfile(props: TalentProfileProps) {
-  const { profile_picture_url, full_name, bio, skills } = props;
+  const { profile_picture_url, full_name, bio, skills } = props,
 
   return (<div className="space-y-4" data-testid="talent-profile">
       <div className="flex items-center space-x-4">

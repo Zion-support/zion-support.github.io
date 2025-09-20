@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function UltimateRedundancyPage() {
   return (
@@ -10,7 +10,7 @@ export default function UltimateRedundancyPage() {
         <meta name="description" content="Multi-layer failover, geographic distribution, and self-healing infrastructure." />
         <meta property="og:title" content="Ultimate Redundancy" />
         <meta property="og:description" content="Multi-layer failover, geographic distribution, and self-healing infrastructure." />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter: card" content="summary_large_image" />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -50,6 +50,6 @@ export default function UltimateRedundancyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }
 

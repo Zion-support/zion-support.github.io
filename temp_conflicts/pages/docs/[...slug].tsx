@@ -1,19 +1,19 @@
-import React from 'react';
-import Head from 'next/head';
-import type { GetServerSideProps } from 'next';
-import path from 'path';
-import fs from 'fs/promises';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import React from 'react',
+import Head from 'next/head',
+import type { GetServerSideProps } from 'next',
+import path from 'path',
+import fs from 'fs/promises',
+import ReactMarkdown from 'react-markdown',
+import remarkGfm from 'remark-gfm',
 
 type DocsPageProps = {
-  title: string;
-  markdownContent: string;
-  filePathRequested: string;
-};
+  title: string,
+  markdownContent: string,
+  filePathRequested: string
+},
 
 export default function DocsPage(props: DocsPageProps) {
-  const { title, markdownContent, filePathRequested } = props;
+  const { title, markdownContent, filePathRequested } = props,
 
   return (
     <>
@@ -36,41 +36,41 @@ export default function DocsPage(props: DocsPageProps) {
         </main>
       </div>
     </>
-  );
+  ),
 }
 
 export const getServerSideProps: GetServerSideProps<DocsPageProps> = async (context) => {
-  const slugPartsRaw = context.params?.slug;
-  const slugParts = Array.isArray(slugPartsRaw) ? slugPartsRaw : [];
+  const slugPartsRaw = context.params?.slug,
+  const slugParts = Array.isArray(slugPartsRaw) ? slugPartsRaw : [],
 
   // Join slug parts back into a path like "README.md" or "docs/guide.md"
-  const requestedPath = slugParts.join('/');
+  const requestedPath = slugParts.join('/'),
 
   // Security: only allow .md files and restrict traversal
   if (!requestedPath || !requestedPath.toLowerCase().endsWith('.md') || requestedPath.includes('..')) {
-    return { notFound: true };
+    return { notFound: true },
   }
 
   // Resolve against repository root
-  const repoRoot = process.cwd();
-  const absolutePath = path.join(repoRoot, requestedPath);
+  const repoRoot = process.cwd(),
+  const absolutePath = path.join(repoRoot, requestedPath),
 
   try {
-    const fileBuffer = await fs.readFile(absolutePath);
-    const fileContent = fileBuffer.toString('utf8');
+    const fileBuffer = await fs.readFile(absolutePath),
+    const fileContent = fileBuffer.toString('utf8'),
 
-    const titleBase = path.basename(requestedPath).replace(/\.md$/i, '');
-    const title = titleBase.replace(/[-_]/g, ' ');
+    const titleBase = path.basename(requestedPath).replace(/\.md$/i, ''),
+    const title = titleBase.replace(/[-_]/g, ' '),
 
     return {
       props: {
         title,
         markdownContent: fileContent,
-        filePathRequested: requestedPath,
-      },
-    };
+        filePathRequested: requestedPath
+      }
+    },
   } catch (error) {
-    return { notFound: true };
+    return { notFound: true },
   }
-};
+},
 

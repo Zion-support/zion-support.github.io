@@ -1,11 +1,11 @@
 
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 
 interface FeaturedListingsSectionProps {
-  showTitle?: boolean;
+  showTitle?: boolean,
 }
 
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
@@ -78,8 +78,8 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "SocialAI",
         id: "social-ai"
       }
-    },
-  ];
+    }
+  ],
 
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">
@@ -108,7 +108,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         
         <div className="mt-10 text-center">
           <Button 
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
             asChild
           >
             <Link to="/marketplace">View All Listings</Link>
@@ -116,5 +116,5 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         </div>
       </div>
     </section>
-  );
+  )
 }

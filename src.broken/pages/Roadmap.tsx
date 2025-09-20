@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { NextSeo } from '@/components/NextSeo';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { ROADMAP_ITEMS, RoadmapItem } from '@/data/roadmap';
+import React, { useState } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { NextSeo } from '@/components/NextSeo',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { toast } from '@/hooks/use-toast',
+import { ROADMAP_ITEMS, RoadmapItem } from '@/data/roadmap',
 
-const STATUSES: RoadmapItem['status'][] = ['Planned', 'In Progress', 'Completed'];
+const STATUSES: RoadmapItem['status'][] = ['PlannedIn Progress', 'Completed'],
 
 function voteWeight(role?: string) {
-  if (!role) return 1;
-  const r = role.toLowerCase();
-  if (r === 'client') return 2;
-  if (r === 'zion$ staker' || r === 'staker') return 3;
-  return 1; // default for Talent and others
+  if (!role) return 1,
+  const r = role.toLowerCase(),
+  if (r === 'client') return 2,
+  if (r === 'zion$ staker' || r === 'staker') return 3,
+  return 1, // default for Talent and others
 }
 
 export default function RoadmapPage() {
-  const { user } = useAuth();
-  const [items, setItems] = useState<RoadmapItem[]>(ROADMAP_ITEMS);
+  const { user } = useAuth(),
+  const [items, setItems] = useState<RoadmapItem[]>(ROADMAP_ITEMS),
 
   const handleUpvote = (id: string) => {
     if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to vote' });
-      return;
+      toast({ title: 'Login required', description: 'Please sign in to vote' }),
+      return,
     }
-    const weight = voteWeight(user.role);
+    const weight = voteWeight(user.role),
     setItems((prev) =>
       prev.map((item) =>
         item.id === id ? { ...item, upvotes: item.upvotes + weight } : item
       )
-    );
-  };
+    ),
+  },
 
   return (
     <>
@@ -96,5 +96,5 @@ export default function RoadmapPage() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

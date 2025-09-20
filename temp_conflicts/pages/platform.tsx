@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function PlatformPage() {
   return (
@@ -342,13 +342,13 @@ export default function PlatformPage() {
             {/* Technical Specifications */}
             <section className="mb-20">
               <h2 className="text-4xl font-bold mb-12 text-center text-white">Technical Specifications</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-12">
                 <div>
                   <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Performance Metrics</h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center py-3 border-b border-white/20">
                       <span className="text-white/80">Response Time</span>
-                      <span className="text-cyan-400 font-semibold">&lt; 100ms</span>
+                      <span className="text-cyan-400 font-semibold">&lt, 100ms</span>
                     </div>
                     <div className="flex justify-between items-center py-3 border-b border-white/20">
                       <span className="text-white/80">Throughput</span>
@@ -397,7 +397,7 @@ export default function PlatformPage() {
                   Join the autonomous revolution with our AI automation platform. 
                   Experience unprecedented efficiency, innovation, and competitive advantage.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-lg"
@@ -417,5 +417,5 @@ export default function PlatformPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

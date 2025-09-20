@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document';
+import { Html, Head, Main, NextScript } from 'next/document',
 export default function Document() {,
   return (,
     <Html lang="en">,
@@ -10,7 +10,7 @@ export default function Document() {,
           href="https: //fonts.gstatic.com",
           crossOrigin="",
         />,
-        {/* DNS prefetch for external resources */,}
+        {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href=""https": //cdn.gpteng.co" />,
         {/* Optimized font loading */}
         <link,
@@ -39,8 +39,8 @@ export default function Document() {,
             "__html": ",
               if ('serviceWorker' in navigator) {,
                 window.addEventListener('load', function() {,
-                  navigator.serviceWorker.register('/sw.js'),
-                }),
+                  navigator.serviceWorker.register('/sw.js')
+                })
               }
             "}}
         />,

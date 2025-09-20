@@ -1,69 +1,69 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from - yellow-500 to - orange - 600' },;
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from - green - 500 to - teal - 600' },;
-    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from - blue - 500 to - indigo - 600' };
-  ];
+,
+    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from - yellow-500 to - orange - 600' },
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from - green - 500 to - teal - 600' },
+    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from - blue - 500 to - indigo - 600' },
+  ],
 
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service =>
-    selectedCategory === 'All' || service.category === selectedCategory) ;
+    selectedCategory === 'All' || service.category === selectedCategory) ,
 
   const getCategoryStats = (categoryId: string) => {
     if(categoryId === 'All') {
       return {
               count: innovativeServices2027.length,
-      avgPrice: Math.round(innovativeServices2027.reduce ( (sum, s) => sum + parseInt(s.price.replace (/[$,]/g, '') .split('/') [0]) , 0) / innovativeServices2027.length) ,
-      avgRating: Math.round((innovativeServices2027.reduce ( (sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
-      }};
-    const services = innovativeServices2027.filter(s => s.category === categoryId) ;
+      avgPrice: Math.round(innovativeServices2027.reduce ( (sum, s) => sum + parseInt(s.price.replace (/[$]/g, '') .split('/') [0]) , 0) / innovativeServices2027.length) ,
+      avgRating: Math.round((innovativeServices2027.reduce ( (sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10,
+      }},
+    const services = innovativeServices2027.filter(s => s.category === categoryId) ,
           return {
         count: services.length,
-        avgPrice: Math.round(services.reduce ( (sum, s) => sum + parseInt(s.price.replace (/[$,]/g, '') .split('/') [0]) , 0) / services.length) ,
+        avgPrice: Math.round(services.reduce ( (sum, s) => sum + parseInt(s.price.replace (/[$]/g, '') .split('/') [0]) , 0) / services.length) ,
         avgRating: Math.round((services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-      }};
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
-    selectedCategory === 'All' || service.category === selectedCategory;) ;
+      }},
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ,
+    selectedCategory === 'All' || service.category === selectedCategory,) ,
 
-  const getCategoryStats = (categoryId: string) => {;
-    if(categoryId === 'All') {;
-      return {;
-        count: INNOVATIVE_SERVICES_2027.length,;
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length) ,;
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
-      };
+  const getCategoryStats = (categoryId: string) => {,
+    if(categoryId === 'All') {,
+      return {,
+        count: INNOVATIVE_SERVICES_2027.length,
+        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length) ,
+        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10,
+      },
 
-    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId) ;
+    const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId) ,
     return {
       count: services.length,
       avgPrice: Math.round(services.reduce ( (sum, s) => sum + s.price, 0) / services.length) ,
       avgRating: Math.round((services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
-    };
-  };
+    },
+  },
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+    visible: {,
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5
+      },
+    },
+  },
 
   return (<>
       <SEOHead
@@ -114,7 +114,7 @@ export default function Page() {
         </div>
       </section>
       {/* Contact Information Banner */}
-      <section className="bg-gradient - to - r from - cyan - 600 to - blue - 600 py-8">;
+      <section className="bg-gradient - to - r from - cyan - 600 to - blue - 600 py-8">,
         <div  className="max - w-7xl mx - auto px-6">
           <div  className="flex flex - col md:flex - row items - center justify - between text-white">
             <div  className="flex items - center space - x-4 mb-4 md:mb-0">
@@ -134,7 +134,7 @@ export default function Page() {
       </section>
 
       {/* Category Overview */}
-      <section className="py-20 bg-zion -slate">;
+      <section className="py-20 bg-zion -slate">,
         <div  className="max - w-7xl mx - auto px-6">
           <div  className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -145,14 +145,14 @@ export default function Page() {
               specific business challenges and drive innovation.</p>
           </div>
           <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">
-            {categories.map((category) => {;
-              specific business challenges and drive innovation.;
-            </p>;
-          </div>;
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-            {categories.map((category) => {;
-              const stats = getCategoryStats(category.id) ;
-              const IconComponent = category.icon;
+            {categories.map((category) => {,
+              specific business challenges and drive innovation.,
+            </p>,
+          </div>,
+          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">,
+            {categories.map((category) => {,
+              const stats = getCategoryStats(category.id) ,
+              const IconComponent = category.icon,
 
               return (<motion.div
                   key = {category.id}
@@ -175,18 +175,18 @@ export default function Page() {
                       <span className="text-cyan - 400 font -semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div  className="flex justify -between">
-                      <span > Avg.Rating:</span>;
-                      <span className="text-cyan - 400 font -semibold">{stats.avgRating}/5</span>;
-                    </div>;
-                  </div>;
-                </motion.div>;) ;
+                      <span > Avg.Rating: </span>,
+                      <span className="text-cyan - 400 font -semibold">{stats.avgRating}/5</span>,
+                    </div>,
+                  </div>,
+                </motion.div>,) ,
             }) }
           </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-zion - slate -dark">;
+      <section className="py-20 bg-zion - slate -dark">,
         <div  className="max - w-7xl mx - auto px-6">
           <div  className="flex items - center justify - between mb-12">
             <h2 className="text-3xl md:text-4xl font - bold text-white">
@@ -214,7 +214,7 @@ export default function Page() {
       </section>
 
       {/* Service Categories Deep Dive */}
-      <section className="py-20 bg-zion -slate">;
+      <section className="py-20 bg-zion -slate">,
         <div  className="max - w-7xl mx - auto px-6">
           <div  className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -351,7 +351,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 600 to - blue -600">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 600 to - blue -600">,
         <div  className="max - w-4xl mx - auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -359,7 +359,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-cyan - 100 mb-8 max - w-2xl mx -auto">
@@ -381,38 +381,38 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>;
-    </>;) };
+      </section>,
+    </>,) },
 
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string) => {
     switch(category) {
-      case 'AI Services':;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </>;) ;
-};
+      case 'AI Services':,
+            </a>,
+          </div>,
+        </div>,
+      </section>,
+    </>,) 
+},
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {;
-    switch(category) {;
-      case 'AI Services':;
-        return < Brain className="w-5 h-5" />;
-      case 'Cybersecurity':;
-        return < Shield className="w-5 h-5" />;
-      case 'Emerging Technology':;
-        return < Zap className="w-5 h-5" />;
-      case 'IT Services':;
-        return < Code className="w-5 h-5" />;
-      case 'Telecommunications':;
-        return < Signal className="w-5 h-5" />;
-      default:;
-        return < Users className="w-5 h-5" />};
-  };
+  const getCategoryIcon = (category: string) => {,
+    switch(category) {,
+      case 'AI Services':,
+        return < Brain className="w-5 h-5" />,
+      case 'Cybersecurity':,
+        return < Shield className="w-5 h-5" />,
+      case 'Emerging Technology':,
+        return < Zap className="w-5 h-5" />,
+      case 'IT Services':,
+        return < Code className="w-5 h-5" />,
+      case 'Telecommunications':,
+        return < Signal className="w-5 h-5" />,
+      default:,
+        return < Users className="w-5 h-5" />},
+  },
 
   return (<motion.div
       variants = {itemVariants}
@@ -453,7 +453,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
                 <CheckCircle className="w-3 h-3" />
                 <span>{feature}</span>
-              </span>;) ) }
+              </span>,) ) }
           </div>
         </div>
 
@@ -472,7 +472,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         <div  className="flex space - x-3">
           <Link
             to={service.website}
-            className="flex - 1 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white text-center py-3 px-4 rounded-lg font - medium hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 flex items - center justify - center space - x-2"
+            className="flex - 1 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white text-center py-3 px-4 rounded-lg font - medium hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 flex items - center justify - center space - x-2"
 
             <span > Learn More</span>
             <ArrowRight className="w-4 h-4" />
@@ -481,9 +481,9 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             to="/contact"
             className="px-4 py-3 border border-cyan - 500 text-cyan - 400 rounded-lg font - medium hover:bg-cyan - 500 hover:text-white transition - all duration -300"
           >
-            Contact;
-          </Link>;
-        </div>;
-      </div>;
-    </motion.div>;) ;
-};
+            Contact,
+          </Link>,
+        </div>,
+      </div>,
+    </motion.div>,) 
+},

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,103 +11,85 @@ import {
     ArrowRight, Award, Clock, Target, Rocket, Lightbulb
 } from "lucide-react";
 import { Link } from "react-router-dom";
-
 // Import all service data
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 import { CUTTING_EDGE_2025_SERVICES } from "@/data/2025-cutting-edge-innovations.jsx";
 import { SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "@/data/2025-specialized-industry-solutions.jsx";
 import { INNOVATIVE_MICRO_SAAS_2025 } from "@/data/2025-innovative-micro-saas-expansion.jsx";
-
 // Combine all services
 const ALL_SERVICES = [
     ...MICRO_SAAS_SERVICES,
     ...CUTTING_EDGE_2025_SERVICES,
     ...SPECIALIZED_INDUSTRY_SOLUTIONS_2025,
     ...INNOVATIVE_MICRO_SAAS_2025
-];
+],
 
 // Service categories
 const SERVICE_CATEGORIES = [
-    { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: ALL_SERVICES.filter(s => s.category.includes('AI') || s.tags.includes('AI')).length },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, count: ALL_SERVICES.filter(s => s.category.includes('Quantum') || s.tags.includes('Quantum')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: ALL_SERVICES.filter(s => s.category.includes('Security') || s.tags.includes('Security')).length },
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: BarChart3, count: ALL_SERVICES.filter(s => s.category.includes('Business') || s.tags.includes('Business')).length },
-    { id: 'industry-solutions', name: 'Industry Solutions', icon: Target, count: ALL_SERVICES.filter(s => ['Healthcare', 'Financial Services', 'Manufacturing', 'Energy', 'Transportation', 'Education', 'Real Estate', 'Agriculture', 'Legal Services', 'Media & Entertainment'].includes(s.category)).length },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Lightbulb, count: ALL_SERVICES.filter(s => ['Edge Computing', 'Digital Twin', 'Autonomous Systems', 'Neuromorphic Computing', 'Federated Learning'].includes(s.category)).length }
-];
+    { id: 'all', name: 'All Services', icon: Globe, count: ALL_SERVICES.length };
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: ALL_SERVICES.filter(s => s.category.includes('AI') || s.tags.includes('AI')).length };
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, count: ALL_SERVICES.filter(s => s.category.includes('Quantum') || s.tags.includes('Quantum')).length };
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: ALL_SERVICES.filter(s => s.category.includes('Security') || s.tags.includes('Security')).length };
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: BarChart3, count: ALL_SERVICES.filter(s => s.category.includes('Business') || s.tags.includes('Business')).length };
+    { id: 'industry-solutions', name: 'Industry Solutions', icon: Target, count: ALL_SERVICES.filter(s => ['HealthcareFinancial Services', 'ManufacturingEnergy', 'TransportationEducation', 'Real EstateAgriculture', 'Legal ServicesMedia & Entertainment'].includes(s.category)).length },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Lightbulb, count: ALL_SERVICES.filter(s => ['Edge ComputingDigital Twin', 'Autonomous SystemsNeuromorphic Computing', 'Federated Learning'].includes(s.category)).length }
+],
 
 // Contact information
 const CONTACT_INFO = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709",
-    website: "https://ziontechgroup.com",
-    supportHours: "24/7",
-    responseTime: "< 2 hours"
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
 };
-
 // Benefits section
 const BENEFITS = [
     {
-        icon: <Zap className="h-6 w-6"/>,
-        title: "Immediate Deployment",
-        description: "All services are ready for immediate deployment with no setup delays"
-    },
+        icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays"
+    };
     {
-        icon: <Shield className="h-6 w-6"/>,
-        title: "Enterprise Security",
-        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
-    },
+        icon: <Shield className="h-6 w-6"/>,title: "Enterprise Security",description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
+    };
     {
-        icon: <Users className="h-6 w-6"/>,
-        title: "Dedicated Support",
-        description: "24/7 technical support with dedicated account managers"
-    },
+        icon: <Users className="h-6 w-6"/>,title: "Dedicated Support",description: "24/7 technical support with dedicated account managers"
+    };
     {
-        icon: <TrendingUp className="h-6 w-6"/>,
-        title: "Proven ROI",
-        description: "Average 300% ROI within 6 months of implementation"
+        icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
     }
 ];
-
 export default function AllServices2027() {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [sortBy, setSortBy] = useState('featured');
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [sortBy, setSortBy] = useState('featured'),
 
     // Filter services based on category and search
     const filteredServices = ALL_SERVICES.filter(service => {
         const matchesCategory = selectedCategory === 'all' || 
-            service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
-            service.tags.some(tag => tag.toLowerCase().includes(selectedCategory.replace('-', ' ')));
+            service.category.toLowerCase().includes(selectedCategory.replace('- ')) ||
+            service.tags.some(tag => tag.toLowerCase().includes(selectedCategory.replace('- '))),
         
         const matchesSearch = searchQuery === '' || 
             service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+            service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
         
-        return matchesCategory && matchesSearch;
-    });
+        return matchesCategory && matchesSearch,
+    }),
 
     // Sort services
     const sortedServices = [...filteredServices].sort((a, b) => {
         switch (sortBy) {
             case 'featured':
-                return b.featured - a.featured;
+                return b.featured - a.featured,
             case 'rating':
-                return b.rating - a.rating;
+                return b.rating - a.rating,
             case 'price-low':
                 return a.price - b.price;
             case 'price-high':
                 return b.price - a.price;
             case 'ai-score':
                 return b.aiScore - a.aiScore;
-            default:
-                return 0;
+            default: return 0
         }
     });
-
     return (
         <div className="min-h-screen bg-background">
             {/* Hero Section */}
@@ -118,7 +100,7 @@ export default function AllServices2027() {
                     </h1>
                     <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
                         Discover our comprehensive suite of 100+ AI-powered micro SAAS services. 
-                        From cutting-edge quantum computing to industry-specific solutions, 
+                        From cutting-edge quantum computing to industry-specific solutions;
                         we provide enterprise-grade technology at startup prices.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
@@ -439,7 +421,7 @@ export default function AllServices2027() {
                         to accelerate growth, reduce costs, and gain competitive advantages.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
-                        <Button size="lg" className="bg-white text-zion-blue hover:bg-gray-100">
+                        <Button size="lg" className="bg-white text-zion-blue hover: bg-gray-100">
                             <Rocket className="h-5 w-5 mr-2" />
                             Explore Services
                         </Button>
@@ -451,5 +433,5 @@ export default function AllServices2027() {
                 </div>
             </section>
         </div>
-    );
+    )
 }

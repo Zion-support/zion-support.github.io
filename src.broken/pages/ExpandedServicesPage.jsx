@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState, useEffect } from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
-, [searchQuery, selectedCategory, sortBy]) ;
+, [searchQuery, selectedCategory, sortBy]) ,
     const getCategoryIcon = (category) => {
         switch(category) {
-            case 'AI Services': return '🤖';
-            case 'Micro SAAS': return '☁️';
-            case 'IT Services': return '💻';
-            case 'Digital Services': return '🚀';
+            case 'AI Services': return '🤖',
+            case 'Micro SAAS': return '☁️',
+            case 'IT Services': return '💻',
+            case 'Digital Services': return '🚀',
             default: return '⚡'}
-    };
+    },
     const getPricingModelColor = (model) => {
         switch(model) {
-            case 'subscription': return 'bg-blue - 100 text-blue - 800';
-            case 'project - based': return 'bg-purple - 100 text-purple - 800';
-            case 'one - time': return 'bg-green - 100 text-green - 800';
-            case 'usage - based': return 'bg-orange - 100 text-orange - 800';
+            case 'subscription': return 'bg-blue - 100 text-blue - 800',
+            case 'project - based': return 'bg-purple - 100 text-purple - 800',
+            case 'one - time': return 'bg-green - 100 text-green - 800',
+            case 'usage - based': return 'bg-orange - 100 text-orange - 800',
             default: return 'bg-gray - 100 text-gray - 800'}
-    };
+    },
     return (<div className="min - h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-zion - blue py-20">
@@ -80,7 +80,7 @@ export default function Page() {
                   <div className="flex items - start justify - between mb-2">
                     <div className="text-3xl">{getCategoryIcon(service.category) }</div>
                     <Badge className={getPricingModelColor(service.pricingModel) }>
-                      {service.pricingModel.replace('-', ' ') }
+                      {service.pricingModel.replace('- ') }
                     </Badge>
                   </div>
                   <CardTitle className="text-xl text-zion - blue -dark">{service.title}</CardTitle>

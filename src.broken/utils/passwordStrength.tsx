@@ -23,7 +23,7 @@ export const PASSWORD_STRENGTH = {
   WEAK: 'weak',
   MEDIUM: 'medium',
   STRONG: 'strong',
-  VERY_STRONG: 'very-strong'};
+  VERY_STRONG: 'very-strong'},
 
 /**
  * Password strength colors
@@ -34,7 +34,7 @@ export const PASSWORD_COLORS = {
   [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
   [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
   [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'},
 
 /**
  * Password strength labels
@@ -45,7 +45,7 @@ export const PASSWORD_LABELS = {
   [PASSWORD_STRENGTH.WEAK]: 'Weak',
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
   [PASSWORD_STRENGTH.STRONG]: 'Strong',
-  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};
+  [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'},
 
 /**
  * Check if password contains lowercase letters
@@ -54,8 +54,8 @@ export const PASSWORD_LABELS = {
  */
 export const hasLowercase = password => {
 
-  return /[a-z]/.test(password);
-};
+  return /[a-z]/.test(password),
+},
 
 /**
  * Check if password contains uppercase letters
@@ -64,8 +64,8 @@ export const hasLowercase = password => {
  */
 export const hasUppercase = password => {
 
-  return /[A-Z]/.test(password);
-};
+  return /[A-Z]/.test(password),
+},
 
 /**
  * Check if password contains numbers
@@ -74,8 +74,8 @@ export const hasUppercase = password => {
  */
 export const hasNumbers = password => {
 
-  return /\d/.test(password);
-};
+  return /\d/.test(password),
+},
 
 /**
  * Check if password contains special characters
@@ -85,10 +85,10 @@ export const hasNumbers = password => {
 :src/utils/passwordStrength.jsx
 export const hasSpecialChars = password => {
 
-  return /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
+  return /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),
 export const hasSpecialChars = (password) => {
-  return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
-};
+  return /[!@#$%^&*()_+\-=[\]{},':"\\|,.<>/?]/.test(password),
+},
 
 /**
  * Check password length
@@ -97,13 +97,13 @@ export const hasSpecialChars = (password) => {
  */
 export const getLengthScore = password => {
 
-  if(!password) return 0;
+  if(!password) return 0,
 
-  if(password.length < 8) return 0;
-  if(password.length < 12) return 1;
-  if(password.length < 16) return 2;
-  return 3;
-};
+  if(password.length < 8) return 0,
+  if(password.length < 12) return 1,
+  if(password.length < 16) return 2,
+  return 3,
+},
 
 /**
  * Calculate password strength score
@@ -112,19 +112,19 @@ export const getLengthScore = password => {
  */
 export const calculatePasswordScore = password => {
 
-  if(!password) return 0;
+  if(!password) return 0,
 
-  let score = 0;
+  let score = 0,
 
-  // Length score(0 - 25 points) score += getLengthScore(password) * 8.33;
+  // Length score(0 - 25 points) score += getLengthScore(password) * 8.33,
 
   // Bonus for complexity
-  const uniqueChars = new Set(password) .size;
-  if(uniqueChars > 8) score += 10;
-  if(uniqueChars > 12) score += 10;
+  const uniqueChars = new Set(password) .size,
+  if(uniqueChars > 8) score += 10,
+  if(uniqueChars > 12) score += 10,
 
-  return Math.min(100, Math.round(score));
-};
+  return Math.min(100, Math.round(score)),
+},
 
 /**
  * Get password strength level
@@ -133,14 +133,14 @@ export const calculatePasswordScore = password => {
  */
 export const getPasswordStrength = password => {
 
-  const score = calculatePasswordScore(password);
+  const score = calculatePasswordScore(password),
 
-  if(score < 20) return PASSWORD_STRENGTH.VERY_WEAK;
-  if(score < 40) return PASSWORD_STRENGTH.WEAK;
-  if(score < 60) return PASSWORD_STRENGTH.MEDIUM;
-  if(score < 80) return PASSWORD_STRENGTH.STRONG;
-  return PASSWORD_STRENGTH.VERY_STRONG;
-};
+  if(score < 20) return PASSWORD_STRENGTH.VERY_WEAK,
+  if(score < 40) return PASSWORD_STRENGTH.WEAK,
+  if(score < 60) return PASSWORD_STRENGTH.MEDIUM,
+  if(score < 80) return PASSWORD_STRENGTH.STRONG,
+  return PASSWORD_STRENGTH.VERY_STRONG,
+},
 
 /**
  * Get password strength feedback
@@ -149,46 +149,46 @@ export const getPasswordStrength = password => {
  */
 export const getPasswordFeedback = password => {
 
-  const feedback = [];
+  const feedback = [],
 
   if(!password) {
 
-    feedback.push('Enter a password');
-    return feedback;
+    feedback.push('Enter a password'),
+    return feedback,
   }
 
   if(password.length < 8) {
 
-    feedback.push('Password should be at least 8 characters long');
+    feedback.push('Password should be at least 8 characters long'),
   }
 
   if(!hasLowercase(password)) {
 
-    feedback.push('Include lowercase letters');
+    feedback.push('Include lowercase letters'),
   }
 
   if(!hasUppercase(password)) {
 
-    feedback.push('Include uppercase letters');
+    feedback.push('Include uppercase letters'),
   }
 
   if(!hasNumbers(password)) {
 
-    feedback.push('Include numbers');
+    feedback.push('Include numbers'),
   }
 
   if(!hasSpecialChars(password)) {
 
-    feedback.push('Include special characters');
+    feedback.push('Include special characters'),
   }
 
   if(feedback.length === 0) {
 
-    feedback.push('Password is strong!');
+    feedback.push('Password is strong!'),
   }
 
-  return feedback;
-};
+  return feedback,
+},
 
 /**
  * Validate password requirements
@@ -197,10 +197,10 @@ export const getPasswordFeedback = password => {
  */
 export const validatePassword = password => {
 
-  const score = calculatePasswordScore(password);
-  const strength = getPasswordStrength(password);
-  const feedback = getPasswordFeedback(password);
-  const isValid = score >= 60; // Minimum medium strength
+  const score = calculatePasswordScore(password),
+  const strength = getPasswordStrength(password),
+  const feedback = getPasswordFeedback(password),
+  const isValid = score >= 60, // Minimum medium strength
 
   return {
 
@@ -209,8 +209,8 @@ export const validatePassword = password => {
     strength,
     feedback,
     color: PASSWORD_COLORS[strength],
-    label: PASSWORD_LABELS[strength]};
-};
+    label: PASSWORD_LABELS[strength]},
+},
 
 export default {
 
@@ -225,5 +225,5 @@ export default {
   calculatePasswordScore,
   getPasswordStrength,
   getPasswordFeedback,
-  validatePassword};
+  validatePassword},
 '"

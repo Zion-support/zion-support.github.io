@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"
       <div className="container mx-auto px-4">
@@ -170,9 +170,9 @@ export default function Page() {
                   count: ENHANCED_SERVICES.filter()
                     s => s.category === service.category
                   ).length,
-                  icon: getCategoryIcon(service.category)});
+                  icon: getCategoryIcon(service.category)}),
               }
-              return acc;
+              return acc,
             }, []).map((cat, index) => (
               <div
                 key={index}"
@@ -205,7 +205,7 @@ export default function Page() {
             <div className="flex flex-wrap justify-center gap-4">
               <Button"
                 size="lg"
-                className="bg-white text-zion-purple hover:bg-zion-slate-light"
+                className="bg-white text-zion-purple hover: bg-zion-slate-light"
               >
                 Schedule Free Consultation
               </Button>
@@ -237,7 +237,7 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
-};
-export default EnhancedServicesOverview;
+  )
+},
+export default EnhancedServicesOverview,
 '"`

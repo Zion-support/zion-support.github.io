@@ -1,29 +1,29 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-    ];
+    ],
     const useCases = [{
             industry: 'Academic Research',
-            applications['Literature reviews', 'Meta - analyses', 'Systematic reviews', 'Grant writing'];
-        },;
+            applications['Literature reviewsMeta - analyses', 'Systematic reviewsGrant writing'],
+        },
         {
             industry: 'Market Research',
-            applications['Competitive analysis', 'Trend forecasting', 'Customer insights', 'Industry reports'];
-        },;
+            applications['Competitive analysisTrend forecasting', 'Customer insightsIndustry reports'],
+        },
         {
             industry: 'Scientific Research',
-            applications['Data analysis', 'Hypothesis testing', 'Experimental design', 'Publication support'];
-        },;
+            applications['Data analysisHypothesis testing', 'Experimental designPublication support'],
+        },
         {
             industry: 'Business Intelligence',
-            applications['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics'];
+            applications['Market analysisRisk assessment', 'Strategic planningPerformance metrics'],
         }
-    ];
+    ],
     const tools = [{ name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI - powered academic search engine' },
         { name: 'Google Scholar', url: 'https://scholar.google.com/', description: 'Comprehensive academic search' },
         { name: 'ResearchGate', url: 'https://www.researchgate.net/', description: 'Academic social network' },
         { name: 'arXiv', url: 'https://arxiv.org/', description: 'Preprint repository' }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 text-white">
       <div className="max - w-7xl mx - auto px-4 py-16">
         {/* Hero Section */}

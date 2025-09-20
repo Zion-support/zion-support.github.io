@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
             catch(error) {
 
                 // console.error('Failed to parse accessibility settings:', error)}
         }
-    }, []);
+    }, []),
     useEffect(() => {
         // Apply settings to document
-        applySettings(settings);
+        applySettings(settings),
         // Save to localStorage'
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]),
     const applySettings = (newSettings) => {
 
-        const root = document.documentElement;
+        const root = document.documentElement,
         // High contrast
         if(newSettings.highContrast) {
 
-            root.style.setProperty('--high-contrast',1');
+            root.style.setProperty('--high-contrast',1'),
             root.classList.add('high-contrast')}
         else {
 
-            root.style.setProperty('--high-contrast',0');
+            root.style.setProperty('--high-contrast',0'),
             root.classList.remove('high-contrast')}
         // Font size'
-        root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
+        root.style.setProperty('--font-size', `${newSettings.fontSize}%`),
         // Reduced motion
         if(newSettings.reducedMotion) {
 
@@ -41,7 +41,7 @@ export default function Page() {
 
             root.style.setProperty('--focus-visible',none')}
         // Color blindness'
-        root.classList.remove('protanopia',deuteranopia',tritanopia');
+        root.classList.remove('protanopia',deuteranopia',tritanopia'),
         if(newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
@@ -52,10 +52,10 @@ export default function Page() {
         else {
 
             root.classList.remove('focus-visible')}
-    };
+    },
     const updateSetting = (key, value) => {
 
-        setSettings(prev => ({ ...prev, [key]: value }))};
+        setSettings(prev => ({ ...prev, [key]: value }))},
     const resetSettings = () => {
         const defaultSettings = {
 
@@ -67,32 +67,32 @@ export default function Page() {
             focusIndicator: true,
   colorBlindness: 'none'
 
-};
-        setSettings(defaultSettings)};
+},
+        setSettings(defaultSettings)},
     const tabs = ['
         { id: 'general', label: 'General', icon: '⚙️' },
         { id: 'visual', label: 'Visual', icon: '👁️' },
         { id: 'audio', label: 'Audio', icon: '🔊' },
         { id: 'navigation', label: 'Navigation', icon: '⌨️' }
-    ];
+    ],
     const getScoreColor = (score) => {
 
         if(score >= 90)
-            return 'text-green-400';
+            return 'text-green-400',
         if(score >= 70)
-            return 'text-yellow-400';
-        return 'text-red-400'};
+            return 'text-yellow-400',
+        return 'text-red-400'},
     const getScoreLabel = (score) => {
 
         if(score >= 90)
-            return 'Excellent';
+            return 'Excellent',
         if(score >= 70)
-            return 'Good';
+            return 'Good',
         if(score >= 50)
-            return 'Needs Improvement';
-        return 'Poor'};
+            return 'Needs Improvement',
+        return 'Poor'},
     if(!isVisible)
-        return null;
+        return null,
     return (<>
       {/* Toggle Button */}
       <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"  title="Accessibility Settings">"
@@ -365,6 +365,6 @@ export default function Page() {
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </>)};
-export default AccessibilityPanel;
+    </>)},
+export default AccessibilityPanel,
 '"`

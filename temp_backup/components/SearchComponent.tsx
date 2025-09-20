@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, ArrowRight, Globe, Brain, Shield, Cpu, Cloud, BarChart3, Lock } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Search, X, ArrowRight, Globe, Brain, Shield, Cpu, Cloud, BarChart3, Lock } from 'lucide-react',
 
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  url: string;
-  icon: React.ComponentType<{ className?: string }>;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  url: string,
+  icon: React.ComponentType<{ className?: string }>,
 }
 
 const SearchComponent: React.FC = () => {
@@ -17,7 +17,7 @@ const SearchComponent: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">SearchComponent</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default SearchComponent;
+export default SearchComponent,

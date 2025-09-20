@@ -1,38 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
                     { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
                     { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
-                ],;
-                trafficSources[;
+                ],
+                trafficSources[,
                     { source: 'Organic Search', percentage: 45 },
                     { source: 'Direct', percentage: 25 },
                     { source: 'Social Media', percentage: 20 },
                     { source: 'Referral', percentage: 10 }
-                ],;
-                deviceTypes[;
+                ],
+                deviceTypes[,
                     { device: 'Desktop', percentage: 60 },
                     { device: 'Mobile', percentage: 35 },
                     { device: 'Tablet', percentage: 5 }
                 ]
-            }) ;
-            setIsLoading(false) };
-        fetchData () }, [timeRange]) ;
+            }) ,
+            setIsLoading(false) },
+        fetchData () }, [timeRange]) ,
     const formatNumber = (num) => {
 
         if(num >= 1000000)
-            return (num / 1000000).toFixed(1) + 'M';
+            return (num / 1000000).toFixed(1) + 'M',
         if(num >= 1000)
-            return (num / 1000).toFixed(1) + 'K';
-        return num.toString()};
+            return (num / 1000).toFixed(1) + 'K',
+        return num.toString()},
     const formatCurrency = (num) => {
 
         return new Intl.NumberFormat('en-US', {
 
             style: 'currency',
             currency: 'USD'
-        }) .format(num) };
+        }) .format(num) },
     if(isLoading) {
 
         return (<div className="flex items-center justify-center h-64">"

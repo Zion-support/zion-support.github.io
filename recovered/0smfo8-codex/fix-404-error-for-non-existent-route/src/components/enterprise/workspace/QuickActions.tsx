@@ -1,8 +1,8 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",
 
 export function QuickActions() {
   const actions = [
@@ -34,7 +34,7 @@ export function QuickActions() {
       description: "Set up candidate interviews",
       color: "bg-amber-100 dark:bg-amber-900/20"
     }
-  ];
+  ],
 
   return (
     <Card>
@@ -62,5 +62,5 @@ export function QuickActions() {
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

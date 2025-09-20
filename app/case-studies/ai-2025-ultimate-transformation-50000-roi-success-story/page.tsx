@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story';
-  description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
-  keywords: ['AI TransformationManufacturing', 'Fortune 10050K ROI', 'Autonomous Operations'];
+  title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
+  description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
+  keywords: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations'],
   openGraph: {,
-    title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story';
-    description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
-    type: 'article';
-    publishedTime: '2025-01-14T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI TransformationManufacturing', 'Fortune 10050K ROI', 'Autonomous Operations'],
+    title: 'AI 2025 Ultimate Transformation: 50,000% ROI Success Story',
+    description: 'Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
+    type: 'article',
+    publishedTime: '2025-01-14T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI TransformationManufacturingFortune 10050K ROI', 'Autonomous Operations']
   }
-};
+},
 export default function CaseStudy() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -52,7 +52,7 @@ export default function CaseStudy() {,
             AI 2025 Ultimate Transformation: 50,000% ROI Success Story,
           </h1>,
           <p className="text-xl md: text-2xl opacity-90 mb-8">,
-            Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation;
+            Fortune 100 manufacturing conglomerate achieves unprecedented 50,000% ROI through comprehensive AI transformation,
             revolutionizing operations across 47 facilities worldwide.,
           </p>,
           <div className="flex flex-wrap gap-3">,
@@ -74,12 +74,12 @@ export default function CaseStudy() {,
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
-          {/* Executive Summary */,}
+          {/* Executive Summary */}
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border-l-4 border-green-400 p-8 mb-12">,
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>,
             <p className="text-lg text-gray-700 mb-4">,
-              A Fortune 100 global manufacturing conglomerate achieved an unprecedented <strong>50,000% ROI</strong> through comprehensive AI transformation;
-              revolutionizing their operations across 47 facilities worldwide. This case study details the complete transformation journey;
+              A Fortune 100 global manufacturing conglomerate achieved an unprecedented <strong>50,000% ROI</strong> through comprehensive AI transformation,
+              revolutionizing their operations across 47 facilities worldwide. This case study details the complete transformation journey,
               from initial assessment to full-scale implementation of autonomous business systems.,
             </p>,
             <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mt-6">,
@@ -349,7 +349,7 @@ export default function CaseStudy() {,
               <li><strong>Measurement Drives Success:</strong> Clear metrics enable continuous improvement and optimization</li>,
             </ol>,
           </div>,
-          {/* Client Testimonial */,}
+          {/* Client Testimonial */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl p-8 mt-12">,
             <blockquote className="text-lg italic mb-4">,
               "The AI transformation with Zion Tech Group has been nothing short of revolutionary. We've achieved results that exceeded our wildest expectations. The 50,000% ROI speaks for itself, but the real value is in the operational excellence and competitive advantage we've gained. This partnership has positioned us as the industry leader for the next decade.",
@@ -381,4 +381,4 @@ export default function CaseStudy() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

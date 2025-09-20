@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { MessageCircle  } from 'lucide-react';
+import React, { useState } from 'react',
+import { MessageCircle  } from 'lucide-react',
 export default function Page() {
-;
+,
   return ("
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">"
       <div className="flex items-center gap-3 mb-4">
@@ -107,6 +107,6 @@ export default function Page() {
         🚀 Stay engaged! Top contributors are regularly featured on the
         homepage.</div>
     </div>
-  );
-};
+  ),
+},
 '"

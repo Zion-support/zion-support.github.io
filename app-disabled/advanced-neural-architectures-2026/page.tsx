@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Advanced Neural Architectures 2026 - Zion Tech Group';
-  description: 'Explore next-generation neural network architectures that achieve unprecedented performance in AI applications. Discover the future of neural computing.';
-  keywords: ['neural architecturesdeep learning', 'AI 2026neural networks', 'machine learningartificial intelligence'],
-};
+  title: 'Advanced Neural Architectures 2026 - Zion Tech Group',
+  description: 'Explore next-generation neural network architectures that achieve unprecedented performance in AI applications. Discover the future of neural computing.',
+  keywords: ['neural architecturesdeep learningAI 2026neural networks', 'machine learningartificial intelligence']
+},
 export default function AdvancedNeuralArchitectures2026Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">,
@@ -40,7 +40,7 @@ export default function AdvancedNeuralArchitectures2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Architecture Types Section */,}
+      {/* Architecture Types Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Neural Architectures</h2>,
@@ -75,7 +75,7 @@ export default function AdvancedNeuralArchitectures2026Page() {,
               <div className="text-4xl mb-4">⚡</div>,
               <h3 className="text-2xl font-bold mb-4">Real-time Learning</h3>,
               <p className="text-gray-200 mb-4">,
-                Dynamic neural architectures that adapt and learn continuously in real-time;
+                Dynamic neural architectures that adapt and learn continuously in real-time,
                 enabling systems to improve without downtime.,
               </p>,
               <ul className="text-sm text-gray-300 space-y-2">,
@@ -138,7 +138,7 @@ export default function AdvancedNeuralArchitectures2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack Section */,}
+      {/* Technology Stack Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-black bg-opacity-30">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Technology Stack</h2>,
@@ -166,7 +166,7 @@ export default function AdvancedNeuralArchitectures2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-6">Ready to Harness Advanced Neural AI?</h2>,
@@ -190,5 +190,4 @@ export default function AdvancedNeuralArchitectures2026Page() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

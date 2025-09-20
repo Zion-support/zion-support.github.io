@@ -1,74 +1,49 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Globe, Leaf, Zap, Shield, TrendingUp, Users, CheckCircle, Lightbulb, Database, Cloud } from "lucide-react";
 export default function GreenIT() {
   const features = [
     {
-      icon: Leaf,
-      title: 'Sustainable Infrastructure',
-      description: 'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.'
-    },
+      icon: Leaf,title: 'Sustainable Infrastructure',description: 'Eco-friendly IT infrastructure solutions that reduce carbon footprint while maintaining performance.'
+    };
     {
-      icon: Zap,
-      title: 'Energy Optimization',
-      description: 'AI-powered energy management systems that optimize power consumption across your IT infrastructure.'
-    },
+      icon: Zap,title: 'Energy Optimization',description: 'AI-powered energy management systems that optimize power consumption across your IT infrastructure.'
+    };
     {
-      icon: Cloud,
-      title: 'Green Cloud Solutions',
-      description: 'Carbon-neutral cloud computing options with renewable energy-powered data centers.'
-    },
+      icon: Cloud,title: 'Green Cloud Solutions',description: 'Carbon-neutral cloud computing options with renewable energy-powered data centers.'
+    };
     {
-      icon: Database,
-      title: 'Efficient Data Management',
-      description: 'Smart data storage and processing solutions that minimize energy consumption and waste.'
-    },
+      icon: Database,title: 'Efficient Data Management',description: 'Smart data storage and processing solutions that minimize energy consumption and waste.'
+    };
     {
-      icon: Shield,
-      title: 'Environmental Compliance',
-      description: 'Built-in compliance monitoring for environmental regulations and sustainability standards.'
-    },
+      icon: Shield,title: 'Environmental Compliance',description: 'Built-in compliance monitoring for environmental regulations and sustainability standards.'
+    };
     {
-      icon: TrendingUp,
-      title: 'Performance Monitoring',
-      description: 'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'
+      icon: TrendingUp,title: 'Performance Monitoring',description: 'Real-time tracking of environmental impact and sustainability metrics for continuous improvement.'
     }
   ];
-
   const benefits = [
-    'Reduce carbon footprint by up to 70%',
-    'Lower energy costs by 40-60%',
-    'Meet sustainability compliance requirements',
-    'Enhance brand reputation and ESG scores',
-    'Future-proof your IT infrastructure',
-    'Contribute to global climate goals'
-  ];
+    'Reduce carbon footprint by up to 70%Lower energy costs by 40-60%',
+    'Meet sustainability compliance requirementsEnhance brand reputation and ESG scores',
+    'Future-proof your IT infrastructureContribute to global climate goals'
+  ],
 
   const solutions = [
     {
-      title: 'Green Data Centers',
-      description: 'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',
-      icon: Database
-    },
+      title: 'Green Data Centers',description: 'Energy-efficient data center design with renewable energy integration and advanced cooling systems.',icon: Database
+    };
     {
-      title: 'Sustainable Cloud Migration',
-      description: 'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',
-      icon: Cloud
-    },
+      title: 'Sustainable Cloud Migration',description: 'Migrate to eco-friendly cloud platforms with carbon-neutral computing options.',icon: Cloud
+    };
     {
-      title: 'Energy Management Systems',
-      description: 'AI-powered monitoring and optimization of IT infrastructure energy consumption.',
-      icon: Zap
-    },
+      title: 'Energy Management Systems',description: 'AI-powered monitoring and optimization of IT infrastructure energy consumption.',icon: Zap
+    };
     {
-      title: 'Circular IT Practices',
-      description: 'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
+      title: 'Circular IT Practices',description: 'Implement recycling, refurbishment, and responsible disposal of IT equipment.',
       icon: Leaf
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -255,7 +230,7 @@ export default function GreenIT() {
               Join the sustainable technology revolution and make a positive impact on the environment 
               while improving your IT infrastructure.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Your Green Journey
               </button>
@@ -267,5 +242,5 @@ export default function GreenIT() {
         </div>
       </section>
     </div>
-  );
+  )
 }

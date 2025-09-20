@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  FileText, 
+  FileText,
   Shield, 
   CheckCircle, 
   Clock, 
@@ -19,10 +19,9 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 const AILegalDocumentAnalyzer: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('overview'),
 
   const features = [
     "Contract risk assessment",
@@ -35,7 +34,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     "Risk scoring algorithms",
     "Multi-language support",
     "Integration with legal databases"
-  ];
+  ],
 
   const benefits = [
     "Reduce legal review time by 90%",
@@ -43,7 +42,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     "Save $50K+ annually on legal fees",
     "Improve contract negotiation outcomes",
     "Ensure regulatory compliance"
-  ];
+  ],
 
   const useCases = [
     "Contract review and analysis",
@@ -51,30 +50,24 @@ const AILegalDocumentAnalyzer: React.FC = () => {
     "Legal risk assessment",
     "Due diligence processes",
     "Legal document automation"
-  ];
+  ],
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,499",
-      period: "/month",
-      description: "Perfect for small law firms and legal departments",
-      features: [
-        "Up to 100 documents/month",
+      name: "Starter",price: "$1,499",
+      period: "/month",description: "Perfect for small law firms and legal departments",features: [
+        "Up to 100 documents/month";
         "Basic risk assessment",
         "Compliance checking",
         "Email support",
         "Standard integrations"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$2,499",
-      period: "/month",
-      description: "Ideal for growing legal practices",
-      features: [
-        "Up to 500 documents/month",
+      name: "Professional",price: "$2,499",
+      period: "/month",description: "Ideal for growing legal practices",features: [
+        "Up to 500 documents/month";
         "Advanced risk assessment",
         "Multi-language support",
         "Priority support",
@@ -82,14 +75,11 @@ const AILegalDocumentAnalyzer: React.FC = () => {
         "Custom workflows"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$3,999",
-      period: "/month",
-      description: "For large legal organizations",
-      features: [
-        "Unlimited documents",
+      name: "Enterprise",price: "$3,999",
+      period: "/month",description: "For large legal organizations",features: [
+        "Unlimited documents";
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
@@ -99,13 +89,11 @@ const AILegalDocumentAnalyzer: React.FC = () => {
       popular: false
     }
   ];
-
   const competitors = [
-    { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },
-    { name: "Luminance", price: "$3,000+/month", rating: 4.0 },
+    { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 };
+    { name: "Luminance", price: "$3,000+/month", rating: 4.0 };
     { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -181,7 +169,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2">
-            {['overview', 'features', 'pricing', 'competitors', 'contact'].map((tab) => (
+            {['overviewfeatures', 'pricingcompetitors', 'contact'].map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -308,7 +296,7 @@ const AILegalDocumentAnalyzer: React.FC = () => {
                 <div>
                   <h3 className="text-2xl font-bold mb-6">Integrations</h3>
                   <div className="grid grid-cols-2 gap-4">
-                    {['DocuSign', 'Adobe Acrobat', 'Microsoft Office', 'Legal databases'].map((integration, index) => (
+                    {['DocuSignAdobe Acrobat', 'Microsoft OfficeLegal databases'].map((integration, index) => (
                       <div key={index} className="bg-gray-800/50 p-3 rounded-lg text-center">
                         {integration}
                       </div>
@@ -496,6 +484,6 @@ const AILegalDocumentAnalyzer: React.FC = () => {
       </div>
     </div>
   );
-};
+},
 
 export default AILegalDocumentAnalyzer;

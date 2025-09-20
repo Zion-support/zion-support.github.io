@@ -1,10 +1,10 @@
-import React from 'react';
-import SEO from '../../components/SEO';
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Quantum AI 2026 - Revolutionary Computing Technology | Zion Tech Group';
-  description: 'Experience the future with Quantum AI 2026. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.';
-  keywords: ['quantum AIquantum computing', 'AI 2026quantum neural networks', 'quantum machine learning'],
-};
+  title: 'Quantum AI 2026 - Revolutionary Computing Technology | Zion Tech Group',
+  description: 'Experience the future with Quantum AI 2026. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.',
+  keywords: ['quantum AIquantum computingAI 2026quantum neural networks', 'quantum machine learning']
+},
 export default function QuantumAI2026Page() {,
   return (,
     <div>,
@@ -38,7 +38,7 @@ export default function QuantumAI2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Capabilities */,}
+        {/* Quantum Capabilities */}
         <section className="py-20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -83,7 +83,7 @@ export default function QuantumAI2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Applications */,}
+        {/* Applications */}
         <section className="py-20 bg-white bg-opacity-5">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center mb-16">,
@@ -142,5 +142,4 @@ export default function QuantumAI2026Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

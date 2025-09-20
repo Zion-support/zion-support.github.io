@@ -1,30 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
+import React from "react";
+import { motion } from "framer-motion";
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'cyan';
-  text?: string;
-  showText?: boolean;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  color?: 'primary' | 'secondary' | 'white' | 'cyan',
+  text?: string,
+  showText?: boolean,
+  className?: string,
 }
 
 const sizeClasses = {
-  sm: 'w-8 h-8',
-  md: 'w-12 h-12',
-  lg: 'w-16 h-16',
-  xl: 'w-32 h-32'
+  sm: 'w-8 h-8',md: 'w-12 h-12',lg: 'w-16 h-16',xl: 'w-32 h-32'
 };
-
 const colorClasses = {
-  primary: 'border-cyan-400',
-  secondary: 'border-blue-400',
-  white: 'border-white',
-  cyan: 'border-cyan-400'
+  primary: 'border-cyan-400',secondary: 'border-blue-400',white: 'border-white',cyan: 'border-cyan-400'
 };
-
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+  size = 'md';
   color = 'primary',
   text = 'Loading...',
   showText = true,
@@ -41,9 +32,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-t-transparent ${colorClasses[color]} rounded-full`}
           animate={{ rotate: 360 }}
           transition={{
-            duration: 1,
-            repeat: Infinity,
-            ease: "linear"
+            duration: 1,repeat: Infinity,ease: "linear"
           }}
         />
         
@@ -72,12 +61,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Screen reader text */}
       <span className="sr-only">Loading, please wait</span>
     </div>
-  );
-};
+  ),
+},
 
 // Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({ 
-  size = 'sm', 
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }> = ({ 
+  size = 'sm';
   className = '' 
 }) => (
   <div className={`inline-flex items-center ${className}`} role="status" aria-label="Loading">
@@ -85,20 +74,17 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 360 }}
       transition={{
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear"
+        duration: 1,repeat: Infinity,ease: "linear"
       }}
     />
     <span className="sr-only">Loading</span>
   </div>
 );
-
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{ 
-  text?: string; 
-  showLogo?: boolean;
-  className?: string;
+  text?: string;
+  showLogo?: boolean,
+  className?: string
 }> = ({ 
   text = 'Loading amazing experiences...', 
   showLogo = true,
@@ -119,12 +105,12 @@ export const FullScreenLoader: React.FC<{
       <LoadingSpinner size="lg" color="cyan" text={text} />
     </div>
   </div>
-);
+),
 
 // Skeleton loading component
 export const SkeletonLoader: React.FC<{ 
   className?: string;
-  lines?: number;
+  lines?: number
 }> = ({ 
   className = '', 
   lines = 3 
@@ -139,6 +125,6 @@ export const SkeletonLoader: React.FC<{
       />
     ))}
   </div>
-);
+),
 
 export default LoadingSpinner;

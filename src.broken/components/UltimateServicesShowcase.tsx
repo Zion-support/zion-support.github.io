@@ -1,43 +1,43 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'react';
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
+import { Link  } from 'react-router-dom',
+ from 'react',
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
 export default function UltimateServicesShowcase(...args[]) :  {
-import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services';
-import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions';
-import { motion  } from 'framer-motion';
-import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion';
+import { enterpriseITInfrastructureServices2025 } from '../../data / 2025 - enterprise - it - infrastructure -services',
+import { innovativeMicroSaasSolutions2025 } from '../../data / 2025 - innovative - micro - saas -solutions',
+import { motion  } from 'framer-motion',
+import { ultimateInnovativeServices2025 } from '../../data / 2025 - ultimate - innovative - services -expansion',
 
- from 'lucide - react';
+ from 'lucide - react',
 
 // Import the new services
 
-    icon: <Code className="w-8 h-8"  />,;
-    color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
-];
-;
+    icon: <Code className="w-8 h-8"  />,
+    color: 'from-green-600 to-emerald-700',
+    services: innovativeMicroSaasSolutions2025},
+],
+,
 
-  ;
-  ;
+  ,
+  ,
 
-};
+},
 
 export function UltimateServicesShowcase(...args[]):  {
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedService, setSelectedService] = useState<any>(null),
 
-    ...ultimateInnovativeServices2025,;
-    ...enterpriseITInfrastructureServices2025,;
-    ...innovativeMicroSaasSolutions2025;
-  ];
+    ...ultimateInnovativeServices2025,
+    ...enterpriseITInfrastructureServices2025,
+    ...innovativeMicroSaasSolutions2025,
+  ],
 
   const itemVariants = {
   hidden: { opacity: 0,
@@ -45,103 +45,103 @@ export function UltimateServicesShowcase(...args[]):  {
 
 },
     visible: {
-      opacity: 1,;
+      opacity: 1,
 =======
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
 contactInfo: {
 
-    mobile: string;
-    email: string;
-    address: string;
+    mobile: string,
+    email: string,
+    address: string,
     website: string
-};
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
+},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
+  aiCapabilities: string[],
   marketDisruption: string}
-;
+,
 
-  ;
+  ,
 =======
 '
-  mobile: '+1 302 464 0950','
+  mobile: '+1 302 464 0950
   email: 'kleber@ziontechgroup.com','
-  address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com';
-};
-;
+  address: '364 E Main St STE 1008 Middletown DE 19709',  ,
+  ,
+  ,
+  ,
+  website: 'https://ziontechgroup.com'
+},
+,
 
-    name: 'Micro SAAS Solutions',;
-    description: 'Innovative software solutions for small businesses',;"
-    icon: <Code className="w-8 h-8"  />,;'    color: 'from-green-600 to-emerald-700',;
-    services: innovativeMicroSaasSolutions2025};
-];
-;
+    name: 'Micro SAAS Solutions',
+    description: 'Innovative software solutions for small businesses',"
+    icon: <Code className="w-8 h-8"  />,'    color: 'from-green-600 to-emerald-700',
+    services: innovativeMicroSaasSolutions2025},
+],
+,
 const innovationLevelColors = {
 '
-  'Revolutionary': 'from-red-600 to-pink-700','
-  'Breakthrough': 'from-purple-600 to-violet-700','
-  'Advanced': 'from-blue-600 to-cyan-700',;  ;
-  ;
-  ;
-  'Emerging': 'from-green-600 to-emerald-700';
-};
-;
+  'Revolutionary': 'from-red-600 to-pink-700
+  'Breakthrough': 'from-purple-600 to-violet-700
+  'Advanced': 'from-blue-600 to-cyan-700',  ,
+  ,
+  ,
+  'Emerging': 'from-green-600 to-emerald-700',
+},
+,
 
-  ;
-  ;
+  ,
+  ,
 =======
 '
-  'Patented': 'from-green-600 to-emerald-700','
-  'Patent Pending': 'from-yellow-600 to-orange-700','
-  'Trade Secret': 'from-blue-600 to-indigo-700',;  ;
-  ;
-  ;
-  'Open Source': 'from-purple-600 to-violet-700';
-;
+  'Patented': 'from-green-600 to-emerald-700
+  'Patent Pending': 'from-yellow-600 to-orange-700
+  'Trade Secret': 'from-blue-600 to-indigo-700',  ,
+  ,
+  ,
+  'Open Source': 'from-purple-600 to-violet-700',
+,
       transition: {
-        staggerChildren: 0.1,;
-        delayChildren: 0.2}}};
+        staggerChildren: 0.1,
+        delayChildren: 0.2}}},
 
   
-      y: 0,;
+      y: 0,
       transition: {
-        duration: 0.6,;"
-        ease: "easeOut"}}};
+        duration: 0.6,"
+        ease: "easeOut"}}},
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -228,8 +228,8 @@ const innovationLevelColors = {
                   : 'bg-zion-slate-light text-zion-gray-light hover:bg-zion-slate hover:text-white'`
               }`}
 
-              {category.name} ({category.services.length}) ;
-            </button>;) ) }
+              {category.name} ({category.services.length}) ,
+            </button>,) ) }
         </motion.div>
 
         {/* Services Grid */}
@@ -331,10 +331,10 @@ const innovationLevelColors = {
                     <ArrowRight className="w-4 h-4"  />
                   </button>
                   <Link to={service.link}"
-                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
+                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
                     <Zap className="w-4 h-4"  />                  </Link>
-                </div>;
+                </div>,
               </div>
             </motion.div>) ) }
         </motion.div>
@@ -367,8 +367,8 @@ const innovationLevelColors = {
                 <ArrowRight className="w-5 h-5"  />              </Link>
               <a`
                 href={`tel:${contact.mobile}`'
-                  .replace(/\s/g,)
-                  .replace(/[^\d+]/g,)}"
+                  .replace(/\s/g)
+                  .replace(/[^\d+]/g)}"
                 className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
 "
                 <Phone className="w-5 h-5"  />                Call Now
@@ -477,25 +477,25 @@ const innovationLevelColors = {
                     </Link>
                     <a`
                       href={`tel:${contact.mobile}`'
-                        .replace(/\s/g,)
-                        .replace(/[^\d+]/g,)}"
-                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
+                        .replace(/\s/g)
+                        .replace(/[^\d+]/g)}"
+                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
 "
                       <Phone className="w-5 h-5"  />                    </a>
                   </div>
                 </div>
               </div>
-            </div>;
-          </div>;
-        </div>;) };
-    </section>;) }
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
-export default UltimateServicesShowcase;
+            </div>,
+          </div>,
+        </div>,) },
+    </section>,) }
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
+export default UltimateServicesShowcase,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,18 +1,15 @@
-import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
+import React from "react";
+import { Link } from "react-router-dom";
 interface Service {
-  category: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-  items: string[];
-  description?: string;
+  category: string,icon: React.ComponentType<{ className?: string }>;
+  color: string,items: string[];
+  description?: string
 }
 
 interface ServicesOverviewProps {
-  services: Service[];
+  services: Service[]
 }
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
@@ -50,8 +47,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{
-                y: -5,
-                transition: { duration: 0.3 }
+                y: -5,transition: { duration: 0.3 }
               }}
             >
               {/* Animated background */}
@@ -92,7 +88,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
               <Link
                 to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}
-                className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
+                className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover: from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
                 aria-label={`Learn more about ${service.category} services`}
               >
                 Explore {service.category}
@@ -107,6 +103,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
       </div>
     </section>
   );
-};
+},
 
 export default ServicesOverview;

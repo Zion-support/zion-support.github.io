@@ -1,39 +1,36 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
- from '../data/innovativeAIServices2030';
-,;
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
-  ];
+ from '../data/innovativeAIServices2030',
+,
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length },
+  ],
 
-  const getCategoryIcon = (category: string) => {;
-    if(category.toLowerCase () .includes('ai') ) return Brain;
-    if(category.toLowerCase () .includes('cybersecurity') ) return Shield;
-    if(category.toLowerCase () .includes('cloud') ) return Cloud;
-    return Star;
-  };
+  const getCategoryIcon = (category: string) => {,
+    if(category.toLowerCase () .includes('ai') ) return Brain,
+    if(category.toLowerCase () .includes('cybersecurity') ) return Shield,
+    if(category.toLowerCase () .includes('cloud') ) return Cloud,
+    return Star
+  },
 
-  const getPricingTier = (price: number) => {;
-    if(price < 300) return { tier: 'Starter', color: 'bg-green - 600 / 20 border-green - 500 / 30 text-green - 300' };
-    if(price < 600) return { tier: 'Professional', color: 'bg-blue - 600 / 20 border-blue - 500 / 30 text-blue - 300' };
-    if(price < 1000) return { tier: 'Enterprise', color: 'bg-purple - 600 / 20 border-purple - 500 / 30 text-purple - 300' };
-    return { tier: 'Premium', color: 'bg-orange - 600 / 20 border-orange - 500 / 30 text-orange - 300' };
-  };
+  const getPricingTier = (price: number) => {,
+    if(price < 300) return { tier: 'Starter', color: 'bg-green - 600 / 20 border-green - 500 / 30 text-green - 300' },
+    if(price < 600) return { tier: 'Professional', color: 'bg-blue - 600 / 20 border-blue - 500 / 30 text-blue - 300' },
+    if(price < 1000) return { tier: 'Enterprise', color: 'bg-purple - 600 / 20 border-purple - 500 / 30 text-purple - 300' },
+    return { tier: 'Premium', color: 'bg-orange - 600 / 20 border-orange - 500 / 30 text-orange - 300' },
+  },
 
   const pricingTiers = [{
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
-      features[;
-        'Basic AI features',
-        'Email support',
-        'Up to 5 users',
-        'Standard integrations',
-        'Community forum access',
-        'Basic analytics',
+      features[,
+        'Basic AI featuresEmail support',
+        'Up to 5 usersStandard integrations',
+        'Community forum accessBasic analytics',
         'Mobile app access'
-      ],;
+      ],
       color: 'from - cyan - 500 to - blue - 600',
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
@@ -42,17 +39,13 @@ export default function Page() {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
-      features[;
-        'Advanced AI capabilities',
-        'Priority support',
-        'Up to 25 users',
-        'Advanced integrations',
-        'API access',
-        'Custom branding',
-        'Advanced analytics dashboard',
-        'White - label options',
+      features[,
+        'Advanced AI capabilitiesPriority support',
+        'Up to 25 usersAdvanced integrations',
+        'API accessCustom branding',
+        'Advanced analytics dashboardWhite - label options',
         'Training and onboarding'
-      ],;
+      ],
       color: 'from - purple - 500 to - pink - 600',
       popular: true,
       bestFor: 'Growing businesses, mid - size companies, agencies'
@@ -61,23 +54,18 @@ export default function Page() {
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
-      features[;
-        'Full AI suite access',
-        '24 / 7 dedicated support',
-        'Unlimited users',
-        'Custom integrations',
-        'White - label solutions',
-        'Advanced security features',
-        'SLA guarantees',
-        'Dedicated account manager',
-        'Custom development',
-        'On - premise deployment options'
-      ],;
+      features[,
+        'Full AI suite access24 / 7 dedicated support',
+        'Unlimited usersCustom integrations',
+        'White - label solutionsAdvanced security features',
+        'SLA guaranteesDedicated account manager',
+        'Custom developmentOn - premise deployment options'
+      ],
       color: 'from - indigo - 500 to - purple - 600',
       popular: false,
-      bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
-    };
-  ];
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies',
+    },
+  ],
 
   const marketInsights = [{
       title: 'AI Services Market',
@@ -105,9 +93,9 @@ export default function Page() {
       value: '$65.0B',
       growth: '+48.2%',
       description: 'Quantum market by 2030',
-      color: 'from - indigo - 500 to - purple - 600';
-    };
-  ];
+      color: 'from - indigo - 500 to - purple - 600'
+    },
+  ],
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate -900">
       {/* Hero Section */}
@@ -148,10 +136,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Contact Banner */}
-      <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8 px-4">;
+      <section className="bg-gradient - to - r from - purple - 600 to - blue - 600 py-8 px-4">,
         <div  className="max - w-7xl mx - auto text-center">
           <div  className="flex flex - col md:flex - row items - center justify - center gap-6 text-white">
             <div  className="flex items - center gap-2">
@@ -171,7 +159,7 @@ export default function Page() {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;
+      <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <div  className="flex flex - col lg:flex - row gap-6 mb-8">
             <div  className="flex -1">
@@ -199,14 +187,14 @@ export default function Page() {
                   <span className="bg-white / 20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   </span>
-                </button>;) ) }
+                </button>,) ) }
             </div>
           </div>
         </div>
       </section>
 
       {/* Pricing Overview */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;
+      <section className="py-12 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <motion.div
             initial = {
@@ -257,13 +245,13 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Services Grid */};
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;
-        <div  className="max - w-7xl mx -auto">;
-          <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
-            {filteredServices.map((service, index) => {;
-              const CategoryIcon = getCategoryIcon(service.category) ;
-              const categoryColor = getCategoryColor(service.category) ;
+      {/* Services Grid */},
+      <section className="py-12 px-4 sm: px-6 lg:px-8">,
+        <div  className="max - w-7xl mx -auto">,
+          <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">,
+            {filteredServices.map((service, index) => {,
+              const CategoryIcon = getCategoryIcon(service.category) ,
+              const categoryColor = getCategoryColor(service.category) ,
 
               return (<motion.div
                   key = {service.id}
@@ -343,7 +331,7 @@ export default function Page() {
                   <div  className="flex items - center justify -between">
                     <Link
                       to={`/services/${service.id}`}
-                      className="inline - flex items - center text-sm text-cyan - 400 hover:text-cyan - 300 transition -colors"
+                      className="inline - flex items - center text-sm text-cyan - 400 hover: text-cyan - 300 transition -colors"
                     >
                       Learn More < ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
@@ -351,21 +339,21 @@ export default function Page() {
                       to="/contact"
                       className="inline - flex items - center px-4 py-2 rounded-lg bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white text-sm font - medium hover:opacity - 90 transition -opacity"
                     >
-                      <Mail className="w-4 h-4" />;
-                      Get Quote;
-                    </a>;
-                  </div>;
-                </motion.div>;) ;
+                      <Mail className="w-4 h-4" />,
+                      Get Quote,
+                    </a>,
+                  </div>,
+                </motion.div>,) 
             }) }
           </div>
 
-          {filteredServices.length = == 0 && (;
-            <div  className="text-center py-12">;
-              <div  className="text-gray - 400 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={ () => {;
-                  setSearchTerm('') ;
-                  setActiveCategory('all') ;
+          {filteredServices.length = == 0 && (,
+            <div  className="text-center py-12">,
+              <div  className="text-gray - 400 text-lg mb-4">No services found matching your criteria</div>,
+              <button,
+                onClick={ () => {,
+                  setSearchTerm('') ,
+                  setActiveCategory('all') ,
                 }}
                 className="bg-purple - 600 hover:bg-purple - 700 text-white px-6 py-2 rounded-lg transition -colors"
               >
@@ -376,7 +364,7 @@ export default function Page() {
       </section>
 
       {/* Pricing Benefits */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white / 5">,
         <div  className="max - w-7xl mx -auto">
           <motion.div
             initial = {
@@ -432,7 +420,7 @@ export default function Page() {
                 title: "24 / 7 Support",
                 description: "Round - the - clock support included in all plans.No additional support fees."
 
-            ].map((benefit, index) => (;
+            ].map((benefit, index) => (,
               <motion.div
                 key={index}
                 initial = {
@@ -464,7 +452,7 @@ export default function Page() {
                   <div  className="text-3xl font - bold text-purple - 400 mb-2">40 - 80%</div>
                   <div  className="text-slate -300">Cost Reduction</div>
                 </div>
-              </div>;
+              </div>,
 
               <Link
                 to="/contact"
@@ -478,7 +466,7 @@ export default function Page() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             initial = {
@@ -601,7 +589,7 @@ export default function Page() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div  className="container mx - auto px-4 text-center">
           <div  className="max - w-3xl mx -auto">
             <div  className="text-slate - 300 mb-6">
@@ -618,7 +606,7 @@ export default function Page() {
             <div>
               <h3 className="text-white font - bold text-lg mb-4">Quick Links</h3>
               <div  className="space - y-2">
-                <a href="https://ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
+                <a href="https: //ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
                   Visit Website
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" className="block text-gray - 300 hover:text-white transition -colors">
@@ -635,11 +623,11 @@ export default function Page() {
                 <div  className="text-gray -300">AI & Machine Learning</div>
                 <div  className="text-gray -300">Cybersecurity Solutions</div>
                 <div  className="text-gray -300">Cloud & DevOps</div>
-                <div  className="text-gray -300">IT Infrastructure</div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+                <div  className="text-gray -300">IT Infrastructure</div>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

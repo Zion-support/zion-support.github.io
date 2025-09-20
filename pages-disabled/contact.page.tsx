@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function ContactPage() {,
   return (,
     <>,
@@ -23,13 +23,12 @@ export default function ContactPage() {,
           <form className="mt-8 grid gap-4">,
             <input className="border rounded px-3 py-2" placeholder="Your name"  />,
             <input className="border rounded px-3 py-2" type="email" placeholder="Your email"  />,
-            <textarea className="border rounded px-3 py-2" rows={5,} placeholder="How can we help?"  />,
+            <textarea className="border rounded px-3 py-2" rows={5} placeholder="How can we help?"  />,
             <button className="bg-blue-600 text-white px-4 py-2 rounded hover: b g-blue-700" type="button">,
               Send,
             </button>,
           </form>,
         </section>,
       </main>,
-    </>,
-  ),}
+    </>)}
 ,

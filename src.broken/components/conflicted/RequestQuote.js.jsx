@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react',
 export default function Page() {
 ,
     {
@@ -54,8 +54,8 @@ export default function Page() {
       value: 'consulting',
       label: 'IT Consulting',
       icon: Briefcase,
-      description: 'Strategic technology guidance'},
-  ];
+      description: 'Strategic technology guidance'}
+  ],
   const budgetRanges = [{
 
       value: 'under-10k',
@@ -85,8 +85,8 @@ export default function Page() {
 
       value: 'custom',
       label: 'Custom Pricing',
-      description: "Let's discuss your needs"},
-  ];
+      description: "Let's discuss your needs"}
+  ],
   const timelineOptions = ['
     { value: 'asap', label: 'ASAP', description: 'Immediate start required' },
     {
@@ -113,8 +113,8 @@ export default function Page() {
 
       value: 'flexible',
       label: 'Flexible',
-      description: 'Timeline can be discussed'},
-  ];
+      description: 'Timeline can be discussed'}
+  ],
   const urgencyLevels = [{
 
       value: 'low',
@@ -138,24 +138,24 @@ export default function Page() {
       value: 'critical',
       label: 'Critical',
       description: 'Emergency situation',
-      color: 'text-red-400'},
-  ];
+      color: 'text-red-400'}
+  ],
   const handleInputChange = e => {
 
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
 
       ...prev,
-      [name]: value}));
-  };
+      [name]: value})),
+  },
   const handleSubmit = async e => {
 
-    e.preventDefault();
-    setSubmissionStatus('submitting');
+    e.preventDefault(),
+    setSubmissionStatus('submitting'),
     // Simulate API call
     setTimeout(() => {
 
-      setSubmissionStatus('success');
+      setSubmissionStatus('success'),
       // Reset form after success
       setTimeout(() => {
         setFormData({
@@ -169,16 +169,16 @@ export default function Page() {
           budget: '',
           timeline: '',
           description: '',
-          urgency: 'medium'});
-        setSubmissionStatus('idle');
-      }, 3000);
-    }, 2000);
-  };
+          urgency: 'medium'}),
+        setSubmissionStatus('idle'),
+      }, 3000),
+    }, 2000),
+  },
   const isFormValid =
     formData.firstName &&
     formData.lastName &&
     formData.email &&
-    formData.projectType;
+    formData.projectType,
   return ("
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}"
@@ -676,6 +676,6 @@ export default function Page() {
         </div>
       </section>
     </div>
-  );
+  ),
 }
 '"`

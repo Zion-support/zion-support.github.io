@@ -1,36 +1,36 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 interface AnalyticsData {
 
-  id: string;
-  metric: string;
-  value: number;
-  change: number;
-  trend: 'up' | 'down' | 'stable';
-  category: string;
-  timestamp: Date;
-  target?: number;
+  id: string,
+  metric: string,
+  value: number,
+  change: number,
+  trend: 'up' | 'down' | 'stable',
+  category: string,
+  timestamp: Date,
+  target?: number,
   unit?: string}
 
 =======
 interface ChartData {
 
-  labels: string[];
+  labels: string[],
   datasets: {
 
-    label: string;
-    data: number[];
-    backgroundColor?: string;
-    borderColor?: string;
+    label: string,
+    data: number[],
+    backgroundColor?: string,
+    borderColor?: string,
     borderWidth?: number}[]}
 interface AdvancedAnalyticsDashboardProps {
   // Add your props here
 
-  enabled?: boolean;
-  showRealTime?: boolean;
-  refreshInterval?: number;
-  onDataExport?: data: AnalyticsData[] void;
+  enabled?: boolean,
+  showRealTime?: boolean,
+  refreshInterval?: number,
+  onDataExport?: data: AnalyticsData[] void,
 export function AdvancedAnalyticsDashboard({
 
   enabled = true,
@@ -38,26 +38,26 @@ export function AdvancedAnalyticsDashboard({
   refreshInterval = 30000,
   onDataExport}: AdvancedAnalyticsDashboardProps) {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isFullscreen, setIsFullscreen] = useState(false),
   const [selectedTimeframe, setSelectedTimeframe] = useState<'
     '1h' | '24h' | '7d' | '30d''
-  >('24h');
+  >('24h'),
   const [selectedMetrics, setSelectedMetrics] = useState<string[]>(['
-    'performance',users',revenue',
-  ]);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
+    'performance',users',revenue'
+  ]),
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false),
 
   // Generate sample analytics data
 
-    const newData: AnalyticsData[] = [];
+    const newData: AnalyticsData[] = [],
     categories.forEach(category => {
 
       metrics[category as keyof typeof metrics].forEach(metric => {
 
-        const change = (Math.random() - 0.5) * 20;        newData.push({
+        const change = (Math.random() - 0.5) * 20,        newData.push({
 
           id: `${category}-${metric}`,
           metric,
@@ -72,44 +72,44 @@ export function AdvancedAnalyticsDashboard({
               ? 'ms''
               : category === 'revenue''
                 ? '$''
-                : ''})})});
+                : ''})})}),
 
-    setAnalyticsData(newData) }, []) ;
+    setAnalyticsData(newData) }, []) ,
 
   // Refresh data
   
     setTimeout(() => {
-      generateAnalyticsData () ;
-      setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
+      generateAnalyticsData () ,
+      setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ,
 
   // Export data
   
     } else {
 
-      a.href = url;'`
-      a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`;
-      a.click();
+      a.href = url,'`
+      a.download = `analytics-${selectedTimeframe}-${new Date().toISOString().split('T')[0]}.csv`,
+      a.click(),
       window.URL.revokeObjectURL(url)}
-  }, [analyticsData, selectedTimeframe, onDataExport]) ;
+  }, [analyticsData, selectedTimeframe, onDataExport]) ,
   // Setup real - time updates
   useEffect(() => {
     if(showRealTime && isOpen) {
 
-      generateAnalyticsData();
-      intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
+      generateAnalyticsData(),
+      intervalRef.current = setInterval(generateAnalyticsData, refreshInterval),
 
       return () => {
         if(intervalRef.current) {
 
           clearInterval(intervalRef.current)}
       }}
-  }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
+  }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ,
   // Initial data load
   useEffect(() => {
     if(isOpen) {
 
       generateAnalyticsData()}
-  }, [isOpen, generateAnalyticsData]) ;
+  }, [isOpen, generateAnalyticsData]) ,
 
   // Get trend icon and color'
 
@@ -119,7 +119,7 @@ export function AdvancedAnalyticsDashboard({
           {change > 0 ? '+' : ''}
           {change}%
         </span>
-      </div>) };
+      </div>) },
 
   // Get category icon
   const getCategoryIcon = (category: string) => {
@@ -130,12 +130,12 @@ export function AdvancedAnalyticsDashboard({
       users: <Users className="w-5 h-5"  />,"
       revenue: <DollarSign className="w-5 h-5"  />,"
       engagement: <Activity className="w-5 h-5"  />,"
-      technical: <Cpu className="w-5 h-5"  />};"
-    return icons[category] || <Activity className="w-5 h-5"  />};
+      technical: <Cpu className="w-5 h-5"  />},"
+    return icons[category] || <Activity className="w-5 h-5"  />},
 
   // Filter data by selected metrics
   
-  if(!enabled) return null;
+  if(!enabled) return null,
 
   return ()
     <>
@@ -243,7 +243,7 @@ export function AdvancedAnalyticsDashboard({
                     </span>"
                     <div className="flex flex-wrap gap-2">
                       {['
-                        'performance',users',revenue',engagement',technical',
+                        'performance',users',revenue',engagement',technical'
                       ].map(metric => (
                         <button
                           key={metric}

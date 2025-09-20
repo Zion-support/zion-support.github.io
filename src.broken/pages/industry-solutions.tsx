@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -7,11 +7,9 @@ export default function Page() {
         'Connected vehicle solutions and automotive technology innovations.',
       icon: Car,
       path: '/automotive - solutions',
-      solutions: ['Connected Vehicles',
-        'Predictive Maintenance',
-        'Fleet Management',
-        'Safety Systems',
-      ],
+      solutions: ['Connected VehiclesPredictive Maintenance',
+        'Fleet ManagementSafety Systems'
+      ]
     },
     {
       title: 'Energy & Utilities',
@@ -19,11 +17,9 @@ export default function Page() {
         'Smart grid and energy management solutions for sustainability and efficiency.',
       icon: Zap,
       path: '/energy - solutions',
-      solutions: ['Smart Grid Management',
-        'Energy Optimization',
-        'Predictive Maintenance',
-        'Sustainability Analytics',
-      ],
+      solutions: ['Smart Grid ManagementEnergy Optimization',
+        'Predictive MaintenanceSustainability Analytics'
+      ]
     },
     {
       title: 'Retail & E-commerce',
@@ -31,38 +27,36 @@ export default function Page() {
         'Digital transformation solutions for modern retail and e - commerce operations.',
       icon: Globe,
       path: '/retail - solutions',
-      solutions: ['Customer Analytics',
-        'Inventory Management',
-        'Personalization',
-        'Supply Chain Optimization',
-      ],
-    },
-  ];
+      solutions: ['Customer AnalyticsInventory Management',
+        'PersonalizationSupply Chain Optimization'
+      ]
+    }
+  ],
 
   const benefits = [{
       title: 'Industry Expertise',
       description:
         'Deep understanding of industry - specific challenges and requirements',
-      icon: Brain,
+      icon: Brain
     },
     {
       title: 'Customized Solutions',
       description:
         'Tailored technology solutions for your specific industry needs',
-      icon: Building,
+      icon: Building
     },
     {
       title: 'Proven Results',
       description:
         'Track record of successful implementations across industries',
-      icon: Star,
+      icon: Star
     },
     {
       title: 'Future - Ready',
       description: 'Scalable solutions that grow with your business',
-      icon: TrendingUp,
-    },
-  ];
+      icon: TrendingUp
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Header */}
@@ -205,7 +199,7 @@ export default function Page() {
           <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
             Let's discuss how our industry - specific solutions can address your
             unique challenges and drive growth.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 transform hover:scale -105"
@@ -221,6 +215,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

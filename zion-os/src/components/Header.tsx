@@ -1,23 +1,22 @@
 <<<<<<< HEAD
-import React from 'react';
+import React from 'react',
 const Header: React.FC = () => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">Header</h3>,
       <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
-export default Header;
-  const [isScrolled, setIsScrolled] = useState(false);
+    </div>)},
+export default Header,
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Research & Development', href: '/research-development' },
@@ -26,8 +25,8 @@ export default Header;
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
     { name: 'Business Intelligence', href: '/ai-business-intelligence' },
     { name: 'Content Generation', href: '/ai-content-generator' },
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },
-  ];
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }
+  ],
 
   return (
     <header 
@@ -120,17 +119,17 @@ export default Header;
                   onClick={() => setIsMenuOpen(false)}
                   aria-label="Get started with Zion Tech Group"
 =======
-'use client';
+'use client',
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react',
 =======
-'use client';
+'use client',
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from 'react',
+import Link from 'next/link',
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false),
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -140,8 +139,8 @@ export default function Header() {
     { name: 'Research', href: '/research-development' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
-  ];
+    { name: 'Contact', href: '/contact' }
+  ],
 
   const services = [
     { name: 'AI Automation', href: '/ai-automation-services' },
@@ -149,8 +148,8 @@ export default function Header() {
     { name: 'Cybersecurity', href: '/advanced-cybersecurity-suite' },
     { name: 'IT Infrastructure', href: '/advanced-it-infrastructure-services' },
     { name: 'Quantum Computing', href: '/quantum-services' },
-    { name: 'Space Technology', href: '/space-tech' },
-  ];
+    { name: 'Space Technology', href: '/space-tech' }
+  ],
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -269,6 +268,6 @@ export default function Header() {
         )}
       </div>
     </header>
-  );
+  ),
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 }

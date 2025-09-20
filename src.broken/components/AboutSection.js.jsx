@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-  ];
+  ],
   const values = [{
 
       title: 'Innovation First',
@@ -26,11 +26,11 @@ export default function Page() {
       title: 'Trust & Security',
       description:'
         'Your data and systems are protected with enterprise-grade security and compliance standards.',"
-      icon: <Shield className="w-8 h-8" />},
-  ];
+      icon: <Shield className="w-8 h-8" />}
+  ],
   const technologies = ['
-    'Artificial Intelligence & ML',Cloud Computing',Cybersecurity',Data Analytics',Blockchain Technology',IoT Solutions',Mobile Development',Web Applications',DevOps & Automation',Quantum Computing',Edge Computing',5G Networks',
-  ];
+    'Artificial Intelligence & ML',Cloud Computing',Cybersecurity',Data Analytics',Blockchain Technology',IoT Solutions',Mobile Development',Web Applications',DevOps & Automation',Quantum Computing',Edge Computing',5G Networks'
+  ],
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-800 via-zion-blue-dark to-slate-900">"
       <div className="container mx-auto px-4">"
@@ -172,7 +172,7 @@ export default function Page() {
             transformation.</p>
           <Link"
             to="/team"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover: bg-zion-cyan hover:text-white transition-all duration-300"
           >
             Meet the Team"
             <ArrowRight className="w-5 h-5" />
@@ -180,6 +180,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"

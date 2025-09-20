@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Revolutionary2027ITInfrastructureCybersecurityService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutionary2027ITInfrastructureCybersecurityService[] = [
   // Zero-Trust Security Platform
@@ -49,16 +49,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     period: '/month',
     description: 'Advanced zero-trust security platform that provides comprehensive protection for modern IT environments. Features continuous authentication, micro-segmentation, AI-powered threat detection, and automated incident response.',
     features: [
-      'Continuous authentication',
-      'Micro-segmentation',
-      'AI-powered threat detection',
-      'Automated incident response',
-      'Identity and access management',
-      'Network security monitoring',
-      'Endpoint protection',
-      'Cloud security controls',
-      'Compliance reporting',
-      'Security analytics dashboard'
+      'Continuous authenticationMicro-segmentation',
+      'AI-powered threat detectionAutomated incident response',
+      'Identity and access managementNetwork security monitoring',
+      'Endpoint protectionCloud security controls',
+      'Compliance reportingSecurity analytics dashboard'
     ],
     popular: true,
     icon: '🛡️',
@@ -71,11 +66,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '2 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Machine Learning', 'AI Security', 'Zero-Trust Architecture', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Active Directory', 'Okta', 'Azure AD', 'AWS IAM', 'Google Workspace', 'Slack', 'Microsoft Teams'],
-    useCases: ['Enterprise security', 'Government compliance', 'Financial security', 'Healthcare compliance', 'Cloud security', 'Remote work security'],
+    technology: ['Machine LearningAI Security', 'Zero-Trust ArchitectureReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Active DirectoryOkta', 'Azure ADAWS IAM', 'Google WorkspaceSlack', 'Microsoft Teams'],
+    useCases: ['Enterprise securityGovernment compliance', 'Financial securityHealthcare compliance', 'Cloud securityRemote work security'],
     roi: 'Organizations report 450% ROI through reduced security incidents and improved compliance.',
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'Zscaler', 'Cisco', 'Fortinet'],
+    competitors: ['Palo Alto NetworksCrowdStrike', 'ZscalerCisco', 'Fortinet'],
     marketSize: '$45.2B market',
     growthRate: '235% annual growth',
     variant: 'cybersecurity',
@@ -101,16 +96,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     period: '/month',
     description: 'Advanced quantum-resistant cryptography platform that protects sensitive data against future quantum computing threats. Features post-quantum algorithms, hybrid encryption, key management, and compliance with NIST standards.',
     features: [
-      'Post-quantum algorithms',
-      'Hybrid encryption systems',
-      'Quantum key distribution',
-      'Advanced key management',
-      'NIST compliance',
-      'Performance optimization',
-      'API integration',
-      'Hardware security modules',
-      'Audit logging',
-      'Compliance reporting'
+      'Post-quantum algorithmsHybrid encryption systems',
+      'Quantum key distributionAdvanced key management',
+      'NIST compliancePerformance optimization',
+      'API integrationHardware security modules',
+      'Audit loggingCompliance reporting'
     ],
     popular: false,
     icon: '🔐',
@@ -123,11 +113,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 month',
     category: 'Quantum Security',
     realService: true,
-    technology: ['Post-Quantum Cryptography', 'Quantum Key Distribution', 'Hybrid Encryption', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['PKI systems', 'Hardware security modules', 'Cloud platforms', 'Enterprise systems', 'IoT devices', 'Blockchain networks'],
-    useCases: ['Financial transactions', 'Government communications', 'Healthcare data', 'IoT security', 'Blockchain security', 'Cloud security'],
+    technology: ['Post-Quantum CryptographyQuantum Key Distribution', 'Hybrid EncryptionReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['PKI systemsHardware security modules', 'Cloud platformsEnterprise systems', 'IoT devicesBlockchain networks'],
+    useCases: ['Financial transactionsGovernment communications', 'Healthcare dataIoT security', 'Blockchain securityCloud security'],
     roi: 'Organizations report 380% ROI through future-proofed security and reduced compliance risks.',
-    competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange', 'Post-Quantum', 'ISARA'],
+    competitors: ['ID QuantiqueQrypt', 'Quantum XchangePost-Quantum', 'ISARA'],
     marketSize: '$8.7B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     period: '/month',
     description: 'Intelligent network operations center that provides 24/7 monitoring, automated incident response, and predictive maintenance. Features AI-powered anomaly detection, automated troubleshooting, and comprehensive network analytics.',
     features: [
-      '24/7 network monitoring',
-      'AI-powered anomaly detection',
-      'Automated incident response',
-      'Predictive maintenance',
-      'Network performance analytics',
-      'Real-time alerting',
-      'Automated troubleshooting',
-      'Capacity planning',
-      'Compliance monitoring',
-      'Custom dashboards'
+      '24/7 network monitoringAI-powered anomaly detection',
+      'Automated incident responsePredictive maintenance',
+      'Network performance analyticsReal-time alerting',
+      'Automated troubleshootingCapacity planning',
+      'Compliance monitoringCustom dashboards'
     ],
     popular: true,
     icon: '🖥️',
@@ -175,11 +160,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 week',
     category: 'Network Operations',
     realService: true,
-    technology: ['Machine Learning', 'AI Automation', 'Network Monitoring', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Cisco', 'Juniper', 'Aruba', 'VMware', 'AWS', 'Azure', 'Google Cloud', 'Slack', 'Microsoft Teams'],
-    useCases: ['Network monitoring', 'Incident response', 'Performance optimization', 'Capacity planning', 'Compliance monitoring', 'Predictive maintenance'],
+    technology: ['Machine LearningAI Automation', 'Network MonitoringReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['CiscoJuniper', 'ArubaVMware', 'AWSAzure', 'Google CloudSlack', 'Microsoft Teams'],
+    useCases: ['Network monitoringIncident response', 'Performance optimizationCapacity planning', 'Compliance monitoringPredictive maintenance'],
     roi: 'Companies report 420% ROI through reduced downtime and improved network performance.',
-    competitors: ['SolarWinds', 'Datadog', 'New Relic', 'Splunk', 'LogicMonitor'],
+    competitors: ['SolarWindsDatadog', 'New RelicSplunk', 'LogicMonitor'],
     marketSize: '$28.5B market',
     growthRate: '195% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     period: '/month',
     description: 'Comprehensive edge computing platform that enables deployment and management of distributed computing infrastructure. Features intelligent workload orchestration, edge analytics, and seamless cloud integration.',
     features: [
-      'Edge workload orchestration',
-      'Distributed computing management',
-      'Edge analytics processing',
-      'Cloud-edge integration',
-      'Real-time data processing',
-      'Edge security controls',
-      'Performance monitoring',
-      'Automated scaling',
-      'Multi-cloud support',
-      'Developer tools'
+      'Edge workload orchestrationDistributed computing management',
+      'Edge analytics processingCloud-edge integration',
+      'Real-time data processingEdge security controls',
+      'Performance monitoringAutomated scaling',
+      'Multi-cloud supportDeveloper tools'
     ],
     popular: false,
     icon: '🌐',
@@ -227,11 +207,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '2 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'Kubernetes', 'Docker', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'IoT platforms', 'Edge devices'],
-    useCases: ['IoT applications', 'Manufacturing automation', 'Retail analytics', 'Healthcare monitoring', 'Real-time processing', 'Edge AI'],
+    technology: ['Edge ComputingKubernetes', 'DockerReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['AWSAzure', 'Google CloudKubernetes', 'DockerIoT platforms', 'Edge devices'],
+    useCases: ['IoT applicationsManufacturing automation', 'Retail analyticsHealthcare monitoring', 'Real-time processingEdge AI'],
     roi: 'Organizations report 380% ROI through improved performance and reduced latency.',
-    competitors: ['AWS Outposts', 'Azure Stack', 'Google Anthos', 'VMware', 'Red Hat'],
+    competitors: ['AWS OutpostsAzure Stack', 'Google AnthosVMware', 'Red Hat'],
     marketSize: '$18.9B market',
     growthRate: '225% annual growth',
     variant: 'edge-futuristic',
@@ -257,16 +237,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     period: '/month',
     description: 'Intelligent DevOps automation platform that streamlines software development and deployment processes. Features AI-powered code review, automated testing, intelligent deployment strategies, and comprehensive monitoring.',
     features: [
-      'AI-powered code review',
-      'Automated testing',
-      'Intelligent deployment',
-      'Continuous integration',
-      'Continuous deployment',
-      'Performance monitoring',
-      'Security scanning',
-      'Infrastructure as code',
-      'Team collaboration tools',
-      'Analytics dashboard'
+      'AI-powered code reviewAutomated testing',
+      'Intelligent deploymentContinuous integration',
+      'Continuous deploymentPerformance monitoring',
+      'Security scanningInfrastructure as code',
+      'Team collaboration toolsAnalytics dashboard'
     ],
     popular: true,
     icon: '⚡',
@@ -279,11 +254,11 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     setupTime: '1 week',
     category: 'DevOps Automation',
     realService: true,
-    technology: ['Machine Learning', 'AI Automation', 'DevOps Tools', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Slack'],
-    useCases: ['Code review automation', 'Testing automation', 'Deployment automation', 'Performance monitoring', 'Security scanning', 'Team collaboration'],
+    technology: ['Machine LearningAI Automation', 'DevOps ToolsReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['GitHubGitLab', 'BitbucketAWS', 'AzureGoogle Cloud', 'KubernetesDocker', 'Slack'],
+    useCases: ['Code review automationTesting automation', 'Deployment automationPerformance monitoring', 'Security scanningTeam collaboration'],
     roi: 'Teams report 350% ROI through improved development velocity and reduced deployment issues.',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI', 'Travis CI', 'GitHub Actions'],
+    competitors: ['GitLabJenkins', 'CircleCITravis CI', 'GitHub Actions'],
     marketSize: '$25.3B market',
     growthRate: '185% annual growth',
     variant: 'ai-futuristic',
@@ -300,4 +275,4 @@ export const revolutionary2027ITInfrastructureCybersecurityServices: Revolutiona
     rating: 4.8,
     reviews: 1600
   }
-];
+],

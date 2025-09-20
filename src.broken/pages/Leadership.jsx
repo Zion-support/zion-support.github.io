@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -35,7 +35,7 @@ export default function Page() {
             email: "james.wilson@ziontechgroup.com",
             location: "New York, NY"
 
-    ];
+    ],
     const compValues = [{
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
@@ -56,7 +56,7 @@ export default function Page() {
             description: "Our success is measured by the success of our clients and the impact we create together.",
             icon: Target
 
-    ];
+    ],
     const vision = {
   title: "Our Vision",
         description: "To be the leading force in technological innovation, transforming businesses and society through cutting - edge AI, quantum computing, and sustainable technology solutions.",
@@ -66,7 +66,7 @@ export default function Page() {
   "Build the most trusted technology partner network"
         ]
 
-};
+},
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 50 to - blue -50">
       {/* Hero Section */}
       <section className="relative bg-gradient - to - r from - slate - 900 via - blue - 900 to - slate - 900 text-white py-20">
@@ -229,5 +229,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

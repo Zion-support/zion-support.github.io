@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Target, 
+  Target,
   TrendingUp, 
   Users, 
   Clock, 
@@ -21,84 +21,53 @@ import {
   Cpu,
   Heart,
   Eye
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 const AIMarketingAutomation = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Audience Targeting",
-      description: "Machine learning algorithms identify and target your ideal customers with precision",
-      price: "$59/month"
-    },
+      icon: Brain,title: "AI-Powered Audience Targeting",description: "Machine learning algorithms identify and target your ideal customers with precision",price: "$59/month"
+    };
     {
-      icon: Target,
-      title: "Smart Campaign Optimization",
-      description: "AI continuously optimizes campaigns for maximum ROI and engagement",
-      price: "$79/month"
-    },
+      icon: Target,title: "Smart Campaign Optimization",description: "AI continuously optimizes campaigns for maximum ROI and engagement",price: "$79/month"
+    };
     {
-      icon: MessageSquare,
-      title: "Personalized Content Generation",
-      description: "AI creates personalized marketing content for each customer segment",
-      price: "$69/month"
-    },
+      icon: MessageSquare,title: "Personalized Content Generation",description: "AI creates personalized marketing content for each customer segment",price: "$69/month"
+    };
     {
-      icon: Workflow,
-      title: "Automated Marketing Workflows",
-      description: "Intelligent automation that nurtures leads and converts prospects",
-      price: "$89/month"
-    },
+      icon: Workflow,title: "Automated Marketing Workflows",description: "Intelligent automation that nurtures leads and converts prospects",price: "$89/month"
+    };
     {
-      icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "AI predicts customer behavior and campaign performance",
-      price: "$99/month"
-    },
+      icon: BarChart3,title: "Predictive Analytics",description: "AI predicts customer behavior and campaign performance",price: "$99/month"
+    };
     {
-      icon: Users,
-      title: "Multi-Channel Orchestration",
-      description: "Seamlessly coordinate campaigns across email, social, and web",
+      icon: Users,title: "Multi-Channel Orchestration",description: "Seamlessly coordinate campaigns across email, social, and web",
       price: "$119/month"
     }
   ];
-
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$59",
-      period: "/month",
-      description: "Perfect for small businesses starting with AI marketing",
-      features: [
-        "Basic audience targeting",
+      name: "Starter",price: "$59",period: "/month",description: "Perfect for small businesses starting with AI marketing",features: [
+        "Basic audience targeting";
         "Email automation",
         "Social media posting",
         "Email support"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses with multiple marketing channels",
-      features: [
-        "All Starter features",
+      name: "Professional",price: "$149",period: "/month",description: "Ideal for growing businesses with multiple marketing channels",features: [
+        "All Starter features";
         "Advanced AI targeting",
         "Multi-channel campaigns",
         "Priority support",
         "Custom integrations"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations with complex marketing needs",
-      features: [
-        "All Professional features",
+      name: "Enterprise",price: "$399",period: "/month",description: "For large organizations with complex marketing needs",features: [
+        "All Professional features";
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -107,29 +76,20 @@ const AIMarketingAutomation = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "300% Higher ROI",
-      description: "AI-optimized campaigns deliver significantly better returns"
-    },
+      icon: TrendingUp,title: "300% Higher ROI",description: "AI-optimized campaigns deliver significantly better returns"
+    };
     {
-      icon: Clock,
-      title: "80% Time Savings",
-      description: "Automate repetitive marketing tasks and focus on strategy"
-    },
+      icon: Clock,title: "80% Time Savings",description: "Automate repetitive marketing tasks and focus on strategy"
+    };
     {
-      icon: Target,
-      title: "5x Better Targeting",
-      description: "AI identifies and reaches your ideal customers with precision"
-    },
+      icon: Target,title: "5x Better Targeting",description: "AI identifies and reaches your ideal customers with precision"
+    };
     {
-      icon: Heart,
-      title: "Personalized Experience",
-      description: "Every customer receives relevant, personalized content"
+      icon: Heart,title: "Personalized Experience",description: "Every customer receives relevant, personalized content"
     }
-  ];
+  ],
 
   return (
     <>
@@ -347,7 +307,7 @@ const AIMarketingAutomation = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses already using AI to create personalized, high-converting campaigns
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -359,7 +319,7 @@ const AIMarketingAutomation = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover:bg-pink-400 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border border-pink-400 text-pink-400 font-semibold rounded-lg hover: bg-pink-400 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
                 </motion.button>
@@ -369,7 +329,6 @@ const AIMarketingAutomation = () => {
         </section>
       </div>
     </>
-  );
+  )
 };
-
 export default AIMarketingAutomation;

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
@@ -8,14 +8,14 @@ import {
   FileText, Calendar, CreditCard, BarChart3, Settings,
   Rocket, Star, TrendingUp, Users, Target, Award,
   Phone, Mail, MapPin, ExternalLink, Building
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -90,7 +90,7 @@ const serviceCategories = [
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -103,7 +103,7 @@ const companyLinks = [
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
   { name: '💼 Careers', href: '/careers', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const technologyLinks = [
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
@@ -112,27 +112,27 @@ const technologyLinks = [
   { name: '🔒 Cybersecurity', href: '/cybersecurity', icon: Lock },
   { name: '📊 Analytics', href: '/analytics', icon: Database },
   { name: '🔄 Automation', href: '/automation', icon: Cpu }
-];
+],
 
 export default function UltraFuturisticNavigation2027() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isClient, setIsClient] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true),
+  }, []),
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient) return,
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isClient]);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, [isClient]),
 
   const navigation = [
     {
@@ -393,21 +393,21 @@ export default function UltraFuturisticNavigation2027() {
         }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> },
     { name: 'Case Studies', href: '/case-studies', icon: <FileText className="w-4 h-4" /> },
     { name: 'Support', href: '/support', icon: <MessageSquare className="w-4 h-4" /> },
     { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> }
-  ];
+  ],
 
 const UltraFuturisticNavigation2027: React.FC = () => {
   return (
@@ -415,7 +415,7 @@ const UltraFuturisticNavigation2027: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2027</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2027;
+export default UltraFuturisticNavigation2027,

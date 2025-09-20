@@ -15,6 +15,5 @@ export default function AgentReliabilityScorecards11Page() {,
           <a href="/contact" className="inline-block mt-6 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-500">Request a demo</a>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

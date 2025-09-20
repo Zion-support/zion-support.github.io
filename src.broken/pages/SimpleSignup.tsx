@@ -1,20 +1,20 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react',
+import { useNavigate } from 'react-router-dom',
 export default function SimpleSignup() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const [email, setEmail] = useState(''),
+  const [password, setPassword] = useState(''),
+  const navigate = useNavigate(),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     await fetch('/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
-      credentials: 'include',
-    });
-    navigate('/marketplace');
-  };
+      credentials: 'include'
+    }),
+    navigate('/marketplace'),
+  },
 
   return (
     <form onSubmit={handleSubmit} className="p-4 space-y-2">
@@ -36,5 +36,5 @@ export default function SimpleSignup() {
         Sign Up
       </button>
     </form>
-  );
+  ),
 }

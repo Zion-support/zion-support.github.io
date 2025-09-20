@@ -1,17 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI Implementation Checklist 2026: Complete Guide to Success';
-  description: 'The ultimate checklist for AI implementation in 2026. Ensure your AI projects succeed with our comprehensive, step-by-step guide covering strategy, execution, and optimization.';
-  keywords: ['AI implementationAI checklist', 'AI strategyAI project management', 'AI best practices'];
+  title: 'AI Implementation Checklist 2026: Complete Guide to Success',
+  description: 'The ultimate checklist for AI implementation in 2026. Ensure your AI projects succeed with our comprehensive, step-by-step guide covering strategy, execution, and optimization.',
+  keywords: ['AI implementationAI checklistAI strategyAI project management', 'AI best practices'],
   openGraph: {,
-    title: 'AI Implementation Checklist 2026: Complete Guide to Success';
-    description: 'The ultimate checklist for AI implementation in 2026.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'AI Implementation Checklist 2026: Complete Guide to Success',
+    description: 'The ultimate checklist for AI implementation in 2026.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group']}
+},
 export default function AIImplementationChecklist() {,
   return (,
     <div className="max-w-4xl mx-auto px-4 py-8">,
@@ -399,5 +399,4 @@ export default function AIImplementationChecklist() {,
           </div>,
         </footer>,
       </article>,
-    </div>,
-  ),}
+    </div>)}

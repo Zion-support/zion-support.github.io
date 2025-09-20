@@ -1,32 +1,32 @@
 
-import React, { useState, useEffect, useMemo } from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { ProductListing } from "@/types/listings";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
-import { SearchSuggestion } from "@/types/search";
-import styles from './Marketplace.module.css';
-import { useViewMode } from '@/context/ViewModeContext';
+import React, { useState, useEffect, useMemo } from "react",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { FilterSidebar } from "@/components/search/FilterSidebar",
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { ProductListing } from "@/types/listings",
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
+import { generateRandomListing } from "@/utils/generateRandomListing",
+import { toast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import { SearchSuggestion } from "@/types/search",
+import styles from './Marketplace.module.css',
+import { useViewMode } from '@/context/ViewModeContext',
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+  PaginationPrevious
+} from '@/components/ui/pagination',
 
 interface ProductContainerProps {
-  listings: ProductListing[];
-  onRequestQuote: (id: string) => void;
+  listings: ProductListing[],
+  onRequestQuote: (id: string) => void
 }
 
 function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
@@ -41,7 +41,7 @@ function ProductGrid({ listings, onRequestQuote }: ProductContainerProps) {
         />
       ))}
     </div>
-  );
+  ),
 }
 
 function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
@@ -56,39 +56,39 @@ function ProductList({ listings, onRequestQuote }: ProductContainerProps) {
         />
       ))}
     </div>
-  );
+  ),
 }
 
 export default function Marketplace() {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [isLoading, setIsLoading] = useState(false);
-  const { viewMode, setViewMode } = useViewMode();
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+  const [isLoading, setIsLoading] = useState(false),
+  const { viewMode, setViewMode } = useViewMode(),
+  const [currentPage, setCurrentPage] = useState(1),
+  const itemsPerPage = 10,
 
   // Automatically append a new listing every 2 minutes
   useEffect(() => {
     const interval = setInterval(() => {
-      setListings(prev => [...prev, generateRandomListing()]);
-    }, 120000); // 2 minutes
-    return () => clearInterval(interval);
-  }, []);
+      setListings(prev => [...prev, generateRandomListing()]),
+    }, 120000), // 2 minutes
+    return () => clearInterval(interval),
+  }, []),
   
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
-  const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]),
 
   useEffect(() => {
-    setIsLoading(true);
-    setCurrentPage(1);
-    const timeout = setTimeout(() => setIsLoading(false), 300);
-    return () => clearTimeout(timeout);
-  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
+    setIsLoading(true),
+    setCurrentPage(1),
+    const timeout = setTimeout(() => setIsLoading(false), 300),
+    return () => clearTimeout(timeout),
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
   // Filter listings based on selected filters
   const filteredListings = listings.filter(listing => {
@@ -96,76 +96,76 @@ export default function Marketplace() {
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) && 
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
-      return false;
+      return false,
     }
     
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
-      return false;
+      return false,
     }
     
     // Location filter
     if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
-      return false;
+      return false,
     }
     
     // Availability filter
     if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
-      return false;
+      return false,
     }
     
     // Rating filter
     if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
-      return false;
+      return false,
     }
     
-    return true;
-  });
+    return true,
+  }),
 
-  const totalPages = Math.ceil(filteredListings.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredListings.length / itemsPerPage),
   const paginatedListings = filteredListings.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
-  );
+  ),
   
   const handleFilterChange = (filterType: string, value: string) => {
-    console.log(`Filter changed: ${filterType} = ${value}`);
+    console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
+        ),
+        break,
       case 'locations':
         setSelectedLocations(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
+        ),
+        break,
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
+        ),
+        break,
     }
-  };
+  },
   
   const clearAllFilters = () => {
-    setSearchQuery("");
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
-    setSelectedRating(null);
-  };
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
+    setSelectedRating(null),
+  },
   
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
+    const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
-      });
+      }),
       
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
@@ -178,9 +178,9 @@ export default function Marketplace() {
             image: listing.images?.[0]
           }
         }
-      });
+      }),
     }
-  };
+  },
 
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
@@ -302,8 +302,8 @@ export default function Marketplace() {
                       <PaginationPrevious
                         href="#"
                         onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.max(1, currentPage - 1));
+                          e.preventDefault(),
+                          setCurrentPage(Math.max(1, currentPage - 1)),
                         }}
                       />
                     </PaginationItem>
@@ -313,8 +313,8 @@ export default function Marketplace() {
                           href="#"
                           isActive={page === currentPage}
                           onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page);
+                            e.preventDefault(),
+                            setCurrentPage(page),
                           }}
                         >
                           {page}
@@ -325,8 +325,8 @@ export default function Marketplace() {
                       <PaginationNext
                         href="#"
                         onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.min(totalPages, currentPage + 1));
+                          e.preventDefault(),
+                          setCurrentPage(Math.min(totalPages, currentPage + 1)),
                         }}
                       />
                     </PaginationItem>
@@ -337,5 +337,5 @@ export default function Marketplace() {
           </div>
         </div>
       </main>
-  );
+  ),
 }

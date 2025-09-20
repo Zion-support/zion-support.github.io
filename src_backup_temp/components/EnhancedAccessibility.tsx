@@ -1,2 +1,2 @@
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility,

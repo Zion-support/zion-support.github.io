@@ -1,9 +1,9 @@
-import React from 'react';
-export default UltimateZionServicesShowcase2025;
-import { SEO } from '../components/SEO';
+import React from 'react',
+export default UltimateZionServicesShowcase2025,
+import { SEO } from '../components/SEO',
 
 export default function Page() {
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-7xl mx -auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -62,18 +62,18 @@ export default function Page() {
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`}
-                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover:bg-gray - 600 transition - all duration - 300 text-center block"
+                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover: bg-gray - 600 transition - all duration - 300 text-center block"
 
                       Learn More
                     </a>
-                  </div>;
+                  </div>,
                 </div>) ) }
             </div>
           </div>
         </section>
 
         {/* IT Infrastructure Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray -900">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray -900">,
           <div className="max - w-7xl mx -auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -126,18 +126,18 @@ export default function Page() {
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`}
-                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover:bg-gray - 600 transition - all duration - 300 text-center block"
+                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover: bg-gray - 600 transition - all duration - 300 text-center block"
 
                       Schedule Consultation
                     </a>
-                  </div>;
+                  </div>,
                 </div>) ) }
             </div>
           </div>
         </section>
 
         {/* AI Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-7xl mx -auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -199,18 +199,18 @@ export default function Page() {
                     </a>
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`}
-                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover:bg-gray - 600 transition - all duration - 300 text-center block"
+                      className="w-full bg-gray - 700 text-white py-3 px-4 rounded-lg font - semibold hover: bg-gray - 600 transition - all duration - 300 text-center block"
 
                       AI Consultation
                     </a>
-                  </div>;
+                  </div>,
                 </div>) ) }
             </div>
           </div>
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray -900">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray -900">,
           <div className="max - w-7xl mx -auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -266,7 +266,7 @@ export default function Page() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-4xl mx - auto text-center">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
               Ready to Transform Your Business?
@@ -311,7 +311,7 @@ export default function Page() {
         </section>
 
         {/* Footer Contact */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray -900">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray -900">,
           <div className="max - w-7xl mx - auto text-center">
             <h3 className="text-3xl font - bold text-white mb-8">Contact Zion Tech Group</h3>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
@@ -341,9 +341,9 @@ export default function Page() {
 
                 Visit our website: ziontechgroup.com
               </a>
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
-};
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) 
+},

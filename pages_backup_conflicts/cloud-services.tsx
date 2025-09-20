@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface CloudservicesProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Cloudservices({ }: CloudservicesProps) {,
@@ -8,7 +8,6 @@ export default function Cloudservices({ }: CloudservicesProps) {,
     <div>,
       <h1>Cloudservices</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

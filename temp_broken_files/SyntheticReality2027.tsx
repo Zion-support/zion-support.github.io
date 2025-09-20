@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const SyntheticReality2027: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-pink-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto px-4 py-20">,
@@ -30,10 +30,10 @@ const SyntheticReality2027: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Reality Selection */,}
+      {/* Reality Selection */}
       <div className="container mx-auto px-4 py-16">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-12",
         >,
           <h2 className="text-4xl font-bold mb-4">Choose Your Reality</h2>,
@@ -43,20 +43,19 @@ const SyntheticReality2027: React.FC = () => {,
           {realities.map((reality, index) => (,
             <div,
               key={reality.id}
-              whileInView={{ opacity: 1, scale: 1 ,}}
+              whileInView={{ opacity: 1, scale: 1 }}
               onClick={() => setSelectedReality(reality.id)}
               className={`cursor-pointer rounded-2xl p-6 border-2 transition-all duration-300 hover: scale-105 ${,
                 selectedReality === reality.id,
                   ? 'border-cyan-400 bg-gradient-to-br from-cyan-600/30 to-purple-600/30',
-                  : 'border-gray-600 bg-gradient-to-br from-gray-800/30 to-gray-700/30 hover:border-cyan-400/50',}`}
+                  : 'border-gray-600 bg-gradient-to-br from-gray-800/30 to-gray-700/30 hover:border-cyan-400/50'}`}
             >,
               <div className="text-4xl mb-4 text-center">{reality.icon}</div>,
               <h3 className="text-xl font-bold mb-3 text-center">{reality.name}</h3>,
               <p className="text-gray-300 mb-4 text-center text-sm">{reality.description}</p>,
               <ul className="space-y-1 text-xs text-gray-400">,
                 {reality.features.map((feature, idx) => (,
-                  <li key={idx}>• {feature}</li>,
-                ))}
+                  <li key={idx}>• {feature}</li>))}
               </ul>,
             </div>,
           ))}
@@ -98,8 +97,7 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
           {selectedReality === 'neural' && (,
             <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30">,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
@@ -132,8 +130,7 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
           {selectedReality === 'temporal' && (,
             <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30">,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
@@ -165,8 +162,7 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
           {selectedReality === 'dimensional' && (,
             <div className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30">,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
@@ -199,8 +195,7 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
           {selectedReality === 'consciousness' && (,
             <div className="bg-gradient-to-br from-violet-600/30 to-purple-600/30 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30">,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
@@ -233,8 +228,7 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
           {selectedReality === 'creation' && (,
             <div className="bg-gradient-to-br from-pink-600/30 to-rose-600/30 backdrop-blur-sm rounded-2xl p-8 border border-pink-400/30">,
               <div className="grid md: grid-cols-2 gap-8 items-center">,
@@ -267,15 +261,14 @@ const SyntheticReality2027: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            </div>,
-          ),}
+            </div>)}
         </div>,
       </div>,
       {/* Features Section */}
       <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl font-bold mb-4">Revolutionary Features</h2>,
@@ -283,7 +276,7 @@ const SyntheticReality2027: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-3 gap-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20",
             >,
               <div className="text-4xl mb-4">🎯</div>,
@@ -294,7 +287,7 @@ const SyntheticReality2027: React.FC = () => {,
               </p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20",
             >,
               <div className="text-4xl mb-4">⚡</div>,
@@ -305,7 +298,7 @@ const SyntheticReality2027: React.FC = () => {,
               </p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20",
             >,
               <div className="text-4xl mb-4">🌐</div>,
@@ -321,7 +314,7 @@ const SyntheticReality2027: React.FC = () => {,
       {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, scale: 1 ,}}
+          whileInView={{ opacity: 1, scale: 1 }}
           className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-3xl p-12",
         >,
           <h2 className="text-4xl font-bold mb-6">Ready to Transcend Reality?</h2>,
@@ -340,5 +333,5 @@ const SyntheticReality2027: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default SyntheticReality2027;
+  )},
+export default SyntheticReality2027,

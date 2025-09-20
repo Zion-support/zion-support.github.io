@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function FeaturesGuideSection() {
   const features = [{
 
@@ -20,8 +20,8 @@ export function FeaturesGuideSection() {
 
       title: 'Community Forum',
       description: 'Engage with like-minded professionals and share knowledge.',
-      icon: '💬'},
-  ];
+      icon: '💬'}
+  ],
   return ()
     <section className="py-16">"
       <div className="container mx-auto px-4">"
@@ -41,6 +41,6 @@ export function FeaturesGuideSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

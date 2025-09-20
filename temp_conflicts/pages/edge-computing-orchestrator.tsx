@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Zap, Server, Brain, Globe, Shield, Target, 
   Network, BarChart3, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
   Cpu, Database, Monitor, Cloud, Settings, Eye
-} from 'lucide-react';
+} from 'lucide-react',
 
 const EdgeComputingOrchestrator: React.FC = () => {
   const features = [
@@ -40,18 +40,14 @@ const EdgeComputingOrchestrator: React.FC = () => {
       title: 'Performance Monitoring',
       description: 'Real-time monitoring and analytics for edge computing performance and resource utilization.'
     }
-  ];
+  ],
 
   const useCases = [
-    'IoT Device Management',
-    'Real-time Analytics',
-    'Content Delivery Networks',
-    'Autonomous Vehicles',
-    'Smart Cities',
-    'Industrial IoT',
-    'Healthcare Monitoring',
-    'Financial Trading'
-  ];
+    'IoT Device ManagementReal-time Analytics',
+    'Content Delivery NetworksAutonomous Vehicles',
+    'Smart CitiesIndustrial IoT',
+    'Healthcare MonitoringFinancial Trading'
+  ],
 
   const pricing = [
     {
@@ -59,10 +55,8 @@ const EdgeComputingOrchestrator: React.FC = () => {
       price: '$1,799',
       period: 'month',
       features: [
-        'Up to 10 edge nodes',
-        'Basic orchestration',
-        'Standard security',
-        'Email support',
+        'Up to 10 edge nodesBasic orchestration',
+        'Standard securityEmail support',
         'Basic monitoring'
       ]
     },
@@ -71,12 +65,9 @@ const EdgeComputingOrchestrator: React.FC = () => {
       price: '$3,999',
       period: 'month',
       features: [
-        'Up to 100 edge nodes',
-        'Advanced orchestration',
-        'Enhanced security',
-        'Priority support',
-        'Advanced monitoring',
-        'Custom integrations'
+        'Up to 100 edge nodesAdvanced orchestration',
+        'Enhanced securityPriority support',
+        'Advanced monitoringCustom integrations'
       ],
       popular: true
     },
@@ -85,15 +76,12 @@ const EdgeComputingOrchestrator: React.FC = () => {
       price: '$7,999',
       period: 'month',
       features: [
-        'Unlimited edge nodes',
-        'Full orchestration suite',
-        'Enterprise security',
-        'Dedicated support',
-        'Custom development',
-        'SLA guarantees'
+        'Unlimited edge nodesFull orchestration suite',
+        'Enterprise securityDedicated support',
+        'Custom developmentSLA guarantees'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -293,7 +281,7 @@ const EdgeComputingOrchestrator: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Orchestrate the Edge?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -315,7 +303,7 @@ const EdgeComputingOrchestrator: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default EdgeComputingOrchestrator;
+export default EdgeComputingOrchestrator,

@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Shield, 
+  Shield,
   Lock, 
   Eye, 
   AlertTriangle, 
@@ -40,14 +40,14 @@ import {
   Smartphone as SmartphoneIcon,
   Laptop as LaptopIcon,
   Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
 const CybersecurityPage: React.FC = () => {
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+  },
 
   const staggerContainer = {
     animate: {
@@ -55,71 +55,71 @@ const CybersecurityPage: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const securityServices = [
     {
       title: 'Quantum Cybersecurity Platform 2045',
       description: 'Next-generation quantum-resistant security solutions',
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      features: ['Quantum-resistant encryption', 'Advanced threat detection', 'Real-time monitoring', 'Automated response'],
+      features: ['Quantum-resistant encryptionAdvanced threat detection', 'Real-time monitoringAutomated response'],
       href: '/quantum-cybersecurity-platform-2045'
     },
     {
       title: 'Zero Trust Security Architecture',
       description: 'Comprehensive zero trust implementation and management',
       icon: <Lock className="w-8 h-8 text-blue-400" />,
-      features: ['Identity verification', 'Access control', 'Network segmentation', 'Continuous monitoring'],
+      features: ['Identity verificationAccess control', 'Network segmentationContinuous monitoring'],
       href: '/zero-trust-network-architecture'
     },
     {
       title: 'Vulnerability Assessment & Penetration Testing',
       description: 'Comprehensive security testing and assessment services',
       icon: <Eye className="w-8 h-8 text-green-400" />,
-      features: ['Security audits', 'Penetration testing', 'Vulnerability scanning', 'Risk assessment'],
+      features: ['Security auditsPenetration testing', 'Vulnerability scanningRisk assessment'],
       href: '/vulnerability-assessment-penetration-testing'
     },
     {
       title: 'SOC2 Compliance Automation',
       description: 'Automated SOC2 compliance and evidence collection',
       icon: <CheckCircle className="w-8 h-8 text-emerald-400" />,
-      features: ['Automated evidence collection', 'Compliance monitoring', 'Audit preparation', 'Continuous compliance'],
+      features: ['Automated evidence collectionCompliance monitoring', 'Audit preparationContinuous compliance'],
       href: '/soc2-compliance-automation'
     },
     {
       title: 'Autonomous Security Operations Center',
       description: 'AI-powered security monitoring and response',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      features: ['24/7 monitoring', 'AI threat detection', 'Automated response', 'Incident management'],
+      features: ['24/7 monitoringAI threat detection', 'Automated responseIncident management'],
       href: '/autonomous-security-operations-center-2045'
     },
     {
       title: 'Mobile Device Management',
       description: 'Comprehensive mobile security and management',
       icon: <Smartphone className="w-8 h-8 text-purple-400" />,
-      features: ['Device encryption', 'App management', 'Remote wipe', 'Policy enforcement'],
+      features: ['Device encryptionApp management', 'Remote wipePolicy enforcement'],
       href: '/mobile-device-management'
     }
-  ];
+  ],
 
   const securityCapabilities = [
     {
       category: 'Network Security',
-      capabilities: ['Firewall Management', 'Intrusion Detection', 'VPN Solutions', 'DDoS Protection']
+      capabilities: ['Firewall ManagementIntrusion Detection', 'VPN SolutionsDDoS Protection']
     },
     {
       category: 'Application Security',
-      capabilities: ['Code Analysis', 'API Security', 'Web Application Firewall', 'Secure Development']
+      capabilities: ['Code AnalysisAPI Security', 'Web Application FirewallSecure Development']
     },
     {
       category: 'Data Protection',
-      capabilities: ['Encryption', 'Data Loss Prevention', 'Backup Security', 'Privacy Compliance']
+      capabilities: ['EncryptionData Loss Prevention', 'Backup SecurityPrivacy Compliance']
     },
     {
       category: 'Identity & Access',
-      capabilities: ['Multi-Factor Authentication', 'Single Sign-On', 'Privileged Access Management', 'Identity Governance']
+      capabilities: ['Multi-Factor AuthenticationSingle Sign-On', 'Privileged Access ManagementIdentity Governance']
     }
-  ];
+  ],
 
   const securityThreats = [
     {
@@ -142,7 +142,7 @@ const CybersecurityPage: React.FC = () => {
       description: 'Compromising software or hardware before it reaches the target organization',
       icon: <Network className="w-6 h-6 text-blue-400" />
     }
-  ];
+  ],
 
   const complianceFrameworks = [
     {
@@ -165,7 +165,7 @@ const CybersecurityPage: React.FC = () => {
       description: 'Health Insurance Portability and Accountability Act compliance',
       icon: <Heart className="w-6 h-6 text-red-400" />
     }
-  ];
+  ],
 
   return (
     <Layout 
@@ -404,7 +404,7 @@ const CybersecurityPage: React.FC = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Secure Your Digital Future
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -429,7 +429,7 @@ const CybersecurityPage: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default CybersecurityPage;
+export default CybersecurityPage,

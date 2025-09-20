@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI Transformation 2025: $15B Company Achieves 800% ROI - Ultimate Success Story';
-  description: 'Discover how a Fortune 500 manufacturing giant achieved 800% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.';
-  keywords: ['Case StudyAI Transformation', 'ROIFortune 500', 'ManufacturingSuccess Story', '800% ROI'],
-};
+  title: 'AI Transformation 2025: $15B Company Achieves 800% ROI - Ultimate Success Story',
+  description: 'Discover how a Fortune 500 manufacturing giant achieved 800% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.',
+  keywords: ['Case StudyAI TransformationROIFortune 500', 'ManufacturingSuccess Story800% ROI']
+},
 export default function AITransformationSuccessPage() {,
   return (,
     <div>,
@@ -46,7 +46,7 @@ export default function AITransformationSuccessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -297,7 +297,7 @@ export default function AITransformationSuccessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -334,4 +334,4 @@ export default function AITransformationSuccessPage() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

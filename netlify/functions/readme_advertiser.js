@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 readme_advertiser function triggered');
+    console.log('🤖 readme_advertiser function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'readme_advertiser'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ readme_advertiser function failed:', error);
+    console.error('❌ readme_advertiser function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

@@ -1,86 +1,47 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const featuredListings = [
   {
-    id: 1,
-    title: "AI-Powered Business Intelligence",
-    description: "Transform your data into actionable insights with our advanced AI analytics platform.",
-    category: "AI Services",
-    price: "$299/month",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400",
-    rating: 4.8,
-    reviews: 156,
-    features: ["Real-time analytics", "Predictive insights", "Custom dashboards"],
+    id: 1,title: "AI-Powered Business Intelligence",description: "Transform your data into actionable insights with our advanced AI analytics platform.",category: "AI Services",price: "$299/month",image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400",rating: 4.8,reviews: 156,features: ["Real-time analytics", "Predictive insights", "Custom dashboards"],
     link: "/services/ai-analytics"
-  },
+  };
   {
-    id: 2,
-    title: "Quantum Computing Solutions",
-    description: "Next-generation quantum computing services for complex optimization problems.",
-    category: "Emerging Tech",
-    price: "$1,999/month",
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
-    rating: 4.9,
-    reviews: 89,
-    features: ["Quantum algorithms", "Optimization", "Research support"],
+    id: 2,title: "Quantum Computing Solutions",description: "Next-generation quantum computing services for complex optimization problems.",category: "Emerging Tech",price: "$1,999/month",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",rating: 4.9,reviews: 89,features: ["Quantum algorithms", "Optimization", "Research support"],
     link: "/services/quantum-computing"
-  },
+  };
   {
-    id: 3,
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and secure supply chain management using blockchain technology.",
-    category: "Blockchain",
-    price: "$599/month",
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
-    rating: 4.7,
-    reviews: 234,
-    features: ["Smart contracts", "Traceability", "Security"],
+    id: 3,title: "Blockchain Supply Chain Platform",description: "Transparent and secure supply chain management using blockchain technology.",category: "Blockchain",price: "$599/month",image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",rating: 4.7,reviews: 234,features: ["Smart contracts", "Traceability", "Security"],
     link: "/services/blockchain"
-  },
+  };
   {
-    id: 4,
-    title: "IoT Edge Computing Platform",
-    description: "Real-time IoT data processing and analytics at the edge for instant insights.",
-    category: "IoT",
-    price: "$449/month",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",
-    rating: 4.6,
-    reviews: 178,
-    features: ["Edge processing", "Real-time analytics", "Device management"],
+    id: 4,title: "IoT Edge Computing Platform",description: "Real-time IoT data processing and analytics at the edge for instant insights.",category: "IoT",price: "$449/month",image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",rating: 4.6,reviews: 178,features: ["Edge processing", "Real-time analytics", "Device management"],
     link: "/services/iot-platform"
   }
 ];
-
 export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All"),
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
-
   const filteredListings = selectedCategory === "All"
     ? featuredListings
     : featuredListings.filter(listing => listing.category === selectedCategory);
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
+      opacity: 1,transition: {
+        staggerChildren: 0.15,delayChildren: 0.1
       }
     }
   };
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
-    ));
+    )),
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -182,7 +143,7 @@ export function FeaturedListingsSection() {
         >
           <Link 
             to="/services"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
             View All Services
             <span className="text-xl">→</span>
@@ -190,5 +151,5 @@ export function FeaturedListingsSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

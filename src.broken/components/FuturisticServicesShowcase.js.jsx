@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
  : {}} transition = {
 
@@ -21,9 +21,9 @@ export default function Page() {
 
   {
 
-                x[0, Math.random() * 100 - 50],;
-                y[0, Math.random() * 100 - 50],;
-                opacity[0.6, 0.2, 0.6],;
+                x[0, Math.random() * 100 - 50],
+                y[0, Math.random() * 100 - 50],
+                opacity[0.6, 0.2, 0.6],
 
 }} transition = {
 
@@ -138,23 +138,23 @@ export default function Page() {
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/>
         </div>
       </div>
-    </motion.div>)};
+    </motion.div>)},
 export const FuturisticServicesShowcase = () => {
 
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [visibleServices, setVisibleServices] = useState(new Set());
-    const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))];
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [visibleServices, setVisibleServices] = useState(new Set()),
+    const categories = ['all', ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))],
     const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
 
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        return matchesCategory && matchesSearch});
+            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+        return matchesCategory && matchesSearch}),
     // Set all services as visible initially for better UX
     useEffect(() => {
-        const allIndices = new Set(filteredServices.map((_, index) => index));
-        setVisibleServices(allIndices)}, [filteredServices]);"
+        const allIndices = new Set(filteredServices.map((_, index) => index)),
+        setVisibleServices(allIndices)}, [filteredServices]),"
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}"
       <div className="absolute inset-0 overflow-hidden">"
@@ -252,5 +252,5 @@ export const FuturisticServicesShowcase = () => {
           </div>
         </motion.div>
       </div>
-    </div>)};
+    </div>)},
 '"`

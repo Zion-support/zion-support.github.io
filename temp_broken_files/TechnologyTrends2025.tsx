@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const TechnologyTrends2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -16,24 +16,23 @@ const TechnologyTrends2025: React.FC = () => {,
         </div>,
       </div>,
           </div>,
-        </motion.div>,
-      ),}
+        </motion.div>)}
 ,
       {activeSection === 1 && (,
         <motion.div,
-          initial={{ opacity: 0, y: 50 ,}}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 ,}}
-          transition={{ duration: 0.8 ,}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8 }}
           className="container mx-auto px-4 mb-20",
         >,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {trends.map((trend, index) => (,
               <motion.div,
                 key={trend.id}
-                initial={{ opacity: 0, y: 50 ,}}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 ,}}
-                transition={{ duration: 0.6, delay: index * 0.1 ,}}
-                className={`bg-gradient-to-br ${trend.color}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover: scale-105 transition-all duration-300 hover:shadow-2xl`,}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-gradient-to-br ${trend.color}/30 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover: scale-105 transition-all duration-300 hover:shadow-2xl`}
               >,
                 <div className="text-6xl mb-4 text-center">{trend.icon}</div>,
                 <div className="text-center mb-4">,
@@ -46,11 +45,11 @@ const TechnologyTrends2025: React.FC = () => {,
                 <div className="space-y-3 mb-6">,
                   <div className="flex justify-between">,
                     <span className="text-sm opacity-70">Impact: </span>,
-                    <span className="text-sm font-semibold">{trend.impact,}</span>,
+                    <span className="text-sm font-semibold">{trend.impact}</span>,
                   </div>,
                   <div className="flex justify-between">,
                     <span className="text-sm opacity-70">Timeline: </span>,
-                    <span className="text-sm font-semibold">{trend.timeline,}</span>,
+                    <span className="text-sm font-semibold">{trend.timeline}</span>,
                   </div>,
                 </div>,
                 <ul className="space-y-2 mb-6">,
@@ -58,10 +57,9 @@ const TechnologyTrends2025: React.FC = () => {,
                     <li key={idx} className="flex items-start text-sm">,
                       <span className="w-2 h-2 bg-white rounded-full mr-3 mt-2 flex-shrink-0"></span>,
                       {detail}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
-                <button className={`w-full bg-gradient-to-r ${trend.color} py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`,}>,
+                <button className={`w-full bg-gradient-to-r ${trend.color} py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`}>,
                   Learn More →,
                 </button>,
               </motion.div>,
@@ -72,9 +70,9 @@ const TechnologyTrends2025: React.FC = () => {,
 ,
       {activeSection === 2 && (,
         <motion.div,
-          initial={{ opacity: 0, y: 50 ,}}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 ,}}
-          transition={{ duration: 0.8 ,}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8 }}
           className="container mx-auto px-4 mb-20",
         >,
           <div className="text-center mb-12">,
@@ -173,14 +171,13 @@ const TechnologyTrends2025: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-        </motion.div>,
-      )}
+        </motion.div>)}
 ,
       {activeSection === 3 && (,
         <motion.div,
-          initial={{ opacity: 0, y: 50 ,}}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 ,}}
-          transition={{ duration: 0.8 ,}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8 }}
           className="container mx-auto px-4 mb-20",
         >,
           <div className="text-center mb-12">,
@@ -221,15 +218,14 @@ const TechnologyTrends2025: React.FC = () => {,
               </ul>,
             </div>,
           </div>,
-        </motion.div>,
-      ),}
+        </motion.div>)}
 ,
       {/* Call to Action */}
       <div className="container mx-auto px-4 mb-20">,
         <motion.div,
-          initial={{ opacity: 0, y: 50 ,}}
-          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 ,}}
-          transition={{ duration: 0.8, delay: 0.6 ,}}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center",
         >,
           <h2 className="text-4xl font-bold mb-6">Stay Ahead of the Curve</h2>,
@@ -247,5 +243,5 @@ const TechnologyTrends2025: React.FC = () => {,
         </motion.div>,
       </div>,
     </div>,
-  ),};
-export default TechnologyTrends2025;
+  )},
+export default TechnologyTrends2025,

@@ -3,11 +3,11 @@
  * Theme configuration for PDF export
  */
 export interface PdfThemeColors {
-  background: string;
-  text: string;
-  heading: string;
-  subheading: string;
-  accent: string;
+  background: string,
+  text: string,
+  heading: string,
+  subheading: string,
+  accent: string
 }
 
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
@@ -25,5 +25,5 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
         heading: '#ffffff',
         subheading: '#cccccc',
         accent: '#9b87f5'
-      };
+      },
 }

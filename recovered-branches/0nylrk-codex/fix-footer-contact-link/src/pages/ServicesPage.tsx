@@ -3,48 +3,48 @@
 // Sample service listings,
 const SERVICE_LISTINGS: ProductListing[] = [,
   {,
-    id: "service-1";
-    title: "AI Development & Integration";
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.";
-    category: "Development";
-    price: 5000;
-    currency: "$";
-    tags: ["AI Integration", "Machine Learning", "Enterprise"];
-    id: "service-2";
-    title: "Cloud Infrastructure Management";
-    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
-    category: "Management";
-    price: 3000;
-    currency: "$";
-    tags: ["Cloud", "DevOps", "Security"];
-    id: "service-3";
-    title: "Big Data Analysis & Insights";
-    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.";
-    category: "Analytics";
-    price: 4500;
-    currency: "$";
-    tags: ["Big Data", "Analytics", "Business Intelligence"];
-    id: "service-4";
-    title: "Cybersecurity Assessment & Protection";
-    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.";
-    category: "Security";
-    price: 6000;
-    currency: "$";
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
-    id: "service-5";
-    title: "IT Infrastructure Modernization";
-    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
-    category: "Consulting";
-    price: 8500;
-    currency: "$";
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
-    id: "service-6";
-    title: "AI Strategy & Implementation";
-    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.";
-    category: "Strategy";
-    price: 7500;
-    currency: "$";
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
+    id: "service-1",
+    title: "AI Development & Integration",
+    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.",
+    category: "Development",
+    price: 5000,
+    currency: "$",
+    tags: ["AI Integration", "Machine Learning", "Enterprise"],
+    id: "service-2",
+    title: "Cloud Infrastructure Management",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+    category: "Management",
+    price: 3000,
+    currency: "$",
+    tags: ["Cloud", "DevOps", "Security"],
+    id: "service-3",
+    title: "Big Data Analysis & Insights",
+    description: "Transform your raw data into actionable business insights with our advanced analytics and visualization services.",
+    category: "Analytics",
+    price: 4500,
+    currency: "$",
+    tags: ["Big Data", "Analytics", "Business Intelligence"],
+    id: "service-4",
+    title: "Cybersecurity Assessment & Protection",
+    description: "Comprehensive security audits and implementation of robust protection systems against modern cyber threats.",
+    category: "Security",
+    price: 6000,
+    currency: "$",
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+    id: "service-5",
+    title: "IT Infrastructure Modernization",
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+    category: "Consulting",
+    price: 8500,
+    currency: "$",
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+    id: "service-6",
+    title: "AI Strategy & Implementation",
+    description: "Strategic consulting and implementation services to help businesses leverage AI for competitive advantage.",
+    category: "Strategy",
+    price: 7500,
+    currency: "$",
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
 export default function ServicesPage() {,
   return (,
     <AppLayout>,
@@ -72,11 +72,10 @@ export default function ServicesPage() {,
         categorySlug="services",
         listings={SERVICE_LISTINGS}
         categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 ,}}
+        initialPrice={{ min: 3000, max: 10000 }}
       />,
       <TrustedBySection />,
-    </AppLayout>,
-  );
+    </AppLayout>),
 }
-,
+
 }]

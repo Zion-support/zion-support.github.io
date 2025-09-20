@@ -59,7 +59,7 @@ export const SidebarProvider = React.forwardRef<
         }
 
         // This sets the cookie to keep the sidebar state.
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       },
       [setOpenProp, open]
     )
@@ -99,7 +99,7 @@ export const SidebarProvider = React.forwardRef<
         isMobile,
         openMobile,
         setOpenMobile,
-        toggleSidebar,
+        toggleSidebar
       }),
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
@@ -112,7 +112,7 @@ export const SidebarProvider = React.forwardRef<
               {
                 "--sidebar-width": "16rem",
                 "--sidebar-width-icon": "3rem",
-                ...style,
+                ...style
               } as CSSProperties
               }
             className={cn(

@@ -1,80 +1,67 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Comprehensive performance metrics and insights',
-      color: 'from - purple - 500 to - pink - 500',
+      color: 'from - purple - 500 to - pink - 500'
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise - grade security and data protection',
-      color: 'from - red - 500 to - pink - 500',
+      color: 'from - red - 500 to - pink - 500'
     },
     {
       icon: Cloud,
       title: 'Cloud Platform',
       description: 'Scalable cloud infrastructure for global support',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
-  ];
+      color: 'from - indigo - 500 to - blue - 500'
+    }
+  ],
 
   const services = [{
       title: 'Customer Support',
       description: 'Multi - channel customer support and ticket management',
       icon: MessageCircle,
       benefits: [
-        'Email support',
-        'Live chat',
-        'Phone support',
-        'Social media integration',
-      ],
+        'Email supportLive chat',
+        'Phone supportSocial media integration'
+      ]
     },
     {
       title: 'Internal IT Support',
       description: 'Employee IT support and technical assistance',
       icon: Cpu,
-      benefits: ['Hardware support',
-        'Software assistance',
-        'Network issues',
-        'Access management',
-      ],
+      benefits: ['Hardware supportSoftware assistance',
+        'Network issuesAccess management'
+      ]
     },
     {
       title: 'Knowledge Base',
       description: 'Self - service knowledge base and documentation',
       icon: FileText,
-      benefits: ['FAQ management',
-        'Documentation',
-        'Video tutorials',
-        'Search functionality',
-      ],
+      benefits: ['FAQ managementDocumentation',
+        'Video tutorialsSearch functionality'
+      ]
     },
     {
       title: 'Automation & AI',
       description: 'AI - powered automation and intelligent routing',
       icon: Brain,
-      benefits: ['Auto - routing',
-        'Chatbots',
-        'Predictive analytics',
-        'Smart suggestions',
-      ],
-    },
-  ];
+      benefits: ['Auto - routingChatbots',
+        'Predictive analyticsSmart suggestions'
+      ]
+    }
+  ],
 
-  const integrations = ['CRM Systems',
-    'Email Platforms',
-    'Chat Tools',
-    'Social Media',
-    'Project Management',
-    'Analytics Tools',
-    'Cloud Services',
-    'Mobile Apps',
-    'API Access',
-    'Webhooks',
-  ];
+  const integrations = ['CRM SystemsEmail Platforms',
+    'Chat ToolsSocial Media',
+    'Project ManagementAnalytics Tools',
+    'Cloud ServicesMobile Apps',
+    'API AccessWebhooks'
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -254,7 +241,7 @@ export default function Page() {
               Join the modern helpdesk revolution with Zion Tech Group.Our
               platform is designed to streamline support operations, improve
               customer satisfaction, and boost team productivity.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify - center items -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify - center items -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - green - 500 to - emerald - 500 hover:from - green - 600 hover:to - emerald - 600 text-white font - bold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-green - 500 / 25 flex items - center space - x-2"
@@ -273,5 +260,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

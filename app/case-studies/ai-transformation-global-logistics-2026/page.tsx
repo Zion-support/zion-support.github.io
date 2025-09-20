@@ -1,17 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain';
-  description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.';
-  keywords: ['AI transformationlogistics automation', 'supply chain AIcost reduction', 'efficiency gains'];
+  title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
+  description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.',
+  keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains'],
   openGraph: {,
-    title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain';
-    description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
+    description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group']}
+},
 export default function GlobalLogisticsCaseStudy() {,
   return (,
     <div className="max-w-4xl mx-auto px-4 py-8">,
@@ -69,7 +69,7 @@ export default function GlobalLogisticsCaseStudy() {,
             <div className="bg-blue-50 p-6 rounded-lg">,
               <h3 className="font-semibold text-blue-900 mb-3">1. Intelligent Route Optimization</h3>,
               <p className="text-blue-800 text-sm mb-3">,
-                AI-powered algorithms that consider real-time traffic, weather, fuel costs;
+                AI-powered algorithms that consider real-time traffic, weather, fuel costs,
                 and delivery priorities to optimize routes dynamically.,
               </p>,
               <ul className="list-disc list-inside text-blue-700 text-sm space-y-1">,
@@ -108,7 +108,7 @@ export default function GlobalLogisticsCaseStudy() {,
             <div className="bg-orange-50 p-6 rounded-lg">,
               <h3 className="font-semibold text-orange-900 mb-3">4. Predictive Maintenance</h3>,
               <p className="text-orange-800 text-sm mb-3">,
-                IoT sensors and AI models that predict equipment failures before they occur;
+                IoT sensors and AI models that predict equipment failures before they occur,
                 reducing downtime and maintenance costs.,
               </p>,
               <ul className="list-disc list-inside text-orange-700 text-sm space-y-1">,
@@ -311,4 +311,4 @@ export default function GlobalLogisticsCaseStudy() {,
         </footer>,
       </article>,
     </div>,
-  ),}
+  )}

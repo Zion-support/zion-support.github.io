@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Pause,
@@ -9,88 +9,88 @@ import {,
   Zap,
   Brain,
   Cpu,
-  Database;
-  Cloud;
-  Smartphone;
-  Laptop;
-  Server;
-  Network;
-  Shield;
-  Target;
-  TrendingUp;
-  Users;
-  Globe;
-  Code;
-  Atom;
-  Rocket;
-  Star;
-  CheckCircle;
-  AlertCircle;
-  Info;
-  ArrowRight;
-  Download;
-  Share2;
-  Heart;
-  MessageCircle;
-  BookOpen;
-  Lightbulb;
-  X;
-  Eye;
-  MousePointer;
-  Monitor,
-} from 'lucide-react';
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  Network,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
+  Rocket,
+  Star,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
+  BookOpen,
+  Lightbulb,
+  X,
+  Eye,
+  MousePointer,
+  Monitor
+} from 'lucide-react',
 const InteractiveTechDemo2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [isPlayingsetIsPlaying] = useState(false);
-  const [currentDemosetCurrentDemo] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [isPlayingsetIsPlaying] = useState(false),
+  const [currentDemosetCurrentDemo] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-advance demos,
     const interval = setInterval(() => {,
-      setCurrentDemo((prev) => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentDemo((prev) => (prev + 1) % 4),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const demos = [,
     {,
-      title: "AI Consciousness Evolution";
-      subtitle: "Experience Synthetic Intelligence";
-      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.";
-      icon: Brain;
-      color: "from-purple-500 to-pink-500";
-      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index",};
+      title: "AI Consciousness Evolution",
+      subtitle: "Experience Synthetic Intelligence",
+      description: "Interact with breakthrough AI systems achieving 99.7% consciousness accuracy in real-time neural pattern analysis.",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      metrics: "99.7% Accuracy • 8.9/10 Consciousness Index"},
     {,
-      title: "Quantum Neural Fusion";
-      subtitle: "Witness Quantum Computing Power";
-      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.";
-      icon: Atom;
-      color: "from-indigo-500 to-purple-500";
-      metrics: "1000x Speed • 99.8% Qubit Coherence",};
+      title: "Quantum Neural Fusion",
+      subtitle: "Witness Quantum Computing Power",
+      description: "See the first successful integration of quantum computing with neural networksachieving 1000x processing speed.",
+      icon: Atom,
+      color: "from-indigo-500 to-purple-500",
+      metrics: "1000x Speed • 99.8% Qubit Coherence"},
     {,
-      title: "Brain-Computer Interface";
-      subtitle: "Direct Neural Communication";
-      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.";
-      icon: Cpu;
-      color: "from-green-500 to-teal-500";
-      metrics: "99.9% Accuracy • 12ms Response Time",};
+      title: "Brain-Computer Interface",
+      subtitle: "Direct Neural Communication",
+      description: "Control computing systems with your thoughts through our advanced BCI technology with 99.9% accuracy.",
+      icon: Cpu,
+      color: "from-green-500 to-teal-500",
+      metrics: "99.9% Accuracy • 12ms Response Time"},
     {,
-      title: "Edge AI Processing";
-      subtitle: "Real-Time Distributed Intelligence";
-      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.";
-      icon: Network;
-      color: "from-blue-500 to-cyan-500";
-      metrics: "95% Latency Reduction • 10K+ Nodes",}
-  ];
+      title: "Edge AI Processing",
+      subtitle: "Real-Time Distributed Intelligence",
+      description: "Experience ultra-low latency AI processing at the edge with 95% latency reduction and 10,000+ processing nodes.",
+      icon: Network,
+      color: "from-blue-500 to-cyan-500",
+      metrics: "95% Latency Reduction • 10K+ Nodes"}
+  ],
   const features = [,
-    { icon: Playtext: "Interactive Demos" ,};
-    { icon: Braintext: "AI Technologies" ,};
-    { icon: Atomtext: "Quantum Computing" ,};
-    { icon: Cputext: "Neural Interfaces" ,};
-    { icon: Networktext: "Edge Processing" ,};
-    { icon: Rocketext: "Future Tech" ,}
-  ];
-  if (isDismissed) return null;
+    { icon: Playtext: "Interactive Demos" },
+    { icon: Braintext: "AI Technologies" },
+    { icon: Atomtext: "Quantum Computing" },
+    { icon: Cputext: "Neural Interfaces" },
+    { icon: Networktext: "Edge Processing" },
+    { icon: Rocketext: "Future Tech" }
+  ],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -104,7 +104,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
           </div>,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="flex items-center justify-between">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 pr-8">,
                 <div,
                   key={currentDemo}
@@ -117,7 +117,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                   </div>,
                   {/* Title */}
                   <h2 className="text-3xl md: text-4xl font-bold text-white">,
-                    {demos[currentDemo].title,}
+                    {demos[currentDemo].title}
                   </h2>,
                   {/* Subtitle */}
                   <p className="text-lg text-indigo-200 font-medium">,
@@ -135,22 +135,21 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                   {/* Features */}
                   <div className="flex flex-wrap gap-3 mt-4">,
                     {features.slice(0, 3).map((feature, index) => {,
-                      const Icon = feature.icon;
+                      const Icon = feature.icon,
                       return (,
                         <div key={index} className="flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm">,
                           <Icon className="w-4 h-4 mr-2" />,
                           {feature.text}
-                        </div>,
-                      );
+                        </div>),
                     })}
                   </div>,
                   {/* Action Buttons */}
                   <div className="flex flex-col sm: flex-row gap-3 mt-6">,
                     <button,
-                      onClick={() => setIsPlaying(!isPlaying),}
+                      onClick={() => setIsPlaying(!isPlaying)}
                       className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-medium hover: from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group",
                     >,
-                      {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />,}
+                      {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
                       {isPlaying ? 'Pause Demo' : 'Start Demo'}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />,
                     </button>,
@@ -161,17 +160,17 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                   </div>,
                 </div>,
               </div>,
-              {/* Right Content - Interactive Demo Preview */,}
+              {/* Right Content - Interactive Demo Preview */}
               <div className="hidden lg: block flex-shrink-0">,
                 <div,
-                  key={currentDemo,}
+                  key={currentDemo}
                   className="relative w-80 h-48",
                 >,
                   {/* Demo Container */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/20 p-6">,
                     <div className="flex items-center mb-4">,
                       <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${demos[currentDemo].color} flex items-center justify-center`}>,
-                        {React.createElement(demos[currentDemo].icon{ className: "w-6 h-6 text-white" ,})}
+                        {React.createElement(demos[currentDemo].icon{ className: "w-6 h-6 text-white" })}
                       </div>,
                       <div className="ml-4">,
                         <h3 className="text-white font-bold text-lg">Live Demo</h3>,
@@ -187,14 +186,13 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                             {[...Array(8)].map((_, i) => (,
                               <div,
                                 key={i}
-                                  scale: isPlaying ? [1.21] : 1;
-                                  opacity: isPlaying ? [0.510.5] : 0.7,}}
-                                  duration: 2;
-                                  repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.1,}}
+                                  scale: isPlaying ? [1.21] : 1,
+                                  opacity: isPlaying ? [0.510.5] : 0.7}}
+                                  duration: 2,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.1}}
                                 className="w-3 h-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500",
-                              />,
-                            ))}
+                              />))}
                           </div>,
                         )}
                         {demos[currentDemo].title.includes('Quantum') && (,
@@ -202,15 +200,15 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                             {[...Array(4)].map((_, i) => (,
                               <div,
                                 key={i}
-                                  rotate: isPlaying ? 360 : 0;
-                                  scale: isPlaying ? [1.1] : 1,}}
-                                  duration: 3;
-                                  repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.2,}}
+                                  rotate: isPlaying ? 360 : 0,
+                                  scale: isPlaying ? [1.1] : 1}}
+                                  duration: 3,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.2}}
                                 className="absolute w-8 h-8 border-2 border-indigo-400 rounded-full",
                                 style={{,
-                                  left: `${Math.cos(i * Math.PI / 2) * 20,}px`;
-                                  top: `${Math.sin(i * Math.PI / 2) * 20,}px`,
+                                  left: `${Math.cos(i * Math.PI / 2) * 20}px`,
+                                  top: `${Math.sin(i * Math.PI / 2) * 20}px`
                                 }}
                               />,
                             ))}
@@ -221,17 +219,16 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                             {[...Array(3)].map((_, i) => (,
                               <div,
                                 key={i}
-                                  scaleY: isPlaying ? [121] : 1;
-                                  opacity: isPlaying ? [0.510.5] : 0.7,}}
-                                  duration: 1.5;
-                                  repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.2,}}
+                                  scaleY: isPlaying ? [121] : 1,
+                                  opacity: isPlaying ? [0.510.5] : 0.7}}
+                                  duration: 1.5,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.2}}
                                 className="absolute w-1 bg-gradient-to-t from-green-500 to-teal-500 rounded-full",
                                 style={{,
-                                  left: `${30 + i * 20,}%`;
-                                  height: '100%',}}
-                              />,
-                            ))}
+                                  left: `${30 + i * 20}%`,
+                                  height: '100%'}}
+                              />))}
                           </div>,
                         )}
                         {demos[currentDemo].title.includes('Edge AI') && (,
@@ -239,14 +236,13 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                             {[...Array(6)].map((_, i) => (,
                               <div,
                                 key={i}
-                                  scale: isPlaying ? [1.31] : 1;
-                                  opacity: isPlaying ? [0.610.6] : 0.8,}}
-                                  duration: 2;
-                                  repeat: isPlaying ? Infinity : 0;
-                                  delay: i * 0.1,}}
+                                  scale: isPlaying ? [1.31] : 1,
+                                  opacity: isPlaying ? [0.610.6] : 0.8}}
+                                  duration: 2,
+                                  repeat: isPlaying ? Infinity : 0,
+                                  delay: i * 0.1}}
                                 className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500",
-                              />,
-                            ))}
+                              />))}
                           </div>,
                         )}
                       </div>,
@@ -257,7 +253,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                         onClick={() => setIsPlaying(!isPlaying)}
                         className="w-8 h-8 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center hover: from-indigo-600 hover:to-purple-600 transition-all duration-300",
                       >,
-                        {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white ml-0.5" />,}
+                        {isPlaying ? <Pause className="w-4 h-4 text-white" /> : <Play className="w-4 h-4 text-white ml-0.5" />}
                       </button>,
                       <button className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover: bg-white/20 transition-colors">,
                         <RotateCcw className="w-4 h-4 text-white" />,
@@ -267,7 +263,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                       </button>,
                     </div>,
                   </div>,
-                  {/* Floating Elements */,}
+                  {/* Floating Elements */}
                   <div,
                     className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center",
                   >,
@@ -290,7 +286,7 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${,
                     index === currentDemo,
                       ? 'bg-white w-8',
-                      : 'bg-white/30 hover: bg-white/50',}`}
+                      : 'bg-white/30 hover: bg-white/50'}`}
                 />,
               ))}
             </div>,
@@ -303,8 +299,8 @@ const InteractiveTechDemo2025PromotionBanner = () => {,
             <X className="w-5 h-5" />,
           </button>,
         </div>,
-      ),}
+      )}
     </div>,
-  );
-export default InteractiveTechDemo2025PromotionBanner;
+  ),
+export default InteractiveTechDemo2025PromotionBanner,
 </div></div></div></div></div></div>,

@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -18,11 +18,11 @@ import {
   Network,
   Heart,
   Eye
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AdvancedTechShowcase2029PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentFeaturesetCurrentFeature] = useState(0),
 
   const features = [
     {
@@ -49,23 +49,23 @@ const AdvancedTechShowcase2029PromotionBanner = () => {
       description: 'AI with emotional intelligence',
       color: 'from-pink-500 to-rose-500'
     }
-  ];
+  ],
 
   const technologies = [
     { name: 'Synthetic Consciousness'icon: Brain },
     { name: 'Quantum Processing'icon: Cpu },
     { name: 'Reality Manipulation'icon: Globe },
     { name: 'Ethical AI'icon: Shield }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const AdvancedTechShowcase2029PromotionBanner: React.FC = () => {
   return (
@@ -73,7 +73,7 @@ const AdvancedTechShowcase2029PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AdvancedTechShowcase2029PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AdvancedTechShowcase2029PromotionBanner;
+export default AdvancedTechShowcase2029PromotionBanner,

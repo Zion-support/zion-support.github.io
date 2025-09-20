@@ -1,21 +1,21 @@
 // comment,
 export class jobServiceService {,
   constructor() {,
-    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",
+    this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api"
   }
   async get() {,
     try {,
-      const response = await fetch("${this.baseUrl}/jobservice"),
+      const response = await fetch("${this.baseUrl}/jobservice")
 }
-      return await response.json(),
+      return await response.json()
 }
     } catch (error) {,
-      console.error("Error fetching data:", error),
+      console.error("Error fetching data:", error)
 }
-      throw error,
+      throw error
     }
   }
-export default new jobServiceService(),
+export default new jobServiceService()
 }
 export class jobServiceService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/jobservice") } return await response.json() } } catch (error) { console.error("Error fetching data:",error) } throw error } } export default new jobServiceService() }
 export class jobServiceService { constructor() { this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api" } async get() { try { const response = await fetch("${this.baseUrl}/jobservice") } return await response.json() } } catch (error) { console.error("Error fetching "data":",error) } throw error } } export default new jobServiceService() }

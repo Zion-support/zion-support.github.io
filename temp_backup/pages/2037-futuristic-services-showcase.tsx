@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Rocket, Target, Star, 
   Search, Grid, List,
   ArrowRight, Globe,
   Phone, Mail, MapPin, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new 2037 services
-import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services';
-import { innovative2037ITServices } from '../data/innovative-2037-it-services';
-import { innovative2037AIServices } from '../data/innovative-2037-ai-services';
+import { innovative2037MicroSaasServices } from '../data/innovative-2037-micro-saas-services',
+import { innovative2037ITServices } from '../data/innovative-2037-it-services',
+import { innovative2037AIServices } from '../data/innovative-2037-ai-services',
 
 
 
@@ -58,46 +58,46 @@ const categories = [
     color: 'from-emerald-500 to-cyan-500',
     description: 'Innovative business solutions for modern enterprises'
   }
-];
+],
 
 // Combine all services
 const allServices = [
   ...innovative2037MicroSaasServices,
   ...innovative2037ITServices,
   ...innovative2037AIServices
-];
+],
 
 export default function FuturisticServicesShowcase2037() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
+      service.category.toLowerCase().includes(selectedCategory.replace('- ')),
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const getServiceIcon = (category: string) => {
-    if (category.includes('AI')) return <Brain className="w-6 h-6" />;
-    if (category.includes('Quantum')) return <Atom className="w-6 h-6" />;
-    if (category.includes('Space')) return <Rocket className="w-6 h-6" />;
-    if (category.includes('IT') || category.includes('Cloud')) return <Cpu className="w-6 h-6" />;
-    if (category.includes('Micro') || category.includes('SAAS')) return <Target className="w-6 h-6" />;
-    return <Star className="w-6 h-6" />;
-  };
+    if (category.includes('AI')) return <Brain className="w-6 h-6" />,
+    if (category.includes('Quantum')) return <Atom className="w-6 h-6" />,
+    if (category.includes('Space')) return <Rocket className="w-6 h-6" />,
+    if (category.includes('IT') || category.includes('Cloud')) return <Cpu className="w-6 h-6" />,
+    if (category.includes('Micro') || category.includes('SAAS')) return <Target className="w-6 h-6" />,
+    return <Star className="w-6 h-6" />
+  },
 
   const getServiceColor = (category: string) => {
-    if (category.includes('AI')) return 'from-purple-500 to-pink-500';
-    if (category.includes('Quantum')) return 'from-blue-500 to-cyan-500';
-    if (category.includes('Space')) return 'from-indigo-500 to-purple-500';
-    if (category.includes('IT') || category.includes('Cloud')) return 'from-orange-500 to-red-500';
-    if (category.includes('Micro') || category.includes('SAAS')) return 'from-emerald-500 to-cyan-500';
-    return 'from-gray-500 to-slate-500';
-  };
+    if (category.includes('AI')) return 'from-purple-500 to-pink-500',
+    if (category.includes('Quantum')) return 'from-blue-500 to-cyan-500',
+    if (category.includes('Space')) return 'from-indigo-500 to-purple-500',
+    if (category.includes('IT') || category.includes('Cloud')) return 'from-orange-500 to-red-500',
+    if (category.includes('Micro') || category.includes('SAAS')) return 'from-emerald-500 to-cyan-500',
+    return 'from-gray-500 to-slate-500'
+  },
 
 const 2037-futuristic-services-showcase: React.FC = () => {
   return (
@@ -114,7 +114,7 @@ const 2037-futuristic-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2037-futuristic-services-showcase;
+export default 2037-futuristic-services-showcase,

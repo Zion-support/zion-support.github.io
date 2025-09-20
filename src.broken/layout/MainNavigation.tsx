@@ -1,27 +1,27 @@
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useTranslation } from "react-i18next";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext",
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
+import { LanguageSelector } from '@/components/header/LanguageSelector',
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
+import { LoginModal } from '@/components/auth/LoginModal',
 
 export default function Page() {
-, []);
+, []),
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { count } = useFavorites();
-  const location = useLocation();
-  const { t } = useTranslation();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { count } = useFavorites(),
+  const location = useLocation(),
+  const { t } = useTranslation(),
+  const { items } = useCart(),
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0),
 
   const baseLinks = [
     {
@@ -98,14 +98,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
 
       matches: (path: string)  => path.startsWith('/contact')
-    };
-      key: 'contact',;
-      href: '/contact',;
-      name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact')};
-  ];
+    },
+      key: 'contact',
+      href: '/contact',
+      name: 'Contact',
+      matches: (path: string) => path.startsWith('/contact')},
+  ],
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`), Icon: iconMap[link.key] }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`), Icon: iconMap[link.key] })),
   
   // Add authenticated-only links
   if (isAuthenticated) {
@@ -115,7 +115,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/dashboard',
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'),
       Icon: iconMap['dashboard']
-    });
+    }),
   }
   
   // Add admin-only links
@@ -126,12 +126,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/analytics',
       matches: (path: string) => path.startsWith('/analytics'),
       Icon: iconMap['analytics']
-    });
+    }),
   }
   
-  const linkBaseClasses = "inline-flex h-9 items-center justify-center rounded-md px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-sidebar-background";
-  const linkDefaultStateClasses = "text-slate-200 hover:bg-zion-purple/30 hover:text-white";
-  const linkActiveStateClasses = "bg-zion-purple/20 text-zion-cyan border-b-2 border-zion-cyan";
+  const linkBaseClasses = "inline-flex h-9 items-center justify-center rounded-md px-3 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-zion-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-sidebar-background",
+  const linkDefaultStateClasses = "text-slate-200 hover:bg-zion-purple/30 hover:text-white",
+  const linkActiveStateClasses = "bg-zion-purple/20 text-zion-cyan border-b-2 border-zion-cyan",
 
   return (
     <nav className={cn("navbar ml-6 hidden md:flex", className)}>
@@ -221,5 +221,5 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         </li>
       </ul>
     </nav>
-  );
+  ),
 }

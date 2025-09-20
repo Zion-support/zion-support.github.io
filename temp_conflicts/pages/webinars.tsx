@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
 
 export default function WebinarsPage() {
 	return (
@@ -8,7 +8,7 @@ export default function WebinarsPage() {
 			<Head>
 				<title>Webinars | Zion Tech Group</title>
 				<meta name="description" content="On-demand and upcoming webinars from Zion Tech Group." />
-				<link rel="canonical" href="https://ziontechgroup.com/webinars/" />
+				<link rel="canonical" href="https: //ziontechgroup.com/webinars/" />
 			</Head>
 			<Layout>
 				<section className="min-h-[60vh] px-4 py-24">
@@ -17,5 +17,5 @@ export default function WebinarsPage() {
 				</section>
 			</Layout>
 		</>
-	);
+	)
 }

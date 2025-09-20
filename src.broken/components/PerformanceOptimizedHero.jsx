@@ -1,13 +1,13 @@
 <<<<<<< HEAD
-export default PerformanceOptimizedHero;
+export default PerformanceOptimizedHero,
 
 const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">
     {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>
         <div className="relative mb-4">
           <div className="text-5xl mb-2 group - hover:scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>
 =======
-import React, { memo, useEffect, useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { memo, useEffect, useState } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 } role="region" aria-label={`${stat.label} statistics`}>"
         <div className="relative mb-4">"
@@ -21,22 +21,22 @@ export default function Page() {
         </div>"
         <div className="text-gray-400 font-medium">{stat.label}</div>
       </div>))}
-  </div>));
+  </div>)),
 const PerformanceOptimizedHero = memo(() => {
-    const [isVisible, setIsVisible] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
+    const [isVisible, setIsVisible] = useState(false),
+    const [isLoaded, setIsLoaded] = useState(false),
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(true), 100);
-        const loadTimer = setTimeout(() => setIsLoaded(true), 500);
+        const timer = setTimeout(() => setIsVisible(true), 100),
+        const loadTimer = setTimeout(() => setIsLoaded(true), 500),
         return () => {
-            clearTimeout(timer);
-            clearTimeout(loadTimer)}}, []);
+            clearTimeout(timer),
+            clearTimeout(loadTimer)}}, []),
     const stats = ["
         { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },"
         { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },"
         { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },"
         { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
-    ];
+    ],
     if(!isVisible) {
 "
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
@@ -103,8 +103,8 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>"
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
         </>)}
-    </section>)});
-PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
-export default PerformanceOptimizedHero;
+    </section>)}),
+PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero',
+export default PerformanceOptimizedHero,
 }'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-export default Documentation;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Documentation,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'tutorials', name: 'Tutorials', count: 0 },
     { id: 'examples', name: 'Examples', count: 0 },
-    { id: 'guides', name: 'Guides', count: 0 },
-  ];
+    { id: 'guides', name: 'Guides', count: 0 }
+  ],
 
   const documentationItems = [{
       id: 1,
@@ -21,7 +21,7 @@ export default function Page() {
       views: 15420,
       rating: 4.8,
       featured: true,
-      tags: ['quick - start', 'setup', 'beginner'],
+      tags: ['quick - startsetup', 'beginner']
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ export default function Page() {
       views: 12340,
       rating: 4.7,
       featured: true,
-      tags: ['authentication', 'api', 'security'],
+      tags: ['authenticationapi', 'security']
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ export default function Page() {
       views: 9870,
       rating: 4.6,
       featured: true,
-      tags: ['ai', 'machine - learning', 'tutorial'],
+      tags: ['aimachine - learning', 'tutorial']
     },
     {
       id: 4,
@@ -63,7 +63,7 @@ export default function Page() {
       views: 7890,
       rating: 4.6,
       featured: false,
-      tags: ['cloud', 'deployment', 'infrastructure'],
+      tags: ['clouddeployment', 'infrastructure']
     },
     {
       id: 5,
@@ -77,7 +77,7 @@ export default function Page() {
       views: 5670,
       rating: 4.5,
       featured: false,
-      tags: ['micro - saas', 'platform', 'setup'],
+      tags: ['micro - saasplatform', 'setup']
     },
     {
       id: 6,
@@ -91,78 +91,78 @@ export default function Page() {
       views: 5670,
       rating: 4.5,
       featured: false,
-      tags: ['python', 'sdk', 'examples'],
-    },
-  ];
+      tags: ['pythonsdk', 'examples']
+    }
+  ],
 
   const featuredResources = [{
       title: 'Zion Tech Group Developer Portal',
       description: 'Access our comprehensive developer resources and tools',
       type: 'portal',
       link: 'https://developers.ziontechgroup.com',
-      featured: true,
+      featured: true
     },
     {
       title: 'API Playground',
       description: 'Interactive API testing and exploration environment',
       type: 'tool',
       link: '/api - playground',
-      featured: true,
+      featured: true
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers and get help',
       type: 'community',
       link: '/community',
-      featured: false,
-    },
-  ];
+      featured: false
+    }
+  ],
 
   const getDifficultyColor = (difficulty: string) => {
     switch(difficulty) {
       case 'beginner':
-        return 'bg-green - 500';
+        return 'bg-green - 500',
       case 'intermediate':
-        return 'bg-yellow-500';
+        return 'bg-yellow-500',
       case 'advanced':
-        return 'bg-red - 500';
+        return 'bg-red - 500',
       default:
-        return 'bg-gray - 500';
+        return 'bg-gray - 500'
     }
-  };
+  },
 
   const getDifficultyText = (difficulty: string) => {
     switch(difficulty) {
       case 'beginner':
-        return 'Beginner';
+        return 'Beginner',
       case 'intermediate':
-        return 'Intermediate';
+        return 'Intermediate',
       case 'advanced':
-        return 'Advanced';
+        return 'Advanced',
       default:
-        return 'Unknown';
+        return 'Unknown'
     }
-  };
+  },
 
   const filteredItems = documentationItems.filter(item => {
     const matchesSearch = item.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       item.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       item.tags.some(tag =>
-        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory,
 
-    return matchesSearch && matchesCategory;
-  }) ;
+    return matchesSearch && matchesCategory,
+  }) ,
 
   // Update counts
   categories.forEach(cat => {
     if (cat.id === 'all') {
-      cat.count = documentationItems.length;
+      cat.count = documentationItems.length,
     } else {
-      cat.count = documentationItems.filter(item => item.category === cat.id) .length;
+      cat.count = documentationItems.filter(item => item.category === cat.id) .length,
     }
-  }) ;
+  }) ,
 
   return (<>
       <SEO
@@ -349,6 +349,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

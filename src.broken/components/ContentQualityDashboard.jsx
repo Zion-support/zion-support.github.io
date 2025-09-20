@@ -1,41 +1,41 @@
 <<<<<<< HEAD
-export default ContentQualityDashboard;
-import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer";
+export default ContentQualityDashboard,
+import ContentQualityAnalyzer from "../utils / contentQualityAnalyzer",
 
 =======
-import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X  } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react',
+import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X  } from 'lucide-react',
 export default function Page() {
-,;
+,
                 {
 
                     url: '/about',
                     title: 'About Us - Zion Tech Group',
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.Discover our team of experts and our journey in the tech industry.',
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',
-                    images['/images/about-team.jpg'],;
-                    links['/services',/team',/contact',/mission'];
-                },;
+                    images['/images/about-team.jpg'],
+                    links['/services',/team',/contact',/mission'],
+                },
                 {
 
                     url: '/contact',
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
-            // // // // // // // // console.error('Error analyzing pages:', error);
+            // // // // // // // // console.error('Error analyzing pages:', error),
         }
         finally {
 
-            setIsLoading(false);
+            setIsLoading(false),
 
                     images['/images/contact-office.jpg'],
                     links['/services',/about',/team']
                 }
-            ];
+            ],
             for(const page of samplePages) {
 
                 contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
-            const newReport = contentAnalyzer.generateReport();
+            const newReport = contentAnalyzer.generateReport(),
             setReport(newReport)}
         catch(error) {
 
@@ -43,13 +43,13 @@ export default function Page() {
         finally {
 
             setIsLoading(false)}
-    }, [contentAnalyzer]);
+    }, [contentAnalyzer]),
     useEffect(() => {
         // Auto-analyze pages when component mounts
-        analyzeAllPages()}, [analyzeAllPages]);
+        analyzeAllPages()}, [analyzeAllPages]),
     const getFilteredPages = () => {
-        if(!report) return [];
-        let filtered = report.pageMetrics;
+        if(!report) return [],
+        let filtered = report.pageMetrics,
         // Apply search filter
         if(searchTerm) {
 
@@ -63,36 +63,36 @@ export default function Page() {
                 switch (filterStatus) {
 
                     case 'excellent':
-                        return page.overallScore >= 80;
+                        return page.overallScore >= 80,
                     case 'good':
-                        return page.overallScore >= 60 && page.overallScore < 80;
+                        return page.overallScore >= 60 && page.overallScore < 80,
                     case 'poor':
-                        return page.overallScore < 40;
+                        return page.overallScore < 40,
                     default:
                         return true}
             }) }
-        return filtered};
+        return filtered},
     const getStatusColor = (score) => {
 
         if(score >= 80)
-            return 'text-green-600 bg-green-50 border-green-200';
+            return 'text-green-600 bg-green-50 border-green-200',
         if(score >= 60)
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+            return 'text-yellow-600 bg-yellow-50 border-yellow-200',
         if(score >= 40)
-            return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200'};
+            return 'text-orange-600 bg-orange-50 border-orange-200',
+        return 'text-red-600 bg-red-50 border-red-200'},
     const getStatusText = (score) => {
 
         if(score >= 80)
-            return 'Excellent';
+            return 'Excellent',
         if(score >= 60)
-            return 'Good';
+            return 'Good',
         if(score >= 40)
-            return 'Fair';
-        return 'Poor'};
+            return 'Fair',
+        return 'Poor'},
     const exportReport = () => {
         if(!report)
-            return;
+            return,
         const csvContent = ['
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],
             ...report.pageMetrics.map(page => [page.pageUrl,
@@ -100,18 +100,18 @@ export default function Page() {
                 page.wordCount.toString(),
                 page.seoScore.toString(),
                 page.overallScore.toString(),
-                page.issues.join('; '),
-                page.recommendations.join('; ')
+                page.issues.join(),
+                page.recommendations.join(', ')
             ])'"
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
-        const blob = new Blob([csvContent], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'content-quality-report.csv';
-        a.click();
-        window.URL.revokeObjectURL(url)};
-    const filteredPages = getFilteredPages();`
+        ].map(row => row.map(cell => `"${cell}"`).join(')).join('\n'),
+        const blob = new Blob([csvContent], { type: 'text/csv' }),
+        const url = window.URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = 'content-quality-report.csv',
+        a.click(),
+        window.URL.revokeObjectURL(url)},
+    const filteredPages = getFilteredPages(),`
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>
       {/* Floating Action Button */}"
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
@@ -165,11 +165,11 @@ export default function Page() {
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"/>"
                     <input type="text" placeholder="Search pages..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"/>
                   </div>"
-                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent">"
+                  <select value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)} className="px-3 py-2 border border-gray-300 rounded-md focus: ring-2 focus:ring-green-500 focus:border-transparent">"
                     <option value="all">All Pages</option>"
                     <option value="excellent">Excellent(80%+)</option>"
                     <option value="good">Good(60-79%)</option>"
-                    <option value="poor">Poor(&lt;40%)</option>
+                    <option value="poor">Poor(&lt,40%)</option>
                   </select>"
                   <button onClick={exportReport} className="px-3 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors flex items-center gap-2">"
                     <Download className="w-4 h-4"/>
@@ -313,7 +313,7 @@ export default function Page() {
             </button>
           </div>
         </div>)}
-    </div>)};
-export default ContentQualityDashboard;
+    </div>)},
+export default ContentQualityDashboard,
 }}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

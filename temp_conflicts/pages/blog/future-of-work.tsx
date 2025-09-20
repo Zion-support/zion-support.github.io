@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function FutureOfWork() {
   return (
@@ -63,7 +63,7 @@ export default function FutureOfWork() {
                 <p className='text-white/90 mb-4'>
                   The workplace is undergoing a fundamental transformation. Gone
                   are the days when AI was seen as a threat to human employment.
-                  Today, we&apos;re witnessing the emergence of a new paradigm:
+                  Today, we&apos,re witnessing the emergence of a new paradigm:
                   human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
@@ -186,8 +186,7 @@ export default function FutureOfWork() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As the nature of work evolves, so do the skills required for
-                  success. The most valuable employees will be those who can:
-                </p>
+                  success. The most valuable employees will be those who can: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • <strong>Collaborate with AI:</strong> Understand AI
@@ -207,7 +206,7 @@ export default function FutureOfWork() {
                   </li>
                 </ul>
                 <p className='text-white/90 mb-4'>
-                  We&apos;re investing heavily in training programs that help
+                  We&apos,re investing heavily in training programs that help
                   employees develop these future-ready skills.
                 </p>
               </section>
@@ -249,8 +248,8 @@ export default function FutureOfWork() {
                   Measuring Success
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  Success in human-AI collaboration isn&apos;t just about
-                  efficiency—it&apos;s about creating better outcomes for
+                  Success in human-AI collaboration isn&apos,t just about
+                  efficiency—it&apos,s about creating better outcomes for
                   everyone:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -409,7 +408,7 @@ export default function FutureOfWork() {
                 </p>
                 <Link 
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-500 hover:to-pink-500 transition-all duration-300"
                 >
                   Start Your Transformation
                   <span aria-hidden>→</span>
@@ -420,5 +419,5 @@ export default function FutureOfWork() {
         </main>
       </div>
     </>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Factory, Zap, Target, Shield, TrendingUp, Globe, 
   CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIManufacturingPlatform() {
   const features = [
@@ -39,25 +39,19 @@ export default function AIManufacturingPlatform() {
       title: 'Global Operations',
       description: '24/7 global manufacturing operations with AI-powered automation and remote monitoring.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Reduce downtime by 80%',
-    'Improve quality by 90%',
-    'Increase efficiency by 200%',
-    'Reduce costs by 60%',
-    'Enable predictive maintenance',
-    'Optimize production schedules',
-    'Scale manufacturing globally',
-    'Future-proof operations'
-  ];
+    'Reduce downtime by 80%Improve quality by 90%',
+    'Increase efficiency by 200%Reduce costs by 60%',
+    'Enable predictive maintenanceOptimize production schedules',
+    'Scale manufacturing globallyFuture-proof operations'
+  ],
 
   const useCases = [
-    'Predictive Maintenance', 'Quality Control', 'Production Optimization',
-    'Supply Chain Management', 'Performance Analytics', 'Inventory Control',
-    'Equipment Monitoring', 'Process Automation', 'Demand Forecasting',
-    'Manufacturing Analytics', 'Resource Planning', 'Operations Management'
-  ];
+    'Predictive MaintenanceQuality Control', 'Production OptimizationSupply Chain Management', 'Performance AnalyticsInventory Control',
+    'Equipment MonitoringProcess Automation', 'Demand ForecastingManufacturing Analytics', 'Resource PlanningOperations Management'
+  ],
 
 const ai-manufacturing-platform: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-manufacturing-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-manufacturing-platform;
+export default ai-manufacturing-platform,

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-    [elemName: string]: ;
+    [elemName: string]: 
 
 }
 =======
@@ -7,17 +7,17 @@
 
 // React stubs
 declare module 'react' {
-  export type FC<P = any> = (props: anyP)  => ;
-  export type ReactNode = ;
+  export type FC<P = any> = (props: anyP)  => ,
+  export type ReactNode = ,
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
-  export interface KeyboardEvent<T = any> {};
-  export interface RefObject<T> { current: T };
-  export type RefCallback<T> = (value: anyT)  => void;
-  export type Ref<T> = RefObject<T> | RefCallback<T> | null;
-  export type LegacyRef<T> = Ref<T>;
-  export function useRef<T = any>(initial: T): { current: T };
-  const react: ;
+  export interface KeyboardEvent<T = any> {},
+  export interface RefObject<T> { current: T },
+  export type RefCallback<T> = (value: anyT)  => void,
+  export type Ref<T> = RefObject<T> | RefCallback<T> | null,
+  export type LegacyRef<T> = Ref<T>,
+  export function useRef<T = any>(initial: T): { current: T },
+  const react:  ,
   export default react}
 
 declare module 'react/jsx-runtime' {
@@ -33,50 +33,50 @@ declare namespace JSX {
 }
 
 declare module 'react-dom' {
-  export function reactDom: ;
+  export function reactDom:  ,
   export default reactDom}
 
 declare module 'react-router-dom' {
-  export function useNavigate(): ;
-  export const Link: ;
-  export const Routes: ;
-  export const Navigate: ;
-  const rr: ;
+  export function useNavigate(): ,
+  export const Link: ,
+  export const Routes: ,
+  export const Navigate: ,
+  const rr: ,
   export default rr}
 
 declare module 'react-hook-form' {
-  export function useForm<T = any>(...args: any[]): ;
-  const rhf: ;
+  export function useForm<T = any>(...args: any[]): ,
+  const rhf: ,
   export default rhf}
 
 declare module '@hookform/resolvers/zod' {
   export function zodResolver(...args: any[]): }
 
 declare module '@tanstack/react-query' {
-  export function useMutation<T = any>(...args: any[]): ;
-  const rq: ;
+  export function useMutation<T = any>(...args: any[]): ,
+  const rq: ,
   export default rq}
 
 declare module 'jspdf' {
   export class jsPDF {
-    constructor(...args: any[]);
+    constructor(...args: any[]),
     [key: string]: }
 }
 
 declare module 'path' {
-  const path: ;
+  const path:  ,
   export default path}
 
 declare module 'jspdf-autotable' {
-  const autotable: ;
+  const autotable:  ,
   export default autotable}
 
 declare module 'zod' {
-  export type infer<T> = ;
-  const z: ;
-  export { z };
+  export type infer<T> = ,
+  const z:  ,
+  export { z },
   export default z}
 
-export default useEffect;
-export default useRef;
+export default useEffect,
+export default useRef,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

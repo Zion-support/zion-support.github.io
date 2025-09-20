@@ -1,23 +1,23 @@
 #!/usr/bin/env node,
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process'),
+const fs = require('fs'),
+const path = require('path'),
 class CommitAndPush {,
   constructor() {,
-    this.changes = [];
-    this.commitMessage = this.generateCommitMessage();
+    this.changes = [],
+    this.commitMessage = this.generateCommitMessage(),
   }
   log(message, type = 'INFO') {,
     const icons = {,
-      "INFO": 'ℹ️';
-      "SUCCESS": '✅';
-      "ERROR": '❌';
-      "WARNING": '⚠️';
-      "PROGRESS": '🔄'};
-    console.log(`${icons[type]} ${message}`);
+      "INFO": 'ℹ️',
+      "SUCCESS": '✅',
+      "ERROR": '❌',
+      "WARNING": '⚠️',
+      "PROGRESS": '🔄'},
+    console.log(`${icons[type]} ${message}`),
   }
   generateCommitMessage() {,
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     return `Automated improvements and optimizations - ${timestamp}
 - Enhanced automation scripts and testing suite,
 - Improved security configurations and performance optimizations,
@@ -26,31 +26,30 @@ class CommitAndPush {,
 - Fixed Next.js configuration issues,
 - Added performance monitoring and security auditing,
 - Implemented comprehensive testing framework,
-- Created documentation and usage guides`;
+- Created documentation and usage guides`,
   }
   checkGitRepository() {,
     if (!fs.existsSync('.git')) {,
-      this.log('Not in a git repositoryWARNING');
-      return false;
+      this.log('Not in a git repositoryWARNING'),
+      return false,
     }
-    this.log('Git repository foundSUCCESS');
-    return true;
+    this.log('Git repository foundSUCCESS'),
+    return true,
   }
   createGitCommands() {,
-    const commands = ['# Git Workflow Commands# Run these commands to commit and push changes';
-      '';
-      'git add .git status';
-      `git commit -m "${this.commitMessage}"`;
-      'git push origin main';
-      '';
-      '# "Alternative": Push to current branchgit push origin HEAD';
-      '';
-      '# Check status after pushgit status';
-      'git log --oneline -5',
-    ];
-    const commandsPath = path.join(process.cwd(), 'git-commands.txt');
-    fs.writeFileSync(commandsPath, commands.join('\n'));
-    this.log(`Git commands written to ${commandsPath}`, 'SUCCESS');
+    const commands = ['# Git Workflow Commands# Run these commands to commit and push changes',
+      '',
+      'git add .git status',
+      `git commit -m "${this.commitMessage}"`,
+      'git push origin main',
+      '',
+      '# "Alternative": Push to current branchgit push origin HEAD',
+      '',
+      '# Check status after pushgit statusgit log --oneline -5'
+    ],
+    const commandsPath = path.join(process.cwd(), 'git-commands.txt'),
+    fs.writeFileSync(commandsPath, commands.join('\n')),
+    this.log(`Git commands written to ${commandsPath}`, 'SUCCESS'),
   }
   createCommitScript() {,
     const script = `#!/bin/bash,
@@ -79,48 +78,47 @@ echo "📊 Final "status": ",
 git status,
 echo "📝 Recent commits: ",
 git log --oneline -5,
-`;
-    const scriptPath = path.join(process.cwd(), 'commit-and-push.sh');
-    fs.writeFileSync(scriptPath, script);
-    fs.chmodSync(scriptPath, '755');
-    this.log(`Commit script "created": ${scriptPath}`, 'SUCCESS');
+`,
+    const scriptPath = path.join(process.cwd(), 'commit-and-push.sh'),
+    fs.writeFileSync(scriptPath, script),
+    fs.chmodSync(scriptPath, '755'),
+    this.log(`Commit script "created": ${scriptPath}`, 'SUCCESS'),
   }
   generateSummary() {,
     const summary = {,
-      "timestamp": new Date().toISOString();
-      "commitMessage": this.commitMessage;
-      "filesCreated": ['git-commands.txtcommit-and-push.sh'];
-      "nextSteps": ['Review the generated files"Run": chmod +x commit-and-push.sh';
-        '"Execute": ./commit-and-push.shOr manually run commands from git-commands.txt',
-      ]};
-    const summaryPath = path.join(process.cwd(), 'git-workflow-summary.json');
-    fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
-    this.log(`Summary written to ${summaryPath}`, 'SUCCESS');
+      "timestamp": new Date().toISOString(),
+      "commitMessage": this.commitMessage,
+      "filesCreated": ['git-commands.txtcommit-and-push.sh'],
+      "nextSteps": ['Review the generated files"Run": chmod +x commit-and-push.sh"Execute": ./commit-and-push.shOr manually run commands from git-commands.txt'
+      ]},
+    const summaryPath = path.join(process.cwd(), 'git-workflow-summary.json'),
+    fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2)),
+    this.log(`Summary written to ${summaryPath}`, 'SUCCESS'),
   }
   async run() {,
-    this.log('🚀 Starting git workflow preparation...PROGRESS');
+    this.log('🚀 Starting git workflow preparation...PROGRESS'),
     if (!this.checkGitRepository()) {,
-      this.log('Cannot proceed without git repositoryERROR');
-      return;
+      this.log('Cannot proceed without git repositoryERROR'),
+      return,
     }
-    this.createGitCommands();
-    this.createCommitScript();
-    this.generateSummary();
-    this.log('✅ Git operations prepared successfullySUCCESS');
-    this.log('📋 Next "steps": INFO');
-    this.log('1. Review the generated filesINFO');
-    this.log('2. "Run": chmod +x commit-and-push.shINFO');
-    this.log('3. "Execute": ./commit-and-push.shINFO');
-    this.log('4. Or manually run commands from git-commands.txtINFO');
+    this.createGitCommands(),
+    this.createCommitScript(),
+    this.generateSummary(),
+    this.log('✅ Git operations prepared successfullySUCCESS'),
+    this.log('📋 Next "steps": INFO'),
+    this.log('1. Review the generated filesINFO'),
+    this.log('2. "Run": chmod +x commit-and-push.shINFO'),
+    this.log('3. "Execute": ./commit-and-push.shINFO'),
+    this.log('4. Or manually run commands from git-commands.txtINFO')
   }
 }
 // Run the commit and push preparation,
 if (require.main === module) {,
-  const commitAndPush = new CommitAndPush();
+  const commitAndPush = new CommitAndPush(),
   commitAndPush.run().catch(error => {,
-    console.error('Commit and push preparation "failed": ', error);
-    process.exit(1);
-  });
+    console.error('Commit and push preparation "failed": ', error),
+    process.exit(1),
+  }),
 }
-module.exports = CommitAndPush;
-#!/usr/bin/env node const { execSync } = require('child_process'), const fs = require('fs'), const path = require('path'), class CommitAndPush { constructor() { this.changes = [], this.commitMessage = this.generateCommitMessage()} log(message,type = 'INFO') { const icons = { 'INFO': 'ℹ️SUCCESS': '✅ERROR': '❌WARNING': '⚠️PROGRESS': '🔄' }, console.log(`${icons[type]} ${message}`)} generateCommitMessage() { const timestamp = new Date().toISOString(), return `Automated improvements and optimizations - ${timestamp} - Enhanced automation scripts and testing suite - Improved security configurations and performance optimizations - Added comprehensive monitoring and reporting systems - Created git workflow automation - Fixed Next.js configuration issues - Added performance monitoring and security auditing - Implemented comprehensive testing framework - Created documentation and usage guides`} checkGitRepository() { if (!fs.existsSync('.git')) { this.log('Not in a git repositoryWARNING'), return false} this.log('Git repository foundSUCCESS'), return true} createGitCommands() { const commands = [ '# Git Workflow Commands# Run these commands to commit and push changes','','git add .git status',`git commit -m "${this.commitMessage}"`,'git push origin main','','# Alternative: Push to current branchgit push origin HEAD','','# Check status after pushgit status','git log --oneline -5' ], const commandsPath = path.join(process.cwd(),'git-commands.txt'), fs.writeFileSync(commandsPath,commands.join('\n')), this.log(`Git commands written to ${commandsPath}`,'SUCCESS')} createCommitScript() { const script = `#!/bin/bash set -e echo "🚀 Starting git workflow..." # Check if we're in a git repository if [ ! -d ".git" ], then echo "❌ Not in a git repository" exit 1 fi # Add all changes echo "📦 Adding changes..." git add . # Show status echo "📊 Current status: " git status # Commit with message echo "💾 Committing changes..." git commit -m "${this.commitMessage,}" # Push to main branch echo "🚀 Pushing to main branch..." git push origin main # Show final status echo "✅ Git workflow completed!" echo "📊 Final status: " git status echo "📝 Recent commits:" git log --oneline -5 `, const scriptPath = path.join(process.cwd(),'commit-and-push.sh'), fs.writeFileSync(scriptPath,script), fs.chmodSync(scriptPath,'755'), this.log(`Commit script created: ${scriptPath,}`,'SUCCESS')} generateSummary() { const summary = { timestamp: new Date().toISOString(),commitMessage: this.commitMessage,filesCreated: [ 'git-commands.txtcommit-and-push.sh' ],nextSteps: [ 'Review the generated filesRun: chmod +x commit-and-push.sh','Execute: ./commit-and-push.shOr manually run commands from git-commands.txt' ] ,}, const summaryPath = path.join(process.cwd(),'git-workflow-summary.json'), fs.writeFileSync(summaryPath,JSON.stringify(summary,null,2)), this.log(`Summary written to ${summaryPath}`,'SUCCESS')} async run() { this.log('🚀 Starting git workflow preparation...PROGRESS'), if (!this.checkGitRepository()) { this.log('Cannot proceed without git repositoryERROR'), return} this.createGitCommands(), this.createCommitScript(), this.generateSummary(), this.log('✅ Git operations prepared successfullySUCCESS'), this.log('📋 Next steps:INFO'), this.log('1. Review the generated filesINFO'), this.log('2. Run: chmod +x commit-and-push.shINFO'), this.log('3. Execute: ./commit-and-push.shINFO'), this.log('4. Or manually run commands from git-commands.txtINFO')} } if (require.main === module) { const commitAndPush = new CommitAndPush(), commitAndPush.run().catch(error => { console.error('Commit and push preparation failed:',error), process.exit(1)})} module.exports = CommitAndPush;
+module.exports = CommitAndPush,
+#!/usr/bin/env node const { execSync } = require('child_process'), const fs = require('fs'), const path = require('path'), class CommitAndPush { constructor() { this.changes = [], this.commitMessage = this.generateCommitMessage()} log(message,type = 'INFO') { const icons = { 'INFO': 'ℹ️SUCCESS': '✅ERROR': '❌WARNING': '⚠️PROGRESS': '🔄' }, console.log(`${icons[type]} ${message}`)} generateCommitMessage() { const timestamp = new Date().toISOString(), return `Automated improvements and optimizations - ${timestamp} - Enhanced automation scripts and testing suite - Improved security configurations and performance optimizations - Added comprehensive monitoring and reporting systems - Created git workflow automation - Fixed Next.js configuration issues - Added performance monitoring and security auditing - Implemented comprehensive testing framework - Created documentation and usage guides`} checkGitRepository() { if (!fs.existsSync('.git')) { this.log('Not in a git repositoryWARNING'), return false} this.log('Git repository foundSUCCESS'), return true} createGitCommands() { const commands = [ '# Git Workflow Commands# Run these commands to commit and push changes','','git add .git status',`git commit -m "${this.commitMessage}"`,'git push origin main','','# Alternative: Push to current branchgit push origin HEAD','','# Check status after pushgit statusgit log --oneline -5' ], const commandsPath = path.join(process.cwd(),'git-commands.txt'), fs.writeFileSync(commandsPath,commands.join('\n')), this.log(`Git commands written to ${commandsPath}`,'SUCCESS')} createCommitScript() { const script = `#!/bin/bash set -e echo "🚀 Starting git workflow..." # Check if we're in a git repository if [ ! -d ".git" ], then echo "❌ Not in a git repository" exit 1 fi # Add all changes echo "📦 Adding changes..." git add . # Show status echo "📊 Current status: " git status # Commit with message echo "💾 Committing changes..." git commit -m "${this.commitMessage}" # Push to main branch echo "🚀 Pushing to main branch..." git push origin main # Show final status echo "✅ Git workflow completed!" echo "📊 Final status: " git status echo "📝 Recent commits:" git log --oneline -5 `, const scriptPath = path.join(process.cwd(),'commit-and-push.sh'), fs.writeFileSync(scriptPath,script), fs.chmodSync(scriptPath,'755'), this.log(`Commit script created: ${scriptPath}`,'SUCCESS')} generateSummary() { const summary = { timestamp: new Date().toISOString(),commitMessage: this.commitMessage,filesCreated: [ 'git-commands.txtcommit-and-push.sh' ],nextSteps: [ 'Review the generated filesRun: chmod +x commit-and-push.shExecute: ./commit-and-push.shOr manually run commands from git-commands.txt' ] }, const summaryPath = path.join(process.cwd(),'git-workflow-summary.json'), fs.writeFileSync(summaryPath,JSON.stringify(summary,null,2)), this.log(`Summary written to ${summaryPath}`,'SUCCESS')} async run() { this.log('🚀 Starting git workflow preparation...PROGRESS'), if (!this.checkGitRepository()) { this.log('Cannot proceed without git repositoryERROR'), return} this.createGitCommands(), this.createCommitScript(), this.generateSummary(), this.log('✅ Git operations prepared successfullySUCCESS'), this.log('📋 Next steps:INFO'), this.log('1. Review the generated filesINFO'), this.log('2. Run: chmod +x commit-and-push.shINFO'), this.log('3. Execute: ./commit-and-push.shINFO'), this.log('4. Or manually run commands from git-commands.txtINFO')} } if (require.main === module) { const commitAndPush = new CommitAndPush(), commitAndPush.run().catch(error => { console.error('Commit and push preparation failed:',error), process.exit(1)})} module.exports = CommitAndPush,

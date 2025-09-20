@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const Index: NextPage = () => {
   return (
@@ -59,7 +59,7 @@ const Index: NextPage = () => {
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Meta Accelerator</h2>
-            <p className="text-white/70">Refreshes docs, README, knowledge graph, and TODOs every 2 minutes; commits to main.</p>
+            <p className="text-white/70">Refreshes docs, README, knowledge graph, and TODOs every 2 minutes, commits to main.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/meta-accelerator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
@@ -114,7 +114,7 @@ const Index: NextPage = () => {
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">Fast Orchestrator</h2>
-            <p className="text-white/70">Runs every minute to refresh front and homepage content; commits and pushes to main.</p>
+            <p className="text-white/70">Runs every minute to refresh front and homepage content, commits and pushes to main.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/fast-orchestrator" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
@@ -151,7 +151,7 @@ const Index: NextPage = () => {
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
             <h2 className="text-xl font-bold">SEO Audit Runner</h2>
-            <p className="text-white/70">Audits titles and descriptions; writes reports and JSON.</p>
+            <p className="text-white/70">Audits titles and descriptions, writes reports and JSON.</p>
             <a className="text-cyan-300 underline" href="/.netlify/functions/seo-audit-runner" target="_blank" rel="noopener">Trigger / View</a>
           </li>
           <li className="rounded-lg bg-white/5 border border-white/10 p-5">
@@ -187,7 +187,7 @@ const Index: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default Index;
+export default Index,

@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
-import { ForumCategoryInfo } from "@/types/community";
+import { ForumCategoryInfo } from "@/types/community",
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -40,7 +40,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true,
     icon: "Megaphone"
   }
-];
+],
 
 const iconMap = {
   Briefcase,
@@ -49,18 +49,18 @@ const iconMap = {
   Code,
   FileText,
   Megaphone
-} from "lucide-react";
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+} from "lucide-react",
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
-    title: string;
-    author: string;
+    title: string,
+    author: string,
     date: string
 }}
-;
-export { function };
+,
+export { function },
 export default function ForumCategories(...args[]):  {
 
-  const categories: ForumCategoryInfo[] = [;
+  const categories: ForumCategoryInfo[] = [,
     {
 
       id: '1',
@@ -75,12 +75,12 @@ export default function ForumCategories(...args[]):  {
         author: 'Admin',
         date: '2024-01-15'
 
-  console.log('ForumCategories visibleCategories:', visibleCategories);
+  console.log('ForumCategories visibleCategories:', visibleCategories),
   return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       <h2>DEBUG: Forum Categories Section</h2>
       {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap];
+        const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} href={`/community/category/${category.id}`} passHref>
             <a className="block h-full"> {/* Make the anchor a block element and take full height */}
@@ -97,13 +97,13 @@ export default function ForumCategories(...args[]):  {
               </Card>
             </a>
           </Link>
-        );
+        ),
       })}
     </div>
-  );
-};
+  ),
+},
 
-              {category.lastPost && (;"
+              {category.lastPost && (,"
                 <div className="pt-4 border-t border-white/10">"
                   <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>"
                   <p className="text-sm text-white font-medium truncate">
@@ -114,7 +114,7 @@ export default function ForumCategories(...args[]):  {
                   </p>
                 </div>
               )}
-            </div>;
+            </div>,
           ))}
         </div>
 
@@ -126,12 +126,12 @@ export default function ForumCategories(...args[]):  {
             </h3>"
             <p className="text-zion-slate-light mb-6">
               Start contributing to discussions, ask questions, and share your expertise with the community.</p>"
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
+            </button>,
+          </div>,
+        </div>,
+      </div>,
+    </section>,
   )}
 '"

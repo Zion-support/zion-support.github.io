@@ -1,8 +1,8 @@
 
 ,
-import React from "react";
-import HelpCenter from "@/components/support/HelpCenter";
-import { SEO } from "@/components/SEO";
+import React from "react",
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
 export default function HelpCenterPage() {,
   return (,
     <>,
@@ -12,7 +12,6 @@ export default function HelpCenterPage() {,
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace",
       />,
       <HelpCenter />,
-    </>,
-  );
+    </>),
 }
 ,

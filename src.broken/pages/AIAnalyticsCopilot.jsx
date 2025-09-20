@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
 ,
@@ -22,7 +22,7 @@ export default function Page() {
                 title: "Automated Reporting",
                 description: "Generate comprehensive reports and dashboards automatically based on your requirements"
 
-        ].map ( (feature, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10 hover:border-blue - 500 / 50 transition -colors">;
+        ].map ( (feature, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10 hover: border-blue - 500 / 50 transition -colors">,
                   <feature.icon className="w-12 h-12 text-blue - 400 mb-6"/>
                   <h3 className="text-xl font - semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray - 300 leading -relaxed">{feature.description}</p>
@@ -58,7 +58,7 @@ export default function Page() {
                 title: "Cost Reduction",
                 description: "Reduce analytics costs by up to 60% with automated processes"
 
-        ].map((benefit, index) => (<div key={index} className="text-center">;
+        ].map((benefit, index) => (<div key={index} className="text-center">,
                   <div className="bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-2xl p - 8 mb-4">
                     <h3 className="text-2xl font - bold text-white mb-2">{benefit.title}</h3>
                   </div>
@@ -87,5 +87,5 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) };
+    </>) },
 }}}

@@ -1,29 +1,29 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   ArrowRight,
   Star,
   Brain,
   Zap,
   TrendingUp,
-  Sparkles;
-  X;
-  Play;
-  ExternalLink;
-  CheckCircle,
-} from 'lucide-react';
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle
+} from 'lucide-react',
 const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)1000),
+    return () => clearTimeout(timer),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -48,7 +48,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
           </div>,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-              {/* Content */,}
+              {/* Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3",
@@ -114,7 +114,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* AI Tools Preview */,}
+              {/* AI Tools Preview */}
               <div,
                 className="flex flex-col sm: flex-row lg:flex-col gap-4",
               >,
@@ -135,7 +135,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Dismiss Button */,}
+            {/* Dismiss Button */}
             <button,
               onClick={handleDismiss}
               className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors duration-300 p-1",
@@ -144,12 +144,12 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
               <X className="w-5 h-5" />,
             </button>,
           </div>,
-          {/* Animated Border */,}
+          {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-pulse" />,
         </div>,
       )}
     </div>,
-  );
-};
-export default InteractiveAIToolsShowcase2025PromotionBanner;
+  ),
+},
+export default InteractiveAIToolsShowcase2025PromotionBanner,
 </div></div></div></div></div>,

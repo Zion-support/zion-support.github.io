@@ -1,238 +1,118 @@
-import React, { useState } from 'react';
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
-
+import React, { useState } from "react";
+import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from "lucide-react";
 export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');
-
   const mainCategories = [
     {
-      id: 'all',
-      name: 'All Categories',
-      icon: <Globe className="w-8 h-8" />,
-      color: 'from-zion-cyan to-zion-blue',
-      count: 0
-    },
+      id: 'all',name: 'All Categories',icon: <Globe className="w-8 h-8" />,color: 'from-zion-cyan to-zion-blue',count: 0
+    };
     {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      icon: <Brain className="w-8 h-8" />,
-      color: 'from-zion-purple to-zion-pink',
-      count: 45
-    },
+      id: 'ai-ml',name: 'AI & Machine Learning',icon: <Brain className="w-8 h-8" />,color: 'from-zion-purple to-zion-pink',count: 45
+    };
     {
-      id: 'cloud',
-      name: 'Cloud & Infrastructure',
-      icon: <Cloud className="w-8 h-8" />,
-      color: 'from-zion-blue to-zion-cyan',
-      count: 32
-    },
+      id: 'cloud',name: 'Cloud & Infrastructure',icon: <Cloud className="w-8 h-8" />,color: 'from-zion-blue to-zion-cyan',count: 32
+    };
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      icon: <Shield className="w-8 h-8" />,
-      color: 'from-zion-red to-zion-orange',
-      count: 28
-    },
+      id: 'cybersecurity',name: 'Cybersecurity',icon: <Shield className="w-8 h-8" />,color: 'from-zion-red to-zion-orange',count: 28
+    };
     {
-      id: 'data',
-      name: 'Data & Analytics',
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-zion-green to-zion-emerald',
-      count: 36
-    },
+      id: 'data',name: 'Data & Analytics',icon: <BarChart3 className="w-8 h-8" />,color: 'from-zion-green to-zion-emerald',count: 36
+    };
     {
-      id: 'development',
-      name: 'Development',
-      icon: <Code className="w-8 h-8" />,
-      color: 'from-zion-indigo to-zion-purple',
-      count: 41
+      id: 'development',name: 'Development',icon: <Code className="w-8 h-8" />,color: 'from-zion-indigo to-zion-purple',count: 41
     }
   ];
-
   const subCategories = {
     'ai-ml': [
       {
-        name: 'Natural Language Processing',
-        description: 'Text analysis, language models, and conversational AI',
-        icon: <Brain className="w-6 h-6" />,
-        services: 12,
-        talent: 8,
-        equipment: 3
-      },
+        name: 'Natural Language Processing',description: 'Text analysis, language models, and conversational AI',
+        icon: <Brain className="w-6 h-6" />,services: 12,talent: 8,equipment: 3
+      };
       {
-        name: 'Computer Vision',
-        description: 'Image recognition, object detection, and visual AI',
-        icon: <Eye className="w-6 h-6" />,
-        services: 9,
-        talent: 6,
-        equipment: 4
-      },
+        name: 'Computer Vision',description: 'Image recognition, object detection, and visual AI',
+        icon: <Eye className="w-6 h-6" />,services: 9,talent: 6,equipment: 4
+      };
       {
-        name: 'Machine Learning Platforms',
-        description: 'ML model training, deployment, and management',
-        icon: <Cpu className="w-6 h-6" />,
-        services: 15,
-        talent: 12,
-        equipment: 7
-      },
+        name: 'Machine Learning Platforms',description: 'ML model training, deployment, and management',
+        icon: <Cpu className="w-6 h-6" />,services: 15,talent: 12,equipment: 7
+      };
       {
-        name: 'AI Consulting',
-        description: 'Strategic AI implementation and optimization',
-        icon: <Target className="w-6 h-6" />,
-        services: 8,
-        talent: 5,
-        equipment: 1
+        name: 'AI Consulting',description: 'Strategic AI implementation and optimization',icon: <Target className="w-6 h-6" />,services: 8,talent: 5,equipment: 1
       }
-    ],
+    ];
     'cloud': [
       {
-        name: 'Cloud Migration',
-        description: 'Legacy system migration and cloud transformation',
-        icon: <Rocket className="w-6 h-6" />,
-        services: 11,
-        talent: 7,
-        equipment: 2
-      },
+        name: 'Cloud Migration',description: 'Legacy system migration and cloud transformation',icon: <Rocket className="w-6 h-6" />,services: 11,talent: 7,equipment: 2
+      };
       {
-        name: 'DevOps & CI/CD',
-        description: 'Automated deployment and infrastructure management',
-        icon: <Zap className="w-6 h-6" />,
-        services: 14,
-        talent: 9,
-        equipment: 3
-      },
+        name: 'DevOps & CI/CD',description: 'Automated deployment and infrastructure management',icon: <Zap className="w-6 h-6" />,services: 14,talent: 9,equipment: 3
+      };
       {
-        name: 'Serverless Computing',
-        description: 'Event-driven and serverless architecture',
-        icon: <Cloud className="w-6 h-6" />,
-        services: 7,
-        talent: 4,
-        equipment: 1
+        name: 'Serverless Computing',description: 'Event-driven and serverless architecture',icon: <Cloud className="w-6 h-6" />,services: 7,talent: 4,equipment: 1
       }
-    ],
+    ];
     'cybersecurity': [
       {
-        name: 'Threat Detection',
-        description: 'Advanced threat detection and response systems',
-        icon: <Shield className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
-        equipment: 5
-      },
+        name: 'Threat Detection',description: 'Advanced threat detection and response systems',icon: <Shield className="w-6 h-6" />,services: 13,talent: 8,equipment: 5
+      };
       {
-        name: 'Compliance & Governance',
-        description: 'Security compliance and policy management',
-        icon: <Lock className="w-6 h-6" />,
-        services: 9,
-        talent: 6,
-        equipment: 2
-      },
+        name: 'Compliance & Governance',description: 'Security compliance and policy management',icon: <Lock className="w-6 h-6" />,services: 9,talent: 6,equipment: 2
+      };
       {
-        name: 'Penetration Testing',
-        description: 'Security assessment and vulnerability testing',
-        icon: <Target className="w-6 h-6" />,
-        services: 6,
-        talent: 4,
-        equipment: 3
+        name: 'Penetration Testing',description: 'Security assessment and vulnerability testing',icon: <Target className="w-6 h-6" />,services: 6,talent: 4,equipment: 3
       }
-    ],
+    ];
     'data': [
       {
-        name: 'Business Intelligence',
-        description: 'Data visualization and business analytics',
-        icon: <BarChart3 className="w-6 h-6" />,
-        services: 18,
-        talent: 11,
-        equipment: 4
-      },
+        name: 'Business Intelligence',description: 'Data visualization and business analytics',icon: <BarChart3 className="w-6 h-6" />,services: 18,talent: 11,equipment: 4
+      };
       {
-        name: 'Big Data Processing',
-        description: 'Large-scale data processing and analytics',
-        icon: <Database className="w-6 h-6" />,
-        services: 12,
-        talent: 8,
-        equipment: 6
-      },
+        name: 'Big Data Processing',description: 'Large-scale data processing and analytics',icon: <Database className="w-6 h-6" />,services: 12,talent: 8,equipment: 6
+      };
       {
-        name: 'Data Engineering',
-        description: 'Data pipeline development and ETL processes',
-        icon: <Network className="w-6 h-6" />,
-        services: 6,
-        talent: 5,
-        equipment: 2
+        name: 'Data Engineering',description: 'Data pipeline development and ETL processes',icon: <Network className="w-6 h-6" />,services: 6,talent: 5,equipment: 2
       }
-    ],
+    ];
     'development': [
       {
-        name: 'Web Development',
-        description: 'Frontend and backend web applications',
-        icon: <Code className="w-6 h-6" />,
-        services: 22,
-        talent: 15,
-        equipment: 3
-      },
+        name: 'Web Development',description: 'Frontend and backend web applications',icon: <Code className="w-6 h-6" />,services: 22,talent: 15,equipment: 3
+      };
       {
-        name: 'Mobile Development',
-        description: 'iOS and Android mobile applications',
-        icon: <Smartphone className="w-6 h-6" />,
-        services: 16,
-        talent: 12,
-        equipment: 2
-      },
+        name: 'Mobile Development',description: 'iOS and Android mobile applications',icon: <Smartphone className="w-6 h-6" />,services: 16,talent: 12,equipment: 2
+      };
       {
-        name: 'API Development',
-        description: 'RESTful APIs and microservices',
-        icon: <Network className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
-        equipment: 1
+        name: 'API Development',description: 'RESTful APIs and microservices',icon: <Network className="w-6 h-6" />,services: 13,talent: 8,equipment: 1
       }
     ]
   };
-
   const featuredItems = [
     {
-      type: 'service',
-      title: 'AI-Powered Business Intelligence Platform',
-      category: 'AI & Machine Learning',
-      rating: 4.9,
-      price: '$2,500/month',
+      type: 'service',title: 'AI-Powered Business Intelligence Platform',category: 'AI & Machine Learning',rating: 4.9,price: '$2,500/month',
       featured: true
-    },
+    };
     {
-      type: 'talent',
-      title: 'Senior AI Engineer',
-      category: 'AI & Machine Learning',
-      rating: 4.8,
-      price: '$150/hour',
-      featured: true
-    },
+      type: 'talent',title: 'Senior AI Engineer',category: 'AI & Machine Learning',rating: 4.8,price: '$150/hour',featured: true
+    };
     {
-      type: 'equipment',
-      title: 'High-Performance GPU Cluster',
-      category: 'AI & Machine Learning',
-      rating: 4.7,
-      price: '$15,000/month',
+      type: 'equipment',title: 'High-Performance GPU Cluster',category: 'AI & Machine Learning',rating: 4.7,price: '$15,000/month',
       featured: true
     }
   ];
-
   const getCategoryCount = (categoryId: string) => {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
-      );
+      ),
     }
     return subCategories[categoryId]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
-    ) || 0;
-  };
+    ) || 0,
+  },
 
   // Update counts
   mainCategories.forEach(cat => {
-    cat.count = getCategoryCount(cat.id);
+    cat.count = getCategoryCount(cat.id),
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -365,7 +245,7 @@ export default function Categories() {
           <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Use our advanced search to find specific services, talent, or equipment, or contact us for custom solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="/search"
               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
@@ -382,5 +262,5 @@ export default function Categories() {
         </div>
       </div>
     </div>
-  );
+  )
 }

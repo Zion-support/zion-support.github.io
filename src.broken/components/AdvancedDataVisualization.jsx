@@ -33,8 +33,8 @@
                   <input type="checkbox" checked={chartConfig.animate} onChange = { (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked
 =======
-import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
+import React, { useState, useRef, useEffect } from 'react',
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [,
     { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
@@ -47,73 +47,73 @@ import { BarChart3, RefreshCw, X, Maximize2, Minimize2 const mockChartData = [;
     { id: '10', name: 'Q2 Conversion', value: 3.8, category: 'Conversion', timestamp: new Date('2024-04-01') },
     { id: '11', name: 'Q3 Conversion', value: 3.5, category: 'Conversion', timestamp: new Date('2024-07-01') },
     { id: '12', name: 'Q4 Conversion', value: 4.1, category: 'Conversion', timestamp: new Date('2024-10-01') }
-];
+],
 const colorPalettes = ['
     ['#06b6d4',#7c3aed',#10b981',#f59e0b',#ef4444'],
     ['#3b82f6',#8b5cf6',#06b6d4',#10b981',#f59e0b'],
     ['#ef4444',#f97316',#eab308',#84cc16',#22c55e'],
     ['#8b5cf6',#ec4899',#f97316',#eab308',#84cc16']
-];
+],
 export function AdvancedDataVisualization() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [selectedChartType, setSelectedChartType] = useState('bar');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedColorPalette, setSelectedColorPalette] = useState(0);
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [isFullscreen, setIsFullscreen] = useState(false),
+    const [selectedChartType, setSelectedChartType] = useState('bar'),
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedColorPalette, setSelectedColorPalette] = useState(0),
     const [chartConfig, setChartConfig] = useState({
 
         showLegend: true,
         showGrid: true,
         animate: true,
         responsive: true
-    });
-    const [data, setData] = useState(mockChartData);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const [autoRefresh, setAutoRefresh] = useState(false);
-    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))];
-    const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory);
+    }),
+    const [data, setData] = useState(mockChartData),
+    const [isRefreshing, setIsRefreshing] = useState(false),
+    const [autoRefresh, setAutoRefresh] = useState(false),
+    const categories = ['all', ...Array.from(new Set(data.map(item => item.category)))],
+    const filteredData = data.filter(item => selectedCategory === 'all' || item.category === selectedCategory),
     const refreshData = async () => {
-        setIsRefreshing(true) ;
+        setIsRefreshing(true) ,
         // Simulate data refresh
         setTimeout(() => {
             const newData = data.map(item => ({
 
                 ...item,
-                value: item.value + Math.floor (Math.random () * 100000 - 50000) }) ) ;
-            setData(newData) ;
-            setIsRefreshing(false) }, 1000) };
+                value: item.value + Math.floor (Math.random () * 100000 - 50000) }) ) ,
+            setData(newData) ,
+            setIsRefreshing(false) }, 1000) },
     useEffect(() => {
         if(autoRefresh) {
 
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-        // // // // // // // // console.log(`Downloading chart as ${format}`);
-    };
+            const interval = setInterval(refreshData, 30000), // Refresh every 30 seconds
+        // // // // // // // // console.log(`Downloading chart as ${format}`),
+    },
             return () => clearInterval(interval) }
-    }, [autoRefresh]) ;
+    }, [autoRefresh]) ,
     const downloadChart = (format) => {
 
         // Simulate chart download`
-        // console.log(`Downloading chart as ${format}`)};
+        // console.log(`Downloading chart as ${format}`)},
     const renderChart = () => {
         switch(selectedChartType) {
 
             case 'bar':
-                return renderBarChart();
+                return renderBarChart(),
             case 'line':
-                return renderLineChart();
+                return renderLineChart(),
             case 'pie':
-                return renderPieChart();
+                return renderPieChart(),
             case 'area':
-                return renderAreaChart();
+                return renderAreaChart(),
             case 'scatter':
-                return renderScatterChart () ;
+                return renderScatterChart () ,
             default:
                 return renderBarChart () }
-    };
+    },
     const renderBarChart = () => {
-        const maxValue = Math.max(...filteredData.map (item => item.value) ) ;
-        const colors = colorPalettes[selectedColorPalette];
+        const maxValue = Math.max(...filteredData.map (item => item.value) ) ,
+        const colors = colorPalettes[selectedColorPalette],
         return (<div className="h-80 flex items-end justify-center gap-4 p-6">"
         {filteredData.map((item, index) => (<div key={item.id} className="flex flex-col items-center">"
             <div className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hover:scale-110 cursor-pointer" style={{
@@ -126,10 +126,10 @@ export function AdvancedDataVisualization() {
               <div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
             </div>
           </div>) ) }
-      </div>) };
+      </div>) },
     const renderLineChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];"
+        const maxValue = Math.max(...filteredData.map(item => item.value)),
+        const colors = colorPalettes[selectedColorPalette],"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
           <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
@@ -144,19 +144,19 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>) };
+      </div>) },
     const renderPieChart = () => {
-        const total = filteredData.reduce((sum, item) => sum + item.value, 0);
-        const colors = colorPalettes[selectedColorPalette];"
+        const total = filteredData.reduce((sum, item) => sum + item.value, 0),
+        const colors = colorPalettes[selectedColorPalette],"
         return (<div className="h-80 flex items-center justify-center">"
         <div className="relative w-64 h-64">
           {filteredData.map((item, index) => {
 
-                const percentage = (item.value / total) * 100;
-                const angle = (percentage / 100) * 360;
-                const prevAngle = filteredData;
+                const percentage = (item.value / total) * 100,
+                const angle = (percentage / 100) * 360,
+                const prevAngle = filteredData,
                     .slice(0, index)
-                    .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0);"
+                    .reduce((sum, prevItem) => sum + (prevItem.value / total) * 360, 0),"
                 return (<div key={item.id} className="absolute inset-0 rounded-full border-8 border-transparent" style = {
 
   {
@@ -175,10 +175,10 @@ export function AdvancedDataVisualization() {
             </div>
           </div>
         </div>
-      </div>) };
+      </div>) },
     const renderAreaChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];"
+        const maxValue = Math.max(...filteredData.map(item => item.value)),
+        const colors = colorPalettes[selectedColorPalette],"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
           <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {
@@ -192,10 +192,10 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>) };
+      </div>) },
     const renderScatterChart = () => {
-        const maxValue = Math.max(...filteredData.map(item => item.value));
-        const colors = colorPalettes[selectedColorPalette];"
+        const maxValue = Math.max(...filteredData.map(item => item.value)),
+        const colors = colorPalettes[selectedColorPalette],"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
           {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
@@ -203,7 +203,7 @@ export function AdvancedDataVisualization() {
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
-      </div>) };
+      </div>) },
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"

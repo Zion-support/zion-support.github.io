@@ -1,42 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones } from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AICustomerSupportAutomation() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent conversational AI that understands context and provides accurate responses"
+      icon: Brain,title: "AI-Powered Chatbots",description: "Intelligent conversational AI that understands context and provides accurate responses"
+    };
+    {
+      icon: MessageCircle,title: "Multi-Channel Support",description: "Seamless support across email, chat, social media, and phone"
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Seamless support across email, chat, social media, and phone"
-    },
+      icon: Clock,title: "24/7 Availability",description: "Round-the-clock customer support without human intervention"
+    };
     {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support without human intervention"
-    },
+      icon: Target,title: "Personalized Responses",description: "AI learns customer preferences and provides tailored solutions"
+    };
     {
-      icon: Target,
-      title: "Personalized Responses",
-      description: "AI learns customer preferences and provides tailored solutions"
-    },
+      icon: BarChart3,title: "Real-Time Analytics",description: "Live insights into customer satisfaction and support performance"
+    };
     {
-      icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Live insights into customer satisfaction and support performance"
-    },
-    {
-      icon: Shield,
-      title: "Secure & Compliant",
-      description: "Enterprise-grade security with GDPR and SOC2 compliance"
+      icon: Shield,title: "Secure & Compliant",description: "Enterprise-grade security with GDPR and SOC2 compliance"
     }
   ];
-
   const benefits = [
     "Reduce support costs by 60-80%",
     "Improve response time by 90%",
@@ -44,34 +30,26 @@ export default function AICustomerSupportAutomation() {
     "Handle 10x more support requests",
     "Reduce agent workload by 70%",
     "Provide 24/7 multilingual support"
-  ];
+  ],
 
   const solutions = [
     {
-      title: "AI Chatbot Platform",
-      description: "Intelligent conversational AI for website and app support",
-      features: ["Natural language processing", "Multi-language support", "Integration APIs"],
+      title: "AI Chatbot Platform",description: "Intelligent conversational AI for website and app support",features: ["Natural language processing", "Multi-language support", "Integration APIs"],
       price: "From $2,000/month"
     },
     {
-      title: "Email Support Automation",
-      description: "AI-powered email categorization and response generation",
-      features: ["Smart categorization", "Auto-response generation", "Sentiment analysis"],
+      title: "Email Support Automation",description: "AI-powered email categorization and response generation",features: ["Smart categorization", "Auto-response generation", "Sentiment analysis"],
       price: "From $1,500/month"
     },
     {
-      title: "Voice Support AI",
-      description: "Intelligent voice recognition and response system",
-      features: ["Speech-to-text", "Voice synthesis", "Call routing"],
+      title: "Voice Support AI",description: "Intelligent voice recognition and response system",features: ["Speech-to-text", "Voice synthesis", "Call routing"],
       price: "From $3,000/month"
     },
     {
-      title: "Full Support Suite",
-      description: "Complete AI-powered customer support solution",
-      features: ["All channels", "Advanced analytics", "Custom integrations"],
+      title: "Full Support Suite",description: "Complete AI-powered customer support solution",features: ["All channels", "Advanced analytics", "Custom integrations"],
       price: "From $5,000/month"
     }
-  ];
+  ],
 
   const useCases = [
     "E-commerce Customer Support",
@@ -80,7 +58,7 @@ export default function AICustomerSupportAutomation() {
     "Healthcare Support",
     "Travel & Hospitality",
     "Education & Training"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -153,7 +131,7 @@ export default function AICustomerSupportAutomation() {
               Advanced AI Technology for Better Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered customer support platform combines natural language processing, 
+              Our AI-powered customer support platform combines natural language processing;
               machine learning, and automation to deliver exceptional customer experiences.
             </p>
           </motion.div>
@@ -326,7 +304,7 @@ export default function AICustomerSupportAutomation() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover: bg-green-400/10 transition-all duration-300 flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
@@ -336,5 +314,5 @@ export default function AICustomerSupportAutomation() {
         </div>
       </section>
     </div>
-  );
+  )
 }

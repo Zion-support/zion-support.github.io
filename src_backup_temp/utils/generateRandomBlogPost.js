@@ -1,7 +1,7 @@
-// generateRandomBlogPost utility;
+// generateRandomBlogPost utility,
 export const generateRandomBlogPost = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 "init": function() {}
-};
-export default generateRandomBlogPost;
-export const generateRandomBlogPost = { init: function() {} }, export default generateRandomBlogPost;
+},
+export default generateRandomBlogPost,
+export const generateRandomBlogPost = { init: function() {} }, export default generateRandomBlogPost,

@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Real-Time Governance Blueprint | Zion Tech Group';
-  description: 'Policy-as-code, streaming evals, and automated approvals for safe, real-time AI operations.',
-};
+  title: 'AI 2026: Real-Time Governance Blueprint | Zion Tech Group',
+  description: 'Policy-as-code, streaming evals, and automated approvals for safe, real-time AI operations.'
+},
 export default function RealTimeGovernanceBlueprintPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -22,8 +22,8 @@ export default function RealTimeGovernanceBlueprintPage() {,
         </ul>,
         <h2>Starter architecture</h2>,
         <p>,
-          Combine an evaluation harness with a rules engine and an approval workflow. Use tiered trust boundaries;
-          sandboxed tools, and SLO-based release gates. Route tasks via risk-aware policies that check safety;
+          Combine an evaluation harness with a rules engine and an approval workflow. Use tiered trust boundaries,
+          sandboxed tools, and SLO-based release gates. Route tasks via risk-aware policies that check safety,
           reliability, cost, and compliance in real time.,
         </p>,
         <h2>Resources</h2>,
@@ -32,7 +32,6 @@ export default function RealTimeGovernanceBlueprintPage() {,
           <li><Link href="/content/ai-2026-operational-guardrails" className="text-purple-700">Operational Guardrails</Link></li>,
         </ul>,
       </div>,
-    </main>,
-  );
+    </main>),
 }
 ,

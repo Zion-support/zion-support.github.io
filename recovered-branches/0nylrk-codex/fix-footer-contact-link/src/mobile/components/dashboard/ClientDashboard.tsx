@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Link } from "react-router-dom",
 export function ClientDashboard() {,
   return (,
     <div className="space-y-6 px-4 pb-24">,
@@ -34,7 +34,7 @@ export function ClientDashboard() {,
                   <span className="font-medium">60%</span>,
                 </div>,
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">,
-                  <div className="h-full bg-primary rounded-full" style={{width: '60%',}}></div>,
+                  <div className="h-full bg-primary rounded-full" style={{width: '60%'}}></div>,
                 </div>,
               </div>,
               <div className="flex justify-between items-center">,
@@ -150,6 +150,5 @@ export function ClientDashboard() {,
           </CardContent>,
         </Card>,
       </section>,
-    </div>,
-  ),}
+    </div>)}
 ,

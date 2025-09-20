@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Users, 
   BarChart3, 
   Heart, 
@@ -22,102 +22,59 @@ import {
   Activity,
   PieChart,
   LineChart
-} from 'lucide-react';
-
+} from "lucide-react";
 const AICustomerExperienceAnalytics: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Sentiment Analysis',
-      description: 'Advanced natural language processing to understand customer emotions and feedback in real-time.',
-      price: '$299/month'
-    },
+      icon: Brain,title: 'AI-Powered Sentiment Analysis',description: 'Advanced natural language processing to understand customer emotions and feedback in real-time.',price: '$299/month'
+    };
     {
-      icon: Eye,
-      title: 'Customer Journey Mapping',
-      description: 'Visualize and track customer interactions across all touchpoints with predictive analytics.',
-      price: '$199/month'
-    },
+      icon: Eye,title: 'Customer Journey Mapping',description: 'Visualize and track customer interactions across all touchpoints with predictive analytics.',price: '$199/month'
+    };
     {
-      icon: Target,
-      title: 'Churn Prediction & Prevention',
-      description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',
-      price: '$249/month'
-    },
+      icon: Target,title: 'Churn Prediction & Prevention',description: 'Machine learning algorithms to identify at-risk customers and recommend retention strategies.',price: '$249/month'
+    };
     {
-      icon: BarChart3,
-      title: 'ROI Optimization Insights',
-      description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',
-      price: '$179/month'
+      icon: BarChart3,title: 'ROI Optimization Insights',description: 'Data-driven recommendations to maximize customer lifetime value and marketing effectiveness.',price: '$179/month'
     }
   ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses starting their customer analytics journey',
-      features: [
-        'Up to 10,000 customer interactions',
-        'Basic sentiment analysis',
-        'Standard reporting',
-        'Email support',
+      name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small businesses starting their customer analytics journey',features: [
+        'Up to 10,000 customer interactionsBasic sentiment analysis',
+        'Standard reportingEmail support',
         'Basic journey mapping'
       ],
-      cta: 'Get Started',
-      popular: false
-    },
+      cta: 'Get Started',popular: false
+    };
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing companies with comprehensive customer experience needs',
-      features: [
-        'Up to 100,000 customer interactions',
-        'Advanced AI analytics',
-        'Full journey mapping',
-        'Priority support',
-        'Churn prediction',
-        'Custom dashboards'
+      name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing companies with comprehensive customer experience needs',features: [
+        'Up to 100,000 customer interactionsAdvanced AI analytics',
+        'Full journey mappingPriority support',
+        'Churn predictionCustom dashboards'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large organizations requiring enterprise-grade customer analytics',
-      features: [
-        'Unlimited customer interactions',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Advanced security features',
-        'SLA guarantees'
+      name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade customer analytics',features: [
+        'Unlimited customer interactionsCustom AI models';
+        'White-label solution24/7 dedicated support',
+        'Advanced security featuresSLA guarantees'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   const benefits = [
-    'Increase customer satisfaction by 40%',
-    'Reduce churn rate by 35%',
-    'Improve customer lifetime value by 50%',
-    'Boost conversion rates by 25%',
+    'Increase customer satisfaction by 40%Reduce churn rate by 35%',
+    'Improve customer lifetime value by 50%Boost conversion rates by 25%',
     'Reduce support costs by 30%'
-  ];
+  ],
 
   const analyticsCapabilities = [
-    'Real-time customer sentiment tracking',
-    'Multi-channel interaction analysis',
-    'Predictive customer behavior modeling',
-    'Automated customer feedback processing',
-    'Advanced segmentation and targeting',
-    'Competitive benchmarking insights'
-  ];
+    'Real-time customer sentiment trackingMulti-channel interaction analysis',
+    'Predictive customer behavior modelingAutomated customer feedback processing',
+    'Advanced segmentation and targetingCompetitive benchmarking insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white">
@@ -419,6 +376,6 @@ const AICustomerExperienceAnalytics: React.FC = () => {
       </div>
     </div>
   );
-};
+},
 
 export default AICustomerExperienceAnalytics;

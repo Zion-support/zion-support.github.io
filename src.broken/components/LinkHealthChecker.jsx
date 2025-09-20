@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-    const [linkStatuses, setLinkStatuses] = useState([]);
-    const [isChecking, setIsChecking] = useState(false);
+    const [linkStatuses, setLinkStatuses] = useState([]),
+    const [isChecking, setIsChecking] = useState(false),
 =======
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthChecker = ({ links, className = '' }) => {
 
-    const [linkStatuses, setLinkStatuses] = useState([]);
-    const [isChecking, setIsChecking] = useState(false);
+    const [linkStatuses, setLinkStatuses] = useState([]),
+    const [isChecking, setIsChecking] = useState(false),
     const checkLinkHealth = async(url) => {
 
-        const startTime = Date.now();
+        const startTime = Date.now(),
         try {
 
             // Check if it's an external link'
@@ -55,64 +55,64 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
                 responseTime: Date.now() - startTime,
                 error: error instanceof Error ? error.message : 'Unknown error'
             }}
-    };
+    },
     const checkAllLinks = async () => {
-        setIsChecking(true);
-        setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' })));
-        const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url)));
-        setLinkStatuses(statuses);
-        setIsChecking(false)};
+        setIsChecking(true),
+        setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' }))),
+        const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url))),
+        setLinkStatuses(statuses),
+        setIsChecking(false)},
     useEffect(() => {
         // Auto-check links when component mounts
-        checkAllLinks()}, [links]);
+        checkAllLinks()}, [links]),
     const getStatusIcon = (status) => {
 
         switch(status) {
 
             case 'healthy':
-                return <CheckCircle className="w-5 h-5 text-green-500"/>;
+                return <CheckCircle className="w-5 h-5 text-green-500"/>,
             case 'broken':"
-                return <XCircle className="w-5 h-5 text-red-500"/>;
+                return <XCircle className="w-5 h-5 text-red-500"/>,
             case 'external':"
-                return <ExternalLink className="w-5 h-5 text-blue-500"/>;
+                return <ExternalLink className="w-5 h-5 text-blue-500"/>,
             case 'checking':"
-                return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>;
+                return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse"/>,
             default:"
                 return <AlertTriangle className="w-5 h-5 text-gray-500"/>}
-    };
+    },
     const getStatusText = (status) => {
 
         switch(status) {
 
             case 'healthy':'
-                return 'Healthy';
+                return 'Healthy',
             case 'broken':'
-                return 'Broken';
+                return 'Broken',
             case 'external':'
-                return 'External';
+                return 'External',
             case 'checking':'
-                return 'Checking...';
+                return 'Checking...',
             default:'
                 return 'Unknown'}
-    };
+    },
     const getStatusColor = (status) => {
 
         switch(status) {
 
             case 'healthy':'
-                return 'text-green-500';
+                return 'text-green-500',
             case 'broken':'
-                return 'text-red-500';
+                return 'text-red-500',
             case 'external':'
-                return 'text-blue-500';
+                return 'text-blue-500',
             case 'checking':'
-                return 'text-yellow-500';
+                return 'text-yellow-500',
             default:'
                 return 'text-gray-500'}
-    };
-    const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length;
-    const brokenCount = linkStatuses.filter(s => s.status === 'broken').length;
-    const externalCount = linkStatuses.filter(s => s.status === 'external').length;
+    },
+    const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length,
+    const brokenCount = linkStatuses.filter(s => s.status === 'broken').length,
+    const externalCount = linkStatuses.filter(s => s.status === 'external').length,
     return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>
       {/* Header */}"
       <div className="flex items-center justify-between mb-6">
@@ -151,9 +151,9 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
       <div className="space-y-3">
         {links.map((link, index) => {
 
-            const status = linkStatuses[index];
+            const status = linkStatuses[index],
             if(!status)
-                return null;"
+                return null,"
             return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover:border-white/20 transition-colors duration-300">"
               <div className="flex items-center gap-3">
                 {getStatusIcon(status.status)}
@@ -186,7 +186,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
           <p className="text-sm text-green-300">
             Great job! All links are working properly.Your website is in excellent health.</p>
         </div>)}
-    </div>)};
-export default LinkHealthChecker;
+    </div>)},
+export default LinkHealthChecker,
 }}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

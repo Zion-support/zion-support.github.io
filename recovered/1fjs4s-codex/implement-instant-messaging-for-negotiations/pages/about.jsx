@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 const AboutPage = () => (
   <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
@@ -32,6 +32,6 @@ const AboutPage = () => (
       </ol>
     </section>
   </main>
-);
+),
 
-export default AboutPage;
+export default AboutPage,

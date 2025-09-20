@@ -1,13 +1,13 @@
-import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award  } from 'lucide-react';
+import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award  } from 'lucide-react',
 export default function Page() {
-`};
+`},
     const getSupportLevelColor = (level) => {
         switch(level.toLowerCase () ) {
-            case 'enterprise': return 'bg-purple - 600';
-            case 'premium': return 'bg-blue - 600';
-            case 'standard': return 'bg-green - 600';
+            case 'enterprise': return 'bg-purple - 600',
+            case 'premium': return 'bg-blue - 600',
+            case 'standard': return 'bg-green - 600',
             default: return 'bg-gray - 600'}
-    };
+    },
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -15,7 +15,7 @@ export default function Page() {
             transition: {
                 staggerChildren: 0.1
 
-    };
+    },
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0
@@ -27,10 +27,10 @@ export default function Page() {
             transition: {
                 duration: 0.5
 
-    };
-    return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 text-white">;
+    },
+    return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 text-white">,
       {/* Header Section */}
-      <div className="relative overflow-hidden">;
+      <div className="relative overflow-hidden">,
         <div className="absolute inset - 0 bg-gradient - to - r from - blue - 600 / 20 to - purple -600 / 20"></div>
         <div className="relative z - 10 max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div initial = {
@@ -94,10 +94,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </div>;
+      </div>,
 
       {/* Filters and Search */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 mb-12">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 mb-12">,
         <div className="bg-white / 10 backdrop - blur - sm rounded-lg p - 6 border border-blue -400 / 30">
           <div className="flex flex - col lg:flex - row gap-6 items - center justify -between">
             {/* Search */}
@@ -132,7 +132,7 @@ export default function Page() {
       </div>
 
       {/* Services Grid / List */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 mb-16">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 mb-16">,
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8' : 'space - y-6'}>
           {filteredServices.map((service) => (<motion.div key={service.id} variants={itemVariants} className={`bg-white / 10 backdrop - blur - sm rounded-xl border border-blue - 400 / 20 hover:border-blue - 400 / 40 transition - all duration - 300 hover:shadow-2xl hover:shadow-blue - 400 / 20 cursor - pointer ${viewMode === 'list' ? 'p - 6' : 'p - 6'}`} onClick={ () => setSelectedService(service) }>
               {/* Service Header */}
@@ -196,7 +196,7 @@ export default function Page() {
         {filteredServices.length === 0 && (<div className="text-center py-12">
             <div className="text-gray - 400 text-lg mb-4">No services found matching your criteria</div>
             <button onClick={ () => {
-                setSearchTerm('') ;
+                setSearchTerm('') ,
                 setSelectedCategory('all') }} className="text-blue - 400 hover:text-blue - 300 transition -colors">
               Clear filters
             </button>

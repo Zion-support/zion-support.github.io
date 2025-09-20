@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
@@ -7,12 +7,9 @@ export default function Page() {
     icon: Cloud,
     description: 'Scale your infrastructure with flexible and cost - effective cloud solutions',
     color: 'from - blue - 500 to - cyan - 600',
-    solutions: ['Cloud Migration',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi - cloud Strategy',
-      'Cloud Security'
+    solutions: ['Cloud MigrationInfrastructure as Code',
+      'Container OrchestrationServerless Computing',
+      'Multi - cloud StrategyCloud Security'
     ]
   },
   {
@@ -21,12 +18,9 @@ export default function Page() {
     icon: TrendingUp,
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from - green - 500 to - emerald - 600',
-    solutions: ['Business Intelligence',
-      'Data Warehousing',
-      'Real - time Analytics',
-      'Predictive Modeling',
-      'Data Visualization',
-      'Big Data Processing'
+    solutions: ['Business IntelligenceData Warehousing',
+      'Real - time AnalyticsPredictive Modeling',
+      'Data VisualizationBig Data Processing'
     ]
   },
   {
@@ -35,12 +29,9 @@ export default function Page() {
     icon: Zap,
     description: 'Connect devices and process data closer to the source for real - time insights',
     color: 'from - yellow-500 to - orange - 600',
-    solutions: ['IoT Device Management',
-      'Edge Computing Platforms',
-      'Sensor Networks',
-      'Real - time Monitoring',
-      'Predictive Maintenance',
-      'Smart City Solutions'
+    solutions: ['IoT Device ManagementEdge Computing Platforms',
+      'Sensor NetworksReal - time Monitoring',
+      'Predictive MaintenanceSmart City Solutions'
     ]
   },
   {
@@ -49,90 +40,69 @@ export default function Page() {
     icon: Globe,
     description: 'Modernize your business processes and customer experience',
     color: 'from - indigo - 500 to - purple - 600',
-    solutions: ['Process Automation',
-      'Customer Experience',;
-      'Legacy Modernization',;
-      'Digital Strategy',;
-      'Change Management',;
-      'Technology Consulting';
-    ];
-  };
-];
+    solutions: ['Process AutomationCustomer Experience',
+      'Legacy ModernizationDigital Strategy',
+      'Change ManagementTechnology Consulting',
+    ],
+  },
+],
 
 const industrySolutions = [{
     industry: 'Healthcare',
     icon: Heart,
     solutions: [
-      'Electronic Health Records',
-      'Telemedicine Platforms',
-      'Medical Imaging AI',
-      'Patient Data Analytics',
-      'Healthcare Security',
-      'Regulatory Compliance'
+      'Electronic Health RecordsTelemedicine Platforms',
+      'Medical Imaging AIPatient Data Analytics',
+      'Healthcare SecurityRegulatory Compliance'
     ],
     color: 'from - pink - 500 to - rose - 600'
   },
   {
     industry: 'Finance',
     icon: DollarSign,
-    solutions: ['Fintech Applications',
-      'Risk Management',
-      'Fraud Detection',
-      'Regulatory Compliance',
-      'Digital Banking',
-      'Blockchain Solutions'
+    solutions: ['Fintech ApplicationsRisk Management',
+      'Fraud DetectionRegulatory Compliance',
+      'Digital BankingBlockchain Solutions'
     ],
     color: 'from - green - 500 to - emerald - 600'
   },
   {
     industry: 'Manufacturing',
     icon: Cpu,
-    solutions: ['Smart Manufacturing',
-      'Predictive Maintenance',
-      'Quality Control',
-      'Supply Chain Optimization',
-      'Industrial IoT',
-      'Automation Systems'
+    solutions: ['Smart ManufacturingPredictive Maintenance',
+      'Quality ControlSupply Chain Optimization',
+      'Industrial IoTAutomation Systems'
     ],
     color: 'from - blue - 500 to - cyan - 600'
   },
   {
     industry: 'Retail',
     icon: ShoppingCart,
-    solutions: ['E - commerce Platforms',
-      'Customer Analytics',
-      'Inventory Management',
-      'Omnichannel Solutions',
-      'Personalization',
-      'Supply Chain Management'
+    solutions: ['E - commerce PlatformsCustomer Analytics',
+      'Inventory ManagementOmnichannel Solutions',
+      'PersonalizationSupply Chain Management'
     ],
     color: 'from - purple - 500 to - indigo - 600'
   },
   {
     industry: 'Education',
     icon: BookOpen,
-    solutions: ['Learning Management Systems',
-      'Virtual Classrooms',
-      'Student Analytics',
-      'Content Management',
-      'Assessment Tools',
-      'Collaboration Platforms'
+    solutions: ['Learning Management SystemsVirtual Classrooms',
+      'Student AnalyticsContent Management',
+      'Assessment ToolsCollaboration Platforms'
     ],
     color: 'from - yellow-500 to - orange - 600'
   },
   {
     industry: 'Government',
     icon: Shield,
-    solutions: ['Digital Services',
-      'Data Security',
-      'Process Automation',;
-      'Citizen Engagement',;
-      'Regulatory Compliance',;
-      'Infrastructure Management';
-    ],;
-    color: 'from - gray - 500 to - slate - 600';
-  };
-];
+    solutions: ['Digital ServicesData Security',
+      'Process AutomationCitizen Engagement',
+      'Regulatory ComplianceInfrastructure Management',
+    ],
+    color: 'from - gray - 500 to - slate - 600'
+  },
+],
 
 const featuredSolutions = [{
     id: 1,
@@ -140,17 +110,12 @@ const featuredSolutions = [{
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI - powered analytics platform.Get real - time dashboards, predictive modeling, and automated reporting.',
     features: [
-      'Real - time data processing',
-      'Predictive analytics models',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Natural language queries',
-      'Mobile - responsive design'
+      'Real - time data processingPredictive analytics models',
+      'Custom dashboard creationAutomated reporting',
+      'Natural language queriesMobile - responsive design'
     ],
-    benefits: ['30% faster decision making',
-      'Reduced manual reporting',
-      'Improved data accuracy',
-      'Enhanced user experience'
+    benefits: ['30% faster decision makingReduced manual reporting',
+      'Improved data accuracyEnhanced user experience'
     ],
     price: 'Starting at $2,500 / month',
     implementation: '4 - 8 weeks',
@@ -162,17 +127,12 @@ const featuredSolutions = [{
     name: 'Zero - Trust Security Framework',
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
-    features: ['Identity verification',
-      'Device authentication',
-      'Network segmentation',
-      'Threat detection',
-      'Compliance monitoring',
-      'Incident response'
+    features: ['Identity verificationDevice authentication',
+      'Network segmentationThreat detection',
+      'Compliance monitoringIncident response'
     ],
-    benefits: ['99.9% threat detection rate',
-      'Reduced security incidents',
-      'Compliance achievement',
-      'Lower insurance costs'
+    benefits: ['99.9% threat detection rateReduced security incidents',
+      'Compliance achievementLower insurance costs'
     ],
     price: 'Starting at $3,200 / month',
     implementation: '6 - 12 weeks',
@@ -184,24 +144,19 @@ const featuredSolutions = [{
     name: 'Cloud - Native Infrastructure',
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost - effective infrastructure using modern cloud - native technologies and best practices.',
-    features: ['Auto - scaling infrastructure',
-      'Container orchestration',
-      'CI / CD pipelines',
-      'Monitoring & alerting',
-      'Disaster recovery',
-      'Cost optimization'
+    features: ['Auto - scaling infrastructureContainer orchestration',
+      'CI / CD pipelinesMonitoring & alerting',
+      'Disaster recoveryCost optimization'
     ],
-    benefits: ['50% infrastructure cost reduction',
-      '99.9% uptime guarantee',
-      'Faster deployment cycles',
-      'Improved scalability';
-    ],;
-    price: 'Starting at $1,800 / month',;
-    implementation: '8 - 16 weeks',;
-    icon: Cloud,;
-    color: 'from - blue - 500 to - cyan - 600';
-  };
-];
+    benefits: ['50% infrastructure cost reduction99.9% uptime guarantee',
+      'Faster deployment cyclesImproved scalability',
+    ],
+    price: 'Starting at $1,800 / month',
+    implementation: '8 - 16 weeks',
+    icon: Cloud,
+    color: 'from - blue - 500 to - cyan - 600'
+  },
+],
 
   const industrySolutions = [{
       title: 'Enterprise Solutions',
@@ -209,17 +164,12 @@ const featuredSolutions = [{
       description: 'Scalable enterprise - grade solutions for large organizations',
       color: 'from - blue - 500 to - indigo - 600',
       features: [
-        'Digital Transformation Consulting',
-        'Enterprise AI Integration',
-        'Scalable Cloud Infrastructure',
-        'Enterprise Security & Compliance',
-        'Business Process Automation',
-        'Data Governance & Analytics'
+        'Digital Transformation ConsultingEnterprise AI Integration',
+        'Scalable Cloud InfrastructureEnterprise Security & Compliance',
+        'Business Process AutomationData Governance & Analytics'
       ],
-      useCases: ['Fortune 500 Digital Transformation',
-        'Multi - national AI Implementation',
-        'Enterprise Security Modernization',
-        'Legacy System Migration'
+      useCases: ['Fortune 500 Digital TransformationMulti - national AI Implementation',
+        'Enterprise Security ModernizationLegacy System Migration'
       ],
       href: '/solutions / enterprise'
     },
@@ -228,17 +178,12 @@ const featuredSolutions = [{
       icon: Heart,
       description: 'AI - powered healthcare solutions for improved patient outcomes',
       color: 'from - red - 500 to - pink - 600',
-      features: ['AI Diagnostic Tools',
-        'Patient Data Analytics',
-        'Healthcare Process Automation',
-        'Medical Imaging AI',
-        'Drug Discovery Support',
-        'Healthcare Compliance'
+      features: ['AI Diagnostic ToolsPatient Data Analytics',
+        'Healthcare Process AutomationMedical Imaging AI',
+        'Drug Discovery SupportHealthcare Compliance'
       ],
-      useCases: ['AI - Powered Diagnosis Systems',
-        'Patient Outcome Prediction',
-        'Medical Image Analysis',
-        'Healthcare Workflow Optimization'
+      useCases: ['AI - Powered Diagnosis SystemsPatient Outcome Prediction',
+        'Medical Image AnalysisHealthcare Workflow Optimization'
       ],
       href: '/solutions / healthcare'
     },
@@ -247,17 +192,12 @@ const featuredSolutions = [{
       icon: DollarSign,
       description: 'Advanced financial technology solutions for modern banking',
       color: 'from - green - 500 to - emerald - 600',
-      features: ['AI Trading Algorithms',
-        'Risk Management Systems',
-        'Fraud Detection AI',
-        'Financial Analytics',
-        'Regulatory Compliance',
-        'Customer Experience AI'
+      features: ['AI Trading AlgorithmsRisk Management Systems',
+        'Fraud Detection AIFinancial Analytics',
+        'Regulatory ComplianceCustomer Experience AI'
       ],
-      useCases: ['Algorithmic Trading Platforms',
-        'Real - time Risk Assessment',
-        'AI Fraud Prevention',
-        'Personalized Banking'
+      useCases: ['Algorithmic Trading PlatformsReal - time Risk Assessment',
+        'AI Fraud PreventionPersonalized Banking'
       ],
       href: '/solutions / financial'
     },
@@ -266,17 +206,12 @@ const featuredSolutions = [{
       icon: Truck,
       description: 'Smart manufacturing and Industry 4.0 solutions',
       color: 'from - orange - 500 to - red - 600',
-      features: ['Predictive Maintenance',
-        'Quality Control AI',
-        'Supply Chain Optimization',
-        'IoT Integration',
-        'Production Analytics',
-        'Smart Factory Solutions'
+      features: ['Predictive MaintenanceQuality Control AI',
+        'Supply Chain OptimizationIoT Integration',
+        'Production AnalyticsSmart Factory Solutions'
       ],
-      useCases: ['Predictive Maintenance Systems',
-        'Quality Control Automation',
-        'Supply Chain Optimization',
-        'Smart Factory Implementation'
+      useCases: ['Predictive Maintenance SystemsQuality Control Automation',
+        'Supply Chain OptimizationSmart Factory Implementation'
       ],
       href: '/solutions / manufacturing'
     },
@@ -285,17 +220,12 @@ const featuredSolutions = [{
       icon: Shield,
       description: 'Secure and compliant government technology solutions',
       color: 'from - purple - 500 to - indigo - 600',
-      features: ['Cybersecurity & Compliance',
-        'Data Governance',
-        'Citizen Services AI',
-        'Infrastructure Management',
-        'Public Safety Systems',
-        'Regulatory Compliance'
+      features: ['Cybersecurity & ComplianceData Governance',
+        'Citizen Services AIInfrastructure Management',
+        'Public Safety SystemsRegulatory Compliance'
       ],
-      useCases: ['Government Cybersecurity',
-        'Smart City Infrastructure',
-        'Citizen Service Automation',
-        'Public Safety AI'
+      useCases: ['Government CybersecuritySmart City Infrastructure',
+        'Citizen Service AutomationPublic Safety AI'
       ],
       href: '/solutions / government'
     },
@@ -304,21 +234,16 @@ const featuredSolutions = [{
       icon: BookOpen,
       description: 'Innovative educational technology for modern learning',
       color: 'from - cyan - 500 to - blue - 600',
-      features: ['AI Learning Platforms',
-        'Personalized Education',
-        'Student Analytics',
-        'Virtual Learning Environments',
-        'Assessment Automation',
-        'Educational Content AI'
+      features: ['AI Learning PlatformsPersonalized Education',
+        'Student AnalyticsVirtual Learning Environments',
+        'Assessment AutomationEducational Content AI'
       ],
-      useCases: ['Personalized Learning Systems',
-        'Student Performance Analytics',
-        'Virtual Classroom Platforms',
-        'AI - Powered Assessment'
+      useCases: ['Personalized Learning SystemsStudent Performance Analytics',
+        'Virtual Classroom PlatformsAI - Powered Assessment'
       ],
       href: '/solutions / education'
     }
-  ];
+  ],
 
   const technologySolutions = [{
       title: 'AI & Machine Learning',
@@ -326,12 +251,9 @@ const featuredSolutions = [{
       description: 'Cutting - edge AI solutions for business transformation',
       color: 'from - purple - 500 to - pink - 600',
       solutions: [
-        'AI Business Intelligence',
-        'Machine Learning Platforms',
-        'Natural Language Processing',
-        'Computer Vision Systems',
-        'Predictive Analytics',
-        'AI Automation'
+        'AI Business IntelligenceMachine Learning Platforms',
+        'Natural Language ProcessingComputer Vision Systems',
+        'Predictive AnalyticsAI Automation'
       ]
     },
     {
@@ -339,12 +261,9 @@ const featuredSolutions = [{
       icon: Cloud,
       description: 'Scalable cloud solutions and infrastructure management',
       color: 'from - blue - 500 to - cyan - 600',
-      solutions: ['Cloud Migration',
-        'DevOps Automation',
-        'Container Orchestration',
-        'Serverless Computing',
-        'Multi - cloud Management',
-        'Edge Computing'
+      solutions: ['Cloud MigrationDevOps Automation',
+        'Container OrchestrationServerless Computing',
+        'Multi - cloud ManagementEdge Computing'
       ]
     },
     {
@@ -352,12 +271,9 @@ const featuredSolutions = [{
       icon: Shield,
       description: 'Advanced security solutions for modern threats',
       color: 'from - red - 500 to - orange - 600',
-      solutions: ['Zero Trust Security',
-        'AI Threat Detection',
-        'Compliance Management',
-        'Identity & Access Management',
-        'Security Automation',
-        'Incident Response'
+      solutions: ['Zero Trust SecurityAI Threat Detection',
+        'Compliance ManagementIdentity & Access Management',
+        'Security AutomationIncident Response'
       ]
     },
     {
@@ -365,22 +281,19 @@ const featuredSolutions = [{
       icon: Atom,
       description: 'Next - generation quantum computing solutions',
       color: 'from - indigo - 500 to - purple - 600',
-      solutions: ['Quantum Algorithms',
-        'Quantum Machine Learning',
-        'Quantum Cryptography',
-        'Quantum Simulation',
-        'Hybrid Quantum - Classical',
-        'Quantum Optimization'
+      solutions: ['Quantum AlgorithmsQuantum Machine Learning',
+        'Quantum CryptographyQuantum Simulation',
+        'Hybrid Quantum - ClassicalQuantum Optimization'
       ]
     }
-  ];
+  ],
 
-  const filteredSolutions = featuredSolutions.filter(solution => {;
-    const matchesSearch = solution.name.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                         solution.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
+  const filteredSolutions = featuredSolutions.filter(solution => {,
+    const matchesSearch = solution.name.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                         solution.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
 
-    return matchesCategory && matchesSearch;
-  }) ;
+    return matchesCategory && matchesSearch,
+  }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc -700">
       {/* Hero Section */}
@@ -461,7 +374,7 @@ const featuredSolutions = [{
 
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {solutionCategories.map((category, index) => {
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
               return (<motion.div
                   key={category.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -483,13 +396,13 @@ const featuredSolutions = [{
                             <span>{solution}</span>
                           </div>) ) }
                       </div>
-                      <div  className="mt-4 flex items - center text-zion - cyan group - hover:text-zion - cyan - light transition - colors duration -300">
+                      <div  className="mt-4 flex items - center text-zion - cyan group - hover: text-zion - cyan - light transition - colors duration -300">
                         <span className="text-sm font -medium">Learn More</span>
                         <ArrowRight className="ml-2 h-4 w-4 group - hover:translate - x-1 transition - transform duration -300" />
                       </div>
                     </div>
                   </Link>
-                </motion.div>) ;
+                </motion.div>) 
             }) }
           </div>
         </div>
@@ -511,7 +424,7 @@ const featuredSolutions = [{
 
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {industrySolutions.map((industry, index) => {
-              const IconComponent = industry.icon;
+              const IconComponent = industry.icon,
               return (<motion.div
                   key={industry.industry}
                   initial={{ opacity: 0, y: 20 }}
@@ -538,7 +451,7 @@ const featuredSolutions = [{
                       View {industry.industry} Solutions < ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-                </motion.div>) ;
+                </motion.div>) ,
             }) }
           </div>
         </div>
@@ -560,7 +473,7 @@ const featuredSolutions = [{
 
           <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">
             {filteredSolutions.map((solution, index) => {
-              const IconComponent = solution.icon;
+              const IconComponent = solution.icon,
               return (<motion.div
                   key={solution.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -621,12 +534,12 @@ const featuredSolutions = [{
                     </div>
                     <Link
                       to={`/solutions/${solution.id}`}
-                      className="inline - flex items - center text-zion - cyan hover:text-zion - cyan - light transition - colors duration -300"
+                      className="inline - flex items - center text-zion - cyan hover: text-zion - cyan - light transition - colors duration -300"
                     >
                       Learn More < ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
-                </motion.div>) ;
+                </motion.div>) 
             }) }
           </div>
         </div>
@@ -682,14 +595,14 @@ const featuredSolutions = [{
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >;
-            <h2 className="text-3xl font - bold text-white mb-4">Solution Categories</h2>;
-            <p className="text-zion - slate - light text-lg">Explore our comprehensive range of technology solutions</p>;
-          </motion.div>;
-;
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-            {solutionCategories.map((category, index) => {;
-              const IconComponent = category.icon;
+          >,
+            <h2 className="text-3xl font - bold text-white mb-4">Solution Categories</h2>,
+            <p className="text-zion - slate - light text-lg">Explore our comprehensive range of technology solutions</p>,
+          </motion.div>,
+,
+          <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">,
+            {solutionCategories.map((category, index) => {,
+              const IconComponent = category.icon,
               return (<motion.div
                   key = {category.id}
                   initial = {
@@ -723,13 +636,13 @@ const featuredSolutions = [{
                             <span>{solution}</span>
                           </div>) ) }
                       </div>
-                      <div  className="mt-4 flex items - center text-zion - cyan group - hover:text-zion - cyan - light transition - colors duration -300">;
-                        <span className="text-sm font -medium">Learn More</span>;
-                        <ArrowRight className="ml-2 h-4 w-4 group - hover:translate - x-1 transition - transform duration -300" />;
-                      </div>;
-                    </div>;
-                  </Link>;
-                </motion.div>;) ;
+                      <div  className="mt-4 flex items - center text-zion - cyan group - hover: text-zion - cyan - light transition - colors duration -300">,
+                        <span className="text-sm font -medium">Learn More</span>,
+                        <ArrowRight className="ml-2 h-4 w-4 group - hover:translate - x-1 transition - transform duration -300" />,
+                      </div>,
+                    </div>,
+                  </Link>,
+                </motion.div>,) 
             }) }
           </div>
         </div>
@@ -752,14 +665,14 @@ const featuredSolutions = [{
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >;
-            <h2 className="text-3xl font - bold text-white mb-4">Industry - Specific Solutions</h2>;
-            <p className="text-zion - slate - light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
-          </motion.div>;
-;
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-            {industrySolutions.map((industry, index) => {;
-              const IconComponent = industry.icon;
+          >,
+            <h2 className="text-3xl font - bold text-white mb-4">Industry - Specific Solutions</h2>,
+            <p className="text-zion - slate - light text-lg">Tailored solutions designed for your industry's unique challenges</p>,
+          </motion.div>,
+,
+          <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">,
+            {industrySolutions.map((industry, index) => {,
+              const IconComponent = industry.icon,
               return (<motion.div
                   key = {industry.industry}
                   initial = {
@@ -793,20 +706,20 @@ const featuredSolutions = [{
                   <div  className="mt-4">
                     <Link
                       to={`/solutions/${industry.industry.toLowerCase () }`}
-                      className="inline - flex items - center text-zion - cyan hover:text-zion - cyan - light transition - colors duration -300";
-                    >;
-                      View {industry.industry} Solutions;
-                      <ArrowRight className="ml-2 h-4 w-4" />;
-                    </Link>;
-                  </div>;
-                </motion.div>;) ;
+                      className="inline - flex items - center text-zion - cyan hover: text-zion - cyan - light transition - colors duration -300",
+                    >,
+                      View {industry.industry} Solutions,
+                      <ArrowRight className="ml-2 h-4 w-4" />,
+                    </Link>,
+                  </div>,
+                </motion.div>,) ,
             }) }
           </div>
         </div>
-      </section>;
+      </section>,
 
       {/* Featured Solutions */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -822,14 +735,14 @@ const featuredSolutions = [{
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >;
-            <h2 className="text-3xl font - bold text-white mb-4">Featured Solutions</h2>;
-            <p className="text-zion - slate - light text-lg">Our most popular and impactful technology solutions</p>;
-          </motion.div>;
-;
-          <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">;
-            {filteredSolutions.map((solution, index) => {;
-              const IconComponent = solution.icon;
+          >,
+            <h2 className="text-3xl font - bold text-white mb-4">Featured Solutions</h2>,
+            <p className="text-zion - slate - light text-lg">Our most popular and impactful technology solutions</p>,
+          </motion.div>,
+,
+          <div  className="grid grid - cols - 1 lg: grid - cols - 2 gap-8">,
+            {filteredSolutions.map((solution, index) => {,
+              const IconComponent = solution.icon,
               return (<motion.div
                   key = {solution.id}
                   initial = {
@@ -892,13 +805,13 @@ const featuredSolutions = [{
                     </div>
                     <Link
                       to={`/solutions/${solution.id}`}
-                      className="text-blue - 400 hover:text-blue - 300 text-sm font -medium"
+                      className="text-blue - 400 hover: text-blue - 300 text-sm font -medium"
                     >
-                      Learn More;
-                      <ArrowRight className="ml-2 h-4 w-4" />;
-                    </Link>;
-                  </div>;
-                </motion.div>;) ;
+                      Learn More,
+                      <ArrowRight className="ml-2 h-4 w-4" />,
+                    </Link>,
+                  </div>,
+                </motion.div>,) 
             }) }
           </div>
         </motion.div>
@@ -929,7 +842,7 @@ const featuredSolutions = [{
             <div  className="flex flex - wrap justify - center gap-4">
               <Link
                 to="/contact"
-                className="px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white rounded-lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 font -semibold"
+                className="px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white rounded-lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 font -semibold"
               >
                 Get Started
               </Link>
@@ -943,14 +856,14 @@ const featuredSolutions = [{
                 to="/case - studies"
                 className="px-6 py-3 bg-gray - 700 text-white rounded-lg hover:bg-gray - 600 transition - all duration - 300 font -semibold"
               >
-                View Case Studies;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+                View Case Studies,
+              </Link>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }
       </div>
-    </>) ;
+    </>) ,
 }

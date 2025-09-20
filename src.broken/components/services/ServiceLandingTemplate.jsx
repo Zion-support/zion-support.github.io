@@ -1,5 +1,5 @@
-import React from 'react';
-import { GradientHeading } from '@/components/GradientHeading';
+import React from 'react',
+import { GradientHeading } from '@/components/GradientHeading',
 
 export default function Page() {
               alt={title}"
@@ -89,6 +89,6 @@ export default function Page() {
         </Button>
       </section>
     </div>
-  );
-};
+  ),
+},
 '"

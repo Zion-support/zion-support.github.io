@@ -1,19 +1,19 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group';
-  description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025. Learn about self-managing systems, automated decision-making, and the future of work.';
-  keywords: ['autonomous operationsAI 2025', 'business automationenterprise management', 'future of workAI automation'];
+  title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group',
+  description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025. Learn about self-managing systems, automated decision-making, and the future of work.',
+  keywords: ['autonomous operationsAI 2025business automationenterprise management', 'future of workAI automation'],
   openGraph: {,
-    title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management';
-    description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025.';
-    type: 'article';
-    publishedTime: '2025-01-15T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['autonomous operationsAI 2025', 'business automation'],
+    title: 'AI 2025: Autonomous Business Operations - The Future of Enterprise Management',
+    description: 'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 2025.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['autonomous operationsAI 2025business automation']
   }
-};
+},
 export default function AutonomousBusinessOperationsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function AutonomousBusinessOperationsPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Article Content */,}
+      {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
           <div className="mb-8">,
@@ -255,4 +255,4 @@ export default function AutonomousBusinessOperationsPage() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

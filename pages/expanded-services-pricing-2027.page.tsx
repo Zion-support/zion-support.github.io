@@ -1,57 +1,57 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState, useMemo } from 'react';
-import { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useState, useMemo } from 'react',
+import { ALL_EXPANDED_SERVICES_PRICING } from '../data/expandedServicesPricing2027',
 
 const ExpandedServicesPricingGuide2027: NextPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
 
   // Get unique categories and subcategories
   const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
-    return cats;
-  }, []);
+    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))],
+    return cats,
+  }, []),
 
   const subcategories = useMemo(() => {
     if (selectedCategory === 'all') {
-      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))];
-      return subcats;
+      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.subcategory)))],
+      return subcats,
     }
-    const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory).map(s => s.subcategory)))],
+    return subcats,
+  }, [selectedCategory]),
 
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase()),
       
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory,
       
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory,
+    }),
+  }, [searchTerm, selectedCategory, selectedSubcategory]),
 
   const resetFilters = () => {
-    setSearchTerm('');
-    setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSearchTerm(''),
+    setSelectedCategory('all'),
+    setSelectedSubcategory('all'),
+  },
 
   const getMarketPositionColor = (position: string) => {
     switch (position) {
-      case 'leader': return 'bg-green-600';
-      case 'challenger': return 'bg-blue-600';
-      case 'niche': return 'bg-purple-600';
-      case 'emerging': return 'bg-yellow-600';
-      default: return 'bg-gray-600';
+      case 'leader': return 'bg-green-600',
+      case 'challenger': return 'bg-blue-600',
+      case 'niche': return 'bg-purple-600',
+      case 'emerging': return 'bg-yellow-600',
+      default: return 'bg-gray-600'
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -110,8 +110,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             <select
               value={selectedCategory}
               onChange={(e) => {
-                setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+                setSelectedCategory(e.target.value),
+                setSelectedSubcategory('all'),
               }}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
@@ -233,7 +233,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div>
                       <span className="text-white/70">Competitors:</span>
                       <div className="text-white mt-1">
-                        {service.marketComparison.competitors.join(', ')}
+                        {service.marketComparison.competitors.join()}
                       </div>
                     </div>
                     <div>
@@ -281,7 +281,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div>
                       <span className="text-white/70">Revenue Impact:</span>
                       <div className="text-white mt-1">
-                        {service.roiAnalysis.revenueImpact.slice(0, 2).join(', ')}
+                        {service.roiAnalysis.revenueImpact.slice(0, 2).join()}
                       </div>
                     </div>
                   </div>
@@ -331,7 +331,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Our comprehensive pricing structure is designed to provide maximum value at competitive rates. 
               Contact us today to discuss your specific needs and get a customized quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
@@ -349,7 +349,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ExpandedServicesPricingGuide2027;
+export default ExpandedServicesPricingGuide2027,

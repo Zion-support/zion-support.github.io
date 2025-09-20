@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 
 export default function AI2025_2030FutureTechRevolutionShowcase() {
   const futureTechnologies = [
@@ -52,7 +52,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       metrics: "50,000% ROInfinite Possibilities",
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const caseStudies = [
     {
@@ -76,7 +76,7 @@ export default function AI2025_2030FutureTechRevolutionShowcase() {
       results: "12,800% ROI in 3 monthsZero human error rate",
       timeline: "2028 Q3"
     }
-  ];
+  ],
 
 const AI2025_2030FutureTechRevolutionShowcase: React.FC = () => {
   return (
@@ -84,7 +84,7 @@ const AI2025_2030FutureTechRevolutionShowcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AI2025_2030FutureTechRevolutionShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AI2025_2030FutureTechRevolutionShowcase;
+export default AI2025_2030FutureTechRevolutionShowcase,

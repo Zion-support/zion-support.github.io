@@ -1,22 +1,22 @@
 
-import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { Card } from "@/components/ui/card";
-import { RateOptimizationSection } from "../RateOptimizationSection";
-import { basicInfoSchema, BasicInfoFormData } from "./schema";
-import { PersonalInfoFields } from "./PersonalInfoFields";
-import { ContactFields } from "./ContactFields";
+import React, { useState, useEffect } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { Button } from "@/components/ui/button",
+import { Form } from "@/components/ui/form",
+import { Card } from "@/components/ui/card",
+import { RateOptimizationSection } from "../RateOptimizationSection",
+import { basicInfoSchema, BasicInfoFormData } from "./schema",
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ContactFields } from "./ContactFields",
 
 export interface BasicInfoFormProps {
-  resumeId?: string;
-  initialData?: Partial<BasicInfoFormData>;
-  onSave: (data: BasicInfoFormData) => void;
-  skills?: string[];
-  yearsExperience?: number;
-  onComplete?: () => void;
+  resumeId?: string,
+  initialData?: Partial<BasicInfoFormData>,
+  onSave: (data: BasicInfoFormData) => void,
+  skills?: string[],
+  yearsExperience?: number,
+  onComplete?: () => void
 }
 
 export function BasicInfoForm({
@@ -39,26 +39,26 @@ export function BasicInfoForm({
       linkedin: "",
       github: "",
       hourlyRate: 0,
-      ...initialData,
-    },
-  });
+      ...initialData
+    }
+  }),
 
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
-          form.setValue(key as keyof BasicInfoFormData, value as any);
+          form.setValue(key as keyof BasicInfoFormData, value as any),
         }
-      });
+      }),
     }
-  }, [initialData, form]);
+  }, [initialData, form]),
 
   const handleSubmit = (data: BasicInfoFormData) => {
-    onSave(data);
+    onSave(data),
     if (onComplete) {
-      onComplete();
+      onComplete()
     }
-  };
+  },
 
   return (
     <Form {...form}>
@@ -85,5 +85,5 @@ export function BasicInfoForm({
         </div>
       </form>
     </Form>
-  );
+  ),
 }

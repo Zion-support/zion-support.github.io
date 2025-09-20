@@ -1,50 +1,50 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Revolutionary2025SpecializedITAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const revolutionary2025SpecializedITAIServices: Revolutionary2025SpecializedITAIService[] = [
   // AI-Powered Autonomous Network Security Platform
   {
@@ -55,16 +55,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary network security platform that uses AI to autonomously monitor, detect, and respond to network threats in real-time with unprecedented accuracy and speed.',
     features: [
-      'Autonomous threat detection',
-      'AI-powered intrusion prevention',
-      'Real-time network monitoring',
-      'Automated incident response',
-      'Behavioral analysis',
-      'Zero-day threat protection',
-      'Network segmentation',
-      'Compliance automation',
-      'Performance optimization',
-      '24/7 autonomous operation'
+      'Autonomous threat detectionAI-powered intrusion prevention',
+      'Real-time network monitoringAutomated incident response',
+      'Behavioral analysisZero-day threat protection',
+      'Network segmentationCompliance automation',
+      'Performance optimization24/7 autonomous operation'
     ],
     popular: true,
     icon: '🛡️',
@@ -77,11 +72,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'Network Security',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Cisco', 'Palo Alto Networks', 'Fortinet', 'Check Point', 'Juniper Networks', 'VMware NSX'],
-    useCases: ['Network threat detection', 'Intrusion prevention', 'Incident response', 'Compliance management', 'Performance monitoring', 'Security automation'],
+    technology: ['OpenAI GPT-4Anthropic Claude', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['CiscoPalo Alto Networks', 'FortinetCheck Point', 'Juniper NetworksVMware NSX'],
+    useCases: ['Network threat detectionIntrusion prevention', 'Incident responseCompliance management', 'Performance monitoringSecurity automation'],
     roi: 'Average customer sees 700% ROI through reduced security incidents, automated response, and improved network performance.',
-    competitors: ['Cisco Firepower', 'Palo Alto Networks', 'Fortinet', 'Check Point', 'Juniper Networks'],
+    competitors: ['Cisco FirepowerPalo Alto Networks', 'FortinetCheck Point', 'Juniper Networks'],
     marketSize: '$45.2B network security market',
     growthRate: '380% annual growth',
     variant: 'ai-autonomous',
@@ -102,16 +97,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary data analytics platform that combines quantum computing capabilities with advanced AI to provide unprecedented insights and analysis of complex datasets.',
     features: [
-      'Quantum-enhanced processing',
-      'AI-powered insights generation',
-      'Real-time data analysis',
-      'Predictive modeling',
-      'Advanced visualization',
-      'Automated reporting',
-      'Data quality management',
-      'Performance optimization',
-      'Scalable architecture',
-      'Enterprise security'
+      'Quantum-enhanced processingAI-powered insights generation',
+      'Real-time data analysisPredictive modeling',
+      'Advanced visualizationAutomated reporting',
+      'Data quality managementPerformance optimization',
+      'Scalable architectureEnterprise security'
     ],
     popular: true,
     icon: '📊',
@@ -124,11 +114,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '2 weeks',
     category: 'Data Analytics & BI',
     realService: true,
-    technology: ['IBM Qiskit', 'Microsoft Q#', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Tableau', 'Power BI', 'Qlik', 'SAP BusinessObjects', 'IBM Cognos', 'Oracle Analytics'],
-    useCases: ['Business intelligence', 'Data visualization', 'Predictive analytics', 'Performance monitoring', 'Research analysis', 'Decision support'],
+    technology: ['IBM QiskitMicrosoft Q#', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['TableauPower BI', 'QlikSAP BusinessObjects', 'IBM CognosOracle Analytics'],
+    useCases: ['Business intelligenceData visualization', 'Predictive analyticsPerformance monitoring', 'Research analysisDecision support'],
     roi: 'Average customer sees 800% ROI through improved insights, faster analysis, and better decision-making.',
-    competitors: ['Tableau', 'Power BI', 'Qlik', 'SAP BusinessObjects', 'IBM Cognos'],
+    competitors: ['TableauPower BI', 'QlikSAP BusinessObjects', 'IBM Cognos'],
     marketSize: '$27.8B business intelligence market',
     growthRate: '420% annual growth',
     variant: 'quantum-analytics',
@@ -149,16 +139,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary cloud migration platform that uses AI to autonomously plan, execute, and optimize cloud migrations with minimal downtime and maximum efficiency.',
     features: [
-      'Autonomous migration planning',
-      'AI-powered workload analysis',
-      'Real-time optimization',
-      'Zero-downtime migration',
-      'Cost optimization',
-      'Performance monitoring',
-      'Security compliance',
-      'Automated testing',
-      'Rollback capabilities',
-      'Progress tracking'
+      'Autonomous migration planningAI-powered workload analysis',
+      'Real-time optimizationZero-downtime migration',
+      'Cost optimizationPerformance monitoring',
+      'Security complianceAutomated testing',
+      'Rollback capabilitiesProgress tracking'
     ],
     popular: true,
     icon: '☁️',
@@ -171,11 +156,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'Cloud Migration',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'VMware', 'Hyper-V', 'OpenStack', 'Docker', 'Kubernetes'],
-    useCases: ['Cloud migration', 'Workload optimization', 'Cost optimization', 'Performance improvement', 'Security enhancement', 'Compliance management'],
+    technology: ['OpenAI GPT-4Anthropic Claude', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['AWSAzure', 'Google CloudVMware', 'Hyper-VOpenStack', 'DockerKubernetes'],
+    useCases: ['Cloud migrationWorkload optimization', 'Cost optimizationPerformance improvement', 'Security enhancementCompliance management'],
     roi: 'Average customer sees 600% ROI through reduced migration time, improved performance, and cost optimization.',
-    competitors: ['AWS Migration Hub', 'Azure Migrate', 'Google Cloud Migrate', 'VMware HCX', 'RiverMeadow'],
+    competitors: ['AWS Migration HubAzure Migrate', 'Google Cloud MigrateVMware HCX', 'RiverMeadow'],
     marketSize: '$12.4B cloud migration market',
     growthRate: '320% annual growth',
     variant: 'ai-autonomous',
@@ -196,16 +181,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary IoT security platform that combines quantum computing capabilities with advanced AI to provide unprecedented protection for IoT devices and networks.',
     features: [
-      'Quantum-resistant encryption',
-      'AI-powered threat detection',
-      'Device authentication',
-      'Network monitoring',
-      'Behavioral analysis',
-      'Automated response',
-      'Compliance management',
-      'Performance optimization',
-      'Scalable architecture',
-      'Real-time protection'
+      'Quantum-resistant encryptionAI-powered threat detection',
+      'Device authenticationNetwork monitoring',
+      'Behavioral analysisAutomated response',
+      'Compliance managementPerformance optimization',
+      'Scalable architectureReal-time protection'
     ],
     popular: true,
     icon: '🔐',
@@ -218,11 +198,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'IoT Security',
     realService: true,
-    technology: ['IBM Qiskit', 'Microsoft Q#', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Palo Alto Networks', 'Check Point', 'Fortinet', 'Cisco IoT', 'IBM Watson IoT', 'Microsoft Azure IoT'],
-    useCases: ['Device protection', 'Network security', 'Threat detection', 'Compliance management', 'Performance monitoring', 'Automated response'],
+    technology: ['IBM QiskitMicrosoft Q#', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['Palo Alto NetworksCheck Point', 'FortinetCisco IoT', 'IBM Watson IoTMicrosoft Azure IoT'],
+    useCases: ['Device protectionNetwork security', 'Threat detectionCompliance management', 'Performance monitoringAutomated response'],
     roi: 'Average customer sees 700% ROI through improved security, reduced incidents, and automated protection.',
-    competitors: ['Palo Alto Networks IoT', 'Check Point IoT', 'Fortinet IoT', 'Cisco IoT', 'IBM Watson IoT'],
+    competitors: ['Palo Alto Networks IoTCheck Point IoT', 'Fortinet IoTCisco IoT', 'IBM Watson IoT'],
     marketSize: '$8.9B IoT security market',
     growthRate: '380% annual growth',
     variant: 'quantum-iot-advanced',
@@ -243,16 +223,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary database management platform that uses AI to autonomously optimize, maintain, and secure databases with minimal human intervention and maximum performance.',
     features: [
-      'Autonomous optimization',
-      'AI-powered tuning',
-      'Real-time monitoring',
-      'Automated maintenance',
-      'Performance optimization',
-      'Security management',
-      'Backup automation',
-      'Disaster recovery',
-      'Compliance monitoring',
-      'Cost optimization'
+      'Autonomous optimizationAI-powered tuning',
+      'Real-time monitoringAutomated maintenance',
+      'Performance optimizationSecurity management',
+      'Backup automationDisaster recovery',
+      'Compliance monitoringCost optimization'
     ],
     popular: true,
     icon: '🗄️',
@@ -265,11 +240,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'Database Management',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Oracle', 'SQL Server', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'AWS RDS', 'Azure SQL'],
-    useCases: ['Database optimization', 'Performance tuning', 'Security management', 'Backup automation', 'Disaster recovery', 'Compliance monitoring'],
+    technology: ['OpenAI GPT-4Anthropic Claude', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['OracleSQL Server', 'PostgreSQLMySQL', 'MongoDBRedis', 'AWS RDSAzure SQL'],
+    useCases: ['Database optimizationPerformance tuning', 'Security managementBackup automation', 'Disaster recoveryCompliance monitoring'],
     roi: 'Average customer sees 500% ROI through improved performance, reduced maintenance, and automated operations.',
-    competitors: ['Oracle Autonomous Database', 'AWS RDS', 'Azure SQL', 'Google Cloud SQL', 'IBM Db2'],
+    competitors: ['Oracle Autonomous DatabaseAWS RDS', 'Azure SQLGoogle Cloud SQL', 'IBM Db2'],
     marketSize: '$22.1B database management market',
     growthRate: '340% annual growth',
     variant: 'ai-autonomous',
@@ -290,16 +265,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary API security platform that combines quantum computing capabilities with advanced AI to provide unprecedented protection for APIs and microservices.',
     features: [
-      'Quantum-resistant authentication',
-      'AI-powered threat detection',
-      'Real-time monitoring',
-      'Rate limiting',
-      'Input validation',
-      'Encryption at rest',
-      'Compliance management',
-      'Performance optimization',
-      'Scalable protection',
-      'Automated response'
+      'Quantum-resistant authenticationAI-powered threat detection',
+      'Real-time monitoringRate limiting',
+      'Input validationEncryption at rest',
+      'Compliance managementPerformance optimization',
+      'Scalable protectionAutomated response'
     ],
     popular: true,
     icon: '🔌',
@@ -312,11 +282,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'API Security',
     realService: true,
-    technology: ['IBM Qiskit', 'Microsoft Q#', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management', 'Google Cloud Endpoints', 'Postman'],
-    useCases: ['API protection', 'Threat detection', 'Authentication', 'Rate limiting', 'Compliance management', 'Performance monitoring'],
+    technology: ['IBM QiskitMicrosoft Q#', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['KongApigee', 'AWS API GatewayAzure API Management', 'Google Cloud EndpointsPostman'],
+    useCases: ['API protectionThreat detection', 'AuthenticationRate limiting', 'Compliance managementPerformance monitoring'],
     roi: 'Average customer sees 600% ROI through improved security, reduced incidents, and automated protection.',
-    competitors: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management', 'Google Cloud Endpoints'],
+    competitors: ['KongApigee', 'AWS API GatewayAzure API Management', 'Google Cloud Endpoints'],
     marketSize: '$4.2B API management market',
     growthRate: '360% annual growth',
     variant: 'quantum-security-advanced',
@@ -337,16 +307,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary content management platform that uses AI to autonomously create, optimize, and manage content across all channels with unprecedented efficiency and effectiveness.',
     features: [
-      'Autonomous content creation',
-      'AI-powered optimization',
-      'Multi-channel publishing',
-      'SEO automation',
-      'Performance tracking',
-      'Content analytics',
-      'Workflow automation',
-      'Compliance management',
-      'Version control',
-      'Collaboration tools'
+      'Autonomous content creationAI-powered optimization',
+      'Multi-channel publishingSEO automation',
+      'Performance trackingContent analytics',
+      'Workflow automationCompliance management',
+      'Version controlCollaboration tools'
     ],
     popular: true,
     icon: '📝',
@@ -359,11 +324,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'Content Management',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['WordPress', 'Drupal', 'Joomla', 'Shopify', 'WooCommerce', 'HubSpot', 'Salesforce'],
-    useCases: ['Content creation', 'SEO optimization', 'Multi-channel publishing', 'Performance tracking', 'Workflow automation', 'Collaboration'],
+    technology: ['OpenAI GPT-4Anthropic Claude', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['WordPressDrupal', 'JoomlaShopify', 'WooCommerceHubSpot', 'Salesforce'],
+    useCases: ['Content creationSEO optimization', 'Multi-channel publishingPerformance tracking', 'Workflow automationCollaboration'],
     roi: 'Average customer sees 500% ROI through improved content performance, reduced creation time, and automated optimization.',
-    competitors: ['WordPress', 'Drupal', 'Joomla', 'Shopify', 'WooCommerce'],
+    competitors: ['WordPressDrupal', 'JoomlaShopify', 'WooCommerce'],
     marketSize: '$7.8B content management market',
     growthRate: '320% annual growth',
     variant: 'ai-creative-enterprise',
@@ -384,16 +349,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary machine learning platform that combines quantum computing capabilities with advanced AI to provide unprecedented model training, optimization, and deployment capabilities.',
     features: [
-      'Quantum-enhanced training',
-      'AI-powered optimization',
-      'Real-time model deployment',
-      'Automated feature engineering',
-      'Performance monitoring',
-      'Model versioning',
-      'Scalable infrastructure',
-      'Security compliance',
-      'Interoperability',
-      'Cost optimization'
+      'Quantum-enhanced trainingAI-powered optimization',
+      'Real-time model deploymentAutomated feature engineering',
+      'Performance monitoringModel versioning',
+      'Scalable infrastructureSecurity compliance',
+      'InteroperabilityCost optimization'
     ],
     popular: true,
     icon: '🧠',
@@ -406,11 +366,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '2 weeks',
     category: 'Machine Learning & AI',
     realService: true,
-    technology: ['IBM Qiskit', 'Microsoft Q#', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['AWS SageMaker', 'Azure Machine Learning', 'Google AI Platform', 'IBM Watson', 'H2O.ai', 'DataRobot'],
-    useCases: ['Model training', 'Feature engineering', 'Model deployment', 'Performance optimization', 'Research acceleration', 'Automated ML'],
+    technology: ['IBM QiskitMicrosoft Q#', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['AWS SageMakerAzure Machine Learning', 'Google AI PlatformIBM Watson', 'H2O.aiDataRobot'],
+    useCases: ['Model trainingFeature engineering', 'Model deploymentPerformance optimization', 'Research accelerationAutomated ML'],
     roi: 'Average customer sees 800% ROI through improved model performance, faster training, and automated optimization.',
-    competitors: ['AWS SageMaker', 'Azure Machine Learning', 'Google AI Platform', 'IBM Watson', 'H2O.ai'],
+    competitors: ['AWS SageMakerAzure Machine Learning', 'Google AI PlatformIBM Watson', 'H2O.ai'],
     marketSize: '$21.5B machine learning market',
     growthRate: '450% annual growth',
     variant: 'quantum-ml-enterprise',
@@ -431,16 +391,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     period: '/month',
     description: 'Revolutionary testing platform that uses AI to autonomously generate, execute, and optimize tests with unprecedented coverage and accuracy.',
     features: [
-      'Autonomous test generation',
-      'AI-powered execution',
-      'Real-time optimization',
-      'Coverage analysis',
-      'Performance testing',
-      'Security testing',
-      'Automated reporting',
-      'Defect tracking',
-      'Continuous testing',
-      'Quality assurance'
+      'Autonomous test generationAI-powered execution',
+      'Real-time optimizationCoverage analysis',
+      'Performance testingSecurity testing',
+      'Automated reportingDefect tracking',
+      'Continuous testingQuality assurance'
     ],
     popular: true,
     icon: '🧪',
@@ -453,11 +408,11 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     setupTime: '1 week',
     category: 'Testing & Quality Assurance',
     realService: true,
-    technology: ['OpenAI GPT-4', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Azure'],
-    integrations: ['Selenium', 'TestComplete', 'Katalon Studio', 'JUnit', 'TestNG', 'Cucumber', 'Jenkins', 'GitLab CI'],
-    useCases: ['Test automation', 'Test generation', 'Performance testing', 'Security testing', 'Continuous testing', 'Quality assurance'],
+    technology: ['OpenAI GPT-4Anthropic Claude', 'TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'AWSAzure'],
+    integrations: ['SeleniumTestComplete', 'Katalon StudioJUnit', 'TestNGCucumber', 'JenkinsGitLab CI'],
+    useCases: ['Test automationTest generation', 'Performance testingSecurity testing', 'Continuous testingQuality assurance'],
     roi: 'Average customer sees 600% ROI through improved test coverage, reduced testing time, and automated quality assurance.',
-    competitors: ['Selenium', 'TestComplete', 'Katalon Studio', 'JUnit', 'TestNG'],
+    competitors: ['SeleniumTestComplete', 'Katalon StudioJUnit', 'TestNG'],
     marketSize: '$3.8B testing market',
     growthRate: '340% annual growth',
     variant: 'ai-autonomous',
@@ -469,5 +424,5 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     rating: 4.7,
     reviews: 267
   }
-];
-export default revolutionary2025SpecializedITAIServices;
+],
+export default revolutionary2025SpecializedITAIServices,

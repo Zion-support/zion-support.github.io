@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Star, TrendingUp, Phone, Mail, MapPin,
   ChevronDown, Search, Menu, X, ArrowRight, CheckCircle,
   DollarSign, Users, Briefcase, BookOpen, MessageCircle,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck
-} from 'lucide-react';
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+} from 'lucide-react',
+import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027',
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
 
 // Import all 2028 services
-import { innovative2028Services } from '../data/innovative-2028-services';
-import { emergingTech2028Services } from '../data/emerging-tech-2028-services';
-import { enterpriseIT2028Services } from '../data/enterprise-it-2028-services';
+import { innovative2028Services } from '../data/innovative-2028-services',
+import { emergingTech2028Services } from '../data/emerging-tech-2028-services',
+import { enterpriseIT2028Services } from '../data/enterprise-it-2028-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -46,51 +46,39 @@ const serviceCategories = [
     description: 'Enterprise-grade solutions and infrastructure',
     services: enterpriseIT2028Services.slice(0, 4)
   }
-];
+],
 
 export default function Ultimate2028ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isMenuOpen, setIsMenuOpen] = useState(false),
 
   const allServices = [
     ...innovative2028Services,
     ...emergingTech2028Services,
     ...enterpriseIT2028Services
-  ];
+  ],
 
   const filteredServices = allServices.filter(service =>
     service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  ),
 
   const categories = [
-    'all',
-    'Customer Success & AI',
-    'Inventory Management & AI',
-    'HR & Recruitment',
-    'Content Marketing & AI',
-    'Financial Analytics & AI',
-    'Sales Intelligence & AI',
-    'Project Management & AI',
-    'Customer Support & AI',
-    'Supply Chain & AI',
-    'Quantum Technology & Security',
-    'AI Consciousness & Evolution',
-    'AI Civilization & Society',
-    'Quantum Physics & Time',
-    'Space Technology & AI',
-    'Quantum Neuroscience & AI',
-    'Quantum Finance & Trading',
-    'Enterprise Security & Zero Trust',
-    'Edge Computing & Orchestration',
-    '5G Networks & Enterprise',
-    'Blockchain & Enterprise',
-    'AI Analytics & Enterprise',
-    'IoT & Enterprise Management',
-    'Cloud Migration & Enterprise'
-  ];
+    'allCustomer Success & AI',
+    'Inventory Management & AIHR & Recruitment',
+    'Content Marketing & AIFinancial Analytics & AI',
+    'Sales Intelligence & AIProject Management & AI',
+    'Customer Support & AISupply Chain & AI',
+    'Quantum Technology & SecurityAI Consciousness & Evolution',
+    'AI Civilization & SocietyQuantum Physics & Time',
+    'Space Technology & AIQuantum Neuroscience & AI',
+    'Quantum Finance & TradingEnterprise Security & Zero Trust',
+    'Edge Computing & Orchestration5G Networks & Enterprise',
+    'Blockchain & EnterpriseAI Analytics & Enterprise',
+    'IoT & Enterprise ManagementCloud Migration & Enterprise'
+  ],
 
 const ultimate-2028-services-showcase: React.FC = () => {
   return (
@@ -107,7 +95,7 @@ const ultimate-2028-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ultimate-2028-services-showcase;
+export default ultimate-2028-services-showcase,

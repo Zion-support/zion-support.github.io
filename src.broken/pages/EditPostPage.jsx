@@ -1,12 +1,12 @@
-import { Link, useNavigate, useParams  } from 'react-router-dom';
+import { Link, useNavigate, useParams  } from 'react-router-dom',
 export default function Page() {
- = useAuth () ;
-    const [post, setPost] = useState(mockPost);
-    const [isLoading, setIsLoading] = useState(true);
+ = useAuth () ,
+    const [post, setPost] = useState(mockPost),
+    const [isLoading, setIsLoading] = useState(true),
     useEffect(() => {
         // In a real app, we would fetch the post data here
         // For now, we'll just use the mock data
-        setIsLoading(false) }, [postId]) ;
+        setIsLoading(false) }, [postId]) ,
     if(isLoading) {
         return (<div className="container py-8">
           <div className="flex justify - center items - center h-64">
@@ -21,7 +21,7 @@ export default function Page() {
           </Button>
         </div>) }
     // Check if the user is the author or an admin
-    const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+    const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
     if(!isAuthor && !isAdmin) {
         return (<div className="container py-8">
           <h1 className="text-2xl font - bold mb-4">Permission Denied</h1>
@@ -35,9 +35,9 @@ export default function Page() {
         content: post.content,
         categoryId: post.categoryId,
         tags: post.tags.join(",
-  ") ;
+  ") ,
 
-};
+},
     const handleSubmit = async(values) => {
         try {
             // Here we would normally update the post in the database
@@ -45,9 +45,9 @@ export default function Page() {
             toast({
                 title: "Post updated",
                 description: "Your post has been updated successfully"
-            }) ;
+            }) ,
             // Redirect back to the post
-            router(`/community / post/${postId}`) ;
+            router(`/community / post/${postId}`) ,
         }
         catch(error) {
             toast({
@@ -55,7 +55,7 @@ export default function Page() {
                 description: "There was a problem updating your post",
                 variant: "destructive"
             }) }
-    };
+    },
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ,
             <div className="container py-8">

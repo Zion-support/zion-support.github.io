@@ -1,25 +1,25 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
   Sparkles, Atom, Dna, Cpu, Target, Microscope,
   Users, Briefcase, BookOpen, MessageCircle, Globe
-} from 'lucide-react';
-import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
-import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032';
-import { futuristicInnovations2031 } from '../data/2031-futuristic-innovations';
-import { enterpriseITSolutions2031 } from '../data/2031-enterprise-it-solutions';
-import { innovativeMicroSaas2031 } from '../data/2031-innovative-micro-saas';
+} from 'lucide-react',
+import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
+import UltraFuturisticFooter2032 from '../components/layout/UltraFuturisticFooter2032',
+import { futuristicInnovations2031 } from '../data/2031-futuristic-innovations',
+import { enterpriseITSolutions2031 } from '../data/2031-enterprise-it-solutions',
+import { innovativeMicroSaas2031 } from '../data/2031-innovative-micro-saas',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -64,7 +64,7 @@ const serviceCategories = [
     color: 'from-orange-600 via-red-600 to-pink-600',
     services: futuristicInnovations2031.filter(s => s.category.includes('Research') || s.category.includes('Computing'))
   }
-];
+],
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -74,12 +74,12 @@ const containerVariants = {
       staggerChildren: 0.1
     }
   }
-};
+},
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
-};
+},
 
 export default function FuturisticServicesShowcase2032() {
   return (
@@ -96,6 +96,6 @@ export default function FuturisticServicesShowcase2032() {
         </div>
       </div>
     </div>
-  );
-};
-export default 2032-futuristic-services-showcase;
+  ),
+},
+export default 2032-futuristic-services-showcase,

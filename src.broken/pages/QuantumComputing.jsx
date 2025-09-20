@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Quantum Networks",
     reliability: "Medium"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "25% reduction in delivery costs, 30% improvement in route efficiency, real - time optimization",
     logo: "LO"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,7 +76,7 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const quantumAdvantages = [{
     title: "Exponential Speedup",
@@ -102,16 +102,16 @@ const quantumAdvantages = [{
     icon: Rocket,
     examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Algorithm Development', 'Cryptography', 'Machine Learning', 'Simulation', 'Optimization', 'Infrastructure'];
+  const categories = ['AllAlgorithm Development', 'CryptographyMachine Learning', 'SimulationOptimization', 'Infrastructure'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? quantumSolutions
-    : quantumSolutions.filter(solution => solution.category === selectedCategory) ;
+    : quantumSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}

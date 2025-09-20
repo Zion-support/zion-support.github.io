@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Building2,
   TrendingUp,
@@ -13,131 +13,131 @@ import {,
   Cpu,
   Database,
   Cloud,
-  Settings;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
-  Lightbulb;
-  Rocket;
-  Brain;
-  Lock,
-} from 'lucide-react';
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Lightbulb,
+  Rocket,
+  Brain,
+  Lock
+} from 'lucide-react',
 const BusinessSolutionsShowcase2027 = () => {,
-  const [activeCategorysetActiveCategory] = useState('enterprise');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeCategorysetActiveCategory] = useState('enterprise'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const categories = {,
     enterprise: {,
-      title: 'Enterprise Solutions';
-      subtitle: 'Comprehensive enterprise-grade solutions for large organizations';
-      icon: Building2;
-      color: 'from-blue-600 to-indigo-600';
+      title: 'Enterprise Solutions',
+      subtitle: 'Comprehensive enterprise-grade solutions for large organizations',
+      icon: Building2,
+      color: 'from-blue-600 to-indigo-600',
       solutions: [,
         {,
-          title: 'AI-Powered Business Intelligence';
-          description: 'Advanced analytics and insights powered by machine learning algorithms';
-          features: ['Real-time 'AnalyticsPredictive 'Modeling', 'Custom Dashboards'];
-          icon: BarChart3;
-          roi: '300% ROI',};
+          title: 'AI-Powered Business Intelligence',
+          description: 'Advanced analytics and insights powered by machine learning algorithms',
+          features: ['Real-time 'AnalyticsPredictive 'ModelingCustom Dashboards'],
+          icon: BarChart3,
+          roi: '300% ROI'},
         {,
-          title: 'Enterprise Security Suite';
-          description: 'Comprehensive security solutions protecting your digital assets';
-          features: ['Zero-Trust 'ArchitectureAI Threat 'Detection', 'Compliance Management'];
-          icon: Shield;
-          roi: '99.9% Security',};
+          title: 'Enterprise Security Suite',
+          description: 'Comprehensive security solutions protecting your digital assets',
+          features: ['Zero-Trust 'ArchitectureAI Threat 'DetectionCompliance Management'],
+          icon: Shield,
+          roi: '99.9% Security'},
         {,
-          title: 'Cloud Infrastructure Management';
-          description: 'Scalable cloud solutions optimized for enterprise workloads';
-          features: ['Multi-Cloud 'SupportAuto-'Scaling', 'Cost Optimization'];
-          icon: Cloud;
-          roi: '50% Cost Reduction',}
-      ],
-    };
+          title: 'Cloud Infrastructure Management',
+          description: 'Scalable cloud solutions optimized for enterprise workloads',
+          features: ['Multi-Cloud 'SupportAuto-'ScalingCost Optimization'],
+          icon: Cloud,
+          roi: '50% Cost Reduction'}
+      ]
+    },
     startup: {,
-      title: 'Startup Solutions';
-      subtitle: 'Rapid deployment solutions designed for growing startups';
-      icon: Rocket;
-      color: 'from-green-600 to-emerald-600';
+      title: 'Startup Solutions',
+      subtitle: 'Rapid deployment solutions designed for growing startups',
+      icon: Rocket,
+      color: 'from-green-600 to-emerald-600',
       solutions: [,
         {,
-          title: 'Rapid MVP Development';
-          description: 'Fast-track your product development with our proven frameworks';
-          features: ['2-Week 'DeliveryScalable 'Architecture', 'Technical Support'];
-          icon: Zap;
-          roi: '80% Faster Launch',};
+          title: 'Rapid MVP Development',
+          description: 'Fast-track your product development with our proven frameworks',
+          features: ['2-Week 'DeliveryScalable 'ArchitectureTechnical Support'],
+          icon: Zap,
+          roi: '80% Faster Launch'},
         {,
-          title: 'Growth Analytics Platform';
-          description: 'Data-driven insights to accelerate your startup growth';
-          features: ['User Behavior 'AnalysisConversion 'Tracking', 'Growth Hacking Tools'];
-          icon: TrendingUp;
-          roi: '200% Growth Rate',};
+          title: 'Growth Analytics Platform',
+          description: 'Data-driven insights to accelerate your startup growth',
+          features: ['User Behavior 'AnalysisConversion 'TrackingGrowth Hacking Tools'],
+          icon: TrendingUp,
+          roi: '200% Growth Rate'},
         {,
-          title: 'Automated Operations';
-          description: 'Streamline operations with intelligent automation tools';
-          features: ['Process 'AutomationWorkflow 'Optimization', 'Resource Management'];
-          icon: Settings;
-          roi: '60% Efficiency Gain',}
-      ],
-    };
+          title: 'Automated Operations',
+          description: 'Streamline operations with intelligent automation tools',
+          features: ['Process 'AutomationWorkflow 'OptimizationResource Management'],
+          icon: Settings,
+          roi: '60% Efficiency Gain'}
+      ]
+    },
     smb: {,
-      title: 'SMB Solutions';
-      subtitle: 'Affordable yet powerful solutions for small and medium businesses';
-      icon: Users;
-      color: 'from-purple-600 to-pink-600';
+      title: 'SMB Solutions',
+      subtitle: 'Affordable yet powerful solutions for small and medium businesses',
+      icon: Users,
+      color: 'from-purple-600 to-pink-600',
       solutions: [,
         {,
-          title: 'Digital Transformation Package';
-          description: 'Complete digital transformation tailored for SMBs';
-          features: ['Process 'DigitizationCustomer 'Experience', 'Operational Efficiency'];
-          icon: Lightbulb;
-          roi: '150% Productivity',};
+          title: 'Digital Transformation Package',
+          description: 'Complete digital transformation tailored for SMBs',
+          features: ['Process 'DigitizationCustomer 'ExperienceOperational Efficiency'],
+          icon: Lightbulb,
+          roi: '150% Productivity'},
         {,
-          title: 'Customer Relationship Management';
-          description: 'AI-powered CRM to enhance customer relationships';
-          features: ['Lead 'ManagementSales 'Automation', 'Customer Insights'];
-          icon: Target;
-          roi: '40% Sales Increase',};
+          title: 'Customer Relationship Management',
+          description: 'AI-powered CRM to enhance customer relationships',
+          features: ['Lead 'ManagementSales 'AutomationCustomer Insights'],
+          icon: Target,
+          roi: '40% Sales Increase'},
         {,
-          title: 'Financial Management Suite';
-          description: 'Comprehensive financial tools for better business management';
-          features: ['Expense 'TrackingRevenue 'Analytics', 'Financial Forecasting'];
-          icon: BarChart3;
-          roi: '25% Cost Savings',}
-      ],
+          title: 'Financial Management Suite',
+          description: 'Comprehensive financial tools for better business management',
+          features: ['Expense 'TrackingRevenue 'AnalyticsFinancial Forecasting'],
+          icon: BarChart3,
+          roi: '25% Cost Savings'}
+      ]
     }
-  };
+  },
   const testimonials = [,
     {,
-      name: "Sarah Johnson";
-      role: "CEOTechCorp";
-      company: "Fortune 500";
-      content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 300% ROI in just 6 months.";
-      rating: 5;
-      avatar: "SJ",};
+      name: "Sarah Johnson",
+      role: "CEOTechCorp",
+      company: "Fortune 500",
+      content: "Zion Tech Group transformed our entire digital infrastructure. The results exceeded our expectations with 300% ROI in just 6 months.",
+      rating: 5,
+      avatar: "SJ"},
     {,
-      name: "Michael Chen";
-      role: "FounderStartupXYZ";
-      company: "Series A Startup";
-      content: "Their rapid MVP development helped us launch 3 months ahead of schedule. The quality and speed were incredible.";
-      rating: 5;
-      avatar: "MC",};
+      name: "Michael Chen",
+      role: "FounderStartupXYZ",
+      company: "Series A Startup",
+      content: "Their rapid MVP development helped us launch 3 months ahead of schedule. The quality and speed were incredible.",
+      rating: 5,
+      avatar: "MC"},
     {,
-      name: "Emily Rodriguez";
-      role: "Operations DirectorLocalBiz";
-      company: "SMB";
-      content: "The digital transformation package revolutionized our operations. 'Were now 60% more efficient and our customers love the new experience.";
-      rating: 5;
-      avatar: "ER",}
-  ];
+      name: "Emily Rodriguez",
+      role: "Operations DirectorLocalBiz",
+      company: "SMB",
+      content: "The digital transformation package revolutionized our operations. 'Were now 60% more efficient and our customers love the new experience.",
+      rating: 5,
+      avatar: "ER"}
+  ],
   const stats = [,
-    { number: "500+"label: "Projects Completed"icon: CheckCircle ,};
-    { number: "99.9%"label: "Client Satisfaction"icon: Star ,};
-    { number: "300%"label: "Average ROI"icon: TrendingUp ,};
-    { number: "24/7"label: "Support Available"icon: Shield ,}
-  ];
+    { number: "500+"label: "Projects Completed"icon: CheckCircle },
+    { number: "99.9%"label: "Client Satisfaction"icon: Star },
+    { number: "300%"label: "Average ROI"icon: TrendingUp },
+    { number: "24/7"label: "Support Available"icon: Shield }
+  ],
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -158,7 +158,7 @@ const BusinessSolutionsShowcase2027 = () => {,
             enhance efficiencyand drive innovation across all industries and company sizes.,
           </p>,
         </div>,
-        {/* Category Navigation */,}
+        {/* Category Navigation */}
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
@@ -169,7 +169,7 @@ const BusinessSolutionsShowcase2027 = () => {,
               className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-medium transition-all duration-300 ${,
                 activeCategory === key,
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25',
-                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
             >,
               <category.icon className="w-6 h-6" />,
               {category.title}
@@ -189,7 +189,7 @@ const BusinessSolutionsShowcase2027 = () => {,
                     <categories[activeCategory].icon className="w-8 h-8 text-white" />,
                   </div>,
                   <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">,
-                    {categories[activeCategory].title,}
+                    {categories[activeCategory].title}
                   </h2>,
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
                     {categories[activeCategory].subtitle}
@@ -199,12 +199,12 @@ const BusinessSolutionsShowcase2027 = () => {,
                 <div className="grid md: grid-cols-3 gap-8">,
                   {categories[activeCategory].solutions.map((solutionindex) => (,
                     <div,
-                      key={index,}
+                      key={index}
                       className="group",
                     >,
                       <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover: border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105 h-full">,
                         <div className="flex items-center gap-4 mb-6">,
-                          <div className={`p-4 rounded-2xl bg-gradient-to-r ${categories[activeCategory].color,}`}>,
+                          <div className={`p-4 rounded-2xl bg-gradient-to-r ${categories[activeCategory].color}`}>,
                             <solution.icon className="w-8 h-8 text-white" />,
                           </div>,
                           <div>,
@@ -220,8 +220,7 @@ const BusinessSolutionsShowcase2027 = () => {,
                             <div key={featureIndex} className="flex items-center gap-3">,
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                               <span className="text-gray-300">{feature}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                         <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover: shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:gap-3">,
                           Learn More,
@@ -229,7 +228,7 @@ const BusinessSolutionsShowcase2027 = () => {,
                         </button>,
                       </div>,
                     </div>,
-                  )),}
+                  ))}
                 </div>,
               </div>,
             )}
@@ -246,14 +245,13 @@ const BusinessSolutionsShowcase2027 = () => {,
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">,
               {stats.map((statindex) => (,
                 <div,
-                  key={index,}
+                  key={index}
                   className="text-center",
                 >,
                   <stat.icon className="w-8 h-8 text-blue-400 mx-auto mb-4" />,
-                  <div className="text-3xl md: text-4xl font-bold text-white mb-2">{stat.number,}</div>,
+                  <div className="text-3xl md: text-4xl font-bold text-white mb-2">{stat.number}</div>,
                   <div className="text-gray-300">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -267,7 +265,7 @@ const BusinessSolutionsShowcase2027 = () => {,
           <div className="grid md:grid-cols-3 gap-8">,
             {testimonials.map((testimonialindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20",
               >,
                 <div className="flex items-center gap-4 mb-4">,
@@ -283,8 +281,7 @@ const BusinessSolutionsShowcase2027 = () => {,
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>,
                 <div className="flex gap-1">,
                   {[...Array(testimonial.rating)].map((_i) => (,
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />))}
                 </div>,
               </div>,
             ))}
@@ -316,5 +313,5 @@ const BusinessSolutionsShowcase2027 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default BusinessSolutionsShowcase2027;
+  )},
+export default BusinessSolutionsShowcase2027,

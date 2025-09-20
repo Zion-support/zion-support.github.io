@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 export default function Page() {
 ,"
         "contactPoint": {
@@ -9,7 +9,7 @@ export default function Page() {
             "contactType": "customer service","
             "email": "kleber@ziontechgroup.com"
         },"
-        "sameAs"[;"
+        "sameAs"[,"
             "https://linkedin.com/company/ziontechgroup","
             "https://twitter.com/ziontechgroup","
             "https://github.com/ziontechgroup"
@@ -21,7 +21,7 @@ export default function Page() {
 "
             "@type": "OfferCatalog","
             "name": "Technology Services","
-            "itemListElement"[;
+            "itemListElement"[,
                 {
 "
                     "@type": "Offer","
@@ -44,8 +44,8 @@ export default function Page() {
                 }
             ]
         }
-    };
-    const finalStructuredData = structuredData || defaultStructuredData;
+    },
+    const finalStructuredData = structuredData || defaultStructuredData,
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>"
@@ -115,6 +115,6 @@ export default function Page() {
       {/* Performance Meta Tags */}"
       <meta name="renderer" content="webkit"/>"
       <meta name="force-rendering" content="webkit"/>
-    </Helmet>)};
-export default SEOMeta;
+    </Helmet>)},
+export default SEOMeta,
 '"`

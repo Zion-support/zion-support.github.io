@@ -1,32 +1,32 @@
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useCallback } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
- = useSecurityCompliance();
+ = useSecurityCompliance(),
     const handleStartMonitoring = useCallback(() => {
-        startMonitoring();
-        trackEvent('security',dashboard',monitoring_started')}, [startMonitoring, trackEvent]);
+        startMonitoring(),
+        trackEvent('security',dashboard',monitoring_started')}, [startMonitoring, trackEvent]),
     const handleStopMonitoring = useCallback(() => {
-        stopMonitoring();
-        trackEvent('security',dashboard',monitoring_stopped')}, [stopMonitoring, trackEvent]);
+        stopMonitoring(),
+        trackEvent('security',dashboard',monitoring_stopped')}, [stopMonitoring, trackEvent]),
     const handleCheckCompliance = useCallback(async () => {
-        await checkCompliance();
-        trackEvent('security',dashboard',compliance_checked')}, [checkCompliance, trackEvent]);
+        await checkCompliance(),
+        trackEvent('security',dashboard',compliance_checked')}, [checkCompliance, trackEvent]),
     const handleGenerateReport = useCallback(() => {
-        const report = generateSecurityReport();
-        navigator.clipboard.writeText(report);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-        trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
+        const report = generateSecurityReport(),
+        navigator.clipboard.writeText(report),
+        setCopied(true),
+        setTimeout(() => setCopied(false), 2000),
+        trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]),
     const handleExportAuditLog = useCallback(() => {
-        const auditLog = exportAuditLog();
-        const blob = new Blob([auditLog], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`;
-        a.click();
-        URL.revokeObjectURL(url);
-        trackEvent('security',dashboard',audit_log_exported')}, [exportAuditLog, trackEvent]);
+        const auditLog = exportAuditLog(),
+        const blob = new Blob([auditLog], { type: 'application/json' }),
+        const url = URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`,
+        a.click(),
+        URL.revokeObjectURL(url),
+        trackEvent('security',dashboard',audit_log_exported')}, [exportAuditLog, trackEvent]),
     const handleAddComplianceRule = useCallback(() => {
         const newRule = {
 
@@ -34,41 +34,41 @@ export default function Page() {
             category: 'custom',
             description: 'Custom compliance requirement',
             status: 'pending_review',
-            requirements['Requirement 1',Requirement 2'],;
-  violations[];
+            requirements['Requirement 1',Requirement 2'],
+  violations[],
 
-};
-        addComplianceRule(newRule);
-        trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]);
+},
+        addComplianceRule(newRule),
+        trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]),
     const getSeverityColor = (severity) => {
 
         switch(severity) {
 
-            case 'critical': return 'text-red-600 bg-red-100';
-            case 'high': return 'text-orange-600 bg-orange-100';
-            case 'medium': return 'text-yellow-600 bg-yellow-100';
-            case 'low': return 'text-green-600 bg-green-100';
+            case 'critical': return 'text-red-600 bg-red-100',
+            case 'high': return 'text-orange-600 bg-orange-100',
+            case 'medium': return 'text-yellow-600 bg-yellow-100',
+            case 'low': return 'text-green-600 bg-green-100',
             default: return 'text-gray-600 bg-gray-100'}
-    };
+    },
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'compliant': return 'text-green-600 bg-green-100';
-            case 'non_compliant': return 'text-red-600 bg-red-100';
-            case 'pending_review': return 'text-yellow-600 bg-yellow-100';
+            case 'compliant': return 'text-green-600 bg-green-100',
+            case 'non_compliant': return 'text-red-600 bg-red-100',
+            case 'pending_review': return 'text-yellow-600 bg-yellow-100',
             default: return 'text-gray-600 bg-gray-100'}
-    };
+    },
     const getThreatLevelColor = (level) => {
 
         switch(level) {
 
-            case 'critical': return 'text-red-600 bg-red-100 border-red-200';
-            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
-            case 'low': return 'text-green-600 bg-green-100 border-green-200';
+            case 'critical': return 'text-red-600 bg-red-100 border-red-200',
+            case 'high': return 'text-orange-600 bg-orange-100 border-orange-200',
+            case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200',
+            case 'low': return 'text-green-600 bg-green-100 border-green-200',
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}
-    };`
+    },`
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}"
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -219,7 +219,7 @@ export default function Page() {
                           <AlertTriangle className="w-4 h-4"/>
                         </div>
                         <div>'"
-                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_',)}</p>"
+                          <p className="font-medium text-gray-900 dark:text-white">{event.type.replace('_')}</p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">{event.details}</p>
                         </div>
                       </div>"
@@ -278,7 +278,7 @@ export default function Page() {
                         </div>
                         <div>"
                           <p className="font-medium text-gray-900 dark:text-white">
-                            {event.type.replace('_',).toUpperCase()}
+                            {event.type.replace('_').toUpperCase()}
                           </p>"
                           <p className="text-sm text-gray-500 dark:text-gray-400">
                             {event.timestamp.toLocaleString()}
@@ -340,7 +340,7 @@ export default function Page() {
                     <div className="flex items-center justify-between mb-3">"
                       <h4 className="font-medium text-gray-900 dark:text-white">{rule.name}</h4>`
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}>
-                        {rule.status.replace('_',)}
+                        {rule.status.replace('_')}
                       </span>
                     </div>"
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{rule.description}</p>"
@@ -521,5 +521,5 @@ export default function Page() {
             </div>
           </motion.div>) }
       </AnimatePresence>
-    </div>)};
+    </div>)},
 '"`

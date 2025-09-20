@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -9,38 +9,38 @@ import {,
   MessageSquare,
   Image,
   Video,
-  FileText;
-  Sparkles;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Star;
-  Users;
-  TrendingUp;
-  Shield;
-  Clock;
-  Target,
-} from 'lucide-react';
+  FileText,
+  Sparkles,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Shield,
+  Clock,
+  Target
+} from 'lucide-react',
 interface AITool {,
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  features: string[];
-  demoUrl?: string;
-  pricing: string;
-  rating: number;
-  users: string;
-  isPopular?: boolean;
-  isNew?: boolean,
+  id: string,
+  name: string,
+  description: string,
+  category: string,
+  icon: React.ReactNode,
+  features: string[],
+  demoUrl?: string,
+  pricing: string,
+  rating: number,
+  users: string,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 ,
 const AIToolsInteractiveDemo2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -54,7 +54,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
             Experience the power of cutting-edge AI tools with live demonstrations.,
             Testexploreand discover how AI can transform your workflow.,
           </p>,
-          {/* Search Bar */,}
+          {/* Search Bar */}
           <div className="max-w-md mx-auto">,
             <div className="relative">,
               <input,
@@ -68,7 +68,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
@@ -79,23 +79,23 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 activeCategory === category.id,
                   ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25',
-                  : 'bg-white/10 text-gray-300 hover: bg-white/20',}`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
             >,
               {category.name} ({category.count}),
             </button>,
           ))}
         </div>,
         <div className="grid lg: grid-cols-3 gap-8">,
-          {/* Tools Grid */,}
+          {/* Tools Grid */}
           <div className="lg: col-span-2">,
             <div,
               className="grid md:grid-cols-2 gap-6",
             >,
               {filteredTools.map((toolindex) => (,
                 <div,
-                  key={tool.id,}
+                  key={tool.id}
                   className={`bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover: bg-white/10 transition-all duration-300 cursor-pointer group ${,
-                    selectedTool === tool.id ? 'ring-2 ring-blue-500' : '',}`}
+                    selectedTool === tool.id ? 'ring-2 ring-blue-500' : ''}`}
                   onClick={() => handleToolSelect(tool.id)}
                 >,
                   <div className="flex items-start justify-between mb-4">,
@@ -105,7 +105,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                       </div>,
                       <div>,
                         <h3 className="text-xl font-semibold text-white group-hover: text-blue-400 transition-colors">,
-                          {tool.name,}
+                          {tool.name}
                         </h3>,
                         <div className="flex items-center space-x-2 mt-1">,
                           <div className="flex items-center">,
@@ -115,7 +115,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                                 className={`w-4 h-4 ${,
                                   i < Math.floor(tool.rating),
                                     ? 'text-yellow-400 fill-current',
-                                    : 'text-gray-400',
+                                    : 'text-gray-400'
                                 }`}
                               />,
                             ))}
@@ -128,13 +128,11 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                       {tool.isNew && (,
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">,
                           New,
-                        </span>,
-                      )}
+                        </span>)}
                       {tool.isPopular && (,
                         <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">,
                           Popular,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                   </div>,
                   <p className="text-gray-300 mb-4">{tool.description}</p>,
@@ -145,13 +143,11 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                         className="px-2 py-1 bg-white/10 text-white text-xs rounded-full",
                       >,
                         {feature}
-                      </span>,
-                    ))}
+                      </span>))}
                     {tool.features.length > 2 && (,
                       <span className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">,
                         +{tool.features.length - 2} more,
-                      </span>,
-                    )}
+                      </span>)}
                   </div>,
                   <div className="flex items-center justify-between">,
                     <div className="flex items-center space-x-4 text-sm text-gray-400">,
@@ -170,7 +166,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                     </button>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             </div>,
           </div>,
           {/* Demo Panel */}
@@ -181,7 +177,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
               <h3 className="text-2xl font-bold text-white mb-6">Live Demo</h3>,
                 {selectedToolData ? (,
                   <div,
-                    key={selectedToolData.id,}
+                    key={selectedToolData.id}
                   >,
                     <div className="text-center mb-6">,
                       <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">,
@@ -201,7 +197,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                             <div className="w-full h-full border-4 border-blue-500/20 rounded-full"></div>,
                             <div,
                               className="absolute top-0 left-0 w-full h-full border-4 border-blue-500 rounded-full border-t-transparent animate-spin",
-                              style={{ animationDuration: '1s' ,}}
+                              style={{ animationDuration: '1s' }}
                             ></div>,
                           </div>,
                           <p className="text-white font-medium">Running Demo...</p>,
@@ -210,11 +206,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                         <div className="w-full bg-gray-700 rounded-full h-2">,
                           <div,
                             className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300",
-                            style={{ width: `${demoProgress,}%` }}
+                            style={{ width: `${demoProgress}%` }}
                           ></div>,
                         </div>,
-                      </div>,
-                    ) : (,
+                      </div>) : (,
                       <div className="space-y-4">,
                         <div className="text-center">,
                           <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />,
@@ -226,11 +221,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                         <div className="space-y-3">,
                           <h5 className="text-white font-medium">Key Features: </h5>,
                           {selectedToolData.features.map((featureindex) => (,
-                            <div key={index,} className="flex items-center space-x-2">,
+                            <div key={index} className="flex items-center space-x-2">,
                               <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                               <span className="text-gray-300 text-sm">{feature}</span>,
-                            </div>,
-                          ))}
+                            </div>))}
                         </div>,
                         <div className="pt-4 border-t border-white/10">,
                           <div className="flex items-center justify-between text-sm text-gray-400 mb-2">,
@@ -254,7 +248,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                           <ArrowRight className="w-4 h-4" />,
                         </button>,
                       </div>,
-                    ),}
+                    )}
                   </div>,
                 ) : (,
                   <div,
@@ -267,8 +261,7 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
                     <p className="text-gray-400">,
                       Choose any AI tool from the grid to see it in action,
                     </p>,
-                  </div>,
-                )}
+                  </div>)}
               </div>,
             </div>,
           </div>,
@@ -278,10 +271,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
           className="mt-20 grid grid-cols-2 md: grid-cols-4 gap-8",
         >,
           {[,
-            { icon: <Users className="w-8 h-8" />label: 'Active 'Usersvalue: '5M+' ,};
-            { icon: <Target className="w-8 h-8" />label: 'Tools 'Availablevalue: '24+' ,};
-            { icon: <Shield className="w-8 h-8" />label: ''Uptimevalue: '99.9%' ,};
-            { icon: <Clock className="w-8 h-8" />label: 'Response 'Timevalue: '<100ms' ,}
+            { icon: <Users className="w-8 h-8" />label: 'Active 'Usersvalue: '5M+' },
+            { icon: <Target className="w-8 h-8" />label: 'Tools 'Availablevalue: '24+' },
+            { icon: <Shield className="w-8 h-8" />label: ''Uptimevalue: '99.9%' },
+            { icon: <Clock className="w-8 h-8" />label: 'Response 'Timevalue: '<100ms' }
           ].map((statindex) => (,
             <div key={index} className="text-center">,
               <div className="p-4 bg-blue-500/20 rounded-lg text-blue-400 mb-4 inline-block">,
@@ -289,11 +282,10 @@ const AIToolsInteractiveDemo2025: React.FC = () => {,
               </div>,
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>,
               <div className="text-gray-400">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AIToolsInteractiveDemo2025;
+  ),
+},
+export default AIToolsInteractiveDemo2025,

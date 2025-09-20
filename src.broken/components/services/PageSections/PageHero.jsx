@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
 
   title,
@@ -11,5 +11,5 @@ import { ArrowRight, Star, Users, Clock, Shield export const PageHero = ({
   stats = []
 }) => {
 
-  )};
+  )},
 '"

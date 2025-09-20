@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function AIM365SecurityCopilot() {,
   return (,
     <>,
@@ -39,6 +39,6 @@ export default function AIM365SecurityCopilot() {,
         </section>,
       </main>,
     </>,
-  ),
+  )
 }
 ,

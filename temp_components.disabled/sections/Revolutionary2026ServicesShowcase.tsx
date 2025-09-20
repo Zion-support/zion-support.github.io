@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Shield, Globe, Rocket } from 'lucide-react';
-import { revolutionary2026AIServices } from '../../data/revolutionary-2026-ai-services';
-import { revolutionary2026ITServices } from '../../data/revolutionary-2026-it-services';
-import { revolutionary2026EmergingTechServices } from '../../data/revolutionary-2026-emerging-tech';
-import { revolutionary2026MicroSaasServices } from '../../data/revolutionary-2026-micro-saas';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Shield, Globe, Rocket } from 'lucide-react',
+import { revolutionary2026AIServices } from '../../data/revolutionary-2026-ai-services',
+import { revolutionary2026ITServices } from '../../data/revolutionary-2026-it-services',
+import { revolutionary2026EmergingTechServices } from '../../data/revolutionary-2026-emerging-tech',
+import { revolutionary2026MicroSaasServices } from '../../data/revolutionary-2026-micro-saas',
 
 export default function Revolutionary2026ServicesShowcase() {
   const allRevolutionaryServices = [
@@ -12,9 +12,9 @@ export default function Revolutionary2026ServicesShowcase() {
     ...revolutionary2026ITServices,
     ...revolutionary2026EmergingTechServices,
     ...revolutionary2026MicroSaasServices
-  ];
+  ],
 
-  const featuredServices = allRevolutionaryServices.filter(service => service.popular).slice(0, 8);
+  const featuredServices = allRevolutionaryServices.filter(service => service.popular).slice(0, 8),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -24,7 +24,7 @@ export default function Revolutionary2026ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },
@@ -37,7 +37,7 @@ export default function Revolutionary2026ServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -49,13 +49,13 @@ export default function Revolutionary2026ServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Revolutionary2026ServicesShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default Revolutionary2026ServicesShowcase;
+  ),
+},
+export default Revolutionary2026ServicesShowcase,

@@ -1,17 +1,17 @@
 
-import React from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
-import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-import { useJobMatches } from "@/hooks/useJobMatches";
-import Skeleton from "@/components/ui/skeleton";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
+import { JobMatchCard } from "@/components/jobs/JobMatchCard",
+import { useJobMatches } from "@/hooks/useJobMatches",
+import Skeleton from "@/components/ui/skeleton",
 
 interface JobMatchesProps {
-  jobId: string;
+  jobId: string
 }
 
 export function JobMatches({ jobId }: JobMatchesProps) {
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
+  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
   if (isLoading) {
     return (
@@ -36,11 +36,11 @@ export function JobMatches({ jobId }: JobMatchesProps) {
           ))}
         </CardContent>
       </Card>
-    );
+    ),
   }
 
   if (matches.length === 0) {
-    return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
+    return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />,
   }
 
   return (
@@ -61,5 +61,5 @@ export function JobMatches({ jobId }: JobMatchesProps) {
         />
       ))}
     </div>
-  );
+  ),
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from './layout/Layout',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
   Users, Building, Rocket, CheckCircle, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Homepage2026: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Homepage2026: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">Homepage2026</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default Homepage2026;
+export default Homepage2026,

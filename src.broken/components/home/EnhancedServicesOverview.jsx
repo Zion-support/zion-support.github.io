@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
- from '../ui/badge';
+ from '../ui/badge',
 
-;"
+,"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"
       <div className="container mx-auto px-4">
         {/* Header */}"
@@ -173,7 +173,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </section>)};
-export { EnhancedServicesOverview };
-export default EnhancedServicesOverview;
+    </section>)},
+export { EnhancedServicesOverview },
+export default EnhancedServicesOverview,
 }}}}}'"`

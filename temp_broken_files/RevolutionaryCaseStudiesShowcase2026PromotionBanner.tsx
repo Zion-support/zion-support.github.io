@@ -1,72 +1,71 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Award,
   ArrowRight,
   Star,
-  TrendingUp;
-  X;
-  CheckCircle;
-  DollarSign;
-  Users;
-  Clock;
-  Target;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe,
-} from 'lucide-react';
+  TrendingUp,
+  X,
+  CheckCircle,
+  DollarSign,
+  Users,
+  Clock,
+  Target,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentStatsetCurrentStat] = useState(0),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)1000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)1000),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentStat(prev => (prev + 1) % 4);
-    }2500);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentStat(prev => (prev + 1) % 4),
+    }2500),
+    return () => clearInterval(interval),
+  }[]),
   const caseStudies = [,
     {,
       title: 'FinTech Revolution',
       roi: '500%',
       icon: DollarSign,
-      color: 'text-green-400';
-      company: 'PayFlow Solutions',};
+      color: 'text-green-400',
+      company: 'PayFlow Solutions'},
     {,
       title: 'Healthcare AI',
       roi: '400%',
       icon: Shield,
-      color: 'text-blue-400';
-      company: 'MediTech Innovations',};
+      color: 'text-blue-400',
+      company: 'MediTech Innovations'},
     {,
       title: 'E-commerce Automation',
       roi: '600%',
       icon: Globe,
-      color: 'text-purple-400';
-      company: 'ShopGlobal',};
+      color: 'text-purple-400',
+      company: 'ShopGlobal'},
     {,
       title: 'Smart Manufacturing',
       roi: '350%',
       icon: Zap,
-      color: 'text-orange-400';
-      company: 'AutoParts Pro',}
-  ];
+      color: 'text-orange-400',
+      company: 'AutoParts Pro'}
+  ],
   const features = [,
-    'Real Success StoriesProven ROI Results';
-    'Industry ExpertiseClient Testimonials',
-  ];
+    'Real Success StoriesProven ROI ResultsIndustry ExpertiseClient Testimonials'
+  ],
   const stats = [,
-    { label: '200+'value: 'Projects' ,};
-    { label: '450%'value: 'Avg ROI' ,};
-    { label: '96%'value: 'Satisfaction' ,}
-  ];
-  if (!isVisible || isDismissed) return null;
+    { label: '200+'value: 'Projects' },
+    { label: '450%'value: 'Avg ROI' },
+    { label: '96%'value: 'Satisfaction' }
+  ],
+  if (!isVisible || isDismissed) return null,
   return (,
     <div>,
       <div,
@@ -84,21 +83,21 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
               key={i}
               className="absolute w-2 h-2 bg-white rounded-full opacity-40",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-250];
-                opacity: [0.40.80.4];
-                scale: [1.21],}}
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 2,}}
+                y: [0-250],
+                opacity: [0.40.80.4],
+                scale: [1.21]}}
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
             />,
           ))}
         </div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
           <div className="flex items-center justify-between">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1">,
               <div,
                 className="flex items-center space-x-3 mb-4",
@@ -119,7 +118,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
                 Real success stories from companies that achieved incredible results with our AI and automation solutions.,
                 See how they transformed their operations and achieved massive ROI.,
               </divp>,
-              {/* Rotating Case Study Display */,}
+              {/* Rotating Case Study Display */}
               <div,
                 key={currentStat}
                 className="flex items-center space-x-4 mb-6 p-4 bg-white bg-opacity-10 rounded-lg",
@@ -138,11 +137,10 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
                 className="grid grid-cols-1 md: grid-cols-2 gap-2 mb-6",
               >,
                 {features.map((featureindex) => (,
-                  <div key={index,} className="flex items-center space-x-2">,
+                  <div key={index} className="flex items-center space-x-2">,
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                     <span className="text-sm text-purple-200">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Stats */}
               <div,
@@ -152,8 +150,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
                   <div key={index} className="text-center">,
                     <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>,
                     <div className="text-sm text-purple-300">{stat.value}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* CTA Buttons */}
               <div,
@@ -170,7 +167,7 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Right Content - Animated Success Icons */,}
+            {/* Right Content - Animated Success Icons */}
             <div,
               className="hidden lg: flex items-center space-x-4",
             >,
@@ -192,20 +189,20 @@ const RevolutionaryCaseStudiesShowcase2026PromotionBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Dismiss Button */,}
+        {/* Dismiss Button */}
         <button,
           onClick={() => setIsDismissed(true)}
           className="absolute top-4 right-4 p-2 hover: bg-white hover:bg-opacity-20 rounded-full transition-colors duration-300",
         >,
           <X className="w-5 h-5" />,
         </button>,
-        {/* Pulse Effect */,}
+        {/* Pulse Effect */}
         <div,
           className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-pink-400/20",
         />,
       </div>,
     </div>,
-  );
-};
-export default RevolutionaryCaseStudiesShowcase2026PromotionBanner;
+  ),
+},
+export default RevolutionaryCaseStudiesShowcase2026PromotionBanner,
 </div></div></div></div>,

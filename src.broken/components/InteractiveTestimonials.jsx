@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 ,
     {
 
@@ -57,40 +57,40 @@ import { motion, AnimatePresence  } from 'framer-motion';
         likes: 94,
         verified: true
 
-];
-const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'];
+],
+const categories = ['All',AI Infrastructure',Talent Matching',Research & Development',Startup Solutions',Global Operations'],
 export function InteractiveTestimonials() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-    const [likedTestimonials, setLikedTestimonials] = useState(new Set());
+    const [currentIndex, setCurrentIndex] = useState(0),
+    const [selectedCategory, setSelectedCategory] = useState('All'),
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+    const [likedTestimonials, setLikedTestimonials] = useState(new Set()),
     const filteredTestimonials = selectedCategory === 'All'
         ? testimonials
-        : testimonials.filter(testimonial => testimonial.category === selectedCategory) ;
+        : testimonials.filter(testimonial => testimonial.category === selectedCategory) ,
     useEffect(() => {
-        if(!isAutoPlaying) return;
+        if(!isAutoPlaying) return,
         const interval = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ;
-        return () => clearInterval(interval) }, [isAutoPlaying, filteredTestimonials.length]) ;
+            setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) }, 5000) ,
+        return () => clearInterval(interval) }, [isAutoPlaying, filteredTestimonials.length]) ,
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) };
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length) },
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) };
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length) },
     const toggleLike = (testimonialId) => {
 
         setLikedTestimonials(prev => {
 
-            const newSet = new Set(prev);
+            const newSet = new Set(prev),
             if(newSet.has(testimonialId)) {
 
                 newSet.delete(testimonialId)}
             else {
 
                 newSet.add(testimonialId)}
-            return newSet})};
+            return newSet})},
     const renderStars = (rating) => {
 
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))},
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -102,7 +102,7 @@ export function InteractiveTestimonials() {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
 
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
@@ -119,7 +119,7 @@ export function InteractiveTestimonials() {
                 duration: 0.5,
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated elements */}"
       <div className="absolute inset-0">"

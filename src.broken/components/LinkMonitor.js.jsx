@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { LinkValidator } from '../utils/linkValidator';
+import React, { useState, useEffect } from 'react',
+import { LinkValidator } from '../utils/linkValidator',
 
 export default function Page() {
     }
-    setBrokenLinks(results);
-    setLastScanTime(new Date());
-    setIsScanning(false);
+    setBrokenLinks(results),
+    setLastScanTime(new Date()),
+    setIsScanning(false),
     // Notify parent component of issues
     results.forEach(result => {
 
       if (onLinkIssue) {
 
-        onLinkIssue(result);
+        onLinkIssue(result),
       }
-    });
-  };
+    }),
+  },
   // Fix a broken link
   const fixBrokenLink = async(originalUrl, validationResult) => {
 
@@ -23,44 +23,44 @@ export default function Page() {
       validationResult.suggestedFix.startsWith('Redirect to:')
     ) {
 
-      const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);
+      const newUrl = validationResult.suggestedFix.replace('Redirect to: '),
       // Find and update the link
-      const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
+      const links = document.querySelectorAll(`a[href="${originalUrl}"]`),
       links.forEach(link => {
 
-        link.href = newUrl;
-        link.setAttribute('data-fixed',true');'`
-        link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
-      });
+        link.href = newUrl,
+        link.setAttribute('data-fixed',true'),'`
+        link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`),
+      }),
       // Add to fixed links list
       const fix = {
 
         originalUrl,
         newUrl,
         type: 'redirect',
-        reason: 'Automatically fixed broken internal link'};
-      setFixedLinks(prev => [...prev, fix]);
+        reason: 'Automatically fixed broken internal link'},
+      setFixedLinks(prev => [...prev, fix]),
     }
-  };
+  },
   // Fix all broken links
   const fixAllBrokenLinks = async () => {
     for(const brokenLink of brokenLinks) {
 
-      await fixBrokenLink(brokenLink.url, brokenLink);
+      await fixBrokenLink(brokenLink.url, brokenLink),
     }
-    setBrokenLinks([]);
-  };
+    setBrokenLinks([]),
+  },
   // Generate redirect rules for server configuration
   const generateRedirectRules = () => {
-    const rules = LinkValidator.generateRedirectRules();
-    const blob = new Blob([rules], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'redirect-rules.txt';
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+    const rules = LinkValidator.generateRedirectRules(),
+    const blob = new Blob([rules], { type: 'text/plain' }),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = 'redirect-rules.txt',
+    a.click(),
+    URL.revokeObjectURL(url),
+  },
   // Export broken links report
   const exportReport = () => {
     const report = {
@@ -68,24 +68,24 @@ export default function Page() {
       scanTime: lastScanTime?.toISOString(),
       totalBrokenLinks: brokenLinks.length,
       brokenLinks: brokenLinks,
-      fixedLinks: fixedLinks};
+      fixedLinks: fixedLinks},
     const blob = new Blob([JSON.stringify(report, null, 2)], {
 
-      type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'broken-links-report.json';
-    a.click();
-    URL.revokeObjectURL(url);
-  };
+      type: 'application/json'}),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = 'broken-links-report.json',
+    a.click(),
+    URL.revokeObjectURL(url),
+  },
   // Auto-scan on component mount
   useEffect(() => {
     if(autoFix) {
 
-      scanPageLinks();
+      scanPageLinks(),
     }
-  }, [autoFix]);
+  }, [autoFix]),
   return ("
     <div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">"
       <div className="flex items-center justify-between mb-6">"
@@ -257,7 +257,7 @@ export default function Page() {
         </div>
       )}
     </div>
-  );
-};
-export default LinkMonitor;
+  ),
+},
+export default LinkMonitor,
 '"`

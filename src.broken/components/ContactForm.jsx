@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-export default ContactForm;
-import { Button } from './ui / Button';
+import React, { useState } from 'react',
+export default ContactForm,
+import { Button } from './ui / Button',
 
 export default function Page() {
-;
+,
     const handleSubmit = async(e) => {
 
-        e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitStatus('idle');
+        e.preventDefault(),
+        setIsSubmitting(true),
+        setSubmitStatus('idle'),
         try {
             // Simulate API call
-            await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+            await new Promise(resolve => setTimeout (resolve, 2000) ) ,
             // Reset form on success
             setFormData({
 
@@ -22,18 +22,18 @@ export default function Page() {
                 phone: '',
                 service: '',
                 message: ''
-            });
-            setSubmitStatus('success');
+            }),
+            setSubmitStatus('success'),
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch(error) {
 
-            setSubmitStatus('error');
+            setSubmitStatus('error'),
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {
 
             setIsSubmitting(false)}
-    };
-    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;"
+    },
+    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message,"
     return (<div className="max-w-2xl mx-auto">'"
       {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">"
           <div className="flex items-center">"
@@ -132,6 +132,6 @@ export default function Page() {
           </a>
           .</p>
       </form>
-    </div>)};
-export default ContactForm;
+    </div>)},
+export default ContactForm,
 }}}'"

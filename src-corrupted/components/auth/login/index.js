@@ -1,1 +1,1 @@
-export { default as LoginContent };
+export { default as LoginContent },

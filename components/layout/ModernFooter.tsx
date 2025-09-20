@@ -1,49 +1,49 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { motion } from 'framer-motion',
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react',
 
 const ModernFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const serviceCategories = [
     { 
       name: 'AI & Machine Learning', 
       icon: Brain, 
       href: '/services#ai',
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
+      services: ['AI AutomationMachine Learning', 'Natural Language ProcessingComputer Vision']
     },
     { 
       name: 'Cloud & DevOps', 
       icon: Cloud, 
       href: '/services#cloud',
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']
+      services: ['Cloud MigrationKubernetes', 'DevOps AutomationInfrastructure as Code']
     },
     { 
       name: 'Cybersecurity', 
       icon: Shield, 
       href: '/services#cybersecurity',
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']
+      services: ['Zero TrustSOC 2 Compliance', 'Threat DetectionSecurity Hardening']
     },
     { 
       name: 'Data & Analytics', 
       icon: BarChart3, 
       href: '/services#data',
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']
+      services: ['Data WarehousingBusiness Intelligence', 'Data QualityReal-time Analytics']
     },
     { 
       name: 'Enterprise Solutions', 
       icon: Database, 
       href: '/services#enterprise',
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
+      services: ['ERP SystemsCRM Platforms', 'Workflow AutomationIntegration Services']
     },
     { 
       name: 'Emerging Technologies', 
       icon: Rocket, 
       href: '/services#emerging',
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']
+      services: ['Quantum AIBlockchain', 'IoT PlatformsEdge Computing']
     }
-  ];
+  ],
 
   const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -54,7 +54,7 @@ const ModernFooter: React.FC = () => {
     { name: 'Partners', href: '/partners' },
     { name: 'News', href: '/news' },
     { name: 'Events', href: '/events' }
-  ];
+  ],
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -63,20 +63,20 @@ const ModernFooter: React.FC = () => {
     { name: 'Data Processing Agreement', href: '/dpa' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">
@@ -282,7 +282,7 @@ const ModernFooter: React.FC = () => {
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex flex-wrap gap-6 text-sm">
-                <Link href="/privacy" className="text-gray-400 hover:text-neon-blue transition-colors">
+                <Link href="/privacy" className="text-gray-400 hover: text-neon-blue transition-colors">
                   Privacy Policy
                 </Link>
                 <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
@@ -300,7 +300,7 @@ const ModernFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+},
 
-export default ModernFooter;
+export default ModernFooter,

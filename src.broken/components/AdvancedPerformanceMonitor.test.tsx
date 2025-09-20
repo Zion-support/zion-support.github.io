@@ -1,10 +1,10 @@
 
 describe('AdvancedPerformanceMonitor', () => {
   it('renders without crashing', () => {
-    render(<AdvancedPerformanceMonitor  />) ;
-    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ;
+    render(<AdvancedPerformanceMonitor  />) ,
+    expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ,
 
   it('displays expected content', () => {
-    render(<AdvancedPerformanceMonitor  />) ;
+    render(<AdvancedPerformanceMonitor  />) ,
     // Add specific test assertions based on component content
-  }) }) ;
+  }) }) ,

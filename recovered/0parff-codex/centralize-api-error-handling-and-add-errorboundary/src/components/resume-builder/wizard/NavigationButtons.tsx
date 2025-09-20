@@ -1,7 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { NavigationButtonsProps } from "./types";
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
 
 export const NavigationButtons = ({
   onBack,
@@ -9,7 +9,7 @@ export const NavigationButtons = ({
   isNextDisabled = false,
   backLabel = "Back",
   nextLabel = "Next",
-  isLoading = false,
+  isLoading = false
 }: NavigationButtonsProps) => {
   return (
     <div className="flex justify-between">
@@ -25,5 +25,5 @@ export const NavigationButtons = ({
         </Button>
       )}
     </div>
-  );
-};
+  ),
+},

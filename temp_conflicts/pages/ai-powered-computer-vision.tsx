@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Eye, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredComputerVision: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredComputerVision: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'Computer vision across various devices and platforms'
     }
-  ];
+  ],
 
   const visionCapabilities = [
     {
       area: 'Object Detection',
-      capabilities: ['Real-time detection', 'Multi-class recognition', 'Bounding box detection', 'Instance segmentation'],
+      capabilities: ['Real-time detectionMulti-class recognition', 'Bounding box detectionInstance segmentation'],
       improvement: '99.9% accuracy',
       detection: 'Precise'
     },
     {
       area: 'Image Recognition',
-      capabilities: ['Classification', 'Feature extraction', 'Pattern recognition', 'Visual understanding'],
+      capabilities: ['ClassificationFeature extraction', 'Pattern recognitionVisual understanding'],
       improvement: '95% precision',
       recognition: 'Advanced'
     },
     {
       area: 'Video Analysis',
-      capabilities: ['Motion detection', 'Activity recognition', 'Tracking', 'Temporal analysis'],
+      capabilities: ['Motion detectionActivity recognition', 'TrackingTemporal analysis'],
       improvement: 'Real-time processing',
       analysis: 'Instant'
     },
     {
       area: 'Visual AI',
-      capabilities: ['Scene understanding', 'Context awareness', 'Semantic segmentation', 'Depth estimation'],
+      capabilities: ['Scene understandingContext awareness', 'Semantic segmentationDepth estimation'],
       improvement: '100x faster',
       ai: 'Intelligent'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Manufacturing & Quality Control',
       description: 'AI-powered computer vision for product inspection and quality assurance',
-      benefits: ['Defect detection', 'Quality control', 'Process monitoring', 'Cost reduction']
+      benefits: ['Defect detectionQuality control', 'Process monitoringCost reduction']
     },
     {
       title: 'Security & Surveillance',
       description: 'Computer vision for security monitoring and threat detection',
-      benefits: ['Threat detection', 'Personnel monitoring', 'Access control', 'Incident response']
+      benefits: ['Threat detectionPersonnel monitoring', 'Access controlIncident response']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Medical imaging analysis and diagnostic assistance',
-      benefits: ['Medical diagnosis', 'Image analysis', 'Treatment planning', 'Patient monitoring']
+      benefits: ['Medical diagnosisImage analysis', 'Treatment planningPatient monitoring']
     },
     {
       title: 'Retail & E-commerce',
       description: 'Visual search, inventory management, and customer analytics',
-      benefits: ['Visual search', 'Inventory tracking', 'Customer analytics', 'Loss prevention']
+      benefits: ['Visual searchInventory tracking', 'Customer analyticsLoss prevention']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredComputerVision: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with computer vision',
       features: [
-        'Basic computer vision features',
-        'Single platform support',
-        'Standard processing',
-        'Email support',
+        'Basic computer vision featuresSingle platform support',
+        'Standard processingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredComputerVision: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced computer vision needs',
       features: [
-        'Advanced computer vision features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced computer vision featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time processing'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredComputerVision: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex computer vision requirements',
       features: [
-        'Custom computer vision development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom computer vision developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredComputerVision: React.FC = () => {
       position: "AI Director",
       company: "Advanced Vision Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredComputerVision: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to See with AI-Powered Visual Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredComputerVision: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredComputerVision;
+export default AIPoweredComputerVision,

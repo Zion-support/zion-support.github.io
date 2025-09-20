@@ -1,25 +1,25 @@
-import React, { useState } from 'react';
-export default ComprehensiveServicesShowcase2030;}}}}}
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
+import React, { useState } from 'react',
+export default ComprehensiveServicesShowcase2030,}}}}}
+import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030',
 export default function Page() {
-;
+,
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = () => {,
+    let services: any[] = [],
 
     switch(activeTab) {
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030,
+        break,
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030,
+        break,
       case 'ai':
-        services = comprehensiveAIServices2030;
+        services = comprehensiveAIServices2030,
         break}
 
-    const categories = [...new Set(services.map (service => service.category) ) ];
-    return categories};
+    const categories = [...new Set(services.map (service => service.category) ) ],
+    return categories},
 
   const renderServiceCard = (service) => {
     if(activeTab === 'microsaas') {
@@ -109,14 +109,14 @@ export default function Page() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration -300"
+                  className="px-4 py-2 bg-gradient - to - r from - blue - 600 to - purple - 600 text-white rounded-lg hover: from - blue - 700 hover:to - purple - 700 transition - all duration -300"
 
                   Learn More
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;) ;
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,) 
     } else if(activeTab = == 'it') {
       return (<div  key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition - all duration - 300 border border-gray - 100 overflow-hidden">
           <div  className="p -6">
@@ -203,14 +203,14 @@ export default function Page() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient - to - r from - green - 600 to - blue - 600 text-white rounded-lg hover:from - green - 700 hover:to - blue - 700 transition - all duration -300"
+                  className="px-4 py-2 bg-gradient - to - r from - green - 600 to - blue - 600 text-white rounded-lg hover: from - green - 700 hover:to - blue - 700 transition - all duration -300"
 
                   Learn More
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;) ;
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,) 
     } else {
       return (<div  key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition - all duration - 300 border border-gray - 100 overflow-hidden">
           <div  className="p -6">
@@ -307,16 +307,16 @@ export default function Page() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient - to - r from - purple - 600 to - pink - 600 text-white rounded-lg hover:from - purple - 700 hover:to - pink - 700 transition - all duration -300"
+                  className="px-4 py-2 bg-gradient - to - r from - purple - 600 to - pink - 600 text-white rounded-lg hover: from - purple - 700 hover:to - pink - 700 transition - all duration -300"
 
                   Learn More
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;) ;
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,) 
     }
-  };
+  },
 
   return (<>
       <SEO
@@ -435,18 +435,18 @@ export default function Page() {
           </div>
 
           {/* Services Grid */}
-          <div  className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8">;
+          <div  className="grid grid - cols - 1 lg: grid - cols - 2 xl:grid - cols - 3 gap-8">,
             {getFilteredServices () .map(renderServiceCard) }
           </div>
-;
-          {/* No Results */};
-          {getFilteredServices () .length === 0 && (;
-            <div  className="text-center py-12">;
-              <div  className="text-gray - 500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={ () => {;
-                  setSearchTerm('') ;
-                  setSelectedCategory('all') ;
+,
+          {/* No Results */},
+          {getFilteredServices () .length === 0 && (,
+            <div  className="text-center py-12">,
+              <div  className="text-gray - 500 text-lg mb-4">No services found matching your criteria</div>,
+              <button,
+                onClick={ () => {,
+                  setSearchTerm('') ,
+                  setSelectedCategory('all') ,
                 }}
                 className="px-6 py-3 bg-blue - 600 text-white rounded-lg hover:bg-blue - 700 transition -colors"
               >
@@ -459,7 +459,7 @@ export default function Page() {
             <h2 className="text-3xl font - bold mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue - 100 mb-6">
               Get in touch with our experts to discuss your specific needs and discover how our services can drive your success.</p>
-            <div  className="flex flex - col md:flex - row gap-4 justify -center">
+            <div  className="flex flex - col md: flex - row gap-4 justify -center">
               <a
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue - 600 rounded-lg font - semibold hover:bg-gray - 100 transition -colors"
@@ -472,9 +472,9 @@ export default function Page() {
 
                 Email Us
               </a>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;) ;
-};
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </>,) 
+},

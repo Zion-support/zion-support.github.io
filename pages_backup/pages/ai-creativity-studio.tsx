@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 export default function AICreativityStudioPage() {,
   return (,
     <div className="min-h-[60vh] px-6 py-24">,
@@ -8,12 +8,11 @@ export default function AICreativityStudioPage() {,
         <h1 className="text-4xl font-bold text-white mb-4">AI Creativity Studio</h1>,
         <p className="text-gray-300">Creative automation tools for content, video, and design. Details coming soon.</p>,
       </div>,
-    </div>,
-  ),
-};
+    </div>)
+},
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
 ,

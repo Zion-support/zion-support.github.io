@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  BarChart3, 
+  BarChart3,
   Brain, 
   Zap, 
   CheckCircle,
@@ -51,102 +51,62 @@ import {
   LineChart,
   Scatter,
   Layers
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function DataAnalytics() {
   const features = [
     {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive data analysis with machine learning and AI',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: BarChart3,title: 'Advanced Analytics',description: 'Comprehensive data analysis with machine learning and AI',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Intelligent data processing and predictive analytics',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Brain,title: 'AI-Powered Insights',description: 'Intelligent data processing and predictive analytics',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Database,
-      title: 'Big Data Processing',
-      description: 'Handle massive datasets with distributed computing',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Database,title: 'Big Data Processing',description: 'Handle massive datasets with distributed computing',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: LineChart,
-      title: 'Real-Time Analytics',
-      description: 'Live data streaming and instant insights',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: LineChart,title: 'Real-Time Analytics',description: 'Live data streaming and instant insights',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security and compliance',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Shield,title: 'Data Security',description: 'Enterprise-grade security and compliance',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Globe,
-      title: 'Data Visualization',
-      description: 'Interactive dashboards and beautiful charts',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Globe,title: 'Data Visualization',description: 'Interactive dashboards and beautiful charts',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Unlock insights from 100% of your data with AI analysis',
-    'Reduce decision-making time by 80% with real-time analytics',
-    'Improve business performance by 35% with data-driven insights',
-    'Automate reporting and eliminate manual data processing',
-    'Scale analytics to handle any data volume or velocity',
-    'Ensure data quality and accuracy with automated validation'
-  ];
+    'Unlock insights from 100% of your data with AI analysisReduce decision-making time by 80% with real-time analytics',
+    'Improve business performance by 35% with data-driven insightsAutomate reporting and eliminate manual data processing',
+    'Scale analytics to handle any data volume or velocityEnsure data quality and accuracy with automated validation'
+  ],
 
   const useCases = [
     {
-      title: 'Business Intelligence',
-      description: 'Comprehensive BI dashboards and reporting',
-      icon: BarChart3
-    },
+      title: 'Business Intelligence',description: 'Comprehensive BI dashboards and reporting',icon: BarChart3
+    };
     {
-      title: 'Customer Analytics',
-      description: 'Deep customer insights and behavior analysis',
-      icon: Users
-    },
+      title: 'Customer Analytics',description: 'Deep customer insights and behavior analysis',icon: Users
+    };
     {
-      title: 'Financial Analytics',
-      description: 'Risk assessment and financial performance analysis',
-      icon: TrendingUp
-    },
+      title: 'Financial Analytics',description: 'Risk assessment and financial performance analysis',icon: TrendingUp
+    };
     {
-      title: 'Operational Analytics',
-      description: 'Process optimization and performance monitoring',
-      icon: Activity
+      title: 'Operational Analytics',description: 'Process optimization and performance monitoring',icon: Activity
     }
   ];
-
   const analyticsCapabilities = [
     {
-      name: 'Data Processing',
-      description: 'Advanced ETL and data transformation capabilities',
-      examples: ['Data cleaning', 'Transformation', 'Aggregation']
+      name: 'Data Processing',description: 'Advanced ETL and data transformation capabilities',examples: ['Data cleaningTransformation', 'Aggregation']
     },
     {
-      name: 'Machine Learning',
-      description: 'AI-powered predictive analytics and modeling',
-      examples: ['Predictive models', 'Classification', 'Clustering']
+      name: 'Machine Learning',description: 'AI-powered predictive analytics and modeling',examples: ['Predictive modelsClassification', 'Clustering']
     },
     {
-      name: 'Real-Time Streaming',
-      description: 'Live data processing and instant analytics',
-      examples: ['Stream processing', 'Event analytics', 'Live dashboards']
+      name: 'Real-Time Streaming',description: 'Live data processing and instant analytics',examples: ['Stream processingEvent analytics', 'Live dashboards']
     },
     {
-      name: 'Data Visualization',
-      description: 'Interactive charts and comprehensive dashboards',
-      examples: ['Custom charts', 'Interactive dashboards', 'Mobile views']
+      name: 'Data Visualization',description: 'Interactive charts and comprehensive dashboards',examples: ['Custom chartsInteractive dashboards', 'Mobile views']
     }
-  ];
+  ],
 
   return (
     <>
@@ -400,7 +360,7 @@ export default function DataAnalytics() {
                 Data Analytics Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our analytics platform adapts to various business needs and industries, 
+                Our analytics platform adapts to various business needs and industries;
                 providing tailored solutions for different analytical requirements.
               </p>
             </motion.div>
@@ -465,7 +425,7 @@ export default function DataAnalytics() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -475,5 +435,5 @@ export default function DataAnalytics() {
         </section>
       </div>
     </>
-  );
+  )
 }

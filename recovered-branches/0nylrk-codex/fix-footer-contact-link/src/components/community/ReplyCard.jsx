@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function ReplyCard({ reply, className = '', onMarkAnswer, canMarkAnswer }) {,
     return (<div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>,
       <div className="flex items-start space-x-3">,
@@ -15,14 +15,14 @@ export default function ReplyCard({ reply, className = '', onMarkAnswer, canMark
           </div>,
           <p className="text-zion-slate-light text-sm">{reply.content}</p>,
           <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">,
-            <button className="hover: text-zion-cyan">Like ({reply.likes,})</button>,
+            <button className="hover: text-zion-cyan">Like ({reply.likes})</button>,
             <button className="hover: text-zion-cyan">Reply</button>,
-            {canMarkAnswer && onMarkAnswer && (<button onClick={onMarkAnswer,} className="hover: text-zion-cyan text-green-500">,
+            {canMarkAnswer && onMarkAnswer && (<button onClick={onMarkAnswer} className="hover: text-zion-cyan text-green-500">,
                 Mark as Answer,
-              </button>),}
+              </button>)}
           </div>,
         </div>,
       </div>,
-    </div>);
+    </div>),
 }
 ,

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3';
+import React, { useState } from 'react',
+import { advancedInnovativeServicesExpansionV3 } from '../data/2025-advanced-innovative-services-expansion-v3',
 export default function Page() {
 ,
     {
@@ -11,15 +11,15 @@ export default function Page() {
 
       id: 'Specialized Enterprise',
       name: 'Specialized Enterprise',
-      count: specializedEnterpriseSolutions2025.length},
-  ];
+      count: specializedEnterpriseSolutions2025.length}
+  ],
   const handleServiceClick = service => {
 
-    setSelectedService(service);
-  };
+    setSelectedService(service),
+  },
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null),
+  },
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
@@ -427,7 +427,7 @@ export default function Page() {
         </div>
       )}
     </div>
-  );
-};
-export default EnhancedComprehensiveServicesShowcase;
+  ),
+},
+export default EnhancedComprehensiveServicesShowcase,
 '"`

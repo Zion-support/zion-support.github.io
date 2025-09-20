@@ -1,30 +1,30 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   ArrowRight,
   Star,
   TrendingUp,
   Users,
   DollarSign,
-  Sparkles;
-  X;
-  Play;
-  ExternalLink;
-  CheckCircle;
-  Award,
-} from 'lucide-react';
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle,
+  Award
+} from 'lucide-react',
 const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)1500),
+    return () => clearTimeout(timer),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -49,7 +49,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
           </div>,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-6">,
-              {/* Content */,}
+              {/* Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                   className="flex items-center justify-center lg:justify-start gap-3 mb-3",
@@ -111,7 +111,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
                   </button>,
                 </div>,
               </div>,
-              {/* Success Metrics */,}
+              {/* Success Metrics */}
               <div,
                 className="flex flex-col sm: flex-row lg:flex-col gap-4",
               >,
@@ -132,7 +132,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
                 </div>,
               </div>,
             </div>,
-            {/* Dismiss Button */,}
+            {/* Dismiss Button */}
             <button,
               onClick={handleDismiss}
               className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors duration-300 p-1",
@@ -141,12 +141,12 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
               <X className="w-5 h-5" />,
             </button>,
           </div>,
-          {/* Animated Border */,}
+          {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-green-400 to-teal-400 animate-pulse" />,
         </div>,
       )}
     </div>,
-  );
-};
-export default BusinessSuccessStoriesShowcase2025PromotionBanner;
+  ),
+},
+export default BusinessSuccessStoriesShowcase2025PromotionBanner,
 </div></div></div></div></div>,

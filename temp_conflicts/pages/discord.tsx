@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 const Discord: React.FC = () => {
   const channels = [
@@ -8,52 +8,52 @@ const Discord: React.FC = () => {
       description: 'General discussion about Zion AI Marketplace',
       members: 1250,
       online: 89,
-      icon: '💬',
+      icon: '💬'
     },
     {
       name: 'api-support',
       description: 'Get help with API integration and development',
       members: 890,
       online: 45,
-      icon: '🔧',
+      icon: '🔧'
     },
     {
       name: 'ai-discussions',
       description: 'Discuss AI trends, technologies, and use cases',
       members: 2100,
       online: 156,
-      icon: '🤖',
+      icon: '🤖'
     },
     {
       name: 'marketplace',
       description: 'Share marketplace experiences and feedback',
       members: 750,
       online: 32,
-      icon: '🏪',
+      icon: '🏪'
     },
     {
       name: 'showcase',
       description: 'Show off your AI projects and integrations',
       members: 680,
       online: 28,
-      icon: '🎨',
+      icon: '🎨'
     },
     {
       name: 'events',
       description: 'Stay updated on upcoming events and webinars',
       members: 1200,
       online: 67,
-      icon: '📅',
-    },
-  ];
+      icon: '📅'
+    }
+  ],
 
   const roles = [
     { name: 'Community Member', color: 'bg-gray-600', description: 'Basic access to community channels' },
     { name: 'Developer', color: 'bg-blue-600', description: 'Access to technical channels and resources' },
     { name: 'AI Expert', color: 'bg-purple-600', description: 'Access to advanced AI discussions' },
     { name: 'Marketplace Partner', color: 'bg-green-600', description: 'Special access for marketplace partners' },
-    { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' },
-  ];
+    { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' }
+  ],
 
   return (
     <>
@@ -239,7 +239,7 @@ const Discord: React.FC = () => {
             <div className="text-center text-gray-400">
               <p>Questions about the community? Contact our community managers</p>
               <p className="mt-2">
-                <a href="/contact" className="text-blue-400 hover:text-blue-300">
+                <a href="/contact" className="text-blue-400 hover: text-blue-300">
                   Get in Touch →
                 </a>
               </p>
@@ -248,7 +248,7 @@ const Discord: React.FC = () => {
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default Discord;
+export default Discord,

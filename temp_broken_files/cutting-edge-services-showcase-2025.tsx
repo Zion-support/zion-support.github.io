@@ -1,93 +1,93 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 import {,
-  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-  CheckCircle, ArrowRight, Zap, Target, Microscope;
-  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
-  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin,
-} from 'lucide-react';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+  Brain, Atom, Shield, Rocket, Star, Award, TrendingUp,
+  CheckCircle, ArrowRight, Zap, Target, Microscope,
+  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette,
+  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
+} from 'lucide-react',
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services',
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
 const contactInfo = {,
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com',};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [,
-  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> ,};
-  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> ,};
-  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> ,};
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> ,}
-];
+  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> },
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+],
 const serviceCategories = [,
   {,
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
-    services: cuttingEdgeAIServices2025;
-    icon: Brain;
-    color: 'from-violet-500 to-purple-600';
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600';
-    count: cuttingEdgeAIServices2025.length,};
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
+    count: cuttingEdgeAIServices2025.length},
   {,
-    title: 'Quantum & Emerging Tech';
-    description: 'Breakthrough quantum computing and space technology solutions';
-    services: cuttingEdgeQuantumServices2025;
-    icon: Atom;
-    color: 'from-indigo-500 to-blue-600';
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600';
-    count: cuttingEdgeQuantumServices2025.length,};
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    services: cuttingEdgeQuantumServices2025,
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
+    count: cuttingEdgeQuantumServices2025.length},
   {,
-    title: 'Enterprise IT';
-    description: 'Advanced enterprise infrastructure and security solutions';
-    services: cuttingEdgeEnterpriseITServices2025;
-    icon: Shield;
-    color: 'from-blue-500 to-cyan-600';
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600';
-    count: cuttingEdgeEnterpriseITServices2025.length,};
+    title: 'Enterprise IT',
+    description: 'Advanced enterprise infrastructure and security solutions',
+    services: cuttingEdgeEnterpriseITServices2025,
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-600',
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
+    count: cuttingEdgeEnterpriseITServices2025.length},
   {,
-    title: 'Micro SAAS';
-    description: 'Innovative business solutions for modern enterprises';
-    services: cuttingEdgeMicroSaasServices2025;
-    icon: Rocket;
-    color: 'from-teal-500 to-emerald-600';
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600';
-    count: cuttingEdgeMicroSaasServices2025.length,};
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
+    services: cuttingEdgeMicroSaasServices2025,
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
+    count: cuttingEdgeMicroSaasServices2025.length},
 export default function CuttingEdgeServicesShowcase2025() {,
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const allServices = [,
-    ...cuttingEdgeAIServices2025;
-    ...cuttingEdgeQuantumServices2025;
-    ...cuttingEdgeEnterpriseITServices2025;
-    ...cuttingEdgeMicroSaasServices2025,
-  ];
+    ...cuttingEdgeAIServices2025,
+    ...cuttingEdgeQuantumServices2025,
+    ...cuttingEdgeEnterpriseITServices2025,
+    ...cuttingEdgeMicroSaasServices2025
+  ],
   const filteredServices = allServices.filter(service => {,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        staggerChildren: 0.1,}
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { y: 20, opacity: 0 ,};
+    hidden: { y: 20, opacity: 0 },
     visible: {,
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {,
-        duration: 0.5,}
+        duration: 0.5}
     }
-  };
+  },
   return (,
     <>,
       <Head>,
@@ -127,9 +127,8 @@ export default function CuttingEdgeServicesShowcase2025() {,
                     <div className="flex justify-center mb-2">,
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">,
                         {stat.icon}
-                    <div className="text-2xl md: text-3xl font-bold text-white mb-1">{stat.value,}</div>,
-                    <div className="text-sm text-white/70">{stat.label}</div>,
-                ))}
+                    <div className="text-2xl md: text-3xl font-bold text-white mb-1">{stat.value}</div>,
+                    <div className="text-sm text-white/70">{stat.label}</div>))}
               </div>,
               {/* CTA Buttons */}
               <div,
@@ -151,13 +150,13 @@ export default function CuttingEdgeServicesShowcase2025() {,
             </div>,
           </div>,
         </section>,
-        {/* Search and Filter Section */,}
+        {/* Search and Filter Section */}
         <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div,
               className="flex flex-col lg:flex-row gap-6 items-center justify-between",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               {/* Search */}
               <div className="relative flex-1 max-w-md">,
@@ -169,14 +168,14 @@ export default function CuttingEdgeServicesShowcase2025() {,
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300",
                 />,
-              {/* Category Filter */,}
+              {/* Category Filter */}
               <div className="flex flex-wrap gap-2">,
                 <button,
                   onClick={() => setSelectedCategory('all')}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${,
                     selectedCategory === 'all',
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white',
-                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/10',}`}
+                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/10'}`}
                 >,
                   All ({allServices.length}),
                 {serviceCategories.map((category) => (,
@@ -186,7 +185,7 @@ export default function CuttingEdgeServicesShowcase2025() {,
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${,
                       selectedCategory === category.title,
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white',
-                        : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/10',}`}
+                        : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover: bg-cyan-500/10'}`}
                   >,
                     {category.title} ({category.count}),
                 ))}
@@ -197,7 +196,7 @@ export default function CuttingEdgeServicesShowcase2025() {,
                   className={`p-2 rounded-lg transition-all duration-300 ${,
                     viewMode === 'grid',
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50',
-                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70',}`}
+                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70'}`}
                 >,
                   <Grid className="w-5 h-5" />,
                 <button,
@@ -205,7 +204,7 @@ export default function CuttingEdgeServicesShowcase2025() {,
                   className={`p-2 rounded-lg transition-all duration-300 ${,
                     viewMode === 'list',
                       ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/50',
-                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70',}`}
+                      : 'bg-black/50 text-white/70 hover: text-white hover:bg-black/70'}`}
                 >,
                   <List className="w-5 h-5" />,
                 </button>,
@@ -218,21 +217,21 @@ export default function CuttingEdgeServicesShowcase2025() {,
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div,
               whileInView="visible",
-              viewport={{ once: true ,}}
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6',}
+              viewport={{ once: true }}
+              className={viewMode === 'grid' ? 'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
             >,
               {filteredServices.map((service, index) => (,
                 <div,
                   key={service.id}
                   className={`group relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover: border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${,
-                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : '',}`}
+                    viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''}`}
                 >,
                   {/* Service Header */}
-                  <div className={`p-6 ${viewMode === 'list' ? 'lg: w-1/3' : '',}`}>,
+                  <div className={`p-6 ${viewMode === 'list' ? 'lg: w-1/3' : ''}`}>,
                     <div className="flex items-start justify-between mb-4">,
                       <div className="flex-1">,
                         <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300">,
-                          {service.name,}
+                          {service.name}
                         <p className="text-white/70 text-sm leading-relaxed">,
                           {service.description}
                       <div className="ml-4">,
@@ -249,10 +248,10 @@ export default function CuttingEdgeServicesShowcase2025() {,
                       ))}
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">,
-                      <span>Market: {service.marketSize,}</span>,
+                      <span>Market: {service.marketSize}</span>,
                       <span className="text-cyan-400">{service.category}</span>,
                   {/* Service Details */}
-                  <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg: w-2/3' : '',}`}>,
+                  <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg: w-2/3' : ''}`}>,
                     {/* Features */}
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">,
@@ -261,8 +260,7 @@ export default function CuttingEdgeServicesShowcase2025() {,
                         {service.features.slice(0, 3).map((feature, featureIndex) => (,
                           <li key={featureIndex} className="flex items-start text-sm text-white/80">,
                             <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 mr-2 flex-shrink-0" />,
-                            <span>{feature}</span>,
-                        ))}
+                            <span>{feature}</span>))}
                     {/* Pricing */}
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">,
@@ -284,10 +282,10 @@ export default function CuttingEdgeServicesShowcase2025() {,
                       >,
                         Get Started,
                         <ArrowRight className="ml-2 w-4 h-4" />,
-                  {/* Hover Effect Overlay */,}
+                  {/* Hover Effect Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover: opacity-100 transition-opacity duration-500 pointer-events-none" />,
                 </div>,
-              )),}
+              ))}
             </div>,
             {/* No Results */}
             {filteredServices.length === 0 && (,
@@ -299,21 +297,21 @@ export default function CuttingEdgeServicesShowcase2025() {,
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>,
                 <button,
                   onClick={() => {,
-                    setSearchTerm('');
-                    setSelectedCategory('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300",
                 >,
                   Clear Filters,
                 </button>,
               </div>,
-            ),}
+            )}
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">,
           <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
                 Ready to Transform Your Business?,
@@ -328,25 +326,25 @@ export default function CuttingEdgeServicesShowcase2025() {,
                   Start Your Journey,
                   <ArrowRight className="ml-2 w-5 h-5" />,
                 <a,
-                  href={`tel:${contactInfo.mobile,}`}
+                  href={`tel:${contactInfo.mobile}`}
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-semibold rounded-full hover: bg-cyan-500/10 transition-all duration-300 transform hover:scale-105",
                 >,
                   <Phone className="mr-2 w-5 h-5" />,
                   Call Now,
-              {/* Contact Info */,}
+              {/* Contact Info */}
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">,
                 <div className="flex flex-col items-center">,
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">,
                     <Phone className="w-6 h-6 text-cyan-400" />,
                   <div className="text-white font-semibold">Phone</div>,
-                  <a href={`tel:${contactInfo.mobile,}`} className="text-cyan-400 hover: text-cyan-300 transition-colors duration-300">,
-                    {contactInfo.mobile,}
+                  <a href={`tel:${contactInfo.mobile}`} className="text-cyan-400 hover: text-cyan-300 transition-colors duration-300">,
+                    {contactInfo.mobile}
                 <div className="flex flex-col items-center">,
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">,
                     <Mail className="w-6 h-6 text-cyan-400" />,
                   <div className="text-white font-semibold">Email</div>,
-                  <a href={`mailto: ${contactInfo.email,}`} className="text-cyan-400 hover: text-cyan-300 transition-colors duration-300">,
-                    {contactInfo.email,}
+                  <a href={`mailto: ${contactInfo.email}`} className="text-cyan-400 hover: text-cyan-300 transition-colors duration-300">,
+                    {contactInfo.email}
                 <div className="flex flex-col items-center">,
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center mb-3">,
                     <MapPin className="w-6 h-6 text-cyan-400" />,
@@ -359,9 +357,9 @@ export default function CuttingEdgeServicesShowcase2025() {,
         </section>,
       </Layout>,
     </>,
-  );
+  ),
 }
-import React from "react";
+import React from "react",
 const function CuttingEdgeServicesShowcase2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -372,7 +370,7 @@ const function CuttingEdgeServicesShowcase2025() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function CuttingEdgeServicesShowcase2025() {;
+  ),
+},
+export default function CuttingEdgeServicesShowcase2025() {,
 }}}]

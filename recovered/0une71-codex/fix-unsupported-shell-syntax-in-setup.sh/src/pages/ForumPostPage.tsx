@@ -1,21 +1,21 @@
 
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AppLayout } from "@/components/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow, format } from "date-fns";
-import { ForumPost, ForumReply } from "@/types/community";
-import { useAuth } from "@/hooks/useAuth";
-import ReplyCard from "@/components/community/ReplyCard";
-import ReplyForm from "@/components/community/ReplyForm";
-import { useToast } from "@/hooks/use-toast";
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { AppLayout } from "@/components/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",
+import { formatDistanceToNow, format } from "date-fns",
+import { ForumPost, ForumReply } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
+import ReplyCard from "@/components/community/ReplyCard",
+import ReplyForm from "@/components/community/ReplyForm",
+import { useToast } from "@/hooks/use-toast",
 
 // Mock data for a forum post
 const mockPost: ForumPost = {
@@ -35,7 +35,7 @@ const mockPost: ForumPost = {
   replyCount: 4,
   isAnswered: true,
   isFeatured: true
-};
+},
 
 // Mock data for replies
 const mockReplies: ForumReply[] = [
@@ -87,20 +87,20 @@ const mockReplies: ForumReply[] = [
     upvotes: 4,
     downvotes: 0
   }
-];
+],
 
 export default function ForumPostPage() {
-  const { postId } = useParams<{ postId: string }>();
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [post, setPost] = useState(mockPost);
-  const [replies, setReplies] = useState(mockReplies);
+  const { postId } = useParams<{ postId: string }>(),
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [post, setPost] = useState(mockPost),
+  const [replies, setReplies] = useState(mockReplies),
   
   // Check if this is the user's own post
-  const isAuthor = user?.id === post?.authorId;
+  const isAuthor = user?.id === post?.authorId,
   
   // Check if user is admin/mod
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   
   // For this demo, we'll assume the post is found
   if (!post) {
@@ -113,48 +113,48 @@ export default function ForumPostPage() {
           </Button>
         </div>
       </AppLayout>
-    );
+    ),
   }
 
   const handleUpvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to vote on posts",
-      });
-      return;
+        description: "Please sign in to vote on posts"
+      }),
+      return,
     }
     
-    setPost({ ...post, upvotes: post.upvotes + 1 });
+    setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You upvoted this post",
-    });
-  };
+      description: "You upvoted this post"
+    }),
+  },
 
   const handleDownvote = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to vote on posts",
-      });
-      return;
+        description: "Please sign in to vote on posts"
+      }),
+      return,
     }
     
-    setPost({ ...post, downvotes: post.downvotes + 1 });
+    setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({
       title: "Vote recorded",
-      description: "You downvoted this post",
-    });
-  };
+      description: "You downvoted this post"
+    }),
+  },
 
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to reply",
-      });
-      return;
+        description: "Please sign in to reply"
+      }),
+      return,
     }
     
     // Create a new reply
@@ -169,16 +169,16 @@ export default function ForumPostPage() {
       updatedAt: new Date().toISOString(),
       upvotes: 0,
       downvotes: 0
-    };
+    },
     
-    setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post.replyCount + 1 });
+    setReplies([...replies, newReply]),
+    setPost({ ...post, replyCount: post.replyCount + 1 }),
     
     toast({
       title: "Reply posted",
-      description: "Your reply has been added to the discussion",
-    });
-  };
+      description: "Your reply has been added to the discussion"
+    }),
+  },
 
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
@@ -187,71 +187,71 @@ export default function ForumPostPage() {
         title: "Permission denied",
         description: "Only the original poster or moderators can mark answers",
         variant: "destructive"
-      });
-      return;
+      }),
+      return,
     }
     
     // Update the replies
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply.id === replyId
-    }));
+    })),
     
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true });
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
     
     toast({
       title: "Answer marked",
-      description: "The reply has been marked as the accepted answer",
-    });
-  };
+      description: "The reply has been marked as the accepted answer"
+    }),
+  },
 
   const handleReportPost = () => {
     if (!user) {
       toast({
         title: "Authentication required",
-        description: "Please sign in to report content",
-      });
-      return;
+        description: "Please sign in to report content"
+      }),
+      return,
     }
     
     toast({
       title: "Report submitted",
-      description: "A moderator will review this content",
-    });
-  };
+      description: "A moderator will review this content"
+    }),
+  },
 
   const handlePinPost = () => {
-    if (!isAdminOrMod) return;
+    if (!isAdminOrMod) return,
     
-    setPost({ ...post, isPinned: !post.isPinned });
+    setPost({ ...post, isPinned: !post.isPinned }),
     
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top",
-    });
-  };
+      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"
+    }),
+  },
 
   const handleLockPost = () => {
-    if (!isAdminOrMod) return;
+    if (!isAdminOrMod) return,
     
-    setPost({ ...post, isLocked: !post.isLocked });
+    setPost({ ...post, isLocked: !post.isLocked }),
     
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled",
-    });
-  };
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"
+    }),
+  },
   
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   
   return (
     <AppLayout>
       <SEO 
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}
-        keywords={`community, forum, discussion, ${post.tags.join(', ')}`}
+        keywords={`community, forum, discussion, ${post.tags.join()}`}
       />
       
       <div className="container py-8">
@@ -429,5 +429,5 @@ export default function ForumPostPage() {
         </div>
       </div>
     </AppLayout>
-  );
+  ),
 }

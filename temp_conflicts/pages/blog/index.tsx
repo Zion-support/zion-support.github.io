@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const Blog: NextPage = () => {
   const featuredPosts = [
@@ -34,7 +34,7 @@ const Blog: NextPage = () => {
       image: "/blog/blockchain-business-applications.jpg",
       slug: "blockchain-business-applications"
     }
-  ];
+  ],
 
   const recentPosts = [
     {
@@ -91,7 +91,7 @@ const Blog: NextPage = () => {
       readTime: "10 min read",
       slug: "sustainable-technology-green-computing"
     }
-  ];
+  ],
 
   const categories = [
     "All Posts",
@@ -104,7 +104,7 @@ const Blog: NextPage = () => {
     "DevOps",
     "Machine Learning",
     "Sustainability"
-  ];
+  ],
 
   return (
     <>
@@ -306,7 +306,7 @@ const Blog: NextPage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Have insights to share? We're always looking for industry experts to contribute to our blog.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Write for Us
             </Link>
@@ -317,7 +317,7 @@ const Blog: NextPage = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+},
 
-export default Blog;
+export default Blog,

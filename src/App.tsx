@@ -1,14 +1,13 @@
-import * as React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './components/ThemeProvider';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibility from './components/EnhancedAccessibility';
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./components/ThemeProvider";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import LoadingSpinner from "./components/LoadingSpinner";
+import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import EnhancedAccessibility from "./components/EnhancedAccessibility";
+import SEOHead from "./components/SEOHead";
+import ErrorBoundary from "./components/ErrorBoundary";
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
 const LazyServices = React.lazy(() => import('./components/Services'));

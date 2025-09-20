@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 topic-cluster-builder-runner function triggered');
+  console.log('🤖 topic-cluster-builder-runner function triggered'),
   
   try {
     // Topic cluster builder runner logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate topic cluster operations
     const clusterOperations = [
-      'topic-identification',
-      'content-clustering',
-      'semantic-analysis',
-      'cluster-optimization'
-    ];
+      'topic-identificationcontent-clustering',
+      'semantic-analysiscluster-optimization'
+    ],
     
     // Simulate operation execution
-    const operationResults = {};
+    const operationResults = {},
     for (const operation of clusterOperations) {
-      await new Promise(resolve => setTimeout(resolve, 180)); // Simulate clustering time
-      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-refinement'; // 96% success rate
+      await new Promise(resolve => setTimeout(resolve, 180)), // Simulate clustering time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-refinement', // 96% success rate
     }
     
     // Simulate cluster metrics
@@ -26,7 +24,7 @@ exports.handler = async function(event, context) {
       contentClusters: Math.floor(Math.random() * 150) + 75, // 75-225
       semanticCoherence: Math.floor(Math.random() * 30) + 70, // 70-100%
       clusterQuality: Math.floor(Math.random() * 25) + 75 // 75-100
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         clusterEffectiveness: clusterMetrics.semanticCoherence > 90 ? 'excellent' : clusterMetrics.semanticCoherence > 80 ? 'good' : 'needs-improvement',
         nextRun: new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString() // 6 hours from now
       })
-    };
+    },
     
-    console.log('✅ topic-cluster-builder-runner completed successfully');
-    return result;
+    console.log('✅ topic-cluster-builder-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ topic-cluster-builder-runner failed:', error);
+    console.error('❌ topic-cluster-builder-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'topic-cluster-builder-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

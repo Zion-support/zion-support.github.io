@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -8,11 +8,11 @@ export default function Page() {
       title: 'Business Hours',
       description: "When we're available",
       action: 'Mon-Fri: 9AM-6PM EST',
-      href: '#'},
-  ];
+      href: '#'}
+  ],
   const services = ['
-    'AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',IT Infrastructure',Consulting',Other',
-  ];
+    'AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation',IT Infrastructure',Consulting',Other'
+  ],
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -21,7 +21,7 @@ export default function Page() {
       opacity: 1,
       transition: {
 
-        staggerChildren: 0.1}}};
+        staggerChildren: 0.1}}},
   const itemVariants = {
 
     hidden: { y: 20, opacity: 0 },
@@ -32,7 +32,7 @@ export default function Page() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
   const cardVariants = {
 
     hidden: { scale: 0.9, opacity: 0 },
@@ -51,26 +51,26 @@ export default function Page() {
       transition: {
 
         duration: 0.3,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
   const handleInputChange = e => {
 
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
 
       ...prev,
-      [name]: value}));
-  };
+      [name]: value})),
+  },
   const handleSubmit = async e => {
 
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    await new Promise(resolve => setTimeout(resolve, 2000)),
+    setIsSubmitting(false),
+    setIsSubmitted(true),
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false),
       setFormData({
 
         name: '',
@@ -78,9 +78,9 @@ export default function Page() {
         comp: '',
         phone: '',
         service: '',
-        message: ''});
-    }, 3000);
-  };
+        message: ''}),
+    }, 3000),
+  },
   if(isSubmitted) {
 
     return ()
@@ -98,13 +98,13 @@ export default function Page() {
             within 24 hours.</p>
           <Button
             onClick={() => setIsSubmitted(false)}"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700"
           >
             Send Another Message
           </Button>
         </div>
       </motion.div>
-    );
+    )
   }
   return ("
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -403,6 +403,6 @@ export default function Page() {
         </div>
       </section>
     </div>
-  );
-};
+  ),
+},
 '"

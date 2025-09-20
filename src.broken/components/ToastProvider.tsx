@@ -1,5 +1,5 @@
-import React from 'react';
-import { Toaster as SonnerToaster } from 'sonner';
+import React from 'react',
+import { Toaster as SonnerToaster } from 'sonner',
 
 export default function ToastProvider({ children }: { children: React.ReactNode }) {
   return (
@@ -7,5 +7,5 @@ export default function ToastProvider({ children }: { children: React.ReactNode 
       <SonnerToaster position="top-right" />
       {children}
     </>
-  );
+  ),
 }

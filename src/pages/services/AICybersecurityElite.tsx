@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   Lock, 
   Eye, 
   Zap, 
@@ -23,50 +23,33 @@ import {
   AlertTriangle,
   Activity,
   Key
-} from 'lucide-react';
-
+} from "lucide-react";
 const AICybersecurityElite: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
+      icon: Brain,title: "AI-Powered Threat Detection",description: "Advanced machine learning algorithms that detect and respond to threats in real-time, 24/7"
     },
     {
-      icon: Shield,
-      title: "Zero-Day Vulnerability Protection",
-      description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
+      icon: Shield,title: "Zero-Day Vulnerability Protection",description: "Proactive defense against unknown threats using behavioral analysis and AI pattern recognition"
+    };
+    {
+      icon: Lock,title: "End-to-End Encryption",description: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
+    };
+    {
+      icon: Zap,title: "Automated Incident Response",description: "Instant threat containment and automated remediation workflows to minimize damage"
+    };
+    {
+      icon: Users,title: "Identity & Access Management",description: "Multi-factor authentication, biometric verification, and role-based access control"
     },
     {
-      icon: Lock,
-      title: "End-to-End Encryption",
-      description: "Military-grade encryption for data at rest and in transit with quantum-resistant algorithms"
-    },
-    {
-      icon: Zap,
-      title: "Automated Incident Response",
-      description: "Instant threat containment and automated remediation workflows to minimize damage"
-    },
-    {
-      icon: Users,
-      title: "Identity & Access Management",
-      description: "Multi-factor authentication, biometric verification, and role-based access control"
-    },
-    {
-      icon: Globe,
-      title: "Global Threat Intelligence",
-      description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
+      icon: Globe,title: "Global Threat Intelligence",description: "Real-time threat feeds from 200+ global sources and dark web monitoring"
     }
   ];
-
   const pricing = [
     {
-      name: "Essential",
-      price: "$3,500",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Basic AI threat detection",
+      name: "Essential",price: "$3,500",
+      period: "/month",description: "Perfect for small businesses and startups",features: [
+        "Basic AI threat detection";
         "Firewall & intrusion prevention",
         "Email security & spam filtering",
         "Vulnerability scanning",
@@ -75,12 +58,9 @@ const AICybersecurityElite: React.FC = () => {
       ]
     },
     {
-      name: "Professional",
-      price: "$7,500",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
-      features: [
-        "Advanced AI threat detection",
+      name: "Professional",price: "$7,500",
+      period: "/month",description: "Ideal for growing businesses and teams",features: [
+        "Advanced AI threat detection";
         "Behavioral analytics",
         "Advanced endpoint protection",
         "Threat intelligence feeds",
@@ -89,14 +69,11 @@ const AICybersecurityElite: React.FC = () => {
         "API access"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$18,000",
-      period: "/month",
-      description: "For large organizations with complex needs",
-      features: [
-        "Full AI cybersecurity suite",
+      name: "Enterprise",price: "$18,000",
+      period: "/month",description: "For large organizations with complex needs",features: [
+        "Full AI cybersecurity suite";
         "Custom threat modeling",
         "Advanced forensics",
         "Dedicated security team",
@@ -105,26 +82,22 @@ const AICybersecurityElite: React.FC = () => {
         "On-premise deployment"
       ]
     }
-  ];
+  ],
 
   const securityFeatures = [
     {
-      title: "Advanced Threat Hunting",
-      description: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
+      title: "Advanced Threat Hunting",description: "AI-powered proactive threat hunting that identifies and neutralizes threats before they can cause damage"
+    };
+    {
+      title: "Behavioral Analytics",description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
+    };
+    {
+      title: "Cloud Security",description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
     },
     {
-      title: "Behavioral Analytics",
-      description: "Machine learning algorithms that detect anomalous behavior patterns and flag potential security risks"
-    },
-    {
-      title: "Cloud Security",
-      description: "Comprehensive cloud security including container security, serverless protection, and multi-cloud management"
-    },
-    {
-      title: "Compliance & Governance",
-      description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
+      title: "Compliance & Governance",description: "Automated compliance reporting for SOC 2, ISO 27001, GDPR, HIPAA, and other regulatory frameworks"
     }
-  ];
+  ],
 
   const complianceStandards = [
     "SOC 2 Type II",
@@ -135,7 +108,7 @@ const AICybersecurityElite: React.FC = () => {
     "NIST Cybersecurity Framework",
     "CIS Controls",
     "FedRAMP"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -270,7 +243,7 @@ const AICybersecurityElite: React.FC = () => {
               Industry Compliance & Standards
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our platform meets and exceeds the highest industry standards for cybersecurity, 
+              Our platform meets and exceeds the highest industry standards for cybersecurity;
               ensuring your business remains compliant with regulatory requirements.
             </p>
           </motion.div>
@@ -426,7 +399,7 @@ const AICybersecurityElite: React.FC = () => {
 
           <div className="text-center">
             <a
-              href="https://ziontechgroup.com/contact"
+              href="https: //ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Security Assessment
@@ -437,7 +410,7 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">
+      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
             © 2024 Zion Tech Group. All rights reserved.
@@ -466,7 +439,6 @@ const AICybersecurityElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default AICybersecurityElite;

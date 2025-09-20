@@ -1,29 +1,29 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-    return icons[category] || <Sparkles className="w-5 h-5" />;
-  };
+,
+    return icons[category] || <Sparkles className="w-5 h-5" />,
+  },
 
   const getInnovationLevelColor = (level: anystring) => {
     switch(level) {
       case 'revolutionary':
-        return 'from - purple - 500 to - pink - 500';
+        return 'from - purple - 500 to - pink - 500',
       case 'cutting - edge':
-        return 'from - blue - 500 to - cyan - 500';
+        return 'from - blue - 500 to - cyan - 500',
       default:
-        return 'from - green - 500 to - emerald - 500';
+        return 'from - green - 500 to - emerald - 500'
     }
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -32,10 +32,10 @@ export default function Page() {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'
+      }
+    }
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Futuristic Animated Background */}
@@ -49,17 +49,17 @@ export default function Page() {
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5],
+                scale: [0.5, 1.5, 0.5]
               }}
               transition={{
                 duration: 6 + i * 0.2,
                 repeat: Infinity,
                 delay: i * 0.1,
-                ease: 'easeInOut',
+                ease: 'easeInOut'
               }}
               style={{
                 left: `${Math.random () * 100}%`,
-                top: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`
               }}
             />) ) }
         </div>
@@ -434,7 +434,7 @@ export default function Page() {
               <p > 364 E Main St STE 1008, Middletown DE 19709</p>
               <p > Visit us at:{' '}
                 <a
-                  href="https://ziontechgroup.com"
+                  href="https: //ziontechgroup.com"
                   className="text-cyan - 400 hover:text-cyan -300"
                 >
                   ziontechgroup.com
@@ -444,6 +444,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

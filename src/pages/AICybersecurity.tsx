@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   Brain, 
   Zap, 
   CheckCircle,
@@ -33,102 +33,62 @@ import {
   Server,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AICybersecurity() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms for real-time threat identification and analysis',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Brain,title: 'AI Threat Detection',description: 'Advanced machine learning algorithms for real-time threat identification and analysis',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Shield,
-      title: 'Zero-Day Protection',
-      description: 'Proactive defense against unknown vulnerabilities and emerging threats',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Shield,title: 'Zero-Day Protection',description: 'Proactive defense against unknown vulnerabilities and emerging threats',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Zap,
-      title: 'Real-Time Response',
-      description: 'Instant automated threat response and incident containment',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Zap,title: 'Real-Time Response',description: 'Instant automated threat response and incident containment',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Lock,
-      title: 'Advanced Encryption',
-      description: 'Quantum-resistant encryption and secure communication protocols',
-      color: 'from-purple-500 to-indigo-500'
-    },
+      icon: Lock,title: 'Advanced Encryption',description: 'Quantum-resistant encryption and secure communication protocols',color: 'from-purple-500 to-indigo-500'
+    };
     {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Comprehensive network monitoring and intrusion prevention',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Network,title: 'Network Security',description: 'Comprehensive network monitoring and intrusion prevention',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Database,
-      title: 'Data Protection',
-      description: 'End-to-end data security with AI-powered access controls',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Database,title: 'Data Protection',description: 'End-to-end data security with AI-powered access controls',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Detect threats 10x faster than traditional methods',
-    'Reduce false positives by 85%',
-    'Prevent 99.9% of cyber attacks',
-    '24/7 automated security monitoring',
-    'Compliance with industry standards',
-    'Scalable security for any organization'
-  ];
+    'Detect threats 10x faster than traditional methodsReduce false positives by 85%',
+    'Prevent 99.9% of cyber attacks24/7 automated security monitoring',
+    'Compliance with industry standardsScalable security for any organization'
+  ],
 
   const useCases = [
     {
-      title: 'Enterprise Security',
-      description: 'Comprehensive cybersecurity for large organizations and corporations',
-      icon: Building
-    },
+      title: 'Enterprise Security',description: 'Comprehensive cybersecurity for large organizations and corporations',icon: Building
+    };
     {
-      title: 'Cloud Security',
-      description: 'Protect cloud infrastructure and applications from cyber threats',
-      icon: Cloud
-    },
+      title: 'Cloud Security',description: 'Protect cloud infrastructure and applications from cyber threats',icon: Cloud
+    };
     {
-      title: 'IoT Security',
-      description: 'Secure connected devices and Internet of Things networks',
-      icon: Cpu
-    },
+      title: 'IoT Security',description: 'Secure connected devices and Internet of Things networks',icon: Cpu
+    };
     {
-      title: 'Financial Security',
-      description: 'Protect financial systems and prevent fraud with AI',
-      icon: DollarSign
+      title: 'Financial Security',description: 'Protect financial systems and prevent fraud with AI',icon: DollarSign
     }
   ];
-
   const securityLayers = [
     {
-      name: 'Perimeter Security',
-      description: 'Advanced firewall and network protection systems',
-      features: ['DDoS protection', 'Intrusion detection', 'Traffic analysis']
+      name: 'Perimeter Security',description: 'Advanced firewall and network protection systems',features: ['DDoS protectionIntrusion detection', 'Traffic analysis']
     },
     {
-      name: 'Endpoint Security',
-      description: 'Device-level protection for all connected endpoints',
-      features: ['Malware detection', 'Behavioral analysis', 'Threat isolation']
+      name: 'Endpoint Security',description: 'Device-level protection for all connected endpoints',features: ['Malware detectionBehavioral analysis', 'Threat isolation']
     },
     {
-      name: 'Application Security',
-      description: 'Secure software development and runtime protection',
-      features: ['Code analysis', 'Vulnerability scanning', 'Runtime monitoring']
+      name: 'Application Security',description: 'Secure software development and runtime protection',features: ['Code analysisVulnerability scanning', 'Runtime monitoring']
     },
     {
-      name: 'Data Security',
-      description: 'Protection for sensitive data and information',
-      features: ['Encryption', 'Access controls', 'Data loss prevention']
+      name: 'Data Security',description: 'Protection for sensitive data and information',features: ['EncryptionAccess controls', 'Data loss prevention']
     }
-  ];
+  ],
 
   return (
     <>
@@ -382,7 +342,7 @@ export default function AICybersecurity() {
                 Cybersecurity Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various security needs and industries, 
+                Our AI platform adapts to various security needs and industries;
                 providing tailored protection for different environments.
               </p>
             </motion.div>
@@ -447,7 +407,7 @@ export default function AICybersecurity() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Security Assessment
                 </motion.button>
@@ -457,5 +417,5 @@ export default function AICybersecurity() {
         </section>
       </div>
     </>
-  );
+  )
 }

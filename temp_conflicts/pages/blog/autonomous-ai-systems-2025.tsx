@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AutonomousAISystemsBlog() {
   return (
@@ -197,7 +197,7 @@ export default function AutonomousAISystemsBlog() {
             {/* Related Articles */}
             <section className="mt-16">
               <h2 className="text-2xl font-bold mb-6 text-white">Related Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                 <Link href="/blog" className="block bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                   <h3 className="text-lg font-bold mb-2 text-cyan-400">Automation in Modern DevOps</h3>
                   <p className="text-white/70 text-sm">How automated CI/CD pipelines are revolutionizing software development</p>
@@ -212,5 +212,5 @@ export default function AutonomousAISystemsBlog() {
         </main>
       </div>
     </>
-  );
+  )
 }

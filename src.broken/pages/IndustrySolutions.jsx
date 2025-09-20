@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-export default IndustrySolutions;
+import React, { useState } from 'react',
+export default IndustrySolutions,
 import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory, Store, Home, GraduationCap, Stethoscope const IndustrySolutions = () => {
 
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedIndustry, setSelectedIndustry] = useState('all');
-    const [selectedSolutionType, setSelectedSolutionType] = useState('all');
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [selectedIndustry, setSelectedIndustry] = useState('all'),
+    const [selectedSolutionType, setSelectedSolutionType] = useState('all'),
     // Industry - specific solutions data
-    const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
-    const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
+    const industries = ['allHealthcare', 'FinanceManufacturing', 'RetailEducation', 'LogisticsReal Estate', 'EnergyCybersecurity', 'LegalMedia', 'Transportation'],
+    const solutionTypes = ['allDigital Health', 'FinTechIndustry 4.0', 'Digital CommerceEdTech', 'Supply ChainPropTech', 'Energy TechSecurity', 'LegalTechMediaTech', 'Mobility'],
     const filteredSolutions = industrySolutions.filter(solution => {
-        const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
-        return matchesSearch && matchesIndustry && matchesSolutionType}) ;
+        const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType,
+        return matchesSearch && matchesIndustry && matchesSolutionType}) ,
     const formatPrice = (price, model) => {
         switch(model) {
             case 'monthly':
-                return `$${price.toLocaleString () }/month`;
+                return `$${price.toLocaleString () }/month`,
             case 'hourly':
-                return `$${price}/hour`;
+                return `$${price}/hour`,
             case 'project - based':
-                return `$${price.toLocaleString () }`;
+                return `$${price.toLocaleString () }`,
             default:
                 return `$${price.toLocaleString () }`}
-    };
+    },
     const getIndustryColor = (score) => {
-        if(score >= 95) return 'text-green - 500';
-        if(score >= 90) return 'text-blue - 500';
-        if(score >= 85) return 'text-yellow-500';
-        return 'text-orange - 500'};
+        if(score >= 95) return 'text-green - 500',
+        if(score >= 90) return 'text-blue - 500',
+        if(score >= 85) return 'text-yellow-500',
+        return 'text-orange - 500'},
     const getIndustryIcon = (industry) => {
         switch(industry) {
-            case 'Healthcare': return < Stethoscope className="w-6 h-6"/>;
-            case 'Finance': return < CreditCard className="w-6 h-6"/>;
-            case 'Manufacturing': return < Factory className="w-6 h-6"/>;
-            case 'Retail': return < Store className="w-6 h-6"/>;
-            case 'Education': return < GraduationCap className="w-6 h-6"/>;
-            case 'Logistics': return < Truck className="w-6 h-6"/>;
-            case 'Real Estate': return < Home className="w-6 h-6"/>;
-            case 'Energy': return < Zap className="w-6 h-6"/>;
+            case 'Healthcare': return < Stethoscope className="w-6 h-6"/>,
+            case 'Finance': return < CreditCard className="w-6 h-6"/>,
+            case 'Manufacturing': return < Factory className="w-6 h-6"/>,
+            case 'Retail': return < Store className="w-6 h-6"/>,
+            case 'Education': return < GraduationCap className="w-6 h-6"/>,
+            case 'Logistics': return < Truck className="w-6 h-6"/>,
+            case 'Real Estate': return < Home className="w-6 h-6"/>,
+            case 'Energy': return < Zap className="w-6 h-6"/>,
             default: return < Building className="w-6 h-6"/>}
-    };
+    },
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate -900">
       <div className="container mx - auto px-4 py-8">
         {/* Header */}
@@ -101,7 +101,7 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
                 <div className="text-2xl font - bold text-white mb-2">
                   {formatPrice(solution.price, solution.pricingModel) }
                 </div>
-                <div className="text-sm text-gray -400">{solution.pricingModel.replace('-', ' ') }</div>
+                <div className="text-sm text-gray -400">{solution.pricingModel.replace('- ') }</div>
               </div>
 
               <div className="mb-4">
@@ -160,5 +160,5 @@ import { Search, Zap, CreditCard, Truck, Phone, Mail, MapPin, Building, Factory,
           </div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}}}}}}}}}

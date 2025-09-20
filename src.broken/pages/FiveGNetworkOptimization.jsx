@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
 ,
@@ -22,7 +22,7 @@ export default function Page() {
                 title: "Quality Assurance",
                 description: "Automated quality monitoring and self - healing capabilities for consistent service delivery"
 
-        ].map ( (feature, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10 hover:border-green - 500 / 50 transition -colors">;
+        ].map ( (feature, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10 hover: border-green - 500 / 50 transition -colors">,
                   <feature.icon className="w-12 h-12 text-green - 400 mb-6"/>
                   <h3 className="text-xl font - semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray - 300 leading -relaxed">{feature.description}</p>
@@ -62,7 +62,7 @@ export default function Page() {
                 title: "Uptime Guarantee",
                 description: "Enhanced reliability and service availability"
 
-        ].map((metric, index) => (<div key={index} className="text-center">;
+        ].map((metric, index) => (<div key={index} className="text-center">,
                   <div className="bg-gradient - to - r from - green - 600 to - blue - 600 rounded-2xl p - 8 mb-4">
                     <h3 className="text-3xl font - bold text-white mb-2">{metric.metric}</h3>
                     <h4 className="text-lg font - semibold text-white">{metric.title}</h4>
@@ -100,7 +100,7 @@ export default function Page() {
                 title: "Autonomous Vehicles",
                 description: "Provide the reliable, low-latency connectivity required for vehicle - to - everything communication."
 
-        ].map((useCase, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10">;
+        ].map((useCase, index) => (<div key={index} className="bg-white / 5 backdrop - blur - lg rounded-2xl p - 8 border border-white / 10">,
                   <h3 className="text-xl font - semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray - 300 leading -relaxed">{useCase.description}</p>
                 </div>) ) }
@@ -127,5 +127,5 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) };
+    </>) },
 }}}}

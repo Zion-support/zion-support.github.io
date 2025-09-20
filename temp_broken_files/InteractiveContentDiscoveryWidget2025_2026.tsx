@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Search,
@@ -9,177 +9,177 @@ import {,
   List,
   Star,
   Clock,
-  TrendingUp;
-  ArrowRight;
-  Play;
-  Download;
-  Bookmark;
-  Share2;
-  Eye;
-  Heart;
-  MessageCircle;
-  Zap;
-  Brain;
-  Cpu;
-  Globe;
-  Rocket;
-  Shield;
-  Target;
-  Users;
-  ChevronDown;
-  X,
-} from 'lucide-react';
+  TrendingUp,
+  ArrowRight,
+  Play,
+  Download,
+  Bookmark,
+  Share2,
+  Eye,
+  Heart,
+  MessageCircle,
+  Zap,
+  Brain,
+  Cpu,
+  Globe,
+  Rocket,
+  Shield,
+  Target,
+  Users,
+  ChevronDown,
+  X
+} from 'lucide-react',
 const InteractiveContentDiscoveryWidget2025_2026 = () => {,
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [viewModesetViewMode] = useState('grid');
-  const [sortBysetSortBy] = useState('trending');
-  const [isFilterOpensetIsFilterOpen] = useState(false);
-  const [selectedContentsetSelectedContent] = useState(null);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [searchQuerysetSearchQuery] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [viewModesetViewMode] = useState('grid'),
+  const [sortBysetSortBy] = useState('trending'),
+  const [isFilterOpensetIsFilterOpen] = useState(false),
+  const [selectedContentsetSelectedContent] = useState(null),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const categories = [,
-    { id: ''allname: 'All 'Contenticon: Gridcount: 156 ,};
-    { id: 'ai-2025'name: 'AI 2025'icon: Braincount: 42 ,};
-    { id: 'ai-2026'name: 'AI 2026'icon: Cpucount: 38 ,};
-    { id: ''quantumname: 'Quantum 'Computingicon: Zapcount: 24 ,};
-    { id: ''automationname: ''Automationicon: Targetcount: 32 ,};
-    { id: 'future-'techname: 'Future 'Techicon: Rocketcount: 20 ,}
-  ];
+    { id: ''allname: 'All 'Contenticon: Gridcount: 156 },
+    { id: 'ai-2025'name: 'AI 2025'icon: Braincount: 42 },
+    { id: 'ai-2026'name: 'AI 2026'icon: Cpucount: 38 },
+    { id: ''quantumname: 'Quantum 'Computingicon: Zapcount: 24 },
+    { id: ''automationname: ''Automationicon: Targetcount: 32 },
+    { id: 'future-'techname: 'Future 'Techicon: Rocketcount: 20 }
+  ],
   const contentItems = [,
     {,
-      id: 1;
-      title: 'Neural Consciousness AI: The Future is Here';
-      description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.';
-      category: 'ai-2025';
-      type: 'article';
-      readTime: '8 min read';
-      views: 12500;
-      likes: 892;
-      comments: 156;
-      trending: true;
-      featured: true;
-      image: '/api/placeholder/400/250';
-      author: 'Dr. Sarah Chen';
-      publishedAt: '2025-01-15';
-      tags: [AI', 'Consciousness'Neural 'NetworksFuture Tech'],
-    };
+      id: 1,
+      title: 'Neural Consciousness AI: The Future is Here',
+      description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.',
+      category: 'ai-2025',
+      type: 'article',
+      readTime: '8 min read',
+      views: 12500,
+      likes: 892,
+      comments: 156,
+      trending: true,
+      featured: true,
+      image: '/api/placeholder/400/250',
+      author: 'Dr. Sarah Chen',
+      publishedAt: '2025-01-15',
+      tags: [AIConsciousness'Neural 'NetworksFuture Tech']
+    },
     {,
-      id: 2;
-      title: 'Quantum-Neural Fusion: Computing Revolution';
-      description: 'Discover how quantum computing and neural networks are merging to create unprecedented computational power and intelligence.';
-      category: 'quantum';
-      type: 'video';
-      readTime: '15 min watch';
-      views: 8900;
-      likes: 654;
-      comments: 89;
-      trending: true;
-      featured: false;
-      image: '/api/placeholder/400/250';
-      author: 'Prof. Michael Rodriguez';
-      publishedAt: '2025-01-12';
-      tags: ['Quantum 'ComputingNeural 'Networks', 'AI'Technology'],
-    };
+      id: 2,
+      title: 'Quantum-Neural Fusion: Computing Revolution',
+      description: 'Discover how quantum computing and neural networks are merging to create unprecedented computational power and intelligence.',
+      category: 'quantum',
+      type: 'video',
+      readTime: '15 min watch',
+      views: 8900,
+      likes: 654,
+      comments: 89,
+      trending: true,
+      featured: false,
+      image: '/api/placeholder/400/250',
+      author: 'Prof. Michael Rodriguez',
+      publishedAt: '2025-01-12',
+      tags: ['Quantum 'ComputingNeural 'NetworksAI'Technology']
+    },
     {,
-      id: 3;
-      title: 'AI 2026: Global Ecosystem Vision';
-      description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.';
-      category: 'ai-2026';
-      type: 'interactive';
-      readTime: '12 min explore';
-      views: 15600;
-      likes: 1200;
-      comments: 234;
-      trending: false;
-      featured: true;
-      image: '/api/placeholder/400/250';
-      author: 'AI Research Team';
-      publishedAt: '2025-01-10';
-      tags: ['AI 2026'Global 'EcosystemFuture 'Vision', 'Technology'],
-    };
+      id: 3,
+      title: 'AI 2026: Global Ecosystem Vision',
+      description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.',
+      category: 'ai-2026',
+      type: 'interactive',
+      readTime: '12 min explore',
+      views: 15600,
+      likes: 1200,
+      comments: 234,
+      trending: false,
+      featured: true,
+      image: '/api/placeholder/400/250',
+      author: 'AI Research Team',
+      publishedAt: '2025-01-10',
+      tags: ['AI 2026'Global 'EcosystemFuture 'VisionTechnology']
+    },
     {,
-      id: 4;
-      title: 'Autonomous Business Operations 2025';
-      description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.';
-      category: 'automation';
-      type: 'guide';
-      readTime: '20 min read';
-      views: 7800;
-      likes: 567;
-      comments: 123;
-      trending: false;
-      featured: false;
-      image: '/api/placeholder/400/250';
-      author: 'Business AI Team';
-      publishedAt: '2025-01-08';
-      tags: [Automation', 'BusinessAI', 'Operations'],
-    };
+      id: 4,
+      title: 'Autonomous Business Operations 2025',
+      description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.',
+      category: 'automation',
+      type: 'guide',
+      readTime: '20 min read',
+      views: 7800,
+      likes: 567,
+      comments: 123,
+      trending: false,
+      featured: false,
+      image: '/api/placeholder/400/250',
+      author: 'Business AI Team',
+      publishedAt: '2025-01-08',
+      tags: [AutomationBusinessAI', 'Operations']
+    },
     {,
-      id: 5;
-      title: 'Space-Age AI Computing Systems';
-      description: 'Explore AI systems designed for space exploration and interplanetary communication.';
-      category: 'future-tech';
-      type: 'article';
-      readTime: '10 min read';
-      views: 11200;
-      likes: 789;
-      comments: 145;
-      trending: true;
-      featured: false;
-      image: '/api/placeholder/400/250';
-      author: 'Space Tech Division';
-      publishedAt: '2025-01-05';
-      tags: [Space', 'AIComputing', 'Future Tech'],
-    };
+      id: 5,
+      title: 'Space-Age AI Computing Systems',
+      description: 'Explore AI systems designed for space exploration and interplanetary communication.',
+      category: 'future-tech',
+      type: 'article',
+      readTime: '10 min read',
+      views: 11200,
+      likes: 789,
+      comments: 145,
+      trending: true,
+      featured: false,
+      image: '/api/placeholder/400/250',
+      author: 'Space Tech Division',
+      publishedAt: '2025-01-05',
+      tags: [SpaceAIComputing', 'Future Tech']
+    },
     {,
-      id: 6;
-      title: 'Conscious AI Beings: The Next Frontier';
-      description: 'Understanding AI entities with full consciousness and creative capabilities.';
-      category: 'ai-2026';
-      type: 'video';
-      readTime: '18 min watch';
-      views: 9800;
-      likes: 723;
-      comments: 167;
-      trending: false;
-      featured: true;
-      image: '/api/placeholder/400/250';
-      author: 'Consciousness Research Lab';
-      publishedAt: '2025-01-03';
-      tags: [Consciousness', 'AIFuture', 'Philosophy'],
+      id: 6,
+      title: 'Conscious AI Beings: The Next Frontier',
+      description: 'Understanding AI entities with full consciousness and creative capabilities.',
+      category: 'ai-2026',
+      type: 'video',
+      readTime: '18 min watch',
+      views: 9800,
+      likes: 723,
+      comments: 167,
+      trending: false,
+      featured: true,
+      image: '/api/placeholder/400/250',
+      author: 'Consciousness Research Lab',
+      publishedAt: '2025-01-03',
+      tags: [ConsciousnessAIFuture', 'Philosophy']
     }
-  ];
+  ],
   const filteredContent = contentItems.filter(item => {,
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
   const sortedContent = [...filteredContent].sort((ab) => {,
     switch (sortBy) {,
       case 'trending':,
-        return b.views - a.views;
+        return b.views - a.views,
       case 'newest':,
-        return new Date(b.publishedAt) - new Date(a.publishedAt);
+        return new Date(b.publishedAt) - new Date(a.publishedAt),
       case 'popular':,
-        return b.likes - a.likes;
-      default: return 0,}
-  });
+        return b.likes - a.likes,
+      default: return 0}
+  }),
   const getTypeIcon = (type) => {,
     switch (type) {,
-      case 'video': return Play;
-      case 'interactive': return Zap;
-      case 'guide': return Bookmark;
-      default: return Eye,}
-  };
+      case 'video': return Play,
+      case 'interactive': return Zap,
+      case 'guide': return Bookmark,
+      default: return Eye}
+  },
   const getCategoryIcon = (categoryId) => {,
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Grid;
-  };
+    const category = categories.find(cat => cat.id === categoryId),
+    return category ? category.icon : Grid,
+  },
   return (,
     <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
@@ -193,12 +193,12 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
           Explore cutting-edge AI researchbreakthrough technologiesand future innovations,
         </p>,
       </div>,
-      {/* Search and Filters */,}
+      {/* Search and Filters */}
       <div,
         className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20",
       >,
         <div className="flex flex-col lg: flex-row gap-4">,
-          {/* Search */,}
+          {/* Search */}
           <div className="flex-1 relative">,
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />,
             <input,
@@ -209,7 +209,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
               className="w-full pl-12 pr-4 py-3 bg-slate-700/50 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
             />,
           </div>,
-          {/* Category Filter */,}
+          {/* Category Filter */}
           <div className="relative">,
             <select,
               value={selectedCategory}
@@ -217,7 +217,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
               className="appearance-none bg-slate-700/50 border border-white/20 rounded-xl px-4 py-3 pr-10 text-white focus: outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20",
             >,
               {categories.map(category => (,
-                <option key={category.id,} value={category.id} className="bg-slate-800">,
+                <option key={category.id} value={category.id} className="bg-slate-800">,
                   {category.name} ({category.count}),
                 </option>,
               ))}
@@ -237,19 +237,19 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
             </select>,
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />,
           </div>,
-          {/* View Mode */,}
+          {/* View Mode */}
           <div className="flex bg-slate-700/50 rounded-xl p-1">,
             <button,
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-lg transition-colors ${,
-                viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white',}`}
+                viewMode === 'grid' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white'}`}
             >,
               <Grid className="w-5 h-5" />,
             </button>,
             <button,
               onClick={() => setViewMode('list')}
               className={`p-2 rounded-lg transition-colors ${,
-                viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white',}`}
+                viewMode === 'list' ? 'bg-purple-600 text-white' : 'text-gray-400 hover: text-white'}`}
             >,
               <List className="w-5 h-5" />,
             </button>,
@@ -261,17 +261,17 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
         className={`grid gap-6 ${,
           viewMode === 'grid',
             ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3',
-            : 'grid-cols-1',}`}
+            : 'grid-cols-1'}`}
       >,
         <div>,
           {sortedContent.map((itemindex) => {,
-            const TypeIcon = getTypeIcon(item.type);
-            const CategoryIcon = getCategoryIcon(item.category);
+            const TypeIcon = getTypeIcon(item.type),
+            const CategoryIcon = getCategoryIcon(item.category),
             return (,
               <div,
                 key={item.id}
                 className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-white/20 hover: border-purple-400/50 transition-all duration-300 group cursor-pointer ${,
-                  viewMode === 'list' ? 'flex' : '',}`}
+                  viewMode === 'list' ? 'flex' : ''}`}
                 onClick={() => setSelectedContent(item)}
               >,
                 {viewMode === 'grid' ? (,
@@ -284,20 +284,18 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                         className="w-full h-full object-cover group-hover: scale-105 transition-transform duration-300",
                       />,
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />,
-                      {/* Badges */,}
+                      {/* Badges */}
                       <div className="absolute top-4 left-4 flex gap-2">,
                         {item.featured && (,
                           <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">,
                             <Star className="w-3 h-3" />,
                             Featured,
-                          </span>,
-                        )}
+                          </span>)}
                         {item.trending && (,
                           <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">,
                             <TrendingUp className="w-3 h-3" />,
                             Trending,
-                          </span>,
-                        )}
+                          </span>)}
                       </div>,
                       {/* Type Icon */}
                       <div className="absolute top-4 right-4">,
@@ -318,7 +316,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                     {/* Content */}
                     <div className="p-6">,
                       <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">,
-                        {item.title,}
+                        {item.title}
                       </h3>,
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">,
                         {item.description}
@@ -358,7 +356,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                   <>,
                     <div className="w-48 h-32 rounded-l-2xl overflow-hidden flex-shrink-0">,
                       <img,
-                        src={item.image,}
+                        src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover",
                       />,
@@ -366,14 +364,13 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                     <div className="flex-1 p-6">,
                       <div className="flex items-start justify-between mb-2">,
                         <h3 className="text-xl font-bold text-white group-hover: text-purple-400 transition-colors">,
-                          {item.title,}
+                          {item.title}
                         </h3>,
                         <div className="flex gap-2">,
                           {item.featured && (,
                             <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">,
                               Featured,
-                            </span>,
-                          )}
+                            </span>)}
                           <div className="bg-black/50 backdrop-blur-sm rounded-full p-2">,
                             <TypeIcon className="w-4 h-4 text-white" />,
                           </div>,
@@ -403,9 +400,9 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                       </div>,
                     </div>,
                   </>,
-                ),}
+                )}
               </div>,
-            );
+            ),
           })}
         </div>,
       </div>,
@@ -435,7 +432,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
               </div>,
               <div className="p-8">,
                 <h2 className="text-3xl font-bold text-white mb-4">,
-                  {selectedContent.title,}
+                  {selectedContent.title}
                 </h2>,
                 <p className="text-gray-300 text-lg mb-6">,
                   {selectedContent.description}
@@ -461,13 +458,12 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                       className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm",
                     >,
                       {tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 <div className="flex gap-4">,
                   <button className="bg-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover: bg-purple-700 transition-colors flex items-center gap-2">,
                     <Play className="w-5 h-5" />,
-                    {selectedContent.type === 'video' ? 'Watch Now' : 'Read More',}
+                    {selectedContent.type === 'video' ? 'Watch Now' : 'Read More'}
                   </button>,
                   <button className="border border-white/20 text-white px-6 py-3 rounded-xl font-semibold hover: bg-white/10 transition-colors flex items-center gap-2">,
                     <Bookmark className="w-5 h-5" />,
@@ -481,9 +477,9 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
               </div>,
             </div>,
           </div>,
-        ),}
+        )}
       </div>,
     </div>,
-  );
-export default InteractiveContentDiscoveryWidget2025_2026;
+  ),
+export default InteractiveContentDiscoveryWidget2025_2026,
 }

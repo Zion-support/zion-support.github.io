@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   BarChart3,
   TrendingUp,
@@ -27,110 +27,72 @@ import {
   Cpu,
   Network,
   FileText
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function DataAnalytics() {
   const features = [
     {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Connect and consolidate data from multiple sources into a unified analytics platform.'
-    },
+      icon: Database,title: 'Data Integration',description: 'Connect and consolidate data from multiple sources into a unified analytics platform.'
+    };
     {
-      icon: Brain,
-      title: 'Advanced Analytics',
-      description: 'Leverage machine learning and AI for predictive insights and pattern recognition.'
-    },
+      icon: Brain,title: 'Advanced Analytics',description: 'Leverage machine learning and AI for predictive insights and pattern recognition.'
+    };
     {
-      icon: BarChart3,
-      title: 'Real-time Dashboards',
-      description: 'Interactive visualizations that provide instant insights into your business performance.'
-    },
+      icon: BarChart3,title: 'Real-time Dashboards',description: 'Interactive visualizations that provide instant insights into your business performance.'
+    };
     {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
+      icon: Zap,title: 'Automated Reporting',description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
     }
-  ];
+  ],
 
   const solutions = [
     {
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable insights with interactive dashboards and reports',
-      icon: BarChart3,
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated reporting', 'Mobile access']
+      title: 'Business Intelligence',description: 'Transform raw data into actionable insights with interactive dashboards and reports',icon: BarChart3,benefits: ['Real-time monitoringCustom dashboards', 'Automated reportingMobile access']
     },
     {
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',
-      icon: Brain,
-      benefits: ['Trend forecasting', 'Risk assessment', 'Opportunity identification', 'Scenario planning']
+      title: 'Predictive Analytics',description: 'Forecast future trends and outcomes using advanced statistical models and ML algorithms',icon: Brain,benefits: ['Trend forecastingRisk assessment', 'Opportunity identificationScenario planning']
     },
     {
-      title: 'Data Mining',
-      description: 'Discover hidden patterns and relationships in large datasets',
-      icon: Search,
-      benefits: ['Pattern recognition', 'Anomaly detection', 'Customer segmentation', 'Market insights']
+      title: 'Data Mining',description: 'Discover hidden patterns and relationships in large datasets',icon: Search,benefits: ['Pattern recognitionAnomaly detection', 'Customer segmentationMarket insights']
     },
     {
-      title: 'Performance Analytics',
-      description: 'Monitor and optimize business performance across all key metrics',
-      icon: Activity,
-      benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment']
+      title: 'Performance Analytics',description: 'Monitor and optimize business performance across all key metrics',icon: Activity,benefits: ['KPI trackingPerformance optimization', 'BenchmarkingGoal alignment']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      industry: 'Retail',
-      description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
-      icon: Users,
-      metrics: ['Customer Lifetime Value', 'Inventory Turnover', 'Sales Growth', 'Conversion Rates']
+      industry: 'Retail',description: 'Customer behavior analysis, inventory optimization, and sales forecasting',
+      icon: Users,metrics: ['Customer Lifetime ValueInventory Turnover', 'Sales GrowthConversion Rates']
     },
     {
-      industry: 'Finance',
-      description: 'Risk assessment, fraud detection, and investment portfolio optimization',
-      icon: Shield,
-      metrics: ['Risk Score', 'Fraud Detection Rate', 'Portfolio Performance', 'Compliance Metrics']
+      industry: 'Finance',description: 'Risk assessment, fraud detection, and investment portfolio optimization',
+      icon: Shield,metrics: ['Risk ScoreFraud Detection Rate', 'Portfolio PerformanceCompliance Metrics']
     },
     {
-      industry: 'Healthcare',
-      description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
-      icon: Activity,
-      metrics: ['Patient Outcomes', 'Resource Utilization', 'Treatment Success Rate', 'Cost Efficiency']
+      industry: 'Healthcare',description: 'Patient outcome prediction, resource optimization, and treatment effectiveness',
+      icon: Activity,metrics: ['Patient OutcomesResource Utilization', 'Treatment Success RateCost Efficiency']
     },
     {
-      industry: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and production optimization',
-      icon: Cpu,
-      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction']
+      industry: 'Manufacturing',description: 'Predictive maintenance, quality control, and production optimization',
+      icon: Cpu,metrics: ['Equipment UptimeQuality Score', 'Production EfficiencyCost Reduction']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Improved Decision Making',
-      description: 'Make data-driven decisions with confidence using real-time insights and analytics'
-    },
+      icon: TrendingUp,title: 'Improved Decision Making',description: 'Make data-driven decisions with confidence using real-time insights and analytics'
+    };
     {
-      icon: Zap,
-      title: 'Operational Efficiency',
-      description: 'Streamline processes and optimize operations based on data-driven insights'
-    },
+      icon: Zap,title: 'Operational Efficiency',description: 'Streamline processes and optimize operations based on data-driven insights'
+    };
     {
-      icon: Eye,
-      title: 'Better Visibility',
-      description: 'Gain comprehensive visibility into all aspects of your business performance'
-    },
+      icon: Eye,title: 'Better Visibility',description: 'Gain comprehensive visibility into all aspects of your business performance'
+    };
     {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop informed strategies and plans based on predictive analytics and trends'
+      icon: Target,title: 'Strategic Planning',description: 'Develop informed strategies and plans based on predictive analytics and trends'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -354,7 +316,7 @@ export default function DataAnalytics() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Data analytics is transforming industries across the globe,
+              Data analytics is transforming industries across the globe;
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
@@ -447,24 +409,16 @@ export default function DataAnalytics() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Assessment',
-                description: 'Evaluate your current data infrastructure and analytics needs'
-              },
+                step: '01',title: 'Assessment',description: 'Evaluate your current data infrastructure and analytics needs'
+              };
               {
-                step: '02',
-                title: 'Strategy',
-                description: 'Develop comprehensive analytics strategy and implementation roadmap'
-              },
+                step: '02',title: 'Strategy',description: 'Develop comprehensive analytics strategy and implementation roadmap'
+              };
               {
-                step: '03',
-                title: 'Implementation',
-                description: 'Deploy analytics solutions and configure custom dashboards'
-              },
+                step: '03',title: 'Implementation',description: 'Deploy analytics solutions and configure custom dashboards'
+              };
               {
-                step: '04',
-                title: 'Optimization',
-                description: 'Monitor performance and continuously improve analytics capabilities'
+                step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve analytics capabilities'
               }
             ].map((phase, index) => (
               <motion.div
@@ -497,11 +451,11 @@ export default function DataAnalytics() {
               Ready to Transform Your Data?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how data analytics can revolutionize your business intelligence,
+              Discover how data analytics can revolutionize your business intelligence;
               improve decision-making, and drive unprecedented growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover: from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105">
                 Start Your Analytics Journey
               </button>
               <button className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
@@ -512,5 +466,5 @@ export default function DataAnalytics() {
         </div>
       </section>
     </div>
-  );
+  )
 }

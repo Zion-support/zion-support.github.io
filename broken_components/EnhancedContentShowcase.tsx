@@ -28,11 +28,11 @@
           </div>,
         </div>,
         </div>,
-            <div className="text-4xl mb-3 text-center">{slide.image,}</div>,
+            <div className="text-4xl mb-3 text-center">{slide.image}</div>,
             <h3 className="text-xl font-bold text-white mb-2 text-center">{slide.title}</h3>,
             <p className="text-gray-200 text-sm text-center mb-4">{slide.description}</p>,
             <a,
               href={slide.link}
-              className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center text-sm`,}
+              className={`block w-full bg-gradient-to-r ${slide.gradient} text-white py-2 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center text-sm`}
       </div>,
     </div>,

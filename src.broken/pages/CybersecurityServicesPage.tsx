@@ -1,22 +1,22 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
   const getPricingModelLabel = (model: anystring) => {
 
     switch(model) {
-      case 'one - time': return 'One - time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project - based': return 'Project - based';
-      default: return model;
+      case 'one - time': return 'One - time',
+      case 'monthly': return 'Monthly',
+      case 'hourly': return 'Hourly',
+      case 'project - based': return 'Project - based',
+      default: return model
     }
-  };
+  },
   return (<>
       <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
-        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        keywords={['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust']}
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Service",
@@ -67,7 +67,7 @@ export default function Page() {
         </section>
         {/* Security Service Categories */}
         <section className="py-16 bg-background">
-          <div  className="container mx - auto px-4 md:px-6">
+          <div  className="container mx - auto px-4 md: px-6">
             <div  className="text-center mb-12">
               <h2 className="text-3xl font - bold tracking - tight mb-4">Security Service Categories</h2>
               <p className="text-muted - foreground max - w-3xl mx -auto">
@@ -78,7 +78,7 @@ export default function Page() {
             <div  className="grid gap-6 md: anygrid - cols -2">
               {SECURITY_SERVICE_CATEGORIES.map ( (category) => {
 
-                const IconComponent = category.icon;
+                const IconComponent = category.icon,
                 return (<Card key={category.id} className="text-center hover:shadow-lg transition - shadow cursor - pointer border-red -500 / 20">
                     <CardHeader>
                       <div  className="bg-red - 500 / 10 w-20 h-20 rounded-full flex items - center justify - center mx - auto mb-4">
@@ -92,7 +92,7 @@ export default function Page() {
                         {category.services.length} Services
                       </Badge>
                     </CardContent>
-                  </Card>) ;
+                  </Card>) ,
               }) }
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function Page() {
         </section>
         {/* Contact CTA */}
         <section className="py-16 bg-zion -blue">
-          <div  className="container mx - auto px-4 md:px-6 text-center">
+          <div  className="container mx - auto px-4 md: px-6 text-center">
             <h2 className="text-3xl font - bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
@@ -302,7 +302,7 @@ export default function Page() {
         <TrustedBySection />
       </main>
       <Footer />
-</>) ;
+</>) 
 }
 // Security Service Card Component
 
@@ -331,47 +331,47 @@ function SecurityServiceCard(...args: any[]) : any {
   Key,
   ShieldCheck
 
- } from 'lucide - react';
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSubcategory, setSelectedSubcategory] = useState < any> ('all') ;
-  const [priceRange, setPriceRange] = useState < any> ('all') ;
+ } from 'lucide - react',
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedSubcategory, setSelectedSubcategory] = useState < any> ('all') ,
+  const [priceRange, setPriceRange] = useState < any> ('all') ,
 
   // Filter only security services
   const securityServices = EXPANDED_SERVICES.filter(service =>
-    service.category === 'Security Services') ;
+    service.category === 'Security Services') ,
   const filteredServices = securityServices.filter(service => {
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                         service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    let matchesPrice = true;
-    if(priceRange === 'low') matchesPrice = service.price < 500;
-    else if(priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
-    else if(priceRange === 'high') matchesPrice = service.price >= 1000;
-    return matchesSearch && matchesSubcategory && matchesPrice;
-  }) ;
+                         service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
+    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory,
+    let matchesPrice = true,
+    if(priceRange === 'low') matchesPrice = service.price < 500,
+    else if(priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000,
+    else if(priceRange === 'high') matchesPrice = service.price >= 1000,
+    return matchesSearch && matchesSubcategory && matchesPrice,
+  }) ,
 
   const getPricingModelIcon = (model: anystring) => {
 
     switch(model) {
-      case 'monthly': return < Clock className="w-4 h-4" />;
-      case 'hourly': return < Zap className="w-4 h-4" />;
-      case 'project - based': return < Zap className="w-4 h-4" />;
-      default: return < DollarSign className="w-4 h-4" />;
+      case 'monthly': return < Clock className="w-4 h-4" />,
+      case 'hourly': return < Zap className="w-4 h-4" />,
+      case 'project - based': return < Zap className="w-4 h-4" />,
+      default: return < DollarSign className="w-4 h-4" />
     }
-  };
+  },
 
   const getPricingModelText = (model: anystring) => {
   const getPricingModelLabel = (model: anystring) => {
 
     switch(model) {
-      case 'one - time': return 'One - time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project - based': return 'Project - based';
-      default: return model;
+      case 'one - time': return 'One - time',
+      case 'monthly': return 'Monthly',
+      case 'hourly': return 'Hourly',
+      case 'project - based': return 'Project - based',
+      default: return model
     }
-  };
+  },
   return (<Card className="hover:shadow-lg transition - shadow border-red -500 / 20">
       <div  className="relative">
         <img
@@ -477,7 +477,7 @@ function SecurityServiceCard(...args: any[]) : any {
   Key,
   Database,
   Monitor
-} from "lucide - react";
+} from "lucide - react",
 
 const CybersecurityServicesPage = () => {
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 50 to - red -50">
@@ -657,9 +657,9 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font - semibold text-zion - slate - light mb-2">No security services found</h3>
               <p className="text-zion - slate - light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={ () => {
-                setSearchQuery('') ;
-                setSelectedSubcategory('all') ;
-                setPriceRange('all') ;
+                setSearchQuery('') ,
+                setSelectedSubcategory('all') ,
+                setPriceRange('all') ,
               }}>
                 Clear Filters
               </Button>
@@ -935,7 +935,7 @@ const CybersecurityServicesPage = () => {
       {/* Contact Information */}
       <section className="py-20 bg-zion - blue -dark">
         <div  className="container mx - auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
             Ready to Secure Your Business?
           </h2>
           <p className="text-zion - slate - light text-lg mb-8 max - w-2xl mx -auto">
@@ -987,7 +987,7 @@ const CybersecurityServicesPage = () => {
       </section>
       <TrustedBySection />
       <QuoteFormSection />
-</>) ;
+</>) 
 }
         </div>
       </div>
@@ -1262,7 +1262,7 @@ const CybersecurityServicesPage = () => {
       {/* Footer Contact */}
       <div  className="bg-gray - 900 text-white py-12">
         <div  className="container mx - auto px-4">
-          <div  className="grid md:grid - cols - 2 gap-8">
+          <div  className="grid md: grid - cols - 2 gap-8">
             <div>
               <h3 className="text-2xl font - bold mb-6 text-red -400">ZionTech Group</h3>
               <p className="text-gray - 300 mb-6">
@@ -1293,13 +1293,13 @@ const CybersecurityServicesPage = () => {
             </div>
           </div>
           <div  className="border-t border-gray - 700 mt-8 pt - 8 text-center text-gray -400">
-            <p>&copy; 2024 ZionTech Group.All rights reserved.| <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red -400 hover:underline">ziontechgroup.com</a></p>
+            <p>&copy, 2024 ZionTech Group.All rights reserved.| <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red -400 hover:underline">ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 }
       </CardContent>
-    </Card>) ;
+    </Card>) ,
 }

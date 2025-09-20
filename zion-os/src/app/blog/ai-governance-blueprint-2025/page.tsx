@@ -1,7 +1,7 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI Governance Blueprint 2025';
-  description: 'Dual-layer policy framework for safe autonomy at scale.',};
+  title: 'AI Governance Blueprint 2025',
+  description: 'Dual-layer policy framework for safe autonomy at scale.'},
 export default function AIGovernanceBlueprint2025Page() {,
   return (,
     <article className="min-h-screen bg-white">,
@@ -32,6 +32,5 @@ export default function AIGovernanceBlueprint2025Page() {,
           <Link href="/blog" className="text-blue-600 hover: text-blue-700 font-semibold">← Back to Blog</Link>,
         </div>,
       </main>,
-    </article>,
-  ),}
+    </article>)}
 ,

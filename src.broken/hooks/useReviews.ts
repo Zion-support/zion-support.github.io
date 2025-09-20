@@ -1,5 +1,5 @@
-// Hook for useReviews;
+// Hook for useReviews,
 export const useUseReviews: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

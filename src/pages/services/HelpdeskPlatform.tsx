@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../../components/SEO";
 import { 
-  MessageCircle, 
+  MessageCircle,
   Brain, 
   Target, 
   Zap, 
@@ -23,42 +23,28 @@ import {
   Mail,
   Calendar,
   Search
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function HelpdeskPlatform() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Support",
-      description: "Intelligent chatbots and virtual assistants for instant customer support."
+      icon: Brain,title: "AI-Powered Support",description: "Intelligent chatbots and virtual assistants for instant customer support."
+    };
+    {
+      icon: MessageCircle,title: "Multi-Channel Support",description: "Unified support across email, chat, phone, and social media platforms."
     },
     {
-      icon: MessageCircle,
-      title: "Multi-Channel Support",
-      description: "Unified support across email, chat, phone, and social media platforms."
-    },
+      icon: Target,title: "Smart Ticket Routing",description: "AI-driven ticket classification and automatic assignment to best agents."
+    };
     {
-      icon: Target,
-      title: "Smart Ticket Routing",
-      description: "AI-driven ticket classification and automatic assignment to best agents."
-    },
+      icon: Zap,title: "Automated Workflows",description: "Intelligent automation for common support scenarios and escalations."
+    };
     {
-      icon: Zap,
-      title: "Automated Workflows",
-      description: "Intelligent automation for common support scenarios and escalations."
-    },
+      icon: BarChart3,title: "Performance Analytics",description: "Comprehensive insights into support metrics and customer satisfaction."
+    };
     {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support metrics and customer satisfaction."
-    },
-    {
-      icon: Shield,
-      title: "Knowledge Management",
-      description: "Centralized knowledge base with AI-powered search and suggestions."
+      icon: Shield,title: "Knowledge Management",description: "Centralized knowledge base with AI-powered search and suggestions."
     }
   ];
-
   const benefits = [
     "Reduce support response time by 60-80% with AI automation",
     "Improve customer satisfaction scores by 40-60%",
@@ -66,63 +52,45 @@ export default function HelpdeskPlatform() {
     "Increase agent productivity by 50-70%",
     "Provide 24/7 customer support availability",
     "Enhance first-call resolution rates by 35-55%"
-  ];
+  ],
 
   const supportChannels = [
     {
-      channel: "Live Chat",
-      description: "Real-time chat support with AI-powered instant responses",
-      icon: MessageCircle
-    },
+      channel: "Live Chat",description: "Real-time chat support with AI-powered instant responses",icon: MessageCircle
+    };
     {
-      channel: "Email Support",
-      description: "Intelligent email routing and automated responses",
-      icon: Mail
-    },
+      channel: "Email Support",description: "Intelligent email routing and automated responses",icon: Mail
+    };
     {
-      channel: "Phone Support",
-      description: "Call center integration with smart call routing",
-      icon: Phone
-    },
+      channel: "Phone Support",description: "Call center integration with smart call routing",icon: Phone
+    };
     {
-      channel: "Social Media",
-      description: "Multi-platform social media support integration",
-      icon: Users
-    },
+      channel: "Social Media",description: "Multi-platform social media support integration",icon: Users
+    };
     {
-      channel: "Self-Service",
-      description: "Knowledge base and FAQ automation",
-      icon: Search
-    },
+      channel: "Self-Service",description: "Knowledge base and FAQ automation",icon: Search
+    };
     {
-      channel: "Mobile Support",
-      description: "Mobile-optimized support experience",
-      icon: Globe
+      channel: "Mobile Support",description: "Mobile-optimized support experience",icon: Globe
     }
   ];
-
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Order support, product inquiries, and customer service automation"
+      industry: "E-commerce",description: "Order support, product inquiries, and customer service automation"
     },
     {
-      industry: "SaaS & Technology",
-      description: "Technical support, user onboarding, and feature assistance"
+      industry: "SaaS & Technology",description: "Technical support, user onboarding, and feature assistance"
     },
     {
-      industry: "Healthcare",
-      description: "Patient support, appointment scheduling, and medical inquiries"
+      industry: "Healthcare",description: "Patient support, appointment scheduling, and medical inquiries"
     },
     {
-      industry: "Financial Services",
-      description: "Account support, transaction assistance, and security help"
+      industry: "Financial Services",description: "Account support, transaction assistance, and security help"
     },
     {
-      industry: "Education",
-      description: "Student support, course assistance, and technical help"
+      industry: "Education",description: "Student support, course assistance, and technical help"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -295,7 +263,7 @@ export default function HelpdeskPlatform() {
               Multi-Channel Support
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our helpdesk platform provides unified support across all customer touchpoints, 
+              Our helpdesk platform provides unified support across all customer touchpoints;
               ensuring consistent and efficient service delivery.
             </p>
           </motion.div>
@@ -389,7 +357,7 @@ export default function HelpdeskPlatform() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300"
+                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover: bg-orange-400/10 transition-all duration-300"
               >
                 Contact Sales
               </motion.button>
@@ -398,5 +366,5 @@ export default function HelpdeskPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

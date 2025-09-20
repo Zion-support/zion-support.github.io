@@ -1,6 +1,6 @@
-import React from 'react';
-export default TermsOfService;}
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default TermsOfService,}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -63,14 +63,14 @@ export default function Page() {
       title: 'Changes to Terms',
       icon: AlertTriangle,
       content: `We reserve the right to modify these Terms at any time.We will notify users of significant changes via email or through our website.Continued use of our services constitutes acceptance of the modified Terms.`
-    },;
-    {;
-      id: 'contact',;
-      title: 'Contact Information',;
-      icon: Mail,;
-      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
-    };
-  ];
+    },
+    {,
+      id: 'contact',
+      title: 'Contact Information',
+      icon: Mail,
+      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`,
+    },
+  ],
 
   const keyProvisions = [{
       title: 'Service Usage',
@@ -95,14 +95,14 @@ export default function Page() {
     {
       title: 'Liability Limits',
       description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
-      icon: AlertTriangle;
-    },;
-    {;
-      title: 'Termination Rights',;
-      description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
-      icon: AlertTriangle;
-    };
-  ];
+      icon: AlertTriangle
+    },
+    {,
+      title: 'Termination Rights',
+      description: 'Either party may terminate services with appropriate notice as specified in service agreements',
+      icon: AlertTriangle
+    },
+  ],
 
   const disputeResolution = [{
       step: '1',
@@ -117,14 +117,14 @@ export default function Page() {
     {
       step: '3',
       title: 'Mediation',
-      description: 'For complex disputes, engage in mediation with a neutral third party';
-    },;
-    {;
-      step: '4',;
-      title: 'Arbitration',;
-      description: 'As a last resort, resolve disputes through binding arbitration';
-    };
-  ];
+      description: 'For complex disputes, engage in mediation with a neutral third party',
+    },
+    {,
+      step: '4',
+      title: 'Arbitration',
+      description: 'As a last resort, resolve disputes through binding arbitration',
+    },
+  ],
 
   return (<>
       <Helmet>
@@ -336,7 +336,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Eye className="w-8 h-8 text-zion -cyan" />
                 Privacy and Data Protection
               </h2>
@@ -356,7 +356,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Shield className="w-8 h-8 text-zion -cyan" />
                 Limitation of Liability
               </h2>
@@ -394,7 +394,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Info className="w-8 h-8 text-zion -cyan" />
                 Disclaimers
               </h2>
@@ -433,7 +433,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Shield className="w-8 h-8 text-zion -cyan" />
                 Indemnification
               </h2>
@@ -470,7 +470,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Calendar className="w-8 h-8 text-zion -cyan" />
                 Termination
               </h2>
@@ -490,7 +490,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Globe className="w-8 h-8 text-zion -cyan" />
                 Governing Law and Dispute Resolution
               </h2>
@@ -510,7 +510,7 @@ export default function Page() {
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Calendar className="w-8 h-8 text-zion -cyan" />
                 Changes to These Terms
               </h2>
@@ -572,7 +572,7 @@ export default function Page() {
         </section>
 
         {/* Table of Contents */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -628,7 +628,7 @@ export default function Page() {
         </section>
 
         {/* Key Provisions */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -683,7 +683,7 @@ export default function Page() {
         </section>
 
         {/* Terms Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white">,
           <div className="max - w-4xl mx -auto">
             <motion.div
               initial = {
@@ -719,7 +719,7 @@ export default function Page() {
         </section>
 
         {/* Dispute Resolution */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -774,7 +774,7 @@ export default function Page() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - purple - 600 to - indigo -700">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient - to - r from - purple - 600 to - indigo -700">,
           <div className="max - w-4xl mx - auto text-center">
             <motion.div
               initial = {
@@ -793,7 +793,7 @@ export default function Page() {
 
 }}
             >
-              <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
+              <h2 className="text-3xl md: text-4xl font - bold text-white mb-4">
                 Questions About These Terms?
               </h2>
               <p className="text-xl text-purple - 100 mb-8">
@@ -816,11 +816,11 @@ export default function Page() {
                 </button>
                 <button     className="px-8 py-4 border border-white text-white font - semibold rounded-lg hover:bg-white hover:text-purple - 600 transition -colors">
                   Request Clarification
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
-};
+                </button>,
+              </div>,
+            </motion.div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) 
+},

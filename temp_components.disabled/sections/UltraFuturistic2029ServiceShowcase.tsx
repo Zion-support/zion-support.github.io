@@ -1,93 +1,70 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles, Filter, Search } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles, Filter, Search } from 'lucide-react',
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities?: string[];
-  spaceCapabilities?: string[];
-  quantumCapabilities?: string[];
-  iotCapabilities?: string[];
-  edgeCapabilities?: string[];
-  securityCapabilities?: string[];
-  blockchainCapabilities?: string[];
-  marketDisruption: string;
-  variant: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
+  aiCapabilities?: string[],
+  spaceCapabilities?: string[],
+  quantumCapabilities?: string[],
+  iotCapabilities?: string[],
+  edgeCapabilities?: string[],
+  securityCapabilities?: string[],
+  blockchainCapabilities?: string[],
+  marketDisruption: string,
+  variant: string
 }
 
 interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-  maxServices?: number;
+  services: Service[],
+  title?: string,
+  subtitle?: string,
+  maxServices?: number
 }
 
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600',
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',
-  'Space Colonization': 'from-red-600 to-orange-600',
-  'Space Mining': 'from-yellow-600 to-orange-600',
-  'Space Architecture': 'from-green-600 to-teal-600',
-  'Space Energy': 'from-yellow-500 to-orange-500',
-  'AI & Business': 'from-blue-600 to-cyan-600',
-  'Quantum & Time': 'from-green-600 to-emerald-600',
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',
-  'AI & Emotional Intelligence': 'from-pink-600 to-rose-600',
-  'AI & Transportation': 'from-blue-600 to-indigo-600',
-  'AI & Creative Content': 'from-purple-600 to-pink-600',
-  'AI & Healthcare': 'from-green-600 to-emerald-600',
-  'AI & Finance': 'from-yellow-600 to-orange-600',
-  'Cybersecurity & Quantum': 'from-indigo-600 to-purple-600',
-  'Blockchain & Identity': 'from-green-600 to-teal-600',
-  'AI & Cybersecurity': 'from-red-600 to-pink-600',
-  'Blockchain & Supply Chain': 'from-blue-600 to-cyan-600',
-  'DeFi & AI': 'from-yellow-500 to-orange-500',
-  'IoT & Smart Cities': 'from-blue-600 to-cyan-600',
-  'IoT & Industrial': 'from-gray-600 to-blue-600',
-  'IoT & Environment': 'from-green-600 to-emerald-600',
-  'Edge Computing & AI': 'from-yellow-600 to-orange-600',
-  'IoT & Security': 'from-red-600 to-pink-600'
-};
+  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600AI & Emotional Intelligence': 'from-pink-600 to-rose-600AI & Transportation': 'from-blue-600 to-indigo-600AI & Creative Content': 'from-purple-600 to-pink-600AI & Healthcare': 'from-green-600 to-emerald-600AI & Finance': 'from-yellow-600 to-orange-600Cybersecurity & Quantum': 'from-indigo-600 to-purple-600Blockchain & Identity': 'from-green-600 to-teal-600AI & Cybersecurity': 'from-red-600 to-pink-600Blockchain & Supply Chain': 'from-blue-600 to-cyan-600DeFi & AI': 'from-yellow-500 to-orange-500IoT & Smart Cities': 'from-blue-600 to-cyan-600IoT & Industrial': 'from-gray-600 to-blue-600IoT & Environment': 'from-green-600 to-emerald-600Edge Computing & AI': 'from-yellow-600 to-orange-600IoT & Security': 'from-red-600 to-pink-600'
+},
 
 const categoryIcons: { [key: string]: any } = {
   'AI & Consciousness': Brain,
@@ -114,7 +91,7 @@ const categoryIcons: { [key: string]: any } = {
   'IoT & Environment': Globe,
   'Edge Computing & AI': Cpu,
   'IoT & Security': Lock
-};
+},
 
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
@@ -122,42 +99,41 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 20
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating' | 'popularity'>('innovation');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [showFilters, setShowFilters] = useState<boolean>(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating' | 'popularity'>('innovation'),
+  const [searchTerm, setSearchTerm] = useState<string>(''),
+  const [showFilters, setShowFilters] = useState<boolean>(false),
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))],
 
   // Filter and sort services
   const filteredServices = services
     .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      return matchesCategory && matchesSearch,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
-          const aLevel = (a as any).innovationLevel || 'Advanced';
-          const bLevel = (b as any).innovationLevel || 'Advanced';
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
+          const aLevel = (a as any).innovationLevel || 'Advanced',
+          const bLevel = (b as any).innovationLevel || 'Advanced',
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
+          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        default:
-          return 0;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        default: return 0
       }
     })
-    .slice(0, maxServices);
+    .slice(0, maxServices),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -167,7 +143,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -178,7 +154,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
         duration: 0.5
       }
     }
-  };
+  },
 
 const UltraFuturistic2029ServiceShowcase: React.FC = () => {
   return (
@@ -186,7 +162,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturistic2029ServiceShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturistic2029ServiceShowcase;
+export default UltraFuturistic2029ServiceShowcase,

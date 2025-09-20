@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
 export default function AcademyAdmin() {
-  const [data, setData] = useState<any>(null);
-  const [live, setLive] = useState<any>(null);
+  const [data, setData] = useState<any>(null),
+  const [live, setLive] = useState<any>(null),
 
   useEffect(() => {
-    fetch('/api/academy/analytics').then((r) => r.json()).then(setData).catch(() => setData({}));
-    const tick = () => fetch('/api/metrics/live').then((r) => r.json()).then(setLive).catch(() => {});
-    tick();
-    const id = setInterval(tick, 5000);
-    return () => clearInterval(id);
-  }, []);
+    fetch('/api/academy/analytics').then((r) => r.json()).then(setData).catch(() => setData({})),
+    const tick = () => fetch('/api/metrics/live').then((r) => r.json()).then(setLive).catch(() => {}),
+    tick(),
+    const id = setInterval(tick, 5000),
+    return () => clearInterval(id),
+  }, []),
 
   return (
     <div className="py-10 space-y-6">
@@ -106,5 +106,5 @@ export default function AcademyAdmin() {
         </div>
       ) : null}
     </div>
-  );
+  ),
 }

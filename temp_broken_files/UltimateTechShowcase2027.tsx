@@ -3,6 +3,6 @@
               </div>,
             </div>,
           </div>,
-  );
-};
-export default UltimateTechShowcase2027;
+  ),
+},
+export default UltimateTechShowcase2027,

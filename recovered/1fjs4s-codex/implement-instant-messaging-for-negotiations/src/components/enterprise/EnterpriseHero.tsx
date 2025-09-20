@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
 
 export function EnterpriseHero() {
   return (
@@ -15,7 +15,7 @@ export function EnterpriseHero() {
             <p className="text-xl text-muted-foreground mb-8">
               Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm: flex-row gap-4">
               <Button size="lg" className="w-full sm:w-auto">
                 Schedule a Demo
               </Button>
@@ -49,5 +49,5 @@ export function EnterpriseHero() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '../ui/button';
+import React from 'react',
+import { Button } from '../ui/button',
 export default function Page() {
 </p>"
         <div className="space-x-4">
@@ -12,7 +12,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-};
-export default ErrorPage;
+  ),
+},
+export default ErrorPage,
 '"

@@ -1,22 +1,22 @@
-import React, { useState } from "react";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Button } from '@/components/ui/button';"
-import { Wallet, Info, Check, ArrowUpRight  } from 'lucide-react';"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';"
-import { useToast } from '@/hooks/use-toast';"
-import { useAuth } from '@/hooks/useAuth';
+import React, { useState } from "react","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Button } from '@/components/ui/button',"
+import { Wallet, Info, Check, ArrowUpRight  } from 'lucide-react',"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',"
+import { useToast } from '@/hooks/use-toast',"
+import { useAuth } from '@/hooks/useAuth',
 
 export default function Page() {
             // Request accounts
-            const address = accounts[0];
+            const address = accounts[0],
             // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
             await ethereum.request({
 
                 method: 'personal_sign',
-                params[address, message];
-            });
-            setIsConnected(true);
+                params[address, message],
+            }),
+            setIsConnected(true),
             toast({
 "
                 title: "Wallet connected",`
@@ -28,21 +28,21 @@ export default function Page() {
                 description: error.message || "Could not connect to wallet","
                 variant: "destructive"
             })}
-    };
+    },
     const handleExportTokens = async () => {
-        setIsExporting(true);
-        setExportStatus('processing');
+        setIsExporting(true),
+        setExportStatus('processing'),
         try {
             // Simulate token export
-            await new Promise(resolve => setTimeout(resolve, 2000));
-            setExportStatus('success');
+            await new Promise(resolve => setTimeout(resolve, 2000)),
+            setExportStatus('success'),
             toast({
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
         catch(error) {
 
-            setExportStatus('error');
+            setExportStatus('error'),
             toast({
 "
                 title: "Export failed","
@@ -52,7 +52,7 @@ export default function Page() {
         finally {
 
             setIsExporting(false)}
-    };
+    },
     return (<Card>
       <CardHeader>"
         <CardTitle className="flex items-center gap-2">"

@@ -7,28 +7,21 @@ export const real2036ITServices = [
     price: '$6,999',
     period: 'month',
     features: [
-      'Quantum computing resources',
-      'Quantum-classical hybrid computing',
-      'Quantum resource management',
-      'Quantum networking',
-      'Quantum security protocols',
-      'Scalable quantum infrastructure'
+      'Quantum computing resourcesQuantum-classical hybrid computing',
+      'Quantum resource managementQuantum networking',
+      'Quantum security protocolsScalable quantum infrastructure'
     ],
     popular: true,
     category: 'Quantum Cloud',
     icon: '☁️⚛️',
     marketPrice: '$8,000-15,000/month',
     benefits: [
-      'Access to quantum computing power',
-      'Hybrid classical-quantum processing',
-      'Future-proof cloud infrastructure',
-      'Quantum advantage in the cloud'
+      'Access to quantum computing powerHybrid classical-quantum processing',
+      'Future-proof cloud infrastructureQuantum advantage in the cloud'
     ],
     useCases: [
-      'Scientific research computing',
-      'Financial modeling',
-      'Drug discovery',
-      'Climate simulation'
+      'Scientific research computingFinancial modeling',
+      'Drug discoveryClimate simulation'
     ]
   },
   {
@@ -39,28 +32,21 @@ export const real2036ITServices = [
     price: '$2,999',
     period: 'month',
     features: [
-      'AI-powered deployment automation',
-      'Intelligent testing strategies',
-      'Predictive infrastructure scaling',
-      'Automated incident response',
-      'Smart resource optimization',
-      'Continuous learning algorithms'
+      'AI-powered deployment automationIntelligent testing strategies',
+      'Predictive infrastructure scalingAutomated incident response',
+      'Smart resource optimizationContinuous learning algorithms'
     ],
     popular: true,
     category: 'DevOps & AI',
     icon: '🤖🔄',
     marketPrice: '$4,000-7,000/month',
     benefits: [
-      '90% faster deployment cycles',
-      'Intelligent infrastructure management',
-      'Predictive scaling',
-      'Automated incident resolution'
+      '90% faster deployment cyclesIntelligent infrastructure management',
+      'Predictive scalingAutomated incident resolution'
     ],
     useCases: [
-      'Continuous deployment',
-      'Infrastructure automation',
-      'Testing automation',
-      'Monitoring and alerting'
+      'Continuous deploymentInfrastructure automation',
+      'Testing automationMonitoring and alerting'
     ]
   },
   {
@@ -71,28 +57,21 @@ export const real2036ITServices = [
     price: '$5,499',
     period: 'month',
     features: [
-      'Quantum-resistant algorithms',
-      'Quantum threat detection',
-      'Quantum encryption',
-      'Quantum key distribution',
-      'Future-proof security',
-      'Real-time threat analysis'
+      'Quantum-resistant algorithmsQuantum threat detection',
+      'Quantum encryptionQuantum key distribution',
+      'Future-proof securityReal-time threat analysis'
     ],
     popular: true,
     category: 'Quantum Security',
     icon: '🔒⚛️',
     marketPrice: '$7,000-12,000/month',
     benefits: [
-      'Quantum-resistant security',
-      'Future-proof protection',
-      'Advanced threat detection',
-      'Military-grade security'
+      'Quantum-resistant securityFuture-proof protection',
+      'Advanced threat detectionMilitary-grade security'
     ],
     useCases: [
-      'Government security',
-      'Financial institutions',
-      'Healthcare data protection',
-      'Critical infrastructure'
+      'Government securityFinancial institutions',
+      'Healthcare data protectionCritical infrastructure'
     ]
   },
   {
@@ -103,28 +82,21 @@ export const real2036ITServices = [
     price: '$3,999',
     period: 'month',
     features: [
-      'Intelligent edge orchestration',
-      'Distributed computing optimization',
-      'Edge AI processing',
-      'Latency optimization',
-      'Edge resource management',
-      'Distributed data processing'
+      'Intelligent edge orchestrationDistributed computing optimization',
+      'Edge AI processingLatency optimization',
+      'Edge resource managementDistributed data processing'
     ],
     popular: true,
     category: 'Edge Computing',
     icon: '🌐⚡',
     marketPrice: '$5,000-8,000/month',
     benefits: [
-      'Ultra-low latency processing',
-      'Distributed computing power',
-      'Edge AI capabilities',
-      'Scalable edge infrastructure'
+      'Ultra-low latency processingDistributed computing power',
+      'Edge AI capabilitiesScalable edge infrastructure'
     ],
     useCases: [
-      'IoT applications',
-      'Real-time analytics',
-      'Edge AI processing',
-      'Distributed computing'
+      'IoT applicationsReal-time analytics',
+      'Edge AI processingDistributed computing'
     ]
   },
   {
@@ -135,28 +107,21 @@ export const real2036ITServices = [
     price: '$4,999',
     period: 'month',
     features: [
-      'Quantum-accelerated queries',
-      'Quantum data compression',
-      'Quantum search algorithms',
-      'Quantum data indexing',
-      'Quantum data analytics',
-      'Hybrid quantum-classical storage'
+      'Quantum-accelerated queriesQuantum data compression',
+      'Quantum search algorithmsQuantum data indexing',
+      'Quantum data analyticsHybrid quantum-classical storage'
     ],
     popular: true,
     category: 'Quantum Database',
     icon: '🗄️⚛️',
     marketPrice: '$6,000-10,000/month',
     benefits: [
-      '1000x faster database queries',
-      'Quantum data compression',
-      'Advanced search capabilities',
-      'Future-proof data management'
+      '1000x faster database queriesQuantum data compression',
+      'Advanced search capabilitiesFuture-proof data management'
     ],
     useCases: [
-      'Big data analytics',
-      'Real-time search',
-      'Data warehousing',
-      'Business intelligence'
+      'Big data analyticsReal-time search',
+      'Data warehousingBusiness intelligence'
     ]
   },
   {
@@ -167,28 +132,21 @@ export const real2036ITServices = [
     price: '$2,499',
     period: 'month',
     features: [
-      'AI threat detection',
-      'Intelligent firewall management',
-      'Behavioral analysis',
-      'Anomaly detection',
-      'Automated threat response',
-      'Predictive security analytics'
+      'AI threat detectionIntelligent firewall management',
+      'Behavioral analysisAnomaly detection',
+      'Automated threat responsePredictive security analytics'
     ],
     popular: true,
     category: 'Network Security',
     icon: '🛡️🤖',
     marketPrice: '$3,500-6,000/month',
     benefits: [
-      'Proactive threat detection',
-      'Automated security response',
-      'Intelligent network protection',
-      'Reduced false positives'
+      'Proactive threat detectionAutomated security response',
+      'Intelligent network protectionReduced false positives'
     ],
     useCases: [
-      'Enterprise network security',
-      'Cloud security',
-      'IoT security',
-      'Remote work security'
+      'Enterprise network securityCloud security',
+      'IoT securityRemote work security'
     ]
   },
   {
@@ -199,28 +157,21 @@ export const real2036ITServices = [
     price: '$7,999',
     period: 'month',
     features: [
-      'Quantum communication protocols',
-      'Quantum routing algorithms',
-      'Quantum entanglement distribution',
-      'Quantum network optimization',
-      'Quantum network security',
-      'Quantum internet standards'
+      'Quantum communication protocolsQuantum routing algorithms',
+      'Quantum entanglement distributionQuantum network optimization',
+      'Quantum network securityQuantum internet standards'
     ],
     popular: false,
     category: 'Quantum Internet',
     icon: '🌐⚛️',
     marketPrice: '$10,000-20,000/month',
     benefits: [
-      'Unbreakable quantum communication',
-      'Quantum network optimization',
-      'Future internet protocols',
-      'Quantum internet infrastructure'
+      'Unbreakable quantum communicationQuantum network optimization',
+      'Future internet protocolsQuantum internet infrastructure'
     ],
     useCases: [
-      'Government communications',
-      'Financial networks',
-      'Research networks',
-      'Quantum internet backbone'
+      'Government communicationsFinancial networks',
+      'Research networksQuantum internet backbone'
     ]
   },
   {
@@ -231,28 +182,21 @@ export const real2036ITServices = [
     price: '$1,999',
     period: 'month',
     features: [
-      'AI-powered monitoring',
-      'Predictive maintenance',
-      'Intelligent alerting',
-      'Performance optimization',
-      'Automated monitoring',
-      'Resource optimization'
+      'AI-powered monitoringPredictive maintenance',
+      'Intelligent alertingPerformance optimization',
+      'Automated monitoringResource optimization'
     ],
     popular: true,
     category: 'Infrastructure Monitoring',
     icon: '📊🤖',
     marketPrice: '$3,000-5,000/month',
     benefits: [
-      'Proactive issue detection',
-      'Automated monitoring',
-      'Performance optimization',
-      'Reduced downtime'
+      'Proactive issue detectionAutomated monitoring',
+      'Performance optimizationReduced downtime'
     ],
     useCases: [
-      'Server monitoring',
-      'Network monitoring',
-      'Application monitoring',
-      'Cloud infrastructure'
+      'Server monitoringNetwork monitoring',
+      'Application monitoringCloud infrastructure'
     ]
   },
   {
@@ -263,28 +207,21 @@ export const real2036ITServices = [
     price: '$5,499',
     period: 'month',
     features: [
-      'Quantum data compression',
-      'Quantum data encoding',
-      'Quantum storage algorithms',
-      'Quantum data optimization',
-      'Hybrid quantum-classical storage',
-      'Quantum storage security'
+      'Quantum data compressionQuantum data encoding',
+      'Quantum storage algorithmsQuantum data optimization',
+      'Hybrid quantum-classical storageQuantum storage security'
     ],
     popular: true,
     category: 'Quantum Storage',
     icon: '💾⚛️',
     marketPrice: '$7,000-12,000/month',
     benefits: [
-      '100x data compression',
-      'Quantum data encoding',
-      'Advanced storage optimization',
-      'Future-proof storage technology'
+      '100x data compressionQuantum data encoding',
+      'Advanced storage optimizationFuture-proof storage technology'
     ],
     useCases: [
-      'Big data storage',
-      'Data archiving',
-      'Cloud storage',
-      'Data backup'
+      'Big data storageData archiving',
+      'Cloud storageData backup'
     ]
   },
   {
@@ -295,28 +232,21 @@ export const real2036ITServices = [
     price: '$3,499',
     period: 'month',
     features: [
-      'AI recovery strategies',
-      'Intelligent backup management',
-      'Automated recovery procedures',
-      'Predictive recovery planning',
-      'Automated testing',
-      'Backup optimization'
+      'AI recovery strategiesIntelligent backup management',
+      'Automated recovery proceduresPredictive recovery planning',
+      'Automated testingBackup optimization'
     ],
     popular: true,
     category: 'Disaster Recovery',
     icon: '🔄🤖',
     marketPrice: '$4,500-7,000/month',
     benefits: [
-      'Automated recovery procedures',
-      'Intelligent backup management',
-      'Predictive recovery planning',
-      'Reduced recovery time'
+      'Automated recovery proceduresIntelligent backup management',
+      'Predictive recovery planningReduced recovery time'
     ],
     useCases: [
-      'Data center recovery',
-      'Cloud recovery',
-      'Application recovery',
-      'Business continuity'
+      'Data center recoveryCloud recovery',
+      'Application recoveryBusiness continuity'
     ]
   }
-];
+],

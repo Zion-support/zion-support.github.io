@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function ManagedPostgresHAPage() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function ManagedPostgresHAPage() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function ManagedPostgresHAPage() {;
+  ),
+},
+export default function ManagedPostgresHAPage() {,
 }}}

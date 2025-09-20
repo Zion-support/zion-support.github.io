@@ -8,18 +8,18 @@
           <div className="max-w-7xl mx-auto">,
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">,
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div>,
                   <label className="block text-white font-semibold mb-3">Service Category</label>,
                   <div className="grid grid-cols-2 md: grid-cols-4 gap-2">,
                     {categories.map(category => (,
                       <button,
-                        key={category.id,}
+                        key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
                         className={`p-3 rounded-xl text-sm font-medium transition-all duration-300 ${,
                           selectedCategory === category.id,
                             ? 'bg-cyan-500 text-black',
-                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50',}`}
+                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50'}`}
                       >,
                         <div className="flex items-center justify-center space-x-2">,
                           <category.icon className="w-4 h-4" />,
@@ -37,7 +37,7 @@
                         className={`w-full p-3 rounded-xl text-left transition-all duration-300 ${,
                           priceRange === range.id,
                             ? 'bg-cyan-500 text-black',
-                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50',}`}
+                            : 'bg-gray-700/50 text-gray-300 hover: bg-gray-600/50'}`}
                       >,
                         <div className="font-medium">{range.name}</div>,
                         <div className="text-xs opacity-75">{range.range}</div>,
@@ -46,8 +46,8 @@
         <section className="relative z-10 py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center mb-12",
             >,
               <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>,
@@ -59,8 +59,8 @@
             {/* Market Insights Grid */}
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">,
               <div,
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm",
               >,
                 <div className="text-4xl mb-4">📊</div>,
@@ -74,8 +74,8 @@
                 </div>,
               </div>,
               <div,
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm",
               >,
                 <div className="text-4xl mb-4">🎯</div>,
@@ -89,8 +89,8 @@
                 </div>,
               </div>,
               <div,
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm",
               >,
                 <div className="text-4xl mb-4">🚀</div>,
@@ -110,8 +110,8 @@
         <section className="relative z-10 py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="text-center mb-12",
             >,
               <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>,
@@ -126,16 +126,15 @@
                   className="group",
                 >,
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">,
                       <div className="text-4xl">{service.icon}</div>,
                       {service.popular && (,
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">,
-                          Popular,
-                      )}
+                          Popular)}
                     {/* Service Title */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300">,
-                      {service.name,}
+                      {service.name}
                     {/* Tagline */}
                     <p className="text-gray-300 text-sm mb-4">,
                       {service.tagline}
@@ -180,8 +179,7 @@
                         ))}
                         {service.technology.length > 3 && (,
                           <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">,
-                            +{service.technology.length - 3} more,
-                        )}
+                            +{service.technology.length - 3} more)}
                     {/* CTA Button */}
                     <a,
                       href={service.link}
@@ -191,7 +189,7 @@
                     </a>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             {/* No Results */}
             {filteredServices.length === 0 && (,
               <div,
@@ -200,14 +198,13 @@
                 <div className="text-6xl mb-4">🔍</div>,
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
                 <p className="text-gray-400">Try adjusting your category or price range filters</p>,
-              </div>,
-            )}
+              </div>)}
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm",
             >,
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>,
@@ -217,7 +214,7 @@
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">,
                   <span className="text-2xl">📱</span>,
-                  <span className="font-semibold">{contactInfo.mobile,}</span>,
+                  <span className="font-semibold">{contactInfo.mobile}</span>,
                 <div className="flex items-center justify-center space-x-3 text-purple-300">,
                   <span className="text-2xl">✉️</span>,
                   <span className="font-semibold">{contactInfo.email}</span>,
@@ -242,9 +239,9 @@
         </section>,
       </div>,
     </UltraAdvancedFuturisticBackground>,
-  );
-export default market-pricing-2026;
-import React from "react";
+  ),
+export default market-pricing-2026,
+import React from "react",
 const function MarketPricing2026() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -255,7 +252,7 @@ const function MarketPricing2026() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function MarketPricing2026() {;
+  )
+},
+export default function MarketPricing2026() {,
 }}}

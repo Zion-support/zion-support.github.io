@@ -1,7 +1,7 @@
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';"
-import { AspectRatio } from '@/components/ui/aspect-ratio';"
-import { Badge } from '@/components/ui/badge';"
-import { Star import { cn } from '@/lib/utils';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar',"
+import { AspectRatio } from '@/components/ui/aspect-ratio',"
+import { Badge } from '@/components/ui/badge',"
+import { Star import { cn } from '@/lib/utils',
 export default function Page() {
  cover`} className="w-full h-full object-cover"/>) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark"/>)}
         </AspectRatio>

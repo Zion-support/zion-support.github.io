@@ -1,68 +1,68 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
 import {,
-  Brain, Building, Target, Cpu, Shield;
-  Check, Phone, Mail, MapPin;
-  TrendingUp, Zap, Globe,
-} from 'lucide-react';
+  Brain, Building, Target, Cpu, Shield,
+  Check, Phone, Mail, MapPin,
+  TrendingUp, Zap, Globe
+} from 'lucide-react',
 // Import our new service data,
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services',
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services',
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions',
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services',
 const ComprehensiveServicesShowcase2025 = () => {,
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState('all'),
 // Helper function to get service pricing,
 const getServicePricing = (service: any) => {,
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  if (typeof service.price === 'string') return service.price,
+  return 'Contact for pricing',
+},
 // Helper function to get service features,
 const getServiceFeatures = (service: any) => {,
-  return service.keyFeatures || service.features || [],};
+  return service.keyFeatures || service.features || []},
 // Helper function to get service setup time,
 const getServiceSetupTime = (service: any) => {,
-  if (service.setupTime) return service.setupTime;
-  if (service.pricing?.setupTime) return service.pricing.setupTime;
-  if (service.price?.setupTime) return service.price.setupTime;
-  return 'N/A',
-};
+  if (service.setupTime) return service.setupTime,
+  if (service.pricing?.setupTime) return service.pricing.setupTime,
+  if (service.price?.setupTime) return service.price.setupTime,
+  return 'N/A'
+},
 // Helper function to get service trial days,
 const getServiceTrialDays = (service: any) => {,
-  if (service.trialDays) return service.trialDays;
-  if (service.pricing?.trialDays) return service.pricing.trialDays;
-  if (service.price?.trialDays) return service.price.trialDays;
-  return 'N/A',
-};
+  if (service.trialDays) return service.trialDays,
+  if (service.pricing?.trialDays) return service.pricing.trialDays,
+  if (service.price?.trialDays) return service.price.trialDays,
+  return 'N/A'
+},
 // All services combined,
 const allServices = [,
-  ...advancedAIMLServices;
-  ...advancedCybersecurityServices;
-      ...advancedCloudDevOpsServices2025;
-  ...industrySpecificSolutions;
-  ...emergingTechnologyServices,
-];
+  ...advancedAIMLServices,
+  ...advancedCybersecurityServices,
+      ...advancedCloudDevOpsServices2025,
+  ...industrySpecificSolutions,
+  ...emergingTechnologyServices
+],
   const categories = [,
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> ,};
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> ,};
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> ,};
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> ,};
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> ,};
-    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> ,}
-  ];
+    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5" /> },
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },
+    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
+    { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5" /> }
+  ],
   const filteredServices = activeTab === 'all',
     ? allServices,
     : allServices.filter(service => {,
-        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
-        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
-        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
-        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
-        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
-        return true;
-      });
+        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics'),
+        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation'),
+        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure'),
+        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS'),
+        if (activeTab === 'ai-services') return service.category?.includes('AI Services'),
+        return true,
+      }),
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">,
       <SEO,
@@ -122,18 +122,18 @@ const allServices = [,
           </div>,
         </div>,
       </section>,
-      {/* Category Tabs */,}
+      {/* Category Tabs */}
       <section className="py-12 bg-white">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="flex flex-wrap justify-center gap-2">,
             {categories.map((category) => (,
               <button,
-                key={category.id,}
+                key={category.id}
                 onClick={() => setActiveTab(category.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${,
                   activeTab === category.id,
                     ? 'bg-blue-600 text-white border-blue-600',
-                    : 'bg-white text-gray-700 border-gray-300 hover: border-blue-300 hover:text-blue-600',}`}
+                    : 'bg-white text-gray-700 border-gray-300 hover: border-blue-300 hover:text-blue-600'}`}
               >,
                 {category.icon}
                 {category.name}
@@ -151,7 +151,7 @@ const allServices = [,
                 key={service.id}
                 className="bg-white rounded-2xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100",
               >,
-                {/* Service Header */,}
+                {/* Service Header */}
                 <div className="p-6 border-b border-gray-100">,
                   <div className="flex items-start justify-between mb-4">,
                     <div className="flex-1">,
@@ -184,7 +184,7 @@ const allServices = [,
                       <div className="flex justify-between text-sm">,
                         <span className="text-gray-600">Starting at: </span>,
                         <span className="font-semibold text-green-600">,
-                          {service.pricing ? service.pricing.starter : `${(service as any).price,}${(service as any).period}`}
+                          {service.pricing ? service.pricing.starter : `${(service as any).price}${(service as any).period}`}
                         </span>,
                       </div>,
                       <div className="text-xs text-gray-500">,
@@ -200,32 +200,31 @@ const allServices = [,
                         <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">,
                           <Check className="w-3 h-3 text-green-500 flex-shrink-0" />,
                           <span className="truncate">{feature}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   {/* Market Info */}
                   <div className="mb-4 text-sm">,
                     <div className="flex justify-between mb-1">,
                       <span className="text-gray-600">Market Size: </span>,
-                      <span className="font-semibold text-gray-900">{service.marketSize,}</span>,
+                      <span className="font-semibold text-gray-900">{service.marketSize}</span>,
                     </div>,
                     <div className="flex justify-between">,
                       <span className="text-gray-600">Target Audience: </span>,
-                      <span className="font-semibold text-gray-900">{service.targetAudience,}</span>,
+                      <span className="font-semibold text-gray-900">{service.targetAudience}</span>,
                     </div>,
                   </div>,
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">,
                     <a,
-                      href={`mailto: ${(service as any).contact || 'kleber@ziontechgroup.com',}?subject=Inquiry about ${service.name}`}
+                      href={`mailto: ${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
                       className="w-full bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2",
                     >,
                       <Mail className="w-4 h-4" />,
                       Get Started,
                     </a>,
                     <a,
-                      href={`tel:${(service as any).mobile || '+1 302 464 0950',}`}
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover: bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2",
                     >,
                       <Phone className="w-4 h-4" />,
@@ -234,7 +233,7 @@ const allServices = [,
                   </div>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
           {/* Services Display */}
             {viewMode === 'grid' ? (,
@@ -247,15 +246,14 @@ const allServices = [,
                     key={service.id}
                     className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden border border-gray-100",
                   >,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>,
                       <div className="flex items-center justify-between mb-4">,
                         <span className="text-4xl">{service.icon}</span>,
                         {service.popular && (,
                           <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">,
                             POPULAR,
-                          </span>,
-                        )}
+                          </span>)}
                       </div>,
                       <h3 className="text-xl font-bold mb-2">{service.name}</h3>,
                       <p className="text-blue-100 text-sm">{service.tagline}</p>,
@@ -286,8 +284,7 @@ const allServices = [,
                             <li key={idx} className="flex items-center text-sm text-gray-600">,
                               <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />,
                               {feature}
-                            </li>,
-                          ))}
+                            </li>))}
                         </ul>,
                       </div>,
                       {/* Category Badge */}
@@ -300,10 +297,10 @@ const allServices = [,
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">,
                         <div>,
-                          <span className="font-medium">Setup: </span> {getServiceSetupTime(service),}
+                          <span className="font-medium">Setup: </span> {getServiceSetupTime(service)}
                         </div>,
                         <div>,
-                          <span className="font-medium">Trial: </span> {getServiceTrialDays(service),} days,
+                          <span className="font-medium">Trial: </span> {getServiceTrialDays(service)} days,
                         </div>,
                       </div>,
                       {/* ROI and Popularity */}
@@ -311,7 +308,7 @@ const allServices = [,
                         <div className="text-sm">,
                           <span className="text-gray-500">Expected ROI: </span>,
                           <span className="text-green-600 font-semibold ml-1">,
-                            {service.roi.split(' ')[0],} ROI,
+                            {service.roi.split(' ')[0]} ROI,
                           </span>,
                         </div>,
                         {service.popular && (,
@@ -324,7 +321,7 @@ const allServices = [,
                         <div className="lg: w-1/3">,
                           <div className="text-right mb-4">,
                             <span className="text-3xl font-bold text-gray-900">,
-                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly,}/month`}
+                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                             </span>,
                             <span className="text-gray-500">,
                               {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
@@ -337,8 +334,7 @@ const allServices = [,
                                 <li key={idx} className="flex items-center">,
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />,
                                   {feature}
-                                </li>,
-                              ))}
+                                </li>))}
                             </ul>,
                           </div>,
                           {/* Category and Action */}
@@ -361,7 +357,7 @@ const allServices = [,
                       </div>,
                     </div>,
                   </div>,
-                )),}
+                ))}
               </div>,
             )}
           </div>,
@@ -373,8 +369,7 @@ const allServices = [,
               </div>,
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>,
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>,
-            </div>,
-          )}
+            </div>)}
         </div>,
       </section>,
       {/* Why Choose Us */}
@@ -390,7 +385,7 @@ const allServices = [,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6",
             >,
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">,
@@ -402,7 +397,7 @@ const allServices = [,
               </p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6",
             >,
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">,
@@ -414,7 +409,7 @@ const allServices = [,
               </p>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="text-center p-6",
             >,
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">,
@@ -473,6 +468,6 @@ const allServices = [,
         </div>,
       </section>,
     </div>,
-  ),};
-export default ComprehensiveServicesShowcase;
+  )},
+export default ComprehensiveServicesShowcase,
 })

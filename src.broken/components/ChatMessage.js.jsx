@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react',
 export const ChatMessage = ({ message }) => {
 
-  const isUser = message.sender === 'user';
+  const isUser = message.sender === 'user',
   return ('
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
       <div`
@@ -18,6 +18,6 @@ export const ChatMessage = ({ message }) => {
         </p>
       </div>
     </div>
-  );
-};
+  ),
+},
 '"`

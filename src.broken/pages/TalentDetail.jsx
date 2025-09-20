@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { getTalentBySlug } from '@/api/talent';
-import Skeleton from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { SEO } from '@/components/SEO';
+import React, { useState, useEffect } from 'react',
+import { useParams } from 'react-router-dom',
+import { getTalentBySlug } from '@/api/talent',
+import Skeleton from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { SEO } from '@/components/SEO',
 
 export default function TalentDetail() {
-  const { slug } = useParams();
-  const [talent, setTalent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const { slug } = useParams(),
+  const [talent, setTalent] = useState(null),
+  const [loading, setLoading] = useState(true),
 
   useEffect(() => {
     const fetchTalent = async () => {
-      if (!slug) return;
-      setLoading(true);
+      if (!slug) return,
+      setLoading(true),
       try {
-        const profile = await getTalentBySlug(slug);
-        setTalent(profile);
+        const profile = await getTalentBySlug(slug),
+        setTalent(profile),
       } catch (err) {
-        setTalent(null);
+        setTalent(null),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
-    };
+    },
 
-    fetchTalent();
-  }, [slug]);
+    fetchTalent(),
+  }, [slug]),
 
   if (loading) {
     return (
@@ -34,7 +34,7 @@ export default function TalentDetail() {
         <Skeleton className="h-4 w-full" />
         <Skeleton className="h-4 w-2/3" />
       </div>
-    );
+    ),
   }
 
   if (!talent) {
@@ -42,7 +42,7 @@ export default function TalentDetail() {
       <div className="p-4" data-testid="talent-not-found">
         <p>Talent not found</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -68,5 +68,5 @@ export default function TalentDetail() {
         </div>
       </main>
     </>
-  );
+  ),
 }

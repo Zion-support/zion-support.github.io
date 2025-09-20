@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AISalesAssistant() {
   return (
@@ -15,7 +15,7 @@ export default function AISalesAssistant() {
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">AI Sales Assistant</h1>
+        <h1 className="text-4xl md: text-5xl font-extrabold gradient-text">AI Sales Assistant</h1>
         <p className="mt-4 text-white/80">Automate lead qualification and personalized outreach across email and LinkedIn with CRM syncing.</p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>ICP matching and scoring synced to CRM</li>
@@ -28,6 +28,6 @@ export default function AISalesAssistant() {
         </div>
       </main>
     </div>
-  );
+  )
 }
 

@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'AI Automation Services 2026 - Zion Tech Group';
-  description: 'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.';
-  keywords: ['AI automation servicesbusiness automation', 'AI implementationprocess automation', 'AI consultingenterprise automation'],
-};
+  title: 'AI Automation Services 2026 - Zion Tech Group',
+  description: 'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.',
+  keywords: ['AI automation servicesbusiness automationAI implementationprocess automation', 'AI consultingenterprise automation']
+},
 export default function AIAutomationServices2026() {,
   return (,
     <ErrorBoundary>,
@@ -28,7 +28,7 @@ export default function AIAutomationServices2026() {,
                 AI Automation Services 2026,
               </h1>,
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-                Transform your business with cutting-edge AI automation. Achieve unprecedented ROI;
+                Transform your business with cutting-edge AI automation. Achieve unprecedented ROI,
                 massive cost savings, and complete process transformation.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -48,7 +48,7 @@ export default function AIAutomationServices2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Results */,}
+        {/* Key Results */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Proven Results with AI Automation</h2>,
@@ -72,12 +72,12 @@ export default function AIAutomationServices2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Services Overview */,}
+        {/* Services Overview */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our AI Automation Services</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Service 1 */,}
+              {/* Service 1 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">🤖</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Process Automation</h3>,
@@ -94,7 +94,7 @@ export default function AIAutomationServices2026() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 2 */,}
+              {/* Service 2 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">🧠</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Decision Making</h3>,
@@ -111,7 +111,7 @@ export default function AIAutomationServices2026() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 3 */,}
+              {/* Service 3 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">💬</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">AI-Powered Customer Service</h3>,
@@ -128,7 +128,7 @@ export default function AIAutomationServices2026() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 4 */,}
+              {/* Service 4 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">📊</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Data Intelligence</h3>,
@@ -145,7 +145,7 @@ export default function AIAutomationServices2026() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 5 */,}
+              {/* Service 5 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">🔍</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Computer Vision</h3>,
@@ -162,7 +162,7 @@ export default function AIAutomationServices2026() {,
                   Learn More →,
                 </Link>,
               </div>,
-              {/* Service 6 */,}
+              {/* Service 6 */}
               <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">,
                 <div className="text-4xl mb-4">⚡</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Hyperautomation</h3>,
@@ -182,7 +182,7 @@ export default function AIAutomationServices2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Process */,}
+        {/* Implementation Process */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Implementation Process</h2>,
@@ -218,7 +218,7 @@ export default function AIAutomationServices2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Success Stories Preview */,}
+        {/* Success Stories Preview */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Success Stories</h2>,
@@ -261,7 +261,7 @@ export default function AIAutomationServices2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Business?</h2>,
@@ -285,5 +285,4 @@ export default function AIAutomationServices2026() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}

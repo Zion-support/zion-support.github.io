@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 ArrowRightBrainRocketTestTubeGlobeMicroscopeLockStarTrendingUpZapSparklesAtom
-import Link from 'next/link';
+import Link from 'next/link',
 
 const Revolutionary2027Hero = () => {
   const floatingIcons = [
@@ -13,7 +13,7 @@ const Revolutionary2027Hero = () => {
     { icon: Lockdelay: 2.5position: 'top-1/2 right-10' },
     { icon: Atomdelay: 3position: 'bottom-1/3 left-1/2' },
     { icon: Sparklesdelay: 3.5position: 'top-1/3 right-1/2' }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -23,7 +23,7 @@ const Revolutionary2027Hero = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0y: 30 },
@@ -35,13 +35,13 @@ const Revolutionary2027Hero = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">Revolutionary2027Hero</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default Revolutionary2027Hero;
+  ),
+},
+export default Revolutionary2027Hero,

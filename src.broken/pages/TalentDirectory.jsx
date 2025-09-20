@@ -1,4 +1,4 @@
-import { Search, MapPin, Briefcase, Star  } from 'lucide-react';
+import { Search, MapPin, Briefcase, Star  } from 'lucide-react',
 export default function Page() {
 ,
         {
@@ -7,7 +7,7 @@ export default function Page() {
             role: "Full Stack Developer",
             experience: "5 + years",
             location: "Boston, MA",
-            skills["React", "Node.js", "Python", "MongoDB"],;
+            skills["React", "Node.js", "Python", "MongoDB"],
             rating: 4.8,
             projects: 19,
             avatar: "👩‍💻"
@@ -18,12 +18,12 @@ export default function Page() {
             role: "DevOps Engineer",
             experience: "9 + years",
             location: "Denver, CO",
-            skills["Docker", "Jenkins", "Ansible", "Linux"],;
+            skills["Docker", "Jenkins", "Ansible", "Linux"],
             rating: 4.9,
             projects: 28,
             avatar: "👨‍💻"
 
-    ];
+    ],
     const categories = ["All",
         "AI & Machine Learning",
         "Cloud & DevOps",
@@ -32,7 +32,7 @@ export default function Page() {
         "Full Stack Development",
         "Mobile Development",
         "UI / UX Design"
-    ];
+    ],
     return (<div className="min - h-screen bg-background">
       <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com / talent - directory"/>
 
@@ -194,5 +194,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}

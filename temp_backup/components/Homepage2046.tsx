@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Layout from './layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, 
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Import our new innovative services
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
-import { innovative2046ITServices } from '../data/innovative-2046-it-services';
-import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services',
+import { innovative2046ITServices } from '../data/innovative-2046-it-services',
+import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services',
 
 // Enhanced loading component with quantum effects
 const QuantumLoadingFallback = () => (
@@ -28,7 +28,7 @@ const QuantumLoadingFallback = () => (
             x: [0, Math.random() * 1200],
             y: [0, Math.random() * 800],
             opacity: [0, 1, 0],
-            scale: [0, 1, 0],
+            scale: [0, 1, 0]
           }}
           transition={{
             duration: Math.random() * 4 + 3,
@@ -37,7 +37,7 @@ const QuantumLoadingFallback = () => (
           }}
           style={{
             left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
+            top: Math.random() * 100 + '%'
           }}
         />
       ))}
@@ -95,7 +95,7 @@ const QuantumLoadingFallback = () => (
       </div>
     </motion.div>
   </div>
-);
+),
 
 const Homepage2046: React.FC = () => {
   return (
@@ -103,7 +103,7 @@ const Homepage2046: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">Homepage2046</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default Homepage2046;
+export default Homepage2046,

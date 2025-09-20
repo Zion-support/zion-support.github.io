@@ -1,11 +1,11 @@
-import React from 'react';
-export default AdvancedServices;
-import { FuturisticServicesShowcase } from '../components/FuturisticServicesShowcase';
+import React from 'react',
+export default AdvancedServices,
+import { FuturisticServicesShowcase } from '../components/FuturisticServicesShowcase',
 export default function Page() {
 %`,
                 top: `${Math.random () * 100}%`,
                 animationDelay: `${Math.random () * 5}s`,
-                animationDuration: `${3 + Math.random () * 4}s`,
+                animationDuration: `${3 + Math.random () * 4}s`
             }}/>) ) }
         </div>
 
@@ -251,5 +251,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}

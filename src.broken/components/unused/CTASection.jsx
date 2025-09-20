@@ -9,13 +9,13 @@
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
             <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 =======
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
-;
-    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">;
+,
+    return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-purple-dark to-zion-blue-dark relative overflow-hidden">,
       {/* Background Elements */}"
-      <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>;"
+      <div className="absolute inset-0 bg-quantum-mesh opacity-30"></div>,"
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl"></div>"
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>
 "

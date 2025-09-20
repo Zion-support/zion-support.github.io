@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Check, Star, Users, TrendingUp, Zap, Globe, Shield,
   Brain, Target, Heart, Building, Rocket, Atom, Palette,
   GraduationCap, Truck, Phone, Mail, MapPin, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new advanced service data
-import { advancedCybersecurityMicroSaasServices } from '../data/2025-advanced-cybersecurity-micro-saas';
-import { advancedAIMLMicroSaasServices } from '../data/2025-advanced-ai-ml-micro-saas';
-import { fintechBlockchainMicroSaasServices } from '../data/2025-fintech-blockchain-micro-saas';
-import { healthcareBiotechMicroSaasServices } from '../data/2025-healthcare-biotech-micro-saas';
+import { advancedCybersecurityMicroSaasServices } from '../data/2025-advanced-cybersecurity-micro-saas',
+import { advancedAIMLMicroSaasServices } from '../data/2025-advanced-ai-ml-micro-saas',
+import { fintechBlockchainMicroSaasServices } from '../data/2025-fintech-blockchain-micro-saas',
+import { healthcareBiotechMicroSaasServices } from '../data/2025-healthcare-biotech-micro-saas',
 
 // Contact information
 const contactInfo = {
@@ -19,7 +19,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 // Service categories with icons and colors
 const serviceCategories = [
@@ -51,38 +51,38 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-600',
     services: healthcareBiotechMicroSaasServices
   }
-];
+],
 
 export default function AdvancedPricingShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
 
   const allServices = [
     ...advancedCybersecurityMicroSaasServices,
     ...advancedAIMLMicroSaasServices,
     ...fintechBlockchainMicroSaasServices,
     ...healthcareBiotechMicroSaasServices
-  ];
+  ],
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : serviceCategories.find(cat => cat.id === selectedCategory)?.services || [];
+    : serviceCategories.find(cat => cat.id === selectedCategory)?.services || [],
 
   const getPrice = (service: any) => {
     if (billingCycle === 'yearly') {
-      return service.price?.yearly || service.price?.monthly * 12;
+      return service.price?.yearly || service.price?.monthly * 12
     }
-    return service.price?.monthly || 0;
-  };
+    return service.price?.monthly || 0,
+  },
 
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly' && service.price?.yearly && service.price?.monthly) {
-      const monthlyTotal = service.price.monthly * 12;
-      const yearlyPrice = service.price.yearly;
-      return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 100);
+      const monthlyTotal = service.price.monthly * 12,
+      const yearlyPrice = service.price.yearly,
+      return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 100)
     }
-    return 0;
-  };
+    return 0,
+  },
 
 const 2025-advanced-pricing-showcase: React.FC = () => {
   return (
@@ -99,7 +99,7 @@ const 2025-advanced-pricing-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-advanced-pricing-showcase;
+export default 2025-advanced-pricing-showcase,

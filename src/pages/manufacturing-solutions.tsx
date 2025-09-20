@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Factory, 
+  Factory,
   Cog, 
   Bot, 
   TrendingUp, 
@@ -13,72 +13,44 @@ import {
   Brain,
   Cloud,
   Star
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 const ManufacturingSolutions: React.FC = () => {
   const solutions = [
     {
-      title: 'Smart Factory Automation',
-      description: 'Intelligent automation systems that optimize production processes and increase efficiency.',
-      icon: Bot,
-      features: ['Process optimization', 'Real-time monitoring', 'Predictive maintenance', 'Quality control']
+      title: 'Smart Factory Automation',description: 'Intelligent automation systems that optimize production processes and increase efficiency.',icon: Bot,features: ['Process optimizationReal-time monitoring', 'Predictive maintenanceQuality control']
     },
     {
-      title: 'Industrial IoT Integration',
-      description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',
-      icon: Network,
-      features: ['Sensor networks', 'Data collection', 'Remote monitoring', 'Predictive analytics']
+      title: 'Industrial IoT Integration',description: 'Seamless integration of IoT devices for comprehensive manufacturing intelligence.',icon: Network,features: ['Sensor networksData collection', 'Remote monitoringPredictive analytics']
     },
     {
-      title: 'AI-Powered Quality Control',
-      description: 'Advanced AI systems for automated quality inspection and defect detection.',
-      icon: Eye,
-      features: ['Visual inspection', 'Defect detection', 'Quality assurance', 'Compliance monitoring']
+      title: 'AI-Powered Quality Control',description: 'Advanced AI systems for automated quality inspection and defect detection.',icon: Eye,features: ['Visual inspectionDefect detection', 'Quality assuranceCompliance monitoring']
     },
     {
-      title: 'Predictive Maintenance',
-      description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',
-      icon: TrendingUp,
-      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization']
+      title: 'Predictive Maintenance',description: 'AI-driven maintenance systems that prevent equipment failures and reduce downtime.',icon: TrendingUp,features: ['Equipment monitoringFailure prediction', 'Maintenance schedulingCost optimization']
     },
     {
-      title: 'Supply Chain Optimization',
-      description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',
-      icon: Cog,
-      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management']
+      title: 'Supply Chain Optimization',description: 'Intelligent supply chain management with AI-powered forecasting and optimization.',icon: Cog,features: ['Demand forecastingInventory optimization', 'Route planningSupplier management']
     },
     {
-      title: 'Digital Twin Technology',
-      description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',
-      icon: Cloud,
-      features: ['System simulation', 'Performance optimization', 'Scenario testing', 'Real-time monitoring']
+      title: 'Digital Twin Technology',description: 'Virtual replicas of physical manufacturing systems for simulation and optimization.',icon: Cloud,features: ['System simulationPerformance optimization', 'Scenario testingReal-time monitoring']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Optimize production processes and reduce waste',
-      icon: TrendingUp
-    },
+      title: 'Increased Efficiency',description: 'Optimize production processes and reduce waste',icon: TrendingUp
+    };
     {
-      title: 'Cost Reduction',
-      description: 'Lower operational costs through intelligent automation',
-      icon: BarChart3
-    },
+      title: 'Cost Reduction',description: 'Lower operational costs through intelligent automation',icon: BarChart3
+    };
     {
-      title: 'Quality Improvement',
-      description: 'Enhanced product quality and consistency',
-      icon: Star
-    },
+      title: 'Quality Improvement',description: 'Enhanced product quality and consistency',icon: Star
+    };
     {
-      title: 'Predictive Capabilities',
-      description: 'Anticipate and prevent issues before they occur',
-      icon: Brain
+      title: 'Predictive Capabilities',description: 'Anticipate and prevent issues before they occur',icon: Brain
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -209,7 +181,7 @@ const ManufacturingSolutions: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our manufacturing solutions can optimize your operations and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
@@ -226,7 +198,6 @@ const ManufacturingSolutions: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default ManufacturingSolutions;

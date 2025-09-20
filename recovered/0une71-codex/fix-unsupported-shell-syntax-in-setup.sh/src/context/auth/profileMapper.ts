@@ -1,6 +1,6 @@
 
-import type { UserProfile } from "@/types/auth";
-import { User } from "@supabase/supabase-js";
+import type { UserProfile } from "@/types/auth",
+import { User } from "@supabase/supabase-js",
 
 /**
  * Maps Supabase profile data to our app's user model
@@ -19,5 +19,5 @@ export function mapProfileToUser(user: User, profile: any): UserProfile {
     avatar_url: profile.avatar_url || undefined,
     avatarUrl: profile.avatar_url || undefined, // Add for compatibility
     role: profile.user_type // Map user_type to role for backward compatibility
-  };
+  },
 }

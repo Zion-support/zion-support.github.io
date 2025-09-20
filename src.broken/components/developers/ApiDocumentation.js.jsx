@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react',
 export default function Page() {
 ,
                 {
@@ -10,7 +10,7 @@ export default function Page() {
 
                   name: 'status',
                   type: 'string',
-                  description: 'Filter by job status(new, active, closed)},
+                  description: 'Filter by job status(new, active, closed)}
               ]}
               codeExamples={{
 "
@@ -25,10 +25,10 @@ export default function Page() {
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
 }
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 
 headers = {
@@ -44,7 +44,7 @@ response = requests.get('
   'limit': 10,category': 'development'
 
 },
-    headers = headers;
+    headers = headers,
 )
 
 data = response.json()`
@@ -92,14 +92,14 @@ print(data)`}}
                   name: 'id',
                   type: 'string',
                   description: 'The job ID',
-                  required: true},
+                  required: true}
               ]}
               codeExamples={{
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/jobs/job_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
   -H "Content-Type: application/json"`,`
-                javascript: `const jobId = 'job_abc123';`
+                javascript: `const jobId = 'job_abc123',`
 const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
 `
 }\`, {
@@ -109,10 +109,10 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
   }
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 
 headers = {
@@ -124,7 +124,7 @@ headers = {
 job_id = 'job_abc123'
 response = requests.get('
     f'https://ziontechgroup.com/api/v1/jobs/{job_id},
-    headers = headers;
+    headers = headers,
 )
 
 data = response.json()`
@@ -204,7 +204,7 @@ print(data)`}}
 
                   name: 'deadline',
                   type: 'string',
-                  description: 'Job deadline(ISO date string)},
+                  description: 'Job deadline(ISO date string)}
               ]}
               codeExamples={{
 "`
@@ -247,10 +247,10 @@ print(data)`}}
     },
     deadline: '2025-06-30T23:59:59Z'
   })
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 import json
 
@@ -330,7 +330,7 @@ print(data)`}}
 
                   name: 'availability',
                   type: 'string',
-                  description: 'Filter by availability status'},
+                  description: 'Filter by availability status'}
               ]}
               codeExamples={{
 "`
@@ -345,10 +345,10 @@ print(data)`}}
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
 }
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 
 headers = {
@@ -365,7 +365,7 @@ response = requests.get('
   typescript'
 
 },
-    headers = headers;
+    headers = headers,
 )
 
 data = response.json()`
@@ -406,14 +406,14 @@ print(data)`}}
                   name: 'id',
                   type: 'string',
                   description: 'The talent ID',
-                  required: true},
+                  required: true}
               ]}
               codeExamples={{
 "`
                 curl: `curl -X GET "https://ziontechgroup.com/api/v1/talent/talent_abc123" \\"
   -H "Authorization: Bearer YOUR_API_KEY" \\"`
   -H "Content-Type: application/json"`,`
-                javascript: `const talentId = 'talent_abc123';`
+                javascript: `const talentId = 'talent_abc123',`
 const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId
 `
 }\`, {
@@ -423,10 +423,10 @@ const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talent
 
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
   }
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 
 headers = {
@@ -438,7 +438,7 @@ headers = {
 talent_id = 'talent_abc123'
 response = requests.get('
     f'https://ziontechgroup.com/api/v1/talent/{talent_id},
-    headers = headers;
+    headers = headers,
 )
 
 data = response.json()`
@@ -535,7 +535,7 @@ print(data)`}}
                   name: 'requester_email',
                   type: 'string',
                   description: 'Email of the requester',
-                  required: true},
+                  required: true}
               ]}
               codeExamples={{
 "`
@@ -575,10 +575,10 @@ print(data)`}}
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 import json
 
@@ -648,7 +648,7 @@ print(data)`}}
                   name: 'status',
                   type: 'string',
                   description:'
-                    'Filter by status(new, viewed, replied, archived)},
+                    'Filter by status(new, viewed, replied, archived)}
               ]}
               codeExamples={{
 "`
@@ -663,10 +663,10 @@ print(data)`}}
     'Authorization': 'Bearer YOUR_API_KEY',Content-Type': 'application/json'
 
 }
-});
+}),
 
-const data = await response.json();`
-// console.log(data);`,`
+const data = await response.json(),`
+// console.log(data),`,`
                 python: `import requests
 
 headers = {
@@ -677,7 +677,7 @@ headers = {
 
 response = requests.get('
     'https://ziontechgroup.com/api/v1/quotes',
-    headers = headers;
+    headers = headers,
 )
 
 data = response.json()`
@@ -733,16 +733,16 @@ print(data)`}}
                 body using your webhook secret as the key.</p>
 
               <CodeBlock'`
-                code={`import crypto from 'crypto';
+                code={`import crypto from 'crypto',
 
               <CodeBlock
-                code={`import crypto from 'crypto';
+                code={`import crypto from 'crypto',
 
-// Function to verify webhook signature;
+// Function to verify webhook signature,
 function verifyWebhookSignature(payload, signature, secret) {
 
-  const hmac = crypto.createHmac('sha256', secret);
-  const expectedSignature = hmac.update(payload).digest('hex');
+  const hmac = crypto.createHmac('sha256', secret),
+  const expectedSignature = hmac.update(payload).digest('hex'),
   return crypto.timingSafeEqual()
     Buffer.from(signature),
   Buffer.from(expectedSignature)
@@ -753,20 +753,20 @@ function verifyWebhookSignature(payload, signature, secret) {
 // Example usage in Express.js'
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
-  const signature = req.headers['x-zion-signature'];
-  const payload = req.body.toString();
-  const webhookSecret = process.env.WEBHOOK_SECRET;
+  const signature = req.headers['x-zion-signature'],
+  const payload = req.body.toString(),
+  const webhookSecret = process.env.WEBHOOK_SECRET,
   
   if(!verifyWebhookSignature(payload, signature, webhookSecret)) {
 
     return res.status(401).send('Invalid signature')}
   
   // Process the webhook event
-  const event = JSON.parse(payload);
-  // console.log('Received valid webhook:', event);
+  const event = JSON.parse(payload),
+  // console.log('Received valid webhook:', event),
   
   // Respond to acknowledge receipt'`
-  res.status(200).send('Webhook received')});`}"
+  res.status(200).send('Webhook received')}),`}"
                 language="javascript"
                 showLineNumbers={true}
               />
@@ -991,8 +991,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 response.</p>
 "
               <p className="text-zinc-400 mb-2">
-                Rate limit information is included in the response headers:
-              </p>
+                Rate limit information is included in the response headers: </p>
 "
               <ul className="list-disc pl-6 space-y-1 text-zinc-400">
                 <li>"
@@ -1019,7 +1018,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
         </Tabs>
       </CardContent>
     </Card>
-  );
+  )
 }
 // Helper component for API endpoint documentation
 function EndpointSection({
@@ -1032,7 +1031,7 @@ function EndpointSection({
   codeExamples,
   responseExamples}) {
 
-  const [activeTab, setActiveTab] = useState('curl');
+  const [activeTab, setActiveTab] = useState('curl'),
   return ("
     <div className="border border-zinc-800 rounded-md">"
       <div className="p-4">"
@@ -1135,6 +1134,6 @@ function EndpointSection({
         </div>
       )}
     </div>
-  );
+  ),
 }
 '"`

@@ -1,6 +1,6 @@
-import React from 'react';
-export default InnovationServicesMarketing;
-import { cuttingEdgeInnovations2025 } from '../data/2025 - cutting - edge -innovations';
+import React from 'react',
+export default InnovationServicesMarketing,
+import { cuttingEdgeInnovations2025 } from '../data/2025 - cutting - edge -innovations',
 
 export default function Page() {
         else if(model === 'per kWh managed') {
@@ -15,12 +15,12 @@ export default function Page() {
             return `$${price}/attorney / month`}
         else {
             return `$${price}/${model}`}
-    };
+    },
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 pt -32">
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20">
-          <h1 className="text-6xl md:text-7xl font - bold text-white mb-6">
+          <h1 className="text-6xl md: text-7xl font - bold text-white mb-6">
             Innovation Services 2025
           </h1>
           <p className="text-2xl text-gray - 300 max - w-5xl mx - auto leading - relaxed mb-8">
@@ -89,10 +89,10 @@ export default function Page() {
         {/* Service Categories Overview */}
         <div className="mb-20">
           <h2 className="text-4xl font - bold text-white text-center mb-12">Service Categories</h2>
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+          <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">
             {categories.map ( (category) => {
-            const categoryServices = allServices.filter(service => service.category === category) ;
-            const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length;
+            const categoryServices = allServices.filter(service => service.category === category) ,
+            const avgPrice = categoryServices.reduce((sum, service) => sum + service.price, 0) / categoryServices.length,
             return (<div key={category} className="bg-slate - 800 / 50 border border-white / 10 rounded-2xl p - 6 hover:border-white / 20 transition - all duration -300">
                   <h3 className="text-2xl font - bold text-white mb-4">{category}</h3>
                   <p className="text-gray - 300 mb-4">
@@ -119,10 +119,10 @@ export default function Page() {
         {/* Industry Solutions Overview */}
         <div className="mb-20">
           <h2 className="text-4xl font - bold text-white text-center mb-12">Industry - Specific Solutions</h2>
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
+          <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">
             {industries.map((industry) => {
-            const industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry) ;
-            const avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length;
+            const industryServices = specializedIndustrySolutions2025.filter(service => service.industry === industry) ,
+            const avgPrice = industryServices.reduce((sum, service) => sum + service.price, 0) / industryServices.length,
             return (<div key={industry} className="bg-slate - 800 / 50 border border-white / 10 rounded-2xl p - 6 hover:border-white / 20 transition - all duration -300">
                   <h3 className="text-2xl font - bold text-white mb-4">{industry}</h3>
                   <p className="text-gray - 300 mb-4">
@@ -282,5 +282,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}

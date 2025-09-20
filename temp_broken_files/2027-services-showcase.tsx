@@ -7,7 +7,7 @@
       <section className="px-4 sm: px-6 lg:px-8 mb-16">,
         <div className="max-w-7xl mx-auto">,
           <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20">,
-            {/* Search Bar */,}
+            {/* Search Bar */}
             <div className="mb-6">,
               <div className="relative">,
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />,
@@ -18,9 +18,9 @@
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20",
                 />,
-            {/* Filters */,}
+            {/* Filters */}
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
-              {/* Category Filter */,}
+              {/* Category Filter */}
               <div>,
                 <label className="block text-cyan-400 font-medium mb-2">Category</label>,
                 <select,
@@ -29,7 +29,7 @@
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400",
                 >,
                   {categories.map((category) => (,
-                    <option key={category.id,} value={category.id}>,
+                    <option key={category.id} value={category.id}>,
                       {category.icon} {category.name} ({category.count}),
                   ))}
               {/* Price Range Filter */}
@@ -41,7 +41,7 @@
                   className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus: outline-none focus:border-cyan-400",
                 >,
                   {priceRanges.map((range) => (,
-                    <option key={range.id,} value={range.id}>,
+                    <option key={range.id} value={range.id}>,
                       {range.name} ({range.count}),
                   ))}
               {/* Sort By */}
@@ -55,7 +55,7 @@
                   <option value="name">Name</option>,
                   <option value="price">Price</option>,
                   <option value="roi">ROI</option>,
-      {/* Services Grid */,}
+      {/* Services Grid */}
       <section className="px-4 sm: px-6 lg:px-8 mb-20">,
         <div className="max-w-7xl mx-auto">,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -66,12 +66,12 @@
                   className="group",
                 >,
                   <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover: border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">,
                       <div className="text-4xl">🚀</div>,
                     {/* Service Info */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300">,
-                      {service.name,}
+                      {service.name}
                     <p className="text-cyan-300 text-sm mb-4 line-clamp-3">,
                       {service.description}
                     {/* Price */}
@@ -85,15 +85,13 @@
                         {service.features.slice(0, 3).map((feature, idx) => (,
                           <div key={idx} className="flex items-center space-x-2">,
                             <CheckCircle className="w-4 h-4 text-green-400" />,
-                            <span className="text-gray-300 text-sm">{feature}</span>,
-                        ))}
+                            <span className="text-gray-300 text-sm">{feature}</span>))}
                         {service.features.length > 3 && (,
                           <div className="text-cyan-400 text-sm">,
-                            +{service.features.length - 3} more features,
-                        )}
+                            +{service.features.length - 3} more features)}
                     {/* ROI */}
                     <div className="mb-6 text-center">,
-                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi,}</div>,
+                      <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>,
                       <div className="text-gray-400 text-xs">Return on Investment</div>,
                     {/* Actions */}
                     <div className="flex space-x-3">,
@@ -107,7 +105,7 @@
                         className="px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm",
                       >,
                         Contact,
-                    {/* Category Badge */,}
+                    {/* Category Badge */}
                     <div className="mt-4">,
                       <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">,
                         {service.category}
@@ -128,16 +126,16 @@
               <p className="text-cyan-300 mb-6">Try adjusting your search criteria or browse all services.</p>,
               <button,
                 onClick={() => {,
-                  setSearchTerm('');
-                  setSelectedCategory('all');
-                  setSelectedPriceRange('all');
+                  setSearchTerm(''),
+                  setSelectedCategory('all'),
+                  setSelectedPriceRange('all'),
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300",
               >,
                 Clear Filters,
               </button>,
             </div>,
-          ),}
+          )}
       {/* Contact Section */}
       <section className="px-4 sm: px-6 lg:px-8 mb-20">,
         <div className="max-w-4xl mx-auto">,
@@ -149,7 +147,7 @@
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">,
               <div className="flex items-center justify-center space-x-3">,
                 <Phone className="w-5 h-5 text-cyan-400" />,
-                <span className="text-white">{contactInfo.mobile,}</span>,
+                <span className="text-white">{contactInfo.mobile}</span>,
               <div className="flex items-center justify-center space-x-3">,
                 <Mail className="w-5 h-5 text-purple-400" />,
                 <span className="text-white">{contactInfo.email}</span>,
@@ -167,7 +165,7 @@
                 className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300",
               >,
                 View Pricing Plans,
-      {/* Footer */,}
+      {/* Footer */}
       <footer className="px-4 sm: px-6 lg:px-8 py-12 border-t border-cyan-500/30">,
         <div className="max-w-7xl mx-auto text-center">,
           <div className="mb-8">,
@@ -180,13 +178,13 @@
             <p>&copy, 2027 Zion Tech Group. All rights reserved.</p>,
             <p className="mt-2">,
               <a href="/privacy" className="hover: text-cyan-400 transition-colors duration-300">Privacy Policy</a>,
-              {' • ',}
+              {' • '}
               <a href="/terms" className="hover: text-cyan-400 transition-colors duration-300">Terms of Service</a>,
-              {' • ',}
+              {' • '}
               <a href="/contact" className="hover: text-cyan-400 transition-colors duration-300">Contact Us</a>,
-  );
-export default 2027-services-showcase;
-import React from "react";
+  ),
+export default 2027-services-showcase,
+import React from "react",
 const function ServicesShowcase2027() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -197,7 +195,7 @@ const function ServicesShowcase2027() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function ServicesShowcase2027() {;
+  )
+},
+export default function ServicesShowcase2027() {,
 }}}

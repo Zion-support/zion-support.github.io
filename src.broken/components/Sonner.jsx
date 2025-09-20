@@ -28,6 +28,6 @@ export const toast = {
     dismiss: (toastId) => // console.log('Dismiss:',
   toastId)
 
-};
+},
 }'`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

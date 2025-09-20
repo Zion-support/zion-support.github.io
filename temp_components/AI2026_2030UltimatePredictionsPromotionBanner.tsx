@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -13,11 +13,11 @@ import {
   Sparkles,
   Target,
   Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AI2026_2030UltimatePredictionsPromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentFeaturesetCurrentFeature] = useState(0),
 
   const features = [
     {
@@ -40,16 +40,16 @@ const AI2026_2030UltimatePredictionsPromotionBanner = () => {
       text: "Consciousness Integration",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const AI2026_2030UltimatePredictionsPromotionBanner: React.FC = () => {
   return (
@@ -57,7 +57,7 @@ const AI2026_2030UltimatePredictionsPromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AI2026_2030UltimatePredictionsPromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AI2026_2030UltimatePredictionsPromotionBanner;
+export default AI2026_2030UltimatePredictionsPromotionBanner,

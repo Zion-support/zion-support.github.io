@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Star, Check, ArrowRight,
   Brain, Atom, Shield, Globe,
   Cloud, Network
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new service data
-import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services';
-import { emergingTech2025Innovations } from '../data/emerging-tech-2025-innovations';
+import { innovative2025Q4NewServices } from '../data/innovative-2025-q4-new-services',
+import { emergingTech2025Innovations } from '../data/emerging-tech-2025-innovations',
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 // Combine all services
 const allServices = [
   ...innovative2025Q4NewServices,
   ...emergingTech2025Innovations
-];
+],
 
 const categories = [
   {
@@ -67,20 +67,20 @@ const categories = [
     color: 'from-indigo-500 to-purple-500',
     description: 'Blockchain solutions and IoT platforms'
   }
-];
+],
 
 export default function ServicesAdvertising2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
 
 
@@ -99,8 +99,8 @@ const services-advertising-2025: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default RevolutionaryServices2025;
+export default RevolutionaryServices2025,

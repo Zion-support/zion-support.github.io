@@ -11,11 +11,11 @@ export default function AcademyMonetization() {
           <div className="font-medium mb-1">Premium</div>
           <div className="text-sm text-gray-600 dark:text-gray-300">Full courses, projects, certifications.</div>
         </div>
-        <div className="rounded border border-gray-200 dark:border-gray-800 p-4">
+        <div className="rounded border border-gray-200 dark: border-gray-800 p-4">
           <div className="font-medium mb-1">ZION$ Unlocks</div>
           <div className="text-sm text-gray-600 dark:text-gray-300">Use tokens for exclusive content.</div>
         </div>
       </div>
     </div>
-  );
+  )
 }

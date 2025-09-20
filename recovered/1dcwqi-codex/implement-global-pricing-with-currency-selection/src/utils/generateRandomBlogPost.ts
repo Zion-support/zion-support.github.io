@@ -1,4 +1,4 @@
-import { BlogPost } from "@/types/blog";
+import { BlogPost } from "@/types/blog",
 
 const categories = [
   "Trends",
@@ -7,11 +7,11 @@ const categories = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
-];
+],
 
 export function generateRandomBlogPost(): BlogPost {
-  const timestamp = Date.now();
-  const category = categories[Math.floor(Math.random() * categories.length)];
+  const timestamp = Date.now(),
+  const category = categories[Math.floor(Math.random() * categories.length)],
 
   return {
     id: `auto-${timestamp}`,
@@ -33,5 +33,5 @@ export function generateRandomBlogPost(): BlogPost {
     category,
     tags: [category.toLowerCase(), "automation"],
     featuredImage: "https://images.unsplash.com/photo-1581091012184-7b3403d00985?auto=format&fit=crop&w=1200&h=630"
-  };
+  },
 }

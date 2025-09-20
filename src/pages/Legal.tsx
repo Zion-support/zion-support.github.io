@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  FileText, 
+  FileText,
   Shield, 
   Lock, 
   Eye, 
@@ -17,75 +17,40 @@ import {
   Server,
   Mail,
   Phone
-} from 'lucide-react';
-
+} from "lucide-react";
 const Legal: React.FC = () => {
   const legalDocuments = [
     {
-      title: 'Terms of Service',
-      description: 'Our terms and conditions for using Zion Tech Group services',
-      href: '/terms',
-      icon: FileText,
-      category: 'Service Terms'
-    },
+      title: 'Terms of Service',description: 'Our terms and conditions for using Zion Tech Group services',href: '/terms',icon: FileText,category: 'Service Terms'
+    };
     {
-      title: 'Privacy Policy',
-      description: 'How we collect, use, and protect your personal information',
-      href: '/privacy',
-      icon: Shield,
-      category: 'Data Protection'
-    },
+      title: 'Privacy Policy',description: 'How we collect, use, and protect your personal information',
+      href: '/privacy',icon: Shield,category: 'Data Protection'
+    };
     {
-      title: 'Cookie Policy',
-      description: 'Information about cookies and how we use them',
-      href: '/cookies',
-      icon: Lock,
-      category: 'Data Protection'
-    },
+      title: 'Cookie Policy',description: 'Information about cookies and how we use them',href: '/cookies',icon: Lock,category: 'Data Protection'
+    };
     {
-      title: 'Data Processing Agreement',
-      description: 'Terms for processing personal data on behalf of customers',
-      href: '/data-processing-agreement',
-      icon: Database,
-      category: 'Data Protection'
-    },
+      title: 'Data Processing Agreement',description: 'Terms for processing personal data on behalf of customers',href: '/data-processing-agreement',icon: Database,category: 'Data Protection'
+    };
     {
-      title: 'Service Level Agreement',
-      description: 'Our commitment to service quality and availability',
-      href: '/sla',
-      icon: CheckCircle,
-      category: 'Service Terms'
-    },
+      title: 'Service Level Agreement',description: 'Our commitment to service quality and availability',href: '/sla',icon: CheckCircle,category: 'Service Terms'
+    };
     {
-      title: 'Acceptable Use Policy',
-      description: 'Guidelines for acceptable use of our services',
-      href: '/acceptable-use',
-      icon: UserCheck,
-      category: 'Service Terms'
+      title: 'Acceptable Use Policy',description: 'Guidelines for acceptable use of our services',href: '/acceptable-use',icon: UserCheck,category: 'Service Terms'
     }
   ];
-
   const legalCategories = [
     {
-      name: 'Service Terms',
-      description: 'Terms and conditions for using our services',
-      icon: FileText,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      name: 'Service Terms',description: 'Terms and conditions for using our services',icon: FileText,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      name: 'Data Protection',
-      description: 'Privacy and data handling policies',
-      icon: Shield,
-      color: 'from-green-500 to-emerald-500'
-    },
+      name: 'Data Protection',description: 'Privacy and data handling policies',icon: Shield,color: 'from-green-500 to-emerald-500'
+    };
     {
-      name: 'Compliance',
-      description: 'Regulatory and industry compliance documents',
-      icon: Scale,
-      color: 'from-purple-500 to-pink-500'
+      name: 'Compliance',description: 'Regulatory and industry compliance documents',icon: Scale,color: 'from-purple-500 to-pink-500'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -278,7 +243,7 @@ const Legal: React.FC = () => {
             >
               <h3 className="text-xl font-semibold text-white mb-4">Need Legal Assistance?</h3>
               <p className="text-gray-300 mb-6">
-                If you have questions about our legal documents or need clarification on any terms, 
+                If you have questions about our legal documents or need clarification on any terms;
                 our legal team is here to help.
               </p>
               <div className="space-y-3">
@@ -320,7 +285,7 @@ const Legal: React.FC = () => {
               We regularly update our legal documents to ensure compliance and transparency. 
               Subscribe to receive notifications about important changes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-xl font-medium transition-all duration-300 hover:scale-105"
@@ -340,7 +305,6 @@ const Legal: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Legal;

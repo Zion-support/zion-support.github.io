@@ -1,12 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       ]
-    },;
+    },
     {
       name: "Cloud & Infrastructure",
       description: "Scalable cloud solutions and enterprise infrastructure",
-      services[;
+      services[,
         {
           title: "Cloud DevOps",
           description: "Streamlined cloud deployment and management",
@@ -29,11 +29,11 @@ export default function Page() {
           icon: "🔄"
         }
       ]
-    },;
+    },
     {
       name: "Data & Analytics",
       description: "Transform data into actionable business intelligence",
-      services[;
+      services[,
         {
           title: "Data Analytics",
           description: "Comprehensive data analysis and visualization",
@@ -56,11 +56,11 @@ export default function Page() {
           icon: "⚡"
         }
       ]
-    },;
+    },
     {
       name: "Security & Compliance",
       description: "Enterprise - grade security and regulatory compliance",
-      services[;
+      services[,
         {
           title: "Zero Trust Architecture",
           description: "Modern security framework for enterprise",
@@ -82,9 +82,9 @@ export default function Page() {
           pricing: "Custom pricing",
           icon: "📋"
         }
-      ];
-    };
-  ];
+      ],
+    },
+  ],
 
   return (<>
       <SEO
@@ -262,7 +262,7 @@ export default function Page() {
               {[{
                   title: "AI - Powered Code Review & Security Analysis",
                   description: "Detect vulnerabilities with 85% accuracy improvement.Support for 50 + programming languages with comprehensive security testing.",
-                  benefits["85% vulnerability reduction", "50 + programming languages", "Real - time analysis", "Git integration"],;
+                  benefits["85% vulnerability reduction", "50 + programming languages", "Real - time analysis", "Git integration"],
                   pricing: "$49 - $799 / month",
                   url: "/services / ai - code - review-security",
                   cta: "Secure Your Code"
@@ -270,7 +270,7 @@ export default function Page() {
                 {
                   title: "AI - Powered Customer Experience Analytics",
                   description: "Transform customer insights into actionable intelligence.Boost satisfaction by 35% and reduce churn by 25%.",
-                  benefits["35% satisfaction increase", "25% churn reduction", "Real - time insights", "Predictive analytics"],;
+                  benefits["35% satisfaction increase", "25% churn reduction", "Real - time insights", "Predictive analytics"],
                   pricing: "$299 - $1,999 / month",
                   url: "/services / ai - customer - experience - analytics",
                   cta: "Analyze Customer Data"
@@ -368,7 +368,7 @@ export default function Page() {
                 <div className="bg-white / 10 backdrop - blur - sm rounded-lg p - 6 border border-white / 20">
                   <h3 className="text-xl font - semibold text-white mb-3">Quick Actions</h3>
                   <div className="space - y-3">
-                    <Link to="/contact" className="block w-full bg-blue - 600 hover:bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
+                    <Link to="/contact" className="block w-full bg-blue - 600 hover: bg-blue - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
                       Schedule Consultation
                     </Link>
                     <Link to="/ai - services - showcase" className="block w-full bg-green - 600 hover:bg-green - 700 text-white py-2 px-4 rounded-lg transition - colors duration -300">
@@ -387,5 +387,5 @@ export default function Page() {
             </motion.div>
           </div>
         </section>
-      </div>;
-    </>;) };
+      </div>,
+    </>,) },

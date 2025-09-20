@@ -1,17 +1,17 @@
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
-import Link from "next/link";
-import { cn } from "@/lib/utils";
+import Link from "next/link",
+import { cn } from "@/lib/utils",
 
 interface InteractiveFeaturesProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null);
+  const [openIndex, setOpenIndex] = React.useState<number | null>(null),
 
   const features = [
     {
@@ -20,7 +20,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
         "Our algorithms analyze skills, availability and experience to deliver the best candidates for your project.",
       icon: <Search className="h-8 w-8 text-blue-700" />,
-      link: "/match",
+      link: "/match"
     },
     {
       title: "Talent Directory",
@@ -28,7 +28,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
         "Every profile is vetted for quality and authenticity so you can hire with confidence.",
       icon: <Users className="h-8 w-8 text-purple-700" />,
-      link: "/talent",
+      link: "/talent"
     },
     {
       title: "Services Marketplace",
@@ -36,7 +36,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
         "From on-demand IT support to specialized AI development, our marketplace offers transparent pricing and reviews.",
       icon: <Zap className="h-8 w-8 text-cyan-700" />,
-      link: "/services",
+      link: "/services"
     },
     {
       title: "Equipment Catalog",
@@ -44,13 +44,13 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
       details:
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.",
       icon: <Settings className="h-8 w-8 text-amber-700" />,
-      link: "/equipment",
-    },
-  ];
+      link: "/equipment"
+    }
+  ],
 
   const handleToggle = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  };
+    setOpenIndex((prev) => (prev === index ? null : index))
+  },
 
   return (
     <section className={cn("py-16 bg-zion-blue-dark", className)} style={style}>
@@ -101,7 +101,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
         </div>
       </div>
     </section>
-  );
+  ),
 }
 
-export default InteractiveFeatures;
+export default InteractiveFeatures,

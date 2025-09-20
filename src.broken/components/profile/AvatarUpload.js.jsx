@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react',
 export default function Page() {
 "
           alt="Avatar preview"
@@ -17,6 +17,6 @@ export default function Page() {
           Image upload feature is currently unavailable.</p>
       )}
     </div>
-  );
+  ),
 }
 '"

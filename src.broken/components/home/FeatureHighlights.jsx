@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react';
+import React from 'react',
+import { motion  } from 'framer-motion',
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react',
 
 ,
   {
@@ -10,7 +10,7 @@ import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star,
     description:'
       'Connect with professionals and businesses from over 150 countries worldwide.',
     features: ['
-      'Multi-language Support',Local Expertise',24/7 Availability',
+      'Multi-language Support',Local Expertise',24/7 Availability'
     ],
     color: 'from-zion-cyan to-zion-cyan-dark',
     bgColor: 'bg-zion-cyan/10',
@@ -24,9 +24,9 @@ import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star,
     features: ['Data Protection',Access Control',Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20'},
-];
-;
+    borderColor: 'border-zion-blue/20'}
+],
+,
 const achievements = [{
 
     icon: Award,
@@ -50,13 +50,13 @@ const achievements = [{
     icon: Star,
     number: '4.9/5',
     label: 'User Rating',
-    color: 'text-zion-purple'},
-];
+    color: 'text-zion-purple'}
+],
 
 const technologies = ['
-  'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics',
-];
-;
+  'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics'
+],
+,
 export function FeatureHighlights() {
   const containerVariants = {
 
@@ -67,7 +67,7 @@ export function FeatureHighlights() {
       transition: {
 
         staggerChildren: 0.2,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
 
   const itemVariants = {
 
@@ -84,7 +84,7 @@ export function FeatureHighlights() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
 
   const achievementVariants = {
 
@@ -96,7 +96,7 @@ export function FeatureHighlights() {
 
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 }}};
+      transition: { duration: 0.5 }}},
 
   const techVariants = {
 
@@ -108,7 +108,7 @@ export function FeatureHighlights() {
 
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5 }}};
+      transition: { duration: 0.5 }}},
 
   return ()
     <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
@@ -251,6 +251,6 @@ export function FeatureHighlights() {
         </motion.div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

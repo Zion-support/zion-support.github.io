@@ -1,57 +1,53 @@
   const contentData = {,
     ai: {,
-      title: 'AI Revolution';
-      icon: '🧠';
-      color: 'from-purple-600 to-pink-600';
+      title: 'AI Revolution',
+      icon: '🧠',
+      color: 'from-purple-600 to-pink-600',
       content: {,
-        title: 'Conscious AI Systems';
-        description: 'Experience the first AI systems with genuine consciousness and self-awareness';
+        title: 'Conscious AI Systems',
+        description: 'Experience the first AI systems with genuine consciousness and self-awareness',
         features: [,
-          'True self-awareness and introspectionCreative problem-solving capabilities';
-          'Emotional intelligence and empathyAutonomous learning and adaptation',
-        ];
-        link: '/pages/RevolutionaryTechBreakthrough2025',}
-    };
+          'True self-awareness and introspectionCreative problem-solving capabilitiesEmotional intelligence and empathyAutonomous learning and adaptation'
+        ],
+        link: '/pages/RevolutionaryTechBreakthrough2025'}
+    },
     space: {,
-      title: 'Space Technology';
-      icon: '🚀';
-      color: 'from-cyan-600 to-blue-600';
+      title: 'Space Technology',
+      icon: '🚀',
+      color: 'from-cyan-600 to-blue-600',
       content: {,
-        title: 'Next-Gen Space Exploration';
-        description: 'Revolutionary space technologies enabling interplanetary travel and colonization';
+        title: 'Next-Gen Space Exploration',
+        description: 'Revolutionary space technologies enabling interplanetary travel and colonization',
         features: [,
-          'Faster-than-light propulsion systemsSpace habitat technology';
-          'Terraforming capabilitiesQuantum communication networks',
-        ];
-        link: '/pages/NextGenSpaceTech2026',}
-    };
+          'Faster-than-light propulsion systemsSpace habitat technologyTerraforming capabilitiesQuantum communication networks'
+        ],
+        link: '/pages/NextGenSpaceTech2026'}
+    },
     biotech: {,
-      title: 'Biotech Revolution';
-      icon: '🧬';
-      color: 'from-emerald-600 to-teal-600';
+      title: 'Biotech Revolution',
+      icon: '🧬',
+      color: 'from-emerald-600 to-teal-600',
       content: {,
-        title: 'Advanced Biotechnology';
-        description: 'Revolutionary biotechnology transforming healthcare and human enhancement';
+        title: 'Advanced Biotechnology',
+        description: 'Revolutionary biotechnology transforming healthcare and human enhancement',
         features: [,
-          'Precision gene editing technologyNeural enhancement systems';
-          'Personalized medicine solutionsLongevity and anti-aging therapies',
-        ];
+          'Precision gene editing technologyNeural enhancement systemsPersonalized medicine solutionsLongevity and anti-aging therapies'
+        ],
         link: '/pages/AdvancedBiotechRevolution2026',
           </p>,
         </div>,
-  const [activeTab, setActiveTab] = useState('breakthrough');
+  const [activeTab, setActiveTab] = useState('breakthrough'),
     }
-  };
-  const activeContent = contentTabs[activeTab as keyof typeof contentTabs];
+  },
+  const activeContent = contentTabs[activeTab as keyof typeof contentTabs],
   return (,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         </div>,
       </div>,
     </div>,
-  );
-};
+  ),
+},
         {/* Tab Navigation */}
         <div className="flex justify-center mb-8">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-2 flex space-x-2">,
@@ -62,7 +58,7 @@
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${,
                   activeTab === key,
                     ? `bg-gradient-to-r ${tab.color} text-white shadow-lg`,
-                    : 'text-white/70 hover: text-white hover:bg-white/10',}`}
+                    : 'text-white/70 hover: text-white hover:bg-white/10'}`}
               >,
                 <span className="text-xl mr-2">{tab.icon}</span>,
               </div>,

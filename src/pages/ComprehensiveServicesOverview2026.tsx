@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Cloud,
@@ -81,150 +81,58 @@ import {
   Cpu as CpuIcon2,
   Network as NetworkIcon,
   Leaf as LeafIcon
-} from 'lucide-react';
+} from "lucide-react";
 import SEO from "@/components/SEO";
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from "@/data/ultimateInnovativeServices2026";
-
 export default function ComprehensiveServicesOverview2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-
   const serviceCategories = [
     {
-      id: 'quantum-ai',
-      name: 'Quantum AI & Computing',
-      description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
-      icon: AtomIcon,
-      color: 'from-purple-500 to-cyan-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Quantum AI'),
-      marketSize: '$1.7 billion by 2027',
-      avgROI: '500-2000%',
-      innovationLevel: 'Revolutionary'
-    },
+      id: 'quantum-ai',name: 'Quantum AI & Computing',description: 'Revolutionary quantum computing solutions combined with artificial intelligence',icon: AtomIcon,color: 'from-purple-500 to-cyan-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Quantum AI'),marketSize: '$1.7 billion by 2027',avgROI: '500-2000%',innovationLevel: 'Revolutionary'
+    };
     {
-      id: 'neuromorphic-ai',
-      name: 'Neuromorphic AI',
-      description: 'Brain-inspired computing systems that mimic human neural networks',
-      icon: BrainIcon2,
-      color: 'from-pink-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Neuromorphic AI'),
-      marketSize: '$8.3 billion by 2027',
-      avgROI: '300-800%',
-      innovationLevel: 'Cutting-edge'
-    },
+      id: 'neuromorphic-ai',name: 'Neuromorphic AI',description: 'Brain-inspired computing systems that mimic human neural networks',icon: BrainIcon2,color: 'from-pink-500 to-purple-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Neuromorphic AI'),marketSize: '$8.3 billion by 2027',avgROI: '300-800%',innovationLevel: 'Cutting-edge'
+    };
     {
-      id: 'synthetic-biology',
-      name: 'Synthetic Biology AI',
-      description: 'AI-powered design and engineering of biological systems',
-      icon: DnaIcon,
-      color: 'from-green-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Synthetic Biology'),
-      marketSize: '$13.4 billion by 2027',
-      avgROI: '400-1200%',
-      innovationLevel: 'Revolutionary'
-    },
+      id: 'synthetic-biology',name: 'Synthetic Biology AI',description: 'AI-powered design and engineering of biological systems',icon: DnaIcon,color: 'from-green-500 to-blue-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Synthetic Biology'),marketSize: '$13.4 billion by 2027',avgROI: '400-1200%',innovationLevel: 'Revolutionary'
+    };
     {
-      id: 'space-technology',
-      name: 'Space Technology AI',
-      description: 'Autonomous space operations and satellite management systems',
-      icon: SatelliteIcon,
-      color: 'from-blue-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Space Technology'),
-      marketSize: '$469.8 billion by 2027',
-      avgROI: '600-2000%',
-      innovationLevel: 'Revolutionary'
-    },
+      id: 'space-technology',name: 'Space Technology AI',description: 'Autonomous space operations and satellite management systems',icon: SatelliteIcon,color: 'from-blue-500 to-purple-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Space Technology'),marketSize: '$469.8 billion by 2027',avgROI: '600-2000%',innovationLevel: 'Revolutionary'
+    };
     {
-      id: 'advanced-materials',
-      name: 'Advanced Materials AI',
-      description: 'AI-powered discovery and design of next-generation materials',
-      icon: LayersIcon,
-      color: 'from-orange-500 to-red-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Advanced Materials'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '500-1500%',
-      innovationLevel: 'Cutting-edge'
-    },
+      id: 'advanced-materials',name: 'Advanced Materials AI',description: 'AI-powered discovery and design of next-generation materials',icon: LayersIcon,color: 'from-orange-500 to-red-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Advanced Materials'),marketSize: '$1.2 trillion by 2027',avgROI: '500-1500%',innovationLevel: 'Cutting-edge'
+    };
     {
-      id: 'brain-computer-interface',
-      name: 'Brain-Computer Interface',
-      description: 'Direct neural communication between human brain and computers',
-      icon: MonitorIcon2,
-      color: 'from-purple-500 to-pink-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Brain-Computer Interface'),
-      marketSize: '$3.7 billion by 2027',
-      avgROI: '800-3000%',
-      innovationLevel: 'Revolutionary'
-    },
+      id: 'brain-computer-interface',name: 'Brain-Computer Interface',description: 'Direct neural communication between human brain and computers',icon: MonitorIcon2,color: 'from-purple-500 to-pink-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Brain-Computer Interface'),marketSize: '$3.7 billion by 2027',avgROI: '800-3000%',innovationLevel: 'Revolutionary'
+    };
     {
-      id: 'digital-twin',
-      name: 'Digital Twin AI',
-      description: 'Virtual replicas of physical systems with real-time monitoring',
-      icon: GlobeIcon3,
-      color: 'from-cyan-500 to-green-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Digital Twin'),
-      marketSize: '$86.1 billion by 2028',
-      avgROI: '400-1200%',
-      innovationLevel: 'Advanced'
-    },
+      id: 'digital-twin',name: 'Digital Twin AI',description: 'Virtual replicas of physical systems with real-time monitoring',icon: GlobeIcon3,color: 'from-cyan-500 to-green-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Digital Twin'),marketSize: '$86.1 billion by 2028',avgROI: '400-1200%',innovationLevel: 'Advanced'
+    };
     {
-      id: 'extended-reality',
-      name: 'Extended Reality AI',
-      description: 'Immersive VR, AR, and MR experiences powered by AI',
-      icon: SmartphoneIcon2,
-      color: 'from-orange-500 to-purple-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Extended Reality'),
-      marketSize: '$125.2 billion by 2027',
-      avgROI: '500-1500%',
-      innovationLevel: 'Advanced'
-    },
+      id: 'extended-reality',name: 'Extended Reality AI',description: 'Immersive VR, AR, and MR experiences powered by AI',
+      icon: SmartphoneIcon2,color: 'from-orange-500 to-purple-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Extended Reality'),marketSize: '$125.2 billion by 2027',avgROI: '500-1500%',innovationLevel: 'Advanced'
+    };
     {
-      id: 'edge-ai',
-      name: 'Edge AI Intelligence',
-      description: 'AI processing at the edge of networks for real-time decision making',
-      icon: CpuIcon2,
-      color: 'from-green-500 to-cyan-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Edge AI'),
-      marketSize: '$15.7 billion by 2027',
-      avgROI: '400-1200%',
-      innovationLevel: 'Advanced'
-    },
+      id: 'edge-ai',name: 'Edge AI Intelligence',description: 'AI processing at the edge of networks for real-time decision making',icon: CpuIcon2,color: 'from-green-500 to-cyan-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Edge AI'),marketSize: '$15.7 billion by 2027',avgROI: '400-1200%',innovationLevel: 'Advanced'
+    };
     {
-      id: 'federated-learning',
-      name: 'Federated Learning AI',
-      description: 'Collaborative AI training across distributed data sources',
-      icon: NetworkIcon,
-      color: 'from-purple-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Federated Learning'),
-      marketSize: '$2.3 billion by 2027',
-      avgROI: '500-1500%',
-      innovationLevel: 'Advanced'
-    },
+      id: 'federated-learning',name: 'Federated Learning AI',description: 'Collaborative AI training across distributed data sources',icon: NetworkIcon,color: 'from-purple-500 to-blue-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Federated Learning'),marketSize: '$2.3 billion by 2027',avgROI: '500-1500%',innovationLevel: 'Advanced'
+    };
     {
-      id: 'sustainable-technology',
-      name: 'Sustainable Technology AI',
-      description: 'AI solutions for environmental sustainability and green innovation',
-      icon: LeafIcon,
-      color: 'from-green-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
-      avgROI: '300-800%',
-      innovationLevel: 'Advanced'
+      id: 'sustainable-technology',name: 'Sustainable Technology AI',description: 'AI solutions for environmental sustainability and green innovation',icon: LeafIcon,color: 'from-green-500 to-blue-500',services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),marketSize: '$1.2 trillion by 2027',avgROI: '300-800%',innovationLevel: 'Advanced'
     }
   ];
-
   const filteredCategories = selectedCategory === 'all'
     ? serviceCategories
-    : serviceCategories.filter(cat => cat.id === selectedCategory);
+    : serviceCategories.filter(cat => cat.id === selectedCategory),
 
   const toggleCategoryExpansion = (categoryId: string) => {
-    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId)
   };
-
-  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
-  const totalMarketSize = '$3.2+ trillion';
+  const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length,
+  const totalMarketSize = '$3.2+ trillion',
   const avgROI = '400-1500%';
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -499,7 +407,7 @@ export default function ComprehensiveServicesOverview2026() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Explore the Future?
             </h2>
             <p className="text-xl text-zion-slate-300 mb-8">
@@ -530,5 +438,5 @@ export default function ComprehensiveServicesOverview2026() {
         </div>
       </section>
     </div>
-  );
+  )
 }

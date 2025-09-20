@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Bot, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredRobotics: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredRobotics: React.FC = () => {
       title: 'Human Collaboration',
       description: 'Safe human-robot collaboration and interaction systems'
     }
-  ];
+  ],
 
   const roboticCapabilities = [
     {
       area: 'Industrial Automation',
-      capabilities: ['Assembly line automation', 'Quality control', 'Material handling', 'Packaging'],
+      capabilities: ['Assembly line automationQuality control', 'Material handlingPackaging'],
       improvement: '300% efficiency',
       accuracy: '99.9% precision'
     },
     {
       area: 'Service Robots',
-      capabilities: ['Customer service', 'Cleaning robots', 'Delivery robots', 'Security robots'],
+      capabilities: ['Customer serviceCleaning robots', 'Delivery robotsSecurity robots'],
       improvement: '24/7 availability',
       cost: '60% reduction'
     },
     {
       area: 'Medical Robotics',
-      capabilities: ['Surgical assistance', 'Rehabilitation', 'Patient care', 'Medical logistics'],
+      capabilities: ['Surgical assistanceRehabilitation', 'Patient careMedical logistics'],
       improvement: 'Enhanced precision',
       safety: 'Zero incidents'
     },
     {
       area: 'Agricultural Robots',
-      capabilities: ['Precision farming', 'Harvesting', 'Monitoring', 'Crop management'],
+      capabilities: ['Precision farmingHarvesting', 'MonitoringCrop management'],
       improvement: '40% yield increase',
       sustainability: 'Eco-friendly'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Manufacturing',
       description: 'AI-powered robots for advanced manufacturing and assembly operations',
-      benefits: ['Increased productivity', 'Quality consistency', 'Cost reduction', 'Flexible production']
+      benefits: ['Increased productivityQuality consistency', 'Cost reductionFlexible production']
     },
     {
       title: 'Healthcare',
       description: 'Robotic assistance for medical procedures and patient care',
-      benefits: ['Enhanced precision', 'Reduced errors', 'Faster recovery', 'Better outcomes']
+      benefits: ['Enhanced precisionReduced errors', 'Faster recoveryBetter outcomes']
     },
     {
       title: 'Logistics & Warehousing',
       description: 'Automated material handling and warehouse management systems',
-      benefits: ['Faster processing', 'Reduced costs', 'Better inventory management', '24/7 operation']
+      benefits: ['Faster processingReduced costs', 'Better inventory management24/7 operation']
     },
     {
       title: 'Agriculture',
       description: 'Precision farming and automated agricultural operations',
-      benefits: ['Higher yields', 'Resource optimization', 'Sustainable practices', 'Reduced labor costs']
+      benefits: ['Higher yieldsResource optimization', 'Sustainable practicesReduced labor costs']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredRobotics: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses starting with robotic automation',
       features: [
-        'Up to 5 robots',
-        'Basic AI capabilities',
-        'Standard safety protocols',
-        'Email support',
+        'Up to 5 robotsBasic AI capabilities',
+        'Standard safety protocolsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredRobotics: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies with multiple robotic systems',
       features: [
-        'Up to 20 robots',
-        'Advanced AI capabilities',
-        'Custom safety protocols',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 20 robotsAdvanced AI capabilities',
+        'Custom safety protocolsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-site management'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredRobotics: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex automation needs',
       features: [
-        'Unlimited robots',
-        'Custom AI development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited robotsCustom AI development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredRobotics: React.FC = () => {
       position: "Farm Manager",
       company: "Sustainable Farms Inc"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredRobotics: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate with AI-Powered Robotics?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredRobotics: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredRobotics;
+export default AIPoweredRobotics,

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Sustainable AI 2025 - Zion Tech Group';
-  description: 'Green AI solutions achieving 85% carbon reduction and 300% ROI through sustainable technology. Achieve carbon neutrality with AI.';
-  keywords: ['sustainable AIgreen technology', 'carbon neutralenvironmental AI', 'climate solutions'],
-};
+  title: 'Sustainable AI 2025 - Zion Tech Group',
+  description: 'Green AI solutions achieving 85% carbon reduction and 300% ROI through sustainable technology. Achieve carbon neutrality with AI.',
+  keywords: ['sustainable AIgreen technologycarbon neutralenvironmental AI', 'climate solutions']
+},
 export default function SustainableAI2025Page() {,
   return (,
     <div>,
@@ -47,7 +47,7 @@ export default function SustainableAI2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Environmental Impact */,}
+        {/* Environmental Impact */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Environmental Impact</h2>,
@@ -76,7 +76,7 @@ export default function SustainableAI2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Solutions */,}
+        {/* Solutions */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Sustainable AI Solutions</h2>,
@@ -193,7 +193,7 @@ export default function SustainableAI2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* ROI Metrics */,}
+        {/* ROI Metrics */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Business Benefits</h2>,
@@ -217,7 +217,7 @@ export default function SustainableAI2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Achieve Carbon Neutrality?</h2>,
@@ -242,5 +242,4 @@ export default function SustainableAI2025Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

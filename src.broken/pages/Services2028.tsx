@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { SEO } from '@/components / SEO';
+import React, { useState, useEffect } from 'react',
+import { SEO } from '@/components / SEO',
 
 export default function Page() {
-) ;
+) ,
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  },
 
   return (<div className="min - h-screen bg-cyber -black">
       {/* Futuristic Background */}
@@ -20,7 +20,7 @@ export default function Page() {
             style={{
               left: any`${Math.random () * 100}%`,
               animationDelay: `${Math.random () * 20}s`,
-              animationDuration: `${15 + Math.random () * 10}s`,
+              animationDuration: `${15 + Math.random () * 10}s`
             }}
           >
             {String.fromCharCode(0x30a0 + Math.random () * 96) }
@@ -31,7 +31,7 @@ export default function Page() {
             style={{
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`,
-              animationDelay: `${Math.random () * 6}s`,
+              animationDelay: `${Math.random () * 6}s`
             }}
           />) ) }
       </div>
@@ -352,5 +352,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import { 
-  Star, 
+  Star,
   Phone, 
   Mail, 
   MapPin, 
@@ -19,7 +19,7 @@ import {
   Lock,
   Building,
   BookOpen
-} from 'lucide-react';
+} from 'lucide-react',
 
 const EnhancedFuturisticFooter: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const EnhancedFuturisticFooter: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedFuturisticFooter</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedFuturisticFooter;
+export default EnhancedFuturisticFooter,

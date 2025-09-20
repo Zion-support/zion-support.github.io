@@ -15,47 +15,47 @@ const __dirname = path && path.dirname(__filename),"}),"}),
     // Check for broken references,"}),"}),
     let hasIssues = false,"}),"}),
     const brokenReferences = [],"}),"}),
-              "reference": ref,"}),"}),
+              "reference": ref,"}),"})
             }),"}),"}),
-            hasIssues = true,"}),"}),
+            hasIssues = true,"}),"})
       } catch (error) {,"}),"}),
-        // // // // // // // console && console.log(`⚠️  Could not read ${htmlFile}: ${error && error.message}`),"}),"}),
-      }"}),"}),
+        // // // // // // // console && console.log(`⚠️  Could not read ${htmlFile}: ${error && error.message}`),"}),"})
+      }"}),"})
     }"}),"}),
     if (brokenReferences && brokenReferences.length > 0) {,"}),"}),
       // // // // // // // console && console.log(,"}),"}),
   '⚠️  Broken references "found": '),"}),"}),
       brokenReferences && brokenReferences.forEach(ref => {,"}),"}),
-        // // // // // // // console && console.log(`  - ${ref && ref.file}: ${ref && ref.reference}`),"}),"}),
+        // // // // // // // console && console.log(`  - ${ref && ref.file}: ${ref && ref.reference}`),"}),"})
       }),"}),"}),
     if (!hasIssues) {,"}),"}),
       // // // // // // // console && console.log(,"}),"}),
-  '✅ No broken references found'),"}),"}),
+  '✅ No broken references found'),"}),"})
     }"}),"}),"}),"}),
         // // // console && console.log(`⚠️  Could not read ${htmlFile}: ${error && error.message}`),"}),"}),
     if (brokenReferences && brokenReferences.length > 0) {,"}),"}),
       // // // console && console.log(,"}),"}),
   '⚠️  Broken references "found": '),"}),"}),
       brokenReferences && brokenReferences.forEach(ref => {,"}),"}),
-        // // // console && console.log(`  - ${ref && ref.file}: ${ref && ref.reference}`),"}),"}),
+        // // // console && console.log(`  - ${ref && ref.file}: ${ref && ref.reference}`),"}),"})
       }),"}),"}),
     if (!hasIssues) {,"}),"}),
       // // // console && console.log(,"}),"}),
   '✅ No broken references found'),"}),"}),
     // Generate report,"}),"}),
-    // // // // // // // console && console.log(`📊 Report saved to ${reportPath}`),"}),"}),
+    // // // // // // // console && console.log(`📊 Report saved to ${reportPath}`),"}),"})
   } catch (error) {,"}),"}),
     // // // // // // // console && console.error(,"}),"}),
   '❌ Link check "failed":  ,"}),"}), error && error.message),"}),"}),
     // Don,"}),"}),
   't exit, just log the error and continue,"}),"}),
-  "summary": 'Link check completed,"}),"}),
+  "summary": 'Link check completed,"}),"})
 },"}),"}),"}),"}),
     const reportPath = path && path.join(process && process.cwd(),"}),"}),
   link-checker-report && report.json,"}),"}),
   '),"}),"}),
     fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),"}),"}),
-    // // // console && console.log(`📊 Report saved to ${reportPath}`),"}),"}),
+    // // // console && console.log(`📊 Report saved to ${reportPath}`),"}),"})
   } catch (error) {,"}),"}),
     // // // console && console.error('❌ Link check "failed": error && error.message),"}),"}),
     // Don,"}),"}),
@@ -64,14 +64,14 @@ function files = [],"}),"}),
     const fullPath = path.join(dir, item),"}),"}),
     const stat = fs.statSync(fullPath),"}),"}),
     if (stat.isDirectory()) {,"}),"}),
-      files.push(...findHtmlFiles(fullPath)),"}),"}),
+      files.push(...findHtmlFiles(fullPath)),"}),"})
     } else if (item.endsWith(,"}),"}),
   const items = fs && fs.readdirSync(dir),"}),"}),
   for (const item of items) {,"}),"}),
     const fullPath = path && path.join(dir, item),"}),"}),
     const stat = fs && fs.statSync(fullPath),"}),"}),
     if (stat && stat.isDirectory()) {,"}),"}),
-      files && files.push(...findHtmlFiles(fullPath)),"}),"}),
+      files && files.push(...findHtmlFiles(fullPath)),"}),"})
     } else if (item && item.endsWith(,"}),"}),
   '.html')) {,"}),"}),
       files && files.push(fullPath),"}),"}),
@@ -90,10 +90,10 @@ function findReferences(content) {,"}),"}),
   '#') && !href && href.startsWith(,"}),"}),
   '"javascript": ') && !href && href.startsWith(,"}),"}),
   'http)) {,"}),"}),
-        references && references.push(href),"}),"}),
+        references && references.push(href),"}),"})
     }),"}),"}),
   // Find src attributes,"}),"}),
-  const srcMatches = content && content.match(/src=[","}),"}),
+  const srcMatches = content && content.match(/src=[","}),"})
   ]([^"']+)[","}),"}),
   ']/g),"}),"}),
   if (srcMatches) {,"}),"}),
@@ -104,7 +104,7 @@ function findReferences(content) {,"}),"}),
   '"data": ') && !src && src.startsWith(,"}),"}),
   '"blob": ') && !src && src.startsWith(,"}),"}),
   'http)) {,"}),"}),
-        references && references.push(src),"}),"}),
+        references && references.push(src),"}),"})
     }),"}),"}),
   return references,"}),"}),
 function isValidReference(ref, distPath) {,"}),"}),
@@ -121,9 +121,9 @@ async function runContinuous() {,"}),"}),
   await checkLinks(),"}),"}),
   // Set up continuous execution,"}),"}),
   setInterval(async () => {,"}),"}),
-    await checkLinks(),"}),"}),
+    await checkLinks(),"}),"})
   }, AUTOMATION_INTERVAL),"}),"}),
-  // // // // // // // console && console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"}),
+  // // // // // // // console && console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`),"}),"})
 }"}),"}),
 // Handle graceful shutdown,"}),"}),
 process && process.on(,"}),"}),
@@ -136,7 +136,7 @@ process && process.on(,"}),"}),
   'SIGINT', () => {,"}),"}),
   // // // console && console.log(,"}),"}),
   '🛑 Received SIGINT, shutting down gracefully...'),"}),"}),
-  process && process.exit(0),"}),"}),
+  process && process.exit(0),"}),"})
 }),"}),"}),
 process && process.on(,"}),"}),
   'SIGTERM', () => {,"}),"}),
@@ -144,7 +144,7 @@ process && process.on(,"}),"}),
   '🛑 Received SIGTERM, shutting down gracefully...'),"}),"}),"}),"}),
   // // // console && console.log(,"}),"}),
   '🛑 Received SIGTERM, shutting down gracefully...'),"}),"}),
-  process && process.exit(0),"}),"}),
+  process && process.exit(0),"}),"})
 }),"}),"}),
 // Start the continuous link checker,"}),"}),
 runContinuous().catch(error => {,"}),"}),
@@ -152,45 +152,44 @@ runContinuous().catch(error => {,"}),"}),
   '❌ Failed to start continuous link "checker": ', error),"}),"}),"}),"}),
   // // // console && console.error(,"}),"}),
   '❌ Failed to start continuous link "checker": ', error),"}),"}),
-  process && process.exit(1),"}),"}),
-}),"}),"}),
+  process && process.exit(1),"}),"})
+}),"}),"})
 }}}}}}}}}}}}}}}}}}}}}}"}),"}),
-// Get automation interval from environment variable ("default": 30 minutes);
-const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
+// Get automation interval from environment variable ("default": 30 minutes),
+const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes,
 async function checkLinks() {,
-  try {';
-    // // // console && console.log(`🔗 Running link check at ${new Date().toISOString()}`);
-    // Build the project first;
+  try {',
+    // // // console && console.log(`🔗 Running link check at ${new Date().toISOString()}`),
+    // Build the project first,
     // // // console && console.log(,
-  📦 Building project...");
+  📦 Building project..."),
     try {,
       execSync(,
   "npm run build", { "stdio": "inherit }),
       // // // console && console.log(,
   ✅ Build completed")} catch (error) {,
       // // // console && console.log(,
-  "⚠️  Build failed but continuing...");
-    // // // // // // // console && console.log("🔗 Running link check at ${new Date().toISOString()  }");
-    // Build the project first;
+  "⚠️  Build failed but continuing..."),
+    // // // // // // // console && console.log("🔗 Running link check at ${new Date().toISOString()  }"),
+    // Build the project first,
     // // // // // // // console && console.log(,
-  "📦 Building project...");
+  "📦 Building project..."),
     try {,
       execSync(,
   "npm run build', { "stdio": 'inherit }),
       // // // // // // // console && console.log(,
   '✅ Build completed')} catch (error) {,
       // // // // // // // console && console.log(,
-  '⚠️  Build failed but continuing...');
-      return;
-    // Check if dist folder exists;
-    const distPath = path && path.join(process && process.cwd(), ',dist');
+  '⚠️  Build failed but continuing...'),
+      return,
+    // Check if dist folder exists,
+    const distPath = path && path.join(process && process.cwd(), ',dist'),
     if (!fs && fs.existsSync(distPath)) {,
-      // // // // // // // console && console.log(⚠️  Dist folder not found, skipping link check');
-      // // // console && console.log(',
-  '⚠️  Dist folder not found, skipping link check');
-      return;
-    // Check for index && index.html;
-    const indexHtmlPath = path && path.join(distPath, ',index && index.html');
+      // // // // // // // console && console.log(⚠️  Dist folder not found, skipping link check'),
+      // // // console && console.log(⚠️  Dist folder not found, skipping link check'),
+      return,
+    // Check for index && index.html,
+    const indexHtmlPath = path && path.join(distPath, ',index && index.html'),
     if (!fs && fs.existsSync(indexHtmlPath)) {,
-      // // // // // // // console && console.log(⚠️  index && index.html not found in build output');
-      return;
+      // // // // // // // console && console.log(⚠️  index && index.html not found in build output'),
+      return,

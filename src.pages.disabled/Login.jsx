@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface LoginProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Login({ }: LoginProps) {,
@@ -8,8 +8,7 @@ export default function Login({ }: LoginProps) {,
     <div>,
       <h1>Login</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

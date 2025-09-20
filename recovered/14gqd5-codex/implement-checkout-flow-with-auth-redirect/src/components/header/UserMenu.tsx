@@ -1,45 +1,45 @@
 
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Link, useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
 import { 
-  DropdownMenu, 
+  DropdownMenu,
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuSeparator, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu",
 
 export function UserMenu() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const { toast } = useToast();
+  const { user, logout } = useAuth(),
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
 
   const handleIconClick = () => {
     if (user) {
-      navigate("/profile");
+      navigate("/profile"),
     } else {
-      navigate("/login");
+      navigate("/login"),
     }
-  };
+  },
 
   const handleSignOut = async () => {
     try {
-      await logout();
+      await logout(),
     } catch (error) {
       toast({
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  };
+  },
 
   if (!user) {
     return (
-      <div className="hidden md:flex items-center space-x-4">
+      <div className="hidden md: flex items-center space-x-4">
         <Link to="/login" className="text-zion-slate-light hover:text-white">Login</Link>
         <Link 
           to="/signup" 
@@ -48,7 +48,7 @@ export function UserMenu() {
           Register
         </Link>
       </div>
-    );
+    )
   }
 
   return (
@@ -84,5 +84,5 @@ export function UserMenu() {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ),
 }

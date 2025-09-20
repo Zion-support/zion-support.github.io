@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, Eye, Users, TrendingUp, AlertTriangle export function SiteHealthDashboard () {
 
-    const [healthData, setHealthData] = useState([]);
-    const [overallScore, setOverallScore] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const [healthData, setHealthData] = useState([]),
+    const [overallScore, setOverallScore] = useState(0),
+    const [isLoading, setIsLoading] = useState(true),
     useEffect(() => {
         // Simulate health check data collection
         const performHealthCheck = async () => {
-            setIsLoading(true) ;
+            setIsLoading(true) ,
             // Simulate API calls to various monitoring services
-            await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+            await new Promise(resolve => setTimeout (resolve, 2000) ) ,
             const healthCategories = [{
 
                     name: 'Performance',
                     icon: Zap,
                     overallScore: 88,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'Page Load Time',
@@ -41,16 +41,16 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Core Web Vitals Score',
                             value: 85,
                             status: 'good',
-                            description: 'Overall Google Core Web Vitals performance',
+                            description: 'Overall Google Core Web Vitals performance'
 
                     ]
-                },;
+                },
                 {
 
                     name: 'SEO Health',
                     icon: Search,
                     overallScore: 82,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'Meta Descriptions',
@@ -84,16 +84,16 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Schema Markup',
                             value: 85,
                             status: 'good',
-                            description: 'Structured data implementation',
+                            description: 'Structured data implementation'
 
                     ]
-                },;
+                },
                 {
 
                     name: 'Accessibility',
                     icon: Eye,
                     overallScore: 91,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'ARIA Implementation',
@@ -119,16 +119,16 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Screen Reader Support',
                             value: 89,
                             status: 'good',
-                            description: 'Screen reader compatibility',
+                            description: 'Screen reader compatibility'
 
                     ]
-                },;
+                },
                 {
 
                     name: 'Security',
                     icon: Shield,
                     overallScore: 94,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'HTTPS Implementation',
@@ -154,16 +154,16 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Content Security Policy',
                             value: 95,
                             status: 'excellent',
-                            description: 'CSP header implementation',
+                            description: 'CSP header implementation'
 
                     ]
-                },;
+                },
                 {
 
                     name: 'Content Quality',
                     icon: Globe,
                     overallScore: 76,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'Content Completeness',
@@ -191,16 +191,16 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Content Freshness',
                             value: 89,
                             status: 'good',
-                            description: 'Recently updated content percentage',
+                            description: 'Recently updated content percentage'
 
                     ]
-                },;
+                },
                 {
 
                     name: 'User Experience',
                     icon: Users,
                     overallScore: 85,
-                    metrics[;
+                    metrics[,
                         {
 
                             name: 'Mobile Responsiveness',
@@ -224,46 +224,46 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
                             name: 'Error Handling',
                             value: 77,
                             status: 'good',
-                            description: '404 pages and error handling',
+                            description: '404 pages and error handling'
 
                     ]
 
-            ];
-            setHealthData(healthCategories) ;
+            ],
+            setHealthData(healthCategories) ,
             // Calculate overall score
-            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0) ;
-            setOverallScore(Math.round (totalScore / healthCategories.length) ) ;
-            setIsLoading(false) };
-        performHealthCheck () }, []) ;
+            const totalScore = healthCategories.reduce((sum, category) => sum + category.overallScore, 0) ,
+            setOverallScore(Math.round (totalScore / healthCategories.length) ) ,
+            setIsLoading(false) },
+        performHealthCheck () }, []) ,
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'excellent': return 'text-green-500 bg-green-50 border-green-200';
-            case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
-            case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
-            case 'critical': return 'text-red-500 bg-red-50 border-red-200';
+            case 'excellent': return 'text-green-500 bg-green-50 border-green-200',
+            case 'good': return 'text-blue-500 bg-blue-50 border-blue-200',
+            case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200',
+            case 'critical': return 'text-red-500 bg-red-50 border-red-200',
             default: return 'text-gray-500 bg-gray-50 border-gray-200'}
-    };
+    },
     const getStatusIcon = (status) => {
 
         switch(status) {
 
-            case 'excellent': return <CheckCircle className="w-4 h-4"/>;'"
-            case 'good': return <CheckCircle className="w-4 h-4"/>;'"
-            case 'warning': return <AlertTriangle className="w-4 h-4"/>;'"
-            case 'critical': return <AlertCircle className="w-4 h-4"/>;"
+            case 'excellent': return <CheckCircle className="w-4 h-4"/>,'"
+            case 'good': return <CheckCircle className="w-4 h-4"/>,'"
+            case 'warning': return <AlertTriangle className="w-4 h-4"/>,'"
+            case 'critical': return <AlertCircle className="w-4 h-4"/>,"
             default: return <Clock className="w-4 h-4"/>}
-    };
+    },
     const getScoreColor = (score) => {
 
         if(score >= 90)
-            return 'text-green-500';
+            return 'text-green-500',
         if(score >= 75)
-            return 'text-blue-500';
+            return 'text-blue-500',
         if(score >= 60)
-            return 'text-yellow-500';
-        return 'text-red-500'};
+            return 'text-yellow-500',
+        return 'text-red-500'},
     if(isLoading) {
 "
         return (<div className="max-w-7xl mx-auto p-6">"
@@ -305,7 +305,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {healthData.map((category, index) => {
 
-            const IconComponent = category.icon;"
+            const IconComponent = category.icon,"
             return (<div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">"
               <div className="p-6 border-b border-gray-100">"
                 <div className="flex items-center justify-between mb-4">"

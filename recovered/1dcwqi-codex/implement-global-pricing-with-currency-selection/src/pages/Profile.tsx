@@ -1,73 +1,73 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 import {
   Tabs,
   TabsList,
   TabsTrigger,
-  TabsContent,
-} from '@/components/ui/tabs';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
+  TabsContent
+} from '@/components/ui/tabs',
+import { Input } from '@/components/ui/input',
+import { Label } from '@/components/ui/label',
+import { Button } from '@/components/ui/button',
+import { Checkbox } from '@/components/ui/checkbox',
 import {
   Avatar,
   AvatarImage,
-  AvatarFallback,
-} from '@/components/ui/avatar';
+  AvatarFallback
+} from '@/components/ui/avatar',
 
 interface User {
-  id: string;
-  name: string;
-  email: string;
-  avatarUrl: string;
-  notifications: { email: boolean; push: boolean };
-  softDeleted?: boolean;
+  id: string,
+  name: string,
+  email: string,
+  avatarUrl: string,
+  notifications: { email: boolean, push: boolean },
+  softDeleted?: boolean,
 }
 
 export default function Profile() {
-  const [user, setUser] = useState<User | null>(null);
-  const [avatarPreview, setAvatarPreview] = useState<string>('');
+  const [user, setUser] = useState<User | null>(null),
+  const [avatarPreview, setAvatarPreview] = useState<string>(''),
 
   useEffect(() => {
     fetch('/api/users/me')
       .then(res => res.json())
       .then(setUser)
-      .catch(() => {});
-  }, []);
+      .catch(() => {}),
+  }, []),
 
   const handleSave = async () => {
-    if (!user) return;
+    if (!user) return,
     const res = await fetch('/api/users/me', {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(user),
-    });
-    const data = await res.json();
-    setUser(data);
-  };
+      body: JSON.stringify(user)
+    }),
+    const data = await res.json(),
+    setUser(data),
+  },
 
   const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+    const file = e.target.files?.[0],
     if (file) {
-      const reader = new FileReader();
+      const reader = new FileReader(),
       reader.onloadend = () => {
-        setAvatarPreview(reader.result as string);
-      };
-      reader.readAsDataURL(file);
+        setAvatarPreview(reader.result as string)
+      },
+      reader.readAsDataURL(file),
     }
-  };
+  },
 
   const handleDelete = async () => {
-    const confirm = window.prompt('Enter password to confirm');
-    if (!confirm) return;
-    await fetch('/api/users/me', { method: 'DELETE' });
-    setUser(prev => (prev ? { ...prev, softDeleted: true } : prev));
-  };
+    const confirm = window.prompt('Enter password to confirm'),
+    if (!confirm) return,
+    await fetch('/api/users/me', { method: 'DELETE' }),
+    setUser(prev => (prev ? { ...prev, softDeleted: true } : prev)),
+  },
 
   if (!user) {
     return (
       <div className="p-4">Loading...</div>
-    );
+    ),
   }
 
   return (
@@ -126,7 +126,7 @@ export default function Profile() {
                 onCheckedChange={v =>
                   setUser({
                     ...user,
-                    notifications: { ...user.notifications, email: !!v },
+                    notifications: { ...user.notifications, email: !!v }
                   })
                 }
               />
@@ -141,7 +141,7 @@ export default function Profile() {
                 onCheckedChange={v =>
                   setUser({
                     ...user,
-                    notifications: { ...user.notifications, push: !!v },
+                    notifications: { ...user.notifications, push: !!v }
                   })
                 }
               />
@@ -153,5 +153,5 @@ export default function Profile() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  ),
 }

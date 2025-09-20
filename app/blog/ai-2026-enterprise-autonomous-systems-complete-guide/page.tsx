@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Enterprise Autonomous Systems Complete Guide';
-  description: 'Comprehensive guide to implementing autonomous AI systems in enterprise environments. Learn about architecture, governance, and operational best practices.';
-  keywords: ['autonomous systemsenterprise AI', 'AI governanceautonomous agents', 'AI operations'],
-};
+  title: 'AI 2026: Enterprise Autonomous Systems Complete Guide',
+  description: 'Comprehensive guide to implementing autonomous AI systems in enterprise environments. Learn about architecture, governance, and operational best practices.',
+  keywords: ['autonomous systemsenterprise AIAI governanceautonomous agents', 'AI operations']
+},
 export default function EnterpriseAutonomousSystemsGuide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -16,7 +16,7 @@ export default function EnterpriseAutonomousSystemsGuide() {,
               AI 2026: Enterprise Autonomous Systems Complete Guide,
             </h1>,
             <p className="text-xl text-gray-600 mb-6">,
-              Transform your enterprise with autonomous AI systems that operate independently;
+              Transform your enterprise with autonomous AI systems that operate independently,
               make intelligent decisions, and drive unprecedented business value.,
             </p>,
             <div className="flex flex-wrap gap-2 mb-8">,
@@ -188,4 +188,4 @@ export default function EnterpriseAutonomousSystemsGuide() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react',
+import Link from 'next/link',
 
 export default function DevNetDashboard() {
-  const [address, setAddress] = useState('dev:alice');
-  const [faucetAmount, setFaucetAmount] = useState(100);
-  const [balance, setBalance] = useState<number | null>(null);
-  const operatorPrompt = `Create a local development instance of Zion OS that forks the DAO module, loads mock talent profiles, enables free ZION$ faucet, and supports testnet governance votes.`;
+  const [address, setAddress] = useState('dev: alice'),
+  const [faucetAmount, setFaucetAmount] = useState(100),
+  const [balance, setBalance] = useState<number | null>(null),
+  const operatorPrompt = `Create a local development instance of Zion OS that forks the DAO module, loads mock talent profiles, enables free ZION$ faucet, and supports testnet governance votes.`,
 
   async function fetchBalance(addr: string) {
-    const res = await fetch(`/api/devnet/faucet?address=${encodeURIComponent(addr)}`);
-    const data = await res.json();
-    setBalance(data.balance ?? 0);
+    const res = await fetch(`/api/devnet/faucet?address=${encodeURIComponent(addr)}`),
+    const data = await res.json(),
+    setBalance(data.balance ?? 0),
   }
 
   async function mint() {
     await fetch('/api/devnet/faucet', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ address, amount: faucetAmount }),
-    });
-    fetchBalance(address);
+      body: JSON.stringify({ address, amount: faucetAmount })
+    }),
+    fetchBalance(address),
   }
 
   useEffect(() => {
-    fetchBalance(address);
-  }, []);
+    fetchBalance(address),
+  }, []),
 
   return (
     <div className="p-6 space-y-6 max-w-4xl mx-auto">
@@ -54,7 +54,7 @@ export default function DevNetDashboard() {
 
         <section className="border rounded p-4">
           <h2 className="font-semibold mb-2">Marketplace (Mock)</h2>
-          <p className="text-sm mb-2">Browse or post jobs; sample talent loaded.</p>
+          <p className="text-sm mb-2">Browse or post jobs, sample talent loaded.</p>
           <Link href="/marketplace" className="px-3 py-2 inline-block bg-emerald-600 text-white rounded">Open Marketplace</Link>
         </section>
 
@@ -77,5 +77,5 @@ export default function DevNetDashboard() {
         <textarea className="border p-2 w-full h-24" readOnly value={operatorPrompt} />
       </section>
     </div>
-  );
+  ),
 }

@@ -1,18 +1,18 @@
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AppLayout } from "@/components/layout/AppLayout";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { AppLayout } from "@/components/layout/AppLayout",
+import { TalentGrid } from "@/components/talent/TalentGrid",
+import { FilterSidebar } from "@/components/talent/FilterSidebar",
+import { TalentResults } from "@/components/talent/TalentResults",
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { TalentProfile } from "@/types/talent",
 
 export default function TalentDirectory() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(),
 
   // Use our custom hook to manage state
   const {
@@ -43,18 +43,18 @@ export default function TalentDirectory() {
     toggleRegion,
     clearFilters,
     toggleSection,
-    handleToggleSave,
-  } = useTalentDirectory();
+    handleToggleSave
+  } = useTalentDirectory(),
   
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent);
-    setIsHireModalOpen(true);
-  };
+    setSelectedTalent(talent),
+    setIsHireModalOpen(true)
+  },
   
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    navigate(`/talent/${id}`);
-  };
+    navigate(`/talent/${id}`),
+  },
   
   return (
     <AppLayout>
@@ -123,7 +123,7 @@ export default function TalentDirectory() {
                 setPriceRange,
                 experienceRange,
                 setExperienceRange,
-                clearFilters,
+                clearFilters
               }}
             />
             
@@ -170,5 +170,5 @@ export default function TalentDirectory() {
         </div>
       </div>
     </AppLayout>
-  );
+  ),
 }

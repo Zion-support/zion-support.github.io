@@ -1,51 +1,34 @@
-import React from 'react';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from 'lucide-react';
-
+import React from "react";
+import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight } from "lucide-react";
 const DigitalTransformation = () => {
   const transformationServices = [
     {
-      title: "Process Automation",
-      description: "Streamline workflows with intelligent automation and AI-powered solutions.",
-      price: "From $15,000/project",
+      title: "Process Automation",description: "Streamline workflows with intelligent automation and AI-powered solutions.",price: "From $15,000/project",
       features: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"],
       icon: Zap
-    },
+    };
     {
-      title: "Legacy Modernization",
-      description: "Update and integrate legacy systems with modern technologies.",
-      price: "From $25,000/project",
+      title: "Legacy Modernization",description: "Update and integrate legacy systems with modern technologies.",price: "From $25,000/project",
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
-    },
+    };
     {
-      title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
+      title: "Change Management",description: "Guide your team through digital adoption and transformation.",price: "From $8,000/month",
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
       icon: Users
     }
   ];
-
   const transformationAreas = [
     {
-      name: "Customer Experience",
-      description: "Enhance customer interactions and satisfaction",
-      icon: Target,
-      features: ["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"]
+      name: "Customer Experience",description: "Enhance customer interactions and satisfaction",icon: Target,features: ["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"]
     },
     {
-      name: "Operations",
-      description: "Optimize internal processes and efficiency",
-      icon: TrendingUp,
-      features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
+      name: "Operations",description: "Optimize internal processes and efficiency",icon: TrendingUp,features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
     },
     {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
+      name: "Technology",description: "Modernize your technology stack and infrastructure",icon: BarChart3,features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
     }
-  ];
+  ],
 
   const benefits = [
     "Increased operational efficiency and productivity",
@@ -54,7 +37,7 @@ const DigitalTransformation = () => {
     "Reduced operational costs and manual work",
     "Faster time to market for new products",
     "Better competitive positioning in the market"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -197,7 +180,7 @@ const DigitalTransformation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Transform Your Business
@@ -217,7 +200,6 @@ const DigitalTransformation = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default DigitalTransformation;

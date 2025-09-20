@@ -1,5 +1,5 @@
-import React from 'react';
-import { ApplicationsTracker } from '@/components / jobs / applications';
+import React from 'react',
+import { ApplicationsTracker } from '@/components / jobs / applications',
 export default function Page() {
 >
               <ApplicationsTracker />

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026 - Future AI Technologies | Zion Tech Group';
-  description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.';
-  keywords: ['AI 2026future AI', 'quantum AIrevolutionary technology', 'artificial general intelligence'],
-};
+  title: 'AI 2026 - Future AI Technologies | Zion Tech Group',
+  description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
+  keywords: ['AI 2026future AIquantum AIrevolutionary technology', 'artificial general intelligence']
+},
 export default function AI2026Page() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -41,7 +41,7 @@ export default function AI2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI 2026 Technologies</h2>,
@@ -89,7 +89,7 @@ export default function AI2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gradient-to-r from-violet-50 to-purple-50 py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-900 mb-4">,
@@ -106,5 +106,4 @@ export default function AI2026Page() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

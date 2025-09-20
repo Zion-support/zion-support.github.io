@@ -1,11 +1,11 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
         title: "Email Marketing Campaigns",
         description: "Build relationships and drive sales through targeted email campaigns",
         price: "$500 - $3,000 / month",
-        features["List building", "Template design", "Automation", "A / B testing"],;
+        features["List building", "Template design", "Automation", "A / B testing"],
         icon: <Mail className="h-8 w-8 text-zion -purple"/>,
         category: "Email",
         link: "/request - quote?service = email - marketing"
@@ -14,7 +14,7 @@ export default function Page() {
         title: "Marketing Analytics & Reporting",
         description: "Data - driven insights to optimize your marketing performance",
         price: "$800 - $3,000 / month",
-        features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],;
+        features["Performance tracking", "ROI analysis", "Custom dashboards", "Monthly reports"],
         icon: <BarChart3 className="h-8 w-8 text-zion -blue"/>,
         category: "Analytics",
         link: "/request - quote?service = marketing - analytics"
@@ -23,7 +23,7 @@ export default function Page() {
         title: "Conversion Rate Optimization",
         description: "Improve your website's ability to convert visitors into customers",
         price: "$1,500 - $6,000 / month",
-        features["A / B testing", "User experience", "Landing page optimization", "Funnel analysis"],;
+        features["A / B testing", "User experience", "Landing page optimization", "Funnel analysis"],
         icon: <CheckCircle className="h-8 w-8 text-zion -cyan"/>,
         category: "CRO",
         link: "/request - quote?service = conversion - optimization"
@@ -32,7 +32,7 @@ export default function Page() {
         title: "Influencer Marketing",
         description: "Partner with influencers to reach new audiences and build trust",
         price: "$2,000 - $15,000 per campaign",
-        features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],;
+        features["Influencer research", "Campaign management", "Content coordination", "Performance tracking"],
         icon: <Users className="h-8 w-8 text-zion -purple"/>,
         category: "Influencer",
         link: "/request - quote?service = influencer - marketing"
@@ -41,7 +41,7 @@ export default function Page() {
         title: "Video Marketing & Production",
         description: "Create engaging video content for multiple platforms",
         price: "$1,000 - $8,000 per video",
-        features["Script writing", "Video production", "Editing", "Distribution strategy"],;
+        features["Script writing", "Video production", "Editing", "Distribution strategy"],
         icon: <Video className="h-8 w-8 text-zion -blue"/>,
         category: "Video",
         link: "/request - quote?service = video - marketing"
@@ -50,7 +50,7 @@ export default function Page() {
         title: "Graphic Design Services",
         description: "Professional design for marketing materials and branding",
         price: "$50 - $300 per design",
-        features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],;
+        features["Logo design", "Marketing materials", "Social media graphics", "Brand guidelines"],
         icon: <FileText className="h-8 w-8 text-zion -cyan"/>,
         category: "Design",
         link: "/request - quote?service = graphic - design"
@@ -59,7 +59,7 @@ export default function Page() {
         title: "Marketing Automation",
         description: "Streamline your marketing processes with automation tools",
         price: "$1,000 - $5,000 / month",
-        features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],;
+        features["Workflow setup", "Lead nurturing", "CRM integration", "Performance monitoring"],
         icon: <Zap className="h-8 w-8 text-zion -purple"/>,
         category: "Automation",
         link: "/request - quote?service = marketing - automation"
@@ -68,7 +68,7 @@ export default function Page() {
         title: "Local SEO & Google My Business",
         description: "Optimize your business for local search results",
         price: "$500 - $2,500 / month",
-        features["Local keyword optimization", "Review management", "Citation building", "Local content"],;
+        features["Local keyword optimization", "Review management", "Citation building", "Local content"],
         icon: <Globe className="h-8 w-8 text-zion -blue"/>,
         category: "Local SEO",
         link: "/request - quote?service = local - seo"
@@ -77,7 +77,7 @@ export default function Page() {
         title: "E - commerce Marketing",
         description: "Specialized marketing strategies for online stores",
         price: "$1,500 - $8,000 / month",
-        features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],;
+        features["Product optimization", "Shopping campaigns", "Retargeting", "Customer retention"],
         icon: <ShoppingCart className="h-8 w-8 text-zion -cyan"/>,
         category: "E - commerce",
         link: "/request - quote?service = ecommerce - marketing"
@@ -86,7 +86,7 @@ export default function Page() {
         title: "Marketing Strategy Consulting",
         description: "Strategic guidance for your overall marketing approach",
         price: "$150 - $300 / hour",
-        features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],;
+        features["Market analysis", "Competitive research", "Strategy development", "Implementation planning"],
         icon: <CheckCircle className="h-8 w-8 text-zion -purple"/>,
         category: "Consulting",
         link: "/request - quote?service = marketing - consulting"
@@ -95,7 +95,7 @@ export default function Page() {
         title: "Brand Development & Positioning",
         description: "Develop a strong brand identity and market position",
         price: "$5,000 - $25,000",
-        features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],;
+        features["Brand strategy", "Visual identity", "Messaging framework", "Brand guidelines"],
         icon: <Eye className="h-8 w-8 text-zion -blue"/>,
         category: "Branding",
         link: "/request - quote?service = brand - development"
@@ -104,12 +104,12 @@ export default function Page() {
         title: "Marketing Technology Stack",
         description: "Audit and optimize your marketing technology infrastructure",
         price: "$2,000 - $10,000",
-        features["Tool assessment", "Integration planning", "Implementation", "Training"],;
+        features["Tool assessment", "Integration planning", "Implementation", "Training"],
         icon: <Monitor className="h-8 w-8 text-zion -cyan"/>,
         category: "MarTech",
         link: "/request - quote?service = marketing - technology"
 
-];
+],
 const categories = [{ name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "SEO", value: "seo", icon: <Search className="h-4 w-4"/> },
     { name: "PPC", value: "ppc", icon: <TrendingUp className="h-4 w-4"/> },
@@ -127,11 +127,11 @@ const categories = [{ name: "All", value: "all", icon: <Globe className="h-4 w-4
     { name: "Consulting", value: "consulting", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Branding", value: "branding", icon: <Eye className="h-4 w-4"/> },
     { name: "MarTech", value: "martech", icon: <Monitor className="h-4 w-4"/> }
-];
-    const [selectedCategory, setSelectedCategory] = React.useState("all");
+],
+    const [selectedCategory, setSelectedCategory] = React.useState("all"),
     const filteredServices = selectedCategory === "all"
         ? MarketingServices
-        : MarketingServices.filter(service => service.category.toLowerCase () === selectedCategory) ;
+        : MarketingServices.filter(service => service.category.toLowerCase () === selectedCategory) ,
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate via - zion - purple - dark to - zion -slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - purple - dark via - zion - purple to - zion - cyan py-20">

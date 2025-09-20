@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -15,7 +15,7 @@ export default function Page() {
         features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
         color: "from - yellow-500 to - orange - 500"
 
-];
+],
 const transformationPhases = [{
         phase: "01",
         title: "Discovery & Assessment",
@@ -40,7 +40,7 @@ const transformationPhases = [{
         description: "Execute transformation plan with phased rollout and continuous optimization",
         duration: "6 - 18 months"
 
-];
+],
 const testimonials = [{
         content: "Zion's digital transformation approach was game - changing.They didn't just implement technology - they transformed our entire business model.",
         name: "Carlos Rodriguez",
@@ -59,12 +59,12 @@ const testimonials = [{
         role: "CTO, DigitalFirst Inc",
         rating: 5
 
-];
+],
 const stats = [{ label: "Transformations Completed", value: "75+", icon: Rocket },
     { label: "Average ROI", value: "300%", icon: TrendingUp },
     { label: "Process Efficiency Gain", value: "60%", icon: Zap },
     { label: "Customer Satisfaction", value: "95%", icon: Users }
-];
+],
     return (<div className="min - h-screen bg-background relative overflow-hidden">
       <SEO title="Digital Transformation Services - Zion Tech Group" description="End - to - end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com / digital - transformation"/>
       {/* Hero Section */}
@@ -106,7 +106,7 @@ const stats = [{ label: "Transformations Completed", value: "75+", icon: Rocket 
         <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
             {stats.map((stat, index) => {
-            const IconComponent = stat.icon;
+            const IconComponent = stat.icon,
             return (<motion.div key={stat.label} initial = {
   { opacity: 0,
   scale: 0.8
@@ -149,7 +149,7 @@ const stats = [{ label: "Transformations Completed", value: "75+", icon: Rocket 
           </motion.div>
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {transformationServices.map((service, index) => {
-            const IconComponent = service.icon;
+            const IconComponent = service.icon,
             return (<motion.div key={service.title} initial = {
   { opacity: 0,
   y: 20
@@ -268,7 +268,7 @@ const stats = [{ label: "Transformations Completed", value: "75+", icon: Rocket 
                 icon: Rocket
 
         ].map((benefit, index) => {
-            const IconComponent = benefit.icon;
+            const IconComponent = benefit.icon,
             return (<motion.div key={benefit.title} initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20

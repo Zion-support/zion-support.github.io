@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
       <Button,
         variant="ghost",
         size="icon",
@@ -28,7 +28,6 @@ import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
           size="sm",
         >,
           Ignore,
-        </Button>,
-      )}
+        </Button>)}
     </div>,
-  );
+  ),

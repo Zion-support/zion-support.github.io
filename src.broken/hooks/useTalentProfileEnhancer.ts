@@ -1,5 +1,5 @@
-// Hook for useTalentProfileEnhancer;
+// Hook for useTalentProfileEnhancer,
 export const useUseTalentProfileEnhancer: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

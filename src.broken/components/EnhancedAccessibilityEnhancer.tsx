@@ -26,110 +26,110 @@ export default function Page() {
         JSON.stringify(updatedSettings)
       )},
     [settings]
-  );
+  ),
 
   // Load saved settings
   useEffect(() => {
 
     if(savedSettings) {
 
-      setSettings(parsedSettings);
+      setSettings(parsedSettings),
       applySettings(parsedSettings)}
-  }, [enabled, applySettings]);
+  }, [enabled, applySettings]),
   // Screen reader announcements
 
-    announcement.setAttribute('aria-live',polite');
-    announcement.setAttribute('aria-atomic',true');
-    announcement.className="sr-only";
-    announcement.textContent = message;
+    announcement.setAttribute('aria-live',polite'),
+    announcement.setAttribute('aria-atomic',true'),
+    announcement.className="sr-only",
+    announcement.textContent = message,
     
-    document.body.appendChild(announcement);
+    document.body.appendChild(announcement),
     
     setTimeout(() => {
-      document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]);
+      document.body.removeChild(announcement)}, 1000)}, [settings.screenReader]),
 
   // Keyboard navigation enhancement
   useEffect(() => {
-    if(!enabled || !settings.keyboardNavigation) return;
+    if(!enabled || !settings.keyboardNavigation) return,
 
       switch(event.key) {
 
         case 'ArrowDown':'
         case 'ArrowRight':
-          event.preventDefault();
+          event.preventDefault(),
           
-          (focusableElements[nextIndex] as HTMLElement)?.focus();
-          break;
+          (focusableElements[nextIndex] as HTMLElement)?.focus(),
+          break,
         case 'ArrowUp':'
         case 'ArrowLeft':
-          event.preventDefault();
+          event.preventDefault(),
           
-          (focusableElements[prevIndex] as HTMLElement)?.focus();
-          break;
+          (focusableElements[prevIndex] as HTMLElement)?.focus(),
+          break,
       }
-    };
+    },
 
-    document.addEventListener('focusin', handleFocusChange);
+    document.addEventListener('focusin', handleFocusChange),
 =======
-            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
-          break;'
+            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1,          (focusableElements[prevIndex] as HTMLElement)?.focus(),
+          break,'
         case 'Home':
-          event.preventDefault();
-          (focusableElements[0] as HTMLElement)?.focus();
-          break;
+          event.preventDefault(),
+          (focusableElements[0] as HTMLElement)?.focus(),
+          break,
         case 'End':
-          event.preventDefault();
+          event.preventDefault(),
           (
             focusableElements[focusableElements.length-1] as HTMLElement
-          )?.focus();
+          )?.focus(),
           break}
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]),
 
   // Enhanced focus management
   useEffect(() => {
     
-      setCurrentFocus(target) ;
+      setCurrentFocus(target) ,
 
       if(settings.focusIndicator) {
 
-        target.style.outline = '3px solid #3b82f6';
+        target.style.outline = '3px solid #3b82f6',
         target.style.outlineOffset = '2px'}
-    };
+    },
 
       if(settings.focusIndicator) {
 
-        target.style.outline = '';
-        target.style.outlineOffset = '';
-      }    };
+        target.style.outline = '',
+        target.style.outlineOffset = '',
+      }    },
 '
-    document.addEventListener('focusin', handleFocusChange);'
-    document.addEventListener('focusout', handleFocusOut);
+    document.addEventListener('focusin', handleFocusChange),'
+    document.addEventListener('focusout', handleFocusOut),
 
     return () => {
 
-      document.removeEventListener('focusin', handleFocusChange);
-      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
+      document.removeEventListener('focusin', handleFocusChange),
+      document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ,
 
   // Screen reader announcements
   
-        announcement.setAttribute('aria-live',polite');
-        announcement.setAttribute('aria-atomic',true');
-        announcement.className="sr-only";
-        announcement.textContent = message;
-        document.body.appendChild(announcement);
+        announcement.setAttribute('aria-live',polite'),
+        announcement.setAttribute('aria-atomic',true'),
+        announcement.className="sr-only",
+        announcement.textContent = message,
+        document.body.appendChild(announcement),
 
         setTimeout(() => {
           document.body.removeChild(announcement)}, 1000)}
     },
     [settings.screenReader]
-  );
+  ),
 
   // Toggle settings
   
-      applySettings({ [key]: newValue });
+      applySettings({ [key]: newValue }),
 
       if(key === 'highContrast') {
 
@@ -144,14 +144,14 @@ export default function Page() {
         )}
     },
     [settings, applySettings, announceToScreenReader]
-  );
+  ),
 
   // Zoom controls
   
-      applySettings({ zoomLevel: newZoom });`
+      applySettings({ zoomLevel: newZoom }),`
       announceToScreenReader(`Zoom level ${newZoom}%`)},
     [settings.zoomLevel, applySettings, announceToScreenReader]
-  );
+  ),
 
   return ()
     <>
@@ -421,14 +421,14 @@ export default function Page() {
       <style jsx>{`
         .sr-only {
 
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
+          position: absolute,
+          width: 1px,
+          height: 1px,
+          padding: 0,
+          margin: -1px,
+          overflow: hidden,
+          clip: rect(0, 0, 0, 0),
+          white-space: nowrap,
           border: 0}
 
         .high-contrast {
@@ -440,12 +440,12 @@ export default function Page() {
           font-size: 1.2em}
         .reduced-motion * {
 
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
+          animation-duration: 0.01ms !important,
+          animation-iteration-count: 1 !important,
           transition-duration: 0.01ms !important}`      `}</style>
     </>
-  )};
+  )},
 
-export default EnhancedAccessibilityEnhancer;
+export default EnhancedAccessibilityEnhancer,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

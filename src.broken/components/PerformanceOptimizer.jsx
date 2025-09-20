@@ -1,30 +1,30 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
+import React, { useEffect, useMemo, useCallback } from 'react',
+import { useLocation  } from 'react-router-dom',
 
 export default function Page() {
 "
         // Add decoding="async" for better performance'
-        img.decoding = 'async';
+        img.decoding = 'async',
         // Add error handling
         img.onerror = () => {
 
-          img.style.display = 'none';
-        };
-      });
-    };
+          img.style.display = 'none',
+        },
+      }),
+    },
 
     // Use requestIdleCallback for non-critical optimization'
     if('requestIdleCallback' in window) {
 
-      requestIdleCallback(optimizeImages);
+      requestIdleCallback(optimizeImages),
     } else {
 
-      setTimeout(optimizeImages, 100);
+      setTimeout(optimizeImages, 100),
     }
-  }, [location.pathname]);
+  }, [location.pathname]),
 
   // Memoize expensive computations
-  const optimizedChildren = useMemo(() => children, [children]);
+  const optimizedChildren = useMemo(() => children, [children]),
 
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
@@ -33,16 +33,16 @@ export default function Page() {
 
       window.scrollTimeout = setTimeout(() => {
         // Handle scroll-based optimizations here
-        window.scrollTimeout = null;
-      }, 16); // ~60fps
+        window.scrollTimeout = null,
+      }, 16), // ~60fps
     }
-  }, []);
+  }, []),
 
   useEffect(() => {
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
+    window.addEventListener('scroll', handleScroll, { passive: true }),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, [handleScroll]),
 
   // Service Worker registration for caching
   useEffect(() => {
@@ -53,11 +53,11 @@ export default function Page() {
         .register('/sw.js')
         .then(registration => {
 
-          // // console.log('SW registered: ', registration);
+          // // console.log('SW registered: ', registration),
 
           // Check for updates'
           registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
+            const newWorker = registration.installing,
             if(newWorker) {
 
               newWorker.addEventListener('statechange', () => {
@@ -67,18 +67,18 @@ export default function Page() {
                 ) {
 
                   // New service worker available'
-                  // // console.log('New service worker available');
+                  // // console.log('New service worker available'),
                 }
-              });
+              }),
             }
-          });
+          }),
         })
         .catch(registrationError => {
 
-          // // console.warn('SW registration failed: ', registrationError);
-        });
+          // // console.warn('SW registration failed: ', registrationError),
+        }),
     }
-  }, []);
+  }, []),
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -92,32 +92,32 @@ export default function Page() {
 
             if (entry.isIntersecting) {
 
-              const target = entry.target;
+              const target = entry.target,
               if(target.dataset.src) {
 
-                target.src = target.dataset.src;
-                target.removeAttribute('data-src');
-                observer.unobserve(target);
+                target.src = target.dataset.src,
+                target.removeAttribute('data-src'),
+                observer.unobserve(target),
               }
             }
-          });
+          }),
         },
         {
 
           rootMargin: '50px',
           threshold: 0.1}
-      );
+      ),
 
       // Observe all images with data-src'
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => observer.observe(img));
+      const lazyImages = document.querySelectorAll('img[data-src]'),
+      lazyImages.forEach(img => observer.observe(img)),
 
-      return () => observer.disconnect();
+      return () => observer.disconnect(),
     }
-  }, [location.pathname]);
+  }, [location.pathname]),
 
   return <>{optimizedChildren}</>
-};
+},
 
 // Add global performance optimizations'
 if(typeof window !== 'undefined') {
@@ -130,23 +130,23 @@ if(typeof window !== 'undefined') {
         // Run non-critical tasks during idle time
       },
       { priority: 'background' }
-    );
+    ),
   }
 
   // Optimize memory usage'
   if('memory' in performance) {
 
-    const memoryThreshold = 50 * 1024 * 1024; // 50MB
+    const memoryThreshold = 50 * 1024 * 1024, // 50MB
     if(performance.memory.usedJSHeapSize > memoryThreshold) {
 
       // Trigger garbage collection if available'
       if('gc' in window) {
 
-        window.gc();
+        window.gc(),
       }
     }
   }
 }
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,
 '"

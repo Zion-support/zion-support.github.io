@@ -1,63 +1,42 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera } from "lucide-react";
 const AIContentCreation: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Writing Assistant',
-      description: 'Generate high-quality content with intelligent assistance'
-    },
+      icon: Brain,title: 'AI Writing Assistant',description: 'Generate high-quality content with intelligent assistance'
+    };
     {
-      icon: Image,
-      title: 'AI Image Generation',
-      description: 'Create stunning visuals from text descriptions'
-    },
+      icon: Image,title: 'AI Image Generation',description: 'Create stunning visuals from text descriptions'
+    };
     {
-      icon: Video,
-      title: 'AI Video Creation',
-      description: 'Produce engaging video content automatically'
-    },
+      icon: Video,title: 'AI Video Creation',description: 'Produce engaging video content automatically'
+    };
     {
-      icon: PenTool,
-      title: 'Creative Design',
-      description: 'AI-powered design tools and templates'
+      icon: PenTool,title: 'Creative Design',description: 'AI-powered design tools and templates'
     }
   ];
-
   const contentTypes = [
     {
-      title: 'Blog Posts & Articles',
-      description: 'SEO-optimized content for your website',
-      icon: '📝'
-    },
+      title: 'Blog Posts & Articles',description: 'SEO-optimized content for your website',icon: '📝'
+    };
     {
-      title: 'Social Media Content',
-      description: 'Engaging posts for all platforms',
-      icon: '📱'
-    },
+      title: 'Social Media Content',description: 'Engaging posts for all platforms',icon: '📱'
+    };
     {
-      title: 'Marketing Materials',
-      description: 'Brochures, flyers, and promotional content',
+      title: 'Marketing Materials',description: 'Brochures, flyers, and promotional content',
       icon: '📊'
-    },
+    };
     {
-      title: 'Product Descriptions',
-      description: 'Compelling product copy and descriptions',
-      icon: '🛍️'
+      title: 'Product Descriptions',description: 'Compelling product copy and descriptions',icon: '🛍️'
     }
   ];
-
   const benefits = [
-    'Save time with automated content generation',
-    'Maintain consistent brand voice and style',
-    'Scale content production without additional staff',
-    'Optimize content for SEO and engagement',
-    'Reduce content creation costs',
-    'Faster time to market for campaigns'
-  ];
+    'Save time with automated content generationMaintain consistent brand voice and style',
+    'Scale content production without additional staffOptimize content for SEO and engagement',
+    'Reduce content creation costsFaster time to market for campaigns'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -88,7 +67,7 @@ const AIContentCreation: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your content strategy with AI-powered creation tools. Generate high-quality text, 
+              Revolutionize your content strategy with AI-powered creation tools. Generate high-quality text;
               images, and videos at scale while maintaining your brand voice and style.
             </p>
             
@@ -248,7 +227,7 @@ const AIContentCreation: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Transform your content strategy with AI-powered creation tools
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-pink-500/20">
                 Start Creating Now
               </button>
@@ -260,7 +239,6 @@ const AIContentCreation: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIContentCreation;

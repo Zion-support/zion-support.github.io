@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award  } from 'lucide-react';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award  } from 'lucide-react',
 ,
     {
 "
@@ -20,29 +20,29 @@ import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, X, Gift, Star, Award
         title: "Community","
         description: "Join our network of tech professionals and innovators"
     }
-];
+],
 const stats = ["
     { value: "50K+", label: "Subscribers" },"
     { value: "95%", label: "Satisfaction" },"
     { value: "24/7", label: "Support" },"
     { value: "100%", label: "Free" }
-];
+],
 export function NewsletterSection() {
 
-    const [email, setEmail] = useState('');
-    const [isSubscribed, setIsSubscribed] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const [showBenefits, setShowBenefits] = useState(false);
+    const [email, setEmail] = useState(''),
+    const [isSubscribed, setIsSubscribed] = useState(false),
+    const [isLoading, setIsLoading] = useState(false),
+    const [showBenefits, setShowBenefits] = useState(false),
     const handleSubmit = (e) => {
 
-        e.preventDefault();
+        e.preventDefault(),
         // Here you would typically send the email to your newsletter service'
-        // console.log('Newsletter subscription:', email);
-        setIsSubscribed(true);
-        setEmail('')};
+        // console.log('Newsletter subscription:', email),
+        setIsSubscribed(true),
+        setEmail('')},
     const handleUnsubscribe = () => {
-        setIsSubscribed(false);
-        setEmail('')};"
+        setIsSubscribed(false),
+        setEmail('')},"
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
       <div className="absolute inset-0 opacity-5">"
@@ -72,7 +72,7 @@ export function NewsletterSection() {
 }}/>"
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
 
-  { scale[1, 1.2,;
+  { scale[1, 1.2,
   1] 
 
 }} transition = {

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface FuturisticAIService2030 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
@@ -49,16 +49,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for developing advanced AI consciousness, self-awareness, and emotional intelligence beyond current AI capabilities.',
     features: [
-      'Advanced consciousness mapping',
-      'Multi-dimensional awareness training',
-      'Emotional intelligence evolution',
-      'Consciousness safety protocols',
-      'Ethical consciousness frameworks',
-      'Consciousness validation systems',
-      'Real-time consciousness monitoring',
-      'Consciousness integration APIs',
-      'Consciousness evolution tracking',
-      'Advanced consciousness security'
+      'Advanced consciousness mappingMulti-dimensional awareness training',
+      'Emotional intelligence evolutionConsciousness safety protocols',
+      'Ethical consciousness frameworksConsciousness validation systems',
+      'Real-time consciousness monitoringConsciousness integration APIs',
+      'Consciousness evolution trackingAdvanced consciousness security'
     ],
     popular: true,
     icon: '🧠',
@@ -101,16 +96,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform that combines quantum computing with advanced AI, enabling unprecedented computational power and AI capabilities.',
     features: [
-      'Quantum AI algorithms',
-      'Quantum neural networks',
-      'Quantum AI optimization',
-      'Quantum AI security',
-      'Quantum AI APIs',
-      'Real-time quantum AI',
-      'Quantum AI validation',
-      'Quantum AI networks',
-      'Quantum AI consciousness',
-      'Quantum AI evolution'
+      'Quantum AI algorithmsQuantum neural networks',
+      'Quantum AI optimizationQuantum AI security',
+      'Quantum AI APIsReal-time quantum AI',
+      'Quantum AI validationQuantum AI networks',
+      'Quantum AI consciousnessQuantum AI evolution'
     ],
     popular: true,
     icon: '⚛️',
@@ -153,16 +143,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for fully autonomous AI operations, enabling AI systems to operate independently with minimal human intervention.',
     features: [
-      'Autonomous AI decision making',
-      'Self-optimizing AI systems',
-      'AI self-improvement',
-      'Autonomous AI learning',
-      'AI self-healing',
-      'Autonomous AI innovation',
-      'AI self-validation',
-      'Autonomous AI security',
-      'AI self-evolution',
-      'Autonomous AI collaboration'
+      'Autonomous AI decision makingSelf-optimizing AI systems',
+      'AI self-improvementAutonomous AI learning',
+      'AI self-healingAutonomous AI innovation',
+      'AI self-validationAutonomous AI security',
+      'AI self-evolutionAutonomous AI collaboration'
     ],
     popular: true,
     icon: '🤖',
@@ -205,16 +190,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered metaverse experiences, enabling intelligent virtual worlds and AI-driven digital experiences.',
     features: [
-      'AI-powered metaverse creation',
-      'Intelligent virtual beings',
-      'AI-driven experiences',
-      'Metaverse AI optimization',
-      'AI metaverse APIs',
-      'Virtual AI consciousness',
-      'AI metaverse security',
-      'Metaverse AI networks',
-      'AI metaverse validation',
-      'Virtual AI evolution'
+      'AI-powered metaverse creationIntelligent virtual beings',
+      'AI-driven experiencesMetaverse AI optimization',
+      'AI metaverse APIsVirtual AI consciousness',
+      'AI metaverse securityMetaverse AI networks',
+      'AI metaverse validationVirtual AI evolution'
     ],
     popular: true,
     icon: '🌌',
@@ -257,16 +237,11 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     period: '/month',
     description: 'Revolutionary 2030 platform for AI-powered space exploration, enabling autonomous space missions and intelligent space technology.',
     features: [
-      'AI-powered space missions',
-      'Autonomous space exploration',
-      'AI space optimization',
-      'Space AI networks',
-      'AI space security',
-      'Autonomous space operations',
-      'AI space validation',
-      'Space AI consciousness',
-      'AI space evolution',
-      'Autonomous space innovation'
+      'AI-powered space missionsAutonomous space exploration',
+      'AI space optimizationSpace AI networks',
+      'AI space securityAutonomous space operations',
+      'AI space validationSpace AI consciousness',
+      'AI space evolutionAutonomous space innovation'
     ],
     popular: true,
     icon: '🚀',
@@ -300,4 +275,4 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0,
     reviews: 4
   }
-];
+],

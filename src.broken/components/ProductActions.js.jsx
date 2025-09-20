@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from 'react',
 
 export default function Page() {
-;
+,
   return ()
     <Button onClick={addToCart} disabled={loading}>
       {loading ? (
@@ -13,6 +13,6 @@ export default function Page() {
         label
       )}
     </Button>
-  );
+  ),
 }
 '"

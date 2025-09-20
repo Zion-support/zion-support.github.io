@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Network, 
+  Network,
   Cpu, 
   Zap, 
   Globe, 
@@ -21,8 +21,8 @@ import {
   Cloud,
   Lock,
   Brain
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 const AutonomousEdgeComputingNetwork: React.FC = () => {
   const features = [
@@ -56,7 +56,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
       title: "Distributed Storage",
       description: "Intelligent data distribution across edge locations for optimal access patterns and redundancy."
     }
-  ];
+  ],
 
   const benefits = [
     "Ultra-low latency for real-time applications",
@@ -65,7 +65,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
     "Enhanced user experience globally",
     "Built-in security and compliance",
     "Seamless integration with existing infrastructure"
-  ];
+  ],
 
   const useCases = [
     {
@@ -84,7 +84,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
       title: "Mobile Applications",
       description: "Provide mobile users with fast, responsive experiences regardless of location."
     }
-  ];
+  ],
 
   const technicalFeatures = [
     {
@@ -99,7 +99,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
       category: "Security & Compliance",
       features: ["Edge-to-Edge Encryption", "Threat Detection", "Compliance Monitoring"]
     }
-  ];
+  ],
 
   return (
     <>
@@ -310,7 +310,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Deploy the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -330,7 +330,7 @@ const AutonomousEdgeComputingNetwork: React.FC = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 
-export default AutonomousEdgeComputingNetwork;
+export default AutonomousEdgeComputingNetwork,

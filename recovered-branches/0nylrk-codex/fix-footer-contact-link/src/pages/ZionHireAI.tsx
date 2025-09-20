@@ -18,7 +18,7 @@
             </div>,
           </div>,
         </section>,
-        {/* Features Section */,}
+        {/* Features Section */}
         <section className="py-16 bg-background">,
           <div className="container mx-auto px-4 md: px-6">,
             <div className="text-center mb-12">,
@@ -178,7 +178,7 @@
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="bg-zion-blue-dark py-16">,
           <div className="container mx-auto px-4 md: px-6 text-center">,
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>,
@@ -193,8 +193,8 @@
         </section>,
       </main>,
       <Footer />,
-    </>,}
-;
-  );
+    </>}
+,
+  ),
 }
 ,

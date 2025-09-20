@@ -27,11 +27,11 @@ export default function PublishProduct() {
             Share your products, services, or digital assets with the Zion community.
           </p>
           
-          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md:p-8">
+          <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 md: p-8">
             <ProductSubmissionForm />
           </div>
         </div>
       </main>
       
-    </div>);
+    </div>)
 }

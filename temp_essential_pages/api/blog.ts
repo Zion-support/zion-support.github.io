@@ -1,20 +1,20 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import type { BlogPost } from '@/types/blog';
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { BLOG_POSTS } from '@/data/blog-posts',
+import type { BlogPost } from '@/types/blog',
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<BlogPost[] | { error: string }>
 ) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+    res.setHeader('AllowGET'),
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` }),
   }
 
   try {
-    const queryParam = req.query.query;
-    const query = typeof queryParam === 'string' ? queryParam.toLowerCase() : '';
-    const match = (text?: string) => text?.toLowerCase().includes(query);
+    const queryParam = req.query.query,
+    const query = typeof queryParam === 'string' ? queryParam.toLowerCase() : '',
+    const match = (text?: string) => text?.toLowerCase().includes(query),
     const results = BLOG_POSTS.filter(
       p =>
         !query ||
@@ -22,10 +22,10 @@ export default function handler(
         match(p.excerpt) ||
         match(p.content) ||
         p.tags.some(t => match(t))
-    );
-    return res.status(200).json(results);
+    ),
+    return res.status(200).json(results),
   } catch (err) {
-    console.error('Blog API error:', err);
-    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch blog posts' });
+    console.error('Blog API error:', err),
+    return res.status(500).json({ error: 'Internal Server Error: Failed to fetch blog posts' }),
   }
 }

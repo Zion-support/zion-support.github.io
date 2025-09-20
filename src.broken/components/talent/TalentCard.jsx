@@ -1,26 +1,26 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
-  };
+  },
 
   const handleBook = e => {
 
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if(onBook) {
 
-      onBook(talent);
+      onBook(talent),
     }
-  };
+  },
 
   const handleViewProfile = () => {
 `
-    navigate(`/talent/${talent.id}`);
-  };
+    navigate(`/talent/${talent.id}`),
+  },
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [],
 
   return ()
     <Card
@@ -153,8 +153,8 @@ export default function Page() {
         </div>
       </div>
     </Card>
-  );
-};
+  ),
+},
 
-export default TalentCardComponent;
+export default TalentCardComponent,
 '"`

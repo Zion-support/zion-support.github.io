@@ -2,7 +2,7 @@
 export function TrustIndicatorsCompact({ className }) {
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
 =======
-import React from 'react';
+import React from 'react',
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
 
     const indicators = [{
@@ -33,19 +33,19 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
             description: "10,000+ verified professionals and companies","
             color: "text-zion-purple"
 
-    ];
+    ],
     const certifications = ["
         { name: "SOC 2 Type II", status: "Certified", year: "2024" },"
         { name: "ISO 27001", status: "Certified", year: "2024" },"
         { name: "GDPR", status: "Compliant", year: "2024" },"
         { name: "CCPA", status: "Compliant", year: "2024" }
-    ];
+    ],
     const stats = ["
         { label: "Active Users", value: "50K+", icon: Users },"
         { label: "Countries", value: "100+", icon: Globe },"
         { label: "Projects", value: "$10M+", icon: Award },"
         { label: "Uptime", value: "99.9%", icon: Zap }
-    ];
+    ],
     return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
       <div className="container mx-auto px-4">
         {/* Header */}"

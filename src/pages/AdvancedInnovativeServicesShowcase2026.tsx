@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   Brain,
   Zap,
@@ -22,25 +22,24 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
-
+} from "lucide-react";
+import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('innovation'),
 
   const categories = useMemo(() => {
-    const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)];
-  }, []);
+    const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category)),
+    return ['all', ...Array.from(cats)],
+  }, []),
 
   const filteredServices = useMemo(() => {
-    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
+    let filtered = ADVANCED_INNOVATIVE_SERVICES_2026,
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
 
     // Filter by search term
@@ -49,49 +48,42 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      ),
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
-          return b.innovationLevel.localeCompare(a.innovationLevel);
+          return b.innovationLevel.localeCompare(a.innovationLevel),
         case 'roi':
-          return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
+          return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
         case 'price':
-          return a.price - b.price;
+          return a.price - b.price,
         case 'delivery':
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
-        default:
-          return 0;
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery),
+        default: return 0
       }
     });
-
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+    return filtered,
+  }, [searchTerm, selectedCategory, sortBy]),
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
@@ -361,7 +353,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
 
           <div className="text-center mt-12">
             <a
-              href="https://ziontechgroup.com"
+              href="https: //ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
@@ -373,7 +365,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
+  )
 };
-
 export default AdvancedInnovativeServicesShowcase2026;

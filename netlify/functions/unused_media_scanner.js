@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 unused_media_scanner function triggered');
+    console.log('🤖 unused_media_scanner function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'unused_media_scanner'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ unused_media_scanner function failed:', error);
+    console.error('❌ unused_media_scanner function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

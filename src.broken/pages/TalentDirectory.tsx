@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { FilterSidebar } from '@/components/talent/FilterSidebar';
-import { TalentResults } from '@/components/talent/TalentResults';
-import { TalentSkeleton } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
-import { useTalentDirectory } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS } from '@/data/sortOptions';
+import React, { useState, useEffect } from 'react',
+import { useRouter } from 'next/router', // Changed from useNavigate
+import Link from 'next/link',
+import { useAuth } from '@/hooks/useAuth',
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
+import { FilterSidebar } from '@/components/talent/FilterSidebar',
+import { TalentResults } from '@/components/talent/TalentResults',
+import { TalentSkeleton } from '@/components/talent/TalentSkeleton',
+import { ErrorBanner } from '@/components/talent/ErrorBanner',
+import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
+import { useTalentDirectory } from '@/hooks/useTalentDirectory',
+import { SORT_OPTIONS } from '@/data/sortOptions',
 import { X } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { TalentProfile } from '@/types/talent';
+import { Button } from '@/components/ui/button',
+import Image from 'next/image',
+import { TalentProfile } from '@/types/talent',
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+  PaginationPrevious
+} from '@/components/ui/pagination',
 
 export default function TalentDirectory() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(),
 
   // Use our custom hook to manage state
   const {
@@ -54,25 +54,25 @@ export default function TalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters,
-    toggleSection,
-  } = useTalentDirectory();
+    toggleSection
+  } = useTalentDirectory(),
   
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent);
-    setIsHireModalOpen(true);
-  };
+    setSelectedTalent(talent),
+    setIsHireModalOpen(true)
+  },
   
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    navigate(`/talent/${id}`);
-  };
+    navigate(`/talent/${id}`),
+  },
 
   if (isLoading) {
     return (
       <div className="container mx-auto px-4 py-8">
         <TalentSkeleton />
       </div>
-    );
+    ),
   }
 
   // Error check should come before "no results" check
@@ -81,7 +81,7 @@ export default function TalentDirectory() {
       <div className="container mx-auto px-4 py-8">
         <ErrorBanner msg={error.message || "Unable to load talent profiles."} />
       </div>
-    );
+    ),
   }
 
   // Condition for "Talent Directory Truly Empty"
@@ -108,7 +108,7 @@ export default function TalentDirectory() {
           </p>
         </div>
       </div>
-    );
+    ),
   }
 
   // If none of the above, render the main content with results
@@ -176,7 +176,7 @@ export default function TalentDirectory() {
                 setPriceRange,
                 experienceRange,
                 setExperienceRange,
-                clearFilters,
+                clearFilters
               }}
             />
             
@@ -222,5 +222,5 @@ export default function TalentDirectory() {
           </div>
         </div>
       </div>
-  );
+  ),
 }

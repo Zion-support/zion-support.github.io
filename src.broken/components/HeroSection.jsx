@@ -14,44 +14,44 @@
                         className="text-center group"
                         whileHover={{ y: -5 }}
 =======
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform  } from 'framer-motion';
-import { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award  } from 'lucide-react';
-import { Button } from '@/components/ui/button';"
-import { GradientHeading } from '@/components/GradientHeading';"
-import { Link  } from 'react-router-dom';"
-import { useTranslation } from 'react-i18next';"
-import { motion, useScroll, useTransform  } from 'framer-motion';"
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react';"
-import { useRef } from 'react';
-import { useTranslation } from 'react -i18next';
- from 'react';
-import { Button } from '@/components / ui / button';
-import { GradientHeading } from '@/components / GradientHeading';
- from 'framer-motion';
-import { motion, useScroll, useTransform  } from 'framer-motion';
+import React, { useRef } from 'react',
+import { motion, useScroll, useTransform  } from 'framer-motion',
+import { ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award  } from 'lucide-react',
+import { Button } from '@/components/ui/button',"
+import { GradientHeading } from '@/components/GradientHeading',"
+import { Link  } from 'react-router-dom',"
+import { useTranslation } from 'react-i18next',"
+import { motion, useScroll, useTransform  } from 'framer-motion',"
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react',"
+import { useRef } from 'react',
+import { useTranslation } from 'react -i18next',
+ from 'react',
+import { Button } from '@/components / ui / button',
+import { GradientHeading } from '@/components / GradientHeading',
+ from 'framer-motion',
+import { motion, useScroll, useTransform  } from 'framer-motion',
 
- = useTranslation () ;
-    const containerRef = useRef(null) ;
+ = useTranslation () ,
+    const containerRef = useRef(null) ,
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"]
-    }) ;
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]) ;
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) ;
+    }) ,
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]) ,
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]) ,
 
 =======
 
 export function HeroSection() {
-    const { t } = useTranslation();
-    const containerRef = useRef(null);
+    const { t } = useTranslation(),
+    const containerRef = useRef(null),
     const { scrollYProgress } = useScroll({
 
         target: containerRef,"
         offset: ["start start", "end start"]
-    });"
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+    }),"
+    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]),
+    const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]),
     
     const containerVariants = {
 
@@ -65,7 +65,7 @@ export function HeroSection() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
 
     const itemVariants = {
 
@@ -80,7 +80,7 @@ export function HeroSection() {
                 ease: "easeOut"
             }
         }
-    };
+    },
 
     const floatingVariants = {
 
@@ -95,7 +95,7 @@ export function HeroSection() {
                 ease: "easeInOut"
             }
         }
-    };
+    },
 
     const pulseVariants = {
 
@@ -110,7 +110,7 @@ export function HeroSection() {
                 ease: "easeInOut"
             }
         }
-    };
+    },
 
     const particleVariants = {
 
@@ -125,7 +125,7 @@ export function HeroSection() {
                 ease: "easeInOut"
             }
         }
-    };
+    },
 
   const containerVariants = {
 
@@ -139,7 +139,7 @@ export function HeroSection() {
         delayChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
 
@@ -158,7 +158,7 @@ export function HeroSection() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const floatingVariants = {
 
@@ -173,7 +173,7 @@ export function HeroSection() {
         ease: "easeInOut"
       }
     }
-  };
+  },
 
   const pulseVariants = {
 
@@ -188,7 +188,7 @@ export function HeroSection() {
         ease: "easeInOut"
       }
     }
-  };
+  },
 
   const features = [{
 "
@@ -214,14 +214,14 @@ export function HeroSection() {
       text: "Global Team","
       color: "text-zion-purple-light"
     }
-  ];
+  ],
 
   const stats = ["
     { value: "500+", label: "Projects Delivered" },"
     { value: "50+", label: "Countries Served" },"
     { value: "24/7", label: "Support Available" },"
     { value: "99.9%", label: "Uptime Guarantee" }
-  ];
+  ],
 
                 {/* New stats section */}"
                 <motion.div variants={itemVariants} className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -252,14 +252,14 @@ export function HeroSection() {
                         whileHover={{ y: -5 }} "
                         transition={{ type: "spring", stiffness: 400 }}
                     >"
-                        <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">
+                        <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover: text-zion-cyan transition-colors">
                             99.9%
                         </div>"
                         <div className="text-zion-slate-light">Uptime</div>
                     </motion.div>
                 </motion.div>
             </motion.div>
-        </section>) ;
+        </section>) 
 }
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

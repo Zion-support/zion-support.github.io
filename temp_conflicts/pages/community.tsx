@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
 
 export default function CommunityPage() {
 	const socials = [
@@ -9,7 +9,7 @@ export default function CommunityPage() {
 		{ name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup' },
 		{ name: 'GitHub', href: 'https://github.com/Zion-Holdings' },
 		{ name: 'YouTube', href: 'https://youtube.com/@ziontechgroup' }
-	];
+	],
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="medium">
 			<Head>
@@ -42,5 +42,5 @@ export default function CommunityPage() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

@@ -1,33 +1,33 @@
 export interface PricingTier {
-  name: string;
-  price: number;
-  currency: string;
-  billingCycle: string;
-  features: string[];
-  bestFor: string;
-  popular?: boolean;
+  name: string,
+  price: number,
+  currency: string,
+  billingCycle: string,
+  features: string[],
+  bestFor: string,
+  popular?: boolean
 }
 
 export interface ServicePricing {
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  basePrice: number;
-  currency: string;
-  pricingModel: string;
-  tiers: PricingTier[];
-  marketPrice: string;
-  roi: string;
-  implementationTime: string;
-  supportLevel: string;
-  customPricing: boolean;
-  volumeDiscounts: boolean;
-  enterpriseFeatures: string[];
+  serviceId: string,
+  serviceName: string,
+  category: string,
+  basePrice: number,
+  currency: string,
+  pricingModel: string,
+  tiers: PricingTier[],
+  marketPrice: string,
+  roi: string,
+  implementationTime: string,
+  supportLevel: string,
+  customPricing: boolean,
+  volumeDiscounts: boolean,
+  enterpriseFeatures: string[],
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
+    phone: string,
+    email: string,
+    website: string
+  },
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
@@ -779,7 +779,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
       website: "https://ziontechgroup.com"
     }
   }
-];
+],
 
 export const PRICING_FEATURES = {
   standardFeatures: [
@@ -814,4 +814,4 @@ export const PRICING_FEATURES = {
     "Quarterly billing (1 month free)",
     "Custom payment terms for enterprise"
   ]
-};
+},

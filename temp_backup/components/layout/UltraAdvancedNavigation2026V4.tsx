@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Rocket } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Rocket } from 'lucide-react',
 
 export default function UltraAdvancedNavigation2026V4() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     {
@@ -59,13 +59,13 @@ export default function UltraAdvancedNavigation2026V4() {
         { name: 'Contact', href: '/contact', description: 'Reach out to us' }
       ]
     }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  },
 
 const UltraAdvancedNavigation2026V4: React.FC = () => {
   return (
@@ -73,7 +73,7 @@ const UltraAdvancedNavigation2026V4: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedNavigation2026V4</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedNavigation2026V4;
+export default UltraAdvancedNavigation2026V4,

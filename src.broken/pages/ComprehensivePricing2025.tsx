@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-export default ComprehensivePricing2025;
+import React, { useState } from 'react',
+export default ComprehensivePricing2025,
 
 const ComprehensivePricing2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedIndustry, setSelectedIndustry] = useState('All'),
 
   const pricingData = [{
       id: 1,
@@ -15,17 +15,14 @@ const ComprehensivePricing2025 = () => {
       period: 'per month',
       annualDiscount: 20,
       features: [
-        'Process automation',
-        'AI decision making',
-        'Integration APIs',
-        'Analytics dashboard',
-        'Custom workflows',
-        '24 / 7 support',
+        'Process automationAI decision making',
+        'Integration APIsAnalytics dashboard',
+        'Custom workflows24 / 7 support'
       ],
       icon: '🤖',
       popular: true,
       roi: '300%',
-      delivery: '2 - 4 weeks',
+      delivery: '2 - 4 weeks'
     },
     {
       id: 2,
@@ -37,17 +34,14 @@ const ComprehensivePricing2025 = () => {
       price: 2500,
       period: 'per month',
       annualDiscount: 15,
-      features: ['Customer segmentation',
-        'Predictive analytics',
-        'Omnichannel support',
-        'Real - time insights',
-        'A / B testing',
-        'Performance monitoring',
+      features: ['Customer segmentationPredictive analytics',
+        'Omnichannel supportReal - time insights',
+        'A / B testingPerformance monitoring'
       ],
       icon: '💝',
       popular: false,
       roi: '250%',
-      delivery: '3 - 5 weeks',
+      delivery: '3 - 5 weeks'
     },
     {
       id: 3,
@@ -59,17 +53,14 @@ const ComprehensivePricing2025 = () => {
       price: 3800,
       period: 'per month',
       annualDiscount: 25,
-      features: ['Demand forecasting',
-        'Inventory optimization',
-        'Route planning',
-        'Risk management',
-        'Supplier analytics',
-        'Real - time tracking',
+      features: ['Demand forecastingInventory optimization',
+        'Route planningRisk management',
+        'Supplier analyticsReal - time tracking'
       ],
       icon: '📦',
       popular: true,
       roi: '400%',
-      delivery: '4 - 6 weeks',
+      delivery: '4 - 6 weeks'
     },
     {
       id: 4,
@@ -81,17 +72,14 @@ const ComprehensivePricing2025 = () => {
       price: 2200,
       period: 'per month',
       annualDiscount: 20,
-      features: ['Threat detection',
-        'Behavioral analysis',
-        'Incident response',
-        'Compliance reporting',
-        'Security monitoring',
-        'Vulnerability assessment',
+      features: ['Threat detectionBehavioral analysis',
+        'Incident responseCompliance reporting',
+        'Security monitoringVulnerability assessment'
       ],
       icon: '🔒',
       popular: false,
       roi: '350%',
-      delivery: '2 - 3 weeks',
+      delivery: '2 - 3 weeks'
     },
     {
       id: 5,
@@ -102,33 +90,28 @@ const ComprehensivePricing2025 = () => {
       price: 1800,
       period: 'per month',
       annualDiscount: 15,
-      features: ['Cloud migration',
-        'CI / CD pipelines',
-        'Monitoring',
-        'Auto - scaling',
-        'Security compliance',
-        'Backup & recovery',
+      features: ['Cloud migrationCI / CD pipelines',
+        'MonitoringAuto - scaling',
+        'Security complianceBackup & recovery'
       ],
       icon: '☁️',
       popular: false,
       roi: '280%',
-      delivery: '3 - 4 weeks',
-    },
-  ];
+      delivery: '3 - 4 weeks'
+    }
+  ],
 
-  const categories = ['All', 'AI Services', 'Cybersecurity', 'Cloud Services'];
-  const industries = ['All',
-    'Technology',
-    'Retail',
-    'Manufacturing',
-    'Finance',
-  ];
+  const categories = ['AllAI Services', 'CybersecurityCloud Services'],
+  const industries = ['AllTechnology',
+    'RetailManufacturing',
+    'Finance'
+  ],
 
   const filteredData = pricingData.filter(item => {
-    const categoryMatch = selectedCategory === 'All' || item.category === selectedCategory;
-    const industryMatch = selectedIndustry === 'All' || item.industry === selectedIndustry;
-    return categoryMatch && industryMatch;
-  }) ;
+    const categoryMatch = selectedCategory === 'All' || item.category === selectedCategory,
+    const industryMatch = selectedIndustry === 'All' || item.industry === selectedIndustry,
+    return categoryMatch && industryMatch,
+  }) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white pt -24">
       <div className="container mx - auto px-4 py-16">
@@ -238,5 +221,5 @@ const ComprehensivePricing2025 = () => {
             </div>) ) }
         </div>
       </div>
-    </div>) ;
-};
+    </div>) ,
+},

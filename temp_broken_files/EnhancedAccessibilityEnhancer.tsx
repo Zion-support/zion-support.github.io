@@ -1,20 +1,20 @@
-"use client";
-import React, { useState, useEffect, useCallback } from 'react';
+"use client",
+import React, { useState, useEffect, useCallback } from 'react',
 import {,
-  RotateCcw, Accessibility, CheckCircle, AlertCircle,
-} from 'lucide-react';
+  RotateCcw, Accessibility, CheckCircle, AlertCircle
+} from 'lucide-react',
 interface AccessibilitySettings {,
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  highSaturation: boolean;
-  focusIndicator: boolean;
-  screenReader: boolean,}
+  highContrast: boolean,
+  largeText: boolean,
+  reducedMotion: boolean,
+  highSaturation: boolean,
+  focusIndicator: boolean,
+  screenReader: boolean}
 ,
 const EnhancedAccessibilityEnhancer: React.FC = () => {,
   return (,
     <div className="fixed bottom-4 right-4 z-50">,
-      {/* Accessibility Toggle Button */,}
+      {/* Accessibility Toggle Button */}
       <button,
         onClick={() => setIsOpen(!isOpen)}
         className="bg-blue-600 hover: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors",
@@ -22,7 +22,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
       >,
         <Accessibility className="w-6 h-6" />,
       </button>,
-      {/* Accessibility Panel */,}
+      {/* Accessibility Panel */}
       <div>,
         {isOpen && (,
           <div,
@@ -33,7 +33,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 Accessibility Settings,
               </h3>,
               <button,
-                onClick={resetSettings,}
+                onClick={resetSettings}
                 className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200",
                 aria-label="Reset to defaults",
               >,
@@ -41,7 +41,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
               </button>,
             </div>,
             <div className="space-y-4">,
-              {/* High Contrast */,}
+              {/* High Contrast */}
               <div className="flex items-center justify-between">,
                 <label className="text-sm font-medium text-gray-700 dark: text-gray-300">,
                   High Contrast,
@@ -49,12 +49,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 <button,
                   onClick={() => updateSetting('highContrast', !settings.highContrast)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${,
-                    settings.highContrast ? 'bg-blue-600' : 'bg-gray-200',
+                    settings.highContrast ? 'bg-blue-600' : 'bg-gray-200'
                   }`}
                 >,
                   <span,
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                      settings.highContrast ? 'translate-x-6' : 'translate-x-1',
+                      settings.highContrast ? 'translate-x-6' : 'translate-x-1'
                     }`}
                   />,
                 </button>,
@@ -67,12 +67,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 <button,
                   onClick={() => updateSetting('largeText', !settings.largeText)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${,
-                    settings.largeText ? 'bg-blue-600' : 'bg-gray-200',
+                    settings.largeText ? 'bg-blue-600' : 'bg-gray-200'
                   }`}
                 >,
                   <span,
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                      settings.largeText ? 'translate-x-6' : 'translate-x-1',
+                      settings.largeText ? 'translate-x-6' : 'translate-x-1'
                     }`}
                   />,
                 </button>,
@@ -85,12 +85,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 <button,
                   onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${,
-                    settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200',
+                    settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-200'
                   }`}
                 >,
                   <span,
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1',
+                      settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
                     }`}
                   />,
                 </button>,
@@ -103,12 +103,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 <button,
                   onClick={() => updateSetting('highSaturation', !settings.highSaturation)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${,
-                    settings.highSaturation ? 'bg-blue-600' : 'bg-gray-200',
+                    settings.highSaturation ? 'bg-blue-600' : 'bg-gray-200'
                   }`}
                 >,
                   <span,
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                      settings.highSaturation ? 'translate-x-6' : 'translate-x-1',
+                      settings.highSaturation ? 'translate-x-6' : 'translate-x-1'
                     }`}
                   />,
                 </button>,
@@ -121,12 +121,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
                 <button,
                   onClick={() => updateSetting('focusIndicator', !settings.focusIndicator)}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${,
-                    settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-200',
+                    settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-200'
                   }`}
                 >,
                   <span,
                     className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${,
-                      settings.focusIndicator ? 'translate-x-6' : 'translate-x-1',
+                      settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
                     }`}
                   />,
                 </button>,
@@ -134,7 +134,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
               {/* Font Size Slider */}
               <div className="space-y-2">,
                 <label className="text-sm font-medium text-gray-700 dark: text-gray-300">,
-                  Font Size: {fontSize,}px,
+                  Font Size: {fontSize}px,
                 </label>,
                 <input,
                   type="range",
@@ -148,7 +148,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
               {/* Line Height Slider */}
               <div className="space-y-2">,
                 <label className="text-sm font-medium text-gray-700 dark: text-gray-300">,
-                  Line Height: {lineHeight,}
+                  Line Height: {lineHeight}
                 </label>,
                 <input,
                   type="range",
@@ -163,7 +163,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
               {/* Letter Spacing Slider */}
               <div className="space-y-2">,
                 <label className="text-sm font-medium text-gray-700 dark: text-gray-300">,
-                  Letter Spacing: {letterSpacing,}px,
+                  Letter Spacing: {letterSpacing}px,
                 </label>,
                 <input,
                   type="range",
@@ -188,9 +188,9 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-        ),}
+        )}
       </div>,
     </div>,
-  );
-};
-export default EnhancedAccessibilityEnhancer;
+  ),
+},
+export default EnhancedAccessibilityEnhancer,

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Shield, 
+  Shield,
   Lock, 
   Eye, 
   Key, 
@@ -20,198 +20,118 @@ import {
   ChevronDown,
   ChevronUp,
   Mail
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Security() {
   const [expandedCompliance, setExpandedCompliance] = useState<string | null>(null);
-
   const securityFeatures = [
     {
-      icon: Shield,
-      title: 'Advanced Threat Protection',
-      description: 'Multi-layered security with AI-powered threat detection and prevention',
-      features: [
-        'Real-time threat monitoring',
-        'Behavioral analysis',
-        'Automated response systems',
-        '24/7 security operations'
+      icon: Shield,title: 'Advanced Threat Protection',description: 'Multi-layered security with AI-powered threat detection and prevention',features: [
+        'Real-time threat monitoringBehavioral analysis';
+        'Automated response systems24/7 security operations'
       ]
     },
     {
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for data at rest and in transit',
-      features: [
-        'AES-256 encryption',
-        'TLS 1.3 protocols',
-        'Key management systems',
-        'Hardware security modules'
+      icon: Lock,title: 'Data Encryption',description: 'End-to-end encryption for data at rest and in transit',features: [
+        'AES-256 encryptionTLS 1.3 protocols';
+        'Key management systemsHardware security modules'
       ]
     },
     {
-      icon: Users,
-      title: 'Identity & Access Management',
-      description: 'Comprehensive user authentication and authorization controls',
-      features: [
-        'Multi-factor authentication',
-        'Single sign-on (SSO)',
-        'Role-based access control',
-        'Privileged access management'
+      icon: Users,title: 'Identity & Access Management',description: 'Comprehensive user authentication and authorization controls',features: [
+        'Multi-factor authenticationSingle sign-on (SSO)';
+        'Role-based access controlPrivileged access management'
       ]
     },
     {
-      icon: Server,
-      title: 'Infrastructure Security',
-      description: 'Secure cloud infrastructure with network segmentation',
-      features: [
-        'VPC and subnet isolation',
-        'Web application firewalls',
-        'DDoS protection',
-        'Intrusion detection systems'
+      icon: Server,title: 'Infrastructure Security',description: 'Secure cloud infrastructure with network segmentation',features: [
+        'VPC and subnet isolationWeb application firewalls';
+        'DDoS protectionIntrusion detection systems'
       ]
     },
     {
-      icon: Database,
-      title: 'Data Protection',
-      description: 'Comprehensive data backup, recovery, and privacy controls',
+      icon: Database,title: 'Data Protection',description: 'Comprehensive data backup, recovery, and privacy controls',
       features: [
-        'Automated backups',
-        'Point-in-time recovery',
-        'Data classification',
-        'Privacy by design'
+        'Automated backupsPoint-in-time recovery';
+        'Data classificationPrivacy by design'
       ]
     },
     {
-      icon: Network,
-      title: 'Network Security',
-      description: 'Advanced network security with monitoring and controls',
-      features: [
-        'Network segmentation',
-        'Traffic analysis',
-        'VPN and secure tunnels',
-        'Network access control'
+      icon: Network,title: 'Network Security',description: 'Advanced network security with monitoring and controls',features: [
+        'Network segmentationTraffic analysis';
+        'VPN and secure tunnelsNetwork access control'
       ]
     }
-  ];
+  ],
 
   const complianceFrameworks = [
     {
-      name: 'SOC 2 Type II',
-      status: 'Certified',
-      description: 'Service Organization Control 2 Type II certification for security, availability, and confidentiality',
+      name: 'SOC 2 Type II',status: 'Certified',description: 'Service Organization Control 2 Type II certification for security, availability, and confidentiality',
       details: [
-        'Annual third-party audits',
-        'Continuous monitoring',
-        'Regular security assessments',
-        'Comprehensive reporting'
+        'Annual third-party auditsContinuous monitoring';
+        'Regular security assessmentsComprehensive reporting'
       ],
-      icon: CheckCircle,
-      color: 'text-green-400'
-    },
+      icon: CheckCircle,color: 'text-green-400'
+    };
     {
-      name: 'ISO 27001',
-      status: 'Certified',
-      description: 'International standard for information security management systems',
-      details: [
-        'Risk-based approach',
-        'Continuous improvement',
-        'Management commitment',
-        'Regular audits and reviews'
+      name: 'ISO 27001',status: 'Certified',description: 'International standard for information security management systems',details: [
+        'Risk-based approachContinuous improvement';
+        'Management commitmentRegular audits and reviews'
       ],
-      icon: CheckCircle,
-      color: 'text-green-400'
-    },
+      icon: CheckCircle,color: 'text-green-400'
+    };
     {
-      name: 'GDPR',
-      status: 'Compliant',
-      description: 'General Data Protection Regulation compliance for EU data protection',
-      details: [
-        'Data subject rights',
-        'Privacy by design',
-        'Data breach notification',
-        'Regular compliance audits'
+      name: 'GDPR',status: 'Compliant',description: 'General Data Protection Regulation compliance for EU data protection',details: [
+        'Data subject rightsPrivacy by design';
+        'Data breach notificationRegular compliance audits'
       ],
-      icon: CheckCircle,
-      color: 'text-green-400'
-    },
+      icon: CheckCircle,color: 'text-green-400'
+    };
     {
-      name: 'HIPAA',
-      status: 'Compliant',
-      description: 'Health Insurance Portability and Accountability Act compliance',
-      details: [
-        'Protected health information',
-        'Administrative safeguards',
-        'Physical safeguards',
-        'Technical safeguards'
+      name: 'HIPAA',status: 'Compliant',description: 'Health Insurance Portability and Accountability Act compliance',details: [
+        'Protected health informationAdministrative safeguards';
+        'Physical safeguardsTechnical safeguards'
       ],
-      icon: CheckCircle,
-      color: 'text-green-400'
-    },
+      icon: CheckCircle,color: 'text-green-400'
+    };
     {
-      name: 'PCI DSS',
-      status: 'Compliant',
-      description: 'Payment Card Industry Data Security Standard compliance',
-      details: [
-        'Cardholder data protection',
-        'Vulnerability management',
-        'Access control',
-        'Regular security testing'
+      name: 'PCI DSS',status: 'Compliant',description: 'Payment Card Industry Data Security Standard compliance',details: [
+        'Cardholder data protectionVulnerability management';
+        'Access controlRegular security testing'
       ],
-      icon: CheckCircle,
-      color: 'text-green-400'
+      icon: CheckCircle,color: 'text-green-400'
     }
   ];
-
   const securityMetrics = [
     {
-      metric: '99.99%',
-      label: 'Uptime',
-      description: 'Guaranteed service availability'
-    },
+      metric: '99.99%',label: 'Uptime',description: 'Guaranteed service availability'
+    };
     {
-      metric: '< 50ms',
-      label: 'Response Time',
-      description: 'Average threat response time'
-    },
+      metric: '< 50ms',label: 'Response Time',description: 'Average threat response time'
+    };
     {
-      metric: '0',
-      label: 'Data Breaches',
-      description: 'Successful breaches in 5+ years'
-    },
+      metric: '0',label: 'Data Breaches',description: 'Successful breaches in 5+ years'
+    };
     {
-      metric: '24/7',
-      label: 'Monitoring',
-      description: 'Continuous security monitoring'
+      metric: '24/7',label: 'Monitoring',description: 'Continuous security monitoring'
     }
   ];
-
   const bestPractices = [
     {
-      title: 'Regular Security Training',
-      description: 'Ongoing security awareness training for all employees',
-      icon: Users
-    },
+      title: 'Regular Security Training',description: 'Ongoing security awareness training for all employees',icon: Users
+    };
     {
-      title: 'Security Assessments',
-      description: 'Regular penetration testing and vulnerability assessments',
-      icon: Shield
-    },
+      title: 'Security Assessments',description: 'Regular penetration testing and vulnerability assessments',icon: Shield
+    };
     {
-      title: 'Incident Response',
-      description: 'Comprehensive incident response and recovery procedures',
-      icon: AlertTriangle
-    },
+      title: 'Incident Response',description: 'Comprehensive incident response and recovery procedures',icon: AlertTriangle
+    };
     {
-      title: 'Security Updates',
-      description: 'Regular security patches and system updates',
-      icon: Zap
+      title: 'Security Updates',description: 'Regular security patches and system updates',icon: Zap
     }
   ];
-
   const toggleCompliance = (name: string) => {
-    setExpandedCompliance(expandedCompliance === name ? null : name);
+    setExpandedCompliance(expandedCompliance === name ? null : name)
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -539,7 +459,7 @@ export default function Security() {
               Our security team is available to answer your questions and provide 
               detailed information about our security measures and compliance status.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="mailto:security@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-400 to-orange-500 text-white font-semibold rounded-lg hover:from-red-500 hover:to-orange-600 transition-all duration-200 hover:scale-105"
@@ -559,5 +479,5 @@ export default function Security() {
         </div>
       </section>
     </div>
-  );
+  )
 }

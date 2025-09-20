@@ -1,2 +1,2 @@
 
-export default errorBoundary;
+export default errorBoundary,

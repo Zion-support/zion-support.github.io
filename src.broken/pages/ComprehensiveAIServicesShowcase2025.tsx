@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -6,7 +6,7 @@ export default function Page() {
       title: "AI Supply Chain Optimization",
       description: "Optimize supply chains with AI - powered demand forecasting and logistics optimization",
       price: "From $2,499 / month",
-      features["Demand Forecasting", "Route Optimization", "Risk Management", "Real - time Monitoring"],;
+      features["Demand Forecasting", "Route Optimization", "Risk Management", "Real - time Monitoring"],
       link: "/services / ai - supply - chain - optimization",
       category: "Logistics"
     },
@@ -15,21 +15,21 @@ export default function Page() {
       title: "AI Cybersecurity Suite",
       description: "Advanced cybersecurity with AI - powered threat detection and automated response",
       price: "From $1,999 / month",
-      features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],;
+      features["Threat Detection", "Automated Response", "Vulnerability Assessment", "Compliance Monitoring"],
       link: "/services / ai - cybersecurity - suite",
       category: "Security"
     },
     {
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
-      description: "Transform data into actionable insights with AI - powered business intelligence",
-    };
-      price: "From $1,499 / month",;
-      features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real - time Reporting"],;
-      link: "/services / ai - business - intelligence - platform",;
-      category: "Analytics";
-    };
-  ];
+      description: "Transform data into actionable insights with AI - powered business intelligence"
+    },
+      price: "From $1,499 / month",
+      features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real - time Reporting"],
+      link: "/services / ai - business - intelligence - platform",
+      category: "Analytics"
+    },
+  ],
 
   const industrySolutions = [{
       title: "Healthcare & Life Sciences",
@@ -54,24 +54,24 @@ export default function Page() {
     {
       title: "Retail & E-commerce",
       description: "Customer analytics, inventory optimization, and personalized marketing",
-      icon: Users;
-    },;
-    {;
-      title: "Energy & Utilities",;
-      description: "Predictive maintenance, energy optimization, and grid management",;
-      icon: Zap;
-    };
-  ];
+      icon: Users
+    },
+    {,
+      title: "Energy & Utilities",
+      description: "Predictive maintenance, energy optimization, and grid management",
+      icon: Zap
+    },
+  ],
 
   const advancedTechnologies = ["Machine Learning & Deep Neural Networks",
-    "Natural Language Processing(NLP) ",;
-    "Computer Vision & Image Recognition",;
-    "Predictive Analytics & Forecasting",;
-    "Robotic Process Automation(RPA) ",;
-    "Edge Computing & IoT Integration",;
-    "Blockchain & Distributed Systems",;
-    "Quantum Computing Solutions";
-  ];
+    "Natural Language Processing(NLP) ",
+    "Computer Vision & Image Recognition",
+    "Predictive Analytics & Forecasting",
+    "Robotic Process Automation(RPA) ",
+    "Edge Computing & IoT Integration",
+    "Blockchain & Distributed Systems",
+    "Quantum Computing Solutions",
+  ],
 
   return (<>
       <SEO
@@ -127,7 +127,7 @@ export default function Page() {
         </section>
 
         {/* AI Services Grid */}
-        <section className="py-20 px-6">;
+        <section className="py-20 px-6">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -200,17 +200,17 @@ export default function Page() {
 
                   <Link
                     to={service.link}
-                    className="w-full px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 rounded-lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 text-center block"
+                    className="w-full px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 rounded-lg font - semibold hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 text-center block"
 
                     Learn More
-                  </Link>;
+                  </Link>,
                 </motion.div>) ) }
             </div>
           </div>
         </section>
 
         {/* Industry Solutions */}
-        <section className="py-20 px-6 bg-black / 30">;
+        <section className="py-20 px-6 bg-black / 30">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -260,13 +260,13 @@ export default function Page() {
                   </div>
                   <h3 className="text-xl font - semibold mb-3 text-white">{solution.title}</h3>
                   <p className="text-gray -300">{solution.description}</p>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
           </div>
         </section>
 
         {/* Advanced Technologies */}
-        <section className="py-20 px-6">;
+        <section className="py-20 px-6">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -313,13 +313,13 @@ export default function Page() {
 
                   <Brain className="w-8 h-8 text-cyan - 400 mx - auto mb-3" />
                   <p className="text-white font - medium text-sm">{tech}</p>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient - to - r from - cyan - 600 to - blue -700">;
+        <section className="py-20 px-6 bg-gradient - to - r from - cyan - 600 to - blue -700">,
           <div className="max - w-4xl mx - auto text-center">
             <motion.h2
               initial = {
@@ -395,7 +395,7 @@ export default function Page() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 px-6">;
+        <section className="py-20 px-6">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -509,9 +509,9 @@ export default function Page() {
                 364 E Main St STE 1008 < br />
                 Middletown DE 19709
               </p>
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
+            </motion.div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) ,
 }

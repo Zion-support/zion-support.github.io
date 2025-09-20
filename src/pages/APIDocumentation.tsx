@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Code, 
+  Code,
   Search, 
   Filter,
   ArrowRight,
@@ -37,54 +37,42 @@ import {
   ChevronRight,
   AlertCircle,
   Info
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function APIDocumentation() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedMethod, setSelectedMethod] = useState('All');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedMethod, setSelectedMethod] = useState('All'),
   const [expandedEndpoints, setExpandedEndpoints] = useState<Set<string>>(new Set());
-
-  const categories = ['All', 'Authentication', 'AI Services', 'Data Analytics', 'Cloud Services', 'IoT & Edge', 'Blockchain', 'Quantum Computing'];
-  const methods = ['All', 'GET', 'POST', 'PUT', 'DELETE', 'PATCH'];
-
+  const categories = ['AllAuthentication', 'AI ServicesData Analytics', 'Cloud ServicesIoT & Edge', 'BlockchainQuantum Computing'];
+  const methods = ['AllGET', 'POSTPUT', 'DELETEPATCH'];
   const apiEndpoints = [
     {
-      category: 'Authentication',
-      endpoints: [
+      category: 'Authentication',endpoints: [
         {
-          path: '/auth/login',
-          method: 'POST',
-          title: 'User Login',
-          description: 'Authenticate user with email and password',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
+          path: '/auth/login',method: 'POST',title: 'User Login',description: 'Authenticate user with email and password',parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' };
             { name: 'password', type: 'string', required: true, description: 'User password' }
-          ],
+          ];
           responses: [
             { code: 200, description: 'Login successful', example: '{ "token": "jwt_token", "user": {...} }' },
             { code: 401, description: 'Invalid credentials', example: '{ "error": "Invalid credentials" }' }
-          ],
+          ];
           examples: {
             curl: 'curl -X POST /auth/login -H "Content-Type: application/json" -d \'{"email":"user@example.com","password":"password"}\'',
             python: 'requests.post("/auth/login", json={"email": "user@example.com", "password": "password"})',
             javascript: 'fetch("/auth/login", { method: "POST", body: JSON.stringify({email: "user@example.com", password: "password"}) })'
           }
-        },
+        };
         {
-          path: '/auth/register',
-          method: 'POST',
-          title: 'User Registration',
-          description: 'Create a new user account',
-          parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' },
-            { name: 'password', type: 'string', required: true, description: 'Minimum 8 characters' },
+          path: '/auth/register',method: 'POST',title: 'User Registration',description: 'Create a new user account',parameters: [
+            { name: 'email', type: 'string', required: true, description: 'User email address' };
+            { name: 'password', type: 'string', required: true, description: 'Minimum 8 characters' };
             { name: 'name', type: 'string', required: true, description: 'Full name' }
-          ],
+          ];
           responses: [
             { code: 201, description: 'User created successfully', example: '{ "user": {...}, "message": "User created" }' },
             { code: 400, description: 'Validation error', example: '{ "error": "Email already exists" }' }
-          ],
+          ];
           examples: {
             curl: 'curl -X POST /auth/register -H "Content-Type: application/json" -d \'{"email":"new@example.com","password":"password123","name":"John Doe"}\'',
             python: 'requests.post("/auth/register", json={"email": "new@example.com", "password": "password123", "name": "John Doe"})',
@@ -92,68 +80,55 @@ export default function APIDocumentation() {
           }
         }
       ]
-    },
+    };
     {
-      category: 'AI Services',
-      endpoints: [
+      category: 'AI Services',endpoints: [
         {
-          path: '/ai/analyze',
-          method: 'POST',
-          title: 'AI Text Analysis',
-          description: 'Analyze text using AI for sentiment, entities, and key phrases',
+          path: '/ai/analyze',method: 'POST',title: 'AI Text Analysis',description: 'Analyze text using AI for sentiment, entities, and key phrases',
           parameters: [
-            { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
-            { name: 'analysis_type', type: 'string', required: false, description: 'Type of analysis (sentiment, entities, keywords)', default: 'all' },
+            { name: 'text', type: 'string', required: true, description: 'Text to analyze' };
+            { name: 'analysis_type', type: 'string', required: false, description: 'Type of analysis (sentiment, entities, keywords)', default: 'all' };
             { name: 'language', type: 'string', required: false, description: 'Text language', default: 'en' }
-          ],
+          ];
           responses: [
             { code: 200, description: 'Analysis completed', example: '{ "sentiment": "positive", "entities": [...], "keywords": [...] }' },
             { code: 400, description: 'Invalid input', example: '{ "error": "Text is required" }' }
-          ],
+          ];
           examples: {
             curl: 'curl -X POST /ai/analyze -H "Content-Type: application/json" -d \'{"text":"This is amazing!","analysis_type":"sentiment"}\'',
             python: 'requests.post("/ai/analyze", json={"text": "This is amazing!", "analysis_type": "sentiment"})',
             javascript: 'fetch("/ai/analyze", { method: "POST", body: JSON.stringify({text: "This is amazing!", analysis_type: "sentiment"}) })'
           }
-        },
+        };
         {
-          path: '/ai/generate',
-          method: 'POST',
-          title: 'AI Content Generation',
-          description: 'Generate content using AI models',
-          parameters: [
-            { name: 'prompt', type: 'string', required: true, description: 'Generation prompt' },
-            { name: 'model', type: 'string', required: false, description: 'AI model to use', default: 'gpt-4' },
+          path: '/ai/generate',method: 'POST',title: 'AI Content Generation',description: 'Generate content using AI models',parameters: [
+            { name: 'prompt', type: 'string', required: true, description: 'Generation prompt' };
+            { name: 'model', type: 'string', required: false, description: 'AI model to use', default: 'gpt-4' };
             { name: 'max_tokens', type: 'integer', required: false, description: 'Maximum tokens to generate', default: 1000 }
-          ],
+          ];
           responses: [
             { code: 200, description: 'Content generated', example: '{ "content": "Generated text...", "usage": {...} }' },
             { code: 400, description: 'Invalid prompt', example: '{ "error": "Prompt is required" }' }
-          ],
+          ];
           examples: {
-            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'',
+            curl: 'curl -X POST /ai/generate -H "Content-Type: application/json" -d \'{"prompt":"Write a blog post about AI"}\'';
             python: 'requests.post("/ai/generate", json={"prompt": "Write a blog post about AI"})',
             javascript: 'fetch("/ai/generate", { method: "POST", body: JSON.stringify({prompt: "Write a blog post about AI"}) })'
           }
         }
       ]
-    },
+    };
     {
-      category: 'Data Analytics',
-      endpoints: [
+      category: 'Data Analytics',endpoints: [
         {
-          path: '/analytics/query',
-          method: 'POST',
-          title: 'Data Query',
-          description: 'Query analytics data with custom filters and aggregations',
-          parameters: [
-            { name: 'query', type: 'object', required: true, description: 'Query object with filters and aggregations' },
+          path: '/analytics/query',method: 'POST',title: 'Data Query',description: 'Query analytics data with custom filters and aggregations',parameters: [
+            { name: 'query', type: 'object', required: true, description: 'Query object with filters and aggregations' };
             { name: 'time_range', type: 'string', required: false, description: 'Time range for data', default: 'last_30_days' }
-          ],
+          ];
           responses: [
             { code: 200, description: 'Query results', example: '{ "data": [...], "metadata": {...} }' },
             { code: 400, description: 'Invalid query', example: '{ "error": "Invalid query format" }' }
-          ],
+          ];
           examples: {
             curl: 'curl -X POST /analytics/query -H "Content-Type: application/json" -d \'{"query":{"filters":{"event_type":"page_view"},"aggregations":{"count":"total"}}}\'',
             python: 'requests.post("/analytics/query", json={"query": {"filters": {"event_type": "page_view"}, "aggregations": {"count": "total"}}})',
@@ -161,72 +136,65 @@ export default function APIDocumentation() {
           }
         }
       ]
-    },
+    };
     {
-      category: 'Cloud Services',
-      endpoints: [
+      category: 'Cloud Services',endpoints: [
         {
-          path: '/cloud/deploy',
-          method: 'POST',
-          title: 'Deploy Application',
-          description: 'Deploy application to cloud infrastructure',
-          parameters: [
-            { name: 'app_name', type: 'string', required: true, description: 'Application name' },
-            { name: 'config', type: 'object', required: true, description: 'Deployment configuration' },
+          path: '/cloud/deploy',method: 'POST',title: 'Deploy Application',description: 'Deploy application to cloud infrastructure',parameters: [
+            { name: 'app_name', type: 'string', required: true, description: 'Application name' };
+            { name: 'config', type: 'object', required: true, description: 'Deployment configuration' };
             { name: 'environment', type: 'string', required: false, description: 'Deployment environment', default: 'production' }
-          ],
+          ];
           responses: [
             { code: 200, description: 'Deployment started', example: '{ "deployment_id": "deploy_123", "status": "deploying" }' },
             { code: 400, description: 'Invalid configuration', example: '{ "error": "Invalid app configuration" }' }
-          ],
+          ];
           examples: {
-            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx:latest"}}\'',
-            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx:latest"}})',
+            curl: 'curl -X POST /cloud/deploy -H "Content-Type: application/json" -d \'{"app_name":"my-app","config":{"image":"nginx: latest"}}\'';
+            python: 'requests.post("/cloud/deploy", json={"app_name": "my-app", "config": {"image": "nginx: latest"}})';
             javascript: 'fetch("/cloud/deploy", { method: "POST", body: JSON.stringify({app_name: "my-app", config: {image: "nginx:latest"}}) })'
           }
         }
       ]
     }
   ];
-
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => {
       const matchesSearch = endpoint.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory;
-      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod;
-      return matchesSearch && matchesCategory && matchesMethod;
+      const matchesCategory = selectedCategory === 'All' || category.category === selectedCategory,
+      const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMethod,
+      return matchesSearch && matchesCategory && matchesMethod
     })
-  })).filter(category => category.endpoints.length > 0);
+  })).filter(category => category.endpoints.length > 0),
 
   const toggleEndpoint = (endpointPath: string) => {
     const newExpanded = new Set(expandedEndpoints);
     if (newExpanded.has(endpointPath)) {
-      newExpanded.delete(endpointPath);
+      newExpanded.delete(endpointPath)
     } else {
-      newExpanded.add(endpointPath);
+      newExpanded.add(endpointPath),
     }
-    setExpandedEndpoints(newExpanded);
-  };
+    setExpandedEndpoints(newExpanded),
+  },
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     // Show success message
-  };
+  },
 
   const getMethodColor = (method: string) => {
     switch (method) {
       case 'GET': return 'bg-green-500';
-      case 'POST': return 'bg-blue-500';
-      case 'PUT': return 'bg-yellow-500';
-      case 'DELETE': return 'bg-red-500';
-      case 'PATCH': return 'bg-purple-500';
-      default: return 'bg-gray-500';
+      case 'POST': return 'bg-blue-500',
+      case 'PUT': return 'bg-yellow-500',
+      case 'DELETE': return 'bg-red-500',
+      case 'PATCH': return 'bg-purple-500',
+      default: return 'bg-gray-500'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -449,7 +417,7 @@ export default function APIDocumentation() {
                                     <span className="text-sm font-medium text-gray-300 capitalize">{language}</span>
                                     <button
                                       onClick={() => copyToClipboard(code)}
-                                      className="p-1 text-gray-400 hover:text-cyan-400 transition-colors"
+                                      className="p-1 text-gray-400 hover: text-cyan-400 transition-colors"
                                       title="Copy code"
                                     >
                                       <Copy className="w-4 h-4" />
@@ -483,7 +451,7 @@ export default function APIDocumentation() {
               <button
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('All');
+                  setSelectedCategory('All'),
                   setSelectedMethod('All');
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -512,7 +480,7 @@ export default function APIDocumentation() {
               Get your API keys, explore our interactive API playground, and start building 
               powerful integrations with Zion Tech Group services.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get API Keys
               </button>
@@ -527,5 +495,5 @@ export default function APIDocumentation() {
         </div>
       </section>
     </div>
-  );
+  )
 }

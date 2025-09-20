@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { Button } from '../ui/Button';
+import React, { useState } from 'react',
+import { Button } from '../ui/Button',
 
 export default function Page() {
-);
-    setIsFormOpen(false);
-  };
+),
+    setIsFormOpen(false),
+  },
   const handleChange = e => {
 
 <<<<<<< HEAD:src.broken/components/profile/HireNowCTA.js.jsx
     setFormData(prev => ({
 =======
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData((prev: HireData) => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 >>>>>>> origin/zion-enhancements-v6:src/components/profile/HireNowCTA.tsx
 
       ...prev,
-      [e.target.name]: e.target.value}));
-  };
+      [e.target.name]: e.target.value})),
+  },
   return ()
     <Card className="bg-zion-blue-light border-zion-blue-lighter">
       <CardHeader>"
@@ -145,6 +145,6 @@ export default function Page() {
         )}
       </CardContent>
     </Card>
-  );
+  ),
 }
 '"

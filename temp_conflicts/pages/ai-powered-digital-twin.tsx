@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Copy, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredDigitalTwin: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredDigitalTwin: React.FC = () => {
       title: 'Multi-asset Support',
       description: 'Digital twin support across various assets and systems'
     }
-  ];
+  ],
 
   const digitalTwinCapabilities = [
     {
       area: 'Asset Modeling',
-      capabilities: ['3D modeling', 'Physical simulation', 'Behavioral modeling', 'Performance prediction'],
+      capabilities: ['3D modelingPhysical simulation', 'Behavioral modelingPerformance prediction'],
       improvement: '99.9% accuracy',
       modeling: 'Advanced'
     },
     {
       area: 'Real-time Monitoring',
-      capabilities: ['Live data integration', 'Performance tracking', 'Anomaly detection', 'Predictive maintenance'],
+      capabilities: ['Live data integrationPerformance tracking', 'Anomaly detectionPredictive maintenance'],
       improvement: 'Real-time updates',
       monitoring: 'Continuous'
     },
     {
       area: 'Predictive Analytics',
-      capabilities: ['Failure prediction', 'Performance optimization', 'Maintenance scheduling', 'Risk assessment'],
+      capabilities: ['Failure predictionPerformance optimization', 'Maintenance schedulingRisk assessment'],
       improvement: '95% prediction accuracy',
       analytics: 'Intelligent'
     },
     {
       area: 'Simulation & Testing',
-      capabilities: ['Virtual testing', 'Scenario simulation', 'What-if analysis', 'Optimization testing'],
+      capabilities: ['Virtual testingScenario simulation', 'What-if analysisOptimization testing'],
       improvement: '100x faster testing',
       simulation: 'Comprehensive'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Manufacturing & Industry',
       description: 'AI-powered digital twin platform for manufacturing and industrial operations',
-      benefits: ['Production optimization', 'Predictive maintenance', 'Quality control', 'Efficiency improvement']
+      benefits: ['Production optimizationPredictive maintenance', 'Quality controlEfficiency improvement']
     },
     {
       title: 'Smart Cities & Infrastructure',
       description: 'Digital twin platform for urban infrastructure and smart city management',
-      benefits: ['Infrastructure monitoring', 'Traffic optimization', 'Energy management', 'Public safety']
+      benefits: ['Infrastructure monitoringTraffic optimization', 'Energy managementPublic safety']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Digital twin platform for medical devices and patient care applications',
-      benefits: ['Device monitoring', 'Patient simulation', 'Treatment planning', 'Outcome prediction']
+      benefits: ['Device monitoringPatient simulation', 'Treatment planningOutcome prediction']
     },
     {
       title: 'Energy & Utilities',
       description: 'Digital twin platform for energy systems and utility operations',
-      benefits: ['Grid optimization', 'Asset management', 'Predictive maintenance', 'Efficiency improvement']
+      benefits: ['Grid optimizationAsset management', 'Predictive maintenanceEfficiency improvement']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredDigitalTwin: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with digital twin development',
       features: [
-        'Basic digital twin features',
-        'Single asset support',
-        'Standard monitoring',
-        'Email support',
+        'Basic digital twin featuresSingle asset support',
+        'Standard monitoringEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredDigitalTwin: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced digital twin needs',
       features: [
-        'Advanced digital twin features',
-        'Multi-asset support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced digital twin featuresMulti-asset support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time synchronization'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredDigitalTwin: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex digital twin requirements',
       features: [
-        'Custom digital twin development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom digital twin developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredDigitalTwin: React.FC = () => {
       position: "Platform Director",
       company: "Advanced Digital Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredDigitalTwin: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Model with AI-Powered Digital Twin Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredDigitalTwin: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredDigitalTwin;
+export default AIPoweredDigitalTwin,

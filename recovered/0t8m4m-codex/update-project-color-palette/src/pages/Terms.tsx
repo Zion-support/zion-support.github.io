@@ -1,6 +1,6 @@
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
 
 export default function Terms() {
   return (
@@ -27,5 +27,5 @@ export default function Terms() {
         </div>
       </div>
     </AppLayout>
-  );
+  ),
 }

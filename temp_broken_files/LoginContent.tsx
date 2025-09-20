@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Lock } from 'lucide-react';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
+import { Eye, EyeOff, Mail, Lock } from 'lucide-react',
 interface LoginContentProps {,
-  onLogin?: (credentials: { email: string, password: string ,}) => void;
+  onLogin?: (credentials: { email: string, password: string }) => void,
 }
 ,
-export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
+export const LoginContent: React.FC<LoginContentProps> = ({ onLogin }) => {,
   const [formData, setFormData] = useState({,
-    email: '';
-    password: '',});
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+    email: '',
+    password: ''}),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
   const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault(),
+    setIsLoading(true),
     try {,
       if (onLogin) {,
-        await onLogin(formData),
+        await onLogin(formData)
       }
     } catch (error) {,
-      console.error('Login error:', error);
+      console.error('Login error:', error),
     } finally {,
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     setFormData(prev => ({,
-      ...prev;
-      [e.target.name]: e.target.value,
-    }));
-  };
+      ...prev,
+      [e.target.name]: e.target.value
+    })),
+  },
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center py-12 px-4 sm: px-6 lg:px-8">,
       <div className="max-w-md w-full space-y-8">,
@@ -38,7 +38,7 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
             Sign in to your account,
           </h2>,
           <p className="mt-2 text-center text-sm text-gray-300">,
-            Or{' ',}
+            Or{' '}
             <Link,
               to="/signup",
               className="font-medium text-blue-400 hover: text-blue-300",
@@ -47,7 +47,7 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
             </Link>,
           </p>,
         </div>,
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit,}>,
+        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>,
           <div className="space-y-4">,
             <div>,
               <label htmlFor="email" className="sr-only">,
@@ -65,7 +65,7 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
                   required,
                   className="appearance-none rounded-lg relative block w-full pl-10 pr-3 py-3 border border-gray-600 placeholder-gray-400 text-white bg-gray-800 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   placeholder="Email address",
-                  value={formData.email,}
+                  value={formData.email}
                   onChange={handleChange}
                 />,
               </div>,
@@ -86,7 +86,7 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
                   required,
                   className="appearance-none rounded-lg relative block w-full pl-10 pr-10 py-3 border border-gray-600 placeholder-gray-400 text-white bg-gray-800 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   placeholder="Password",
-                  value={formData.password,}
+                  value={formData.password}
                   onChange={handleChange}
                 />,
                 <button,
@@ -95,10 +95,8 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
                   onClick={() => setShowPassword(!showPassword)}
                 >,
                   {showPassword ? (,
-                    <EyeOff className="h-5 w-5 text-gray-400 hover: text-gray-300" />,
-                  ) : (,
-                    <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />,
-                  ),}
+                    <EyeOff className="h-5 w-5 text-gray-400 hover: text-gray-300" />) : (,
+                    <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />)}
                 </button>,
               </div>,
             </div>,
@@ -127,15 +125,15 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin ,}) => {,
           <div>,
             <button,
               type="submit",
-              disabled={isLoading,}
+              disabled={isLoading}
               className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed",
             >,
-              {isLoading ? 'Signing in...' : 'Sign in',}
+              {isLoading ? 'Signing in...' : 'Sign in'}
             </button>,
           </div>,
         </form>,
       </div>,
     </div>,
-  );
-};
-export default LoginContent;
+  ),
+},
+export default LoginContent,

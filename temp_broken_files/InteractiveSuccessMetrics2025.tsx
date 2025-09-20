@@ -1,153 +1,153 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   DollarSign,
   Users,
   Clock,
-  Award;
-  BarChart3;
-  PieChart;
-  Activity;
-  Zap;
-  Target;
-  Star;
-  ArrowUp;
-  Play;
-  Pause,
-} from 'lucide-react';
+  Award,
+  BarChart3,
+  PieChart,
+  Activity,
+  Zap,
+  Target,
+  Star,
+  ArrowUp,
+  Play,
+  Pause
+} from 'lucide-react',
 const InteractiveSuccessMetrics2025 = () => {,
-  const [isPlayingsetIsPlaying] = useState(true);
-  const [currentMetricsetCurrentMetric] = useState(0);
+  const [isPlayingsetIsPlaying] = useState(true),
+  const [currentMetricsetCurrentMetric] = useState(0),
   const [animatedValuesetAnimatedValues] = useState({,
-    revenue: 0;
-    clients: 0;
-    efficiency: 0;
-    satisfaction: 0;
-    growth: 0;
-    savings: 0,});
+    revenue: 0,
+    clients: 0,
+    efficiency: 0,
+    satisfaction: 0,
+    growth: 0,
+    savings: 0}),
   const metrics = [,
     {,
-      id: 0;
-      title: "Revenue Growth";
-      value: "2,847%";
-      description: "Average revenue increase for our clients";
-      icon: <DollarSign className="w-8 h-8" />;
-      color: "from-green-500 to-emerald-600";
-      chart: "📈";
+      id: 0,
+      title: "Revenue Growth",
+      value: "2,847%",
+      description: "Average revenue increase for our clients",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-600",
+      chart: "📈",
       details: [,
-        "Year-over-year growth tracking";
-        "Real-time revenue analytics";
-        "Predictive revenue modeling";
-        "ROI optimization strategies",
-      ],
-    };
+        "Year-over-year growth tracking",
+        "Real-time revenue analytics",
+        "Predictive revenue modeling",
+        "ROI optimization strategies"
+      ]
+    },
     {,
-      id: 1;
-      title: "Client Success Rate";
-      value: "98.7%";
-      description: "Client satisfaction and retention rate";
-      icon: <Users className="w-8 h-8" />;
-      color: "from-blue-500 to-cyan-600";
-      chart: "👥";
+      id: 1,
+      title: "Client Success Rate",
+      value: "98.7%",
+      description: "Client satisfaction and retention rate",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-600",
+      chart: "👥",
       details: [,
-        "24/7 client support system";
-        "Personalized success plans";
-        "Regular performance reviews";
-        "Continuous improvement cycles",
-      ],
-    };
+        "24/7 client support system",
+        "Personalized success plans",
+        "Regular performance reviews",
+        "Continuous improvement cycles"
+      ]
+    },
     {,
-      id: 2;
-      title: "Efficiency Boost";
-      value: "567%";
-      description: "Operational efficiency improvement";
-      icon: <Zap className="w-8 h-8" />;
-      color: "from-yellow-500 to-orange-600";
-      chart: "⚡";
+      id: 2,
+      title: "Efficiency Boost",
+      value: "567%",
+      description: "Operational efficiency improvement",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-600",
+      chart: "⚡",
       details: [,
-        "Automated workflow systems";
-        "AI-powered optimization";
-        "Resource allocation algorithms";
-        "Performance monitoring tools",
-      ],
-    };
+        "Automated workflow systems",
+        "AI-powered optimization",
+        "Resource allocation algorithms",
+        "Performance monitoring tools"
+      ]
+    },
     {,
-      id: 3;
-      title: "Time Savings";
-      value: "15,000";
-      description: "Hours saved per month per client";
-      icon: <Clock className="w-8 h-8" />;
-      color: "from-purple-500 to-pink-600";
-      chart: "⏰";
+      id: 3,
+      title: "Time Savings",
+      value: "15,000",
+      description: "Hours saved per month per client",
+      icon: <Clock className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-600",
+      chart: "⏰",
       details: [,
-        "Process automation";
-        "Intelligent scheduling";
-        "Task prioritization";
-        "Workflow optimization",
-      ],
+        "Process automation",
+        "Intelligent scheduling",
+        "Task prioritization",
+        "Workflow optimization"
+      ]
     }
-  ];
+  ],
   const achievements = [,
-    { icon: <Award className="w-6 h-6" />title: "Industry Leader"count: "3 Years Running" ,};
-    { icon: <Star className="w-6 h-6" />title: "5-Star Rating"count: "99.8% Reviews" ,};
-    { icon: <Target className="w-6 h-6" />title: "Success Rate"count: "98.7%" ,};
+    { icon: <Award className="w-6 h-6" />title: "Industry Leader"count: "3 Years Running" },
+    { icon: <Star className="w-6 h-6" />title: "5-Star Rating"count: "99.8% Reviews" },
+    { icon: <Target className="w-6 h-6" />title: "Success Rate"count: "98.7%" },
     { icon: <TrendingUp className="w-6 h-6" />title: "Growth Rate"count: "2,847%" }
-  ];
+  ],
   useEffect(() => {,
     // Animate metric values,
     const targets = {,
-      revenue: 2847;
-      clients: 98.7;
-      efficiency: 567;
-      satisfaction: 99.8;
-      growth: 15000;
-      savings: 2.4,};
+      revenue: 2847,
+      clients: 98.7,
+      efficiency: 567,
+      satisfaction: 99.8,
+      growth: 15000,
+      savings: 2.4},
     Object.keys(targets).forEach(key => {,
-      let start = 0;
-      const target = targets[key as keyof typeof targets];
-      const increment = target / 100;
+      let start = 0,
+      const target = targets[key as keyof typeof targets],
+      const increment = target / 100,
       const timer = setInterval(() => {,
-        start += increment;
+        start += increment,
         if (start >= target) {,
-          start = target;
-          clearInterval(timer);
+          start = target,
+          clearInterval(timer),
         }
         setAnimatedValues(prev => ({,
           ...prev,
           [key]: key.includes('clients') || key.includes('satisfaction'),
             ? Number(start.toFixed(1)),
-            : Math.floor(start),
-        }));
-      }30);
-    });
+            : Math.floor(start)
+        })),
+      }30),
+    }),
     // Auto-rotate metrics,
     if (isPlaying) {,
       const interval = setInterval(() => {,
-        setCurrentMetric((prev) => (prev + 1) % metrics.length);
-      }3000);
-      return () => clearInterval(interval);
+        setCurrentMetric((prev) => (prev + 1) % metrics.length),
+      }3000),
+      return () => clearInterval(interval),
     }
-  }[isPlayingmetrics.length]);
+  }[isPlayingmetrics.length]),
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.1,}
+        duration: 0.8,
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,};
+    hidden: { opacity: 0, y: 20 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
+  },
   return (,
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">,
       {/* Animated Background */}
@@ -170,20 +170,20 @@ const InteractiveSuccessMetrics2025 = () => {,
             See how our clients achieve extraordinary growth and efficiency.,
           </divp>,
             <button,
-              onClick={() => setIsPlaying(!isPlaying),}
+              onClick={() => setIsPlaying(!isPlaying)}
               className="flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-full transition-all duration-300",
             >,
-              {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />,}
+              {isPlaying ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
               {isPlaying ? 'Pause' : 'Play'} Animation,
             </button>,
           </div>,
         </div>,
         {/* Main Metrics Display */}
         <div className="grid lg: grid-cols-3 gap-8 mb-16">,
-          {/* Current Metric Showcase */,}
+          {/* Current Metric Showcase */}
           <div className="lg: col-span-2">,
               <div,
-                key={currentMetric,}
+                key={currentMetric}
                 className={`p-8 rounded-2xl bg-gradient-to-br ${metrics[currentMetric].color} shadow-2xl relative overflow-hidden`}
               >,
                 {/* Background Pattern */}
@@ -217,8 +217,7 @@ const InteractiveSuccessMetrics2025 = () => {,
                       >,
                         <ArrowUp className="w-4 h-4 mr-2 text-white" />,
                         <span className="text-sm">{detail}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               </div>,
@@ -229,13 +228,13 @@ const InteractiveSuccessMetrics2025 = () => {,
                 <button,
                   key={index}
                   onClick={() => {,
-                    setCurrentMetric(index);
-                    setIsPlaying(false);
+                    setCurrentMetric(index),
+                    setIsPlaying(false),
                   }}
                   className={`w-4 h-4 rounded-full transition-all duration-300 ${,
                     currentMetric === index,
                       ? 'bg-white scale-125 shadow-lg',
-                      : 'bg-white/50 hover: bg-white/70',}`}
+                      : 'bg-white/50 hover: bg-white/70'}`}
                 />,
               ))}
             </div>,
@@ -297,8 +296,7 @@ const InteractiveSuccessMetrics2025 = () => {,
                       <span className="text-sm">{achievement.title}</span>,
                     </div>,
                     <span className="font-bold text-sm">{achievement.count}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -308,26 +306,25 @@ const InteractiveSuccessMetrics2025 = () => {,
           className="grid grid-cols-2 md: grid-cols-4 gap-6",
         >,
           {[,
-            { icon: <DollarSign className="w-6 h-6" />value: `$${animatedValues.savings,}M`label: "Cost Savings" ,};
-            { icon: <Users className="w-6 h-6" />value: `${animatedValues.growth.toLocaleString(),}`label: "Hours Saved" ,};
-            { icon: <PieChart className="w-6 h-6" />value: `${animatedValues.satisfaction,}%`label: "Success Rate" ,};
-            { icon: <TrendingUp className="w-6 h-6" />value: "24/7"label: "Monitoring" ,}
+            { icon: <DollarSign className="w-6 h-6" />value: `$${animatedValues.savings}M`label: "Cost Savings" },
+            { icon: <Users className="w-6 h-6" />value: `${animatedValues.growth.toLocaleString()}`label: "Hours Saved" },
+            { icon: <PieChart className="w-6 h-6" />value: `${animatedValues.satisfaction}%`label: "Success Rate" },
+            { icon: <TrendingUp className="w-6 h-6" />value: "24/7"label: "Monitoring" }
           ].map((statindex) => (,
             <div,
               key={index}
               className="p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover: bg-white/10 transition-all duration-300 text-center group",
             >,
               <div className="text-blue-400 mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">,
-                {stat.icon,}
+                {stat.icon}
               </div>,
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
               <div className="text-gray-400 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
       </div>,
     </section>,
-  );
-};
-export default InteractiveSuccessMetrics2025;
+  ),
+},
+export default InteractiveSuccessMetrics2025,
 </div></div></div></div>,

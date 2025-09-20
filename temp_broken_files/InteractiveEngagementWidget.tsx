@@ -1,62 +1,62 @@
 
 interface EngagementData {,
-  visitors: number;
-  timeOnSite: number;
-  bounceRate: number;
-  conversionRate: number,};
+  visitors: number,
+  timeOnSite: number,
+  bounceRate: number,
+  conversionRate: number},
 export default function InteractiveEngagementWidget() {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   const [engagementDatasetEngagementData] = useState<EngagementData>({,
-    visitors: 0;
-    timeOnSite: 0;
-    bounceRate: 0;
-    conversionRate: 0,});
-  const [currentTestimonialsetCurrentTestimonial] = useState(0);
+    visitors: 0,
+    timeOnSite: 0,
+    bounceRate: 0,
+    conversionRate: 0}),
+  const [currentTestimonialsetCurrentTestimonial] = useState(0),
   const testimonials = [,
     {,
-      name: "Sarah Johnson";
-      company: "TechCorp Inc.";
-      role: "CEO";
-      content: "Zion Tech 'Group', 's AI solutions increased our efficiency by 400% and ROI by 2,500% in just 6 months!";
-      rating: 5,};
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      role: "CEO",
+      content: "Zion Tech 'Group', 's AI solutions increased our efficiency by 400% and ROI by 2,500% in just 6 months!",
+      rating: 5},
     {,
-      name: "Michael Chen";
-      company: "InnovateLabs";
-      role: "CTO";
-      content: "The breakthrough technologies they implemented transformed our entire operation. Absolutely revolutionary!";
-      rating: 5,};
+      name: "Michael Chen",
+      company: "InnovateLabs",
+      role: "CTO",
+      content: "The breakthrough technologies they implemented transformed our entire operation. Absolutely revolutionary!",
+      rating: 5},
     {,
-      name: "Emily Rodriguez";
-      company: "FutureTech Solutions";
-      role: "VP of Operations";
-      content: "We achieved 10,000% ROI using their AI 2025 breakthrough solutions. Game-changing results!";
-      rating: 5,}
-  ];
+      name: "Emily Rodriguez",
+      company: "FutureTech Solutions",
+      role: "VP of Operations",
+      content: "We achieved 10,000% ROI using their AI 2025 breakthrough solutions. Game-changing results!",
+      rating: 5}
+  ],
   useEffect(() => {,
     // Simulate real-time data updates,
     const interval = setInterval(() => {,
       setEngagementData((prev: EngagementData) => ({,
-        visitors: prev.visitors + Math.floor(Math.random() * 3) + 1;
-        timeOnSite: Math.max(0prev.timeOnSite + (Math.random() - 0.5) * 10);
-        bounceRate: Math.max(0Math.min(100prev.bounceRate + (Math.random() - 0.5) * 2));
-        conversionRate: Math.max(0Math.min(100prev.conversionRate + (Math.random() - 0.5) * 1)),}));
-    }2000);
+        visitors: prev.visitors + Math.floor(Math.random() * 3) + 1,
+        timeOnSite: Math.max(0prev.timeOnSite + (Math.random() - 0.5) * 10),
+        bounceRate: Math.max(0Math.min(100prev.bounceRate + (Math.random() - 0.5) * 2)),
+        conversionRate: Math.max(0Math.min(100prev.conversionRate + (Math.random() - 0.5) * 1))})),
+    }2000),
     // Rotate testimonials,
     const testimonialInterval = setInterval(() => {,
-      setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length),}5000);
+      setCurrentTestimonial((prev: number) => (prev + 1) % testimonials.length)}5000),
     return () => {,
-      clearInterval(interval);
-      clearInterval(testimonialInterval);
-    };
-  }[testimonials.length]);
+      clearInterval(interval),
+      clearInterval(testimonialInterval),
+    },
+  }[testimonials.length]),
   useEffect(() => {,
     // Show widget after 3 seconds,
     const timer = setTimeout(() => {,
-      setIsVisible(true);
-    }3000);
-    return () => clearTimeout(timer);
-  }[]);
-  if (!isVisible) return null;
+      setIsVisible(true),
+    }3000),
+    return () => clearTimeout(timer),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div,
       className="fixed bottom-4 left-4 bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-w-sm z-40",
@@ -68,7 +68,7 @@ export default function InteractiveEngagementWidget() {,
           className="text-gray-400 hover: text-gray-600 text-xs",
         >,
           ✕,
-      {/* Real-time metrics */,}
+      {/* Real-time metrics */}
       <div className="grid grid-cols-2 gap-3 mb-4">,
         <div className="text-center">,
           <div className="text-lg font-bold text-blue-600">{engagementData.visitors.toLocaleString()}</div>,
@@ -97,8 +97,7 @@ export default function InteractiveEngagementWidget() {,
                   {testimonials[currentTestimonial].role}{testimonials[currentTestimonial].company}
               <div className="flex">,
                 {[...Array(testimonials[currentTestimonial].rating)].map((_i) => (,
-                  <span key={i} className="text-yellow-400 text-xs">★</span>,
-                ))}
+                  <span key={i} className="text-yellow-400 text-xs">★</span>))}
               </div>,
             </div>,
           </div>,
@@ -107,13 +106,13 @@ export default function InteractiveEngagementWidget() {,
       {/* Call to action */}
       <div className="mt-3 pt-3 border-t">,
         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs py-2 px-3 rounded-md hover: from-blue-700 hover:to-purple-700 transition-all duration-200">,
-          Join {engagementData.visitors.toLocaleString(),}+ Successful Clients,
+          Join {engagementData.visitors.toLocaleString()}+ Successful Clients,
         </button>,
       </div>,
     </div>,
-  );
-export default InteractiveEngagementWidget;
-import React from "react";
+  ),
+export default InteractiveEngagementWidget,
+import React from "react",
 const function InteractiveEngagementWidget() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -124,7 +123,7 @@ const function InteractiveEngagementWidget() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function InteractiveEngagementWidget() {;
+  ),
+},
+export default function InteractiveEngagementWidget() {,
 }}}}

@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
  className="flex items - center space - x-3">
@@ -11,14 +11,10 @@ export default function Page() {
               <div>
                 <h3 className="text-2xl font - bold text-white mb-6">Business Intelligence</h3>
                 <div className="space - y-4">
-                  {['Interactive Dashboards',
-            'Custom Report Builder',
-            'Real - time Data Streaming',
-            'Multi - source Data Integration',
-            'Automated Insights Generation',
-            'Collaborative Analytics',
-            'Mobile BI Access',
-            'Advanced Visualization'
+                  {['Interactive DashboardsCustom Report Builder',
+            'Real - time Data StreamingMulti - source Data Integration',
+            'Automated Insights GenerationCollaborative Analytics',
+            'Mobile BI AccessAdvanced Visualization'
         ].map((capability, index) => (<div key={index} className="flex items - center space - x-3">
                       <CheckCircle className="h-5 w-5 text-green - 400 flex - shrink -0"/>
                       <span className="text-gray -300">{capability}</span>
@@ -107,5 +103,5 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) };
+    </>) },
 }

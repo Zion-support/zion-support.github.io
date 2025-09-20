@@ -1,28 +1,28 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Slider } from "@/components/ui/slider";
-import { ProductListing, ListingView } from "@/types/listings";
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { useState, useEffect } from "react",
+import { useNavigate } from "react-router-dom",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Slider } from "@/components/ui/slider",
+import { ProductListing, ListingView } from "@/types/listings",
+import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
 
 interface PriceRange {
-  min: number;
-  max: number;
+  min: number,
+  max: number
 }
 
 interface DynamicListingPageProps {
-  title: string;
-  description: string;
-  categorySlug: string;
-  listings: ProductListing[];
-  categoryFilters: { label: string; value: string }[];
-  initialPrice?: PriceRange;
+  title: string,
+  description: string,
+  categorySlug: string,
+  listings: ProductListing[],
+  categoryFilters: { label: string, value: string }[],
+  initialPrice?: PriceRange,
 }
 
 export function DynamicListingPage({
@@ -33,65 +33,65 @@ export function DynamicListingPage({
   categoryFilters,
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [view, setView] = useState<ListingView>("grid");
-  const [isLoading, setIsLoading] = useState(false);
-  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("all"),
+  const [view, setView] = useState<ListingView>("grid"),
+  const [isLoading, setIsLoading] = useState(false),
+  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),
 
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
   useEffect(() => {
-    const listingsWithPrice = allListings.filter(l => l.price !== null);
+    const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
-      const min = Math.min(...listingsWithPrice.map(l => l.price || 0));
-      const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
-      setPriceRange({ min, max });
+      const min = Math.min(...listingsWithPrice.map(l => l.price || 0)),
+      const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
+      setPriceRange({ min, max }),
     }
-  }, [allListings]);
+  }, [allListings]),
 
   const [currentPriceFilter, setCurrentPriceFilter] = useState<[number, number]>([
     initialPrice.min,
     initialPrice.max
-  ]);
+  ]),
 
   const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0], values[1]]);
-  };
+    setCurrentPriceFilter([values[0], values[1]]),
+  },
 
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery || 
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+      (listing.tags && listing.tags.some((tag: string) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
     
-    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
+    const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,
     
     const matchesPrice = listing.price === null || (
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1]
-    );
+    ),
     
     const matchesRating = 
       selectedRating === null || 
-      (listing.rating !== undefined && listing.rating >= selectedRating);
+      (listing.rating !== undefined && listing.rating >= selectedRating),
     
-    return matchesSearch && matchesCategory && matchesPrice && matchesRating;
-  });
+    return matchesSearch && matchesCategory && matchesPrice && matchesRating
+  }),
 
   const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true);
+    setIsLoading(true),
     
-    const listing = allListings.find(item => item.id === listingId);
+    const listing = allListings.find(item => item.id === listingId),
     
     setTimeout(() => {
-      setIsLoading(false);
+      setIsLoading(false),
       if (listing) {
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`
-        });
+        }),
         
         navigate("/request-quote", {
           state: { 
@@ -103,10 +103,10 @@ export function DynamicListingPage({
               image: listing.images?.[0]
             }
           }
-        });
+        }),
       }
-    }, 500);
-  };
+    }, 500),
+  },
 
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -132,8 +132,8 @@ export function DynamicListingPage({
                 <Select 
                   value={selectedCategory} 
                   onValueChange={(value: string) => {
-                    console.log("Category selected:", value);
-                    setSelectedCategory(value);
+                    console.log("Category selected:", value),
+                    setSelectedCategory(value),
                   }}
                 >
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
@@ -182,8 +182,8 @@ export function DynamicListingPage({
                       variant="outline"
                       size="sm"
                       onClick={() => {
-                        console.log("Rating selected:", rating);
-                        setSelectedRating(rating);
+                        console.log("Rating selected:", rating),
+                        setSelectedRating(rating),
                       }}
                       className={`${
                         selectedRating === rating 
@@ -208,13 +208,13 @@ export function DynamicListingPage({
               
               <Button 
                 variant="outline" 
-                className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-                  console.log("Resetting filters");
-                  setSearchQuery("");
-                  setSelectedCategory("all");
-                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
-                  setSelectedRating(null);
+                  console.log("Resetting filters"),
+                  setSearchQuery(""),
+                  setSelectedCategory("all"),
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]),
+                  setSelectedRating(null),
                 }}
               >
                 Reset Filters
@@ -232,8 +232,8 @@ export function DynamicListingPage({
                     placeholder="Search listings..."
                     value={searchQuery}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                      console.log("Search query:", e.target.value);
-                      setSearchQuery(e.target.value);
+                      console.log("Search query:", e.target.value),
+                      setSearchQuery(e.target.value),
                     }}
                     className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                   />
@@ -304,10 +304,10 @@ export function DynamicListingPage({
                 <Button 
                   variant="outline" 
                   onClick={() => {
-                    setSearchQuery("");
-                    setSelectedCategory("all");
-                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
-                    setSelectedRating(null);
+                    setSearchQuery(""),
+                    setSelectedCategory("all"),
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]),
+                    setSelectedRating(null),
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >
@@ -319,5 +319,5 @@ export function DynamicListingPage({
         </div>
       </div>
     </div>
-  );
+  ),
 }

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function PriceIntelligence() {
   return (
@@ -15,7 +15,7 @@ export default function PriceIntelligence() {
         <div className="absolute inset-0 beams opacity-[0.06]" />
       </div>
       <main className="relative z-10 mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold gradient-text">Price Intelligence</h1>
+        <h1 className="text-4xl md: text-5xl font-extrabold gradient-text">Price Intelligence</h1>
         <p className="mt-4 text-white/80">Track market changes and propose optimal pricing strategies.</p>
         <ul className="mt-6 space-y-2 text-white/80 list-disc pl-5">
           <li>Competitor monitoring</li>
@@ -28,5 +28,5 @@ export default function PriceIntelligence() {
         </div>
       </main>
     </div>
-  );
+  )
 }

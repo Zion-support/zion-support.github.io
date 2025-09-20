@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const errorHandler = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">,
@@ -8,7 +8,6 @@ const errorHandler = () => {,
           <p className="text-lg opacity-90">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  );
-};
-export default errorHandler;
+    </div>),
+},
+export default errorHandler,

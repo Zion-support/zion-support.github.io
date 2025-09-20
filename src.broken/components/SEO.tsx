@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
-  robots?: string;
-  viewport?: string;
-  charset?: string;
-  language?: string;
-  themeColor?: string;
-  msApplicationTileColor?: string;
-  appleMobileWebAppTitle?: string;
-  appleMobileWebAppCapable?: boolean;
-  appleMobileWebAppStatusBarStyle?: 'default' | 'black' | 'black-translucent';
-  appleTouchIcon?: string;
-  favicon?: string;
-  manifest?: string;
-  preconnect?: string[];
-  dnsPrefetch?: string[];
+  url?: string,
+  type?: 'website' | 'article' | 'product' | 'service',
+  author?: string,
+  publishedTime?: string,
+  modifiedTime?: string,
+  section?: string,
+  tags?: string[],
+  noindex?: boolean,
+  nofollow?: boolean,
+  robots?: string,
+  viewport?: string,
+  charset?: string,
+  language?: string,
+  themeColor?: string,
+  msApplicationTileColor?: string,
+  appleMobileWebAppTitle?: string,
+  appleMobileWebAppCapable?: boolean,
+  appleMobileWebAppStatusBarStyle?: 'default' | 'black' | 'black-translucent',
+  appleTouchIcon?: string,
+  favicon?: string,
+  manifest?: string,
+  preconnect?: string[],
+  dnsPrefetch?: string[],
   preload?: Array<{
 
-    href: string;
-    as: string;
-    type?: string;
-    crossorigin?: boolean}[];
-  prefetch?: string[];
-  dnsPrefetch?: string[];
+    href: string,
+    as: string,
+    type?: string,
+    crossorigin?: boolean}[],
+  prefetch?: string[],
+  dnsPrefetch?: string[],
   preconnect?: string[]}
 
 export function SEO({
@@ -61,37 +61,37 @@ export function SEO({
         description,
         images: [
           {
-            url: ogImage,
-          },
-        ],
+            url: ogImage
+          }
+        ]
       }}
       twitter={{
         handle: '@lovable_dev',
         site: '@lovable_dev',
-        cardType: 'summary_large_image',
+        cardType: 'summary_large_image'
       }}
       additionalMetaTags={
         keywords
           ? [
               {
                 name: 'keywords',
-                content: keywords,
-              },
+                content: keywords
+              }
             ]
           : undefined
       }
     />
-  );
+  ),
 }
 =======
 
-import { NextSeo } from 'next-seo';
+import { NextSeo } from 'next-seo',
 
 interface SEOProps {
 =======
 type SEOProps = {
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
+  title?: string,
+  description?: string,
+  url?: string,
+  image?: string,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

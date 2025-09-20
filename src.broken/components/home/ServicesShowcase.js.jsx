@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
  glowColor={service.glowColor} intensity="medium" className="h-full group hover:scale-105 transition-transform duration-300">"
               <CardHeader className="pb-4">"

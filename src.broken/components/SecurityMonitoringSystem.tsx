@@ -1,47 +1,47 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 interface SecurityThreat {
-  id: string;
-  type: 'critical' | 'high' | 'medium' | 'low';
-  severity: number;
-  description: string;
-  source: string;
-  timestamp: Date;
-  status: 'active' | 'resolved' | 'investigating';
-  affectedSystems: string[];
+  id: string,
+  type: 'critical' | 'high' | 'medium' | 'low',
+  severity: number,
+  description: string,
+  source: string,
+  timestamp: Date,
+  status: 'active' | 'resolved' | 'investigating',
+  affectedSystems: string[],
   recommendations: string[]}
 
 =======
 interface VulnerabilityAssessment {
-  id: string;
-  category: 'network' | 'application' | 'infrastructure' | 'data';
-  risk: 'critical' | 'high' | 'medium' | 'low';
-  score: number;
-  description: string;
-  cveId?: string;
-  affectedComponents: string[];
-  remediation: string;
+  id: string,
+  category: 'network' | 'application' | 'infrastructure' | 'data',
+  risk: 'critical' | 'high' | 'medium' | 'low',
+  score: number,
+  description: string,
+  cveId?: string,
+  affectedComponents: string[],
+  remediation: string,
   estimatedTime: string}
 interface ComplianceStatus {
-  framework: string;
-  status: 'compliant' | 'non-compliant' | 'partial';
-  score: number;
-  lastAudit: Date;
-  nextAudit: Date;
+  framework: string,
+  status: 'compliant' | 'non-compliant' | 'partial',
+  score: number,
+  lastAudit: Date,
+  nextAudit: Date,
   requirements: {
 
-    total: number;
-    compliant: number;
-    nonCompliant: number;
+    total: number,
+    compliant: number,
+    nonCompliant: number,
     pending: number}}
 interface SecurityMonitoringSystemProps {
   // Add your props here
 
-  enabled?: boolean;
-  showRealTime?: boolean;
-  autoScan?: boolean;
-  onThreatDetected?: threat: SecurityThreat void;
+  enabled?: boolean,
+  showRealTime?: boolean,
+  autoScan?: boolean,
+  onThreatDetected?: threat: SecurityThreat void,
 export function SecurityMonitoringSystem({
 
   enabled = true,
@@ -49,23 +49,23 @@ export function SecurityMonitoringSystem({
   autoScan = true,
   onThreatDetected}: SecurityMonitoringSystemProps) {
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [scanComplete, setScanComplete] = useState(false);
-  const [threats, setThreats] = useState<SecurityThreat[]>([]);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isFullscreen, setIsFullscreen] = useState(false),
+  const [isScanning, setIsScanning] = useState(false),
+  const [scanComplete, setScanComplete] = useState(false),
+  const [threats, setThreats] = useState<SecurityThreat[]>([]),
   const [vulnerabilities, setVulnerabilities] = useState<
     VulnerabilityAssessment[]
-  >([]);
+  >([]),
   const [complianceStatus, setComplianceStatus] = useState<ComplianceStatus[]>(
     []
-  );
+  ),
   const [selectedView, setSelectedView] = useState<'
     'threats' | 'vulnerabilities' | 'compliance''
-  >('threats');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [securityScore, setSecurityScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(95);
+  >('threats'),
+  const [showAdvanced, setShowAdvanced] = useState(false),
+  const [securityScore, setSecurityScore] = useState(0),
+  const [targetScore, setTargetScore] = useState(95),
 
   // Generate sample security threats
 
@@ -85,10 +85,10 @@ export function SecurityMonitoringSystem({
             : 'active',
       affectedSystems: systems.slice(0, Math.floor(Math.random() * 3) + 1),
       recommendations: ['
-        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls',
-      ]}));
+        'Implement additional authentication layers',Update security policies',Conduct security training',Review access controls'
+      ]})),
 
-    setThreats(newThreats)}, []);
+    setThreats(newThreats)}, []),
 
   // Generate vulnerability assessments
 
@@ -109,9 +109,9 @@ export function SecurityMonitoringSystem({
         ),`
         remediation: `Update ${category} security configurations and apply latest patches`,`
         estimatedTime: `${Math.floor(Math.random() * 4) + 1} hours`})
-    );
+    ),
 
-    setVulnerabilities(newVulnerabilities)}, []);
+    setVulnerabilities(newVulnerabilities)}, []),
 
   // Generate compliance status
   
@@ -136,20 +136,20 @@ export function SecurityMonitoringSystem({
             compliant,
             nonCompliant: total - compliant,
             pending: Math.floor(Math.random() * 10)}}}
-    );
+    ),
 
-    setComplianceStatus(newCompliance)}, []);
+    setComplianceStatus(newCompliance)}, []),
   // Start security scan
   
-    setScanComplete(false);
+    setScanComplete(false),
 
     // Simulate scan process
     setTimeout(() => {
-      generateSecurityThreats();
-      generateVulnerabilities();
-      generateComplianceStatus();
-      setIsScanning(false);
-      setScanComplete(true);
+      generateSecurityThreats(),
+      generateVulnerabilities(),
+      generateComplianceStatus(),
+      setIsScanning(false),
+      setScanComplete(true),
 
       // Calculate overall security score
 
@@ -158,22 +158,22 @@ export function SecurityMonitoringSystem({
     generateComplianceStatus,
     complianceStatus,
     threats,
-    vulnerabilities,
-  ]);
+    vulnerabilities
+  ]),
   // Auto-scan when component opens
   useEffect(() => {
     if(autoScan && isOpen && !scanComplete) {
 
       startSecurityScan()}
-  }, [autoScan, isOpen, scanComplete, startSecurityScan]) ;
+  }, [autoScan, isOpen, scanComplete, startSecurityScan]) ,
   // Setup real - time updates
   useEffect(() => {
     if(showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {
-        generateSecurityThreats();
-        generateVulnerabilities();
-        generateComplianceStatus()}, 60000); // Update every minute
+        generateSecurityThreats(),
+        generateVulnerabilities(),
+        generateComplianceStatus()}, 60000), // Update every minute
 
       return () => {
         if(scanIntervalRef.current) {
@@ -185,12 +185,12 @@ export function SecurityMonitoringSystem({
     scanComplete,
     generateSecurityThreats,
     generateVulnerabilities,
-    generateComplianceStatus,
-  ]);
+    generateComplianceStatus
+  ]),
 
   // Get threat color
   
-    return colors[type as keyof typeof colors] || colors.low};
+    return colors[type as keyof typeof colors] || colors.low},
 
   // Get status icon
   const getStatusIcon = (status: string) => {
@@ -199,13 +199,13 @@ export function SecurityMonitoringSystem({
 
       active: <AlertTriangle className="w-4 h-4 text-red-500"  />,"
       investigating: <Eye className="w-4 h-4 text-yellow-500"  />,"
-      resolved: <CheckCircle className="w-4 h-4 text-green-500"  />};"
-    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />};
+      resolved: <CheckCircle className="w-4 h-4 text-green-500"  />},"
+    return icons[status as keyof typeof icons] || <Info className="w-4 h-4"  />},
 
   // Get compliance color
   
-    return colors[status as keyof typeof colors] || colors.partial};
-  if(!enabled) return null;
+    return colors[status as keyof typeof colors] || colors.partial},
+  if(!enabled) return null,
 
   return ()
     <>
@@ -364,7 +364,7 @@ export function SecurityMonitoringSystem({
                           key: 'compliance',
                           label: 'Compliance',
                           icon: CheckCircle,
-                          count: complianceStatus.length},
+                          count: complianceStatus.length}
                       ].map(({ key, label, icon: Icon, count }) => (
                         <button
                           key={key}
@@ -548,7 +548,7 @@ export function SecurityMonitoringSystem({
                                 <div`
                                   className={`px-3 py-1 rounded-full text-sm font-medium ${getComplianceColor(compliance.status)}`}
                                 >
-                                  {compliance.status.replace('-',)}
+                                  {compliance.status.replace('-')}
                                 </div>
                               </div>
 "

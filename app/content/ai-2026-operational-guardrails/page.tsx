@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Operational Guardrails';
-  description: 'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.',
-};
+  title: 'AI 2026: Operational Guardrails',
+  description: 'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.'
+},
 export default function OperationalGuardrails2026Page() {,
   return (,
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -51,6 +51,5 @@ export default function OperationalGuardrails2026Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

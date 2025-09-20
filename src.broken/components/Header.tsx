@@ -10,10 +10,10 @@ function Header({ className }: HeaderProps) {
 
     
     // You can add theme switching logic here
-  }}};
+  }}},
 
     // Add search logic here'
-    // console.log('Searching for:', searchQuery)};
+    // console.log('Searching for:', searchQuery)},
 
   return ()
     <header 
@@ -303,8 +303,8 @@ function Header({ className }: HeaderProps) {
     </header>) }
 '"
 =======
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react',
+import { Link, useLocation } from 'react-router-dom',
 import {
   Menu,
   X,
@@ -367,33 +367,33 @@ import {
   MapPin,
   ExternalLink,
   Cloud
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface HeaderProps {
-  className?: string;
+  className?: string,
 }
 
 export function Header({ className }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false),
+  const [isSearchOpen, setIsSearchOpen] = useState(false),
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const location = useLocation(),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
+      setIsScrolled(window.scrollY > 0),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+    setTheme(theme === 'light' ? 'dark' : 'light'),
+  },
 
   const navigation = [
     { name: 'Home', href: '/', current: location.pathname === '/' },
@@ -403,7 +403,7 @@ export function Header({ className }: HeaderProps) {
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
     { name: 'Blog', href: '/blog', current: location.pathname.startsWith('/blog') },
     { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' }
-  ];
+  ],
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -557,8 +557,8 @@ export function Header({ className }: HeaderProps) {
         </div>
       )}
     </header>
-  );
+  ),
 }
 
-export default Header;
+export default Header,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

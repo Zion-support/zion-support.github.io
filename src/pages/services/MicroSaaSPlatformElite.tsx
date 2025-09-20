@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Rocket, 
+  Rocket,
   ShoppingCart, 
   Zap, 
   Users, 
@@ -23,49 +23,33 @@ import {
   BarChart3,
   CreditCard,
   Settings
-} from 'lucide-react';
-
+} from "lucide-react";
 const MicroSaaSPlatformElite: React.FC = () => {
   const features = [
     {
-      icon: Rocket,
-      title: "Rapid SaaS Launch",
-      description: "Launch your micro-SaaS in 30 days with our proven templates and automation tools"
+      icon: Rocket,title: "Rapid SaaS Launch",description: "Launch your micro-SaaS in 30 days with our proven templates and automation tools"
+    };
+    {
+      icon: ShoppingCart,title: "Built-in Payment Processing",description: "Integrated Stripe, PayPal, and crypto payments with automated billing and subscriptions"
     },
     {
-      icon: ShoppingCart,
-      title: "Built-in Payment Processing",
-      description: "Integrated Stripe, PayPal, and crypto payments with automated billing and subscriptions"
+      icon: Zap,title: "AI-Powered Automation",description: "Smart workflows, customer support automation, and intelligent business process optimization"
     },
     {
-      icon: Zap,
-      title: "AI-Powered Automation",
-      description: "Smart workflows, customer support automation, and intelligent business process optimization"
+      icon: Users,title: "Multi-Tenant Architecture",description: "Scalable platform supporting unlimited customers with role-based access control"
+    };
+    {
+      icon: Globe,title: "Global Deployment",description: "Deploy to multiple regions with CDN, load balancing, and localized compliance"
     },
     {
-      icon: Users,
-      title: "Multi-Tenant Architecture",
-      description: "Scalable platform supporting unlimited customers with role-based access control"
-    },
-    {
-      icon: Globe,
-      title: "Global Deployment",
-      description: "Deploy to multiple regions with CDN, load balancing, and localized compliance"
-    },
-    {
-      icon: Database,
-      title: "Enterprise Database",
-      description: "PostgreSQL, MongoDB, and Redis with automated backups and disaster recovery"
+      icon: Database,title: "Enterprise Database",description: "PostgreSQL, MongoDB, and Redis with automated backups and disaster recovery"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Micro SaaS Starter",
-      price: "$2,500",
-      period: "/month",
-      description: "Perfect for solo entrepreneurs and small teams",
-      features: [
+      name: "Micro SaaS Starter",price: "$2,500",
+      period: "/month",description: "Perfect for solo entrepreneurs and small teams",features: [
         "Up to 1,000 customers",
         "Basic SaaS templates",
         "Standard payment processing",
@@ -75,11 +59,8 @@ const MicroSaaSPlatformElite: React.FC = () => {
       ]
     },
     {
-      name: "Micro SaaS Pro",
-      price: "$5,500",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
-      features: [
+      name: "Micro SaaS Pro",price: "$5,500",
+      period: "/month",description: "Ideal for growing businesses and teams",features: [
         "Up to 10,000 customers",
         "Advanced SaaS templates",
         "Multi-payment gateways",
@@ -89,14 +70,11 @@ const MicroSaaSPlatformElite: React.FC = () => {
         "Custom branding"
       ],
       popular: true
-    },
+    };
     {
-      name: "Micro SaaS Enterprise",
-      price: "$12,000",
-      period: "/month",
-      description: "For large organizations with complex needs",
-      features: [
-        "Unlimited customers",
+      name: "Micro SaaS Enterprise",price: "$12,000",
+      period: "/month",description: "For large organizations with complex needs",features: [
+        "Unlimited customers";
         "Custom SaaS development",
         "White-label platform",
         "24/7 dedicated support",
@@ -105,26 +83,22 @@ const MicroSaaSPlatformElite: React.FC = () => {
         "SLA guarantees"
       ]
     }
-  ];
+  ],
 
   const platformFeatures = [
     {
-      title: "SaaS Templates & Components",
-      description: "Pre-built templates for common SaaS applications including CRM, project management, e-commerce, and more"
+      title: "SaaS Templates & Components",description: "Pre-built templates for common SaaS applications including CRM, project management, e-commerce, and more"
     },
     {
-      title: "Customer Management System",
-      description: "Complete customer lifecycle management with onboarding, support, and retention tools"
+      title: "Customer Management System",description: "Complete customer lifecycle management with onboarding, support, and retention tools"
     },
     {
-      title: "Analytics & Reporting",
-      description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
-    },
+      title: "Analytics & Reporting",description: "Comprehensive business intelligence with real-time dashboards and automated reporting"
+    };
     {
-      title: "Integration Hub",
-      description: "Connect with 500+ third-party services including CRMs, marketing tools, and business applications"
+      title: "Integration Hub",description: "Connect with 500+ third-party services including CRMs, marketing tools, and business applications"
     }
-  ];
+  ],
 
   const saasTemplates = [
     "CRM & Sales Management",
@@ -137,7 +111,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
     "Customer Support",
     "Inventory Management",
     "Real Estate Management"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -382,7 +356,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
               Ready to Launch Your SaaS?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Get in touch with our SaaS platform experts to discuss how we can help you build, 
+              Get in touch with our SaaS platform experts to discuss how we can help you build;
               launch, and scale your micro-SaaS business.
             </p>
           </motion.div>
@@ -428,7 +402,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
 
           <div className="text-center">
             <a
-              href="https://ziontechgroup.com/contact"
+              href="https: //ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Platform Demo
@@ -439,7 +413,7 @@ const MicroSaaSPlatformElite: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light">
+      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
             © 2024 Zion Tech Group. All rights reserved.
@@ -468,7 +442,6 @@ const MicroSaaSPlatformElite: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default MicroSaaSPlatformElite;

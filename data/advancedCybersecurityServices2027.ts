@@ -1,45 +1,45 @@
 export interface AdvancedCybersecurityService2027 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
   pricing: {
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string;
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  technologies: string[];
-  integrations: string[];
-  support: string[];
-  link: string;
-  badge: string;
-  icon: string;
-  image: string;
-  innovationLevel: string;
-  marketSize: string;
-  competitors: string[];
+    monthly: number,
+    yearly: number,
+    custom: string,
+    currency: string,
+    pricingModel: string
+  },
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  technologies: string[],
+  integrations: string[],
+  support: string[],
+  link: string,
+  badge: string,
+  icon: string,
+  image: string,
+  innovationLevel: string,
+  marketSize: string,
+  competitors: string[],
   securityFeatures: {
-    threatDetection: string;
-    encryption: string;
-    compliance: string[];
-    monitoring: string;
-    response: string;
-  };
-  roi: string;
-  estimatedDelivery: string;
+    threatDetection: string,
+    encryption: string,
+    compliance: string[],
+    monitoring: string,
+    response: string
+  },
+  roi: string,
+  estimatedDelivery: string,
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-    address: string;
-  };
+    phone: string,
+    email: string,
+    website: string,
+    address: string
+  },
 }
 
 export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2027[] = [
@@ -472,4 +472,4 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-];
+],

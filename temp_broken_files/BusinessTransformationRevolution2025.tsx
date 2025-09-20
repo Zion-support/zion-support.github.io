@@ -1,115 +1,115 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Target,
   TrendingUp,
   Users,
   Briefcase,
-  Lightbulb;
-  ArrowRight;
-  CheckCircle2;
-  Sparkles;
-  BarChart3;
-  Clock,
-} from 'lucide-react';
+  Lightbulb,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  BarChart3,
+  Clock
+} from 'lucide-react',
 const BusinessTransformationRevolution2025 = () => {,
-  const [activeTabsetActiveTab] = useState(0);
+  const [activeTabsetActiveTab] = useState(0),
   const [countersetCounters] = useState({,
-    businesses: 0;
-    revenue: 0;
-    efficiency: 0;
-    satisfaction: 0,});
+    businesses: 0,
+    revenue: 0,
+    efficiency: 0,
+    satisfaction: 0}),
   const tabs = [,
     {,
-      id: 0;
-      title: "Digital Revolution";
-      icon: <Sparkles className="w-6 h-6" />;
+      id: 0,
+      title: "Digital Revolution",
+      icon: <Sparkles className="w-6 h-6" />,
       content: {,
-        title: "Complete Digital Transformation";
-        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.";
+        title: "Complete Digital Transformation",
+        description: "Transform your entire business ecosystem with cutting-edge AI and automation technologies.",
         benefits: [,
-          "500% increase in operational efficiency";
-          "Real-time data-driven decision making";
-          "Automated workflow optimization";
-          "Predictive analytics and forecasting",
-        ];
-        image: "🚀",}
-    };
+          "500% increase in operational efficiency",
+          "Real-time data-driven decision making",
+          "Automated workflow optimization",
+          "Predictive analytics and forecasting"
+        ],
+        image: "🚀"}
+    },
     {,
-      id: 1;
-      title: "AI Integration";
-      icon: <Target className="w-6 h-6" />;
+      id: 1,
+      title: "AI Integration",
+      icon: <Target className="w-6 h-6" />,
       content: {,
-        title: "Intelligent AI Integration";
-        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.";
+        title: "Intelligent AI Integration",
+        description: "Seamlessly integrate AI across all business operations for unprecedented growth and efficiency.",
         benefits: [,
-          "Custom AI models for your industry";
-          "24/7 automated customer support";
-          "Intelligent resource allocation";
-          "Advanced pattern recognition",
-        ];
-        image: "🧠",}
-    };
+          "Custom AI models for your industry",
+          "24/7 automated customer support",
+          "Intelligent resource allocation",
+          "Advanced pattern recognition"
+        ],
+        image: "🧠"}
+    },
     {,
-      id: 2;
-      title: "Growth Strategy";
-      icon: <TrendingUp className="w-6 h-6" />;
+      id: 2,
+      title: "Growth Strategy",
+      icon: <TrendingUp className="w-6 h-6" />,
       content: {,
-        title: "Exponential Growth Strategy";
-        description: "Unlock explosive business growth with our proven transformation methodologies.";
+        title: "Exponential Growth Strategy",
+        description: "Unlock explosive business growth with our proven transformation methodologies.",
         benefits: [,
-          "Market expansion strategies";
-          "Revenue optimization systems";
-          "Competitive advantage frameworks";
-          "Scalable business models",
-        ];
-        image: "📈",}
+          "Market expansion strategies",
+          "Revenue optimization systems",
+          "Competitive advantage frameworks",
+          "Scalable business models"
+        ],
+        image: "📈"}
     }
-  ];
+  ],
   useEffect(() => {,
     // Animate counters,
     const animateCounters = () => {,
       const targets = {,
-        businesses: 50000;
-        revenue: 2500;
-        efficiency: 400;
-        satisfaction: 98,};
+        businesses: 50000,
+        revenue: 2500,
+        efficiency: 400,
+        satisfaction: 98},
       Object.keys(targets).forEach(key => {,
-        let start = 0;
-        const target = targets[key as keyof typeof targets];
-        const increment = target / 100;
+        let start = 0,
+        const target = targets[key as keyof typeof targets],
+        const increment = target / 100,
         const timer = setInterval(() => {,
-          start += increment;
+          start += increment,
           if (start >= target) {,
-            start = target;
-            clearInterval(timer);
+            start = target,
+            clearInterval(timer),
           }
-          setCounters(prev => ({ ...prev[key]: Math.floor(start) }));
-        }20);
-      });
-    };
-    const timer = setTimeout(animateCounters500);
-    return () => clearTimeout(timer);
-  }[]);
+          setCounters(prev => ({ ...prev[key]: Math.floor(start) })),
+        }20),
+      }),
+    },
+    const timer = setTimeout(animateCounters500),
+    return () => clearTimeout(timer),
+  }[]),
   const containerVariants = {,
-    hidden: { opacity: 0, y: 50 ,};
+    hidden: { opacity: 0, y: 50 },
     visible: {,
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.2,}
+        duration: 0.8,
+        staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,};
+    hidden: { opacity: 0, y: 20 },
     visible: {,
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.6 ,}
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
     }
-  };
+  },
   return (,
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">,
       {/* Animated Background Elements */}
@@ -135,27 +135,26 @@ const BusinessTransformationRevolution2025 = () => {,
             Limited Time: 50% Off Implementation,
           </div>,
         </div>,
-        {/* Stats Section */,}
+        {/* Stats Section */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
           {[,
-            { icon: <Users className="w-8 h-8" />value: counters.businesses.toLocaleString()label: "Businesses Transformed"suffix: "+" ,};
-            { icon: <TrendingUp className="w-8 h-8" />value: counters.revenuelabel: "Average Revenue Increase"suffix: "%" ,};
-            { icon: <BarChart3 className="w-8 h-8" />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" ,};
-            { icon: <Target className="w-8 h-8" />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" ,}
+            { icon: <Users className="w-8 h-8" />value: counters.businesses.toLocaleString()label: "Businesses Transformed"suffix: "+" },
+            { icon: <TrendingUp className="w-8 h-8" />value: counters.revenuelabel: "Average Revenue Increase"suffix: "%" },
+            { icon: <BarChart3 className="w-8 h-8" />value: counters.efficiencylabel: "Efficiency Improvement"suffix: "%" },
+            { icon: <Target className="w-8 h-8" />value: counters.satisfactionlabel: "Client Satisfaction"suffix: "%" }
           ].map((statindex) => (,
             <div,
               key={index}
               className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover: bg-white/20 transition-all duration-300 transform hover:scale-105",
             >,
-              <div className="text-blue-400 mb-4 flex justify-center">{stat.icon,}</div>,
+              <div className="text-blue-400 mb-4 flex justify-center">{stat.icon}</div>,
               <div className="text-4xl font-bold text-white mb-2">,
                 {stat.value}{stat.suffix}
               </div>,
               <div className="text-gray-300 text-sm">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Tabs Section */}
         <div className="mb-16">,
@@ -171,7 +170,7 @@ const BusinessTransformationRevolution2025 = () => {,
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center ${,
                     activeTab === index,
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg',
-                      : 'text-gray-300 hover: text-white hover:bg-white/10',}`}
+                      : 'text-gray-300 hover: text-white hover:bg-white/10'}`}
                 >,
                   {tab.icon}
                   <span className="ml-2">{tab.title}</span>,
@@ -185,7 +184,7 @@ const BusinessTransformationRevolution2025 = () => {,
             className="grid lg: grid-cols-2 gap-12 items-center",
           >,
             <div className="space-y-6">,
-              <div className="text-8xl mb-6">{tabs[activeTab].content.image,}</div>,
+              <div className="text-8xl mb-6">{tabs[activeTab].content.image}</div>,
               <h3 className="text-4xl font-bold text-white mb-4">,
                 {tabs[activeTab].content.title}
               </h3>,
@@ -200,8 +199,7 @@ const BusinessTransformationRevolution2025 = () => {,
                   >,
                     <CheckCircle2 className="w-6 h-6 mr-4 text-green-400" />,
                     <span className="text-lg">{benefit}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             <div className="space-y-6">,
@@ -243,7 +241,7 @@ const BusinessTransformationRevolution2025 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Final CTA */,}
+        {/* Final CTA */}
         <div,
           className="text-center",
         >,
@@ -264,6 +262,6 @@ const BusinessTransformationRevolution2025 = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default BusinessTransformationRevolution2025;
+  )},
+export default BusinessTransformationRevolution2025,
 </div></div></div></div>,

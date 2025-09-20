@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { 
-  Calendar, 
+  Calendar,
   Clock, 
   User, 
   Tag, 
@@ -22,175 +22,93 @@ import {
   Building,
   Code,
   Database
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 interface NewsArticle {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
-  readTime: number;
+  id: string,title: string,excerpt: string,content: string,author: string,date: string,category: string,tags: string[],image: string,featured: boolean,readTime: number
 }
 
 const News: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('latest');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('latest'),
 
   const categories = [
-    { id: 'all', name: 'All News', icon: Globe, count: 0 },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 },
-    { id: 'company', name: 'Company Updates', icon: Building, count: 0 },
+    { id: 'all', name: 'All News', icon: Globe, count: 0 };
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0 };
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 };
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 };
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 };
+    { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 };
+    { id: 'company', name: 'Company Updates', icon: Building, count: 0 };
     { id: 'technology', name: 'Technology Trends', icon: Code, count: 0 }
   ];
-
   const newsArticles: NewsArticle[] = [
     {
-      id: '1',
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, drug discovery, and financial modeling.',
-      content: 'Full article content would go here...',
-      author: 'Dr. Sarah Chen',
-      date: '2024-08-27',
-      category: 'ai',
-      tags: ['AI', 'Quantum Computing', 'Innovation', 'Platform Launch'],
-      image: '/images/news/ai-quantum-platform.jpg',
-      featured: true,
-      readTime: 8
-    },
+      id: '1',title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, drug discovery, and financial modeling.',
+      content: 'Full article content would go here...',author: 'Dr. Sarah Chen',date: '2024-08-27',category: 'ai',tags: ['AIQuantum Computing', 'InnovationPlatform Launch'],
+      image: '/images/news/ai-quantum-platform.jpg',featured: true,readTime: 8
+    };
     {
-      id: '2',
-      title: 'New Micro SaaS Solutions Transforming Small Business Operations',
-      excerpt: 'Discover how our innovative micro SaaS platform is helping small businesses compete with enterprise-level tools at a fraction of the cost.',
-      content: 'Full article content would go here...',
-      author: 'Michael Rodriguez',
-      date: '2024-08-25',
-      category: 'innovation',
-      tags: ['Micro SaaS', 'Small Business', 'Digital Transformation'],
-      image: '/images/news/micro-saas-solutions.jpg',
-      featured: true,
-      readTime: 6
-    },
+      id: '2',title: 'New Micro SaaS Solutions Transforming Small Business Operations',excerpt: 'Discover how our innovative micro SaaS platform is helping small businesses compete with enterprise-level tools at a fraction of the cost.',content: 'Full article content would go here...',author: 'Michael Rodriguez',date: '2024-08-25',category: 'innovation',tags: ['Micro SaaSSmall Business', 'Digital Transformation'],
+      image: '/images/news/micro-saas-solutions.jpg',featured: true,readTime: 6
+    };
     {
-      id: '3',
-      title: 'Cybersecurity Breakthrough: AI-Powered Threat Detection Achieves 99.9% Accuracy',
-      excerpt: 'Our advanced AI cybersecurity platform has achieved unprecedented accuracy in threat detection, setting new industry standards for enterprise security.',
-      content: 'Full article content would go here...',
-      author: 'Alex Thompson',
-      date: '2024-08-23',
-      category: 'security',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Enterprise Security'],
-      image: '/images/news/ai-cybersecurity.jpg',
-      featured: false,
-      readTime: 7
-    },
+      id: '3',title: 'Cybersecurity Breakthrough: AI-Powered Threat Detection Achieves 99.9% Accuracy',excerpt: 'Our advanced AI cybersecurity platform has achieved unprecedented accuracy in threat detection, setting new industry standards for enterprise security.',
+      content: 'Full article content would go here...',author: 'Alex Thompson',date: '2024-08-23',category: 'security',tags: ['CybersecurityAI', 'Threat DetectionEnterprise Security'],
+      image: '/images/news/ai-cybersecurity.jpg',featured: false,readTime: 7
+    };
     {
-      id: '4',
-      title: 'Zion Tech Group Named Top 10 AI Companies by TechCrunch',
-      excerpt: 'Recognition of our innovative AI solutions and commitment to pushing the boundaries of what\'s possible in artificial intelligence.',
-      content: 'Full article content would go here...',
-      author: 'Press Team',
-      date: '2024-08-21',
-      category: 'company',
-      tags: ['Awards', 'Recognition', 'AI Leadership', 'Company News'],
-      image: '/images/news/techcrunch-award.jpg',
-      featured: false,
-      readTime: 4
-    },
+      id: '4',title: 'Zion Tech Group Named Top 10 AI Companies by TechCrunch',excerpt: 'Recognition of our innovative AI solutions and commitment to pushing the boundaries of what\'s possible in artificial intelligence.',content: 'Full article content would go here...',author: 'Press Team',date: '2024-08-21',category: 'company',tags: ['AwardsRecognition', 'AI LeadershipCompany News'],
+      image: '/images/news/techcrunch-award.jpg',featured: false,readTime: 4
+    };
     {
-      id: '5',
-      title: 'The Future of Edge Computing: IoT Solutions for Smart Cities',
-      excerpt: 'Exploring how edge computing and IoT technologies are revolutionizing urban infrastructure and creating more sustainable, efficient cities.',
-      content: 'Full article content would go here...',
-      author: 'Dr. Emily Watson',
-      date: '2024-08-19',
-      category: 'technology',
-      tags: ['Edge Computing', 'IoT', 'Smart Cities', 'Urban Technology'],
-      image: '/images/news/edge-computing-iot.jpg',
-      featured: false,
-      readTime: 9
-    },
+      id: '5',title: 'The Future of Edge Computing: IoT Solutions for Smart Cities',excerpt: 'Exploring how edge computing and IoT technologies are revolutionizing urban infrastructure and creating more sustainable, efficient cities.',
+      content: 'Full article content would go here...',author: 'Dr. Emily Watson',date: '2024-08-19',category: 'technology',tags: ['Edge ComputingIoT', 'Smart CitiesUrban Technology'],
+      image: '/images/news/edge-computing-iot.jpg',featured: false,readTime: 9
+    };
     {
-      id: '6',
-      title: 'Quantum Machine Learning: The Next Frontier in AI',
-      excerpt: 'How quantum computing is revolutionizing machine learning algorithms and opening new possibilities for AI applications.',
-      content: 'Full article content would go here...',
-      author: 'Dr. James Kim',
-      date: '2024-08-17',
-      category: 'quantum',
-      tags: ['Quantum Computing', 'Machine Learning', 'AI', 'Research'],
-      image: '/images/news/quantum-ml.jpg',
-      featured: false,
-      readTime: 10
-    },
+      id: '6',title: 'Quantum Machine Learning: The Next Frontier in AI',excerpt: 'How quantum computing is revolutionizing machine learning algorithms and opening new possibilities for AI applications.',content: 'Full article content would go here...',author: 'Dr. James Kim',date: '2024-08-17',category: 'quantum',tags: ['Quantum ComputingMachine Learning', 'AIResearch'],
+      image: '/images/news/quantum-ml.jpg',featured: false,readTime: 10
+    };
     {
-      id: '7',
-      title: 'Cloud FinOps: Optimizing Cloud Costs with AI',
-      excerpt: 'Learn how our AI-powered FinOps solutions are helping enterprises reduce cloud costs by up to 40% while improving performance.',
-      content: 'Full article content would go here...',
-      author: 'Lisa Chang',
-      date: '2024-08-15',
-      category: 'cloud',
-      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'AI'],
-      image: '/images/news/cloud-finops.jpg',
-      featured: false,
-      readTime: 6
-    },
+      id: '7',title: 'Cloud FinOps: Optimizing Cloud Costs with AI',excerpt: 'Learn how our AI-powered FinOps solutions are helping enterprises reduce cloud costs by up to 40% while improving performance.',content: 'Full article content would go here...',author: 'Lisa Chang',date: '2024-08-15',category: 'cloud',tags: ['Cloud ComputingFinOps', 'Cost OptimizationAI'],
+      image: '/images/news/cloud-finops.jpg',featured: false,readTime: 6
+    };
     {
-      id: '8',
-      title: 'Digital Twin Technology: Revolutionizing Manufacturing and Healthcare',
-      excerpt: 'Exploring the applications of digital twin technology across industries and how it\'s improving efficiency and outcomes.',
-      content: 'Full article content would go here...',
-      author: 'Robert Davis',
-      date: '2024-08-13',
-      category: 'innovation',
-      tags: ['Digital Twin', 'Manufacturing', 'Healthcare', 'Innovation'],
-      image: '/images/news/digital-twin.jpg',
-      featured: false,
-      readTime: 8
+      id: '8',title: 'Digital Twin Technology: Revolutionizing Manufacturing and Healthcare',excerpt: 'Exploring the applications of digital twin technology across industries and how it\'s improving efficiency and outcomes.',content: 'Full article content would go here...',author: 'Robert Davis',date: '2024-08-13',category: 'innovation',tags: ['Digital TwinManufacturing', 'HealthcareInnovation'],
+      image: '/images/news/digital-twin.jpg',featured: false,readTime: 8
     }
   ];
-
   // Update category counts
   categories.forEach(category => {
     if (category.id === 'all') {
-      category.count = newsArticles.length;
+      category.count = newsArticles.length,
     } else {
-      category.count = newsArticles.filter(article => article.category === category.id).length;
+      category.count = newsArticles.filter(article => article.category === category.id).length,
     }
-  });
+  }),
 
   const filteredArticles = newsArticles
     .filter(article => {
       const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+                           article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory,
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       if (sortBy === 'latest') {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
+        return new Date(b.date).getTime() - new Date(a.date).getTime(),
       } else if (sortBy === 'oldest') {
-        return new Date(a.date).getTime() - new Date(b.date).getTime();
+        return new Date(a.date).getTime() - new Date(b.date).getTime(),
       } else if (sortBy === 'readTime') {
-        return a.readTime - b.readTime;
+        return a.readTime - b.readTime,
       }
-      return 0;
-    });
+      return 0,
+    }),
 
-  const featuredArticles = newsArticles.filter(article => article.featured);
+  const featuredArticles = newsArticles.filter(article => article.featured),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -491,7 +409,7 @@ const News: React.FC = () => {
               Get the latest news, insights, and technology updates delivered directly to your inbox. 
               Never miss a breakthrough or innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -505,7 +423,6 @@ const News: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default News;

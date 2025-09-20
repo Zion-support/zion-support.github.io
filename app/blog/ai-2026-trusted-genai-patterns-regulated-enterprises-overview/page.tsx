@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Overview: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group';
+  title: 'Overview: Trusted GenAI Patterns for Regulated Enterprises | Zion Tech Group',
   description:,
-    'Executive overview of trusted GenAI for regulated industries: policies, evals, tool governance, and audit evidence.';
-  keywords: ['GenAIregulated', 'executive overviewgovernance', 'evaluations'],
-};
+    'Executive overview of trusted GenAI for regulated industries: policies, evals, tool governance, and audit evidence.',
+  keywords: ['GenAIregulatedexecutive overviewgovernance', 'evaluations']
+},
 export default function TrustedGenAIOverviewPage() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -41,6 +41,5 @@ export default function TrustedGenAIOverviewPage() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

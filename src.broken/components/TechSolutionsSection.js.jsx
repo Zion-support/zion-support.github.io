@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -10,13 +10,13 @@ export default function Page() {
         icon: <Cpu className="w-8 h-8"/>,
         color: 'from-zion-cyan to-zion-purple',
         bgColor: 'from-zion-cyan/20 to-zion-purple/20',
-        features[;
+        features[,
             'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'
-        ],;
-        benefits[;
+        ],
+        benefits[,
             'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
-        ],;
-        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],;
+        ],
+        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
         rating: 4.6,
         projects: 90,
         category: 'Connected Devices'
@@ -29,18 +29,18 @@ export default function Page() {
         icon: <Smartphone className="w-8 h-8"/>,
         color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
-        features[;
+        features[,
             'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
-        ],;
-        benefits[;
+        ],
+        benefits[,
             'Reach customers on all devices',Improve user engagement',Increase brand visibility'
-        ],;
-        useCases['Retail',Entertainment',Education',Healthcare'],;
+        ],
+        useCases['Retail',Entertainment',Education',Healthcare'],
         rating: 4.8,
         projects: 250,
         category: 'Mobile'
     }
-];
+],
 const industries = ['"
     { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },"
     { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },"
@@ -48,9 +48,9 @@ const industries = ['"
     { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },"
     { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
     { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
-];
-    const [selectedSolution, setSelectedSolution] = useState(null);
-    const [hoveredSolution, setHoveredSolution] = useState(null);
+],
+    const [selectedSolution, setSelectedSolution] = useState(null),
+    const [hoveredSolution, setHoveredSolution] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -63,7 +63,7 @@ const industries = ['"
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -80,7 +80,7 @@ const industries = ['"
                 ease: "easeOut"
             }
         }
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.95,
@@ -97,7 +97,7 @@ const industries = ['"
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

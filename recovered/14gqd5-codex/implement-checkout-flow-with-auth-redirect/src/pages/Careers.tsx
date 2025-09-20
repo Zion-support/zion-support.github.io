@@ -1,8 +1,8 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export default function Careers() {
   // Sample job listings
@@ -78,7 +78,7 @@ export default function Careers() {
         description: "Help connect the right talent with the right opportunities on our platform through personalized matching."
       }
     ]
-  };
+  },
 
   // Benefits list
   const benefits = [
@@ -118,7 +118,7 @@ export default function Careers() {
         </svg>
       )
     }
-  ];
+  ],
 
   return (
     <>
@@ -141,7 +141,7 @@ export default function Careers() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
+                At Zion, we're not just building a marketplace, we're creating a new paradigm for how AI and 
                 technology are accessed, shared, and implemented globally.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
@@ -216,7 +216,7 @@ export default function Careers() {
             </Tabs>
           </div>
           
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md: p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals who are passionate about AI and technology. 
@@ -229,5 +229,5 @@ export default function Careers() {
         </div>
       </main>
     </>
-  );
+  )
 }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
+import React from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card",
+import { Button } from "../ui/button",
+import { Badge } from "../ui/badge",
+import { Link } from "react-router-dom",
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react",
 export function ContactInfo() {,
     return (<section className="py-20 bg-zion-blue-dark">,
       <div className="container mx-auto px-4">,
@@ -16,7 +16,7 @@ export function ContactInfo() {,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-          {/* Contact Information */,}
+          {/* Contact Information */}
           <div className="space-y-6">,
             <Card className="bg-zion-blue border-zion-blue-light">,
               <CardHeader>,
@@ -106,7 +106,7 @@ export function ContactInfo() {,
               </CardContent>,
             </Card>,
           </div>,
-          {/* Quick Actions & Services */,}
+          {/* Quick Actions & Services */}
           <div className="space-y-6">,
             <Card className="bg-zion-blue border-zion-blue-light">,
               <CardHeader>,
@@ -180,7 +180,7 @@ export function ContactInfo() {,
             </Card>,
           </div>,
         </div>,
-        {/* Bottom CTA */,}
+        {/* Bottom CTA */}
         <div className="text-center mt-16">,
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">,
             <h3 className="text-2xl font-bold text-white mb-4">,
@@ -204,5 +204,5 @@ export function ContactInfo() {,
           </div>,
         </div>,
       </div>,
-    </section>),}
+    </section>)}
 ,

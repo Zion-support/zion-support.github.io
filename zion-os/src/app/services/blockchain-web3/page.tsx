@@ -5,7 +5,6 @@ export default function Page() {,
         <h1 className="text-3xl font-bold mb-4">Services Blockchain Web3 Page</h1>,
         <p className="text-white/70">Content coming soon.</p>,
       </div>,
-    </div>,
-  );
+    </div>),
 }
 ,

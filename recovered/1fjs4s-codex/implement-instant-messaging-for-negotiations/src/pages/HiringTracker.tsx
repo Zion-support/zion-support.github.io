@@ -1,17 +1,17 @@
 
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Footer } from "@/components/Footer";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from "lucide-react";
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Footer } from "@/components/Footer",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Briefcase } from "lucide-react",
 
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string };
-  const [activeTab, setActiveTab] = useState<string>("kanban");
+  const { jobId } = useParams() as { jobId?: string },
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
 
   return (
     <>
@@ -49,7 +49,7 @@ function HiringTrackerContent() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }
 
 export default function HiringTracker() {
@@ -57,5 +57,5 @@ export default function HiringTracker() {
     <ProtectedRoute>
       <HiringTrackerContent />
     </ProtectedRoute>
-  );
+  ),
 }

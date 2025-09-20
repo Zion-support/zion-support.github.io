@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react';
+import React from 'react',
+import { motion  } from 'framer-motion',
+import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award  } from 'lucide-react',
 ,
     {
 
         icon: Globe,
         title: 'Global Network',
         description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-        features['Multi-language Support',Local Expertise',24/7 Availability'],;
+        features['Multi-language Support',Local Expertise',24/7 Availability'],
         color: 'from-zion-cyan to-zion-cyan-dark',
         bgColor: 'bg-zion-cyan/10',
         borderColor: 'border-zion-cyan/20'
@@ -17,21 +17,21 @@ import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star,
         icon: Shield,
         title: 'Enterprise Security',
         description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-        features['Data Protection',Access Control',Audit Trails'],;
+        features['Data Protection',Access Control',Audit Trails'],
         color: 'from-zion-blue to-zion-blue-dark',
         bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'
     }
-];
+],
 const achievements = ['
     { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
     { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
     { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
     { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
-];
+],
 const technologies = ['
     'Machine Learning',Blockchain',Cloud Computing',IoT',Cybersecurity',Data Analytics'
-];
+],
 export function FeatureHighlights() {
     const containerVariants = {
 
@@ -45,7 +45,7 @@ export function FeatureHighlights() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0, y: 30,
@@ -63,7 +63,7 @@ export function FeatureHighlights() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const achievementVariants = {
 
   hidden: { opacity: 0,
@@ -76,7 +76,7 @@ export function FeatureHighlights() {
             scale: 1,
             transition: { duration: 0.5 }
         }
-    };
+    },
     const techVariants = {
 
   hidden: { opacity: 0,
@@ -89,7 +89,7 @@ export function FeatureHighlights() {
             x: 0,
             transition: { duration: 0.5 }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

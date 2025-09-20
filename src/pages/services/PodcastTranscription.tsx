@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -35,12 +34,11 @@ function PodcastTranscription() {
           </div>
         </div>
         <p className="mt-10 text-sm text-zion-slate-light">
-          Explore more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
+          Explore more at <a className="text-cyan-400 underline" href="https: //ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
         </p>
       </section>
     </div>
-  );
+  )
 }
 
 export default PodcastTranscription;
-

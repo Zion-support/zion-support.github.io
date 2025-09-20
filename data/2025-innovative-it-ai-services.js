@@ -8,16 +8,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Enterprise-grade quantum computing platform providing access to quantum processors, quantum algorithms, and quantum machine learning capabilities for complex computational problems.',
         features: [
-            'Quantum processor access',
-            'Quantum algorithm library',
-            'Quantum machine learning',
-            'Hybrid classical-quantum systems',
-            'Quantum cryptography tools',
-            'Performance optimization',
-            'Expert consultation',
-            'Training and support',
-            'API access',
-            'Custom quantum solutions'
+            'Quantum processor accessQuantum algorithm library',
+            'Quantum machine learningHybrid classical-quantum systems',
+            'Quantum cryptography toolsPerformance optimization',
+            'Expert consultationTraining and support',
+            'API accessCustom quantum solutions'
         ],
         popular: true,
         icon: '⚛️',
@@ -60,16 +55,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Revolutionary AI development platform that autonomously creates, trains, and deploys machine learning models without human intervention, featuring automated feature engineering and model optimization.',
         features: [
-            'Autonomous model creation',
-            'Automated feature engineering',
-            'AutoML capabilities',
-            'Model optimization',
-            'One-click deployment',
-            'Performance monitoring',
-            'Scalable infrastructure',
-            'Custom model training',
-            'API generation',
-            'Real-time analytics'
+            'Autonomous model creationAutomated feature engineering',
+            'AutoML capabilitiesModel optimization',
+            'One-click deploymentPerformance monitoring',
+            'Scalable infrastructureCustom model training',
+            'API generationReal-time analytics'
         ],
         popular: true,
         icon: '🧠',
@@ -112,16 +102,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Advanced edge computing platform that enables AI model deployment on edge devices, providing real-time processing, reduced latency, and offline capabilities for IoT and mobile applications.',
         features: [
-            'Edge model deployment',
-            'Real-time processing',
-            'Offline capabilities',
-            'Model optimization',
-            'Device management',
-            'Performance monitoring',
-            'Security features',
-            'Scalable architecture',
-            'API access',
-            'Custom edge solutions'
+            'Edge model deploymentReal-time processing',
+            'Offline capabilitiesModel optimization',
+            'Device managementPerformance monitoring',
+            'Security featuresScalable architecture',
+            'API accessCustom edge solutions'
         ],
         popular: false,
         icon: '🌐',
@@ -164,16 +149,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Next-generation cybersecurity platform leveraging artificial intelligence for real-time threat detection, automated incident response, and predictive security analytics to protect against evolving cyber threats.',
         features: [
-            'AI threat detection',
-            'Automated incident response',
-            'Predictive analytics',
-            'Behavioral analysis',
-            'Real-time monitoring',
-            'Vulnerability assessment',
-            'Compliance reporting',
-            'Threat intelligence',
-            'API integrations',
-            'Custom security rules'
+            'AI threat detectionAutomated incident response',
+            'Predictive analyticsBehavioral analysis',
+            'Real-time monitoringVulnerability assessment',
+            'Compliance reportingThreat intelligence',
+            'API integrationsCustom security rules'
         ],
         popular: true,
         icon: '🔒',
@@ -216,16 +196,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Innovative platform that seamlessly integrates blockchain technology with artificial intelligence, enabling secure, transparent, and intelligent decentralized applications and smart contracts.',
         features: [
-            'Blockchain-AI integration',
-            'Smart contract automation',
-            'Decentralized AI models',
-            'Secure data sharing',
-            'Token economics',
-            'Cross-chain compatibility',
-            'AI model marketplace',
-            'Governance tools',
-            'API access',
-            'Custom blockchain solutions'
+            'Blockchain-AI integrationSmart contract automation',
+            'Decentralized AI modelsSecure data sharing',
+            'Token economicsCross-chain compatibility',
+            'AI model marketplaceGovernance tools',
+            'API accessCustom blockchain solutions'
         ],
         popular: false,
         icon: '⛓️',
@@ -268,16 +243,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Revolutionary DevOps platform that autonomously manages the entire software development lifecycle, from code review to deployment, using AI to optimize performance and reduce human intervention.',
         features: [
-            'Autonomous CI/CD',
-            'AI code review',
-            'Automated testing',
-            'Performance optimization',
-            'Infrastructure management',
-            'Security scanning',
-            'Deployment automation',
-            'Monitoring and alerting',
-            'Cost optimization',
-            'Custom workflows'
+            'Autonomous CI/CDAI code review',
+            'Automated testingPerformance optimization',
+            'Infrastructure managementSecurity scanning',
+            'Deployment automationMonitoring and alerting',
+            'Cost optimizationCustom workflows'
         ],
         popular: true,
         icon: '🚀',
@@ -320,16 +290,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Intelligent data governance platform that uses AI to automate data quality management, compliance monitoring, and data lineage tracking, ensuring data integrity and regulatory compliance.',
         features: [
-            'AI data quality management',
-            'Automated compliance monitoring',
-            'Data lineage tracking',
-            'Privacy protection',
-            'Data cataloging',
-            'Policy enforcement',
-            'Audit reporting',
-            'Real-time monitoring',
-            'API access',
-            'Custom governance rules'
+            'AI data quality managementAutomated compliance monitoring',
+            'Data lineage trackingPrivacy protection',
+            'Data catalogingPolicy enforcement',
+            'Audit reportingReal-time monitoring',
+            'API accessCustom governance rules'
         ],
         popular: false,
         icon: '📋',
@@ -372,16 +337,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Advanced API management platform featuring AI-driven performance monitoring, automated optimization, security analysis, and intelligent traffic management for optimal API performance.',
         features: [
-            'AI performance monitoring',
-            'Automated optimization',
-            'Security analysis',
-            'Traffic management',
-            'API analytics',
-            'Developer portal',
-            'Rate limiting',
-            'Documentation tools',
-            'Testing capabilities',
-            'Custom integrations'
+            'AI performance monitoringAutomated optimization',
+            'Security analysisTraffic management',
+            'API analyticsDeveloper portal',
+            'Rate limitingDocumentation tools',
+            'Testing capabilitiesCustom integrations'
         ],
         popular: false,
         icon: '🔌',
@@ -424,16 +384,11 @@ export const innovativeITAIServices2025 = [
         period: '/month',
         description: 'Intelligent cloud migration platform that autonomously analyzes, plans, and executes cloud migrations with AI-driven optimization, cost analysis, and performance monitoring.',
         features: [
-            'AI migration planning',
-            'Automated migration execution',
-            'Cost optimization',
-            'Performance monitoring',
-            'Multi-cloud support',
-            'Security assessment',
-            'Compliance checking',
-            'Rollback capabilities',
-            'Migration analytics',
-            'Custom migration strategies'
+            'AI migration planningAutomated migration execution',
+            'Cost optimizationPerformance monitoring',
+            'Multi-cloud supportSecurity assessment',
+            'Compliance checkingRollback capabilities',
+            'Migration analyticsCustom migration strategies'
         ],
         popular: true,
         icon: '☁️',
@@ -467,4 +422,4 @@ export const innovativeITAIServices2025 = [
         rating: 4.8,
         reviews: 67
     }
-];
+],

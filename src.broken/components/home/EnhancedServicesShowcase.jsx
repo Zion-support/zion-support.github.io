@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-;
+import React from 'react',
+import { Link  } from 'react-router-dom',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle import { ENHANCED_SERVICES } from '@/data/enhancedServices',
+,
 export function EnhancedServicesShowcase() {
     return (<section className="py-20 bg-zion-blue-dark">"
       <div className="container mx-auto px-4">"
@@ -18,10 +18,10 @@ export function EnhancedServicesShowcase() {
         </div>
 
         {/* Featured Services Grid */}"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service) => {
 
-            const IconComponent = serviceIcons[service.category] || Code;"
+            const IconComponent = serviceIcons[service.category] || Code,"
             return (<Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <CardHeader>"
                   <div className="flex items-center justify-between mb-4">"

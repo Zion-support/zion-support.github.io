@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 
 export const metadata = {
   title: 'Executive AI Security Playbook (2026)',
   description:
-    'Board‑ready controls: policy‑as‑code, eval gates, runtime guardrails, and audit evidence to ship safely at scale.',
-};
+    'Board‑ready controls: policy‑as‑code, eval gates, runtime guardrails, and audit evidence to ship safely at scale.'
+},
 
 export default function ExecutiveAISecurityPlaybookPage() {
   return (
@@ -66,24 +66,24 @@ gates:
           <footer className="mt-12 pt-6 border-t border-white/10 flex items-center justify-between">
             <span className="text-white/60 text-sm">Written by Zion Tech Group</span>
             <div className="flex gap-4">
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300">More articles</Link>
+              <Link href="/blog" className="text-cyan-400 hover: text-cyan-300">More articles</Link>
               <Link href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200">Get in touch</Link>
             </div>
           </footer>
         </article>
       </main>
     </div>
-  );
+  )
 }
 
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 
 export const metadata = {
 	title: 'AI 2026: Executive AI Security Playbook',
 	description:
-		'Practical, board-ready playbook for securing AI systems: policy-as-code, eval-gated releases, and evidence-driven assurance.',
-};
+		'Practical, board-ready playbook for securing AI systems: policy-as-code, eval-gated releases, and evidence-driven assurance.'
+},
 
 export default function Page() {
 	return (
@@ -128,6 +128,6 @@ export default function Page() {
 				</div>
 			</main>
 		</div>
-	);
+	)
 }
 

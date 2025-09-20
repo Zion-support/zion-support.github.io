@@ -1,30 +1,30 @@
-"use client";
-import React, { useEffect, useState, useCallback } from 'react';
-import dynamic from 'next/dynamic';
-import Head from 'next/head';
+"use client",
+import React, { useEffect, useState, useCallback } from 'react',
+import dynamic from 'next/dynamic',
+import Head from 'next/head',
 import {,
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon,
-} from 'lucide-react';
-import PerformanceDashboard from './PerformanceDashboard';
-import EnhancedSEO from './EnhancedSEO';
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon
+} from 'lucide-react',
+import PerformanceDashboard from './PerformanceDashboard',
+import EnhancedSEO from './EnhancedSEO',
 // Lazy load heavy components for better performance,
-const ServiceCard = lazy(() => import('./ServiceCard'));
-const StatsSection = lazy(() => import('./StatsSection'));
-const FeaturesGrid = lazy(() => import('./FeaturesGrid'));
+const ServiceCard = lazy(() => import('./ServiceCard')),
+const StatsSection = lazy(() => import('./StatsSection')),
+const FeaturesGrid = lazy(() => import('./FeaturesGrid')),
 // Import our new revolutionary services,
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
+import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas',
+import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services',
+import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services',
 interface Service {,
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  category: string;
+  id: string,
+  name: string,
+  description: string,
+  type: string,
+  category: string,
   pricing: {,
-    starter: string,};
-  slug: string,}
+    starter: string},
+  slug: string}
 ,
 const Homepage2044: React.FC = () => {,
   return (,
@@ -41,34 +41,34 @@ const Homepage2044: React.FC = () => {,
         <meta property="og:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />,
         <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />,
         <meta property="og: image" content="https://ziontechgroup.com/og-image.jpg" />,
-        {/* Twitter */,}
+        {/* Twitter */}
         <meta property="twitter: card" content="summary_large_image" />,
         <meta property="twitter:url" content="https://ziontechgroup.com/" />,
         <meta property="twitter:title" content="Zion Tech Group - Revolutionary 2044 Technology Solutions" />,
         <meta property="twitter:description" content="Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions." />,
         <meta property="twitter: image" content="https://ziontechgroup.com/og-image.jpg" />,
-        {/* Structured Data */,}
+        {/* Structured Data */}
         <script,
           type="application/ld+json",
           dangerouslySetInnerHTML={{,
             __html: JSON.stringify({,
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "@context": "https: //schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
+              "url": "https: //ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
               "sameAs": [,
-                "https://linkedin.com/company/ziontechgroup";
-                "https://twitter.com/ziontechgroup";
-                "https: //github.com/ziontechgroup",
-              ];
+                "https: //linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"
+              ],
               "contactPoint": {,
-                "@type": "ContactPoint";
-                "contactType": "customer service";
-                "availableLanguage": "English",
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "English"
               }
-            }),
+            })
           }}
         />,
         {/* Preload critical resources */}
@@ -96,18 +96,18 @@ const Homepage2044: React.FC = () => {,
                   <div,
                     key={i}
                     className="absolute w-2 h-2 bg-cyan-400/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]",
-                      x: [0, 150, 0];
-                      y: [0, -150, 0];
-                      opacity: [0, 1, 0];
-                      scale: [0, 1.5, 0],
+                      x: [0, 150, 0],
+                      y: [0, -150, 0],
+                      opacity: [0, 1, 0],
+                      scale: [0, 1.5, 0]
                     }}
-                      duration: 8 + i * 0.3;
-                      repeat: Infinity as any;
-                      delay: i * 0.2;
-                      ease: "easeInOut",}}
+                      duration: 8 + i * 0.3,
+                      repeat: Infinity as any,
+                      delay: i * 0.2,
+                      ease: "easeInOut"}}
                     style={{,
-                      left: `${Math.random() * 100,}%`;
-                      top: `${Math.random() * 100,}%`,
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`
                     }}
                   />,
                 ))}
@@ -115,28 +115,28 @@ const Homepage2044: React.FC = () => {,
               {/* Grid pattern with neon glow */}
               <div className="absolute inset-0 opacity-20">,
                 <div className="absolute inset-0" style={{,
-                  backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`;
-                  backgroundSize: '60px 60px',}}></div>,
+                  backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
+                  backgroundSize: '60px 60px'}}></div>,
               </div>,
               {/* Floating geometric shapes */}
               <div,
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-400/30 rotate-45",
-                  rotate: [45, 405];
-                  scale: [1, 1.2, 1];
-                  opacity: [0.3, 0.8, 0.3],
+                  rotate: [45, 405],
+                  scale: [1, 1.2, 1],
+                  opacity: [0.3, 0.8, 0.3]
                 }}
-                  duration: 10;
-                  repeat: Infinity as any;
-                  ease: "linear",}}
+                  duration: 10,
+                  repeat: Infinity as any,
+                  ease: "linear"}}
               />,
               <div,
                 className="absolute bottom-32 left-32 w-16 h-16 border border-purple-400/30 rounded-full",
-                  scale: [1, 1.5, 1];
-                  opacity: [0.3, 0.8, 0.3],
+                  scale: [1, 1.5, 1],
+                  opacity: [0.3, 0.8, 0.3]
                 }}
-                  duration: 8;
-                  repeat: Infinity as any;
-                  ease: "easeInOut",}}
+                  duration: 8,
+                  repeat: Infinity as any,
+                  ease: "easeInOut"}}
               />,
             </div>,
             {/* Hero Content */}
@@ -166,7 +166,7 @@ const Homepage2044: React.FC = () => {,
               >,
                 <button,
                   className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus: outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden",
-                  onClick={handleGetStarted,}
+                  onClick={handleGetStarted}
                   aria-label="Get started with Zion Tech Group revolutionary services",
                 >,
                   <span className="relative z-10 flex items-center">,
@@ -203,14 +203,14 @@ const Homepage2044: React.FC = () => {,
                     <div,
                       key={service.id}
                       className={`relative group cursor-pointer ${,
-                        index === currentServiceIndex ? 'scale-105' : 'scale-100',
+                        index === currentServiceIndex ? 'scale-105' : 'scale-100'
                       } transition-transform duration-500`}
                       onClick={() => handleServiceClick(service)}
                       role="button",
                       tabIndex={0}
                       onKeyDown={(e) => {,
                         if (e.key === 'Enter' || e.key === ' ') {,
-                          handleServiceClick(service);
+                          handleServiceClick(service),
                         }
                       }}
                       aria-label={`Learn more about ${service.name}`}
@@ -227,7 +227,7 @@ const Homepage2044: React.FC = () => {,
                             </span>,
                           </div>,
                           <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-300">,
-                            {service.name,}
+                            {service.name}
                           </h3>,
                           <p className="text-gray-400 text-sm leading-relaxed mb-4">,
                             {service.description.substring(0, 120)}...,
@@ -241,7 +241,7 @@ const Homepage2044: React.FC = () => {,
                         </div>,
                       </div>,
                     </div>,
-                  )),}
+                  ))}
                 </div>,
               </div>,
             </div>,
@@ -251,8 +251,8 @@ const Homepage2044: React.FC = () => {,
             <div className="max-w-7xl mx-auto">,
               <div,
                 className="text-center mb-20",
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               >,
                 <h2 className="text-5xl font-bold text-white mb-6">,
                   Revolutionary Technology Solutions,
@@ -263,18 +263,18 @@ const Homepage2044: React.FC = () => {,
               </div>,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
                 {[,
-                  { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI with emotional intelligence and consciousness", color: "from-purple-500 to-pink-500" ,};
-                  { icon: Atom, title: "Quantum Neural Networks", description: "Quantum-powered AI with consciousness integration", color: "from-blue-500 to-cyan-500" ,};
-                  { icon: Shield, title: "Quantum Cybersecurity", description: "Quantum-resistant security with AI consciousness", color: "from-red-500 to-orange-500" ,};
-                  { icon: Rocket, title: "Space Resource Intelligence", description: "AI-powered space exploration with consciousness", color: "from-indigo-500 to-purple-500" ,};
-                  { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-500 to-teal-500" ,};
-                  { icon: Database, title: "Quantum Cloud Infrastructure", description: "Quantum-powered cloud with consciousness", color: "from-yellow-500 to-orange-500" ,}
+                  { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI with emotional intelligence and consciousness", color: "from-purple-500 to-pink-500" },
+                  { icon: Atom, title: "Quantum Neural Networks", description: "Quantum-powered AI with consciousness integration", color: "from-blue-500 to-cyan-500" },
+                  { icon: Shield, title: "Quantum Cybersecurity", description: "Quantum-resistant security with AI consciousness", color: "from-red-500 to-orange-500" },
+                  { icon: Rocket, title: "Space Resource Intelligence", description: "AI-powered space exploration with consciousness", color: "from-indigo-500 to-purple-500" },
+                  { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-500 to-teal-500" },
+                  { icon: Database, title: "Quantum Cloud Infrastructure", description: "Quantum-powered cloud with consciousness", color: "from-yellow-500 to-orange-500" }
                 ].map((feature, index) => (,
                   <div,
                     key={index}
                     className="group cursor-pointer",
-                    whileInView={{ opacity: 1, y: 0 ,}}
-                    viewport={{ once: true ,}}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                   >,
                     <div className="relative p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-xl hover: border-cyan-500/50 transition-all duration-300">,
                       <div className="flex items-center justify-between mb-4">,
@@ -282,7 +282,7 @@ const Homepage2044: React.FC = () => {,
                           <Brain className="w-6 h-6 text-white" />,
                         </div>,
                         <span className="px-2 py-1 text-xs bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full text-purple-300">,
-                          {service.type,}
+                          {service.type}
                         </span>,
                       </div>,
                       <div className="relative z-10">,
@@ -290,7 +290,7 @@ const Homepage2044: React.FC = () => {,
                           <feature.icon className="w-8 h-8 text-white" />,
                         </div>,
                         <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors duration-300">,
-                          {feature.title,}
+                          {feature.title}
                         </h3>,
                         <p className="text-gray-400 text-sm leading-relaxed">,
                           {feature.description}
@@ -307,16 +307,16 @@ const Homepage2044: React.FC = () => {,
             <div className="max-w-7xl mx-auto">,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
                 {[,
-                  { number: "2000+", label: "Revolutionary Services", icon: Star ,};
-                  { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp ,};
-                  { number: "24/7", label: "AI Support Available", icon: Brain ,};
-                  { number: "200+", label: "Countries Served", icon: Globe ,}
+                  { number: "2000+", label: "Revolutionary Services", icon: Star },
+                  { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+                  { number: "24/7", label: "AI Support Available", icon: Brain },
+                  { number: "200+", label: "Countries Served", icon: Globe }
                 ].map((stat, index) => (,
                   <div,
                     key={index}
                     className="text-center",
-                    whileInView={{ opacity: 1, scale: 1 ,}}
-                    viewport={{ once: true ,}}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
                   >,
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.3)] mx-auto mb-4">,
                       <stat.icon className="w-8 h-8 text-white" />,
@@ -331,7 +331,7 @@ const Homepage2044: React.FC = () => {,
         </main>,
       </Layout>,
     </>,
-  );
-};
-export default Homepage2044;
+  ),
+},
+export default Homepage2044,
 </div></div></div></div></div>,

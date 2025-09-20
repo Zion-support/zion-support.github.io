@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, 
+  Menu,
   X, 
   Search, 
   ChevronDown, 
@@ -36,45 +36,45 @@ import {
   Award,
   Mail,
   MapPin
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 interface MobileNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void
 }
 
 const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) => {
-  const [activeSection, setActiveSection] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const searchRef = useRef<HTMLInputElement>(null);
+  const [activeSection, setActiveSection] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [isSearchOpen, setIsSearchOpen] = useState(false),
+  const searchRef = useRef<HTMLInputElement>(null),
 
   // Close navigation when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-nav')) {
-        onClose();
+        onClose()
       }
-    };
+    },
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener('mousedown', handleClickOutside),
+      document.body.style.overflow = 'hidden',
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen, onClose]);
+      document.removeEventListener('mousedown', handleClickOutside),
+      document.body.style.overflow = 'unset',
+    },
+  }, [isOpen, onClose]),
 
   // Focus search input when opened
   useEffect(() => {
     if (isSearchOpen && searchRef.current) {
-      searchRef.current.focus();
+      searchRef.current.focus(),
     }
-  }, [isSearchOpen]);
+  }, [isSearchOpen]),
 
   const navigationSections = [
     {
@@ -123,28 +123,28 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
         { label: 'Contact', href: '/contact', icon: Phone, color: 'from-cyan-500 to-blue-500' }
       ]
     }
-  ];
+  ],
 
   const quickActions = [
     { label: 'Get Started', href: '/contact', icon: Sparkles, color: 'from-cyan-500 to-purple-600' },
     { label: 'View Pricing', href: '/pricing', icon: Star, color: 'from-yellow-500 to-orange-500' },
     { label: 'Schedule Demo', href: '/demo', icon: Video, color: 'from-purple-500 to-pink-500' },
     { label: 'Support', href: '/support', icon: Users, color: 'from-green-500 to-emerald-500' }
-  ];
+  ],
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
-      setIsSearchOpen(false);
-      setSearchQuery('');
+      console.log('Searching for:', searchQuery),
+      setIsSearchOpen(false),
+      setSearchQuery(''),
     }
-  };
+  },
 
   const toggleSection = (sectionId: string) => {
-    setActiveSection(activeSection === sectionId ? null : sectionId);
-  };
+    setActiveSection(activeSection === sectionId ? null : sectionId)
+  },
 
 const MobileNavigation: React.FC = () => {
   return (
@@ -152,7 +152,7 @@ const MobileNavigation: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">MobileNavigation</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default MobileNavigation;
+export default MobileNavigation,

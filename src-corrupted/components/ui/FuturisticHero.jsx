@@ -1,2 +1,2 @@
 
-export default FuturisticHero;
+export default FuturisticHero,

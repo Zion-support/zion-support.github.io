@@ -1,14 +1,14 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import { 
   Heart, Shield, DollarSign, GraduationCap, Globe, 
   ArrowRight, CheckCircle, TrendingUp, Infinity, 
   Eye, Sparkles, Clock, Zap, Users, Award,
   Coffee, Dumbbell, TreePine, Home, Car, Plane,
   BookOpen, Monitor, Smartphone, Wifi, Utensils
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BenefitsPage: React.FC = () => {
   const benefitCategories = [
@@ -21,17 +21,17 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Medical, Dental & Vision',
           description: '100% employer-paid premium coverage for you and your family',
-          details: ['Comprehensive medical coverage', 'Dental and vision plans', 'Prescription drug coverage', 'Mental health services']
+          details: ['Comprehensive medical coverageDental and vision plans', 'Prescription drug coverageMental health services']
         },
         {
           name: 'Wellness Programs',
           description: 'Gym memberships, fitness classes, and wellness challenges',
-          details: ['Free gym memberships', 'On-site fitness classes', 'Wellness challenges and rewards', 'Health coaching services']
+          details: ['Free gym membershipsOn-site fitness classes', 'Wellness challenges and rewardsHealth coaching services']
         },
         {
           name: 'Mental Health Support',
           description: 'Professional counseling and mental health resources',
-          details: ['Employee assistance program', 'Mental health counseling', 'Stress management workshops', 'Meditation and mindfulness programs']
+          details: ['Employee assistance programMental health counseling', 'Stress management workshopsMeditation and mindfulness programs']
         }
       ]
     },
@@ -44,17 +44,17 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Competitive Salary',
           description: 'Above-market compensation with regular performance reviews',
-          details: ['Market-leading base salaries', 'Performance-based bonuses', 'Annual salary reviews', 'Equity participation']
+          details: ['Market-leading base salariesPerformance-based bonuses', 'Annual salary reviewsEquity participation']
         },
         {
           name: '401(k) & Retirement',
           description: 'Generous retirement savings with employer matching',
-          details: ['401(k) with 6% employer match', 'Roth 401(k) options', 'Financial planning services', 'Retirement education']
+          details: ['401(k) with 6% employer matchRoth 401(k) options', 'Financial planning servicesRetirement education']
         },
         {
           name: 'Stock Options & Equity',
           description: 'Ownership in the company through stock options and equity grants',
-          details: ['Stock option grants', 'Restricted stock units', 'Performance equity awards', 'Employee stock purchase plan']
+          details: ['Stock option grantsRestricted stock units', 'Performance equity awardsEmployee stock purchase plan']
         }
       ]
     },
@@ -67,17 +67,17 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Professional Development',
           description: 'Courses, certifications, and learning resources',
-          details: ['Unlimited learning budget', 'Professional certifications', 'Conference attendance', 'Online learning platforms']
+          details: ['Unlimited learning budgetProfessional certifications', 'Conference attendanceOnline learning platforms']
         },
         {
           name: 'Tuition Reimbursement',
           description: 'Support for advanced degrees and continuing education',
-          details: ['Graduate degree support', 'Course reimbursement', 'Professional development', 'Industry certifications']
+          details: ['Graduate degree supportCourse reimbursement', 'Professional developmentIndustry certifications']
         },
         {
           name: 'Internal Training',
           description: 'Company-sponsored training and skill development',
-          details: ['Technical workshops', 'Leadership training', 'Soft skills development', 'Cross-functional training']
+          details: ['Technical workshopsLeadership training', 'Soft skills developmentCross-functional training']
         }
       ]
     },
@@ -90,17 +90,17 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Flexible Work Arrangements',
           description: 'Remote work options and flexible scheduling',
-          details: ['100% remote work option', 'Flexible start/end times', 'Hybrid work models', 'Work from anywhere']
+          details: ['100% remote work optionFlexible start/end times', 'Hybrid work modelsWork from anywhere']
         },
         {
           name: 'Unlimited PTO',
           description: 'Take time off when you need it to recharge',
-          details: ['Unlimited paid time off', 'Sick leave coverage', 'Personal days', 'Mental health days']
+          details: ['Unlimited paid time offSick leave coverage', 'Personal daysMental health days']
         },
         {
           name: 'Family-Friendly Policies',
           description: 'Support for families and life events',
-          details: ['Paid parental leave', 'Family medical leave', 'Childcare support', 'Elder care resources']
+          details: ['Paid parental leaveFamily medical leave', 'Childcare supportElder care resources']
         }
       ]
     },
@@ -113,17 +113,17 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Modern Office Spaces',
           description: 'Beautiful, well-equipped offices with modern amenities',
-          details: ['Open concept workspaces', 'Private meeting rooms', 'Collaboration areas', 'Quiet zones']
+          details: ['Open concept workspacesPrivate meeting rooms', 'Collaboration areasQuiet zones']
         },
         {
           name: 'Daily Perks',
           description: 'Free meals, snacks, and beverages throughout the day',
-          details: ['Free breakfast and lunch', 'Unlimited snacks', 'Premium coffee and tea', 'Healthy food options']
+          details: ['Free breakfast and lunchUnlimited snacks', 'Premium coffee and teaHealthy food options']
         },
         {
           name: 'Technology & Equipment',
           description: 'Latest technology and equipment to do your best work',
-          details: ['Latest laptops and devices', 'Dual monitors', 'Ergonomic furniture', 'Mobile phone plans']
+          details: ['Latest laptops and devicesDual monitors', 'Ergonomic furnitureMobile phone plans']
         }
       ]
     },
@@ -136,21 +136,21 @@ const BenefitsPage: React.FC = () => {
         {
           name: 'Team Building',
           description: 'Regular team events and social activities',
-          details: ['Team offsites', 'Social events', 'Holiday parties', 'Team building activities']
+          details: ['Team offsitesSocial events', 'Holiday partiesTeam building activities']
         },
         {
           name: 'Employee Resource Groups',
           description: 'Connect with colleagues who share your interests',
-          details: ['Diversity groups', 'Professional networks', 'Interest-based clubs', 'Mentorship programs']
+          details: ['Diversity groupsProfessional networks', 'Interest-based clubsMentorship programs']
         },
         {
           name: 'Recognition Programs',
           description: 'Celebrate achievements and contributions',
-          details: ['Employee of the month', 'Performance awards', 'Innovation recognition', 'Peer recognition']
+          details: ['Employee of the monthPerformance awards', 'Innovation recognitionPeer recognition']
         }
       ]
     }
-  ];
+  ],
 
   const additionalPerks = [
     {
@@ -173,14 +173,14 @@ const BenefitsPage: React.FC = () => {
       title: 'Internet & Utilities',
       description: 'Home internet and utility reimbursements'
     }
-  ];
+  ],
 
   const totalCompensation = [
     { label: 'Base Salary', value: 'Competitive' },
     { label: 'Performance Bonus', value: 'Up to 25%' },
     { label: 'Equity Value', value: '$50K-$200K' },
     { label: 'Benefits Value', value: '$15K-$25K' }
-  ];
+  ],
 
 const benefits: React.FC = () => {
   return (
@@ -197,7 +197,7 @@ const benefits: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default benefits;
+export default benefits,

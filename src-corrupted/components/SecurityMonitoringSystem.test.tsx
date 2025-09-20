@@ -1,5 +1,5 @@
-import React from 'react,',',',';
-import {SEO } from '@/components/SEO';
+import React from 'react,,',',
+import {SEO } from '@/components/SEO',
 export default function SecurityMonitoringSystem.test() {return (,
     <div className="min-h-screen bg-white">,
       <SEO title="SecurityMonitoringSystem.test - Zion Tech Group" description="Professional SecurityMonitoringSystem.test services by Zion Tech Group"  />,
@@ -8,7 +8,7 @@ export default function SecurityMonitoringSystem.test() {return (,
         <p className="text-gray-300 text-lg">,
           Professional SecurityMonitoringSystem.test services to help your business grow.,
         </p>,
-      </div>';
-    </div>;
-  ),',',';
-}",',';
+      </div>',
+    </div>,
+  ),,',
+}",',',

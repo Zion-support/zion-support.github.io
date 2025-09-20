@@ -1,13 +1,13 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 export function ServicesOverview(...args[]):  {
 
-      icon: Heart,;
-      color: 'from-zion-pink to-zion-purple',;
-      description: 'Healthcare artificial intelligence solutions',;
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
-  ];
+      icon: Heart,
+      color: 'from-zion-pink to-zion-purple',
+      description: 'Healthcare artificial intelligence solutions',
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))},
+  ],
 =======
 
   return ()
@@ -47,8 +47,7 @@ export function ServicesOverview(...args[]):  {
 
         {/* Service Categories Grid */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {serviceCategories.map((category, index)  => (
-            <motion.div
+          {serviceCategories.map((category, index)  => (<motion.div
               key={category.id}"
               className="group"
               initial = {
@@ -98,11 +97,11 @@ export function ServicesOverview(...args[]):  {
                   </div>
 
                   {/* Hover Arrow */}"
-                  <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">"
+                  <div className="absolute bottom-4 right-4 opacity-0 group-hover: opacity-100 transition-opacity duration-300">"
                     <ArrowRight className="w-5 h-5 text-zion-cyan"  />                  </div>
                 </div>
               </Link>
-            </motion.div>;) ) }
+            </motion.div>) ) }
         </div>
 
         {/* Featured Services */}
@@ -204,7 +203,7 @@ export function ServicesOverview(...args[]):  {
 
                     Learn More"
                     <ArrowRight className="w-4 h-4 ml-2"  />                  </Link>
-                </div>;
+                </div>,
               </motion.div>) ) }
           </div>
         </motion.div>
@@ -245,7 +244,7 @@ export function ServicesOverview(...args[]):  {
             </div>
 
             {/* Contact Info Grid */}"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;"
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">,"
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">"
                 <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2"  />"
                 <p className="font-medium text-white mb-1">Address</p>"
@@ -266,10 +265,10 @@ export function ServicesOverview(...args[]):  {
                   ziontechgroup.com
                 </a>
               </div>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) }
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

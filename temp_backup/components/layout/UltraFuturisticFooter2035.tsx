@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
@@ -8,7 +8,7 @@ import {
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-} from 'lucide-react';
+} from 'lucide-react',
 
 const footerSections = [
   {
@@ -119,7 +119,7 @@ const footerSections = [
       { name: 'Developer Resources', href: '/developer-resources' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'All Services', href: '/comprehensive-services-showcase-2025' },
@@ -128,7 +128,7 @@ const quickLinks = [
   { name: 'Training', href: '/training' },
   { name: 'Support', href: '/support' },
   { name: 'Contact', href: '/contact' }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -139,14 +139,14 @@ const companyLinks = [
   { name: 'Contact Us', href: '/contact' },
   { name: 'Newsletter', href: '/newsletter' },
   { name: 'Events', href: '/events' }
-];
+],
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
   { name: 'Terms of Service', href: '/terms' },
   { name: 'Cookie Policy', href: '/cookies' },
   { name: 'Security', href: '/security' }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -155,12 +155,12 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-];
+],
 
 export default function UltraFuturisticFooter2035() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
 const UltraFuturisticFooter2035: React.FC = () => {
   return (
@@ -168,7 +168,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2035</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2035;
+export default UltraFuturisticFooter2035,

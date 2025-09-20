@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Menu, 
+  Menu,
   X, 
   Search, 
   ChevronDown, 
@@ -50,23 +50,23 @@ import {
   Mail,
   MapPin,
   ShoppingBag
-} from 'lucide-react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+} from 'lucide-react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 // Define Node type for DOM event handling
-type Node = HTMLElement | null;
+type Node = HTMLElement | null,
 
 interface NavigationItem {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  featured?: boolean;
-  neonColor?: string;
-  category?: string;
+  label: string,
+  href: string,
+  icon: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  featured?: boolean,
+  neonColor?: string,
+  category?: string
 }
 
 // Enhanced navigation items with better organization
@@ -255,7 +255,7 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 const UltraFuturisticNavigation2045V2: React.FC = () => {
   return (
@@ -263,7 +263,7 @@ const UltraFuturisticNavigation2045V2: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2045V2</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2045V2;
+export default UltraFuturisticNavigation2045V2,

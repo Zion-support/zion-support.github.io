@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Quantum Computing Breakthrough - Zion Tech Group';
-  description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.';
-  keywords: ['quantum computing 2026quantum AI', 'quantum supremacyquantum algorithms', 'enterprise quantum'],
-};
+  title: 'AI 2026: Quantum Computing Breakthrough - Zion Tech Group',
+  description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.',
+  keywords: ['quantum computing 2026quantum AIquantum supremacyquantum algorithms', 'enterprise quantum']
+},
 export default function AI2026QuantumComputingBreakthrough() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-100">,
@@ -19,7 +19,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
               AI 2026: Quantum Computing Breakthrough,
             </h1>,
             <p className="text-xl text-gray-600 leading-relaxed">,
-              The definitive guide to quantum computing breakthroughs that will revolutionize AI;
+              The definitive guide to quantum computing breakthroughs that will revolutionize AI,
               cryptography, and enterprise computing in 2026 and beyond.,
             </p>,
           </div>,
@@ -30,7 +30,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
               <h2 className="text-2xl font-bold">Quantum Supremacy Achieved</h2>,
             </div>,
             <p className="text-lg opacity-90 mb-4">,
-              By 2026, quantum computers will solve problems that are impossible for classical computers;
+              By 2026, quantum computers will solve problems that are impossible for classical computers,
               ushering in a new era of computational capabilities.,
             </p>,
             <div className="grid md: grid-cols-3 gap-4">,
@@ -48,7 +48,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
               </div>,
             </div>,
           </div>,
-          {/* Key Breakthroughs */,}
+          {/* Key Breakthroughs */}
           <section className="mb-12">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Revolutionary Breakthroughs</h2>,
             <div className="space-y-8">,
@@ -94,7 +94,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
                   <div>,
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Quantum Optimization</h3>,
                     <p className="text-gray-700 mb-4">,
-                      Quantum algorithms that solve complex optimization problems in logistics, finance;
+                      Quantum algorithms that solve complex optimization problems in logistics, finance,
                       and resource allocation with exponential speed improvements.,
                     </p>,
                     <ul className="grid md: grid-cols-2 gap-2 text-sm text-gray-600">,
@@ -108,7 +108,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
               </div>,
             </div>,
           </section>,
-          {/* Enterprise Applications */,}
+          {/* Enterprise Applications */}
           <section className="mb-12">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Enterprise Applications</h2>,
             <div className="grid md: grid-cols-2 gap-8">,
@@ -223,7 +223,7 @@ export default function AI2026QuantumComputingBreakthrough() {,
               </Link>,
             </div>,
           </div>,
-          {/* Related Content */,}
+          {/* Related Content */}
           <div className="mt-12">,
             <h3 className="text-xl font-bold text-gray-900 mb-6">Related Quantum Research</h3>,
             <div className="grid md: grid-cols-2 gap-6">,
@@ -240,4 +240,4 @@ export default function AI2026QuantumComputingBreakthrough() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

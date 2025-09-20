@@ -1,12 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate } from "react-router-dom",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 
 interface CreatePostButtonProps {
   /** Optional category to preselect when creating a post */
-  categoryId?: string;
-  className?: string;
+  categoryId?: string,
+  className?: string,
 }
 
 /**
@@ -15,20 +15,20 @@ interface CreatePostButtonProps {
  * login page with a "next" parameter so they can come back after logging in.
  */
 export function CreatePostButton({ categoryId, className }: CreatePostButtonProps) {
-  const { user } = useAuth();
-  const navigate = useNavigate();
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
 
   const handleClick = () => {
     const target = categoryId
       ? `/community/create?category=${categoryId}`
-      : "/community/create";
+      : "/community/create",
 
     if (user) {
-      navigate(target);
+      navigate(target),
     } else {
-      navigate(`/login?next=${encodeURIComponent(target)}`);
+      navigate(`/login?next=${encodeURIComponent(target)}`),
     }
-  };
+  },
 
   return (
     <TooltipProvider>
@@ -43,7 +43,7 @@ export function CreatePostButton({ categoryId, className }: CreatePostButtonProp
         )}
       </Tooltip>
     </TooltipProvider>
-  );
+  ),
 }
 
-export default CreatePostButton;
+export default CreatePostButton,

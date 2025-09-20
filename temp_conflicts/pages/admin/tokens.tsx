@@ -1,56 +1,56 @@
-import React, { useEffect, useState } from "react";
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
+import React, { useEffect, useState } from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
 
 export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]);
-  const [userId, setUserId] = useState("");
-  const [amount, setAmount] = useState(100);
-  const [reason, setReason] = useState("admin_action");
-  const [config, setConfig] = useState<any>(null);
+  const [transactions, setTransactions] = useState<any[]>([]),
+  const [userId, setUserId] = useState(""),
+  const [amount, setAmount] = useState(100),
+  const [reason, setReason] = useState("admin_action"),
+  const [config, setConfig] = useState<any>(null),
 
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json()),
-      fetch("/api/admin/tokens/config").then((r) => r.json()),
-    ]);
-    setTransactions(txRes.transactions || []);
-    setConfig(cfgRes);
+      fetch("/api/admin/tokens/config").then((r) => r.json())
+    ]),
+    setTransactions(txRes.transactions || []),
+    setConfig(cfgRes),
   }
 
   useEffect(() => {
-    load();
-  }, []);
+    load(),
+  }, []),
 
   async function issue() {
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount, reason }),
-    });
-    const data = await res.json();
-    if (data.error) alert(data.error);
-    await load();
+      body: JSON.stringify({ userId, amount, reason })
+    }),
+    const data = await res.json(),
+    if (data.error) alert(data.error),
+    await load(),
   }
 
   async function revoke() {
     const res = await fetch("/api/admin/tokens/revoke", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId, amount, reason }),
-    });
-    const data = await res.json();
-    if (data.error) alert(data.error);
-    await load();
+      body: JSON.stringify({ userId, amount, reason })
+    }),
+    const data = await res.json(),
+    if (data.error) alert(data.error),
+    await load(),
   }
 
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(config),
-    });
-    const data = await res.json();
-    setConfig(data);
+      body: JSON.stringify(config)
+    }),
+    const data = await res.json(),
+    setConfig(data),
   }
 
   return (
@@ -101,5 +101,5 @@ export default function AdminTokens() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

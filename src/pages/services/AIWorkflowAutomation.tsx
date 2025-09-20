@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Workflow, 
+  Workflow,
   Zap, 
   Brain, 
   Clock, 
@@ -37,162 +37,100 @@ import {
   GitBranch,
   Code,
   Terminal
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIWorkflowAutomation() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Decision Making',
-      description: 'Intelligent workflows that automatically make decisions based on data patterns and business rules.'
+      icon: Brain,title: 'AI-Powered Decision Making',description: 'Intelligent workflows that automatically make decisions based on data patterns and business rules.'
+    };
+    {
+      icon: Workflow,title: 'Visual Workflow Designer',description: 'Drag-and-drop interface to create complex workflows without coding knowledge.'
+    };
+    {
+      icon: Zap,title: 'Real-time Automation',description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
     },
     {
-      icon: Workflow,
-      title: 'Visual Workflow Designer',
-      description: 'Drag-and-drop interface to create complex workflows without coding knowledge.'
-    },
-    {
-      icon: Zap,
-      title: 'Real-time Automation',
-      description: 'Instant execution of workflows triggered by events, schedules, or conditions.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
+      icon: TrendingUp,title: 'Performance Analytics',description: 'Comprehensive insights into workflow efficiency, bottlenecks, and optimization opportunities.'
     }
-  ];
+  ],
 
   const capabilities = [
     {
-      title: 'Workflow Orchestration',
-      description: 'Coordinate complex multi-step processes across different systems and platforms',
-      icon: GitBranch,
-      benefits: ['Multi-system integration', 'Conditional branching', 'Error handling']
+      title: 'Workflow Orchestration',description: 'Coordinate complex multi-step processes across different systems and platforms',icon: GitBranch,benefits: ['Multi-system integrationConditional branching', 'Error handling']
     },
     {
-      title: 'AI Decision Engine',
-      description: 'Machine learning models that make intelligent decisions within workflows',
-      icon: Brain,
-      benefits: ['Predictive decisions', 'Pattern recognition', 'Continuous learning']
+      title: 'AI Decision Engine',description: 'Machine learning models that make intelligent decisions within workflows',icon: Brain,benefits: ['Predictive decisionsPattern recognition', 'Continuous learning']
     },
     {
-      title: 'Real-time Monitoring',
-      description: 'Live visibility into workflow execution and performance metrics',
-      icon: Monitor,
-      benefits: ['Live dashboards', 'Alert system', 'Performance tracking']
+      title: 'Real-time Monitoring',description: 'Live visibility into workflow execution and performance metrics',icon: Monitor,benefits: ['Live dashboardsAlert system', 'Performance tracking']
     },
     {
-      title: 'Integration Hub',
-      description: 'Connect to 500+ applications and services via pre-built connectors',
-      icon: Database,
-      benefits: ['API integration', 'Webhook support', 'Custom connectors']
+      title: 'Integration Hub',description: 'Connect to 500+ applications and services via pre-built connectors',icon: Database,benefits: ['API integrationWebhook support', 'Custom connectors']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      industry: 'E-commerce',
-      description: 'Automated order processing, inventory management, and customer service workflows',
-      icon: ShoppingCart,
-      metrics: ['Order Processing Time', 'Inventory Accuracy', 'Customer Satisfaction']
+      industry: 'E-commerce',description: 'Automated order processing, inventory management, and customer service workflows',
+      icon: ShoppingCart,metrics: ['Order Processing TimeInventory Accuracy', 'Customer Satisfaction']
     },
     {
-      industry: 'Finance',
-      description: 'Automated loan processing, compliance checks, and risk assessment workflows',
-      icon: Shield,
-      metrics: ['Processing Speed', 'Compliance Rate', 'Risk Detection']
+      industry: 'Finance',description: 'Automated loan processing, compliance checks, and risk assessment workflows',
+      icon: Shield,metrics: ['Processing SpeedCompliance Rate', 'Risk Detection']
     },
     {
-      industry: 'Healthcare',
-      description: 'Patient intake, appointment scheduling, and medical record management workflows',
-      icon: Activity,
-      metrics: ['Patient Wait Time', 'Appointment Efficiency', 'Record Accuracy']
+      industry: 'Healthcare',description: 'Patient intake, appointment scheduling, and medical record management workflows',
+      icon: Activity,metrics: ['Patient Wait TimeAppointment Efficiency', 'Record Accuracy']
     },
     {
-      industry: 'Manufacturing',
-      description: 'Production scheduling, quality control, and maintenance workflows',
-      icon: Settings,
-      metrics: ['Production Efficiency', 'Quality Score', 'Downtime Reduction']
+      industry: 'Manufacturing',description: 'Production scheduling, quality control, and maintenance workflows',
+      icon: Settings,metrics: ['Production EfficiencyQuality Score', 'Downtime Reduction']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams getting started with automation',
-      features: [
-        'Up to 10 workflows',
-        '5 user accounts',
-        'Basic integrations',
-        'Email support',
+      name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small teams getting started with automation',features: [
+        'Up to 10 workflows5 user accounts';
+        'Basic integrationsEmail support',
         'Standard templates'
       ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
+      cta: 'Start Free Trial',popular: false
+    };
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses with complex automation needs',
-      features: [
-        'Up to 100 workflows',
-        '25 user accounts',
-        'Advanced integrations',
-        'Priority support',
-        'Custom templates',
-        'Advanced analytics',
+      name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing businesses with complex automation needs',features: [
+        'Up to 100 workflows25 user accounts';
+        'Advanced integrationsPriority support',
+        'Custom templatesAdvanced analytics',
         'API access'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'For large organizations requiring enterprise-grade automation',
-      features: [
-        'Unlimited workflows',
-        'Unlimited users',
-        'All integrations',
-        '24/7 support',
-        'Custom development',
-        'Advanced security',
+      name: 'Enterprise',price: 'Custom',period: '',description: 'For large organizations requiring enterprise-grade automation',features: [
+        'Unlimited workflowsUnlimited users';
+        'All integrations24/7 support',
+        'Custom developmentAdvanced security',
         'SLA guarantees'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   const benefits = [
     {
-      icon: Clock,
-      title: 'Save 40+ Hours Weekly',
-      description: 'Automate repetitive tasks and focus on strategic work that drives growth.'
-    },
+      icon: Clock,title: 'Save 40+ Hours Weekly',description: 'Automate repetitive tasks and focus on strategic work that drives growth.'
+    };
     {
-      icon: TrendingUp,
-      title: 'Increase Efficiency by 300%',
-      description: 'Streamline processes and eliminate bottlenecks for faster delivery.'
-    },
+      icon: TrendingUp,title: 'Increase Efficiency by 300%',description: 'Streamline processes and eliminate bottlenecks for faster delivery.'
+    };
     {
-      icon: Shield,
-      title: 'Reduce Errors by 95%',
-      description: 'AI-powered validation ensures accuracy and consistency across all workflows.'
-    },
+      icon: Shield,title: 'Reduce Errors by 95%',description: 'AI-powered validation ensures accuracy and consistency across all workflows.'
+    };
     {
-      icon: Users,
-      title: 'Improve Team Productivity',
-      description: 'Empower teams with self-service automation tools and real-time insights.'
+      icon: Users,title: 'Improve Team Productivity',description: 'Empower teams with self-service automation tools and real-time insights.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -507,7 +445,7 @@ export default function AIWorkflowAutomation() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300"
               >
                 Schedule Demo
               </motion.button>
@@ -516,5 +454,5 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
     </div>
-  );
+  )
 }

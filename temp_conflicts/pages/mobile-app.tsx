@@ -1,29 +1,29 @@
-import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { useEffect, useMemo, useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 // Removed next/image for simplicity
-import { v4 as uuidv4 } from 'uuid';
-import type { AppMetadata } from '../utils/types/appMetadata';
+import { v4 as uuidv4 } from 'uuid',
+import type { AppMetadata } from '../utils/types/appMetadata',
 
 const loadMetadata = async (): Promise<AppMetadata> => {
-  const res = await fetch('/api/app-metadata');
-  return res.json();
-};
+  const res = await fetch('/api/app-metadata'),
+  return res.json(),
+},
 
 export default function MobileAppPage() {
-  const [data, setData] = useState<AppMetadata | null>(null);
-  const [isBannerVisible, setBannerVisible] = useState(true);
+  const [data, setData] = useState<AppMetadata | null>(null),
+  const [isBannerVisible, setBannerVisible] = useState(true),
 
   useEffect(() => {
-    loadMetadata().then(setData).catch(() => setData(null));
-  }, []);
+    loadMetadata().then(setData).catch(() => setData(null)),
+  }, []),
 
-  const pageTitle = data?.seo.title || 'Zion AI Marketplace App';
-  const pageDescription = data?.seo.description || 'Hire top AI talent or find global IT jobs on the go.';
-  const pageKeywords = (data?.seo.keywords || ['AI freelancer app', 'hire tech', 'find IT jobs']).join(', ');
+  const pageTitle = data?.seo.title || 'Zion AI Marketplace App',
+  const pageDescription = data?.seo.description || 'Hire top AI talent or find global IT jobs on the go.',
+  const pageKeywords = (data?.seo.keywords || ['AI freelancer apphire tech', 'find IT jobs']).join(),
 
-  const iosUrl = data?.store.iosStoreUrl || '#';
-  const androidUrl = data?.store.androidStoreUrl || '#';
+  const iosUrl = data?.store.iosStoreUrl || '#',
+  const androidUrl = data?.store.androidStoreUrl || '#',
 
   const trackClick = async (platform: 'ios' | 'android' | 'unknown') => {
     try {
@@ -31,14 +31,14 @@ export default function MobileAppPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: uuidv4(), platform, sourcePath: '/mobile-app' })
-      });
+      }),
     } catch (_) {}
-  };
+  },
 
   const appBannerMeta = useMemo(() => ({
     appId: data?.store.iosAppId || '',
     appArgument: data?.store.webFallbackUrl || 'https://zion.app/mobile-app'
-  }), [data]);
+  }), [data]),
 
   return (
     <>
@@ -150,5 +150,5 @@ export default function MobileAppPage() {
         ) : null}
       </main>
     </>
-  );
+  ),
 }

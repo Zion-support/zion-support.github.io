@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 license_compliance_auditor function triggered');
+    console.log('🤖 license_compliance_auditor function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'license_compliance_auditor'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ license_compliance_auditor function failed:', error);
+    console.error('❌ license_compliance_auditor function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

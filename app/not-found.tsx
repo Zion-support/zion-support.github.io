@@ -1,6 +1,6 @@
-'use client';
+'use client',
 
-import Link from 'next/link';
+import Link from 'next/link',
 
 export default function NotFound() {
   return (
@@ -11,7 +11,7 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-xl text-gray-300 mb-8">
-          The page you&apos;re looking for doesn&apos;t exist. It might have been moved, deleted, or you entered the wrong URL.
+          The page you&apos,re looking for doesn&apos,t exist. It might have been moved, deleted, or you entered the wrong URL.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
@@ -22,12 +22,12 @@ export default function NotFound() {
           </Link>
           <button 
             onClick={() => window.history.back()}
-            className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
           >
             Go Back
           </button>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Loader2,
   CheckCircle,
@@ -11,28 +11,24 @@ import {
   Database,
   Network,
   Shield
-} from 'lucide-react';
-
+} from "lucide-react";
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg',
+  text?: string,
+  fullScreen?: boolean,
 }
 
 export function LoadingSpinner({
-  size = 'md',
-  text = 'Loading...',
+  size = 'md';
+  text = 'Loading...';
   fullScreen = false
 }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-32 h-32'
+    sm: 'w-8 h-8',md: 'w-16 h-16',lg: 'w-32 h-32'
   };
-
   const containerClasses = fullScreen
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8';
+    : 'flex items-center justify-center p-8',
 
   return (
     <div className={containerClasses}>
@@ -41,11 +37,10 @@ export function LoadingSpinner({
         <motion.div
           className="relative mx-auto mb-4"
           animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1]
+            rotate: 360,scale: [1, 1.1, 1]
           }}
           transition={{
-            rotate: { duration: 2, repeat: Infinity, ease: "linear" },
+            rotate: { duration: 2, repeat: Infinity, ease: "linear" };
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
         >
@@ -54,8 +49,7 @@ export function LoadingSpinner({
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
               animate={{
                 background: [
-                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
-                  'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
+                  'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)'
                 ]
               }}
@@ -92,9 +86,7 @@ export function LoadingSpinner({
                 opacity: [0.5, 1, 0.5]
               }}
               transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                delay: index * 0.2
+                duration: 1.5,repeat: Infinity,delay: index * 0.2
               }}
             />
           ))}
@@ -105,7 +97,7 @@ export function LoadingSpinner({
 }
 
 interface PageLoaderProps {
-  pageName?: string;
+  pageName?: string,
 }
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
@@ -117,7 +109,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           <motion.div
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
             animate={{
-              scale: [1, 1.5, 1],
+              scale: [1, 1.5, 1];
               opacity: [0.3, 0.6, 0.3]
             }}
             transition={{ duration: 4, repeat: Infinity }}
@@ -125,7 +117,7 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
             animate={{
-              scale: [1.5, 1, 1.5],
+              scale: [1.5, 1, 1.5];
               opacity: [0.6, 0.3, 0.6]
             }}
             transition={{ duration: 4, repeat: Infinity, delay: 1 }}
@@ -185,8 +177,8 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
 }
 
 interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
+  lines?: number,
+  className?: string,
 }
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
@@ -197,13 +189,11 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
           animate={{
-            opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0', '-200% 0']
+            opacity: [0.5, 1, 0.5];
+            backgroundPosition: ['200% 0-200% 0']
           }}
           transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            delay: index * 0.1
+            duration: 1.5,repeat: Infinity,delay: index * 0.1
           }}
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',

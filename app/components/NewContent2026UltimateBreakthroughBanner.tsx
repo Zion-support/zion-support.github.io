@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NewContent2026UltimateBreakthroughBanner() {,
   return (,
     <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">,
@@ -12,7 +12,7 @@ export default function NewContent2026UltimateBreakthroughBanner() {,
             Revolutionary AI 2026 Content Now Available,
           </h2>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Discover cutting-edge insights on autonomous business systems, quantum machine learning;
+            Discover cutting-edge insights on autonomous business systems, quantum machine learning,
             and enterprise automation breakthroughs that will transform your business in 2026.,
           </p>,
           {/* Featured Content Grid */}
@@ -73,5 +73,4 @@ export default function NewContent2026UltimateBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

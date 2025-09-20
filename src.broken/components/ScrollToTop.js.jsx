@@ -1,10 +1,10 @@
-import React from 'react';
-export default ScrollToTop;
-export default ScrollToTop;
-export default ScrollToTop;
+import React from 'react',
+export default ScrollToTop,
+export default ScrollToTop,
+export default ScrollToTop,
 export function ScrollToTop = () => {
 
-        const [isVisible, setIsVisible] = useState(false);
+        const [isVisible, setIsVisible] = useState(false),
         useEffect(() => {
             const toggleVisibility = () => {
                 if(window.pageYOffset > 300) {
@@ -13,56 +13,56 @@ export function ScrollToTop = () => {
                 else {
 
                     setIsVisible(false)}
-            };
-            window.addEventListener('scroll', toggleVisibility);
-            return () => window.removeEventListener('scroll', toggleVisibility)}, []);
+            },
+            window.addEventListener('scroll', toggleVisibility),
+            return () => window.removeEventListener('scroll', toggleVisibility)}, []),
         const scrollToTop = () => {
             window.scrollTo({
 
                 top: 0,
-                behavior: 'smooth'})};
-        return (className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center z-50");
-        aria - label;"
-        "Back to top";
-        initial = {};
+                behavior: 'smooth'})},
+        return (className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-300 flex items-center justify-center z-50"),
+        aria - label,"
+        "Back to top",
+        initial = {},
         {
 
-            opacity: 0, scale;
-            0, y;
+            opacity: 0, scale,
+            0, y,
             20}
-    };
-    animate = {};
+    },
+    animate = {},
     {
 
-        opacity: 1, scale;
-        1, y;
+        opacity: 1, scale,
+        1, y,
         0}
 }
-exit = {};
+exit = {},
 {
 
-    opacity: 0, scale;
-    0, y;
+    opacity: 0, scale,
+    0, y,
     20}
-whileHover = {};
+whileHover = {},
 {
 
     scale: 1.1,
-        y;
+        y,
     -2,
-        boxShadow;"
+        boxShadow,"
     "0 20px 25px-5px rgba(59, 130, 246, 0.3), 0 10px 10px-5px rgba(59, 130, 246, 0.2)"}
-whileTap = {};
+whileTap = {},
 {
 
     scale: 0.95}
-transition = {};
+transition = {},
 {
 "
     type: "spring",
-        stiffness;
+        stiffness,
     400,
-        damping;
+        damping,
     17}
     >"
         <svg className="w-6 h-6"/>
@@ -74,9 +74,9 @@ transition = {};
           </svg>
         </button>)}
     </>
-;
-;
-export default ScrollToTop;
+,
+,
+export default ScrollToTop,
 
-export default ScrollToTop;
-export default ScrollToTop;'"
+export default ScrollToTop,
+export default ScrollToTop,'"

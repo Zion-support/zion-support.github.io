@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   Search,
   Filter,
@@ -18,56 +18,56 @@ import {
   Clock,
   CheckCircle,
   ArrowRight
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 import {
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
-} from '../data/comprehensiveServices2026';
+} from "../data/comprehensiveServices2026";
 const ComprehensiveServicesShowcase2026: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
-  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
-  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all'),
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))],
+  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))],
   const filteredServices = useMemo(() => {
-    let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+    let filtered = ALL_REVOLUTIONARY_SERVICES_2026,
     if (searchTerm) {
-      const lowerQuery = searchTerm.toLowerCase();
+      const lowerQuery = searchTerm.toLowerCase(),
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(lowerQuery) ||
         service.description.toLowerCase().includes(lowerQuery) ||
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-      );
+      ),
     }
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
     if (selectedInnovationLevel !== 'all') {
-      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel),
     }
-    return filtered;
-  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+    return filtered,
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]),
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
-      case 'Neural Networks': return <Brain className="w-5 h-5" />;
-      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
-      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
-      case 'Edge Computing': return <Network className="w-5 h-5" />;
-      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
-      case 'Quantum AI': return <Zap className="w-5 h-5" />;
-      default: return <Zap className="w-5 h-5" />;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />,
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />,
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />,
+      case 'Edge Computing': return <Network className="w-5 h-5" />,
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />,
+      case 'Quantum AI': return <Zap className="w-5 h-5" />,
+      default: return <Zap className="w-5 h-5" />
     }
   };
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
-      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
-      default: return 'bg-gray-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600',
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600',
+      default: return 'bg-gray-600'
     }
   };
   return (
@@ -277,7 +277,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                       href={service.contactInfo.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+                      className="mt-4 w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg hover: from-blue-600 hover:to-purple-600 transition-all duration-300"
                     >
                       Learn More
                       <ExternalLink className="w-4 h-4" />
@@ -292,8 +292,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 <button
                   onClick={() => {
                     setSearchTerm('');
-                    setSelectedCategory('all');
-                    setSelectedInnovationLevel('all');
+                    setSelectedCategory('all'),
+                    setSelectedInnovationLevel('all'),
                   }}
                   className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
@@ -319,7 +319,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
                 Join the future with Zion Tech Group's revolutionary 2026 services.
                 Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
@@ -344,6 +344,6 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 };
 export default ComprehensiveServicesShowcase2026;

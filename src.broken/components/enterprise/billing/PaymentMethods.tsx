@@ -1,7 +1,7 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 export function PaymentMethods() {
@@ -14,7 +14,7 @@ export function PaymentMethods() {
       last4: "4242",
       expMonth: 12,
       expYear: 2025,
-      isDefault: true,
+      isDefault: true
     },
     {
       id: "pm-2",
@@ -23,9 +23,9 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-      isDefault: false,
+      isDefault: false
     }
-  ];
+  ],
 
   return (
     <Card>
@@ -77,5 +77,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  );
+  ),
 }

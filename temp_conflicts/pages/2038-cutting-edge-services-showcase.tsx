@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List,
   Brain, Shield, Target, Rocket,
   ArrowRight, Heart,
   Building, Star,
   Phone, Mail, MapPin, Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new 2038 services
-import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services';
-import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services';
+import { innovative2038CuttingEdgeServices } from '../data/innovative-2038-cutting-edge-services',
+import { innovative2038ITMicroSaasServices } from '../data/innovative-2038-it-micro-saas-services',
 
 // Create unified services array
 const all2038Services = [
   ...innovative2038CuttingEdgeServices,
   ...innovative2038ITMicroSaasServices
-];
+],
 
 const categories = [
   {
@@ -76,7 +76,7 @@ const categories = [
     color: 'from-teal-500 to-green-500',
     description: 'AI-powered climate prediction and analysis'
   }
-];
+],
 
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
@@ -85,66 +85,65 @@ const sortOptions = [
   { value: 'popular', label: 'Most Popular' },
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
-];
+],
 
 export default function CuttingEdge2038ServicesShowcase() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 12;
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [currentPage, setCurrentPage] = useState(1),
+  const pageSize = 12,
 
   // Filter services based on search and category
   const filteredServices = all2038Services.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    if (selectedCategory === 'all') return matchesSearch;
+    if (selectedCategory === 'all') return matchesSearch,
     
-    const serviceCategory = service.category.toLowerCase();
-    const categoryName = categories.find(cat => cat.id === selectedCategory)?.name.toLowerCase();
+    const serviceCategory = service.category.toLowerCase(),
+    const categoryName = categories.find(cat => cat.id === selectedCategory)?.name.toLowerCase(),
     
-    return matchesSearch && serviceCategory.includes(categoryName || '');
-  });
+    return matchesSearch && serviceCategory.includes(categoryName || ''),
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price-low': {
-        const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
-        const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
-        return priceA - priceB;
+        const priceA = parseInt(a.price.replace(/[^0-9]/g, '')),
+        const priceB = parseInt(b.price.replace(/[^0-9]/g, '')),
+        return priceA - priceB,
       }
       case 'price-high': {
-        const priceAHigh = parseInt(a.price.replace(/[^0-9]/g, ''));
-        const priceBHigh = parseInt(b.price.replace(/[^0-9]/g, ''));
-        return priceBHigh - priceAHigh;
+        const priceAHigh = parseInt(a.price.replace(/[^0-9]/g, '')),
+        const priceBHigh = parseInt(b.price.replace(/[^0-9]/g, '')),
+        return priceBHigh - priceAHigh,
       }
       case 'popular':
-        return b.popular ? 1 : -1;
+        return b.popular ? 1 : -1,
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       case 'rating':
-        return b.rating - a.rating;
-      default:
-        return 0;
+        return b.rating - a.rating,
+      default: return 0
     }
-  });
+  }),
 
   // Pagination
-  const totalPages = Math.ceil(sortedServices.length / pageSize);
+  const totalPages = Math.ceil(sortedServices.length / pageSize),
   const paginatedServices = sortedServices.slice(
     (currentPage - 1) * pageSize,
     currentPage * pageSize
-  );
+  ),
 
   const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    setCurrentPage(page),
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -502,7 +501,7 @@ export default function CuttingEdge2038ServicesShowcase() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md: grid-cols-3 gap-6"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
               <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
@@ -525,5 +524,5 @@ export default function CuttingEdge2038ServicesShowcase() {
         </div>
       </section>
     </div>
-  );
+  )
 }

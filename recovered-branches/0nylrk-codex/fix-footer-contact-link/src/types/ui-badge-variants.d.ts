@@ -7,4 +7,4 @@ declare type BadgeVariant =,
   | "outline",
   | "success",
   | "warning",
-  | "info";
+  | "info",

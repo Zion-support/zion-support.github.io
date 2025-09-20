@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
-  Menu, 
+  Menu,
   X, 
   ChevronDown, 
   Brain, 
@@ -77,7 +77,7 @@ import {
   TrendingUp as Growth,
   Clock as Time,
   DollarSign as Money
-} from 'lucide-react';
+} from 'lucide-react',
 
 const navigationItems = [
   {
@@ -409,7 +409,7 @@ const navigationItems = [
       }
     ]
   }
-];
+],
 
 const quickLinks = [
   { title: 'Pricing', href: '/pricing', icon: DollarSign },
@@ -418,11 +418,11 @@ const quickLinks = [
   { title: 'Status', href: '/status', icon: BarChart3 },
   { title: 'Free Consultation', href: '/consultation', icon: Calendar },
   { title: 'Get Quote', href: '/quote', icon: FileText }
-];
+],
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
 
 const Navigation: React.FC = () => {
   return (
@@ -439,7 +439,7 @@ const Navigation: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default Navigation;
+export default Navigation,

@@ -1,77 +1,77 @@
 
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
+  DialogTitle
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { useAuth } from "@/hooks/useAuth",
+import { JobApplication } from "@/types/jobs",
 
 export interface HireConfirmationModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void;
-  isSubmitting?: boolean;
+  isOpen: boolean,
+  onClose: () => void,
+  candidateData?: TalentProfile,
+  application?: JobApplication,
+  onConfirm: () => void,
+  isSubmitting?: boolean
 }
 
 export function HireConfirmationModal({ 
-  isOpen, 
+  isOpen,
   onClose, 
   candidateData, 
   application,
   onConfirm,
   isSubmitting = false
 }: HireConfirmationModalProps) {
-  const [projectName, setProjectName] = useState('');
-  const [projectDescription, setProjectDescription] = useState('');
-  const [updateAvailability, setUpdateAvailability] = useState(true);
-  const [isLoading, setIsLoading] = useState(false);
-  const { user } = useAuth();
+  const [projectName, setProjectName] = useState(''),
+  const [projectDescription, setProjectDescription] = useState(''),
+  const [updateAvailability, setUpdateAvailability] = useState(true),
+  const [isLoading, setIsLoading] = useState(false),
+  const { user } = useAuth(),
 
   // Get talent information from either candidateData or application
-  const talentData = candidateData || (application?.talent_profile as TalentProfile);
+  const talentData = candidateData || (application?.talent_profile as TalentProfile),
 
   const handleHireCandidate = async () => {
     if (!projectName || !projectDescription) {
       toast({
         title: 'Required fields missing',
         description: 'Please fill in both project name and description.',
-        variant: 'destructive',
-      });
-      return;
+        variant: 'destructive'
+      }),
+      return,
     }
 
     if (!user) {
       toast({
         title: 'Not authenticated',
         description: 'You must be logged in to hire a candidate.',
-        variant: 'destructive',
-      });
-      return;
+        variant: 'destructive'
+      }),
+      return,
     }
 
     if (!talentData) {
       toast({
         title: 'Missing talent data',
         description: 'Talent information is missing.',
-        variant: 'destructive',
-      });
-      return;
+        variant: 'destructive'
+      }),
+      return,
     }
 
-    setIsLoading(true);
+    setIsLoading(true),
 
     // Create a new project
     try {
@@ -85,20 +85,20 @@ export function HireConfirmationModal({
             title: projectName,
             description: projectDescription,
             status: 'active',
-            payment_terms: 'hourly',
-          },
+            payment_terms: 'hourly'
+          }
         ])
         .select()
-        .single();
+        .single(),
 
       if (projectError) {
         toast({
           title: 'Error creating project',
           description: projectError.message,
-          variant: 'destructive',
-        });
-        setIsLoading(false);
-        return;
+          variant: 'destructive'
+        }),
+        setIsLoading(false),
+        return,
       }
 
       // Create a new hiring record
@@ -110,18 +110,18 @@ export function HireConfirmationModal({
             talent_id: talentData.user_id,
             project_id: projectData.id,
             hire_date: new Date().toISOString(),
-            status: 'active',
-          },
-        ]);
+            status: 'active'
+          }
+        ]),
 
       if (hiringError) {
         toast({
           title: 'Error creating hiring record',
           description: hiringError.message,
-          variant: 'destructive',
-        });
-        setIsLoading(false);
-        return;
+          variant: 'destructive'
+        }),
+        setIsLoading(false),
+        return,
       }
 
       // Update the availability status
@@ -130,46 +130,46 @@ export function HireConfirmationModal({
           const { error: availabilityError } = await supabase
             .from('talent_profiles')
             .update({ availability_type: 'unavailable' })
-            .eq('id', talentData.id);
+            .eq('id', talentData.id),
 
           if (availabilityError) {
             toast({
               title: 'Error updating availability',
               description: availabilityError.message,
-              variant: 'destructive',
-            });
-            setIsLoading(false);
-            return;
+              variant: 'destructive'
+            }),
+            setIsLoading(false),
+            return,
           }
         } catch (error) {
-          console.error('Error updating availability:', error);
+          console.error('Error updating availability:', error),
           toast({
             title: 'Error updating availability',
             description: 'Failed to update candidate availability status.',
-            variant: 'destructive',
-          });
-          setIsLoading(false);
-          return;
+            variant: 'destructive'
+          }),
+          setIsLoading(false),
+          return,
         }
       }
 
       toast({
         title: 'Candidate hired successfully',
-        description: `${talentData.full_name} has been hired for the project.`,
-      });
-      onConfirm();
-      onClose();
+        description: `${talentData.full_name} has been hired for the project.`
+      }),
+      onConfirm(),
+      onClose(),
     } catch (error) {
-      console.error('Error hiring candidate:', error);
+      console.error('Error hiring candidate:', error),
       toast({
         title: 'Error hiring candidate',
         description: 'Failed to hire candidate. Please try again.',
-        variant: 'destructive',
-      });
+        variant: 'destructive'
+      }),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -229,5 +229,5 @@ export function HireConfirmationModal({
         </div>
       </DialogContent>
     </Dialog>
-  );
+  ),
 }

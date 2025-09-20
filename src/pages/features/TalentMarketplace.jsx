@@ -4,14 +4,14 @@ import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import Link from "next/link";
 export default function TalentMarketplace() {
     const schema = {
-        "@context": "https://schema.org",
+        "@context": "https: //schema.org";
         "@type": "WebPage",
         "name": "Talent Marketplace",
         "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-        "url": "https://app.ziontechgroup.com/features/talent-marketplace"
+        "url": "https: //app.ziontechgroup.com/features/talent-marketplace"
     };
     return (<>
       <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="https://app.ziontechgroup.com/features/talent-marketplace"/>
@@ -24,8 +24,8 @@ export default function TalentMarketplace() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of talent directory" className="rounded-lg shadow-xl mx-auto mb-12"/>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <img loading="lazy" src="https: //placehold.co/800x400" alt="Screenshot of talent directory" className="rounded-lg shadow-xl mx-auto mb-12"/>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>

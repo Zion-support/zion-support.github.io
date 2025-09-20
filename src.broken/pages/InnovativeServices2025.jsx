@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -10,86 +10,69 @@ export default function Page() {
           description:
             'Next - generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real - time.',
           features: [
-            'Real - time transaction monitoring',
-            'Behavioral pattern recognition',
-            'Machine learning risk scoring',
-            'Automated fraud alerts',
-            'Comprehensive fraud analytics',
+            'Real - time transaction monitoringBehavioral pattern recognition',
+            'Machine learning risk scoringAutomated fraud alerts',
+            'Comprehensive fraud analytics'
           ],
-          benefits: ['99.9% fraud detection accuracy',
-            'Real - time prevention capabilities',
-            'Reduced false positives by 80%',
-            'Compliance with regulatory requirements',
-            'Significant cost savings from fraud prevention',
+          benefits: ['99.9% fraud detection accuracyReal - time prevention capabilities',
+            'Reduced false positives by 80%Compliance with regulatory requirements',
+            'Significant cost savings from fraud prevention'
           ],
           pricing: '$3,000 - $25,000 / month',
           marketPosition:
             'Leading AI fraud detection for financial institutions and e - commerce',
-          useCases: ['Banks',
-            'Credit card companies',
-            'E - commerce platforms',
-            'Insurance companies',
+          useCases: ['BanksCredit card companies',
+            'E - commerce platformsInsurance companies'
           ],
-          competitors: ['Sift', 'Signifyd', 'Forter'],
+          competitors: ['SiftSignifyd', 'Forter'],
           competitiveAdvantage:
-            'Advanced ML algorithms, real - time processing, and industry - leading accuracy rates',
+            'Advanced ML algorithms, real - time processing, and industry - leading accuracy rates'
         },
         {
           name: 'AI Supply Chain Optimization',
           description:
             'Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI - powered analytics.',
-          features: ['Predictive demand forecasting',
-            'Route optimization algorithms',
-            'Supplier performance analytics',
-            'Real - time supply chain visibility',
-            'Risk assessment and mitigation',
+          features: ['Predictive demand forecastingRoute optimization algorithms',
+            'Supplier performance analyticsReal - time supply chain visibility',
+            'Risk assessment and mitigation'
           ],
-          benefits: ['25% reduction in supply chain costs',
-            'Improved delivery performance',
-            'Enhanced supplier relationships',
-            'Real - time risk monitoring',
-            'Data - driven decision making',
+          benefits: ['25% reduction in supply chain costsImproved delivery performance',
+            'Enhanced supplier relationshipsReal - time risk monitoring',
+            'Data - driven decision making'
           ],
           pricing: '$4,000 - $30,000 / month',
           marketPosition:
             'Advanced supply chain optimization for global enterprises',
-          useCases: ['Manufacturing', 'Logistics', 'Retail', 'Healthcare'],
-          competitors: ['Llamasoft', 'AnyLogic', 'FlexSim'],
+          useCases: ['ManufacturingLogistics', 'RetailHealthcare'],
+          competitors: ['LlamasoftAnyLogic', 'FlexSim'],
           competitiveAdvantage:
-            'AI - powered optimization, real - time visibility, and comprehensive risk management',
+            'AI - powered optimization, real - time visibility, and comprehensive risk management'
         },
         {
           name: 'AI - Powered Healthcare',
           description:
             'Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.',
-          features: ['Medical imaging analysis',
-            'Diagnostic assistance algorithms',
-            'Patient monitoring systems',
-            'Drug discovery optimization',
-            'Healthcare analytics dashboard',
+          features: ['Medical imaging analysisDiagnostic assistance algorithms',
+            'Patient monitoring systemsDrug discovery optimization',
+            'Healthcare analytics dashboard'
           ],
-          benefits: ['Improved diagnostic accuracy by 30%',
-            'Enhanced patient care quality',
-            'Reduced healthcare costs',
-            'Faster treatment decisions',
-            'Better resource utilization',
+          benefits: ['Improved diagnostic accuracy by 30%Enhanced patient care quality',
+            'Reduced healthcare costsFaster treatment decisions',
+            'Better resource utilization'
           ],
           pricing: '$8,000 - $60,000 / month',
           marketPosition:
             'Leading healthcare AI for hospitals and medical institutions',
-          useCases: ['Hospitals',
-            'Medical clinics',
-            'Research institutions',
-            'Pharmaceutical companies',
+          useCases: ['HospitalsMedical clinics',
+            'Research institutionsPharmaceutical companies'
           ],
-          competitors: ['IBM Watson Health',
-            'Google Health',
-            'Microsoft Healthcare',
+          competitors: ['IBM Watson HealthGoogle Health',
+            'Microsoft Healthcare'
           ],
           competitiveAdvantage:
-            'Advanced medical AI, comprehensive healthcare integration, and regulatory compliance',
-        },
-      ],
+            'Advanced medical AI, comprehensive healthcare integration, and regulatory compliance'
+        }
+      ]
     },
     {
       category: 'Emerging Technology Solutions',
@@ -100,87 +83,69 @@ export default function Page() {
           description:
             'Expert guidance on quantum computing strategy, implementation, and business transformation for forward - thinking organizations.',
           features: [
-            'Quantum computing strategy development',
-            'Use case identification and validation',
-            'Vendor selection and evaluation',
-            'Implementation roadmap planning',
-            'Quantum workforce development',
+            'Quantum computing strategy developmentUse case identification and validation',
+            'Vendor selection and evaluationImplementation roadmap planning',
+            'Quantum workforce development'
           ],
-          benefits: ['Future - ready technology strategy',
-            'Competitive advantage in emerging tech',
-            'Innovation leadership positioning',
-            'Strategic technology planning',
-            'Expert guidance and support',
+          benefits: ['Future - ready technology strategyCompetitive advantage in emerging tech',
+            'Innovation leadership positioningStrategic technology planning',
+            'Expert guidance and support'
           ],
           pricing: '$5,000 - $25,000 / month',
           marketPosition:
             'Premier quantum computing consulting for Fortune 500 companies',
-          useCases: ['Financial services',
-            'Pharmaceutical',
-            'Logistics',
-            'Research institutions',
+          useCases: ['Financial servicesPharmaceutical',
+            'LogisticsResearch institutions'
           ],
-          competitors: ['McKinsey', 'BCG', 'Deloitte'],
+          competitors: ['McKinseyBCG', 'Deloitte'],
           competitiveAdvantage:
-            'Deep quantum expertise, practical implementation experience, and strategic business focus',
+            'Deep quantum expertise, practical implementation experience, and strategic business focus'
         },
         {
           name: 'Metaverse Development',
           description:
             'Complete metaverse platform development including VR / AR experiences, 3D environments, and interactive digital spaces.',
-          features: ['Virtual reality platform development',
-            'Augmented reality applications',
-            '3D modeling and design',
-            'Interactive experience creation',
-            'Multi - user platform support',
+          features: ['Virtual reality platform developmentAugmented reality applications',
+            '3D modeling and designInteractive experience creation',
+            'Multi - user platform support'
           ],
-          benefits: ['Innovation leadership in emerging tech',
-            'New revenue streams and business models',
-            'Enhanced customer engagement',
-            'Competitive differentiation',
-            'Future - ready technology infrastructure',
+          benefits: ['Innovation leadership in emerging techNew revenue streams and business models',
+            'Enhanced customer engagementCompetitive differentiation',
+            'Future - ready technology infrastructure'
           ],
           pricing: '$8,000 - $60,000 / month',
           marketPosition:
             'Leading metaverse development for brands and enterprises',
-          useCases: ['Brand marketing',
-            'Virtual events',
-            'Training and education',
-            'Entertainment',
+          useCases: ['Brand marketingVirtual events',
+            'Training and educationEntertainment'
           ],
-          competitors: ['Meta', 'Microsoft', 'Unity'],
+          competitors: ['MetaMicrosoft', 'Unity'],
           competitiveAdvantage:
-            'Custom development, rapid prototyping, and comprehensive platform solutions',
+            'Custom development, rapid prototyping, and comprehensive platform solutions'
         },
         {
           name: 'Web3 Development',
           description:
             'Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.',
-          features: ['Decentralized application development',
-            'Smart contract development',
-            'DeFi platform creation',
-            'NFT marketplace development',
-            'Blockchain integration services',
+          features: ['Decentralized application developmentSmart contract development',
+            'DeFi platform creationNFT marketplace development',
+            'Blockchain integration services'
           ],
-          benefits: ['Decentralized business models',
-            'Innovation in financial services',
-            'New revenue opportunities',
-            'Technology leadership',
-            'Future - proof architecture',
+          benefits: ['Decentralized business modelsInnovation in financial services',
+            'New revenue opportunitiesTechnology leadership',
+            'Future - proof architecture'
           ],
           pricing: '$6,000 - $45,000 / month',
           marketPosition:
             'Expert Web3 development for fintech and innovative businesses',
-          useCases: ['Financial services',
-            'Gaming',
-            'Art and collectibles',
-            'Supply chain',
+          useCases: ['Financial servicesGaming',
+            'Art and collectiblesSupply chain'
           ],
-          competitors: ['Consensys', 'Chainlink Labs', 'Alchemy'],
+          competitors: ['ConsensysChainlink Labs', 'Alchemy'],
           competitiveAdvantage:
-            'Full - stack Web3 development, rapid deployment, and comprehensive blockchain expertise',
-        },
-      ],
+            'Full - stack Web3 development, rapid deployment, and comprehensive blockchain expertise'
+        }
+      ]
     },
     {
       category: 'Advanced Cybersecurity Solutions',
@@ -191,61 +156,49 @@ export default function Page() {
           description:
             'Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.',
           features: [
-            'Identity verification and authentication',
-            'Continuous access monitoring',
-            'Network segmentation',
-            'Threat detection and response',
-            'Compliance and audit support',
+            'Identity verification and authenticationContinuous access monitoring',
+            'Network segmentationThreat detection and response',
+            'Compliance and audit support'
           ],
-          benefits: ['Enhanced security posture',
-            'Reduced attack surface',
-            'Improved compliance',
-            'Better visibility and control',
-            'Adaptive security architecture',
+          benefits: ['Enhanced security postureReduced attack surface',
+            'Improved complianceBetter visibility and control',
+            'Adaptive security architecture'
           ],
           pricing: '$4,500 - $35,000 / month',
           marketPosition:
             'Leading zero trust implementation for enterprise organizations',
-          useCases: ['Financial services',
-            'Healthcare',
-            'Government',
-            'Technology companies',
+          useCases: ['Financial servicesHealthcare',
+            'GovernmentTechnology companies'
           ],
-          competitors: ['Palo Alto Networks', 'Cisco', 'Microsoft'],
+          competitors: ['Palo Alto NetworksCisco', 'Microsoft'],
           competitiveAdvantage:
-            'Comprehensive implementation, rapid deployment, and ongoing optimization support',
+            'Comprehensive implementation, rapid deployment, and ongoing optimization support'
         },
         {
           name: 'AI - Powered Cybersecurity',
           description:
             'Next - generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real - time.',
-          features: ['AI - powered threat detection',
-            'Behavioral analysis and monitoring',
-            'Automated incident response',
-            'Predictive security analytics',
-            'Continuous learning and adaptation',
+          features: ['AI - powered threat detectionBehavioral analysis and monitoring',
+            'Automated incident responsePredictive security analytics',
+            'Continuous learning and adaptation'
           ],
-          benefits: ['Proactive threat prevention',
-            'Zero - day attack protection',
-            'Automated response capabilities',
-            'Reduced false positives',
-            'Continuous security improvement',
+          benefits: ['Proactive threat preventionZero - day attack protection',
+            'Automated response capabilitiesReduced false positives',
+            'Continuous security improvement'
           ],
           pricing: '$5,000 - $40,000 / month',
           marketPosition:
             'Advanced AI cybersecurity for high-security environments',
-          useCases: ['Critical infrastructure',
-            'Financial institutions',
-            'Healthcare',
-            'Government',
+          useCases: ['Critical infrastructureFinancial institutions',
+            'HealthcareGovernment'
           ],
-          competitors: ['Darktrace', 'CrowdStrike', 'SentinelOne'],
+          competitors: ['DarktraceCrowdStrike', 'SentinelOne'],
           competitiveAdvantage:
-            'Advanced AI algorithms, real - time protection, and comprehensive threat intelligence',
-        },
-      ],
-    },
-  ];
+            'Advanced AI algorithms, real - time protection, and comprehensive threat intelligence'
+        }
+      ]
+    }
+  ],
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -389,7 +342,7 @@ export default function Page() {
                               Use Cases:
                             </span>
                             <p className="text-gray -300">
-                              {service.useCases.join(', ') }
+                              {service.useCases.join() }
                             </p>
                           </div>
                           <div>
@@ -464,5 +417,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) ,
+},

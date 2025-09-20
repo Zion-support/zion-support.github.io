@@ -2,42 +2,42 @@
 
 export default function Page() {
 interface SEOMetrics {
-  pageSpeed: number;
-  mobileFriendliness: number;
-  accessibility: number;
-  bestPractices: number;
-  seoScore: number;
+  pageSpeed: number,
+  mobileFriendliness: number,
+  accessibility: number,
+  bestPractices: number,
+  seoScore: number,
 coreWebVitals: {
 
-    lcp: number;
-    fid: number;
+    lcp: number,
+    fid: number,
     cls: number
 }}
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
-  url?: string;
-  autoAnalyze?: boolean;
-  showDetails?: boolean;
+  url?: string,
+  autoAnalyze?: boolean,
+  showDetails?: boolean,
   onAnalysisComplete?: (analysis: SEOAnalysis) => void}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   url,
-autoAnalyze:  true,;
-  showDetails = false,;
-  onAnalysisComplete}) => {;
-  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+autoAnalyze:  true,
+  showDetails = false,
+  onAnalysisComplete}) => {,
+  const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null),
+  const [isAnalyzing, setIsAnalyzing] = useState(false),
+  const [currentUrl, setCurrentUrl] = useState(url || window.location.href),
+  const [showAdvanced, setShowAdvanced] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState<any>('all'),
 
   // Mock SEO analysis data(in real app, this would come from actual analysis)
   const mockAnalysis: SEOAnalysis = useMemo(() => ({
 
     score: 87,
-    issues[;
+    issues[,
       {
 
         id: '1',
@@ -68,8 +68,8 @@ autoAnalyze:  true,;
         fixable: true,
         category: 'accessibility'
 
-    ],;
-    suggestions[;
+    ],
+    suggestions[,
       {
 
         id: '1',
@@ -97,7 +97,7 @@ autoAnalyze:  true,;
         effort: 'low',
         estimatedImpact: 5
 
-    ],;
+    ],
     metrics: {
 
       pageSpeed: 78,
@@ -106,43 +106,43 @@ autoAnalyze:  true,;
       bestPractices: 88,
       seoScore: 87,
       coreWebVitals: {
-        lcp: 2.8,;
-        fid: 45,;
-        cls: 0.08}},;
-    lastUpdated: new Date () }) , []) ;
+        lcp: 2.8,
+        fid: 45,
+        cls: 0.08}},
+    lastUpdated: new Date () }) , []) ,
 
   // Analyze SEO
   
-    setIsAnalyzing(true) ;
+    setIsAnalyzing(true) ,
 
   
-    if(selectedCategory === 'all') return analysis?.issues || [];
+    if(selectedCategory === 'all') return analysis?.issues || [],
 =======
     // Simulate analysis delay
-    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
-    setAnalysis(mockAnalysis) ;
-    setIsAnalyzing(false) ;
-    onAnalysisComplete?.(mockAnalysis) }, [mockAnalysis, onAnalysisComplete]) ;
+    setAnalysis(mockAnalysis) ,
+    setIsAnalyzing(false) ,
+    onAnalysisComplete?.(mockAnalysis) }, [mockAnalysis, onAnalysisComplete]) ,
 
   // Auto - analyze on mount
   useEffect(() => {
     if(autoAnalyze) {
 
       analyzeSEO()}
-  }, [autoAnalyze, analyzeSEO]);
+  }, [autoAnalyze, analyzeSEO]),
 
   // Get score color'
       default: return 'text-zion-slate'}
-  };
+  },
 
   // Get priority color'
       default: return 'text-zion-slate bg-zion-slate/10 border-zion-slate/200'}
-  };
+  },
 
   // Filter issues by category
-  const filteredIssues = useMemo(() => {;'    if(selectedCategory === 'all') return analysis?.issues || [];
-    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
+  const filteredIssues = useMemo(() => {,'    if(selectedCategory === 'all') return analysis?.issues || [],
+    return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ,
 
   // Filter suggestions by priority
   const filteredSuggestions = useMemo(() => {
@@ -150,13 +150,13 @@ autoAnalyze:  true,;
 
       const priorityOrder = {
 
-  high: 3, medium: 2,;  ;
-  ;
-  ;
-  ;
-  ;
-  low: 1 };
-      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
+  high: 3, medium: 2,  ,
+  ,
+  ,
+  ,
+  ,
+  low: 1 },
+      return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ,
 
   if(!analysis && !isAnalyzing) {
 
@@ -165,11 +165,11 @@ autoAnalyze:  true,;
         <Search className="w-12 h-12 text-zion-slate/40 mx-auto mb-4"  />"        <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}"
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
-        >;
-          Analyze SEO;
-        </button>;
-      </div>;) }
+          className="mt-4 px-6 py-2 bg-zion-cyan hover: bg-zion-cyan/80 text-white rounded-lg transition-colors",
+        >,
+          Analyze SEO,
+        </button>,
+      </div>,) }
   return ("
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
       {/* Header */}"
@@ -194,9 +194,9 @@ autoAnalyze:  true,;
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}"
-            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
+            className="px-4 py-2 bg-zion-cyan hover: bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
 
-            {isAnalyzing ? (;
+            {isAnalyzing ? (,
               <>"
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 <span>Analyzing...</span>
@@ -208,13 +208,13 @@ autoAnalyze:  true,;
             )}
           </button>
         </div>
-      </div>;
+      </div>,
 
       {isAnalyzing ? ("
-        <div className="text-center py-12">;"
+        <div className="text-center py-12">,"
           <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />"
           <p className="text-zion-slate/60">Analyzing your page...</p>
-        </div>;
+        </div>,
       ) : analysis ? (
         <>
           {/* Overall Score */}"
@@ -363,17 +363,16 @@ autoAnalyze:  true,;
                           </button>) }
                       </div>
                     </div>
-                  </motion.div>;) ) }
+                  </motion.div>,) ) }
               </AnimatePresence>
             </div>
           </div>
 
           {/* Suggestions */}"
-          <div className="mb-6">;"
+          <div className="mb-6">,"
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Optimization Suggestions</h4>"
             <div className="space-y-3">
-              {filteredSuggestions.slice(0, 3).map((suggestion) => (
-                <motion.div
+              {filteredSuggestions.slice(0, 3).map((suggestion) => (<motion.div
                   key={suggestion.id}
                   initial = {
 
@@ -400,10 +399,10 @@ autoAnalyze:  true,;
                       </div>
                     </div>
 "
-                    <button className="p-2 hover:bg-zion-cyan/10 rounded-lg transition-colors">"
+                    <button className="p-2 hover: bg-zion-cyan/10 rounded-lg transition-colors">"
                       <ArrowUpRight className="w-4 h-4 text-zion-cyan"  />                    </button>
                   </div>
-                </motion.div>;) ) }
+                </motion.div>) ) }
             </div>
           </div>
 
@@ -450,26 +449,26 @@ autoAnalyze:  true,;
                     </select>
                   </div>
                 </div>
-              </motion.div>;) };
-          </AnimatePresence>;
+              </motion.div>,) },
+          </AnimatePresence>,
         </>
-      ) : null};
-    </div>;
-  )};
+      ) : null},
+    </div>,
+  )},
 
 // Hook for using SEO optimization
-  const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ,
+  const [isOptimizing, setIsOptimizing] = useState(false),
 
-    setIsOptimizing(true) ;    // Implement actual optimization logic here
-    await new Promise(resolve => setTimeout (resolve, 3000) ) ;
-    setIsOptimizing(false) }, []) ;
+    setIsOptimizing(true) ,    // Implement actual optimization logic here
+    await new Promise(resolve => setTimeout (resolve, 3000) ) ,
+    setIsOptimizing(false) }, []) ,
 
   return {
 
     analysis,
     isOptimizing,
     optimizePage
-  }};
+  }},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

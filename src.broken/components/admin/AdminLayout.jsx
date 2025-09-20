@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 ,
     { title: 'Services', href: '/admin/services' },
     { title: 'Users', href: '/admin/users' },
-    { title: 'Reports', href: '/admin/reports' },
-];
+    { title: 'Reports', href: '/admin/reports' }
+],
 export function AdminLayout({ children }) {
 
     return (<div className="flex min-h-screen">"
@@ -17,15 +17,15 @@ export function AdminLayout({ children }) {
         </nav>
       </aside>"
       <main className="flex-1 p-6 overflow-y-auto">{children}</main>
-    </div>)};
-export { AdminLayout };
-export default AdminLayout;
-;
-export default AdminLayout;
-export default AdminLayout;
-export default AdminLayout;
-export default AdminLayout;
-export default AdminLayout;
-export default AdminLayout;
-export default AdminLayout;
+    </div>)},
+export { AdminLayout },
+export default AdminLayout,
+,
+export default AdminLayout,
+export default AdminLayout,
+export default AdminLayout,
+export default AdminLayout,
+export default AdminLayout,
+export default AdminLayout,
+export default AdminLayout,
 '"

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 export default function Page() {
-    };
+    },
     // Merge with provided structured data
-    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+    const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData,
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>"
@@ -12,7 +12,7 @@ export default function Page() {
       <meta name="keywords" content={keywords}/>"
       <meta name="author" content="Zion Tech Group"/>"
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>"
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+      <meta httpEquiv="Content-Type" content="text/html, charset=utf-8"/>
       
       {/* Canonical URL */}"
       {canonical && <link rel="canonical" href={canonical}/>}
@@ -65,7 +65,7 @@ export default function Page() {
       {/* Security Headers */}"
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>"
       <meta httpEquiv="X-Frame-Options" content="DENY"/>"
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>"
+      <meta httpEquiv="X-XSS-Protection" content="1, mode=block"/>"
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
     </Helmet>)}
 '"`

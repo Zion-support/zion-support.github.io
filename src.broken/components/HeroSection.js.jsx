@@ -1,10 +1,10 @@
-import { Button } from '@/components/ui/button';"
-import { GradientHeading } from '@/components/GradientHeading';"
-import { Link  } from 'react-router-dom';"
-import { useTranslation } from 'react-i18next';"
-import { motion, useScroll, useTransform  } from 'framer-motion';"
-import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react';"
-import { useRef } from 'react';
+import { Button } from '@/components/ui/button',"
+import { GradientHeading } from '@/components/GradientHeading',"
+import { Link  } from 'react-router-dom',"
+import { useTranslation } from 'react-i18next',"
+import { motion, useScroll, useTransform  } from 'framer-motion',"
+import { ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield  } from 'lucide-react',"
+import { useRef } from 'react',
 export default function Page() {
 ,
         visible: {
@@ -16,7 +16,7 @@ export default function Page() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -33,13 +33,13 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const floatingVariants = {
 
   animate: {
 
-            y[-15, 15, -15],;
-            rotate[0, 5, 0],;
+            y[-15, 15, -15],
+            rotate[0, 5, 0],
             transition: {
 
                 duration: 4,
@@ -48,13 +48,13 @@ export default function Page() {
 
 }
         }
-    };
+    },
     const pulseVariants = {
 
   animate: {
 
-            scale[1, 1.1, 1],;
-            opacity[0.5, 0.8, 0.5],;
+            scale[1, 1.1, 1],
+            opacity[0.5, 0.8, 0.5],
             transition: {
 
                 duration: 2,
@@ -63,7 +63,7 @@ export default function Page() {
 
 }
         }
-    };"
+    },"
     return (<section ref={containerRef} className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
       {/* Enhanced background with parallax effect */}"
       <motion.div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" style = {

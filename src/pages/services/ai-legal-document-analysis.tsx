@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  FileText, 
+  FileText,
   Search, 
   Shield, 
   Zap, 
@@ -20,62 +20,43 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AILegalDocumentAnalysis() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Contract Analysis",
-      description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy"
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Contract Analysis",description: "Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy"
     },
     {
-      icon: <Search className="w-6 h-6" />,
-      title: "Intelligent Document Search",
-      description: "Semantic search across millions of legal documents with context-aware results and relevance scoring"
+      icon: <Search className="w-6 h-6" />,title: "Intelligent Document Search",description: "Semantic search across millions of legal documents with context-aware results and relevance scoring"
+    };
+    {
+      icon: <Shield className="w-6 h-6" />,title: "Compliance Monitoring",description: "Real-time compliance tracking with automated alerts for regulatory changes and deadline management"
+    };
+    {
+      icon: <Zap className="w-6 h-6" />,title: "Automated Risk Assessment",description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts"
+    };
+    {
+      icon: <Users className="w-6 h-6" />,title: "Collaborative Review",description: "Multi-user document review with version control, comments, and approval workflows"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Compliance Monitoring",
-      description: "Real-time compliance tracking with automated alerts for regulatory changes and deadline management"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Risk Assessment",
-      description: "AI-driven risk scoring and mitigation recommendations for legal documents and contracts"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Collaborative Review",
-      description: "Multi-user document review with version control, comments, and approval workflows"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights into document patterns, risk trends, and compliance metrics"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Analytics Dashboard",description: "Comprehensive insights into document patterns, risk trends, and compliance metrics"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      features: [
-        "Up to 100 documents/month",
+      name: "Starter",price: "$299",period: "/month",features: [
+        "Up to 100 documents/month";
         "Basic AI analysis",
         "Standard search",
         "Email support",
         "Basic compliance alerts"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      features: [
+      name: "Professional",price: "$799",period: "/month",features: [
         "Up to 1,000 documents/month",
         "Advanced AI analysis",
         "Semantic search",
@@ -85,13 +66,11 @@ export default function AILegalDocumentAnalysis() {
         "API access"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      features: [
-        "Unlimited documents",
+      name: "Enterprise",price: "$1,999",
+      period: "/month",features: [
+        "Unlimited documents";
         "Custom AI models",
         "Advanced analytics",
         "Dedicated support",
@@ -102,7 +81,6 @@ export default function AILegalDocumentAnalysis() {
       popular: false
     }
   ];
-
   const benefits = [
     "Reduce legal review time by 85%",
     "Identify contract risks 3x faster",
@@ -111,7 +89,6 @@ export default function AILegalDocumentAnalysis() {
     "Improve contract negotiation outcomes",
     "Streamline due diligence processes"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -390,7 +367,7 @@ export default function AILegalDocumentAnalysis() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -429,5 +406,5 @@ export default function AILegalDocumentAnalysis() {
         </div>
       </section>
     </div>
-  );
+  )
 }

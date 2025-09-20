@@ -1,50 +1,50 @@
-import { useState, useEffect } from 'react';"
-import { Footer } from '@/components/Footer';"
-import { GradientHeading } from '@/components/GradientHeading';"
-import { ListingScoreCard } from '@/components/ListingScoreCard';"
-import { Button } from '@/components/ui/button';"
-import { Input } from '@/components/ui/input';"
-import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select';"
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2  } from 'lucide-react';
+import { useState, useEffect } from 'react',"
+import { Footer } from '@/components/Footer',"
+import { GradientHeading } from '@/components/GradientHeading',"
+import { ListingScoreCard } from '@/components/ListingScoreCard',"
+import { Button } from '@/components/ui/button',"
+import { Input } from '@/components/ui/input',"
+import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/ui/select',"
+import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2  } from 'lucide-react',
 export default function Page() {
 ,
     { label: 'A-Z', value: 'a-z' },
-    { label: 'Z-A', value: 'z-a' },
+    { label: 'Z-A', value: 'z-a' }
 ], filterOptions = ['
     { label: 'All', value: 'all' },
     { label: 'Highly Rated', value: 'high-rating' },
-    { label: 'Best AI Match', value: 'best-match' },
+    { label: 'Best AI Match', value: 'best-match' }
 ] }) {
 "
-    const [searchQuery, setSearchQuery] = useState("");
-    const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
-    const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
-    const [isLoading, setIsLoading] = useState(false);
+    const [searchQuery, setSearchQuery] = useState(""),
+    const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value),
+    const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value),
+    const [isLoading, setIsLoading] = useState(false),
     useEffect(() => {
 
-        localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
+        localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]),
     useEffect(() => {
 
-        localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
+        localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]),
     useEffect(() => {
-        setIsLoading(true);
-        const timeout = setTimeout(() => setIsLoading(false), 300);
-        return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);
+        setIsLoading(true),
+        const timeout = setTimeout(() => setIsLoading(false), 300),
+        return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]),
     // Process listings based on filters and search
-    const processedListings = initialListings;
+    const processedListings = initialListings,
         .filter(listing => {
 
         // Apply search filter
         const matchesSearch = listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (listing.tags && listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+            (listing.tags && listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
         // Apply category filters'
         if(selectedFilter === 'all')
-            return matchesSearch;
+            return matchesSearch,
         if(selectedFilter === 'high-rating')
-            return matchesSearch && (listing.rating || 0) >= 4;
+            return matchesSearch && (listing.rating || 0) >= 4,
         if(selectedFilter === 'best-match')
-            return matchesSearch && (listing.aiScore || 0) >= 85;
+            return matchesSearch && (listing.aiScore || 0) >= 85,
         return matchesSearch})
         .sort((a, b) => {
 
@@ -52,20 +52,20 @@ export default function Page() {
         switch(selectedSort) {
 
             case 'newest':
-                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+                return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
             case 'oldest':
-                return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+                return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
             case 'rating-high':
-                return (b.rating || 0) - (a.rating || 0);
+                return (b.rating || 0) - (a.rating || 0),
             case 'ai-match':
-                return (b.aiScore || 0) - (a.aiScore || 0);
+                return (b.aiScore || 0) - (a.aiScore || 0),
             case 'a-z':
-                return a.title.localeCompare(b.title);
+                return a.title.localeCompare(b.title),
             case 'z-a':
-                return b.title.localeCompare(a.title);
+                return b.title.localeCompare(a.title),
             default:
                 return 0}
-    });
+    }),
     return (<>"
       <div className="min-h-screen bg-zion-blue py-12 px-4">"
         <div className="container mx-auto">"
@@ -136,7 +136,7 @@ export default function Page() {
               <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>"
               <Button variant="outline" onClick={() => {
 "
-                setSearchQuery("");"
+                setSearchQuery(""),"
                 setSelectedFilter(filterOptions[0].value)}} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                 Clear all filters
               </Button>

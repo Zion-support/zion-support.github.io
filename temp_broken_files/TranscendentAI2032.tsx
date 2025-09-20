@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 const TranscendentAI2032: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">,
       <div className="container mx-auto px-4 py-12">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div,
           className="text-center mb-16",
         >,
@@ -129,7 +129,7 @@ const TranscendentAI2032: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div,
           className="text-center mt-16",
         >,
@@ -150,6 +150,5 @@ const TranscendentAI2032: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default TranscendentAI2032;
+    </div>)},
+export default TranscendentAI2032,

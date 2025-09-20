@@ -1,73 +1,73 @@
-import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
-import { getStripe } from '@/utils/getStripe';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react',
+import { Button } from '@/components/ui/button',
+import Link from 'next/link',
+import { useSelector, useDispatch } from 'react-redux',
+import { useState } from 'react',
+import { getStripe } from '@/utils/getStripe',
+import { useTranslation } from 'react-i18next',
+import { motion } from 'framer-motion',
 import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react'
-import { useWishlist } from '@/hooks/useWishlist';
-import { toast } from '@/hooks/use-toast';
-import { useCart } from '@/context/CartContext';
+import { useWishlist } from '@/hooks/useWishlist',
+import { toast } from '@/hooks/use-toast',
+import { useCart } from '@/context/CartContext',
 
 interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
 }
 
 export default function CartPage() {
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const { items, dispatch } = useCart();
-  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  const { items, dispatch } = useCart(),
+  const [loading, setLoading] = useState(false),
 
   if (!user) {
     toast({
       title: 'Authentication required',
-      description: 'Please sign in to view your cart.',
-    });
-    navigate('/login');
-    return null;
+      description: 'Please sign in to view your cart.'
+    }),
+    navigate('/login'),
+    return null,
   }
 
   useEffect(() => {
     if (!items.length) {
-      setLoading(true);
+      setLoading(true),
       fetch('/api/cart')
         .then(r => r.json())
         .then(data => dispatch({ type: 'SET_ITEMS', payload: data }))
-        .finally(() => setLoading(false));
+        .finally(() => setLoading(false)),
     }
-  }, [items.length, dispatch]);
+  }, [items.length, dispatch]),
 
   const updateQuantity = (id: string, qty: number) => {
     const updated = items.map(i =>
       i.id === id ? { ...i, quantity: qty } : i
-    );
-    dispatch({ type: 'SET_ITEMS', payload: updated });
-  };
+    ),
+    dispatch({ type: 'SET_ITEMS', payload: updated }),
+  },
 
   const removeItem = (id: string) => {
-    dispatch({ type: 'SET_ITEMS', payload: items.filter(i => i.id !== id) });
-  };
+    dispatch({ type: 'SET_ITEMS', payload: items.filter(i => i.id !== id) }),
+  },
 
   const applyCode = async () => {
     try {
       const res = await apiClient.post('/coupons/validate', {
         code,
-        amount: subtotal,
-      });
-      setDiscount(res.data.discount || 0);
+        amount: subtotal
+      }),
+      setDiscount(res.data.discount || 0),
     } catch (e) {
-      setDiscount(0);
+      setDiscount(0),
     }
-  };
+  },
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const total = subtotal - discount;
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+  const total = subtotal - discount,
 
   if (items.length === 0) {
     return (
@@ -78,7 +78,7 @@ export default function CartPage() {
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -136,5 +136,5 @@ export default function CartPage() {
         Checkout
       </Button>
     </div>
-  );
+  ),
 }

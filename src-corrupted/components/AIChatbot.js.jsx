@@ -1,2 +1,2 @@
 
-export default AIChatbot.js;
+export default AIChatbot.js,

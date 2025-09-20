@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Star, TrendingUp, Target,
@@ -10,13 +10,13 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Phone, Mail, MapPin
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
-import { quantumSpace2029Services } from '../data/2029-quantum-space-services';
-import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services',
+import { quantumSpace2029Services } from '../data/2029-quantum-space-services',
+import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services',
+import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services',
 
 export default function Futuristic2029ServicesShowcase() {
   const contactInfo = {
@@ -24,14 +24,14 @@ export default function Futuristic2029ServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allServices = [
     ...futuristic2029AIServices,
     ...quantumSpace2029Services,
     ...biotechEmerging2029Services,
     ...enterpriseIT2029Services
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -58,7 +58,7 @@ export default function Futuristic2029ServicesShowcase() {
       color: 'from-red-600 to-orange-600',
       services: enterpriseIT2029Services
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -68,7 +68,7 @@ export default function Futuristic2029ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -79,7 +79,7 @@ export default function Futuristic2029ServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const 2029-futuristic-services-showcase: React.FC = () => {
   return (
@@ -96,7 +96,7 @@ const 2029-futuristic-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2029-futuristic-services-showcase;
+export default 2029-futuristic-services-showcase,

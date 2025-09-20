@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 const speakers = [{
 
     name: 'Alex Zion',
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
-    linkedin: '#'},
-];
+    linkedin: '#'}
+],
 export function SpeakersSection() {
   return ()
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">"
@@ -50,6 +50,6 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

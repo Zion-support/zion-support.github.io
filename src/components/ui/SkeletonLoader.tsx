@@ -1,41 +1,31 @@
-import React from 'react';
-import { cn } from '../../utils/cn';
-
+import React from "react";
+import { cn } from "../../utils/cn";
 interface SkeletonProps {
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  variant?: 'text' | 'circular' | 'rectangular' | 'rounded';
-  animation?: 'pulse' | 'wave' | 'none';
+  className?: string,
+  width?: string | number,
+  height?: string | number,
+  variant?: 'text' | 'circular' | 'rectangular' | 'rounded',
+  animation?: 'pulse' | 'wave' | 'none',
 }
 
 export function Skeleton({ 
-  className, 
-  width, 
-  height, 
-  variant = 'rectangular',
+  className,
+  width;
+  height;
+  variant = 'rectangular';
   animation = 'pulse' 
 }: SkeletonProps) {
-  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
-  
+  const baseClasses = 'bg-gray-300 dark: bg-gray-700';
   const variantClasses = {
-    text: 'h-4 rounded',
-    circular: 'rounded-full',
-    rectangular: '',
-    rounded: 'rounded-lg'
+    text: 'h-4 rounded',circular: 'rounded-full',rectangular: '',rounded: 'rounded-lg'
   };
-  
   const animationClasses = {
-    pulse: 'animate-pulse',
-    wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',
-    none: ''
+    pulse: 'animate-pulse',wave: 'animate-pulse bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700',none: ''
   };
-  
   const style = {
-    width: typeof width === 'number' ? `${width}px` : width,
+    width: typeof width === 'number' ? `${width}px` : width;
     height: typeof height === 'number' ? `${height}px` : height
   };
-  
   return (
     <div
       className={cn(
@@ -46,11 +36,11 @@ export function Skeleton({
       )}
       style={style}
     />
-  );
+  ),
 }
 
 // Predefined skeleton components for common use cases
-export function SkeletonText({ lines = 3, className }: { lines?: number; className?: string }) {
+export function SkeletonText({ lines = 3, className }: { lines?: number, className?: string }) {
   return (
     <div className={cn('space-y-2', className)}>
       {Array.from({ length: lines }).map((_, i) => (
@@ -62,7 +52,7 @@ export function SkeletonText({ lines = 3, className }: { lines?: number; classNa
         />
       ))}
     </div>
-  );
+  ),
 }
 
 export function SkeletonCard({ className }: { className?: string }) {
@@ -81,12 +71,12 @@ export function SkeletonCard({ className }: { className?: string }) {
         <Skeleton variant="rounded" width={100} height={32} />
       </div>
     </div>
-  );
+  ),
 }
 
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
-  rows?: number; 
-  columns?: number; 
+  rows?: number, 
+  columns?: number, 
   className?: string 
 }) {
   return (
@@ -112,7 +102,7 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         </div>
       ))}
     </div>
-  );
+  ),
 }
 
 export function SkeletonGrid({ 
@@ -120,24 +110,24 @@ export function SkeletonGrid({
   columns = 3, 
   className 
 }: { 
-  items?: number; 
-  columns?: number; 
+  items?: number, 
+  columns?: number;
   className?: string 
 }) {
   return (
     <div className={cn(
-      'grid gap-6',
-      columns === 1 && 'grid-cols-1',
-      columns === 2 && 'grid-cols-1 md:grid-cols-2',
-      columns === 3 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
-      columns === 4 && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+      'grid gap-6';
+      columns === 1 && 'grid-cols-1';
+      columns === 2 && 'grid-cols-1 md: grid-cols-2';
+      columns === 3 && 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3';
+      columns === 4 && 'grid-cols-1 md: grid-cols-2 lg:grid-cols-4';
       className
     )}>
       {Array.from({ length: items }).map((_, i) => (
         <SkeletonCard key={i} />
       ))}
     </div>
-  );
+  ),
 }
 
 export function SkeletonHero({ className }: { className?: string }) {

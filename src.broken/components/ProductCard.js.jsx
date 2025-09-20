@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { Heart  } from 'lucide-react';
+import Link from 'next/link',
+import { Heart  } from 'lucide-react',
 export default function Page() {
 }
-    );
+    ),
     return ()
       <div
         className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center"
@@ -13,11 +13,11 @@ export default function Page() {
         {/* Optionally, provide more details if product ID is known */}"
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
       </div>
-    );
+    ),
   }
-  const active = isWishlisted(product.id);
-  const dispatch = useDispatch();
-  // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
+  const active = isWishlisted(product.id),
+  const dispatch = useDispatch(),
+  // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title,
   const addToCart = () => {
     dispatch()
       addItem({
@@ -26,21 +26,21 @@ export default function Page() {
         title: productTitle,
         price: product.price ?? 0,
         image: imageUrl || null})
-    );
-  };
-  const imageAltText = productTitle;
+    ),
+  },
+  const imageAltText = productTitle,
   const handleImageError = error => {
 
     if(!imageError) {
 
-      setImageError(true);
+      setImageError(true),
       captureException(error, {
 
         product: product.id,
-        imageUrl});
+        imageUrl}),
     }
-  };
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  },
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
   return ()
     <div"
       className="relative border rounded-lg bg-card p-4"
@@ -99,8 +99,8 @@ export default function Page() {
                 <Button
                   onClick={e => {
 
-                    e.stopPropagation();
-                    onBuy();
+                    e.stopPropagation(),
+                    onBuy(),
                   }}"
                   size="sm"
                   variant="outline"
@@ -119,6 +119,6 @@ export default function Page() {
         )}
       </div>
     </div>
-  );
+  ),
 }
 '"`

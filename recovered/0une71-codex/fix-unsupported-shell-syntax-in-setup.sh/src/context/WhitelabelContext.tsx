@@ -1,19 +1,19 @@
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react',
+import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant',
 
 interface WhitelabelContextType {
-  isWhitelabel: boolean;
-  primaryColor: string;
-  logoUrl: string | null;
-  brandName: string;
-  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
+  isWhitelabel: boolean,
+  primaryColor: string,
+  logoUrl: string | null,
+  brandName: string,
+  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
   landingPageCopy: {
-    headline: string;
-    subtitle: string;
-    cta: string;
-  };
-  tenant: WhitelabelTenant | null;
+    headline: string,
+    subtitle: string,
+    cta: string
+  },
+  tenant: WhitelabelTenant | null
 }
 
 const defaultContext: WhitelabelContextType = {
@@ -25,22 +25,22 @@ const defaultContext: WhitelabelContextType = {
   landingPageCopy: {
     headline: 'AI Talent Marketplace',
     subtitle: 'Find the best AI talent for your projects',
-    cta: 'Get Started',
+    cta: 'Get Started'
   },
-  tenant: null,
-};
+  tenant: null
+},
 
-const WhitelabelContext = createContext<WhitelabelContextType>(defaultContext);
+const WhitelabelContext = createContext<WhitelabelContextType>(defaultContext),
 
-export const useWhitelabel = () => useContext(WhitelabelContext);
+export const useWhitelabel = () => useContext(WhitelabelContext),
 
 interface WhitelabelProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
-  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
-  const { tenant, isLoading } = useWhitelabelTenant();
+  const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext),
+  const { tenant, isLoading } = useWhitelabelTenant(),
 
   useEffect(() => {
     if (!isLoading && tenant) {
@@ -51,17 +51,17 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
         brandName: tenant.brand_name,
         themePreset: tenant.theme_preset,
         landingPageCopy: tenant.landing_page_copy,
-        tenant: tenant,
-      });
+        tenant: tenant
+      }),
     } else if (!isLoading) {
-      setContextValue(defaultContext);
+      setContextValue(defaultContext),
     }
-  }, [tenant, isLoading]);
+  }, [tenant, isLoading]),
 
   return (
     <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
-  );
-};
+  ),
+},
 

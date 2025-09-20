@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react';
+import React, { useState, useRef } from 'react',
+import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader  } from 'lucide-react',
 
-        ],;
-        rules[;
+        ],
+        rules[,
             {
 
                 id: 'rule-001',
@@ -15,9 +15,9 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 lastTriggered: new Date('2024-01-15T10:30:00Z'),
                 triggerCount: 156
             }
-        ],;
-        dependencies['vendor_verification',budget_approval'];
-    },;
+        ],
+        dependencies['vendor_verification',budget_approval'],
+    },
     {
 
         id: 'bp-002',
@@ -27,29 +27,29 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
         status: 'active',
         priority: 'medium',
         automationLevel: 'semi-automated',
-        aiInsights[;
+        aiInsights[,
             'Bottleneck identified: IT setup takes 3 days on average',Recommendation: Implement parallel processing for faster onboarding',Success rate: 98% completion within SLA'
-        ],;
+        ],
         efficiency: 87,
         costSavings: 8000,
         timeReduction: 55,
-        stakeholders['HR Team',IT Department',New Employees'],;
+        stakeholders['HR Team',IT Department',New Employees'],
         lastExecuted: new Date('2024-01-14T14:15:00Z'),
         nextExecution: new Date('2024-01-17T09:00:00Z'),
-        executionHistory[;
+        executionHistory[,
             {
 
                 id: 'exec-002',
                 timestamp: new Date('2024-01-14T14:15:00Z'),
                 status: 'success',
                 duration: 120,
-                aiDecisions['Optimized task sequence',Identified resource conflicts'],;
+                aiDecisions['Optimized task sequence',Identified resource conflicts'],
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
             }
-        ],;
-        rules[;
+        ],
+        rules[,
             {
 
                 id: 'rule-002',
@@ -62,9 +62,9 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 lastTriggered: new Date('2024-01-14T14:15:00Z'),
                 triggerCount: 23
             }
-        ],;
-        dependencies['background_check',document_verification'];
-    },;
+        ],
+        dependencies['background_check',document_verification'],
+    },
     {
 
         id: 'bp-003',
@@ -74,29 +74,29 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
         status: 'active',
         priority: 'critical',
         automationLevel: 'fully-automated',
-        aiInsights[;
+        aiInsights[,
             'AI accuracy: 94% correct ticket classification',Response time improved by 60%',Customer satisfaction increased by 25%'
-        ],;
+        ],
         efficiency: 96,
         costSavings: 15000,
         timeReduction: 70,
-        stakeholders['Support Team',Customers',Product Team'],;
+        stakeholders['Support Team',Customers',Product Team'],
         lastExecuted: new Date('2024-01-15T16:45:00Z'),
         nextExecution: new Date('2024-01-15T17:00:00Z'),
-        executionHistory[;
+        executionHistory[,
             {
 
                 id: 'exec-003',
                 timestamp: new Date('2024-01-15T16:45:00Z'),
                 status: 'success',
                 duration: 15,
-                aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],;
+                aiDecisions['Classified 47 tickets by priority',Assigned to optimal agents'],
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
             }
-        ],;
-        rules[;
+        ],
+        rules[,
             {
 
                 id: 'rule-003',
@@ -109,84 +109,84 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 lastTriggered: new Date('2024-01-15T16:45:00Z'),
                 triggerCount: 8
             }
-        ],;
-        dependencies['ticket_classification',agent_availability'];
+        ],
+        dependencies['ticket_classification',agent_availability'],
     }
-];
+],
 export function AdvancedAIBusinessProcessAutomation() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [selectedStatus, setSelectedStatus] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [showAIInsights, setShowAIInsights] = useState(true);
-    const [showAutomation, setShowAutomation] = useState(true);
-    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
-    const [selectedProcess, setSelectedProcess] = useState(null);
-    const [isExecuting, setIsExecuting] = useState(false);
-    const containerRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [isFullscreen, setIsFullscreen] = useState(false),
+    const [activeTab, setActiveTab] = useState('overview'),
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [selectedStatus, setSelectedStatus] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [showAIInsights, setShowAIInsights] = useState(true),
+    const [showAutomation, setShowAutomation] = useState(true),
+    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses),
+    const [selectedProcess, setSelectedProcess] = useState(null),
+    const [isExecuting, setIsExecuting] = useState(false),
+    const containerRef = useRef(null),
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'active': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
-            case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
-            case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-            case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
+            case 'active': return 'text-green-500 bg-green-100 dark: bg-green-900/20',
+            case 'paused': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20',
+            case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20',
+            case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20',
+            case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20',
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
-    };
+    },
     const getPriorityColor = (priority) => {
 
         switch(priority) {
 
-            case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-            case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
-            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
+            case 'critical': return 'text-red-600 bg-red-100 dark: bg-red-900/20',
+            case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20',
+            case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20',
+            case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20',
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
-    };
+    },
     const getAutomationLevelColor = (level) => {
 
         switch(level) {
 
-            case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-            case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
-            case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
+            case 'fully-automated': return 'text-green-600 bg-green-100 dark: bg-green-900/20',
+            case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20',
+            case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20',
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
-    };
+    },
     const getCategoryIcon = (category) => {
 
         switch(category) {
 '"
-            case 'finance': return <DollarSign className="w-4 h-4"/>;'"
-            case 'hr': return <Users className="w-4 h-4"/>;'"
-            case 'operations': return <Settings className="w-4 h-4"/>;'"
-            case 'sales': return <TrendingUp className="w-4 h-4"/>;'"
-            case 'marketing': return <Target className="w-4 h-4"/>;'"
-            case 'it': return <Server className="w-4 h-4"/>;"
+            case 'finance': return <DollarSign className="w-4 h-4"/>,'"
+            case 'hr': return <Users className="w-4 h-4"/>,'"
+            case 'operations': return <Settings className="w-4 h-4"/>,'"
+            case 'sales': return <TrendingUp className="w-4 h-4"/>,'"
+            case 'marketing': return <Target className="w-4 h-4"/>,'"
+            case 'it': return <Server className="w-4 h-4"/>,"
             default: return <FileText className="w-4 h-4"/>}
-    };
+    },
     const formatPercentage = (value) => {
 
-        return `${value}%`};
+        return `${value}%`},
     const executeProcess = async(processId) => {
 
-        setIsExecuting(true);
+        setIsExecuting(true),
         // Simulate process execution
-        await new Promise(resolve => setTimeout (resolve, 2000) ) ;
-        setIsExecuting(false) ;
+        await new Promise(resolve => setTimeout (resolve, 2000) ) ,
+        setIsExecuting(false) ,
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId'
             ? { ...p, lastExecuted: new Date(), status: 'active' }
-            : p))};
+            : p))},
     const filteredProcesses = businessProcesses.filter(process => {
 
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            process.description.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesStatus && matchesSearch});
+            process.description.toLowerCase().includes(searchQuery.toLowerCase()),
+        return matchesCategory && matchesStatus && matchesSearch}),
     if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover:shadow-zion-blue/50 transition-all duration-300 z-50 group">"
@@ -430,7 +430,7 @@ export function AdvancedAIBusinessProcessAutomation() {
                     {process.priority}
                   </span>`
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAutomationLevelColor(process.automationLevel)}`}>
-                    {process.automationLevel.replace('-',)}
+                    {process.automationLevel.replace('-')}
                   </span>
                 </div>
 "

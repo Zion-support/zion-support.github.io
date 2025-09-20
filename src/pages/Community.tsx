@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Users, 
+  Users,
   MessageCircle, 
   Search, 
   Filter,
@@ -34,176 +34,83 @@ import {
   Calendar,
   User,
   Plus
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Community() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedSort, setSelectedSort] = useState('Latest');
-
-  const categories = ['All', 'General Discussion', 'AI & Machine Learning', 'Cybersecurity', 'Cloud & DevOps', 'Quantum Computing', 'Blockchain', 'IoT & Edge', 'Help & Support', 'Showcase'];
-  const sortOptions = ['Latest', 'Most Popular', 'Most Active', 'Trending'];
-
+  const categories = ['AllGeneral Discussion', 'AI & Machine LearningCybersecurity', 'Cloud & DevOpsQuantum Computing', 'BlockchainIoT & Edge', 'Help & SupportShowcase'];
+  const sortOptions = ['LatestMost Popular', 'Most ActiveTrending'];
   const forumCategories = [
     {
-      id: 'general',
-      name: 'General Discussion',
-      description: 'General topics, announcements, and community discussions',
-      icon: Users,
-      color: 'from-blue-500 to-cyan-500',
-      topics: 1247,
-      posts: 8934,
-      lastActivity: '2 hours ago',
-      featured: true
-    },
+      id: 'general',name: 'General Discussion',description: 'General topics, announcements, and community discussions',
+      icon: Users,color: 'from-blue-500 to-cyan-500',topics: 1247,posts: 8934,lastActivity: '2 hours ago',featured: true
+    };
     {
-      id: 'ai-ml',
-      name: 'AI & Machine Learning',
-      description: 'Discussions about AI, machine learning, and data science',
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500',
-      topics: 892,
-      posts: 5678,
-      lastActivity: '1 hour ago',
-      featured: true
-    },
+      id: 'ai-ml',name: 'AI & Machine Learning',description: 'Discussions about AI, machine learning, and data science',
+      icon: Zap,color: 'from-purple-500 to-pink-500',topics: 892,posts: 5678,lastActivity: '1 hour ago',featured: true
+    };
     {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      description: 'Security discussions, threat intelligence, and best practices',
-      icon: Lock,
-      color: 'from-red-500 to-orange-500',
-      topics: 456,
-      posts: 2345,
-      lastActivity: '3 hours ago',
-      featured: true
-    },
+      id: 'cybersecurity',name: 'Cybersecurity',description: 'Security discussions, threat intelligence, and best practices',
+      icon: Lock,color: 'from-red-500 to-orange-500',topics: 456,posts: 2345,lastActivity: '3 hours ago',featured: true
+    };
     {
-      id: 'cloud-devops',
-      name: 'Cloud & DevOps',
-      description: 'Cloud computing, DevOps practices, and infrastructure',
-      icon: Globe,
-      color: 'from-green-500 to-emerald-500',
-      topics: 678,
-      posts: 3456,
-      lastActivity: '4 hours ago',
-      featured: false
-    },
+      id: 'cloud-devops',name: 'Cloud & DevOps',description: 'Cloud computing, DevOps practices, and infrastructure',
+      icon: Globe,color: 'from-green-500 to-emerald-500',topics: 678,posts: 3456,lastActivity: '4 hours ago',featured: false
+    };
     {
-      id: 'quantum',
-      name: 'Quantum Computing',
-      description: 'Quantum computing research, applications, and developments',
-      icon: Atom,
-      color: 'from-indigo-500 to-purple-500',
-      topics: 234,
-      posts: 1234,
-      lastActivity: '6 hours ago',
-      featured: false
-    },
+      id: 'quantum',name: 'Quantum Computing',description: 'Quantum computing research, applications, and developments',
+      icon: Atom,color: 'from-indigo-500 to-purple-500',topics: 234,posts: 1234,lastActivity: '6 hours ago',featured: false
+    };
     {
-      id: 'blockchain',
-      name: 'Blockchain',
-      description: 'Blockchain technology, DeFi, and Web3 discussions',
-      icon: Link,
-      color: 'from-yellow-500 to-orange-500',
-      topics: 345,
-      posts: 1789,
-      lastActivity: '8 hours ago',
-      featured: false
+      id: 'blockchain',name: 'Blockchain',description: 'Blockchain technology, DeFi, and Web3 discussions',
+      icon: Link,color: 'from-yellow-500 to-orange-500',topics: 345,posts: 1789,lastActivity: '8 hours ago',featured: false
     }
   ];
-
   const recentDiscussions = [
     {
-      id: 1,
-      title: 'Best practices for implementing AI in enterprise environments?',
-      author: 'Sarah Chen',
-      authorAvatar: '/avatars/sarah.jpg',
-      category: 'AI & Machine Learning',
-      replies: 23,
-      views: 456,
-      lastReply: '2 hours ago',
-      tags: ['AI', 'Enterprise', 'Best Practices'],
-      featured: true,
-      pinned: false
-    },
+      id: 1,title: 'Best practices for implementing AI in enterprise environments?',author: 'Sarah Chen',authorAvatar: '/avatars/sarah.jpg',category: 'AI & Machine Learning',replies: 23,views: 456,lastReply: '2 hours ago',tags: ['AIEnterprise', 'Best Practices'],
+      featured: true,pinned: false
+    };
     {
-      id: 2,
-      title: 'Zero Trust Security Architecture Implementation Guide',
-      author: 'Mike Rodriguez',
-      authorAvatar: '/avatars/mike.jpg',
-      category: 'Cybersecurity',
-      replies: 18,
-      views: 234,
-      lastReply: '4 hours ago',
-      tags: ['Security', 'Zero Trust', 'Architecture'],
-      featured: false,
-      pinned: true
-    },
+      id: 2,title: 'Zero Trust Security Architecture Implementation Guide',author: 'Mike Rodriguez',authorAvatar: '/avatars/mike.jpg',category: 'Cybersecurity',replies: 18,views: 234,lastReply: '4 hours ago',tags: ['SecurityZero Trust', 'Architecture'],
+      featured: false,pinned: true
+    };
     {
-      id: 3,
-      title: 'Quantum Computing vs Classical Computing for ML workloads',
-      author: 'Dr. Emily Watson',
-      authorAvatar: '/avatars/emily.jpg',
-      category: 'Quantum Computing',
-      replies: 31,
-      views: 789,
-      lastReply: '1 hour ago',
-      tags: ['Quantum', 'Machine Learning', 'Performance'],
-      featured: true,
-      pinned: false
-    },
+      id: 3,title: 'Quantum Computing vs Classical Computing for ML workloads',author: 'Dr. Emily Watson',authorAvatar: '/avatars/emily.jpg',category: 'Quantum Computing',replies: 31,views: 789,lastReply: '1 hour ago',tags: ['QuantumMachine Learning', 'Performance'],
+      featured: true,pinned: false
+    };
     {
-      id: 4,
-      title: 'DevOps transformation success stories and lessons learned',
-      author: 'Alex Thompson',
-      authorAvatar: '/avatars/alex.jpg',
-      category: 'Cloud & DevOps',
-      replies: 15,
-      views: 345,
-      lastReply: '5 hours ago',
-      tags: ['DevOps', 'Transformation', 'Success Stories'],
-      featured: false,
-      pinned: false
-    },
+      id: 4,title: 'DevOps transformation success stories and lessons learned',author: 'Alex Thompson',authorAvatar: '/avatars/alex.jpg',category: 'Cloud & DevOps',replies: 15,views: 345,lastReply: '5 hours ago',tags: ['DevOpsTransformation', 'Success Stories'],
+      featured: false,pinned: false
+    };
     {
-      id: 5,
-      title: 'Blockchain scalability solutions for enterprise applications',
-      author: 'Maria Santos',
-      authorAvatar: '/avatars/maria.jpg',
-      category: 'Blockchain',
-      replies: 27,
-      views: 567,
-      lastReply: '3 hours ago',
-      tags: ['Blockchain', 'Scalability', 'Enterprise'],
-      featured: false,
-      pinned: false
+      id: 5,title: 'Blockchain scalability solutions for enterprise applications',author: 'Maria Santos',authorAvatar: '/avatars/maria.jpg',category: 'Blockchain',replies: 27,views: 567,lastReply: '3 hours ago',tags: ['BlockchainScalability', 'Enterprise'],
+      featured: false,pinned: false
     }
   ];
-
   const communityStats = [
-    { label: 'Members', value: '12,847', icon: Users, color: 'text-blue-400' },
-    { label: 'Topics', value: '4,892', icon: MessageSquare, color: 'text-green-400' },
-    { label: 'Posts', value: '23,456', icon: MessageCircle, color: 'text-purple-400' },
+    { label: 'Members', value: '12,847', icon: Users, color: 'text-blue-400' };
+    { label: 'Topics', value: '4,892', icon: MessageSquare, color: 'text-green-400' };
+    { label: 'Posts', value: '23,456', icon: MessageCircle, color: 'text-purple-400' };
     { label: 'Solutions', value: '8,934', icon: CheckCircle, color: 'text-cyan-400' }
   ];
-
   const filteredDiscussions = recentDiscussions.filter(discussion => {
     const matchesSearch = discussion.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         discussion.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    const matchesCategory = selectedCategory === 'All' || discussion.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const handleStartDiscussion = () => {
     // Navigate to create discussion page
-    console.log('Start new discussion');
-  };
+    console.log('Start new discussion'),
+  },
 
   const handleJoinCommunity = () => {
     // Handle community join logic
-    console.log('Join community');
-  };
+    console.log('Join community'),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -419,7 +326,7 @@ export default function Community() {
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-400 hover:text-cyan-400 transition-colors" title="Bookmark">
+                        <button className="p-2 text-gray-400 hover: text-cyan-400 transition-colors" title="Bookmark">
                           <Bookmark className="w-4 h-4" />
                         </button>
                         <button className="p-2 text-gray-400 hover:text-cyan-400 transition-colors" title="Share">
@@ -448,7 +355,7 @@ export default function Community() {
               <button
                 onClick={() => {
                   setSearchQuery('');
-                  setSelectedCategory('All');
+                  setSelectedCategory('All'),
                 }}
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
@@ -473,13 +380,13 @@ export default function Community() {
               Ready to Join the Community?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Connect with thousands of technology professionals, share your expertise, 
+              Connect with thousands of technology professionals, share your expertise;
               and learn from industry leaders. Join our community today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={handleJoinCommunity}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Join Community
               </button>
@@ -491,5 +398,5 @@ export default function Community() {
         </div>
       </section>
     </div>
-  );
+  )
 }

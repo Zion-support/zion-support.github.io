@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Sparkles,
@@ -8,29 +8,29 @@ import {,
   Star,
   Zap,
   Brain,
-  Rocket;
-  TrendingUp;
-  Users;
-  Award;
-  ChevronRight;
-  X,
-} from 'lucide-react';
+  Rocket,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  X
+} from 'lucide-react',
 const UltimateContentRevolution2025Banner = () => {,
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [,
-    { icon: Braintext: "Revolutionary AI Breakthroughs"color: "text-purple-400" ,};
-    { icon: Zaptext: "2,500% Average ROI"color: "text-blue-400" ,};
-    { icon: Rocketext: "Future Technology Predictions"color: "text-green-400" ,};
-    { icon: Userstext: "500+ Enterprise Clients"color: "text-yellow-400" ,}
-  ];
+    { icon: Braintext: "Revolutionary AI Breakthroughs"color: "text-purple-400" },
+    { icon: Zaptext: "2,500% Average ROI"color: "text-blue-400" },
+    { icon: Rocketext: "Future Technology Predictions"color: "text-green-400" },
+    { icon: Userstext: "500+ Enterprise Clients"color: "text-yellow-400" }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-  if (!isVisible) return null;
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
+  if (!isVisible) return null,
   return (,
     <div>,
       <div,
@@ -47,7 +47,7 @@ const UltimateContentRevolution2025Banner = () => {,
         <div className="absolute bottom-4 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" />,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1 text-center lg: text-left">,
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">,
                 <div,
@@ -60,8 +60,7 @@ const UltimateContentRevolution2025Banner = () => {,
                 </span>,
                 <div className="flex items-center gap-1">,
                   {[...Array(5)].map((_i) => (,
-                    <Star key={i,} className="w-3 h-3 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />))}
                 </div>,
               </div>,
               <h2 className="text-2xl md: text-3xl font-bold text-white mb-2">,
@@ -69,7 +68,7 @@ const UltimateContentRevolution2025Banner = () => {,
               </h2>,
               <div className="flex items-center justify-center lg:justify-start gap-4 mb-3">,
                   <div,
-                    key={currentFeature,}
+                    key={currentFeature}
                     className="flex items-center gap-2",
                   >,
                     <features[currentFeature].icon className={`w-5 h-5 ${features[currentFeature].color}`} />,
@@ -84,7 +83,7 @@ const UltimateContentRevolution2025Banner = () => {,
                 that are transforming industries worldwide. Join 500+ companies already experiencing the AI revolution.,
               </p>,
             </div>,
-            {/* Right Content - CTA Buttons */,}
+            {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm: flex-row gap-3 items-center">,
               <a,
                 href="/ultimate-content-revolution-2025",
@@ -103,7 +102,7 @@ const UltimateContentRevolution2025Banner = () => {,
                 <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />,
               </a>,
             </div>,
-            {/* Close Button */,}
+            {/* Close Button */}
             <button,
               onClick={() => setIsVisible(false)}
               className="absolute top-4 right-4 text-gray-400 hover: text-white transition-colors duration-200 p-1",
@@ -111,7 +110,7 @@ const UltimateContentRevolution2025Banner = () => {,
               <X className="h-5 w-5" />,
             </button>,
           </div>,
-          {/* Progress Bar */,}
+          {/* Progress Bar */}
           <div className="mt-4 w-full bg-white/10 rounded-full h-1">,
             <div,
               className="bg-gradient-to-r from-blue-500 to-purple-500 h-1 rounded-full",
@@ -141,7 +140,7 @@ const UltimateContentRevolution2025Banner = () => {,
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50" />,
       </div>,
     </div>,
-  );
-};
-export default UltimateContentRevolution2025Banner;
+  ),
+},
+export default UltimateContentRevolution2025Banner,
 </div></div></div></div></div></div></div>,

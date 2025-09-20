@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function NewContent2026Showcase() {,
   return (,
     <section className="py-16 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white relative overflow-hidden">,
@@ -69,5 +69,4 @@ export default function NewContent2026Showcase() {,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

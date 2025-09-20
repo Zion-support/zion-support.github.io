@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
                   </Link>
@@ -92,6 +92,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"

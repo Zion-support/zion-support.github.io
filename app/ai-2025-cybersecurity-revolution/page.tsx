@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Cybersecurity Revolution: The Ultimate Protection Guide';
-  description: 'Discover how AI is revolutionizing cybersecurity in 2025. Learn about advanced threat detection, automated response systems, and next-generation security solutions.';
-  keywords: ['AI CybersecurityThreat Detection', 'Security AutomationAI Security', '2025 Trends'],
-};
+  title: 'AI 2025 Cybersecurity Revolution: The Ultimate Protection Guide',
+  description: 'Discover how AI is revolutionizing cybersecurity in 2025. Learn about advanced threat detection, automated response systems, and next-generation security solutions.',
+  keywords: ['AI CybersecurityThreat DetectionSecurity AutomationAI Security', '2025 Trends']
+},
 export default function AICybersecurity2025Page() {,
   return (,
     <>,
@@ -27,7 +27,7 @@ export default function AICybersecurity2025Page() {,
                 AI 2025 Cybersecurity Revolution,
               </h1>,
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-                Discover how AI is revolutionizing cybersecurity with advanced threat detection;
+                Discover how AI is revolutionizing cybersecurity with advanced threat detection,
                 automated response systems, and next-generation security solutions that protect your enterprise.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -47,7 +47,7 @@ export default function AICybersecurity2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -70,14 +70,14 @@ export default function AICybersecurity2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <section id="content" className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
               <h2 className="text-3xl font-bold text-gray-900 mb-8">The Current Cybersecurity Crisis and AI Solution</h2>,
               <h3 className="text-2xl font-bold text-gray-900 mb-6">The Evolving Threat Landscape</h3>,
               <p className="text-gray-600 mb-6">,
-                Cyber threats have become more sophisticated and frequent in 2025. AI-powered attacks, zero-day exploits;
+                Cyber threats have become more sophisticated and frequent in 2025. AI-powered attacks, zero-day exploits,
                 and advanced ransomware are creating unprecedented challenges for organizations worldwide.,
               </p>,
               <ul className="list-disc list-inside text-gray-600 mb-8 space-y-2">,
@@ -88,7 +88,7 @@ export default function AICybersecurity2025Page() {,
               </ul>,
               <h3 className="text-2xl font-bold text-gray-900 mb-6">AI as the Game-Changer</h3>,
               <p className="text-gray-600 mb-6">,
-                Artificial intelligence has emerged as the most powerful weapon in the cybersecurity arsenal;
+                Artificial intelligence has emerged as the most powerful weapon in the cybersecurity arsenal,
                 providing real-time threat detection, predictive security, and automated response capabilities.,
               </p>,
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Core AI Cybersecurity Technologies</h2>,
@@ -186,7 +186,7 @@ export default function AICybersecurity2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Revolutionize Your Cybersecurity?</h2>,
@@ -212,4 +212,4 @@ export default function AICybersecurity2025Page() {,
         </section>,
       </div>,
     </>,
-  ),}
+  )}

@@ -1,21 +1,21 @@
 
-import { Fragment } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Privacy from "@/pages/Privacy";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
-import Careers from "@/pages/Careers";
-import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
-import Terms from "@/pages/Terms";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
+import { Fragment } from "react",
+import { Route, Routes, Navigate } from "react-router-dom",
+import Home from "@/pages/Home",
+import About from "@/pages/About",
+import Contact from "@/pages/Contact",
+import Privacy from "@/pages/Privacy",
+import Blog from "@/pages/Blog",
+import BlogPost from "@/pages/BlogPost",
+import GreenIT from "@/pages/GreenIT",
+import Careers from "@/pages/Careers",
+import SearchPage from "@/pages/SearchPage",
+import { SitemapPage } from "@/components/SitemapPage",
+import Terms from "@/pages/Terms",
+import HelpCenterPage from "@/pages/HelpCenterPage",
+import AccountSettings from "@/pages/AccountSettings",
+import ProjectRoom from "@/pages/ProjectRoom",
+import VideoCall from "@/pages/VideoCall",
 
 const ContentRoutes = () => {
   return (
@@ -59,7 +59,7 @@ const ContentRoutes = () => {
       {/* Sitemap Page */}
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
-  );
-};
+  ),
+},
 
-export default ContentRoutes;
+export default ContentRoutes,

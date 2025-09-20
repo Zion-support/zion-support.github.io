@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react',
 
 export default function Solutions() {
 	const industrySolutions = [
@@ -8,7 +8,7 @@ export default function Solutions() {
 			icon: Building,
 			title: 'Enterprise Solutions',
 			description: 'Comprehensive technology solutions for large enterprises',
-			features: ['Digital Transformation', 'Legacy Modernization', 'Enterprise Integration', 'Scalable Architecture'],
+			features: ['Digital TransformationLegacy Modernization', 'Enterprise IntegrationScalable Architecture'],
 			href: '/solutions/enterprise',
 			color: 'from-blue-600 to-indigo-700'
 		},
@@ -16,7 +16,7 @@ export default function Solutions() {
 			icon: Users,
 			title: 'SMB Solutions',
 			description: 'Cost-effective technology solutions for small and medium businesses',
-			features: ['Cloud Migration', 'Security Hardening', 'Process Automation', 'Growth Enablement'],
+			features: ['Cloud MigrationSecurity Hardening', 'Process AutomationGrowth Enablement'],
 			href: '/solutions/smb',
 			color: 'from-green-600 to-emerald-700'
 		},
@@ -24,18 +24,18 @@ export default function Solutions() {
 			icon: Globe,
 			title: 'Startup Solutions',
 			description: 'Rapid development and scaling solutions for startups',
-			features: ['MVP Development', 'Cloud Infrastructure', 'AI Integration', 'Growth Analytics'],
+			features: ['MVP DevelopmentCloud Infrastructure', 'AI IntegrationGrowth Analytics'],
 			href: '/solutions/startup',
 			color: 'from-purple-600 to-pink-700'
 		}
-	];
+	],
 
 	const technologySolutions = [
 		{
 			icon: Brain,
 			title: 'AI & Machine Learning',
 			description: 'Intelligent automation and decision-making systems',
-			features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Automated Workflows'],
+			features: ['Predictive AnalyticsNatural Language Processing', 'Computer VisionAutomated Workflows'],
 			href: '/solutions/ai-ml',
 			color: 'from-purple-600 to-indigo-700'
 		},
@@ -43,7 +43,7 @@ export default function Solutions() {
 			icon: Cloud,
 			title: 'Cloud & DevOps',
 			description: 'Scalable cloud infrastructure and automation',
-			features: ['Multi-cloud Strategy', 'Kubernetes Orchestration', 'CI/CD Pipelines', 'Infrastructure as Code'],
+			features: ['Multi-cloud StrategyKubernetes Orchestration', 'CI/CD PipelinesInfrastructure as Code'],
 			href: '/solutions/cloud-devops',
 			color: 'from-cyan-600 to-blue-700'
 		},
@@ -51,7 +51,7 @@ export default function Solutions() {
 			icon: Shield,
 			title: 'Cybersecurity',
 			description: 'Comprehensive security and compliance solutions',
-			features: ['Zero Trust Architecture', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening'],
+			features: ['Zero Trust ArchitectureSOC 2 Compliance', 'Threat DetectionSecurity Hardening'],
 			href: '/solutions/cybersecurity',
 			color: 'from-red-600 to-orange-700'
 		},
@@ -59,7 +59,7 @@ export default function Solutions() {
 			icon: BarChart3,
 			title: 'Data & Analytics',
 			description: 'Real-time insights and business intelligence',
-			features: ['Data Warehousing', 'Real-time Analytics', 'Business Intelligence', 'Data Quality'],
+			features: ['Data WarehousingReal-time Analytics', 'Business IntelligenceData Quality'],
 			href: '/solutions/data-analytics',
 			color: 'from-emerald-600 to-teal-700'
 		},
@@ -67,7 +67,7 @@ export default function Solutions() {
 			icon: Database,
 			title: 'Enterprise Systems',
 			description: 'Modern ERP, CRM, and workflow solutions',
-			features: ['ERP Modernization', 'CRM Integration', 'Workflow Automation', 'API Management'],
+			features: ['ERP ModernizationCRM Integration', 'Workflow AutomationAPI Management'],
 			href: '/solutions/enterprise-systems',
 			color: 'from-blue-600 to-indigo-700'
 		},
@@ -75,11 +75,11 @@ export default function Solutions() {
 			icon: Rocket,
 			title: 'Emerging Technologies',
 			description: 'Cutting-edge quantum and blockchain solutions',
-			features: ['Quantum Computing', 'Blockchain Platforms', 'IoT Infrastructure', 'Edge Computing'],
+			features: ['Quantum ComputingBlockchain Platforms', 'IoT InfrastructureEdge Computing'],
 			href: '/solutions/emerging-tech',
 			color: 'from-pink-600 to-rose-700'
 		}
-	];
+	],
 
 	const useCaseSolutions = [
 		{
@@ -118,14 +118,14 @@ export default function Solutions() {
 			icon: Target,
 			href: '/solutions/process-automation'
 		}
-	];
+	],
 
 	const successMetrics = [
 		{ number: '95%', label: 'Client Satisfaction', icon: Star },
 		{ number: '40%', label: 'Cost Reduction', icon: TrendingUp },
 		{ number: '60%', label: 'Efficiency Gain', icon: Zap },
 		{ number: '99.9%', label: 'Uptime SLA', icon: Clock }
-	];
+	],
 
 	return (
 		<>
@@ -282,7 +282,7 @@ export default function Solutions() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
+			<section className="py-24 sm: py-32 bg-gradient-to-r from-blue-600 to-purple-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready for Your Custom Solution?</h2>
@@ -307,5 +307,5 @@ export default function Solutions() {
 				</div>
 			</section>
 		</>
-	);
+	)
 }

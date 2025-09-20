@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Check, 
+  Check,
   Star, 
   TrendingUp, 
   Zap, 
@@ -29,79 +29,72 @@ import {
   Handshake,
   Lightbulb,
   ArrowRight
-} from 'lucide-react';
-import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from '../data/enhancedMicroSaasServices2025';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { ENHANCED_MICRO_SAAS_SERVICES_2025 } from "../data/enhancedMicroSaasServices2025";
+import { SEO } from "../components/SEO";
 const EnhancedPricing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('price');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('price'),
 
-  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025;
+  const allServices = ENHANCED_MICRO_SAAS_SERVICES_2025,
   
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🤖' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', icon: '⚖️' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: '🏥' },
-    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' },
-    { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', icon: '🌐' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },
+    { id: 'all', name: 'All Services', icon: '🚀' };
+    { id: 'AI & Analytics', name: 'AI & Analytics', icon: '🤖' };
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', icon: '⚖️' };
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' };
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: '🏥' };
+    { id: 'Blockchain', name: 'Blockchain', icon: '🔗' };
+    { id: 'IoT & Smart Cities', name: 'IoT & Smart Cities', icon: '🌐' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' };
     { id: 'Metaverse', name: 'Metaverse', icon: '🌍' }
   ];
-
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory);
+    : allServices.filter(service => service.category === selectedCategory),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'roi':
-        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', ''));
+        return parseFloat(b.roi.replace('%', '')) - parseFloat(a.roi.replace('%', '')),
       case 'innovation':
-        return b.innovationLevel.localeCompare(a.innovationLevel);
-      default:
-        return 0;
+        return b.innovationLevel.localeCompare(a.innovationLevel),
+      default: return 0
     }
   });
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Analytics': return <Brain className="w-6 h-6" />;
-      case 'AI & Legal Tech': return <Shield className="w-6 h-6" />;
-      case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
-      case 'AI & Healthcare': return <Users className="w-6 h-6" />;
-      case 'Blockchain': return <Database className="w-6 h-6" />;
-      case 'IoT & Smart Cities': return <Network className="w-6 h-6" />;
-      case 'Cybersecurity': return <ShieldCheck className="w-6 h-6" />;
-      case 'Metaverse': return <Globe className="w-6 h-6" />;
-      default: return <Rocket className="w-6 h-6" />;
+      case 'AI & Legal Tech': return <Shield className="w-6 h-6" />,
+      case 'Quantum Computing': return <Cpu className="w-6 h-6" />,
+      case 'AI & Healthcare': return <Users className="w-6 h-6" />,
+      case 'Blockchain': return <Database className="w-6 h-6" />,
+      case 'IoT & Smart Cities': return <Network className="w-6 h-6" />,
+      case 'Cybersecurity': return <ShieldCheck className="w-6 h-6" />,
+      case 'Metaverse': return <Globe className="w-6 h-6" />,
+      default: return <Rocket className="w-6 h-6" />
     }
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
-      'Advanced': 'bg-blue-500',
-      'Cutting-edge': 'bg-purple-500',
-      'Revolutionary': 'bg-red-500'
+      'Advanced': 'bg-blue-500Cutting-edge': 'bg-purple-500Revolutionary': 'bg-red-500'
     };
     return (
       <span className={`px-2 py-1 text-xs font-semibold text-white rounded-full ${colors[level as keyof typeof colors] || 'bg-gray-500'}`}>
         {level}
       </span>
-    );
-  };
+    ),
+  },
 
   const getROIColor = (roi: string) => {
-    const roiValue = parseFloat(roi.replace('%', ''));
-    if (roiValue >= 500) return 'text-red-400';
-    if (roiValue >= 300) return 'text-orange-400';
-    if (roiValue >= 200) return 'text-yellow-400';
-    return 'text-green-400';
-  };
+    const roiValue = parseFloat(roi.replace('%', '')),
+    if (roiValue >= 500) return 'text-red-400',
+    if (roiValue >= 300) return 'text-orange-400',
+    if (roiValue >= 200) return 'text-yellow-400',
+    return 'text-green-400',
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -314,7 +307,7 @@ const EnhancedPricing: React.FC = () => {
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Custom Pricing Inquiry&body=Hi, I'm interested in custom pricing for your services. Please provide more details about enterprise options and custom solutions."
-                className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover: bg-white/20 transition-all duration-300"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 Request Custom Quote
@@ -324,7 +317,6 @@ const EnhancedPricing: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default EnhancedPricing;

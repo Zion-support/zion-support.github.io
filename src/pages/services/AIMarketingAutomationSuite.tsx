@@ -1,73 +1,50 @@
-import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon } from 'lucide-react';
-
+import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon } from "lucide-react";
 export default function AIMarketingAutomationSuite() {
   const features = [
-    'AI-powered audience segmentation and targeting',
-    'Predictive customer behavior modeling',
-    'Automated content generation and optimization',
-    'Multi-channel campaign orchestration',
-    'Real-time performance analytics and optimization',
-    'Personalized customer journey mapping',
-    'A/B testing with AI-driven insights',
-    'Social media automation and scheduling',
-    'Email marketing with smart personalization',
-    'ROI tracking and attribution modeling'
-  ];
+    'AI-powered audience segmentation and targetingPredictive customer behavior modeling',
+    'Automated content generation and optimizationMulti-channel campaign orchestration',
+    'Real-time performance analytics and optimizationPersonalized customer journey mapping',
+    'A/B testing with AI-driven insightsSocial media automation and scheduling',
+    'Email marketing with smart personalizationROI tracking and attribution modeling'
+  ],
 
   const benefits = [
-    'Increase conversion rates by 40-80%',
-    'Reduce customer acquisition costs by 30-50%',
-    'Improve customer lifetime value by 25-60%',
-    'Automate 70% of marketing tasks',
-    'Real-time campaign optimization',
-    'Data-driven marketing decisions'
-  ];
+    'Increase conversion rates by 40-80%Reduce customer acquisition costs by 30-50%',
+    'Improve customer lifetime value by 25-60%Automate 70% of marketing tasks',
+    'Real-time campaign optimizationData-driven marketing decisions'
+  ],
 
   const useCases = [
-    'E-commerce marketing automation',
-    'B2B lead generation campaigns',
-    'Customer retention programs',
-    'Product launch campaigns',
-    'Seasonal marketing campaigns',
-    'Account-based marketing (ABM)'
+    'E-commerce marketing automationB2B lead generation campaigns';
+    'Customer retention programsProduct launch campaigns';
+    'Seasonal marketing campaignsAccount-based marketing (ABM)'
   ];
-
   const tiers = [
     { 
-      name: 'Growth', 
-      price: '$1,499/mo', 
-      details: ['Up to 10,000 contacts', 'Basic AI insights', 'Email support', 'Standard integrations'] 
+      name: 'Growth',price: '$1,499/mo', 
+      details: ['Up to 10,000 contactsBasic AI insights', 'Email supportStandard integrations'] 
     },
     { 
-      name: 'Professional', 
-      price: '$3,999/mo', 
-      details: ['Up to 100,000 contacts', 'Advanced AI analytics', 'Priority support', 'Custom integrations'] 
+      name: 'Professional',price: '$3,999/mo', 
+      details: ['Up to 100,000 contactsAdvanced AI analytics', 'Priority supportCustom integrations'] 
     },
     { 
-      name: 'Enterprise', 
-      price: '$9,999/mo', 
-      details: ['Unlimited contacts', 'Custom AI models', 'Dedicated support', 'White-label solution'] 
-    },
-  ];
+      name: 'Enterprise',price: '$9,999/mo', 
+      details: ['Unlimited contactsCustom AI models', 'Dedicated supportWhite-label solution'] 
+    }
+  ],
 
   const marketingChannels = [
-    'Email Marketing',
-    'Social Media',
-    'SMS Marketing',
-    'Push Notifications',
-    'Web Push',
-    'Retargeting Ads'
-  ];
+    'Email MarketingSocial Media',
+    'SMS MarketingPush Notifications',
+    'Web PushRetargeting Ads'
+  ],
 
   const aiCapabilities = [
-    'Predictive analytics',
-    'Content optimization',
-    'Audience targeting',
-    'Campaign automation',
-    'Performance optimization',
-    'Customer insights'
+    'Predictive analyticsContent optimization',
+    'Audience targetingCampaign automation',
+    'Performance optimizationCustomer insights'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center">
@@ -171,7 +148,7 @@ export default function AIMarketingAutomationSuite() {
 
         <div className="mt-12 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">Marketing Automation Workflow</h3>
-          <div className="grid md:grid-cols-4 gap-4 text-center">
+          <div className="grid md: grid-cols-4 gap-4 text-center">
             <div>
               <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-2 font-bold">1</div>
               <h4 className="font-semibold text-zion-slate-dark mb-1">Data Collection</h4>
@@ -211,5 +188,5 @@ export default function AIMarketingAutomationSuite() {
         </div>
       </section>
     </div>
-  );
+  )
 }

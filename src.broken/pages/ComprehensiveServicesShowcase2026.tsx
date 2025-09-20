@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-export default ComprehensiveServicesShowcase2026;
-export default ComprehensiveServicesShowcase2026;
-import { import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+export default ComprehensiveServicesShowcase2026,
+export default ComprehensiveServicesShowcase2026,
+import { import { motion  } from 'framer-motion',
 
 export default function Page() {
-    return `$${price.toLocaleString () }`;
-  };
+    return `$${price.toLocaleString () }`,
+  },
 
   return (<>
       <SEO
@@ -57,7 +57,7 @@ export default function Page() {
           </div>
         </section>
         {/* Search and Filter Section */}
-        <section className="py-8">;
+        <section className="py-8">,
           <div  className="container mx - auto px-4">
             <div  className="bg-white / 5 backdrop - blur - sm rounded-2xl p - 6 border border-white / 10">
               <div  className="grid grid - cols - 1 md:grid - cols - 3 gap-4">
@@ -76,9 +76,9 @@ export default function Page() {
                 <select
                   value={selectedCategory}
                   onChange={ (e) => setSelectedCategory(e.target.value) }
-                  className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - blue -500"
+                  className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus: outline - none focus:ring - 2 focus:ring - blue -500"
 
-                  {categories.map(category => (;
+                  {categories.map(category => (,
                     <option key={category} value={category} className="bg-zinc - 800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>) ) }
@@ -87,9 +87,9 @@ export default function Page() {
                 <select
                   value={selectedInnovationLevel}
                   onChange={ (e) => setSelectedInnovationLevel(e.target.value) }
-                  className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - blue -500"
+                  className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus: outline - none focus:ring - 2 focus:ring - blue -500"
 
-                  {innovationLevels.map(level => (;
+                  {innovationLevels.map(level => (,
                     <option key={level} value={level} className="bg-zinc - 800 text-white">
                       {level === 'all' ? 'All Innovation Levels' : level}
                     </option>) ) }
@@ -99,7 +99,7 @@ export default function Page() {
           </div>
         </section>
         {/* Services Grid */}
-        <section className="py-12">;
+        <section className="py-12">,
           <div  className="container mx - auto px-4">
             <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
               {filteredServices.map((service, index) => (<motion.div
@@ -128,14 +128,14 @@ export default function Page() {
                   </span>
                 </motion.button>) ) }
             </div>
-            {filteredServices.length === 0 && (;
-              <div  className="text-center py-12">;
-                <p className="text-zinc - 400 text-lg">No services found matching your criteria.</p>;
-                <button;
-                  onClick={ () => {;
-                    setSearchTerm('') ;
-                    setSelectedCategory('all') ;
-                    setSelectedInnovationLevel('all') ;
+            {filteredServices.length === 0 && (,
+              <div  className="text-center py-12">,
+                <p className="text-zinc - 400 text-lg">No services found matching your criteria.</p>,
+                <button,
+                  onClick={ () => {,
+                    setSearchTerm('') ,
+                    setSelectedCategory('all') ,
+                    setSelectedInnovationLevel('all') ,
                   }}
                   className="mt-4 px-6 py-3 bg-blue - 500 text-white rounded-lg hover:bg-blue - 600 transition -colors"
                 >
@@ -145,7 +145,7 @@ export default function Page() {
           </div>
         </section>
         {/* Contact CTA Section */}
-        <section className="py-16">;
+        <section className="py-16">,
           <div  className="container mx - auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ export default function Page() {
               </h2>
               <p className="text-xl text-zinc - 300 mb-8 max - w-3xl mx -auto">
                 Join the future with Zion Tech Group's revolutionary 2026 services.Get in touch to discuss how we can help you achieve quantum advantage and AI supremacy.</p>
-              <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+              <div  className="flex flex - col sm: flex - row gap-4 justify -center">
                 <a
                   href="tel:+13024640950"
                   className="flex items - center justify - center gap-2 px-8 py-4 bg-green - 500 text-white font - medium rounded-lg hover:bg-green - 600 transition -colors"
@@ -176,21 +176,21 @@ export default function Page() {
               </div>
               <div  className="mt-8 text-zinc -400">
                 <p > 364 E Main St STE 1008 Middletown DE 19709</p>
-                <p className="text-sm mt-2">Available 24 / 7 for enterprise clients</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
-};
+                <p className="text-sm mt-2">Available 24 / 7 for enterprise clients</p>,
+              </div>,
+            </motion.div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) 
+},
 
 // Icon components
 const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (<svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012 - 2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l - 2.257 1.13a11.042 11.042 0 005.516 5.516l1.13 - 2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01 - 2 2h-1C9.716 21 3 14.284 3 6V5z" />;
-  </svg>;) ;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012 - 2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l - 2.257 1.13a11.042 11.042 0 005.516 5.516l1.13 - 2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01 - 2 2h-1C9.716 21 3 14.284 3 6V5z" />,
+  </svg>,) ,
 
 const EnvelopeIcon: React.FC<{ className?: string }> = ({ className }) => (<svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002 - 2V7a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v10a2 2 0 002 2z" />;
-  </svg>;) ;
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002 - 2V7a2 2 0 00 - 2-2H5a2 2 0 00 - 2 2v10a2 2 0 002 2z" />,
+  </svg>,) ,
 

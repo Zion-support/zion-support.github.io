@@ -1,24 +1,24 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
-import { innovative2025Q4Services } from '../data/innovative-2025-q4-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
-import { specializedBusiness2025Services } from '../data/specialized-business-2025-services';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
+import { innovative2025Q4Services } from '../data/innovative-2025-q4-services',
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services',
+import { specializedBusiness2025Services } from '../data/specialized-business-2025-services',
 
 export default function Innovative2025Q4ShowcasePage() {
   const allServices = [
     ...innovative2025Q4Services,
     ...emergingTech2025Services,
     ...specializedBusiness2025Services
-  ];
+  ],
 
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -26,8 +26,7 @@ export default function Innovative2025Q4ShowcasePage() {
         title="Innovative 2025 Q4 Micro SAAS Services Showcase | Zion Tech Group"
         description="Discover cutting-edge micro SAAS services including AI platforms, blockchain solutions, IoT platforms, and specialized business solutions. Transform your business with innovative technology."
         keywords={[
-          'micro SAAS', 'AI services', 'blockchain', 'IoT', 'edge computing', 
-          'business automation', 'healthcare compliance', 'financial services', 
+          'micro SAASAI services', 'blockchainIoT', 'edge computingbusiness automation', 'healthcare compliancefinancial services', 
           'innovation management'
         ]}
       />
@@ -123,7 +122,7 @@ export default function Innovative2025Q4ShowcasePage() {
                 title: 'Specialized Industry',
                 description: 'Tailored solutions for healthcare, finance, and specialized sectors',
                 icon: '🏢',
-                count: allServices.filter(s => ['Healthcare', 'Financial Services', 'Manufacturing', 'Education', 'Government'].includes(s.category)).length,
+                count: allServices.filter(s => ['HealthcareFinancial Services', 'ManufacturingEducation', 'Government'].includes(s.category)).length,
                 color: 'from-teal-600 to-green-700'
               }
             ].map((category, index) => (
@@ -262,10 +261,8 @@ export default function Innovative2025Q4ShowcasePage() {
                 period: '/month',
                 description: 'Perfect for small businesses and startups',
                 features: [
-                  'AI-powered analytics',
-                  'Basic automation',
-                  'Standard support',
-                  'Core integrations'
+                  'AI-powered analyticsBasic automation',
+                  'Standard supportCore integrations'
                 ],
                 color: 'from-green-600 to-emerald-700'
               },
@@ -275,10 +272,8 @@ export default function Innovative2025Q4ShowcasePage() {
                 period: '/month',
                 description: 'Ideal for growing businesses',
                 features: [
-                  'Advanced AI capabilities',
-                  'Full automation suite',
-                  'Priority support',
-                  'Advanced integrations',
+                  'Advanced AI capabilitiesFull automation suite',
+                  'Priority supportAdvanced integrations',
                   'Custom workflows'
                 ],
                 color: 'from-blue-600 to-indigo-700',
@@ -290,12 +285,9 @@ export default function Innovative2025Q4ShowcasePage() {
                 period: '/month',
                 description: 'For large organizations',
                 features: [
-                  'Enterprise AI platform',
-                  'Full process automation',
-                  'Dedicated support',
-                  'Custom development',
-                  'Advanced security',
-                  'Compliance features'
+                  'Enterprise AI platformFull process automation',
+                  'Dedicated supportCustom development',
+                  'Advanced securityCompliance features'
                 ],
                 color: 'from-purple-600 to-pink-700'
               }
@@ -375,7 +367,7 @@ export default function Innovative2025Q4ShowcasePage() {
             <div>
               <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
               <div className="space-y-2">
-                <Link href="/services" className="block text-gray-300 hover:text-white transition-colors">
+                <Link href="/services" className="block text-gray-300 hover: text-white transition-colors">
                   All Services
                 </Link>
                 <Link href="/about" className="block text-gray-300 hover:text-white transition-colors">
@@ -406,5 +398,5 @@ export default function Innovative2025Q4ShowcasePage() {
         </footer>
         </UltraFuturisticBackground>
       </div>
-    );
+    )
   }

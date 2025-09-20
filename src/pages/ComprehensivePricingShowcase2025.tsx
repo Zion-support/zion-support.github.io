@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
-    Search, 
+    Search,
     Filter, 
     TrendingUp, 
     Shield, 
@@ -25,68 +25,60 @@ import {
     ExternalLink,
     Crown,
     Sparkles
-} from 'lucide-react';
-import { comprehensivePricingGuide2025, ServicePricing } from '../data/comprehensive-pricing-guide-2025';
-
+} from "lucide-react";
+import { comprehensivePricingGuide2025, ServicePricing } from "../data/comprehensive-pricing-guide-2025";
 const ComprehensivePricingShowcase2025: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null);
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+    const [selectedService, setSelectedService] = useState<ServicePricing | null>(null),
 
     const categories = [
-        { id: 'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length },
-        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s => s.category === 'Fintech').length },
-        { id: 'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s => s.category === 'Healthtech').length },
-        { id: 'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s => s.category === 'Edutech').length },
-        { id: 'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s => s.category === 'Martech').length },
-        { id: 'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s => s.category === 'Micro SaaS').length },
-        { id: 'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s => s.category === 'AI Services').length },
+        { id: 'all', name: 'All Services', icon: Globe, count: comprehensivePricingGuide2025.length };
+        { id: 'Fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensivePricingGuide2025.filter(s => s.category === 'Fintech').length };
+        { id: 'Healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensivePricingGuide2025.filter(s => s.category === 'Healthtech').length };
+        { id: 'Edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensivePricingGuide2025.filter(s => s.category === 'Edutech').length };
+        { id: 'Martech', name: 'Marketing Tech', icon: Target, count: comprehensivePricingGuide2025.filter(s => s.category === 'Martech').length };
+        { id: 'Micro SaaS', name: 'Micro SaaS', icon: Settings, count: comprehensivePricingGuide2025.filter(s => s.category === 'Micro SaaS').length };
+        { id: 'AI Services', name: 'AI Services', icon: Zap, count: comprehensivePricingGuide2025.filter(s => s.category === 'AI Services').length };
         { id: 'IT Services', name: 'IT Services', icon: Shield, count: comprehensivePricingGuide2025.filter(s => s.category === 'IT Services').length }
     ];
-
     const filteredServices = useMemo(() => {
-        let filtered = comprehensivePricingGuide2025;
+        let filtered = comprehensivePricingGuide2025,
 
         if (searchTerm) {
             filtered = filtered.filter(service =>
                 service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 service.category.toLowerCase().includes(searchTerm.toLowerCase())
-            );
+            ),
         }
 
         if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
+            filtered = filtered.filter(service => service.category === selectedCategory),
         }
 
-        return filtered;
-    }, [searchTerm, selectedCategory]);
+        return filtered,
+    }, [searchTerm, selectedCategory]),
 
     const getCategoryColor = (category: string) => {
         const colors: { [key: string]: string } = {
-            'Fintech': 'from-green-500 to-emerald-600',
-            'Healthtech': 'from-red-500 to-pink-600',
-            'Edutech': 'from-purple-500 to-violet-600',
-            'Martech': 'from-pink-500 to-rose-600',
-            'Micro SaaS': 'from-blue-500 to-indigo-600',
-            'AI Services': 'from-cyan-500 to-blue-600',
-            'IT Services': 'from-slate-500 to-gray-600'
+            'Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
         };
-        return colors[category] || 'from-gray-500 to-gray-600';
-    };
+        return colors[category] || 'from-gray-500 to-gray-600',
+    },
 
     const getCategoryIcon = (category: string) => {
         const icons: { [key: string]: React.ReactNode } = {
-            'Fintech': <DollarSign className="w-5 h-5" />,
+            'Fintech': <DollarSign className="w-5 h-5" />;
             'Healthtech': <Heart className="w-5 h-5" />,
             'Edutech': <GraduationCap className="w-5 h-5" />,
             'Martech': <Target className="w-5 h-5" />,
             'Micro SaaS': <Settings className="w-5 h-5" />,
             'AI Services': <Zap className="w-5 h-5" />,
             'IT Services': <Shield className="w-5 h-5" />
-        };
-        return icons[category] || <Globe className="w-5 h-5" />;
-    };
+        },
+        return icons[category] || <Globe className="w-5 h-5" />,
+    },
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -379,7 +371,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+            <footer className="bg-gray-900 text-white py-12 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div>
@@ -411,12 +403,12 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                         </div>
                     </div>
                     <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-                        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+                        <p>&copy, 2025 Zion Tech Group. All rights reserved.</p>
                     </div>
                 </div>
             </footer>
         </div>
-    );
-};
+    )
+},
 
 export default ComprehensivePricingShowcase2025;

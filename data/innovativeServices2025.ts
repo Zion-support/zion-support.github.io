@@ -1,16 +1,16 @@
 export interface InnovativeService2025 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  price: number;
-  marketPrice: string;
-  rating: number;
-  reviews: number;
-  aiScore: number;
-  features: string[];
-  benefits: string[];
-  launchDate: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  price: number,
+  marketPrice: string,
+  rating: number,
+  reviews: number,
+  aiScore: number,
+  features: string[],
+  benefits: string[],
+  launchDate: string
 }
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
@@ -25,18 +25,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 156,
     aiScore: 95,
     features: [
-      'Autonomous decision making',
-      'Real-time business analytics',
-      'Predictive market analysis',
-      'Automated resource allocation',
-      'Intelligent risk management',
-      'Dynamic strategy optimization'
+      'Autonomous decision makingReal-time business analytics',
+      'Predictive market analysisAutomated resource allocation',
+      'Intelligent risk managementDynamic strategy optimization'
     ],
     benefits: [
-      'Reduce operational costs by 40%',
-      'Improve decision accuracy by 85%',
-      '24/7 autonomous operation',
-      'Scalable business management'
+      'Reduce operational costs by 40%Improve decision accuracy by 85%',
+      '24/7 autonomous operationScalable business management'
     ],
     launchDate: '2025-01-15'
   },
@@ -51,18 +46,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 89,
     aiScore: 92,
     features: [
-      'Quantum-enhanced processing',
-      'Edge AI deployment',
-      'Real-time data analytics',
-      'Low-latency computing',
-      'Scalable infrastructure',
-      'Advanced security protocols'
+      'Quantum-enhanced processingEdge AI deployment',
+      'Real-time data analyticsLow-latency computing',
+      'Scalable infrastructureAdvanced security protocols'
     ],
     benefits: [
-      '10x faster processing speed',
-      'Reduced latency by 90%',
-      'Enhanced security features',
-      'Cost-effective edge deployment'
+      '10x faster processing speedReduced latency by 90%',
+      'Enhanced security featuresCost-effective edge deployment'
     ],
     launchDate: '2025-02-01'
   },
@@ -77,18 +67,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 234,
     aiScore: 88,
     features: [
-      'Workflow automation',
-      'Customer lifecycle management',
-      'Revenue optimization',
-      'Performance analytics',
-      'Integration management',
-      'Scalability tools'
+      'Workflow automationCustomer lifecycle management',
+      'Revenue optimizationPerformance analytics',
+      'Integration managementScalability tools'
     ],
     benefits: [
-      'Increase efficiency by 60%',
-      'Reduce manual tasks by 80%',
-      'Improve customer retention',
-      'Faster time to market'
+      'Increase efficiency by 60%Reduce manual tasks by 80%',
+      'Improve customer retentionFaster time to market'
     ],
     launchDate: '2025-01-20'
   },
@@ -103,18 +88,13 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 178,
     aiScore: 91,
     features: [
-      'AI content generation',
-      'Multi-channel distribution',
-      'SEO optimization',
-      'Performance analytics',
-      'Brand consistency tools',
-      'Automated scheduling'
+      'AI content generationMulti-channel distribution',
+      'SEO optimizationPerformance analytics',
+      'Brand consistency toolsAutomated scheduling'
     ],
     benefits: [
-      'Reduce content creation time by 70%',
-      'Improve SEO rankings',
-      'Increase engagement rates',
-      'Maintain brand consistency'
+      'Reduce content creation time by 70%Improve SEO rankings',
+      'Increase engagement ratesMaintain brand consistency'
     ],
     launchDate: '2025-02-10'
   },
@@ -129,40 +109,35 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     reviews: 312,
     aiScore: 94,
     features: [
-      'AI threat detection',
-      'Automated incident response',
-      'Advanced malware protection',
-      'Real-time monitoring',
-      'Compliance management',
-      'Security analytics'
+      'AI threat detectionAutomated incident response',
+      'Advanced malware protectionReal-time monitoring',
+      'Compliance managementSecurity analytics'
     ],
     benefits: [
-      'Prevent 99.9% of cyber threats',
-      'Reduce response time by 95%',
-      'Ensure compliance standards',
-      'Protect critical assets'
+      'Prevent 99.9% of cyber threatsReduce response time by 95%',
+      'Ensure compliance standardsProtect critical assets'
     ],
     launchDate: '2025-01-05'
   }
-];
+],
 
 export const getServicesByCategory = (category: string) => {
-  if (category === 'all') return INNOVATIVE_SERVICES_2025;
-  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
-};
+  if (category === 'all') return INNOVATIVE_SERVICES_2025,
+  return INNOVATIVE_SERVICES_2025.filter(service => service.category === category)
+},
 
 export const getServicesByPriceRange = (priceRange: string) => {
-  if (priceRange === 'all') return INNOVATIVE_SERVICES_2025;
+  if (priceRange === 'all') return INNOVATIVE_SERVICES_2025,
   
-  const [min, max] = priceRange.split('-').map(Number);
+  const [min, max] = priceRange.split('-').map(Number),
   if (priceRange === '3000+') {
-    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000);
+    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000),
   }
-  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max);
-};
+  return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max),
+},
 
 export const getTopRatedServices = (limit: number = 5) => {
   return [...INNOVATIVE_SERVICES_2025]
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit);
-};
+    .slice(0, limit),
+},

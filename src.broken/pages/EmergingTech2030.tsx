@@ -1,21 +1,21 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  };
+,
+  },
 
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0
 
 },
-    visible: {;
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+    visible: {,
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5
+      },
+    },
+  },
 
   const serviceIcons = {
   'Quantum Computing': Brain,
@@ -23,15 +23,15 @@ export default function Page() {
     'Neuromorphic Computing': Brain,
     'Synthetic Biology': Heart,
     'Space Technology': Rocket,
-    'Brain - Computer Interface': Brain,;
-  ;
-  ;
-  ;
-  ;
-  'Fusion Energy': Zap;
-  ;
+    'Brain - Computer Interface': Brain,
+  ,
+  ,
+  ,
+  ,
+  'Fusion Energy': Zap,
+  ,
 
-};
+},
 
   return (<>
       <SEO
@@ -103,7 +103,7 @@ export default function Page() {
         </section>
 
         {/* Services Overview */}
-        <section className="py-20 px-4">;
+        <section className="py-20 px-4">,
           <motion.div
             className="container mx - auto max - w-7xl"
             variants={containerVariants}
@@ -116,12 +116,12 @@ export default function Page() {
               </h2>
               <p className="text-xl text-gray - 400 max - w-3xl mx -auto">
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
-              </p>;
-            </motion.div>;
-;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-              {emergingTechServices2030.map((service, index) => {;
-                const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
+              </p>,
+            </motion.div>,
+,
+            <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">,
+              {emergingTechServices2030.map((service, index) => {,
+                const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu,
 
                 return (<motion.div
                     key = {service.id}
@@ -170,19 +170,19 @@ export default function Page() {
                       to = {
   `/services/${service.id.replace(/-/g,
   '-') }`}
-                      className="inline - flex items - center gap-2 text-cyan - 400 hover:text-cyan - 300 transition -colors group"
-                    >;
-                      Learn More;
-                      <ArrowRight className="w-4 h-4 group - hover:translate - x-1 transition -transform" />;
-                    </Link>;
-                  </motion.div>;) ;
+                      className="inline - flex items - center gap-2 text-cyan - 400 hover: text-cyan - 300 transition -colors group"
+                    >,
+                      Learn More,
+                      <ArrowRight className="w-4 h-4 group - hover:translate - x-1 transition -transform" />,
+                    </Link>,
+                  </motion.div>,) 
               }) }
             </div>
           </motion.div>
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className="py-20 px-4 bg-gradient - to - r from - slate - 900 / 50 to - slate -800 / 50">;
+        <section className="py-20 px-4 bg-gradient - to - r from - slate - 900 / 50 to - slate -800 / 50">,
           <motion.div
             className="container mx - auto max - w-6xl"
             variants={containerVariants}
@@ -246,13 +246,13 @@ export default function Page() {
                   </div>
                   <h3 className="text-xl font - bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray - 400 leading -relaxed">{feature.description}</p>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
           </motion.div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4">;
+        <section className="py-20 px-4">,
           <motion.div
             className="container mx - auto max - w-4xl text-center"
             variants={containerVariants}
@@ -284,7 +284,7 @@ export default function Page() {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex flex - col sm:flex - row gap-4 justify -center">
+            <motion.div variants={itemVariants} className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 rounded-lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale -105"
@@ -297,9 +297,9 @@ export default function Page() {
 
                 Get Custom Quote
               </Link>
-            </motion.div>;
-          </motion.div>;
-        </section>;
-      </div>;
-    </>;) ;
+            </motion.div>,
+          </motion.div>,
+        </section>,
+      </div>,
+    </>,) 
 }

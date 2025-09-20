@@ -1,16 +1,15 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agentic Sandbox Patterns | Zion Tech Group';
+  title: 'AI 2026: Agentic Sandbox Patterns | Zion Tech Group',
   description:,
-    'Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.';
+    'Isolation domains, scoped permissions, and runtime guards for safe agent tool use in production.',
   keywords: [,
-    'agent sandboxtool use safety';
-    'policy-as-coderuntime guards';
-    'isolation domainseval gates',
-  ],
-};
+    'agent sandboxtool use safetypolicy-as-coderuntime guards',
+    'isolation domainseval gates'
+  ]
+},
 export default function AgenticSandboxPatternsPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -65,6 +64,5 @@ export default function AgenticSandboxPatternsPage() {,
           </div>,
         </article>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

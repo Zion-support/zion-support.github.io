@@ -1,20 +1,20 @@
-import { useParams  } from 'react-router-dom';
+import { useParams  } from 'react-router-dom',
 
 export default function Page() {
             catch(error) {
-                // // // // // // // console.error("Error fetching profile:", error) ;
-                setIsError(true) ;
+                // // // // // // // console.error("Error fetching profile:", error) ,
+                setIsError(true) ,
                 toast({
                     title: "Error",
                     description: "Failed to load profile.Please try again later.",
-                    variant: "destructive",
+                    variant: "destructive"
                 }) }
             finally {
                 setIsLoading(false) }
-        };
+        },
         if(profileId) {
             fetchProfile () }
-    }, [profileId]) ;
+    }, [profileId]) ,
     if(isLoading) {
         return (<div className="min - h-screen flex items - center justify -center">
         <span className="loading loading - ring loading -lg"></span>

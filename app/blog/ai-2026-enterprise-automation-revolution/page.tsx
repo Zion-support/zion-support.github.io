@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Enterprise Automation Revolution - Zion Tech Group';
-  description: 'Discover the revolutionary AI automation solutions that will transform enterprises in 2026. Advanced workflows, intelligent process automation, and autonomous business operations.';
-  keywords: ['AI automation 2026enterprise automation', 'intelligent workflowsautonomous business', 'AI transformation'],
-};
+  title: 'AI 2026: Enterprise Automation Revolution - Zion Tech Group',
+  description: 'Discover the revolutionary AI automation solutions that will transform enterprises in 2026. Advanced workflows, intelligent process automation, and autonomous business operations.',
+  keywords: ['AI automation 2026enterprise automationintelligent workflowsautonomous business', 'AI transformation']
+},
 export default function AI2026EnterpriseAutomationRevolution() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">,
@@ -19,7 +19,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
               AI 2026: Enterprise Automation Revolution,
             </h1>,
             <p className="text-xl text-gray-600 leading-relaxed">,
-              The complete guide to transforming your enterprise with next-generation AI automation;
+              The complete guide to transforming your enterprise with next-generation AI automation,
               intelligent workflows, and autonomous business operations.,
             </p>,
           </div>,
@@ -46,7 +46,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </div>,
-          {/* Key Technologies */,}
+          {/* Key Technologies */}
           <section className="mb-12">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Technologies Driving the Revolution</h2>,
             <div className="grid md: grid-cols-2 gap-8">,
@@ -54,7 +54,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
                 <div className="text-4xl mb-4">🧠</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous AI Agents</h3>,
                 <p className="text-gray-600 mb-4">,
-                  Self-managing AI systems that can execute complex business processes with minimal human intervention;
+                  Self-managing AI systems that can execute complex business processes with minimal human intervention,
                   learning and adapting in real-time.,
                 </p>,
                 <ul className="text-sm text-gray-600 space-y-1">,
@@ -67,7 +67,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
                 <div className="text-4xl mb-4">⚡</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Intelligent Workflow Orchestration</h3>,
                 <p className="text-gray-600 mb-4">,
-                  Advanced workflow engines that can dynamically adapt processes based on real-time conditions;
+                  Advanced workflow engines that can dynamically adapt processes based on real-time conditions,
                   resource availability, and business priorities.,
                 </p>,
                 <ul className="text-sm text-gray-600 space-y-1">,
@@ -132,7 +132,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </section>,
-          {/* Business Impact */,}
+          {/* Business Impact */}
           <section className="mb-12">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Expected Business Impact</h2>,
             <div className="grid md: grid-cols-2 gap-8">,
@@ -180,7 +180,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
               </div>,
             </div>,
           </section>,
-          {/* Call to Action */,}
+          {/* Call to Action */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-white text-center">,
             <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>,
             <p className="text-lg mb-6 opacity-90">,
@@ -201,7 +201,7 @@ export default function AI2026EnterpriseAutomationRevolution() {,
               </Link>,
             </div>,
           </div>,
-          {/* Related Content */,}
+          {/* Related Content */}
           <div className="mt-12">,
             <h3 className="text-xl font-bold text-gray-900 mb-6">Related Content</h3>,
             <div className="grid md: grid-cols-2 gap-6">,
@@ -217,6 +217,5 @@ export default function AI2026EnterpriseAutomationRevolution() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

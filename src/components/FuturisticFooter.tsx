@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -24,70 +24,66 @@ import {
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
-} from 'lucide-react';
+} from "lucide-react";
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const currentYear = new Date().getFullYear();
+  },
+  const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: "Services",
-      links: [
-        { name: "AI & Machine Learning", href: "/ai-services" },
-        { name: "Micro SAAS Solutions", href: "/micro-saas" },
-        { name: "IT Infrastructure", href: "/it-services" },
-        { name: "Emerging Technologies", href: "/emerging-tech" },
-        { name: "Cybersecurity", href: "/it-services/cybersecurity" },
-        { name: "Cloud Solutions", href: "/it-services/cloud" },
-        { name: "DevOps & Automation", href: "/it-services/devops" },
+      title: "Services",links: [
+        { name: "AI & Machine Learning", href: "/ai-services" };
+        { name: "Micro SAAS Solutions", href: "/micro-saas" };
+        { name: "IT Infrastructure", href: "/it-services" };
+        { name: "Emerging Technologies", href: "/emerging-tech" };
+        { name: "Cybersecurity", href: "/it-services/cybersecurity" };
+        { name: "Cloud Solutions", href: "/it-services/cloud" };
+        { name: "DevOps & Automation", href: "/it-services/devops" };
         { name: "Data Management", href: "/it-services/data" }
       ]
-    },
+    };
     {
-      title: "Solutions",
-      links: [
-        { name: "Quantum Computing", href: "/emerging-tech/quantum" },
-        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
-        { name: "Edge Computing", href: "/emerging-tech/edge" },
-        { name: "IoT Solutions", href: "/emerging-tech/iot" },
-        { name: "Healthcare AI", href: "/ai-services/healthcare" },
-        { name: "Financial AI", href: "/ai-services/financial" },
-        { name: "Green Technology", href: "/green-it" },
+      title: "Solutions",links: [
+        { name: "Quantum Computing", href: "/emerging-tech/quantum" };
+        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" };
+        { name: "Edge Computing", href: "/emerging-tech/edge" };
+        { name: "IoT Solutions", href: "/emerging-tech/iot" };
+        { name: "Healthcare AI", href: "/ai-services/healthcare" };
+        { name: "Financial AI", href: "/ai-services/financial" };
+        { name: "Green Technology", href: "/green-it" };
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },
+    };
     {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "/about" },
-        { name: "Our Team", href: "/about#team" },
-        { name: "Careers", href: "/careers" },
-        { name: "Partners", href: "/partners" },
-        { name: "News & Blog", href: "/blog" },
-        { name: "Press Kit", href: "/press" },
-        { name: "Investor Relations", href: "/investors" },
+      title: "Company",links: [
+        { name: "About Us", href: "/about" };
+        { name: "Our Team", href: "/about#team" };
+        { name: "Careers", href: "/careers" };
+        { name: "Partners", href: "/partners" };
+        { name: "News & Blog", href: "/blog" };
+        { name: "Press Kit", href: "/press" };
+        { name: "Investor Relations", href: "/investors" };
         { name: "Sustainability", href: "/sustainability" }
       ]
-    },
+    };
     {
-      title: "Resources",
-      links: [
-        { name: "Documentation", href: "/docs" },
-        { name: "API Reference", href: "/api" },
-        { name: "Developer Portal", href: "/developer" },
-        { name: "Support Center", href: "/support" },
-        { name: "FAQ", href: "/faq" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "Case Studies", href: "/case-studies" },
+      title: "Resources",links: [
+        { name: "Documentation", href: "/docs" };
+        { name: "API Reference", href: "/api" };
+        { name: "Developer Portal", href: "/developer" };
+        { name: "Support Center", href: "/support" };
+        { name: "FAQ", href: "/faq" };
+        { name: "Contact Us", href: "/contact" };
+        { name: "Case Studies", href: "/case-studies" };
         { name: "Marketplace", href: "/marketplace" }
       ]
     }
   ];
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin };
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter };
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook };
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
   return (

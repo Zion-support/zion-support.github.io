@@ -47,6 +47,6 @@ export default function ReplyCard({
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"`

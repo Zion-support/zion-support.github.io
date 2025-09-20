@@ -1,81 +1,81 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2  } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react',
+import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2  } from 'lucide-react',
 export default function Page() {
-, [messages]);
+, [messages]),
   const handleSendMessage = async () => {
-    if(!inputValue.trim()) return;
+    if(!inputValue.trim()) return,
     const userMessage = {
 
       id: Date.now().toString(),
       type: 'user',
       content: inputValue,
-      timestamp: new Date()};
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsTyping(true);
+      timestamp: new Date()},
+    setMessages(prev => [...prev, userMessage]),
+    setInputValue(''),
+    setIsTyping(true),
     // Simulate AI response
     setTimeout()
       () => {
         const randomResponse =
-          mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)];
+          mockAIResponses[Math.floor(Math.random() * mockAIResponses.length)],
         const aiMessage = {
 
           id: (Date.now() + 1).toString(),
           type: 'assistant',
           content: randomResponse,
-          timestamp: new Date()};
-        setMessages(prev => [...prev, aiMessage]);
-        setIsTyping(false);
+          timestamp: new Date()},
+        setMessages(prev => [...prev, aiMessage]),
+        setIsTyping(false),
       },
       1500 + Math.random() * 1000
-    );
-  };
+    ),
+  },
   const handleVoiceInput = () => {
     if(!isListening) {
 
-      setIsListening(true);
+      setIsListening(true),
       // Simulate voice recognition
       setTimeout(() => {
 '"
-        const voiceText = "I'm interested in your AI development services";
-        setInputValue(voiceText);
-        setIsListening(false);
-      }, 2000);
+        const voiceText = "I'm interested in your AI development services",
+        setInputValue(voiceText),
+        setIsListening(false),
+      }, 2000),
     } else {
 
-      setIsListening(false);
+      setIsListening(false),
     }
-  };
+  },
   const handleKeyPress = e => {
 
     if(e.key === 'Enter' && !e.shiftKey) {
 
-      e.preventDefault();
-      handleSendMessage();
+      e.preventDefault(),
+      handleSendMessage(),
     }
-  };
+  },
   const toggleChat = () => {
     if(isOpen) {
 
-      setIsMinimized(!isMinimized);
+      setIsMinimized(!isMinimized),
     } else {
 
-      setIsOpen(true);
-      setIsMinimized(false);
+      setIsOpen(true),
+      setIsMinimized(false),
     }
-  };
+  },
   if(!isOpen) {
 
     return ()
       <button
         onClick={toggleChat}"
-        className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
+        className="fixed bottom-4 right-4 p-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full shadow-lg hover: shadow-xl transition-all duration-300 z-50 group"
         title="Chat with Zion AI"
       >"
         <MessageCircle className="w-6 h-6" />"
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
       </button>
-    );
+    )
   }
   if(isMinimized) {
 
@@ -87,14 +87,14 @@ export default function Page() {
             <span className="text-sm text-zion-slate">Zion AI is online</span>
             <button
               onClick={toggleChat}"
-              className="text-zion-slate-light hover:text-zion-slate transition-colors"
+              className="text-zion-slate-light hover: text-zion-slate transition-colors"
             >"
               <Maximize2 className="w-4 h-4" />
             </button>
           </div>
         </div>
       </div>
-    );
+    )
   }
   return ("
     <div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col">
@@ -227,7 +227,7 @@ export default function Page() {
           <button
             onClick={handleSendMessage}
             disabled={!inputValue.trim()}"
-            className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="p-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover: from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             title="Send Message"
           >"
             <Send className="w-4 h-4" />
@@ -240,6 +240,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 '"`

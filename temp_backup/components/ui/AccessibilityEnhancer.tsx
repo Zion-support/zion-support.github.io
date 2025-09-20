@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Eye, EyeOff, Volume2, VolumeX, MousePointer, 
   Keyboard, Monitor, Smartphone, Sun, Moon, 
   Accessibility, SkipForward, SkipBack
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  keyboardNavigation: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  highContrast: boolean,
+  largeText: boolean,
+  reducedMotion: boolean,
+  screenReader: boolean,
+  keyboardNavigation: boolean,
+  focusIndicator: boolean,
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'
 }
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -22,8 +22,8 @@ const AccessibilityEnhancer: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AccessibilityEnhancer</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
 
-export default RevolutionaryAdBanner;
+export default RevolutionaryAdBanner,

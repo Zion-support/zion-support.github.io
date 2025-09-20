@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 duplicate_media_finder_runner function triggered');
+    console.log('🤖 duplicate_media_finder_runner function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'duplicate_media_finder_runner'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ duplicate_media_finder_runner function failed:', error);
+    console.error('❌ duplicate_media_finder_runner function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "High-frequency Trading",
     reliability: "Medium"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "5,000 + loans issued, $15M + in lending volume, 95% repayment rate",
     logo: "MN"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "2 - 4 weeks"
 
-];
+],
 
 const blockchainBenefits = [{
     title: "Transparency",
     description: "All transactions are visible and verifiable on the blockchain",
     icon: Eye,
-    examples["Public ledgers", "Audit trails", "Real - time tracking"];
-  },;
+    examples["Public ledgers", "Audit trails", "Real - time tracking"],
+  },
   {
     title: "Security",
     description: "Cryptographic security ensures data integrity and immutability",
     icon: Shield,
-    examples["Cryptographic hashing", "Digital signatures", "Consensus mechanisms"];
-  },;
+    examples["Cryptographic hashing", "Digital signatures", "Consensus mechanisms"],
+  },
   {
     title: "Decentralization",
     description: "No single point of failure or central authority",
     icon: Network,
-    examples["Distributed nodes", "Peer - to - peer", "Community governance"];
-  },;
+    examples["Distributed nodes", "Peer - to - peer", "Community governance"],
+  },
   {
     title: "Automation",
     description: "Smart contracts execute automatically based on predefined conditions",
     icon: Zap,
-    examples["Automated payments", "Conditional logic", "Business process automation"];
+    examples["Automated payments", "Conditional logic", "Business process automation"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Development', 'DeFi', 'NFT', 'Supply Chain', 'Identity', 'Interoperability'];
+  const categories = ['AllDevelopment', 'DeFiNFT', 'Supply ChainIdentity', 'Interoperability'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions
-    : blockchainSolutions.filter(solution => solution.category === selectedCategory) ;
+    : blockchainSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -183,10 +183,10 @@ const blockchainBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Blockchain Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -242,13 +242,13 @@ const blockchainBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Blockchain Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -306,13 +306,13 @@ const blockchainBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -368,13 +368,13 @@ const blockchainBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -474,7 +474,7 @@ const blockchainBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -545,13 +545,13 @@ const blockchainBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

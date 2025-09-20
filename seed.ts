@@ -1,5 +1,5 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { PrismaClient } from '@prisma/client',
+const prisma = new PrismaClient(),
 
 async function main() {
   const products = [
@@ -9,7 +9,7 @@ async function main() {
       description: 'Generate blog posts and articles using AI.',
       price: 29.99,
       currency: 'USD',
-      images: ['https://placehold.co/600x400?text=AI+Writer'],
+      images: ['https://placehold.co/600x400?text=AI+Writer']
     },
     {
       id: 'demo-ai-chatbot',
@@ -17,7 +17,7 @@ async function main() {
       description: 'Automate customer chats with a smart AI bot.',
       price: 49.0,
       currency: 'USD',
-      images: ['https://placehold.co/600x400?text=AI+Chatbot'],
+      images: ['https://placehold.co/600x400?text=AI+Chatbot']
     },
     {
       id: 'demo-ai-design',
@@ -25,7 +25,7 @@ async function main() {
       description: 'Create stunning designs from text prompts.',
       price: 39.0,
       currency: 'USD',
-      images: ['https://placehold.co/600x400?text=AI+Design'],
+      images: ['https://placehold.co/600x400?text=AI+Design']
     },
     {
       id: 'demo-ai-voice',
@@ -33,7 +33,7 @@ async function main() {
       description: 'Clone voices for videos and podcasts.',
       price: 25.0,
       currency: 'USD',
-      images: ['https://placehold.co/600x400?text=AI+Voice'],
+      images: ['https://placehold.co/600x400?text=AI+Voice']
     },
     {
       id: 'demo-ai-analytics',
@@ -41,11 +41,11 @@ async function main() {
       description: 'Forecast trends with machine learning analytics.',
       price: 59.0,
       currency: 'USD',
-      images: ['https://placehold.co/600x400?text=AI+Analytics'],
-    },
-  ];
+      images: ['https://placehold.co/600x400?text=AI+Analytics']
+    }
+  ],
 
-  await prisma.product.createMany({ data: products, skipDuplicates: true });
+  await prisma.product.createMany({ data: products, skipDuplicates: true }),
 
   const talents = [
     {
@@ -53,25 +53,25 @@ async function main() {
       role: 'Full Stack Developer',
       avatar: 'https://placehold.co/100x100?text=A',
       rate: 100,
-      skills: ['React', 'Node.js', 'Prisma'],
+      skills: ['ReactNode.js', 'Prisma']
     },
     {
       name: 'Bob Smith',
       role: 'Data Scientist',
       avatar: 'https://placehold.co/100x100?text=B',
       rate: 120,
-      skills: ['Python', 'TensorFlow', 'Pandas'],
+      skills: ['PythonTensorFlow', 'Pandas']
     },
     {
       name: 'Carol Williams',
       role: 'DevOps Engineer',
       avatar: 'https://placehold.co/100x100?text=C',
       rate: 110,
-      skills: ['AWS', 'Docker', 'Kubernetes'],
-    },
-  ];
+      skills: ['AWSDocker', 'Kubernetes']
+    }
+  ],
 
-  await prisma.talent.createMany({ data: talents, skipDuplicates: true });
+  await prisma.talent.createMany({ data: talents, skipDuplicates: true }),
 
   const categories = [
     {
@@ -79,42 +79,42 @@ async function main() {
       name: 'Services',
       slug: 'services',
       icon: 'Briefcase',
-      active: true,
+      active: true
     },
     {
       id: 'talents',
       name: 'Talents',
       slug: 'talents',
       icon: 'Users',
-      active: true,
+      active: true
     },
     {
       id: 'equipment',
       name: 'Equipment',
       slug: 'equipment',
       icon: 'HardDrive',
-      active: true,
+      active: true
     },
     {
       id: 'innovation',
       name: 'Innovation',
       slug: 'innovation',
       icon: 'Lightbulb',
-      active: true,
-    },
-  ];
+      active: true
+    }
+  ],
 
   await (prisma as any).category.createMany({
     data: categories,
-    skipDuplicates: true,
-  });
+    skipDuplicates: true
+  }),
 }
 
 main()
   .catch((e) => {
-    console.error(e);
-    process.exit(1);
+    console.error(e),
+    process.exit(1),
   })
   .finally(async () => {
-    await prisma.$disconnect();
-  });
+    await prisma.$disconnect(),
+  }),

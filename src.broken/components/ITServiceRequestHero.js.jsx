@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 "
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -20,6 +20,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

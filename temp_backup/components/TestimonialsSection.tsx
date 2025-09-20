@@ -1,15 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Quote, User, Building } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Star, Quote, User, Building } from 'lucide-react',
 
 interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar?: string;
+  id: string,
+  name: string,
+  role: string,
+  company: string,
+  content: string,
+  rating: number,
+  avatar?: string
 }
 
 const testimonials: Testimonial[] = [
@@ -61,7 +61,7 @@ const testimonials: Testimonial[] = [
     content: 'Quantum cloud infrastructure has transformed our scalability. We can now handle 10x the load with half the resources.',
     rating: 5
   }
-];
+],
 
 const TestimonialsSection: React.FC = () => {
   return (
@@ -69,7 +69,7 @@ const TestimonialsSection: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">TestimonialsSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default TestimonialsSection;
+export default TestimonialsSection,

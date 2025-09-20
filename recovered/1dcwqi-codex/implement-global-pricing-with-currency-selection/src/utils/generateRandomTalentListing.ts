@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "@/types/listings",
 
 const categories = [
   "Engineering",
@@ -7,7 +7,7 @@ const categories = [
   "Security",
   "Development",
   "Consulting"
-];
+],
 
 const names = [
   "Emma Johnson",
@@ -20,7 +20,7 @@ const names = [
   "Mason Wilson",
   "Isabella Moore",
   "Logan Taylor"
-];
+],
 
 const skillsByCategory: Record<string, string[]> = {
   Engineering: ["C++", "Python", "Systems Design", "Embedded"],
@@ -29,18 +29,18 @@ const skillsByCategory: Record<string, string[]> = {
   Security: ["Pen Testing", "Incident Response", "CISSP", "Risk Management"],
   Development: ["React", "Node.js", "TypeScript", "MongoDB"],
   Consulting: ["AI Ethics", "Governance", "Policy", "Risk Assessment"]
-};
+},
 
 function randomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
+  return arr[Math.floor(Math.random() * arr.length)]
 }
 
 export function generateRandomTalentListing(): ProductListing {
-  const timestamp = Date.now();
-  const category = randomItem(categories);
-  const name = randomItem(names);
-  const price = Math.floor(Math.random() * 100) + 100; // $100 - $199
-  const rating = parseFloat((Math.random() + 4).toFixed(1));
+  const timestamp = Date.now(),
+  const category = randomItem(categories),
+  const name = randomItem(names),
+  const price = Math.floor(Math.random() * 100) + 100, // $100 - $199
+  const rating = parseFloat((Math.random() + 4).toFixed(1)),
 
   return {
     id: `auto-${timestamp}`,
@@ -60,6 +60,6 @@ export function generateRandomTalentListing(): ProductListing {
     aiScore: Math.floor(Math.random() * 20) + 80,
     rating,
     reviewCount: Math.floor(Math.random() * 50) + 1
-  };
+  },
 }
 

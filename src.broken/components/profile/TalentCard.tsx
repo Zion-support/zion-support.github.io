@@ -1,17 +1,17 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import Link from "next/link";
-import { TalentProfile } from "@/types/talent";
+import Link from "next/link",
+import { TalentProfile } from "@/types/talent",
 
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-  isAuthenticated: boolean;
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
 }
 
 export function TalentCard({
@@ -24,28 +24,28 @@ export function TalentCard({
 }: TalentCardProps) {
   const handleViewProfile = () => {
     if (onViewProfile) {
-      onViewProfile(talent.id);
+      onViewProfile(talent.id),
     }
-  };
+  },
 
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(talent);
+      onRequestHire(talent)
     }
-  };
+  },
 
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if (onToggleSave) {
-      onToggleSave(talent.id, !isSaved);
+      onToggleSave(talent.id, !isSaved),
     }
-  };
+  },
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [],
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
@@ -157,7 +157,7 @@ export function TalentCard({
               size="sm"
               variant="ghost"
               onClick={handleViewProfile}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -165,5 +165,5 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  );
+  )
 }

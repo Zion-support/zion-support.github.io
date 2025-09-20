@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AutonomousAIFutureBlog() {
   return (
@@ -159,7 +159,7 @@ export default function AutonomousAIFutureBlog() {
                   <div className="flex flex-wrap gap-4">
                     <a 
                       href="/reports/innovation" 
-                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
+                      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white text-sm font-semibold rounded-lg hover: from-cyan-600 hover:to-fuchsia-600 transition-all duration-200"
                     >
                       Explore Our Innovation Pipeline
                     </a>
@@ -177,5 +177,5 @@ export default function AutonomousAIFutureBlog() {
         </main>
       </div>
     </>
-  );
+  )
 }

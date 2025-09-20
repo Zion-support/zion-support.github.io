@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, UserIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 AI Revolution Success: $50B Annual Savings - 10,000% ROI Success Story';
-  description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings within 18 months.';
-  keywords: ['Case StudyFortune 500', 'AI Revolution10,000% ROI', 'Success StoryManufacturing', '2025-2026'];
+  title: 'Fortune 500 AI Revolution Success: $50B Annual Savings - 10,000% ROI Success Story',
+  description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings within 18 months.',
+  keywords: ['Case StudyFortune 500AI Revolution10,000% ROI', 'Success StoryManufacturing2025-2026'],
   openGraph: {,
-    title: 'Fortune 500 AI Revolution Success: $50B Annual Savings - 10,000% ROI Success Story';
-    description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings within 18 months.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Case StudyFortune 500', 'AI RevolutionSuccess Story'],
+    title: 'Fortune 500 AI Revolution Success: $50B Annual Savings - 10,000% ROI Success Story',
+    description: 'How a Fortune 500 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,000% ROI and $50B in annual savings within 18 months.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Case StudyFortune 500AI RevolutionSuccess Story']
   }
-};
+},
 export default function Fortune500AISuccessCaseStudy() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -369,4 +369,4 @@ export default function Fortune500AISuccessCaseStudy() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

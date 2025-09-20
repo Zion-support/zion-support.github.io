@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download  } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react',
+import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download  } from 'lucide-react',
 ,
   {
 
@@ -22,124 +22,124 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
     growth: 8.5,
     prediction: 4.2,
     category: 'Storage',
-    unit: 'TB'},
-];
+    unit: 'TB'}
+],
 export function AdvancedPerformanceMonitor() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [timeRange, setTimeRange] = useState('1h');
-  const [autoRefresh, setAutoRefresh] = useState(true);
-  const [showPredictions, setShowPredictions] = useState(true);
-  const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isMinimized, setIsMinimized] = useState(false),
+  const [isFullscreen, setIsFullscreen] = useState(false),
+  const [activeTab, setActiveTab] = useState('overview'),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [timeRange, setTimeRange] = useState('1h'),
+  const [autoRefresh, setAutoRefresh] = useState(true),
+  const [showPredictions, setShowPredictions] = useState(true),
+  const [systemMetrics, setSystemMetrics] = useState(mockSystemMetrics),
   const [performanceAlerts, setPerformanceAlerts] = useState()
     mockPerformanceAlerts
-  );
+  ),
   const [scalabilityMetrics, setScalabilityMetrics] = useState()
     mockScalabilityMetrics
-  );
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  ),
+  const [isRefreshing, setIsRefreshing] = useState(false),
   const categories = ['
-    'all',Processor',Memory',Storage',Network',Database',Performance',
-  ];
+    'all',Processor',Memory',Storage',Network',Database',Performance'
+  ],
   const timeRanges = ['
     { value: '15m', label: '15 Minutes' },
     { value: '1h', label: '1 Hour' },
     { value: '6h', label: '6 Hours' },
-    { value: '24h', label: '24 Hours' },
-  ];
+    { value: '24h', label: '24 Hours' }
+  ],
   const filteredMetrics ='
     selectedCategory === 'all'
       ? systemMetrics
-      : systemMetrics.filter(metric => metric.category === selectedCategory);
+      : systemMetrics.filter(metric => metric.category === selectedCategory),
   const refreshData = async () => {
-    setIsRefreshing(true);
+    setIsRefreshing(true),
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsRefreshing(false);
-  };
+    await new Promise(resolve => setTimeout(resolve, 1500)),
+    setIsRefreshing(false),
+  },
   useEffect(() => {
     if(autoRefresh) {
 
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
+      const interval = setInterval(refreshData, 30000), // Refresh every 30 seconds
+      return () => clearInterval(interval),
     }
-  }, [autoRefresh]);
+  }, [autoRefresh]),
   const getStatusColor = status => {
 
     switch(status) {
 
       case 'critical':'
-        return 'bg-red-500 text-white';
+        return 'bg-red-500 text-white',
       case 'warning':'
-        return 'bg-yellow-500 text-white';
-      default:'
-        return 'bg-green-500 text-white';
+        return 'bg-yellow-500 text-white',
+      default: '
+        return 'bg-green-500 text-white'
     }
-  };
+  },
   const getSeverityColor = severity => {
 
     switch(severity) {
 
       case 'critical':'
-        return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
+        return 'bg-red-100 text-red-700 dark: bg-red-900/30 dark:text-red-300',
       case 'high':'
-        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300';
+        return 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300',
       case 'medium':'
-        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
+        return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300',
       default:'
-        return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300';
+        return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
     }
-  };
+  },
   const getTrendIcon = trend => {
 
     switch(trend) {
 
       case 'up':
-        return <TrendingUp className="w-4 h-4 text-red-500" />;
+        return <TrendingUp className="w-4 h-4 text-red-500" />,
       case 'down':"
-        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
-      default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />,
+      default: "
+        return <Activity className="w-4 h-4 text-gray-500" />
     }
-  };
+  },
   const getCategoryIcon = category => {
 
     switch(category) {
 
       case 'Processor':"
-        return <Cpu className="w-5 h-5 text-blue-500" />;
+        return <Cpu className="w-5 h-5 text-blue-500" />,
       case 'Memory':"
-        return <HardDrive className="w-5 h-5 text-green-500" />;
+        return <HardDrive className="w-5 h-5 text-green-500" />,
       case 'Storage':"
-        return <HardDrive className="w-5 h-5 text-purple-500" />;
+        return <HardDrive className="w-5 h-5 text-purple-500" />,
       case 'Network':"
-        return <Network className="w-5 h-5 text-orange-500" />;
+        return <Network className="w-5 h-5 text-orange-500" />,
       case 'Database':"
-        return <Database className="w-5 h-5 text-cyan-500" />;
-      default:"
-        return <Activity className="w-5 h-5 text-gray-500" />;
+        return <Database className="w-5 h-5 text-cyan-500" />,
+      default: "
+        return <Activity className="w-5 h-5 text-gray-500" />
     }
-  };
+  },
   const getUtilizationColor = utilization => {
 
-    if(utilization >= 80) return 'text-red-600';
-    if(utilization >= 60) return 'text-yellow-600';
-    return 'text-green-600';
-  };
+    if(utilization >= 80) return 'text-red-600',
+    if(utilization >= 60) return 'text-yellow-600',
+    return 'text-green-600',
+  },
   if(!isOpen) {
 
     return ()
       <button
         onClick={() => setIsOpen(true)}"
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-300 hover:scale-110 z-40"
         title="Open Performance Monitor"
       >"
         <Activity className="w-6 h-6" />
       </button>
-    );
+    )
   }
   if(isMinimized) {
 
@@ -152,13 +152,13 @@ export function AdvancedPerformanceMonitor() {
           </span>
           <button
             onClick={() => setIsMinimized(false)}"
-            className="ml-auto p-1 hover:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hover: bg-zion-slate-light rounded"
           >"
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
-    );
+    )
   }
   return ()
     <div'
@@ -278,10 +278,10 @@ export function AdvancedPerformanceMonitor() {
           { id: 'metrics', label: 'System Metrics', icon: BarChart3 },
           { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },
           { id: 'scalability', label: 'Scalability', icon: TrendingUp },
-          { id: 'analytics', label: 'Analytics', icon: Zap },
+          { id: 'analytics', label: 'Analytics', icon: Zap }
         ].map(tab => {
 
-          const Icon = tab.icon;
+          const Icon = tab.icon,
           return ()
             <button
               key={tab.id}
@@ -294,7 +294,7 @@ export function AdvancedPerformanceMonitor() {
               <Icon className="w-4 h-4" />
               {tab.label}
             </button>
-          );
+          ),
         })}
       </div>
 
@@ -648,6 +648,6 @@ export function AdvancedPerformanceMonitor() {
         )}
       </div>
     </div>
-  );
+  ),
 }
 '"`

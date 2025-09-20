@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import React, { useState } from 'react',
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025',
 
 export default function Page() {
-  };
+  },
   const handleServiceClick = service => {
 
-    setSelectedService(service);
-  };
+    setSelectedService(service),
+  },
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null),
+  },
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Header Section */}"
@@ -373,7 +373,7 @@ export default function Page() {
       {/* CTA Section */}"
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">"
         <div className="max-w-4xl mx-auto text-center px-4">"
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-gray-300 mb-8">
@@ -397,7 +397,7 @@ export default function Page() {
         </div>
       </section>
     </div>
-  );
-};
-export default InnovativeServicesShowcase;
+  )
+},
+export default InnovativeServicesShowcase,
 '"`

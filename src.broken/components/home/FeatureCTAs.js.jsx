@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import React from 'react',
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',
 export default function Page() {
 ,
     {
@@ -69,8 +69,8 @@ export default function Page() {
       link: '/zion-hire-ai',
       badge: 'Premium',
       details:'
-        'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'},
-  ];
+        'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'}
+  ],
   return ("
     <section className="py-16 bg-gradient-to-b from-background to-background/90">"
       <div className="container mx-auto px-4">"
@@ -124,6 +124,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

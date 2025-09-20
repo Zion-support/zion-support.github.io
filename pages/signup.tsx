@@ -38,26 +38,18 @@ export default function Signup() {
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
+    'TechnologyHealthcare',
+    'FinanceManufacturing',
+    'RetailEducation',
+    'GovernmentNon-profit',
     'Other'
   ]
 
   const useCases = [
-    'AI & Machine Learning',
-    'Cloud Infrastructure',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Data Analytics',
-    'IoT Solutions',
-    'Micro SaaS Development',
-    'Enterprise IT',
+    'AI & Machine LearningCloud Infrastructure',
+    'CybersecurityDigital Transformation',
+    'Data AnalyticsIoT Solutions',
+    'Micro SaaS DevelopmentEnterprise IT',
     'Other'
   ]
 

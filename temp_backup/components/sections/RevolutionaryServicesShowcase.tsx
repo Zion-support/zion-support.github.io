@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services';
-import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services',
+import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard',
 
 interface RevolutionaryServicesShowcaseProps {
-  title?: string;
-  subtitle?: string;
-  maxServices?: number;
-  category?: string;
+  title?: string,
+  subtitle?: string,
+  maxServices?: number,
+  category?: string,
 }
 
 const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps> = ({
@@ -18,9 +18,9 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
 }) => {
   const filteredServices = category 
     ? revolutionaryMicroSaasServices.filter(service => service.category.includes(category))
-    : revolutionaryMicroSaasServices;
+    : revolutionaryMicroSaasServices,
   
-  const displayedServices = filteredServices.slice(0, maxServices);
+  const displayedServices = filteredServices.slice(0, maxServices),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -31,7 +31,7 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -43,20 +43,20 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const getVariantForService = (index: number): 'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk' => {
     const variants: Array<'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk'> = [
-      'quantum', 'holographic', 'neural', 'cyberpunk', 'default'
-    ];
-    return variants[index % variants.length];
-  };
+      'quantumholographic', 'neuralcyberpunk', 'default'
+    ],
+    return variants[index % variants.length],
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">RevolutionaryServicesShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default RevolutionaryServicesShowcase;
+  ),
+},
+export default RevolutionaryServicesShowcase,

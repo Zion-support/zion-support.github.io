@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
- from 'framer-motion';
+ from 'framer-motion',
 
 ,
   {
@@ -11,18 +11,13 @@ export default function Page() {
     price: '$22,999',
     period: '/month',
     description: 'AI - powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
-    features[;
-      'AI network monitoring',
-      'Automatic optimization',
-      'Traffic analysis',
-      'Security automation',
-      'Performance tuning',
-      'Bandwidth management',
-      'Quality of service',
-      'Network analytics',
-      'Alert management',
-      'Reporting tools'
-    ],;
+    features[,
+      'AI network monitoringAutomatic optimization',
+      'Traffic analysisSecurity automation',
+      'Performance tuningBandwidth management',
+      'Quality of serviceNetwork analytics',
+      'Alert managementReporting tools'
+    ],
     popular: true,
     icon: Network,
     color: 'from - purple - 600 to - indigo - 700',
@@ -41,18 +36,13 @@ export default function Page() {
     price: '$35,999',
     period: '/month',
     description: 'Advanced quantum - powered DevOps platform that automates software development, testing, deployment, and operations processes.',
-    features[;
-      'AI - powered CI / CD',
-      'Automated testing',
-      'Deployment automation',
-      'Performance monitoring',
-      'Error tracking',
-      'Team collaboration',
-      'Version control',
-      'Infrastructure as code',
-      'Security scanning',
-      'Compliance automation'
-    ],;
+    features[,
+      'AI - powered CI / CDAutomated testing',
+      'Deployment automationPerformance monitoring',
+      'Error trackingTeam collaboration',
+      'Version controlInfrastructure as code',
+      'Security scanningCompliance automation'
+    ],
     popular: true,
     icon: Rocket,
     color: 'from - orange - 600 to - red - 700',
@@ -71,34 +61,29 @@ export default function Page() {
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive AI - powered data analytics platform that provides real - time insights, predictive analytics, and automated reporting.',
-    features[;
-      'Real - time data processing',
-      'AI - powered insights',
-      'Predictive analytics',
-      'Data visualization',
-      'Automated reporting',
-      'Custom dashboards',
-      'Data integration',
-      'Collaboration tools',
-      'Mobile access',
-      'API integration'
-    ],;
+    features[,
+      'Real - time data processingAI - powered insights',
+      'Predictive analyticsData visualization',
+      'Automated reportingCustom dashboards',
+      'Data integrationCollaboration tools',
+      'Mobile accessAPI integration'
+    ],
     popular: false,
     icon: BarChart3,
     color: 'from - emerald - 600 to - teal - 700',
     category: 'Data & Analytics',
-    realService: true,;
-    marketSize: '$11.2B data analytics market',;
-    growthRate: '220% annual growth',;
-    rating: 4.6,;
-    reviews: 156,;
-    customers: 89;
-  };
-];
+    realService: true,
+    marketSize: '$11.2B data analytics market',
+    growthRate: '220% annual growth',
+    rating: 4.6,
+    reviews: 156,
+    customers: 89
+  },
+],
 
-            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </a>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) ,
+},

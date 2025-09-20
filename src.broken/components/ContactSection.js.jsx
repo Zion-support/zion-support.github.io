@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -13,8 +13,8 @@ export default function Page() {
       city: 'London, UK',
       country: 'United Kingdom',
       address: '1 Canary Wharf, London E14 5AB',"
-      icon: <MapPin className="w-5 h-5" />},
-  ];
+      icon: <MapPin className="w-5 h-5" />}
+  ],
   const supportFeatures = [{
 "
       icon: <Clock className="w-6 h-6" />,
@@ -34,8 +34,8 @@ export default function Page() {
 "
       icon: <Globe className="w-6 h-6" />,
       title: 'Global Reach',
-      description: 'Support available in multiple time zones'},
-  ];
+      description: 'Support available in multiple time zones'}
+  ],
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">"
       <div className="container mx-auto px-4">
@@ -189,7 +189,7 @@ export default function Page() {
           <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your technology needs and discover how
             Zion Tech Group can help transform your business.</p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link"
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
@@ -207,6 +207,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"`

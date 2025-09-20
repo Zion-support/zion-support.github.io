@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Rocket, 
+  Rocket,
   Satellite, 
   Globe, 
   Zap, 
@@ -52,79 +52,47 @@ import {
   Brain,
   Network,
   Cpu
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function SpaceTech() {
   const features = [
     {
-      icon: Rocket,
-      title: "Space Launch Systems",
-      description: "Advanced propulsion and launch vehicle technologies",
-      color: "from-red-500 to-orange-500"
-    },
+      icon: Rocket,title: "Space Launch Systems",description: "Advanced propulsion and launch vehicle technologies",color: "from-red-500 to-orange-500"
+    };
     {
-      icon: Satellite,
-      title: "Satellite Technology",
-      description: "Earth observation and communication satellites",
-      color: "from-blue-500 to-cyan-500"
-    },
+      icon: Satellite,title: "Satellite Technology",description: "Earth observation and communication satellites",color: "from-blue-500 to-cyan-500"
+    };
     {
-      icon: Globe,
-      title: "Earth Observation",
-      description: "Remote sensing and environmental monitoring",
-      color: "from-green-500 to-emerald-500"
-    },
+      icon: Globe,title: "Earth Observation",description: "Remote sensing and environmental monitoring",color: "from-green-500 to-emerald-500"
+    };
     {
-      icon: Zap,
-      title: "Space Communications",
-      description: "High-speed data transmission and networking",
-      color: "from-yellow-500 to-orange-500"
-    },
+      icon: Zap,title: "Space Communications",description: "High-speed data transmission and networking",color: "from-yellow-500 to-orange-500"
+    };
     {
-      icon: Shield,
-      title: "Space Security",
-      description: "Cybersecurity and space defense systems",
-      color: "from-purple-500 to-pink-500"
-    },
+      icon: Shield,title: "Space Security",description: "Cybersecurity and space defense systems",color: "from-purple-500 to-pink-500"
+    };
     {
-      icon: Target,
-      title: "Navigation Systems",
-      description: "Precise positioning and navigation technologies",
-      color: "from-indigo-500 to-blue-500"
+      icon: Target,title: "Navigation Systems",description: "Precise positioning and navigation technologies",color: "from-indigo-500 to-blue-500"
     }
   ];
-
   const applications = [
     {
-      title: "Telecommunications",
-      description: "Global communication networks and internet connectivity",
-      icon: Wifi,
-      benefits: ["Global coverage", "High bandwidth", "Low latency"]
+      title: "Telecommunications",description: "Global communication networks and internet connectivity",icon: Wifi,benefits: ["Global coverage", "High bandwidth", "Low latency"]
     },
     {
-      title: "Environmental Monitoring",
-      description: "Climate change tracking and natural disaster prediction",
-      icon: Activity,
-      benefits: ["Climate data", "Disaster response", "Resource management"]
+      title: "Environmental Monitoring",description: "Climate change tracking and natural disaster prediction",icon: Activity,benefits: ["Climate data", "Disaster response", "Resource management"]
     },
     {
-      title: "Navigation & GPS",
-      description: "Precise positioning and location services",
-      icon: Target,
-      benefits: ["Global positioning", "Navigation systems", "Timing services"]
+      title: "Navigation & GPS",description: "Precise positioning and location services",icon: Target,benefits: ["Global positioning", "Navigation systems", "Timing services"]
     },
     {
-      title: "Scientific Research",
-      description: "Space exploration and astronomical discoveries",
-      icon: Eye,
-      benefits: ["Astronomy", "Planetary science", "Space physics"]
+      title: "Scientific Research",description: "Space exploration and astronomical discoveries",icon: Eye,benefits: ["Astronomy", "Planetary science", "Space physics"]
     }
-  ];
+  ],
 
   const technologies = [
     "Propulsion Systems", "Satellite Design", "Ground Stations", "Launch Vehicles", 
     "Earth Observation", "Space Communications", "Navigation Systems", "Space Robotics", "Space Mining", "Space Habitats"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -178,7 +146,7 @@ export default function SpaceTech() {
               Space Technology Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive space technology platform provides everything you need to explore, 
+              Our comprehensive space technology platform provides everything you need to explore;
               communicate, and operate in the vast expanse of space.
             </p>
           </motion.div>
@@ -304,7 +272,7 @@ export default function SpaceTech() {
               Join the space technology revolution with Zion Tech Group. Our space solutions are designed to explore 
               new frontiers, connect the world, and advance human knowledge beyond Earth's boundaries.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25 flex items-center space-x-2"
@@ -324,5 +292,5 @@ export default function SpaceTech() {
         </div>
       </section>
     </div>
-  );
+  )
 }

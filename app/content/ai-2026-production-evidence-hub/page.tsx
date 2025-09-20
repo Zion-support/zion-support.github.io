@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Production Evidence Hub | Zion Tech Group';
+  title: 'AI 2026: Production Evidence Hub | Zion Tech Group',
   description:,
-    'Blueprint to centralize evals, incidents, approvals, and KPIs for audit‑ready, evidence‑led AI operations.';
-  keywords: ['evaluation hubevidence', 'governanceagents', 'SLOsaudit'],
-};
+    'Blueprint to centralize evals, incidents, approvals, and KPIs for audit‑ready, evidence‑led AI operations.',
+  keywords: ['evaluation hubevidencegovernanceagents', 'SLOsaudit']
+},
 export default function ProductionEvidenceHubPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -26,7 +26,7 @@ export default function ProductionEvidenceHubPage() {,
         <article className="prose prose-lg max-w-none">,
           <h2>Why an Evidence Hub?</h2>,
           <p>,
-            Enterprises shipping autonomous agents need a single source of truth for evaluations, safety incidents;
+            Enterprises shipping autonomous agents need a single source of truth for evaluations, safety incidents,
             approvals, model changes, and KPIs. A centralized hub makes risk transparent, accelerates audits, and,
             enables eval‑gated delivery.,
           </p>,
@@ -57,6 +57,5 @@ export default function ProductionEvidenceHubPage() {,
           <Link href="/content" className="text-emerald-700 font-semibold hover:text-emerald-900">← Back to Content</Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

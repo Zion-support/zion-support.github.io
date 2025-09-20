@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Autonomous Vehicles Revolution 2025 - Zion Tech Group';
-  description: 'Explore the revolutionary advances in autonomous vehicle technology in 2025. Discover how AI is transforming transportation, safety, and mobility across industries.';
-  keywords: ['autonomous vehiclesself-driving', 'AI 2025transportation', 'automotive AI'],
-};
+  title: 'Autonomous Vehicles Revolution 2025 - Zion Tech Group',
+  description: 'Explore the revolutionary advances in autonomous vehicle technology in 2025. Discover how AI is transforming transportation, safety, and mobility across industries.',
+  keywords: ['autonomous vehiclesself-drivingAI 2025transportation', 'automotive AI']
+},
 export default function AutonomousVehiclesRevolution2025Page() {,
   return (,
     <div>,
@@ -27,7 +27,7 @@ export default function AutonomousVehiclesRevolution2025Page() {,
                 The Future of Transportation is Autonomous,
               </h1>,
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-                Experience Level 5 autonomous driving technology that's revolutionizing logistics;
+                Experience Level 5 autonomous driving technology that's revolutionizing logistics,
                 delivery, and transportation across industries with 99.97% safety record.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -47,7 +47,7 @@ export default function AutonomousVehiclesRevolution2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Revolutionary Performance</h2>,
@@ -71,7 +71,7 @@ export default function AutonomousVehiclesRevolution2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Technology Overview */,}
+        {/* Technology Overview */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Level 5 Autonomy Technology</h2>,
@@ -150,7 +150,7 @@ export default function AutonomousVehiclesRevolution2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Economic Impact */,}
+        {/* Economic Impact */}
         <section className="py-16">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Economic Transformation</h2>,
@@ -192,7 +192,7 @@ export default function AutonomousVehiclesRevolution2025Page() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Transportation?</h2>,
@@ -216,5 +216,4 @@ export default function AutonomousVehiclesRevolution2025Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

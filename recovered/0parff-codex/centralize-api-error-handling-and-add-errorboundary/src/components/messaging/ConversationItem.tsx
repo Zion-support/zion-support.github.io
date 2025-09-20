@@ -1,14 +1,14 @@
 
-import React from 'react';
-import { format } from 'date-fns';
-import { cn } from '@/lib/utils';
-import { Conversation } from '@/types/messaging';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import React from 'react',
+import { format } from 'date-fns',
+import { cn } from '@/lib/utils',
+import { Conversation } from '@/types/messaging',
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
 
 interface ConversationItemProps {
-  conversation: Conversation;
-  isActive: boolean;
-  onClick: () => void;
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
 }
 
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
@@ -53,5 +53,5 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         </div>
       )}
     </div>
-  );
+  ),
 }

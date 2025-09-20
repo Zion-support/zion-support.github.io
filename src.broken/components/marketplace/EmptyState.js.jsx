@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb  } from 'lucide-react';
-import { Button } from '@/components/ui/button';
- from 'react-i18next';
+import * as React from 'react',
+import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb  } from 'lucide-react',
+import { Button } from '@/components/ui/button',
+ from 'react-i18next',
 ,
     categories: {
 "
@@ -37,12 +37,12 @@ import { Button } from '@/components/ui/button';
 "
         icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin"/>,
         title: 'Loading...',
-        description: 'We\'re fetching the latest data for you.This should only take a moment.'}};
+        description: 'We\'re fetching the latest data for you.This should only take a moment.'}},
 export function EmptyState({ type, title, description, action, icon }) {
 
-    const { t } = useTranslation();
-    const content = defaultContent[type];
-    const displayIcon = icon || content.icon;"
+    const { t } = useTranslation(),
+    const content = defaultContent[type],
+    const displayIcon = icon || content.icon,"
     return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">"
       <div className="mb-4">
         {displayIcon}
@@ -76,12 +76,12 @@ export function EmptyState({ type, title, description, action, icon }) {
         </div>
       )}
     </div>
-  );
+  ),
 }
 // Specific empty state variants for quick use
 export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = false }) {
 
-    const action = onAddProduct;
+    const action = onAddProduct,
         ? {
 
             label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
@@ -89,10 +89,10 @@ export function ProductsEmptyState({ onRetry, onAddProduct, isAuthenticated = fa
         }
         : onRetry'
             ? { label: 'Try Again', onClick: onRetry }
-            : null;
-    const customDescription = isAuthenticated;'"
+            : null,
+    const customDescription = isAuthenticated,'"
         ? "We're working on adding new products to our marketplace.Check back soon for exciting new offerings, or add your own!"'"
-        : "We're working on adding new products to our marketplace.Check back soon for exciting new offerings, or log in to add your own!";"
+        : "We're working on adding new products to our marketplace.Check back soon for exciting new offerings, or log in to add your own!","
     return (<EmptyState type="products" action={action} description={customDescription}/>)}
 export function CategoriesEmptyState({ onRetry }) {
 "

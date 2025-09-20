@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Shield, Rocket, Star } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Brain, Shield, Rocket, Star } from 'lucide-react',
 
 const StatisticsSection: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const StatisticsSection: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">StatisticsSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default StatisticsSection;
+export default StatisticsSection,

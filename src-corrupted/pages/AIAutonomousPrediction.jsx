@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const AIAutonomousPrediction: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -13,6 +13,5 @@ const AIAutonomousPrediction: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default AIAutonomousPrediction;
+    </div>)},
+export default AIAutonomousPrediction,

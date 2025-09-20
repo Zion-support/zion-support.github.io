@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Menu, X, ChevronDown, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react',
 
 const ModernHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const serviceCategories = [
     { 
@@ -22,44 +22,44 @@ const ModernHeader: React.FC = () => {
       icon: Brain, 
       href: '/services#ai',
       description: 'Intelligent automation and AI solutions',
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
+      services: ['AI AutomationMachine Learning', 'Natural Language ProcessingComputer Vision']
     },
     { 
       name: 'Cloud & DevOps', 
       icon: Cloud, 
       href: '/services#cloud',
       description: 'Cloud infrastructure and DevOps automation',
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']
+      services: ['Cloud MigrationKubernetes', 'DevOps AutomationInfrastructure as Code']
     },
     { 
       name: 'Cybersecurity', 
       icon: Shield, 
       href: '/services#cybersecurity',
       description: 'Advanced security and compliance solutions',
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']
+      services: ['Zero TrustSOC 2 Compliance', 'Threat DetectionSecurity Hardening']
     },
     { 
       name: 'Data & Analytics', 
       icon: BarChart3, 
       href: '/services#data',
       description: 'Data platforms and business intelligence',
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']
+      services: ['Data WarehousingBusiness Intelligence', 'Data QualityReal-time Analytics']
     },
     { 
       name: 'Enterprise Solutions', 
       icon: Database, 
       href: '/services#enterprise',
       description: 'Enterprise-grade business solutions',
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
+      services: ['ERP SystemsCRM Platforms', 'Workflow AutomationIntegration Services']
     },
     { 
       name: 'Emerging Technologies', 
       icon: Rocket, 
       href: '/services#emerging',
       description: 'Quantum computing and blockchain',
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']
+      services: ['Quantum AIBlockchain', 'IoT PlatformsEdge Computing']
     }
-  ];
+  ],
 
   const mainNavigation = [
     { name: 'Home', href: '/', hasDropdown: false },
@@ -69,7 +69,7 @@ const ModernHeader: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies', hasDropdown: false },
     { name: 'Blog', href: '/blog', hasDropdown: false },
     { name: 'Contact', href: '/contact', hasDropdown: false }
-  ];
+  ],
 
   return (
     <motion.header
@@ -251,7 +251,7 @@ const ModernHeader: React.FC = () => {
         )}
       </AnimatePresence>
     </motion.header>
-  );
-};
+  ),
+},
 
-export default ModernHeader;
+export default ModernHeader,

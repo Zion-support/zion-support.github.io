@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import { SEO } from "@/components/SEO";
 import {Header} from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {CheckCircle, Clock, Users, Zap} from "lucide-react";
-
 export default function RequestQuote() {
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -25,7 +24,7 @@ export default function RequestQuote() {
               Get Your Custom Quote
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Whether you need AI services, IT solutions, top talent, or specialized equipment, 
+              Whether you need AI services, IT solutions, top talent, or specialized equipment;
               we'll provide you with a detailed, competitive quote tailored to your specific requirements.
             </p>
           </div>
@@ -177,8 +176,7 @@ export default function RequestQuote() {
               Need Immediate Assistance?
             </h3>
             <p className="text-zion-slate-light mb-6">
-              For urgent requests or to speak with our team directly, contact us:
-            </p>
+              For urgent requests or to speak with our team directly, contact us: </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="mailto:commercial@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-zion-cyan text-zion-blue-dark font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors">
                 Email Us
@@ -193,5 +191,5 @@ export default function RequestQuote() {
       
       <Footer />
     </div>
-  );
+  )
 }

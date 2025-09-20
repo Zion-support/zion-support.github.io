@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'),
+const path = require('path'),
 // Function to fix a single test file,
 function fixTestFile(filePath) {,
   try {,
-    const content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8'),
     // Fix common syntax issues,
     let fixed = content,
       .replace(/import React from 'react"/g, "import React from 'react',"),
@@ -27,7 +27,7 @@ function fixTestFile(filePath) {,
       .replace(/\s*}\s*/g, '\n}'),
       .replace(/\s*(\s*/g, ' ('),
       .replace(/\s*)\s*/g, ')'),
-      .replace(/\s*,\s*/g, ),
+      .replace(/\s*,\s*/g),
       .replace(/\s*=>\s*/g, ' => '),
       .replace(/\s*<\s*/g, '<'),
       .replace(/\s*>\s*/g, '>'),
@@ -36,33 +36,33 @@ function fixTestFile(filePath) {,
       .replace(/\s*:\s*/g, ': '),
       .replace(/\s*,\s*/g, ',\n'),
       .replace(/\n\s*\n/g, '\n'),
-      .replace(/^\s+|\s+$/g, '');
+      .replace(/^\s+|\s+$/g, ''),
     // Add proper formatting,
-    const lines = fixed.split('\n');
-    let formatted = [];
-    let indentLevel = 0;
+    const lines = fixed.split('\n'),
+    let formatted = [],
+    let indentLevel = 0,
     for (let line of lines) {,
-      const trimmed = line.trim();
-      if (!trimmed) continue;
-      if (trimmed.includes('}')) indentLevel = Math.max(0, indentLevel - 1);
-      formatted.push('  '.repeat(indentLevel) + trimmed);
-      if (trimmed.includes('{')) indentLevel++;
+      const trimmed = line.trim(),
+      if (!trimmed) continue,
+      if (trimmed.includes('}')) indentLevel = Math.max(0, indentLevel - 1),
+      formatted.push('  '.repeat(indentLevel) + trimmed),
+      if (trimmed.includes('{')) indentLevel++,
     }
 ,
-    fs.writeFileSync(filePath, formatted.join('\n') + '\n');
-    console.log(`Fixed: ${filePath,}`);
+    fs.writeFileSync(filePath, formatted.join('\n') + '\n'),
+    console.log(`Fixed: ${filePath}`),
   } catch (error) {,
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message),
   }
 }
 ,
 // Get all test files,
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.js'));
-console.log(`Found ${files.length} test files to fix`);
+const testDir = path.join(__dirname, '__tests__'),
+const files = fs.readdirSync(testDir).filter(file => file.endsWith('.test.js')),
+console.log(`Found ${files.length} test files to fix`),
 files.forEach(file => {,
-  const filePath = path.join(testDir, file);
-  fixTestFile(filePath);
-});
-console.log('Test file fixing completed!');
+  const filePath = path.join(testDir, file),
+  fixTestFile(filePath),
+}),
+console.log('Test file fixing completed!'),
 }}}}}}}}))

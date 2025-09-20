@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 import {,
   Atom,
   Cpu,
   Zap,
   Brain,
-  ArrowRight;
-  Star;
-  Sparkles;
-  Infinity,
-} from 'lucide-react';
+  ArrowRight,
+  Star,
+  Sparkles,
+  Infinity
+} from 'lucide-react',
 export default function QuantumAIBreakthrough2030PromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16">,
@@ -32,7 +32,7 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {,
             unlocking computational power that will solve humanity's most complex challenges.,
           </p>,
         </div>,
-        {/* Feature Grid */,}
+        {/* Feature Grid */}
         <div className="grid md: grid-cols-3 gap-8 mb-12">,
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">,
             <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">,
@@ -62,7 +62,7 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {,
             </p>,
           </div>,
         </div>,
-        {/* Timeline Preview */,}
+        {/* Timeline Preview */}
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 mb-12">,
           <h3 className="text-2xl font-bold text-white text-center mb-6">,
             Roadmap to Quantum Supremacy,
@@ -108,7 +108,7 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {,
             Join the quantum computing revolution - be among the first to witness the future,
           </p>,
         </div>,
-        {/* Trust Indicators */,}
+        {/* Trust Indicators */}
         <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-gray-400">,
           <div className="flex items-center gap-2">,
             <Star className="w-4 h-4 text-yellow-400 fill-current" />,
@@ -125,5 +125,5 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {,
         </div>,
       </div>,
     </div>,
-  );
+  ),
 }

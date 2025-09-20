@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Risk Management Blueprint';
-  description: 'Practical playbook for assessing, mitigating, and monitoring risks in autonomous AI agent systems with policy-as-code and continuous evaluations.',
-};
+  title: 'AI 2026: Agent Risk Management Blueprint',
+  description: 'Practical playbook for assessing, mitigating, and monitoring risks in autonomous AI agent systems with policy-as-code and continuous evaluations.'
+},
 export default function AgentRiskManagement2026() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -29,7 +29,6 @@ export default function AgentRiskManagement2026() {,
         <h2>Operationalization</h2>,
         <p>Roll out changes progressively via feature flags, record outcomes, and feed learnings into updated playbooks and eval suites.</p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

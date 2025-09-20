@@ -1,20 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Cpu, Rocket, Sparkles, Zap, TrendingUp } from 'lucide-react';
-import Button from '../ui/Button';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Brain, Cpu, Rocket, Sparkles, Zap, TrendingUp } from 'lucide-react',
+import Button from '../ui/Button',
 
 interface RevolutionaryHeroProps {
-  title?: string;
-  subtitle?: string;
-  description?: string;
-  ctaText?: string;
-  ctaLink?: string;
+  title?: string,
+  subtitle?: string,
+  description?: string,
+  ctaText?: string,
+  ctaLink?: string,
   stats?: Array<{
-    value: string;
-    label: string;
-    color: string;
-    icon: React.ReactNode;
-  }>;
+    value: string,
+    label: string,
+    color: string,
+    icon: React.ReactNode
+  }>,
 }
 
 const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
@@ -41,7 +41,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
         delayChildren: 0.3
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -53,7 +53,7 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const floatingVariants = {
     float: {
@@ -64,13 +64,13 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
         ease: "easeInOut"
       }
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">RevolutionaryHero</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default RevolutionaryHero;
+  ),
+},
+export default RevolutionaryHero,

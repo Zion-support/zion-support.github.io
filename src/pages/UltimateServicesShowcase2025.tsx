@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import SEO from "@/components/SEO";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   Zap, 
   Shield, 
   Database, 
@@ -22,29 +22,27 @@ import {
   MapPin,
   ExternalLink,
   Search
-} from 'lucide-react';
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from '@/data/ultimateRealServices2025';
-
+} from "lucide-react";
+import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025 } from "@/data/ultimateRealServices2025";
 export default function UltimateServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
-  const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
+  const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)],
 
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   const getCategoryIcon = (category: string) => {
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
-      <Rocket className="w-6 h-6" />;
-  };
+      <Rocket className="w-6 h-6" />,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -348,7 +346,7 @@ export default function UltimateServicesShowcase2025() {
               </div>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm: flex-row gap-3">
                 <Link
                   to={`/services/${service.id}`}
                   className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
@@ -401,7 +399,7 @@ export default function UltimateServicesShowcase2025() {
             <button
               onClick={() => {
                 setSearchTerm('');
-                setSelectedCategory('all');
+                setSelectedCategory('all'),
               }}
               className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
@@ -493,7 +491,7 @@ export default function UltimateServicesShowcase2025() {
 
           {/* Bottom Bar */}
           <div className="border-t border-gray-700 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex flex-col md: flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
                 © 2025 Zion Tech Group. All rights reserved.
               </p>
@@ -506,7 +504,7 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // Search icon component

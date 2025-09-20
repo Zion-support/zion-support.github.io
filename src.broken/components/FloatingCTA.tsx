@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
- from 'lucide-react';
+ from 'lucide-react',
 
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { useState, useEffect } from "react",
 import { X } from 'lucide-react'
 
 export function FloatingCTA() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
 
   useEffect(() => {
     // Show CTA after 5 seconds
     
-      setIsVisible(true) }, 5000) ;
+      setIsVisible(true) }, 5000) ,
 
-    return () => clearTimeout(timer) }, []) };
-  ];
+    return () => clearTimeout(timer) }, []) },
+  ],
 
   const quickServices = ["
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },"
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },"
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;"
-    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
-  ];
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },"
+    { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" },
+  ],
 
-  if(!isVisible) return null;
+  if(!isVisible) return null,
 
 =======
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false),
 
   return ()
     <>
@@ -75,13 +75,13 @@ export function FloatingCTA() {
             exit={{ opacity: 0 }}
             onClick={ () => setIsExpanded(false) }
           />) }
-      </AnimatePresence>;
+      </AnimatePresence>,
     </>
-  )};
+  )},
 
-            onClick={ () => setIsExpanded(false) };
-          />;) };
-      </AnimatePresence>;
+            onClick={ () => setIsExpanded(false) },
+          />,) },
+      </AnimatePresence>,
     </>
   )}
 '"

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { Link } from "react-router-dom";
 import { 
-  Store, 
+  Store,
   Search, 
   Filter, 
   Grid, 
@@ -210,435 +210,221 @@ import {
   Cockatoo,
   Canary,
   Finch
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Marketplace() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedType, setSelectedType] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
-
   const categories = [
-    { id: 'all', name: 'All Categories', count: 48 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },
-    { id: 'cloud', name: 'Cloud Solutions', count: 8 },
-    { id: 'security', name: 'Security & Compliance', count: 6 },
-    { id: 'data', name: 'Data & Analytics', count: 7 },
-    { id: 'development', name: 'Development Tools', count: 9 },
+    { id: 'all', name: 'All Categories', count: 48 };
+    { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 };
+    { id: 'cloud', name: 'Cloud Solutions', count: 8 };
+    { id: 'security', name: 'Security & Compliance', count: 6 };
+    { id: 'data', name: 'Data & Analytics', count: 7 };
+    { id: 'development', name: 'Development Tools', count: 9 };
     { id: 'hardware', name: 'Hardware & Equipment', count: 6 }
   ];
-
   const types = [
-    { id: 'all', name: 'All Types', count: 48 },
-    { id: 'software', name: 'Software', count: 25 },
-    { id: 'service', name: 'Services', count: 15 },
+    { id: 'all', name: 'All Types', count: 48 };
+    { id: 'software', name: 'Software', count: 25 };
+    { id: 'service', name: 'Services', count: 15 };
     { id: 'hardware', name: 'Hardware', count: 8 }
   ];
-
   const marketplaceItems = [
     // AI & Machine Learning
     {
-      id: 'ai-chatbot',
-      name: 'AI Chatbot Platform',
-      category: 'ai-ml',
-      type: 'software',
-      icon: Bot,
-      description: 'Intelligent chatbot platform with natural language processing',
-      features: [
-        'Natural language understanding',
-        'Multi-language support',
-        'Integration APIs',
-        'Analytics dashboard',
-        'Custom training models',
-        '24/7 availability'
+      id: 'ai-chatbot',name: 'AI Chatbot Platform',category: 'ai-ml',type: 'software',icon: Bot,description: 'Intelligent chatbot platform with natural language processing',features: [
+        'Natural language understandingMulti-language support';
+        'Integration APIsAnalytics dashboard',
+        'Custom training models24/7 availability'
       ],
-      pricing: '$299/month',
-      rating: 4.8,
-      reviews: 156,
-      downloads: 1247,
-      status: 'featured',
-      tags: ['AI', 'Chatbot', 'NLP', 'Automation'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/ai-chatbot',
-      documentation: 'https://docs.ziontechgroup.com/ai-chatbot'
-    },
+      pricing: '$299/month',rating: 4.8,reviews: 156,downloads: 1247,status: 'featured',tags: ['AIChatbot', 'NLPAutomation'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/ai-chatbot',documentation: 'https://docs.ziontechgroup.com/ai-chatbot'
+    };
     {
-      id: 'ml-pipeline',
-      name: 'ML Pipeline Automation',
-      category: 'ai-ml',
-      type: 'software',
-      icon: BarChart3,
-      description: 'Automated machine learning pipeline for data scientists',
-      features: [
-        'AutoML capabilities',
-        'Model versioning',
-        'A/B testing',
-        'Performance monitoring',
-        'Scalable infrastructure',
-        'Cloud deployment'
+      id: 'ml-pipeline',name: 'ML Pipeline Automation',category: 'ai-ml',type: 'software',icon: BarChart3,description: 'Automated machine learning pipeline for data scientists',features: [
+        'AutoML capabilitiesModel versioning';
+        'A/B testingPerformance monitoring',
+        'Scalable infrastructureCloud deployment'
       ],
-      pricing: '$499/month',
-      rating: 4.9,
-      reviews: 89,
-      downloads: 567,
-      status: 'popular',
-      tags: ['Machine Learning', 'Automation', 'Data Science', 'MLOps'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/ml-pipeline',
-      documentation: 'https://docs.ziontechgroup.com/ml-pipeline'
-    },
+      pricing: '$499/month',rating: 4.9,reviews: 89,downloads: 567,status: 'popular',tags: ['Machine LearningAutomation', 'Data ScienceMLOps'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/ml-pipeline',documentation: 'https://docs.ziontechgroup.com/ml-pipeline'
+    };
     {
-      id: 'computer-vision',
-      name: 'Computer Vision API',
-      category: 'ai-ml',
-      type: 'service',
-      icon: Eye,
-      description: 'Advanced computer vision services for image and video analysis',
-      features: [
-        'Object detection',
-        'Face recognition',
-        'Image classification',
-        'Video analysis',
-        'Real-time processing',
-        'Custom model training'
+      id: 'computer-vision',name: 'Computer Vision API',category: 'ai-ml',type: 'service',icon: Eye,description: 'Advanced computer vision services for image and video analysis',features: [
+        'Object detectionFace recognition';
+        'Image classificationVideo analysis',
+        'Real-time processingCustom model training'
       ],
-      pricing: '$0.01 per image',
-      rating: 4.7,
-      reviews: 203,
-      downloads: 892,
-      status: 'trending',
-      tags: ['Computer Vision', 'AI', 'Image Processing', 'Video Analysis'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/computer-vision',
-      documentation: 'https://docs.ziontechgroup.com/computer-vision'
-    },
+      pricing: '$0.01 per image',rating: 4.7,reviews: 203,downloads: 892,status: 'trending',tags: ['Computer VisionAI', 'Image ProcessingVideo Analysis'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/computer-vision',documentation: 'https://docs.ziontechgroup.com/computer-vision'
+    };
     // Cloud Solutions
     {
-      id: 'cloud-migration',
-      name: 'Cloud Migration Service',
-      category: 'cloud',
-      type: 'service',
-      icon: Cloud,
-      description: 'Professional cloud migration and optimization services',
-      features: [
-        'Infrastructure assessment',
-        'Migration planning',
-        'Data migration',
-        'Performance optimization',
-        'Cost optimization',
-        'Ongoing support'
+      id: 'cloud-migration',name: 'Cloud Migration Service',category: 'cloud',type: 'service',icon: Cloud,description: 'Professional cloud migration and optimization services',features: [
+        'Infrastructure assessmentMigration planning';
+        'Data migrationPerformance optimization',
+        'Cost optimizationOngoing support'
       ],
       pricing: 'Starting from $15,000',
-      rating: 4.9,
-      reviews: 67,
-      downloads: 234,
-      status: 'featured',
-      tags: ['Cloud Migration', 'AWS', 'Azure', 'GCP', 'DevOps'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/cloud-migration',
-      documentation: 'https://docs.ziontechgroup.com/cloud-migration'
-    },
+      rating: 4.9,reviews: 67,downloads: 234,status: 'featured',tags: ['Cloud MigrationAWS', 'AzureGCP', 'DevOps'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/cloud-migration',documentation: 'https://docs.ziontechgroup.com/cloud-migration'
+    };
     {
-      id: 'kubernetes-manager',
-      name: 'Kubernetes Management Platform',
-      category: 'cloud',
-      type: 'software',
-      icon: Server,
-      description: 'Enterprise-grade Kubernetes cluster management solution',
-      features: [
-        'Multi-cluster management',
-        'Auto-scaling',
-        'Monitoring & alerting',
-        'Security policies',
-        'Backup & recovery',
-        'Cost optimization'
+      id: 'kubernetes-manager',name: 'Kubernetes Management Platform',category: 'cloud',type: 'software',icon: Server,description: 'Enterprise-grade Kubernetes cluster management solution',features: [
+        'Multi-cluster managementAuto-scaling';
+        'Monitoring & alertingSecurity policies',
+        'Backup & recoveryCost optimization'
       ],
-      pricing: '$199/month',
-      rating: 4.8,
-      reviews: 134,
-      downloads: 456,
-      status: 'popular',
-      tags: ['Kubernetes', 'Container Orchestration', 'DevOps', 'Cloud Native'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/kubernetes-manager',
-      documentation: 'https://docs.ziontechgroup.com/kubernetes-manager'
-    },
+      pricing: '$199/month',rating: 4.8,reviews: 134,downloads: 456,status: 'popular',tags: ['KubernetesContainer Orchestration', 'DevOpsCloud Native'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/kubernetes-manager',documentation: 'https://docs.ziontechgroup.com/kubernetes-manager'
+    };
     // Security & Compliance
     {
-      id: 'threat-detection',
-      name: 'Advanced Threat Detection',
-      category: 'security',
-      type: 'software',
-      icon: Shield,
-      description: 'AI-powered threat detection and response system',
-      features: [
-        'Real-time monitoring',
-        'Behavioral analysis',
-        'Threat intelligence',
-        'Automated response',
-        'Compliance reporting',
-        '24/7 SOC support'
+      id: 'threat-detection',name: 'Advanced Threat Detection',category: 'security',type: 'software',icon: Shield,description: 'AI-powered threat detection and response system',features: [
+        'Real-time monitoringBehavioral analysis';
+        'Threat intelligenceAutomated response',
+        'Compliance reporting24/7 SOC support'
       ],
-      pricing: '$399/month',
-      rating: 4.9,
-      reviews: 178,
-      downloads: 678,
-      status: 'featured',
-      tags: ['Cybersecurity', 'Threat Detection', 'AI Security', 'SOC'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/threat-detection',
-      documentation: 'https://docs.ziontechgroup.com/threat-detection'
-    },
+      pricing: '$399/month',rating: 4.9,reviews: 178,downloads: 678,status: 'featured',tags: ['CybersecurityThreat Detection', 'AI SecuritySOC'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/threat-detection',documentation: 'https://docs.ziontechgroup.com/threat-detection'
+    };
     {
-      id: 'compliance-audit',
-      name: 'Compliance Audit Service',
-      category: 'security',
-      type: 'service',
-      icon: CheckCircle,
-      description: 'Comprehensive compliance auditing and certification services',
-      features: [
-        'SOC 2 Type II',
-        'ISO 27001',
-        'GDPR compliance',
-        'HIPAA assessment',
-        'PCI DSS validation',
-        'Ongoing monitoring'
+      id: 'compliance-audit',name: 'Compliance Audit Service',category: 'security',type: 'service',icon: CheckCircle,description: 'Comprehensive compliance auditing and certification services',features: [
+        'SOC 2 Type IIISO 27001';
+        'GDPR complianceHIPAA assessment',
+        'PCI DSS validationOngoing monitoring'
       ],
       pricing: 'Starting from $25,000',
-      rating: 4.8,
-      reviews: 45,
-      downloads: 123,
-      status: 'popular',
-      tags: ['Compliance', 'Security', 'Audit', 'Certification'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/compliance-audit',
-      documentation: 'https://docs.ziontechgroup.com/compliance-audit'
-    },
+      rating: 4.8,reviews: 45,downloads: 123,status: 'popular',tags: ['ComplianceSecurity', 'AuditCertification'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/compliance-audit',documentation: 'https://docs.ziontechgroup.com/compliance-audit'
+    };
     // Data & Analytics
     {
-      id: 'data-warehouse',
-      name: 'Data Warehouse Solution',
-      category: 'data',
-      type: 'software',
-      icon: Database,
-      description: 'Scalable data warehouse with advanced analytics',
-      features: [
-        'Multi-cloud support',
-        'Real-time processing',
-        'Advanced analytics',
-        'Data governance',
-        'Security & encryption',
-        'Auto-scaling'
+      id: 'data-warehouse',name: 'Data Warehouse Solution',category: 'data',type: 'software',icon: Database,description: 'Scalable data warehouse with advanced analytics',features: [
+        'Multi-cloud supportReal-time processing';
+        'Advanced analyticsData governance',
+        'Security & encryptionAuto-scaling'
       ],
-      pricing: '$599/month',
-      rating: 4.7,
-      reviews: 92,
-      downloads: 345,
-      status: 'trending',
-      tags: ['Data Warehouse', 'Big Data', 'Analytics', 'Business Intelligence'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/data-warehouse',
-      documentation: 'https://docs.ziontechgroup.com/data-warehouse'
-    },
+      pricing: '$599/month',rating: 4.7,reviews: 92,downloads: 345,status: 'trending',tags: ['Data WarehouseBig Data', 'AnalyticsBusiness Intelligence'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/data-warehouse',documentation: 'https://docs.ziontechgroup.com/data-warehouse'
+    };
     {
-      id: 'bi-dashboard',
-      name: 'Business Intelligence Dashboard',
-      category: 'data',
-      type: 'software',
-      icon: BarChart3,
-      description: 'Interactive BI dashboard for data visualization',
-      features: [
-        'Drag & drop interface',
-        'Real-time data',
-        'Custom widgets',
-        'Mobile responsive',
-        'Export capabilities',
-        'Collaboration tools'
+      id: 'bi-dashboard',name: 'Business Intelligence Dashboard',category: 'data',type: 'software',icon: BarChart3,description: 'Interactive BI dashboard for data visualization',features: [
+        'Drag & drop interfaceReal-time data';
+        'Custom widgetsMobile responsive',
+        'Export capabilitiesCollaboration tools'
       ],
-      pricing: '$149/month',
-      rating: 4.6,
-      reviews: 167,
-      downloads: 789,
-      status: 'popular',
-      tags: ['Business Intelligence', 'Dashboard', 'Data Visualization', 'Analytics'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/bi-dashboard',
-      documentation: 'https://docs.ziontechgroup.com/bi-dashboard'
-    },
+      pricing: '$149/month',rating: 4.6,reviews: 167,downloads: 789,status: 'popular',tags: ['Business IntelligenceDashboard', 'Data VisualizationAnalytics'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/bi-dashboard',documentation: 'https://docs.ziontechgroup.com/bi-dashboard'
+    };
     // Development Tools
     {
-      id: 'code-generator',
-      name: 'AI Code Generator',
-      category: 'development',
-      type: 'software',
-      icon: Code,
-      description: 'AI-powered code generation and assistance tool',
-      features: [
-        'Multi-language support',
-        'Code completion',
-        'Bug detection',
-        'Documentation generation',
-        'Code review',
-        'Integration with IDEs'
+      id: 'code-generator',name: 'AI Code Generator',category: 'development',type: 'software',icon: Code,description: 'AI-powered code generation and assistance tool',features: [
+        'Multi-language supportCode completion';
+        'Bug detectionDocumentation generation',
+        'Code reviewIntegration with IDEs'
       ],
-      pricing: '$99/month',
-      rating: 4.8,
-      reviews: 234,
-      downloads: 1234,
-      status: 'trending',
-      tags: ['Code Generation', 'AI', 'Development', 'Productivity'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/code-generator',
-      documentation: 'https://docs.ziontechgroup.com/code-generator'
-    },
+      pricing: '$99/month',rating: 4.8,reviews: 234,downloads: 1234,status: 'trending',tags: ['Code GenerationAI', 'DevelopmentProductivity'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/code-generator',documentation: 'https://docs.ziontechgroup.com/code-generator'
+    };
     {
-      id: 'api-gateway',
-      name: 'API Gateway Platform',
-      category: 'development',
-      type: 'software',
-      icon: Network,
-      description: 'Enterprise API gateway with advanced management features',
-      features: [
-        'Rate limiting',
-        'Authentication',
-        'Monitoring & analytics',
-        'Version management',
-        'Documentation',
-        'Developer portal'
+      id: 'api-gateway',name: 'API Gateway Platform',category: 'development',type: 'software',icon: Network,description: 'Enterprise API gateway with advanced management features',features: [
+        'Rate limitingAuthentication';
+        'Monitoring & analyticsVersion management',
+        'DocumentationDeveloper portal'
       ],
-      pricing: '$299/month',
-      rating: 4.7,
-      reviews: 156,
-      downloads: 567,
-      status: 'featured',
-      tags: ['API Gateway', 'Microservices', 'API Management', 'Developer Tools'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/api-gateway',
-      documentation: 'https://docs.ziontechgroup.com/api-gateway'
-    },
+      pricing: '$299/month',rating: 4.7,reviews: 156,downloads: 567,status: 'featured',tags: ['API GatewayMicroservices', 'API ManagementDeveloper Tools'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/api-gateway',documentation: 'https://docs.ziontechgroup.com/api-gateway'
+    };
     // Hardware & Equipment
     {
-      id: 'edge-computing',
-      name: 'Edge Computing Device',
-      category: 'hardware',
-      type: 'hardware',
-      icon: Cpu,
-      description: 'High-performance edge computing device for IoT applications',
-      features: [
-        'Intel i7 processor',
-        '16GB RAM',
-        '512GB SSD',
-        'Dual network ports',
-        'Industrial grade',
-        '5-year warranty'
+      id: 'edge-computing',name: 'Edge Computing Device',category: 'hardware',type: 'hardware',icon: Cpu,description: 'High-performance edge computing device for IoT applications',features: [
+        'Intel i7 processor16GB RAM';
+        '512GB SSDDual network ports',
+        'Industrial grade5-year warranty'
       ],
       pricing: '$1,299',
-      rating: 4.9,
-      reviews: 78,
-      downloads: 234,
-      status: 'featured',
-      tags: ['Edge Computing', 'IoT', 'Hardware', 'Industrial'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/edge-computing',
-      documentation: 'https://docs.ziontechgroup.com/edge-computing'
-    },
+      rating: 4.9,reviews: 78,downloads: 234,status: 'featured',tags: ['Edge ComputingIoT', 'HardwareIndustrial'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/edge-computing',documentation: 'https://docs.ziontechgroup.com/edge-computing'
+    };
     {
-      id: 'network-switch',
-      name: 'Enterprise Network Switch',
-      category: 'hardware',
-      type: 'hardware',
-      icon: Network,
-      description: 'High-speed network switch for enterprise environments',
-      features: [
-        '48-port Gigabit',
-        'PoE+ support',
-        'VLAN management',
-        'QoS features',
-        'SNMP monitoring',
-        'Lifetime warranty'
+      id: 'network-switch',name: 'Enterprise Network Switch',category: 'hardware',type: 'hardware',icon: Network,description: 'High-speed network switch for enterprise environments',features: [
+        '48-port GigabitPoE+ support';
+        'VLAN managementQoS features',
+        'SNMP monitoringLifetime warranty'
       ],
-      pricing: '$899',
-      rating: 4.8,
-      reviews: 123,
-      downloads: 456,
-      status: 'popular',
-      tags: ['Networking', 'Switch', 'Enterprise', 'PoE'],
-      image: '/api/placeholder/400/300',
-      demo: 'https://demo.ziontechgroup.com/network-switch',
-      documentation: 'https://docs.ziontechgroup.com/network-switch'
+      pricing: '$899',rating: 4.8,reviews: 123,downloads: 456,status: 'popular',tags: ['NetworkingSwitch', 'EnterprisePoE'],
+      image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/network-switch',documentation: 'https://docs.ziontechgroup.com/network-switch'
     }
   ];
-
-  const featuredItems = marketplaceItems.filter(item => item.status === 'featured');
-  const popularItems = marketplaceItems.filter(item => item.status === 'popular');
-  const trendingItems = marketplaceItems.filter(item => item.status === 'trending');
+  const featuredItems = marketplaceItems.filter(item => item.status === 'featured'),
+  const popularItems = marketplaceItems.filter(item => item.status === 'popular'),
+  const trendingItems = marketplaceItems.filter(item => item.status === 'trending'),
 
   const toggleItemExpansion = (itemId: string) => {
-    setExpandedItem(expandedItem === itemId ? null : itemId);
+    setExpandedItem(expandedItem === itemId ? null : itemId)
   };
-
   const filteredItems = marketplaceItems.filter(item => {
-    if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
-    if (selectedType !== 'all' && item.type !== selectedType) return false;
+    if (selectedCategory !== 'all' && item.category !== selectedCategory) return false,
+    if (selectedType !== 'all' && item.type !== selectedType) return false,
     if (searchQuery) {
       return item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+             item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     }
-    return true;
-  });
+    return true,
+  }),
 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
-      case 'cloud': return 'bg-blue-500/20 text-blue-400';
-      case 'security': return 'bg-red-500/20 text-red-400';
-      case 'data': return 'bg-green-500/20 text-green-400';
-      case 'development': return 'bg-orange-500/20 text-orange-400';
-      case 'hardware': return 'bg-gray-500/20 text-gray-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'cloud': return 'bg-blue-500/20 text-blue-400',
+      case 'security': return 'bg-red-500/20 text-red-400',
+      case 'data': return 'bg-green-500/20 text-green-400',
+      case 'development': return 'bg-orange-500/20 text-orange-400',
+      case 'hardware': return 'bg-gray-500/20 text-gray-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
-      case 'service': return 'bg-green-500/20 text-green-400';
-      case 'hardware': return 'bg-orange-500/20 text-orange-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'service': return 'bg-green-500/20 text-green-400',
+      case 'hardware': return 'bg-orange-500/20 text-orange-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
-      case 'popular': return 'bg-blue-500/20 text-blue-400';
-      case 'trending': return 'bg-green-500/20 text-green-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'popular': return 'bg-blue-500/20 text-blue-400',
+      case 'trending': return 'bg-green-500/20 text-green-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const renderStars = (rating: number) => {
     const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+    const fullStars = Math.floor(rating),
+    const hasHalfStar = rating % 1 !== 0,
     
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
+    for (let i = 0, i < fullStars, i++) {
+      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />),
     }
     
     if (hasHalfStar) {
-      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />);
+      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />),
     }
     
-    const emptyStars = 5 - Math.ceil(rating);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />);
+    const emptyStars = 5 - Math.ceil(rating),
+    for (let i = 0, i < emptyStars, i++) {
+      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />),
     }
     
-    return stars;
-  };
+    return stars,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -664,7 +450,7 @@ export default function Marketplace() {
               Technology <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Marketplace</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover innovative solutions, cutting-edge software, professional services, 
+              Discover innovative solutions, cutting-edge software, professional services;
               and enterprise hardware to accelerate your digital transformation.
             </p>
           </motion.div>
@@ -1068,7 +854,7 @@ export default function Marketplace() {
               Let's discuss your requirements and build something amazing together.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                 Request Custom Solution
               </button>
@@ -1083,5 +869,5 @@ export default function Marketplace() {
         </div>
       </section>
     </div>
-  );
+  )
 }

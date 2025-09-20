@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Footer from '../components/Footer';
+import React from 'react',
+import Head from 'next/head',
+import Footer from '../components/Footer',
 export default function SitemapPage() {,
   return (,
     <>,
@@ -22,7 +22,7 @@ export default function SitemapPage() {,
             </p>,
           </section>,
           <section className="mx-auto max-w-6xl">,
-            {/* Main Pages */,}
+            {/* Main Pages */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">,
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Main Pages</h2>,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -63,7 +63,7 @@ export default function SitemapPage() {,
                 </a>,
               </div>,
             </div>,
-            {/* Update Reports */,}
+            {/* Update Reports */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16">,
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Autonomous Updates</h2>,
               <p className="text-white/70 mb-6 text-center">,
@@ -96,7 +96,7 @@ export default function SitemapPage() {,
                 </a>,
               </div>,
             </div>,
-            {/* Quick Navigation */,}
+            {/* Quick Navigation */}
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8">,
               <h2 className="text-3xl font-bold mb-6 text-green-400">Quick Navigation</h2>,
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -123,5 +123,4 @@ export default function SitemapPage() {,
         </main>,
         <Footer />,
       </div>,
-    </>,
-  ),}
+    </>)}

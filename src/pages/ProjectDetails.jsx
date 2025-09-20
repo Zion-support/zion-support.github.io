@@ -1,58 +1,56 @@
 import React, { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
 import SEO from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle, } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger, } from "@/components/ui/tabs";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger, } from "@/components/ui/alert-dialog";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog";
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle, } from "lucide-react";
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from "lucide-react";
 function ProjectDetailsContent() {
-    const router = useRouter();
+    const router = useRouter(),
     // Get projectId from Next.js router query params
-    const { projectId } = router.query;
-    const { user } = useAuth();
-    const { getProjectById, updateProjectStatus } = useProjects();
-    const [project, setProject] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [notes, setNotes] = useState([]);
-    const [newNote, setNewNote] = useState("");
-    const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-    const [activeTab, setActiveTab] = useState("details");
+    const { projectId } = router.query,
+    const { user } = useAuth(),
+    const { getProjectById, updateProjectStatus } = useProjects(),
+    const [project, setProject] = useState(null),
+    const [isLoading, setIsLoading] = useState(true),
+    const [notes, setNotes] = useState([]),
+    const [newNote, setNewNote] = useState(""),
+    const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+    const [activeTab, setActiveTab] = useState("details"),
     // Load project data
     useEffect(() => {
         async function loadProject() {
             if (!projectId)
-                return;
-            setIsLoading(true);
-            const projectData = await getProjectById(projectId);
+                return,
+            setIsLoading(true),
+            const projectData = await getProjectById(projectId),
             if (projectData) {
-                setProject(projectData);
+                setProject(projectData),
                 // Now fetch notes
-                fetchProjectNotes(projectId);
+                fetchProjectNotes(projectId),
             }
             else {
                 toast({
-                    title: "Project not found",
-                    description: "The requested project could not be found.",
-                    variant: "destructive",
+                    title: "Project not found",description: "The requested project could not be found.",variant: "destructive"
                 });
-                router.push("/dashboard");
+                router.push("/dashboard"),
             }
-            setIsLoading(false);
+            setIsLoading(false),
         }
-        loadProject();
-    }, [projectId]);
+        loadProject(),
+    }, [projectId]),
     const fetchProjectNotes = async (projectId) => {
         try {
             const { data, error } = await supabase
@@ -64,84 +62,76 @@ function ProjectDetailsContent() {
                 .eq("project_id", projectId)
                 .order("created_at", { ascending: false });
             if (error)
-                throw error;
-            setNotes(data || []);
+                throw error,
+            setNotes(data || []),
         }
         catch (err) {
-            console.error("Error fetching project notes:", err);
+            console.error("Error fetching project notes:", err),
         }
-    };
+    },
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
-            return;
-        setIsSubmittingNote(true);
+            return,
+        setIsSubmittingNote(true),
         try {
             const { data, error } = await supabase
                 .from("project_notes")
                 .insert({
-                project_id: project.id,
-                user_id: user.id,
-                content: newNote,
+                project_id: project.id,user_id: user.id,content: newNote
             })
                 .select();
             if (error)
-                throw error;
+                throw error,
             // Refresh notes
-            fetchProjectNotes(project.id);
-            setNewNote("");
+            fetchProjectNotes(project.id),
+            setNewNote(""),
             toast({
-                title: "Note added",
-                description: "Your note has been added to the project.",
+                title: "Note added",description: "Your note has been added to the project."
             });
         }
         catch (err) {
-            console.error("Error adding note:", err);
+            console.error("Error adding note:", err),
             toast({
-                title: "Failed to add note",
-                description: err.message || "An error occurred while adding your note.",
-                variant: "destructive",
+                title: "Failed to add note",description: err.message || "An error occurred while adding your note.",variant: "destructive"
             });
         }
         finally {
-            setIsSubmittingNote(false);
+            setIsSubmittingNote(false),
         }
-    };
+    },
     const handleStatusChange = async (newStatus) => {
         if (!project)
-            return;
-        const success = await updateProjectStatus(project.id, newStatus);
+            return,
+        const success = await updateProjectStatus(project.id, newStatus),
         if (success) {
             setProject({
                 ...project,
-                status: newStatus,
+                status: newStatus
             });
             // If offer was accepted, show a special toast
             if (newStatus === "offer_accepted") {
                 toast({
-                    title: "Offer Accepted! 🎉",
-                    description: "The project is now in progress. Congratulations!",
+                    title: "Offer Accepted! 🎉",description: "The project is now in progress. Congratulations!"
                 });
             }
         }
-    };
+    },
     const getStatusBadge = (status) => {
         switch (status) {
-            case "offer_sent":
-                return <Badge variant="outline">Offer Sent</Badge>;
+            case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
             case "offer_accepted":
-                return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+                return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
             case "changes_requested":
-                return <Badge variant="secondary">Changes Requested</Badge>;
+                return <Badge variant="secondary">Changes Requested</Badge>,
             case "in_progress":
-                return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+                return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
             case "completed":
-                return <Badge variant="default">Completed</Badge>;
+                return <Badge variant="default">Completed</Badge>,
             case "canceled":
-                return <Badge variant="destructive">Canceled</Badge>;
-            default:
-                return <Badge variant="outline">{status}</Badge>;
+                return <Badge variant="destructive">Canceled</Badge>,
+            default: return <Badge variant="outline">{status}</Badge>;
         }
-    };
+    },
     if (isLoading) {
         return (<div className="container mx-auto py-8">
         <div className="flex justify-center items-center h-64">
@@ -150,7 +140,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>
           </div>
         </div>
-      </div>);
+      </div>),
     }
     if (!project) {
         return (<div className="container mx-auto py-8">
@@ -166,18 +156,18 @@ function ProjectDetailsContent() {
             </Button>
           </CardContent>
         </Card>
-      </div>);
+      </div>),
     }
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
-    const isTalent = user?.id === project.talent_id;
+    const isClient = user?.id === project.client_id,
+    const isTalent = user?.id === project.talent_id,
     if (!isClient && !isTalent) {
-        router.push("/unauthorized");
-        return null;
+        router.push("/unauthorized"),
+        return null,
     }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+    const isOfferPending = project.status === "offer_sent",
+    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
       
@@ -531,7 +521,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>);
+    </>),
 }
 export default function ProjectDetails() {
     return (<ProtectedRoute>

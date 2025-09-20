@@ -1,94 +1,94 @@
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import MainLayout from '../src/components/layout/MainLayout',
+import { motion } from 'framer-motion',
 import {,
-  Code;
-  Check;
-  Globe;
-  Shield;
-  Zap;
-  Database;
-  Cpu;
-  Cloud;
-  XCircle,
-} from 'lucide-react';
+  Code,
+  Check,
+  Globe,
+  Shield,
+  Zap,
+  Database,
+  Cpu,
+  Cloud,
+  XCircle
+} from 'lucide-react',
 export default function APIPage() {,
   const apiEndpoints = [,
     {,
-      id: 'auth';
-      title: 'Authentication';
-      description: 'Secure authentication and authorization endpoints';
-      baseUrl: '/api/v1/auth';
+      id: 'auth',
+      title: 'Authentication',
+      description: 'Secure authentication and authorization endpoints',
+      baseUrl: '/api/v1/auth',
       methods: [,
         {,
-          method: 'POST';
-          endpoint: '/login';
-          description: 'Authenticate user with email and password';
+          method: 'POST',
+          endpoint: '/login',
+          description: 'Authenticate user with email and password',
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\,
   -H "Content-Type: application/json" \\,
   -d '{,
-    "email": "user@example.com";
-    "password": "your_password",
-  }'`,
-        };
+    "email": "user@example.com",
+    "password": "your_password"
+  }'`
+        },
         {,
-          method: 'POST';
-          endpoint: '/register';
-          description: 'Register a new user account';
+          method: 'POST',
+          endpoint: '/register',
+          description: 'Register a new user account',
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\,
   -H "Content-Type: application/json" \\,
   -d '{,
-    "email": "user@example.com";
-    "password": "your_password";
-    "name": "John Doe",
-  }'`,
+    "email": "user@example.com",
+    "password": "your_password",
+    "name": "John Doe"
+  }'`
         }
-      ],
-    };
+      ]
+    },
     {,
-      id: 'ai-services';
-      title: 'AI Services';
-      description: 'Access our AI-powered services and models';
-      baseUrl: '/api/v1/ai';
+      id: 'ai-services',
+      title: 'AI Services',
+      description: 'Access our AI-powered services and models',
+      baseUrl: '/api/v1/ai',
       methods: [,
         {,
-          method: 'POST';
-          endpoint: '/chat';
-          description: 'Send messages to our AI chat service';
+          method: 'POST',
+          endpoint: '/chat',
+          description: 'Send messages to our AI chat service',
           code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\,
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\,
   -H "Content-Type: application/json" \\,
   -d '{,
-    "message": "Hello, how can you help me?";
-    "model": "gpt-4";
-    "temperature": 0.7,
-  }'`,
+    "message": "Hello, how can you help me?",
+    "model": "gpt-4",
+    "temperature": 0.7
+  }'`
         }
-      ],
+      ]
     }
-  ];
+  ],
   const responseExamples = {,
     success: {,
-      status: 200;
+      status: 200,
       data: {,
-        message: "Request successful";
+        message: "Request successful",
         data: {,
-          id: "12345";
-          name: "Example Response";
-          created_at: "2024-01-01T00:00:00Z",}
+          id: "12345",
+          name: "Example Response",
+          created_at: "2024-01-01T00:00:00Z"}
       }
-    };
+    },
     error: {,
-      status: 400;
+      status: 400,
       error: {,
-        code: "VALIDATION_ERROR";
-        message: "Invalid request parameters";
+        code: "VALIDATION_ERROR",
+        message: "Invalid request parameters",
         details: {,
-          field: "email";
-          issue: "Invalid email format",}
+          field: "email",
+          issue: "Invalid email format"}
       }
     }
-  };
+  },
   return (,
     <MainLayout,
       title="API Documentation - Zion Tech Group",
@@ -104,13 +104,13 @@ export default function APIPage() {,
           </div>,
           <div className="container mx-auto px-4 relative z-10">,
             <motion.div,
-              initial={{ opacity: 0, y: 30 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center",
             >,
               <h1 className="text-4xl md: text-6xl font-bold mb-6">,
-                API{' ',}
+                API{' '}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">,
                   Documentation,
                 </span>,
@@ -127,10 +127,10 @@ export default function APIPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">,
                 Quick Start Guide,
@@ -143,10 +143,10 @@ export default function APIPage() {,
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
                 <motion.div,
                   className="text-center",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
                 >,
                   <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <Shield className="w-8 h-8 text-indigo-600" />,
@@ -156,10 +156,10 @@ export default function APIPage() {,
                 </motion.div>,
                 <motion.div,
                   className="text-center",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
                 >,
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <Code className="w-8 h-8 text-purple-600" />,
@@ -169,10 +169,10 @@ export default function APIPage() {,
                 </motion.div>,
                 <motion.div,
                   className="text-center",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.2 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >,
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">,
                     <Zap className="w-8 h-8 text-green-600" />,
@@ -189,10 +189,10 @@ export default function APIPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center mb-16",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">,
                 Response Examples,
@@ -205,10 +205,10 @@ export default function APIPage() {,
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
                 <motion.div,
                   className="bg-white border border-gray-200 rounded-lg p-6",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
                 >,
                   <div className="flex items-center mb-4">,
                     <Check className="w-6 h-6 text-green-500 mr-3" />,
@@ -222,10 +222,10 @@ export default function APIPage() {,
                 </motion.div>,
                 <motion.div,
                   className="bg-white border border-gray-200 rounded-lg p-6",
-                  initial={{ opacity: 0, y: 30 ,}}
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  transition={{ duration: 0.8, delay: 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  viewport={{ once: true }}
                 >,
                   <div className="flex items-center mb-4">,
                     <XCircle className="w-6 h-6 text-red-500 mr-3" />,
@@ -246,10 +246,10 @@ export default function APIPage() {,
           <div className="container mx-auto px-4">,
             <motion.div,
               className="text-center",
-              initial={{ opacity: 0, y: 30 ,}}
-              whileInView={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
-              viewport={{ once: true ,}}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold mb-6">,
                 Ready to Get Started?,
@@ -277,4 +277,4 @@ export default function APIPage() {,
         </section>,
       </div>,
     </MainLayout>,
-  ),}
+  )}

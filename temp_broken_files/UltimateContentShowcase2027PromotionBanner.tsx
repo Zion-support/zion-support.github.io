@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   Zap,
@@ -8,56 +8,56 @@ import {,
   Rocket,
   Star,
   TrendingUp,
-  ArrowRight;
-  Play;
-  X;
-  ChevronRight;
-  Award;
-  Users;
-  Clock,
-} from 'lucide-react';
+  ArrowRight,
+  Play,
+  X,
+  ChevronRight,
+  Award,
+  Users,
+  Clock
+} from 'lucide-react',
 const UltimateContentShowcase2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
     {,
-      icon: Brain;
-      title: 'Neural Interface Revolution';
-      description: 'Direct brain-computer interfaces';
-      color: 'from-purple-500 to-blue-500',};
+      icon: Brain,
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces',
+      color: 'from-purple-500 to-blue-500'},
     {,
-      icon: Zap;
-      title: 'Quantum AI Processing';
-      description: '1000x faster processing speeds';
-      color: 'from-green-500 to-teal-500',};
+      icon: Zap,
+      title: 'Quantum AI Processing',
+      description: '1000x faster processing speeds',
+      color: 'from-green-500 to-teal-500'},
     {,
-      icon: Rocket;
-      title: 'Holographic Interfaces';
-      description: '3D immersive experiences';
-      color: 'from-orange-500 to-red-500',};
+      icon: Rocket,
+      title: 'Holographic Interfaces',
+      description: '3D immersive experiences',
+      color: 'from-orange-500 to-red-500'},
     {,
-      icon: Award;
-      title: '99.8% Success Rate';
-      description: 'Proven reliability';
-      color: 'from-yellow-500 to-orange-500',}
-  ];
+      icon: Award,
+      title: '99.8% Success Rate',
+      description: 'Proven reliability',
+      color: 'from-yellow-500 to-orange-500'}
+  ],
   const stats = [,
-    { value: '2.5M+'label: 'Active Users' ,};
-    { value: '500%'label: 'ROI Increase' ,};
-    { value: '99.8%'label: 'Success Rate' ,};
-    { value: '10M+'label: 'Hours Saved' ,}
-  ];
+    { value: '2.5M+'label: 'Active Users' },
+    { value: '500%'label: 'ROI Increase' },
+    { value: '99.8%'label: 'Success Rate' },
+    { value: '10M+'label: 'Hours Saved' }
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
-  if (isDismissed) return null;
+      setCurrentFeature((prev) => (prev + 1) % features.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -69,15 +69,14 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
             <div,
               className="absolute inset-0 opacity-30",
                 background: [,
-                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)',
-                ],
+                  'radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)radial-gradient(circle at 40% 80%rgba(1202192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(12011980.3) 0%transparent 50%)'
+                ]
               }}
             />,
           </div>,
           <div className="relative z-10 container mx-auto px-4 py-6">,
             <div className="flex flex-col lg: flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">,
                   <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/30">,
@@ -86,8 +85,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
                   </div>,
                   <div className="flex items-center gap-1">,
                     {[...Array(5)].map((_i) => (,
-                      <Star key={i,} className="w-4 h-4 text-yellow-400 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />))}
                   </div>,
                 </div>,
                 <h2 className="text-2xl lg: text-3xl font-bold text-white mb-2">,
@@ -99,7 +97,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
                   Experience revolutionary AI innovationsautomation masteryand next-generation,
                   solutions transforming businesses worldwide. Join 2.5M+ users achieving 500% ROI increases.,
                 </p>,
-                {/* Rotating Features */,}
+                {/* Rotating Features */}
                 <div className="flex items-center gap-4 mb-4">,
                     <div,
                       key={currentFeature}
@@ -126,8 +124,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
                       <TrendingUp className="w-3 h-3 text-green-400" />,
                       <span className="text-white font-semibold">{stat.value}</span>,
                       <span className="text-gray-400">{stat.label}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Right Content - CTA */}
@@ -142,7 +139,7 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
                   <span>Join 2.5M+ Users</span>,
                 </button>,
               </div>,
-              {/* Dismiss Button */,}
+              {/* Dismiss Button */}
               <button,
                 onClick={() => setIsDismissed(true)}
                 className="absolute top-4 right-4 p-2 rounded-full hover: bg-white/10 transition-colors",
@@ -151,11 +148,11 @@ const UltimateContentShowcase2027PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Progress Bar */,}
+          {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 animate-pulse" />,
         </div>,
       )}
     </div>,
-  );
-};
-export default UltimateContentShowcase2027PromotionBanner;
+  ),
+},
+export default UltimateContentShowcase2027PromotionBanner,

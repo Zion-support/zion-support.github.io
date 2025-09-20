@@ -1,80 +1,67 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Comprehensive SEO performance tracking and insights',
-      color: 'from - yellow-500 to - orange - 500',
+      color: 'from - yellow-500 to - orange - 500'
     },
     {
       icon: Zap,
       title: 'Automated Optimization',
       description: 'AI - driven SEO improvements and technical optimizations',
-      color: 'from - red - 500 to - pink - 500',
+      color: 'from - red - 500 to - pink - 500'
     },
     {
       icon: Globe,
       title: 'Global SEO',
       description: 'Multi - language and international SEO optimization',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
-  ];
+      color: 'from - indigo - 500 to - blue - 500'
+    }
+  ],
 
   const services = [{
       title: 'Technical SEO Audit',
       description: 'Comprehensive website technical analysis and optimization',
       icon: Settings,
       benefits: [
-        'Site speed optimization',
-        'Mobile responsiveness',
-        'Technical issues',
-        'Schema markup',
-      ],
+        'Site speed optimizationMobile responsiveness',
+        'Technical issuesSchema markup'
+      ]
     },
     {
       title: 'Content Strategy',
       description: 'AI - powered content planning and optimization',
       icon: FileText,
-      benefits: ['Keyword research',
-        'Content planning',
-        'SEO optimization',
-        'Performance tracking',
-      ],
+      benefits: ['Keyword researchContent planning',
+        'SEO optimizationPerformance tracking'
+      ]
     },
     {
       title: 'Local SEO',
       description: 'Location - based search optimization and management',
       icon: Target,
-      benefits: ['Google My Business',
-        'Local citations',
-        'Review management',
-        'Local keywords',
-      ],
+      benefits: ['Google My BusinessLocal citations',
+        'Review managementLocal keywords'
+      ]
     },
     {
       title: 'E - commerce SEO',
       description: 'Product page optimization and search visibility',
       icon: ShoppingCart,
-      benefits: ['Product optimization',
-        'Category pages',
-        'Internal linking',
-        'Conversion tracking',
-      ],
-    },
-  ];
+      benefits: ['Product optimizationCategory pages',
+        'Internal linkingConversion tracking'
+      ]
+    }
+  ],
 
-  const technologies = ['Machine Learning',
-    'Natural Language Processing',
-    'Predictive Analytics',
-    'Big Data Analysis',
-    'AI Algorithms',
-    'Search Engine APIs',
-    'Web Crawling',
-    'Data Mining',
-    'Sentiment Analysis',
-    'Competitive Intelligence',
-  ];
+  const technologies = ['Machine LearningNatural Language Processing',
+    'Predictive AnalyticsBig Data Analysis',
+    'AI AlgorithmsSearch Engine APIs',
+    'Web CrawlingData Mining',
+    'Sentiment AnalysisCompetitive Intelligence'
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -247,7 +234,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
               Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray - 300 max - w-3xl mx - auto mb-8">
@@ -273,5 +260,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

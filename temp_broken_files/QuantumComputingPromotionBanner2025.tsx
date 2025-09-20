@@ -1,5 +1,5 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+"use client",
+import React, { useState, useEffect } from 'react',
 AtomZapCpuArrowRightXStar,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const QuantumComputingPromotionBanner2025: React.FC = () => {,
@@ -10,7 +10,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {,
       >,
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
           <div className="flex items-center justify-between py-4">,
-            {/* Left side - Quantum Badge */,}
+            {/* Left side - Quantum Badge */}
             <div className="flex items-center gap-4">,
               <div,
                 key={currentFeature}
@@ -44,7 +44,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {,
             <div className="flex items-center gap-4">,
               <a href="/quantum-computing-showcase-2025">,
                 <button,
-                  className={`bg-gradient-to-r ${features[currentFeature].color} hover: opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`,}
+                  className={`bg-gradient-to-r ${features[currentFeature].color} hover: opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >,
                   <Star className="w-4 h-4" />,
                   Explore Quantum,
@@ -60,7 +60,7 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Animated Background */,}
+        {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-cyan-500/5 to-purple-500/5 animate-pulse"></div>,
         {/* Quantum Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">,
@@ -69,21 +69,21 @@ const QuantumComputingPromotionBanner2025: React.FC = () => {,
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-20];
-                opacity: [010];
-                scale: [0.51.50.5],}}
-                duration: 3;
-                repeat: Infinity;
-                delay: Math.random() * 2,}}
+                y: [0-20],
+                opacity: [010],
+                scale: [0.51.50.5]}}
+                duration: 3,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
             />,
           ))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default QuantumComputingPromotionBanner2025;
+  ),
+},
+export default QuantumComputingPromotionBanner2025,
 </div></div>,

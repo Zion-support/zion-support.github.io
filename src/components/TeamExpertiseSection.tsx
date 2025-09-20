@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Award,
   Users,
@@ -11,47 +11,30 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from 'lucide-react';
-
+} from "lucide-react";
 const teamExpertise = [
   {
-    icon: "🎓",
-    title: "Advanced Degrees",
-    description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
+    icon: "🎓",title: "Advanced Degrees",description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
     count: "95%"
-  },
+  };
   {
-    icon: "🏆",
-    title: "Industry Certifications",
-    description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
+    icon: "🏆",title: "Industry Certifications",description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
     count: "50+"
-  },
+  };
   {
-    icon: "🌍",
-    title: "Global Experience",
-    description: "Team members with experience working across 25+ countries and diverse industries",
-    count: "25+"
-  },
+    icon: "🌍",title: "Global Experience",description: "Team members with experience working across 25+ countries and diverse industries",count: "25+"
+  };
   {
-    icon: "⚡",
-    title: "Years of Experience",
-    description: "Combined experience of over 200 years in technology and business solutions",
-    count: "200+"
-  },
+    icon: "⚡",title: "Years of Experience",description: "Combined experience of over 200 years in technology and business solutions",count: "200+"
+  };
   {
-    icon: "🔬",
-    title: "Research Publications",
-    description: "Published research in leading AI, quantum computing, and blockchain journals",
+    icon: "🔬",title: "Research Publications",description: "Published research in leading AI, quantum computing, and blockchain journals",
     count: "30+"
-  },
+  };
   {
-    icon: "🚀",
-    title: "Successful Projects",
-    description: "Successfully delivered complex technology solutions for Fortune 500 companies",
-    count: "500+"
+    icon: "🚀",title: "Successful Projects",description: "Successfully delivered complex technology solutions for Fortune 500 companies",count: "500+"
   }
 ];
-
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",
@@ -61,7 +44,7 @@ const coreExpertise = [
   "Data Science & Analytics",
   "IoT & Edge Computing",
   "Mobile & Web Development"
-];
+],
 
 export function TeamExpertiseSection() {
   return (
@@ -127,7 +110,7 @@ export function TeamExpertiseSection() {
               Our certified professionals are ready to bring their expertise
               to your project and help you achieve exceptional results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation
                 <Rocket className="ml-2 h-5 w-5" />
@@ -141,5 +124,5 @@ export function TeamExpertiseSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

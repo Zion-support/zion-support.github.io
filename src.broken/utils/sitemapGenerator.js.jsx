@@ -1,11 +1,11 @@
 export class SitemapGenerator {
 export const defaultSitemapConfig = {
-export const generator = new SitemapGenerator(config) ;
-export default SitemapGenerator;
-export default to;
-export default to;
+export const generator = new SitemapGenerator(config) ,
+export default SitemapGenerator,
+export default to,
+export default to,
 
-    config;
+    config,
     constructor(config) {
 
         this.config = {
@@ -13,44 +13,44 @@ export default to;
   outputPath: './public/sitemap.xml',
   ...config
 
-};
+},
     }
     /**
      * Generate XML sitemap content
      */
     generateXML() {
-        const { baseUrl, urls } = this.config;
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
+        const { baseUrl, urls } = this.config,
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>,
         const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>'`
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}'`
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`
-      </url>`;
-            return urlElement.replace(/\s+/g,).trim();
-        }).join('');`
-        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
+      </url>`,
+            return urlElement.replace(/\s+/g).trim(),
+        }).join(''),`
+        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`,
     }
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
 '"
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>,
         const sitemapElements = sitemaps.map(sitemap => {
 `
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>`
-      </sitemap>`;
-        }).join('');`
-        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
+      </sitemap>`,
+        }).join(''),`
+        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,
     }
     /**
      * Generate robots.txt content
      */
     generateRobotsTxt() {
-        const { baseUrl } = this.config;`
+        const { baseUrl } = this.config,`
         return `User-agent: *
 Allow: /
 
@@ -65,13 +65,13 @@ Allow: /
 Allow: /services / Allow: /solutions / Allow: /about / Allow: /contact / Allow: /blog / Allow: /careers/
 
 # Crawl delay(optional)`
-Crawl-delay: 1`;
+Crawl-delay: 1`
     }
     /**
      * Generate JSON sitemap for JavaScript applications
      */
     generateJSON () {
-        const { baseUrl, urls } = this.config;
+        const { baseUrl, urls } = this.config,
         const jsonSitemap = {
 
   baseUrl,
@@ -81,14 +81,14 @@ Crawl-delay: 1`;
   fullUrl: `${baseUrl
 `
 }${url.url}`,
-                lastmod: url.lastmod || new Date () .toISOString () }) ) };
-        return JSON.stringify(jsonSitemap, null, 2) ;
+                lastmod: url.lastmod || new Date () .toISOString () }) ) },
+        return JSON.stringify(jsonSitemap, null, 2) ,
     }
     /**
      * Generate HTML sitemap for users
      */
     generateHTML() {
-        const { baseUrl, urls } = this.config;`
+        const { baseUrl, urls } = this.config,`
         const html = `<!DOCTYPE html>"
 <html lang="en">
 <head>"
@@ -96,17 +96,17 @@ Crawl-delay: 1`;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Zion Tech Group</title>"
     <meta name="description" content="Complete sitemap of Zion Tech Group website">
-    <style > body { font - family: Arial, sans - serif; margin: 40px; line - height: 1.6; }
-        .container { max - width: 1200px; margin: 0 auto; }
-        h1 { color: #00e5ff; border-bottom: 2px solid #00e5ff; padding - bottom: 10px; }
-        .sitemap - section { margin: 30px 0; }
-        .sitemap - section h2 { color: #333; margin - bottom: 15px; }
-        .sitemap - links { display: grid; grid - template - columns: repeat(auto - fit, minmax (300px, 1fr) ) ; gap: 20px; }
-        .sitemap - link { padding: 10px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none; color: #333; }
-        .sitemap - link:hover { background - color: #f5f5f5; border-color: #00e5ff; }
-        .priority - high { border-left: 4px solid #00e5ff; }
-        .priority - medium { border-left: 4px solid #ff9800; }
-        .priority - low { border-left: 4px solid #4caf50; }
+    <style > body { font - family: Arial, sans - serif, margin: 40px, line - height: 1.6 }
+        .container { max - width: 1200px, margin: 0 auto }
+        h1 { color: #00e5ff, border-bottom: 2px solid #00e5ff, padding - bottom: 10px }
+        .sitemap - section { margin: 30px 0 }
+        .sitemap - section h2 { color: #333, margin - bottom: 15px }
+        .sitemap - links { display: grid, grid - template - columns: repeat(auto - fit, minmax (300px, 1fr) ) , gap: 20px }
+        .sitemap - link { padding: 10px, border: 1px solid #ddd, border-radius: 5px, text-decoration: none, color: #333 }
+        .sitemap - link: hover { background - color: #f5f5f5, border-color: #00e5ff }
+        .priority - high { border-left: 4px solid #00e5ff }
+        .priority - medium { border-left: 4px solid #ff9800 }
+        .priority - low { border-left: 4px solid #4caf50 }
     </style>
 </head>
 <body>"
@@ -121,7 +121,7 @@ Crawl-delay: 1`;
             .filter(url => url.priority && url.priority >= 0.8)`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">
-                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -134,7 +134,7 @@ Crawl-delay: 1`;
             .filter(url => url.url.startsWith('/services/'))`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -147,7 +147,7 @@ Crawl-delay: 1`;
             .filter(url => url.url.startsWith('/solutions/'))`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -160,7 +160,7 @@ Crawl-delay: 1`;
             .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8)`
             .map(url => `"
                     <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">
-                        ${url.url.split('/').pop()?.replace(/-/g,).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
+                        ${url.url.split('/').pop()?.replace(/-/g).replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>'`
                   `).join('')}
             </div>
@@ -172,8 +172,8 @@ Crawl-delay: 1`;
         </div>
     </div>
 </body>`
-</html>`;
-        return html;
+</html>`,
+        return html,
     }
 }
 // Default sitemap configuration for Zion Tech Group
@@ -221,32 +221,32 @@ export const defaultSitemapConfig = {
         { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
         { url: '/terms', changefreq: 'yearly', priority: 0.3 }
     ]
-};
+},
 // Utility function to generate all sitemap files
     try {
         // Generate XML sitemap
-        const xmlSitemap = generator.generateXML () ;
+        const xmlSitemap = generator.generateXML () ,
         // Generate robots.txt
-        const robotsTxt = generator.generateRobotsTxt () ;
+        const robotsTxt = generator.generateRobotsTxt () ,
         // Generate HTML sitemap
-        const htmlSitemap = generator.generateHTML () ;
+        const htmlSitemap = generator.generateHTML () ,
         // Generate JSON sitemap
-        const jsonSitemap = generator.generateJSON () ;
+        const jsonSitemap = generator.generateJSON () ,
         return {
 
             xml: xmlSitemap,
             robots: robotsTxt,
             html: htmlSitemap,
             json: jsonSitemap
-        };
+        },
     }
     catch(error) {
 
-        // console.error('Error generating sitemaps:', error);
-        throw error;
+        // console.error('Error generating sitemaps:', error),
+        throw error,
     }
-};
-export default SitemapGenerator;
+},
+export default SitemapGenerator,
 
-export default to;
-export default to;'"`
+export default to,
+export default to,'"`

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Zap,
   Code,
@@ -20,64 +20,45 @@ import {
   Rocket,
   Target,
   Globe
-} from 'lucide-react';
+} from "lucide-react";
 const MicroSAASPage = () => {
   const saasServices = [
     {
-      id: 'custom-applications',
-      title: 'Custom Applications',
-      description: 'Tailored software solutions designed for your specific business needs',
-      icon: <Code className="w-8 h-8" />,
-      features: ['Custom Development', 'Scalable Architecture', 'User Management', 'API Integration'],
-      useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
+      id: 'custom-applications',title: 'Custom Applications',description: 'Tailored software solutions designed for your specific business needs',icon: <Code className="w-8 h-8" />,features: ['Custom DevelopmentScalable Architecture', 'User ManagementAPI Integration'],
+      useCases: ['Business ToolsIndustry Solutions', 'Process AutomationCustomer Portals'],
       pricing: 'Starting from $2,500/month'
     },
     {
-      id: 'api-development',
-      title: 'API Development',
-      description: 'Robust and scalable APIs to connect your applications and services',
-      icon: <Database className="w-8 h-8" />,
-      features: ['RESTful APIs', 'GraphQL Services', 'Authentication', 'Rate Limiting'],
-      useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
+      id: 'api-development',title: 'API Development',description: 'Robust and scalable APIs to connect your applications and services',icon: <Database className="w-8 h-8" />,features: ['RESTful APIsGraphQL Services', 'AuthenticationRate Limiting'],
+      useCases: ['System IntegrationMobile Apps', 'Third-party ServicesData Exchange'],
       pricing: 'Starting from $1,800/month'
     },
     {
-      id: 'scalable-architecture',
-      title: 'Scalable Architecture',
-      description: 'Cloud-native architectures that grow with your business',
-      icon: <Globe className="w-8 h-8" />,
-      features: ['Microservices', 'Containerization', 'Auto-scaling', 'Load Balancing'],
-      useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
+      id: 'scalable-architecture',title: 'Scalable Architecture',description: 'Cloud-native architectures that grow with your business',icon: <Globe className="w-8 h-8" />,features: ['MicroservicesContainerization', 'Auto-scalingLoad Balancing'],
+      useCases: ['High-traffic ApplicationsGrowing Businesses', 'Enterprise SolutionsGlobal Deployments'],
       pricing: 'Starting from $3,200/month'
     },
     {
-      id: 'user-management',
-      title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
+      id: 'user-management',title: 'User Management',description: 'Comprehensive user authentication and authorization systems',icon: <Users className="w-8 h-8" />,features: ['Single Sign-OnRole-based Access', 'Multi-tenancyUser Analytics'],
+      useCases: ['B2B ApplicationsEnterprise Software', 'Multi-user PlatformsSaaS Products'],
       pricing: 'Starting from $1,500/month'
     }
-  ];
+  ],
   const saasBenefits = [
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
-  ];
+    'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration'
+  ],
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
+      opacity: 1,y: 0,transition: {
         duration: 0.5
       }
     }
@@ -271,7 +252,7 @@ const MicroSAASPage = () => {
             Let our SAAS experts help you create a successful software product
             that scales with your business and delights your customers.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
@@ -288,6 +269,6 @@ const MicroSAASPage = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
 export default MicroSAASPage;

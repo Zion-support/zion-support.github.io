@@ -1,96 +1,96 @@
 <<<<<<< HEAD
 
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const ComprehensivePricingGuide2030: React.FC = () => {,
+  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas'),
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
-  const getFilteredServices = () => {;
-    let services: any[] = [];
+  const getFilteredServices = () => {,
+    let services: any[] = [],
 
-  const getCategories = () => {;
-    let services: any[] = [];
+  const getCategories = () => {,
+    let services: any[] = [],
 
-  const getPriceRange = () => {;
-    let services: any[] = [];
+  const getPriceRange = () => {,
+    let services: any[] = []
 
 }
 }
-                    setSelectedCategory('all');
+                    setSelectedCategory('all'),
 
 }}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                  setSelectedCategory('all');
+                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover: bg-gray-700 transition-colors"
+                  setSelectedCategory('all')
 
 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
 =======
   
-    let services: unknown[] = [];
+    let services: unknown[] = [],
     
 =======
     switch(activeTab) {
 
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030,
+        break,
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030,
+        break,
       case 'ai':
-        services = comprehensiveAIServices2030;
+        services = comprehensiveAIServices2030,
         break}
 
     // Filter by price range
-    services = services.filter(service => {;
-      if (activeTab === 'it') {;
+    services = services.filter(service => {,
+      if (activeTab === 'it') {,
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {
 
-        return service.price >= priceRange[0] && service.price <= priceRange[1]}    });
+        return service.price >= priceRange[0] && service.price <= priceRange[1]}    }),
 
     // Filter by category'
     if(selectedCategory !== 'all') {
 
-      services = services.filter(service => service.category === selectedCategory)};
-;
-    return services};
+      services = services.filter(service => service.category === selectedCategory)},
+,
+    return services},
 
   
-    let services: unknown[] = [];    
+    let services: unknown[] = [],    
     switch(activeTab) {
 
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030,
+        break,
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030,
+        break,
       case 'ai':
-        services = comprehensiveAIServices2030;
+        services = comprehensiveAIServices2030,
         break}
 
-    return categories};
+    return categories},
 
   
-    let services: unknown[] = [];    
+    let services: unknown[] = [],    
     switch(activeTab) {
 
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030,
+        break,
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030,
+        break,
       case 'ai':
-        services = comprehensiveAIServices2030;
+        services = comprehensiveAIServices2030,
         break}
 
-    if(activeTab = == 'it') {;
+    if(activeTab = == 'it') {,
       
       return [min, max]} else {
 
       return [min, max]}
-  };
+  },
 
   const renderPricingCard = (service)  => {
 
@@ -165,10 +165,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center"
 
                   Email: {service.contactInfo.email}
-                </a>;              </div>;
-            </div>;
-          </div>;
-        </div>;
+                </a>,              </div>,
+            </div>,
+          </div>,
+        </div>,
       )} else if(activeTab = == 'it') {
 
       return ("
@@ -247,11 +247,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center"
 
                   Email: {service.contactInfo.email}
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
       )} else {
 
       return ("
@@ -330,13 +330,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center"
 
                   Email: {service.contactInfo.email}
-                </a>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
+                </a>,
+              </div>,
+            </div>,
+          </div>,
+        </div>,
       )}
-  };
+  },
 
   return ()
     <>
@@ -438,7 +438,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Filters */}"
-          <div className="mb-8">;"
+          <div className="mb-8">,"
             <div className="bg-white rounded-xl p-6 shadow-lg">"
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Filter Services</h3>
 "
@@ -505,14 +505,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   onClick = {
 
   () => {
-                    setPriceRange([priceRangeData[0],;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-  priceRangeData[1]]);
+                    setPriceRange([priceRangeData[0],
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  priceRangeData[1]]),
                     setSelectedCategory('all')}}"                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
                 >
                   Reset Filters
@@ -522,7 +522,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Pricing Summary */}"
-          <div className="mb-8">;"
+          <div className="mb-8">,"
             <div className="bg-white rounded-xl p-6 shadow-lg">"
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Pricing Summary</h3>"
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
@@ -549,7 +549,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
 
           {/* Services Grid */}"
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
+          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">,
             {getFilteredServices().map(renderPricingCard)}
           </div>
 
@@ -561,19 +561,19 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 onClick = {
 
   () => {
-                  setPriceRange([priceRangeData[0],;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
-  priceRangeData[1]]);
-                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  setPriceRange([priceRangeData[0],
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  priceRangeData[1]]),
+                  setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
-            </div>;
+            </div>,
           )}
 
           {/* Pricing Comparison */}"
@@ -624,7 +624,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>"
             <p className="text-xl text-blue-100 mb-6">
               Contact our team to discuss your specific needs and get a customized quote for your business.</p>"
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <div className="flex flex-col md: flex-row gap-4 justify-center">
               <a"
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -637,12 +637,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
                 Email Us
               </a>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+            </div>,
+          </div>,
+        </div>,
+      </div>,
     </>
-  )};
+  )},
 
 export default ComprehensivePricingGuide2030}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

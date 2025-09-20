@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Atom, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { Atom, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react',
 
 export default function QuantumNeuralNetworkPlatform() {
   const features = [
@@ -35,18 +35,14 @@ export default function QuantumNeuralNetworkPlatform() {
       title: 'Hybrid Classical-Quantum',
       description: 'Seamless integration between classical and quantum computing for optimal performance.'
     }
-  ];
+  ],
 
   const applications = [
-    'Advanced Pattern Recognition',
-    'Quantum Machine Learning',
-    'Consciousness Simulation',
-    'Predictive Analytics',
-    'Natural Language Processing',
-    'Computer Vision',
-    'Autonomous Systems',
-    'Scientific Research'
-  ];
+    'Advanced Pattern RecognitionQuantum Machine Learning',
+    'Consciousness SimulationPredictive Analytics',
+    'Natural Language ProcessingComputer Vision',
+    'Autonomous SystemsScientific Research'
+  ],
 
   return (
     <>
@@ -137,7 +133,7 @@ export default function QuantumNeuralNetworkPlatform() {
             <p className="text-xl text-gray-300 mb-8">
               Join us in revolutionizing the world with quantum-powered neural networks that understand, learn, and evolve.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -155,5 +151,5 @@ export default function QuantumNeuralNetworkPlatform() {
         </section>
       </div>
     </>
-  );
+  )
 }

@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Shield, Cloud, Factory, Truck, Heart,
   ArrowRight, Check, Star, Phone, Mail, MapPin,
   TrendingUp, Users, Zap, Target, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new innovative services
-import { innovative2027AIBusinessIntelligenceServices } from '../data/innovative-2027-ai-business-intelligence';
-import { innovative2027CybersecurityComplianceServices } from '../data/innovative-2027-cybersecurity-compliance';
-import { innovative2027CloudDevOpsServices } from '../data/innovative-2027-cloud-devops';
-import { innovative2027IndustrySolutions } from '../data/innovative-2027-industry-solutions';
+import { innovative2027AIBusinessIntelligenceServices } from '../data/innovative-2027-ai-business-intelligence',
+import { innovative2027CybersecurityComplianceServices } from '../data/innovative-2027-cybersecurity-compliance',
+import { innovative2027CloudDevOpsServices } from '../data/innovative-2027-cloud-devops',
+import { innovative2027IndustrySolutions } from '../data/innovative-2027-industry-solutions',
 
 // Combine all services
 const allInnovativeServices = [
@@ -20,7 +20,7 @@ const allInnovativeServices = [
   ...innovative2027CybersecurityComplianceServices,
   ...innovative2027CloudDevOpsServices,
   ...innovative2027IndustrySolutions
-];
+],
 
 const categories = [
   {
@@ -86,7 +86,7 @@ const categories = [
     color: 'from-cyan-500 to-blue-500',
     description: 'Logistics optimization and supply chain'
   }
-];
+],
 
 const sortOptions = [
   { value: 'name', label: 'Name A-Z' },
@@ -95,52 +95,51 @@ const sortOptions = [
   { value: 'popular', label: 'Most Popular' },
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
-];
+],
 
 export default function Innovative2027ServicesShowcase() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 12;
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [currentPage, setCurrentPage] = useState(1),
+  const pageSize = 12,
 
   // Filter services based on search and category
   const filteredServices = allInnovativeServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
     
-    if (selectedCategory === 'all') return matchesSearch;
+    if (selectedCategory === 'all') return matchesSearch,
     
-    return matchesSearch && service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-  });
+    return matchesSearch && service.category.toLowerCase().includes(selectedCategory.replace('- ')),
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price-low':
         return (parseInt(a.price.replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(b.price.replace(/[^0-9]/g, '')) || 0);
+               (parseInt(b.price.replace(/[^0-9]/g, '')) || 0),
       case 'price-high':
         return (parseInt(b.price.replace(/[^0-9]/g, '')) || 0) - 
-               (parseInt(a.price.replace(/[^0-9]/g, '')) || 0);
+               (parseInt(a.price.replace(/[^0-9]/g, '')) || 0),
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popular':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      default: return 0
     }
-  });
+  }),
 
   // Pagination
-  const totalPages = Math.ceil(sortedServices.length / pageSize);
-  const startIndex = (currentPage - 1) * pageSize;
-  const paginatedServices = sortedServices.slice(startIndex, startIndex + pageSize);
+  const totalPages = Math.ceil(sortedServices.length / pageSize),
+  const startIndex = (currentPage - 1) * pageSize,
+  const paginatedServices = sortedServices.slice(startIndex, startIndex + pageSize),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -150,7 +149,7 @@ export default function Innovative2027ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -161,7 +160,7 @@ export default function Innovative2027ServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const innovative-2027-services-showcase: React.FC = () => {
   return (
@@ -178,7 +177,7 @@ const innovative-2027-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default innovative-2027-services-showcase;
+export default innovative-2027-services-showcase,

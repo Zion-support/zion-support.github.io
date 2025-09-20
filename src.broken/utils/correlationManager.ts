@@ -1,17 +1,17 @@
 // src/utils/correlationManager.ts
 
-let currentCorrelationId: string | null = null;
-let lastSetTime: number | null = null;
+let currentCorrelationId: string | null = null,
+let lastSetTime: number | null = null,
 
-const CORRELATION_ID_TTL = 5 * 60 * 1000; // 5 minutes TTL for the correlation ID
+const CORRELATION_ID_TTL = 5 * 60 * 1000, // 5 minutes TTL for the correlation ID
 
 /**
  * Sets the current correlation ID.
  * It will automatically expire after a set TTL.
  */
 export function setCorrelationId(id: string): void {
-  currentCorrelationId = id;
-  lastSetTime = Date.now();
+  currentCorrelationId = id,
+  lastSetTime = Date.now()
 }
 
 /**
@@ -21,21 +21,21 @@ export function setCorrelationId(id: string): void {
 export function getCorrelationId(): string | null {
   if (currentCorrelationId && lastSetTime) {
     if (Date.now() - lastSetTime < CORRELATION_ID_TTL) {
-      return currentCorrelationId;
+      return currentCorrelationId,
     } else {
       // ID has expired
-      currentCorrelationId = null;
-      lastSetTime = null;
-      return null;
+      currentCorrelationId = null,
+      lastSetTime = null,
+      return null,
     }
   }
-  return null;
+  return null,
 }
 
 /**
  * Clears the current correlation ID.
  */
 export function clearCorrelationId(): void {
-  currentCorrelationId = null;
-  lastSetTime = null;
+  currentCorrelationId = null,
+  lastSetTime = null,
 }

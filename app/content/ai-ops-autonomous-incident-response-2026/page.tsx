@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-	 title: 'AI-Ops: Autonomous Incident Response (2026)';
-	 description: 'Design autonomous incident response with event-driven pipelines, agents, and policy-as-code.',
-};
+	 title: 'AI-Ops: Autonomous Incident Response (2026)',
+	 description: 'Design autonomous incident response with event-driven pipelines, agents, and policy-as-code.'
+},
 export default function AIOpsAutonomousIncidentResponse2026() {,
 	 return (,
 		 <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -22,6 +22,6 @@ export default function AIOpsAutonomousIncidentResponse2026() {,
 				 <p>50%+ MTTR reduction, improved reliability, and lower operational cost.</p>,
 			 </section>,
 		 </main>,
-	 );
+	 ),
 }
 ,

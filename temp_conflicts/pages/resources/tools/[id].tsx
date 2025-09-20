@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 export default function ResourceToolPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
 
   // Tool data - in a real app, this would come from an API or database
   const tools = {
@@ -16,17 +16,13 @@ export default function ResourceToolPage() {
       estimatedTime: '15 minutes',
       fullDescription: 'This comprehensive assessment tool helps organizations evaluate their current state and readiness for AI automation implementation. It covers technical infrastructure, team capabilities, process maturity, and organizational readiness.',
       benefits: [
-        'Identify current automation maturity level',
-        'Understand technical and organizational gaps',
-        'Get personalized recommendations',
-        'Create a roadmap for automation success'
+        'Identify current automation maturity levelUnderstand technical and organizational gaps',
+        'Get personalized recommendationsCreate a roadmap for automation success'
       ],
       howItWorks: 'The assessment consists of 25 carefully crafted questions across four key areas: Technical Infrastructure, Team Capabilities, Process Maturity, and Organizational Readiness. Based on your responses, you\'ll receive a detailed report with actionable insights.',
       categories: [
-        'Technical Infrastructure',
-        'Team Capabilities', 
-        'Process Maturity',
-        'Organizational Readiness'
+        'Technical InfrastructureTeam Capabilities', 
+        'Process MaturityOrganizational Readiness'
       ]
     },
     'ai-maturity-model': {
@@ -36,17 +32,13 @@ export default function ResourceToolPage() {
       estimatedTime: '30 minutes',
       fullDescription: 'The AI Maturity Model provides a structured framework for organizations to assess their current AI capabilities and plan their transformation journey. It helps identify the next steps needed to advance to higher levels of AI maturity.',
       benefits: [
-        'Understand your current AI maturity level',
-        'Identify specific areas for improvement',
-        'Get a clear roadmap for advancement',
-        'Benchmark against industry standards'
+        'Understand your current AI maturity levelIdentify specific areas for improvement',
+        'Get a clear roadmap for advancementBenchmark against industry standards'
       ],
       howItWorks: 'This framework evaluates your organization across five maturity levels: Initial, Managed, Defined, Quantitatively Managed, and Optimizing. Each level has specific criteria and requirements that must be met before advancing.',
       categories: [
-        'Data Management',
-        'Model Development',
-        'Deployment & Operations',
-        'Governance & Ethics',
+        'Data ManagementModel Development',
+        'Deployment & OperationsGovernance & Ethics',
         'Business Integration'
       ]
     },
@@ -57,23 +49,19 @@ export default function ResourceToolPage() {
       estimatedTime: '20 minutes',
       fullDescription: 'This benchmarking tool allows you to compare your automation performance metrics against industry standards and best practices. It provides insights into where you excel and areas where you can improve.',
       benefits: [
-        'Compare performance to industry standards',
-        'Identify performance gaps and opportunities',
-        'Track improvement over time',
-        'Get actionable improvement recommendations'
+        'Compare performance to industry standardsIdentify performance gaps and opportunities',
+        'Track improvement over timeGet actionable improvement recommendations'
       ],
       howItWorks: 'The tool collects key performance indicators (KPIs) from your automation initiatives and compares them against a comprehensive database of industry benchmarks. You\'ll receive detailed analysis and recommendations for improvement.',
       categories: [
-        'Efficiency Metrics',
-        'Quality Metrics',
-        'Cost Metrics',
-        'Time Metrics',
+        'Efficiency MetricsQuality Metrics',
+        'Cost MetricsTime Metrics',
         'ROI Metrics'
       ]
     }
-  };
+  },
 
-  const tool = tools[id as keyof typeof tools];
+  const tool = tools[id as keyof typeof tools],
 
   if (!tool) {
     return (
@@ -81,12 +69,12 @@ export default function ResourceToolPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Tool Not Found</h1>
           <p className="text-white/80 mb-8">The requested tool could not be found.</p>
-          <Link href="/resources" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
+          <Link href="/resources" className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
             Back to Resources
           </Link>
         </div>
       </div>
-    );
+    )
   }
 
   return (
@@ -187,7 +175,7 @@ export default function ResourceToolPage() {
                     Explore our other tools, case studies, and resources to accelerate 
                     your AI automation journey.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4 justify-center">
                     <Link 
                       href="/resources"
                       className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -208,5 +196,5 @@ export default function ResourceToolPage() {
         </main>
       </div>
     </>
-  );
+  )
 }

@@ -1,5 +1,5 @@
 exports.handler = async function(event, context) {
-  console.log('Test function executed successfully');
+  console.log('Test function executed successfully'),
   
   return {
     statusCode: 200,
@@ -15,5 +15,5 @@ exports.handler = async function(event, context) {
     headers: {
       'Content-Type': 'application/json'
     }
-  };
-};
+  },
+},

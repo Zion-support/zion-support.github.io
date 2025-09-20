@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Responsible AI Operations Blueprint';
-  description: 'A pragmatic blueprint to operationalize responsible AI with policy-as-code, evals, incident response, and governance that scales.',
-};
+  title: 'AI 2026: Responsible AI Operations Blueprint',
+  description: 'A pragmatic blueprint to operationalize responsible AI with policy-as-code, evals, incident response, and governance that scales.'
+},
 export default function ResponsibleAIOpsBlueprintPage() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -35,7 +35,6 @@ export default function ResponsibleAIOpsBlueprintPage() {,
           {' '}or <Link href="/contact" className="text-purple-600 font-semibold">contact us</Link> for a tailored assessment.,
         </p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

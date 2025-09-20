@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   Filter,
@@ -56,79 +56,74 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 import {
   ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-} from '@/data/expandedInnovativeServices2027';
-
+} from "@/data/expandedInnovativeServices2027";
 const ExpandedServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [filteredServices, setFilteredServices] = useState<ExpandedService2027[]>(ALL_EXPANDED_SERVICES_2027),
 
   useEffect(() => {
-    let services = getExpandedServicesByCategory(selectedCategory);
+    let services = getExpandedServicesByCategory(selectedCategory),
     if (searchQuery) {
-      services = searchExpandedServices(searchQuery);
+      services = searchExpandedServices(searchQuery),
     }
-    setFilteredServices(services);
-  }, [selectedCategory, searchQuery]);
+    setFilteredServices(services),
+  }, [selectedCategory, searchQuery]),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
       case 'Data Analytics':
-        return BarChart3;
+        return BarChart3,
       case 'Cloud & DevOps':
-        return Cloud;
+        return Cloud,
       case 'IoT & Edge Computing':
-        return IoT;
+        return IoT,
       case 'Financial Technology':
-        return FinTech;
+        return FinTech,
       case 'Healthcare Technology':
-        return Healthcare;
-      default:
-        return Rocket;
+        return Healthcare,
+      default: return Rocket
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
-        return 'from-blue-500 to-cyan-600';
+        return 'from-blue-500 to-cyan-600',
       case 'Cloud & DevOps':
-        return 'from-indigo-500 to-purple-600';
+        return 'from-indigo-500 to-purple-600',
       case 'IoT & Edge Computing':
-        return 'from-green-500 to-emerald-600';
+        return 'from-green-500 to-emerald-600',
       case 'Financial Technology':
-        return 'from-yellow-500 to-orange-600';
+        return 'from-yellow-500 to-orange-600',
       case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600';
-      default:
-        return 'from-gray-500 to-slate-600';
+        return 'from-teal-500 to-blue-600',
+      default: return 'from-gray-500 to-slate-600'
     }
   };
-
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {
     if (pricing.model === 'Transaction Fees + Governance') {
-      return 'Free + Transaction Fees';
+      return 'Free + Transaction Fees'
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
-  };
+  },
 
   const renderServiceCard = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category);
+    const categoryColor = getCategoryColor(service.category),
 
     return (
       <motion.div
@@ -230,7 +225,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               {service.benefits.slice(0, 4).map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-xs text-gray-600 dark:text-gray-300 line-clamp-2">
+                  <span className="text-xs text-gray-600 dark: text-gray-300 line-clamp-2">
                     {benefit}
                   </span>
                 </div>
@@ -293,7 +288,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="flex-1 bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
@@ -302,12 +297,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </motion.div>
-    );
+    )
   };
-
   const renderServiceList = (service: ExpandedService2027) => {
     const CategoryIcon = getCategoryIcon(service.category);
-    const categoryColor = getCategoryColor(service.category);
+    const categoryColor = getCategoryColor(service.category),
 
     return (
       <motion.div
@@ -380,7 +374,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
+                className="bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
@@ -389,9 +383,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
         </div>
       </motion.div>
-    );
+    )
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
@@ -558,7 +551,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             Our innovative services are designed to drive growth, efficiency, and competitive advantage.
             Contact us today to discuss how we can help you achieve your goals.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
@@ -577,7 +570,6 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default ExpandedServicesShowcase2027;

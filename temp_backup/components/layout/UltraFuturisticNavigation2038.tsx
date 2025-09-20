@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
@@ -9,30 +9,30 @@ import {
   Calendar, Calculator, GraduationCap,
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
   Zap, Users, FileText, ShieldCheck, Database, Server, Lock, Key, Eye, Search, Bell, User, Cog
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const navigationItems: NavigationItem[] = [
@@ -287,7 +287,7 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
@@ -295,30 +295,30 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
   { name: 'Documentation', href: '/api-documentation', icon: <FileText className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <Monitor className="w-4 h-4" /> }
-];
+],
 
 export default function UltraFuturisticNavigation2038() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
 
   const closeAllDropdowns = () => {
-    setActiveDropdown(null);
-    setIsOpen(false);
-  };
+    setActiveDropdown(null),
+    setIsOpen(false),
+  },
 
 const UltraFuturisticNavigation2038: React.FC = () => {
   return (
@@ -326,7 +326,7 @@ const UltraFuturisticNavigation2038: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2038</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2038;
+export default UltraFuturisticNavigation2038,

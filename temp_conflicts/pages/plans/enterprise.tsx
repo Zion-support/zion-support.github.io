@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
-  { key: 'admin_dashboards', label: 'Admin dashboards' },
-];
+  { key: 'admin_dashboards', label: 'Admin dashboards' }
+],
 
 const tiers = [
   {
@@ -14,26 +14,26 @@ const tiers = [
     name: 'Teams',
     price: '$199/mo',
     blurb: 'Up to 10 users, core collaboration features',
-    highlights: ['10 seats', 'Private portal', 'Admin dashboard'],
-    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true },
+    highlights: ['10 seatsPrivate portal', 'Admin dashboard'],
+    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }
   },
   {
     id: 'business',
     name: 'Business',
     price: '$499/mo',
     blurb: 'Up to 50 users, advanced controls and limits',
-    highlights: ['50 seats', 'Dedicated talent pool', 'SLA options'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true },
+    highlights: ['50 seatsDedicated talent pool', 'SLA options'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }
   },
   {
     id: 'enterprise-custom',
     name: 'Enterprise',
     price: 'Custom',
     blurb: 'Unlimited users, custom contracts and SLAs',
-    highlights: ['Unlimited seats', 'Custom SLA', 'Dedicated CSM'],
-    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true },
-  },
-];
+    highlights: ['Unlimited seatsCustom SLA', 'Dedicated CSM'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }
+  }
+],
 
 export default function EnterprisePlans() {
   return (
@@ -103,5 +103,5 @@ export default function EnterprisePlans() {
         </div>
       </section>
     </main>
-  );
+  ),
 }

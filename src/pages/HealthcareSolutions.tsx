@@ -1,6 +1,5 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
+import React from "react";
+import { SEO } from "@/components/SEO";
 const HealthcareSolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -15,8 +14,7 @@ const HealthcareSolutions: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
+  ),
+},
 
 export default HealthcareSolutions;
-

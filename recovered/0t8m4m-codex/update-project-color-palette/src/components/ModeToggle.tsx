@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { useTheme } from "@/hooks/useTheme"
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme(),
 
   return (
     <Button
@@ -19,5 +19,5 @@ export function ModeToggle() {
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
-  );
+  ),
 }

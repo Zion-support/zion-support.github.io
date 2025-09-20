@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Scale, Search, TrendingUp, Shield, Zap, Target, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AILegalResearchPlatform() {
   const features = [
@@ -39,25 +39,19 @@ export default function AILegalResearchPlatform() {
       title: 'Legal Analytics',
       description: 'Comprehensive legal analytics with trend analysis and outcome prediction for legal strategies.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Reduce research time by 80%',
-    'Improve case outcomes by 60%',
-    'Increase research accuracy by 70%',
-    'Reduce legal costs by 50%',
-    'Accelerate document review by 200%',
-    'Enhance legal strategy by 150%',
-    'Scale legal operations',
-    'Future-proof legal practice'
-  ];
+    'Reduce research time by 80%Improve case outcomes by 60%',
+    'Increase research accuracy by 70%Reduce legal costs by 50%',
+    'Accelerate document review by 200%Enhance legal strategy by 150%',
+    'Scale legal operationsFuture-proof legal practice'
+  ],
 
   const useCases = [
-    'Legal Research', 'Case Analysis', 'Document Review',
-    'Contract Analysis', 'Compliance Monitoring', 'Legal Analytics',
-    'Risk Assessment', 'Document Generation', 'Precedent Analysis',
-    'Regulatory Research', 'Litigation Support', 'Legal Intelligence'
-  ];
+    'Legal ResearchCase Analysis', 'Document ReviewContract Analysis', 'Compliance MonitoringLegal Analytics',
+    'Risk AssessmentDocument Generation', 'Precedent AnalysisRegulatory Research', 'Litigation SupportLegal Intelligence'
+  ],
 
 const ai-legal-research-platform: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-legal-research-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-legal-research-platform;
+export default ai-legal-research-platform,

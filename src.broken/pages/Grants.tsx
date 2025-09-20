@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
-import { NextSeo } from '@/components/NextSeo';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
+import React, { useState } from 'react',
+import { NextSeo } from '@/components/NextSeo',
+import { useForm } from 'react-hook-form',
+import { z } from 'zod',
+import { zodResolver } from '@hookform/resolvers/zod',
 import {
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from '@/components/ui/form';
-import { ControllerRenderProps } from 'react-hook-form'; // Added import
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+  FormMessage
+} from '@/components/ui/form',
+import { ControllerRenderProps } from 'react-hook-form', // Added import
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
 import {
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
-  SelectItem,
-} from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+  SelectItem
+} from '@/components/ui/select',
+import { Button } from '@/components/ui/button',
+import { Card, CardHeader, CardContent } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
 
 const categories = [
-  'Ecosystem Tools',
-  'Talent Development',
-  'Regional Expansion',
-  'Research Grants',
-];
+  'Ecosystem ToolsTalent Development',
+  'Regional ExpansionResearch Grants'
+],
 
 const schema = z.object({
   projectName: z.string().min(1, 'Required'),
@@ -39,28 +37,28 @@ const schema = z.object({
   timeline: z.string().min(1, 'Required'),
   budget: z.string().min(1, 'Required'),
   links: z.string().optional(),
-  category: z.string().min(1, 'Required'),
-});
+  category: z.string().min(1, 'Required')
+}),
 
-type FormValues = z.infer<typeof schema>;
+type FormValues = z.infer<typeof schema>,
 
 interface Grant extends FormValues {
-  id: number;
-  status: 'Draft' | 'Submitted';
+  id: number,
+  status: 'Draft' | 'Submitted'
 }
 
 export default function GrantsPage() {
-  const [grants, setGrants] = useState<Grant[]>([]);
+  const [grants, setGrants] = useState<Grant[]>([]),
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
-    defaultValues: { category: categories[0] },
-  });
+    defaultValues: { category: categories[0] }
+  }),
 
   const saveGrant = (values: FormValues, status: Grant['status']) => {
-    const grant: Grant = { ...values, id: Date.now(), status };
-    setGrants((prev) => [...prev, grant]);
-    form.reset({ category: categories[0] });
-  };
+    const grant: Grant = { ...values, id: Date.now(), status },
+    setGrants((prev) => [...prev, grant]),
+    form.reset({ category: categories[0] }),
+  },
 
   return (
     <>
@@ -210,5 +208,5 @@ export default function GrantsPage() {
         </div>
       </div>
     </>
-  );
+  ),
 }

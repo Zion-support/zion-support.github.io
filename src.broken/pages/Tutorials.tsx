@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-  ];
+  ],
 
   const featuredTutorials = [{
       title: 'AI Autonomous Research Assistant Implementation',
@@ -12,7 +12,7 @@ export default function Page() {
       instructor: 'Dr.Sarah Chen',
       rating: 4.9,
       students: '1.2k',
-      thumbnail: '/images / tutorials / ai - autonomous - research.jpg',
+      thumbnail: '/images / tutorials / ai - autonomous - research.jpg'
     },
     {
       title: 'AI Supply Chain Optimization Setup',
@@ -23,7 +23,7 @@ export default function Page() {
       instructor: 'Michael Rodriguez',
       rating: 4.8,
       students: '856',
-      thumbnail: '/images / tutorials / ai - supply - chain.jpg',
+      thumbnail: '/images / tutorials / ai - supply - chain.jpg'
     },
     {
       title: 'Building Your First AI Chatbot',
@@ -34,7 +34,7 @@ export default function Page() {
       instructor: 'Dr.Sarah Chen',
       rating: 4.8,
       students: '2.3k',
-      thumbnail: '/images / tutorials / ai - chatbot.jpg',
+      thumbnail: '/images / tutorials / ai - chatbot.jpg'
     },
     {
       title: 'Quantum Neural Network Implementation',
@@ -45,7 +45,7 @@ export default function Page() {
       instructor: 'Michael Rodriguez',
       rating: 4.9,
       students: '856',
-      thumbnail: '/images / tutorials / quantum - neural.jpg',
+      thumbnail: '/images / tutorials / quantum - neural.jpg'
     },
     {
       title: 'Cybersecurity Best Practices',
@@ -56,7 +56,7 @@ export default function Page() {
       instructor: 'James Wilson',
       rating: 4.7,
       students: '1.5k',
-      thumbnail: '/images / tutorials / cybersecurity.jpg',
+      thumbnail: '/images / tutorials / cybersecurity.jpg'
     },
     {
       title: 'AI Model Optimization',
@@ -67,36 +67,36 @@ export default function Page() {
       instructor: 'Dr.Emily Watson',
       rating: 4.6,
       students: '623',
-      thumbnail: '/images / tutorials / ai - optimization.jpg',
-    },
-  ];
+      thumbnail: '/images / tutorials / ai - optimization.jpg'
+    }
+  ],
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popular'),
 
   const filteredTutorials = featuredTutorials.filter(tutorial => {
     const matchesSearch = tutorial.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
-      tutorial.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
+      tutorial.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
     const matchesCategory = selectedCategory === 'all' ||
-      tutorial.category.toLowerCase () === selectedCategory.toLowerCase () ;
-    return matchesSearch && matchesCategory;
-  }) ;
+      tutorial.category.toLowerCase () === selectedCategory.toLowerCase () ,
+    return matchesSearch && matchesCategory,
+  }) ,
 
   const sortedTutorials = [...filteredTutorials].sort((a, b) => {
     switch(sortBy) {
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'duration':
-        return parseInt(a.duration) - parseInt(b.duration) ;
+        return parseInt(a.duration) - parseInt(b.duration) ,
       case 'students':
-        return (parseInt (b.students.replace ('k', '000') ) -
-          parseInt(a.students.replace ('k', '000') ) ) ;
+        return (parseInt (b.students.replace ('k000') ) -
+          parseInt(a.students.replace ('k000') ) ) ,
       default:
-        return (parseInt (b.students.replace ('k', '000') ) -
-          parseInt(a.students.replace ('k', '000') ) ) ;
+        return (parseInt (b.students.replace ('k000') ) -
+          parseInt(a.students.replace ('k000') ) ) ,
     }
-  }) ;
+  }) ,
 
   return (<div
       
@@ -326,7 +326,7 @@ export default function Page() {
         {/* Empty State */}
         {sortedTutorials.length === 0 && (<div  className="text-center py-16">
             <BookOpen className="w-16 h-16 text-slate - 400 mx - auto mb-4" />
-            <h3 className="text-xl font - semibold text-slate - 900 dark:text-white mb-2">
+            <h3 className="text-xl font - semibold text-slate - 900 dark: text-white mb-2">
               No tutorials found
             </h3>
             <p className="text-slate - 600 dark:text-slate - 400 mb-6">
@@ -334,9 +334,9 @@ export default function Page() {
               looking for.</p>
             <button    
               onClick={ () => {
-                setSearchTerm('') ;
-                setSelectedCategory('all') ;
-                setSortBy('popular') ;
+                setSearchTerm('') ,
+                setSelectedCategory('all') ,
+                setSortBy('popular') 
               }}
               className="bg-cyan - 600 hover:bg-cyan - 700 text-white px-6 py-2 rounded-lg font - medium transition -colors"
             >
@@ -344,5 +344,5 @@ export default function Page() {
             </button>
           </div>) }
       </div>
-    </div>) ;
-};
+    </div>) ,
+},

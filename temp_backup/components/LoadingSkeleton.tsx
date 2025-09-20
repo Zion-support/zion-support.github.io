@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 const LoadingSkeleton: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const LoadingSkeleton: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">LoadingSkeleton</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default LoadingSkeleton;
+export default LoadingSkeleton,

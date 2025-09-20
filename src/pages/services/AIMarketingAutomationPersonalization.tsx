@@ -1,78 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from 'lucide-react';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight, Brain, TrendingUp, MessageSquare, Globe } from "lucide-react";
 export default function AIMarketingAutomationPersonalization() {
   const features = [
-    'AI-powered customer segmentation with behavioral analysis',
-    'Dynamic content personalization across all marketing channels',
-    'Predictive lead scoring and conversion optimization',
-    'Multi-channel campaign orchestration (email, SMS, social, web)',
-    'Real-time A/B testing with AI-driven optimization',
-    'Customer journey mapping and automated nurturing sequences',
-    'Advanced analytics and ROI tracking with attribution modeling',
-    'Integration with major CRM, e-commerce, and advertising platforms',
-  ];
+    'AI-powered customer segmentation with behavioral analysisDynamic content personalization across all marketing channels',
+    'Predictive lead scoring and conversion optimizationMulti-channel campaign orchestration (email, SMS, social, web)',
+    'Real-time A/B testing with AI-driven optimizationCustomer journey mapping and automated nurturing sequences',
+    'Advanced analytics and ROI tracking with attribution modelingIntegration with major CRM, e-commerce, and advertising platforms'
+  ],
 
   const benefits = [
-    'Increase conversion rates by 40-60% with personalization',
-    'Reduce customer acquisition costs by 30-50%',
-    'Improve email open rates by 25-40% with AI optimization',
-    'Generate 35-50% more qualified leads through automation',
-    'Boost customer lifetime value by 20-35%',
-    'Achieve 99.9% campaign delivery and tracking accuracy',
-  ];
+    'Increase conversion rates by 40-60% with personalizationReduce customer acquisition costs by 30-50%',
+    'Improve email open rates by 25-40% with AI optimizationGenerate 35-50% more qualified leads through automation',
+    'Boost customer lifetime value by 20-35%Achieve 99.9% campaign delivery and tracking accuracy'
+  ],
 
   const marketingChannels = [
-    'Email Marketing Automation',
-    'SMS & Push Notifications',
-    'Social Media Advertising',
-    'Display & Retargeting Ads',
-    'Content Marketing',
-    'Search Engine Marketing',
-    'Influencer Marketing',
-    'Video Marketing',
-    'Voice & Chatbot Marketing',
-    'Location-Based Marketing',
-  ];
+    'Email Marketing AutomationSMS & Push Notifications',
+    'Social Media AdvertisingDisplay & Retargeting Ads',
+    'Content MarketingSearch Engine Marketing',
+    'Influencer MarketingVideo Marketing',
+    'Voice & Chatbot MarketingLocation-Based Marketing'
+  ],
 
   const aiCapabilities = [
-    'Customer Behavior Analysis',
-    'Predictive Analytics',
-    'Dynamic Content Generation',
-    'Smart Segmentation',
-    'Lead Scoring & Qualification',
-    'Campaign Optimization',
-    'Personalization Engine',
-    'A/B Testing Automation',
-    'Performance Prediction',
-    'ROI Optimization',
-  ];
+    'Customer Behavior AnalysisPredictive Analytics',
+    'Dynamic Content GenerationSmart Segmentation',
+    'Lead Scoring & QualificationCampaign Optimization',
+    'Personalization EngineA/B Testing Automation',
+    'Performance PredictionROI Optimization'
+  ],
 
   const integrations = [
-    'Salesforce Marketing Cloud',
-    'HubSpot Marketing Hub',
-    'Mailchimp',
-    'Klaviyo',
-    'Shopify',
-    'WooCommerce',
-    'Facebook Ads',
-    'Google Ads',
-    'LinkedIn Ads',
-    'TikTok Ads',
+    'Salesforce Marketing CloudHubSpot Marketing Hub',
+    'MailchimpKlaviyo',
+    'ShopifyWooCommerce';
+    'Facebook AdsGoogle Ads';
+    'LinkedIn AdsTikTok Ads'
   ];
-
   const stack = [
-    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
-    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },
-    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },
-    { name: 'Apache Spark', url: 'https://spark.apache.org/' },
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },
-    { name: 'Redis', url: 'https://redis.io/' },
-    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' },
-    { name: 'Elasticsearch', url: 'https://www.elastic.co/' },
+    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' };
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' };
+    { name: 'Scikit-learn', url: 'https://scikit-learn.org/' };
+    { name: 'Apache Spark', url: 'https://spark.apache.org/' };
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' };
+    { name: 'Redis', url: 'https://redis.io/' };
+    { name: 'PostgreSQL', url: 'https://www.postgresql.org/' };
+    { name: 'Elasticsearch', url: 'https://www.elastic.co/' }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -242,7 +217,7 @@ export default function AIMarketingAutomationPersonalization() {
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Transform Your Marketing Today</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -260,5 +235,5 @@ export default function AIMarketingAutomationPersonalization() {
         </div>
       </section>
     </div>
-  );
+  )
 }

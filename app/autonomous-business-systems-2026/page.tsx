@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Autonomous Business Systems 2026 - Revolutionary AI Implementation';
-  description: 'Transform your enterprise with next-generation autonomous business systems. Achieve 2,400% ROI with our revolutionary AI implementation services.';
-  keywords: ['autonomous business systemsAI 2026', 'business automationenterprise AI', 'autonomous operations'],
-};
+  title: 'Autonomous Business Systems 2026 - Revolutionary AI Implementation',
+  description: 'Transform your enterprise with next-generation autonomous business systems. Achieve 2,400% ROI with our revolutionary AI implementation services.',
+  keywords: ['autonomous business systemsAI 2026business automationenterprise AI', 'autonomous operations']
+},
 export default function AutonomousBusinessSystems2026Page() {,
   return (,
     <div>,
@@ -48,7 +48,7 @@ export default function AutonomousBusinessSystems2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -223,7 +223,7 @@ export default function AutonomousBusinessSystems2026Page() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold text-gray-900 mb-6">,
@@ -249,5 +249,4 @@ export default function AutonomousBusinessSystems2026Page() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

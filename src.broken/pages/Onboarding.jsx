@@ -1,19 +1,19 @@
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom',
 
 export default function Page() {
         // Continue with the onboarding flow for clients
-        setCurrentStep(1) };
+        setCurrentStep(1) },
     const handleProfileComplete = async(data) => {
         if(!user || !userType) {
             toast({
                 title: "Authentication Error",
                 description: "Your session may have expired.Please log in again.",
-                variant: "destructive",
-            }) ;
-            router('/login') ;
-            return;
+                variant: "destructive"
+            }) ,
+            router('/login') ,
+            return,
         }
-        const dbUserType = mapUserTypeToDatabase(userType) ;
+        const dbUserType = mapUserTypeToDatabase(userType) ,
         try {
             await updateProfile({
                 id: user.id,
@@ -22,38 +22,38 @@ export default function Page() {
                 userType: dbUserType,
                 headline: data.headline,
                 profileComplete: true
-            }) ;
+            }) ,
             // Update onboarding milestone
             await supabase.rpc('update_onboarding_milestone', {
                 _user_id: user.id,
                 _milestone: 'profile_completed',
                 _status: true
-            }) ;
+            }) ,
             toast({
                 title: 'Profile completed!',
-                description: 'Your profile has been set up successfully.',
-            }) ;
+                description: 'Your profile has been set up successfully.'
+            }) ,
             // Get the appropriate dashboard route based on user type
             const dashboardRoute = userType === "client"
                 ? "/client - dashboard"
-                : "/talent - dashboard";
+                : "/talent - dashboard",
             // Redirect to dashboard
-            router(dashboardRoute) ;
+            router(dashboardRoute) ,
         }
         catch(error) {
-            // // // // // // // console.error('Error updating profile:', error) ;
+            // // // // // // // console.error('Error updating profile:', error) ,
             toast({
                 title: 'Error',
                 description: 'There was a problem updating your profile.Please try again.',
-                variant: 'destructive',
+                variant: 'destructive'
             }) }
-    };
+    },
     const steps = [{ label: "Select Role", description: "Choose how you'll use the platform" },
-        { label: "Create Profile", description: "Tell us about yourself" },
-    ];
+        { label: "Create Profile", description: "Tell us about yourself" }
+    ],
     if(!user) {
-        router('/login') ;
-        return null;
+        router('/login') ,
+        return null,
     }
     return (<>
 

@@ -509,4 +509,4 @@ export type ServiceVariant =
   | 'neuromorphic-futuristic'
   | 'dna-futuristic'
   | 'photonic-futuristic'
-  | 'robotics-futuristic';
+  | 'robotics-futuristic',

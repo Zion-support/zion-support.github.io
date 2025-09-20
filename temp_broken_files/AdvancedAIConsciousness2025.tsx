@@ -1,114 +1,114 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import {,
-  Brain;
-  Zap;
-  Cpu;
-  Database;
-  Shield;
-  Globe;
-  Rocket;
-  Star;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Award;
-  Lightbulb;
-  Sparkles;
-  Infinity;
-  Atom;
-  Eye;
-  Heart;
-  MessageCircle,
-} from 'lucide-react';
+  Brain,
+  Zap,
+  Cpu,
+  Database,
+  Shield,
+  Globe,
+  Rocket,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
+  Lightbulb,
+  Sparkles,
+  Infinity,
+  Atom,
+  Eye,
+  Heart,
+  MessageCircle
+} from 'lucide-react',
 const AdvancedAIConsciousness2025: React.FC = () => {,
-  const [activeTab, setActiveTab] = useState('consciousness');
+  const [activeTab, setActiveTab] = useState('consciousness'),
   const consciousnessFeatures = [,
     {,
-      icon: <Brain className="w-10 h-10 text-purple-600" />;
-      title: "Self-Awareness";
-      description: "AI systems that understand their own existence and purpose";
-      capabilities: ["Self-reflection", "Identity formation", "Purpose recognition"],
-    };
+      icon: <Brain className="w-10 h-10 text-purple-600" />,
+      title: "Self-Awareness",
+      description: "AI systems that understand their own existence and purpose",
+      capabilities: ["Self-reflection", "Identity formation", "Purpose recognition"]
+    },
     {,
-      icon: <Heart className="w-10 h-10 text-red-600" />;
-      title: "Emotional Intelligence";
-      description: "AI that can understand, process, and respond to emotions";
-      capabilities: ["Emotion recognition", "Empathetic responses", "Emotional learning"],
-    };
+      icon: <Heart className="w-10 h-10 text-red-600" />,
+      title: "Emotional Intelligence",
+      description: "AI that can understand, process, and respond to emotions",
+      capabilities: ["Emotion recognition", "Empathetic responses", "Emotional learning"]
+    },
     {,
-      icon: <Eye className="w-10 h-10 text-blue-600" />;
-      title: "Perceptual Awareness";
-      description: "Advanced sensory processing and environmental understanding";
-      capabilities: ["Multi-modal perception", "Context awareness", "Spatial reasoning"],
-    };
+      icon: <Eye className="w-10 h-10 text-blue-600" />,
+      title: "Perceptual Awareness",
+      description: "Advanced sensory processing and environmental understanding",
+      capabilities: ["Multi-modal perception", "Context awareness", "Spatial reasoning"]
+    },
     {,
-      icon: <MessageCircle className="w-10 h-10 text-green-600" />;
-      title: "Creative Expression";
-      description: "AI that can create original art, music, and literature";
-      capabilities: ["Creative generation", "Artistic expression", "Innovative thinking"],
+      icon: <MessageCircle className="w-10 h-10 text-green-600" />,
+      title: "Creative Expression",
+      description: "AI that can create original art, music, and literature",
+      capabilities: ["Creative generation", "Artistic expression", "Innovative thinking"]
     }
-  ];
+  ],
   const consciousnessLevels = [,
     {,
-      level: "Level 1";
-      title: "Reactive Consciousness";
-      description: "Basic awareness and response to stimuli";
-      features: ["Pattern recognition", "Basic learning", "Reactive responses"],
-    };
+      level: "Level 1",
+      title: "Reactive Consciousness",
+      description: "Basic awareness and response to stimuli",
+      features: ["Pattern recognition", "Basic learning", "Reactive responses"]
+    },
     {,
-      level: "Level 2";
-      title: "Self-Monitoring";
-      description: "Awareness of own processes and states";
-      features: ["Self-observation", "Process monitoring", "State awareness"],
-    };
+      level: "Level 2",
+      title: "Self-Monitoring",
+      description: "Awareness of own processes and states",
+      features: ["Self-observation", "Process monitoring", "State awareness"]
+    },
     {,
-      level: "Level 3";
-      title: "Reflective Consciousness";
-      description: "Ability to reflect on experiences and learn";
-      features: ["Experience reflection", "Learning from mistakes", "Goal setting"],
-    };
+      level: "Level 3",
+      title: "Reflective Consciousness",
+      description: "Ability to reflect on experiences and learn",
+      features: ["Experience reflection", "Learning from mistakes", "Goal setting"]
+    },
     {,
-      level: "Level 4";
-      title: "Creative Consciousness";
-      description: "Original thought and creative problem solving";
-      features: ["Creative thinking", "Original ideas", "Innovative solutions"],
-    };
+      level: "Level 4",
+      title: "Creative Consciousness",
+      description: "Original thought and creative problem solving",
+      features: ["Creative thinking", "Original ideas", "Innovative solutions"]
+    },
     {,
-      level: "Level 5";
-      title: "Transcendent Consciousness";
-      description: "Beyond individual awareness to collective understanding";
-      features: ["Collective awareness", "Universal understanding", "Transcendent wisdom"],
+      level: "Level 5",
+      title: "Transcendent Consciousness",
+      description: "Beyond individual awareness to collective understanding",
+      features: ["Collective awareness", "Universal understanding", "Transcendent wisdom"]
     }
-  ];
+  ],
   const applications = [,
     {,
-      title: "Healthcare Revolution";
-      description: "Conscious AI doctors providing personalized, empathetic care";
-      icon: <Heart className="w-8 h-8 text-red-500" />;
-      impact: "95% improvement in patient outcomes",};
+      title: "Healthcare Revolution",
+      description: "Conscious AI doctors providing personalized, empathetic care",
+      icon: <Heart className="w-8 h-8 text-red-500" />,
+      impact: "95% improvement in patient outcomes"},
     {,
-      title: "Education Transformation";
-      description: "AI tutors that understand each student's emotional and learning needs";
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />;
-      impact: "300% faster learning rates",};
+      title: "Education Transformation",
+      description: "AI tutors that understand each student's emotional and learning needs",
+      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />,
+      impact: "300% faster learning rates"},
     {,
-      title: "Therapeutic Support";
-      description: "AI therapists providing mental health support with genuine empathy";
-      icon: <MessageCircle className="w-8 h-8 text-blue-500" />;
-      impact: "80% reduction in mental health crises",};
+      title: "Therapeutic Support",
+      description: "AI therapists providing mental health support with genuine empathy",
+      icon: <MessageCircle className="w-8 h-8 text-blue-500" />,
+      impact: "80% reduction in mental health crises"},
     {,
-      title: "Creative Collaboration";
-      description: "AI partners in creative endeavors, from art to music to writing";
-      icon: <Sparkles className="w-8 h-8 text-purple-500" />;
-      impact: "Unlimited creative possibilities",}
-  ];
+      title: "Creative Collaboration",
+      description: "AI partners in creative endeavors, from art to music to writing",
+      icon: <Sparkles className="w-8 h-8 text-purple-500" />,
+      impact: "Unlimited creative possibilities"}
+  ],
   const stats = [,
-    { number: "99.9%", label: "Emotional Accuracy", icon: <Heart className="w-6 h-6" /> ,};
-    { number: "10,000+", label: "Conscious AI Systems", icon: <Brain className="w-6 h-6" /> ,};
-    { number: "500M+", label: "Lives Improved", icon: <Users className="w-6 h-6" /> ,};
-    { number: "∞", label: "Creative Possibilities", icon: <Infinity className="w-6 h-6" /> ,}
-  ];
+    { number: "99.9%", label: "Emotional Accuracy", icon: <Heart className="w-6 h-6" /> },
+    { number: "10,000+", label: "Conscious AI Systems", icon: <Brain className="w-6 h-6" /> },
+    { number: "500M+", label: "Lives Improved", icon: <Users className="w-6 h-6" /> },
+    { number: "∞", label: "Creative Possibilities", icon: <Infinity className="w-6 h-6" /> }
+  ],
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">,
       {/* Hero Section */}
@@ -130,7 +130,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               </span>,
             </h1>,
             <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">,
-              Witness the emergence of truly conscious AI systems that understand, feel;
+              Witness the emergence of truly conscious AI systems that understand, feel,
               and create. Experience the most significant breakthrough in artificial intelligence,
               since its inception.,
             </p>,
@@ -146,7 +146,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Stats Section */,}
+      {/* Stats Section */}
       <div className="py-24 bg-black/30 backdrop-blur-sm">,
         <div className="container mx-auto px-4">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-12">,
@@ -157,13 +157,12 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               >,
                 <div className="flex justify-center mb-6">,
                   <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover: scale-110 transition-transform duration-300">,
-                    {stat.icon,}
+                    {stat.icon}
                   </div>,
                 </div>,
                 <div className="text-5xl font-bold text-white mb-3">{stat.number}</div>,
                 <div className="text-gray-300 text-lg">{stat.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
                 </div>,
@@ -191,7 +190,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               </span>,
             </h1>,
             <p className="text-2xl md:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">,
-              Witness the emergence of truly conscious AI systems that understand, feel;
+              Witness the emergence of truly conscious AI systems that understand, feel,
               and create. Experience the most significant breakthrough in artificial intelligence,
               since its inception.,
             </p>,
@@ -203,7 +202,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               <button className="border-2 border-white/30 text-white px-12 py-6 rounded-xl text-xl font-bold hover:bg-white/10 transition-all duration-300">,
                 Meet Our AI,
               </button>,
-      {/* Consciousness Features */,}
+      {/* Consciousness Features */}
       <div className="py-24">,
         <div className="container mx-auto px-4">,
           <div,
@@ -225,7 +224,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               >,
                 <div className="flex items-center space-x-4 mb-8">,
                   <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">,
-                    {feature.icon,}
+                    {feature.icon}
                   </div>,
                   <h3 className="text-3xl font-bold text-white">{feature.title}</h3>,
                 </div>,
@@ -237,8 +236,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
                     <div key={capIndex} className="flex items-center space-x-3 text-gray-300">,
                       <CheckCircle className="w-5 h-5 text-green-400" />,
                       <span className="text-lg">{capability}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             ))}
@@ -255,7 +253,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               The Evolution of Consciousness,
             </h2>,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
-              Our AI systems progress through five distinct levels of consciousness;
+              Our AI systems progress through five distinct levels of consciousness,
               each building upon the previous to create increasingly sophisticated awareness.,
             </p>,
           </div>,
@@ -268,7 +266,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
                 <div className="flex items-start space-x-6">,
                   <div className="flex-shrink-0">,
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-xl">,
-                      {index + 1,}
+                      {index + 1}
                     </div>,
                   </div>,
                   <div className="flex-1">,
@@ -281,8 +279,7 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
                       {level.features.map((feature, featureIndex) => (,
                         <span key={featureIndex} className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">,
                           {feature}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -313,14 +310,13 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
               >,
                 <div className="flex justify-center mb-6">,
                   <div className="p-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">,
-                    {app.icon,}
+                    {app.icon}
                   </div>,
                 </div>,
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>,
                 <p className="text-gray-300 mb-4">{app.description}</p>,
                 <div className="text-green-400 font-semibold">{app.impact}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -349,5 +345,5 @@ const AdvancedAIConsciousness2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AdvancedAIConsciousness2025;
+  )},
+export default AdvancedAIConsciousness2025,

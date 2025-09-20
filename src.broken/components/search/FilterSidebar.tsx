@@ -1,37 +1,37 @@
 
 <<<<<<< HEAD
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
 
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null;
-  };
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void;
+    selectedProductTypes: string[],
+    selectedLocations: string[],
+    selectedAvailability: string[],
+    selectedRating: number | null
+  },
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
+  onClearFilters: () => void
 }
 
 interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
+  title: string,
+  key: string,
+  options: FilterOption[],
   type: 'checkbox' | 'radio' | 'range'}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
-  filters: FilterGroup[];
-  selectedFilters: Record<string, any>;
-  onFilterChange: key: string, value: string, checked: boolean void;
-  onClearFilters: : unknown void;
-  isOpen: boolean;
+  filters: FilterGroup[],
+  selectedFilters: Record<string, any>,
+  onFilterChange: key: string, value: string, checked: boolean void,
+  onClearFilters: : unknown void,
+  isOpen: boolean,
   onClose: ()  => void}
 
 export function FilterSidebar({
@@ -95,12 +95,12 @@ export function FilterSidebar({
           </div>
 
           {/* Filter groups */}
-          {filters.map((group) => (;"
-            <div key={group.key} className="space-y-3">;"
-              <h4 className="font-medium text-white">{group.title}</h4>;
-              ;"
-              <div className="space-y-2">;
-                {group.options.map((option: unknown {;
+          {filters.map((group) => (,"
+            <div key={group.key} className="space-y-3">,"
+              <h4 className="font-medium text-white">{group.title}</h4>,
+              ,"
+              <div className="space-y-2">,
+                {group.options.map((option: unknown {,
                   
                   return ("                    <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input'
@@ -124,11 +124,11 @@ export function FilterSidebar({
                         {option.label}
                         {option.count && ("
                           <span className="ml-2 text-zion-slate-light/60">
-                            ({option.count});
-                          </span>;
-                        )};
-                      </span>;
-                    </label>;
+                            ({option.count}),
+                          </span>,
+                        )},
+                      </span>,
+                    </label>,
                   )})}
               </div>
             </div>

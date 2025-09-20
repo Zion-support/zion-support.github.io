@@ -1,5 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from "react";
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -16,12 +15,12 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      error: null, 
-      errorInfo: null,
-      errorId: null
-    };
+      this.state = { 
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: null
+      };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -34,9 +33,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
+error;
       errorInfo
-    });
+    
+});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -56,12 +56,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({ 
-      hasError: false, 
-      error: null, 
-      errorInfo: null,
-      errorId: null
-    });
+    this.setState({
+hasError: false,error: null,errorInfo: null,errorId: null
+    
+});
   };
 
   handleReload = () => {

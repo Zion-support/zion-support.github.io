@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
  params - Function parameters
  * @returns {*} Function return value
@@ -68,34 +68,34 @@ function EnhancedHeader () {
   Atom as AtomIcon,
   Rocket as RocketIcon,
   Leaf as LeafIcon,
-  Link as LinkIcon2} from 'lucide-react';
+  Link as LinkIcon2} from 'lucide-react',
 
 =======
 export function EnhancedHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false),
+  const [scrolled, setScrolled] = useState(false),
+  const [isSearching, setIsSearching] = useState(false),
   
   useEffect(() => {
     
-    };
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
 
   const handleSearch = async(e: React.FormEvent) => {
 
-    e.preventDefault();    if(searchQuery.trim()) {
+    e.preventDefault(),    if(searchQuery.trim()) {
 
-      setIsSearching(true);
+      setIsSearching(true),
       try {
-        await new Promise(resolve => setTimeout (resolve, 1000) ) ;
+        await new Promise(resolve => setTimeout (resolve, 1000) ) ,
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {
 
         setIsSearching(false)}    }
-  };
+  },
 
   // Enhanced navigation with better organization
   
@@ -452,6 +452,6 @@ export function EnhancedHeader() {
         </AnimatePresence>
       </motion.header>
     </>) }
-export default EnhancedHeader;
+export default EnhancedHeader,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

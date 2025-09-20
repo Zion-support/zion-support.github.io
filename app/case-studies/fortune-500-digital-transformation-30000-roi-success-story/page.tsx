@@ -1,19 +1,19 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 Digital Transformation Success: $2.8B Annual Savings - 30,000% ROI';
-  description: 'Learn how a Fortune 500 manufacturing company achieved 30,000% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.';
-  keywords: ['Case StudyFortune 500', 'Digital TransformationROI', 'Success Story30,000% ROI'];
+  title: 'Fortune 500 Digital Transformation Success: $2.8B Annual Savings - 30,000% ROI',
+  description: 'Learn how a Fortune 500 manufacturing company achieved 30,000% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.',
+  keywords: ['Case StudyFortune 500Digital TransformationROI', 'Success Story30,000% ROI'],
   openGraph: {,
-    title: 'Fortune 500 Digital Transformation Success: $2.8B Annual Savings - 30,000% ROI';
-    description: 'Learn how a Fortune 500 manufacturing company achieved 30,000% ROI through strategic AI implementation.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Case StudyFortune 500', 'Digital TransformationROI'],
+    title: 'Fortune 500 Digital Transformation Success: $2.8B Annual Savings - 30,000% ROI',
+    description: 'Learn how a Fortune 500 manufacturing company achieved 30,000% ROI through strategic AI implementation.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Case StudyFortune 500Digital TransformationROI']
   }
-};
+},
 export default function Fortune500DigitalTransformationSuccessPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -47,7 +47,7 @@ export default function Fortune500DigitalTransformationSuccessPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">,
@@ -297,4 +297,4 @@ export default function Fortune500DigitalTransformationSuccessPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

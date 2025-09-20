@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity } from "lucide-react";
 const AIPredictiveMaintenance: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Machine learning algorithms predict equipment failures'
-    },
+      icon: Brain,title: 'AI-Powered Analytics',description: 'Machine learning algorithms predict equipment failures'
+    };
     {
-      icon: Gauge,
-      title: 'Real-time Monitoring',
-      description: 'Continuous monitoring of equipment performance'
-    },
+      icon: Gauge,title: 'Real-time Monitoring',description: 'Continuous monitoring of equipment performance'
+    };
     {
-      icon: AlertTriangle,
-      title: 'Early Warning System',
-      description: 'Proactive alerts before equipment failure'
-    },
+      icon: AlertTriangle,title: 'Early Warning System',description: 'Proactive alerts before equipment failure'
+    };
     {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Data-driven insights for optimization'
+      icon: BarChart3,title: 'Performance Analytics',description: 'Data-driven insights for optimization'
     }
   ];
-
   const applications = [
     {
-      title: 'Manufacturing',
-      description: 'Predictive maintenance for production equipment',
-      icon: '🏭'
-    },
+      title: 'Manufacturing',description: 'Predictive maintenance for production equipment',icon: '🏭'
+    };
     {
-      title: 'Energy & Utilities',
-      description: 'Monitor power plants and distribution systems',
-      icon: '⚡'
-    },
+      title: 'Energy & Utilities',description: 'Monitor power plants and distribution systems',icon: '⚡'
+    };
     {
-      title: 'Transportation',
-      description: 'Fleet maintenance and vehicle optimization',
-      icon: '🚚'
-    },
+      title: 'Transportation',description: 'Fleet maintenance and vehicle optimization',icon: '🚚'
+    };
     {
-      title: 'Healthcare',
-      description: 'Medical equipment maintenance and reliability',
-      icon: '🏥'
+      title: 'Healthcare',description: 'Medical equipment maintenance and reliability',icon: '🏥'
     }
   ];
-
   const benefits = [
-    'Reduce unplanned downtime by up to 75%',
-    'Extend equipment lifespan and reliability',
-    'Lower maintenance costs and labor requirements',
-    'Improve safety and compliance standards',
-    'Optimize spare parts inventory management',
-    'Increase overall operational efficiency'
-  ];
+    'Reduce unplanned downtime by up to 75%Extend equipment lifespan and reliability',
+    'Lower maintenance costs and labor requirementsImprove safety and compliance standards',
+    'Optimize spare parts inventory managementIncrease overall operational efficiency'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const AIPredictiveMaintenance: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Transform your maintenance strategy with AI-powered intelligence
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
                 Start Predictive Journey
               </button>
@@ -260,7 +238,6 @@ const AIPredictiveMaintenance: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIPredictiveMaintenance;

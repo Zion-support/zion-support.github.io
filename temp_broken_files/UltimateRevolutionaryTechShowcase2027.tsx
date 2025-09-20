@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
   return (,
     <div,
       className="relative overflow-hidden",
     >,
-      {/* Background Animation */,}
+      {/* Background Animation */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900">,
         <div className="absolute inset-0 opacity-20" style={{,
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,}}></div>,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}></div>,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-indigo-600/20"></div>,
       </div>,
       <div className="relative z-10 p-8 md: p-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-12">,
           <div,
             className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-bold mb-4",
@@ -29,10 +29,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
             Experience technologies that transcend human imagination and reshape the very fabric of reality itself,
           </divp>,
         </div>,
-        {/* Technology Showcase */,}
+        {/* Technology Showcase */}
         <div className="max-w-7xl mx-auto">,
           <div className="grid lg: grid-cols-2 gap-12 items-center">,
-            {/* Left: Technology Details */,}
+            {/* Left: Technology Details */}
             <div,
               key={currentTech}
               className="space-y-8",
@@ -61,8 +61,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
                   >,
                     <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>,
                     <span className="text-white font-medium">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <div className="flex space-x-6">,
                 {Object.entries(revolutionaryTechs[currentTech].stats).map(([key, value], index) => (,
@@ -72,11 +71,10 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
                   >,
                     <div className="text-3xl font-bold text-white">{value}</div>,
                     <div className="text-sm text-gray-400 capitalize">{key}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
-            {/* Right: Visual Representation */,}
+            {/* Right: Visual Representation */}
             <div,
               className="relative",
             >,
@@ -104,15 +102,15 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
                     key={i}
                     className="absolute w-2 h-2 bg-white rounded-full opacity-30",
                     style={{,
-                      left: `${Math.random() * 100,}%`;
-                      top: `${Math.random() * 100,}%`,
+                      left: `${Math.random() * 100}%`,
+                      top: `${Math.random() * 100}%`
                     }}
-                      y: [0, -20, 0];
-                      opacity: [0.3, 0.8, 0.3],
+                      y: [0, -20, 0],
+                      opacity: [0.3, 0.8, 0.3]
                     }}
-                      duration: 3 + Math.random() * 2;
-                      repeat: Infinity;
-                      delay: Math.random() * 2,}}
+                      duration: 3 + Math.random() * 2,
+                      repeat: Infinity,
+                      delay: Math.random() * 2}}
                   />,
                 ))}
               </div>,
@@ -127,7 +125,7 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
                 className={`w-4 h-4 rounded-full transition-all duration-300 ${,
                   index === currentTech,
                     ? 'bg-gradient-to-r from-purple-400 to-pink-400 scale-125',
-                    : 'bg-white/30 hover: bg-white/50',}`}
+                    : 'bg-white/30 hover: bg-white/50'}`}
               />,
             ))}
           </div>,
@@ -153,5 +151,5 @@ const UltimateRevolutionaryTechShowcase2027: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default UltimateRevolutionaryTechShowcase2027;
+  )},
+export default UltimateRevolutionaryTechShowcase2027,

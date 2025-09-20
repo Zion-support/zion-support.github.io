@@ -18,7 +18,7 @@ export const toast = {
 
   position = 'bottom - right',
   richColors = true,
-  closeButton = true,
+  closeButton = true
 }) {
   return (<div
       className={`fixed ${position === 'top - left'
@@ -31,13 +31,13 @@ export const toast = {
       } z - 50`}
     >
       {/* Sonner toast container */}
-    </div>) ;
+    </div>) ,
 }
   success: message => console.log('Success:', message) ,
   error: message => console.log('Error:', message) ,
   info: message => console.log('Info:', message) ,
   warning: message => console.log('Warning:', message) ,
   loading: message => console.log('Loading:', message) ,
-  dismiss: toastId => console.log('Dismiss:', toastId) ,
-};
+  dismiss: toastId => console.log('Dismiss:', toastId) 
+},
 '`

@@ -1,59 +1,59 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 interface UltraAdvancedFuturisticServiceCard2036Props {
-  service: Service;
-  variant?: 'ai' | 'quantum' | 'security' | 'iot' | 'fintech' | 'default';
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'security' | 'iot' | 'fintech' | 'default'
 }
 
 export default function UltraAdvancedFuturisticServiceCard2036({ 
-  service, 
+  service,
   variant = 'default' 
 }: UltraAdvancedFuturisticServiceCard2036Props) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
 
   const getVariantStyles = () => {
     switch (variant) {
@@ -63,46 +63,46 @@ export default function UltraAdvancedFuturisticServiceCard2036({
           borderColor: 'border-purple-500',
           glowColor: 'shadow-purple-500/50',
           textColor: 'text-purple-400'
-        };
+        },
       case 'quantum':
         return {
           gradient: 'from-cyan-600 via-blue-600 to-indigo-600',
           borderColor: 'border-cyan-500',
           glowColor: 'shadow-cyan-500/50',
           textColor: 'text-cyan-400'
-        };
+        },
       case 'security':
         return {
           gradient: 'from-red-600 via-orange-600 to-yellow-600',
           borderColor: 'border-red-500',
           glowColor: 'shadow-red-500/50',
           textColor: 'text-red-400'
-        };
+        },
       case 'iot':
         return {
           gradient: 'from-green-600 via-emerald-600 to-teal-600',
           borderColor: 'border-green-500',
           glowColor: 'shadow-green-500/50',
           textColor: 'text-green-400'
-        };
+        },
       case 'fintech':
         return {
           gradient: 'from-yellow-600 via-amber-600 to-orange-600',
           borderColor: 'border-yellow-500',
           glowColor: 'shadow-yellow-500/50',
           textColor: 'text-yellow-400'
-        };
+        },
       default:
         return {
           gradient: 'from-gray-600 via-slate-600 to-zinc-600',
           borderColor: 'border-gray-500',
           glowColor: 'shadow-gray-500/50',
           textColor: 'text-gray-400'
-        };
+        },
     }
-  };
+  },
 
-  const styles = getVariantStyles();
+  const styles = getVariantStyles(),
 
 const UltraAdvancedFuturisticServiceCard2036: React.FC = () => {
   return (
@@ -110,7 +110,7 @@ const UltraAdvancedFuturisticServiceCard2036: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticServiceCard2036</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticServiceCard2036;
+export default UltraAdvancedFuturisticServiceCard2036,

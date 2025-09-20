@@ -1,40 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from "lucide-react";
 const AIWorkflowAutomation = () => {
     const features = [
         {
-            icon: Brain,
-            title: "AI-Powered Process Analysis",
-            description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",
-            benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
+            icon: Brain,title: "AI-Powered Process Analysis",description: "Intelligent analysis of existing workflows to identify optimization opportunities and automation potential",benefits: ["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
-            icon: GitFork,
-            title: "Intelligent Workflow Design",
-            description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
-            benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
+            icon: GitFork,title: "Intelligent Workflow Design",description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",benefits: ["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
         },
         {
-            icon: Zap,
-            title: "Automated Decision Making",
-            description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
+            icon: Zap,title: "Automated Decision Making",description: "AI algorithms that make intelligent decisions based on data, rules, and historical patterns",
             benefits: ["Rule-based decisions", "Machine learning", "Risk assessment", "Compliance checking"]
         },
         {
-            icon: Clock,
-            title: "Real-time Monitoring",
-            description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
-            benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
+            icon: Clock,title: "Real-time Monitoring",description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
         }
-    ];
+    ],
     const solutions = [
         {
-            category: "Document Processing",
-            icon: Database,
-            solutions: [
-                "Automated document classification",
+            category: "Document Processing",icon: Database,solutions: [
+                "Automated document classification";
                 "Intelligent data extraction",
                 "Form processing automation",
                 "Document routing and approval",
@@ -42,10 +29,8 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
-            category: "Customer Service",
-            icon: Users,
-            solutions: [
-                "Ticket routing and prioritization",
+            category: "Customer Service",icon: Users,solutions: [
+                "Ticket routing and prioritization";
                 "Automated responses",
                 "Customer inquiry handling",
                 "Service level monitoring",
@@ -53,10 +38,8 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
-            category: "Financial Operations",
-            icon: TrendingUp,
-            solutions: [
-                "Invoice processing automation",
+            category: "Financial Operations",icon: TrendingUp,solutions: [
+                "Invoice processing automation";
                 "Payment approval workflows",
                 "Expense report processing",
                 "Budget monitoring",
@@ -64,86 +47,61 @@ const AIWorkflowAutomation = () => {
             ]
         },
         {
-            category: "HR & Recruitment",
-            icon: Users,
-            solutions: [
-                "Resume screening automation",
+            category: "HR & Recruitment",icon: Users,solutions: [
+                "Resume screening automation";
                 "Interview scheduling",
                 "Onboarding workflows",
                 "Performance review automation",
                 "Employee self-service"
             ]
         }
-    ];
+    ],
     const technologies = [
         {
-            name: "Machine Learning",
-            description: "Advanced ML algorithms for process optimization and decision making",
-            icon: Brain
-        },
+            name: "Machine Learning",description: "Advanced ML algorithms for process optimization and decision making",icon: Brain
+        };
         {
-            name: "Robotic Process Automation",
-            description: "RPA tools for repetitive task automation",
-            icon: GitFork
-        },
+            name: "Robotic Process Automation",description: "RPA tools for repetitive task automation",icon: GitFork
+        };
         {
-            name: "Natural Language Processing",
-            description: "AI-powered text analysis and document processing",
-            icon: Database
-        },
+            name: "Natural Language Processing",description: "AI-powered text analysis and document processing",icon: Database
+        };
         {
-            name: "Workflow Engine",
-            description: "Scalable workflow orchestration platform",
-            icon: Zap
-        },
+            name: "Workflow Engine",description: "Scalable workflow orchestration platform",icon: Zap
+        };
         {
-            name: "Real-time Analytics",
-            description: "Instant performance monitoring and optimization",
-            icon: BarChart3
-        },
+            name: "Real-time Analytics",description: "Instant performance monitoring and optimization",icon: BarChart3
+        };
         {
-            name: "API Integration",
-            description: "Seamless integration with existing systems",
-            icon: Globe
+            name: "API Integration",description: "Seamless integration with existing systems",icon: Globe
         }
     ];
     const benefits = [
         {
-            title: "Increased Efficiency",
-            description: "Automate repetitive tasks and improve process efficiency by 40-60%",
-            icon: TrendingUp
-        },
+            title: "Increased Efficiency",description: "Automate repetitive tasks and improve process efficiency by 40-60%",icon: TrendingUp
+        };
         {
-            title: "Cost Reduction",
-            description: "Reduce operational costs by 25-35% through automation",
-            icon: Target
-        },
+            title: "Cost Reduction",description: "Reduce operational costs by 25-35% through automation",icon: Target
+        };
         {
-            title: "Error Reduction",
-            description: "Minimize human errors and improve accuracy by 90%+",
-            icon: CheckCircle
-        },
+            title: "Error Reduction",description: "Minimize human errors and improve accuracy by 90%+",icon: CheckCircle
+        };
         {
-            title: "Scalability",
-            description: "Scale operations without proportional increase in resources",
-            icon: Users
+            title: "Scalability",description: "Scale operations without proportional increase in resources",icon: Users
         }
     ];
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 };
         visible: {
-            opacity: 1,
-            transition: {
+            opacity: 1,transition: {
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { y: 20, opacity: 0 };
         visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
+            y: 0,opacity: 1,transition: {
                 duration: 0.5
             }
         }
@@ -272,7 +230,7 @@ const AIWorkflowAutomation = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and workflow technologies to ensure scalability, 
+              Built on cutting-edge AI and workflow technologies to ensure scalability;
               performance, and reliability for enterprise automation.
             </p>
           </motion.div>
@@ -300,7 +258,7 @@ const AIWorkflowAutomation = () => {
             transform your business processes and drive operational excellence.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300">
+            <Link to="/contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-orange-700 hover:to-red-700 transition-all duration-300">
               Schedule Consultation
             </Link>
             <Link to="/case-studies" className="border border-orange-400 text-orange-400 px-8 py-3 rounded-lg font-semibold hover:bg-orange-400 hover:text-white transition-all duration-300">
@@ -309,6 +267,6 @@ const AIWorkflowAutomation = () => {
           </div>
         </motion.div>
       </div>
-    </div>);
+    </div>)
 };
 export default AIWorkflowAutomation;

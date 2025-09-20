@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 import {
   Menu,
   X,
@@ -33,164 +33,114 @@ import {
   Mail,
   MapPin,
   Clock
-} from 'lucide-react';
-
+} from "lucide-react";
 interface NavigationItem {
-  label: string;
-  path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
-  children?: NavigationItem[];
-  description?: string;
+  label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
+  children?: NavigationItem[],
+  description?: string,
 }
 
 const navigationItems: NavigationItem[] = [
   {
-    label: 'Home',
-    path: '/',
-    icon: Home,
-    description: 'Welcome to Zion Tech Group'
-  },
+    label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
+  };
   {
-    label: 'About',
-    path: '/about',
-    icon: Info,
-    description: 'Learn about our company and mission'
-  },
+    label: 'About',path: '/about',icon: Info,description: 'Learn about our company and mission'
+  };
   {
-    label: 'Services',
-    path: '/services',
-    icon: Briefcase,
-    children: [
+    label: 'Services',path: '/services',icon: Briefcase,children: [
       {
-        label: 'AI & Machine Learning',
-        path: '/services/ai',
-        icon: Brain,
-        description: 'Cutting-edge AI solutions'
-      },
+        label: 'AI & Machine Learning',path: '/services/ai',icon: Brain,description: 'Cutting-edge AI solutions'
+      };
       {
-        label: 'Cybersecurity',
-        path: '/services/cybersecurity',
-        icon: Shield,
-        description: 'Advanced security services'
-      },
+        label: 'Cybersecurity',path: '/services/cybersecurity',icon: Shield,description: 'Advanced security services'
+      };
       {
-        label: 'Cloud Services',
-        path: '/services/cloud',
-        icon: Cloud,
-        description: 'Scalable cloud solutions'
-      },
+        label: 'Cloud Services',path: '/services/cloud',icon: Cloud,description: 'Scalable cloud solutions'
+      };
       {
-        label: 'Digital Transformation',
-        path: '/services/transformation',
-        icon: Zap,
-        description: 'Business transformation services'
-      },
+        label: 'Digital Transformation',path: '/services/transformation',icon: Zap,description: 'Business transformation services'
+      };
       {
-        label: 'Infrastructure',
-        path: '/services/infrastructure',
-        icon: Server,
-        description: 'IT infrastructure solutions'
-      },
+        label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
+      };
       {
-        label: 'Consulting',
-        path: '/services/consulting',
-        icon: Users,
-        description: 'Strategic IT consulting'
+        label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
       }
     ]
-  },
+  };
   {
-    label: 'Solutions',
-    path: '/solutions',
-    icon: Rocket,
-    description: 'Industry-specific solutions'
-  },
+    label: 'Solutions',path: '/solutions',icon: Rocket,description: 'Industry-specific solutions'
+  };
   {
-    label: 'Contact',
-    path: '/contact',
-    icon: Phone,
-    description: 'Get in touch with us'
+    label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
   }
 ];
-
 const quickActions = [
   {
-    label: 'Get Quote',
-    path: '/request-quote',
-    icon: MessageCircle,
-    color: 'bg-zion-cyan'
-  },
+    label: 'Get Quote',path: '/request-quote',icon: MessageCircle,color: 'bg-zion-cyan'
+  };
   {
-    label: 'Support',
-    path: '/help',
-    icon: HelpCircle,
-    color: 'bg-zion-purple'
-  },
+    label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
+  };
   {
-    label: 'Documentation',
-    path: '/docs',
-    icon: FileText,
-    color: 'bg-zion-blue'
+    label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
   }
 ];
-
 export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false),
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
+  const [activePath, setActivePath] = useState('/'),
+  const location = useLocation(),
   const menuRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     setActivePath(location.pathname);
   }, [location]);
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
     };
-
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener('mousedown', handleClickOutside),
+      document.body.style.overflow = 'hidden',
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
+      document.removeEventListener('mousedown', handleClickOutside),
+      document.body.style.overflow = 'unset',
+    },
+  }, [isOpen]),
 
   const toggleExpanded = (label: string) => {
     setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
-        newSet.delete(label);
+        newSet.delete(label)
       } else {
-        newSet.add(label);
+        newSet.add(label),
       }
-      return newSet;
-    });
-  };
+      return newSet,
+    }),
+  },
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
-    setExpandedItems(new Set());
-  };
+    setExpandedItems(new Set())
+  },
 
   const isActive = (path: string) => {
     if (path === '/') {
-      return activePath === '/';
+      return activePath === '/'
     }
     return activePath.startsWith(path);
-  };
+  },
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0;
-    const isItemActive = isActive(item.path);
+    const hasChildren = item.children && item.children.length > 0,
+    const isItemActive = isActive(item.path),
 
     return (
       <div key={item.label} className="w-full">
@@ -264,8 +214,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </AnimatePresence>
         )}
       </div>
-    );
-  };
+    ),
+  },
 
   return (
     <>
@@ -379,7 +329,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">
-                    <Link to="/privacy" className="hover:text-white transition-colors">
+                    <Link to="/privacy" className="hover: text-white transition-colors">
                       Privacy
                     </Link>
                     <Link to="/terms" className="hover:text-white transition-colors">

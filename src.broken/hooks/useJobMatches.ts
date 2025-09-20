@@ -1,45 +1,45 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from 'react', // Added useCallback
+import { supabase } from '@/integrations/supabase/client',
 export default function Page() {
-);
-      setMatches([]); // Clear matches on error
+),
+      setMatches([]), // Clear matches on error
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  }, [jobId]); // jobId is a dependency of fetchMatches
+  }, [jobId]), // jobId is a dependency of fetchMatches
 
   const triggerAIMatching = async () => {
-    setIsProcessing(true);
+    setIsProcessing(true),
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
-        body: { jobId },
-      });
+        body: { jobId }
+      }),
       
-      if(response.error) throw new Error(response.error.message);
+      if(response.error) throw new Error(response.error.message),
       
       toast({
         title: "AI Matching Complete",
-        description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
-      });
+        description: `Found ${response.data.matches || 0} potential talent matches for this job.`
+      }),
       
-      await fetchMatches();
+      await fetchMatches(),
     } catch(error) {
-      console.error("Error triggering AI matching:", error);
+      console.error("Error triggering AI matching:", error),
       toast({
         title: "Matching Failed",
         description: "Could not process talent matching.Please try again later.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     } finally {
-      setIsProcessing(false);
+      setIsProcessing(false),
     }
-  };
+  },
 
   useEffect(() => {
     if(jobId) { // Ensure jobId is present before fetching
-      fetchMatches();
+      fetchMatches(),
     }
-  }, [jobId, fetchMatches]); // Added fetchMatches
+  }, [jobId, fetchMatches]), // Added fetchMatches
 
   return {
     matches,
@@ -47,5 +47,5 @@ export default function Page() {
     isProcessing,
     triggerAIMatching,
     refetch: fetchMatches // Added refetch
-  };
+  },
 }

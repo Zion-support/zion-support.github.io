@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import {
-} from 'lucide-react';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+} from 'lucide-react',
+import { ultimate2026Services } from '../data/ultimate-2026-services',
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations',
 
 export default function Ultimate2026ServicesShowcase() {
 
@@ -13,63 +13,62 @@ export default function Ultimate2026ServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all services
   const allServices = [
     ...ultimate2026Services,
     ...revolutionary2026Innovations
-  ];
+  ],
 
   // Dynamic category counts
   const aiCount = allServices.filter(service =>
     service.category?.includes('AI') || service.category?.includes('Machine Learning')
-  ).length;
+  ).length,
   const quantumCount = allServices.filter(service =>
     service.category?.includes('Quantum') || service.category?.includes('Space')
-  ).length;
+  ).length,
   const enterpriseCount = allServices.filter(service =>
     service.category?.includes('Enterprise') || service.category?.includes('IT')
-  ).length;
+  ).length,
   const emergingCount = allServices.filter(service =>
     service.category?.includes('Emerging') || service.category?.includes('Innovation')
-  ).length;
+  ).length,
 
   const categories = [
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
 
       const matchesCategory = selectedCategory === 'all' ||
         (selectedCategory === 'ai' && service.category.includes('AI')) ||
         (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
         (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
-        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation'))),
 
       const matchesPrice = selectedPriceRange === 'all' ||
-        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing'),
 
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
+      return matchesSearch && matchesCategory && matchesPrice,
+    }),
 
     // Sort services
     switch (sortBy) {
       case 'name':
-          return priceA - priceB;
-        });
-        break;
+          return priceA - priceB,
+        }),
+        break,
       case 'popularity':
-        break;
-      default:
-        break;
+        break,
+      default: break
     }
 
-    return filtered;
+    return filtered,
 
 const ultimate-2026-services-showcase: React.FC = () => {
   return (
@@ -86,7 +85,7 @@ const ultimate-2026-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ultimate-2026-services-showcase;
+export default ultimate-2026-services-showcase,

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default Sustainability;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Sustainability,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -10,19 +10,15 @@ export default function Page() {
       description:
         'Electric vehicles, public transit optimization, and green logistics solutions.',
       icon: Car,
-      features: ['EV infrastructure',
-        'Public transit optimization',
-        'Green logistics',
-        'Carbon footprint tracking',
+      features: ['EV infrastructurePublic transit optimization',
+        'Green logisticsCarbon footprint tracking'
       ],
       price: 'From $120,000',
       timeline: '24 - 36 weeks',
       category: 'Transportation',
-      technologies: ['EV Charging',
-        'Smart Routing',
-        'Fleet Management',
-        'Carbon Analytics',
-      ],
+      technologies: ['EV ChargingSmart Routing',
+        'Fleet ManagementCarbon Analytics'
+      ]
     },
     {
       id: 5,
@@ -30,19 +26,15 @@ export default function Page() {
       description:
         'Smart water management and conservation systems for sustainable resource use.',
       icon: Droplets,
-      features: ['Smart irrigation',
-        'Water quality monitoring',
-        'Leak detection',
-        'Conservation analytics',
+      features: ['Smart irrigationWater quality monitoring',
+        'Leak detectionConservation analytics'
       ],
       price: 'From $80,000',
       timeline: '16 - 24 weeks',
       category: 'Water Management',
-      technologies: ['IoT Sensors',
-        'AI Analytics',
-        'Smart Valves',
-        'Water Quality',
-      ],
+      technologies: ['IoT SensorsAI Analytics',
+        'Smart ValvesWater Quality'
+      ]
     },
     {
       id: 6,
@@ -50,21 +42,17 @@ export default function Page() {
       description:
         'Comprehensive carbon footprint tracking and reduction strategies.',
       icon: Globe,
-      features: ['Carbon footprint analysis',
-        'Emissions tracking',
-        'Offset strategies',
-        'Sustainability reporting',
+      features: ['Carbon footprint analysisEmissions tracking',
+        'Offset strategiesSustainability reporting'
       ],
       price: 'From $60,000',
       timeline: '12 - 20 weeks',
       category: 'Environmental',
-      technologies: ['Carbon Analytics',
-        'IoT Monitoring',
-        'AI Reporting',
-        'Blockchain',
-      ],
-    },
-  ];
+      technologies: ['Carbon AnalyticsIoT Monitoring',
+        'AI ReportingBlockchain'
+      ]
+    }
+  ],
 
   const successStories = [{
       logo: '🏭',
@@ -75,7 +63,7 @@ export default function Page() {
       solution:
         'Implemented solar power systems, energy - efficient equipment, and smart monitoring.',
       results:
-        '40% reduction in energy costs, 60% decrease in carbon footprint, LEED Gold certification.',
+        '40% reduction in energy costs, 60% decrease in carbon footprint, LEED Gold certification.'
     },
     {
       logo: '🏢',
@@ -86,7 +74,7 @@ export default function Page() {
       solution:
         'Complete building retrofit with smart HVAC, LED lighting, and renewable energy integration.',
       results:
-        '35% energy savings, 25% increase in tenant satisfaction, 50% reduction in maintenance costs.',
+        '35% energy savings, 25% increase in tenant satisfaction, 50% reduction in maintenance costs.'
     },
     {
       logo: '🚛',
@@ -97,9 +85,9 @@ export default function Page() {
       solution:
         'Transitioned to electric vehicles, implemented route optimization, and carbon tracking.',
       results:
-        '30% reduction in fuel costs, 45% decrease in carbon emissions, improved delivery efficiency.',
-    },
-  ];
+        '30% reduction in fuel costs, 45% decrease in carbon emissions, improved delivery efficiency.'
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - green - 900 to - slate - 900 text-white">
       {/* Hero Section */}
@@ -285,7 +273,7 @@ export default function Page() {
               business, reduce environmental impact, and create new
               opportunities for growth.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - green - 600 to - emerald - 600 text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-green - 500 / 25 transition - all duration - 300 transform hover:scale -105"
@@ -302,6 +290,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react',
+import { useTranslation } from 'react-i18next',
 export default function Page() {
 </h2>'"
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
@@ -56,6 +56,6 @@ export default function Page() {
         </Card>
       </div>
     </div>
-  );
+  ),
 }
 '"`

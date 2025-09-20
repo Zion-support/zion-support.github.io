@@ -36,5 +36,5 @@ export default function EvidenceFirstReleaseManagement2026Page() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}
 ,

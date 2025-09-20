@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -7,7 +7,7 @@ export default function Page() {
       description: 'Complete content creation, optimization, and distribution platform powered by advanced AI.',
       category: 'AI & ML',
       price: '$1,900 / month',
-      features: ['Content Creation', 'SEO Optimization', 'Social Media Management', 'Analytics Dashboard', 'Multi - platform Publishing'],
+      features: ['Content CreationSEO Optimization', 'Social Media ManagementAnalytics Dashboard', 'Multi - platform Publishing'],
       icon: PenTool,
       badge: 'New',
       color: 'from - pink - 600 to - rose - 700',
@@ -23,7 +23,7 @@ export default function Page() {
       description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',
       category: 'AI & ML',
       price: '$1,600 / month',
-      features: ['Smart Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base', 'Performance Metrics'],
+      features: ['Smart ChatbotsTicket Routing', 'Sentiment AnalysisKnowledge Base', 'Performance Metrics'],
       icon: MessageCircle,
       badge: 'Popular',
       color: 'from - cyan - 600 to - blue - 700',
@@ -39,7 +39,7 @@ export default function Page() {
       description: 'Intelligent project planning, resource allocation, and risk management with AI insights.',
       category: 'AI & ML',
       price: '$2,300 / month',
-      features: ['Smart Planning', 'Resource Optimization', 'Risk Management', 'Team Collaboration', 'Progress Tracking'],
+      features: ['Smart PlanningResource Optimization', 'Risk ManagementTeam Collaboration', 'Progress Tracking'],
       icon: Workflow,
       badge: 'Featured',
       color: 'from - orange - 600 to - red - 700',
@@ -57,7 +57,7 @@ export default function Page() {
       description: 'Comprehensive DevOps automation with CI / CD pipelines, infrastructure as code, and monitoring.',
       category: 'IT Infrastructure',
       price: '$3,200 / month',
-      features: ['CI / CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting', 'Security Scanning', 'Auto - scaling'],
+      features: ['CI / CD PipelinesInfrastructure as Code', 'Monitoring & AlertingSecurity Scanning', 'Auto - scaling'],
       icon: Cloud,
       badge: 'Popular',
       color: 'from - blue - 600 to - indigo - 700',
@@ -73,7 +73,7 @@ export default function Page() {
       description: 'Complete IT infrastructure monitoring, management, and optimization platform.',
       category: 'IT Infrastructure',
       price: '$2,800 / month',
-      features: ['Infrastructure Monitoring', 'Performance Optimization', 'Capacity Planning', 'Security Management', 'Backup & Recovery'],
+      features: ['Infrastructure MonitoringPerformance Optimization', 'Capacity PlanningSecurity Management', 'Backup & Recovery'],
       icon: Server,
       badge: 'Featured',
       color: 'from - gray - 600 to - slate - 700',
@@ -89,7 +89,7 @@ export default function Page() {
       description: 'Advanced threat detection, vulnerability assessment, and security automation platform.',
       category: 'IT Infrastructure',
       price: '$3,500 / month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Automation', 'Incident Response', 'Compliance Reporting'],
+      features: ['Threat DetectionVulnerability Assessment', 'Security AutomationIncident Response', 'Compliance Reporting'],
       icon: Lock,
       badge: 'Popular',
       color: 'from - red - 600 to - pink - 700',
@@ -107,7 +107,7 @@ export default function Page() {
       description: 'Cloud cost optimization and financial operations management platform for enterprises.',
       category: 'Micro SaaS',
       price: '$1,200 / month',
-      features: ['Cost Optimization', 'Budget Management', 'Resource Tracking', 'Cost Allocation', 'Savings Recommendations'],
+      features: ['Cost OptimizationBudget Management', 'Resource TrackingCost Allocation', 'Savings Recommendations'],
       icon: DollarSign,
       badge: 'New',
       color: 'from - green - 600 to - emerald - 700',
@@ -123,7 +123,7 @@ export default function Page() {
       description: 'Secure network access control with identity verification and continuous monitoring.',
       category: 'Micro SaaS',
       price: '$2,100 / month',
-      features: ['Identity Verification', 'Access Control', 'Continuous Monitoring', 'Threat Detection', 'Compliance Reporting'],
+      features: ['Identity VerificationAccess Control', 'Continuous MonitoringThreat Detection', 'Compliance Reporting'],
       icon: Shield,
       badge: 'Featured',
       color: 'from - indigo - 600 to - purple - 700',
@@ -139,7 +139,7 @@ export default function Page() {
       description: 'GDPR compliance platform for managing data subject requests and privacy rights.',
       category: 'Micro SaaS',
       price: '$900 / month',
-      features: ['Request Management', 'Data Mapping', 'Consent Management', 'Privacy Impact Assessment', 'Compliance Reporting'],
+      features: ['Request ManagementData Mapping', 'Consent ManagementPrivacy Impact Assessment', 'Compliance Reporting'],
       icon: FileText,
       badge: 'New',
       color: 'from - teal - 600 to - cyan - 700',
@@ -157,7 +157,7 @@ export default function Page() {
       description: 'Quantum computing services for optimization, cryptography, and scientific computing.',
       category: 'Emerging Tech',
       price: '$5,000 / month',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Scientific Computing', 'Research Support'],
+      features: ['Quantum AlgorithmsOptimization Problems', 'CryptographyScientific Computing', 'Research Support'],
       icon: Atom,
       badge: 'Future',
       color: 'from - purple - 600 to - pink - 700',
@@ -173,7 +173,7 @@ export default function Page() {
       description: 'Distributed edge computing platform for IoT, real - time processing, and low-latency applications.',
       category: 'Emerging Tech',
       price: '$2,800 / month',
-      features: ['Edge Nodes', 'Real - time Processing', 'IoT Integration', 'Low Latency', 'Scalable Architecture'],
+      features: ['Edge NodesReal - time Processing', 'IoT IntegrationLow Latency', 'Scalable Architecture'],
       icon: Cpu,
       badge: 'Featured',
       color: 'from - blue - 600 to - cyan - 700',
@@ -189,7 +189,7 @@ export default function Page() {
       description: 'Scalable blockchain solutions for supply chain, finance, and digital identity management.',
       category: 'Emerging Tech',
       price: '$3,200 / month',
-      features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'Token Management', 'Consensus Mechanisms'],
+      features: ['Smart ContractsSupply Chain Tracking', 'Digital IdentityToken Management', 'Consensus Mechanisms'],
       icon: Link,
       badge: 'Popular',
       color: 'from - green - 600 to - blue - 700',
@@ -199,35 +199,34 @@ export default function Page() {
       rating: 4.7,
       reviews: 167
     }
-  ];
+  ],
 
-  const categories = [{ id: any'all', name: 'All Services', icon: Star, count: services.length },;
+  const categories = [{ id: any'all', name: 'All Services', icon: Star, count: services.length },
     { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s  => s.category === 'AI & ML') .length },
-    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure') .length },;
-    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS') .length },;
+    { id: any'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s  => s.category === 'IT Infrastructure') .length },
+    { id: any'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s  => s.category === 'Micro SaaS') .length },
     { id: any'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s  => s.category === 'Emerging Tech') .length }
-  ];
+  ],
 
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
       case 'price - low':
-        return parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) - parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) ;
+        return parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) - parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) ,
       case 'price - high':
-        return parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) - parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ;
+        return parseFloat(b.price.replace (/[^0 - 9.]/g, '') ) - parseFloat(a.price.replace (/[^0 - 9.]/g, '') ) ,
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'popularity':
-      default:
-        return b.reviews - a.reviews;
+      default: return b.reviews - a.reviews
     }
-  }) ;
+  }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -465,7 +464,7 @@ export default function Page() {
           >
             <Link
               to="/contact"
-              className="bg-white text-zion - blue - dark px-8 py-4 rounded-full font - semibold hover:bg-zion - blue - light transition - colors duration - 300 text-lg"
+              className="bg-white text-zion - blue - dark px-8 py-4 rounded-full font - semibold hover: bg-zion - blue - light transition - colors duration - 300 text-lg"
             >
               Schedule a Demo
             </Link>
@@ -478,5 +477,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

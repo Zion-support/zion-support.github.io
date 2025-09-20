@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import SEO from "../components/SEO";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Code,
   Search,
@@ -25,65 +25,39 @@ import {
   Key,
   Database,
   Lock
-} from 'lucide-react';
-
+} from "lucide-react";
 const API: React.FC = () => {
   const endpoints = [
     {
-      method: 'GET',
-      path: '/api/v1/services',
-      description: 'Retrieve all available services',
-      auth: 'Required'
-    },
+      method: 'GET',path: '/api/v1/services',description: 'Retrieve all available services',auth: 'Required'
+    };
     {
-      method: 'POST',
-      path: '/api/v1/quote',
-      description: 'Request a quote for services',
-      auth: 'Required'
-    },
+      method: 'POST',path: '/api/v1/quote',description: 'Request a quote for services',auth: 'Required'
+    };
     {
-      method: 'GET',
-      path: '/api/v1/analytics',
-      description: 'Get analytics data',
-      auth: 'Required'
-    },
+      method: 'GET',path: '/api/v1/analytics',description: 'Get analytics data',auth: 'Required'
+    };
     {
-      method: 'PUT',
-      path: '/api/v1/user/profile',
-      description: 'Update user profile',
-      auth: 'Required'
+      method: 'PUT',path: '/api/v1/user/profile',description: 'Update user profile',auth: 'Required'
     }
   ];
-
   const features = [
     {
-      icon: Shield,
-      title: 'Secure Authentication',
-      description: 'OAuth 2.0 and API key authentication'
-    },
+      icon: Shield,title: 'Secure Authentication',description: 'OAuth 2.0 and API key authentication'
+    };
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Sub-100ms response times guaranteed'
-    },
+      icon: Zap,title: 'High Performance',description: 'Sub-100ms response times guaranteed'
+    };
     {
-      icon: Globe,
-      title: 'Global CDN',
-      description: 'Worldwide edge locations for fast access'
-    },
+      icon: Globe,title: 'Global CDN',description: 'Worldwide edge locations for fast access'
+    };
     {
-      icon: Database,
-      title: 'Real-time Data',
-      description: 'Live data synchronization across all endpoints'
+      icon: Database,title: 'Real-time Data',description: 'Live data synchronization across all endpoints'
     }
   ];
-
   const codeExamples = [
     {
-      title: 'Text Analysis',
-      language: 'Python',
-      description: 'Analyze text sentiment and extract insights using our AI API.',
-      code: `import requests
+      title: 'Text Analysis',language: 'Python',description: 'Analyze text sentiment and extract insights using our AI API.',code: `import requests
 
 response = requests.post('https://api.ziontechgroup.com/v1/ai/analyze', json={
     "text": "Your text here",
@@ -92,33 +66,22 @@ response = requests.post('https://api.ziontechgroup.com/v1/ai/analyze', json={
 
 print(response.json())`,
       category: 'AI & ML'
-    },
+    };
     {
-      title: 'Cloud Resource Management',
-      language: 'JavaScript',
-      description: 'Example of managing cloud resources through our infrastructure API.',
-      code: `const axios = require('axios');
-
+      title: 'Cloud Resource Management',language: 'JavaScript',description: 'Example of managing cloud resources through our infrastructure API.',code: `const axios = require('axios');
 const api = axios.create({
-    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
-    headers: {'Authorization': 'Bearer YOUR_API_KEY'}
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',headers: {'Authorization': 'Bearer YOUR_API_KEY'}
 });
-
 const createInstance = async () => {
     const response = await api.post('/instances', {
-        type: 'compute',
-        size: 'medium',
-        region: 'us-east-1'
+        type: 'compute',size: 'medium',region: 'us-east-1'
     });
-    return response.data;
-};`,
+    return response.data,
+},`,
       category: 'Cloud & DevOps'
-    },
+    };
     {
-      title: 'Security Threat Detection',
-      language: 'Python',
-      description: 'Implement real-time threat detection using our security API.',
-      code: `import requests
+      title: 'Security Threat Detection',language: 'Python',description: 'Implement real-time threat detection using our security API.',code: `import requests
 
 def check_threat(ip_address):
     url = "https://api.ziontechgroup.com/v1/security/threat-check"
@@ -133,25 +96,17 @@ def check_threat(ip_address):
       category: 'Security'
     }
   ];
-
   const sdks = [
     {
-      name: 'Node.js SDK',
-      icon: Terminal,
-      link: 'https://github.com/ziontechgroup/node-sdk'
-    },
+      name: 'Node.js SDK',icon: Terminal,link: 'https://github.com/ziontechgroup/node-sdk'
+    };
     {
-      name: 'Python SDK',
-      icon: Key,
-      link: 'https://github.com/ziontechgroup/python-sdk'
-    },
+      name: 'Python SDK',icon: Key,link: 'https://github.com/ziontechgroup/python-sdk'
+    };
     {
-      name: 'Go SDK',
-      icon: Database,
-      link: 'https://github.com/ziontechgroup/go-sdk'
+      name: 'Go SDK',icon: Database,link: 'https://github.com/ziontechgroup/go-sdk'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -341,7 +296,7 @@ def check_threat(ip_address):
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of developers building amazing applications with our APIs
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105">
                 Get Your API Key
               </button>
@@ -353,7 +308,6 @@ def check_threat(ip_address):
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default API;

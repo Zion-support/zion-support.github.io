@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Cloud, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredCloudComputing: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredCloudComputing: React.FC = () => {
       title: 'Multi-cloud Support',
       description: 'Cloud computing across various providers and platforms'
     }
-  ];
+  ],
 
   const cloudCapabilities = [
     {
       area: 'Resource Optimization',
-      capabilities: ['Auto-scaling', 'Load balancing', 'Performance tuning', 'Cost optimization'],
+      capabilities: ['Auto-scalingLoad balancing', 'Performance tuningCost optimization'],
       improvement: '40% cost savings',
       efficiency: 'Automated'
     },
     {
       area: 'AI-Powered Analytics',
-      capabilities: ['Performance monitoring', 'Predictive analytics', 'Anomaly detection', 'Insight generation'],
+      capabilities: ['Performance monitoringPredictive analytics', 'Anomaly detectionInsight generation'],
       improvement: '100x faster',
       analytics: 'Real-time'
     },
     {
       area: 'Security & Compliance',
-      capabilities: ['Threat detection', 'Access control', 'Data encryption', 'Regulatory compliance'],
+      capabilities: ['Threat detectionAccess control', 'Data encryptionRegulatory compliance'],
       improvement: 'Zero breaches',
       security: 'Enhanced'
     },
     {
       area: 'Multi-cloud Management',
-      capabilities: ['Provider integration', 'Workload distribution', 'Cost optimization', 'Performance monitoring'],
+      capabilities: ['Provider integrationWorkload distribution', 'Cost optimizationPerformance monitoring'],
       improvement: 'Unified management',
       coverage: 'Global'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Enterprise Applications',
       description: 'AI-powered cloud computing for enterprise software and business applications',
-      benefits: ['Scalability', 'Performance optimization', 'Cost reduction', 'Global deployment']
+      benefits: ['ScalabilityPerformance optimization', 'Cost reductionGlobal deployment']
     },
     {
       title: 'Data Analytics & AI',
       description: 'Cloud computing for big data processing and AI model training',
-      benefits: ['Massive scalability', 'GPU acceleration', 'Cost efficiency', 'Global access']
+      benefits: ['Massive scalabilityGPU acceleration', 'Cost efficiencyGlobal access']
     },
     {
       title: 'Web & Mobile Applications',
       description: 'Cloud computing for web and mobile application hosting and scaling',
-      benefits: ['Auto-scaling', 'Global CDN', 'High availability', 'Cost optimization']
+      benefits: ['Auto-scalingGlobal CDN', 'High availabilityCost optimization']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Cloud computing for development, testing, and deployment pipelines',
-      benefits: ['Automated deployment', 'Environment management', 'Testing automation', 'Release management']
+      benefits: ['Automated deploymentEnvironment management', 'Testing automationRelease management']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredCloudComputing: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with cloud computing',
       features: [
-        'Up to 100 GB storage',
-        'Basic cloud computing',
-        'Standard monitoring',
-        'Email support',
+        'Up to 100 GB storageBasic cloud computing',
+        'Standard monitoringEmail support',
         'Basic security'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredCloudComputing: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced cloud computing needs',
       features: [
-        'Up to 1 TB storage',
-        'Advanced cloud computing',
-        'Custom optimization',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 1 TB storageAdvanced cloud computing',
+        'Custom optimizationPriority support',
+        'Advanced analyticsAPI access',
         'Multi-cloud support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredCloudComputing: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex cloud computing requirements',
       features: [
-        'Unlimited storage',
-        'Custom cloud development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited storageCustom cloud development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredCloudComputing: React.FC = () => {
       position: "Data Director",
       company: "Advanced Analytics Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredCloudComputing: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Compute with AI-Powered Cloud Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredCloudComputing: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredCloudComputing;
+export default AIPoweredCloudComputing,

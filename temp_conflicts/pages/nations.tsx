@@ -1,50 +1,50 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 
-interface Nation { id: string; name: string; founder: string; manifesto?: string; createdAt: number }
+interface Nation { id: string, name: string, founder: string, manifesto?: string, createdAt: number }
 
 export default function NationsPage() {
-  const [nations, setNations] = useState<Nation[]>([]);
-  const [name, setName] = useState('New Micro-Nation');
-  const [founder, setFounder] = useState('dev:alice');
-  const [selected, setSelected] = useState<Nation | null>(null);
-  const [manifesto, setManifesto] = useState('');
+  const [nations, setNations] = useState<Nation[]>([]),
+  const [name, setName] = useState('New Micro-Nation'),
+  const [founder, setFounder] = useState('dev: alice'),
+  const [selected, setSelected] = useState<Nation | null>(null),
+  const [manifesto, setManifesto] = useState(''),
 
   async function load() {
-    const res = await fetch('/api/devnet/nation');
-    const data = await res.json();
-    setNations(data.nations || []);
+    const res = await fetch('/api/devnet/nation'),
+    const data = await res.json(),
+    setNations(data.nations || []),
   }
 
   async function createNation() {
     const res = await fetch('/api/devnet/nation', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, founder }),
-    });
-    const data = await res.json();
-    setSelected(data.nation);
-    setManifesto(data.nation?.manifesto || '');
-    load();
+      body: JSON.stringify({ name, founder })
+    }),
+    const data = await res.json(),
+    setSelected(data.nation),
+    setManifesto(data.nation?.manifesto || ''),
+    load(),
   }
 
   async function loadManifesto(n: Nation) {
-    const res = await fetch(`/api/devnet/vault?nationId=${encodeURIComponent(n.id)}`);
-    const data = await res.json();
-    setSelected(n);
-    setManifesto(data.manifesto || '');
+    const res = await fetch(`/api/devnet/vault?nationId=${encodeURIComponent(n.id)}`),
+    const data = await res.json(),
+    setSelected(n),
+    setManifesto(data.manifesto || ''),
   }
 
   async function saveManifesto() {
-    if (!selected) return;
+    if (!selected) return,
     await fetch('/api/devnet/vault', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nationId: selected.id, manifesto }),
-    });
-    load();
+      body: JSON.stringify({ nationId: selected.id, manifesto })
+    }),
+    load(),
   }
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(), }, []),
 
   return (
     <div className="p-6 max-w-5xl mx-auto space-y-6">
@@ -84,5 +84,5 @@ export default function NationsPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

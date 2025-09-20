@@ -1,27 +1,27 @@
 // Generic request/response types so this handler works without Next.js
-type Req = { method?: string; body?: any };
+type Req = { method?: string, body?: any },
 interface JsonRes {
-  statusCode?: number;
-  setHeader: (name: string, value: string) => void;
-  end: (data?: any) => void;
-  status: (code: number) => JsonRes;
-  json: (data: any) => void;
+  statusCode?: number,
+  setHeader: (name: string, value: string) => void,
+  end: (data?: any) => void,
+  status: (code: number) => JsonRes,
+  json: (data: any) => void
 }
 export default async function handler(req: Req, res: JsonRes) {
   if (req.method !== 'POST') {
-    res.status(405);
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    res.status(405),
+    res.setHeader('AllowPOST'),
+    res.end('Method Not Allowed'),
+    return,
   }
 
-  const { productId } = req.body as { productId?: string };
+  const { productId } = req.body as { productId?: string },
   if (!productId) {
-    res.status(400).json({ error: 'Missing productId' });
-    return;
+    res.status(400).json({ error: 'Missing productId' }),
+    return,
   }
 
   // In this demo environment we return a mock session id
-  const sessionId = `sess_${productId}`;
-  res.status(200).json({ sessionId });
+  const sessionId = `sess_${productId}`,
+  res.status(200).json({ sessionId }),
 }

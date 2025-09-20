@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum AI Revolution 2026 - The Ultimate Breakthrough Guide';
-  description: 'Discover the revolutionary quantum AI technologies that will transform business operations in 2026. Quantum computing, neural networks, and synthetic intelligence breakthrough guide.';
-  keywords: ['quantum AIquantum computing', 'AI revolution 2026quantum neural networks', 'synthetic intelligencebusiness transformation'],
-};
+  title: 'Quantum AI Revolution 2026 - The Ultimate Breakthrough Guide',
+  description: 'Discover the revolutionary quantum AI technologies that will transform business operations in 2026. Quantum computing, neural networks, and synthetic intelligence breakthrough guide.',
+  keywords: ['quantum AIquantum computingAI revolution 2026quantum neural networks', 'synthetic intelligencebusiness transformation']
+},
 export default function QuantumAIRevolution2026Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -60,7 +60,7 @@ export default function QuantumAIRevolution2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Technologies Section */,}
+      {/* Quantum Technologies Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">,
@@ -96,7 +96,7 @@ export default function QuantumAIRevolution2026Page() {,
               <div className="text-5xl mb-6">🧠</div>,
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>,
               <p className="opacity-80 mb-6">,
-                Revolutionary neural networks powered by quantum mechanics;
+                Revolutionary neural networks powered by quantum mechanics,
                 enabling unprecedented learning and decision-making capabilities.,
               </p>,
               <ul className="space-y-2 mb-6">,
@@ -145,7 +145,7 @@ export default function QuantumAIRevolution2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Business Applications */,}
+      {/* Business Applications */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">,
@@ -231,7 +231,7 @@ export default function QuantumAIRevolution2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Timeline */,}
+      {/* Implementation Timeline */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">,
@@ -311,7 +311,7 @@ export default function QuantumAIRevolution2026Page() {,
             </div>,
           </div>,
           <p className="text-lg opacity-80 mb-8">,
-            Based on quantum computing breakthroughs and advanced AI integration;
+            Based on quantum computing breakthroughs and advanced AI integration,
             early adopters are seeing unprecedented returns on their technology investments.,
           </p>,
           <Link,
@@ -322,7 +322,7 @@ export default function QuantumAIRevolution2026Page() {,
           </Link>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md:text-5xl font-bold mb-8">,
@@ -349,4 +349,4 @@ export default function QuantumAIRevolution2026Page() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

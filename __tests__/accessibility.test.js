@@ -1,4 +1,4 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import accessibility from '../components/accessibility';
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import accessibility from '../components/accessibility',

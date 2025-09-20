@@ -1,106 +1,101 @@
 export interface EmergingTechInnovationService {,
-  "id": string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  marketSize: string;
-  targetAudience: string[];
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
+  "id": string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string,
+  period: string,
+  features: string[],
+  category: string,
+  marketSize: string,
+  targetAudience: string[],
+  competitiveAdvantage: string,
+  useCases: string[],
+  integrations: string[],
+  compliance: string[],
+  website: string,
   contact: {,
-    phone: string;
-    email: string;
-    address: string,};
-  "trialDays": number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  technologyStack: string[];
-  innovationLevel: string;
-  futureProofing: string;
-  researchPartnerships: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  textColor?: string;
-  link?: string;
-  marketPosition?: string;
-  technology?: string[];
-  growthRate?: string;
-  variant?: string;
+    phone: string,
+    email: string,
+    address: string},
+  "trialDays": number,
+  setupTime: string,
+  competitors: string[],
+  roi: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  technologyStack: string[],
+  innovationLevel: string,
+  futureProofing: string,
+  researchPartnerships: string[],
+  popular?: boolean,
+  icon?: string,
+  color?: string,
+  textColor?: string,
+  link?: string,
+  marketPosition?: string,
+  technology?: string[],
+  growthRate?: string,
+  variant?: string,
   contactInfo?: {,
-    mobile: string;
-    email: string;
-    address: string;
-    website: string,};
-  realImplementation?: boolean;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation?: boolean,
   implementationDetails?: string}
 export const "emergingTechInnovations2025": EmergingTechInnovationService[] = [{,
-    id: 'ai-quantum-fusion-2025';
-    "name": 'AI-Quantum Fusion Platform';
-    "tagline": 'Revolutionary AI-Quantum Computing Integration';
-    "description": 'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.';
-    "price": '$2,999';
-    "period": 'monthly';
+    id: 'ai-quantum-fusion-2025',
+    "name": 'AI-Quantum Fusion Platform',
+    "tagline": 'Revolutionary AI-Quantum Computing Integration',
+    "description": 'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',
+    "price": '$2,999',
+    "period": 'monthly',
     "features": [,
-      'Quantum-enhanced AI algorithmsReal-time quantum simulation';
-      'Advanced machine learning modelsQuantum cryptography integration';
-      'Scalable quantum processing units',
-    ];
-    "category": 'AI & Quantum Computing';
-    "marketSize": '$15.2B';
-    "targetAudience": ['Research institutionsTech companies';
-      'Financial servicesHealthcare organizations',
-    ];
-    "competitiveAdvantage": 'First-to-market AI-quantum fusion technology with proprietary algorithms';
-    "useCases": ['Drug discovery and molecular modelingFinancial risk assessment';
-      'Climate change modelingCryptographic security';
-      'Complex optimization problems',
-    ];
-    "integrations": ['AWS QuantumIBM Quantum';
-      'Google Quantum AIMicrosoft Azure Quantum';
-      'Custom API endpoints',
-    ];
-    "compliance": ['ISO 27001SOC 2 Type II', 'GDPRHIPAA'];
-    "website": 'https://ziontechgroup.com/ai-quantum-fusion';
+      'Quantum-enhanced AI algorithmsReal-time quantum simulationAdvanced machine learning modelsQuantum cryptography integration',
+      'Scalable quantum processing units'
+    ],
+    "category": 'AI & Quantum Computing',
+    "marketSize": '$15.2B',
+    "targetAudience": ['Research institutionsTech companiesFinancial servicesHealthcare organizations'
+    ],
+    "competitiveAdvantage": 'First-to-market AI-quantum fusion technology with proprietary algorithms',
+    "useCases": ['Drug discovery and molecular modelingFinancial risk assessmentClimate change modelingCryptographic security',
+      'Complex optimization problems'
+    ],
+    "integrations": ['AWS QuantumIBM QuantumGoogle Quantum AIMicrosoft Azure Quantum',
+      'Custom API endpoints'
+    ],
+    "compliance": ['ISO 27001SOC 2 Type IIGDPRHIPAA'],
+    "website": 'https://ziontechgroup.com/ai-quantum-fusion',
     "contact": {,
-      phone: '+1-800-ZION-TECH';
-      "email": 'ai-quantum@ziontechgroup.com';
-      "address": 'Zion Tech Group, Innovation District, Tech City'};
-    "trialDays": 30;
-    "setupTime": '2-4 weeks';
-    "competitors": ['IBM QuantumGoogle Quantum AI', 'Microsoft Quantum'];
-    "roi": '300-500% within 18 months';
-    "launchDate": 'Q2 2025';
-    "customers": 150;
-    "rating": 4.8;
-    "reviews": 89;
-    "technologyStack": ['PythonQiskit';
-      'TensorFlowQuantum Assembly';
-      'Rust',
-    ];
-    "innovationLevel": 'Breakthrough';
-    "futureProofing": 'Quantum-ready architecture with AI evolution paths';
-    "researchPartnerships": ['MIT Quantum LabStanford AI Research', 'CERN'];
-    "popular": true;
-    "icon": 'quantum-brain';
-    "color": 'from-zion-cyan to-zion-purple';
-    "textColor": 'text-white';
-    "link": '/services/ai-quantum-fusion';
-    "marketPosition": 'Market Leader';
-    "technology": ['AIQuantum Computing', 'Machine Learning'];
-    "growthRate": '45% YoY';
+      phone: '+1-800-ZION-TECH',
+      "email": 'ai-quantum@ziontechgroup.com',
+      "address": 'Zion Tech Group, Innovation District, Tech City'},
+    "trialDays": 30,
+    "setupTime": '2-4 weeks',
+    "competitors": ['IBM QuantumGoogle Quantum AIMicrosoft Quantum'],
+    "roi": '300-500% within 18 months',
+    "launchDate": 'Q2 2025',
+    "customers": 150,
+    "rating": 4.8,
+    "reviews": 89,
+    "technologyStack": ['PythonQiskitTensorFlowQuantum Assembly',
+      'Rust'
+    ],
+    "innovationLevel": 'Breakthrough',
+    "futureProofing": 'Quantum-ready architecture with AI evolution paths',
+    "researchPartnerships": ['MIT Quantum LabStanford AI ResearchCERN'],
+    "popular": true,
+    "icon": 'quantum-brain',
+    "color": 'from-zion-cyan to-zion-purple',
+    "textColor": 'text-white',
+    "link": '/services/ai-quantum-fusion',
+    "marketPosition": 'Market Leader',
+    "technology": ['AIQuantum ComputingMachine Learning'],
+    "growthRate": '45% YoY',
     "variant": 'premium'}
-];
-export interface EmergingTechInnovationService { id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[], category: string, marketSize: string, targetAudience: string[], competitiveAdvantage: string, useCases: string[], integrations: string[], compliance: string[], website: string, contact: { phone: string, email: string, address: string,}, trialDays: number, setupTime: string, competitors: string[], roi: string, launchDate: string, customers: number, rating: number, reviews: number, technologyStack: string[], innovationLevel: string, futureProofing: string, researchPartnerships: string[], popular?: boolean, icon?: string, color?: string, textColor?: string, link?: string, marketPosition?: string, technology?: string[], growthRate?: string, variant?: string, contactInfo?: { mobile: string, email: string, address: string, website: string,}, realImplementation?: boolean, implementationDetails?: string} export const emergingTechInnovations2025: EmergingTechInnovationService[] = [ { id: 'ai-quantum-fusion-2025',name: 'AI-Quantum Fusion Platform',tagline: 'Revolutionary AI-Quantum Computing Integration',description: 'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',price: '$2,999',period: 'monthly',features: [ 'Quantum-enhanced AI algorithmsReal-time quantum simulation','Advanced machine learning modelsQuantum cryptography integration','Scalable quantum processing units'],category: 'AI & Quantum Computing',marketSize: '$15.2B',targetAudience: [ 'Research institutionsTech companies','Financial servicesHealthcare organizations'],competitiveAdvantage: 'First-to-market AI-quantum fusion technology with proprietary algorithms',useCases: [ 'Drug discovery and molecular modelingFinancial risk assessment','Climate change modelingCryptographic security','Complex optimization problems'],integrations: [ 'AWS QuantumIBM Quantum','Google Quantum AIMicrosoft Azure Quantum','Custom API endpoints'],compliance: ['ISO 27001SOC 2 Type II','GDPRHIPAA'],website: 'https: contact: { phone: '+1-800-ZION-TECH',email: 'ai-quantum@ziontechgroup.com',address: 'Zion Tech Group,Innovation District,Tech City'},trialDays: 30,setupTime: '2-4 weeks',competitors: ['IBM QuantumGoogle Quantum AI','Microsoft Quantum'],roi: '300-500% within 18 months',launchDate: 'Q2 2025',customers: 150,rating: 4.8,reviews: 89,technologyStack: [ 'PythonQiskit','TensorFlowQuantum Assembly','Rust'],innovationLevel: 'Breakthrough',futureProofing: 'Quantum-ready architecture with AI evolution paths',researchPartnerships: ['MIT Quantum LabStanford AI Research','CERN'],popular: true,icon: 'quantum-brain',color: 'from-zion-cyan to-zion-purple',textColor: 'text-white',link: '/services/ai-quantum-fusion',marketPosition: 'Market Leader',technology: ['AIQuantum Computing','Machine Learning'],growthRate: '45% YoY',variant: 'premium',}];
+],
+export interface EmergingTechInnovationService { id: string, name: string, tagline: string, description: string, price: string, period: string, features: string[], category: string, marketSize: string, targetAudience: string[], competitiveAdvantage: string, useCases: string[], integrations: string[], compliance: string[], website: string, contact: { phone: string, email: string, address: string}, trialDays: number, setupTime: string, competitors: string[], roi: string, launchDate: string, customers: number, rating: number, reviews: number, technologyStack: string[], innovationLevel: string, futureProofing: string, researchPartnerships: string[], popular?: boolean, icon?: string, color?: string, textColor?: string, link?: string, marketPosition?: string, technology?: string[], growthRate?: string, variant?: string, contactInfo?: { mobile: string, email: string, address: string, website: string}, realImplementation?: boolean, implementationDetails?: string} export const emergingTechInnovations2025: EmergingTechInnovationService[] = [ { id: 'ai-quantum-fusion-2025',name: 'AI-Quantum Fusion Platform',tagline: 'Revolutionary AI-Quantum Computing Integration',description: 'Breakthrough platform combining artificial intelligence with quantum computing capabilities for unprecedented computational power and problem-solving abilities.',price: '$2,999',period: 'monthly',features: [ 'Quantum-enhanced AI algorithmsReal-time quantum simulationAdvanced machine learning modelsQuantum cryptography integration','Scalable quantum processing units'],category: 'AI & Quantum Computing',marketSize: '$15.2B',targetAudience: [ 'Research institutionsTech companiesFinancial servicesHealthcare organizations'],competitiveAdvantage: 'First-to-market AI-quantum fusion technology with proprietary algorithms',useCases: [ 'Drug discovery and molecular modelingFinancial risk assessmentClimate change modelingCryptographic security','Complex optimization problems'],integrations: [ 'AWS QuantumIBM QuantumGoogle Quantum AIMicrosoft Azure Quantum','Custom API endpoints'],compliance: ['ISO 27001SOC 2 Type IIGDPRHIPAA'],website: 'https: contact: { phone: '+1-800-ZION-TECH',email: 'ai-quantum@ziontechgroup.com',address: 'Zion Tech Group,Innovation District,Tech City'},trialDays: 30,setupTime: '2-4 weeks',competitors: ['IBM QuantumGoogle Quantum AIMicrosoft Quantum'],roi: '300-500% within 18 months',launchDate: 'Q2 2025',customers: 150,rating: 4.8,reviews: 89,technologyStack: [ 'PythonQiskitTensorFlowQuantum Assembly','Rust'],innovationLevel: 'Breakthrough',futureProofing: 'Quantum-ready architecture with AI evolution paths',researchPartnerships: ['MIT Quantum LabStanford AI ResearchCERN'],popular: true,icon: 'quantum-brain',color: 'from-zion-cyan to-zion-purple',textColor: 'text-white',link: '/services/ai-quantum-fusion',marketPosition: 'Market Leader',technology: ['AIQuantum ComputingMachine Learning'],growthRate: '45% YoY',variant: 'premium'}],

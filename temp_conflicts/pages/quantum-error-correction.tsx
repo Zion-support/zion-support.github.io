@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Shield, Atom, Zap, Target, Brain, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumErrorCorrection: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumErrorCorrection: React.FC = () => {
       title: 'Scalable Solutions',
       description: 'Error correction for quantum systems of any size'
     }
-  ];
+  ],
 
   const correctionCapabilities = [
     {
       area: 'Surface Codes',
-      capabilities: ['2D surface codes', '3D surface codes', 'Color codes', 'Toric codes'],
+      capabilities: ['2D surface codes3D surface codes', 'Color codesToric codes'],
       improvement: '99.9% fidelity',
       overhead: '100x reduction'
     },
     {
       area: 'Stabilizer Codes',
-      capabilities: ['Steane codes', 'CSS codes', 'Reed-Muller codes', 'BCH codes'],
+      capabilities: ['Steane codesCSS codes', 'Reed-Muller codesBCH codes'],
       improvement: '99.5% fidelity',
       overhead: '50x reduction'
     },
     {
       area: 'Topological Codes',
-      capabilities: ['Kitaev codes', 'Fibonacci anyons', 'Braid group codes', 'Fusion codes'],
+      capabilities: ['Kitaev codesFibonacci anyons', 'Braid group codesFusion codes'],
       improvement: '99.8% fidelity',
       overhead: '75x reduction'
     },
     {
       area: 'Concatenated Codes',
-      capabilities: ['Nested codes', 'Hierarchical correction', 'Multi-level codes', 'Recursive correction'],
+      capabilities: ['Nested codesHierarchical correction', 'Multi-level codesRecursive correction'],
       improvement: '99.99% fidelity',
       overhead: '200x reduction'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Quantum Computing',
       description: 'Error correction for large-scale quantum computers and quantum processors',
-      benefits: ['Fault-tolerant operations', 'Extended coherence time', 'Reliable computation']
+      benefits: ['Fault-tolerant operationsExtended coherence time', 'Reliable computation']
     },
     {
       title: 'Quantum Communication',
       description: 'Error correction for quantum networks and secure communications',
-      benefits: ['Reliable transmission', 'Long-distance communication', 'Secure data transfer']
+      benefits: ['Reliable transmissionLong-distance communication', 'Secure data transfer']
     },
     {
       title: 'Quantum Memory',
       description: 'Error correction for quantum memory and storage systems',
-      benefits: ['Data preservation', 'Extended storage time', 'High fidelity retrieval']
+      benefits: ['Data preservationExtended storage time', 'High fidelity retrieval']
     },
     {
       title: 'Quantum Sensors',
       description: 'Error correction for quantum sensing and measurement devices',
-      benefits: ['Improved accuracy', 'Enhanced sensitivity', 'Stable measurements']
+      benefits: ['Improved accuracyEnhanced sensitivity', 'Stable measurements']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumErrorCorrection: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small quantum projects',
       features: [
-        'Up to 100 error corrections/month',
-        'Basic error correction codes',
-        'Standard correction protocols',
-        'Email support',
+        'Up to 100 error corrections/monthBasic error correction codes',
+        'Standard correction protocolsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumErrorCorrection: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing quantum teams and research organizations',
       features: [
-        'Up to 500 error corrections/month',
-        'Advanced error correction codes',
-        'Custom correction protocols',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 error corrections/monthAdvanced error correction codes',
+        'Custom correction protocolsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumErrorCorrection: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government agencies',
       features: [
-        'Unlimited error corrections',
-        'Custom error correction development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited error correctionsCustom error correction development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumErrorCorrection: React.FC = () => {
       position: "Quantum Memory Researcher",
       company: "Quantum Memory Institute"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumErrorCorrection: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Correct Quantum Errors?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumErrorCorrection: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumErrorCorrection;
+export default QuantumErrorCorrection,

@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Autonomous Business Operations 2026: Self-Managing Systems';
-  description: 'Learn how to build autonomous business operations that self-manage, optimize, and adapt without human intervention in 2026.';
-  keywords: ['autonomous businessself-managing systems', 'business automationAI operations', 'autonomous workflows'],
-};
+  title: 'Autonomous Business Operations 2026: Self-Managing Systems',
+  description: 'Learn how to build autonomous business operations that self-manage, optimize, and adapt without human intervention in 2026.',
+  keywords: ['autonomous businessself-managing systemsbusiness automationAI operations', 'autonomous workflows']
+},
 export default function AutonomousBusiness2026() {,
   return (,
     <div className="min-h-screen bg-white">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-2 text-sm text-green-600 mb-4">,
             <span>Autonomous Systems</span>,
@@ -100,7 +100,7 @@ export default function AutonomousBusiness2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Core Components */,}
+        {/* Core Components */}
         <section className="mb-16">,
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Core Components of Autonomous Operations</h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -110,7 +110,7 @@ export default function AutonomousBusiness2026() {,
               </div>,
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Decision Engine</h3>,
               <p className="text-gray-700 mb-6">,
-                Advanced AI systems that make complex business decisions autonomously;
+                Advanced AI systems that make complex business decisions autonomously,
                 learning from outcomes and continuously improving.,
               </p>,
               <div className="space-y-2">,
@@ -174,7 +174,7 @@ export default function AutonomousBusiness2026() {,
               </div>,
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Autonomous Security</h3>,
               <p className="text-gray-700 mb-6">,
-                AI-powered security systems that automatically detect threats;
+                AI-powered security systems that automatically detect threats,
                 respond to incidents, and adapt to new attack vectors.,
               </p>,
               <div className="space-y-2">,
@@ -287,7 +287,7 @@ export default function AutonomousBusiness2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Business Benefits */,}
+        {/* Business Benefits */}
         <section className="mb-16">,
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Business Benefits</h2>,
           <div className="grid md: grid-cols-2 gap-8">,
@@ -352,7 +352,7 @@ export default function AutonomousBusiness2026() {,
           <div className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-2xl p-12 text-white text-center">,
             <h2 className="text-4xl font-bold mb-6">Ready to Build Autonomous Operations?</h2>,
             <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">,
-              Transform your business with autonomous operations that work 24/7, adapt to changes;
+              Transform your business with autonomous operations that work 24/7, adapt to changes,
               and continuously optimize performance. Start your journey to full autonomy today.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -371,7 +371,7 @@ export default function AutonomousBusiness2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Resources */,}
+        {/* Related Resources */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Resources</h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -391,4 +391,4 @@ export default function AutonomousBusiness2026() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

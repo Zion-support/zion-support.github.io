@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const UltimateBreakthroughBanner: React.FC = () => {,
   return (,
     <div,
-      whileInView={{ opacity: 1, y: 0 ,}}
+      whileInView={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 rounded-2xl p-8 mb-8 text-white text-center relative overflow-hidden",
     >,
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-red-600/50 backdrop-blur-sm"></div>,
@@ -13,7 +13,7 @@ const UltimateBreakthroughBanner: React.FC = () => {,
           <span className="text-4xl animate-bounce">🚀</span>,
         </div>,
         <p className="text-2xl opacity-95 mb-6 max-w-5xl mx-auto">,
-          Experience the most revolutionary technology showcase featuring AI consciousness, quantum computing;
+          Experience the most revolutionary technology showcase featuring AI consciousness, quantum computing,
           neural interfaces, and space colonization technologies,
         </p>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-4 max-w-6xl mx-auto">,
@@ -35,6 +35,5 @@ const UltimateBreakthroughBanner: React.FC = () => {,
           <span className="bg-white/20 px-3 py-1 rounded-full">⚡ Revolutionary Tech</span>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default UltimateBreakthroughBanner;
+    </div>)},
+export default UltimateBreakthroughBanner,

@@ -1,10 +1,9 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { Button } from '../../components/ui/Button';
-import { Card } from '../../components/ui/Card';
-import { Badge } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu } from 'lucide-react';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { Button } from "../../components/ui/Button";
+import { Card } from "../../components/ui/Card";
+import { Badge } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu } from "lucide-react";
 const AICybersecurityPlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -329,7 +328,7 @@ const AICybersecurityPlatform: React.FC = () => {
                   White-label options
                 </li>
               </ul>
-              <Button className="w-full bg-orange-600 hover:bg-orange-700">
+              <Button className="w-full bg-orange-600 hover: bg-orange-700">
                 Contact Sales
               </Button>
             </Card>
@@ -366,7 +365,7 @@ const AICybersecurityPlatform: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             Ready to Secure Your Organization?
@@ -404,7 +403,6 @@ const AICybersecurityPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AICybersecurityPlatform;

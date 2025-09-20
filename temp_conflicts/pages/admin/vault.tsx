@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 
 const defaultContents = {
   daoGenesisKey: '',
@@ -9,126 +9,126 @@ const defaultContents = {
   manifestoVersions: [],
   whitepaperHistory: [],
   roadmapHistory: [],
-  gptPromptBase: '',
-};
+  gptPromptBase: ''
+},
 
 export default function AdminVaultPage() {
-  const [vaultId, setVaultId] = useState('zion-founders');
-  const [passphrase, setPassphrase] = useState('');
-  const [guardians, setGuardians] = useState<string>('');
-  const [status, setStatus] = useState<string>('');
-  const [contents, setContents] = useState<any>(defaultContents);
-  const [unlockedContents, setUnlockedContents] = useState<any>(null);
-  const [failedAttempts, setFailedAttempts] = useState<number>(0);
+  const [vaultId, setVaultId] = useState('zion-founders'),
+  const [passphrase, setPassphrase] = useState(''),
+  const [guardians, setGuardians] = useState<string>(''),
+  const [status, setStatus] = useState<string>(''),
+  const [contents, setContents] = useState<any>(defaultContents),
+  const [unlockedContents, setUnlockedContents] = useState<any>(null),
+  const [failedAttempts, setFailedAttempts] = useState<number>(0),
 
-  const guardianList = useMemo(() => guardians.split(/[,\n]/).map((g) => g.trim()).filter(Boolean), [guardians]);
+  const guardianList = useMemo(() => guardians.split(/[,\n]/).map((g) => g.trim()).filter(Boolean), [guardians]),
 
   async function createVault() {
-    setStatus('Creating...');
+    setStatus('Creating...'),
     const body = {
       vaultId,
       passphrase,
       guardians: guardianList,
       guardianThreshold: Math.min(2, guardianList.length || 0),
-      contents,
-    };
-    const res = await fetch(`/api/admin/vault?action=create`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-    const json = await res.json();
-    setStatus(res.ok ? 'Vault created' : `Error: ${json.error}`);
+      contents
+    },
+    const res = await fetch(`/api/admin/vault?action=create`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) }),
+    const json = await res.json(),
+    setStatus(res.ok ? 'Vault created' : `Error: ${json.error}`),
   }
 
   async function unlockWithPassphrase() {
-    setStatus('Unlocking...');
-    const res = await fetch(`/api/admin/vault?action=unlock`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, passphrase }) });
-    const json = await res.json();
+    setStatus('Unlocking...'),
+    const res = await fetch(`/api/admin/vault?action=unlock`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, passphrase }) }),
+    const json = await res.json(),
     if (res.ok) {
-      setUnlockedContents(json.contents);
-      setStatus('Unlocked');
-      setFailedAttempts(0);
+      setUnlockedContents(json.contents),
+      setStatus('Unlocked'),
+      setFailedAttempts(0),
     } else {
-      setStatus(`Unlock failed: ${json.error}`);
-      setFailedAttempts(json.attempts || failedAttempts + 1);
+      setStatus(`Unlock failed: ${json.error}`),
+      setFailedAttempts(json.attempts || failedAttempts + 1),
     }
   }
 
   async function unlockWithGuardians() {
-    setStatus('Unlocking via guardians...');
-    const res = await fetch(`/api/admin/vault?action=unlock`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, guardians: guardianList }) });
-    const json = await res.json();
+    setStatus('Unlocking via guardians...'),
+    const res = await fetch(`/api/admin/vault?action=unlock`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, guardians: guardianList }) }),
+    const json = await res.json(),
     if (res.ok) {
-      setUnlockedContents(json.contents || '(Guardian unlock, contents hidden without passphrase)');
-      setStatus('Unlocked via guardians');
-      setFailedAttempts(0);
+      setUnlockedContents(json.contents || '(Guardian unlock, contents hidden without passphrase)'),
+      setStatus('Unlocked via guardians'),
+      setFailedAttempts(0),
     } else {
-      setStatus(`Guardian unlock failed: ${json.error}`);
-      setFailedAttempts(json.attempts || failedAttempts + 1);
+      setStatus(`Guardian unlock failed: ${json.error}`),
+      setFailedAttempts(json.attempts || failedAttempts + 1),
     }
   }
 
   async function simulateFailure() {
-    setStatus('Simulating failure...');
-    const res = await fetch(`/api/admin/vault?action=simulate-failure`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) });
-    const json = await res.json();
+    setStatus('Simulating failure...'),
+    const res = await fetch(`/api/admin/vault?action=simulate-failure`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) }),
+    const json = await res.json(),
     if (res.ok) {
-      setStatus(json.selfDestructed ? 'Vault self-destructed' : `Failed attempts: ${json.failedAttempts}`);
+      setStatus(json.selfDestructed ? 'Vault self-destructed' : `Failed attempts: ${json.failedAttempts}`),
     } else {
-      setStatus(`Error: ${json.error}`);
+      setStatus(`Error: ${json.error}`),
     }
   }
 
   async function exportVault() {
-    const res = await fetch(`/api/admin/vault?action=export`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) });
+    const res = await fetch(`/api/admin/vault?action=export`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) }),
     if (!res.ok) {
-      const json = await res.json();
-      setStatus(`Export error: ${json.error}`);
-      return;
+      const json = await res.json(),
+      setStatus(`Export error: ${json.error}`),
+      return,
     }
-    const blob = await res.blob();
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `zion-vault-${vaultId}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const blob = await res.blob(),
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = `zion-vault-${vaultId}.json`,
+    a.click(),
+    URL.revokeObjectURL(url),
   }
 
   async function exportEncrypted() {
-    const res = await fetch(`/api/admin/vault?action=export-enc`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, passphrase }) });
-    const blob = await res.blob();
-    if (!res.ok) { setStatus('Encrypted export failed'); return; }
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `zion-vault-${vaultId}.zip.enc`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const res = await fetch(`/api/admin/vault?action=export-enc`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId, passphrase }) }),
+    const blob = await res.blob(),
+    if (!res.ok) { setStatus('Encrypted export failed'), return, }
+    const url = URL.createObjectURL(blob),
+    const a = document.createElement('a'),
+    a.href = url,
+    a.download = `zion-vault-${vaultId}.zip.enc`,
+    a.click(),
+    URL.revokeObjectURL(url),
   }
 
   async function pushIpfs() {
-    setStatus('Uploading to IPFS...');
-    const res = await fetch(`/api/admin/vault?action=push-ipfs`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) });
-    const json = await res.json();
-    setStatus(res.ok ? `IPFS CID: ${json.cid}` : `IPFS error: ${json.error}`);
+    setStatus('Uploading to IPFS...'),
+    const res = await fetch(`/api/admin/vault?action=push-ipfs`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) }),
+    const json = await res.json(),
+    setStatus(res.ok ? `IPFS CID: ${json.cid}` : `IPFS error: ${json.error}`),
   }
 
   async function makeNftMetadata() {
-    const res = await fetch(`/api/admin/vault?action=nft-metadata`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) });
-    const json = await res.json();
+    const res = await fetch(`/api/admin/vault?action=nft-metadata`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ vaultId }) }),
+    const json = await res.json(),
     if (res.ok) {
-      const data = JSON.stringify(json.metadata, null, 2);
-      const url = URL.createObjectURL(new Blob([data], { type: 'application/json' }));
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `zion-vault-${vaultId}-nft.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-      setStatus('NFT metadata downloaded');
+      const data = JSON.stringify(json.metadata, null, 2),
+      const url = URL.createObjectURL(new Blob([data], { type: 'application/json' })),
+      const a = document.createElement('a'),
+      a.href = url,
+      a.download = `zion-vault-${vaultId}-nft.json`,
+      a.click(),
+      URL.revokeObjectURL(url),
+      setStatus('NFT metadata downloaded'),
     } else {
-      setStatus(`NFT metadata error: ${json.error}`);
+      setStatus(`NFT metadata error: ${json.error}`),
     }
   }
 
-  const biometricSupported = typeof window !== 'undefined' && (navigator as any).credentials && 'isUserVerifyingPlatformAuthenticatorAvailable' in (navigator as any).credentials;
+  const biometricSupported = typeof window !== 'undefined' && (navigator as any).credentials && 'isUserVerifyingPlatformAuthenticatorAvailable' in (navigator as any).credentials,
 
   return (
     <EnhancedLayout>
@@ -177,12 +177,9 @@ export default function AdminVaultPage() {
           <div className="space-y-3">
             <h2 className="text-xl font-semibold">Backup Checklist</h2>
             {[
-              'DAO Genesis Key / Multisig fallback',
-              'Treasury recovery address',
-              'ZION$ initial distribution',
-              'Manifesto v1-v5',
-              'Whitepaper + roadmap history',
-              'Original GPT prompt base (ZionGPT Core)',
+              'DAO Genesis Key / Multisig fallbackTreasury recovery address',
+              'ZION$ initial distributionManifesto v1-v5',
+              'Whitepaper + roadmap historyOriginal GPT prompt base (ZionGPT Core)'
             ].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-emerald-500" />
@@ -200,7 +197,7 @@ export default function AdminVaultPage() {
               <input className="w-full border rounded px-3 py-2 bg-white dark:bg-black" value={contents.treasuryRecoveryAddress} onChange={(e) => setContents({ ...contents, treasuryRecoveryAddress: e.target.value })} />
               <label className="block text-sm font-medium">ZION$ Initial Distribution (JSON)</label>
               <textarea className="w-full border rounded px-3 py-2 h-24 bg-white dark:bg-black" value={JSON.stringify(contents.initialDistribution, null, 2)} onChange={(e) => {
-                try { setContents({ ...contents, initialDistribution: JSON.parse(e.target.value || '{}') }); } catch (err) {}
+                try { setContents({ ...contents, initialDistribution: JSON.parse(e.target.value || '{}') }), } catch (err) {}
               }} />
               <label className="block text-sm font-medium">ZionGPT Core Prompt</label>
               <textarea className="w-full border rounded px-3 py-2 h-24 bg-white dark:bg-black" value={contents.gptPromptBase} onChange={(e) => setContents({ ...contents, gptPromptBase: e.target.value })} />
@@ -221,5 +218,5 @@ export default function AdminVaultPage() {
         <div className="text-xs text-gray-400">Biometric available: {biometricSupported ? 'Yes' : 'No'}</div>
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

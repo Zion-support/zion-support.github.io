@@ -1,21 +1,21 @@
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react";
-import { useState } from "react";
-import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm";
-import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks";
-import { PartnerDashboard } from "@/components/partners/PartnerDashboard";
-import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard";
-import { PartnerResources } from "@/components/partners/PartnerResources";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",
+import { useState } from "react",
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate } from "react-router-dom",
 
 export default function Partners() {
-  const [activeTab, setActiveTab] = useState("overview");
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -147,7 +147,7 @@ export default function Partners() {
           </Button>
         </div>
       </div>
-    );
+    ),
   }
 
   // Authenticated user view - Partner Dashboard
@@ -205,5 +205,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  );
+  ),
 }

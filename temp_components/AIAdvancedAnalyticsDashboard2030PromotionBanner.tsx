@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   BarChart3
   TrendingUp
@@ -31,11 +31,11 @@ import {
   Cloud,
   Lock,
   Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentMetricsetCurrentMetric] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentMetricsetCurrentMetric] = useState(0),
 
   const metrics = [
     {
@@ -62,23 +62,23 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner = () => {
       description: 'Lightning-fast analytics',
       color: 'from-blue-500 to-cyan-500'
     }
-  ];
+  ],
 
   const features = [
     { name: 'Predictive Analytics'icon: Brain },
     { name: 'Real-time Insights'icon: Activity },
     { name: 'AI Optimization'icon: Sparkles },
     { name: 'Automated Reports'icon: BarChart3 }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentMetric(prev => (prev + 1) % metrics.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentMetric(prev => (prev + 1) % metrics.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const AIAdvancedAnalyticsDashboard2030PromotionBanner: React.FC = () => {
   return (
@@ -86,7 +86,7 @@ const AIAdvancedAnalyticsDashboard2030PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AIAdvancedAnalyticsDashboard2030PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AIAdvancedAnalyticsDashboard2030PromotionBanner;
+export default AIAdvancedAnalyticsDashboard2030PromotionBanner,

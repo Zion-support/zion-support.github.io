@@ -1,10 +1,10 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
+  size?: 'sm' | 'md' | 'lg',
+  text?: string,
   fullScreen?: boolean}
 
 export function LoadingSpinner({
@@ -13,20 +13,20 @@ export function LoadingSpinner({
   text = 'Loading...',
   fullScreen = false}: LoadingSpinnerProps) {
 
-  ;
+  ,
   { duration: 1, repeat: Infinity,
   ease: "linear"
   { duration: 3,
   ease: "easeInOut"
 =======
-  ;
-  ;
-  ;
-  lg: 'w-32 h-32';
-  ;
+  ,
+  ,
+  ,
+  lg: 'w-32 h-32',
+  ,
 
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50''
-    : 'flex items-center justify-center p-8';
+    : 'flex items-center justify-center p-8',
 
   return ()    <div className = {containerClasses}>
       <div className="text-center">
@@ -53,7 +53,7 @@ export function LoadingSpinner({
 
                 background: ['
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9),linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6),linear-gradient(45deg, #0ea5e9, #8b5cf6,
-  #0ea5e9);
+  #0ea5e9),
                 ]
 
 }}
@@ -127,11 +127,11 @@ export function LoadingSpinner({
                 repeat: Infinity,
   delay: index * 0.2
 
-}};
-            />;) ) };
-        </div>;
-      </div>;
-    </div>;) }
+}},
+            />,) ) },
+        </div>,
+      </div>,
+    </div>,) }
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
   pageName?: string}
@@ -139,7 +139,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 export function PageLoader(...args[]):  {
 
   return ("
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">;"
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">,"
       <div className="text-center">
         {/* Animated Background */}"
         <div className="absolute inset-0 overflow-hidden">
@@ -265,19 +265,19 @@ export function PageLoader(...args[]):  {
 
 }}
               />
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) }
-  lines?: number;
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) }
+  lines?: number,
   className?: string}
 
 export function SkeletonLoader(...args[]):  {
 
   return ()`
-<div className:  {`space-y-3 ${className}`}>;
-      {Array.from({ length: lines }).map((_, index)  => (;
+<div className:  {`space-y-3 ${className}`}>,
+      {Array.from({ length: lines }).map((_, index)  => (,
         <motion.div
           key={index}"
           className="h-4 bg-zion-slate-light/20 rounded"

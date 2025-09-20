@@ -1,11 +1,11 @@
 
-    pool = new Pool({ connectionString: process.env.DATABASE_URL ,});
+    pool = new Pool({ connectionString: process.env.DATABASE_URL }),
   }
-  return pool;
+  return pool,
 }
 ,
-    await client.query('COMMIT');
-    return result;
+    await client.query('COMMIT'),
+    return result,
   } catch (err) {,
-    await client.query('ROLLBACK');
-    throw err;
+    await client.query('ROLLBACK'),
+    throw err,

@@ -22,10 +22,10 @@ function InnovationResearchSection () {
   Brain,
   Microscope,
   Target'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      patents: '11'};
-  ];
+      patents: '11'},
+  ],
 const researchAreas = [{
 
     icon: "🧠","
@@ -50,13 +50,13 @@ const researchAreas = [{
     progress: 90,"
     color: "from-green-500 to-emerald-500"
   },
-  {;"
-    icon: "🌐",;"
-    title: "Edge Computing",;"
-    description: "Distributed computing and IoT optimization",;
-    progress: 80,;"
-    color: "from-orange-500 to-red-500"};
-];
+  {,"
+    icon: "🌐","
+    title: "Edge Computing","
+    description: "Distributed computing and IoT optimization",
+    progress: 80,"
+    color: "from-orange-500 to-red-500"},
+],
 
 =======
 export function InnovationResearchSection() {
@@ -115,7 +115,7 @@ export function InnovationResearchSection() {
 
         {/* Research Areas */}
         <motion.div
-          className="mb-16";
+          className="mb-16",
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
@@ -168,7 +168,7 @@ export function InnovationResearchSection() {
 
         {/* Research Areas */}
         <motion.div "
-          className="mb-16";
+          className="mb-16",
           initial = {
 
   { opacity: 0,
@@ -337,7 +337,7 @@ export function InnovationResearchSection() {
             <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
               Partner with us to explore the frontiers of technology and create
               solutions that will shape the future of humanity.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Research Partnership"
                 <Flask className="ml-2 h-5 w-5"  />
@@ -348,16 +348,16 @@ export function InnovationResearchSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default InnovationResearchSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default IconComponent;
-export default IconComponent;
+export default InnovationResearchSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default IconComponent,
+export default IconComponent,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

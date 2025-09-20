@@ -1,5 +1,5 @@
-// Hook for index;
+// Hook for index,
 export const useIndex: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

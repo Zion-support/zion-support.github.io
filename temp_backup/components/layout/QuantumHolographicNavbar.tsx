@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Sparkles, Rocket, Cpu, Database, Brain, Atom, Eye, Lock, BarChart3, Users, Target, TrendingUp, Star, Award, ZapIcon, CloudIcon, BotIcon, ShieldIcon, GlobeIcon, CpuIcon, DatabaseIcon, BrainIcon, AtomIcon, EyeIcon, LockIcon, BarChart3Icon, UsersIcon, TargetIcon, TrendingUpIcon, StarIcon, AwardIcon } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu as HeadlessMenu, X as HeadlessX, Zap as HeadlessZap, Sparkles as HeadlessSparkles, ChevronDown, Globe as HeadlessGlobe, Shield as HeadlessShield, Cpu as HeadlessCpu, Brain as HeadlessBrain } from 'lucide-react';
-import { BookOpen, ShieldCheck } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { Menu, X, Zap, Globe, Bot, Cloud, Shield, Sparkles, Rocket, Cpu, Database, Brain, Atom, Eye, Lock, BarChart3, Users, Target, TrendingUp, Star, Award, ZapIcon, CloudIcon, BotIcon, ShieldIcon, GlobeIcon, CpuIcon, DatabaseIcon, BrainIcon, AtomIcon, EyeIcon, LockIcon, BarChart3Icon, UsersIcon, TargetIcon, TrendingUpIcon, StarIcon, AwardIcon } from 'lucide-react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Menu as HeadlessMenu, X as HeadlessX, Zap as HeadlessZap, Sparkles as HeadlessSparkles, ChevronDown, Globe as HeadlessGlobe, Shield as HeadlessShield, Cpu as HeadlessCpu, Brain as HeadlessBrain } from 'lucide-react',
+import { BookOpen, ShieldCheck } from 'lucide-react',
 
 export default function QuantumHolographicNavbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [scrolled, setScrolled] = useState(false),
+  const [isClient, setIsClient] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true),
+  }, []),
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient) return,
 
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+      setScrolled(window.scrollY > 50),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isClient]);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, [isClient]),
 
   const navItems = [
     { 
@@ -114,16 +114,16 @@ export default function QuantumHolographicNavbar() {
       href: '/contact', 
       icon: <Zap className="w-4 h-4" />,
       description: 'Get in Touch'
-    },
-  ];
+    }
+  ],
 
   const handleDropdownEnter = (name: string) => {
-    setActiveDropdown(name);
-  };
+    setActiveDropdown(name)
+  },
 
   const handleDropdownLeave = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
 const QuantumHolographicNavbar: React.FC = () => {
   return (
@@ -131,7 +131,7 @@ const QuantumHolographicNavbar: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">QuantumHolographicNavbar</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumHolographicNavbar;
+export default QuantumHolographicNavbar,

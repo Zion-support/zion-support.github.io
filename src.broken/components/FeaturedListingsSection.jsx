@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
   {
@@ -22,15 +22,15 @@ export default function Page() {
     location: 'Hybrid',
     featured: false,
     technologies: ['
-      'IoT Sensors',Apache Kafka',Elasticsearch',React',Node.js',
+      'IoT Sensors',Apache Kafka',Elasticsearch',React',Node.js'
     ],
     highlights: ['
-      'Real-time Monitoring',Predictive Analytics',Scalable Architecture',Dashboard',
+      'Real-time Monitoring',Predictive Analytics',Scalable Architecture',Dashboard'
     ],
-    link: '/services/iot-smart-city'},
-];
+    link: '/services/iot-smart-city'}
+],
 
-  const [hoveredListing, setHoveredListing] = useState(null);
+  const [hoveredListing, setHoveredListing] = useState(null),
 
   const containerVariants = {
 
@@ -40,7 +40,7 @@ export default function Page() {
       opacity: 1,
       transition: {
 
-        staggerChildren: 0.1}}};
+        staggerChildren: 0.1}}},
 
   const itemVariants = {
 
@@ -51,7 +51,7 @@ export default function Page() {
       opacity: 1,
       transition: {
 
-        duration: 0.5}}};
+        duration: 0.5}}},
 
   return ()
     <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">"
@@ -259,7 +259,7 @@ export default function Page() {
             <p className="text-xl mb-6 opacity-90">
               Join thousands of businesses already using our solutions
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
@@ -284,6 +284,6 @@ export default function Page() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 '"

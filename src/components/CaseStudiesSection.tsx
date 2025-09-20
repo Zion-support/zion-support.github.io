@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   TrendingUp,
   Users,
@@ -9,56 +9,33 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
-
+} from "lucide-react";
 const caseStudies = [
   {
-    id: 1,
-    title: "AI-Powered Supply Chain Optimization",
-    company: "Global Manufacturing Corp",
-    industry: "Manufacturing",
-    challenge: "Inefficient supply chain causing 30% cost overruns and delays",
-    solution: "Implemented AI-driven demand forecasting and route optimization",
-    results: [
-      "Reduced costs by 25%",
+    id: 1,title: "AI-Powered Supply Chain Optimization",company: "Global Manufacturing Corp",industry: "Manufacturing",challenge: "Inefficient supply chain causing 30% cost overruns and delays",solution: "Implemented AI-driven demand forecasting and route optimization",results: [
+      "Reduced costs by 25%";
       "Improved delivery times by 40%",
       "Increased efficiency by 35%"
     ],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
-    color: "from-blue-500 to-cyan-500"
-  },
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",color: "from-blue-500 to-cyan-500"
+  };
   {
-    id: 2,
-    title: "Quantum Computing Financial Modeling",
-    company: "FinTech Innovations Ltd",
-    industry: "Financial Services",
-    challenge: "Complex financial models taking days to compute",
-    solution: "Deployed quantum computing algorithms for portfolio optimization",
-    results: [
-      "1000x faster computation",
+    id: 2,title: "Quantum Computing Financial Modeling",company: "FinTech Innovations Ltd",industry: "Financial Services",challenge: "Complex financial models taking days to compute",solution: "Deployed quantum computing algorithms for portfolio optimization",results: [
+      "1000x faster computation";
       "Improved accuracy by 60%",
       "Reduced risk by 45%"
     ],
-    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
-    color: "from-purple-500 to-pink-500"
-  },
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",color: "from-purple-500 to-pink-500"
+  };
   {
-    id: 3,
-    title: "Blockchain Supply Chain Transparency",
-    company: "Organic Foods Inc",
-    industry: "Food & Beverage",
-    challenge: "Lack of transparency in food supply chain",
-    solution: "Implemented blockchain-based tracking system",
-    results: [
-      "100% supply chain visibility",
+    id: 3,title: "Blockchain Supply Chain Transparency",company: "Organic Foods Inc",industry: "Food & Beverage",challenge: "Lack of transparency in food supply chain",solution: "Implemented blockchain-based tracking system",results: [
+      "100% supply chain visibility";
       "Reduced fraud by 99%",
       "Improved customer trust by 80%"
     ],
-    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",
-    color: "from-green-500 to-emerald-500"
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",color: "from-green-500 to-emerald-500"
   }
 ];
-
 export function CaseStudiesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -149,7 +126,7 @@ export function CaseStudiesSection() {
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200"
@@ -169,5 +146,5 @@ export function CaseStudiesSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

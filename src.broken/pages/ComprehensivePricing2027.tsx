@@ -1,8 +1,8 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-    };
-  };
+,
+    },
+  },
 
   const itemVariants = {
   hidden: { y: 20,
@@ -10,14 +10,14 @@ export default function Page() {
 
 },
     visible: {
-      y: 0,;
-      opacity: 1,;
-      transition: {;
-        duration: 0.5,;
-        ease: "easeOut";
-      };
-    };
-  };
+      y: 0,
+      opacity: 1,
+      transition: {,
+        duration: 0.5,
+        ease: "easeOut"
+      },
+    },
+  },
 
   const cardVariants = {
   hidden: { scale: 0.8,
@@ -33,32 +33,32 @@ export default function Page() {
 
     },
     hover: {
-      scale: 1.02,;
-      y: -5,;
-      transition: {;
-        duration: 0.2,;
-        ease: "easeOut";
-      };
-    };
-  };
+      scale: 1.02,
+      y: -5,
+      transition: {,
+        duration: 0.2,
+        ease: "easeOut"
+      },
+    },
+  },
 
             initial = {
   { opacity: 0,
-  scale: 0.8 ;
+  scale: 0.8 
 
 }}
             animate = {
   { opacity: 1,
-  scale: 1 ;
+  scale: 1 
 
 }}
             transition = {
   { duration: 0.8,
-  delay: 0.2 ;
+  delay: 0.2 
 
 }}
           >
-            Comprehensive Pricing 2027;
+            Comprehensive Pricing 2027,
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray - 300 mb-8 max - w-4xl mx -auto"
@@ -119,17 +119,17 @@ export default function Page() {
         className="relative z - 10 px-6 pb -12"
         initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 0.8 ;
+  delay: 0.8 
 
 }}
       >
@@ -201,7 +201,7 @@ export default function Page() {
         initial="hidden"
         animate="visible"
 
-        <div  className="max - w-7xl mx -auto">;
+        <div  className="max - w-7xl mx -auto">,
           <AnimatePresence mode="wait">
             {filteredServices.length > 0 ? (<motion.div
                 className={viewMode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8' : 'space - y-6'}
@@ -228,7 +228,7 @@ export default function Page() {
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
                     className={viewMode === 'grid' ? '' : 'bg-zion - blue - dark / 30 backdrop - blur - md rounded-2xl p - 6 border border-zion - purple / 20'}
 
-                    {viewMode === 'grid' ? (;
+                    {viewMode === 'grid' ? (,
                       <motion.div
                         className="bg-zion - blue - dark / 30 backdrop - blur - md rounded-2xl p - 6 border border-zion - purple / 20 h-full group cursor -pointer"
                         variants={cardVariants}
@@ -260,8 +260,8 @@ export default function Page() {
                         </p>
 
                         {/* Tags */}
-                        <div  className="flex flex - wrap gap-2 mb-4">;
-                          {service.tags.slice(0, 3) .map((tag, tagIndex) => (;
+                        <div  className="flex flex - wrap gap-2 mb-4">,
+                          {service.tags.slice(0, 3) .map((tag, tagIndex) => (,
                             <span
                               key={tagIndex}
                               className="px-2 py-1 bg-zion - purple / 20 text-zion - cyan text-xs rounded-full border border-zion -purple / 30"
@@ -401,12 +401,12 @@ export default function Page() {
                             </div>
 
                             <button     onClick={ () => window.open(service.website, '_blank') }
-                              className="bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-2 px-4 rounded-lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 flex items - center gap-2"
+                              className="bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold py-2 px-4 rounded-lg hover: from - zion - blue hover:to - zion - cyan transition - all duration - 300 flex items - center gap-2"
 
                               Get Started
                             </button>
                           </div>
-                        </div>;
+                        </div>,
                       </div>) }
                   </motion.div>) ) }
               </motion.div>) : (<motion.div
@@ -418,7 +418,7 @@ export default function Page() {
                 <div  className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font - bold text-white mb-2">No services found</h3>
                 <p className="text-gray -400">Try adjusting your search criteria or filters</p>
-              </motion.div>;) }
+              </motion.div>,) }
           </AnimatePresence>
         </div>
       </motion.section>
@@ -428,17 +428,17 @@ export default function Page() {
         className="relative z - 10 px-6 pb -20"
         initial = {
   { opacity: 0,
-  y: 30 ;
+  y: 30 
 
 }}
         animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
         transition = {
   { duration: 0.8,
-  delay: 1.2 ;
+  delay: 1.2 
 
 }}
       >
@@ -450,7 +450,7 @@ export default function Page() {
             <p className="text-xl text-gray - 300 mb-8">
               Get in touch with our experts to discuss pricing, implementation, and how these innovative services can drive your success
             </p>
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - blue text-black font - semibold rounded-lg hover:from - zion - blue hover:to - zion - cyan transition - all duration - 300 transform hover:scale -105"
@@ -463,9 +463,9 @@ export default function Page() {
 
                 Call + 1 302 464 0950
               </a>
-            </div>;
-          </div>;
-        </div>;
-      </motion.section>;
-    </div>;) ;
+            </div>,
+          </div>,
+        </div>,
+      </motion.section>,
+    </div>,) 
 }

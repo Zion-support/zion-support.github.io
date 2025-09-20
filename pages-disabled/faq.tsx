@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function FAQPage() {,
   return (,
     <main className="max-w-4xl mx-auto px-4 py-16">,
@@ -14,7 +14,6 @@ export default function FAQPage() {,
           <p className="text-gray-700">Visit our contact page to request a tailored quote.</p>,
         </section>,
       </div>,
-    </main>,
-  );
+    </main>),
 }
 ,

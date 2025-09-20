@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   X, 
   Clock, 
@@ -41,284 +41,185 @@ import {
   Gamepad2,
   Coins,
   Satellite
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 interface SearchResult {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  type: 'service' | 'page' | 'news' | 'document' | 'case-study';
-  url: string;
-  category: string;
-  tags: string[];
-  author?: string;
-  date?: string;
-  readTime?: number;
+  id: string,title: string,excerpt: string,content: string,type: 'service' | 'page' | 'news' | 'document' | 'case-study',url: string,category: string,tags: string[];
+  author?: string,
+  date?: string,
+  readTime?: number,
   relevance: number;
-  featured?: boolean;
+  featured?: boolean
 }
 
 const SearchPage: React.FC = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get('q') || '');
-  const [isSearching, setIsSearching] = useState(false);
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance');
+  const [searchParams, setSearchParams] = useSearchParams(),
+  const [query, setQuery] = useState(searchParams.get('q') || ''),
+  const [isSearching, setIsSearching] = useState(false),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [selectedType, setSelectedType] = useState<string>('all'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'title'>('relevance'),
 
   const searchTypes = [
-    { id: 'all', name: 'All Results', icon: Globe, count: 0 },
-    { id: 'service', name: 'Services', icon: Zap, count: 0 },
-    { id: 'page', name: 'Pages', icon: FileText, count: 0 },
-    { id: 'news', name: 'News', icon: BookOpen, count: 0 },
-    { id: 'document', name: 'Documents', icon: FileText, count: 0 },
+    { id: 'all', name: 'All Results', icon: Globe, count: 0 };
+    { id: 'service', name: 'Services', icon: Zap, count: 0 };
+    { id: 'page', name: 'Pages', icon: FileText, count: 0 };
+    { id: 'news', name: 'News', icon: BookOpen, count: 0 };
+    { id: 'document', name: 'Documents', icon: FileText, count: 0 };
     { id: 'case-study', name: 'Case Studies', icon: Target, count: 0 }
   ];
-
   const categories = [
-    { id: 'all', name: 'All Categories', icon: Globe, count: 0 },
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 },
-    { id: 'company', name: 'Company', icon: Building, count: 0 },
-    { id: 'technology', name: 'Technology', icon: Code, count: 0 },
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 0 },
-    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 0 },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 },
+    { id: 'all', name: 'All Categories', icon: Globe, count: 0 };
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: 0 };
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 };
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 0 };
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 };
+    { id: 'innovation', name: 'Innovation', icon: Rocket, count: 0 };
+    { id: 'company', name: 'Company', icon: Building, count: 0 };
+    { id: 'technology', name: 'Technology', icon: Code, count: 0 };
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 0 };
+    { id: 'iot', name: 'IoT & Edge', icon: Network, count: 0 };
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, count: 0 };
     { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 }
   ];
-
   // Mock search results - in a real app, this would come from an API
   const mockSearchResults: SearchResult[] = [
     {
-      id: '1',
-      title: 'AI-Powered Quantum Computing Platform',
-      excerpt: 'Revolutionary platform combining artificial intelligence with quantum computing for unprecedented computational power.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/ai-quantum-platform',
-      category: 'ai',
-      tags: ['AI', 'Quantum Computing', 'Platform', 'Innovation'],
-      author: 'Dr. Sarah Chen',
-      date: '2024-08-27',
-      readTime: 8,
-      relevance: 95,
-      featured: true
-    },
+      id: '1',title: 'AI-Powered Quantum Computing Platform',excerpt: 'Revolutionary platform combining artificial intelligence with quantum computing for unprecedented computational power.',content: 'Full content would go here...',type: 'service',url: '/services/ai-quantum-platform',category: 'ai',tags: ['AIQuantum Computing', 'PlatformInnovation'],
+      author: 'Dr. Sarah Chen',date: '2024-08-27',readTime: 8,relevance: 95,featured: true
+    };
     {
-      id: '2',
-      title: 'Micro SaaS Solutions for Small Business',
-      excerpt: 'Affordable, powerful software solutions designed specifically for small business needs and budgets.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/micro-saas-solutions',
-      category: 'innovation',
-      tags: ['Micro SaaS', 'Small Business', 'Software', 'Affordable'],
-      author: 'Michael Rodriguez',
-      date: '2024-08-25',
-      readTime: 6,
-      relevance: 88,
-      featured: true
-    },
+      id: '2',title: 'Micro SaaS Solutions for Small Business',excerpt: 'Affordable, powerful software solutions designed specifically for small business needs and budgets.',
+      content: 'Full content would go here...',type: 'service',url: '/services/micro-saas-solutions',category: 'innovation',tags: ['Micro SaaSSmall Business', 'SoftwareAffordable'],
+      author: 'Michael Rodriguez',date: '2024-08-25',readTime: 6,relevance: 88,featured: true
+    };
     {
-      id: '3',
-      title: 'AI Cybersecurity Threat Detection',
-      excerpt: 'Advanced AI-powered cybersecurity platform achieving 99.9% accuracy in threat detection and prevention.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/ai-cybersecurity',
-      category: 'security',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security'],
-      author: 'Alex Thompson',
-      date: '2024-08-23',
-      readTime: 7,
-      relevance: 92,
-      featured: false
-    },
+      id: '3',title: 'AI Cybersecurity Threat Detection',excerpt: 'Advanced AI-powered cybersecurity platform achieving 99.9% accuracy in threat detection and prevention.',content: 'Full content would go here...',type: 'service',url: '/services/ai-cybersecurity',category: 'security',tags: ['CybersecurityAI', 'Threat DetectionSecurity'],
+      author: 'Alex Thompson',date: '2024-08-23',readTime: 7,relevance: 92,featured: false
+    };
     {
-      id: '4',
-      title: 'Cloud FinOps Optimization',
-      excerpt: 'AI-driven cloud cost optimization helping enterprises reduce cloud spending by up to 40%.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/cloud-finops-optimizer',
-      category: 'cloud',
-      tags: ['Cloud Computing', 'FinOps', 'Cost Optimization', 'AI'],
-      author: 'Lisa Chang',
-      date: '2024-08-15',
-      readTime: 6,
-      relevance: 85,
-      featured: false
-    },
+      id: '4',title: 'Cloud FinOps Optimization',excerpt: 'AI-driven cloud cost optimization helping enterprises reduce cloud spending by up to 40%.',content: 'Full content would go here...',type: 'service',url: '/services/cloud-finops-optimizer',category: 'cloud',tags: ['Cloud ComputingFinOps', 'Cost OptimizationAI'],
+      author: 'Lisa Chang',date: '2024-08-15',readTime: 6,relevance: 85,featured: false
+    };
     {
-      id: '5',
-      title: 'Digital Twin Technology Solutions',
-      excerpt: 'Virtual replicas of physical systems enabling predictive maintenance and operational optimization.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/digital-twin',
-      category: 'innovation',
-      tags: ['Digital Twin', 'Predictive Maintenance', 'IoT', 'Optimization'],
-      author: 'Robert Davis',
-      date: '2024-08-13',
-      readTime: 8,
-      relevance: 82,
-      featured: false
-    },
+      id: '5',title: 'Digital Twin Technology Solutions',excerpt: 'Virtual replicas of physical systems enabling predictive maintenance and operational optimization.',content: 'Full content would go here...',type: 'service',url: '/services/digital-twin',category: 'innovation',tags: ['Digital TwinPredictive Maintenance', 'IoTOptimization'],
+      author: 'Robert Davis',date: '2024-08-13',readTime: 8,relevance: 82,featured: false
+    };
     {
-      id: '6',
-      title: 'Quantum Machine Learning Applications',
-      excerpt: 'Exploring the intersection of quantum computing and machine learning for next-generation AI solutions.',
-      content: 'Full content would go here...',
-      type: 'news',
-      url: '/news/quantum-machine-learning',
-      category: 'quantum',
-      tags: ['Quantum Computing', 'Machine Learning', 'AI', 'Research'],
-      author: 'Dr. James Kim',
-      date: '2024-08-17',
-      readTime: 10,
-      relevance: 78,
-      featured: false
-    },
+      id: '6',title: 'Quantum Machine Learning Applications',excerpt: 'Exploring the intersection of quantum computing and machine learning for next-generation AI solutions.',content: 'Full content would go here...',type: 'news',url: '/news/quantum-machine-learning',category: 'quantum',tags: ['Quantum ComputingMachine Learning', 'AIResearch'],
+      author: 'Dr. James Kim',date: '2024-08-17',readTime: 10,relevance: 78,featured: false
+    };
     {
-      id: '7',
-      title: 'Edge Computing for Smart Cities',
-      excerpt: 'IoT and edge computing solutions revolutionizing urban infrastructure and sustainability.',
-      content: 'Full content would go here...',
-      type: 'news',
-      url: '/news/edge-computing-iot',
-      category: 'iot',
-      tags: ['Edge Computing', 'IoT', 'Smart Cities', 'Urban Technology'],
-      author: 'Dr. Emily Watson',
-      date: '2024-08-19',
-      readTime: 9,
-      relevance: 75,
-      featured: false
-    },
+      id: '7',title: 'Edge Computing for Smart Cities',excerpt: 'IoT and edge computing solutions revolutionizing urban infrastructure and sustainability.',content: 'Full content would go here...',type: 'news',url: '/news/edge-computing-iot',category: 'iot',tags: ['Edge ComputingIoT', 'Smart CitiesUrban Technology'],
+      author: 'Dr. Emily Watson',date: '2024-08-19',readTime: 9,relevance: 75,featured: false
+    };
     {
-      id: '8',
-      title: 'Blockchain Supply Chain Solutions',
-      excerpt: 'Transparent, secure supply chain management using blockchain technology for traceability and trust.',
-      content: 'Full content would go here...',
-      type: 'service',
-      url: '/services/blockchain-supply-chain',
-      category: 'blockchain',
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Security'],
-      author: 'Jennifer Lee',
-      date: '2024-08-11',
-      readTime: 7,
-      relevance: 72,
-      featured: false
+      id: '8',title: 'Blockchain Supply Chain Solutions',excerpt: 'Transparent, secure supply chain management using blockchain technology for traceability and trust.',
+      content: 'Full content would go here...',type: 'service',url: '/services/blockchain-supply-chain',category: 'blockchain',tags: ['BlockchainSupply Chain', 'TransparencySecurity'],
+      author: 'Jennifer Lee',date: '2024-08-11',readTime: 7,relevance: 72,featured: false
     }
   ];
-
   useEffect(() => {
     if (query.trim()) {
-      performSearch();
+      performSearch(),
     } else {
-      setResults([]);
+      setResults([]),
     }
-  }, [query, selectedType, selectedCategory, sortBy]);
+  }, [query, selectedType, selectedCategory, sortBy]),
 
   const performSearch = async () => {
-    if (!query.trim()) return;
+    if (!query.trim()) return,
 
-    setIsSearching(true);
+    setIsSearching(true),
     
     // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 500)),
 
     // Filter results based on search criteria
     let filteredResults = mockSearchResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(query.toLowerCase()) ||
                           result.excerpt.toLowerCase().includes(query.toLowerCase()) ||
-                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
-      const matchesType = selectedType === 'all' || result.type === selectedType;
-      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory;
+                          result.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase())),
+      const matchesType = selectedType === 'all' || result.type === selectedType,
+      const matchesCategory = selectedCategory === 'all' || result.category === selectedCategory,
       
-      return matchesQuery && matchesType && matchesCategory;
-    });
+      return matchesQuery && matchesType && matchesCategory,
+    }),
 
     // Sort results
     filteredResults.sort((a, b) => {
       if (sortBy === 'relevance') {
-        return b.relevance - a.relevance;
+        return b.relevance - a.relevance,
       } else if (sortBy === 'date') {
-        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime();
+        return new Date(b.date || '1970-01-01').getTime() - new Date(a.date || '1970-01-01').getTime(),
       } else if (sortBy === 'title') {
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare(b.title),
       }
-      return 0;
-    });
+      return 0,
+    }),
 
-    setResults(filteredResults);
-    setIsSearching(false);
-  };
+    setResults(filteredResults),
+    setIsSearching(false),
+  },
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
-  };
+  },
 
   const clearFilters = () => {
-    setSelectedType('all');
-    setSelectedCategory('all');
-    setSortBy('relevance');
-  };
+    setSelectedType('all'),
+    setSelectedCategory('all'),
+    setSortBy('relevance'),
+  },
 
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
-      case 'page': return <FileText className="w-4 h-4" />;
-      case 'news': return <BookOpen className="w-4 h-4" />;
-      case 'document': return <FileText className="w-4 h-4" />;
-      case 'case-study': return <Target className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
+      case 'page': return <FileText className="w-4 h-4" />,
+      case 'news': return <BookOpen className="w-4 h-4" />,
+      case 'document': return <FileText className="w-4 h-4" />,
+      case 'case-study': return <Target className="w-4 h-4" />,
+      default: return <Globe className="w-4 h-4" />
     }
   };
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return <Brain className="w-4 h-4" />;
-      case 'quantum': return <Atom className="w-4 h-4" />;
-      case 'cloud': return <Cloud className="w-4 h-4" />;
-      case 'security': return <Shield className="w-4 h-4" />;
-      case 'innovation': return <Rocket className="w-4 h-4" />;
-      case 'company': return <Building className="w-4 h-4" />;
-      case 'technology': return <Code className="w-4 h-4" />;
-      case 'data': return <Database className="w-4 h-4" />;
-      case 'iot': return <Network className="w-4 h-4" />;
-      case 'blockchain': return <Lock className="w-4 h-4" />;
-      case 'sustainability': return <Leaf className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
+      case 'quantum': return <Atom className="w-4 h-4" />,
+      case 'cloud': return <Cloud className="w-4 h-4" />,
+      case 'security': return <Shield className="w-4 h-4" />,
+      case 'innovation': return <Rocket className="w-4 h-4" />,
+      case 'company': return <Building className="w-4 h-4" />,
+      case 'technology': return <Code className="w-4 h-4" />,
+      case 'data': return <Database className="w-4 h-4" />,
+      case 'iot': return <Network className="w-4 h-4" />,
+      case 'blockchain': return <Lock className="w-4 h-4" />,
+      case 'sustainability': return <Leaf className="w-4 h-4" />,
+      default: return <Globe className="w-4 h-4" />
     }
   };
-
   // Update counts
   useEffect(() => {
     searchTypes.forEach(type => {
       if (type.id === 'all') {
-        type.count = results.length;
+        type.count = results.length,
       } else {
-        type.count = results.filter(result => result.type === type.id).length;
+        type.count = results.filter(result => result.type === type.id).length,
       }
-    });
+    }),
 
     categories.forEach(category => {
       if (category.id === 'all') {
-        category.count = results.length;
+        category.count = results.length,
       } else {
-        category.count = results.filter(result => result.category === category.id).length;
+        category.count = results.filter(result => result.category === category.id).length,
       }
-    });
-  }, [results]);
+    }),
+  }, [results]),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -539,7 +440,7 @@ const SearchPage: React.FC = () => {
                             <div className="flex items-center space-x-3 mb-2">
                               <span className="inline-flex items-center px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20">
                                 {getTypeIcon(result.type)}
-                                <span className="ml-1 capitalize">{result.type.replace('-', ' ')}</span>
+                                <span className="ml-1 capitalize">{result.type.replace('- ')}</span>
                               </span>
                               <span className="inline-flex items-center px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-400/20">
                                 {getCategoryIcon(result.category)}
@@ -639,11 +540,11 @@ const SearchPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'AI Services', icon: Brain, description: 'Machine learning, automation, and AI solutions', query: 'AI services' },
-                { title: 'Quantum Computing', icon: Atom, description: 'Next-generation computational power', query: 'quantum computing' },
-                { title: 'Cloud Solutions', icon: Cloud, description: 'DevOps, infrastructure, and cloud optimization', query: 'cloud solutions' },
-                { title: 'Cybersecurity', icon: Shield, description: 'Advanced security and threat protection', query: 'cybersecurity' },
-                { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' },
+                { title: 'AI Services', icon: Brain, description: 'Machine learning, automation, and AI solutions', query: 'AI services' };
+                { title: 'Quantum Computing', icon: Atom, description: 'Next-generation computational power', query: 'quantum computing' };
+                { title: 'Cloud Solutions', icon: Cloud, description: 'DevOps, infrastructure, and cloud optimization', query: 'cloud solutions' };
+                { title: 'Cybersecurity', icon: Shield, description: 'Advanced security and threat protection', query: 'cybersecurity' };
+                { title: 'Micro SaaS', icon: Zap, description: 'Affordable software solutions for businesses', query: 'micro SaaS' };
                 { title: 'Digital Transformation', icon: Rocket, description: 'Strategic technology consulting', query: 'digital transformation' }
               ].map((item, index) => (
                 <motion.button
@@ -674,6 +575,6 @@ const SearchPage: React.FC = () => {
       )}
     </div>
   );
-};
+},
 
 export default SearchPage;

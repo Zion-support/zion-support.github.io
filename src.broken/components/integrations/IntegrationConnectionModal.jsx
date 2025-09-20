@@ -1,21 +1,21 @@
-import React, { useState } from "react";"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';"
-import { Button } from '@/components/ui/button';"
-import { Label } from '@/components/ui/label';"
-import { Checkbox } from '@/components/ui/checkbox';"
-import { toast } from 'sonner';
+import React, { useState } from "react","
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',"
+import { Button } from '@/components/ui/button',"
+import { Label } from '@/components/ui/label',"
+import { Checkbox } from '@/components/ui/checkbox',"
+import { toast } from 'sonner',
 export default function Page() {
-, 2000);
+, 2000),
         // In a real application, this would open a popup for OAuth authentication`
-        // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')};
+        // window.open(`/api/oauth/${integration.id}`,oauth',width=600,height=600')},
     const handleDisconnect = () => {
         // In a real application, this would revoke the OAuth token`
-        toast.info(`Disconnected from ${integration.name}`);
-        onClose()};
+        toast.info(`Disconnected from ${integration.name}`),
+        onClose()},
     const handleSaveSettings = () => {
         // In a real application, this would save the sync settings"
-        toast.success("Integration settings saved");
-        onClose()};
+        toast.success("Integration settings saved"),
+        onClose()},
     return (<Dialog open={isOpen} onOpenChange={onClose}>"
       <DialogContent className="sm:max-w-md">"
         <DialogHeader className="flex flex-row items-center gap-4">"`

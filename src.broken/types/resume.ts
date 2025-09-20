@@ -1,3 +1,3 @@
-// Type definitions for resume;
-interface resume {;
-  // TODO: Add proper type definitions,};
+// Type definitions for resume,
+interface resume {,
+  // TODO: Add proper type definitions},

@@ -1,17 +1,17 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router',
+import { useEffect, useState } from 'react',
 
 export default function LessonPage() {
-  const { query } = useRouter();
-  const { slug, lessonId } = query as { slug?: string; lessonId?: string };
-  const [lessonType, setLessonType] = useState<'video' | 'quiz' | 'exercise'>('video');
+  const { query } = useRouter(),
+  const { slug, lessonId } = query as { slug?: string, lessonId?: string },
+  const [lessonType, setLessonType] = useState<'video' | 'quiz' | 'exercise'>('video'),
 
   useEffect(() => {
-    if (!lessonId) return;
-    if (String(lessonId).includes('quiz')) setLessonType('quiz');
-    else if (String(lessonId).includes('prompts')) setLessonType('exercise');
-    else setLessonType('video');
-  }, [lessonId]);
+    if (!lessonId) return,
+    if (String(lessonId).includes('quiz')) setLessonType('quiz'),
+    else if (String(lessonId).includes('prompts')) setLessonType('exercise'),
+    else setLessonType('video'),
+  }, [lessonId]),
 
   return (
     <div className="py-10 space-y-6">
@@ -36,25 +36,25 @@ export default function LessonPage() {
       )}
 
       <button className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-2" onClick={async () => {
-        const res = await fetch(`/api/academy/summarize?lesson=${encodeURIComponent(String(lessonId || ''))}`);
-        const data = await res.json();
-        alert(data.summary || 'Summary generated');
+        const res = await fetch(`/api/academy/summarize?lesson=${encodeURIComponent(String(lessonId || ''))}`),
+        const data = await res.json(),
+        alert(data.summary || 'Summary generated'),
       }}>Summarize with AI</button>
     </div>
-  );
+  ),
 }
 
 function Quiz() {
-  const [selected, setSelected] = useState<string | null>(null);
-  const [result, setResult] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(null),
+  const [result, setResult] = useState<string | null>(null),
 
   const answers = [
     { id: 'a', text: 'Option A' },
     { id: 'b', text: 'Option B' },
     { id: 'c', text: 'Option C' }
-  ];
+  ],
 
-  const correct = 'b';
+  const correct = 'b',
 
   return (
     <div>
@@ -70,5 +70,5 @@ function Quiz() {
       <button className="mt-3 rounded-md bg-blue-600 text-white px-3 py-1" onClick={() => setResult(selected === correct ? 'Correct!' : 'Try again')}>Submit</button>
       {result && <div className="mt-2 text-sm">{result}</div>}
     </div>
-  );
+  ),
 }

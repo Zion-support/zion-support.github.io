@@ -1,16 +1,16 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
-,;
-    {;
-      title: "Smart Notifications",;
-      description: "Intelligent alerts that adapt to your preferences and schedule",;
-      icon: Bell,;
-      color: "from - orange - 400 to - red - 500";
-    };
-  ];
+,
+    {,
+      title: "Smart Notifications",
+      description: "Intelligent alerts that adapt to your preferences and schedule",
+      icon: Bell,
+      color: "from - orange - 400 to - red - 500"
+    },
+  ],
 
   const appScreens = [{
       name: "Dashboard",
@@ -29,14 +29,14 @@ export default function Page() {
       description: "Comprehensive data visualization and business intelligence tools",
       icon: BarChart3,
       features: ["Interactive charts", "Custom reports", "Data export"]
-    },;
-    {;
-      name: "Services",;
-      description: "Access to all Zion Tech Group services and solutions",;
-      icon: Settings,;
-      features: ["Service catalog", "Quick setup", "Support access"];
-    };
-  ];
+    },
+    {,
+      name: "Services",
+      description: "Access to all Zion Tech Group services and solutions",
+      icon: Settings,
+      features: ["Service catalog", "Quick setup", "Support access"],
+    },
+  ],
 
   const downloadOptions = [{
       platform: "iOS App Store",
@@ -52,22 +52,22 @@ export default function Page() {
       link: "#",
       featured: true
     },
-    {;
-      platform: "Web App",;
-      icon: "🌐",;
-      description: "Access via browser",;
-      link: "/",;
-      featured: false;
-    };
-  ];
+    {,
+      platform: "Web App",
+      icon: "🌐",
+      description: "Access via browser",
+      link: "/",
+      featured: false
+    },
+  ],
 
-  const systemRequirements = [;
-    { requirement: "iOS 14.0+", icon: "🍎" },;
-    { requirement: "Android 8.0+", icon: "🤖" },;
-    { requirement: "2GB RAM", icon: "💾" },;
-    { requirement: "100MB Storage", icon: "💿" },;
-    { requirement: "Internet Connection", icon: "🌐" };
-  ];
+  const systemRequirements = [,
+    { requirement: "iOS 14.0+", icon: "🍎" },
+    { requirement: "Android 8.0+", icon: "🤖" },
+    { requirement: "2GB RAM", icon: "💾" },
+    { requirement: "100MB Storage", icon: "💿" },
+    { requirement: "Internet Connection", icon: "🌐" },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -199,12 +199,12 @@ export default function Page() {
               </div>
               <div className="absolute - bottom - 4 -left - 4 w-6 h-6 bg-cyan - 400 rounded-full animate -pulse"></div>
             </motion.div>
-          </div>;
+          </div>,
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -254,13 +254,13 @@ export default function Page() {
 
                 <h3 className="text-xl font - bold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate -300">{feature.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* App Screens Section */}
-      <section className="py-20 bg-slate -800 / 50">;
+      <section className="py-20 bg-slate -800 / 50">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -316,13 +316,13 @@ export default function Page() {
                       {feature}
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Download Section */}
-      <section id="download" className="py-20">;
+      <section id="download" className="py-20">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -366,7 +366,7 @@ export default function Page() {
                 className={`bg-slate - 800 / 50 border rounded-xl p - 8 text-center hover:border-cyan - 400 / 50 transition - all duration - 300 hover:scale - 105 ${option.featured ? 'border-cyan - 400 / 30 bg-gradient - to - br from - cyan - 400 / 5 to - blue - 500 / 5' : 'border-slate - 700 / 50'
                 }`}
 
-                {option.featured && (;
+                {option.featured && (,
                   <div className="flex items - center justify - center mb-4">
                     <Star className="w-5 h-5 text-yellow-400 mr-2" />
                     <span className="text-yellow-400 text-sm font -semibold">Recommended</span>
@@ -378,17 +378,17 @@ export default function Page() {
 
                 <Link
                   to={option.link}
-                  className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale -105"
+                  className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover: from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale -105"
 
                   Download < Download className="ml-2 w-4 h-4" />
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* System Requirements */}
-      <section className="py-20 bg-slate -800 / 50">;
+      <section className="py-20 bg-slate -800 / 50">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -433,13 +433,13 @@ export default function Page() {
 
                 <div className="text-4xl mb-3">{req.icon}</div>
                 <p className="text-white font -medium">{req.requirement}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">,
         <div className="container mx - auto px-4 text-center">
           <motion.div
             initial = {
@@ -461,7 +461,7 @@ export default function Page() {
               Download our mobile app today and take Zion Tech Group's powerful solutions
               with you wherever you go.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="#download"
                 className="inline - flex items - center px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-cyan -500 / 25"
@@ -473,11 +473,11 @@ export default function Page() {
                 to="/contact"
                 className="inline - flex items - center px-8 py-4 border border-cyan - 400 / 30 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 / 10 transition - all duration -200"
 
-                Get Support < ArrowRight className="ml-2 w-5 h-5" />;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+                Get Support < ArrowRight className="ml-2 w-5 h-5" />,
+              </Link>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

@@ -1,6 +1,6 @@
-import React from 'react';
-import BlogSEO from '../../../components/BlogSEO';
-import Link from 'next/link';
+import React from 'react',
+import BlogSEO from '../../../components/BlogSEO',
+import Link from 'next/link',
 export default function AIWorkforceTransformation2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -11,14 +11,14 @@ export default function AIWorkforceTransformation2025() {,
         publishedTime="2025-01-28T00:00:00+00:00",
         modifiedTime="2025-01-28T00:00:00+00:00",
         author="Zion Tech Group",
-        tags={["AI workforce transformation"reskilling"upskilling"AI training"future of work"digital transformation"employee development"],}
+        tags={["AI workforce transformation"reskilling"upskilling"AI training"future of work"digital transformation"employee development"]}
         category="AI & Workforce",
         readingTime={12}
         wordCount={2800}
         featuredImage="/images/blog/ai-workforce-transformation-2025.jpg",
       />,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-4">,
             <Link href="/blog" className="text-blue-600 hover: text-blue-700 font-medium">,
@@ -46,7 +46,7 @@ export default function AIWorkforceTransformation2025() {,
             <span>Workforce Development</span>,
           </div>,
         </div>,
-        {/* Article Content */,}
+        {/* Article Content */}
         <article className="prose prose-lg max-w-none">,
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-12">,
             <h2 className="text-2xl font-bold text-gray-900 mb-4">🚀 Executive Summary</h2>,
@@ -249,7 +249,7 @@ export default function AIWorkforceTransformation2025() {,
             </Link>,
           </div>,
         </article>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <div className="mt-16 pt-8 border-t border-gray-200">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>,
           <div className="grid md: grid-cols-2 gap-6">,
@@ -277,4 +277,4 @@ export default function AIWorkforceTransformation2025() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

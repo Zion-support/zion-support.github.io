@@ -1,8 +1,8 @@
-import { Link  } from 'react-router-dom';
- from 'react';
-  import { export default function Help () { Search, BookOpen, MessageCircle, Phone, Mail, Video, FileText, Users, Settings, CreditCard, Shield, Globe, ArrowRight, ChevronDown, ChevronUp,  } from 'lucide-react';
+import { Link  } from 'react-router-dom',
+ from 'react',
+  import { export default function Help () { Search, BookOpen, MessageCircle, Phone, Mail, Video, FileText, Users, Settings, CreditCard, Shield, Globe, ArrowRight, ChevronDown, ChevronUp  } from 'lucide-react',
 
-;
+,
   const helpCategories = [{
       id: 'getting - started',
       title: 'Getting Started',
@@ -12,19 +12,19 @@ import { Link  } from 'react-router-dom';
           title: 'How to create your first account',
           description:
             'Step - by - step guide to setting up your Zion Tech Group account',
-          url: '/help / account - creation',
+          url: '/help / account - creation'
         },
         {
           title: 'Understanding the marketplace',
           description: 'Learn how our AI and tech marketplace works',
-          url: '/help / marketplace - guide',
+          url: '/help / marketplace - guide'
         },
         {
           title: 'First steps for new users',
           description: 'Essential information to get you started quickly',
-          url: '/help / first - steps',
-        },
-      ],
+          url: '/help / first - steps'
+        }
+      ]
     },
     {
       id: 'account - management',
@@ -33,19 +33,19 @@ import { Link  } from 'react-router-dom';
       articles: [{
           title: 'Updating your profile information',
           description: 'How to keep your profile current and accurate',
-          url: '/help / profile - updates',
+          url: '/help / profile - updates'
         },
         {
           title: 'Security settings and two - factor authentication',
           description: 'Protect your account with enhanced security features',
-          url: '/help / security - settings',
+          url: '/help / security - settings'
         },
         {
           title: 'Managing notifications and preferences',
           description: 'Customize how and when you receive updates',
-          url: '/help / notifications',
-        },
-      ],
+          url: '/help / notifications'
+        }
+      ]
     },
     {
       id: 'marketplace',
@@ -55,19 +55,19 @@ import { Link  } from 'react-router-dom';
           title: 'How to list your services',
           description:
             'Create compelling service listings that attract clients',
-          url: '/help / service - listings',
+          url: '/help / service - listings'
         },
         {
           title: 'Finding and hiring talent',
           description: 'Discover and connect with skilled professionals',
-          url: '/help / hiring - talent',
+          url: '/help / hiring - talent'
         },
         {
           title: 'Payment and billing explained',
           description: 'Understanding our payment system and fees',
-          url: '/help / payments',
-        },
-      ],
+          url: '/help / payments'
+        }
+      ]
     },
     {
       id: 'ai - services',
@@ -76,19 +76,19 @@ import { Link  } from 'react-router-dom';
       articles: [{
           title: 'Available AI solutions',
           description: 'Overview of our artificial intelligence services',
-          url: '/help / ai - solutions',
+          url: '/help / ai - solutions'
         },
         {
           title: 'Cybersecurity services guide',
           description: 'Protect your business with our security solutions',
-          url: '/help / cybersecurity',
+          url: '/help / cybersecurity'
         },
         {
           title: 'Cloud and infrastructure services',
           description: 'Scalable cloud solutions for your business needs',
-          url: '/help / cloud - services',
-        },
-      ],
+          url: '/help / cloud - services'
+        }
+      ]
     },
     {
       id: 'billing - support',
@@ -97,19 +97,19 @@ import { Link  } from 'react-router-dom';
       articles: [{
           title: 'Understanding your invoice',
           description: 'Break down of charges and payment terms',
-          url: '/help / invoice - explanation',
+          url: '/help / invoice - explanation'
         },
         {
           title: 'Payment methods and options',
           description: 'Accepted payment methods and processing times',
-          url: '/help / payment - methods',
+          url: '/help / payment - methods'
         },
         {
           title: 'Refund and cancellation policies',
           description: 'Our policies for refunds and service cancellations',
-          url: '/help / refund - policy',
-        },
-      ],
+          url: '/help / refund - policy'
+        }
+      ]
     },
     {
       id: 'security - privacy',
@@ -118,47 +118,47 @@ import { Link  } from 'react-router-dom';
       articles: [{
           title: 'Data protection measures',
           description: 'How we protect your information and privacy',
-          url: '/help / data - protection',
+          url: '/help / data - protection'
         },
         {
           title: 'Privacy settings and controls',
           description: 'Manage your privacy preferences and data sharing',
-          url: '/help / privacy - controls',
+          url: '/help / privacy - controls'
         },
         {
           title: 'Reporting security issues',
           description: 'How to report security concerns or vulnerabilities',
-          url: '/help / security - reporting',
-        },
-      ],
-    },
-  ];
+          url: '/help / security - reporting'
+        }
+      ]
+    }
+  ],
   const popularArticles = [{
       title: 'How to get started with AI services',
       description: 'Quick guide to implementing AI solutions for your business',
       category: 'AI & Technology Services',
-      readTime: '5 min read',
+      readTime: '5 min read'
     },
     {
       title: 'Marketplace best practices',
       description: 'Tips for success in our technology marketplace',
       category: 'Marketplace Features',
-      readTime: '8 min read',
+      readTime: '8 min read'
     },
     {
       title: 'Account security essentials',
       description: 'Protect your account with these security best practices',
       category: 'Security & Privacy',
-      readTime: '6 min read',
-    },
-  ];
+      readTime: '6 min read'
+    }
+  ],
   const filteredCategories = helpCategories
     .map(category => ({
       ...category,
       articles: category.articles.filter (article =>
           article.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-          article.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
-    }) ) .filter(category => category.articles.length > 0) ;
+          article.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ) 
+    }) ) .filter(category => category.articles.length > 0) ,
   return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -20">
       {/* Hero Section */}
       <section className="py-16 bg-gradient - to - r from - zion - cyan to - zion -purple">
@@ -338,7 +338,7 @@ import { Link  } from 'react-router-dom';
           <p className="text-zion - slate - light mb-8 max - w-2xl mx -auto">
             Our support team is here to help you.Contact us through any of the
             channels below and we'll get back to you as soon as possible.</p>
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8 max - w-4xl mx -auto">
+          <div className="grid grid - cols - 1 md: grid - cols - 3 gap-8 max - w-4xl mx -auto">
             <div className="bg-zion - blue - dark / 50 p - 6 rounded-lg border border-zion -cyan / 20">
               <MessageCircle className="w-12 h-12 text-zion - cyan mx - auto mb-4" />
               <h3 className="text-lg font - semibold text-white mb-2">
@@ -384,5 +384,5 @@ import { Link  } from 'react-router-dom';
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

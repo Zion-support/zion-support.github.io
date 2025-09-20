@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-import Link from 'next/link';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter';
-import { AuthButtons } from '@/components/AuthButtons';
+import { useState, useEffect } from 'react',
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import { useFormik } from 'formik',
+import * as Yup from 'yup',
+import axios from 'axios',
+import Link from 'next/link',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',
+import { Alert, AlertDescription } from '@/components/ui/alert',
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter',
+import { AuthButtons } from '@/components/AuthButtons',
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-import { toast } from '@/hooks/use-toast';
-import { AuthLayout } from '@/layout';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import { toast } from '@/hooks/use-toast',
+import { AuthLayout } from '@/layout',
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
 const SignupSchema = Yup.object({
@@ -29,46 +29,46 @@ const SignupSchema = Yup.object({
     .oneOf([Yup.ref('password')], 'Passwords must match')
     .required('Confirm password is required'),
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions')
-});
+}),
 
 export default function Signup() {
-  const router = useRouter(); // Changed from navigate
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
-  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true);
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
+  const router = useRouter(), // Changed from navigate
+  const [loading, setLoading] = useState(false),
+  const [errorMessage, setErrorMessage] = useState(''),
+  const [successMessage, setSuccessMessage] = useState(''),
+  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+  const [healthCheckLoading, setHealthCheckLoading] = useState(true),
+  const [healthCheckError, setHealthCheckError] = useState<string | null>(null),
   
   // Check if this is a partner signup
-  const isPartnerSignup = router.query.type === 'partner';
-  const signupSource = router.query.source as string || 'direct';
+  const isPartnerSignup = router.query.type === 'partner',
+  const signupSource = router.query.source as string || 'direct',
 
   const performHealthCheck = async () => {
-    setHealthCheckLoading(true);
-    setHealthCheckError(null);
+    setHealthCheckLoading(true),
+    setHealthCheckError(null),
     try {
-      const res = await axios.get('/api/auth/health');
-      setAuthServiceAvailable(res.status === 200);
+      const res = await axios.get('/api/auth/health'),
+      setAuthServiceAvailable(res.status === 200),
       if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues');
+        setHealthCheckError('Authentication service is experiencing issues'),
       }
     } catch (err: any) {
-      logErrorToProduction('Auth service health check failed', { data: err });
-      setAuthServiceAvailable(false);
+      logErrorToProduction('Auth service health check failed', { data: err }),
+      setAuthServiceAvailable(false),
       // Set a more specific error message based on the error type
       if (err.code === 'NETWORK_ERROR' || err.message?.includes('Network Error')) {
-        setHealthCheckError('Network connection issues detected');
+        setHealthCheckError('Network connection issues detected'),
       } else if (err.response?.status === 500) {
-        setHealthCheckError('Authentication service is temporarily unavailable');
+        setHealthCheckError('Authentication service is temporarily unavailable'),
       } else {
-        setHealthCheckError('Unable to verify authentication service status');
+        setHealthCheckError('Unable to verify authentication service status'),
       }
     } finally {
-      setHealthCheckLoading(false);
+      setHealthCheckLoading(false),
     }
-  };
+  },
 
   const validateForm = () => {
     if(!formData.firstName ||
@@ -77,46 +77,46 @@ export default function Signup() {
       !formData.company ||
       !formData.password ||
       !formData.confirmPassword) {
-      setError('Please fill in all required fields') ;
-      return false;
+      setError('Please fill in all required fields') ,
+      return false,
     }
     if(!/\S+@\S+\.\S+/.test (formData.email) ) {
-      setError('Please enter a valid email address') ;
-      return false;
+      setError('Please enter a valid email address') ,
+      return false,
     }
     if(formData.password.length < 8) {
-      setError('Password must be at least 8 characters long') ;
-      return false;
+      setError('Password must be at least 8 characters long') ,
+      return false,
     }
     if(formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match') ;
-      return false;
+      setError('Passwords do not match') ,
+      return false,
     }
     if(!formData.agreeToTerms) {
-      setError('Please agree to the terms and conditions') ;
-      return false;
+      setError('Please agree to the terms and conditions') ,
+      return false,
     }
-    return true;
-  };
+    return true,
+  },
 
-import { useAuth } from "@/hooks/useAuth";
-import { registerUser } from "@/services/authService";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import { safeStorage } from "@/utils/safeStorage";
-import { mailchimpService } from "@/integrations/mailchimp";
+import { useAuth } from "@/hooks/useAuth",
+import { registerUser } from "@/services/authService",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
+import { safeStorage } from "@/utils/safeStorage",
+import { mailchimpService } from "@/integrations/mailchimp",
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+  FormMessage
+} from "@/components/ui/form",
 
 // Form validation schema
 const signupSchema = z
@@ -130,22 +130,22 @@ const signupSchema = z
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
-      message: "You must accept the terms and conditions",
+      message: "You must accept the terms and conditions"
     }),
-    newsletterOptIn: z.boolean().optional(),
+    newsletterOptIn: z.boolean().optional()
   })
   .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
+    path: ["confirmPassword"]
+  }),
 
-type SignupFormValues = any;
+type SignupFormValues = any,
 
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   
   // Initialize react-hook-form
   const form = useForm({
@@ -156,28 +156,28 @@ export default function Signup() {
       password: "",
       confirmPassword: "",
       termsAccepted: false,
-      newsletterOptIn: false,
-    },
-  });
+      newsletterOptIn: false
+    }
+  }),
 
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return; // Prevent multiple submissions
+    if (isSubmitting) return, // Prevent multiple submissions
     
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       const { data: resData } = await registerUser( // `res` variable removed as it wasn't used
         data.displayName,
         data.email,
         data.password
-      );
+      ),
 
       // The `registerUser` service is expected to handle the response from the API.
       // If the API indicates an email already exists, `registerUser` should throw an error
       // which will be caught by the catch block below.
 
       if (resData?.emailVerificationRequired) {
-        setShowVerificationMessage(true);
+        setShowVerificationMessage(true),
         // No navigation or session setting here. User needs to verify their email.
         // Mailchimp subscription should also wait until the email is verified.
       } else {
@@ -187,12 +187,12 @@ export default function Signup() {
         // and updating the application's auth state (user, isAuthenticated, tokens).
         // We should not manually set session, tokens, or headers here.
 
-        toast.success("Account created successfully! Please log in to continue.");
+        toast.success("Account created successfully! Please log in to continue."),
 
         // Redirect to the login page. If Supabase did auto-log in the user,
         // the useAuth hook (via AuthProvider) will likely redirect from the login page
         // to the appropriate authenticated route (e.g., dashboard or onboarding).
-        navigate("/login");
+        navigate("/login"),
 
         // Subscribe to Mailchimp if opted in, as the account is considered created.
         // This happens regardless of whether Supabase auto-logged them in or they need to log in manually.
@@ -201,20 +201,20 @@ export default function Signup() {
             await mailchimpService.addSubscriber({
               email: data.email,
               mergeFields: { FNAME: data.displayName }
-            });
-            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+            }),
+            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10'),
           } catch (mailchimpError) {
-            console.error('Mailchimp subscription failed:', mailchimpError);
+            console.error('Mailchimp subscription failed:', mailchimpError),
             // This is a non-critical error, so we don't block the user flow
             // or show a user-facing error message for this.
           }
         }
-        toast.error(message);
-        return;
+        toast.error(message),
+        return,
       }
 
       if (resData?.token) {
-        safeStorage.setItem("token", resData.token);
+        safeStorage.setItem("token", resData.token),
       }
 
   // Redirect if user is already logged in.
@@ -224,10 +224,10 @@ export default function Signup() {
   if (isAuthenticated && !showVerificationMessage) {
     // If profile is complete, go to home/dashboard. Otherwise, to onboarding.
     if (user && typeof user !== 'boolean' && user.profileComplete) {
-      return <Navigate to="/" />;
+      return <Navigate to="/" />,
     } else {
       // User is authenticated but profile is not complete
-      return <Navigate to="/onboarding" />;
+      return <Navigate to="/onboarding" />,
     }
   }
 
@@ -605,6 +605,6 @@ export default function Signup() {
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) ,
+},
 

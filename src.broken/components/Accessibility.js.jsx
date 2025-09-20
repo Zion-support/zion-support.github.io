@@ -1,8 +1,8 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, createContext, useContext } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-  }, []);
+  }, []),
   // Save settings to localStorage
   useEffect(() => {
     const settings = {
@@ -10,34 +10,34 @@ export default function Page() {
       highContrast,
       reducedMotion,
       fontSize,
-      colorBlindMode};
+      colorBlindMode},
     localStorage.setItem('
       'zion-accessibility-settings',
       JSON.stringify(settings)
-    );
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
+    ),
+  }, [highContrast, reducedMotion, fontSize, colorBlindMode]),
   // Apply accessibility settings to document
   useEffect(() => {
-    const root = document.documentElement;
+    const root = document.documentElement,
     // High contrast mode
     if(highContrast) {
 
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast'),
     } else {
 
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast'),
     }
     // Reduced motion
     if(reducedMotion) {
 
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion'),
     } else {
 
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion'),
     }
     // Font size
     root.style.fontSize ='
-      fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
+      fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px',
     // Color blind mode
     root.style.filter ='
       colorBlindMode === 'none''
@@ -46,9 +46,9 @@ export default function Page() {
           ? 'url(#protanopia)''
           : colorBlindMode === 'deuteranopia''
             ? 'url(#deuteranopia)''
-            : 'url(#tritanopia);
-  }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-  const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+            : 'url(#tritanopia),
+  }, [highContrast, reducedMotion, fontSize, colorBlindMode]),
+  const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
   const value = {
 
     highContrast,
@@ -58,16 +58,16 @@ export default function Page() {
     toggleHighContrast,
     toggleReducedMotion,
     setFontSize,
-    setColorBlindMode};
+    setColorBlindMode},
   return ()
     <AccessibilityContext.Provider value={value}>
       {children}
     </AccessibilityContext.Provider>
-  );
-};
+  ),
+},
 // Accessibility Panel Component
 export const AccessibilityPanel = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
   const {
 
     highContrast,
@@ -77,7 +77,7 @@ export const AccessibilityPanel = () => {
     toggleHighContrast,
     toggleReducedMotion,
     setFontSize,
-    setColorBlindMode} = useAccessibility();
+    setColorBlindMode} = useAccessibility(),
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = event => {
@@ -89,8 +89,8 @@ export const AccessibilityPanel = () => {
         event.key === 'A'
       ) {
 
-        event.preventDefault();
-        setIsOpen(!isOpen);
+        event.preventDefault(),
+        setIsOpen(!isOpen),
       }
       // Ctrl/Cmd + Shift + H to toggle high contrast
       if()
@@ -99,8 +99,8 @@ export const AccessibilityPanel = () => {
         event.key === 'H'
       ) {
 
-        event.preventDefault();
-        toggleHighContrast();
+        event.preventDefault(),
+        toggleHighContrast(),
       }
       // Ctrl/Cmd + Shift + M to toggle reduced motion
       if()
@@ -109,13 +109,13 @@ export const AccessibilityPanel = () => {
         event.key === 'M'
       ) {
 
-        event.preventDefault();
-        toggleReducedMotion();
+        event.preventDefault(),
+        toggleReducedMotion(),
       }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, toggleHighContrast, toggleReducedMotion]);
+    },
+    window.addEventListener('keydown', handleKeyDown),
+    return () => window.removeEventListener('keydown', handleKeyDown),
+  }, [isOpen, toggleHighContrast, toggleReducedMotion]),
   return ()
     <>
       {/* Floating Accessibility Button */}
@@ -315,28 +315,28 @@ export const AccessibilityPanel = () => {
         )}
       </AnimatePresence>
     </>
-  );
-};
+  ),
+},
 // Skip to Content Link
 export const SkipToContent = () => (
   <a"
     href="#main-content"
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300"
+    className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hover:bg-zion-cyan-light transition-colors duration-300"
   >
     Skip to main content
   </a>
-);
+),
 // Focus Trap Hook
 export const useFocusTrap = isActive => {
 
   useEffect(() => {
-    if(!isActive) return;
+    if(!isActive) return,
     const focusableElements ='"
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
-    const container = document.activeElement?.closest('[data-focus-trap]');
-    if(!container) return;
-    const firstFocusableElement = focusableContent[0];
-    const lastFocusableElement = focusableContent[focusableContent.length-1];
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]),
+    const container = document.activeElement?.closest('[data-focus-trap]'),
+    if(!container) return,
+    const firstFocusableElement = focusableContent[0],
+    const lastFocusableElement = focusableContent[focusableContent.length-1],
     const handleTabKey = e => {
 
       if(e.key === 'Tab') {
@@ -345,26 +345,26 @@ export const useFocusTrap = isActive => {
 
           if(document.activeElement === firstFocusableElement) {
 
-            e.preventDefault();
-            lastFocusableElement.focus();
+            e.preventDefault(),
+            lastFocusableElement.focus(),
           }
         } else {
 
           if(document.activeElement === lastFocusableElement) {
 
-            e.preventDefault();
-            firstFocusableElement.focus();
+            e.preventDefault(),
+            firstFocusableElement.focus(),
           }
         }
       }
-    };
-    document.addEventListener('keydown', handleTabKey);
-    return () => document.removeEventListener('keydown', handleTabKey);
-  }, [isActive]);
-};
+    },
+    document.addEventListener('keydown', handleTabKey),
+    return () => document.removeEventListener('keydown', handleTabKey),
+  }, [isActive]),
+},
 // Screen Reader Only Text
 export const SrOnly = ({ children }) => ("
   <span className="sr-only">{children}</span>
-);
-export default AccessibilityPanel;
+),
+export default AccessibilityPanel,
 '"

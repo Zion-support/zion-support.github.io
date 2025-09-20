@@ -17,13 +17,12 @@ import {
   QuotesFilter,
   QuotesTable
 } from "@/components/admin/quotes";
-
 export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin',
 
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
 
   const {
     quotes,
@@ -37,34 +36,28 @@ export default function QuoteManager() {
     setSearchQuery,
     dateRange,
     setDateRange,
-    updateStatus,
-    toggleArchive,
+    updateStatus;
+    toggleArchive;
     deleteQuote
   } = useAdminQuotes();
-
   // Count quotes by status
   const statusCounts = {
-    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
-    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
-    accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,
-    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,
-    closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
+    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
   };
-
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
-    setShowDetails(true);
-  };
+    setShowDetails(true)
+  },
 
   const handleResetFilters = () => {
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
     setDateRange({ from: undefined, to: undefined });
-  };
+  },
 
   if (!isAdmin) {
-    return <Navigate to="/unauthorized" replace />;
+    return <Navigate to="/unauthorized" replace />,
   }
 
   return (
@@ -73,7 +66,7 @@ export default function QuoteManager() {
 
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+            <div className="flex flex-col md: flex-row justify-between items-start md:items-center mb-8">
               <div>
                 <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
                 <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
@@ -141,7 +134,7 @@ export default function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
-            setSelectedQuote(null);
+            setSelectedQuote(null),
           }}
         />
 

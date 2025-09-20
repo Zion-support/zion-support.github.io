@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Evals Blueprint';
+  title: 'AI 2026: Autonomous Evals Blueprint',
   description:,
-    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.',
-};
+    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -30,7 +30,7 @@ export default function Page() {,
           <div className="prose prose-lg max-w-none">,
             <h2>Overview</h2>,
             <p>,
-              This blueprint provides a step-by-step approach to implement autonomous evaluations for AI agents;
+              This blueprint provides a step-by-step approach to implement autonomous evaluations for AI agents,
               integrating continuous testing, red-teaming, and reliability gates throughout the lifecycle.,
             </p>,
             <h3>Key Pillars</h3>,
@@ -55,7 +55,6 @@ export default function Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

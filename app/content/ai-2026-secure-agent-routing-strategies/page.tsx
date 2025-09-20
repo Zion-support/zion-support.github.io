@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Secure Agent Routing Strategies';
+  title: 'AI 2026: Secure Agent Routing Strategies',
   description:,
-    'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.',
-};
+    'Least‑privilege routing, tiered trust, eval‑gated execution, and runtime guards for safe autonomous agents.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -46,7 +46,6 @@ export default function Page() {,
           </li>,
         </ul>,
       </article>,
-    </main>,
-  );
+    </main>),
 }
 ,

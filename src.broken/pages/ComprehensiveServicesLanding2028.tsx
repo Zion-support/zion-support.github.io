@@ -1,33 +1,29 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
-    { number: "15+", label: "Years of Innovation", icon: Award },;
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },;
-    { number: "24 / 7", label: "Support Available", icon: Clock };
-  ];
+,
+    { number: "15+", label: "Years of Innovation", icon: Award },
+    { number: "99.9%", label: "Client Satisfaction", icon: Star },
+    { number: "24 / 7", label: "Support Available", icon: Clock },
+  ],
 
       default: return Rocket}
-  };
+  },
 
   const getCategoryColor = (category: string) => {
-    const colors = ['from - blue - 600 to - cyan - 600',
-      'from - purple - 600 to - pink - 600',;
-      'from - green - 600 to - emerald - 600',;
-      'from - red - 600 to - orange - 600',;
-      'from - indigo - 600 to - purple - 600',;
-      'from - yellow-600 to - orange - 600',;
-      'from - teal - 600 to - blue - 600',;
-      'from - pink - 600 to - red - 600';
-    ];
-    return colors[Math.abs(category.length) % colors.length]};
+    const colors = ['from - blue - 600 to - cyan - 600from - purple - 600 to - pink - 600',
+      'from - green - 600 to - emerald - 600from - red - 600 to - orange - 600',
+      'from - indigo - 600 to - purple - 600from - yellow-600 to - orange - 600',
+      'from - teal - 600 to - blue - 600from - pink - 600 to - red - 600',
+    ],
+    return colors[Math.abs(category.length) % colors.length]},
 
-  const nextTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
-  };
+  const nextTestimonial = () => {,
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ,
+  },
 
-  const prevTestimonial = () => {;
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ;
-  };
+  const prevTestimonial = () => {,
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length) ,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - blue - dark via - zion - blue to - zion -purple">
       <SEO
@@ -113,11 +109,11 @@ export default function Page() {
               Get Started
             </Button>
           </motion.div>
-        </div>;
+        </div>,
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white / 5 backdrop - blur -sm">;
+      <section className="py-16 bg-white / 5 backdrop - blur -sm">,
         <div  className="container mx - auto px-4">
           <div  className="grid grid - cols - 2 md: grid - cols - 4 gap-8">
             {stats.map((stat, index) => (<motion.div
@@ -144,13 +140,13 @@ export default function Page() {
                 </div>
                 <div  className="text-3xl font - bold text-zion - cyan mb-2">{stat.number}</div>
                 <div  className="text-zion - slate -light">{stat.label}</div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Services Overview */}
-      <section id="services - section" className="py-20">;
+      <section id="services - section" className="py-20">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -242,7 +238,7 @@ export default function Page() {
                   onClick={ () => setSelectedService(service) }
 
                   View Details
-                </Button>;
+                </Button>,
               </motion.div>) ) }
           </div>
 
@@ -277,7 +273,7 @@ export default function Page() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white / 5 backdrop - blur -sm">;
+      <section className="py-20 bg-white / 5 backdrop - blur -sm">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -369,7 +365,7 @@ export default function Page() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -672,7 +668,7 @@ export default function Page() {
               </div>
 
               <div  className="flex gap-4 mt-8">
-                <Button className="flex - 1 bg-gradient - to - r from - zion - cyan to - zion - blue hover:from - zion - cyan - light hover:to - zion - blue -light">
+                <Button className="flex - 1 bg-gradient - to - r from - zion - cyan to - zion - blue hover: from - zion - cyan - light hover:to - zion - blue -light">
                   Get Started
                 </Button>
                 <Button variant="outline" className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan hover:text-white">
@@ -680,7 +676,7 @@ export default function Page() {
                 </Button>
               </div>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>) }
 
       {/* Contact Section */}
@@ -823,9 +819,9 @@ export default function Page() {
               onClick={ () => window.location.href = '/contact'}
 
               Schedule a Consultation
-            </Button>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </Button>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) ,
 }

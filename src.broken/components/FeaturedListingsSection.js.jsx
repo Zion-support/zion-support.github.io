@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Star, Eye, Heart, ArrowRight, Clock, Users, Award  } from 'lucide-react';
-import { Link  } from 'react-router-dom'; // Added Link import
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Star, Eye, Heart, ArrowRight, Clock, Users, Award  } from 'lucide-react',
+import { Link  } from 'react-router-dom', // Added Link import
 
 const featuredListings = [{
 
@@ -15,14 +15,14 @@ const featuredListings = [{
         likes: 156,"
         image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80","
         price: "$15,000","
-        tags["React", "Node.js", "AI/ML", "E-commerce"],;"
+        tags["React", "Node.js", "AI/ML", "E-commerce"],"
         duration: "3-4 months","
         team: "5 experts","
         location: "Remote",
         featured: true,"
-        technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],;"
-        highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"];
-    },;
+        technologies["React", "Node.js", "MongoDB", "AI/ML", "AWS"],"
+        highlights["AI Recommendations", "Real-time Analytics", "Mobile Responsive", "SEO Optimized"],
+    },
     {
 
         id: 2,"
@@ -35,14 +35,14 @@ const featuredListings = [{
         likes: 134,"
         image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80","
         price: "$22,000","
-        tags["React Native", "Security", "FinTech", "Biometrics"],;"
+        tags["React Native", "Security", "FinTech", "Biometrics"],"
         duration: "4-5 months","
         team: "6 experts","
         location: "Hybrid",
         featured: true,"
-        technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],;"
-        highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"];
-    },;
+        technologies["React Native", "Node.js", "PostgreSQL", "Biometrics", "Security"],"
+        highlights["Biometric Auth", "Real-time Transactions", "Security Compliance", "Cross-platform"],
+    },
     {
 
         id: 3,"
@@ -55,14 +55,14 @@ const featuredListings = [{
         likes: 189,"
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80","
         price: "$18,500","
-        tags["AWS", "Docker", "Kubernetes", "CI/CD"],;"
+        tags["AWS", "Docker", "Kubernetes", "CI/CD"],"
         duration: "2-3 months","
         team: "4 experts","
         location: "On-site",
         featured: true,"
-        technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],;"
-        highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"];
-    },;
+        technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Prometheus"],"
+        highlights["Zero Downtime", "Auto-scaling", "Monitoring", "Security"],
+    },
     {
 
         id: 4,"
@@ -75,14 +75,14 @@ const featuredListings = [{
         likes: 278,"
         image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80","
         price: "$35,000","
-        tags["Python", "TensorFlow", "Computer Vision", "Healthcare"],;"
+        tags["Python", "TensorFlow", "Computer Vision", "Healthcare"],"
         duration: "6-8 months","
         team: "8 experts","
         location: "Remote",
         featured: true,"
-        technologies["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],;"
-        highlights["95% Accuracy", "Real-time Processing", "HIPAA Compliant", "API Integration"];
-    },;
+        technologies["Python", "TensorFlow", "OpenCV", "Docker", "AWS"],"
+        highlights["95% Accuracy", "Real-time Processing", "HIPAA Compliant", "API Integration"],
+    },
     {
 
         id: 5,"
@@ -95,14 +95,14 @@ const featuredListings = [{
         likes: 112,"
         image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80","
         price: "$28,000","
-        tags["IoT", "Big Data", "Analytics", "Smart Cities"],;"
+        tags["IoT", "Big Data", "Analytics", "Smart Cities"],"
         duration: "5-6 months","
         team: "7 experts","
         location: "Hybrid",
         featured: false,"
-        technologies["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],;"
-        highlights["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"];
-    },;
+        technologies["IoT Sensors", "Apache Kafka", "Elasticsearch", "React", "Node.js"],"
+        highlights["Real-time Monitoring", "Predictive Analytics", "Scalable Architecture", "Dashboard"],
+    },
     {
 
         id: 6,"
@@ -115,26 +115,26 @@ const featuredListings = [{
         likes: 167,"
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80","
         price: "$25,000","
-        tags["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],;"
+        tags["Data Analytics", "Business Intelligence", "Dashboard", "Predictive"],"
         duration: "4-5 months","
         team: "6 experts","
         location: "Remote",
         featured: false,"
-        technologies["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],;"
-        highlights["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"];
+        technologies["Python", "Tableau", "PostgreSQL", "Apache Spark", "React"],"
+        highlights["Real-time Dashboards", "Predictive Models", "Data Integration", "Custom Reports"],
     }
-];
+],
 const categories = ["
     "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
-];
+],
 export function FeaturedListingsSection() {
 "
-    const [selectedCategory, setSelectedCategory] = useState("All");
-    const [hoveredListing, setHoveredListing] = useState(null);
-    const [showFilters, setShowFilters] = useState(false);"
+    const [selectedCategory, setSelectedCategory] = useState("All"),
+    const [hoveredListing, setHoveredListing] = useState(null),
+    const [showFilters, setShowFilters] = useState(false),"
     const filteredListings = selectedCategory === "All"
         ? featuredListings
-        : featuredListings.filter(listing => listing.category === selectedCategory) ;
+        : featuredListings.filter(listing => listing.category === selectedCategory) ,
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -147,13 +147,13 @@ export function FeaturedListingsSection() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     
     const renderStars = (rating) => {
 
         return Array.from({ length: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
-      </span>))};"
+      </span>))},"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}"
       <div className="absolute inset-0 opacity-5">"
@@ -183,7 +183,7 @@ export function FeaturedListingsSection() {
 }}/>"
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
 
-  { scale[1, 1.2,;
+  { scale[1, 1.2,
   1] 
 
 }} transition = {

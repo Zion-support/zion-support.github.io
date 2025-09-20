@@ -1,75 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from "lucide-react";
 const AICodeReviewAssistant = () => {
     const features = [
         {
-            title: "Automated Security Vulnerability Detection",
-            description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production",
+            title: "Automated Security Vulnerability Detection",description: "AI-powered scanning identifies security flaws, SQL injections, and common vulnerabilities before they reach production",
             icon: <Shield className="w-6 h-6"/>
-        },
+        };
         {
-            title: "Code Quality Scoring & Metrics",
-            description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations",
-            icon: <BarChart3 className="w-6 h-6"/>
-        },
+            title: "Code Quality Scoring & Metrics",description: "Comprehensive code quality assessment with detailed metrics and improvement recommendations",icon: <BarChart3 className="w-6 h-6"/>
+        };
         {
-            title: "Best Practice Recommendations",
-            description: "Intelligent suggestions for code improvements, design patterns, and industry best practices",
+            title: "Best Practice Recommendations",description: "Intelligent suggestions for code improvements, design patterns, and industry best practices",
             icon: <CheckCircle className="w-6 h-6"/>
-        },
+        };
         {
-            title: "Git Integration & Automation",
-            description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
+            title: "Git Integration & Automation",description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
             icon: <GitFork className="w-6 h-6"/>
         }
     ];
     const benefits = [
         {
-            metric: "40-60%",
-            description: "Reduction in code review time",
-            icon: <Clock className="w-5 h-5"/>
-        },
+            metric: "40-60%",description: "Reduction in code review time",icon: <Clock className="w-5 h-5"/>
+        };
         {
-            metric: "25%",
-            description: "Improvement in code quality",
-            icon: <TrendingUp className="w-5 h-5"/>
-        },
+            metric: "25%",description: "Improvement in code quality",icon: <TrendingUp className="w-5 h-5"/>
+        };
         {
-            metric: "90%",
-            description: "Security issues caught early",
-            icon: <Shield className="w-5 h-5"/>
-        },
+            metric: "90%",description: "Security issues caught early",icon: <Shield className="w-5 h-5"/>
+        };
         {
-            metric: "24/7",
-            description: "Automated review coverage",
-            icon: <Zap className="w-5 h-5"/>
+            metric: "24/7",description: "Automated review coverage",icon: <Zap className="w-5 h-5"/>
         }
     ];
     const pricingPlans = [
         {
-            name: "Starter",
-            price: "$199",
-            period: "/month",
-            description: "Perfect for small development teams",
-            features: [
-                "Up to 10 developers",
+            name: "Starter",price: "$199",period: "/month",description: "Perfect for small development teams",features: [
+                "Up to 10 developers";
                 "Basic security scanning",
                 "GitHub integration",
                 "Standard reporting",
                 "Email support"
             ],
             popular: false
-        },
+        };
         {
-            name: "Professional",
-            price: "$399",
-            period: "/month",
-            description: "Ideal for growing development teams",
-            features: [
-                "Up to 25 developers",
+            name: "Professional",price: "$399",period: "/month",description: "Ideal for growing development teams",features: [
+                "Up to 25 developers";
                 "Advanced security scanning",
                 "Multi-repo support",
                 "Custom rule sets",
@@ -77,14 +56,10 @@ const AICodeReviewAssistant = () => {
                 "Team analytics"
             ],
             popular: true
-        },
+        };
         {
-            name: "Enterprise",
-            price: "Custom",
-            period: "",
-            description: "For large organizations with complex needs",
-            features: [
-                "Unlimited developers",
+            name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex needs",features: [
+                "Unlimited developers";
                 "Custom integrations",
                 "Advanced compliance",
                 "Dedicated support",
@@ -96,7 +71,7 @@ const AICodeReviewAssistant = () => {
     ];
     const integrations = [
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
-    ];
+    ],
     const useCases = [
         "Code quality improvement",
         "Security compliance",
@@ -104,7 +79,7 @@ const AICodeReviewAssistant = () => {
         "DevOps automation",
         "Code standardization",
         "Technical debt reduction"
-    ];
+    ],
     return (<>
       <Helmet>
         <title>AI Code Review Assistant — Zion Tech Group | Automated Code Quality & Security</title>
@@ -301,6 +276,6 @@ const AICodeReviewAssistant = () => {
           </div>
         </section>
       </div>
-    </>);
+    </>)
 };
 export default AICodeReviewAssistant;

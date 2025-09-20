@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Star,
@@ -8,65 +8,65 @@ import {,
   Zap,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  Download;
-  ExternalLink,
-} from 'lucide-react';
+  Award,
+  ChevronRight,
+  Play,
+  Download,
+  ExternalLink
+} from 'lucide-react',
 const UltimateContentAdvertisingBanner2025 = () => {,
-  const [currentSlidesetCurrentSlide] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [currentSlidesetCurrentSlide] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   const advertisingContent = [,
     {,
-      id: 1;
-      title: "🚀 Revolutionary AI Solutions 2025";
-      subtitle: "Transform Your Business with Cutting-Edge Technology";
-      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.";
-      cta: "Explore AI Solutions";
-      href: "/ai-2025-ultimate-breakthrough";
-      stats: "500+ Success Stories";
-      color: "from-purple-600 to-blue-600";
-      icon: <Zap className="w-8 h-8" />,};
+      id: 1,
+      title: "🚀 Revolutionary AI Solutions 2025",
+      subtitle: "Transform Your Business with Cutting-Edge Technology",
+      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.",
+      cta: "Explore AI Solutions",
+      href: "/ai-2025-ultimate-breakthrough",
+      stats: "500+ Success Stories",
+      color: "from-purple-600 to-blue-600",
+      icon: <Zap className="w-8 h-8" />},
     {,
-      id: 2;
-      title: "💼 Enterprise Automation Mastery";
-      subtitle: "Streamline Operations with Intelligent Automation";
-      description: "Our comprehensive automation suite reduces operational costs by 60% while increasing productivity by 300%. Join 1000+ enterprises already transforming their workflows.";
-      cta: "Start Automation Journey";
-      href: "/automation-solutions-2025";
-      stats: "60% Cost Reduction";
-      color: "from-green-600 to-emerald-600";
-      icon: <TrendingUp className="w-8 h-8" />,};
+      id: 2,
+      title: "💼 Enterprise Automation Mastery",
+      subtitle: "Streamline Operations with Intelligent Automation",
+      description: "Our comprehensive automation suite reduces operational costs by 60% while increasing productivity by 300%. Join 1000+ enterprises already transforming their workflows.",
+      cta: "Start Automation Journey",
+      href: "/automation-solutions-2025",
+      stats: "60% Cost Reduction",
+      color: "from-green-600 to-emerald-600",
+      icon: <TrendingUp className="w-8 h-8" />},
     {,
-      id: 3;
-      title: "🌐 Quantum Computing Breakthrough";
-      subtitle: "Next-Generation Computing Power";
-      description: "Experience the future with our quantum computing solutions. Process complex algorithms 1000x faster and unlock unprecedented computational capabilities.";
-      cta: "Discover Quantum Power";
-      href: "/quantum-computing-2025-ultimate-breakthrough";
-      stats: "1000x Faster Processing";
-      color: "from-indigo-600 to-purple-600";
-      icon: <Award className="w-8 h-8" />,};
+      id: 3,
+      title: "🌐 Quantum Computing Breakthrough",
+      subtitle: "Next-Generation Computing Power",
+      description: "Experience the future with our quantum computing solutions. Process complex algorithms 1000x faster and unlock unprecedented computational capabilities.",
+      cta: "Discover Quantum Power",
+      href: "/quantum-computing-2025-ultimate-breakthrough",
+      stats: "1000x Faster Processing",
+      color: "from-indigo-600 to-purple-600",
+      icon: <Award className="w-8 h-8" />},
     {,
-      id: 4;
-      title: "🧠 Neural Interface Revolution";
-      subtitle: "Direct Brain-Computer Integration";
-      description: "Breakthrough neural interface technology enabling direct communication between human consciousness and AI systems. The future is here.";
-      cta: "Experience Neural Tech";
-      href: "/neural-interface-revolution-2026";
-      stats: "Revolutionary Technology";
-      color: "from-pink-600 to-rose-600";
-      icon: <Users className="w-8 h-8" />,}
-  ];
+      id: 4,
+      title: "🧠 Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      description: "Breakthrough neural interface technology enabling direct communication between human consciousness and AI systems. The future is here.",
+      cta: "Experience Neural Tech",
+      href: "/neural-interface-revolution-2026",
+      stats: "Revolutionary Technology",
+      color: "from-pink-600 to-rose-600",
+      icon: <Users className="w-8 h-8" />}
+  ],
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentSlide((prev) => (prev + 1) % advertisingContent.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
-  const currentContent = advertisingContent[currentSlide];
+      setCurrentSlide((prev) => (prev + 1) % advertisingContent.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
+  const currentContent = advertisingContent[currentSlide],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">,
       {/* Animated Background */}
@@ -77,7 +77,7 @@ const UltimateContentAdvertisingBanner2025 = () => {,
       <div className="absolute bottom-20 left-32 w-12 h-12 bg-pink-500/30 rounded-full animate-bounce delay-2000" />,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
           <div,
-            key={currentSlide,}
+            key={currentSlide}
             className="text-center",
           >,
             {/* Main Content */}
@@ -90,12 +90,12 @@ const UltimateContentAdvertisingBanner2025 = () => {,
               <divh2,
                 className="text-4xl md: text-6xl font-bold text-white mb-4",
               >,
-                {currentContent.title,}
+                {currentContent.title}
               </divh2>,
               <divp,
                 className="text-xl md: text-2xl text-blue-100 mb-6",
               >,
-                {currentContent.subtitle,}
+                {currentContent.subtitle}
               </divp>,
               <divp,
                 className="text-lg text-gray-200 mb-8 max-w-4xl mx-auto",
@@ -109,12 +109,12 @@ const UltimateContentAdvertisingBanner2025 = () => {,
             >,
               <div className="flex items-center gap-2 text-yellow-400">,
                 <Star className="w-5 h-5 fill-current" />,
-                <span className="text-lg font-semibold">{currentContent.stats,}</span>,
+                <span className="text-lg font-semibold">{currentContent.stats}</span>,
               </div>,
               <div className="flex gap-4">,
                 <a,
                   href={currentContent.href}
-                  className={`group relative inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white font-bold rounded-full hover: scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`,}
+                  className={`group relative inline-flex items-center px-8 py-4 bg-gradient-to-r ${currentContent.color} text-white font-bold rounded-full hover: scale-105 transition-all duration-300 shadow-lg hover:shadow-xl`}
                 >,
                   <span className="mr-2">{currentContent.cta}</span>,
                   <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />,
@@ -125,7 +125,7 @@ const UltimateContentAdvertisingBanner2025 = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Additional CTAs */,}
+            {/* Additional CTAs */}
             <div,
               className="flex flex-wrap justify-center gap-4",
             >,
@@ -153,7 +153,7 @@ const UltimateContentAdvertisingBanner2025 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Slide Indicators */,}
+        {/* Slide Indicators */}
         <div className="flex justify-center mt-8 space-x-2">,
           {advertisingContent.map((_index) => (,
             <button,
@@ -162,7 +162,7 @@ const UltimateContentAdvertisingBanner2025 = () => {,
               className={`w-3 h-3 rounded-full transition-all duration-300 ${,
                 index === currentSlide,
                   ? 'bg-white scale-125',
-                  : 'bg-white/50 hover: bg-white/75',}`}
+                  : 'bg-white/50 hover: bg-white/75'}`}
             />,
           ))}
         </div>,
@@ -181,6 +181,6 @@ const UltimateContentAdvertisingBanner2025 = () => {,
         </svg>,
       </div>,
     </div>,
-  );
-};
-export default UltimateContentAdvertisingBanner2025;
+  ),
+},
+export default UltimateContentAdvertisingBanner2025,

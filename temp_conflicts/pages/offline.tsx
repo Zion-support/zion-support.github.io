@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
-import { logError } from '@/utils/productionLogger'; // Import logError
+import { logError } from '@/utils/productionLogger', // Import logError
 
 export default function OfflinePage() {
   const [isOnline, setIsOnline] = useState(false)
@@ -40,7 +40,7 @@ export default function OfflinePage() {
       setRetryCount(prev => prev + 1)
       window.location.reload()
     } catch (err) {
-      logError('Failed to reload page', { data: err });
+      logError('Failed to reload page', { data: err }),
     }
   }
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
 import { 
-  Brain, 
+  Brain,
   Cloud, 
   Shield, 
   Server, 
@@ -40,13 +40,13 @@ import {
   Lock,
   DollarSign,
   Users
-} from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "@/data/advancedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025 } from "@/data/emergingTechServices2025";
+} from 'lucide-react',
+import { ADVANCED_INNOVATIVE_SERVICES_2025 } from "@/data/advancedInnovativeServices2025",
+import { EMERGING_TECH_SERVICES_2025 } from "@/data/emergingTechServices2025",
 
 export default function SimpleServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' },
@@ -59,25 +59,25 @@ export default function SimpleServicesPage() {
     { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' },
     { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' }
-  ];
+  ],
 
   // Combine all services
   const allServices = [
     ...ADVANCED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
-  ];
+  ],
   
   const filteredServices = allServices.filter(service => {
-    const title = service.title || service.name || '';
+    const title = service.title || service.name || '',
     const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
     
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory);
+                           service.category.toLowerCase().includes(selectedCategory),
     
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory,
+  }),
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -205,11 +205,11 @@ export default function SimpleServicesPage() {
           </div>
           <div className="mt-8 text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
+            <p>📧 <a href="mailto: kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
             <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

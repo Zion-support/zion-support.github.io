@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { Link } from "react-router-dom";
 import { 
-  Target, 
+  Target,
   TrendingUp, 
   Users, 
   DollarSign, 
@@ -29,184 +29,83 @@ import {
   Lock,
   Cpu,
   Car
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CaseStudies() {
   const caseStudies = [
     {
-      id: 'techcorp-digital-transformation',
-      title: 'TechCorp Inc. - Digital Transformation Success',
-      subtitle: '50% Cost Reduction & 99.9% Uptime',
-      company: 'TechCorp Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Legacy systems causing 40% downtime and $2M annual losses',
-      solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',
-      results: [
-        '50% reduction in operational costs',
-        '99.9% system uptime achieved',
-        '3x faster decision making',
-        '40% improvement in productivity'
+      id: 'techcorp-digital-transformation',title: 'TechCorp Inc. - Digital Transformation Success',subtitle: '50% Cost Reduction & 99.9% Uptime',company: 'TechCorp Inc.',industry: 'Manufacturing',challenge: 'Legacy systems causing 40% downtime and $2M annual losses',solution: 'Implemented comprehensive AI-powered automation and cloud infrastructure',results: [
+        '50% reduction in operational costs99.9% system uptime achieved';
+        '3x faster decision making40% improvement in productivity'
       ],
-      technologies: ['AI Automation', 'Cloud Migration', 'IoT Integration', 'Predictive Analytics'],
-      duration: '6 months',
-      teamSize: '15 engineers',
-      featured: true,
-      color: 'from-blue-500 to-cyan-500',
-      icon: Building,
-      roi: '400%'
-    },
+      technologies: ['AI AutomationCloud Migration', 'IoT IntegrationPredictive Analytics'],
+      duration: '6 months',teamSize: '15 engineers',featured: true,color: 'from-blue-500 to-cyan-500',icon: Building,roi: '400%'
+    };
     {
-      id: 'healthplus-ai-revolution',
-      title: 'HealthPlus Systems - AI Healthcare Revolution',
-      subtitle: '30% Diagnostic Accuracy Improvement',
-      company: 'HealthPlus Systems',
-      industry: 'Healthcare',
-      challenge: 'Medical device failures and inefficient patient care processes',
-      solution: 'Developed AI-powered diagnostic tools and digital twin solutions',
-      results: [
-        '30% improvement in diagnostic accuracy',
-        'Zero critical device failures',
-        '25% improvement in patient outcomes',
-        '40% reduction in patient wait times'
+      id: 'healthplus-ai-revolution',title: 'HealthPlus Systems - AI Healthcare Revolution',subtitle: '30% Diagnostic Accuracy Improvement',company: 'HealthPlus Systems',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed AI-powered diagnostic tools and digital twin solutions',results: [
+        '30% improvement in diagnostic accuracyZero critical device failures';
+        '25% improvement in patient outcomes40% reduction in patient wait times'
       ],
-      technologies: ['AI Diagnostics', 'Digital Twins', 'IoT Monitoring', 'Machine Learning'],
-      duration: '8 months',
-      teamSize: '12 engineers',
-      featured: true,
-      color: 'from-red-500 to-pink-500',
-      icon: Heart,
-      roi: '350%'
-    },
+      technologies: ['AI DiagnosticsDigital Twins', 'IoT MonitoringMachine Learning'],
+      duration: '8 months',teamSize: '12 engineers',featured: true,color: 'from-red-500 to-pink-500',icon: Heart,roi: '350%'
+    };
     {
-      id: 'startupxyz-growth',
-      title: 'StartupXYZ - Rapid Growth Acceleration',
-      subtitle: '10x Faster Market Validation',
-      company: 'StartupXYZ',
-      industry: 'SaaS',
-      challenge: 'Need for rapid scaling and market validation',
-      solution: 'Implemented AI-powered analytics and automated growth tools',
-      results: [
-        '10x faster market validation',
-        '3x increase in user engagement',
-        '50% reduction in customer acquisition costs',
-        'Secured Series A funding in 6 months'
+      id: 'startupxyz-growth',title: 'StartupXYZ - Rapid Growth Acceleration',subtitle: '10x Faster Market Validation',company: 'StartupXYZ',industry: 'SaaS',challenge: 'Need for rapid scaling and market validation',solution: 'Implemented AI-powered analytics and automated growth tools',results: [
+        '10x faster market validation3x increase in user engagement';
+        '50% reduction in customer acquisition costsSecured Series A funding in 6 months'
       ],
-      technologies: ['AI Analytics', 'Growth Automation', 'Cloud Infrastructure', 'Data Analytics'],
-      duration: '4 months',
-      teamSize: '8 engineers',
-      featured: true,
-      color: 'from-purple-500 to-indigo-500',
-      icon: Rocket,
-      roi: '500%'
-    },
+      technologies: ['AI AnalyticsGrowth Automation', 'Cloud InfrastructureData Analytics'],
+      duration: '4 months',teamSize: '8 engineers',featured: true,color: 'from-purple-500 to-indigo-500',icon: Rocket,roi: '500%'
+    };
     {
-      id: 'smartcity-metro',
-      title: 'SmartCity Metro - Urban Infrastructure Optimization',
-      subtitle: '30% Traffic Reduction',
-      company: 'SmartCity Metro',
-      industry: 'Municipal',
-      challenge: 'Traffic congestion and inefficient public services',
-      solution: 'Created city-wide digital twin integrating all infrastructure systems',
-      results: [
-        '30% reduction in traffic congestion',
-        '20% improvement in transit efficiency',
-        '15% reduction in energy consumption',
-        'Improved citizen satisfaction by 40%'
+      id: 'smartcity-metro',title: 'SmartCity Metro - Urban Infrastructure Optimization',subtitle: '30% Traffic Reduction',company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public services',solution: 'Created city-wide digital twin integrating all infrastructure systems',results: [
+        '30% reduction in traffic congestion20% improvement in transit efficiency';
+        '15% reduction in energy consumptionImproved citizen satisfaction by 40%'
       ],
-      technologies: ['Digital Twins', 'IoT Sensors', 'AI Analytics', 'Smart Infrastructure'],
-      duration: '12 months',
-      teamSize: '20 engineers',
-      featured: false,
-      color: 'from-green-500 to-emerald-500',
-      icon: Building,
-      roi: '250%'
-    },
+      technologies: ['Digital TwinsIoT Sensors', 'AI AnalyticsSmart Infrastructure'],
+      duration: '12 months',teamSize: '20 engineers',featured: false,color: 'from-green-500 to-emerald-500',icon: Building,roi: '250%'
+    };
     {
-      id: 'fintech-risk-management',
-      title: 'FinTech Solutions - AI-Powered Risk Management',
-      subtitle: '80% Fraud Reduction',
-      company: 'FinTech Solutions',
-      industry: 'Financial Services',
-      challenge: 'High fraud rates and manual risk assessment processes',
-      solution: 'Implemented AI-powered fraud detection and automated risk assessment',
-      results: [
-        '80% reduction in fraud losses',
-        '90% faster risk assessment',
-        'Improved compliance by 95%',
-        '25% reduction in operational costs'
+      id: 'fintech-risk-management',title: 'FinTech Solutions - AI-Powered Risk Management',subtitle: '80% Fraud Reduction',company: 'FinTech Solutions',industry: 'Financial Services',challenge: 'High fraud rates and manual risk assessment processes',solution: 'Implemented AI-powered fraud detection and automated risk assessment',results: [
+        '80% reduction in fraud losses90% faster risk assessment';
+        'Improved compliance by 95%25% reduction in operational costs'
       ],
-      technologies: ['AI Fraud Detection', 'Machine Learning', 'Blockchain', 'Automation'],
-      duration: '7 months',
-      teamSize: '10 engineers',
-      featured: false,
-      color: 'from-emerald-500 to-green-500',
-      icon: TrendingUp,
-      roi: '300%'
-    },
+      technologies: ['AI Fraud DetectionMachine Learning', 'BlockchainAutomation'],
+      duration: '7 months',teamSize: '10 engineers',featured: false,color: 'from-emerald-500 to-green-500',icon: TrendingUp,roi: '300%'
+    };
     {
-      id: 'manufacturing-industry4',
-      title: 'ManufacturingCorp - Industry 4.0 Transformation',
-      subtitle: '60% Quality Improvement',
-      company: 'ManufacturingCorp',
-      industry: 'Manufacturing',
-      challenge: 'Outdated manufacturing processes and quality control issues',
-      solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',
-      results: [
-        '60% improvement in product quality',
-        '45% reduction in production time',
-        '30% reduction in waste',
-        '25% increase in production capacity'
+      id: 'manufacturing-industry4',title: 'ManufacturingCorp - Industry 4.0 Transformation',subtitle: '60% Quality Improvement',company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Outdated manufacturing processes and quality control issues',solution: 'Implemented comprehensive Industry 4.0 solution with IoT and AI',results: [
+        '60% improvement in product quality45% reduction in production time';
+        '30% reduction in waste25% increase in production capacity'
       ],
-      technologies: ['IoT Sensors', 'AI Quality Control', 'Predictive Maintenance', 'Automation'],
-      duration: '10 months',
-      teamSize: '18 engineers',
-      featured: false,
-      color: 'from-orange-500 to-red-500',
-      icon: Building,
-      roi: '280%'
+      technologies: ['IoT SensorsAI Quality Control', 'Predictive MaintenanceAutomation'],
+      duration: '10 months',teamSize: '18 engineers',featured: false,color: 'from-orange-500 to-red-500',icon: Building,roi: '280%'
     }
   ];
-
   const industries = [
-    { name: 'Manufacturing', icon: Building, count: 15, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Healthcare', icon: Heart, count: 12, color: 'from-red-500 to-pink-500' },
-    { name: 'Financial Services', icon: TrendingUp, count: 8, color: 'from-emerald-500 to-green-500' },
-    { name: 'Automotive', icon: Car, count: 6, color: 'from-purple-500 to-indigo-500' },
-    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' },
+    { name: 'Manufacturing', icon: Building, count: 15, color: 'from-blue-500 to-cyan-500' };
+    { name: 'Healthcare', icon: Heart, count: 12, color: 'from-red-500 to-pink-500' };
+    { name: 'Financial Services', icon: TrendingUp, count: 8, color: 'from-emerald-500 to-green-500' };
+    { name: 'Automotive', icon: Car, count: 6, color: 'from-purple-500 to-indigo-500' };
+    { name: 'Smart Cities', icon: Building, count: 5, color: 'from-green-500 to-emerald-500' };
     { name: 'Energy', icon: Zap, count: 4, color: 'from-orange-500 to-red-500' }
   ];
-
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI-powered automation alone saved us $2M annually.',
-      rating: 5
-    },
+      name: 'Sarah Johnson',role: 'CTO',company: 'TechCorp Inc.',content: 'Zion Tech Group transformed our entire IT infrastructure. The AI-powered automation alone saved us $2M annually.',rating: 5
+    };
     {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Medical Director',
-      company: 'HealthPlus Systems',
-      content: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',
-      rating: 5
-    },
+      name: 'Dr. Emily Rodriguez',role: 'Medical Director',company: 'HealthPlus Systems',content: 'The AI diagnostic tools have improved our accuracy by 30% and reduced patient wait times significantly.',rating: 5
+    };
     {
-      name: 'Mike Chen',
-      role: 'Founder & CEO',
-      company: 'StartupXYZ',
-      content: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',
-      rating: 5
+      name: 'Mike Chen',role: 'Founder & CEO',company: 'StartupXYZ',content: 'Their startup solutions helped us validate our product 10x faster and secure our Series A funding.',rating: 5
     }
   ];
-
   const metrics = [
-    { label: 'Success Stories', value: '50+', icon: Star },
-    { label: 'Industries Served', value: '15+', icon: Building },
-    { label: 'Average ROI', value: '300%', icon: TrendingUp },
+    { label: 'Success Stories', value: '50+', icon: Star };
+    { label: 'Industries Served', value: '15+', icon: Building };
+    { label: 'Average ROI', value: '300%', icon: TrendingUp };
     { label: 'Client Satisfaction', value: '98%', icon: Users }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -224,7 +123,7 @@ export default function CaseStudies() {
               <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent"> Stories</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover how our technology solutions have transformed businesses across industries, 
+              Discover how our technology solutions have transformed businesses across industries;
               delivering measurable results and driving innovation.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -547,7 +446,7 @@ export default function CaseStudies() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -573,5 +472,5 @@ export default function CaseStudies() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,18 +1,18 @@
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import { GetServerSideProps } from 'next',
+import { useState } from 'react',
+import { readJson } from '../../utils/fsDb',
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const requests = readJson<any[]>('support/requests.json', []);
-  return { props: { initialRequests: requests } };
-};
+  const requests = readJson<any[]>('support/requests.json', []),
+  return { props: { initialRequests: requests } },
+},
 
 export default function SupportRequests({ initialRequests }: { initialRequests: any[] }) {
-  const [requests, setRequests] = useState(initialRequests);
+  const [requests, setRequests] = useState(initialRequests),
 
   async function resolve(id: string) {
-    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
-    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)));
+    await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) }),
+    setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r))),
   }
 
   return (
@@ -36,5 +36,5 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
         ))}
       </div>
     </div>
-  );
+  ),
 }

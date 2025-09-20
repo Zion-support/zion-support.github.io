@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Rocket, Zap, Brain, Target, Users, Globe, Shield, TrendingUp } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Rocket, Zap, Brain, Target, Users, Globe, Shield, TrendingUp } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function StartupSolutions() {
   const solutions = [
@@ -41,7 +41,7 @@ export default function StartupSolutions() {
       description: "Scalable cloud infrastructure that grows with your startup",
       href: "/multi-cloud-disaster-recovery"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function StartupSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default startup-solutions;
+  ),
+},
+export default startup-solutions,

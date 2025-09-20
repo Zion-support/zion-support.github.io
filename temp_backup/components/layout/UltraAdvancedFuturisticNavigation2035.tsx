@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, X, Search, ChevronDown, ChevronRight, 
   Home, Briefcase, Users, BookOpen, Phone, 
   Zap, Shield, Brain, Rocket, Atom, Satellite,
   Cloud, Database, Lock, ChartBar, Cpu, Globe,
   Target, Lightbulb, Code, Palette, Gamepad2
-} from 'lucide-react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+} from 'lucide-react',
+import Link from 'next/link',
+import { useRouter } from 'next/router',
 
 // Type definitions for DOM elements
-type Node = any;
+type Node = any,
 
 interface NavigationItem {
-  label: string;
-  href: string;
-  icon: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
+  label: string,
+  href: string,
+  icon: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[]
 }
 
 const navigationItems: NavigationItem[] = [
@@ -165,7 +165,7 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-4 h-4" />,
     description: 'Get in touch with our experts'
   }
-];
+],
 
 const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
   return (
@@ -173,7 +173,7 @@ const UltraAdvancedFuturisticNavigation2035: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticNavigation2035</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticNavigation2035;
+export default UltraAdvancedFuturisticNavigation2035,

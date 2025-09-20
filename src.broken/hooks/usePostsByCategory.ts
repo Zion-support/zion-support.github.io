@@ -1,10 +1,10 @@
-import { useQuery } from '@tanstack/react-query';
-import { fetchPostsByCategory } from '@/services/forumPostService';
-import type { ForumPost } from '@/types/community';
+import { useQuery } from '@tanstack/react-query',
+import { fetchPostsByCategory } from '@/services/forumPostService',
+import type { ForumPost } from '@/types/community',
 
 export function usePostsByCategory(categoryId?: string, cursor?: string) {
   return useQuery({
-    queryKey: ['posts', 'category', categoryId, cursor],
+    queryKey: ['postscategory', categoryId, cursor],
     queryFn: () =>
       categoryId
         ? fetchPostsByCategory(categoryId, cursor)
@@ -12,10 +12,10 @@ export function usePostsByCategory(categoryId?: string, cursor?: string) {
     enabled: !!categoryId,
     suspense: true,
     initialData: { posts: [] as ForumPost[] },
-    select: data => data.posts,
+    select: data => data.posts
   }) as {
-    data: ForumPost[] | undefined;
-    isPending: boolean;
-    error: unknown;
-  };
+    data: ForumPost[] | undefined,
+    isPending: boolean,
+    error: unknown
+  },
 }

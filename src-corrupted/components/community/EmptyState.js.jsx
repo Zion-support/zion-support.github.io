@@ -48,21 +48,19 @@ export {EmptyState},"}),"})",
             {hasSession ? (",
               <Button asChild" >"",
                 <Link href={href}" >{cta}</Link>",
-              </Button>,
-            ) : (",
-              <Button disabled" >{cta}</Button>",
-            )}
+              </Button>) : (",
+              <Button disabled" >{cta}</Button>")}
 ,
           </TooltipTrigger>,
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 ,
         </Tooltip>,
       </TooltipProvider>,
-</div>)};
-export default EmptyState;
-export {EmptyState};
-export {EmptyState};
-export {EmptyState};
-export {EmptyState};
-export {EmptyState};
+</div>)},
+export default EmptyState,
+export {EmptyState},
+export {EmptyState},
+export {EmptyState},
+export {EmptyState},
+export {EmptyState},
 </MessageSquare>,

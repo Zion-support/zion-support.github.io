@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "@/components/SEO";
 import { 
-  Cpu, 
+  Cpu,
   Zap, 
   Shield, 
   Cloud, 
@@ -29,8 +29,7 @@ import {
   Play,
   Pause,
   RefreshCw
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIDevOpsAutomationPlatform() {
   const features = [
     "AI-Powered Code Review & Analysis",
@@ -41,7 +40,7 @@ export default function AIDevOpsAutomationPlatform() {
     "Automated Testing & Quality Assurance",
     "Intelligent Deployment Strategies",
     "Real-time Incident Response & Recovery"
-  ];
+  ],
 
   const benefits = [
     "Reduce deployment time by 80% through intelligent automation",
@@ -49,16 +48,14 @@ export default function AIDevOpsAutomationPlatform() {
     "Cut infrastructure costs by 40% with smart resource management",
     "Improve code quality by 60% with AI-powered analysis",
     "Achieve 99.9% uptime with predictive monitoring",
-    "Reduce security incidents by 90% with automated scanning",
-    "Accelerate time-to-market by 3x",
+    "Reduce security incidents by 90% with automated scanning";
+    "Accelerate time-to-market by 3x";
     "Enable 24/7 autonomous operations"
   ];
-
   const capabilities = [
     {
-      category: "Code Management",
-      items: [
-        "AI-powered code review and suggestions",
+      category: "Code Management",items: [
+        "AI-powered code review and suggestions";
         "Automated code quality analysis",
         "Intelligent refactoring recommendations",
         "Security vulnerability scanning",
@@ -66,9 +63,8 @@ export default function AIDevOpsAutomationPlatform() {
       ]
     },
     {
-      category: "Build & Deploy",
-      items: [
-        "Smart CI/CD pipeline orchestration",
+      category: "Build & Deploy",items: [
+        "Smart CI/CD pipeline orchestration";
         "Automated testing and validation",
         "Intelligent deployment strategies",
         "Rollback automation",
@@ -76,9 +72,8 @@ export default function AIDevOpsAutomationPlatform() {
       ]
     },
     {
-      category: "Infrastructure",
-      items: [
-        "Auto-scaling based on demand",
+      category: "Infrastructure",items: [
+        "Auto-scaling based on demand";
         "Cost optimization algorithms",
         "Resource allocation intelligence",
         "Cloud provider optimization",
@@ -86,24 +81,21 @@ export default function AIDevOpsAutomationPlatform() {
       ]
     },
     {
-      category: "Monitoring & Operations",
-      items: [
-        "Predictive performance monitoring",
+      category: "Monitoring & Operations",items: [
+        "Predictive performance monitoring";
         "Automated incident response",
         "Intelligent alerting systems",
         "Root cause analysis automation",
         "Performance trend analysis"
       ]
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$29,999",
-      period: "one-time setup",
-      features: [
-        "Basic AI DevOps automation",
+      name: "Starter",price: "$29,999",
+      period: "one-time setup",features: [
+        "Basic AI DevOps automation";
         "Up to 10 applications",
         "Standard CI/CD pipelines",
         "Basic monitoring & alerting",
@@ -112,11 +104,9 @@ export default function AIDevOpsAutomationPlatform() {
       ]
     },
     {
-      name: "Professional",
-      price: "$59,999",
-      period: "one-time setup",
-      features: [
-        "Advanced AI automation",
+      name: "Professional",price: "$59,999",
+      period: "one-time setup",features: [
+        "Advanced AI automation";
         "Up to 50 applications",
         "Custom CI/CD workflows",
         "Advanced monitoring & analytics",
@@ -126,11 +116,9 @@ export default function AIDevOpsAutomationPlatform() {
       ]
     },
     {
-      name: "Enterprise",
-      price: "$119,999",
-      period: "one-time setup",
-      features: [
-        "Full AI DevOps platform",
+      name: "Enterprise",price: "$119,999",
+      period: "one-time setup",features: [
+        "Full AI DevOps platform";
         "Unlimited applications",
         "Custom automation workflows",
         "24/7 dedicated support",
@@ -140,7 +128,7 @@ export default function AIDevOpsAutomationPlatform() {
         "White-label solutions"
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
@@ -173,7 +161,7 @@ export default function AIDevOpsAutomationPlatform() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-              The future of DevOps is here. Our AI-powered automation platform revolutionizes software development, 
+              The future of DevOps is here. Our AI-powered automation platform revolutionizes software development;
               deployment, and operations with intelligent automation that learns, adapts, and optimizes continuously.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -460,7 +448,7 @@ export default function AIDevOpsAutomationPlatform() {
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
               <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
               <a 
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                href="https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-blue-400 hover:text-blue-300 transition-colors duration-300"
@@ -472,5 +460,5 @@ export default function AIDevOpsAutomationPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

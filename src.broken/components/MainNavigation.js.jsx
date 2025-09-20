@@ -1,53 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import React, { useState, useEffect } from 'react',
+import { Link, useLocation  } from 'react-router-dom',
 export default function Page() {
 ,
                 { name: 'Cloud Computing', href: '/services/cloud' },
                 { name: 'IT Consulting', href: '/services/consulting' },
                 { name: 'Digital Transformation', href: '/services/digital-transformation' }
             ]
-        },;
+        },
         {
 
             name: 'Solutions',
             href: '/solutions',
-            dropdown[;
+            dropdown[,
                 { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
                 { name: 'Quantum Computing', href: '/solutions/quantum' },
                 { name: 'Autonomous Systems', href: '/solutions/autonomous' },
                 { name: 'Blockchain', href: '/solutions/blockchain' },
                 { name: 'IoT Platform', href: '/solutions/iot' }
             ]
-        },;
+        },
         {
 
             name: 'Industries',
             href: '/industries',
-            dropdown[;
+            dropdown[,
                 { name: 'Healthcare', href: '/industries/healthcare' },
                 { name: 'Finance', href: '/industries/finance' },
                 { name: 'Manufacturing', href: '/industries/manufacturing' },
                 { name: 'Retail', href: '/industries/retail' },
                 { name: 'Education', href: '/industries/education' }
             ]
-        },;
+        },
         {
 
             name: 'Resources',
             href: '/resources',
-            dropdown[;
+            dropdown[,
                 { name: 'Blog', href: '/blog' },
                 { name: 'Case Studies', href: '/case-studies' },
                 { name: 'White Papers', href: '/white-papers' },
                 { name: 'Webinars', href: '/webinars' },
                 { name: 'Documentation', href: '/docs' }
             ]
-        },;
+        },
         {
 
             name: 'Comp',
             href: '/about',
-            dropdown[;
+            dropdown[,
                 { name: 'About Us', href: '/about' },
                 { name: 'Leadership', href: '/leadership' },
                 { name: 'Careers', href: '/careers' },
@@ -55,12 +55,12 @@ export default function Page() {
                 { name: 'Contact', href: '/contact' }
             ]
         }
-    ];
+    ],
     const isActive = (path) => {
 
         if(path === '/')
-            return location.pathname === '/';
-        return location.pathname.startsWith(path)};
+            return location.pathname === '/',
+        return location.pathname.startsWith(path)},
     return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled'
             ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/20 shadow-lg''`
             : 'bg-transparent'}`}>"
@@ -166,8 +166,8 @@ export default function Page() {
                   </button>
                   "
                   {activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">"
-                      {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-zion-slate-dark hover:text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-200" onClick={() => {
-                            setActiveDropdown(null);
+                      {item.dropdown.map((subItem) => (<Link key={subItem.name} to={subItem.href} className="block px-4 py-2 text-zion-slate-dark hover: text-zion-cyan hover:bg-zion-cyan/5 rounded-lg transition-colors duration-200" onClick={() => {
+                            setActiveDropdown(null),
                             setIsOpen(false)}}>
                           {subItem.name}
                         </Link>) ) }

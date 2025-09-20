@@ -1,24 +1,24 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star } from 'lucide-react',
 
 interface SimpleServiceCardProps {
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    description: string;
-    price: string;
-    period: string;
-    features: string[];
-    popular: boolean;
-    category: string;
-    icon: string;
-    marketValidation: string;
-    targetAudience: string;
-    competitiveAdvantage: string;
-    pricingStrategy: string;
-  };
+    id: string,
+    name: string,
+    tagline: string,
+    description: string,
+    price: string,
+    period: string,
+    features: string[],
+    popular: boolean,
+    category: string,
+    icon: string,
+    marketValidation: string,
+    targetAudience: string,
+    competitiveAdvantage: string,
+    pricingStrategy: string
+  },
 }
 
 const SimpleServiceCard: React.FC<SimpleServiceCardProps> = ({ service }) => {
@@ -27,6 +27,6 @@ const SimpleServiceCard: React.FC<SimpleServiceCardProps> = ({ service }) => {
       <h3 className="text-xl font-bold mb-4">SimpleServiceCard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default SimpleServiceCard;
+  ),
+},
+export default SimpleServiceCard,

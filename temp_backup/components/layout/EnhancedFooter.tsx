@@ -1,19 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Zap, Brain, Atom, Rocket, Shield, Target, 
   Phone, Mail, MapPin, Globe, ExternalLink,
   Twitter, Linkedin, Github, Facebook, Instagram,
   ArrowRight, Star, TrendingUp, Users, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -145,7 +145,7 @@ const serviceCategories = [
       { name: 'AI Threat Detection', href: '/ai-threat-detection' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -156,7 +156,7 @@ const companyLinks = [
   { name: 'Resources', href: '/resources' },
   { name: 'Services Advertising', href: '/services-advertising' },
   { name: 'Market Pricing', href: '/market-pricing' }
-];
+],
 
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
@@ -167,24 +167,24 @@ const supportLinks = [
   { name: 'Mobile Device Management (MDM)', href: '/mobile-device-management' },
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
   { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
-];
+],
 
 export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const serviceCategories = [
     {
@@ -231,7 +231,7 @@ export default function EnhancedFooter() {
         { name: 'Smart HR Assistant', href: '/services/smart-hr-assistant' }
       ]
     }
-  ];
+  ],
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
@@ -240,7 +240,7 @@ export default function EnhancedFooter() {
     { name: 'News & Updates', href: '/news' },
     { name: 'Blog', href: '/blog' },
     { name: 'Support', href: '/support' }
-  ];
+  ],
 
   const resourceLinks = [
     { name: 'Documentation', href: '/docs' },
@@ -249,7 +249,7 @@ export default function EnhancedFooter() {
     { name: 'Integration Guides', href: '/integrations' },
     { name: 'Best Practices', href: '/best-practices' },
     { name: 'Community Forum', href: '/community' }
-  ];
+  ],
 
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -258,7 +258,7 @@ export default function EnhancedFooter() {
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
     { name: 'GDPR', href: '/gdpr' }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -266,14 +266,14 @@ export default function EnhancedFooter() {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> }
-  ];
+  ],
 
   const stats = [
     { label: 'Services', value: '500+', icon: <Zap className="w-6 h-6" /> },
     { label: 'Clients', value: '10K+', icon: <Users className="w-6 h-6" /> },
     { label: 'ROI Average', value: '800%', icon: <TrendingUp className="w-6 h-6" /> },
     { label: 'Uptime', value: '99.9%', icon: <Star className="w-6 h-6" /> }
-  ];
+  ],
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -281,7 +281,7 @@ const EnhancedFooter: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">EnhancedFooter</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedFooter;
+export default EnhancedFooter,

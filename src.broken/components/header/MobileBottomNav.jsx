@@ -3,15 +3,15 @@
             <div className="relative">
               <item.icon className="h-5 w-5 mb-1"/>
 =======
-import React from "react";"
-import { Link, useLocation  } from 'react-router-dom';"
-import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from '@/context/CartContext';"
-import { cn } from '@/lib/utils';"
-import { useAuth } from '@/hooks/useAuth';"
-import { useFavorites } from '@/hooks/useFavorites';
+import React from "react","
+import { Link, useLocation  } from 'react-router-dom',"
+import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart import { useCart } from '@/context/CartContext',"
+import { cn } from '@/lib/utils',"
+import { useAuth } from '@/hooks/useAuth',"
+import { useFavorites } from '@/hooks/useFavorites',
 export default function Page() {
- = useCart();
-    const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+ = useCart(),
+    const cartCount = items.reduce((sum, i) => sum + i.quantity, 0),
     const navItems = [{
 "
             name: "Home","
@@ -58,9 +58,9 @@ export default function Page() {
             matches: (path) => path.startsWith("/dashboard"),
             authRequired: true
 
-    ];
+    ],
     // Filter items based on auth status
-    const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated));"
+    const visibleItems = navItems.filter(item => !item.authRequired || (item.authRequired && isAuthenticated)),"
     return (<nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">"
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (<Link key={item.name} to={item.href} className = {

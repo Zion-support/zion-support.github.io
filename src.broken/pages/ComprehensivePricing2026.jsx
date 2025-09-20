@@ -1,22 +1,22 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-;
-  const filteredServices = getCategoryServices(selectedCategory) ;
+,
+  const filteredServices = getCategoryServices(selectedCategory) ,
   const getAnnualPrice = monthlyPrice => {
-    const price = parseInt(monthlyPrice.replace (/[^0 - 9]/g, '') ) ;
-    const annualPrice = price * 12 * 0.8; // 20% discount for annual
-    return `$${annualPrice.toLocaleString () }`;
-  };
+    const price = parseInt(monthlyPrice.replace (/[^0 - 9]/g, '') ) ,
+    const annualPrice = price * 12 * 0.8, // 20% discount for annual
+    return `$${annualPrice.toLocaleString () }`,
+  },
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -24,10 +24,10 @@ export default function Page() {
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
-      },
-    },
-  };
+        ease: 'easeOut'
+      }
+    }
+  },
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -438,5 +438,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) ,
+},

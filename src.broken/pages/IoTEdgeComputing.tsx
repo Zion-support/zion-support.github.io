@@ -1,66 +1,60 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: Network,
       title: 'Distributed Computing',
       description: 'Efficient resource utilization across edge nodes',
-      color: 'from - purple - 500 to - pink - 500',
+      color: 'from - purple - 500 to - pink - 500'
     },
     {
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Enterprise - grade security for IoT ecosystems',
-      color: 'from - red - 500 to - pink - 500',
+      color: 'from - red - 500 to - pink - 500'
     },
     {
       icon: Target,
       title: 'Scalable Architecture',
       description: 'Flexible deployment across diverse environments',
-      color: 'from - indigo - 500 to - blue - 500',
-    },
-  ];
+      color: 'from - indigo - 500 to - blue - 500'
+    }
+  ],
 
   const applications = [{
       title: 'Smart Cities',
       description: 'Urban infrastructure monitoring and management',
       icon: Building,
-      benefits: ['Traffic optimization', 'Energy management', 'Public safety'],
+      benefits: ['Traffic optimizationEnergy management', 'Public safety']
     },
     {
       title: 'Industrial IoT',
       description: 'Manufacturing process optimization and monitoring',
       icon: Factory,
-      benefits: ['Predictive maintenance',
-        'Quality control',
-        'Efficiency gains',
-      ],
+      benefits: ['Predictive maintenanceQuality control',
+        'Efficiency gains'
+      ]
     },
     {
       title: 'Healthcare',
       description: 'Patient monitoring and medical device management',
       icon: Activity,
-      benefits: ['Remote monitoring', 'Device integration', 'Data analytics'],
+      benefits: ['Remote monitoringDevice integration', 'Data analytics']
     },
     {
       title: 'Agriculture',
       description: 'Precision farming and crop monitoring',
       icon: Globe,
-      benefits: ['Soil monitoring', 'Irrigation control', 'Crop optimization'],
-    },
-  ];
+      benefits: ['Soil monitoringIrrigation control', 'Crop optimization']
+    }
+  ],
 
-  const technologies = ['5G Networks',
-    'LPWAN',
-    'Edge Computing',
-    'Machine Learning',
-    'Blockchain',
-    'Cloud Platforms',
-    'IoT Protocols',
-    'Sensor Networks',
-    'Data Analytics',
-    'Security Frameworks',
-  ];
+  const technologies = ['5G NetworksLPWAN',
+    'Edge ComputingMachine Learning',
+    'BlockchainCloud Platforms',
+    'IoT ProtocolsSensor Networks',
+    'Data AnalyticsSecurity Frameworks'
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -240,7 +234,7 @@ export default function Page() {
               Join the IoT and edge computing revolution with Zion Tech Group.Our solutions are designed to connect devices, process data
               intelligently, and create new possibilities for automation and
               insight.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify - center items -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify - center items -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - green - 500 to - emerald - 500 hover:from - green - 600 hover:to - emerald - 600 text-white font - bold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-green - 500 / 25 flex items - center space - x-2"
@@ -259,5 +253,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

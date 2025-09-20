@@ -1,44 +1,44 @@
-import { useState, useEffect } from 'react';"
-import { format } from 'date-fns';"
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X  } from 'lucide-react';"
-import { useWebhooks } from '@/hooks/useWebhooks';"
-import { Button } from '@/components/ui/button';"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';"
-import { Input } from '@/components/ui/input';"
-import { Checkbox } from '@/components/ui/checkbox';"
-import { Label } from '@/components/ui/label';"
-import { Badge } from '@/components/ui/badge';"
-import { Switch } from '@/components/ui/switch';"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';"
-import { ScrollArea } from '@/components/ui/scroll-area';"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useState, useEffect } from 'react',"
+import { format } from 'date-fns',"
+import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X  } from 'lucide-react',"
+import { useWebhooks } from '@/hooks/useWebhooks',"
+import { Button } from '@/components/ui/button',"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog',"
+import { Input } from '@/components/ui/input',"
+import { Checkbox } from '@/components/ui/checkbox',"
+import { Label } from '@/components/ui/label',"
+import { Badge } from '@/components/ui/badge',"
+import { Switch } from '@/components/ui/switch',"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu',"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',"
+import { ScrollArea } from '@/components/ui/scroll-area',"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
 export default function Page() {
-;
+,
     const handleTestWebhook = async(webhookId) => {
 
-        await testWebhook(webhookId, testEventType);
-        setShowTestResult(true)};
+        await testWebhook(webhookId, testEventType),
+        setShowTestResult(true)},
     const resetWebhookForm = () => {
 "
-        setWebhookName("");"
-        setWebhookUrl("");"
-        setWebhookSecret("");
-        setSelectedEvents([])};
+        setWebhookName(""),"
+        setWebhookUrl(""),"
+        setWebhookSecret(""),
+        setSelectedEvents([])},
     // Event type options
     const eventOptions = ['
         { value: 'new_application', label: 'New Application', description: 'When a talent applies to a job' },
         { value: 'quote_received', label: 'Quote Received', description: 'When a quote is received from talent' },
         { value: 'milestone_approved', label: 'Milestone Approved', description: 'When a project milestone is approved' },
-        { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' },
-    ];
+        { value: 'talent_hired', label: 'Talent Hired', description: 'When talent is hired for a project' }
+    ],
     // Toggle an event selection
     const toggleEvent = (event) => {
 
         setSelectedEvents(prev => prev.includes(event)
             ? prev.filter(e => e !== event)
-            [...prev, event])};"
+            [...prev, event])},"
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>"
         <CardTitle className="text-xl flex items-center">"
@@ -103,7 +103,7 @@ export default function Page() {
               
               <DialogFooter>"
                 <Button variant="outline" onClick={() => {
-            setShowCreateDialog(false);
+            setShowCreateDialog(false),
             resetWebhookForm()}}>
                   Cancel
                 </Button>"
@@ -191,11 +191,11 @@ export default function Page() {
 
             if(!open) {
 
-                setShowTestDialog(null);
-                setTestEventType('new_application');
+                setShowTestDialog(null),
+                setTestEventType('new_application'),
                 if(showTestResult) {
 
-                    setShowTestResult(false);
+                    setShowTestResult(false),
                     clearTestResult()}
             }
         }}>"
@@ -258,13 +258,13 @@ export default function Page() {
               
               <DialogFooter>"
                 <Button variant="default" onClick={() => {
-                setShowTestDialog(null);
-                setShowTestResult(false);
+                setShowTestDialog(null),
+                setShowTestResult(false),
                 clearTestResult()}}>
                   Close
                 </Button>"
                 <Button variant="outline" onClick={() => {
-                setShowTestResult(false);
+                setShowTestResult(false),
                 clearTestResult()}}>
                   Test Another Event
                 </Button>

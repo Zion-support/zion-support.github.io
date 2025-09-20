@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Edge Processing",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "40% operational improvement, 50% cost savings, better citizen services, enhanced monitoring",
     logo: "SCS"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: Gauge,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const fiveGBenefits = [{
     title: "Ultra - Fast Connectivity",
     description: "5G provides unprecedented speed and bandwidth for enterprise operations",
     icon: Zap,
-    examples["High speed", "Low latency", "High bandwidth", "Better performance"];
-  },;
+    examples["High speed", "Low latency", "High bandwidth", "Better performance"],
+  },
   {
     title: "Network Slicing",
     description: "Custom network slices for different enterprise applications and requirements",
     icon: Layers,
-    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"];
-  },;
+    examples["Custom networks", "Application isolation", "Better security", "Optimized performance"],
+  },
   {
     title: "Edge Computing",
     description: "Local processing and reduced latency for enterprise applications",
     icon: Server,
-    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"];
-  },;
+    examples["Local processing", "Reduced latency", "Better performance", "Cost optimization"],
+  },
   {
     title: "IoT Integration",
     description: "Seamless integration of IoT devices and applications",
     icon: Wifi,
-    examples["Device connectivity", "Data collection", "Real - time monitoring", "Automation"];
+    examples["Device connectivity", "Data collection", "Real - time monitoring", "Automation"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Network Infrastructure', 'Applications', 'IoT', 'Edge Computing', 'Security', 'Analytics'];
+  const categories = ['AllNetwork Infrastructure', 'ApplicationsIoT', 'Edge ComputingSecurity', 'Analytics'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? fiveGSolutions
-    : fiveGSolutions.filter(solution => solution.category === selectedCategory) ;
+    : fiveGSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -183,10 +183,10 @@ const fiveGBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* 5G Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -242,13 +242,13 @@ const fiveGBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* 5G Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -306,13 +306,13 @@ const fiveGBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -368,13 +368,13 @@ const fiveGBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -474,7 +474,7 @@ const fiveGBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -545,13 +545,13 @@ const fiveGBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import Card from '../../components/ui/Card',
 export const metadata = {,
-  title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence';
-  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.';
-  keywords: ['AI 2026artificial intelligence breakthrough', 'machine learning revolutionneural networks', 'quantum AI'],
-};
+  title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
+  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
+  keywords: ['AI 2026artificial intelligence breakthroughmachine learning revolutionneural networks', 'quantum AI']
+},
 export default function AI2026BreakthroughRevolution() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
@@ -47,7 +47,7 @@ export default function AI2026BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Breakthroughs Section */,}
+      {/* Key Breakthroughs Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary AI Breakthroughs</h2>,
@@ -56,7 +56,7 @@ export default function AI2026BreakthroughRevolution() {,
               <div className="text-4xl mb-4">🧠</div>,
               <h3 className="text-2xl font-bold mb-4">Quantum Neural Networks</h3>,
               <p className="text-gray-200 mb-6">,
-                Revolutionary quantum-enhanced neural networks that process information at unprecedented speeds;
+                Revolutionary quantum-enhanced neural networks that process information at unprecedented speeds,
                 enabling real-time complex decision making across all industries.,
               </p>,
               <ul className="text-sm text-gray-300 space-y-2">,
@@ -69,7 +69,7 @@ export default function AI2026BreakthroughRevolution() {,
               <div className="text-4xl mb-4">🤖</div>,
               <h3 className="text-2xl font-bold mb-4">Autonomous Business Systems</h3>,
               <p className="text-gray-200 mb-6">,
-                Fully autonomous business operations powered by advanced AI that can make complex decisions;
+                Fully autonomous business operations powered by advanced AI that can make complex decisions,
                 manage resources, and optimize processes without human intervention.,
               </p>,
               <ul className="text-sm text-gray-300 space-y-2">,
@@ -118,7 +118,7 @@ export default function AI2026BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Stack */,}
+      {/* Technology Stack */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Cutting-Edge Technology</h2>,
@@ -168,7 +168,7 @@ export default function AI2026BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Future?</h2>,
@@ -192,5 +192,4 @@ export default function AI2026BreakthroughRevolution() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

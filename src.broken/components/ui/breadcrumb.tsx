@@ -91,7 +91,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    &#8230;
+    &#8230,
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
@@ -102,5 +102,5 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-  BreadcrumbEllipsis,
+  BreadcrumbEllipsis
 }

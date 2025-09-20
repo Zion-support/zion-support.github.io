@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from 'react',
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
  className="mt-4">
@@ -16,6 +16,6 @@ export default function Page() {
         </Button>
       </div>
     </form>
-  );
+  ),
 }
 '"

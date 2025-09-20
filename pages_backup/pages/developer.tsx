@@ -20,18 +20,17 @@ export default function DeveloperPage() {,
         <a href="/support" className="text-cyan-400 underline">Support</Link>,
       </div>,
       </div>,
-    </>,
-  ),
-};
+    </>)
+},
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
 export default function DeveloperPage() {_return (,
     <>,
       <Head>,
@@ -48,5 +47,4 @@ export default function DeveloperPage() {_return (,
         <a href="/support" className="text-cyan-400 underline">Support</a>,
       </div>,
       </div>,
-    </>,
-  ),
+    </>),

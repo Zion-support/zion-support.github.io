@@ -1,170 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import SEO from '../components/SEO';
-
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from "lucide-react";
+import SEO from "../components/SEO";
 interface ServiceStatus {
-  id: string;
-  name: string;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance';
-  uptime: number;
-  responseTime: number;
-  lastUpdated: string;
-  description: string;
-  icon: React.ComponentType<any>;
+  id: string,name: string,status: 'operational' | 'degraded' | 'outage' | 'maintenance',uptime: number,responseTime: number,lastUpdated: string,description: string,icon: React.ComponentType<any>
 }
 
 interface Incident {
-  id: string;
-  title: string;
-  description: string;
-  status: 'investigating' | 'identified' | 'monitoring' | 'resolved';
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  startTime: string;
-  endTime?: string;
-  affectedServices: string[];
+  id: string,title: string,description: string,status: 'investigating' | 'identified' | 'monitoring' | 'resolved',severity: 'low' | 'medium' | 'high' | 'critical',startTime: string;
+  endTime?: string,
+  affectedServices: string[]
 }
 
 const services: ServiceStatus[] = [
   {
-    id: 'api',
-    name: 'API Services',
-    status: 'operational',
-    uptime: 99.99,
-    responseTime: 45,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Core API endpoints and microservices',
-    icon: Server
-  },
+    id: 'api',name: 'API Services',status: 'operational',uptime: 99.99,responseTime: 45,lastUpdated: '2025-08-27T16:48:00Z',description: 'Core API endpoints and microservices',icon: Server
+  };
   {
-    id: 'database',
-    name: 'Database Systems',
-    status: 'operational',
-    uptime: 99.95,
-    responseTime: 12,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Primary and replica database clusters',
-    icon: Database
-  },
+    id: 'database',name: 'Database Systems',status: 'operational',uptime: 99.95,responseTime: 12,lastUpdated: '2025-08-27T16:48:00Z',description: 'Primary and replica database clusters',icon: Database
+  };
   {
-    id: 'web',
-    name: 'Web Application',
-    status: 'operational',
-    uptime: 99.98,
-    responseTime: 180,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Main website and user interface',
-    icon: Globe
-  },
+    id: 'web',name: 'Web Application',status: 'operational',uptime: 99.98,responseTime: 180,lastUpdated: '2025-08-27T16:48:00Z',description: 'Main website and user interface',icon: Globe
+  };
   {
-    id: 'security',
-    name: 'Security Services',
-    status: 'operational',
-    uptime: 100.00,
-    responseTime: 8,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Authentication, authorization, and threat detection',
+    id: 'security',name: 'Security Services',status: 'operational',uptime: 100.00,responseTime: 8,lastUpdated: '2025-08-27T16:48:00Z',description: 'Authentication, authorization, and threat detection',
     icon: Shield
-  },
+  };
   {
-    id: 'ai',
-    name: 'AI Services',
-    status: 'operational',
-    uptime: 99.92,
-    responseTime: 320,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Machine learning models and AI processing',
-    icon: Zap
-  },
+    id: 'ai',name: 'AI Services',status: 'operational',uptime: 99.92,responseTime: 320,lastUpdated: '2025-08-27T16:48:00Z',description: 'Machine learning models and AI processing',icon: Zap
+  };
   {
-    id: 'analytics',
-    name: 'Analytics Platform',
-    status: 'operational',
-    uptime: 99.89,
-    responseTime: 95,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Data analytics and reporting systems',
-    icon: BarChart3
+    id: 'analytics',name: 'Analytics Platform',status: 'operational',uptime: 99.89,responseTime: 95,lastUpdated: '2025-08-27T16:48:00Z',description: 'Data analytics and reporting systems',icon: BarChart3
   }
 ];
-
 const incidents: Incident[] = [
   {
-    id: 'inc-001',
-    title: 'Scheduled Maintenance - Database Optimization',
-    description: 'Routine database maintenance to improve performance and reliability.',
-    status: 'monitoring',
-    severity: 'low',
-    startTime: '2025-08-27T14:00:00Z',
-    affectedServices: ['database', 'analytics'],
-    endTime: '2025-08-27T16:00:00Z'
+    id: 'inc-001',title: 'Scheduled Maintenance - Database Optimization',description: 'Routine database maintenance to improve performance and reliability.',status: 'monitoring',severity: 'low',startTime: '2025-08-27T14:00:00Z',affectedServices: ['databaseanalytics'],endTime: '2025-08-27T16:00:00Z'
   }
 ];
-
 const getStatusColor = (status: ServiceStatus['status']) => {
   switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
     case 'degraded':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
     case 'outage':
-      return 'text-red-400 bg-red-400/10 border-red-400/20';
+      return 'text-red-400 bg-red-400/10 border-red-400/20',
     case 'maintenance':
-      return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
-    default:
-      return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+      return 'text-blue-400 bg-blue-400/10 border-blue-400/20',
+    default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   }
 };
-
 const getStatusIcon = (status: ServiceStatus['status']) => {
   switch (status) {
     case 'operational':
       return CheckCircle;
     case 'degraded':
-      return AlertCircle;
+      return AlertCircle,
     case 'outage':
-      return XCircle;
+      return XCircle,
     case 'maintenance':
-      return Clock;
-    default:
-      return Clock;
+      return Clock,
+    default: return Clock
   }
 };
-
 const getSeverityColor = (severity: Incident['severity']) => {
   switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     case 'medium':
-      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+      return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
     case 'high':
-      return 'text-orange-400 bg-orange-400/10 border-orange-400/20';
+      return 'text-orange-400 bg-orange-400/10 border-orange-400/20',
     case 'critical':
-      return 'text-red-400 bg-red-400/10 border-red-400/20';
-    default:
-      return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+      return 'text-red-400 bg-red-400/10 border-red-400/20',
+    default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
   }
 };
-
 export default function SystemStatus() {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [lastUpdated, setLastUpdated] = useState(new Date()),
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLastUpdated(new Date());
-    }, 30000); // Update every 30 seconds
+      setLastUpdated(new Date()),
+    }, 30000), // Update every 30 seconds
 
     return () => clearInterval(interval);
   }, []);
-
   const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 
     : services.some(s => s.status === 'outage') 
     ? 'outage' 
     : 'degraded';
-
   const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
-
   return (
     <motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -443,7 +371,7 @@ export default function SystemStatus() {
             <p className="text-gray-300 mb-6">
               Experiencing issues? Our support team is available 24/7 to help.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/support"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
@@ -461,5 +389,5 @@ export default function SystemStatus() {
         </motion.div>
       </div>
     </motion.div>
-  );
+  )
 }

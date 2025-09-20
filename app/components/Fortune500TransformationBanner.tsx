@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function Fortune500TransformationBanner() {,
   return (,
     <section className="py-8 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900">,
@@ -49,5 +49,4 @@ export default function Fortune500TransformationBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

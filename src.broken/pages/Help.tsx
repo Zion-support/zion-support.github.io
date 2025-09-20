@@ -1,25 +1,25 @@
-import { useState, useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Input } from '@/components/ui/input';
-import { Markdown } from '@/components/ui/markdown';
-import { SEO } from '@/components/SEO';
-import { SupportChatbot } from '@/components/SupportChatbot';
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { GradientHeading } from '@/components/GradientHeading',
+import { Input } from '@/components/ui/input',
+import { Markdown } from '@/components/ui/markdown',
+import { SEO } from '@/components/SEO',
+import { SupportChatbot } from '@/components/SupportChatbot',
 
-interface Article { slug: string; title: string; content: string; }
+interface Article { slug: string, title: string, content: string }
 
 export default function Help() {
-  const [query, setQuery] = useState('');
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [selected, setSelected] = useState<Article | null>(null);
+  const [query, setQuery] = useState(''),
+  const [articles, setArticles] = useState<Article[]>([]),
+  const [selected, setSelected] = useState<Article | null>(null),
 
   useEffect(() => {
     fetch(`/api/help/articles?q=${encodeURIComponent(query)}`)
       .then(r => r.json())
       .then(setArticles)
-      .catch(() => setArticles([]));
-  }, [query]);
+      .catch(() => setArticles([])),
+  }, [query]),
 
   return (
     <>
@@ -57,5 +57,5 @@ export default function Help() {
       <SupportChatbot />
       <Footer />
     </>
-  );
+  ),
 }

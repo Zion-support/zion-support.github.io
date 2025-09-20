@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 
 export default function Page() {
-    setExpandedSections(newExpanded)};
+    setExpandedSections(newExpanded)},
 
   const navigationSections = [{
 
       title: "Main Navigation",
       icon: Home,
-      items[;"
+      items[,"
         { name: "Home", href: "/", icon: Home },"
         { name: "Solutions", href: "/solutions", icon: Target },"
         { name: "Services", href: "/services", icon: Zap },"
@@ -28,12 +28,12 @@ export default function Page() {
                  />
 =======
       ]
-    },;
+    },
     {
 "
       title: "Service Areas",
       icon: Zap,
-      items[;"
+      items[,"
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },"
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },"
         { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },"
@@ -45,7 +45,7 @@ export default function Page() {
         { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },"
         { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
       ]
-    },;
+    },
     {
 "
       title: "Security & Compliance",
@@ -62,22 +62,22 @@ export default function Page() {
         { name: "Support", href: "/support", icon: HelpCircle }
       ]
 
-  ];
+  ],
 
   return ("
     <div className="w-64 bg-slate-900/95 backdrop-blur-xl border-r border-slate-700/50 h-screen overflow-y-auto">"      <div className="p-6">
         {/* Logo */}"
-        <div className="mb-8">;"
-        { name: "Sitemap", href: "/sitemap", icon: Globe },;"
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;"
-        { name: "Login", href: "/login", icon: User };
-      ]};
-  ];
+        <div className="mb-8">,"
+        { name: "Sitemap", href: "/sitemap", icon: Globe },"
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },"
+        { name: "Login", href: "/login", icon: User },
+      ]},
+  ],
 
-  const quickActions = [;"
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
-  ];
+  const quickActions = [,"
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },"
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" },
+  ],
 
   return ("
     <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">"
@@ -162,7 +162,7 @@ export default function Page() {
 "
                   <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300"  />"                  <span className="font-medium">{action.name}</span>
                 </Link>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </motion.div>
 
@@ -296,11 +296,11 @@ export default function Page() {
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </aside>;) };
+              <MapPin className="w-3 h-3"  />,              <span>Middletown, DE</span>,
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </aside>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

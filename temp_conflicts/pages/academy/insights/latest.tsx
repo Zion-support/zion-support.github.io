@@ -1,7 +1,7 @@
-import insights from '../../../data/reports/academy-insights.json';
+import insights from '../../../data/reports/academy-insights.json',
 
 export default function AcademyInsights() {
-  const t = insights as any;
+  const t = insights as any,
   return (
     <div className="py-10 space-y-6">
       <h1 className="text-2xl font-semibold">Academy Insights</h1>
@@ -34,5 +34,5 @@ export default function AcademyInsights() {
         </ul>
       </section>
     </div>
-  );
+  ),
 }

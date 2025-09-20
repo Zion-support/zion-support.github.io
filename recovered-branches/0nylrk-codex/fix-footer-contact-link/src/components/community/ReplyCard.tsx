@@ -1,7 +1,7 @@
 
-  onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
-  className?: string;
+  onMarkAnswer?: () => void,
+  canMarkAnswer?: boolean,
+  className?: string,
 }
 ,
       className,
@@ -19,16 +19,15 @@
             {reply.authorRole && (,
               <Badge variant="outline" className="ml-2 text-xs">,
                 {reply.authorRole}
+              </Badge>)}
+            {reply && reply.isAnswer && (,
+              <Badge className="ml-2 bg-green-500 text-white">,
+                <CheckCircle className="h-3 w-3 mr-1" />,
+                Answer,
               </Badge>,
             )}
-            {reply && reply.isAnswer && (;
-              <Badge className="ml-2 bg-green-500 text-white">;
-                <CheckCircle className="h-3 w-3 mr-1" />;
-                Answer;
-              </Badge>;
-            )}
-          </div>;
-          <div className="text-xs text-muted-foreground">;
+          </div>,
+          <div className="text-xs text-muted-foreground">,
                 {reply.authorRole}
               </Badge>,
             )}
@@ -36,8 +35,7 @@
               <Badge className="ml-2 bg-green-500 text-white">,
                 <CheckCircle className="h-3 w-3 mr-1" />,
                 Answer,
-              </Badge>,
-            )}
+              </Badge>)}
           </div>,
           <div className="text-xs text-muted-foreground">,
             {timeAgo}
@@ -59,12 +57,11 @@
           <Button size="sm" variant="outline" onClick={onMarkAnswer} className="text-green-600">,
             <CheckCircle className="h-4 w-4 mr-1" />,
             Mark as Answer,
-          </Button>,
-        )}
+          </Button>)}
 ,
-export default ReplyCard;
+export default ReplyCard,
       </CardFooter>,
     </Card>,
-  );
-};
-export default ReplyCard;
+  ),
+},
+export default ReplyCard,

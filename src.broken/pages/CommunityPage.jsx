@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from 'react',
 export default function Page() {
 ,
         authorId: "user3",
         category: "project - help",
         categoryId: "project - help",
-        tags["testing", "automation", "ci - cd"],;
+        tags["testing", "automation", "ci - cd"],
         createdAt: "2025 - 04 - 10T14:30:00Z",
         updatedAt: "2025 - 04 - 10T14:30:00Z",
-        replies[],;
+        replies[],
         likes: 5,
         views: 45,
         upvotes: 5,
@@ -33,10 +33,10 @@ export default function Page() {
         authorId: "user4",
         category: "feedback",
         categoryId: "feedback",
-        tags["feature - request", "teams", "collaboration"],;
+        tags["feature - request", "teams", "collaboration"],
         createdAt: "2025 - 04 - 09T18:45:00Z",
         updatedAt: "2025 - 04 - 09T18:45:00Z",
-        replies[],;
+        replies[],
         likes: 12,
         views: 67,
         upvotes: 12,
@@ -62,10 +62,10 @@ export default function Page() {
         authorId: "user5",
         category: "project - help",
         categoryId: "project - help",
-        tags["client - management", "scope", "projects"],;
+        tags["client - management", "scope", "projects"],
         createdAt: "2025 - 04 - 08T10:20:00Z",
         updatedAt: "2025 - 04 - 08T10:20:00Z",
-        replies[],;
+        replies[],
         likes: 24,
         views: 89,
         upvotes: 24,
@@ -78,9 +78,9 @@ export default function Page() {
         authorAvatar: "https://i.pravatar.cc / 150?img = 11",
         authorRole: "Freelancer"
 
-];
-    const { user } = useAuth () ;
-    const [activeTab, setActiveTab] = useState("categories");
+],
+    const { user } = useAuth () ,
+    const [activeTab, setActiveTab] = useState("categories"),
     return (<>
       <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum.Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com / community"/>
 

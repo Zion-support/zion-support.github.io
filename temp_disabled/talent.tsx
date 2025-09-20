@@ -1,122 +1,114 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget
-import Layout from '../components/Layout';
+import Layout from '../components/Layout',
 const positions = [,
   {,
-    title: 'Senior Full Stack Developer';
-    department: 'Engineering';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '5+ years';
-    salary: '$80,000 - $120,000';
-    description: 'Lead development of our micro SaaS platforms and AI-powered solutions.';
+    title: 'Senior Full Stack Developer',
+    department: 'Engineering',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '5+ years',
+    salary: '$80,000 - $120,000',
+    description: 'Lead development of our micro SaaS platforms and AI-powered solutions.',
     requirements: [,
-      'ReactNext.jsNode.js expertiseCloud architecture experience';
-      'AI/ML integration knowledgeTeam leadership skills',
-    ];
-    benefits: [,
-      'Competitive salaryHealth insurance';
-      'Remote work optionsProfessional development',
+      'ReactNext.jsNode.js expertiseCloud architecture experienceAI/ML integration knowledgeTeam leadership skills'
     ],
-  };
+    benefits: [,
+      'Competitive salaryHealth insuranceRemote work optionsProfessional development'
+    ]
+  },
   {,
-    title: 'AI/ML Engineer';
-    department: 'AI Research';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '3+ years';
-    salary: '$90,000 - $140,000';
-    description: 'Develop and implement cutting-edge AI solutions for our clients.';
+    title: 'AI/ML Engineer',
+    department: 'AI Research',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '3+ years',
+    salary: '$90,000 - $140,000',
+    description: 'Develop and implement cutting-edge AI solutions for our clients.',
     requirements: [,
-      'PythonTensorFlowPyTorchMachine learning algorithms';
-      'Data science backgroundCloud AI services experience',
-    ];
-    benefits: [,
-      'Top-tier compensationResearch opportunities';
-      'Conference attendanceStock options',
+      'PythonTensorFlowPyTorchMachine learning algorithmsData science backgroundCloud AI services experience'
     ],
-  };
+    benefits: [,
+      'Top-tier compensationResearch opportunitiesConference attendanceStock options'
+    ]
+  },
   {,
-    title: 'DevOps Engineer';
-    department: 'Infrastructure';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '4+ years';
-    salary: '$85,000 - $130,000';
-    description: 'Manage and optimize our cloud infrastructure and deployment pipelines.';
+    title: 'DevOps Engineer',
+    department: 'Infrastructure',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '4+ years',
+    salary: '$85,000 - $130,000',
+    description: 'Manage and optimize our cloud infrastructure and deployment pipelines.',
     requirements: [,
-      'AWSAzureGCP expertiseDockerKubernetes';
-      'CI/CD pipeline designMonitoring and security',
-    ];
-    benefits: [,
-      'Flexible scheduleLearning budget';
-      'Certification supportPerformance bonuses',
+      'AWSAzureGCP expertiseDockerKubernetesCI/CD pipeline designMonitoring and security'
     ],
-  };
+    benefits: [,
+      'Flexible scheduleLearning budgetCertification supportPerformance bonuses'
+    ]
+  },
   {,
-    title: 'Product Manager';
-    department: 'Product';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '4+ years';
-    salary: '$95,000 - $135,000';
-    description: 'Drive product strategy and roadmap for our technology solutions.';
+    title: 'Product Manager',
+    department: 'Product',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '4+ years',
+    salary: '$95,000 - $135,000',
+    description: 'Drive product strategy and roadmap for our technology solutions.',
     requirements: [,
-      'Product management experienceTechnical background';
-      'User research skillsStrategic thinking',
-    ];
-    benefits: [,
-      'Leadership opportunitiesEquity participation';
-      'Travel opportunitiesMentorship program',
+      'Product management experienceTechnical backgroundUser research skillsStrategic thinking'
     ],
+    benefits: [,
+      'Leadership opportunitiesEquity participationTravel opportunitiesMentorship program'
+    ]
   }
-];
+],
 const benefits = [,
   {,
-    title: 'Competitive Compensation';
-    description: 'Above-market salaries with performance bonuses';
-    icon: Award,};
+    title: 'Competitive Compensation',
+    description: 'Above-market salaries with performance bonuses',
+    icon: Award},
   {,
-    title: 'Health & Wellness';
-    description: 'Comprehensive healthdentaland vision coverage';
-    icon: CheckCircle,};
+    title: 'Health & Wellness',
+    description: 'Comprehensive healthdentaland vision coverage',
+    icon: CheckCircle},
   {,
-    title: 'Remote Work';
-    description: 'Flexible remote work options with home office stipend';
-    icon: Globe,};
+    title: 'Remote Work',
+    description: 'Flexible remote work options with home office stipend',
+    icon: Globe},
   {,
-    title: 'Professional Growth';
-    description: 'Learning budgetconferencesand career development';
-    icon: Target,};
+    title: 'Professional Growth',
+    description: 'Learning budgetconferencesand career development',
+    icon: Target},
   {,
-    title: 'Work-Life Balance';
-    description: 'Flexible hoursunlimited PTOand mental health support';
-    icon: Clock,};
+    title: 'Work-Life Balance',
+    description: 'Flexible hoursunlimited PTOand mental health support',
+    icon: Clock},
   {,
-    title: 'Team Culture';
-    description: 'Collaborative environment with regular team events';
-    icon: Users,}
-];
+    title: 'Team Culture',
+    description: 'Collaborative environment with regular team events',
+    icon: Users}
+],
 const values = [,
   {,
-    title: 'Innovation';
-    description: 'We encourage creative thinking and cutting-edge solutions';
-    icon: Star,};
+    title: 'Innovation',
+    description: 'We encourage creative thinking and cutting-edge solutions',
+    icon: Star},
   {,
-    title: 'Collaboration';
-    description: 'We believe in the power of teamwork and shared success';
-    icon: Users,};
+    title: 'Collaboration',
+    description: 'We believe in the power of teamwork and shared success',
+    icon: Users},
   {,
-    title: 'Excellence';
-    description: 'We strive for the highest quality in everything we do';
-    icon: Award,};
+    title: 'Excellence',
+    description: 'We strive for the highest quality in everything we do',
+    icon: Award},
   {,
-    title: 'Growth';
-    description: 'We invest in our people and their professional development';
-    icon: Target,}
-];
+    title: 'Growth',
+    description: 'We invest in our people and their professional development',
+    icon: Target}
+],
 export default function TalentPage() {,
   return (,
     <Layout,
@@ -144,17 +136,17 @@ export default function TalentPage() {,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {jobOpenings.map((jobindex) => (,
                 <motion.div,
-                  key={job.id,}
-                  initial={{ opacity: 0y: 30 ,}}
-                  whileInView={{ opacity: 1y: 0 ,}}
-                  transition={{ duration: 0.8delay: index * 0.1 ,}}
-                  viewport={{ once: true ,}}
+                  key={job.id}
+                  initial={{ opacity: 0y: 30 }}
+                  whileInView={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.8delay: index * 0.1 }}
+                  viewport={{ once: true }}
                   className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
           <div className="container mx-auto px-4 relative z-10">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center",
             >,
               <h1 className="text-4xl md: text-6xl font-bold mb-6">,
@@ -183,13 +175,13 @@ export default function TalentPage() {,
             </motion.div>,
           </div>,
         </section>,
-        {/* Open Positions */,}
+        {/* Open Positions */}
         <section id="positions" className="py-16">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-12",
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,
@@ -202,16 +194,16 @@ export default function TalentPage() {,
             <div className="space-y-8">,
               {positions.map((positionindex) => (,
                 <motion.div,
-                  key={index,}
-                  initial={{ opacity: 0y: 30 ,}}
-                  animate={{ opacity: 1y: 0 ,}}
-                  transition={{ duration: 0.6delay: index * 0.1 ,}}
+                  key={index}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 overflow-hidden",
                 >,
                   <div className="p-8">,
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">,
                       <div>,
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title,}</h3>,
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>,
                         <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">,
                           <span className="flex items-center">,
                             <Briefcase className="w-4 h-4 mr-2" />,
@@ -234,17 +226,16 @@ export default function TalentPage() {,
                         </button>,
                       </div>,
                     </div>,
-                    <p className="text-gray-700 mb-6">{position.description,}</p>,
+                    <p className="text-gray-700 mb-6">{position.description}</p>,
                     <div className="grid md: grid-cols-2 gap-6">,
                       <div>,
                         <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>,
                         <ul className="space-y-2">,
                           {position.requirements.map((reqIndex) => (,
-                            <li key={reqIndex,} className="flex items-center text-gray-600">,
+                            <li key={reqIndex} className="flex items-center text-gray-600">,
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2" />,
                               {req}
-                            </li>,
-                          ))}
+                            </li>))}
                         </ul>,
                       </div>,
                       <div>,
@@ -254,8 +245,7 @@ export default function TalentPage() {,
                             <li key={benefitIndex} className="flex items-center text-gray-600">,
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2" />,
                               {benefit}
-                            </li>,
-                          ))}
+                            </li>))}
                         </ul>,
                       </div>,
                     </div>,
@@ -269,9 +259,9 @@ export default function TalentPage() {,
         <section className="py-16 bg-white">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-12",
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,
@@ -284,10 +274,10 @@ export default function TalentPage() {,
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {benefits.map((benefitindex) => (,
                 <motion.div,
-                  key={index,}
-                  initial={{ opacity: 0y: 30 ,}}
-                  animate={{ opacity: 1y: 0 ,}}
-                  transition={{ duration: 0.6delay: index * 0.1 ,}}
+                  key={index}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="text-center p-6",
                 >,
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">,
@@ -295,8 +285,7 @@ export default function TalentPage() {,
                   </div>,
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>,
                   <p className="text-gray-600">{benefit.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -304,9 +293,9 @@ export default function TalentPage() {,
         <section className="py-16">,
           <div className="container mx-auto px-4">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center mb-12",
             >,
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,
@@ -319,10 +308,10 @@ export default function TalentPage() {,
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {values.map((valueindex) => (,
                 <motion.div,
-                  key={index,}
-                  initial={{ opacity: 0y: 30 ,}}
-                  animate={{ opacity: 1y: 0 ,}}
-                  transition={{ duration: 0.6delay: index * 0.1 ,}}
+                  key={index}
+                  initial={{ opacity: 0y: 30 }}
+                  animate={{ opacity: 1y: 0 }}
+                  transition={{ duration: 0.6delay: index * 0.1 }}
                   className="text-center p-6 bg-white rounded-xl shadow-lg",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">,
@@ -330,8 +319,7 @@ export default function TalentPage() {,
                   </div>,
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>,
                   <p className="text-gray-600">{value.description}</p>,
-                </motion.div>,
-              ))}
+                </motion.div>))}
             </div>,
           </div>,
         </section>,
@@ -339,9 +327,9 @@ export default function TalentPage() {,
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">,
           <div className="container mx-auto px-4 text-center">,
             <motion.div,
-              initial={{ opacity: 0y: 30 ,}}
-              animate={{ opacity: 1y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0y: 30 }}
+              animate={{ opacity: 1y: 0 }}
+              transition={{ duration: 0.8 }}
             >,
               <h2 className="text-3xl md: text-4xl font-bold mb-6">,
                 Ready to Join Our Team?,
@@ -371,5 +359,5 @@ export default function TalentPage() {,
         </section>,
       </div>,
     </Layout>,
-  ),}
+  )}
 }))

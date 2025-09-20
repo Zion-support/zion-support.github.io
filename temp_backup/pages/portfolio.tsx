@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function PortfolioPage() {
   const projects = [
@@ -76,22 +76,22 @@ export default function PortfolioPage() {
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: Rocket },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },
     { number: "2500%", label: "Average ROI", icon: TrendingUp }
-  ];
+  ],
 
-  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"];
+  const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"],
 
-  const [selectedCategory, setSelectedCategory] = React.useState("All");
+  const [selectedCategory, setSelectedCategory] = React.useState("All"),
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+    : projects.filter(project => project.category === selectedCategory),
 
 const portfolio: React.FC = () => {
   return (
@@ -108,7 +108,7 @@ const portfolio: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default portfolio;
+export default portfolio,

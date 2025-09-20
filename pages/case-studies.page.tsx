@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import {
   CheckCircle,
   TrendingUp,
@@ -16,7 +16,7 @@ import {
   Cloud,
   Brain,
   Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 const caseStudies = [
   {
@@ -163,26 +163,26 @@ const caseStudies = [
     roi: "500%",
     image: "/images/case-study-6.jpg"
   }
-];
+],
 
-const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
-const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
+const industries = ['AllTechnology', 'HealthcareFinance', 'BankingManufacturing', 'Retail'],
+const technologies = ['AllAI/ML', 'Cloud ComputingCybersecurity', 'IoTData Analytics', 'DevOps'],
 
 export default function CaseStudies() {
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [selectedTechnology, setSelectedTechnology] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('All'),
+  const [selectedTechnology, setSelectedTechnology] = useState('All'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
+    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry,
     const matchesTechnology = selectedTechnology === 'All' || 
-      study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
+      study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase())),
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
+                         study.challenge.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    return matchesIndustry && matchesTechnology && matchesSearch;
-  });
+    return matchesIndustry && matchesTechnology && matchesSearch,
+  }),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -384,7 +384,7 @@ export default function CaseStudies() {
               Let's discuss how Zion Tech Group can transform your business with 
               cutting-edge technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
@@ -403,5 +403,5 @@ export default function CaseStudies() {
         </div>
       </section>
     </div>
-  );
+  )
 }

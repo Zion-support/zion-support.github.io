@@ -1,5 +1,5 @@
 
-let stripePromise: Promise<Stripe | null>;
+let stripePromise: Promise<Stripe | null>,
 
 export function getStripe(): Promise<Stripe | null> {
 

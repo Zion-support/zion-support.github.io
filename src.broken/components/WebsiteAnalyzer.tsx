@@ -1,8 +1,9 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
-export default WebsiteAnalyzer;
-import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
+export default WebsiteAnalyzer,
+import { CheckCircle,
+import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker',
 
 export default function Page() {
  catch(error) {
@@ -22,13 +23,13 @@ export default function Page() {
 
       // console.error('Analysis failed:', error)} finally {
 
-      setIsAnalyzing(false);
-      setProgress(100);
+      setIsAnalyzing(false),
+      setProgress(100),
       setCurrentPage('')}
-  };
+  },
 
-    a.href = url;
-    a.download = 'zion-website-analysis.json';
+    a.href = url,
+    a.download = 'zion-website-analysis.json',
               )}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}
 
@@ -55,30 +56,30 @@ export default function Page() {
                     <p className="text-2xl font - bold text-yellow-900">{analysisResult.summary.missingPages}</p>
                     <p className="text-sm text-yellow-700">Missing Pages</p>
 =======
-    a.href = url;'    a.download = 'zion-website-analysis.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url)};
+    a.href = url,'    a.download = 'zion-website-analysis.json',
+    document.body.appendChild(a),
+    a.click(),
+    document.body.removeChild(a),
+    URL.revokeObjectURL(url)},
 
       case 'broken':"
-        return <XCircle className="w-4 h-4 text-red-500"  />;
+        return <XCircle className="w-4 h-4 text-red-500"  />,
       case 'missing':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />,
       case 'external':"
-        return <ExternalLink className="w-4 h-4 text-blue-500"  />;
+        return <ExternalLink className="w-4 h-4 text-blue-500"  />,
       default:"
         return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
-  };
+  },
 
       case 'broken':'
-        return 'text-red-600 bg-red-100';
+        return 'text-red-600 bg-red-100',
       case 'missing':'
-        return 'text-yellow-600 bg-yellow-100';
+        return 'text-yellow-600 bg-yellow-100',
       case 'external':'
-        return 'text-blue-600 bg-blue-100';
+        return 'text-blue-600 bg-blue-100',
       default:'
-        return 'text-gray-600 bg-gray-100'}  };
+        return 'text-gray-600 bg-gray-100'}  },
 
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
@@ -246,6 +247,6 @@ export default function Page() {
             </div>
           </div>) }
       </div>
-    </div>) };
-export default WebsiteAnalyzer;'"`
+    </div>) },
+export default WebsiteAnalyzer,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

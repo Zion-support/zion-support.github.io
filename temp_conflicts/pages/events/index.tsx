@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function EventsIndexPage() {
   const events = [
@@ -69,9 +69,9 @@ export default function EventsIndexPage() {
       featured: false,
       registration: 'Closed'
     }
-  ];
+  ],
 
-  const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Meetup', 'Symposium'];
+  const eventTypes = ['AllConference', 'WorkshopWebinar', 'MeetupSymposium'],
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -265,7 +265,7 @@ export default function EventsIndexPage() {
             <h2 className="text-3xl font-bold text-white mb-4">Call for Speakers</h2>
             <p className="text-white/80 mb-6 max-w-2xl mx-auto">
               Are you an expert in AI automation, cloud computing, or autonomous systems? 
-              We&apos;re always looking for speakers to share their knowledge and insights at our events.
+              We&apos,re always looking for speakers to share their knowledge and insights at our events.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -312,10 +312,10 @@ export default function EventsIndexPage() {
           <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-400/30 rounded-lg p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Join Us?</h2>
             <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-              Whether you&apos;re looking to learn, network, or share your expertise, 
+              Whether you&apos,re looking to learn, network, or share your expertise, 
               our events provide the perfect platform for growth and collaboration.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
@@ -333,5 +333,5 @@ export default function EventsIndexPage() {
         </section>
       </main>
     </div>
-  );
+  )
 }

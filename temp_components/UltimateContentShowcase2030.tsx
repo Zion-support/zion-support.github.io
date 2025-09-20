@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -41,16 +41,16 @@ import {
   Dna,
   Activity,
   Zap as Lightning
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2030 = () => {
-  const [activeTabsetActiveTab] = useState('transcendent-ai');
-  const [hoveredCardsetHoveredCard] = useState(null);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('transcendent-ai'),
+  const [hoveredCardsetHoveredCard] = useState(null),
+  const [isVisiblesetIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
 
   const contentCategories = [
     {
@@ -81,7 +81,7 @@ const UltimateContentShowcase2030 = () => {
       color: 'from-orange-500 to-red-500',
       description: 'Technology beyond our universe'
     }
-  ];
+  ],
 
   const transcendentAI = [
     {
@@ -148,7 +148,7 @@ const UltimateContentShowcase2030 = () => {
       featured: false,
       rating: 4.7
     }
-  ];
+  ],
 
   const quantumRevolution = [
     {
@@ -183,7 +183,7 @@ const UltimateContentShowcase2030 = () => {
       featured: false,
       rating: 4.8
     }
-  ];
+  ],
 
   const neuralSynthesis = [
     {
@@ -218,7 +218,7 @@ const UltimateContentShowcase2030 = () => {
       featured: false,
       rating: 4.8
     }
-  ];
+  ],
 
   const omniversalTech = [
     {
@@ -253,24 +253,23 @@ const UltimateContentShowcase2030 = () => {
       featured: false,
       rating: 4.7
     }
-  ];
+  ],
 
   const getContentByCategory = (category) => {
     switch (category) {
       case 'transcendent-ai':
-        return transcendentAI;
+        return transcendentAI,
       case 'quantum-revolution':
-        return quantumRevolution;
+        return quantumRevolution,
       case 'neural-synthesis':
-        return neuralSynthesis;
+        return neuralSynthesis,
       case 'omniversal-tech':
-        return omniversalTech;
-      default:
-        return transcendentAI;
+        return omniversalTech,
+      default: return transcendentAI
     }
-  };
+  },
 
-  const currentContent = getContentByCategory(activeTab);
+  const currentContent = getContentByCategory(activeTab),
 
 const UltimateContentShowcase2030: React.FC = () => {
   return (
@@ -278,7 +277,7 @@ const UltimateContentShowcase2030: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2030</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2030;
+export default UltimateContentShowcase2030,

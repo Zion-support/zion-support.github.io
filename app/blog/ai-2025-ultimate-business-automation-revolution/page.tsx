@@ -1,25 +1,25 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide';
-  description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems and advanced neural architectures.';
-  keywords: ['AI automationbusiness automation', 'ROIenterprise transformation', 'AI 2025automation revolution', '25,000% ROIFortune 500'];
+  title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
+  description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems and advanced neural architectures.',
+  keywords: ['AI automationbusiness automationROIenterprise transformation', 'AI 2025automation revolution25,000% ROIFortune 500'],
   openGraph: {,
-    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide';
-    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI automationbusiness transformation', 'ROIenterprise solutions'],
-  };
+    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
+    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI through next-generation autonomous systems.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI automationbusiness transformationROIenterprise solutions']
+  },
   twitter: {,
-    card: 'summary_large_image';
-    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide';
-    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI.',
+    card: 'summary_large_image',
+    title: 'AI 2025: The Ultimate Business Automation Revolution - 25,000% ROI Guide',
+    description: 'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,000% ROI.'
   }
-};
+},
 export default function AI2025UltimateBusinessAutomationRevolutionPage() {,
   return (,
     <div>,
@@ -75,7 +75,7 @@ export default function AI2025UltimateBusinessAutomationRevolutionPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -219,4 +219,4 @@ export default function AI2025UltimateBusinessAutomationRevolutionPage() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

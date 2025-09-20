@@ -1,26 +1,26 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react',
 export default function Page() {
- = useBlockchainWeb3();
+ = useBlockchainWeb3(),
     const [nftForm, setNftForm] = useState({
 
         name: '',
         description: '',
         image: ''
-    });
+    }),
     const [transactionForm, setTransactionForm] = useState({
 
         to: '',
         value: '',
         data: ''
-    });
+    }),
     const handleConnectWallet = useCallback(async () => {
         try {
-            await connectWallet();
+            await connectWallet(),
             trackEvent('blockchain',dashboard',wallet_connected')}
         catch(error) {
 
             // console.error('Failed to connect wallet:', error)}
-    }, [connectWallet, trackEvent]);
+    }, [connectWallet, trackEvent]),
     const handleMintNFT = useCallback(async () => {
         if(nftForm.name.trim() && wallet) {
 
@@ -32,38 +32,38 @@ export default function Page() {
   image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name
 `
 }`
-                };
-                await mintNFT(contracts[1]?.address || '', metadata);
-                setNftForm({ name: '', description: '', image: '' });
-                setShowMintNFT(false);
+                },
+                await mintNFT(contracts[1]?.address || '', metadata),
+                setNftForm({ name: '', description: '', image: '' }),
+                setShowMintNFT(false),
                 trackEvent('blockchain',dashboard',nft_minted')}
             catch(error) {
 
                 // console.error('Failed to mint NFT:', error)}
         }
-    }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
+    }, [nftForm, wallet, contracts, mintNFT, trackEvent]),
     const handleSendTransaction = useCallback(async () => {
         if(transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
-                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
-                setTransactionForm({ to: '', value: '', data: '' });
-                setShowSendTransaction(false);
+                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null),
+                setTransactionForm({ to: '', value: '', data: '' }),
+                setShowSendTransaction(false),
                 trackEvent('blockchain',dashboard',transaction_sent')}
             catch(error) {
 
                 // console.error('Failed to send transaction:', error)}
         }
-    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
+    }, [transactionForm, wallet, sendTransaction, trackEvent]) ,
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'confirmed': return 'text-green-600 bg-green-100';
-            case 'pending': return 'text-yellow-600 bg-yellow-100';
-            case 'failed': return 'text-red-600 bg-red-100';
+            case 'confirmed': return 'text-green-600 bg-green-100',
+            case 'pending': return 'text-yellow-600 bg-yellow-100',
+            case 'failed': return 'text-red-600 bg-red-100',
             default: return 'text-gray-600 bg-gray-100'}
-    };`
+    },`
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}"
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -164,13 +164,12 @@ export default function Page() {
                 name: 'New Contract',
                 address: '0x' + Math.random().toString(36).substr(2, 40),
                 network: 'ethereum',
-                abi[],;
-                functions['function1',function2'],;
-                events['Event1',;
-  'Event2']
+                abi[],
+                functions['function1',function2'],
+                events['Event1Event2']
             
 "
-})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">;"
+})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover: bg-blue-700">,"
                   <Plus className="w-4 h-4 inline mr-2"/>
                   Add Contract
                 </button>
@@ -589,5 +588,5 @@ export default function Page() {
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>)};
+    </div>)},
 '"`

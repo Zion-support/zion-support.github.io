@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-export default SystemStatus;
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+export default SystemStatus,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -12,7 +12,7 @@ export default function Page() {
     responseTime: 12,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Primary and replica database clusters',
-    icon: Database,
+    icon: Database
   },
   {
     id: 'web',
@@ -22,7 +22,7 @@ export default function Page() {
     responseTime: 180,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Main website and user interface',
-    icon: Globe,
+    icon: Globe
   },
   {
     id: 'security',
@@ -32,7 +32,7 @@ export default function Page() {
     responseTime: 8,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Authentication, authorization, and threat detection',
-    icon: Shield,
+    icon: Shield
   },
   {
     id: 'ai',
@@ -42,7 +42,7 @@ export default function Page() {
     responseTime: 320,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Machine learning models and AI processing',
-    icon: Brain,
+    icon: Brain
   },
   {
     id: 'analytics',
@@ -52,9 +52,9 @@ export default function Page() {
     responseTime: 95,
     lastUpdated: '2025 - 08 - 27T16:48:00Z',
     description: 'Data analytics and reporting services',
-    icon: BarChart3,
-  },
-];
+    icon: BarChart3
+  }
+],
 
 const incidents: Incident[] = [{
     id: 'inc - 001',
@@ -65,70 +65,70 @@ const incidents: Incident[] = [{
     severity: 'low',
     startTime: '2025 - 08 - 27T02:00:00Z',
     endTime: '2025 - 08 - 27T04:00:00Z',
-    affectedServices: ['database'],
-  },
-];
+    affectedServices: ['database']
+  }
+],
 
 const SystemStatus: React.FC = () => {
-  const [lastUpdated, setLastUpdated] = useState(new Date () ) ;
-  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(new Date () ) ,
+  const [isRefreshing, setIsRefreshing] = useState(false),
 
   const refreshData = () => {
-    setIsRefreshing(true) ;
+    setIsRefreshing(true) ,
     setTimeout(() => {
-      setLastUpdated(new Date () ) ;
-      setIsRefreshing(false) ;
-    }, 1000) ;
-  };
+      setLastUpdated(new Date () ) ,
+      setIsRefreshing(false) ,
+    }, 1000) ,
+  },
 
   const getStatusColor = (status: string) => {
     switch(status) {
       case 'operational':
-        return 'text-green - 400 bg-green - 500 / 20';
+        return 'text-green - 400 bg-green - 500 / 20',
       case 'degraded':
-        return 'text-yellow-400 bg-yellow-500 / 20';
+        return 'text-yellow-400 bg-yellow-500 / 20',
       case 'outage':
-        return 'text-red - 400 bg-red - 500 / 20';
+        return 'text-red - 400 bg-red - 500 / 20',
       case 'maintenance':
-        return 'text-blue - 400 bg-blue - 500 / 20';
+        return 'text-blue - 400 bg-blue - 500 / 20',
       default:
-        return 'text-gray - 400 bg-gray - 500 / 20';
+        return 'text-gray - 400 bg-gray - 500 / 20'
     }
-  };
+  },
 
   const getStatusIcon = (status: string) => {
     switch(status) {
       case 'operational':
-        return < CheckCircle className="w-5 h-5" />;
+        return < CheckCircle className="w-5 h-5" />,
       case 'degraded':
-        return < AlertTriangle className="w-5 h-5" />;
+        return < AlertTriangle className="w-5 h-5" />,
       case 'outage':
-        return < XCircle className="w-5 h-5" />;
+        return < XCircle className="w-5 h-5" />,
       case 'maintenance':
-        return < Clock className="w-5 h-5" />;
+        return < Clock className="w-5 h-5" />,
       default:
-        return < Activity className="w-5 h-5" />;
+        return < Activity className="w-5 h-5" />
     }
-  };
+  },
 
   const getSeverityColor = (severity: string) => {
     switch(severity) {
       case 'critical':
-        return 'text-red - 400 bg-red - 500 / 20';
+        return 'text-red - 400 bg-red - 500 / 20',
       case 'high':
-        return 'text-orange - 400 bg-orange - 500 / 20';
+        return 'text-orange - 400 bg-orange - 500 / 20',
       case 'medium':
-        return 'text-yellow-400 bg-yellow-500 / 20';
+        return 'text-yellow-400 bg-yellow-500 / 20',
       case 'low':
-        return 'text-blue - 400 bg-blue - 500 / 20';
+        return 'text-blue - 400 bg-blue - 500 / 20',
       default:
-        return 'text-gray - 400 bg-gray - 500 / 20';
+        return 'text-gray - 400 bg-gray - 500 / 20'
     }
-  };
+  },
 
   const overallStatus = services.every(service => service.status === 'operational') ? 'operational'
     : services.some(service => service.status === 'outage') ? 'outage'
-      : 'degraded';
+      : 'degraded',
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
@@ -380,18 +380,17 @@ const SystemStatus: React.FC = () => {
 
                   {incident.affectedServices.length > 0 && (<div>
                       <h4 className="text-sm font - semibold text-gray - 400 mb-2">
-                        Affected Services:
-                      </h4>
+                        Affected Services: </h4>
                       <div  className="flex flex - wrap gap-2">
                         {incident.affectedServices.map(serviceId => {
-                          const service = services.find (s => s.id === serviceId) ;
+                          const service = services.find (s => s.id === serviceId) ,
                           return service ? (<span
                               key={serviceId}
                               className="inline - flex items - center px-2 py-1 bg-slate - 700 / 50 rounded text-xs text-gray -300"
                             >
                               <service.icon className="w-3 h-3 mr-1" />
                               {service.name}
-                            </span>) : null;
+                            </span>) : null,
                         }) }
                       </div>
                     </div>) }
@@ -432,6 +431,6 @@ const SystemStatus: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

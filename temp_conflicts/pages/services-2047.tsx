@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import Layout from '../components/layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from '../components/layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
   Lock, Cloud, Network, Truck, FileText, GraduationCap, DollarSign, Satellite, Cpu, ArrowUpRight,
   Search, Filter, Grid, List, BookOpen, Video, MessageCircle, Calendar, MapPin, Phone, Mail
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our new revolutionary services
-import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas';
-import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services';
-import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
+import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas',
+import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services',
+import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services',
 
 // Import our new innovative 2025 services
-import { innovativeAIAutonomousEcosystemServices2025 } from '../data/2025-innovative-ai-autonomous-ecosystem';
-import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations';
-import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-micro-saas-breakthroughs';
+import { innovativeAIAutonomousEcosystemServices2025 } from '../data/2025-innovative-ai-autonomous-ecosystem',
+import { cuttingEdgeITInfrastructureInnovations2025 } from '../data/2025-cutting-edge-it-infrastructure-innovations',
+import { innovativeMicroSaasBreakthroughs2025 } from '../data/2025-innovative-micro-saas-breakthroughs',
 
 const Services2047: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc'),
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [
@@ -34,18 +34,18 @@ const Services2047: React.FC = () => {
     ...innovativeAIAutonomousEcosystemServices2025,
     ...cuttingEdgeITInfrastructureInnovations2025,
     ...innovativeMicroSaasBreakthroughs2025
-  ];
+  ],
 
   // Filter services by category and search
   const getFilteredServices = () => {
-    let filtered = allRevolutionaryServices;
+    let filtered = allRevolutionaryServices,
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => 
         service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
         (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-      );
+      ),
     }
 
     // Filter by search query
@@ -54,40 +54,40 @@ const Services2047: React.FC = () => {
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      ),
     }
 
     // Sort services
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+      let aValue: any, bValue: any,
       
       switch (sortBy) {
         case 'name':
-          aValue = a.name;
-          bValue = b.name;
-          break;
+          aValue = a.name,
+          bValue = b.name,
+          break,
         case 'price':
-          aValue = a.pricing?.starter || '0';
-          bValue = b.pricing?.starter || '0';
-          break;
+          aValue = a.pricing?.starter || '0',
+          bValue = b.pricing?.starter || '0',
+          break,
         case 'category':
-          aValue = a.category;
-          bValue = b.category;
-          break;
+          aValue = a.category,
+          bValue = b.category,
+          break,
         default:
-          aValue = a.name;
-          bValue = b.name;
+          aValue = a.name,
+          bValue = b.name
       }
 
       if (sortOrder === 'asc') {
-        return aValue.localeCompare(bValue);
+        return aValue.localeCompare(bValue),
       } else {
-        return bValue.localeCompare(aValue);
+        return bValue.localeCompare(aValue),
       }
-    });
+    }),
 
-    return filtered;
-  };
+    return filtered,
+  },
 
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allRevolutionaryServices.length },
@@ -96,9 +96,9 @@ const Services2047: React.FC = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allRevolutionaryServices.filter(s => s.category.includes('Security')).length },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-500 to-teal-500', count: allRevolutionaryServices.filter(s => (s as any).type === 'Micro SAAS' || s.category.includes('Business')).length },
     { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allRevolutionaryServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length }
-  ];
+  ],
 
-  const filteredServices = getFilteredServices();
+  const filteredServices = getFilteredServices(),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -109,7 +109,7 @@ const Services2047: React.FC = () => {
         delayChildren: 0.3
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -121,11 +121,11 @@ const Services2047: React.FC = () => {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
   const handleServiceClick = (slug: string) => {
-    window.location.href = slug;
-  };
+    window.location.href = slug
+  },
 
   return (
     <Layout
@@ -417,7 +417,7 @@ const Services2047: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => window.location.href = '/contact'}
-                className="px-8 py-4 border-2 border-blue-500/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm"
+                className="px-8 py-4 border-2 border-blue-500/30 text-blue-400 font-semibold rounded-xl hover: bg-blue-500/10 hover:border-blue-500/50 transition-all duration-300 backdrop-blur-sm"
               >
                 Contact Us
               </motion.button>
@@ -426,7 +426,7 @@ const Services2047: React.FC = () => {
         </div>
       </section>
     </Layout>
-  );
-};
+  )
+},
 
-export default Services2047;
+export default Services2047,

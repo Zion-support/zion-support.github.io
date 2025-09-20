@@ -1,14 +1,14 @@
-import { Link  } from 'react-router-dom';
- from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from '@/data/microSaasServices';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
-;
+import { Link  } from 'react-router-dom',
+ from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from '@/data/microSaasServices',
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe  } from 'lucide-react',
+import { Link  } from 'react-router-dom',
+,
 const features = ['
-  'AI-Powered Automation',Real-time Analytics',Multi-cloud Support',API-First Architecture',Scalable Infrastructure',Custom Integrations',White-label Solutions',Comprehensive Documentation',24/7 Technical Support',99.9% Uptime Guarantee',SOC 2 Type II Compliant',30-Day Money Back Guarantee',
-];
+  'AI-Powered Automation',Real-time Analytics',Multi-cloud Support',API-First Architecture',Scalable Infrastructure',Custom Integrations',White-label Solutions',Comprehensive Documentation',24/7 Technical Support',99.9% Uptime Guarantee',SOC 2 Type II Compliant',30-Day Money Back Guarantee'
+],
 const benefits = [{
 
     icon: <Zap className="h-6 w-6" />,
@@ -30,12 +30,12 @@ const benefits = [{
 "
     icon: <CheckCircle className="h-6 w-6" />,
     title: 'Quality Guaranteed',
-    description: '30-day money-back guarantee with free migration support'},
-];
+    description: '30-day money-back guarantee with free migration support'}
+],
 export function ServicesShowcase() {
   const featuredServices = MICRO_SAAS_SERVICES.filter()
     service => service.featured
-  ).slice(0, 6);
+  ).slice(0, 6),
   return ("
     <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
       <div className="container mx-auto px-4">
@@ -72,11 +72,11 @@ export function ServicesShowcase() {
         </div>
 
         {/* Categories Overview */}"
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-20">
           {MICRO_SAAS_CATEGORIES.map(category => {
 
-            const IconComponent = categoryIcons[category.label];
-            const colorClass = categoryColors[category.label];
+            const IconComponent = categoryIcons[category.label],
+            const colorClass = categoryColors[category.label],
             return ()
               <Card
                 key={category.value}"
@@ -104,7 +104,7 @@ export function ServicesShowcase() {
                   </p>
                 </CardContent>
               </Card>
-            );
+            ),
           })}
         </div>
 
@@ -273,7 +273,7 @@ export function ServicesShowcase() {
               </h4>"
               <div className="space-y-4">"
                 <Link to="/request-quote">"
-                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">
+                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark">
                     Request Custom Quote
                   </Button>
                 </Link>"
@@ -325,6 +325,6 @@ export function ServicesShowcase() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 '"`

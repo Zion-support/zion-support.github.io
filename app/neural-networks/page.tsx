@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Neural Networks 2025 - Advanced AI Learning | Zion Tech Group';
-  description: 'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.';
-  keywords: ['neural networksdeep learning', 'machine learningAI education', 'neural network tutorials'],
-};
+  title: 'Neural Networks 2025 - Advanced AI Learning | Zion Tech Group',
+  description: 'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.',
+  keywords: ['neural networksdeep learningmachine learningAI education', 'neural network tutorials']
+},
 export default function NeuralNetworksPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -41,7 +41,7 @@ export default function NeuralNetworksPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Features Grid */,}
+      {/* Features Grid */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Neural Network Types</h2>,
@@ -89,7 +89,7 @@ export default function NeuralNetworksPage() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="bg-gradient-to-r from-orange-50 to-red-50 py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-900 mb-4">,
@@ -106,5 +106,4 @@ export default function NeuralNetworksPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

@@ -1,43 +1,43 @@
-import React, { useState } from 'react';
-import { Input } from '@/components/ui/input';
-import { useAutocomplete } from '@/hooks/useAutocomplete';
-import { ProductListing } from '@/types/listings';
+import React, { useState } from 'react',
+import { Input } from '@/components/ui/input',
+import { useAutocomplete } from '@/hooks/useAutocomplete',
+import { ProductListing } from '@/types/listings',
 
 interface MarketplaceSearchProps {
-  products: ProductListing[];
-  onSelect?: (item: ProductListing) => void;
+  products: ProductListing[],
+  onSelect?: (item: ProductListing) => void
 }
 
 export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps) {
-  const [query, setQuery] = useState('');
-  const { suggestions, getSuggestions, clearSuggestions } = useAutocomplete(products);
-  const [highlight, setHighlight] = useState(-1);
+  const [query, setQuery] = useState(''),
+  const { suggestions, getSuggestions, clearSuggestions } = useAutocomplete(products),
+  const [highlight, setHighlight] = useState(-1),
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setQuery(value);
-    getSuggestions(value);
-    setHighlight(-1);
-  };
+    const value = e.target.value,
+    setQuery(value),
+    getSuggestions(value),
+    setHighlight(-1)
+  },
 
   const select = (item: ProductListing) => {
-    setQuery(item.title);
-    clearSuggestions();
-    if (onSelect) onSelect(item);
-  };
+    setQuery(item.title),
+    clearSuggestions(),
+    if (onSelect) onSelect(item)
+  },
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowDown') {
-      e.preventDefault();
-      setHighlight(h => Math.min(h + 1, suggestions.length - 1));
+      e.preventDefault(),
+      setHighlight(h => Math.min(h + 1, suggestions.length - 1)),
     } else if (e.key === 'ArrowUp') {
-      e.preventDefault();
-      setHighlight(h => Math.max(h - 1, 0));
+      e.preventDefault(),
+      setHighlight(h => Math.max(h - 1, 0)),
     } else if (e.key === 'Enter' && highlight >= 0) {
-      e.preventDefault();
-      select(suggestions[highlight]);
+      e.preventDefault(),
+      select(suggestions[highlight]),
     }
-  };
+  },
 
   return (
     <div className="relative">
@@ -62,7 +62,7 @@ export function MarketplaceSearch({ products, onSelect }: MarketplaceSearchProps
         </ul>
       )}
     </div>
-  );
+  ),
 }
 
-export default MarketplaceSearch;
+export default MarketplaceSearch,

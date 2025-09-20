@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',
 
-;
+,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
     res.setHeader('AllowPOST'),
-    return res.status(405).end('Method Not Allowed'),}
+    return res.status(405).end('Method Not Allowed')}
   const { prompt } = req.body |{}
-  if (!prompt) return res.status(400).json({ error: 'prompt required' ,}),
+  if (!prompt) return res.status(400).json({ error: 'prompt required' }),
   try {,
     const apiKey = process.env.OPENAI_API_KEY,
     if (apiKey) {,
@@ -17,78 +17,78 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         messages: [,
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
 ,
-          { role: 'user', content: String(prompt) ,}
-        ],
+          { role: 'user', content: String(prompt) }
+        ]
       }),
       const text = resp.choices?.[0]?.message?.content |'No response',
-      return res.status(200).json({ text }),
+      return res.status(200).json({ text })
     }
     // Fallback without API key,
-    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' ,}),
+    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
   } catch (e: any) {,
-    return res.status(500).json({ error: e?.message ?? 'Coach error' ,}),
-  };
-};
+    return res.status(500).json({ error: e?.message ?? 'Coach error' })
+  },
+},
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
-  res.status(200).json({ message: 'API endpoint' ,});
+  res.status(200).json({ message: 'API endpoint' }),
 export default async function handler(req, res) {,
   try {,
-    const api_key = process.env.OPENAI_API_KEY;
+    const api_key = process.env.OPENAI_API_KEY,
     // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
-      const { OpenAI } = await import ('openai');
-      const openai = new OpenAI ({ api_key });
+      const { OpenAI } = await import ('openai'),
+      const openai = new OpenAI ({ api_key }),
       const resp = await openai.chat.completions.create ({,
-        model: 'gpt - 4o - mini';
-        messages: [;
-          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' };
-          { role: 'user', content: String (prompt) ,}
-        ];
-      });
-      const text = resp.choices?.[0]?.message?.content || 'No response';
-      return res.status (200).json ({ text });
+        model: 'gpt - 4o - mini',
+        messages: [,
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+          { role: 'user', content: String (prompt) }
+        ],
+      }),
+      const text = resp.choices?.[0]?.message?.content || 'No response',
+      return res.status (200).json ({ text }),
     }
-    // Fallback without API key;
-    return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' ,});
+    // Fallback without API key,
+    return res.status (200).json ({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' }),
   } catch (e: any) {,
-    return res.status (500).json ({ error: e?.message ?? 'Coach error' ,});
+    return res.status (500).json ({ error: e?.message ?? 'Coach error' }),
   }
-,
+
 }
-,
-}
-;
-    // Fallback without API key;
-    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' ,});
-  } catch (error) {,
-    return res.status(500).json({ error: e?.message ?? 'Coach error' ,});
-    } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
-    } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
-  }
+
 }
 ,
+    // Fallback without API key,
+    return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' }),
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
-  }
-}
-  } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    return res.status(500).json({ error: e?.message ?? 'Coach error' }),
     } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
+    } catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
+  }
+}
+
+  } catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
+    } catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
+  }
+}
+  } catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
   }

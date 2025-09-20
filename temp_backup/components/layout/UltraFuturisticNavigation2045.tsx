@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Shield, Atom, BookOpen,
@@ -8,30 +8,30 @@ import {
   Grid, Globe, Cpu, Database, Cloud, Palette,
   HelpCircle, FileText, Video, Building, MessageCircle,
   Zap, Target, Users, Award, TrendingUp, Lock, Clock, Calendar
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const contactInfo = {
@@ -39,17 +39,17 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const navigationItems: NavigationItem[] = [
@@ -179,7 +179,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'Pricing Comparison', href: '/pricing', description: 'Service pricing comparison', featured: true }
     ]
   }
-];
+],
 
 const UltraFuturisticNavigation2045: React.FC = () => {
   return (
@@ -187,7 +187,7 @@ const UltraFuturisticNavigation2045: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2045</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2045;
+export default UltraFuturisticNavigation2045,

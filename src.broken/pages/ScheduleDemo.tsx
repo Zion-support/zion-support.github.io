@@ -1,25 +1,25 @@
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react';
+import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react',
 export default function Page() {
 }
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
-,;
-    { id: 'ai - content - creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },;
-    { id: 'quantum - computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;
-    { id: 'iot - edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real - time Processing' },;
-    { id: 'digital - twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;
-    { id: 'cloud - devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
-    { id: 'micro - saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
-  ];
+,
+    { id: 'ai - content - creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },
+    { id: 'iot - edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real - time Processing' },
+    { id: 'digital - twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },
+    { id: 'cloud - devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },
+    { id: 'micro - saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' },
+  ],
 
-      // // // // // // // console.error('Error submitting form:', error) ;
+      // // // // // // // console.error('Error submitting form:', error) ,
     } finally {
-      setIsSubmitting(false) ;
+      setIsSubmitting(false) ,
 
       setIsSubmitted(true) } catch(error) {
       console.error('Error submitting form:', error) } finally {
       setIsSubmitting(false) }
-  };
+  },
 
   if(isSubmitted) {
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex items - center justify -center">
@@ -69,7 +69,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <a
               href="/"
               className="px-6 py-3 bg-slate - 700 hover:bg-slate - 600 text-white rounded-lg transition -colors"
@@ -80,11 +80,11 @@ export default function Page() {
               href="/contact"
               className="px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text-white rounded-lg transition -colors"
             >
-              Contact Us;
-            </a>;
-          </div>;
-        </motion.div>;
-      </div>;) ;
+              Contact Us,
+            </a>,
+          </div>,
+        </motion.div>,
+      </div>,) 
   }
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
@@ -133,10 +133,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Demo Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max - w-4xl mx -auto">
           <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8">
             {/* Form */}
@@ -344,9 +344,9 @@ export default function Page() {
 
                   <button     type="submit"
                     disabled={isSubmitting}
-                    className="w-full px-6 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text-white font - semibold rounded-lg transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform -none"
+                    className="w-full px-6 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 hover: from - cyan - 600 hover:to - blue - 700 text-white font - semibold rounded-lg transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed disabled:transform -none"
 
-                    {isSubmitting ? (;
+                    {isSubmitting ? (,
                       <div className="flex items - center justify - center gap-2">
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate -spin"></div > Scheduling Demo...
                       </div>) : (<div className="flex items - center justify - center gap-2">
@@ -359,7 +359,7 @@ export default function Page() {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col - span -1">;
+            <div className="lg: col - span -1">,
               <motion.div
                 initial = {
   { opacity: 0,
@@ -433,7 +433,7 @@ export default function Page() {
                 </div>
 
                 {/* Demo Benefits */}
-                <div className="bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 p -6">;
+                <div className="bg-gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded-2xl border border-cyan - 400 / 30 p -6">,
                   <h3 className="text-lg font - semibold text-white mb-4 flex items - center gap-2">
                     <Star className="w-5 h-5 text-cyan -400" />
                     Demo Benefits
@@ -447,9 +447,9 @@ export default function Page() {
                   </ul>
                 </div>
               </motion.div>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) ,
+},

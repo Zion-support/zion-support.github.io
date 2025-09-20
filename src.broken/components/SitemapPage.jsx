@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-  import { completeSitemap } from '../config / sitemap';
+  import { completeSitemap } from '../config / sitemap',
 
 export default function Page() {
                   </Link>
@@ -92,9 +92,9 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"
 =======
-import React from 'react';
+import React from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

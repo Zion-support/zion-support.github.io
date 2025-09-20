@@ -37,7 +37,7 @@ function ClientSuccessStoriesSection () {
                 <div className="border-t border-slate - 700 pt -4">
                   <blockquote className="text-gray - 300 text-sm italic mb-3">
         <motion.div
-          className="mb-16";
+          className="mb-16",
 
             <div className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
               <div className="text-center">
@@ -66,13 +66,13 @@ function ClientSuccessStoriesSection () {
   CheckCircle,
   ArrowRight,
   Heart'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      metrics['8 Week Launch',MVP Ready',Scalable Architecture']};
-  ];
+      metrics['8 Week Launch',MVP Ready',Scalable Architecture']},
+  ],
 
-    { label: 'Average Rating', value: '4.9/5', icon: Star };
-  ];
+    { label: 'Average Rating', value: '4.9/5', icon: Star },
+  ],
 const successStories = [{
 
     id: 1,
@@ -120,13 +120,13 @@ const successStories = [{
       "Improved patient outcomes by 30%","
       "Reduced administrative overhead by 50%","
       "Enhanced data accuracy by 95%"
-    ],;"
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;"
-    author: "Dr.Emily Rodriguez",;"
-    position: "Chief Medical Officer",;
-    rating: 5,;"
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"};
-];
+    ],"
+    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.","
+    author: "Dr.Emily Rodriguez","
+    position: "Chief Medical Officer",
+    rating: 5,"
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"},
+],
 =======
 
 export function ClientSuccessStoriesSection() {
@@ -177,8 +177,8 @@ export function ClientSuccessStoriesSection() {
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >;
-          {successMetrics.map ( (metric, index) => {;
+        >,
+          {successMetrics.map ( (metric, index) => {,
             
             return ("
               <div key = {metric.label} className="text-center">"
@@ -289,7 +289,7 @@ export function ClientSuccessStoriesSection() {
 
         {/* Success Metrics */}
         <motion.div "
-          className="mb-16";
+          className="mb-16",
           initial = {
 
   { opacity: 0,
@@ -365,7 +365,7 @@ export function ClientSuccessStoriesSection() {
             <p className="text-green-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <ArrowRight className="ml-2 h-5 w-5"  />
@@ -376,16 +376,16 @@ export function ClientSuccessStoriesSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default ClientSuccessStoriesSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default ClientSuccessStoriesSection;
-export default ClientSuccessStoriesSection;
+export default ClientSuccessStoriesSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default ClientSuccessStoriesSection,
+export default ClientSuccessStoriesSection,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

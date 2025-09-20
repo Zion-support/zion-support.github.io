@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Building2, 
+  Building2,
   Building, 
   Rocket, 
   Shield, 
@@ -37,228 +37,131 @@ import {
   ShoppingCart,
   Factory as FactoryIcon,
   City as CityIcon
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 export default function Solutions() {
   const solutions = [
     {
-      name: 'Enterprise Solutions',
-      icon: Building2,
-      description: 'Large-scale business transformations and digital modernization',
-      features: [
-        'AI-Powered Process Automation',
-        'Enterprise Data Analytics',
-        'Cloud Migration & Optimization',
-        'Digital Twin Implementation',
-        'Cybersecurity & Compliance',
-        'Legacy System Modernization'
+      name: 'Enterprise Solutions',icon: Building2,description: 'Large-scale business transformations and digital modernization',features: [
+        'AI-Powered Process AutomationEnterprise Data Analytics';
+        'Cloud Migration & OptimizationDigital Twin Implementation',
+        'Cybersecurity & ComplianceLegacy System Modernization'
       ],
       benefits: [
-        '50% reduction in operational costs',
-        '3x faster decision making',
-        '99.9% system uptime',
-        'Enhanced security posture'
+        '50% reduction in operational costs3x faster decision making';
+        '99.9% system uptimeEnhanced security posture'
       ],
-      color: 'from-blue-500 to-cyan-500',
-      featured: true
-    },
+      color: 'from-blue-500 to-cyan-500',featured: true
+    };
     {
-      name: 'SMB Solutions',
-      icon: Building,
-      description: 'Small to medium business growth and efficiency solutions',
-      features: [
-        'AI-Powered Marketing Automation',
-        'Customer Relationship Management',
-        'Business Intelligence Dashboards',
-        'Process Optimization',
-        'Cloud Infrastructure Setup',
-        'Cybersecurity Protection'
+      name: 'SMB Solutions',icon: Building,description: 'Small to medium business growth and efficiency solutions',features: [
+        'AI-Powered Marketing AutomationCustomer Relationship Management';
+        'Business Intelligence DashboardsProcess Optimization',
+        'Cloud Infrastructure SetupCybersecurity Protection'
       ],
       benefits: [
-        '40% increase in productivity',
-        'Improved customer retention',
-        'Reduced IT overhead',
-        'Scalable growth foundation'
+        '40% increase in productivityImproved customer retention';
+        'Reduced IT overheadScalable growth foundation'
       ],
-      color: 'from-purple-500 to-pink-500',
-      featured: false
-    },
+      color: 'from-purple-500 to-pink-500',featured: false
+    };
     {
-      name: 'Startup Solutions',
-      icon: Rocket,
-      description: 'Accelerate growth and build scalable foundations',
-      features: [
-        'MVP Development & Launch',
-        'AI-Powered Growth Hacking',
-        'Scalable Infrastructure Design',
-        'Data-Driven Decision Making',
-        'Customer Acquisition Automation',
-        'Investor-Ready Analytics'
+      name: 'Startup Solutions',icon: Rocket,description: 'Accelerate growth and build scalable foundations',features: [
+        'MVP Development & LaunchAI-Powered Growth Hacking';
+        'Scalable Infrastructure DesignData-Driven Decision Making',
+        'Customer Acquisition AutomationInvestor-Ready Analytics'
       ],
       benefits: [
-        '10x faster market validation',
-        '3x user engagement increase',
-        'Reduced time to market',
-        'Investor-ready metrics'
+        '10x faster market validation3x user engagement increase';
+        'Reduced time to marketInvestor-ready metrics'
       ],
-      color: 'from-green-500 to-emerald-500',
-      featured: false
-    },
+      color: 'from-green-500 to-emerald-500',featured: false
+    };
     {
-      name: 'Healthcare Solutions',
-      icon: Heart,
-      description: 'AI-powered healthcare innovation and patient care',
-      features: [
-        'Medical Image Analysis',
-        'Patient Data Analytics',
-        'Predictive Diagnostics',
-        'Healthcare Process Automation',
-        'Compliance & Security',
-        'Telemedicine Platforms'
+      name: 'Healthcare Solutions',icon: Heart,description: 'AI-powered healthcare innovation and patient care',features: [
+        'Medical Image AnalysisPatient Data Analytics';
+        'Predictive DiagnosticsHealthcare Process Automation',
+        'Compliance & SecurityTelemedicine Platforms'
       ],
       benefits: [
-        '30% improvement in diagnostic accuracy',
-        '40% faster patient processing',
-        'Enhanced patient outcomes',
-        'Reduced healthcare costs'
+        '30% improvement in diagnostic accuracy40% faster patient processing';
+        'Enhanced patient outcomesReduced healthcare costs'
       ],
-      color: 'from-red-500 to-pink-500',
-      featured: false
-    },
+      color: 'from-red-500 to-pink-500',featured: false
+    };
     {
-      name: 'Manufacturing Solutions',
-      icon: Factory,
-      description: 'Smart manufacturing and Industry 4.0 transformation',
-      features: [
-        'IoT Device Integration',
-        'Predictive Maintenance',
-        'Quality Control Automation',
-        'Supply Chain Optimization',
-        'Digital Twin Implementation',
-        'Energy Efficiency Management'
+      name: 'Manufacturing Solutions',icon: Factory,description: 'Smart manufacturing and Industry 4.0 transformation',features: [
+        'IoT Device IntegrationPredictive Maintenance';
+        'Quality Control AutomationSupply Chain Optimization',
+        'Digital Twin ImplementationEnergy Efficiency Management'
       ],
       benefits: [
-        '25% reduction in downtime',
-        '20% improvement in quality',
-        '15% energy cost savings',
-        'Real-time production insights'
+        '25% reduction in downtime20% improvement in quality';
+        '15% energy cost savingsReal-time production insights'
       ],
-      color: 'from-orange-500 to-red-500',
-      featured: false
-    },
+      color: 'from-orange-500 to-red-500',featured: false
+    };
     {
-      name: 'Financial Services',
-      icon: Shield,
-      description: 'Secure, compliant, and innovative financial technology',
+      name: 'Financial Services',icon: Shield,description: 'Secure, compliant, and innovative financial technology',
       features: [
-        'Fraud Detection & Prevention',
-        'Risk Assessment & Management',
-        'Regulatory Compliance',
-        'Customer Experience Optimization',
-        'Blockchain Integration',
-        'Real-time Analytics'
+        'Fraud Detection & PreventionRisk Assessment & Management';
+        'Regulatory ComplianceCustomer Experience Optimization',
+        'Blockchain IntegrationReal-time Analytics'
       ],
       benefits: [
-        '99.9% fraud detection accuracy',
-        '60% faster risk assessment',
-        'Full regulatory compliance',
-        'Enhanced customer trust'
+        '99.9% fraud detection accuracy60% faster risk assessment';
+        'Full regulatory complianceEnhanced customer trust'
       ],
-      color: 'from-indigo-500 to-purple-500',
-      featured: false
+      color: 'from-indigo-500 to-purple-500',featured: false
     }
   ];
-
   const industrySolutions = [
     {
-      title: 'Retail & E-commerce',
-      description: 'Digital transformation for modern retail',
-      icon: ShoppingCart,
-      color: 'from-purple-500 to-pink-500',
-      solutions: ['AI-Powered Personalization', 'Inventory Optimization', 'Customer Analytics', 'Omnichannel Integration']
+      title: 'Retail & E-commerce',description: 'Digital transformation for modern retail',icon: ShoppingCart,color: 'from-purple-500 to-pink-500',solutions: ['AI-Powered PersonalizationInventory Optimization', 'Customer AnalyticsOmnichannel Integration']
     },
     {
-      title: 'Transportation & Logistics',
-      description: 'Smart logistics and fleet management',
-      icon: Truck,
-      color: 'from-blue-500 to-cyan-500',
-      solutions: ['Route Optimization', 'Fleet Tracking', 'Predictive Maintenance', 'Supply Chain Analytics']
+      title: 'Transportation & Logistics',description: 'Smart logistics and fleet management',icon: Truck,color: 'from-blue-500 to-cyan-500',solutions: ['Route OptimizationFleet Tracking', 'Predictive MaintenanceSupply Chain Analytics']
     },
     {
-      title: 'Real Estate',
-      description: 'Property technology and market insights',
-      icon: Home,
-      color: 'from-green-500 to-emerald-500',
-      solutions: ['Market Analysis', 'Property Valuation', 'Investment Analytics', 'Customer Relationship Management']
+      title: 'Real Estate',description: 'Property technology and market insights',icon: Home,color: 'from-green-500 to-emerald-500',solutions: ['Market AnalysisProperty Valuation', 'Investment AnalyticsCustomer Relationship Management']
     },
     {
-      title: 'Education',
-      description: 'EdTech solutions for modern learning',
-      icon: Brain,
-      color: 'from-orange-500 to-red-500',
-      solutions: ['Learning Analytics', 'Personalized Education', 'Administrative Automation', 'Student Engagement']
+      title: 'Education',description: 'EdTech solutions for modern learning',icon: Brain,color: 'from-orange-500 to-red-500',solutions: ['Learning AnalyticsPersonalized Education', 'Administrative AutomationStudent Engagement']
     }
-  ];
+  ],
 
   const technologyStack = [
     {
-      category: 'AI & Machine Learning',
-      technologies: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Computer Vision', 'NLP'],
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      category: 'AI & Machine Learning',technologies: ['TensorFlowPyTorch', 'Scikit-learnOpenAI GPT', 'Computer VisionNLP'],
+      icon: Brain,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      category: 'Cloud & Infrastructure',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker', 'Terraform'],
-      icon: Cloud,
-      color: 'from-green-500 to-emerald-500'
-    },
+      category: 'Cloud & Infrastructure',technologies: ['AWSAzure', 'Google CloudKubernetes', 'DockerTerraform'],
+      icon: Cloud,color: 'from-green-500 to-emerald-500'
+    };
     {
-      category: 'Data & Analytics',
-      technologies: ['Apache Spark', 'Hadoop', 'Tableau', 'Power BI', 'Python', 'R'],
-      icon: Database,
-      color: 'from-purple-500 to-pink-500'
-    },
+      category: 'Data & Analytics',technologies: ['Apache SparkHadoop', 'TableauPower BI', 'PythonR'],
+      icon: Database,color: 'from-purple-500 to-pink-500'
+    };
     {
-      category: 'Security & Compliance',
-      technologies: ['Zero Trust', 'SOC 2', 'GDPR', 'HIPAA', 'Penetration Testing', 'Security Monitoring'],
-      icon: Lock,
-      color: 'from-red-500 to-orange-500'
+      category: 'Security & Compliance',technologies: ['Zero TrustSOC 2', 'GDPRHIPAA', 'Penetration TestingSecurity Monitoring'],
+      icon: Lock,color: 'from-red-500 to-orange-500'
     }
   ];
-
   const successMetrics = [
     {
-      metric: '500+',
-      label: 'Projects Delivered',
-      description: 'Successfully completed projects across industries',
-      icon: CheckCircle,
-      color: 'from-green-500 to-emerald-500'
-    },
+      metric: '500+',label: 'Projects Delivered',description: 'Successfully completed projects across industries',icon: CheckCircle,color: 'from-green-500 to-emerald-500'
+    };
     {
-      metric: '99.9%',
-      label: 'Client Satisfaction',
-      description: 'Consistently high client satisfaction ratings',
-      icon: Star,
-      color: 'from-yellow-500 to-orange-500'
-    },
+      metric: '99.9%',label: 'Client Satisfaction',description: 'Consistently high client satisfaction ratings',icon: Star,color: 'from-yellow-500 to-orange-500'
+    };
     {
-      metric: '50%',
-      label: 'Cost Reduction',
-      description: 'Average cost savings for our clients',
-      icon: TrendingUp,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      metric: '50%',label: 'Cost Reduction',description: 'Average cost savings for our clients',icon: TrendingUp,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      metric: '3x',
-      label: 'Performance Boost',
-      description: 'Average performance improvement achieved',
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500'
+      metric: '3x',label: 'Performance Boost',description: 'Average performance improvement achieved',icon: Zap,color: 'from-purple-500 to-pink-500'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -529,7 +432,7 @@ export default function Solutions() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -555,5 +458,5 @@ export default function Solutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

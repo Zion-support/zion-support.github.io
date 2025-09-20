@@ -1,35 +1,35 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Atom,
   Zap,
   Shield,
-  Lock;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Target;
-  Brain;
-  X,
-} from 'lucide-react';
+  Lock,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Target,
+  Brain,
+  X
+} from 'lucide-react',
 const QuantumComputingSolutions2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)3000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)3000),
+    return () => clearTimeout(timer),
+  }[]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   const solutions = [,
-    { icon: Targetlabel: ''Optimizationcolor: 'text-purple-400' ,};
-    { icon: Locklabel: ''Encryptioncolor: 'text-green-400' ,};
-    { icon: Atomlabel: ''Simulationcolor: 'text-cyan-400' ,};
-    { icon: Brainlabel: 'AI/'MLcolor: 'text-red-400' ,}
-  ];
+    { icon: Targetlabel: ''Optimizationcolor: 'text-purple-400' },
+    { icon: Locklabel: ''Encryptioncolor: 'text-green-400' },
+    { icon: Atomlabel: ''Simulationcolor: 'text-cyan-400' },
+    { icon: Brainlabel: 'AI/'MLcolor: 'text-red-400' }
+  ],
   return (,
     <div>,
       {isVisible && (,
@@ -45,22 +45,22 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40",
                   style={{,
-                    left: `${Math.random() * 100,}%`;
-                    top: `${Math.random() * 100,}%`,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`
                   }}
-                    y: [0-40];
-                    x: [0Math.random() * 10 - 50];
-                    opacity: [0.40.80.4],}}
-                    duration: 4 + Math.random() * 2;
-                    repeat: Infinity;
-                    delay: Math.random() * 2,}}
+                    y: [0-40],
+                    x: [0Math.random() * 10 - 50],
+                    opacity: [0.40.80.4]}}
+                    duration: 4 + Math.random() * 2,
+                    repeat: Infinity,
+                    delay: Math.random() * 2}}
                 />,
               ))}
             </div>,
           </div>,
           <div className="relative z-10 container mx-auto px-4 py-6">,
             <div className="flex flex-col lg: flex-row items-center justify-between gap-6">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                   className="flex items-center justify-center lg:justify-start mb-3",
@@ -71,8 +71,7 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
                   </div>,
                   <div className="flex items-center text-yellow-400">,
                     {[...Array(5)].map((_i) => (,
-                      <Star key={i,} className="w-4 h-4 fill-current" />,
-                    ))}
+                      <Star key={i} className="w-4 h-4 fill-current" />))}
                   </div>,
                 </div>,
                 <divh2,
@@ -85,16 +84,15 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
                 >,
                   Harness quantum power: OptimizationEncryptionSimulationand AI/ML solutions,
                 </divp>,
-                {/* Solution Icons */,}
+                {/* Solution Icons */}
                 <div,
                   className="flex flex-wrap items-center justify-center lg: justify-start gap-3 mb-4",
                 >,
                   {solutions.map((solutionindex) => (,
-                    <div key={index,} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">,
+                    <div key={index} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2">,
                       <solution.icon className={`w-4 h-4 ${solution.color} mr-2`} />,
                       <span className="text-sm font-medium">{solution.label}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Right Content - CTA */}
@@ -111,7 +109,7 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />,
                 </button>,
               </div>,
-              {/* Dismiss Button */,}
+              {/* Dismiss Button */}
               <button,
                 onClick={handleDismiss}
                 className="absolute top-4 right-4 p-2 hover: bg-white/10 rounded-full transition-colors",
@@ -120,15 +118,15 @@ const QuantumComputingSolutions2026PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Progress Bar */,}
+          {/* Progress Bar */}
           <div,
             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 origin-left",
-            style={{ width: '100%' ,}}
+            style={{ width: '100%' }}
           />,
         </div>,
       )}
     </div>,
-  );
-};
-export default QuantumComputingSolutions2026PromotionBanner;
+  ),
+},
+export default QuantumComputingSolutions2026PromotionBanner,
 </div></div></div></div></div></div>,

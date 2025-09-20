@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 const Newsroom: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const categories = [
     { id: 'all', name: 'All News', count: 156 },
@@ -13,8 +13,8 @@ const Newsroom: React.FC = () => {
     { id: 'product-updates', name: 'Product Updates', count: 34 },
     { id: 'partnerships', name: 'Partnerships', count: 18 },
     { id: 'awards', name: 'Awards & Recognition', count: 12 },
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 24 },
-  ];
+    { id: 'thought-leadership', name: 'Thought Leadership', count: 24 }
+  ],
 
   const featuredNews = [
     {
@@ -27,7 +27,7 @@ const Newsroom: React.FC = () => {
       readTime: '3 min read',
       featured: true,
       image: '/api/placeholder/400/250',
-      tags: ['Gartner', 'Leadership', 'Automation', 'Recognition']
+      tags: ['GartnerLeadership', 'AutomationRecognition']
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const Newsroom: React.FC = () => {
       readTime: '4 min read',
       featured: true,
       image: '/api/placeholder/400/250',
-      tags: ['Partnership', 'Innovation', 'Technology', 'Growth']
+      tags: ['PartnershipInnovation', 'TechnologyGrowth']
     },
     {
       id: 3,
@@ -51,9 +51,9 @@ const Newsroom: React.FC = () => {
       readTime: '5 min read',
       featured: true,
       image: '/api/placeholder/400/250',
-      tags: ['Financial Results', 'Growth', 'Q4 2024', 'Market Expansion']
-    },
-  ];
+      tags: ['Financial ResultsGrowth', 'Q4 2024Market Expansion']
+    }
+  ],
 
   const recentNews = [
     {
@@ -65,7 +65,7 @@ const Newsroom: React.FC = () => {
       author: 'Product Team',
       readTime: '2 min read',
       image: '/api/placeholder/300/200',
-      tags: ['AI', 'Product Update', 'Innovation']
+      tags: ['AIProduct Update', 'Innovation']
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ const Newsroom: React.FC = () => {
       author: 'Expansion Team',
       readTime: '2 min read',
       image: '/api/placeholder/300/200',
-      tags: ['Expansion', 'Europe', 'Berlin', 'Growth']
+      tags: ['ExpansionEurope', 'BerlinGrowth']
     },
     {
       id: 6,
@@ -87,7 +87,7 @@ const Newsroom: React.FC = () => {
       author: 'Customer Success Team',
       readTime: '4 min read',
       image: '/api/placeholder/300/200',
-      tags: ['Customer Success', 'Case Study', 'Efficiency']
+      tags: ['Customer SuccessCase Study', 'Efficiency']
     },
     {
       id: 7,
@@ -98,7 +98,7 @@ const Newsroom: React.FC = () => {
       author: 'HR Team',
       readTime: '2 min read',
       image: '/api/placeholder/300/200',
-      tags: ['Workplace', 'Innovation', 'Recognition']
+      tags: ['WorkplaceInnovation', 'Recognition']
     },
     {
       id: 8,
@@ -109,7 +109,7 @@ const Newsroom: React.FC = () => {
       author: 'Research Team',
       readTime: '6 min read',
       image: '/api/placeholder/300/200',
-      tags: ['Research', 'Industry Report', '2025 Trends']
+      tags: ['ResearchIndustry Report', '2025 Trends']
     },
     {
       id: 9,
@@ -120,9 +120,9 @@ const Newsroom: React.FC = () => {
       author: 'Security Team',
       readTime: '3 min read',
       image: '/api/placeholder/300/200',
-      tags: ['Security', 'Threat Protection', 'Enterprise']
-    },
-  ];
+      tags: ['SecurityThreat Protection', 'Enterprise']
+    }
+  ],
 
   const pressReleases = [
     {
@@ -145,39 +145,29 @@ const Newsroom: React.FC = () => {
       date: '2025-01-04',
       excerpt: 'Strategic acquisition enhances our AI and machine learning offerings.',
       category: 'press-releases'
-    },
-  ];
+    }
+  ],
 
   const getCategoryColor = (category: string) => {
     const colors: { [key: string]: string } = {
-      'press-releases': 'bg-blue-100 text-blue-800',
-      'company-news': 'bg-green-100 text-green-800',
-      'product-updates': 'bg-purple-100 text-purple-800',
-      'partnerships': 'bg-orange-100 text-orange-800',
-      'awards': 'bg-yellow-100 text-yellow-800',
-      'thought-leadership': 'bg-indigo-100 text-indigo-800',
-    };
-    return colors[category] || 'bg-gray-100 text-gray-800';
-  };
+      'press-releases': 'bg-blue-100 text-blue-800company-news': 'bg-green-100 text-green-800product-updates': 'bg-purple-100 text-purple-800partnerships': 'bg-orange-100 text-orange-800awards': 'bg-yellow-100 text-yellow-800thought-leadership': 'bg-indigo-100 text-indigo-800'
+    },
+    return colors[category] || 'bg-gray-100 text-gray-800',
+  },
 
   const getCategoryName = (category: string) => {
     const names: { [key: string]: string } = {
-      'press-releases': 'Press Releases',
-      'company-news': 'Company News',
-      'product-updates': 'Product Updates',
-      'partnerships': 'Partnerships',
-      'awards': 'Awards & Recognition',
-      'thought-leadership': 'Thought Leadership',
-    };
-    return names[category] || category;
-  };
+      'press-releases': 'Press Releasescompany-news': 'Company Newsproduct-updates': 'Product Updatespartnerships': 'Partnershipsawards': 'Awards & Recognitionthought-leadership': 'Thought Leadership'
+    },
+    return names[category] || category,
+  },
 
   const filteredNews = recentNews.filter(item => {
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || item.category === activeCategory,
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         item.excerpt.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -382,7 +372,7 @@ const Newsroom: React.FC = () => {
               Our PR team is here to help with media requests, interviews, and press opportunities.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/contact" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
                 Contact PR Team
               </Link>
               <a href="mailto:press@zion.app" className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
@@ -393,7 +383,7 @@ const Newsroom: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default Newsroom;
+export default Newsroom,

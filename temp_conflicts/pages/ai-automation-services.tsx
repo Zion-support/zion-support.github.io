@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function AIAutomationServices() {
   const services = [
@@ -8,10 +8,8 @@ export default function AIAutomationServices() {
       title: 'Intelligent Process Automation',
       description: 'Transform manual workflows into intelligent, self-optimizing processes that learn and improve over time.',
       features: [
-        'Workflow automation with AI decision-making',
-        'Process optimization and continuous improvement',
-        'Integration with existing enterprise systems',
-        'Real-time monitoring and analytics'
+        'Workflow automation with AI decision-makingProcess optimization and continuous improvement',
+        'Integration with existing enterprise systemsReal-time monitoring and analytics'
       ],
       icon: '🤖',
       category: 'Core Services'
@@ -20,10 +18,8 @@ export default function AIAutomationServices() {
       title: 'AI-Powered Content Generation',
       description: 'Create high-quality, engaging content at scale using advanced natural language processing and generation.',
       features: [
-        'Automated content creation and curation',
-        'Multi-language content generation',
-        'SEO-optimized content strategies',
-        'Content performance analytics'
+        'Automated content creation and curationMulti-language content generation',
+        'SEO-optimized content strategiesContent performance analytics'
       ],
       icon: '✍️',
       category: 'Content Services'
@@ -32,10 +28,8 @@ export default function AIAutomationServices() {
       title: 'Predictive Analytics & Forecasting',
       description: 'Leverage machine learning to predict trends, identify opportunities, and make data-driven decisions.',
       features: [
-        'Advanced predictive modeling',
-        'Real-time data analysis',
-        'Custom forecasting algorithms',
-        'Actionable insights and recommendations'
+        'Advanced predictive modelingReal-time data analysis',
+        'Custom forecasting algorithmsActionable insights and recommendations'
       ],
       icon: '📊',
       category: 'Analytics Services'
@@ -44,10 +38,8 @@ export default function AIAutomationServices() {
       title: 'Autonomous Customer Service',
       description: 'Provide 24/7 customer support with intelligent chatbots and automated response systems.',
       features: [
-        'Natural language understanding',
-        'Multi-channel support integration',
-        'Escalation to human agents',
-        'Continuous learning and improvement'
+        'Natural language understandingMulti-channel support integration',
+        'Escalation to human agentsContinuous learning and improvement'
       ],
       icon: '💬',
       category: 'Customer Experience'
@@ -56,10 +48,8 @@ export default function AIAutomationServices() {
       title: 'Smart Supply Chain Management',
       description: 'Optimize supply chain operations with AI-driven demand forecasting and inventory management.',
       features: [
-        'Demand prediction and planning',
-        'Inventory optimization',
-        'Supplier performance monitoring',
-        'Risk assessment and mitigation'
+        'Demand prediction and planningInventory optimization',
+        'Supplier performance monitoringRisk assessment and mitigation'
       ],
       icon: '🚚',
       category: 'Operations'
@@ -68,15 +58,13 @@ export default function AIAutomationServices() {
       title: 'Cybersecurity Automation',
       description: 'Protect your systems with intelligent threat detection and automated response capabilities.',
       features: [
-        'Real-time threat monitoring',
-        'Automated incident response',
-        'Behavioral analysis',
-        'Compliance monitoring and reporting'
+        'Real-time threat monitoringAutomated incident response',
+        'Behavioral analysisCompliance monitoring and reporting'
       ],
       icon: '🔒',
       category: 'Security'
     }
-  ];
+  ],
 
   const industries = [
     {
@@ -109,7 +97,7 @@ export default function AIAutomationServices() {
       description: 'Smart grid management and renewable energy optimization.',
       icon: '⚡'
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -142,7 +130,7 @@ export default function AIAutomationServices() {
       description: 'Stay ahead of the competition with cutting-edge AI automation capabilities.',
       icon: '🏆'
     }
-  ];
+  ],
 
   return (
     <>
@@ -266,9 +254,8 @@ export default function AIAutomationServices() {
               <h2 className="text-3xl font-bold mb-12 text-center text-white">Our Technology Stack</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {[
-                  'Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Robotic Process Automation',
-                  'Cloud Computing', 'Edge Computing', 'IoT Integration', 'Blockchain', 'Quantum Computing',
-                  'Neural Networks', 'Deep Learning', 'Predictive Analytics'
+                  'Machine LearningNatural Language Processing', 'Computer VisionRobotic Process Automation',
+                  'Cloud ComputingEdge Computing', 'IoT IntegrationBlockchain', 'Quantum ComputingNeural Networks', 'Deep LearningPredictive Analytics'
                 ].map((tech, index) => (
                   <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 rounded-lg p-4 border border-white/20 text-center hover:border-cyan-400/30 transition-all duration-300">
                     <p className="text-white/80 text-sm font-medium">{tech}</p>
@@ -313,7 +300,7 @@ export default function AIAutomationServices() {
                 <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
                   Let's discuss how AI automation can revolutionize your operations and drive unprecedented growth.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
                     href="/contact" 
                     className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -333,5 +320,5 @@ export default function AIAutomationServices() {
         </main>
       </div>
     </>
-  );
+  )
 }

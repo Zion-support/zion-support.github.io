@@ -1,127 +1,127 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
   Shield,
   Globe,
   Users,
-  TrendingUp;
-  Play;
-  Code;
-  Database;
-  Cpu;
-  Network;
-  BarChart3;
-  MessageSquare;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Search;
-  Filter;
-  Settings;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  ExternalLink,
-} from 'lucide-react';
+  TrendingUp,
+  Play,
+  Code,
+  Database,
+  Cpu,
+  Network,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Search,
+  Filter,
+  Settings,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  ExternalLink
+} from 'lucide-react',
 const InteractiveAIToolsShowcase2025 = () => {,
-  const [activeToolsetActiveTool] = useState('ai-assistant');
-  const [isVisiblesetIsVisible] = useState(false);
-  const [hoveredToolsetHoveredTool] = useState<string | null>(null);
+  const [activeToolsetActiveTool] = useState('ai-assistant'),
+  const [isVisiblesetIsVisible] = useState(false),
+  const [hoveredToolsetHoveredTool] = useState<string | null>(null),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)200);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)200),
+    return () => clearTimeout(timer),
+  }[]),
   const aiTools = {,
     'ai-assistant': {,
-      name: 'AI Assistant';
-      icon: Brain;
-      description: 'Intelligent conversational AI that understands context and provides human-like responses';
-      features: ['Natural Language 'ProcessingContext 'Awareness', 'Multi-language 'SupportReal-time Learning'];
-      stats: { users: '10M+'accuracy: '98.5%'languages: '50+' ,};
-      color: 'from-blue-500 to-cyan-500',};
+      name: 'AI Assistant',
+      icon: Brain,
+      description: 'Intelligent conversational AI that understands context and provides human-like responses',
+      features: ['Natural Language 'ProcessingContext 'AwarenessMulti-language 'SupportReal-time Learning'],
+      stats: { users: '10M+'accuracy: '98.5%'languages: '50+' },
+      color: 'from-blue-500 to-cyan-500'},
     'data-analyzer': {,
-      name: 'Data Analyzer';
-      icon: BarChart3;
-      description: 'Advanced analytics tool that processes complex datasets and generates actionable insights';
-      features: ['Predictive 'AnalyticsReal-time 'Processing', 'Visual 'DashboardsCustom Reports'];
-      stats: { datasets: '1B+'insights: '99.2%'speed: '10x faster' ,};
-      color: 'from-green-500 to-emerald-500',};
+      name: 'Data Analyzer',
+      icon: BarChart3,
+      description: 'Advanced analytics tool that processes complex datasets and generates actionable insights',
+      features: ['Predictive 'AnalyticsReal-time 'ProcessingVisual 'DashboardsCustom Reports'],
+      stats: { datasets: '1B+'insights: '99.2%'speed: '10x faster' },
+      color: 'from-green-500 to-emerald-500'},
     'content-generator': {,
-      name: 'Content Generator';
-      icon: FileText;
-      description: 'AI-powered content creation tool that generates high-quality textimagesand multimedia';
-      features: ['Multi-format 'SupportBrand 'Consistency', 'SEO 'OptimizationPlagiarism Detection'];
-      stats: { content: '100M+'quality: '95%'formats: '20+' ,};
-      color: 'from-purple-500 to-pink-500',};
+      name: 'Content Generator',
+      icon: FileText,
+      description: 'AI-powered content creation tool that generates high-quality textimagesand multimedia',
+      features: ['Multi-format 'SupportBrand 'ConsistencySEO 'OptimizationPlagiarism Detection'],
+      stats: { content: '100M+'quality: '95%'formats: '20+' },
+      color: 'from-purple-500 to-pink-500'},
     'automation-engine': {,
-      name: 'Automation Engine';
-      icon: Zap;
-      description: 'Smart automation platform that streamlines workflows and reduces manual tasks';
-      features: ['Workflow 'AutomationTask 'Scheduling', 'Error 'HandlingPerformance Monitoring'];
-      stats: { tasks: '50M+'efficiency: '85%'errors: '0.1%' ,};
-      color: 'from-orange-500 to-red-500',};
+      name: 'Automation Engine',
+      icon: Zap,
+      description: 'Smart automation platform that streamlines workflows and reduces manual tasks',
+      features: ['Workflow 'AutomationTask 'SchedulingError 'HandlingPerformance Monitoring'],
+      stats: { tasks: '50M+'efficiency: '85%'errors: '0.1%' },
+      color: 'from-orange-500 to-red-500'},
     'security-guard': {,
-      name: 'Security Guard';
-      icon: Shield;
-      description: 'AI-powered security system that protects against threats and ensures data privacy';
-      features: ['Threat 'DetectionReal-time 'Monitoring', 'Encryption'Compliance'];
-      stats: { threats: '99.9%'uptime: '99.99%'compliance: '100%' ,};
-      color: 'from-red-500 to-rose-500',};
+      name: 'Security Guard',
+      icon: Shield,
+      description: 'AI-powered security system that protects against threats and ensures data privacy',
+      features: ['Threat 'DetectionReal-time 'MonitoringEncryption'Compliance'],
+      stats: { threats: '99.9%'uptime: '99.99%'compliance: '100%' },
+      color: 'from-red-500 to-rose-500'},
     'search-engine': {,
-      name: 'Smart Search';
-      icon: Search;
-      description: 'Intelligent search engine that understands intent and delivers precise results';
-      features: ['Semantic 'SearchVoice 'Search', 'Image 'SearchPersonalization'];
-      stats: { queries: '1B+'accuracy: '96%'speed: '0.1s' ,};
-      color: 'from-indigo-500 to-blue-500',}
-  };
+      name: 'Smart Search',
+      icon: Search,
+      description: 'Intelligent search engine that understands intent and delivers precise results',
+      features: ['Semantic 'SearchVoice 'SearchImage 'SearchPersonalization'],
+      stats: { queries: '1B+'accuracy: '96%'speed: '0.1s' },
+      color: 'from-indigo-500 to-blue-500'}
+  },
   const useCases = [,
     {,
-      title: 'E-commerce Optimization';
-      description: 'Increase sales by 40% with AI-powered product recommendations and personalized shopping experiences';
-      icon: TrendingUp;
-      results: ['40% increase in sales'60% higher engagement'25% more conversions'],};
+      title: 'E-commerce Optimization',
+      description: 'Increase sales by 40% with AI-powered product recommendations and personalized shopping experiences',
+      icon: TrendingUp,
+      results: ['40% increase in sales'60% higher engagement'25% more conversions']},
     {,
-      title: 'Customer Support';
-      description: 'Reduce response time by 80% with intelligent chatbots and automated ticket routing';
-      icon: MessageSquare;
-      results: ['80% faster responses'90% satisfaction rate'50% cost reduction'],};
+      title: 'Customer Support',
+      description: 'Reduce response time by 80% with intelligent chatbots and automated ticket routing',
+      icon: MessageSquare,
+      results: ['80% faster responses'90% satisfaction rate'50% cost reduction']},
     {,
-      title: 'Content Marketing';
-      description: 'Scale content production by 300% while maintaining quality and brand consistency';
-      icon: FileText;
-      results: ['300% more content'95% quality score'70% time savings'],};
+      title: 'Content Marketing',
+      description: 'Scale content production by 300% while maintaining quality and brand consistency',
+      icon: FileText,
+      results: ['300% more content'95% quality score'70% time savings']},
     {,
-      title: 'Data Insights';
-      description: 'Uncover hidden patterns and trends in your data with advanced AI analytics';
-      icon: BarChart3;
-      results: ['90% faster insights'85% accuracy'200% more discoveries'],}
-  ];
+      title: 'Data Insights',
+      description: 'Uncover hidden patterns and trends in your data with advanced AI analytics',
+      icon: BarChart3,
+      results: ['90% faster insights'85% accuracy'200% more discoveries']}
+  ],
   const testimonials = [,
     {,
-      name: 'Alex Thompson';
-      role: 'Head of AITechStart';
-      content: 'The AI tools from Zion Tech Group revolutionized our entire workflow. We saw immediate improvements in efficiency and accuracy.';
-      avatar: 'AT';
-      rating: 5,};
+      name: 'Alex Thompson',
+      role: 'Head of AITechStart',
+      content: 'The AI tools from Zion Tech Group revolutionized our entire workflow. We saw immediate improvements in efficiency and accuracy.',
+      avatar: 'AT',
+      rating: 5},
     {,
-      name: 'Maria Garcia';
-      role: 'CTODataFlow Inc';
-      content: 'Their automation engine saved us thousands of hours. The ROI was evident within the first week of implementation.';
-      avatar: 'MG';
-      rating: 5,};
+      name: 'Maria Garcia',
+      role: 'CTODataFlow Inc',
+      content: 'Their automation engine saved us thousands of hours. The ROI was evident within the first week of implementation.',
+      avatar: 'MG',
+      rating: 5},
     {,
-      name: 'David Kim';
-      role: 'VP EngineeringCloudScale';
-      content: 'The security guard AI has been flawless. We\'ve had zero security incidents since implementing their solution.';
-      avatar: 'DK';
-      rating: 5,}
-  ];
-  if (!isVisible) return null;
+      name: 'David Kim',
+      role: 'VP EngineeringCloudScale',
+      content: 'The security guard AI has been flawless. We\'ve had zero security incidents since implementing their solution.',
+      avatar: 'DK',
+      rating: 5}
+  ],
+  if (!isVisible) return null,
   return (,
     <div className="relative bg-gradient-to-br from-slate-50 via-white to-indigo-50 py-20 overflow-hidden">,
       {/* Background Elements */}
@@ -129,7 +129,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-l from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl -z-10" />,
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl -z-10" />,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -140,20 +140,20 @@ const InteractiveAIToolsShowcase2025 = () => {,
             Experience the power of artificial intelligence with our comprehensive suite of interactive tools designed to transform your business operations.,
           </p>,
         </div>,
-        {/* AI Tools Grid */,}
+        {/* AI Tools Grid */}
         <div,
           className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4 mb-16",
         >,
           {Object.entries(aiTools).map(([keytool]) => (,
             <button,
-              key={key,}
+              key={key}
               onClick={() => setActiveTool(key)}
               onMouseEnter={() => setHoveredTool(key)}
               onMouseLeave={() => setHoveredTool(null)}
               className={`relative p-6 rounded-2xl transition-all duration-300 ${,
                 activeTool === key,
                   ? 'bg-white shadow-xl scale-105 border-2 border-indigo-200',
-                  : 'bg-white/50 hover: bg-white hover:shadow-lg border border-slate-200',}`}
+                  : 'bg-white/50 hover: bg-white hover:shadow-lg border border-slate-200'}`}
             >,
               <div className="text-center">,
                 <div className={`w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-r ${tool.color} flex items-center justify-center`}>,
@@ -166,8 +166,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
                 {hoveredTool === key && activeTool !== key && (,
                   <div,
                     className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl",
-                  />,
-                )}
+                  />)}
               </div>,
             </button>,
           ))}
@@ -178,7 +177,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
             className="bg-white rounded-3xl p-8 shadow-xl mb-16",
           >,
             <div className="grid lg: grid-cols-2 gap-8">,
-              {/* Tool Info */,}
+              {/* Tool Info */}
               <div>,
                 <div className="flex items-center mb-6">,
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${aiTools[activeTool as keyof typeof aiTools].color} flex items-center justify-center mr-4`}>,
@@ -193,11 +192,10 @@ const InteractiveAIToolsShowcase2025 = () => {,
                   <h4 className="font-semibold text-slate-900 mb-3">Key Features: </h4>,
                   <div className="grid grid-cols-2 gap-2">,
                     {aiTools[activeTool as keyof typeof aiTools].features.map((featureindex) => (,
-                      <div key={index,} className="flex items-center text-sm text-slate-600">,
+                      <div key={index} className="flex items-center text-sm text-slate-600">,
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />,
                         {feature}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
                 <div className="grid grid-cols-3 gap-4">,
@@ -205,8 +203,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
                     <div key={key} className="text-center p-3 bg-slate-50 rounded-xl">,
                       <div className="text-xl font-bold text-slate-900">{value}</div>,
                       <div className="text-xs text-slate-600 capitalize">{key}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               {/* Interactive Demo */}
@@ -219,7 +216,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
                       <span className="text-sm text-slate-600">AI is processing your request...</span>,
                     </div>,
                     <div className="text-sm text-slate-800">,
-                      {activeTool === 'ai-assistant' && "Hello! 'Im your AI assistant. How can I help you today?",}
+                      {activeTool === 'ai-assistant' && "Hello! 'Im your AI assistant. How can I help you today?"}
                       {activeTool === 'data-analyzer' && "Analyzing data patterns... Found 3 key insights in your dataset."}
                       {activeTool === 'content-generator' && "Generating content... Created 5 high-quality articles based on your requirements."}
                       {activeTool === 'automation-engine' && "Automation running... Completed 12 tasks in the last hour."}
@@ -236,7 +233,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Use Cases */,}
+        {/* Use Cases */}
         <div,
           className="mb-16",
         >,
@@ -246,21 +243,20 @@ const InteractiveAIToolsShowcase2025 = () => {,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {useCases.map((useCaseindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg hover: shadow-xl transition-all duration-300",
               >,
                 <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">,
                   <useCase.icon className="w-6 h-6 text-indigo-600" />,
                 </div>,
-                <h4 className="text-lg font-semibold text-slate-900 mb-2">{useCase.title,}</h4>,
+                <h4 className="text-lg font-semibold text-slate-900 mb-2">{useCase.title}</h4>,
                 <p className="text-slate-600 text-sm mb-4">{useCase.description}</p>,
                 <div className="space-y-1">,
                   {useCase.results.map((resulti) => (,
                     <div key={i} className="flex items-center text-sm text-green-600">,
                       <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />,
                       {result}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             ))}
@@ -276,7 +272,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
           <div className="grid md: grid-cols-3 gap-8">,
             {testimonials.map((testimonialindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg",
               >,
                 <div className="flex items-center mb-4">,
@@ -290,8 +286,7 @@ const InteractiveAIToolsShowcase2025 = () => {,
                 </div>,
                 <div className="flex items-center mb-3">,
                   {[...Array(testimonial.rating)].map((_i) => (,
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />))}
                 </div>,
                 <p className="text-slate-600 italic">"{testimonial.content}"</p>,
               </div>,
@@ -319,6 +314,6 @@ const InteractiveAIToolsShowcase2025 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default InteractiveAIToolsShowcase2025;
+  )},
+export default InteractiveAIToolsShowcase2025,
 </div></div></div></div>,

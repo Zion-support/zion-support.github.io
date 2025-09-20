@@ -1,12 +1,12 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
 
 interface ActionButtonsProps {
-  flagId: string;
-  status: string;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -57,5 +57,5 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         </Button>
       )}
     </div>
-  );
-};
+  ),
+},

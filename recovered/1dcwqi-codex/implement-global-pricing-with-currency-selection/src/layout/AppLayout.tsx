@@ -1,13 +1,13 @@
 
-import React from "react";
-import { Outlet } from "react-router-dom";
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
-import { SkipLink } from "@/components/SkipLink";
+import React from "react",
+import { Outlet } from "react-router-dom",
+import { AppHeader } from "./AppHeader",
+import { Footer } from "@/components/Footer",
+import { SkipLink } from "@/components/SkipLink",
 
 interface AppLayoutProps {
-  children?: React.ReactNode;
-  hideFooter?: boolean;
+  children?: React.ReactNode,
+  hideFooter?: boolean,
 }
 
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
@@ -20,5 +20,5 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
       </main>
       {!hideFooter && <Footer />}
     </div>
-  );
+  ),
 }

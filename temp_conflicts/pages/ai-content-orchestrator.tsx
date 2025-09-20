@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Brain, FileText, Palette, Zap, Target, Users, 
   BarChart3, Globe, Shield, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIContentOrchestrator: React.FC = () => {
   const features = [
@@ -39,18 +39,14 @@ const AIContentOrchestrator: React.FC = () => {
       title: 'Real-time Optimization',
       description: 'Continuously optimize content based on performance data and user engagement.'
     }
-  ];
+  ],
 
   const useCases = [
-    'Marketing Content Automation',
-    'Blog and Article Generation',
-    'Social Media Management',
-    'Email Marketing Campaigns',
-    'Product Description Creation',
-    'Customer Support Content',
-    'Training Material Development',
-    'Multilingual Content Localization'
-  ];
+    'Marketing Content AutomationBlog and Article Generation',
+    'Social Media ManagementEmail Marketing Campaigns',
+    'Product Description CreationCustomer Support Content',
+    'Training Material DevelopmentMultilingual Content Localization'
+  ],
 
   const pricing = [
     {
@@ -58,10 +54,8 @@ const AIContentOrchestrator: React.FC = () => {
       price: '$1,299',
       period: 'month',
       features: [
-        'Up to 100 content pieces/month',
-        'Basic AI content generation',
-        '3 social media channels',
-        'Standard analytics',
+        'Up to 100 content pieces/monthBasic AI content generation',
+        '3 social media channelsStandard analytics',
         'Email support'
       ]
     },
@@ -70,12 +64,9 @@ const AIContentOrchestrator: React.FC = () => {
       price: '$2,499',
       period: 'month',
       features: [
-        'Up to 500 content pieces/month',
-        'Advanced AI with custom training',
-        'Unlimited social media channels',
-        'Advanced analytics & reporting',
-        'Priority support',
-        'Custom integrations'
+        'Up to 500 content pieces/monthAdvanced AI with custom training',
+        'Unlimited social media channelsAdvanced analytics & reporting',
+        'Priority supportCustom integrations'
       ],
       popular: true
     },
@@ -84,15 +75,12 @@ const AIContentOrchestrator: React.FC = () => {
       price: '$4,999',
       period: 'month',
       features: [
-        'Unlimited content pieces',
-        'Custom AI model training',
-        'Full channel integration',
-        'Advanced personalization',
-        'Dedicated account manager',
-        'Custom SLA & support'
+        'Unlimited content piecesCustom AI model training',
+        'Full channel integrationAdvanced personalization',
+        'Dedicated account managerCustom SLA & support'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -292,7 +280,7 @@ const AIContentOrchestrator: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Content Strategy?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -314,7 +302,7 @@ const AIContentOrchestrator: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIContentOrchestrator;
+export default AIContentOrchestrator,

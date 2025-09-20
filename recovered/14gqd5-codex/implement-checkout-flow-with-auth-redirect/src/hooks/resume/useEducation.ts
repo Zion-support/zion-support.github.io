@@ -1,23 +1,23 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Education } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+import { useState } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import { Education } from '@/types/resume',
+import { useAuth } from '@/hooks/useAuth',
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils',
 
 export function useEducation() {
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { user } = useAuth(),
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
   
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to add education');
-      return false;
+      setError('You must be logged in to add education'),
+      return false
     }
     
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
     
     try {
       const { error } = await supabase
@@ -33,26 +33,26 @@ export function useEducation() {
           description: education.description,
           institution_logo_url: education.institution_logo_url,
           location: education.location
-        });
+        }),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      return showSuccessToast("Education added", "Your education has been added to your resume");
+      return showSuccessToast("Education added", "Your education has been added to your resume"),
     } catch (e: any) {
-      return handleResumeError(e, 'Could not add education');
+      return handleResumeError(e, 'Could not add education'),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update education');
-      return false;
+      setError('You must be logged in to update education'),
+      return false
     }
     
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
     
     try {
       const { error } = await supabase
@@ -68,42 +68,42 @@ export function useEducation() {
           institution_logo_url: education.institution_logo_url,
           location: education.location
         })
-        .eq('id', eduId);
+        .eq('id', eduId),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      return showSuccessToast("Education updated", "Your education has been updated");
+      return showSuccessToast("Education updated", "Your education has been updated"),
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update education');
+      return handleResumeError(e, 'Could not update education'),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   
   const deleteEducation = async (eduId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete education');
-      return false;
+      setError('You must be logged in to delete education'),
+      return false
     }
     
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
     
     try {
       const { error } = await supabase
         .from('education')
         .delete()
-        .eq('id', eduId);
+        .eq('id', eduId),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      return showSuccessToast("Education deleted", "Your education has been removed from your resume");
+      return showSuccessToast("Education deleted", "Your education has been removed from your resume"),
     } catch (e: any) {
-      return handleResumeError(e, 'Could not delete education');
+      return handleResumeError(e, 'Could not delete education'),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return {
     isLoading,
@@ -111,5 +111,5 @@ export function useEducation() {
     addEducation,
     updateEducation,
     deleteEducation
-  };
+  },
 }

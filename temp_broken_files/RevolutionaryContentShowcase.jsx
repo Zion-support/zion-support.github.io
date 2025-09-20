@@ -1,32 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const RevolutionaryContentShowcase = () => {,
-  const [activeContent, setActiveContent] = useState(0);
+  const [activeContent, setActiveContent] = useState(0),
   const contentItems = [,
     {,
-      title: "Synthetic Intelligence 2026";
-      description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities";
-      icon: "🤖";
-      gradient: "from-purple-600 to-pink-600";
-      link: "/pages/SyntheticIntelligence2026";
-      features: ["Autonomous AI Agents", "Synthetic Consciousness", "Creative AI", "Collective Intelligence"],
-    };
+      title: "Synthetic Intelligence 2026",
+      description: "Experience the future with AI agents that possess synthetic consciousness and autonomous capabilities",
+      icon: "🤖",
+      gradient: "from-purple-600 to-pink-600",
+      link: "/pages/SyntheticIntelligence2026",
+      features: ["Autonomous AI Agents", "Synthetic Consciousness", "Creative AI", "Collective Intelligence"]
+    },
     {,
-      title: "Quantum-Neural Fusion 2026";
-      description: "Revolutionary fusion of quantum computing and neural networks for unprecedented processing power";
-      icon: "⚛️";
-      gradient: "from-cyan-600 to-blue-600";
-      link: "/pages/QuantumNeuralFusion2026";
-      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"],
-    };
+      title: "Quantum-Neural Fusion 2026",
+      description: "Revolutionary fusion of quantum computing and neural networks for unprecedented processing power",
+      icon: "⚛️",
+      gradient: "from-cyan-600 to-blue-600",
+      link: "/pages/QuantumNeuralFusion2026",
+      features: ["Quantum Processing", "Neural Networks", "Fusion Technology", "Exponential Power"]
+    },
     {,
-      title: "Next-Gen Tech Showcase 2026";
-      description: "Discover the most advanced technologies of 2026 featuring revolutionary innovations";
-      icon: "🌟";
-      gradient: "from-violet-600 to-fuchsia-600";
-      link: "/pages/NextGenTechShowcase2026";
-      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"],
+      title: "Next-Gen Tech Showcase 2026",
+      description: "Discover the most advanced technologies of 2026 featuring revolutionary innovations",
+      icon: "🌟",
+      gradient: "from-violet-600 to-fuchsia-600",
+      link: "/pages/NextGenTechShowcase2026",
+      features: ["Synthetic Intelligence", "Advanced Quantum", "Neural Interfaces", "Global AI Network"]
     }
-  ];
+  ],
   return (,
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">,
       <div className="container mx-auto px-4">,
@@ -52,7 +52,7 @@ const RevolutionaryContentShowcase = () => {,
                 className={`px-6 py-3 rounded-md transition-all duration-300 ${,
                   activeContent === index,
                     ? 'bg-white text-gray-900',
-                    : 'text-white hover: bg-white/20',}`}
+                    : 'text-white hover: bg-white/20'}`}
               >,
                 <span className="text-2xl mr-2">{item.icon}</span>,
                 {item.title}
@@ -67,21 +67,20 @@ const RevolutionaryContentShowcase = () => {,
         >,
           <div className="grid md: grid-cols-2 gap-12 items-center">,
             <div>,
-              <div className="text-8xl mb-6">{contentItems[activeContent].icon,}</div>,
+              <div className="text-8xl mb-6">{contentItems[activeContent].icon}</div>,
               <h3 className="text-4xl font-bold mb-6">{contentItems[activeContent].title}</h3>,
               <p className="text-xl opacity-90 mb-8">{contentItems[activeContent].description}</p>,
               <div className="grid grid-cols-2 gap-4 mb-8">,
                 {contentItems[activeContent].features.map((feature, index) => (,
                   <div key={index} className="bg-white/20 backdrop-blur-sm rounded-lg p-3 text-center">,
                     <span className="text-sm font-semibold">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <a,
                 href={contentItems[activeContent].link}
                 className="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold text-lg",
               >,
-                Explore {contentItems[activeContent].title,} →,
+                Explore {contentItems[activeContent].title} →,
               </a>,
             </div>,
             <div className="relative">,
@@ -111,6 +110,6 @@ const RevolutionaryContentShowcase = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default RevolutionaryContentShowcase;
+  ),
+},
+export default RevolutionaryContentShowcase,

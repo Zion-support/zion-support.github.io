@@ -1,10 +1,10 @@
 
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext",
 import {
   Home,
   Search,
@@ -13,19 +13,19 @@ import {
   MessageSquare,
   ShoppingCart,
   User
-} from "lucide-react";
+} from "lucide-react",
 
 interface MobileBottomNavProps {
-  unreadCount?: number;
+  unreadCount?: number,
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const location = useLocation();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { count: favoritesCount } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);
+  const location = useLocation(),
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const { count: favoritesCount } = useFavorites(),
+  const { items } = useCart(),
+  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0),
 
   const navItems = [
     {
@@ -76,12 +76,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
-  ];
+  ],
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
-  );
+  ),
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-purple/20">
@@ -110,5 +110,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         ))}
       </div>
     </nav>
-  );
+  ),
 }

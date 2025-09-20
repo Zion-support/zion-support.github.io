@@ -1,18 +1,18 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation';
-  description: 'Discover how a Fortune 500 company achieved 450% ROI and 85% operational efficiency gains through AI 2026 enterprise automation implementation.';
-  keywords: ['AI 2026enterprise automation', 'case studyFortune 500', 'ROIbusiness transformation', 'success story'];
+  title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
+  description: 'Discover how a Fortune 500 company achieved 450% ROI and 85% operational efficiency gains through AI 2026 enterprise automation implementation.',
+  keywords: ['AI 2026enterprise automationcase studyFortune 500', 'ROIbusiness transformationsuccess story'],
   openGraph: {,
-    title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation';
-    description: 'Discover how a Fortune 500 company achieved 450% ROI through AI 2026 enterprise automation.';
-    type: 'article';
-    publishedTime: '2024-12-27T00:00:00.000Z';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
+    description: 'Discover how a Fortune 500 company achieved 450% ROI through AI 2026 enterprise automation.',
+    type: 'article',
+    publishedTime: '2024-12-27T00:00:00.000Z',
+    authors: ['Zion Tech Group']}
+},
 export default function AI2026EnterpriseAutomationCaseStudy() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -53,13 +53,13 @@ export default function AI2026EnterpriseAutomationCaseStudy() {,
           </div>,
         </div>,
       </section>,
-      {/* Content */,}
+      {/* Content */}
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
           <h2>Executive Summary</h2>,
           <p>,
             This case study examines the successful implementation of AI 2026 enterprise automation solutions,
-            at a Fortune 500 manufacturing company. The transformation resulted in unprecedented business outcomes;
+            at a Fortune 500 manufacturing company. The transformation resulted in unprecedented business outcomes,
             including 450% ROI, 85% reduction in operational inefficiencies, and $2.8 billion in total business value creation.,
           </p>,
           <h3>Company Background</h3>,
@@ -209,7 +209,7 @@ export default function AI2026EnterpriseAutomationCaseStudy() {,
           </div>,
         </div>,
       </article>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="bg-gray-50 py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -239,4 +239,4 @@ export default function AI2026EnterpriseAutomationCaseStudy() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

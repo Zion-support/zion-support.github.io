@@ -1,5 +1,5 @@
-import React from 'react';
-export { function };
+import React from 'react',
+export { function },
 export default function PostCard({ post }) {
 
   return ()
@@ -29,6 +29,6 @@ export default function PostCard({ post }) {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"

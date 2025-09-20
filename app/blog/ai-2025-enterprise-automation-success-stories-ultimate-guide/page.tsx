@@ -1,12 +1,12 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Enterprise Automation Success Stories: Ultimate Guide';
-  description: 'Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.';
-  keywords: ['AI automationenterprise', 'case studiesROI', 'success storiesFortune 500'],
-};
+  title: 'AI 2025 Enterprise Automation Success Stories: Ultimate Guide',
+  description: 'Discover how Fortune 500 companies achieved 300%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',
+  keywords: ['AI automationenterprisecase studiesROI', 'success storiesFortune 500']
+},
 export default function AIEnterpriseAutomationSuccessStoriesPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -46,7 +46,7 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Content Preview */,}
+      {/* Content Preview */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="prose prose-lg max-w-none">,
@@ -138,4 +138,4 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

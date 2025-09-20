@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Award,
   Brain,
@@ -15,78 +15,50 @@ import {
   Shield,
   Sparkles,
   TrendingUp
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
-import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
-import { comprehensivePricingGuide2028 } from '../data/comprehensivePricingGuide2028';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';
-
+} from "lucide-react";
+import React, { useState } from "react";
+import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028";
+import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from "../data/comprehensiveITInfrastructure2028";
+import { comprehensivePricingGuide2028 } from "../data/comprehensivePricingGuide2028";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from "../data/innovativeMicroSaasServices2028";
 const ComprehensiveServicesLanding2028: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeTab, setActiveTab] = useState('ai'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const serviceCategories = [
     {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      description: 'Revolutionary AI solutions that transform business operations',
-      icon: Brain,
-      services: ADVANCED_AI_SERVICES_2028,
-      color: 'from-blue-600 to-purple-600',
-      bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30'
-    },
+      id: 'ai',name: 'AI & Machine Learning',description: 'Revolutionary AI solutions that transform business operations',icon: Brain,services: ADVANCED_AI_SERVICES_2028,color: 'from-blue-600 to-purple-600',bgColor: 'bg-blue-500/10',borderColor: 'border-blue-500/30'
+    };
     {
-      id: 'infrastructure',
-      name: 'IT Infrastructure',
-      description: 'Next-generation infrastructure solutions for modern businesses',
-      icon: Server,
-      services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,
-      color: 'from-green-600 to-emerald-600',
-      bgColor: 'bg-green-500/10',
-      borderColor: 'border-green-500/30'
-    },
+      id: 'infrastructure',name: 'IT Infrastructure',description: 'Next-generation infrastructure solutions for modern businesses',icon: Server,services: COMPREHENSIVE_IT_INFRASTRUCTURE_2028,color: 'from-green-600 to-emerald-600',bgColor: 'bg-green-500/10',borderColor: 'border-green-500/30'
+    };
     {
-      id: 'saas',
-      name: 'Micro SAAS',
-      description: 'Innovative micro SAAS solutions for every business need',
-      icon: Cloud,
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,
-      color: 'from-purple-600 to-pink-600',
-      bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30'
+      id: 'saas',name: 'Micro SAAS',description: 'Innovative micro SAAS solutions for every business need',icon: Cloud,services: INNOVATIVE_MICRO_SAAS_SERVICES_2028,color: 'from-purple-600 to-pink-600',bgColor: 'bg-purple-500/10',borderColor: 'border-purple-500/30'
     }
   ];
-
-  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [];
+  const activeServices = serviceCategories.find(cat => cat.id === activeTab)?.services || [],
   const filteredServices = activeServices.filter(service =>
     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     service.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  ),
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -372,28 +344,17 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                icon: Award,
-                title: "Industry Expertise",
-                description: "20+ years of experience in cutting-edge technology solutions",
-                color: "from-blue-600 to-purple-600"
-              },
+                icon: Award,title: "Industry Expertise",description: "20+ years of experience in cutting-edge technology solutions",color: "from-blue-600 to-purple-600"
+              };
               {
-                icon: Rocket,
-                title: "Fast Implementation",
-                description: "Get up and running in weeks, not months with our proven methodology",
+                icon: Rocket,title: "Fast Implementation",description: "Get up and running in weeks, not months with our proven methodology",
                 color: "from-purple-600 to-pink-600"
-              },
+              };
               {
-                icon: TrendingUp,
-                title: "Proven ROI",
-                description: "See measurable results within 90 days with our data-driven approach",
-                color: "from-pink-600 to-red-600"
-              },
+                icon: TrendingUp,title: "Proven ROI",description: "See measurable results within 90 days with our data-driven approach",color: "from-pink-600 to-red-600"
+              };
               {
-                icon: Shield,
-                title: "Enterprise Security",
-                description: "Bank-grade security and compliance for your peace of mind",
-                color: "from-red-600 to-orange-600"
+                icon: Shield,title: "Enterprise Security",description: "Bank-grade security and compliance for your peace of mind",color: "from-red-600 to-orange-600"
               }
             ].map((feature, index) => (
               <motion.div
@@ -428,11 +389,11 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of technology with our innovative services. Get started today and experience the power of AI, 
+              Join the future of technology with our innovative services. Get started today and experience the power of AI;
               advanced infrastructure, and cutting-edge micro SAAS solutions.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -453,7 +414,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {/* Footer Contact Information */}
-      <footer className="bg-white/5 backdrop-blur-sm py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-white/5 backdrop-blur-sm py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
@@ -509,7 +470,6 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default ComprehensiveServicesLanding2028;

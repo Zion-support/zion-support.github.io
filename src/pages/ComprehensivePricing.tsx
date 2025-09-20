@@ -1,113 +1,88 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
+import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
 };
-
 const pricingTiers = [
   {
-    name: 'Starter',
-    price: '$999',
-    period: '/month',
-    description: 'Perfect for small businesses and startups',
-    features: [
-      'Basic AI automation',
-      'Standard support',
-      'Core integrations',
-      'Basic analytics',
+    name: 'Starter',price: '$999',period: '/month',description: 'Perfect for small businesses and startups',features: [
+      'Basic AI automationStandard support';
+      'Core integrationsBasic analytics',
       'Email support'
     ],
     popular: false
-  },
+  };
   {
-    name: 'Professional',
-    price: '$2,999',
-    period: '/month',
-    description: 'Ideal for growing businesses',
-    features: [
-      'Advanced AI features',
-      'Priority support',
-      'Custom integrations',
-      'Advanced analytics',
-      'Phone & email support',
-      'Training sessions'
+    name: 'Professional',price: '$2,999',
+    period: '/month',description: 'Ideal for growing businesses',features: [
+      'Advanced AI featuresPriority support';
+      'Custom integrationsAdvanced analytics',
+      'Phone & email supportTraining sessions'
     ],
     popular: true
-  },
+  };
   {
-    name: 'Enterprise',
-    price: '$7,999',
-    period: '/month',
-    description: 'For large organizations',
-    features: [
-      'Full AI suite',
-      '24/7 dedicated support',
-      'Custom development',
-      'Enterprise analytics',
-      'Dedicated account manager',
-      'Custom training programs',
+    name: 'Enterprise',price: '$7,999',
+    period: '/month',description: 'For large organizations',features: [
+      'Full AI suite24/7 dedicated support';
+      'Custom developmentEnterprise analytics',
+      'Dedicated account managerCustom training programs',
       'SLA guarantees'
     ],
     popular: false
   }
 ];
-
 export default function ComprehensivePricing() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
 
   // Combine all services
-  const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027];
+  const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category)));
+  const categories = Array.from(new Set(allServices.map(service => service.category))),
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
 
-    let matchesPrice = true;
+    let matchesPrice = true,
     if (selectedPriceRange !== 'all') {
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+      const price = parseInt(service.price.replace(/[^0-9]/g, '')),
       switch (selectedPriceRange) {
         case 'under-1000':
-          matchesPrice = price < 1000;
-          break;
+          matchesPrice = price < 1000,
+          break,
         case '1000-3000':
-          matchesPrice = price >= 1000 && price < 3000;
-          break;
+          matchesPrice = price >= 1000 && price < 3000,
+          break,
         case '3000-5000':
-          matchesPrice = price >= 3000 && price < 5000;
-          break;
+          matchesPrice = price >= 3000 && price < 5000,
+          break,
         case 'over-5000':
-          matchesPrice = price >= 5000;
-          break;
+          matchesPrice = price >= 5000,
+          break,
       }
     }
 
-    return matchesCategory && matchesPrice;
-  });
+    return matchesCategory && matchesPrice,
+  }),
 
   const getPriceRangeLabel = (range: string) => {
     switch (range) {
-      case 'under-1000': return 'Under $1,000';
+      case 'under-1000': return 'Under $1,000',
       case '1000-3000': return '$1,000 - $3,000';
       case '3000-5000': return '$3,000 - $5,000';
       case 'over-5000': return 'Over $5,000';
-      default: return 'All Prices';
+      default: return 'All Prices'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header */}
@@ -260,7 +235,7 @@ export default function ComprehensivePricing() {
                   {/* Market Information */}
                   <div className="space-y-2 mb-4 text-sm bg-zion-slate-light/20 p-3 rounded-lg">
                     <div className="flex justify-between">
-                      <span className="text-zion-slate-dark">Market Size:</span>
+                      <span className="text-zion-slate-dark">Market Size: </span>
                       <span className="font-semibold">{service.marketSize}</span>
                     </div>
                     <div className="flex justify-between">
@@ -311,7 +286,7 @@ export default function ComprehensivePricing() {
               <Button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSelectedPriceRange('all');
+                  setSelectedPriceRange('all'),
                 }}
                 className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
               >

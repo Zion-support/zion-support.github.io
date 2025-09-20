@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default EnhancedZionTechServices2025;}
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from '../data/enhancedZionTechServices2025';
+import React, { useState } from 'react',
+export default EnhancedZionTechServices2025,}
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from '../data/enhancedZionTechServices2025',
 
 export default function Page() {
       <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">
@@ -48,9 +48,9 @@ export default function Page() {
             <select
               value={selectedCategory}
               onChange={ (e) => setSelectedCategory(e.target.value) }
-              className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus:outline - none focus:ring - 2 focus:ring - blue -500"
+              className="px-4 py-3 bg-white / 10 border border-white / 20 rounded-lg text-white focus: outline - none focus:ring - 2 focus:ring - blue -500"
 
-              {categories.map(category => (;
+              {categories.map(category => (,
                 <option key={category} value={category}>{category}</option>) ) }
             </select>
             <select
@@ -152,17 +152,17 @@ export default function Page() {
                 <div className="text-center">
                   <a
                     href={`mailto:${service.contactInfo.email}`}
-                    className="text-sm text-blue - 400 hover:text-blue - 300 transition -colors"
+                    className="text-sm text-blue - 400 hover: text-blue - 300 transition -colors"
 
                     Contact Sales
                   </a>
                 </div>
-              </div>;
+              </div>,
             </div>) ) }
         </div>
 
         {/* Contact Section */}
-        <div className="mt-24 text-center">;
+        <div className="mt-24 text-center">,
           <h2 className="text-3xl font - bold text-white mb-8">
             Ready to Transform Your Business?
           </h2>
@@ -186,7 +186,7 @@ export default function Page() {
         </div>
 
         {/* Why Choose Zion Tech Group */}
-        <div className="mt-24">;
+        <div className="mt-24">,
           <h2 className="text-3xl font - bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
           </h2>
@@ -208,11 +208,11 @@ export default function Page() {
             </div>
             <div className="text-center">
               <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font - bold text-white mb-2">Global Support</h3>;
-              <p className="text-gray -400">24 / 7 support and global deployment capabilities</p>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
-};
+              <h3 className="text-xl font - bold text-white mb-2">Global Support</h3>,
+              <p className="text-gray -400">24 / 7 support and global deployment capabilities</p>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) ,
+},

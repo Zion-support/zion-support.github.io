@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from 'react',
+import SEO from '../components/SEO',
 export default function EventsPage() {,
 	return (,
 		<>,
@@ -8,12 +8,11 @@ export default function EventsPage() {,
 				<h1 className="text-4xl font-bold mb-4">Events</h1>,
 				<p className="text-gray-300">No upcoming events at this time. Check back soon.</p>,
 			</div>,
-		</>,
-	),
+		</>)
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

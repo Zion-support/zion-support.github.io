@@ -1,18 +1,18 @@
 <<<<<<< HEAD
 
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/components/ui/use-toast",
+import { SEO } from "@/components/SEO",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
 import { 
-  Star, 
+  Star,
   MapPin, 
   Clock, 
   Link as LinkIcon, 
@@ -20,56 +20,56 @@ import {
   Twitter, 
   Linkedin,
   CheckCircle2
-} from "lucide-react";
+} from "lucide-react",
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string };
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
+  const { profileId } = useParams() as { profileId?: string },
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isError, setIsError] = useState(false),
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setIsError(false);
+      setIsLoading(true),
+      setIsError(false),
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single();
+          .single(),
 
         if (error) {
-          throw error;
+          throw error,
         }
 
-        setProfileData(data);
+        setProfileData(data),
       } catch (error) {
-        console.error("Error fetching profile:", error);
-        setIsError(true);
+        console.error("Error fetching profile:", error),
+        setIsError(true),
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive",
-        });
+          variant: "destructive"
+        }),
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
-    };
+    },
 
     if (profileId) {
-      fetchProfile();
+      fetchProfile(),
     }
-  }, [profileId]);
+  }, [profileId]),
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    );
+    ),
   }
 
   if (isError || !profileData) {
@@ -77,7 +77,7 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -241,13 +241,13 @@ export default function ProfilePage() {
       <Footer />
     </>
 =======
-import React from 'react';
+import React from 'react',
 export function ProfilePage() {
   return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

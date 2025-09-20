@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-green-900 py-16">,
@@ -8,7 +8,7 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>,
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-bounce">,
             <span className="text-purple-400 font-bold text-lg">🚀 FUTURE TECH REVOLUTION 2025-2030</span>,
           </div>,
@@ -16,7 +16,7 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
           <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight">,
             AI Future Technology Revolution,
           </h1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <p className="text-xl md: text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">,
             Witness the most revolutionary AI breakthrough timeline in human history.,
             From <span className="text-yellow-400 font-bold">quantum-AI fusion</span> to,
@@ -60,7 +60,7 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
               <p className="text-gray-300">Consciousness transcending physical limitations</p>,
             </div>,
           </div>,
-          {/* Call to action buttons */,}
+          {/* Call to action buttons */}
           <div className="flex flex-col sm: flex-row gap-6 justify-center items-center mb-8">,
             <Link,
               href="/ai-2025-2030-future-tech-revolution",
@@ -75,7 +75,7 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
               Get Custom ROI Analysis,
             </Link>,
           </div>,
-          {/* Trust indicators */,}
+          {/* Trust indicators */}
           <div className="flex flex-col sm: flex-row items-center justify-center gap-8 text-gray-400">,
             <div className="flex items-center gap-2">,
               <span className="text-green-400">✓</span>,
@@ -93,5 +93,5 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
         </div>,
       </div>,
     </div>,
-  );
+  ),
 }

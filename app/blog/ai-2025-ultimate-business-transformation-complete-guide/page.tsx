@@ -1,16 +1,16 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import { ArrowLeftIcon, ShareIcon, BookmarkIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group';
-  description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.';
-  keywords: ['AI 2025Business Transformation', 'Enterprise AIDigital Transformation', 'ROI Optimization'];
+  title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group',
+  description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.',
+  keywords: ['AI 2025Business TransformationEnterprise AIDigital Transformation', 'ROI Optimization'],
   openGraph: {,
-    title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide';
-    description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.';
-    images: ['/images/ai-business-transformation-2025.jpg'],}
-};
+    title: 'AI 2025 Ultimate Business Transformation: Complete Enterprise Guide',
+    description: 'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 2025.',
+    images: ['/images/ai-business-transformation-2025.jpg']}
+},
 export default function AI2025UltimateBusinessTransformationGuide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -33,7 +33,7 @@ export default function AI2025UltimateBusinessTransformationGuide() {,
             AI 2025 Ultimate Business Transformation: Complete Enterprise Guide,
           </h1>,
           <p className="text-xl opacity-90 mb-8 leading-relaxed">,
-            Transform your business with cutting-edge AI technologies. Complete guide to AI implementation;
+            Transform your business with cutting-edge AI technologies. Complete guide to AI implementation,
             ROI optimization, and enterprise success in 2025.,
           </p>,
           <div className="flex flex-wrap gap-4 text-sm">,
@@ -241,4 +241,4 @@ export default function AI2025UltimateBusinessTransformationGuide() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

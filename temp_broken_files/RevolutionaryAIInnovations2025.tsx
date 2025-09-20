@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Brain,
@@ -10,165 +10,165 @@ import {,
   Shield,
   TrendingUp,
   Users,
-  Star;
-  ArrowRight;
-  Play;
-  BookOpen;
-  Lightbulb;
-  Target;
-  CheckCircle;
-  Sparkles;
-  Cpu;
-  Database;
-  Network;
-  Lock;
-  Eye;
-  Heart;
-  MessageSquare;
-  BarChart3;
-  Layers;
-  Activity,
-} from 'lucide-react';
+  Star,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  Target,
+  CheckCircle,
+  Sparkles,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  Heart,
+  MessageSquare,
+  BarChart3,
+  Layers,
+  Activity
+} from 'lucide-react',
 const RevolutionaryAIInnovations2025 = () => {,
-  const [activeInnovationsetActiveInnovation] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeInnovationsetActiveInnovation] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setActiveInnovation((prev) => (prev + 1) % innovations.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setActiveInnovation((prev) => (prev + 1) % innovations.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const innovations = [,
     {,
-      id: 1;
-      title: "Quantum-Neural Fusion Architecture";
-      subtitle: "The Next Generation of AI Processing";
-      description: "Revolutionary quantum computing integration with neural networks achieving unprecedented processing speeds and accuracy. This breakthrough enables real-time complex problem solving that was previously impossible.";
-      icon: Brain;
-      category: "Quantum AI";
-      impact: "10,000x Faster Processing";
+      id: 1,
+      title: "Quantum-Neural Fusion Architecture",
+      subtitle: "The Next Generation of AI Processing",
+      description: "Revolutionary quantum computing integration with neural networks achieving unprecedented processing speeds and accuracy. This breakthrough enables real-time complex problem solving that was previously impossible.",
+      icon: Brain,
+      category: "Quantum AI",
+      impact: "10,000x Faster Processing",
       features: [,
-        "Quantum entanglement-based neural networks";
-        "Real-time complex problem solving";
-        "99.99% accuracy in predictions";
-        "Energy efficiency improved by 95%",
-      ];
+        "Quantum entanglement-based neural networks",
+        "Real-time complex problem solving",
+        "99.99% accuracy in predictions",
+        "Energy efficiency improved by 95%"
+      ],
       stats: {,
-        speed: "10,000x";
-        accuracy: "99.99%";
-        efficiency: "95%";
-        applications: "500+",};
-      color: "from-purple-500 to-pink-500";
-      bgColor: "from-purple-50 to-pink-50",};
+        speed: "10,000x",
+        accuracy: "99.99%",
+        efficiency: "95%",
+        applications: "500+"},
+      color: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-50 to-pink-50"},
     {,
-      id: 2;
-      title: "Autonomous Decision Intelligence";
-      subtitle: "Self-Evolving AI Systems";
-      description: "AI systems that continuously learn and adaptmaking complex business decisions with human-level reasoning and superhuman speed. These systems improve their decision-making capabilities over time without human intervention.";
-      icon: Target;
-      category: "Autonomous Systems";
-      impact: "99.9% Decision Accuracy";
+      id: 2,
+      title: "Autonomous Decision Intelligence",
+      subtitle: "Self-Evolving AI Systems",
+      description: "AI systems that continuously learn and adaptmaking complex business decisions with human-level reasoning and superhuman speed. These systems improve their decision-making capabilities over time without human intervention.",
+      icon: Target,
+      category: "Autonomous Systems",
+      impact: "99.9% Decision Accuracy",
       features: [,
-        "Self-learning decision algorithms";
-        "Real-time risk assessment";
-        "Adaptive strategy optimization";
-        "Human-AI collaboration protocols",
-      ];
+        "Self-learning decision algorithms",
+        "Real-time risk assessment",
+        "Adaptive strategy optimization",
+        "Human-AI collaboration protocols"
+      ],
       stats: {,
-        accuracy: "99.9%";
-        speed: "1000x";
-        learning: "Continuous";
-        decisions: "1M+/day",};
-      color: "from-blue-500 to-cyan-500";
-      bgColor: "from-blue-50 to-cyan-50",};
+        accuracy: "99.9%",
+        speed: "1000x",
+        learning: "Continuous",
+        decisions: "1M+/day"},
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-50 to-cyan-50"},
     {,
-      id: 3;
-      title: "Predictive Business Analytics";
-      subtitle: "Future-Ready Intelligence";
-      description: "Advanced forecasting models that predict market trendscustomer behaviorand business outcomes with unprecedented accuracy. Transform your business with data-driven insights that anticipate the future.";
-      icon: TrendingUp;
-      category: "Analytics";
-      impact: "6 Month Forecast Accuracy";
+      id: 3,
+      title: "Predictive Business Analytics",
+      subtitle: "Future-Ready Intelligence",
+      description: "Advanced forecasting models that predict market trendscustomer behaviorand business outcomes with unprecedented accuracy. Transform your business with data-driven insights that anticipate the future.",
+      icon: TrendingUp,
+      category: "Analytics",
+      impact: "6 Month Forecast Accuracy",
       features: [,
-        "Market trend prediction";
-        "Customer behavior analysis";
-        "Risk assessment models";
-        "Revenue optimization strategies",
-      ];
+        "Market trend prediction",
+        "Customer behavior analysis",
+        "Risk assessment models",
+        "Revenue optimization strategies"
+      ],
       stats: {,
-        forecast: "6 months";
-        accuracy: "94%";
-        markets: "Global";
-        insights: "Real-time",};
-      color: "from-green-500 to-emerald-500";
-      bgColor: "from-green-50 to-emerald-50",};
+        forecast: "6 months",
+        accuracy: "94%",
+        markets: "Global",
+        insights: "Real-time"},
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-50 to-emerald-50"},
     {,
-      id: 4;
-      title: "Neural Interface Revolution";
-      subtitle: "Direct Brain-Computer Integration";
-      description: "Breakthrough neural interfaces enabling seamless communication between human minds and AI systems. Experience the future of human-AI collaboration with direct neural connectivity.";
-      icon: Users;
-      category: "Neural Technology";
-      impact: "Direct Neural Interface";
+      id: 4,
+      title: "Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      description: "Breakthrough neural interfaces enabling seamless communication between human minds and AI systems. Experience the future of human-AI collaboration with direct neural connectivity.",
+      icon: Users,
+      category: "Neural Technology",
+      impact: "Direct Neural Interface",
       features: [,
-        "Non-invasive neural reading";
-        "Thought-to-action translation";
-        "Enhanced cognitive abilities";
-        "Secure neural data protocols",
-      ];
+        "Non-invasive neural reading",
+        "Thought-to-action translation",
+        "Enhanced cognitive abilities",
+        "Secure neural data protocols"
+      ],
       stats: {,
-        latency: "< 1ms";
-        accuracy: "98%";
-        safety: "100%";
-        users: "10,000+",
-      };
-      color: "from-orange-500 to-red-500";
-      bgColor: "from-orange-50 to-red-50",};
+        latency: "< 1ms",
+        accuracy: "98%",
+        safety: "100%",
+        users: "10,000+"
+      },
+      color: "from-orange-500 to-red-500",
+      bgColor: "from-orange-50 to-red-50"},
     {,
-      id: 5;
-      title: "Quantum Security Protocols";
-      subtitle: "Unbreakable Data Protection";
-      description: "Revolutionary quantum encryption ensuring absolute security for sensitive data and communications. Protect your most valuable information with quantum-level security 'thats impossible to breach.";
-      icon: Shield;
-      category: "Security";
-      impact: "Unbreakable Encryption";
+      id: 5,
+      title: "Quantum Security Protocols",
+      subtitle: "Unbreakable Data Protection",
+      description: "Revolutionary quantum encryption ensuring absolute security for sensitive data and communications. Protect your most valuable information with quantum-level security 'thats impossible to breach.",
+      icon: Shield,
+      category: "Security",
+      impact: "Unbreakable Encryption",
       features: [,
-        "Quantum key distribution";
-        "Entanglement-based security";
-        "Zero-knowledge protocols";
-        "Future-proof encryption",
-      ];
+        "Quantum key distribution",
+        "Entanglement-based security",
+        "Zero-knowledge protocols",
+        "Future-proof encryption"
+      ],
       stats: {,
-        security: "Unbreakable";
-        keys: "Quantum";
-        breaches: "0";
-        compliance: "100%",};
-      color: "from-indigo-500 to-purple-500";
-      bgColor: "from-indigo-50 to-purple-50",};
+        security: "Unbreakable",
+        keys: "Quantum",
+        breaches: "0",
+        compliance: "100%"},
+      color: "from-indigo-500 to-purple-500",
+      bgColor: "from-indigo-50 to-purple-50"},
     {,
-      id: 6;
-      title: "Space Technology Integration";
-      subtitle: "AI-Powered Space Exploration";
-      description: "Advanced AI systems designed for space explorationsatellite managementand interplanetary communication. Push the boundaries of human knowledge with AI that works beyond Earth.";
-      icon: Rocket;
-      category: "Space Technology";
-      impact: "Space-Ready AI";
+      id: 6,
+      title: "Space Technology Integration",
+      subtitle: "AI-Powered Space Exploration",
+      description: "Advanced AI systems designed for space explorationsatellite managementand interplanetary communication. Push the boundaries of human knowledge with AI that works beyond Earth.",
+      icon: Rocket,
+      category: "Space Technology",
+      impact: "Space-Ready AI",
       features: [,
-        "Autonomous space navigation";
-        "Satellite constellation management";
-        "Interplanetary communication";
-        "Space resource optimization",
-      ];
+        "Autonomous space navigation",
+        "Satellite constellation management",
+        "Interplanetary communication",
+        "Space resource optimization"
+      ],
       stats: {,
-        satellites: "1000+";
-        range: "Interplanetary";
-        autonomy: "100%";
-        missions: "50+",};
-      color: "from-teal-500 to-blue-500";
-      bgColor: "from-teal-50 to-blue-50",}
-  ];
-  const currentInnovation = innovations[activeInnovation];
+        satellites: "1000+",
+        range: "Interplanetary",
+        autonomy: "100%",
+        missions: "50+"},
+      color: "from-teal-500 to-blue-500",
+      bgColor: "from-teal-50 to-blue-50"}
+  ],
+  const currentInnovation = innovations[activeInnovation],
   return (,
     <divsection,
       className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden",
@@ -176,26 +176,26 @@ const RevolutionaryAIInnovations2025 = () => {,
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">,
         <div,
-            x: [0100];
-            y: [0-100];
-            rotate: [0360],}}
+            x: [0100],
+            y: [0-100],
+            rotate: [0360]}}
             duration: 30,
             repeat: Infinity,
-            ease: "linear",}}
+            ease: "linear"}}
           className="absolute -top-20 -right-20 w-80 h-80 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-10 blur-3xl",
         />,
         <div,
-            x: [0-100];
-            y: [0100];
-            rotate: [360360],}}
+            x: [0-100],
+            y: [0100],
+            rotate: [360360]}}
             duration: 25,
             repeat: Infinity,
-            ease: "linear",}}
+            ease: "linear"}}
           className="absolute -bottom-20 -left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-10 blur-3xl",
         />,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div className="text-center mb-16">,
           <div,
             className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-lg font-medium mb-8",
@@ -214,9 +214,9 @@ const RevolutionaryAIInnovations2025 = () => {,
             Experience breakthrough AI innovations that are transforming industries and reshaping the future of technology,
           </divp>,
         </div>,
-        {/* Main Innovation Showcase */,}
+        {/* Main Innovation Showcase */}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center mb-20">,
-          {/* Left Side - Innovation Details */,}
+          {/* Left Side - Innovation Details */}
           <div,
             key={activeInnovation}
             className="space-y-8",
@@ -232,7 +232,7 @@ const RevolutionaryAIInnovations2025 = () => {,
               </div>,
             </div>,
             <h3 className="text-4xl md: text-5xl font-bold mb-4">,
-              {currentInnovation.title,}
+              {currentInnovation.title}
             </h3>,
             <p className="text-xl text-purple-200 mb-6">,
               {currentInnovation.subtitle}
@@ -250,17 +250,16 @@ const RevolutionaryAIInnovations2025 = () => {,
               <h4 className="text-xl font-bold text-white mb-4">Key Features: </h4>,
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">,
                 {currentInnovation.features.map((featureindex) => (,
-                  <div key={index,} className="flex items-center space-x-3">,
+                  <div key={index} className="flex items-center space-x-3">,
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                     <span className="text-gray-300">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
             {/* Action Buttons */}
             <div className="flex flex-col sm: flex-row gap-4 pt-6">,
               <a,
-                href={`/ai-innovations/${currentInnovation.id,}`}
+                href={`/ai-innovations/${currentInnovation.id}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold hover: from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 group",
               >,
                 <Play className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" />,
@@ -276,7 +275,7 @@ const RevolutionaryAIInnovations2025 = () => {,
               </a>,
             </div>,
           </div>,
-          {/* Right Side - Visual Representation */,}
+          {/* Right Side - Visual Representation */}
           <div,
             key={`visual-${activeInnovation}`}
             className="relative",
@@ -285,30 +284,30 @@ const RevolutionaryAIInnovations2025 = () => {,
               {/* Animated Background */}
               <div className="absolute inset-0 opacity-20">,
                 <div,
-                    scale: [1.21];
-                    rotate: [0180360],}}
+                    scale: [1.21],
+                    rotate: [0180360]}}
                     duration: 8,
                     repeat: Infinity,
-                    ease: "easeInOut",}}
+                    ease: "easeInOut"}}
                   className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute top-1/4 left-1/4`}
                 />,
                 <div,
-                    scale: [1.21.2];
-                    rotate: [360180],}}
+                    scale: [1.21.2],
+                    rotate: [360180]}}
                     duration: 6,
                     repeat: Infinity,
-                    ease: "easeInOut";
-                    delay: 1,}}
+                    ease: "easeInOut",
+                    delay: 1}}
                   className={`w-24 h-24 bg-gradient-to-r ${currentInnovation.color} rounded-full absolute bottom-1/4 right-1/4`}
                 />,
               </div>,
               {/* Main Icon */}
               <div,
-                  scale: [1.1];
-                  rotate: [05-50],}}
+                  scale: [1.1],
+                  rotate: [05-50]}}
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut",}}
+                  ease: "easeInOut"}}
                 className={`w-32 h-32 bg-gradient-to-r ${currentInnovation.color} rounded-full flex items-center justify-center relative z-10`}
               >,
                 <currentInnovation.icon className="w-16 h-16 text-white" />,
@@ -322,8 +321,7 @@ const RevolutionaryAIInnovations2025 = () => {,
                   >,
                     <div className="text-2xl font-bold text-gray-900">{value}</div>,
                     <div className="text-xs text-gray-600 capitalize">{key}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -337,7 +335,7 @@ const RevolutionaryAIInnovations2025 = () => {,
               className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 activeInnovation === index,
                   ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg transform scale-105',
-                  : 'bg-white bg-opacity-20 text-white hover: bg-opacity-30 backdrop-blur-sm',}`}
+                  : 'bg-white bg-opacity-20 text-white hover: bg-opacity-30 backdrop-blur-sm'}`}
             >,
               <innovation.icon className="w-5 h-5 mr-3" />,
               {innovation.title}
@@ -376,6 +374,6 @@ const RevolutionaryAIInnovations2025 = () => {,
         </div>,
       </div>,
     </divsection>,
-  ),};
-export default RevolutionaryAIInnovations2025;
+  )},
+export default RevolutionaryAIInnovations2025,
 </div></div></div></div></div></div></div>,

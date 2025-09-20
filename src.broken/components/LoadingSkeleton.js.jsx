@@ -1,5 +1,5 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react',
+import { cn } from '@/lib/utils',
 ) {
 
   const roundedClasses = {
@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
     sm: 'rounded-sm',
     md: 'rounded-md',
     lg: 'rounded-lg',
-    full: 'rounded-full'};
+    full: 'rounded-full'},
   return ()
     <div
       className={cn('
@@ -22,7 +22,7 @@ import { cn } from '@/lib/utils';
         width: width,
         height: height}}
     />
-  );
+  ),
 }
 export function CardSkeleton({
 
@@ -59,7 +59,7 @@ export function CardSkeleton({
         )}
       </div>
     </div>
-  );
+  ),
 }
 export function ListSkeleton({
 
@@ -93,7 +93,7 @@ export function ListSkeleton({
         </div>
       ))}
     </div>
-  );
+  ),
 }
 export function TableSkeleton({
 
@@ -125,7 +125,7 @@ export function TableSkeleton({
         ))}
       </div>
     </div>
-  );
+  ),
 }
 export function GridSkeleton({
 
@@ -156,7 +156,7 @@ export function GridSkeleton({
         />
       ))}
     </div>
-  );
+  ),
 }
 export function HeroSkeleton({
 
@@ -200,7 +200,7 @@ export function HeroSkeleton({
         )}
       </div>
     </div>
-  );
+  ),
 }
 // Shimmer effect component
 export function Shimmer({ className }) {
@@ -209,7 +209,7 @@ export function Shimmer({ className }) {
     <div className={cn('relative overflow-hidden', className)}>"
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
     </div>
-  );
+  ),
 }
 // Custom shimmer animation`
 export const shimmerAnimation = `
@@ -222,5 +222,5 @@ export const shimmerAnimation = `
 
       transform: translateX(100%)}
   }`
-`;
+`,
 '"`

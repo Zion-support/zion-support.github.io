@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 export default function CustomerFeedbackSurveys() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -24,7 +23,7 @@ export default function CustomerFeedbackSurveys() {
               <li>• NPS, CSAT, CES templates</li>
               <li>• Branching logic, translations, rich media</li>
               <li>• AI topic clustering, sentiment trends</li>
-              <li>• Alerts to Slack/Teams; webhook and REST APIs</li>
+              <li>• Alerts to Slack/Teams, webhook and REST APIs</li>
               <li>• Exports to BigQuery, Snowflake, S3</li>
             </ul>
           </div>
@@ -37,7 +36,7 @@ export default function CustomerFeedbackSurveys() {
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
               References:
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.typeform.com/pricing/" target="_blank" rel="noreferrer">Typeform pricing</a>,
+              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.typeform.com/pricing/" target="_blank" rel="noreferrer">Typeform pricing</a>;
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://www.surveymonkey.com/pricing/" target="_blank" rel="noreferrer">SurveyMonkey pricing</a>
             </p>
           </div>
@@ -50,6 +49,6 @@ export default function CustomerFeedbackSurveys() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

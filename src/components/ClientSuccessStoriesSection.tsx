@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Star,
   Quote,
@@ -9,62 +9,33 @@ import {
   CheckCircle,
   ArrowRight,
   Heart
-} from 'lucide-react';
-
+} from "lucide-react";
 const successStories = [
   {
-    id: 1,
-    client: "TechCorp Solutions",
-    industry: "Technology",
-    challenge: "Legacy systems causing 40% productivity loss",
-    solution: "Modernized infrastructure with AI-powered automation",
-    results: [
-      "Increased productivity by 60%",
+    id: 1,client: "TechCorp Solutions",industry: "Technology",challenge: "Legacy systems causing 40% productivity loss",solution: "Modernized infrastructure with AI-powered automation",results: [
+      "Increased productivity by 60%";
       "Reduced operational costs by 35%",
       "Improved customer satisfaction by 45%"
     ],
-    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",
-    author: "Sarah Johnson",
-    position: "CTO",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
-  },
+    testimonial: "Zion Tech Group transformed our entire operation. The results exceeded our expectations.",author: "Sarah Johnson",position: "CTO",rating: 5,image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+  };
   {
-    id: 2,
-    client: "Global Finance Ltd",
-    industry: "Financial Services",
-    challenge: "Security vulnerabilities and compliance issues",
-    solution: "Comprehensive cybersecurity and compliance platform",
-    results: [
-      "100% compliance achievement",
+    id: 2,client: "Global Finance Ltd",industry: "Financial Services",challenge: "Security vulnerabilities and compliance issues",solution: "Comprehensive cybersecurity and compliance platform",results: [
+      "100% compliance achievement";
       "Zero security breaches",
       "Reduced audit time by 70%"
     ],
-    testimonial: "Their security solutions are world-class. We feel completely protected now.",
-    author: "Michael Chen",
-    position: "CISO",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
-  },
+    testimonial: "Their security solutions are world-class. We feel completely protected now.",author: "Michael Chen",position: "CISO",rating: 5,image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
+  };
   {
-    id: 3,
-    client: "HealthTech Innovations",
-    industry: "Healthcare",
-    challenge: "Patient data management inefficiencies",
-    solution: "AI-powered healthcare analytics platform",
-    results: [
-      "Improved patient outcomes by 30%",
+    id: 3,client: "HealthTech Innovations",industry: "Healthcare",challenge: "Patient data management inefficiencies",solution: "AI-powered healthcare analytics platform",results: [
+      "Improved patient outcomes by 30%";
       "Reduced administrative overhead by 50%",
       "Enhanced data accuracy by 95%"
     ],
-    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",
-    author: "Dr. Emily Rodriguez",
-    position: "Chief Medical Officer",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
+    testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",author: "Dr. Emily Rodriguez",position: "Chief Medical Officer",rating: 5,image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
   }
 ];
-
 export function ClientSuccessStoriesSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -212,7 +183,7 @@ export function ClientSuccessStoriesSection() {
               Join hundreds of satisfied clients who have transformed their
               businesses with our innovative technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -226,5 +197,5 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

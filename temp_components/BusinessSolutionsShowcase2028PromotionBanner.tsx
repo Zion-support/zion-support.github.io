@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   TrendingUp
   Users
@@ -17,11 +17,11 @@ import {
   Sparkles,
   CheckCircle,
   Star
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BusinessSolutionsShowcase2028PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(true);
-  const [currentBenefitsetCurrentBenefit] = useState(0);
+  const [isVisiblesetIsVisible] = useState(true),
+  const [currentBenefitsetCurrentBenefit] = useState(0),
 
   const benefits = [
     {
@@ -48,23 +48,23 @@ const BusinessSolutionsShowcase2028PromotionBanner = () => {
       description: 'Accelerate business processes',
       color: 'from-blue-500 to-cyan-500'
     }
-  ];
+  ],
 
   const solutions = [
     { name: 'AI Automation'icon: Zap },
     { name: 'Analytics'icon: BarChart3 },
     { name: 'Security'icon: Shield },
     { name: 'Cloud'icon: Building2 }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentBenefit((prev) => (prev + 1) % benefits.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentBenefit((prev) => (prev + 1) % benefits.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
 
-  if (!isVisible) return null;
+  if (!isVisible) return null,
 
 const BusinessSolutionsShowcase2028PromotionBanner: React.FC = () => {
   return (
@@ -72,7 +72,7 @@ const BusinessSolutionsShowcase2028PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">BusinessSolutionsShowcase2028PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default BusinessSolutionsShowcase2028PromotionBanner;
+export default BusinessSolutionsShowcase2028PromotionBanner,

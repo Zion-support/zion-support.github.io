@@ -1,18 +1,17 @@
-import React from 'react';
-
+import React from "react";
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'custom';
-  customColor?: string;
-  text?: string;
-  showText?: boolean;
-  variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple';
-  className?: string;
-  ariaLabel?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  color?: 'primary' | 'secondary' | 'white' | 'custom',
+  customColor?: string,
+  text?: string,
+  showText?: boolean,
+  variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple',
+  className?: string,
+  ariaLabel?: string,
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+  size = 'md';
   color = 'primary',
   customColor,
   text = 'Loading...',
@@ -23,33 +22,24 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }) => {
   // Size classes
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
+    sm: 'w-4 h-4',md: 'w-8 h-8',lg: 'w-12 h-12',xl: 'w-16 h-16'
   };
-
   // Color classes
   const colorClasses = {
-    primary: 'text-cyan-400',
-    secondary: 'text-purple-400',
-    white: 'text-white',
-    custom: ''
+    primary: 'text-cyan-400',secondary: 'text-purple-400',white: 'text-white',custom: ''
   };
-
   // Get the actual color value
   const getColorValue = () => {
     if (color === 'custom' && customColor) {
-      return customColor;
+      return customColor,
     }
-    return '';
-  };
+    return '',
+  },
 
   // Spinner variants
   const renderSpinner = () => {
-    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`;
+    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`,
     const customStyle = color === 'custom' ? { color: customColor } : {};
-
     switch (variant) {
       case 'dots':
         return (
@@ -59,11 +49,10 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
           </div>
         );
-
       case 'pulse':
         return (
           <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
-        );
+        ),
 
       case 'bars':
         return (
@@ -74,7 +63,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
           </div>
         );
-
       case 'ripple':
         return (
           <div className={`${sizeClasses[size]} relative`}>
@@ -83,10 +71,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' }}></div>
           </div>
         );
-
       case 'spinner':
-      default:
-        return (
+      default: return (
           <svg 
             className={baseClasses} 
             style={customStyle}
@@ -110,19 +96,15 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </svg>
         );
     }
-  };
+  },
 
   // Text size classes
   const textSizeClasses = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-base',
-    xl: 'text-lg'
+    sm: 'text-xs',md: 'text-sm',lg: 'text-base',xl: 'text-lg'
   };
-
   // Accessibility
-  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
-  const isSpinning = variant === 'spinner' || variant === 'ripple';
+  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`,
+  const isSpinning = variant === 'spinner' || variant === 'ripple',
 
   return (
     <div 
@@ -169,7 +151,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   );
-};
+},
 
 // Specialized loading components for common use cases
 export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading page...' }) => (
@@ -183,7 +165,6 @@ export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loadin
     />
   </div>
 );
-
 export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => (
   <LoadingSpinner 
     size={size} 
@@ -192,7 +173,6 @@ export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 
     className="inline-flex"
   />
 );
-
 export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
   <LoadingSpinner 
     size="sm" 
@@ -202,7 +182,6 @@ export const InlineLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Load
     className="inline-flex items-center space-x-2"
   />
 );
-
 export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading amazing content...' }) => (
   <div className="fixed inset-0 bg-futuristic/95 backdrop-blur-sm flex items-center justify-center z-50">
     <div className="text-center">
@@ -219,15 +198,13 @@ export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = '
     </div>
   </div>
 );
-
 // Loading overlay for components
 export const LoadingOverlay: React.FC<{ 
-  isLoading: boolean; 
-  children: React.ReactNode;
-  text?: string;
-  overlay?: boolean;
+  isLoading: boolean,children: React.ReactNode;
+  text?: string,
+  overlay?: boolean
 }> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
-  if (!isLoading) return <>{children}</>;
+  if (!isLoading) return <>{children}</>,
 
   if (overlay) {
     return (
@@ -243,7 +220,7 @@ export const LoadingOverlay: React.FC<{
           />
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -255,14 +232,14 @@ export const LoadingOverlay: React.FC<{
         showText={true}
       />
     </div>
-  );
-};
+  ),
+},
 
 // Skeleton loading component
 export const Skeleton: React.FC<{ 
   className?: string;
-  lines?: number;
-  height?: string;
+  lines?: number,
+  height?: string
 }> = ({ className = '', lines = 1, height = 'h-4' }) => (
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map((_, index) => (
@@ -272,7 +249,7 @@ export const Skeleton: React.FC<{
       />
     ))}
   </div>
-);
+),
 
 // Card skeleton
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className = '' }) => (

@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp, Sun, Wind, Battery, Recycle, Tree, Cloud, Database } from "lucide-react";
 const SustainableTechnology: React.FC = () => {
   const features = [
     {
-      icon: Leaf,
-      title: 'Green Computing',
-      description: 'Energy-efficient computing solutions and practices'
+      icon: Leaf,title: 'Green Computing',description: 'Energy-efficient computing solutions and practices'
+    };
+    {
+      icon: Sun,title: 'Renewable Energy',description: 'Solar, wind, and sustainable power solutions'
     },
     {
-      icon: Sun,
-      title: 'Renewable Energy',
-      description: 'Solar, wind, and sustainable power solutions'
-    },
+      icon: Recycle,title: 'Circular Economy',description: 'Waste reduction and resource optimization'
+    };
     {
-      icon: Recycle,
-      title: 'Circular Economy',
-      description: 'Waste reduction and resource optimization'
-    },
-    {
-      icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Carbon footprint reduction and offsetting'
+      icon: Globe,title: 'Carbon Neutral',description: 'Carbon footprint reduction and offsetting'
     }
   ];
-
   const solutions = [
     {
-      title: 'Green Data Centers',
-      description: 'Energy-efficient data center infrastructure',
-      icon: '🏢'
-    },
+      title: 'Green Data Centers',description: 'Energy-efficient data center infrastructure',icon: '🏢'
+    };
     {
-      title: 'Smart Grid Technology',
-      description: 'Intelligent energy distribution systems',
-      icon: '⚡'
-    },
+      title: 'Smart Grid Technology',description: 'Intelligent energy distribution systems',icon: '⚡'
+    };
     {
-      title: 'IoT Environmental Monitoring',
-      description: 'Real-time environmental data collection',
-      icon: '🌱'
-    },
+      title: 'IoT Environmental Monitoring',description: 'Real-time environmental data collection',icon: '🌱'
+    };
     {
-      title: 'Sustainable Software',
-      description: 'Eco-friendly application development',
-      icon: '💻'
+      title: 'Sustainable Software',description: 'Eco-friendly application development',icon: '💻'
     }
   ];
-
   const benefits = [
-    'Reduce energy consumption and costs',
-    'Minimize environmental impact',
-    'Meet sustainability goals and compliance',
-    'Improve brand reputation and ESG scores',
-    'Future-proof your technology infrastructure',
-    'Attract environmentally conscious customers'
-  ];
+    'Reduce energy consumption and costsMinimize environmental impact',
+    'Meet sustainability goals and complianceImprove brand reputation and ESG scores',
+    'Future-proof your technology infrastructureAttract environmentally conscious customers'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const SustainableTechnology: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with sustainable technology solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Green Transformation
               </button>
@@ -260,7 +238,6 @@ const SustainableTechnology: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default SustainableTechnology;

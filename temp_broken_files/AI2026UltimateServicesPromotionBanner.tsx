@@ -1,27 +1,27 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
   ArrowRight,
   Star,
-  Sparkles;
-  TrendingUp;
-  Users;
-  CheckCircle,
-} from 'lucide-react';
+  Sparkles,
+  TrendingUp,
+  Users,
+  CheckCircle
+} from 'lucide-react',
 const AI2026UltimateServicesPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
-    "Neural Interface Revolution";
-    "Quantum AI Fusion";
-    "Autonomous Operations";
-    "Advanced Security AI",
-  ];
+    "Neural Interface Revolution",
+    "Quantum AI Fusion",
+    "Autonomous Operations",
+    "Advanced Security AI"
+  ],
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 py-16 px-4",
@@ -35,7 +35,7 @@ const AI2026UltimateServicesPromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto">,
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="space-y-8",
           >,
@@ -46,7 +46,7 @@ const AI2026UltimateServicesPromotionBanner = () => {,
             <h1 className="text-5xl md: text-6xl font-bold text-white leading-tight">,
               Revolutionary AI,
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,
-                {" ",}Services,
+                {" "}Services,
               </span>,
               <br />,
               <span className="text-3xl md: text-4xl text-gray-300">,
@@ -60,13 +60,12 @@ const AI2026UltimateServicesPromotionBanner = () => {,
             <div className="space-y-4">,
               {features.map((featureindex) => (,
                 <div,
-                  key={index,}
+                  key={index}
                   className="flex items-center gap-3",
                 >,
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />,
                   <span className="text-gray-300 text-lg">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
               <button,
@@ -139,27 +138,27 @@ const AI2026UltimateServicesPromotionBanner = () => {,
               {/* Floating Elements */}
               <div,
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-60",
-                  y: [0-20];
-                  scale: [1.1],}}
-                  duration: 4;
-                  repeat: Infinity;
-                  ease: "easeInOut",}}
+                  y: [0-20],
+                  scale: [1.1]}}
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"}}
               />,
               <div,
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-xl opacity-60",
-                  y: [020];
-                  scale: [1.21],}}
-                  duration: 3;
-                  repeat: Infinity;
-                  ease: "easeInOut";
-                  delay: 1,}}
+                  y: [020],
+                  scale: [1.21]}}
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1}}
               />,
             </div>,
           </div>,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AI2026UltimateServicesPromotionBanner;
+  ),
+},
+export default AI2026UltimateServicesPromotionBanner,
 </div></div></div></div></div></div></div></div>,

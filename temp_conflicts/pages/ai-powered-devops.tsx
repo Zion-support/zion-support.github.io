@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   GitBranch, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredDevOps: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredDevOps: React.FC = () => {
       title: 'Team Collaboration',
       description: 'DevOps collaboration across development and operations teams'
     }
-  ];
+  ],
 
   const devopsCapabilities = [
     {
       area: 'CI/CD Automation',
-      capabilities: ['Build automation', 'Testing automation', 'Deployment automation', 'Release management'],
+      capabilities: ['Build automationTesting automation', 'Deployment automationRelease management'],
       improvement: '90% faster',
       deployment: 'Automated'
     },
     {
       area: 'Infrastructure as Code',
-      capabilities: ['Terraform automation', 'Kubernetes management', 'Cloud provisioning', 'Configuration management'],
+      capabilities: ['Terraform automationKubernetes management', 'Cloud provisioningConfiguration management'],
       improvement: '100x faster',
       provisioning: 'Instant'
     },
     {
       area: 'Monitoring & Observability',
-      capabilities: ['Performance monitoring', 'Log analysis', 'Alert management', 'Root cause analysis'],
+      capabilities: ['Performance monitoringLog analysis', 'Alert managementRoot cause analysis'],
       improvement: 'Real-time insights',
       monitoring: '24/7'
     },
     {
       area: 'Security & Compliance',
-      capabilities: ['Vulnerability scanning', 'Compliance checking', 'Access control', 'Audit logging'],
+      capabilities: ['Vulnerability scanningCompliance checking', 'Access controlAudit logging'],
       improvement: 'Zero vulnerabilities',
       security: 'Enhanced'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Software Development',
       description: 'AI-powered DevOps for software development and application deployment',
-      benefits: ['Faster releases', 'Quality improvement', 'Cost reduction', 'Team productivity']
+      benefits: ['Faster releasesQuality improvement', 'Cost reductionTeam productivity']
     },
     {
       title: 'Cloud Infrastructure',
       description: 'DevOps automation for cloud infrastructure and platform management',
-      benefits: ['Infrastructure automation', 'Scalability', 'Cost optimization', 'High availability']
+      benefits: ['Infrastructure automationScalability', 'Cost optimizationHigh availability']
     },
     {
       title: 'Microservices & Containers',
       description: 'DevOps for microservices architecture and container orchestration',
-      benefits: ['Service automation', 'Container management', 'Orchestration', 'Service discovery']
+      benefits: ['Service automationContainer management', 'OrchestrationService discovery']
     },
     {
       title: 'Data & Analytics',
       description: 'DevOps for data pipelines and analytics infrastructure',
-      benefits: ['Pipeline automation', 'Data quality', 'Processing efficiency', 'Insight delivery']
+      benefits: ['Pipeline automationData quality', 'Processing efficiencyInsight delivery']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredDevOps: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with DevOps automation',
       features: [
-        'Up to 10 projects',
-        'Basic CI/CD',
-        'Standard monitoring',
-        'Email support',
+        'Up to 10 projectsBasic CI/CD',
+        'Standard monitoringEmail support',
         'Basic security'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredDevOps: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced DevOps needs',
       features: [
-        'Up to 50 projects',
-        'Advanced CI/CD',
-        'Custom automation',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 50 projectsAdvanced CI/CD',
+        'Custom automationPriority support',
+        'Advanced analyticsAPI access',
         'Multi-platform support'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredDevOps: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex DevOps requirements',
       features: [
-        'Unlimited projects',
-        'Custom DevOps development',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited projectsCustom DevOps development',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredDevOps: React.FC = () => {
       position: "Infrastructure Director",
       company: "Advanced Systems Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredDevOps: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate with AI-Powered DevOps Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredDevOps: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredDevOps;
+export default AIPoweredDevOps,

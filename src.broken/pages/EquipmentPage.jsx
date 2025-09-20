@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState, useEffect } from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
 </h3>
             <p className="text-sm text-muted -foreground">{equipment.category}</p>
@@ -32,7 +32,7 @@ export default function Page() {
           </Button>
         </div>
       </CardContent>
-    </Card>) ;
+    </Card>) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white pt -20">
       <div className="container mx - auto px-4 py-8">
@@ -88,11 +88,11 @@ export default function Page() {
                 reviewCount: 156,
                 description: "Reliable 2U server with excellent performance and enterprise support."
 
-            ].map((equipment, index) => (;
+            ].map((equipment, index) => (,
               <EquipmentCard key={index} equipment={equipment} />) ) ) }
         </div>
       </div>
       <Footer />
-    </div>) };
+    </div>) },
 
 }}

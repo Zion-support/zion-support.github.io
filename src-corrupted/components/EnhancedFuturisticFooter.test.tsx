@@ -1,5 +1,5 @@
-import React from 'react,',',',';
-import {SEO } from '@/components/SEO';
+import React from 'react,,',',
+import {SEO } from '@/components/SEO',
 export default function EnhancedFuturisticFooter.test() {return (,
     <div className="min-h-screen bg-white">,
       <SEO title="EnhancedFuturisticFooter.test - Zion Tech Group" description="Professional EnhancedFuturisticFooter.test services by Zion Tech Group"  />,
@@ -8,7 +8,7 @@ export default function EnhancedFuturisticFooter.test() {return (,
         <p className="text-gray-300 text-lg">,
           Professional EnhancedFuturisticFooter.test services to help your business grow.,
         </p>,
-      </div>';
-    </div>;
-  ),',',';
-}",',';
+      </div>',
+    </div>,
+  ),,',
+}",',',

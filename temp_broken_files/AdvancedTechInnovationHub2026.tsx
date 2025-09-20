@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 const AdvancedTechInnovationHub2026: React.FC = () => {
   return (
@@ -360,7 +360,7 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
             Be part of the most advanced technology innovation hub in the world. Collaborate with leading researchers and shape the future of technology.
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-lg">
               Join Our Team
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold text-lg">
@@ -370,8 +370,8 @@ const AdvancedTechInnovationHub2026: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default AdvancedTechInnovationHub2026;
+export default AdvancedTechInnovationHub2026,

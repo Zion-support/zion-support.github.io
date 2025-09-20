@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -13,12 +13,11 @@ export default function Page() {
     content:
       'The IoT solution they implemented has revolutionized our production monitoring.We can now track every aspect of our manufacturing process in real - time, leading to better quality control and reduced waste.',
     project: 'IoT Manufacturing Platform',
-    results: ['Real - time production monitoring',
-      'Improved quality control',
-      'Reduced waste by 25%',
+    results: ['Real - time production monitoringImproved quality control',
+      'Reduced waste by 25%'
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
+    featured: false
   },
   {
     id: 5,
@@ -30,12 +29,11 @@ export default function Page() {
     content:
       'Zion Tech Group helped us navigate our digital transformation journey with expertise and patience.Their solutions have improved our customer experience and increased our online sales by 35%.',
     project: 'Digital Transformation & E-commerce',
-    results: ['35% increase in online sales',
-      'Improved customer experience',
-      'Streamlined operations',
+    results: ['35% increase in online salesImproved customer experience',
+      'Streamlined operations'
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
+    featured: false
   },
   {
     id: 6,
@@ -47,12 +45,11 @@ export default function Page() {
     content:
       'Their healthcare technology solutions are cutting - edge and compliant with all regulations.The AI - powered diagnostic tools have improved our diagnostic accuracy and patient outcomes significantly.',
     project: 'AI Healthcare Diagnostics Platform',
-    results: ['Improved diagnostic accuracy',
-      'Enhanced patient outcomes',
-      'Full regulatory compliance',
+    results: ['Improved diagnostic accuracyEnhanced patient outcomes',
+      'Full regulatory compliance'
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
+    featured: false
   },
   {
     id: 7,
@@ -64,12 +61,11 @@ export default function Page() {
     content:
       'As a startup, we needed a partner who could scale with us.Zion Tech Group delivered a robust platform that has grown with our business, and their ongoing support has been invaluable.',
     project: 'Scalable SaaS Platform',
-    results: ['Scalable platform architecture',
-      'Rapid development and deployment',
-      'Ongoing technical support',
+    results: ['Scalable platform architectureRapid development and deployment',
+      'Ongoing technical support'
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
+    featured: false
   },
   {
     id: 8,
@@ -81,42 +77,37 @@ export default function Page() {
     content:
       "Their quantum computing solutions are revolutionary.We've been able to solve complex problems that were previously intractable, opening up new possibilities for our research.",
     project: 'Quantum Computing Platform',
-    results: ['Solved previously intractable problems',
-      'Advanced research capabilities',
-      'Cutting - edge technology implementation',
+    results: ['Solved previously intractable problemsAdvanced research capabilities',
+      'Cutting - edge technology implementation'
     ],
     image: '/api / placeholder / 100 / 100',
-    featured: false,
-  },
-];
+    featured: false
+  }
+],
 
-const industries = ['All Industries',
-  'Technology',
-  'Software Development',
-  'Financial Services',
-  'Manufacturing',
-  'Retail',
-  'Healthcare',
-  'Startup',
-  'Research & Development',
-];
+const industries = ['All IndustriesTechnology',
+  'Software DevelopmentFinancial Services',
+  'ManufacturingRetail',
+  'HealthcareStartup',
+  'Research & Development'
+],
 
-const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
+const ratings = ['All Ratings5 Stars', '4 + Stars3 + Stars'],
 
-  const [selectedIndustry, setSelectedIndustry] = useState('All Industries');
-  const [selectedRating, setSelectedRating] = useState('All Ratings');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState('All Industries'),
+  const [selectedRating, setSelectedRating] = useState('All Ratings'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const filteredTestimonials = testimonials.filter(testimonial => {
     const matchesIndustry = selectedIndustry === 'All Industries' ||
-      testimonial.industry === selectedIndustry;
-    const matchesRating = selectedRating === 'All Ratings' || (selectedRating === '5 Stars' && testimonial.rating === 5) || (selectedRating === '4 + Stars' && testimonial.rating >= 4) || (selectedRating === '3 + Stars' && testimonial.rating >= 3) ;
+      testimonial.industry === selectedIndustry,
+    const matchesRating = selectedRating === 'All Ratings' || (selectedRating === '5 Stars' && testimonial.rating === 5) || (selectedRating === '4 + Stars' && testimonial.rating >= 4) || (selectedRating === '3 + Stars' && testimonial.rating >= 3) ,
     const matchesSearch = testimonial.content.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       testimonial.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-      testimonial.comp.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
+      testimonial.comp.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
 
-    return matchesIndustry && matchesRating && matchesSearch;
-  }) ;
+    return matchesIndustry && matchesRating && matchesSearch,
+  }) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - blue via - zion - blue - dark to - zion - slate -dark">
       {/* Hero Section */}
@@ -289,7 +280,7 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
           <p className="text-xl text-zion - slate - light mb-8 max - w-2xl mx -auto">
             Let's discuss how Zion Tech Group can transform your business with
             cutting - edge technology solutions.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <a
               href="/contact"
               className="inline - flex items - center justify - center px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white font - semibold rounded-lg hover:scale - 105 transition - all duration -300"
@@ -305,5 +296,5 @@ const ratings = ['All Ratings', '5 Stars', '4 + Stars', '3 + Stars'];
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

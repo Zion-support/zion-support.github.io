@@ -1,48 +1,48 @@
 export interface EmergingTechnologyService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
   {
     id: 'ai-powered-autonomous-vehicles-platform',
@@ -52,16 +52,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive platform for developing, testing, and validating autonomous vehicle systems using advanced AI simulation and real-world data integration.',
     features: [
-      '3D environment simulation engine',
-      'AI-powered traffic scenario generation',
-      'Real-time sensor data processing',
-      'Machine learning model training',
-      'Safety validation and testing',
-      'Regulatory compliance tools',
-      'Hardware-in-the-loop testing',
-      'Performance analytics dashboard',
-      'API for custom integrations',
-      'Cloud-based development environment'
+      '3D environment simulation engineAI-powered traffic scenario generation',
+      'Real-time sensor data processingMachine learning model training',
+      'Safety validation and testingRegulatory compliance tools',
+      'Hardware-in-the-loop testingPerformance analytics dashboard',
+      'API for custom integrationsCloud-based development environment'
     ],
     popular: true,
     icon: '🚗',
@@ -69,7 +64,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-vehicles',
     marketPosition: 'Competes with NVIDIA DRIVE ($1000/month), Waymo ($2000/month). Our advantage: Affordable development platform with comprehensive simulation tools.',
-    targetAudience: ['Automotive manufacturers', 'Autonomous vehicle startups', 'Research institutions', 'Transportation companies', 'Government agencies'],
+    targetAudience: ['Automotive manufacturersAutonomous vehicle startups', 'Research institutionsTransportation companies', 'Government agencies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Autonomous Systems',
@@ -78,7 +73,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['NVIDIA DRIVE, Intel Mobileye, Tesla Autopilot, Waymo, Cruise, Uber ATG'],
     useCases: ['Autonomous vehicle development, Safety testing, Performance validation, Research and education'],
     roi: 'Investment in autonomous vehicle development with 60% faster time-to-market',
-    competitors: ['NVIDIA DRIVE ($1000/month)', 'Waymo ($2000/month)', 'Intel Mobileye ($1500/month)'],
+    competitors: ['NVIDIA DRIVE ($1000/month)Waymo ($2000/month)', 'Intel Mobileye ($1500/month)'],
     marketSize: '$45B autonomous vehicle market',
     growthRate: '280% YoY',
     contactInfo: contact,
@@ -97,16 +92,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.',
     features: [
-      'Quantum-enhanced ML algorithms',
-      'Hybrid quantum-classical training',
-      'Quantum feature selection',
-      'Quantum neural networks',
-      'Optimization problem solving',
-      'Real-time quantum processing',
-      'Integration with classical ML frameworks',
-      'Performance benchmarking tools',
-      'API for custom applications',
-      'Educational tutorials and documentation'
+      'Quantum-enhanced ML algorithmsHybrid quantum-classical training',
+      'Quantum feature selectionQuantum neural networks',
+      'Optimization problem solvingReal-time quantum processing',
+      'Integration with classical ML frameworksPerformance benchmarking tools',
+      'API for custom applicationsEducational tutorials and documentation'
     ],
     popular: false,
     icon: '🧠',
@@ -114,7 +104,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning',
     marketPosition: 'First-to-market quantum ML platform. Competes with IBM Quantum ML ($800/month), Google Quantum AI ($1000/month). Our advantage: Hybrid approach with classical ML integration.',
-    targetAudience: ['AI researchers', 'Data scientists', 'Financial institutions', 'Pharmaceutical companies', 'Universities'],
+    targetAudience: ['AI researchersData scientists', 'Financial institutionsPharmaceutical companies', 'Universities'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI',
@@ -123,7 +113,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, AWS Braket, Classical ML frameworks'],
     useCases: ['AI model training, Optimization problems, Drug discovery, Financial modeling'],
     roi: 'Investment in quantum AI capabilities with 10x faster optimization',
-    competitors: ['IBM Quantum ML ($800/month)', 'Google Quantum AI ($1000/month)', 'Microsoft Azure Quantum ($600/month)'],
+    competitors: ['IBM Quantum ML ($800/month)Google Quantum AI ($1000/month)', 'Microsoft Azure Quantum ($600/month)'],
     marketSize: '$12B quantum ML market',
     growthRate: '320% YoY',
     contactInfo: contact,
@@ -142,16 +132,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive platform for developing, testing, and deploying decentralized finance applications on multiple blockchain networks with advanced security features.',
     features: [
-      'Multi-blockchain support (Ethereum, Polygon, Solana)',
-      'Smart contract development tools',
-      'DeFi protocol templates',
-      'Security auditing and testing',
-      'Liquidity pool management',
-      'Yield farming automation',
-      'Cross-chain bridge integration',
-      'Real-time market data feeds',
-      'Mobile DeFi applications',
-      'API for financial integrations'
+      'Multi-blockchain support (Ethereum, Polygon, Solana)Smart contract development tools',
+      'DeFi protocol templatesSecurity auditing and testing',
+      'Liquidity pool managementYield farming automation',
+      'Cross-chain bridge integrationReal-time market data feeds',
+      'Mobile DeFi applicationsAPI for financial integrations'
     ],
     popular: true,
     icon: '🏦',
@@ -159,7 +144,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/blockchain-defi-platform',
     marketPosition: 'Competes with Alchemy ($49/month), Infura ($50/month). Our advantage: DeFi-focused platform with comprehensive financial tools.',
-    targetAudience: ['DeFi developers', 'Financial institutions', 'Cryptocurrency startups', 'Investment firms', 'Trading platforms'],
+    targetAudience: ['DeFi developersFinancial institutions', 'Cryptocurrency startupsInvestment firms', 'Trading platforms'],
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Blockchain & DeFi',
@@ -168,7 +153,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['MetaMask, WalletConnect, Uniswap, Aave, Compound, Chainlink'],
     useCases: ['DeFi application development, Smart contract deployment, Yield farming, Cross-chain DeFi'],
     roi: 'Average 500% ROI with 80% faster DeFi development',
-    competitors: ['Alchemy ($49/month)', 'Infura ($50/month)', 'QuickNode ($49/month)'],
+    competitors: ['Alchemy ($49/month)Infura ($50/month)', 'QuickNode ($49/month)'],
     marketSize: '$18B DeFi development market',
     growthRate: '240% YoY',
     contactInfo: contact,
@@ -187,16 +172,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive AI platform for medical imaging analysis, disease detection, and diagnostic assistance. FDA-compliant with support for multiple imaging modalities.',
     features: [
-      'Multi-modality image analysis (X-ray, MRI, CT, Ultrasound)',
-      'AI-powered disease detection',
-      'Radiology report generation',
-      'Patient data integration',
-      'HIPAA compliance tools',
-      'Real-time diagnostic assistance',
-      'Integration with PACS systems',
-      'Mobile diagnostic applications',
-      'API for healthcare systems',
-      'Performance analytics and reporting'
+      'Multi-modality image analysis (X-ray, MRI, CT, Ultrasound)AI-powered disease detection',
+      'Radiology report generationPatient data integration',
+      'HIPAA compliance toolsReal-time diagnostic assistance',
+      'Integration with PACS systemsMobile diagnostic applications',
+      'API for healthcare systemsPerformance analytics and reporting'
     ],
     popular: true,
     icon: '🏥',
@@ -204,7 +184,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition: 'Competes with Aidoc ($800/month), Zebra Medical ($1000/month). Our advantage: Affordable platform with comprehensive imaging support.',
-    targetAudience: ['Hospitals', 'Radiology clinics', 'Healthcare systems', 'Medical device companies', 'Research institutions'],
+    targetAudience: ['HospitalsRadiology clinics', 'Healthcare systemsMedical device companies', 'Research institutions'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'AI & Healthcare',
@@ -213,7 +193,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['PACS systems, EHR systems, RIS systems, Medical imaging devices'],
     useCases: ['Medical imaging analysis, Disease detection, Diagnostic assistance, Research and education'],
     roi: 'Average 400% ROI with 30% faster diagnosis and 25% cost reduction',
-    competitors: ['Aidoc ($800/month)', 'Zebra Medical ($1000/month)', 'Enlitic ($600/month)'],
+    competitors: ['Aidoc ($800/month)Zebra Medical ($1000/month)', 'Enlitic ($600/month)'],
     marketSize: '$35B AI healthcare market',
     growthRate: '260% YoY',
     contactInfo: contact,
@@ -232,16 +212,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive IoT platform for smart city development, including traffic management, environmental monitoring, public safety, and infrastructure optimization.',
     features: [
-      'Real-time sensor data collection',
-      'AI-powered traffic optimization',
-      'Environmental monitoring (air quality, noise, pollution)',
-      'Smart lighting and energy management',
-      'Public safety monitoring',
-      'Waste management optimization',
-      'Water and utility monitoring',
-      'Citizen engagement applications',
-      'API for city services integration',
-      'Comprehensive analytics dashboard'
+      'Real-time sensor data collectionAI-powered traffic optimization',
+      'Environmental monitoring (air quality, noise, pollution)Smart lighting and energy management',
+      'Public safety monitoringWaste management optimization',
+      'Water and utility monitoringCitizen engagement applications',
+      'API for city services integrationComprehensive analytics dashboard'
     ],
     popular: false,
     icon: '🏙️',
@@ -249,7 +224,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/iot-smart-city-platform',
     marketPosition: 'Competes with Cisco Smart City ($1500/month), Siemens City Performance ($2000/month). Our advantage: Affordable platform with comprehensive city management tools.',
-    targetAudience: ['City governments', 'Municipalities', 'Urban planners', 'Infrastructure companies', 'Technology providers'],
+    targetAudience: ['City governmentsMunicipalities', 'Urban plannersInfrastructure companies', 'Technology providers'],
     trialDays: 45,
     setupTime: '4-6 weeks',
     category: 'IoT & Smart Cities',
@@ -258,7 +233,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['Traffic management systems, Environmental monitoring, Public safety systems, Utility networks'],
     useCases: ['Traffic optimization, Environmental monitoring, Public safety, Infrastructure management'],
     roi: 'Average 300% ROI with 25% reduction in city operational costs',
-    competitors: ['Cisco Smart City ($1500/month)', 'Siemens City Performance ($2000/month)', 'IBM Smart City ($1200/month)'],
+    competitors: ['Cisco Smart City ($1500/month)Siemens City Performance ($2000/month)', 'IBM Smart City ($1200/month)'],
     marketSize: '$28B smart city market',
     growthRate: '210% YoY',
     contactInfo: contact,
@@ -277,16 +252,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time with automated incident response.',
     features: [
-      'AI-powered threat detection',
-      'Real-time security monitoring',
-      'Automated incident response',
-      'Threat intelligence sharing',
-      'Vulnerability assessment',
-      'Security compliance reporting',
-      'Integration with SIEM systems',
-      'Mobile security monitoring',
-      'API for security tools integration',
-      '24/7 security operations center'
+      'AI-powered threat detectionReal-time security monitoring',
+      'Automated incident responseThreat intelligence sharing',
+      'Vulnerability assessmentSecurity compliance reporting',
+      'Integration with SIEM systemsMobile security monitoring',
+      'API for security tools integration24/7 security operations center'
     ],
     popular: true,
     icon: '🛡️',
@@ -294,7 +264,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-intelligence',
     marketPosition: 'Competes with CrowdStrike ($800/month), SentinelOne ($700/month). Our advantage: AI-first approach with automated response capabilities.',
-    targetAudience: ['Enterprise companies', 'Financial institutions', 'Healthcare providers', 'Government agencies', 'Technology companies'],
+    targetAudience: ['Enterprise companiesFinancial institutions', 'Healthcare providersGovernment agencies', 'Technology companies'],
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Cybersecurity & AI',
@@ -303,7 +273,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['SIEM systems, Firewalls, IDS/IPS, Endpoint protection, Security orchestration platforms'],
     useCases: ['Threat detection, Incident response, Security monitoring, Compliance reporting'],
     roi: 'Average 400% ROI with 90% faster threat response and 60% reduction in security incidents',
-    competitors: ['CrowdStrike ($800/month)', 'SentinelOne ($700/month)', 'Carbon Black ($600/month)'],
+    competitors: ['CrowdStrike ($800/month)SentinelOne ($700/month)', 'Carbon Black ($600/month)'],
     marketSize: '$22B AI cybersecurity market',
     growthRate: '230% YoY',
     contactInfo: contact,
@@ -322,16 +292,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced quantum cryptography platform that uses quantum key distribution (QKD) to provide unbreakable encryption for secure communications and data protection.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography algorithms',
-      'Quantum random number generation',
-      'Secure key management',
-      'Real-time encryption/decryption',
-      'Quantum network infrastructure',
-      'Integration with existing security systems',
-      'Compliance with NIST standards',
-      'API for custom applications',
-      'Quantum security consulting services'
+      'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+      'Quantum random number generationSecure key management',
+      'Real-time encryption/decryptionQuantum network infrastructure',
+      'Integration with existing security systemsCompliance with NIST standards',
+      'API for custom applicationsQuantum security consulting services'
     ],
     popular: false,
     icon: '🔒',
@@ -339,7 +304,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-cryptography-platform',
     marketPosition: 'First-to-market quantum cryptography platform. Competes with ID Quantique ($2000/month), Toshiba Quantum ($1500/month). Our advantage: Affordable platform with comprehensive quantum security.',
-    targetAudience: ['Government agencies', 'Financial institutions', 'Healthcare providers', 'Defense contractors', 'Technology companies'],
+    targetAudience: ['Government agenciesFinancial institutions', 'Healthcare providersDefense contractors', 'Technology companies'],
     trialDays: 45,
     setupTime: '3-4 weeks',
     category: 'Quantum Computing & Security',
@@ -348,7 +313,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['Existing security systems, Network infrastructure, Hardware security modules'],
     useCases: ['Secure communications, Data protection, Key management, Quantum network security'],
     roi: 'Investment in quantum-resistant security with regulatory compliance benefits',
-    competitors: ['ID Quantique ($2000/month)', 'Toshiba Quantum ($1500/month)', 'Quantum Xchange ($1800/month)'],
+    competitors: ['ID Quantique ($2000/month)Toshiba Quantum ($1500/month)', 'Quantum Xchange ($1800/month)'],
     marketSize: '$5B quantum cryptography market',
     growthRate: '280% YoY',
     contactInfo: contact,
@@ -367,16 +332,11 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced robotics automation platform that uses AI to optimize robotic operations, improve efficiency, and enable autonomous decision-making in manufacturing and logistics environments.',
     features: [
-      'AI-powered robotic control systems',
-      'Computer vision for object recognition',
-      'Autonomous navigation and path planning',
-      'Predictive maintenance for robots',
-      'Integration with manufacturing systems',
-      'Real-time performance monitoring',
-      'Safety and collision avoidance',
-      'Mobile robotics applications',
-      'API for custom integrations',
-      'Comprehensive analytics dashboard'
+      'AI-powered robotic control systemsComputer vision for object recognition',
+      'Autonomous navigation and path planningPredictive maintenance for robots',
+      'Integration with manufacturing systemsReal-time performance monitoring',
+      'Safety and collision avoidanceMobile robotics applications',
+      'API for custom integrationsComprehensive analytics dashboard'
     ],
     popular: true,
     icon: '🤖',
@@ -384,7 +344,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/ai-robotics-automation',
     marketPosition: 'Competes with ABB Robotics ($1000/month), KUKA Robotics ($1200/month). Our advantage: AI-first approach with affordable pricing.',
-    targetAudience: ['Manufacturing companies', 'Logistics providers', 'Warehouse operators', 'Automotive manufacturers', 'Technology companies'],
+    targetAudience: ['Manufacturing companiesLogistics providers', 'Warehouse operatorsAutomotive manufacturers', 'Technology companies'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI & Robotics',
@@ -393,7 +353,7 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     integrations: ['Manufacturing execution systems, Warehouse management systems, ERP systems'],
     useCases: ['Manufacturing automation, Warehouse automation, Logistics optimization, Quality control'],
     roi: 'Average 350% ROI with 40% increase in productivity and 30% reduction in operational costs',
-    competitors: ['ABB Robotics ($1000/month)', 'KUKA Robotics ($1200/month)', 'FANUC Robotics ($800/month)'],
+    competitors: ['ABB Robotics ($1000/month)KUKA Robotics ($1200/month)', 'FANUC Robotics ($800/month)'],
     marketSize: '$32B AI robotics market',
     growthRate: '240% YoY',
     contactInfo: contact,
@@ -404,4 +364,4 @@ export const emergingTechnologyServices2026: EmergingTechnologyService[] = [
     rating: 4.7,
     reviews: 123
   }
-];
+],

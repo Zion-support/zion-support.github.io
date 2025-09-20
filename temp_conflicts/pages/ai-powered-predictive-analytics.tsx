@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   TrendingUp, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredPredictiveAnalytics: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
       title: 'Multi-domain Support',
       description: 'Predictive analytics across various domains and industries'
     }
-  ];
+  ],
 
   const predictiveCapabilities = [
     {
       area: 'Forecasting Models',
-      capabilities: ['Time series analysis', 'Trend prediction', 'Seasonal patterns', 'Anomaly detection'],
+      capabilities: ['Time series analysisTrend prediction', 'Seasonal patternsAnomaly detection'],
       improvement: '95% accuracy',
       forecasting: 'Advanced'
     },
     {
       area: 'Risk Assessment',
-      capabilities: ['Risk modeling', 'Probability analysis', 'Scenario planning', 'Impact assessment'],
+      capabilities: ['Risk modelingProbability analysis', 'Scenario planningImpact assessment'],
       improvement: 'Real-time analysis',
       assessment: 'Instant'
     },
     {
       area: 'Pattern Recognition',
-      capabilities: ['Data mining', 'Correlation analysis', 'Cluster detection', 'Feature engineering'],
+      capabilities: ['Data miningCorrelation analysis', 'Cluster detectionFeature engineering'],
       improvement: '1000x faster',
       recognition: 'Efficient'
     },
     {
       area: 'Decision Support',
-      capabilities: ['Recommendation engines', 'Optimization algorithms', 'What-if analysis', 'Strategic insights'],
+      capabilities: ['Recommendation enginesOptimization algorithms', 'What-if analysisStrategic insights'],
       improvement: 'Actionable insights',
       support: 'Intelligent'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Financial Services',
       description: 'AI-powered predictive analytics for risk assessment and investment decisions',
-      benefits: ['Risk assessment', 'Investment optimization', 'Fraud detection', 'Portfolio management']
+      benefits: ['Risk assessmentInvestment optimization', 'Fraud detectionPortfolio management']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Predictive analytics for patient outcomes and treatment planning',
-      benefits: ['Patient outcomes', 'Treatment planning', 'Disease prevention', 'Resource optimization']
+      benefits: ['Patient outcomesTreatment planning', 'Disease preventionResource optimization']
     },
     {
       title: 'Retail & E-commerce',
       description: 'Customer behavior prediction and demand forecasting',
-      benefits: ['Demand forecasting', 'Customer insights', 'Inventory optimization', 'Marketing optimization']
+      benefits: ['Demand forecastingCustomer insights', 'Inventory optimizationMarketing optimization']
     },
     {
       title: 'Manufacturing & Operations',
       description: 'Predictive maintenance and operational optimization',
-      benefits: ['Predictive maintenance', 'Quality prediction', 'Supply chain optimization', 'Efficiency improvement']
+      benefits: ['Predictive maintenanceQuality prediction', 'Supply chain optimizationEfficiency improvement']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with predictive analytics',
       features: [
-        'Basic predictive analytics features',
-        'Single domain support',
-        'Standard forecasting',
-        'Email support',
+        'Basic predictive analytics featuresSingle domain support',
+        'Standard forecastingEmail support',
         'Basic insights'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced predictive analytics needs',
       features: [
-        'Advanced predictive analytics features',
-        'Multi-domain support',
-        'Custom development',
-        'Priority support',
-        'Advanced insights',
-        'API access',
+        'Advanced predictive analytics featuresMulti-domain support',
+        'Custom developmentPriority support',
+        'Advanced insightsAPI access',
         'Real-time forecasting'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex predictive analytics requirements',
       features: [
-        'Custom predictive analytics development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom predictive analytics developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
       position: "Analytics Director",
       company: "Advanced Analytics Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Predict with AI-Powered Analytics Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredPredictiveAnalytics: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredPredictiveAnalytics;
+export default AIPoweredPredictiveAnalytics,

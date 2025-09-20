@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Rocket, 
+  Rocket,
   Satellite, 
   CheckCircle, 
   Users, 
@@ -74,93 +74,62 @@ import {
   Earth,
   Moon,
   Sun
-} from 'lucide-react';
-
+} from "lucide-react";
 const SpaceTech = () => {
   const features = [
     {
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite design, deployment, and management solutions'
+      icon: Satellite,title: 'Satellite Technology',description: 'Advanced satellite design, deployment, and management solutions'
     },
     {
-      icon: Orbit,
-      title: 'Orbital Mechanics',
-      description: 'Precise orbital calculations and trajectory optimization'
-    },
+      icon: Orbit,title: 'Orbital Mechanics',description: 'Precise orbital calculations and trajectory optimization'
+    };
     {
-      icon: Antenna,
-      title: 'Ground Station Systems',
-      description: 'Earth-based communication and control infrastructure'
-    },
+      icon: Antenna,title: 'Ground Station Systems',description: 'Earth-based communication and control infrastructure'
+    };
     {
-      icon: Signal,
-      title: 'Space Communications',
-      description: 'Reliable data transmission between space and ground'
-    },
+      icon: Signal,title: 'Space Communications',description: 'Reliable data transmission between space and ground'
+    };
     {
-      icon: Navigation,
-      title: 'Space Navigation',
-      description: 'Advanced positioning and navigation systems for space missions'
-    },
+      icon: Navigation,title: 'Space Navigation',description: 'Advanced positioning and navigation systems for space missions'
+    };
     {
-      icon: Telescope,
-      title: 'Space Observation',
-      description: 'Earth observation and space monitoring capabilities'
+      icon: Telescope,title: 'Space Observation',description: 'Earth observation and space monitoring capabilities'
     }
   ];
-
   const benefits = [
-    'Enable global connectivity and coverage',
-    'Provide critical Earth observation data',
-    'Support space exploration missions',
-    'Enable advanced navigation systems',
-    'Support disaster response and monitoring',
-    'Drive innovation in space technology'
-  ];
+    'Enable global connectivity and coverageProvide critical Earth observation data',
+    'Support space exploration missionsEnable advanced navigation systems',
+    'Support disaster response and monitoringDrive innovation in space technology'
+  ],
 
   const services = [
     {
-      icon: Rocket,
-      title: 'Launch Services',
-      description: 'Satellite launch coordination and mission planning'
-    },
+      icon: Rocket,title: 'Launch Services',description: 'Satellite launch coordination and mission planning'
+    };
     {
-      icon: Planet,
-      title: 'Earth Observation',
-      description: 'Satellite imagery and environmental monitoring'
-    },
+      icon: Planet,title: 'Earth Observation',description: 'Satellite imagery and environmental monitoring'
+    };
     {
-      icon: Star,
-      title: 'Space Research',
-      description: 'Scientific research and space exploration support'
-    },
+      icon: Star,title: 'Space Research',description: 'Scientific research and space exploration support'
+    };
     {
-      icon: Globe2,
-      title: 'Global Communications',
-      description: 'Satellite communications and internet services'
+      icon: Globe2,title: 'Global Communications',description: 'Satellite communications and internet services'
     }
   ];
-
   const useCases = [
     {
-      industry: 'Telecommunications',
-      description: 'Global satellite communications and internet services'
-    },
+      industry: 'Telecommunications',description: 'Global satellite communications and internet services'
+    };
     {
-      industry: 'Environmental Monitoring',
-      description: 'Climate change tracking and natural disaster monitoring'
-    },
+      industry: 'Environmental Monitoring',description: 'Climate change tracking and natural disaster monitoring'
+    };
     {
-      industry: 'Agriculture',
-      description: 'Crop monitoring and precision agriculture support'
-    },
+      industry: 'Agriculture',description: 'Crop monitoring and precision agriculture support'
+    };
     {
-      industry: 'Defense & Security',
-      description: 'Surveillance and national security applications'
+      industry: 'Defense & Security',description: 'Surveillance and national security applications'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -253,14 +222,14 @@ const SpaceTech = () => {
               Core Space Technology Services
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust,
+              Cutting-edge technologies and platforms to build robust;
               reliable space systems and solutions.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {spaceTechnologies.map((tech, index) => (
-              <motion.div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
+              <motion.div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover: border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -279,7 +248,7 @@ const SpaceTech = () => {
                 Why Choose Space Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Space technology provides unprecedented opportunities to explore,
+                Space technology provides unprecedented opportunities to explore;
                 monitor, and understand our world and beyond.
               </p>
               <ul className="space-y-3">
@@ -346,7 +315,7 @@ const SpaceTech = () => {
               Join organizations worldwide that use our space technology solutions to 
               explore new frontiers and solve global challenges.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -359,7 +328,6 @@ const SpaceTech = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default SpaceTech;

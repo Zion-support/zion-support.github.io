@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect } from 'react',
+import { supabase } from '@/integrations/supabase/client',
 
-[];
+[],
   recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
-    actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
-    type: 'client' | 'talent';
-  }[];
-  isLoading: boolean;
-  error: string | null;
+    id: string,
+    userId: string,
+    suggestedMin: number,
+    suggestedMax: number,
+    actualValue?: number,
+    accepted: boolean,
+    createdAt: string,
+    type: 'client' | 'talent'
+  }[],
+  isLoading: boolean,
+  error: string | null
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
@@ -25,14 +25,14 @@ export function usePricingSuggestionAnalytics(days = 30) {
     recentSuggestions: [],
     isLoading: true,
     error: null
-  });
+  }),
 
-  const [analytics, setAnalytics] = useState(initialState);
+  const [analytics, setAnalytics] = useState(initialState),
 
   const fetchAnalytics = useCallback(async () => {
-    setAnalytics(prev => ({ ...prev, isLoading: true, error: null }));
+    setAnalytics(prev => ({ ...prev, isLoading: true, error: null })),
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000)),
 
       const mockData = {
         totalSuggestions: 256,
@@ -42,7 +42,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
           { category: 'design', count: 65, acceptanceRate: 0.82 },
           { category: 'marketing', count: 42, acceptanceRate: 0.64 },
           { category: 'content', count: 18, acceptanceRate: 0.56 },
-          { category: 'data', count: 11, acceptanceRate: 0.78 },
+          { category: 'data', count: 11, acceptanceRate: 0.78 }
         ],
         recentSuggestions: Array(10).fill(null).map((_, i) => ({
           id: `suggestion-${i}`,
@@ -52,32 +52,32 @@ export function usePricingSuggestionAnalytics(days = 30) {
           actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
           accepted: Math.random() > 0.25,
           createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
-          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
+          type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'
         }))
-      };
+      },
 
       setAnalytics({
         ...mockData,
         isLoading: false,
         error: null
-      });
+      }),
 
       } catch (error) {
-        console.error("Error fetching pricing suggestion analytics:", error);
+        console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
           isLoading: false,
           error: "Failed to load pricing analytics data."
-        });
+        }),
       }
-    };
+    },
 
-    fetchAnalytics();
-  }, [days]);
+    fetchAnalytics(),
+  }, [days]),
 
   useEffect(() => {
-    fetchAnalytics();
-  }, [fetchAnalytics]);
+    fetchAnalytics(),
+  }, [fetchAnalytics]),
 
-  return analytics;
+  return analytics,
 }

@@ -1,103 +1,99 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Brain,
   Zap,
   Globe,
   Shield,
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Calendar;
-  Target;
-  Users;
-  BarChart3;
-  Lightbulb;
-  Star,
-} from 'lucide-react';
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  Target,
+  Users,
+  BarChart3,
+  Lightbulb,
+  Star
+} from 'lucide-react',
 const AITrendsPredictions2026 = () => {,
-  const [activePredictionsetActivePrediction] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activePredictionsetActivePrediction] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const predictions = [,
     {,
-      id: 'quantum-ai';
-      title: 'Quantum-Enhanced AI';
-      timeframe: 'Q2 2026';
-      confidence: 95;
-      icon: Brain;
-      color: 'from-purple-600 to-blue-600';
-      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.';
-      impact: 'Revolutionary';
+      id: 'quantum-ai',
+      title: 'Quantum-Enhanced AI',
+      timeframe: 'Q2 2026',
+      confidence: 95,
+      icon: Brain,
+      color: 'from-purple-600 to-blue-600',
+      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.',
+      impact: 'Revolutionary',
       keyPoints: [,
-        '1000x faster machine learning trainingBreakthrough in drug discovery';
-        'Advanced cryptography solutionsReal-time complex simulations',
-      ];
-      marketValue: '$50B';
-      adoptionRate: '85%',};
+        '1000x faster machine learning trainingBreakthrough in drug discoveryAdvanced cryptography solutionsReal-time complex simulations'
+      ],
+      marketValue: '$50B',
+      adoptionRate: '85%'},
     {,
-      id: 'neural-interfaces';
-      title: 'Neural Interface Integration';
-      timeframe: 'Q3 2026';
-      confidence: 88;
-      icon: Zap;
-      color: 'from-cyan-600 to-teal-600';
-      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.';
-      impact: 'Transformative';
+      id: 'neural-interfaces',
+      title: 'Neural Interface Integration',
+      timeframe: 'Q3 2026',
+      confidence: 88,
+      icon: Zap,
+      color: 'from-cyan-600 to-teal-600',
+      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.',
+      impact: 'Transformative',
       keyPoints: [,
-        'Thought-controlled computingEnhanced memory augmentation';
-        'Real-time language translationTelepathic communication',
-      ];
-      marketValue: '$30B';
-      adoptionRate: '70%',};
+        'Thought-controlled computingEnhanced memory augmentationReal-time language translationTelepathic communication'
+      ],
+      marketValue: '$30B',
+      adoptionRate: '70%'},
     {,
-      id: 'autonomous-systems';
-      title: 'Fully Autonomous Ecosystems';
-      timeframe: 'Q4 2026';
-      confidence: 92;
-      icon: Shield;
-      color: 'from-green-600 to-emerald-600';
-      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.';
-      impact: 'Disruptive';
+      id: 'autonomous-systems',
+      title: 'Fully Autonomous Ecosystems',
+      timeframe: 'Q4 2026',
+      confidence: 92,
+      icon: Shield,
+      color: 'from-green-600 to-emerald-600',
+      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.',
+      impact: 'Disruptive',
       keyPoints: [,
-        'Self-managing smart citiesAutonomous transportation networks';
-        'Predictive maintenance systemsIntelligent resource allocation',
-      ];
-      marketValue: '$75B';
-      adoptionRate: '90%',};
+        'Self-managing smart citiesAutonomous transportation networksPredictive maintenance systemsIntelligent resource allocation'
+      ],
+      marketValue: '$75B',
+      adoptionRate: '90%'},
     {,
-      id: 'ai-consciousness';
-      title: 'Artificial Consciousness';
-      timeframe: 'Q1 2027';
-      confidence: 75;
-      icon: Globe;
-      color: 'from-red-600 to-pink-600';
-      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.';
-      impact: 'Paradigm-Shifting';
+      id: 'ai-consciousness',
+      title: 'Artificial Consciousness',
+      timeframe: 'Q1 2027',
+      confidence: 75,
+      icon: Globe,
+      color: 'from-red-600 to-pink-600',
+      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.',
+      impact: 'Paradigm-Shifting',
       keyPoints: [,
-        'Self-aware AI systemsEmotional intelligence in machines';
-        'AI rights and ethics frameworksHuman-AI collaborative decision making',
-      ];
-      marketValue: '$100B';
-      adoptionRate: '60%',}
-  ];
+        'Self-aware AI systemsEmotional intelligence in machinesAI rights and ethics frameworksHuman-AI collaborative decision making'
+      ],
+      marketValue: '$100B',
+      adoptionRate: '60%'}
+  ],
   const marketInsights = [,
-    { category: 'AI 'Hardwaregrowth: '+340%'value: '$200B' ,};
-    { category: 'AI 'Softwaregrowth: '+280%'value: '$150B' ,};
-    { category: 'AI 'Servicesgrowth: '+420%'value: '$100B' ,};
-    { category: 'AI 'Researchgrowth: '+500%'value: '$50B' ,}
-  ];
+    { category: 'AI 'Hardwaregrowth: '+340%'value: '$200B' },
+    { category: 'AI 'Softwaregrowth: '+280%'value: '$150B' },
+    { category: 'AI 'Servicesgrowth: '+420%'value: '$100B' },
+    { category: 'AI 'Researchgrowth: '+500%'value: '$50B' }
+  ],
   const timeline = [,
-    { month: 'Jan 2026'event: 'Quantum AI 'Prototypesstatus: 'completed' ,};
-    { month: 'Mar 2026'event: 'Neural Interface 'Trialsstatus: 'in-progress' ,};
-    { month: 'Jun 2026'event: 'Autonomous City 'Launchstatus: 'upcoming' ,};
-    { month: 'Sep 2026'event: 'AI Consciousness 'Researchstatus: 'upcoming' ,};
-    { month: 'Dec 2026'event: 'Full Ecosystem 'Integrationstatus: 'upcoming' ,}
-  ];
+    { month: 'Jan 2026'event: 'Quantum AI 'Prototypesstatus: 'completed' },
+    { month: 'Mar 2026'event: 'Neural Interface 'Trialsstatus: 'in-progress' },
+    { month: 'Jun 2026'event: 'Autonomous City 'Launchstatus: 'upcoming' },
+    { month: 'Sep 2026'event: 'AI Consciousness 'Researchstatus: 'upcoming' },
+    { month: 'Dec 2026'event: 'Full Ecosystem 'Integrationstatus: 'upcoming' }
+  ],
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -110,14 +106,14 @@ const AITrendsPredictions2026 = () => {,
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-50];
-                opacity: [0.40.80.4],}}
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 3,}}
+                y: [0-50],
+                opacity: [0.40.80.4]}}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 3}}
             />,
           ))}
         </div>,
@@ -136,7 +132,7 @@ const AITrendsPredictions2026 = () => {,
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
             The Future of,
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">,
-              {' ',}Artificial Intelligence,
+              {' '}Artificial Intelligence,
             </span>,
           </h1>,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
@@ -150,15 +146,14 @@ const AITrendsPredictions2026 = () => {,
         >,
           {marketInsights.map((insightindex) => (,
             <div,
-              key={index,}
+              key={index}
               className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20",
             >,
               <BarChart3 className="w-8 h-8 text-cyan-400 mx-auto mb-3" />,
               <div className="text-2xl font-bold text-white mb-1">{insight.value}</div>,
               <div className="text-cyan-400 font-semibold mb-1">{insight.growth}</div>,
               <div className="text-gray-300 text-sm">{insight.category}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Predictions Grid */}
         <div,
@@ -170,7 +165,7 @@ const AITrendsPredictions2026 = () => {,
           <div className="grid md: grid-cols-2 gap-8">,
             {predictions.map((predictionindex) => (,
               <div,
-                key={prediction.id,}
+                key={prediction.id}
                 className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 cursor-pointer",
                 onClick={() => setActivePrediction(index)}
               >,
@@ -224,14 +219,14 @@ const AITrendsPredictions2026 = () => {,
             <div className="grid md: grid-cols-2 gap-8 items-center">,
               <div>,
                 <div className="flex items-center mb-6">,
-                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${predictions[activePrediction].color,} mr-4`}>,
+                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${predictions[activePrediction].color} mr-4`}>,
                     <predictions[activePrediction].icon className="w-10 h-10 text-white" />,
                   </div>,
                   <div>,
                     <h3 className="text-3xl font-bold text-white mb-2">{predictions[activePrediction].title}</h3>,
                     <div className="flex items-center text-cyan-400">,
                       <Calendar className="w-5 h-5 mr-2" />,
-                      Expected: {predictions[activePrediction].timeframe,}
+                      Expected: {predictions[activePrediction].timeframe}
                     </div>,
                   </div>,
                 </div>,
@@ -243,8 +238,7 @@ const AITrendsPredictions2026 = () => {,
                     <div key={index} className="flex items-center text-gray-300">,
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />,
                       {point}
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className="relative">,
@@ -282,7 +276,7 @@ const AITrendsPredictions2026 = () => {,
                           ? 'bg-green-500/20 text-green-400',
                           : item.status === 'in-progress',
                           ? 'bg-yellow-500/20 text-yellow-400',
-                          : 'bg-gray-500/20 text-gray-400',
+                          : 'bg-gray-500/20 text-gray-400'
                       }`}>,
                         {item.status === 'completed' && <CheckCircle className="w-4 h-4 mr-1" />}
                         {item.status === 'in-progress' && <Rocket className="w-4 h-4 mr-1" />}
@@ -325,7 +319,7 @@ const AITrendsPredictions2026 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default AITrendsPredictions2026;
+  )},
+export default AITrendsPredictions2026,
 </div></div>,
 </p></p></p>,

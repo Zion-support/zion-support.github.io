@@ -1,2 +1,2 @@
 
-export default EnhancedStatsSection;
+export default EnhancedStatsSection,

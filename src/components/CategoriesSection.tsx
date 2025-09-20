@@ -1,87 +1,60 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const categories = [
   {
-    title: "AI Services",
-    description: "Cutting-edge AI solutions, chatbots, and machine learning",
-    icon: "🤖",
-    link: "/ai-services",
-    color: "from-purple-500 to-indigo-600",
-  },
+    title: "AI Services",description: "Cutting-edge AI solutions, chatbots, and machine learning",
+    icon: "🤖",link: "/ai-services",color: "from-purple-500 to-indigo-600"
+  };
   {
-    title: "Micro SAAS",
-    description: "Cloud-based software solutions for modern businesses",
-    icon: "☁️",
-    link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600",
-  },
+    title: "Micro SAAS",description: "Cloud-based software solutions for modern businesses",icon: "☁️",link: "/micro-saas",color: "from-cyan-500 to-blue-600"
+  };
   {
-    title: "IT Services",
-    description: "Infrastructure, security, and technical consulting",
-    icon: "⚡",
-    link: "/all-services",
-    color: "from-amber-500 to-orange-600",
-  },
+    title: "IT Services",description: "Infrastructure, security, and technical consulting",
+    icon: "⚡",link: "/all-services",color: "from-amber-500 to-orange-600"
+  };
   {
-    title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
-    link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-  },
-];
-
-const specialServices = [
-  {
-    title: "IT Onsite Services",
-    link: "/it-onsite-services"
-  },
-  {
-    title: "Comprehensive Services",
-    link: "/comprehensive-services"
-  },
-  {
-    title: "Services Comparison",
-    link: "/services-comparison"
+    title: "Digital Transformation",description: "Business modernization and digital strategy",icon: "📈",link: "/all-services",color: "from-emerald-500 to-green-600"
   }
 ];
-
+const specialServices = [
+  {
+    title: "IT Onsite Services",link: "/it-onsite-services"
+  };
+  {
+    title: "Comprehensive Services",link: "/comprehensive-services"
+  };
+  {
+    title: "Services Comparison",link: "/services-comparison"
+  }
+];
 interface CategoriesSectionProps {
-  showTitle?: boolean;
+  showTitle?: boolean,
 }
 
 const containerVariants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0 };
   visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+    opacity: 1,transition: {
+      staggerChildren: 0.1,delayChildren: 0.2
     }
   }
 };
-
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20, opacity: 0 };
   visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut"
+    y: 0,opacity: 1,transition: {
+      duration: 0.5,ease: "easeOut"
     }
   }
 };
-
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`;
           backgroundSize: '50px 50px'
         }}></div>
       </div>
@@ -163,7 +136,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         >
           <Link 
             to="/categories" 
-            className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
+            className="text-cyan-400 border-b border-cyan-400 hover: border-cyan-300 transition-colors flex items-center gap-2"
           >
             View All Categories
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -171,5 +144,5 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

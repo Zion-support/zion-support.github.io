@@ -41,5 +41,4 @@ export default function AutonomousItOpsCopilotV1Page() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

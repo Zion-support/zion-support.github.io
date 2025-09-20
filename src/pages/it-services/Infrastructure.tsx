@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe } from "lucide-react";
 export default function Infrastructure() {
   const features = [
     {
-      icon: Server,
-      title: 'Scalable Infrastructure',
-      description: 'Build robust systems that grow with your business'
-    },
+      icon: Server,title: 'Scalable Infrastructure',description: 'Build robust systems that grow with your business'
+    };
     {
-      icon: Network,
-      title: 'Network Management',
-      description: 'Optimize connectivity and performance'
-    },
+      icon: Network,title: 'Network Management',description: 'Optimize connectivity and performance'
+    };
     {
-      icon: Shield,
-      title: 'Security First',
-      description: 'Protect your infrastructure with enterprise-grade security'
-    },
+      icon: Shield,title: 'Security First',description: 'Protect your infrastructure with enterprise-grade security'
+    };
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast systems and applications'
+      icon: Zap,title: 'High Performance',description: 'Lightning-fast systems and applications'
     }
   ];
-
   const services = [
     {
-      title: 'Server Management',
-      description: 'Comprehensive server administration and optimization',
-      icon: Server
-    },
+      title: 'Server Management',description: 'Comprehensive server administration and optimization',icon: Server
+    };
     {
-      title: 'Network Design',
-      description: 'Custom network architecture and implementation',
-      icon: Network
-    },
+      title: 'Network Design',description: 'Custom network architecture and implementation',icon: Network
+    };
     {
-      title: 'Cloud Migration',
-      description: 'Seamless transition to cloud infrastructure',
-      icon: Cloud
-    },
+      title: 'Cloud Migration',description: 'Seamless transition to cloud infrastructure',icon: Cloud
+    };
     {
-      title: 'Disaster Recovery',
-      description: 'Business continuity and backup solutions',
-      icon: Shield
+      title: 'Disaster Recovery',description: 'Business continuity and backup solutions',icon: Shield
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -189,7 +170,7 @@ export default function Infrastructure() {
               <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
                 Create a solid foundation for your digital transformation journey.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-orange-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Get Infrastructure Assessment
                 </button>
@@ -202,5 +183,5 @@ export default function Infrastructure() {
         </div>
       </section>
     </div>
-  );
+  )
 }

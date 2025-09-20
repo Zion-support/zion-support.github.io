@@ -3,30 +3,30 @@
 export default function Page() {
 > {
 
-  maxNotifications?: number;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  enableSound?: boolean;
-  enableVibration?: boolean;
-  autoDismiss?: boolean;
+  maxNotifications?: number,
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',
+  enableSound?: boolean,
+  enableVibration?: boolean,
+  autoDismiss?: boolean,
   defaultDuration?: number}
 
 interface NotificationSettings {
-  sound: boolean;
-  vibration: boolean;
-  autoDismiss: boolean;
-  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-  maxNotifications: number;
+  sound: boolean,
+  vibration: boolean,
+  autoDismiss: boolean,
+  position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',
+  maxNotifications: number,
   defaultDuration: number}
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   maxNotifications = 5,
   position = 'top-right',
-enableSound:  true,;
-  enableVibration = true,;
-  autoDismiss = true,;
-  defaultDuration = 5000}) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+enableSound:  true,
+  enableVibration = true,
+  autoDismiss = true,
+  defaultDuration = 5000}) => {,
+  const [notifications, setNotifications] = useState<Notification[]>([]),
   const [settings, setSettings] = useState<NotificationSettings>({
 
     sound: enableSound,
@@ -35,128 +35,128 @@ enableSound:  true,;
     position,
     maxNotifications,
     defaultDuration
-  }) ;
-  const [showSettings, setShowSettings] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(0);
+  }) ,
+  const [showSettings, setShowSettings] = useState(false),
+  const [isOpen, setIsOpen] = useState(false),
+  const [unreadCount, setUnreadCount] = useState(0),
   
   // Initialize audio for notification sounds
-        return 'bottom-4 left-4';
+        return 'bottom-4 left-4',
       case 'bottom-right':'
-        return 'bottom-4 right-4';
+        return 'bottom-4 right-4',
 =======
   useEffect(() => {
     if(settings.sound) {
 
-      audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
-      audioRef.current.volume = 0.3}}, [settings.sound]) ;
+      audioRef.current = new Audio('/notification-sound.mp3'), // You can add a custom sound file
+      audioRef.current.volume = 0.3}}, [settings.sound]) ,
   // Update unread count
   useEffect(() => {
-    setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ;
+    setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ,
 
   // Auto - dismiss notifications
   useEffect(() => {
-    if(!settings.autoDismiss) return;
+    if(!settings.autoDismiss) return,
 
-    const timeouts: NodeJS.Timeout[] = [];
+    const timeouts: NodeJS.Timeout[] = [],
 
     notifications.forEach(notification => {
 
       if (notification.duration !== 0) {
 
-        }, notification.duration || settings.defaultDuration);
+        }, notification.duration || settings.defaultDuration),
         timeouts.push(timeout)}
-    }) ;
+    }) ,
     return () => {
-      timeouts.forEach(timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
+      timeouts.forEach(timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ,
 
   // Play notification sound'
         // // // // // // // // console.warn('Could not play notification sound:', error)}    }
-  }, [settings.sound]) ;
+  }, [settings.sound]) ,
 
   // Trigger vibration'
         // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
-  }, [settings.vibration]) ;
+  }, [settings.vibration]) ,
 
   // Add notification'
   
-;
-;
+,
+,
 
-`}-${Math.random().toString(36).substr(2, 9)}`,;
-      timestamp: new Date(),;
-      read: false,;
-      duration: notification.duration ?? settings.defaultDuration};
+`}-${Math.random().toString(36).substr(2, 9)}`,
+      timestamp: new Date(),
+      read: false,
+      duration: notification.duration ?? settings.defaultDuration},
 
-    setNotifications(prev = > {;
+    setNotifications(prev = > {,
       
-      return updated.slice (0, settings.maxNotifications) }) ;
+      return updated.slice (0, settings.maxNotifications) }) ,
     // Play sound and vibrate
-    playSound () ;
-    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ;
+    playSound () ,
+    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ,
 
   // Dismiss notification
   
-    setNotifications(prev => prev.filter (n => n.id !== id) ) }, []) ;
+    setNotifications(prev => prev.filter (n => n.id !== id) ) }, []) ,
 
   // Mark notification as read
   
-  }, []);
+  }, []),
 
   // Mark all as read
   
-    setNotifications(prev => prev.map (n => ({ ...n, read: true }) ) ) }, []) ;
+    setNotifications(prev => prev.map (n => ({ ...n, read: true }) ) ) }, []) ,
 
   // Clear all notifications
   
-    setNotifications([]) }, []) ;
+    setNotifications([]) }, []) ,
 
   // Get notification icon
 
     switch(type) {
 
       case 'success':'`
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`}  />;
+        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`}  />,
       case 'warning':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`}  />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`}  />,
       case 'error':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`}  />;
+        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`}  />,
       case 'info':'`
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`}  />;
+        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`}  />,
       case 'achievement':'`
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`}  />;
+        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`}  />,
       default:"
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />}};
+        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />}},
   // Get notification styles'
         return baseStyles + 'border-zion-slate bg-zion-slate/10'}
-  };
+  },
 
   // Get position classes
   
-    switch(settings.position) {;
-      case 'top-left':;
-        return 'top-4 left-4';
+    switch(settings.position) {,
+      case 'top-left':,
+        return 'top-4 left-4',
       case 'top-right':'
-        return 'top-4 right-4';
+        return 'top-4 right-4',
       case 'bottom-left':'
-        return 'bottom-4 left-4';'
-      case 'bottom-right':'        return 'bottom-4 right-4';
+        return 'bottom-4 left-4
+      case 'bottom-right':'        return 'bottom-4 right-4',
       default:'
         return 'top-4 right-4'}
-  };
+  },
 
   // Update settings
   
-    setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
+    setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ,
   // Expose addNotification method globally for external use
-  useEffect(() => { (window as) .addNotification = addNotification;
+  useEffect(() => { (window as) .addNotification = addNotification,
     return () => {
-      delete(window as) .addNotification}}, [addNotification]) ;
+      delete(window as) .addNotification}}, [addNotification]) ,
 
   return ()
     <>
       {/* Notification Bell */}`
-      <div className = {`fixed ${getPositionClasses()} z-50`}>;
+      <div className = {`fixed ${getPositionClasses()} z-50`}>,
         <button
           onClick={() => setIsOpen(!isOpen)}"
           className="relative p-3 bg-white/95 backdrop-blur-xl rounded-full shadow-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 transform hover:scale-105"
@@ -328,7 +328,7 @@ enableSound:  true,;
                       layout
                       className = {
 `
-  `p-4 rounded-xl ${getNotificationStyles(notification.type,;
+  `p-4 rounded-xl ${getNotificationStyles(notification.type,
   notification.priority)
 
 } ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`
@@ -366,7 +366,7 @@ enableSound:  true,;
                               {notification.action && (
                                 <button
                                   onClick={() => {
-                                    notification.action!.onClick();
+                                    notification.action!.onClick(),
                                     markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}
@@ -385,28 +385,28 @@ enableSound:  true,;
                       </div>
                     </motion.div>) ) ) }
               </AnimatePresence>
-            </div>;
-          </motion.div>;) };
-      </AnimatePresence>;
+            </div>,
+          </motion.div>,) },
+      </AnimatePresence>,
     </>
-  )};
+  )},
 
 // Hook for using notifications in components
 export 
   
-    if((window as any).addNotification) {;
+    if((window as any).addNotification) {,
       (window as any).addNotification(notification)}
-  }, []) ;
-  return { addNotification }};
+  }, []) ,
+  return { addNotification }},
 
 // Utility functions for common notification types
 export 
-        priority: 'medium',;
+        priority: 'medium',
 =======
-})};'        priority: 'medium',;
-  ;
-  ;
-  ...options;
+})},'        priority: 'medium',
+  ,
+  ,
+  ...options,
       }) }  },
 
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
@@ -461,6 +461,6 @@ export
         ...options
       }) }
   }
-};
+},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

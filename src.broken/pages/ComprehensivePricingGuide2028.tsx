@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-export default ComprehensivePricingGuide2028;
-export default ComprehensivePricingGuide2028;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default ComprehensivePricingGuide2028,
+export default ComprehensivePricingGuide2028,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -15,7 +15,7 @@ export default function Page() {
       roi: '400%',
       setupTime: '1 day',
       trialDays: 7,
-      features['High-resolution generation', 'Brand customization', 'Commercial rights'],;
+      features['High-resolution generationBrand customization', 'Commercial rights'],
       targetAudience: 'Designers, Marketing agencies, E - commerce businesses'
     },
     {
@@ -28,11 +28,11 @@ export default function Page() {
       roi: '500%',
       setupTime: '2 - 3 days',
       trialDays: 21,
-      features['Multi - language support', 'Bug detection', 'Code optimization'],;
+      features['Multi - language supportBug detection', 'Code optimization'],
       targetAudience: 'Software developers, Development teams, Tech companies'
 
-  ],;
-  itServices[;
+  ],
+  itServices[,
     {
       name: 'Quantum Cloud Infrastructure',
       price: '$45,999',
@@ -43,7 +43,7 @@ export default function Page() {
       roi: '700%',
       setupTime: '6 - 8 weeks',
       trialDays: 30,
-      features['Quantum - ready nodes', 'Zero - latency networking', 'Auto - scaling'],;
+      features['Quantum - ready nodesZero - latency networking', 'Auto - scaling'],
       targetAudience: 'Enterprises, Cloud providers, Data centers'
     },
     {
@@ -56,7 +56,7 @@ export default function Page() {
       roi: '500%',
       setupTime: '2 - 3 weeks',
       trialDays: 14,
-      features['AI threat detection', 'Zero - trust architecture', 'Automated response'],;
+      features['AI threat detectionZero - trust architecture', 'Automated response'],
       targetAudience: 'Enterprises, Government agencies, Financial institutions'
     },
     {
@@ -67,63 +67,63 @@ export default function Page() {
       marketSize: '$9.8B',
       growthRate: '300%',
       roi: '600%',
-      setupTime: '4 - 5 weeks',
-    };
-  ];
-};
+      setupTime: '4 - 5 weeks'
+    },
+  ],
+},
 
-const ComprehensivePricingGuide2028: React.FC = () : JSX.Element => {;
-      trialDays: 21,;
-      features: ['AI - powered CI / CD', 'Automated testing', 'Performance monitoring'],;
-      targetAudience: 'Development teams, DevOps engineers, Technology companies';
-    };
-  ];
-};
+const ComprehensivePricingGuide2028: React.FC = () : JSX.Element => {,
+      trialDays: 21,
+      features: ['AI - powered CI / CDAutomated testing', 'Performance monitoring'],
+      targetAudience: 'Development teams, DevOps engineers, Technology companies',
+    },
+  ],
+},
 
-const ComprehensivePricingGuide2028: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+const ComprehensivePricingGuide2028: React.FC = () => {,
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
 
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from - zion - cyan to - zion - purple' },;
-    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from - zion - blue to - zion - cyan' },;
-    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from - zion - purple to - zion - pink' },;
-    { id: 'it', name: 'IT Services', icon: Server, color: 'from - zion - green to - zion - emerald' };
-  ];
+  const categories = [,
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from - zion - cyan to - zion - purple' },
+    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from - zion - blue to - zion - cyan' },
+    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from - zion - purple to - zion - pink' },
+    { id: 'it', name: 'IT Services', icon: Server, color: 'from - zion - green to - zion - emerald' },
+  ],
 
-  const priceRanges = [;
-    { id: 'all', name: 'All Prices', range: 'All' },;
-    { id: 'low', name: 'Under $500', range: 'Under $500' },;
-    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
-    { id: 'high', name: 'Over $10K', range: 'Over $10K' };
-  ];
+  const priceRanges = [,
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $500', range: 'Under $500' },
+    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },
+    { id: 'high', name: 'Over $10K', range: 'Over $10K' },
+  ],
 
-  const getAllServices = () => {;
-    return [;
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' }) ) ,;
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' }) ) ,;
-      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }) ) ;
-    ];
-  };
+  const getAllServices = () => {,
+    return [,
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' }) ) ,
+      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' }) ) ,
+      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }) ) ,
+    ],
+  },
 
   const filteredServices = getAllServices () .filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      service.type.toLowerCase () .includes(selectedCategory.replace ('-', ' ') ) ;
+      service.type.toLowerCase () .includes(selectedCategory.replace ('- ') ) ,
 
-    const price = parseInt(service.price.replace (/[^0 - 9]/g, '') ) ;
-    let matchesPrice = true;
-    if(priceRange === 'low') matchesPrice = price < 500;
-    else if(priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000;
-    else if(priceRange === 'high') matchesPrice = price > 10000;
+    const price = parseInt(service.price.replace (/[^0 - 9]/g, '') ) ,
+    let matchesPrice = true,
+    if(priceRange === 'low') matchesPrice = price < 500,
+    else if(priceRange === 'medium') matchesPrice = price >= 500 && price <= 10000,
+    else if(priceRange === 'high') matchesPrice = price > 10000,
 
-    return matchesCategory && matchesPrice;
-  }) ;
+    return matchesCategory && matchesPrice,
+  }) ,
 
-  const calculateROI = (roi: string) => {;
-    return parseInt(roi.replace ('%', '') ) ;
-  };
+  const calculateROI = (roi: string) => {,
+    return parseInt(roi.replace ('%', '') ) ,
+  },
 
-  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi) ) ;
+  const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi) ) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -162,11 +162,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
               🎯 Market Positioning
             </div>
           </motion.div>
-        </div>;
+        </div>,
       </section>
 
       {/* Market Overview */}
-      <section className="py-20 bg-zion - slate -dark / 50">;
+      <section className="py-20 bg-zion - slate -dark / 50">,
         <div  className="container mx - auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -221,7 +221,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Filters */}
-      <section className="py-12 bg-zion - slate -dark / 30">;
+      <section className="py-12 bg-zion - slate -dark / 30">,
         <div  className="container mx - auto px-6">
           <div  className="flex flex - col lg:flex - row gap-6 items - center justify -between">
             {/* Category Filter */}
@@ -238,7 +238,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                </motion.button>;) ) }
+                </motion.button>,) ) }
             </div>
 
             {/* Price Range Filter */}
@@ -261,7 +261,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-6">
           <div  className="grid grid - cols - 1 lg: grid - cols - 2 gap-8">
             {sortedServices.map((service, index) => (<motion.div
@@ -289,14 +289,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
                 </div>
 
                 {/* Service Header */}
-                <div  className="mb-6">;
+                <div  className="mb-6">,
                   <h3 className="text-2xl font - bold text-white mb-2 group - hover:text-zion - cyan transition - colors duration -300">
                     {service.name}
                   </h3>
                   <p className="text-zion - slate - light text-sm mb-4">
                     {service.category}
                   </p>
-                </div>;
+                </div>,
 
                 {/* Pricing */}
                 <div  className="mb-6">
@@ -355,7 +355,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* ROI Calculator */}
-      <section className="py-20 bg-zion - slate -dark / 50">;
+      <section className="py-20 bg-zion - slate -dark / 50">,
         <div  className="container mx - auto px-6">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -423,7 +423,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-6 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -445,7 +445,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex - col sm:flex - row gap-4 justify -center"
+            className="flex flex - col sm: flex - row gap-4 justify -center"
 
             <a
               href="tel:+13024640950"
@@ -460,10 +460,10 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </a>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},
 

@@ -1,6 +1,6 @@
-import { ArrowUp  } from 'lucide-react';
+import { ArrowUp  } from 'lucide-react',
 export default function Page() {
-);
+),
   return ()
     <button'
       aria-label={t('general.back_to_top')}
@@ -9,6 +9,6 @@ export default function Page() {
     >
       <ArrowUp aria-hidden="true" className="h-5 w-5" />
     </button>
-  );
+  ),
 }
 '"`

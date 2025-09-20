@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 export default function ExpensiveComponent() {
 
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]),
+  const [loading, setLoading] = useState(true),
   useEffect(() => {
     // Simulate expensive computation
     const timer = setTimeout(() => {
       const expensiveData = Array.from()
         { length: 10000 },
         (_, i) => Math.sqrt(i) * Math.PI * Math.random()
-      );
-      setData(expensiveData);
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
+      ),
+      setData(expensiveData),
+      setLoading(false),
+    }, 2000),
+    return () => clearTimeout(timer),
+  }, []),
   if(loading) {
 
     return ()
@@ -22,7 +22,7 @@ export default function ExpensiveComponent() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>
-    );
+    ),
   }
   return ("
     <div className="space-y-4">"
@@ -47,6 +47,6 @@ export default function ExpensiveComponent() {
         )}
       </div>
     </div>
-  );
+  ),
 }
 '"

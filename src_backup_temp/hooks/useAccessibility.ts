@@ -1,201 +1,199 @@
-import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: "boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean"} enableLargeText?: "boolean"} interface AccessibilityFeatures { "isHighContrast": 'boolean, "isReducedMotion": "boolean, "isLargeText": boolean,' "} "isScreenReader": 'boolean'} export const useAccessibility = ("options": "UseAccessibilityOption s = {"}) => { const {, enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): "AccessibilityFeatures => { if (typeof window === 'null') {, return {, "isHighContrast": 'fals e'", "isReducedMotion": 'fals e', "isLargeText": 'fals e', "isScreenReader": 'fals e,' }} const mediaQueries = { "highContrast": "windo w.matchMedia('(prefers-"contrast": hig h)')","reducedMotion": "windo w.matchMedia('(prefers-reduced-"motion": reduc e)')","largeText": "windo w.matchMedia('(prefers-reduced-"motion": reduc e)')", , , }, return { "isHighContrast": 'mediaQuerie s.highContrast.matches',"isReducedMotion": 'mediaQuerie s.reducedMotion.matches',"isLargeText": 'fals e',"isScreenReader": 'fals e }},[]), navigateFocus('forward',currentElement)} break, case 'Escape': ", closeActiveElements(), break, case 'Enter':, case ' ':, if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()"} break, case 'ArrowUp': ", case 'ArrowDown':, navigateVertical(key === 'ArrowUp' ? 'up' : 'down'",currentElement), break, case 'ArrowLeft': ", case 'ArrowRight':, navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right'",currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback(("container": "HTMLElemen t): HTMLElement[] => { const selector = [ '"button": no t([disabled])'", '"input": "no t([disabled])'", '"select": "no t([disabled])'", '"textarea": "no t([disabled])'", 'a[href][tabindex]: "not([tabindex="-1"])'", '[contenteditable="true"]', ].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : "0"} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : "focusableElements.length - 1"} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : "items.length - 1"} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : "0"} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : "items.length - 1"} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : "0"} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach("element": "> {, element.classList.remove('active')"}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback(("message": 'string',"priority": 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return, const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomictrue'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return, document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return, document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return, document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true', const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }};
-import { useEffect, useRef, useCallback, useMemo  } from 'react';
+import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: "boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean"} enableLargeText?: "boolean"} interface AccessibilityFeatures { "isHighContrast": 'boolean, "isReducedMotion": "boolean, "isLargeText": boolean,' "} "isScreenReader": 'boolean'} export const useAccessibility = ("options": "UseAccessibilityOption s = {"}) => { const {, enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): "AccessibilityFeatures => { if (typeof window === 'null') {, return {, "isHighContrast": 'fals e'", "isReducedMotion": 'fals e', "isLargeText": 'fals e', "isScreenReader": 'fals e,' }} const mediaQueries = { "highContrast": "windo w.matchMedia('(prefers-"contrast": hig h)')","reducedMotion": "windo w.matchMedia('(prefers-reduced-"motion": reduc e)')","largeText": "windo w.matchMedia('(prefers-reduced-"motion": reduc e)')", ,  }, return { "isHighContrast": 'mediaQuerie s.highContrast.matches',"isReducedMotion": 'mediaQuerie s.reducedMotion.matches',"isLargeText": 'fals e',"isScreenReader": 'fals e }},[]), navigateFocus('forward',currentElement)} break, case 'Escape': ", closeActiveElements(), break, case 'Enter':, case ' ':, if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()"} break, case 'ArrowUp': ", case 'ArrowDown':, navigateVertical(key === 'ArrowUp' ? 'up' : 'down'",currentElement), break, case 'ArrowLeft': ", case 'ArrowRight':, navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right'",currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback(("container": "HTMLElemen t): HTMLElement[] => { const selector = [ '"button": no t([disabled])'", '"input": "no t([disabled])'", '"select": "no t([disabled])'", '"textarea": "no t([disabled])'", 'a[href][tabindex]: "not([tabindex="-1"])'", '[contenteditable="true"]' ].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : "0"} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : "focusableElements.length - 1"} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : "items.length - 1"} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : "0"} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : "items.length - 1"} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : "0"} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach("element": "> {, element.classList.remove('active')"}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback(("message": 'string',"priority": 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return, const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomictrue'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return, document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return, document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return, document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true', const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }},
+import { useEffect, useRef, useCallback, useMemo  } from 'react',
 interface UseAccessibilityOptions {,
-  enableKeyboardNavigation?: boolean;
-  enableFocusManagement?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableReducedMotion?: boolean;
+  enableKeyboardNavigation?: boolean,
+  enableFocusManagement?: boolean,
+  enableScreenReaderSupport?: boolean,
+  enableHighContrast?: boolean,
+  enableReducedMotion?: boolean,
   enableLargeText?: boolean}
 interface AccessibilityFeatures {,
-  "isHighContrast": boolean;
-  isReducedMotion: boolean;
-  isLargeText: boolean;
-  isScreenReader: boolean,}
-export const useAccessibility = ("options": UseAccessibilityOption s = {},) => {,
-  const {;
-    enableKeyboardNavigation = true;
-    enableFocusManagement = true;
-    enableScreenReaderSupport = true;
-    enableHighContrast = true;
-    enableReducedMotion = true;
-    enableLargeText = true}, = options;
-  const focusableElementsRef = useRef<HTMLElement[]>([]);
-  const lastFocusedElementRef = useRef<HTMLElement | null>(null);
-  const focusTrapRef = useRef<HTMLElement | null>(null);
+  "isHighContrast": boolean,
+  isReducedMotion: boolean,
+  isLargeText: boolean,
+  isScreenReader: boolean}
+export const useAccessibility = ("options": UseAccessibilityOption s = {}) => {,
+  const {,
+    enableKeyboardNavigation = true,
+    enableFocusManagement = true,
+    enableScreenReaderSupport = true,
+    enableHighContrast = true,
+    enableReducedMotion = true,
+    enableLargeText = true}, = options,
+  const focusableElementsRef = useRef<HTMLElement[]>([]),
+  const lastFocusedElementRef = useRef<HTMLElement | null>(null),
+  const focusTrapRef = useRef<HTMLElement | null>(null),
   // Detect accessibility preferences,
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {,
-    if (typeof window === 'null') {;
-      return {;
-        "isHighContrast": fals e;
-        "isReducedMotion": fals e;
-        "isLargeText": fals e;
+    if (typeof window === 'null') {,
+      return {,
+        "isHighContrast": fals e,
+        "isReducedMotion": fals e,
+        "isLargeText": fals e,
         "isScreenReader": fals e}}
     const mediaQueries = {,
-  "highContrast": windo w.matchMedia('(prefers-contrast: hig h)');
-      "reducedMotion": windo w.matchMedia('(prefers-reduced-motion: reduc e)');
-      "largeText": windo w.matchMedia('(prefers-reduced-motion: reduc e)');
-  ;
-  // Placeholder};
+  "highContrast": windo w.matchMedia('(prefers-contrast: hig h)'),
+      "reducedMotion": windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
+      "largeText": windo w.matchMedia('(prefers-reduced-motion: reduc e)'),
+  ,
+  // Placeholder},
     return {,
-      "isHighContrast": mediaQuerie s.highContrast.matches;
-      "isReducedMotion": mediaQuerie s.reducedMotion.matches;
+      "isHighContrast": mediaQuerie s.highContrast.matches,
+      "isReducedMotion": mediaQuerie s.reducedMotion.matches,
       "isLargeText": fals e, // Would need to check font size preferences,
-      "isScreenReader": fals e // Would need to detect screen reader usage,
-    }}, []);
+      "isScreenReader": fals e // Would need to detect screen reader usage
+    }}, []),
   // Keyboard navigation,
           navigateFocus('forward', currentElement)}
-        break,';
-      case 'Escape':;
+        break,',
+      case 'Escape':,
         // Close modals, dropdowns, etc.,
-        closeActiveElements();
-        break,';
-      case 'Enter':,;
-      case ' ':,';
+        closeActiveElements(),
+        break,',
+      case 'Enter':,
+      case ' ':,',
         // Activate buttons, links, etc.,
-        if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {;
-          event.preventDefault();
+        if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {,
+          event.preventDefault(),
           currentElement.click()}
-        break,';
-      case 'ArrowUp':,;
-      case 'ArrowDown':,';
+        break,',
+      case 'ArrowUp':,
+      case 'ArrowDown':,',
         // Navigate through lists, dropdowns, etc.,
-        navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement);
-        break,';
-      case 'ArrowLeft':,;
-      case 'ArrowRight':,';
+        navigateVertical(key === 'ArrowUp' ? 'up' : 'down', currentElement),
+        break,',
+      case 'ArrowLeft':,
+      case 'ArrowRight':,',
         // Navigate through horizontal lists, tabs, etc.,
-        navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement);
+        navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right', currentElement),
         break}
-  }, [enableKeyboardNavigation]);
+  }, [enableKeyboardNavigation]),
   // Focus management,
       lastFocusedElementRef.current = document.activeElement}
-;
-    // Focus the new element;
-    element.focus();
+,
+    // Focus the new element,
+    element.focus(),
     // Add focus indicator,
-    element.classList.add('focus-visible');
+    element.classList.add('focus-visible'),
     // Remove focus indicator after animation,
     setTimeout(() => {,
-      element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
+      element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]),
   // Focus trap for modals,
       focusableElements[0].focus()}
     // Store focusable elements,
-    focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
+    focusableElementsRef.current = focusableElements}, [enableFocusManagement]),
   // Remove focus trap,
-  const removeFocusTrap = useCallback(() => {;
-    if (focusTrapRef.current && lastFocusedElementRef.current) {;
-      lastFocusedElementRef.current.focus();
-      focusTrapRef.current = null;
-      focusableElementsRef.current = []}}, []);
+  const removeFocusTrap = useCallback(() => {,
+    if (focusTrapRef.current && lastFocusedElementRef.current) {,
+      lastFocusedElementRef.current.focus(),
+      focusTrapRef.current = null,
+      focusableElementsRef.current = []}}, []),
   // Get all focusable elements,
   const getFocusableElements = useCallback(("container": HTMLElemen t): HTMLElement[]  => {,
-    const selector = ['button: no t([disabled])"input": no t([disabled])';
-      '"select": no t([disabled])"textarea": no t([disabled])';
-      'a[href][tabindex]:not([tabindex="-1"])';
-      '[contenteditable="true"]'].join();
-    return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
+    const selector = ['button: no t([disabled])"input": no t([disabled])"select": no t([disabled])"textarea": no t([disabled])',
+      'a[href][tabindex]:not([tabindex="-1"])[contenteditable="true"]'].join(),
+    return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []),
   // Navigate focus,
-    if (direction = == 'forward') {;
+    if (direction = == 'forward') {,
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {,
       nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
-    manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
+    manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]),
   // Vertical navigation,
-    if (direction = == 'up') {;
+    if (direction = == 'up') {,
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {,
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
-    const nextElement = items[nextIndex] as HTMLElement;
+    const nextElement = items[nextIndex] as HTMLElement,
     if (nextElement) {,
       manageFocus(nextElement)}
-  }, [manageFocus]);
+  }, [manageFocus]),
   // Horizontal navigation,
-    if (direction = == 'left') {;
+    if (direction = == 'left') {,
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {,
       nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
-    const nextElement = items[nextIndex] as HTMLElement;
+    const nextElement = items[nextIndex] as HTMLElement,
     if (nextElement) {,
       manageFocus(nextElement)}
-  }, [manageFocus]);
+  }, [manageFocus]),
   // Close active elements,
-  const closeActiveElements = useCallback(() => {;
-    // Close modals, dropdowns, etc.,;
-    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active');
-activeElements.forEach(element: > {;
-      element.classList.remove('active'),
+  const closeActiveElements = useCallback(() => {,
+    // Close modals, dropdowns, etc.,
+    const activeElements = document.querySelectorAll('.modal.active, .dropdown.active, .popup.active'),
+activeElements.forEach(element: > {,
+      element.classList.remove('active')
     }
-    );
-activeElements.forEach("element": > {,;
-      element.classList.remove('active')});
+    ),
+activeElements.forEach("element": > {,
+      element.classList.remove('active')}),
     // Remove focus trap,
-    removeFocusTrap()}, [removeFocusTrap]);
+    removeFocusTrap()}, [removeFocusTrap]),
   // Screen reader announcements,
-  const announceToScreenReader = useCallback(("message": string, "priority": 'polite' | 'assertive' = 'polite') => {;
-    if (!enableScreenReaderSupport) return,';
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', priority),;
-    announcement.setAttribute('aria-atomic', 'true'),;
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
+  const announceToScreenReader = useCallback(("message": string, "priority": 'polite' | 'assertive' = 'polite') => {,
+    if (!enableScreenReaderSupport) return,',
+    const announcement = document.createElement('div'),
+    announcement.setAttribute('aria-live', priority),
+    announcement.setAttribute('aria-atomictrue'),
+    announcement.className = 'sr-only',
+    announcement.textContent = message,
+    document.body.appendChild(announcement),
     // Remove after announcement,
     setTimeout(() => {,
-      document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]);
+      document.body.removeChild(announcement)}, 1000)}, [enableScreenReaderSupport]),
   // High contrast mode,
-  const toggleHighContrast = useCallback(() => {;
-    if (!enableHighContrast) return,';
-    document.documentElement.classList.toggle('high-contrast'),;
-    const isEnabled = document.documentElement.classList.contains('high-contrast');
+  const toggleHighContrast = useCallback(() => {,
+    if (!enableHighContrast) return,',
+    document.documentElement.classList.toggle('high-contrast'),
+    const isEnabled = document.documentElement.classList.contains('high-contrast'),
     // Announce change to screen reader,
-    announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`);
+    announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`),
     // Save preference,
-    localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]);
+    localStorage.setItem('highContrast', isEnabled.toString())}, [enableHighContrast, announceToScreenReader]),
   // Reduced motion mode,
-  const toggleReducedMotion = useCallback(() => {;
-    if (!enableReducedMotion) return,';
-    document.documentElement.classList.toggle('reduced-motion'),;
-    const isEnabled = document.documentElement.classList.contains('reduced-motion');
+  const toggleReducedMotion = useCallback(() => {,
+    if (!enableReducedMotion) return,',
+    document.documentElement.classList.toggle('reduced-motion'),
+    const isEnabled = document.documentElement.classList.contains('reduced-motion'),
     // Announce change to screen reader,
-    announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`);
+    announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`),
     // Save preference,
-    localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]);
+    localStorage.setItem('reducedMotion', isEnabled.toString())}, [enableReducedMotion, announceToScreenReader]),
   // Large text mode,
-  const toggleLargeText = useCallback(() => {;
-    if (!enableLargeText) return,';
-    document.documentElement.classList.toggle('large-text'),;
-    const isEnabled = document.documentElement.classList.contains('large-text');
+  const toggleLargeText = useCallback(() => {,
+    if (!enableLargeText) return,',
+    document.documentElement.classList.toggle('large-text'),
+    const isEnabled = document.documentElement.classList.contains('large-text'),
     // Announce change to screen reader,
-    announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`);
+    announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`),
     // Save preference,
-    localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]);
+    localStorage.setItem('largeText', isEnabled.toString())}, [enableLargeText, announceToScreenReader]),
   // Initialize accessibility features,
   useEffect(() => {,
     // Load saved preferences,
     const highContrast = localStorage.getItem('highContrast') === 'true,
-    const reducedMotion = localStorage.getItem('reducedMotion') === 'true';
-    const largeText = localStorage.getItem('largeText') === 'true';
-    if (highContrast) document.documentElement.classList.add('high-contrast'),;
-    if (reducedMotion) document.documentElement.classList.add('reduced-motion'),;
-    if (largeText) document.documentElement.classList.add('large-text');
+    const reducedMotion = localStorage.getItem('reducedMotion') === 'true',
+    const largeText = localStorage.getItem('largeText') === 'true',
+    if (highContrast) document.documentElement.classList.add('high-contrast'),
+    if (reducedMotion) document.documentElement.classList.add('reduced-motion'),
+    if (largeText) document.documentElement.classList.add('large-text'),
     // Add keyboard event listener,
     if (enableKeyboardNavigation) {,
       document.addEventListener('keydown', handleKeyboardNavigation)}
     // Cleanup,
     return () => {,
-      document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]);
+      document.removeEventListener('keydown', handleKeyboardNavigation)}}, [enableKeyboardNavigation, handleKeyboardNavigation]),
   return {,
-    accessibilityFeatures;
-    manageFocus;
-    createFocusTrap;
-    removeFocusTrap;
-    announceToScreenReader;
-    toggleHighContrast;
-    toggleReducedMotion;
-    toggleLargeText;
-    getFocusableElements;
-    navigateFocus;
-    navigateVertical;
-    navigateHorizontal,
-  }},',;
-import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean} enableLargeText?: boolean} interface AccessibilityFeatures { isHighContrast: 'boolean, isReducedMotion: boolean, isLargeText: boolean,' } isScreenReader: 'boolean',} export const useAccessibility = (options: UseAccessibilityOption s = {}) => { const {, enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): AccessibilityFeatures => { if (typeof window === 'null') {, return {, isHighContrast: 'fals e', isReducedMotion: 'fals e', isLargeText: 'fals e', isScreenReader: 'fals e,' }} const mediaQueries = { highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'), , , }, return { isHighContrast: 'mediaQuerie s.highContrast.matches',isReducedMotion: 'mediaQuerie s.reducedMotion.matches',isLargeText: 'fals e',isScreenReader: 'fals e ,}},[]), navigateFocus('forward',currentElement)} break, case 'Escape':, closeActiveElements(), break, case 'Enter':, case ' ':, if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()} break, case 'ArrowUp':, case 'ArrowDown':, navigateVertical(key === 'ArrowUp' ? 'up' : 'down',currentElement), break, case 'ArrowLeft':, case 'ArrowRight':, navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right',currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[] => { const selector = [ 'button: no t([disabled])input: no t([disabled])', 'select: no t([disabled])textarea: no t([disabled])', 'a[href][tabindex]:not([tabindex="-1"])', '[contenteditable="true"]', ].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach(element: > {, element.classList.remove('active')}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback((message: 'string',priority: 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return, const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomictrue'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return, document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return, document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return, document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true', const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }};
-  }},;
-import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean, enableLargeText?: boolean} interface AccessibilityFeatures { isHighContrast: boolean, isReducedMotion: boolean, isLargeText: boolean, isScreenReader: boolean,} export const useAccessibility = (options: UseAccessibilityOption s = {},) => { const {, enableKeyboardNavigation = true,enableFocusManagement = true,enableScreenReaderSupport = true,enableHighContrast = true,enableReducedMotion = true,enableLargeText = true}, = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): AccessibilityFeatures => { if (typeof window === 'null') {, return {, isHighContrast: fals e,isReducedMotion: fals e,isLargeText: fals e,isScreenReader: fals e,}} const mediaQueries = { highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'), return { isHighContrast: mediaQuerie s.highContrast.matches,isReducedMotion: mediaQuerie s.reducedMotion.matches,isLargeText: fals e,isScreenReader: fals e ,}},[]), navigateFocus('forward',currentElement)} break,', case 'Escape':, closeActiveElements(), break,', case 'Enter':, case ' ':,', if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()} break,', case 'ArrowUp':, case 'ArrowDown':,', navigateVertical(key === 'ArrowUp' ? 'up' : 'down',currentElement), break,', case 'ArrowLeft':, case 'ArrowRight':,', navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right',currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[] => { const selector = [ 'button: no t([disabled])input: no t([disabled])','select: no t([disabled])textarea: no t([disabled])','a[href][tabindex]:not([tabindex="-1"])','[contenteditable="true"]'].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach(element: > {, element.classList.remove('active')}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback((message: string,priority: 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return,', const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomic','true'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return,', document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return,', document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return,', document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }},',';
+    accessibilityFeatures,
+    manageFocus,
+    createFocusTrap,
+    removeFocusTrap,
+    announceToScreenReader,
+    toggleHighContrast,
+    toggleReducedMotion,
+    toggleLargeText,
+    getFocusableElements,
+    navigateFocus,
+    navigateVertical,
+    navigateHorizontal
+  }},',
+import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean} enableLargeText?: boolean} interface AccessibilityFeatures { isHighContrast: 'boolean, isReducedMotion: boolean, isLargeText: boolean,' } isScreenReader: 'boolean'} export const useAccessibility = (options: UseAccessibilityOption s = {}) => { const {, enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): AccessibilityFeatures => { if (typeof window === 'null') {, return {, isHighContrast: 'fals e', isReducedMotion: 'fals e', isLargeText: 'fals e', isScreenReader: 'fals e,' }} const mediaQueries = { highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'), ,  }, return { isHighContrast: 'mediaQuerie s.highContrast.matches',isReducedMotion: 'mediaQuerie s.reducedMotion.matches',isLargeText: 'fals e',isScreenReader: 'fals e }},[]), navigateFocus('forward',currentElement)} break, case 'Escape':, closeActiveElements(), break, case 'Enter':, case ' ':, if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()} break, case 'ArrowUp':, case 'ArrowDown':, navigateVertical(key === 'ArrowUp' ? 'up' : 'down',currentElement), break, case 'ArrowLeft':, case 'ArrowRight':, navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right',currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[] => { const selector = [ 'button: no t([disabled])input: no t([disabled])select: no t([disabled])textarea: no t([disabled])', 'a[href][tabindex]:not([tabindex="-1"])[contenteditable="true"]' ].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach(element: > {, element.classList.remove('active')}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback((message: 'string',priority: 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return, const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomictrue'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return, document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return, document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return, document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true', const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }},
+  }},
+import { useEffect,useRef,useCallback,useMemo } from 'react', interface UseAccessibilityOptions { enableKeyboardNavigation?: boolean, enableFocusManagement?: boolean, enableScreenReaderSupport?: boolean, enableHighContrast?: boolean, enableReducedMotion?: boolean, enableLargeText?: boolean} interface AccessibilityFeatures { isHighContrast: boolean, isReducedMotion: boolean, isLargeText: boolean, isScreenReader: boolean} export const useAccessibility = (options: UseAccessibilityOption s = {}) => { const {, enableKeyboardNavigation = true,enableFocusManagement = true,enableScreenReaderSupport = true,enableHighContrast = true,enableReducedMotion = true,enableLargeText = true}, = options, const focusableElementsRef = useRef<HTMLElement[]>([]), const lastFocusedElementRef = useRef<HTMLElement | null>(null), const focusTrapRef = useRef<HTMLElement | null>(null), const accessibilityFeatures = useMemo((): AccessibilityFeatures => { if (typeof window === 'null') {, return {, isHighContrast: fals e,isReducedMotion: fals e,isLargeText: fals e,isScreenReader: fals e}} const mediaQueries = { highContrast: windo w.matchMedia('(prefers-contrast: hig h)'),reducedMotion: windo w.matchMedia('(prefers-reduced-motion: reduc e)'),largeText: windo w.matchMedia('(prefers-reduced-motion: reduc e)'), return { isHighContrast: mediaQuerie s.highContrast.matches,isReducedMotion: mediaQuerie s.reducedMotion.matches,isLargeText: fals e,isScreenReader: fals e }},[]), navigateFocus('forward',currentElement)} break,', case 'Escape':, closeActiveElements(), break,', case 'Enter':, case ' ':,', if (currentElement.tagName = == 'BUTTON' || currentElement.tagName === 'A') {, event.preventDefault(), currentElement.click()} break,', case 'ArrowUp':, case 'ArrowDown':,', navigateVertical(key === 'ArrowUp' ? 'up' : 'down',currentElement), break,', case 'ArrowLeft':, case 'ArrowRight':,', navigateHorizontal(key === 'ArrowLeft' ? 'left' : 'right',currentElement), break} },[enableKeyboardNavigation]), lastFocusedElementRef.current = document.activeElement} , element.focus(), element.classList.add('focus-visible'), setTimeout(() => { element.classList.remove('focus-visible')},2000)},[enableFocusManagement]), focusableElements[0].focus()} focusableElementsRef.current = focusableElements},[enableFocusManagement]), const removeFocusTrap = useCallback(() => {, if (focusTrapRef.current && lastFocusedElementRef.current) {, lastFocusedElementRef.current.focus(), focusTrapRef.current = null, focusableElementsRef.current = []}},[]), const getFocusableElements = useCallback((container: HTMLElemen t): HTMLElement[] => { const selector = [ 'button: no t([disabled])input: no t([disabled])select: no t([disabled])textarea: no t([disabled])','a[href][tabindex]:not([tabindex="-1"])[contenteditable="true"]'].join(), return Array.from(container.querySelectorAll(selector)) as HTMLElement[]},[]), if (direction = == 'forward') {, nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else { nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1} manageFocus(focusableElements[nextIndex])},[getFocusableElements,manageFocus]), if (direction = == 'up') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), if (direction = == 'left') {, nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else { nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0} const nextElement = items[nextIndex] as HTMLElement, if (nextElement) { manageFocus(nextElement)} },[manageFocus]), const closeActiveElements = useCallback(() => {, const activeElements = document.querySelectorAll('.modal.active,.dropdown.active,.popup.active'), activeElements.forEach(element: > {, element.classList.remove('active')}), removeFocusTrap()},[removeFocusTrap]), const announceToScreenReader = useCallback((message: string,priority: 'polite' | 'assertive' = 'polite') => {, if (!enableScreenReaderSupport) return,', const announcement = document.createElement('div'), announcement.setAttribute('aria-live',priority), announcement.setAttribute('aria-atomictrue'), announcement.className = 'sr-only', announcement.textContent = message, document.body.appendChild(announcement), setTimeout(() => { document.body.removeChild(announcement)},1000)},[enableScreenReaderSupport]), const toggleHighContrast = useCallback(() => {, if (!enableHighContrast) return,', document.documentElement.classList.toggle('high-contrast'), const isEnabled = document.documentElement.classList.contains('high-contrast'), announceToScreenReader(`High contrast mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('highContrast',isEnabled.toString())},[enableHighContrast,announceToScreenReader]), const toggleReducedMotion = useCallback(() => {, if (!enableReducedMotion) return,', document.documentElement.classList.toggle('reduced-motion'), const isEnabled = document.documentElement.classList.contains('reduced-motion'), announceToScreenReader(`Reduced motion mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('reducedMotion',isEnabled.toString())},[enableReducedMotion,announceToScreenReader]), const toggleLargeText = useCallback(() => {, if (!enableLargeText) return,', document.documentElement.classList.toggle('large-text'), const isEnabled = document.documentElement.classList.contains('large-text'), announceToScreenReader(`Large text mode ${isEnabled ? 'enabled' : 'disabled'}`), localStorage.setItem('largeText',isEnabled.toString())},[enableLargeText,announceToScreenReader]), useEffect(() => { const highContrast = localStorage.getItem('highContrast') === 'true const reducedMotion = localStorage.getItem('reducedMotion') === 'true', const largeText = localStorage.getItem('largeText') === 'true', if (highContrast) document.documentElement.classList.add('high-contrast'), if (reducedMotion) document.documentElement.classList.add('reduced-motion'), if (largeText) document.documentElement.classList.add('large-text'), if (enableKeyboardNavigation) { document.addEventListener('keydown',handleKeyboardNavigation)} return () => { document.removeEventListener('keydown',handleKeyboardNavigation)}},[enableKeyboardNavigation,handleKeyboardNavigation]), return { accessibilityFeatures,manageFocus,createFocusTrap,removeFocusTrap,announceToScreenReader,toggleHighContrast,toggleReducedMotion,toggleLargeText,getFocusableElements,navigateFocus,navigateVertical,navigateHorizontal }},',',

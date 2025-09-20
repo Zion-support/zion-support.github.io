@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function ContentSharingWidget({ titleurldescription }: ContentSharingWidge
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {;
+  ),
+},
+export default function ContentSharingWidget({ titleurldescription }: ContentSharingWidgetProps) {,
 }}}

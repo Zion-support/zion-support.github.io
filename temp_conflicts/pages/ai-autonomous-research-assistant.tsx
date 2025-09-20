@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Search, BookOpen, Database, Zap, Globe, 
   ArrowRight, CheckCircle, Star, TrendingUp, Users
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function AIResearchAssistantPage() {
   const features = [
@@ -46,7 +46,7 @@ export default function AIResearchAssistantPage() {
       description: "Bridging knowledge gaps between different scientific disciplines and research areas.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const benefits = [
     "Accelerate research timelines by 80% with automated discovery and analysis",
@@ -55,7 +55,7 @@ export default function AIResearchAssistantPage() {
     "Generate novel research hypotheses and identify research gaps",
     "Stay updated with the latest research developments automatically",
     "Collaborate with AI to enhance human research capabilities"
-  ];
+  ],
 
   const useCases = [
     {
@@ -78,7 +78,7 @@ export default function AIResearchAssistantPage() {
       description: "Competitive intelligence, market trend analysis, and business opportunity research",
       results: "Real-time market insights, comprehensive competitive analysis"
     }
-  ];
+  ],
 
   const pricing = [
     {
@@ -126,7 +126,7 @@ export default function AIResearchAssistantPage() {
       ],
       popular: false
     }
-  ];
+  ],
 
   return (
     <>
@@ -451,7 +451,7 @@ export default function AIResearchAssistantPage() {
             <p className="text-xl text-blue-100 mb-8">
               Experience the future of research with AI-powered autonomous discovery and analysis.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
@@ -471,5 +471,5 @@ export default function AIResearchAssistantPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

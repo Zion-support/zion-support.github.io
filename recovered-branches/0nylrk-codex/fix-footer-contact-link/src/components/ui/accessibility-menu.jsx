@@ -1,2 +1,2 @@
 
-export default accessibility-menu;
+export default accessibility-menu,

@@ -6,12 +6,12 @@ export const vi = {
   restoreAllMocks: jest.restoreAllMocks.bind(jest),
   stubGlobal: (key: string, value: any) => {
     // @ts-ignore
-    global[key] = value;
-  },
-};
+    global[key] = value
+  }
+},
 
-export const describe = global.describe;
-export const it = global.it;
-export const test = global.test;
-export const expect = global.expect;
-export const beforeEach = global.beforeEach;
+export const describe = global.describe,
+export const it = global.it,
+export const test = global.test,
+export const expect = global.expect,
+export const beforeEach = global.beforeEach,

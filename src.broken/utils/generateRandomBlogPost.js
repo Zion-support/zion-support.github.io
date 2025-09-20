@@ -10,5 +10,5 @@ export const generateRandomBlogPost = () => {
     author: 'Zion Team',
     publishedAt: new Date().toISOString(),
     tags: ['AI',Technology',Innovation'],
-    slug: 'sample-blog-post'};
-};
+    slug: 'sample-blog-post'},
+},

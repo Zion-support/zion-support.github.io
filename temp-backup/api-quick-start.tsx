@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface ApiquickstartProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Apiquickstart({ }: ApiquickstartProps) {,
@@ -8,7 +8,6 @@ export default function Apiquickstart({ }: ApiquickstartProps) {,
     <div>,
       <h1>Apiquickstart</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

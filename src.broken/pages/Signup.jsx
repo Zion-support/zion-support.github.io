@@ -1,9 +1,9 @@
-import { Link, Navigate, useNavigate  } from 'react-router-dom';
+import { Link, Navigate, useNavigate  } from 'react-router-dom',
 export default function Page() {
 ) .refine(data => data.password === data.confirmPassword, {
     message: 'Passwords do not match',
-    path: ['confirmPassword'],
-  }) ;
+    path: ['confirmPassword']
+  }) ,
   const {
     signup,
     loginWithGoogle,
@@ -11,15 +11,15 @@ export default function Page() {
     loginWithTwitter,
     isLoading,
     isAuthenticated,
-    user,
-  } = useAuth () ;
-  const navigate = useNavigate () ;
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    user
+  } = useAuth () ,
+  const navigate = useNavigate () ,
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   // Track confirm password locally to prevent it from clearing on blur
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState('');
-  const passwordValue = form.watch('password') ;
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState(''),
+  const passwordValue = form.watch('password') ,
+  const [isSubmitting, setIsSubmitting] = useState(false),
   // Initialize react - hook - form
   const form = useForm({
     resolver: zodResolver (signupSchema) ,
@@ -28,64 +28,64 @@ export default function Page() {
       email: '',
       password: '',
       confirmPassword: '',
-      termsAccepted: false,
-    },
-  }) ;
+      termsAccepted: false
+    }
+  }) ,
   // Form submission handler
   const onSubmit = async data => {
-    if(isSubmitting) return; // Prevent multiple submissions
-    setIsSubmitting(true) ;
+    if(isSubmitting) return, // Prevent multiple submissions
+    setIsSubmitting(true) ,
     try {
       const { res, data: resData } = await register(data.displayName,
         data.email,
-        data.password) ;
+        data.password) ,
       // Handle duplicate email error from API
       if(res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-        form.setError('email', { message: resData.message }) ;
-        toast.error('Email already registered – please login.') ;
-        return;
+        form.setError('email', { message: resData.message }) ,
+        toast.error('Email already registered – please login.') ,
+        return,
       }
       // Check for successful response
       if(res.ok && resData.token && resData.user) {
         // Successful registration
-        safeStorage.setItem('authToken', resData.token) ;
-        setUser(resData.user) ;
+        safeStorage.setItem('authToken', resData.token) ,
+        setUser(resData.user) ,
         setTokens({
           accessToken: resData.token,
-          refreshToken: resData.refreshToken || null,
-        }) ;
+          refreshToken: resData.refreshToken || null
+        }) ,
         // Handle email verification required case
         if(resData?.emailVerificationRequired) {
-          setShowVerificationMessage(true) ;
+          setShowVerificationMessage(true) ,
           // Do not proceed to set session or navigate
         } else if(resData?.session) {
           // Set the session directly if verification is not required
-          const { error: sessionError } = await supabase.auth.setSession(resData.session) ;
+          const { error: sessionError } = await supabase.auth.setSession(resData.session) ,
           if(sessionError) {
-            console.error('Error setting session:', sessionError) ;
+            console.error('Error setting session:', sessionError) ,
             form.setError('root', {
               message:
                 sessionError.message ||
-                'Failed to set session.Please try logging in.',
-            }) ;
+                'Failed to set session.Please try logging in.'
+            }) ,
             toast.error(sessionError.message ||
-                'Failed to set session.Please try logging in.') ;
-            return;
+                'Failed to set session.Please try logging in.') ,
+            return,
           }
           // The onAuthStateChange listener in AuthProvider should now handle
-          // updating user state and navigating if necessary for other cases.// For direct signup with session, we can navigate.toast.success('Welcome to ZionAI 🎉') ;
-          navigate('/dashboard') ;
+          // updating user state and navigating if necessary for other cases.// For direct signup with session, we can navigate.toast.success('Welcome to ZionAI 🎉') ,
+          navigate('/dashboard') ,
         } else {
           // This case might indicate an unexpected response from the API
           console.error('Registration response did not include session or emailVerificationRequired flag.',
-            resData) ;
+            resData) ,
           form.setError('root', {
             message:
-              'Registration complete, but an unexpected issue occurred.Please try logging in.',
-          }) ;
-          toast.error('Registration complete, but an unexpected issue occurred.Please try logging in manually.') ;
+              'Registration complete, but an unexpected issue occurred.Please try logging in.'
+          }) ,
+          toast.error('Registration complete, but an unexpected issue occurred.Please try logging in manually.') ,
           // Potentially navigate to login or show a more specific error
-          return;
+          return,
         }
         // Subscribe user to Mailchimp if opted in(only if registration is fully complete, not pending verification) if(data.newsletterOptIn &&
           mailchimpService &&
@@ -93,11 +93,11 @@ export default function Page() {
           try {
             await mailchimpService.addSubscriber({
               email: data.email,
-              mergeFields: { FNAME: data.displayName },
-            }) ;
-            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10') ;
+              mergeFields: { FNAME: data.displayName }
+            }) ,
+            await mailchimpService.sendWelcomeEmail(data.email, 'NEW10') ,
           } catch(err) {
-            console.error('Mailchimp subscription failed', err) ;
+            console.error('Mailchimp subscription failed', err) ,
             // Non - critical error, don't block user flow
           }
         }
@@ -106,27 +106,27 @@ export default function Page() {
       }
       try {
       } catch(err) {
-        const message = err.message ?? 'Registration failed';
-        form.setError('root', { message }) ;
-        toast.error(message) ;
+        const message = err.message ?? 'Registration failed',
+        form.setError('root', { message }) ,
+        toast.error(message) ,
       } finally {
-        setIsSubmitting(false) ;
+        setIsSubmitting(false) ,
       }
     } finally {
     }
     const onInvalid = errors => {
-      const firstError = Object.keys(errors) [0];
+      const firstError = Object.keys(errors) [0],
       if(firstError) {
-        form.setFocus(firstError) ;
+        form.setFocus(firstError) ,
       }
-    };
+    },
     // Redirect if user is already logged in and has completed profile
     if(isAuthenticated && user?.profileComplete) {
-      return < Navigate to="/" />;
+      return < Navigate to="/" />,
     }
     // Redirect to onboarding if user is authenticated but hasn't completed profile
     if(isAuthenticated && !user?.profileComplete) {
-      return < Navigate to="/onboarding" />;
+      return < Navigate to="/onboarding" />,
     }
     return (<>
         <div className="flex min - h-screen bg-zion -blue">
@@ -258,12 +258,12 @@ export default function Page() {
                                 className="bg-zion - blue pl - 10 border-zion - blue - light focus:border-zion -purple"
                                 value={confirmPasswordValue}
                                 onChange={e => {
-                                  field.onChange(e) ;
-                                  setConfirmPasswordValue(e.target.value) ;
+                                  field.onChange(e) ,
+                                  setConfirmPasswordValue(e.target.value) ,
                                 }}
                                 onBlur={e => {
-                                  field.onBlur () ;
-                                  setConfirmPasswordValue(e.target.value) ;
+                                  field.onBlur () ,
+                                  setConfirmPasswordValue(e.target.value) ,
                                 }}
                                 autoComplete="new-password"
                               />
@@ -422,6 +422,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </>) ;
-  };
+      </>) ,
+  },
 }

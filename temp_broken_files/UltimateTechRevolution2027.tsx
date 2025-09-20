@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
         <div className="text-center mb-16">,
           <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white mb-6 animate-pulse">,
             <Rocket className="w-4 h-4 mr-2" />,
@@ -225,7 +225,7 @@ import React from 'react';
             </CardContent>,
           </Card>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center bg-gradient-to-r from-purple-800/30 to-pink-800/30 rounded-2xl p-12 backdrop-blur-sm border border-purple-500/30">,
           <h2 className="text-4xl font-bold text-white mb-6">,
             Ready to Experience the Ultimate Tech Revolution?,
@@ -245,5 +245,5 @@ import React from 'react';
           </div>,
         </div>,
     </div>,
-  ),};
-export default UltimateTechRevolution2027;
+  )},
+export default UltimateTechRevolution2027,

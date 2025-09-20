@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardContent, CardHeader } from '../ui/card';
+import React from 'react',
+import { Card, CardContent, CardHeader } from '../ui/card',
 
 export default function Page() {
               <Button"
@@ -13,6 +13,6 @@ export default function Page() {
         </CardContent>
       </Card>
     </div>
-  );
-};
+  ),
+},
 '"

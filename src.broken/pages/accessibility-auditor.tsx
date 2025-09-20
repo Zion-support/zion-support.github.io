@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-  ];
+  ],
 
   const complianceStandards = [{
       standard: 'WCAG 2.1 AA',
@@ -31,13 +31,13 @@ export default function Page() {
       description: 'European accessibility requirements for ICT products and services',
       color: 'text-green - 500'
     }
-      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
-    },;
-    {;
-      category: "Technical Accessibility",;
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross - browser compatibility"];
-    };
-  ];
+      items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"],
+    },
+    {,
+      category: "Technical Accessibility",
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross - browser compatibility"],
+    },
+  ],
 
   const accessibilityTools = [{
       name: 'Screen Reader Support',
@@ -59,7 +59,7 @@ export default function Page() {
       description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -69,7 +69,7 @@ export default function Page() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -80,7 +80,7 @@ export default function Page() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -224,7 +224,7 @@ export default function Page() {
               <p className="text-gray - 300 mb-6">
                 Get a comprehensive accessibility audit and ensure your products are
                 inclusive for all users.Contact us today to get started.</p>
-              <div className="flex flex - col sm:flex - row gap-4 justify -center">
+              <div className="flex flex - col sm: flex - row gap-4 justify -center">
                 <Link
                   to="/contact"
                   className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-lg hover:from - blue - 700 hover:to - cyan - 700 transition - all duration -300"
@@ -238,9 +238,9 @@ export default function Page() {
                   View All Services
                 </Link>
               </div>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

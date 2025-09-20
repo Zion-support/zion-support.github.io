@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const EnhancedNewsletterSignup2025: React.FC = () => {,
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [email, setEmail] = useState(''),
+  const [isSubscribed, setIsSubscribed] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
   const handleSubmit = async (e: React.FormEvent) => {,
-    e.preventDefault();
-    setIsLoading(true);
+    e.preventDefault(),
+    setIsLoading(true),
     // Simulate API call,
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubscribed(true);
-    setIsLoading(false);
-    setEmail('');
-  };
+    await new Promise(resolve => setTimeout(resolve, 2000)),
+    setIsSubscribed(true),
+    setIsLoading(false),
+    setEmail(''),
+  },
   if (isSubscribed) {,
     return (,
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-white text-center mb-12">,
@@ -31,8 +31,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
             <li>• Quantum computing simulation access</li>,
           </ul>,
         </div>,
-      </div>,
-    ),}
+      </div>)}
   return (,
       <div className="relative z-10">,
         <div className="text-center mb-8">,
@@ -42,7 +41,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
             <span className="text-4xl animate-bounce">🚀</span>,
           </div>,
           <p className="text-2xl opacity-90 max-w-4xl mx-auto">,
-            Get exclusive access to our revolutionary technology breakthroughs;
+            Get exclusive access to our revolutionary technology breakthroughs,
             AI consciousness updates, and quantum computing innovations.,
           </p>,
         </div>,
@@ -50,7 +49,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
           <form onSubmit={handleSubmit} className="flex flex-col md: flex-row gap-4 mb-8">,
             <input,
               type="email",
-              value={email,}
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email for exclusive access",
               className="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus: outline-none focus:ring-4 focus:ring-cyan-400",
@@ -58,17 +57,17 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
             />,
             <button,
               type="submit",
-              disabled={isLoading,}
+              disabled={isLoading}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-bold text-lg disabled:opacity-50 disabled:cursor-not-allowed",
             >,
-              {isLoading ? 'Joining...' : 'Join Revolution',}
+              {isLoading ? 'Joining...' : 'Join Revolution'}
             </button>,
         {!isSubscribed ? (,
           <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">,
             <div className="flex flex-col md: flex-row gap-4">,
               <input,
                 type="email",
-                value={email,}
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address",
                 className="flex-1 px-6 py-4 rounded-lg text-gray-900 text-lg focus: outline-none focus:ring-4 focus:ring-purple-500",
@@ -110,8 +109,8 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
+  ),
+},
   if (isSubscribed) {,
     return (,
       <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-16">,
@@ -135,7 +134,7 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
               <h3 className="text-xl font-bold mb-2 text-purple-300">AI Consciousness Updates</h3>,
               <p className="text-purple-100 text-sm">,
                 Be the first to know about breakthroughs in artificial consciousness and self-aware AI systems.,
-          {/* Social Proof */,}
+          {/* Social Proof */}
           <div className="mt-12">,
             <p className="text-lg opacity-90 mb-6">Trusted by pioneers worldwide</p>,
             <div className="flex justify-center items-center space-x-8 opacity-60">,
@@ -145,5 +144,5 @@ const EnhancedNewsletterSignup2025: React.FC = () => {,
               <div className="text-2xl font-bold">Countries</div>,
               <div className="text-2xl font-bold">24/7</div>,
               <div className="text-2xl font-bold">Updates</div>,
-            </div>,
+            </div>
 }})))

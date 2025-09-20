@@ -1,5 +1,5 @@
-import React from 'react,',',',';
-import {SEO } from '@/components/SEO';
+import React from 'react,,',',
+import {SEO } from '@/components/SEO',
 export default function FuturisticServicesShowcase.test() {return (,
     <div className="min-h-screen bg-white">,
       <SEO title="FuturisticServicesShowcase.test - Zion Tech Group" description="Professional FuturisticServicesShowcase.test services by Zion Tech Group"  />,
@@ -8,7 +8,7 @@ export default function FuturisticServicesShowcase.test() {return (,
         <p className="text-gray-300 text-lg">,
           Professional FuturisticServicesShowcase.test services to help your business grow.,
         </p>,
-      </div>';
-    </div>;
-  ),',',';
-}",',';
+      </div>',
+    </div>,
+  ),,',
+}",',',

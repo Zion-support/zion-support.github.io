@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 BrainZapShieldUsersTrendingUpTargetCheckCircleArrowRight,
 export default function AISolutionsPage() {,
   return (,
@@ -12,7 +12,7 @@ export default function AISolutionsPage() {,
         <meta name="twitter:card" content="summary_large_image" />,
       </Head>,
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <section className="pt-24 pb-16">,
           <div className="container mx-auto px-6 text-center">,
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -31,7 +31,7 @@ export default function AISolutionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* AI Capabilities Overview */,}
+        {/* AI Capabilities Overview */}
         <section className="py-16">,
           <div className="container mx-auto px-6">,
             <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">Our AI Capabilities</h2>,
@@ -81,7 +81,7 @@ export default function AISolutionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* AI Solutions for Industries */,}
+        {/* AI Solutions for Industries */}
         <section className="py-16 bg-white/5">,
           <div className="container mx-auto px-6">,
             <h2 className="text-3xl font-bold text-center mb-12 text-fuchsia-400">AI Solutions by Industry</h2>,
@@ -173,7 +173,7 @@ export default function AISolutionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* AI Implementation Process */,}
+        {/* AI Implementation Process */}
         <section className="py-16">,
           <div className="container mx-auto px-6">,
             <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">Our AI Implementation Process</h2>,
@@ -217,7 +217,7 @@ export default function AISolutionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* AI Success Metrics */,}
+        {/* AI Success Metrics */}
         <section className="py-16 bg-white/5">,
           <div className="container mx-auto px-6">,
             <h2 className="text-3xl font-bold text-center mb-12 text-fuchsia-400">AI Success Metrics</h2>,
@@ -240,7 +240,7 @@ export default function AISolutionsPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16">,
           <div className="container mx-auto px-6 text-center">,
             <h2 className="text-3xl font-bold mb-6 text-white">Ready to Transform Your Business with AI?</h2>,
@@ -259,5 +259,4 @@ export default function AISolutionsPage() {,
           </div>,
         </section>,
       </div>,
-    </>,
-  ),}
+    </>)}

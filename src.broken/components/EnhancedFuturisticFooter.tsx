@@ -1,17 +1,17 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'framer-motion';
+import { Link  } from 'react-router-dom',
+ from 'framer-motion',
 
- from 'lucide-react';
+ from 'lucide-react',
 
- from 'lucide-react';
+ from 'lucide-react',
 
 export function EnhancedFuturisticFooter() {
 
-        { name: 'Press & Media', href: '/press', featured: false },;
-        { name: 'Legal & Privacy', href: '/legal', featured: false };
-      ]};
-  ];
+        { name: 'Press & Media', href: '/press', featured: false },
+        { name: 'Legal & Privacy', href: '/legal', featured: false },
+      ]},
+  ],
 
   return ()    <footer className="relative bg-slate-950 border-t border-cyan-400/20 overflow-hidden">
       {/* Enhanced Animated Background */}"
@@ -28,11 +28,11 @@ export function EnhancedFuturisticFooter() {
         </div>
       </div>
 
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;
-    { name: 'Security', href: '/security', description: 'Security practices' },;
-    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
+    { name: 'Security', href: '/security', description: 'Security practices' },
+    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' },
 
       <div  className="relative">
         {/* Main Footer Content */}
@@ -63,22 +63,22 @@ export function EnhancedFuturisticFooter() {
 
             <div  className="flex items - center space - x-4">
               <button     onClick={scrollToTop}
-                className="p - 2 bg-slate - 700 / 50 rounded-lg text-gray - 400 hover:text-cyan - 400 hover:bg-slate - 600 / 50 transition - all duration - 300 transform hover:scale -110"
+                className="p - 2 bg-slate - 700 / 50 rounded-lg text-gray - 400 hover: text-cyan - 400 hover:bg-slate - 600 / 50 transition - all duration - 300 transform hover:scale -110"
                 
               >
-                <ArrowUpRight className="w-5 h-5 rotate -45" />;
-              </button>;
+                <ArrowUpRight className="w-5 h-5 rotate -45" />,
+              </button>,
 =======
-    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },;'
-    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },;'
-    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },;'
-    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },;'
-    { name: 'Security', href: '/security', description: 'Security practices' },;'    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
-  ];
+    { name: 'Privacy Policy', href: '/privacy', description: 'Data protection' },'
+    { name: 'Terms of Service', href: '/terms', description: 'Service terms' },'
+    { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },'
+    { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },'
+    { name: 'Security', href: '/security', description: 'Security practices' },'    { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' },
+  ],
 
   // Create missing pages for broken links
   
-      </Link>;) };
+      </Link>,) },
   return ("
           <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}"
@@ -303,97 +303,97 @@ export function EnhancedFuturisticFooter() {
       icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
       links: ['
-        { name: 'Pricing Overview', href: '/pricing' },;
-        { name: 'Pricing Guide', href: '/pricing-guide' },;
-        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },;
-        { name: 'Request Quote', href: '/request-quote' },;
-        { name: 'Schedule Demo', href: '/schedule-demo' },;
+        { name: 'Pricing Overview', href: '/pricing' },
+        { name: 'Pricing Guide', href: '/pricing-guide' },
+        { name: 'Comprehensive Pricing 2026', href: '/comprehensive-pricing-guide-2026' },
+        { name: 'Request Quote', href: '/request-quote' },
+        { name: 'Schedule Demo', href: '/schedule-demo' },
         { name: 'Contact Sales', href: '/contact' }
       ]
     },
     {
 
-      title: 'Company',;
+      title: 'Company',
       icon: Building,
       color: 'from-green-600 to-emerald-600',
       links: ['
-        { name: 'About Us', href: '/about' },;
-        { name: 'Our Team', href: '/team' },;
-        { name: 'Careers', href: '/careers' },;
-        { name: 'Partners', href: '/partners' },;
-        { name: 'News & Press', href: '/news' },;
-        { name: 'Events', href: '/events' },;
-        { name: 'Case Studies', href: '/case-studies' },;
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Press', href: '/news' },
+        { name: 'Events', href: '/events' },
+        { name: 'Case Studies', href: '/case-studies' },
         { name: 'Marketplace', href: '/marketplace' }
       ]
     },
     {
 
-      title: 'Resources & Learning',;
+      title: 'Resources & Learning',
       icon: BookOpen,
       color: 'from-orange-600 to-red-600',
       links: ['
-        { name: 'Help Center', href: '/help' },;
-        { name: 'Documentation', href: '/documentation' },;
-        { name: 'Training', href: '/training' },;
-        { name: 'Blog', href: '/blog' },;
-        { name: 'Webinars', href: '/webinars' },;
-        { name: 'White Papers', href: '/white-papers' },;
-        { name: 'FAQ', href: '/faq' },;
-        { name: 'Support Center', href: '/support' },;
+        { name: 'Help Center', href: '/help' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Support Center', href: '/support' },
         { name: 'Community', href: '/community' }
       ]
     },
     {
 
-      title: 'Platform & Tools',;
+      title: 'Platform & Tools',
       icon: Settings,
       color: 'from-slate-600 to-gray-600',
       links: ['
-        { name: 'Dashboard', href: '/dashboard' },;
-        { name: 'Login', href: '/login' },;
-        { name: 'Sign Up', href: '/signup' },;
-        { name: 'System Status', href: '/status' },;
-        { name: 'API Documentation', href: '/documentation' },;
+        { name: 'Dashboard', href: '/dashboard' },
+        { name: 'Login', href: '/login' },
+        { name: 'Sign Up', href: '/signup' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Documentation', href: '/documentation' },
         { name: 'Developer Tools', href: '/documentation' }
       ]
     },
     {
 
-      title: 'Legal & Compliance',;
+      title: 'Legal & Compliance',
       icon: Shield,
       color: 'from-gray-600 to-slate-600',
       links: ['
-        { name: 'Privacy Policy', href: '/privacy' },;
-        { name: 'Terms of Service', href: '/terms' },;
-        { name: 'Cookie Policy', href: '/cookies' },;
-        { name: 'Security', href: '/security' },;
-        { name: 'Compliance', href: '/compliance' },;
-        { name: 'Accessibility', href: '/accessibility' },;
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' },
+        { name: 'Accessibility', href: '/accessibility' },
         { name: 'Sitemap', href: '/sitemap' }
       ]
     }
-  ];
+  ],
 
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
-    { name: 'Contact Support', href: '/support', icon: MessageCircle },;
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
+    { name: 'Contact Support', href: '/support', icon: MessageCircle },
     { name: 'View Status', href: '/status', icon: Gauge }
-  ];
+  ],
 
-    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },;
-    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },;
-    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },;
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },;
+    { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
-  ];
+  ],
 
     email: 'info@ziontechgroup.com',
     address: '123 Innovation Drive, Tech City, TC 12345'
 =======
 '
-    phone: '+1(555) 123-4567',;'
+    phone: '+1(555) 123-4567
     email: 'info@ziontechgroup.com','    address: '123 Innovation Drive, Tech City, TC 12345'
-  };
+  },
 
   return ("
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -466,9 +466,9 @@ export function EnhancedFuturisticFooter() {
             transition={{ duration: 0.6, delay: 1 }}"
             className="border-t border-slate-700/50 pt-8"
           >"
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">"
+            <div className="flex flex-col md: flex-row items-center justify-between space-y-4 md:space-y-0">"
               <div className="flex items-center space-x-4 text-sm text-slate-400">
-                <span>&copy; {currentYear} Zion Tech Group.All rights reserved.</span>
+                <span>&copy, {currentYear} Zion Tech Group.All rights reserved.</span>
                 <span>•</span>"
                 <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <span>•</span>"
@@ -509,14 +509,14 @@ export function EnhancedFuturisticFooter() {
             </div>
           </div>
         </section>
-      </div>;
-;
-      {/* Bottom Footer */};"
-      <div className="border-t border-slate-700/50">;"
-        <div className="container-responsive py-6">;"
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;"
-            <div className="flex items-center space-x-6 text-sm text-gray-400">;
-              <span>&copy; {currentYear} Zion Tech Group.All rights reserved.</span>"
+      </div>,
+,
+      {/* Bottom Footer */},"
+      <div className="border-t border-slate-700/50">,"
+        <div className="container-responsive py-6">,"
+          <div className="flex flex-col md: flex-row items-center justify-between gap-4">,"
+            <div className="flex items-center space-x-6 text-sm text-gray-400">,
+              <span>&copy, {currentYear} Zion Tech Group.All rights reserved.</span>"
               <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>"
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>"
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
@@ -525,14 +525,14 @@ export function EnhancedFuturisticFooter() {
             <div className="flex items-center space-x-4">
               <button
                 onClick={scrollToTop}"
-                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
+                className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover: text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
                 
               >"
-                <ArrowUpRight className="w-5 h-5 rotate-45"  />;              </button>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;) };
+                <ArrowUpRight className="w-5 h-5 rotate-45"  />,              </button>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </footer>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

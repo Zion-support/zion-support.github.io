@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Rocket,
   Brain,
@@ -32,100 +32,57 @@ import {
   BarChart3,
   Globe2,
   ShieldCheck
-} from 'lucide-react';
-
+} from "lucide-react";
 const InnovativeServicesHub: React.FC = () => {
   const serviceCategories = [
     {
-      id: 'ultimate-2025',
-      title: 'Ultimate Innovative Services 2025',
-      description: 'Revolutionary micro SAAS, IT, and AI services that push the boundaries of technology',
-      icon: Rocket,
-      color: 'from-blue-600 to-purple-600',
-      route: '/ultimate-services-2025',
-      features: ['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
+      id: 'ultimate-2025',title: 'Ultimate Innovative Services 2025',description: 'Revolutionary micro SAAS, IT, and AI services that push the boundaries of technology',
+      icon: Rocket,color: 'from-blue-600 to-purple-600',route: '/ultimate-services-2025',features: ['AI-Powered SolutionsQuantum Computing', 'Blockchain InnovationEdge Computing'],
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
-    },
+    };
     {
-      id: 'advanced-2026',
-      title: 'Advanced Innovative Services 2026',
-      description: 'Cutting-edge futuristic technologies including brain-computer interfaces and space mining',
-      icon: Brain,
-      color: 'from-purple-600 to-pink-600',
-      route: '/advanced-services-2026',
-      features: ['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
+      id: 'advanced-2026',title: 'Advanced Innovative Services 2026',description: 'Cutting-edge futuristic technologies including brain-computer interfaces and space mining',icon: Brain,color: 'from-purple-600 to-pink-600',route: '/advanced-services-2026',features: ['Brain-Computer InterfacesSpace Mining', 'Synthetic BiologyFusion Energy'],
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
-    },
+    };
     {
-      id: 'core-it',
-      title: 'Core IT & Infrastructure',
-      description: 'Enterprise-grade IT solutions and infrastructure services for modern businesses',
-      icon: Server,
-      color: 'from-green-600 to-teal-600',
-      route: '/services',
-      features: ['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
+      id: 'core-it',title: 'Core IT & Infrastructure',description: 'Enterprise-grade IT solutions and infrastructure services for modern businesses',icon: Server,color: 'from-green-600 to-teal-600',route: '/services',features: ['Cloud ServicesCybersecurity', 'IT InfrastructureDigital Transformation'],
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
-    },
+    };
     {
-      id: 'green-tech',
-      title: 'Green Technology Solutions',
-      description: 'Sustainable and eco-friendly technology solutions for a better future',
-      icon: Globe,
-      color: 'from-emerald-600 to-green-600',
-      route: '/green-it',
-      features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
+      id: 'green-tech',title: 'Green Technology Solutions',description: 'Sustainable and eco-friendly technology solutions for a better future',icon: Globe,color: 'from-emerald-600 to-green-600',route: '/green-it',features: ['Renewable EnergyCarbon Reduction', 'Sustainable ComputingGreen AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
     }
   ];
-
   const featuredServices = [
     {
-      title: 'Quantum AI Neural Networks',
-      description: 'Revolutionary AI powered by quantum computing principles',
-      category: 'AI & Quantum',
-      price: '$50,000',
-      roi: '800%',
-      delivery: '6 months'
-    },
+      title: 'Quantum AI Neural Networks',description: 'Revolutionary AI powered by quantum computing principles',category: 'AI & Quantum',price: '$50,000',
+      roi: '800%',delivery: '6 months'
+    };
     {
-      title: 'Brain-Computer Interface Platform',
-      description: 'Direct neural interface for human-computer interaction',
-      category: 'Neurotech',
-      price: '$100,000',
-      roi: '1200%',
-      delivery: '12 months'
-    },
+      title: 'Brain-Computer Interface Platform',description: 'Direct neural interface for human-computer interaction',category: 'Neurotech',price: '$100,000',
+      roi: '1200%',delivery: '12 months'
+    };
     {
-      title: 'Autonomous Space Mining System',
-      description: 'AI-powered space exploration and resource extraction',
-      category: 'Space Tech',
-      price: '$500,000',
-      roi: '2000%',
-      delivery: '18 months'
+      title: 'Autonomous Space Mining System',description: 'AI-powered space exploration and resource extraction',category: 'Space Tech',price: '$500,000',
+      roi: '2000%',delivery: '18 months'
     }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -218,7 +175,7 @@ const InnovativeServicesHub: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
           {serviceCategories.map((category) => {
             const IconComponent = category.icon;
             return (
@@ -273,7 +230,7 @@ const InnovativeServicesHub: React.FC = () => {
                 {/* CTA */}
                 <a
                   href={category.route}
-                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
+                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
                 >
                   Explore {category.title}
                   <ArrowRight className="w-5 h-5" />
@@ -395,7 +352,7 @@ const InnovativeServicesHub: React.FC = () => {
 
           <div className="text-center mt-12">
             <a
-              href="https://ziontechgroup.com"
+              href="https: //ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
@@ -407,7 +364,6 @@ const InnovativeServicesHub: React.FC = () => {
         </div>
       </motion.div>
     </div>
-  );
+  )
 };
-
 export default InnovativeServicesHub;

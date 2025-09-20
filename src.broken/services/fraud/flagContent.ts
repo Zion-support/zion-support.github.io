@@ -1,9 +1,9 @@
 
 // Content flagging functionality
-import { supabase } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag } from '@/types/fraud';
-import { FlagResult } from './types';
-import { logDev, logError } from '@/utils/productionLogger';
+import { supabase } from '@/integrations/supabase/client',
+import { FraudSeverity, FraudFlag } from '@/types/fraud',
+import { FlagResult } from './types',
+import { logDev, logError } from '@/utils/productionLogger',
 
 /**
  * Flag content for review
@@ -25,7 +25,7 @@ export const flagContent = async (
       contentId,
       reason,
       severity
-    });
+    }),
     
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId,
@@ -38,16 +38,16 @@ export const flagContent = async (
       ip_address: ipAddress,
       timestamp: new Date().toISOString(),
       status: 'pending'
-    });
+    }),
     
-    if (error) throw error;
+    if (error) throw error,
     
-    return { success: true };
+    return { success: true },
   } catch (error) {
-    logError('Error flagging content:', error);
+    logError('Error flagging content:', error),
     return { 
       success: false, 
       error: error instanceof Error ? error.message : 'Unknown error' 
-    };
+    },
   }
-};
+},

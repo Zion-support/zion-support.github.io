@@ -1,12 +1,10 @@
 <<<<<<< HEAD
 export 
-  'Metaverse Solutions',;
-  'Web3 Solutions',;
-  'Sustainable Tech',;
-  'NeuroTech Solutions',;
-  'Fusion Energy Solutions';
+  'Metaverse SolutionsWeb3 Solutions',
+  'Sustainable TechNeuroTech Solutions',
+  'Fusion Energy Solutions',
 =======
-;export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services
+,export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [// AI-Powered Micro SAAS Services
   {
 "
     id: "ai-autonomous-code-reviewer","
@@ -649,16 +647,16 @@ export
     setupTime: "5-7 weeks","
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
-];
+],
 export 
 export 
 export 
-export const pricingCategories2027 = [;'
-  'Metaverse Solutions',;'
-  'Web3 Solutions',;'
-  'Sustainable Tech',;'
-  'NeuroTech Solutions',;'  'Fusion Energy Solutions';
-];
+export const pricingCategories2027 = [,'
+  'Metaverse Solutions
+  'Web3 Solutions','
+  'Sustainable Tech
+  'NeuroTech Solutions','  'Fusion Energy Solutions',
+],
 export const pricingSubcategories2027 = {
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

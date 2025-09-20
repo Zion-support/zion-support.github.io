@@ -1,15 +1,15 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025',
 export default function Page() {
-) ) ;
+) ) ,
 
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0) ;
-  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
-    const roi = parseInt(service.roi.replace ('%', '') ) ;
-    return sum + roi;
-  }, 0) / totalServices;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0) ,
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {,
+    const roi = parseInt(service.roi.replace ('%', '') ) ,
+    return sum + roi,
+  }, 0) / totalServices,
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -65,7 +65,7 @@ export default function Page() {
               </div>
             </div>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/innovative - services - showcase - 2025"
                 className="px-8 py-4 bg-gradient - to - r from - blue - 500 to - purple - 600 text-white font - semibold rounded-lg hover:from - blue - 400 hover:to - purple - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-blue -500 / 20"
@@ -79,12 +79,12 @@ export default function Page() {
                 View Pricing Guide
               </Link>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Service Categories */}
-      <section className="px-4 pb -20">;
+      <section className="px-4 pb -20">,
         <div className="max - w-7xl mx -auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
@@ -137,13 +137,13 @@ export default function Page() {
                     <ChevronRight className="w-4 h-4 ml-1" />
                   </Link>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* All Categories */}
-      <section className="py-16 bg-slate -900 / 30">;
+      <section className="py-16 bg-slate -900 / 30">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font - bold mb-4">Complete Service Portfolio</h2>
@@ -208,7 +208,7 @@ export default function Page() {
       </section>
 
       {/* Featured Services */}
-      <section className="px-4 pb -20">;
+      <section className="px-4 pb -20">,
         <div className="max - w-7xl mx -auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
@@ -284,12 +284,12 @@ export default function Page() {
 
                 <Link
                   to="/innovative - services - showcase - 2025"
-                  className="w-full py-3 bg-gradient - to - r from - blue - 500 to - purple - 600 text-white font - semibold rounded-lg hover:from - blue - 400 hover:to - purple - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-blue - 500 / 20 group - hover:shadow-blue - 500 / 30 text-center block"
+                  className="w-full py-3 bg-gradient - to - r from - blue - 500 to - purple - 600 text-white font - semibold rounded-lg hover: from - blue - 400 hover:to - purple - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-blue - 500 / 20 group - hover:shadow-blue - 500 / 30 text-center block"
 
                   <span className="flex items - center justify -center">
                     Learn More < ArrowRight className="w-4 h-4 ml-2 group - hover:translate - x-1 transition -transform" />
                   </span>
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
 
@@ -305,7 +305,7 @@ export default function Page() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="px-4 pb -20">;
+      <section className="px-4 pb -20">,
         <div className="max - w-7xl mx -auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
@@ -338,7 +338,7 @@ export default function Page() {
                 title: 'Enterprise Security',
                 description: 'Bank - grade security with compliance certifications and best practices'
 
-            ].map((feature, index) => (;
+            ].map((feature, index) => (,
               <motion.div
                 key={index}
                 initial = {
@@ -363,13 +363,13 @@ export default function Page() {
                 </div>
                 <h3 className="text-xl font - bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray -300">{feature.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="px-4 pb -20">;
+      <section className="px-4 pb -20">,
         <div className="max - w-4xl mx -auto">
           <motion.div
             initial = {
@@ -425,9 +425,9 @@ export default function Page() {
             <div className="mt-6 text-sm text-gray -400">
               <p > 364 E Main St STE 1008, Middletown DE 19709</p>
               <p > Visit us at: <a href="https://ziontechgroup.com" className="text-blue -400 hover:underline">ziontechgroup.com</a></p>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { BarChart3, TrendingUp, PieChart, Activity, Database, Brain, Zap, Target } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { BarChart3, TrendingUp, PieChart, Activity, Database, Brain, Zap, Target } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function DataAnalytics() {
   const services = [
@@ -41,7 +41,7 @@ export default function DataAnalytics() {
       description: "Machine learning enhanced analytics and predictive insights",
       href: "/ai-powered-decision-engine"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function DataAnalytics() {
         </div>
       </div>
     </div>
-  );
-};
-export default data-analytics;
+  ),
+},
+export default data-analytics,

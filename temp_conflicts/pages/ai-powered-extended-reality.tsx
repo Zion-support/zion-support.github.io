@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Eye, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredExtendedReality: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredExtendedReality: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'XR platform support across various devices and technologies'
     }
-  ];
+  ],
 
   const xrCapabilities = [
     {
       area: 'Content Generation',
-      capabilities: ['AI-powered creation', '3D modeling', 'Texture generation', 'Animation synthesis'],
+      capabilities: ['AI-powered creation3D modeling', 'Texture generationAnimation synthesis'],
       improvement: '10x faster',
       generation: 'Intelligent'
     },
     {
       area: 'Immersive Experiences',
-      capabilities: ['VR environments', 'AR overlays', 'Mixed reality', 'Spatial computing'],
+      capabilities: ['VR environmentsAR overlays', 'Mixed realitySpatial computing'],
       improvement: 'Immersive quality',
       experiences: 'Advanced'
     },
     {
       area: 'Performance Optimization',
-      capabilities: ['Real-time rendering', 'Frame rate optimization', 'Latency reduction', 'Quality enhancement'],
+      capabilities: ['Real-time renderingFrame rate optimization', 'Latency reductionQuality enhancement'],
       improvement: '60fps+ performance',
       optimization: 'Real-time'
     },
     {
       area: 'User Interaction',
-      capabilities: ['Gesture recognition', 'Voice control', 'Eye tracking', 'Haptic feedback'],
+      capabilities: ['Gesture recognitionVoice control', 'Eye trackingHaptic feedback'],
       improvement: 'Natural interaction',
       interaction: 'Intuitive'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Gaming & Entertainment',
       description: 'AI-powered XR platform for immersive gaming and entertainment experiences',
-      benefits: ['Immersive gaming', 'Interactive storytelling', 'Social experiences', 'Content creation']
+      benefits: ['Immersive gamingInteractive storytelling', 'Social experiencesContent creation']
     },
     {
       title: 'Training & Education',
       description: 'XR platform for immersive training and educational experiences',
-      benefits: ['Skill development', 'Virtual classrooms', 'Simulation training', 'Knowledge retention']
+      benefits: ['Skill developmentVirtual classrooms', 'Simulation trainingKnowledge retention']
     },
     {
       title: 'Healthcare & Medical',
       description: 'XR platform for medical training and patient care applications',
-      benefits: ['Surgical training', 'Patient education', 'Therapy applications', 'Medical visualization']
+      benefits: ['Surgical trainingPatient education', 'Therapy applicationsMedical visualization']
     },
     {
       title: 'Industrial & Manufacturing',
       description: 'XR platform for industrial training and operational applications',
-      benefits: ['Safety training', 'Maintenance guidance', 'Design visualization', 'Remote assistance']
+      benefits: ['Safety trainingMaintenance guidance', 'Design visualizationRemote assistance']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredExtendedReality: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with XR platform development',
       features: [
-        'Basic XR platform features',
-        'Single platform support',
-        'Standard rendering',
-        'Email support',
+        'Basic XR platform featuresSingle platform support',
+        'Standard renderingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredExtendedReality: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced XR platform needs',
       features: [
-        'Advanced XR platform features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced XR platform featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time rendering'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredExtendedReality: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex XR platform requirements',
       features: [
-        'Custom XR platform development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom XR platform developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredExtendedReality: React.FC = () => {
       position: "Platform Director",
       company: "Advanced XR Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredExtendedReality: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Create with AI-Powered Extended Reality Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredExtendedReality: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredExtendedReality;
+export default AIPoweredExtendedReality,

@@ -2,10 +2,10 @@
 <<<<<<< HEAD
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'default' | 'futuristic' | 'ai' | 'quantum';
-  text?: string;
-  showProgress?: boolean;
+  size?: 'sm' | 'md' | 'lg',
+  variant?: 'default' | 'futuristic' | 'ai' | 'quantum',
+  text?: string,
+  showProgress?: boolean,
   progress?: number}
 
       const timer = setTimeout(() => {
@@ -14,7 +14,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
           message: 'Loading complete!',
           progress: 100,
           estimatedTime: 0
-        }) ;
+        }) ,
 
   const renderSpinner = () => {
     switch(variant) {
@@ -63,21 +63,21 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
                   ease: "easeInOut"
                 }}
               />) ) }
-          </div>) ;
+          </div>) ,
 
       case 'minimal':
 =======
 interface EnhancedLoadingSpinnerProps {
   // Add your props here
 
-  enabled?: boolean;
-  showProgress?: boolean;
-  showEstimatedTime?: boolean;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'default' | 'futuristic' | 'minimal' | 'themed';
-  onComplete?: : unknown void;
-  autoComplete?: boolean;
-  autoCompleteDelay?: number;
+  enabled?: boolean,
+  showProgress?: boolean,
+  showEstimatedTime?: boolean,
+  size?: 'small' | 'medium' | 'large',
+  variant?: 'default' | 'futuristic' | 'minimal' | 'themed',
+  onComplete?: : unknown void,
+  autoComplete?: boolean,
+  autoCompleteDelay?: number,
 export function EnhancedLoadingSpinner({
 
   enabled = true,
@@ -95,10 +95,10 @@ export function EnhancedLoadingSpinner({
     message: 'Loading...',
     progress: 0,
     estimatedTime: 3
-  }) ;
+  }) ,
 
-  const [isVisible, setIsVisible] = useState(true);
-  const [currentStep, setCurrentStep] = useState(0);
+  const [isVisible, setIsVisible] = useState(true),
+  const [currentStep, setCurrentStep] = useState(0),
 
   // Size configurations
 
@@ -106,14 +106,14 @@ export function EnhancedLoadingSpinner({
   
   // Progress simulation
   useEffect(() => {
-    if(!enabled || !showProgress) return;
+    if(!enabled || !showProgress) return,
 
     const interval = setInterval(() => {
       setLoadingState(prev => {
 
         if (prev.progress! >= 100) {
 
-          clearInterval(interval);          if(autoComplete) {
+          clearInterval(interval),          if(autoComplete) {
 
             setTimeout(() => {
               setLoadingState({
@@ -122,9 +122,9 @@ export function EnhancedLoadingSpinner({
                 message: 'Ready!',
                 progress: 100,
                 estimatedTime: 0
-              }) ;
+              }) ,
               setTimeout(() => {
-                setIsVisible(false) ;
+                setIsVisible(false) ,
                 onComplete?.() }, 1000) }, autoCompleteDelay) }
           return prev}
 
@@ -133,30 +133,30 @@ export function EnhancedLoadingSpinner({
           ...prev,
           progress: newProgress,
           estimatedTime: newEstimatedTime
-        }}) }, 200) ;
+        }}) }, 200) ,
 
-    return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ;
+    return () => clearInterval(interval) }, [enabled, showProgress, autoComplete, autoCompleteDelay, onComplete]) ,
   // Step progression for themed variant
   useEffect(() => {
 
-    if(variant !== 'themed') return;
+    if(variant !== 'themed') return,
 
           return prev}
-        return prev + 1}) }, 1000) ;
+        return prev + 1}) }, 1000) ,
 
-    return () => clearInterval(stepInterval) }, [variant]) ;
+    return () => clearInterval(stepInterval) }, [variant]) ,
   // Auto - complete effect
   useEffect(() => {
     if(autoComplete && enabled) {
 
         setTimeout(() => {
-          setIsVisible(false) ;
-          onComplete?.() }, 1000) }, autoCompleteDelay) ;
+          setIsVisible(false) ,
+          onComplete?.() }, 1000) }, autoCompleteDelay) ,
 
       return () => clearTimeout(timer) }
-  }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ;
+  }, [autoComplete, enabled, autoCompleteDelay, onComplete]) ,
 
-  if(!enabled || !isVisible) return null;
+  if(!enabled || !isVisible) return null,
 
   
 '      case 'minimal':
@@ -166,7 +166,7 @@ export function EnhancedLoadingSpinner({
             animate={{ rotate: 360 }}"
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           />
-        );
+        ),
 
       case 'themed':
         return ("
@@ -187,7 +187,7 @@ export function EnhancedLoadingSpinner({
                 {loadingSteps[currentStep].icon && React.createElement (loadingSteps[currentStep].icon, { size: 16 }) }
               </motion.div>
             </motion.div>
-          </div>) ;
+          </div>) ,
 
       default:
         return ()
@@ -205,7 +205,7 @@ export function EnhancedLoadingSpinner({
         className="text-center text-zion-slate-600 dark:text-zion-slate-400 font-medium"
       >
         {loadingState.message}
-      </motion.div>) };
+      </motion.div>) },
 
     return ("
       <div className="w-full mt-4">"        <div className="flex justify-between text-xs text-zion-slate-500 mb-1">
@@ -220,7 +220,7 @@ export function EnhancedLoadingSpinner({
             transition={{ duration: 0.3, ease: "easeOut" }}
           />
         </div>
-      </div>) };
+      </div>) },
 
     return ()      <motion.div
         initial={{ opacity: 0 }}
@@ -229,54 +229,54 @@ export function EnhancedLoadingSpinner({
       >"
         <Clock className="w-3 h-3"  />        <span>Estimated time: {loadingState.estimatedTime.toFixed(1)}s</span>
       </motion.div>
-    )};
+    )},
 
-    if(!config) return null}}};
+    if(!config) return null}}},
 
 export default function EnhancedLoadingSpinner() {
 
-  ;
+  ,
 =======
 '
-  sm: 'w-8 h-8','
-    md: 'w-12 h-12',;  ;
-  ;
-  ;
-  ;
-  lg: 'w-16 h-16'}};
+  sm: 'w-8 h-8
+    md: 'w-12 h-12',  ,
+  ,
+  ,
+  ,
+  lg: 'w-16 h-16'}},
 
-  ;
+  ,
 =======
 '
-  sm: 'text-sm','
-    md: 'text-base',;  ;
-  ;
-  ;
-  ;
-  lg: 'text-lg';
-  };
+  sm: 'text-sm
+    md: 'text-base',  ,
+  ,
+  ,
+  ,
+  lg: 'text-lg'
+  },
 
-    switch(variant) {;
-      case 'ai':;"
-        return <Brain className="w-full h-full text-cyan-400"  />;
-      case 'quantum':;"
-        return <Atom className="w-full h-full text-purple-400"  />;
-      case 'futuristic':;"
-        return <Zap className="w-full h-full text-blue-400"  />;
-      default:;"
+    switch(variant) {,
+      case 'ai':,"
+        return <Brain className="w-full h-full text-cyan-400"  />,
+      case 'quantum':,"
+        return <Atom className="w-full h-full text-purple-400"  />,
+      case 'futuristic':,"
+        return <Zap className="w-full h-full text-blue-400"  />,
+      default:,"
         return <Loader2 className="w-full h-full text-gray-400" />}
-  };
+  },
 
-    switch(variant) {;
-      case 'ai':;
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
-      case 'quantum':;
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
-      case 'futuristic':;
-        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
-      default:;
+    switch(variant) {,
+      case 'ai':,
+        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30',
+      case 'quantum':,
+        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30',
+      case 'futuristic':,
+        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30',
+      default:,
         return 'bg-gray-100 border-gray-200'}
-  };
+  },
 
   return ("
     <AnimatePresence mode="wait">
@@ -339,6 +339,6 @@ export default function EnhancedLoadingSpinner() {
     </AnimatePresence>) }
 
 // Export as ZionLoadingSpinner for backward compatibility
-export default EnhancedLoadingSpinner;
+export default EnhancedLoadingSpinner,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

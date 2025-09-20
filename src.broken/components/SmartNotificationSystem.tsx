@@ -1,32 +1,32 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
-  id: string;
-  title: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info' | 'system';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  category: 'user' | 'system' | 'security' | 'performance' | 'update';
-  timestamp: Date;
-  read: boolean;
-  archived: boolean;
-  actions?: NotificationAction[];
-  metadata?: Record < string, any>;
-  expiresAt?: Date;
+  id: string,
+  title: string,
+  message: string,
+  type: 'success' | 'error' | 'warning' | 'info' | 'system',
+  priority: 'low' | 'medium' | 'high' | 'critical',
+  category: 'user' | 'system' | 'security' | 'performance' | 'update',
+  timestamp: Date,
+  read: boolean,
+  archived: boolean,
+  actions?: NotificationAction[],
+  metadata?: Record < string, any>,
+  expiresAt?: Date,
 
-  label: string;
-  action: () => void;
-  variant?: 'primary' | 'secondary' | 'danger';
+  label: string,
+  action: () => void,
+  variant?: 'primary' | 'secondary' | 'danger',
   icon?: React.ComponentType < any>}
 
 interface SmartNotificationSystemProps {
   // Add your props here
 
-  maxNotifications?: number;
-  autoDismiss?: boolean;
-  autoDismissDelay?: number;
-  soundEnabled?: boolean;
-  onNotificationAction?: notification: Notification, action: string void;
+  maxNotifications?: number,
+  autoDismiss?: boolean,
+  autoDismissDelay?: number,
+  soundEnabled?: boolean,
+  onNotificationAction?: notification: Notification, action: string void,
 
 export function SmartNotificationSystem({
 
@@ -37,11 +37,11 @@ export function SmartNotificationSystem({
   soundEnabled = true,
   onNotificationAction}: SmartNotificationSystemProps) {
 
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [notifications, setNotifications] = useState<Notification[]>([]),
+  const [isOpen, setIsOpen] = useState(false),
+  const [showSettings, setShowSettings] = useState(false),
+  const [filter, setFilter] = useState<'all' | 'unread' | 'important'>('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
   const [settings, setSettings] = useState({
 
     sound: soundEnabled,
@@ -50,21 +50,21 @@ export function SmartNotificationSystem({
     autoDismissDelay,
     showPreview: true,
     grouping: true,
-    priority: true});
+    priority: true}),
 
   // Initialize audio for notification sounds
   useEffect(() => {
     if(settings.sound) {
 
-      audioRef.current = new Audio('/notification-sound.mp3');
+      audioRef.current = new Audio('/notification-sound.mp3'),
       audioRef.current.volume = 0.3}
-  }, [settings.sound]) ;
+  }, [settings.sound]) ,
 
   // Add notification
   
       setNotifications(prev => {
 
-        return updated.slice(0, maxNotifications)});
+        return updated.slice(0, maxNotifications)}),
 
       // Play sound if enabled
       if(settings.sound && audioRef.current) {
@@ -94,27 +94,27 @@ export function SmartNotificationSystem({
           requireInteraction: notification.priority === 'critical'})}
     },
     [maxNotifications, settings, autoDismissDelay]
-  );
+  ),
 
   // Dismiss notification
   
-  }, []);
+  }, []),
 
   // Mark as read
   
-  }, []);
+  }, []),
 
   // Archive notification
   
-  }, []);
+  }, []),
 
   // Mark all as read
   
-  }, []) ;
+  }, []) ,
 
   // Clear all notifications
   
-  }, []) ;
+  }, []) ,
 
   // Filter notifications
   
@@ -123,54 +123,54 @@ export function SmartNotificationSystem({
       notification.priority !== 'high' &&'
       notification.priority !== 'critical'
     )
-      return false;
+      return false,
     if()
       searchTerm &&
       !notification.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
       !notification.message.toLowerCase().includes(searchTerm.toLowerCase())
     )
-      return false;
-    return !notification.archived});
+      return false,
+    return !notification.archived}),
 
   // Get notification icon'
   
       case 'error':
-        return XCircle;
+        return XCircle,
       case 'warning':
-        return AlertTriangle;
+        return AlertTriangle,
       case 'info':
-        return Info;
+        return Info,
       case 'system':
-        return Zap;
+        return Zap,
       default:
         return Info}
-  };
+  },
 
   // Get priority color'
   
       case 'high':'
-        return 'text-orange-600 bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
+        return 'text-orange-600 bg-orange-50 dark: bg-orange-900/20 border-orange-200 dark:border-orange-800',
       case 'medium':'
-        return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800';
+        return 'text-yellow-600 bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800',
       case 'low':'
-        return 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800';
+        return 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800',
       default:'
         return 'text-gray-600 bg-gray-50 dark:bg-gray-900/20 border-gray-200 dark:border-gray-800'}
-  };
+  },
 
   // Get category icon'
   
       case 'system':
-        return Zap;
+        return Zap,
       case 'security':
-        return Shield;
+        return Shield,
       case 'performance':
-        return Zap;
+        return Zap,
       case 'update':
-        return Globe;
+        return Globe,
       default:
         return Info}
-  };
+  },
 
   // Request notification permission
   
@@ -178,29 +178,29 @@ export function SmartNotificationSystem({
 
         setSettings(prev => ({ ...prev, desktop: true }))}
     }
-  }, []) ;
+  }, []) ,
 
   // Handle notification action
   
-      markAsRead(notification.id);
+      markAsRead(notification.id),
 
       if(onNotificationAction) {
 
         onNotificationAction(notification, action.label)}
     },
     [markAsRead, onNotificationAction]
-  );
+  ),
 
   // Group notifications by category
   
-          if(!groups[category]) groups[category] = [];
-          groups[category].push(notification);
+          if(!groups[category]) groups[category] = [],
+          groups[category].push(notification),
           return groups},
         {} as Record<string, Notification[]>
       )
-    : { All: filteredNotifications };
+    : { All: filteredNotifications },
 
-  if(!enabled) return null;
+  if(!enabled) return null,
 
   return ()
     <>
@@ -555,12 +555,12 @@ export
 =======
 
 type SmartNotificationSystemProps = {
-  enabled?: boolean;
-};
+  enabled?: boolean,
+},
 
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
-  if(!enabled) return null;
-  return <div className="hidden" aria-hidden="true" />};
+  if(!enabled) return null,
+  return <div className="hidden" aria-hidden="true" />},
 
-export default SmartNotificationSystem;
+export default SmartNotificationSystem,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

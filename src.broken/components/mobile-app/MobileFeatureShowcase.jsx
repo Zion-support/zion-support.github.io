@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFeatureShowcase = () => {
   const features = [{
 
@@ -42,7 +42,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
       description: "Comprehensive insights and reporting for data-driven decisions","
       color: "from-pink-500 to-pink-600"
 
-  ];
+  ],
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">"
@@ -66,7 +66,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
               </div>"
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
               <p className="text-gray-300">{feature.description}</p>
-            </div>;
+            </div>,
           ))}
         </div>
 "
@@ -77,7 +77,7 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
             </h3>"
             <p className="text-gray-300 mb-6">
               Download the Zion mobile app today and transform how you work with AI talent and projects.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300">
                 Download for iOS
               </button>"
@@ -88,6 +88,6 @@ import { Smartphone, Zap, Shield, Users, Globe, BarChart3 export const MobileFea
           </div>
         </div>
       </div>
-    </section>;
-  )};
+    </section>,
+  )},
 '"`

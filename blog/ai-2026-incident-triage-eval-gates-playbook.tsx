@@ -38,5 +38,5 @@ export default function AI2026IncidentTriageEvalGatesPlaybook() {,
         </footer>,
       </article>,
     </main>,
-  ),}
+  )}
 ,

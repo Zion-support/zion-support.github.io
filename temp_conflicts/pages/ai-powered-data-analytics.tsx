@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   BarChart3, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredDataAnalytics: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredDataAnalytics: React.FC = () => {
       title: 'Multi-source Support',
       description: 'Data analytics across various sources and formats'
     }
-  ];
+  ],
 
   const analyticsCapabilities = [
     {
       area: 'Predictive Analytics',
-      capabilities: ['Trend forecasting', 'Pattern recognition', 'Risk assessment', 'Opportunity identification'],
+      capabilities: ['Trend forecastingPattern recognition', 'Risk assessmentOpportunity identification'],
       improvement: '95% accuracy',
       analytics: 'Advanced'
     },
     {
       area: 'Business Intelligence',
-      capabilities: ['Real-time dashboards', 'KPI monitoring', 'Performance tracking', 'Strategic insights'],
+      capabilities: ['Real-time dashboardsKPI monitoring', 'Performance trackingStrategic insights'],
       improvement: 'Real-time insights',
       intelligence: 'Instant'
     },
     {
       area: 'Data Visualization',
-      capabilities: ['Interactive charts', '3D visualizations', 'Custom dashboards', 'Mobile reporting'],
+      capabilities: ['Interactive charts3D visualizations', 'Custom dashboardsMobile reporting'],
       improvement: '100% clarity',
       visualization: 'Crystal clear'
     },
     {
       area: 'Data Mining',
-      capabilities: ['Pattern discovery', 'Anomaly detection', 'Correlation analysis', 'Cluster identification'],
+      capabilities: ['Pattern discoveryAnomaly detection', 'Correlation analysisCluster identification'],
       improvement: '1000x faster',
       mining: 'Efficient'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Business Intelligence',
       description: 'AI-powered analytics for business performance monitoring and strategic decision making',
-      benefits: ['Performance tracking', 'Strategic insights', 'KPI monitoring', 'Decision support']
+      benefits: ['Performance trackingStrategic insights', 'KPI monitoringDecision support']
     },
     {
       title: 'Financial Analytics',
       description: 'Data analytics for financial services, risk assessment, and investment decisions',
-      benefits: ['Risk assessment', 'Investment analysis', 'Fraud detection', 'Portfolio optimization']
+      benefits: ['Risk assessmentInvestment analysis', 'Fraud detectionPortfolio optimization']
     },
     {
       title: 'Marketing Analytics',
       description: 'Customer behavior analysis and marketing campaign optimization',
-      benefits: ['Customer insights', 'Campaign optimization', 'ROI analysis', 'Market segmentation']
+      benefits: ['Customer insightsCampaign optimization', 'ROI analysisMarket segmentation']
     },
     {
       title: 'Operational Analytics',
       description: 'Process optimization and operational efficiency improvement',
-      benefits: ['Process optimization', 'Efficiency improvement', 'Cost reduction', 'Quality enhancement']
+      benefits: ['Process optimizationEfficiency improvement', 'Cost reductionQuality enhancement']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredDataAnalytics: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with data analytics',
       features: [
-        'Basic analytics features',
-        'Single data source',
-        'Standard reporting',
-        'Email support',
+        'Basic analytics featuresSingle data source',
+        'Standard reportingEmail support',
         'Basic dashboards'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredDataAnalytics: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced analytics needs',
       features: [
-        'Advanced analytics features',
-        'Multi-source support',
-        'Custom development',
-        'Priority support',
-        'Advanced dashboards',
-        'API access',
+        'Advanced analytics featuresMulti-source support',
+        'Custom developmentPriority support',
+        'Advanced dashboardsAPI access',
         'Predictive analytics'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredDataAnalytics: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex analytics requirements',
       features: [
-        'Custom analytics development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom analytics developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredDataAnalytics: React.FC = () => {
       position: "Data Director",
       company: "Advanced Analytics Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredDataAnalytics: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Analyze with AI-Powered Data Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredDataAnalytics: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredDataAnalytics;
+export default AIPoweredDataAnalytics,

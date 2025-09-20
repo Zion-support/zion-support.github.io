@@ -1,5 +1,5 @@
 
-import { ProfileData } from "@/types/profile";
+import { ProfileData } from "@/types/profile",
 
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
@@ -391,4 +391,4 @@ export const MOCK_TALENTS: ProfileData[] = [
     hourlyRate: 125,
     contactEmail: "david.martinez@example.com"
   }
-];
+],

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import Link from 'next/link',
 import {
   Brain,
   Shield,
@@ -33,7 +33,7 @@ import {
   DollarSign,
   Search,
   Filter
-} from 'lucide-react';
+} from 'lucide-react',
 
 const solutionCategories = [
   {
@@ -43,12 +43,9 @@ const solutionCategories = [
     description: 'Transform your business with intelligent automation and predictive insights',
     color: 'from-purple-500 to-indigo-600',
     solutions: [
-      'Predictive Analytics',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Recommendation Systems',
-      'Chatbots & Virtual Assistants',
-      'Machine Learning Models'
+      'Predictive AnalyticsNatural Language Processing',
+      'Computer VisionRecommendation Systems',
+      'Chatbots & Virtual AssistantsMachine Learning Models'
     ]
   },
   {
@@ -58,12 +55,9 @@ const solutionCategories = [
     description: 'Protect your digital assets with enterprise-grade security solutions',
     color: 'from-red-500 to-pink-600',
     solutions: [
-      'Threat Detection & Response',
-      'Identity & Access Management',
-      'Security Compliance',
-      'Penetration Testing',
-      'Security Training',
-      'Incident Response'
+      'Threat Detection & ResponseIdentity & Access Management',
+      'Security CompliancePenetration Testing',
+      'Security TrainingIncident Response'
     ]
   },
   {
@@ -73,12 +67,9 @@ const solutionCategories = [
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
     color: 'from-blue-500 to-cyan-600',
     solutions: [
-      'Cloud Migration',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategy',
-      'Cloud Security'
+      'Cloud MigrationInfrastructure as Code',
+      'Container OrchestrationServerless Computing',
+      'Multi-cloud StrategyCloud Security'
     ]
   },
   {
@@ -88,12 +79,9 @@ const solutionCategories = [
     description: 'Turn your data into actionable insights for better decision making',
     color: 'from-green-500 to-emerald-600',
     solutions: [
-      'Business Intelligence',
-      'Data Warehousing',
-      'Real-time Analytics',
-      'Predictive Modeling',
-      'Data Visualization',
-      'Big Data Processing'
+      'Business IntelligenceData Warehousing',
+      'Real-time AnalyticsPredictive Modeling',
+      'Data VisualizationBig Data Processing'
     ]
   },
   {
@@ -103,12 +91,9 @@ const solutionCategories = [
     description: 'Connect devices and process data closer to the source for real-time insights',
     color: 'from-yellow-500 to-orange-600',
     solutions: [
-      'IoT Device Management',
-      'Edge Computing Platforms',
-      'Sensor Networks',
-      'Real-time Monitoring',
-      'Predictive Maintenance',
-      'Smart City Solutions'
+      'IoT Device ManagementEdge Computing Platforms',
+      'Sensor NetworksReal-time Monitoring',
+      'Predictive MaintenanceSmart City Solutions'
     ]
   },
   {
@@ -118,27 +103,21 @@ const solutionCategories = [
     description: 'Modernize your business processes and customer experience',
     color: 'from-indigo-500 to-purple-600',
     solutions: [
-      'Process Automation',
-      'Customer Experience',
-      'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
-      'Technology Consulting'
+      'Process AutomationCustomer Experience',
+      'Legacy ModernizationDigital Strategy',
+      'Change ManagementTechnology Consulting'
     ]
   }
-];
+],
 
 const industrySolutions = [
   {
     industry: 'Healthcare',
     icon: Heart,
     solutions: [
-      'Electronic Health Records',
-      'Telemedicine Platforms',
-      'Medical Imaging AI',
-      'Patient Data Analytics',
-      'Healthcare Security',
-      'Regulatory Compliance'
+      'Electronic Health RecordsTelemedicine Platforms',
+      'Medical Imaging AIPatient Data Analytics',
+      'Healthcare SecurityRegulatory Compliance'
     ],
     color: 'from-pink-500 to-rose-600'
   },
@@ -146,12 +125,9 @@ const industrySolutions = [
     industry: 'Finance',
     icon: DollarSign,
     solutions: [
-      'Fintech Applications',
-      'Risk Management',
-      'Fraud Detection',
-      'Regulatory Compliance',
-      'Digital Banking',
-      'Blockchain Solutions'
+      'Fintech ApplicationsRisk Management',
+      'Fraud DetectionRegulatory Compliance',
+      'Digital BankingBlockchain Solutions'
     ],
     color: 'from-green-500 to-emerald-600'
   },
@@ -159,12 +135,9 @@ const industrySolutions = [
     industry: 'Manufacturing',
     icon: Cpu,
     solutions: [
-      'Smart Manufacturing',
-      'Predictive Maintenance',
-      'Quality Control',
-      'Supply Chain Optimization',
-      'Industrial IoT',
-      'Automation Systems'
+      'Smart ManufacturingPredictive Maintenance',
+      'Quality ControlSupply Chain Optimization',
+      'Industrial IoTAutomation Systems'
     ],
     color: 'from-blue-500 to-cyan-600'
   },
@@ -172,12 +145,9 @@ const industrySolutions = [
     industry: 'Retail',
     icon: ShoppingCart,
     solutions: [
-      'E-commerce Platforms',
-      'Customer Analytics',
-      'Inventory Management',
-      'Omnichannel Solutions',
-      'Personalization',
-      'Supply Chain Management'
+      'E-commerce PlatformsCustomer Analytics',
+      'Inventory ManagementOmnichannel Solutions',
+      'PersonalizationSupply Chain Management'
     ],
     color: 'from-purple-500 to-indigo-600'
   },
@@ -185,12 +155,9 @@ const industrySolutions = [
     industry: 'Education',
     icon: FileText,
     solutions: [
-      'Learning Management Systems',
-      'Virtual Classrooms',
-      'Student Analytics',
-      'Content Management',
-      'Assessment Tools',
-      'Collaboration Platforms'
+      'Learning Management SystemsVirtual Classrooms',
+      'Student AnalyticsContent Management',
+      'Assessment ToolsCollaboration Platforms'
     ],
     color: 'from-yellow-500 to-orange-600'
   },
@@ -198,16 +165,13 @@ const industrySolutions = [
     industry: 'Government',
     icon: Shield,
     solutions: [
-      'Digital Services',
-      'Data Security',
-      'Process Automation',
-      'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
+      'Digital ServicesData Security',
+      'Process AutomationCitizen Engagement',
+      'Regulatory ComplianceInfrastructure Management'
     ],
     color: 'from-gray-500 to-slate-600'
   }
-];
+],
 
 const featuredSolutions = [
   {
@@ -216,18 +180,13 @@ const featuredSolutions = [
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
     features: [
-      'Real-time data processing',
-      'Predictive analytics models',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Natural language queries',
-      'Mobile-responsive design'
+      'Real-time data processingPredictive analytics models',
+      'Custom dashboard creationAutomated reporting',
+      'Natural language queriesMobile-responsive design'
     ],
     benefits: [
-      '30% faster decision making',
-      'Reduced manual reporting',
-      'Improved data accuracy',
-      'Enhanced user experience'
+      '30% faster decision makingReduced manual reporting',
+      'Improved data accuracyEnhanced user experience'
     ],
     price: 'Starting at $2,500/month',
     implementation: '4-8 weeks',
@@ -240,18 +199,13 @@ const featuredSolutions = [
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
     features: [
-      'Identity verification',
-      'Device authentication',
-      'Network segmentation',
-      'Threat detection',
-      'Compliance monitoring',
-      'Incident response'
+      'Identity verificationDevice authentication',
+      'Network segmentationThreat detection',
+      'Compliance monitoringIncident response'
     ],
     benefits: [
-      '99.9% threat detection rate',
-      'Reduced security incidents',
-      'Compliance achievement',
-      'Lower insurance costs'
+      '99.9% threat detection rateReduced security incidents',
+      'Compliance achievementLower insurance costs'
     ],
     price: 'Starting at $3,200/month',
     implementation: '6-12 weeks',
@@ -264,41 +218,36 @@ const featuredSolutions = [
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
     features: [
-      'Auto-scaling infrastructure',
-      'Container orchestration',
-      'CI/CD pipelines',
-      'Monitoring & alerting',
-      'Disaster recovery',
-      'Cost optimization'
+      'Auto-scaling infrastructureContainer orchestration',
+      'CI/CD pipelinesMonitoring & alerting',
+      'Disaster recoveryCost optimization'
     ],
     benefits: [
-      '50% infrastructure cost reduction',
-      '99.9% uptime guarantee',
-      'Faster deployment cycles',
-      'Improved scalability'
+      '50% infrastructure cost reduction99.9% uptime guarantee',
+      'Faster deployment cyclesImproved scalability'
     ],
     price: 'Starting at $1,800/month',
     implementation: '8-16 weeks',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600'
   }
-];
+],
 
 export default function Solutions() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedIndustry, setSelectedIndustry] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedIndustry, setSelectedIndustry] = useState('All'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
-  const categories = ['All', ...solutionCategories.map(cat => cat.name)];
-  const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
+  const categories = ['All', ...solutionCategories.map(cat => cat.name)],
+  const industries = ['All', ...industrySolutions.map(ind => ind.industry)],
 
   const filteredSolutions = featuredSolutions.filter(solution => {
-    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory,
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         solution.description.toLowerCase().includes(searchTerm.toLowerCase());
+                         solution.description.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    return matchesCategory && matchesSearch;
-  });
+    return matchesCategory && matchesSearch,
+  }),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
@@ -391,7 +340,7 @@ export default function Solutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index) => {
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
               return (
                 <motion.div
                   key={category.id}
@@ -416,14 +365,14 @@ export default function Solutions() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover: text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
                   </Link>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -445,7 +394,7 @@ export default function Solutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index) => {
-              const IconComponent = industry.icon;
+              const IconComponent = industry.icon,
               return (
                 <motion.div
                   key={industry.industry}
@@ -477,7 +426,7 @@ export default function Solutions() {
                     </Link>
                   </div>
                 </motion.div>
-              );
+              ),
             })}
           </div>
         </div>
@@ -499,7 +448,7 @@ export default function Solutions() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index) => {
-              const IconComponent = solution.icon;
+              const IconComponent = solution.icon,
               return (
                 <motion.div
                   key={solution.id}
@@ -565,14 +514,14 @@ export default function Solutions() {
                     </div>
                     <Link
                       href={`/solutions/${solution.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      className="inline-flex items-center text-zion-cyan hover: text-zion-cyan-light transition-colors duration-300"
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -595,7 +544,7 @@ export default function Solutions() {
               Let's discuss how our technology solutions can address your specific challenges 
               and drive measurable results for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
@@ -614,5 +563,5 @@ export default function Solutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

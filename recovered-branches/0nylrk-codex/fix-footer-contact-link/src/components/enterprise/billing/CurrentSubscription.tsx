@@ -1,18 +1,18 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 export function CurrentSubscription() {,
   // Mock subscription data,
   const subscription = {,
-    plan: "Business";
-    status: "active";
-    billingCycle: "Annual";
-    amount: "$1,999.00";
+    plan: "Business",
+    status: "active",
+    billingCycle: "Annual",
+    amount: "$1,999.00",
     teamSeats: {,
-      used: 32;
-      total: 50,}
-  };
+      used: 32,
+      total: 50}
+  },
   return (,
     <Card>,
       <CardHeader>,
@@ -26,7 +26,7 @@ export function CurrentSubscription() {,
         <div className="grid grid-cols-1 gap-4 md: grid-cols-2 lg:grid-cols-3">,
           <div className="space-y-1">,
             <p className="text-sm font-medium leading-none text-muted-foreground">Plan</p>,
-            <p className="text-lg font-bold">{subscription.plan,}</p>,
+            <p className="text-lg font-bold">{subscription.plan}</p>,
           </div>,
           <div className="space-y-1">,
             <p className="text-sm font-medium leading-none text-muted-foreground">Billing Cycle</p>,
@@ -67,7 +67,6 @@ export function CurrentSubscription() {,
         <Button variant="outline">Change Plan</Button>,
         <Button variant="destructive">Cancel Subscription</Button>,
       </CardFooter>,
-    </Card>,
-  );
+    </Card>),
 }
 ,

@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Handshake, Globe, Rocket, Brain, Shield, Users, 
   Award, Star, Zap, Building, Target, CheckCircle
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function PartnersPage() {
   const partnershipTypes = [
@@ -58,7 +58,7 @@ export default function PartnersPage() {
       ],
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ],
 
   const currentPartners = [
     {
@@ -89,7 +89,7 @@ export default function PartnersPage() {
       description: "Breakthrough technology research and development",
       achievements: ["Joint innovation lab", "Shared IP portfolio", "Industry disruption initiatives"]
     }
-  ];
+  ],
 
   const partnershipBenefits = [
     {
@@ -122,7 +122,7 @@ export default function PartnersPage() {
       title: "Brand Enhancement",
       description: "Strengthen your brand through association with cutting-edge technology"
     }
-  ];
+  ],
 
   const partnershipProcess = [
     {
@@ -145,7 +145,7 @@ export default function PartnersPage() {
       title: "Growth & Optimization",
       description: "Continuously optimize partnership for maximum mutual value"
     }
-  ];
+  ],
 
   return (
     <>
@@ -401,7 +401,7 @@ export default function PartnersPage() {
                 Let's discuss how we can create mutual value through strategic collaboration. 
                 Together, we can accelerate innovation and achieve remarkable results.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
@@ -424,5 +424,5 @@ export default function PartnersPage() {
 
       <EnhancedFooter />
     </>
-  );
+  )
 }

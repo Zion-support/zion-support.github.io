@@ -1,132 +1,132 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   ArrowRight,
   CheckCircle,
   TrendingUp,
   Users,
-  DollarSign;
-  Clock;
-  Target;
-  Award;
-  Star;
-  ExternalLink;
-  Play;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe,
-} from 'lucide-react';
+  DollarSign,
+  Clock,
+  Target,
+  Award,
+  Star,
+  ExternalLink,
+  Play,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe
+} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase2026 = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeCasetActiveCase] = useState(0);
-  const [isVideoPlayingsetIsVideoPlaying] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [activeCasetActiveCase] = useState(0),
+  const [isVideoPlayingsetIsVideoPlaying] = useState(false),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)300);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)300),
+    return () => clearTimeout(timer),
+  }[]),
   const caseStudies = [,
     {,
-      id: 'fintech-transformation';
-      title: 'FinTech Revolution: 500% ROI in 6 Months';
-      company: 'PayFlow Solutions';
-      industry: 'Financial Technology';
-      icon: DollarSign;
-      color: 'from-green-500 to-emerald-600';
-      challenge: 'Legacy payment processing system causing 40% transaction failures and customer churn';
-      solution: 'Implemented AI-powered fraud detectionreal-time processingand automated compliance';
+      id: 'fintech-transformation',
+      title: 'FinTech Revolution: 500% ROI in 6 Months',
+      company: 'PayFlow Solutions',
+      industry: 'Financial Technology',
+      icon: DollarSign,
+      color: 'from-green-500 to-emerald-600',
+      challenge: 'Legacy payment processing system causing 40% transaction failures and customer churn',
+      solution: 'Implemented AI-powered fraud detectionreal-time processingand automated compliance',
       results: {,
-        roi: '500%';
-        efficiency: '300%';
-        costReduction: '60%';
-        customerSatisfaction: '95%',};
-      timeline: '6 months';
-      team: '15 experts';
-      technologies: ['AI/'MLBlockchain'Cloud 'InfrastructureReal-time Analytics'];
+        roi: '500%',
+        efficiency: '300%',
+        costReduction: '60%',
+        customerSatisfaction: '95%'},
+      timeline: '6 months',
+      team: '15 experts',
+      technologies: ['AI/'MLBlockchain'Cloud 'InfrastructureReal-time Analytics'],
       testimonial: {,
-        name: 'Sarah Chen';
-        role: 'CTO';
-        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.',}
-    };
+        name: 'Sarah Chen',
+        role: 'CTO',
+        content: 'Zion Tech Group transformed our entire payment ecosystem. The results exceeded our wildest expectations.'}
+    },
     {,
-      id: 'healthcare-ai';
-      title: 'Healthcare AI: Diagnosing 10x Faster';
-      company: 'MediTech Innovations';
-      industry: 'Healthcare Technology';
-      icon: Shield;
-      color: 'from-blue-500 to-cyan-600';
-      challenge: 'Manual diagnosis processes taking 2-3 dayscausing delayed treatments and patient dissatisfaction';
-      solution: 'Deployed AI diagnostic toolsautomated patient triageand predictive health analytics';
+      id: 'healthcare-ai',
+      title: 'Healthcare AI: Diagnosing 10x Faster',
+      company: 'MediTech Innovations',
+      industry: 'Healthcare Technology',
+      icon: Shield,
+      color: 'from-blue-500 to-cyan-600',
+      challenge: 'Manual diagnosis processes taking 2-3 dayscausing delayed treatments and patient dissatisfaction',
+      solution: 'Deployed AI diagnostic toolsautomated patient triageand predictive health analytics',
       results: {,
-        roi: '400%';
-        efficiency: '1000%';
-        costReduction: '45%';
-        customerSatisfaction: '98%',};
-      timeline: '8 months';
-      team: '20 experts';
-      technologies: ['Computer 'VisionNLP'Predictive 'AnalyticsIoT Integration'];
+        roi: '400%',
+        efficiency: '1000%',
+        costReduction: '45%',
+        customerSatisfaction: '98%'},
+      timeline: '8 months',
+      team: '20 experts',
+      technologies: ['Computer 'VisionNLP'Predictive 'AnalyticsIoT Integration'],
       testimonial: {,
-        name: 'Dr. Michael Rodriguez';
-        role: 'Chief Medical Officer';
-        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.',}
-    };
+        name: 'Dr. Michael Rodriguez',
+        role: 'Chief Medical Officer',
+        content: 'Our diagnostic accuracy improved dramatically while reducing processing time from days to minutes.'}
+    },
     {,
-      id: 'ecommerce-automation';
-      title: 'E-commerce Automation: $50M Revenue Boost';
-      company: 'ShopGlobal';
-      industry: 'E-commerce';
-      icon: Globe;
-      color: 'from-purple-500 to-pink-600';
-      challenge: 'Manual inventory management and customer service causing 30% lost sales opportunities';
-      solution: 'Implemented AI-driven inventory optimizationautomated customer serviceand dynamic pricing';
+      id: 'ecommerce-automation',
+      title: 'E-commerce Automation: $50M Revenue Boost',
+      company: 'ShopGlobal',
+      industry: 'E-commerce',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-600',
+      challenge: 'Manual inventory management and customer service causing 30% lost sales opportunities',
+      solution: 'Implemented AI-driven inventory optimizationautomated customer serviceand dynamic pricing',
       results: {,
-        roi: '600%';
-        efficiency: '400%';
-        costReduction: '50%';
-        customerSatisfaction: '92%',};
-      timeline: '10 months';
-      team: '25 experts';
-      technologies: ['Machine 'LearningNLP'Computer 'VisionCloud Computing'];
+        roi: '600%',
+        efficiency: '400%',
+        costReduction: '50%',
+        customerSatisfaction: '92%'},
+      timeline: '10 months',
+      team: '25 experts',
+      technologies: ['Machine 'LearningNLP'Computer 'VisionCloud Computing'],
       testimonial: {,
-        name: 'Jennifer Walsh';
-        role: 'CEO';
-        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.',}
-    };
+        name: 'Jennifer Walsh',
+        role: 'CEO',
+        content: 'The automation solutions revolutionized our operations. We saw immediate impact on both revenue and customer satisfaction.'}
+    },
     {,
-      id: 'manufacturing-iot';
-      title: 'Smart Manufacturing: Zero Downtime Achievement';
-      company: 'AutoParts Pro';
-      industry: 'Manufacturing';
-      icon: Zap;
-      color: 'from-orange-500 to-red-600';
-      challenge: 'Unplanned downtime costing $2M monthly and 15% production efficiency loss';
-      solution: 'Deployed IoT sensorspredictive maintenance AIand real-time production optimization';
+      id: 'manufacturing-iot',
+      title: 'Smart Manufacturing: Zero Downtime Achievement',
+      company: 'AutoParts Pro',
+      industry: 'Manufacturing',
+      icon: Zap,
+      color: 'from-orange-500 to-red-600',
+      challenge: 'Unplanned downtime costing $2M monthly and 15% production efficiency loss',
+      solution: 'Deployed IoT sensorspredictive maintenance AIand real-time production optimization',
       results: {,
-        roi: '350%';
-        efficiency: '250%';
-        costReduction: '40%';
-        customerSatisfaction: '97%',};
-      timeline: '12 months';
-      team: '18 experts';
-      technologies: [IoT', 'Edge 'ComputingPredictive 'Analytics', 'Digital Twins'];
+        roi: '350%',
+        efficiency: '250%',
+        costReduction: '40%',
+        customerSatisfaction: '97%'},
+      timeline: '12 months',
+      team: '18 experts',
+      technologies: [IoTEdge 'ComputingPredictive 'AnalyticsDigital Twins'],
       testimonial: {,
-        name: 'Robert Kim';
-        role: 'Operations Director';
-        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.',}
+        name: 'Robert Kim',
+        role: 'Operations Director',
+        content: 'We achieved zero unplanned downtime for 6 consecutive months. The predictive maintenance system is a game-changer.'}
     }
-  ];
+  ],
   const overallStats = [,
-    { label: 'Projects 'Completedvalue: '200+'icon: CheckCircle ,};
-    { label: 'Average 'ROIvalue: '450%'icon: TrendingUp ,};
-    { label: 'Client 'Satisfactionvalue: '96%'icon: Star ,};
-    { label: 'Years 'Experiencevalue: '8+'icon: Award ,}
-  ];
-  if (!isVisible) return null;
+    { label: 'Projects 'Completedvalue: '200+'icon: CheckCircle },
+    { label: 'Average 'ROIvalue: '450%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '96%'icon: Star },
+    { label: 'Years 'Experiencevalue: '8+'icon: Award }
+  ],
+  if (!isVisible) return null,
   return (,
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -137,19 +137,18 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
             Real success stories from companies that transformed their operations with our cutting-edge AI and automation solutions.,
           </p>,
         </div>,
-        {/* Overall Stats */,}
+        {/* Overall Stats */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
           {overallStats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">,
                 <stat.icon className="w-8 h-8 text-blue-600" />,
               </div>,
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>,
               <div className="text-gray-600">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Case Study Selector */}
         <div,
@@ -157,12 +156,12 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
         >,
           {caseStudies.map((caseStudyindex) => (,
             <button,
-              key={caseStudy.id,}
+              key={caseStudy.id}
               onClick={() => setActiveCase(index)}
               className={`p-6 rounded-xl transition-all duration-300 ${,
                 activeCase === index,
                   ? 'bg-white shadow-xl scale-105 border-2 border-blue-500',
-                  : 'bg-white shadow-lg hover: shadow-xl',}`}
+                  : 'bg-white shadow-lg hover: shadow-xl'}`}
             >,
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center mb-4 mx-auto`}>,
                 <caseStudy.icon className="w-6 h-6 text-white" />,
@@ -179,7 +178,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
             className="bg-white rounded-2xl shadow-xl p-8 mb-12",
           >,
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
-              {/* Left Column - Details */,}
+              {/* Left Column - Details */}
               <div>,
                 <div className="flex items-start space-x-4 mb-6">,
                   <div className={`p-4 rounded-2xl bg-gradient-to-r ${caseStudies[activeCase].color}`}>,
@@ -208,8 +207,7 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
                       {caseStudies[activeCase].technologies.map((techindex) => (,
                         <span key={index} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">,
                           {tech}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -283,5 +281,5 @@ const RevolutionaryCaseStudiesShowcase2026 = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default RevolutionaryCaseStudiesShowcase2026;
+  )},
+export default RevolutionaryCaseStudiesShowcase2026,

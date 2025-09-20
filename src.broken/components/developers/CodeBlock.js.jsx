@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function CodeBlock({
 
   children,
@@ -7,7 +7,7 @@ export default function CodeBlock({
   className = '',
   showLineNumbers = false}) {
 
-  const content = code || children || '';
+  const content = code || children || '',
   return ()
     <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>
       <div className="flex items-center justify-between mb-2">"
@@ -29,6 +29,6 @@ export default function CodeBlock({
         <code>{content}</code>
       </pre>
     </div>
-  );
+  ),
 }
 '"`

@@ -3,9 +3,9 @@
 export default function Page() {
 > {
 
-  data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
-  placeholder?: string;
+  data: SearchResult[],
+  onResultsChange?: (results: SearchResult[]) => void,
+  placeholder?: string,
   showFilters?: boolean}
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
@@ -15,25 +15,25 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   placeholder = "Search services, articles, team members...",
   showFilters = true}) => {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [sortBy, setSortBy] = useState<any>('relevance');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [isSearchFocused, setIsSearchFocused] = useState(false),
+  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set()),
+  const [showFilterPanel, setShowFilterPanel] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState<any>('all'),
+  const [sortBy, setSortBy] = useState<any>('relevance'),
 
   // Filter options
   
-      return acc}, {} as Record < string, any>) ;
+      return acc}, {} as Record < string, any>) ,
 
-      return acc}, {} as Record < string, any>) ;
+      return acc}, {} as Record < string, any>) ,
 
-        break;
+        break,
       case 'rating':
-        break;
+        break,
       case 'name':
                     <Tag className="w-4 h-4"  />
-                    {result.tags.slice(0, 3).join(',)}`
+                    {result.tags.slice(0, 3).join(')}`
                     {result.tags.length > 3 && ` +${result.tags.length-3} more`}
 =======
     return {
@@ -51,7 +51,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         label: key.charAt(0) .toUpperCase () + key.slice(1) ,
         value: key,
         count
-      }) ) }}, [data]) ;
+      }) ) }}, [data]) ,
 
   // Filtered and sorted results
   
@@ -59,32 +59,32 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       
       // Active filters
       
-      return matchesSearch && matchesCategory && matchesFilters}) ;
+      return matchesSearch && matchesCategory && matchesFilters}) ,
     // Sort results
     switch(sortBy) {
 
       case 'date':
         results = results.sort((a, b) => {
 
-          if(!a.date || !b.date) return 0;
-          return new Date(b.date).getTime() - new Date(a.date).getTime()});
-        break;'      case 'rating':
+          if(!a.date || !b.date) return 0,
+          return new Date(b.date).getTime() - new Date(a.date).getTime()}),
+        break,'      case 'rating':
         results = results.sort((a, b) => {
 
-          if(!a.rating || !b.rating) return 0;
-          return b.rating - a.rating});
-        break;'      case 'name':
-        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ;
-        break;
+          if(!a.rating || !b.rating) return 0,
+          return b.rating - a.rating}),
+        break,'      case 'name':
+        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ,
+        break,
       default: // relevance
         // Keep original order for relevance
-        break;
+        break,
 
-    return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ;
+    return results}, [data, searchQuery, selectedCategory, activeFilters, sortBy]) ,
 
   // Update parent component with results
   useEffect(() => {
-    onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
+    onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ,
 
   // Toggle filter
   
@@ -92,29 +92,29 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       newFilters.delete(filterId)} else {
 
-      newFilters.add(filterId);
+      newFilters.add(filterId),
 
-    setActiveFilters(newFilters) };
+    setActiveFilters(newFilters) },
 
   // Clear all filters
   
-    setSelectedCategory('all');
-    setSortBy('relevance')};
+    setSelectedCategory('all'),
+    setSortBy('relevance')},
 
   // Get icon for type
   const getTypeIcon = (type: string) => {
 
     switch(type) {
 '"
-      case 'service': return <Zap className="w-4 h-4"  />;'"
-      case 'article': return <Tag className="w-4 h-4"  />;'"
-      case 'team': return <Users className="w-4 h-4"  />;'"
-      case 'technology': return <Brain className="w-4 h-4"  />;"
-      default: return <Globe className="w-4 h-4"  />};
+      case 'service': return <Zap className="w-4 h-4"  />,'"
+      case 'article': return <Tag className="w-4 h-4"  />,'"
+      case 'team': return <Users className="w-4 h-4"  />,'"
+      case 'technology': return <Brain className="w-4 h-4"  />,"
+      default: return <Globe className="w-4 h-4"  />},
 
   // Get category color
   
-    return colors[category as keyof typeof colors] || 'text-zinc-400'};
+    return colors[category as keyof typeof colors] || 'text-zinc-400'},
   return ("
     <div className="w-full max-w-6xl mx-auto">
       {/* Search Bar */}"
@@ -132,9 +132,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           {searchQuery && (
             <button'
               onClick={() => setSearchQuery('')}"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: text-white transition-colors"
 "
-              <X className="w-5 h-5"  />            </button>;
+              <X className="w-5 h-5"  />            </button>,
           )}
         </div>
 
@@ -146,7 +146,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               exit={{ opacity: 0, y: -10 }}"
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
 
-              {filteredResults.slice(0, 5).map((result) => (;
+              {filteredResults.slice(0, 5).map((result) => (,
                 <div
                   key={result.id}"
                   className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
@@ -163,7 +163,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       {result.category}
                     </span>
                   </div>
-                </div>;) ) }
+                </div>,) ) }
             </motion.div>) }
         </AnimatePresence>
       </div>
@@ -314,19 +314,19 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   </div>
                 </div>
               </div>
-            </div>;
+            </div>,
           </motion.div>) }
       </AnimatePresence>
 
       {/* Results Count */}"
-      <div className="mb-4 text-sm text-zinc-400">;
-        Showing {filteredResults.length} of {data.length} results;"`
+      <div className="mb-4 text-sm text-zinc-400">,
+        Showing {filteredResults.length} of {data.length} results,"`
         {searchQuery && ` for "${searchQuery}"`}
       </div>
 
       {/* Search Results */}"
-      <div className="space-y-4">;
-        {filteredResults.map((result) => (;
+      <div className="space-y-4">,
+        {filteredResults.map((result) => (,
           <motion.div
             key={result.id}
             initial = {
@@ -382,12 +382,12 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   )}"
                   <div className="flex items-center gap-1">"
                     <Tag className="w-4 h-4"  />'
-                    {result.tags.slice(0, 3).join(', ')}`                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}
+                    {result.tags.slice(0, 3).join()}`                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}
                   </div>
                 </div>
               </div>
             </div>
-          </motion.div>;) ) }
+          </motion.div>,) ) }
       </div>
 
       {/* No Results */}

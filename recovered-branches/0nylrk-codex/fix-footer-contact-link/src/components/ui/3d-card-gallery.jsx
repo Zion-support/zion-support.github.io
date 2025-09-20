@@ -1,2 +1,2 @@
 
-export default 3d-card-gallery;
+export default 3d-card-gallery,

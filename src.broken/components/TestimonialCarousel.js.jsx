@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-react',
 ,
   {
 
@@ -61,34 +61,34 @@ import { ChevronLeft, ChevronRight, Star, Quote, ArrowRight  } from 'lucide-reac
     avatar: '/avatars/alex.jpg',
     rating: 5,
     category: 'Infrastructure',
-    project: 'Cloud Infrastructure'},
-];
+    project: 'Cloud Infrastructure'}
+],
 export function TestimonialCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0),
+  const [direction, setDirection] = useState(0),
   useEffect(() => {
     const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex(prev => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
+      setDirection(1),
+      setCurrentIndex(prev => (prev + 1) % testimonials.length),
+    }, 5000),
+    return () => clearInterval(timer),
+  }, []),
   const swipePower = (offset, velocity) => {
 
-    return Math.abs(offset) * velocity;
-  };
+    return Math.abs(offset) * velocity,
+  },
   const paginate = newDirection => {
 
-    setDirection(newDirection);
+    setDirection(newDirection),
     setCurrentIndex()
       prev => (prev + newDirection + testimonials.length) % testimonials.length
-    );
-  };
+    ),
+  },
   const goToSlide = index => {
 
-    setDirection(index > currentIndex ? 1 : -1);
-    setCurrentIndex(index);
-  };
+    setDirection(index > currentIndex ? 1 : -1),
+    setCurrentIndex(index),
+  },
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -138,13 +138,13 @@ export function TestimonialCarousel() {
               dragElastic={1}
               onDragEnd={(e, { offset, velocity }) => {
 
-                const swipe = swipePower(offset.x, velocity.x);
+                const swipe = swipePower(offset.x, velocity.x),
                 if(swipe < -swipeConfidenceThreshold) {
 
-                  paginate(1);
+                  paginate(1),
                 } else if(swipe > swipeConfidenceThreshold) {
 
-                  paginate(-1);
+                  paginate(-1),
                 }
               }}"
               className="absolute w-full"
@@ -275,6 +275,6 @@ export function TestimonialCarousel() {
         </motion.div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

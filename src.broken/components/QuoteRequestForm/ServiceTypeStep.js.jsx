@@ -1,29 +1,29 @@
-import { useEffect, useState } from 'react';"
-import { Input } from '@/components/ui/input';"
-import { Card } from '@/components/ui/card';"
-import { Search  } from 'lucide-react';"
-import { ListingScoreCard } from '@/components/ListingScoreCard';"
-import { captureException } from '@/utils/sentry';"
-import { Skeleton } from '@/components/ui/skeleton';"
-import { useDebounce } from '@/hooks/useDebounce';"
-import { z } from 'zod';
+import { useEffect, useState } from 'react',"
+import { Input } from '@/components/ui/input',"
+import { Card } from '@/components/ui/card',"
+import { Search  } from 'lucide-react',"
+import { ListingScoreCard } from '@/components/ListingScoreCard',"
+import { captureException } from '@/utils/sentry',"
+import { Skeleton } from '@/components/ui/skeleton',"
+import { useDebounce } from '@/hooks/useDebounce',"
+import { z } from 'zod',
 
 export default function Page() {
-`;
-            const maxRetries = 3;
-            for(let attempt = 0; attempt < maxRetries; attempt++) {
+`,
+            const maxRetries = 3,
+            for(let attempt = 0, attempt < maxRetries, attempt++) {
 
                 try {
-                    const response = await fetch(url);
+                    const response = await fetch(url),
                     if(!response.ok)
-                        throw new Error('Failed to fetch');
-                    const data = await response.json();
-                    const parsed = listingsSchema.safeParse(data);
+                        throw new Error('Failed to fetch'),
+                    const data = await response.json(),
+                    const parsed = listingsSchema.safeParse(data),
                     if(!parsed.success)
-                        throw new Error('Invalid response');
-                    setListings(parsed.data);
-                    setError(null);
-                    setLoading(false);
+                        throw new Error('Invalid response'),
+                    setListings(parsed.data),
+                    setError(null),
+                    setLoading(false),
                     return}
                 catch(err) {
                     if(attempt === maxRetries - 1) {
@@ -34,16 +34,16 @@ export default function Page() {
                         else {
 
                             captureException(err)}
-                        setListings([]);
-                        setError('Failed to load services');
+                        setListings([]),
+                        setError('Failed to load services'),
                         setLoading(false)}
                     else {
 
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
-        };
-        fetchServices()}, [formData.serviceType, debouncedQuery]);
+        },
+        fetchServices()}, [formData.serviceType, debouncedQuery]),
     const handleItemSelect = (item) => {
 
         updateFormData({
@@ -51,20 +51,20 @@ export default function Page() {
             specificItem: item,
             serviceCategory: item.category,
             serviceType: item.category.toLowerCase()
-        })};
-    const sourceListings = listings;
+        })},
+    const sourceListings = listings,
     const filteredListings = sourceListings.filter(item => {
 
         // Filter by category only when a service type has been selected"
         if (formData.serviceType !== "") {
 
-            const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
+            const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
             if(!categoryMatch)
                 return false}"
         if(searchQuery.trim() === "")
-            return true;
+            return true,
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.category.toLowerCase().includes(searchQuery.toLowerCase())});"
+            item.category.toLowerCase().includes(searchQuery.toLowerCase())}),"
     return (<div className="space-y-6">
       <div>"
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>"

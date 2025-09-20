@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 const NotFound: React.FC = () => (
   <div className="flex flex-1 items-center justify-center bg-gray-100">
@@ -13,6 +13,6 @@ const NotFound: React.FC = () => (
       </a>
     </div>
   </div>
-);
+),
 
-export default NotFound;
+export default NotFound,

@@ -3,7 +3,7 @@ import React from 'react'
 export const metadata = {
   title: 'Real-Time Agent Cost Optimizer v1.0 — Launch',
   description:
-    'Automated routing, dynamic budgets, and live eval gates to reduce inference costs while preserving quality.',
+    'Automated routing, dynamic budgets, and live eval gates to reduce inference costs while preserving quality.'
 }
 
 export default function Page() {

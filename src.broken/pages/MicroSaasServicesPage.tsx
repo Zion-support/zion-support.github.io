@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '@/components / SEO';
+import React from 'react',
+import SEO from '@/components / SEO',
 
 const MicroSAASServicesPage = () => {
   return (<>
@@ -137,16 +137,16 @@ const MicroSAASServicesPage = () => {
             Start with a free trial and see how our micro SAAS solutions can streamline your operations,
             improve productivity, and drive growth.No long - term contracts, cancel anytime.</p>
           <div  className="flex flex - wrap justify - center gap-4">
-            <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
+            <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
               <TrendingUp className="h-5 w-5 mr-2" />
               Start Free Trial
             </Button>
             <Button className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2" />;
-              Call + 1 302 464 0950;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;) ;
+              <Phone className="h-5 w-5 mr-2" />,
+              Call + 1 302 464 0950,
+            </Button>,
+          </div>,
+        </div>,
+      </div>,
+    </div>,) 
 }

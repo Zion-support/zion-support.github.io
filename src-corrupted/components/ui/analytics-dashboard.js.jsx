@@ -1,2 +1,2 @@
 
-export default analytics-dashboard.js;
+export default analytics-dashboard.js,

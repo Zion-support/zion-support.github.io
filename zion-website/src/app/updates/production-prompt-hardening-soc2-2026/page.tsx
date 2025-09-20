@@ -17,6 +17,6 @@ export default function ProductionPromptHardeningSOC22026() {,
         </div>,
       </section>,
     </div>,
-  ),
+  )
 }
 ,

@@ -1,40 +1,40 @@
 export interface EmergingTechService2027 {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  marketPrice: string;
-  website: string;
-  contactEmail: string;
-  tags: string[];
-  aiScore: number;
-  rating: number;
-  reviewCount: number;
-  featured: boolean;
-  location: string;
-  availability: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  marketPrice: string,
+  website: string,
+  contactEmail: string,
+  tags: string[],
+  aiScore: number,
+  rating: number,
+  reviewCount: number,
+  featured: boolean,
+  location: string,
+  availability: string,
 author: {
 
-    name: string;
-    id: string;
-    avatarUrl?: string;
+    name: string,
+    id: string,
+    avatarUrl?: string,
     verified: boolean
-};
-  images: string[];
-  createdAt: string;
-  technologyStack: string[];
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
+},
+  images: string[],
+  createdAt: string,
+  technologyStack: string[],
+  useCases: string[],
+  integrations: string[],
+  compliance: string[],
   support: string[]}
-;
+,
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockchain & DeFi Platform
   {
 
@@ -46,7 +46,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 1799,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "Multi-chain support(Ethereum, Polygon, Solana)","
       "Smart contract development & deployment","
       "DeFi protocol integration","
@@ -55,19 +55,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Governance mechanisms","
       "Analytics dashboard","
       "API for developers"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Reduced transaction costs","
       "Enhanced security & transparency","
       "Automated smart contracts","
       "Global accessibility","
       "Innovative business models"
-    ],;"
-    targetAudience["Financial Institutions", "Enterprises", "Startups", "Developers", "Investors"],;"
+    ],"
+    targetAudience["Financial Institutions", "Enterprises", "Startups", "Developers", "Investors"],"
     marketPrice: "$1,799-3,999/month","
     website: "https://ziontechgroup.com/blockchain-defi-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["Blockchain", "DeFi", "Smart Contracts", "NFTs", "Cryptocurrency"],;
+    tags["Blockchain", "DeFi", "Smart Contracts", "NFTs", "Cryptocurrency"],
     aiScore: 96,
     rating: 4.8,
     reviewCount: 167,
@@ -81,13 +81,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["Solidity", "Rust", "JavaScript", "Python", "Web3.js"],;"
-    useCases["DeFi Applications", "Smart Contracts", "NFT Marketplaces", "Cross-chain Operations"],;"
-    integrations["MetaMask", "WalletConnect", "Chainlink", "Uniswap", "OpenSea"],;"
-    compliance["AML/KYC", "Regulatory Compliance", "Security Audits", "Privacy Standards"],;"
-    support["24/7 Support", "Developer Resources", "Security Audits", "Training"]},;
+    technologyStack["Solidity", "Rust", "JavaScript", "Python", "Web3.js"],"
+    useCases["DeFi Applications", "Smart Contracts", "NFT Marketplaces", "Cross-chain Operations"],"
+    integrations["MetaMask", "WalletConnect", "Chainlink", "Uniswap", "OpenSea"],"
+    compliance["AML/KYC", "Regulatory Compliance", "Security Audits", "Privacy Standards"],"
+    support["24/7 Support", "Developer Resources", "Security Audits", "Training"]},
   // Advanced IoT Platform
   {
 "
@@ -99,7 +99,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 1299,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "Device management & provisioning","
       "Edge computing capabilities","
       "Real-time data processing","
@@ -108,19 +108,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Scalable infrastructure","
       "API management","
       "Dashboard & monitoring"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Real-time data insights","
       "Reduced latency","
       "Cost optimization","
       "Scalable IoT deployments","
       "Enhanced security"
-    ],;"
-    targetAudience["Manufacturing", "Smart Cities", "Healthcare", "Agriculture", "Transportation"],;"
+    ],"
+    targetAudience["Manufacturing", "Smart Cities", "Healthcare", "Agriculture", "Transportation"],"
     marketPrice: "$1,299-2,999/month","
     website: "https://ziontechgroup.com/advanced-iot-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["IoT", "Edge Computing", "Smart Cities", "Industrial IoT", "Automation"],;
+    tags["IoT", "Edge Computing", "Smart Cities", "Industrial IoT", "Automation"],
     aiScore: 95,
     rating: 4.8,
     reviewCount: 189,
@@ -134,13 +134,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["Python", "Node.js", "Kubernetes", "Docker", "MQTT"],;"
-    useCases["Smart Manufacturing", "Connected Healthcare", "Precision Agriculture", "Smart Cities"],;"
-    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT Brokers", "Analytics Tools"],;"
-    compliance["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],;"
-    support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
+    technologyStack["Python", "Node.js", "Kubernetes", "Docker", "MQTT"],"
+    useCases["Smart Manufacturing", "Connected Healthcare", "Precision Agriculture", "Smart Cities"],"
+    integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT Brokers", "Analytics Tools"],"
+    compliance["ISO 27001", "GDPR", "Industry Standards", "Security Protocols"],"
+    support["24/7 Support", "Implementation", "Training", "Custom Development"]},
   // Robotics & Automation Platform
   {
 "
@@ -152,7 +152,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 2499,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "Collaborative robot programming","
       "AI-powered vision systems","
       "Predictive maintenance","
@@ -161,19 +161,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Quality control","
       "Remote operation","
       "Analytics dashboard"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "70% cost reduction","
       "Improved quality","
       "24/7 operation","
       "Enhanced safety","
       "Scalable automation"
-    ],;"
-    targetAudience["Manufacturing", "Automotive", "Electronics", "Pharmaceuticals", "Logistics"],;"
+    ],"
+    targetAudience["Manufacturing", "Automotive", "Electronics", "Pharmaceuticals", "Logistics"],"
     marketPrice: "$2,499-4,999/month","
     website: "https://ziontechgroup.com/robotics-automation-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["Robotics", "Automation", "Manufacturing", "AI", "Quality Control"],;
+    tags["Robotics", "Automation", "Manufacturing", "AI", "Quality Control"],
     aiScore: 97,
     rating: 4.9,
     reviewCount: 134,
@@ -187,13 +187,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["ROS", "Python", "C++", "TensorFlow", "Computer Vision"],;"
-    useCases["Assembly Lines", "Quality Inspection", "Material Handling", "Packaging"],;"
-    integrations["PLC Systems", "MES Systems", "ERP Systems", "Vision Cameras", "Sensors"],;"
-    compliance["Safety Standards", "Industry Regulations", "Quality Standards", "ISO Certifications"],;"
-    support["24/7 Support", "Installation", "Training", "Maintenance"]},;
+    technologyStack["ROS", "Python", "C++", "TensorFlow", "Computer Vision"],"
+    useCases["Assembly Lines", "Quality Inspection", "Material Handling", "Packaging"],"
+    integrations["PLC Systems", "MES Systems", "ERP Systems", "Vision Cameras", "Sensors"],"
+    compliance["Safety Standards", "Industry Regulations", "Quality Standards", "ISO Certifications"],"
+    support["24/7 Support", "Installation", "Training", "Maintenance"]},
   // Augmented Reality Platform
   {
 "
@@ -205,7 +205,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 999,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "3D content creation","
       "Multi-user collaboration","
       "Real-time rendering","
@@ -214,19 +214,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Analytics tracking","
       "Cross-platform support","
       "API integration"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Enhanced training effectiveness","
       "Improved collaboration","
       "Cost savings","
       "Better customer engagement","
       "Innovative experiences"
-    ],;"
-    targetAudience["Training & Education", "Design & Engineering", "Healthcare", "Retail", "Real Estate"],;"
+    ],"
+    targetAudience["Training & Education", "Design & Engineering", "Healthcare", "Retail", "Real Estate"],"
     marketPrice: "$999-2,499/month","
     website: "https://ziontechgroup.com/ar-vr-enterprise-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["AR/VR", "Mixed Reality", "Training", "Collaboration", "3D Content"],;
+    tags["AR/VR", "Mixed Reality", "Training", "Collaboration", "3D Content"],
     aiScore: 94,
     rating: 4.7,
     reviewCount: 156,
@@ -240,13 +240,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"],;"
-    useCases["Employee Training", "Product Design", "Virtual Meetings", "Customer Experiences"],;"
-    integrations["Microsoft HoloLens", "Meta Quest", "Magic Leap", "Mobile Devices", "Web Browsers"],;"
-    compliance["Accessibility Standards", "Privacy Regulations", "Content Guidelines", "Platform Requirements"],;"
-    support["24/7 Support", "Content Creation", "Training", "Custom Development"]},;
+    technologyStack["Unity", "Unreal Engine", "WebXR", "Three.js", "ARCore/ARKit"],"
+    useCases["Employee Training", "Product Design", "Virtual Meetings", "Customer Experiences"],"
+    integrations["Microsoft HoloLens", "Meta Quest", "Magic Leap", "Mobile Devices", "Web Browsers"],"
+    compliance["Accessibility Standards", "Privacy Regulations", "Content Guidelines", "Platform Requirements"],"
+    support["24/7 Support", "Content Creation", "Training", "Custom Development"]},
   // Digital Twin Platform
   {
 "
@@ -258,7 +258,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 1899,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "3D modeling & visualization","
       "Real-time data integration","
       "Predictive analytics","
@@ -267,19 +267,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Scenario testing","
       "Collaborative environment","
       "API access"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Predictive maintenance","
       "Performance optimization","
       "Risk reduction","
       "Cost savings","
       "Better decision making"
-    ],;"
-    targetAudience["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Transportation"],;"
+    ],"
+    targetAudience["Manufacturing", "Infrastructure", "Energy", "Healthcare", "Transportation"],"
     marketPrice: "$1,899-3,999/month","
     website: "https://ziontechgroup.com/digital-twin-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],;
+    tags["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
     aiScore: 96,
     rating: 4.8,
     reviewCount: 123,
@@ -293,13 +293,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"],;"
-    useCases["Asset Monitoring", "Process Optimization", "Predictive Maintenance", "Training & Simulation"],;"
-    integrations["IoT Sensors", "CAD Systems", "PLM Systems", "Analytics Tools", "Cloud Platforms"],;"
-    compliance["Industry Standards", "Data Security", "Privacy Regulations", "Quality Standards"],;"
-    support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
+    technologyStack["Unity", "Unreal Engine", "Python", "Three.js", "IoT Platforms"],"
+    useCases["Asset Monitoring", "Process Optimization", "Predictive Maintenance", "Training & Simulation"],"
+    integrations["IoT Sensors", "CAD Systems", "PLM Systems", "Analytics Tools", "Cloud Platforms"],"
+    compliance["Industry Standards", "Data Security", "Privacy Regulations", "Quality Standards"],"
+    support["24/7 Support", "Implementation", "Training", "Custom Development"]},
   // Biometric Security Platform
   {
 "
@@ -311,7 +311,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 799,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "Multi-modal biometric authentication","
       "AI-powered recognition","
       "Liveness detection","
@@ -320,19 +320,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Audit logging","
       "API for developers","
       "Mobile SDK"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Enhanced security","
       "Improved user experience","
       "Reduced fraud","
       "Compliance ready","
       "Scalable solution"
-    ],;"
-    targetAudience["Financial Services", "Healthcare", "Government", "Enterprises", "Retail"],;"
+    ],"
+    targetAudience["Financial Services", "Healthcare", "Government", "Enterprises", "Retail"],"
     marketPrice: "$799-1,999/month","
     website: "https://ziontechgroup.com/biometric-security-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["Biometrics", "Security", "Authentication", "AI", "Access Control"],;
+    tags["Biometrics", "Security", "Authentication", "AI", "Access Control"],
     aiScore: 95,
     rating: 4.8,
     reviewCount: 178,
@@ -346,13 +346,13 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"],;"
-    useCases["Access Control", "Identity Verification", "Fraud Prevention", "Secure Authentication"],;"
-    integrations["Active Directory", "LDAP", "SSO Systems", "Mobile Apps", "Web Applications"],;"
-    compliance["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],;"
-    support["24/7 Support", "Implementation", "Training", "Custom Development"]},;
+    technologyStack["Python", "TensorFlow", "OpenCV", "React Native", "Node.js"],"
+    useCases["Access Control", "Identity Verification", "Fraud Prevention", "Secure Authentication"],"
+    integrations["Active Directory", "LDAP", "SSO Systems", "Mobile Apps", "Web Applications"],"
+    compliance["GDPR", "CCPA", "HIPAA", "SOC 2", "ISO 27001"],"
+    support["24/7 Support", "Implementation", "Training", "Custom Development"]},
   // Neuromorphic Computing Platform
   {
 "
@@ -364,7 +364,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
     price: 3999,"
     currency: "$","
     pricingModel: "monthly",
-    features[;"
+    features[,"
       "Spiking neural networks","
       "Event-driven processing","
       "Low-power consumption","
@@ -373,19 +373,19 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       "Neuromorphic algorithms","
       "Edge AI deployment","
       "Research tools"
-    ],;
-    benefits[;"
+    ],
+    benefits[,"
       "Ultra-low power consumption","
       "Real-time processing","
       "Efficient learning","
       "Edge AI capabilities","
       "Brain-inspired architecture"
-    ],;"
-    targetAudience["AI Research", "IoT Devices", "Robotics", "Neuromorphic Hardware", "Edge Computing"],;"
+    ],"
+    targetAudience["AI Research", "IoT Devices", "Robotics", "Neuromorphic Hardware", "Edge Computing"],"
     marketPrice: "$3,999-6,999/month","
     website: "https://ziontechgroup.com/neuromorphic-computing-platform","
     contactEmail: "kleber@ziontechgroup.com","
-    tags["Neuromorphic Computing", "AI", "Brain-Inspired", "Edge Computing", "Research"],;
+    tags["Neuromorphic Computing", "AI", "Brain-Inspired", "Edge Computing", "Research"],
     aiScore: 98,
     rating: 4.9,
     reviewCount: 67,
@@ -399,11 +399,11 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [// Blockc
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },"
-    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],;"
+    images["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],"
     createdAt: "2027-01-15T10:00:00.000Z","
-    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],;"
-    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],;"
-    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;"
-    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],;"
-    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"]};];
+    technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],"
+    useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],"
+    integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],"
+    compliance: ["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],"
+    support: ["24/7 Support", "Research Collaboration", "Training", "Custom Development"]},],
 '"

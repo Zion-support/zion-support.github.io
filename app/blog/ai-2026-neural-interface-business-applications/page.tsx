@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Neural Interface Business Applications';
-  description: 'Explore how neural interfaces are revolutionizing business operations. Complete guide to brain-computer interfaces in enterprise environments.';
-  keywords: ['neural interfacesbrain-computer interfaces', 'BCIneural technology', 'business applications'],
-};
+  title: 'AI 2026: Neural Interface Business Applications',
+  description: 'Explore how neural interfaces are revolutionizing business operations. Complete guide to brain-computer interfaces in enterprise environments.',
+  keywords: ['neural interfacesbrain-computer interfacesBCIneural technology', 'business applications']
+},
 export default function NeuralInterfaceBusinessApplications() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -16,7 +16,7 @@ export default function NeuralInterfaceBusinessApplications() {,
               AI 2026: Neural Interface Business Applications,
             </h1>,
             <p className="text-xl text-gray-600 mb-6">,
-              Discover how neural interfaces are transforming business operations, enhancing human capabilities;
+              Discover how neural interfaces are transforming business operations, enhancing human capabilities,
               and creating new possibilities for enterprise productivity and innovation.,
             </p>,
             <div className="flex flex-wrap gap-2 mb-8">,
@@ -254,4 +254,4 @@ export default function NeuralInterfaceBusinessApplications() {,
         </div>,
       </div>,
     </div>,
-  ),}
+  )}

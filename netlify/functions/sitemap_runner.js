@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 sitemap_runner function triggered');
+  console.log('🤖 sitemap_runner function triggered'),
   
   try {
     // Sitemap generation logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate sitemap generation
     const sitemapData = {
@@ -11,21 +11,19 @@ exports.handler = async function(event, context) {
       generatedPages: Math.floor(Math.random() * 1900) + 900,
       excludedPages: Math.floor(Math.random() * 100) + 50,
       generationTime: Math.floor(Math.random() * 60) + 30
-    };
+    },
     
     // Simulate sitemap types
     const sitemapTypes = [
-      'main-sitemap',
-      'blog-sitemap',
-      'product-sitemap',
-      'category-sitemap'
-    ];
+      'main-sitemapblog-sitemap',
+      'product-sitemapcategory-sitemap'
+    ],
     
     // Simulate generation results
-    const generationResults = {};
+    const generationResults = {},
     for (const type of sitemapTypes) {
-      await new Promise(resolve => setTimeout(resolve, 40)); // Simulate generation time
-      generationResults[type] = Math.random() > 0.02 ? 'success' : 'partial'; // 98% success rate
+      await new Promise(resolve => setTimeout(resolve, 40)), // Simulate generation time
+      generationResults[type] = Math.random() > 0.02 ? 'success' : 'partial', // 98% success rate
     }
     
     const result = {
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         coverage: (sitemapData.generatedPages / sitemapData.totalPages * 100).toFixed(2) + '%',
         nextRun: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString() // 12 hours from now
       })
-    };
+    },
     
-    console.log('✅ sitemap_runner completed successfully');
-    return result;
+    console.log('✅ sitemap_runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ sitemap_runner failed:', error);
+    console.error('❌ sitemap_runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'sitemap_runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

@@ -1,17 +1,17 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export /**
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
-import React from 'react';
-import { GradientHeading } from "./GradientHeading";
+import React from 'react',
+import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
 
 interface HowItWorksSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 const getSteps = (t: any) => [
@@ -56,26 +56,26 @@ const getSteps = (t: any) => [
     bgColor: "from-zion-purple-light/20 to-zion-purple/20",
     details: ["
       "Comprehensive testing","
-      "Documentation delivery",;"
-      "Training and handover",;"
-      "Post-launch support";
-    ],;"
-    duration: "Ongoing",;"
-    success: "100% client retention"};
-];
+      "Documentation delivery","
+      "Training and handover","
+      "Post-launch support",
+    ],"
+    duration: "Ongoing","
+    success: "100% client retention"},
+],
 
-const stats = [;"
-  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },;"
-  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },;"
-  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },;"
-  { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };];
+const stats = [,"
+  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },"
+  { icon: <Target className="w-6 h-6"  />, value: "99.9%", label: "Success Rate" },"
+  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },"
+  { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" },],
 
-  const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
-  const [activeStep, setActiveStep] = useState < number> (0) ;
+  const [hoveredStep, setHoveredStep] = useState < number | null> (null) ,
+  const [activeStep, setActiveStep] = useState < number> (0) ,
 
       transition: {
-        staggerChildren: 0.2,;
-        delayChildren: 0.1}}};
+        staggerChildren: 0.2,
+        delayChildren: 0.1}}},
 
   const statsVariants = {
   hidden: { opacity: 0,
@@ -83,7 +83,7 @@ const stats = [;"
 
 },
     visible: {
-      opacity: 1,;
+      opacity: 1,
   { duration: 20, repeat: Infinity,
   ease: "linear"
   { duration: 25, repeat: Infinity,
@@ -109,10 +109,10 @@ const stats = [;"
                   <div className="mt-4 text-zion - cyan / 60 text-xs">
 =======
   
-      scale: 1,;
+      scale: 1,
       transition: {
-        duration: 0.5,;"
-        ease: "easeOut"}}};
+        duration: 0.5,"
+        ease: "easeOut"}}},
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}"
@@ -197,7 +197,7 @@ const stats = [;"
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map((stat, index) => (,
             <motion.div 
               key={index} 
               variants={statsVariants}"
@@ -391,14 +391,14 @@ const stats = [;"
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">"              <p className="text-white text-lg mb-4">
                 Ready to start your project journey?
               </p>"
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
+              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-purple/25">
                 Get Started Today"
                 <Rocket className="w-5 h-5" />              </button>
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
 
 }
 '"`

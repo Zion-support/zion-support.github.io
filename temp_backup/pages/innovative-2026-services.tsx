@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Rocket, Shield, Zap, Brain, Cpu } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { innovative2026Services } from '../data/innovative-2026-services';
-import { revolutionaryAIServices2026 } from '../data/revolutionary-ai-services-2026';
-import { enterpriseITSolutions2026 } from '../data/enterprise-it-solutions-2026';
-import { cybersecuritySolutions2026 } from '../data/cybersecurity-solutions-2026';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Rocket, Shield, Zap, Brain, Cpu } from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { innovative2026Services } from '../data/innovative-2026-services',
+import { revolutionaryAIServices2026 } from '../data/revolutionary-ai-services-2026',
+import { enterpriseITSolutions2026 } from '../data/enterprise-it-solutions-2026',
+import { cybersecuritySolutions2026 } from '../data/cybersecurity-solutions-2026',
 
 export default function Innovative2026ServicesPage() {
   const contactInfo = {
@@ -17,7 +17,7 @@ export default function Innovative2026ServicesPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all 2026 services
   const all2026Services = [
@@ -25,7 +25,7 @@ export default function Innovative2026ServicesPage() {
     ...revolutionaryAIServices2026,
     ...enterpriseITSolutions2026,
     ...cybersecuritySolutions2026
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -58,7 +58,7 @@ export default function Innovative2026ServicesPage() {
       icon: Shield,
       color: 'from-red-500 to-pink-600'
     }
-  ];
+  ],
 
 const innovative-2026-services: React.FC = () => {
   return (
@@ -75,8 +75,8 @@ const innovative-2026-services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default AdvancedNeuralInterface2026;
+export default AdvancedNeuralInterface2026,

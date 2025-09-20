@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Building, 
+  Building,
   Heart, 
   Factory, 
   DollarSign, 
@@ -13,78 +13,45 @@ import {
   Cloud,
   Shield,
   TrendingUp
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 const IndustrySolutions: React.FC = () => {
   const industries = [
     {
-      title: 'Healthcare',
-      description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',
-      icon: Heart,
-      path: '/solutions/healthcare',
-      solutions: ['AI Healthcare Analytics', 'Predictive Diagnostics', 'Patient Care Optimization', 'Compliance Management']
+      title: 'Healthcare',description: 'AI-powered healthcare solutions for improved patient care and operational efficiency.',icon: Heart,path: '/solutions/healthcare',solutions: ['AI Healthcare AnalyticsPredictive Diagnostics', 'Patient Care OptimizationCompliance Management']
     },
     {
-      title: 'Manufacturing',
-      description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.',
-      icon: Factory,
-      path: '/manufacturing-solutions',
-      solutions: ['Smart Factory Automation', 'Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
+      title: 'Manufacturing',description: 'Smart manufacturing solutions with IoT, AI, and automation technologies.',
+      icon: Factory,path: '/manufacturing-solutions',solutions: ['Smart Factory AutomationPredictive Maintenance', 'Quality ControlSupply Chain Optimization']
     },
     {
-      title: 'Financial Services',
-      description: 'Advanced financial technology solutions for risk management and operational efficiency.',
-      icon: DollarSign,
-      path: '/financial-solutions',
-      solutions: ['AI Financial Analytics', 'Risk Management', 'Trading Algorithms', 'Compliance Automation']
+      title: 'Financial Services',description: 'Advanced financial technology solutions for risk management and operational efficiency.',icon: DollarSign,path: '/financial-solutions',solutions: ['AI Financial AnalyticsRisk Management', 'Trading AlgorithmsCompliance Automation']
     },
     {
-      title: 'Automotive',
-      description: 'Connected vehicle solutions and automotive technology innovations.',
-      icon: Car,
-      path: '/automotive-solutions',
-      solutions: ['Connected Vehicles', 'Predictive Maintenance', 'Fleet Management', 'Safety Systems']
+      title: 'Automotive',description: 'Connected vehicle solutions and automotive technology innovations.',icon: Car,path: '/automotive-solutions',solutions: ['Connected VehiclesPredictive Maintenance', 'Fleet ManagementSafety Systems']
     },
     {
-      title: 'Energy & Utilities',
-      description: 'Smart grid and energy management solutions for sustainability and efficiency.',
-      icon: Zap,
-      path: '/energy-solutions',
-      solutions: ['Smart Grid Management', 'Energy Optimization', 'Predictive Maintenance', 'Sustainability Analytics']
+      title: 'Energy & Utilities',description: 'Smart grid and energy management solutions for sustainability and efficiency.',icon: Zap,path: '/energy-solutions',solutions: ['Smart Grid ManagementEnergy Optimization', 'Predictive MaintenanceSustainability Analytics']
     },
     {
-      title: 'Retail & E-commerce',
-      description: 'Digital transformation solutions for modern retail and e-commerce operations.',
-      icon: Globe,
-      path: '/retail-solutions',
-      solutions: ['Customer Analytics', 'Inventory Management', 'Personalization', 'Supply Chain Optimization']
+      title: 'Retail & E-commerce',description: 'Digital transformation solutions for modern retail and e-commerce operations.',icon: Globe,path: '/retail-solutions',solutions: ['Customer AnalyticsInventory Management', 'PersonalizationSupply Chain Optimization']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      title: 'Industry Expertise',
-      description: 'Deep understanding of industry-specific challenges and requirements',
-      icon: Brain
-    },
+      title: 'Industry Expertise',description: 'Deep understanding of industry-specific challenges and requirements',icon: Brain
+    };
     {
-      title: 'Customized Solutions',
-      description: 'Tailored technology solutions for your specific industry needs',
-      icon: Building
-    },
+      title: 'Customized Solutions',description: 'Tailored technology solutions for your specific industry needs',icon: Building
+    };
     {
-      title: 'Proven Results',
-      description: 'Track record of successful implementations across industries',
-      icon: Star
-    },
+      title: 'Proven Results',description: 'Track record of successful implementations across industries',icon: Star
+    };
     {
-      title: 'Future-Ready',
-      description: 'Scalable solutions that grow with your business',
-      icon: TrendingUp
+      title: 'Future-Ready',description: 'Scalable solutions that grow with your business',icon: TrendingUp
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -223,7 +190,7 @@ const IndustrySolutions: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our industry-specific solutions can address your unique challenges and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
@@ -240,7 +207,6 @@ const IndustrySolutions: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default IndustrySolutions;

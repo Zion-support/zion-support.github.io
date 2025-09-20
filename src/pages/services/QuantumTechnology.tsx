@@ -1,51 +1,34 @@
-import React from 'react';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from 'lucide-react';
-
+import React from "react";
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from "lucide-react";
 const QuantumTechnology = () => {
   const quantumServices = [
     {
-      title: "Quantum Neural Networks",
-      description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",
-      price: "From $35,000/project",
+      title: "Quantum Neural Networks",description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",price: "From $35,000/project",
       features: ["Quantum algorithms", "Pattern recognition", "Data analysis", "Machine learning"],
       icon: Box
-    },
+    };
     {
-      title: "Quantum Edge Computing",
-      description: "Distributed quantum computing solutions for real-time processing at the edge.",
-      price: "From $28,000/month",
+      title: "Quantum Edge Computing",description: "Distributed quantum computing solutions for real-time processing at the edge.",price: "From $28,000/month",
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
-    },
+    };
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
-      price: "From $42,000/month",
+      title: "Quantum Cryptography",description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",price: "From $42,000/month",
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
       icon: Shield
     }
   ];
-
   const quantumTechnologies = [
     {
-      name: "Quantum Computing",
-      description: "Superposition and entanglement-based computation",
-      icon: Cpu,
-      features: ["Qubit management", "Quantum gates", "Error correction", "Quantum algorithms"]
+      name: "Quantum Computing",description: "Superposition and entanglement-based computation",icon: Cpu,features: ["Qubit management", "Quantum gates", "Error correction", "Quantum algorithms"]
     },
     {
-      name: "Quantum Machine Learning",
-      description: "AI algorithms leveraging quantum properties",
-      icon: BarChart3,
-      features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
+      name: "Quantum Machine Learning",description: "AI algorithms leveraging quantum properties",icon: BarChart3,features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
     },
     {
-      name: "Quantum Communications",
-      description: "Secure communication using quantum principles",
-      icon: Globe,
-      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
+      name: "Quantum Communications",description: "Secure communication using quantum principles",icon: Globe,features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
     }
-  ];
+  ],
 
   const benefits = [
     "Exponential speedup for complex computational problems",
@@ -54,12 +37,12 @@ const QuantumTechnology = () => {
     "Revolutionary breakthroughs in scientific research",
     "Competitive advantage in technology innovation",
     "Future-proof solutions for emerging challenges"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
@@ -96,7 +79,7 @@ const QuantumTechnology = () => {
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 Quantum computing leverages the principles of quantum mechanics to process information in ways that
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously,
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously;
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">
@@ -198,7 +181,7 @@ const QuantumTechnology = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -206,7 +189,7 @@ const QuantumTechnology = () => {
                 Why Choose Quantum Technology?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Quantum technology represents the next frontier in computing,
+                Quantum technology represents the next frontier in computing;
                 offering unprecedented capabilities for solving complex problems.
               </p>
               <ul className="space-y-3">
@@ -238,7 +221,7 @@ const QuantumTechnology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready for the Quantum Future?
@@ -258,7 +241,6 @@ const QuantumTechnology = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default QuantumTechnology;

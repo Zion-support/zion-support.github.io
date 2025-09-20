@@ -1,29 +1,29 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             title: "Endpoint Protection",
             description: "Comprehensive endpoint security and device management",
-            features["Antivirus", "EDR", "Device control", "Application whitelisting"];
-        },;
+            features["Antivirus", "EDR", "Device control", "Application whitelisting"],
+        },
         {
             title: "Cloud Security",
             description: "Multi - cloud security and compliance management",
-            features["CSPM", "Cloud DLP", "Identity management", "API security"];
-        },;
+            features["CSPM", "Cloud DLP", "Identity management", "API security"],
+        },
         {
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
-            features["Encryption at rest", "Backup automation", "DR planning", "Data classification"];
+            features["Encryption at rest", "Backup automation", "DR planning", "Data classification"],
         }
-    ];
+    ],
     const complianceFrameworks = ["SOC 2 Type II",
         "ISO 27001",
         "NIST Cybersecurity Framework",
         "GDPR",
         "HIPAA",
         "PCI DSS"
-    ];
+    ],
     const threatIntelligence = [{
             category: "Real - time Monitoring",
             description: "24 / 7 security operations center with AI - powered threat detection"
@@ -40,7 +40,7 @@ export default function Page() {
             category: "Forensic Analysis",
             description: "Advanced digital forensics and evidence collection"
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max - w-7xl mx -auto">
@@ -204,5 +204,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

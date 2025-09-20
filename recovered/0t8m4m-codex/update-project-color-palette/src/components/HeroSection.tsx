@@ -1,7 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Link } from "react-router-dom",
 
 export function HeroSection() {
   return (
@@ -27,7 +27,7 @@ export function HeroSection() {
           Publish, connect, and thrive — all in one place.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className="flex flex-col sm: flex-row justify-center gap-4">
           <Button
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6"
             size="lg"
@@ -46,5 +46,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

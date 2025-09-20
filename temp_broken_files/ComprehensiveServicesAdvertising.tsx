@@ -23,7 +23,7 @@
               <p className="text-pink-300">,
                 364 E Main St STE 1008<br />,
                 Middletown DE 19709,
-      {/* Services Overview */,}
+      {/* Services Overview */}
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div,
           className="text-center mb-16",
@@ -46,7 +46,7 @@
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover: scale-105 ${,
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg',
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700',}`}
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
               >,
                 <span className="mr-2">{category.icon}</span>,
                 {category.name} ({category.count}),
@@ -58,12 +58,12 @@
             <input,
               type="text",
               placeholder="Search services...",
-              value={searchTerm,}
+              value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 pr-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-80",
             />,
           <select,
-            value={sortBy,}
+            value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
           >,
@@ -71,7 +71,7 @@
             <option value="price">Sort by Price</option>,
             <option value="reviews">Sort by Reviews</option>,
             <option value="name">Sort by Name</option>,
-        {/* Services Grid */,}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
           <div>,
             {sortedServices.map((service, index) => (,
@@ -82,7 +82,7 @@
                 <div className="flex items-center justify-between mb-4">,
                   <div className="flex items-center space-x-3">,
                     <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">,
-                      {getCategoryIcon(service.category),}
+                      {getCategoryIcon(service.category)}
                     <span className="text-sm text-gray-400 bg-gray-700 px-2 py-1 rounded">,
                       {service.subcategory}
                   <div className="flex items-center space-x-1">,
@@ -94,16 +94,16 @@
                 <div className="space-y-3 mb-6">,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-400">Price: </span>,
-                    <span className="text-white font-semibold">{service.currency,}{service.price.toLocaleString()}</span>,
+                    <span className="text-white font-semibold">{service.currency}{service.price.toLocaleString()}</span>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-400">Market Price: </span>,
-                    <span className="text-blue-400">{service.marketPrice,}</span>,
+                    <span className="text-blue-400">{service.marketPrice}</span>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-400">ROI: </span>,
-                    <span className="text-green-400 font-semibold">{service.roi,}</span>,
+                    <span className="text-green-400 font-semibold">{service.roi}</span>,
                   <div className="flex items-center justify-between">,
                     <span className="text-gray-400">Setup Time: </span>,
-                    <span className="text-yellow-400">{service.setupTime,}</span>,
+                    <span className="text-yellow-400">{service.setupTime}</span>,
                 <div className="mb-4">,
                   <div className="flex items-center justify-between mb-2">,
                     <span className="text-gray-400 text-sm">AI Score</span>,
@@ -111,7 +111,7 @@
                   <div className="w-full bg-gray-700 rounded-full h-2">,
                     <div,
                       className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-300",
-                      style={{ width: `${service.aiScore,}%` }}
+                      style={{ width: `${service.aiScore}%` }}
                     ></div>,
                 <div className="mb-4">,
                   <p className="text-gray-400 text-sm mb-2">Key Features: </p>,
@@ -131,7 +131,7 @@
                     <span>Learn More</span>,
                     <ArrowRight className="w-4 h-4 ml-2" />,
                   <a,
-                    href={`https://ziontechgroup.com/services/${service.id,}`}
+                    href={`https://ziontechgroup.com/services/${service.id}`}
                     target="_blank",
                     rel="noopener noreferrer",
                     className="w-full border border-blue-500 text-blue-400 font-semibold py-3 px-4 rounded-lg hover: bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center",
@@ -141,7 +141,7 @@
                   </a>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -172,7 +172,7 @@
           </div>,
         </div>,
       </div>,
-      {/* Footer Contact Section */,}
+      {/* Footer Contact Section */}
       <div className="bg-gray-900 py-16">,
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">,
@@ -223,9 +223,9 @@
                     <p className="text-white font-semibold">Website</p>,
                     <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-green-400 hover:text-green-300">,
                       ziontechgroup.com,
-  );
-export default ComprehensiveServicesAdvertising;
-import React from 'react';
+  ),
+export default ComprehensiveServicesAdvertising,
+import React from 'react',
 const function ComprehensiveServicesAdvertising() {: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -236,7 +236,7 @@ const function ComprehensiveServicesAdvertising() {: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function ComprehensiveServicesAdvertising() {;
+  )
+},
+export default function ComprehensiveServicesAdvertising() {,
 }}}

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Link, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredBlockchain: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredBlockchain: React.FC = () => {
       title: 'Multi-chain Support',
       description: 'Blockchain platform support across various networks and protocols'
     }
-  ];
+  ],
 
   const blockchainCapabilities = [
     {
       area: 'Smart Contracts',
-      capabilities: ['AI-powered execution', 'Automated logic', 'Conditional contracts', 'Self-executing agreements'],
+      capabilities: ['AI-powered executionAutomated logic', 'Conditional contractsSelf-executing agreements'],
       improvement: '99.9% reliability',
       contracts: 'Intelligent'
     },
     {
       area: 'Transaction Processing',
-      capabilities: ['High-speed processing', 'Scalability optimization', 'Fee optimization', 'Throughput enhancement'],
+      capabilities: ['High-speed processingScalability optimization', 'Fee optimizationThroughput enhancement'],
       improvement: '1000+ TPS',
       processing: 'High-performance'
     },
     {
       area: 'Security & Consensus',
-      capabilities: ['AI threat detection', 'Consensus optimization', 'Fraud prevention', 'Network security'],
+      capabilities: ['AI threat detectionConsensus optimization', 'Fraud preventionNetwork security'],
       improvement: 'Zero breaches',
       security: 'Robust'
     },
     {
       area: 'Data Analytics',
-      capabilities: ['Blockchain analytics', 'Transaction insights', 'Pattern recognition', 'Risk assessment'],
+      capabilities: ['Blockchain analyticsTransaction insights', 'Pattern recognitionRisk assessment'],
       improvement: 'Real-time insights',
       analytics: 'Comprehensive'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Financial Services',
       description: 'AI-powered blockchain platform for financial transactions and services',
-      benefits: ['Secure transactions', 'Cost reduction', 'Transparency', 'Regulatory compliance']
+      benefits: ['Secure transactionsCost reduction', 'TransparencyRegulatory compliance']
     },
     {
       title: 'Supply Chain Management',
       description: 'Blockchain platform for supply chain transparency and traceability',
-      benefits: ['End-to-end tracking', 'Fraud prevention', 'Quality assurance', 'Efficiency improvement']
+      benefits: ['End-to-end trackingFraud prevention', 'Quality assuranceEfficiency improvement']
     },
     {
       title: 'Digital Identity',
       description: 'Blockchain platform for secure digital identity and authentication',
-      benefits: ['Identity verification', 'Privacy protection', 'Access control', 'Fraud prevention']
+      benefits: ['Identity verificationPrivacy protection', 'Access controlFraud prevention']
     },
     {
       title: 'Asset Tokenization',
       description: 'Blockchain platform for digital asset creation and management',
-      benefits: ['Asset digitization', 'Fractional ownership', 'Liquidity enhancement', 'Market access']
+      benefits: ['Asset digitizationFractional ownership', 'Liquidity enhancementMarket access']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredBlockchain: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with blockchain development',
       features: [
-        'Basic blockchain features',
-        'Single chain support',
-        'Standard security',
-        'Email support',
+        'Basic blockchain featuresSingle chain support',
+        'Standard securityEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredBlockchain: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced blockchain needs',
       features: [
-        'Advanced blockchain features',
-        'Multi-chain support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced blockchain featuresMulti-chain support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time processing'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredBlockchain: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex blockchain requirements',
       features: [
-        'Custom blockchain development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom blockchain developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredBlockchain: React.FC = () => {
       position: "Platform Director",
       company: "Advanced Blockchain Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredBlockchain: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Build with AI-Powered Blockchain Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredBlockchain: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredBlockchain;
+export default AIPoweredBlockchain,

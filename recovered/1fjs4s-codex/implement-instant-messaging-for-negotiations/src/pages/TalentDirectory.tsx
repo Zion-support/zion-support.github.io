@@ -1,24 +1,24 @@
 
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
+import React, { useState, useEffect } from "react",
+import { useNavigate } from "react-router-dom",
+import { FilterSidebar } from "@/components/talent/FilterSidebar",
+import { TalentResults } from "@/components/talent/TalentResults",
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",
+import { SORT_OPTIONS } from "@/data/sortOptions",
+import { X } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { TalentProfile } from "@/types/talent",
 import {
   Pagination,
   PaginationContent,
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
+  PaginationPrevious
+} from "@/components/ui/pagination",
 
 export default function TalentDirectory() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(),
 
   // Use our custom hook to manage state
   const {
@@ -49,31 +49,31 @@ export default function TalentDirectory() {
     toggleRegion,
     clearFilters,
     toggleSection,
-    handleToggleSave,
-  } = useTalentDirectory();
+    handleToggleSave
+  } = useTalentDirectory(),
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1),
+  const itemsPerPage = 10,
 
   useEffect(() => {
-    setCurrentPage(1);
-  }, [filteredTalents]);
+    setCurrentPage(1),
+  }, [filteredTalents]),
 
-  const totalPages = Math.ceil(filteredTalents.length / itemsPerPage);
+  const totalPages = Math.ceil(filteredTalents.length / itemsPerPage),
   const paginatedTalents = filteredTalents.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
-  );
+  ),
   
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent);
-    setIsHireModalOpen(true);
-  };
+    setSelectedTalent(talent),
+    setIsHireModalOpen(true)
+  },
   
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
-    navigate(`/talent/${id}`);
-  };
+    navigate(`/talent/${id}`),
+  },
   
   return (
     <div className="container mx-auto px-4 py-8">
@@ -142,7 +142,7 @@ export default function TalentDirectory() {
                 setPriceRange,
                 experienceRange,
                 setExperienceRange,
-                clearFilters,
+                clearFilters
               }}
             />
 
@@ -154,8 +154,8 @@ export default function TalentDirectory() {
                       <PaginationPrevious
                         href="#"
                         onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.max(1, currentPage - 1));
+                          e.preventDefault(),
+                          setCurrentPage(Math.max(1, currentPage - 1)),
                         }}
                       />
                     </PaginationItem>
@@ -165,8 +165,8 @@ export default function TalentDirectory() {
                           href="#"
                           isActive={page === currentPage}
                           onClick={(e) => {
-                            e.preventDefault();
-                            setCurrentPage(page);
+                            e.preventDefault(),
+                            setCurrentPage(page),
                           }}
                         >
                           {page}
@@ -177,8 +177,8 @@ export default function TalentDirectory() {
                       <PaginationNext
                         href="#"
                         onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(Math.min(totalPages, currentPage + 1));
+                          e.preventDefault(),
+                          setCurrentPage(Math.min(totalPages, currentPage + 1)),
                         }}
                       />
                     </PaginationItem>
@@ -229,5 +229,5 @@ export default function TalentDirectory() {
           </div>
         </div>
       </div>
-  );
+  ),
 }

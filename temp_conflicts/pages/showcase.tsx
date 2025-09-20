@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function ShowcasePage() {
   const projects = [
@@ -58,7 +58,7 @@ export default function ShowcasePage() {
       status: "Development",
       category: "Quantum"
     }
-  ];
+  ],
 
   const technologies = [
     { name: "Artificial Intelligence", icon: "🧠", description: "Advanced ML models and neural networks" },
@@ -67,7 +67,7 @@ export default function ShowcasePage() {
     { name: "Edge Computing", icon: "🌐", description: "Distributed computing at the network edge" },
     { name: "Blockchain", icon: "🔗", description: "Decentralized applications and smart contracts" },
     { name: "Cybersecurity", icon: "🔒", description: "Advanced threat detection and prevention" }
-  ];
+  ],
 
   return (
     <>
@@ -221,7 +221,7 @@ export default function ShowcasePage() {
               <p className="text-white/70 mb-8 max-w-2xl mx-auto">
                 Whether you're looking to implement cutting-edge technology solutions or want to collaborate on innovative projects, we're here to help bring your vision to life.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all">
                   Start a Project
                 </Link>
@@ -234,5 +234,5 @@ export default function ShowcasePage() {
         </main>
       </div>
     </>
-  );
+  )
 }

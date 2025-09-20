@@ -1,26 +1,26 @@
-import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Send, Mail } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+import React from 'react',
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',
+import { useForm } from 'react-hook-form',
+import { zodResolver } from '@hookform/resolvers/zod',
+import { z } from 'zod',
+import { Send, Mail } from 'lucide-react',
+import { toast } from '@/hooks/use-toast',
 
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
+  isOpen: boolean,
+  onClose: () => void,
+  publisherName: string,
+  publisherEmail?: string
 }
 
 type FormValues = {
-  subject: string;
-  message: string;
-};
+  subject: string,
+  message: string
+},
 
 const schema = z.object({
   subject: z
@@ -30,8 +30,8 @@ const schema = z.object({
   message: z
     .string()
     .min(20, 'Message must be at least 20 characters')
-    .nonempty('Message is required'),
-});
+    .nonempty('Message is required')
+}),
 
 export function ContactPublisherModal({
 
@@ -40,34 +40,34 @@ export function ContactPublisherModal({
   publisherName,
   publisherEmail}) {
 
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false),
   const form = useForm({
 
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     mode: 'onChange',
-    defaultValues: { subject: '', message: '' }});
+    defaultValues: { subject: '', message: '' }}),
   const handleSend = async () => {
-    const values = form.getValues();
-    setIsSubmitting(true);
+    const values = form.getValues(),
+    setIsSubmitting(true),
     try {
 
       await api.post('/messages', {
 
         productId,
         subject: values.subject,
-        body: values.message});
-      toast.success('Message sent!');
-      form.reset();
-      onClose();
+        body: values.message}),
+      toast.success('Message sent!'),
+      form.reset(),
+      onClose(),
     } catch(err) {
 
-      toast.error(err?.message || 'Failed to send message');
+      toast.error(err?.message || 'Failed to send message'),
     } finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
   return ()
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
@@ -137,6 +137,6 @@ export function ContactPublisherModal({
         </Form>
       </DialogContent>
     </Dialog>
-  );
+  ),
 }
 '"`

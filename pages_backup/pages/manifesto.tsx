@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import React from 'react';
+import Head from 'next/head',
+import React from 'react',
 export default function ManifestoPage(): JSX.Element {,
   return (,
     <>,
@@ -50,12 +50,11 @@ export default function ManifestoPage(): JSX.Element {,
           </section>,
         </div>,
       </main>,
-    </>,
-  ),
-};
+    </>)
+},
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
 ,

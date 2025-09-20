@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, TrendingUp, Zap, Users, Award,
   Brain, Atom, Shield, Target, Rocket, Building,
   Cpu, Globe, ArrowRight, Phone, Mail, MapPin, Grid
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import our innovative 2038 services
-import { innovative2038MicroSaasExpansions } from '../data/innovative-2038-micro-saas-expansions';
-import { innovative2038ITServicesExpansions } from '../data/innovative-2038-it-services-expansions';
-import { innovative2038AIServicesExpansions } from '../data/innovative-2038-ai-services-expansions';
+import { innovative2038MicroSaasExpansions } from '../data/innovative-2038-micro-saas-expansions',
+import { innovative2038ITServicesExpansions } from '../data/innovative-2038-it-services-expansions',
+import { innovative2038AIServicesExpansions } from '../data/innovative-2038-ai-services-expansions',
 
 // Contact information
 const contactInfo = {
@@ -18,7 +18,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 // Create service categories for pricing
 const serviceCategories = [
@@ -46,36 +46,36 @@ const serviceCategories = [
     description: 'Revolutionary AI and consciousness technology',
     services: innovative2038AIServicesExpansions
   }
-];
+],
 
 export default function Innovative2038Pricing() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [billingCycle, setBillingCycle] = useState('monthly'),
 
   const allServices = [
     ...innovative2038MicroSaasExpansions,
     ...innovative2038ITServicesExpansions,
     ...innovative2038AIServicesExpansions
-  ];
+  ],
 
   const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allServices;
-    const category = serviceCategories.find(cat => cat.id === selectedCategory);
-    return category ? category.services : allServices;
-  };
+    if (selectedCategory === 'all') return allServices,
+    const category = serviceCategories.find(cat => cat.id === selectedCategory),
+    return category ? category.services : allServices,
+  },
 
   const getPrice = (service: any) => {
-    return billingCycle === 'monthly' ? service.price.monthly : service.price.yearly;
-  };
+    return billingCycle === 'monthly' ? service.price.monthly : service.price.yearly
+  },
 
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly') {
-      const monthlyTotal = service.price.monthly * 12;
-      const yearlyPrice = service.price.yearly;
-      return monthlyTotal - yearlyPrice;
+      const monthlyTotal = service.price.monthly * 12,
+      const yearlyPrice = service.price.yearly,
+      return monthlyTotal - yearlyPrice
     }
-    return 0;
-  };
+    return 0,
+  },
 
 const innovative-2038-pricing: React.FC = () => {
   return (
@@ -92,7 +92,7 @@ const innovative-2038-pricing: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default innovative-2038-pricing;
+export default innovative-2038-pricing,

@@ -1,8 +1,8 @@
 export interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
 }
 
-export let cart: CartItem[] = [];
+export let cart: CartItem[] = [],

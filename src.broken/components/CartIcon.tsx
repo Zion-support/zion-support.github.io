@@ -1,11 +1,11 @@
-import { ShoppingCart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { useAppSelector } from '@/store/hooks';
-import { selectCartCount } from '@/store/cartSlice';
-import { cn } from '@/lib/utils';
+import { ShoppingCart } from 'lucide-react',
+import { Link } from 'react-router-dom',
+import { useAppSelector } from '@/store/hooks',
+import { selectCartCount } from '@/store/cartSlice',
+import { cn } from '@/lib/utils',
 
 export function CartIcon({ className }: { className?: string }) {
-  const count = useAppSelector(selectCartCount);
+  const count = useAppSelector(selectCartCount),
   return (
     <Link to="/cart" className={cn('relative', className)} data-cy="cart-link" aria-label="cart">
       <ShoppingCart className="w-6 h-6" />
@@ -15,5 +15,5 @@ export function CartIcon({ className }: { className?: string }) {
         </span>
       )}
     </Link>
-  );
+  ),
 }

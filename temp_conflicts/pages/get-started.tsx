@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
 import { 
   Rocket, CheckCircle, ArrowRight, Brain, Atom, 
   Shield, Zap, Users, Clock, Target, Star,
   FileText, Video, Code, Globe, Building
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>('');
-  const [currentStep, setCurrentStep] = useState(1);
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1),
 
   const onboardingSteps = [
     {
@@ -35,7 +35,7 @@ export default function GetStarted() {
       description: 'Start your journey with our expert team',
       icon: <Rocket className="w-8 h-8 text-green-400" />
     }
-  ];
+  ],
 
   const technologyPaths = [
     {
@@ -44,12 +44,10 @@ export default function GetStarted() {
       description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       features: [
-        'AI consciousness development',
-        'Emotional intelligence training',
-        'Self-aware neural networks',
-        'Autonomous decision making'
+        'AI consciousness developmentEmotional intelligence training',
+        'Self-aware neural networksAutonomous decision making'
       ],
-      useCases: ['Customer Success', 'HR Analytics', 'Mental Health', 'Education'],
+      useCases: ['Customer SuccessHR Analytics', 'Mental HealthEducation'],
       timeline: '6-12 months',
       complexity: 'Advanced'
     },
@@ -59,12 +57,10 @@ export default function GetStarted() {
       description: 'Leverage quantum computing for cryptography, optimization, and simulation',
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
-        'Quantum algorithms',
-        'Post-quantum cryptography',
-        'Quantum machine learning',
-        'Quantum simulation'
+        'Quantum algorithmsPost-quantum cryptography',
+        'Quantum machine learningQuantum simulation'
       ],
-      useCases: ['Financial Services', 'Healthcare', 'Research', 'Cybersecurity'],
+      useCases: ['Financial ServicesHealthcare', 'ResearchCybersecurity'],
       timeline: '8-18 months',
       complexity: 'Expert'
     },
@@ -74,12 +70,10 @@ export default function GetStarted() {
       description: 'Build self-managing and self-optimizing business operations',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       features: [
-        'Process automation',
-        'Self-healing infrastructure',
-        'Predictive maintenance',
-        'Autonomous operations'
+        'Process automationSelf-healing infrastructure',
+        'Predictive maintenanceAutonomous operations'
       ],
-      useCases: ['Manufacturing', 'DevOps', 'Customer Service', 'Supply Chain'],
+      useCases: ['ManufacturingDevOps', 'Customer ServiceSupply Chain'],
       timeline: '3-9 months',
       complexity: 'Intermediate'
     },
@@ -89,16 +83,14 @@ export default function GetStarted() {
       description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
       icon: <Building className="w-8 h-8 text-blue-400" />,
       features: [
-        'Cloud migration',
-        'Microservices architecture',
-        'AI-powered analytics',
-        'Security automation'
+        'Cloud migrationMicroservices architecture',
+        'AI-powered analyticsSecurity automation'
       ],
-      useCases: ['Digital Transformation', 'Legacy Modernization', 'Data Analytics', 'Security'],
+      useCases: ['Digital TransformationLegacy Modernization', 'Data AnalyticsSecurity'],
       timeline: '4-12 months',
       complexity: 'Intermediate'
     }
-  ];
+  ],
 
   const quickStartOptions = [
     {
@@ -133,24 +125,24 @@ export default function GetStarted() {
       action: 'Discuss Pilot',
       color: 'from-orange-500 to-red-600'
     }
-  ];
+  ],
 
   const handlePathSelection = (pathId: string) => {
-    setSelectedPath(pathId);
-    setCurrentStep(2);
-  };
+    setSelectedPath(pathId),
+    setCurrentStep(2)
+  },
 
   const handleNextStep = () => {
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);
+      setCurrentStep(currentStep + 1),
     }
-  };
+  },
 
   const handlePreviousStep = () => {
     if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
+      setCurrentStep(currentStep - 1),
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -462,7 +454,7 @@ export default function GetStarted() {
               Our team of experts is ready to help you navigate the future of technology. 
               Let's discuss your project and create a roadmap to success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
@@ -481,5 +473,5 @@ export default function GetStarted() {
         </div>
       </section>
     </div>
-  );
+  )
 }

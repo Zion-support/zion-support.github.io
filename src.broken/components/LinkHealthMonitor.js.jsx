@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
-  ];
+  ],
   useEffect(() => {
-    setLinkStatuses(sampleLinks);
-    generateReport(sampleLinks);
-  }, []);
+    setLinkStatuses(sampleLinks),
+    generateReport(sampleLinks),
+  }, []),
   const generateReport = links => {
 
-    const totalLinks = links.length;
-    const healthyLinks = links.filter(l => l.status === 'healthy').length;
-    const brokenLinks = links.filter(l => l.status === 'broken').length;
-    const externalLinks = links.filter(l => l.status === 'external').length;
+    const totalLinks = links.length,
+    const healthyLinks = links.filter(l => l.status === 'healthy').length,
+    const brokenLinks = links.filter(l => l.status === 'broken').length,
+    const externalLinks = links.filter(l => l.status === 'external').length,
     const avgResponseTime =
-      links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
+      links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks,
     setReport({
 
       totalLinks,
@@ -22,47 +22,47 @@ export default function Page() {
       brokenLinks,
       externalLinks,
       averageResponseTime: avgResponseTime,
-      lastUpdated: new Date()});
-  };
+      lastUpdated: new Date()}),
+  },
   const startMonitoring = async () => {
-    setIsMonitoring(true);
+    setIsMonitoring(true),
     // Simulate link checking
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsMonitoring(false);
-  };
+    await new Promise(resolve => setTimeout(resolve, 2000)),
+    setIsMonitoring(false),
+  },
   const getStatusIcon = status => {
 
     switch(status) {
 
       case 'healthy':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
+        return <CheckCircle className="w-4 h-4 text-green-400" />,
       case 'broken':"
-        return <AlertTriangle className="w-4 h-4 text-red-400" />;
+        return <AlertTriangle className="w-4 h-4 text-red-400" />,
       case 'external':"
-        return <ExternalLink className="w-4 h-4 text-blue-400" />;
-      default:"
-        return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+        return <ExternalLink className="w-4 h-4 text-blue-400" />,
+      default: "
+        return <RefreshCw className="w-4 h-4 text-yellow-400" />
     }
-  };
+  },
   const getStatusColor = status => {
 
     switch(status) {
 
       case 'healthy':'
-        return 'text-green-400';
+        return 'text-green-400',
       case 'broken':'
-        return 'text-red-400';
+        return 'text-red-400',
       case 'external':'
-        return 'text-blue-400';
-      default:'
-        return 'text-yellow-400';
+        return 'text-blue-400',
+      default: '
+        return 'text-yellow-400'
     }
-  };
+  },
   const filteredLinks = linkStatuses.filter(link => {
 
-    if (selectedFilter === 'all') return true;
-    return link.status === selectedFilter;
-  });
+    if (selectedFilter === 'all') return true,
+    return link.status === selectedFilter,
+  }),
   return ()
     <>
       {/* Floating Action Button */}
@@ -293,7 +293,7 @@ export default function Page() {
         </motion.div>
       )}
     </>
-  );
-};
-export default LinkHealthMonitor;
+  ),
+},
+export default LinkHealthMonitor,
 '"`

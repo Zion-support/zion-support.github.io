@@ -1,10 +1,10 @@
 
 interface ApiResponse<T = any> {
 
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;
+  success: boolean,
+  data?: T,
+  error?: string,
+  message?: string,
   count?: number}
 
 // Generic API error
@@ -15,7 +15,7 @@ class ApiError extends Error {
     message: string
   ) {
 
-    super(message);
+    super(message),
     this.name = 'ApiError'}}
 
 // Generic fetch wrapper with error handling
@@ -30,7 +30,7 @@ async function apiRequest<T>(endpoint: string,
 
       'Content-Type': 'application/json',
       ...options.headers},
-    ...options};
+    ...options},
 
   try {
     
@@ -58,17 +58,17 @@ export const api = {
   // Users'
   getUsers: () => apiRequest<Array<any>>('/users'),
   getUser: (id: number) =>`
-    apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) =>
-    apiRequest<{ id: number; name: string; email: string; createdAt: string }>('
+    apiRequest<{ id: number, name: string, email: string }>(`/users/${id}`),
+  createUser: (userData: { name: string, email: string }) =>
+    apiRequest<{ id: number, name: string, email: string, createdAt: string }>('
       '/users',
       {
 
         method: 'POST',
         body: JSON.stringify(userData)}
     ),
-  updateUser: (id: number, userData: { name?: string; email?: string }) =>
-    apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(`
+  updateUser: (id: number, userData: { name?: string, email?: string }) =>
+    apiRequest<{ id: number, name: string, email: string, updatedAt: string }>(`
       `/users/${id}`,
       {
 
@@ -78,13 +78,13 @@ export const api = {
   deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }),
 
   // Authentication
-  login: (credentials: { email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/login', {
+  login: (credentials: { email: string, password: string }) =>
+    apiRequest<{ token: string, user: any }>('/auth/login', {
 
       method: 'POST',
       body: JSON.stringify(credentials)}),
-  register: (userData: { name: string; email: string; password: string }) =>
-    apiRequest<{ token: string; user: any }>('/auth/register', {
+  register: (userData: { name: string, email: string, password: string }) =>
+    apiRequest<{ token: string, user: any }>('/auth/register', {
 
       method: 'POST',
       body: JSON.stringify(userData)}),
@@ -120,7 +120,7 @@ export const api = {
       method: 'PUT',
       body: JSON.stringify(orderData)}),
   deleteOrder: (id: number) =>'`
-    apiRequest(`/orders/${id}`, { method: 'DELETE' })};
+    apiRequest(`/orders/${id}`, { method: 'DELETE' })},
 
-export default api;
+export default api,
 '`

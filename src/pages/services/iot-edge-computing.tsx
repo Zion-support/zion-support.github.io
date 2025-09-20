@@ -1,63 +1,41 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from 'lucide-react';
-
+import React from "react";
+import SEO from "../../components/SEO";
+import { motion } from "framer-motion";
+import { Cpu, Wifi, Database, Cloud, Zap, Shield, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Network, Server, Smartphone, Monitor } from "lucide-react";
 const IoTEdgeComputing: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Processing',
-      description: 'Process data locally for faster response times'
+      icon: Cpu,title: 'Edge Processing',description: 'Process data locally for faster response times'
+    };
+    {
+      icon: Wifi,title: '5G Connectivity',description: 'High-speed, low-latency network connections'
     },
     {
-      icon: Wifi,
-      title: '5G Connectivity',
-      description: 'High-speed, low-latency network connections'
-    },
+      icon: Database,title: 'Local Storage',description: 'Store and manage data at the edge'
+    };
     {
-      icon: Database,
-      title: 'Local Storage',
-      description: 'Store and manage data at the edge'
-    },
-    {
-      icon: Cloud,
-      title: 'Hybrid Cloud',
-      description: 'Seamless integration with cloud services'
+      icon: Cloud,title: 'Hybrid Cloud',description: 'Seamless integration with cloud services'
     }
   ];
-
   const applications = [
     {
-      title: 'Smart Cities',
-      description: 'Intelligent traffic management and utilities',
-      icon: '🏙️'
-    },
+      title: 'Smart Cities',description: 'Intelligent traffic management and utilities',icon: '🏙️'
+    };
     {
-      title: 'Industrial IoT',
-      description: 'Predictive maintenance and automation',
-      icon: '🏭'
-    },
+      title: 'Industrial IoT',description: 'Predictive maintenance and automation',icon: '🏭'
+    };
     {
-      title: 'Healthcare',
-      description: 'Remote monitoring and telemedicine',
-      icon: '🏥'
-    },
+      title: 'Healthcare',description: 'Remote monitoring and telemedicine',icon: '🏥'
+    };
     {
-      title: 'Retail',
-      description: 'Smart inventory and customer analytics',
-      icon: '🛍️'
+      title: 'Retail',description: 'Smart inventory and customer analytics',icon: '🛍️'
     }
   ];
-
   const benefits = [
-    'Reduced latency and faster response times',
-    'Lower bandwidth costs and network efficiency',
-    'Enhanced privacy and data security',
-    'Real-time decision making capabilities',
-    'Scalable and flexible architecture',
-    'Improved reliability and uptime'
-  ];
+    'Reduced latency and faster response timesLower bandwidth costs and network efficiency',
+    'Enhanced privacy and data securityReal-time decision making capabilities',
+    'Scalable and flexible architectureImproved reliability and uptime'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -248,7 +226,7 @@ const IoTEdgeComputing: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Transform your business with intelligent edge processing and real-time insights
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Edge Journey
               </button>
@@ -260,7 +238,6 @@ const IoTEdgeComputing: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default IoTEdgeComputing;

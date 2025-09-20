@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent' | 'white';
-  text?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  color?: 'primary' | 'secondary' | 'accent' | 'white',
+  text?: string,
+  fullScreen?: boolean,
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -19,14 +19,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
-  };
+  },
 
   const colorClasses = {
     primary: 'border-cyan-500',
     secondary: 'border-purple-500',
     accent: 'border-emerald-500',
     white: 'border-white'
-  };
+  },
 
   const spinner = (
     <div className="flex flex-col items-center justify-center space-y-4">
@@ -67,7 +67,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
-            className={`w-2 h-2 ${colorClasses[color].replace('border-', 'bg-')} rounded-full`}
+            className={`w-2 h-2 ${colorClasses[color].replace('border-bg-')} rounded-full`}
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5]
@@ -82,6 +82,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         ))}
       </div>
     </div>
-  );
-};
-export default LoadingSpinner;
+  ),
+},
+export default LoadingSpinner,

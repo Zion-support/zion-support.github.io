@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function ReplyCard({
 
   reply,
@@ -48,6 +48,6 @@ export default function ReplyCard({
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"`

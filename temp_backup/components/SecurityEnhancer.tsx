@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useEffect, useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
-  Shield, 
+  Shield,
   AlertTriangle, 
   CheckCircle, 
   X
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface SecurityStatus {
-  csp: boolean;
-  hsts: boolean;
-  xss: boolean;
-  frameOptions: boolean;
-  contentType: boolean;
-  referrerPolicy: boolean;
+  csp: boolean,
+  hsts: boolean,
+  xss: boolean,
+  frameOptions: boolean,
+  contentType: boolean,
+  referrerPolicy: boolean
 }
 
 interface SecurityThreat {
-  type: 'high' | 'medium' | 'low';
-  description: string;
-  recommendation: string;
-  timestamp: Date;
+  type: 'high' | 'medium' | 'low',
+  description: string,
+  recommendation: string,
+  timestamp: Date
 }
 
 const SecurityEnhancer: React.FC = () => {
@@ -29,7 +29,7 @@ const SecurityEnhancer: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">SecurityEnhancer</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default SecurityEnhancer;
+export default SecurityEnhancer,

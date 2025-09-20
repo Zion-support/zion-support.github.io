@@ -1,8 +1,6 @@
-import React from 'react';
-
+import React from "react";
 interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
+  error: Error,resetErrorBoundary: () => void
 }
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
@@ -17,7 +15,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
         <div className="space-y-3">
           <button
             onClick={resetErrorBoundary}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
             Try Again
           </button>

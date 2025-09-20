@@ -1,54 +1,54 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import SEO from '@/components/SEO';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Star, Zap, TrendingUp, CheckCircle, Phone, Mail, Globe, Shield, Users, ArrowUpRight, Brain, Cloud, Database, Lock, Code, BarChart3, MessageSquare, FileText, ShoppingCart, Settings } from "lucide-react";
+import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from "@/data/expandedServices";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import SEO from "@/components/SEO";
 export default function AllServicesLandingPage() {
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'AI Services': return '🤖';
+            case 'AI Services': return '🤖',
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-            default: return '⚡';
+            default: return '⚡'
         }
     };
     const getCategoryIconComponent = (category) => {
         switch (category) {
-            case 'AI Services': return <Brain className="h-6 w-6"/>;
-            case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;
-            case 'IT Services': return <Code className="h-6 w-6"/>;
-            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
-            default: return <Settings className="h-6 w-6"/>;
+            case 'AI Services': return <Brain className="h-6 w-6"/>,
+            case 'Micro SAAS': return <Cloud className="h-6 w-6"/>,
+            case 'IT Services': return <Code className="h-6 w-6"/>,
+            case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>,
+            default: return <Settings className="h-6 w-6"/>
         }
     };
     const getPricingModelColor = (model) => {
         switch (model) {
-            case 'subscription': return 'bg-blue-100 text-blue-800';
-            case 'project-based': return 'bg-purple-100 text-purple-800';
-            case 'one-time': return 'bg-green-100 text-green-800';
-            case 'usage-based': return 'bg-orange-100 text-orange-800';
-            default: return 'bg-gray-100 text-gray-800';
+            case 'subscription': return 'bg-blue-100 text-blue-800',
+            case 'project-based': return 'bg-purple-100 text-purple-800',
+            case 'one-time': return 'bg-green-100 text-green-800',
+            case 'usage-based': return 'bg-orange-100 text-orange-800',
+            default: return 'bg-gray-100 text-gray-800'
         }
     };
     const getServiceIcon = (subcategory) => {
         switch (subcategory) {
-            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>;
-            case 'Analytics': return <BarChart3 className="h-5 w-5"/>;
-            case 'Content Creation': return <FileText className="h-5 w-5"/>;
-            case 'Inventory Management': return <Database className="h-5 w-5"/>;
-            case 'HR Analytics': return <Users className="h-5 w-5"/>;
-            case 'Financial Management': return <BarChart3 className="h-5 w-5"/>;
-            case 'Cloud Solutions': return <Cloud className="h-5 w-5"/>;
-            case 'Cybersecurity': return <Lock className="h-5 w-5"/>;
-            case 'DevOps': return <Code className="h-5 w-5"/>;
-            case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
-            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
-            default: return <Settings className="h-5 w-5"/>;
+            case 'Customer Service': return <MessageSquare className="h-5 w-5"/>,
+            case 'Analytics': return <BarChart3 className="h-5 w-5"/>,
+            case 'Content Creation': return <FileText className="h-5 w-5"/>,
+            case 'Inventory Management': return <Database className="h-5 w-5"/>,
+            case 'HR Analytics': return <Users className="h-5 w-5"/>,
+            case 'Financial Management': return <BarChart3 className="h-5 w-5"/>,
+            case 'Cloud Solutions': return <Cloud className="h-5 w-5"/>,
+            case 'Cybersecurity': return <Lock className="h-5 w-5"/>,
+            case 'DevOps': return <Code className="h-5 w-5"/>,
+            case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>,
+            case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>,
+            default: return <Settings className="h-5 w-5"/>
         }
     };
     return (<div className="min-h-screen bg-background">
@@ -61,7 +61,7 @@ export default function AllServicesLandingPage() {
             Complete Tech Solutions Ecosystem
           </h1>
           <p className="text-xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure, 
+            From cutting-edge AI automation to affordable micro SAAS solutions, comprehensive IT infrastructure;
             and digital transformation services - we provide everything your business needs to thrive in the digital age.
           </p>
           
@@ -133,7 +133,7 @@ export default function AllServicesLandingPage() {
                         <div className="flex items-start justify-between mb-2">
                           <div className="text-2xl">{getCategoryIcon(service.category)}</div>
                           <Badge className={getPricingModelColor(service.pricingModel)}>
-                            {service.pricingModel.replace('-', ' ')}
+                            {service.pricingModel.replace('- ')}
                           </Badge>
                         </div>
                         <div className="flex items-center space-x-2 mb-2">
@@ -319,5 +319,5 @@ export default function AllServicesLandingPage() {
       </section>
 
       <TrustedBySection />
-    </div>);
+    </div>)
 }

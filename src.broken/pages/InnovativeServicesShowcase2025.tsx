@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -7,13 +7,10 @@ export default function Page() {
       description: 'Revolutionize your supply chain with AI - powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
       icon: Truck,
       price: 'From $599 / month',
-      features: ['AI - powered demand forecasting and inventory optimization',
-        'Real - time supply chain monitoring and risk assessment',
-        'Intelligent route optimization and logistics planning',
-        'Automated supplier performance analysis and scoring'
+      features: ['AI - powered demand forecasting and inventory optimizationReal - time supply chain monitoring and risk assessment',
+        'Intelligent route optimization and logistics planningAutomated supplier performance analysis and scoring'
       ],
-      benefits: ['Reduce supply chain costs by 25 - 40%',
-        'Improve inventory accuracy by 90%',
+      benefits: ['Reduce supply chain costs by 25 - 40%Improve inventory accuracy by 90%',
         'Reduce lead times by 30 - 50%'
       ],
       path: '/services / ai - supply - chain - optimization',
@@ -25,13 +22,10 @@ export default function Page() {
       description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
       icon: Shield,
       price: 'From $799 / month',
-      features: ['AI - powered credit risk assessment and scoring',
-        'Real - time market risk monitoring and alerts',
-        'Intelligent fraud detection and prevention',
-        'Advanced portfolio risk analysis and optimization'
+      features: ['AI - powered credit risk assessment and scoringReal - time market risk monitoring and alerts',
+        'Intelligent fraud detection and preventionAdvanced portfolio risk analysis and optimization'
       ],
-      benefits: ['Reduce credit losses by 40 - 60%',
-        'Improve risk - adjusted returns by 25%',
+      benefits: ['Reduce credit losses by 40 - 60%Improve risk - adjusted returns by 25%',
         'Detect fraud with 99.5% accuracy'
       ],
       path: '/services / ai - financial - risk - management',
@@ -43,13 +37,10 @@ export default function Page() {
       description: 'Revolutionize your hiring process with AI - powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
       icon: Briefcase,
       price: 'From $299 / month',
-      features: ['AI - powered candidate sourcing and matching',
-        'Intelligent resume parsing and skill extraction',
-        'Automated candidate screening and assessment',
-        'Predictive candidate success modeling'
+      features: ['AI - powered candidate sourcing and matchingIntelligent resume parsing and skill extraction',
+        'Automated candidate screening and assessmentPredictive candidate success modeling'
       ],
-      benefits: ['Reduce time - to - hire by 60%',
-        'Improve candidate quality by 45%',
+      benefits: ['Reduce time - to - hire by 60%Improve candidate quality by 45%',
         'Reduce recruitment costs by 40%'
       ],
       path: '/services / ai - hr - talent - acquisition',
@@ -61,13 +52,10 @@ export default function Page() {
       description: 'Transform your IoT infrastructure with AI - powered edge computing that processes data locally, reduces latency, and enables real - time intelligent decision making.',
       icon: Cpu,
       price: 'From $499 / month',
-      features: ['AI - powered edge computing and processing',
-        'Real - time IoT device management and monitoring',
-        'Intelligent edge analytics and decision making',
-        'Advanced device connectivity and protocol support'
+      features: ['AI - powered edge computing and processingReal - time IoT device management and monitoring',
+        'Intelligent edge analytics and decision makingAdvanced device connectivity and protocol support'
       ],
-      benefits: ['Reduce latency by 80 - 90%',
-        'Lower bandwidth costs by 60%',
+      benefits: ['Reduce latency by 80 - 90%Lower bandwidth costs by 60%',
         'Improve device reliability by 75%'
       ],
       path: '/services / ai - iot - edge - computing',
@@ -79,13 +67,10 @@ export default function Page() {
       description: 'Transform your maintenance operations with AI - powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
       icon: Wrench,
       price: 'From $399 / month',
-      features: ['AI - powered equipment health monitoring and analysis',
-        'Real - time predictive maintenance scheduling',
-        'Intelligent failure prediction and prevention',
-        'Advanced sensor data analysis and processing'
+      features: ['AI - powered equipment health monitoring and analysisReal - time predictive maintenance scheduling',
+        'Intelligent failure prediction and preventionAdvanced sensor data analysis and processing'
       ],
-      benefits: ['Reduce unplanned downtime by 70 - 90%',
-        'Lower maintenance costs by 25 - 40%',
+      benefits: ['Reduce unplanned downtime by 70 - 90%Lower maintenance costs by 25 - 40%',
         'Extend equipment lifespan by 20 - 30%'
       ],
       path: '/services / ai - predictive - maintenance',
@@ -97,13 +82,10 @@ export default function Page() {
       description: 'Transform your organization into a sustainability leader with AI - powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
       icon: Leaf,
       price: 'From $299 / month',
-      features: ['AI - powered energy consumption optimization',
-        'Real - time sustainability monitoring and reporting',
-        'Intelligent carbon footprint tracking and reduction',
-        'Advanced waste management and recycling optimization'
+      features: ['AI - powered energy consumption optimizationReal - time sustainability monitoring and reporting',
+        'Intelligent carbon footprint tracking and reductionAdvanced waste management and recycling optimization'
       ],
-      benefits: ['Reduce energy consumption by 25 - 40%',
-        'Lower carbon footprint by 30 - 50%',
+      benefits: ['Reduce energy consumption by 25 - 40%Lower carbon footprint by 30 - 50%',
         'Improve resource efficiency by 35%'
       ],
       path: '/services / ai - sustainable - technology',
@@ -115,21 +97,18 @@ export default function Page() {
       description: 'Revolutionize your computational capabilities with AI - powered quantum machine learning that solves previously impossible problems and accelerates innovation.',
       icon: Atom,
       price: 'From $1,999 / month',
-      features: ['Quantum - enhanced machine learning algorithms',
-        'Hybrid quantum - classical computing solutions',
-        'Advanced quantum neural network optimization',
-        'Real - time quantum algorithm execution'
+      features: ['Quantum - enhanced machine learning algorithmsHybrid quantum - classical computing solutions',
+        'Advanced quantum neural network optimizationReal - time quantum algorithm execution'
       ],
-      benefits: ['Solve complex problems 100x faster than classical computing',
-        'Improve machine learning accuracy by 40 - 60%',
+      benefits: ['Solve complex problems 100x faster than classical computingImprove machine learning accuracy by 40 - 60%',
         'Enable previously impossible computational tasks'
       ],
       path: '/services / ai - quantum - machine - learning',
       category: 'AI & Quantum Computing'
     }
-  ];
+  ],
 
-  const categories = [...new Set(services.map (service => service.category) ) ];
+  const categories = [...new Set(services.map (service => service.category) ) ],
 
   return (<div className="min - h-screen bg-white">
       <SEO
@@ -528,5 +507,5 @@ export default function Page() {
               </motion.div>) ) }
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

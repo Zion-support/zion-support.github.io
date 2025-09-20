@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface NextGenInnovation2025 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics
@@ -49,16 +49,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Comprehensive autonomous fleet management platform that uses AI to coordinate, optimize, and manage fleets of autonomous vehicles for logistics, transportation, and delivery services.',
     features: [
-      'AI fleet coordination',
-      'Route optimization',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Safety protocols',
-      'Traffic analysis',
-      'Energy optimization',
-      'Compliance management',
-      'Performance analytics',
-      'Emergency response'
+      'AI fleet coordinationRoute optimization',
+      'Real-time monitoringPredictive maintenance',
+      'Safety protocolsTraffic analysis',
+      'Energy optimizationCompliance management',
+      'Performance analyticsEmergency response'
     ],
     popular: true,
     icon: '🚗',
@@ -71,11 +66,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '3-6 weeks',
     category: 'Autonomous AI & Robotics',
     realService: true,
-    technology: ['AI/ML', 'Autonomous systems', 'IoT sensors', 'Real-time analytics', 'Predictive modeling'],
-    integrations: ['Vehicle systems', 'GPS platforms', 'Traffic data', 'Weather services', 'Logistics platforms'],
-    useCases: ['Autonomous delivery', 'Logistics optimization', 'Fleet management', 'Route planning', 'Safety monitoring'],
+    technology: ['AI/MLAutonomous systems', 'IoT sensorsReal-time analytics', 'Predictive modeling'],
+    integrations: ['Vehicle systemsGPS platforms', 'Traffic dataWeather services', 'Logistics platforms'],
+    useCases: ['Autonomous deliveryLogistics optimization', 'Fleet managementRoute planning', 'Safety monitoring'],
     roi: 'Logistics companies achieve 600% ROI through reduced operational costs and improved efficiency.',
-    competitors: ['Traditional fleet management', 'Autonomous vehicle platforms', 'Logistics software'],
+    competitors: ['Traditional fleet managementAutonomous vehicle platforms', 'Logistics software'],
     marketSize: '$6.8B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -100,16 +95,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Revolutionary bioinformatics platform that leverages quantum computing to analyze complex biological data, accelerate drug discovery, and advance medical research.',
     features: [
-      'Quantum DNA analysis',
-      'Protein folding simulation',
-      'Drug discovery acceleration',
-      'Genomic sequencing',
-      'Molecular modeling',
-      'Clinical trial optimization',
-      'Biomarker discovery',
-      'Disease prediction',
-      'Personalized medicine',
-      'Research collaboration'
+      'Quantum DNA analysisProtein folding simulation',
+      'Drug discovery accelerationGenomic sequencing',
+      'Molecular modelingClinical trial optimization',
+      'Biomarker discoveryDisease prediction',
+      'Personalized medicineResearch collaboration'
     ],
     popular: true,
     icon: '🧬',
@@ -122,11 +112,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '4-8 weeks',
     category: 'Quantum Bioinformatics & Healthcare',
     realService: true,
-    technology: ['Quantum computing', 'Bioinformatics algorithms', 'Machine learning', 'Genomic analysis', 'Molecular modeling'],
-    integrations: ['Research databases', 'Clinical systems', 'Laboratory equipment', 'Analytics platforms', 'Collaboration tools'],
-    useCases: ['Drug discovery', 'Genomic research', 'Clinical trials', 'Personalized medicine', 'Disease research'],
+    technology: ['Quantum computingBioinformatics algorithms', 'Machine learningGenomic analysis', 'Molecular modeling'],
+    integrations: ['Research databasesClinical systems', 'Laboratory equipmentAnalytics platforms', 'Collaboration tools'],
+    useCases: ['Drug discoveryGenomic research', 'Clinical trialsPersonalized medicine', 'Disease research'],
     roi: 'Pharmaceutical companies achieve 800% ROI through accelerated drug discovery and research efficiency.',
-    competitors: ['Traditional bioinformatics', 'Research platforms', 'Laboratory software'],
+    competitors: ['Traditional bioinformaticsResearch platforms', 'Laboratory software'],
     marketSize: '$9.2B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
@@ -152,16 +142,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Advanced AI platform that processes data while preserving privacy using quantum encryption and federated learning techniques. Perfect for healthcare, finance, and sensitive data applications.',
     features: [
-      'Quantum encryption',
-      'Federated learning',
-      'Privacy preservation',
-      'Secure data processing',
-      'Homomorphic encryption',
-      'Differential privacy',
-      'Secure multi-party computation',
-      'Privacy auditing',
-      'Compliance tools',
-      'Zero-knowledge proofs'
+      'Quantum encryptionFederated learning',
+      'Privacy preservationSecure data processing',
+      'Homomorphic encryptionDifferential privacy',
+      'Secure multi-party computationPrivacy auditing',
+      'Compliance toolsZero-knowledge proofs'
     ],
     popular: true,
     icon: '🔐',
@@ -174,11 +159,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '3-6 weeks',
     category: 'Quantum AI & Privacy',
     realService: true,
-    technology: ['Quantum encryption', 'Federated learning', 'Homomorphic encryption', 'Privacy-preserving AI', 'Secure computation'],
-    integrations: ['Healthcare systems', 'Financial platforms', 'Government databases', 'Research tools', 'Analytics platforms'],
-    useCases: ['Healthcare analytics', 'Financial modeling', 'Government research', 'Academic research', 'Privacy-sensitive AI'],
+    technology: ['Quantum encryptionFederated learning', 'Homomorphic encryptionPrivacy-preserving AI', 'Secure computation'],
+    integrations: ['Healthcare systemsFinancial platforms', 'Government databasesResearch tools', 'Analytics platforms'],
+    useCases: ['Healthcare analyticsFinancial modeling', 'Government researchAcademic research', 'Privacy-sensitive AI'],
     roi: 'Healthcare organizations achieve 500% ROI through secure data analysis while maintaining privacy compliance.',
-    competitors: ['Traditional AI platforms', 'Privacy tools', 'Encryption solutions'],
+    competitors: ['Traditional AI platformsPrivacy tools', 'Encryption solutions'],
     marketSize: '$7.5B market',
     growthRate: '250% annual growth',
     variant: 'quantum-futuristic',
@@ -204,16 +189,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Advanced energy optimization platform that uses quantum computing to optimize energy grids, renewable energy systems, and industrial energy consumption for maximum efficiency and sustainability.',
     features: [
-      'Quantum grid optimization',
-      'Renewable energy integration',
-      'Demand forecasting',
-      'Energy storage optimization',
-      'Grid stability analysis',
-      'Carbon footprint reduction',
-      'Cost optimization',
-      'Predictive maintenance',
-      'Real-time monitoring',
-      'Sustainability reporting'
+      'Quantum grid optimizationRenewable energy integration',
+      'Demand forecastingEnergy storage optimization',
+      'Grid stability analysisCarbon footprint reduction',
+      'Cost optimizationPredictive maintenance',
+      'Real-time monitoringSustainability reporting'
     ],
     popular: true,
     icon: '⚡',
@@ -226,11 +206,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '4-8 weeks',
     category: 'Quantum Energy & Sustainability',
     realService: true,
-    technology: ['Quantum computing', 'Energy optimization', 'Grid management', 'Predictive modeling', 'Real-time analytics'],
-    integrations: ['Energy grids', 'Smart meters', 'Renewable systems', 'Industrial equipment', 'Monitoring systems'],
-    useCases: ['Grid optimization', 'Renewable integration', 'Industrial efficiency', 'Smart city energy', 'Sustainability optimization'],
+    technology: ['Quantum computingEnergy optimization', 'Grid managementPredictive modeling', 'Real-time analytics'],
+    integrations: ['Energy gridsSmart meters', 'Renewable systemsIndustrial equipment', 'Monitoring systems'],
+    useCases: ['Grid optimizationRenewable integration', 'Industrial efficiencySmart city energy', 'Sustainability optimization'],
     roi: 'Utility companies achieve 700% ROI through improved grid efficiency and reduced energy costs.',
-    competitors: ['Traditional energy management', 'Grid optimization tools', 'Sustainability platforms'],
+    competitors: ['Traditional energy managementGrid optimization tools', 'Sustainability platforms'],
     marketSize: '$12.8B market',
     growthRate: '300% annual growth',
     variant: 'quantum-futuristic',
@@ -256,16 +236,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Comprehensive industrial automation platform that combines AI, IoT, and robotics to create intelligent, self-optimizing manufacturing systems for Industry 4.0.',
     features: [
-      'AI-powered automation',
-      'Predictive maintenance',
-      'Quality control AI',
-      'Supply chain optimization',
-      'Robotic process automation',
-      'Real-time monitoring',
-      'Performance optimization',
-      'Safety protocols',
-      'Compliance management',
-      'Analytics dashboard'
+      'AI-powered automationPredictive maintenance',
+      'Quality control AISupply chain optimization',
+      'Robotic process automationReal-time monitoring',
+      'Performance optimizationSafety protocols',
+      'Compliance managementAnalytics dashboard'
     ],
     popular: true,
     icon: '🏭',
@@ -278,11 +253,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '6-12 weeks',
     category: 'AI Manufacturing & Industry 4.0',
     realService: true,
-    technology: ['AI/ML', 'IoT sensors', 'Robotics', 'Predictive analytics', 'Real-time monitoring'],
-    integrations: ['Manufacturing equipment', 'ERP systems', 'Supply chain platforms', 'Quality control systems', 'Safety systems'],
-    useCases: ['Manufacturing automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Safety monitoring'],
+    technology: ['AI/MLIoT sensors', 'RoboticsPredictive analytics', 'Real-time monitoring'],
+    integrations: ['Manufacturing equipmentERP systems', 'Supply chain platformsQuality control systems', 'Safety systems'],
+    useCases: ['Manufacturing automationQuality control', 'Predictive maintenanceSupply chain optimization', 'Safety monitoring'],
     roi: 'Manufacturing companies achieve 800% ROI through improved efficiency and reduced operational costs.',
-    competitors: ['Traditional automation', 'Manufacturing software', 'Industrial IoT platforms'],
+    competitors: ['Traditional automationManufacturing software', 'Industrial IoT platforms'],
     marketSize: '$18.5B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -308,16 +283,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Revolutionary educational platform that uses AI to teach quantum computing, advanced mathematics, and cutting-edge technologies through personalized learning experiences.',
     features: [
-      'AI-powered learning',
-      'Quantum computing courses',
-      'Personalized curriculum',
-      'Interactive simulations',
-      'Real-time feedback',
-      'Progress tracking',
-      'Collaborative learning',
-      'Expert mentorship',
-      'Certification programs',
-      'Career guidance'
+      'AI-powered learningQuantum computing courses',
+      'Personalized curriculumInteractive simulations',
+      'Real-time feedbackProgress tracking',
+      'Collaborative learningExpert mentorship',
+      'Certification programsCareer guidance'
     ],
     popular: true,
     icon: '🎓',
@@ -330,11 +300,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '1-2 weeks',
     category: 'Quantum Education & Training',
     realService: true,
-    technology: ['AI/ML', 'Quantum computing', 'Educational technology', 'Interactive simulations', 'Personalized learning'],
-    integrations: ['Learning management systems', 'Video platforms', 'Assessment tools', 'Collaboration tools', 'Analytics platforms'],
-    useCases: ['Quantum education', 'Advanced mathematics', 'Technology training', 'Corporate learning', 'Academic research'],
+    technology: ['AI/MLQuantum computing', 'Educational technologyInteractive simulations', 'Personalized learning'],
+    integrations: ['Learning management systemsVideo platforms', 'Assessment toolsCollaboration tools', 'Analytics platforms'],
+    useCases: ['Quantum educationAdvanced mathematics', 'Technology trainingCorporate learning', 'Academic research'],
     roi: 'Educational institutions achieve 400% ROI through improved learning outcomes and student engagement.',
-    competitors: ['Traditional education platforms', 'Online learning tools', 'Technology training platforms'],
+    competitors: ['Traditional education platformsOnline learning tools', 'Technology training platforms'],
     marketSize: '$5.2B market',
     growthRate: '220% annual growth',
     variant: 'quantum-futuristic',
@@ -360,16 +330,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     period: '/month',
     description: 'Advanced content creation platform that combines AI, quantum computing, and creative algorithms to generate high-quality video, audio, and multimedia content automatically.',
     features: [
-      'AI video generation',
-      'Quantum creative algorithms',
-      'Audio synthesis',
-      'Content personalization',
-      'Multi-format output',
-      'Brand voice consistency',
-      'Performance analytics',
-      'Collaboration tools',
-      'Content scheduling',
-      'Distribution automation'
+      'AI video generationQuantum creative algorithms',
+      'Audio synthesisContent personalization',
+      'Multi-format outputBrand voice consistency',
+      'Performance analyticsCollaboration tools',
+      'Content schedulingDistribution automation'
     ],
     popular: true,
     icon: '🎬',
@@ -382,11 +347,11 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     setupTime: '1-2 weeks',
     category: 'AI Content & Entertainment',
     realService: true,
-    technology: ['AI/ML', 'Quantum computing', 'Video generation', 'Audio synthesis', 'Creative algorithms'],
-    integrations: ['Video platforms', 'Social media', 'Marketing tools', 'Analytics platforms', 'Content management systems'],
-    useCases: ['Video creation', 'Audio production', 'Marketing content', 'Educational materials', 'Entertainment content'],
+    technology: ['AI/MLQuantum computing', 'Video generationAudio synthesis', 'Creative algorithms'],
+    integrations: ['Video platformsSocial media', 'Marketing toolsAnalytics platforms', 'Content management systems'],
+    useCases: ['Video creationAudio production', 'Marketing contentEducational materials', 'Entertainment content'],
     roi: 'Content creators achieve 500% ROI through automated content generation and improved engagement.',
-    competitors: ['Traditional content tools', 'Video editing software', 'Content creation platforms'],
+    competitors: ['Traditional content toolsVideo editing software', 'Content creation platforms'],
     marketSize: '$8.5B market',
     growthRate: '260% annual growth',
     variant: 'ai-futuristic',
@@ -403,4 +368,4 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     rating: 4.8,
     reviews: 267
   }
-];
+],

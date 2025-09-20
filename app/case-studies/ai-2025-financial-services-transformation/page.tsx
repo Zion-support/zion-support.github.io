@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
 export default function AIFinancialServicesTransformation2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -11,7 +11,7 @@ export default function AIFinancialServicesTransformation2025() {,
         url="/case-studies/ai-2025-financial-services-transformation",
       />,
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <Link href="/case-studies" className="text-blue-600 hover: text-blue-700 font-medium">,
@@ -27,7 +27,7 @@ export default function AIFinancialServicesTransformation2025() {,
             AI Financial Services Transformation 2025: $50M Savings & 300% ROI,
           </h1>,
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">,
-            How a Fortune 500 financial services company transformed their operations with AI;
+            How a Fortune 500 financial services company transformed their operations with AI,
             achieving unprecedented cost savings, efficiency gains, and customer satisfaction,
             improvements through strategic AI implementation.,
           </p>,
@@ -68,7 +68,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Table of Contents */,}
+        {/* Table of Contents */}
         <div className="bg-gray-50 rounded-xl p-8 mb-12">,
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Case Study Overview</h2>,
           <div className="grid md: grid-cols-2 gap-4">,
@@ -90,13 +90,13 @@ export default function AIFinancialServicesTransformation2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>,
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">,
             Global Financial Corp (GFC), a Fortune 500 financial services company with $2.5 trillion,
             in assets under management, faced mounting pressure to modernize their operations. With,
-            legacy systems dating back to the 1990s, manual processes consuming 60% of staff time;
+            legacy systems dating back to the 1990s, manual processes consuming 60% of staff time,
             and increasing regulatory requirements, the company needed a comprehensive transformation,
             to remain competitive.,
           </p>,
@@ -113,7 +113,7 @@ export default function AIFinancialServicesTransformation2025() {,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">The Solution: Comprehensive AI Transformation</h3>,
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">,
             Zion Tech Group partnered with GFC to design and implement a comprehensive AI transformation,
-            strategy across all business units. The solution focused on four key areas: process automation;
+            strategy across all business units. The solution focused on four key areas: process automation,
             customer experience enhancement, risk management, and regulatory compliance.,
           </p>,
           <div className="grid md: grid-cols-2 gap-8 mb-8">,
@@ -333,7 +333,7 @@ export default function AIFinancialServicesTransformation2025() {,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Technology Architecture</h3>,
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">,
             The AI transformation was built on a modern, scalable architecture designed to handle,
-            the complex requirements of financial services while ensuring security, compliance;
+            the complex requirements of financial services while ensuring security, compliance,
             and performance.,
           </p>,
           <div className="bg-gray-50 rounded-xl p-8 mb-8">,
@@ -415,7 +415,7 @@ export default function AIFinancialServicesTransformation2025() {,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Conclusion</h3>,
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">,
             The AI transformation at Global Financial Corp demonstrates the tremendous potential of,
-            strategic AI implementation in financial services. By focusing on high-impact use cases;
+            strategic AI implementation in financial services. By focusing on high-impact use cases,
             maintaining strong governance, and investing in change management, the company achieved,
             remarkable results that position them for continued success in the digital age.,
           </p>,
@@ -453,7 +453,7 @@ export default function AIFinancialServicesTransformation2025() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Case Studies */,}
+        {/* Related Case Studies */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -494,4 +494,4 @@ export default function AIFinancialServicesTransformation2025() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

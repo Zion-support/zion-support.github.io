@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Rocket, BarChart3, Globe, Zap, Target, Users, 
   Satellite, Brain, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
   Cpu, Database, Network, Server, Monitor, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const SpaceDataAnalyticsPlatform: React.FC = () => {
   const features = [
@@ -40,18 +40,14 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
       title: 'Predictive Modeling',
       description: 'Forecast space weather, orbital dynamics, and environmental changes.'
     }
-  ];
+  ],
 
   const applications = [
-    'Climate Change Monitoring',
-    'Disaster Response',
-    'Agricultural Intelligence',
-    'Urban Planning',
-    'Oceanography Research',
-    'Atmospheric Science',
-    'Space Debris Tracking',
-    'Satellite Constellation Management'
-  ];
+    'Climate Change MonitoringDisaster Response',
+    'Agricultural IntelligenceUrban Planning',
+    'Oceanography ResearchAtmospheric Science',
+    'Space Debris TrackingSatellite Constellation Management'
+  ],
 
   const pricing = [
     {
@@ -59,10 +55,8 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
       price: '$1,899',
       period: 'month',
       features: [
-        'Basic satellite data access',
-        'Standard analytics tools',
-        'Email support',
-        'Monthly reports',
+        'Basic satellite data accessStandard analytics tools',
+        'Email supportMonthly reports',
         'Up to 10GB data storage'
       ]
     },
@@ -71,12 +65,9 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
       price: '$3,999',
       period: 'month',
       features: [
-        'Advanced data processing',
-        'AI-powered insights',
-        'Priority support',
-        'Custom dashboards',
-        'Up to 100GB data storage',
-        'API access'
+        'Advanced data processingAI-powered insights',
+        'Priority supportCustom dashboards',
+        'Up to 100GB data storageAPI access'
       ],
       popular: true
     },
@@ -85,15 +76,12 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
       price: '$7,999',
       period: 'month',
       features: [
-        'Full platform access',
-        'Custom AI models',
-        'Dedicated support team',
-        'Unlimited data storage',
-        'Custom integrations',
-        'SLA guarantees'
+        'Full platform accessCustom AI models',
+        'Dedicated support teamUnlimited data storage',
+        'Custom integrationsSLA guarantees'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -293,7 +281,7 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Explore Space Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -315,7 +303,7 @@ const SpaceDataAnalyticsPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default SpaceDataAnalyticsPlatform;
+export default SpaceDataAnalyticsPlatform,

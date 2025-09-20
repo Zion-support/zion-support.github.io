@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Cloud,
   Server,
@@ -15,87 +15,59 @@ import {
   Code,
   Settings,
   Users
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CloudSolutions() {
   const cloudServices = [
     {
-      icon: Server,
-      title: "Cloud Migration",
-      description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
-      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+      icon: Server,title: "Cloud Migration",description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
     {
-      icon: Database,
-      title: "Database Management",
-      description: "Optimize and manage your databases in the cloud for maximum performance",
-      features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
+      icon: Database,title: "Database Management",description: "Optimize and manage your databases in the cloud for maximum performance",features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
     },
     {
-      icon: Shield,
-      title: "Cloud Security",
-      description: "Comprehensive security solutions to protect your cloud infrastructure",
-      features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
+      icon: Shield,title: "Cloud Security",description: "Comprehensive security solutions to protect your cloud infrastructure",features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
-      icon: Zap,
-      title: "DevOps Automation",
-      description: "Streamline your development and deployment processes with automation",
-      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+      icon: Zap,title: "DevOps Automation",description: "Streamline your development and deployment processes with automation",features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
     }
-  ];
+  ],
 
   const benefits = [
     {
-      icon: BarChart3,
-      title: "Cost Optimization",
-      description: "Reduce infrastructure costs by up to 40% with intelligent cloud management"
-    },
+      icon: BarChart3,title: "Cost Optimization",description: "Reduce infrastructure costs by up to 40% with intelligent cloud management"
+    };
     {
-      icon: Globe,
-      title: "Global Scalability",
-      description: "Scale your applications globally with multi-region deployment strategies"
-    },
+      icon: Globe,title: "Global Scalability",description: "Scale your applications globally with multi-region deployment strategies"
+    };
     {
-      icon: Lock,
-      title: "Enhanced Security",
-      description: "Enterprise-grade security with advanced threat protection and compliance"
-    },
+      icon: Lock,title: "Enhanced Security",description: "Enterprise-grade security with advanced threat protection and compliance"
+    };
     {
-      icon: Users,
-      title: "24/7 Support",
-      description: "Round-the-clock expert support for your cloud infrastructure needs"
+      icon: Users,title: "24/7 Support",description: "Round-the-clock expert support for your cloud infrastructure needs"
     }
   ];
-
   const technologies = [
-    { name: "AWS", logo: "AWS", description: "Amazon Web Services" },
-    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },
-    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },
-    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },
-    { name: "Docker", logo: "Docker", description: "Containerization" },
+    { name: "AWS", logo: "AWS", description: "Amazon Web Services" };
+    { name: "Azure", logo: "Azure", description: "Microsoft Azure" };
+    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" };
+    { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" };
+    { name: "Docker", logo: "Docker", description: "Containerization" };
     { name: "Terraform", logo: "TF", description: "Infrastructure as Code" }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
+      opacity: 1,y: 0,transition: { duration: 0.6 }
     }
   };
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}

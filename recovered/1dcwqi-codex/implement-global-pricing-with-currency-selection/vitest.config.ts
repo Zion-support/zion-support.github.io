@@ -1,12 +1,12 @@
-import { defineConfig } from 'vitest/config';
-import path from 'node:path';
+import { defineConfig } from 'vitest/config',
+import path from 'node: path',
 
 export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@/pages': path.resolve(__dirname, './src/pages'),
-    },
+      '@/pages': path.resolve(__dirname, './src/pages')
+    }
   },
   define: {
     'import.meta.env.VITE_SUPABASE_URL': JSON.stringify('http://localhost:54321'),
@@ -18,15 +18,12 @@ export default defineConfig({
     globals: true,
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html'],
+      reporter: ['texthtml']
     },
     exclude: [
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/cypress/**',
-      '**/.{idea,git,cache,output,temp}/**',
-      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*',
-      'tests/e2e/**'
+      '**/node_modules/****/dist/**',
+      '**/cypress/****/.{idea,git,cache,output,temp}/**',
+      '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*tests/e2e/**'
     ]
-  },
-});
+  }
+}),

@@ -1,93 +1,92 @@
-import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle,  } from 'lucide-react';
+import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle  } from 'lucide-react',
 
 export default function Page() {
             else {
                 toast({
                     title: "Project not found",
                     description: "The requested project could not be found.",
-                    variant: "destructive",
-                }) ;
-                router("/dashboard") ;
-                navigate("/dashboard") ;
+                    variant: "destructive"
+                }) ,
+                router("/dashboard") ,
+                navigate("/dashboard") ,
             }
-            setIsLoading(false) ;
+            setIsLoading(false) ,
 
-        loadProject () ;
-    }, [projectId]) ;
+        loadProject () ,
+    }, [projectId]) ,
     const fetchProjectNotes = async(projectId) => {
         try {
             const { data, error } = await supabase
                 .from("project_notes") .select(`
           *,
-          created_by_profile:profiles ! user_id (display_name, avatar_url) `) .eq("project_id", projectId) .order("created_at", { ascending: false }) ;
-            if(error) throw error;
-            // // // // // // // console.error("Error fetching project notes:", err) ;
+          created_by_profile:profiles ! user_id (display_name, avatar_url) `) .eq("project_id", projectId) .order("created_at", { ascending: false }) ,
+            if(error) throw error,
+            // // // // // // // console.error("Error fetching project notes:", err) ,
         }
             setNotes(data || []) }
         catch(err) {
             console.error("Error fetching project notes:", err) }
-    };
+    },
     const handleSubmitNote = async () => {
-        if(!newNote.trim () || !project || !user) return;
-        setIsSubmittingNote(true) ;
+        if(!newNote.trim () || !project || !user) return,
+        setIsSubmittingNote(true) ,
         try {
             const { data, error } = await supabase
                 .from("project_notes") .insert({
                 project_id: project.id,
                 user_id: user.id,
-                content: newNote,
-            }) .select () ;
-            if(error) throw error;
+                content: newNote
+            }) .select () ,
+            if(error) throw error,
             // Refresh notes
-            fetchProjectNotes(project.id) ;
-            setNewNote("") ;
+            fetchProjectNotes(project.id) ,
+            setNewNote("") ,
             toast({
                 title: "Note added",
-                description: "Your note has been added to the project.",
+                description: "Your note has been added to the project."
             }) }
         catch(err) {
-            // // // // // // // console.error("Error adding note:", err) ;
+            // // // // // // // console.error("Error adding note:", err) ,
             toast({
                 title: "Failed to add note",
                 description: err.message || "An error occurred while adding your note.",
-                variant: "destructive",
+                variant: "destructive"
             }) }
         finally {
             setIsSubmittingNote(false) }
-    };
+    },
     const handleStatusChange = async(newStatus) => {
-        if(!project) return;
-        const success = await updateProjectStatus(project.id, newStatus) ;
+        if(!project) return,
+        const success = await updateProjectStatus(project.id, newStatus) ,
         if(success) {
             setProject({
                 ...project,
-                status: newStatus,
-            }) ;
+                status: newStatus
+            }) ,
             // If offer was accepted, show a special toast
             if(newStatus === "offer_accepted") {
                 toast({
                     title: "Offer Accepted! 🎉",
-                    description: "The project is now in progress.Congratulations!",
+                    description: "The project is now in progress.Congratulations!"
                 }) }
         }
-    };
+    },
     const getStatusBadge = (status) => {
         switch(status) {
-            case "offer_sent":
-                return < Badge variant="outline">Offer Sent</Badge>;
+            case "offer_sent": return < Badge variant="outline">Offer Sent</Badge>,
             case "offer_accepted":
-                return < Badge className="bg-green - 100 text-green -800">Offer Accepted</Badge>;
+                return < Badge className="bg-green - 100 text-green -800">Offer Accepted</Badge>,
             case "changes_requested":
-                return < Badge variant="secondary">Changes Requested</Badge>;
+                return < Badge variant="secondary">Changes Requested</Badge>,
             case "in_progress":
-                return < Badge className="bg-blue - 100 text-blue -800">In Progress</Badge>;
+                return < Badge className="bg-blue - 100 text-blue -800">In Progress</Badge>,
             case "completed":
-                return < Badge variant="default">Completed</Badge>;
+                return < Badge variant="default">Completed</Badge>,
             case "canceled":
-                return < Badge variant="destructive">Canceled</Badge>;
+                return < Badge variant="destructive">Canceled</Badge>,
             default:
                 return < Badge variant="outline">{status}</Badge>}
-    };
+    },
     if(isLoading) {
         return (<div className="container mx - auto py-8">
         <div className="flex justify - center items - center h-64">
@@ -113,13 +112,13 @@ export default function Page() {
         </Card>
       </div>) }
     // Check if user is either the client or the talent
-    const isTalent = user?.id === project.talent_id;
+    const isTalent = user?.id === project.talent_id,
     if(!isClient && !isTalent) {
-        router("/unauthorized") ;
-        navigate("/unauthorized") ;
-        return null;
+        router("/unauthorized") ,
+        navigate("/unauthorized") ,
+        return null,
     }
-    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status) ;
+    const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status) ,
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
 
@@ -202,7 +201,7 @@ export default function Page() {
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>) }
             </div>
-          </div>;
+          </div>,
         </div>
 
         <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8">
@@ -384,7 +383,7 @@ export default function Page() {
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>) }
                     </div>
-                  </div>;
+                  </div>,
 
                   <div className="flex items - start gap-4">
                     <Avatar className="h-10 w-10">
@@ -400,7 +399,7 @@ export default function Page() {
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>) }
                     </div>
-                  </div>;
+                  </div>,
                 </div>
               </CardContent>
             </Card>

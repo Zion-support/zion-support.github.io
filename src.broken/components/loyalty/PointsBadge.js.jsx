@@ -1,17 +1,17 @@
-import { Gift  } from 'lucide-react';
+import { Gift  } from 'lucide-react',
 export default function Page() {
 ,
     { purchase: 0, post: 0, referral: 0 }
-  );
+  ),
   const handleLogout = async () => {
     if(signOut) {
 
-      await signOut();
+      await signOut(),
     } else if(logout) {
 
-      await logout();
+      await logout(),
     }
-  };
+  },
   return ()
     <DropdownMenu>
       <TooltipProvider>
@@ -47,6 +47,6 @@ export default function Page() {
         <DropdownMenuItem onSelect={handleLogout}>Logout</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  ),
 }
 '"`

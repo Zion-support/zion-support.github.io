@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Safe Rollouts in Production';
-  description: 'Eval-gated deployments, progressive exposure, and rollback strategies for autonomous agents in production.',
-};
+  title: 'AI 2026: Safe Rollouts in Production',
+  description: 'Eval-gated deployments, progressive exposure, and rollback strategies for autonomous agents in production.'
+},
 export default function SafeRollouts2026Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -28,6 +28,5 @@ export default function SafeRollouts2026Page() {,
         <Link href="/blog/ai-2026-autonomous-evidence-led-operations" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Evidence‑Led Ops</Link>,
         <Link href="/content/ai-2026-evaluation-hub" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Hub</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

@@ -1,54 +1,54 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { supabase } from "../../utils/supabase/client";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useMemo, useState } from "react",
+import { supabase } from "../../utils/supabase/client",
+import { AnimatePresence, motion } from "framer-motion",
 
 type TalentSuggestion = {
-  id: string;
-  match_type?: "talent_for_job" | string;
-  job_id: string;
-  job_title: string;
-  client_id: string;
-  talent_id: string;
-  talent_name: string;
-  talent_title?: string;
-  talent_photo_url?: string;
-  summary?: string;
-  skills?: string[];
-  hourly_rate?: number;
-  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null;
-  score?: number;
-  created_at?: string;
-};
+  id: string,
+  match_type?: "talent_for_job" | string,
+  job_id: string,
+  job_title: string,
+  client_id: string,
+  talent_id: string,
+  talent_name: string,
+  talent_title?: string,
+  talent_photo_url?: string,
+  summary?: string,
+  skills?: string[],
+  hourly_rate?: number,
+  status?: "new" | "viewed" | "applied" | "declined" | "pending" | string | null,
+  score?: number,
+  created_at?: string
+},
 
 interface JobGroup {
-  jobId: string;
-  jobTitle: string;
-  suggestions: TalentSuggestion[];
+  jobId: string,
+  jobTitle: string,
+  suggestions: TalentSuggestion[]
 }
 
 const SUGGESTION_TABLE_ENV =
-  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches";
+  process.env.NEXT_PUBLIC_AI_MATCHES_TABLE || "ai_matches",
 
-const MAX_SUGGESTIONS_PER_JOB = 5;
+const MAX_SUGGESTIONS_PER_JOB = 5,
 
 const badge = (
   <span className="ml-2 inline-flex items-center rounded-full bg-indigo-600/10 px-2 py-0.5 text-xs font-medium text-indigo-600 ring-1 ring-inset ring-indigo-600/20">
     Matched by AI
   </span>
-);
+),
 
 function InviteModal({
   open,
   onClose,
   talent,
-  jobTitle,
+  jobTitle
 }: {
-  open: boolean;
-  onClose: () => void;
-  talent: TalentSuggestion | null;
-  jobTitle: string | null;
+  open: boolean,
+  onClose: () => void,
+  talent: TalentSuggestion | null,
+  jobTitle: string | null
 }) {
-  if (!open || !talent) return null;
+  if (!open || !talent) return null,
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
       <div className="w-full max-w-lg rounded-2xl bg-white p-6 shadow-xl">
@@ -101,7 +101,7 @@ function InviteModal({
             </button>
             <button
               onClick={onClose}
-              className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700"
+              className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover: bg-indigo-700"
             >
               Send Invite
             </button>
@@ -109,29 +109,29 @@ function InviteModal({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default function ClientDashboardSuggestedTalents() {
-  const [userId, setUserId] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [groups, setGroups] = useState<JobGroup[]>([]);
-  const [inviteOpen, setInviteOpen] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [groups, setGroups] = useState<JobGroup[]>([]),
+  const [inviteOpen, setInviteOpen] = useState(false),
   const [inviteTalent, setInviteTalent] = useState<TalentSuggestion | null>(
     null
-  );
-  const [inviteJobTitle, setInviteJobTitle] = useState<string | null>(null);
+  ),
+  const [inviteJobTitle, setInviteJobTitle] = useState<string | null>(null),
 
   useEffect(() => {
     async function load() {
       const res = await fetch("/api/marketplace/offers", {
-        headers: { "x-demo-user-role": "client", "x-demo-user-id": "client-1" },
-      });
-      const json = await res.json();
-      if (json.ok) setOffers(json.offers);
+        headers: { "x-demo-user-role": "client", "x-demo-user-id": "client-1" }
+      }),
+      const json = await res.json(),
+      if (json.ok) setOffers(json.offers),
     }
-    load();
-  }, []);
+    load(),
+  }, []),
 
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
@@ -157,5 +157,5 @@ export default function ClientDashboardSuggestedTalents() {
         </div>
       ))}
     </div>
-  );
+  ),
 }

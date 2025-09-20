@@ -1,9 +1,9 @@
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Footer } from '@/components/Footer';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
 
 function ProjectMilestones() {
   return (
@@ -17,7 +17,7 @@ function ProjectMilestones() {
         <Footer />
       </>
     </ProtectedRoute>
-  );
+  ),
 }
 
-export default ProjectMilestones;
+export default ProjectMilestones,

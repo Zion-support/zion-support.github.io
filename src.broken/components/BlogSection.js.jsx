@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 `} className="hover:text-zion-cyan">
                   {post.title}
@@ -15,6 +15,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

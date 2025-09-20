@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import ShareBar from '../../components/ShareBar';
+import Head from 'next/head',
+import Link from 'next/link',
+import ShareBar from '../../components/ShareBar',
 
 const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
   return (
@@ -12,7 +12,7 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
         <meta property="og:title" content="ApiFirstDevelopmentBuildingScalableSystemsChat" />
         <meta property="og:description" content={desc} />
         <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="article" />
+        <meta property="og: type" content="article" />
       </Head>
       
       <main>
@@ -21,7 +21,7 @@ const ApiFirstDevelopmentBuildingScalableSystemsChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ApiFirstDevelopmentBuildingScalableSystemsChat;
+export default ApiFirstDevelopmentBuildingScalableSystemsChat,

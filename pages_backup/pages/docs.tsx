@@ -11,13 +11,12 @@ export default function DocsPage() {,
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">Documentation</h1>,
 				<p className="text-gray-300">Guides, API docs, and best practices. Coming soon.</p>,
 			</section>,
-		</Layout>,
-	),
+		</Layout>)
 }
-,
+
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

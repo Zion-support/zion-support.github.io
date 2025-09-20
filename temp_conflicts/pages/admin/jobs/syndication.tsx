@@ -1,72 +1,70 @@
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../../components/layout/EnhancedLayout';
-import type { BoardName, FormattedJob, JobInput } from '../../../utils/types/jobs';
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
+import type { BoardName, FormattedJob, JobInput } from '../../../utils/types/jobs',
 
-const ALL_BOARDS: BoardName[] = ['LinkedIn', 'Indeed', 'StackOverflow', 'RemoteOK', 'HackerNews', 'AngelList'];
+const ALL_BOARDS: BoardName[] = ['LinkedInIndeed', 'StackOverflowRemoteOK', 'HackerNewsAngelList'],
 
 export default function JobSyndicationAdminPage() {
-  const [enabled, setEnabled] = useState<boolean>(false);
+  const [enabled, setEnabled] = useState<boolean>(false),
   const [selectedBoards, setSelectedBoards] = useState<Record<BoardName, boolean>>({
     LinkedIn: true,
     Indeed: true,
     StackOverflow: false,
     RemoteOK: false,
     HackerNews: false,
-    AngelList: false,
-  });
-  const [job, setJob] = useState<JobInput>({ internalDescription: '', internalTitle: '', employmentType: 'Full-time', remote: true, applyUrl: '' });
-  const [formatted, setFormatted] = useState<FormattedJob | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [publishResults, setPublishResults] = useState<any>(null);
-  const [health, setHealth] = useState<any>(null);
-  const [adminSecret, setAdminSecret] = useState<string>('');
+    AngelList: false
+  }),
+  const [job, setJob] = useState<JobInput>({ internalDescription: '', internalTitle: '', employmentType: 'Full-time', remote: true, applyUrl: '' }),
+  const [formatted, setFormatted] = useState<FormattedJob | null>(null),
+  const [loading, setLoading] = useState<boolean>(false),
+  const [publishResults, setPublishResults] = useState<any>(null),
+  const [health, setHealth] = useState<any>(null),
+  const [adminSecret, setAdminSecret] = useState<string>(''),
 
-  const selectedBoardList = useMemo(() => ALL_BOARDS.filter((b) => selectedBoards[b]), [selectedBoards]);
+  const selectedBoardList = useMemo(() => ALL_BOARDS.filter((b) => selectedBoards[b]), [selectedBoards]),
 
   async function fetchHealth() {
-    const res = await fetch('/api/jobs/syndication/health');
-    setHealth(await res.json());
+    const res = await fetch('/api/jobs/syndication/health'),
+    setHealth(await res.json()),
   }
 
   async function formatWithAI() {
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/jobs/syndication/format', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'x-admin-secret': adminSecret,
+          'Content-Type': 'application/jsonx-admin-secret': adminSecret
         },
-        body: JSON.stringify({ job }),
-      });
-      const data = await res.json();
-      setFormatted(data.formatted);
+        body: JSON.stringify({ job })
+      }),
+      const data = await res.json(),
+      setFormatted(data.formatted),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
   async function publish() {
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/jobs/syndication/publish', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'x-admin-secret': adminSecret,
+          'Content-Type': 'application/jsonx-admin-secret': adminSecret
         },
         body: JSON.stringify({
           job,
           boards: selectedBoardList,
           formatted,
           utm: { campaign: 'job_syndication', medium: 'jobs' },
-          autoRefresh: { enabled: true, cadence: 'weekly' },
-        }),
-      });
-      const data = await res.json();
-      setPublishResults(data);
+          autoRefresh: { enabled: true, cadence: 'weekly' }
+        })
+      }),
+      const data = await res.json(),
+      setPublishResults(data),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
@@ -163,7 +161,7 @@ export default function JobSyndicationAdminPage() {
                   <div className="text-gray-600 text-xs">{formatted.summary}</div>
                   <div className="mt-2">
                     <div className="text-xs font-medium">Tags:</div>
-                    <div className="text-xs text-gray-700">{formatted.tags.join(', ')}</div>
+                    <div className="text-xs text-gray-700">{formatted.tags.join()}</div>
                   </div>
                   <div className="mt-3 prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: formatted.markdown.replace(/\n/g, '<br/>') }} />
                 </div>
@@ -208,5 +206,5 @@ export default function JobSyndicationAdminPage() {
         ) : null}
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

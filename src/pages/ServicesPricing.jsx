@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Check, X, Zap, Shield, TrendingUp, Globe, BarChart3, Users, Phone, Mail, MapPin, ExternalLink, DollarSign, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import SEO from "@/components/SEO";
 const pricingTiers = [
     {
-        name: "Starter",
-        description: "Perfect for small businesses and startups",
-        price: "From $500",
-        priceRange: "500 - 1,999",
+        name: "Starter",description: "Perfect for small businesses and startups",price: "From $500",priceRange: "500 - 1,999",
         features: [
-            "Basic AI Integration",
+            "Basic AI Integration";
             "Standard Security",
             "Email Support",
             "Basic Analytics",
@@ -20,21 +17,18 @@ const pricingTiers = [
             "Standard Templates"
         ],
         notIncluded: [
-            "Advanced Customization",
+            "Advanced Customization";
             "Priority Support",
             "Custom Integrations",
             "Advanced Analytics"
         ],
-        color: "from-emerald-500 to-green-600",
-        popular: false
-    },
+        color: "from-emerald-500 to-green-600",popular: false
+    };
     {
-        name: "Professional",
-        description: "Ideal for growing businesses and teams",
-        price: "From $2,000",
+        name: "Professional",description: "Ideal for growing businesses and teams",price: "From $2,000",
         priceRange: "2,000 - 4,999",
         features: [
-            "Advanced AI Features",
+            "Advanced AI Features";
             "Enhanced Security",
             "Priority Support",
             "Advanced Analytics",
@@ -44,20 +38,17 @@ const pricingTiers = [
             "Integration Support"
         ],
         notIncluded: [
-            "Enterprise Security",
+            "Enterprise Security";
             "Custom Development",
             "Dedicated Account Manager"
         ],
-        color: "from-blue-500 to-indigo-600",
-        popular: true
-    },
+        color: "from-blue-500 to-indigo-600",popular: true
+    };
     {
-        name: "Enterprise",
-        description: "For large organizations with complex needs",
-        price: "From $5,000",
+        name: "Enterprise",description: "For large organizations with complex needs",price: "From $5,000",
         priceRange: "5,000 - 15,000",
         features: [
-            "Full AI Suite",
+            "Full AI Suite";
             "Enterprise Security",
             "24/7 Premium Support",
             "Custom Analytics",
@@ -68,83 +59,61 @@ const pricingTiers = [
             "Custom Integrations",
             "Training & Onboarding"
         ],
-        notIncluded: [],
-        color: "from-purple-500 to-indigo-600",
-        popular: false
+        notIncluded: [],color: "from-purple-500 to-indigo-600",popular: false
     }
 ];
 const serviceCategories = [
     {
-        name: "AI Services",
-        icon: <Zap className="w-6 h-6"/>,
-        services: [
-            { name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 },
-            { name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 },
-            { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 },
+        name: "AI Services",icon: <Zap className="w-6 h-6"/>,services: [
+            { name: "AI Chatbot Platform", starter: 899, professional: 2999, enterprise: 5999 };
+            { name: "Content Generation Suite", starter: 499, professional: 899, enterprise: 1999 };
+            { name: "Data Analytics Platform", starter: 999, professional: 1999, enterprise: 4999 };
             { name: "Computer Vision API", starter: 799, professional: 1499, enterprise: 3999 }
         ]
-    },
+    };
     {
-        name: "IT Services",
-        icon: <Shield className="w-6 h-6"/>,
-        services: [
-            { name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 },
-            { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 },
-            { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 },
+        name: "IT Services",icon: <Shield className="w-6 h-6"/>,services: [
+            { name: "Cloud Migration", starter: 1999, professional: 4999, enterprise: 9999 };
+            { name: "Cybersecurity Audit", starter: 1499, professional: 3999, enterprise: 7999 };
+            { name: "DevOps Automation", starter: 999, professional: 3499, enterprise: 6999 };
             { name: "Infrastructure Setup", starter: 1299, professional: 2999, enterprise: 5999 }
         ]
-    },
+    };
     {
-        name: "Business Solutions",
-        icon: <TrendingUp className="w-6 h-6"/>,
-        services: [
-            { name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 },
-            { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 },
-            { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 },
+        name: "Business Solutions",icon: <TrendingUp className="w-6 h-6"/>,services: [
+            { name: "Workflow Automation", starter: 799, professional: 2499, enterprise: 4999 };
+            { name: "Customer Support System", starter: 599, professional: 1799, enterprise: 3999 };
+            { name: "Project Management", starter: 699, professional: 1999, enterprise: 4499 };
             { name: "HR Management Suite", starter: 899, professional: 2499, enterprise: 5499 }
         ]
-    },
+    };
     {
-        name: "Digital Solutions",
-        icon: <Globe className="w-6 h-6"/>,
-        services: [
-            { name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 },
-            { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
-            { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
+        name: "Digital Solutions",icon: <Globe className="w-6 h-6"/>,services: [
+            { name: "E-commerce Optimization", starter: 1499, professional: 3999, enterprise: 7999 };
+            { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 };
+            { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 };
             { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
         ]
     }
 ];
 const benefits = [
     {
-        icon: <CheckCircle className="w-8 h-8"/>,
-        title: "Scalable Solutions",
-        description: "Start with what you need and scale up as your business grows"
+        icon: <CheckCircle className="w-8 h-8"/>,title: "Scalable Solutions",description: "Start with what you need and scale up as your business grows"
+    };
+    {
+        icon: <Shield className="w-8 h-8"/>,title: "Enterprise Security",description: "Bank-level security and compliance for all our solutions"
+    };
+    {
+        icon: <Clock className="w-8 h-8"/>,title: "Rapid Deployment",description: "Get up and running in days, not months"
     },
     {
-        icon: <Shield className="w-8 h-8"/>,
-        title: "Enterprise Security",
-        description: "Bank-level security and compliance for all our solutions"
-    },
+        icon: <Users className="w-8 h-8"/>,title: "Expert Support",description: "24/7 technical support and dedicated account management"
+    };
     {
-        icon: <Clock className="w-8 h-8"/>,
-        title: "Rapid Deployment",
-        description: "Get up and running in days, not months"
-    },
+        icon: <TrendingUp className="w-8 h-8"/>,title: "Proven ROI",description: "Track record of delivering measurable business outcomes"
+    };
     {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Expert Support",
-        description: "24/7 technical support and dedicated account management"
-    },
-    {
-        icon: <TrendingUp className="w-8 h-8"/>,
-        title: "Proven ROI",
-        description: "Track record of delivering measurable business outcomes"
-    },
-    {
-        icon: <BarChart3 className="w-8 h-8"/>,
-        title: "Continuous Innovation",
-        description: "Regular updates and new features to keep you ahead"
+        icon: <BarChart3 className="w-8 h-8"/>,title: "Continuous Innovation",description: "Regular updates and new features to keep you ahead"
     }
 ];
 export default function ServicesPricing() {
@@ -159,7 +128,7 @@ export default function ServicesPricing() {
             Transparent Pricing
           </h1>
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need, 
+            Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need;
             with the ability to scale up as you grow.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -346,7 +315,7 @@ export default function ServicesPricing() {
             Contact us today to discuss your specific needs and get a custom quote tailored to your business
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
               Schedule a Consultation
             </Button>
@@ -357,5 +326,5 @@ export default function ServicesPricing() {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 }

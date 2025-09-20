@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI Services 2025 Ultimate - Revolutionary AI Solutions';
-  description: 'Discover our comprehensive suite of AI services for 2025, including automation, machine learning, neural networks, and quantum computing solutions that transform businesses.';
-  keywords: ['AI services 2025artificial intelligence solutions', 'AI automationmachine learning', 'neural networksquantum computing'],
-};
+  title: 'AI Services 2025 Ultimate - Revolutionary AI Solutions',
+  description: 'Discover our comprehensive suite of AI services for 2025, including automation, machine learning, neural networks, and quantum computing solutions that transform businesses.',
+  keywords: ['AI services 2025artificial intelligence solutionsAI automationmachine learning', 'neural networksquantum computing']
+},
 export default function AIServices2025Ultimate() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">,
@@ -16,7 +16,7 @@ export default function AIServices2025Ultimate() {,
         url="/ai-services-2025-ultimate",
       />,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-medium">🚀 ULTIMATE AI SERVICES 2025</span>,
@@ -35,7 +35,7 @@ export default function AIServices2025Ultimate() {,
             <div className="text-4xl mb-4">🤖</div>,
             <h3 className="text-2xl font-bold mb-4">AI Automation Solutions</h3>,
             <p className="text-gray-300 mb-6">,
-              Intelligent automation systems that streamline operations, reduce costs;
+              Intelligent automation systems that streamline operations, reduce costs,
               and increase efficiency across your entire organization.,
             </p>,
             <ul className="space-y-2 mb-6 text-sm">,
@@ -194,7 +194,7 @@ export default function AIServices2025Ultimate() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>,
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">,
@@ -217,5 +217,4 @@ export default function AIServices2025Ultimate() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

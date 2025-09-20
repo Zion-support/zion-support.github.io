@@ -8,7 +8,7 @@
           <div className="max-w-7xl mx-auto">,
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">,
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">,
-                {/* Search */,}
+                {/* Search */}
                 <div className="relative">,
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />,
                   <input,
@@ -18,7 +18,7 @@
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
                   />,
-                {/* Category Filter */,}
+                {/* Category Filter */}
                 <div className="relative">,
                   <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />,
                   <select,
@@ -27,7 +27,7 @@
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none",
                   >,
                     {categories.map(category => (,
-                      <option key={category.id,} value={category.id}>,
+                      <option key={category.id} value={category.id}>,
                         {category.name} ({category.count}),
                     ))}
                 {/* Sort By */}
@@ -42,7 +42,7 @@
                     <option value="price">Sort by Price</option>,
                     <option value="rating">Sort by Rating</option>,
                     <option value="customers">Sort by Customers</option>,
-        {/* Services Grid */,}
+        {/* Services Grid */}
         <section className="relative z-10 py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-7xl mx-auto">,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -52,16 +52,15 @@
                   className="group",
                 >,
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover: border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">,
-                    {/* Service Header */,}
+                    {/* Service Header */}
                     <div className="flex items-start justify-between mb-4">,
                       <div className="text-4xl">{service.icon}</div>,
                       {service.popular && (,
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">,
-                          Popular,
-                      )}
+                          Popular)}
                     {/* Service Title */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: text-cyan-400 transition-colors duration-300">,
-                      {service.name,}
+                      {service.name}
                     {/* Tagline */}
                     <p className="text-gray-300 text-sm mb-4">,
                       {service.tagline}
@@ -101,7 +100,7 @@
                     </a>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             {/* No Results */}
             {filteredServices.length === 0 && (,
               <div,
@@ -110,14 +109,13 @@
                 <div className="text-6xl mb-4">🔍</div>,
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
                 <p className="text-gray-400">Try adjusting your search terms or filters</p>,
-              </div>,
-            )}
+              </div>)}
         {/* Contact Section */}
         <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <div,
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm",
             >,
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>,
@@ -126,7 +124,7 @@
               <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">,
                   <span className="text-2xl">📱</span>,
-                  <span className="font-semibold">{contactInfo.mobile,}</span>,
+                  <span className="font-semibold">{contactInfo.mobile}</span>,
                 <div className="flex items-center justify-center space-x-3 text-purple-300">,
                   <span className="text-2xl">✉️</span>,
                   <span className="font-semibold">{contactInfo.email}</span>,
@@ -151,9 +149,9 @@
         </section>,
       </div>,
     </UltraAdvancedFuturisticBackground>,
-  );
-export default 2026-services-showcase;
-import React from "react";
+  ),
+export default 2026-services-showcase,
+import React from "react",
 const function ServicesShowcase2026() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -164,7 +162,7 @@ const function ServicesShowcase2026() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function ServicesShowcase2026() {;
+  )
+},
+export default function ServicesShowcase2026() {,
 }}}

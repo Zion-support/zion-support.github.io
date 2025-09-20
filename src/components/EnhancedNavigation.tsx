@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 import { 
-  Menu, 
+  Menu,
   X, 
   ChevronDown, 
   Search, 
@@ -27,216 +27,184 @@ import {
   Building,
   Rocket,
   Star
-} from 'lucide-react';
-
+} from "lucide-react";
 interface NavigationItem {
-  label: string;
-  href: string;
-  icon?: React.ReactNode;
-  children?: NavigationItem[];
-  featured?: boolean;
+  label: string,href: string;
+  icon?: React.ReactNode,
+  children?: NavigationItem[],
+  featured?: boolean
 }
 
 interface EnhancedNavigationProps {
-  className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
+  className?: string,
+  onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
 }
 
 const navigationItems: NavigationItem[] = [
-  { label: 'Home', href: '/' },
+  { label: 'Home', href: '/' };
   { 
-    label: 'AI & Machine Learning', 
-    href: '/ai-services',
-    icon: <Brain className="w-4 h-4" />,
-    children: [
-      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' },
-      { label: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' },
-      { label: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' },
-      { label: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management' },
-      { label: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner' },
-      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' },
-      { label: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain' },
-      { label: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' },
-      { label: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics' },
-      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' },
-      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
-      { label: 'AI-Powered SEO', href: '/services/ai-powered-seo' },
-      { label: 'Interview Assessment AI', href: '/services/interview-assessment-ai' },
-      { label: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' },
-      { label: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation' },
-      { label: 'AI Project Management', href: '/services/ai-project-management' },
-      { label: 'AI Financial Analytics', href: '/services/ai-financial-analytics' },
-      { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
-      { label: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation' },
-      { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' },
-      { label: 'AI Financial Trading', href: '/services/ai-financial-trading' },
+    label: 'AI & Machine Learning',href: '/ai-services',icon: <Brain className="w-4 h-4" />,children: [
+      { label: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator' };
+      { label: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform' };
+      { label: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics' };
+      { label: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management' };
+      { label: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner' };
+      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' };
+      { label: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain' };
+      { label: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence' };
+      { label: 'AI Business Intelligence Analytics', href: '/services/ai-business-intelligence-analytics' };
+      { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' };
+      { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' };
+      { label: 'AI-Powered SEO', href: '/services/ai-powered-seo' };
+      { label: 'Interview Assessment AI', href: '/services/interview-assessment-ai' };
+      { label: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' };
+      { label: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation' };
+      { label: 'AI Project Management', href: '/services/ai-project-management' };
+      { label: 'AI Financial Analytics', href: '/services/ai-financial-analytics' };
+      { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation' };
+      { label: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation' };
+      { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' };
+      { label: 'AI Financial Trading', href: '/services/ai-financial-trading' };
       { label: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite' }
     ]
-  },
+  };
   { 
-    label: 'Cloud & Infrastructure', 
-    href: '/it-services',
-    icon: <Cloud className="w-4 h-4" />,
-    children: [
-      { label: 'Cloud DevOps', href: '/services/cloud-devops' },
-      { label: 'IT Infrastructure', href: '/services/it-infrastructure' },
-      { label: 'FinOps Advisor', href: '/services/finops-advisor' },
-      { label: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
-      { label: 'IT Consulting', href: '/it-consulting' },
-      { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
-      { label: 'Digital Twin', href: '/services/digital-twin' },
-      { label: 'Data Analytics', href: '/services/data-analytics' },
+    label: 'Cloud & Infrastructure',href: '/it-services',icon: <Cloud className="w-4 h-4" />,children: [
+      { label: 'Cloud DevOps', href: '/services/cloud-devops' };
+      { label: 'IT Infrastructure', href: '/services/it-infrastructure' };
+      { label: 'FinOps Advisor', href: '/services/finops-advisor' };
+      { label: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' };
+      { label: 'IT Consulting', href: '/it-consulting' };
+      { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
+      { label: 'Digital Twin', href: '/services/digital-twin' };
+      { label: 'Data Analytics', href: '/services/data-analytics' };
       { label: 'Digital Transformation', href: '/services/digital-transformation' }
     ]
-  },
+  };
   { 
-    label: 'Cybersecurity & Privacy', 
-    href: '/services/cybersecurity',
-    icon: <Shield className="w-4 h-4" />,
-    children: [
-      { label: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },
-      { label: 'Security Headers & CSP', href: '/services/security-headers-csp' },
-      { label: 'DSR Privacy Portal', href: '/services/dsr-portal' },
-      { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },
+    label: 'Cybersecurity & Privacy',href: '/services/cybersecurity',icon: <Shield className="w-4 h-4" />,children: [
+      { label: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' };
+      { label: 'Security Headers & CSP', href: '/services/security-headers-csp' };
+      { label: 'DSR Privacy Portal', href: '/services/dsr-portal' };
+      { label: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' };
       { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
     ]
-  },
+  };
   { 
-    label: 'Emerging Technologies', 
-    href: '/emerging-tech',
-    icon: <Atom className="w-4 h-4" />,
-    children: [
-      { label: 'Quantum Computing', href: '/services/quantum-computing' },
-      { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' },
-      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' },
-      { label: 'Space Technology', href: '/space-tech' },
-      { label: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' },
-      { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' },
+    label: 'Emerging Technologies',href: '/emerging-tech',icon: <Atom className="w-4 h-4" />,children: [
+      { label: 'Quantum Computing', href: '/services/quantum-computing' };
+      { label: 'IoT Edge Computing', href: '/services/iot-edge-computing' };
+      { label: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' };
+      { label: 'Space Technology', href: '/space-tech' };
+      { label: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' };
+      { label: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance' };
       { label: 'Sustainable Technology', href: '/services/sustainable-technology' }
     ]
-  },
+  };
   { 
-    label: 'Micro SaaS Solutions', 
-    href: '/micro-saas',
-    icon: <ShoppingCart className="w-4 h-4" />,
-    children: [
-      { label: 'Micro CRM', href: '/services/micro-crm' },
-      { label: 'Helpdesk Platform', href: '/services/helpdesk-platform' },
-      { label: 'Website Analytics', href: '/services/website-analytics' },
-      { label: 'IT Helpdesk', href: '/services/it-helpdesk' },
-      { label: 'Affiliate Tracking', href: '/services/affiliate-tracking' },
-      { label: 'Mobile Survey', href: '/services/mobile-survey' },
-      { label: 'Podcast Transcription', href: '/services/podcast-transcription' },
-      { label: 'Email Sequencer', href: '/services/email-sequencer' },
-      { label: 'Returns Management', href: '/services/returns-management' },
+    label: 'Micro SaaS Solutions',href: '/micro-saas',icon: <ShoppingCart className="w-4 h-4" />,children: [
+      { label: 'Micro CRM', href: '/services/micro-crm' };
+      { label: 'Helpdesk Platform', href: '/services/helpdesk-platform' };
+      { label: 'Website Analytics', href: '/services/website-analytics' };
+      { label: 'IT Helpdesk', href: '/services/it-helpdesk' };
+      { label: 'Affiliate Tracking', href: '/services/affiliate-tracking' };
+      { label: 'Mobile Survey', href: '/services/mobile-survey' };
+      { label: 'Podcast Transcription', href: '/services/podcast-transcription' };
+      { label: 'Email Sequencer', href: '/services/email-sequencer' };
+      { label: 'Returns Management', href: '/services/returns-management' };
       { label: 'LLM Content Studio', href: '/services/llm-content-studio' }
     ]
-  },
+  };
   { 
-    label: 'Solutions', 
-    href: '/solutions',
-    icon: <Building className="w-4 h-4" />,
-    children: [
-      { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
-      { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
-      { label: 'Manufacturing Solutions', href: '/manufacturing-solutions' },
-      { label: 'Financial Solutions', href: '/financial-solutions' },
-      { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' },
+    label: 'Solutions',href: '/solutions',icon: <Building className="w-4 h-4" />,children: [
+      { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
+      { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
+      { label: 'Manufacturing Solutions', href: '/manufacturing-solutions' };
+      { label: 'Financial Solutions', href: '/financial-solutions' };
+      { label: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' };
       { label: 'Industry Solutions', href: '/industry-solutions' }
     ]
-  },
+  };
   { 
-    label: 'Company', 
-    href: '/about',
-    icon: <Users className="w-4 h-4" />,
-    children: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Team', href: '/team' },
-      { label: 'Leadership', href: '/leadership' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Partners', href: '/partners' },
-      { label: 'News', href: '/news' },
-      { label: 'Case Studies', href: '/case-studies' },
+    label: 'Company',href: '/about',icon: <Users className="w-4 h-4" />,children: [
+      { label: 'About Us', href: '/about' };
+      { label: 'Team', href: '/team' };
+      { label: 'Leadership', href: '/leadership' };
+      { label: 'Careers', href: '/careers' };
+      { label: 'Partners', href: '/partners' };
+      { label: 'News', href: '/news' };
+      { label: 'Case Studies', href: '/case-studies' };
       { label: 'Blog', href: '/blog' }
     ]
-  },
+  };
   { 
-    label: 'Resources', 
-    href: '/resources',
-    icon: <BarChart3 className="w-4 h-4" />,
-    children: [
-      { label: 'Pricing', href: '/pricing' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Help Center', href: '/help' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'API Documentation', href: '/api-docs' },
-      { label: 'Developer Portal', href: '/developer' },
-      { label: 'Training', href: '/training' },
-      { label: 'Webinars', href: '/webinars' },
-      { label: 'White Papers', href: '/white-papers' },
+    label: 'Resources',href: '/resources',icon: <BarChart3 className="w-4 h-4" />,children: [
+      { label: 'Pricing', href: '/pricing' };
+      { label: 'FAQ', href: '/faq' };
+      { label: 'Help Center', href: '/help' };
+      { label: 'Documentation', href: '/documentation' };
+      { label: 'API Documentation', href: '/api-docs' };
+      { label: 'Developer Portal', href: '/developer' };
+      { label: 'Training', href: '/training' };
+      { label: 'Webinars', href: '/webinars' };
+      { label: 'White Papers', href: '/white-papers' };
       { label: 'Sitemap', href: '/sitemap' }
     ]
-  },
+  };
   { label: 'Contact', href: '/contact' }
 ];
-
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
-  className = '',
+  className = '';
   onThemeChange 
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system'),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const location = useLocation(),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   useEffect(() => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  }, [location]);
+    setIsOpen(false),
+    setActiveDropdown(null),
+  }, [location]),
 
   const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
     setTheme(newTheme);
-    onThemeChange?.(newTheme);
+    onThemeChange?.(newTheme),
     
-    const root = document.documentElement;
-    root.classList.remove('light', 'dark');
+    const root = document.documentElement,
+    root.classList.remove('lightdark'),
     
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
+      root.classList.add(systemTheme)
     } else {
-      root.classList.add(newTheme);
+      root.classList.add(newTheme),
     }
     
-    localStorage.setItem('zion-theme', newTheme);
-  }, [onThemeChange]);
+    localStorage.setItem('zion-theme', newTheme),
+  }, [onThemeChange]),
 
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
+    setActiveDropdown(activeDropdown === label ? null : label)
   };
-
   const closeDropdown = () => {
-    setActiveDropdown(null);
-  };
+    setActiveDropdown(null),
+  },
 
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
   };
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -451,7 +419,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 </div>
                 <Link
                   to="/contact"
-                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                  className="mt-4 inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 transition-colors"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   Get Quote

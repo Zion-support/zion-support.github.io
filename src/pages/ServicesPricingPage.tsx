@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,10 +29,10 @@ import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/da
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {
-    acc[service.category] = [];
+    acc[service.category] = [],
   }
-  acc[service.category].push(service);
-  return acc;
+  acc[service.category].push(service),
+  return acc,
 }, {} as { [key: string]: typeof EXPANDED_SERVICES });
 // Pricing comparison features
 const pricingFeatures = [
@@ -44,7 +44,7 @@ const pricingFeatures = [
   "Regular Updates",
   "Security Compliance",
   "Scalable Architecture"
-];
+],
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
@@ -53,7 +53,7 @@ export default function ServicesPricingPage() {
     : servicesByCategory[selectedCategory] || [];
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
-      'AI Automation': <Zap className="h-5 w-5" />,
+      'AI Automation': <Zap className="h-5 w-5" />;
       'Customer Intelligence': <Users className="h-5 w-5" />,
       'Content Marketing': <TrendingUp className="h-5 w-5" />,
       'Cybersecurity': <Shield className="h-5 w-5" />,
@@ -73,9 +73,9 @@ export default function ServicesPricingPage() {
       'FinTech': <TrendingUp className="h-5 w-5" />,
       'Education Technology': <GraduationCap className="h-5 w-5" />,
       'Supply Chain': <Truck className="h-5 w-5" />
-    };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />;
-  };
+    },
+    return categoryIcons[category] || <Zap className="h-5 w-5" />,
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -145,7 +145,7 @@ export default function ServicesPricingPage() {
                   </div>
                   <Button
                     className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
+                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry_blank')}
                   >
                     Get Custom Quote
                   </Button>
@@ -248,7 +248,7 @@ export default function ServicesPricingPage() {
                           <Button
                             variant="outline"
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+                            onClick={() => window.open('https://ziontechgroup.com_blank')}
                           >
                             <ExternalLink className="h-4 w-4" />
                           </Button>
@@ -346,7 +346,7 @@ export default function ServicesPricingPage() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
-              onClick={() => window.open('tel:+13024640950', '_blank')}
+              onClick={() => window.open('tel:+13024640950_blank')}
             >
               <Phone className="h-5 w-5 mr-2" />
               Call Now

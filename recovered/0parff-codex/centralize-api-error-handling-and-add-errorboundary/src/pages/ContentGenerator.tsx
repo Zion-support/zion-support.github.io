@@ -1,45 +1,45 @@
 
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { toast } from "sonner",
+import { Loader2 } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { useNavigate } from "react-router-dom",
 
 export default function ContentGenerator() {
-  const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
+  const { user, isLoading } = useAuth(),
+  const navigate = useNavigate(),
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),
+  const [customPrompt, setCustomPrompt] = useState(''),
+  const [topic, setTopic] = useState(''),
+  const [autoPublish, setAutoPublish] = useState(false),
+  const [includeImage, setIncludeImage] = useState(true),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [previewContent, setPreviewContent] = useState<any>(null),
+  const [testEmail, setTestEmail] = useState(''),
 
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("You must be logged in to access this page");
-      navigate("/login?redirect=/content-generator");
+      toast.error("You must be logged in to access this page"),
+      navigate("/login?redirect=/content-generator"),
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
 
   const generateContent = async () => {
-    setIsGenerating(true);
-    setPreviewContent(null);
+    setIsGenerating(true),
+    setPreviewContent(null),
     
     try {
       const { data, error } = await supabase.functions.invoke('generate-content', {
@@ -50,29 +50,29 @@ export default function ContentGenerator() {
           autoPublish,
           includeImage: contentType === 'blog' ? includeImage : false
         }
-      });
+      }),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      setPreviewContent(data);
-      toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
+      setPreviewContent(data),
+      toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`),
     } catch (error) {
-      console.error("Error generating content:", error);
-      toast.error("Failed to generate content. Please try again.");
+      console.error("Error generating content:", error),
+      toast.error("Failed to generate content. Please try again."),
     } finally {
-      setIsGenerating(false);
+      setIsGenerating(false),
     }
-  };
+  },
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
-      toast.error("Please enter a test email address");
-      return;
+      toast.error("Please enter a test email address"),
+      return,
     }
     
     if (!previewContent) {
-      toast.error("Generate newsletter content first");
-      return;
+      toast.error("Generate newsletter content first"),
+      return,
     }
     
     try {
@@ -84,16 +84,16 @@ export default function ContentGenerator() {
           testMode: true,
           testEmail
         }
-      });
+      }),
       
-      if (error) throw error;
+      if (error) throw error,
       
-      toast.success(`Test newsletter sent to ${testEmail}!`);
+      toast.success(`Test newsletter sent to ${testEmail}!`),
     } catch (error) {
-      console.error("Error sending test newsletter:", error);
-      toast.error("Failed to send test newsletter. Please try again.");
+      console.error("Error sending test newsletter:", error),
+      toast.error("Failed to send test newsletter. Please try again."),
     }
-  };
+  },
 
   // Check if user is still loading
   if (isLoading) {
@@ -105,7 +105,7 @@ export default function ContentGenerator() {
         </div>
         <Footer />
       </>
-    );
+    ),
   }
 
   return (
@@ -390,5 +390,5 @@ export default function ContentGenerator() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

@@ -1,58 +1,52 @@
-import React, { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Shield, Brain, Rocket, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
+import React, { useState, useCallback } from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, Zap, Shield, Brain, Rocket, ExternalLink } from 'lucide-react',
+import Link from 'next/link',
 
 interface ServiceCardProps {
   service: {
-    id: string;
-    name: string;
-    description: string;
-    category: string[];
-    features: string[];
-    pricing?: string;
-    rating?: number;
-    icon?: string;
-    href?: string;
-    isPopular?: boolean;
-    isNew?: boolean;
-  };
-  index: number;
-  isReducedMotion?: boolean;
+    id: string,
+    name: string,
+    description: string,
+    category: string[],
+    features: string[],
+    pricing?: string,
+    rating?: number,
+    icon?: string,
+    href?: string,
+    isPopular?: boolean,
+    isNew?: boolean
+  },
+  index: number,
+  isReducedMotion?: boolean
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isReducedMotion = false }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
 
   const handleMouseEnter = useCallback(() => {
     if (!isReducedMotion) {
-      setIsHovered(true);
+      setIsHovered(true),
     }
-  }, [isReducedMotion]);
+  }, [isReducedMotion]),
 
   const handleMouseLeave = useCallback(() => {
     if (!isReducedMotion) {
-      setIsHovered(false);
+      setIsHovered(false),
     }
-  }, [isReducedMotion]);
+  }, [isReducedMotion]),
 
   const toggleExpanded = useCallback(() => {
-    setIsExpanded(prev => !prev);
-  }, []);
+    setIsExpanded(prev => !prev),
+  }, []),
 
   const getCategoryColor = useCallback((category: string) => {
     const colors: Record<string, string> = {
-      'AI': 'from-purple-400 to-pink-500',
-      'Quantum': 'from-cyan-400 to-blue-500',
-      'IT': 'from-emerald-400 to-teal-500',
-      'Micro SAAS': 'from-orange-400 to-red-500',
-      'Cybersecurity': 'from-red-400 to-pink-500',
-      'Space': 'from-indigo-400 to-purple-500',
-      'Blockchain': 'from-yellow-400 to-orange-500'
-    };
-    return colors[category] || 'from-gray-400 to-gray-500';
-  }, []);
+      'AI': 'from-purple-400 to-pink-500Quantum': 'from-cyan-400 to-blue-500IT': 'from-emerald-400 to-teal-500Micro SAAS': 'from-orange-400 to-red-500Cybersecurity': 'from-red-400 to-pink-500Space': 'from-indigo-400 to-purple-500Blockchain': 'from-yellow-400 to-orange-500'
+    },
+    return colors[category] || 'from-gray-400 to-gray-500',
+  }, []),
 
   const getIcon = useCallback((category: string) => {
     const icons: Record<string, React.ReactNode> = {
@@ -63,9 +57,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isReducedMoti
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Space': <Rocket className="w-6 h-6" />,
       'Blockchain': <Zap className="w-6 h-6" />
-    };
-    return icons[category] || <Star className="w-6 h-6" />;
-  }, []);
+    },
+    return icons[category] || <Star className="w-6 h-6" />,
+  }, []),
 
 const ServiceCard: React.FC = () => {
   return (
@@ -73,7 +67,7 @@ const ServiceCard: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">ServiceCard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default ServiceCard;
+export default ServiceCard,

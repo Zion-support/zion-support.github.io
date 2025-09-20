@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Heart, 
+  Heart,
   Brain, 
   Shield, 
   Activity, 
@@ -27,80 +27,48 @@ import {
   Building,
   Video,
   Eye
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIHealthcarePlatform() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Diagnostics',
-      description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Brain,title: 'AI-Powered Diagnostics',description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring with predictive analytics and early warning systems',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Heart,title: 'Patient Monitoring',description: 'Real-time health monitoring with predictive analytics and early warning systems',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Shield,
-      title: 'HIPAA Compliant Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance standards',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Shield,title: 'HIPAA Compliant Security',description: 'Enterprise-grade security with end-to-end encryption and compliance standards',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Activity,
-      title: 'Predictive Analytics',
-      description: 'Proactive health insights using historical data and AI forecasting models',
-      color: 'from-purple-500 to-indigo-500'
-    },
+      icon: Activity,title: 'Predictive Analytics',description: 'Proactive health insights using historical data and AI forecasting models',color: 'from-purple-500 to-indigo-500'
+    };
     {
-      icon: Users,
-      title: 'Care Team Collaboration',
-      description: 'Seamless communication and coordination between healthcare providers',
-      color: 'from-orange-500 to-red-500'
-    },
+      icon: Users,title: 'Care Team Collaboration',description: 'Seamless communication and coordination between healthcare providers',color: 'from-orange-500 to-red-500'
+    };
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Instant data analysis and decision support for critical care situations',
-      color: 'from-yellow-500 to-orange-500'
+      icon: Zap,title: 'Real-time Processing',description: 'Instant data analysis and decision support for critical care situations',color: 'from-yellow-500 to-orange-500'
     }
   ];
-
   const benefits = [
-    'Reduce diagnostic errors by up to 85%',
-    'Improve patient outcomes by 40%',
-    'Cut healthcare costs by 30%',
-    'Streamline administrative processes',
-    'Enhance patient engagement',
-    'Ensure regulatory compliance'
-  ];
+    'Reduce diagnostic errors by up to 85%Improve patient outcomes by 40%',
+    'Cut healthcare costs by 30%Streamline administrative processes',
+    'Enhance patient engagementEnsure regulatory compliance'
+  ],
 
   const useCases = [
     {
-      title: 'Hospital Management',
-      description: 'Comprehensive hospital information system with AI-powered decision support',
-      icon: Building
-    },
+      title: 'Hospital Management',description: 'Comprehensive hospital information system with AI-powered decision support',icon: Building
+    };
     {
-      title: 'Telemedicine Platform',
-      description: 'Virtual care delivery with AI-assisted diagnosis and treatment planning',
-      icon: Video
-    },
+      title: 'Telemedicine Platform',description: 'Virtual care delivery with AI-assisted diagnosis and treatment planning',icon: Video
+    };
     {
-      title: 'Medical Imaging',
-      description: 'AI-enhanced radiology and pathology analysis for accurate diagnosis',
-      icon: Eye
-    },
+      title: 'Medical Imaging',description: 'AI-enhanced radiology and pathology analysis for accurate diagnosis',icon: Eye
+    };
     {
-      title: 'Patient Records',
-      description: 'Intelligent electronic health records with predictive insights',
-      icon: FileText
+      title: 'Patient Records',description: 'Intelligent electronic health records with predictive insights',icon: FileText
     }
   ];
-
   return (
     <>
       <SEO 
@@ -224,7 +192,7 @@ export default function AIHealthcarePlatform() {
                 </h2>
                 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                  Our AI healthcare platform delivers measurable improvements in patient care, 
+                  Our AI healthcare platform delivers measurable improvements in patient care;
                   operational efficiency, and cost reduction while maintaining the highest 
                   standards of security and compliance.
                 </p>
@@ -302,7 +270,7 @@ export default function AIHealthcarePlatform() {
                 Healthcare Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various healthcare settings and requirements, 
+                Our AI platform adapts to various healthcare settings and requirements;
                 providing tailored solutions for different medical environments.
               </p>
             </motion.div>
@@ -367,7 +335,7 @@ export default function AIHealthcarePlatform() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Contact Sales
                 </motion.button>
@@ -377,5 +345,5 @@ export default function AIHealthcarePlatform() {
         </section>
       </div>
     </>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Evaluations in Production | Zion Tech Group';
+  title: 'AI 2026: Evaluations in Production | Zion Tech Group',
   description:,
-    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.',
-};
+    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.'
+},
 export default function EvaluationsInProductionArticle() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -39,6 +39,5 @@ export default function EvaluationsInProductionArticle() {,
         <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-700">Discuss an implementation</Link>,
         <Link href="/blog" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">More articles</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

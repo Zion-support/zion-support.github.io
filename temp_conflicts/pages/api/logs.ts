@@ -1,23 +1,23 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-import * as Sentry from '@sentry/nextjs';
-import { logWarn, logError } from '@/utils/productionLogger'; // Import loggers
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+import * as Sentry from '@sentry/nextjs',
+import { logWarn, logError } from '@/utils/productionLogger', // Import loggers
 
 interface LogEntry {
-  level: 'debug' | 'info' | 'warn' | 'error';
-  message: string;
-  context?: Record<string, any>;
-  timestamp: string;
-  sessionId: string;
-  correlationId?: string | null; // Added to match productionLogger's LogEntry
-  url?: string;
-  userAgent?: string;
-  userId?: string | null; // Matched to productionLogger's LogEntry
+  level: 'debug' | 'info' | 'warn' | 'error',
+  message: string,
+  context?: Record<string, any>,
+  timestamp: string,
+  sessionId: string,
+  correlationId?: string | null, // Added to match productionLogger's LogEntry
+  url?: string,
+  userAgent?: string,
+  userId?: string | null, // Matched to productionLogger's LogEntry
 }
 
 interface LogsRequestBody {
-  entries: LogEntry[];
+  entries: LogEntry[]
 }
 
 export default async function handler(
@@ -26,14 +26,14 @@ export default async function handler(
 ) {
   // Only allow POST requests
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }),
   }
 
   try {
-    const { entries } = req.body as LogsRequestBody;
+    const { entries } = req.body as LogsRequestBody,
 
     if (!entries || !Array.isArray(entries)) {
-      return res.status(400).json({ error: 'Invalid request body. Expected entries array.' });
+      return res.status(400).json({ error: 'Invalid request body. Expected entries array.' }),
     }
 
     // 2. Forward errors/warnings to Sentry if configured
@@ -42,24 +42,24 @@ export default async function handler(
         if (entry.level === 'error' || entry.level === 'warn') {
           Sentry.captureMessage(entry.message, {
             level: entry.level,
-            extra: entry,
-          });
+            extra: entry
+          }),
         }
-      });
+      }),
     }
 
     // 3. Optional: Forward to external webhook if configured via env
     if (process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL) {
       try {
-        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch;
+        const doFetch = typeof fetch !== 'undefined' ? fetch : (await import('node-fetch')).default as unknown as typeof fetch,
         await doFetch(process.env.NEXT_PUBLIC_AUTOFIX_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ entries }),
-        });
+          body: JSON.stringify({ entries })
+        }),
       } catch (err) {
         // swallow – do not break client logging on webhook failure
-         logWarn('Failed to forward logs to webhook:', { data: err });
+         logWarn('Failed to forward logs to webhook:', { data: err }),
       }
     }
 
@@ -73,10 +73,10 @@ export default async function handler(
       console.log(`[API] Received ${entries.length} log entries:`, {
         sessionIds: [...new Set(entries.map(e => e.sessionId))],
         levels: entries.reduce((acc, e) => {
-          acc[e.level] = (acc[e.level] || 0) + 1;
-          return acc;
-        }, {} as Record<string, number>),
-      });
+          acc[e.level] = (acc[e.level] || 0) + 1,
+          return acc,
+        }, {} as Record<string, number>)
+      }),
     }
 
     // Process all entries with server-side productionLogger
@@ -87,42 +87,42 @@ export default async function handler(
         url: entry.url,
         userAgent: entry.userAgent,
         userId: entry.userId,
-        originalContext: entry.context,
-      };
+        originalContext: entry.context
+      },
 
       switch (entry.level) {
         case 'debug':
           // Server-side debug logs from client are often too noisy for production
           // Only log them if server is also in debug mode or explicit client_debug mode is enabled
           if (process.env.NODE_ENV === 'development' || process.env.DEBUG === 'true' || process.env.CLIENT_DEBUG_LOGGING === 'true') {
-            serverLogDebug(`Client Debug: ${entry.message}`, serverContext);
+            serverLogDebug(`Client Debug: ${entry.message}`, serverContext),
           }
-          break;
+          break,
         case 'info':
-          serverLogInfo(`Client Info: ${entry.message}`, serverContext);
-          break;
+          serverLogInfo(`Client Info: ${entry.message}`, serverContext),
+          break,
         case 'warn':
-          serverLogWarn(`Client Warn: ${entry.message}`, serverContext);
-          break;
+          serverLogWarn(`Client Warn: ${entry.message}`, serverContext),
+          break,
         case 'error':
-          serverLogError(`Client Error: ${entry.message}`, entry.context?.error || new Error(entry.message), serverContext);
-          break;
+          serverLogError(`Client Error: ${entry.message}`, entry.context?.error || new Error(entry.message), serverContext),
+          break,
         default:
-          serverLogWarn(`Unknown client log level: ${entry.level} - Message: ${entry.message}`, serverContext);
-          break;
+          serverLogWarn(`Unknown client log level: ${entry.level} - Message: ${entry.message}`, serverContext),
+          break,
       }
     }
 
     return res.status(200).json({ 
       success: true,
       processed: entries.length,
-      timestamp: new Date().toISOString(),
-    });
+      timestamp: new Date().toISOString()
+    }),
 
   } catch (error) {
     // Log server-side failure
-    logError('Error in /api/logs:', { data: error });
-    Sentry.captureException(error);
-    return res.status(500).json({ message: 'Internal Server Error' });
+    logError('Error in /api/logs:', { data: error }),
+    Sentry.captureException(error),
+    return res.status(500).json({ message: 'Internal Server Error' }),
   }
 } 

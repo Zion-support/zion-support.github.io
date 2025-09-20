@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { SERVICE_CATEGORIES, ALL_SERVICES } from '@/data/servicesData';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { SERVICE_CATEGORIES, ALL_SERVICES } from '@/data/servicesData',
 
 export function Home() {
-  const featuredServices = ALL_SERVICES.slice(0, 6);
+  const featuredServices = ALL_SERVICES.slice(0, 6),
   const stats = [
     { number: '500+', label: 'Happy Clients' },
     { number: '50+', label: 'Expert Services' },
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -315,7 +315,7 @@ export function Home() {
       {/* Footer */}
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
               <p className="text-gray-400 mb-4">
@@ -379,7 +379,7 @@ export function Home() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Zion Tech Group. All rights reserved. | 
+            <p>&copy, 2024 Zion Tech Group. All rights reserved. | 
               <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 ml-1">
                 ziontechgroup.com
               </a>
@@ -388,5 +388,5 @@ export function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }

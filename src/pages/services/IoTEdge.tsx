@@ -1,54 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone } from "lucide-react";
 export default function IoTEdge() {
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Computing',
-      description: 'Process data closer to the source for faster response times'
-    },
+      icon: Cpu,title: 'Edge Computing',description: 'Process data closer to the source for faster response times'
+    };
     {
-      icon: Wifi,
-      title: 'IoT Connectivity',
-      description: 'Seamless device communication and data transmission'
-    },
+      icon: Wifi,title: 'IoT Connectivity',description: 'Seamless device communication and data transmission'
+    };
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Instant data analysis and decision making'
-    },
+      icon: Zap,title: 'Real-time Processing',description: 'Instant data analysis and decision making'
+    };
     {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Efficient storage and processing of IoT data streams'
+      icon: Database,title: 'Data Management',description: 'Efficient storage and processing of IoT data streams'
     }
   ];
-
   const services = [
     {
-      title: 'IoT Device Management',
-      description: 'Centralized management and monitoring of connected devices',
-      icon: Smartphone
-    },
+      title: 'IoT Device Management',description: 'Centralized management and monitoring of connected devices',icon: Smartphone
+    };
     {
-      title: 'Edge Analytics',
-      description: 'Real-time data processing and analytics at the edge',
-      icon: BarChart3
-    },
+      title: 'Edge Analytics',description: 'Real-time data processing and analytics at the edge',icon: BarChart3
+    };
     {
-      title: '5G Integration',
-      description: 'High-speed connectivity for IoT applications',
-      icon: Wifi
-    },
+      title: '5G Integration',description: 'High-speed connectivity for IoT applications',icon: Wifi
+    };
     {
-      title: 'Security & Compliance',
-      description: 'End-to-end security for IoT ecosystems',
-      icon: Shield
+      title: 'Security & Compliance',description: 'End-to-end security for IoT ecosystems',icon: Shield
     }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -72,7 +53,7 @@ export default function IoTEdge() {
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Harness the power of IoT and edge computing to create intelligent,
+              Harness the power of IoT and edge computing to create intelligent;
               connected systems that process data faster and more efficiently.
             </p>
 
@@ -189,7 +170,7 @@ export default function IoTEdge() {
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Transform your business with intelligent IoT solutions and edge computing capabilities.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Start IoT Project
                 </button>
@@ -202,5 +183,5 @@ export default function IoTEdge() {
         </div>
       </section>
     </div>
-  );
+  )
 }

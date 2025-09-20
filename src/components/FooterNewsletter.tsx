@@ -1,32 +1,30 @@
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
-
+import React, { useState } from "react";
+import { Mail, Send, CheckCircle } from "lucide-react";
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    if (!email.trim()) return,
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000)),
 
-      setIsSubmitted(true);
-      setEmail('');
+      setIsSubmitted(true),
+      setEmail(''),
 
       // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
+      setTimeout(() => setIsSubmitted(false), 3000),
     } catch (error) {
-      console.error('Newsletter subscription failed:', error);
+      console.error('Newsletter subscription failed:', error),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
@@ -50,7 +48,7 @@ export const FooterNewsletter: React.FC = () => {
             <span>Successfully subscribed!</span>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
               value={email}

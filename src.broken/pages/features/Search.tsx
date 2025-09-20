@@ -1,9 +1,9 @@
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
 
 export default function SearchFeature() {
   const schema = {
@@ -12,7 +12,7 @@ export default function SearchFeature() {
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
-  };
+  },
 
   return (
     <>
@@ -36,12 +36,12 @@ export default function SearchFeature() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src="https://placehold.co/800x400"
+              src="https: //placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Find the right expert or product without endless scrolling.</li>
             <li>Save favorite searches and get notified of new matches.</li>
@@ -66,5 +66,5 @@ export default function SearchFeature() {
         </div>
       </main>
     </>
-  );
+  ),
 }

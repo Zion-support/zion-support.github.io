@@ -1,36 +1,36 @@
-import React, { useState } from 'react';
-import AdminLayout from '@/components/admin/AdminLayout';
+import React, { useState } from 'react',
+import AdminLayout from '@/components/admin/AdminLayout',
 import {
   Table,
   TableHead,
   TableHeader,
   TableRow,
   TableBody,
-  TableCell,
-} from '@/components/ui/table';
-import { Input } from '@/components/ui/input';
-import { Switch } from '@/components/ui/switch';
+  TableCell
+} from '@/components/ui/table',
+import { Input } from '@/components/ui/input',
+import { Switch } from '@/components/ui/switch',
 
 interface Product {
-  id: number;
-  name: string;
-  category: string;
-  status: 'approved' | 'pending' | 'rejected';
+  id: number,
+  name: string,
+  category: string,
+  status: 'approved' | 'pending' | 'rejected'
 }
 
 const initialProducts: Product[] = [
   { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },
   { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },
-  { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' },
-];
+  { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' }
+],
 
 export default function ProductsAdminPage() {
-  const [search, setSearch] = useState('');
-  const [products, setProducts] = useState(initialProducts);
+  const [search, setSearch] = useState(''),
+  const [products, setProducts] = useState(initialProducts),
 
   const filtered = products.filter((p) =>
     p.name.toLowerCase().includes(search.toLowerCase())
-  );
+  ),
 
   const toggleApproval = (id: number) => {
     setProducts((prev) =>
@@ -38,12 +38,12 @@ export default function ProductsAdminPage() {
         p.id === id
           ? {
               ...p,
-              status: p.status === 'approved' ? 'rejected' : 'approved',
+              status: p.status === 'approved' ? 'rejected' : 'approved'
             }
           : p
       )
-    );
-  };
+    ),
+  },
 
   return (
     <AdminLayout>
@@ -88,5 +88,5 @@ export default function ProductsAdminPage() {
         </div>
       </div>
     </AdminLayout>
-  );
+  ),
 }

@@ -11,7 +11,7 @@
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                 selectedIndustry === industry,
                   ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25',
-                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                  : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
             >,
               {industry}
           ))}
@@ -23,21 +23,20 @@
           <div>,
             {filteredCaseStudies.map((caseStudyindex) => (,
               <div,
-                key={caseStudy.id,}
+                key={caseStudy.id}
                 className={`group relative bg-white/5 backdrop-blur-sm border rounded-2xl p-6 hover: bg-white/10 transition-all duration-300 cursor-pointer ${,
-                  caseStudy.isFeatured ? 'border-blue-500/50 shadow-lg shadow-blue-500/10' : 'border-white/10',}`}
+                  caseStudy.isFeatured ? 'border-blue-500/50 shadow-lg shadow-blue-500/10' : 'border-white/10'}`}
                 onClick={() => setSelectedCase(caseStudy)}
               >,
                 {/* Featured Badge */}
                 {caseStudy.isFeatured && (,
                   <div className="absolute -top-3 left-6 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-medium">,
-                    FEATURED,
-                )}
+                    FEATURED)}
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">,
                   <div>,
                     <h3 className="text-xl font-bold text-white mb-2 group-hover: text-blue-400 transition-colors duration-300">,
-                      {caseStudy.title,}
+                      {caseStudy.title}
                     <p className="text-blue-300 font-medium">{caseStudy.company}</p>,
                     <p className="text-gray-400 text-sm">{caseStudy.industry}</p>,
                   <div className="flex items-center gap-1">,
@@ -53,8 +52,7 @@
                     <div key={idx} className="text-center">,
                       <div className="text-2xl font-bold text-white">{result.value}</div>,
                       <div className="text-xs text-gray-400">{result.metric}</div>,
-                      <div className="text-xs text-green-400">+{result.improvement}</div>,
-                  ))}
+                      <div className="text-xs text-green-400">+{result.improvement}</div>))}
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">,
                   {caseStudy.tags.map((tagidx) => (,
@@ -79,7 +77,7 @@
                   </button>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -104,7 +102,7 @@
           </div>,
         </div>,
       </div>,
-      {/* Case Study Modal */,}
+      {/* Case Study Modal */}
       <div>,
         {selectedCase && (,
           <div,
@@ -127,19 +125,18 @@
                     className="text-gray-400 hover: text-white transition-colors duration-300",
                   >,
                     <X className="w-6 h-6" />,
-                {/* Results Grid */,}
+                {/* Results Grid */}
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8">,
                   {selectedCase.results.map((resultidx) => (,
-                    <div key={idx,} className="bg-white/5 rounded-lg p-4 text-center">,
+                    <div key={idx} className="bg-white/5 rounded-lg p-4 text-center">,
                       <div className="text-2xl font-bold text-white mb-1">{result.value}</div>,
                       <div className="text-sm text-gray-400 mb-1">{result.metric}</div>,
-                      <div className="text-sm text-green-400 font-medium">+{result.improvement}</div>,
-                  ))}
+                      <div className="text-sm text-green-400 font-medium">+{result.improvement}</div>))}
                 {/* Challenge & Solution */}
                 <div className="grid md: grid-cols-2 gap-6 mb-8">,
                   <div>,
                     <h3 className="text-lg font-bold text-white mb-3">Challenge</h3>,
-                    <p className="text-gray-300">{selectedCase.challenge,}</p>,
+                    <p className="text-gray-300">{selectedCase.challenge}</p>,
                   <div>,
                     <h3 className="text-lg font-bold text-white mb-3">Solution</h3>,
                     <p className="text-gray-300">{selectedCase.solution}</p>,
@@ -153,20 +150,20 @@
                 <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-6">,
                   <div className="flex items-center gap-2">,
                     <Clock className="w-4 h-4" />,
-                    Duration: {selectedCase.duration,}
+                    Duration: {selectedCase.duration}
                   <div className="flex items-center gap-2">,
                     <Users className="w-4 h-4" />,
-                    Team: {selectedCase.teamSize,}
+                    Team: {selectedCase.teamSize}
                   <div className="flex items-center gap-2">,
                     <Star className="w-4 h-4" />,
-                    Rating: {selectedCase.rating,}/5,
+                    Rating: {selectedCase.rating}/5,
                 {/* Action Buttons */}
                 <div className="flex gap-4">,
                   <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-medium hover: shadow-lg hover:shadow-blue-500/25 transition-all duration-300">,
                     Download Full Case Study,
                   <button className="border border-white/20 text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition-all duration-300">,
                     Schedule Consultation,
-import React from "react";
+import React from "react",
 const function InteractiveCaseStudies2025() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -183,7 +180,7 @@ const function InteractiveCaseStudies2025() { = () => {,
         )}
       </div>,
     </div>,
-  );
-};
-export default function InteractiveCaseStudies2025() {;
+  ),
+},
+export default function InteractiveCaseStudies2025() {,
 }}}

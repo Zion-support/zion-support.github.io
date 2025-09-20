@@ -1,31 +1,31 @@
-import React from "react";"
-import { useForm } from 'react-hook-form';"
-import { zodResolver } from '@hookform/resolvers/zod';"
-import z from "zod";"
-import { supabase } from '@/integrations/supabase/client';"
-import { useAuth } from '@/hooks/useAuth';"
-import { useToast } from '@/hooks/use-toast';"
-import { useNavigate  } from 'react-router-dom';"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';"
-import { Input } from '@/components/ui/input';"
-import { Button } from '@/components/ui/button';"
-import { Textarea } from '@/components/ui/textarea';"
-import { AspectRatio } from '@/components/ui/aspect-ratio';"
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';"
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator';
+import React from "react","
+import { useForm } from 'react-hook-form',"
+import { zodResolver } from '@hookform/resolvers/zod',"
+import z from "zod","
+import { supabase } from '@/integrations/supabase/client',"
+import { useAuth } from '@/hooks/useAuth',"
+import { useToast } from '@/hooks/use-toast',"
+import { useNavigate  } from 'react-router-dom',"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',"
+import { Input } from '@/components/ui/input',"
+import { Button } from '@/components/ui/button',"
+import { Textarea } from '@/components/ui/textarea',"
+import { AspectRatio } from '@/components/ui/aspect-ratio',"
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',"
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator',
 ),"
     category: z.string().min(1, "Please select a category"),
     image: z.instanceof(File).optional(),
     video: z.instanceof(File).optional(),
     model: z.instanceof(File).optional(),
-    tags: z.string().optional()});
+    tags: z.string().optional()}),
 export function ProductSubmissionForm() {
-    const { user } = useAuth();
-    const { toast } = useToast();
-    const navigate = useNavigate();
-    const [isSubmitting, setIsSubmitting] = React.useState(false);
-    const [imagePreview, setImagePreview] = React.useState(null);"
-    const [activeTab, setActiveTab] = React.useState("manual");
+    const { user } = useAuth(),
+    const { toast } = useToast(),
+    const navigate = useNavigate(),
+    const [isSubmitting, setIsSubmitting] = React.useState(false),
+    const [imagePreview, setImagePreview] = React.useState(null),"
+    const [activeTab, setActiveTab] = React.useState("manual"),
     // Initialize the form
     const form = useForm({
 
@@ -38,43 +38,43 @@ export function ProductSubmissionForm() {
             category: "",
             video: null,
             model: null,"
-            tags: ""}});
+            tags: ""}}),
     // Handle image upload preview
     const handleImageChange = (e) => {
 
-        const file = e.target.files?.[0];
+        const file = e.target.files?.[0],
         if(file) {
 "
-            form.setValue("image", file);
-            const reader = new FileReader();
+            form.setValue("image", file),
+            const reader = new FileReader(),
             reader.onloadend = () => {
-                setImagePreview(reader.result) };
+                setImagePreview(reader.result) },
             reader.readAsDataURL(file) }
-    };
+    },
     const handleVideoChange = (e) => {
 
-        const file = e.target.files?.[0];
+        const file = e.target.files?.[0],
         if(file) {
 "
             form.setValue("video", file)}
-    };
+    },
     const handleModelChange = (e) => {
 
-        const file = e.target.files?.[0];
+        const file = e.target.files?.[0],
         if(file) {
 "
             form.setValue("model", file)}
-    };
+    },
     // Apply AI - generated content to the form
     const handleApplyGenerated = (content) => {
 "
-        form.setValue("description", content.description);"
-        form.setValue("tags", content.tags.join(", "));
+        form.setValue("description", content.description),"
+        form.setValue("tags", content.tags.join(", ")),
         // Set a default price as the middle of the suggested range
-        const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);"
-        form.setValue("price", averagePrice);
+        const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),"
+        form.setValue("price", averagePrice),
         // Switch to the manual tab to show applied content"
-        setActiveTab("manual")};
+        setActiveTab("manual")},
     // Handle form submission
     const onSubmit = async(values) => {
 
@@ -84,9 +84,9 @@ export function ProductSubmissionForm() {
 "
                 title: "Authentication Required","
                 description: "You must be logged in to publish products","
-                variant: "destructive"});
+                variant: "destructive"}),
             return}
-        setIsSubmitting(true) ;
+        setIsSubmitting(true) ,
         try {
             // Create the product listing
             const productData = {
@@ -96,42 +96,42 @@ export function ProductSubmissionForm() {
                 price: parseFloat(values.price),
                 category: values.category,"
                 currency: "USD", // Default currency
-                tags: values.tags ? values.tags.split(',) .map(tag => tag.trim () ) [],;
+                tags: values.tags ? values.tags.split(') .map(tag => tag.trim () ) [],
                 author: {
 "
                     name: user.displayName || "Anonymous Creator",
                     id: user.id},
-                createdAt: new Date().toISOString()};
+                createdAt: new Date().toISOString()},
             const { data: productRecord, error: productError } = await supabase'
                 .from('product_listings')
                 .insert([productData])
                 .select('id')
-                .single();
+                .single(),
             if(productError) {
 
                 throw new Error(productError.message)}
             // If we have an image, upload it
             if(values.image) {
 
-                const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
+                const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
-                    .upload(imagePath, values.image);
+                    .upload(imagePath, values.image),
                 if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 // Get the public URL for the image
                 const { data: publicUrlData } = supabase.storage'
                     .from('products')
-                    .getPublicUrl(imagePath);
+                    .getPublicUrl(imagePath),
                 // Update the product with the image URL
                 const { error: updateError } = await supabase'
                     .from('product_listings')
                     .update({
 
-                    images[publicUrlData.publicUrl];
-                });
-                    .eq('id', productRecord.id);
+                    images[publicUrlData.publicUrl],
+                }),
+                    .eq('id', productRecord.id),
                 if(updateError) {
 
                     throw new Error(updateError.message)}
@@ -139,20 +139,20 @@ export function ProductSubmissionForm() {
             // Upload video if provided
             if(values.video) {
 `
-                const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
+                const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
-                    .upload(videoPath, values.video);
+                    .upload(videoPath, values.video),
                 if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage'
                     .from('products')
-                    .getPublicUrl(videoPath);
+                    .getPublicUrl(videoPath),
                 const { error: updateError } = await supabase'
                     .from('product_listings')
                     .update({ video_url: publicUrlData.publicUrl })
-                    .eq('id', productRecord.id);
+                    .eq('id', productRecord.id),
                 if(updateError) {
 
                     throw new Error(updateError.message)}
@@ -160,20 +160,20 @@ export function ProductSubmissionForm() {
             // Upload model if provided
             if(values.model) {
 `
-                const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
+                const modelPath = `product_models/${productRecord.id}/${values.model.name}`,
                 const { error: uploadError } = await supabase.storage'
                     .from('products')
-                    .upload(modelPath, values.model);
+                    .upload(modelPath, values.model),
                 if(uploadError) {
 
                     throw new Error(uploadError.message)}
                 const { data: publicUrlData } = supabase.storage'
                     .from('products')
-                    .getPublicUrl(modelPath);
+                    .getPublicUrl(modelPath),
                 const { error: updateError } = await supabase'
                     .from('product_listings')
                     .update({ model_url: publicUrlData.publicUrl })
-                    .eq('id', productRecord.id);
+                    .eq('id', productRecord.id),
                 if(updateError) {
 
                     throw new Error(updateError.message)}
@@ -182,9 +182,9 @@ export function ProductSubmissionForm() {
             toast({
 "
                 title: "Product Published!","
-                description: "Your product has been successfully published on Zion."});
+                description: "Your product has been successfully published on Zion."}),
             // Redirect to product page`
-            router(`/marketplace/listing/${productRecord.id}`);
+            router(`/marketplace/listing/${productRecord.id}`),
         }
         catch(error) {
             toast({
@@ -195,7 +195,7 @@ export function ProductSubmissionForm() {
         finally {
 
             setIsSubmitting(false)}
-    };"
+    },"
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">"
       <TabsList className="grid grid-cols-2 mb-6">"
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">

@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'react';
+import { Link  } from 'react-router-dom',
+ from 'react',
 export const EnhancedServicesShowcase: React.FC = () => {
 export default React.memo(/**
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
  params - Function parameters
  * @returns {*} Function return value
@@ -69,18 +69,18 @@ function EnhancedServicesShowcase () {
       description: 'Automate sales processes and boost conversion rates with AI',
       price: 'From $1,500/month',
       path: '/services/ai-sales-copilot',
-      icon: Brain,;
-      category: 'Sales AI',;
-      features: ['Lead scoring',CRM automation',Sales analytics',Predictive insights'],;
-      benefits: ['Reduce admin time by 40-60%',Improve conversion rates',Shorten sales cycles'],;
-      color: 'from-pink-500 to-rose-600',;
-      glowColor: 'pink'};
-  ];
+      icon: Brain,
+      category: 'Sales AI',
+      features: ['Lead scoring',CRM automation',Sales analytics',Predictive insights'],
+      benefits: ['Reduce admin time by 40-60%',Improve conversion rates',Shorten sales cycles'],
+      color: 'from-pink-500 to-rose-600',
+      glowColor: 'pink'},
+  ],
 
     visible: {
-      opacity: 1,;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1}}};
+        staggerChildren: 0.1}}},
 
         <motion.div
           className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap-8"
@@ -90,15 +90,15 @@ function EnhancedServicesShowcase () {
           viewport = {
   { once: true,
   margin: "-100px"
-              View All Services;
-              <ArrowRight className="ml-2 w-5 h-5" />;
+              View All Services,
+              <ArrowRight className="ml-2 w-5 h-5" />,
             </Link>
             <a
 =======
 export default function EnhancedServicesShowcase() {
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [hoveredService, setHoveredService] = useState<string | null>(null),
 
   return ()    <section className="py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}"
@@ -214,13 +214,13 @@ export default function EnhancedServicesShowcase() {
                   <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"  />                </Link>
 
                 {/* Hover Glow Effect */}`
-                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
+                <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>,
               </div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </motion.div>
 
         {/* Services Grid */}"
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">;"
+        <div className="grid lg: grid-cols-2 xl:grid-cols-3 gap-8">,"
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (<motion.div
                 key={service.id}
@@ -334,7 +334,7 @@ export default function EnhancedServicesShowcase() {
   y: 20 }}          whileInView = {
 
   { opacity: 1,
-  y: 0 ;
+  y: 0 ,
 
         {/* CTA Section */}
         <motion.div 
@@ -345,7 +345,7 @@ export default function EnhancedServicesShowcase() {
 
   { duration: 0.6,
   delay: 0.3 }}        >
-          {categories.map((category, index) => (;
+          {categories.map((category, index) => (,
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}`
@@ -378,21 +378,21 @@ export default function EnhancedServicesShowcase() {
               View All Services"
               <ArrowRight className="ml-2 w-5 h-5"  />            </Link>
             <a"
-              href="tel:+13024640950"
+              href="tel: +13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
 
-              Call + 1 302 464 0950;
-            </a>;
-          </div>;"
-<div className: "mt-6 text-zion-slate-light">;"
-            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) };
+              Call + 1 302 464 0950,
+            </a>,
+          </div>,"
+<div className: "mt-6 text-zion-slate-light">,"
+            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) },
             >
-              View All Services;"
-              <ArrowRight className="ml-2 w-5 h-5"  />;            </Link>
+              View All Services,"
+              <ArrowRight className="ml-2 w-5 h-5"  />,            </Link>
             <a "
               href="tel:+13024640950"
               className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
@@ -412,6 +412,6 @@ export default function EnhancedServicesShowcase() {
           </div>
         )}
       </div>
-    </section>) };
+    </section>) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

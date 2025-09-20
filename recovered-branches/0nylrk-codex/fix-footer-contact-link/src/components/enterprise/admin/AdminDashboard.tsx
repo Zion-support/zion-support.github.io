@@ -1,14 +1,14 @@
 
-import React from "react";
-import { AdminHeader } from "./AdminHeader";
-import { TeamManagement } from "./TeamManagement";
-import { UsageStats } from "./UsageStats";
-import { RoleManagement } from "./RoleManagement";
-import { TeamActivity } from "./TeamActivity";
+import React from "react",
+import { AdminHeader } from "./AdminHeader",
+import { TeamManagement } from "./TeamManagement",
+import { UsageStats } from "./UsageStats",
+import { RoleManagement } from "./RoleManagement",
+import { TeamActivity } from "./TeamActivity",
 import {,
-  Tabs;
-  TabsContent;
-  TabsList;
+  Tabs,
+  TabsContent,
+  TabsList,
 export function AdminDashboard() {,
   return (,
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">,
@@ -33,7 +33,6 @@ export function AdminDashboard() {,
           <TeamActivity />,
         </TabsContent>,
       </Tabs>,
-    </div>,
-  ),}
-,
+    </div>)}
+
 }

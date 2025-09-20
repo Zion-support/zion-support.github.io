@@ -1,6 +1,6 @@
 
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NotFound() {,
   return (,
     <div className="min-h-screen bg-white flex items-center justify-center">,
@@ -15,6 +15,5 @@ export default function NotFound() {,
           Go Home,
         </Link>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

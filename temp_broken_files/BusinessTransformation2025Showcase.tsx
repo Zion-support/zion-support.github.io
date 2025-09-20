@@ -1,127 +1,127 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Users,
   DollarSign,
   Clock,
   Target,
-  BarChart3;
-  Zap;
-  Brain;
-  Shield;
-  Globe;
-  Award;
-  ChevronRight;
-  Play;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Building2;
-  PieChart;
-  LineChart,
-} from 'lucide-react';
+  BarChart3,
+  Zap,
+  Brain,
+  Shield,
+  Globe,
+  Award,
+  ChevronRight,
+  Play,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Building2,
+  PieChart,
+  LineChart
+} from 'lucide-react',
 const BusinessTransformation2025Showcase = () => {,
-  const [activeSectionsetActiveSection] = useState('overview');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeSectionsetActiveSection] = useState('overview'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const transformationData = {,
     overview: {,
-      title: 'Business Transformation Overview';
-      icon: Building2;
-      color: 'from-blue-500 to-cyan-500';
+      title: 'Business Transformation Overview',
+      icon: Building2,
+      color: 'from-blue-500 to-cyan-500',
       metrics: [,
-        { label: 'Revenue 'Increasevalue: '340%'icon: DollarSigncolor: 'text-green-400' ,};
-        { label: 'Cost 'Reductionvalue: '65%'icon: TrendingUpcolor: 'text-blue-400' ,};
-        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-yellow-400' ,};
-        { label: 'Customer 'Satisfactionvalue: '98%'icon: Starcolor: 'text-purple-400' ,}
-      ],
-    };
+        { label: 'Revenue 'Increasevalue: '340%'icon: DollarSigncolor: 'text-green-400' },
+        { label: 'Cost 'Reductionvalue: '65%'icon: TrendingUpcolor: 'text-blue-400' },
+        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-yellow-400' },
+        { label: 'Customer 'Satisfactionvalue: '98%'icon: Starcolor: 'text-purple-400' }
+      ]
+    },
     automation: {,
-      title: 'Process Automation';
-      icon: Zap;
-      color: 'from-green-500 to-emerald-500';
+      title: 'Process Automation',
+      icon: Zap,
+      color: 'from-green-500 to-emerald-500',
       metrics: [,
-        { label: 'Tasks 'Automatedvalue: '15,000+'icon: Targetcolor: 'text-green-400' ,};
-        { label: 'Time 'Savedvalue: '2,400 'hrsicon: Clockcolor: 'text-blue-400' ,};
-        { label: 'Error 'Reductionvalue: '95%'icon: Shieldcolor: 'text-red-400' ,};
-        { label: 'ROI 'Achievedvalue: '450%'icon: BarChart3color: 'text-yellow-400' ,}
-      ],
-    };
+        { label: 'Tasks 'Automatedvalue: '15,000+'icon: Targetcolor: 'text-green-400' },
+        { label: 'Time 'Savedvalue: '2,400 'hrsicon: Clockcolor: 'text-blue-400' },
+        { label: 'Error 'Reductionvalue: '95%'icon: Shieldcolor: 'text-red-400' },
+        { label: 'ROI 'Achievedvalue: '450%'icon: BarChart3color: 'text-yellow-400' }
+      ]
+    },
     ai: {,
-      title: 'AI Integration';
-      icon: Brain;
-      color: 'from-purple-500 to-pink-500';
+      title: 'AI Integration',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
       metrics: [,
-        { label: 'AI Models 'Deployedvalue: '25+'icon: Braincolor: 'text-purple-400' ,};
-        { label: 'Decision 'Speedvalue: '10x 'Fastericon: Zapcolor: 'text-yellow-400' ,};
-        { label: 'Prediction 'Accuracyvalue: '94%'icon: Targetcolor: 'text-green-400' ,};
-        { label: 'Data 'Processingvalue: '1M+ 'Recordsicon: BarChart3color: 'text-blue-400' ,}
-      ],
-    };
+        { label: 'AI Models 'Deployedvalue: '25+'icon: Braincolor: 'text-purple-400' },
+        { label: 'Decision 'Speedvalue: '10x 'Fastericon: Zapcolor: 'text-yellow-400' },
+        { label: 'Prediction 'Accuracyvalue: '94%'icon: Targetcolor: 'text-green-400' },
+        { label: 'Data 'Processingvalue: '1M+ 'Recordsicon: BarChart3color: 'text-blue-400' }
+      ]
+    },
     global: {,
-      title: 'Global Expansion';
-      icon: Globe;
-      color: 'from-orange-500 to-red-500';
+      title: 'Global Expansion',
+      icon: Globe,
+      color: 'from-orange-500 to-red-500',
       metrics: [,
-        { label: 'Markets 'Enteredvalue: '12'icon: Globecolor: 'text-orange-400' ,};
-        { label: 'Revenue 'Growthvalue: '180%'icon: TrendingUpcolor: 'text-green-400' ,};
-        { label: 'Team 'Expansionvalue: '300%'icon: Userscolor: 'text-blue-400' ,};
-        { label: 'Market 'Sharevalue: '15%'icon: PieChartcolor: 'text-purple-400' ,}
-      ],
+        { label: 'Markets 'Enteredvalue: '12'icon: Globecolor: 'text-orange-400' },
+        { label: 'Revenue 'Growthvalue: '180%'icon: TrendingUpcolor: 'text-green-400' },
+        { label: 'Team 'Expansionvalue: '300%'icon: Userscolor: 'text-blue-400' },
+        { label: 'Market 'Sharevalue: '15%'icon: PieChartcolor: 'text-purple-400' }
+      ]
     }
-  };
+  },
   const sections = Object.entries(transformationData).map(([keydata]) => ({,
-    key;
-    ...data,
-  }));
+    key,
+    ...data
+  })),
   const successStories = [,
     {,
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      challenge: 'Manual data processing causing 40% delays';
-      solution: 'AI-powered automation system';
-      results: '95% faster processing60% cost reduction';
-      revenue: '+$2.3M';
-      icon: Building2,};
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'Manual data processing causing 40% delays',
+      solution: 'AI-powered automation system',
+      results: '95% faster processing60% cost reduction',
+      revenue: '+$2.3M',
+      icon: Building2},
     {,
-      company: 'Global Manufacturing Inc';
-      industry: 'Manufacturing';
-      challenge: 'Supply chain inefficiencies';
-      solution: 'Predictive analytics and automation';
-      results: '80% reduction in downtime45% cost savings';
-      revenue: '+$5.7M';
-      icon: Building2,};
+      company: 'Global Manufacturing Inc',
+      industry: 'Manufacturing',
+      challenge: 'Supply chain inefficiencies',
+      solution: 'Predictive analytics and automation',
+      results: '80% reduction in downtime45% cost savings',
+      revenue: '+$5.7M',
+      icon: Building2},
     {,
-      company: 'Financial Services Group';
-      industry: 'Finance';
-      challenge: 'Manual compliance reporting';
-      solution: 'AI-driven compliance automation';
-      results: '99% accuracy70% time reduction';
-      revenue: '+$1.8M';
-      icon: Building2,}
-  ];
+      company: 'Financial Services Group',
+      industry: 'Finance',
+      challenge: 'Manual compliance reporting',
+      solution: 'AI-driven compliance automation',
+      results: '99% accuracy70% time reduction',
+      revenue: '+$1.8M',
+      icon: Building2}
+  ],
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        duration: 0.8;
-        staggerChildren: 0.1,}
+        duration: 0.8,
+        staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { opacity: 0, y: 20 ,};
-    visible: { opacity: 1, y: 0 ,}
-  };
-  if (!isVisible) return null;
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  },
+  if (!isVisible) return null,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -132,12 +132,12 @@ const BusinessTransformation2025Showcase = () => {,
             Real results from real businesses. See how companies are achieving unprecedented growth with AI and automation.,
           </p>,
         </div>,
-        {/* Navigation Tabs */,}
+        {/* Navigation Tabs */}
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
           {sections.map((section) => {,
-            const Icon = section.icon;
+            const Icon = section.icon,
             return (,
               <button,
                 key={section.key}
@@ -145,12 +145,12 @@ const BusinessTransformation2025Showcase = () => {,
                 className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${,
                   activeSection === section.key,
                     ? `bg-gradient-to-r ${section.color} text-white shadow-lg transform scale-105`,
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
               >,
                 <Icon className="w-5 h-5 mr-2" />,
                 {section.title}
               </button>,
-            );
+            ),
           })}
         </div>,
         {/* Metrics Display */}
@@ -159,7 +159,7 @@ const BusinessTransformation2025Showcase = () => {,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16",
         >,
           {transformationData[activeSection as keyof typeof transformationData].metrics.map((metricindex) => {,
-            const Icon = metric.icon;
+            const Icon = metric.icon,
             return (,
               <div,
                 key={index}
@@ -167,7 +167,7 @@ const BusinessTransformation2025Showcase = () => {,
               >,
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />,
                 <div className="relative z-10">,
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${transformationData[activeSection as keyof typeof transformationData].color,} mb-4`}>,
+                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${transformationData[activeSection as keyof typeof transformationData].color} mb-4`}>,
                     <Icon className="w-8 h-8 text-white" />,
                   </div>,
                   <div className={`text-3xl font-bold ${metric.color} mb-2`}>,
@@ -177,8 +177,7 @@ const BusinessTransformation2025Showcase = () => {,
                     {metric.label}
                   </div>,
                 </div>,
-              </div>,
-            );
+              </div>),
           })}
         </div>,
         {/* Success Stories */}
@@ -190,7 +189,7 @@ const BusinessTransformation2025Showcase = () => {,
           </h2>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {successStories.map((storyindex) => {,
-              const Icon = story.icon;
+              const Icon = story.icon,
               return (,
                 <div,
                   key={index}
@@ -203,7 +202,7 @@ const BusinessTransformation2025Showcase = () => {,
                         <Icon className="w-6 h-6 text-white" />,
                       </div>,
                       <div>,
-                        <h3 className="text-xl font-bold text-white">{story.company,}</h3>,
+                        <h3 className="text-xl font-bold text-white">{story.company}</h3>,
                         <p className="text-gray-400 text-sm">{story.industry}</p>,
                       </div>,
                     </div>,
@@ -231,8 +230,7 @@ const BusinessTransformation2025Showcase = () => {,
                       </div>,
                     </div>,
                   </div>,
-                </div>,
-              );
+                </div>),
             })}
           </div>,
         </div>,
@@ -263,7 +261,7 @@ const BusinessTransformation2025Showcase = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default BusinessTransformation2025Showcase;
-</div></div>,
+  ),
+export default BusinessTransformation2025Showcase,
+</div></div>
 }

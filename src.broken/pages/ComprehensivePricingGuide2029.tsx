@@ -1,4 +1,4 @@
-import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react';
+import { Check, Star, Users, Zap, Shield, Brain, Rocket, Globe, Cpu, TrendingUp, Target, BarChart3, Code, Truck, Car, Plane, Dna, Atom, Link, Box, Crown, Sparkles  } from 'lucide-react',
 
 export default function Page() {
 ,
@@ -42,9 +42,9 @@ export default function Page() {
       name: 'Emerging Tech',
       icon: <Sparkles className="w-6 h-6" />,
       services: anyallServices.filter(s  => !s.category.includes ('AI') && !s.category.includes('Space') && !s.category.includes('Quantum') ) }
-  ];
+  ],
 
-  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1;
+  const getDiscountMultiplier = () => billingCycle === 'yearly' ? 0.83 : 1,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -276,7 +276,7 @@ export default function Page() {
 
         <div  className="space - y-6">
           {[{
-              question: any"Can I mix and match services from different categories?",;
+              question: any"Can I mix and match services from different categories?",
               answer: "Yes ! Our flexible pricing allows you to choose services from any category based on your specific business needs.You can start with a few services and add more as you grow."
             },
             {
@@ -327,7 +327,7 @@ export default function Page() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover:bg-white / 10 transition - all duration -300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover: bg-white / 10 transition - all duration -300"
             >
               Contact Sales
             </motion.button>
@@ -338,5 +338,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

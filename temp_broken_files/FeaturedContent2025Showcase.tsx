@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const FeaturedContent2025Showcase: React.FC = () => {,
   return (,
@@ -23,18 +23,17 @@ const FeaturedContent2025Showcase: React.FC = () => {,
             <div,
               key={index}
               className={`relative group ${,
-                content.featured ? 'lg: col-span-2' : '',}`}
+                content.featured ? 'lg: col-span-2' : ''}`}
             >,
               <div className={`bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-300 overflow-hidden border-2 ${,
-                content.featured ? 'border-blue-200' : 'border-gray-100',}`}>,
+                content.featured ? 'border-blue-200' : 'border-gray-100'}`}>,
                 {content.featured && (,
                   <div className="absolute top-4 right-4 z-10">,
                     <span className={`${content.badgeColor} text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg`}>,
                       {content.badge}
                     </span>,
-                  </div>,
-                )}
-                <div className={`p-8 ${content.featured ? 'lg: p-12' : '',}`}>,
+                  </div>)}
+                <div className={`p-8 ${content.featured ? 'lg: p-12' : ''}`}>,
                   <div className="flex items-center justify-between mb-4">,
                     <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">,
                       {content.type}
@@ -42,11 +41,11 @@ const FeaturedContent2025Showcase: React.FC = () => {,
                     <span className="text-gray-500 text-sm">{content.readTime}</span>,
                   </div>,
                   <h3 className={`font-bold text-gray-900 mb-4 leading-tight ${,
-                    content.featured ? 'text-2xl lg: text-3xl' : 'text-xl',}`}>,
+                    content.featured ? 'text-2xl lg: text-3xl' : 'text-xl'}`}>,
                     {content.title}
                   </h3>,
                   <p className={`text-gray-600 mb-6 leading-relaxed ${,
-                    content.featured ? 'text-lg' : '',
+                    content.featured ? 'text-lg' : ''
                   }`}>,
                     {content.description}
                   </p>,
@@ -65,7 +64,7 @@ const FeaturedContent2025Showcase: React.FC = () => {,
                     className={`inline-flex items-center font-semibold transition-colors ${,
                       content.featured,
                         ? 'bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700',
-                        : 'text-blue-600 hover:text-blue-800',}`}
+                        : 'text-blue-600 hover:text-blue-800'}`}
                   >,
                     {content.featured ? 'Read Full Guide' : 'Read More'}
                     <span className="ml-2">→</span>,
@@ -75,7 +74,7 @@ const FeaturedContent2025Showcase: React.FC = () => {,
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover: opacity-5 transition-opacity duration-300"></div>,
               </div>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Bottom Stats Section */}
         <div,
@@ -100,7 +99,7 @@ const FeaturedContent2025Showcase: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Newsletter Signup */,}
+        {/* Newsletter Signup */}
         <div,
           className="mt-12 text-center",
         >,
@@ -128,5 +127,5 @@ const FeaturedContent2025Showcase: React.FC = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default FeaturedContent2025Showcase;
+  )},
+export default FeaturedContent2025Showcase,

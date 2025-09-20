@@ -1,45 +1,45 @@
-// import { prisma } from "@/lib/prisma";
+// import { prisma } from "@/lib/prisma",
 
 interface InstanceWithCounts {
-  id: string;
-  name: string;
-  slug: string;
-  domain: string | null;
-  subdomain: string | null;
-  vertical: string;
-  defaultLanguage: string;
-  tokenSystem: string;
-  governanceType: string;
-  isPublic: boolean;
-  region: string | null;
-  country: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-  daoConfig: any | null;
+  id: string,
+  name: string,
+  slug: string,
+  domain: string | null,
+  subdomain: string | null,
+  vertical: string,
+  defaultLanguage: string,
+  tokenSystem: string,
+  governanceType: string,
+  isPublic: boolean,
+  region: string | null,
+  country: string | null,
+  createdAt: Date,
+  updatedAt: Date,
+  daoConfig: any | null,
   _count: {
-    deployments: number;
-    features: number;
-  };
+    deployments: number,
+    features: number
+  },
 }
 
 export default async function InstancesPage() {
-  let instances: InstanceWithCounts[] = [];
-  let error: string | null = null;
+  let instances: InstanceWithCounts[] = [],
+  let error: string | null = null,
 
   try {
     instances = await prisma.instance.findMany({
       include: {
         daoConfig: true,
-        _count: { select: { deployments: true, features: true } },
+        _count: { select: { deployments: true, features: true } }
       },
-      orderBy: { createdAt: "desc" },
-    });
+      orderBy: { createdAt: "desc" }
+    }),
   } catch (err) {
-    console.error("Database connection error:", err);
-    error = "Unable to connect to database";
+    console.error("Database connection error:", err),
+    error = "Unable to connect to database",
   }
 
-  const instances: any[] = []; // Temporary empty array
+  const instances: any[] = [], // Temporary empty array
 
 export default function InstancesPage() {
   return (
@@ -487,22 +487,22 @@ export default function InstancesPage() {
         </div>
       )}
     </div>
-  );
+  ),
 }
 
 function getGovernanceLabel(type: string) {
   switch (type) {
-    case "ADMIN": return "Admin Control";
-    case "DAO_LITE": return "DAO-lite";
-    case "DAO_FULL": return "Full DAO";
-    default: return type;
+    case "ADMIN": return "Admin Control",
+    case "DAO_LITE": return "DAO-lite",
+    case "DAO_FULL": return "Full DAO",
+    default: return type
   }
 }
 
 function getTokenSystemLabel(type: string) {
   switch (type) {
-    case "SHARED": return "ZION$ Shared";
-    case "LOCAL": return "Local Token";
-    default: return type;
+    case "SHARED": return "ZION$ Shared",
+    case "LOCAL": return "Local Token",
+    default: return type
   }
 }

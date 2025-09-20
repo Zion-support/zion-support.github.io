@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 marketing-and-features-promo function triggered');
+  console.log('🤖 marketing-and-features-promo function triggered'),
   
   try {
     // Marketing and features promotion logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate marketing campaigns
     const marketingCampaigns = [
-      'feature-highlight-campaign',
-      'user-onboarding-promotion',
-      'upgrade-encouragement',
-      'community-engagement'
-    ];
+      'feature-highlight-campaignuser-onboarding-promotion',
+      'upgrade-encouragementcommunity-engagement'
+    ],
     
     // Simulate campaign execution
-    const campaignResults = {};
+    const campaignResults = {},
     for (const campaign of marketingCampaigns) {
-      await new Promise(resolve => setTimeout(resolve, 35)); // Simulate campaign time
-      campaignResults[campaign] = Math.random() > 0.04 ? 'success' : 'needs-optimization'; // 96% success rate
+      await new Promise(resolve => setTimeout(resolve, 35)), // Simulate campaign time
+      campaignResults[campaign] = Math.random() > 0.04 ? 'success' : 'needs-optimization', // 96% success rate
     }
     
     // Simulate marketing metrics
@@ -26,7 +24,7 @@ exports.handler = async function(event, context) {
       clicks: Math.floor(Math.random() * 1000) + 200,
       conversions: Math.floor(Math.random() * 100) + 20,
       engagementRate: Math.floor(Math.random() * 30) + 10 // 10-40%
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         roi: marketingMetrics.conversions > 50 ? 'excellent' : marketingMetrics.conversions > 25 ? 'good' : 'needs-improvement',
         nextRun: new Date(Date.now() + 2 * 60 * 60 * 1000).toISOString() // 2 hours from now
       })
-    };
+    },
     
-    console.log('✅ marketing-and-features-promo completed successfully');
-    return result;
+    console.log('✅ marketing-and-features-promo completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ marketing-and-features-promo failed:', error);
+    console.error('❌ marketing-and-features-promo failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'marketing-and-features-promo',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

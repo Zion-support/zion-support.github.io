@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Shield, Atom, Lock, Zap, Target, Users, 
   BarChart3, Globe, Brain, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
   Cpu, Database, Network, Server, Monitor
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumCybersecuritySuite: React.FC = () => {
   const features = [
@@ -40,18 +40,14 @@ const QuantumCybersecuritySuite: React.FC = () => {
       title: 'Real-time Protection',
       description: 'Continuous monitoring and instant response to security incidents.'
     }
-  ];
+  ],
 
   const securityFeatures = [
-    'Post-Quantum Cryptography',
-    'Quantum Key Distribution',
-    'Advanced Threat Intelligence',
-    'Behavioral Analytics',
-    'Incident Response Automation',
-    'Compliance Management',
-    'Security Awareness Training',
-    '24/7 Security Operations Center'
-  ];
+    'Post-Quantum CryptographyQuantum Key Distribution',
+    'Advanced Threat IntelligenceBehavioral Analytics',
+    'Incident Response AutomationCompliance Management',
+    'Security Awareness Training24/7 Security Operations Center'
+  ],
 
   const pricing = [
     {
@@ -59,10 +55,8 @@ const QuantumCybersecuritySuite: React.FC = () => {
       price: '$2,499',
       period: 'month',
       features: [
-        'Basic quantum-resistant encryption',
-        'Standard threat detection',
-        'Email & phone support',
-        'Security reports',
+        'Basic quantum-resistant encryptionStandard threat detection',
+        'Email & phone supportSecurity reports',
         'Up to 100 users'
       ]
     },
@@ -71,12 +65,9 @@ const QuantumCybersecuritySuite: React.FC = () => {
       price: '$4,999',
       period: 'month',
       features: [
-        'Advanced quantum cryptography',
-        'AI-powered threat detection',
-        'Priority support',
-        'Custom security policies',
-        'Up to 1000 users',
-        'Compliance reporting'
+        'Advanced quantum cryptographyAI-powered threat detection',
+        'Priority supportCustom security policies',
+        'Up to 1000 usersCompliance reporting'
       ],
       popular: true
     },
@@ -85,15 +76,12 @@ const QuantumCybersecuritySuite: React.FC = () => {
       price: '$9,999',
       period: 'month',
       features: [
-        'Full quantum security suite',
-        'Custom quantum algorithms',
-        'Dedicated security team',
-        'Unlimited users',
-        'Custom integrations',
-        'SLA guarantees'
+        'Full quantum security suiteCustom quantum algorithms',
+        'Dedicated security teamUnlimited users',
+        'Custom integrationsSLA guarantees'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -293,7 +281,7 @@ const QuantumCybersecuritySuite: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Secure Your Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -315,7 +303,7 @@ const QuantumCybersecuritySuite: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumCybersecuritySuite;
+export default QuantumCybersecuritySuite,

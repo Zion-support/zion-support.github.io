@@ -1,1 +1,1 @@
-export default HomepagePromotion;
+export default HomepagePromotion,

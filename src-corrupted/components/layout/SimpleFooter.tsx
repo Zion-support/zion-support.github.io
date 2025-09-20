@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react',
 export function SimpleFooter(props: any) {,
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
   return (,
     <footer className="bg-gray-900 text-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">,
-          {/* Company Info */,}
+          {/* Company Info */}
           <div className="md: col-span-2">,
             <div className="flex items-center mb-4">,
               <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">,
@@ -54,7 +54,7 @@ export function SimpleFooter(props: any) {,
               <li><Link to="/digital-transformation" className="text-gray-300 hover:text-white text-sm">Digital Transformation</Link></li>,
             </ul>,
           </div>,
-          {/* Company */,}
+          {/* Company */}
           <div>,
             <h4 className="text-white font-semibold mb-4">Company</h4>,
             <ul className="space-y-2">,
@@ -69,7 +69,7 @@ export function SimpleFooter(props: any) {,
             </ul>,
           </div>,
         </div>,
-        {/* Social Links */,}
+        {/* Social Links */}
         <div className="mt-8 pt-8 border-t border-gray-800">,
           <div className="flex items-center justify-between">,
             <div className="text-gray-400 text-sm">,
@@ -92,5 +92,4 @@ export function SimpleFooter(props: any) {,
           </div>,
         </div>,
       </div>,
-    </footer>,
-  ),}
+    </footer>)}

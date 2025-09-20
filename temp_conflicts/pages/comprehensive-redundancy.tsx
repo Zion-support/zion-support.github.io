@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function ComprehensiveRedundancyPage() {
   return (
@@ -8,7 +8,7 @@ export default function ComprehensiveRedundancyPage() {
       <Head>
         <title>Comprehensive Automation & Redundancy | Zion Tech Group</title>
         <meta name="description" content="227+ autonomous agents powering self-managing systems with predictive analytics." />
-        <meta property="og:title" content="Comprehensive Automation & Redundancy" />
+        <meta property="og: title" content="Comprehensive Automation & Redundancy" />
         <meta property="og:description" content="227+ autonomous agents powering self-managing systems with predictive analytics." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -50,6 +50,6 @@ export default function ComprehensiveRedundancyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }
 

@@ -21,10 +21,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
-        { role: 'user', content: prompt },
+        { role: 'user', content: prompt }
       ],
       temperature: 0.4,
-      max_tokens: 400,
+      max_tokens: 400
     })
 
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'

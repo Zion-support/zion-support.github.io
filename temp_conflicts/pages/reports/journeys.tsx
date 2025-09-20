@@ -1,15 +1,15 @@
-import Head from 'next/head';
-import fs from 'fs';
-import path from 'path';
+import Head from 'next/head',
+import fs from 'fs',
+import path from 'path',
 
 export async function getStaticProps() {
-  const dataPath = path.resolve(process.cwd(), 'data', 'journeys.json');
-  let report: any = null;
+  const dataPath = path.resolve(process.cwd(), 'datajourneys.json'),
+  let report: any = null,
   try {
-    const raw = fs.readFileSync(dataPath, 'utf8');
-    report = JSON.parse(raw);
+    const raw = fs.readFileSync(dataPath, 'utf8'),
+    report = JSON.parse(raw),
   } catch {}
-  return { props: { report } };
+  return { props: { report } },
 }
 
 export default function JourneysReport({ report }: { report: any }) {
@@ -42,5 +42,5 @@ export default function JourneysReport({ report }: { report: any }) {
         )}
       </main>
     </div>
-  );
+  ),
 }

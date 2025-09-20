@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign, Clock, Target, Award'  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Brain, Shield, Rocket, Globe, Zap, ArrowRight, Star, Users, TrendingUp, CheckCircle, DollarSign, Clock, Target, Award'  } from 'lucide-react',
+import { Link  } from 'react-router-dom',
 
- from '../../data/revolutionary-2027-advanced-micro-saas';"
-import { revolutionary2027ITInfrastructureCybersecurityServices } from '../../data/revolutionary-2027-it-infrastructure-cybersecurity';"
-import { revolutionary2027AIInnovationServices } from '../../data/revolutionary-2027-ai-innovation-services';
+ from '../../data/revolutionary-2027-advanced-micro-saas',"
+import { revolutionary2027ITInfrastructureCybersecurityServices } from '../../data/revolutionary-2027-it-infrastructure-cybersecurity',"
+import { revolutionary2027AIInnovationServices } from '../../data/revolutionary-2027-ai-innovation-services',
 
 ,
   {
@@ -24,12 +24,12 @@ import { revolutionary2027AIInnovationServices } from '../../data/revolutionary-
     color: 'from-blue-600 to-cyan-600',
     services: revolutionary2027AIInnovationServices
   }
-];
+],
 
 export function ComprehensiveServicesShowcase() {
 
-  const [selectedCategory, setSelectedCategory] = useState('micro-saas');
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('micro-saas'),
+  const [selectedService, setSelectedService] = useState(null),
 
   const containerVariants = {
 
@@ -43,7 +43,7 @@ export function ComprehensiveServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
 
@@ -61,7 +61,7 @@ export function ComprehensiveServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   const cardVariants = {
 
@@ -79,7 +79,7 @@ export function ComprehensiveServicesShowcase() {
         ease: "easeOut"
       }
     }
-  };
+  },
 
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
@@ -194,7 +194,7 @@ export function ComprehensiveServicesShowcase() {
 
                   y: -8,"
                   boxShadow: "0 20px 40px rgba(0, 0, 0,"
-  0.3)";
+  0.3)",
 
 }}
               >
@@ -273,7 +273,7 @@ export function ComprehensiveServicesShowcase() {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </motion.div>
 
         {/* Call to Action */}

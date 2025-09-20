@@ -3,26 +3,26 @@
 export default function Page() {
 > {
 
-  showStats?: boolean;
-  showFilters?: boolean;
-  showCharts?: boolean;
+  showStats?: boolean,
+  showFilters?: boolean,
+  showCharts?: boolean,
   maxResources?: number}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
 
-showStats:  true,;
-  showFilters = true,;
-  showCharts = true,;
-  maxResources = 20}) => {;
-  const [resources, setResources] = useState<Resource[]>([]);
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [showResourceForm, setShowResourceForm] = useState(false);
-  const [editingResource, setEditingResource] = useState<any>(null);
+showStats:  true,
+  showFilters = true,
+  showCharts = true,
+  maxResources = 20}) => {,
+  const [resources, setResources] = useState<Resource[]>([]),
+  const [filteredResources, setFilteredResources] = useState<Resource[]>([]),
+  const [selectedType, setSelectedType] = useState<string>('all'),
+  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
+  const [selectedPriority, setSelectedPriority] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<any>('grid'),
+  const [showResourceForm, setShowResourceForm] = useState(false),
+  const [editingResource, setEditingResource] = useState<any>(null),
 
   // Sample resource data
   useEffect(() => {
@@ -40,7 +40,7 @@ showStats:  true,;
         department: 'Engineering',
         cost: 250000,
         lastUpdated: '2024-01-15',
-        tags['AI',Machine Learning',Development'],;
+        tags['AI',Machine Learning',Development'],
         description: 'Expert team specializing in AI and machine learning development',
         manager: 'Sarah Johnson',
         utilization: 80
@@ -59,7 +59,7 @@ showStats:  true,;
         department: 'IT Operations',
         cost: 50000,
         lastUpdated: '2024-01-14',
-        tags['Cloud',AWS',Infrastructure'],;
+        tags['Cloud',AWS',Infrastructure'],
         description: 'High-performance cloud computing cluster for enterprise applications',
         manager: 'Michael Chen',
         utilization: 75
@@ -78,7 +78,7 @@ showStats:  true,;
         department: 'Security',
         cost: 75000,
         lastUpdated: '2024-01-13',
-        tags['Security',Threat Detection',Monitoring'],;
+        tags['Security',Threat Detection',Monitoring'],
         description: 'Comprehensive cybersecurity monitoring and threat detection system',
         manager: 'David Kim',
         utilization: 85
@@ -97,7 +97,7 @@ showStats:  true,;
         department: 'Facilities',
         cost: 2000000,
         lastUpdated: '2024-01-12',
-        tags['Data Center',Facility',Infrastructure'],;
+        tags['Data Center',Facility',Infrastructure'],
         description: 'Primary data center facility with redundant power and cooling',
         manager: 'Lisa Thompson',
         utilization: 0
@@ -116,19 +116,19 @@ showStats:  true,;
         department: 'Engineering',
         cost: 30000,
         lastUpdated: '2024-01-11',
-        tags['DevOps',CI/CD',Automation'],;
+        tags['DevOps',CI/CD',Automation'],
         description: 'Complete DevOps toolchain for continuous integration and deployment',
         manager: 'Alex Wong',
         utilization: 90
 
-    ];
+    ],
 
-    setResources(sampleResources) ;
-    setFilteredResources(sampleResources) }, []) ;
+    setResources(sampleResources) ,
+    setFilteredResources(sampleResources) }, []) ,
 
   // Filter resources
   useEffect(() => {
-    let filtered = resources;
+    let filtered = resources,
 
     if(selectedType !== 'all') {
 
@@ -149,15 +149,15 @@ showStats:  true,;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )};
-      filtered = filtered.filter(r => ;
-        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      )},
+      filtered = filtered.filter(r => ,
+        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+        r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+        r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||,
+        r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
       )}
 
-    setFilteredResources(filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ;
+    setFilteredResources(filtered.slice (0, maxResources) ) }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]) ,
 
   // Calculate resource stats
   const resourceStats = {

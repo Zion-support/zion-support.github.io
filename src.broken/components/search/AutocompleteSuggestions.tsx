@@ -1,26 +1,26 @@
-import React, { useEffect, useRef } from "react";
-import { SearchSuggestion, SearchHighlight } from '@/types/search';
+import React, { useEffect, useRef } from "react",
+import { SearchSuggestion, SearchHighlight } from '@/types/search',
 
 // Helper function to highlight matching text
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if(!searchTerm || searchTerm.length === 0) {
-    return { before: '', match: text, after: '' };
+    return { before: '', match: text, after: '' },
   }
   
-  const lowerText = text.toLowerCase();
-  const lowerSearchTerm = searchTerm.toLowerCase();
-  const index = lowerText.indexOf(lowerSearchTerm);
+  const lowerText = text.toLowerCase(),
+  const lowerSearchTerm = searchTerm.toLowerCase(),
+  const index = lowerText.indexOf(lowerSearchTerm),
   
   if(index === -1) {
-    return { before: '', match: text, after: '' };
+    return { before: '', match: text, after: '' },
   }
   
   return {
     before: text.substring(0, index),
     match: text.substring(index, index + searchTerm.length),
     after: text.substring(index + searchTerm.length)
-  };
-};
+  },
+},
 
 export function AutocompleteSuggestions({ 
   suggestions, 
@@ -30,21 +30,21 @@ export function AutocompleteSuggestions({
   highlightedIndex, 
   listId 
 }: AutocompleteSuggestionsProps) {
-  const listRef = useRef<HTMLUListElement>(null); // Moved up
-  const highlightedItemRef = useRef<HTMLLIElement>(null); // Moved up
+  const listRef = useRef<HTMLUListElement>(null), // Moved up
+  const highlightedItemRef = useRef<HTMLLIElement>(null), // Moved up
 
   useEffect(() => { // Moved up, logic inside remains conditional on props
     if (visible && suggestions.length > 0 && highlightedIndex !== -1 && highlightedItemRef.current) {
       highlightedItemRef.current.scrollIntoView({
         block: "nearest",
         inline: "nearest"
-      });
+      }),
     }
-  }, [highlightedIndex, visible, suggestions.length]); // Added dependencies
+  }, [highlightedIndex, visible, suggestions.length]), // Added dependencies
 
-  if (!visible || suggestions.length === 0) return null; // Early return after hooks
+  if (!visible || suggestions.length === 0) return null, // Early return after hooks
 
-  if(!visible || suggestions.length === 0) return null;
+  if(!visible || suggestions.length === 0) return null,
   
   return (<div className="absolute z-50 top-full left-0 right-0 w-full mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg max-h-64 overflow-y-auto">
       <ul
@@ -54,8 +54,8 @@ export function AutocompleteSuggestions({
         className="py-2"
       >
         {suggestions.map((suggestion, index) => {
-          const highlight = highlightMatch(suggestion.text, searchTerm);
-          const isHighlighted = index === highlightedIndex;
+          const highlight = highlightMatch(suggestion.text, searchTerm),
+          const isHighlighted = index === highlightedIndex,
 
           return (<li
               key={`${suggestion.type}-${index}`}
@@ -65,8 +65,8 @@ export function AutocompleteSuggestions({
               aria-selected={isHighlighted}
               className={`px-4 py-2 cursor-pointer ${isHighlighted ? 'bg-zion-blue-light' : 'hover:bg-zion-blue-light/20'}`}
               onMouseDown={(e) => { 
-                e.preventDefault();
-                onSelectSuggestion(suggestion.text);
+                e.preventDefault(),
+                onSelectSuggestion(suggestion.text),
               }}
             >
               <div className="flex items-center justify-between">
@@ -80,9 +80,9 @@ export function AutocompleteSuggestions({
                 </span>
               </div>
             </li>
-          );
+          ),
         })}
       </ul>
     </div>
-  );
+  ),
 }

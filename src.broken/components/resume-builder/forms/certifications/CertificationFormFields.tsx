@@ -1,11 +1,11 @@
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { UseFormReturn, ControllerRenderProps } from 'react-hook-form';
-import { CertificationFormValues } from './types';
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',
+import { Input } from '@/components/ui/input',
+import { UseFormReturn, ControllerRenderProps } from 'react-hook-form',
+import { CertificationFormValues } from './types',
 
 interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>;
+  form: UseFormReturn<CertificationFormValues>
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
@@ -109,5 +109,5 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
     </>
-  );
+  ),
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum Computing Revolution 2025 - Breakthrough Technology | Zion Tech Group';
-  description: 'Experience the quantum computing revolution of 2025. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.';
-  keywords: ['quantum computingquantum AI', 'quantum algorithmsquantum revolution', 'business solutionsbreakthrough technology'],
-};
+  title: 'Quantum Computing Revolution 2025 - Breakthrough Technology | Zion Tech Group',
+  description: 'Experience the quantum computing revolution of 2025. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.',
+  keywords: ['quantum computingquantum AIquantum algorithmsquantum revolution', 'business solutionsbreakthrough technology']
+},
 export default function QuantumComputingRevolution2025Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
@@ -37,7 +37,7 @@ export default function QuantumComputingRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Capabilities */,}
+      {/* Quantum Capabilities */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Quantum Computing Capabilities</h2>,
@@ -117,7 +117,7 @@ export default function QuantumComputingRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Use Cases</h2>,
@@ -190,5 +190,4 @@ export default function QuantumComputingRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

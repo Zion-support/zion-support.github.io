@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, ArrowRight, Star, Sparkles,
   Brain, Atom, Shield, Cpu, Code, Rocket, Users,
   Globe, Lock, Database, Server, Zap, TrendingUp,
   MessageCircle, HelpCircle, BookOpen, FileText, 
   GraduationCap, Building, Handshake, Heart
-} from 'lucide-react';
+} from 'lucide-react',
 
 const footerSections = [
   {
@@ -82,19 +82,19 @@ const footerSections = [
       { name: 'Resources', href: '/resources' }
     ]
   }
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-];
+],
 
 const UltraFuturisticFooter2040: React.FC = () => {
   return (
@@ -102,7 +102,7 @@ const UltraFuturisticFooter2040: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2040</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2040;
+export default UltraFuturisticFooter2040,

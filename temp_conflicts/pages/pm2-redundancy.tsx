@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function PM2RedundancyPage() {
   return (
@@ -20,7 +20,7 @@ export default function PM2RedundancyPage() {
             <p className="text-white/80 max-w-3xl mx-auto">Production-grade process management with monitoring, clustering, and graceful restarts.</p>
           </section>
 
-          <section className="mx-auto max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6">
+          <section className="mx-auto max-w-5xl grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
               <h2 className="text-xl font-semibold text-yellow-300 mb-3">Highlights</h2>
               <ul className="text-white/80 space-y-2 text-sm">
@@ -50,6 +50,6 @@ export default function PM2RedundancyPage() {
         </main>
       </div>
     </>
-  );
+  )
 }
 

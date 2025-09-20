@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  PenTool, 
+  PenTool,
   Brain, 
   Image, 
   Video, 
@@ -22,59 +22,40 @@ import {
   Sparkles,
   Lightbulb,
   BarChart3
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AIContentCreation() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Writing",
-      description: "Generate high-quality content with advanced language models"
+      icon: Brain,title: "AI-Powered Writing",description: "Generate high-quality content with advanced language models"
+    };
+    {
+      icon: Image,title: "Visual Content",description: "Create stunning images, graphics, and visual assets"
     },
     {
-      icon: Image,
-      title: "Visual Content",
-      description: "Create stunning images, graphics, and visual assets"
-    },
+      icon: Video,title: "Video Production",description: "Generate and edit videos with AI-driven tools"
+    };
     {
-      icon: Video,
-      title: "Video Production",
-      description: "Generate and edit videos with AI-driven tools"
-    },
-    {
-      icon: Globe,
-      title: "Multi-Language",
-      description: "Create content in multiple languages automatically"
+      icon: Globe,title: "Multi-Language",description: "Create content in multiple languages automatically"
     }
   ];
-
   const services = [
     {
-      title: "Content Writing",
-      description: "AI-powered writing assistance for blogs, articles, and marketing copy",
-      icon: PenTool,
-      features: ["Blog post generation", "SEO-optimized content", "Brand voice consistency"]
+      title: "Content Writing",description: "AI-powered writing assistance for blogs, articles, and marketing copy",
+      icon: PenTool,features: ["Blog post generation", "SEO-optimized content", "Brand voice consistency"]
     },
     {
-      title: "Visual Design",
-      description: "Create compelling graphics, logos, and visual content with AI",
-      icon: Palette,
-      features: ["Logo design", "Social media graphics", "Brand assets"]
+      title: "Visual Design",description: "Create compelling graphics, logos, and visual content with AI",
+      icon: Palette,features: ["Logo design", "Social media graphics", "Brand assets"]
     },
     {
-      title: "Video Creation",
-      description: "Generate and edit videos for marketing and social media",
-      icon: Video,
-      features: ["Video generation", "Auto-editing", "Caption generation"]
+      title: "Video Creation",description: "Generate and edit videos for marketing and social media",icon: Video,features: ["Video generation", "Auto-editing", "Caption generation"]
     },
     {
-      title: "Audio Content",
-      description: "Create podcasts, voice-overs, and audio content with AI",
-      icon: Mic,
-      features: ["Voice synthesis", "Audio editing", "Podcast generation"]
+      title: "Audio Content",description: "Create podcasts, voice-overs, and audio content with AI",
+      icon: Mic,features: ["Voice synthesis", "Audio editing", "Podcast generation"]
     }
-  ];
+  ],
 
   const technologies = [
     "Natural Language Processing (NLP)",
@@ -86,7 +67,6 @@ export default function AIContentCreation() {
     "Multi-Modal AI",
     "Content Analytics"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
@@ -278,7 +258,7 @@ export default function AIContentCreation() {
               Join the AI content revolution and create engaging, high-quality content in seconds.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
@@ -297,5 +277,5 @@ export default function AIContentCreation() {
         </div>
       </section>
     </div>
-  );
+  )
 }

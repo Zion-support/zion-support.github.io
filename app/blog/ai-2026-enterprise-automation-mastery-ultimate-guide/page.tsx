@@ -1,20 +1,20 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation';
-  description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies and ROI strategies.';
-  keywords: ['AI automationEnterprise automation', 'AI 2026Business transformation', 'Machine learningProcess optimization'];
+  title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation',
+  description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies and ROI strategies.',
+  keywords: ['AI automationEnterprise automationAI 2026Business transformation', 'Machine learningProcess optimization'],
   openGraph: {,
-    title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide';
-    description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies.';
-    type: 'article';
-    publishedTime: '2025-01-14T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AIEnterprise Automation', 'Business TransformationAI 2026'],
+    title: 'AI 2026 Enterprise Automation Mastery: The Ultimate Guide',
+    description: 'Master enterprise automation with cutting-edge AI technologies in 2026. Complete implementation guide with real-world case studies.',
+    type: 'article',
+    publishedTime: '2025-01-14T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AIEnterprise AutomationBusiness TransformationAI 2026']
   }
-};
+},
 export default function AI2026EnterpriseAutomationGuide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -54,7 +54,7 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Benefits */,}
+      {/* Key Benefits */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="text-center mb-12">,
@@ -83,7 +83,7 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Guide Overview */,}
+      {/* Guide Overview */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
@@ -152,7 +152,7 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Download Section */,}
+      {/* Download Section */}
       <section id="download-guide" className="py-16 bg-gray-900 text-white">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold mb-6">Get Your Complete AI 2026 Guide</h2>,
@@ -201,7 +201,7 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Related Content */,}
+      {/* Related Content */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Content</h2>,
@@ -245,7 +245,7 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* CTA Section */,}
+      {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>,
@@ -268,5 +268,4 @@ export default function AI2026EnterpriseAutomationGuide() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

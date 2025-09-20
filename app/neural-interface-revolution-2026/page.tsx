@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Neural Interface Revolution 2026 - Zion Tech Group';
-  description: 'Explore the neural interface revolution of 2026. Learn about brain-computer interfaces, neural augmentation, and mind-machine integration.';
-  keywords: 'neural interface, brain-computer interface, BCI, neural augmentation, mind-machine interface, neurotechnology 2026';
+  title: 'Neural Interface Revolution 2026 - Zion Tech Group',
+  description: 'Explore the neural interface revolution of 2026. Learn about brain-computer interfaces, neural augmentation, and mind-machine integration.',
+  keywords: 'neural interface, brain-computer interface, BCI, neural augmentation, mind-machine interface, neurotechnology 2026',
   openGraph: {,
-    title: 'Neural Interface Revolution 2026';
-    description: 'Revolutionary neural interface technology and brain-computer interfaces';
-    type: 'website',}
-};
+    title: 'Neural Interface Revolution 2026',
+    description: 'Revolutionary neural interface technology and brain-computer interfaces',
+    type: 'website'}
+},
 export default function NeuralInterfaceRevolution() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">,
@@ -72,7 +72,7 @@ export default function NeuralInterfaceRevolution() {,
             </div>,
           </div>,
         </div>,
-        {/* Key Features */,}
+        {/* Key Features */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">,
             <div className="text-4xl mb-4">🎮</div>,
@@ -197,7 +197,7 @@ export default function NeuralInterfaceRevolution() {,
             </div>,
           </div>,
         </div>,
-        {/* Safety and Ethics */,}
+        {/* Safety and Ethics */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 mb-16">,
           <h2 className="text-3xl font-bold text-white mb-8 text-center">,
             Safety, Security & Ethics,
@@ -245,7 +245,7 @@ export default function NeuralInterfaceRevolution() {,
             </div>,
           </div>,
         </div>,
-        {/* Market Impact */,}
+        {/* Market Impact */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 mb-16">,
           <h2 className="text-3xl font-bold text-white mb-8 text-center">,
             Neural Interface Market Impact,
@@ -281,7 +281,7 @@ export default function NeuralInterfaceRevolution() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h2 className="text-3xl font-bold text-white mb-6">,
             Ready to Experience the Neural Interface Revolution?,
@@ -305,7 +305,7 @@ export default function NeuralInterfaceRevolution() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Related Neural Interface Content</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -342,5 +342,4 @@ export default function NeuralInterfaceRevolution() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

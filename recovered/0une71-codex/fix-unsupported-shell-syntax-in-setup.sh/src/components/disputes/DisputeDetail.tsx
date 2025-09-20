@@ -1,86 +1,86 @@
 
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useDisputes } from "@/hooks/useDisputes";
-import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { format, formatDistanceToNow } from "date-fns";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "sonner";
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { useDisputes } from "@/hooks/useDisputes",
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { format, formatDistanceToNow } from "date-fns",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "sonner",
 
 export function DisputeDetail() {
-  const { disputeId } = useParams<{ disputeId: string }>();
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+  const { disputeId } = useParams<{ disputeId: string }>(),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
   
-  const [dispute, setDispute] = useState<any>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [message, setMessage] = useState(""),
+  const [isSending, setIsSending] = useState(false),
   const [resolution, setResolution] = useState({
     summary: "",
-    resolution_type: "compromise",
-  });
-  const [activeTab, setActiveTab] = useState("overview");
+    resolution_type: "compromise"
+  }),
+  const [activeTab, setActiveTab] = useState("overview"),
 
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
+  const isAdmin = user?.userType === "admin",
   
   useEffect(() => {
-    if (!disputeId) return;
+    if (!disputeId) return,
 
     const loadDisputeData = async () => {
-      setIsLoading(true);
+      setIsLoading(true),
       try {
-        const disputeData = await getDisputeById(disputeId);
+        const disputeData = await getDisputeById(disputeId),
         if (!disputeData) {
-          toast.error("Dispute not found");
-          navigate("/dashboard/disputes");
-          return;
+          toast.error("Dispute not found"),
+          navigate("/dashboard/disputes"),
+          return,
         }
-        setDispute(disputeData);
+        setDispute(disputeData),
         
-        const messagesData = await getDisputeMessages(disputeId);
-        setMessages(messagesData);
+        const messagesData = await getDisputeMessages(disputeId),
+        setMessages(messagesData),
       } catch (error) {
-        console.error("Error loading dispute data:", error);
-        toast.error("Failed to load dispute");
+        console.error("Error loading dispute data:", error),
+        toast.error("Failed to load dispute"),
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
-    };
+    },
     
-    loadDisputeData();
-  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
+    loadDisputeData(),
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),
 
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return;
+    if (!disputeId) return,
     
-    const success = await updateDisputeStatus(disputeId, status);
+    const success = await updateDisputeStatus(disputeId, status),
     if (success && dispute) {
-      setDispute({ ...dispute, status });
+      setDispute({ ...dispute, status }),
     }
-  };
+  },
 
   const handleResolveDispute = async () => {
-    if (!disputeId) return;
+    if (!disputeId) return,
     
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary");
-      return;
+      toast.error("Please provide a resolution summary"),
+      return,
     }
     
-    const success = await resolveDispute(disputeId, resolution);
+    const success = await resolveDispute(disputeId, resolution),
     if (success && dispute) {
       setDispute({ 
         ...dispute, 
@@ -88,28 +88,28 @@ export function DisputeDetail() {
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()
-      });
+      }),
     }
-  };
+  },
 
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return;
+    if (!disputeId || !message.trim()) return,
     
-    setIsSending(true);
+    setIsSending(true),
     try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin);
+      const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId);
-        setMessages(updatedMessages);
-        setMessage("");
+        const updatedMessages = await getDisputeMessages(disputeId),
+        setMessages(updatedMessages),
+        setMessage(""),
       }
     } catch (error) {
-      console.error("Error sending message:", error);
+      console.error("Error sending message:", error),
     } finally {
-      setIsSending(false);
+      setIsSending(false),
     }
-  };
+  },
 
   if (isLoading) {
     return (
@@ -117,7 +117,7 @@ export function DisputeDetail() {
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
         <p>Loading dispute details...</p>
       </div>
-    );
+    ),
   }
 
   if (!dispute) {
@@ -128,18 +128,18 @@ export function DisputeDetail() {
           Back to Disputes
         </Button>
       </div>
-    );
+    ),
   }
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default";
-      case "under_review": return "secondary";
-      case "resolved": return "outline"; // Changed from "success" to "outline"
-      case "closed": return "outline";
-      default: return "default";
+      case "open": return "default",
+      case "under_review": return "secondary",
+      case "resolved": return "outline", // Changed from "success" to "outline"
+      case "closed": return "outline",
+      default: return "default"
     }
-  };
+  },
 
   return (
     <div className="container mx-auto p-4 space-y-6">
@@ -148,7 +148,7 @@ export function DisputeDetail() {
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
-              {dispute.status.replace('_', ' ')}
+              {dispute.status.replace('_ ')}
             </Badge>
           </div>
           <p className="text-muted-foreground">
@@ -257,7 +257,7 @@ export function DisputeDetail() {
                     {dispute.resolution_type && (
                       <div className="mt-4">
                         <Badge>
-                          Resolution: {dispute.resolution_type.replace('_', ' ')}
+                          Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>
                       </div>
                     )}
@@ -283,7 +283,7 @@ export function DisputeDetail() {
                       messages
                         .filter(msg => !msg.is_admin_note)
                         .map((msg) => {
-                          const isCurrentUser = user?.id === msg.user_id;
+                          const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div
                               key={msg.id}
@@ -313,7 +313,7 @@ export function DisputeDetail() {
                                 <p className="whitespace-pre-wrap">{msg.message}</p>
                               </div>
                             </div>
-                          );
+                          ),
                         })
                     )}
                   </div>
@@ -462,9 +462,9 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-                                getDisputeMessages(disputeId!).then(setMessages);
-                                setMessage("");
-                              });
+                                getDisputeMessages(disputeId!).then(setMessages),
+                                setMessage(""),
+                              }),
                             }
                           }}
                         >
@@ -533,7 +533,7 @@ export function DisputeDetail() {
               <div className="flex justify-between">
                 <span className="font-medium">Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_', ' ')}
+                  {dispute.status.replace('_ ')}
                 </Badge>
               </div>
               <div className="flex justify-between">
@@ -545,5 +545,5 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

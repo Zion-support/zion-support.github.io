@@ -5,7 +5,7 @@
       label: 'Dashboard',
       icon: Settings,
       matches: (path) => path.startsWith('/dashboard')
-    });
+    }),
   }
 
   return (<div className={cn("md:hidden", className)}>
@@ -38,20 +38,20 @@
 =======
 export default function Page() {
 >
-  const { user, isAuthenticated } = useAuth();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
+  const { user, isAuthenticated } = useAuth(),
+  const location = useLocation(),
+  const [isOpen, setIsOpen] = useState(false),
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen(!isOpen),
   
   const navigationItems = ['
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },;
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },;
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
-  ];
+    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },
+    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },
+    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },
+    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },
+    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },
+    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },
+  ],
 
   if(isAuthenticated) {
 
@@ -61,7 +61,7 @@ export default function Page() {
       label: 'Dashboard', 
       icon: Settings,
       matches: (path) => path.startsWith('/dashboard') 
-    });
+    }),
   }
   
   return ("
@@ -97,8 +97,8 @@ export default function Page() {
             <nav className="p-4 space-y-2">
               {navigationItems.map((item) => {
 
-                const Icon = item.icon;
-                const isActive = item.matches(location.pathname);
+                const Icon = item.icon,
+                const isActive = item.matches(location.pathname),
                 return ()
                   <Link 
                     key={item.href} 
@@ -118,7 +118,7 @@ export default function Page() {
                     <Icon className="w-5 h-5"/>"
                     <span className="font-medium">{item.label}</span>
                   </Link>
-                );
+                ),
               })}
             </nav>
 
@@ -170,10 +170,10 @@ export default function Page() {
               )}
             </div>
           </div>
-        </div>;
+        </div>,
       )}
     </div>
-  );
+  ),
 }
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

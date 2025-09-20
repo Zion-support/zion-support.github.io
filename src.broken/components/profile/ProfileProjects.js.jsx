@@ -1,4 +1,4 @@
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card',
 
 export default function Page() {
                   alt={project.title}"
@@ -39,6 +39,6 @@ export default function Page() {
         ))}
       </div>
     </div>
-  );
+  ),
 }
 '"

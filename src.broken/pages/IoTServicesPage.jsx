@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       <section className="bg-gradient - to - br from - zion - blue via - zion - purple to - zion - blue - dark py-20">

@@ -1,16 +1,16 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { TalentProfile } from '@/types/talent';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
+import { generateAITalents, getTalentMarketStats, getRecommendedTalents } from '@/utils/talentAutoFeedAlgorithm',
+import { TALENT_PROFILES } from '@/data/talentData',
+import { TalentProfile } from '@/types/talent',
+import { SkeletonCard } from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import Spinner from '@/components/ui/spinner',
 
 // Market insights component for talents
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
@@ -44,20 +44,20 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </div>
     </CardContent>
   </Card>
-);
+),
 
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterSpecialization: string;
-  setFilterSpecialization: (spec: string) => void;
-  filterAvailability: string;
-  setFilterAvailability: (avail: string) => void;
-  specializations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;
+  sortBy: string,
+  setSortBy: (sort: string) => void,
+  filterSpecialization: string,
+  setFilterSpecialization: (spec: string) => void,
+  filterAvailability: string,
+  setFilterAvailability: (avail: string) => void,
+  specializations: string[],
+  showRecommended: boolean,
+  setShowRecommended: (show: boolean) => void,
+  loading: boolean
 }> = ({
   sortBy,
   setSortBy,
@@ -127,10 +127,10 @@ const TalentFilterControls: React.FC<{
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
-);
+),
 
 // Talent card component
-const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ talent, onHire }) => (
+const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
@@ -195,7 +195,7 @@ const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ t
 
       <div className="flex items-center justify-between">
         <Badge variant={talent.availability_type === 'full_time' ? 'default' : 'outline'} className="text-xs">
-          {talent.availability_type?.replace('_', ' ').toUpperCase()}
+          {talent.availability_type?.replace('_ ').toUpperCase()}
         </Badge>
         <Button size="sm" onClick={onHire}>
           Hire Talent
@@ -203,7 +203,7 @@ const TalentCard: React.FC<{ talent: TalentProfile; onHire: () => void }> = ({ t
       </div>
     </CardContent>
   </Card>
-);
+),
 
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
@@ -212,83 +212,82 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
       <SkeletonCard key={i} />
     ))}
   </div>
-);
+),
 
 // Main enhanced talents page with infinite scroll
 export default function TalentsPage() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterSpecialization, setFilterSpecialization] = useState('');
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [totalGenerated, setTotalGenerated] = useState(0);
+  const router = useRouter(),
+  const [sortBy, setSortBy] = useState('newest'),
+  const [filterSpecialization, setFilterSpecialization] = useState(''),
+  const [filterAvailability, setFilterAvailability] = useState(''),
+  const [showRecommended, setShowRecommended] = useState(false),
+  const [totalGenerated, setTotalGenerated] = useState(0),
 
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
     // Add realistic loading delay
-    await new Promise(resolve => setTimeout(resolve, 300));
+    await new Promise(resolve => setTimeout(resolve, 300)),
 
-    let allTalents: TalentProfile[] = [];
+    let allTalents: TalentProfile[] = [],
     
     // Start with existing talent profiles
     if (page === 1) {
-      allTalents = [...TALENT_PROFILES];
+      allTalents = [...TALENT_PROFILES]
     }
     
     // Generate new AI/IT talents using the auto-feed algorithm
-    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated;
-    const newTalents = generateAITalents(limit, startId);
-    setTotalGenerated(prev => prev + newTalents.length);
+    const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated,
+    const newTalents = generateAITalents(limit, startId),
+    setTotalGenerated(prev => prev + newTalents.length),
     
-    allTalents = [...allTalents, ...newTalents];
+    allTalents = [...allTalents, ...newTalents],
     
     // Apply filters
-    let filteredTalents = allTalents;
+    let filteredTalents = allTalents,
     
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
-      );
+      ),
     }
 
     if (filterAvailability) {
-      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability);
+      filteredTalents = filteredTalents.filter(t => t.availability_type === filterAvailability),
     }
     
     if (showRecommended) {
-      filteredTalents = getRecommendedTalents(filteredTalents);
+      filteredTalents = getRecommendedTalents(filteredTalents),
     }
     
     // Apply sorting
     filteredTalents.sort((a, b) => {
       switch (sortBy) {
         case 'hourly-rate-low':
-          return (a.hourly_rate || 0) - (b.hourly_rate || 0);
+          return (a.hourly_rate || 0) - (b.hourly_rate || 0),
         case 'hourly-rate-high':
-          return (b.hourly_rate || 0) - (a.hourly_rate || 0);
+          return (b.hourly_rate || 0) - (a.hourly_rate || 0),
         case 'rating':
-          return (b.average_rating || 0) - (a.average_rating || 0);
+          return (b.average_rating || 0) - (a.average_rating || 0),
         case 'experience':
-          return (b.years_experience || 0) - (a.years_experience || 0);
+          return (b.years_experience || 0) - (a.years_experience || 0),
         case 'verified':
-          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
+          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0),
         case 'newest':
-        default:
-          return new Date(b.id || '').getTime() - new Date(a.id || '').getTime();
+        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
       }
-    });
+    }),
     
     // Paginate results
-    const startIndex = (page - 1) * limit;
-    const endIndex = startIndex + limit;
-    const items = filteredTalents.slice(startIndex, endIndex);
+    const startIndex = (page - 1) * limit,
+    const endIndex = startIndex + limit,
+    const items = filteredTalents.slice(startIndex, endIndex),
     
     return {
       items,
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
-    };
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
+    },
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
 
   // Use infinite scroll hook
   const {
@@ -302,34 +301,34 @@ export default function TalentsPage() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchTalents, 16);
+  } = useInfiniteScrollPagination(fetchTalents, 16),
 
   // Refresh when filters change
   useEffect(() => {
-    refresh();
-    setTotalGenerated(0);
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
+    refresh(),
+    setTotalGenerated(0),
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
 
   // Calculate market stats
   const marketStats = useMemo(() => {
-    if (talents.length === 0) return null;
-    return getTalentMarketStats(talents);
-  }, [talents]);
+    if (talents.length === 0) return null,
+    return getTalentMarketStats(talents),
+  }, [talents]),
 
   // Get unique specializations
   const specializations = useMemo(() => {
-    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)));
-  }, [talents]);
+    return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean))),
+  }, [talents]),
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setShowScrollTop(window.scrollY > 800),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   // Loading state
   if (loading && talents.length === 0) {
@@ -349,7 +348,7 @@ export default function TalentsPage() {
         </motion.div>
         <TalentLoadingGrid />
       </div>
-    );
+    ),
   }
 
   // Error state
@@ -362,7 +361,7 @@ export default function TalentsPage() {
           <Button onClick={refresh}>Try Again</Button>
         </div>
       </div>
-    );
+    ),
   }
 
   // Main render
@@ -499,5 +498,5 @@ export default function TalentsPage() {
         )}
       </AnimatePresence>
     </div>
-  );
+  ),
 }

@@ -1,70 +1,69 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List,
   Brain, ArrowRight, Check,
   Star, TrendingUp, Zap, Globe
-} from 'lucide-react';
-import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services';
+} from 'lucide-react',
+import { cuttingEdgeFuturisticServices } from '../data/2025-cutting-edge-futuristic-services',
 
 // Helper function to get service category
-const getServiceCategory = (service: { category?: string; type?: string }) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other';
-};
+const getServiceCategory = (service: { category?: string, type?: string }) => {
+  if (service.category) return service.category,
+  if (service.type) return service.type,
+  return 'Other',
+},
 
 
 
 // Helper function to get service features
-const getServiceFeatures = (service: { features?: string[]; keyFeatures?: string[] }) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return [];
-};
+const getServiceFeatures = (service: { features?: string[], keyFeatures?: string[] }) => {
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return [],
+},
 
 // Helper function to get service description
-const getServiceDescription = (service: { description?: string; tagline?: string }) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return 'No description available';
-};
+const getServiceDescription = (service: { description?: string, tagline?: string }) => {
+  if (service.description) return service.description,
+  if (service.tagline) return service.tagline,
+  return 'No description available',
+},
 
 const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
 
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(cuttingEdgeFuturisticServices.map(service => getServiceCategory(service))))];
+  const categories = ['All', ...Array.from(new Set(cuttingEdgeFuturisticServices.map(service => getServiceCategory(service))))],
 
   // Filter and sort services
   const filteredServices = cuttingEdgeFuturisticServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || getServiceCategory(service) === selectedCategory;
-      return matchesSearch && matchesCategory;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'All' || getServiceCategory(service) === selectedCategory,
+      return matchesSearch && matchesCategory,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price': {
-          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
-          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
-          return priceA - priceB;
+          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')),
+          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return priceA - priceB,
         }
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'popularity':
-        default:
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        default: return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       }
-    });
+    }),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -74,7 +73,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -85,7 +84,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -93,8 +92,8 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
         title="2025 Cutting-Edge Futuristic Services Showcase | Zion Tech Group"
         description="Discover our revolutionary cutting-edge futuristic services including quantum AI, autonomous systems, holographic technology, and more. Transform your business with next-generation solutions."
         keywords={[
-          'cutting-edge services', 'futuristic technology', 'quantum AI', 'autonomous systems', 
-          'holographic technology', 'AI automation', 'quantum computing', 'neural interfaces'
+          'cutting-edge servicesfuturistic technology', 'quantum AIautonomous systems', 
+          'holographic technologyAI automation', 'quantum computingneural interfaces'
         ]}
         image="/og-cutting-edge-services.jpg"
       />
@@ -383,7 +382,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
             viewport={{ once: true }}
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-3xl p-12 border border-white/20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -408,7 +407,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default CuttingEdgeFuturisticServicesShowcase;
+export default CuttingEdgeFuturisticServicesShowcase,

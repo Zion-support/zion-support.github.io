@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   HelpCircle, MessageCircle, Phone, Mail, 
   BookOpen, Video, FileText, ArrowRight, 
   Search, Filter, CheckCircle, Clock, Star,
   Brain, Rocket, Shield, Zap, Target, Atom,
   Users, Globe, Building, Cpu, Database
-} from 'lucide-react';
+} from 'lucide-react',
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const supportCategories = [
     { id: 'all', name: 'All Topics', icon: <HelpCircle className="w-5 h-5" />, count: 45 },
@@ -20,46 +20,46 @@ const SupportPage: React.FC = () => {
     { id: 'infrastructure', name: 'IT Infrastructure', icon: <Cpu className="w-5 h-5" />, count: 10 },
     { id: 'automation', name: 'Business Automation', icon: <Zap className="w-5 h-5" />, count: 7 },
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 8 }
-  ];
+  ],
 
   const faqItems = [
     {
       question: 'How do I get started with your AI services?',
       answer: 'Getting started is simple! Contact our team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and create a customized implementation plan.',
       category: 'ai',
-      tags: ['Getting Started', 'AI Services', 'Implementation']
+      tags: ['Getting StartedAI Services', 'Implementation']
     },
     {
       question: 'What is the typical implementation timeline for quantum computing solutions?',
       answer: 'Implementation timelines vary based on complexity and scope. Simple integrations can take 2-4 weeks, while comprehensive enterprise solutions typically require 3-6 months. We provide detailed project timelines during the planning phase.',
       category: 'quantum',
-      tags: ['Timeline', 'Quantum Computing', 'Implementation']
+      tags: ['TimelineQuantum Computing', 'Implementation']
     },
     {
       question: 'Do you provide 24/7 support for enterprise clients?',
       answer: 'Yes! Enterprise clients receive 24/7 support with dedicated account managers, priority response times, and round-the-clock technical assistance. We also offer custom SLA agreements to meet your specific requirements.',
       category: 'infrastructure',
-      tags: ['Enterprise', '24/7 Support', 'SLA']
+      tags: ['Enterprise24/7 Support', 'SLA']
     },
     {
       question: 'How do you ensure data security and compliance?',
       answer: 'We implement enterprise-grade security measures including end-to-end encryption, SOC2 compliance, GDPR adherence, and regular security audits. All data is processed in secure, compliant environments with strict access controls.',
       category: 'security',
-      tags: ['Security', 'Compliance', 'Data Protection']
+      tags: ['SecurityCompliance', 'Data Protection']
     },
     {
       question: 'Can I integrate your solutions with existing systems?',
       answer: 'Absolutely! Our solutions are designed for seamless integration with existing enterprise systems. We provide comprehensive API documentation, integration guides, and dedicated support to ensure smooth deployment.',
       category: 'automation',
-      tags: ['Integration', 'API', 'Enterprise Systems']
+      tags: ['IntegrationAPI', 'Enterprise Systems']
     },
     {
       question: 'What training and documentation do you provide?',
       answer: 'We offer comprehensive training programs, detailed documentation, video tutorials, and hands-on workshops. Our team ensures your staff is fully equipped to maximize the value of our solutions.',
       category: 'ai',
-      tags: ['Training', 'Documentation', 'Workshops']
+      tags: ['TrainingDocumentation', 'Workshops']
     }
-  ];
+  ],
 
   const supportChannels = [
     {
@@ -94,7 +94,7 @@ const SupportPage: React.FC = () => {
       responseTime: 'Immediate',
       priority: 'Self-Service'
     }
-  ];
+  ],
 
   const resources = [
     {
@@ -125,15 +125,15 @@ const SupportPage: React.FC = () => {
       category: 'Community',
       link: '/community'
     }
-  ];
+  ],
 
   const filteredFAQs = faqItems.filter(item => {
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   return (
     <Layout>
@@ -395,8 +395,7 @@ const SupportPage: React.FC = () => {
               <div className="mt-8 p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30">
                 <h3 className="text-xl font-bold text-white mb-4">Emergency Support</h3>
                 <p className="text-gray-300 mb-4">
-                  For critical issues affecting production systems, contact our emergency support line:
-                </p>
+                  For critical issues affecting production systems, contact our emergency support line: </p>
                 <div className="text-2xl font-bold text-cyan-400">+1 (302) 464-0950</div>
                 <p className="text-sm text-gray-400 mt-2">Available 24/7 for enterprise clients</p>
               </div>
@@ -405,7 +404,7 @@ const SupportPage: React.FC = () => {
         </section>
       </main>
     </Layout>
-  );
-};
+  )
+},
 
-export default SupportPage;
+export default SupportPage,

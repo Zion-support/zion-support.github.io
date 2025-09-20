@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 export default function Page() {
-, [location.pathname]) ;
+, [location.pathname]) ,
 
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`}};
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`}},
 
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) },
 
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },
@@ -17,21 +17,21 @@ export default function Page() {
                     type="text"
                     placeholder="Search services..."
 =======
-      dropdown[;'
+      dropdown[,'
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Advanced AI consciousness research platform' },'
         { name: 'Quantum Emotion Processor', href: '/ai-services/quantum-emotion', icon: Heart, description: 'Quantum-powered emotional intelligence' },'
         { name: 'AI Autonomous Systems', href: '/ai-services/autonomous-systems', icon: Cpu, description: 'Self-managing AI infrastructure' },'
         { name: 'Neural Network Architect', href: '/ai-services/neural-architect', icon: Network, description: 'Custom neural network design' },'
         { name: 'AI Ethics Framework', href: '/ai-services/ai-ethics', icon: Shield, description: 'Ethical AI development tools' },'        { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
       ]
-    },;
+    },
     {
 
       name: 'Micro SAAS',
       href: '/micro-saas',
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown[;
+      dropdown[,
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: BarChart3, description: 'Intelligent business analytics platform' },
         { name: 'Customer Experience Hub', href: '/micro-saas/customer-experience', icon: Users, description: '360° customer journey management' },
         { name: 'Quantum Computing Suite', href: '/micro-saas/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
@@ -41,14 +41,14 @@ export default function Page() {
         { name: 'Content Creation AI', href: '/micro-saas/content-creation', icon: FileText, description: 'AI-powered content generation' },
         { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
       ]
-    },;
+    },
     {
 
       name: 'IT Services',
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
-      dropdown[;
+      dropdown[,
         { name: 'Infrastructure Management', href: '/it-services/infrastructure', icon: Server, description: 'Complete infrastructure solutions' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation', icon: Zap, description: 'Digital transformation consulting' },
         { name: 'IT Consulting', href: '/it-services/consulting', icon: Users, description: 'Expert IT consulting services' },
@@ -56,14 +56,14 @@ export default function Page() {
         { name: 'Green IT Solutions', href: '/it-services/green-it', icon: Heart, description: 'Sustainable IT infrastructure' },
         { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
       ]
-    },;
+    },
     {
 
       name: 'Emerging Tech',
       href: '/emerging-tech',
       icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;
+      dropdown[,
         { name: 'Quantum Computing', href: '/emerging-tech/quantum-computing', icon: Atom, description: 'Quantum computing solutions' },
         { name: 'Blockchain & DeFi', href: '/emerging-tech/blockchain-defi', icon: Lock, description: 'Blockchain and DeFi platforms' },
         { name: 'Space Technology', href: '/emerging-tech/space-tech', icon: Satellite, description: 'Space technology innovations' },
@@ -71,14 +71,14 @@ export default function Page() {
         { name: 'Nanotechnology', href: '/emerging-tech/nanotech', icon: Microscope, description: 'Nanotechnology applications' },
         { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
       ]
-    },;
+    },
     {
 
       name: 'Marketplace',
       href: '/marketplace',
       icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
-      dropdown[;
+      dropdown[,
         { name: 'AI Products', href: '/marketplace/ai-products', icon: Brain, description: 'AI-powered products and tools' },
         { name: 'IT Equipment', href: '/marketplace/it-equipment', icon: Monitor, description: 'Professional IT equipment' },
         { name: 'Software Solutions', href: '/marketplace/software', icon: Code, description: 'Enterprise software solutions' },
@@ -86,20 +86,20 @@ export default function Page() {
         { name: 'Talent Network', href: '/marketplace/talent', icon: Users, description: 'Skilled professionals network' },
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
       ]
-    },;
+    },
     {
 
       name: 'Comprehensive',
       href: '/services-overview',
       icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
-      dropdown[;
+      dropdown[,
         { name: 'Services Overview', href: '/services-overview', icon: BarChart3, description: 'Complete portfolio of all services' },
         { name: 'Pricing Guide', href: '/pricing-guide', icon: Calculator, description: 'Detailed pricing and ROI analysis' },
         { name: 'Ultimate Services 2027', href: '/enhanced-innovative-services-2027', icon: Crown, description: 'Most advanced services for 2027' },
         { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
-    },;
+    },
     {
 
       name: 'About',
@@ -108,13 +108,13 @@ export default function Page() {
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-    {;
-      name: 'Contact',;
-      href: '/contact',;
-      icon: Phone,;
-      color: 'from-zion-cyan to-zion-purple',;
-      isMain: true};
-  ];
+    {,
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone,
+      color: 'from-zion-cyan to-zion-purple',
+      isMain: true},
+  ],
 
   return ()
     <>
@@ -157,7 +157,7 @@ export default function Page() {
                       <span>{item.name}</span>`
                       <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${activeDropdown === item.name ? 'rotate-180' : ''`
                       }`}  />
-                    </button>;) : (;
+                    </button>,) : (,
                     <Link to={item.href}`                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href'
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25''
                           : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30'`
@@ -209,18 +209,18 @@ export default function Page() {
                                       {dropdownItem.description}
                                     </div>
                                   </div>
-                                </Link>;) ) }
+                                </Link>,) ) }
                             </div>
-                          </div>;
-                        </motion.div>;) }
+                          </div>,
+                        </motion.div>,) }
                     </AnimatePresence>) }
                 </div>) ) }
             </div>
 
             {/* Right Side Actions */}"
-            <div className="flex items-center space-x-4">;
+            <div className="flex items-center space-x-4">,
               {/* Search */}"
-              <form onSubmit={handleSearch} className="relative">;"
+              <form onSubmit={handleSearch} className="relative">,"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />
                 <input"
                   type="text""                  placeholder="Search services..."
@@ -231,7 +231,7 @@ export default function Page() {
               </form>
 
               {/* User Menu */}"
-              <div className="flex items-center space-x-3">;"
+              <div className="flex items-center space-x-3">,"
                 <button className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">"
                   <Bell className="w-5 h-5"  />
                 </button>"
@@ -244,7 +244,7 @@ export default function Page() {
       </nav>
 
       {/* Mobile Navigation */}"
-      <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">;`
+      <nav className="lg: hidden fixed top-0 left-0 right-0 z-50">,`
         <div className={`transition-all duration-500 ${scrolled'
             ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10''
             : 'bg-transparent'`
@@ -354,7 +354,7 @@ export default function Page() {
                                 transition={{ duration: 0.3 }}"
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
 
-                                {item.dropdown.map((dropdownItem) => (;
+                                {item.dropdown.map((dropdownItem) => (,
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}"
@@ -364,7 +364,7 @@ export default function Page() {
                                   </Link>) ) }
                               </motion.div>) }
                           </AnimatePresence>
-                        </div>) : (;
+                        </div>) : (,
                         <Link
                           to={item.href}`
                           className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href'
@@ -376,12 +376,12 @@ export default function Page() {
                             {item.icon && <item.icon className="w-4 h-4" />}
                             <span>{item.name}</span>
                           </div>
-                        </Link>;) }
+                        </Link>,) }
                     </div>) ) }
                 </div>
 
                 {/* Contact Info */}"
-                <div className="mt-8 pt-6 border-t border-zion-cyan/20">;"
+                <div className="mt-8 pt-6 border-t border-zion-cyan/20">,"
                   <div className="text-center">"
                     <div className="text-zion-cyan font-semibold mb-2">Contact Us</div>"
                     <div className="text-sm text-gray-400 space-y-1">
@@ -395,11 +395,11 @@ export default function Page() {
               </div>
             </motion.div>) }
         </AnimatePresence>
-      </nav>;
-;
-      {/* Spacer for fixed navigation */};"
-      <div className="h-20"></div>;
+      </nav>,
+,
+      {/* Spacer for fixed navigation */},"
+      <div className="h-20"></div>,
     </>
-  )};
+  )},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

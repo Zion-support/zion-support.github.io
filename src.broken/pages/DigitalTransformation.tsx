@@ -1,49 +1,49 @@
-import React, { useState } from 'react';
-export default DigitalTransformation;}}}}
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default DigitalTransformation,}}}}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
     {
       phase: "02",
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4 - 6 weeks",
-      activities[;
+      activities[,
         "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
         "ROI analysis and business case",
         "Risk assessment"
       ]
-    },;
+    },
     {
       phase: "03",
       title: "Pilot & Validation",
       description: "Implement proof - of - concept and validate approach with stakeholders",
       duration: "6 - 8 weeks",
-      activities[;
+      activities[,
         "Proof - of - concept development",
         "Pilot implementation",
         "Stakeholder validation",
         "Performance measurement",
         "Feedback collection"
       ]
-    },;
+    },
     {
       phase: "04",
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6 - 18 months",
-      activities[;
-        "Phased rollout execution",;
-        "Change management implementation",;
-        "Performance monitoring",;
-        "Continuous optimization",;
-        "Training and support";
-      ];
-    };
-  ];
+      activities[,
+        "Phased rollout execution",
+        "Change management implementation",
+        "Performance monitoring",
+        "Continuous optimization",
+        "Training and support",
+      ],
+    },
+  ],
 
   const testimonials = [{
       content: "Zion's digital transformation approach was game - changing.They didn't just implement technology - they transformed our entire business model.",
@@ -58,20 +58,20 @@ export default function Page() {
       rating: 5
     },
     {
-    };
-      content: "Working with Zion transformed our company culture.We're now more agile, data - driven, and customer - focused than ever before.",;
-      name: "Marcus Johnson",;
-      role: "CTO, DigitalFirst Inc",;
-      rating: 5;
-    };
-  ];
+    },
+      content: "Working with Zion transformed our company culture.We're now more agile, data - driven, and customer - focused than ever before.",
+      name: "Marcus Johnson",
+      role: "CTO, DigitalFirst Inc",
+      rating: 5
+    },
+  ],
 
-  const stats = [;
-    { number: "85%", label: "Average efficiency improvement" },;
-    { number: "3.2x", label: "Faster time to market" },;
-    { number: "40%", label: "Cost reduction achieved" },;
-    { number: "92%", label: "Customer satisfaction increase" };
-  ];
+  const stats = [,
+    { number: "85%", label: "Average efficiency improvement" },
+    { number: "3.2x", label: "Faster time to market" },
+    { number: "40%", label: "Cost reduction achieved" },
+    { number: "92%", label: "Customer satisfaction increase" },
+  ],
 
   return (<div  className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -133,13 +133,13 @@ export default function Page() {
 
                 <div  className="text-4xl md:text-5xl font - bold text-zion - cyan mb-2">{stat.number}</div>
                 <div  className="text-zion - slate - light text-sm md:text-base">{stat.label}</div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
-      </section>;
+      </section>,
 
       {/* Services Section */}
-      <section className="py-20 bg-zion - blue -dark">;
+      <section className="py-20 bg-zion - blue -dark">,
         <div  className="container mx - auto px-4">
           <div  className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -183,13 +183,13 @@ export default function Page() {
                       <span className="text-zion - slate - light text-sm">{feature}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Transformation Process */}
-      <section className="py-20 bg-zion - slate -dark">;
+      <section className="py-20 bg-zion - slate -dark">,
         <div  className="container mx - auto px-4">
           <div  className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -261,14 +261,14 @@ export default function Page() {
                           </div>) ) }
                       </motion.div>) }
                   </div>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-zion - blue -dark">;
+      <section className="py-20 bg-zion - blue -dark">,
         <div  className="container mx - auto px-4">
           <div  className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -308,13 +308,13 @@ export default function Page() {
                   <div  className="font - semibold text-white">{testimonial.name}</div>
                   <div  className="text-zion - slate - light text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">;
+      <section className="py-20 bg-gradient - to - r from - zion - slate - dark to - zion - blue -dark">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
             Ready to Transform Your Business?
@@ -323,15 +323,15 @@ export default function Page() {
             Let's discuss how digital transformation can revolutionize your operations,
             enhance customer experiences, and drive sustainable growth.</p>
 
-          <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div  className="flex flex - col sm: flex - row gap-4 justify -center">
             <button     className="px-8 py-4 bg-gradient - to - r from - zion - cyan to - zion - purple text-white rounded-xl font - semibold text-lg hover:scale - 105 transition - all duration - 300 shadow-2xl hover:shadow-zion -cyan / 25">
               Start Your Journey
             </button>
             <button     className="px-8 py-4 border border-zion - cyan text-zion - cyan rounded-xl font - semibold text-lg hover:bg-zion - cyan hover:text-white transition - all duration -300">
               Schedule Consultation
-            </button>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </button>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

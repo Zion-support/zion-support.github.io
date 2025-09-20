@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, ArrowRight, Phone, Mail, MapPin,
   Brain, Atom, Rocket, Target, Server, Building,
   Shield, Globe, Zap, TrendingUp, Users, Award,
   DollarSign, Clock, Users as UsersIcon, Shield as ShieldIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our new services
-import { advancedAIAutomationPlatforms2025 } from '../data/2025-advanced-ai-automation-platforms';
-import { innovativeITInfrastructureSolutions2025 } from '../data/2025-innovative-it-infrastructure-solutions';
-import { specializedMicroSaasSolutions2025 } from '../data/2025-specialized-micro-saas-solutions';
-import { emergingTechnologyServices2025 } from '../data/2025-emerging-technology-services';
+import { advancedAIAutomationPlatforms2025 } from '../data/2025-advanced-ai-automation-platforms',
+import { innovativeITInfrastructureSolutions2025 } from '../data/2025-innovative-it-infrastructure-solutions',
+import { specializedMicroSaasSolutions2025 } from '../data/2025-specialized-micro-saas-solutions',
+import { emergingTechnologyServices2025 } from '../data/2025-emerging-technology-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const PricingCard = ({ service, index }: { service: any; index: number }) => {
-  const [isHovered, setIsHovered] = useState(false);
+const PricingCard = ({ service, index }: { service: any, index: number }) => {
+  const [isHovered, setIsHovered] = useState(false),
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -38,6 +38,6 @@ const PricingCard = ({ service, index }: { service: any; index: number }) => {
         </div>
       </div>
     </div>
-  );
-};
-export default pricing-2025-comprehensive;
+  ),
+},
+export default pricing-2025-comprehensive,

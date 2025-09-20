@@ -1,6 +1,6 @@
 export const metadata = {,
-  title: 'Content Hub | Zion Tech Group';
-  description: 'Explore our latest guides and articles on AI and automation.',};
+  title: 'Content Hub | Zion Tech Group',
+  description: 'Explore our latest guides and articles on AI and automation.'},
 export default function ContentIndexPage() {,
   return (,
     <main className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,

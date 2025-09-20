@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Check, 
+  Check,
   Star, 
   Zap, 
   Brain, 
@@ -35,186 +35,104 @@ import {
   Mail,
   MapPin,
   Building
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 export default function Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
   const [selectedPlan, setSelectedPlan] = useState<string>('pro');
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: { monthly: 299, annual: 2990 },
+      name: 'Starter',description: 'Perfect for small businesses and startups',price: { monthly: 299, annual: 2990 };
       features: [
-        'AI-powered business intelligence dashboard',
-        'Basic cloud infrastructure setup',
-        'Email support',
-        'Monthly reports',
-        'Up to 5 users',
-        'Basic integrations'
+        'AI-powered business intelligence dashboardBasic cloud infrastructure setup';
+        'Email supportMonthly reports',
+        'Up to 5 usersBasic integrations'
       ],
-      icon: Rocket,
-      color: 'from-blue-500 to-cyan-500',
-      popular: false,
-      cta: 'Get Started',
-      link: '/contact'
-    },
+      icon: Rocket,color: 'from-blue-500 to-cyan-500',popular: false,cta: 'Get Started',link: '/contact'
+    };
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: { monthly: 799, annual: 7990 },
+      name: 'Professional',description: 'Ideal for growing businesses and teams',price: { monthly: 799, annual: 7990 };
       features: [
-        'Everything in Starter',
-        'Advanced AI analytics and insights',
-        'Custom dashboard development',
-        'Priority support',
-        'Up to 25 users',
-        'Advanced integrations',
-        'Custom reporting',
-        'Training sessions'
+        'Everything in StarterAdvanced AI analytics and insights';
+        'Custom dashboard developmentPriority support',
+        'Up to 25 usersAdvanced integrations',
+        'Custom reportingTraining sessions'
       ],
-      icon: Building,
-      color: 'from-purple-500 to-pink-500',
-      popular: true,
-      cta: 'Get Started',
-      link: '/contact'
-    },
+      icon: Building,color: 'from-purple-500 to-pink-500',popular: true,cta: 'Get Started',link: '/contact'
+    };
     {
-      name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      price: { monthly: 1999, annual: 19990 },
+      name: 'Enterprise',description: 'For large organizations with complex needs',price: { monthly: 1999, annual: 19990 };
       features: [
-        'Everything in Professional',
-        'Custom AI model development',
-        'Dedicated account manager',
-        '24/7 priority support',
-        'Unlimited users',
-        'Custom integrations',
-        'White-label solutions',
-        'On-site training',
+        'Everything in ProfessionalCustom AI model development';
+        'Dedicated account manager24/7 priority support',
+        'Unlimited usersCustom integrations',
+        'White-label solutionsOn-site training',
         'SLA guarantees'
       ],
-      icon: Globe,
-      color: 'from-orange-500 to-red-500',
-      popular: false,
-      cta: 'Contact Sales',
-      link: '/contact'
+      icon: Globe,color: 'from-orange-500 to-red-500',popular: false,cta: 'Contact Sales',link: '/contact'
     }
   ];
-
   const servicePackages = [
     {
-      title: 'AI & Machine Learning',
-      description: 'Custom AI solutions and ML model development',
-      startingPrice: 5000,
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500',
-      features: [
-        'Custom AI model development',
-        'Data preprocessing and cleaning',
-        'Model training and optimization',
-        'API integration and deployment',
+      title: 'AI & Machine Learning',description: 'Custom AI solutions and ML model development',startingPrice: 5000,icon: Cpu,color: 'from-blue-500 to-cyan-500',features: [
+        'Custom AI model developmentData preprocessing and cleaning';
+        'Model training and optimizationAPI integration and deployment',
         'Ongoing model maintenance'
       ]
     },
     {
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and migration services',
-      startingPrice: 3000,
-      icon: Server,
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Cloud architecture design',
-        'Migration planning and execution',
-        'Security and compliance setup',
-        'Performance optimization',
+      title: 'Cloud Infrastructure',description: 'Scalable cloud solutions and migration services',startingPrice: 3000,icon: Server,color: 'from-green-500 to-emerald-500',features: [
+        'Cloud architecture designMigration planning and execution';
+        'Security and compliance setupPerformance optimization',
         '24/7 monitoring and support'
       ]
     },
     {
-      title: 'Digital Twin Solutions',
-      description: 'Advanced digital twin technology implementation',
-      startingPrice: 10000,
-      icon: Target,
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        '3D modeling and visualization',
-        'Real-time data integration',
-        'Predictive analytics',
-        'IoT device connectivity',
+      title: 'Digital Twin Solutions',description: 'Advanced digital twin technology implementation',startingPrice: 10000,icon: Target,color: 'from-purple-500 to-pink-500',features: [
+        '3D modeling and visualizationReal-time data integration';
+        'Predictive analyticsIoT device connectivity',
         'Custom dashboard development'
       ]
     },
     {
-      title: 'Data Analytics',
-      description: 'Comprehensive data analysis and insights',
-      startingPrice: 2500,
-      icon: Database,
-      color: 'from-orange-500 to-red-500',
-      features: [
-        'Data strategy and planning',
-        'ETL pipeline development',
-        'Advanced analytics and reporting',
-        'Data visualization',
+      title: 'Data Analytics',description: 'Comprehensive data analysis and insights',startingPrice: 2500,icon: Database,color: 'from-orange-500 to-red-500',features: [
+        'Data strategy and planningETL pipeline development';
+        'Advanced analytics and reportingData visualization',
         'Business intelligence dashboards'
       ]
     }
-  ];
+  ],
 
   const pricingFactors = [
     {
-      title: 'Project Complexity',
-      description: 'More complex projects require additional resources and time',
-      icon: Target,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      title: 'Project Complexity',description: 'More complex projects require additional resources and time',icon: Target,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      title: 'Customization Level',
-      description: 'Highly customized solutions require more development effort',
-      icon: Zap,
-      color: 'from-green-500 to-emerald-500'
-    },
+      title: 'Customization Level',description: 'Highly customized solutions require more development effort',icon: Zap,color: 'from-green-500 to-emerald-500'
+    };
     {
-      title: 'Integration Requirements',
-      description: 'Complex integrations with existing systems affect pricing',
-      icon: Server,
-      color: 'from-purple-500 to-pink-500'
-    },
+      title: 'Integration Requirements',description: 'Complex integrations with existing systems affect pricing',icon: Server,color: 'from-purple-500 to-pink-500'
+    };
     {
-      title: 'Support and Maintenance',
-      description: 'Ongoing support and maintenance packages vary by level',
-      icon: Shield,
-      color: 'from-orange-500 to-red-500'
+      title: 'Support and Maintenance',description: 'Ongoing support and maintenance packages vary by level',icon: Shield,color: 'from-orange-500 to-red-500'
     }
   ];
-
-  const savings = billingCycle === 'annual' ? 0.17 : 0; // 17% savings for annual
+  const savings = billingCycle === 'annual' ? 0.17 : 0, // 17% savings for annual
 
   const benefits = [
     {
-      title: 'Transparent Pricing',
-      description: 'No hidden fees or surprise charges',
-      icon: Shield
-    },
+      title: 'Transparent Pricing',description: 'No hidden fees or surprise charges',icon: Shield
+    };
     {
-      title: 'Flexible Plans',
-      description: 'Scale up or down as your business grows',
-      icon: TrendingUp
-    },
+      title: 'Flexible Plans',description: 'Scale up or down as your business grows',icon: TrendingUp
+    };
     {
-      title: 'Custom Solutions',
-      description: 'Tailored packages for unique requirements',
-      icon: Target
-    },
+      title: 'Custom Solutions',description: 'Tailored packages for unique requirements',icon: Target
+    };
     {
-      title: '24/7 Support',
-      description: 'Round-the-clock assistance when you need it',
-      icon: Users
+      title: '24/7 Support',description: 'Round-the-clock assistance when you need it',icon: Users
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -430,7 +348,7 @@ export default function Pricing() {
             {pricingFactors.map((factor, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
+                className="text-center p-6 rounded-2xl bg-slate-800/50 hover: bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${factor.color} flex items-center justify-center mx-auto mb-6`}>
                   <factor.icon className="w-8 h-8 text-white" />
@@ -459,40 +377,22 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: 'Custom AI Models',
-                description: 'Tailored machine learning models for your specific use case',
-                icon: Cpu,
-                color: 'from-blue-500 to-cyan-500'
-              },
+                title: 'Custom AI Models',description: 'Tailored machine learning models for your specific use case',icon: Cpu,color: 'from-blue-500 to-cyan-500'
+              };
               {
-                title: 'Advanced Security',
-                description: 'Enterprise-grade security with compliance certifications',
-                icon: Shield,
-                color: 'from-green-500 to-emerald-500'
-              },
+                title: 'Advanced Security',description: 'Enterprise-grade security with compliance certifications',icon: Shield,color: 'from-green-500 to-emerald-500'
+              };
               {
-                title: 'Dedicated Support',
-                description: '24/7 dedicated support team with SLA guarantees',
-                icon: Users,
-                color: 'from-purple-500 to-pink-500'
-              },
+                title: 'Dedicated Support',description: '24/7 dedicated support team with SLA guarantees',icon: Users,color: 'from-purple-500 to-pink-500'
+              };
               {
-                title: 'White-Label Solutions',
-                description: 'Customizable solutions with your branding',
-                icon: Target,
-                color: 'from-orange-500 to-red-500'
-              },
+                title: 'White-Label Solutions',description: 'Customizable solutions with your branding',icon: Target,color: 'from-orange-500 to-red-500'
+              };
               {
-                title: 'On-Site Training',
-                description: 'Comprehensive training programs at your location',
-                icon: Award,
-                color: 'from-indigo-500 to-purple-500'
-              },
+                title: 'On-Site Training',description: 'Comprehensive training programs at your location',icon: Award,color: 'from-indigo-500 to-purple-500'
+              };
               {
-                title: 'Custom Integrations',
-                description: 'Seamless integration with your existing systems',
-                icon: Server,
-                color: 'from-cyan-500 to-blue-500'
+                title: 'Custom Integrations',description: 'Seamless integration with your existing systems',icon: Server,color: 'from-cyan-500 to-blue-500'
               }
             ].map((feature, index) => (
               <div
@@ -571,20 +471,16 @@ export default function Pricing() {
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
-                question: 'Can I change my plan at any time?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+                question: 'Can I change my plan at any time?',answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
               },
               {
-                question: 'Do you offer custom pricing for enterprise clients?',
-                answer: 'Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements.'
+                question: 'Do you offer custom pricing for enterprise clients?',answer: 'Absolutely! We work with enterprise clients to create custom pricing plans that meet their specific needs and requirements.'
+              };
+              {
+                question: 'What payment methods do you accept?',answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
               },
               {
-                question: 'What payment methods do you accept?',
-                answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients.'
-              },
-              {
-                question: 'Is there a setup fee?',
-                answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
+                question: 'Is there a setup fee?',answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
               }
             ].map((faq, index) => (
               <motion.div
@@ -612,7 +508,7 @@ export default function Pricing() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -638,5 +534,5 @@ export default function Pricing() {
         </div>
       </section>
     </div>
-  );
+  )
 }

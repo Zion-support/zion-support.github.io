@@ -1,8 +1,8 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useNotificationOperations } from './useNotificationOperations';
-import { NotificationContextType } from './types';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
+import { useNotificationOperations } from './useNotificationOperations',
+import { NotificationContextType } from './types',
 
 // Default context used when React type definitions are missing. Providing a
 // fully-typed object here avoids TypeScript errors that occur when an untyped
@@ -17,29 +17,29 @@ const defaultContext: NotificationContextType = {
   markAllAsRead: async () => {},
   dismissNotification: async () => {},
   setFilter: () => {},
-  fetchNotifications: async () => {},
-};
+  fetchNotifications: async () => {}
+},
 
 // Cast the default context value to avoid issues when React types are missing.
 const NotificationContext = createContext(
   defaultContext as NotificationContextType
-);
+),
 
 export const useNotifications = (): NotificationContextType => {
-  const context = useContext(NotificationContext) as NotificationContextType;
+  const context = useContext(NotificationContext) as NotificationContextType,
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error('useNotifications must be used within a NotificationProvider'),
   }
-  return context;
-};
+  return context,
+},
 
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
-  const { user } = useAuth();
-  const notificationOps = useNotificationOperations(user?.id);
+  const { user } = useAuth(),
+  const notificationOps = useNotificationOperations(user?.id),
   
   // Load notifications when user changes
   useEffect(() => {
-    notificationOps.fetchNotifications();
+    notificationOps.fetchNotifications(),
     
     // Set up real-time subscription for new notifications
     if (user) {
@@ -53,21 +53,21 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             filter: `user_id=eq.${user.id}`
           },
           (payload) => {
-            console.log('Notification change received:', payload);
-            notificationOps.fetchNotifications();
+            console.log('Notification change received:', payload),
+            notificationOps.fetchNotifications(),
           }
         )
-        .subscribe();
+        .subscribe(),
         
       return () => {
-        supabase.removeChannel(channel);
-      };
+        supabase.removeChannel(channel),
+      },
     }
-  }, [user]);
+  }, [user]),
   
   return (
     <NotificationContext.Provider value={notificationOps}>
       {children}
     </NotificationContext.Provider>
-  );
-};
+  ),
+},

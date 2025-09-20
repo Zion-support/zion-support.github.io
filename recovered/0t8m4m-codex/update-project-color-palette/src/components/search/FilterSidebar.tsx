@@ -1,21 +1,21 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
 
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null;
-  };
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-  onClearFilters: () => void;
+    selectedProductTypes: string[],
+    selectedLocations: string[],
+    selectedAvailability: string[],
+    selectedRating: number | null
+  },
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
+  onClearFilters: () => void
 }
 
 export function FilterSidebar({
@@ -149,5 +149,5 @@ export function FilterSidebar({
         </div>
       </div>
     </div>
-  );
+  ),
 }

@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence';
-  description: 'Operationalize policy‑as‑code for autonomous agents with evaluation gates, runtime protections, and audit‑ready evidence.',
-};
+  title: 'AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence',
+  description: 'Operationalize policy‑as‑code for autonomous agents with evaluation gates, runtime protections, and audit‑ready evidence.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -10,7 +10,7 @@ export default function Page() {,
         <p className="text-sm text-purple-700 font-semibold">Blueprint • Sep 15, 2025</p>,
         <h1>AI 2026: Policy‑as‑Code in Production — Guardrails, Gates, and Evidence</h1>,
         <p>,
-          Enterprises are shipping autonomous agents faster than ever, but production safety, compliance;
+          Enterprises are shipping autonomous agents faster than ever, but production safety, compliance,
           and cost discipline demand executable policies, real‑time evaluation gates, and end‑to‑end evidence.,
         </p>,
         <h2>Why policy‑as‑code now</h2>,
@@ -39,11 +39,11 @@ export default function Page() {,
           <li>Audit‑readiness with continuous evidence collection</li>,
         </ul>,
         <p>,
-          Get the full starter kit in our resources: {' ',}
+          Get the full starter kit in our resources: {' '}
           <Link className="text-purple-700 font-semibold" href="/resources/ai-2026-agent-risk-metrics-starter-kit">Agent Risk Metrics Starter Kit</Link>.,
         </p>,
       </article>,
     </main>,
-  );
+  ),
 }
 ,

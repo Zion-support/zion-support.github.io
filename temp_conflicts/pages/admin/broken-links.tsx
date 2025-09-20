@@ -1,6 +1,6 @@
-import data from '../../data/reports/broken-links.json';
+import data from '../../data/reports/broken-links.json',
 export default function BrokenLinks(){
-  const d = data as any;
+  const d = data as any,
   return (
     <div className="py-10 space-y-3">
       <h1 className="text-2xl font-semibold">Broken Links</h1>
@@ -13,5 +13,5 @@ export default function BrokenLinks(){
         ))}
       </ul>
     </div>
-  );
+  ),
 }

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface CuttingEdge2029Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Emotional Intelligence
@@ -49,16 +49,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Revolutionary platform for developing genuine AI consciousness, self-awareness, and emotional intelligence. Create AI systems that understand context, emotions, and can make autonomous decisions with human-like reasoning.',
     features: [
-      'Consciousness development algorithms',
-      'Emotional intelligence training',
-      'Self-awareness modules',
-      'Contextual understanding',
-      'Autonomous decision making',
-      'Ethical reasoning frameworks',
-      'Consciousness metrics dashboard',
-      'Multi-modal consciousness training',
-      'Real-time consciousness monitoring',
-      'Consciousness evolution tracking'
+      'Consciousness development algorithmsEmotional intelligence training',
+      'Self-awareness modulesContextual understanding',
+      'Autonomous decision makingEthical reasoning frameworks',
+      'Consciousness metrics dashboardMulti-modal consciousness training',
+      'Real-time consciousness monitoringConsciousness evolution tracking'
     ],
     popular: true,
     icon: '🧠',
@@ -100,16 +95,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Advanced AI platform that understands, analyzes, and responds to human emotions in real-time. Perfect for customer service, mental health, education, and any application requiring emotional intelligence.',
     features: [
-      'Real-time emotion detection',
-      'Multi-modal emotion analysis',
-      'Emotional response generation',
-      'Sentiment trend analysis',
-      'Emotional intelligence scoring',
-      'Custom emotion training',
-      'Multi-language emotion support',
-      'Emotional context understanding',
-      'Emotion-based decision making',
-      'Emotional health monitoring'
+      'Real-time emotion detectionMulti-modal emotion analysis',
+      'Emotional response generationSentiment trend analysis',
+      'Emotional intelligence scoringCustom emotion training',
+      'Multi-language emotion supportEmotional context understanding',
+      'Emotion-based decision makingEmotional health monitoring'
     ],
     popular: true,
     icon: '💝',
@@ -152,16 +142,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Next-generation quantum internet security gateway providing unbreakable encryption, quantum key distribution, and post-quantum cryptography. Secure your digital infrastructure against all current and future threats.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Real-time threat detection',
-      'Quantum network security',
-      'Zero-trust architecture',
-      'Quantum-safe protocols',
-      'Advanced encryption standards',
-      'Quantum random number generation',
-      'Quantum network monitoring'
+      'Quantum key distribution (QKD)Post-quantum cryptography',
+      'Quantum-resistant algorithmsReal-time threat detection',
+      'Quantum network securityZero-trust architecture',
+      'Quantum-safe protocolsAdvanced encryption standards',
+      'Quantum random number generationQuantum network monitoring'
     ],
     popular: true,
     icon: '🔐',
@@ -204,16 +189,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Revolutionary space mining automation platform for asteroid mining, lunar resource extraction, and space manufacturing. Automate the entire process from prospecting to resource delivery.',
     features: [
-      'Automated asteroid prospecting',
-      'Robotic mining operations',
-      'Space resource processing',
-      'Automated manufacturing',
-      'Resource transportation logistics',
-      'Space weather monitoring',
-      'Mining efficiency optimization',
-      'Resource quality analysis',
-      'Space debris management',
-      'Sustainable mining practices'
+      'Automated asteroid prospectingRobotic mining operations',
+      'Space resource processingAutomated manufacturing',
+      'Resource transportation logisticsSpace weather monitoring',
+      'Mining efficiency optimizationResource quality analysis',
+      'Space debris managementSustainable mining practices'
     ],
     popular: true,
     icon: '🚀',
@@ -256,16 +236,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Next-generation metaverse platform creating immersive virtual worlds with AI-powered experiences, realistic physics, and seamless cross-platform integration. Build the future of digital reality.',
     features: [
-      'AI-powered world generation',
-      'Realistic physics engine',
-      'Cross-platform compatibility',
-      'Virtual asset marketplace',
-      'AI NPCs and characters',
-      'Real-time collaboration',
-      'Virtual event hosting',
-      'Custom world building',
-      'Social interaction tools',
-      'Monetization platform'
+      'AI-powered world generationRealistic physics engine',
+      'Cross-platform compatibilityVirtual asset marketplace',
+      'AI NPCs and charactersReal-time collaboration',
+      'Virtual event hostingCustom world building',
+      'Social interaction toolsMonetization platform'
     ],
     popular: true,
     icon: '🌌',
@@ -308,16 +283,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Revolutionary AI system that autonomously manages entire business operations, makes strategic decisions, optimizes processes, and drives growth without human intervention.',
     features: [
-      'Autonomous decision making',
-      'Business process optimization',
-      'Strategic planning automation',
-      'Financial management',
-      'Human resource optimization',
-      'Market analysis automation',
-      'Customer relationship management',
-      'Supply chain optimization',
-      'Performance monitoring',
-      'Growth strategy execution'
+      'Autonomous decision makingBusiness process optimization',
+      'Strategic planning automationFinancial management',
+      'Human resource optimizationMarket analysis automation',
+      'Customer relationship managementSupply chain optimization',
+      'Performance monitoringGrowth strategy execution'
     ],
     popular: true,
     icon: '🤖',
@@ -360,16 +330,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Revolutionary DNA computing platform that uses biological molecules for computation, data storage, and processing. Unlock the power of biological computing for unprecedented computational capabilities.',
     features: [
-      'DNA-based computation',
-      'Biological data storage',
-      'Molecular computing',
-      'DNA sequence processing',
-      'Biological algorithm execution',
-      'DNA memory systems',
-      'Molecular logic gates',
-      'Biological circuit design',
-      'DNA-based encryption',
-      'Biological data centers'
+      'DNA-based computationBiological data storage',
+      'Molecular computingDNA sequence processing',
+      'Biological algorithm executionDNA memory systems',
+      'Molecular logic gatesBiological circuit design',
+      'DNA-based encryptionBiological data centers'
     ],
     popular: true,
     icon: '🧬',
@@ -412,16 +377,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Next-generation quantum financial trading platform using quantum computing for market analysis, risk assessment, and algorithmic trading. Achieve unprecedented accuracy in financial predictions and trading strategies.',
     features: [
-      'Quantum market analysis',
-      'Quantum risk assessment',
-      'Quantum trading algorithms',
-      'Real-time market prediction',
-      'Portfolio optimization',
-      'Risk management automation',
-      'Quantum arbitrage detection',
-      'Market sentiment analysis',
-      'Trading strategy optimization',
-      'Performance analytics'
+      'Quantum market analysisQuantum risk assessment',
+      'Quantum trading algorithmsReal-time market prediction',
+      'Portfolio optimizationRisk management automation',
+      'Quantum arbitrage detectionMarket sentiment analysis',
+      'Trading strategy optimizationPerformance analytics'
     ],
     popular: true,
     icon: '💰',
@@ -464,16 +424,11 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     period: '/month',
     description: 'Revolutionary AI platform that orchestrates multiple AI models to generate breakthrough creative ideas, innovative solutions, and artistic creations. Combine the power of multiple AI systems for unprecedented creativity.',
     features: [
-      'Multi-model AI orchestration',
-      'Creative idea generation',
-      'Innovation pipeline management',
-      'Cross-domain creativity',
-      'Creative collaboration tools',
-      'Innovation tracking',
-      'Creative quality assessment',
-      'Idea validation systems',
-      'Creative workflow automation',
-      'Innovation analytics'
+      'Multi-model AI orchestrationCreative idea generation',
+      'Innovation pipeline managementCross-domain creativity',
+      'Creative collaboration toolsInnovation tracking',
+      'Creative quality assessmentIdea validation systems',
+      'Creative workflow automationInnovation analytics'
     ],
     popular: true,
     icon: '🎨',
@@ -507,16 +462,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     rating: 4.8,
     reviews: 134
   }
-];
+],
 export const getPopularCuttingEdge2029Services = () => {
-  return cuttingEdge2029Services.filter(service => service.popular);
-};
+  return cuttingEdge2029Services.filter(service => service.popular),
+},
 export const getCuttingEdge2029ServicesByCategory = (category: string) => {
-  return cuttingEdge2029Services.filter(service => service.category === category);
-};
+  return cuttingEdge2029Services.filter(service => service.category === category)
+},
 export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return cuttingEdge2029Services.filter(service => {
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+    return price >= minPrice && price <= maxPrice,
+  }),
+},

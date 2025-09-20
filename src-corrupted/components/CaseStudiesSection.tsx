@@ -1,2 +1,2 @@
 
-export default CaseStudiesSection;
+export default CaseStudiesSection,

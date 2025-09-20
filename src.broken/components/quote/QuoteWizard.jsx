@@ -1,17 +1,17 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 =======
-import { useState, useMemo, useEffect } from 'react';
-import { useQuoteWizard } from '@/hooks/useQuoteWizard';
-import { useDelayedError } from '@/hooks/useDelayedError';
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
- from '@/hooks/use-toast';
+import { useState, useMemo, useEffect } from 'react',
+import { useQuoteWizard } from '@/hooks/useQuoteWizard',
+import { useDelayedError } from '@/hooks/useDelayedError',
+import { Card } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Textarea } from '@/components/ui/textarea',
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert',
+ from '@/hooks/use-toast',
 ) {
 
-  const progress = (step / WIZARD_STEPS.length) * 100;
+  const progress = (step / WIZARD_STEPS.length) * 100,
   return ()
     <div className="space-y-1">
       <div"
@@ -27,37 +27,37 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
         />
       </div>
     </div>
-  );
+  ),
 }
 export function QuoteWizard({ category }) {
 
-  const [step, setStep] = useState(1);
-  const [selectedItemId, setSelectedItemId] = useState(null);
-  const [message, setMessage] = useState('');
-  const [selectionError, setSelectionError] = useState('');
-  const { data, error, mutate, isLoading } = useQuoteWizard(category);
-  const delayedError = useDelayedError(error);
-  const { toast } = useToast();
+  const [step, setStep] = useState(1),
+  const [selectedItemId, setSelectedItemId] = useState(null),
+  const [message, setMessage] = useState(''),
+  const [selectionError, setSelectionError] = useState(''),
+  const { data, error, mutate, isLoading } = useQuoteWizard(category),
+  const delayedError = useDelayedError(error),
+  const { toast } = useToast(),
   useEffect(() => {
     if(delayedError) {
 
       toast({
 
         title: 'Unable to load services',
-        variant: 'destructive'});
+        variant: 'destructive'}),
     }
-  }, [delayedError, toast]);
+  }, [delayedError, toast]),
   // Use isLoading from SWR for a more direct loading state
-  const loading = isLoading;
+  const loading = isLoading,
   const selectedItem = useMemo(() => {
-    if(!data || !selectedItemId) return null;
-    return data.find(item => item.id === selectedItemId);
-  }, [data, selectedItemId]);
+    if(!data || !selectedItemId) return null,
+    return data.find(item => item.id === selectedItemId),
+  }, [data, selectedItemId]),
   const handleSelect = id => {
 
-    setSelectedItemId(id);
-    setStep(2);
-  };
+    setSelectedItemId(id),
+    setStep(2),
+  },
   const handleContinue = () => {
     if(!selectedItemId) {
 
@@ -68,41 +68,40 @@ export function QuoteWizard({ category }) {
               ? 'talent''
               : 'item'`
         } to continue.`
-      );
-      return;
+      ),
+      return,
     }
-    setSelectionError('');
-    setStep(2);
-  };
+    setSelectionError(''),
+    setStep(2),
+  },
   const handleSubmit = async () => {
-    if(!selectedItemId) return;
-    let endpoint = '/api/quotes';
-    const payload = { user_message: message };
+    if(!selectedItemId) return,
+    let endpoint = '/api/quotes',
+    const payload = { user_message: message },
     switch(category) {
 
       case 'services':'
-        endpoint = '/api/services/quotes';
-        payload.service_id = selectedItemId;
-        break;
+        endpoint = '/api/services/quotes',
+        payload.service_id = selectedItemId,
+        break,
       case 'talent':'
-        endpoint = '/api/talent/quotes';
-        payload.talent_id = selectedItemId;
-        break;
+        endpoint = '/api/talent/quotes',
+        payload.talent_id = selectedItemId,
+        break,
       case 'equipment':'
-        endpoint = '/api/equipment/quotes';
-        payload.item_id = selectedItemId;
-        break;
-      default:
-        payload.item_id = selectedItemId;
-        payload.category = category;
+        endpoint = '/api/equipment/quotes',
+        payload.item_id = selectedItemId,
+        break,
+      default: payload.item_id = selectedItemId,
+        payload.category = category
     }
     await fetch(endpoint, {
 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)});
-    setStep(3);
-  };
+      body: JSON.stringify(payload)}),
+    setStep(3),
+  },
   if(step === 1) {
 
     return ("
@@ -155,8 +154,8 @@ export function QuoteWizard({ category }) {
 
                   if(e.key === 'Enter' || e.key === ' ') {
 
-                    e.preventDefault();
-                    setSelectedItemId(item.id);
+                    e.preventDefault(),
+                    setSelectedItemId(item.id),
                   }
                 }}
               >"
@@ -174,8 +173,8 @@ export function QuoteWizard({ category }) {
                   data-testid={`select-item-${item.id}`}
                   onClick={e => {
 
-                    e.stopPropagation();
-                    handleSelect(item.id);
+                    e.stopPropagation(),
+                    handleSelect(item.id),
                   }}"
                   className="w-full mt-2"
                 >
@@ -207,7 +206,7 @@ export function QuoteWizard({ category }) {
           Continue
         </Button>
       </div>
-    );
+    ),
   }
   if(step === 2) {
 
@@ -249,7 +248,7 @@ export function QuoteWizard({ category }) {
           </Button>
         </div>
       </div>
-    );
+    ),
   }
   if(step === 3) {
 
@@ -265,17 +264,17 @@ export function QuoteWizard({ category }) {
           shortly.</p>
         <Button
           onClick={() => {
-            setStep(1);
-            setSelectedItemId(null);
-            setMessage('');
+            setStep(1),
+            setSelectedItemId(null),
+            setMessage(''),
           }}
         >
           Request Another Quote
         </Button>
       </div>
-    );
+    ),
   }
-  return null;
+  return null,
 }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

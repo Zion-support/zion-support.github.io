@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -15,7 +15,7 @@ export default function Page() {
     icon: BarChart3,
     impact: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -44,7 +44,7 @@ const successStories = [{
     results: "30% reduction in stockouts, 20% improvement in order fulfillment",
     logo: "HG"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -74,16 +74,16 @@ const processSteps = [{
     icon: Users,
     duration: "1 - 2 weeks"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'E - commerce', 'Mobile Development', 'POS Systems', 'Analytics', 'Inventory', 'Platform Solutions'];
+  const categories = ['AllE - commerce', 'Mobile DevelopmentPOS Systems', 'AnalyticsInventory', 'Platform Solutions'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? retailSolutions
-    : retailSolutions.filter(solution => solution.category === selectedCategory) ;
+    : retailSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -154,10 +154,10 @@ const processSteps = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Retail Trends */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -214,13 +214,13 @@ const processSteps = [{
                 }`}>
                   {trend.impact} Impact
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -276,13 +276,13 @@ const processSteps = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -382,7 +382,7 @@ const processSteps = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -453,13 +453,13 @@ const processSteps = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

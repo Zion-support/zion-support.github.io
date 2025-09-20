@@ -1,8 +1,8 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SmartHeader from '../../components/SmartHeader';
-import SmartFooter from '../../components/SmartFooter';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import SmartHeader from '../../components/SmartHeader',
+import SmartFooter from '../../components/SmartFooter',
 
 export default function AIAutonomousBusinessManager() {
   return (
@@ -383,14 +383,14 @@ export default function AIAutonomousBusinessManager() {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-4 gap-8">
+              <div className="grid md: grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="text-5xl font-bold text-fuchsia-400 mb-2">99.9%</div>
                   <div className="text-white/70">Uptime</div>
                 </div>
                 
                 <div className="text-center">
-                  <div className="text-5xl font-bold text-cyan-400 mb-2">&lt;100ms</div>
+                  <div className="text-5xl font-bold text-cyan-400 mb-2">&lt,100ms</div>
                   <div className="text-white/70">Response Time</div>
                 </div>
                 
@@ -414,7 +414,7 @@ export default function AIAutonomousBusinessManager() {
               <p className="text-xl text-white/80 mb-8">
                 Join the future of autonomous business management today
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
@@ -435,5 +435,5 @@ export default function AIAutonomousBusinessManager() {
         <SmartFooter />
       </div>
     </>
-  );
+  )
 }

@@ -1,45 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
           { page: '/about', views: Math.floor(Math.random() * 1500) + 800 },
-          { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 },
+          { page: '/pricing', views: Math.floor(Math.random() * 1000) + 500 }
         ],
         trafficSources: ['
           { source: 'Organic Search', percentage: 45 },
           { source: 'Direct', percentage: 25 },
           { source: 'Social Media', percentage: 20 },
-          { source: 'Referral', percentage: 10 },
+          { source: 'Referral', percentage: 10 }
         ],
         deviceTypes: ['
           { device: 'Desktop', percentage: 60 },
           { device: 'Mobile', percentage: 35 },
-          { device: 'Tablet', percentage: 5 },
-        ]});
-      setIsLoading(false);
-    };
-    fetchData();
-  }, [timeRange]);
+          { device: 'Tablet', percentage: 5 }
+        ]}),
+      setIsLoading(false),
+    },
+    fetchData(),
+  }, [timeRange]),
   const formatNumber = num => {
 
-    if(num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if(num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num.toString();
-  };
+    if(num >= 1000000) return (num / 1000000).toFixed(1) + 'M',
+    if(num >= 1000) return (num / 1000).toFixed(1) + 'K',
+    return num.toString(),
+  },
   const formatCurrency = num => {
 
     return new Intl.NumberFormat('en-US', {
 
       style: 'currency',
-      currency: 'USD'}).format(num);
-  };
+      currency: 'USD'}).format(num),
+  },
   if(isLoading) {
 
     return ()
       <div className="flex items-center justify-center h-64">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
       </div>
-    );
+    ),
   }
 
   return ("
@@ -241,7 +241,7 @@ export default function Page() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Performance Insights
         </h3>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           <div>"
             <h4 className="text-zion-cyan font-semibold mb-2">
               Optimization Opportunities
@@ -264,8 +264,8 @@ export default function Page() {
           </div>
         </div>
       </motion.div>
-    </div>) ;
+    </div>) 
 }
 
-export default AdvancedAnalytics;
+export default AdvancedAnalytics,
 '"`

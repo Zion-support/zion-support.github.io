@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Brain
   Cloud
@@ -10,7 +10,7 @@ import {
   BarChart3,
   ArrowRight,
   Zap
-} from 'lucide-react';
+} from 'lucide-react',
 
 const ServicesSection: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const ServicesSection: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">ServicesSection</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default ServicesSection;
+export default ServicesSection,

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Risk Management Framework';
+  title: 'AI 2026: Agent Risk Management Framework',
   description:,
-    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.',
-};
+    'Framework for assessing and mitigating risks of autonomous agents: threat models, safeguards, and governance.'
+},
 export default function AgentRiskManagementFrameworkPage() {,
   return (,
     <div className="prose prose-invert max-w-3xl mx-auto py-12 px-4">,
@@ -34,7 +34,6 @@ export default function AgentRiskManagementFrameworkPage() {,
         <li>Automate pre-deploy and runtime evaluations</li>,
         <li>Continuously improve with incidents and near-misses</li>,
       </ol>,
-    </div>,
-  );
+    </div>),
 }
 ,

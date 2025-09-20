@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface HelpdeskProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Helpdesk({ }: HelpdeskProps) {,
@@ -8,7 +8,6 @@ export default function Helpdesk({ }: HelpdeskProps) {,
     <div>,
       <h1>Helpdesk</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

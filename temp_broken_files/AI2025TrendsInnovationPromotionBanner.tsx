@@ -1,38 +1,38 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Brain,
   Zap,
   ArrowRight,
-  Star;
-  Sparkles;
-  Target;
-  Clock,
-} from 'lucide-react';
+  Star,
+  Sparkles,
+  Target,
+  Clock
+} from 'lucide-react',
 const AI2025TrendsInnovationPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentStatsetCurrentStat] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }2000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentStat((prev) => (prev + 1) % stats.length),
+    }2000),
+    return () => clearInterval(interval),
+  }[]),
   const stats = [,
-    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" ,};
-    { icon: Brainvalue: "85%"label: "Efficiency Boost" ,};
-    { icon: Zapvalue: "60%"label: "Faster Processing" ,};
-    { icon: Targetvalue: "95%"label: "Success Rate" ,}
-  ];
+    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
+    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
+    { icon: Zapvalue: "60%"label: "Faster Processing" },
+    { icon: Targetvalue: "95%"label: "Success Rate" }
+  ],
   const features = [,
-    "Generative AI Revolution";
+    "Generative AI Revolution",
     "Edge AI Computing",
-    "Quantum AI Integration";
-    "Predictive Analytics",
-  ];
+    "Quantum AI Integration",
+    "Predictive Analytics"
+  ],
   return (,
     <section className="py-16 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">,
       {/* Animated Background */}
@@ -43,7 +43,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="space-y-8",
           >,
@@ -52,7 +52,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
               <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />,
               <span className="text-blue-300 font-medium">New: AI Trends 2025</span>,
             </div>,
-            {/* Main Heading */,}
+            {/* Main Heading */}
             <div>,
               <h2 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">,
                 Discover the,
@@ -65,7 +65,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
                 Stay ahead with the latest technology insights and implementation strategies.,
               </p>,
             </div>,
-            {/* Features List */,}
+            {/* Features List */}
             <div className="space-y-4">,
               {features.map((featureindex) => (,
                 <div,
@@ -74,8 +74,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
                 >,
                   <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>,
                   <span className="text-gray-300 text-lg">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div className="flex flex-col sm: flex-row gap-4 pt-4">,
@@ -93,7 +92,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Stats Display */,}
+          {/* Right Content - Stats Display */}
           <div,
             className="relative",
           >,
@@ -126,10 +125,9 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
                   <div,
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                      index === currentStat ? 'bg-blue-400 w-8' : 'bg-white/30',
+                      index === currentStat ? 'bg-blue-400 w-8' : 'bg-white/30'
                     }`}
-                  />,
-                ))}
+                  />))}
               </div>,
             </div>,
             {/* Floating Elements */}
@@ -163,7 +161,7 @@ const AI2025TrendsInnovationPromotionBanner = () => {,
         </div>,
       </div>,
     </section>,
-  );
-};
-export default AI2025TrendsInnovationPromotionBanner;
+  ),
+},
+export default AI2025TrendsInnovationPromotionBanner,
 </div></div></div>,

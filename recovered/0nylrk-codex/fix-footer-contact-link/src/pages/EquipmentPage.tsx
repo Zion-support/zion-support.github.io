@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 const EquipmentPage = () => {
   return (
@@ -14,7 +14,7 @@ const EquipmentPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default EquipmentPage;
+export default EquipmentPage,

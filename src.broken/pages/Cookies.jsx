@@ -1,5 +1,5 @@
-import React from 'react';
-  import { SEO } from '../components/SEO';
+import React from 'react',
+  import { SEO } from '../components/SEO',
 
 export default function Page() {
                       Use your browser settings to delete or block cookies
@@ -28,7 +28,7 @@ export default function Page() {
                     </a>{' '}
                     or call us at{' '}
                     <a
-                      href="tel:+13024640950"
+                      href="tel: +13024640950"
                       className="text-blue - 400 hover:text-blue -300"
                     >
                       +1(302) 464 - 0950
@@ -40,5 +40,5 @@ export default function Page() {
           </div>
         </div>
       </main>
-    </div>) ;
+    </div>) 
 }

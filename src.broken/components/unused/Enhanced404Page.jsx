@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
 }
@@ -122,10 +122,10 @@ export default function Page() {
                   {route === '/contact' && 'Contact Us'}
                   {route === '/case-studies' && 'Case Studies'}
                   {!['
-                    '/services',/ai-solutions',/about',/contact',/case-studies',
+                    '/services',/ai-solutions',/about',/contact',/case-studies'
                   ].includes(route) &&
                     route.charAt(1).toUpperCase() +'
-                      route.slice(2).replace(/-/g,)}
+                      route.slice(2).replace(/-/g)}
                 </Link>
               </motion.div>
             ))}
@@ -144,14 +144,14 @@ export default function Page() {
           </p>
           <Link"
             to="/contact"
-            className="text-blue-400 hover:text-blue-300 underline font-medium"
+            className="text-blue-400 hover: text-blue-300 underline font-medium"
           >
             Contact our support team
           </Link>
         </motion.div>
       </motion.div>
     </div>
-  );
-};
-export default Enhanced404Page;
+  )
+},
+export default Enhanced404Page,
 '"

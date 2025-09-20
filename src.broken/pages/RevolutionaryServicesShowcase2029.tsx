@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { SEO } from '@/components / SEO';
+import React, { useState } from 'react',
+import { SEO } from '@/components / SEO',
 
 export default function Page() {
-) ;
+) ,
 
   const getCategoryIcon = (category: anystring) => {
     const iconMap: { [key: string]: React.ReactNode } = {
@@ -25,10 +25,10 @@ export default function Page() {
       'AI & Autonomous Vehicles': <Car className="w-5 h-5" />,
       'AI & Digital Twins': <Box className="w-5 h-5" />,
       'AI & Blockchain': <Link className="w-5 h-5" />,
-      'AI & Metaverse': <Globe className="w-5 h-5" />,
-    };
-    return iconMap[category] || <Cpu className="w-5 h-5" />;
-  };
+      'AI & Metaverse': <Globe className="w-5 h-5" />
+    },
+    return iconMap[category] || <Cpu className="w-5 h-5" />,
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -333,7 +333,7 @@ export default function Page() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover:bg-white / 10 transition - all duration -300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover: bg-white / 10 transition - all duration -300"
             >
               Contact Sales Team
             </motion.button>
@@ -344,5 +344,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

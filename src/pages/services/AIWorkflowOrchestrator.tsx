@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Workflow, 
+  Workflow,
   Zap, 
   Brain, 
   BarChart3, 
@@ -18,90 +18,56 @@ import {
   Database,
   Cloud,
   Lock
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIWorkflowOrchestrator: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Intelligent Process Mapping',
-      description: 'AI automatically discovers and maps your business processes using natural language processing and workflow analysis.',
-      price: '$299/month'
-    },
+      icon: Brain,title: 'Intelligent Process Mapping',description: 'AI automatically discovers and maps your business processes using natural language processing and workflow analysis.',price: '$299/month'
+    };
     {
-      icon: Zap,
-      title: 'Smart Automation Triggers',
-      description: 'Automatically trigger workflows based on events, data changes, or time-based conditions with machine learning optimization.',
+      icon: Zap,title: 'Smart Automation Triggers',description: 'Automatically trigger workflows based on events, data changes, or time-based conditions with machine learning optimization.',
       price: '$199/month'
-    },
+    };
     {
-      icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Real-time insights into workflow efficiency, bottlenecks, and optimization opportunities with predictive analytics.',
+      icon: BarChart3,title: 'Performance Analytics',description: 'Real-time insights into workflow efficiency, bottlenecks, and optimization opportunities with predictive analytics.',
       price: '$149/month'
-    },
+    };
     {
-      icon: Shield,
-      title: 'Compliance & Governance',
-      description: 'Built-in compliance frameworks, audit trails, and role-based access control for enterprise security.',
+      icon: Shield,title: 'Compliance & Governance',description: 'Built-in compliance frameworks, audit trails, and role-based access control for enterprise security.',
       price: '$399/month'
     }
   ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small teams getting started with workflow automation',
-      features: [
-        'Up to 10 workflows',
-        'Basic AI process mapping',
-        'Standard integrations',
-        'Email support',
+      name: 'Starter',price: '$99',period: '/month',description: 'Perfect for small teams getting started with workflow automation',features: [
+        'Up to 10 workflowsBasic AI process mapping';
+        'Standard integrationsEmail support',
         'Basic analytics'
       ],
       popular: false
-    },
+    };
     {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses with complex workflow needs',
-      features: [
-        'Up to 50 workflows',
-        'Advanced AI orchestration',
-        'Custom integrations',
-        'Priority support',
-        'Advanced analytics',
-        'Compliance features'
+      name: 'Professional',price: '$299',period: '/month',description: 'Ideal for growing businesses with complex workflow needs',features: [
+        'Up to 50 workflowsAdvanced AI orchestration';
+        'Custom integrationsPriority support',
+        'Advanced analyticsCompliance features'
       ],
       popular: true
-    },
+    };
     {
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large organizations requiring enterprise-grade workflow management',
-      features: [
-        'Unlimited workflows',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Custom compliance frameworks',
-        'Advanced security features'
+      name: 'Enterprise',price: '$799',period: '/month',description: 'For large organizations requiring enterprise-grade workflow management',features: [
+        'Unlimited workflowsCustom AI models';
+        'White-label solution24/7 dedicated support',
+        'Custom compliance frameworksAdvanced security features'
       ],
       popular: false
     }
   ];
-
   const benefits = [
-    'Reduce manual work by up to 80%',
-    'Improve process efficiency by 60%',
-    'Cut operational costs by 40%',
-    'Ensure 99.9% compliance accuracy',
+    'Reduce manual work by up to 80%Improve process efficiency by 60%',
+    'Cut operational costs by 40%Ensure 99.9% compliance accuracy',
     'Scale workflows automatically with demand'
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -365,6 +331,6 @@ const AIWorkflowOrchestrator: React.FC = () => {
       </div>
     </div>
   );
-};
+},
 
 export default AIWorkflowOrchestrator;

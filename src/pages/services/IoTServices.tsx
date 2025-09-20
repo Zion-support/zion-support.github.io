@@ -1,51 +1,35 @@
-import React from 'react';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lucide-react';
-
+import React from "react";
+import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from "lucide-react";
 const IoTServices = () => {
   const iotServices = [
     {
-      title: "IoT Device Development",
-      description: "Custom IoT device design and development for your specific use case.",
-      price: "From $15,000/project",
+      title: "IoT Device Development",description: "Custom IoT device design and development for your specific use case.",price: "From $15,000/project",
       features: ["Hardware design", "Firmware development", "Sensor integration", "Power management"],
       icon: Cog
-    },
+    };
     {
-      title: "IoT Connectivity Solutions",
-      description: "Secure and reliable connectivity for your IoT ecosystem.",
-      price: "From $8,000/month",
+      title: "IoT Connectivity Solutions",description: "Secure and reliable connectivity for your IoT ecosystem.",price: "From $8,000/month",
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
-    },
+    };
     {
-      title: "IoT Data Management",
-      description: "Comprehensive data collection, processing, and analytics for IoT devices.",
+      title: "IoT Data Management",description: "Comprehensive data collection, processing, and analytics for IoT devices.",
       price: "From $6,500/month",
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
       icon: Database
     }
   ];
-
   const iotTechnologies = [
     {
-      name: "Edge Computing",
-      description: "Local data processing and decision making",
-      icon: Activity,
-      features: ["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"]
+      name: "Edge Computing",description: "Local data processing and decision making",icon: Activity,features: ["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"]
     },
     {
-      name: "Machine Learning",
-      description: "AI-powered IoT intelligence and automation",
-      icon: BarChart3,
-      features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
+      name: "Machine Learning",description: "AI-powered IoT intelligence and automation",icon: BarChart3,features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
     },
     {
-      name: "Security & Privacy",
-      description: "Enterprise-grade IoT security solutions",
-      icon: Shield,
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
+      name: "Security & Privacy",description: "Enterprise-grade IoT security solutions",icon: Shield,features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
     }
-  ];
+  ],
 
   const benefits = [
     "Real-time monitoring and control capabilities",
@@ -54,7 +38,7 @@ const IoTServices = () => {
     "Reduced operational costs and manual work",
     "Scalable and flexible IoT infrastructure",
     "Better decision-making with real-time data"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
@@ -123,14 +107,14 @@ const IoTServices = () => {
       </section>
 
       {/* IoT Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IoT Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge technologies and platforms to build robust,
+              Cutting-edge technologies and platforms to build robust;
               scalable IoT solutions.
             </p>
           </div>
@@ -157,7 +141,7 @@ const IoTServices = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -165,7 +149,7 @@ const IoTServices = () => {
                 Why Choose IoT Solutions?
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                IoT technology provides unprecedented opportunities to monitor,
+                IoT technology provides unprecedented opportunities to monitor;
                 control, and optimize your business operations.
               </p>
               <ul className="space-y-3">
@@ -197,7 +181,7 @@ const IoTServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Connect Your World?
@@ -217,7 +201,6 @@ const IoTServices = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default IoTServices;

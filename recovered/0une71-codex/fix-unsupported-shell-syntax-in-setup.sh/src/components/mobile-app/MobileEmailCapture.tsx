@@ -1,35 +1,35 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 
 export const MobileEmailCapture: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSuccess, setIsSuccess] = useState(false),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email || isSubmitting) return;
+    e.preventDefault(),
+    if (!email || isSubmitting) return,
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // In a real implementation, this would connect to a backend service
       // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSuccess(true);
-      setEmail("");
+      await new Promise(resolve => setTimeout(resolve, 1000)),
+      setIsSuccess(true),
+      setEmail(""),
       
       setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
+        setIsSuccess(false),
+      }, 5000),
     } catch (error) {
-      console.error("Error subscribing:", error);
+      console.error("Error subscribing:", error),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
@@ -66,5 +66,5 @@ export const MobileEmailCapture: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface UltimateFuturisticAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
   // AI Consciousness Evolution Platform
@@ -49,16 +49,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Revolutionary platform for developing AI systems with genuine consciousness, self-awareness, and emotional intelligence capabilities.',
     features: [
-      'Consciousness development framework',
-      'Emotional intelligence training',
-      'Self-awareness algorithms',
-      'Consciousness testing tools',
-      'Ethical AI development',
-      'Consciousness validation',
-      'Emotional response systems',
-      'Self-reflection capabilities',
-      'Consciousness metrics',
-      'Ethics compliance monitoring'
+      'Consciousness development frameworkEmotional intelligence training',
+      'Self-awareness algorithmsConsciousness testing tools',
+      'Ethical AI developmentConsciousness validation',
+      'Emotional response systemsSelf-reflection capabilities',
+      'Consciousness metricsEthics compliance monitoring'
     ],
     popular: true,
     icon: '🧠',
@@ -101,16 +96,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Advanced AI research platform that autonomously conducts scientific research, generates hypotheses, and discovers new insights without human intervention.',
     features: [
-      'Fully autonomous research',
-      'Hypothesis generation',
-      'Data analysis automation',
-      'Literature review automation',
-      'Research paper generation',
-      'Experimental design',
-      'Results interpretation',
-      'Collaboration with other AIs',
-      'Research validation',
-      'Publication assistance'
+      'Fully autonomous researchHypothesis generation',
+      'Data analysis automationLiterature review automation',
+      'Research paper generationExperimental design',
+      'Results interpretationCollaboration with other AIs',
+      'Research validationPublication assistance'
     ],
     popular: true,
     icon: '🔬',
@@ -153,16 +143,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Comprehensive platform for training AI systems to recognize, understand, and appropriately respond to human emotions and social cues.',
     features: [
-      'Emotion recognition training',
-      'Social intelligence development',
-      'Empathy algorithms',
-      'Emotional response generation',
-      'Social cue interpretation',
-      'Emotional validation',
-      'Multi-cultural emotional understanding',
-      'Context-aware responses',
-      'Emotional consistency training',
-      'Ethics compliance monitoring'
+      'Emotion recognition trainingSocial intelligence development',
+      'Empathy algorithmsEmotional response generation',
+      'Social cue interpretationEmotional validation',
+      'Multi-cultural emotional understandingContext-aware responses',
+      'Emotional consistency trainingEthics compliance monitoring'
     ],
     popular: true,
     icon: '❤️',
@@ -205,16 +190,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that completely automates business operations including decision-making, resource allocation, and strategic planning.',
     features: [
-      'Fully autonomous decision-making',
-      'Self-optimizing operations',
-      'Predictive resource allocation',
-      'Automated strategic planning',
-      'Self-healing business processes',
-      'Real-time performance optimization',
-      'Autonomous risk management',
-      'Self-learning business intelligence',
-      'Zero-touch operations',
-      'Performance analytics'
+      'Fully autonomous decision-makingSelf-optimizing operations',
+      'Predictive resource allocationAutomated strategic planning',
+      'Self-healing business processesReal-time performance optimization',
+      'Autonomous risk managementSelf-learning business intelligence',
+      'Zero-touch operationsPerformance analytics'
     ],
     popular: true,
     icon: '🏢',
@@ -257,16 +237,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Advanced AI platform that analyzes health data to predict potential health issues, recommend preventive measures, and optimize treatment plans.',
     features: [
-      'AI-powered health prediction',
-      'Disease risk assessment',
-      'Preventive care recommendations',
-      'Treatment optimization',
-      'Health trend analysis',
-      'Medication interaction warnings',
-      'Lifestyle optimization',
-      'Telemedicine integration',
-      'Real-time monitoring',
-      'Compliance automation'
+      'AI-powered health predictionDisease risk assessment',
+      'Preventive care recommendationsTreatment optimization',
+      'Health trend analysisMedication interaction warnings',
+      'Lifestyle optimizationTelemedicine integration',
+      'Real-time monitoringCompliance automation'
     ],
     popular: true,
     icon: '🏥',
@@ -309,16 +284,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that autonomously generates, tests, optimizes, and deploys production-ready code without human intervention.',
     features: [
-      'Fully autonomous coding',
-      'Automatic testing and QA',
-      'Code optimization algorithms',
-      'Self-deployment capabilities',
-      'Bug detection and fixing',
-      'Performance optimization',
-      'Security vulnerability scanning',
-      'Documentation generation',
-      'Code review automation',
-      'Continuous integration'
+      'Fully autonomous codingAutomatic testing and QA',
+      'Code optimization algorithmsSelf-deployment capabilities',
+      'Bug detection and fixingPerformance optimization',
+      'Security vulnerability scanningDocumentation generation',
+      'Code review automationContinuous integration'
     ],
     popular: true,
     icon: '💻',
@@ -361,16 +331,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Revolutionary marketing platform that autonomously creates, optimizes, and manages marketing campaigns across all channels.',
     features: [
-      'Autonomous campaign creation',
-      'AI-powered content optimization',
-      'Real-time performance tracking',
-      'Automatic A/B testing',
-      'Predictive audience targeting',
-      'Cross-channel optimization',
-      'ROI maximization',
-      'Autonomous budget allocation',
-      'Creative asset generation',
-      'Performance analytics'
+      'Autonomous campaign creationAI-powered content optimization',
+      'Real-time performance trackingAutomatic A/B testing',
+      'Predictive audience targetingCross-channel optimization',
+      'ROI maximizationAutonomous budget allocation',
+      'Creative asset generationPerformance analytics'
     ],
     popular: true,
     icon: '📢',
@@ -413,16 +378,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Revolutionary sales platform that uses AI to autonomously identify prospects, nurture leads, and close deals without human intervention.',
     features: [
-      'Autonomous lead generation',
-      'AI-powered prospect qualification',
-      'Automatic lead nurturing',
-      'Intelligent sales conversations',
-      'Deal closing automation',
-      'Predictive sales analytics',
-      'Autonomous follow-up',
-      'Sales process optimization',
-      'Performance tracking',
-      'ROI analytics'
+      'Autonomous lead generationAI-powered prospect qualification',
+      'Automatic lead nurturingIntelligent sales conversations',
+      'Deal closing automationPredictive sales analytics',
+      'Autonomous follow-upSales process optimization',
+      'Performance trackingROI analytics'
     ],
     popular: true,
     icon: '💰',
@@ -465,16 +425,11 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     period: '/month',
     description: 'Fully autonomous AI customer service platform that handles inquiries, resolves issues, and provides support across all channels without human intervention.',
     features: [
-      '24/7 autonomous support',
-      'Multi-channel integration',
-      'Natural language understanding',
-      'Automatic issue resolution',
-      'Sentiment analysis',
-      'Predictive customer needs',
-      'Seamless human handoff',
-      'Multi-language support',
-      'Knowledge base learning',
-      'Performance analytics'
+      '24/7 autonomous supportMulti-channel integration',
+      'Natural language understandingAutomatic issue resolution',
+      'Sentiment analysisPredictive customer needs',
+      'Seamless human handoffMulti-language support',
+      'Knowledge base learningPerformance analytics'
     ],
     popular: true,
     icon: '💬',
@@ -508,4 +463,4 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     rating: 4.7,
     reviews: 67
   }
-];
+],

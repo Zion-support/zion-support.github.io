@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 const InteractiveFeaturesShowcase: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden">,
-      {/* Animated Background */,}
+      {/* Animated Background */}
       <div className="absolute inset-0">,
         <div,
           className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse",
           style={{,
-            left: mousePosition.x - 200;
-            top: mousePosition.y - 200;
-            transition: 'all 0.1s ease-out',}}
+            left: mousePosition.x - 200,
+            top: mousePosition.y - 200,
+            transition: 'all 0.1s ease-out'}}
         />,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10" />,
       </div>,
       <div className="relative z-10 container mx-auto px-4">,
         <div className="text-center mb-12">,
           <motion.div,
-            initial={{ opacity: 0, y: -20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8 ,}}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse",
           >,
             🚀 INTERACTIVE FEATURES SHOWCASE,
           </motion.div>,
           <motion.h2,
-            initial={{ opacity: 0, y: -20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.2 ,}}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent",
           >,
             Revolutionary Interactive Features,
           </motion.h2>,
           <motion.p,
-            initial={{ opacity: 0, y: -20 ,}}
-            animate={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.8, delay: 0.4 ,}}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl opacity-90 max-w-4xl mx-auto",
           >,
             Experience the future of human-computer interaction with our cutting-edge interactive features,
@@ -58,7 +58,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                 <div className="relative z-10 grid md: grid-cols-2 gap-12 items-center">,
                   <div>,
                     <div className="flex items-center space-x-3 mb-4">,
-                      <span className="text-6xl">{currentFeature.icon,}</span>,
+                      <span className="text-6xl">{currentFeature.icon}</span>,
                       <div className="flex items-center space-x-2">,
                         <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>,
                         <span className="text-sm font-semibold">{currentFeature.demo.status}</span>,
@@ -74,8 +74,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                         >,
                           <div className="w-2 h-2 bg-white rounded-full"></div>,
                           <span className="font-semibold">{metric}</span>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                     <div className="flex gap-4">,
                       <button,
@@ -93,7 +92,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                   <div className="relative">,
                     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">,
                       <h4 className="text-2xl font-bold mb-6 text-center">Live Demo</h4>,
-                      {/* Interactive Demo Area */,}
+                      {/* Interactive Demo Area */}
                       <div className="relative h-64 bg-gradient-to-br from-white/20 to-white/10 rounded-lg overflow-hidden">,
                         <div className="absolute inset-0 flex items-center justify-center">,
                           <div className="text-6xl animate-spin">,
@@ -112,14 +111,13 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                               <div,
                                 key={i}
                                 className="w-4 h-4 bg-white/30 rounded",
-                                  scale: [1, 1.5, 1];
-                                  opacity: [0.3, 1, 0.3],
+                                  scale: [1, 1.5, 1],
+                                  opacity: [0.3, 1, 0.3]
                                 }}
-                                  duration: 2;
-                                  repeat: Infinity;
-                                  delay: i * 0.1,}}
-                              />,
-                            ))}
+                                  duration: 2,
+                                  repeat: Infinity,
+                                  delay: i * 0.1}}
+                              />))}
                           </div>,
                         </div>,
                       </div>,
@@ -142,7 +140,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover: bg-white/30 transition-all duration-300",
           >,
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M15 19l-7-7 7-7" />,
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />,
             </svg>,
           </button>,
           <button,
@@ -150,7 +148,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover: bg-white/30 transition-all duration-300",
           >,
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M9 5l7 7-7 7" />,
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />,
             </svg>,
           </button>,
         </div>,
@@ -159,18 +157,18 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
           {features.map((feature, index) => (,
             <div,
               key={feature.id}
-              initial={{ opacity: 0, y: 50, scale: 0.9 ,}}
-              animate={{ opacity: 1, y: 0, scale: 1 ,}}
-              transition={{ duration: 0.6, delay: index * 0.1 ,}}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: scale-105 transition-all duration-300 cursor-pointer group ${,
-                hoveredCard === feature.id ? 'shadow-2xl shadow-purple-500/20 border-purple-400/50' : '',}`}
+                hoveredCard === feature.id ? 'shadow-2xl shadow-purple-500/20 border-purple-400/50' : ''}`}
               onMouseEnter={() => setHoveredCard(feature.id)}
               onMouseLeave={() => setHoveredCard(null)}
               onClick={() => setActiveFeature(index)}
             >,
               <div className="text-center mb-6">,
                 <div className={`text-6xl mb-4 transition-transform duration-300 ${,
-                  hoveredCard === feature.id ? 'scale-110 rotate-12' : '',
+                  hoveredCard === feature.id ? 'scale-110 rotate-12' : ''
                 }`}>,
                   {feature.icon}
                 </div>,
@@ -187,8 +185,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                 {feature.demo.metrics.slice(0, 2).map((metric, i) => (,
                   <div key={i} className="text-xs bg-white/20 rounded px-2 py-1 text-center">,
                     {metric}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <button,
                 className="w-full bg-white/20 text-white py-2 rounded-lg hover: bg-white/30 transition-all duration-300 font-semibold text-sm",
@@ -196,7 +193,7 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
                 Try Demo,
               </button>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Feature Indicators */}
         <div className="flex justify-center space-x-3 mt-8">,
@@ -205,15 +202,15 @@ const InteractiveFeaturesShowcase: React.FC = () => {,
               key={index}
               onClick={() => setActiveFeature(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${,
-                index === activeFeature ? 'bg-white' : 'bg-white/30',
+                index === activeFeature ? 'bg-white' : 'bg-white/30'
               }`}
             />,
           ))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default InteractiveFeaturesShowcase;
+  ),
+},
+export default InteractiveFeaturesShowcase,
 </div></div></div></div></div></div></div>,
 </p></p>,

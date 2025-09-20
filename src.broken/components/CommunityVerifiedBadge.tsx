@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 
 interface CommunityVerifiedBadgeProps {
-  endorsementCount: number;
-  threshold?: number;
-  className?: string;
+  endorsementCount: number,
+  threshold?: number,
+  className?: string
 }
 
 const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({
@@ -12,7 +12,7 @@ const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({
   className = ''
 }) => {
   if(endorsementCount < threshold) {
-    return null; // Don't render if below threshold
+    return null, // Don't render if below threshold
   }
 
   return (<div
@@ -21,7 +21,7 @@ const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({
     >
       {/* Example: Using an SVG icon (Heroicons check-circle) */}
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="http: //www.w3.org/2000/svg"
         className="h-5 w-5 mr-1.5"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -34,7 +34,7 @@ const CommunityVerifiedBadge: React.FC<CommunityVerifiedBadgeProps> = ({
       </svg>
       Community Verified
     </div>
-  );
-};
+  )
+},
 
-export default CommunityVerifiedBadge;
+export default CommunityVerifiedBadge,

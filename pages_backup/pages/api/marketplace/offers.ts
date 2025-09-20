@@ -1,43 +1,43 @@
 import {,
-import { v4 as uuidv4 } from "uuid";
-import type { NextApiRequest, NextApiResponse } from "next";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4 as uuidv4  } from './uuid';
+import { v4 as uuidv4 } from "uuid",
+import type { NextApiRequest, NextApiResponse } from "next",
+import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth",
+import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store",
+import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
+import type { NextApiRequest, NextApiResponse } from './next',
+import { v4 as uuidv4  } from './uuid',
 import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types',
   assertClient,
   assertTalentOrClientForOffer,
-  getDemoUser,
-} from "../../../utils/marketplace/auth";
+  getDemoUser
+} from "../../../utils/marketplace/auth",
   getOfferById,
   listOffers,
   saveOffer,
   saveProject,
-  assertClient;
-  assertTalentOrClientForOffer;
-  getDemoUser;
-} from "../../../utils/marketplace/auth";
-  getOfferById;
-  listOffers;
-  saveOffer;
-  saveProject;
-} from "../../../utils/marketplace/store";
-  assert_client;
-  assertTalentOrClientForOffer;
+  assertClient,
+  assertTalentOrClientForOffer,
   getDemoUser,
-} from '../../../utils / marketplace / auth';
-  getOfferById;
-  list_offers;
-  save_offer;
-  save_project,
-} from '../../../utils / marketplace / store';
+} from "../../../utils/marketplace/auth",
+  getOfferById,
+  listOffers,
+  saveOffer,
+  saveProject,
+} from "../../../utils/marketplace/store",
+  assert_client,
+  assertTalentOrClientForOffer,
+  getDemoUser
+} from '../../../utils / marketplace / auth',
+  getOfferById,
+  list_offers,
+  save_offer,
+  save_project
+} from '../../../utils / marketplace / store',
 /**,
  * bad - Function description,
  */,
 function bad() {,
-  return res.status (code).json ({ ok: false, error: message ,});
+  return res.status (code).json ({ ok: false, error: message }),
 }
 export default /**,
  * handler - Function description,
@@ -46,38 +46,38 @@ function handler() {,
   try {,
     // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
-      const user = getDemoUser (req);
+      const user = getDemoUser (req),
       // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
-        const offers = list_offers ({ client_id: user.id ,});
-        return res.json ({ ok: true, offers });
+        const offers = list_offers ({ client_id: user.id }),
+        return res.json ({ ok: true, offers }),
       }
       // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
-        const offers = list_offers ({ talent_slug: user.talent_slug ,});
-        return res.json ({ ok: true, offers });
+        const offers = list_offers ({ talent_slug: user.talent_slug }),
+        return res.json ({ ok: true, offers }),
       }
-      return bad(res, "Unknown role", 403);
+      return bad(res, "Unknown role", 403),
     }
 ,
     if (req.method === "POST") {,
       // Create an offer (client sends an offer to confirm),
-      const client = assertClient(req);
+      const client = assertClient(req),
       const {,
         talentSlug,
         startDateIso,
         scopeSummary,
         paymentTerms,
-        agreementUrl,
+        agreementUrl
       } = req.body |{}
       if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {,
-        return bad(res, "Missing required fields");
+        return bad(res, "Missing required fields"),
       }
       const offer: Offer = {,
         id: uuidv4(),
@@ -88,29 +88,28 @@ if ( {) {,
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-        status: "SENT",}
-      saveOffer(offer);
-      return res.status(201).json({ ok: true, offer });
+        status: "SENT"}
+      saveOffer(offer),
+      return res.status(201).json({ ok: true, offer }),
     }
     if (req.method === "PATCH") {,
       // Update offer: accept or request changes,
       const { id, action, changeRequestNote } = req.body |{}
-      if (!id |!action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
+      if (!id |!action) return bad(res, "Missing id or action"),
+      const existing = getOfferById(id),
+      if (!existing) return bad(res, "Offer not found", 404),
       const user = assertTalentOrClientForOffer(,
         req,
         existing,
-        req.headers["x-demo-talent-slug"] as string,
-      );
+        req.headers["x-demo-talent-slug"] as string),
       if (action === "accept") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can accept", 403);
-        existing.status = "CONFIRMED";
+          return bad(res, "Only talent can accept", 403),
+        existing.status = "CONFIRMED",
         // Create a project upon acceptance,
         const project: Project = {,
           id: uuidv4(),
-          title: `Project with ${existing.talentSlug,}`,
+          title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
           talentSlug: existing.talentSlug,
@@ -126,176 +125,176 @@ if ( {) {,
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),}
+                  uploadedAtIso: new Date().toISOString()}
               ],
             : [],
-          notes: [],}
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project });
+          notes: []}
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing, project }),
       }
       if (action === "request_changes") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote |"";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing ,});
+          return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote |"",
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing }),
       }
       if (action === "decline") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
-        return res.json({ ok: true, offers });
+          return bad(res, "Only talent can decline", 403),
+        existing.status = "DECLINED",
+        return res.json({ ok: true, offers }),
       }
       if (user.role === "talent") {,
-    if (req.method === "GET") {;
-      const user = getDemoUser(req);
+    if (req.method === "GET") {,
+      const user = getDemoUser(req),
       if (user.role === "client") {,
-        const offers = listOffers({ clientId: user.id ,});
-        return res.json({ ok: true, offers });
+        const offers = listOffers({ clientId: user.id }),
+        return res.json({ ok: true, offers }),
       }
       if (user.role === "talent") {,
-        const offers = listOffers({ talentSlug: user.talentSlug ,});
-        return res.json({ ok: true, offers });
+        const offers = listOffers({ talentSlug: user.talentSlug }),
+        return res.json({ ok: true, offers }),
       }
-      return bad(res, "Unknown role", 403);
+      return bad(res, "Unknown role", 403),
     }
 ,
     if (req && req.method === "POST") {,
       // Create an offer (client sends an offer to confirm),
-      const client = assertClient(req);
+      const client = assertClient(req),
       const {,
-        talentSlug;
-        startDateIso;
-        scopeSummary;
-        paymentTerms;
-        agreementUrl,
-      } = req && req.body || {};
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms,
+        agreementUrl
+      } = req && req.body || {},
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {,
-        return bad(res, "Missing required fields");
+        return bad(res, "Missing required fields"),
       }
 ,
     if (req && req.method === "PATCH") {,
       // Update offer: accept or request changes,
-      const { id, action, changeRequestNote } = req && req.body || {};
-      if (!id || !action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
-      const user = assertTalentOrClientForOffer(req;
-        existing;
-        req && req.headers["x-demo-talent-slug"] as string);
+      const { id, action, changeRequestNote } = req && req.body || {},
+      if (!id || !action) return bad(res, "Missing id or action"),
+      const existing = getOfferById(id),
+      if (!existing) return bad(res, "Offer not found", 404),
+      const user = assertTalentOrClientForOffer(req,
+        existing,
+        req && req.headers["x-demo-talent-slug"] as string),
       if (action === "accept") {,
-          id: uuidv4();
-          title: `Project with ${existing && existing.talentSlug,}`;
-          summary: existing && existing.scopeSummary;
-          clientId: existing && existing.clientId;
-          talentSlug: existing && existing.talentSlug;
-          startDateIso: existing && existing.startDateIso;
-          status: "ACTIVE";
+          id: uuidv4(),
+          title: `Project with ${existing && existing.talentSlug}`,
+          summary: existing && existing.scopeSummary,
+          clientId: existing && existing.clientId,
+          talentSlug: existing && existing.talentSlug,
+          startDateIso: existing && existing.startDateIso,
+          status: "ACTIVE",
           documents: existing.agreementUrl,
             ? [,
                 {,
-                  id: uuidv4();
-                  name: "Agreement";
-                  url: existing && existing.agreementUrl;
-                  uploadedAtIso: new Date().toISOString(),}
+                  id: uuidv4(),
+                  name: "Agreement",
+                  url: existing && existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()}
               ],
             : [],
-          notes: [],}
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
+          notes: []}
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 403),
       }
-      save_offer (offer);
-      return res.status (201).json ({ ok: true, offer });
+      save_offer (offer),
+      return res.status (201).json ({ ok: true, offer }),
     }
     // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
-      // Update offer: accept or request changes;
+      // Update offer: accept or request changes,
       const { id, action, changeRequestNote } = req.body || {}
       if (return bad (res, "Missing id or action")) {,
-  $2,
+  $2
 }
-      const existing = getOfferById (id);
+      const existing = getOfferById (id),
       if (return bad (res, "Offer not found", 404)) {,
-  $2,
+  $2
 }
-      const user = assertTalentOrClientForOffer (req;
-        existing;
-        req.headers["x - demo - talent - slug"] as string);
+      const user = assertTalentOrClientForOffer (req,
+        existing,
+        req.headers["x - demo - talent - slug"] as string),
       // Check condition,
 if ( {) {,
-  $2,
+  $2
 }
         if (,
           return bad (res, "Only talent can accept", 403)) {,
-  $2,
+  $2
 }
 ,
-        existing.status = "CONFIRMED";
-        // Create a project upon acceptance;
+        existing.status = "CONFIRMED",
+        // Create a project upon acceptance,
         const project: Project = {}
 ,
-          id: uuidv4 ();
-          title: `Project with ${existing.talent_slug,}`;
-          summary: existing.scope_summary;
-          client_id: existing.client_id;
-          talent_slug: existing.talent_slug;
-          startDateIso: existing.startDateIso;
-          status: "ACTIVE";
-          timeline: ;
-            existing.payment_terms.type === "milestone";
-              ? existing.payment_terms.milestones || [];
-              : [];
-          documents: existing.agreement_url;
-            ? [;
+          id: uuidv4 (),
+          title: `Project with ${existing.talent_slug}`,
+          summary: existing.scope_summary,
+          client_id: existing.client_id,
+          talent_slug: existing.talent_slug,
+          startDateIso: existing.startDateIso,
+          status: "ACTIVE",
+          timeline: ,
+            existing.payment_terms.type === "milestone",
+              ? existing.payment_terms.milestones || [],
+              : [],
+          documents: existing.agreement_url,
+            ? [,
                 {,
-                  id: uuidv4 ();
-                  name: "Agreement";
-                  url: existing.agreement_url;
-                  uploadedAtIso: new Date ().toISOString (),}
-              ];
-            : [];
-          notes: [],}
-        save_project (project);
-        existing.project_id = project.id;
-        save_offer (existing);
-        return res.json ({ ok: true, offer: existing, project });
+                  id: uuidv4 (),
+                  name: "Agreement",
+                  url: existing.agreement_url,
+                  uploadedAtIso: new Date ().toISOString ()}
+              ],
+            : [],
+          notes: []}
+        save_project (project),
+        existing.project_id = project.id,
+        save_offer (existing),
+        return res.json ({ ok: true, offer: existing, project }),
       }
       // Check condition,
 if ( {) {,
   $2,
 function bad(res: NextApiResponse, message: string, code = 400) {,
-  return res.status(code).json({ ok: false, error: message ,}),
+  return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {,
   try {,
     if (req.method === "GET") {,
-      const user = getDemoUser(req);
+      const user = getDemoUser(req),
       if (user.role === "client") {,
-        const offers = listOffers({ clientId: user.id ,});
-        return res.json({ ok: true, offers });
+        const offers = listOffers({ clientId: user.id }),
+        return res.json({ ok: true, offers }),
       }
       if (user.role === "talent") {,
-        const offers = listOffers({ talentSlug: user.talentSlug ,});
-        return res.json({ ok: true, offers });
+        const offers = listOffers({ talentSlug: user.talentSlug }),
+        return res.json({ ok: true, offers }),
       }
-      return bad(res, "Unknown role", 403);
+      return bad(res, "Unknown role", 403),
     }
     if (req.method === "POST") {,
       // Create an offer (client sends an offer to confirm),
-      const client = assertClient(req);
+      const client = assertClient(req),
       const {,
         talentSlug,
         startDateIso,
         scopeSummary,
         paymentTerms,
-        agreementUrl,
+        agreementUrl
       } = req.body |{}
       if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {,
-        return bad(res, "Missing required fields");
+        return bad(res, "Missing required fields"),
       }
       const offer: Offer = {,
         id: uuidv4(),
@@ -306,29 +305,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {,
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-        status: "SENT",}
-      saveOffer(offer);
-      return res.status(201).json({ ok: true, offer });
+        status: "SENT"}
+      saveOffer(offer),
+      return res.status(201).json({ ok: true, offer }),
     }
     if (req.method === "PATCH") {,
       // Update offer: accept or request changes,
       const { id, action, changeRequestNote } = req.body |{}
-      if (!id |!action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
+      if (!id |!action) return bad(res, "Missing id or action"),
+      const existing = getOfferById(id),
+      if (!existing) return bad(res, "Offer not found", 404),
       const user = assertTalentOrClientForOffer(,
         req,
         existing,
-        req.headers["x-demo-talent-slug"] as string,
-      );
+        req.headers["x-demo-talent-slug"] as string),
       if (action === "accept") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can accept", 403);
-        existing.status = "CONFIRMED";
+          return bad(res, "Only talent can accept", 403),
+        existing.status = "CONFIRMED",
         // Create a project upon acceptance,
         const project: Project = {,
           id: uuidv4(),
-          title: `Project with ${existing.talentSlug,}`,
+          title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
           talentSlug: existing.talentSlug,
@@ -344,186 +342,186 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {,
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),}
+                  uploadedAtIso: new Date().toISOString()}
               ],
             : [],
-          notes: [],}
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project });
+          notes: []}
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing, project }),
       }
       if (action === "request_changes") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote |"";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing ,});
+          return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote |"",
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing }),
       }
       if (action === "decline") {,
         if (user.role !== "talent"),
-          return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
+          return bad(res, "Only talent can decline", 403),
+        existing.status = "DECLINED",
       const offer: Offer = {,
-        id: uuidv4();
-        createdAtIso: new Date().toISOString();
-        clientId: client.id;
-        talentSlug;
-        startDateIso;
-        scopeSummary;
-        paymentTerms: paymentTerms as PaymentTerms;
-        agreementUrl,
-      };
-      saveOffer(offer);
-      return res.status(201).json({ ok: true, offer });
+        id: uuidv4(),
+        createdAtIso: new Date().toISOString(),
+        clientId: client.id,
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms: paymentTerms as PaymentTerms,
+        agreementUrl
+      },
+      saveOffer(offer),
+      return res.status(201).json({ ok: true, offer }),
     }
 ,
     if (req.method === "PATCH") {,
       // Update offer: accept or request changes,
-      const { id, action, changeRequestNote } = req.body || {};
-      if (!id || !action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
-      const user = assertTalentOrClientForOffer(req;
-        existing;
-        req && req.headers["x-demo-talent-slug"] as string);
+      const { id, action, changeRequestNote } = req.body || {},
+      if (!id || !action) return bad(res, "Missing id or action"),
+      const existing = getOfferById(id),
+      if (!existing) return bad(res, "Offer not found", 404),
+      const user = assertTalentOrClientForOffer(req,
+        existing,
+        req && req.headers["x-demo-talent-slug"] as string),
       if (action === "accept") {,
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-        existing.status = "CONFIRMED";
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 403),
+        existing.status = "CONFIRMED",
         // Create a project upon acceptance,
         const project: Project = {,
-          id: uuidv4();
-          title: `Project with ${existing && existing.talentSlug,}`;
-          summary: existing && existing.scopeSummary;
-          clientId: existing && existing.clientId;
-          talentSlug: existing && existing.talentSlug;
-          startDateIso: existing && existing.startDateIso;
-          status: "ACTIVE";
-          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [];
+          id: uuidv4(),
+          title: `Project with ${existing && existing.talentSlug}`,
+          summary: existing && existing.scopeSummary,
+          clientId: existing && existing.clientId,
+          talentSlug: existing && existing.talentSlug,
+          startDateIso: existing && existing.startDateIso,
+          status: "ACTIVE",
+          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
           documents: existing.agreementUrl,
             ? [,
                 {,
-                  id: uuidv4();
-                  name: "Agreement";
-                  url: existing.agreementUrl;
-                  uploadedAtIso: new Date().toISOString(),}],
-            : [],
-        };
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project }),
+                  id: uuidv4(),
+                  name: "Agreement",
+                  url: existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()}],
+            : []
+        },
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing, project })
       }
 ,
       if (action === "request_changes") {,
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote || "";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing ,}),
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote || "",
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing })
       }
 ,
-      return bad(res, "Unknown action");
+      return bad(res, "Unknown action"),
     }
-    return bad(res, "Method not allowed", 405);
+    return bad(res, "Method not allowed", 405),
   } catch (e: any) {,
-    const status = e?.statusCode |500;
+    const status = e?.statusCode |500,
     return res,
       .status(status),
-      .json({ ok: false, error: e?.message |"Server error" ,});
+      .json({ ok: false, error: e?.message |"Server error" }),
       if (action === "decline") {,
-      .json({ ok: false, error: e?.message || "Server error" ,});
-          notes: [],};
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing, project }),
+      .json({ ok: false, error: e?.message || "Server error" }),
+          notes: []},
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing, project })
         } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
     } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
         if (,
           return bad (res, "Only talent can decline", 403)) {,
-  $2,
+  $2
 }
       if (action === "request_changes") {,
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote || "";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing ,}),
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote || "",
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing })
         } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
     } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
-      if (action === "decline") {;
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
-        save_offer (existing);
-        return res.json ({ ok: true, offer: existing ,});
+,
+      if (action === "decline") {,
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403),
+        existing.status = "DECLINED",
+        save_offer (existing),
+        return res.json ({ ok: true, offer: existing }),
       }
-      return bad (res, "Unknown action");
+      return bad (res, "Unknown action"),
     }
-    return bad (res, "Method not allowed", 405);
+    return bad (res, "Method not allowed", 405),
   } catch (e: any) {,
-    const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" ,}),
+    const status = e?.statusCode || 500,
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
-,
+
 }
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
 ,
-      );
+      ),
       if (action === "accept") {,
-          id: uuidv4();
-          title: `Project with ${existing && existing.talentSlug,}`;
-          summary: existing && existing.scopeSummary;
-          clientId: existing && existing.clientId;
-          talentSlug: existing && existing.talentSlug;
-          startDateIso: existing && existing.startDateIso;
-          status: "ACTIVE";
+          id: uuidv4(),
+          title: `Project with ${existing && existing.talentSlug}`,
+          summary: existing && existing.scopeSummary,
+          clientId: existing && existing.clientId,
+          talentSlug: existing && existing.talentSlug,
+          startDateIso: existing && existing.startDateIso,
+          status: "ACTIVE",
           documents: existing.agreementUrl,
             ? [,
                 {,
-                  id: uuidv4();
-                  name: "Agreement";
-                  url: existing && existing.agreementUrl;
-                  uploadedAtIso: new Date().toISOString(),}
+                  id: uuidv4(),
+                  name: "Agreement",
+                  url: existing && existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()}
               ],
             : [],
-          notes: [],}
-,
+          notes: []}
+
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
     } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
 ,

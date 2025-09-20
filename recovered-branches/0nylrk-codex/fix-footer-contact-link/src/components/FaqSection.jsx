@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function FaqSection() {,
     return (<div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">,
       <div className="container mx-auto px-4 sm: px-6 lg:px-8">,
@@ -16,7 +16,7 @@ export function FaqSection() {,
               What services does Zion Tech Group offer?,
             </h3>,
             <p className="text-zion-slate-light">,
-              We offer comprehensive AI solutions, cybersecurity services, cloud infrastructure;
+              We offer comprehensive AI solutions, cybersecurity services, cloud infrastructure,
               data analytics, blockchain development, and innovative technology consulting.,
             </p>,
           </div>,
@@ -34,12 +34,12 @@ export function FaqSection() {,
               What is your typical project timeline?,
             </h3>,
             <p className="text-zion-slate-light">,
-              Project timelines vary based on complexity. Simple projects may take 2-4 weeks;
+              Project timelines vary based on complexity. Simple projects may take 2-4 weeks,
               while complex enterprise solutions can take 3-6 months or more.,
             </p>,
           </div>,
         </div>,
       </div>,
-    </div>);
+    </div>),
 }
 ,

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Star, 
+  Star,
   CheckCircle, 
   ArrowRight, 
   Zap, 
@@ -43,51 +43,48 @@ import {
   Sparkles,
   Crown,
   Gem
-} from 'lucide-react';
-import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
-import { revolutionaryAIServices2029 } from '../../data/revolutionary-ai-services-2029';
-import { revolutionaryITServices2029 } from '../../data/revolutionary-it-services-2029';
-
+} from "lucide-react";
+import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029";
+import { revolutionaryAIServices2029 } from "../../data/revolutionary-ai-services-2029";
+import { revolutionaryITServices2029 } from "../../data/revolutionary-it-services-2029";
 export default function ComprehensivePricing2029() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'price' | 'rating' | 'popularity'>('popularity'),
 
-  const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting', 'Edge Computing', 'DevOps & Automation', 'Storage & Security', 'Network Optimization', 'Disaster Recovery', 'Quantum Security'];
+  const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & ConsultingEdge Computing', 'DevOps & AutomationStorage & Security', 'Network OptimizationDisaster Recovery', 'Quantum Security'],
 
   // Combine all services
   const allServices = [
     ...innovativeMicroSAASServices2029,
     ...revolutionaryAIServices2029,
     ...revolutionaryITServices2029
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
       case 'rating':
         return b.rating - a.rating;
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+      default: return 0
     }
   });
-
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: any } = {
-      'AI & Analytics': Brain,
+      'AI & Analytics': Brain;
       'Cybersecurity': Shield,
       'AI & Operations': Workflow,
       'Blockchain & Security': Lock,
@@ -103,9 +100,9 @@ export default function ComprehensivePricing2029() {
       'Network Optimization': BarChart3,
       'Disaster Recovery': Shield,
       'Quantum Security': Lock
-    };
-    return iconMap[category] || Cpu;
-  };
+    },
+    return iconMap[category] || Cpu,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -124,16 +121,14 @@ export default function ComprehensivePricing2029() {
               animate={{
                 x: [0, 100, 0],
                 y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                delay: Math.random() * 5,
+                duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -442,7 +437,7 @@ export default function ComprehensivePricing2029() {
             <p className="text-gray-300 mb-8 text-lg">
               Get in touch with our team to discuss how these revolutionary solutions can drive your business forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
@@ -465,5 +460,5 @@ export default function ComprehensivePricing2029() {
         </div>
       </div>
     </div>
-  );
+  )
 }

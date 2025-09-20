@@ -1,70 +1,70 @@
 <<<<<<< HEAD
 export default function Page() {
-, refreshInterval);
-    return () => clearInterval(interval);
-  }, [showRealTime, refreshInterval]);
+, refreshInterval),
+    return () => clearInterval(interval),
+  }, [showRealTime, refreshInterval]),
   // Update analytics summary
   const updateAnalyticsSummary = () => {
-    const summary = getAnalyticsSummary();
+    const summary = getAnalyticsSummary(),
     if(summary) {
 
-      setAnalyticsSummary(summary);
+      setAnalyticsSummary(summary),
     }
-  };
+  },
   // Update summary when events change
   useEffect(() => {
-    updateAnalyticsSummary();
-  }, [events, currentSession]);
+    updateAnalyticsSummary(),
+  }, [events, currentSession]),
   // Track dashboard interactions
   const handleDashboardInteraction = (action, metadata) => {
 
-    trackEvent('dashboard', action,dashboard_interaction', null, metadata);
-  };
+    trackEvent('dashboard', action,dashboard_interaction', null, metadata),
+  },
   // Track conversion goal
   const handleTrackConversion = () => {
 
     trackConversion('dashboard_engagement', 1, {
 
-      timeRange: selectedTimeRange});
-  };
+      timeRange: selectedTimeRange}),
+  },
   // Get events by category for chart
   const getEventsByCategory = () => {
-    if(!analyticsSummary?.eventsByCategory) return [];
+    if(!analyticsSummary?.eventsByCategory) return [],
     return Object.entries(analyticsSummary.eventsByCategory).map()
       ([category, count]) => ({
 
         category,
         count: count})
-    );
-  };
+    ),
+  },
   // Get performance score
   const getPerformanceScore = () => {
-    if(!performanceMetrics) return 0;
-    const score = 100;
+    if(!performanceMetrics) return 0,
+    const score = 100,
     // Deduct points for poor performance
-    if(performanceMetrics.pageLoadTime > 3000) score -= 20;
-    else if(performanceMetrics.pageLoadTime > 1000) score -= 10;
-    if(performanceMetrics.firstContentfulPaint > 2000) score -= 15;
-    else if(performanceMetrics.firstContentfulPaint > 1000) score -= 5;
-    if(performanceMetrics.cumulativeLayoutShift > 0.1) score -= 25;
-    else if(performanceMetrics.cumulativeLayoutShift > 0.05) score -= 10;
-    return Math.max(0, score);
-  };
+    if(performanceMetrics.pageLoadTime > 3000) score -= 20,
+    else if(performanceMetrics.pageLoadTime > 1000) score -= 10,
+    if(performanceMetrics.firstContentfulPaint > 2000) score -= 15,
+    else if(performanceMetrics.firstContentfulPaint > 1000) score -= 5,
+    if(performanceMetrics.cumulativeLayoutShift > 0.1) score -= 25,
+    else if(performanceMetrics.cumulativeLayoutShift > 0.05) score -= 10,
+    return Math.max(0, score),
+  },
   // Format duration
   const formatDuration = seconds => {
 
-    if(seconds < 60) return `${seconds}s`;
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;`
-    return `${minutes}m ${remainingSeconds}s`;
-  };
+    if(seconds < 60) return `${seconds}s`,
+    const minutes = Math.floor(seconds / 60),
+    const remainingSeconds = seconds % 60,`
+    return `${minutes}m ${remainingSeconds}s`,
+  },
   // Format number with K/M suffix
   const formatNumber = num => {
 `
-    if(num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;`
-    if(num >= 1000) return `${(num / 1000).toFixed(1)}K`;
-    return num.toString();
-  };
+    if(num >= 1000000) return `${(num / 1000000).toFixed(1)}M`,`
+    if(num >= 1000) return `${(num / 1000).toFixed(1)}K`,
+    return num.toString(),
+  },
   return ()
     <div`
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}
@@ -92,10 +92,10 @@ export default function Page() {
               value={selectedTimeRange}
               onChange={e => {
 
-                setSelectedTimeRange(e.target.value);
+                setSelectedTimeRange(e.target.value),
                 handleDashboardInteraction('time_range_changed', {
 
-                  timeRange: e.target.value});
+                  timeRange: e.target.value}),
               }}"
               className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50"
             >"
@@ -291,7 +291,7 @@ export default function Page() {
                   className="flex items-center justify-between"
                 >"
                   <span className="text-green-700 dark:text-green-300 text-sm capitalize">
-                    {item.category.replace('_',)}
+                    {item.category.replace('_')}
                   </span>"
                   <div className="flex items-center gap-2">"
                     <div className="w-16 bg-green-200 dark:bg-green-700 rounded-full h-2">
@@ -358,15 +358,15 @@ export default function Page() {
       )}
 
       {/* Controls */}"
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">"
+      <div className="p-4 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-800">"
         <div className="flex gap-2">
           <button
             onClick={() => {
 
-              handleDashboardInteraction('refresh_clicked');
-              updateAnalyticsSummary();
+              handleDashboardInteraction('refresh_clicked'),
+              updateAnalyticsSummary()
             }}"
-            className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
+            className="flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
           >"
             <RefreshCw className="w-4 h-4" />
             Refresh Data
@@ -374,10 +374,10 @@ export default function Page() {
 
           <button
             onClick={() => {
-              handleTrackConversion();
-              handleDashboardInteraction('conversion_tracked');
+              handleTrackConversion(),
+              handleDashboardInteraction('conversion_tracked')
             }}"
-            className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
+            className="px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2"
           >"
             <Target className="w-4 h-4" />
             Track Goal
@@ -385,9 +385,9 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 '"`
 =======
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

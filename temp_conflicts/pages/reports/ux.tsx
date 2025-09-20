@@ -1,12 +1,12 @@
-import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import Head from 'next/head',
+import { useEffect, useState } from 'react',
 
 export default function UxReport() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(null),
   useEffect(() => {
-    fetch('/reports/ux/latest.json').then(r => r.json()).then(setData).catch(()=>{});
-  }, []);
-  const items = data?.results || [];
+    fetch('/reports/ux/latest.json').then(r => r.json()).then(setData).catch(()=>{}),
+  }, []),
+  const items = data?.results || [],
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -42,5 +42,5 @@ export default function UxReport() {
         </div>
       </main>
     </div>
-  );
+  ),
 }

@@ -1,24 +1,24 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story';
-  description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $500B annual savings and 25,000% ROI.';
-  keywords: ['Fortune 500AI automation', 'case studyROI success', 'manufacturing automation25,000% ROI', 'business transformation'];
+  title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story',
+  description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $500B annual savings and 25,000% ROI.',
+  keywords: ['Fortune 500AI automationcase studyROI success', 'manufacturing automation25,000% ROIbusiness transformation'],
   openGraph: {,
-    title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story';
-    description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.';
-    type: 'article';
-    publishedTime: '2025-01-17T00:00:00.000Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Fortune 500AI automation', 'case studyROI', 'manufacturing'],
-  };
+    title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story',
+    description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',
+    type: 'article',
+    publishedTime: '2025-01-17T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Fortune 500AI automationcase studyROI', 'manufacturing']
+  },
   twitter: {,
-    card: 'summary_large_image';
-    title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story';
-    description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',}
-};
+    card: 'summary_large_image',
+    title: 'Fortune 500 Ultimate Automation Success: $500B Annual Savings - 25,000% ROI Success Story',
+    description: 'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.'}
+},
 export default function Fortune500UltimateAutomationSuccessPage() {,
   return (,
     <div>,
@@ -74,7 +74,7 @@ export default function Fortune500UltimateAutomationSuccessPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -333,4 +333,4 @@ export default function Fortune500UltimateAutomationSuccessPage() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

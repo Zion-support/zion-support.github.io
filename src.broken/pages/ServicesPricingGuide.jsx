@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState } from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
-;
+,
   const getPriceTierColor = tier => {
     switch(tier) {
       case 'Starter':
-        return 'bg-green - 500';
+        return 'bg-green - 500',
       case 'Professional':
-        return 'bg-blue - 500';
+        return 'bg-blue - 500',
       case 'Enterprise':
-        return 'bg-purple - 500';
-      default:
-        return 'bg-gray - 500';
+        return 'bg-purple - 500',
+      default: return 'bg-gray - 500'
     }
-  };
+  },
   const getServiceIcon = category => {
     switch(category) {
       case 'AI Development':
-        return < TrendingUp className="w-5 h-5 text-blue -500" />;
+        return < TrendingUp className="w-5 h-5 text-blue -500" />,
       case 'Cloud Services':
-        return < Globe className="w-5 h-5 text-green -500" />;
+        return < Globe className="w-5 h-5 text-green -500" />,
       case 'Cybersecurity':
-        return < Shield className="w-5 h-5 text-red -500" />;
+        return < Shield className="w-5 h-5 text-red -500" />,
       case 'Data & Analytics':
-        return < TrendingUp className="w-5 h-5 text-purple -500" />;
+        return < TrendingUp className="w-5 h-5 text-purple -500" />,
       case 'Digital Transformation':
-        return < Zap className="w-5 h-5 text-yellow-500" />;
+        return < Zap className="w-5 h-5 text-yellow-500" />,
       case 'IoT & Edge Computing':
-        return < Globe className="w-5 h-5 text-indigo -500" />;
+        return < Globe className="w-5 h-5 text-indigo -500" />,
       case 'Blockchain & Web3':
-        return < TrendingUp className="w-5 h-5 text-orange -500" />;
+        return < TrendingUp className="w-5 h-5 text-orange -500" />,
       case 'AR / VR & Metaverse':
-        return < Globe className="w-5 h-5 text-pink -500" />;
-      default:
-        return < TrendingUp className="w-5 h-5 text-gray -500" />;
+        return < Globe className="w-5 h-5 text-pink -500" />,
+      default: return < TrendingUp className="w-5 h-5 text-gray -500" />
     }
-  };
+  },
   return (<div className="min - h-screen bg-gradient - to - br from - zion - blue - dark via - zion - blue to - zion - blue -light">
       <SEO
         title="Services Pricing Guide - Zion Tech Group"
@@ -439,5 +437,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) ,
 }

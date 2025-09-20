@@ -1,33 +1,33 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Sparkles,
   ArrowRight,
   Star,
   Users,
-  Zap;
-  Brain;
-  Code;
-  BarChart3;
-  MessageSquare;
-  Image;
-  Video;
-  CheckCircle;
-  TrendingUp;
-  Shield,
-} from 'lucide-react';
+  Zap,
+  Brain,
+  Code,
+  BarChart3,
+  MessageSquare,
+  Image,
+  Video,
+  CheckCircle,
+  TrendingUp,
+  Shield
+} from 'lucide-react',
 const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16",
     >,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%253D%2522%25239C92AC%2522%20fill-opacity%3D%220.05%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%253D%25222%2522%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-20"></div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative z-10">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="space-y-8">,
             <div,
             >,
@@ -46,19 +46,17 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
                 See how AI can transform your workflow in real-time.,
               </p>,
             </div>,
-            {/* Features List */,}
+            {/* Features List */}
             <div,
               className="space-y-4",
             >,
               {[,
-                'Live interactive demonstrations24+ AI tools across 6 categories';
-                'Real-time performance metricsInstant trial access',
+                'Live interactive demonstrations24+ AI tools across 6 categoriesReal-time performance metricsInstant trial access'
               ].map((featureindex) => (,
                 <div key={index} className="flex items-center space-x-3">,
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                   <span className="text-gray-300">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -73,7 +71,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
                 View All Tools,
               </button>,
             </div>,
-            {/* Stats */,}
+            {/* Stats */}
             <div,
               className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10",
             >,
@@ -109,17 +107,17 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
                 {tools.map((toolindex) => (,
                   <div,
                     key={tool.name}
-                      opacity: currentTool === index ? 1 : 0.5;
-                      scale: currentTool === index ? 1 : 0.95,}}
+                      opacity: currentTool === index ? 1 : 0.5,
+                      scale: currentTool === index ? 1 : 0.95}}
                     className={`p-4 rounded-lg border transition-all duration-300 ${,
                       currentTool === index,
                         ? 'bg-gradient-to-r ' + tool.color + ' border-white/20',
-                        : 'bg-white/5 border-white/10',
+                        : 'bg-white/5 border-white/10'
                     }`}
                   >,
                     <div className="flex items-center space-x-3">,
                       <div className={`p-2 rounded-lg ${,
-                        currentTool === index ? 'bg-white/20' : 'bg-white/10',
+                        currentTool === index ? 'bg-white/20' : 'bg-white/10'
                       }`}>,
                         {tool.icon}
                       </div>,
@@ -133,8 +131,7 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
                         <div className="flex items-center space-x-2">,
                           <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>,
                           <Play className="w-4 h-4 text-white" />,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                   </div>,
                 ))}
@@ -154,22 +151,22 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
             </div>,
             {/* Floating Elements */}
             <div,
-                y: [0-10];
-                rotate: [050],}}
-                duration: 3;
-                repeat: Infinity;
-                ease: "easeInOut",}}
+                y: [0-10],
+                rotate: [050]}}
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut"}}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg",
             >,
               <Zap className="w-8 h-8 text-white" />,
             </div>,
             <div,
-                y: [010];
-                rotate: [0-50],}}
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut";
-                delay: 1,}}
+                y: [010],
+                rotate: [0-50]}}
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1}}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg",
             >,
               <Star className="w-6 h-6 text-white" />,
@@ -180,6 +177,6 @@ const AIToolsInteractiveDemo2025PromotionBanner: React.FC = () => {,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>,
     </div>,
-  );
-};
-export default AIToolsInteractiveDemo2025PromotionBanner;
+  ),
+},
+export default AIToolsInteractiveDemo2025PromotionBanner,

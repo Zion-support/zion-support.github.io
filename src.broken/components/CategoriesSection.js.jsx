@@ -1,7 +1,7 @@
-import { GradientHeading } from './GradientHeading';"
-import { Link  } from 'react-router-dom';"
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react';"
-import { motion  } from 'framer-motion';
+import { GradientHeading } from './GradientHeading',"
+import { Link  } from 'react-router-dom',"
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket  } from 'lucide-react',"
+import { motion  } from 'framer-motion',
 ,
     {
 "
@@ -11,7 +11,7 @@ import { motion  } from 'framer-motion';
         link: "/talent","
         color: "from-zion-cyan to-zion-blue","
         gradient: "from-zion-cyan/20 to-zion-blue/20","
-        features["AI Experts", "Global Network", "Verified Profiles"],;"
+        features["AI Experts", "Global Network", "Verified Profiles"],"
         stats: "10K+ Experts"
     },
     {
@@ -22,7 +22,7 @@ import { motion  } from 'framer-motion';
         link: "/equipment","
         color: "from-zion-cyan-light to-zion-cyan","
         gradient: "from-zion-cyan-light/20 to-zion-cyan/20","
-        features["High-Performance", "Flexible Rental", "24/7 Monitoring"],;"
+        features["High-Performance", "Flexible Rental", "24/7 Monitoring"],"
         stats: "1000+ Devices"
     },
     {
@@ -33,10 +33,10 @@ import { motion  } from 'framer-motion';
         link: "/category/innovation","
         color: "from-zion-purple-light to-zion-purple","
         gradient: "from-zion-purple-light/20 to-zion-purple/20","
-        features["Latest Tech", "AI Solutions", "Future-Ready"],;"
+        features["Latest Tech", "AI Solutions", "Future-Ready"],"
         stats: "100+ Innovations"
-    },
-];
+    }
+],
 const specialServices = [{
 "
         title: "Enhanced AI & IT Services","
@@ -70,7 +70,7 @@ const specialServices = [{
         icon: <Zap className="w-5 h-5"/>,"
         description: "Scalable cloud infrastructure"
     }
-];
+],
 export function CategoriesSection({ showTitle = true }) {
 
     const containerVariants = {
@@ -85,7 +85,7 @@ export function CategoriesSection({ showTitle = true }) {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -102,7 +102,7 @@ export function CategoriesSection({ showTitle = true }) {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.95,
@@ -119,7 +119,7 @@ export function CategoriesSection({ showTitle = true }) {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

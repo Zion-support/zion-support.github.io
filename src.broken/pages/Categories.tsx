@@ -1,20 +1,20 @@
-import React from 'react';
-import { useMarketplaceCategories } from '@/hooks/useMarketplace';
-import { getMarketplaceErrorMessage } from '@/services/marketplace'; // Ensure this is imported
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SkeletonCard } from '@/components/ui';
-import ErrorBoundary from "@/components/GlobalErrorBoundary";
+import React from 'react',
+import { useMarketplaceCategories } from '@/hooks/useMarketplace',
+import { getMarketplaceErrorMessage } from '@/services/marketplace', // Ensure this is imported
+import { CategoryCard } from "@/components/CategoryCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SkeletonCard } from '@/components/ui',
+import ErrorBoundary from "@/components/GlobalErrorBoundary",
 import { Folder } from 'lucide-react'
-import { CATEGORIES } from '@/data/categories';
-import { NextSeo } from '@/components/NextSeo';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { CATEGORIES } from '@/data/categories',
+import { NextSeo } from '@/components/NextSeo',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 // CategoryType from useMarketplace hook should be compatible or updated in the hook
 // For now, assuming the structure is similar: { id, name, slug, icon }
 
 export default function CategoriesPage() {
-  const { data: categories, loading, error, retry, refresh } = useMarketplaceCategories();
+  const { data: categories, loading, error, retry, refresh } = useMarketplaceCategories(),
 
   return (
     <div className="min-h-screen bg-zion-blue">
@@ -61,11 +61,11 @@ export default function CategoriesPage() {
             </div>
           )}
           {!loading && !error && categories && categories.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {categories.map((category) => {
                 // Get the icon component from lucide-react
                 // Ensure category.icon is a string matching a Lucide icon name
-                const IconComponent = (Icons as any)[category.icon || 'Folder'] || Icons.Folder;
+                const IconComponent = (Icons as any)[category.icon || 'Folder'] || Icons.Folder,
                 
                 return (
                   <CategoryCard
@@ -77,12 +77,12 @@ export default function CategoriesPage() {
                     // Pass slug or href if CategoryCard expects it for navigation
                     // href={`/marketplace/categories/${category.slug}`}
                   />
-                );
+                ),
               })}
             </div>
           )}
         </ErrorBoundary>
       </div>
     </div>
-  );
+  ),
 }

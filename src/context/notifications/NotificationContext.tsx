@@ -1,40 +1,34 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
+import React, { createContext, useContext, useState, ReactNode } from "react";
 interface Notification {
-  id: string;
-  message: string;
-  type: 'success' | 'error' | 'warning' | 'info';
-  duration?: number;
+  id: string,message: string,type: 'success' | 'error' | 'warning' | 'info';
+  duration?: number
 }
 
 interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-  clearNotifications: () => void;
+  notifications: Notification[],addNotification: (notification: Omit<Notification, 'id'>) => void,
+  removeNotification: (id: string) => void,clearNotifications: () => void
 }
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
-
 export const useNotifications = () => {
-  const context = useContext(NotificationContext);
+  const context = useContext(NotificationContext),
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error('useNotifications must be used within a NotificationProvider'),
   }
-  return context;
-};
+  return context,
+},
 
 interface NotificationProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<Notification[]>([]),
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
-    setNotifications(prev => [...prev, newNotification]);
+    const id = Math.random().toString(36).substr(2, 9),
+    const newNotification = { ...notification, id },
+    setNotifications(prev => [...prev, newNotification]),
 
     if (notification.duration !== 0) {
       setTimeout(() => {
@@ -42,25 +36,23 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
       }, notification.duration || 5000);
     }
   };
-
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
+    setNotifications(prev => prev.filter(n => n.id !== id))
   };
-
   const clearNotifications = () => {
-    setNotifications([]);
-  };
+    setNotifications([]),
+  },
 
   const value: NotificationContextType = {
-    notifications,
+    notifications;
     addNotification,
     removeNotification,
-    clearNotifications,
-  };
+    clearNotifications
+  },
 
   return (
     <NotificationContext.Provider value={value}>
       {children}
     </NotificationContext.Provider>
-  );
+  ),
 };

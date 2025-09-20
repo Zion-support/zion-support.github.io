@@ -2,37 +2,37 @@
 // Cutting-edge IT infrastructure, cloud, and digital transformation services
 
 export interface ITServiceContact {
-  phone: string;
-  email: string;
-  website: string;
+  phone: string,
+  email: string,
+  website: string,
   address: string}
 
 export interface InnovativeITService {
-  id: number;
-  name: string;
-  category: string;
-  pricing: string;
-  description: string;
-  price: number;
-  pricingModel: string;
-  scope: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ITServiceContact;
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  implementationTime: string;
-  technologies: string[];
-  freeConsultation: boolean;
-  trialPeriod: string;
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  useCases: string[];
-  compliance: string[];
+  id: number,
+  name: string,
+  category: string,
+  pricing: string,
+  description: string,
+  price: number,
+  pricingModel: string,
+  scope: string,
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  tags: string[],
+  contactInfo: ITServiceContact,
+  marketPrice: string,
+  competitors: string[],
+  roi: string,
+  implementationTime: string,
+  technologies: string[],
+  freeConsultation: boolean,
+  trialPeriod: string,
+  innovationLevel: string,
+  marketSize: string,
+  growthRate: string,
+  useCases: string[],
+  compliance: string[],
   supportLevel: string}
 
 // Zion Tech Group Contact Information
@@ -41,7 +41,7 @@ const zionContact: ITServiceContact = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+},
 
 // Innovative IT Services 2030
 export const innovativeITServices2030: InnovativeITService[] = [{
@@ -310,6 +310,6 @@ export const innovativeITServices2030: InnovativeITService[] = [{
     compliance: ["GDPR", "SOX", "PCI DSS", "Industry-specific regulations"],
     supportLevel: "24/7 blockchain support"
   }
-];
+],
 
-export default innovativeITServices2030;
+export default innovativeITServices2030,

@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   ShoppingCart, Globe, Brain, Shield, Zap, Cpu, 
   TrendingUp, CheckCircle, ArrowRight, BarChart3, Users
-} from 'lucide-react';
+} from 'lucide-react',
 export default function RetailSolutions() {,
   return (,
     <Layout>,
@@ -13,16 +13,16 @@ export default function RetailSolutions() {,
         <section className="relative py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center",
             >,
               <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 bg-clip-text text-transparent mb-6">,
                 Retail & E-commerce Solutions,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
-                Revolutionary AI-powered retail solutions that transform customer experience;
+                Revolutionary AI-powered retail solutions that transform customer experience,
                 optimize operations, and drive digital commerce innovation.,
               </p>,
             </motion.div>,
@@ -32,23 +32,23 @@ export default function RetailSolutions() {,
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl font-bold text-white mb-4">Our Retail Solutions</h2>,
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">,
-                Cutting-edge technology solutions designed specifically for retailers;
+                Cutting-edge technology solutions designed specifically for retailers,
                 e-commerce platforms, and digital commerce businesses.,
               </p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* E-commerce Platform */,}
+              {/* E-commerce Platform */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.3 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 className="bg-gradient-to-br from-pink-900/20 to-purple-900/20 border border-pink-500/20 rounded-2xl p-8 hover: border-pink-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -58,7 +58,7 @@ export default function RetailSolutions() {,
                   <h3 className="text-2xl font-bold text-white">AI-Powered E-commerce</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Intelligent e-commerce platform with AI-driven personalization;
+                  Intelligent e-commerce platform with AI-driven personalization,
                   automated inventory management, and seamless customer experience.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -79,11 +79,11 @@ export default function RetailSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Customer Analytics */,}
+              {/* Customer Analytics */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
                 className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-2xl p-8 hover: border-blue-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -93,7 +93,7 @@ export default function RetailSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Customer Analytics</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Advanced customer analytics platform with behavioral insights;
+                  Advanced customer analytics platform with behavioral insights,
                   predictive modeling, and personalized marketing automation.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -114,11 +114,11 @@ export default function RetailSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Omnichannel Retail */,}
+              {/* Omnichannel Retail */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.5 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
                 className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-2xl p-8 hover: border-green-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -149,11 +149,11 @@ export default function RetailSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Supply Chain */,}
+              {/* Supply Chain */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.6 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-2xl p-8 hover: border-yellow-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -163,7 +163,7 @@ export default function RetailSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Supply Chain Optimization</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Intelligent supply chain optimization with demand forecasting;
+                  Intelligent supply chain optimization with demand forecasting,
                   inventory management, and logistics automation.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -184,11 +184,11 @@ export default function RetailSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Fraud Prevention */,}
+              {/* Fraud Prevention */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.7 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
                 className="bg-gradient-to-br from-red-900/20 to-pink-900/20 border border-red-500/20 rounded-2xl p-8 hover: border-red-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -219,11 +219,11 @@ export default function RetailSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Customer Service */,}
+              {/* Customer Service */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.8 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className="bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20 rounded-2xl p-8 hover: border-teal-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -233,7 +233,7 @@ export default function RetailSolutions() {,
                   <h3 className="text-2xl font-bold text-white">AI Customer Service</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Intelligent customer service platform with AI chatbots;
+                  Intelligent customer service platform with AI chatbots,
                   automated support, and personalized assistance.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -257,13 +257,13 @@ export default function RetailSolutions() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-pink-900/20 to-purple-900/20">,
           <div className="container mx-auto max-w-4xl text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.9 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Ready to Transform Retail?,
@@ -290,6 +290,5 @@ export default function RetailSolutions() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),}
+    </Layout>)}
 ,

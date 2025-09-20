@@ -1,54 +1,54 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react',
+import { motion } from 'framer-motion',
 
 export default function UltraAdvancedFuturisticBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [isClient, setIsClient] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
+  const [isClient, setIsClient] = useState(false),
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true),
+  }, []),
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient) return,
     
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = canvasRef.current,
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight,
+    },
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas(),
+    window.addEventListener('resize', resizeCanvas),
 
     // Enhanced particle system with quantum effects
     const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      type: 'quantum' | 'neural' | 'energy' | 'data' | 'consciousness' | 'neon';
-      life: number;
-      maxLife: number;
-      connections: number[];
-      glow: number;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      type: 'quantum' | 'neural' | 'energy' | 'data' | 'consciousness' | 'neon',
+      life: number,
+      maxLife: number,
+      connections: number[],
+      glow: number
+    }> = [],
 
     // Initialize particles with enhanced effects
     const initParticles = () => {
-      particles.length = 0;
+      particles.length = 0,
       
       // Quantum particles (cyan/blue with entanglement)
-      for (let i = 0; i < 60; i++) {
+      for (let i = 0, i < 60, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -62,11 +62,11 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.5 + 0.5
-        });
+        }),
       }
 
       // Neural particles (purple/pink with consciousness)
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0, i < 50, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -80,11 +80,11 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.6 + 0.4
-        });
+        }),
       }
 
       // Energy particles (green/emerald with power)
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0, i < 40, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -98,11 +98,11 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.7 + 0.3
-        });
+        }),
       }
 
       // Data particles (white/blue with information)
-      for (let i = 0; i < 80; i++) {
+      for (let i = 0, i < 80, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -116,11 +116,11 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.4 + 0.2
-        });
+        }),
       }
 
       // Consciousness particles (golden with awareness)
-      for (let i = 0; i < 25; i++) {
+      for (let i = 0, i < 25, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -134,11 +134,11 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.8 + 0.2
-        });
+        }),
       }
 
       // Neon particles (bright with glow effects)
-      for (let i = 0; i < 35; i++) {
+      for (let i = 0, i < 35, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -152,12 +152,12 @@ export default function UltraAdvancedFuturisticBackground() {
           maxLife: 100,
           connections: [],
           glow: Math.random() * 0.9 + 0.1
-        });
+        }),
       }
-    };
+    },
 
     // Initialize particles
-    initParticles();
+    initParticles(),
 
     // Animation loop with enhanced effects
     const animate = () => {
@@ -165,92 +165,92 @@ export default function UltraAdvancedFuturisticBackground() {
       const gradient = ctx.createRadialGradient(
         canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2
-      );
-      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)');
-      gradient.addColorStop(0.5, 'rgba(10, 10, 30, 0.9)');
-      gradient.addColorStop(1, 'rgba(20, 20, 50, 0.8)');
+      ),
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)'),
+      gradient.addColorStop(0.5, 'rgba(10, 10, 30, 0.9)'),
+      gradient.addColorStop(1, 'rgba(20, 20, 50, 0.8)'),
       
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = gradient,
+      ctx.fillRect(0, 0, canvas.width, canvas.height),
 
       // Update and draw particles with enhanced effects
       particles.forEach((particle, index) => {
         // Update particle position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-        particle.life += 0.5;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
+        particle.life += 0.5,
 
         // Bounce off edges with quantum tunneling effect
         if (particle.x < 0 || particle.x > canvas.width) {
-          particle.vx *= -1;
+          particle.vx *= -1,
           if (Math.random() < 0.1) { // 10% chance of quantum tunneling
-            particle.x = particle.x < 0 ? canvas.width : 0;
+            particle.x = particle.x < 0 ? canvas.width : 0,
           }
         }
         if (particle.y < 0 || particle.y > canvas.height) {
-          particle.vy *= -1;
+          particle.vy *= -1,
           if (Math.random() < 0.1) { // 10% chance of quantum tunneling
-            particle.y = particle.y < 0 ? canvas.height : 0;
+            particle.y = particle.y < 0 ? canvas.height : 0,
           }
         }
 
         // Reset particle if it goes off screen
         if (particle.x < -100 || particle.x > canvas.width + 100 || 
             particle.y < -100 || particle.y > canvas.height + 100) {
-          particle.x = Math.random() * canvas.width;
-          particle.y = Math.random() * canvas.height;
-          particle.life = 0;
+          particle.x = Math.random() * canvas.width,
+          particle.y = Math.random() * canvas.height,
+          particle.life = 0,
         }
 
         // Draw particle with enhanced effects
-        ctx.save();
+        ctx.save(),
         
         // Add glow effect
-        const glowSize = particle.size * (2 + particle.glow * 3);
+        const glowSize = particle.size * (2 + particle.glow * 3),
         const glowGradient = ctx.createRadialGradient(
           particle.x, particle.y, 0,
           particle.x, particle.y, glowSize
-        );
+        ),
         
         // Enhanced glow colors based on particle type
-        let glowColor = particle.color;
-        let glowOpacity = particle.opacity * 0.3;
+        let glowColor = particle.color,
+        let glowOpacity = particle.opacity * 0.3,
         
         switch (particle.type) {
           case 'quantum':
-            glowColor = 'hsl(180, 100%, 80%)';
-            glowOpacity = particle.opacity * 0.5;
-            break;
+            glowColor = 'hsl(180, 100%, 80%)',
+            glowOpacity = particle.opacity * 0.5,
+            break,
           case 'neural':
-            glowColor = 'hsl(280, 100%, 80%)';
-            glowOpacity = particle.opacity * 0.4;
-            break;
+            glowColor = 'hsl(280, 100%, 80%)',
+            glowOpacity = particle.opacity * 0.4,
+            break,
           case 'energy':
-            glowColor = 'hsl(140, 100%, 80%)';
-            glowOpacity = particle.opacity * 0.6;
-            break;
+            glowColor = 'hsl(140, 100%, 80%)',
+            glowOpacity = particle.opacity * 0.6,
+            break,
           case 'consciousness':
-            glowColor = 'hsl(45, 100%, 80%)';
-            glowOpacity = particle.opacity * 0.7;
-            break;
+            glowColor = 'hsl(45, 100%, 80%)',
+            glowOpacity = particle.opacity * 0.7,
+            break,
           case 'neon':
-            glowColor = 'hsl(320, 100%, 90%)';
-            glowOpacity = particle.opacity * 0.8;
-            break;
+            glowColor = 'hsl(320, 100%, 90%)',
+            glowOpacity = particle.opacity * 0.8,
+            break,
         }
         
-        glowGradient.addColorStop(0, `${glowColor.replace(')', `, ${glowOpacity})`)}`);
-        glowGradient.addColorStop(1, 'transparent');
+        glowGradient.addColorStop(0, `${glowColor.replace(')', `, ${glowOpacity})`)}`),
+        glowGradient.addColorStop(1, 'transparent'),
         
-        ctx.fillStyle = glowGradient;
-        ctx.fillRect(particle.x - glowSize, particle.y - glowSize, glowSize * 2, glowSize * 2);
+        ctx.fillStyle = glowGradient,
+        ctx.fillRect(particle.x - glowSize, particle.y - glowSize, glowSize * 2, glowSize * 2),
 
         // Draw main particle
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.beginPath(),
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+        ctx.fill(),
 
         // Add particle type-specific effects
         if (particle.type === 'quantum') {
@@ -260,17 +260,17 @@ export default function UltraAdvancedFuturisticBackground() {
               const distance = Math.sqrt(
                 Math.pow(particle.x - otherParticle.x, 2) + 
                 Math.pow(particle.y - otherParticle.y, 2)
-              );
+              ),
               if (distance < 150) {
-                ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 150)})`;
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(otherParticle.x, otherParticle.y);
-                ctx.stroke();
+                ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 150)})`,
+                ctx.lineWidth = 1,
+                ctx.beginPath(),
+                ctx.moveTo(particle.x, particle.y),
+                ctx.lineTo(otherParticle.x, otherParticle.y),
+                ctx.stroke(),
               }
             }
-          });
+          }),
         }
 
         if (particle.type === 'neural') {
@@ -280,87 +280,87 @@ export default function UltraAdvancedFuturisticBackground() {
               const distance = Math.sqrt(
                 Math.pow(particle.x - otherParticle.x, 2) + 
                 Math.pow(particle.y - otherParticle.y, 2)
-              );
+              ),
               if (distance < 120) {
-                ctx.strokeStyle = `rgba(255, 0, 255, ${0.2 * (1 - distance / 120)})`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(otherParticle.x, otherParticle.y);
-                ctx.stroke();
+                ctx.strokeStyle = `rgba(255, 0, 255, ${0.2 * (1 - distance / 120)})`,
+                ctx.lineWidth = 0.5,
+                ctx.beginPath(),
+                ctx.moveTo(particle.x, particle.y),
+                ctx.lineTo(otherParticle.x, otherParticle.y),
+                ctx.stroke(),
               }
             }
-          });
+          }),
         }
 
         if (particle.type === 'consciousness') {
           // Consciousness ripple effect
-          const rippleSize = (particle.life % 50) * 2;
-          ctx.strokeStyle = `rgba(255, 215, 0, ${0.3 * (1 - rippleSize / 100)})`;
-          ctx.lineWidth = 2;
-          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, rippleSize, 0, Math.PI * 2);
-          ctx.stroke();
+          const rippleSize = (particle.life % 50) * 2,
+          ctx.strokeStyle = `rgba(255, 215, 0, ${0.3 * (1 - rippleSize / 100)})`,
+          ctx.lineWidth = 2,
+          ctx.beginPath(),
+          ctx.arc(particle.x, particle.y, rippleSize, 0, Math.PI * 2),
+          ctx.stroke(),
         }
 
-        ctx.restore();
-      });
+        ctx.restore(),
+      }),
 
       // Add floating geometric shapes for futuristic effect
-      const time = Date.now() * 0.001;
-      for (let i = 0; i < 3; i++) {
-        const x = (canvas.width / 2) + Math.sin(time + i) * 200;
-        const y = (canvas.height / 2) + Math.cos(time + i * 0.7) * 150;
-        const size = 20 + Math.sin(time * 2 + i) * 10;
+      const time = Date.now() * 0.001,
+      for (let i = 0, i < 3, i++) {
+        const x = (canvas.width / 2) + Math.sin(time + i) * 200,
+        const y = (canvas.height / 2) + Math.cos(time + i * 0.7) * 150,
+        const size = 20 + Math.sin(time * 2 + i) * 10,
         
-        ctx.save();
-        ctx.globalAlpha = 0.1;
-        ctx.strokeStyle = 'rgba(0, 255, 255, 0.3)';
-        ctx.lineWidth = 2;
-        ctx.translate(x, y);
-        ctx.rotate(time + i);
+        ctx.save(),
+        ctx.globalAlpha = 0.1,
+        ctx.strokeStyle = 'rgba(0, 255, 255, 0.3)',
+        ctx.lineWidth = 2,
+        ctx.translate(x, y),
+        ctx.rotate(time + i),
         
         // Draw geometric shapes
         if (i === 0) {
           // Triangle
-          ctx.beginPath();
-          ctx.moveTo(0, -size);
-          ctx.lineTo(size * 0.866, size * 0.5);
-          ctx.lineTo(-size * 0.866, size * 0.5);
-          ctx.closePath();
+          ctx.beginPath(),
+          ctx.moveTo(0, -size),
+          ctx.lineTo(size * 0.866, size * 0.5),
+          ctx.lineTo(-size * 0.866, size * 0.5),
+          ctx.closePath(),
         } else if (i === 1) {
           // Square
-          ctx.strokeRect(-size, -size, size * 2, size * 2);
+          ctx.strokeRect(-size, -size, size * 2, size * 2),
         } else {
           // Hexagon
-          ctx.beginPath();
-          for (let j = 0; j < 6; j++) {
-            const angle = (j * Math.PI) / 3;
-            const px = Math.cos(angle) * size;
-            const py = Math.sin(angle) * size;
-            if (j === 0) ctx.moveTo(px, py);
-            else ctx.lineTo(px, py);
+          ctx.beginPath(),
+          for (let j = 0, j < 6, j++) {
+            const angle = (j * Math.PI) / 3,
+            const px = Math.cos(angle) * size,
+            const py = Math.sin(angle) * size,
+            if (j === 0) ctx.moveTo(px, py),
+            else ctx.lineTo(px, py),
           }
-          ctx.closePath();
+          ctx.closePath(),
         }
         
-        ctx.stroke();
-        ctx.restore();
+        ctx.stroke(),
+        ctx.restore(),
       }
 
-      requestAnimationFrame(animate);
-    };
+      requestAnimationFrame(animate),
+    },
 
     // Start animation
-    animate();
+    animate(),
 
     // Cleanup
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, [isClient]);
+      window.removeEventListener('resize', resizeCanvas),
+    },
+  }, [isClient]),
 
-  if (!isClient) return null;
+  if (!isClient) return null,
 
 const UltraAdvancedFuturisticBackground: React.FC = () => {
   return (
@@ -368,7 +368,7 @@ const UltraAdvancedFuturisticBackground: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedFuturisticBackground</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedFuturisticBackground;
+export default UltraAdvancedFuturisticBackground,

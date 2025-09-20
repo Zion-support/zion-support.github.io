@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function AutonomousSystems2025RevolutionBanner() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function AutonomousSystems2025RevolutionBanner() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function AutonomousSystems2025RevolutionBanner() {;
+  ),
+},
+export default function AutonomousSystems2025RevolutionBanner() {,
 }}}

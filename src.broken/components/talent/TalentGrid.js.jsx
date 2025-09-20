@@ -1,10 +1,10 @@
-import { TalentCard } from '@/components/talent/TalentCard';
+import { TalentCard } from '@/components/talent/TalentCard',
 
 export default function Page() {
-;
+,
   if(isLoading) {
 
-    return <TalentSkeleton />;
+    return <TalentSkeleton />,
   }
   if(!talents || talents.length === 0) {
 
@@ -22,7 +22,7 @@ export default function Page() {
           </button>
         )}
       </div>
-    );
+    ),
   }
   return ("
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -36,6 +36,6 @@ export default function Page() {
         />
       ))}
     </div>
-  );
+  ),
 }
 '"

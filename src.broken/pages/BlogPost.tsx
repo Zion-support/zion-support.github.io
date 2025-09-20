@@ -1,23 +1,23 @@
-import { useState, useEffect } from "react";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { SEO } from "@/components/SEO";
-import JsonLd from "@/components/JsonLd";
-import { Button } from "@/components/ui/button";
-import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { SEO } from "@/components/SEO",
+import JsonLd from "@/components/JsonLd",
+import { Button } from "@/components/ui/button",
+import ImageWithRetry from '@/components/ui/ImageWithRetry',
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import type { BlogPost as BlogPostType } from "@/types/blog",
+import { Separator } from "@/components/ui/separator",
+import ReactMarkdown from 'react-markdown',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
-  };
+      day: 'numeric'
+    }) ,
+  },
 
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {
@@ -27,10 +27,10 @@ import {logErrorToProduction} from '@/utils/productionLogger';
       cloud: Cloud,
       business: TrendingUp,
       iot: Network,
-      emerging: Zap,
-    };
-    return categoryIcons[category] || BookOpen;
-  };
+      emerging: Zap
+    },
+    return categoryIcons[category] || BookOpen,
+  },
 
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
@@ -40,10 +40,10 @@ import {logErrorToProduction} from '@/utils/productionLogger';
       cloud: 'Cloud & DevOps',
       business: 'Business Insights',
       iot: 'IoT & Edge',
-      emerging: 'Emerging Tech',
-    };
-    return categoryNames[category] || 'Uncategorized';
-  };
+      emerging: 'Emerging Tech'
+    },
+    return categoryNames[category] || 'Uncategorized',
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -77,7 +77,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
+                  className: 'w-4 h-4'
                 }) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
@@ -295,7 +295,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
             <div className="flex flex - wrap justify - center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300"
+                className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover: from - cyan - 600 hover:to - blue - 600 transition - all duration -300"
               >
                 Get Started Today
               </Link>
@@ -309,5 +309,5 @@ import {logErrorToProduction} from '@/utils/productionLogger';
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

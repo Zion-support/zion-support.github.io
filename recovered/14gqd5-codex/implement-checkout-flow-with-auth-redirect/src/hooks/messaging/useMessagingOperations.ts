@@ -1,12 +1,12 @@
 
-import { UserProfile, UserDetails } from '@/types/auth';
-import { Message, Conversation, ConversationContextData } from '@/types/messaging';
-import { useConversationState } from './useConversationState';
-import { useConversations } from './useConversations';
-import { useMessages } from './useMessages';
+import { UserProfile, UserDetails } from '@/types/auth',
+import { Message, Conversation, ConversationContextData } from '@/types/messaging',
+import { useConversationState } from './useConversationState',
+import { useConversations } from './useConversations',
+import { useMessages } from './useMessages',
 
 // Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null;
+type UserWithProfile = UserProfile | UserDetails | null,
 
 /**
  * Hook that combines all messaging operations
@@ -26,7 +26,7 @@ export function useMessagingOperations(user: UserWithProfile) {
     setActiveConversation,
     isLoading,
     setIsLoading
-  } = useConversationState();
+  } = useConversationState(),
 
   // Conversations management
   const {
@@ -37,7 +37,7 @@ export function useMessagingOperations(user: UserWithProfile) {
     setConversations,
     setUnreadCount,
     setIsLoading
-  );
+  ),
 
   // Messages management
   const {
@@ -54,7 +54,7 @@ export function useMessagingOperations(user: UserWithProfile) {
     setUnreadCount,
     setIsLoading,
     fetchConversations
-  );
+  ),
 
   return {
     // State
@@ -75,5 +75,5 @@ export function useMessagingOperations(user: UserWithProfile) {
     markAsRead,
     fetchConversations,
     loadMessages
-  };
+  },
 }

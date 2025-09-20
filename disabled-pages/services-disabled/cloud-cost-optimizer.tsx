@@ -1,5 +1,5 @@
-import { Helmet  } from 'react-helmet-async.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet  } from 'react-helmet-async.ts',
+import { Link  } from 'react-router-dom.ts',
 export default function CloudCostOptimizer(...args: any[]): any {,
   return (,
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
@@ -30,5 +30,5 @@ export default function CloudCostOptimizer(...args: any[]): any {,
         </div>,
       </main>,
     </div>,
-  ),}
+  )}
 ,

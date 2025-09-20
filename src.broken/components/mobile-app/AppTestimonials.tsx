@@ -1,7 +1,7 @@
 
-import React from "react";
+import React from "react",
 import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
 const testimonials = [
   {
@@ -25,7 +25,7 @@ const testimonials = [
     rating: 4,
     avatar: "/placeholder.svg"
   }
-];
+],
 
 export const AppTestimonials: React.FC = () => {
   return (
@@ -73,5 +73,5 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},

@@ -1,2 +1,2 @@
 
-export default AdvancedServicePortfolioDashboard.js;
+export default AdvancedServicePortfolioDashboard.js,

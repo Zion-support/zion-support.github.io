@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Zap,
@@ -26,23 +26,22 @@ import {
   Search,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
-
+} from "lucide-react";
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
 export default function InnovativeServices2028() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('name');
-  const [expandedService, setExpandedService] = useState<number | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState('name'),
+  const [expandedService, setExpandedService] = useState<number | null>(null),
 
   const filteredServices = innovativeServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
+      serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id),
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -52,17 +51,15 @@ export default function InnovativeServices2028() {
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       case 'name':
         return a.name.localeCompare(b.name);
-      default:
-        return 0;
+      default: return 0
     }
   });
-
   const getCategoryIcon = (categoryName: string) => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
-    if (!category) return Brain;
+    if (!category) return Brain,
 
     const iconMap: { [key: string]: any } = {
-      'Brain': Brain,
+      'Brain': Brain;
       'Zap': Zap,
       'Lock': Lock,
       'Cloud': Cloud,
@@ -70,15 +67,15 @@ export default function InnovativeServices2028() {
       'Users': Users,
       'Database': Database,
       'Network': Network
-    };
+    },
 
-    return iconMap[category.icon] || Brain;
-  };
+    return iconMap[category.icon] || Brain,
+  },
 
   const getCategoryColor = (categoryName: string) => {
     const category = serviceCategories.find(cat => cat.name === categoryName);
-    return category?.color || 'from-purple-500 to-pink-500';
-  };
+    return category?.color || 'from-purple-500 to-pink-500'
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
@@ -110,11 +107,11 @@ export default function InnovativeServices2028() {
               Innovative Services 2028
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover the future of technology with our cutting-edge micro SAAS services,
+              Discover the future of technology with our cutting-edge micro SAAS services;
               AI solutions, and innovative IT services designed to transform your business
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              From AI-powered business intelligence to quantum computing solutions,
+              From AI-powered business intelligence to quantum computing solutions;
               we're pioneering the next generation of digital transformation
             </p>
 
@@ -448,7 +445,7 @@ export default function InnovativeServices2028() {
                 </button>
                 <button
                   onClick={() => window.open(`tel:${contactInfo.phone}`, '_blank')}
-                  className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover: bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule a Call
                 </button>
@@ -458,5 +455,5 @@ export default function InnovativeServices2028() {
         </div>
       </section>
     </div>
-  );
+  )
 }

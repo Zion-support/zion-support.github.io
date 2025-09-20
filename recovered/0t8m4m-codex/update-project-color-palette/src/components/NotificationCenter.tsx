@@ -1,22 +1,22 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
-import { Bell } from '@/components/icons';
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { useNotifications } from '@/context/notifications/NotificationContext';
-import { toast } from 'sonner';
+import { Bell } from '@/components/icons',
+import { Button } from '@/components/ui/button',
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover',
+import { useNotifications } from '@/context/notifications/NotificationContext',
+import { toast } from 'sonner',
 import { 
-  NotificationFilter, 
+  NotificationFilter,
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
-} from '@/components/notifications';
-import { FilterType } from '@/components/notifications/NotificationFilter';
+} from '@/components/notifications',
+import { FilterType } from '@/components/notifications/NotificationFilter',
 
 export const NotificationCenter: React.FC = () => {
   const { 
-    filteredNotifications, 
+    filteredNotifications,
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -25,42 +25,42 @@ export const NotificationCenter: React.FC = () => {
     filter,
     setFilter,
     fetchNotifications
-  } = useNotifications();
+  } = useNotifications(),
   
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [open, setOpen] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
       const loadNotifications = async () => {
         try {
-          await fetchNotifications();
-          setError(null);
+          await fetchNotifications(),
+          setError(null),
         } catch (err) {
-          console.error("Failed to fetch notifications:", err);
-          setError("Couldn't load notifications");
-          toast.error("Failed to load notifications");
+          console.error("Failed to fetch notifications:", err),
+          setError("Couldn't load notifications"),
+          toast.error("Failed to load notifications"),
         }
-      };
+      },
       
-      loadNotifications();
+      loadNotifications(),
     }
-  }, [open, fetchNotifications]);
+  }, [open, fetchNotifications]),
 
   const handleMarkAllAsRead = async () => {
     try {
-      await markAllAsRead();
-      toast.success("All notifications marked as read");
+      await markAllAsRead(),
+      toast.success("All notifications marked as read"),
     } catch (err) {
-      console.error("Failed to mark notifications as read:", err);
-      toast.error("Failed to update notifications");
+      console.error("Failed to mark notifications as read:", err),
+      toast.error("Failed to update notifications"),
     }
-  };
+  },
 
   const handleFilterChange = (newFilter: FilterType) => {
-    setFilter(newFilter as any);
-  };
+    setFilter(newFilter as any)
+  },
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -97,5 +97,5 @@ export const NotificationCenter: React.FC = () => {
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
-  );
-};
+  ),
+},

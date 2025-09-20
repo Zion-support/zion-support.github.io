@@ -1,29 +1,29 @@
 
-import { QuoteRequestSteps } from "../QuoteRequestForm";
+import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 
 interface StepProgressProps {
-  currentStep: QuoteRequestSteps;
+  currentStep: QuoteRequestSteps
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
+  const steps: { id: QuoteRequestSteps, label: string }[] = [
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
-  ];
+  ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+    const stepOrder = steps.findIndex(s => s.id === stepId),
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current";
-    return "upcoming";
-  };
+    if (stepOrder < currentStepOrder) return "complete",
+    if (stepOrder === currentStepOrder) return "current",
+    return "upcoming"
+  },
 
   return (
     <div className="relative">
@@ -38,7 +38,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       
       <div className="flex justify-between relative">
         {steps.map((step) => {
-          const status = getStepStatus(step.id);
+          const status = getStepStatus(step.id),
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div 
@@ -66,9 +66,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 {step.label}
               </span>
             </div>
-          );
+          ),
         })}
       </div>
     </div>
-  );
+  ),
 }

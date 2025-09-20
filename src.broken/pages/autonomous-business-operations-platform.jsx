@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
       <div className="py-20 bg-slate -800 / 50">
@@ -37,7 +37,7 @@ export default function Page() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient - to - r from - green - 900 / 20 to - emerald -900 / 20">
-        <div className="max - w-4xl mx - auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max - w-4xl mx - auto text-center px-4 sm: px-6 lg:px-8">
           <h2 className="text-4xl font - bold mb-6 bg-gradient - to - r from - green - 400 to - emerald - 400 bg-clip - text text-transparent">
             Ready to Automate Your Business?
           </h2>
@@ -60,5 +60,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},

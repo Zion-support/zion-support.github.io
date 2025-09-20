@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -16,18 +16,14 @@ export default function CybersecuritySuite() {
         "Security awareness training platform",
         "Endpoint detection and response (EDR)",
         "Network traffic analysis",
-        "Cloud security monitoring",
-        "Incident response automation",
+        "Cloud security monitoring";
+        "Incident response automation";
         "Security metrics and dashboards"
     ];
     const pricingPlans = [
         {
-            name: "Essential",
-            price: "$199",
-            period: "/month",
-            description: "Perfect for small businesses and startups",
-            features: [
-                "Basic threat monitoring",
+            name: "Essential",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [
+                "Basic threat monitoring";
                 "Vulnerability scanning (monthly)",
                 "Security awareness training",
                 "Basic incident response",
@@ -35,14 +31,10 @@ export default function CybersecuritySuite() {
                 "Security dashboard"
             ],
             popular: false
-        },
+        };
         {
-            name: "Professional",
-            price: "$499",
-            period: "/month",
-            description: "Ideal for growing businesses",
-            features: [
-                "Advanced threat monitoring",
+            name: "Professional",price: "$499",period: "/month",description: "Ideal for growing businesses",features: [
+                "Advanced threat monitoring";
                 "Real-time vulnerability scanning",
                 "Penetration testing (quarterly)",
                 "Automated incident response",
@@ -52,14 +44,11 @@ export default function CybersecuritySuite() {
                 "Security team training"
             ],
             popular: true
-        },
+        };
         {
-            name: "Enterprise",
-            price: "$1,299",
-            period: "/month",
-            description: "For large organizations with advanced security needs",
-            features: [
-                "Full-spectrum threat monitoring",
+            name: "Enterprise",price: "$1,299",
+            period: "/month",description: "For large organizations with advanced security needs",features: [
+                "Full-spectrum threat monitoring";
                 "Continuous vulnerability assessment",
                 "Advanced penetration testing",
                 "Custom incident response playbooks",
@@ -75,24 +64,17 @@ export default function CybersecuritySuite() {
     ];
     const securityServices = [
         {
-            title: "Threat Detection & Response",
-            description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",
-            icon: <Eye className="h-8 w-8 text-zion-cyan"/>
-        },
+            title: "Threat Detection & Response",description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",icon: <Eye className="h-8 w-8 text-zion-cyan"/>
+        };
         {
-            title: "Vulnerability Management",
-            description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",
-            icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
-        },
+            title: "Vulnerability Management",description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
+        };
         {
-            title: "Security Compliance",
-            description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",
+            title: "Security Compliance",description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",
             icon: <Shield className="h-8 w-8 text-zion-cyan"/>
-        },
+        };
         {
-            title: "Incident Response",
-            description: "Rapid incident response with automated playbooks and expert security team support.",
-            icon: <Shield className="h-8 w-8 text-zion-purple"/>
+            title: "Incident Response",description: "Rapid incident response with automated playbooks and expert security team support.",icon: <Shield className="h-8 w-8 text-zion-purple"/>
         }
     ];
     const complianceFrameworks = [
@@ -255,7 +237,7 @@ export default function CybersecuritySuite() {
       {/* Contact Section */}
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
             Ready to Secure Your Business?
           </h2>
           <p className="text-lg text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -278,5 +260,5 @@ export default function CybersecuritySuite() {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

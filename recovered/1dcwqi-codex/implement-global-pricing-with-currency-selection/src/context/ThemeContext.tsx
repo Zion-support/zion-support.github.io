@@ -10,13 +10,13 @@ export interface ThemeContextState {
 
 const initialState: ThemeContextState = {
   theme: 'light',
-  toggleTheme: () => {},
+  toggleTheme: () => {}
 }
 
 const ThemeContext = createContext<ThemeContextState>(initialState)
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'light')
+  const [theme, setTheme] = useLocalStorage<Theme>('themelight')
 
   const applyTheme = (nextTheme: Theme) => {
     const root = document.documentElement

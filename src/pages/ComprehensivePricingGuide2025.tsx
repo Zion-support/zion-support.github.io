@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
   Check,
   X,
@@ -26,53 +26,49 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { COMPREHENSIVE_PRICING_GUIDE_2025 } from '../data/comprehensivePricingGuide2025';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
+import { COMPREHENSIVE_PRICING_GUIDE_2025 } from "../data/comprehensivePricingGuide2025";
 export default function ComprehensivePricingGuide2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 20000]);
-
   // Get unique categories
   const categories = [
-    { id: 'all', name: 'All Services', count: COMPREHENSIVE_PRICING_GUIDE_2025.length },
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Business Intelligence').length },
-    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Customer Support').length },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Marketing').length },
-    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Content').length },
-    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & HR').length },
+    { id: 'all', name: 'All Services', count: COMPREHENSIVE_PRICING_GUIDE_2025.length };
+    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Business Intelligence').length };
+    { id: 'AI & Customer Support', name: 'AI & Customer Support', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Customer Support').length };
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Marketing').length };
+    { id: 'AI & Content', name: 'AI & Content', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & Content').length };
+    { id: 'AI & HR', name: 'AI & HR', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'AI & HR').length };
     { id: 'FinTech', name: 'FinTech', count: COMPREHENSIVE_PRICING_GUIDE_2025.filter(s => s.category === 'FinTech').length }
   ];
-
   const filteredServices = COMPREHENSIVE_PRICING_GUIDE_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesPrice = service.pricingTiers.some(tier => 
       tier.price >= priceRange[0] && tier.price <= priceRange[1]
-    );
-    return matchesCategory && matchesSearch && matchesPrice;
-  });
+    ),
+    return matchesCategory && matchesSearch && matchesPrice,
+  }),
 
   const handleServiceClick = (service: any) => {
-    setSelectedService(service);
+    setSelectedService(service)
   };
-
   const closeModal = () => {
-    setSelectedService(null);
-  };
+    setSelectedService(null),
+  },
 
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`;
     }
-    return `$${price}`;
-  };
+    return `$${price}`,
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -487,7 +483,7 @@ export default function ComprehensivePricingGuide2025() {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-gray-400">Competitors:</span>
-                            <span className="text-white">{selectedService.marketComparison.competitors.join(', ')}</span>
+                            <span className="text-white">{selectedService.marketComparison.competitors.join()}</span>
                           </div>
                           <div className="text-sm text-gray-300 mt-2">
                             {selectedService.marketComparison.valueProposition}

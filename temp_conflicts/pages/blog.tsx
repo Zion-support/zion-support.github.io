@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, Calendar, User, Tag, ArrowRight, 
   Clock, BookOpen, TrendingUp, Lightbulb
-} from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
 
 export default function BlogPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All Posts', count: 25 },
@@ -19,7 +19,7 @@ export default function BlogPage() {
     { id: 'innovation', name: 'Innovation', count: 5 },
     { id: 'technology', name: 'Technology Trends', count: 4 },
     { id: 'business', name: 'Business Insights', count: 2 }
-  ];
+  ],
 
   const blogPosts = [
     {
@@ -118,27 +118,27 @@ export default function BlogPage() {
       tags: ["Future of Work", "AI", "Collaboration"],
       image: "👥"
     }
-  ];
+  ],
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const regularPosts = filteredPosts.filter(post => !post.featured);
+  const featuredPosts = blogPosts.filter(post => post.featured),
+  const regularPosts = filteredPosts.filter(post => !post.featured),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
+    }),
+  },
 
   return (
     <>
@@ -429,5 +429,5 @@ export default function BlogPage() {
 
       <EnhancedFooter />
     </>
-  );
+  ),
 }

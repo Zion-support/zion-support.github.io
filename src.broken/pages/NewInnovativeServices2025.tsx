@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  ];
+,
+  ],
 
   const serviceCategories = [{
       name: "AI & Machine Learning",
@@ -45,14 +45,14 @@ export default function Page() {
       icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       services: ["AI Workflow Orchestrator",
-        "AI Project Management",;
-        "Customer Support Automation",;
-        "Email Automation",;
-        "Process Optimization";
-      ],;
-      color: "from - zion - purple to - zion - orange";
-    };
-  ];
+        "AI Project Management",
+        "Customer Support Automation",
+        "Email Automation",
+        "Process Optimization",
+      ],
+      color: "from - zion - purple to - zion - orange"
+    },
+  ],
 
   const benefits = [{
       icon: TrendingUp,
@@ -67,14 +67,14 @@ export default function Page() {
     {
       icon: Users,
       title: "Enhanced Customer Experience",
-      description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty";
-    },;
-    {;
-      icon: Shield,;
-      title: "Improved Security",;
-      description: "Advanced security measures and compliance automation protect your business and data";
-    };
-  ];
+      description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty",
+    },
+    {,
+      icon: Shield,
+      title: "Improved Security",
+      description: "Advanced security measures and compliance automation protect your business and data"
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - 900 via - zion - slate - 800 to - zion - slate -900">
       {/* Futuristic Animated Background */}
@@ -396,7 +396,7 @@ export default function Page() {
         </section>
 
         {/* Contact Information */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion - slate -800 / 50">
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-zion - slate -800 / 50">
           <div className="max - w-4xl mx - auto text-center">
             <h3 className="text-2xl font - bold text-white mb-8">Get in Touch</h3>
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-8">
@@ -410,11 +410,11 @@ export default function Page() {
               </div>
               <div className="flex flex - col items -center">
                 <MapPin className="w-8 h-8 text-zion - cyan mb-4" />
-                <p className="text-zion - slate -300">364 E Main St STE 1008 < br />Middletown DE 19709</p>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </div>;) ;
+                <p className="text-zion - slate -300">364 E Main St STE 1008 < br />Middletown DE 19709</p>,
+              </div>,
+            </div>,
+          </div>,
+        </section>,
+      </div>,
+    </div>,) 
 }

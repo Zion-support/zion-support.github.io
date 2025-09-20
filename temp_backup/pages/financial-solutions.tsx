@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { DollarSign, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, TrendingUp, Lock, BarChart3 } from 'lucide-react';
-import SEO from '../components/SEO';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { DollarSign, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity, TrendingUp, Lock, BarChart3 } from 'lucide-react',
+import SEO from '../components/SEO',
 
 const financialServices = [
   {
@@ -9,44 +9,44 @@ const financialServices = [
     description: 'Advanced AI-powered financial analysis and decision-making platforms',
     icon: <Brain className="w-8 h-8 text-cyan-400" />,
     href: '/ai-financial-intelligence',
-    features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis']
+    features: ['Risk AssessmentPortfolio Optimization', 'Market Analysis']
   },
   {
     title: 'Quantum Financial Trading',
     description: 'Quantum computing solutions for high-frequency trading and financial modeling',
     icon: <Zap className="w-8 h-8 text-purple-400" />,
     href: '/quantum-financial-trading',
-    features: ['Algorithmic Trading', 'Risk Management', 'Performance Optimization']
+    features: ['Algorithmic TradingRisk Management', 'Performance Optimization']
   },
   {
     title: 'Financial Analytics Platform',
     description: 'Comprehensive financial data analytics and reporting solutions',
     icon: <BarChart3 className="w-8 h-8 text-green-400" />,
     href: '/financial-analytics-platform',
-    features: ['Real-time Analytics', 'Custom Reporting', 'Data Visualization']
+    features: ['Real-time AnalyticsCustom Reporting', 'Data Visualization']
   },
   {
     title: 'Blockchain Financial Services',
     description: 'Secure blockchain-based financial transactions and smart contracts',
     icon: <Lock className="w-8 h-8 text-blue-400" />,
     href: '/blockchain-financial-services',
-    features: ['Smart Contracts', 'DeFi Solutions', 'Secure Transactions']
+    features: ['Smart ContractsDeFi Solutions', 'Secure Transactions']
   },
   {
     title: 'Regulatory Compliance',
     description: 'Automated compliance monitoring and reporting for financial institutions',
     icon: <Shield className="w-8 h-8 text-red-400" />,
     href: '/financial-compliance-automation',
-    features: ['Regulatory Monitoring', 'Automated Reporting', 'Compliance Auditing']
+    features: ['Regulatory MonitoringAutomated Reporting', 'Compliance Auditing']
   },
   {
     title: 'Financial Planning AI',
     description: 'Intelligent financial planning and wealth management platforms',
     icon: <Target className="w-8 h-8 text-yellow-400" />,
     href: '/ai-financial-planning-platform',
-    features: ['Personalized Planning', 'Goal Tracking', 'Investment Advice']
+    features: ['Personalized PlanningGoal Tracking', 'Investment Advice']
   }
-];
+],
 
 export default function FinancialSolutions() {
   return (
@@ -63,6 +63,6 @@ export default function FinancialSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default NeuralInterface2026;
+  ),
+},
+export default NeuralInterface2026,

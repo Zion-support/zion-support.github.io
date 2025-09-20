@@ -1,10 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs'),
+const path = require('path'),
 
 exports.handler = async function(event, context) {
   try {
     // Get the automation script path
-    const automationPath = path.join(process.cwd(), 'automation', 'ultra-fast-automation-orchestrator.cjs');
+    const automationPath = path.join(process.cwd(), 'automationultra-fast-automation-orchestrator.cjs'),
     
     // Check if the automation script exists
     if (!fs.existsSync(automationPath)) {
@@ -16,23 +16,23 @@ exports.handler = async function(event, context) {
           path: automationPath,
           timestamp: new Date().toISOString()
         })
-      };
+      },
     }
 
     // Import and run the automation
-    const automation = require(automationPath);
+    const automation = require(automationPath),
     
-    let result;
+    let result,
     if (typeof automation === 'function') {
-      result = await automation();
+      result = await automation(),
     } else if (automation && typeof automation.run === 'function') {
-      result = await automation.run();
+      result = await automation.run(),
     } else if (automation && typeof automation.start === 'function') {
-      result = await automation.start();
+      result = await automation.start(),
     } else if (automation && typeof automation.ultraFast === 'function') {
-      result = await automation.ultraFast();
+      result = await automation.ultraFast(),
     } else {
-      result = { status: 'automation script loaded but no run method found' };
+      result = { status: 'automation script loaded but no run method found' },
     }
 
     return {
@@ -45,10 +45,10 @@ exports.handler = async function(event, context) {
         functionName: 'ultra-fast-automation-orchestrator',
         schedule: 'every 5 minutes'
       })
-    };
+    },
 
   } catch (error) {
-    console.error('Ultra-fast automation orchestrator function error:', error);
+    console.error('Ultra-fast automation orchestrator function error:', error),
     
     return {
       statusCode: 500,
@@ -60,6 +60,6 @@ exports.handler = async function(event, context) {
         timestamp: new Date().toISOString(),
         functionName: 'ultra-fast-automation-orchestrator'
       })
-    };
+    },
   }
-};
+},

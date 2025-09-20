@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Star
   ArrowRight
@@ -41,23 +41,23 @@ import {
   Cpu,
   Wifi,
   Lock
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2030PromotionBanner = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentSlidesetCurrentSlide] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentSlidesetCurrentSlide] = useState(0),
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     
     // Auto-advance slides
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }5000);
+      setCurrentSlide((prev) => (prev + 1) % 3),
+    }5000),
 
-    return () => clearInterval(interval);
-  }[]);
+    return () => clearInterval(interval),
+  }[]),
 
   const slides = [
     {
@@ -87,7 +87,7 @@ const UltimateContentShowcase2030PromotionBanner = () => {
       stats: "6.8M views • 678K likes",
       category: "Omniversal"
     }
-  ];
+  ],
 
   const features = [
     "Transcendent AI Consciousness",
@@ -96,9 +96,9 @@ const UltimateContentShowcase2030PromotionBanner = () => {
     "Omniversal Communication",
     "Dimensional Gateway Systems",
     "Reality Creation Engines"
-  ];
+  ],
 
-  if (isDismissed) return null;
+  if (isDismissed) return null,
 
 const UltimateContentShowcase2030PromotionBanner: React.FC = () => {
   return (
@@ -106,7 +106,7 @@ const UltimateContentShowcase2030PromotionBanner: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2030PromotionBanner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2030PromotionBanner;
+export default UltimateContentShowcase2030PromotionBanner,

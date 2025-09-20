@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NewContent2026BreakthroughShowcase() {,
   return (,
     <section className="py-16 bg-white">,
@@ -16,9 +16,9 @@ export default function NewContent2026BreakthroughShowcase() {,
             These breakthrough resources are transforming businesses across every industry.,
           </p>,
         </div>,
-        {/* Featured Content Cards */,}
+        {/* Featured Content Cards */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
-          {/* Autonomous Operations Card */,}
+          {/* Autonomous Operations Card */}
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-purple-100">,
             <div className="flex items-center space-x-3 mb-4">,
               <div className="text-3xl">🤖</div>,
@@ -50,7 +50,7 @@ export default function NewContent2026BreakthroughShowcase() {,
               Read Complete Guide →,
             </Link>,
           </div>,
-          {/* Quantum Computing Card */,}
+          {/* Quantum Computing Card */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-blue-100">,
             <div className="flex items-center space-x-3 mb-4">,
               <div className="text-3xl">⚛️</div>,
@@ -82,7 +82,7 @@ export default function NewContent2026BreakthroughShowcase() {,
               Explore Quantum Future →,
             </Link>,
           </div>,
-          {/* Neural Interface Card */,}
+          {/* Neural Interface Card */}
           <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 border border-purple-100">,
             <div className="flex items-center space-x-3 mb-4">,
               <div className="text-3xl">🧠</div>,
@@ -115,7 +115,7 @@ export default function NewContent2026BreakthroughShowcase() {,
             </Link>,
           </div>,
         </div>,
-        {/* Success Stories Section */,}
+        {/* Success Stories Section */}
         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 mb-12">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Success Stories from Our Clients</h3>,
           <div className="grid md: grid-cols-3 gap-6">,
@@ -139,7 +139,7 @@ export default function NewContent2026BreakthroughShowcase() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>,
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">,
@@ -162,5 +162,4 @@ export default function NewContent2026BreakthroughShowcase() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

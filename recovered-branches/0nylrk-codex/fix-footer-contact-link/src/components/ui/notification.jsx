@@ -1,2 +1,2 @@
 
-export default notification;
+export default notification,

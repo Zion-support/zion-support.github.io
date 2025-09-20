@@ -1,1 +1,1 @@
-export default SEOOptimizer;
+export default SEOOptimizer,

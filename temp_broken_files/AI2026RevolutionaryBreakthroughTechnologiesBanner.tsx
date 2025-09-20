@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {,
   return (,
     <divsection,
       className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-20 overflow-hidden",
     >,
-      {/* Animated Background Elements */,}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">,
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>,
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>,
@@ -13,7 +13,7 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Badge */,}
+          {/* Badge */}
           <div,
             className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-full px-6 py-3 mb-8 shadow-lg",
           >,
@@ -28,7 +28,7 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {,
               Technologies 2026,
             </span>,
           </divh1>,
-          {/* Subheading */,}
+          {/* Subheading */}
           <divp,
             className="text-xl md: text-2xl lg:text-3xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90",
           >,
@@ -73,7 +73,7 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {,
               🚀 Get Implementation Support,
             </a>,
           </div>,
-          {/* Trust Indicators */,}
+          {/* Trust Indicators */}
           <div,
             className="mt-12 pt-8 border-t border-white border-opacity-20",
           >,
@@ -90,10 +90,9 @@ const AI2026RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {,
       </div>,
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-400 rounded-full animate-bounce opacity-60"></div>,
-      <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' ,}}></div>,
-      <div className="absolute bottom-32 left-20 w-5 h-5 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' ,}}></div>,
-    </divsection>,
-  );
-};
-export default AI2026RevolutionaryBreakthroughTechnologiesBanner;
+      <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' }}></div>,
+      <div className="absolute bottom-32 left-20 w-5 h-5 bg-blue-400 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' }}></div>,
+    </divsection>),
+},
+export default AI2026RevolutionaryBreakthroughTechnologiesBanner,
 </div></div></div>,

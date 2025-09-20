@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 ai_changelog_runner function triggered');
+    console.log('🤖 ai_changelog_runner function triggered'),
     
     // Basic implementation - replace with actual logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     return {
       statusCode: 200,
@@ -12,9 +12,9 @@ exports.handler = async function(event, context) {
         timestamp: timestamp,
         function: 'ai_changelog_runner'
       })
-    };
+    },
   } catch (error) {
-    console.error('❌ ai_changelog_runner function failed:', error);
+    console.error('❌ ai_changelog_runner function failed:', error),
     
     return {
       statusCode: 500,
@@ -23,6 +23,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

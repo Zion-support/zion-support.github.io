@@ -1,4 +1,4 @@
-import { Route, Routes, Navigate  } from 'react-router-dom';
+import { Route, Routes, Navigate  } from 'react-router-dom',
 export default function Page() {
  />"
       <Route path="/contact" element={<Contact />} />"
@@ -62,8 +62,8 @@ export default function Page() {
       <Route path="/sitemap" element={<Sitemap />} />"
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
-  );
-};
-export { ContentRoutes };
-export default ContentRoutes;
+  ),
+},
+export { ContentRoutes },
+export default ContentRoutes,
 '"

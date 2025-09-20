@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import React, { useEffect, useState } from "react",
+import { Menu, X } from "lucide-react",
+import { useIsMobile } from "@/hooks/use-mobile",
 
 export default function MarketplaceSidebar({ children }) {
-  const isMobile = useIsMobile();
-  const [isOpen, setIsOpen] = useState(!isMobile);
+  const isMobile = useIsMobile(),
+  const [isOpen, setIsOpen] = useState(!isMobile),
 
   useEffect(() => {
-    setIsOpen(!isMobile);
-  }, [isMobile]);
+    setIsOpen(!isMobile),
+  }, [isMobile]),
 
   return (
     <div className="relative flex">
@@ -27,5 +27,5 @@ export default function MarketplaceSidebar({ children }) {
         {children}
       </aside>
     </div>
-  );
+  ),
 }

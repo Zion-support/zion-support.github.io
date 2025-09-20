@@ -1,152 +1,152 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
- from 'framer-motion';
-,;
-    {;
-      title: "Custom Dashboards",;
-      description: "Build personalized dashboards tailored to your business needs",;
-      icon: Target,;
-      color: "from - orange - 400 to - red - 500";
-    };
-  ];
+ from 'framer-motion',
+,
+    {,
+      title: "Custom Dashboards",
+      description: "Build personalized dashboards tailored to your business needs",
+      icon: Target,
+      color: "from - orange - 400 to - red - 500"
+    },
+  ],
 
 export default function Analytics() {
-  const [timeRange, setTimeRange] = useState('30d');
+  const [timeRange, setTimeRange] = useState('30d'),
   
   const { data: pageViewTrends } = useQuery({
     queryKey: ['page-views-trend', timeRange],
     queryFn: async () => {
       // Get daily page views for trend chart
-      const days = parseInt(timeRange.replace('d', ''));
-      const startDate = new Date();
-      startDate.setDate(startDate.getDate() - days);
+      const days = parseInt(timeRange.replace('d', '')),
+      const startDate = new Date(),
+      startDate.setDate(startDate.getDate() - days),
       
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
-        .eq('event_type', 'page_view')
-        .gte('created_at', startDate.toISOString());
+        .eq('event_typepage_view')
+        .gte('created_at', startDate.toISOString()),
         
-      if (error) throw error;
+      if (error) throw error,
       
       // Group by date
-      const viewsByDate: Record<string, { date: string; views: number }> = {};
+      const viewsByDate: Record<string, { date: string, views: number }> = {},
       data?.forEach(view => {
-        const date = new Date(view.created_at).toISOString().split('T')[0];
-        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 };
-        viewsByDate[date].views++;
-      });
+        const date = new Date(view.created_at).toISOString().split('T')[0],
+        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0 },
+        viewsByDate[date].views++,
+      }),
       
       // Fill in missing dates
-      const result = [];
-      for (let i = 0; i < days; i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        const dateStr = date.toISOString().split('T')[0];
+      const result = [],
+      for (let i = 0, i < days, i++) {
+        const date = new Date(),
+        date.setDate(date.getDate() - i),
+        const dateStr = date.toISOString().split('T')[0],
         
         if (viewsByDate[dateStr]) {
-          result.push(viewsByDate[dateStr]);
+          result.push(viewsByDate[dateStr]),
         } else {
-          result.push({ date: dateStr, views: 0 });
+          result.push({ date: dateStr, views: 0 }),
         }
       }
       
-      return result.sort((a, b) => a.date.localeCompare(b.date));
+      return result.sort((a, b) => a.date.localeCompare(b.date)),
     }
-  });
+  }),
   
   const { data: conversionData } = useQuery({
     queryKey: ['conversion-data', timeRange],
     queryFn: async () => {
-      const days = parseInt(timeRange.replace('d', ''));
-      const startDate = new Date();
-      startDate.setDate(startDate.getDate() - days);
+      const days = parseInt(timeRange.replace('d', '')),
+      const startDate = new Date(),
+      startDate.setDate(startDate.getDate() - days),
       
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, metadata')
-        .eq('event_type', 'conversion')
-        .gte('created_at', startDate.toISOString());
+        .eq('event_typeconversion')
+        .gte('created_at', startDate.toISOString()),
         
-      if (error) throw error;
+      if (error) throw error,
       
       // Group by conversion type and date
-      const conversionsByType: Record<string, Record<string, number>> = {};
+      const conversionsByType: Record<string, Record<string, number>> = {},
       data?.forEach(item => {
-        const date = new Date(item.created_at).toISOString().split('T')[0];
-        const conversionType = item.metadata?.conversionType || 'unknown';
+        const date = new Date(item.created_at).toISOString().split('T')[0],
+        const conversionType = item.metadata?.conversionType || 'unknown',
         
         if (!conversionsByType[conversionType]) {
-          conversionsByType[conversionType] = {};
+          conversionsByType[conversionType] = {},
         }
         
         if (!conversionsByType[conversionType][date]) {
-          conversionsByType[conversionType][date] = 0;
+          conversionsByType[conversionType][date] = 0,
         }
         
-        conversionsByType[conversionType][date]++;
-      });
+        conversionsByType[conversionType][date]++,
+      }),
       
       // Get all dates in range
-      const dates = [];
-      for (let i = 0; i < days; i++) {
-        const date = new Date();
-        date.setDate(date.getDate() - i);
-        dates.push(date.toISOString().split('T')[0]);
+      const dates = [],
+      for (let i = 0, i < days, i++) {
+        const date = new Date(),
+        date.setDate(date.getDate() - i),
+        dates.push(date.toISOString().split('T')[0]),
       }
-      dates.sort();
+      dates.sort(),
       
       // Format data for chart
       return dates.map(date => {
-        const result: Record<string, string | number> = { date };
+        const result: Record<string, string | number> = { date },
         
         Object.keys(conversionsByType).forEach(type => {
-          result[type] = conversionsByType[type][date] || 0;
-        });
+          result[type] = conversionsByType[type][date] || 0,
+        }),
         
-        return result;
-      });
+        return result,
+      }),
     }
-  });
+  }),
 
   const { data: featureUsageData } = useQuery({
     queryKey: ['feature-usage-data', timeRange],
     queryFn: async () => {
-      const days = parseInt(timeRange.replace('d', ''));
+      const days = parseInt(timeRange.replace('d', '')),
       const { data, error } = await supabase.rpc('get_feature_usage_stats', {
-        days_back: days,
-      });
+        days_back: days
+      }),
 
       if (error) {
-        console.error('Error fetching feature usage:', error);
+        console.error('Error fetching feature usage:', error),
         // fallback query
-        const startDate = new Date();
-        startDate.setDate(startDate.getDate() - days);
+        const startDate = new Date(),
+        startDate.setDate(startDate.getDate() - days),
         const { data: manual, error: manualError } = await supabase
           .from('analytics_events')
           .select('created_at, metadata')
-          .eq('event_type', 'feature_usage')
-          .gte('created_at', startDate.toISOString());
+          .eq('event_typefeature_usage')
+          .gte('created_at', startDate.toISOString()),
 
-        if (manualError) throw manualError;
+        if (manualError) throw manualError,
 
-        const usageByDate: Record<string, Record<string, number>> = {};
+        const usageByDate: Record<string, Record<string, number>> = {},
         manual?.forEach(ev => {
-          const date = new Date(ev.created_at).toISOString().split('T')[0];
-          const feature = ev.metadata?.feature || 'unknown';
-          if (!usageByDate[date]) usageByDate[date] = {};
-          if (!usageByDate[date][feature]) usageByDate[date][feature] = 0;
-          usageByDate[date][feature]++;
-        });
+          const date = new Date(ev.created_at).toISOString().split('T')[0],
+          const feature = ev.metadata?.feature || 'unknown',
+          if (!usageByDate[date]) usageByDate[date] = {},
+          if (!usageByDate[date][feature]) usageByDate[date][feature] = 0,
+          usageByDate[date][feature]++,
+        }),
 
         return Object.entries(usageByDate).map(([date, feats]) => ({
           date,
-          ...feats,
-        }));
+          ...feats
+        })),
       }
 
-      return data || [];
+      return data || [],
     },
     {
       name: "Website Analytics",
@@ -162,30 +162,30 @@ export default function Analytics() {
       features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],
       path: "/services / ai - data - analytics"
     },
-    {;
-      name: "Financial Analytics",;
-      description: "Financial performance tracking and optimization",;
-      icon: DollarSign,;
-      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;
-      path: "/services / ai - financial - analytics";
-    };
-  ];
+    {,
+      name: "Financial Analytics",
+      description: "Financial performance tracking and optimization",
+      icon: DollarSign,
+      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
+      path: "/services / ai - financial - analytics"
+    },
+  ],
 
-  const metrics = [;
-    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },;
-    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },;
-    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },;
-    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
-  ];
+  const metrics = [,
+    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },
+    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },
+    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },
+    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" },
+  ],
 
-  const integrations = [;
-    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },;
-    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },;
-    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },;
-    { name: "Slack", icon: "💬", description: "Team communication metrics" },;
-    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;
-    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
-  ];
+  const integrations = [,
+    { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },
+    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },
+    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },
+    { name: "Slack", icon: "💬", description: "Team communication metrics" },
+    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },
+    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -228,7 +228,7 @@ export default function Analytics() {
             <p className="text-xl md:text-2xl text-slate - 300 mb-8 leading -relaxed">
               Transform your raw data into actionable insights with our comprehensive analytics platform.Monitor performance, track trends, and make informed decisions with real - time data.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="inline - flex items - center px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-cyan -500 / 25"
@@ -242,12 +242,12 @@ export default function Analytics() {
                 Explore Services
               </Link>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Metrics Section */}
-      <section className="py-16 bg-slate -800 / 50">;
+      <section className="py-16 bg-slate -800 / 50">,
         <div className="container mx - auto px-4">
           <div className="grid grid - cols - 2 md:grid - cols - 4 gap-8">
             {metrics.map ( (metric, index) => (<motion.div
@@ -275,13 +275,13 @@ export default function Analytics() {
                 <div className="text-3xl font - bold text-white mb-2">{metric.value}</div>
                 <div className="text-cyan - 400 font - semibold mb-1">{metric.label}</div>
                 <div className="text-sm text-slate -400">{metric.description}</div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -331,13 +331,13 @@ export default function Analytics() {
 
                 <h3 className="text-xl font - bold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate -300">{feature.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Analytics Types Section */}
-      <section className="py-20 bg-slate -800 / 50">;
+      <section className="py-20 bg-slate -800 / 50">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -397,17 +397,17 @@ export default function Analytics() {
 
                 <Link
                   to={type.path}
-                  className="inline - flex items - center text-cyan - 400 hover:text-cyan - 300 font - medium transition -colors"
+                  className="inline - flex items - center text-cyan - 400 hover: text-cyan - 300 font - medium transition -colors"
 
                   Learn More < ArrowRight className="ml-2 w-4 h-4" />
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* Integrations Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -454,13 +454,13 @@ export default function Analytics() {
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-white font - medium mb-2">{integration.name}</h3>
                 <p className="text-sm text-slate -400">{integration.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">,
         <div className="container mx - auto px-4 text-center">
           <motion.div
             initial = {
@@ -481,7 +481,7 @@ export default function Analytics() {
             <p className="text-xl text-slate - 300 mb-8 max - w-2xl mx -auto">
               Start transforming your data into actionable insights today.Our analytics platform will help you make better decisions and drive growth.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="inline - flex items - center px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-cyan -500 / 25"
@@ -492,11 +492,11 @@ export default function Analytics() {
                 to="/request - quote"
                 className="inline - flex items - center px-8 py-4 border border-cyan - 400 / 30 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 / 10 transition - all duration -200"
               >
-                Get Custom Quote;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+                Get Custom Quote,
+              </Link>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

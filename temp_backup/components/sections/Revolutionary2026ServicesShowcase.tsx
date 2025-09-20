@@ -1,54 +1,54 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target, Users, Eye, Heart, Code, Palette, Search, Mail, MessageCircle, Calendar, BarChart3, Lightbulb, Globe2, Satellite, Microscope, Flask, ShieldCheck, Zap as ZapIcon, Cpu as CpuIcon, Brain as BrainIcon, Rocket as RocketIcon, Star as StarIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target, Users, Eye, Heart, Code, Palette, Search, Mail, MessageCircle, Calendar, BarChart3, Lightbulb, Globe2, Satellite, Microscope, Flask, ShieldCheck, Zap as ZapIcon, Cpu as CpuIcon, Brain as BrainIcon, Rocket as RocketIcon, Star as StarIcon, TrendingUp as TrendingUpIcon } from 'lucide-react',
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 
 interface Revolutionary2026ServicesShowcaseProps {
-  services: Service[];
-  title?: string;
-  subtitle?: string;
-  maxServices?: number;
+  services: Service[],
+  title?: string,
+  subtitle?: string,
+  maxServices?: number
 }
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
@@ -88,46 +88,11 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Space Agriculture': Globe,
   'Space Energy': ZapIcon,
   'Space Research': Microscope
-};
+},
 
 const categoryColors: { [key: string]: string } = {
-  'AI Consciousness & Ethics': 'from-indigo-500 to-purple-600',
-  'AI Multimodal': 'from-blue-500 to-cyan-600',
-  'AI Autonomous Systems': 'from-green-500 to-emerald-600',
-  'AI Quantum Computing': 'from-purple-500 to-pink-600',
-  'AI Emotional Intelligence': 'from-pink-500 to-rose-600',
-  'AI Creative': 'from-yellow-500 to-orange-600',
-  'AI Predictive Analytics': 'from-indigo-500 to-blue-600',
-  'AI Quantum ML': 'from-purple-500 to-indigo-600',
-  'AI Research': 'from-teal-500 to-green-600',
-  'Zero Trust Security': 'from-red-500 to-pink-600',
-  'Edge Computing': 'from-blue-500 to-cyan-600',
-  '5G Networks': 'from-green-500 to-emerald-600',
-  'Quantum Computing': 'from-purple-500 to-pink-600',
-  'Autonomous IT': 'from-blue-500 to-indigo-600',
-  'Neuromorphic Computing': 'from-indigo-500 to-purple-600',
-  'DNA Computing': 'from-green-500 to-teal-600',
-  'Photonic Computing': 'from-yellow-500 to-orange-600',
-  'Holographic Technology': 'from-pink-500 to-rose-600',
-  'AI Branding': 'from-purple-500 to-pink-600',
-  'Holographic Events': 'from-pink-500 to-rose-600',
-  'AI Transcription': 'from-blue-500 to-cyan-600',
-  'AI Mental Health': 'from-green-500 to-emerald-600',
-  'AI Personalization': 'from-indigo-500 to-purple-600',
-  'AI Customer Experience': 'from-teal-500 to-green-600',
-  'AI Social Media': 'from-blue-500 to-indigo-600',
-  'AI Email Marketing': 'from-orange-500 to-red-600',
-  'AI SEO': 'from-green-500 to-teal-600',
-  'Space Technology': 'from-purple-500 to-indigo-600',
-  'Space Safety': 'from-blue-500 to-cyan-600',
-  'Quantum Space': 'from-green-500 to-emerald-600',
-  'Space Weather': 'from-yellow-500 to-orange-600',
-  'Autonomous Space': 'from-indigo-500 to-purple-600',
-  'Space Tourism': 'from-pink-500 to-rose-600',
-  'Space Agriculture': 'from-green-500 to-teal-600',
-  'Space Energy': 'from-yellow-500 to-orange-600',
-  'Space Research': 'from-indigo-500 to-blue-600'
-};
+  'AI Consciousness & Ethics': 'from-indigo-500 to-purple-600AI Multimodal': 'from-blue-500 to-cyan-600AI Autonomous Systems': 'from-green-500 to-emerald-600AI Quantum Computing': 'from-purple-500 to-pink-600AI Emotional Intelligence': 'from-pink-500 to-rose-600AI Creative': 'from-yellow-500 to-orange-600AI Predictive Analytics': 'from-indigo-500 to-blue-600AI Quantum ML': 'from-purple-500 to-indigo-600AI Research': 'from-teal-500 to-green-600Zero Trust Security': 'from-red-500 to-pink-600Edge Computing': 'from-blue-500 to-cyan-6005G Networks': 'from-green-500 to-emerald-600Quantum Computing': 'from-purple-500 to-pink-600Autonomous IT': 'from-blue-500 to-indigo-600Neuromorphic Computing': 'from-indigo-500 to-purple-600DNA Computing': 'from-green-500 to-teal-600Photonic Computing': 'from-yellow-500 to-orange-600Holographic Technology': 'from-pink-500 to-rose-600AI Branding': 'from-purple-500 to-pink-600Holographic Events': 'from-pink-500 to-rose-600AI Transcription': 'from-blue-500 to-cyan-600AI Mental Health': 'from-green-500 to-emerald-600AI Personalization': 'from-indigo-500 to-purple-600AI Customer Experience': 'from-teal-500 to-green-600AI Social Media': 'from-blue-500 to-indigo-600AI Email Marketing': 'from-orange-500 to-red-600AI SEO': 'from-green-500 to-teal-600Space Technology': 'from-purple-500 to-indigo-600Space Safety': 'from-blue-500 to-cyan-600Quantum Space': 'from-green-500 to-emerald-600Space Weather': 'from-yellow-500 to-orange-600Autonomous Space': 'from-indigo-500 to-purple-600Space Tourism': 'from-pink-500 to-rose-600Space Agriculture': 'from-green-500 to-teal-600Space Energy': 'from-yellow-500 to-orange-600Space Research': 'from-indigo-500 to-blue-600'
+},
 
 export default function Revolutionary2026ServicesShowcase({
   services,
@@ -135,11 +100,11 @@ export default function Revolutionary2026ServicesShowcase({
   subtitle = "Experience the future of technology with our cutting-edge AI, quantum, and space solutions",
   maxServices = 12
 }: Revolutionary2026ServicesShowcaseProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'popular' | 'price' | 'rating' | 'newest'>('popular');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+  const [sortBy, setSortBy] = useState<'popular' | 'price' | 'rating' | 'newest'>('popular'),
 
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(services.map(s => s.category)))];
+  const categories = ['All', ...Array.from(new Set(services.map(s => s.category)))],
 
   // Filter and sort services
   const filteredServices = services
@@ -147,18 +112,17 @@ export default function Revolutionary2026ServicesShowcase({
     .sort((a, b) => {
       switch (sortBy) {
         case 'popular':
-          return b.popular ? 1 : -1;
+          return b.popular ? 1 : -1,
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return 0;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
       }
     })
-    .slice(0, maxServices);
+    .slice(0, maxServices),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -168,7 +132,7 @@ export default function Revolutionary2026ServicesShowcase({
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -180,7 +144,7 @@ export default function Revolutionary2026ServicesShowcase({
         ease: "easeOut"
       }
     }
-  };
+  },
 
 const Revolutionary2026ServicesShowcase: React.FC = () => {
   return (
@@ -188,7 +152,7 @@ const Revolutionary2026ServicesShowcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">Revolutionary2026ServicesShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default Revolutionary2026ServicesShowcase;
+export default Revolutionary2026ServicesShowcase,

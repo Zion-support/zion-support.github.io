@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { LoginModal } from '@/components/auth/LoginModal';
+import { useAuth } from '@/hooks/useAuth',
+import { usePoints } from '@/hooks/usePoints',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { ScrollArea } from '@/components/ui/scroll-area',
+import { formatDistanceToNow } from 'date-fns',
+import Link from 'next/link',
+import { LoginModal } from '@/components/auth/LoginModal',
 
 export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [redeeming, setRedeeming] = useState(false);
+  const { isAuthenticated, user } = useAuth(),
+  const { ledger, balance, loading, fetchLedger } = usePoints(),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const [redeeming, setRedeeming] = useState(false),
 
-  async function handleRedeem(reward: { id: string; cost: number; title: string }) {
-    if (!user?.id) return;
-    setRedeeming(true);
+  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+    if (!user?.id) return,
+    setRedeeming(true),
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
-      });
-      await fetchLedger();
+      }),
+      await fetchLedger(),
     } finally {
-      setRedeeming(false);
+      setRedeeming(false),
     }
   }
 
@@ -60,7 +60,7 @@ export default function PointsPage() {
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-  ];
+  ],
 
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
@@ -68,7 +68,7 @@ export default function PointsPage() {
     { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ];
+  ],
 
   if (!isAuthenticated) {
     return (
@@ -149,7 +149,7 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    );
+    ),
   }
 
   return (
@@ -285,5 +285,5 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-  );
+  ),
 }

@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+import Head from 'next/head',
 
 const SustainableTechnologyPractices = () => {
   return (
@@ -14,7 +14,7 @@ const SustainableTechnologyPractices = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default SustainableTechnologyPractices;
+export default SustainableTechnologyPractices,

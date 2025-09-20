@@ -1,41 +1,41 @@
 
-import { useState, useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
 import { Wallet, Database, Save } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { toast } from 'sonner';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
 
 export default function AccountSettings() {
-  const { user } = useAuth();
-  const [displayWeb3, setDisplayWeb3] = useState(false);
-  const [didHandle, setDidHandle] = useState('');
-  const [enableBackup, setEnableBackup] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
 
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('account_settings');
+      const saved = localStorage.getItem('account_settings'),
       if (saved) {
-        const parsed = JSON.parse(saved);
-        setDisplayWeb3(!!parsed.displayWeb3);
-        setDidHandle(parsed.didHandle || '');
-        setEnableBackup(!!parsed.enableBackup);
+        const parsed = JSON.parse(saved),
+        setDisplayWeb3(!!parsed.displayWeb3),
+        setDidHandle(parsed.didHandle || ''),
+        setEnableBackup(!!parsed.enableBackup),
       }
     } catch (e) {
-      console.error('Error loading account settings', e);
+      console.error('Error loading account settings', e),
     }
-  }, []);
+  }, []),
 
   const handleSave = () => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     // Simulate API call
     setTimeout(() => {
@@ -43,54 +43,54 @@ export default function AccountSettings() {
         localStorage.setItem(
           'account_settings',
           JSON.stringify({ displayWeb3, didHandle, enableBackup })
-        );
-        console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
-        toast.success('Account settings updated successfully');
+        ),
+        console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
+        toast.success('Account settings updated successfully'),
       } catch (e) {
-        console.error('Failed to save settings', e);
-        toast.error('Failed to save settings');
+        console.error('Failed to save settings', e),
+        toast.error('Failed to save settings'),
       } finally {
-        setIsSubmitting(false);
+        setIsSubmitting(false),
       }
-    }, 1000);
-  };
+    }, 1000),
+  },
   
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
-      const ethereum = (window as any).ethereum;
+      const ethereum = (window as any).ethereum,
       if (!ethereum) {
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-        return;
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),
+        return,
       }
       
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-      const address = accounts[0];
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
+      const address = accounts[0],
       
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
       await ethereum.request({
         method: 'personal_sign',
         params: [address, message]
-      });
+      }),
       
       // Auto-set DID handle if ENS is available
       try {
-        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
-        const ensName = await provider.lookupAddress(address);
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum),
+        const ensName = await provider.lookupAddress(address),
         if (ensName) {
-          setDidHandle(ensName);
+          setDidHandle(ensName),
         }
       } catch (error) {
-        console.error('ENS lookup error:', error);
+        console.error('ENS lookup error:', error),
       }
       
-      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
+      toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
     } catch (error: any) {
-      toast.error(error.message || 'Failed to connect wallet');
+      toast.error(error.message || 'Failed to connect wallet')
     }
-  };
+  },
 
   return (
     <>
@@ -288,5 +288,5 @@ export default function AccountSettings() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

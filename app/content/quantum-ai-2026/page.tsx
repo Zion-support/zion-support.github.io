@@ -1,16 +1,16 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum AI 2026: Revolutionary Computing Breakthrough';
-  description: 'Explore how quantum computing will transform AI capabilities in 2026, enabling 1000x performance improvements and breakthrough applications.';
-  keywords: ['quantum AIquantum computing', 'quantum machine learningAI 2026', 'quantum algorithms'],
-};
+  title: 'Quantum AI 2026: Revolutionary Computing Breakthrough',
+  description: 'Explore how quantum computing will transform AI capabilities in 2026, enabling 1000x performance improvements and breakthrough applications.',
+  keywords: ['quantum AIquantum computingquantum machine learningAI 2026', 'quantum algorithms']
+},
 export default function QuantumAI2026() {,
   return (,
     <div className="min-h-screen bg-white">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-2 text-sm text-purple-600 mb-4">,
             <span>Quantum Computing</span>,
@@ -100,7 +100,7 @@ export default function QuantumAI2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Applications */,}
+        {/* Key Applications */}
         <section className="mb-16">,
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Key Quantum AI Applications</h2>,
           <div className="grid md: grid-cols-3 gap-8">,
@@ -200,7 +200,7 @@ export default function QuantumAI2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Roadmap */,}
+        {/* Implementation Roadmap */}
         <section className="mb-16">,
           <h2 className="text-4xl font-bold text-gray-900 mb-8">Implementation Roadmap</h2>,
           <div className="space-y-8">,
@@ -278,7 +278,7 @@ export default function QuantumAI2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="mb-16">,
           <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 rounded-2xl p-12 text-white text-center">,
             <h2 className="text-4xl font-bold mb-6">Ready to Embrace Quantum AI?</h2>,
@@ -302,7 +302,7 @@ export default function QuantumAI2026() {,
             </div>,
           </div>,
         </section>,
-        {/* Related Resources */,}
+        {/* Related Resources */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Resources</h2>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -322,4 +322,4 @@ export default function QuantumAI2026() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

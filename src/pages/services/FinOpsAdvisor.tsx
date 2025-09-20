@@ -1,47 +1,36 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  DollarSign, 
+  DollarSign,
   Play, 
   Settings, 
   Target, 
   CheckCircle, 
   ArrowRight 
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function FinOpsAdvisor() {
   const features = [
     {
-      icon: Target,
-      title: 'Cost Optimization',
-      description: 'Identify and eliminate unnecessary cloud spending'
-    },
+      icon: Target,title: 'Cost Optimization',description: 'Identify and eliminate unnecessary cloud spending'
+    };
     {
-      icon: CheckCircle,
-      title: 'Resource Management',
-      description: 'Optimize resource allocation and utilization'
-    },
+      icon: CheckCircle,title: 'Resource Management',description: 'Optimize resource allocation and utilization'
+    };
     {
-      icon: Settings,
-      title: 'Automation',
-      description: 'Automate cost monitoring and optimization'
+      icon: Settings,title: 'Automation',description: 'Automate cost monitoring and optimization'
     }
   ];
-
   const benefits = [
-    'Reduce cloud costs by 30-50%',
-    'Improve resource utilization',
-    'Implement cost governance',
-    'Optimize pricing models'
-  ];
+    'Reduce cloud costs by 30-50%Improve resource utilization',
+    'Implement cost governanceOptimize pricing models'
+  ],
 
   const useCases = [
-    { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' },
-    { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' },
-    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' },
+    { industry: 'E-commerce', description: 'Optimize seasonal scaling costs' };
+    { industry: 'SaaS', description: 'Manage multi-tenant infrastructure costs' };
+    { industry: 'Healthcare', description: 'Ensure HIPAA-compliant cost optimization' };
     { industry: 'Finance', description: 'Implement cost controls for regulatory compliance' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -266,7 +255,7 @@ export default function FinOpsAdvisor() {
               Join organizations worldwide that use our FinOps solutions to 
               achieve cost efficiency and maximize cloud ROI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -279,8 +268,6 @@ export default function FinOpsAdvisor() {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default FinOpsAdvisor;
-

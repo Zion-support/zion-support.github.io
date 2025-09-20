@@ -1,31 +1,31 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             title: 'Security & Compliance',
             description: 'Enterprise - grade security and compliance features',
             icon: Shield,
-            features['IAM & Access Control', 'Encryption', 'Compliance Frameworks', 'Security Monitoring'];
-        },;
+            features['IAM & Access ControlEncryption', 'Compliance FrameworksSecurity Monitoring'],
+        },
         {
             title: 'Monitoring & Analytics',
             description: 'Comprehensive monitoring and observability',
             icon: BarChart3,
-            features['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management'];
+            features['CloudWatchAzure Monitor', 'StackdriverLog Management'],
         }
-    ];
+    ],
     const benefits = [{ title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
         { title: 'Cost Optimization', description: 'Pay only for what you use with smart resource management', icon: DollarSign },
         { title: 'High Availability', description: '99.9%+ uptime with multi - region deployments', icon: Shield },
         { title: 'Security', description: 'Enterprise - grade security with compliance certifications', icon: Lock },
         { title: 'Performance', description: 'Global CDN and edge computing for optimal speed', icon: Zap },
         { title: 'Disaster Recovery', description: 'Automated backup and recovery solutions', icon: HardDrive }
-    ];
+    ],
     const stats = [{ number: '99.9%', label: 'Uptime SLA', icon: Shield },
         { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
         { number: '10x', label: 'Faster Deployment', icon: Zap },
         { number: '24 / 7', label: 'Monitoring', icon: Wifi }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - blue - 900 to - purple -900">
       {/* Hero Section */}
       <section className="relative overflow-hidden">

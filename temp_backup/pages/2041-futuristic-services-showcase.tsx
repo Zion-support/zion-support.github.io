@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 
 const 2041-futuristic-services-showcase: React.FC = () => {
   return (
@@ -16,8 +16,8 @@ const 2041-futuristic-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 // Import motion from framer-motion
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion',

@@ -1,5 +1,5 @@
-// Hook for useFollowedCategories;
+// Hook for useFollowedCategories,
 export const useUseFollowedCategories: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

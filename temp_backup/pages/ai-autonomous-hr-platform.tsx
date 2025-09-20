@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { Layout } from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { Layout } from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Users, Brain, Zap, CheckCircle, ArrowRight, 
   Target, Calendar, BarChart3, Heart, Shield
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIAutonomousHRPlatform: React.FC = () => {
   return (
@@ -22,6 +22,6 @@ const AIAutonomousHRPlatform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default ai-autonomous-hr-platform;
+  )
+},
+export default ai-autonomous-hr-platform,

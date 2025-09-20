@@ -1,7 +1,7 @@
-import { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
+import { Config } from "tailwindcss",
+import { fontFamily } from "tailwindcss/defaultTheme",
+import plugin from "tailwindcss/plugin",
+import animatePlugin from "tailwindcss-animate",
 
 const config: Config = {
   darkMode: ["class"],
@@ -9,7 +9,7 @@ const config: Config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"
   ],
   safelist: ['border-border'],
   theme: {
@@ -17,8 +17,8 @@ const config: Config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
-      },
+        "2xl": "1400px"
+      }
     },
     extend: {
       colors: {
@@ -29,77 +29,77 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          foreground: "hsl(var(--primary-foreground))"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          foreground: "hsl(var(--secondary-foreground))"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          foreground: "hsl(var(--destructive-foreground))"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          foreground: "hsl(var(--muted-foreground))"
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
+          foreground: "hsl(var(--accent-foreground))"
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          foreground: "hsl(var(--popover-foreground))"
         },
         card: {
           DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
+          foreground: "hsl(var(--card-foreground))"
         },
         // Custom Zion colors (updated palette)
         "zion-blue": {
           DEFAULT: "#2e73ea",
           light: "#8ab1f3",
-          dark: "#172d67",
+          dark: "#172d67"
         },
         "zion-purple": {
           DEFAULT: "#8c15e9",
           light: "#b971f2",
-          dark: "#530c8b",
+          dark: "#530c8b"
         },
         "zion-cyan": {
           DEFAULT: "#22ddd2",
           light: "#7aeae4",
-          dark: "#14847e",
+          dark: "#14847e"
         },
         "zion-slate": {
           DEFAULT: "#17072b",
           light: "#451582",
-          dark: "#000000",
-        },
+          dark: "#000000"
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 4px)"
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-sans)", ...fontFamily.sans]
       },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "var(--radix-accordion-content-height)" }
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+          to: { height: "0" }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
+        "accordion-up": "accordion-up 0.2s ease-out"
+      }
+    }
   },
   plugins: [
     animatePlugin,
@@ -107,16 +107,16 @@ const config: Config = {
       const newUtilities = {
         '.rtl': {
           direction: 'rtl',
-          textAlign: 'right',
+          textAlign: 'right'
         },
         '.ltr': {
           direction: 'ltr',
-          textAlign: 'left',
-        },
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
-};
+          textAlign: 'left'
+        }
+      },
+      addUtilities(newUtilities),
+    })
+  ]
+},
 
-export default config;
+export default config,

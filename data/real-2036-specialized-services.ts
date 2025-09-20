@@ -1,22 +1,22 @@
 export type Real2036SpecializedService = {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: string;
-  period?: string;
-  features: string[];
-  link: string;
-  launchDate?: string;
-  rating?: number;
-  marketSize?: string;
-  targetAudience?: string;
-  competitiveAdvantage?: string;
-  integration?: string[];
-  useCases?: string[];
-  technology?: string[];
-};
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  category: string,
+  price: string,
+  period?: string,
+  features: string[],
+  link: string,
+  launchDate?: string,
+  rating?: number,
+  marketSize?: string,
+  targetAudience?: string,
+  competitiveAdvantage?: string,
+  integration?: string[],
+  useCases?: string[],
+  technology?: string[]
+},
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -28,14 +28,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,999',
     period: '/month',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Adaptive processing algorithms',
-      'Edge computing optimization',
-      'Custom neural models',
-      'Performance benchmarking',
-      'Expert consultation'
+      'Brain-inspired neural architectureUltra-low power consumption',
+      'Real-time learning capabilitiesAdaptive processing algorithms',
+      'Edge computing optimizationCustom neural models',
+      'Performance benchmarkingExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform',
     launchDate: '2036-04-01',
@@ -43,9 +39,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.8B',
     targetAudience: 'Research institutions, AI companies, Semiconductor firms',
     competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning',
-    integration: ['AI frameworks', 'Edge devices', 'IoT platforms', 'Cloud services'],
-    useCases: ['Edge AI processing', 'Autonomous systems', 'Cognitive computing', 'Energy-efficient AI'],
-    technology: ['Neuromorphic chips', 'Spiking neural networks', 'Analog computing', 'Bio-inspired algorithms']
+    integration: ['AI frameworksEdge devices', 'IoT platformsCloud services'],
+    useCases: ['Edge AI processingAutonomous systems', 'Cognitive computingEnergy-efficient AI'],
+    technology: ['Neuromorphic chipsSpiking neural networks', 'Analog computingBio-inspired algorithms']
   },
   // Synthetic Biology Platform
   {
@@ -57,14 +53,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$5,999',
     period: '/month',
     features: [
-      'AI-powered DNA design',
-      'Biological system simulation',
-      'Automated lab protocols',
-      'Genetic circuit optimization',
-      'Safety and compliance tools',
-      'Real-time monitoring',
-      'Custom organism design',
-      'Expert consultation'
+      'AI-powered DNA designBiological system simulation',
+      'Automated lab protocolsGenetic circuit optimization',
+      'Safety and compliance toolsReal-time monitoring',
+      'Custom organism designExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
     launchDate: '2036-04-05',
@@ -72,9 +64,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$3.2B',
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions',
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus',
-    integration: ['Lab automation systems', 'DNA synthesis platforms', 'Sequencing services', 'Cloud platforms'],
-    useCases: ['Drug discovery', 'Biofuel production', 'Environmental remediation', 'Agricultural optimization'],
-    technology: ['CRISPR', 'Gene editing', 'DNA synthesis', 'Bioinformatics']
+    integration: ['Lab automation systemsDNA synthesis platforms', 'Sequencing servicesCloud platforms'],
+    useCases: ['Drug discoveryBiofuel production', 'Environmental remediationAgricultural optimization'],
+    technology: ['CRISPRGene editing', 'DNA synthesisBioinformatics']
   },
   // Quantum Internet Protocol Suite
   {
@@ -86,14 +78,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$2,999',
     period: '/month',
     features: [
-      'Quantum network protocols',
-      'Interoperability standards',
-      'Security frameworks',
-      'Network management tools',
-      'Performance optimization',
-      'Compliance certification',
-      'Custom protocol development',
-      'Expert consultation'
+      'Quantum network protocolsInteroperability standards',
+      'Security frameworksNetwork management tools',
+      'Performance optimizationCompliance certification',
+      'Custom protocol developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/quantum-internet-protocol-suite',
     launchDate: '2036-04-10',
@@ -101,9 +89,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.1B',
     targetAudience: 'Internet service providers, Government agencies, Research institutions',
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus',
-    integration: ['Quantum networks', 'Internet infrastructure', 'Security systems', 'Cloud platforms'],
-    useCases: ['Quantum networks', 'Secure communications', 'Internet infrastructure', 'Government networks'],
-    technology: ['Quantum protocols', 'Network standards', 'Security frameworks', 'Interoperability']
+    integration: ['Quantum networksInternet infrastructure', 'Security systemsCloud platforms'],
+    useCases: ['Quantum networksSecure communications', 'Internet infrastructureGovernment networks'],
+    technology: ['Quantum protocolsNetwork standards', 'Security frameworksInteroperability']
   },
   // Brain-Computer Interface Platform
   {
@@ -115,14 +103,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$4,999',
     period: '/month',
     features: [
-      'Neural signal processing',
-      'Real-time brain monitoring',
-      'Custom interface design',
-      'Safety and compliance',
-      'Performance optimization',
-      'User training tools',
-      'Custom applications',
-      'Expert consultation'
+      'Neural signal processingReal-time brain monitoring',
+      'Custom interface designSafety and compliance',
+      'Performance optimizationUser training tools',
+      'Custom applicationsExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/brain-computer-interface-platform',
     launchDate: '2036-04-15',
@@ -130,9 +114,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.8B',
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies',
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus',
-    integration: ['Medical devices', 'Accessibility tools', 'Gaming platforms', 'Research systems'],
-    useCases: ['Assistive technology', 'Medical research', 'Gaming and entertainment', 'Human augmentation'],
-    technology: ['EEG', 'Neural implants', 'Signal processing', 'Machine learning']
+    integration: ['Medical devicesAccessibility tools', 'Gaming platformsResearch systems'],
+    useCases: ['Assistive technologyMedical research', 'Gaming and entertainmentHuman augmentation'],
+    technology: ['EEGNeural implants', 'Signal processingMachine learning']
   },
   // Metaverse Development Studio Pro
   {
@@ -144,14 +128,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$1,999',
     period: '/month',
     features: [
-      '3D world building tools',
-      'AI-powered NPCs',
-      'Blockchain integration',
-      'Multi-user environments',
-      'VR/AR support',
-      'Performance optimization',
-      'Custom development',
-      'Expert consultation'
+      '3D world building toolsAI-powered NPCs',
+      'Blockchain integrationMulti-user environments',
+      'VR/AR supportPerformance optimization',
+      'Custom developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/metaverse-development-studio-pro',
     launchDate: '2036-04-20',
@@ -159,9 +139,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$8.9B',
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions',
     competitiveAdvantage: '3D tools, AI integration, Blockchain support',
-    integration: ['VR headsets', 'AR devices', 'Blockchain platforms', '3D engines'],
-    useCases: ['Virtual worlds', 'Digital real estate', 'Educational experiences', 'Social platforms'],
-    technology: ['3D graphics', 'Virtual reality', 'Augmented reality', 'Blockchain']
+    integration: ['VR headsetsAR devices', 'Blockchain platforms3D engines'],
+    useCases: ['Virtual worldsDigital real estate', 'Educational experiencesSocial platforms'],
+    technology: ['3D graphicsVirtual reality', 'Augmented realityBlockchain']
   },
   // Autonomous Vehicle AI Platform
   {
@@ -173,14 +153,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,999',
     period: '/month',
     features: [
-      'Computer vision systems',
-      'Sensor fusion algorithms',
-      'Path planning and navigation',
-      'Safety and redundancy',
-      'Real-time processing',
-      'Performance optimization',
-      'Custom vehicle integration',
-      'Expert consultation'
+      'Computer vision systemsSensor fusion algorithms',
+      'Path planning and navigationSafety and redundancy',
+      'Real-time processingPerformance optimization',
+      'Custom vehicle integrationExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/autonomous-vehicle-ai-platform',
     launchDate: '2036-04-25',
@@ -188,9 +164,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$12.4B',
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers',
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing',
-    integration: ['Vehicle systems', 'Sensor arrays', 'Navigation systems', 'Cloud platforms'],
-    useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Public transportation'],
-    technology: ['Computer vision', 'Machine learning', 'Sensor fusion', 'Control systems']
+    integration: ['Vehicle systemsSensor arrays', 'Navigation systemsCloud platforms'],
+    useCases: ['Self-driving carsAutonomous trucks', 'Delivery robotsPublic transportation'],
+    technology: ['Computer visionMachine learning', 'Sensor fusionControl systems']
   },
   // Quantum Materials Discovery Platform
   {
@@ -202,14 +178,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$4,999',
     period: '/month',
     features: [
-      'Quantum material simulation',
-      'AI-powered discovery',
-      'Property prediction',
-      'Synthesis optimization',
-      'Performance testing',
-      'Custom material design',
-      'Expert consultation',
-      'Research collaboration'
+      'Quantum material simulationAI-powered discovery',
+      'Property predictionSynthesis optimization',
+      'Performance testingCustom material design',
+      'Expert consultationResearch collaboration'
     ],
     link: 'https://ziontechgroup.com/services/quantum-materials-discovery-platform',
     launchDate: '2036-04-30',
@@ -217,9 +189,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.6B',
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms',
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design',
-    integration: ['Quantum computers', 'AI platforms', 'Lab systems', 'Research databases'],
-    useCases: ['New materials', 'Energy storage', 'Electronics', 'Manufacturing'],
-    technology: ['Quantum computing', 'Machine learning', 'Materials science', 'Simulation']
+    integration: ['Quantum computersAI platforms', 'Lab systemsResearch databases'],
+    useCases: ['New materialsEnergy storage', 'ElectronicsManufacturing'],
+    technology: ['Quantum computingMachine learning', 'Materials scienceSimulation']
   },
   // AI-Powered Climate Modeling Platform
   {
@@ -231,14 +203,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$2,499',
     period: '/month',
     features: [
-      'AI climate models',
-      'Real-time data analysis',
-      'Predictive modeling',
-      'Scenario simulation',
-      'Data visualization',
-      'Custom analysis',
-      'Expert consultation',
-      'Research collaboration'
+      'AI climate modelsReal-time data analysis',
+      'Predictive modelingScenario simulation',
+      'Data visualizationCustom analysis',
+      'Expert consultationResearch collaboration'
     ],
     link: 'https://ziontechgroup.com/services/ai-climate-modeling-platform',
     launchDate: '2036-05-05',
@@ -246,9 +214,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$3.8B',
     targetAudience: 'Government agencies, Research institutions, Environmental organizations',
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities',
-    integration: ['Climate sensors', 'Satellite data', 'Weather services', 'Research databases'],
-    useCases: ['Climate prediction', 'Policy planning', 'Environmental research', 'Risk assessment'],
-    technology: ['Machine learning', 'Climate models', 'Data analysis', 'Simulation']
+    integration: ['Climate sensorsSatellite data', 'Weather servicesResearch databases'],
+    useCases: ['Climate predictionPolicy planning', 'Environmental researchRisk assessment'],
+    technology: ['Machine learningClimate models', 'Data analysisSimulation']
   },
   // Quantum Neural Network Platform
   {
@@ -260,14 +228,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$3,499',
     period: '/month',
     features: [
-      'Quantum neural networks',
-      'Hybrid quantum-classical AI',
-      'Advanced optimization',
-      'Performance benchmarking',
-      'Custom model development',
-      'Expert consultation',
-      'Research collaboration',
-      'Training and support'
+      'Quantum neural networksHybrid quantum-classical AI',
+      'Advanced optimizationPerformance benchmarking',
+      'Custom model developmentExpert consultation',
+      'Research collaborationTraining and support'
     ],
     link: 'https://ziontechgroup.com/services/quantum-neural-network-platform',
     launchDate: '2036-05-10',
@@ -275,9 +239,9 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$2.2B',
     targetAudience: 'AI companies, Research institutions, Technology firms',
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization',
-    integration: ['Quantum computers', 'AI frameworks', 'Cloud platforms', 'Research tools'],
-    useCases: ['Advanced AI', 'Research applications', 'Commercial AI', 'Scientific computing'],
-    technology: ['Quantum computing', 'Neural networks', 'Machine learning', 'Optimization']
+    integration: ['Quantum computersAI frameworks', 'Cloud platformsResearch tools'],
+    useCases: ['Advanced AIResearch applications', 'Commercial AIScientific computing'],
+    technology: ['Quantum computingNeural networks', 'Machine learningOptimization']
   },
   // Space Tourism Platform
   {
@@ -289,14 +253,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     price: '$6,999',
     period: '/month',
     features: [
-      'Tourism management system',
-      'Safety protocols',
-      'Training programs',
-      'Flight operations',
-      'Customer management',
-      'Compliance tools',
-      'Custom development',
-      'Expert consultation'
+      'Tourism management systemSafety protocols',
+      'Training programsFlight operations',
+      'Customer managementCompliance tools',
+      'Custom developmentExpert consultation'
     ],
     link: 'https://ziontechgroup.com/services/space-tourism-platform',
     launchDate: '2036-05-15',
@@ -304,8 +264,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     marketSize: '$1.2B',
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
-    integration: ['Spacecraft systems', 'Training facilities', 'Booking systems', 'Safety systems'],
-    useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
-    technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
+    integration: ['Spacecraft systemsTraining facilities', 'Booking systemsSafety systems'],
+    useCases: ['Space tourismTraining programs', 'Safety managementCustomer experience'],
+    technology: ['Space systemsSafety protocols', 'Training technologyCustomer management']
   }
-];
+],

@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 export default function AboutPage() {,
 	return (,
 		<>,
@@ -11,7 +11,7 @@ export default function AboutPage() {,
 			</Head>,
 			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">,
 				<div className="container mx-auto px-6 py-16">,
-					{/* Hero Section */,}
+					{/* Hero Section */}
 					<section className="text-center mb-16">,
 						<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
 							About Zion Tech Group,
@@ -31,7 +31,7 @@ export default function AboutPage() {,
 							</Link>,
 						</div>,
 					</section>,
-					{/* Mission & Vision */,}
+					{/* Mission & Vision */}
 					<section className="mb-16">,
 						<div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
 							<div>,
@@ -84,7 +84,7 @@ export default function AboutPage() {,
 							</div>,
 						</div>,
 					</section>,
-					{/* What We Do */,}
+					{/* What We Do */}
 					<section className="mb-16">,
 						<h2 className="text-3xl font-bold mb-8 text-center text-white">What We Do</h2>,
 						<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -126,7 +126,7 @@ export default function AboutPage() {,
 							</Link>,
 						</div>,
 					</section>,
-					{/* CTA Section */,}
+					{/* CTA Section */}
 					<section className="text-center">,
 						<div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 border border-cyan-400/30 rounded-lg p-8">,
 							<h2 className="text-2xl font-bold mb-4 text-white">Ready to Transform Your Business?</h2>,
@@ -145,5 +145,4 @@ export default function AboutPage() {,
 					</section>,
 				</div>,
 			</main>,
-		</>,
-	),}
+		</>)}

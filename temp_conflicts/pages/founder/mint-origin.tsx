@@ -1,1 +1,1 @@
-export { default } from '../nft/mint';
+export { default } from '../nft/mint',

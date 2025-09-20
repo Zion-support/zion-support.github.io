@@ -1,5 +1,5 @@
-// Hook for useApiErrorHandling;
+// Hook for useApiErrorHandling,
 export const useUseApiErrorHandling: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

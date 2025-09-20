@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy';
-  description: 'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.',
-};
+  title: 'AI 2026: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy',
+  description: 'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -36,14 +36,13 @@ export default function Page() {,
             Pair this hub with your CI to block risky changes and promote only evaluation-approved variants.,
           </p>,
           <p>,
-            Continue with the{' ',}
+            Continue with the{' '}
             <Link href="/blog/ai-2026-eval-gated-autonomy" className="text-purple-700 underline">Eval‑Gated Autonomy overview</Link>{' '}
             and the{' '}
             <Link href="/content/ai-2026-evaluation-runbook-starter-kit" className="text-purple-700 underline">Evaluation Runbook Starter Kit</Link>.,
           </p>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

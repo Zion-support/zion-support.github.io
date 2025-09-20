@@ -1,13 +1,13 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Shield, Globe, Cpu, Database } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
-import { revolutionary2026ITInfrastructureServices } from '../data/revolutionary-2026-it-infrastructure';
-import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, Zap, Brain, Atom, Rocket, Shield, Globe, Cpu, Database } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services',
+import { revolutionary2026ITInfrastructureServices } from '../data/revolutionary-2026-it-infrastructure',
+import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas',
 
 export default function Revolutionary2026ServicesShowcase() {
   const contactInfo = {
@@ -15,13 +15,13 @@ export default function Revolutionary2026ServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allRevolutionaryServices = [
     ...revolutionary2026AIServices,
     ...revolutionary2026ITInfrastructureServices,
     ...revolutionary2026MicroSaasServices
-  ];
+  ],
 
   const serviceStats = {
     totalServices: allRevolutionaryServices.length,
@@ -29,10 +29,10 @@ export default function Revolutionary2026ServicesShowcase() {
     itInfrastructure: revolutionary2026ITInfrastructureServices.length,
     microSaas: revolutionary2026MicroSaasServices.length,
     totalValue: allRevolutionaryServices.reduce((sum, service) => {
-      const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-      return sum + price;
+      const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+      return sum + price,
     }, 0)
-  };
+  },
 
 const revolutionary-2026-services-showcase: React.FC = () => {
   return (
@@ -49,7 +49,7 @@ const revolutionary-2026-services-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default revolutionary-2026-services-showcase;
+export default revolutionary-2026-services-showcase,

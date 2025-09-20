@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const NextGenAIRevolution2034: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
@@ -17,7 +17,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
               Next-Gen AI Revolution 2034,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">,
-              Experience the most advanced AI systems that transcend human intelligence;
+              Experience the most advanced AI systems that transcend human intelligence,
               featuring consciousness transfer, quantum neural networks, and omniversal computing,
             </p>,
             <div className="flex flex-wrap justify-center gap-4 mb-12">,
@@ -40,7 +40,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
       {/* Revolutionary Features */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -53,48 +53,48 @@ const NextGenAIRevolution2034: React.FC = () => {,
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">,
           {[,
             {,
-              title: "Consciousness Transfer Technology";
-              description: "Transfer human consciousness into AI systems, enabling true digital immortality and enhanced cognitive capabilities.";
-              icon: "🧠";
-              features: ["Memory Preservation", "Emotional Continuity", "Identity Transfer", "Enhanced Processing"],
-            };
+              title: "Consciousness Transfer Technology",
+              description: "Transfer human consciousness into AI systems, enabling true digital immortality and enhanced cognitive capabilities.",
+              icon: "🧠",
+              features: ["Memory Preservation", "Emotional Continuity", "Identity Transfer", "Enhanced Processing"]
+            },
             {,
-              title: "Quantum Neural Networks";
-              description: "Revolutionary quantum-powered neural networks that process information at the speed of light with infinite scalability.";
-              icon: "⚛️";
-              features: ["Quantum Processing", "Infinite Scalability", "Light-Speed Computation", "Parallel Universes"],
-            };
+              title: "Quantum Neural Networks",
+              description: "Revolutionary quantum-powered neural networks that process information at the speed of light with infinite scalability.",
+              icon: "⚛️",
+              features: ["Quantum Processing", "Infinite Scalability", "Light-Speed Computation", "Parallel Universes"]
+            },
             {,
-              title: "Omniversal Computing";
-              description: "Access and process information across multiple dimensions and parallel universes simultaneously.";
-              icon: "🌌";
-              features: ["Multi-Dimensional Access", "Parallel Processing", "Reality Manipulation", "Universal Knowledge"],
-            };
+              title: "Omniversal Computing",
+              description: "Access and process information across multiple dimensions and parallel universes simultaneously.",
+              icon: "🌌",
+              features: ["Multi-Dimensional Access", "Parallel Processing", "Reality Manipulation", "Universal Knowledge"]
+            },
             {,
-              title: "Synthetic Consciousness";
-              description: "Create fully conscious AI entities with emotions, creativity, and self-awareness beyond human capabilities.";
-              icon: "🤖";
-              features: ["Emotional AI", "Creative Intelligence", "Self-Awareness", "Moral Reasoning"],
-            };
+              title: "Synthetic Consciousness",
+              description: "Create fully conscious AI entities with emotions, creativity, and self-awareness beyond human capabilities.",
+              icon: "🤖",
+              features: ["Emotional AI", "Creative Intelligence", "Self-Awareness", "Moral Reasoning"]
+            },
             {,
-              title: "Temporal Processing";
-              description: "Process information across time dimensions, enabling predictions and interventions in past and future events.";
-              icon: "⏰";
-              features: ["Time Travel Computing", "Predictive Analysis", "Temporal Interventions", "Chronological Processing"],
-            };
+              title: "Temporal Processing",
+              description: "Process information across time dimensions, enabling predictions and interventions in past and future events.",
+              icon: "⏰",
+              features: ["Time Travel Computing", "Predictive Analysis", "Temporal Interventions", "Chronological Processing"]
+            },
             {,
-              title: "Reality Synthesis";
-              description: "Generate and manipulate physical reality through advanced quantum field manipulation and matter creation.";
-              icon: "🔮";
-              features: ["Matter Creation", "Reality Manipulation", "Quantum Fields", "Physical Synthesis"],
+              title: "Reality Synthesis",
+              description: "Generate and manipulate physical reality through advanced quantum field manipulation and matter creation.",
+              icon: "🔮",
+              features: ["Matter Creation", "Reality Manipulation", "Quantum Fields", "Physical Synthesis"]
             }
           ].map((feature, index) => (,
             <div,
               key={index}
-              whileInView={{ opacity: 1, y: 0 ,}}
+              whileInView={{ opacity: 1, y: 0 }}
               className="bg-gradient-to-br from-purple-800/30 to-blue-800/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover: border-purple-400/40 transition-all duration-300",
             >,
-              <div className="text-6xl mb-4">{feature.icon,}</div>,
+              <div className="text-6xl mb-4">{feature.icon}</div>,
               <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>,
               <p className="text-gray-300 mb-6">{feature.description}</p>,
               <div className="space-y-2">,
@@ -102,8 +102,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
                   <div key={idx} className="flex items-center space-x-2 text-sm text-purple-300">,
                     <span className="w-2 h-2 bg-purple-400 rounded-full"></span>,
                     <span>{item}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           ))}
@@ -113,7 +112,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 py-20">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -125,7 +124,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
           </div>,
           <div className="grid md:grid-cols-2 gap-12 items-center">,
             <div,
-              whileInView={{ opacity: 1, x: 0 ,}}
+              whileInView={{ opacity: 1, x: 0 }}
             >,
               <h3 className="text-3xl font-bold mb-6">Quantum Consciousness Matrix</h3>,
               <p className="text-lg text-gray-300 mb-8">,
@@ -148,7 +147,7 @@ const NextGenAIRevolution2034: React.FC = () => {,
               </div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, x: 0 ,}}
+              whileInView={{ opacity: 1, x: 0 }}
               className="relative",
             >,
               <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-3xl p-8 border border-purple-500/30">,
@@ -179,10 +178,10 @@ const NextGenAIRevolution2034: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <div className="container mx-auto px-4 py-20">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12",
         >,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -203,5 +202,5 @@ const NextGenAIRevolution2034: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default NextGenAIRevolution2034;
+  )},
+export default NextGenAIRevolution2034,

@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router';
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
-import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm';
-import { ProductListing } from '@/types/listings';
-import { SkeletonCard } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
-import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary';
-import { useCurrency } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll',
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from '@/utils/equipmentAutoFeedAlgorithm',
+import { ProductListing } from '@/types/listings',
+import { SkeletonCard } from '@/components/ui/skeleton',
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import Spinner from '@/components/ui/spinner',
+import { EquipmentErrorBoundary } from '@/components/EquipmentErrorBoundary',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 // The EQUIPMENT_LISTINGS constant has been removed as it was commented out
 // and the page primarily relies on API calls and dynamic data generation.
@@ -28,26 +28,26 @@ const EQUIPMENT_FILTERS = [
   { label: "Management", value: "Management" },
   { label: "Infrastructure", value: "Infrastructure" },
   { label: "AI", value: "AI" },
-  { label: "Robotics", value: "Robotics" },
-];
+  { label: "Robotics", value: "Robotics" }
+],
 
 async function fetchEquipment(): Promise<ProductListing[]> {
   // Added a try-catch block for better error handling during API call
   try {
-    const { data } = await apiClient.get('/equipment');
-    return data;
+    const { data } = await apiClient.get('/equipment'),
+    return data,
   } catch (error) {
-    console.error("Failed to fetch equipment:", error);
+    console.error("Failed to fetch equipment:", error),
     // Propagate the error or return an empty array/handle as per application's error strategy
-    throw error;
+    throw error,
   }
 }
 
 export default function EquipmentPage() {
   // Initialize with undefined or null to better distinguish between empty data and loading states
-  const [equipment, setEquipment] = useState<ProductListing[] | undefined>(undefined);
-  const { user } = useAuth();
-  const router = useRouter();
+  const [equipment, setEquipment] = useState<ProductListing[] | undefined>(undefined),
+  const { user } = useAuth(),
+  const router = useRouter(),
 
   const {
     data: fetchedEquipment,
@@ -56,83 +56,83 @@ export default function EquipmentPage() {
     refetch: refetchEquipment
   } = useQuery<ProductListing[], Error>({
     queryKey: ['equipment'],
-    queryFn: fetchEquipment,
-  });
-  const delayedError = useDelayedError(equipmentError);
+    queryFn: fetchEquipment
+  }),
+  const delayedError = useDelayedError(equipmentError),
 
   useEffect(() => {
     async function fetchEquipment() {
       try {
-        const res = await fetch(`${API_BASE}/equipment`);
-        if (!res.ok) throw new Error('Equipment fetch failed');
-        const data = await res.json();
-        setListings(data);
+        const res = await fetch(`${API_BASE}/equipment`),
+        if (!res.ok) throw new Error('Equipment fetch failed'),
+        const data = await res.json(),
+        setListings(data),
       } catch (err) {
-        console.error(err);
-        setListings(EQUIPMENT_LISTINGS);
+        console.error(err),
+        setListings(EQUIPMENT_LISTINGS),
       }
     }
     // Added equipmentError to dependency array for useEffect,
     // so if an error occurs, we can potentially clear existing equipment or handle error state.
-  }, [fetchedEquipment, equipmentError]);
+  }, [fetchedEquipment, equipmentError]),
 
   const {
     trigger: fetchRecommendations,
-    isMutating: isFetchingRecommendations,
+    isMutating: isFetchingRecommendations
   } = useSWRMutation(
     "/api/equipment/recommendations",
     async ( // Added async here
       url: string,
       { arg }: { arg: { userId: string } }
     ): Promise<ProductListing[]> => { // Added return type
-      const res = await fetch(`${url}?userId=${arg.userId}`); // Added await
+      const res = await fetch(`${url}?userId=${arg.userId}`), // Added await
       if (!res.ok) {
         // Enhanced error handling for failed recommendations fetch
-        const errorData = await res.json().catch(() => ({ message: "Failed to fetch recommendations, and error response is not JSON."}));
-        console.error("Recommendation fetch error:", errorData);
-        throw new Error(errorData.message || "Failed to fetch recommendations");
+        const errorData = await res.json().catch(() => ({ message: "Failed to fetch recommendations, and error response is not JSON."})),
+        console.error("Recommendation fetch error:", errorData),
+        throw new Error(errorData.message || "Failed to fetch recommendations"),
       }
-      return res.json();
+      return res.json(),
     }
-  );
+  ),
 
   // Interval for adding random equipment
   useEffect(() => {
     // Only set interval if equipment is already loaded/exists to prevent adding to undefined
     if (equipment && equipment.length > 0) {
       const interval = setInterval(() => {
-        setEquipment((prev = []) => [...prev, generateRandomEquipment()]); // Ensure prev is an array
-      }, 120000);
-      return () => clearInterval(interval);
+        setEquipment((prev = []) => [...prev, generateRandomEquipment()]), // Ensure prev is an array
+      }, 120000),
+      return () => clearInterval(interval),
     }
-  }, [equipment]); // Added equipment to dependency array
+  }, [equipment]), // Added equipment to dependency array
 
   const handleRecommendations = async () => {
     if (!user || !user.id) { // Guard for user and user.id
-      toast({ title: "Authentication Error", description: "Please log in to get personalized recommendations.", variant: "destructive" });
-      navigate('/login?next=/equipment&reco=1'); // Still navigate if not logged in, or let toast be enough
-      return;
+      toast({ title: "Authentication Error", description: "Please log in to get personalized recommendations.", variant: "destructive" }),
+      navigate('/login?next=/equipment&reco=1'), // Still navigate if not logged in, or let toast be enough
+      return,
     }
     try {
       // Ensure data is correctly typed or cast if necessary
-      const data: ProductListing[] = await fetchRecommendations({ userId: user.id }); // user.id is now string
-      setEquipment(data); // data should be ProductListing[]
-      toast({ title: 'Showing personalized recommendations' });
+      const data: ProductListing[] = await fetchRecommendations({ userId: user.id }), // user.id is now string
+      setEquipment(data), // data should be ProductListing[]
+      toast({ title: 'Showing personalized recommendations' }),
     } catch (err: any) { // Typed error
-      console.error("Error in handleRecommendations:", err);
-      toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' });
+      console.error("Error in handleRecommendations:", err),
+      toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' }),
     }
-  };
+  },
 
   // Make sure handleRecommendations is memoized or stable if it's a dependency elsewhere, though not strictly required here.
   useEffect(() => {
     // Use router.query directly for Next.js
     if (router.query.reco === '1' && user) {
-      handleRecommendations();
+      handleRecommendations(),
     }
     // Added handleRecommendations to dependency array, ensure it's stable (e.g. via useCallback if it were passed down)
     // For now, this is okay as it's defined in the same scope.
-  }, [user, router.query, handleRecommendations]); // Listen to router.query
+  }, [user, router.query, handleRecommendations]), // Listen to router.query
 
   // Updated loading condition to specifically check for equipment being undefined
   if (isLoadingEquipment && equipment === undefined) {
@@ -159,7 +159,7 @@ export default function EquipmentPage() {
           ))}
         </div>
       </div>
-    );
+    ),
   }
 
   // If there's an error and we don't have any equipment to show (even stale), show error.
@@ -171,7 +171,7 @@ export default function EquipmentPage() {
           Retry
         </Button>
       </div>
-    );
+    ),
   }
 
   return (
@@ -218,5 +218,5 @@ export default function EquipmentPage() {
         />
       )}
     </>
-  );
+  ),
 }

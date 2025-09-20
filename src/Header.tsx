@@ -1,6 +1,5 @@
-import React from 'react';
-import NotificationSystem from './components/NotificationSystem';
-
+import React from "react";
+import NotificationSystem from "./components/NotificationSystem";
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
@@ -51,13 +50,13 @@ const Header: React.FC = () => {
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             <NotificationSystem />
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover: shadow-lg transition-all duration-300 font-medium">
               Get Started
             </button>
           </div>
         </div>
       </div>
     </header>
-  );
+  )
   };
 export default Header;

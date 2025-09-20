@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Eye, Atom, Zap, Target, Shield, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumSensingPlatform: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumSensingPlatform: React.FC = () => {
       title: 'Scalable Platform',
       description: 'Handles applications from laboratory to industrial scale'
     }
-  ];
+  ],
 
   const sensingCapabilities = [
     {
       area: 'Quantum Imaging',
-      capabilities: ['Single-photon detection', 'Quantum-enhanced microscopy', 'Quantum radar', 'Quantum lidar'],
+      capabilities: ['Single-photon detectionQuantum-enhanced microscopy', 'Quantum radarQuantum lidar'],
       improvement: '1000x better resolution',
       sensitivity: 'Single photon level'
     },
     {
       area: 'Quantum Magnetometry',
-      capabilities: ['SQUID sensors', 'Atomic magnetometers', 'NV center sensing', 'Quantum Hall effect'],
+      capabilities: ['SQUID sensorsAtomic magnetometers', 'NV center sensingQuantum Hall effect'],
       improvement: '100x more sensitive',
       sensitivity: 'Femtotesla range'
     },
     {
       area: 'Quantum Gravimetry',
-      capabilities: ['Atom interferometry', 'Quantum gravimeters', 'Gravity gradiometry', 'Tidal measurements'],
+      capabilities: ['Atom interferometryQuantum gravimeters', 'Gravity gradiometryTidal measurements'],
       improvement: '10x more precise',
       sensitivity: 'Nanogal precision'
     },
     {
       area: 'Quantum Spectroscopy',
-      capabilities: ['Quantum-enhanced spectroscopy', 'Single-molecule detection', 'Quantum frequency combs', 'Quantum metrology'],
+      capabilities: ['Quantum-enhanced spectroscopySingle-molecule detection', 'Quantum frequency combsQuantum metrology'],
       improvement: '100x better resolution',
       sensitivity: 'Molecular level'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Medical Imaging',
       description: 'Quantum-enhanced medical imaging for early disease detection and precise diagnostics',
-      benefits: ['Sub-cellular resolution', 'Early disease detection', 'Reduced radiation exposure']
+      benefits: ['Sub-cellular resolutionEarly disease detection', 'Reduced radiation exposure']
     },
     {
       title: 'Environmental Monitoring',
       description: 'Quantum sensing for pollution detection, climate monitoring, and resource exploration',
-      benefits: ['Real-time monitoring', 'Ultra-sensitive detection', 'Wide area coverage']
+      benefits: ['Real-time monitoringUltra-sensitive detection', 'Wide area coverage']
     },
     {
       title: 'Defense & Security',
       description: 'Quantum sensing for threat detection, surveillance, and secure communications',
-      benefits: ['Stealth detection', 'Quantum-secure communications', 'Advanced threat identification']
+      benefits: ['Stealth detectionQuantum-secure communications', 'Advanced threat identification']
     },
     {
       title: 'Scientific Research',
       description: 'Quantum sensing for fundamental physics research and discovery',
-      benefits: ['Unprecedented precision', 'New physics discovery', 'Advanced instrumentation']
+      benefits: ['Unprecedented precisionNew physics discovery', 'Advanced instrumentation']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumSensingPlatform: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small sensing projects',
       features: [
-        'Up to 100 sensing operations/month',
-        'Basic quantum sensors',
-        'Standard sensing modes',
-        'Email support',
+        'Up to 100 sensing operations/monthBasic quantum sensors',
+        'Standard sensing modesEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumSensingPlatform: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing research teams and industrial applications',
       features: [
-        'Up to 500 sensing operations/month',
-        'Advanced quantum sensors',
-        'Custom sensing configurations',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 sensing operations/monthAdvanced quantum sensors',
+        'Custom sensing configurationsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumSensingPlatform: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government agencies',
       features: [
-        'Unlimited sensing operations',
-        'Custom quantum sensor development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited sensing operationsCustom quantum sensor development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumSensingPlatform: React.FC = () => {
       position: "Research Director",
       company: "Quantum Physics Laboratory"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumSensingPlatform: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Sense with Quantum Power?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumSensingPlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumSensingPlatform;
+export default QuantumSensingPlatform,

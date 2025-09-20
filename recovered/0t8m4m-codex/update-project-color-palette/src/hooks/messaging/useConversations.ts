@@ -1,11 +1,11 @@
 
-import { UserProfile, UserDetails } from '@/types/auth';
-import { supabase } from '@/integrations/supabase/client';
-import { Conversation, ConversationContextData } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
+import { UserProfile, UserDetails } from '@/types/auth',
+import { supabase } from '@/integrations/supabase/client',
+import { Conversation, ConversationContextData } from '@/types/messaging',
+import { toast } from '@/hooks/use-toast',
 
 // Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null;
+type UserWithProfile = UserProfile | UserDetails | null,
 
 /**
  * Hook to handle conversation operations
@@ -20,23 +20,23 @@ export function useConversations(
    * Fetch conversations for the current user
    */
   const fetchConversations = async () => {
-    if (!user) return;
+    if (!user) return,
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       // Fetch conversations from the database
       const { data, error } = await supabase
         .from('conversations')
         .select('*')
-        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`);
+        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`),
         
-      if (error) throw error;
+      if (error) throw error,
       
       // Format conversations
       const formattedConversations: Conversation[] = data.map(conv => {
-        const isUserOne = conv.user_one_id === user.id;
-        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
+        const isUserOne = conv.user_one_id === user.id,
+        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id,
         
         return {
           id: conv.id,
@@ -58,23 +58,23 @@ export function useConversations(
           context_type: conv.context_type,
           context_id: conv.context_id,
           context_data: conv.context_data
-        };
-      });
+        },
+      }),
       
-      setConversations(formattedConversations);
+      setConversations(formattedConversations),
       
       // Calculate total unread count
       const totalUnread = formattedConversations.reduce(
         (total, conv) => total + (conv.unread_count || 0), 
         0
-      );
-      setUnreadCount(totalUnread);
+      ),
+      setUnreadCount(totalUnread),
     } catch (error) {
-      console.error('Error fetching conversations:', error);
+      console.error('Error fetching conversations:', error),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   /**
    * Create a new conversation and send initial message
@@ -86,22 +86,22 @@ export function useConversations(
     contextId?: string,
     contextData?: ConversationContextData
   ) => {
-    if (!user || !initialMessage.trim()) return;
+    if (!user || !initialMessage.trim()) return,
     
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
-        .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`);
+        .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`),
         
-      if (fetchError) throw fetchError;
+      if (fetchError) throw fetchError,
       
-      let conversationId;
+      let conversationId,
       
       if (existingConversations && existingConversations.length > 0) {
         // Use existing conversation
-        conversationId = existingConversations[0].id;
+        conversationId = existingConversations[0].id,
         
         // Update context if provided
         if (contextType || contextId || contextData) {
@@ -113,7 +113,7 @@ export function useConversations(
               context_data: contextData,
               updated_at: new Date().toISOString()
             })
-            .eq('id', conversationId);
+            .eq('id', conversationId),
         }
       } else {
         // Get recipient information
@@ -121,9 +121,9 @@ export function useConversations(
           .from('profiles')
           .select('display_name, avatar_url, user_type')
           .eq('id', recipientId)
-          .single();
+          .single(),
           
-        if (recipientError) throw recipientError;
+        if (recipientError) throw recipientError,
         
         // Create a new conversation
         const { data: newConversation, error: createError } = await supabase
@@ -146,11 +146,11 @@ export function useConversations(
             context_data: contextData
           })
           .select('id')
-          .single();
+          .single(),
           
-        if (createError) throw createError;
+        if (createError) throw createError,
         
-        conversationId = newConversation.id;
+        conversationId = newConversation.id,
       }
       
       // Send the initial message
@@ -163,25 +163,25 @@ export function useConversations(
           content: initialMessage,
           created_at: new Date().toISOString(),
           read: false
-        });
+        }),
       
       // Update conversations list
-      await fetchConversations();
+      await fetchConversations(),
       
       // Return the conversation ID
-      return conversationId;
+      return conversationId,
     } catch (error) {
-      console.error('Error creating conversation:', error);
+      console.error('Error creating conversation:', error),
       toast({
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
-      });
+      }),
     }
-  };
+  },
 
   return {
     fetchConversations,
-    createConversation,
-  };
+    createConversation
+  },
 }

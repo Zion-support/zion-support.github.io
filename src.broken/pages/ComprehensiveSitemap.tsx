@@ -22,8 +22,8 @@ export default function ComprehensiveSitemap() {
           </Link>
 }
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 import {
   Home,
   Rocket,
@@ -56,7 +56,7 @@ import {
   Star,
   Award,
   TrendingUp
-} from 'lucide-react';
+} from 'lucide-react',
 
 export function ComprehensiveSitemap() {
   const siteStructure = [
@@ -152,41 +152,41 @@ export function ComprehensiveSitemap() {
         { name: 'Developer Portal', href: '/developer', description: 'Developer resources' }
       ]
     }
-  ];
+  ],
 
   const quickLinks = [
     { name: 'Get Started', href: '/request-quote', icon: ArrowRight, color: 'from-cyan-500 to-blue-600' },
     { name: 'Contact Us', href: '/contact', icon: Phone, color: 'from-green-500 to-emerald-600' },
     { name: 'View Services', href: '/services', icon: Rocket, color: 'from-purple-500 to-pink-600' },
     { name: 'Read Blog', href: '/blog', icon: FileText, color: 'from-orange-500 to-red-600' }
-  ];
+  ],
 
   const serviceHighlights = [
     {
       category: 'AI & Machine Learning',
       icon: Brain,
-      services: ['AI Analytics', 'Natural Language Processing', 'Computer Vision', 'Predictive Modeling'],
+      services: ['AI AnalyticsNatural Language Processing', 'Computer VisionPredictive Modeling'],
       href: '/services/ai'
     },
     {
       category: 'Cybersecurity',
       icon: Shield,
-      services: ['Threat Detection', 'Penetration Testing', 'Security Auditing', 'Incident Response'],
+      services: ['Threat DetectionPenetration Testing', 'Security AuditingIncident Response'],
       href: '/services/cybersecurity'
     },
     {
       category: 'Cloud & DevOps',
       icon: Cloud,
-      services: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
+      services: ['Cloud MigrationDevOps Automation', 'Container OrchestrationInfrastructure as Code'],
       href: '/services/cloud'
     },
     {
       category: 'Digital Transformation',
       icon: Workflow,
-      services: ['Process Optimization', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
+      services: ['Process OptimizationLegacy Modernization', 'Digital StrategyChange Management'],
       href: '/services/digital'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -339,7 +339,7 @@ export function ComprehensiveSitemap() {
 
       {/* Footer Navigation */}
       <div className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -369,9 +369,9 @@ export function ComprehensiveSitemap() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ComprehensiveSitemap;
+export default ComprehensiveSitemap,
 
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

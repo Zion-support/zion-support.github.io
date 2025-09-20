@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function AISalesForecastingInventory() {,
   return (,
     <>,
@@ -48,6 +48,6 @@ export default function AISalesForecastingInventory() {,
         </section>,
       </main>,
     </>,
-  ),
+  )
 }
 ,

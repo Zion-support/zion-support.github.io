@@ -4,12 +4,12 @@
         </div>,
         {/* Search and Filters */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="mb-12",
         >,
           <div className="flex flex-col lg: flex-row gap-6 items-center justify-between">,
-            {/* Search */,}
+            {/* Search */}
             <div className="relative flex-1 max-w-md">,
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />,
               <input,
@@ -19,7 +19,7 @@
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20",
               />,
-            {/* Sort and View Controls */,}
+            {/* Sort and View Controls */}
             <div className="flex items-center gap-4">,
               <select,
                 value={sortBy}
@@ -32,15 +32,15 @@
                 <option value="newest">Newest First</option>,
               <div className="flex bg-white/10 rounded-xl p-1">,
                 <button,
-                  onClick={() => setViewMode('grid'),}
+                  onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all ${,
-                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white',}`}
+                    viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white'}`}
                 >,
                   <Grid className="w-5 h-5" />,
                 <button,
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all ${,
-                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white',}`}
+                    viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover: text-white'}`}
                 >,
                   <List className="w-5 h-5" />,
                 </button>,
@@ -50,8 +50,8 @@
         </div>,
         {/* Category Filter */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="mb-12",
         >,
           <div className="flex flex-wrap justify-center gap-3">,
@@ -62,7 +62,7 @@
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${,
                   selectedCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg',
-                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-white/70 hover: bg-white/20 hover:text-white'}`}
               >,
                 <span>{category.icon}</span>,
                 {category.name}
@@ -79,12 +79,11 @@
                   key={service.id}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl",
                 >,
-                  {/* Popular Badge */,}
+                  {/* Popular Badge */}
                   {service.popular && (,
                     <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">,
                       <Star className="w-3 h-3" />,
-                      Popular,
-                  )}
+                      Popular)}
                   {/* Service Content */}
                   <div className="p-6">,
                     <div className="flex items-start justify-between mb-4">,
@@ -124,7 +123,7 @@
                     </a>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             </div>,
           </div>,
         ) : (,
@@ -136,13 +135,12 @@
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover: border-cyan-400/30 transition-all duration-300 p-6",
                 >,
                   <div className="flex flex-col lg:flex-row gap-6">,
-                    {/* Left Side - Icon and Basic Info */,}
+                    {/* Left Side - Icon and Basic Info */}
                     <div className="flex-shrink-0">,
                       <div className="text-6xl mb-4">{service.icon}</div>,
                       {service.popular && (,
                         <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center">,
-                          Popular,
-                      )}
+                          Popular)}
                     {/* Center - Service Details */}
                     <div className="flex-1">,
                       <div className="flex items-start justify-between mb-4">,
@@ -158,8 +156,7 @@
                         {service.features.slice(0, 6).map((feature, idx) => (,
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">,
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
-                            <span className="truncate">{feature}</span>,
-                        ))}
+                            <span className="truncate">{feature}</span>))}
                       {/* Stats Row */}
                       <div className="flex items-center gap-6 text-sm text-white/60">,
                         <div className="flex items-center gap-2">,
@@ -190,7 +187,7 @@
                     </div>,
                   </div>,
                 </div>,
-              )),}
+              ))}
             </div>,
           </div>,
         )}
@@ -202,12 +199,11 @@
             <div className="text-6xl mb-4">🔍</div>,
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
             <p className="text-white/60">Try adjusting your search or filter criteria</p>,
-          </div>,
-        )}
+          </div>)}
         {/* Contact CTA */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
-          viewport={{ once: true ,}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="mt-20 text-center",
         >,
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">,
@@ -233,9 +229,9 @@
         </div>,
       </div>,
     </section>,
-  );
-export default ComprehensiveServicesShowcase;
-import React from "react";
+  ),
+export default ComprehensiveServicesShowcase,
+import React from "react",
 const function ComprehensiveServicesShowcase() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -246,7 +242,7 @@ const function ComprehensiveServicesShowcase() { = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-};
-export default function ComprehensiveServicesShowcase() {;
+  )
+},
+export default function ComprehensiveServicesShowcase() {,
 }}}

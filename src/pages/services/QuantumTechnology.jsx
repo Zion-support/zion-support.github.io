@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Box, Cpu, Zap, Globe, Rocket, Shield } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Box, Cpu, Zap, Globe, Rocket, Shield } from "lucide-react";
 const QuantumTechnology = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex justify-center mb-6">
@@ -41,7 +41,7 @@ const QuantumTechnology = () => {
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 Quantum computing leverages the principles of quantum mechanics to process information in ways that 
-                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously, 
+                classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously;
                 quantum computers can solve complex problems exponentially faster.
               </p>
               <div className="space-y-4">
@@ -143,7 +143,7 @@ const QuantumTechnology = () => {
       </section>
 
       {/* Applications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Quantum Computing Applications
@@ -287,7 +287,7 @@ const QuantumTechnology = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for the Quantum Revolution?
@@ -305,6 +305,6 @@ const QuantumTechnology = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default QuantumTechnology;

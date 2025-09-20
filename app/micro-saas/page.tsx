@@ -1,17 +1,17 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'Micro SaaS Solutions - Zion Tech Group';
-  description: 'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
-  keywords: ['micro saascustom software', 'business solutionsscalable applications'];
+  title: 'Micro SaaS Solutions - Zion Tech Group',
+  description: 'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',
+  keywords: ['micro saascustom softwarebusiness solutionsscalable applications'],
   openGraph: {,
-    title: 'Micro SaaS Solutions - Zion Tech Group';
-    description: 'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
-    type: 'website';
-    url: '/micro-saas',}
-};
+    title: 'Micro SaaS Solutions - Zion Tech Group',
+    description: 'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',
+    type: 'website',
+    url: '/micro-saas'}
+},
 export default function MicroSaaS() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -52,7 +52,7 @@ export default function MicroSaaS() {,
             </div>,
           </div>,
         </section>,
-        {/* Content Section */,}
+        {/* Content Section */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="text-center">,
@@ -80,6 +80,5 @@ export default function MicroSaaS() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

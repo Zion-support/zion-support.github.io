@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, Search, 
   Brain, Rocket, Shield, 
@@ -9,16 +9,16 @@ import {
   Palette, BookOpen, GraduationCap, Heart,
   Truck, DollarSign, Lock, Cpu, Database,
   Cloud, Wifi, ShieldCheck, Code, Layers
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  color?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  color?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -137,24 +137,24 @@ const navigationItems: NavigationItem[] = [
       { name: 'Biotech Research Automation', href: '/biotech-research-automation', description: 'Automated research workflows', badge: 'Fast' }
     ]
   }
-];
+],
 
 export default function UltraFuturisticNavigation2035() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
+    setActiveDropdown(activeDropdown === name ? null : name)
+  },
 
 const UltraFuturisticNavigation2035: React.FC = () => {
   return (
@@ -162,7 +162,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2035</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2035;
+export default UltraFuturisticNavigation2035,

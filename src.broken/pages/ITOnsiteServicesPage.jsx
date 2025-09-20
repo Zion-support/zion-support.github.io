@@ -1,14 +1,14 @@
-import { useSearchParams  } from 'react-router-dom';
+import { useSearchParams  } from 'react-router-dom',
 export default function Page() {
-) ;
+) ,
   const handleCountrySelect = country => {
-    setSelectedCountry(country) ;
+    setSelectedCountry(country) ,
     // Scroll to the service details section
     setTimeout(() => {
       document
-        .getElementById('service - details') ?.scrollIntoView({ behavior: 'smooth' }) ;
-    }, 100) ;
-  };
+        .getElementById('service - details') ?.scrollIntoView({ behavior: 'smooth' }) ,
+    }, 100) ,
+  },
   return ((<section className="py-16 bg-zion -blue">
         <div className="container mx - auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section with Features */}
@@ -54,5 +54,5 @@ export default function Page() {
 
           <EnterpriseCallToAction />
         </div>
-      </section>) , (<GlobalServiceSection />) , (<TrustedBySection />) , (<QuoteFormSection />) ) ;
+      </section>) , (<GlobalServiceSection />) , (<TrustedBySection />) , (<QuoteFormSection />) ) ,
 }

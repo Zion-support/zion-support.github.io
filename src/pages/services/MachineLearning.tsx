@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Zap, 
   CheckCircle,
   Star,
@@ -103,135 +103,83 @@ import {
   LineChart as LineChartIcon,
   Scatter as ScatterIcon,
   Layers as LayersIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function MachineLearning() {
   const features = [
     {
-      icon: Brain,
-      title: 'Deep Learning',
-      description: 'Advanced neural networks for complex pattern recognition',
-      color: 'from-purple-500 to-pink-500'
-    },
+      icon: Brain,title: 'Deep Learning',description: 'Advanced neural networks for complex pattern recognition',color: 'from-purple-500 to-pink-500'
+    };
     {
-      icon: Target,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors with high accuracy',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: Target,title: 'Predictive Analytics',description: 'Forecast future trends and behaviors with high accuracy',color: 'from-blue-500 to-cyan-500'
+    };
     {
-      icon: Search,
-      title: 'Natural Language Processing',
-      description: 'Understand and process human language intelligently',
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: Search,title: 'Natural Language Processing',description: 'Understand and process human language intelligently',color: 'from-green-500 to-emerald-500'
+    };
     {
-      icon: Eye,
-      title: 'Computer Vision',
-      description: 'Advanced image and video analysis capabilities',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Eye,title: 'Computer Vision',description: 'Advanced image and video analysis capabilities',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Zap,
-      title: 'Real-Time Learning',
-      description: 'Continuous model improvement and adaptation',
-      color: 'from-red-500 to-pink-500'
-    },
+      icon: Zap,title: 'Real-Time Learning',description: 'Continuous model improvement and adaptation',color: 'from-red-500 to-pink-500'
+    };
     {
-      icon: Shield,
-      title: 'AI Ethics & Safety',
-      description: 'Responsible AI development and deployment',
-      color: 'from-indigo-500 to-blue-500'
+      icon: Shield,title: 'AI Ethics & Safety',description: 'Responsible AI development and deployment',color: 'from-indigo-500 to-blue-500'
     }
   ];
-
   const benefits = [
-    'Improve decision accuracy by 85% with predictive insights',
-    'Automate complex tasks and reduce manual work by 70%',
-    'Unlock hidden patterns in data for competitive advantage',
-    'Scale operations without proportional cost increases',
-    'Provide personalized experiences for customers and users',
-    'Enable new business models and revenue opportunities'
-  ];
+    'Improve decision accuracy by 85% with predictive insightsAutomate complex tasks and reduce manual work by 70%',
+    'Unlock hidden patterns in data for competitive advantageScale operations without proportional cost increases',
+    'Provide personalized experiences for customers and usersEnable new business models and revenue opportunities'
+  ],
 
   const useCases = [
     {
-      title: 'Customer Analytics',
-      description: 'Predict customer behavior and preferences',
-      icon: Users
-    },
+      title: 'Customer Analytics',description: 'Predict customer behavior and preferences',icon: Users
+    };
     {
-      title: 'Fraud Detection',
-      description: 'Identify suspicious activities in real-time',
-      icon: Shield
-    },
+      title: 'Fraud Detection',description: 'Identify suspicious activities in real-time',icon: Shield
+    };
     {
-      title: 'Recommendation Systems',
-      description: 'Personalized product and content suggestions',
-      icon: Target
-    },
+      title: 'Recommendation Systems',description: 'Personalized product and content suggestions',icon: Target
+    };
     {
-      title: 'Process Optimization',
-      description: 'Streamline operations and reduce inefficiencies',
-      icon: Activity
+      title: 'Process Optimization',description: 'Streamline operations and reduce inefficiencies',icon: Activity
     }
   ];
-
   const mlCapabilities = [
     {
-      name: 'Supervised Learning',
-      description: 'Training models with labeled data for classification and regression',
-      examples: ['Classification', 'Regression', 'Object detection', 'Sentiment analysis']
+      name: 'Supervised Learning',description: 'Training models with labeled data for classification and regression',examples: ['ClassificationRegression', 'Object detectionSentiment analysis']
     },
     {
-      name: 'Unsupervised Learning',
-      description: 'Discovering hidden patterns in unlabeled data',
-      examples: ['Clustering', 'Dimensionality reduction', 'Anomaly detection']
+      name: 'Unsupervised Learning',description: 'Discovering hidden patterns in unlabeled data',examples: ['ClusteringDimensionality reduction', 'Anomaly detection']
     },
     {
-      name: 'Reinforcement Learning',
-      description: 'Training agents to make decisions through trial and error',
-      examples: ['Game AI', 'Robotics', 'Autonomous systems', 'Resource optimization']
+      name: 'Reinforcement Learning',description: 'Training agents to make decisions through trial and error',examples: ['Game AIRobotics', 'Autonomous systemsResource optimization']
     },
     {
-      name: 'Neural Networks',
-      description: 'Deep learning models for complex pattern recognition',
-      examples: ['CNNs', 'RNNs', 'Transformers', 'GANs']
+      name: 'Neural Networks',description: 'Deep learning models for complex pattern recognition',examples: ['CNNsRNNs', 'TransformersGANs']
     }
-  ];
+  ],
 
   const industries = [
     {
-      name: 'Healthcare',
-      icon: Heart,
-      description: 'Medical diagnosis, drug discovery, and patient care'
+      name: 'Healthcare',icon: Heart,description: 'Medical diagnosis, drug discovery, and patient care'
     },
     {
-      name: 'Finance',
-      icon: BarChart,
-      description: 'Risk assessment, fraud detection, and trading algorithms'
+      name: 'Finance',icon: BarChart,description: 'Risk assessment, fraud detection, and trading algorithms'
     },
     {
-      name: 'Retail',
-      icon: ShoppingCart,
-      description: 'Customer segmentation, inventory optimization, and pricing'
+      name: 'Retail',icon: ShoppingCart,description: 'Customer segmentation, inventory optimization, and pricing'
     },
     {
-      name: 'Manufacturing',
-      icon: Factory,
-      description: 'Predictive maintenance, quality control, and supply chain'
+      name: 'Manufacturing',icon: Factory,description: 'Predictive maintenance, quality control, and supply chain'
     },
     {
-      name: 'Transportation',
-      icon: Car,
-      description: 'Autonomous vehicles, route optimization, and logistics'
+      name: 'Transportation',icon: Car,description: 'Autonomous vehicles, route optimization, and logistics'
     },
     {
-      name: 'Entertainment',
-      icon: Play,
-      description: 'Content recommendation, personalization, and analytics'
+      name: 'Entertainment',icon: Play,description: 'Content recommendation, personalization, and analytics'
     }
-  ];
+  ],
 
   return (
     <>
@@ -534,7 +482,7 @@ export default function MachineLearning() {
                 Machine Learning Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our ML platform adapts to various business needs and industries, 
+                Our ML platform adapts to various business needs and industries;
                 providing tailored solutions for different requirements.
               </p>
             </motion.div>
@@ -599,7 +547,7 @@ export default function MachineLearning() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -609,5 +557,5 @@ export default function MachineLearning() {
         </section>
       </div>
     </>
-  );
+  )
 }

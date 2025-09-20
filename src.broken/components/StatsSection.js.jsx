@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function StatsSection() {
   const stats = [{
 
@@ -41,8 +41,8 @@ export function StatsSection() {
       label: 'Years Experience',
       description: 'Industry expertise and knowledge',
       icon: '🏆',
-      color: 'from-red-500 to-pink-500'},
-  ];
+      color: 'from-red-500 to-pink-500'}
+  ],
   return ()
     <section className="py-16 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -91,7 +91,7 @@ export function StatsSection() {
               Be part of the next 500+ successful projects and experience the
               Zion Tech Group difference
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a"
                 href="/contact"
                 className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300"
@@ -109,6 +109,6 @@ export function StatsSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"`

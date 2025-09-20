@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react';
-import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
-import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
-import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
-import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025';
-import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025';
-import { fintechFinancial2025 } from '../../data/fintech-financial-2025';
-import { educationElearning2025 } from '../../data/education-elearning-2025';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react',
+import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',
+import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025',
+import { blockchainWeb32025 } from '../../data/blockchain-web3-2025',
+import { iotEdgeComputing2025 } from '../../data/iot-edge-computing-2025',
+import { healthcareBiotech2025 } from '../../data/healthcare-biotech-2025',
+import { fintechFinancial2025 } from '../../data/fintech-financial-2025',
+import { educationElearning2025 } from '../../data/education-elearning-2025',
 
 const ComprehensiveServicesShowcase2025 = () => {
   const serviceCategories = [
@@ -60,7 +60,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'
     }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ const ComprehensiveServicesShowcase2025 = () => {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -81,13 +81,13 @@ const ComprehensiveServicesShowcase2025 = () => {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">ComprehensiveServicesShowcase2025</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default ComprehensiveServicesShowcase2025;
+  ),
+},
+export default ComprehensiveServicesShowcase2025,

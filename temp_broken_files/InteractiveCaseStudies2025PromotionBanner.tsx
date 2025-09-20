@@ -1,7 +1,7 @@
     </div>,
-  );
-export default InteractiveCaseStudies2025PromotionBanner;
-import React from "react";
+  ),
+export default InteractiveCaseStudies2025PromotionBanner,
+import React from "react",
 const function InteractiveCaseStudies2025PromotionBanner() { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -12,7 +12,7 @@ const function InteractiveCaseStudies2025PromotionBanner() { = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function InteractiveCaseStudies2025PromotionBanner() {;
+  ),
+},
+export default function InteractiveCaseStudies2025PromotionBanner() {,
 }}}

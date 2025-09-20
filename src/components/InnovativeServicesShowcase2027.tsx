@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Brain,
   Atom,
@@ -22,11 +22,10 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
-
+} from "lucide-react";
+import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Consciousness': Brain,
+  'AI & Consciousness': Brain;
   'Quantum AI': Atom,
   'Autonomous AI': Cpu,
   'Quantum Computing': Atom,
@@ -38,60 +37,42 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Quantum Security': Shield,
   'Nanotechnology': Microscope,
   'Neural Technology': Eye
-};
+},
 
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-500 to-pink-500',
-  'Quantum AI': 'from-blue-500 to-cyan-500',
-  'Autonomous AI': 'from-green-500 to-emerald-500',
-  'Quantum Computing': 'from-indigo-500 to-purple-500',
-  'Quantum Finance': 'from-yellow-500 to-orange-500',
-  'Space Technology': 'from-purple-500 to-blue-500',
-  'Quantum Space': 'from-cyan-500 to-blue-500',
-  'Biotechnology': 'from-green-500 to-teal-500',
-  'Quantum Medicine': 'from-teal-500 to-blue-500',
-  'Quantum Security': 'from-red-500 to-pink-500',
-  'Nanotechnology': 'from-gray-500 to-slate-500',
-  'Neural Technology': 'from-violet-500 to-purple-500'
+  'AI & Consciousness': 'from-purple-500 to-pink-500Quantum AI': 'from-blue-500 to-cyan-500Autonomous AI': 'from-green-500 to-emerald-500Quantum Computing': 'from-indigo-500 to-purple-500Quantum Finance': 'from-yellow-500 to-orange-500Space Technology': 'from-purple-500 to-blue-500Quantum Space': 'from-cyan-500 to-blue-500Biotechnology': 'from-green-500 to-teal-500Quantum Medicine': 'from-teal-500 to-blue-500Quantum Security': 'from-red-500 to-pink-500Nanotechnology': 'from-gray-500 to-slate-500Neural Technology': 'from-violet-500 to-purple-500'
 };
-
 export const InnovativeServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
         }
-      },
+      };
       { threshold: 0.1 }
     );
-
-    const element = document.getElementById('innovative-services-2027');
+    const element = document.getElementById('innovative-services-2027'),
     if (element) {
-      observer.observe(element);
+      observer.observe(element),
     }
 
-    return () => observer.disconnect();
-  }, []);
+    return () => observer.disconnect(),
+  }, []),
 
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
-    : getServicesByCategory(selectedCategory);
+    : getServicesByCategory(selectedCategory),
 
   const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
+    setExpandedService(expandedService === serviceId ? null : serviceId)
   };
-
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <section id="innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -155,7 +136,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
+                      : 'bg-zion-slate-light/50 text-gray-300 hover: bg-zion-slate-light/70 hover:text-white'
                   }`}
                 >
                   {Icon && <Icon className="w-4 h-4" />}
@@ -335,7 +316,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
@@ -357,5 +338,5 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
+  )
 };

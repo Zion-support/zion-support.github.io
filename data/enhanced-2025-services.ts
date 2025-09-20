@@ -1,38 +1,38 @@
 export interface EnhancedService {
-  id: string;
-  name: string;
-  tagline: string;
-  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing';
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing',
+  description: string,
+  features: string[],
+  benefits: string[],
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-  link: string;
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+    starter: number,
+    professional: number,
+    enterprise: number,
+    currency: string,
+    period: string
+  },
+  link: string,
+  icon: string,
+  isPopular?: boolean,
+  isNew?: boolean,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    address: string
+  },
 }
 
 export const enhancedServices2025: EnhancedService[] = [
@@ -44,22 +44,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'AI',
     description: 'Advanced AI platform that autonomously manages complex business processes, makes intelligent decisions in real-time, and optimizes operations without human intervention.',
     features: [
-      '24/7 Autonomous Operations',
-      'AI Decision Making Engine',
-      'Process Optimization Algorithms',
-      'Real-time Analytics Dashboard',
-      'Predictive Maintenance',
-      'Resource Allocation Optimization',
-      'Automated Workflow Management',
-      'Intelligent Error Handling'
+      '24/7 Autonomous OperationsAI Decision Making Engine',
+      'Process Optimization AlgorithmsReal-time Analytics Dashboard',
+      'Predictive MaintenanceResource Allocation Optimization',
+      'Automated Workflow ManagementIntelligent Error Handling'
     ],
     benefits: [
-      'Reduce operational costs by up to 40%',
-      'Improve process efficiency by 60%',
-      'Eliminate manual errors and delays',
-      '24/7 automated operations',
-      'Real-time decision making',
-      'Scalable business processes'
+      'Reduce operational costs by up to 40%Improve process efficiency by 60%',
+      'Eliminate manual errors and delays24/7 automated operations',
+      'Real-time decision makingScalable business processes'
     ],
     pricing: {
       starter: 2500,
@@ -73,14 +66,14 @@ export const enhancedServices2025: EnhancedService[] = [
     isPopular: true,
     isNew: true,
     marketPosition: 'Leading autonomous operations platform with advanced AI decision-making',
-    targetAudience: ['Enterprise', 'Operations', 'Manufacturing', 'Logistics'],
+    targetAudience: ['EnterpriseOperations', 'ManufacturingLogistics'],
     trialDays: 30,
     setupTime: '2-4 weeks',
-    technology: ['Machine Learning', 'Process Automation', 'IoT Integration', 'Predictive Analytics'],
-    integrations: ['ERP Systems', 'CRM Platforms', 'Supply Chain Tools', 'IoT Devices'],
-    useCases: ['Manufacturing Operations', 'Supply Chain Management', 'Customer Service', 'Financial Operations'],
+    technology: ['Machine LearningProcess Automation', 'IoT IntegrationPredictive Analytics'],
+    integrations: ['ERP SystemsCRM Platforms', 'Supply Chain ToolsIoT Devices'],
+    useCases: ['Manufacturing OperationsSupply Chain Management', 'Customer ServiceFinancial Operations'],
     roi: 'Average 300% ROI within 12 months',
-    competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism'],
+    competitors: ['UiPathAutomation Anywhere', 'Blue Prism'],
     marketSize: '$15B autonomous operations market',
     growthRate: '25% CAGR',
     contactInfo: {
@@ -97,22 +90,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Security',
     description: 'Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time with advanced behavioral analysis.',
     features: [
-      'AI Threat Detection',
-      'Real-time Response Automation',
-      'Advanced Behavioral Analysis',
-      'Compliance Ready',
-      'Automated Incident Response',
-      'Threat Intelligence Integration',
-      'Zero-day Attack Prevention',
-      'Security Posture Assessment'
+      'AI Threat DetectionReal-time Response Automation',
+      'Advanced Behavioral AnalysisCompliance Ready',
+      'Automated Incident ResponseThreat Intelligence Integration',
+      'Zero-day Attack PreventionSecurity Posture Assessment'
     ],
     benefits: [
-      '99.9% threat detection rate',
-      'Reduce response time by 90%',
-      'Automated compliance reporting',
-      '24/7 security monitoring',
-      'Proactive threat prevention',
-      'Reduced false positives'
+      '99.9% threat detection rateReduce response time by 90%',
+      'Automated compliance reporting24/7 security monitoring',
+      'Proactive threat preventionReduced false positives'
     ],
     pricing: {
       starter: 1800,
@@ -125,14 +111,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🛡️',
     isPopular: true,
     marketPosition: 'Advanced AI-driven cybersecurity with behavioral analysis',
-    targetAudience: ['Security Teams', 'IT Departments', 'Compliance Officers', 'Risk Managers'],
+    targetAudience: ['Security TeamsIT Departments', 'Compliance OfficersRisk Managers'],
     trialDays: 14,
     setupTime: '1-2 weeks',
-    technology: ['Machine Learning', 'Behavioral Analytics', 'Threat Intelligence', 'Automation'],
-    integrations: ['SIEM Systems', 'EDR Solutions', 'Firewalls', 'Identity Management'],
-    useCases: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Monitoring'],
+    technology: ['Machine LearningBehavioral Analytics', 'Threat IntelligenceAutomation'],
+    integrations: ['SIEM SystemsEDR Solutions', 'FirewallsIdentity Management'],
+    useCases: ['Threat DetectionIncident Response', 'Compliance ManagementSecurity Monitoring'],
     roi: 'Prevent 95% of potential security breaches',
-    competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace'],
+    competitors: ['CrowdStrikeSentinelOne', 'Darktrace'],
     marketSize: '$45B cybersecurity market',
     growthRate: '18% CAGR',
     contactInfo: {
@@ -149,22 +135,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Marketing',
     description: 'Comprehensive AI platform that generates engaging content across all channels, optimizes marketing campaigns, and provides data-driven insights for better ROI.',
     features: [
-      'AI Content Generation',
-      'Multi-channel Publishing',
-      'SEO Optimization',
-      'Performance Analytics',
-      'Brand Voice Consistency',
-      'A/B Testing Automation',
-      'Content Calendar Management',
-      'Social Media Automation'
+      'AI Content GenerationMulti-channel Publishing',
+      'SEO OptimizationPerformance Analytics',
+      'Brand Voice ConsistencyA/B Testing Automation',
+      'Content Calendar ManagementSocial Media Automation'
     ],
     benefits: [
-      '10x faster content creation',
-      'Improve engagement by 45%',
-      'Reduce marketing costs by 30%',
-      '24/7 content optimization',
-      'Consistent brand messaging',
-      'Data-driven content strategy'
+      '10x faster content creationImprove engagement by 45%',
+      'Reduce marketing costs by 30%24/7 content optimization',
+      'Consistent brand messagingData-driven content strategy'
     ],
     pricing: {
       starter: 800,
@@ -176,14 +155,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/ai-content-marketing-suite',
     icon: '✍️',
     marketPosition: 'All-in-one AI content creation and marketing automation',
-    targetAudience: ['Marketing Teams', 'Content Creators', 'Agencies', 'Small Businesses'],
+    targetAudience: ['Marketing TeamsContent Creators', 'AgenciesSmall Businesses'],
     trialDays: 14,
     setupTime: '1 week',
-    technology: ['Natural Language Processing', 'Machine Learning', 'SEO Tools', 'Analytics'],
-    integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Social Media Platforms'],
-    useCases: ['Blog Content', 'Social Media', 'Email Marketing', 'SEO Content'],
+    technology: ['Natural Language ProcessingMachine Learning', 'SEO ToolsAnalytics'],
+    integrations: ['WordPressHubSpot', 'MailchimpSocial Media Platforms'],
+    useCases: ['Blog ContentSocial Media', 'Email MarketingSEO Content'],
     roi: 'Increase content ROI by 200%',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
+    competitors: ['JasperCopy.ai', 'Writesonic'],
     marketSize: '$12B content marketing market',
     growthRate: '22% CAGR',
     contactInfo: {
@@ -201,22 +180,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Fintech',
     description: 'Advanced fintech platform that uses AI to automate financial processes, detect fraud, provide personalized financial advice, and optimize investment strategies.',
     features: [
-      'AI Fraud Detection',
-      'Automated Risk Assessment',
-      'Personalized Financial Advice',
-      'Investment Portfolio Optimization',
-      'Real-time Market Analysis',
-      'Compliance Automation',
-      'Multi-currency Support',
-      'Blockchain Integration'
+      'AI Fraud DetectionAutomated Risk Assessment',
+      'Personalized Financial AdviceInvestment Portfolio Optimization',
+      'Real-time Market AnalysisCompliance Automation',
+      'Multi-currency SupportBlockchain Integration'
     ],
     benefits: [
-      'Reduce fraud by 95%',
-      'Improve investment returns by 25%',
-      'Automate compliance processes',
-      '24/7 financial monitoring',
-      'Personalized financial insights',
-      'Cost-effective financial services'
+      'Reduce fraud by 95%Improve investment returns by 25%',
+      'Automate compliance processes24/7 financial monitoring',
+      'Personalized financial insightsCost-effective financial services'
     ],
     pricing: {
       starter: 3000,
@@ -229,14 +201,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '💰',
     isNew: true,
     marketPosition: 'Leading AI-driven fintech platform with blockchain integration',
-    targetAudience: ['Banks', 'Credit Unions', 'Investment Firms', 'Fintech Startups'],
+    targetAudience: ['BanksCredit Unions', 'Investment FirmsFintech Startups'],
     trialDays: 30,
     setupTime: '4-6 weeks',
-    technology: ['Machine Learning', 'Blockchain', 'API Integration', 'Cloud Computing'],
-    integrations: ['Core Banking Systems', 'Payment Processors', 'Trading Platforms', 'Regulatory Systems'],
-    useCases: ['Fraud Detection', 'Risk Management', 'Investment Advisory', 'Compliance'],
+    technology: ['Machine LearningBlockchain', 'API IntegrationCloud Computing'],
+    integrations: ['Core Banking SystemsPayment Processors', 'Trading PlatformsRegulatory Systems'],
+    useCases: ['Fraud DetectionRisk Management', 'Investment AdvisoryCompliance'],
     roi: 'Average 400% ROI within 18 months',
-    competitors: ['Plaid', 'Stripe', 'Square'],
+    competitors: ['PlaidStripe', 'Square'],
     marketSize: '$180B fintech market',
     growthRate: '20% CAGR',
     contactInfo: {
@@ -253,22 +225,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Development',
     description: 'Blockchain-based platform that provides end-to-end visibility and traceability across supply chains, ensuring transparency, security, and compliance.',
     features: [
-      'End-to-end Traceability',
-      'Smart Contract Automation',
-      'Real-time Tracking',
-      'Compliance Reporting',
-      'Quality Assurance',
-      'Supplier Verification',
-      'Inventory Management',
-      'Sustainability Tracking'
+      'End-to-end TraceabilitySmart Contract Automation',
+      'Real-time TrackingCompliance Reporting',
+      'Quality AssuranceSupplier Verification',
+      'Inventory ManagementSustainability Tracking'
     ],
     benefits: [
-      '100% supply chain transparency',
-      'Reduce fraud and counterfeiting',
-      'Improve compliance efficiency',
-      'Real-time inventory tracking',
-      'Enhanced supplier relationships',
-      'Sustainable business practices'
+      '100% supply chain transparencyReduce fraud and counterfeiting',
+      'Improve compliance efficiencyReal-time inventory tracking',
+      'Enhanced supplier relationshipsSustainable business practices'
     ],
     pricing: {
       starter: 2000,
@@ -280,14 +245,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/blockchain-supply-chain-tracking',
     icon: '🔗',
     marketPosition: 'Leading blockchain supply chain solution with smart contracts',
-    targetAudience: ['Manufacturers', 'Retailers', 'Logistics Companies', 'Food & Beverage'],
+    targetAudience: ['ManufacturersRetailers', 'Logistics CompaniesFood & Beverage'],
     trialDays: 21,
     setupTime: '3-5 weeks',
-    technology: ['Blockchain', 'Smart Contracts', 'IoT Integration', 'Cloud Computing'],
-    integrations: ['ERP Systems', 'WMS Platforms', 'Logistics Software', 'Retail Systems'],
-    useCases: ['Product Traceability', 'Quality Control', 'Compliance', 'Sustainability'],
+    technology: ['BlockchainSmart Contracts', 'IoT IntegrationCloud Computing'],
+    integrations: ['ERP SystemsWMS Platforms', 'Logistics SoftwareRetail Systems'],
+    useCases: ['Product TraceabilityQuality Control', 'ComplianceSustainability'],
     roi: 'Reduce supply chain costs by 30%',
-    competitors: ['IBM Food Trust', 'VeChain', 'OriginTrail'],
+    competitors: ['IBM Food TrustVeChain', 'OriginTrail'],
     marketSize: '$8B blockchain supply chain market',
     growthRate: '35% CAGR',
     contactInfo: {
@@ -305,22 +270,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Healthcare',
     description: 'AI-powered healthcare platform that provides accurate medical diagnostics, image analysis, and predictive healthcare insights for better patient outcomes.',
     features: [
-      'Medical Image Analysis',
-      'Diagnostic AI Models',
-      'Predictive Healthcare',
-      'Patient Risk Assessment',
-      'Treatment Recommendations',
-      'Clinical Decision Support',
-      'HIPAA Compliance',
-      'Integration with EMR Systems'
+      'Medical Image AnalysisDiagnostic AI Models',
+      'Predictive HealthcarePatient Risk Assessment',
+      'Treatment RecommendationsClinical Decision Support',
+      'HIPAA ComplianceIntegration with EMR Systems'
     ],
     benefits: [
-      'Improve diagnostic accuracy by 30%',
-      'Reduce diagnosis time by 60%',
-      'Early disease detection',
-      'Personalized treatment plans',
-      'Cost-effective healthcare',
-      'Better patient outcomes'
+      'Improve diagnostic accuracy by 30%Reduce diagnosis time by 60%',
+      'Early disease detectionPersonalized treatment plans',
+      'Cost-effective healthcareBetter patient outcomes'
     ],
     pricing: {
       starter: 5000,
@@ -333,14 +291,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🏥',
     isNew: true,
     marketPosition: 'Leading AI healthcare diagnostics with FDA compliance',
-    targetAudience: ['Hospitals', 'Clinics', 'Radiology Centers', 'Research Institutions'],
+    targetAudience: ['HospitalsClinics', 'Radiology CentersResearch Institutions'],
     trialDays: 60,
     setupTime: '6-8 weeks',
-    technology: ['Deep Learning', 'Computer Vision', 'Natural Language Processing', 'Cloud Computing'],
-    integrations: ['EMR Systems', 'PACS Systems', 'Lab Information Systems', 'Telemedicine Platforms'],
-    useCases: ['Medical Imaging', 'Diagnostics', 'Risk Assessment', 'Treatment Planning'],
+    technology: ['Deep LearningComputer Vision', 'Natural Language ProcessingCloud Computing'],
+    integrations: ['EMR SystemsPACS Systems', 'Lab Information SystemsTelemedicine Platforms'],
+    useCases: ['Medical ImagingDiagnostics', 'Risk AssessmentTreatment Planning'],
     roi: 'Improve patient outcomes by 40%',
-    competitors: ['Butterfly Network', 'Zebra Medical', 'Aidoc'],
+    competitors: ['Butterfly NetworkZebra Medical', 'Aidoc'],
     marketSize: '$45B AI healthcare market',
     growthRate: '28% CAGR',
     contactInfo: {
@@ -358,22 +316,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Education',
     description: 'Intelligent learning platform that adapts to each student\'s learning style, pace, and preferences, providing personalized educational experiences.',
     features: [
-      'Adaptive Learning Algorithms',
-      'Personalized Content',
-      'Progress Tracking',
-      'Performance Analytics',
-      'Interactive Assessments',
-      'Multi-modal Learning',
-      'Collaborative Learning',
-      'Parent-Teacher Communication'
+      'Adaptive Learning AlgorithmsPersonalized Content',
+      'Progress TrackingPerformance Analytics',
+      'Interactive AssessmentsMulti-modal Learning',
+      'Collaborative LearningParent-Teacher Communication'
     ],
     benefits: [
-      'Improve learning outcomes by 35%',
-      'Personalized learning paths',
-      'Real-time progress monitoring',
-      'Engaging learning experiences',
-      'Better student retention',
-      'Data-driven insights'
+      'Improve learning outcomes by 35%Personalized learning paths',
+      'Real-time progress monitoringEngaging learning experiences',
+      'Better student retentionData-driven insights'
     ],
     pricing: {
       starter: 500,
@@ -385,14 +336,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/ai-personalized-learning-platform',
     icon: '🎓',
     marketPosition: 'Leading AI-powered personalized learning solution',
-    targetAudience: ['K-12 Schools', 'Universities', 'Corporate Training', 'Online Education'],
+    targetAudience: ['K-12 SchoolsUniversities', 'Corporate TrainingOnline Education'],
     trialDays: 30,
     setupTime: '2-3 weeks',
-    technology: ['Machine Learning', 'Natural Language Processing', 'Analytics', 'Cloud Computing'],
-    integrations: ['LMS Platforms', 'Student Information Systems', 'Assessment Tools', 'Communication Platforms'],
-    useCases: ['K-12 Education', 'Higher Education', 'Corporate Training', 'Skill Development'],
+    technology: ['Machine LearningNatural Language Processing', 'AnalyticsCloud Computing'],
+    integrations: ['LMS PlatformsStudent Information Systems', 'Assessment ToolsCommunication Platforms'],
+    useCases: ['K-12 EducationHigher Education', 'Corporate TrainingSkill Development'],
     roi: 'Improve student performance by 35%',
-    competitors: ['Duolingo', 'Khan Academy', 'Coursera'],
+    competitors: ['DuolingoKhan Academy', 'Coursera'],
     marketSize: '$25B AI education market',
     growthRate: '24% CAGR',
     contactInfo: {
@@ -410,22 +361,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'IT',
     description: 'Advanced IoT platform that processes data at the edge, providing real-time insights, automation, and intelligent decision-making for connected devices.',
     features: [
-      'Edge Data Processing',
-      'Real-time Analytics',
-      'Device Management',
-      'Predictive Maintenance',
-      'Security & Encryption',
-      'Scalable Architecture',
-      'API Integration',
-      'Cloud Synchronization'
+      'Edge Data ProcessingReal-time Analytics',
+      'Device ManagementPredictive Maintenance',
+      'Security & EncryptionScalable Architecture',
+      'API IntegrationCloud Synchronization'
     ],
     benefits: [
-      'Reduce latency by 90%',
-      'Lower bandwidth costs',
-      'Real-time decision making',
-      'Enhanced security',
-      'Scalable IoT solutions',
-      'Improved reliability'
+      'Reduce latency by 90%Lower bandwidth costs',
+      'Real-time decision makingEnhanced security',
+      'Scalable IoT solutionsImproved reliability'
     ],
     pricing: {
       starter: 1500,
@@ -437,14 +381,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/iot-edge-computing-platform',
     icon: '🌐',
     marketPosition: 'Leading edge computing platform for IoT applications',
-    targetAudience: ['Manufacturing', 'Smart Cities', 'Healthcare', 'Transportation'],
+    targetAudience: ['ManufacturingSmart Cities', 'HealthcareTransportation'],
     trialDays: 21,
     setupTime: '3-4 weeks',
-    technology: ['Edge Computing', 'IoT Protocols', 'Machine Learning', 'Cloud Computing'],
-    integrations: ['IoT Devices', 'Cloud Platforms', 'Analytics Tools', 'Enterprise Systems'],
-    useCases: ['Smart Manufacturing', 'Connected Cities', 'Healthcare Monitoring', 'Fleet Management'],
+    technology: ['Edge ComputingIoT Protocols', 'Machine LearningCloud Computing'],
+    integrations: ['IoT DevicesCloud Platforms', 'Analytics ToolsEnterprise Systems'],
+    useCases: ['Smart ManufacturingConnected Cities', 'Healthcare MonitoringFleet Management'],
     roi: 'Reduce operational costs by 25%',
-    competitors: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
+    competitors: ['AWS IoT GreengrassAzure IoT Edge', 'Google Cloud IoT'],
     marketSize: '$18B edge computing market',
     growthRate: '32% CAGR',
     contactInfo: {
@@ -462,22 +406,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'AI',
     description: 'Cutting-edge quantum computing platform that provides access to quantum algorithms, optimization solutions, and research capabilities for complex computational problems.',
     features: [
-      'Quantum Algorithm Library',
-      'Optimization Solvers',
-      'Research Tools',
-      'Quantum Simulators',
-      'API Access',
-      'Expert Consultation',
-      'Training Programs',
-      'Custom Solutions'
+      'Quantum Algorithm LibraryOptimization Solvers',
+      'Research ToolsQuantum Simulators',
+      'API AccessExpert Consultation',
+      'Training ProgramsCustom Solutions'
     ],
     benefits: [
-      'Solve complex problems exponentially faster',
-      'Advanced optimization capabilities',
-      'Research and development support',
-      'Competitive advantage',
-      'Future-proof technology',
-      'Expert quantum guidance'
+      'Solve complex problems exponentially fasterAdvanced optimization capabilities',
+      'Research and development supportCompetitive advantage',
+      'Future-proof technologyExpert quantum guidance'
     ],
     pricing: {
       starter: 10000,
@@ -490,14 +427,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '⚛️',
     isNew: true,
     marketPosition: 'Leading quantum computing services provider',
-    targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services', 'Government'],
+    targetAudience: ['Research InstitutionsPharmaceutical Companies', 'Financial ServicesGovernment'],
     trialDays: 90,
     setupTime: '8-12 weeks',
-    technology: ['Quantum Computing', 'Quantum Algorithms', 'Optimization', 'Simulation'],
-    integrations: ['Research Platforms', 'Analytics Tools', 'Enterprise Systems', 'Cloud Platforms'],
-    useCases: ['Drug Discovery', 'Financial Modeling', 'Logistics Optimization', 'Cryptography'],
+    technology: ['Quantum ComputingQuantum Algorithms', 'OptimizationSimulation'],
+    integrations: ['Research PlatformsAnalytics Tools', 'Enterprise SystemsCloud Platforms'],
+    useCases: ['Drug DiscoveryFinancial Modeling', 'Logistics OptimizationCryptography'],
     roi: 'Solve problems 1000x faster than classical computers',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Azure Quantum'],
     marketSize: '$2B quantum computing market',
     growthRate: '45% CAGR',
     contactInfo: {
@@ -515,22 +452,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Development',
     description: 'Advanced space technology platform that provides satellite data analytics, space mission planning, and innovative solutions for the new space economy.',
     features: [
-      'Satellite Data Analytics',
-      'Mission Planning Tools',
-      'Space Weather Monitoring',
-      'Earth Observation',
-      'Navigation Systems',
-      'Communication Solutions',
-      'Research Support',
-      'Commercial Applications'
+      'Satellite Data AnalyticsMission Planning Tools',
+      'Space Weather MonitoringEarth Observation',
+      'Navigation SystemsCommunication Solutions',
+      'Research SupportCommercial Applications'
     ],
     benefits: [
-      'Access to space data and insights',
-      'Innovative space solutions',
-      'Research and development support',
-      'Commercial space applications',
-      'Technology advancement',
-      'Global connectivity'
+      'Access to space data and insightsInnovative space solutions',
+      'Research and development supportCommercial space applications',
+      'Technology advancementGlobal connectivity'
     ],
     pricing: {
       starter: 8000,
@@ -543,14 +473,14 @@ export const enhancedServices2025: EnhancedService[] = [
     icon: '🚀',
     isNew: true,
     marketPosition: 'Leading space technology innovation platform',
-    targetAudience: ['Space Agencies', 'Satellite Companies', 'Research Institutions', 'Commercial Space'],
+    targetAudience: ['Space AgenciesSatellite Companies', 'Research InstitutionsCommercial Space'],
     trialDays: 60,
     setupTime: '6-10 weeks',
-    technology: ['Satellite Technology', 'Data Analytics', 'AI/ML', 'Cloud Computing'],
-    integrations: ['Satellite Systems', 'Ground Stations', 'Data Centers', 'Research Platforms'],
-    useCases: ['Earth Observation', 'Satellite Communications', 'Space Research', 'Commercial Applications'],
+    technology: ['Satellite TechnologyData Analytics', 'AI/MLCloud Computing'],
+    integrations: ['Satellite SystemsGround Stations', 'Data CentersResearch Platforms'],
+    useCases: ['Earth ObservationSatellite Communications', 'Space ResearchCommercial Applications'],
     roi: 'Access to $400B space economy',
-    competitors: ['SpaceX', 'Blue Origin', 'Virgin Galactic'],
+    competitors: ['SpaceXBlue Origin', 'Virgin Galactic'],
     marketSize: '$400B space economy',
     growthRate: '40% CAGR',
     contactInfo: {
@@ -568,22 +498,15 @@ export const enhancedServices2025: EnhancedService[] = [
     category: 'Analytics',
     description: 'Comprehensive BI platform that provides advanced analytics, predictive modeling, and real-time insights to drive data-driven decision making.',
     features: [
-      'Advanced Analytics',
-      'Predictive Modeling',
-      'Real-time Dashboards',
-      'Data Visualization',
-      'Machine Learning Integration',
-      'Automated Reporting',
-      'Data Integration',
-      'Collaborative Analytics'
+      'Advanced AnalyticsPredictive Modeling',
+      'Real-time DashboardsData Visualization',
+      'Machine Learning IntegrationAutomated Reporting',
+      'Data IntegrationCollaborative Analytics'
     ],
     benefits: [
-      'Make data-driven decisions',
-      'Predict future trends',
-      'Improve operational efficiency',
-      'Real-time insights',
-      'Automated reporting',
-      'Better collaboration'
+      'Make data-driven decisionsPredict future trends',
+      'Improve operational efficiencyReal-time insights',
+      'Automated reportingBetter collaboration'
     ],
     pricing: {
       starter: 1200,
@@ -595,14 +518,14 @@ export const enhancedServices2025: EnhancedService[] = [
     link: 'https://ziontechgroup.com/services/advanced-business-intelligence',
     icon: '📊',
     marketPosition: 'Leading AI-powered business intelligence platform',
-    targetAudience: ['Business Analysts', 'Data Scientists', 'Executives', 'Operations Teams'],
+    targetAudience: ['Business AnalystsData Scientists', 'ExecutivesOperations Teams'],
     trialDays: 21,
     setupTime: '2-3 weeks',
-    technology: ['Machine Learning', 'Data Analytics', 'Visualization', 'Cloud Computing'],
-    integrations: ['Data Sources', 'CRM Systems', 'ERP Platforms', 'Cloud Storage'],
-    useCases: ['Business Analytics', 'Performance Monitoring', 'Trend Analysis', 'Decision Support'],
+    technology: ['Machine LearningData Analytics', 'VisualizationCloud Computing'],
+    integrations: ['Data SourcesCRM Systems', 'ERP PlatformsCloud Storage'],
+    useCases: ['Business AnalyticsPerformance Monitoring', 'Trend AnalysisDecision Support'],
     roi: 'Improve decision making by 60%',
-    competitors: ['Tableau', 'Power BI', 'Qlik'],
+    competitors: ['TableauPower BI', 'Qlik'],
     marketSize: '$30B business intelligence market',
     growthRate: '26% CAGR',
     contactInfo: {
@@ -611,22 +534,22 @@ export const enhancedServices2025: EnhancedService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+],
 
 export const getServicesByCategory = (category: EnhancedService['category']) => {
-  return enhancedServices2025.filter(service => service.category === category);
-};
+  return enhancedServices2025.filter(service => service.category === category)
+},
 
 export const getPopularServices = () => {
-  return enhancedServices2025.filter(service => service.isPopular);
-};
+  return enhancedServices2025.filter(service => service.isPopular),
+},
 
 export const getNewServices = () => {
-  return enhancedServices2025.filter(service => service.isNew);
-};
+  return enhancedServices2025.filter(service => service.isNew),
+},
 
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
-  );
-};
+  )
+},

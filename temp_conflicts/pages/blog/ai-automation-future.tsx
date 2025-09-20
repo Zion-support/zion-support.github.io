@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function AIAutomationFutureBlog() {
   return (
@@ -116,7 +116,7 @@ export default function AIAutomationFutureBlog() {
                 Ready to explore how AI automation can transform your business? Zion Tech Group is here to help you navigate this exciting future.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a href="/services" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
+                <a href="/services" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200">
                   Explore Our Services
                 </a>
                 <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50">
@@ -128,5 +128,5 @@ export default function AIAutomationFutureBlog() {
         </main>
       </div>
     </>
-  );
+  )
 }

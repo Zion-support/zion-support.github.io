@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   Brain,
@@ -10,99 +10,95 @@ import {,
   Globe,
   Rocket,
   Database,
-  Cloud;
-  BarChart3;
-  Users;
-  Lock;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Lightbulb;
-  Target;
-  Gauge,
-} from 'lucide-react';
+  Cloud,
+  BarChart3,
+  Users,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Target,
+  Gauge
+} from 'lucide-react',
 const AI2025UltimateTechnologyShowcase = () => {,
-  const [activeTabsetActiveTab] = useState('ai-automation');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-automation'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const technologies = [,
     {,
-      id: 'ai-automation';
-      title: 'AI-Powered Automation';
-      description: 'Revolutionary automation solutions that transform business operations';
-      icon: Brain;
-      color: 'from-purple-500 to-pink-500';
+      id: 'ai-automation',
+      title: 'AI-Powered Automation',
+      description: 'Revolutionary automation solutions that transform business operations',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
       features: [,
-        'Intelligent Process AutomationPredictive Analytics';
-        'Natural Language ProcessingComputer Vision Integration';
-        'Autonomous Decision MakingReal-time Optimization',
-      ];
-      stats: { value: '95%'label: 'Efficiency Increase' ,};
-      link: '/ai-2025-advanced-automation-solutions',};
+        'Intelligent Process AutomationPredictive AnalyticsNatural Language ProcessingComputer Vision Integration',
+        'Autonomous Decision MakingReal-time Optimization'
+      ],
+      stats: { value: '95%'label: 'Efficiency Increase' },
+      link: '/ai-2025-advanced-automation-solutions'},
     {,
-      id: 'quantum-computing';
-      title: 'Quantum Computing';
-      description: 'Next-generation quantum solutions for complex problem solving';
-      icon: Cpu;
-      color: 'from-blue-500 to-cyan-500';
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex problem solving',
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-500',
       features: [,
-        'Quantum Machine LearningCryptographic Security';
-        'Optimization AlgorithmsQuantum Neural Networks';
-        'Molecular SimulationFinancial Modeling',
-      ];
-      stats: { value: '1000'xlabel: 'Processing Speed' ,};
-      link: '/quantum-computing-2025',};
+        'Quantum Machine LearningCryptographic SecurityOptimization AlgorithmsQuantum Neural Networks',
+        'Molecular SimulationFinancial Modeling'
+      ],
+      stats: { value: '1000'xlabel: 'Processing Speed' },
+      link: '/quantum-computing-2025'},
     {,
-      id: 'neural-interfaces';
-      title: 'Neural Interface Technology';
-      description: 'Direct brain-computer interfaces for enhanced human capabilities';
-      icon: Zap;
-      color: 'from-green-500 to-emerald-500';
+      id: 'neural-interfaces',
+      title: 'Neural Interface Technology',
+      description: 'Direct brain-computer interfaces for enhanced human capabilities',
+      icon: Zap,
+      color: 'from-green-500 to-emerald-500',
       features: [,
-        'Brain-Computer InterfacesNeural Signal Processing';
-        'Cognitive EnhancementMedical Applications';
-        'Augmented Reality IntegrationThought-Controlled Systems',
-      ];
-      stats: { value: '99.9%'label: 'Accuracy Rate' ,};
-      link: '/neural-interface-revolution-2026',};
+        'Brain-Computer InterfacesNeural Signal ProcessingCognitive EnhancementMedical Applications',
+        'Augmented Reality IntegrationThought-Controlled Systems'
+      ],
+      stats: { value: '99.9%'label: 'Accuracy Rate' },
+      link: '/neural-interface-revolution-2026'},
     {,
-      id: 'cybersecurity';
-      title: 'Advanced Cybersecurity';
-      description: 'AI-driven security solutions protecting digital assets';
-      icon: Shield;
-      color: 'from-red-500 to-orange-500';
+      id: 'cybersecurity',
+      title: 'Advanced Cybersecurity',
+      description: 'AI-driven security solutions protecting digital assets',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
       features: [,
-        'Threat Detection & PreventionBehavioral Analysis';
-        'Zero-Trust ArchitectureEncryption Technologies';
-        'Incident Response AutomationCompliance Management',
-      ];
-      stats: { value: '99.99%'label: 'Threat Detection' ,};
-      link: '/advanced-security-solutions',}
-  ];
+        'Threat Detection & PreventionBehavioral AnalysisZero-Trust ArchitectureEncryption Technologies',
+        'Incident Response AutomationCompliance Management'
+      ],
+      stats: { value: '99.99%'label: 'Threat Detection' },
+      link: '/advanced-security-solutions'}
+  ],
   const successStories = [,
     {,
-      company: 'TechCorp Global';
-      industry: 'Manufacturing';
-      improvement: '300%';
-      description: 'Implemented AI automation reducing production costs by 60%';
-      logo: '🏭',};
+      company: 'TechCorp Global',
+      industry: 'Manufacturing',
+      improvement: '300%',
+      description: 'Implemented AI automation reducing production costs by 60%',
+      logo: '🏭'},
     {,
-      company: 'FinanceMax';
-      industry: 'Financial Services';
-      improvement: '500%';
-      description: 'Quantum computing solutions increased trading algorithm speed';
-      logo: '💼',};
+      company: 'FinanceMax',
+      industry: 'Financial Services',
+      improvement: '500%',
+      description: 'Quantum computing solutions increased trading algorithm speed',
+      logo: '💼'},
     {,
-      company: 'HealthTech Solutions';
-      industry: 'Healthcare';
-      improvement: '250%';
-      description: 'Neural interface technology improved patient diagnosis accuracy';
-      logo: '🏥',}
-  ];
-  const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0];
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      improvement: '250%',
+      description: 'Neural interface technology improved patient diagnosis accuracy',
+      logo: '🏥'}
+  ],
+  const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0],
   return (,
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen py-20">,
       {/* Background Effects */}
@@ -111,14 +107,14 @@ const AI2025UltimateTechnologyShowcase = () => {,
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,
             AI 2025 Ultimate,
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,
-              {' ',}Technology Showcase,
+              {' '}Technology Showcase,
             </span>,
           </h1>,
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">,
@@ -145,7 +141,7 @@ const AI2025UltimateTechnologyShowcase = () => {,
         >,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
             {technologies.map((tech) => {,
-              const Icon = tech.icon;
+              const Icon = tech.icon,
               return (,
                 <button,
                   key={tech.id}
@@ -153,12 +149,12 @@ const AI2025UltimateTechnologyShowcase = () => {,
                   className={`flex items-center gap-3 px-6 py-4 rounded-xl transition-all duration-300 ${,
                     activeTab === tech.id,
                       ? `bg-gradient-to-r ${tech.color} text-white shadow-lg transform scale-105`,
-                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
                 >,
                   <Icon className="w-5 h-5" />,
                   <span className="font-semibold">{tech.title}</span>,
                 </button>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -170,7 +166,7 @@ const AI2025UltimateTechnologyShowcase = () => {,
           <div className="grid lg: grid-cols-2 gap-12 items-center">,
             <div>,
               <div className="flex items-center gap-4 mb-6">,
-                <div className={`p-4 rounded-2xl bg-gradient-to-r ${currentTech.color,}`}>,
+                <div className={`p-4 rounded-2xl bg-gradient-to-r ${currentTech.color}`}>,
                   <currentTech.icon className="w-8 h-8 text-white" />,
                 </div>,
                 <div>,
@@ -200,11 +196,10 @@ const AI2025UltimateTechnologyShowcase = () => {,
               <h4 className="text-xl font-semibold text-white mb-6">Key Features</h4>,
               <div className="grid grid-cols-1 gap-3">,
                 {currentTech.features.map((featureindex) => (,
-                  <div key={index,} className="flex items-center gap-3 text-gray-300">,
+                  <div key={index} className="flex items-center gap-3 text-gray-300">,
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />,
                     <span>{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
@@ -218,14 +213,13 @@ const AI2025UltimateTechnologyShowcase = () => {,
           </h2>,
           <div className="grid md: grid-cols-3 gap-8">,
             {successStories.map((storyindex) => (,
-              <div key={index,} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">,
-                <div className="text-4xl mb-4">{story.logo,}</div>,
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300">,
+                <div className="text-4xl mb-4">{story.logo}</div>,
                 <h3 className="text-xl font-semibold text-white mb-2">{story.company}</h3>,
                 <p className="text-gray-400 text-sm mb-4">{story.industry}</p>,
                 <div className="text-3xl font-bold text-green-400 mb-2">{story.improvement}</div>,
                 <p className="text-gray-300 text-sm">{story.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -255,6 +249,6 @@ const AI2025UltimateTechnologyShowcase = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default AI2025UltimateTechnologyShowcase;
+  ),
+export default AI2025UltimateTechnologyShowcase,
 }

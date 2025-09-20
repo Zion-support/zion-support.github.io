@@ -3,7 +3,7 @@
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             Not Found Page
@@ -21,8 +21,8 @@ export default function NotFoundPage() {
             Get Started
           </Link>
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 import {
   Home,
   Search,
@@ -50,8 +50,8 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide-react';
+  Instagram
+} from 'lucide-react',
 
 export function NotFoundPage() {
   const quickLinks = [
@@ -60,15 +60,15 @@ export function NotFoundPage() {
     { name: 'About', href: '/about', icon: Award, description: 'Learn more about our company' },
     { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' },
     { name: 'Blog', href: '/blog', icon: TrendingUp, description: 'Read our latest insights' },
-    { name: 'Training', href: '/training', icon: GraduationCap, description: 'Access our training programs' },
-  ];
+    { name: 'Training', href: '/training', icon: GraduationCap, description: 'Access our training programs' }
+  ],
 
   const popularServices = [
     { name: 'AI & Machine Learning', href: '/services#ai-services', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { name: 'Cybersecurity', href: '/services#cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
     { name: 'Cloud Infrastructure', href: '/services#cloud-services', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Data Analytics', href: '/services#data-analytics', icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
-  ];
+    { name: 'Data Analytics', href: '/services#data-analytics', icon: TrendingUp, color: 'from-green-500 to-emerald-500' }
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -195,7 +195,7 @@ export function NotFoundPage() {
 
       {/* Contact Support */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Our team is here to help you find what you're looking for. 
@@ -236,6 +236,6 @@ export function NotFoundPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 }

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
@@ -9,51 +9,51 @@ import {,
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  Sparkles;
-  Rocket,
-} from 'lucide-react';
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
+  Rocket
+} from 'lucide-react',
 const NewContentShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentFeaturesetCurrentFeature] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentFeaturesetCurrentFeature] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Rotate features every 3 seconds,
     const interval = setInterval(() => {,
-      setCurrentFeature((prev) => (prev + 1) % 3);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentFeature((prev) => (prev + 1) % 3),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const features = [,
     {,
-      icon: Brain;
-      title: 'AI Solutions';
-      description: 'Revolutionary AI technology';
-      color: 'from-purple-500 to-blue-500',};
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-500 to-blue-500'},
     {,
-      icon: Zap;
-      title: 'Automation';
-      description: 'Intelligent workflow automation';
-      color: 'from-green-500 to-teal-500',};
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-500 to-teal-500'},
     {,
-      icon: Shield;
-      title: 'Security';
-      description: 'Advanced cybersecurity protection';
-      color: 'from-red-500 to-orange-500',}
-  ];
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
+      color: 'from-red-500 to-orange-500'}
+  ],
   const stats = [,
-    { label: 'New 'Featuresvalue: '50+'icon: Sparkles ,};
-    { label: 'Success 'Ratevalue: '99.8%'icon: Award ,};
-    { label: 'Client 'Satisfactionvalue: '5.0★'icon: Star ,};
-    { label: 'ROI 'Increasevalue: '300%'icon: TrendingUp ,}
-  ];
+    { label: 'New 'Featuresvalue: '50+'icon: Sparkles },
+    { label: 'Success 'Ratevalue: '99.8%'icon: Award },
+    { label: 'Client 'Satisfactionvalue: '5.0★'icon: Star },
+    { label: 'ROI 'Increasevalue: '300%'icon: TrendingUp }
+  ],
   return (,
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       {/* Animated Background */}
@@ -64,7 +64,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="text-white",
           >,
@@ -79,7 +79,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
             <divh2,
               className="text-4xl md: text-5xl font-bold mb-6",
             >,
-              Discover Our Latest{' ',}
+              Discover Our Latest{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">,
                 Innovations,
               </span>,
@@ -115,11 +115,10 @@ const NewContentShowcase2025PromotionBanner = () => {,
               className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
             >,
               {stats.map((statindex) => (,
-                <div key={index,} className="text-center">,
+                <div key={index} className="text-center">,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-300">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* CTA Buttons */}
             <div,
@@ -142,7 +141,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
               </a>,
             </div>,
           </div>,
-          {/* Right Content - Visual */,}
+          {/* Right Content - Visual */}
           <div,
             className="relative",
           >,
@@ -165,7 +164,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
                     className={`p-4 rounded-xl border transition-all duration-300 ${,
                       index === currentFeature,
                         ? 'bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-400/50',
-                        : 'bg-white/5 border-white/20',
+                        : 'bg-white/5 border-white/20'
                     }`}
                   >,
                     <div className="flex items-center space-x-3">,
@@ -181,8 +180,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
                           className="ml-auto",
                         >,
                           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>,
-                        </div>,
-                      )}
+                        </div>)}
                     </div>,
                   </div>,
                 ))}
@@ -215,7 +213,7 @@ const NewContentShowcase2025PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default NewContentShowcase2025PromotionBanner;
+  ),
+},
+export default NewContentShowcase2025PromotionBanner,
 </div></div></div></div></div></div>,

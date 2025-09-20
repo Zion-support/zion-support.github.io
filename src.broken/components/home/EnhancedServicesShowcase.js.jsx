@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle  } from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-;
+import React from 'react',
+import { Link  } from 'react-router-dom',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Brain, Cloud, Shield, Database, TrendingUp, Code, Zap, Heart, DollarSign, Link as LinkIcon, ArrowRight, Star, CheckCircle  } from 'lucide-react',
+import { ENHANCED_SERVICES } from '@/data/enhancedServices',
+,
 export function EnhancedServicesShowcase() {
   return ()
     <section className="py-20 bg-zion-blue-dark">"
@@ -22,10 +22,10 @@ export function EnhancedServicesShowcase() {
         </div>
 
         {/* Featured Services Grid */}"
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map(service => {
 
-            const IconComponent = serviceIcons[service.category] || Code;
+            const IconComponent = serviceIcons[service.category] || Code,
             return ()
               <Card
                 key={service.id}"
@@ -89,7 +89,7 @@ export function EnhancedServicesShowcase() {
                     <Button"
                       size="sm"
                       variant="outline"
-                      className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                      className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
                       asChild
                     >"
                       <Link to="/enhanced-services">
@@ -100,7 +100,7 @@ export function EnhancedServicesShowcase() {
                   </div>
                 </CardContent>
               </Card>
-            );
+            )
           })}
         </div>
 
@@ -213,7 +213,7 @@ export function EnhancedServicesShowcase() {
             AI-powered solutions can drive innovation and growth for your
             organization
           </p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Button"
               size="lg"
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
@@ -236,6 +236,6 @@ export function EnhancedServicesShowcase() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"

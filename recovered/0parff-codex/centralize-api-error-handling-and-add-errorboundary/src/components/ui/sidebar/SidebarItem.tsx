@@ -1,11 +1,11 @@
 
-import React from "react";
-import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  children?: React.ReactNode;
-  active?: boolean;
+  className?: string,
+  children?: React.ReactNode,
+  active?: boolean,
 }
 
 export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {
@@ -20,5 +20,5 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
     >
       {children}
     </div>
-  );
+  ),
 }

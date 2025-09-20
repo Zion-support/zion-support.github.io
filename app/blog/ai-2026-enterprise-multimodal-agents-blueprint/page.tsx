@@ -1,16 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-	title: 'AI 2026: Enterprise Multimodal Agents Blueprint';
-	description: 'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.';
+	title: 'AI 2026: Enterprise Multimodal Agents Blueprint',
+	description: 'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',
 	keywords: [,
-		'enterprise AI agentsmultimodal AI';
-		'AI blueprintvision-language models';
-		'speech AIenterprise automation',
-	],
-};
+		'enterprise AI agentsmultimodal AIAI blueprintvision-language models',
+		'speech AIenterprise automation'
+	]
+},
 export default function EnterpriseMultimodalAgentsBlueprint2026() {,
 	return (,
 		<ErrorBoundary>,
@@ -120,4 +119,4 @@ export default function EnterpriseMultimodalAgentsBlueprint2026() {,
 				</article>,
 			</div>,
 		</ErrorBoundary>,
-	),}
+	)}

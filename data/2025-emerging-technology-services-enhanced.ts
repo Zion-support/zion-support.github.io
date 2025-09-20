@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechnologyService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
@@ -49,16 +49,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     period: '/month',
     description: 'Advanced quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools.',
     features: [
-      'Access to quantum processors (IBM, Google, Rigetti)',
-      'Quantum algorithm library',
-      'Quantum software development kit',
-      'Real-time quantum circuit execution',
-      'Quantum error correction',
-      'Hybrid quantum-classical computing',
-      'Quantum machine learning algorithms',
-      'Quantum cryptography tools',
-      'Performance monitoring and analytics',
-      'Expert quantum consulting'
+      'Access to quantum processors (IBM, Google, Rigetti)Quantum algorithm library',
+      'Quantum software development kitReal-time quantum circuit execution',
+      'Quantum error correctionHybrid quantum-classical computing',
+      'Quantum machine learning algorithmsQuantum cryptography tools',
+      'Performance monitoring and analyticsExpert quantum consulting'
     ],
     popular: true,
     icon: '⚛️',
@@ -101,16 +96,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     period: '/month',
     description: 'Advanced blockchain platform that provides infrastructure, development tools, and deployment services for enterprise blockchain applications.',
     features: [
-      'Multi-blockchain support (Ethereum, Polygon, Solana)',
-      'Smart contract development tools',
-      'Blockchain deployment automation',
-      'Performance monitoring and analytics',
-      'Security auditing and testing',
-      'Cross-chain interoperability',
-      'Scalability solutions',
-      'Developer SDK and APIs',
-      'Compliance and governance tools',
-      '24/7 blockchain monitoring'
+      'Multi-blockchain support (Ethereum, Polygon, Solana)Smart contract development tools',
+      'Blockchain deployment automationPerformance monitoring and analytics',
+      'Security auditing and testingCross-chain interoperability',
+      'Scalability solutionsDeveloper SDK and APIs',
+      'Compliance and governance tools24/7 blockchain monitoring'
     ],
     popular: true,
     icon: '🔗',
@@ -153,16 +143,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     period: '/month',
     description: 'Advanced edge computing platform that orchestrates distributed computing resources, optimizes performance, and provides real-time data processing capabilities.',
     features: [
-      'Distributed edge node management',
-      'Real-time data processing',
-      'Load balancing and optimization',
-      'Edge AI model deployment',
-      'Performance monitoring and analytics',
-      'Security and compliance tools',
-      'Multi-cloud edge integration',
-      'Custom edge applications',
-      'Edge-to-cloud synchronization',
-      'Advanced orchestration dashboard'
+      'Distributed edge node managementReal-time data processing',
+      'Load balancing and optimizationEdge AI model deployment',
+      'Performance monitoring and analyticsSecurity and compliance tools',
+      'Multi-cloud edge integrationCustom edge applications',
+      'Edge-to-cloud synchronizationAdvanced orchestration dashboard'
     ],
     popular: true,
     icon: '🌐',
@@ -205,16 +190,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     period: '/month',
     description: 'Advanced metaverse platform that provides tools for creating, deploying, and managing immersive virtual worlds and experiences.',
     features: [
-      '3D world building tools',
-      'Avatar creation and customization',
-      'Real-time collaboration tools',
-      'VR/AR integration',
-      'Blockchain integration',
-      'Social features and networking',
-      'Content monetization tools',
-      'Performance optimization',
-      'Multi-platform deployment',
-      'Advanced analytics dashboard'
+      '3D world building toolsAvatar creation and customization',
+      'Real-time collaboration toolsVR/AR integration',
+      'Blockchain integrationSocial features and networking',
+      'Content monetization toolsPerformance optimization',
+      'Multi-platform deploymentAdvanced analytics dashboard'
     ],
     popular: true,
     icon: '🌍',
@@ -257,16 +237,11 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     period: '/month',
     description: 'Advanced space technology platform that provides satellite management, space data analytics, and space infrastructure solutions.',
     features: [
-      'Satellite constellation management',
-      'Space data analytics and processing',
-      'Ground station automation',
-      'Orbital mechanics optimization',
-      'Space weather monitoring',
-      'Satellite communication tools',
-      'Space debris tracking',
-      'Launch vehicle integration',
-      'Regulatory compliance tools',
-      'Advanced space analytics dashboard'
+      'Satellite constellation managementSpace data analytics and processing',
+      'Ground station automationOrbital mechanics optimization',
+      'Space weather monitoringSatellite communication tools',
+      'Space debris trackingLaunch vehicle integration',
+      'Regulatory compliance toolsAdvanced space analytics dashboard'
     ],
     popular: true,
     icon: '🚀',
@@ -300,4 +275,4 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.9,
     reviews: 23
   }
-];
+],

@@ -1,11 +1,11 @@
-"use client";
+"use client",
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { useState, useEffect, useRef } from "react",
+import Link from "next/link",
 
 export function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+  const [isSearchOpen, setIsSearchOpen] = useState(false),
 
   return (
     <nav 
@@ -260,5 +260,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  );
+  ),
 }

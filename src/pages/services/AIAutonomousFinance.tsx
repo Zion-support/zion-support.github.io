@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  DollarSign, 
+  DollarSign,
   Brain, 
   Target, 
   BarChart3, 
@@ -23,50 +23,33 @@ import {
   Zap,
   Shield,
   Calculator
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousFinance: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Financial Management',
-      description: 'Advanced machine learning for autonomous financial planning and optimization'
-    },
+      icon: Brain,title: 'AI-Powered Financial Management',description: 'Advanced machine learning for autonomous financial planning and optimization'
+    };
     {
-      icon: DollarSign,
-      title: 'Budget Optimization',
-      description: 'Intelligent budget planning and expense optimization with AI-driven insights'
-    },
+      icon: DollarSign,title: 'Budget Optimization',description: 'Intelligent budget planning and expense optimization with AI-driven insights'
+    };
     {
-      icon: Target,
-      title: 'Investment Management',
-      description: 'AI-powered investment strategies and portfolio optimization'
-    },
+      icon: Target,title: 'Investment Management',description: 'AI-powered investment strategies and portfolio optimization'
+    };
     {
-      icon: BarChart3,
-      title: 'Financial Analytics',
-      description: 'Real-time analytics and insights into financial performance and trends'
-    },
+      icon: BarChart3,title: 'Financial Analytics',description: 'Real-time analytics and insights into financial performance and trends'
+    };
     {
-      icon: Calculator,
-      title: 'Risk Assessment',
-      description: 'AI-driven financial risk assessment and mitigation strategies'
-    },
+      icon: Calculator,title: 'Risk Assessment',description: 'AI-driven financial risk assessment and mitigation strategies'
+    };
     {
-      icon: TrendingUp,
-      title: 'Revenue Optimization',
-      description: 'Continuous optimization of financial processes and revenue generation'
+      icon: TrendingUp,title: 'Revenue Optimization',description: 'Continuous optimization of financial processes and revenue generation'
     }
   ];
-
   const benefits = [
-    'Improve financial efficiency by 60%',
-    'Reduce financial risks by 70%',
-    'Optimize investments by 80%',
-    'Automate financial processes',
-    '24/7 autonomous operation',
-    'Real-time financial insights'
-  ];
+    'Improve financial efficiency by 60%Reduce financial risks by 70%',
+    'Optimize investments by 80%Automate financial processes',
+    '24/7 autonomous operationReal-time financial insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -208,7 +191,7 @@ const AIAutonomousFinance: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Finance?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -226,7 +209,6 @@ const AIAutonomousFinance: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousFinance;

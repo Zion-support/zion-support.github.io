@@ -1,89 +1,83 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { enhancedServices2025 } from '../../data/enhanced-2025-services';
-import { specializedIndustryServices } from '../../data/specialized-industry-services';
-import { allServices } from '../../data/services';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { enhancedServices2025 } from "../../data/enhanced-2025-services";
+import { specializedIndustryServices } from "../../data/specialized-industry-services";
+import { allServices } from "../../data/services";
+import { Link } from "react-router-dom";
 export default function ServicesOverview() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedIndustry, setSelectedIndustry] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedIndustry, setSelectedIndustry] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
 
   // Combine all services
   const allAvailableServices = [
-    ...enhancedServices2025,
-    ...specializedIndustryServices,
+    ...enhancedServices2025;
+    ...specializedIndustryServices;
     ...allServices
   ];
-
   // Categories for filtering
   const categories = [
-    { id: 'all', name: 'All Categories', icon: Globe },
-    { id: 'AI', name: 'AI & Machine Learning', icon: Bot },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Cloud },
-    { id: 'Security', name: 'Security & Compliance', icon: Shield },
-    { id: 'Analytics', name: 'Analytics & BI', icon: BarChart3 },
-    { id: 'Automation', name: 'Automation', icon: Workflow },
-    { id: 'Fintech', name: 'Fintech', icon: DollarSign },
-    { id: 'Healthcare', name: 'Healthcare', icon: FileText },
-    { id: 'Education', name: 'Education', icon: GraduationCap },
-    { id: 'Marketing', name: 'Marketing', icon: ShoppingCart },
-    { id: 'Development', name: 'Development', icon: Building },
+    { id: 'all', name: 'All Categories', icon: Globe };
+    { id: 'AI', name: 'AI & Machine Learning', icon: Bot };
+    { id: 'IT', name: 'IT & Infrastructure', icon: Cloud };
+    { id: 'Security', name: 'Security & Compliance', icon: Shield };
+    { id: 'Analytics', name: 'Analytics & BI', icon: BarChart3 };
+    { id: 'Automation', name: 'Automation', icon: Workflow };
+    { id: 'Fintech', name: 'Fintech', icon: DollarSign };
+    { id: 'Healthcare', name: 'Healthcare', icon: FileText };
+    { id: 'Education', name: 'Education', icon: GraduationCap };
+    { id: 'Marketing', name: 'Marketing', icon: ShoppingCart };
+    { id: 'Development', name: 'Development', icon: Building };
     { id: 'SAAS', name: 'SAAS Solutions', icon: Cloud }
   ];
-
   // Industries for filtering
   const industries = [
-    { id: 'all', name: 'All Industries', icon: Globe },
-    { id: 'Manufacturing', name: 'Manufacturing', icon: Building },
-    { id: 'Healthcare', name: 'Healthcare', icon: FileText },
-    { id: 'Legal', name: 'Legal', icon: Scale },
-    { id: 'Real Estate', name: 'Real Estate', icon: Home },
-    { id: 'Agriculture', name: 'Agriculture', icon: Leaf },
-    { id: 'Energy', name: 'Energy', icon: Zap },
-    { id: 'Transportation', name: 'Transportation', icon: Car },
-    { id: 'Retail', name: 'Retail', icon: ShoppingCart },
-    { id: 'Hospitality', name: 'Hospitality', icon: Hotel },
-    { id: 'Education', name: 'Education', icon: GraduationCap },
+    { id: 'all', name: 'All Industries', icon: Globe };
+    { id: 'Manufacturing', name: 'Manufacturing', icon: Building };
+    { id: 'Healthcare', name: 'Healthcare', icon: FileText };
+    { id: 'Legal', name: 'Legal', icon: Scale };
+    { id: 'Real Estate', name: 'Real Estate', icon: Home };
+    { id: 'Agriculture', name: 'Agriculture', icon: Leaf };
+    { id: 'Energy', name: 'Energy', icon: Zap };
+    { id: 'Transportation', name: 'Transportation', icon: Car };
+    { id: 'Retail', name: 'Retail', icon: ShoppingCart };
+    { id: 'Hospitality', name: 'Hospitality', icon: Hotel };
+    { id: 'Education', name: 'Education', icon: GraduationCap };
     { id: 'Finance', name: 'Finance', icon: DollarSign }
   ];
-
   // Filter and sort services
   const filteredServices = allAvailableServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
       
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
       
       const matchesIndustry = selectedIndustry === 'all' || 
                              (service.industry && service.industry === selectedIndustry) ||
-                             (!service.industry && selectedIndustry === 'all');
+                             (!service.industry && selectedIndustry === 'all'),
       
-      return matchesSearch && matchesCategory && matchesIndustry;
+      return matchesSearch && matchesCategory && matchesIndustry,
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'name':
-          return a.name.localeCompare(b.name);
+          return a.name.localeCompare(b.name),
         case 'price-low':
-          return (a.pricing?.starter || 0) - (b.pricing?.starter || 0);
+          return (a.pricing?.starter || 0) - (b.pricing?.starter || 0),
         case 'price-high':
-          return (b.pricing?.starter || 0) - (a.pricing?.starter || 0);
+          return (b.pricing?.starter || 0) - (a.pricing?.starter || 0),
         case 'popular':
-          return (b.isPopular ? 1 : 0) - (a.isPopular ? 1 : 0);
+          return (b.isPopular ? 1 : 0) - (a.isPopular ? 1 : 0),
         case 'new':
-          return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
-        default:
-          return 0;
+          return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0),
+        default: return 0
       }
     });
-
   const renderServiceCard = (service: any) => (
     <motion.div
       key={service.id}
@@ -202,7 +196,6 @@ export default function ServicesOverview() {
       </div>
     </motion.div>
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
@@ -415,7 +408,7 @@ export default function ServicesOverview() {
           >
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule a Consultation
             </Link>
@@ -429,5 +422,5 @@ export default function ServicesOverview() {
         </div>
       </section>
     </div>
-  );
+  )
 }

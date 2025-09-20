@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
         { label: 'Cloud Infrastructure', href: '#cloud' },
@@ -38,7 +38,7 @@ export default function Page() {
         { label: 'Support', href: '#support' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [{ icon: Twitter, href: '#twitter', label: 'Twitter' },
     { icon: Linkedin, href: '#linkedin', label: 'LinkedIn' },
@@ -46,14 +46,14 @@ export default function Page() {
     { icon: Instagram, href: '#instagram', label: 'Instagram' },
     { icon: Youtube, href: '#youtube', label: 'YouTube' },
     { icon: Github, href: '#github', label: 'GitHub' }
-  ];
+  ],
 
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (<footer className="bg-gray-900 text-gray-300">
       {/* Main Footer Content */}
@@ -234,7 +234,7 @@ export default function Page() {
         <ArrowUp className="w-6 h-6" />
       </motion.button>
     </footer>
-  );
-};
+  ),
+},
 
-export default ModernFooter;
+export default ModernFooter,

@@ -1,23 +1,22 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-	title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide';
+	title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide',
 	description:,
-		'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.';
+		'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.',
 	keywords: [,
-		'multimodal AIAI agents';
-		'enterprise automationcustomer experience';
-		'analytics2025 AI guide',
-	];
+		'multimodal AIAI agentsenterprise automationcustomer experience',
+		'analytics2025 AI guide'
+	],
 	openGraph: {,
-		title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide';
+		title: 'AI 2025: Multimodal Agents in the Enterprise - Practical Guide',
 		description:,
-			'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.';
-		type: 'article';
-		publishedTime: '2025-09-15T00:00:00.000Z';
-		authors: ['Zion Tech Group'],}
-};
+			'How enterprises deploy multimodal AI agents for automation, analytics, and customer experience. A practical 2025 playbook with architecture and ROI.',
+		type: 'article',
+		publishedTime: '2025-09-15T00:00:00.000Z',
+		authors: ['Zion Tech Group']}
+},
 export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
 	return (,
 		<div className="min-h-screen bg-white">,
@@ -57,7 +56,7 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
 						</div>,
 					</div>,
 				</div>,
-				{/* TOC */,}
+				{/* TOC */}
 				<div className="bg-gray-50 rounded-xl p-8 mb-16">,
 					<h2 className="text-2xl font-bold text-gray-900 mb-6">📋 Table of Contents</h2>,
 					<div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
@@ -170,6 +169,5 @@ export default function MultimodalAgentsEnterpriseGuide(): JSX.Element {,
 					</Link>,
 				</div>,
 			</div>,
-		</div>,
-	),}
+		</div>)}
 ,

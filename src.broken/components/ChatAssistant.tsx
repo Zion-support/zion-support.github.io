@@ -1,17 +1,17 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 interface ChatAssistantProps {
-  children?: React.ReactNode;
-  enabled?: boolean;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  language?: string;
-  maxMessages?: number;
-  enableVoice?: boolean;
-  enableFileUpload?: boolean;
-  enableSuggestions?: boolean;
+  children?: React.ReactNode,
+  enabled?: boolean,
+  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
+  theme?: 'light' | 'dark' | 'auto',
+  language?: string,
+  maxMessages?: number,
+  enableVoice?: boolean,
+  enableFileUpload?: boolean,
+  enableSuggestions?: boolean,
 }
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
@@ -24,41 +24,41 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   enableFileUpload = true,
   enableSuggestions = true
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false),
   const [messages, setMessages] = useState<Message[]>([{
       id: '1',
       text: 'Hello! I\'m your AI assistant.How can I help you today?',
       sender: 'assistant',
       timestamp: new Date()
     }
-  ]);
-  const [inputValue, setInputValue] = useState('');
-  const [isTyping, setIsTyping] = useState(false);
-  const [isListening, setIsListening] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
+  ]),
+  const [inputValue, setInputValue] = useState(''),
+  const [isTyping, setIsTyping] = useState(false),
+  const [isListening, setIsListening] = useState(false),
+  const messagesEndRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLInputElement>(null),
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }),
+  },
 
   useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
+    scrollToBottom(),
+  }, [messages]),
 
   const handleSendMessage = async () => {
-    if(!inputValue.trim()) return;
+    if(!inputValue.trim()) return,
 
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputValue,
       sender: 'user',
       timestamp: new Date()
-    };
+    },
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsTyping(true);
+    setMessages(prev => [...prev, userMessage]),
+    setInputValue(''),
+    setIsTyping(true),
 
     // Simulate AI response
     setTimeout(() => {
@@ -69,14 +69,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         timestamp: new Date(),
         metadata: {
           confidence: 0.95,
-          suggestions: ['Learn more about our services', 'Schedule a consultation', 'View pricing']
+          suggestions: ['Learn more about our servicesSchedule a consultation', 'View pricing']
         }
-      };
+      },
       
-      setMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-    }, 1500);
-  };
+      setMessages(prev => [...prev, aiResponse]),
+      setIsTyping(false),
+    }, 1500),
+  },
 
   const getAIResponse = (input: string): string => {
     const responses = ["I'd be happy to help you with that! Can you provide more details about your specific needs?",
@@ -84,30 +84,27 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       "Thank you for reaching out! I can connect you with one of our experts to discuss your requirements in detail.",
       "Based on your query, I recommend exploring our comprehensive service offerings.Would you like me to guide you through them?",
       "Excellent! We have extensive experience in that area.Let me provide you with some relevant information and next steps."
-    ];
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
+    ],
+    return responses[Math.floor(Math.random() * responses.length)],
+  },
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if(e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
+      e.preventDefault(),
+      handleSendMessage()
     }
-  };
+  },
 
   const toggleVoice = () => {
-    setIsListening(!isListening);
+    setIsListening(!isListening),
     // Voice functionality would be implemented here
-  };
+  },
 
   const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
+    'bottom-right': 'bottom-4 right-4bottom-left': 'bottom-4 left-4top-right': 'top-4 right-4top-left': 'top-4 left-4'
+  },
 
-  if(!enabled) return null;
+  if(!enabled) return null,
 
   return (<div className={`fixed ${positionClasses[position]} z-50`}>
       {/* Chat Window */}
@@ -235,7 +232,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
     </div>
-  );
-};
+  ),
+},
 
-export default ChatAssistant;
+export default ChatAssistant,

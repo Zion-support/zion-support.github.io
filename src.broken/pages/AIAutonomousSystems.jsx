@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Physical Control",
     reliability: "Critical"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "30% yield increase, 40% water savings, reduced labor costs, improved sustainability",
     logo: "AC"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: Shield,
     duration: "8 - 16 weeks"
 
-];
+],
 
 const autonomousBenefits = [{
     title: "Increased Efficiency",
     description: "24 / 7 operation with consistent performance and reduced human error",
     icon: Zap,
-    examples["24 / 7 operation", "Consistent performance", "Reduced errors", "Faster processing"];
-  },;
+    examples["24 / 7 operation", "Consistent performance", "Reduced errors", "Faster processing"],
+  },
   {
     title: "Enhanced Safety",
     description: "Advanced safety systems and risk mitigation capabilities",
     icon: Shield,
-    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];
-  },;
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"],
+  },
   {
     title: "Cost Reduction",
     description: "Lower operational costs and improved resource utilization",
     icon: TrendingUp,
-    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];
-  },;
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"],
+  },
   {
     title: "Scalability",
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
-    examples["Easy scaling", "Adaptive systems", "Modular design", "Future - proof technology"];
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future - proof technology"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Vehicles', 'Robotics', 'Drones', 'Smart Home', 'Agriculture', 'Medical'];
+  const categories = ['AllVehicles', 'RoboticsDrones', 'Smart HomeAgriculture', 'Medical'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? autonomousSystemsSolutions
-    : autonomousSystemsSolutions.filter(solution => solution.category === selectedCategory) ;
+    : autonomousSystemsSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -183,10 +183,10 @@ const autonomousBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Autonomous Systems Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -242,13 +242,13 @@ const autonomousBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Autonomous Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -306,13 +306,13 @@ const autonomousBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -368,13 +368,13 @@ const autonomousBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -474,7 +474,7 @@ const autonomousBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -545,13 +545,13 @@ const autonomousBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

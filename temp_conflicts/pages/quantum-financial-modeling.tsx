@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   DollarSign, Chart, Brain, Atom, Shield, Clock, 
   CheckCircle, ArrowRight, Users, Award,
   TrendingUp, Globe, MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumFinancialModeling: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumFinancialModeling: React.FC = () => {
       title: 'Multi-Asset Support',
       description: 'Comprehensive coverage across stocks, bonds, commodities, and derivatives'
     }
-  ];
+  ],
 
   const quantumCapabilities = [
     {
       area: 'Portfolio Optimization',
-      capabilities: ['Quantum mean-variance optimization', 'Risk parity calculations', 'Multi-factor models'],
+      capabilities: ['Quantum mean-variance optimizationRisk parity calculations', 'Multi-factor models'],
       improvement: '1000x faster optimization',
       processingTime: '< 1 second'
     },
     {
       area: 'Risk Modeling',
-      capabilities: ['Value at Risk (VaR)', 'Expected Shortfall', 'Stress testing scenarios'],
+      capabilities: ['Value at Risk (VaR)Expected Shortfall', 'Stress testing scenarios'],
       improvement: '99.9% accuracy',
       processingTime: '< 5 seconds'
     },
     {
       area: 'Market Prediction',
-      capabilities: ['Time series forecasting', 'Volatility modeling', 'Correlation analysis'],
+      capabilities: ['Time series forecastingVolatility modeling', 'Correlation analysis'],
       improvement: '95% prediction accuracy',
       processingTime: '< 3 seconds'
     },
     {
       area: 'Algorithmic Trading',
-      capabilities: ['Signal generation', 'Execution optimization', 'Market impact analysis'],
+      capabilities: ['Signal generationExecution optimization', 'Market impact analysis'],
       improvement: '90% faster execution',
       processingTime: '< 100ms'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Investment Management',
       description: 'Quantum-enhanced portfolio optimization for institutional and retail investors',
-      benefits: ['Optimal asset allocation', 'Risk-adjusted returns', 'Real-time rebalancing']
+      benefits: ['Optimal asset allocationRisk-adjusted returns', 'Real-time rebalancing']
     },
     {
       title: 'Risk Management',
       description: 'Advanced risk assessment and mitigation for financial institutions',
-      benefits: ['Comprehensive risk modeling', 'Stress testing', 'Regulatory compliance']
+      benefits: ['Comprehensive risk modelingStress testing', 'Regulatory compliance']
     },
     {
       title: 'Algorithmic Trading',
       description: 'High-frequency trading with quantum-powered market analysis',
-      benefits: ['Faster signal generation', 'Optimal execution', 'Reduced market impact']
+      benefits: ['Faster signal generationOptimal execution', 'Reduced market impact']
     },
     {
       title: 'Financial Research',
       description: 'Academic and quantitative research using quantum computing',
-      benefits: ['Complex model simulation', 'Large-scale data analysis', 'Innovative strategies']
+      benefits: ['Complex model simulationLarge-scale data analysis', 'Innovative strategies']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumFinancialModeling: React.FC = () => {
       period: '/month',
       description: 'Perfect for individual investors and small funds',
       features: [
-        'Up to 100 portfolio optimizations/month',
-        'Basic quantum algorithms',
-        'Standard risk models',
-        'Email support',
+        'Up to 100 portfolio optimizations/monthBasic quantum algorithms',
+        'Standard risk modelsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumFinancialModeling: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing investment firms and hedge funds',
       features: [
-        'Up to 1000 portfolio optimizations/month',
-        'Advanced quantum algorithms',
-        'Custom risk models',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 1000 portfolio optimizations/monthAdvanced quantum algorithms',
+        'Custom risk modelsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumFinancialModeling: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large financial institutions',
       features: [
-        'Unlimited optimizations',
-        'Custom quantum algorithm development',
-        'Dedicated quantum hardware',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited optimizationsCustom quantum algorithm development',
+        'Dedicated quantum hardwareDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumFinancialModeling: React.FC = () => {
       position: "Quantitative Trading Director",
       company: "Hedge Fund Capital"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -491,7 +483,7 @@ const QuantumFinancialModeling: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Financial Modeling?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -513,7 +505,7 @@ const QuantumFinancialModeling: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumFinancialModeling;
+export default QuantumFinancialModeling,

@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { LucideIcon } from 'lucide-react',
 
 interface FuturisticNeonButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  size?: 'sm' | 'md' | 'lg';
-  icon?: LucideIcon;
-  disabled?: boolean;
-  className?: string;
-  neonIntensity?: 'low' | 'medium' | 'high';
+  children: React.ReactNode,
+  onClick?: () => void,
+  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger',
+  size?: 'sm' | 'md' | 'lg',
+  icon?: LucideIcon,
+  disabled?: boolean,
+  className?: string,
+  neonIntensity?: 'low' | 'medium' | 'high'
 }
 
 const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
@@ -64,29 +64,29 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
       bg: 'bg-red-400/10',
       hoverBg: 'hover:bg-red-400/20'
     }
-  };
+  },
 
   const sizes = {
     sm: 'px-4 py-2 text-sm',
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
-  };
+  },
 
   const neonIntensities = {
     low: 'shadow-lg',
     medium: 'shadow-xl',
     high: 'shadow-2xl'
-  };
+  },
 
-  const selectedVariant = variants[variant];
-  const selectedSize = sizes[size];
-  const selectedNeonIntensity = neonIntensities[neonIntensity];
+  const selectedVariant = variants[variant],
+  const selectedSize = sizes[size],
+  const selectedNeonIntensity = neonIntensities[neonIntensity],
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">FuturisticNeonButton</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default FuturisticNeonButton;
+  ),
+},
+export default FuturisticNeonButton,

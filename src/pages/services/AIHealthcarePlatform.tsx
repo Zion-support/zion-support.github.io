@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Heart, 
+  Heart,
   Brain, 
   Target, 
   BarChart3, 
@@ -25,50 +25,33 @@ import {
   Shield,
   Users,
   Stethoscope
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIHealthcarePlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Diagnosis',
-      description: 'Advanced machine learning for accurate medical diagnosis and treatment recommendations'
-    },
+      icon: Brain,title: 'AI-Powered Diagnosis',description: 'Advanced machine learning for accurate medical diagnosis and treatment recommendations'
+    };
     {
-      icon: Heart,
-      title: 'Patient Monitoring',
-      description: 'Real-time health monitoring and early warning systems for critical conditions'
-    },
+      icon: Heart,title: 'Patient Monitoring',description: 'Real-time health monitoring and early warning systems for critical conditions'
+    };
     {
-      icon: Target,
-      title: 'Treatment Optimization',
-      description: 'Personalized treatment plans based on patient data and medical research'
-    },
+      icon: Target,title: 'Treatment Optimization',description: 'Personalized treatment plans based on patient data and medical research'
+    };
     {
-      icon: BarChart3,
-      title: 'Health Analytics',
-      description: 'Comprehensive health data analysis and predictive insights'
-    },
+      icon: BarChart3,title: 'Health Analytics',description: 'Comprehensive health data analysis and predictive insights'
+    };
     {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'HIPAA-compliant security with end-to-end encryption'
-    },
+      icon: Shield,title: 'Data Security',description: 'HIPAA-compliant security with end-to-end encryption'
+    };
     {
-      icon: Stethoscope,
-      title: 'Clinical Decision Support',
-      description: 'AI-powered tools to assist healthcare professionals in decision making'
+      icon: Stethoscope,title: 'Clinical Decision Support',description: 'AI-powered tools to assist healthcare professionals in decision making'
     }
   ];
-
   const benefits = [
-    'Improve diagnostic accuracy by 40%',
-    'Reduce medical errors by 60%',
-    'Enhance patient outcomes by 35%',
-    'Optimize treatment plans',
-    'Reduce healthcare costs by 25%',
-    'Improve patient engagement'
-  ];
+    'Improve diagnostic accuracy by 40%Reduce medical errors by 60%',
+    'Enhance patient outcomes by 35%Optimize treatment plans',
+    'Reduce healthcare costs by 25%Improve patient engagement'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,7 +193,7 @@ const AIHealthcarePlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -228,7 +211,6 @@ const AIHealthcarePlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIHealthcarePlatform;

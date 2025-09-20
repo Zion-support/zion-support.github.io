@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-export default NewServices;
-import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
+import React, { useState } from 'react',
+export default NewServices,
+export default NewServices,
+export default NewServices,
+export default NewServices,
+export default NewServices,
+export default NewServices,
+export default NewServices,
+import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices',
 export default function Page() {
 ,
         visible: {
@@ -15,10 +15,10 @@ export default function Page() {
             transition: {
                 duration: 0.5
 
-    };
-    return (<div className="min - h-screen bg-zion - blue - dark text-white relative overflow-hidden">;
+    },
+    return (<div className="min - h-screen bg-zion - blue - dark text-white relative overflow-hidden">,
       {/* Animated Background */}
-      <div className="absolute inset - 0 bg-quantum - gradient opacity - 20 animate -pulse"></div>;
+      <div className="absolute inset - 0 bg-quantum - gradient opacity - 20 animate -pulse"></div>,
       <div className="absolute inset - 0 bg-quantum -mesh"></div>
 
       {/* Matrix Rain Effect */}
@@ -211,7 +211,7 @@ export default function Page() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex - wrap gap-2">
-                    { ('tags' in service ? service.tags []) .slice(0, 4) .map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion - blue - light / 20 text-zion - slate - light rounded-full">;
+                    { ('tags' in service ? service.tags []) .slice(0, 4) .map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion - blue - light / 20 text-zion - slate - light rounded-full">,
                         {tag}
                       </span>) ) }
                   </div>) }
@@ -290,7 +290,7 @@ export default function Page() {
 
                 {/* Tags */}
                 {'tags' in service && service.tags && (<div className="mt-4 flex flex - wrap gap-2">
-                    { ('tags' in service ? service.tags []) .slice(0, 4) .map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion - blue - light / 20 text-zion - slate - light rounded-full">;
+                    { ('tags' in service ? service.tags []) .slice(0, 4) .map((tag, index) => (<span key={index} className="text-xs px-2 py-1 bg-zion - blue - light / 20 text-zion - slate - light rounded-full">,
                         {tag}
                       </span>) ) }
                   </div>) }
@@ -304,7 +304,7 @@ export default function Page() {
               No services found matching your criteria
             </div>
             <button onClick={ () => {
-                setSearchTerm('') ;
+                setSearchTerm('') ,
                 setSelectedCategory('all') }} className="px-6 py-3 bg-zion - cyan text-zion - blue - dark rounded-lg font - medium hover:bg-zion - cyan / 90 transition -colors">
               Clear Filters
             </button>

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Implementation Guide - Complete Roadmap';
-  description: 'The most comprehensive AI implementation guide for 2025. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.';
-  keywords: ['AI implementationAI roadmap', 'AI transformationAI strategy', 'AI guide 2025'],
-};
+  title: 'AI 2025 Ultimate Implementation Guide - Complete Roadmap',
+  description: 'The most comprehensive AI implementation guide for 2025. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.',
+  keywords: ['AI implementationAI roadmapAI transformationAI strategy', 'AI guide 2025']
+},
 export default function AI2025UltimateImplementationGuide() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -40,12 +40,12 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Phases */,}
+      {/* Implementation Phases */}
       <section className="py-16">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Implementation Phases</h2>,
           <div className="space-y-12">,
-            {/* Phase 1 */,}
+            {/* Phase 1 */}
             <div className="flex flex-col md: flex-row items-center gap-8">,
               <div className="flex-shrink-0">,
                 <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold">,
@@ -55,7 +55,7 @@ export default function AI2025UltimateImplementationGuide() {,
               <div className="flex-1">,
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Assessment & Strategy</h3>,
                 <p className="text-gray-600 mb-4">,
-                  Comprehensive analysis of your current state, identification of AI opportunities;
+                  Comprehensive analysis of your current state, identification of AI opportunities,
                   and development of a customized transformation strategy.,
                 </p>,
                 <ul className="list-disc pl-6 text-gray-600 space-y-2">,
@@ -111,7 +111,7 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Key Technologies */,}
+      {/* Key Technologies */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Key AI Technologies</h2>,
@@ -167,7 +167,7 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Timeline */,}
+      {/* Implementation Timeline */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Implementation Timeline</h2>,
@@ -203,7 +203,7 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Success Metrics */,}
+      {/* Success Metrics */}
       <section className="py-16 bg-gray-50">,
         <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Expected Results</h2>,
@@ -227,7 +227,7 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-16">,
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">,
@@ -252,5 +252,4 @@ export default function AI2025UltimateImplementationGuide() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

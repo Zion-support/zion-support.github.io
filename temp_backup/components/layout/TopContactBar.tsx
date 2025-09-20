@@ -1,20 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, Star, Award, TrendingUp, Users } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Phone, Mail, MapPin, Clock, Star, Award, TrendingUp, Users } from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const companyStats = [
   { icon: Star, value: '500+', label: 'Services Delivered' },
   { icon: Users, value: '1000+', label: 'Happy Clients' },
   { icon: TrendingUp, value: '99.9%', label: 'Uptime Guarantee' },
   { icon: Award, value: '25+', label: 'Industry Awards' }
-];
+],
 
 export default function TopContactBar() {
   return (
@@ -22,6 +22,6 @@ export default function TopContactBar() {
       <h3 className="text-xl font-bold mb-4">TopContactBar</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default TopContactBar;
+  ),
+},
+export default TopContactBar,

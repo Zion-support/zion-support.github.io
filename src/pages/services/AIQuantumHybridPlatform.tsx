@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Atom, 
+  Atom,
   Brain, 
   Zap, 
   Shield, 
@@ -37,105 +37,64 @@ import {
   DollarSign,
   Clock,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIQuantumHybridPlatform() {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum-Classical Hybrid Computing',
-      description: 'Seamlessly integrate quantum and classical computing for unprecedented computational power',
-      benefits: ['1000x faster complex calculations', 'Hybrid algorithm optimization', 'Quantum advantage in specific domains']
+      icon: Atom,title: 'Quantum-Classical Hybrid Computing',description: 'Seamlessly integrate quantum and classical computing for unprecedented computational power',benefits: ['1000x faster complex calculationsHybrid algorithm optimization', 'Quantum advantage in specific domains']
     },
     {
-      icon: Brain,
-      title: 'AI-Quantum Neural Networks',
-      description: 'Advanced neural networks leveraging quantum properties for superior pattern recognition',
-      benefits: ['Quantum-enhanced learning', 'Superior classification accuracy', 'Faster training convergence']
+      icon: Brain,title: 'AI-Quantum Neural Networks',description: 'Advanced neural networks leveraging quantum properties for superior pattern recognition',benefits: ['Quantum-enhanced learningSuperior classification accuracy', 'Faster training convergence']
     },
     {
-      icon: Shield,
-      title: 'Quantum-Secure AI Operations',
-      description: 'Unbreakable encryption and security protocols using quantum cryptography',
-      benefits: ['Post-quantum cryptography', 'Quantum key distribution', 'Tamper-proof AI operations']
+      icon: Shield,title: 'Quantum-Secure AI Operations',description: 'Unbreakable encryption and security protocols using quantum cryptography',benefits: ['Post-quantum cryptographyQuantum key distribution', 'Tamper-proof AI operations']
     },
     {
-      icon: Database,
-      title: 'Quantum Data Processing',
-      description: 'Process massive datasets with quantum algorithms for instant insights',
-      benefits: ['Exponential speedup', 'Real-time big data analysis', 'Quantum machine learning']
+      icon: Database,title: 'Quantum Data Processing',description: 'Process massive datasets with quantum algorithms for instant insights',benefits: ['Exponential speedupReal-time big data analysis', 'Quantum machine learning']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      title: 'Financial Modeling',
-      description: 'Quantum-enhanced risk assessment and portfolio optimization',
-      icon: TrendingUp,
-      price: '$15,000/month'
+      title: 'Financial Modeling',description: 'Quantum-enhanced risk assessment and portfolio optimization',icon: TrendingUp,price: '$15,000/month'
     },
     {
-      title: 'Drug Discovery',
-      description: 'Molecular simulation and protein folding with quantum accuracy',
-      icon: TestTube,
-      price: '$25,000/month'
+      title: 'Drug Discovery',description: 'Molecular simulation and protein folding with quantum accuracy',icon: TestTube,price: '$25,000/month'
     },
     {
-      title: 'Climate Modeling',
-      description: 'Complex climate simulations with quantum precision',
-      icon: Globe,
-      price: '$20,000/month'
+      title: 'Climate Modeling',description: 'Complex climate simulations with quantum precision',icon: Globe,price: '$20,000/month'
     },
     {
-      title: 'Supply Chain Optimization',
-      description: 'Quantum algorithms for logistics and route optimization',
-      icon: Network,
-      price: '$18,000/month'
+      title: 'Supply Chain Optimization',description: 'Quantum algorithms for logistics and route optimization',icon: Network,price: '$18,000/month'
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$5,000',
-      period: '/month',
-      description: 'Basic quantum-AI integration for small teams',
-      features: [
-        'Quantum API access',
-        'Basic hybrid algorithms',
-        'Standard support',
-        'Up to 100 quantum operations/day'
+      name: 'Starter',price: '$5,000',
+      period: '/month',description: 'Basic quantum-AI integration for small teams',features: [
+        'Quantum API accessBasic hybrid algorithms';
+        'Standard supportUp to 100 quantum operations/day'
       ]
     },
     {
-      name: 'Professional',
-      price: '$15,000',
-      period: '/month',
-      description: 'Advanced features for growing organizations',
-      features: [
-        'Full quantum-AI platform',
-        'Custom hybrid algorithms',
-        'Priority support',
-        'Unlimited quantum operations',
+      name: 'Professional',price: '$15,000',
+      period: '/month',description: 'Advanced features for growing organizations',features: [
+        'Full quantum-AI platformCustom hybrid algorithms';
+        'Priority supportUnlimited quantum operations',
         'Quantum security features'
       ],
       popular: true
-    },
+    };
     {
-      name: 'Enterprise',
-      price: '$50,000',
-      period: '/month',
-      description: 'Complete solution for large enterprises',
-      features: [
-        'Everything in Professional',
-        'Custom quantum hardware integration',
-        'Dedicated quantum engineer',
-        '24/7 support',
+      name: 'Enterprise',price: '$50,000',
+      period: '/month',description: 'Complete solution for large enterprises',features: [
+        'Everything in ProfessionalCustom quantum hardware integration';
+        'Dedicated quantum engineer24/7 support',
         'Custom algorithm development'
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {/* Hero Section */}
@@ -457,7 +416,7 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
@@ -479,5 +438,5 @@ export default function AIQuantumHybridPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

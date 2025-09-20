@@ -1,19 +1,19 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PageTransition from '../components/PageTransition';
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import PageTransition from '../components/PageTransition',
 describe('PageTransition', () => {,
   test('renders without crashing', () => {,
-    render(<PageTransition />);
-    expect(screen.getByTestId('pagetransition')).toBeInTheDocument();
-  });
+    render(<PageTransition />),
+    expect(screen.getByTestId('pagetransition')).toBeInTheDocument(),
+  }),
   test('displays correct content', () => {,
-    render(<PageTransition />);
-  });
+    render(<PageTransition />),
+  }),
   test('handles user interactions', () => {,
-    render(<PageTransition />);
-  });
+    render(<PageTransition />),
+  }),
   test('applies correct styling', () => {,
-    render(<PageTransition />);
-  });
-});
+    render(<PageTransition />),
+  }),
+}),

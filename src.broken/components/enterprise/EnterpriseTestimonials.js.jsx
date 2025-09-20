@@ -1,6 +1,6 @@
-import React from 'react';
-import { Quote  } from 'lucide-react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import React from 'react',
+import { Quote  } from 'lucide-react',
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel',
 ,
   {
 
@@ -17,8 +17,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
     author: 'Elena Rodriguez',
     title: 'CTO',
     comp: 'FutureTech Systems',
-    image: '/placeholder.svg'},
-];
+    image: '/placeholder.svg'}
+],
 export function EnterpriseTestimonials() {
   return ("
     <section id="testimonials" className="py-20 px-4 md:px-6">"
@@ -68,6 +68,6 @@ export function EnterpriseTestimonials() {
         </Carousel>
       </div>
     </section>
-  );
+  ),
 }
 '"

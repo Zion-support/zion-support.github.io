@@ -1,23 +1,23 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface PaymentButtonProps {
-  amount: number;
-  serviceId: string;
-  providerId: string;
-  buttonText?: string;
-  className?: string;
-  onPaymentInitiated?: () => void;
-  redirectUrl?: string;
+  amount: number,
+  serviceId: string,
+  providerId: string,
+  buttonText?: string,
+  className?: string,
+  onPaymentInitiated?: () => void,
+  redirectUrl?: string
 }
 
 export function PaymentButton({
@@ -27,37 +27,36 @@ export function PaymentButton({
   buttonText = "Purchase",
   className,
   onPaymentInitiated,
-  redirectUrl,
+  redirectUrl
   }: PaymentButtonProps) {
-    const [isProcessing, setIsProcessing] = useState(false);
-    const { isAuthenticated, user } = useAuth();
-    const navigate = useNavigate();
-    const { trackEvent } = useAnalytics();
+    const [isProcessing, setIsProcessing] = useState(false),
+    const { isAuthenticated, user } = useAuth(),
+    const navigate = useNavigate(),
+    const { trackEvent } = useAnalytics(),
   
     const handlePaymentClick = async () => {
-      trackEvent('button_click', { elementId: 'buy_now', serviceId });
-      gtagEvent('buy_now_click', { serviceId });
+      trackEvent('button_click', { elementId: 'buy_now', serviceId }),
+      gtagEvent('buy_now_click', { serviceId }),
       if (!isAuthenticated) {
         toast({
           title: "Authentication required",
-        description: "Please sign in to make a purchase.",
-      });
+        description: "Please sign in to make a purchase."
+      }),
 
-      const next = encodeURIComponent(`/checkout?sku=${serviceId}`);
-      navigate(`/login?next=${next}`);
-      return;
+      const next = encodeURIComponent(`/checkout?sku=${serviceId}`),
+      navigate(`/login?next=${next}`),
+      return,
     }
     
     try {
-      setIsProcessing(true);
+      setIsProcessing(true),
       
       if (onPaymentInitiated) {
-        onPaymentInitiated();
+        onPaymentInitiated(),
       }
       
       // Create a Stripe checkout session via edge function
-      const { data, error } = await supabase.functions.invoke(
-        "checkout-sessions",
+      const { data, error } = await supabase.functions.invoke("checkout-sessions",
         {
         body: {
           amount,
@@ -65,37 +64,36 @@ export function PaymentButton({
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
-          cancelUrl: window.location.href,
-        },
-      );
+          cancelUrl: window.location.href
+        }),
 
       if (error) {
-        throw error;
+        throw error,
       }
 
-      const sessionId = data?.sessionId as string | undefined;
+      const sessionId = data?.sessionId as string | undefined,
       if (sessionId) {
-        const stripe = await stripePromise;
-        await stripe?.redirectToCheckout({ sessionId });
+        const stripe = await stripePromise,
+        await stripe?.redirectToCheckout({ sessionId }),
       } else {
-        throw new Error("No session ID returned");
+        throw new Error("No session ID returned"),
       }
       
       } catch (error) {
-        console.error("Payment error:", error);
-        captureException(error);
+        console.error("Payment error:", error),
+        captureException(error),
         toast({
           title: "Payment error",
         description: "There was a problem initiating your payment. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     } finally {
       // Reset button state after a short delay
       setTimeout(() => {
-        setIsProcessing(false);
-      }, 1500);
+        setIsProcessing(false),
+      }, 1500),
     }
-  };
+  },
   
   return (
     <Button
@@ -115,5 +113,5 @@ export function PaymentButton({
         buttonText
       )}
     </Button>
-  );
+  ),
 }

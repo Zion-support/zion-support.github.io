@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default Training;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Training,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
@@ -11,23 +11,23 @@ export default function Page() {
       id: 'leadership',
       name: 'Leadership & Management',
       icon: Users,
-      count: 4,
-    },
-  ];
+      count: 4
+    }
+  ],
 
   const levels = [{ id: 'all', name: 'All Levels', count: 0 },
     { id: 'beginner', name: 'Beginner', count: 0 },
     { id: 'intermediate', name: 'Intermediate', count: 0 },
     { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 },
-  ];
+    { id: 'expert', name: 'Expert', count: 0 }
+  ],
 
   const formats = [{ id: 'all', name: 'All Formats', count: 0 },
     { id: 'online', name: 'Online', count: 0 },
     { id: 'in - person', name: 'In - Person', count: 0 },
     { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self - paced', name: 'Self - Paced', count: 0 },
-  ];
+    { id: 'self - paced', name: 'Self - Paced', count: 0 }
+  ],
 
   const trainingPrograms = [{
       id: 1,
@@ -43,12 +43,10 @@ export default function Page() {
       students: 1247,
       price: '$299',
       image: '/images / training / ai - fundamentals.jpg',
-      tags: ['Python', 'TensorFlow', 'Neural Networks', 'Data Science'],
-      features: ['Hands - on projects with real datasets',
-        'Live Q & A sessions with experts',
-        'Certificate upon completion',
-        'Lifetime access to materials',
-      ],
+      tags: ['PythonTensorFlow', 'Neural NetworksData Science'],
+      features: ['Hands - on projects with real datasetsLive Q & A sessions with experts',
+        'Certificate upon completionLifetime access to materials'
+      ]
     },
     {
       id: 2,
@@ -64,12 +62,10 @@ export default function Page() {
       students: 892,
       price: '$499',
       image: '/images / training / cloud - architecture.jpg',
-      tags: ['AWS', 'Azure', 'Kubernetes', 'Microservices'],
-      features: ['Real - world case studies',
-        'Architecture design workshops',
-        'Industry best practices',
-        'Networking opportunities',
-      ],
+      tags: ['AWSAzure', 'KubernetesMicroservices'],
+      features: ['Real - world case studiesArchitecture design workshops',
+        'Industry best practicesNetworking opportunities'
+      ]
     },
     {
       id: 3,
@@ -85,16 +81,12 @@ export default function Page() {
       students: 1563,
       price: '$399',
       image: '/images / training / cybersecurity.jpg',
-      tags: ['Penetration Testing',
-        'Incident Response',
-        'Compliance',
-        'Risk Management',
+      tags: ['Penetration TestingIncident Response',
+        'ComplianceRisk Management'
       ],
-      features: ['Hands - on security labs',
-        'Industry certifications',
-        'Expert - led workshops',
-        'Career guidance',
-      ],
+      features: ['Hands - on security labsIndustry certifications',
+        'Expert - led workshopsCareer guidance'
+      ]
     },
     {
       id: 4,
@@ -110,82 +102,80 @@ export default function Page() {
       students: 2034,
       price: '$349',
       image: '/images / training / data - science.jpg',
-      tags: ['R', 'Python', 'SQL', 'Tableau'],
-      features: ['Real - world data projects',
-        'Statistical analysis tools',
-        'Data visualization skills',
-        'Portfolio development',
-      ],
-    },
-  ];
+      tags: ['RPython', 'SQLTableau'],
+      features: ['Real - world data projectsStatistical analysis tools',
+        'Data visualization skillsPortfolio development'
+      ]
+    }
+  ],
 
   const getLevelColor = (level: string) => {
     switch(level) {
       case 'beginner':
-        return 'bg-green - 500 / 20 text-green - 400';
+        return 'bg-green - 500 / 20 text-green - 400',
       case 'intermediate':
-        return 'bg-yellow-500 / 20 text-yellow-400';
+        return 'bg-yellow-500 / 20 text-yellow-400',
       case 'advanced':
-        return 'bg-orange - 500 / 20 text-orange - 400';
+        return 'bg-orange - 500 / 20 text-orange - 400',
       case 'expert':
-        return 'bg-red - 500 / 20 text-red - 400';
+        return 'bg-red - 500 / 20 text-red - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const getFormatColor = (format: string) => {
     switch(format) {
       case 'online':
-        return 'bg-blue - 500 / 20 text-blue - 400';
+        return 'bg-blue - 500 / 20 text-blue - 400',
       case 'in - person':
-        return 'bg-purple - 500 / 20 text-purple - 400';
+        return 'bg-purple - 500 / 20 text-purple - 400',
       case 'hybrid':
-        return 'bg-indigo - 500 / 20 text-indigo - 400';
+        return 'bg-indigo - 500 / 20 text-indigo - 400',
       case 'self - paced':
-        return 'bg-teal - 500 / 20 text-teal - 400';
+        return 'bg-teal - 500 / 20 text-teal - 400',
       default:
-        return 'bg-gray - 500 / 20 text-gray - 400';
+        return 'bg-gray - 500 / 20 text-gray - 400'
     }
-  };
+  },
 
   const filteredPrograms = trainingPrograms.filter(program => {
     const matchesSearch = program.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       program.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       program.tags.some(tag =>
-        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
-    const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
+    const matchesCategory = activeCategory === 'all' || program.category === activeCategory,
+    const matchesLevel = activeLevel === 'all' || program.level === activeLevel,
+    const matchesFormat = activeFormat === 'all' || program.format === activeFormat,
 
-    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
-  }) ;
+    return matchesSearch && matchesCategory && matchesLevel && matchesFormat,
+  }) ,
 
   // Update counts
   categories.forEach(cat => {
     if (cat.id === 'all') {
-      cat.count = trainingPrograms.length;
+      cat.count = trainingPrograms.length,
     } else {
-      cat.count = trainingPrograms.filter(program => program.category === cat.id) .length;
+      cat.count = trainingPrograms.filter(program => program.category === cat.id) .length,
     }
-  }) ;
+  }) ,
 
   levels.forEach(level => {
     if (level.id === 'all') {
-      level.count = trainingPrograms.length;
+      level.count = trainingPrograms.length,
     } else {
-      level.count = trainingPrograms.filter(program => program.level === level.id) .length;
+      level.count = trainingPrograms.filter(program => program.level === level.id) .length,
     }
-  }) ;
+  }) ,
 
   formats.forEach(format => {
     if (format.id === 'all') {
-      format.count = trainingPrograms.length;
+      format.count = trainingPrograms.length,
     } else {
-      format.count = trainingPrograms.filter(program => program.format === format.id) .length;
+      format.count = trainingPrograms.filter(program => program.format === format.id) .length,
     }
-  }) ;
+  }) ,
 
   return (<>
       <SEO
@@ -346,8 +336,8 @@ export default function Page() {
                       className={`px-2 py-1 rounded-full text-xs font - medium ${getFormatColor(program.format) }`}
                     >
                       {program.format
-                        .replace('-', ' ') .charAt(0) .toUpperCase () +
-                        program.format.replace('-', ' ') .slice(1) }
+                        .replace('- ') .charAt(0) .toUpperCase () +
+                        program.format.replace('- ') .slice(1) }
                     </span>
                   </div>
 
@@ -417,6 +407,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

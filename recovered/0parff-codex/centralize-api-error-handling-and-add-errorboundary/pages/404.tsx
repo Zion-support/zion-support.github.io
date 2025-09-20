@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
 
 export default function Custom404() {
-  const router = useRouter();
-  const [query, setQuery] = useState('');
+  const router = useRouter(),
+  const [query, setQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
-      router.push(`/marketplace/search?q=${encodeURIComponent(query)}`);
+      router.push(`/marketplace/search?q=${encodeURIComponent(query)}`),
     }
-  };
+  },
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6 text-center">
@@ -31,5 +31,5 @@ export default function Custom404() {
         <Link href="/marketplace">Back to Marketplace</Link>
       </Button>
     </main>
-  );
+  ),
 }

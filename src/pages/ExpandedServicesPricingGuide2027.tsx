@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   Filter,
@@ -60,92 +60,85 @@ import {
   Info,
   AlertTriangle,
   Zap
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 import {
   ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-} from '@/data/expandedServicesPricing2027';
-
+} from "@/data/expandedServicesPricing2027";
 const ExpandedServicesPricingGuide2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [filteredPricing, setFilteredPricing] = useState<ExpandedServicePricing[]>(ALL_EXPANDED_SERVICES_PRICING),
 
-  const categories = ['All', 'Cybersecurity', 'Data Analytics', 'Cloud & DevOps', 'IoT & Edge Computing', 'Financial Technology', 'Healthcare Technology'];
+  const categories = ['AllCybersecurity', 'Data AnalyticsCloud & DevOps', 'IoT & Edge ComputingFinancial Technology', 'Healthcare Technology'],
 
   useEffect(() => {
-    let pricing = ALL_EXPANDED_SERVICES_PRICING;
+    let pricing = ALL_EXPANDED_SERVICES_PRICING,
     if (selectedCategory !== 'All') {
-      pricing = pricing.filter(p => p.category === selectedCategory);
+      pricing = pricing.filter(p => p.category === selectedCategory),
     }
     if (searchQuery) {
       pricing = pricing.filter(p =>
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      ),
     }
-    setFilteredPricing(pricing);
-  }, [selectedCategory, searchQuery]);
+    setFilteredPricing(pricing),
+  }, [selectedCategory, searchQuery]),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
       case 'Data Analytics':
-        return BarChart3;
+        return BarChart3,
       case 'Cloud & DevOps':
-        return Cloud;
+        return Cloud,
       case 'IoT & Edge Computing':
-        return IoT;
+        return IoT,
       case 'Financial Technology':
-        return FinTech;
+        return FinTech,
       case 'Healthcare Technology':
-        return Healthcare;
-      default:
-        return Rocket;
+        return Healthcare,
+      default: return Rocket
     }
   };
-
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
-        return 'from-blue-500 to-cyan-600';
+        return 'from-blue-500 to-cyan-600',
       case 'Cloud & DevOps':
-        return 'from-indigo-500 to-purple-600';
+        return 'from-indigo-500 to-purple-600',
       case 'IoT & Edge Computing':
-        return 'from-green-500 to-emerald-600';
+        return 'from-green-500 to-emerald-600',
       case 'Financial Technology':
-        return 'from-yellow-500 to-orange-600';
+        return 'from-yellow-500 to-orange-600',
       case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600';
-      default:
-        return 'from-gray-500 to-slate-600';
+        return 'from-teal-500 to-blue-600',
+      default: return 'from-gray-500 to-slate-600'
     }
   };
-
   const getMarketPositionColor = (position: string) => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';
       case 'challenger':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'niche':
-        return 'bg-purple-100 text-purple-800';
+        return 'bg-purple-100 text-purple-800',
       case 'emerging':
-        return 'bg-yellow-100 text-yellow-800';
-      default:
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-yellow-100 text-yellow-800',
+      default: return 'bg-gray-100 text-gray-800'
     }
   };
-
   const renderPricingCard = (pricing: ExpandedServicePricing) => {
     const CategoryIcon = getCategoryIcon(pricing.category);
-    const categoryColor = getCategoryColor(pricing.category);
+    const categoryColor = getCategoryColor(pricing.category),
 
     return (
       <motion.div
@@ -321,7 +314,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                         {pricing.pricingTiers.enterprise.features.slice(3).map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">
                             <CheckCircle className="w-4 h-4 text-green-500" />
-                            <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                            <span className="text-sm text-gray-600 dark: text-gray-300">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -341,7 +334,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                   {pricing.marketComparison.marketPosition.toUpperCase()}
                 </span>
                 <span className="text-sm text-gray-600 dark:text-gray-300">
-                  vs {pricing.marketComparison.competitors.join(', ')}
+                  vs {pricing.marketComparison.competitors.join()}
                 </span>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
@@ -426,7 +419,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 href={pricing.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="flex-1 bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
@@ -435,9 +428,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
           </div>
         </div>
       </motion.div>
-    );
+    )
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
@@ -570,7 +562,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
@@ -597,7 +589,6 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 };
-
 export default ExpandedServicesPricingGuide2027;

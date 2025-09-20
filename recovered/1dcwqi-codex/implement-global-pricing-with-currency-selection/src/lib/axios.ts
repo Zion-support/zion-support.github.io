@@ -1,65 +1,65 @@
 export interface AxiosError extends Error {
-  response?: { status: number; data?: any };
+  response?: { status: number, data?: any },
 }
 
-type FulfilledFn = (value: any) => any | Promise<any>;
-type RejectedFn = (error: any) => any | Promise<any>;
+type FulfilledFn = (value: any) => any | Promise<any>,
+type RejectedFn = (error: any) => any | Promise<any>,
 
 class InterceptorManager {
-  handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = [];
+  handlers: { fulfilled?: FulfilledFn, rejected?: RejectedFn }[] = [],
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
-    this.handlers.push({ fulfilled, rejected });
+    this.handlers.push({ fulfilled, rejected }),
   }
 }
 
 export interface AxiosInstance {
-  interceptors: { response: InterceptorManager };
-  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>;
+  interceptors: { response: InterceptorManager },
+  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>,
 }
 
-export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
-  const baseURL = config.baseURL || '';
-  const withCreds = !!config.withCredentials;
+export function create(config: { baseURL?: string, withCredentials?: boolean } = {}): AxiosInstance {
+  const baseURL = config.baseURL || '',
+  const withCreds = !!config.withCredentials,
 
   const instance: AxiosInstance = {
     interceptors: { response: new InterceptorManager() },
     async get(url, init = {}) {
       const params = (init as any).params
         ? '?' + new URLSearchParams((init as any).params).toString()
-        : '';
-      const opts = { ...init } as RequestInit;
-      delete (opts as any).params;
-      return request(baseURL + url + params, 'GET', opts);
-    },
-  };
+        : '',
+      const opts = { ...init } as RequestInit,
+      delete (opts as any).params,
+      return request(baseURL + url + params, 'GET', opts),
+    }
+  },
 
   async function request(url: string, method: string, init: RequestInit) {
-    const response = await fetch(url, { ...init, method, credentials: withCreds ? 'include' : init.credentials });
-    let data: any = null;
+    const response = await fetch(url, { ...init, method, credentials: withCreds ? 'include' : init.credentials }),
+    let data: any = null,
     try {
-      data = await response.clone().json();
+      data = await response.clone().json()
     } catch {}
-    const result = { data, status: response.status };
+    const result = { data, status: response.status },
     if (response.ok) {
-      let res: any = result;
+      let res: any = result,
       for (const h of instance.interceptors.response.handlers) {
         if (h.fulfilled) {
-          res = await h.fulfilled(res);
+          res = await h.fulfilled(res)
         }
       }
-      return res;
+      return res,
     } else {
-      const err: AxiosError = Object.assign(new Error('Request failed'), { response: result });
+      const err: AxiosError = Object.assign(new Error('Request failed'), { response: result }),
       for (const h of instance.interceptors.response.handlers) {
         if (h.rejected) {
-          await h.rejected(err);
+          await h.rejected(err),
         }
       }
-      throw err;
+      throw err,
     }
   }
 
-  return instance;
+  return instance,
 }
 
-export default { create };
+export default { create },

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building  } from 'lucide-react';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building  } from 'lucide-react',
 ,
     {
 "
@@ -11,7 +11,7 @@ import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building
         icon: <Building className="w-8 h-8"/>,"
         color: "from-zion-purple to-zion-purple-dark","
         bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-        features[;"
+        features[,"
             "Up to 25 team members","
             "Full AI tools access","
             "Priority email support","
@@ -19,11 +19,11 @@ import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building
             "Unlimited projects","
             "Team collaboration","
             "Basic analytics"
-        ],;
-        notIncluded[;"
+        ],
+        notIncluded[,"
             "Custom integrations","
             "Dedicated account manager"
-        ],;
+        ],
         popular: true,"
         cta: "Start Free Trial"
     },
@@ -36,7 +36,7 @@ import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building
         icon: <Crown className="w-8 h-8"/>,"
         color: "from-zion-cyan-light to-zion-purple","
         bgColor: "from-zion-cyan-light/20 to-zion-purple/20",
-        features[;"
+        features[,"
             "Unlimited team members","
             "All AI tools + custom models","
             "24/7 phone support","
@@ -47,12 +47,12 @@ import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building
             "Dedicated account manager","
             "SLA guarantees","
             "On-premise options"
-        ],;
-        notIncluded[],;
+        ],
+        notIncluded[],
         popular: false,"
         cta: "Contact Sales"
     }
-];
+],
 const addons = [{
 "
         name: "AI Model Training",
@@ -60,8 +60,8 @@ const addons = [{
         period: "month","
         description: "Custom AI model training and optimization","
         icon: <Zap className="w-6 h-6"/>,"
-        features["Custom model training", "Performance optimization", "Model monitoring"];
-    },;
+        features["Custom model training", "Performance optimization", "Model monitoring"],
+    },
     {
 "
         name: "Premium Support",
@@ -69,8 +69,8 @@ const addons = [{
         period: "month","
         description: "24/7 dedicated support with guaranteed response times","
         icon: <Shield className="w-6 h-6"/>,"
-        features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"];
-    },;
+        features["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"],
+    },
     {
 "
         name: "Advanced Analytics",
@@ -78,16 +78,16 @@ const addons = [{
         period: "month","
         description: "Comprehensive analytics and reporting suite","
         icon: <Users className="w-6 h-6"/>,"
-        features["Custom dashboards", "Advanced reporting", "Data export options"];
+        features["Custom dashboards", "Advanced reporting", "Data export options"],
     }
-];
+],
 export function PricingSection() {
 
-    const [billingPeriod, setBillingPeriod] = useState('month');
-    const [selectedPlan, setSelectedPlan] = useState(null);
+    const [billingPeriod, setBillingPeriod] = useState('month'),
+    const [selectedPlan, setSelectedPlan] = useState(null),
     const getDiscountedPrice = (price) => {
 
-        return billingPeriod === 'year' ? Math.round(price * 10) : price};
+        return billingPeriod === 'year' ? Math.round(price * 10) : price},
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -100,7 +100,7 @@ export function PricingSection() {
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -117,7 +117,7 @@ export function PricingSection() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

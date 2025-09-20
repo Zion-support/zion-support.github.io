@@ -1,34 +1,30 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             id: 'budget',
             question: 'What is your budget range for AI implementation?',
-            options[;
-                'Under $10,000',
-                '$10,000 - $50,000',
-                '$50,000 - $200,000',
-                '$200,000 - $1,000,000',
+            options[,
+                'Under $10,000$10,000 - $50,000',
+                '$50,000 - $200,000$200,000 - $1,000,000',
                 'Over $1,000,000'
             ]
-        },;
+        },
         {
             id: 'timeline',
             question: 'What is your implementation timeline?',
-            options[;
-                'Immediate(0 - 3 months) ',
-                'Short - term(3 - 6 months) ',
-                'Medium - term(6 - 12 months) ',
-                'Long - term(1 + years) '
+            options[,
+                'Immediate(0 - 3 months) Short - term(3 - 6 months) ',
+                'Medium - term(6 - 12 months) Long - term(1 + years) '
             ]
 
-    ];
+    ],
     const aiSolutions = [{
             name: 'AI Business Intelligence',
             description: 'Advanced analytics and business intelligence powered by artificial intelligence',
             category: 'Analytics & Insights',
-            bestFor['Data - driven decision making', 'Performance tracking', 'Market analysis'],;
-            features['Predictive Analytics', 'Real - time Dashboards', 'Custom Reports'],;
+            bestFor['Data - driven decision makingPerformance tracking', 'Market analysis'],
+            features['Predictive AnalyticsReal - time Dashboards', 'Custom Reports'],
             href: '/services / ai - business - intelligence',
             icon: TrendingUp
         },
@@ -36,8 +32,8 @@ export default function Page() {
             name: 'AI Marketing Automation',
             description: 'Intelligent marketing automation with AI - driven optimization',
             category: 'Marketing & Sales',
-            bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'],;
-            features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'],;
+            bestFor['Customer acquisitionCampaign optimization', 'Lead generation'],
+            features['Campaign AutomationCustomer Segmentation', 'ROI Optimization'],
             href: '/services / ai - marketing - automation',
             icon: Target
         },
@@ -45,8 +41,8 @@ export default function Page() {
             name: 'AI Workflow Automation',
             description: 'Streamline business processes with intelligent automation',
             category: 'Process Automation',
-            bestFor['Operational efficiency', 'Error reduction', 'Cost savings'],;
-            features['Process Optimization', 'Workflow Design', 'Integration'],;
+            bestFor['Operational efficiencyError reduction', 'Cost savings'],
+            features['Process OptimizationWorkflow Design', 'Integration'],
             href: '/services / ai - workflow-automation',
             icon: Zap
         },
@@ -54,8 +50,8 @@ export default function Page() {
             name: 'AI - Powered IT Asset Management',
             description: 'Intelligent IT asset lifecycle management',
             category: 'IT Management',
-            bestFor['Asset optimization', 'Cost management', 'Compliance'],;
-            features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'],;
+            bestFor['Asset optimizationCost management', 'Compliance'],
+            features['Asset TrackingPredictive Maintenance', 'Cost Analytics'],
             href: '/ai - powered - it - asset - management',
             icon: Cloud
         },
@@ -63,8 +59,8 @@ export default function Page() {
             name: 'Autonomous Business Operations',
             description: 'AI - driven business process automation platform',
             category: 'Business Operations',
-            bestFor['End - to - end automation', 'Scalability', 'Innovation'],;
-            features['Process Automation', 'Decision Support', 'Performance Analytics'],;
+            bestFor['End - to - end automationScalability', 'Innovation'],
+            features['Process AutomationDecision Support', 'Performance Analytics'],
             href: '/autonomous - business - operations - platform',
             icon: Brain
         },
@@ -72,22 +68,22 @@ export default function Page() {
             name: 'AI Customer Service Automation',
             description: 'Intelligent customer service and support automation',
             category: 'Customer Experience',
-            bestFor['24 / 7 support', 'Response time improvement', 'Customer satisfaction'],;
-            features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'],;
+            bestFor['24 / 7 supportResponse time improvement', 'Customer satisfaction'],
+            features['Chatbot IntegrationTicket Routing', 'Knowledge Management'],
             href: '/services / ai - customer - service - automation',
             icon: Users
 
-    ];
+    ],
     const handlePrevious = () => {
         if(currentStep > 1) {
             setCurrentStep(currentStep - 1) }
-    };
+    },
     const generateRecommendations = () => {
         // Simple recommendation logic based on answers
-        const industry = answers.industry;
-        const compSize = answers.comp_size;
-        const goals = answers.ai_goals;
-        let filteredSolutions = aiSolutions;
+        const industry = answers.industry,
+        const compSize = answers.comp_size,
+        const goals = answers.ai_goals,
+        let filteredSolutions = aiSolutions,
         // Filter based on industry
         if(industry === 'Healthcare & Life Sciences') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes ('Healthcare') || s.category === 'Analytics & Insights') }
@@ -101,13 +97,13 @@ export default function Page() {
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation') }
         else if(goals === 'Improve customer experience') {
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience') }
-        setRecommendations(filteredSolutions.slice (0, 3) ) ;
-        setCurrentStep(questions.length + 1) };
+        setRecommendations(filteredSolutions.slice (0, 3) ) ,
+        setCurrentStep(questions.length + 1) },
     const resetQuiz = () => {
-        setCurrentStep(1) ;
-        setAnswers({}) ;
-        setRecommendations([]) };
-    const progressPercentage = (currentStep / questions.length) * 100;
+        setCurrentStep(1) ,
+        setAnswers({}) ,
+        setRecommendations([]) },
+    const progressPercentage = (currentStep / questions.length) * 100,
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -294,5 +290,5 @@ export default function Page() {
           </motion.div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}}}}

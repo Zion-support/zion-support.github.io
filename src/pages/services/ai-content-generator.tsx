@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
+import React from "react";
+import { SEO } from "../../components/SEO";
 import { 
-  FileText, 
+  FileText,
   Brain, 
   Zap, 
   Users, 
@@ -11,8 +11,7 @@ import {
   BarChart3,
   Headphones,
   Bot
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIContentGenerator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -133,12 +132,12 @@ export default function AIContentGenerator() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
           >
             Get Started with AI Content Generator
           </a>
         </div>
       </section>
     </div>
-  );
+  )
 }

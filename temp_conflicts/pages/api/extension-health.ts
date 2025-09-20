@@ -1,23 +1,23 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { logError } from '@/utils/productionLogger'; // Import logError
+import { NextApiRequest, NextApiResponse } from 'next',
+import { logError } from '@/utils/productionLogger', // Import logError
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   // Set CORS headers for browser extensions
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Origin*'),
+  res.setHeader('Access-Control-Allow-MethodsGET, POST, OPTIONS'),
+  res.setHeader('Access-Control-Allow-HeadersContent-Type, Authorization'),
 
   // Handle preflight requests
   if (req.method === 'OPTIONS') {
-    return res.status(200).end();
+    return res.status(200).end(),
   }
 
   // Only allow GET requests for health check
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ error: 'Method not allowed' }),
   }
 
   try {
@@ -25,13 +25,13 @@ export default async function handler(
       status: 'healthy',
       timestamp: new Date().toISOString(),
       version: '1.0.0',
-      environment: process.env.NODE_ENV,
-    });
+      environment: process.env.NODE_ENV
+    }),
   } catch (error) {
-    logError('Extension health check error:', { data: error });
+    logError('Extension health check error:', { data: error }),
     return res.status(500).json({
       status: 'error',
-      message: 'Internal server error',
-    });
+      message: 'Internal server error'
+    }),
   }
 } 

@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 export default function AIComplianceCopilot() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -28,9 +27,9 @@ export default function AIComplianceCopilot() {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-lg font-semibold mb-2">Pricing</h2>
-            <p className="text-sm text-zion-slate-light">From $1,500/mo; enterprise tiers with dedicated CSM.</p>
+            <p className="text-sm text-zion-slate-light">From $1,500/mo, enterprise tiers with dedicated CSM.</p>
             <p className="text-xs text-zion-slate-light mt-2">
-              References: <a className="text-cyan-400" href="https://drata.com/pricing" target="_blank" rel="noreferrer">Drata</a>, <a className="text-cyan-400" href="https://vanta.com/pricing" target="_blank" rel="noreferrer">Vanta</a>
+              References: <a className="text-cyan-400" href="https://drata.com/pricing" target="_blank" rel="noreferrer">Drata</a>, <a className="text-cyan-400" href="https: //vanta.com/pricing" target="_blank" rel="noreferrer">Vanta</a>
             </p>
           </div>
         </div>
@@ -41,6 +40,6 @@ export default function AIComplianceCopilot() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Eye, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredAugmentedReality: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredAugmentedReality: React.FC = () => {
       title: 'Multi-platform Support',
       description: 'AR development across various devices and platforms'
     }
-  ];
+  ],
 
   const arCapabilities = [
     {
       area: 'Computer Vision',
-      capabilities: ['Object recognition', 'Image processing', 'Spatial mapping', 'Face detection'],
+      capabilities: ['Object recognitionImage processing', 'Spatial mappingFace detection'],
       improvement: '99.9% accuracy',
       recognition: 'Real-time'
     },
     {
       area: '3D Rendering',
-      capabilities: ['3D modeling', 'Real-time rendering', 'Animation', 'Physics simulation'],
+      capabilities: ['3D modelingReal-time rendering', 'AnimationPhysics simulation'],
       improvement: '60fps performance',
       rendering: 'Smooth'
     },
     {
       area: 'Spatial Computing',
-      capabilities: ['Spatial mapping', 'Gesture recognition', 'Voice control', 'Haptic feedback'],
+      capabilities: ['Spatial mappingGesture recognition', 'Voice controlHaptic feedback'],
       improvement: '90% precision',
       interaction: 'Natural'
     },
     {
       area: 'Content Creation',
-      capabilities: ['3D asset creation', 'Animation tools', 'Interactive elements', 'Content management'],
+      capabilities: ['3D asset creationAnimation tools', 'Interactive elementsContent management'],
       improvement: '10x faster',
       creation: 'Efficient'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Enterprise AR',
       description: 'AI-powered AR solutions for enterprise training, maintenance, and operations',
-      benefits: ['Training efficiency', 'Maintenance accuracy', 'Remote assistance', 'Cost reduction']
+      benefits: ['Training efficiencyMaintenance accuracy', 'Remote assistanceCost reduction']
     },
     {
       title: 'Retail & E-commerce',
       description: 'AR technology for virtual try-ons, product visualization, and shopping experiences',
-      benefits: ['Virtual try-ons', 'Product visualization', 'Interactive shopping', 'Increased sales']
+      benefits: ['Virtual try-onsProduct visualization', 'Interactive shoppingIncreased sales']
     },
     {
       title: 'Healthcare & Medical',
       description: 'AR applications for medical training, surgery planning, and patient care',
-      benefits: ['Medical training', 'Surgery planning', 'Patient education', 'Improved outcomes']
+      benefits: ['Medical trainingSurgery planning', 'Patient educationImproved outcomes']
     },
     {
       title: 'Education & Training',
       description: 'AR technology for immersive learning experiences and skill development',
-      benefits: ['Immersive learning', 'Skill development', 'Interactive education', 'Better retention']
+      benefits: ['Immersive learningSkill development', 'Interactive educationBetter retention']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredAugmentedReality: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with AR development',
       features: [
-        'Basic AR features',
-        'Single platform support',
-        'Standard rendering',
-        'Email support',
+        'Basic AR featuresSingle platform support',
+        'Standard renderingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredAugmentedReality: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced AR development needs',
       features: [
-        'Advanced AR features',
-        'Multi-platform support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced AR featuresMulti-platform support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         '3D asset library'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredAugmentedReality: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex AR development requirements',
       features: [
-        'Custom AR development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom AR developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredAugmentedReality: React.FC = () => {
       position: "Retail Director",
       company: "Advanced Retail Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredAugmentedReality: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Create with AI-Powered AR Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredAugmentedReality: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredAugmentedReality;
+export default AIPoweredAugmentedReality,

@@ -1,101 +1,52 @@
-import React from 'react';
-
+import React from "react";
 interface ForumCategoryInfo {
-  id: string;
-  name: string;
-  description: string;
-  postCount: number;
-  adminOnly?: boolean;
-  icon?: string;
+  id: string,name: string,description: string,postCount: number;
+  adminOnly?: boolean,
+  icon?: string,
   lastPost?: {
-    title: string;
-    author: string;
-    date: string;
+    title: string,author: string,date: string
   };
 }
 
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
     {
-      id: '1',
-      name: 'General Discussion',
-      description: 'General topics and discussions about technology, business, and innovation',
-      postCount: 150,
-      adminOnly: false,
-      icon: 'message-circle',
-      lastPost: {
-        title: 'Welcome to the Zion Tech Group community!',
-        author: 'Admin',
-        date: '2024-01-15'
+      id: '1',name: 'General Discussion',description: 'General topics and discussions about technology, business, and innovation',
+      postCount: 150,adminOnly: false,icon: 'message-circle',lastPost: {
+        title: 'Welcome to the Zion Tech Group community!',author: 'Admin',date: '2024-01-15'
       }
-    },
+    };
     {
-      id: '2',
-      name: 'Technical Support',
-      description: 'Get help with technical issues, API integration, and development questions',
-      postCount: 89,
-      adminOnly: false,
-      icon: 'code',
-      lastPost: {
-        title: 'API integration question',
-        author: 'Developer123',
-        date: '2024-01-14'
+      id: '2',name: 'Technical Support',description: 'Get help with technical issues, API integration, and development questions',
+      postCount: 89,adminOnly: false,icon: 'code',lastPost: {
+        title: 'API integration question',author: 'Developer123',date: '2024-01-14'
       }
-    },
+    };
     {
-      id: '3',
-      name: 'AI & Machine Learning',
-      description: 'Discussions about AI, ML, and data science topics',
-      postCount: 234,
-      adminOnly: false,
-      icon: 'brain',
-      lastPost: {
-        title: 'New AI model deployment strategies',
-        author: 'DataScientist',
-        date: '2024-01-13'
+      id: '3',name: 'AI & Machine Learning',description: 'Discussions about AI, ML, and data science topics',
+      postCount: 234,adminOnly: false,icon: 'brain',lastPost: {
+        title: 'New AI model deployment strategies',author: 'DataScientist',date: '2024-01-13'
       }
-    },
+    };
     {
-      id: '4',
-      name: 'Cloud & DevOps',
-      description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
-      postCount: 167,
-      adminOnly: false,
-      icon: 'cloud',
-      lastPost: {
-        title: 'Kubernetes best practices',
-        author: 'DevOpsEngineer',
-        date: '2024-01-12'
+      id: '4',name: 'Cloud & DevOps',description: 'Cloud infrastructure, DevOps practices, and deployment strategies',
+      postCount: 167,adminOnly: false,icon: 'cloud',lastPost: {
+        title: 'Kubernetes best practices',author: 'DevOpsEngineer',date: '2024-01-12'
       }
-    },
+    };
     {
-      id: '5',
-      name: 'Cybersecurity',
-      description: 'Security best practices, threat detection, and compliance discussions',
-      postCount: 98,
-      adminOnly: false,
-      icon: 'shield',
-      lastPost: {
-        title: 'Zero-day vulnerability response',
-        author: 'SecurityExpert',
-        date: '2024-01-11'
+      id: '5',name: 'Cybersecurity',description: 'Security best practices, threat detection, and compliance discussions',
+      postCount: 98,adminOnly: false,icon: 'shield',lastPost: {
+        title: 'Zero-day vulnerability response',author: 'SecurityExpert',date: '2024-01-11'
       }
-    },
+    };
     {
-      id: '6',
-      name: 'Business & Strategy',
-      description: 'Business development, strategy, and industry insights',
-      postCount: 76,
-      adminOnly: false,
-      icon: 'trending-up',
-      lastPost: {
-        title: 'Digital transformation case studies',
-        author: 'BusinessAnalyst',
-        date: '2024-01-10'
+      id: '6',name: 'Business & Strategy',description: 'Business development, strategy, and industry insights',
+      postCount: 76,adminOnly: false,icon: 'trending-up',lastPost: {
+        title: 'Digital transformation case studies',author: 'BusinessAnalyst',date: '2024-01-10'
       }
     }
   ];
-
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
@@ -172,12 +123,12 @@ export default function ForumCategories() {
             <p className="text-zion-slate-light mb-6">
               Start contributing to discussions, ask questions, and share your expertise with the community.
             </p>
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
             </button>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const EnhancedTechShowcase2026: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white py-20">,
       <div className="container mx-auto px-4">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,
@@ -24,7 +24,7 @@ const EnhancedTechShowcase2026: React.FC = () => {,
                 className={`px-6 py-3 rounded-lg transition-all duration-300 font-semibold ${,
                   activeTab === key,
                     ? `bg-gradient-to-r ${category.color} text-white`,
-                    : 'text-white/70 hover: text-white hover:bg-white/10',}`}
+                    : 'text-white/70 hover: text-white hover:bg-white/10'}`}
               >,
                 <span className="mr-2">{category.icon}</span>,
                 {category.title}
@@ -42,19 +42,18 @@ const EnhancedTechShowcase2026: React.FC = () => {,
                 key={index}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: scale-105 transition-all duration-300",
               >,
-                <h3 className="text-xl font-bold mb-3">{item.title,}</h3>,
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>,
                 <p className="text-white/80 mb-4 text-sm">{item.description}</p>,
                 <ul className="space-y-1 mb-6">,
                   {item.features.map((feature, featureIndex) => (,
                     <li key={featureIndex} className="text-white/60 text-sm flex items-center">,
                       <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
                 <a,
                   href={item.link}
-                  className={`inline-block w-full text-center py-2 px-4 rounded-lg bg-gradient-to-r ${techCategories[activeTab as keyof typeof techCategories].color} text-white hover: shadow-lg transition-all duration-300 font-semibold`,}
+                  className={`inline-block w-full text-center py-2 px-4 rounded-lg bg-gradient-to-r ${techCategories[activeTab as keyof typeof techCategories].color} text-white hover: shadow-lg transition-all duration-300 font-semibold`}
                 >,
                   Explore →,
                 </a>,
@@ -64,7 +63,7 @@ const EnhancedTechShowcase2026: React.FC = () => {,
         </div>,
         {/* Statistics Section */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="mt-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-purple-400/30",
         >,
           <div className="text-center mb-12">,
@@ -73,28 +72,28 @@ const EnhancedTechShowcase2026: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             <div,
-              whileInView={{ opacity: 1, scale: 1 ,}}
+              whileInView={{ opacity: 1, scale: 1 }}
               className="text-center",
             >,
               <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>,
               <div className="text-lg opacity-80">Active Projects</div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, scale: 1 ,}}
+              whileInView={{ opacity: 1, scale: 1 }}
               className="text-center",
             >,
               <div className="text-4xl font-bold text-pink-400 mb-2">1000+</div>,
               <div className="text-lg opacity-80">Researchers</div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, scale: 1 ,}}
+              whileInView={{ opacity: 1, scale: 1 }}
               className="text-center",
             >,
               <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>,
               <div className="text-lg opacity-80">Patents Filed</div>,
             </div>,
             <div,
-              whileInView={{ opacity: 1, scale: 1 ,}}
+              whileInView={{ opacity: 1, scale: 1 }}
               className="text-center",
             >,
               <div className="text-4xl font-bold text-emerald-400 mb-2">99.9%</div>,
@@ -104,7 +103,7 @@ const EnhancedTechShowcase2026: React.FC = () => {,
         </div>,
         {/* Call to Action */}
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mt-16",
         >,
           <h3 className="text-3xl font-bold mb-6">Ready to Experience the Future?</h3>,
@@ -122,5 +121,5 @@ const EnhancedTechShowcase2026: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default EnhancedTechShowcase2026;
+  )},
+export default EnhancedTechShowcase2026,

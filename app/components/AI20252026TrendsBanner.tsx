@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI20252026TrendsBanner() {,
   return (,
     <section className="py-8 bg-gradient-to-r from-purple-900 via-indigo-900 to-purple-900">,
@@ -49,5 +49,4 @@ export default function AI20252026TrendsBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

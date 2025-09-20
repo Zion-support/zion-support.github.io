@@ -1,7 +1,7 @@
-import { useParams, useNavigate  } from 'react-router-dom';
+import { useParams, useNavigate  } from 'react-router-dom',
 export default function Page() {
- = useWhitelabel () ;
-    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+ = useWhitelabel () ,
+    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
     if(isLoading) {
         return (<div className="flex items - center justify - center min - h-screen">
         <div className="animate - spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
@@ -18,21 +18,21 @@ export default function Page() {
       </>) }
     const handleApply = () => {
         if(!isAuthenticated) {
-            toast.error("Please log in to apply for this job") ;
-            router('/login?redirect=' + encodeURIComponent (`/jobs/${jobId}`) ) ;
-            return;
+            toast.error("Please log in to apply for this job") ,
+            router('/login?redirect=' + encodeURIComponent (`/jobs/${jobId}`) ) ,
+            return,
         }
         if(user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-            toast.error("Only job seekers can apply for jobs") ;
+            toast.error("Only job seekers can apply for jobs") ,
             return}
-        setIsApplyModalOpen(true) };
+        setIsApplyModalOpen(true) },
     const handleApplySuccess = async(appliedJobId) => {
-        toast.success("Application submitted successfully!") ;
-        setIsApplyModalOpen(false) };
+        toast.success("Application submitted successfully!") ,
+        setIsApplyModalOpen(false) },
     const formatBudget = (budget) => {
-        if(!budget) return "Not specified";
-        return `$${budget.min} - $${budget.max}`};
-    const isOwnJob = user?.id === job.client_id;
+        if(!budget) return "Not specified",
+        return `$${budget.min} - $${budget.max}`},
+    const isOwnJob = user?.id === job.client_id,
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
   job.description.substring (0,

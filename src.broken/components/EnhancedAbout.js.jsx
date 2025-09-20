@@ -1,37 +1,37 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-    ];
+    ],
     const teamMembers = [{
 
             name: 'Kleber',
             role: 'CEO & Founder',
-            expertise['AI/ML',Cloud Architecture',Digital Transformation'],;
+            expertise['AI/ML',Cloud Architecture',Digital Transformation'],
             avatar: '👨‍💼'
         },
         {
 
             name: 'AI Team',
             role: 'Machine Learning Engineers',
-            expertise['Deep Learning',NLP',Computer Vision'],;
+            expertise['Deep Learning',NLP',Computer Vision'],
             avatar: '🤖'
         },
         {
 
             name: 'DevOps Team',
             role: 'Cloud & Infrastructure',
-            expertise['AWS/Azure',Kubernetes',CI/CD'],;
+            expertise['AWS/Azure',Kubernetes',CI/CD'],
             avatar: '☁️'
         },
         {
 
             name: 'Security Team',
             role: 'Cybersecurity Experts',
-            expertise['Threat Detection',Compliance',Penetration Testing'],;
+            expertise['Threat Detection',Compliance',Penetration Testing'],
             avatar: '🔒'
         }
-    ];
+    ],
     const milestones = [{
 
             year: '2020',
@@ -67,7 +67,7 @@ export default function Page() {
             description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'
         }
-    ];
+    ],
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -79,7 +79,7 @@ export default function Page() {
                 staggerChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 20,
@@ -96,7 +96,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const cardVariants = {
 
   hidden: { scale: 0.9,
@@ -123,7 +123,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const timelineVariants = {
 
   hidden: { opacity: 0,
@@ -140,7 +140,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}"
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -331,5 +331,5 @@ export default function Page() {
           </div>
         </motion.div>
       </section>
-    </div>)};
+    </div>)},
 '"`

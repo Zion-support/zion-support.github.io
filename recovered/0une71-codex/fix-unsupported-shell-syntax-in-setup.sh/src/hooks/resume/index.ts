@@ -1,24 +1,24 @@
 
-import { useState } from 'react';
-import { Resume } from '@/types/resume';
-import { useFetchResume } from './useFetchResume';
-import { useResumeActions } from './useResumeActions';
-import { useWorkExperience } from './useWorkExperience';
-import { useEducation } from './useEducation';
-import { useSkills } from './useSkills';
-import { useCertifications } from './useCertifications';
-import { useResumeList } from './useResumeList';
+import { useState } from 'react',
+import { Resume } from '@/types/resume',
+import { useFetchResume } from './useFetchResume',
+import { useResumeActions } from './useResumeActions',
+import { useWorkExperience } from './useWorkExperience',
+import { useEducation } from './useEducation',
+import { useSkills } from './useSkills',
+import { useCertifications } from './useCertifications',
+import { useResumeList } from './useResumeList',
 
 export function useResume() {
-  const [resume, setResume] = useState<Resume | null>(null);
+  const [resume, setResume] = useState<Resume | null>(null),
   
-  const fetchResumeOperations = useFetchResume();
-  const resumeActions = useResumeActions();
-  const workOperations = useWorkExperience();
-  const educationOperations = useEducation();
-  const skillsOperations = useSkills();
-  const certOperations = useCertifications();
-  const resumeListOperations = useResumeList();
+  const fetchResumeOperations = useFetchResume(),
+  const resumeActions = useResumeActions(),
+  const workOperations = useWorkExperience(),
+  const educationOperations = useEducation(),
+  const skillsOperations = useSkills(),
+  const certOperations = useCertifications(),
+  const resumeListOperations = useResumeList(),
   
   // Determine overall loading state
   const isLoading = 
@@ -28,7 +28,7 @@ export function useResume() {
     educationOperations.isLoading || 
     skillsOperations.isLoading || 
     certOperations.isLoading ||
-    resumeListOperations.isLoading;
+    resumeListOperations.isLoading,
   
   // Determine overall error state (use first non-null error)
   const error = 
@@ -38,16 +38,16 @@ export function useResume() {
     educationOperations.error || 
     skillsOperations.isLoading || 
     certOperations.error ||
-    resumeListOperations.error;
+    resumeListOperations.error,
   
   // Override the fetch resume function to update local state
   const fetchResume = async (resumeId?: string) => {
-    const result = await fetchResumeOperations.fetchResume(resumeId);
+    const result = await fetchResumeOperations.fetchResume(resumeId),
     if (result) {
-      setResume(result);
+      setResume(result),
     }
-    return result;
-  };
+    return result,
+  },
   
   return {
     // State
@@ -80,15 +80,15 @@ export function useResume() {
     addCertification: certOperations.addCertification,
     updateCertification: certOperations.updateCertification,
     deleteCertification: certOperations.deleteCertification
-  };
+  },
 }
 
 // Export all hooks
-export * from './useFetchResume';
-export * from './useResumeActions';
-export * from './useWorkExperience';
-export * from './useEducation';
-export * from './useSkills';
-export * from './useCertifications';
-export * from './useResumeList';
-export * from './useResumeUtils';
+export * from './useFetchResume',
+export * from './useResumeActions',
+export * from './useWorkExperience',
+export * from './useEducation',
+export * from './useSkills',
+export * from './useCertifications',
+export * from './useResumeList',
+export * from './useResumeUtils',

@@ -1,57 +1,57 @@
-import React, { useEffect, useState } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-import { useCurrency } from '@/context/CurrencyContext';
+import React, { useEffect, useState } from 'react',
+import { safeStorage } from '@/utils/safeStorage',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+import { useCurrency } from '@/context/CurrencyContext',
 
 interface CartItem {
-  id: string;
-  name: string;
-  price: number;
-  quantity: number;
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
 }
 
 export default function CartPage() {
-  const navigate = useNavigate();
-  const { currency } = useCurrency();
-  const [items, setItems] = useState<CartItem[]>([]);
+  const navigate = useNavigate(),
+  const { currency } = useCurrency(),
+  const [items, setItems] = useState<CartItem[]>([]),
 
   useEffect(() => {
-    const stored = safeStorage.getItem('cart');
+    const stored = safeStorage.getItem('cart'),
     if (stored) {
       try {
-        setItems(JSON.parse(stored) as CartItem[]);
+        setItems(JSON.parse(stored) as CartItem[]),
       } catch {
-        setItems([]);
+        setItems([]),
       }
     }
-  }, []);
+  }, []),
 
   const updateQuantity = (id: string, qty: number) => {
     setItems(prev => {
-      const updated = prev.map(i => i.id === id ? { ...i, quantity: qty } : i);
-      safeStorage.setItem('cart', JSON.stringify(updated));
-      return updated;
-    });
-  };
+      const updated = prev.map(i => i.id === id ? { ...i, quantity: qty } : i),
+      safeStorage.setItem('cart', JSON.stringify(updated)),
+      return updated,
+    }),
+  },
 
   const removeItem = (id: string) => {
     setItems(prev => {
-      const updated = prev.filter(i => i.id !== id);
-      safeStorage.setItem('cart', JSON.stringify(updated));
-      return updated;
-    });
-  };
+      const updated = prev.filter(i => i.id !== id),
+      safeStorage.setItem('cart', JSON.stringify(updated)),
+      return updated,
+    }),
+  },
 
-  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const displaySubtotal = (subtotal * currency.fx_rate).toFixed(2);
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
+  const displaySubtotal = (subtotal * currency.fx_rate).toFixed(2),
 
   if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
         <p>Your cart is empty.</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -90,5 +90,5 @@ export default function CartPage() {
         Checkout
       </Button>
     </div>
-  );
+  ),
 }

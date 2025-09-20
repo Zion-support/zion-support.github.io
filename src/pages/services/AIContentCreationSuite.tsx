@@ -1,98 +1,67 @@
-import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from 'lucide-react';
-
+import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database, Globe, Shield } from "lucide-react";
 export default function AIContentCreationSuite() {
   const features = [
-    'AI-powered text generation and editing',
-    'Automated image creation and editing',
-    'Video content generation and optimization',
-    'Multi-language content localization',
-    'SEO-optimized content creation',
-    'Brand voice consistency management',
-    'Content performance analytics',
-    'Automated content scheduling',
-    'Plagiarism detection and prevention',
-    'Content collaboration and workflow management'
-  ];
+    'AI-powered text generation and editingAutomated image creation and editing',
+    'Video content generation and optimizationMulti-language content localization',
+    'SEO-optimized content creationBrand voice consistency management',
+    'Content performance analyticsAutomated content scheduling',
+    'Plagiarism detection and preventionContent collaboration and workflow management'
+  ],
 
   const benefits = [
-    'Increase content production by 10x',
-    'Reduce content creation costs by 60%',
-    'Improve content engagement by 45%',
-    'Maintain consistent brand voice',
-    'Scale content across multiple channels',
-    'Optimize content for better SEO performance'
-  ];
+    'Increase content production by 10xReduce content creation costs by 60%',
+    'Improve content engagement by 45%Maintain consistent brand voice',
+    'Scale content across multiple channelsOptimize content for better SEO performance'
+  ],
 
   const useCases = [
-    'Marketing and advertising agencies',
-    'E-commerce and retail brands',
-    'Publishing and media companies',
-    'Educational institutions',
-    'Corporate communications',
-    'Social media management'
+    'Marketing and advertising agenciesE-commerce and retail brands';
+    'Publishing and media companiesEducational institutions';
+    'Corporate communicationsSocial media management'
   ];
-
   const tiers = [
     {
-      name: 'Creator',
-      price: '$199/mo',
-      details: [
-        'Up to 100 content pieces/month',
-        'Basic AI text generation',
-        'Standard image creation',
-        'Email support',
+      name: 'Creator',price: '$199/mo',details: [
+        'Up to 100 content pieces/monthBasic AI text generation';
+        'Standard image creationEmail support',
         'Basic analytics'
       ]
     },
     {
-      name: 'Professional',
-      price: '$499/mo',
-      details: [
-        'Up to 500 content pieces/month',
-        'Advanced AI content creation',
-        'Video generation',
-        'Priority support',
-        'Multi-language support',
-        'Advanced analytics'
+      name: 'Professional',price: '$499/mo',details: [
+        'Up to 500 content pieces/monthAdvanced AI content creation';
+        'Video generationPriority support',
+        'Multi-language supportAdvanced analytics'
       ]
     },
     {
-      name: 'Enterprise',
-      price: '$1,299/mo',
+      name: 'Enterprise',price: '$1,299/mo',
       details: [
-        'Unlimited content creation',
-        'Full AI content suite',
-        'Custom AI models',
-        'Dedicated support',
-        'API access',
-        'White-label solutions'
+        'Unlimited content creationFull AI content suite';
+        'Custom AI modelsDedicated support',
+        'API accessWhite-label solutions'
       ]
     }
-  ];
+  ],
 
   const technicalSpecs = {
-    technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Adobe Creative Suite'],
-    security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
-    uptime: '99.9%',
-    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'CCPA', 'COPPA']
-  };
+    technology: ['GPT-4DALL-E', 'Stable DiffusionPython', 'ReactNode.js', 'PostgreSQLRedis'],
+    integrations: ['WordPressShopify', 'HubSpotMailchimp', 'HootsuiteBuffer', 'CanvaAdobe Creative Suite'],
+    security: ['SOC 2 Type IIISO 27001', 'GDPREnd-to-end encryption', 'Multi-factor authentication'],
+    uptime: '99.9%',compliance: ['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA']
+  },
 
   const contentTypes = [
     {
-      type: 'Text Content',
-      solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
+      type: 'Text Content',solutions: ['Blog postsSocial media posts', 'Email campaignsProduct descriptions', 'Press releases']
     },
     {
-      type: 'Visual Content',
-      solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets']
+      type: 'Visual Content',solutions: ['Images and graphicsInfographics', 'Social media visualsProduct photos', 'Brand assets']
     },
     {
-      type: 'Video Content',
-      solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
+      type: 'Video Content',solutions: ['Product videosSocial media clips', 'Educational contentMarketing videos', 'Live streams']
     }
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
@@ -239,7 +208,7 @@ export default function AIContentCreationSuite() {
 
         <div className="mt-14 text-center">
           <div className="text-sm text-zion-slate-light mb-2">Ready to revolutionize your content creation?</div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg">
               <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
             </a>
@@ -255,5 +224,5 @@ export default function AIContentCreationSuite() {
         </div>
       </section>
     </div>
-  );
+  )
 }

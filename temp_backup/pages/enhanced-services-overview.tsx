@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, 
@@ -9,22 +9,22 @@ import {
   ExternalLink, Users, Clock, BarChart3, Award, Globe,
   Cpu, Database, Lock, MessageSquare, BarChart, ShoppingCart,
   UserCheck, FileText, Palette, Camera, Video, Music
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035';
-import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+} from 'lucide-react',
+import Button from '../components/ui/Button',
+import UltraFuturisticBackground2035 from '../components/ui/UltraFuturisticBackground2035',
+import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticNavigation2033',
+import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034',
 
 export default function EnhancedServicesOverview() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const serviceCategories = [
     {
@@ -34,17 +34,13 @@ export default function EnhancedServicesOverview() {
       icon: Brain,
       color: 'from-violet-500 to-purple-600',
       services: [
-        'AI Consciousness Evolution Platform',
-        'AI Emotional Intelligence Platform',
-        'AI Autonomous Business Manager',
-        'AI Creativity Orchestrator',
-        'AI Content Generation & Optimization',
-        'AI Sales Automation',
-        'AI HR Recruitment',
-        'AI Legal Contract Analysis'
+        'AI Consciousness Evolution PlatformAI Emotional Intelligence Platform',
+        'AI Autonomous Business ManagerAI Creativity Orchestrator',
+        'AI Content Generation & OptimizationAI Sales Automation',
+        'AI HR RecruitmentAI Legal Contract Analysis'
       ],
       pricing: { starting: '$1,499', range: '$1,499 - $9,999' },
-      benefits: ['300% ROI improvement', '80% time savings', 'Enhanced decision making'],
+      benefits: ['300% ROI improvement80% time savings', 'Enhanced decision making'],
       href: '/ai-services',
       featured: true
     },
@@ -55,17 +51,13 @@ export default function EnhancedServicesOverview() {
       icon: Atom,
       color: 'from-indigo-500 to-blue-600',
       services: [
-        'Quantum Internet Security Gateway',
-        'Quantum Financial Trading Platform',
-        'Quantum AI Brain-Computer Interface',
-        'Quantum Blockchain Infrastructure',
-        'Quantum Cybersecurity Solutions',
-        'Quantum Energy Optimization',
-        'Quantum Logistics Platform',
-        'Quantum Metaverse Development'
+        'Quantum Internet Security GatewayQuantum Financial Trading Platform',
+        'Quantum AI Brain-Computer InterfaceQuantum Blockchain Infrastructure',
+        'Quantum Cybersecurity SolutionsQuantum Energy Optimization',
+        'Quantum Logistics PlatformQuantum Metaverse Development'
       ],
       pricing: { starting: '$2,999', range: '$2,999 - $19,999' },
-      benefits: ['Unbreakable security', 'Exponential performance', 'Future-proof technology'],
+      benefits: ['Unbreakable securityExponential performance', 'Future-proof technology'],
       href: '/quantum-services',
       featured: true
     },
@@ -76,17 +68,13 @@ export default function EnhancedServicesOverview() {
       icon: Rocket,
       color: 'from-teal-500 to-emerald-600',
       services: [
-        'Space Mining Automation Platform',
-        'Satellite Constellation Management',
-        'Space Debris Tracking System',
-        'Space Tourism Platform',
-        'Space Resource Analytics',
-        'Space Weather Monitoring',
-        'Space Communication Networks',
-        'Space Manufacturing Systems'
+        'Space Mining Automation PlatformSatellite Constellation Management',
+        'Space Debris Tracking SystemSpace Tourism Platform',
+        'Space Resource AnalyticsSpace Weather Monitoring',
+        'Space Communication NetworksSpace Manufacturing Systems'
       ],
       pricing: { starting: '$4,999', range: '$4,999 - $49,999' },
-      benefits: ['Access to space resources', 'Global connectivity', 'Innovation leadership'],
+      benefits: ['Access to space resourcesGlobal connectivity', 'Innovation leadership'],
       href: '/space-technology',
       featured: true
     },
@@ -97,17 +85,13 @@ export default function EnhancedServicesOverview() {
       icon: Cpu,
       color: 'from-blue-500 to-cyan-600',
       services: [
-        'Autonomous DevOps Platform',
-        'Zero Trust Network Architecture',
-        'Edge Computing Orchestration',
-        'AI IT Operations Center',
-        'Cloud Infrastructure Management',
-        'Data Center Automation',
-        'Network Security Monitoring',
-        'IT Asset Management'
+        'Autonomous DevOps PlatformZero Trust Network Architecture',
+        'Edge Computing OrchestrationAI IT Operations Center',
+        'Cloud Infrastructure ManagementData Center Automation',
+        'Network Security MonitoringIT Asset Management'
       ],
       pricing: { starting: '$1,999', range: '$1,999 - $29,999' },
-      benefits: ['Operational efficiency', 'Cost reduction', 'Security enhancement'],
+      benefits: ['Operational efficiencyCost reduction', 'Security enhancement'],
       href: '/enterprise-it',
       featured: true
     },
@@ -118,17 +102,13 @@ export default function EnhancedServicesOverview() {
       icon: Target,
       color: 'from-green-500 to-yellow-600',
       services: [
-        'AI Content Calendar Pro',
-        'Smart Invoice Automation',
-        'Customer Success Automation',
-        'AI Sales Pipeline Optimizer',
-        'HR Automation Suite',
-        'E-commerce Automation Platform',
-        'Project Management AI',
-        'Data Analytics Automation'
+        'AI Content Calendar ProSmart Invoice Automation',
+        'Customer Success AutomationAI Sales Pipeline Optimizer',
+        'HR Automation SuiteE-commerce Automation Platform',
+        'Project Management AIData Analytics Automation'
       ],
       pricing: { starting: '$19', range: '$19 - $499' },
-      benefits: ['Quick implementation', 'Affordable pricing', 'Immediate ROI'],
+      benefits: ['Quick implementationAffordable pricing', 'Immediate ROI'],
       href: '/enhanced-micro-saas-showcase',
       featured: true
     },
@@ -139,17 +119,13 @@ export default function EnhancedServicesOverview() {
       icon: Shield,
       color: 'from-red-500 to-pink-600',
       services: [
-        'AI Threat Detection System',
-        'Incident Response Automation',
-        'Vulnerability Assessment Platform',
-        'Security Awareness Training',
-        'Compliance Monitoring System',
-        'Penetration Testing Automation',
-        'Security Operations Center',
-        'Risk Assessment AI'
+        'AI Threat Detection SystemIncident Response Automation',
+        'Vulnerability Assessment PlatformSecurity Awareness Training',
+        'Compliance Monitoring SystemPenetration Testing Automation',
+        'Security Operations CenterRisk Assessment AI'
       ],
       pricing: { starting: '$79', range: '$79 - $999' },
-      benefits: ['Threat prevention', 'Compliance assurance', 'Risk mitigation'],
+      benefits: ['Threat preventionCompliance assurance', 'Risk mitigation'],
       href: '/security',
       featured: false
     },
@@ -160,17 +136,13 @@ export default function EnhancedServicesOverview() {
       icon: BarChart3,
       color: 'from-orange-500 to-red-600',
       services: [
-        'Data Pipeline Automation',
-        'Real-time Analytics Dashboard',
-        'Predictive Analytics Platform',
-        'Data Quality Monitoring',
-        'Business Intelligence Suite',
-        'Data Visualization Tools',
-        'Machine Learning Pipeline',
-        'Data Governance Platform'
+        'Data Pipeline AutomationReal-time Analytics Dashboard',
+        'Predictive Analytics PlatformData Quality Monitoring',
+        'Business Intelligence SuiteData Visualization Tools',
+        'Machine Learning PipelineData Governance Platform'
       ],
       pricing: { starting: '$49', range: '$49 - $799' },
-      benefits: ['Data-driven decisions', 'Operational insights', 'Performance optimization'],
+      benefits: ['Data-driven decisionsOperational insights', 'Performance optimization'],
       href: '/ai-data-analytics',
       featured: false
     },
@@ -181,17 +153,13 @@ export default function EnhancedServicesOverview() {
       icon: FileText,
       color: 'from-pink-500 to-rose-600',
       services: [
-        'AI Content Generator',
-        'Video Editing AI Platform',
-        'Social Media Automation',
-        'Content Calendar Management',
-        'SEO Optimization Tools',
-        'Multimedia Content Creation',
-        'Content Performance Analytics',
-        'Brand Voice AI'
+        'AI Content GeneratorVideo Editing AI Platform',
+        'Social Media AutomationContent Calendar Management',
+        'SEO Optimization ToolsMultimedia Content Creation',
+        'Content Performance AnalyticsBrand Voice AI'
       ],
       pricing: { starting: '$29', range: '$29 - $399' },
-      benefits: ['Content quality improvement', 'Time savings', 'Engagement increase'],
+      benefits: ['Content quality improvementTime savings', 'Engagement increase'],
       href: '/ai-content-generator',
       featured: false
     },
@@ -202,17 +170,13 @@ export default function EnhancedServicesOverview() {
       icon: Zap,
       color: 'from-yellow-500 to-orange-600',
       services: [
-        'Workflow Automation Platform',
-        'Process Mining Tools',
-        'RPA Implementation',
-        'Business Process Optimization',
-        'Automation Consulting',
-        'Integration Services',
-        'Performance Monitoring',
-        'Automation Strategy'
+        'Workflow Automation PlatformProcess Mining Tools',
+        'RPA ImplementationBusiness Process Optimization',
+        'Automation ConsultingIntegration Services',
+        'Performance MonitoringAutomation Strategy'
       ],
       pricing: { starting: '$99', range: '$99 - $1,999' },
-      benefits: ['Process efficiency', 'Cost reduction', 'Error elimination'],
+      benefits: ['Process efficiencyCost reduction', 'Error elimination'],
       href: '/automation',
       featured: false
     },
@@ -223,25 +187,21 @@ export default function EnhancedServicesOverview() {
       icon: Microscope,
       color: 'from-purple-500 to-indigo-600',
       services: [
-        'Emerging Technology Research',
-        'Innovation Strategy Consulting',
-        'Prototype Development',
-        'Technology Assessment',
-        'Patent Research',
-        'Market Analysis',
-        'Technology Transfer',
-        'Innovation Workshops'
+        'Emerging Technology ResearchInnovation Strategy Consulting',
+        'Prototype DevelopmentTechnology Assessment',
+        'Patent ResearchMarket Analysis',
+        'Technology TransferInnovation Workshops'
       ],
       pricing: { starting: '$199', range: '$199 - $2,999' },
-      benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'],
+      benefits: ['Innovation leadershipCompetitive advantage', 'Future readiness'],
       href: '/emerging-tech',
       featured: false
     }
-  ];
+  ],
 
   const filteredCategories = serviceCategories.filter(category =>
     selectedCategory === 'all' || category.id === selectedCategory
-  );
+  ),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -251,7 +211,7 @@ export default function EnhancedServicesOverview() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -262,7 +222,7 @@ export default function EnhancedServicesOverview() {
         duration: 0.6
       }
     }
-  };
+  },
 
 const enhanced-services-overview: React.FC = () => {
   return (
@@ -279,7 +239,7 @@ const enhanced-services-overview: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default enhanced-services-overview;
+export default enhanced-services-overview,

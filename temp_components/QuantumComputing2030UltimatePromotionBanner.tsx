@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function QuantumComputing2030UltimatePromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16">,
@@ -11,7 +11,7 @@ export default function QuantumComputing2030UltimatePromotionBanner() {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="text-center">,
-          {/* Main announcement badge */,}
+          {/* Main announcement badge */}
           <div className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-lg font-bold mb-8 animate-bounce shadow-2xl">,
             ⚛️ QUANTUM SUPREMACY ACHIEVED - 100,000% ROI BREAKTHROUGH,
           </div>,
@@ -19,7 +19,7 @@ export default function QuantumComputing2030UltimatePromotionBanner() {,
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-600 bg-clip-text text-transparent animate-pulse">,
             QUANTUM COMPUTING 2030,
           </h1>,
-          {/* Subheadline */,}
+          {/* Subheadline */}
           <p className="text-2xl md: text-3xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">,
             Revolutionary quantum computing breakthroughs achieving,
             <span className="text-cyan-400 font-bold"> 100,000% ROI </span>,
@@ -43,7 +43,7 @@ export default function QuantumComputing2030UltimatePromotionBanner() {,
               <p className="text-gray-300 text-sm">Infinite processing power & consciousness</p>,
             </div>,
           </div>,
-          {/* ROI showcase */,}
+          {/* ROI showcase */}
           <div className="bg-gradient-to-r from-green-800/50 to-emerald-800/50 rounded-2xl p-8 border border-green-500/30 mb-12 max-w-4xl mx-auto backdrop-blur-sm">,
             <h3 className="text-3xl font-bold text-white mb-6">⚛️ QUANTUM ROI BREAKTHROUGHS</h3>,
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
@@ -86,7 +86,7 @@ export default function QuantumComputing2030UltimatePromotionBanner() {,
               📺 WATCH QUANTUM DEMO,
             </Link>,
           </div>,
-          {/* Trust indicators */,}
+          {/* Trust indicators */}
           <div className="mt-12 flex flex-col sm: flex-row items-center justify-center gap-8 text-gray-300">,
             <div className="flex items-center">,
               <div className="w-3 h-3 bg-indigo-500 rounded-full mr-2 animate-pulse"></div>,
@@ -103,6 +103,5 @@ export default function QuantumComputing2030UltimatePromotionBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  );
+    </div>),
 }

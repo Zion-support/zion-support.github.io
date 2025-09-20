@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import Link from "next/link",
+import { useTranslation } from "react-i18next",
 
     id: 'ai-solutions',
     title: 'AI-Powered Business Solutions',
@@ -15,14 +15,14 @@ import { useTranslation } from "react-i18next";
     cta: 'Explore AI Solutions',
     path: '/services/ai-business-intelligence',
     features: ['
-      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights',
+      'Machine Learning',Predictive Analytics',Process Automation',Real-time Insights'
     ],
     gradient: 'from-zion-cyan via-zion-purple to-zion-blue',
     icon: Brain,
     stats: ['
       { label: 'Accuracy Rate', value: '95%+', icon: Target },
       { label: 'ROI Increase', value: '450%', icon: TrendingUp },
-      { label: 'Market Growth', value: '280%', icon: Rocket },
+      { label: 'Market Growth', value: '280%', icon: Rocket }
     ]},
   {
 
@@ -35,14 +35,14 @@ import { useTranslation } from "react-i18next";
     cta: 'View Our Services',
     path: '/services',
     features: ['
-      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support',
+      'Cloud Infrastructure',Cybersecurity',DevOps Automation',24/7 Support'
     ],
     gradient: 'from-zion-blue via-zion-cyan to-zion-purple',
     icon: Shield,
     stats: ['
       { label: 'Uptime', value: '99.99%', icon: Target },
       { label: 'Cost Savings', value: '700%', icon: TrendingUp },
-      { label: 'Response Time', value: '<5min', icon: Rocket },
+      { label: 'Response Time', value: '<5min', icon: Rocket }
     ]},
   {
 
@@ -55,74 +55,74 @@ import { useTranslation } from "react-i18next";
     cta: 'Learn More',
     path: '/green-it',
     features: ['
-      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings',
+      'Energy Efficiency',Carbon Reduction',Sustainable Practices',Cost Savings'
     ],
     gradient: 'from-zion-cyan via-zion-blue to-zion-purple',
     icon: Globe,
     stats: ['
       { label: 'Energy Savings', value: '60%', icon: Target },
       { label: 'Carbon Reduction', value: '75%', icon: TrendingUp },
-      { label: 'Cost Reduction', value: '40%', icon: Rocket },
-    ]},
-];
-};
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [direction, setDirection] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+      { label: 'Cost Reduction', value: '40%', icon: Rocket }
+    ]}
+],
+},
+  const [currentSlide, setCurrentSlide] = useState(0),
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+  const [direction, setDirection] = useState(0),
+  const [isLoading, setIsLoading] = useState(true),
 
   // Memoize slides to prevent unnecessary re - renders
   
   // Optimized slide navigation with useCallback
   
-    setCurrentSlide(prev => (prev + 1) % memoizedSlides.length);
-    setIsAutoPlaying(false)}, [memoizedSlides.length]);
+    setCurrentSlide(prev => (prev + 1) % memoizedSlides.length),
+    setIsAutoPlaying(false)}, [memoizedSlides.length]),
 
     setCurrentSlide()
       prev => (prev - 1 + memoizedSlides.length) % memoizedSlides.length
-    );
-    setIsAutoPlaying(false)}, [memoizedSlides.length]);
+    ),
+    setIsAutoPlaying(false)}, [memoizedSlides.length]),
 
-      setCurrentSlide(index);
+      setCurrentSlide(index),
       setIsAutoPlaying(false)},
     [currentSlide]
-  );
+  ),
   // Auto-play functionality with pause on hover
   useEffect(() => {
-    if(!isAutoPlaying) return;
+    if(!isAutoPlaying) return,
 
-      setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
+      setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000),
 
-    return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ;
+    return () => clearInterval(interval) }, [isAutoPlaying, memoizedSlides.length]) ,
 
   // Handle keyboard navigation
   useEffect(() => {
     
-      if(e.key === 'ArrowRight') nextSlide();
+      if(e.key === 'ArrowRight') nextSlide(),
       if(e.key === ' ') {
 =======
 '
-      if(e.key === 'ArrowLeft') prevSlide();'
-      if(e.key === 'ArrowRight') nextSlide();'      if(e.key === ' ') {
+      if(e.key === 'ArrowLeft') prevSlide(),'
+      if(e.key === 'ArrowRight') nextSlide(),'      if(e.key === ' ') {
 
-        e.preventDefault();
+        e.preventDefault(),
         setIsAutoPlaying(!isAutoPlaying)}
-    };
+    },
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]);
+    window.addEventListener('keydown', handleKeyDown),
+    return () => window.removeEventListener('keydown', handleKeyDown)}, [prevSlide, nextSlide, isAutoPlaying]),
 
   // Handle image loading
   useEffect(() => {
     
-          img.onload = resolve;
-          img.onerror = resolve;
-          img.src = slide.image}) }) ;
+          img.onload = resolve,
+          img.onerror = resolve,
+          img.src = slide.image}) }) ,
 
-      await Promise.all(imagePromises) ;
-      setIsLoading(false) };
+      await Promise.all(imagePromises) ,
+      setIsLoading(false) },
 
-    preloadImages () }, [memoizedSlides]) ;
+    preloadImages () }, [memoizedSlides]) ,
 
   if(isLoading) {
 
@@ -227,6 +227,6 @@ import { useTranslation } from "react-i18next";
         <ChevronRight className="w-6 h-6"  />
       </button>
     </section>) }
-export { HeroSection };
+export { HeroSection },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef, useCallback } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Brain, Rocket, Target, Atom, Shield,
@@ -10,15 +10,15 @@ import {
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building,
   Zap, Infinity, Eye, Heart as HeartIcon, Code as CodeIcon, Palette as PaletteIcon,
   BookOpen, User
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  label: string;
-  href?: string;
-  children?: NavigationItem[];
-  icon?: React.ReactNode;
-  description?: string;
-  badge?: string;
+  label: string,
+  href?: string,
+  children?: NavigationItem[],
+  icon?: React.ReactNode,
+  description?: string,
+  badge?: string
 }
 
 const navigationItems: NavigationItem[] = [
@@ -736,13 +736,13 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709'
-};
+},
 
 const UltraFuturisticNavigation2040: React.FC = () => {
   return (
@@ -750,7 +750,7 @@ const UltraFuturisticNavigation2040: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2040</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2040;
+export default UltraFuturisticNavigation2040,

@@ -1,81 +1,81 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 const RevolutionaryTechShowcase2029: React.FC = () => {,
-  const [activeTech, setActiveTech] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [activeTech, setActiveTech] = useState(0),
+  const [isAnimating, setIsAnimating] = useState(false),
   const technologies = [,
     {,
-      id: 'consciousness-transfer';
-      name: 'Consciousness Transfer';
-      icon: '🧠';
-      description: 'Transfer human consciousness to digital substrates for digital immortality';
-      features: ['Neural Pattern MappingConsciousness Backup', 'Digital Immortality'];
-      status: 'Available 2029';
-      color: 'from-purple-600 to-pink-600';
-      bgColor: 'from-purple-600/30 to-pink-600/30';
-      borderColor: 'border-purple-400/30',};
+      id: 'consciousness-transfer',
+      name: 'Consciousness Transfer',
+      icon: '🧠',
+      description: 'Transfer human consciousness to digital substrates for digital immortality',
+      features: ['Neural Pattern MappingConsciousness BackupDigital Immortality'],
+      status: 'Available 2029',
+      color: 'from-purple-600 to-pink-600',
+      bgColor: 'from-purple-600/30 to-pink-600/30',
+      borderColor: 'border-purple-400/30'},
     {,
-      id: 'quantum-consciousness';
-      name: 'Quantum Consciousness';
-      icon: '⚛️';
-      description: 'Merge quantum computing with human consciousness for superhuman intelligence';
-      features: ['Quantum Neural NetworksConsciousness Amplification', 'Reality Manipulation'];
-      status: 'In Development';
-      color: 'from-cyan-600 to-blue-600';
-      bgColor: 'from-cyan-600/30 to-blue-600/30';
-      borderColor: 'border-cyan-400/30',};
+      id: 'quantum-consciousness',
+      name: 'Quantum Consciousness',
+      icon: '⚛️',
+      description: 'Merge quantum computing with human consciousness for superhuman intelligence',
+      features: ['Quantum Neural NetworksConsciousness AmplificationReality Manipulation'],
+      status: 'In Development',
+      color: 'from-cyan-600 to-blue-600',
+      bgColor: 'from-cyan-600/30 to-blue-600/30',
+      borderColor: 'border-cyan-400/30'},
     {,
-      id: 'interdimensional-computing';
-      name: 'Interdimensional Computing';
-      icon: '🌌';
-      description: 'Access computing power from parallel dimensions for infinite processing capacity';
-      features: ['Dimensional Bridge TechnologyParallel Universe Computing', 'Infinite Processing'];
-      status: 'Prototype Ready';
-      color: 'from-emerald-600 to-teal-600';
-      bgColor: 'from-emerald-600/30 to-teal-600/30';
-      borderColor: 'border-emerald-400/30',};
+      id: 'interdimensional-computing',
+      name: 'Interdimensional Computing',
+      icon: '🌌',
+      description: 'Access computing power from parallel dimensions for infinite processing capacity',
+      features: ['Dimensional Bridge TechnologyParallel Universe ComputingInfinite Processing'],
+      status: 'Prototype Ready',
+      color: 'from-emerald-600 to-teal-600',
+      bgColor: 'from-emerald-600/30 to-teal-600/30',
+      borderColor: 'border-emerald-400/30'},
     {,
-      id: 'molecular-assembly';
-      name: 'Molecular Assembly';
-      icon: '🔬';
-      description: 'Build anything from atoms up using programmable matter and molecular assembly';
-      features: ['Programmable MatterMolecular 3D Printing', 'Instant Manufacturing'];
-      status: 'Beta Testing';
-      color: 'from-orange-600 to-red-600';
-      bgColor: 'from-orange-600/30 to-red-600/30';
-      borderColor: 'border-orange-400/30',};
+      id: 'molecular-assembly',
+      name: 'Molecular Assembly',
+      icon: '🔬',
+      description: 'Build anything from atoms up using programmable matter and molecular assembly',
+      features: ['Programmable MatterMolecular 3D PrintingInstant Manufacturing'],
+      status: 'Beta Testing',
+      color: 'from-orange-600 to-red-600',
+      bgColor: 'from-orange-600/30 to-red-600/30',
+      borderColor: 'border-orange-400/30'},
     {,
-      id: 'reality-engine';
-      name: 'Reality Engine';
-      icon: '🌟';
-      description: 'Create and manipulate reality itself through advanced quantum field manipulation';
-      features: ['Quantum Field ControlReality Simulation', 'Physical Law Manipulation'];
-      status: 'Research Phase';
-      color: 'from-pink-600 to-purple-600';
-      bgColor: 'from-pink-600/30 to-purple-600/30';
-      borderColor: 'border-pink-400/30',};
+      id: 'reality-engine',
+      name: 'Reality Engine',
+      icon: '🌟',
+      description: 'Create and manipulate reality itself through advanced quantum field manipulation',
+      features: ['Quantum Field ControlReality SimulationPhysical Law Manipulation'],
+      status: 'Research Phase',
+      color: 'from-pink-600 to-purple-600',
+      bgColor: 'from-pink-600/30 to-purple-600/30',
+      borderColor: 'border-pink-400/30'},
     {,
-      id: 'ftl-travel';
-      name: 'FTL Travel';
-      icon: '🚀';
-      description: 'Faster-than-light travel through space-time manipulation and wormhole technology';
-      features: ['Wormhole GenerationSpace-Time Folding', 'Instantaneous Travel'];
-      status: 'Theoretical';
-      color: 'from-yellow-600 to-orange-600';
-      bgColor: 'from-yellow-600/30 to-orange-600/30';
-      borderColor: 'border-yellow-400/30',}
-  ];
+      id: 'ftl-travel',
+      name: 'FTL Travel',
+      icon: '🚀',
+      description: 'Faster-than-light travel through space-time manipulation and wormhole technology',
+      features: ['Wormhole GenerationSpace-Time FoldingInstantaneous Travel'],
+      status: 'Theoretical',
+      color: 'from-yellow-600 to-orange-600',
+      bgColor: 'from-yellow-600/30 to-orange-600/30',
+      borderColor: 'border-yellow-400/30'}
+  ],
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setIsAnimating(true);
+      setIsAnimating(true),
       setTimeout(() => {,
-        setActiveTech((prev) => (prev + 1) % technologies.length);
-        setIsAnimating(false);
-      }, 300);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [technologies.length]);
-  const currentTech = technologies[activeTech];
+        setActiveTech((prev) => (prev + 1) % technologies.length),
+        setIsAnimating(false),
+      }, 300),
+    }, 5000),
+    return () => clearInterval(interval),
+  }, [technologies.length]),
+  const currentTech = technologies[activeTech],
   return (,
     <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-16">,
       <div className="container mx-auto px-4">,
@@ -93,23 +93,23 @@ const RevolutionaryTechShowcase2029: React.FC = () => {,
         </div>,
         {/* Interactive Technology Display */}
         <div className="grid lg: grid-cols-2 gap-12 mb-16">,
-          {/* Technology Selector */,}
+          {/* Technology Selector */}
           <div className="space-y-4">,
             <h3 className="text-2xl font-bold mb-6">Select Technology</h3>,
             {technologies.map((tech, index) => (,
               <button,
                 key={tech.id}
                 onClick={() => {,
-                  setIsAnimating(true);
+                  setIsAnimating(true),
                   setTimeout(() => {,
-                    setActiveTech(index);
-                    setIsAnimating(false);
-                  }, 300);
+                    setActiveTech(index),
+                    setIsAnimating(false),
+                  }, 300),
                 }}
                 className={`w-full p-4 rounded-lg transition-all duration-300 ${,
                   activeTech === index,
                     ? `bg-gradient-to-r ${tech.bgColor} border-2 ${tech.borderColor}`,
-                    : 'bg-gray-800/50 border border-gray-600 hover: bg-gray-700/50',}`}
+                    : 'bg-gray-800/50 border border-gray-600 hover: bg-gray-700/50'}`}
               >,
                 <div className="flex items-center space-x-4">,
                   <div className="text-3xl">{tech.icon}</div>,
@@ -141,12 +141,11 @@ const RevolutionaryTechShowcase2029: React.FC = () => {,
                     <li key={index} className="flex items-center">,
                       <span className="w-2 h-2 bg-white rounded-full mr-3"></span>,
                       {feature}
-                    </li>,
-                  ))}
+                    </li>))}
                 </ul>,
               </div>,
               <div className="text-center">,
-                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`,}>,
+                <button className={`bg-gradient-to-r ${currentTech.color} text-white px-6 py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold`}>,
                   Learn More →,
                 </button>,
               </div>,
@@ -158,13 +157,13 @@ const RevolutionaryTechShowcase2029: React.FC = () => {,
           {technologies.map((tech, index) => (,
             <div,
               key={tech.id}
-              className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-6 border ${tech.borderColor} hover: scale-105 transition-all duration-300 cursor-pointer`,}
+              className={`bg-gradient-to-br ${tech.bgColor} backdrop-blur-sm rounded-xl p-6 border ${tech.borderColor} hover: scale-105 transition-all duration-300 cursor-pointer`}
               onClick={() => {,
-                setIsAnimating(true);
+                setIsAnimating(true),
                 setTimeout(() => {,
-                  setActiveTech(index);
-                  setIsAnimating(false);
-                }, 300);
+                  setActiveTech(index),
+                  setIsAnimating(false),
+                }, 300),
               }}
             >,
               <div className="text-center">,
@@ -332,7 +331,6 @@ const RevolutionaryTechShowcase2029: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default RevolutionaryTechShowcase2029;
+    </div>)},
+export default RevolutionaryTechShowcase2029,
 })

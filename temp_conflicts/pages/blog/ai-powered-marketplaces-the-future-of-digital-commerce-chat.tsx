@@ -1,7 +1,7 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import Head from 'next/head',
+import Link from 'next/link',
+import dynamic from 'next/dynamic',
 
 const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
   return (
@@ -17,7 +17,7 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat;
+export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat,

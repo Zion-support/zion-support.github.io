@@ -1,32 +1,32 @@
 
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { TalentProfile } from "@/components/profile/TalentProfile";
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";
-import { useTalentProfile } from "@/hooks/useTalentProfile";
-import { HireRequestModal } from "@/components/profile/hire-request";
-import { useAuthStatus } from "@/hooks/talent";
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";
-import { StickyAction } from "@/components/ui/sticky-action";
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { TalentProfile } from "@/components/profile/TalentProfile",
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
+import { useTalentProfile } from "@/hooks/useTalentProfile",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
+import { StickyAction } from "@/components/ui/sticky-action",
 import { Handshake, MessageSquare } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-import { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
-import { StructuredData } from "@/components/StructuredData";
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { StructuredData } from "@/components/StructuredData",
 
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();
+  const router = useRouter(),
+  const { id } = router.query as { id?: string },
+  const { profile, isLoading, error } = useTalentProfile(id),
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
+  const { userDetails } = useAuthStatus(),
+  const { isAuthenticated, user } = useAuth(),
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -47,12 +47,11 @@ export default function TalentProfilePage() {
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
-  };
+  },
 
-  const pageUrl = id ? `https://app.ziontechgroup.com/talent/${id}` : undefined;
+  const pageUrl = id ? `https://app.ziontechgroup.com/talent/${id}` : undefined,
   const structuredData = profile ? {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
+    '@context': 'https://schema.org@type': 'Service',
     serviceType: profile.title,
     provider: {
       '@type': 'Person',
@@ -60,7 +59,7 @@ export default function TalentProfilePage() {
     },
     description: profile.bio,
     url: pageUrl
-  } : null;
+  } : null,
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -68,17 +67,17 @@ export default function TalentProfilePage() {
       toast({
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
-        variant: "destructive",
-      });
+        variant: "destructive"
+      }),
     }
-  }, [error]);
+  }, [error]),
 
   if (isLoading) {
-    return <ProfileLoadingState />;
+    return <ProfileLoadingState />,
   }
 
   if (error || !profile) {
-    return <ProfileErrorState error={error} />;
+    return <ProfileErrorState error={error} />,
   }
 
   const handleRequestHire = () => {
@@ -86,26 +85,26 @@ export default function TalentProfilePage() {
       toast({
         title: "Authentication required",
         description: "Please sign in to hire this talent.",
-        variant: "default",
-      });
-      navigate('/login', { state: { from: `/talent/${id}` } });
-      return;
+        variant: "default"
+      }),
+      navigate('/login', { state: { from: `/talent/${id}` } }),
+      return,
     }
-    setIsHireModalOpen(true);
-  };
+    setIsHireModalOpen(true),
+  },
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please sign in to message this talent.",
-        variant: "default",
-      });
-      navigate('/login', { state: { from: `/talent/${id}` } });
-      return;
+        variant: "default"
+      }),
+      navigate('/login', { state: { from: `/talent/${id}` } }),
+      return,
     }
-    setIsMessageModalOpen(true);
-  };
+    setIsMessageModalOpen(true),
+  },
 
   return (
     <>
@@ -162,5 +161,5 @@ export default function TalentProfilePage() {
       />
     </div>
     </>
-  );
+  ),
 }

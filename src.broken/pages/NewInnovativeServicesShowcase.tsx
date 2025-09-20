@@ -1,33 +1,33 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-  ];
+  ],
 
   const keyBenefits = [{
       title: 'Cutting - Edge AI Technology',
       description:
         'Leverage the latest advances in machine learning, natural language processing, and predictive analytics',
-      icon: Sparkles,
+      icon: Sparkles
     },
     {
       title: 'Industry - Specific Solutions',
       description:
         'Tailored solutions designed for specific industry challenges and regulatory requirements',
-      icon: Target,
+      icon: Target
     },
     {
       title: 'Proven ROI & Results',
       description:
         'Measurable improvements in efficiency, accuracy, and cost savings across all services',
-      icon: TrendingUp,
+      icon: TrendingUp
     },
     {
       title: 'Enterprise - Grade Security',
       description:
         'SOC 2, ISO 27001, and industry - specific compliance certifications for maximum security',
-      icon: Shield,
-    },
-  ];
+      icon: Shield
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text-white">
       <SEO
@@ -344,7 +344,7 @@ export default function Page() {
                 <div className="flex items - center justify -center">
                   <Globe className="h-4 w-4 mr-2 text-purple -400" />
                   <a
-                    href="https://ziontechgroup.com"
+                    href="https: //ziontechgroup.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-purple -300"
@@ -357,5 +357,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

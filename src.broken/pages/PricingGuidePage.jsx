@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components / ui / badge';
+import React, { useState } from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
-K`;
+K`,
     }
-    return `$${price}`;
-  };
+    return `$${price}`,
+  },
   const getServiceTier = price => {
-    if(price < 2000) return { tier: 'Starter', color: 'bg-green - 100 text-green - 800' };
-    if(price < 5000) return { tier: 'Professional', color: 'bg-blue - 100 text-blue - 800' };
-    if(price < 10000) return { tier: 'Enterprise', color: 'bg-purple - 100 text-purple - 800' };
-    return { tier: 'Premium', color: 'bg-orange - 100 text-orange - 800' };
-  };
+    if(price < 2000) return { tier: 'Starter', color: 'bg-green - 100 text-green - 800' },
+    if(price < 5000) return { tier: 'Professional', color: 'bg-blue - 100 text-blue - 800' },
+    if(price < 10000) return { tier: 'Enterprise', color: 'bg-purple - 100 text-purple - 800' },
+    return { tier: 'Premium', color: 'bg-orange - 100 text-orange - 800' },
+  },
   return (<div className="min - h-screen bg-background">
       <SEO
         title="Service Pricing Guide - Zion Tech Group"
@@ -96,7 +96,7 @@ K`;
             >
               All Services({EXPANDED_SERVICES.length}) </Button>
             {SERVICE_CATEGORIES.map(category => {
-              const stats = getCategoryStats (category.name) ;
+              const stats = getCategoryStats (category.name) ,
               return (<Button
                   key={category.id}
                   variant={
@@ -109,7 +109,7 @@ K`;
                       : 'border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10'
                   }
                 >
-                  {category.name} ({stats.count}) </Button>) ;
+                  {category.name} ({stats.count}) </Button>) ,
             }) }
           </div>
         </div>
@@ -129,9 +129,9 @@ K`;
           </p>
         </div>
 
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-6">
+        <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-6">
           {filteredServices.map(service => {
-            const tier = getServiceTier (service.price || 0) ;
+            const tier = getServiceTier (service.price || 0) ,
             return (<Card
                 key={service.id}
                 className="h-full hover:shadow-lg transition - shadow duration -300"
@@ -187,7 +187,7 @@ K`;
                     style={{
                       display: '-webkit - box',
                       WebkitLineClamp: 3,
-                      WebkitBoxOrient: 'vertical',
+                      WebkitBoxOrient: 'vertical'
                     }}
                   >
                     {service.description}
@@ -218,7 +218,7 @@ K`;
 
                   {/* Action Buttons */}
                   <div className="flex space - x-2">
-                    <Button className="flex - 1 bg-zion - purple hover:bg-zion - purple - dark text-white">
+                    <Button className="flex - 1 bg-zion - purple hover: bg-zion - purple - dark text-white">
                       Get Quote
                     </Button>
                     <Button
@@ -229,7 +229,7 @@ K`;
                     </Button>
                   </div>
                 </CardContent>
-              </Card>) ;
+              </Card>) 
           }) }
         </div>
 
@@ -392,5 +392,5 @@ K`;
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) ,
 }

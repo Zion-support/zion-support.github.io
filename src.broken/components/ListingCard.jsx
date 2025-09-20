@@ -1,9 +1,9 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react',
+import { cn } from '@/lib/utils',
 
 export default function Page() {
       className={cn('
-        'flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple',
+        'flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple',
         className
       )}
     >
@@ -62,6 +62,6 @@ export default function Page() {
         )}
       </div>
     </Link>
-  );
+  ),
 }
 '"`

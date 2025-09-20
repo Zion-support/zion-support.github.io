@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Risk Analysis",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "30% better portfolio performance, 45% improved exit timing, better returns, optimized strategies",
     logo: "SVL"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: Gauge,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const vcBenefits = [{
     title: "Better Investment Decisions",
     description: "AI - powered insights enable data - driven investment decisions",
     icon: Brain,
-    examples["Data - driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"];
-  },;
+    examples["Data - driven insights", "Market analysis", "Risk assessment", "Portfolio optimization"],
+  },
   {
     title: "Increased Deal Flow",
     description: "AI systems identify more investment opportunities",
     icon: Zap,
-    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"];
-  },;
+    examples["Deal sourcing", "Market scanning", "Opportunity identification", "Better coverage"],
+  },
   {
     title: "Improved Returns",
     description: "AI optimization leads to better portfolio performance",
     icon: TrendingUp,
-    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"];
-  },;
+    examples["Portfolio optimization", "Risk management", "Exit timing", "Better performance"],
+  },
   {
     title: "Operational Efficiency",
     description: "Automation reduces manual effort and improves processes",
     icon: Rocket,
-    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"];
+    examples["Process automation", "Due diligence", "Reporting", "Better efficiency"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Investment Analysis', 'Deal Sourcing', 'Portfolio Management', 'Market Intelligence', 'Due Diligence', 'Exit Strategy'];
+  const categories = ['AllInvestment Analysis', 'Deal SourcingPortfolio Management', 'Market IntelligenceDue Diligence', 'Exit Strategy'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? ventureCapitalSolutions
-    : ventureCapitalSolutions.filter(solution => solution.category === selectedCategory) ;
+    : ventureCapitalSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -183,10 +183,10 @@ const vcBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* VC Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -242,13 +242,13 @@ const vcBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* VC Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -306,13 +306,13 @@ const vcBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -368,13 +368,13 @@ const vcBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -474,7 +474,7 @@ const vcBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -545,13 +545,13 @@ const vcBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

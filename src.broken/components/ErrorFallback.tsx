@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: anyError;
-  resetErrorBoundary: () => void;
+  error: anyError,
+  resetErrorBoundary: () => void
 
 }
 
@@ -43,11 +43,11 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
               Error Details(Development)
             </summary>"
             <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">
-              {error.message};
-              {error.stack};
-            </pre>;
-          </details>;) };
-      </div>;
-    </div>;) };
+              {error.message},
+              {error.stack},
+            </pre>,
+          </details>,) },
+      </div>,
+    </div>,) },
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

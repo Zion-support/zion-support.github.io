@@ -13,27 +13,27 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-    const [activeTab, setActiveTab] = useState("all");
-    const { jobs, isLoading } = useJobs();
-    const [selectedJobId, setSelectedJobId] = useState(null);
-    const [selectedJobTitle, setSelectedJobTitle] = useState("");
-    const isMobile = useIsMobile();
+    const [activeTab, setActiveTab] = useState("all"),
+    const { jobs, isLoading } = useJobs(),
+    const [selectedJobId, setSelectedJobId] = useState(null),
+    const [selectedJobTitle, setSelectedJobTitle] = useState(""),
+    const isMobile = useIsMobile(),
     // Set the first job as selected when jobs are loaded (if any)
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
-            setSelectedJobId(jobs[0].id);
-            setSelectedJobTitle(jobs[0].title);
+            setSelectedJobId(jobs[0].id),
+            setSelectedJobTitle(jobs[0].title),
         }
-    }, [jobs, selectedJobId]);
+    }, [jobs, selectedJobId]),
     const handleJobSelect = (jobId, jobTitle) => {
-        setSelectedJobId(jobId);
-        setSelectedJobTitle(jobTitle);
-    };
+        setSelectedJobId(jobId),
+        setSelectedJobTitle(jobTitle),
+    },
     return (<>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
-        <div className={`flex flex-col ${!isMobile ? 'md:flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
+        <div className={`flex flex-col ${!isMobile ? 'md: flex-row md:justify-between md:items-center' : ''} mb-8 gap-4`}>
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>My Jobs</h1>
             <p className="text-muted-foreground mt-1">Manage your job postings and talent applications</p>

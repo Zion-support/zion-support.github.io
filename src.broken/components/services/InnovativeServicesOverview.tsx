@@ -1,53 +1,53 @@
 
-  maxServices?: number;
-  category?: string;
+  maxServices?: number,
+  category?: string,
   showViewAllButton?: boolean}
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
-maxServices:  6,;
-  category,;
-  showViewAllButton = true}) => {;
-  const [activeTab, setActiveTab] = useState('featured');
+maxServices:  6,
+  category,
+  showViewAllButton = true}) => {,
+  const [activeTab, setActiveTab] = useState('featured'),
 
-    { id: 'featured', label: 'Featured', count: 3 },;
-    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
-    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
-    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },;
-    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },;
-    { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
-  ];
+    { id: 'featured', label: 'Featured', count: 3 },
+    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },
+    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },
+    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },
+    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },
+    { id: 'development', label: 'Development', count: getServicesByCategory('Development').length },
+  ],
 
-  const filteredServices = useMemo(: unknown {;    let services = INNOVATIVE_SERVICES_2025;
+  const filteredServices = useMemo(: unknown {,    let services = INNOVATIVE_SERVICES_2025,
 
     if (category) {
 
       services = getServicesByCategory(category)} else {
 
-      switch(activeTab) {;
-        case 'featured':;
-          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
-          break;
-        case 'ai':;
-          services = getServicesByCategory('AI Services');
-          break;
-        case 'it':;
-          services = getServicesByCategory('IT Services');
-          break;
-        case 'saas':;
-          services = getServicesByCategory('Micro SAAS');
-          break;
-        case 'business':;
-          services = getServicesByCategory('Business');
-          break;
-        case 'development':;
-          services = getServicesByCategory('Development');
-          break;
+      switch(activeTab) {,
+        case 'featured':,
+          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3),
+          break,
+        case 'ai':,
+          services = getServicesByCategory('AI Services'),
+          break,
+        case 'it':,
+          services = getServicesByCategory('IT Services'),
+          break,
+        case 'saas':,
+          services = getServicesByCategory('Micro SAAS'),
+          break,
+        case 'business':,
+          services = getServicesByCategory('Business'),
+          break,
+        case 'development':,
+          services = getServicesByCategory('Development'),
+          break,
         default:
           services = INNOVATIVE_SERVICES_2025}
     }
 
-    return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
+    return services.slice(0, maxServices)}, [activeTab, category, maxServices]),
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => ("
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">"
@@ -87,16 +87,16 @@ maxServices:  6,;
         </div>
 "
         <div className="flex space-x-2">"
-          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover:bg-blue-700 transition-colors">
+          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover: bg-blue-700 transition-colors">
             Get Quote
-          </button>;"
-          <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors">;
-            Details;
-          </button>;
-        </div>;
-      </div>;
-    </div>;
-  );
+          </button>,"
+          <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors">,
+            Details,
+          </button>,
+        </div>,
+      </div>,
+    </div>,
+  ),
 
   return ("
     <div className="bg-gray-50 py-16">"      <div className="container mx-auto px-4">
@@ -161,10 +161,10 @@ maxServices:  6,;
 
                   {tab.label}"
                   <span className="ml-2 text-xs opacity-75">({tab.count})</span>
-                </button>;
+                </button>,
               ))}
             </div>
-          </div>;
+          </div>,
         )}
 
         {/* Services Grid */}"
@@ -196,15 +196,15 @@ maxServices:  6,;
               href="/innovative-services-2025"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
 
-              View All {totalServices} Services;"
+              View All {totalServices} Services,"
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </a>;
-          </div>;
-        )};
-      </div>;
-    </div>;
-  )};
+            </a>,
+          </div>,
+        )},
+      </div>,
+    </div>,
+  )},
 
 export default InnovativeServicesOverview}}}'"`

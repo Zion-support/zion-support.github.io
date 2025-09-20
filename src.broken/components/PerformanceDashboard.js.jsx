@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { usePerformance } from '@/hooks/usePerformance';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
- from '@/lib/utils';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { usePerformance } from '@/hooks/usePerformance',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+ from '@/lib/utils',
 ) {
 
-  const { metrics, observers, performanceScore, logMetrics } = usePerformance();
-  const [isExpanded, setIsExpanded] = useState(showDetails);
+  const { metrics, observers, performanceScore, logMetrics } = usePerformance(),
+  const [isExpanded, setIsExpanded] = useState(showDetails),
   const getScoreColor = score => {
 
-    if(score >= 90) return 'text-green-500';
-    if(score >= 70) return 'text-yellow-500';
-    return 'text-red-500';
-  };
+    if(score >= 90) return 'text-green-500',
+    if(score >= 70) return 'text-yellow-500',
+    return 'text-red-500',
+  },
   const getScoreEmoji = score => {
 
-    if(score >= 90) return '🚀';
-    if(score >= 70) return '⚠️';
-    return '🐌';
-  };
+    if(score >= 90) return '🚀',
+    if(score >= 70) return '⚠️',
+    return '🐌',
+  },
   const getMetricIcon = metricName => {
 
     const icons = {
@@ -31,9 +31,9 @@ import { Badge } from '@/components/ui/badge';
       CLS: <BarChart3 className="w-4 h-4" />,"
       TTFB: <Clock className="w-4 h-4" />,"
       DOMLOAD: <Activity className="w-4 h-4" />,"
-      WINDOWLOAD: <Activity className="w-4 h-4" />};"
-    return icons[metricName] || <Activity className="w-4 h-4" />;
-  };
+      WINDOWLOAD: <Activity className="w-4 h-4" />},"
+    return icons[metricName] || <Activity className="w-4 h-4" />,
+  },
   const getMetricDescription = metricName => {
 
     const descriptions = {
@@ -44,15 +44,15 @@ import { Badge } from '@/components/ui/badge';
       CLS: 'Cumulative Layout Shift - Visual stability',
       TTFB: 'Time to First Byte - Server response time',
       DOMLOAD: 'DOM Content Loaded - DOM ready time',
-      WINDOWLOAD: 'Window Load - Full page load time'};
-    return descriptions[metricName] || 'Performance metric';
-  };
+      WINDOWLOAD: 'Window Load - Full page load time'},
+    return descriptions[metricName] || 'Performance metric',
+  },
   const formatMetricValue = (metricName, value) => {
 
-    if(metricName === 'CLS') return value.toFixed(3);
-    if(metricName === 'FID') return `${value.toFixed(0)}ms`;`
-    return `${value.toFixed(0)}ms`;
-  };
+    if(metricName === 'CLS') return value.toFixed(3),
+    if(metricName === 'FID') return `${value.toFixed(0)}ms`,`
+    return `${value.toFixed(0)}ms`,
+  },
   return ()
     <motion.div'
       className={cn('fixed bottom-4 right-4 z-50 max-w-sm', className)}
@@ -197,12 +197,12 @@ import { Badge } from '@/components/ui/badge';
         </AnimatePresence>
       </Card>
     </motion.div>
-  );
+  ),
 }
 // Compact performance indicator
 export function PerformanceIndicator({ className }) {
 
-  const { performanceScore } = usePerformance();
+  const { performanceScore } = usePerformance(),
   return ('
     <div className={cn('flex items-center gap-2', className)}>
       <div
@@ -219,6 +219,6 @@ export function PerformanceIndicator({ className }) {
         {performanceScore}/100
       </span>
     </div>
-  );
+  ),
 }
 '"`

@@ -1,14 +1,14 @@
 
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { SEO } from "@/components/SEO";
-import { AppLayout } from "@/layout/AppLayout";
-import PostCard from "@/components/community/PostCard";
-import { ForumPost, ForumCategoryInfo } from "@/types/community";
-import { Badge } from "@/components/ui/badge";
-import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import PostCard from "@/components/community/PostCard",
+import { ForumPost, ForumCategoryInfo } from "@/types/community",
+import { Badge } from "@/components/ui/badge",
+import { useAuth } from "@/hooks/useAuth",
 import {
   MessageSquare,
   Briefcase,
@@ -16,7 +16,7 @@ import {
   FileText,
   Megaphone,
   Search
-} from "@/components/icons";
+} from "@/components/icons",
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
@@ -55,7 +55,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-};
+},
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
@@ -221,7 +221,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       isPinned: true
     }
   ]
-};
+},
 
 const iconMap = {
   "Briefcase": Briefcase,
@@ -229,14 +229,14 @@ const iconMap = {
   "Code": Code,
   "FileText": FileText,
   "Megaphone": Megaphone
-};
+},
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const { categoryId } = useParams();
-  const { user } = useAuth();
-  const [searchQuery, setSearchQuery] = useState("");
+  const { categoryId } = useParams(),
+  const { user } = useAuth(),
+  const [searchQuery, setSearchQuery] = useState(""),
   
   if (!categoryId || !categoriesInfo[categoryId]) {
     return (
@@ -248,12 +248,12 @@ export default function ForumCategoryPage() {
           </Button>
         </div>
       </AppLayout>
-    );
+    ),
   }
   
-  const category = categoriesInfo[categoryId];
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
-  const posts = postsByCategory[categoryId] || [];
+  const category = categoriesInfo[categoryId],
+  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
+  const posts = postsByCategory[categoryId] || [],
   
   // Filter posts based on search query
   const filteredPosts = searchQuery
@@ -262,10 +262,10 @@ export default function ForumCategoryPage() {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : posts;
+    : posts,
   
   // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
+  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
   
   return (
     <AppLayout>
@@ -339,5 +339,5 @@ export default function ForumCategoryPage() {
         )}
       </div>
     </AppLayout>
-  );
+  ),
 }

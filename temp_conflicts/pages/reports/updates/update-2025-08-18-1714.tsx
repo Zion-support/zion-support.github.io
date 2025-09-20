@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head',
 
 export default function UpdatePage() {
   return (
@@ -32,5 +32,5 @@ export default function UpdatePage() {
         <p className="mt-6">Learn more at <a className="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">https://ziontechgroup.com</a>.</p>
       </main>
     </div>
-  );
+  )
 }

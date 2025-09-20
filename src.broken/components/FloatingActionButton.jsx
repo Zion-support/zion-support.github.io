@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-export default FloatingActionButton;
-import { motion, AnimatePresence  } from 'framer-motion';
+export default FloatingActionButton,
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-,
-  ];
+
+  ],
   return ()
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
@@ -77,11 +77,11 @@ export default function Page() {
           )}
         </AnimatePresence>
       </motion.button>
-    </div>) ;
-};
+    </div>) ,
+},
 
-export default FloatingActionButton;
+export default FloatingActionButton,
 '"`
 =======
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

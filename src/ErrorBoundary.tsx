@@ -30,9 +30,10 @@ class ErrorBoundary extends Component<Props, State> {
     }
     
     this.setState({
-      error,
-      errorInfo,
-    })
+error,
+      errorInfo
+    
+})
   }
 
   render() {
@@ -46,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="error-boundary" role="alert">
           <h2>Something went wrong</h2>
-          <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
+          <p>We&apos,re sorry, but something unexpected happened. Please try refreshing the page.</p>
           <button 
             onClick={() => window.location.reload()}
             className="btn-primary"
@@ -58,11 +59,7 @@ class ErrorBoundary extends Component<Props, State> {
             <details style={{ marginTop: '1rem' }}>
               <summary>Error Details (Development)</summary>
               <pre style={{ 
-                background: '#f5f5f5', 
-                padding: '1rem', 
-                borderRadius: '4px',
-                overflow: 'auto',
-                fontSize: '12px'
+                background: '#f5f5f5',padding: '1rem',borderRadius: '4px',overflow: 'auto',fontSize: '12px'
               }}>
                 {this.state.error.toString()}
                 {this.state.errorInfo?.componentStack}

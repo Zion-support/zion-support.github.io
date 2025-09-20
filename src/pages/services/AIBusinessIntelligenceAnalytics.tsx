@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "@/components/SEO";
 import { 
-  Brain, 
+  Brain,
   BarChart3, 
   TrendingUp, 
   Users, 
@@ -32,8 +32,7 @@ import {
   Calendar,
   DollarSign,
   Percent
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIBusinessIntelligenceAnalytics = () => {
   const features = [
     "AI-Powered Predictive Analytics",
@@ -44,7 +43,7 @@ const AIBusinessIntelligenceAnalytics = () => {
     "Natural Language Query Interface",
     "Multi-Source Data Integration",
     "Custom Dashboard Creation"
-  ];
+  ],
 
   const benefits = [
     "Increase revenue by 25% through data-driven insights",
@@ -55,13 +54,12 @@ const AIBusinessIntelligenceAnalytics = () => {
     "Enhance customer satisfaction by 35%",
     "Achieve 95% forecast accuracy",
     "Enable real-time business monitoring"
-  ];
+  ],
 
   const capabilities = [
     {
-      category: "Data Analytics",
-      items: [
-        "Real-time data processing and analysis",
+      category: "Data Analytics",items: [
+        "Real-time data processing and analysis";
         "Advanced statistical modeling",
         "Machine learning algorithms",
         "Predictive analytics and forecasting",
@@ -69,9 +67,8 @@ const AIBusinessIntelligenceAnalytics = () => {
       ]
     },
     {
-      category: "Business Intelligence",
-      items: [
-        "Interactive dashboards and reports",
+      category: "Business Intelligence",items: [
+        "Interactive dashboards and reports";
         "KPI tracking and monitoring",
         "Performance benchmarking",
         "Trend analysis and insights",
@@ -79,9 +76,8 @@ const AIBusinessIntelligenceAnalytics = () => {
       ]
     },
     {
-      category: "Data Integration",
-      items: [
-        "Multi-source data connectors",
+      category: "Data Integration",items: [
+        "Multi-source data connectors";
         "ETL/ELT data pipelines",
         "Real-time data streaming",
         "Data quality management",
@@ -89,16 +85,15 @@ const AIBusinessIntelligenceAnalytics = () => {
       ]
     },
     {
-      category: "AI & Machine Learning",
-      items: [
-        "Natural language processing",
+      category: "AI & Machine Learning",items: [
+        "Natural language processing";
         "Automated insights generation",
         "Intelligent recommendations",
         "Pattern recognition",
         "Cognitive analytics"
       ]
     }
-  ];
+  ],
 
   const useCases = [
     "Financial Performance Analysis",
@@ -109,15 +104,13 @@ const AIBusinessIntelligenceAnalytics = () => {
     "Operational Performance Monitoring",
     "Risk Assessment & Management",
     "Product Performance Analysis"
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$19,999",
-      period: "one-time setup",
-      features: [
-        "Basic AI analytics platform",
+      name: "Starter",price: "$19,999",
+      period: "one-time setup",features: [
+        "Basic AI analytics platform";
         "Up to 5 data sources",
         "Standard dashboards",
         "Basic reporting",
@@ -126,11 +119,9 @@ const AIBusinessIntelligenceAnalytics = () => {
       ]
     },
     {
-      name: "Professional",
-      price: "$39,999",
-      period: "one-time setup",
-      features: [
-        "Advanced AI analytics",
+      name: "Professional",price: "$39,999",
+      period: "one-time setup",features: [
+        "Advanced AI analytics";
         "Up to 20 data sources",
         "Custom dashboards",
         "Advanced reporting",
@@ -140,11 +131,9 @@ const AIBusinessIntelligenceAnalytics = () => {
       ]
     },
     {
-      name: "Enterprise",
-      price: "$79,999",
-      period: "one-time setup",
-      features: [
-        "Full AI BI platform",
+      name: "Enterprise",price: "$79,999",
+      period: "one-time setup",features: [
+        "Full AI BI platform";
         "Unlimited data sources",
         "Custom analytics workflows",
         "24/7 dedicated support",
@@ -154,7 +143,7 @@ const AIBusinessIntelligenceAnalytics = () => {
         "White-label solutions"
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">
@@ -512,7 +501,7 @@ const AIBusinessIntelligenceAnalytics = () => {
               <h3 className="text-xl font-bold text-white mb-2">Address</h3>
               <p className="text-gray-300 mb-4">364 E Main St STE 1008, Middletown DE 19709</p>
               <a 
-                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
+                href="https: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-green-400 hover:text-green-300 transition-colors duration-300"
@@ -524,7 +513,6 @@ const AIBusinessIntelligenceAnalytics = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIBusinessIntelligenceAnalytics;

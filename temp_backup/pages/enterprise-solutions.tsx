@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Building, Shield, Globe, Brain, Zap, Users, Target, Award } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Building, Shield, Globe, Brain, Zap, Users, Target, Award } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function EnterpriseSolutions() {
   const solutions = [
@@ -41,7 +41,7 @@ export default function EnterpriseSolutions() {
       description: "Advanced collaboration tools and workflow management systems",
       href: "/incident-automation-suite"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function EnterpriseSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default QuantumComputing2026;
+  ),
+},
+export default QuantumComputing2026,

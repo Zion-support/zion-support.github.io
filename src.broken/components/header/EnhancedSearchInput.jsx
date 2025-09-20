@@ -1,20 +1,20 @@
 <<<<<<< HEAD
 }
 =======
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react',
 import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export const EnhancedSearchInput = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeIndex, setActiveIndex] = useState(-1);
+  const [isOpen, setIsOpen] = useState(false),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [activeIndex, setActiveIndex] = useState(-1),
   const [recentSearches, setRecentSearches] = useState(['
     'IT infrastructure setup',Network security',Cloud migration',Data backup solutions'
-  ]);
+  ]),
   const [trendingSearches, setTrendingSearches] = useState(['
     'AI-powered IT management',Cybersecurity services',Remote IT support',Digital transformation'
-  ]);
-  const [suggestions, setSuggestions] = useState([]);
-  const searchRef = useRef(null);
-  const inputRef = useRef(null);
+  ]),
+  const [suggestions, setSuggestions] = useState([]),
+  const searchRef = useRef(null),
+  const inputRef = useRef(null),
 
   // Sample search suggestions
   const allSuggestions = ['
@@ -26,49 +26,49 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     { type: 'service', text: 'Software Support', icon: Users, category: 'Software' },
     { type: 'service', text: 'IT Consulting', icon: TrendingUp, category: 'Consulting' },
     { type: 'service', text: 'Managed IT Services', icon: Building, category: 'Managed Services' }
-  ];
+  ],
 
   useEffect(() => {
     const handleClickOutside = (event) => {
 
       if(searchRef.current && !searchRef.current.contains(event.target)) {
 
-        setIsOpen(false);
+        setIsOpen(false),
         setActiveIndex(-1)}
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    document.addEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
 
   useEffect(() => {
     if(searchQuery.trim()) {
 
       const filtered = allSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      ),
       setSuggestions(filtered)} else {
 
       setSuggestions([])}
-    setActiveIndex(-1)}, [searchQuery]);
+    setActiveIndex(-1)}, [searchQuery]),
 
   const handleInputChange = (e) => {
 
-    setSearchQuery(e.target.value);
-    setIsOpen(true)};
+    setSearchQuery(e.target.value),
+    setIsOpen(true)},
 
   const handleKeyDown = (e) => {
 
     if(e.key === 'ArrowDown') {
 
-      e.preventDefault();
+      e.preventDefault(),
       setActiveIndex(prev =>
         prev < suggestions.length-1 ? prev + 1 : prev'
       )} else if(e.key === 'ArrowUp') {
 
-      e.preventDefault();
+      e.preventDefault(),
       setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if(e.key === 'Enter') {
 
-      e.preventDefault();
+      e.preventDefault(),
       if(activeIndex >= 0 && suggestions[activeIndex]) {
 
         handleSuggestionClick(suggestions[activeIndex])} else if(searchQuery.trim()) {
@@ -76,57 +76,57 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         handleSearch(searchQuery)}
     } else if(e.key === 'Escape') {
 
-      setIsOpen(false);
+      setIsOpen(false),
       setActiveIndex(-1)}
-  };
+  },
 
   const handleSuggestionClick = (suggestion) => {
 
-    setSearchQuery(suggestion.text);
-    setIsOpen(false);
-    setActiveIndex(-1);
-    handleSearch(suggestion.text)};
+    setSearchQuery(suggestion.text),
+    setIsOpen(false),
+    setActiveIndex(-1),
+    handleSearch(suggestion.text)},
 
   const handleSearch = (query) => {
 
     if(query.trim()) {
 
       // Add to recent searches
-      const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5);
-      setRecentSearches(newRecent);
+      const newRecent = [query, ...recentSearches.filter(s => s !== query)].slice(0, 5),
+      setRecentSearches(newRecent),
 
       // Store in localStorage'
-      localStorage.setItem('recentSearches', JSON.stringify(newRecent));
+      localStorage.setItem('recentSearches', JSON.stringify(newRecent)),
 
       // Perform search(in a real app, this would navigate to search results)
-      // // // // // // // // console.log('Searching for:', query);
+      // // // // // // // // console.log('Searching for:', query),
 
       // Close search
-      setIsOpen(false);
+      setIsOpen(false),
       setActiveIndex(-1)}
-  };
+  },
 
   const handleRecentSearchClick = (search) => {
 
-    setSearchQuery(search);
-    handleSearch(search)};
+    setSearchQuery(search),
+    handleSearch(search)},
 
   const handleTrendingSearchClick = (search) => {
 
-    setSearchQuery(search);
-    handleSearch(search)};
+    setSearchQuery(search),
+    handleSearch(search)},
 
   const clearSearch = () => {
 
-    setSearchQuery('');
-    inputRef.current?.focus()};
+    setSearchQuery(''),
+    inputRef.current?.focus()},
 
   const removeRecentSearch = (searchToRemove, e) => {
 
-    e.stopPropagation();
-    const newRecent = recentSearches.filter(s => s !== searchToRemove);
-    setRecentSearches(newRecent);
-    localStorage.setItem('recentSearches', JSON.stringify(newRecent))};
+    e.stopPropagation(),
+    const newRecent = recentSearches.filter(s => s !== searchToRemove),
+    setRecentSearches(newRecent),
+    localStorage.setItem('recentSearches', JSON.stringify(newRecent))},
 
   return ()
     <div className="relative flex-1 max-w-2xl" ref={searchRef}>
@@ -145,14 +145,12 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           placeholder="Search for IT services, solutions, or support..."
           className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         />
-        {searchQuery && (
-          <button
+        {searchQuery && (<button
             onClick={clearSearch}"
             className="absolute inset-y-0 right-0 pr-3 flex items-center"
 "
-            <X className="h-5 w-5 text-gray-400 hover:text-gray-600" />
-          </button>;
-        )}
+            <X className="h-5 w-5 text-gray-400 hover: text-gray-600" />
+          </button>)}
       </div>
 
       {/* Search Dropdown */}
@@ -175,10 +173,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
                       <div className="text-sm font-medium text-gray-900">{suggestion.text}</div>"
                       <div className="text-xs text-gray-500">{suggestion.category}</div>
                     </div>
-                  </button>;
+                  </button>,
                 ))}
               </div>
-            </div>;
+            </div>,
           )}
 
           {/* Recent Searches */}
@@ -204,10 +202,10 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
 
 
 }"
-                      className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
+                      className="opacity-0 group-hover: opacity-100 p-1 hover:bg-gray-200 rounded"
 "
                       <X className="w-3 h-3 text-gray-400" />
-                    </button>;
+                    </button>,
                   </button>
                 ))}
               </div>
@@ -234,7 +232,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
           </div>
 
           {/* Search Button */}"
-          <div className="p-4 bg-gray-50 border-t border-gray-200">;
+          <div className="p-4 bg-gray-50 border-t border-gray-200">,
             <button
               onClick={() => handleSearch(searchQuery)}
               disabled={!searchQuery.trim()}"
@@ -246,6 +244,6 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         </div>
       )}
     </div>
-  )};
+  )},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

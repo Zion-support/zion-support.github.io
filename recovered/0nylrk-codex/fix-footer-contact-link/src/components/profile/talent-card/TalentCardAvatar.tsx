@@ -1,10 +1,10 @@
 
-import React from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import React from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
 interface TalentCardAvatarProps {
-  profilePicture?: string;
-  fullName: string;
+  profilePicture?: string,
+  fullName: string
 }
 
 export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {
@@ -14,8 +14,8 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .split(' ')
       .map(part => part[0])
       .join('')
-      .toUpperCase();
-  };
+      .toUpperCase()
+  },
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
@@ -27,5 +27,5 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
-  );
+  ),
 }

@@ -1,14 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import Layout from '../components/layout/Layout',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function Innovations2034Page() {
   return (
@@ -51,18 +51,18 @@ export default function Innovations2034Page() {
                   className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
                   style={{
                     left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`
                   }}
                   animate={{
                     y: [0, -100, 0],
                     opacity: [0.6, 1, 0.6],
                     scale: [1, 1.5, 1],
-                    rotate: [0, 360],
+                    rotate: [0, 360]
                   }}
                   transition={{
                     duration: 4 + Math.random() * 3,
                     repeat: Infinity,
-                    delay: Math.random() * 2,
+                    delay: Math.random() * 2
                   }}
                 />
               ))}
@@ -372,7 +372,7 @@ export default function Innovations2034Page() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-500/25 text-lg"
               >
                 Start Your Innovation Journey
               </motion.button>
@@ -382,5 +382,5 @@ export default function Innovations2034Page() {
         </div>
       </Layout>
     </>
-  );
+  )
 }

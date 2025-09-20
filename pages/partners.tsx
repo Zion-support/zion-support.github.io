@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { 
-  Shield, 
+  Shield,
   Cloud, 
   Brain, 
   Users, 
@@ -94,19 +94,19 @@ export default function Partners() {
     {
       name: 'Platinum',
       description: 'Strategic partnerships with deep integration and joint go-to-market initiatives.',
-      benefits: ['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
+      benefits: ['Priority supportJoint marketing', 'Custom integrationsExecutive alignment'],
       color: 'from-purple-600 to-pink-600'
     },
     {
       name: 'Gold',
       description: 'Preferred partnerships with significant collaboration and mutual benefits.',
-      benefits: ['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
+      benefits: ['Enhanced supportCo-marketing opportunities', 'Technical collaborationTraining access'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       name: 'Silver',
       description: 'Standard partnerships with basic collaboration and referral programs.',
-      benefits: ['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
+      benefits: ['Standard supportReferral programs', 'Documentation accessCommunity access'],
       color: 'from-gray-400 to-gray-600'
     }
   ]

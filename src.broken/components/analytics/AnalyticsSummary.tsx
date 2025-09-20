@@ -1,9 +1,9 @@
 
-import { Card, CardContent } from "@/components/ui/card";
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import Skeleton from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
+import { Card, CardContent } from "@/components/ui/card",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
 
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
@@ -13,30 +13,30 @@ export function AnalyticsSummary() {
       const { data: pageViewsData, error: pageViewsError } = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_type', 'page_view')
-        .single();
+        .eq('event_typepage_view')
+        .single(),
 
-      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
+      if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError,
       
       // Get unique visitors (by counting distinct user IDs)
       const { data: uniqueVisitorsData, error: uniqueVisitorsError } = await supabase
         .from('analytics_events')
         .select('user_id')
-        .eq('event_type', 'page_view')
-        .is('user_id', 'not.null');
+        .eq('event_typepage_view')
+        .is('user_idnot.null'),
         
-      if (uniqueVisitorsError) throw uniqueVisitorsError;
+      if (uniqueVisitorsError) throw uniqueVisitorsError,
       
-      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []);
+      const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) || []),
       
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
         .from('analytics_events')
         .select('count')
-        .eq('event_type', 'conversion')
-        .single();
+        .eq('event_typeconversion')
+        .single(),
         
-      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError;
+      if (conversionsError && conversionsError.code !== 'PGRST116') throw conversionsError,
       
       // Get most recent event to calculate "last updated"
       const { data: lastEventData, error: lastEventError } = await supabase
@@ -44,24 +44,24 @@ export function AnalyticsSummary() {
         .select('created_at')
         .order('created_at', { ascending: false })
         .limit(1)
-        .single();
+        .single(),
         
-      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError;
+      if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
         
       return {
         totalPageViews: pageViewsData?.count || 0,
         uniqueVisitors: uniqueUserIds.size || 0,
         conversions: conversionsData?.count || 0,
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null,
-      };
+        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null
+      },
     },
     refetchInterval: 300000, // Refetch every 5 minutes
-  });
+  }),
   
   // Calculate conversion rate
   const conversionRate = stats && stats.totalPageViews > 0 
     ? ((stats.conversions / stats.totalPageViews) * 100).toFixed(2)
-    : '0.00';
+    : '0.00',
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -100,13 +100,13 @@ export function AnalyticsSummary() {
         }
       />
     </div>
-  );
+  ),
 }
 
 interface StatCardProps {
-  title: string;
-  value: React.ReactNode;
-  icon: React.ReactNode;
+  title: string,
+  value: React.ReactNode,
+  icon: React.ReactNode
 }
 
 function StatCard({ title, value, icon }: StatCardProps) {
@@ -128,5 +128,5 @@ function StatCard({ title, value, icon }: StatCardProps) {
         </div>
       </CardContent>
     </Card>
-  );
+  ),
 }

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 
 const GitHub: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all'),
 
   const categories = [
     { id: 'all', name: 'All Discussions', icon: '💬' },
@@ -10,8 +10,8 @@ const GitHub: React.FC = () => {
     { id: 'general', name: 'General', icon: '🌐' },
     { id: 'ideas', name: 'Ideas', icon: '💡' },
     { id: 'help', name: 'Help', icon: '❓' },
-    { id: 'showcase', name: 'Showcase', icon: '🎨' },
-  ];
+    { id: 'showcase', name: 'Showcase', icon: '🎨' }
+  ],
 
   const discussions = [
     {
@@ -24,7 +24,7 @@ const GitHub: React.FC = () => {
       views: 1200,
       lastActivity: '2 hours ago',
       status: 'pinned',
-      tags: ['api', 'release', 'ai-models'],
+      tags: ['apirelease', 'ai-models']
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ const GitHub: React.FC = () => {
       views: 890,
       lastActivity: '5 hours ago',
       status: 'active',
-      tags: ['performance', 'optimization', 'api'],
+      tags: ['performanceoptimization', 'api']
     },
     {
       id: 3,
@@ -48,7 +48,7 @@ const GitHub: React.FC = () => {
       views: 2100,
       lastActivity: '1 day ago',
       status: 'active',
-      tags: ['feature-request', 'batch-processing', 'ai-services'],
+      tags: ['feature-requestbatch-processing', 'ai-services']
     },
     {
       id: 4,
@@ -60,7 +60,7 @@ const GitHub: React.FC = () => {
       views: 1560,
       lastActivity: '2 days ago',
       status: 'active',
-      tags: ['showcase', 'chatbot', 'customer-support'],
+      tags: ['showcasechatbot', 'customer-support']
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ const GitHub: React.FC = () => {
       views: 3400,
       lastActivity: '3 days ago',
       status: 'active',
-      tags: ['healthcare', 'ai-future', 'discussion'],
+      tags: ['healthcareai-future', 'discussion']
     },
     {
       id: 6,
@@ -84,22 +84,22 @@ const GitHub: React.FC = () => {
       views: 450,
       lastActivity: '4 days ago',
       status: 'resolved',
-      tags: ['webhooks', 'troubleshooting', 'integration'],
-    },
-  ];
+      tags: ['webhookstroubleshooting', 'integration']
+    }
+  ],
 
   const filteredDiscussions = discussions.filter(discussion => 
     activeCategory === 'all' || discussion.category === activeCategory
-  );
+  ),
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'pinned': return 'bg-yellow-600 text-white';
-      case 'active': return 'bg-green-600 text-white';
-      case 'resolved': return 'bg-blue-600 text-white';
-      default: return 'bg-gray-600 text-white';
+      case 'pinned': return 'bg-yellow-600 text-white',
+      case 'active': return 'bg-green-600 text-white',
+      case 'resolved': return 'bg-blue-600 text-white',
+      default: return 'bg-gray-600 text-white'
     }
-  };
+  },
 
   return (
     <>
@@ -347,7 +347,7 @@ const GitHub: React.FC = () => {
             <div className="text-center text-gray-400">
               <p>Need help with GitHub discussions? Contact our community team</p>
               <p className="mt-2">
-                <a href="/contact" className="text-blue-400 hover:text-blue-300">
+                <a href="/contact" className="text-blue-400 hover: text-blue-300">
                   Get Support →
                 </a>
               </p>
@@ -356,7 +356,7 @@ const GitHub: React.FC = () => {
         </footer>
       </div>
     </>
-  );
-};
+  )
+},
 
-export default GitHub;
+export default GitHub,

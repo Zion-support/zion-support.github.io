@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Neural Interface Revolution 2025 - Brain-Computer Integration | Zion Tech Group';
-  description: 'Experience the neural interface revolution of 2025. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.';
-  keywords: ['neural interfacebrain-computer interface', 'BCIneural technology', 'consciousness integrationAI interaction'],
-};
+  title: 'Neural Interface Revolution 2025 - Brain-Computer Integration | Zion Tech Group',
+  description: 'Experience the neural interface revolution of 2025. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.',
+  keywords: ['neural interfacebrain-computer interfaceBCIneural technology', 'consciousness integrationAI interaction']
+},
 export default function NeuralInterfaceRevolution2025Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white">,
@@ -37,7 +37,7 @@ export default function NeuralInterfaceRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Neural Capabilities */,}
+      {/* Neural Capabilities */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Neural Interface Capabilities</h2>,
@@ -117,7 +117,7 @@ export default function NeuralInterfaceRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Use Cases */,}
+      {/* Use Cases */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Applications</h2>,
@@ -190,5 +190,4 @@ export default function NeuralInterfaceRevolution2025Page() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

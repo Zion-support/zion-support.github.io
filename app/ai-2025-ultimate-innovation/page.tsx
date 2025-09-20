@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2025 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group';
-  description: 'Discover the ultimate AI innovations of 2025. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.';
-  keywords: ['AI 2025artificial intelligence', 'machine learningautonomous systems', 'business transformationinnovation'],
-};
+  title: 'AI 2025 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group',
+  description: 'Discover the ultimate AI innovations of 2025. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.',
+  keywords: ['AI 2025artificial intelligencemachine learningautonomous systems', 'business transformationinnovation']
+},
 export default function AI2025UltimateInnovationPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
@@ -37,7 +37,7 @@ export default function AI2025UltimateInnovationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Innovation Highlights */,}
+      {/* Innovation Highlights */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary AI Innovations</h2>,
@@ -93,7 +93,7 @@ export default function AI2025UltimateInnovationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md: text-5xl font-bold mb-6">,
@@ -118,5 +118,4 @@ export default function AI2025UltimateInnovationPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

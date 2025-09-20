@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -6,20 +6,20 @@ import { ProductListing } from "@/types/listings";
 import { DollarSign } from "lucide-react";
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import { useDispatch } from "react-redux";
+import type { AppDispatch } from "@/store";
+import { addItem } from "@/store/cartSlice";
 // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing;
-  view?: 'grid' | 'list';
+  view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-  detailBasePath?: string;
+  detailBasePath?: string
 }
 
 export function ProductListingCard({
@@ -28,56 +28,54 @@ export function ProductListingCard({
   onRequestQuote,
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
+  const isGrid = view === 'grid',
+  const navigate = useNavigate(),
+  const [loading, setLoading] = useState(false),
   const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0
     ? listing.images[0]
     : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
+  ),
+  const [imageError, setImageError] = useState(false),
 
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`;
-  };
+    if (listing.price === null) return "Custom pricing",
+    return `${listing.currency}${listing.price.toLocaleString()}`,
+  },
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg');
-      setImageError(true);
+      setImageSrc('/placeholder.svg'),
+      setImageError(true),
     }
   };
-
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
-
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
-    e.stopPropagation();
+    e.stopPropagation(),
 
     if (onRequestQuote) {
-      onRequestQuote(listing.id);
+      onRequestQuote(listing.id)
     } else {
-      navigate(`/request-quote?listing=${listing.id}`);
+      navigate(`/request-quote?listing=${listing.id}`),
     }
-  };
+  },
 
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
 
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm: border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleViewListing();
+          handleViewListing(),
         }
       }}
     >
@@ -89,8 +87,8 @@ export function ProductListingCard({
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            handleViewListing();
+            e.preventDefault(),
+            handleViewListing(),
           }
         }}
       >
@@ -149,7 +147,7 @@ export function ProductListingCard({
         </div>
 
         {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm: border-primary/20">
           <div className="text-sm font-medium">
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
@@ -166,16 +164,16 @@ export function ProductListingCard({
           <div className="flex gap-2">
             <Button
               size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
+              className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`);
+                navigate(`${detailBasePath}/${listing.id}`),
               }}
               disabled={loading}
             >
               {loading ? (
                 <>
-                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http: //www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>

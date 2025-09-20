@@ -1,35 +1,35 @@
 
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react';
-import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import React, { useState, useEffect } from 'react',
+import { useParams, useNavigate } from 'react-router-dom',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react',
+import { formatDistanceToNow } from 'date-fns',
+import { toast } from 'sonner',
+import { useAuth } from '@/hooks/useAuth',
+import useJobDetails from '@/hooks/useJobDetails',
+import { ApplyToJobModal } from '@/components/messaging/job-application',
+import { SEO } from '@/components/SEO',
+import { useWhitelabel } from '@/context/WhitelabelContext',
 
 export default function JobDetails() {
-  const { jobId } = useParams<{ jobId: string }>();
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
+  const { jobId } = useParams<{ jobId: string }>(),
+  const { job, isLoading, error } = useJobDetails(jobId),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+  const { isWhitelabel, brandName } = useWhitelabel(),
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
-    );
+    ),
   }
 
   if (error || !job) {
@@ -43,35 +43,35 @@ export default function JobDetails() {
         </div>
         <Footer />
       </>
-    );
+    ),
   }
 
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job");
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-      return;
+      toast.error("Please log in to apply for this job"),
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
+      return,
     }
     
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs");
-      return;
+      toast.error("Only job seekers can apply for jobs"),
+      return,
     }
     
-    setIsApplyModalOpen(true);
-  };
+    setIsApplyModalOpen(true),
+  },
 
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!");
-    setIsApplyModalOpen(false);
-  };
+    toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)
+  },
 
   const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified";
-    return `$${budget.min} - $${budget.max}`;
-  };
+    if (!budget) return "Not specified",
+    return `$${budget.min} - $${budget.max}`,
+  },
 
-  const isOwnJob = user?.id === job.client_id;
+  const isOwnJob = user?.id === job.client_id,
 
   return (
     <>
@@ -195,5 +195,5 @@ export default function JobDetails() {
         />
       )}
     </>
-  );
+  ),
 }

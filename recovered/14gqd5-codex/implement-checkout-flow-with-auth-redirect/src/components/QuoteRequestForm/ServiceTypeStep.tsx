@@ -1,80 +1,80 @@
-import { useEffect, useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { SAMPLE_SERVICES } from "@/data/sampleServices";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDebounce } from "@/hooks/useDebounce";
+import { useEffect, useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",
+import { Search } from "lucide-react",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { SAMPLE_SERVICES } from "@/data/sampleServices",
+import { Skeleton } from "@/components/ui/skeleton",
+import { useDebounce } from "@/hooks/useDebounce",
 
 interface ServiceTypeStepProps {
-  formData: QuoteFormData;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
+  formData: QuoteFormData,
+  updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
-  const [listings, setListings] = useState<ListingItem[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState(""),
+  const debouncedQuery = useDebounce(searchQuery, 300),
+  const [listings, setListings] = useState<ListingItem[]>([]),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   // Fetch services when the service type or query changes
   useEffect(() => {
     if (!formData.serviceType) {
-      setListings([]);
-      return;
+      setListings([]),
+      return,
     }
 
     const fetchServices = async () => {
-      setLoading(true);
-      setError(null);
+      setLoading(true),
+      setError(null),
       try {
-        const response = await fetch(`/api/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`);
-        if (!response.ok) throw new Error('Failed to fetch');
-        const data = await response.json();
-        setListings(data as ListingItem[]);
+        const response = await fetch(`/api/services?category=${encodeURIComponent(formData.serviceType)}&q=${encodeURIComponent(debouncedQuery)}`),
+        if (!response.ok) throw new Error('Failed to fetch'),
+        const data = await response.json(),
+        setListings(data as ListingItem[]),
       } catch (err) {
-        setError('Failed to load services');
+        setError('Failed to load services'),
         setListings(
           SAMPLE_SERVICES.filter(item => item.category === formData.serviceType &&
             item.title.toLowerCase().includes(debouncedQuery.toLowerCase()))
-        );
+        ),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
-    };
+    },
 
-    fetchServices();
-  }, [formData.serviceType, debouncedQuery]);
+    fetchServices(),
+  }, [formData.serviceType, debouncedQuery]),
   
   const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type });
-  };
+    updateFormData({ serviceType: type }),
+  },
   
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
       specificItem: item,
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
-    });
-  };
+    }),
+  },
   
-  const sourceListings = listings.length > 0 ? listings : SAMPLE_SERVICES;
+  const sourceListings = listings.length > 0 ? listings : SAMPLE_SERVICES,
 
   const filteredListings = sourceListings.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false;
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
+      if (!categoryMatch) return false,
     }
     
-    if (searchQuery.trim() === "") return true;
+    if (searchQuery.trim() === "") return true,
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+           item.category.toLowerCase().includes(searchQuery.toLowerCase()),
+  }),
 
   return (
     <div className="space-y-6">
@@ -173,5 +173,5 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         </div>
       )}
     </div>
-  );
+  ),
 }

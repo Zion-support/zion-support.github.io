@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export const TestimonialsSection: React.FC = () => {
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -31,26 +31,26 @@ export default function Page() {
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
     verified: true
   }"
-    company: "Healthcare Innovations",;"
-    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
-    rating: 5,;"
-    industry: "Healthcare",;"
-    project: "Cloud Migration & Optimization"};
-];
+    company: "Healthcare Innovations","
+    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",
+    rating: 5,"
+    industry: "Healthcare","
+    project: "Cloud Migration & Optimization"},
+],
 
-;
+,
 export const TestimonialsSection: React.FC = props {
-  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true);
+  const [currentTestimonial, setCurrentTestimonial] = useState<typeof 0>(0),
+  const [isAutoPlaying, setIsAutoPlaying] = useState<typeof true>(true),
 
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}};
+  const [currentTestimonial, setCurrentTestimonial] = useState(0),
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true) }}},
 
   // Auto - play functionality
   React.useEffect(() => {
-    if(!isAutoPlaying) return}, 5000) ;
+    if(!isAutoPlaying) return}, 5000) ,
 
-    return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;
+    return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ,
 
   return ("
     <section className="py-20 bg-zion-blue-dark">"
@@ -72,8 +72,8 @@ export const TestimonialsSection: React.FC = props {
               <div className="mb-4">"
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60"  />              </div>
               {/* Rating */}"
-              <div className="flex items-center mb-4">;
-                {[...Array(testimonial.rating)].map((_, i) => (;"
+              <div className="flex items-center mb-4">,
+                {[...Array(testimonial.rating)].map((_, i) => (,"
                   <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />                ))}
               </div>
               {/* Content */}"
@@ -288,11 +288,11 @@ export const TestimonialsSection: React.FC = props {
         </motion.div>
       </div>
     </section>
-  )};"
-            <div className="text-zion-slate-light">Support Available</div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) };
+  )},"
+            <div className="text-zion-slate-light">Support Available</div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) },
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

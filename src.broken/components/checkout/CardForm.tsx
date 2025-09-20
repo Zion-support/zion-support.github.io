@@ -1,33 +1,33 @@
-import { useState } from 'react';
-import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
+import { useState } from 'react',
+import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js',
+import { Button } from '@/components/ui/button',
+import { useAuth } from '@/hooks/useAuth',
 
 interface Props {
-  amount: number;
-  onSuccess: (intent: any) => void;
+  amount: number,
+  onSuccess: (intent: any) => void
 }
 
 export default function CardForm({ amount, onSuccess }: Props) {
-  const stripe = useStripe();
-  const elements = useElements();
-  const { user } = useAuth();
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const stripe = useStripe(),
+  const elements = useElements(),
+  const { user } = useAuth(),
+  const [loading, setLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!stripe || !elements) return;
-    setError(null);
-    setLoading(true);
+    e.preventDefault(),
+    if (!stripe || !elements) return,
+    setError(null),
+    setLoading(true),
     try {
       const res = await fetch('/api/create-payment-intent', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to create payment');
+        body: JSON.stringify({ amount, userId: (user && typeof user !== 'boolean' ? user.id : undefined) })
+      }),
+      const data = await res.json(),
+      if (!res.ok) throw new Error(data.error || 'Failed to create payment'),
 
       const result = await stripe.confirmCardPayment(
         data.clientSecret,
@@ -39,29 +39,29 @@ export default function CardForm({ amount, onSuccess }: Props) {
               name:
                 user && typeof user !== 'boolean'
                   ? user.displayName
-                  : undefined,
-            },
-          },
-        },
-      });
+                  : undefined
+            }
+          }
+        }
+      }),
 
-      if (result.error) throw new Error(result.error.message);
+      if (result.error) throw new Error(result.error.message),
       if (result.paymentIntent?.status === 'succeeded') {
         if (user && typeof user !== 'boolean' && user.id) { // Applied safer check here
           await fetch('/api/points/add', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: user.id, amount: -amount }), // user.id is safe here
-          });
+          }),
         }
-        onSuccess(result.paymentIntent);
+        onSuccess(result.paymentIntent),
       }
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -71,5 +71,5 @@ export default function CardForm({ amount, onSuccess }: Props) {
         {loading ? 'Processing...' : `Pay $${amount.toFixed(2)}`}
       </Button>
     </form>
-  );
+  ),
 }

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 
 export default function Helpdesk() {
   return (
@@ -23,8 +23,8 @@ export default function Helpdesk() {
             Get Started
           </Link>
 =======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
 import {
   HelpCircle,
   MessageCircle,
@@ -65,52 +65,52 @@ import {
   ChevronUp,
   ExternalLink,
   Code,
-  DollarSign,
-} from 'lucide-react';
+  DollarSign
+} from 'lucide-react',
 
 export default function Helpdesk() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedTicket, setExpandedTicket] = useState<any>(null);
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [expandedTicket, setExpandedTicket] = useState<any>(null),
 
   const supportCategories = [
     {
       id: 'all',
       name: 'All Issues',
       icon: HelpCircle,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       id: 'technical',
       name: 'Technical Issues',
       icon: Monitor,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       id: 'account',
       name: 'Account & Billing',
       icon: Settings,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       id: 'product',
       name: 'Product Support',
       icon: Rocket,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-500 to-red-500'
     },
     {
       id: 'integration',
       name: 'Integration Help',
       icon: Zap,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       id: 'security',
       name: 'Security Issues',
       icon: Shield,
-      color: 'from-red-500 to-orange-500',
-    },
-  ];
+      color: 'from-red-500 to-orange-500'
+    }
+  ],
 
   const commonIssues = [
     {
@@ -122,7 +122,7 @@ export default function Helpdesk() {
         "I'm getting an error when trying to log in to my account. The system says my credentials are invalid.",
       solution:
         'Please try resetting your password using the "Forgot Password" link. If the issue persists, contact our support team.',
-      tags: ['login', 'authentication', 'password'],
+      tags: ['loginauthentication', 'password']
     },
     {
       id: 'api-error',
@@ -133,7 +133,7 @@ export default function Helpdesk() {
         'Our system is experiencing issues when calling the Zion Tech Group API endpoints.',
       solution:
         'Check your API key and ensure you have the correct permissions. Verify the endpoint URLs and request format.',
-      tags: ['api', 'integration', 'endpoints'],
+      tags: ['apiintegration', 'endpoints']
     },
     {
       id: 'performance-issue',
@@ -144,7 +144,7 @@ export default function Helpdesk() {
         'The application is running very slowly and taking a long time to respond to user actions.',
       solution:
         'Clear your browser cache and cookies. If the issue continues, try accessing from a different device or network.',
-      tags: ['performance', 'speed', 'response-time'],
+      tags: ['performancespeed', 'response-time']
     },
     {
       id: 'billing-question',
@@ -155,9 +155,9 @@ export default function Helpdesk() {
         'I have questions about my current subscription plan and billing cycle.',
       solution:
         'You can view your billing information in your account settings. For detailed billing questions, contact our billing team.',
-      tags: ['billing', 'subscription', 'account'],
-    },
-  ];
+      tags: ['billingsubscription', 'account']
+    }
+  ],
 
   const supportTickets = [
     {
@@ -168,7 +168,7 @@ export default function Helpdesk() {
       status: 'open',
       createdAt: '2025-01-27T10:30:00Z',
       lastUpdated: '2025-01-27T14:45:00Z',
-      description: 'Unable to authenticate with existing credentials',
+      description: 'Unable to authenticate with existing credentials'
     },
     {
       id: 'TICKET-002',
@@ -178,7 +178,7 @@ export default function Helpdesk() {
       status: 'in-progress',
       createdAt: '2025-01-26T15:20:00Z',
       lastUpdated: '2025-01-27T09:15:00Z',
-      description: 'Experiencing unexpected rate limiting on API calls',
+      description: 'Experiencing unexpected rate limiting on API calls'
     },
     {
       id: 'TICKET-003',
@@ -188,39 +188,39 @@ export default function Helpdesk() {
       status: 'resolved',
       createdAt: '2025-01-25T11:00:00Z',
       lastUpdated: '2025-01-26T16:30:00Z',
-      description: 'Dashboard takes more than 10 seconds to load',
-    },
-  ];
+      description: 'Dashboard takes more than 10 seconds to load'
+    }
+  ],
 
   const filteredIssues = commonIssues.filter(
     (issue) => selectedCategory === 'all' || issue.category === selectedCategory
-  );
+  ),
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high':
-        return 'text-red-400 bg-red-400/10 border-red-400/20';
+        return 'text-red-400 bg-red-400/10 border-red-400/20',
       case 'medium':
-        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
       case 'low':
-        return 'text-green-400 bg-green-400/10 border-green-400/20';
+        return 'text-green-400 bg-green-400/10 border-green-400/20',
       default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
     }
-  };
+  },
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'open':
-        return 'text-red-400 bg-red-400/10 border-red-400/20';
+        return 'text-red-400 bg-red-400/10 border-red-400/20',
       case 'in-progress':
-        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20',
       case 'resolved':
-        return 'text-green-400 bg-green-400/10 border-green-400/20';
+        return 'text-green-400 bg-green-400/10 border-green-400/20',
       default:
-        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -405,7 +405,7 @@ export default function Helpdesk() {
                     <h3 className="text-lg font-semibold">{ticket.title}</h3>
                     <span className="text-sm text-gray-400">#{ticket.id}</span>
                     <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(ticket.status)}`}>
-                      {ticket.status.replace('-', ' ').toUpperCase()}
+                      {ticket.status.replace('- ').toUpperCase()}
                     </span>
                   </div>
                   <button
@@ -457,7 +457,7 @@ export default function Helpdesk() {
 
       {/* Contact Support */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Our support team is available 24/7 to help you with any questions or issues. 
@@ -484,5 +484,5 @@ export default function Helpdesk() {
         </div>
       </div>
     </div>
-  );
+  )
 }

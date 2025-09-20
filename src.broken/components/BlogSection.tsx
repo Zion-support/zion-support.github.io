@@ -6,30 +6,30 @@
       date: '2024 - 01 - 15',
       readTime: '8 min read'
     },
-    {;
+    {,
 =======
-import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import Image from 'next/image';
-import React, { useState } from 'react'; // Ensure React and useState are imported
+import { GradientHeading } from "./GradientHeading",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "./ui/button",
+import Link from "next/link",
+import { BLOG_POSTS } from "@/data/blog-posts",
+import Image from 'next/image',
+import React, { useState } from 'react', // Ensure React and useState are imported
 
 export function BlogSection(...args[]):  {
 
-      id: '2',;
-      title: 'Building Scalable Web Applications',;
-      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
-      date: '2024-01-10',;
-      readTime: '12 min read'};  ];
+      id: '2',
+      title: 'Building Scalable Web Applications',
+      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
+      date: '2024-01-10',
+      readTime: '12 min read'},  ],
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc("/images/blog-placeholder.svg");
-      setImageError(true);
+      setImageSrc("/images/blog-placeholder.svg"),
+      setImageError(true),
     }
-  };
+  },
 
   return (
     <Image
@@ -42,8 +42,8 @@ export function BlogSection(...args[]):  {
       className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
       priority={false} // Not LCP
     />
-  );
-};
+  ),
+},
 
 export function BlogSection() {
   return (
@@ -94,6 +94,6 @@ export function BlogSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

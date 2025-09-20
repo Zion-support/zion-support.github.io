@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react',
 const devops-automation-strategies-for-modern-teams-chat: React.FC = () => {,
   return (,
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
       <h3 className="text-xl font-bold mb-4">devops-automation-strategies-for-modern-teams-chat</h3>,
       <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
-export default devops-automation-strategies-for-modern-teams-chat;
+    </div>)},
+export default devops-automation-strategies-for-modern-teams-chat,

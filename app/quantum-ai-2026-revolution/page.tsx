@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Quantum AI 2026 Revolution - The Future of Computing';
-  description: 'Explore the revolutionary quantum AI technologies of 2026. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.';
-  keywords: ['quantum AI 2026quantum computing', 'neural interfacessynthetic intelligence', 'AI revolution 2026'],
-};
+  title: 'Quantum AI 2026 Revolution - The Future of Computing',
+  description: 'Explore the revolutionary quantum AI technologies of 2026. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',
+  keywords: ['quantum AI 2026quantum computingneural interfacessynthetic intelligence', 'AI revolution 2026']
+},
 export default function QuantumAI2026RevolutionPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">,
@@ -45,7 +45,7 @@ export default function QuantumAI2026RevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Revolutionary Technologies */,}
+      {/* Revolutionary Technologies */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -105,7 +105,7 @@ export default function QuantumAI2026RevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Technology Roadmap */,}
+      {/* Technology Roadmap */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -161,5 +161,4 @@ export default function QuantumAI2026RevolutionPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

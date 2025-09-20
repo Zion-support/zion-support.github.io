@@ -1,44 +1,44 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Zap,
   Brain,
   Code,
   BarChart3,
-  Image;
-  ArrowRight;
-  Star;
-  X;
-  Sparkles,
-} from 'lucide-react';
+  Image,
+  ArrowRight,
+  Star,
+  X,
+  Sparkles
+} from 'lucide-react',
 const InteractiveAIToolsDemo2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentToolsetCurrentTool] = useState(0),
   const tools = [,
-    { icon: Codename: 'Code 'Generatorcolor: 'from-blue-500 to-cyan-500' ,};
-    { icon: BarChart3name: 'Data 'Analyzercolor: 'from-green-500 to-emerald-500' ,};
-    { icon: Imagename: 'Image 'Generatorcolor: 'from-purple-500 to-pink-500' ,};
-    { icon: Brainame: 'AI 'Assistantcolor: 'from-orange-500 to-red-500' ,}
-  ];
+    { icon: Codename: 'Code 'Generatorcolor: 'from-blue-500 to-cyan-500' },
+    { icon: BarChart3name: 'Data 'Analyzercolor: 'from-green-500 to-emerald-500' },
+    { icon: Imagename: 'Image 'Generatorcolor: 'from-purple-500 to-pink-500' },
+    { icon: Brainame: 'AI 'Assistantcolor: 'from-orange-500 to-red-500' }
+  ],
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)1500);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)1500),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
     if (isVisible) {,
       const interval = setInterval(() => {,
-        setCurrentTool(prev => (prev + 1) % tools.length);
-      }2000);
-      return () => clearInterval(interval);
+        setCurrentTool(prev => (prev + 1) % tools.length),
+      }2000),
+      return () => clearInterval(interval),
     }
-  }[isVisibletools.length]);
+  }[isVisibletools.length]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   return (,
     <div,
       className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden",
@@ -50,7 +50,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
         <div className="flex items-center justify-between">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1">,
             <div,
               className="flex items-center gap-3 mb-3",
@@ -61,8 +61,7 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
               </div>,
               <div className="flex items-center gap-1">,
                 {[...Array(5)].map((_i) => (,
-                  <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />,
-                ))}
+                  <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />))}
               </div>,
             </div>,
             <divh2,
@@ -89,24 +88,23 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Rotating Tool Icons */,}
+          {/* Right Content - Rotating Tool Icons */}
           <div,
             className="hidden lg: flex items-center gap-6",
           >,
             <div className="relative w-20 h-20">,
               {tools.map((toolindex) => (,
                 <div,
-                  key={tool.name,}
-                    opacity: currentTool === index ? 1 : 0;
-                    scale: currentTool === index ? 1 : 0.8,}}
+                  key={tool.name}
+                    opacity: currentTool === index ? 1 : 0,
+                    scale: currentTool === index ? 1 : 0.8}}
                   className="absolute inset-0 flex flex-col items-center justify-center",
                 >,
                   <div className={`w-16 h-16 bg-gradient-to-r ${tool.color} rounded-full flex items-center justify-center shadow-lg`}>,
                     <tool.icon className="w-8 h-8 text-white" />,
                   </div>,
                   <span className="text-xs font-medium mt-1 text-center">{tool.name}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             <div className="text-center">,
               <div className="text-2xl font-bold text-white mb-1">,
@@ -134,22 +132,22 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
         </div>,
         {/* Floating Elements */}
         <div,
-            y: [0-80];
-            rotate: [030],}}
-            duration: 2.5;
-            repeat: Infinity;
-            ease: "easeInOut",}}
+            y: [0-80],
+            rotate: [030]}}
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut"}}
           className="absolute top-3 right-3 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center",
         >,
           <Sparkles className="w-3 h-3 text-white" />,
         </div>,
         <div,
-            y: [080];
-            rotate: [0-30],}}
-            duration: 3;
-            repeat: Infinity;
-            ease: "easeInOut";
-            delay: 1,}}
+            y: [080],
+            rotate: [0-30]}}
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1}}
           className="absolute bottom-3 left-3 w-4 h-4 bg-white/20 rounded-full flex items-center justify-center",
         >,
           <Zap className="w-2 h-2 text-white" />,
@@ -163,6 +161,6 @@ const InteractiveAIToolsDemo2027PromotionBanner = () => {,
         <X className="w-3 h-3 text-white" />,
       </button>,
     </div>,
-  ),};
-export default InteractiveAIToolsDemo2027PromotionBanner;
+  )},
+export default InteractiveAIToolsDemo2027PromotionBanner,
 </div></div></div>,

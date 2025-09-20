@@ -1,6 +1,6 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
 
     // Cloud & Infrastructure Services
     {
@@ -11,9 +11,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / cloud - devops',
       icon: '☁️',
-      features['Multi - cloud deployment', 'Infrastructure as Code', 'Automated scaling'],;
-      benefits['Faster deployments', 'Cost optimization'];
-    },;
+      features['Multi - cloud deploymentInfrastructure as Code', 'Automated scaling'],
+      benefits['Faster deploymentsCost optimization'],
+    },
     {
       id: 'it - infrastructure',
       title: 'IT Infrastructure',
@@ -22,9 +22,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / it - infrastructure',
       icon: '🏗️',
-      features['Network design', 'Server management', 'Storage solutions'],;
-      benefits['Reliable infrastructure', 'Scalable solutions'];
-    },;
+      features['Network designServer management', 'Storage solutions'],
+      benefits['Reliable infrastructureScalable solutions'],
+    },
     {
       id: 'digital - twin',
       title: 'Digital Twin',
@@ -33,9 +33,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / digital - twin',
       icon: '🔄',
-      features['Real - time monitoring', 'Predictive maintenance', 'Simulation modeling'],;
-      benefits['Improved efficiency', 'Reduced downtime'];
-    },;
+      features['Real - time monitoringPredictive maintenance', 'Simulation modeling'],
+      benefits['Improved efficiencyReduced downtime'],
+    },
 
     // Data & Analytics Services
     {
@@ -46,9 +46,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / data - analytics',
       icon: '📈',
-      features['Data visualization', 'Statistical analysis', 'Trend identification'],;
-      benefits['Better insights', 'Data - driven decisions'];
-    },;
+      features['Data visualizationStatistical analysis', 'Trend identification'],
+      benefits['Better insightsData - driven decisions'],
+    },
     {
       id: 'ai - business - intelligence',
       title: 'AI Business Intelligence',
@@ -57,9 +57,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / ai - business - intelligence',
       icon: '🧠',
-      features['Predictive analytics', 'Natural language queries', 'Automated insights'],;
-      benefits['Faster insights', 'Predictive capabilities'];
-    },;
+      features['Predictive analyticsNatural language queries', 'Automated insights'],
+      benefits['Faster insightsPredictive capabilities'],
+    },
     {
       id: 'iot - edge',
       title: 'IoT Edge Computing',
@@ -68,9 +68,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / iot - edge',
       icon: '⚡',
-      features['Edge processing', 'Real - time analytics', 'Data filtering'],;
-      benefits['Low latency', 'Real - time decisions'];
-    },;
+      features['Edge processingReal - time analytics', 'Data filtering'],
+      benefits['Low latencyReal - time decisions'],
+    },
 
     // Security & Compliance Services
     {
@@ -81,9 +81,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / zero - trust - network - architecture',
       icon: '🛡️',
-      features['Identity verification', 'Micro - segmentation', 'Continuous monitoring'],;
-      benefits['Enhanced security', 'Compliance ready'];
-    },;
+      features['Identity verificationMicro - segmentation', 'Continuous monitoring'],
+      benefits['Enhanced securityCompliance ready'],
+    },
     {
       id: 'ai - cybersecurity - suite',
       title: 'AI Cybersecurity Suite',
@@ -92,9 +92,9 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / ai - cybersecurity - suite',
       icon: '🔐',
-      features['Threat detection', 'Vulnerability assessment', 'Incident response'],;
-      benefits['Proactive security', 'Faster response'];
-    },;
+      features['Threat detectionVulnerability assessment', 'Incident response'],
+      benefits['Proactive securityFaster response'],
+    },
     {
       id: 'ai - compliance - assistant',
       title: 'AI Compliance Assistant',
@@ -103,19 +103,19 @@ export default function Page() {
       pricing: 'Custom pricing',
       url: '/services / ai - compliance - assistant',
       icon: '📋',
-      features['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],;
-      benefits['Automated compliance', 'Reduced risk'];
-    };
-  ];
+      features['Regulatory monitoringCompliance reporting', 'Risk assessment'],
+      benefits['Automated complianceReduced risk'],
+    },
+  ],
 
-  const categories = ['all', 'AI - Powered Micro SAAS', 'Cloud & Infrastructure', 'Data & Analytics', 'Security & Compliance'];
+  const categories = ['allAI - Powered Micro SAAS', 'Cloud & InfrastructureData & Analytics', 'Security & Compliance'],
 
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-                         service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory}) ;
+    const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                         service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+                         service.category.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory}) ,
 
   return (<>
       <SEO
@@ -208,15 +208,15 @@ export default function Page() {
                 <p className="text-gray - 300 mb-6">
                   Try adjusting your search terms or category filter
                 </p>
-                <button;
-                  onClick={ () => {;
-                    setSearchTerm('') ;
+                <button,
+                  onClick={ () => {,
+                    setSearchTerm('') ,
                     setSelectedCategory('all') }}
-                  className="bg-blue - 600 hover:bg-blue - 700 text-white font - semibold py-3 px-6 rounded-lg transition - colors duration -300"
+                  className="bg-blue - 600 hover: bg-blue - 700 text-white font - semibold py-3 px-6 rounded-lg transition - colors duration -300"
                 >
                   Clear Filters
                 </button>
-              </motion.div>;) : (<div  className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap-8">
+              </motion.div>,) : (<div  className="grid grid - cols - 1 md: anygrid - cols - 2 lg:grid - cols - 3 gap-8">
                 {filteredServices.map((service, index) => (<motion.div
                     key={service.id}
                     initial = {
@@ -296,7 +296,7 @@ export default function Page() {
         </section>
 
         {/* Quick Actions Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black / 20">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-black / 20">,
           <div  className="max - w-4xl mx - auto text-center">
             <motion.div
               initial = {
@@ -367,5 +367,5 @@ export default function Page() {
             </motion.div>
           </div>
         </section>
-      </div>;
-    </>;) };
+      </div>,
+    </>,) },

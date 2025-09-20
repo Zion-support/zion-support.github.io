@@ -7,18 +7,18 @@
   avatar,
   location,
   category,
-  matchPercent,
+  matchPercent
 }
 }
 ,
-  talent_id;
-  name;
-  title;
-  company;
-  avatar;
-  location;
-  category;
-  match_percent,
+  talent_id,
+  name,
+  title,
+  company,
+  avatar,
+  location,
+  category,
+  match_percent
 }
 }
 ,

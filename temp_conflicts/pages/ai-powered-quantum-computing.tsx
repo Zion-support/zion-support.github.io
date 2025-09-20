@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Atom, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredQuantumComputing: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredQuantumComputing: React.FC = () => {
       title: 'Multi-qubit Support',
       description: 'Quantum computing support across various qubit architectures'
     }
-  ];
+  ],
 
   const quantumCapabilities = [
     {
       area: 'Quantum Algorithms',
-      capabilities: ['Quantum machine learning', 'Optimization algorithms', 'Cryptography', 'Simulation'],
+      capabilities: ['Quantum machine learningOptimization algorithms', 'CryptographySimulation'],
       improvement: '1000x faster',
       algorithms: 'Quantum-accelerated'
     },
     {
       area: 'Error Correction',
-      capabilities: ['Quantum error correction', 'Noise mitigation', 'Fault tolerance', 'Reliability enhancement'],
+      capabilities: ['Quantum error correctionNoise mitigation', 'Fault toleranceReliability enhancement'],
       improvement: '99.9% accuracy',
       correction: 'Advanced'
     },
     {
       area: 'Quantum Simulation',
-      capabilities: ['Molecular simulation', 'Material science', 'Chemical modeling', 'Physics simulation'],
+      capabilities: ['Molecular simulationMaterial science', 'Chemical modelingPhysics simulation'],
       improvement: 'Real-time simulation',
       simulation: 'High-fidelity'
     },
     {
       area: 'Quantum Optimization',
-      capabilities: ['Combinatorial optimization', 'Route optimization', 'Resource allocation', 'Scheduling'],
+      capabilities: ['Combinatorial optimizationRoute optimization', 'Resource allocationScheduling'],
       improvement: 'Exponential speedup',
       optimization: 'Quantum-powered'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Financial Services',
       description: 'AI-powered quantum computing for financial modeling and risk assessment',
-      benefits: ['Portfolio optimization', 'Risk modeling', 'Trading algorithms', 'Fraud detection']
+      benefits: ['Portfolio optimizationRisk modeling', 'Trading algorithmsFraud detection']
     },
     {
       title: 'Drug Discovery',
       description: 'Quantum computing for pharmaceutical research and molecular simulation',
-      benefits: ['Molecular modeling', 'Drug design', 'Protein folding', 'Chemical simulation']
+      benefits: ['Molecular modelingDrug design', 'Protein foldingChemical simulation']
     },
     {
       title: 'Logistics & Supply Chain',
       description: 'Quantum computing for complex optimization and routing problems',
-      benefits: ['Route optimization', 'Supply chain optimization', 'Resource allocation', 'Scheduling']
+      benefits: ['Route optimizationSupply chain optimization', 'Resource allocationScheduling']
     },
     {
       title: 'Climate Modeling',
       description: 'Quantum computing for environmental and climate simulation',
-      benefits: ['Weather prediction', 'Climate modeling', 'Environmental simulation', 'Risk assessment']
+      benefits: ['Weather predictionClimate modeling', 'Environmental simulationRisk assessment']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredQuantumComputing: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with quantum computing',
       features: [
-        'Basic quantum computing features',
-        'Single qubit architecture support',
-        'Standard algorithms',
-        'Email support',
+        'Basic quantum computing featuresSingle qubit architecture support',
+        'Standard algorithmsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredQuantumComputing: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced quantum computing needs',
       features: [
-        'Advanced quantum computing features',
-        'Multi-qubit architecture support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced quantum computing featuresMulti-qubit architecture support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time processing'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredQuantumComputing: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex quantum computing requirements',
       features: [
-        'Custom quantum computing development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom quantum computing developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredQuantumComputing: React.FC = () => {
       position: "Platform Director",
       company: "Advanced Quantum Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredQuantumComputing: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Compute with AI-Powered Quantum Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredQuantumComputing: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredQuantumComputing;
+export default AIPoweredQuantumComputing,

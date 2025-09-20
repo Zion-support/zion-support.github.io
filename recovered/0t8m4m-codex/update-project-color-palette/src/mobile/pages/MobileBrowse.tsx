@@ -1,11 +1,11 @@
 
-import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { BrowseFilters } from "../components/browse/BrowseFilters";
-import { BrowseCards } from "../components/browse/BrowseCards";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
+import React, { useState } from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { BrowseFilters } from "../components/browse/BrowseFilters",
+import { BrowseCards } from "../components/browse/BrowseCards",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
 
 // Mock data for demonstration
 const jobsData = [
@@ -42,7 +42,7 @@ const jobsData = [
     timePosted: "1 week ago",
     match: 78
   }
-];
+],
 
 const talentsData = [
   {
@@ -78,17 +78,17 @@ const talentsData = [
     image: "",
     match: 82
   }
-];
+],
 
 export function MobileBrowse() {
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
+  const { user } = useAuth(),
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
+  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
   const handleViewDetails = (id: string) => {
-    console.log(`View details for item ${id}`);
+    console.log(`View details for item ${id}`),
     // Navigate to details page
-  };
+  },
   
   return (
     <div className="min-h-screen">
@@ -128,5 +128,5 @@ export function MobileBrowse() {
       
       <BottomNavigation />
     </div>
-  );
+  ),
 }

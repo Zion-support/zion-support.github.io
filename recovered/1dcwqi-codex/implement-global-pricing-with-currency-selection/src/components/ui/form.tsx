@@ -7,7 +7,7 @@ import {
   type FieldPath,
   type FieldValues,
   FormProvider,
-  useFormContext,
+  useFormContext
 } from "react-hook-form"
 
 import { cn } from "@/lib/utils"
@@ -20,7 +20,7 @@ type FormFieldContextValue = {
 }
 
 const FormFieldContext = React.createContext<FormFieldContextValue>({
-  name: "",
+  name: ""
 })
 
 const FormField = ({ ...props }: any) => {
@@ -54,7 +54,7 @@ const useFormField = () => {
     formItemId: `${id}-form-item`,
     formDescriptionId: `${id}-form-item-description`,
     formMessageId: `${id}-form-item-message`,
-    ...fieldState,
+    ...fieldState
   }
 }
 
@@ -166,5 +166,5 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
-  FormField,
+  FormField
 }

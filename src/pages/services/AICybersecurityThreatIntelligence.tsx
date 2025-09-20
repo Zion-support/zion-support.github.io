@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   CheckCircle, 
   BarChart3, 
   Zap, 
@@ -49,148 +49,92 @@ import {
   MapPin,
   Calendar,
   Calculator
-} from 'lucide-react';
-
+} from "lucide-react";
 const AICybersecurityThreatIntelligence = () => {
   const features = [
     {
-      icon: Shield,
-      title: 'AI-Powered Threat Detection',
-      description: 'Advanced machine learning algorithms that identify and analyze cyber threats in real-time'
+      icon: Shield,title: 'AI-Powered Threat Detection',description: 'Advanced machine learning algorithms that identify and analyze cyber threats in real-time'
+    };
+    {
+      icon: Radar,title: 'Real-time Threat Intelligence',description: 'Continuous monitoring and analysis of global threat landscapes and emerging cyber risks'
+    };
+    {
+      icon: Bug,title: 'Vulnerability Assessment',description: 'Automated scanning and assessment of security vulnerabilities across your infrastructure'
+    };
+    {
+      icon: AlertTriangle,title: 'Proactive Threat Hunting',description: 'AI-driven threat hunting that identifies potential threats before they become active attacks'
+    };
+    {
+      icon: Globe2,title: 'Global Threat Feed',description: 'Real-time threat intelligence from global sources, dark web monitoring, and threat databases'
     },
     {
-      icon: Radar,
-      title: 'Real-time Threat Intelligence',
-      description: 'Continuous monitoring and analysis of global threat landscapes and emerging cyber risks'
-    },
-    {
-      icon: Bug,
-      title: 'Vulnerability Assessment',
-      description: 'Automated scanning and assessment of security vulnerabilities across your infrastructure'
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Proactive Threat Hunting',
-      description: 'AI-driven threat hunting that identifies potential threats before they become active attacks'
-    },
-    {
-      icon: Globe2,
-      title: 'Global Threat Feed',
-      description: 'Real-time threat intelligence from global sources, dark web monitoring, and threat databases'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Incident Response Automation',
-      description: 'Automated response and mitigation strategies for detected threats and security incidents'
+      icon: ShieldCheck,title: 'Incident Response Automation',description: 'Automated response and mitigation strategies for detected threats and security incidents'
     }
   ];
-
   const benefits = [
-    'Reduce threat detection time by 80%',
-    'Improve threat response by 70%',
-    'Reduce false positives by 60%',
-    'Increase security visibility by 90%',
-    'Reduce incident response time by 65%',
-    'Improve compliance posture by 75%'
-  ];
+    'Reduce threat detection time by 80%Improve threat response by 70%',
+    'Reduce false positives by 60%Increase security visibility by 90%',
+    'Reduce incident response time by 65%Improve compliance posture by 75%'
+  ],
 
   const services = [
     {
-      icon: Server,
-      title: 'Threat Intelligence Platform',
-      description: 'Comprehensive platform for collecting, analyzing, and disseminating threat intelligence'
+      icon: Server,title: 'Threat Intelligence Platform',description: 'Comprehensive platform for collecting, analyzing, and disseminating threat intelligence'
     },
     {
-      icon: Workflow,
-      title: 'Security Operations Center',
-      description: 'AI-powered SOC services with 24/7 monitoring and automated incident response'
+      icon: Workflow,title: 'Security Operations Center',description: 'AI-powered SOC services with 24/7 monitoring and automated incident response'
+    };
+    {
+      icon: Database,title: 'Threat Database & Analytics',description: 'Extensive database of known threats, attack patterns, and security intelligence'
     },
     {
-      icon: Database,
-      title: 'Threat Database & Analytics',
-      description: 'Extensive database of known threats, attack patterns, and security intelligence'
-    },
-    {
-      icon: Network,
-      title: 'Network Security Monitoring',
-      description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
+      icon: Network,title: 'Network Security Monitoring',description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
     }
   ];
-
   const useCases = [
     {
-      industry: 'Financial Services',
-      description: 'Protect financial data, prevent fraud, and ensure regulatory compliance with AI threat intelligence'
+      industry: 'Financial Services',description: 'Protect financial data, prevent fraud, and ensure regulatory compliance with AI threat intelligence'
     },
     {
-      industry: 'Healthcare',
-      description: 'Secure patient data, protect medical devices, and ensure HIPAA compliance'
+      industry: 'Healthcare',description: 'Secure patient data, protect medical devices, and ensure HIPAA compliance'
     },
     {
-      industry: 'Government & Defense',
-      description: 'National security, classified information protection, and critical infrastructure security'
+      industry: 'Government & Defense',description: 'National security, classified information protection, and critical infrastructure security'
     },
     {
-      industry: 'Enterprise IT',
-      description: 'Corporate network security, data protection, and employee security awareness'
+      industry: 'Enterprise IT',description: 'Corporate network security, data protection, and employee security awareness'
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Starter',
-      price: '$399',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 100 endpoints',
-        'Basic threat detection',
-        'Email alerts',
-        'Basic reporting',
-        'Email support',
-        'Mobile app access'
+      name: 'Starter',price: '$399',period: '/month',description: 'Perfect for small businesses',features: [
+        'Up to 100 endpointsBasic threat detection';
+        'Email alertsBasic reporting',
+        'Email supportMobile app access'
       ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
+      cta: 'Start Free Trial',popular: false
+    };
     {
-      name: 'Professional',
-      price: '$999',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 1,000 endpoints',
-        'Advanced AI detection',
-        'Real-time monitoring',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom integrations',
-        'Threat hunting tools'
+      name: 'Professional',price: '$999',period: '/month',description: 'Ideal for growing companies',features: [
+        'Up to 1,000 endpointsAdvanced AI detection',
+        'Real-time monitoringPriority support',
+        'Advanced analyticsAPI access',
+        'Custom integrationsThreat hunting tools'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited endpoints',
-        'Custom AI models',
-        'On-premise deployment',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced security',
-        'Compliance reporting',
-        'SLA guarantees'
+      name: 'Enterprise',price: '$2,499',
+      period: '/month',description: 'For large organizations',features: [
+        'Unlimited endpointsCustom AI models';
+        'On-premise deploymentDedicated support',
+        'Custom integrationsAdvanced security',
+        'Compliance reportingSLA guarantees'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -213,7 +157,7 @@ const AICybersecurityThreatIntelligence = () => {
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay ahead of cyber threats with AI-powered threat intelligence that detects, 
+              Stay ahead of cyber threats with AI-powered threat intelligence that detects;
               analyzes, and responds to security risks in real-time.
             </p>
             
@@ -244,7 +188,7 @@ const AICybersecurityThreatIntelligence = () => {
               Advanced Threat Intelligence Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive cybersecurity threat detection, 
+              Our AI-powered platform provides comprehensive cybersecurity threat detection;
               analysis, and response capabilities for modern organizations.
             </p>
           </motion.div>
@@ -549,7 +493,7 @@ const AICybersecurityThreatIntelligence = () => {
               Join thousands of organizations worldwide that use our AI-powered cybersecurity 
               threat intelligence platform to protect their digital assets.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -580,7 +524,6 @@ const AICybersecurityThreatIntelligence = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AICybersecurityThreatIntelligence;

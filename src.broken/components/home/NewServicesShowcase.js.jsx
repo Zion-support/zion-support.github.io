@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
             </span>
@@ -151,7 +151,7 @@ export default function Page() {
         {/* CTA Section */}"
         <div className="text-center">"
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">"
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>"
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -202,6 +202,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"`

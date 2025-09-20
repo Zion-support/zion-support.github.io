@@ -1,12 +1,12 @@
-"use client";
-import React{ useState } from 'react';
+"use client",
+import React{ useState } from 'react',
 AtomZapCpuShieldTargetTrendingUpArrowRightPlayPause,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const QuantumComputingShowcase2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -20,21 +20,21 @@ const QuantumComputingShowcase2025: React.FC = () => {,
             Experience the future of computing with our revolutionary quantum solutions that transcend classical limitations and unlock infinite possibilities.,
           </p>,
         </div>,
-        {/* Interactive Tabs */,}
+        {/* Interactive Tabs */}
         <div className="mb-16">,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
             {quantumSolutions.map((solutionindex) => (,
               <button,
                 key={solution.id}
                 onClick={() => {,
-                  setActiveTab(index);
-                  setIsAnimating(true);
-                  setTimeout(() => setIsAnimating(false)500);
+                  setActiveTab(index),
+                  setIsAnimating(true),
+                  setTimeout(() => setIsAnimating(false)500),
                 }}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${,
                   activeTab === index,
                     ? `bg-gradient-to-r ${solution.gradient} text-white shadow-lg`,
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20'}`}
               >,
                 {solution.title}
               </button>,
@@ -46,7 +46,7 @@ const QuantumComputingShowcase2025: React.FC = () => {,
               className="bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10",
             >,
               <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,
-                {/* Content */,}
+                {/* Content */}
                 <div>,
                   <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${quantumSolutions[activeTab].gradient} text-white font-bold text-sm mb-6`}>,
                     {quantumSolutions[activeTab].subtitle}
@@ -61,25 +61,23 @@ const QuantumComputingShowcase2025: React.FC = () => {,
                   <div className="space-y-4 mb-8">,
                     <h3 className="text-xl font-bold text-white mb-4">Key Features: </h3>,
                     {quantumSolutions[activeTab].features.map((featureidx) => (,
-                      <div key={idx,} className="flex items-start gap-3">,
+                      <div key={idx} className="flex items-start gap-3">,
                         <ArrowRight className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />,
                         <span className="text-gray-300">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Benefits */}
                   <div className="space-y-4 mb-8">,
                     <h3 className="text-xl font-bold text-white mb-4">Benefits: </h3>,
                     {quantumSolutions[activeTab].benefits.map((benefitidx) => (,
-                      <div key={idx,} className="flex items-start gap-3">,
+                      <div key={idx} className="flex items-start gap-3">,
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>,
                         <span className="text-gray-300">{benefit}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   <a href="/contact">,
                     <button,
-                      className={`bg-gradient-to-r ${quantumSolutions[activeTab].gradient} hover: opacity-90 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2`,}
+                      className={`bg-gradient-to-r ${quantumSolutions[activeTab].gradient} hover: opacity-90 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center gap-2`}
                     >,
                       Get Started,
                       <ArrowRight className="w-5 h-5" />,
@@ -99,16 +97,15 @@ const QuantumComputingShowcase2025: React.FC = () => {,
                           key={i}
                           className="absolute w-4 h-4 bg-white/30 rounded-full",
                           style={{,
-                            left: '50%';
-                            top: '50%';
-                            transformOrigin: '0 0',}}
-                            rotate: [0360];
-                            scale: [1.51],}}
-                            duration: 3;
-                            repeat: Infinity;
-                            delay: i * 0.2,}}
-                        />,
-                      ))}
+                            left: '50%',
+                            top: '50%',
+                            transformOrigin: '0 0'}}
+                            rotate: [0360],
+                            scale: [1.51]}}
+                            duration: 3,
+                            repeat: Infinity,
+                            delay: i * 0.2}}
+                        />))}
                     </div>,
                   </div>,
                   {/* Floating Particles */}
@@ -118,14 +115,14 @@ const QuantumComputingShowcase2025: React.FC = () => {,
                         key={i}
                         className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60",
                         style={{,
-                          left: `${Math.random() * 100,}%`;
-                          top: `${Math.random() * 100,}%`,
+                          left: `${Math.random() * 100}%`,
+                          top: `${Math.random() * 100}%`
                         }}
-                          y: [0-30];
-                          opacity: [010],}}
-                          duration: 2;
-                          repeat: Infinity;
-                          delay: Math.random() * 2,}}
+                          y: [0-30],
+                          opacity: [010]}}
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: Math.random() * 2}}
                       />,
                     ))}
                   </div>,
@@ -144,15 +141,14 @@ const QuantumComputingShowcase2025: React.FC = () => {,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {useCases.map((useCaseindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover: border-white/20 transition-all duration-300 text-center group hover:transform hover:scale-105",
               >,
                 <useCase.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300 transition-colors duration-300" />,
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title,}</h3>,
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>,
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{useCase.description}</p>,
                 <div className="text-cyan-400 font-semibold text-sm">{useCase.impact}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -185,6 +181,6 @@ const QuantumComputingShowcase2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default QuantumComputingShowcase2025;
+  )},
+export default QuantumComputingShowcase2025,
 </div></div></div></div>,

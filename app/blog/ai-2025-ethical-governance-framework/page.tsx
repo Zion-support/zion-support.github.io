@@ -1,6 +1,6 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../../components/SEO',
+import Link from 'next/link',
 export default function AIEthicalGovernanceFramework2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -11,7 +11,7 @@ export default function AIEthicalGovernanceFramework2025() {,
         url="/blog/ai-2025-ethical-governance-framework",
       />,
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <Link href="/blog" className="text-blue-600 hover: text-blue-700 font-medium">,
@@ -75,7 +75,7 @@ export default function AIEthicalGovernanceFramework2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Main Content */,}
+        {/* Main Content */}
         <div className="prose prose-lg max-w-none">,
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Critical Need for AI Ethics</h2>,
           <p className="text-lg text-gray-700 mb-8 leading-relaxed">,
@@ -156,7 +156,7 @@ export default function AIEthicalGovernanceFramework2025() {,
                   <h4 className="text-lg font-semibold text-gray-900">Beneficence</h4>,
                 </div>,
                 <p className="text-gray-600 text-sm">,
-                  AI systems should be designed to benefit humanity and society;
+                  AI systems should be designed to benefit humanity and society,
                   promoting human flourishing and well-being.,
                 </p>,
               </div>,
@@ -166,7 +166,7 @@ export default function AIEthicalGovernanceFramework2025() {,
                   <h4 className="text-lg font-semibold text-gray-900">Human Autonomy</h4>,
                 </div>,
                 <p className="text-gray-600 text-sm">,
-                  AI should augment rather than replace human decision-making;
+                  AI should augment rather than replace human decision-making,
                   preserving human agency and choice.,
                 </p>,
               </div>,
@@ -174,7 +174,7 @@ export default function AIEthicalGovernanceFramework2025() {,
           </div>,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Building Your AI Governance Structure</h3>,
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">,
-            Effective AI governance requires a multi-layered approach involving people, processes;
+            Effective AI governance requires a multi-layered approach involving people, processes,
             and technology. Here's how to structure your organization for responsible AI: ,
           </p>,
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-8">,
@@ -408,7 +408,7 @@ export default function AIEthicalGovernanceFramework2025() {,
                 Many organizations try to add ethical considerations after AI systems are already built.,
               </p>,
               <p className="text-red-700 text-sm">,
-                <strong>Solution:</strong> Integrate ethics into the AI development lifecycle from day one;
+                <strong>Solution: </strong> Integrate ethics into the AI development lifecycle from day one,
                 not as a compliance checkbox but as a core design principle.,
               </p>,
             </div>,
@@ -484,7 +484,7 @@ export default function AIEthicalGovernanceFramework2025() {,
         <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white text-center mt-12">,
           <h3 className="text-2xl font-bold mb-4">Build Your AI Ethics Framework</h3>,
           <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">,
-            Get started with our comprehensive AI ethical governance toolkit. Download templates;
+            Get started with our comprehensive AI ethical governance toolkit. Download templates,
             checklists, and implementation guides to accelerate your responsible AI journey.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -502,7 +502,7 @@ export default function AIEthicalGovernanceFramework2025() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Related Articles</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -543,4 +543,4 @@ export default function AIEthicalGovernanceFramework2025() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

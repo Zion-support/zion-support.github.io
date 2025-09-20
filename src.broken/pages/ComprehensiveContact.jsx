@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
+import React, { useState } from 'react',
+import { Button } from '@/components / ui / button',
 export default function Page() {
-) };
+) },
     return (<div className="min - h-screen bg-gradient - to - br from - zion - blue - dark via - zion - blue to - zion - purple -dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -272,7 +272,7 @@ export default function Page() {
       {/* Footer */}
       <footer className="bg-zion - blue - dark py-12">
         <div className="container mx - auto px-4">
-          <div className="grid md:grid - cols - 4 gap-8">
+          <div className="grid md: grid - cols - 4 gap-8">
             <div>
               <h3 className="text-xl font - bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-zion - cyan -light">
@@ -311,7 +311,7 @@ export default function Page() {
             </div>
           </div>
           <div className="border-t border-zion - blue - light mt-8 pt - 8 text-center text-zion - cyan -light">
-            <p>&copy; 2024 Zion Tech Group.All rights reserved.</p>
+            <p>&copy, 2024 Zion Tech Group.All rights reserved.</p>
           </div>
         </div>
       </footer>

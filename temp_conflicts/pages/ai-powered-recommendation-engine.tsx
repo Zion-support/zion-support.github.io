@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   TrendingUp, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredRecommendationEngine: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredRecommendationEngine: React.FC = () => {
       title: 'Multi-domain Support',
       description: 'Recommendation engines across various industries and use cases'
     }
-  ];
+  ],
 
   const recommendationCapabilities = [
     {
       area: 'Personalization Engine',
-      capabilities: ['User profiling', 'Behavioral analysis', 'Preference learning', 'Context awareness'],
+      capabilities: ['User profilingBehavioral analysis', 'Preference learningContext awareness'],
       improvement: '95% accuracy',
       personalization: 'Advanced'
     },
     {
       area: 'Recommendation Algorithms',
-      capabilities: ['Collaborative filtering', 'Content-based filtering', 'Hybrid approaches', 'Deep learning models'],
+      capabilities: ['Collaborative filteringContent-based filtering', 'Hybrid approachesDeep learning models'],
       improvement: 'Real-time processing',
       algorithms: 'Intelligent'
     },
     {
       area: 'Data Integration',
-      capabilities: ['Multi-source data', 'Real-time feeds', 'Historical analysis', 'External APIs'],
+      capabilities: ['Multi-source dataReal-time feeds', 'Historical analysisExternal APIs'],
       improvement: 'Seamless integration',
       integration: 'Comprehensive'
     },
     {
       area: 'Performance Analytics',
-      capabilities: ['Conversion tracking', 'A/B testing', 'Performance metrics', 'Optimization insights'],
+      capabilities: ['Conversion trackingA/B testing', 'Performance metricsOptimization insights'],
       improvement: 'Actionable insights',
       analytics: 'Real-time'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'E-commerce & Retail',
       description: 'Product recommendations and personalized shopping experiences',
-      benefits: ['Product discovery', 'Cross-selling', 'Personalization', 'Revenue optimization']
+      benefits: ['Product discoveryCross-selling', 'PersonalizationRevenue optimization']
     },
     {
       title: 'Content & Media',
       description: 'Content recommendations and personalized media experiences',
-      benefits: ['Content discovery', 'Engagement optimization', 'User retention', 'Content monetization']
+      benefits: ['Content discoveryEngagement optimization', 'User retentionContent monetization']
     },
     {
       title: 'Financial Services',
       description: 'Investment recommendations and financial product suggestions',
-      benefits: ['Investment guidance', 'Product matching', 'Risk assessment', 'Portfolio optimization']
+      benefits: ['Investment guidanceProduct matching', 'Risk assessmentPortfolio optimization']
     },
     {
       title: 'Healthcare & Wellness',
       description: 'Health recommendations and personalized wellness plans',
-      benefits: ['Treatment suggestions', 'Lifestyle recommendations', 'Preventive care', 'Health optimization']
+      benefits: ['Treatment suggestionsLifestyle recommendations', 'Preventive careHealth optimization']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredRecommendationEngine: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with recommendation engines',
       features: [
-        'Basic recommendation features',
-        'Single domain support',
-        'Standard algorithms',
-        'Email support',
+        'Basic recommendation featuresSingle domain support',
+        'Standard algorithmsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredRecommendationEngine: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced recommendation needs',
       features: [
-        'Advanced recommendation features',
-        'Multi-domain support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced recommendation featuresMulti-domain support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time processing'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredRecommendationEngine: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex recommendation requirements',
       features: [
-        'Custom recommendation development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom recommendation developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredRecommendationEngine: React.FC = () => {
       position: "Content Director",
       company: "Advanced Media Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredRecommendationEngine: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Recommend with AI-Powered Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredRecommendationEngine: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredRecommendationEngine;
+export default AIPoweredRecommendationEngine,

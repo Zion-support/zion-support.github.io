@@ -1,34 +1,34 @@
-import { PrismaClient, Product } from '@prisma/client';
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { PrismaClient, Product } from '@prisma/client',
+import type { NextApiRequest, NextApiResponse } from 'next',
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient(),
 
 // Define the extended product type, same as in details.ts
 // Consider moving this to a shared type file, e.g., src/types/listings.ts or src/types/products.ts later
 export type ProductWithReviewStats = Product & {
-  averageRating: number | null;
-  reviewCount: number;
+  averageRating: number | null,
+  reviewCount: number,
   // Additional fields to align with potential frontend expectations (e.g., ProductListingCard)
-  title: string; // Mapped from product.name
-  category?: string;
-  images?: { url: string; alt?: string }[]; // Assuming images might have a URL and alt text
-  price?: number | null;
-  currency?: string;
-  tags?: string[];
-};
+  title: string, // Mapped from product.name
+  category?: string,
+  images?: { url: string, alt?: string }[], // Assuming images might have a URL and alt text
+  price?: number | null,
+  currency?: string,
+  tags?: string[],
+},
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ProductWithReviewStats[] | { error: string }>
 ) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end(`Method ${req.method} Not Allowed`);
+    res.setHeader('Allow', ['GET']),
+    return res.status(405).end(`Method ${req.method} Not Allowed`),
   }
 
   try {
     // Fetch all products
-    const products = await prisma.product.findMany();
+    const products = await prisma.product.findMany(),
 
     // findMany returns an empty array if no products are found, so no special check for !products is needed.
     // If products array is empty, the map will result in an empty array, which is correct.
@@ -38,17 +38,17 @@ export default async function handler(
       products.map(async (product) => {
         const reviewStats = await prisma.productReview.aggregate({
           _avg: {
-            rating: true,
+            rating: true
           },
           _count: {
             // Assuming 'id' is a valid field to count for reviews.
             // Could also use _count: { _all: true } or specific field like userId.
-            id: true,
+            id: true
           },
           where: {
-            productId: product.id,
-          },
-        });
+            productId: product.id
+          }
+        }),
 
         // The Product model currently has: id, name, description, reviews[] (relation)
         // The ProductWithReviewStats type aims to bridge this with frontend needs.
@@ -69,15 +69,15 @@ export default async function handler(
           price: null,  // Default to null or define based on other logic
           currency: 'USD', // Default currency or define based on other logic
           tags: [], // Default to empty array or define based on other logic
-        };
+        },
       })
-    );
+    ),
 
-    return res.status(200).json(productsWithStats);
+    return res.status(200).json(productsWithStats),
   } catch (e: any) {
-    console.error('Error fetching products with stats:', e);
-    return res.status(500).json({ error: 'Internal server error while fetching products.' });
+    console.error('Error fetching products with stats:', e),
+    return res.status(500).json({ error: 'Internal server error while fetching products.' }),
   } finally {
-    await prisma.$disconnect();
+    await prisma.$disconnect(),
   }
 }

@@ -1,13 +1,13 @@
-import { Link  } from 'react-router-dom';
- from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
- from '../../data / 2027 - cutting - edge - comprehensive -services';
-import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative -services';
+import { Link  } from 'react-router-dom',
+ from 'react',
+import { Badge } from '@/components / ui / badge',
+import { Button } from '@/components / ui / button',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card',
+ from '../../data / 2027 - cutting - edge - comprehensive -services',
+import { specializedInnovativeServices2027 } from '../../data / 2027 - specialized - innovative -services',
  = {,
-  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',Quantum Computing & AI': 'from-blue-600 to-cyan-700',Blockchain & Web3': 'from-green-600 to-emerald-700',Cybersecurity & Privacy': 'from-red-600 to-pink-700',Healthcare & Biotech': 'from-purple-600 to-pink-700',Financial Technology': 'from-yellow-600 to-orange-700',IoT & Automation': 'from-blue-600 to-teal-700',Cloud & Infrastructure': 'from-gray-600 to-blue-700',Data Analytics & BI': 'from-green-600 to-blue-700',Digital Marketing & Automation': 'from-pink-600 to-purple-700',E-commerce & Retail': 'from-orange-600 to-red-700',Education & Learning Technology': 'from-teal-600 to-green-700',Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',Robotics & Automation': 'from-gray-600 to-slate-700',Green Technology & Sustainability': 'from-green-600 to-emerald-700',Supply Chain & Logistics': 'from-blue-600 to-indigo-700',Human Resources & Talent Management': 'from-purple-600 to-violet-700',Legal Technology & Compliance': 'from-slate-600 to-gray-700',Real Estate & Property Technology': 'from-amber-600 to-orange-700',Sports Technology & Analytics': 'from-green-600 to-blue-700',Entertainment & Media Technology': 'from-purple-600 to-pink-700',
-};
+  'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',Quantum Computing & AI': 'from-blue-600 to-cyan-700',Blockchain & Web3': 'from-green-600 to-emerald-700',Cybersecurity & Privacy': 'from-red-600 to-pink-700',Healthcare & Biotech': 'from-purple-600 to-pink-700',Financial Technology': 'from-yellow-600 to-orange-700',IoT & Automation': 'from-blue-600 to-teal-700',Cloud & Infrastructure': 'from-gray-600 to-blue-700',Data Analytics & BI': 'from-green-600 to-blue-700',Digital Marketing & Automation': 'from-pink-600 to-purple-700',E-commerce & Retail': 'from-orange-600 to-red-700',Education & Learning Technology': 'from-teal-600 to-green-700',Space Technology & Earth Observation': 'from-indigo-600 to-purple-700',AR/VR & Immersive Technology': 'from-pink-600 to-rose-700',Robotics & Automation': 'from-gray-600 to-slate-700',Green Technology & Sustainability': 'from-green-600 to-emerald-700',Supply Chain & Logistics': 'from-blue-600 to-indigo-700',Human Resources & Talent Management': 'from-purple-600 to-violet-700',Legal Technology & Compliance': 'from-slate-600 to-gray-700',Real Estate & Property Technology': 'from-amber-600 to-orange-700',Sports Technology & Analytics': 'from-green-600 to-blue-700',Entertainment & Media Technology': 'from-purple-600 to-pink-700'
+},
 const features = [",
   "AI-Powered Automation",",
   "Real-time Analytics",",
@@ -20,13 +20,13 @@ const features = [",
   "24/7 Technical Support",",
   "99.9% Uptime Guarantee",",
   "SOC 2 Type II Compliant",",
-  "30-Day Money Back Guarantee";
-];
+  "30-Day Money Back Guarantee",
+],
 }, {,",
     icon: <CheckCircle className="h-6 w-6"  />,",
     title: "Quality Guaranteed",",
-    description: "30-day money-back guarantee with free migration support",};
-];
+    description: "30-day money-back guarantee with free migration support"},
+],
 ,      <div className="container mx-auto px-4">,
         {/* Header */}",
         <div className="text-center mb-16">",
@@ -49,13 +49,13 @@ const features = [",
             </Link>,
           </div>,
         </div>,
-        {/* Contact Information Banner */,}",
+        {/* Contact Information Banner */}",
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-16 border border-white/20">",
           <div className="grid grid-cols-1 md: gri d-cols-3 gap-6 text-center">",
             <div className="flex flex-col items-center">",
               <Phone className="h-8 w-8 text-zion-cyan mb-2"  />",
               <h3 className="text-lg font-semibold text-white mb-1">Call Us</h3>",
-              <p className="text-zion-slate-light">{contactInfo.mobile,}</p>,
+              <p className="text-zion-slate-light">{contactInfo.mobile}</p>,
             </div>",
             <div className="flex flex-col items-center">",
               <Mail className="h-8 w-8 text-zion-cyan mb-2"  />",
@@ -75,12 +75,12 @@ const features = [",
               type="text",
               placeholder="Search services...",
               className="flex-1 px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan",
-              value={searchQuery,}
+              value={searchQuery}
               onChange={ (e) => setSearchQuery(e.target.value) }
             />,
             <select",
               className="px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan",
-              value={selectedCategory,}
+              value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
 ",
               <option value="all">All Categories</option>,
@@ -93,9 +93,9 @@ const features = [",
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>",
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">,
             {featuredServices.map((service)  => (",
-              <Card key={service.id,} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">",
+              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">",
                 <CardHeader className="text-center">,
-                  <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600',} rounded-full flex items-center justify-center mb-4 text-2xl`}>,
+                  <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center mb-4 text-2xl`}>,
                     {service.icon}
                   </div>",
                   <CardTitle className="text-lg">{service.name}</CardTitle>",
@@ -119,8 +119,7 @@ const features = [",
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">",
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"  />,
                         {feature}
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>",
                   <div className="mt-4 flex items-center justify-between text-sm">",
                     <div className="flex items-center">",
@@ -137,7 +136,7 @@ const features = [",
                       <ArrowRight className="h-4 w-4 ml-2"  />                    </Button>,
                   </Link>,
                 </CardContent>,
-              </Card>) ) ,}
+              </Card>) ) }
           </div>,
         </div>,
         {/* All Services Grid */}
@@ -147,15 +146,14 @@ const features = [",
           </h3>",
           <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-6">,
             {filteredServices.map((service)  => (",
-              <Card key={service.id,} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">,
+              <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover: borde r-zion-purple/50 transition-all duration-300 hover: scal e-105">,
                 <CardHeader>",
                   <div className="flex items-center justify-between mb-2">'`,
-                    <div className={`w-12 h-12 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600',} rounded-full flex items-center justify-center text-xl`}>,
+                    <div className={`w-12 h-12 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-500 to-gray-600'} rounded-full flex items-center justify-center text-xl`}>,
                       {service.icon}
                     </div>,
                     {service.popular && (",
-                      <Badge className="bg-zion-purple text-white">Popular</Badge>,
-                    )}
+                      <Badge className="bg-zion-purple text-white">Popular</Badge>)}
                   </div>",
                   <CardTitle className="text-lg">{service.name}</CardTitle>",
                   <CardDescription className="text-zion-slate-light">,
@@ -185,15 +183,15 @@ const features = [",
                   <div className="space-y-2 mb-4 text-sm">",
                     <div className="flex justify-between">",
                       <span className="text-zion-slate-light">Market Size: </span>",
-                      <span className="text-white">{service.marketSize,}</span>,
+                      <span className="text-white">{service.marketSize}</span>,
                     </div>",
                     <div className="flex justify-between">",
                       <span className="text-zion-slate-light">Growth Rate: </span>",
-                      <span className="text-white">{service.growthRate,}</span>,
+                      <span className="text-white">{service.growthRate}</span>,
                     </div>",
                     <div className="flex justify-between">",
                       <span className="text-zion-slate-light">ROI: </span>",
-                      <span className="text-white">{service.roi,}</span>,
+                      <span className="text-white">{service.roi}</span>,
                     </div>,
                   </div>,
                   {/* Service Stats */}",
@@ -221,7 +219,7 @@ const features = [",
                     </Link>,
                   </div>,
                 </CardContent>,
-              </Card>) ) ,}
+              </Card>) ) }
           </div>,
         </div>,
         {/* Benefits Section */}",
@@ -235,8 +233,7 @@ const features = [",
                 </div>",
                 <h4 className="text-xl font-semibold text-white mb-2">{benefit.title}</h4>",
                 <p className="text-zion-slate-light">{benefit.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}",
@@ -246,7 +243,7 @@ const features = [",
               Ready to Transform Your Business?,
             </h3>",
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">,
-              Join thousands of businesses already using our innovative solutions to drive growth;
+              Join thousands of businesses already using our innovative solutions to drive growth,
               improve efficiency, and stay ahead of the competition.</p>",
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">",
               <Link to="/contact">",
@@ -262,20 +259,20 @@ const features = [",
               </Link>,
             </div>",
             <div className="mt-6 text-zion-slate-light">,
-              <p>📞 Call us: {contactInfo.mobile,}</p>,
-              <p>📧 Email: {contactInfo.email,}</p>,
-              <p>📍 Address: {contactInfo.address,}</p>,
-            </div>;
-          </div>;
-        </div>;
-      </div>;
+              <p>📞 Call us: {contactInfo.mobile}</p>,
+              <p>📧 Email: {contactInfo.email}</p>,
+              <p>📍 Address: {contactInfo.address}</p>,
+            </div>,
+          </div>,
+        </div>,
+      </div>,
     </div>,) }
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
-export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
+export default ComprehensiveServicesShowcase2027,
 '"`,

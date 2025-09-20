@@ -1,27 +1,26 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   ArrowRight,
   Star,
-  Zap;
-  Brain;
-  Rocket;
-  Target;
-  CheckCircle;
-  Play;
-  ExternalLink,
-} from 'lucide-react';
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  CheckCircle,
+  Play,
+  ExternalLink
+} from 'lucide-react',
 const NewContentShowcase2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
-    'Revolutionary AI InnovationsAdvanced Automation Solutions',
-    'Future Technology PredictionsInteractive Demonstrations',
-  ];
+    'Revolutionary AI InnovationsAdvanced Automation SolutionsFuture Technology PredictionsInteractive Demonstrations'
+  ],
   return (,
     <div,
       className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600",
@@ -32,15 +31,14 @@ const NewContentShowcase2026PromotionBanner = () => {,
         <div,
           className="absolute top-0 left-0 w-full h-full",
             background: [,
-              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)';
-              'radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)',
-            ],
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)'
+            ]
           }}
         />,
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
         <div className="grid lg:grid-cols-2 gap-8 items-center">,
-          {/* Content */,}
+          {/* Content */}
           <div>,
             <div className="flex items-center gap-2 mb-4">,
               <Sparkles className="w-6 h-6 text-yellow-300" />,
@@ -58,11 +56,10 @@ const NewContentShowcase2026PromotionBanner = () => {,
             </p>,
             <div className="grid grid-cols-2 gap-3 mb-6">,
               {features.map((featureindex) => (,
-                <div key={index,} className="flex items-center gap-2">,
+                <div key={index} className="flex items-center gap-2">,
                   <CheckCircle className="w-4 h-4 text-green-300 flex-shrink-0" />,
                   <span className="text-sm text-white">{feature}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
               <button className="flex items-center gap-2 px-6 py-3 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg">,
@@ -76,7 +73,7 @@ const NewContentShowcase2026PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Visual */,}
+          {/* Visual */}
           <div className="relative">,
             <div className="grid grid-cols-2 gap-4">,
               <div,
@@ -119,7 +116,7 @@ const NewContentShowcase2026PromotionBanner = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default NewContentShowcase2026PromotionBanner;
+  ),
+},
+export default NewContentShowcase2026PromotionBanner,
 </div></div></div>,

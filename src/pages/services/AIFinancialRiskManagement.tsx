@@ -1,152 +1,96 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, BarChart3, AlertTriangle, TrendingUp, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon } from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Shield, BarChart3, AlertTriangle, TrendingUp, CheckCircle, ArrowRight, Brain, Zap, Target, Globe, Lock, Clock, DollarSign, Star, Rocket, Cpu, Cloud, Database, Network, FileText, Search, Filter, Activity, Sparkles, Award, GitFork, Atom, Leaf, Gamepad2, Coins, Satellite, MessageCircle, Server, ShoppingCart, Smartphone, Users, Eye, Heart, Building, Car, Plane, Ship, Truck, CreditCard, PiggyBank, Calculator, PieChart, LineChart, Activity as ActivityIcon, TrendingDown, AlertCircle, CheckCircle2, XCircle, Info, HelpCircle, Settings, RefreshCw, Download, Upload, Share2, ExternalLink, ArrowUpRight, ChevronRight, ChevronDown, ChevronUp, Minus, Plus, Equal, Divide, Percent, Hash, AtSign, Hash as HashIcon, AtSign as AtSignIcon } from "lucide-react";
 const AIFinancialRiskManagement = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Risk Assessment',
-      description: 'Advanced machine learning algorithms that analyze financial data in real-time to identify potential risks and predict market volatility.',
-      benefits: ['Real-time risk monitoring', 'Predictive risk modeling', 'Automated risk scoring', 'Multi-factor analysis']
+      icon: Brain,title: 'AI-Powered Risk Assessment',description: 'Advanced machine learning algorithms that analyze financial data in real-time to identify potential risks and predict market volatility.',benefits: ['Real-time risk monitoringPredictive risk modeling', 'Automated risk scoringMulti-factor analysis']
     },
     {
-      icon: Shield,
-      title: 'Comprehensive Risk Coverage',
-      description: 'Cover all types of financial risks including market risk, credit risk, operational risk, liquidity risk, and compliance risk.',
-      benefits: ['360-degree risk view', 'Integrated risk framework', 'Regulatory compliance', 'Risk aggregation']
+      icon: Shield,title: 'Comprehensive Risk Coverage',description: 'Cover all types of financial risks including market risk, credit risk, operational risk, liquidity risk, and compliance risk.',
+      benefits: ['360-degree risk viewIntegrated risk framework', 'Regulatory complianceRisk aggregation']
     },
     {
-      icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Forecast potential financial losses and market movements using historical data analysis and machine learning models.',
-      benefits: ['Loss forecasting', 'Market trend prediction', 'Scenario analysis', 'Stress testing']
+      icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast potential financial losses and market movements using historical data analysis and machine learning models.',benefits: ['Loss forecastingMarket trend prediction', 'Scenario analysisStress testing']
     },
     {
-      icon: AlertTriangle,
-      title: 'Real-time Risk Alerts',
-      description: 'Instant notifications when risk thresholds are exceeded, enabling proactive risk management and rapid response.',
-      benefits: ['Instant alerts', 'Customizable thresholds', 'Escalation workflows', 'Mobile notifications']
+      icon: AlertTriangle,title: 'Real-time Risk Alerts',description: 'Instant notifications when risk thresholds are exceeded, enabling proactive risk management and rapid response.',
+      benefits: ['Instant alertsCustomizable thresholds', 'Escalation workflowsMobile notifications']
     },
     {
-      icon: TrendingUp,
-      title: 'Portfolio Risk Optimization',
-      description: 'AI-driven portfolio optimization that balances risk and return while maintaining compliance with investment mandates.',
-      benefits: ['Risk-adjusted returns', 'Portfolio rebalancing', 'Asset allocation optimization', 'Performance tracking']
+      icon: TrendingUp,title: 'Portfolio Risk Optimization',description: 'AI-driven portfolio optimization that balances risk and return while maintaining compliance with investment mandates.',benefits: ['Risk-adjusted returnsPortfolio rebalancing', 'Asset allocation optimizationPerformance tracking']
     },
     {
-      icon: Lock,
-      title: 'Regulatory Compliance',
-      description: 'Automated compliance monitoring for Basel III, Solvency II, IFRS 9, and other regulatory frameworks.',
-      benefits: ['Automated reporting', 'Regulatory updates', 'Audit trails', 'Compliance dashboards']
+      icon: Lock,title: 'Regulatory Compliance',description: 'Automated compliance monitoring for Basel III, Solvency II, IFRS 9, and other regulatory frameworks.',
+      benefits: ['Automated reportingRegulatory updates', 'Audit trailsCompliance dashboards']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: 'Professional',
-      price: '$3,500',
-      period: '/month',
-      description: 'Perfect for financial institutions',
-      features: [
-        'Up to $100M portfolio value',
-        'Basic risk assessment',
-        'Standard compliance reporting',
-        'Email support',
+      name: 'Professional',price: '$3,500',
+      period: '/month',description: 'Perfect for financial institutions',features: [
+        'Up to $100M portfolio valueBasic risk assessment';
+        'Standard compliance reportingEmail support',
         'Basic risk alerts'
       ],
-      cta: 'Get Started',
-      popular: false
-    },
+      cta: 'Get Started',popular: false
+    };
     {
-      name: 'Enterprise',
-      price: '$8,500',
-      period: '/month',
-      description: 'Ideal for large financial organizations',
-      features: [
-        'Up to $1B portfolio value',
-        'Advanced AI risk modeling',
-        'Full compliance automation',
-        'Priority support',
-        'Custom risk frameworks',
-        'API access',
+      name: 'Enterprise',price: '$8,500',
+      period: '/month',description: 'Ideal for large financial organizations',features: [
+        'Up to $1B portfolio valueAdvanced AI risk modeling';
+        'Full compliance automationPriority support',
+        'Custom risk frameworksAPI access',
         'Real-time monitoring'
       ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
+      cta: 'Start Free Trial',popular: true
+    };
     {
-      name: 'Institutional',
-      price: '$18,000',
-      period: '/month',
-      description: 'For major financial institutions',
-      features: [
-        'Unlimited portfolio value',
-        'Custom AI models',
-        'White-label solutions',
-        '24/7 dedicated support',
-        'Advanced integrations',
-        'Custom workflows',
+      name: 'Institutional',price: '$18,000',
+      period: '/month',description: 'For major financial institutions',features: [
+        'Unlimited portfolio valueCustom AI models';
+        'White-label solutions24/7 dedicated support',
+        'Advanced integrationsCustom workflows',
         'On-premise deployment'
       ],
-      cta: 'Contact Sales',
-      popular: false
+      cta: 'Contact Sales',popular: false
     }
   ];
-
   const useCases = [
     {
-      title: 'Investment Management',
-      description: 'Optimize portfolio risk-return profiles and ensure compliance with investment mandates and regulatory requirements.',
-      icon: PieChart,
-      benefits: ['Portfolio optimization', 'Risk-adjusted returns', 'Compliance monitoring', 'Performance attribution']
+      title: 'Investment Management',description: 'Optimize portfolio risk-return profiles and ensure compliance with investment mandates and regulatory requirements.',icon: PieChart,benefits: ['Portfolio optimizationRisk-adjusted returns', 'Compliance monitoringPerformance attribution']
     },
     {
-      title: 'Commercial Banking',
-      description: 'Manage credit risk, market risk, and operational risk across lending portfolios and trading operations.',
-      icon: Building,
-      benefits: ['Credit risk assessment', 'Market risk monitoring', 'Operational risk management', 'Regulatory reporting']
+      title: 'Commercial Banking',description: 'Manage credit risk, market risk, and operational risk across lending portfolios and trading operations.',
+      icon: Building,benefits: ['Credit risk assessmentMarket risk monitoring', 'Operational risk managementRegulatory reporting']
     },
     {
-      title: 'Insurance & Reinsurance',
-      description: 'Assess underwriting risk, investment risk, and catastrophe risk while maintaining solvency requirements.',
-      icon: Shield,
-      benefits: ['Underwriting risk analysis', 'Investment risk management', 'Catastrophe modeling', 'Solvency monitoring']
+      title: 'Insurance & Reinsurance',description: 'Assess underwriting risk, investment risk, and catastrophe risk while maintaining solvency requirements.',
+      icon: Shield,benefits: ['Underwriting risk analysisInvestment risk management', 'Catastrophe modelingSolvency monitoring']
     },
     {
-      title: 'Corporate Treasury',
-      description: 'Manage financial risk exposure including interest rate risk, foreign exchange risk, and commodity price risk.',
-      icon: Calculator,
-      benefits: ['Interest rate risk', 'FX risk management', 'Commodity hedging', 'Cash flow optimization']
+      title: 'Corporate Treasury',description: 'Manage financial risk exposure including interest rate risk, foreign exchange risk, and commodity price risk.',
+      icon: Calculator,benefits: ['Interest rate riskFX risk management', 'Commodity hedgingCash flow optimization']
     }
-  ];
+  ],
 
   const riskTypes = [
     {
-      title: 'Market Risk',
-      description: 'Risk of losses due to changes in market prices, interest rates, and exchange rates.',
-      icon: TrendingUp,
-      examples: ['Equity price risk', 'Interest rate risk', 'Foreign exchange risk', 'Commodity price risk']
+      title: 'Market Risk',description: 'Risk of losses due to changes in market prices, interest rates, and exchange rates.',
+      icon: TrendingUp,examples: ['Equity price riskInterest rate risk', 'Foreign exchange riskCommodity price risk']
     },
     {
-      title: 'Credit Risk',
-      description: 'Risk of losses due to borrowers or counterparties failing to meet their financial obligations.',
-      icon: Users,
-      examples: ['Default risk', 'Counterparty risk', 'Concentration risk', 'Settlement risk']
+      title: 'Credit Risk',description: 'Risk of losses due to borrowers or counterparties failing to meet their financial obligations.',icon: Users,examples: ['Default riskCounterparty risk', 'Concentration riskSettlement risk']
     },
     {
-      title: 'Operational Risk',
-      description: 'Risk of losses due to inadequate or failed internal processes, people, and systems.',
-      icon: Settings,
-      examples: ['Technology failures', 'Human errors', 'Process inefficiencies', 'External events']
+      title: 'Operational Risk',description: 'Risk of losses due to inadequate or failed internal processes, people, and systems.',
+      icon: Settings,examples: ['Technology failuresHuman errors', 'Process inefficienciesExternal events']
     },
     {
-      title: 'Liquidity Risk',
-      description: 'Risk of being unable to meet financial obligations when they come due.',
-      icon: Activity,
-      examples: ['Funding liquidity risk', 'Market liquidity risk', 'Asset liquidity risk', 'Contingent liquidity risk']
+      title: 'Liquidity Risk',description: 'Risk of being unable to meet financial obligations when they come due.',icon: Activity,examples: ['Funding liquidity riskMarket liquidity risk', 'Asset liquidity riskContingent liquidity risk']
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -445,7 +389,7 @@ const AIFinancialRiskManagement = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Contact Sales
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -455,7 +399,6 @@ const AIFinancialRiskManagement = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIFinancialRiskManagement;

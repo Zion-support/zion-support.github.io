@@ -1,15 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   BrainZapRocketShieldGlobeCpu
   ArrowRightExternalLinkCheckStar,
   TrendingUpUsersClockDollarSignPhoneMailMapPin
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { innovativeITServices } from '../data/innovative-it-services';
-import { innovativeMicroSaas } from '../data/innovative-micro-saas';
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { innovativeITServices } from '../data/innovative-it-services',
+import { innovativeMicroSaas } from '../data/innovative-micro-saas',
 
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
@@ -17,7 +17,7 @@ export default function InnovativeServicesShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -28,7 +28,7 @@ export default function InnovativeServicesShowcase() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0y: 30 },
@@ -40,9 +40,9 @@ export default function InnovativeServicesShowcase() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
-  const ServiceCard = ({ serviceindex }: { service: any; index: number }) => (
+  const ServiceCard = ({ serviceindex }: { service: any, index: number }) => (
     <motion.div
       variants={itemVariants}
       className="group relative overflow-hidden rounded-2xl border border-gray-800 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/25"
@@ -134,9 +134,9 @@ export default function InnovativeServicesShowcase() {
       </div>
 
       {/* Hover Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 opacity-0 group-hover: opacity-100 transition-opacity duration-500 pointer-events-none" />
     </motion.div>
-  );
+  ),
 
 const innovative-services-showcase: React.FC = () => {
   return (
@@ -144,7 +144,7 @@ const innovative-services-showcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">innovative-services-showcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default innovative-services-showcase;
+export default innovative-services-showcase,

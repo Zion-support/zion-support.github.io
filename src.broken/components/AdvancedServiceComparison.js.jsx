@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
- from './ui/badge';"
-import { Input } from './ui/input';
+ from './ui/badge',"
+import { Input } from './ui/input',
 export default function Page() {
 ,
         {
@@ -12,10 +12,10 @@ export default function Page() {
             category: 'quantum',
             price: '$200,000/month',
             duration: '18-24 months',
-            features['Custom quantum algorithms',Dedicated processors',24/7 support',Custom development'],;
-            benefits['Competitive advantage',Custom solutions',Priority access',Expert support'],;
-            technology['Quantum Computing',Custom Algorithms',Dedicated Hardware',Advanced Support'],;
-            targetAudience['Large Corporations',Government',Financial Services'],;
+            features['Custom quantum algorithms',Dedicated processors',24/7 support',Custom development'],
+            benefits['Competitive advantage',Custom solutions',Priority access',Expert support'],
+            technology['Quantum Computing',Custom Algorithms',Dedicated Hardware',Advanced Support'],
+            targetAudience['Large Corporations',Government',Financial Services'],
             rating: 4.9,
             complexity: 'Enterprise',
             popularity: 'Trending',
@@ -23,37 +23,37 @@ export default function Page() {
             email: 'kleber@ziontechgroup.com',
             link: 'https://ziontechgroup.com/services/quantum-enterprise'
         }
-    ];
+    ],
     const filteredServices = useMemo(() => {
         return mockServices.filter(service => {
 
-            const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase());
-            return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch})}, [filters, searchTerm]);
+            const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()),
+            return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch})}, [filters, searchTerm]),
     const toggleServiceSelection = (serviceId) => {
 
         setSelectedServices(prev => prev.includes(serviceId)
             ? prev.filter(id => id !== serviceId)
-            [...prev, serviceId])};
+            [...prev, serviceId])},
     const getComplexityColor = (complexity) => {
 
         switch(complexity) {
 
-            case 'Basic': return 'bg-green-100 text-green-800';
-            case 'Intermediate': return 'bg-blue-100 text-blue-800';
-            case 'Advanced': return 'bg-orange-100 text-orange-800';
-            case 'Enterprise': return 'bg-purple-100 text-purple-800';
+            case 'Basic': return 'bg-green-100 text-green-800',
+            case 'Intermediate': return 'bg-blue-100 text-blue-800',
+            case 'Advanced': return 'bg-orange-100 text-orange-800',
+            case 'Enterprise': return 'bg-purple-100 text-purple-800',
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    },
     const getPopularityIcon = (popularity) => {
 
         switch(popularity) {
 '"
-            case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;'"
-            case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;'"
-            case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;'"
-            case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;"
+            case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>,'"
+            case 'High': return <Star className="w-4 h-4 text-yellow-500"/>,'"
+            case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>,'"
+            case 'Low': return <Target className="w-4 h-4 text-gray-500"/>,"
             default: return <Users className="w-4 h-4 text-gray-500"/>}
-    };"
+    },"
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
@@ -352,6 +352,6 @@ export default function Page() {
           </div>
         </div>
       </motion.div>
-    </div>)};
-export default AdvancedServiceComparison;
+    </div>)},
+export default AdvancedServiceComparison,
 '"`

@@ -1,45 +1,45 @@
 export interface EnterpriseITInfrastructureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
-  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
-  aiCapabilities: string[];
-  marketDisruption: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',
+  patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',
+  aiCapabilities: string[],
+  marketDisruption: string
 }
 
 const contact = {
@@ -47,7 +47,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureService[] = [
   // HYBRID CLOUD ORCHESTRATION
@@ -59,16 +59,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Advanced hybrid cloud orchestration platform that seamlessly manages multi-cloud environments. Uses AI to optimize costs, performance, and security across AWS, Azure, GCP, and private clouds.',
     features: [
-      'Multi-cloud management',
-      'AI cost optimization',
-      'Automated scaling',
-      'Security compliance',
-      'Performance monitoring',
-      'Disaster recovery',
-      'Resource allocation',
-      'Cost analytics',
-      'Compliance reporting',
-      '24/7 AI monitoring'
+      'Multi-cloud managementAI cost optimization',
+      'Automated scalingSecurity compliance',
+      'Performance monitoringDisaster recovery',
+      'Resource allocationCost analytics',
+      'Compliance reporting24/7 AI monitoring'
     ],
     popular: true,
     icon: '☁️🔧',
@@ -81,11 +76,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '6 weeks',
     category: 'Cloud Infrastructure',
     realService: true,
-    technology: ['Kubernetes', 'Docker', 'Terraform', 'AI/ML', 'Python', 'Cloud APIs'],
-    integrations: ['AWS', 'Azure', 'GCP', 'Private clouds', 'Monitoring tools', 'Security platforms'],
-    useCases: ['Multi-cloud management', 'Cost optimization', 'Performance monitoring', 'Disaster recovery', 'Compliance'],
+    technology: ['KubernetesDocker', 'TerraformAI/ML', 'PythonCloud APIs'],
+    integrations: ['AWSAzure', 'GCPPrivate clouds', 'Monitoring toolsSecurity platforms'],
+    useCases: ['Multi-cloud managementCost optimization', 'Performance monitoringDisaster recovery', 'Compliance'],
     roi: 'Reduce cloud costs by 40% and improve performance by 200%',
-    competitors: ['VMware ($100,000+/month)', 'Red Hat ($80,000+/month)', 'None for AI optimization'],
+    competitors: ['VMware ($100,000+/month)Red Hat ($80,000+/month)', 'None for AI optimization'],
     marketSize: '$120B cloud management market',
     growthRate: '300% annual growth',
     contactInfo: contact,
@@ -97,7 +92,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 56,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['AI Cost Optimization', 'Automated Scaling', 'Performance Monitoring', 'Resource Allocation'],
+    aiCapabilities: ['AI Cost OptimizationAutomated Scaling', 'Performance MonitoringResource Allocation'],
     marketDisruption: 'Revolutionizes multi-cloud management with AI'
   },
 
@@ -110,16 +105,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Revolutionary edge computing platform that distributes processing power to the edge of networks. Reduces latency by 90% and increases processing speed by 10x for IoT, AI, and real-time applications.',
     features: [
-      'Distributed edge nodes',
-      '90% latency reduction',
-      '10x processing speed',
-      'IoT integration',
-      'Real-time analytics',
-      'Edge AI processing',
-      'Automatic scaling',
-      'Security at edge',
-      'Performance monitoring',
-      'Global edge network'
+      'Distributed edge nodes90% latency reduction',
+      '10x processing speedIoT integration',
+      'Real-time analyticsEdge AI processing',
+      'Automatic scalingSecurity at edge',
+      'Performance monitoringGlobal edge network'
     ],
     popular: true,
     icon: '🌐⚡',
@@ -132,11 +122,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '4 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Edge Computing', 'IoT', 'AI/ML', '5G', 'Python', 'Edge APIs'],
-    integrations: ['IoT devices', 'AI models', 'Cloud platforms', '5G networks', 'Analytics tools'],
-    useCases: ['IoT processing', 'Real-time AI', 'Gaming', 'Financial trading', 'Healthcare monitoring'],
+    technology: ['Edge ComputingIoT', 'AI/ML5G', 'PythonEdge APIs'],
+    integrations: ['IoT devicesAI models', 'Cloud platforms5G networks', 'Analytics tools'],
+    useCases: ['IoT processingReal-time AI', 'GamingFinancial trading', 'Healthcare monitoring'],
     roi: 'Reduce latency by 90% and increase processing speed by 10x',
-    competitors: ['AWS Greengrass ($50,000+/month)', 'Azure IoT Edge ($40,000+/month)', 'None for 90% latency reduction'],
+    competitors: ['AWS Greengrass ($50,000+/month)Azure IoT Edge ($40,000+/month)', 'None for 90% latency reduction'],
     marketSize: '$45B edge computing market',
     growthRate: '400% annual growth',
     contactInfo: contact,
@@ -148,7 +138,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 78,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Edge AI Processing', 'Real-time Analytics', 'IoT Integration', 'Automatic Scaling'],
+    aiCapabilities: ['Edge AI ProcessingReal-time Analytics', 'IoT IntegrationAutomatic Scaling'],
     marketDisruption: 'Revolutionizes computing with distributed edge processing'
   },
 
@@ -161,16 +151,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Next-generation quantum-safe cybersecurity platform that uses post-quantum cryptography to protect against quantum computer attacks. Ensures data security for the next 50+ years.',
     features: [
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Zero-trust security',
-      'Advanced encryption',
-      'Threat detection',
-      'Compliance monitoring',
-      'Security analytics',
-      'Automated response',
-      '24/7 protection',
-      'Future-proof security'
+      'Post-quantum cryptographyQuantum-resistant algorithms',
+      'Zero-trust securityAdvanced encryption',
+      'Threat detectionCompliance monitoring',
+      'Security analyticsAutomated response',
+      '24/7 protectionFuture-proof security'
     ],
     popular: true,
     icon: '🔐⚛️',
@@ -183,9 +168,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '8 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Post-quantum Cryptography', 'Quantum-resistant Algorithms', 'Zero-trust Security', 'Python', 'C++'],
-    integrations: ['Security platforms', 'Encryption tools', 'Compliance systems', 'Monitoring tools', 'Firewalls'],
-    useCases: ['Data encryption', 'Secure communications', 'Compliance', 'Threat protection', 'Future security'],
+    technology: ['Post-quantum CryptographyQuantum-resistant Algorithms', 'Zero-trust SecurityPython', 'C++'],
+    integrations: ['Security platformsEncryption tools', 'Compliance systemsMonitoring tools', 'Firewalls'],
+    useCases: ['Data encryptionSecure communications', 'ComplianceThreat protection', 'Future security'],
     roi: 'Protect against quantum attacks and ensure 50+ years of data security',
     competitors: ['No direct competitors - innovative new category'],
     marketSize: '$300B cybersecurity market',
@@ -199,7 +184,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 25,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Quantum-resistant Encryption', 'Advanced Threat Detection', 'Zero-trust Security', 'Future-proof Protection'],
+    aiCapabilities: ['Quantum-resistant EncryptionAdvanced Threat Detection', 'Zero-trust SecurityFuture-proof Protection'],
     marketDisruption: 'Revolutionizes cybersecurity with quantum-safe protection'
   },
 
@@ -212,16 +197,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Revolutionary autonomous data center management platform that operates data centers without human intervention. Achieves 99.99% uptime through AI-powered automation and predictive maintenance.',
     features: [
-      'Autonomous operation',
-      '99.99% uptime',
-      'Predictive maintenance',
-      'AI optimization',
-      'Zero human intervention',
-      'Energy efficiency',
-      'Performance monitoring',
-      'Automated scaling',
-      'Disaster recovery',
-      '24/7 AI management'
+      'Autonomous operation99.99% uptime',
+      'Predictive maintenanceAI optimization',
+      'Zero human interventionEnergy efficiency',
+      'Performance monitoringAutomated scaling',
+      'Disaster recovery24/7 AI management'
     ],
     popular: true,
     icon: '🏢🤖',
@@ -234,9 +214,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '12 weeks',
     category: 'Autonomous Infrastructure',
     realService: true,
-    technology: ['AI/ML', 'IoT', 'Automation', 'Python', 'Robotics', 'Predictive Analytics'],
-    integrations: ['Data center equipment', 'Monitoring systems', 'Power management', 'Cooling systems', 'Security systems'],
-    useCases: ['Data center automation', 'Predictive maintenance', 'Energy optimization', 'Performance management', 'Disaster recovery'],
+    technology: ['AI/MLIoT', 'AutomationPython', 'RoboticsPredictive Analytics'],
+    integrations: ['Data center equipmentMonitoring systems', 'Power managementCooling systems', 'Security systems'],
+    useCases: ['Data center automationPredictive maintenance', 'Energy optimizationPerformance management', 'Disaster recovery'],
     roi: 'Reduce operational costs by 80% and achieve 99.99% uptime',
     competitors: ['No direct competitors - innovative new category'],
     marketSize: '$200B data center market',
@@ -250,7 +230,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 18,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Autonomous Operation', 'Predictive Maintenance', 'AI Optimization', 'Zero Human Intervention'],
+    aiCapabilities: ['Autonomous OperationPredictive Maintenance', 'AI OptimizationZero Human Intervention'],
     marketDisruption: 'Eliminates need for data center staff with autonomous AI'
   },
 
@@ -263,16 +243,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Cutting-edge 6G network infrastructure platform that delivers 100x faster speeds than 5G with ultra-low latency. Enables next-generation applications like holographic communications and brain-computer interfaces.',
     features: [
-      '6G network deployment',
-      '100x faster speeds',
-      'Ultra-low latency',
-      'Holographic communications',
-      'Brain-computer interfaces',
-      'AI-powered optimization',
-      'Global coverage',
-      'Security protocols',
-      'Performance monitoring',
-      'Future-ready infrastructure'
+      '6G network deployment100x faster speeds',
+      'Ultra-low latencyHolographic communications',
+      'Brain-computer interfacesAI-powered optimization',
+      'Global coverageSecurity protocols',
+      'Performance monitoringFuture-ready infrastructure'
     ],
     popular: true,
     icon: '📡🚀',
@@ -285,9 +260,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '16 weeks',
     category: '6G Networks',
     realService: true,
-    technology: ['6G Technology', 'AI/ML', 'Quantum Communications', 'Advanced Antennas', 'Python', 'Network APIs'],
-    integrations: ['5G networks', 'Satellite systems', 'AI platforms', 'Quantum computers', 'Holographic devices'],
-    useCases: ['Holographic communications', 'Brain-computer interfaces', 'Quantum internet', 'Advanced IoT', 'Future applications'],
+    technology: ['6G TechnologyAI/ML', 'Quantum CommunicationsAdvanced Antennas', 'PythonNetwork APIs'],
+    integrations: ['5G networksSatellite systems', 'AI platformsQuantum computers', 'Holographic devices'],
+    useCases: ['Holographic communicationsBrain-computer interfaces', 'Quantum internetAdvanced IoT', 'Future applications'],
     roi: 'Enable next-generation applications and gain 5-year technology advantage',
     competitors: ['No direct competitors - innovative new category'],
     marketSize: '$1.2T 6G market',
@@ -301,7 +276,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 12,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['AI Network Optimization', 'Holographic Communications', 'Brain-Computer Interfaces', 'Future Applications'],
+    aiCapabilities: ['AI Network OptimizationHolographic Communications', 'Brain-Computer InterfacesFuture Applications'],
     marketDisruption: 'Revolutionizes telecommunications with 6G technology'
   },
 
@@ -314,16 +289,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Revolutionary quantum internet infrastructure that provides unbreakable encryption and instant global communication. Uses quantum entanglement for secure, faster-than-light information transfer.',
     features: [
-      'Quantum internet backbone',
-      'Unbreakable encryption',
-      'Instant global communication',
-      'Quantum entanglement',
-      'Quantum key distribution',
-      'Global quantum network',
-      'Security protocols',
-      'Performance monitoring',
-      'Quantum applications',
-      'Future-ready infrastructure'
+      'Quantum internet backboneUnbreakable encryption',
+      'Instant global communicationQuantum entanglement',
+      'Quantum key distributionGlobal quantum network',
+      'Security protocolsPerformance monitoring',
+      'Quantum applicationsFuture-ready infrastructure'
     ],
     popular: true,
     icon: '🌐⚛️',
@@ -336,9 +306,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '24 weeks',
     category: 'Quantum Internet',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Communications', 'Quantum Entanglement', 'Quantum Cryptography', 'Python'],
-    integrations: ['Classical internet', 'Quantum computers', 'Security systems', 'Research tools', 'Government networks'],
-    useCases: ['Secure communications', 'Quantum computing', 'Research collaboration', 'Defense applications', 'Future technology'],
+    technology: ['Quantum ComputingQuantum Communications', 'Quantum EntanglementQuantum Cryptography', 'Python'],
+    integrations: ['Classical internetQuantum computers', 'Security systemsResearch tools', 'Government networks'],
+    useCases: ['Secure communicationsQuantum computing', 'Research collaborationDefense applications', 'Future technology'],
     roi: 'Enable unbreakable encryption and instant global communication',
     competitors: ['No direct competitors - innovative new category'],
     marketSize: '$500B quantum internet market',
@@ -352,7 +322,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 8,
     innovationLevel: 'Revolutionary',
     patentStatus: 'Patent Pending',
-    aiCapabilities: ['Quantum Communications', 'Unbreakable Encryption', 'Instant Global Communication', 'Future Technology'],
+    aiCapabilities: ['Quantum CommunicationsUnbreakable Encryption', 'Instant Global CommunicationFuture Technology'],
     marketDisruption: 'Revolutionizes internet with quantum technology'
   },
 
@@ -365,16 +335,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Revolutionary autonomous software development platform that uses AI to write, test, and deploy code automatically. Reduces development time by 90% and eliminates human coding errors.',
     features: [
-      'AI code generation',
-      'Automated testing',
-      'Automatic deployment',
-      'Bug detection',
-      'Code optimization',
-      'Performance analysis',
-      'Security scanning',
-      'Documentation generation',
-      'Version control',
-      '24/7 development'
+      'AI code generationAutomated testing',
+      'Automatic deploymentBug detection',
+      'Code optimizationPerformance analysis',
+      'Security scanningDocumentation generation',
+      'Version control24/7 development'
     ],
     popular: true,
     icon: '💻🤖',
@@ -387,11 +352,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '2 weeks',
     category: 'Autonomous Development',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Code Generation', 'Python', 'JavaScript', 'Development Tools'],
-    integrations: ['Git', 'CI/CD pipelines', 'Cloud platforms', 'Testing tools', 'Monitoring systems'],
-    useCases: ['Code generation', 'Automated testing', 'Bug detection', 'Performance optimization', 'Rapid development'],
+    technology: ['AI/MLNatural Language Processing', 'Code GenerationPython', 'JavaScriptDevelopment Tools'],
+    integrations: ['GitCI/CD pipelines', 'Cloud platformsTesting tools', 'Monitoring systems'],
+    useCases: ['Code generationAutomated testing', 'Bug detectionPerformance optimization', 'Rapid development'],
     roi: 'Reduce development time by 90% and eliminate coding errors',
-    competitors: ['GitHub Copilot ($20/month)', 'Tabnine ($15/month)', 'None for autonomous development'],
+    competitors: ['GitHub Copilot ($20/month)Tabnine ($15/month)', 'None for autonomous development'],
     marketSize: '$50B software development market',
     growthRate: '250% annual growth',
     contactInfo: contact,
@@ -403,7 +368,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 89,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Trade Secret',
-    aiCapabilities: ['AI Code Generation', 'Automated Testing', 'Bug Detection', 'Code Optimization'],
+    aiCapabilities: ['AI Code GenerationAutomated Testing', 'Bug DetectionCode Optimization'],
     marketDisruption: 'Revolutionizes software development with autonomous AI'
   },
 
@@ -416,16 +381,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Advanced AI-powered IT service desk that automatically resolves 95% of technical issues without human intervention. Provides instant support, reduces response times, and improves user satisfaction.',
     features: [
-      'AI issue resolution',
-      '95% automatic resolution',
-      'Instant support',
-      'Predictive maintenance',
-      'Knowledge base',
-      'Ticket management',
-      'Performance analytics',
-      'User satisfaction tracking',
-      'Integration support',
-      '24/7 AI assistance'
+      'AI issue resolution95% automatic resolution',
+      'Instant supportPredictive maintenance',
+      'Knowledge baseTicket management',
+      'Performance analyticsUser satisfaction tracking',
+      'Integration support24/7 AI assistance'
     ],
     popular: true,
     icon: '🛠️🤖',
@@ -438,11 +398,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '3 weeks',
     category: 'IT Service Management',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Automation', 'Python', 'React', 'Service APIs'],
-    integrations: ['ITSM tools', 'Monitoring systems', 'Communication platforms', 'Knowledge bases', 'Analytics tools'],
-    useCases: ['Issue resolution', 'Technical support', 'Predictive maintenance', 'Knowledge management', 'Performance tracking'],
+    technology: ['AI/MLNatural Language Processing', 'AutomationPython', 'ReactService APIs'],
+    integrations: ['ITSM toolsMonitoring systems', 'Communication platformsKnowledge bases', 'Analytics tools'],
+    useCases: ['Issue resolutionTechnical support', 'Predictive maintenanceKnowledge management', 'Performance tracking'],
     roi: 'Reduce support costs by 70% and improve user satisfaction by 200%',
-    competitors: ['ServiceNow ($100,000+/month)', 'Jira Service Desk ($50,000+/month)', 'None for 95% auto-resolution'],
+    competitors: ['ServiceNow ($100,000+/month)Jira Service Desk ($50,000+/month)', 'None for 95% auto-resolution'],
     marketSize: '$8B IT service management market',
     growthRate: '200% annual growth',
     contactInfo: contact,
@@ -454,7 +414,7 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 112,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Trade Secret',
-    aiCapabilities: ['AI Issue Resolution', 'Predictive Maintenance', 'Instant Support', 'Knowledge Management'],
+    aiCapabilities: ['AI Issue ResolutionPredictive Maintenance', 'Instant SupportKnowledge Management'],
     marketDisruption: 'Revolutionizes IT support with AI automation'
   },
 
@@ -467,16 +427,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     period: '/month',
     description: 'Revolutionary autonomous network management platform that continuously optimizes network performance, security, and efficiency. Uses AI to predict issues, optimize routing, and maintain peak performance.',
     features: [
-      'Autonomous optimization',
-      'Performance prediction',
-      'Automatic routing',
-      'Security monitoring',
-      'Traffic optimization',
-      'Bandwidth management',
-      'Quality of service',
-      'Performance analytics',
-      'Zero-downtime operations',
-      '24/7 AI management'
+      'Autonomous optimizationPerformance prediction',
+      'Automatic routingSecurity monitoring',
+      'Traffic optimizationBandwidth management',
+      'Quality of servicePerformance analytics',
+      'Zero-downtime operations24/7 AI management'
     ],
     popular: true,
     icon: '🌐🤖',
@@ -489,11 +444,11 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     setupTime: '4 weeks',
     category: 'Network Management',
     realService: true,
-    technology: ['AI/ML', 'Network Automation', 'SDN', 'Python', 'Network APIs', 'Monitoring Tools'],
-    integrations: ['Network equipment', 'SDN controllers', 'Monitoring systems', 'Security platforms', 'Analytics tools'],
-    useCases: ['Network optimization', 'Performance management', 'Security monitoring', 'Traffic optimization', 'Quality of service'],
+    technology: ['AI/MLNetwork Automation', 'SDNPython', 'Network APIsMonitoring Tools'],
+    integrations: ['Network equipmentSDN controllers', 'Monitoring systemsSecurity platforms', 'Analytics tools'],
+    useCases: ['Network optimizationPerformance management', 'Security monitoringTraffic optimization', 'Quality of service'],
     roi: 'Improve network performance by 300% and reduce operational costs by 60%',
-    competitors: ['Cisco ($100,000+/month)', 'Juniper ($80,000+/month)', 'None for autonomous optimization'],
+    competitors: ['Cisco ($100,000+/month)Juniper ($80,000+/month)', 'None for autonomous optimization'],
     marketSize: '$25B network management market',
     growthRate: '300% annual growth',
     contactInfo: contact,
@@ -505,9 +460,9 @@ export const enterpriseITInfrastructureServices2025: EnterpriseITInfrastructureS
     reviews: 76,
     innovationLevel: 'Breakthrough',
     patentStatus: 'Trade Secret',
-    aiCapabilities: ['Autonomous Optimization', 'Performance Prediction', 'Automatic Routing', 'Traffic Optimization'],
+    aiCapabilities: ['Autonomous OptimizationPerformance Prediction', 'Automatic RoutingTraffic Optimization'],
     marketDisruption: 'Revolutionizes network management with autonomous AI'
   }
-];
+],
 
-export default enterpriseITInfrastructureServices2025;
+export default enterpriseITInfrastructureServices2025,

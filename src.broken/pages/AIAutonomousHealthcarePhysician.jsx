@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="mb-16">
@@ -61,15 +61,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Medical Specialties
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['General Medicine',
-                'Cardiology',
-                'Dermatology',
-                'Pediatrics',
-                'Mental Health',
-                'Nutrition',
-                'Emergency Care',
-                'Preventive Medicine',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['General MedicineCardiology',
+                'DermatologyPediatrics',
+                'Mental HealthNutrition',
+                'Emergency CarePreventive Medicine'
               ].map (specialty => (<div
                   key={specialty}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -136,7 +132,7 @@ export default function Page() {
               Get instant medical consultation and health guidance whenever you
               need it
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-green - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Consultation
               </button>
@@ -147,5 +143,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

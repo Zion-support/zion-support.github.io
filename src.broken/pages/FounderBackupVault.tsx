@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { AdminLayout } from '@/components/admin/AdminLayout';
-import { encryptData, decryptData } from '@/utils/vaultEncryption';
+import React, { useState } from 'react',
+import JSZip from 'jszip',
+import { saveAs } from 'file-saver',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { AdminLayout } from '@/components/admin/AdminLayout',
+import { encryptData, decryptData } from '@/utils/vaultEncryption',
 
 interface VaultData {
-  daoKey: string;
-  treasuryAddress: string;
-  distribution: string;
-  manifesto: string;
-  whitepaper: string;
-  promptBase: string;
+  daoKey: string,
+  treasuryAddress: string,
+  distribution: string,
+  manifesto: string,
+  whitepaper: string,
+  promptBase: string
 }
 
 export default function FounderBackupVault() {
@@ -23,64 +23,61 @@ export default function FounderBackupVault() {
     distribution: '',
     manifesto: '',
     whitepaper: '',
-    promptBase: '',
-  });
-  const [password, setPassword] = useState('');
-  const [encrypted, setEncrypted] = useState<Uint8Array | null>(null);
-  const [failCount, setFailCount] = useState(0);
+    promptBase: ''
+  }),
+  const [password, setPassword] = useState(''),
+  const [encrypted, setEncrypted] = useState<Uint8Array | null>(null),
+  const [failCount, setFailCount] = useState(0),
 
   const handleChange = (field: keyof VaultData) => (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
-    setData({ ...data, [field]: e.target.value });
-  };
+    setData({ ...data, [field]: e.target.value }),
+  },
 
-  const allFilled = Object.values(data).every(Boolean);
+  const allFilled = Object.values(data).every(Boolean),
 
   const handleExport = async () => {
-    if (!password) return alert('Set a password');
-    const encryptedData = await encryptData(JSON.stringify(data), password);
-    setEncrypted(encryptedData);
-    const zip = new JSZip();
-    zip.file('vault.enc', encryptedData);
-    const blob = await zip.generateAsync({ type: 'blob' });
-    saveAs(blob, 'zion_backup.zip');
-  };
+    if (!password) return alert('Set a password'),
+    const encryptedData = await encryptData(JSON.stringify(data), password),
+    setEncrypted(encryptedData),
+    const zip = new JSZip(),
+    zip.file('vault.enc', encryptedData),
+    const blob = await zip.generateAsync({ type: 'blob' }),
+    saveAs(blob, 'zion_backup.zip'),
+  },
 
   const handleExportPdf = async () => {
-    const { jsPDF } = await import('jspdf');
-    const doc = new jsPDF();
-    doc.text('Zion Backup Checklist', 10, 10);
+    const { jsPDF } = await import('jspdf'),
+    const doc = new jsPDF(),
+    doc.text('Zion Backup Checklist', 10, 10),
     const items = [
-      'DAO Genesis Key / Multisig fallback',
-      'Treasury recovery address',
-      'ZION$ initial distribution',
-      'Manifesto v1-v5',
-      'Whitepaper + roadmap history',
-      'Original GPT prompt base (ZionGPT Core)',
-    ];
+      'DAO Genesis Key / Multisig fallbackTreasury recovery address',
+      'ZION$ initial distributionManifesto v1-v5',
+      'Whitepaper + roadmap historyOriginal GPT prompt base (ZionGPT Core)'
+    ],
     items.forEach((item, i) => {
-      doc.text(`${i + 1}. ${item}`, 10, 20 + i * 10);
-    });
-    doc.save('zion_backup.pdf');
-  };
+      doc.text(`${i + 1}. ${item}`, 10, 20 + i * 10),
+    }),
+    doc.save('zion_backup.pdf'),
+  },
 
   const simulateRecovery = async () => {
-    if (!encrypted) return alert('Export first');
-    const pass = prompt('Enter vault password') || '';
+    if (!encrypted) return alert('Export first'),
+    const pass = prompt('Enter vault password') || '',
     try {
-      const decrypted = await decryptData(encrypted.buffer as ArrayBuffer, pass); // Added type assertion
-      console.log('Decrypted:', decrypted);
-      alert('Recovery successful');
-      setFailCount(0);
+      const decrypted = await decryptData(encrypted.buffer as ArrayBuffer, pass), // Added type assertion
+      console.log('Decrypted:', decrypted),
+      alert('Recovery successful'),
+      setFailCount(0),
     } catch (err) {
-      const attempts = failCount + 1;
-      setFailCount(attempts);
+      const attempts = failCount + 1,
+      setFailCount(attempts),
       if (attempts >= 3) {
-        alert('Vault self-destruct triggered. DAO alerted.');
+        alert('Vault self-destruct triggered. DAO alerted.'),
       } else {
-        alert('Incorrect password');
+        alert('Incorrect password'),
       }
     }
-  };
+  },
 
   return (
     <AdminLayout>
@@ -109,5 +106,5 @@ export default function FounderBackupVault() {
         </div>
       </div>
     </AdminLayout>
-  );
+  ),
 }

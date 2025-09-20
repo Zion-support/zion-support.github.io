@@ -1,2 +1,2 @@
 
-export default accessibility;
+export default accessibility,

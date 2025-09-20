@@ -1,24 +1,24 @@
-import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';"
-import { Button } from '@/components/ui/button';"
-import { Loader2, Edit, Trash, Star, StarOff  } from 'lucide-react';"
-import { useContractTemplates } from '@/hooks/useContractTemplates';"
-import { Card, CardContent } from '@/components/ui/card';"
-import { Separator } from '@/components/ui/separator';"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';"
-import { useAuth } from '@/hooks/useAuth';"
-import { useNavigate, useLocation  } from 'react-router-dom';"
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';"
-import { useState } from 'react';
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime',"
+import { Button } from '@/components/ui/button',"
+import { Loader2, Edit, Trash, Star, StarOff  } from 'lucide-react',"
+import { useContractTemplates } from '@/hooks/useContractTemplates',"
+import { Card, CardContent } from '@/components/ui/card',"
+import { Separator } from '@/components/ui/separator',"
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',"
+import { useAuth } from '@/hooks/useAuth',"
+import { useNavigate, useLocation  } from 'react-router-dom',"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',"
+import { useState } from 'react',
 
 export default function Page() {
-    };
+    },
     const handleSetDefault = async(templateId) => {
 
         if(!user) {
 
-            router(`/login?next=${encodeURIComponent(location.pathname + location.search)}`);
+            router(`/login?next=${encodeURIComponent(location.pathname + location.search)}`),
             return}
-        await setDefaultTemplate.mutateAsync(templateId)};
+        await setDefaultTemplate.mutateAsync(templateId)},
     if(isLoading) {
 "
         return (_jsx("div", { className: "flex justify-center items-center py-8", children: _jsx(Loader2, { className: "h-8 w-8 animate-spin text-zion-purple" }) }))}

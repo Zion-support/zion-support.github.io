@@ -1,37 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react',
 
 export default function Page() {
-, [currentLanguage, supportedLanguages]); // Added dependencies
+, [currentLanguage, supportedLanguages]), // Added dependencies
 
   useEffect(() => {
     // Check if this is first visit
-    const hasVisited = safeStorage.getItem('zion_has_visited');
-    if (hasVisited) return;
+    const hasVisited = safeStorage.getItem('zion_has_visited'),
+    if (hasVisited) return,
 
     // Mark as visited
-    safeStorage.setItem('zion_has_visited', 'true');
+    safeStorage.setItem('zion_has_visitedtrue'),
     
     // Get browser language
-    const browserLang = navigator.language as SupportedLanguage;
+    const browserLang = navigator.language as SupportedLanguage,
     
     // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(lang => lang.code === browserLang);
+    const isSupported = supportedLanguages.some(lang => lang.code === browserLang),
     if (isSupported && browserLang !== currentLanguage) {
-      setDetectedLanguage(browserLang);
-      setOpen(true);
+      setDetectedLanguage(browserLang),
+      setOpen(true),
     }
-  }, [currentLanguage, supportedLanguages]); // Added dependencies
+  }, [currentLanguage, supportedLanguages]), // Added dependencies
 
-  if (!detectedLanguage) return null;
+  if (!detectedLanguage) return null,
 
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage;
+  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
 
   const handleAccept = async () => {
     if(detectedLanguage) { // Ensure detectedLanguage is not null
-      await changeLanguage(detectedLanguage);
+      await changeLanguage(detectedLanguage),
     }
-    setOpen(false);
-  };
+    setOpen(false),
+  },
 
   return (<AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
@@ -56,5 +56,5 @@ export default function Page() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-  );
+  ),
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'Quantum AI 2026: The Business Breakthrough - $100B Market Transformation';
-  description: 'Discover how Quantum AI 2026 is revolutionizing business operations with 400-600% ROI, 1,200% speed improvements, and 99.97% accuracy. Complete guide to quantum AI transformation.';
-  keywords: ['quantum AIquantum computing', 'business transformationAI 2026', 'quantum revolutionenterprise AI'],
-};
+  title: 'Quantum AI 2026: The Business Breakthrough - $100B Market Transformation',
+  description: 'Discover how Quantum AI 2026 is revolutionizing business operations with 400-600% ROI, 1,200% speed improvements, and 99.97% accuracy. Complete guide to quantum AI transformation.',
+  keywords: ['quantum AIquantum computingbusiness transformationAI 2026', 'quantum revolutionenterprise AI']
+},
 export default function QuantumAI2026BusinessBreakthrough() {,
   return (,
     <div>,
@@ -27,7 +27,7 @@ export default function QuantumAI2026BusinessBreakthrough() {,
                 The Quantum AI Business Breakthrough,
               </h1>,
               <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed">,
-                Experience the future of business with Quantum AI 2026. Achieve 400-600% ROI;
+                Experience the future of business with Quantum AI 2026. Achieve 400-600% ROI,
                 1,200% speed improvements, and 99.97% accuracy in a $100B market transformation.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -47,7 +47,7 @@ export default function QuantumAI2026BusinessBreakthrough() {,
             </div>,
           </div>,
         </section>,
-        {/* Quantum Revolution Metrics */,}
+        {/* Quantum Revolution Metrics */}
         <section className="py-16 bg-white">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quantum Revolution Metrics</h2>,
@@ -141,7 +141,7 @@ export default function QuantumAI2026BusinessBreakthrough() {,
                 </p>,
                 <h3 className="text-2xl font-bold mb-4">The Quantum Solution</h3>,
                 <p className="text-lg opacity-90">,
-                  We implemented our Quantum AI 2026 platform, leveraging quantum machine learning;
+                  We implemented our Quantum AI 2026 platform, leveraging quantum machine learning,
                   quantum neural networks, and quantum optimization to revolutionize their operations.,
                 </p>,
               </div>,
@@ -213,7 +213,7 @@ export default function QuantumAI2026BusinessBreakthrough() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">,
@@ -240,5 +240,4 @@ export default function QuantumAI2026BusinessBreakthrough() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

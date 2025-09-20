@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Performance Analysis",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "500% increase in content output, 60% improvement in SEO performance, higher conversion rates",
     logo: "EB"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: BarChart3,
     duration: "Ongoing"
 
-];
+],
 
 const contentBenefits = [{
     title: "Increased Productivity",
     description: "Streamlined workflows and automated processes boost content creation efficiency",
     icon: Zap,
-    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"];
-  },;
+    examples["Faster content creation", "Automated workflows", "Collaboration tools", "Template libraries"],
+  },
   {
     title: "Better Quality",
     description: "Professional tools and AI assistance improve content quality and consistency",
     icon: Award,
-    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"];
-  },;
+    examples["Professional templates", "AI assistance", "Quality checks", "Brand consistency"],
+  },
   {
     title: "Multi - channel Reach",
     description: "Distribute content across multiple platforms and channels simultaneously",
     icon: Globe,
-    examples["Social media", "Website", "Email marketing", "Mobile apps"];
-  },;
+    examples["Social media", "Website", "Email marketing", "Mobile apps"],
+  },
   {
     title: "Data - driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
-    examples["Performance metrics", "Audience insights", "A / B testing", "ROI tracking"];
+    examples["Performance metrics", "Audience insights", "A / B testing", "ROI tracking"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'CMS', 'Video', 'Design', 'Audio', 'Analytics', 'Distribution'];
+  const categories = ['AllCMS', 'VideoDesign', 'AudioAnalytics', 'Distribution'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? contentCreationSolutions
-    : contentCreationSolutions.filter(solution => solution.category === selectedCategory) ;
+    : contentCreationSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -182,10 +182,10 @@ const contentBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Content Creation Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -241,13 +241,13 @@ const contentBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Content Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -305,13 +305,13 @@ const contentBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -367,13 +367,13 @@ const contentBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -473,7 +473,7 @@ const contentBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -544,13 +544,13 @@ const contentBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

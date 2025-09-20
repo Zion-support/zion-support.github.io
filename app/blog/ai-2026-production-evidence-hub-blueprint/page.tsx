@@ -1,17 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'AI 2026: Production Evidence Hub — Blueprint';
-  description: 'Design a centralized hub for evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven AI operations.';
+  title: 'AI 2026: Production Evidence Hub — Blueprint',
+  description: 'Design a centralized hub for evals, incidents, approvals, and KPIs to power audit‑ready, gate‑driven AI operations.',
   keywords: [,
-    'AI 2026production evidence hub';
-    'evaluationsincidents';
-    'approvalsKPIs';
-    'governance',
-  ],
-};
+    'AI 2026production evidence hubevaluationsincidents',
+    'approvalsKPIsgovernance'
+  ]
+},
 export default function ProductionEvidenceHubBlueprint() {,
   return (,
     <ErrorBoundary>,
@@ -39,7 +37,7 @@ export default function ProductionEvidenceHubBlueprint() {,
             </div>,
           </div>,
         </section>,
-        {/* Overview */,}
+        {/* Overview */}
         <section className="py-16">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <div className="prose prose-lg max-w-none">,
@@ -94,7 +92,7 @@ export default function ProductionEvidenceHubBlueprint() {,
             <Link href="/contact" className="bg-white text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">Get a blueprint workshop</Link>,
           </div>,
         </section>,
-        {/* Related */,}
+        {/* Related */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>,
@@ -115,6 +113,5 @@ export default function ProductionEvidenceHubBlueprint() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}
 ,

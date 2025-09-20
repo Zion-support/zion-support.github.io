@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
-  Rocket, 
+  Rocket,
   Star, 
   Brain, 
   Atom, 
@@ -18,7 +18,7 @@ import {
   Instagram,
   Youtube,
   Github
-} from 'lucide-react';
+} from 'lucide-react',
 
 
 
@@ -117,7 +117,7 @@ const footerSections = [
       { name: 'Partners', href: '/partners' }
     ]
   }
-];
+],
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
@@ -126,7 +126,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about' },
@@ -137,7 +137,7 @@ const quickLinks = [
   { name: 'Documentation', href: '/docs' },
   { name: 'Support', href: '/support' },
   { name: 'Contact', href: '/contact' }
-];
+],
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
@@ -145,7 +145,7 @@ const legalLinks = [
   { name: 'Cookie Policy', href: '/cookies' },
   { name: 'Security', href: '/security' },
   { name: 'Compliance', href: '/compliance' }
-];
+],
 
 const UltraFuturisticFooter2036: React.FC = () => {
   return (
@@ -153,7 +153,7 @@ const UltraFuturisticFooter2036: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2036</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2036;
+export default UltraFuturisticFooter2036,

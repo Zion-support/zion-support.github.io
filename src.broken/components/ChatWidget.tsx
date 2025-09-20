@@ -1,60 +1,60 @@
-import { useEffect, useRef, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { MessageBubble } from '@/components/messaging/MessageBubble';
-import { Button } from '@/components/ui/button';
-import type { Message } from '@/types/messaging';
+import { useEffect, useRef, useState } from 'react',
+import { useAuth } from '@/hooks/useAuth',
+import { MessageBubble } from '@/components/messaging/MessageBubble',
+import { Button } from '@/components/ui/button',
+import type { Message } from '@/types/messaging',
 
 interface ChatWidgetProps {
   /** Room identifier, typically order or service id */
-  roomId: string;
+  roomId: string,
   /** Recipient user id */
-  recipientId: string;
-  isOpen: boolean;
-  onClose: () => void;
+  recipientId: string,
+  isOpen: boolean,
+  onClose: () => void
 }
 
 export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetProps) {
-  const { user } = useAuth();
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [text, setText] = useState('');
-  const socketRef = useRef<any>();
+  const { user } = useAuth(),
+  const [messages, setMessages] = useState<Message[]>([]),
+  const [text, setText] = useState(''),
+  const socketRef = useRef<any>(),
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) return,
     if ('Notification' in window && Notification.permission === 'default') {
-      Notification.requestPermission();
+      Notification.requestPermission(),
     }
-  }, [isOpen]);
+  }, [isOpen]),
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) return,
 
     async function setup() {
-      const { io } = await import('socket.io-client');
-      socketRef.current = io({ path: '/api/socket', transports: ['websocket'] });
-      socketRef.current.emit('join-room', roomId);
+      const { io } = await import('socket.io-client'),
+      socketRef.current = io({ path: '/api/socket', transports: ['websocket'] }),
+      socketRef.current.emit('join-room', roomId),
       socketRef.current.on('receive-message', (msg: Message) => {
-        setMessages(prev => [...prev, msg]);
-        triggerNotification('New message', msg.content);
-      });
+        setMessages(prev => [...prev, msg]),
+        triggerNotification('New message', msg.content),
+      }),
     }
 
-    setup();
+    setup(),
     return () => {
-      socketRef.current?.disconnect();
-    };
-  }, [isOpen, roomId]);
+      socketRef.current?.disconnect(),
+    },
+  }, [isOpen, roomId]),
 
   const triggerNotification = (title: string, body: string) => {
     if ('Notification' in window && Notification.permission === 'granted') {
       navigator.serviceWorker.getRegistration().then(reg => {
-        reg?.showNotification(title, { body });
-      });
+        reg?.showNotification(title, { body }),
+      }),
     }
-  };
+  },
 
   const handleSend = () => {
-    if (!socketRef.current || !text.trim() || !user || typeof user === 'boolean') return; // Ensure user is not boolean false
+    if (!socketRef.current || !text.trim() || !user || typeof user === 'boolean') return, // Ensure user is not boolean false
     const msg: Message = {
       id: Date.now().toString(),
       sender_id: String(user.id), // user is now guaranteed to be UserDetails
@@ -62,13 +62,13 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
       content: text,
       created_at: new Date().toISOString(),
       read: false
-    };
-    socketRef.current.emit('send-message', { roomId, message: msg });
-    setMessages(prev => [...prev, msg]);
-    setText('');
-  };
+    },
+    socketRef.current.emit('send-message', { roomId, message: msg }),
+    setMessages(prev => [...prev, msg]),
+    setText(''),
+  },
 
-  if (!isOpen) return null;
+  if (!isOpen) return null,
 
   return (
     <div className="fixed bottom-4 right-4 w-80 bg-zion-blue-dark rounded-lg shadow-xl border border-zion-purple/20 flex flex-col animate-slide-up">
@@ -95,5 +95,5 @@ export function ChatWidget({ roomId, recipientId, isOpen, onClose }: ChatWidgetP
         </Button>
       </div>
     </div>
-  );
+  ),
 }

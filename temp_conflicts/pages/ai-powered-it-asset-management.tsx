@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { Database, Shield, TrendingUp, Zap, Globe, Cpu, BarChart3, Settings } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { Database, Shield, TrendingUp, Zap, Globe, Cpu, BarChart3, Settings } from 'lucide-react',
 
 export default function AIPoweredITAssetManagement() {
   const features = [
@@ -35,18 +35,14 @@ export default function AIPoweredITAssetManagement() {
       title: 'AI-Powered Optimization',
       description: 'Optimize asset allocation and utilization using machine learning algorithms and predictive analytics.'
     }
-  ];
+  ],
 
   const capabilities = [
-    'Asset Lifecycle Management',
-    'License Management',
-    'Cost Optimization',
-    'Risk Assessment',
-    'Performance Monitoring',
-    'Automated Reporting',
-    'Integration APIs',
-    'Mobile Management'
-  ];
+    'Asset Lifecycle ManagementLicense Management',
+    'Cost OptimizationRisk Assessment',
+    'Performance MonitoringAutomated Reporting',
+    'Integration APIsMobile Management'
+  ],
 
   const benefits = [
     {
@@ -65,7 +61,7 @@ export default function AIPoweredITAssetManagement() {
       title: 'Better Decision Making',
       description: 'Make informed decisions with comprehensive asset analytics and reporting.'
     }
-  ];
+  ],
 
   return (
     <>
@@ -176,7 +172,7 @@ export default function AIPoweredITAssetManagement() {
             <p className="text-xl text-gray-300 mb-8">
               Experience the future of intelligent asset management with AI-powered automation and insights.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
@@ -194,5 +190,5 @@ export default function AIPoweredITAssetManagement() {
         </section>
       </div>
     </>
-  );
+  )
 }

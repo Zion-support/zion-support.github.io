@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Star, TrendingUp, Target,
@@ -11,13 +11,13 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Phone, Mail, MapPin,
   ArrowRight, Users, Award, Globe2, Clock
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
-import { quantumSpace2029Services } from '../data/2029-quantum-space-services';
-import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
+} from 'lucide-react',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services',
+import { quantumSpace2029Services } from '../data/2029-quantum-space-services',
+import { biotechEmerging2029Services } from '../data/2029-biotech-emerging-services',
+import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services',
 
 export default function ServicesAdvertising2029() {
   const contactInfo = {
@@ -25,14 +25,14 @@ export default function ServicesAdvertising2029() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const allServices = [
     ...futuristic2029AIServices,
     ...quantumSpace2029Services,
     ...biotechEmerging2029Services,
     ...enterpriseIT2029Services
-  ];
+  ],
 
   const serviceCategories = [
     {
@@ -43,7 +43,7 @@ export default function ServicesAdvertising2029() {
       services: futuristic2029AIServices,
       marketSize: '$15.8B by 2029',
       growthRate: '45% CAGR',
-      keyBenefits: ['Consciousness development', 'Emotional intelligence', 'Ethical AI frameworks', 'Research breakthroughs']
+      keyBenefits: ['Consciousness developmentEmotional intelligence', 'Ethical AI frameworksResearch breakthroughs']
     },
     {
       title: '🚀 Quantum Space Technology 2029',
@@ -53,7 +53,7 @@ export default function ServicesAdvertising2029() {
       services: quantumSpace2029Services,
       marketSize: '$17.5B by 2029',
       growthRate: '52% CAGR',
-      keyBenefits: ['Space mining operations', 'Quantum communication', 'Interplanetary navigation', 'Resource optimization']
+      keyBenefits: ['Space mining operationsQuantum communication', 'Interplanetary navigationResource optimization']
     },
     {
       title: '🧬 Biotechnology & Emerging Tech 2029',
@@ -63,7 +63,7 @@ export default function ServicesAdvertising2029() {
       services: biotechEmerging2029Services,
       marketSize: '$26.5B by 2029',
       growthRate: '38% CAGR',
-      keyBenefits: ['DNA computing', 'Quantum biotechnology', 'Metaverse development', 'Innovation acceleration']
+      keyBenefits: ['DNA computingQuantum biotechnology', 'Metaverse developmentInnovation acceleration']
     },
     {
       title: '🏢 Enterprise IT & Security 2029',
@@ -73,9 +73,9 @@ export default function ServicesAdvertising2029() {
       services: enterpriseIT2029Services,
       marketSize: '$36.8B by 2029',
       growthRate: '42% CAGR',
-      keyBenefits: ['Zero trust security', 'Autonomous decision making', 'Quantum cloud infrastructure', 'Enterprise transformation']
+      keyBenefits: ['Zero trust securityAutonomous decision making', 'Quantum cloud infrastructureEnterprise transformation']
     }
-  ];
+  ],
 
   const competitiveAdvantages = [
     {
@@ -102,14 +102,14 @@ export default function ServicesAdvertising2029() {
       icon: Globe,
       color: 'from-red-600 to-orange-600'
     }
-  ];
+  ],
 
   const successMetrics = [
     { metric: '500+', label: 'Research Partners', icon: Users },
     { metric: '99.9%', label: 'Uptime Guarantee', icon: Award },
     { metric: '45+', label: 'Countries Served', icon: Globe2 },
     { metric: '24/7', label: 'Global Support', icon: Clock }
-  ];
+  ],
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -119,7 +119,7 @@ export default function ServicesAdvertising2029() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -130,7 +130,7 @@ export default function ServicesAdvertising2029() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const 2029-services-advertising: React.FC = () => {
   return (
@@ -147,8 +147,8 @@ const 2029-services-advertising: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default RevolutionaryTechBlog2027;
+export default RevolutionaryTechBlog2027,

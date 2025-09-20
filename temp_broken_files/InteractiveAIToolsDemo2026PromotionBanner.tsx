@@ -1,52 +1,51 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Code,
   BarChart3,
   Network,
-  Shield;
+  Shield,
   ArrowRight,
   Star,
-  Zap;
-  X;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Award;
-  Brain,
-} from 'lucide-react';
+  Zap,
+  X,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
+  Brain
+} from 'lucide-react',
 const InteractiveAIToolsDemo2026PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentToolsetCurrentTool] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentToolsetCurrentTool] = useState(0),
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)800);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)800),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
     const interval = setInterval(() => {,
-      setCurrentTool(prev => (prev + 1) % 4);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTool(prev => (prev + 1) % 4),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const tools = [,
-    { icon: Codename: 'AI Code 'Reviewcolor: 'text-blue-400' ,};
-    { icon: BarChart3name: 'Data 'Analyticscolor: 'text-green-400' ,};
-    { icon: Networkname: ''Infrastructurecolor: 'text-purple-400' ,};
-    { icon: Shieldname: 'Security 'Scancolor: 'text-red-400' ,}
-  ];
+    { icon: Codename: 'AI Code 'Reviewcolor: 'text-blue-400' },
+    { icon: BarChart3name: 'Data 'Analyticscolor: 'text-green-400' },
+    { icon: Networkname: ''Infrastructurecolor: 'text-purple-400' },
+    { icon: Shieldname: 'Security 'Scancolor: 'text-red-400' }
+  ],
   const features = [,
-    'Interactive Live DemosReal-time Performance Metrics';
-    'Hands-on ExperienceInstant Results',
-  ];
+    'Interactive Live DemosReal-time Performance MetricsHands-on ExperienceInstant Results'
+  ],
   const stats = [,
-    { label: '95%'value: 'Efficiency' ,};
-    { label: '98%'value: 'Accuracy' ,};
-    { label: '3'xvalue: 'Faster' ,}
-  ];
-  if (!isVisible || isDismissed) return null;
+    { label: '95%'value: 'Efficiency' },
+    { label: '98%'value: 'Accuracy' },
+    { label: '3'xvalue: 'Faster' }
+  ],
+  if (!isVisible || isDismissed) return null,
   return (,
     <div>,
       <div,
@@ -64,21 +63,21 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-30];
-                opacity: [0.30.80.3];
-                scale: [1.51],}}
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 2,}}
+                y: [0-30],
+                opacity: [0.30.80.3],
+                scale: [1.51]}}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
             />,
           ))}
         </div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
           <div className="flex items-center justify-between">,
-            {/* Left Content */,}
+            {/* Left Content */}
             <div className="flex-1">,
               <div,
                 className="flex items-center space-x-3 mb-4",
@@ -99,7 +98,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
                 Experience the power of our cutting-edge AI tools through hands-on interactive demonstrations.,
                 See real-time performance metrics and instant results.,
               </divp>,
-              {/* Rotating Tool Display */,}
+              {/* Rotating Tool Display */}
               <div,
                 key={currentTool}
                 className="flex items-center space-x-3 mb-6",
@@ -117,11 +116,10 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
                 className="grid grid-cols-1 md: grid-cols-2 gap-2 mb-6",
               >,
                 {features.map((featureindex) => (,
-                  <div key={index,} className="flex items-center space-x-2">,
+                  <div key={index} className="flex items-center space-x-2">,
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />,
                     <span className="text-sm text-blue-200">{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* Stats */}
               <div,
@@ -131,8 +129,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
                   <div key={index} className="text-center">,
                     <div className="text-2xl font-bold text-yellow-300">{stat.label}</div>,
                     <div className="text-sm text-blue-300">{stat.value}</div>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               {/* CTA Buttons */}
               <div,
@@ -149,7 +146,7 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
                 </button>,
               </div>,
             </div>,
-            {/* Right Content - Animated Icons */,}
+            {/* Right Content - Animated Icons */}
             <div,
               className="hidden lg: flex items-center space-x-4",
             >,
@@ -171,20 +168,20 @@ const InteractiveAIToolsDemo2026PromotionBanner = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Dismiss Button */,}
+        {/* Dismiss Button */}
         <button,
           onClick={() => setIsDismissed(true)}
           className="absolute top-4 right-4 p-2 hover: bg-white hover:bg-opacity-20 rounded-full transition-colors duration-300",
         >,
           <X className="w-5 h-5" />,
         </button>,
-        {/* Pulse Effect */,}
+        {/* Pulse Effect */}
         <div,
           className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20",
         />,
       </div>,
     </div>,
-  );
-};
-export default InteractiveAIToolsDemo2026PromotionBanner;
+  ),
+},
+export default InteractiveAIToolsDemo2026PromotionBanner,
 </div></div></div></div>,

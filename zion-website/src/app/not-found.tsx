@@ -28,7 +28,7 @@ export default function NotFound() {,
         </div>,
         <div className="mt-8 text-sm text-gray-400">,
           <p>,
-            Need help?{' ',}
+            Need help?{' '}
             <Link,
               href="/contact",
               className="text-blue-400 hover: text-blue-300 underline",
@@ -38,5 +38,4 @@ export default function NotFound() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

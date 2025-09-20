@@ -1,22 +1,22 @@
-import { Link  } from 'react-router-dom';
-import { Link  } from 'react-router-dom';
-import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye  } from 'lucide-react';
- from 'react';
-import React, { useState } from 'react';
+import { Link  } from 'react-router-dom',
+import { Link  } from 'react-router-dom',
+import { Users, MessageCircle, TrendingUp, Star, Clock, Search, Filter, Plus, Heart, Share2, Bookmark, MoreHorizontal, User, Calendar, Tag, Eye  } from 'lucide-react',
+ from 'react',
+import React, { useState } from 'react',
 export default function Community () {
 export default React.memo(function Community (...args[]) :  {
-import { motion  } from 'framer-motion';
-import { motion  } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { motion  } from 'framer-motion',
+import { motion  } from 'framer-motion',
+import { SEO } from '../components/SEO',
 
- from 'lucide - react';
+ from 'lucide - react',
 
-  const communityStats = [;
-    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from - blue - 500 to - cyan - 500' },;
-    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from - purple - 500 to - pink - 500' },;
-    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from - green - 500 to - emerald - 500' },;
-    { label: 'Countries', value: '45+', icon: Globe, color: 'from - orange - 500 to - red - 500' };
-  ];
+  const communityStats = [,
+    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from - blue - 500 to - cyan - 500' },
+    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from - purple - 500 to - pink - 500' },
+    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from - green - 500 to - emerald - 500' },
+    { label: 'Countries', value: '45+', icon: Globe, color: 'from - orange - 500 to - red - 500' },
+  ],
 
   const communityForums = [{
       title: 'AI & Machine Learning',
@@ -51,14 +51,14 @@ import { SEO } from '../components/SEO';
     {
       title: 'Digital Transformation',
       description: 'Business transformation strategies and technology adoption',
-      icon: Rocket,;
-      color: 'from - green - 600 to - emerald - 600',;
-      topics: 620,;
-      posts: 4100,;
-      members: 1800,;
-      href: '/community / digital - transformation';
-    };
-  ];
+      icon: Rocket,
+      color: 'from - green - 600 to - emerald - 600',
+      topics: 620,
+      posts: 4100,
+      members: 1800,
+      href: '/community / digital - transformation'
+    },
+  ],
 
   const upcomingEvents = [{
       title: 'AI Innovation Summit 2025',
@@ -86,14 +86,14 @@ import { SEO } from '../components/SEO';
       title: 'DevOps Best Practices Meetup',
       description: 'Local meetup for DevOps professionals to share experiences',
       date: 'March 28, 2025',
-      location: 'New York, NY',;
-      type: 'Meetup',;
-      attendees: 75,;
-      icon: Cloud,;
-      color: 'from - blue - 500 to - cyan - 500',;
-      href: '/events / devops - meetup - nyc';
-    };
-  ];
+      location: 'New York, NY',
+      type: 'Meetup',
+      attendees: 75,
+      icon: Cloud,
+      color: 'from - blue - 500 to - cyan - 500',
+      href: '/events / devops - meetup - nyc'
+    },
+  ],
 
   const featuredDiscussions = [{
       title: 'Implementing Zero Trust Architecture in Enterprise',
@@ -102,7 +102,7 @@ import { SEO } from '../components/SEO';
       replies: 45,
       views: 1200,
       lastActivity: '2 hours ago',
-      tags: ['Zero Trust', 'Enterprise', 'Security'],
+      tags: ['Zero TrustEnterprise', 'Security'],
       icon: Shield,
       color: 'from - red - 500 to - orange - 500',
       href: '/community / discussions / zero - trust - enterprise'
@@ -114,7 +114,7 @@ import { SEO } from '../components/SEO';
       replies: 32,
       views: 890,
       lastActivity: '5 hours ago',
-      tags: ['AI', 'Deployment', 'Best Practices'],
+      tags: ['AIDeployment', 'Best Practices'],
       icon: Brain,
       color: 'from - purple - 500 to - pink - 500',
       href: '/community / discussions / ai - model - deployment'
@@ -124,14 +124,14 @@ import { SEO } from '../components/SEO';
       author: 'Lisa Thompson',
       category: 'Cloud & DevOps',
       replies: 28,
-      views: 650,;
-      lastActivity: '1 day ago',;
-      tags: ['Multi - Cloud', 'Cost Optimization', 'DevOps'],;
-      icon: Cloud,;
-      color: 'from - blue - 500 to - cyan - 500',;
-      href: '/community / discussions / multi - cloud - cost - optimization';
-    };
-  ];
+      views: 650,
+      lastActivity: '1 day ago',
+      tags: ['Multi - CloudCost Optimization', 'DevOps'],
+      icon: Cloud,
+      color: 'from - blue - 500 to - cyan - 500',
+      href: '/community / discussions / multi - cloud - cost - optimization'
+    },
+  ],
 
   const communityResources = [{
       title: 'Community Guidelines',
@@ -154,23 +154,23 @@ import { SEO } from '../components/SEO';
       href: '/community / members',
       color: 'from - purple - 500 to - pink - 500'
     },
-    {;
-      title: 'Resource Library',;
-      description: 'Access shared resources, templates, and tools',;
-      icon: Download,;
-      href: '/community / resources',;
-      color: 'from - orange - 500 to - red - 500';
-    };
-  ];
+    {,
+      title: 'Resource Library',
+      description: 'Access shared resources, templates, and tools',
+      icon: Download,
+      href: '/community / resources',
+      color: 'from - orange - 500 to - red - 500'
+    },
+  ],
 
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">,
       <SEO
         title="Community - Zion Tech Group"
         description="Join our community of technology professionals and enthusiasts.Share knowledge, get help, and connect with peers."
       />
 
       {/* Header */}
-      <div  className="bg-slate - 800 / 50 border-b border-slate -700">;
+      <div  className="bg-slate - 800 / 50 border-b border-slate -700">,
         <div  className="container mx - auto px-4 py-16">
           <motion.div
             initial = {
@@ -194,108 +194,108 @@ import { SEO } from '../components/SEO';
             </h1>
             <p className="text-xl text-slate - 300 max - w-3xl mx -auto">
               Connect with technology professionals, share knowledge, and stay ahead of industry trends.interface CommunityPost {
-  id: string;
-  title: string;
-  content: string;
+  id: string,
+  title: string,
+  content: string,
   author: {
-    name: string;
-    avatar: string;
-    role: string;
-    verified: boolean;
-  };
-  category: string;
-  tags: string[];
-  likes: number;
-  replies: number;
-  views: number;
-  createdAt: string;
-  isPinned: boolean;
-  isFeatured: boolean;
+    name: string,
+    avatar: string,
+    role: string,
+    verified: boolean
+  },
+  category: string,
+  tags: string[],
+  likes: number,
+  replies: number,
+  views: number,
+  createdAt: string,
+  isPinned: boolean,
+  isFeatured: boolean
 }
 
 interface CommunityCategory {
-  id: string;
-  name: string;
-  description: string;
-  icon: any;
-  color: string;
-  postCount: number;
-  topics: string[];
+  id: string,
+  name: string,
+  description: string,
+  icon: any,
+  color: string,
+  postCount: number,
+  topics: string[]
 }
 
 const Community: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
-  const [sortBy, setSortBy] = useState < string> ('latest') ;
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ,
+  const [sortBy, setSortBy] = useState < string> ('latest') ,
 
   const communityCategories: CommunityCategory[] = [{
-      id: 'general',;
+      id: 'general',
       name: 'General Discussion',
       description: 'General topics about Zion Tech Group and technology',
       icon: Users,
       color: 'from - blue - 500 to - cyan - 500',
       postCount: 1247,
-      topics: ['Company News', 'Technology Trends', 'Industry Updates']
+      topics: ['Company NewsTechnology Trends', 'Industry Updates']
     },
     {
-      id: 'ai - services',;
+      id: 'ai - services',
       name: 'AI Services',
       description: 'Discussions about our AI and machine learning services',
       icon: TrendingUp,
       color: 'from - purple - 500 to - pink - 500',
       postCount: 892,
-      topics: ['AI Integration', 'Machine Learning', 'AI Best Practices']
+      topics: ['AI IntegrationMachine Learning', 'AI Best Practices']
     },
     {
-      id: 'cloud - infrastructure',;
+      id: 'cloud - infrastructure',
       name: 'Cloud & Infrastructure',
       description: 'Cloud computing, DevOps, and infrastructure topics',
       icon: TrendingUp,
       color: 'from - green - 500 to - blue - 500',
       postCount: 654,
-      topics: ['Cloud Migration', 'DevOps', 'Infrastructure Management']
+      topics: ['Cloud MigrationDevOps', 'Infrastructure Management']
     },
     {
-      id: 'security - compliance',;
+      id: 'security - compliance',
       name: 'Security & Compliance',
       description: 'Cybersecurity, compliance, and data protection',
       icon: TrendingUp,
       color: 'from - red - 500 to - orange - 500',
       postCount: 456,
-      topics: ['Cybersecurity', 'Compliance', 'Data Protection']
+      topics: ['CybersecurityCompliance', 'Data Protection']
     },
     {
-      id: 'micro - saas',;
+      id: 'micro - saas',
       name: 'Micro SaaS Solutions',
       description: 'Our micro SaaS products and integrations',
       icon: TrendingUp,
       color: 'from - yellow-500 to - orange - 500',
       postCount: 789,
-      topics: ['Product Updates', 'Integration Guides', 'Best Practices']
+      topics: ['Product UpdatesIntegration Guides', 'Best Practices']
     },
     {
-      id: 'support',;
+      id: 'support',
       name: 'Support & Help',
       description: 'Get help and support from the community',
       icon: MessageCircle,
       color: 'from - indigo - 500 to - purple - 500',
       postCount: 1234,
-      topics: ['Technical Support', 'Troubleshooting', 'Feature Requests']
+      topics: ['Technical SupportTroubleshooting', 'Feature Requests']
     }
-  ];
+  ],
 
   const communityPosts: CommunityPost[] = [{
-      id: '1',;
+      id: '1',
       title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
       author: {
-        name: 'Sarah Chen',;
+        name: 'Sarah Chen',
         avatar: '/avatars / sarah.jpg',
         role: 'Senior Data Scientist',
         verified: true
       },
       category: 'ai - services',
-      tags: ['AI', 'Business Intelligence', 'Best Practices', 'Getting Started'],
+      tags: ['AIBusiness Intelligence', 'Best PracticesGetting Started'],
       likes: 45,
       replies: 23,
       views: 1234,
@@ -304,17 +304,17 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
-      id: '2',;
+      id: '2',
       title: 'Cloud Migration Success Story: From On - Prem to Multi - Cloud',
       content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure.Here\'s our journey and lessons learned...',
       author: {
-        name: 'Michael Rodriguez',;
+        name: 'Michael Rodriguez',
         avatar: '/avatars / michael.jpg',
         role: 'DevOps Engineer',
         verified: true
       },
       category: 'cloud - infrastructure',
-      tags: ['Cloud Migration', 'DevOps', 'Success Story', 'Multi - Cloud'],
+      tags: ['Cloud MigrationDevOps', 'Success StoryMulti - Cloud'],
       likes: 67,
       replies: 34,
       views: 2156,
@@ -323,17 +323,17 @@ const Community: React.FC = () => {
       isFeatured: true
     },
     {
-      id: '3',;
+      id: '3',
       title: 'Zero Trust Security Implementation Guide',
       content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
       author: {
-        name: 'Alex Thompson',;
+        name: 'Alex Thompson',
         avatar: '/avatars / alex.jpg',
         role: 'Security Architect',
         verified: true
       },
       category: 'security - compliance',
-      tags: ['Zero Trust', 'Security', 'Implementation', 'Guide'],
+      tags: ['Zero TrustSecurity', 'ImplementationGuide'],
       likes: 89,
       replies: 56,
       views: 3421,
@@ -342,17 +342,17 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
-      id: '4',;
+      id: '4',
       title: 'Micro CRM Integration with Salesforce - Step by Step',
       content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce.Includes code examples and troubleshooting tips...',
       author: {
-        name: 'Jennifer Lee',;
+        name: 'Jennifer Lee',
         avatar: '/avatars / jennifer.jpg',
         role: 'Integration Specialist',
         verified: false
       },
       category: 'micro - saas',
-      tags: ['Micro CRM', 'Salesforce', 'Integration', 'Tutorial'],
+      tags: ['Micro CRMSalesforce', 'IntegrationTutorial'],
       likes: 34,
       replies: 18,
       views: 987,
@@ -361,17 +361,17 @@ const Community: React.FC = () => {
       isFeatured: false
     },
     {
-      id: '5',;
+      id: '5',
       title: 'AI Content Creation API Performance Optimization',
       content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
       author: {
-        name: 'David Kim',;
+        name: 'David Kim',
         avatar: '/avatars / david.jpg',
         role: 'Software Engineer',
         verified: true
       },
       category: 'ai - services',
-      tags: ['AI Content Creation', 'API', 'Performance', 'Optimization'],
+      tags: ['AI Content CreationAPI', 'PerformanceOptimization'],
       likes: 56,
       replies: 29,
       views: 1567,
@@ -379,40 +379,39 @@ const Community: React.FC = () => {
       isPinned: false,
       isFeatured: false
     }
-  ];
+  ],
 
   const filteredPosts = communityPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          post.content.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                         post.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  }) ;
+                         post.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }) ,
 
   const sortedPosts = [...filteredPosts].sort((a, b) => {
     switch(sortBy) {
       case 'latest':
-        return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
+        return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ,
       case 'popular':
-        return b.likes - a.likes;
+        return b.likes - a.likes,
       case 'most - replied':
-        return b.replies - a.replies;
+        return b.replies - a.replies,
       case 'most - viewed':
-        return b.views - a.views;
-      default:
-        return 0;
+        return b.views - a.views,
+      default: return 0
     }
-  }) ;
+  }) ,
 
   const getCategoryColor = (categoryId: string) => {
-    const category = communityCategories.find(cat => cat.id === categoryId) ;
-    return category ? category.color : 'from - gray - 500 to - gray - 600';
-  };
+    const category = communityCategories.find(cat => cat.id === categoryId) ,
+    return category ? category.color : 'from - gray - 500 to - gray - 600'
+  },
 
   const getCategoryName = (categoryId: string) => {
-    const category = communityCategories.find(cat => cat.id === categoryId) ;
-    return category ? category.name : 'Unknown';
-  };
+    const category = communityCategories.find(cat => cat.id === categoryId) ,
+    return category ? category.name : 'Unknown'
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate -900">
       {/* Header Section */}
@@ -518,11 +517,11 @@ const Community: React.FC = () => {
                     </div>
                   </div>
 
-                  <div  className="w-full py-3 bg-slate - 700 text-white font - semibold rounded-lg hover:bg-slate - 600 transition - colors duration - 300 text-center">
+                  <div  className="w-full py-3 bg-slate - 700 text-white font - semibold rounded-lg hover: bg-slate - 600 transition - colors duration - 300 text-center">
                     Learn More
                   </div>
                 </div>
-              </Link>;
+              </Link>,
             </motion.div>) ) }
         </div>
       </div>
@@ -791,7 +790,7 @@ const Community: React.FC = () => {
       </div>
 
       {/* Create New Post Section */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         <div  className="bg-gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded-3xl p - 8 text-center">
           <h2 className="text-3xl font - bold text-white mb-4">
             Share Your Knowledge
@@ -801,7 +800,7 @@ const Community: React.FC = () => {
             Create a new post and start a discussion!
           </p>
 
-          <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div  className="flex flex - col sm: flex - row gap-4 justify -center">
             <button     className="inline - flex items - center px-6 py-3 bg-blue - 600 hover:bg-blue - 700 text-white font - semibold rounded-xl transition -colors">
               <Plus className="w-5 h-5 mr-2" />
               Create New Post
@@ -815,10 +814,10 @@ const Community: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>;
+      </div>,
 
       {/* Community Stats */}
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div  className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-16">,
         <div  className="grid grid - cols - 1 md:grid - cols - 4 gap-6">
           <div  className="bg-white / 10 backdrop - blur - lg rounded-2xl p - 6 text-center">
             <Users className="w-12 h-12 text-blue - 400 mx - auto mb-4" />
@@ -844,11 +843,11 @@ const Community: React.FC = () => {
             <p className="text-gray -300">Featured Posts</p>
           </div>
         </div>
-      </div>;
-    </div>) };
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
+      </div>,
+    </div>) },
+            </Link>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) ,
 }

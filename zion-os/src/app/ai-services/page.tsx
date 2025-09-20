@@ -7,7 +7,6 @@ export default function AIServicesPage() {,
           <p className="text-lg text-gray-700">End-to-end AI solutions for automation, analytics, and research.</p>,
         </div>,
       </section>,
-    </div>,
-  );
+    </div>),
 }
 ,

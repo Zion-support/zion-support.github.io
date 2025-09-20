@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agent Evaluation Playground — Overview';
-  description: 'Why every agent platform needs a quick, safe way to prototype evaluations.',
-};
+  title: 'AI 2026: Agent Evaluation Playground — Overview',
+  description: 'Why every agent platform needs a quick, safe way to prototype evaluations.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -27,5 +27,5 @@ export default function Page() {,
         </ul>,
       </article>,
     </main>,
-  ),}
+  )}
 ,

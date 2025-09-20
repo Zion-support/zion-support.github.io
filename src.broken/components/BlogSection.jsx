@@ -2,8 +2,8 @@
 export function BlogSection () {
 
 =======
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 ,
         {
 
@@ -13,7 +13,7 @@ import { Link  } from 'react-router-dom';
             date: '2024-01-10',
             readTime: '12 min read'
 
-    ];
+    ],
     return (<section className="py-16">"
       <div className="container mx-auto px-4">"
         <div className="flex justify-between items-center mb-8">"

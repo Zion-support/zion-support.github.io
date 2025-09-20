@@ -1,27 +1,27 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-import AIAssistant from '../../components/ui/AIAssistant';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import React, { useMemo, useState } from 'react',
+import AIAssistant from '../../components/ui/AIAssistant',
 
 const ResumeBuilder: NextPage = () => {
-  const [role, setRole] = useState('Data Scientist');
-  const [experienceYears, setExperienceYears] = useState(5);
-  const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems');
-  const [tone, setTone] = useState('clear and concise');
+  const [role, setRole] = useState('Data Scientist'),
+  const [experienceYears, setExperienceYears] = useState(5),
+  const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems'),
+  const [tone, setTone] = useState('clear and concise'),
 
-  const [summary, setSummary] = useState('');
-  const [experience, setExperience] = useState('');
-  const [skillsText, setSkillsText] = useState('');
+  const [summary, setSummary] = useState(''),
+  const [experience, setExperience] = useState(''),
+  const [skillsText, setSkillsText] = useState(''),
 
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN;
+  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
 
   const generateSummaryPrompt = useMemo(() => (
     `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
-  ), [role, experienceYears, skills, tone]);
+  ), [role, experienceYears, skills, tone]),
 
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
-  );
+  ),
 
   return (
     <div>
@@ -100,7 +100,7 @@ const ResumeBuilder: NextPage = () => {
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
-  );
-};
+  ),
+},
 
-export default ResumeBuilder;
+export default ResumeBuilder,

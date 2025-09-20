@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { useState } from 'react',
+import { useNavigate } from 'react-router-dom',
+import axios from 'axios',
 
 export default function SignUp() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const navigate = useNavigate();
+  const [email, setEmail] = useState(''),
+  const [password, setPassword] = useState(''),
+  const navigate = useNavigate(),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await axios.post('/api/auth/register', { email, password });
-    navigate('/marketplace');
-  };
+    e.preventDefault(),
+    await axios.post('/api/auth/register', { email, password }),
+    navigate('/marketplace'),
+  },
 
   return (
     <form onSubmit={handleSubmit} className="p-4 space-y-2">
@@ -33,5 +33,5 @@ export default function SignUp() {
         Sign Up
       </button>
     </form>
-  );
+  ),
 }

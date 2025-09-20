@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react',
 interface CalculatorInputs {,
-  currentRevenue: number;
-  currentCosts: number;
-  aiInvestment: number;
-  expectedEfficiency: number;
-  timeframe: number,}
+  currentRevenue: number,
+  currentCosts: number,
+  aiInvestment: number,
+  expectedEfficiency: number,
+  timeframe: number}
 ,
 interface CalculationResult {,
-  currentROI: number;
-  projectedROI: number;
-  roiImprovement: number;
-  monthlySavings: number;
-  annualSavings: number;
-  paybackPeriod: number;
-  netBenefit: number,}
+  currentROI: number,
+  projectedROI: number,
+  roiImprovement: number,
+  monthlySavings: number,
+  annualSavings: number,
+  paybackPeriod: number,
+  netBenefit: number}
 ,
 const InteractiveAICalculator: React.FC = () => {,
   return (,
@@ -27,7 +27,7 @@ const InteractiveAICalculator: React.FC = () => {,
         </p>,
       </div>,
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">,
-        {/* Input Section */,}
+        {/* Input Section */}
         <div className="space-y-6">,
           <h3 className="text-xl font-semibold text-gray-900 dark: text-white">,
             Business Metrics,
@@ -39,7 +39,7 @@ const InteractiveAICalculator: React.FC = () => {,
               </label>,
               <input,
                 type="number",
-                value={inputs.currentRevenue,}
+                value={inputs.currentRevenue}
                 onChange={(e) => handleInputChange('currentRevenue', Number(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white",
                 placeholder="1000000",
@@ -51,7 +51,7 @@ const InteractiveAICalculator: React.FC = () => {,
               </label>,
               <input,
                 type="number",
-                value={inputs.currentCosts,}
+                value={inputs.currentCosts}
                 onChange={(e) => handleInputChange('currentCosts', Number(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white",
                 placeholder="600000",
@@ -63,7 +63,7 @@ const InteractiveAICalculator: React.FC = () => {,
               </label>,
               <input,
                 type="number",
-                value={inputs.aiInvestment,}
+                value={inputs.aiInvestment}
                 onChange={(e) => handleInputChange('aiInvestment', Number(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white",
                 placeholder="100000",
@@ -77,7 +77,7 @@ const InteractiveAICalculator: React.FC = () => {,
                 type="number",
                 min="1",
                 max="100",
-                value={inputs.expectedEfficiency,}
+                value={inputs.expectedEfficiency}
                 onChange={(e) => handleInputChange('expectedEfficiency', Number(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white",
                 placeholder="25",
@@ -91,7 +91,7 @@ const InteractiveAICalculator: React.FC = () => {,
                 type="number",
                 min="1",
                 max="60",
-                value={inputs.timeframe,}
+                value={inputs.timeframe}
                 onChange={(e) => handleInputChange('timeframe', Number(e.target.value))}
                 className="w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white",
                 placeholder="12",
@@ -99,7 +99,7 @@ const InteractiveAICalculator: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Results Section */,}
+        {/* Results Section */}
         <div className="space-y-6">,
           <h3 className="text-xl font-semibold text-gray-900 dark: text-white">,
             ROI Projections,
@@ -108,8 +108,7 @@ const InteractiveAICalculator: React.FC = () => {,
             <div className="flex items-center justify-center py-12">,
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>,
               <span className="ml-3 text-gray-600 dark:text-gray-400">Calculating...</span>,
-            </div>,
-          ) : result ? (,
+            </div>) : result ? (,
             <div>,
               <div,
                 className="space-y-4",
@@ -118,45 +117,45 @@ const InteractiveAICalculator: React.FC = () => {,
                   <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">,
                     <div className="text-sm text-blue-600 dark:text-blue-400">Current ROI</div>,
                     <div className="text-2xl font-bold text-blue-700 dark:text-blue-300">,
-                      {formatPercentage(result.currentROI),}
+                      {formatPercentage(result.currentROI)}
                     </div>,
                   </div>,
                   <div className="bg-green-50 dark: bg-green-900/20 p-4 rounded-lg">,
                     <div className="text-sm text-green-600 dark:text-green-400">Projected ROI</div>,
                     <div className="text-2xl font-bold text-green-700 dark:text-green-300">,
-                      {formatPercentage(result.projectedROI),}
+                      {formatPercentage(result.projectedROI)}
                     </div>,
                   </div>,
                 </div>,
                 <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark: from-purple-900/20 dark:to-blue-900/20 p-6 rounded-lg">,
                   <div className="text-sm text-purple-600 dark:text-purple-400">ROI Improvement</div>,
                   <div className="text-3xl font-bold text-purple-700 dark:text-purple-300">,
-                    +{formatPercentage(result.roiImprovement),}
+                    +{formatPercentage(result.roiImprovement)}
                   </div>,
                 </div>,
                 <div className="space-y-3">,
                   <div className="flex justify-between items-center py-2 border-b border-gray-200 dark: border-gray-600">,
                     <span className="text-gray-600 dark:text-gray-400">Monthly Savings</span>,
                     <span className="font-semibold text-green-600 dark:text-green-400">,
-                      {formatCurrency(result.monthlySavings),}
+                      {formatCurrency(result.monthlySavings)}
                     </span>,
                   </div>,
                   <div className="flex justify-between items-center py-2 border-b border-gray-200 dark: border-gray-600">,
                     <span className="text-gray-600 dark:text-gray-400">Annual Savings</span>,
                     <span className="font-semibold text-green-600 dark:text-green-400">,
-                      {formatCurrency(result.annualSavings),}
+                      {formatCurrency(result.annualSavings)}
                     </span>,
                   </div>,
                   <div className="flex justify-between items-center py-2 border-b border-gray-200 dark: border-gray-600">,
                     <span className="text-gray-600 dark:text-gray-400">Payback Period</span>,
                     <span className="font-semibold text-blue-600 dark:text-blue-400">,
-                      {result.paybackPeriod.toFixed(1),} months,
+                      {result.paybackPeriod.toFixed(1)} months,
                     </span>,
                   </div>,
                   <div className="flex justify-between items-center py-3 bg-gray-50 dark: bg-gray-700 rounded-lg px-4">,
                     <span className="text-gray-700 dark:text-gray-300 font-medium">Net Benefit</span>,
                     <span className="font-bold text-lg text-green-600 dark:text-green-400">,
-                      {formatCurrency(result.netBenefit),}
+                      {formatCurrency(result.netBenefit)}
                     </span>,
                   </div>,
                 </div>,
@@ -166,6 +165,6 @@ const InteractiveAICalculator: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export default InteractiveAICalculator;
+  ),
+},
+export default InteractiveAICalculator,

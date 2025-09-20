@@ -1,50 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/Input";
-
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle, Send } from "lucide-react";
-
 export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    description: ''
+    name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSelectChange = (name, value) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    })),
+  },
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)),
     
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    setIsSubmitting(false),
+    setIsSubmitted(true),
+  },
 
   if (isSubmitted) {
     return (
@@ -57,7 +48,7 @@ export const QuoteRequestForm = () => {
           </p>
         </CardContent>
       </Card>
-    );
+    ),
   }
 
   return (
@@ -208,7 +199,7 @@ export const QuoteRequestForm = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan/90 px-8 py-3 text-lg font-semibold"
+              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan/90 px-8 py-3 text-lg font-semibold"
             >
               {isSubmitting ? (
                 <>
@@ -228,4 +219,3 @@ export const QuoteRequestForm = () => {
     </Card>
   );
 };
-

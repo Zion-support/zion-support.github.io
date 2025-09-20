@@ -1,22 +1,22 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
-, []);
+, []),
     const handleLogout = async () => {
         try {
-            await logout();
-            // // // // // // // // console.error('Logout failed:', error);
+            await logout(),
+            // // // // // // // // console.error('Logout failed:', error),
         }
-    };
+    },
     if(!user) {
 
-        return null;
+        return null,
 
             setIsOpen(false)}
         catch(error) {
 
             // console.error('Logout failed:', error)}
-    };
+    },
     if(!user) {
 
         return null}"
@@ -69,5 +69,5 @@ export default function Page() {
             </div>
           </div>
         </div>)}
-    </div>)};
+    </div>)},
 '"`

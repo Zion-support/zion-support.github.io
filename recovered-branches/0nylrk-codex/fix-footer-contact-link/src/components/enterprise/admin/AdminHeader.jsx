@@ -1,12 +1,12 @@
 
-import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { DownloadSettings } from "lucide-react";
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+import React from "react",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { DownloadSettings } from "lucide-react",
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
 export function AdminHeader() {,
-  const { user } = useAuth();
-  const { company } = useCompanyWorkspace();
+  const { user } = useAuth(),
+  const { company } = useCompanyWorkspace(),
   return (,
     <div className="space-y-4">,
       <div className="flex items-center justify-between">,
@@ -30,7 +30,7 @@ export function AdminHeader() {,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
         <div className="bg-card rounded-lg p-4 border border-border">,
           <div className="text-sm text-muted-foreground">Subscription Plan</div>,
-          <div className="text-xl font-medium">{company?.plan || "Enterprise",}</div>,
+          <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>,
         </div>,
         <div className="bg-card rounded-lg p-4 border border-border">,
           <div className="text-sm text-muted-foreground">Team Members</div>,
@@ -53,13 +53,12 @@ export function AdminHeader() {,
           <div>,
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>,
             <p className="text-sm text-muted-foreground">,
-              Workspace URL: {company?.workspaceUrl || "loading...",}
+              Workspace URL: {company?.workspaceUrl || "loading..."}
             </p>,
           </div>,
         </div>,
         <Button>Customize Workspace</Button>,
       </div>,
-    </div>,
-  );
+    </div>),
 }
 ,

@@ -1,15 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
-import SEO from '@/components/SEO';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, Phone, Mail, MapPin, Globe, DollarSign, Star, Users, Shield, Zap, Building } from "lucide-react";
+import { COMPREHENSIVE_SERVICES, PRICING_TIERS, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
+import SEO from "@/components/SEO";
 export default function ServicesPricingPage() {
     // Group services by category for pricing table
     const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
-        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category);
+        const categoryServices = COMPREHENSIVE_SERVICES.filter(service => service.category === category),
         if (categoryServices.length > 0) {
             acc[category] = categoryServices;
         }
@@ -178,27 +178,19 @@ export default function ServicesPricingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {[
             {
-                icon: <Zap className="w-8 h-8"/>,
-                title: "Competitive Pricing",
-                description: "Market-leading rates without compromising on quality or features"
-            },
+                icon: <Zap className="w-8 h-8"/>,title: "Competitive Pricing",description: "Market-leading rates without compromising on quality or features"
+            };
             {
-                icon: <Shield className="w-8 h-8"/>,
-                title: "No Hidden Fees",
-                description: "Transparent pricing with clear breakdowns of all costs"
-            },
+                icon: <Shield className="w-8 h-8"/>,title: "No Hidden Fees",description: "Transparent pricing with clear breakdowns of all costs"
+            };
             {
-                icon: <Users className="w-8 h-8"/>,
-                title: "Flexible Plans",
-                description: "Customizable solutions that grow with your business needs"
-            },
+                icon: <Users className="w-8 h-8"/>,title: "Flexible Plans",description: "Customizable solutions that grow with your business needs"
+            };
             {
-                icon: <Building className="w-8 h-8"/>,
-                title: "Proven ROI",
-                description: "Measurable business outcomes and return on investment"
+                icon: <Building className="w-8 h-8"/>,title: "Proven ROI",description: "Measurable business outcomes and return on investment"
             }
         ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
@@ -221,7 +213,7 @@ export default function ServicesPricingPage() {
             Contact us today for a personalized quote tailored to your specific business requirements
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+            <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light">
               <Phone className="w-5 h-5 mr-2"/>
               Get Custom Quote
             </Button>
@@ -232,5 +224,5 @@ export default function ServicesPricingPage() {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 }

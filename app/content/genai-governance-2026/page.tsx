@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-	title: 'GenAI Governance 2026: Policies, Controls, and Guardrails';
-	description: 'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 2026.',
-};
+	title: 'GenAI Governance 2026: Policies, Controls, and Guardrails',
+	description: 'A pragmatic governance framework for safe, compliant, and value-driven GenAI at scale in 2026.'
+},
 export default function GenAIGovernance2026() {,
 	return (,
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -26,7 +26,6 @@ export default function GenAIGovernance2026() {,
 				<h2>Outcomes</h2>,
 				<p>Enable safe, compliant scaling of AI capabilities while protecting users and the business.</p>,
 			</section>,
-		</main>,
-	);
+		</main>),
 }
 ,

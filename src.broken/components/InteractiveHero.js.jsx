@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ] }) => {
 
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [isHovered, setIsHovered] = useState(false);
-    const [activeStat, setActiveStat] = useState(0);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
+    const [isHovered, setIsHovered] = useState(false),
+    const [activeStat, setActiveStat] = useState(0),
     useEffect(() => {
         const handleMouseMove = (e) => {
 
-            setMousePosition({ x: e.clientX, y: e.clientY })};
-        window.addEventListener('mousemove', handleMouseMove);
+            setMousePosition({ x: e.clientX, y: e.clientY })},
+        window.addEventListener('mousemove', handleMouseMove),
         // Auto-rotate stats
         const interval = setInterval(() => {
-            setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
+            setActiveStat((prev) => (prev + 1) % stats.length)}, 3000),
         return () => {
 
-            window.removeEventListener('mousemove', handleMouseMove);
-            clearInterval(interval)}}, [stats.length]);
+            window.removeEventListener('mousemove', handleMouseMove),
+            clearInterval(interval)}}, [stats.length]),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -31,7 +31,7 @@ export default function Page() {
                 staggerChildren: 0.2
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0,
@@ -48,12 +48,12 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const floatingVariants = {
 
   animate: {
 
-            y[0, -10, 0],;
+            y[0, -10, 0],
             transition: {
 
                 duration: 3,
@@ -62,7 +62,7 @@ export default function Page() {
 
 }
         }
-    };"
+    },"
     return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Animated Background */}"
       <div className="absolute inset-0">
@@ -71,9 +71,9 @@ export default function Page() {
 
   {
 
-            x[0, 100, 0],;
-            y[0, -50, 0],;
-            scale[1, 1.2,;
+            x[0, 100, 0],
+            y[0, -50, 0],
+            scale[1, 1.2,
   1]
 
 }} transition = {
@@ -89,9 +89,9 @@ export default function Page() {
 
   {
 
-            x[0, -80, 0],;
-            y[0, 60, 0],;
-            scale[1, 0.8,;
+            x[0, -80, 0],
+            y[0, 60, 0],
+            scale[1, 0.8,
   1]
 
 }} transition = {
@@ -107,9 +107,9 @@ export default function Page() {
 
   {
 
-            x[0, 60, 0],;
-            y[0, -40, 0],;
-            scale[1, 1.1,;
+            x[0, 60, 0],
+            y[0, -40, 0],
+            scale[1, 1.1,
   1]
 
 }} transition = {
@@ -212,8 +212,8 @@ export default function Page() {
 
   {
 
-            y[0, -20, 0],;
-            rotate[0, 180,;
+            y[0, -20, 0],
+            rotate[0, 180,
   360]
 
 }} transition = {
@@ -230,8 +230,8 @@ export default function Page() {
 
   {
 
-            y[0, 30, 0],;
-            x[0, 20,;
+            y[0, 30, 0],
+            x[0, 20,
   0]
 
 }} transition = {
@@ -262,6 +262,6 @@ export default function Page() {
   damping: 30
 
 }}/>
-    </section>)};
-export default InteractiveHero;
+    </section>)},
+export default InteractiveHero,
 '"`

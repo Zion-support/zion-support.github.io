@@ -1,13 +1,13 @@
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [statusFilter, setStatusFilter] = useState<string | null>(null),
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
   // Count by status for the summary dashboard,
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
-  const totalCount = MOCK_SUPPORT_REQUESTS.length;
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
+  const totalCount = MOCK_SUPPORT_REQUESTS.length,
         title="Support Requests | Admin Dashboard",
         description="Manage and track user support requests and issues",
       />,
@@ -27,11 +27,11 @@
             </Button>,
           </div>,
         </div>,
-        {/* Status Cards */,}
+        {/* Status Cards */}
         <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 mb-8">,
           <Card>,
             <CardHeader className="pb-2">,
-              <CardTitle className="text-2xl font-bold">{openCount,}</CardTitle>,
+              <CardTitle className="text-2xl font-bold">{openCount}</CardTitle>,
               <CardDescription>Open Requests</CardDescription>,
             </CardHeader>,
           </Card>,
@@ -98,7 +98,7 @@
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters,
               </Button>,
             </div>,
-            {/* Support Requests Table */,}
+            {/* Support Requests Table */}
             <Card>,
               <CardContent className="p-0">,
                 <Table>,
@@ -127,8 +127,7 @@
                           </Badge>,
                         </TableCell>,
                         <TableCell>,
-                          <Badge variant={,
-                    ))}
+                          <Badge variant={))}
                   </TableBody>,
                 </Table>,
               </CardContent>,
@@ -160,5 +159,5 @@
           </TabsContent>,
         </Tabs>,
       </div>,
-    </AppLayout>,
+    </AppLayout>
 }}

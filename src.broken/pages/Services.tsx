@@ -1,5 +1,5 @@
-import React from 'react';
-export default Services;
+import React from 'react',
+export default Services,
 
   const categories = [{ id: 'all', name: 'All Services', icon: Settings, count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics') .length },
@@ -9,16 +9,16 @@ export default Services;
     { id: 'Healthcare Tech', name: 'Healthcare Tech', icon: Heart, count: allServices.filter(s => s.category === 'Healthcare Tech') .length },
     { id: 'FinTech', name: 'FinTech', icon: DollarSign, count: allServices.filter(s => s.category === 'FinTech') .length },
     { id: 'Micro SaaS', name: 'Micro SaaS', icon: ShoppingCart, count: allServices.filter(s => s.category === 'Micro SaaS') .length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  }) ;
+                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }) ,
 
-  const featuredServices = allServices.filter(service => service.featured) ;
+  const featuredServices = allServices.filter(service => service.featured) ,
 
   return (<div className="min - h-screen bg-gradient - to - br from - blue - 900 via - purple - 900 to - indigo -900">
       <div className="container mx - auto px-4 py-24 text-center text-white">
@@ -98,18 +98,18 @@ export default Services;
             </div>
             <div className="bg-white / 10 backdrop - blur - sm rounded-xl p - 8 border border-white / 20">
               <h3 className="text-2xl font - bold mb-2">Support Ticket Triage Copilot</h3>
-              <p className="text-gray - 300 mb-4">Classifies, deduplicates, and suggests resolutions; integrates with Zendesk / Jira.</p>
+              <p className="text-gray - 300 mb-4">Classifies, deduplicates, and suggests resolutions, integrates with Zendesk / Jira.</p>
               <ul className="text-sm text-gray - 300 mb-4 list - disc pl - 5 space - y-1">
                 <li > Auto - priority and routing</li>
                 <li > Knowledge base suggestions</li>
                 <li > First - response macros</li>
               </ul>
               <p className="text-2xl font - bold text-blue - 400 mb-4">$249 - $999 / month</p>
-              <a href="/solutions" className="text-cyan - 300 hover:text-cyan - 200 font -semibold">See solution →</a>
+              <a href="/solutions" className="text-cyan - 300 hover: text-cyan - 200 font -semibold">See solution →</a>
             </div>
             <div className="bg-white / 10 backdrop - blur - sm rounded-xl p - 8 border border-white / 20">
               <h3 className="text-2xl font - bold mb-2">Invoice OCR + Reconciliation</h3>
-              <p className="text-gray - 300 mb-4">Extracts line - items and auto - matches to POs; exports to QuickBooks / Xero.</p>
+              <p className="text-gray - 300 mb-4">Extracts line - items and auto - matches to POs, exports to QuickBooks / Xero.</p>
               <ul className="text-sm text-gray - 300 mb-4 list - disc pl - 5 space - y-1">
                 <li > Vendor anomaly detection</li>
                 <li > Tax and currency support</li>
@@ -206,6 +206,6 @@ export default Services;
           </a>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},
 

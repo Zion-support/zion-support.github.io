@@ -1,10 +1,10 @@
-import React, { useState, useMemo } from 'react';
-export default ComprehensivePricingGuide2031;
-import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031';
+import React, { useState, useMemo } from 'react',
+export default ComprehensivePricingGuide2031,
+import { COMPREHENSIVE_PRICING_GUIDE_2031 } from '../data/comprehensivePricingGuide2031',
 
 export default function Page() {
-    return filtered;
-  }, [searchQuery, selectedCategory]) ;
+    return filtered,
+  }, [searchQuery, selectedCategory]) ,
 
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType < any> } = {
@@ -17,24 +17,23 @@ export default function Page() {
       'IoT & Predictive Analytics': Network,
       'Customer Experience & AI': Users,
       'Research & AI': Code,
-      'Business Intelligence & AI': BarChart3,
-    };
-    return iconMap[category] || Globe;
-  };
+      'Business Intelligence & AI': BarChart3
+    },
+    return iconMap[category] || Globe,
+  },
 
   const getInnovationColor = (level: string) => {
     const colorMap: { [key: string]: string } = {
-      Revolutionary: 'from - purple - 500 to - pink - 500',
-      'Cutting - edge': 'from - blue - 500 to - indigo - 500',
+      Revolutionary: 'from - purple - 500 to - pink - 500Cutting - edge': 'from - blue - 500 to - indigo - 500',
       Advanced: 'from - green - 500 to - teal - 500',
-      Breakthrough: 'from - red - 500 to - orange - 500',
-    };
-    return colorMap[level] || 'from - gray - 500 to - slate - 500';
-  };
+      Breakthrough: 'from - red - 500 to - orange - 500'
+    },
+    return colorMap[level] || 'from - gray - 500 to - slate - 500',
+  },
 
   const toggleServiceExpansion = (id: string) => {
-    setExpandedService(expandedService === id ? null : id) ;
-  };
+    setExpandedService(expandedService === id ? null : id) 
+  },
 
   const getTierColor = (tierName: string) => {
     const colorMap: { [key: string]: string } = {
@@ -43,10 +42,10 @@ export default function Page() {
       Creator: 'from - green - 500 to - emerald - 500',
       Student: 'from - purple - 500 to - pink - 500',
       Professional: 'from - cyan - 500 to - blue - 500',
-      Enterprise: 'from - orange - 500 to - red - 500',
-    };
-    return colorMap[tierName] || 'from - gray - 500 to - slate - 500';
-  };
+      Enterprise: 'from - orange - 500 to - red - 500'
+    },
+    return colorMap[tierName] || 'from - gray - 500 to - slate - 500',
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -165,13 +164,13 @@ export default function Page() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div  className="max - w-7xl mx -auto">
           <div  className="grid grid - cols - 1 lg:grid - cols - 2 gap-8">
             {filteredServices.map(service => {
-              const CategoryIcon = getCategoryIcon (service.category) ;
+              const CategoryIcon = getCategoryIcon (service.category) ,
               const selectedPricingTier = service.pricingTiers.find(tier => tier.name === selectedTier) ||
-                service.pricingTiers[1];
+                service.pricingTiers[1],
 
               return (<motion.div
                   key={service.id}
@@ -359,7 +358,7 @@ export default function Page() {
                         </div>
                       </div>
                     </motion.div>) }
-                </motion.div>) ;
+                </motion.div>) ,
             }) }
           </div>
 
@@ -382,7 +381,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray - 300 mb-8">
@@ -409,6 +408,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

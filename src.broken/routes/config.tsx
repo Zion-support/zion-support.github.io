@@ -1,16 +1,16 @@
-import React from 'react';
-// Removed: import { RouteObject } from 'react-router';
-// Removed: import { Navigate } from 'react-router-dom';
+import React from 'react',
+// Removed: import { RouteObject } from 'react-router',
+// Removed: import { Navigate } from 'react-router-dom',
 
 // Redefined AppRouteObject without react-router types
 export interface AppRouteObject {
-  path?: string;
-  element?: React.ReactNode; // Keep as ReactNode for component references
-  index?: boolean;
-  children?: AppRouteObject[];
-  metaTitle?: string;
-  requiresAuth?: boolean;
-  // caseSensitive?: boolean; // Removed as it was from RouteObject
+  path?: string,
+  element?: React.ReactNode, // Keep as ReactNode for component references
+  index?: boolean,
+  children?: AppRouteObject[],
+  metaTitle?: string,
+  requiresAuth?: boolean,
+  // caseSensitive?: boolean, // Removed as it was from RouteObject
 }
 
 // Ensure this interface still meets the needs of guardRoutes and other usages.
@@ -19,66 +19,65 @@ export interface AppRouteObject {
 
 /*
   The original AppRouteObject extended Omit<RouteObject, 'index' | 'children'>.
-  RouteObject has properties like:
-  caseSensitive?: boolean;
-  path?: string;
-  id?: string;
-  loader?: LoaderFunction;
-  action?: ActionFunction;
-  element?: React.ReactNode | null;
-  errorElement?: React.ReactNode | null;
-  handle?: RouteHandle;
-  shouldRevalidate?: ShouldRevalidateFunction;
-  children?: RouteObject[];
-  index?: boolean;
+  RouteObject has properties like: caseSensitive?: boolean,
+  path?: string,
+  id?: string,
+  loader?: LoaderFunction,
+  action?: ActionFunction,
+  element?: React.ReactNode | null,
+  errorElement?: React.ReactNode | null,
+  handle?: RouteHandle,
+  shouldRevalidate?: ShouldRevalidateFunction,
+  children?: RouteObject[],
+  index?: boolean,
 
   The new AppRouteObject keeps path, element, index, children, metaTitle, requiresAuth.
   If other properties from RouteObject were implicitly used (e.g. id, caseSensitive),
   they might need to be explicitly added back or handled differently.
 */
-import RootPage from '@/pages/RootPage';
-import MarketplaceLanding from '@/pages/MarketplaceLanding';
-import Categories from '@/pages/Categories';
-import Blog from '@/pages/Blog';
-import ServicesPage from '@/pages/ServicesPage';
-import ProductsList from '@/pages/ProductsList';
-import ErrorGuard from '@/components/ErrorGuard';
+import RootPage from '@/pages/RootPage',
+import MarketplaceLanding from '@/pages/MarketplaceLanding',
+import Categories from '@/pages/Categories',
+import Blog from '@/pages/Blog',
+import ServicesPage from '@/pages/ServicesPage',
+import ProductsList from '@/pages/ProductsList',
+import ErrorGuard from '@/components/ErrorGuard',
 
 function guardRoutes(routes: AppRouteObject[]): AppRouteObject[] {
-  return routes;
+  return routes
 }
-import { LoginForm } from '@/components/auth/login';
-import OAuthCallback from '@/pages/OAuthCallback';
-import Dashboard from '@/pages/Dashboard';
-import Profile from '@/pages/Profile';
-import ForgotPassword from '@/pages/ForgotPassword';
-import ResetPassword from '@/pages/ResetPassword';
-import Wallet from '@/pages/Wallet';
-import CheckoutPage from '@/pages/CheckoutPage';
-import AboutPage from '@/pages/About';
-import PartnersPage from '@/pages/Partners';
-import PartnerIntegration from '@/pages/PartnerIntegration';
-import InvestorMatchPage from '@/pages/InvestorMatch';
-import BlogPost from '@/pages/BlogPost';
-import GrantsPage from '@/pages/Grants';
-import RoadmapPage from '@/pages/Roadmap';
-import RoadmapFeaturePage from '@/pages/RoadmapFeature';
-import RoadmapSuggestPage from '@/pages/RoadmapSuggest';
-import ErrorTriggerComponent from '@/components/testing/ErrorTriggerComponent';
-import { CommunityProvider } from '@/context';
-import VerifyIdentity from '@/pages/VerifyIdentity';
-import StartupOSPage from '@/pages/StartupOS'; // Import the new page
-import GlobalMapPage from '@/pages/GlobalMap';
-import SummitPage from '@/pages/SummitPage';
-import OrgChartPage from '@/pages/OrgChart';
-import PrivacyVotePage from '@/pages/governance/privacy';
-import MobilePwa from '@/pages/MobilePwa';
-import FounderBackupVault from '@/pages/FounderBackupVault';
-import CongressPage from '@/pages/Congress';
-import UNBridgePage from '@/pages/UNBridge';
-import InternationalProposalsPage from '@/pages/InternationalProposals';
-import DocsPage from '@/pages/DocsPage'; // Added import for DocsPage
-const Signup = React.lazy(() => import('@/pages/Signup'));
+import { LoginForm } from '@/components/auth/login',
+import OAuthCallback from '@/pages/OAuthCallback',
+import Dashboard from '@/pages/Dashboard',
+import Profile from '@/pages/Profile',
+import ForgotPassword from '@/pages/ForgotPassword',
+import ResetPassword from '@/pages/ResetPassword',
+import Wallet from '@/pages/Wallet',
+import CheckoutPage from '@/pages/CheckoutPage',
+import AboutPage from '@/pages/About',
+import PartnersPage from '@/pages/Partners',
+import PartnerIntegration from '@/pages/PartnerIntegration',
+import InvestorMatchPage from '@/pages/InvestorMatch',
+import BlogPost from '@/pages/BlogPost',
+import GrantsPage from '@/pages/Grants',
+import RoadmapPage from '@/pages/Roadmap',
+import RoadmapFeaturePage from '@/pages/RoadmapFeature',
+import RoadmapSuggestPage from '@/pages/RoadmapSuggest',
+import ErrorTriggerComponent from '@/components/testing/ErrorTriggerComponent',
+import { CommunityProvider } from '@/context',
+import VerifyIdentity from '@/pages/VerifyIdentity',
+import StartupOSPage from '@/pages/StartupOS', // Import the new page
+import GlobalMapPage from '@/pages/GlobalMap',
+import SummitPage from '@/pages/SummitPage',
+import OrgChartPage from '@/pages/OrgChart',
+import PrivacyVotePage from '@/pages/governance/privacy',
+import MobilePwa from '@/pages/MobilePwa',
+import FounderBackupVault from '@/pages/FounderBackupVault',
+import CongressPage from '@/pages/Congress',
+import UNBridgePage from '@/pages/UNBridge',
+import InternationalProposalsPage from '@/pages/InternationalProposals',
+import DocsPage from '@/pages/DocsPage', // Added import for DocsPage
+const Signup = React.lazy(() => import('@/pages/Signup')),
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -91,7 +90,7 @@ import {
   MarketplaceRoutes, // Assuming MarketplaceRoutes is a group of routes
   TalentRoutes,      // Assuming TalentRoutes is a group of routes
   CommunityRoutes,   // Assuming CommunityRoutes is a group of routes
-} from '.'; // Importing from the same directory (src/routes)
+} from '.', // Importing from the same directory (src/routes)
 
 export const primaryRoutes: AppRouteObject[] = guardRoutes([
   { path: '/', element: <RootPage /> },
@@ -99,14 +98,14 @@ export const primaryRoutes: AppRouteObject[] = guardRoutes([
     path: '/marketplace',
     element: <MarketplaceLanding />,
     metaTitle: 'Marketplace - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   { path: '/categories', element: <Categories />, metaTitle: 'Categories - Zion' },
   { path: '/blog', element: <Blog />, metaTitle: 'Blog - Zion', requiresAuth: false },
   { path: '/services', element: <ServicesPage />, metaTitle: 'Services - Zion', requiresAuth: false },
   { path: '/products', element: <ProductsList />, metaTitle: 'Products - Zion', requiresAuth: false },
-  { path: '/login', element: <LoginForm />, metaTitle: 'Login - Zion', requiresAuth: false },
-]);
+  { path: '/login', element: <LoginForm />, metaTitle: 'Login - Zion', requiresAuth: false }
+]),
 
 export const allRoutes: AppRouteObject[] = guardRoutes([
   ...primaryRoutes,
@@ -119,7 +118,7 @@ export const allRoutes: AppRouteObject[] = guardRoutes([
     path: '/dashboard',
     element: <Dashboard />,
     metaTitle: 'Dashboard - Zion',
-    requiresAuth: true,
+    requiresAuth: true
   },
   { path: '/partners', element: <PartnersPage /> },
   { path: '/investor-match', element: <InvestorMatchPage />, metaTitle: 'Investor Match - Zion' },
@@ -171,46 +170,46 @@ export const allRoutes: AppRouteObject[] = guardRoutes([
     path: '/founder-dashboard',
     element: <StartupOSPage />, // Reuses the same page component
     metaTitle: 'Founder Dashboard - Zion',
-    requiresAuth: true,
+    requiresAuth: true
   },
   {
     path: '/founder/backup',
     element: <FounderBackupVault />,
     metaTitle: 'Founder Backup Vault - Zion',
-    requiresAuth: true,
+    requiresAuth: true
   },
   {
     path: '/global',
     element: <GlobalMapPage />,
     metaTitle: 'Global Map - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   {
     path: '/convene',
     element: <CongressPage />,
     metaTitle: 'Planetary Congress - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   {
     path: '/protocol/congress',
     element: <CongressPage />,
     metaTitle: 'Planetary Congress - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   {
     path: '/protocol/un-bridge',
     element: <UNBridgePage />,
     metaTitle: 'UN Bridge - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   {
     path: '/proposals/international',
     element: <InternationalProposalsPage />,
     metaTitle: 'International Proposals - Zion',
-    requiresAuth: false,
+    requiresAuth: false
   },
   // Route for documentation page - This is handled by pages/docs.tsx which provides props via getStaticProps
   // { path: '/docs', element: <DocsPage />, metaTitle: 'Documentation - Zion' },
   // Wildcard for error handling - ensure this is last
-  { path: '*', element: <ErrorRoutes />, metaTitle: 'Not Found - Zion' },
-]);
+  { path: '*', element: <ErrorRoutes />, metaTitle: 'Not Found - Zion' }
+]),

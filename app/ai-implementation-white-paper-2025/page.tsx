@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import ErrorBoundary from '../components/ErrorBoundary',
+import SEO from '../components/SEO',
 export const metadata = {,
-  title: 'AI Implementation White Paper 2025: Enterprise Strategy & Best Practices';
-  description: 'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.';
-  keywords: ['AI implementationenterprise AI strategy', 'AI white paperAI best practices', 'AI transformation frameworkAI implementation guide'],
-};
+  title: 'AI Implementation White Paper 2025: Enterprise Strategy & Best Practices',
+  description: 'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.',
+  keywords: ['AI implementationenterprise AI strategyAI white paperAI best practices', 'AI transformation frameworkAI implementation guide']
+},
 export default function AIImplementationWhitePaper2025() {,
   return (,
     <ErrorBoundary>,
@@ -45,7 +45,7 @@ export default function AIImplementationWhitePaper2025() {,
             </div>,
           </div>,
         </section>,
-        {/* Executive Summary */,}
+        {/* Executive Summary */}
         <section id="executive-summary" className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Executive Summary</h2>,
@@ -97,12 +97,12 @@ export default function AIImplementationWhitePaper2025() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Framework */,}
+        {/* Implementation Framework */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Proven Implementation Framework</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
-              {/* Phase 1 */,}
+              {/* Phase 1 */}
               <div className="bg-gradient-to-br from-blue-800 to-blue-900 p-8 rounded-xl shadow-2xl">,
                 <div className="text-4xl mb-4">🔍</div>,
                 <h3 className="text-xl font-bold text-white mb-4">Phase 1: Discovery & Assessment</h3>,
@@ -147,7 +147,7 @@ export default function AIImplementationWhitePaper2025() {,
                   <li>• Continuous optimization</li>,
                 </ul>,
               </div>,
-              {/* Phase 4 */,}
+              {/* Phase 4 */}
               <div className="bg-gradient-to-br from-orange-800 to-orange-900 p-8 rounded-xl shadow-2xl">,
                 <div className="text-4xl mb-4">📈</div>,
                 <h3 className="text-xl font-bold text-white mb-4">Phase 4: Scale & Optimize</h3>,
@@ -301,7 +301,7 @@ export default function AIImplementationWhitePaper2025() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-4xl mx-auto text-center">,
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Implement AI Successfully?</h2>,
@@ -326,4 +326,4 @@ export default function AIImplementationWhitePaper2025() {,
         </section>,
       </div>,
     </ErrorBoundary>,
-  ),}
+  )}

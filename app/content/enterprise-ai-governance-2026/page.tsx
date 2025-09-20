@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'Enterprise AI Governance Blueprint 2026 | Zion Tech Group';
+  title: 'Enterprise AI Governance Blueprint 2026 | Zion Tech Group',
   description:,
-    'Practical governance for AI systems in 2026: policies, controls, evals, and risk management to ship trustworthy AI at scale.',
-};
+    'Practical governance for AI systems in 2026: policies, controls, evals, and risk management to ship trustworthy AI at scale.'
+},
 export default function EnterpriseAIGovernance2026Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -12,7 +12,7 @@ export default function EnterpriseAIGovernance2026Page() {,
         <p className="text-sm font-semibold text-purple-700">Blueprint • 2026</p>,
         <h1 className="text-4xl font-bold text-gray-900 mt-2">Enterprise AI Governance Blueprint 2026</h1>,
         <p className="text-gray-600 mt-4">,
-          A field-tested blueprint for establishing outcome-driven AI governance across the enterprise: policy-as-code;
+          A field-tested blueprint for establishing outcome-driven AI governance across the enterprise: policy-as-code,
           evaluation-first development, model and data controls, monitoring, and risk workflows that keep velocity high,
           without compromising safety.,
         </p>,
@@ -50,6 +50,5 @@ export default function EnterpriseAIGovernance2026Page() {,
         <Link href="/content" className="text-purple-700 font-semibold hover: text-purple-800">← Back to Content</Link>,
         <Link href="/contact" className="text-white bg-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-purple-700">Talk to an expert</Link>,
       </footer>,
-    </main>,
-  ),}
+    </main>)}
 ,

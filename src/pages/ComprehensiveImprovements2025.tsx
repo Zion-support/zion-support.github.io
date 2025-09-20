@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Star, 
+  Star,
   Zap, 
   Brain, 
   Shield, 
@@ -53,125 +53,76 @@ import {
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon
-} from 'lucide-react';
-import EnhancedSEOManager from '../components/EnhancedSEOManager';
-
+} from "lucide-react";
+import EnhancedSEOManager from "../components/EnhancedSEOManager";
 export default function ComprehensiveImprovements2025() {
   const improvements = [
     {
-      category: 'AI & Machine Learning Services',
-      icon: Brain,
-      color: 'from-zion-cyan to-zion-purple',
-      items: [
-        'AI Workflow Orchestrator - Intelligent workflow automation',
-        'AI Data Governance Platform - Comprehensive data compliance',
-        'AI Customer Experience Analytics - Advanced customer insights',
-        'AI Business Intelligence Analytics - ML-powered insights',
-        'AI Compliance Assistant - Automated regulatory compliance',
-        'AI Sales Copilot - Intelligent sales optimization',
-        'AI-Powered SEO - Machine learning optimization',
-        'Interview Assessment AI - Candidate evaluation',
-        'AI Content Marketing Suite - Automated content creation',
-        'AI Customer Support Automation - Intelligent support',
-        'AI Project Management - AI-driven optimization',
-        'AI Financial Analytics - Intelligent financial insights',
-        'AI Financial Risk Management - Risk assessment',
-        'AI Code Review Security Scanner - Security analysis',
-        'AI DevOps Automation Platform - DevOps automation',
-        'AI Customer Experience Support - Enhanced experience',
-        'AI Marketing Automation Personalization - Personalization',
-        'AI Quantum Hybrid Platform - Quantum-AI integration',
-        'AI Quantum Financial Trading - Quantum trading',
-        'AI Autonomous Supply Chain - Supply chain automation',
+      category: 'AI & Machine Learning Services',icon: Brain,color: 'from-zion-cyan to-zion-purple',items: [
+        'AI Workflow Orchestrator - Intelligent workflow automationAI Data Governance Platform - Comprehensive data compliance';
+        'AI Customer Experience Analytics - Advanced customer insightsAI Business Intelligence Analytics - ML-powered insights',
+        'AI Compliance Assistant - Automated regulatory complianceAI Sales Copilot - Intelligent sales optimization',
+        'AI-Powered SEO - Machine learning optimizationInterview Assessment AI - Candidate evaluation',
+        'AI Content Marketing Suite - Automated content creationAI Customer Support Automation - Intelligent support',
+        'AI Project Management - AI-driven optimizationAI Financial Analytics - Intelligent financial insights',
+        'AI Financial Risk Management - Risk assessmentAI Code Review Security Scanner - Security analysis',
+        'AI DevOps Automation Platform - DevOps automationAI Customer Experience Support - Enhanced experience',
+        'AI Marketing Automation Personalization - PersonalizationAI Quantum Hybrid Platform - Quantum-AI integration',
+        'AI Quantum Financial Trading - Quantum tradingAI Autonomous Supply Chain - Supply chain automation',
         'AI Cybersecurity Threat Intelligence - Threat detection'
       ]
     },
     {
-      category: 'Cloud & DevOps Solutions',
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      items: [
-        'Cloud DevOps - Infrastructure automation & scaling',
-        'IT Infrastructure - Enterprise infrastructure solutions',
-        'FinOps Advisor - Cloud cost optimization',
-        'Cloud FinOps Optimizer - Financial operations automation'
+      category: 'Cloud & DevOps Solutions',icon: Cloud,color: 'from-blue-500 to-cyan-500',items: [
+        'Cloud DevOps - Infrastructure automation & scalingIT Infrastructure - Enterprise infrastructure solutions';
+        'FinOps Advisor - Cloud cost optimizationCloud FinOps Optimizer - Financial operations automation'
       ]
     },
     {
-      category: 'Cybersecurity & Privacy',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      items: [
-        'AI Cybersecurity Platform - Advanced AI-powered security',
-        'Security Headers & CSP - Web security hardening',
-        'DSR Privacy Portal - GDPR/CCPA compliance',
-        'Zero Trust Network Access - Modern security architecture'
+      category: 'Cybersecurity & Privacy',icon: Shield,color: 'from-red-500 to-orange-500',items: [
+        'AI Cybersecurity Platform - Advanced AI-powered securitySecurity Headers & CSP - Web security hardening';
+        'DSR Privacy Portal - GDPR/CCPA complianceZero Trust Network Access - Modern security architecture'
       ]
     },
     {
-      category: 'Digital Transformation',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500',
-      items: [
-        'Digital Twin - Virtual system replicas',
-        'Digital Transformation - Strategic technology consulting',
+      category: 'Digital Transformation',icon: Zap,color: 'from-yellow-500 to-orange-500',items: [
+        'Digital Twin - Virtual system replicasDigital Transformation - Strategic technology consulting';
         'IT Consulting - Technology strategy & planning'
       ]
     },
     {
-      category: 'Emerging Technologies',
-      icon: Atom,
-      color: 'from-indigo-500 to-purple-500',
-      items: [
-        'Quantum Computing - Next-gen computational power',
-        'IoT Edge Computing - Smart device networks',
-        'Space Tech - Space technology solutions',
-        'Green IT - Sustainable technology solutions'
+      category: 'Emerging Technologies',icon: Atom,color: 'from-indigo-500 to-purple-500',items: [
+        'Quantum Computing - Next-gen computational powerIoT Edge Computing - Smart device networks';
+        'Space Tech - Space technology solutionsGreen IT - Sustainable technology solutions'
       ]
     }
-  ];
+  ],
 
   const features = [
     {
-      title: 'Futuristic Design',
-      description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX',
-      icon: Sparkles,
-      color: 'from-pink-500 to-purple-500'
-    },
+      title: 'Futuristic Design',description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX',
+      icon: Sparkles,color: 'from-pink-500 to-purple-500'
+    };
     {
-      title: 'Responsive Layout',
-      description: 'Optimized for all screen sizes with mobile-first approach',
-      icon: Smartphone,
-      color: 'from-blue-500 to-cyan-500'
-    },
+      title: 'Responsive Layout',description: 'Optimized for all screen sizes with mobile-first approach',icon: Smartphone,color: 'from-blue-500 to-cyan-500'
+    };
     {
-      title: 'Performance Optimized',
-      description: 'Lazy loading, code splitting, and optimized animations',
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-500'
-    },
+      title: 'Performance Optimized',description: 'Lazy loading, code splitting, and optimized animations',
+      icon: Zap,color: 'from-yellow-500 to-orange-500'
+    };
     {
-      title: 'Accessibility Enhanced',
-      description: 'WCAG compliant with enhanced user experience',
-      icon: Eye,
-      color: 'from-green-500 to-emerald-500'
+      title: 'Accessibility Enhanced',description: 'WCAG compliant with enhanced user experience',icon: Eye,color: 'from-green-500 to-emerald-500'
     }
   ];
-
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <EnhancedSEOManager
       seoData={{
-        title: 'Comprehensive Improvements 2025 | Zion Tech Group',
-        description: 'Discover our comprehensive suite of improvements including AI services, performance analytics, SEO optimization, and modern UI/UX enhancements.',
-        keywords: ['AI services', 'performance analytics', 'SEO optimization', 'UI/UX', 'security features', 'integrations'],
-        ogType: 'website',
-        canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
+        title: 'Comprehensive Improvements 2025 | Zion Tech Group',description: 'Discover our comprehensive suite of improvements including AI services, performance analytics, SEO optimization, and modern UI/UX enhancements.',
+        keywords: ['AI servicesperformance analytics', 'SEO optimizationUI/UX', 'security featuresintegrations'],
+        ogType: 'website',canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
       }}
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -393,7 +344,7 @@ export default function ComprehensiveImprovements2025() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              <h3 className="text-2xl md: text-3xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Experience the Future of Technology
               </h3>
               <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -420,5 +371,5 @@ export default function ComprehensiveImprovements2025() {
         </section>
       </div>
     </EnhancedSEOManager>
-  );
+  )
 }

@@ -1,31 +1,26 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { AlertTriangle, RefreshCw } from "lucide-react";
 interface Props {
   children: ReactNode;
   onError?: (error: Error) => void;
-  fallback?: ReactNode;
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean,error: Error | null,errorInfo: ErrorInfo | null
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
+      hasError: false,error: null,errorInfo: null
     };
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true,
+      hasError: true;
       error,
       errorInfo: null
     };
@@ -33,34 +28,34 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
+error;
       errorInfo
-    });
+    
+}),
 
     // Call the onError callback if provided
     if (this.props.onError) {
-      this.props.onError(error);
+      this.props.onError(error),
     }
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo),
     }
   }
 
   handleRetry = () => {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  };
+hasError: false,error: null,errorInfo: null
+    
+});
+  },
 
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       // Default error UI
@@ -77,7 +72,7 @@ export class ErrorBoundary extends Component<Props, State> {
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-800 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <h3 className="text-red-400 font-semibold mb-2">Error Details: </h3>
                 <pre className="text-xs text-red-300 whitespace-pre-wrap break-words">
                   {this.state.error.message}
                 </pre>
@@ -102,14 +97,14 @@ export class ErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
+                className="px-6 py-3 bg-gray-600 hover: bg-gray-700 text-white rounded-lg transition-colors duration-200 font-medium"
               >
                 Refresh Page
               </button>
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

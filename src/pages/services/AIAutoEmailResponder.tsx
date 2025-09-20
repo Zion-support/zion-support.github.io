@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 export default function AIAutoEmailResponder() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -13,7 +12,7 @@ export default function AIAutoEmailResponder() {
           AI Auto Email Responder
         </h1>
         <p className="text-zion-slate-light max-w-3xl">
-          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies,
+          Reduce response times and improve CSAT with an AI responder that drafts context-aware replies;
           classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
@@ -25,7 +24,7 @@ export default function AIAutoEmailResponder() {
               <li>• Intent/sentiment detection, priority triage</li>
               <li>• Multi-lingual drafting with brand tone controls</li>
               <li>• Knowledge grounding from your docs/CRM</li>
-              <li>• Approval queues; role-based workflows</li>
+              <li>• Approval queues, role-based workflows</li>
               <li>• Secure redaction (PII/PHI), audit logs</li>
               <li>• Integrations: Gmail, O365, HubSpot, Salesforce, Zendesk</li>
             </ul>
@@ -38,10 +37,9 @@ export default function AIAutoEmailResponder() {
               <li>• Enterprise: Custom SSO, VPC, SLAs</li>
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
-              References:
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>,
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>,
-              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>
+              References: <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>;
+              <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>;
+              <a className="text-cyan-400 hover: text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>
             </p>
           </div>
         </div>
@@ -49,7 +47,7 @@ export default function AIAutoEmailResponder() {
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Time-to-Value</h3>
-            <p className="text-sm text-zion-slate-light">Deploy pilot in 7 days; typical 35–60% faster responses.</p>
+            <p className="text-sm text-zion-slate-light">Deploy pilot in 7 days, typical 35–60% faster responses.</p>
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Compliance</h3>
@@ -57,11 +55,11 @@ export default function AIAutoEmailResponder() {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Get a Quote</h3>
-            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
+            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto: kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
 

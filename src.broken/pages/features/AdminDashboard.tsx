@@ -1,9 +1,9 @@
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import React from "react",
+import { Header } from "@/components/Header",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import Link from 'next/link',
 
 export default function AdminDashboard() {
   const schema = {
@@ -12,7 +12,7 @@ export default function AdminDashboard() {
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  };
+  },
 
   return (
     <>
@@ -36,12 +36,12 @@ export default function AdminDashboard() {
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src="https://placehold.co/800x400"
+              src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
             />
           </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
             <li>Approve or remove listings with a few clicks.</li>
@@ -66,5 +66,5 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
-  );
+  ),
 }

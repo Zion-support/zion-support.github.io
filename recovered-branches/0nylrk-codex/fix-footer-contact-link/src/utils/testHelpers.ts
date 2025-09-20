@@ -1,48 +1,48 @@
 import React from 'react',
 // Testing utilities and helpers,
 export const createMockUser = (overrides = {}) => ({,
-  id: '1';
-  name: 'Test User';
-  email: 'test@example.com';
-  avatar: 'https://via.placeholder.com/150';
-  ...overrides,
-});
+  id: '1',
+  name: 'Test User',
+  email: 'test@example.com',
+  avatar: 'https://via.placeholder.com/150',
+  ...overrides
+}),
 export const createMockApiResponse = <T>(data: T, delay = 100) => {,
   return new Promise<T>((resolve) => {,
-    setTimeout(() => resolve(data), delay);
-  });
-};
+    setTimeout(() => resolve(data), delay),
+  }),
+},
 export const mockFetch = (response: any, status = 200) => {,
   global.fetch = jest.fn(() =>,
     Promise.resolve({,
-      ok: status >= 200 && status < 300;
-      status;
-      json: () => Promise.resolve(response);
-      text: () => Promise.resolve(JSON.stringify(response)),}),
-  ) as jest.Mock;
-};
+      ok: status >= 200 && status < 300,
+      status,
+      json: () => Promise.resolve(response),
+      text: () => Promise.resolve(JSON.stringify(response))}),
+  ) as jest.Mock,
+},
 export const renderWithProviders = (ui: React.ReactElement, options = {}) => {,
   // This would integrate with your testing library setup,
   // For now, just return the UI,
-  return ui;
-};
+  return ui,
+},
 export const waitForElement = (selector: string): Promise<Element> => {,
   return new Promise((resolve) => {,
-    const element = document.querySelector(selector);
+    const element = document.querySelector(selector),
     if (element) {,
-      resolve(element);
-      return,
+      resolve(element),
+      return
     }
 ,
     const observer = new MutationObserver(() => {,
-      const element = document.querySelector(selector);
+      const element = document.querySelector(selector),
       if (element) {,
-        observer.disconnect();
-        resolve(element);
+        observer.disconnect(),
+        resolve(element),
       }
-    });
+    }),
     observer.observe(document.body, {,
-      childList: true;
-      subtree: true,});
-  });
-};
+      childList: true,
+      subtree: true}),
+  }),
+},

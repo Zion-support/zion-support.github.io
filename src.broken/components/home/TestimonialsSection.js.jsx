@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function TestimonialsSection() {
   const testimonials = [{
 
@@ -26,8 +26,8 @@ export function TestimonialsSection() {
       content:'
         'Their cloud migration expertise saved us months of planning and implementation time.The results exceeded our expectations.',
       rating: 5,
-      avatar: '👩‍🔬'},
-  ];
+      avatar: '👩‍🔬'}
+  ],
   const renderStars = rating => {
 
     return Array.from({ length: 5 }, (_, i) => (
@@ -37,8 +37,8 @@ export function TestimonialsSection() {
       >
         ★
       </span>
-    ));
-  };
+    )),
+  },
   return ()
     <section className="py-16 bg-white">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -82,6 +82,6 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

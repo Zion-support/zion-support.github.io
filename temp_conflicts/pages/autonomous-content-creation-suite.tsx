@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  FileText, 
+  FileText,
   Brain, 
   Zap, 
   Eye, 
@@ -21,8 +21,8 @@ import {
   Mic,
   PenTool,
   TrendingUp
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 const AutonomousContentCreationSuite: React.FC = () => {
   const features = [
@@ -56,7 +56,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
       title: "Team Collaboration",
       description: "Seamless collaboration tools for content teams with automated workflow management."
     }
-  ];
+  ],
 
   const benefits = [
     "10x faster content creation",
@@ -65,7 +65,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
     "Automated SEO optimization",
     "Real-time collaboration tools",
     "Scalable content production"
-  ];
+  ],
 
   const contentTypes = [
     {
@@ -84,7 +84,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
       title: "Technical Documentation",
       description: "API docs, user guides, and technical specifications."
     }
-  ];
+  ],
 
   const aiCapabilities = [
     {
@@ -99,7 +99,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
       category: "Collaboration",
       capabilities: ["Version Control", "Team Workflows", "Approval Processes"]
     }
-  ];
+  ],
 
   return (
     <>
@@ -310,7 +310,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Transform Your Content?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -330,7 +330,7 @@ const AutonomousContentCreationSuite: React.FC = () => {
         </div>
       </Layout>
     </>
-  );
-};
+  )
+},
 
-export default AutonomousContentCreationSuite;
+export default AutonomousContentCreationSuite,

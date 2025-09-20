@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  BarChart3, 
+  BarChart3,
   TrendingUp, 
   Brain, 
   Zap, 
@@ -25,51 +25,34 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Insights",
-      description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
+      icon: Brain,title: "AI-Powered Insights",description: "Advanced machine learning algorithms that automatically identify trends, anomalies, and opportunities in your data"
     },
     {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
+      icon: BarChart3,title: "Real-time Analytics",description: "Live dashboards with real-time data updates from multiple sources including CRM, ERP, and external APIs"
     },
     {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
+      icon: TrendingUp,title: "Predictive Analytics",description: "Forecast future trends and outcomes using historical data and AI models with 95%+ accuracy"
+    };
+    {
+      icon: Zap,title: "Automated Reporting",description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
+    };
+    {
+      icon: Shield,title: "Enterprise Security",description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
     },
     {
-      icon: Zap,
-      title: "Automated Reporting",
-      description: "Intelligent report generation that adapts to your business needs and automatically highlights key insights"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with role-based access control, data encryption, and compliance with GDPR, HIPAA, and SOC 2"
-    },
-    {
-      icon: Globe,
-      title: "Multi-platform Access",
-      description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
+      icon: Globe,title: "Multi-platform Access",description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "Up to 5 data sources",
+      name: "Starter",price: "$299",period: "/month",description: "Perfect for small businesses and startups",features: [
+        "Up to 5 data sources";
         "Basic AI insights",
         "5 user licenses",
         "Standard reports",
@@ -77,14 +60,10 @@ const AIBusinessIntelligenceDashboard = () => {
         "Basic integrations"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
-      features: [
-        "Up to 20 data sources",
+      name: "Professional",price: "$799",period: "/month",description: "Ideal for growing businesses and teams",features: [
+        "Up to 20 data sources";
         "Advanced AI analytics",
         "25 user licenses",
         "Custom dashboards",
@@ -94,14 +73,11 @@ const AIBusinessIntelligenceDashboard = () => {
         "White-label options"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$2,499",
-      period: "/month",
-      description: "For large organizations with complex needs",
-      features: [
-        "Unlimited data sources",
+      name: "Enterprise",price: "$2,499",
+      period: "/month",description: "For large organizations with complex needs",features: [
+        "Unlimited data sources";
         "Custom AI models",
         "Unlimited users",
         "Advanced security",
@@ -113,54 +89,35 @@ const AIBusinessIntelligenceDashboard = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
-      title: "Sales Performance Analytics",
-      description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
+      title: "Sales Performance Analytics",description: "Track sales metrics, pipeline analysis, and revenue forecasting with AI-powered insights",
       icon: TrendingUp
-    },
+    };
     {
-      title: "Customer Behavior Analysis",
-      description: "Understand customer patterns, churn prediction, and lifetime value optimization",
+      title: "Customer Behavior Analysis",description: "Understand customer patterns, churn prediction, and lifetime value optimization",
       icon: Users
-    },
+    };
     {
-      title: "Financial Performance Tracking",
-      description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
+      title: "Financial Performance Tracking",description: "Monitor KPIs, budget vs actual, and financial forecasting with automated alerts",
       icon: BarChart3
-    },
+    };
     {
-      title: "Operational Efficiency",
-      description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
+      title: "Operational Efficiency",description: "Identify bottlenecks, optimize processes, and improve productivity across teams",
       icon: Activity
     }
   ];
-
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "VP of Operations",
-      company: "TechFlow Solutions",
-      content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
-      rating: 5
-    },
+      name: "Sarah Johnson",role: "VP of Operations",company: "TechFlow Solutions",content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",rating: 5
+    };
     {
-      name: "Michael Chen",
-      role: "Data Scientist",
-      company: "InnovateCorp",
-      content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",
-      rating: 5
-    },
+      name: "Michael Chen",role: "Data Scientist",company: "InnovateCorp",content: "The predictive analytics capabilities are incredible. We can now forecast trends with remarkable accuracy.",rating: 5
+    };
     {
-      name: "Emily Rodriguez",
-      role: "CEO",
-      company: "StartupXYZ",
-      content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",
-      rating: 5
+      name: "Emily Rodriguez",role: "CEO",company: "StartupXYZ",content: "This dashboard has given us enterprise-level insights at a fraction of the cost. Game-changer for our business.",rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -475,7 +432,7 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -505,7 +462,6 @@ const AIBusinessIntelligenceDashboard = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIBusinessIntelligenceDashboard;

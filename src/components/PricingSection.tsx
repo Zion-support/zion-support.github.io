@@ -1,30 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const pricingTiers = [
   {
-    name: "Starter",
-    price: "$99",
-    period: "/month",
-    description: "Perfect for small businesses and startups",
-    features: [
-      "Basic AI Services",
+    name: "Starter",price: "$99",period: "/month",description: "Perfect for small businesses and startups",features: [
+      "Basic AI Services";
       "Email Support",
       "5GB Storage",
       "Basic Analytics",
       "Mobile App Access"
     ],
-    popular: false,
-    color: "from-blue-500 to-cyan-500"
-  },
+    popular: false,color: "from-blue-500 to-cyan-500"
+  };
   {
-    name: "Professional",
-    price: "$299",
-    period: "/month",
-    description: "Ideal for growing businesses",
-    features: [
-      "Advanced AI Services",
+    name: "Professional",price: "$299",period: "/month",description: "Ideal for growing businesses",features: [
+      "Advanced AI Services";
       "Priority Support",
       "50GB Storage",
       "Advanced Analytics",
@@ -32,16 +22,11 @@ const pricingTiers = [
       "Custom Integrations",
       "Team Collaboration"
     ],
-    popular: true,
-    color: "from-purple-500 to-pink-500"
-  },
+    popular: true,color: "from-purple-500 to-pink-500"
+  };
   {
-    name: "Enterprise",
-    price: "$999",
-    period: "/month",
-    description: "For large organizations",
-    features: [
-      "Full AI Suite",
+    name: "Enterprise",price: "$999",period: "/month",description: "For large organizations",features: [
+      "Full AI Suite";
       "24/7 Dedicated Support",
       "Unlimited Storage",
       "Custom Analytics",
@@ -50,11 +35,9 @@ const pricingTiers = [
       "Custom Development",
       "SLA Guarantee"
     ],
-    popular: false,
-    color: "from-green-500 to-emerald-500"
+    popular: false,color: "from-green-500 to-emerald-500"
   }
 ];
-
 export function PricingSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -140,7 +123,7 @@ export function PricingSection() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover: bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team
             <span className="text-sm">→</span>
@@ -148,5 +131,5 @@ export function PricingSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

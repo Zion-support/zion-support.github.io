@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 
 export default function ContactPage() {
   return (
@@ -23,8 +23,8 @@ export default function ContactPage() {
             Get Started
           </Link>
 =======
-import React, { useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useCallback } from 'react',
+import { Link } from 'react-router-dom',
 import {
   Phone,
   Mail,
@@ -74,8 +74,8 @@ import {
   BarChart3,
   Users2,
   Settings,
-  Palette,
-} from 'lucide-react';
+  Palette
+} from 'lucide-react',
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -85,32 +85,32 @@ export function ContactPage() {
     company: '',
     phone: '',
     service: '',
-    message: '',
-  });
+    message: ''
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
-    });
-  }, [formData]);
+      [e.target.name]: e.target.value
+    }),
+  }, [formData]),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setIsSubmitting(false),
+    setIsSubmitted(true),
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
+      setIsSubmitted(false),
       setFormData({
         firstName: '',
         lastName: '',
@@ -118,10 +118,10 @@ export function ContactPage() {
         email: '',
         phone: '',
         service: '',
-        message: '',
-      });
-    }, 3000);
-  };
+        message: ''
+      }),
+    }, 3000),
+  },
 
   const contactMethods = [
     {
@@ -130,7 +130,7 @@ export function ContactPage() {
       icon: Phone,
       description: 'Call us anytime',
       color: 'from-blue-500 to-cyan-600',
-      link: 'tel:+13024640950',
+      link: 'tel:+13024640950'
     },
     {
       title: 'Email',
@@ -138,7 +138,7 @@ export function ContactPage() {
       icon: Mail,
       description: 'Send us a message',
       color: 'from-purple-500 to-pink-600',
-      link: 'mailto:kleber@ziontechgroup.com',
+      link: 'mailto:kleber@ziontechgroup.com'
     },
     {
       title: 'Office',
@@ -146,35 +146,31 @@ export function ContactPage() {
       icon: MapPin,
       description: 'Visit our headquarters',
       color: 'from-green-500 to-teal-600',
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       title: 'Hours',
       value: '24/7 Support',
       icon: Clock,
       description: 'Always here for you',
-      color: 'from-orange-500 to-red-600',
-    },
-  ];
+      color: 'from-orange-500 to-red-600'
+    }
+  ],
 
   const services = [
-    'AI & Machine Learning',
-    'Cybersecurity',
-    'Cloud Infrastructure',
-    'Digital Transformation',
-    'Data Analytics',
-    'Software Development',
-    'IT Consulting',
-    'Other',
-  ];
+    'AI & Machine LearningCybersecurity',
+    'Cloud InfrastructureDigital Transformation',
+    'Data AnalyticsSoftware Development',
+    'IT ConsultingOther'
+  ],
 
   const socialLinks = [
     { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-500' },
     { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-sky-500' },
     { name: 'GitHub', icon: Github, href: '#', color: 'hover:text-gray-400' },
     { name: 'Facebook', icon: Facebook, href: '#', color: 'hover:text-blue-600' },
-    { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-pink-500' },
-  ];
+    { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-pink-500' }
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -471,7 +467,7 @@ export function ContactPage() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Let's Build the Future Together</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Ready to take your business to the next level? Our team is here to help you succeed 
@@ -498,5 +494,5 @@ export function ContactPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

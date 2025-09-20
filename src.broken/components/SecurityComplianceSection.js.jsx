@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-];
+],
 const complianceFrameworks = [{
 "
         name: "NIST Cybersecurity Framework","
@@ -10,9 +10,9 @@ const complianceFrameworks = [{
         description: "Voluntary framework for managing and reducing cybersecurity risk","
         implementation: "Fully Implemented","
         maturity: "Tier 4 - Adaptive","
-        controls["Identify", "Protect", "Detect", "Respond", "Recover"],;"
-        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"];
-    },;
+        controls["Identify", "Protect", "Detect", "Respond", "Recover"],"
+        benefits["Risk-based Approach", "Industry Best Practices", "Continuous Improvement", "Stakeholder Confidence"],
+    },
     {
 "
         name: "OWASP Top 10","
@@ -20,9 +20,9 @@ const complianceFrameworks = [{
         description: "Standard awareness document for developers and web application security","
         implementation: "Fully Implemented","
         maturity: "Advanced","
-        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],;"
-        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"];
-    },;
+        controls["Input Validation", "Authentication", "Session Management", "Data Protection"],"
+        benefits["Secure Development", "Vulnerability Prevention", "Code Quality", "Security Training"],
+    },
     {
 "
         name: "PCI DSS","
@@ -30,9 +30,9 @@ const complianceFrameworks = [{
         description: "Payment Card Industry Data Security Standard compliance","
         implementation: "Compliant","
         maturity: "Level 1","
-        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],;"
-        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"];
-    },;
+        controls["Network Security", "Access Control", "Data Encryption", "Vulnerability Management"],"
+        benefits["Payment Processing", "Customer Trust", "Fraud Prevention", "Industry Standards"],
+    },
     {
 "
         name: "FedRAMP","
@@ -40,10 +40,10 @@ const complianceFrameworks = [{
         description: "Federal Risk and Authorization Management Program compliance","
         implementation: "In Progress","
         maturity: "Authorization Phase","
-        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],;"
-        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"];
+        controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],"
+        benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"],
     }
-];
+],
 const securityStats = ["
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },"
     { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },"
@@ -51,10 +51,10 @@ const securityStats = ["
     { icon: <CheckCircle className="w-6 h-6"/>, value: "15+", label: "Certifications" },"
     { icon: <Users className="w-6 h-6"/>, value: "0", label: "Security Breaches" },"
     { icon: <Award className="w-6 h-6"/>, value: "100%", label: "Compliance" }
-];
-    const [selectedStandard, setSelectedStandard] = useState(null);
-    const [selectedFramework, setSelectedFramework] = useState(null);
-    const [selectedFeature, setSelectedFeature] = useState(null);
+],
+    const [selectedStandard, setSelectedStandard] = useState(null),
+    const [selectedFramework, setSelectedFramework] = useState(null),
+    const [selectedFeature, setSelectedFeature] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -67,7 +67,7 @@ const securityStats = ["
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -84,7 +84,7 @@ const securityStats = ["
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

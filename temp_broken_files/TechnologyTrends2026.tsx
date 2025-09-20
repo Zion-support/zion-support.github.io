@@ -1,62 +1,62 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Brain,
   Zap,
   Rocket,
   Target,
-  Globe;
-  ArrowRight;
-  Play;
-  BookOpen;
-  Code;
-  Lightbulb;
-  Star;
-  Award;
-  ChevronRight;
-  ExternalLink;
-  Sparkles;
-  Cpu;
-  Shield;
-  Database;
-  Network;
-  Microscope;
-  Atom;
-  Layers;
-  Search;
-  Calendar;
-  Users;
-  BarChart3;
-  PieChart;
-  LineChart,
-} from 'lucide-react';
+  Globe,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search,
+  Calendar,
+  Users,
+  BarChart3,
+  PieChart,
+  LineChart
+} from 'lucide-react',
 interface TrendItem {,
-  id: string;
-  title: string;
-  description: string;
-  category: 'ai' | 'quantum' | 'automation' | 'biotech' | 'robotics' | 'sustainability';
-  impact: 'low' | 'medium' | 'high' | 'transformative';
-  timeline: string;
+  id: string,
+  title: string,
+  description: string,
+  category: 'ai' | 'quantum' | 'automation' | 'biotech' | 'robotics' | 'sustainability',
+  impact: 'low' | 'medium' | 'high' | 'transformative',
+  timeline: string,
   adoption: number, // percentage,
-  marketSize: string;
+  marketSize: string,
   growth: number, // percentage,
-  tags: string[];
-  image: string;
-  url: string;
-  featured: boolean;
+  tags: string[],
+  image: string,
+  url: string,
+  featured: boolean,
   predictions: {,
-    shortTerm: string;
-    mediumTerm: string;
-    longTerm: string,};
-  keyPlayers: string[];
-  challenges: string[],}
+    shortTerm: string,
+    mediumTerm: string,
+    longTerm: string},
+  keyPlayers: string[],
+  challenges: string[]}
 ,
 const TechnologyTrends2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">,
-      {/* Header Section */,}
+      {/* Header Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>,
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -74,14 +74,14 @@ const TechnologyTrends2026: React.FC = () => {,
               Discover the most influential technology trendsbreakthrough innovationsand transformative,
               developments that will shape the future of technology and society.,
             </p>,
-            {/* Search and View Controls */,}
+            {/* Search and View Controls */}
             <div className="max-w-4xl mx-auto mb-8">,
               <div className="flex flex-col md: flex-row gap-4 items-center justify-center">,
                 <div className="relative flex-1 max-w-2xl">,
                   <input,
                     type="text",
                     placeholder="Search trendstechnologiesor predictions...",
-                    value={searchQuery,}
+                    value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full px-6 py-4 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent",
                   />,
@@ -89,16 +89,16 @@ const TechnologyTrends2026: React.FC = () => {,
                 </div>,
                 <div className="flex bg-white/10 rounded-xl p-1">,
                   <button,
-                    onClick={() => setViewMode('grid'),}
+                    onClick={() => setViewMode('grid')}
                     className={`px-4 py-2 rounded-lg transition-colors ${,
-                      viewMode === 'grid' ? 'bg-white/20 text-white' : 'text-gray-400 hover: text-white',}`}
+                      viewMode === 'grid' ? 'bg-white/20 text-white' : 'text-gray-400 hover: text-white'}`}
                   >,
                     Grid,
                   </button>,
                   <button,
                     onClick={() => setViewMode('timeline')}
                     className={`px-4 py-2 rounded-lg transition-colors ${,
-                      viewMode === 'timeline' ? 'bg-white/20 text-white' : 'text-gray-400 hover: text-white',}`}
+                      viewMode === 'timeline' ? 'bg-white/20 text-white' : 'text-gray-400 hover: text-white'}`}
                   >,
                     Timeline,
                   </button>,
@@ -119,12 +119,12 @@ const TechnologyTrends2026: React.FC = () => {,
           </h2>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {featuredTrends.map((trendindex) => {,
-              const CategoryIcon = getCategoryIcon(trend.category);
+              const CategoryIcon = getCategoryIcon(trend.category),
               return (,
                 <div,
                   key={trend.id}
                   className="group relative bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 hover: border-white/40 transition-all duration-300 hover:scale-105",
-                  onClick={() => setSelectedTrend(trend),}
+                  onClick={() => setSelectedTrend(trend)}
                 >,
                   <div className="relative h-48 overflow-hidden">,
                     <img,
@@ -137,7 +137,7 @@ const TechnologyTrends2026: React.FC = () => {,
                       <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs font-semibold">,
                         Featured,
                       </span>,
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getImpactColor(trend.impact),}`}>,
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getImpactColor(trend.impact)}`}>,
                         {trend.impact}
                       </span>,
                     </div>,
@@ -153,14 +153,14 @@ const TechnologyTrends2026: React.FC = () => {,
                       <span className="text-sm text-gray-400">{trend.timeline}</span>,
                     </div>,
                     <h3 className="text-xl font-bold text-white mb-3 group-hover: text-indigo-400 transition-colors">,
-                      {trend.title,}
+                      {trend.title}
                     </h3>,
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">,
                       {trend.description}
                     </p>,
                     <div className="flex items-center justify-between mb-4">,
                       <div className="flex items-center space-x-4 text-sm text-gray-400">,
-                        <span>Market: {trend.marketSize,}</span>,
+                        <span>Market: {trend.marketSize}</span>,
                         <span className={`font-semibold ${getGrowthColor(trend.growth)}`}>,
                           +{trend.growth}%,
                         </span>,
@@ -169,16 +169,16 @@ const TechnologyTrends2026: React.FC = () => {,
                     <div className="w-full bg-gray-700 rounded-full h-2 mb-4">,
                       <div,
                         className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full transition-all duration-1000",
-                        style={{ width: `${trend.adoption,}%` }}
+                        style={{ width: `${trend.adoption}%` }}
                       ></div>,
                     </div>,
                     <div className="flex items-center justify-between">,
-                      <span className="text-xs text-gray-400">Adoption: {trend.adoption,}%</span>,
+                      <span className="text-xs text-gray-400">Adoption: {trend.adoption}%</span>,
                       <ChevronRight className="h-5 w-5 text-gray-400 group-hover: text-indigo-400 transition-colors" />,
                     </div>,
                   </div>,
                 </div>,
-              ),})}
+              )})}
           </div>,
         </div>,
         {/* Category Filter */}
@@ -188,7 +188,7 @@ const TechnologyTrends2026: React.FC = () => {,
           <h2 className="text-3xl font-bold text-white mb-8">Browse by Category</h2>,
           <div className="flex flex-wrap gap-4">,
             {categories.map((category) => {,
-              const Icon = category.icon;
+              const Icon = category.icon,
               return (,
                 <button,
                   key={category.id}
@@ -196,7 +196,7 @@ const TechnologyTrends2026: React.FC = () => {,
                   className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${,
                     activeCategory === category.id,
                       ? 'bg-indigo-400 text-black font-semibold',
-                      : 'bg-white/10 text-white hover: bg-white/20',}`}
+                      : 'bg-white/10 text-white hover: bg-white/20'}`}
                 >,
                   <Icon className="h-5 w-5 mr-2" />,
                   <span>{category.name}</span>,
@@ -204,7 +204,7 @@ const TechnologyTrends2026: React.FC = () => {,
                     {category.count}
                   </span>,
                 </button>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -213,12 +213,12 @@ const TechnologyTrends2026: React.FC = () => {,
         >,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
             {filteredTrends.map((trendindex) => {,
-              const CategoryIcon = getCategoryIcon(trend.category);
+              const CategoryIcon = getCategoryIcon(trend.category),
               return (,
                 <div,
                   key={trend.id}
                   className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover: border-white/30 transition-all duration-300 hover:scale-105",
-                  onClick={() => setSelectedTrend(trend),}
+                  onClick={() => setSelectedTrend(trend)}
                 >,
                   <div className="relative h-40 overflow-hidden">,
                     <img,
@@ -231,7 +231,7 @@ const TechnologyTrends2026: React.FC = () => {,
                       <CategoryIcon className="h-5 w-5 text-white" />,
                     </div>,
                     <div className="absolute top-3 right-3">,
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getImpactColor(trend.impact),}`}>,
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${getImpactColor(trend.impact)}`}>,
                         {trend.impact}
                       </span>,
                     </div>,
@@ -244,13 +244,13 @@ const TechnologyTrends2026: React.FC = () => {,
                       <span className="text-xs text-gray-400">{trend.timeline}</span>,
                     </div>,
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-indigo-400 transition-colors line-clamp-2">,
-                      {trend.title,}
+                      {trend.title}
                     </h3>,
                     <p className="text-gray-300 text-sm mb-3 line-clamp-2">,
                       {trend.description}
                     </p>,
                     <div className="flex items-center justify-between text-xs text-gray-400 mb-2">,
-                      <span>Market: {trend.marketSize,}</span>,
+                      <span>Market: {trend.marketSize}</span>,
                       <span className={`font-semibold ${getGrowthColor(trend.growth)}`}>,
                         +{trend.growth}%,
                       </span>,
@@ -258,16 +258,16 @@ const TechnologyTrends2026: React.FC = () => {,
                     <div className="w-full bg-gray-700 rounded-full h-1.5 mb-2">,
                       <div,
                         className="bg-gradient-to-r from-indigo-500 to-purple-500 h-1.5 rounded-full transition-all duration-1000",
-                        style={{ width: `${trend.adoption,}%` }}
+                        style={{ width: `${trend.adoption}%` }}
                       ></div>,
                     </div>,
                     <div className="flex items-center justify-between">,
-                      <span className="text-xs text-gray-400">Adoption: {trend.adoption,}%</span>,
+                      <span className="text-xs text-gray-400">Adoption: {trend.adoption}%</span>,
                       <ChevronRight className="h-4 w-4 group-hover: text-indigo-400 transition-colors" />,
                     </div>,
                   </div>,
                 </div>,
-              ),})}
+              )})}
           </div>,
         </div>,
       </div>,
@@ -298,7 +298,7 @@ const TechnologyTrends2026: React.FC = () => {,
               <div className="p-8">,
                 <div className="flex items-center justify-between mb-4">,
                   <span className="text-sm text-gray-600 uppercase tracking-wide">,
-                    {selectedTrend.category,}
+                    {selectedTrend.category}
                   </span>,
                   <div className="flex space-x-2">,
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getImpactColor(selectedTrend.impact)}`}>,
@@ -318,7 +318,7 @@ const TechnologyTrends2026: React.FC = () => {,
                 {/* Market Data */}
                 <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-6">,
                   <div className="bg-gray-50 rounded-lg p-4 text-center">,
-                    <div className="text-2xl font-bold text-indigo-600">{selectedTrend.marketSize,}</div>,
+                    <div className="text-2xl font-bold text-indigo-600">{selectedTrend.marketSize}</div>,
                     <div className="text-sm text-gray-600">Market Size</div>,
                   </div>,
                   <div className="bg-gray-50 rounded-lg p-4 text-center">,
@@ -342,7 +342,7 @@ const TechnologyTrends2026: React.FC = () => {,
                   <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,
                     <div className="bg-blue-50 rounded-lg p-4">,
                       <h4 className="font-semibold text-blue-900 mb-2">Short Term</h4>,
-                      <p className="text-blue-800 text-sm">{selectedTrend.predictions.shortTerm,}</p>,
+                      <p className="text-blue-800 text-sm">{selectedTrend.predictions.shortTerm}</p>,
                     </div>,
                     <div className="bg-green-50 rounded-lg p-4">,
                       <h4 className="font-semibold text-green-900 mb-2">Medium Term</h4>,
@@ -361,12 +361,11 @@ const TechnologyTrends2026: React.FC = () => {,
                     <div className="flex flex-wrap gap-2">,
                       {selectedTrend.keyPlayers.map((player) => (,
                         <span,
-                          key={player,}
+                          key={player}
                           className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm",
                         >,
                           {player}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                   <div>,
@@ -378,8 +377,7 @@ const TechnologyTrends2026: React.FC = () => {,
                           className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm",
                         >,
                           {challenge}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -390,12 +388,11 @@ const TechnologyTrends2026: React.FC = () => {,
                       className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm",
                     >,
                       #{tag}
-                    </span>,
-                  ))}
+                    </span>))}
                 </div>,
                 <div className="flex items-center justify-between">,
                   <div className="text-sm text-gray-500">,
-                    Timeline: {selectedTrend.timeline,}
+                    Timeline: {selectedTrend.timeline}
                   </div>,
                   <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700 transition-colors flex items-center">,
                     <ExternalLink className="h-4 w-4 mr-2" />,
@@ -405,9 +402,9 @@ const TechnologyTrends2026: React.FC = () => {,
               </div>,
             </div>,
           </div>,
-        ),}
+        )}
       </div>,
     </div>,
-  );
-export default TechnologyTrends2026;
+  ),
+export default TechnologyTrends2026,
 }

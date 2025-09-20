@@ -1,4 +1,4 @@
-import Image from "next/image"; // Import Image
+import Image from "next/image", // Import Image
 
 export function InteractiveMap() {
   const locations = [{ name: 'New York', subdomain: 'ny.zionapp.com', top: '40%', left: '35%' },
@@ -8,8 +8,8 @@ export function InteractiveMap() {
       subdomain: 'london.zionapp.com',
       top: '30%',
       left: '50%'},
-    { name: 'Tokyo', subdomain: 'tokyo.zionapp.com', top: '45%', left: '80%' },
-  ];
+    { name: 'Tokyo', subdomain: 'tokyo.zionapp.com', top: '45%', left: '80%' }
+  ],
   return (
     <section className="py-12 bg-background text-foreground" id="map">
       <div className="container mx-auto px-4 space-y-6 text-center">
@@ -34,6 +34,6 @@ export function InteractiveMap() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

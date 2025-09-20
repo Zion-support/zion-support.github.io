@@ -1,4 +1,4 @@
     </div>,
-  );
-};
-export default ComprehensiveServicesShowcase;
+  ),
+},
+export default ComprehensiveServicesShowcase,

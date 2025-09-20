@@ -1,19 +1,19 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitor from '../components/PerformanceMonitor';
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import PerformanceMonitor from '../components/PerformanceMonitor',
 describe('PerformanceMonitor', () => {,
   test('renders without crashing', () => {,
-    render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument();
-  });
+    render(<PerformanceMonitor />),
+    expect(screen.getByTestId('performancemonitor')).toBeInTheDocument(),
+  }),
   test('displays correct content', () => {,
-    render(<PerformanceMonitor />);
-  });
+    render(<PerformanceMonitor />),
+  }),
   test('handles user interactions', () => {,
-    render(<PerformanceMonitor />);
-  });
+    render(<PerformanceMonitor />),
+  }),
   test('applies correct styling', () => {,
-    render(<PerformanceMonitor />);
-  });
-});
+    render(<PerformanceMonitor />),
+  }),
+}),

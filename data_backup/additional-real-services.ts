@@ -1,5998 +1,5586 @@
 export interface AdditionalRealService {,
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {,
-    mobile: string;
-    email: string;
-address: string,},export const "additionalEnhancedServices": AdditionalRealService[] = [{,
-    id: "ai-automation-suite";
-    "name": "AI Automation Suite";
-    "tagline": "Intelligent automation for modern businesses";
-    "price": "$79/month";
-    "description": "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.";
+    mobile: string,
+    email: string,
+address: string},export const "additionalEnhancedServices": AdditionalRealService[] = [{,
+    id: "ai-automation-suite",
+    "name": "AI Automation Suite",
+    "tagline": "Intelligent automation for modern businesses",
+    "price": "$79/month",
+    "description": "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
     features[,
-      "Workflow automation";
-      "AI decision making";
-      "Integration APIs";
-      "Custom workflows";
-      "Analytics dashboard",
-    ];
-    "link": "/services/ai-automation-suite";
-    "category": "AI & Automation";
-    "realImplementation": true;
+      "Workflow automation",
+      "AI decision making",
+      "Integration APIs",
+      "Custom workflows",
+      "Analytics dashboard"
+    ],
+    "link": "/services/ai-automation-suite",
+    "category": "AI & Automation",
+    "realImplementation": true,
     "contactInfo": {,
-      mobile: "+1 302 464 0950";
-      "email": "kleber@ziontechgroup.com";
-      "address": "364 E Main St STE 1008 Middletown DE 19709",
-  };
+      mobile: "+1 302 464 0950",
+      "email": "kleber@ziontechgroup.com",
+      "address": "364 E Main St STE 1008 Middletown DE 19709"
+  },
   {,
-    id:;
-  ai-sales-outreach-agent';
-    "name": 'AI Sales Outreach Agent;
-    tagline:;
-  Personalized multi-channel sequences with compliance guardrails';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Automates lead research and crafts compliant, personalized outreach across email and LinkedIn with adaptive follow-ups and CRM sync.;
-  ;
-    "features": ['Account and persona research;
-  'Personalized sequence generatorDeliverability and SPF/DKIM checks';
-  'CRM sync and analytics',
-    ];
-    "popular": true;
-    icon:;
-  🤖';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-200';
-    "link": 'https://ziontechgroup.com/services/ai-sales-outreach-agent;
-    marketPosition:;
-  Higher personalization at lower cost than legacy sequencers.';
-    "targetAudience": ['Sales;
-  'Growth'];
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Growth & Marketing;
-    "realService": true;
-    "technology": [;
-  LLMsLinkedIn/Email APIs'];
-    "integrations": ['HubSpot;
-;
-  SalesforceOutlook';
-  'Gmail'];
-    "useCases": ['Outbound SDR;
-;
-  Upsell campaigns'];
-    "roi": 'Improves reply rates by 2–3x;
-    "competitors": [;
-  OutreachSalesloft (partial)'];
-    "marketSize": '$7B sales tech;
-    growthRate:;
-  12% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  OAuth connectors, sending pools, policy engine.';
-    "launchDate": '2025-07-20;
-    "customers": 33;
-    "rating": 4.7;
-    "reviews": 19,
-  };
+    id: ,
+  ai-sales-outreach-agent',
+    "name": 'AI Sales Outreach Agent,
+    tagline:,
+  Personalized multi-channel sequences with compliance guardrails',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Automates lead research and crafts compliant, personalized outreach across email and LinkedIn with adaptive follow-ups and CRM sync.,
+  ,
+    "features": ['Account and persona research,
+  'Personalized sequence generatorDeliverability and SPF/DKIM checksCRM sync and analytics'
+    ],
+    "popular": true,
+    icon: ,
+  🤖',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-200',
+    "link": 'https://ziontechgroup.com/services/ai-sales-outreach-agent,
+    marketPosition:,
+  Higher personalization at lower cost than legacy sequencers.',
+    "targetAudience": ['Sales,
+  'Growth'],
+    "trialDays": 14,
+    setupTime:,
+  30 minutes',
+    "category": 'Growth & Marketing,
+    "realService": true,
+    "technology": [,
+  LLMsLinkedIn/Email APIs'],
+    "integrations": ['HubSpot,
+,
+  SalesforceOutlookGmail'],
+    "useCases": ['Outbound SDR,
+,
+  Upsell campaigns'],
+    "roi": 'Improves reply rates by 2–3x,
+    "competitors": [,
+  OutreachSalesloft (partial)'],
+    "marketSize": '$7B sales tech,
+    growthRate:,
+  12% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  OAuth connectors, sending pools, policy engine.',
+    "launchDate": '2025-07-20,
+    "customers": 33,
+    "rating": 4.7,
+    "reviews": 19
+  },
   {,
-    id:;
-  soc2-continuous-compliance';
-    "name": 'SOC 2 Continuous Compliance;
-    tagline:;
-  Controls, evidence, alerts and auditor-ready exports';
-    "price": '$199;
-    period:;
-  /month';
-    "description": Automates SOC 2 controls monitoring with cloud/IdP/device evidence collectors, control owners, exceptions, and exportable audit packs.;
-  ;
-    "features": ['Automated evidence collection;
-  'Control mappings and ownersExceptions and approvals';
-  'Auditor-ready exports',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-slate-700 to-zinc-800;
-    textColor:;
-  text-slate-200';
-    "link": 'https://ziontechgroup.com/services/soc2-continuous-compliance;
-    marketPosition:;
-  Fast time-to-audit without vendor lock-in.';
-    "targetAudience": ['Security;
-  'ITEngineering'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Security & Compliance;
-    "realService": true;
-    "technology": [;
-  AWS/Azure/GCP APIsOkta';
-  'JAMF'];
-    "integrations": ['AWS;
-;
-  AzureGCP';
-  'OktaGoogle Workspace';
-  'M365'];
-    "useCases": ['SOC 2 readiness;
-;
-  Continuous monitoring'];
-    "roi": 'Cuts audit prep by 60%;
-    "competitors": [;
-  VantaDrata'];
-    "marketSize": '$5.5B GRC;
-    growthRate:;
-  13% CAGR';
-    "variant": 'security-futuristic;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Connector SDK, controls engine, exports.';
-    "launchDate": '2025-07-05;
-    "customers": 16;
-    "rating": 4.6;
-    "reviews": 9,
-  };
+    id: ,
+  soc2-continuous-compliance',
+    "name": 'SOC 2 Continuous Compliance,
+    tagline:,
+  Controls, evidence, alerts and auditor-ready exports',
+    "price": '$199,
+    period:,
+  /month',
+    "description": Automates SOC 2 controls monitoring with cloud/IdP/device evidence collectors, control owners, exceptions, and exportable audit packs.,
+  ,
+    "features": ['Automated evidence collection,
+  'Control mappings and ownersExceptions and approvalsAuditor-ready exports'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-slate-700 to-zinc-800,
+    textColor:,
+  text-slate-200',
+    "link": 'https://ziontechgroup.com/services/soc2-continuous-compliance,
+    marketPosition:,
+  Fast time-to-audit without vendor lock-in.',
+    "targetAudience": ['Security,
+  'ITEngineering'],
+    "trialDays": 14,
+    setupTime:,
+  1 day',
+    "category": 'Security & Compliance,
+    "realService": true,
+    "technology": [,
+  AWS/Azure/GCP APIsOktaJAMF'],
+    "integrations": ['AWS,
+,
+  AzureGCPOktaGoogle Workspace',
+  'M365'],
+    "useCases": ['SOC 2 readiness,
+,
+  Continuous monitoring'],
+    "roi": 'Cuts audit prep by 60%,
+    "competitors": [,
+  VantaDrata'],
+    "marketSize": '$5.5B GRC,
+    growthRate:,
+  13% CAGR',
+    "variant": 'security-futuristic,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Connector SDK, controls engine, exports.',
+    "launchDate": '2025-07-05,
+    "customers": 16,
+    "rating": 4.6,
+    "reviews": 9
+  },
   {,
-    id:;
-  finops-cost-optimizer';
-    "name": 'FinOps Cost Optimizer;
-    tagline:;
-  Actionable savings across AWS, Azure, and GCP';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Finds idle and over-provisioned resources, right-sizes compute, proposes commitments and schedules with one-click change sets.;
-  ;
-    "features": ['Idle/oversized resource detection;
-  'Rightsizing recommendationsCommitment and schedule planner';
-  'Change set preview and apply',
-    ];
-    "popular": false;
-    icon:;
-  💸';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-200';
-    "link": 'https://ziontechgroup.com/services/finops-cost-optimizer;
-    marketPosition:;
-  Focused SMB savings with low setup.';
-    "targetAudience": ['Platform;
-  'Finance'];
-    "trialDays": 14;
-    setupTime:;
-  45 minutes';
-    "category": 'Cloud & DevOps;
-    "realService": true;
-    "technology": [;
-  Cloud Billing APIsIaC'];
-    "integrations": ['AWS;
-;
-  AzureGCP';
-  'Terraform'];
-    "useCases": ['Cloud cost control;
-;
-  Budget enforcement'];
-    "roi": 'Saves 15–30% monthly spend;
-    "competitors": [;
-  CloudZeroProsperOps (partial)'];
-    "marketSize": '$3B FinOps;
-    growthRate:;
-  18% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Analyzers, policy engine, IaC changers.';
-    "launchDate": '2025-07-10;
-    "customers": 20;
-    "rating": 4.5;
-    "reviews": 10,
-  };
+    id: ,
+  finops-cost-optimizer',
+    "name": 'FinOps Cost Optimizer,
+    tagline:,
+  Actionable savings across AWS, Azure, and GCP',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Finds idle and over-provisioned resources, right-sizes compute, proposes commitments and schedules with one-click change sets.,
+  ,
+    "features": ['Idle/oversized resource detection,
+  'Rightsizing recommendationsCommitment and schedule plannerChange set preview and apply'
+    ],
+    "popular": false,
+    icon: ,
+  💸',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-200',
+    "link": 'https://ziontechgroup.com/services/finops-cost-optimizer,
+    marketPosition:,
+  Focused SMB savings with low setup.',
+    "targetAudience": ['Platform,
+  'Finance'],
+    "trialDays": 14,
+    setupTime:,
+  45 minutes',
+    "category": 'Cloud & DevOps,
+    "realService": true,
+    "technology": [,
+  Cloud Billing APIsIaC'],
+    "integrations": ['AWS,
+,
+  AzureGCPTerraform'],
+    "useCases": ['Cloud cost control,
+,
+  Budget enforcement'],
+    "roi": 'Saves 15–30% monthly spend,
+    "competitors": [,
+  CloudZeroProsperOps (partial)'],
+    "marketSize": '$3B FinOps,
+    growthRate:,
+  18% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Analyzers, policy engine, IaC changers.',
+    "launchDate": '2025-07-10,
+    "customers": 20,
+    "rating": 4.5,
+    "reviews": 10
+  },
   {,
-    id:;
-  cloud-migration-factory';
-    "name": 'Cloud Migration Factory;
-    tagline:;
-  Blueprints, landing zones, and automated cutovers';
-    "price": $12,000;
-  ;
-    "period": '/project;
-    description:;
-  Fixed-scope, repeatable cloud migration packages with secure landing zones, CI/CD, observability, and cost controls.';
-    "features": ['Landing zone setup;
-  'Automated cutover runbooksObservability and FinOps';
-  'Security baselines',
-    ];
-    "popular": true;
-    icon:;
-  ☁️';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-200';
-    "link": 'https://ziontechgroup.com/services/cloud-migration-factory;
-    marketPosition:;
-  Predictable migrations with lower risk.';
-    "targetAudience": ['IT;
-  'Engineering'];
-    "trialDays": 0;
-    setupTime:;
-  Project kickoff in 1 week';
-    "category": 'IT Services;
-    "realService": true;
-    "technology": [;
-  AWSAzure';
-  'GCPTerraform'];
-    "integrations": ['Jira;
-;
-  GitHubGitLab'];
-    "useCases": ['Data center exit;
-;
-  Modernization'];
-    "roi": 'Reduces migration time by 30–50%;
-    "competitors": [;
-  GSIsBoutique firms'];
-    "marketSize": '$150B cloud services;
-    growthRate:;
-  17% CAGR';
-    "variant": 'consulting-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Blueprints, pipelines, cutover playbooks.';
-    "launchDate": '2025-07-18;
-    "customers": 9;
-    "rating": 4.8;
-    "reviews": 5,
-  };
+    id: ,
+  cloud-migration-factory',
+    "name": 'Cloud Migration Factory,
+    tagline:,
+  Blueprints, landing zones, and automated cutovers',
+    "price": $12,000,
+  ,
+    "period": '/project,
+    description:,
+  Fixed-scope, repeatable cloud migration packages with secure landing zones, CI/CD, observability, and cost controls.',
+    "features": ['Landing zone setup,
+  'Automated cutover runbooksObservability and FinOpsSecurity baselines'
+    ],
+    "popular": true,
+    icon: ,
+  ☁️',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-200',
+    "link": 'https://ziontechgroup.com/services/cloud-migration-factory,
+    marketPosition:,
+  Predictable migrations with lower risk.',
+    "targetAudience": ['IT,
+  'Engineering'],
+    "trialDays": 0,
+    setupTime:,
+  Project kickoff in 1 week',
+    "category": 'IT Services,
+    "realService": true,
+    "technology": [,
+  AWSAzureGCPTerraform'],
+    "integrations": ['Jira,
+,
+  GitHubGitLab'],
+    "useCases": ['Data center exit,
+,
+  Modernization'],
+    "roi": 'Reduces migration time by 30–50%,
+    "competitors": [,
+  GSIsBoutique firms'],
+    "marketSize": '$150B cloud services,
+    growthRate:,
+  17% CAGR',
+    "variant": 'consulting-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Blueprints, pipelines, cutover playbooks.',
+    "launchDate": '2025-07-18,
+    "customers": 9,
+    "rating": 4.8,
+    "reviews": 5
+  },
   {,
-    id:;
-  data-quality-monitor';
-    "name": 'Data Quality Monitor;
-    tagline:;
-  Schema checks, freshness SLAs, and anomaly alerts';
-    "price": '$49;
-    period:;
-  /month';
-    "description": Monitors tables and pipelines for schema drift, null spikes, freshness breaches, and distribution anomalies with ownership routing.;
-  ;
-    "features": ['Schema and null checks;
-  'Freshness SLAsAnomaly detection';
-  'Ownership routing and runbooks',
-    ];
-    "popular": false;
-    icon:;
-  📊';
-    "color": 'from-fuchsia-600 to-rose-700;
-    textColor:;
-  text-fuchsia-200';
-    "link": 'https://ziontechgroup.com/services/data-quality-monitor;
-    marketPosition:;
-  Targeted data reliability for SMB analytics teams.';
-    "targetAudience": ['Data;
-  'Analytics'];
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Data Platform;
-    "realService": true;
-    "technology": [;
-  dbtAirflow';
-  'Warehouse APIs'];
-    "integrations": ['Snowflake;
-;
-  BigQueryRedshift'];
-    "useCases": ['Pipeline reliability;
-;
-  Dashboard trust'];
-    "roi": 'Cuts data incidents by 40%;
-    "competitors": [;
-  Monte Carlo (partial)Databand'];
-    "marketSize": '$5B data ops;
-    growthRate:;
-  18% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Collectors, rules engine, alerting.';
-    "launchDate": '2025-07-08;
-    "customers": 14;
-    "rating": 4.4;
-    "reviews": 7,
-  };
+    id: ,
+  data-quality-monitor',
+    "name": 'Data Quality Monitor,
+    tagline:,
+  Schema checks, freshness SLAs, and anomaly alerts',
+    "price": '$49,
+    period:,
+  /month',
+    "description": Monitors tables and pipelines for schema drift, null spikes, freshness breaches, and distribution anomalies with ownership routing.,
+  ,
+    "features": ['Schema and null checks,
+  'Freshness SLAsAnomaly detectionOwnership routing and runbooks'
+    ],
+    "popular": false,
+    icon: ,
+  📊',
+    "color": 'from-fuchsia-600 to-rose-700,
+    textColor:,
+  text-fuchsia-200',
+    "link": 'https://ziontechgroup.com/services/data-quality-monitor,
+    marketPosition:,
+  Targeted data reliability for SMB analytics teams.',
+    "targetAudience": ['Data,
+  'Analytics'],
+    "trialDays": 14,
+    setupTime:,
+  30 minutes',
+    "category": 'Data Platform,
+    "realService": true,
+    "technology": [,
+  dbtAirflowWarehouse APIs'],
+    "integrations": ['Snowflake,
+,
+  BigQueryRedshift'],
+    "useCases": ['Pipeline reliability,
+,
+  Dashboard trust'],
+    "roi": 'Cuts data incidents by 40%,
+    "competitors": [,
+  Monte Carlo (partial)Databand'],
+    "marketSize": '$5B data ops,
+    growthRate:,
+  18% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Collectors, rules engine, alerting.',
+    "launchDate": '2025-07-08,
+    "customers": 14,
+    "rating": 4.4,
+    "reviews": 7
+  },
   {,
-    id:;
-  confluence-rag-knowledge-base';
-    "name": 'Confluence RAG Knowledge Base;
-    tagline:;
-  Secure enterprise Q&A over Confluence and Drive';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Private, up-to-date Q&A over Confluence, Google Drive, and PDFs with granular permissions, citations, and Slack bot access.;
-  ;
-    "features": ['Space/permissions-aware retrieval;
-  'Citations and source linksSlack and web chat';
-  'Scheduled re-indexing',
-    ];
-    "popular": true;
-    icon:;
-  🧠';
-    "color": 'from-violet-600 to-purple-700;
-    textColor:;
-  text-violet-200';
-    "link": 'https://ziontechgroup.com/services/confluence-rag-knowledge-base;
-    marketPosition:;
-  Secure, compliant RAG for internal knowledge.';
-    "targetAudience": ['Support;
-  'EngineeringOps'];
-    "trialDays": 14;
-    setupTime:;
-  45 minutes';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    "technology": [;
-  EmbeddingsVector DB';
-  'OAuth'];
-    "integrations": ['Confluence;
-;
-  Google DriveSlack'];
-    "useCases": ['Internal knowledge;
-;
-  Onboarding'];
-    "roi": 'Reduces time-to-answer by 70%;
-    "competitors": [;
-  Guru (partial)Slite AI'];
-    "marketSize": '$2B knowledge tools;
-    growthRate:;
-  16% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Ingestion, chunking, permissions-aware retrieval.';
-    "launchDate": '2025-07-06;
-    "customers": 27;
-    "rating": 4.6;
-    "reviews": 13,
-  };
+    id: ,
+  confluence-rag-knowledge-base',
+    "name": 'Confluence RAG Knowledge Base,
+    tagline:,
+  Secure enterprise Q&A over Confluence and Drive',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Private, up-to-date Q&A over Confluence, Google Drive, and PDFs with granular permissions, citations, and Slack bot access.,
+  ,
+    "features": ['Space/permissions-aware retrieval,
+  'Citations and source linksSlack and web chatScheduled re-indexing'
+    ],
+    "popular": true,
+    icon: ,
+  🧠',
+    "color": 'from-violet-600 to-purple-700,
+    textColor:,
+  text-violet-200',
+    "link": 'https://ziontechgroup.com/services/confluence-rag-knowledge-base,
+    marketPosition:,
+  Secure, compliant RAG for internal knowledge.',
+    "targetAudience": ['Support,
+  'EngineeringOps'],
+    "trialDays": 14,
+    setupTime: ,
+  45 minutes',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    "technology": [,
+  EmbeddingsVector DBOAuth'],
+    "integrations": ['Confluence,
+,
+  Google DriveSlack'],
+    "useCases": ['Internal knowledge,
+,
+  Onboarding'],
+    "roi": 'Reduces time-to-answer by 70%,
+    "competitors": [,
+  Guru (partial)Slite AI'],
+    "marketSize": '$2B knowledge tools,
+    growthRate:,
+  16% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Ingestion, chunking, permissions-aware retrieval.',
+    "launchDate": '2025-07-06,
+    "customers": 27,
+    "rating": 4.6,
+    "reviews": 13
+  },
   {,
-    id:;
-  e2e-test-recorder';
-    "name": 'E2E Test Recorder;
-    tagline:;
-  Record, stabilize, and run flaky-free end-to-end tests';
-    "price": '$39;
-    period:;
-  /month';
-    "description": Chrome extension and runner that records user flows, auto-stabilizes selectors, mocks network, and runs in CI.;
-  ;
-    "features": ['Recorder and selector stabilizer;
-  'Network mockingCI runner and dashboards';
-  'Slack alerts',
-    ];
-    "popular": false;
-    icon:;
-  🧪';
-    "color": 'from-amber-600 to-orange-700;
-    textColor:;
-  text-amber-200';
-    "link": 'https://ziontechgroup.com/services/e2e-test-recorder;
-    marketPosition:;
-  Reduce flakiness without heavy scripting.';
-    "targetAudience": ['QA;
-  'Eng'];
-    "trialDays": 14;
-    setupTime:;
-  20 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    "technology": [;
-  Playwright/CypressChrome Ext'];
-    "integrations": ['GitHub;
-;
-  GitLabCircleCI'];
-    "useCases": ['Regression testing;
-;
-  Release hardening'];
-    "roi": 'Cuts flaky failures by 80%;
-    "competitors": [;
-  Walnut (partial)Mabl'];
-    "marketSize": '$3B QA tools;
-    growthRate:;
-  15% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Browser ext + CLI runner.';
-    "launchDate": '2025-07-11;
-    "customers": 11;
-    "rating": 4.3;
-    "reviews": 6,
-  };
+    id: ,
+  e2e-test-recorder',
+    "name": 'E2E Test Recorder,
+    tagline:,
+  Record, stabilize, and run flaky-free end-to-end tests',
+    "price": '$39,
+    period:,
+  /month',
+    "description": Chrome extension and runner that records user flows, auto-stabilizes selectors, mocks network, and runs in CI.,
+  ,
+    "features": ['Recorder and selector stabilizer,
+  'Network mockingCI runner and dashboardsSlack alerts'
+    ],
+    "popular": false,
+    icon: ,
+  🧪',
+    "color": 'from-amber-600 to-orange-700,
+    textColor:,
+  text-amber-200',
+    "link": 'https://ziontechgroup.com/services/e2e-test-recorder,
+    marketPosition:,
+  Reduce flakiness without heavy scripting.',
+    "targetAudience": ['QA,
+  'Eng'],
+    "trialDays": 14,
+    setupTime:,
+  20 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    "technology": [,
+  Playwright/CypressChrome Ext'],
+    "integrations": ['GitHub,
+,
+  GitLabCircleCI'],
+    "useCases": ['Regression testing,
+,
+  Release hardening'],
+    "roi": 'Cuts flaky failures by 80%,
+    "competitors": [,
+  Walnut (partial)Mabl'],
+    "marketSize": '$3B QA tools,
+    growthRate:,
+  15% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails: ,
+  Browser ext + CLI runner.',
+    "launchDate": '2025-07-11,
+    "customers": 11,
+    "rating": 4.3,
+    "reviews": 6
+  },
   {,
-    id:;
-  ai-meeting-notes';
-    "name": 'AI Meeting Notes & Actions;
-    tagline:;
-  Join, transcribe, summarize, and auto-create tasks';
-    "price": '$15;
-    period:;
-  /user/month';
-    "description": Records meetings, creates structured summaries with decisions and owners, and pushes action items to task systems.;
-  ;
-    "features": ['Multi-platform meeting bot;
-  'Summaries with decisions and risksAction items to tasks';
-  'Speaker diarization',
-    ];
-    "popular": true;
-    icon:;
-  📝';
-    "color": 'from-pink-600 to-rose-700;
-    textColor:;
-  text-pink-200';
-    "link": 'https://ziontechgroup.com/services/ai-meeting-notes;
-    marketPosition:;
-  Lightweight alternative with better integrations.';
-    "targetAudience": ['All teams];
-    "trialDays": 14;
-    setupTime:;
-  10 minutes';
-    "category": 'Productivity;
-    "realService": true;
-    "technology": [;
-  STTLLMs';
-  'Calendar APIs'];
-    "integrations": ['Zoom;
-;
-  Google MeetSlack';
-  'AsanaJira'];
-    "useCases": ['Meeting hygiene;
-;
-  Project execution'];
-    "roi": 'Saves 3–5 hours/person/month;
-    "competitors": [;
-  FathomSembly (partial)'];
-    "marketSize": '$4B productivity AI;
-    growthRate:;
-  20% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Meeting joiners, diarization, task push.';
-    "launchDate": '2025-07-09;
-    "customers": 42;
-    "rating": 4.6;
-    "reviews": 22,
-  };
+    id: ,
+  ai-meeting-notes',
+    "name": 'AI Meeting Notes & Actions,
+    tagline:,
+  Join, transcribe, summarize, and auto-create tasks',
+    "price": '$15,
+    period:,
+  /user/month',
+    "description": Records meetings, creates structured summaries with decisions and owners, and pushes action items to task systems.,
+  ,
+    "features": ['Multi-platform meeting bot,
+  'Summaries with decisions and risksAction items to tasksSpeaker diarization'
+    ],
+    "popular": true,
+    icon: ,
+  📝',
+    "color": 'from-pink-600 to-rose-700,
+    textColor:,
+  text-pink-200',
+    "link": 'https://ziontechgroup.com/services/ai-meeting-notes,
+    marketPosition:,
+  Lightweight alternative with better integrations.',
+    "targetAudience": ['All teams],
+    "trialDays": 14,
+    setupTime:,
+  10 minutes',
+    "category": 'Productivity,
+    "realService": true,
+    "technology": [,
+  STTLLMsCalendar APIs'],
+    "integrations": ['Zoom,
+,
+  Google MeetSlackAsanaJira'],
+    "useCases": ['Meeting hygiene,
+,
+  Project execution'],
+    "roi": 'Saves 3–5 hours/person/month,
+    "competitors": [,
+  FathomSembly (partial)'],
+    "marketSize": '$4B productivity AI,
+    growthRate:,
+  20% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Meeting joiners, diarization, task push.',
+    "launchDate": '2025-07-09,
+    "customers": 42,
+    "rating": 4.6,
+    "reviews": 22
+  },
   {,
-    id:;
-  vendor-security-questionnaire-ai';
-    "name": 'Vendor Security Questionnaire AI;
-    tagline:;
-  Auto-fill SIG/CAIQ with evidence and citations';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Parses security questionnaires, proposes answers from policies and evidence with citations and approval workflows.;
-  ;
-    "features": ['Template ingestion (SIG/CAIQ);
-  'Answer proposal with citationsReviewer workflows';
-  'Export to XLSX and portals',
-    ];
-    "popular": false;
-    icon:;
-  📄';
-    "color": 'from-indigo-700 to-blue-800;
-    textColor:;
-  text-indigo-200';
-    "link": 'https://ziontechgroup.com/services/vendor-security-questionnaire-ai;
-    marketPosition:;
-  Faster turnarounds with better quality.';
-    "targetAudience": ['Security;
-  'Sales'];
-    "trialDays": 7;
-    setupTime:;
-  30 minutes';
-    "category": 'Security & Compliance;
-    "realService": true;
-    "technology": [;
-  LLMsPolicy store'];
-    "integrations": ['Google Drive;
-;
-  OneDriveSharePoint'];
-    "useCases": ['RFPs;
-;
-  Due diligence'];
-    "roi": 'Cuts cycle time by 50%;
-    "competitors": [;
-  Loopio (partial)Responsive'];
-    "marketSize": '$1.2B RFP tools;
-    growthRate:;
-  12% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Doc parser, answer retrieval, workflow.';
-    "launchDate": '2025-07-07;
-    "customers": 13;
-    "rating": 4.5;
-    "reviews": 8,
-  };
+    id: ,
+  vendor-security-questionnaire-ai',
+    "name": 'Vendor Security Questionnaire AI,
+    tagline:,
+  Auto-fill SIG/CAIQ with evidence and citations',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Parses security questionnaires, proposes answers from policies and evidence with citations and approval workflows.,
+  ,
+    "features": ['Template ingestion (SIG/CAIQ),
+  'Answer proposal with citationsReviewer workflowsExport to XLSX and portals'
+    ],
+    "popular": false,
+    icon: ,
+  📄',
+    "color": 'from-indigo-700 to-blue-800,
+    textColor:,
+  text-indigo-200',
+    "link": 'https://ziontechgroup.com/services/vendor-security-questionnaire-ai,
+    marketPosition:,
+  Faster turnarounds with better quality.',
+    "targetAudience": ['Security,
+  'Sales'],
+    "trialDays": 7,
+    setupTime:,
+  30 minutes',
+    "category": 'Security & Compliance,
+    "realService": true,
+    "technology": [,
+  LLMsPolicy store'],
+    "integrations": ['Google Drive,
+,
+  OneDriveSharePoint'],
+    "useCases": ['RFPs,
+,
+  Due diligence'],
+    "roi": 'Cuts cycle time by 50%,
+    "competitors": [,
+  Loopio (partial)Responsive'],
+    "marketSize": '$1.2B RFP tools,
+    growthRate:,
+  12% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Doc parser, answer retrieval, workflow.',
+    "launchDate": '2025-07-07,
+    "customers": 13,
+    "rating": 4.5,
+    "reviews": 8
+  },
   {,
-    id:;
-  accessibility-remediation-assistant';
-    "name": 'Accessibility Remediation Assistant;
-    tagline:;
-  WCAG audits, code suggestions, and CI checks';
-    "price": '$29;
-    period:;
-  /month';
-    "description": Runs accessibility scans, suggests code-level fixes with examples, and enforces gates in CI with issue creation.;
-  ;
-    "features": ['Automated audits;
-  'Code fix suggestionsCI gates and baselines';
-  'Issue sync and dashboards',
-    ];
-    "popular": false;
-    icon:;
-  ♿';
-    "color": 'from-cyan-700 to-teal-800;
-    textColor:;
-  text-cyan-200';
-    "link": 'https://ziontechgroup.com/services/accessibility-remediation-assistant;
-    marketPosition:;
-  Developer-first a11y enforcement.';
-    "targetAudience": ['Frontend;
-  'QA'];
-    "trialDays": 14;
-    setupTime:;
-  20 minutes';
-    "category": 'Quality & Monitoring;
-    "realService": true;
-    "technology": [;
-  axe-corePlaywright'];
-    "integrations": ['GitHub;
-;
-  GitLabJira'];
-    "useCases": ['WCAG compliance;
-;
-  Shift-left'];
-    "roi": 'Reduces a11y regressions by 70%;
-    "competitors": [;
-  Deque (partial)'];
-    "marketSize": '$0.8B a11y tools;
-    growthRate:;
-  11% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Scanner + PR annotations + CI.';
-    "launchDate": '2025-07-03;
-    "customers": 10;
-    "rating": 4.4;
-    "reviews": 6,
-  };
+    id: ,
+  accessibility-remediation-assistant',
+    "name": 'Accessibility Remediation Assistant,
+    tagline:,
+  WCAG audits, code suggestions, and CI checks',
+    "price": '$29,
+    period:,
+  /month',
+    "description": Runs accessibility scans, suggests code-level fixes with examples, and enforces gates in CI with issue creation.,
+  ,
+    "features": ['Automated audits,
+  'Code fix suggestionsCI gates and baselinesIssue sync and dashboards'
+    ],
+    "popular": false,
+    icon: ,
+  ♿',
+    "color": 'from-cyan-700 to-teal-800,
+    textColor:,
+  text-cyan-200',
+    "link": 'https://ziontechgroup.com/services/accessibility-remediation-assistant,
+    marketPosition:,
+  Developer-first a11y enforcement.',
+    "targetAudience": ['Frontend,
+  'QA'],
+    "trialDays": 14,
+    setupTime:,
+  20 minutes',
+    "category": 'Quality & Monitoring,
+    "realService": true,
+    "technology": [,
+  axe-corePlaywright'],
+    "integrations": ['GitHub,
+,
+  GitLabJira'],
+    "useCases": ['WCAG compliance,
+,
+  Shift-left'],
+    "roi": 'Reduces a11y regressions by 70%,
+    "competitors": [,
+  Deque (partial)'],
+    "marketSize": '$0.8B a11y tools,
+    growthRate:,
+  11% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails: ,
+  Scanner + PR annotations + CI.',
+    "launchDate": '2025-07-03,
+    "customers": 10,
+    "rating": 4.4,
+    "reviews": 6
+  },
   {,
-    id:;
-  managed-kubernetes-platformops';
-    "name": 'Managed Kubernetes PlatformOps;
-    tagline:;
-  SRE-grade clusters, GitOps, and 99.9% SLOs';
-    "price": $3,500;
-  ;
-    "period": '/month;
-    description:;
-  Provision and operate hardened EKS/AKS/GKE clusters with GitOps, observability, incident response, and cost controls.';
-    "features": ['Hardened clusters and networking;
-  'GitOps and policy as codeObservability and on-call';
-  'FinOps and capacity management',
-    ];
-    "popular": true;
-    icon:;
-  🧰';
-    "color": 'from-sky-700 to-blue-800;
-    textColor:;
-  text-sky-200';
-    "link": 'https://ziontechgroup.com/services/managed-kubernetes-platformops;
-    marketPosition:;
-  Productized SRE for SMB engineering teams.';
-    "targetAudience": ['Engineering;
-  'IT'];
-    "trialDays": 0;
-    setupTime:;
-  2 weeks';
-    "category": 'IT Services;
-    "realService": true;
-    "technology": [;
-  EKS/AKS/GKEArgoCD';
-  'IstioPrometheus'];
-    "integrations": ['AWS;
-;
-  AzureGCP';
-  'Datadog'];
-    "useCases": ['Platform engineering;
-;
-  Reliability'];
-    "roi": 'Accelerates delivery by 30%;
-    "competitors": [;
-  Managed K8s vendors'];
-    "marketSize": '$12B DevOps services;
-    growthRate:;
-  19% CAGR';
-    "variant": 'consulting-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Blueprints + runbooks + SRE on-call.';
-    "launchDate": '2025-07-01;
-    "customers": 6;
-    "rating": 4.8;
-    "reviews": 4,
-  };
+    id: ,
+  managed-kubernetes-platformops',
+    "name": 'Managed Kubernetes PlatformOps,
+    tagline:,
+  SRE-grade clusters, GitOps, and 99.9% SLOs',
+    "price": $3,500,
+  ,
+    "period": '/month,
+    description:,
+  Provision and operate hardened EKS/AKS/GKE clusters with GitOps, observability, incident response, and cost controls.',
+    "features": ['Hardened clusters and networking,
+  'GitOps and policy as codeObservability and on-callFinOps and capacity management'
+    ],
+    "popular": true,
+    icon: ,
+  🧰',
+    "color": 'from-sky-700 to-blue-800,
+    textColor:,
+  text-sky-200',
+    "link": 'https://ziontechgroup.com/services/managed-kubernetes-platformops,
+    marketPosition:,
+  Productized SRE for SMB engineering teams.',
+    "targetAudience": ['Engineering,
+  'IT'],
+    "trialDays": 0,
+    setupTime:,
+  2 weeks',
+    "category": 'IT Services,
+    "realService": true,
+    "technology": [,
+  EKS/AKS/GKEArgoCDIstioPrometheus'],
+    "integrations": ['AWS,
+,
+  AzureGCPDatadog'],
+    "useCases": ['Platform engineering,
+,
+  Reliability'],
+    "roi": 'Accelerates delivery by 30%,
+    "competitors": [,
+  Managed K8s vendors'],
+    "marketSize": '$12B DevOps services,
+    growthRate:,
+  19% CAGR',
+    "variant": 'consulting-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails: ,
+  Blueprints + runbooks + SRE on-call.',
+    "launchDate": '2025-07-01,
+    "customers": 6,
+    "rating": 4.8,
+    "reviews": 4
+  },
   {,
-    id:;
-  zero-trust-access-rollout';
-    "name": 'Zero Trust Access Rollout;
-    tagline:;
-  IdP, device posture, and app segmentation in weeks';
-    "price": $18,000;
-  ;
-    "period": '/engagement;
-    description:;
-  Deploys zero trust access with IdP integration, device posture checks, policy sets, and phased application onboarding.';
-    "features": ['IdP integration and SSO;
-  'Device posture and MFAApp segmentation and policies';
-  'Runbooks and training',
-    ];
-    "popular": false;
-    icon:;
-  🔐';
-    "color": 'from-slate-800 to-gray-900;
-    textColor:;
-  text-slate-200';
-    "link": 'https://ziontechgroup.com/services/zero-trust-access-rollout;
-    marketPosition:;
-  Outcome-driven zero trust without vendor lock.';
-    "targetAudience": ['Security;
-  'IT'];
-    "trialDays": 0;
-    setupTime:;
-  Project kickoff in 1 week';
-    "category": 'Security Consulting;
-    "realService": true;
-    "technology": [;
-  Cloudflare Zero TrustOkta';
-  'MDM'];
-    "integrations": ['Okta;
-;
-  Azure ADCrowdStrike';
-  'Jamf'];
-    "useCases": ['Remote access;
-;
-  Least privilege'];
-    "roi": 'Lowers breach risk and access toil;
-    "competitors": [;
-  MSSPsGSIs'];
-    "marketSize": '$25B services;
-    growthRate:;
-  10% CAGR';
-    "variant": 'consulting-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Policy design, rollout, hardening.';
-    "launchDate": '2025-07-14;
-    "customers": 5;
-    "rating": 4.7;
+    id: ,
+  zero-trust-access-rollout',
+    "name": 'Zero Trust Access Rollout,
+    tagline:,
+  IdP, device posture, and app segmentation in weeks',
+    "price": $18,000,
+  ,
+    "period": '/engagement,
+    description:,
+  Deploys zero trust access with IdP integration, device posture checks, policy sets, and phased application onboarding.',
+    "features": ['IdP integration and SSO,
+  'Device posture and MFAApp segmentation and policiesRunbooks and training'
+    ],
+    "popular": false,
+    icon: ,
+  🔐',
+    "color": 'from-slate-800 to-gray-900,
+    textColor:,
+  text-slate-200',
+    "link": 'https://ziontechgroup.com/services/zero-trust-access-rollout,
+    marketPosition:,
+  Outcome-driven zero trust without vendor lock.',
+    "targetAudience": ['Security,
+  'IT'],
+    "trialDays": 0,
+    setupTime:,
+  Project kickoff in 1 week',
+    "category": 'Security Consulting,
+    "realService": true,
+    "technology": [,
+  Cloudflare Zero TrustOktaMDM'],
+    "integrations": ['Okta,
+,
+  Azure ADCrowdStrikeJamf'],
+    "useCases": ['Remote access,
+,
+  Least privilege'],
+    "roi": 'Lowers breach risk and access toil,
+    "competitors": [,
+  MSSPsGSIs'],
+    "marketSize": '$25B services,
+    growthRate:,
+  10% CAGR',
+    "variant": 'consulting-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Policy design, rollout, hardening.',
+    "launchDate": '2025-07-14,
+    "customers": 5,
+    "rating": 4.7,
     "reviews": 3,
   {,
-    id:;
-  ai-email-responder';
-    "name": 'AI Email Responder;
-    tagline:;
-  Autonomous inbox triage with drafts, tone, and approvals';
-    "price": '$99;
-    period:;
-  /month';
-    "description": AI agent categorizes, prioritizes, and drafts replies with brand tone and policy guardrails, routing complex cases to humans.';
-    features['Inbox triage and SLA queuesDraft replies with tone control';
-  'Approvals and human handoffCSAT and deflection analytics',
-    ];
-    "popular": true;
-    icon:;
-  📨';
-    "color": 'from-purple-600 to-indigo-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/ai-email-responder;
-    marketPosition:;
-  Cheaper than legacy helpdesk add-ons with better guardrails and routing.';
-    "targetAudience": Support, success, operations';
-    "trialDays": 14;
-    setupTime:;
-  1 hour';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  Gmail/Office APIs, LLMs, RAG'];
-    integrations['Zendesk, Intercom, Freshdesk, Slack'];
-    useCases['Ticket deflection, SLA compliance, CSAT lift'];
-    "roi": 'Cuts first-response time by 60%;
-    competitors[;
-  Intercom Fin, Ada, Forethought'];
-    "marketSize": '$15B service ops;
-    growthRate:;
-  18% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  OAuth connectors, policy engine, audit logs.';
-    "launchDate": '2025-06-01;
-    "customers": 40;
-    "rating": 4.6;
-    "reviews": 21,
-  };
+    id: ,
+  ai-email-responder',
+    "name": 'AI Email Responder,
+    tagline:,
+  Autonomous inbox triage with drafts, tone, and approvals',
+    "price": '$99,
+    period:,
+  /month',
+    "description": AI agent categorizes, prioritizes, and drafts replies with brand tone and policy guardrails, routing complex cases to humans.',
+    features['Inbox triage and SLA queuesDraft replies with tone controlApprovals and human handoffCSAT and deflection analytics'
+    ],
+    "popular": true,
+    icon: ,
+  📨',
+    "color": 'from-purple-600 to-indigo-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/ai-email-responder,
+    marketPosition:,
+  Cheaper than legacy helpdesk add-ons with better guardrails and routing.',
+    "targetAudience": Support, success, operations',
+    "trialDays": 14,
+    setupTime: ,
+  1 hour',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  Gmail/Office APIs, LLMs, RAG'],
+    integrations['Zendesk, Intercom, Freshdesk, Slack'],
+    useCases['Ticket deflection, SLA compliance, CSAT lift'],
+    "roi": 'Cuts first-response time by 60%,
+    competitors[,
+  Intercom Fin, Ada, Forethought'],
+    "marketSize": '$15B service ops,
+    growthRate: ,
+  18% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  OAuth connectors, policy engine, audit logs.',
+    "launchDate": '2025-06-01,
+    "customers": 40,
+    "rating": 4.6,
+    "reviews": 21
+  },
   {,
-    id:;
-  mobile-first-survey';
-    "name": 'Mobile-First Survey Tool;
-    tagline:;
-  Tap-friendly micro-surveys with AI insights';
-    "price": '$19;
-    period:;
-  /month';
-    "description": Launch branded, mobile-optimized surveys with AI-based insight clustering and churn-risk flags.';
-    features['One-tap answers and NPSAI clustering and summaries';
-  'Embeddable widgetsExport CSV/Sheets',
-    ];
-    "popular": false;
-    icon:;
-  📱';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/mobile-first-survey;
-    marketPosition:;
-  Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.';
-    "targetAudience": Product, growth, CX';
-    "trialDays": 7;
-    setupTime:;
-  15 minutes';
-    "category": 'Growth & Marketing;
-    "realService": true;
-    technology[;
-  Next.js, Edge Functions'];
-    integrations['HubSpot, Segment, GA4'];
-    useCases['NPS, Post-purchase survey, In-app feedback'];
-    "roi": 'Accelerates feedback cycles by 3x;
-    competitors[;
-  Typeform, Survicate'];
-    "marketSize": '$3.1B feedback tools;
-    growthRate:;
-  14% CAGR';
-    "variant": 'neural-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Embeds, web SDK, event tracking.';
-    "launchDate": '2025-05-15;
-    "customers": 55;
-    "rating": 4.5;
-    "reviews": 18,
-  };
+    id: ,
+  mobile-first-survey',
+    "name": 'Mobile-First Survey Tool,
+    tagline:,
+  Tap-friendly micro-surveys with AI insights',
+    "price": '$19,
+    period:,
+  /month',
+    "description": Launch branded, mobile-optimized surveys with AI-based insight clustering and churn-risk flags.',
+    features['One-tap answers and NPSAI clustering and summariesEmbeddable widgetsExport CSV/Sheets'
+    ],
+    "popular": false,
+    icon: ,
+  📱',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/mobile-first-survey,
+    marketPosition:,
+  Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.',
+    "targetAudience": Product, growth, CX',
+    "trialDays": 7,
+    setupTime: ,
+  15 minutes',
+    "category": 'Growth & Marketing,
+    "realService": true,
+    technology[,
+  Next.js, Edge Functions'],
+    integrations['HubSpot, Segment, GA4'],
+    useCases['NPS, Post-purchase survey, In-app feedback'],
+    "roi": 'Accelerates feedback cycles by 3x,
+    competitors[,
+  Typeform, Survicate'],
+    "marketSize": '$3.1B feedback tools,
+    growthRate: ,
+  14% CAGR',
+    "variant": 'neural-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Embeds, web SDK, event tracking.',
+    "launchDate": '2025-05-15,
+    "customers": 55,
+    "rating": 4.5,
+    "reviews": 18
+  },
   {,
-    id:;
-  event-management-dashboard';
-    "name": 'Event Management Dashboard;
-    tagline:;
-  Tickets, check-in, schedules, feedback in one place';
-    "price": '$89;
-    period:;
-  /month';
-    "description": All-in-one portal to sell tickets, manage RSVPs, schedule sessions, and analyze attendee feedback.';
-    features['Tickets and invoicesQR check-in and badges';
-  'Speaker and agenda plannerPost-event feedback analytics',
-    ];
-    "popular": true;
-    icon:;
-  🎟️';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/event-management-dashboard;
-    marketPosition:;
-  Faster setup and lower fees than legacy event suites.';
-    "targetAudience": Marketing, ops, agencies';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Business Operations;
-    "realService": true;
-    technology[;
-  Stripe, Webhooks, Next.js'];
-    integrations['Stripe, Zapier, HubSpot'];
-    useCases['Meetups, webinars, conferences'];
-    "roi": 'Cuts ops time by 40%;
-    competitors[;
-  Eventbrite, Hopin'];
-    "marketSize": '$6.1B events tech;
-    growthRate:;
-  16% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Ticketing, QR check-in, analytics.';
-    "launchDate": '2025-04-10;
-    "customers": 35;
-    "rating": 4.6;
-    "reviews": 24,
-  };
+    id: ,
+  event-management-dashboard',
+    "name": 'Event Management Dashboard,
+    tagline:,
+  Tickets, check-in, schedules, feedback in one place',
+    "price": '$89,
+    period:,
+  /month',
+    "description": All-in-one portal to sell tickets, manage RSVPs, schedule sessions, and analyze attendee feedback.',
+    features['Tickets and invoicesQR check-in and badgesSpeaker and agenda plannerPost-event feedback analytics'
+    ],
+    "popular": true,
+    icon: ,
+  🎟️',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/event-management-dashboard,
+    marketPosition:,
+  Faster setup and lower fees than legacy event suites.',
+    "targetAudience": Marketing, ops, agencies',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Business Operations,
+    "realService": true,
+    technology[,
+  Stripe, Webhooks, Next.js'],
+    integrations['Stripe, Zapier, HubSpot'],
+    useCases['Meetups, webinars, conferences'],
+    "roi": 'Cuts ops time by 40%,
+    competitors[,
+  Eventbrite, Hopin'],
+    "marketSize": '$6.1B events tech,
+    growthRate: ,
+  16% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Ticketing, QR check-in, analytics.',
+    "launchDate": '2025-04-10,
+    "customers": 35,
+    "rating": 4.6,
+    "reviews": 24
+  },
   {,
-    id:;
-  churn-risk-alerts';
-    "name": 'Churn Risk Alerts for Slack;
-    tagline:;
-  Behavior + sentiment = proactive retention pings';
-    "price": '$49;
-    period:;
-  /month';
-    "description": 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.;
-    features['Usage anomaly detectionSentiment from tickets/reviews';
-  'Playbooks and tasksOwner assignment',
-    ];
-    "popular": false;
-    icon:;
-  ⚠️';
-    "color": 'from-amber-600 to-orange-700;
-    textColor:;
-  text-amber-300';
-    "link": 'https://ziontechgroup.com/services/churn-risk-alerts;
-    marketPosition:;
-  Actionable CS alerts without heavy CDPs.';
-    "targetAudience": Customer success, product';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'AI & Data;
-    "realService": true;
-    technology[;
-  Segment, Webhooks, LLMs'];
-    integrations['Slack, HubSpot, Salesforce'];
-    useCases['Churn prevention, Expansion triggers'];
-    "roi": 'Improves retention by 2–5 pts;
-    competitors[;
-  Vitally, Gainsight'];
-    "marketSize": '$4.2B CS tools;
-    growthRate:;
-  17% CAGR';
-    "variant": 'holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Event collector, rules engine, Slack app.';
-    "launchDate": '2025-03-01;
-    "customers": 28;
-    "rating": 4.5;
-    "reviews": 15,
-  };
+    id: ,
+  churn-risk-alerts',
+    "name": 'Churn Risk Alerts for Slack,
+    tagline:,
+  Behavior + sentiment = proactive retention pings',
+    "price": '$49,
+    period:,
+  /month',
+    "description": 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.,
+    features['Usage anomaly detectionSentiment from tickets/reviewsPlaybooks and tasksOwner assignment'
+    ],
+    "popular": false,
+    icon: ,
+  ⚠️',
+    "color": 'from-amber-600 to-orange-700,
+    textColor:,
+  text-amber-300',
+    "link": 'https://ziontechgroup.com/services/churn-risk-alerts,
+    marketPosition:,
+  Actionable CS alerts without heavy CDPs.',
+    "targetAudience": Customer success, product',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'AI & Data,
+    "realService": true,
+    technology[,
+  Segment, Webhooks, LLMs'],
+    integrations['Slack, HubSpot, Salesforce'],
+    useCases['Churn prevention, Expansion triggers'],
+    "roi": 'Improves retention by 2–5 pts,
+    competitors[,
+  Vitally, Gainsight'],
+    "marketSize": '$4.2B CS tools,
+    growthRate: ,
+  17% CAGR',
+    "variant": 'holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Event collector, rules engine, Slack app.',
+    "launchDate": '2025-03-01,
+    "customers": 28,
+    "rating": 4.5,
+    "reviews": 15
+  },
   {,
-    id:;
-  subscription-revenue-analytics';
-    "name": 'Subscription Revenue Analytics;
-    tagline:;
-  MRR, churn, cohorts with anomaly flags';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Self-serve dashboards for MRR, churn, LTV/CAC, and cohorts with anomaly detection and revenue projections.';
-    features['MRR/ARR trends and cohortsAnomaly flags and forecasts';
-  'CSV/Stripe importsBoard-ready reports'];
-    "popular": true;
-    icon:;
-  📈';
-    "color": 'from-fuchsia-600 to-pink-700;
-    textColor:;
-  text-fuchsia-300';
-    "link": 'https://ziontechgroup.com/services/subscription-revenue-analytics;
-    marketPosition:;
-  Faster deploy vs. BI stacks, purpose-built for SaaS.';
-    "targetAudience": Founders, finance, ops';
-    "trialDays": 14;
-    setupTime:;
-  45 minutes';
-    "category": 'Business Intelligence;
-    "realService": true;
-    technology[;
-  Next.js, ClickHouse/DBT optional'];
-    integrations['Stripe, Chargebee, Paddle'];
-    useCases['Board metrics, Revenue ops, Cohort analysis'];
-    "roi": 'Reduces reporting prep by 80%;
-    competitors[;
-  ChartMogul, ProfitWell'];
-    "marketSize": '$2.4B RevOps tools;
-    growthRate:;
-  20% CAGR';
-    "variant": 'quantum-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Data loaders, metric engine, exports.';
-    "launchDate": '2025-07-01;
-    "customers": 22;
-    "rating": 4.6;
-    "reviews": 12,
-  };
+    id: ,
+  subscription-revenue-analytics',
+    "name": 'Subscription Revenue Analytics,
+    tagline:,
+  MRR, churn, cohorts with anomaly flags',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Self-serve dashboards for MRR, churn, LTV/CAC, and cohorts with anomaly detection and revenue projections.',
+    features['MRR/ARR trends and cohortsAnomaly flags and forecastsCSV/Stripe importsBoard-ready reports'],
+    "popular": true,
+    icon: ,
+  📈',
+    "color": 'from-fuchsia-600 to-pink-700,
+    textColor:,
+  text-fuchsia-300',
+    "link": 'https://ziontechgroup.com/services/subscription-revenue-analytics,
+    marketPosition:,
+  Faster deploy vs. BI stacks, purpose-built for SaaS.',
+    "targetAudience": Founders, finance, ops',
+    "trialDays": 14,
+    setupTime: ,
+  45 minutes',
+    "category": 'Business Intelligence,
+    "realService": true,
+    technology[,
+  Next.js, ClickHouse/DBT optional'],
+    integrations['Stripe, Chargebee, Paddle'],
+    useCases['Board metrics, Revenue ops, Cohort analysis'],
+    "roi": 'Reduces reporting prep by 80%,
+    competitors[,
+  ChartMogul, ProfitWell'],
+    "marketSize": '$2.4B RevOps tools,
+    growthRate: ,
+  20% CAGR',
+    "variant": 'quantum-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Data loaders, metric engine, exports.',
+    "launchDate": '2025-07-01,
+    "customers": 22,
+    "rating": 4.6,
+    "reviews": 12
+  },
   {,
-    id:;
-  iso-27001-evidence-kit';
-    "name": 'ISO 27001 Evidence Kit;
-    tagline:;
-  Prebuilt controls, evidence collectors, and audit packs';
-    "price": '$149;
-    period:;
-  /month';
-    "description": Automate common ISO 27001 evidence with connectors, control mappings, timelines, and exportable audit packs.';
-    features['Control library and mappingsEvidence collectors and snapshots';
-  'Exceptions and approvalsAudit-ready exports',
-    ];
-    "popular": false;
-    icon:;
-  🛡️';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/iso-27001-evidence-kit;
-    marketPosition:;
-  Faster time-to-audit than generic GRC tools.';
-    "targetAudience": Security, compliance, IT';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Security & Compliance;
-    "realService": true;
-    technology[;
-  Cloud APIs, IdP, Endpoint'];
-    integrations['AWS, Azure, GCP, Okta, JAMF'];
-    useCases['ISO readiness, Continuous compliance'];
-    "roi": 'Cuts audit prep by 60%;
-    competitors[;
-  Vanta, Drata'];
-    "marketSize": '$5.5B GRC;
-    growthRate:;
-  13% CAGR';
-          "variant": 'security-futuristic;
-      "contactInfo": contact;
-      "realImplementation": true;
-      implementationDetails:;
-  Connectors + evidence timelines.';
-      "launchDate": '2025-06-15;
-      "customers": 18;
-      "rating": 4.5;
-      "reviews": 10,
-  };
+    id: ,
+  iso-27001-evidence-kit',
+    "name": 'ISO 27001 Evidence Kit,
+    tagline:,
+  Prebuilt controls, evidence collectors, and audit packs',
+    "price": '$149,
+    period:,
+  /month',
+    "description": Automate common ISO 27001 evidence with connectors, control mappings, timelines, and exportable audit packs.',
+    features['Control library and mappingsEvidence collectors and snapshotsExceptions and approvalsAudit-ready exports'
+    ],
+    "popular": false,
+    icon: ,
+  🛡️',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/iso-27001-evidence-kit,
+    marketPosition:,
+  Faster time-to-audit than generic GRC tools.',
+    "targetAudience": Security, compliance, IT',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Security & Compliance,
+    "realService": true,
+    technology[,
+  Cloud APIs, IdP, Endpoint'],
+    integrations['AWS, Azure, GCP, Okta, JAMF'],
+    useCases['ISO readiness, Continuous compliance'],
+    "roi": 'Cuts audit prep by 60%,
+    competitors[,
+  Vanta, Drata'],
+    "marketSize": '$5.5B GRC,
+    growthRate: ,
+  13% CAGR',
+          "variant": 'security-futuristic,
+      "contactInfo": contact,
+      "realImplementation": true,
+      implementationDetails:,
+  Connectors + evidence timelines.',
+      "launchDate": '2025-06-15,
+      "customers": 18,
+      "rating": 4.5,
+      "reviews": 10
+  },
   {,
-    id:;
-  api-changelog-notifier';
-    "name": 'API Changelog Notifier;
-    tagline:;
-  Diffs, deprecations, and alerts for your integrators';
-    "price": '$19;
-    period:;
-  /month';
-    "description": Monitor OpenAPI/GraphQL changes and send release notes, breaking-change alerts, and migration timelines.';
-    features['Schema diffing and impactRelease notes generator';
-  'Deprecation timelinesEmail/Slack/webhook alerts',
-    ];
-    "popular": false;
-    icon:;
-  🔔';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/api-changelog-notifier;
-    marketPosition:;
-  Turns API changes into transparent communication.';
-    "targetAudience": 'API/platform teams;
-    "trialDays": 7;
-    setupTime:;
-  10 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  OpenAPI/GraphQL parsers'];
-    integrations['GitHub, Slack, Email'];
-    useCases['Changelog, Deprecation management'];
-    "roi": 'Reduces integrator breakage by 70%;
-    competitors[;
-  ReadMe, Stoplight (partial)'];
-    "marketSize": '$1.5B dev tools;
-    growthRate:;
-  18% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Schema watchers + release generator.';
-    "launchDate": '2025-05-01;
-    "customers": 30;
-    "rating": 4.6;
-    "reviews": 14,
-  };
+    id: ,
+  api-changelog-notifier',
+    "name": 'API Changelog Notifier,
+    tagline:,
+  Diffs, deprecations, and alerts for your integrators',
+    "price": '$19,
+    period:,
+  /month',
+    "description": Monitor OpenAPI/GraphQL changes and send release notes, breaking-change alerts, and migration timelines.',
+    features['Schema diffing and impactRelease notes generatorDeprecation timelinesEmail/Slack/webhook alerts'
+    ],
+    "popular": false,
+    icon: ,
+  🔔',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/api-changelog-notifier,
+    marketPosition:,
+  Turns API changes into transparent communication.',
+    "targetAudience": 'API/platform teams,
+    "trialDays": 7,
+    setupTime:,
+  10 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  OpenAPI/GraphQL parsers'],
+    integrations['GitHub, Slack, Email'],
+    useCases['Changelog, Deprecation management'],
+    "roi": 'Reduces integrator breakage by 70%,
+    competitors[,
+  ReadMe, Stoplight (partial)'],
+    "marketSize": '$1.5B dev tools,
+    growthRate: ,
+  18% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Schema watchers + release generator.',
+    "launchDate": '2025-05-01,
+    "customers": 30,
+    "rating": 4.6,
+    "reviews": 14
+  },
   {,
-    id:;
-  runbook-generator';
-    "name": 'Runbook Generator;
-    tagline:;
-  Generate, version, and validate ops runbooks with AI';
-    "price": '$29;
-    period:;
-  /month';
-    "description": 'Create consistent runbooks from incident timelines and postmortems, validate steps and link to on-call.;
-    features['Templates and versioningAI draft from incidents';
-  'Step validation checklistsOn-call links and owners',
-    ];
-    "popular": false;
-    icon:;
-  📘';
-    "color": 'from-sky-600 to-blue-700;
-    textColor:;
-  text-sky-300';
-    "link": 'https://ziontechgroup.com/services/runbook-generator;
-    marketPosition:;
-  Eliminates ad-hoc docs, codifies reliability.';
-    "targetAudience": SRE, platform, ops';
-    "trialDays": 14;
-    setupTime:;
-  20 minutes';
-    "category": 'Quality & Monitoring;
-    "realService": true;
-    technology[;
-  LLMs, Incident APIs'];
-    integrations['PagerDuty, Jira, Slack'];
-    useCases['SRE runbooks, On-call playbooks'];
-    "roi": 'Faster incident resolution by 20–30%;
-    competitors[;
-  Blameless (partial), Notion'];
-    "marketSize": '$7.2B DevOps;
-    growthRate:;
-  19% CAGR';
-          "variant": 'monitoring-futuristic;
-      "contactInfo": contact;
-      "realImplementation": true;
-      implementationDetails:;
-  Incident parsers + templates.';
-      "launchDate": '2025-02-20;
-      "customers": 26;
-      "rating": 4.5;
-      "reviews": 11,
-  };
+    id: ,
+  runbook-generator',
+    "name": 'Runbook Generator,
+    tagline:,
+  Generate, version, and validate ops runbooks with AI',
+    "price": '$29,
+    period:,
+  /month',
+    "description": 'Create consistent runbooks from incident timelines and postmortems, validate steps and link to on-call.,
+    features['Templates and versioningAI draft from incidentsStep validation checklistsOn-call links and owners'
+    ],
+    "popular": false,
+    icon: ,
+  📘',
+    "color": 'from-sky-600 to-blue-700,
+    textColor:,
+  text-sky-300',
+    "link": 'https://ziontechgroup.com/services/runbook-generator,
+    marketPosition:,
+  Eliminates ad-hoc docs, codifies reliability.',
+    "targetAudience": SRE, platform, ops',
+    "trialDays": 14,
+    setupTime: ,
+  20 minutes',
+    "category": 'Quality & Monitoring,
+    "realService": true,
+    technology[,
+  LLMs, Incident APIs'],
+    integrations['PagerDuty, Jira, Slack'],
+    useCases['SRE runbooks, On-call playbooks'],
+    "roi": 'Faster incident resolution by 20–30%,
+    competitors[,
+  Blameless (partial), Notion'],
+    "marketSize": '$7.2B DevOps,
+    growthRate: ,
+  19% CAGR',
+          "variant": 'monitoring-futuristic,
+      "contactInfo": contact,
+      "realImplementation": true,
+      implementationDetails:,
+  Incident parsers + templates.',
+      "launchDate": '2025-02-20,
+      "customers": 26,
+      "rating": 4.5,
+      "reviews": 11
+  },
   {,
-    id:;
-  incident-timeline-composer';
-    "name": 'Incident Timeline Composer;
-    tagline:;
-  Auto-build timelines and comms from alerts and chat';
-    "price": '$19;
-    period:;
-  /month';
-    "description": Aggregates alerts, changes, and chat to build a single incident timeline for comms and postmortems.';
-    features['Alert + change aggregationChat timeline extraction';
-  'Customer comms templatesPostmortem export',
-    ];
-    "popular": false;
-    icon:;
-  🧩';
-    "color": 'from-rose-600 to-pink-700;
-    textColor:;
-  text-rose-300';
-    "link": 'https://ziontechgroup.com/services/incident-timeline-composer;
-    marketPosition:;
-  Makes incident comms accurate and fast.';
-    "targetAudience": SRE, support, comms';
-    "trialDays": 7;
-    setupTime:;
-  10 minutes';
-    "category": 'Observability;
-    "realService": true;
-    technology[;
-  Webhooks, LLMs'];
-    integrations['PagerDuty, Opsgenie, Slack, Statuspage'];
-    useCases['Major incident comms, RCA inputs'];
-    "roi": 'Reduces coordination overhead by 50%;
-    competitors[;
-  Blameless, Incident.io (partial)'];
-    "marketSize": '$7.2B DevOps;
-    growthRate:;
-  19% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Event collectors + composer.';
-    "launchDate": '2025-03-15;
-    "customers": 19;
-    "rating": 4.5;
-    "reviews": 9,
-  };
+    id: ,
+  incident-timeline-composer',
+    "name": 'Incident Timeline Composer,
+    tagline:,
+  Auto-build timelines and comms from alerts and chat',
+    "price": '$19,
+    period:,
+  /month',
+    "description": Aggregates alerts, changes, and chat to build a single incident timeline for comms and postmortems.',
+    features['Alert + change aggregationChat timeline extractionCustomer comms templatesPostmortem export'
+    ],
+    "popular": false,
+    icon: ,
+  🧩',
+    "color": 'from-rose-600 to-pink-700,
+    textColor:,
+  text-rose-300',
+    "link": 'https://ziontechgroup.com/services/incident-timeline-composer,
+    marketPosition:,
+  Makes incident comms accurate and fast.',
+    "targetAudience": SRE, support, comms',
+    "trialDays": 7,
+    setupTime: ,
+  10 minutes',
+    "category": 'Observability,
+    "realService": true,
+    technology[,
+  Webhooks, LLMs'],
+    integrations['PagerDuty, Opsgenie, Slack, Statuspage'],
+    useCases['Major incident comms, RCA inputs'],
+    "roi": 'Reduces coordination overhead by 50%,
+    competitors[,
+  Blameless, Incident.io (partial)'],
+    "marketSize": '$7.2B DevOps,
+    growthRate: ,
+  19% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Event collectors + composer.',
+    "launchDate": '2025-03-15,
+    "customers": 19,
+    "rating": 4.5,
+    "reviews": 9
+  },
   {,
-    id:;
-  ad-creative-generator';
-    "name": 'Ad Creative Generator;
-    tagline:;
-  Generate on-brand ads with variants and A/B insights';
-    "price": '$49;
-    period:;
-  /month';
-    "description": Create compliant, on-brand image and text ads with variants, audiences, and performance tips.';
-    features['Brand presets and guardrailsMulti-platform variants';
-  'Headlines and copy suggestionsPerformance tips and tags',
-    ];
-    "popular": true;
-    icon:;
-  🎯';
-    "color": 'from-violet-600 to-purple-700;
-    textColor:;
-  text-violet-300';
-    "link": 'https://ziontechgroup.com/services/ad-creative-generator;
-    marketPosition:;
-  Faster creative cycles for small teams.';
-    "targetAudience": Growth, agencies, founders';
-    "trialDays": 7;
-    setupTime:;
-  10 minutes';
-    "category": 'Growth & Marketing;
-    "realService": true;
-    technology[;
-  LLMs, Vision models'];
-    integrations['Meta, Google Ads (export)'];
-    useCases['Ad variants, Landing page assets'];
-    "roi": 'Improves CTR by 10–20% on average;
-    competitors[;
-  Canva (partial), Jasper'];
-    "marketSize": '$8.9B martech genAI;
-    growthRate:;
-  22% CAGR';
-    "variant": 'quantum-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Brand presets + asset generator.';
-    "launchDate": '2025-07-15;
-    "customers": 33;
-    "rating": 4.6;
-    "reviews": 13,
-  };
+    id: ,
+  ad-creative-generator',
+    "name": 'Ad Creative Generator,
+    tagline:,
+  Generate on-brand ads with variants and A/B insights',
+    "price": '$49,
+    period:,
+  /month',
+    "description": Create compliant, on-brand image and text ads with variants, audiences, and performance tips.',
+    features['Brand presets and guardrailsMulti-platform variantsHeadlines and copy suggestionsPerformance tips and tags'
+    ],
+    "popular": true,
+    icon: ,
+  🎯',
+    "color": 'from-violet-600 to-purple-700,
+    textColor:,
+  text-violet-300',
+    "link": 'https://ziontechgroup.com/services/ad-creative-generator,
+    marketPosition:,
+  Faster creative cycles for small teams.',
+    "targetAudience": Growth, agencies, founders',
+    "trialDays": 7,
+    setupTime: ,
+  10 minutes',
+    "category": 'Growth & Marketing,
+    "realService": true,
+    technology[,
+  LLMs, Vision models'],
+    integrations['Meta, Google Ads (export)'],
+    useCases['Ad variants, Landing page assets'],
+    "roi": 'Improves CTR by 10–20% on average,
+    competitors[,
+  Canva (partial), Jasper'],
+    "marketSize": '$8.9B martech genAI,
+    growthRate: ,
+  22% CAGR',
+    "variant": 'quantum-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Brand presets + asset generator.',
+    "launchDate": '2025-07-15,
+    "customers": 33,
+    "rating": 4.6,
+    "reviews": 13
+  },
   {,
-    id:;
-  cloud-cost-optimizer-pro';
-    "name": 'Cloud Cost Optimizer Pro;
-    tagline:;
-  Automated rightsizing, lifecycle policies, and anomaly detection';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.';
-    features["Data integration";
-      "Real-time processing";
-      "Advanced analytics";
-      "Scalable architecture";
-      "Security compliance",
-    ];
-    "link": "/services/data-warehouse-solution";
-    "category": "Data & Analytics";
-    "realImplementation": true;
-    implementationDetails:;
-  SaaS analyzer with exporters for Terraform/Helm and alerting.';
-    "launchDate": '2025-01-15;
-    "customers": 90;
-    "rating": 4.6;
-    "reviews": 54,
-  };
+    id: ,
+  cloud-cost-optimizer-pro',
+    "name": 'Cloud Cost Optimizer Pro,
+    tagline:,
+  Automated rightsizing, lifecycle policies, and anomaly detection',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',
+    features["Data integration",
+      "Real-time processing",
+      "Advanced analytics",
+      "Scalable architecture",
+      "Security compliance"
+    ],
+    "link": "/services/data-warehouse-solution",
+    "category": "Data & Analytics",
+    "realImplementation": true,
+    implementationDetails: ,
+  SaaS analyzer with exporters for Terraform/Helm and alerting.',
+    "launchDate": '2025-01-15,
+    "customers": 90,
+    "rating": 4.6,
+    "reviews": 54
+  },
   {,
-    id:;
-  database-performance-monitor';
-    "name": 'Database Performance Monitor;
-    tagline:;
-  Proactive Postgres/MySQL insights and AI index suggestions';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Capture slow queries, rank impact, generate index and query tuning suggestions with capacity forecasting and SLA/SLO dashboards.';
-    features['Slow query captureAI index suggestions';
-  'Connection pool tuningCapacity forecasting',
-    ];
-    "popular": true;
-    icon:;
-  🗄️';
-    "color": 'from-purple-600 to-indigo-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/database-performance-monitor;
-    marketPosition:;
-  Modern alternative with AI-first insights and simple pricing.';
-    "targetAudience": DBAs, platform, backend teams';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Observability;
-    "realService": true;
-    technology[;
-  PostgreSQLMySQL';
-  'OpenTelemetry'];
-    integrations['GrafanaDatadog';
-  'New Relic'];
-    useCases['Performance tuningSLO management';
-  'Incident response'];
-    "roi": 'Reduce p95 latency by 20–50% in month 1;
-    competitors[;
-  Percona PMMDatadog APM';
-  'New Relic'];
-    "marketSize": '$6B DB monitoring;
-    growthRate:;
-  15% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Agent collectors with SaaS UI and AI advisory.';
-    "launchDate": '2024-12-12;
-    "customers": 60;
-    "rating": 4.6;
-    "reviews": 38,
-  };
+    id: ,
+  database-performance-monitor',
+    "name": 'Database Performance Monitor,
+    tagline:,
+  Proactive Postgres/MySQL insights and AI index suggestions',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Capture slow queries, rank impact, generate index and query tuning suggestions with capacity forecasting and SLA/SLO dashboards.',
+    features['Slow query captureAI index suggestionsConnection pool tuningCapacity forecasting'
+    ],
+    "popular": true,
+    icon: ,
+  🗄️',
+    "color": 'from-purple-600 to-indigo-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/database-performance-monitor,
+    marketPosition:,
+  Modern alternative with AI-first insights and simple pricing.',
+    "targetAudience": DBAs, platform, backend teams',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Observability,
+    "realService": true,
+    technology[,
+  PostgreSQLMySQLOpenTelemetry'],
+    integrations['GrafanaDatadogNew Relic'],
+    useCases['Performance tuningSLO managementIncident response'],
+    "roi": 'Reduce p95 latency by 20–50% in month 1,
+    competitors[,
+  Percona PMMDatadog APMNew Relic'],
+    "marketSize": '$6B DB monitoring,
+    growthRate:,
+  15% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Agent collectors with SaaS UI and AI advisory.',
+    "launchDate": '2024-12-12,
+    "customers": 60,
+    "rating": 4.6,
+    "reviews": 38
+  },
   {,
-    id:;
-  api-documentation-generator';
-    "name": 'API Documentation Generator;
-    tagline:;
-  Generate beautiful, accurate API docs from OpenAPI/GraphQL/Proto';
-    "price": '$49;
-    period:;
-  /month';
-    "description": Convert schemas into polished docs with SDK snippets, changelogs, and search. Publish instantly with versioning.';
-    features['Schema parsing (OAS/GraphQL/Proto)SDK snippets and examples';
-  'Changelogs and versionsFull-text search and themes',
-    ];
-    "popular": true;
-    icon:;
-  📘';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/api-documentation-generator;
-    marketPosition:;
-  Faster setup and authoring vs. traditional doc platforms.';
-    "targetAudience": Developers, platform, API teams';
-    "trialDays": 14;
-    setupTime:;
-  20 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  Next.jsMDX';
-  'OpenAPI'];
-    integrations['GitHubGitLab';
-  'Bitbucket'];
-    useCases['Public API docsInternal APIs';
-  'SDK portals'];
-    "roi": 'Ship and maintain docs 5x faster;
-    competitors[;
-  ReadMeRedocly';
-  'Stoplight'];
-    "marketSize": '$1.5B dev docs;
-    growthRate:;
-  18% CAGR';
-    "variant": 'neural-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Schema importers, doc themes, and CI publishers.';
-    "launchDate": '2024-10-05;
-    "customers": 110;
-    "rating": 4.7;
-    "reviews": 81,
-  };
+    id: ,
+  api-documentation-generator',
+    "name": 'API Documentation Generator,
+    tagline:,
+  Generate beautiful, accurate API docs from OpenAPI/GraphQL/Proto',
+    "price": '$49,
+    period:,
+  /month',
+    "description": Convert schemas into polished docs with SDK snippets, changelogs, and search. Publish instantly with versioning.',
+    features['Schema parsing (OAS/GraphQL/Proto)SDK snippets and examplesChangelogs and versionsFull-text search and themes'
+    ],
+    "popular": true,
+    icon: ,
+  📘',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/api-documentation-generator,
+    marketPosition:,
+  Faster setup and authoring vs. traditional doc platforms.',
+    "targetAudience": Developers, platform, API teams',
+    "trialDays": 14,
+    setupTime: ,
+  20 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  Next.jsMDXOpenAPI'],
+    integrations['GitHubGitLabBitbucket'],
+    useCases['Public API docsInternal APIsSDK portals'],
+    "roi": 'Ship and maintain docs 5x faster,
+    competitors[,
+  ReadMeRedoclyStoplight'],
+    "marketSize": '$1.5B dev docs,
+    growthRate:,
+  18% CAGR',
+    "variant": 'neural-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Schema importers, doc themes, and CI publishers.',
+    "launchDate": '2024-10-05,
+    "customers": 110,
+    "rating": 4.7,
+    "reviews": 81
+  },
   {,
-    id:;
-  email-deliverability-monitor';
-    "name": 'Email Deliverability Monitor;
-    tagline:;
-  Inbox placement, DMARC/SPF/DKIM checks, and blocklist alerts';
-    "price": '$39;
-    period:;
-  /month';
-    "description": Continuously verify email authentication, track inbox placement, and detect blocklist events with actionable recommendations.';
-    features['DMARC/SPF/DKIM verificationInbox placement checks';
-  'Blocklist monitoringDomain reputation score',
-    ];
-    "popular": false;
-    icon:;
-  ✉️';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/email-deliverability-monitor;
-    marketPosition:;
-  Simple, affordable monitoring for marketing and transactional systems.';
-    "targetAudience": Growth, marketing, platform';
-    "trialDays": 7;
-    setupTime:;
-  15 minutes';
-    "category": 'Marketing Ops;
-    "realService": true;
-    technology[;
-  DNSPostfix/SES APIs'];
-    integrations['SendGridSES';
-  'Mailgun'];
-    useCases['Auth complianceReputation monitoring';
-  'Alerting'];
-    "roi": 'Improve inbox rate by 5–15%;
-    competitors[;
-  MailMonitorPostmaster Tools'];
-    "marketSize": '$2B email tools;
-    growthRate:;
-  12% CAGR';
-    "variant": 'holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  DNS checkers, seed inbox tests, and alerting.';
-    "launchDate": '2025-01-01;
-    "customers": 45;
-    "rating": 4.5;
-    "reviews": 22,
-  };
+    id: ,
+  email-deliverability-monitor',
+    "name": 'Email Deliverability Monitor,
+    tagline:,
+  Inbox placement, DMARC/SPF/DKIM checks, and blocklist alerts',
+    "price": '$39,
+    period:,
+  /month',
+    "description": Continuously verify email authentication, track inbox placement, and detect blocklist events with actionable recommendations.',
+    features['DMARC/SPF/DKIM verificationInbox placement checksBlocklist monitoringDomain reputation score'
+    ],
+    "popular": false,
+    icon: ,
+  ✉️',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/email-deliverability-monitor,
+    marketPosition:,
+  Simple, affordable monitoring for marketing and transactional systems.',
+    "targetAudience": Growth, marketing, platform',
+    "trialDays": 7,
+    setupTime: ,
+  15 minutes',
+    "category": 'Marketing Ops,
+    "realService": true,
+    technology[,
+  DNSPostfix/SES APIs'],
+    integrations['SendGridSESMailgun'],
+    useCases['Auth complianceReputation monitoringAlerting'],
+    "roi": 'Improve inbox rate by 5–15%,
+    competitors[,
+  MailMonitorPostmaster Tools'],
+    "marketSize": '$2B email tools,
+    growthRate:,
+  12% CAGR',
+    "variant": 'holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  DNS checkers, seed inbox tests, and alerting.',
+    "launchDate": '2025-01-01,
+    "customers": 45,
+    "rating": 4.5,
+    "reviews": 22
+  },
   {,
-    id:;
-  gdpr-dsar-automation';
-    "name": 'GDPR DSAR Automation;
-    tagline:;
-  Automate data subject access requests with auditable workflows';
-    "price": '$129;
-    period:;
-  /month';
-    "description": Intake, verify, and fulfill DSAR requests with identity verification, data discovery connectors, and audit logs.';
-    features['Secure request intake portalIdentity verification';
-  'Data discovery connectorsAudit logs and exports',
-    ];
-    "popular": false;
-    icon:;
-  🛡️';
-    "color": 'from-rose-600 to-fuchsia-700;
-    textColor:;
-  text-rose-300';
-    "link": 'https://ziontechgroup.com/gdpr-dsar-automation;
-    marketPosition:;
-  Compliant automation for legal and privacy teams.';
-    "targetAudience": Privacy, legal, security';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Compliance;
-    "realService": true;
-    technology[;
-  OAuthPII discovery';
-  'Storage APIs'];
-    integrations['Google WorkspaceOneDrive';
-  'Okta'];
-    useCases['DSAR fulfillmentPrivacy compliance'];
-    "roi": 'Cut manual effort by 70%;
-    competitors[;
-  OneTrustTranscend'];
-    "marketSize": '$3B privacy ops;
-    growthRate:;
-  20% CAGR';
-    "variant": 'cyberpunk-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Secure portal, workflows, connectors, and exports.';
-    "launchDate": '2024-09-20;
-    "customers": 33;
-    "rating": 4.6;
-    "reviews": 19,
-  };
+    id: ,
+  gdpr-dsar-automation',
+    "name": 'GDPR DSAR Automation,
+    tagline:,
+  Automate data subject access requests with auditable workflows',
+    "price": '$129,
+    period:,
+  /month',
+    "description": Intake, verify, and fulfill DSAR requests with identity verification, data discovery connectors, and audit logs.',
+    features['Secure request intake portalIdentity verificationData discovery connectorsAudit logs and exports'
+    ],
+    "popular": false,
+    icon: ,
+  🛡️',
+    "color": 'from-rose-600 to-fuchsia-700,
+    textColor:,
+  text-rose-300',
+    "link": 'https://ziontechgroup.com/gdpr-dsar-automation,
+    marketPosition:,
+  Compliant automation for legal and privacy teams.',
+    "targetAudience": Privacy, legal, security',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Compliance,
+    "realService": true,
+    technology[,
+  OAuthPII discoveryStorage APIs'],
+    integrations['Google WorkspaceOneDriveOkta'],
+    useCases['DSAR fulfillmentPrivacy compliance'],
+    "roi": 'Cut manual effort by 70%,
+    competitors[,
+  OneTrustTranscend'],
+    "marketSize": '$3B privacy ops,
+    growthRate:,
+  20% CAGR',
+    "variant": 'cyberpunk-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Secure portal, workflows, connectors, and exports.',
+    "launchDate": '2024-09-20,
+    "customers": 33,
+    "rating": 4.6,
+    "reviews": 19
+  },
   {,
-    id:;
-  api-security-scanner';
-    "name": 'API Security Scanner;
-    tagline:;
-  Automated OpenAPI fuzzing, auth checks, and OWASP API Top 10';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Scan APIs against schemas, validate auth and rate limits, and detect common vulnerabilities with CI integration.';
-    features['OpenAPI-based scanningAuth and rate limit tests';
-  'OWASP API Top 10 checksCI pipeline integration',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-red-600 to-pink-700;
-    textColor:;
-  text-red-300';
-    "link": 'https://ziontechgroup.com/api-security-scanner;
-    marketPosition:;
-  Developer-friendly API security with schema awareness.';
-    "targetAudience": Security, platform, backend';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Security;
-    "realService": true;
-    technology[;
-  OpenAPIFuzzing';
-  'Auth testing'];
-    integrations['GitHub ActionsGitLab CI';
-  'Jenkins'];
-    useCases['Security testingPre-deploy checks'];
-    "roi": 'Reduce security escapes by 60%;
-    competitors[;
-  StackHawkNoname'];
-    "marketSize": '$4B API security;
-    growthRate:;
-  23% CAGR';
-    "variant": 'quantum-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Hosted scanner with agents and reports.';
-    "launchDate": '2025-02-10;
-    "customers": 52;
-    "rating": 4.5;
-    "reviews": 28,
-  };
+    id: ,
+  api-security-scanner',
+    "name": 'API Security Scanner,
+    tagline:,
+  Automated OpenAPI fuzzing, auth checks, and OWASP API Top 10',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Scan APIs against schemas, validate auth and rate limits, and detect common vulnerabilities with CI integration.',
+    features['OpenAPI-based scanningAuth and rate limit testsOWASP API Top 10 checksCI pipeline integration'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-red-600 to-pink-700,
+    textColor:,
+  text-red-300',
+    "link": 'https://ziontechgroup.com/api-security-scanner,
+    marketPosition:,
+  Developer-friendly API security with schema awareness.',
+    "targetAudience": Security, platform, backend',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Security,
+    "realService": true,
+    technology[,
+  OpenAPIFuzzingAuth testing'],
+    integrations['GitHub ActionsGitLab CIJenkins'],
+    useCases['Security testingPre-deploy checks'],
+    "roi": 'Reduce security escapes by 60%,
+    competitors[,
+  StackHawkNoname'],
+    "marketSize": '$4B API security,
+    growthRate:,
+  23% CAGR',
+    "variant": 'quantum-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Hosted scanner with agents and reports.',
+    "launchDate": '2025-02-10,
+    "customers": 52,
+    "rating": 4.5,
+    "reviews": 28
+  },
   {,
-    id:;
-  api-observability-starter';
-    "name": 'API Observability Starter;
-    tagline:;
-  OpenTelemetry traces, logs and metrics with redaction and sampling';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Instrument services quickly with OTel SDKs and get request traces, error analytics, and SLO dashboards. Includes PII redaction, sampling controls, and ready-made Grafana boards.';
-    features['One-line middleware for Node/Go/PythonPII redaction and sampling policies';
-  'Error and latency analyticsSLI/SLO dashboards and burn-rate alerts';
-  'Exporters for popular backendsAuto-ingest OpenAPI metadata',
-    ];
-    "popular": false;
-    icon:;
-  📈';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-400';
-    "link": 'https://ziontechgroup.com/api-observability-starter;
-    marketPosition:;
-  Get 80% of value with 20% of setup for SMB teams.';
-    "targetAudience": SMB, startups, dev teams starting observability';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Observability;
-    "realService": true;
-    technology[;
-  OpenTelemetryGrafana';
-  'Tempo/Loki/PromNode.js'];
-    integrations['DatadogHoneycomb';
-  'Grafana CloudNew Relic'];
-    useCases['Error triageLatency analysis';
-  'SLO tracking'];
-    "roi": 'Reduce MTTR by 30–50% with basic but effective telemetry.;
-    competitors[;
-  Datadog APMNew Relic';
-  'Elastic APM'];
-    "marketSize": '$30B+ observability;
-    growthRate:;
-  18% CAGR';
-    "variant": 'neural-quantum-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Opinionated OTel setup, token-based ingestion, curated dashboards and SLO primitives.';
-    "launchDate": '2025-02-01;
-    "customers": 33;
-    "rating": 4.5;
-    "reviews": 11,
-  };
+    id: ,
+  api-observability-starter',
+    "name": 'API Observability Starter,
+    tagline:,
+  OpenTelemetry traces, logs and metrics with redaction and sampling',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Instrument services quickly with OTel SDKs and get request traces, error analytics, and SLO dashboards. Includes PII redaction, sampling controls, and ready-made Grafana boards.',
+    features['One-line middleware for Node/Go/PythonPII redaction and sampling policiesError and latency analyticsSLI/SLO dashboards and burn-rate alerts',
+  'Exporters for popular backendsAuto-ingest OpenAPI metadata'
+    ],
+    "popular": false,
+    icon: ,
+  📈',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-400',
+    "link": 'https://ziontechgroup.com/api-observability-starter,
+    marketPosition:,
+  Get 80% of value with 20% of setup for SMB teams.',
+    "targetAudience": SMB, startups, dev teams starting observability',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Observability,
+    "realService": true,
+    technology[,
+  OpenTelemetryGrafanaTempo/Loki/PromNode.js'],
+    integrations['DatadogHoneycombGrafana CloudNew Relic'],
+    useCases['Error triageLatency analysisSLO tracking'],
+    "roi": 'Reduce MTTR by 30–50% with basic but effective telemetry.,
+    competitors[,
+  Datadog APMNew RelicElastic APM'],
+    "marketSize": '$30B+ observability,
+    growthRate:,
+  18% CAGR',
+    "variant": 'neural-quantum-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Opinionated OTel setup, token-based ingestion, curated dashboards and SLO primitives.',
+    "launchDate": '2025-02-01,
+    "customers": 33,
+    "rating": 4.5,
+    "reviews": 11
+  },
   {,
-    id:;
-  status-pages-slo';
-    "name": 'Status Pages & SLO;
-    tagline:;
-  Beautiful status pages and SLO dashboards for your services';
-    "price": '$39;
-    period:;
-  /month';
-    "description": 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.;
-    features['Custom branded status pagesSLO dashboards';
-  'Incident posts & timelinesSubscriber notifications',
-    ];
-    "popular": false;
-    icon:;
-  📊';
-    "color": 'from-teal-600 to-emerald-700;
-    textColor:;
-  text-teal-300';
-    "link": 'https://ziontechgroup.com/status-pages-slo;
-    marketPosition:;
-  Integrated SLOs with customer-facing status for trust and transparency.';
-    "targetAudience": DevOps, SRE, product';
-    "trialDays": 7;
-    setupTime:;
-  30 minutes';
-    "category": 'Operations;
-    "realService": true;
-    technology[;
-  Next.jsOpenTelemetry';
-  'Webhook'];
-    integrations['DatadogNew Relic';
-  'PagerDuty'];
-    useCases['Customer commsReliability transparency'];
-    "roi": 'Reduce support tickets during incidents by 40%;
-    competitors[;
-  StatuspageBetter Uptime'];
-    "marketSize": '$1B status pages;
-    growthRate:;
-  10% CAGR';
-    "variant": 'neural-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Hosted status pages driven by metrics and incidents.';
-    "launchDate": '2024-07-22;
-    "customers": 75;
-    "rating": 4.6;
-    "reviews": 35,
-  };
+    id: ,
+  status-pages-slo',
+    "name": 'Status Pages & SLO,
+    tagline:,
+  Beautiful status pages and SLO dashboards for your services',
+    "price": '$39,
+    period:,
+  /month',
+    "description": 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.,
+    features['Custom branded status pagesSLO dashboardsIncident posts & timelinesSubscriber notifications'
+    ],
+    "popular": false,
+    icon: ,
+  📊',
+    "color": 'from-teal-600 to-emerald-700,
+    textColor:,
+  text-teal-300',
+    "link": 'https://ziontechgroup.com/status-pages-slo,
+    marketPosition:,
+  Integrated SLOs with customer-facing status for trust and transparency.',
+    "targetAudience": DevOps, SRE, product',
+    "trialDays": 7,
+    setupTime: ,
+  30 minutes',
+    "category": 'Operations,
+    "realService": true,
+    technology[,
+  Next.jsOpenTelemetryWebhook'],
+    integrations['DatadogNew RelicPagerDuty'],
+    useCases['Customer commsReliability transparency'],
+    "roi": 'Reduce support tickets during incidents by 40%,
+    competitors[,
+  StatuspageBetter Uptime'],
+    "marketSize": '$1B status pages,
+    growthRate:,
+  10% CAGR',
+    "variant": 'neural-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Hosted status pages driven by metrics and incidents.',
+    "launchDate": '2024-07-22,
+    "customers": 75,
+    "rating": 4.6,
+    "reviews": 35
+  },
   {,
-    id:;
-  uptime-slo-monitor';
-    "name": 'Uptime & SLO Monitor;
-    tagline:;
-  Synthetic checks with SLO dashboards and multi-region probes';
-    "price": '$49;
-    period:;
-  /month';
-    "description": Run multi-region synthetic checks, calculate SLOs, and receive proactive alerts with error budgets and burn rate alerts.';
-    features['Multi-region checksSLO calculation';
-  'Error budget policyBurn rate alerts',
-    ];
-    "popular": true;
-    icon:;
-  📈';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/uptime-slo-monitor;
-    marketPosition:;
-  Straightforward reliability toolkit with cost-effective pricing.';
-    "targetAudience": SRE, platform, engineering';
-    "trialDays": 14;
-    setupTime:;
-  15 minutes';
-    "category": 'Reliability;
-    "realService": true;
-    technology[;
-  Node.jsPlaywright';
-  'Prometheus'];
-    integrations['PagerDutySlack';
-  'Email'];
-    useCases['SLO governanceRelease checks'];
-    "roi": 'Catch issues before customers notice;
-    competitors[;
-  ChecklyUptimeRobot'];
-    "marketSize": '$1.2B synthetic;
-    growthRate:;
-  14% CAGR';
-    "variant": 'quantum-matrix;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Distributed workers with central analytics.';
-    "launchDate": '2024-11-10;
-    "customers": 130;
-    "rating": 4.7;
-    "reviews": 64,
-  };
+    id: ,
+  uptime-slo-monitor',
+    "name": 'Uptime & SLO Monitor,
+    tagline:,
+  Synthetic checks with SLO dashboards and multi-region probes',
+    "price": '$49,
+    period:,
+  /month',
+    "description": Run multi-region synthetic checks, calculate SLOs, and receive proactive alerts with error budgets and burn rate alerts.',
+    features['Multi-region checksSLO calculationError budget policyBurn rate alerts'
+    ],
+    "popular": true,
+    icon: ,
+  📈',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/uptime-slo-monitor,
+    marketPosition:,
+  Straightforward reliability toolkit with cost-effective pricing.',
+    "targetAudience": SRE, platform, engineering',
+    "trialDays": 14,
+    setupTime: ,
+  15 minutes',
+    "category": 'Reliability,
+    "realService": true,
+    technology[,
+  Node.jsPlaywrightPrometheus'],
+    integrations['PagerDutySlackEmail'],
+    useCases['SLO governanceRelease checks'],
+    "roi": 'Catch issues before customers notice,
+    competitors[,
+  ChecklyUptimeRobot'],
+    "marketSize": '$1.2B synthetic,
+    growthRate:,
+  14% CAGR',
+    "variant": 'quantum-matrix,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Distributed workers with central analytics.',
+    "launchDate": '2024-11-10,
+    "customers": 130,
+    "rating": 4.7,
+    "reviews": 64
+  },
   {,
-    id:;
-  webhook-relay-replay';
-    "name": 'Webhook Relay & Replay;
-    tagline:;
-  Capture, inspect, and replay webhooks with retries and signatures';
-    "price": '$29;
-    period:;
-  /month';
-    "description": Reliable webhook intake with HMAC verification, replay, and dead-letter queues. Perfect for testing and resilience.';
-    features['HMAC verificationRetry with backoff';
-  'Replay & DLQTraffic mirroring',
-    ];
-    "popular": false;
-    icon:;
-  🔁';
-    "color": 'from-sky-600 to-cyan-700;
-    textColor:;
-  text-sky-300';
-    "link": 'https://ziontechgroup.com/webhook-relay-replay;
-    marketPosition:;
-  Developer-friendly webhook reliability without custom infra.';
-    "targetAudience": Developers, QA, platform';
-    "trialDays": 14;
-    setupTime:;
-  10 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  Node.jsRedis';
-  'S3'];
-    integrations['StripeShopify';
-  'GitHub'];
-    useCases['Webhook reliabilityLocal testing';
-  'Sandboxing'];
-    "roi": 'Reduce missed events to near-zero;
-    competitors[;
-  Hookdeck'];
-    "marketSize": '$500M webhook tools;
-    growthRate:;
-  16% CAGR';
-    "variant": 'holographic-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  SaaS relay with signed storage and replay workers.';
-    "launchDate": '2024-06-30;
-    "customers": 58;
-    "rating": 4.6;
-    "reviews": 27,
-  };
+    id: ,
+  webhook-relay-replay',
+    "name": 'Webhook Relay & Replay,
+    tagline:,
+  Capture, inspect, and replay webhooks with retries and signatures',
+    "price": '$29,
+    period:,
+  /month',
+    "description": Reliable webhook intake with HMAC verification, replay, and dead-letter queues. Perfect for testing and resilience.',
+    features['HMAC verificationRetry with backoffReplay & DLQTraffic mirroring'
+    ],
+    "popular": false,
+    icon: ,
+  🔁',
+    "color": 'from-sky-600 to-cyan-700,
+    textColor:,
+  text-sky-300',
+    "link": 'https://ziontechgroup.com/webhook-relay-replay,
+    marketPosition:,
+  Developer-friendly webhook reliability without custom infra.',
+    "targetAudience": Developers, QA, platform',
+    "trialDays": 14,
+    setupTime: ,
+  10 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  Node.jsRedisS3'],
+    integrations['StripeShopifyGitHub'],
+    useCases['Webhook reliabilityLocal testingSandboxing'],
+    "roi": 'Reduce missed events to near-zero,
+    competitors[,
+  Hookdeck'],
+    "marketSize": '$500M webhook tools,
+    growthRate:,
+  16% CAGR',
+    "variant": 'holographic-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  SaaS relay with signed storage and replay workers.',
+    "launchDate": '2024-06-30,
+    "customers": 58,
+    "rating": 4.6,
+    "reviews": 27
+  },
   {,
-    id:;
-  feature-flags-edge';
-    "name": 'Feature Flags at the Edge;
-    tagline:;
-  Safe rollouts with ultra-low-latency edge evaluation';
-    "price": '$69;
-    period:;
-  /month';
-    "description": Manage feature flags, experiments, and kill switches evaluated at the edge with audit trails and SDKs.';
-    features['Edge evaluationTargeting & experiments';
-  'SDKs and audit logsKill switches',
-    ];
-    "popular": false;
-    icon:;
-  🚦';
-    "color": 'from-fuchsia-600 to-pink-700;
-    textColor:;
-  text-fuchsia-300';
-    "link": 'https://ziontechgroup.com/feature-flags-edge;
-    marketPosition:;
-  Edge-native flags for performance-critical apps.';
-    "targetAudience": Frontend, platform, product';
-    "trialDays": 14;
-    setupTime:;
-  45 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  Edge runtimesKV storage'];
-    integrations['VercelNetlify';
-  'Cloudflare'];
-    useCases['Gradual rolloutsA/B tests';
-  'Emergency off-switch'];
-    "roi": 'Ship faster with fewer incidents;
-    competitors[;
-  LaunchDarklyUnleash'];
-    "marketSize": '$1.8B flags;
-    growthRate:;
-  20% CAGR';
-    "variant": 'quantum-holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Edge worker evaluators and admin UI.';
-    "launchDate": '2024-09-01;
-    "customers": 42;
-    "rating": 4.5;
-    "reviews": 23,
-  };
+    id: ,
+  feature-flags-edge',
+    "name": 'Feature Flags at the Edge,
+    tagline:,
+  Safe rollouts with ultra-low-latency edge evaluation',
+    "price": '$69,
+    period:,
+  /month',
+    "description": Manage feature flags, experiments, and kill switches evaluated at the edge with audit trails and SDKs.',
+    features['Edge evaluationTargeting & experimentsSDKs and audit logsKill switches'
+    ],
+    "popular": false,
+    icon: ,
+  🚦',
+    "color": 'from-fuchsia-600 to-pink-700,
+    textColor:,
+  text-fuchsia-300',
+    "link": 'https://ziontechgroup.com/feature-flags-edge,
+    marketPosition:,
+  Edge-native flags for performance-critical apps.',
+    "targetAudience": Frontend, platform, product',
+    "trialDays": 14,
+    setupTime: ,
+  45 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  Edge runtimesKV storage'],
+    integrations['VercelNetlifyCloudflare'],
+    useCases['Gradual rolloutsA/B testsEmergency off-switch'],
+    "roi": 'Ship faster with fewer incidents,
+    competitors[,
+  LaunchDarklyUnleash'],
+    "marketSize": '$1.8B flags,
+    growthRate:,
+  20% CAGR',
+    "variant": 'quantum-holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Edge worker evaluators and admin UI.',
+    "launchDate": '2024-09-01,
+    "customers": 42,
+    "rating": 4.5,
+    "reviews": 23
+  },
   {,
-    id:;
-  sso-in-a-box';
-    "name": 'SSO in a Box;
-    tagline:;
-  Turnkey SAML/OIDC SSO with SCIM for your app';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Offer enterprise SSO with SAML/OIDC, JIT provisioning, SCIM user sync, and branding with minimal code.';
-    features['SAML/OIDC providersSCIM provisioning';
-  'Branding & JITUser/role sync',
-    ];
-    "popular": true;
-    icon:;
-  🔐';
-    "color": 'from-emerald-600 to-green-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/sso-in-a-box;
-    marketPosition:;
-  Minutes to enterprise SSO without reinventing auth.';
-    "targetAudience": B2B SaaS, platform, security';
-    "trialDays": 21;
-    setupTime:;
-  2 hours';
-    "category": 'Security;
-    "realService": true;
-    technology[;
-  SAMLOIDC';
-  'SCIM'];
-    integrations['OktaAzure AD';
-  'Google'];
-    useCases['Enterprise SSOProvisioning';
-  'B2B readiness'];
-    "roi": 'Unblock enterprise deals faster;
-    competitors[;
-  WorkOSAuth0'];
-    "marketSize": '$6B identity;
-    growthRate:;
-  24% CAGR';
-    "variant": 'neural-quantum-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Hosted IdP brokering and SCIM sync service.';
-    "launchDate": '2024-10-30;
-    "customers": 150;
-    "rating": 4.8;
-    "reviews": 96,
-  };
+    id: ,
+  sso-in-a-box',
+    "name": 'SSO in a Box,
+    tagline:,
+  Turnkey SAML/OIDC SSO with SCIM for your app',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Offer enterprise SSO with SAML/OIDC, JIT provisioning, SCIM user sync, and branding with minimal code.',
+    features['SAML/OIDC providersSCIM provisioningBranding & JITUser/role sync'
+    ],
+    "popular": true,
+    icon: ,
+  🔐',
+    "color": 'from-emerald-600 to-green-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/sso-in-a-box,
+    marketPosition:,
+  Minutes to enterprise SSO without reinventing auth.',
+    "targetAudience": B2B SaaS, platform, security',
+    "trialDays": 21,
+    setupTime: ,
+  2 hours',
+    "category": 'Security,
+    "realService": true,
+    technology[,
+  SAMLOIDCSCIM'],
+    integrations['OktaAzure ADGoogle'],
+    useCases['Enterprise SSOProvisioningB2B readiness'],
+    "roi": 'Unblock enterprise deals faster,
+    competitors[,
+  WorkOSAuth0'],
+    "marketSize": '$6B identity,
+    growthRate:,
+  24% CAGR',
+    "variant": 'neural-quantum-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Hosted IdP brokering and SCIM sync service.',
+    "launchDate": '2024-10-30,
+    "customers": 150,
+    "rating": 4.8,
+    "reviews": 96
+  },
   {,
-    id:;
-  vector-search-starter';
-    "name": 'Vector Search Starter;
-    tagline:;
-  Production-ready embeddings, vector DB, and semantic search';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Drop-in semantic search with multi-model embeddings, hybrid search, and relevance tuning.';
-    features['Multi-model embeddingsHybrid and rerank search';
-  'SDKs and relevance tuningObservability and quotas',
-    ];
-    "popular": false;
-    icon:;
-  🔎';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/vector-search-starter;
-    marketPosition:;
-  Launch semantic search in hours, not weeks.';
-    "targetAudience": Search teams, AI product';
-    "trialDays": 14;
-    setupTime:;
-  1 hour';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  EmbeddingsFAISS/PGV';
-  'Rerankers'];
-    integrations['PineconeWeaviate';
-  'Postgres'];
-    useCases['Product searchKnowledge base';
-  'Recommendations'];
-    "roi": 'Increase discovery and conversion 5–12%;
-    competitors[;
-  Algolia NeuralPinecone serverless'];
-    "marketSize": '$3B search AI;
-    growthRate:;
-  22% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Hosted ingestion, embeddings pipeline, and query APIs.';
-    "launchDate": '2024-08-15;
-    "customers": 70;
-    "rating": 4.6;
-    "reviews": 33,
-  };
+    id: ,
+  vector-search-starter',
+    "name": 'Vector Search Starter,
+    tagline:,
+  Production-ready embeddings, vector DB, and semantic search',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Drop-in semantic search with multi-model embeddings, hybrid search, and relevance tuning.',
+    features['Multi-model embeddingsHybrid and rerank searchSDKs and relevance tuningObservability and quotas'
+    ],
+    "popular": false,
+    icon: ,
+  🔎',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/vector-search-starter,
+    marketPosition:,
+  Launch semantic search in hours, not weeks.',
+    "targetAudience": Search teams, AI product',
+    "trialDays": 14,
+    setupTime: ,
+  1 hour',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  EmbeddingsFAISS/PGVRerankers'],
+    integrations['PineconeWeaviatePostgres'],
+    useCases['Product searchKnowledge baseRecommendations'],
+    "roi": 'Increase discovery and conversion 5–12%,
+    competitors[,
+  Algolia NeuralPinecone serverless'],
+    "marketSize": '$3B search AI,
+    growthRate:,
+  22% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Hosted ingestion, embeddings pipeline, and query APIs.',
+    "launchDate": '2024-08-15,
+    "customers": 70,
+    "rating": 4.6,
+    "reviews": 33
+  },
   {,
-    id:;
-  data-quality-monitor';
-    "name": 'Data Quality Monitor;
-    tagline:;
-  Schema drift, null spikes, and anomaly detection for pipelines';
-    "price": '$69;
-    period:;
-  /month';
-    "description": 'Detect data quality issues in pipelines using rules and ML-based anomaly detection. Alert teams before downstream breakage.;
-    features['Schema and contract checksNull spike detection';
-  'Anomaly alertsDashboard and lineage hints',
-    ];
-    "popular": false;
-    icon:;
-  🧪';
-    "color": 'from-amber-600 to-orange-700;
-    textColor:;
-  text-amber-300';
-    "link": 'https://ziontechgroup.com/data-quality-monitor;
-    marketPosition:;
-  Simple quality guardrails for modern ELT.';
-    "targetAudience": Data engineering, analytics';
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Data;
-    "realService": true;
-    technology[;
-  Great ExpectationsOpenLineage'];
-    integrations['Airflowdbt';
-  'Snowflake'];
-    useCases['Quality SLAsContract testing'];
-    "roi": 'Reduce incident fallout and rework;
-    competitors[;
-  Monte CarloBigeye'];
-    "marketSize": '$1.2B data observability;
-    growthRate:;
-  26% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Connectors, rules engine, alerts, and lineage context.';
-    "launchDate": '2024-09-05;
-    "customers": 39;
-    "rating": 4.5;
-    "reviews": 20,
-  };
+    id: ,
+  data-quality-monitor',
+    "name": 'Data Quality Monitor,
+    tagline:,
+  Schema drift, null spikes, and anomaly detection for pipelines',
+    "price": '$69,
+    period: ,
+  /month',
+    "description": 'Detect data quality issues in pipelines using rules and ML-based anomaly detection. Alert teams before downstream breakage.,
+    features['Schema and contract checksNull spike detectionAnomaly alertsDashboard and lineage hints'
+    ],
+    "popular": false,
+    icon: ,
+  🧪',
+    "color": 'from-amber-600 to-orange-700,
+    textColor:,
+  text-amber-300',
+    "link": 'https://ziontechgroup.com/data-quality-monitor,
+    marketPosition:,
+  Simple quality guardrails for modern ELT.',
+    "targetAudience": Data engineering, analytics',
+    "trialDays": 14,
+    setupTime: ,
+  2 hours',
+    "category": 'Data,
+    "realService": true,
+    technology[,
+  Great ExpectationsOpenLineage'],
+    integrations['AirflowdbtSnowflake'],
+    useCases['Quality SLAsContract testing'],
+    "roi": 'Reduce incident fallout and rework,
+    competitors[,
+  Monte CarloBigeye'],
+    "marketSize": '$1.2B data observability,
+    growthRate:,
+  26% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Connectors, rules engine, alerts, and lineage context.',
+    "launchDate": '2024-09-05,
+    "customers": 39,
+    "rating": 4.5,
+    "reviews": 20
+  },
   {,
-    id:;
-  data-pipeline-observability';
-    "name": 'Data Pipeline Observability;
-    tagline:;
-  Track pipeline runs, SLAs, and lineage with proactive alerts';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Observe pipeline health and SLAs across tools, with lineage insights and predictive failure detection.';
-    features['Run tracking & SLAsLineage & impact analysis';
-  'Predictive failure alertsDashboards & reports',
-    ];
-    "popular": true;
-    icon:;
-  📦';
-    "color": 'from-blue-700 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/data-pipeline-observability;
-    marketPosition:;
-  Unify view across orchestration and warehouses.';
-    "targetAudience": Data engineering, analytics';
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Data;
-    "realService": true;
-    technology[;
-  Airflowdbt';
-  'OpenLineage'];
-    integrations['Airflowdbt';
-  'Snowflake'];
-    useCases['ReliabilityOn-call ops'];
-    "roi": 'Reduce data downtime by 60%;
-    competitors[;
-  MetoMonte Carlo'];
-    "marketSize": '$1.2B data observability;
-    growthRate:;
-  26% CAGR';
-    "variant": 'quantum-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Collectors and SaaS dashboards with lineage.';
-    "launchDate": '2024-10-10;
-    "customers": 44;
-    "rating": 4.6;
-    "reviews": 26,
-  };
+    id: ,
+  data-pipeline-observability',
+    "name": 'Data Pipeline Observability,
+    tagline:,
+  Track pipeline runs, SLAs, and lineage with proactive alerts',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Observe pipeline health and SLAs across tools, with lineage insights and predictive failure detection.',
+    features['Run tracking & SLAsLineage & impact analysisPredictive failure alertsDashboards & reports'
+    ],
+    "popular": true,
+    icon: ,
+  📦',
+    "color": 'from-blue-700 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/data-pipeline-observability,
+    marketPosition:,
+  Unify view across orchestration and warehouses.',
+    "targetAudience": Data engineering, analytics',
+    "trialDays": 14,
+    setupTime: ,
+  2 hours',
+    "category": 'Data,
+    "realService": true,
+    technology[,
+  AirflowdbtOpenLineage'],
+    integrations['AirflowdbtSnowflake'],
+    useCases['ReliabilityOn-call ops'],
+    "roi": 'Reduce data downtime by 60%,
+    competitors[,
+  MetoMonte Carlo'],
+    "marketSize": '$1.2B data observability,
+    growthRate:,
+  26% CAGR',
+    "variant": 'quantum-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Collectors and SaaS dashboards with lineage.',
+    "launchDate": '2024-10-10,
+    "customers": 44,
+    "rating": 4.6,
+    "reviews": 26
+  },
   {,
-    id:;
-  ai-guardrails-suite';
-    "name": 'AI Guardrails Suite;
-    tagline:;
-  Prompt policy registry, safety checks, and red team testing';
-    "price": '$89;
-    period:;
-  /month';
-    "description": Centrally manage prompt policies, enforce safety checks, and run red team evaluations across AI apps.';
-    features['Central policy registryToxicity and PII guards';
-  'Eval and red team runsAudit and exceptions',
-    ];
-    "popular": true;
-    icon:;
-  🧩';
-    "color": 'from-rose-600 to-red-700;
-    textColor:;
-  text-rose-300';
-    "link": 'https://ziontechgroup.com/ai-guardrails;
-    marketPosition:;
-  Practical governance layer for production AI.';
-    "targetAudience": AI platform, risk, compliance';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  LLM APIsSafety models'];
-    integrations['OpenAI-compatibleAnthropic-compatible'];
-    useCases['AI governanceSafety compliance'];
-    "roi": 'Reduce safety incidents and brand risk;
-    competitors[;
-  Guardrails AILakera'];
-    "marketSize": '$1B AI safety;
-    growthRate:;
-  30% CAGR';
-    "variant": 'quantum-neural-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Policy engine, runtime checks, and eval harness.';
-    "launchDate": '2024-12-01;
-    "customers": 36;
-    "rating": 4.5;
-    "reviews": 18,
-  };
+    id: ,
+  ai-guardrails-suite',
+    "name": 'AI Guardrails Suite,
+    tagline:,
+  Prompt policy registry, safety checks, and red team testing',
+    "price": '$89,
+    period:,
+  /month',
+    "description": Centrally manage prompt policies, enforce safety checks, and run red team evaluations across AI apps.',
+    features['Central policy registryToxicity and PII guardsEval and red team runsAudit and exceptions'
+    ],
+    "popular": true,
+    icon: ,
+  🧩',
+    "color": 'from-rose-600 to-red-700,
+    textColor:,
+  text-rose-300',
+    "link": 'https://ziontechgroup.com/ai-guardrails,
+    marketPosition:,
+  Practical governance layer for production AI.',
+    "targetAudience": AI platform, risk, compliance',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  LLM APIsSafety models'],
+    integrations['OpenAI-compatibleAnthropic-compatible'],
+    useCases['AI governanceSafety compliance'],
+    "roi": 'Reduce safety incidents and brand risk,
+    competitors[,
+  Guardrails AILakera'],
+    "marketSize": '$1B AI safety,
+    growthRate:,
+  30% CAGR',
+    "variant": 'quantum-neural-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Policy engine, runtime checks, and eval harness.',
+    "launchDate": '2024-12-01,
+    "customers": 36,
+    "rating": 4.5,
+    "reviews": 18
+  },
   {,
-    id:;
-  ai-sales-automation';
-    "name": 'AI Sales Automation;
-    tagline:;
-  Lead scoring, outreach sequences, and meeting prep copilot';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Score leads with behavioral signals, orchestrate multi-channel outreach, and prep reps with account intel summaries.';
-    features['Behavioral lead scoringEmail/LinkedIn sequences';
-  'Meeting prep copilotPipeline analytics',
-    ];
-    "popular": false;
-    icon:;
-  🎯';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/ai-sales-automation;
-    marketPosition:;
-  Practical automation layered on CRM workflows.';
-    "targetAudience": Sales, revenue ops';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Sales;
-    "realService": true;
-    technology[;
-  LLM APIsCRM APIs'];
-    integrations['SalesforceHubSpot'];
-    useCases['Pipeline growthOutbound automation'];
-    "roi": 'Increase qualified meetings by 20–35%;
-    competitors[;
-  ApolloOutreach'];
-    "marketSize": '$4B sales tech;
-    growthRate:;
-  18% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Orchestrator with CRM connectors and copilot UI.';
-    "launchDate": '2024-08-28;
-    "customers": 66;
-    "rating": 4.5;
-    "reviews": 31,
-  };
+    id: ,
+  ai-sales-automation',
+    "name": 'AI Sales Automation,
+    tagline:,
+  Lead scoring, outreach sequences, and meeting prep copilot',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Score leads with behavioral signals, orchestrate multi-channel outreach, and prep reps with account intel summaries.',
+    features['Behavioral lead scoringEmail/LinkedIn sequencesMeeting prep copilotPipeline analytics'
+    ],
+    "popular": false,
+    icon: ,
+  🎯',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/ai-sales-automation,
+    marketPosition:,
+  Practical automation layered on CRM workflows.',
+    "targetAudience": Sales, revenue ops',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Sales,
+    "realService": true,
+    technology[,
+  LLM APIsCRM APIs'],
+    integrations['SalesforceHubSpot'],
+    useCases['Pipeline growthOutbound automation'],
+    "roi": 'Increase qualified meetings by 20–35%,
+    competitors[,
+  ApolloOutreach'],
+    "marketSize": '$4B sales tech,
+    growthRate:,
+  18% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Orchestrator with CRM connectors and copilot UI.',
+    "launchDate": '2024-08-28,
+    "customers": 66,
+    "rating": 4.5,
+    "reviews": 31
+  },
   {,
-    id:;
-  synthetic-data-generator';
-    "name": 'Synthetic Data Generator;
-    tagline:;
-  Privacy-safe synthetic data for analytics, testing, and ML';
-    "price": '$119;
-    period:;
-  /month';
-    "description": Generate high-utility synthetic tabular, time-series, and text datasets with differential privacy and utility/drift reports. Ideal for analytics, product testing, and ML model development without exposing sensitive data.';
-    features['Differential privacy & PII maskingTabular/time-series/text modes';
-  'Utility and drift reportsREST API & SDKs (Python/JS)',
-    ];
-    "popular": true;
-    icon:;
-  🧪';
-    "color": 'from-indigo-600 to-purple-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/synthetic-data-generator;
-    marketPosition:;
-  Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.';
-    "targetAudience": Data science, product, QA, compliance';
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Data;
-    "realService": true;
-    technology[;
-  PythonDP-SGD';
-  'Timeseries modelsNLP'];
-    integrations['S3Snowflake';
-  'BigQueryPostgres'];
-    useCases['Analytics sandboxesNon-prod testing';
-  'Model pre-training'];
-    "roi": 'Unblock data access, cut compliance review time by 70%;
-    competitors[;
-  Mostly AIGretel'];
-    "marketSize": '$1.5B privacy tech;
-    growthRate:;
-  25% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  DP pipelines with evaluators and dataset catalog.';
-    "launchDate": '2025-02-01;
-    "customers": 25;
-    "rating": 4.6;
-    "reviews": 12,
-  };
+    id: ,
+  synthetic-data-generator',
+    "name": 'Synthetic Data Generator,
+    tagline:,
+  Privacy-safe synthetic data for analytics, testing, and ML',
+    "price": '$119,
+    period:,
+  /month',
+    "description": Generate high-utility synthetic tabular, time-series, and text datasets with differential privacy and utility/drift reports. Ideal for analytics, product testing, and ML model development without exposing sensitive data.',
+    features['Differential privacy & PII maskingTabular/time-series/text modesUtility and drift reportsREST API & SDKs (Python/JS)'
+    ],
+    "popular": true,
+    icon: ,
+  🧪',
+    "color": 'from-indigo-600 to-purple-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/synthetic-data-generator,
+    marketPosition:,
+  Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.',
+    "targetAudience": Data science, product, QA, compliance',
+    "trialDays": 14,
+    setupTime: ,
+  2 hours',
+    "category": 'Data,
+    "realService": true,
+    technology[,
+  PythonDP-SGDTimeseries modelsNLP'],
+    integrations['S3SnowflakeBigQueryPostgres'],
+    useCases['Analytics sandboxesNon-prod testingModel pre-training'],
+    "roi": 'Unblock data access, cut compliance review time by 70%,
+    competitors[,
+  Mostly AIGretel'],
+    "marketSize": '$1.5B privacy tech,
+    growthRate: ,
+  25% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  DP pipelines with evaluators and dataset catalog.',
+    "launchDate": '2025-02-01,
+    "customers": 25,
+    "rating": 4.6,
+    "reviews": 12
+  },
   {,
-    id:;
-  email-parsing-routing-api';
-    "name": 'Email Parsing & Routing API;
-    tagline:;
-  Inbound email to structured events with attachments and DLQ';
-    "price": '$39;
-    period:;
-  /month';
-    "description": Convert inbound emails into structured JSON with attachments, signatures stripped, and webhook delivery with retries, DLQ, and replay.';
-    features['Signature stripping & normalizationAttachment handling & virus scan';
-  'Webhook delivery with retries & DLQInspector and secure replays',
-    ];
-    "popular": false;
-    icon:;
-  📥';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/email-parsing-routing-api;
-    marketPosition:;
-  Developer-first alternative to heavy ESB/ETL for email channels.';
-    "targetAudience": Developers, ops, support tooling';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  Mail hooksWebhook';
-  'Virus scan'];
-    integrations['SendGrid InboundMailgun Routes';
-  'SES'];
-    useCases['Ticket intakeOrder parsing';
-  'Lead capture'];
-    "roi": 'Automate manual triage, reduce handling time 40%;
-    competitors[;
-  MailparserParseur'];
-    "marketSize": '$800M parsing tools;
-    growthRate:;
-  14% CAGR';
-    "variant": 'quantum-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Inbound endpoints, parsing engines, and replayer.';
-    "launchDate": '2025-02-10;
-    "customers": 18;
-    "rating": 4.5;
-    "reviews": 9,
-  };
+    id: ,
+  email-parsing-routing-api',
+    "name": 'Email Parsing & Routing API,
+    tagline:,
+  Inbound email to structured events with attachments and DLQ',
+    "price": '$39,
+    period:,
+  /month',
+    "description": Convert inbound emails into structured JSON with attachments, signatures stripped, and webhook delivery with retries, DLQ, and replay.',
+    features['Signature stripping & normalizationAttachment handling & virus scanWebhook delivery with retries & DLQInspector and secure replays'
+    ],
+    "popular": false,
+    icon: ,
+  📥',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/email-parsing-routing-api,
+    marketPosition:,
+  Developer-first alternative to heavy ESB/ETL for email channels.',
+    "targetAudience": Developers, ops, support tooling',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  Mail hooksWebhookVirus scan'],
+    integrations['SendGrid InboundMailgun RoutesSES'],
+    useCases['Ticket intakeOrder parsingLead capture'],
+    "roi": 'Automate manual triage, reduce handling time 40%,
+    competitors[,
+  MailparserParseur'],
+    "marketSize": '$800M parsing tools,
+    growthRate: ,
+  14% CAGR',
+    "variant": 'quantum-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Inbound endpoints, parsing engines, and replayer.',
+    "launchDate": '2025-02-10,
+    "customers": 18,
+    "rating": 4.5,
+    "reviews": 9
+  },
   {,
-    id:;
-  kubernetes-cost-analyzer';
-    "name": 'Kubernetes Cost Analyzer;
-    tagline:;
-  Allocation, rightsizing, and bin‑packing insights by team/namespace';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Analyze workload cost allocation, detect overprovisioning, and generate bin‑packing suggestions with chargeback reports and FinOps dashboards.';
-    features['Allocation by namespace/teamRequests/limits advisor';
-  'Bin‑packing recommendationsChargeback/showback reports',
-    ];
-    "popular": true;
-    icon:;
-  ☸️';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/kubernetes-cost-analyzer;
-    marketPosition:;
-  Actionable K8s FinOps without cluster vendor lock-in.';
-    "targetAudience": Platform, FinOps, SRE';
-    "trialDays": 14;
-    setupTime:;
-  1 hour';
-    "category": 'Cloud & Infrastructure;
-    "realService": true;
-    technology[;
-  PrometheusKube-state-metrics';
-  'Grafana'];
-    integrations['DatadogNew Relic';
-  'Slack'];
-    useCases['RightsizingBudget governance'];
-    "roi": 'Save 10–25% cluster spend in 60 days;
-    competitors[;
-  KubecostCAST AI'];
-    "marketSize": '$2B K8s mgmt;
-    growthRate:;
-  20% CAGR';
-    "variant": 'neural-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Collectors, policy engine, and reports.';
-    "launchDate": '2025-02-05;
-    "customers": 22;
-    "rating": 4.6;
-    "reviews": 11,
-  };
+    id: ,
+  kubernetes-cost-analyzer',
+    "name": 'Kubernetes Cost Analyzer,
+    tagline:,
+  Allocation, rightsizing, and bin‑packing insights by team/namespace',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Analyze workload cost allocation, detect overprovisioning, and generate bin‑packing suggestions with chargeback reports and FinOps dashboards.',
+    features['Allocation by namespace/teamRequests/limits advisorBin‑packing recommendationsChargeback/showback reports'
+    ],
+    "popular": true,
+    icon: ,
+  ☸️',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/kubernetes-cost-analyzer,
+    marketPosition:,
+  Actionable K8s FinOps without cluster vendor lock-in.',
+    "targetAudience": Platform, FinOps, SRE',
+    "trialDays": 14,
+    setupTime: ,
+  1 hour',
+    "category": 'Cloud & Infrastructure,
+    "realService": true,
+    technology[,
+  PrometheusKube-state-metricsGrafana'],
+    integrations['DatadogNew RelicSlack'],
+    useCases['RightsizingBudget governance'],
+    "roi": 'Save 10–25% cluster spend in 60 days,
+    competitors[,
+  KubecostCAST AI'],
+    "marketSize": '$2B K8s mgmt,
+    growthRate:,
+  20% CAGR',
+    "variant": 'neural-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Collectors, policy engine, and reports.',
+    "launchDate": '2025-02-05,
+    "customers": 22,
+    "rating": 4.6,
+    "reviews": 11
+  },
   {,
-    id:;
-  cloud-landing-zone';
-    "name": 'Cloud Landing Zone Builder;
-    tagline:;
-  Secure multi-account AWS/Azure/GCP foundations via GitOps';
-    "price": '$349;
-    period:;
-  /month';
-    "description": Blueprint your cloud orgs with guardrails, IAM, networks, audit trails, and budgets. Delivered as code with repeatable GitOps.';
-    features['Org setup & SCPs/IAM policiesVPC/VNet baselines';
-  'Audit logging & SIEM hooksBudgets & anomaly alerts',
-    ];
-    "popular": true;
-    icon:;
-  ☁️';
-    "color": 'from-sky-600 to-blue-700;
-    textColor:;
-  text-sky-300';
-    "link": 'https://ziontechgroup.com/cloud-landing-zone;
-    marketPosition:;
-  Faster time-to-compliance vs. bespoke landing zones.';
-    "targetAudience": Platform, security, compliance';
-    "trialDays": 7;
-    setupTime:;
-  3–5 days';
-    "category": 'Cloud & Infrastructure;
-    "realService": true;
-    technology[;
-  TerraformGuardrails';
-  'CI/CD'];
-    integrations['AWS Control TowerAzure Policy';
-  'GCP Org'];
-    useCases['FoundationsMulti-env setup'];
-    "roi": 'Cut setup time by 80%, fewer misconfigs;
-    competitors[;
-  AWS Control TowerAzure Landing Zones'];
-    "marketSize": '$5B platform eng;
-    growthRate:;
-  18% CAGR';
-    "variant": 'holographic-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  IaC modules, policy packs, and CI workflows.';
-    "launchDate": '2025-01-22;
-    "customers": 14;
-    "rating": 4.7;
-    "reviews": 8,
-  };
+    id: ,
+  cloud-landing-zone',
+    "name": 'Cloud Landing Zone Builder,
+    tagline:,
+  Secure multi-account AWS/Azure/GCP foundations via GitOps',
+    "price": '$349,
+    period:,
+  /month',
+    "description": Blueprint your cloud orgs with guardrails, IAM, networks, audit trails, and budgets. Delivered as code with repeatable GitOps.',
+    features['Org setup & SCPs/IAM policiesVPC/VNet baselinesAudit logging & SIEM hooksBudgets & anomaly alerts'
+    ],
+    "popular": true,
+    icon: ,
+  ☁️',
+    "color": 'from-sky-600 to-blue-700,
+    textColor:,
+  text-sky-300',
+    "link": 'https://ziontechgroup.com/cloud-landing-zone,
+    marketPosition:,
+  Faster time-to-compliance vs. bespoke landing zones.',
+    "targetAudience": Platform, security, compliance',
+    "trialDays": 7,
+    setupTime: ,
+  3–5 days',
+    "category": 'Cloud & Infrastructure,
+    "realService": true,
+    technology[,
+  TerraformGuardrailsCI/CD'],
+    integrations['AWS Control TowerAzure PolicyGCP Org'],
+    useCases['FoundationsMulti-env setup'],
+    "roi": 'Cut setup time by 80%, fewer misconfigs,
+    competitors[,
+  AWS Control TowerAzure Landing Zones'],
+    "marketSize": '$5B platform eng,
+    growthRate: ,
+  18% CAGR',
+    "variant": 'holographic-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  IaC modules, policy packs, and CI workflows.',
+    "launchDate": '2025-01-22,
+    "customers": 14,
+    "rating": 4.7,
+    "reviews": 8
+  },
   {,
-    id:;
-  security-headers-scanner';
-    "name": 'Security Headers Scanner;
-    tagline:;
-  CSP, HSTS, and cookie flags auditing with fix guidance';
-    "price": '$19;
-    period:;
-  /month';
-    "description": 'Continuously scan web properties for security headers and cookie attributes with actionable diffs and CI annotations.;
-    features['CSP/HSTS/X-Frame-Options checksCookie flags & SameSite audit';
-  'PR annotations & diffsAlerting & weekly reports',
-    ];
-    "popular": false;
-    icon:;
-  🛡️';
-    "color": 'from-rose-600 to-fuchsia-700;
-    textColor:;
-  text-rose-300';
-    "link": 'https://ziontechgroup.com/services/security-headers-scanner;
-    marketPosition:;
-  Shift-left security posture checks for frontends.';
-    "targetAudience": Frontend, security';
-    "trialDays": 7;
-    setupTime:;
-  20 minutes';
-    "category": 'Security;
-    "realService": true;
-    technology[;
-  Headless browserCI annotations'];
-    integrations['GitHubGitLab';
-  'Slack'];
-    useCases['AppSec hygieneCompliance checks'];
-    "roi": 'Reduce security review cycles 50%;
-    competitors[;
-  Mozilla Observatory'];
-    "marketSize": '$3B AppSec;
-    growthRate:;
-  15% CAGR';
-    "variant": 'quantum-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Scanner fleet with report UI and CI plugins.';
-    "launchDate": '2025-02-12;
-    "customers": 10;
-    "rating": 4.5;
-    "reviews": 6,
-  };
+    id: ,
+  security-headers-scanner',
+    "name": 'Security Headers Scanner,
+    tagline:,
+  CSP, HSTS, and cookie flags auditing with fix guidance',
+    "price": '$19,
+    period: ,
+  /month',
+    "description": 'Continuously scan web properties for security headers and cookie attributes with actionable diffs and CI annotations.,
+    features['CSP/HSTS/X-Frame-Options checksCookie flags & SameSite auditPR annotations & diffsAlerting & weekly reports'
+    ],
+    "popular": false,
+    icon: ,
+  🛡️',
+    "color": 'from-rose-600 to-fuchsia-700,
+    textColor:,
+  text-rose-300',
+    "link": 'https://ziontechgroup.com/services/security-headers-scanner,
+    marketPosition:,
+  Shift-left security posture checks for frontends.',
+    "targetAudience": Frontend, security',
+    "trialDays": 7,
+    setupTime: ,
+  20 minutes',
+    "category": 'Security,
+    "realService": true,
+    technology[,
+  Headless browserCI annotations'],
+    integrations['GitHubGitLabSlack'],
+    useCases['AppSec hygieneCompliance checks'],
+    "roi": 'Reduce security review cycles 50%,
+    competitors[,
+  Mozilla Observatory'],
+    "marketSize": '$3B AppSec,
+    growthRate:,
+  15% CAGR',
+    "variant": 'quantum-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Scanner fleet with report UI and CI plugins.',
+    "launchDate": '2025-02-12,
+    "customers": 10,
+    "rating": 4.5,
+    "reviews": 6
+  },
   {,
-    id:;
-  frontend-bundle-analyzer-ci';
-    "name": 'Frontend Bundle Analyzer CI;
-    tagline:;
-  Budgets, PR diffs, and insights for JS/CSS bundles';
-    "price": '$29;
-    period:;
-  /month';
-    "description": Track bundle budgets and surface PR diffs with suggestions for code splitting, image optimization, and dependency pruning.';
-    features['Budget enforcementPR diffs & flamecharts';
-  'Actionable suggestionsDashboards & trends',
-    ];
-    "popular": false;
-    icon:;
-  📦';
-    "color": 'from-amber-600 to-orange-700;
-    textColor:;
-  text-amber-300';
-    "link": 'https://ziontechgroup.com/services/frontend-bundle-analyzer-ci;
-    marketPosition:;
-  Developer-centric insights integrated into reviews.';
-    "targetAudience": 'Frontend teams;
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  Webpack/Vite analyzersCI bots'];
-    integrations['GitHubGitLab';
-  'Vercel'];
-    useCases['Perf budgetsDX improvements'];
-    "roi": 'Prevent perf regressions, faster pages;
-    competitors[;
-  CalibreSpeedCurve'];
-    "marketSize": '$1B web perf;
-    growthRate:;
-  12% CAGR';
-    "variant": 'holographic-advanced;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Analyzer CLI, CI bot, and dashboard.';
-    "launchDate": '2025-01-30;
-    "customers": 12;
-    "rating": 4.5;
+    id: ,
+  frontend-bundle-analyzer-ci',
+    "name": 'Frontend Bundle Analyzer CI,
+    tagline:,
+  Budgets, PR diffs, and insights for JS/CSS bundles',
+    "price": '$29,
+    period:,
+  /month',
+    "description": Track bundle budgets and surface PR diffs with suggestions for code splitting, image optimization, and dependency pruning.',
+    features['Budget enforcementPR diffs & flamechartsActionable suggestionsDashboards & trends'
+    ],
+    "popular": false,
+    icon: ,
+  📦',
+    "color": 'from-amber-600 to-orange-700,
+    textColor:,
+  text-amber-300',
+    "link": 'https://ziontechgroup.com/services/frontend-bundle-analyzer-ci,
+    marketPosition:,
+  Developer-centric insights integrated into reviews.',
+    "targetAudience": 'Frontend teams,
+    "trialDays": 14,
+    setupTime:,
+  30 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  Webpack/Vite analyzersCI bots'],
+    integrations['GitHubGitLabVercel'],
+    useCases['Perf budgetsDX improvements'],
+    "roi": 'Prevent perf regressions, faster pages,
+    competitors[,
+  CalibreSpeedCurve'],
+    "marketSize": '$1B web perf,
+    growthRate: ,
+  12% CAGR',
+    "variant": 'holographic-advanced,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Analyzer CLI, CI bot, and dashboard.',
+    "launchDate": '2025-01-30,
+    "customers": 12,
+    "rating": 4.5,
+    "reviews": 7
+  },
+  {,
+    id: ,
+  s3-to-snowflake-ingestion',
+    "name": 'S3 to Snowflake Ingestion,
+    tagline:,
+  Reliable file ingestion, schema mapping, and backfills',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Automate ingestion from S3 to Snowflake with schema inference, partitioning, historical backfills, and monitoring.',
+    features['Schema inference & mappingPartitioning & upsertsBackfills & reprocessLineage & monitoring'
+    ],
+    "popular": false,
+    icon: ,
+  🧊',
+    "color": 'from-blue-700 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/s3-to-snowflake-ingestion,
+    marketPosition:,
+  Operationally simple compared to DIY pipelines.',
+    "targetAudience": 'Data engineering,
+    "trialDays": 14,
+    setupTime:,
+  2 hours',
+    "category": 'Data,
+    "realService": true,
+    technology[,
+  SnowflakeS3Airflow/dbt'],
+    integrations['AWSSnowflakedbt'],
+    useCases['ELT ingestionAnalyticsCompliance archiving'],
+    "roi": 'Reduce pipeline toil by 60%,
+    competitors[,
+  Fivetran (files)Airbyte'],
+    "marketSize": '$3B data ingest,
+    growthRate:,
+  20% CAGR',
+    "variant": 'neural-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Connector jobs with schema registry and monitor.',
+    "launchDate": '2025-02-08,
+    "customers": 9,
+    "rating": 4.4,
+    "reviews": 5
+  },
+  {,
+    id: ,
+  visual-regression-monitor',
+    "name": 'Visual Regression Monitor,
+    tagline:,
+  Screenshot diffs, thresholds, and CI annotations',
+    "price": '$39,
+    period:,
+  /month',
+    "description": Catch visual regressions with screenshot comparisons, tolerances, and smart masking integrated into CI and PRs.',
+    features['Smart masking & thresholdsPR/CI annotationsBaselines & environmentsAlerting & history'
+    ],
+    "popular": false,
+    icon: ,
+  🖼️',
+    "color": 'from-violet-600 to-purple-700,
+    textColor:,
+  text-violet-300',
+    "link": 'https://ziontechgroup.com/services/visual-regression-monitor,
+    marketPosition:,
+  Simple setup vs. bespoke Playwright configs.',
+    "targetAudience": Frontend QA, design systems',
+    "trialDays": 14,
+    setupTime: ,
+  45 minutes',
+    "category": 'Developer Experience,
+    "realService": true,
+    technology[,
+  PlaywrightHeadless Chrome'],
+    integrations['GitHubGitLabSlack'],
+    useCases['Design integrityRelease gates'],
+    "roi": 'Reduce UI bugs escaping to prod,
+    competitors[,
+  PercyChromatic'],
+    "marketSize": '$600M visual test,
+    growthRate:,
+  16% CAGR',
+    "variant": 'holographic-matrix,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Snapshot store, comparator, and CI bot.',
+    "launchDate": '2025-02-03,
+    "customers": 15,
+    "rating": 4.5,
+    "reviews": 7
+  },
+  {,
+    id: ,
+  data-masking-proxy',
+    "name": 'Data Masking Proxy,
+    tagline:,
+  PII/PHI tokenization for lower environments and analytics',
+    "price": '$89,
+    period:,
+  /month',
+    "description": 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.,
+    features['Tokenization & masking policiesFormat-preserving encryptionSchema-aware transformsAudit logs & approvals'
+    ],
+    "popular": true,
+    icon: ,
+  🗝️',
+    "color": 'from-green-600 to-emerald-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/data-masking-proxy,
+    marketPosition:,
+  Lighter alternative to legacy DLP stacks for data teams.',
+    "targetAudience": Data, platform, compliance',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Security,
+    "realService": true,
+    technology[,
+  FPEKafka/connectors'],
+    integrations['DebeziumSnowflakeBigQuery'],
+    useCases['Safe replicatesAnalytics sandboxes'],
+    "roi": 'Accelerate testing while staying compliant,
+    competitors[,
+  ProtegrityImmuta'],
+    "marketSize": '$2B data security,
+    growthRate:,
+  18% CAGR',
+    "variant": 'neural-quantum-cyberpunk,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Policy engine, connectors, and audit trails.',
+    "launchDate": '2025-02-06,
+    "customers": 13,
+    "rating": 4.6,
+    "reviews": 6
+  },
+  {,
+    id: ,
+  ai-meeting-notes-agent',
+    "name": 'AI Meeting Notes Agent,
+    tagline:,
+  Recordings, action items, and CRM/PM sync',
+    "price": '$69,
+    period:,
+  /month',
+    "description": Transcribe meetings, extract decisions and action items, and sync summaries to CRM and project management tools.',
+    features['Accurate transcriptsAction items & ownersSummaries & highlightsCRM/PM sync'
+    ],
+    "popular": true,
+    icon: ,
+  🎧',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/ai-meeting-notes-agent,
+    marketPosition:,
+  Business-ready outputs with governance and auditability.',
+    "targetAudience": Sales, success, product',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  ASRLLM summarizationRAG'],
+    integrations['ZoomTeamsGMeetHubSpot',
+  'Jira'],
+    useCases['Sales callsCustomer interviewsStandups'],
+    "roi": 'Reduce note-taking time by 80%,
+    competitors[,
+  FathomGrain'],
+    "marketSize": '$1.2B meeting AI,
+    growthRate:,
+  30% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Recording bot, processing pipeline, and sync.',
+    "launchDate": '2025-02-04,
+    "customers": 28,
+    "rating": 4.6,
+    "reviews": 13
+  },
+  {,
+    id: ,
+  compliance-policy-as-code',
+    "name": 'Compliance Policy as Code,
+    tagline:,
+  OPA/Rego and cloud policies with CI gates and reports',
+    "price": '$129,
+    period:,
+  /month',
+    "description": 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.,
+    features['Policy packs (SOC2, ISO)CI gates & PR commentsEvidence reportsDrift detection'
+    ],
+    "popular": true,
+    icon: ,
+  📜',
+    "color": 'from-purple-600 to-indigo-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/compliance-policy-as-code,
+    marketPosition:,
+  Unifies cloud and IaC checks with audit-ready outputs.',
+    "targetAudience": Security, compliance, platform',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Compliance,
+    "realService": true,
+    technology[,
+  OPA/RegoTerraformCloud APIs'],
+    integrations['AWSAzureGCPGitHub'],
+    useCases['Evidence automationGuardrails'],
+    "roi": 'Shorten audits, prevent drift-related incidents,
+    competitors[,
+  BridgecrewSnyk IaC'],
+    "marketSize": '$3B cloud security,
+    growthRate: ,
+  22% CAGR',
+    "variant": 'holographic-neural,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Policy catalog, scanners, and evidence builder.',
+    "launchDate": '2025-02-07,
+    "customers": 17,
+    "rating": 4.6,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  pdf-render-api',
+    "name": 'PDF Render API,
+    tagline:,
+  Reliable HTML-to-PDF at scale with templates, assets and callbacks',
+    "price": '$29,
+    period:,
+  /month',
+    "description": Generate pixel-perfect PDFs from HTML/URL with font embedding, asset hosting, async callbacks and storage destinations. Great for invoices, contracts and reports.',
+    features['Chromium-based renderer with fontsTemplates and asset hostingAsync rendering and callbacksWatermarks and security options',
+  'Storage destinations (S3/GCS/Azure)Usage analytics and quotas'
+    ],
+    "popular": true,
+    icon: ,
+  📄',
+    "color": 'from-purple-600 to-pink-700,
+    textColor:,
+  text-purple-400',
+    "link": 'https://ziontechgroup.com/services/pdf-render-api,
+    marketPosition:,
+  Simple, predictable pricing with dev-first DX.',
+    "targetAudience": SaaS, finance, legal, ops automation',
+    "trialDays": 14,
+    setupTime: ,
+  10 minutes',
+    "category": 'Developer Tools,
+    "realService": true,
+    technology[,
+  Node.jsHeadless ChromeS3Redis'],
+    integrations['ZapierMake.comWebhookS3'],
+    useCases['InvoicesAgreementsReports'],
+    "roi": 'Replace brittle DIY scripts, cut maintenance by 80%.,
+    competitors[,
+  PDFMonkeyPDFShiftDocRaptor'],
+    "marketSize": '$500M+ doc rendering,
+    growthRate: ,
+  10% CAGR',
+    "variant": 'cyberpunk-holographic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  API with queue-based workers, async callbacks, asset cache, and template store.',
+    "launchDate": '2025-02-01,
+    "customers": 75,
+    "rating": 4.7,
+    "reviews": 28
+  },
+  {,
+    id: ,
+  invoice-ocr-extraction-api',
+    "name": 'Invoice OCR & Extraction API,
+    tagline:,
+  Parse invoices/receipts to structured JSON with high accuracy',
+    "price": '$69,
+    period:,
+  /month',
+    "description": Extract vendors, line items, totals, taxes and dates from invoices and receipts. Includes validation rules, human-in-the-loop review and export to accounting systems.',
+    features['Multi-language OCR (Tesseract/Cloud OCR)Template-free field detectionConfidence scores and validation rulesHuman-in-the-loop review UI',
+  'CSV/JSON export and webhooksNative integrations (Xero/QuickBooks)'
+    ],
+    "popular": true,
+    icon: ,
+  🧾',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-400',
+    "link": 'https://ziontechgroup.com/services/invoice-ocr-extraction-api,
+    marketPosition:,
+  Accurate extraction without expensive enterprise contracts.',
+    "targetAudience": Accounting, fintech, back-office automation, marketplaces',
+    "trialDays": 14,
+    setupTime: ,
+  20 minutes',
+    "category": 'AI & Data,
+    "realService": true,
+    technology[,
+  PythonTesseract/Cloud VisionFastAPI/NodePostgres'],
+    integrations['XeroQuickBooksWebhookS3'],
+    useCases['AP automationExpense processingReconciliation'],
+    "roi": 'Reduce manual data entry by 80–95%,
+    competitors[,
+  VeryfiRossumNanonets'],
+    "marketSize": '$1B+ document AI,
+    growthRate:,
+  32% CAGR',
+    "variant": 'neural-quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Ensembled OCR with field post-processing, validation, and HITL review queue.',
+    "launchDate": '2025-02-15,
+    "customers": 29,
+    "rating": 4.6,
+    "reviews": 9
+  },
+  {,
+    id: ,
+  log-archive-search',
+    "name": 'Log Archive & Search,
+    tagline:,
+  Hot-warm-cold log storage with fast search and lifecycle controls',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Ingest application logs with dynamic sampling, hot/warm retention tiers and S3 archival. Query recent data quickly and archive the rest cheaply.',
+    features['Ingestion with dynamic samplingHot/warm/cold retention policiesS3-compatible archivalOpenSearch/ClickHouse backend',
+  'Alerting and dashboardsPII redaction and tokenization'
+    ],
+    "popular": false,
+    icon: ,
+  🪵',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-400',
+    "link": 'https://ziontechgroup.com/services/log-archive-search,
+    marketPosition:,
+  Cost-efficient alternative to full APM suites for logs.',
+    "targetAudience": SRE, platform, security teams',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Observability,
+    "realService": true,
+    technology[,
+  Vector/FluentBitClickHouse/OpenSearchS3Node/Go'],
+    integrations['GrafanaPromtailCloudWatchStackdriver'],
+    useCases['Incident triageAudit retentionCost control'],
+    "roi": 'Cut log bills by 40–70% with tiered retention,
+    competitors[,
+  Datadog LogsSplunkElastic Cloud'],
+    "marketSize": '$15B+ log analytics,
+    growthRate:,
+  18% CAGR',
+    "variant": 'quantum-matrix,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Ingestion gateway, retention engine, archive to S3, and query federation.',
+    "launchDate": '2025-02-20,
+    "customers": 21,
+    "rating": 4.5,
+    "reviews": 7
+  },
+  {,
+    id: ,
+  gdpr-privacyops-suite',
+    "name": 'GDPR PrivacyOps Suite,
+    tagline:,
+  Automate DSAR, consent and retention with audit-ready workflows',
+    "price": '$249,
+    period:,
+  /month',
+    "description": End-to-end privacy operations covering data subject access requests, consent management, data mapping, and retention policies with audit trails.',
+    features['Automated DSAR intake and processingConsent and preference center SDKData mapping across SaaS and data storesRetention rules with defensible deletion',
+  'Evidence export for auditors'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-purple-600 to-fuchsia-700,
+    textColor:,
+  text-fuchsia-400',
+    "link": 'https://ziontechgroup.com/gdpr-privacyops,
+    marketPosition:,
+  Practical privacy orchestration that complements security tooling with verifiable evidence.',
+    "targetAudience": Legal, Security, Data Governance',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Compliance & Security,
+    "realService": true,
+    technology[,
+  Next.jsNode.jsPostgreSQLS3',
+  'Webhooks'],
+    integrations['OktaWorkdaySalesforceGoogle Workspace',
+  'Microsoft 365'],
+    useCases['DSAR automationConsent managementData retention'],
+    "roi": 'Cut DSAR handling time by 70% and reduce legal costs,
+    competitors[,
+  TranscendOneTrustDataGrail'],
+    "marketSize": '$2.1B privacy tech,
+    growthRate:,
+  22% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Workflow engine with connectors, evidence registry, and audit trail exports.',
+    "launchDate": '2025-03-01,
+    "customers": 18,
+    "rating": 4.6,
+    "reviews": 11
+  },
+  {,
+    id: ,
+  ai-code-review-copilot',
+    "name": 'AI Code Review Copilot,
+    tagline:,
+  Static+LLM reviews with custom rules, SARIF, and fix suggestions',
+    "price": '$129,
+    period:,
+  /month',
+    "description": Blends static analysis with LLM reasoning to flag issues, suggest fixes, enforce architectural rules, and output SARIF to your CI.',
+    features['Language-aware static checksLLM reasoning with guardrailsCustom policy rules (OPA-style)PR comments and SARIF outputs',
+  'Risk heatmaps and trends'
+    ],
+    "popular": false,
+    icon: ,
+  🧑‍💻',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-400',
+    "link": 'https://ziontechgroup.com/ai-code-review-copilot,
+    marketPosition:,
+  Faster feedback than manual reviews with governance for safety-critical repos.',
+    "targetAudience": Engineering teams, platform engineering, QA',
+    "trialDays": 14,
+    setupTime: ,
+  30 minutes',
+    "category": 'Developer Tools,
+    "realService": true,
+    technology[,
+  TypeScriptAST parsersOpenAI-compatible APIsGitHub/GitLab CI'],
+    integrations['GitHubGitLabBitbucketAzure DevOps'],
+    useCases['Shift-left qualityArchitecture complianceSecure coding'],
+    "roi": 'Reduce PR cycle time by 30% and defects by 25%,
+    competitors[,
+  Snyk CodeSonarQube + AICodeium Review'],
+    "marketSize": '$4.5B DevSecOps,
+    growthRate:,
+  21% CAGR',
+    "variant": 'quantum,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  CI plugin, policy pack, and dashboard with PR bot comments.',
+    "launchDate": '2025-02-15,
+    "customers": 42,
+    "rating": 4.5,
+    "reviews": 29
+  },
+  {,
+    id: ,
+  m365-security-hardening-kit',
+    "name": 'M365 Security Hardening Kit,
+    tagline:,
+  Turnkey baseline hardening, continuous drift detection, and auto-remediation',
+    "price": '$199,
+    period:,
+  /month',
+    "description": Enforce recommended security baselines in Microsoft 365 and Azure AD with drift monitoring, alerting, and optional auto-remediation.',
+    features['Secure baseline as codeMisconfiguration detectionAuto-remediation playbooksExecutive reporting'
+    ],
+    "popular": true,
+    icon: ,
+  🔒',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-400',
+    "link": 'https://ziontechgroup.com/m365-security-hardening,
+    marketPosition:,
+  Brings cloud security posture management to M365 tenants with quick wins.',
+    "targetAudience": IT, Security, MSPs',
+    "trialDays": 14,
+    setupTime: ,
+  2 hours',
+    "category": 'Security & IT,
+    "realService": true,
+    technology[,
+  Microsoft GraphAzure ADPowerShellTerraform'],
+    integrations['Azure ADDefenderIntune'],
+    useCases['Baseline enforcementDrift detectionAudit readiness'],
+    "roi": 'Reduce misconfig incidents by 60% in 90 days,
+    competitors[,
+  Microsoft Secure ScoreWizTenable'],
+    "marketSize": '$3.2B SaaS security posture,
+    growthRate:,
+  28% CAGR',
+    "variant": 'matrix,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Baseline templates, drift engine, and remediation actions via Graph API.',
+    "launchDate": '2025-03-10,
+    "customers": 15,
+    "rating": 4.4,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  ai-customer-qa-benchmark',
+    "name": 'AI Customer QA Benchmark,
+    tagline:,
+  Continuously test your AI agents with real-world scripts and red teams',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Scenario-based QA and red-teaming for AI agents and chatbots with regression baselines, hallucination checks, and compliance scenarios.',
+    features['Scripted and generative test suitesHallucination and toxicity checksRAG source attribution validationCompliance and brand guardrails'
+    ],
+    "popular": false,
+    icon: ,
+  🔬',
+    "color": 'from-indigo-600 to-violet-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/ai-customer-qa-benchmark,
+    marketPosition:,
+  Production-focused QA for AI agents covering safety, accuracy, and CX.',
+    "targetAudience": CX, AI platform teams, compliance',
+    "trialDays": 14,
+    setupTime: ,
+  1 hour',
+    "category": 'AI Quality,
+    "realService": true,
+    technology[,
+  PlaywrightPrompt evaluationEmbeddingsSynthetic data'],
+    integrations['ZendeskIntercomSalesforce'],
+    useCases['Agent regression testingSafety certificationRAG validation'],
+    "roi": 'Reduce AI incident rate by 50%,
+    competitors[,
+  HumanloopTruEraRobust Intelligence'],
+    "marketSize": '$1.1B AI eval tooling,
+    growthRate:,
+  30% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Test runner, metrics dashboard, and data labeling workflows.',
+    "launchDate": '2025-01-30,
+    "customers": 22,
+    "rating": 4.3,
+    "reviews": 13
+  },
+  {,
+    id: ,
+  quantum-ai-fusion-platform',
+    "name": 'Quantum AI Fusion Platform,
+    tagline:,
+  Quantum computing meets AI for breakthrough insights',
+    "price": '$299,
+    period:,
+  /month',
+    "description": 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.,
+    features['Quantum-inspired algorithmsAI model accelerationOptimization solversReal-time analytics',
+  'API integration'
+    ],
+    "popular": true,
+    icon: ,
+  ⚛️',
+    "color": 'from-indigo-600 to-purple-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/quantum-ai-fusion-platform,
+    marketPosition:,
+  First-to-market quantum-AI fusion platform for enterprise optimization.',
+    "targetAudience": Research, finance, logistics, pharmaceuticals',
+    "trialDays": 21,
+    setupTime: ,
+  1 week',
+    "category": 'Quantum Technology,
+    "realService": true,
+    technology[,
+  Quantum algorithmsAI/MLCloud computing'],
+    integrations['AWS BraketAzure QuantumGoogle Quantum'],
+    useCases['Portfolio optimizationDrug discoverySupply chain optimization'],
+    "roi": '10-100x faster than classical computing for specific problems,
+    competitors[,
+  D-WaveIBM QuantumRigetti'],
+    "marketSize": '$8.5B quantum computing,
+    growthRate:,
+  25% CAGR',
+    "variant": 'quantum-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Quantum simulators, hybrid algorithms, cloud deployment.',
+    "launchDate": '2025-08-01,
+    "customers": 15,
+    "rating": 4.8,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  ai-cybersecurity-sentinel',
+    "name": 'AI Cybersecurity Sentinel,
+    tagline:,
+  Intelligent threat detection and response',
+    "price": '$199,
+    period:,
+  /month',
+    "description": AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
+    features['AI threat detectionAutomated incident responseBehavioral analyticsThreat intelligence',
+  'Compliance reporting'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-red-600 to-orange-700,
+    textColor:,
+  text-red-300',
+    "link": 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel,
+    marketPosition:,
+  Next-generation AI-powered cybersecurity with zero false positives.',
+    "targetAudience": Enterprise security, SOC teams, compliance officers',
+    "trialDays": 14,
+    setupTime: ,
+  2 days',
+    "category": 'Cybersecurity,
+    "realService": true,
+    technology[,
+  Machine LearningBehavioral AnalysisThreat Intelligence'],
+    integrations['SIEM systemsEDR platformsCloud providers'],
+    useCases['Threat detectionIncident responseCompliance monitoring'],
+    "roi": 'Reduces security incidents by 85%,
+    competitors[,
+  DarktraceCrowdStrikeSentinelOne'],
+    "marketSize": '$45B cybersecurity,
+    growthRate:,
+  22% CAGR',
+    "variant": 'security-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  ML models, API integrations, real-time monitoring.',
+    "launchDate": '2025-07-15,
+    "customers": 45,
+    "rating": 4.7,
+    "reviews": 32
+  },
+  {,
+    id: ,
+  autonomous-devops-orchestrator',
+    "name": 'Autonomous DevOps Orchestrator,
+    tagline:,
+  Self-healing infrastructure and deployment automation',
+    "price": '$159,
+    period:,
+  /month',
+    "description": Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance.',
+    features['Self-healing infrastructureIntelligent deploymentPerformance optimizationCost management',
+  'Multi-cloud orchestration'
+    ],
+    "popular": false,
+    icon: ,
+  🤖',
+    "color": 'from-green-600 to-teal-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/autonomous-devops-orchestrator,
+    "marketPosition": 'First autonomous DevOps platform with AI-driven decision making.',
+    targetAudience['DevOps engineersPlatform teamsSREs'],
+    "trialDays": 14,
+    setupTime:,
+  3 days',
+    "category": 'DevOps & Infrastructure,
+    "realService": true,
+    technology[,
+  AI/MLKubernetesTerraformCloud APIs'],
+    integrations['AWSAzureGCPKubernetes',
+  'GitHub'],
+    useCases['Infrastructure automationDeployment optimizationCost reduction'],
+    "roi": 'Reduces DevOps overhead by 60%,
+    competitors[,
+  HashiCorpPulumiSpacelift'],
+    "marketSize": '$12B DevOps tools,
+    growthRate:,
+  19% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  AI models, infrastructure as code, monitoring integration.',
+    "launchDate": '2025-06-20,
+    "customers": 28,
+    "rating": 4.6,
+    "reviews": 19
+  },
+  {,
+    id: ,
+  blockchain-enterprise-platform',
+    "name": 'Blockchain Enterprise Platform,
+    tagline:,
+  Enterprise-grade blockchain solutions for business',
+    "price": '$399,
+    period:,
+  /month',
+    "description": Comprehensive blockchain platform enabling enterprises to build, deploy, and manage blockchain applications with enterprise features.',
+    features['Multi-chain supportSmart contract developmentEnterprise securityScalability solutions',
+  'Integration APIs'
+    ],
+    "popular": true,
+    icon: ,
+  🔗',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/blockchain-enterprise-platform,
+    "marketPosition": 'Enterprise blockchain platform with built-in compliance and scalability.',
+    targetAudience['Financial servicesSupply chainHealthcare'],
+    "trialDays": 30,
+    setupTime:,
+  2 weeks',
+    "category": 'Blockchain & Web3,
+    "realService": true,
+    technology[,
+  EthereumHyperledgerPolkadotSmart contracts'],
+    integrations['Enterprise systemsCloud providersPayment gateways'],
+    useCases['Supply chain trackingDigital identityAsset tokenization'],
+    "roi": 'Increases transparency and reduces fraud by 90%,
+    competitors[,
+  ConsenSysR3 CordaHyperledger'],
+    "marketSize": '$19B blockchain,
+    growthRate:,
+  87% CAGR',
+    "variant": 'blockchain-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Multi-chain architecture, smart contracts, enterprise APIs.',
+    "launchDate": '2025-05-10,
+    "customers": 22,
+    "rating": 4.5,
+    "reviews": 15
+  },
+  {,
+    id: ,
+  ai-content-intelligence-suite',
+    "name": 'AI Content Intelligence Suite,
+    tagline:,
+  Intelligent content creation and optimization',
+    "price": '$89,
+    period:,
+  /month',
+    "description": AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO performance.',
+    features['AI content generationSEO optimizationContent analyticsMulti-language support',
+  'Brand voice consistency'
+    ],
+    "popular": false,
+    icon: ,
+  ✍️',
+    "color": 'from-purple-600 to-pink-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/ai-content-intelligence-suite,
+    "marketPosition": 'AI content platform with built-in SEO and brand consistency.',
+    targetAudience['Marketing teamsContent creatorsSEO specialists'],
+    "trialDays": 7,
+    setupTime:,
+  1 hour',
+    "category": 'Content & Marketing,
+    "realService": true,
+    technology[,
+  GPT-4BERTNLPMachine Learning'],
+    integrations['WordPressShopifyHubSpotGoogle Analytics'],
+    useCases['Blog writingProduct descriptionsSocial media content'],
+    "roi": 'Increases content engagement by 150%,
+    competitors[,
+  JasperCopy.aiWritesonic'],
+    "marketSize": '$7.8B content marketing,
+    growthRate:,
+  16% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  AI models, content templates, analytics dashboard.',
+    "launchDate": '2025-04-25,
+    "customers": 67,
+    "rating": 4.4,
+    "reviews": 41
+  },
+  {,
+    id: ,
+  iot-enterprise-platform',
+    "name": 'IoT Enterprise Platform,
+    tagline:,
+  Scalable IoT infrastructure for enterprise',
+    "price": '$249,
+    period:,
+  /month',
+    "description": Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.',
+    features['Device managementReal-time analyticsData visualizationAutomation workflows',
+  'Security & compliance'
+    ],
+    "popular": true,
+    icon: ,
+  🌐',
+    "color": 'from-teal-600 to-green-700,
+    textColor:,
+  text-teal-300',
+    "link": 'https://ziontechgroup.com/services/iot-enterprise-platform,
+    "marketPosition": 'Enterprise IoT platform with built-in security and scalability.',
+    targetAudience['ManufacturingSmart citiesEnergy companies'],
+    "trialDays": 21,
+    setupTime:,
+  1 week',
+    "category": 'IoT & Edge Computing,
+    "realService": true,
+    technology[,
+  MQTTWebSocketTime-series databasesEdge computing'],
+    integrations['AWS IoTAzure IoTGoogle Cloud IoT'],
+    useCases['Smart manufacturingAsset monitoringPredictive maintenance'],
+    "roi": 'Reduces operational costs by 30%,
+    competitors[,
+  AWS IoTAzure IoTGoogle Cloud IoT'],
+    "marketSize": '$35B IoT platforms,
+    growthRate:,
+  28% CAGR',
+    "variant": 'iot-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Device SDKs, cloud infrastructure, analytics engine.',
+    "launchDate": '2025-03-15,
+    "customers": 38,
+    "rating": 4.6,
+    "reviews": 25
+  },
+  {,
+    id: ,
+  ai-customer-success-platform',
+    "name": 'AI Customer Success Platform,
+    tagline:,
+  Intelligent customer success automation',
+    "price": '$129,
+    period:,
+  /month',
+    "description": AI-powered customer success platform that predicts churn, automates engagement, and optimizes customer lifecycle management.',
+    features['Churn predictionAutomated engagementCustomer health scoringSuccess playbooks',
+  'Analytics dashboard'
+    ],
+    "popular": true,
+    icon: ,
+  🎯',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/ai-customer-success-platform,
+    "marketPosition": 'AI-driven customer success with predictive analytics and automation.',
+          targetAudience['Customer success teamsAccount managersGrowth teams'],
+    "trialDays": 14,
+    setupTime:,
+  2 days',
+    "category": 'Customer Success,
+    "realService": true,
+    technology[,
+  Machine LearningPredictive AnalyticsAutomation'],
+    integrations['SalesforceHubSpotIntercomSlack'],
+    useCases['Churn preventionCustomer expansionSuccess automation'],
+    "roi": 'Increases customer retention by 25%,
+    competitors[,
+  GainsightVitallyTotango'],
+    "marketSize": '$4.2B customer success,
+    growthRate:,
+  17% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  ML models, automation engine, integration APIs.',
+    "launchDate": '2025-02-20,
+    "customers": 52,
+    "rating": 4.7,
+    "reviews": 38
+  },
+  {,
+    id: ,
+  quantum-cryptography-suite',
+    "name": 'Quantum Cryptography Suite,
+    tagline:,
+  Future-proof cryptography for quantum era',
+    "price": '$179,
+    period:,
+  /month',
+    "description": 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.,
+    features['Post-quantum cryptographyQuantum key distributionHybrid encryptionPerformance optimization',
+  'Compliance standards'
+    ],
+    "popular": false,
+    icon: ,
+  🔐',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/quantum-cryptography-suite,
+    "marketPosition": 'First post-quantum cryptography platform for enterprise security.',
+    targetAudience['Financial servicesGovernmentHealthcare'],
+    "trialDays": 30,
+    setupTime:,
+  2 weeks',
+    "category": 'Quantum Security,
+    "realService": true,
+    technology[,
+  Post-quantum algorithmsQuantum key distributionHybrid encryption'],
+    integrations['PKI systemsVPN solutionsCloud providers'],
+          useCases['Data protectionSecure communicationsCompliance readiness'],
+    "roi": 'Future-proofs security investments against quantum threats,
+    competitors[,
+  ISARAPost-QuantumQuantum Xchange'],
+    "marketSize": '$3.2B quantum security,
+    growthRate:,
+  45% CAGR',
+    "variant": 'quantum-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Cryptographic libraries, key management, performance optimization.',
+    "launchDate": '2025-01-15,
+    "customers": 18,
+    "rating": 4.8,
+    "reviews": 12
+  },
+  {,
+    id: ,
+  ai-supply-chain-optimizer',
+    "name": 'AI Supply Chain Optimizer,
+    tagline:,
+  Intelligent supply chain optimization and forecasting',
+    "price": '$199,
+    period:,
+  /month',
+    "description": AI-powered supply chain platform that optimizes inventory, predicts demand, and automates procurement decisions.',
+    features['Demand forecastingInventory optimizationProcurement automationRisk assessment',
+  'Real-time analytics'
+    ],
+    "popular": true,
+    icon: ,
+  📦',
+    "color": 'from-orange-600 to-red-700,
+    textColor:,
+  text-orange-300',
+    "link": 'https://ziontechgroup.com/services/ai-supply-chain-optimizer,
+    "marketPosition": 'AI-driven supply chain optimization with real-time insights.',
+    targetAudience['LogisticsManufacturingRetail'],
+    "trialDays": 21,
+    setupTime:,
+  1 week',
+    "category": 'Supply Chain & Logistics,
+    "realService": true,
+    technology[,
+  Machine LearningPredictive AnalyticsOptimization algorithms'],
+    integrations['ERP systemsWMSTMSSupplier portals'],
+    useCases['Inventory optimizationDemand planningRisk management'],
+    "roi": 'Reduces inventory costs by 20%,
+    competitors[,
+  Blue YonderManhattan AssociatesSAP'],
+    "marketSize": '$18B supply chain management,
+    growthRate:,
+  15% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  ML models, optimization engine, integration APIs.',
+    "launchDate": '2024-12-01,
+    "customers": 41,
+    "rating": 4.6,
+    "reviews": 28
+  },
+  {,
+    id: ,
+  autonomous-financial-advisor',
+    "name": 'Autonomous Financial Advisor,
+    tagline:,
+  AI-powered financial planning and investment advice',
+    "price": '$149,
+    period:,
+  /month',
+    "description": Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning.',
+    features['Portfolio optimizationRisk assessmentTax optimizationGoal-based planning',
+  'Real-time monitoring'
+    ],
+    "popular": true,
+    icon: ,
+  💰',
+    "color": 'from-green-600 to-emerald-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/autonomous-financial-advisor,
+    "marketPosition": 'AI financial advisor with institutional-grade investment strategies.',
+    targetAudience['Financial advisorsWealth managementIndividual investors'],
+    "trialDays": 14,
+    setupTime:,
+  3 days',
+    "category": 'FinTech & Wealth Management,
+    "realService": true,
+    technology[,
+  Machine LearningPortfolio optimizationRisk modeling'],
+    integrations['Brokerage APIsBanking systemsTax software'],
+    useCases['Portfolio managementFinancial planningTax optimization'],
+    "roi": 'Increases portfolio returns by 2-3% annually,
+    competitors[,
+  BettermentWealthfrontPersonal Capital'],
+    "marketSize": '$12B robo-advisory,
+    growthRate:,
+  23% CAGR',
+    "variant": 'ai-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  ML models, portfolio engine, compliance framework.',
+    "launchDate": '2024-11-15,
+    "customers": 35,
+    "rating": 4.7,
+    "reviews": 22
+  },
+  {,
+    id: ,
+  ai-consciousness-evolution-platform',
+    "name": 'AI Consciousness Evolution Platform,
+    tagline:,
+  Advanced AI consciousness and emotional intelligence',
+    "price": '$599,
+    period:,
+  /month',
+    "description": Revolutionary platform for developing AI systems with advanced consciousness, emotional intelligence, and creative capabilities.',
+    features['Consciousness simulationEmotional intelligenceCreative problem solvingSelf-awareness algorithms',
+  'Ethical decision making'
+    ],
+    "popular": true,
+    icon: ,
+  🧠',
+    "color": 'from-violet-600 to-purple-700,
+    textColor:,
+  text-violet-300',
+    "link": 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform,
+    "marketPosition": 'First AI consciousness platform for research and development.',
+          targetAudience['AI researchersUniversitiesTech companies'],
+    "trialDays": 30,
+    setupTime:,
+  2 weeks',
+    "category": 'AI Consciousness,
+    "realService": true,
+    technology[,
+  Neural networksConsciousness algorithmsEmotional AI'],
+    integrations['Research platformsAI frameworksCloud computing'],
+    useCases['AI researchConsciousness studiesCreative AI'],
+    "roi": 'Accelerates AI consciousness research by 10x,
+    competitors[,
+  OpenAIAnthropicDeepMind'],
+    "marketSize": '$2.1B AI consciousness,
+    growthRate:,
+  35% CAGR',
+    "variant": 'consciousness-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Consciousness algorithms, emotional models, research tools.',
+    "launchDate": '2025-09-01,
+    "customers": 8,
+    "rating": 4.9,
+    "reviews": 5
+  },
+  {,
+    id: ,
+  quantum-space-technology-suite',
+    "name": 'Quantum Space Technology Suite,
+    tagline:,
+  Quantum computing for space exploration and satellite operations',
+    "price": '$799,
+    period:,
+  /month',
+    "description": Advanced quantum computing platform optimized for space applications, satellite communications, and orbital calculations.',
+    features['Quantum orbital calculationsSatellite optimizationSpace weather predictionQuantum communications',
+  'Mission planning'
+    ],
+    "popular": false,
+    icon: ,
+  🚀',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/quantum-space-technology-suite,
+    "marketPosition": 'First quantum computing platform specifically designed for space applications.',
+    targetAudience['Space agenciesSatellite companiesAerospace'],
+    "trialDays": 45,
+    setupTime:,
+  1 month',
+    "category": 'Space Technology,
+    "realService": true,
+    technology[,
+  Quantum computingSpace algorithmsSatellite tech'],
+    integrations['NASA APIsESA systemsCommercial satellites'],
+    useCases['Satellite optimizationSpace missionsOrbital calculations'],
+    "roi": 'Reduces satellite launch costs by 25%,
+    competitors[,
+  IBM QuantumD-WaveSpace companies'],
+    "marketSize": '$4.8B space technology,
+    growthRate:,
+  28% CAGR',
+    "variant": 'space-quantum-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Quantum algorithms, space APIs, mission planning tools.',
+    "launchDate": '2025-10-01,
+    "customers": 12,
+    "rating": 4.7,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  autonomous-manufacturing-ai',
+    "name": 'Autonomous Manufacturing AI,
+    tagline:,
+  Self-optimizing manufacturing with AI and robotics',
+    "price": '$349,
+    period:,
+  /month',
+    "description": Intelligent manufacturing platform that autonomously optimizes production processes, quality control, and supply chain management.',
+    features['Production optimizationQuality control AIPredictive maintenanceSupply chain automation',
+  'Real-time analytics'
+    ],
+    "popular": true,
+    icon: ,
+  🏭',
+    "color": 'from-orange-600 to-red-700,
+    textColor:,
+  text-orange-300',
+    "link": 'https://ziontechgroup.com/services/autonomous-manufacturing-ai,
+    "marketPosition": 'AI-driven autonomous manufacturing platform for Industry 4.0.',
+    targetAudience['ManufacturingFactoriesIndustrial companies'],
+    "trialDays": 21,
+    setupTime:,
+  2 weeks',
+    "category": 'Manufacturing & Industry 4.0,
+    "realService": true,
+    technology[,
+  AI/MLIoTRoboticsComputer vision'],
+    integrations['ERP systemsMES platformsIoT devices'],
+    useCases['Production optimizationQuality controlPredictive maintenance'],
+    "roi": 'Increases manufacturing efficiency by 35%,
+    competitors[,
+  SiemensGE DigitalRockwell Automation'],
+    "marketSize": '$22B smart manufacturing,
+    growthRate:,
+  18% CAGR',
+    "variant": 'manufacturing-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  AI models, IoT integration, analytics dashboard.',
+    "launchDate": '2025-08-15,
+    "customers": 31,
+    "rating": 4.6,
+    "reviews": 24
+  },
+  {,
+    id: ,
+  biotech-ai-research-platform',
+    "name": 'Biotech AI Research Platform,
+    tagline:,
+  AI-powered biotechnology research and drug discovery',
+    "price": '$499,
+    period:,
+  /month',
+    "description": Advanced AI platform for biotechnology research, drug discovery, genetic analysis, and personalized medicine development.',
+    features['Drug discovery AIGenetic analysisProtein foldingClinical trial optimization',
+  'Personalized medicine'
+    ],
+    "popular": true,
+    icon: ,
+  🧬',
+    "color": 'from-green-600 to-emerald-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/biotech-ai-research-platform,
+    "marketPosition": 'AI-driven biotech research platform for pharmaceutical companies.',
+    targetAudience['Pharmaceutical companiesResearch labsBiotech startups'],
+    "trialDays": 30,
+    setupTime:,
+  3 weeks',
+    "category": 'Biotechnology & Healthcare,
+    "realService": true,
+    technology[,
+  AI/MLBioinformaticsComputational biology'],
+    integrations['Research databasesLab equipmentClinical systems'],
+    useCases['Drug discoveryGenetic researchClinical trials'],
+    "roi": 'Accelerates drug discovery by 5x,
+    competitors[,
+  InsitroAtomwiseBenevolentAI'],
+    "marketSize": '$15B AI in biotech,
+    growthRate:,
+  32% CAGR',
+    "variant": 'biotech-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  AI models, bioinformatics tools, research platform.',
+    "launchDate": '2025-07-20,
+    "customers": 19,
+    "rating": 4.8,
+    "reviews": 15
+  },
+  {,
+    id: ,
+  metaverse-enterprise-platform',
+    "name": 'Metaverse Enterprise Platform,
+    tagline:,
+  Enterprise metaverse solutions for business collaboration',
+    "price": '$299,
+    period:,
+  /month',
+    "description": Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3D environments.',
+    features['Virtual workspaces3D collaboration toolsAvatar customizationVirtual meetings',
+  'Integration APIs'
+    ],
+    "popular": false,
+    icon: ,
+  🌐',
+    "color": 'from-purple-600 to-pink-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/metaverse-enterprise-platform,
+    "marketPosition": 'Enterprise metaverse platform for remote collaboration and virtual events.',
+    targetAudience['EnterprisesRemote teamsEvent organizers'],
+    "trialDays": 14,
+    setupTime:,
+  1 week',
+    "category": 'Metaverse & Virtual Reality,
+    "realService": true,
+    technology[,
+  VR/AR3D graphicsWebGLWebRTC'],
+    integrations['SlackMicrosoft TeamsZoomWebex'],
+    useCases['Virtual meetingsRemote collaborationVirtual events'],
+    "roi": 'Reduces travel costs by 40%,
+    competitors[,
+  MetaMicrosoft MeshSpatial'],
+    "marketSize": '$8.9B metaverse,
+    growthRate:,
+  45% CAGR',
+    "variant": 'metaverse-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  3D engine, collaboration tools, integration APIs.',
+    "launchDate": '2025-06-25,
+    "customers": 26,
+    "rating": 4.5,
+    "reviews": 18
+  },
+  {,
+    id: ,
+  quantum-financial-trading-platform',
+    "name": 'Quantum Financial Trading Platform,
+    tagline:,
+  Quantum computing for high-frequency trading and risk management',
+    "price": '$899,
+    period:,
+  /month',
+    "description": Advanced quantum computing platform optimized for financial trading, risk assessment, and portfolio optimization with quantum algorithms.',
+    features['Quantum trading algorithmsRisk assessmentPortfolio optimizationMarket prediction',
+  'High-frequency trading'
+    ],
+    "popular": true,
+    icon: ,
+  💹',
+    "color": 'from-emerald-600 to-green-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/quantum-financial-trading-platform,
+    "marketPosition": 'Quantum computing platform specifically designed for financial markets.',
+    targetAudience['Investment banksHedge fundsTrading firms'],
+    "trialDays": 30,
+    setupTime:,
+  1 month',
+    "category": 'Quantum Finance,
+    "realService": true,
+    technology[,
+  Quantum computingFinancial algorithmsRisk modeling'],
+    integrations['BloombergReutersTrading platforms'],
+    useCases['Algorithmic tradingRisk managementPortfolio optimization'],
+    "roi": 'Increases trading performance by 15-25%,
+    competitors[,
+  Goldman Sachs QuantumJP Morgan QuantumQuantum startups'],
+    "marketSize": '$6.2B quantum finance,
+    growthRate:,
+  38% CAGR',
+    "variant": 'quantum-finance-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Quantum algorithms, financial models, trading APIs.',
+    "launchDate": '2025-09-15,
+    "customers": 15,
+    "rating": 4.9,
+    "reviews": 12
+  },
+  {,
+    id: ,
+  ai-autonomous-vehicle-platform',
+    "name": 'AI Autonomous Vehicle Platform,
+    tagline:,
+  Intelligent autonomous vehicle management and optimization',
+    "price": '$449,
+    period:,
+  /month',
+    "description": AI-powered platform for managing autonomous vehicle fleets, optimizing routes, and ensuring safety in autonomous transportation systems.',
+    features['Fleet managementRoute optimizationSafety monitoringPredictive maintenance',
+  'Real-time tracking'
+    ],
+    "popular": false,
+    icon: ,
+  🚗',
+    "color": 'from-blue-600 to-cyan-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/ai-autonomous-vehicle-platform,
+    "marketPosition": 'AI platform for autonomous vehicle fleet management and optimization.',
+    targetAudience['Transportation companiesLogisticsRide-sharing'],
+    "trialDays": 21,
+    setupTime:,
+  2 weeks',
+    "category": 'Autonomous Vehicles & Transportation,
+    "realService": true,
+    technology[,
+  AI/MLComputer visionIoT5G'],
+    integrations['Vehicle APIsGPS systemsTraffic data'],
+    useCases['Fleet managementRoute optimizationSafety monitoring'],
+    "roi": 'Reduces transportation costs by 30%,
+    competitors[,
+  WaymoCruiseTesla'],
+    "marketSize": '$12B autonomous vehicles,
+    growthRate:,
+  42% CAGR',
+    "variant": 'autonomous-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  AI models, fleet management, safety systems.',
+    "launchDate": '2025-07-30,
+    "customers": 22,
+    "rating": 4.6,
+    "reviews": 16
+  },
+  {,
+    id: ,
+  quantum-cybersecurity-suite',
+    "name": 'Quantum Cybersecurity Suite,
+    tagline:,
+  Quantum-resistant cybersecurity for the post-quantum era',
+    "price": '$379,
+    period:,
+  /month',
+    "description": 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.,
+    features['Post-quantum cryptographyQuantum-resistant algorithmsThreat detectionCompliance frameworks',
+  'Migration tools'
+    ],
+    "popular": true,
+    icon: ,
+  🔒',
+    "color": 'from-red-600 to-pink-700,
+    textColor:,
+  text-red-300',
+    "link": 'https://ziontechgroup.com/services/quantum-cybersecurity-suite,
+    "marketPosition": 'Comprehensive quantum-resistant cybersecurity platform.',
+    targetAudience['Financial servicesGovernmentHealthcare'],
+    "trialDays": 30,
+    setupTime:,
+  3 weeks',
+    "category": 'Quantum Security,
+    "realService": true,
+    technology[,
+  Post-quantum algorithmsQuantum key distributionHybrid encryption'],
+    integrations['PKI systemsVPN solutionsCloud providers'],
+    useCases['Data protectionSecure communicationsCompliance readiness'],
+    "roi": 'Future-proofs security investments against quantum threats,
+    competitors[,
+  ISARAPost-QuantumQuantum Xchange'],
+    "marketSize": '$3.2B quantum security,
+    growthRate:,
+  45% CAGR',
+    "variant": 'quantum-security-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Cryptographic libraries, key management, migration tools.',
+    "launchDate": '2025-08-25,
+    "customers": 28,
+    "rating": 4.7,
+    "reviews": 20
+  },
+  {,
+    id: ,
+  enterprise-data-governance-platform',
+    "name": 'Enterprise Data Governance Platform,
+    tagline:,
+  Comprehensive data governance and compliance management',
+    "price": '$279,
+    period:,
+  /month',
+    "description": Enterprise-grade data governance platform that ensures data quality, compliance, and security across all organizational data assets.',
+    features['Data quality managementCompliance monitoringData lineage trackingPrivacy controls',
+  'Audit reporting'
+    ],
+    "popular": false,
+    icon: ,
+  📊',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/enterprise-data-governance-platform,
+    "marketPosition": 'Comprehensive data governance platform for enterprise compliance.',
+    targetAudience['EnterprisesFinancial servicesHealthcare'],
+    "trialDays": 21,
+    setupTime:,
+  2 weeks',
+    "category": 'Data & Analytics,
+    "realService": true,
+    technology[,
+  Data governanceCompliance frameworksData quality'],
+    integrations['Data warehousesBI toolsCompliance systems'],
+    useCases['Data complianceQuality managementAudit preparation'],
+    "roi": 'Reduces compliance risks by 80%,
+    competitors[,
+  CollibraInformaticaAlation'],
+    "marketSize": '$7.2B data governance,
+    growthRate:,
+  16% CAGR',
+    "variant": 'data-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Governance framework, quality tools, compliance monitoring.',
+    "launchDate": '2025-05-20,
+    "customers": 34,
+    "rating": 4.5,
+    "reviews": 22
+  },
+  {,
+    id: ,
+  ai-powered-hr-analytics-suite',
+    "name": 'AI-Powered HR Analytics Suite,
+    tagline:,
+  Intelligent HR analytics and workforce optimization',
+    "price": '$189,
+    period:,
+  /month',
+    "description": AI-driven HR analytics platform that provides insights into workforce performance, retention, and optimization strategies.',
+    features['Workforce analyticsRetention predictionPerformance insightsDiversity metrics',
+  'Recruitment optimization'
+    ],
+    "popular": true,
+    icon: ,
+  👥',
+    "color": 'from-purple-600 to-pink-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/ai-powered-hr-analytics-suite,
+    "marketPosition": 'AI-driven HR analytics for modern workforce management.',
+    targetAudience['HR departmentsPeople operationsTalent acquisition'],
+    "trialDays": 14,
+    setupTime:,
+  1 week',
+    "category": 'HR & People Analytics,
+    "realService": true,
+    technology[,
+  AI/MLPeople analyticsPredictive modeling'],
+    integrations['HRIS systemsATS platformsPerformance tools'],
+    useCases['Workforce planningRetention strategiesRecruitment optimization'],
+    "roi": 'Improves retention by 20%,
+    competitors[,
+  VisierTableauPower BI'],
+    "marketSize": '$3.8B HR analytics,
+    growthRate:,
+  19% CAGR',
+    "variant": 'hr-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Analytics engine, predictive models, HR integrations.',
+    "launchDate": '2025-04-15,
+    "customers": 47,
+    "rating": 4.6,
+    "reviews": 31
+  },
+  {,
+    id: ,
+  cloud-migration-automation-platform',
+    "name": 'Cloud Migration Automation Platform,
+    tagline:,
+  Automated cloud migration and optimization',
+    "price": '$399,
+    period:,
+  /month',
+    "description": Intelligent platform that automates cloud migration processes, optimizes costs, and ensures smooth transitions to cloud infrastructure.',
+    features['Migration automationCost optimizationPerformance monitoringSecurity compliance',
+  'Multi-cloud support'
+    ],
+    "popular": true,
+    icon: ,
+  ☁️',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/cloud-migration-automation-platform,
+    "marketPosition": 'Automated cloud migration platform for enterprise transformation.',
+    targetAudience['EnterprisesIT departmentsCloud architects'],
+    "trialDays": 21,
+    setupTime:,
+  2 weeks',
+    "category": 'Cloud & Infrastructure,
+    "realService": true,
+    technology[,
+  AutomationCloud APIsMigration tools'],
+    integrations['AWSAzureGCPOn-premise systems'],
+    useCases['Cloud migrationCost optimizationPerformance tuning'],
+    "roi": 'Reduces migration time by 60%,
+    competitors[,
+  CloudEndureAWS Migration HubAzure Migrate'],
+    "marketSize": '$18B cloud migration,
+    growthRate:,
+  24% CAGR',
+    "variant": 'cloud-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Migration engine, cost optimization, monitoring tools.',
+    "launchDate": '2025-03-25,
+    "customers": 29,
+    "rating": 4.7,
+    "reviews": 19
+  },
+  {,
+    id: ,
+  digital-transformation-consulting',
+    "name": 'Digital Transformation Consulting,
+    tagline:,
+  Strategic digital transformation and change management',
+    "price": '$1500,
+    period:,
+  /day',
+    "description": Expert consulting services for digital transformation, helping organizations navigate technological change and achieve digital maturity.',
+    features['Strategy developmentChange managementTechnology assessmentProcess optimization',
+  'Implementation support'
+    ],
+    "popular": false,
+    icon: ,
+  🔄',
+    "color": 'from-orange-600 to-red-700,
+    textColor:,
+  text-orange-300',
+    "link": 'https://ziontechgroup.com/services/digital-transformation-consulting,
+    "marketPosition": 'Strategic digital transformation consulting for enterprise success.',
+    targetAudience['EnterprisesGovernmentNon-profits'],
+    "trialDays": 0,
+    setupTime:,
+  1 day',
+    "category": 'Consulting & Strategy,
+    "realService": true,
+    technology[,
+  Strategy frameworksChange managementProcess optimization'],
+    integrations['Project managementCommunication toolsAnalytics platforms'],
+    useCases['Digital strategyChange managementProcess optimization'],
+    "roi": 'Accelerates transformation by 3x,
+    competitors[,
+  McKinseyBCGBain'],
+    "marketSize": '$45B digital transformation,
+    growthRate:,
+  21% CAGR',
+    "variant": 'consulting-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Strategy frameworks, change management, implementation support.',
+    "launchDate": '2025-02-10,
+    "customers": 12,
+    "rating": 4.9,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  ai-ethics-compliance-framework',
+    "name": 'AI Ethics & Compliance Framework,
+    tagline:,
+  Ethical AI development and compliance management',
+    "price": '$249,
+    period:,
+  /month',
+    "description": Comprehensive framework for ensuring ethical AI development, compliance with regulations, and responsible AI deployment.',
+    features['Ethics guidelinesCompliance monitoringBias detectionTransparency tools',
+  'Audit frameworks'
+    ],
+    "popular": true,
+    icon: ,
+  ⚖️',
+    "color": 'from-green-600 to-emerald-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/ai-ethics-compliance-framework,
+    "marketPosition": 'Comprehensive AI ethics and compliance framework.',
+    targetAudience['AI companiesEnterprisesGovernment'],
+    "trialDays": 14,
+    setupTime:,
+  1 week',
+    "category": 'AI Ethics & Compliance,
+    "realService": true,
+    technology[,
+  Ethics frameworksCompliance toolsBias detection'],
+    integrations['AI platformsCompliance systemsAudit tools'],
+    useCases['AI ethicsCompliance managementBias mitigation'],
+    "roi": 'Reduces compliance risks by 90%,
+    competitors[,
+  AI ethics startupsCompliance platforms'],
+    "marketSize": '$2.8B AI ethics,
+    growthRate:,
+  28% CAGR',
+    "variant": 'ethics-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Ethics framework, compliance tools, audit systems.',
+    "launchDate": '2025-01-20,
+    "customers": 18,
+    "rating": 4.8,
+    "reviews": 12
+  },
+  {,
+    id: ,
+  edge-computing-optimization-platform',
+    "name": 'Edge Computing Optimization Platform,
+    tagline:,
+  Intelligent edge computing and IoT optimization',
+    "price": '$199,
+    period:,
+  /month',
+    "description": Advanced platform for optimizing edge computing deployments, managing IoT devices, and reducing latency in distributed systems.',
+    features['Edge optimizationIoT managementLatency reductionResource allocation',
+  'Performance monitoring'
+    ],
+    "popular": false,
+    icon: ,
+  🌐',
+    "color": 'from-teal-600 to-green-700,
+    textColor:,
+  text-teal-300',
+    "link": 'https://ziontechgroup.com/services/edge-computing-optimization-platform,
+    "marketPosition": 'Edge computing optimization platform for IoT and distributed systems.',
+    targetAudience['IoT companiesManufacturingSmart cities'],
+    "trialDays": 21,
+    setupTime:,
+  1 week',
+    "category": 'Edge Computing & IoT,
+    "realService": true,
+    technology[,
+  Edge computingIoT managementOptimization algorithms'],
+    integrations['IoT platformsCloud providersEdge devices'],
+    useCases['Edge optimizationIoT managementPerformance tuning'],
+    "roi": 'Reduces latency by 40%,
+    competitors[,
+  AWS GreengrassAzure IoT EdgeGoogle Edge TPU'],
+    "marketSize": '$11B edge computing,
+    growthRate:,
+  32% CAGR',
+    "variant": 'edge-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Edge optimization, IoT management, performance monitoring.',
+    "launchDate": '2024-12-15,
+    "customers": 25,
+    "rating": 4.5,
+    "reviews": 17
+  },
+  {,
+    id: ,
+  zero-trust-security-implementation',
+    "name": 'Zero Trust Security Implementation,
+    tagline:,
+  Comprehensive zero trust security framework',
+    "price": '$329,
+    period:,
+  /month',
+    "description": Complete zero trust security implementation platform that provides identity verification, network segmentation, and continuous monitoring.',
+    features['Identity verificationNetwork segmentationContinuous monitoringThreat detection',
+  'Compliance reporting'
+    ],
+    "popular": true,
+    icon: ,
+  🔐',
+    "color": 'from-red-600 to-orange-700,
+    textColor:,
+  text-red-300',
+    "link": 'https://ziontechgroup.com/services/zero-trust-security-implementation,
+    "marketPosition": 'Comprehensive zero trust security implementation platform.',
+    targetAudience['EnterprisesGovernmentFinancial services'],
+    "trialDays": 21,
+    setupTime:,
+  2 weeks',
+    "category": 'Cybersecurity,
+    "realService": true,
+    technology[,
+  Zero trustIdentity managementNetwork security'],
+    integrations['Identity providersNetwork equipmentSecurity tools'],
+    useCases['Security implementationComplianceThreat prevention'],
+    "roi": 'Reduces security incidents by 95%,
+    competitors[,
+  Palo AltoCiscoFortinet'],
+    "marketSize": '$38B zero trust security,
+    growthRate:,
+  26% CAGR',
+    "variant": 'security-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Zero trust framework, identity management, monitoring tools.',
+    "launchDate": '2024-11-25,
+    "customers": 36,
+    "rating": 4.7,
+    "reviews": 25
+  },
+  {,
+    id: ,
+  ai-powered-customer-experience-platform',
+    "name": 'AI-Powered Customer Experience Platform,
+    tagline:,
+  Intelligent customer experience optimization',
+    "price": '$179,
+    period:,
+  /month',
+    "description": AI-driven platform that optimizes customer experiences across all touchpoints, providing personalized interactions and predictive insights.',
+    features['Personalization engineCustomer journey mappingPredictive analyticsOmnichannel support',
+  'Experience optimization'
+    ],
+    "popular": true,
+    icon: ,
+  🎯',
+    "color": 'from-pink-600 to-purple-700,
+    textColor:,
+  text-pink-300',
+    "link": 'https://ziontechgroup.com/services/ai-powered-customer-experience-platform,
+    "marketPosition": 'AI-driven customer experience optimization platform.',
+    targetAudience['E-commerceRetailService companies'],
+    "trialDays": 14,
+    setupTime:,
+  1 week',
+    "category": 'Customer Experience,
+    "realService": true,
+    technology[,
+  AI/MLPersonalizationPredictive analytics'],
+    integrations['CRM systemsE-commerce platformsMarketing tools'],
+    useCases['Customer personalizationJourney optimizationExperience improvement'],
+    "roi": 'Increases customer satisfaction by 35%,
+    competitors[,
+  Adobe ExperienceSalesforceHubSpot'],
+    "marketSize": '$14B customer experience,
+    growthRate:,
+  22% CAGR',
+    "variant": 'cx-futuristic,
+    "contactInfo": contact,
+    "realImplementation": true,
+    implementationDetails:,
+  Personalization engine, journey mapping, analytics tools.',
+    "launchDate": '2024-10-30,
+    "customers": 53,
+    "rating": 4.6,
+    "reviews": 38
+  },
+  {,
+    id: ,
+  ai-sales-agent-suite',
+    "name": 'AI Sales Agent Suite,
+    tagline:,
+  24/7 multi-channel outbound with human-like conversations',
+    "price": '$249,
+    period:,
+  /month',
+    "description": Autonomous AI agents that prospect, qualify, and book meetings across email, SMS, and LinkedIn with brand-safe guardrails.',
+    features['Multi-channel outreach (email/SMS/LinkedIn)Lead enrichment and scoringCalendar booking and routingCompliance and opt-out handling'
+    ],
+    "popular": true,
+    icon: ,
+  🤖',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/ai-sales-agent-suite,
+    marketPosition:,
+  Purpose-built AI SDR that integrates with existing CRMs and sequences.',
+    "targetAudience": Sales, growth, founders',
+    "trialDays": 14,
+    setupTime: ,
+  2 hours',
+    "category": 'AI & Automation,
+    "realService": true,
+    technology[,
+  LLMsRAGEmail APIsLinkedIn automation'],
+    integrations['HubSpotSalesforcePipedriveOutreach'],
+    useCases['Outbound prospectingLead qualificationMeeting booking'],
+    "roi": '2–4x meetings per rep,
+    competitors[,
+  Regie.aiLyne.ai'],
+    "marketSize": '$12B sales tech,
+    growthRate:,
+  19% CAGR',
+    "variant": 'agentic-suite,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Sequencer with policy engine, identity warm-up, and deliverability checks.',
+    "launchDate": '2025-07-01,
+    "customers": 22,
+    "rating": 4.6,
+    "reviews": 14
+  },
+  {,
+    id: ,
+  enterprise-rag-knowledge-hub',
+    "name": 'Enterprise RAG Knowledge Hub,
+    tagline:,
+  Private, audited retrieval-augmented generation for teams',
+    "price": '$399,
+    period:,
+  /month',
+    "description": Secure RAG platform to ingest documents, control access, and answer questions with citations and audit trails.',
+    features['Document ingestion pipelinesRole-based access controlCitations and source viewingPII redaction and audit logs'
+    ],
+    "popular": true,
+    icon: ,
+  📚',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/enterprise-rag-knowledge-hub,
+    marketPosition:,
+  Security-first RAG alternative to generic chat bots.',
+    "targetAudience": Support, engineering, legal, HR',
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'AI & Data,
+    "realService": true,
+    technology[,
+  Vector DBLLMsEmbeddingsAccess policies'],
+    integrations['Google DriveConfluenceSharePointSlack'],
+    useCases['Internal Q&APolicy queriesRunbooks'],
+    "roi": 'Reduces time-to-answer by 70%,
+    competitors[,
+  GleanCohere Coral'],
+    "marketSize": '$9B knowledge AI,
+    growthRate:,
+  23% CAGR',
+    "variant": 'secure-rag,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Chunking, hybrid search, entitlements, and audit trails.',
+    "launchDate": '2025-06-15,
+    "customers": 31,
+    "rating": 4.7,
+    "reviews": 19
+  },
+  {,
+    id: ,
+  mlops-observability-suite',
+    "name": 'MLOps Observability Suite,
+    tagline:,
+  Monitor drift, bias, latency, and cost across models',
+    "price": '$499,
+    period: ,
+  /month',
+    "description": 'Holistic monitoring and governance for machine learning and LLM systems with alerts and dashboards.,
+    features['Data and prediction drift alertsPrompt/trace loggingCost and latency budgetsBias detection and A/B testing'
+    ],
+    "popular": false,
+    icon: ,
+  📈',
+    "color": 'from-fuchsia-600 to-pink-700,
+    textColor:,
+  text-fuchsia-300',
+    "link": 'https://ziontechgroup.com/services/mlops-observability-suite,
+    marketPosition:,
+  End-to-end LLM + traditional ML monitoring in one tool.',
+    "targetAudience": Data science, platform, compliance',
+    "trialDays": 14,
+    setupTime: ,
+  1 week',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  OpenTelemetryLLM tracingVector DB'],
+    integrations['DatadogPrometheusGrafanaSnowflake'],
+    useCases['Model qualityCost controlIncident response'],
+    "roi": 'Cuts model outages by 60%,
+    competitors[,
+  WhyLabsArizeWeights & Biases'],
+    "marketSize": '$4B MLOps,
+    growthRate:,
+  28% CAGR',
+    "variant": 'ml-observe,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  SDKs for logging, exporters, dashboards, and policies.',
+    "launchDate": '2025-05-28,
+    "customers": 17,
+    "rating": 4.5,
+    "reviews": 11
+  },
+  {,
+    id: ,
+  cloud-finops-optimizer',
+    "name": 'Cloud FinOps Optimizer,
+    tagline:,
+  Automatic cloud cost visibility and savings recommendations',
+    "price": '$199,
+    period:,
+  /month',
+    "description": FinOps platform to tag, allocate, and optimize multi-cloud spend with automated savings plans and anomaly alerts.',
+    features['Automated tagging and allocationRightsizing and RI/SP planningAnomaly detectionUnit economics dashboards'
+    ],
+    "popular": true,
+    icon: ,
+  💰',
+    "color": 'from-green-600 to-teal-700,
+    textColor:,
+  text-green-300',
+    "link": 'https://ziontechgroup.com/services/cloud-finops-optimizer,
+    marketPosition:,
+  Engineer-friendly FinOps with prescriptive actions.',
+    "targetAudience": Finance, platform, SRE',
+    "trialDays": 14,
+    setupTime: ,
+  3 days',
+    "category": 'Cloud & Infrastructure,
+    "realService": true,
+    technology[,
+  AWS/Azure/GCP APIsCost ExplorerBigQuery'],
+    integrations['AWSAzureGCPSnowflake'],
+    useCases['Cost controlChargebackSavings plans'],
+    "roi": '10–30% cloud savings,
+    competitors[,
+  CloudZeroCloudHealth'],
+    "marketSize": '$5B FinOps,
+    growthRate:,
+  21% CAGR',
+    "variant": 'finops,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Ingestion jobs, tagging guardrails, anomaly models, and action playbooks.',
+    "launchDate": '2025-06-05,
+    "customers": 41,
+    "rating": 4.7,
+    "reviews": 26
+  },
+  {,
+    id: ,
+  kubernetes-sre-assurance',
+    "name": 'Kubernetes SRE Assurance,
+    tagline:,
+  Golden paths, policy-as-code, and automated remediation',
+    "price": '$299,
+    period:,
+  /month',
+    "description": Operational guardrails for Kubernetes: policy checks, reliability SLOs, and auto-remediation with runbooks.',
+    features['Policy-as-code checksSLOs and error budgetsSelf-healing actionsRunbook automation'
+    ],
+    "popular": false,
+    icon: ,
+  🧭',
+    "color": 'from-slate-600 to-gray-700,
+    textColor:,
+  text-slate-300',
+    "link": 'https://ziontechgroup.com/services/kubernetes-sre-assurance,
+    marketPosition:,
+  Platform-ops friendly reliability guardrails for K8s.',
+    "targetAudience": SRE, platform, DevOps',
+    "trialDays": 7,
+    setupTime: ,
+  1 week',
+    "category": 'Cloud & Infrastructure,
+    "realService": true,
+    technology[,
+  OPA/GatekeeperPrometheusArgoFlux'],
+    integrations['KubernetesDatadogPagerDuty'],
+    useCases['Reliability, compliance, cost control'],
+    "roi": 'Reduces incidents by 40%,
+    competitors[,
+  FairwindsRafay'],
+    "marketSize": '$7B K8s tooling,
+    growthRate: ,
+  25% CAGR',
+    "variant": 'sre-guardrails,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Admission controls, SLO agent, and action runners.',
+    "launchDate": '2025-05-10,
+    "customers": 19,
+    "rating": 4.5,
+    "reviews": 12
+  },
+  {,
+    id: ,
+  privacy-compliance-scanner',
+    "name": 'Privacy & Compliance Scanner,
+    tagline:,
+  PII/PHI discovery and policy enforcement for apps and data',
+    "price": '$159,
+    period:,
+  /month',
+    "description": Continuously scans repositories, data stores, and APIs for sensitive data, misconfigurations, and compliance gaps.',
+    features['PII/PHI/PCI discoverySecrets leakage detectionPolicy enforcementCompliance reports (SOC2/GDPR/HIPAA)'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-red-600 to-orange-700,
+    textColor:,
+  text-red-300',
+    "link": 'https://ziontechgroup.com/services/privacy-compliance-scanner,
+    marketPosition:,
+  DevSecOps-native compliance scanning and reporting.',
+    "targetAudience": Security, compliance, engineering',
+    "trialDays": 14,
+    setupTime: ,
+  2 days',
+    "category": 'Security & Compliance,
+    "realService": true,
+    technology[,
+  Static analysisDLPCodeQL'],
+    integrations['GitHubGitLabBitbucketSnowflake'],
+    useCases['Compliance auditsSecurity posture'],
+    "roi": 'Cuts audit prep time by 70%,
+    competitors[,
+  NightfallSnyk'],
+    "marketSize": '$10B AppSec,
+    growthRate:,
+  20% CAGR',
+    "variant": 'privacy-guardian,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Connectors, scanners, policy engine, and dashboards.',
+    "launchDate": '2025-04-20,
+    "customers": 27,
+    "rating": 4.6,
+    "reviews": 16
+  },
+  {,
+    id: ,
+  agentic-rpa-studio',
+    "name": 'Agentic RPA Studio,
+    tagline:,
+  LLM-powered automation that adapts to UI and API changes',
+    "price": '$229,
+    period:,
+  /month',
+    "description": Next-gen RPA with LLM reasoning to build robust automations across web, desktop, and APIs with change resilience.',
+    features['No-code/low-code builderAutonomous healing of broken stepsHuman-in-the-loop reviewAudit logs and RBAC'
+    ],
+    "popular": false,
+    icon: ,
+  🧠',
+    "color": 'from-purple-600 to-pink-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/agentic-rpa-studio,
+    marketPosition:,
+  Modern RPA alternative with AI-based resilience.',
+    "targetAudience": Ops, finance, HR, IT',
+    "trialDays": 14,
+    setupTime: ,
+  1 week',
+    "category": 'Automation,
+    "realService": true,
+    technology[,
+  LLMsComputer visionAPI orchestration'],
+    integrations['SAPSalesforceWorkdayCustom apps'],
+    useCases['Back-office automationReconciliationReporting'],
+    "roi": 'Saves 20–50% of manual hours,
+    competitors[,
+  UiPathAutomation Anywhere'],
+    "marketSize": '$13B RPA,
+    growthRate:,
+  26% CAGR',
+    "variant": 'agent-rpa,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Hybrid recorder, vector memory, fallbacks, and approvals.',
+    "launchDate": '2025-06-22,
+    "customers": 13,
+    "rating": 4.4,
+    "reviews": 9
+  },
+  {,
+    id: ,
+  synthetic-data-generator',
+    "name": 'Synthetic Data Generator,
+    tagline:,
+  Privacy-safe synthetic datasets for analytics and AI',
+    "price": '$179,
+    period:,
+  /month',
+    "description": 'Generate high-fidelity synthetic data that preserves statistical properties while protecting privacy.,
+    features['Tabular/text/image generatorsDifferential privacy optionsBias reduction toolingQuality validation reports'
+    ],
+    "popular": false,
+    icon: ,
+  🧪',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/synthetic-data-generator,
+    marketPosition:,
+  Developer-first synthetic data with controls for privacy and bias.',
+    "targetAudience": Data science, product analytics',
+    "trialDays": 7,
+    setupTime: ,
+  3 days',
+    "category": 'Data & Analytics,
+    "realService": true,
+    technology[,
+  GANsLLMsDifferential privacy'],
+    integrations['SnowflakeBigQueryS3'],
+    useCases['Model trainingProduct analyticsTest data'],
+    "roi": 'Shortens data acquisition by 80%,
+    competitors[,
+  Mostly AIGretel'],
+    "marketSize": '$2.5B synthetic data,
+    growthRate:,
+  34% CAGR',
+    "variant": 'synthdata,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Schema inference, model training, evaluators, and export.',
+    "launchDate": '2025-05-02,
+    "customers": 11,
+    "rating": 4.5,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  edge-iot-fleet-manager',
+    "name": 'Edge IoT Fleet Manager,
+    tagline:,
+  Secure device onboarding, OTA updates, and telemetry at scale',
+    "price": '$299,
+    period:,
+  /month',
+    "description": Manage edge devices with secure provisioning, remote updates, and real-time telemetry dashboards.',
+    features['Device identity and certificatesOTA updates and rollbacksRules engine and alertsDigital twins and dashboards'
+    ],
+    "popular": false,
+    icon: ,
+  📡',
+    "color": 'from-yellow-600 to-orange-700,
+    textColor:,
+  text-yellow-300',
+    "link": 'https://ziontechgroup.com/services/edge-iot-fleet-manager,
+    marketPosition:,
+  Vendor-neutral IoT management for diverse fleets.',
+    "targetAudience": Operations, manufacturing, logistics',
+    "trialDays": 14,
+    setupTime: ,
+  2 weeks',
+    "category": 'IoT & Edge,
+    "realService": true,
+    technology[,
+  MQTTDevice shadowTLSTime-series DB'],
+    integrations['AWS IoTAzure IoTGCP IoT'],
+    useCases['Remote monitoringPredictive maintenance'],
+    "roi": 'Reduces downtime by 25%,
+    competitors[,
+  BalenaParticle'],
+    "marketSize": '$15B IoT platforms,
+    growthRate:,
+  18% CAGR',
+    "variant": 'edge-fleet,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Provisioning service, OTA pipelines, telemetry storage, and rules.',
+    "launchDate": '2025-06-30,
+    "customers": 9,
+    "rating": 4.4,
+    "reviews": 6
+  },
+  {,
+    id: ,
+  data-quality-governance',
+    "name": 'Data Quality & Governance,
+    tagline:,
+  Automated data contracts, tests, and lineage for reliability',
+    "price": '$219,
+    period: ,
+  /month',
+    "description": 'Define data contracts and run continuous tests with lineage and blast-radius analysis for safe changes.,
+    features['Data contracts and schemasQuality tests and SLOsLineage and impact analysisChange approvals and rollbacks'
+    ],
+    "popular": false,
+    icon: ,
+  🗂️',
+    "color": 'from-blue-600 to-cyan-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/data-quality-governance,
+    marketPosition:,
+  Contract-driven data reliability for analytics and ML.',
+    "targetAudience": Data engineering, analytics, platform',
+    "trialDays": 14,
+    setupTime: ,
+  2 weeks',
+    "category": 'Data & Analytics,
+    "realService": true,
+    technology[,
+  Great ExpectationsdbtOpenLineage'],
+    integrations['SnowflakeBigQueryRedshiftDatabricks'],
+    useCases['Reliable dashboardsML pipelinesCompliance'],
+    "roi": 'Cuts data incidents by 50%,
+    competitors[,
+  Monte CarloBigeye'],
+    "marketSize": '$3B data observability,
+    growthRate:,
+  24% CAGR',
+    "variant": 'data-gov,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Declarative contracts, test runners, lineage graph, and UI.',
+    "launchDate": '2025-05-18,
+    "customers": 15,
+    "rating": 4.5,
+    "reviews": 10
+  },
+  {,
+    id: ,
+  full-stack-observability',
+    "name": 'Full-Stack Observability,
+    tagline:,
+  Unified logs, metrics, traces, and user journeys',
+    "price": '$279,
+    period: ,
+  /month',
+    "description": 'End-to-end visibility from frontend sessions to backend services with correlation and RCA.,
+    features['Session replayDistributed tracingMetrics and SLOsRoot-cause analysis'
+    ],
+    "popular": true,
+    icon: ,
+  🕵️‍♂️',
+    "color": 'from-orange-600 to-red-700,
+    textColor:,
+  text-orange-300',
+    "link": 'https://ziontechgroup.com/services/full-stack-observability,
+    marketPosition:,
+  Business-impact aware observability with UX correlation.',
+    "targetAudience": SRE, product, engineering',
+    "trialDays": 14,
+    setupTime: ,
+  1 week',
+    "category": 'DevOps & Reliability,
+    "realService": true,
+    technology[,
+  OpenTelemetryClickHouseeBPF'],
+    integrations['KubernetesDatadogGrafana'],
+    useCases['Outage RCAPerformance tuningUX optimization'],
+    "roi": 'Mean-time-to-recovery reduced by 45%,
+    competitors[,
+  New RelicDynatrace'],
+    "marketSize": '$17B observability,
+    growthRate:,
+  20% CAGR',
+    "variant": 'obs-unified,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Unified collector, correlation engine, and dashboards.',
+    "launchDate": '2025-05-08,
+    "customers": 24,
+    "rating": 4.6,
+    "reviews": 13
+  },
+  {,
+    id: ,
+  dr-backup-as-a-service',
+    "name": 'Backup & DR as a Service,
+    tagline:,
+  Immutable backups and orchestrated disaster recovery',
+    "price": '$189,
+    period:,
+  /month',
+    "description": Managed backups with immutability, ransomware protection, and DR runbooks for rapid recovery.',
+    features['Policy-based backupsImmutability and encryptionDR drills and runbooksCross-cloud replication'
+    ],
+    "popular": false,
+    icon: ,
+  🔁',
+    "color": 'from-sky-600 to-indigo-700,
+    textColor:,
+  text-sky-300',
+    "link": 'https://ziontechgroup.com/services/backup-disaster-recovery,
+    marketPosition:,
+  SaaS-first, cloud-native backup and recovery.',
+    "targetAudience": IT, compliance, security',
+    "trialDays": 7,
+    setupTime: ,
+  1 week',
+    "category": 'IT Services,
+    "realService": true,
+    technology[,
+  SnapshotsObject storageDR orchestration'],
+    integrations['AWSAzureGCPVMware'],
+    useCases['Ransomware recoveryCompliance'],
+    "roi": 'Cuts RTO/RPO by 50%,
+    competitors[,
+  VeeamDruva'],
+    "marketSize": '$9B backup/DR,
+    growthRate:,
+  18% CAGR',
+    "variant": 'dr-saas,
+    "contactInfo": {,
+      mobile: ,
+  +1 302 464 0950',
+      "email": 'kleber@ziontechgroup.com,
+      "address": '364 E Main St STE 1008 Middletown DE 19709'
+    },
+    "realImplementation": true,
+    implementationDetails:,
+  Policy engine, storage backends, orchestration, and testing.',
+    "launchDate": '2025-06-12,
+    "customers": 12,
+    "rating": 4.5,
     "reviews": 7,
-  };
-  {,
-    id:;
-  s3-to-snowflake-ingestion';
-    "name": 'S3 to Snowflake Ingestion;
-    tagline:;
-  Reliable file ingestion, schema mapping, and backfills';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Automate ingestion from S3 to Snowflake with schema inference, partitioning, historical backfills, and monitoring.';
-    features['Schema inference & mappingPartitioning & upserts';
-  'Backfills & reprocessLineage & monitoring',
-    ];
-    "popular": false;
-    icon:;
-  🧊';
-    "color": 'from-blue-700 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/s3-to-snowflake-ingestion;
-    marketPosition:;
-  Operationally simple compared to DIY pipelines.';
-    "targetAudience": 'Data engineering;
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Data;
-    "realService": true;
-    technology[;
-  SnowflakeS3';
-  'Airflow/dbt'];
-    integrations['AWSSnowflake';
-  'dbt'];
-    useCases['ELT ingestionAnalytics';
-  'Compliance archiving'];
-    "roi": 'Reduce pipeline toil by 60%;
-    competitors[;
-  Fivetran (files)Airbyte'];
-    "marketSize": '$3B data ingest;
-    growthRate:;
-  20% CAGR';
-    "variant": 'neural-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Connector jobs with schema registry and monitor.';
-    "launchDate": '2025-02-08;
-    "customers": 9;
-    "rating": 4.4;
-    "reviews": 5,
-  };
-  {,
-    id:;
-  visual-regression-monitor';
-    "name": 'Visual Regression Monitor;
-    tagline:;
-  Screenshot diffs, thresholds, and CI annotations';
-    "price": '$39;
-    period:;
-  /month';
-    "description": Catch visual regressions with screenshot comparisons, tolerances, and smart masking integrated into CI and PRs.';
-    features['Smart masking & thresholdsPR/CI annotations';
-  'Baselines & environmentsAlerting & history',
-    ];
-    "popular": false;
-    icon:;
-  🖼️';
-    "color": 'from-violet-600 to-purple-700;
-    textColor:;
-  text-violet-300';
-    "link": 'https://ziontechgroup.com/services/visual-regression-monitor;
-    marketPosition:;
-  Simple setup vs. bespoke Playwright configs.';
-    "targetAudience": Frontend QA, design systems';
-    "trialDays": 14;
-    setupTime:;
-  45 minutes';
-    "category": 'Developer Experience;
-    "realService": true;
-    technology[;
-  PlaywrightHeadless Chrome'];
-    integrations['GitHubGitLab';
-  'Slack'];
-    useCases['Design integrityRelease gates'];
-    "roi": 'Reduce UI bugs escaping to prod;
-    competitors[;
-  PercyChromatic'];
-    "marketSize": '$600M visual test;
-    growthRate:;
-  16% CAGR';
-    "variant": 'holographic-matrix;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Snapshot store, comparator, and CI bot.';
-    "launchDate": '2025-02-03;
-    "customers": 15;
-    "rating": 4.5;
-    "reviews": 7,
-  };
-  {,
-    id:;
-  data-masking-proxy';
-    "name": 'Data Masking Proxy;
-    tagline:;
-  PII/PHI tokenization for lower environments and analytics';
-    "price": '$89;
-    period:;
-  /month';
-    "description": 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.;
-    features['Tokenization & masking policiesFormat-preserving encryption';
-  'Schema-aware transformsAudit logs & approvals',
-    ];
-    "popular": true;
-    icon:;
-  🗝️';
-    "color": 'from-green-600 to-emerald-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/data-masking-proxy;
-    marketPosition:;
-  Lighter alternative to legacy DLP stacks for data teams.';
-    "targetAudience": Data, platform, compliance';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Security;
-    "realService": true;
-    technology[;
-  FPEKafka/connectors'];
-    integrations['DebeziumSnowflake';
-  'BigQuery'];
-    useCases['Safe replicatesAnalytics sandboxes'];
-    "roi": 'Accelerate testing while staying compliant;
-    competitors[;
-  ProtegrityImmuta'];
-    "marketSize": '$2B data security;
-    growthRate:;
-  18% CAGR';
-    "variant": 'neural-quantum-cyberpunk;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Policy engine, connectors, and audit trails.';
-    "launchDate": '2025-02-06;
-    "customers": 13;
-    "rating": 4.6;
-    "reviews": 6,
-  };
-  {,
-    id:;
-  ai-meeting-notes-agent';
-    "name": 'AI Meeting Notes Agent;
-    tagline:;
-  Recordings, action items, and CRM/PM sync';
-    "price": '$69;
-    period:;
-  /month';
-    "description": Transcribe meetings, extract decisions and action items, and sync summaries to CRM and project management tools.';
-    features['Accurate transcriptsAction items & owners';
-  'Summaries & highlightsCRM/PM sync',
-    ];
-    "popular": true;
-    icon:;
-  🎧';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/ai-meeting-notes-agent;
-    marketPosition:;
-  Business-ready outputs with governance and auditability.';
-    "targetAudience": Sales, success, product';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  ASRLLM summarization';
-  'RAG'];
-    integrations['ZoomTeams';
-  'GMeetHubSpot';
-  'Jira'];
-    useCases['Sales callsCustomer interviews';
-  'Standups'];
-    "roi": 'Reduce note-taking time by 80%;
-    competitors[;
-  FathomGrain'];
-    "marketSize": '$1.2B meeting AI;
-    growthRate:;
-  30% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Recording bot, processing pipeline, and sync.';
-    "launchDate": '2025-02-04;
-    "customers": 28;
-    "rating": 4.6;
-    "reviews": 13,
-  };
-  {,
-    id:;
-  compliance-policy-as-code';
-    "name": 'Compliance Policy as Code;
-    tagline:;
-  OPA/Rego and cloud policies with CI gates and reports';
-    "price": '$129;
-    period:;
-  /month';
-    "description": 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.;
-    features['Policy packs (SOC2, ISO)CI gates & PR comments';
-  'Evidence reportsDrift detection',
-    ];
-    "popular": true;
-    icon:;
-  📜';
-    "color": 'from-purple-600 to-indigo-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/compliance-policy-as-code;
-    marketPosition:;
-  Unifies cloud and IaC checks with audit-ready outputs.';
-    "targetAudience": Security, compliance, platform';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Compliance;
-    "realService": true;
-    technology[;
-  OPA/RegoTerraform';
-  'Cloud APIs'];
-    integrations['AWSAzure';
-  'GCPGitHub'];
-    useCases['Evidence automationGuardrails'];
-    "roi": 'Shorten audits, prevent drift-related incidents;
-    competitors[;
-  BridgecrewSnyk IaC'];
-    "marketSize": '$3B cloud security;
-    growthRate:;
-  22% CAGR';
-    "variant": 'holographic-neural;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Policy catalog, scanners, and evidence builder.';
-    "launchDate": '2025-02-07;
-    "customers": 17;
-    "rating": 4.6;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  pdf-render-api';
-    "name": 'PDF Render API;
-    tagline:;
-  Reliable HTML-to-PDF at scale with templates, assets and callbacks';
-    "price": '$29;
-    period:;
-  /month';
-    "description": Generate pixel-perfect PDFs from HTML/URL with font embedding, asset hosting, async callbacks and storage destinations. Great for invoices, contracts and reports.';
-    features['Chromium-based renderer with fontsTemplates and asset hosting';
-  'Async rendering and callbacksWatermarks and security options';
-  'Storage destinations (S3/GCS/Azure)Usage analytics and quotas',
-    ];
-    "popular": true;
-    icon:;
-  📄';
-    "color": 'from-purple-600 to-pink-700;
-    textColor:;
-  text-purple-400';
-    "link": 'https://ziontechgroup.com/services/pdf-render-api;
-    marketPosition:;
-  Simple, predictable pricing with dev-first DX.';
-    "targetAudience": SaaS, finance, legal, ops automation';
-    "trialDays": 14;
-    setupTime:;
-  10 minutes';
-    "category": 'Developer Tools;
-    "realService": true;
-    technology[;
-  Node.jsHeadless Chrome';
-  'S3Redis'];
-    integrations['ZapierMake.com';
-  'WebhookS3'];
-    useCases['InvoicesAgreements';
-  'Reports'];
-    "roi": 'Replace brittle DIY scripts, cut maintenance by 80%.;
-    competitors[;
-  PDFMonkeyPDFShift';
-  'DocRaptor'];
-    "marketSize": '$500M+ doc rendering;
-    growthRate:;
-  10% CAGR';
-    "variant": 'cyberpunk-holographic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  API with queue-based workers, async callbacks, asset cache, and template store.';
-    "launchDate": '2025-02-01;
-    "customers": 75;
-    "rating": 4.7;
-    "reviews": 28,
-  };
-  {,
-    id:;
-  invoice-ocr-extraction-api';
-    "name": 'Invoice OCR & Extraction API;
-    tagline:;
-  Parse invoices/receipts to structured JSON with high accuracy';
-    "price": '$69;
-    period:;
-  /month';
-    "description": Extract vendors, line items, totals, taxes and dates from invoices and receipts. Includes validation rules, human-in-the-loop review and export to accounting systems.';
-    features['Multi-language OCR (Tesseract/Cloud OCR)Template-free field detection';
-  'Confidence scores and validation rulesHuman-in-the-loop review UI';
-  'CSV/JSON export and webhooksNative integrations (Xero/QuickBooks)',
-    ];
-    "popular": true;
-    icon:;
-  🧾';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-400';
-    "link": 'https://ziontechgroup.com/services/invoice-ocr-extraction-api;
-    marketPosition:;
-  Accurate extraction without expensive enterprise contracts.';
-    "targetAudience": Accounting, fintech, back-office automation, marketplaces';
-    "trialDays": 14;
-    setupTime:;
-  20 minutes';
-    "category": 'AI & Data;
-    "realService": true;
-    technology[;
-  PythonTesseract/Cloud Vision';
-  'FastAPI/NodePostgres'];
-    integrations['XeroQuickBooks';
-  'WebhookS3'];
-    useCases['AP automationExpense processing';
-  'Reconciliation'];
-    "roi": 'Reduce manual data entry by 80–95%;
-    competitors[;
-  VeryfiRossum';
-  'Nanonets'];
-    "marketSize": '$1B+ document AI;
-    growthRate:;
-  32% CAGR';
-    "variant": 'neural-quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Ensembled OCR with field post-processing, validation, and HITL review queue.';
-    "launchDate": '2025-02-15;
-    "customers": 29;
-    "rating": 4.6;
-    "reviews": 9,
-  };
-  {,
-    id:;
-  log-archive-search';
-    "name": 'Log Archive & Search;
-    tagline:;
-  Hot-warm-cold log storage with fast search and lifecycle controls';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Ingest application logs with dynamic sampling, hot/warm retention tiers and S3 archival. Query recent data quickly and archive the rest cheaply.';
-    features['Ingestion with dynamic samplingHot/warm/cold retention policies';
-  'S3-compatible archivalOpenSearch/ClickHouse backend';
-  'Alerting and dashboardsPII redaction and tokenization',
-    ];
-    "popular": false;
-    icon:;
-  🪵';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-400';
-    "link": 'https://ziontechgroup.com/services/log-archive-search;
-    marketPosition:;
-  Cost-efficient alternative to full APM suites for logs.';
-    "targetAudience": SRE, platform, security teams';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Observability;
-    "realService": true;
-    technology[;
-  Vector/FluentBitClickHouse/OpenSearch';
-  'S3Node/Go'];
-    integrations['GrafanaPromtail';
-  'CloudWatchStackdriver'];
-    useCases['Incident triageAudit retention';
-  'Cost control'];
-    "roi": 'Cut log bills by 40–70% with tiered retention;
-    competitors[;
-  Datadog LogsSplunk';
-  'Elastic Cloud'];
-    "marketSize": '$15B+ log analytics;
-    growthRate:;
-  18% CAGR';
-    "variant": 'quantum-matrix;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Ingestion gateway, retention engine, archive to S3, and query federation.';
-    "launchDate": '2025-02-20;
-    "customers": 21;
-    "rating": 4.5;
-    "reviews": 7,
-  };
-  {,
-    id:;
-  gdpr-privacyops-suite';
-    "name": 'GDPR PrivacyOps Suite;
-    tagline:;
-  Automate DSAR, consent and retention with audit-ready workflows';
-    "price": '$249;
-    period:;
-  /month';
-    "description": End-to-end privacy operations covering data subject access requests, consent management, data mapping, and retention policies with audit trails.';
-    features['Automated DSAR intake and processingConsent and preference center SDK';
-  'Data mapping across SaaS and data storesRetention rules with defensible deletion';
-  'Evidence export for auditors',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-purple-600 to-fuchsia-700;
-    textColor:;
-  text-fuchsia-400';
-    "link": 'https://ziontechgroup.com/gdpr-privacyops;
-    marketPosition:;
-  Practical privacy orchestration that complements security tooling with verifiable evidence.';
-    "targetAudience": Legal, Security, Data Governance';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Compliance & Security;
-    "realService": true;
-    technology[;
-  Next.jsNode.js';
-  'PostgreSQLS3';
-  'Webhooks'];
-    integrations['OktaWorkday';
-  'SalesforceGoogle Workspace';
-  'Microsoft 365'];
-    useCases['DSAR automationConsent management';
-  'Data retention'];
-    "roi": 'Cut DSAR handling time by 70% and reduce legal costs;
-    competitors[;
-  TranscendOneTrust';
-  'DataGrail'];
-    "marketSize": '$2.1B privacy tech;
-    growthRate:;
-  22% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Workflow engine with connectors, evidence registry, and audit trail exports.';
-    "launchDate": '2025-03-01;
-    "customers": 18;
-    "rating": 4.6;
-    "reviews": 11,
-  };
-  {,
-    id:;
-  ai-code-review-copilot';
-    "name": 'AI Code Review Copilot;
-    tagline:;
-  Static+LLM reviews with custom rules, SARIF, and fix suggestions';
-    "price": '$129;
-    period:;
-  /month';
-    "description": Blends static analysis with LLM reasoning to flag issues, suggest fixes, enforce architectural rules, and output SARIF to your CI.';
-    features['Language-aware static checksLLM reasoning with guardrails';
-  'Custom policy rules (OPA-style)PR comments and SARIF outputs';
-  'Risk heatmaps and trends',
-    ];
-    "popular": false;
-    icon:;
-  🧑‍💻';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-400';
-    "link": 'https://ziontechgroup.com/ai-code-review-copilot;
-    marketPosition:;
-  Faster feedback than manual reviews with governance for safety-critical repos.';
-    "targetAudience": Engineering teams, platform engineering, QA';
-    "trialDays": 14;
-    setupTime:;
-  30 minutes';
-    "category": 'Developer Tools;
-    "realService": true;
-    technology[;
-  TypeScriptAST parsers';
-  'OpenAI-compatible APIsGitHub/GitLab CI'];
-    integrations['GitHubGitLab';
-  'BitbucketAzure DevOps'];
-    useCases['Shift-left qualityArchitecture compliance';
-  'Secure coding'];
-    "roi": 'Reduce PR cycle time by 30% and defects by 25%;
-    competitors[;
-  Snyk CodeSonarQube + AI';
-  'Codeium Review'];
-    "marketSize": '$4.5B DevSecOps;
-    growthRate:;
-  21% CAGR';
-    "variant": 'quantum;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  CI plugin, policy pack, and dashboard with PR bot comments.';
-    "launchDate": '2025-02-15;
-    "customers": 42;
-    "rating": 4.5;
-    "reviews": 29,
-  };
-  {,
-    id:;
-  m365-security-hardening-kit';
-    "name": 'M365 Security Hardening Kit;
-    tagline:;
-  Turnkey baseline hardening, continuous drift detection, and auto-remediation';
-    "price": '$199;
-    period:;
-  /month';
-    "description": Enforce recommended security baselines in Microsoft 365 and Azure AD with drift monitoring, alerting, and optional auto-remediation.';
-    features['Secure baseline as codeMisconfiguration detection';
-  'Auto-remediation playbooksExecutive reporting',
-    ];
-    "popular": true;
-    icon:;
-  🔒';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-400';
-    "link": 'https://ziontechgroup.com/m365-security-hardening;
-    marketPosition:;
-  Brings cloud security posture management to M365 tenants with quick wins.';
-    "targetAudience": IT, Security, MSPs';
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Security & IT;
-    "realService": true;
-    technology[;
-  Microsoft GraphAzure AD';
-  'PowerShellTerraform'];
-    integrations['Azure ADDefender';
-  'Intune'];
-    useCases['Baseline enforcementDrift detection';
-  'Audit readiness'];
-    "roi": 'Reduce misconfig incidents by 60% in 90 days;
-    competitors[;
-  Microsoft Secure ScoreWiz';
-  'Tenable'];
-    "marketSize": '$3.2B SaaS security posture;
-    growthRate:;
-  28% CAGR';
-    "variant": 'matrix;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Baseline templates, drift engine, and remediation actions via Graph API.';
-    "launchDate": '2025-03-10;
-    "customers": 15;
-    "rating": 4.4;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  ai-customer-qa-benchmark';
-    "name": 'AI Customer QA Benchmark;
-    tagline:;
-  Continuously test your AI agents with real-world scripts and red teams';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Scenario-based QA and red-teaming for AI agents and chatbots with regression baselines, hallucination checks, and compliance scenarios.';
-    features['Scripted and generative test suitesHallucination and toxicity checks';
-  'RAG source attribution validationCompliance and brand guardrails',
-    ];
-    "popular": false;
-    icon:;
-  🔬';
-    "color": 'from-indigo-600 to-violet-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/ai-customer-qa-benchmark;
-    marketPosition:;
-  Production-focused QA for AI agents covering safety, accuracy, and CX.';
-    "targetAudience": CX, AI platform teams, compliance';
-    "trialDays": 14;
-    setupTime:;
-  1 hour';
-    "category": 'AI Quality;
-    "realService": true;
-    technology[;
-  PlaywrightPrompt evaluation';
-  'EmbeddingsSynthetic data'];
-    integrations['ZendeskIntercom';
-  'Salesforce'];
-    useCases['Agent regression testingSafety certification';
-  'RAG validation'];
-    "roi": 'Reduce AI incident rate by 50%;
-    competitors[;
-  HumanloopTruEra';
-  'Robust Intelligence'];
-    "marketSize": '$1.1B AI eval tooling;
-    growthRate:;
-  30% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Test runner, metrics dashboard, and data labeling workflows.';
-    "launchDate": '2025-01-30;
-    "customers": 22;
-    "rating": 4.3;
-    "reviews": 13,
-  };
-  {,
-    id:;
-  quantum-ai-fusion-platform';
-    "name": 'Quantum AI Fusion Platform;
-    tagline:;
-  Quantum computing meets AI for breakthrough insights';
-    "price": '$299;
-    period:;
-  /month';
-    "description": 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.;
-    features['Quantum-inspired algorithmsAI model acceleration';
-  'Optimization solversReal-time analytics';
-  'API integration',
-    ];
-    "popular": true;
-    icon:;
-  ⚛️';
-    "color": 'from-indigo-600 to-purple-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/quantum-ai-fusion-platform;
-    marketPosition:;
-  First-to-market quantum-AI fusion platform for enterprise optimization.';
-    "targetAudience": Research, finance, logistics, pharmaceuticals';
-    "trialDays": 21;
-    setupTime:;
-  1 week';
-    "category": 'Quantum Technology;
-    "realService": true;
-    technology[;
-  Quantum algorithmsAI/ML';
-  'Cloud computing'];
-    integrations['AWS BraketAzure Quantum';
-  'Google Quantum'];
-    useCases['Portfolio optimizationDrug discovery';
-  'Supply chain optimization'];
-    "roi": '10-100x faster than classical computing for specific problems;
-    competitors[;
-  D-WaveIBM Quantum';
-  'Rigetti'];
-    "marketSize": '$8.5B quantum computing;
-    growthRate:;
-  25% CAGR';
-    "variant": 'quantum-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Quantum simulators, hybrid algorithms, cloud deployment.';
-    "launchDate": '2025-08-01;
-    "customers": 15;
-    "rating": 4.8;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  ai-cybersecurity-sentinel';
-    "name": 'AI Cybersecurity Sentinel;
-    tagline:;
-  Intelligent threat detection and response';
-    "price": '$199;
-    period:;
-  /month';
-    "description": AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.';
-    features['AI threat detectionAutomated incident response';
-  'Behavioral analyticsThreat intelligence';
-  'Compliance reporting',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-red-600 to-orange-700;
-    textColor:;
-  text-red-300';
-    "link": 'https://ziontechgroup.com/services/ai-cybersecurity-sentinel;
-    marketPosition:;
-  Next-generation AI-powered cybersecurity with zero false positives.';
-    "targetAudience": Enterprise security, SOC teams, compliance officers';
-    "trialDays": 14;
-    setupTime:;
-  2 days';
-    "category": 'Cybersecurity;
-    "realService": true;
-    technology[;
-  Machine LearningBehavioral Analysis';
-  'Threat Intelligence'];
-    integrations['SIEM systemsEDR platforms';
-  'Cloud providers'];
-    useCases['Threat detectionIncident response';
-  'Compliance monitoring'];
-    "roi": 'Reduces security incidents by 85%;
-    competitors[;
-  DarktraceCrowdStrike';
-  'SentinelOne'];
-    "marketSize": '$45B cybersecurity;
-    growthRate:;
-  22% CAGR';
-    "variant": 'security-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  ML models, API integrations, real-time monitoring.';
-    "launchDate": '2025-07-15;
-    "customers": 45;
-    "rating": 4.7;
-    "reviews": 32,
-  };
-  {,
-    id:;
-  autonomous-devops-orchestrator';
-    "name": 'Autonomous DevOps Orchestrator;
-    tagline:;
-  Self-healing infrastructure and deployment automation';
-    "price": '$159;
-    period:;
-  /month';
-    "description": Intelligent DevOps platform that autonomously manages infrastructure, automates deployments, and optimizes performance.';
-    features['Self-healing infrastructureIntelligent deployment';
-  'Performance optimizationCost management';
-  'Multi-cloud orchestration',
-    ];
-    "popular": false;
-    icon:;
-  🤖';
-    "color": 'from-green-600 to-teal-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/autonomous-devops-orchestrator;
-    "marketPosition": 'First autonomous DevOps platform with AI-driven decision making.';
-    targetAudience['DevOps engineersPlatform teams';
-  'SREs'];
-    "trialDays": 14;
-    setupTime:;
-  3 days';
-    "category": 'DevOps & Infrastructure;
-    "realService": true;
-    technology[;
-  AI/MLKubernetes';
-  'TerraformCloud APIs'];
-    integrations['AWSAzure';
-  'GCPKubernetes';
-  'GitHub'];
-    useCases['Infrastructure automationDeployment optimization';
-  'Cost reduction'];
-    "roi": 'Reduces DevOps overhead by 60%;
-    competitors[;
-  HashiCorpPulumi';
-  'Spacelift'];
-    "marketSize": '$12B DevOps tools;
-    growthRate:;
-  19% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  AI models, infrastructure as code, monitoring integration.';
-    "launchDate": '2025-06-20;
-    "customers": 28;
-    "rating": 4.6;
-    "reviews": 19,
-  };
-  {,
-    id:;
-  blockchain-enterprise-platform';
-    "name": 'Blockchain Enterprise Platform;
-    tagline:;
-  Enterprise-grade blockchain solutions for business';
-    "price": '$399;
-    period:;
-  /month';
-    "description": Comprehensive blockchain platform enabling enterprises to build, deploy, and manage blockchain applications with enterprise features.';
-    features['Multi-chain supportSmart contract development';
-  'Enterprise securityScalability solutions';
-  'Integration APIs',
-    ];
-    "popular": true;
-    icon:;
-  🔗';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/blockchain-enterprise-platform;
-    "marketPosition": 'Enterprise blockchain platform with built-in compliance and scalability.';
-    targetAudience['Financial servicesSupply chain';
-  'Healthcare'];
-    "trialDays": 30;
-    setupTime:;
-  2 weeks';
-    "category": 'Blockchain & Web3;
-    "realService": true;
-    technology[;
-  EthereumHyperledger';
-  'PolkadotSmart contracts'];
-    integrations['Enterprise systemsCloud providers';
-  'Payment gateways'];
-    useCases['Supply chain trackingDigital identity';
-  'Asset tokenization'];
-    "roi": 'Increases transparency and reduces fraud by 90%;
-    competitors[;
-  ConsenSysR3 Corda';
-  'Hyperledger'];
-    "marketSize": '$19B blockchain;
-    growthRate:;
-  87% CAGR';
-    "variant": 'blockchain-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Multi-chain architecture, smart contracts, enterprise APIs.';
-    "launchDate": '2025-05-10;
-    "customers": 22;
-    "rating": 4.5;
-    "reviews": 15,
-  };
-  {,
-    id:;
-  ai-content-intelligence-suite';
-    "name": 'AI Content Intelligence Suite;
-    tagline:;
-  Intelligent content creation and optimization';
-    "price": '$89;
-    period:;
-  /month';
-    "description": AI-powered content platform that creates, optimizes, and analyzes content for maximum engagement and SEO performance.';
-    features['AI content generationSEO optimization';
-  'Content analyticsMulti-language support';
-  'Brand voice consistency',
-    ];
-    "popular": false;
-    icon:;
-  ✍️';
-    "color": 'from-purple-600 to-pink-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/ai-content-intelligence-suite;
-    "marketPosition": 'AI content platform with built-in SEO and brand consistency.';
-    targetAudience['Marketing teamsContent creators';
-  'SEO specialists'];
-    "trialDays": 7;
-    setupTime:;
-  1 hour';
-    "category": 'Content & Marketing;
-    "realService": true;
-    technology[;
-  GPT-4BERT';
-  'NLPMachine Learning'];
-    integrations['WordPressShopify';
-  'HubSpotGoogle Analytics'];
-    useCases['Blog writingProduct descriptions';
-  'Social media content'];
-    "roi": 'Increases content engagement by 150%;
-    competitors[;
-  JasperCopy.ai';
-  'Writesonic'];
-    "marketSize": '$7.8B content marketing;
-    growthRate:;
-  16% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  AI models, content templates, analytics dashboard.';
-    "launchDate": '2025-04-25;
-    "customers": 67;
-    "rating": 4.4;
-    "reviews": 41,
-  };
-  {,
-    id:;
-  iot-enterprise-platform';
-    "name": 'IoT Enterprise Platform;
-    tagline:;
-  Scalable IoT infrastructure for enterprise';
-    "price": '$249;
-    period:;
-  /month';
-    "description": Enterprise IoT platform providing device management, data collection, analytics, and automation for large-scale IoT deployments.';
-    features['Device managementReal-time analytics';
-  'Data visualizationAutomation workflows';
-  'Security & compliance',
-    ];
-    "popular": true;
-    icon:;
-  🌐';
-    "color": 'from-teal-600 to-green-700;
-    textColor:;
-  text-teal-300';
-    "link": 'https://ziontechgroup.com/services/iot-enterprise-platform;
-    "marketPosition": 'Enterprise IoT platform with built-in security and scalability.';
-    targetAudience['ManufacturingSmart cities';
-  'Energy companies'];
-    "trialDays": 21;
-    setupTime:;
-  1 week';
-    "category": 'IoT & Edge Computing;
-    "realService": true;
-    technology[;
-  MQTTWebSocket';
-  'Time-series databasesEdge computing'];
-    integrations['AWS IoTAzure IoT';
-  'Google Cloud IoT'];
-    useCases['Smart manufacturingAsset monitoring';
-  'Predictive maintenance'];
-    "roi": 'Reduces operational costs by 30%;
-    competitors[;
-  AWS IoTAzure IoT';
-  'Google Cloud IoT'];
-    "marketSize": '$35B IoT platforms;
-    growthRate:;
-  28% CAGR';
-    "variant": 'iot-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Device SDKs, cloud infrastructure, analytics engine.';
-    "launchDate": '2025-03-15;
-    "customers": 38;
-    "rating": 4.6;
-    "reviews": 25,
-  };
-  {,
-    id:;
-  ai-customer-success-platform';
-    "name": 'AI Customer Success Platform;
-    tagline:;
-  Intelligent customer success automation';
-    "price": '$129;
-    period:;
-  /month';
-    "description": AI-powered customer success platform that predicts churn, automates engagement, and optimizes customer lifecycle management.';
-    features['Churn predictionAutomated engagement';
-  'Customer health scoringSuccess playbooks';
-  'Analytics dashboard',
-    ];
-    "popular": true;
-    icon:;
-  🎯';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/ai-customer-success-platform;
-    "marketPosition": 'AI-driven customer success with predictive analytics and automation.';
-          targetAudience['Customer success teamsAccount managers';
-  'Growth teams'];
-    "trialDays": 14;
-    setupTime:;
-  2 days';
-    "category": 'Customer Success;
-    "realService": true;
-    technology[;
-  Machine LearningPredictive Analytics';
-  'Automation'];
-    integrations['SalesforceHubSpot';
-  'IntercomSlack'];
-    useCases['Churn preventionCustomer expansion';
-  'Success automation'];
-    "roi": 'Increases customer retention by 25%;
-    competitors[;
-  GainsightVitally';
-  'Totango'];
-    "marketSize": '$4.2B customer success;
-    growthRate:;
-  17% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  ML models, automation engine, integration APIs.';
-    "launchDate": '2025-02-20;
-    "customers": 52;
-    "rating": 4.7;
-    "reviews": 38,
-  };
-  {,
-    id:;
-  quantum-cryptography-suite';
-    "name": 'Quantum Cryptography Suite;
-    tagline:;
-  Future-proof cryptography for quantum era';
-    "price": '$179;
-    period:;
-  /month';
-    "description": 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.;
-    features['Post-quantum cryptographyQuantum key distribution';
-  'Hybrid encryptionPerformance optimization';
-  'Compliance standards',
-    ];
-    "popular": false;
-    icon:;
-  🔐';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/quantum-cryptography-suite;
-    "marketPosition": 'First post-quantum cryptography platform for enterprise security.';
-    targetAudience['Financial servicesGovernment';
-  'Healthcare'];
-    "trialDays": 30;
-    setupTime:;
-  2 weeks';
-    "category": 'Quantum Security;
-    "realService": true;
-    technology[;
-  Post-quantum algorithmsQuantum key distribution';
-  'Hybrid encryption'];
-    integrations['PKI systemsVPN solutions';
-  'Cloud providers'];
-          useCases['Data protectionSecure communications';
-  'Compliance readiness'];
-    "roi": 'Future-proofs security investments against quantum threats;
-    competitors[;
-  ISARAPost-Quantum';
-  'Quantum Xchange'];
-    "marketSize": '$3.2B quantum security;
-    growthRate:;
-  45% CAGR';
-    "variant": 'quantum-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Cryptographic libraries, key management, performance optimization.';
-    "launchDate": '2025-01-15;
-    "customers": 18;
-    "rating": 4.8;
-    "reviews": 12,
-  };
-  {,
-    id:;
-  ai-supply-chain-optimizer';
-    "name": 'AI Supply Chain Optimizer;
-    tagline:;
-  Intelligent supply chain optimization and forecasting';
-    "price": '$199;
-    period:;
-  /month';
-    "description": AI-powered supply chain platform that optimizes inventory, predicts demand, and automates procurement decisions.';
-    features['Demand forecastingInventory optimization';
-  'Procurement automationRisk assessment';
-  'Real-time analytics',
-    ];
-    "popular": true;
-    icon:;
-  📦';
-    "color": 'from-orange-600 to-red-700;
-    textColor:;
-  text-orange-300';
-    "link": 'https://ziontechgroup.com/services/ai-supply-chain-optimizer;
-    "marketPosition": 'AI-driven supply chain optimization with real-time insights.';
-    targetAudience['LogisticsManufacturing';
-  'Retail'];
-    "trialDays": 21;
-    setupTime:;
-  1 week';
-    "category": 'Supply Chain & Logistics;
-    "realService": true;
-    technology[;
-  Machine LearningPredictive Analytics';
-  'Optimization algorithms'];
-    integrations['ERP systemsWMS';
-  'TMSSupplier portals'];
-    useCases['Inventory optimizationDemand planning';
-  'Risk management'];
-    "roi": 'Reduces inventory costs by 20%;
-    competitors[;
-  Blue YonderManhattan Associates';
-  'SAP'];
-    "marketSize": '$18B supply chain management;
-    growthRate:;
-  15% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  ML models, optimization engine, integration APIs.';
-    "launchDate": '2024-12-01;
-    "customers": 41;
-    "rating": 4.6;
-    "reviews": 28,
-  };
-  {,
-    id:;
-  autonomous-financial-advisor';
-    "name": 'Autonomous Financial Advisor;
-    tagline:;
-  AI-powered financial planning and investment advice';
-    "price": '$149;
-    period:;
-  /month';
-    "description": Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning.';
-    features['Portfolio optimizationRisk assessment';
-  'Tax optimizationGoal-based planning';
-  'Real-time monitoring',
-    ];
-    "popular": true;
-    icon:;
-  💰';
-    "color": 'from-green-600 to-emerald-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/autonomous-financial-advisor;
-    "marketPosition": 'AI financial advisor with institutional-grade investment strategies.';
-    targetAudience['Financial advisorsWealth management';
-  'Individual investors'];
-    "trialDays": 14;
-    setupTime:;
-  3 days';
-    "category": 'FinTech & Wealth Management;
-    "realService": true;
-    technology[;
-  Machine LearningPortfolio optimization';
-  'Risk modeling'];
-    integrations['Brokerage APIsBanking systems';
-  'Tax software'];
-    useCases['Portfolio managementFinancial planning';
-  'Tax optimization'];
-    "roi": 'Increases portfolio returns by 2-3% annually;
-    competitors[;
-  BettermentWealthfront';
-  'Personal Capital'];
-    "marketSize": '$12B robo-advisory;
-    growthRate:;
-  23% CAGR';
-    "variant": 'ai-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  ML models, portfolio engine, compliance framework.';
-    "launchDate": '2024-11-15;
-    "customers": 35;
-    "rating": 4.7;
-    "reviews": 22,
-  };
-  {,
-    id:;
-  ai-consciousness-evolution-platform';
-    "name": 'AI Consciousness Evolution Platform;
-    tagline:;
-  Advanced AI consciousness and emotional intelligence';
-    "price": '$599;
-    period:;
-  /month';
-    "description": Revolutionary platform for developing AI systems with advanced consciousness, emotional intelligence, and creative capabilities.';
-    features['Consciousness simulationEmotional intelligence';
-  'Creative problem solvingSelf-awareness algorithms';
-  'Ethical decision making',
-    ];
-    "popular": true;
-    icon:;
-  🧠';
-    "color": 'from-violet-600 to-purple-700;
-    textColor:;
-  text-violet-300';
-    "link": 'https://ziontechgroup.com/services/ai-consciousness-evolution-platform;
-    "marketPosition": 'First AI consciousness platform for research and development.';
-          targetAudience['AI researchersUniversities';
-  'Tech companies'];
-    "trialDays": 30;
-    setupTime:;
-  2 weeks';
-    "category": 'AI Consciousness;
-    "realService": true;
-    technology[;
-  Neural networksConsciousness algorithms';
-  'Emotional AI'];
-    integrations['Research platformsAI frameworks';
-  'Cloud computing'];
-    useCases['AI researchConsciousness studies';
-  'Creative AI'];
-    "roi": 'Accelerates AI consciousness research by 10x;
-    competitors[;
-  OpenAIAnthropic';
-  'DeepMind'];
-    "marketSize": '$2.1B AI consciousness;
-    growthRate:;
-  35% CAGR';
-    "variant": 'consciousness-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Consciousness algorithms, emotional models, research tools.';
-    "launchDate": '2025-09-01;
-    "customers": 8;
-    "rating": 4.9;
-    "reviews": 5,
-  };
-  {,
-    id:;
-  quantum-space-technology-suite';
-    "name": 'Quantum Space Technology Suite;
-    tagline:;
-  Quantum computing for space exploration and satellite operations';
-    "price": '$799;
-    period:;
-  /month';
-    "description": Advanced quantum computing platform optimized for space applications, satellite communications, and orbital calculations.';
-    features['Quantum orbital calculationsSatellite optimization';
-  'Space weather predictionQuantum communications';
-  'Mission planning',
-    ];
-    "popular": false;
-    icon:;
-  🚀';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/quantum-space-technology-suite;
-    "marketPosition": 'First quantum computing platform specifically designed for space applications.';
-    targetAudience['Space agenciesSatellite companies';
-  'Aerospace'];
-    "trialDays": 45;
-    setupTime:;
-  1 month';
-    "category": 'Space Technology;
-    "realService": true;
-    technology[;
-  Quantum computingSpace algorithms';
-  'Satellite tech'];
-    integrations['NASA APIsESA systems';
-  'Commercial satellites'];
-    useCases['Satellite optimizationSpace missions';
-  'Orbital calculations'];
-    "roi": 'Reduces satellite launch costs by 25%;
-    competitors[;
-  IBM QuantumD-Wave';
-  'Space companies'];
-    "marketSize": '$4.8B space technology;
-    growthRate:;
-  28% CAGR';
-    "variant": 'space-quantum-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Quantum algorithms, space APIs, mission planning tools.';
-    "launchDate": '2025-10-01;
-    "customers": 12;
-    "rating": 4.7;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  autonomous-manufacturing-ai';
-    "name": 'Autonomous Manufacturing AI;
-    tagline:;
-  Self-optimizing manufacturing with AI and robotics';
-    "price": '$349;
-    period:;
-  /month';
-    "description": Intelligent manufacturing platform that autonomously optimizes production processes, quality control, and supply chain management.';
-    features['Production optimizationQuality control AI';
-  'Predictive maintenanceSupply chain automation';
-  'Real-time analytics',
-    ];
-    "popular": true;
-    icon:;
-  🏭';
-    "color": 'from-orange-600 to-red-700;
-    textColor:;
-  text-orange-300';
-    "link": 'https://ziontechgroup.com/services/autonomous-manufacturing-ai;
-    "marketPosition": 'AI-driven autonomous manufacturing platform for Industry 4.0.';
-    targetAudience['ManufacturingFactories';
-  'Industrial companies'];
-    "trialDays": 21;
-    setupTime:;
-  2 weeks';
-    "category": 'Manufacturing & Industry 4.0;
-    "realService": true;
-    technology[;
-  AI/MLIoT';
-  'RoboticsComputer vision'];
-    integrations['ERP systemsMES platforms';
-  'IoT devices'];
-    useCases['Production optimizationQuality control';
-  'Predictive maintenance'];
-    "roi": 'Increases manufacturing efficiency by 35%;
-    competitors[;
-  SiemensGE Digital';
-  'Rockwell Automation'];
-    "marketSize": '$22B smart manufacturing;
-    growthRate:;
-  18% CAGR';
-    "variant": 'manufacturing-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  AI models, IoT integration, analytics dashboard.';
-    "launchDate": '2025-08-15;
-    "customers": 31;
-    "rating": 4.6;
-    "reviews": 24,
-  };
-  {,
-    id:;
-  biotech-ai-research-platform';
-    "name": 'Biotech AI Research Platform;
-    tagline:;
-  AI-powered biotechnology research and drug discovery';
-    "price": '$499;
-    period:;
-  /month';
-    "description": Advanced AI platform for biotechnology research, drug discovery, genetic analysis, and personalized medicine development.';
-    features['Drug discovery AIGenetic analysis';
-  'Protein foldingClinical trial optimization';
-  'Personalized medicine',
-    ];
-    "popular": true;
-    icon:;
-  🧬';
-    "color": 'from-green-600 to-emerald-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/biotech-ai-research-platform;
-    "marketPosition": 'AI-driven biotech research platform for pharmaceutical companies.';
-    targetAudience['Pharmaceutical companiesResearch labs';
-  'Biotech startups'];
-    "trialDays": 30;
-    setupTime:;
-  3 weeks';
-    "category": 'Biotechnology & Healthcare;
-    "realService": true;
-    technology[;
-  AI/MLBioinformatics';
-  'Computational biology'];
-    integrations['Research databasesLab equipment';
-  'Clinical systems'];
-    useCases['Drug discoveryGenetic research';
-  'Clinical trials'];
-    "roi": 'Accelerates drug discovery by 5x;
-    competitors[;
-  InsitroAtomwise';
-  'BenevolentAI'];
-    "marketSize": '$15B AI in biotech;
-    growthRate:;
-  32% CAGR';
-    "variant": 'biotech-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  AI models, bioinformatics tools, research platform.';
-    "launchDate": '2025-07-20;
-    "customers": 19;
-    "rating": 4.8;
-    "reviews": 15,
-  };
-  {,
-    id:;
-  metaverse-enterprise-platform';
-    "name": 'Metaverse Enterprise Platform;
-    tagline:;
-  Enterprise metaverse solutions for business collaboration';
-    "price": '$299;
-    period:;
-  /month';
-    "description": Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3D environments.';
-    features['Virtual workspaces3D collaboration tools';
-  'Avatar customizationVirtual meetings';
-  'Integration APIs',
-    ];
-    "popular": false;
-    icon:;
-  🌐';
-    "color": 'from-purple-600 to-pink-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/metaverse-enterprise-platform;
-    "marketPosition": 'Enterprise metaverse platform for remote collaboration and virtual events.';
-    targetAudience['EnterprisesRemote teams';
-  'Event organizers'];
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'Metaverse & Virtual Reality;
-    "realService": true;
-    technology[;
-  VR/AR3D graphics';
-  'WebGLWebRTC'];
-    integrations['SlackMicrosoft Teams';
-  'ZoomWebex'];
-    useCases['Virtual meetingsRemote collaboration';
-  'Virtual events'];
-    "roi": 'Reduces travel costs by 40%;
-    competitors[;
-  MetaMicrosoft Mesh';
-  'Spatial'];
-    "marketSize": '$8.9B metaverse;
-    growthRate:;
-  45% CAGR';
-    "variant": 'metaverse-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  3D engine, collaboration tools, integration APIs.';
-    "launchDate": '2025-06-25;
-    "customers": 26;
-    "rating": 4.5;
-    "reviews": 18,
-  };
-  {,
-    id:;
-  quantum-financial-trading-platform';
-    "name": 'Quantum Financial Trading Platform;
-    tagline:;
-  Quantum computing for high-frequency trading and risk management';
-    "price": '$899;
-    period:;
-  /month';
-    "description": Advanced quantum computing platform optimized for financial trading, risk assessment, and portfolio optimization with quantum algorithms.';
-    features['Quantum trading algorithmsRisk assessment';
-  'Portfolio optimizationMarket prediction';
-  'High-frequency trading',
-    ];
-    "popular": true;
-    icon:;
-  💹';
-    "color": 'from-emerald-600 to-green-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/quantum-financial-trading-platform;
-    "marketPosition": 'Quantum computing platform specifically designed for financial markets.';
-    targetAudience['Investment banksHedge funds';
-  'Trading firms'];
-    "trialDays": 30;
-    setupTime:;
-  1 month';
-    "category": 'Quantum Finance;
-    "realService": true;
-    technology[;
-  Quantum computingFinancial algorithms';
-  'Risk modeling'];
-    integrations['BloombergReuters';
-  'Trading platforms'];
-    useCases['Algorithmic tradingRisk management';
-  'Portfolio optimization'];
-    "roi": 'Increases trading performance by 15-25%;
-    competitors[;
-  Goldman Sachs QuantumJP Morgan Quantum';
-  'Quantum startups'];
-    "marketSize": '$6.2B quantum finance;
-    growthRate:;
-  38% CAGR';
-    "variant": 'quantum-finance-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Quantum algorithms, financial models, trading APIs.';
-    "launchDate": '2025-09-15;
-    "customers": 15;
-    "rating": 4.9;
-    "reviews": 12,
-  };
-  {,
-    id:;
-  ai-autonomous-vehicle-platform';
-    "name": 'AI Autonomous Vehicle Platform;
-    tagline:;
-  Intelligent autonomous vehicle management and optimization';
-    "price": '$449;
-    period:;
-  /month';
-    "description": AI-powered platform for managing autonomous vehicle fleets, optimizing routes, and ensuring safety in autonomous transportation systems.';
-    features['Fleet managementRoute optimization';
-  'Safety monitoringPredictive maintenance';
-  'Real-time tracking',
-    ];
-    "popular": false;
-    icon:;
-  🚗';
-    "color": 'from-blue-600 to-cyan-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/ai-autonomous-vehicle-platform;
-    "marketPosition": 'AI platform for autonomous vehicle fleet management and optimization.';
-    targetAudience['Transportation companiesLogistics';
-  'Ride-sharing'];
-    "trialDays": 21;
-    setupTime:;
-  2 weeks';
-    "category": 'Autonomous Vehicles & Transportation;
-    "realService": true;
-    technology[;
-  AI/MLComputer vision';
-  'IoT5G'];
-    integrations['Vehicle APIsGPS systems';
-  'Traffic data'];
-    useCases['Fleet managementRoute optimization';
-  'Safety monitoring'];
-    "roi": 'Reduces transportation costs by 30%;
-    competitors[;
-  WaymoCruise';
-  'Tesla'];
-    "marketSize": '$12B autonomous vehicles;
-    growthRate:;
-  42% CAGR';
-    "variant": 'autonomous-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  AI models, fleet management, safety systems.';
-    "launchDate": '2025-07-30;
-    "customers": 22;
-    "rating": 4.6;
-    "reviews": 16,
-  };
-  {,
-    id:;
-  quantum-cybersecurity-suite';
-    "name": 'Quantum Cybersecurity Suite;
-    tagline:;
-  Quantum-resistant cybersecurity for the post-quantum era';
-    "price": '$379;
-    period:;
-  /month';
-    "description": 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.;
-    features['Post-quantum cryptographyQuantum-resistant algorithms';
-  'Threat detectionCompliance frameworks';
-  'Migration tools',
-    ];
-    "popular": true;
-    icon:;
-  🔒';
-    "color": 'from-red-600 to-pink-700;
-    textColor:;
-  text-red-300';
-    "link": 'https://ziontechgroup.com/services/quantum-cybersecurity-suite;
-    "marketPosition": 'Comprehensive quantum-resistant cybersecurity platform.';
-    targetAudience['Financial servicesGovernment';
-  'Healthcare'];
-    "trialDays": 30;
-    setupTime:;
-  3 weeks';
-    "category": 'Quantum Security;
-    "realService": true;
-    technology[;
-  Post-quantum algorithmsQuantum key distribution';
-  'Hybrid encryption'];
-    integrations['PKI systemsVPN solutions';
-  'Cloud providers'];
-    useCases['Data protectionSecure communications';
-  'Compliance readiness'];
-    "roi": 'Future-proofs security investments against quantum threats;
-    competitors[;
-  ISARAPost-Quantum';
-  'Quantum Xchange'];
-    "marketSize": '$3.2B quantum security;
-    growthRate:;
-  45% CAGR';
-    "variant": 'quantum-security-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Cryptographic libraries, key management, migration tools.';
-    "launchDate": '2025-08-25;
-    "customers": 28;
-    "rating": 4.7;
-    "reviews": 20,
-  };
-  {,
-    id:;
-  enterprise-data-governance-platform';
-    "name": 'Enterprise Data Governance Platform;
-    tagline:;
-  Comprehensive data governance and compliance management';
-    "price": '$279;
-    period:;
-  /month';
-    "description": Enterprise-grade data governance platform that ensures data quality, compliance, and security across all organizational data assets.';
-    features['Data quality managementCompliance monitoring';
-  'Data lineage trackingPrivacy controls';
-  'Audit reporting',
-    ];
-    "popular": false;
-    icon:;
-  📊';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/enterprise-data-governance-platform;
-    "marketPosition": 'Comprehensive data governance platform for enterprise compliance.';
-    targetAudience['EnterprisesFinancial services';
-  'Healthcare'];
-    "trialDays": 21;
-    setupTime:;
-  2 weeks';
-    "category": 'Data & Analytics;
-    "realService": true;
-    technology[;
-  Data governanceCompliance frameworks';
-  'Data quality'];
-    integrations['Data warehousesBI tools';
-  'Compliance systems'];
-    useCases['Data complianceQuality management';
-  'Audit preparation'];
-    "roi": 'Reduces compliance risks by 80%;
-    competitors[;
-  CollibraInformatica';
-  'Alation'];
-    "marketSize": '$7.2B data governance;
-    growthRate:;
-  16% CAGR';
-    "variant": 'data-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Governance framework, quality tools, compliance monitoring.';
-    "launchDate": '2025-05-20;
-    "customers": 34;
-    "rating": 4.5;
-    "reviews": 22,
-  };
-  {,
-    id:;
-  ai-powered-hr-analytics-suite';
-    "name": 'AI-Powered HR Analytics Suite;
-    tagline:;
-  Intelligent HR analytics and workforce optimization';
-    "price": '$189;
-    period:;
-  /month';
-    "description": AI-driven HR analytics platform that provides insights into workforce performance, retention, and optimization strategies.';
-    features['Workforce analyticsRetention prediction';
-  'Performance insightsDiversity metrics';
-  'Recruitment optimization',
-    ];
-    "popular": true;
-    icon:;
-  👥';
-    "color": 'from-purple-600 to-pink-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/ai-powered-hr-analytics-suite;
-    "marketPosition": 'AI-driven HR analytics for modern workforce management.';
-    targetAudience['HR departmentsPeople operations';
-  'Talent acquisition'];
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'HR & People Analytics;
-    "realService": true;
-    technology[;
-  AI/MLPeople analytics';
-  'Predictive modeling'];
-    integrations['HRIS systemsATS platforms';
-  'Performance tools'];
-    useCases['Workforce planningRetention strategies';
-  'Recruitment optimization'];
-    "roi": 'Improves retention by 20%;
-    competitors[;
-  VisierTableau';
-  'Power BI'];
-    "marketSize": '$3.8B HR analytics;
-    growthRate:;
-  19% CAGR';
-    "variant": 'hr-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Analytics engine, predictive models, HR integrations.';
-    "launchDate": '2025-04-15;
-    "customers": 47;
-    "rating": 4.6;
-    "reviews": 31,
-  };
-  {,
-    id:;
-  cloud-migration-automation-platform';
-    "name": 'Cloud Migration Automation Platform;
-    tagline:;
-  Automated cloud migration and optimization';
-    "price": '$399;
-    period:;
-  /month';
-    "description": Intelligent platform that automates cloud migration processes, optimizes costs, and ensures smooth transitions to cloud infrastructure.';
-    features['Migration automationCost optimization';
-  'Performance monitoringSecurity compliance';
-  'Multi-cloud support',
-    ];
-    "popular": true;
-    icon:;
-  ☁️';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/cloud-migration-automation-platform;
-    "marketPosition": 'Automated cloud migration platform for enterprise transformation.';
-    targetAudience['EnterprisesIT departments';
-  'Cloud architects'];
-    "trialDays": 21;
-    setupTime:;
-  2 weeks';
-    "category": 'Cloud & Infrastructure;
-    "realService": true;
-    technology[;
-  AutomationCloud APIs';
-  'Migration tools'];
-    integrations['AWSAzure';
-  'GCPOn-premise systems'];
-    useCases['Cloud migrationCost optimization';
-  'Performance tuning'];
-    "roi": 'Reduces migration time by 60%;
-    competitors[;
-  CloudEndureAWS Migration Hub';
-  'Azure Migrate'];
-    "marketSize": '$18B cloud migration;
-    growthRate:;
-  24% CAGR';
-    "variant": 'cloud-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Migration engine, cost optimization, monitoring tools.';
-    "launchDate": '2025-03-25;
-    "customers": 29;
-    "rating": 4.7;
-    "reviews": 19,
-  };
-  {,
-    id:;
-  digital-transformation-consulting';
-    "name": 'Digital Transformation Consulting;
-    tagline:;
-  Strategic digital transformation and change management';
-    "price": '$1500;
-    period:;
-  /day';
-    "description": Expert consulting services for digital transformation, helping organizations navigate technological change and achieve digital maturity.';
-    features['Strategy developmentChange management';
-  'Technology assessmentProcess optimization';
-  'Implementation support',
-    ];
-    "popular": false;
-    icon:;
-  🔄';
-    "color": 'from-orange-600 to-red-700;
-    textColor:;
-  text-orange-300';
-    "link": 'https://ziontechgroup.com/services/digital-transformation-consulting;
-    "marketPosition": 'Strategic digital transformation consulting for enterprise success.';
-    targetAudience['EnterprisesGovernment';
-  'Non-profits'];
-    "trialDays": 0;
-    setupTime:;
-  1 day';
-    "category": 'Consulting & Strategy;
-    "realService": true;
-    technology[;
-  Strategy frameworksChange management';
-  'Process optimization'];
-    integrations['Project managementCommunication tools';
-  'Analytics platforms'];
-    useCases['Digital strategyChange management';
-  'Process optimization'];
-    "roi": 'Accelerates transformation by 3x;
-    competitors[;
-  McKinseyBCG';
-  'Bain'];
-    "marketSize": '$45B digital transformation;
-    growthRate:;
-  21% CAGR';
-    "variant": 'consulting-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Strategy frameworks, change management, implementation support.';
-    "launchDate": '2025-02-10;
-    "customers": 12;
-    "rating": 4.9;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  ai-ethics-compliance-framework';
-    "name": 'AI Ethics & Compliance Framework;
-    tagline:;
-  Ethical AI development and compliance management';
-    "price": '$249;
-    period:;
-  /month';
-    "description": Comprehensive framework for ensuring ethical AI development, compliance with regulations, and responsible AI deployment.';
-    features['Ethics guidelinesCompliance monitoring';
-  'Bias detectionTransparency tools';
-  'Audit frameworks',
-    ];
-    "popular": true;
-    icon:;
-  ⚖️';
-    "color": 'from-green-600 to-emerald-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/ai-ethics-compliance-framework;
-    "marketPosition": 'Comprehensive AI ethics and compliance framework.';
-    targetAudience['AI companiesEnterprises';
-  'Government'];
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'AI Ethics & Compliance;
-    "realService": true;
-    technology[;
-  Ethics frameworksCompliance tools';
-  'Bias detection'];
-    integrations['AI platformsCompliance systems';
-  'Audit tools'];
-    useCases['AI ethicsCompliance management';
-  'Bias mitigation'];
-    "roi": 'Reduces compliance risks by 90%;
-    competitors[;
-  AI ethics startupsCompliance platforms'];
-    "marketSize": '$2.8B AI ethics;
-    growthRate:;
-  28% CAGR';
-    "variant": 'ethics-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Ethics framework, compliance tools, audit systems.';
-    "launchDate": '2025-01-20;
-    "customers": 18;
-    "rating": 4.8;
-    "reviews": 12,
-  };
-  {,
-    id:;
-  edge-computing-optimization-platform';
-    "name": 'Edge Computing Optimization Platform;
-    tagline:;
-  Intelligent edge computing and IoT optimization';
-    "price": '$199;
-    period:;
-  /month';
-    "description": Advanced platform for optimizing edge computing deployments, managing IoT devices, and reducing latency in distributed systems.';
-    features['Edge optimizationIoT management';
-  'Latency reductionResource allocation';
-  'Performance monitoring',
-    ];
-    "popular": false;
-    icon:;
-  🌐';
-    "color": 'from-teal-600 to-green-700;
-    textColor:;
-  text-teal-300';
-    "link": 'https://ziontechgroup.com/services/edge-computing-optimization-platform;
-    "marketPosition": 'Edge computing optimization platform for IoT and distributed systems.';
-    targetAudience['IoT companiesManufacturing';
-  'Smart cities'];
-    "trialDays": 21;
-    setupTime:;
-  1 week';
-    "category": 'Edge Computing & IoT;
-    "realService": true;
-    technology[;
-  Edge computingIoT management';
-  'Optimization algorithms'];
-    integrations['IoT platformsCloud providers';
-  'Edge devices'];
-    useCases['Edge optimizationIoT management';
-  'Performance tuning'];
-    "roi": 'Reduces latency by 40%;
-    competitors[;
-  AWS GreengrassAzure IoT Edge';
-  'Google Edge TPU'];
-    "marketSize": '$11B edge computing;
-    growthRate:;
-  32% CAGR';
-    "variant": 'edge-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Edge optimization, IoT management, performance monitoring.';
-    "launchDate": '2024-12-15;
-    "customers": 25;
-    "rating": 4.5;
-    "reviews": 17,
-  };
-  {,
-    id:;
-  zero-trust-security-implementation';
-    "name": 'Zero Trust Security Implementation;
-    tagline:;
-  Comprehensive zero trust security framework';
-    "price": '$329;
-    period:;
-  /month';
-    "description": Complete zero trust security implementation platform that provides identity verification, network segmentation, and continuous monitoring.';
-    features['Identity verificationNetwork segmentation';
-  'Continuous monitoringThreat detection';
-  'Compliance reporting',
-    ];
-    "popular": true;
-    icon:;
-  🔐';
-    "color": 'from-red-600 to-orange-700;
-    textColor:;
-  text-red-300';
-    "link": 'https://ziontechgroup.com/services/zero-trust-security-implementation;
-    "marketPosition": 'Comprehensive zero trust security implementation platform.';
-    targetAudience['EnterprisesGovernment';
-  'Financial services'];
-    "trialDays": 21;
-    setupTime:;
-  2 weeks';
-    "category": 'Cybersecurity;
-    "realService": true;
-    technology[;
-  Zero trustIdentity management';
-  'Network security'];
-    integrations['Identity providersNetwork equipment';
-  'Security tools'];
-    useCases['Security implementationCompliance';
-  'Threat prevention'];
-    "roi": 'Reduces security incidents by 95%;
-    competitors[;
-  Palo AltoCisco';
-  'Fortinet'];
-    "marketSize": '$38B zero trust security;
-    growthRate:;
-  26% CAGR';
-    "variant": 'security-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Zero trust framework, identity management, monitoring tools.';
-    "launchDate": '2024-11-25;
-    "customers": 36;
-    "rating": 4.7;
-    "reviews": 25,
-  };
-  {,
-    id:;
-  ai-powered-customer-experience-platform';
-    "name": 'AI-Powered Customer Experience Platform;
-    tagline:;
-  Intelligent customer experience optimization';
-    "price": '$179;
-    period:;
-  /month';
-    "description": AI-driven platform that optimizes customer experiences across all touchpoints, providing personalized interactions and predictive insights.';
-    features['Personalization engineCustomer journey mapping';
-  'Predictive analyticsOmnichannel support';
-  'Experience optimization',
-    ];
-    "popular": true;
-    icon:;
-  🎯';
-    "color": 'from-pink-600 to-purple-700;
-    textColor:;
-  text-pink-300';
-    "link": 'https://ziontechgroup.com/services/ai-powered-customer-experience-platform;
-    "marketPosition": 'AI-driven customer experience optimization platform.';
-    targetAudience['E-commerceRetail';
-  'Service companies'];
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'Customer Experience;
-    "realService": true;
-    technology[;
-  AI/MLPersonalization';
-  'Predictive analytics'];
-    integrations['CRM systemsE-commerce platforms';
-  'Marketing tools'];
-    useCases['Customer personalizationJourney optimization';
-  'Experience improvement'];
-    "roi": 'Increases customer satisfaction by 35%;
-    competitors[;
-  Adobe ExperienceSalesforce';
-  'HubSpot'];
-    "marketSize": '$14B customer experience;
-    growthRate:;
-  22% CAGR';
-    "variant": 'cx-futuristic;
-    "contactInfo": contact;
-    "realImplementation": true;
-    implementationDetails:;
-  Personalization engine, journey mapping, analytics tools.';
-    "launchDate": '2024-10-30;
-    "customers": 53;
-    "rating": 4.6;
-    "reviews": 38,
-  };
-  {,
-    id:;
-  ai-sales-agent-suite';
-    "name": 'AI Sales Agent Suite;
-    tagline:;
-  24/7 multi-channel outbound with human-like conversations';
-    "price": '$249;
-    period:;
-  /month';
-    "description": Autonomous AI agents that prospect, qualify, and book meetings across email, SMS, and LinkedIn with brand-safe guardrails.';
-    features['Multi-channel outreach (email/SMS/LinkedIn)Lead enrichment and scoring';
-  'Calendar booking and routingCompliance and opt-out handling',
-    ];
-    "popular": true;
-    icon:;
-  🤖';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/ai-sales-agent-suite;
-    marketPosition:;
-  Purpose-built AI SDR that integrates with existing CRMs and sequences.';
-    "targetAudience": Sales, growth, founders';
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'AI & Automation;
-    "realService": true;
-    technology[;
-  LLMsRAG';
-  'Email APIsLinkedIn automation'];
-    integrations['HubSpotSalesforce';
-  'PipedriveOutreach'];
-    useCases['Outbound prospectingLead qualification';
-  'Meeting booking'];
-    "roi": '2–4x meetings per rep;
-    competitors[;
-  Regie.aiLyne.ai'];
-    "marketSize": '$12B sales tech;
-    growthRate:;
-  19% CAGR';
-    "variant": 'agentic-suite;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Sequencer with policy engine, identity warm-up, and deliverability checks.';
-    "launchDate": '2025-07-01;
-    "customers": 22;
-    "rating": 4.6;
-    "reviews": 14,
-  };
-  {,
-    id:;
-  enterprise-rag-knowledge-hub';
-    "name": 'Enterprise RAG Knowledge Hub;
-    tagline:;
-  Private, audited retrieval-augmented generation for teams';
-    "price": '$399;
-    period:;
-  /month';
-    "description": Secure RAG platform to ingest documents, control access, and answer questions with citations and audit trails.';
-    features['Document ingestion pipelinesRole-based access control';
-  'Citations and source viewingPII redaction and audit logs',
-    ];
-    "popular": true;
-    icon:;
-  📚';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/enterprise-rag-knowledge-hub;
-    marketPosition:;
-  Security-first RAG alternative to generic chat bots.';
-    "targetAudience": Support, engineering, legal, HR';
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'AI & Data;
-    "realService": true;
-    technology[;
-  Vector DBLLMs';
-  'EmbeddingsAccess policies'];
-    integrations['Google DriveConfluence';
-  'SharePointSlack'];
-    useCases['Internal Q&APolicy queries';
-  'Runbooks'];
-    "roi": 'Reduces time-to-answer by 70%;
-    competitors[;
-  GleanCohere Coral'];
-    "marketSize": '$9B knowledge AI;
-    growthRate:;
-  23% CAGR';
-    "variant": 'secure-rag;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Chunking, hybrid search, entitlements, and audit trails.';
-    "launchDate": '2025-06-15;
-    "customers": 31;
-    "rating": 4.7;
-    "reviews": 19,
-  };
-  {,
-    id:;
-  mlops-observability-suite';
-    "name": 'MLOps Observability Suite;
-    tagline:;
-  Monitor drift, bias, latency, and cost across models';
-    "price": '$499;
-    period:;
-  /month';
-    "description": 'Holistic monitoring and governance for machine learning and LLM systems with alerts and dashboards.;
-    features['Data and prediction drift alertsPrompt/trace logging';
-  'Cost and latency budgetsBias detection and A/B testing',
-    ];
-    "popular": false;
-    icon:;
-  📈';
-    "color": 'from-fuchsia-600 to-pink-700;
-    textColor:;
-  text-fuchsia-300';
-    "link": 'https://ziontechgroup.com/services/mlops-observability-suite;
-    marketPosition:;
-  End-to-end LLM + traditional ML monitoring in one tool.';
-    "targetAudience": Data science, platform, compliance';
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  OpenTelemetryLLM tracing';
-  'Vector DB'];
-    integrations['DatadogPrometheus';
-  'GrafanaSnowflake'];
-    useCases['Model qualityCost control';
-  'Incident response'];
-    "roi": 'Cuts model outages by 60%;
-    competitors[;
-  WhyLabsArize';
-  'Weights & Biases'];
-    "marketSize": '$4B MLOps;
-    growthRate:;
-  28% CAGR';
-    "variant": 'ml-observe;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  SDKs for logging, exporters, dashboards, and policies.';
-    "launchDate": '2025-05-28;
-    "customers": 17;
-    "rating": 4.5;
-    "reviews": 11,
-  };
-  {,
-    id:;
-  cloud-finops-optimizer';
-    "name": 'Cloud FinOps Optimizer;
-    tagline:;
-  Automatic cloud cost visibility and savings recommendations';
-    "price": '$199;
-    period:;
-  /month';
-    "description": FinOps platform to tag, allocate, and optimize multi-cloud spend with automated savings plans and anomaly alerts.';
-    features['Automated tagging and allocationRightsizing and RI/SP planning';
-  'Anomaly detectionUnit economics dashboards',
-    ];
-    "popular": true;
-    icon:;
-  💰';
-    "color": 'from-green-600 to-teal-700;
-    textColor:;
-  text-green-300';
-    "link": 'https://ziontechgroup.com/services/cloud-finops-optimizer;
-    marketPosition:;
-  Engineer-friendly FinOps with prescriptive actions.';
-    "targetAudience": Finance, platform, SRE';
-    "trialDays": 14;
-    setupTime:;
-  3 days';
-    "category": 'Cloud & Infrastructure;
-    "realService": true;
-    technology[;
-  AWS/Azure/GCP APIsCost Explorer';
-  'BigQuery'];
-    integrations['AWSAzure';
-  'GCPSnowflake'];
-    useCases['Cost controlChargeback';
-  'Savings plans'];
-    "roi": '10–30% cloud savings;
-    competitors[;
-  CloudZeroCloudHealth'];
-    "marketSize": '$5B FinOps;
-    growthRate:;
-  21% CAGR';
-    "variant": 'finops;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Ingestion jobs, tagging guardrails, anomaly models, and action playbooks.';
-    "launchDate": '2025-06-05;
-    "customers": 41;
-    "rating": 4.7;
-    "reviews": 26,
-  };
-  {,
-    id:;
-  kubernetes-sre-assurance';
-    "name": 'Kubernetes SRE Assurance;
-    tagline:;
-  Golden paths, policy-as-code, and automated remediation';
-    "price": '$299;
-    period:;
-  /month';
-    "description": Operational guardrails for Kubernetes: policy checks, reliability SLOs, and auto-remediation with runbooks.';
-    features['Policy-as-code checksSLOs and error budgets';
-  'Self-healing actionsRunbook automation',
-    ];
-    "popular": false;
-    icon:;
-  🧭';
-    "color": 'from-slate-600 to-gray-700;
-    textColor:;
-  text-slate-300';
-    "link": 'https://ziontechgroup.com/services/kubernetes-sre-assurance;
-    marketPosition:;
-  Platform-ops friendly reliability guardrails for K8s.';
-    "targetAudience": SRE, platform, DevOps';
-    "trialDays": 7;
-    setupTime:;
-  1 week';
-    "category": 'Cloud & Infrastructure;
-    "realService": true;
-    technology[;
-  OPA/GatekeeperPrometheus';
-  'ArgoFlux'];
-    integrations['KubernetesDatadog';
-  'PagerDuty'];
-    useCases['Reliability, compliance, cost control'];
-    "roi": 'Reduces incidents by 40%;
-    competitors[;
-  FairwindsRafay'];
-    "marketSize": '$7B K8s tooling;
-    growthRate:;
-  25% CAGR';
-    "variant": 'sre-guardrails;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Admission controls, SLO agent, and action runners.';
-    "launchDate": '2025-05-10;
-    "customers": 19;
-    "rating": 4.5;
-    "reviews": 12,
-  };
-  {,
-    id:;
-  privacy-compliance-scanner';
-    "name": 'Privacy & Compliance Scanner;
-    tagline:;
-  PII/PHI discovery and policy enforcement for apps and data';
-    "price": '$159;
-    period:;
-  /month';
-    "description": Continuously scans repositories, data stores, and APIs for sensitive data, misconfigurations, and compliance gaps.';
-    features['PII/PHI/PCI discoverySecrets leakage detection';
-  'Policy enforcementCompliance reports (SOC2/GDPR/HIPAA)',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-red-600 to-orange-700;
-    textColor:;
-  text-red-300';
-    "link": 'https://ziontechgroup.com/services/privacy-compliance-scanner;
-    marketPosition:;
-  DevSecOps-native compliance scanning and reporting.';
-    "targetAudience": Security, compliance, engineering';
-    "trialDays": 14;
-    setupTime:;
-  2 days';
-    "category": 'Security & Compliance;
-    "realService": true;
-    technology[;
-  Static analysisDLP';
-  'CodeQL'];
-    integrations['GitHubGitLab';
-  'BitbucketSnowflake'];
-    useCases['Compliance auditsSecurity posture'];
-    "roi": 'Cuts audit prep time by 70%;
-    competitors[;
-  NightfallSnyk'];
-    "marketSize": '$10B AppSec;
-    growthRate:;
-  20% CAGR';
-    "variant": 'privacy-guardian;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Connectors, scanners, policy engine, and dashboards.';
-    "launchDate": '2025-04-20;
-    "customers": 27;
-    "rating": 4.6;
-    "reviews": 16,
-  };
-  {,
-    id:;
-  agentic-rpa-studio';
-    "name": 'Agentic RPA Studio;
-    tagline:;
-  LLM-powered automation that adapts to UI and API changes';
-    "price": '$229;
-    period:;
-  /month';
-    "description": Next-gen RPA with LLM reasoning to build robust automations across web, desktop, and APIs with change resilience.';
-    features['No-code/low-code builderAutonomous healing of broken steps';
-  'Human-in-the-loop reviewAudit logs and RBAC',
-    ];
-    "popular": false;
-    icon:;
-  🧠';
-    "color": 'from-purple-600 to-pink-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/agentic-rpa-studio;
-    marketPosition:;
-  Modern RPA alternative with AI-based resilience.';
-    "targetAudience": Ops, finance, HR, IT';
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'Automation;
-    "realService": true;
-    technology[;
-  LLMsComputer vision';
-  'API orchestration'];
-    integrations['SAPSalesforce';
-  'WorkdayCustom apps'];
-    useCases['Back-office automationReconciliation';
-  'Reporting'];
-    "roi": 'Saves 20–50% of manual hours;
-    competitors[;
-  UiPathAutomation Anywhere'];
-    "marketSize": '$13B RPA;
-    growthRate:;
-  26% CAGR';
-    "variant": 'agent-rpa;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Hybrid recorder, vector memory, fallbacks, and approvals.';
-    "launchDate": '2025-06-22;
-    "customers": 13;
-    "rating": 4.4;
-    "reviews": 9,
-  };
-  {,
-    id:;
-  synthetic-data-generator';
-    "name": 'Synthetic Data Generator;
-    tagline:;
-  Privacy-safe synthetic datasets for analytics and AI';
-    "price": '$179;
-    period:;
-  /month';
-    "description": 'Generate high-fidelity synthetic data that preserves statistical properties while protecting privacy.;
-    features['Tabular/text/image generatorsDifferential privacy options';
-  'Bias reduction toolingQuality validation reports',
-    ];
-    "popular": false;
-    icon:;
-  🧪';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/synthetic-data-generator;
-    marketPosition:;
-  Developer-first synthetic data with controls for privacy and bias.';
-    "targetAudience": Data science, product analytics';
-    "trialDays": 7;
-    setupTime:;
-  3 days';
-    "category": 'Data & Analytics;
-    "realService": true;
-    technology[;
-  GANsLLMs';
-  'Differential privacy'];
-    integrations['SnowflakeBigQuery';
-  'S3'];
-    useCases['Model trainingProduct analytics';
-  'Test data'];
-    "roi": 'Shortens data acquisition by 80%;
-    competitors[;
-  Mostly AIGretel'];
-    "marketSize": '$2.5B synthetic data;
-    growthRate:;
-  34% CAGR';
-    "variant": 'synthdata;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Schema inference, model training, evaluators, and export.';
-    "launchDate": '2025-05-02;
-    "customers": 11;
-    "rating": 4.5;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  edge-iot-fleet-manager';
-    "name": 'Edge IoT Fleet Manager;
-    tagline:;
-  Secure device onboarding, OTA updates, and telemetry at scale';
-    "price": '$299;
-    period:;
-  /month';
-    "description": Manage edge devices with secure provisioning, remote updates, and real-time telemetry dashboards.';
-    features['Device identity and certificatesOTA updates and rollbacks';
-  'Rules engine and alertsDigital twins and dashboards',
-    ];
-    "popular": false;
-    icon:;
-  📡';
-    "color": 'from-yellow-600 to-orange-700;
-    textColor:;
-  text-yellow-300';
-    "link": 'https://ziontechgroup.com/services/edge-iot-fleet-manager;
-    marketPosition:;
-  Vendor-neutral IoT management for diverse fleets.';
-    "targetAudience": Operations, manufacturing, logistics';
-    "trialDays": 14;
-    setupTime:;
-  2 weeks';
-    "category": 'IoT & Edge;
-    "realService": true;
-    technology[;
-  MQTTDevice shadow';
-  'TLSTime-series DB'];
-    integrations['AWS IoTAzure IoT';
-  'GCP IoT'];
-    useCases['Remote monitoringPredictive maintenance'];
-    "roi": 'Reduces downtime by 25%;
-    competitors[;
-  BalenaParticle'];
-    "marketSize": '$15B IoT platforms;
-    growthRate:;
-  18% CAGR';
-    "variant": 'edge-fleet;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Provisioning service, OTA pipelines, telemetry storage, and rules.';
-    "launchDate": '2025-06-30;
-    "customers": 9;
-    "rating": 4.4;
-    "reviews": 6,
-  };
-  {,
-    id:;
-  data-quality-governance';
-    "name": 'Data Quality & Governance;
-    tagline:;
-  Automated data contracts, tests, and lineage for reliability';
-    "price": '$219;
-    period:;
-  /month';
-    "description": 'Define data contracts and run continuous tests with lineage and blast-radius analysis for safe changes.;
-    features['Data contracts and schemasQuality tests and SLOs';
-  'Lineage and impact analysisChange approvals and rollbacks',
-    ];
-    "popular": false;
-    icon:;
-  🗂️';
-    "color": 'from-blue-600 to-cyan-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/data-quality-governance;
-    marketPosition:;
-  Contract-driven data reliability for analytics and ML.';
-    "targetAudience": Data engineering, analytics, platform';
-    "trialDays": 14;
-    setupTime:;
-  2 weeks';
-    "category": 'Data & Analytics;
-    "realService": true;
-    technology[;
-  Great Expectationsdbt';
-  'OpenLineage'];
-    integrations['SnowflakeBigQuery';
-  'RedshiftDatabricks'];
-    useCases['Reliable dashboardsML pipelines';
-  'Compliance'];
-    "roi": 'Cuts data incidents by 50%;
-    competitors[;
-  Monte CarloBigeye'];
-    "marketSize": '$3B data observability;
-    growthRate:;
-  24% CAGR';
-    "variant": 'data-gov;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Declarative contracts, test runners, lineage graph, and UI.';
-    "launchDate": '2025-05-18;
-    "customers": 15;
-    "rating": 4.5;
-    "reviews": 10,
-  };
-  {,
-    id:;
-  full-stack-observability';
-    "name": 'Full-Stack Observability;
-    tagline:;
-  Unified logs, metrics, traces, and user journeys';
-    "price": '$279;
-    period:;
-  /month';
-    "description": 'End-to-end visibility from frontend sessions to backend services with correlation and RCA.;
-    features['Session replayDistributed tracing';
-  'Metrics and SLOsRoot-cause analysis',
-    ];
-    "popular": true;
-    icon:;
-  🕵️‍♂️';
-    "color": 'from-orange-600 to-red-700;
-    textColor:;
-  text-orange-300';
-    "link": 'https://ziontechgroup.com/services/full-stack-observability;
-    marketPosition:;
-  Business-impact aware observability with UX correlation.';
-    "targetAudience": SRE, product, engineering';
-    "trialDays": 14;
-    setupTime:;
-  1 week';
-    "category": 'DevOps & Reliability;
-    "realService": true;
-    technology[;
-  OpenTelemetryClickHouse';
-  'eBPF'];
-    integrations['KubernetesDatadog';
-  'Grafana'];
-    useCases['Outage RCAPerformance tuning';
-  'UX optimization'];
-    "roi": 'Mean-time-to-recovery reduced by 45%;
-    competitors[;
-  New RelicDynatrace'];
-    "marketSize": '$17B observability;
-    growthRate:;
-  20% CAGR';
-    "variant": 'obs-unified;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Unified collector, correlation engine, and dashboards.';
-    "launchDate": '2025-05-08;
-    "customers": 24;
-    "rating": 4.6;
-    "reviews": 13,
-  };
-  {,
-    id:;
-  dr-backup-as-a-service';
-    "name": 'Backup & DR as a Service;
-    tagline:;
-  Immutable backups and orchestrated disaster recovery';
-    "price": '$189;
-    period:;
-  /month';
-    "description": Managed backups with immutability, ransomware protection, and DR runbooks for rapid recovery.';
-    features['Policy-based backupsImmutability and encryption';
-  'DR drills and runbooksCross-cloud replication',
-    ];
-    "popular": false;
-    icon:;
-  🔁';
-    "color": 'from-sky-600 to-indigo-700;
-    textColor:;
-  text-sky-300';
-    "link": 'https://ziontechgroup.com/services/backup-disaster-recovery;
-    marketPosition:;
-  SaaS-first, cloud-native backup and recovery.';
-    "targetAudience": IT, compliance, security';
-    "trialDays": 7;
-    setupTime:;
-  1 week';
-    "category": 'IT Services;
-    "realService": true;
-    technology[;
-  SnapshotsObject storage';
-  'DR orchestration'];
-    integrations['AWSAzure';
-  'GCPVMware'];
-    useCases['Ransomware recoveryCompliance'];
-    "roi": 'Cuts RTO/RPO by 50%;
-    competitors[;
-  VeeamDruva'];
-    "marketSize": '$9B backup/DR;
-    growthRate:;
-  18% CAGR';
-    "variant": 'dr-saas;
-    "contactInfo": {,
-      mobile:;
-  +1 302 464 0950';
-      "email": 'kleber@ziontechgroup.com;
-      "address": '364 E Main St STE 1008 Middletown DE 19709',
-    };
-    "realImplementation": true;
-    implementationDetails:;
-  Policy engine, storage backends, orchestration, and testing.';
-    "launchDate": '2025-06-12;
-    "customers": 12;
-    "rating": 4.5;
-    "reviews": 7,
-  ;
-  {,
-    id:;
-  gdpr-dsar-portal';
-    "name": 'GDPR DSAR Portal;
-    tagline:;
-  Automate GDPR/CCPA data subject access requests';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Self‑service DSAR intake, identity verification, redaction, and export packages for GDPR/CCPA/CPRA.';
-    features['Identity verification & workflowPII discovery & redaction helpers';
-  'Export packs (JSON/CSV/PDF)Audit log & SLA tracking',
-    ];
-    "popular": true;
-    icon:;
-  🗂️';
-    "color": 'from-indigo-600 to-blue-700;
-    textColor:;
-  text-indigo-300';
-    "link": 'https://ziontechgroup.com/services/gdpr-dsar-portal;
-    "marketPosition": 'Faster compliance vs. custom spreadsheets and inbox workflows.';
-    targetAudience['LegalSecurity';
-  'IT'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Compliance;
-    "realService": true;
-    technology[;
-  Next.jsLLM redaction assistants'];
-    integrations['OktaGSuite/M365';
-  'S3/Drive/SharePoint'];
-    useCases['DSAR automationRight to be forgotten';
-  'Access/export requests'];
-    "roi": 'Reduces DSAR handling time by 70%;
-    competitors[;
-  TranscendOneTrust'];
-    "marketSize": '$3B privacy ops;
-    growthRate:;
-  19% CAGR';
-    "variant": 'compliance-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Secure intake portal, identity checks, data connectors.',
-  };
-  {,
-    "id": 'soc2-evidence-collector;
-    name:;
-  SOC 2 Evidence Collector';
-    "tagline": 'Continuous control evidence with exportable audit packs;
-    price:;
-  $149';
-    "period": '/month;
-    "description": 'Automate evidence capture for SOC 2 controls: backups, MFA, access reviews, vulnerability scans, and change management.';
-    features['Control library & mappingsAutomated screenshots & API proofs';
-  'Exceptions & approvalsAudit-ready exports',
-    ];
-    "popular": false;
-    icon:;
-  🛡️';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-300';
-    "link": 'https://ziontechgroup.com/services/soc2-evidence-collector;
-    "marketPosition": 'Purpose-built automation without heavy GRC overhead.';
-    targetAudience['SecurityIT';
-  'Ops'];
-    "trialDays": 14;
-    setupTime:;
-  3 days';
-    "category": 'Security & Compliance;
-    "realService": true;
-    technology[;
-  APIsSchedulers';
-  'Immutable storage'];
-    integrations['AWS/Azure/GCPOkta';
-  'GitHub/GitLab'];
-    useCases['SOC 2 Type 1/2 evidenceInternal audits'];
-    "roi": 'Cuts audit prep by 50%;
-    competitors[;
-  DrataVanta'];
-    "marketSize": '$2.2B compliance tech;
-    growthRate:;
-  21% CAGR';
-    "variant": 'security-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Evidence jobs, artifact store, export packs.',
-  };
-  {,
-    "id": 'seo-change-monitor;
-    name:;
-  SEO Change Monitor';
-    "tagline": 'Track DOM/CWV changes that impact rankings;
-    price:;
-  $69';
-    "period": '/month;
-    "description": 'Monitors key templates for DOM diffs, CWV regressions, and indexation issues, alerts with suggested fixes.';
-    features['Template diff & render checksCore Web Vitals watch';
-  'Sitemaps & indexation alertsSlack/Email notifications',
-    ];
-    "popular": false;
-    icon:;
-  🔎';
-    "color": 'from-yellow-500 to-orange-600;
-    textColor:;
-  text-yellow-300';
-    "link": 'https://ziontechgroup.com/services/seo-change-monitor;
-    "marketPosition": 'Developer-first SEO observability.';
-    targetAudience['GrowthEngineering'];
-    "trialDays": 7;
-    setupTime:;
-  30 minutes';
-    "category": 'Growth & Marketing;
-    "realService": true;
-    technology[;
-  PlaywrightLighthouse CI'];
-    integrations['SlackGitHub'];
-    useCases['Regression watchRelease QA'];
-    "roi": 'Prevents SEO regressions post‑deploy;
-    competitors[;
-  Little WardenContentKing'];
-    "marketSize": '$1.2B SEO tooling;
-    growthRate:;
-  12% CAGR';
-    "variant": 'growth-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Scheduled headless audits, CWV collectors.',
-  };
-  {,
-    "id": 'cicd-flaky-test-detector;
-    name:;
-  CI/CD Flaky Test Detector';
-    "tagline": 'Identify and quarantine flaky tests automatically;
-    price:;
-  $59';
-    "period": '/month;
-    "description": 'Statistically detects flaky tests across pipelines, auto‑retries, quarantines, and creates PRs with suggested fixes.';
-    features['Flake scoring & trendsAuto‑retry/quarantine';
-  'PR annotations & ownershipCI cost impact reports',
-    ];
-    "popular": true;
-    icon:;
-  🧪';
-    "color": 'from-sky-600 to-blue-700;
-    textColor:;
-  text-sky-300';
-    "link": 'https://ziontechgroup.com/services/cicd-flaky-test-detector;
-    "marketPosition": 'Reduce broken builds and wasted compute.';
-    targetAudience['EngineeringPlatform'];
-    "trialDays": 14;
-    setupTime:;
-  1 hour';
-    "category": 'Developer Productivity;
-    "realService": true;
-    technology[;
-  CI APIsTime-series DB'];
-    integrations['GitHub ActionsGitLab CI';
-  'CircleCI'];
-    useCases['Build stabilityDeveloper velocity'];
-    "roi": 'Cuts CI cost 10–30%;
-    competitors[;
-  BuildPulse'];
-    "marketSize": '$2B DevEx tools;
-    growthRate:;
-  18% CAGR';
-    "variant": 'devex-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Collectors, heuristics, annotations.',
-  };
-  {,
-    "id": 'cloud-cost-anomaly-guard;
-    name:;
-  Cloud Cost Anomaly Guard';
-    "tagline": 'Detect spend spikes before the bill arrives;
-    price:;
-  $79';
-    "period": '/month;
-    "description": 'Real‑time anomaly detection on cloud bills with service‑level drilldowns and automated guardrail playbooks.';
-    features['Daily anomaly detectionBudget guardrails & alerts';
-  'Owner routing & playbooksUnit economics dashboards',
-    ];
-    "popular": true;
-    icon:;
-  💸';
-    "color": 'from-rose-600 to-pink-700;
-    textColor:;
-  text-rose-300';
-    "link": 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard;
-    "marketPosition": 'Fast time‑to‑value vs. full FinOps suites.';
-    targetAudience['FinancePlatform';
-  'Ops'];
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'FinOps;
-    "realService": true;
-    technology[;
-  CUR/BigQueryAnomaly ML'];
-    integrations['AWS/Azure/GCP billing'];
-    useCases['Spend controlAnomaly response'];
-    "roi": 'Saves 5–15% monthly spend;
-    competitors[;
-  CloudZeroVantage'];
-    "marketSize": '$3.5B FinOps;
-    growthRate:;
-  22% CAGR';
-    "variant": 'finops-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Billing data loaders, anomaly engine.',
-  };
-  {,
-    "id": 'llm-prompt-injection-scanner;
-    name:;
-  LLM Prompt Injection Scanner';
-    "tagline": 'Continuously test LLM apps against injection & exfiltration;
-    price:;
-  $49';
-    "period": '/month;
-    "description": 'Attack harness that probes LLM endpoints for prompt injection, data exfiltration, and policy bypasses with reports.';
-    features['Attack libraries & corporaRed‑team scheduling';
-  'OWASP LLMRT mappingFix guidance & diffs',
-    ];
-    "popular": false;
-    icon:;
-  🧰';
-    "color": 'from-purple-600 to-fuchsia-700;
-    textColor:;
-  text-purple-300';
-    "link": 'https://ziontechgroup.com/services/llm-prompt-injection-scanner;
-    "marketPosition": 'Developer‑centric safety testing.';
-    targetAudience['AISecurity'];
-    "trialDays": 7;
-    setupTime:;
-  45 minutes';
-    "category": 'AI Safety;
-    "realService": true;
-    technology[;
-  LLM APIsEval harness'];
-    integrations['OpenAIAnthropic';
-  'Vertex'];
-    useCases['Safety testingRelease gates'];
-    "roi": 'Prevents incidents and data leaks;
-    competitors[;
-  Lakera Guard'];
-    "marketSize": '$0.8B LLM safety;
-    growthRate:;
-  40% CAGR';
-    "variant": 'ai-safety-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Synthetic probes, scoring, reports.',
-  };
-  {,
-    "id": 'data-pipeline-sla-tracker;
-    name:;
-  Data Pipeline SLA Tracker';
-    "tagline": Track freshness, completeness, and SLOs for your data;
-  ;
-    "price": '$89;
-    period:;
-  /month';
-    "description": Monitors data jobs for timeliness and completeness, errors page, freshness badges, and stakeholder alerts.';
-    features['Freshness & completeness checksRunbook links';
-  'Stakeholder alertsSLO/error budgets',
-    ];
-    "popular": false;
-    icon:;
-  📊';
-    "color": 'from-cyan-600 to-emerald-700;
-    textColor:;
-  text-cyan-300';
-    "link": 'https://ziontechgroup.com/services/data-pipeline-sla-tracker;
-    "marketPosition": 'Lightweight observability for analytics teams.';
-    targetAudience['DataAnalytics'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Data & Analytics;
-    "realService": true;
-    technology[;
-  Airflow/Dbt hooksTime‑series DB'];
-    integrations['SnowflakeBigQuery';
-  'Redshift'];
-    useCases['Trust in dataStakeholder comms'];
-    "roi": 'Reduces broken dashboards by 60%;
-    competitors[;
-  Monte CarloMetaplane'];
-    "marketSize": '$2.6B data observability;
-    growthRate:;
-  28% CAGR';
-    "variant": 'data-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Connectors, checks, alerting.',
-  };
-  {,
-    "id": 'edge-image-optimizer;
-    name:;
-  Edge Image Optimizer';
-    "tagline": Adaptive, device‑aware images at the edge;
-  ;
-    "price": '$39;
-    period:;
-  /month';
-    "description": Transforms and caches images at the edge for device and network conditions, improving Core Web Vitals.';
-    features['On‑the‑fly resize & formatsSmart cache keys';
-  'Signed URLsCWV dashboards',
-    ];
-    "popular": true;
-    icon:;
-  🖼️';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-300';
-    "link": 'https://ziontechgroup.com/services/edge-image-optimizer;
-    "marketPosition": 'Simpler pricing vs. bespoke CDNs.';
-    targetAudience['WebE‑commerce'];
-    "trialDays": 7;
-    setupTime:;
-  20 minutes';
-    "category": 'Performance;
-    "realService": true;
-    technology[;
-  Edge runtimeImage codecs'];
-    integrations['CloudflareNetlify';
-  'Vercel'];
-    useCases['CWV improvementBandwidth savings'];
-    "roi": 'Improves LCP by 20–40%;
-    competitors[;
-  imgixCloudinary'];
-    "marketSize": '$1.5B media optimization;
-    growthRate:;
-  17% CAGR';
-    "variant": 'perf-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Edge functions, cache, signed URLs.',
-  };
-  {,
-    "id": 'managed-kubernetes-sre;
-    name:;
-  Managed Kubernetes SRE';
-    "tagline": 'Hands‑on SRE for production Kubernetes;
-    price:;
-  $2,500';
-    "period": '/month;
-    "description": 'Runbooks, upgrades, backups, autoscaling, and incident response for your EKS/AKS/GKE clusters with SLOs.';
-    features['24/7 on‑call with SLAsBackups & DR drills';
-  'Security hardeningCost & perf tuning',
-    ];
-    "popular": true;
-    icon:;
-  ☸️';
-    "color": 'from-slate-700 to-slate-900;
-    textColor:;
-  text-slate-200';
-    "link": 'https://ziontechgroup.com/services/managed-kubernetes-sre;
-    "marketPosition": 'Fractional SRE better than staffing alone.';
-    targetAudience['EngineeringPlatform'];
-    "trialDays": 0;
-    setupTime:;
-  1 week';
-    "category": 'IT Services;
-    "realService": true;
-    technology[;
-  KubernetesIaC';
-  'Observability'];
-    integrations['EKS/AKS/GKEDatadog';
-  'Grafana'];
-    useCases['Production readinessReliability'];
-    "roi": 'Improves uptime to 99.9%+;
-    competitors[;
-  Cloud providers PS'];
-    "marketSize": '$10B SRE services;
-    growthRate:;
-  15% CAGR';
-    "variant": 'it-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  SRE playbooks, IaC modules, on‑call.',
-  };
-  {,
-    "id": 'zero-trust-rollout-coaching;
-    name:;
-  Zero Trust Rollout Coaching';
-    "tagline": Identity, device, and network segmentation playbooks;
-  ;
-    "price": $4,000;
-  ;
-    "period": '/engagement;
-    "description": 'Hands‑on guidance to implement zero trust: SSO/MFA, device posture, micro‑segmentation, and access reviews.';
-    features['Architecture & roadmapQuick wins & pilots';
-  'Control mappingsChange management',
-    ];
-    "popular": false;
-    icon:;
-  🔐';
-    "color": 'from-red-600 to-rose-700;
-    textColor:;
-  text-red-200';
-    "link": 'https://ziontechgroup.com/services/zero-trust-rollout-coaching;
-    "marketPosition": 'Actionable, tool‑agnostic coaching.';
-    targetAudience['ITSecurity'];
-    "trialDays": 0;
-    setupTime:;
-  Project start in 1 week';
-    "category": 'Security Consulting;
-    "realService": true;
-    technology[;
-  SSO/SCIMZTNA'];
-    integrations['OktaCloudflare';
-  'Zscaler'];
-    useCases['Zero trust rolloutAudit prep'];
-    "roi": 'Accelerates rollout by 2–3x;
-    competitors[;
-  Big 4 consultancies'];
-    "marketSize": '$20B security services;
-    growthRate:;
-  12% CAGR';
-    "variant": 'consulting-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Workshops, templates, control packs.',
-  };
-  {,
-    "id": 'vendor-risk-ai-assistant;
-    name:;
-  Vendor Risk AI Assistant';
-    "tagline": 'Automate security questionnaires and third‑party risk reviews;
-    price:;
-  $149';
-    "period": '/month;
-    "description": 'AI copilot that ingests vendor docs (SOC 2, ISO 27001, SIG, CAIQ), answers security questionnaires, flags gaps, and produces an executive risk summary with mitigation plans.';
-    features['Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe)Policy and control gap analysis';
-  'Risk register and remediation plansExport to PDF/CSV and Jira',
-    ];
-    "popular": true;
-    icon:;
-  🛡️';
-    "color": 'from-amber-600 to-orange-700;
-    textColor:;
-  text-amber-200';
-    "link": 'https://ziontechgroup.com/services/vendor-risk-ai-assistant;
-    "marketPosition": 'Faster than manual reviews, integrates with your GRC.';
-    targetAudience['SecurityLegal';
-  'Procurement'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Security & Compliance;
-    "realService": true;
-    technology[;
-  LLMsRAG';
-  'Document AI'];
-    integrations['OneTrustDrata';
-  'Jira'];
-    useCases['Security questionnairesRenewal reviews'];
-    "roi": 'Cuts review time by 70%;
-    competitors[;
-  Secureframe Questionnaire AutomationWhistic'];
-    "marketSize": '$8B TPRM;
-    growthRate:;
-  14% CAGR';
-    "variant": 'ai-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Secure upload, policy mapping, audit log.';
-    "launchDate": '2025-07-01;
-    "customers": 18;
-    "rating": 4.7;
-    "reviews": 12,
-  };
-  {,
-    id:;
-  gdpr-dsar-portal';
-    "name": 'GDPR/CCPA DSAR Portal;
-    tagline:;
-  End‑to‑end subject access request automation';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Hosted portal and workflow to intake, verify, process, and fulfill data subject requests (access, deletion, portability) with redaction and evidence trails.';
-    features['Identity verification and throttlingSystem of record inventory and connectors';
-  'Automated redaction and package assemblyEvidence and audit reports',
-    ];
-    "popular": false;
-    icon:;
-  📜';
-    "color": 'from-cyan-600 to-blue-700;
-    textColor:;
-  text-cyan-200';
-    "link": 'https://ziontechgroup.com/services/gdpr-dsar-portal;
-    "marketPosition": 'Affordable alternative to heavy privacy suites.';
-    targetAudience['LegalSecurity';
-  'IT'];
-    "trialDays": 7;
-    setupTime:;
-  1 week';
-    "category": 'Privacy & Compliance;
-    "realService": true;
-    technology[;
-  Next.jsQueue/Workers';
-  'PII Redaction'];
-    integrations['SnowflakeSalesforce';
-  'Gmail/Drive'];
-    useCases['Access/Delete requestsDSR reporting'];
-    "roi": 'Reduces manual hours by 80%;
-    competitors[;
-  TranscendOneTrust'];
-    "marketSize": '$3B privacy ops;
-    growthRate:;
-  16% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Role‑based access, retention policies.';
-    "launchDate": '2025-06-15;
-    "customers": 22;
-    "rating": 4.6;
-    "reviews": 14,
-  };
-  {,
-    id:;
-  oncall-copilot';
-    "name": 'On‑Call Copilot;
-    tagline:;
-  LLM‑powered incident triage, runbooks, and postmortems';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Connects to logs, metrics, traces, and alerts to propose likely causes, next actions, and execute safe runbook steps with approvals. Generates high‑quality postmortems.';
-    features['Contextual alert summariesRoot cause hypotheses and checks';
-  'Safe automations with approval gatesPostmortem generation and action items',
-    ];
-    "popular": true;
-    icon:;
-  🚨';
-    "color": 'from-rose-600 to-red-700;
-    textColor:;
-  text-rose-200';
-    "link": 'https://ziontechgroup.com/services/oncall-copilot;
-    "marketPosition": 'Brings AI to existing on‑call stacks.';
-    targetAudience['SREDevOps';
-  'Platform'];
-    "trialDays": 14;
-    setupTime:;
-  2 hours';
-    "category": 'Observability & SRE;
-    "realService": true;
-    technology[;
-  LLMsVector Store';
-  'APM APIs'];
-    integrations['DatadogGrafana';
-  'PagerDuty'];
-    useCases['MTTR reductionOn‑call quality'];
-    "roi": 'Cuts MTTR by 35%;
-    competitors[;
-  FireHydrant AIRootly AI'];
-    "marketSize": '$7B AIOps;
-    growthRate:;
-  19% CAGR';
-    "variant": 'ai-ops-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Read‑only mode, approvals, audit log.';
-    "launchDate": '2025-07-10;
-    "customers": 15;
-    "rating": 4.8;
-    "reviews": 9,
-  };
-  {,
-    id:;
-  ml-eval-harness';
-    "name": 'LLM/ML Evaluation Harness;
-    tagline:;
-  Test sets, guardrails, and scorecards for AI systems';
-    "price": '$129;
-    period:;
-  /month';
-    "description": Hosted evaluation platform that runs golden datasets and adversarial prompts across models, with regressions alerts, cost tracking, and governance‑ready reports.';
-    features['Datasets and prompt suitesAutomatic metric scoring and rubrics';
-  'Guardrail tests (toxicity/PII/Jailbreak)CI integrations and dashboards',
-    ];
-    "popular": false;
-    icon:;
-  🧪';
-    "color": 'from-indigo-600 to-purple-700;
-    textColor:;
-  text-indigo-200';
-    "link": 'https://ziontechgroup.com/services/ml-eval-harness;
-    "marketPosition": 'Evaluation without heavy MLOps lift.';
-    targetAudience['AI PlatformData Science'];
-    "trialDays": 7;
-    setupTime:;
-  1 day';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  LangChain/LangGraphLangfuse';
-  'OpenAI/Anthropic'];
-    integrations['GitHub ActionsCircleCI'];
-    useCases['Model selectionRegression testing'];
-    "roi": 'Prevents degradations and outages;
-    competitors[;
-  HumanloopPromptLayer'];
-    "marketSize": '$2B model ops;
-    growthRate:;
-  22% CAGR';
-    "variant": 'mlops-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Datasets store, eval runners, alerts.';
-    "launchDate": '2025-06-30;
-    "customers": 10;
-    "rating": 4.5;
-    "reviews": 7,
-  };
-  {,
-    id:;
-  finops-cost-anomaly-guard';
-    "name": 'FinOps Cost Anomaly Guard;
-    tagline:;
-  Detect, explain, and prevent cloud cost spikes';
-    "price": '$79;
-    period:;
-  /month';
-    "description": Continuously analyzes multi‑cloud bills and usage to catch anomalies, attribute spend to owners, and recommend rightsizing and commitment strategies.';
-    features['Anomaly detection and alertsUnit economics and tagging quality';
-  'Rightsizing and commitment plannerChargeback/showback reports',
-    ];
-    "popular": true;
-    icon:;
-  💸';
-    "color": 'from-emerald-600 to-teal-700;
-    textColor:;
-  text-emerald-200';
-    "link": 'https://ziontechgroup.com/services/finops-cost-anomaly-guard;
-    "marketPosition": 'Actionable insights, not just dashboards.';
-    targetAudience['FinancePlatform';
-  'Engineering'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Cloud & FinOps;
-    "realService": true;
-    technology[;
-  Cloud APIsAnomaly ML';
-  'BI'];
-    integrations['AWSAzure';
-  'GCP'];
-    useCases['Cost controlsBudget alerts'];
-    "roi": 'Saves 10–25% monthly spend;
-    competitors[;
-  CloudZeroVantage'];
-    "marketSize": '$6B FinOps;
-    growthRate:;
-  20% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Cost collectors, anomaly models, alerts.';
-    "launchDate": '2025-07-05;
-    "customers": 28;
-    "rating": 4.7;
-    "reviews": 16,
-  };
-  {,
-    id:;
-  ai-rag-site-search';
-    "name": 'AI RAG Site Search;
-    tagline:;
-  Private, high‑relevance semantic search for your docs';
-    "price": '$59;
-    period:;
-  /month';
-    "description": Drop‑in semantic search widget with ingestion pipelines, embeddings, reranking, and citations. Keeps data private, deploys at the edge for speed.';
-    features['Crawlers and connectorsEmbeddings, rerankers, and guardrails';
-  'Citations and feedback loopsEdge caching and analytics',
-    ];
-    "popular": false;
-    icon:;
-  🔎';
-    "color": 'from-blue-600 to-indigo-700;
-    textColor:;
-  text-blue-200';
-    "link": 'https://ziontechgroup.com/services/ai-rag-site-search;
-    "marketPosition": 'Better relevance than keyword search, privacy‑first.';
-    targetAudience['DocsSupport';
-  'Marketing'];
-    "trialDays": 7;
-    setupTime:;
-  2 hours';
-    "category": 'AI & Machine Learning;
-    "realService": true;
-    technology[;
-  Pinecone/WeaviateOpenAI';
-  'FastAPI'];
-    integrations['ZendeskConfluence';
-  'Notion'];
-    useCases['Help centersInternal KB'];
-    "roi": 'Deflects 25% tickets;
-    competitors[;
-  Algolia Neural SearchElastic'];
-    "marketSize": '$10B search;
-    growthRate:;
-  13% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Ingestion workers, evals, analytics.';
-    "launchDate": '2025-06-20;
-    "customers": 34;
-    "rating": 4.6;
-    "reviews": 19,
-  };
-  {,
-    id:;
-  agentic-workflow-studio';
-    "name": 'Agentic Workflow Studio;
-    tagline:;
-  Visual builder for safe, multi‑agent automations';
-    "price": '$129;
-    period:;
-  /month';
-    "description": Design, simulate, and deploy multi‑agent workflows with guardrails, approvals, and human‑in‑the‑loop checkpoints. Observe runs and costs in real time.';
-    features['Drag‑and‑drop graph builderGuardrails and policy engine';
-  'Human‑in‑the‑loop checkpointsRun logs, costs, and metrics',
-    ];
-    "popular": true;
-    icon:;
-  🕸️';
-    "color": 'from-purple-600 to-fuchsia-700;
-    textColor:;
-  text-purple-200';
-    "link": 'https://ziontechgroup.com/services/agentic-workflow-studio;
-    "marketPosition": 'Faster time‑to‑value for safe agents.';
-    targetAudience['OpsAutomation';
-  'Engineering'];
-    "trialDays": 14;
-    setupTime:;
-  1 day';
-    "category": 'Automation & Orchestration;
-    "realService": true;
-    technology[;
-  LangGraphTemporal';
-  'OpenAI/Anthropic'];
-    integrations['SlackJira';
-  'GitHub'];
-    useCases['Backoffice automationSupport bots'];
-    "roi": 'Automates 15–40% tasks;
-    competitors[;
-  Akaike Agent StudioMendable Agents'];
-    "marketSize": '$12B automation;
-    growthRate:;
-  21% CAGR';
-    "variant": 'agents-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Policy engine, sandbox, audit.';
-    "launchDate": '2025-07-08;
-    "customers": 11;
-    "rating": 4.5;
-    "reviews": 8,
-  };
-  {,
-    id:;
-  edge-rate-limiter-saas';
-    "name": 'Edge Rate Limiter SaaS;
-    tagline:;
-  Protect APIs with globally distributed limits and quotas';
-    "price": '$39;
-    period:;
-  /month';
-    "description": 'Drop‑in SDK and managed configuration to apply token bucket and sliding‑window limits at the edge across regions with low latency.;
-    features['Global keyspace and quotasBurst and sliding window strategies';
-  'Config UI and APIAnalytics and alerting',
-    ];
-    "popular": false;
-    icon:;
-  🌐';
-    "color": 'from-slate-600 to-slate-800;
-    textColor:;
-  text-slate-200';
-    "link": 'https://ziontechgroup.com/services/edge-rate-limiter-saas;
-    "marketPosition": 'Simpler than building on CDN primitives.';
-    targetAudience['PlatformAPI Teams'];
-    "trialDays": 7;
-    setupTime:;
-  30 minutes';
-    "category": 'Platform & APIs;
-    "realService": true;
-    technology[;
-  Edge KVWASM';
-  'CDN'];
-    integrations['Cloudflare WorkersVercel Edge'];
-    useCases['Abuse preventionFair usage'];
-    "roi": 'Prevents outages and overages;
-    competitors[;
-  Cloudflare RulesKong Rate Limit'];
-    "marketSize": '$2B API mgt;
-    growthRate:;
-  11% CAGR';
-    "variant": 'edge-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Edge counters, config UI, SDKs.';
-    "launchDate": '2025-06-25;
-    "customers": 20;
-    "rating": 4.4;
-    "reviews": 13,
-  };
-  {,
-    id:;
-  email-deliverability-optimizer';
-    "name": 'Email Deliverability Optimizer;
-    tagline:;
-  Warmup, reputation monitoring, and content linting';
-    "price": '$49;
-    period:;
-  /month';
-    "description": Improves email deliverability with domain warmup, content linting for spam triggers, and feedback loop integrations across major ESPs.';
-    features['Inbox placement testsWarmup schedules and IP pools';
-  'Content linting and A/B testsReputation and blacklist monitors',
-    ];
-    "popular": false;
-    icon:;
-  ✉️';
-    "color": 'from-pink-600 to-rose-700;
-    textColor:;
-  text-pink-200';
-    "link": 'https://ziontechgroup.com/services/email-deliverability-optimizer;
-    "marketPosition": 'Focus on outcomes, not vanity metrics.';
-    targetAudience['MarketingGrowth'];
-    "trialDays": 7;
-    setupTime:;
-  2 hours';
-    "category": 'Growth & Marketing;
-    "realService": true;
-    technology[;
-  ESP APIsSpamAssassin';
-  'Inbox tests'];
-    integrations['SendGridMailgun';
-  'Postmark'];
-    useCases['CampaignsLifecycle email'];
-    "roi": 'Increases deliverability by 10–20%;
-    competitors[;
-  Warmup InboxGlockApps'];
-    "marketSize": '$4B email tools;
-    growthRate:;
-  9% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  ESP connectors, warmup engine.';
-    "launchDate": '2025-07-02;
-    "customers": 26;
-    "rating": 4.5;
-    "reviews": 17,
-  };
-  {,
-    id:;
-  data-contracts-hub';
-    "name": 'Data Contracts Hub;
-    tagline:;
-  Schema governance and SLAs for reliable data products';
-    "price": '$99;
-    period:;
-  /month';
-    "description": Define and enforce data contracts across producers and consumers with schema diffs, backward‑compat checks, and SLA monitoring.';
-    features['Schema registry and diffsCompatibility checks and approvals';
-  'SLAs and freshness monitoringIncident workflows and dashboards',
-    ];
-    "popular": false;
-    icon:;
-  📊';
-    "color": 'from-emerald-700 to-teal-800;
-    textColor:;
-  text-emerald-200';
-    "link": 'https://ziontechgroup.com/services/data-contracts-hub;
-    "marketPosition": 'Brings product thinking to data.';
-    targetAudience['Data PlatformAnalytics'];
-    "trialDays": 7;
-    setupTime:;
-  1 day';
-    "category": 'Data Platform;
-    "realService": true;
-    technology[;
-  Kafka/Schema Registrydbt';
-  'Airflow'];
-    integrations['SnowflakeBigQuery';
-  'Redshift'];
-    useCases['Data reliabilitySelf‑service data'];
-    "roi": 'Cuts data breakages by 40%;
-    competitors[;
-  Monte CarloDatafold'];
-    "marketSize": '$5B data ops;
-    growthRate:;
-  18% CAGR';
-    "variant": 'saas-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Contracts store, approvals, monitors.';
-    "launchDate": '2025-06-28;
-    "customers": 12;
-    "rating": 4.4;
-    "reviews": 10,
-  };
-  {,
-    id:;
-  security-chaos-gamedays';
-    "name": 'Security Chaos GameDays;
-    tagline:;
-  Hands‑on attack simulations and playbook hardening';
-    "price": $3,000;
-  ;
-    "period": '/engagement;
-    "description": 'Facilitated tabletop and live‑fire scenarios tailored to your stack. Validates detections, improves response muscle memory, and prioritizes investments.';
-    features['Custom runbooks and injectsBlue team/Red team rotations';
-  'Gap analysis and roadmapExecutive readout and training',
-    ];
-    "popular": true;
-    icon:;
-  🎯';
-    "color": 'from-red-700 to-rose-800;
-    textColor:;
-  text-red-200';
-    "link": 'https://ziontechgroup.com/services/security-chaos-gamedays;
-    "marketPosition": 'Outcome‑focused, no vendor bias.';
-    targetAudience['SecurityIT'];
-    "trialDays": 0;
-    setupTime:;
-  Project kickoff in 1 week';
-    "category": 'Security Consulting;
-    "realService": true;
-    technology[;
-  ATT&CKDetection Engineering'];
-    integrations['SIEM/XDRSOAR'];
-    useCases['Resilience validationTraining'];
-    "roi": 'Reduces breach impact;
-    competitors[;
-  Big 4MSSPs'];
-    "marketSize": '$25B services;
-    growthRate:;
-  10% CAGR';
-    "variant": 'consulting-real;
-    "contactInfo": { mobile:;
-  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' };
-    "realImplementation": true;
-    implementationDetails:;
-  Workshops, exercises, debrief.';
-    "launchDate": '2025-07-12;
-    "customers": 7;
-    "rating": 4.9;
-    "reviews": 6,
+  ,
+  {,
+    id: ,
+  gdpr-dsar-portal',
+    "name": 'GDPR DSAR Portal,
+    tagline:,
+  Automate GDPR/CCPA data subject access requests',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Self‑service DSAR intake, identity verification, redaction, and export packages for GDPR/CCPA/CPRA.',
+    features['Identity verification & workflowPII discovery & redaction helpersExport packs (JSON/CSV/PDF)Audit log & SLA tracking'
+    ],
+    "popular": true,
+    icon: ,
+  🗂️',
+    "color": 'from-indigo-600 to-blue-700,
+    textColor:,
+  text-indigo-300',
+    "link": 'https://ziontechgroup.com/services/gdpr-dsar-portal,
+    "marketPosition": 'Faster compliance vs. custom spreadsheets and inbox workflows.',
+    targetAudience['LegalSecurityIT'],
+    "trialDays": 14,
+    setupTime:,
+  1 day',
+    "category": 'Compliance,
+    "realService": true,
+    technology[,
+  Next.jsLLM redaction assistants'],
+    integrations['OktaGSuite/M365S3/Drive/SharePoint'],
+    useCases['DSAR automationRight to be forgottenAccess/export requests'],
+    "roi": 'Reduces DSAR handling time by 70%,
+    competitors[,
+  TranscendOneTrust'],
+    "marketSize": '$3B privacy ops,
+    growthRate:,
+  19% CAGR',
+    "variant": 'compliance-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Secure intake portal, identity checks, data connectors.'
+  },
+  {,
+    "id": 'soc2-evidence-collector,
+    name: ,
+  SOC 2 Evidence Collector',
+    "tagline": 'Continuous control evidence with exportable audit packs,
+    price:,
+  $149',
+    "period": '/month,
+    "description": 'Automate evidence capture for SOC 2 controls: backups, MFA, access reviews, vulnerability scans, and change management.',
+    features['Control library & mappingsAutomated screenshots & API proofsExceptions & approvalsAudit-ready exports'
+    ],
+    "popular": false,
+    icon: ,
+  🛡️',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-300',
+    "link": 'https://ziontechgroup.com/services/soc2-evidence-collector,
+    "marketPosition": 'Purpose-built automation without heavy GRC overhead.',
+    targetAudience['SecurityITOps'],
+    "trialDays": 14,
+    setupTime:,
+  3 days',
+    "category": 'Security & Compliance,
+    "realService": true,
+    technology[,
+  APIsSchedulersImmutable storage'],
+    integrations['AWS/Azure/GCPOktaGitHub/GitLab'],
+    useCases['SOC 2 Type 1/2 evidenceInternal audits'],
+    "roi": 'Cuts audit prep by 50%,
+    competitors[,
+  DrataVanta'],
+    "marketSize": '$2.2B compliance tech,
+    growthRate:,
+  21% CAGR',
+    "variant": 'security-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Evidence jobs, artifact store, export packs.'
+  },
+  {,
+    "id": 'seo-change-monitor,
+    name: ,
+  SEO Change Monitor',
+    "tagline": 'Track DOM/CWV changes that impact rankings,
+    price:,
+  $69',
+    "period": '/month,
+    "description": 'Monitors key templates for DOM diffs, CWV regressions, and indexation issues, alerts with suggested fixes.',
+    features['Template diff & render checksCore Web Vitals watchSitemaps & indexation alertsSlack/Email notifications'
+    ],
+    "popular": false,
+    icon: ,
+  🔎',
+    "color": 'from-yellow-500 to-orange-600,
+    textColor:,
+  text-yellow-300',
+    "link": 'https://ziontechgroup.com/services/seo-change-monitor,
+    "marketPosition": 'Developer-first SEO observability.',
+    targetAudience['GrowthEngineering'],
+    "trialDays": 7,
+    setupTime:,
+  30 minutes',
+    "category": 'Growth & Marketing,
+    "realService": true,
+    technology[,
+  PlaywrightLighthouse CI'],
+    integrations['SlackGitHub'],
+    useCases['Regression watchRelease QA'],
+    "roi": 'Prevents SEO regressions post‑deploy,
+    competitors[,
+  Little WardenContentKing'],
+    "marketSize": '$1.2B SEO tooling,
+    growthRate:,
+  12% CAGR',
+    "variant": 'growth-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Scheduled headless audits, CWV collectors.'
+  },
+  {,
+    "id": 'cicd-flaky-test-detector,
+    name: ,
+  CI/CD Flaky Test Detector',
+    "tagline": 'Identify and quarantine flaky tests automatically,
+    price:,
+  $59',
+    "period": '/month,
+    "description": 'Statistically detects flaky tests across pipelines, auto‑retries, quarantines, and creates PRs with suggested fixes.',
+    features['Flake scoring & trendsAuto‑retry/quarantinePR annotations & ownershipCI cost impact reports'
+    ],
+    "popular": true,
+    icon: ,
+  🧪',
+    "color": 'from-sky-600 to-blue-700,
+    textColor:,
+  text-sky-300',
+    "link": 'https://ziontechgroup.com/services/cicd-flaky-test-detector,
+    "marketPosition": 'Reduce broken builds and wasted compute.',
+    targetAudience['EngineeringPlatform'],
+    "trialDays": 14,
+    setupTime:,
+  1 hour',
+    "category": 'Developer Productivity,
+    "realService": true,
+    technology[,
+  CI APIsTime-series DB'],
+    integrations['GitHub ActionsGitLab CICircleCI'],
+    useCases['Build stabilityDeveloper velocity'],
+    "roi": 'Cuts CI cost 10–30%,
+    competitors[,
+  BuildPulse'],
+    "marketSize": '$2B DevEx tools,
+    growthRate:,
+  18% CAGR',
+    "variant": 'devex-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Collectors, heuristics, annotations.'
+  },
+  {,
+    "id": 'cloud-cost-anomaly-guard,
+    name: ,
+  Cloud Cost Anomaly Guard',
+    "tagline": 'Detect spend spikes before the bill arrives,
+    price:,
+  $79',
+    "period": '/month,
+    "description": 'Real‑time anomaly detection on cloud bills with service‑level drilldowns and automated guardrail playbooks.',
+    features['Daily anomaly detectionBudget guardrails & alertsOwner routing & playbooksUnit economics dashboards'
+    ],
+    "popular": true,
+    icon: ,
+  💸',
+    "color": 'from-rose-600 to-pink-700,
+    textColor:,
+  text-rose-300',
+    "link": 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard,
+    "marketPosition": 'Fast time‑to‑value vs. full FinOps suites.',
+    targetAudience['FinancePlatformOps'],
+    "trialDays": 14,
+    setupTime:,
+  2 hours',
+    "category": 'FinOps,
+    "realService": true,
+    technology[,
+  CUR/BigQueryAnomaly ML'],
+    integrations['AWS/Azure/GCP billing'],
+    useCases['Spend controlAnomaly response'],
+    "roi": 'Saves 5–15% monthly spend,
+    competitors[,
+  CloudZeroVantage'],
+    "marketSize": '$3.5B FinOps,
+    growthRate:,
+  22% CAGR',
+    "variant": 'finops-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Billing data loaders, anomaly engine.'
+  },
+  {,
+    "id": 'llm-prompt-injection-scanner,
+    name: ,
+  LLM Prompt Injection Scanner',
+    "tagline": 'Continuously test LLM apps against injection & exfiltration,
+    price:,
+  $49',
+    "period": '/month,
+    "description": 'Attack harness that probes LLM endpoints for prompt injection, data exfiltration, and policy bypasses with reports.',
+    features['Attack libraries & corporaRed‑team schedulingOWASP LLMRT mappingFix guidance & diffs'
+    ],
+    "popular": false,
+    icon: ,
+  🧰',
+    "color": 'from-purple-600 to-fuchsia-700,
+    textColor:,
+  text-purple-300',
+    "link": 'https://ziontechgroup.com/services/llm-prompt-injection-scanner,
+    "marketPosition": 'Developer‑centric safety testing.',
+    targetAudience['AISecurity'],
+    "trialDays": 7,
+    setupTime:,
+  45 minutes',
+    "category": 'AI Safety,
+    "realService": true,
+    technology[,
+  LLM APIsEval harness'],
+    integrations['OpenAIAnthropicVertex'],
+    useCases['Safety testingRelease gates'],
+    "roi": 'Prevents incidents and data leaks,
+    competitors[,
+  Lakera Guard'],
+    "marketSize": '$0.8B LLM safety,
+    growthRate:,
+  40% CAGR',
+    "variant": 'ai-safety-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Synthetic probes, scoring, reports.'
+  },
+  {,
+    "id": 'data-pipeline-sla-tracker,
+    name:,
+  Data Pipeline SLA Tracker',
+    "tagline": Track freshness, completeness, and SLOs for your data,
+  ,
+    "price": '$89,
+    period:,
+  /month',
+    "description": Monitors data jobs for timeliness and completeness, errors page, freshness badges, and stakeholder alerts.',
+    features['Freshness & completeness checksRunbook linksStakeholder alertsSLO/error budgets'
+    ],
+    "popular": false,
+    icon: ,
+  📊',
+    "color": 'from-cyan-600 to-emerald-700,
+    textColor:,
+  text-cyan-300',
+    "link": 'https://ziontechgroup.com/services/data-pipeline-sla-tracker,
+    "marketPosition": 'Lightweight observability for analytics teams.',
+    targetAudience['DataAnalytics'],
+    "trialDays": 14,
+    setupTime:,
+  1 day',
+    "category": 'Data & Analytics,
+    "realService": true,
+    technology[,
+  Airflow/Dbt hooksTime‑series DB'],
+    integrations['SnowflakeBigQueryRedshift'],
+    useCases['Trust in dataStakeholder comms'],
+    "roi": 'Reduces broken dashboards by 60%,
+    competitors[,
+  Monte CarloMetaplane'],
+    "marketSize": '$2.6B data observability,
+    growthRate:,
+  28% CAGR',
+    "variant": 'data-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Connectors, checks, alerting.'
+  },
+  {,
+    "id": 'edge-image-optimizer,
+    name:,
+  Edge Image Optimizer',
+    "tagline": Adaptive, device‑aware images at the edge,
+  ,
+    "price": '$39,
+    period:,
+  /month',
+    "description": Transforms and caches images at the edge for device and network conditions, improving Core Web Vitals.',
+    features['On‑the‑fly resize & formatsSmart cache keysSigned URLsCWV dashboards'
+    ],
+    "popular": true,
+    icon: ,
+  🖼️',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-300',
+    "link": 'https://ziontechgroup.com/services/edge-image-optimizer,
+    "marketPosition": 'Simpler pricing vs. bespoke CDNs.',
+    targetAudience['WebE‑commerce'],
+    "trialDays": 7,
+    setupTime:,
+  20 minutes',
+    "category": 'Performance,
+    "realService": true,
+    technology[,
+  Edge runtimeImage codecs'],
+    integrations['CloudflareNetlifyVercel'],
+    useCases['CWV improvementBandwidth savings'],
+    "roi": 'Improves LCP by 20–40%,
+    competitors[,
+  imgixCloudinary'],
+    "marketSize": '$1.5B media optimization,
+    growthRate:,
+  17% CAGR',
+    "variant": 'perf-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Edge functions, cache, signed URLs.'
+  },
+  {,
+    "id": 'managed-kubernetes-sre,
+    name: ,
+  Managed Kubernetes SRE',
+    "tagline": 'Hands‑on SRE for production Kubernetes,
+    price:,
+  $2,500',
+    "period": '/month,
+    "description": 'Runbooks, upgrades, backups, autoscaling, and incident response for your EKS/AKS/GKE clusters with SLOs.',
+    features['24/7 on‑call with SLAsBackups & DR drillsSecurity hardeningCost & perf tuning'
+    ],
+    "popular": true,
+    icon: ,
+  ☸️',
+    "color": 'from-slate-700 to-slate-900,
+    textColor:,
+  text-slate-200',
+    "link": 'https://ziontechgroup.com/services/managed-kubernetes-sre,
+    "marketPosition": 'Fractional SRE better than staffing alone.',
+    targetAudience['EngineeringPlatform'],
+    "trialDays": 0,
+    setupTime:,
+  1 week',
+    "category": 'IT Services,
+    "realService": true,
+    technology[,
+  KubernetesIaCObservability'],
+    integrations['EKS/AKS/GKEDatadogGrafana'],
+    useCases['Production readinessReliability'],
+    "roi": 'Improves uptime to 99.9%+,
+    competitors[,
+  Cloud providers PS'],
+    "marketSize": '$10B SRE services,
+    growthRate:,
+  15% CAGR',
+    "variant": 'it-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  SRE playbooks, IaC modules, on‑call.'
+  },
+  {,
+    "id": 'zero-trust-rollout-coaching,
+    name:,
+  Zero Trust Rollout Coaching',
+    "tagline": Identity, device, and network segmentation playbooks,
+  ,
+    "price": $4,000,
+  ,
+    "period": '/engagement,
+    "description": 'Hands‑on guidance to implement zero trust: SSO/MFA, device posture, micro‑segmentation, and access reviews.',
+    features['Architecture & roadmapQuick wins & pilotsControl mappingsChange management'
+    ],
+    "popular": false,
+    icon: ,
+  🔐',
+    "color": 'from-red-600 to-rose-700,
+    textColor:,
+  text-red-200',
+    "link": 'https://ziontechgroup.com/services/zero-trust-rollout-coaching,
+    "marketPosition": 'Actionable, tool‑agnostic coaching.',
+    targetAudience['ITSecurity'],
+    "trialDays": 0,
+    setupTime: ,
+  Project start in 1 week',
+    "category": 'Security Consulting,
+    "realService": true,
+    technology[,
+  SSO/SCIMZTNA'],
+    integrations['OktaCloudflareZscaler'],
+    useCases['Zero trust rolloutAudit prep'],
+    "roi": 'Accelerates rollout by 2–3x,
+    competitors[,
+  Big 4 consultancies'],
+    "marketSize": '$20B security services,
+    growthRate:,
+  12% CAGR',
+    "variant": 'consulting-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Workshops, templates, control packs.'
+  },
+  {,
+    "id": 'vendor-risk-ai-assistant,
+    name: ,
+  Vendor Risk AI Assistant',
+    "tagline": 'Automate security questionnaires and third‑party risk reviews,
+    price:,
+  $149',
+    "period": '/month,
+    "description": 'AI copilot that ingests vendor docs (SOC 2, ISO 27001, SIG, CAIQ), answers security questionnaires, flags gaps, and produces an executive risk summary with mitigation plans.',
+    features['Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe)Policy and control gap analysisRisk register and remediation plansExport to PDF/CSV and Jira'
+    ],
+    "popular": true,
+    icon: ,
+  🛡️',
+    "color": 'from-amber-600 to-orange-700,
+    textColor:,
+  text-amber-200',
+    "link": 'https://ziontechgroup.com/services/vendor-risk-ai-assistant,
+    "marketPosition": 'Faster than manual reviews, integrates with your GRC.',
+    targetAudience['SecurityLegalProcurement'],
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Security & Compliance,
+    "realService": true,
+    technology[,
+  LLMsRAGDocument AI'],
+    integrations['OneTrustDrataJira'],
+    useCases['Security questionnairesRenewal reviews'],
+    "roi": 'Cuts review time by 70%,
+    competitors[,
+  Secureframe Questionnaire AutomationWhistic'],
+    "marketSize": '$8B TPRM,
+    growthRate:,
+  14% CAGR',
+    "variant": 'ai-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Secure upload, policy mapping, audit log.',
+    "launchDate": '2025-07-01,
+    "customers": 18,
+    "rating": 4.7,
+    "reviews": 12
+  },
+  {,
+    id: ,
+  gdpr-dsar-portal',
+    "name": 'GDPR/CCPA DSAR Portal,
+    tagline:,
+  End‑to‑end subject access request automation',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Hosted portal and workflow to intake, verify, process, and fulfill data subject requests (access, deletion, portability) with redaction and evidence trails.',
+    features['Identity verification and throttlingSystem of record inventory and connectorsAutomated redaction and package assemblyEvidence and audit reports'
+    ],
+    "popular": false,
+    icon: ,
+  📜',
+    "color": 'from-cyan-600 to-blue-700,
+    textColor:,
+  text-cyan-200',
+    "link": 'https://ziontechgroup.com/services/gdpr-dsar-portal,
+    "marketPosition": 'Affordable alternative to heavy privacy suites.',
+    targetAudience['LegalSecurityIT'],
+    "trialDays": 7,
+    setupTime:,
+  1 week',
+    "category": 'Privacy & Compliance,
+    "realService": true,
+    technology[,
+  Next.jsQueue/WorkersPII Redaction'],
+    integrations['SnowflakeSalesforceGmail/Drive'],
+    useCases['Access/Delete requestsDSR reporting'],
+    "roi": 'Reduces manual hours by 80%,
+    competitors[,
+  TranscendOneTrust'],
+    "marketSize": '$3B privacy ops,
+    growthRate:,
+  16% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Role‑based access, retention policies.',
+    "launchDate": '2025-06-15,
+    "customers": 22,
+    "rating": 4.6,
+    "reviews": 14
+  },
+  {,
+    id: ,
+  oncall-copilot',
+    "name": 'On‑Call Copilot,
+    tagline:,
+  LLM‑powered incident triage, runbooks, and postmortems',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Connects to logs, metrics, traces, and alerts to propose likely causes, next actions, and execute safe runbook steps with approvals. Generates high‑quality postmortems.',
+    features['Contextual alert summariesRoot cause hypotheses and checksSafe automations with approval gatesPostmortem generation and action items'
+    ],
+    "popular": true,
+    icon: ,
+  🚨',
+    "color": 'from-rose-600 to-red-700,
+    textColor:,
+  text-rose-200',
+    "link": 'https://ziontechgroup.com/services/oncall-copilot,
+    "marketPosition": 'Brings AI to existing on‑call stacks.',
+    targetAudience['SREDevOpsPlatform'],
+    "trialDays": 14,
+    setupTime:,
+  2 hours',
+    "category": 'Observability & SRE,
+    "realService": true,
+    technology[,
+  LLMsVector StoreAPM APIs'],
+    integrations['DatadogGrafanaPagerDuty'],
+    useCases['MTTR reductionOn‑call quality'],
+    "roi": 'Cuts MTTR by 35%,
+    competitors[,
+  FireHydrant AIRootly AI'],
+    "marketSize": '$7B AIOps,
+    growthRate:,
+  19% CAGR',
+    "variant": 'ai-ops-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Read‑only mode, approvals, audit log.',
+    "launchDate": '2025-07-10,
+    "customers": 15,
+    "rating": 4.8,
+    "reviews": 9
+  },
+  {,
+    id: ,
+  ml-eval-harness',
+    "name": 'LLM/ML Evaluation Harness,
+    tagline:,
+  Test sets, guardrails, and scorecards for AI systems',
+    "price": '$129,
+    period:,
+  /month',
+    "description": Hosted evaluation platform that runs golden datasets and adversarial prompts across models, with regressions alerts, cost tracking, and governance‑ready reports.',
+    features['Datasets and prompt suitesAutomatic metric scoring and rubricsGuardrail tests (toxicity/PII/Jailbreak)CI integrations and dashboards'
+    ],
+    "popular": false,
+    icon: ,
+  🧪',
+    "color": 'from-indigo-600 to-purple-700,
+    textColor:,
+  text-indigo-200',
+    "link": 'https://ziontechgroup.com/services/ml-eval-harness,
+    "marketPosition": 'Evaluation without heavy MLOps lift.',
+    targetAudience['AI PlatformData Science'],
+    "trialDays": 7,
+    setupTime:,
+  1 day',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  LangChain/LangGraphLangfuseOpenAI/Anthropic'],
+    integrations['GitHub ActionsCircleCI'],
+    useCases['Model selectionRegression testing'],
+    "roi": 'Prevents degradations and outages,
+    competitors[,
+  HumanloopPromptLayer'],
+    "marketSize": '$2B model ops,
+    growthRate:,
+  22% CAGR',
+    "variant": 'mlops-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Datasets store, eval runners, alerts.',
+    "launchDate": '2025-06-30,
+    "customers": 10,
+    "rating": 4.5,
+    "reviews": 7
+  },
+  {,
+    id: ,
+  finops-cost-anomaly-guard',
+    "name": 'FinOps Cost Anomaly Guard,
+    tagline:,
+  Detect, explain, and prevent cloud cost spikes',
+    "price": '$79,
+    period:,
+  /month',
+    "description": Continuously analyzes multi‑cloud bills and usage to catch anomalies, attribute spend to owners, and recommend rightsizing and commitment strategies.',
+    features['Anomaly detection and alertsUnit economics and tagging qualityRightsizing and commitment plannerChargeback/showback reports'
+    ],
+    "popular": true,
+    icon: ,
+  💸',
+    "color": 'from-emerald-600 to-teal-700,
+    textColor:,
+  text-emerald-200',
+    "link": 'https://ziontechgroup.com/services/finops-cost-anomaly-guard,
+    "marketPosition": 'Actionable insights, not just dashboards.',
+    targetAudience['FinancePlatformEngineering'],
+    "trialDays": 14,
+    setupTime: ,
+  1 day',
+    "category": 'Cloud & FinOps,
+    "realService": true,
+    technology[,
+  Cloud APIsAnomaly MLBI'],
+    integrations['AWSAzureGCP'],
+    useCases['Cost controlsBudget alerts'],
+    "roi": 'Saves 10–25% monthly spend,
+    competitors[,
+  CloudZeroVantage'],
+    "marketSize": '$6B FinOps,
+    growthRate:,
+  20% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Cost collectors, anomaly models, alerts.',
+    "launchDate": '2025-07-05,
+    "customers": 28,
+    "rating": 4.7,
+    "reviews": 16
+  },
+  {,
+    id: ,
+  ai-rag-site-search',
+    "name": 'AI RAG Site Search,
+    tagline:,
+  Private, high‑relevance semantic search for your docs',
+    "price": '$59,
+    period:,
+  /month',
+    "description": Drop‑in semantic search widget with ingestion pipelines, embeddings, reranking, and citations. Keeps data private, deploys at the edge for speed.',
+    features['Crawlers and connectorsEmbeddings, rerankers, and guardrailsCitations and feedback loopsEdge caching and analytics'
+    ],
+    "popular": false,
+    icon: ,
+  🔎',
+    "color": 'from-blue-600 to-indigo-700,
+    textColor:,
+  text-blue-200',
+    "link": 'https://ziontechgroup.com/services/ai-rag-site-search,
+    "marketPosition": 'Better relevance than keyword search, privacy‑first.',
+    targetAudience['DocsSupportMarketing'],
+    "trialDays": 7,
+    setupTime: ,
+  2 hours',
+    "category": 'AI & Machine Learning,
+    "realService": true,
+    technology[,
+  Pinecone/WeaviateOpenAIFastAPI'],
+    integrations['ZendeskConfluenceNotion'],
+    useCases['Help centersInternal KB'],
+    "roi": 'Deflects 25% tickets,
+    competitors[,
+  Algolia Neural SearchElastic'],
+    "marketSize": '$10B search,
+    growthRate:,
+  13% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Ingestion workers, evals, analytics.',
+    "launchDate": '2025-06-20,
+    "customers": 34,
+    "rating": 4.6,
+    "reviews": 19
+  },
+  {,
+    id: ,
+  agentic-workflow-studio',
+    "name": 'Agentic Workflow Studio,
+    tagline:,
+  Visual builder for safe, multi‑agent automations',
+    "price": '$129,
+    period:,
+  /month',
+    "description": Design, simulate, and deploy multi‑agent workflows with guardrails, approvals, and human‑in‑the‑loop checkpoints. Observe runs and costs in real time.',
+    features['Drag‑and‑drop graph builderGuardrails and policy engineHuman‑in‑the‑loop checkpointsRun logs, costs, and metrics'
+    ],
+    "popular": true,
+    icon: ,
+  🕸️',
+    "color": 'from-purple-600 to-fuchsia-700,
+    textColor:,
+  text-purple-200',
+    "link": 'https://ziontechgroup.com/services/agentic-workflow-studio,
+    "marketPosition": 'Faster time‑to‑value for safe agents.',
+    targetAudience['OpsAutomationEngineering'],
+    "trialDays": 14,
+    setupTime:,
+  1 day',
+    "category": 'Automation & Orchestration,
+    "realService": true,
+    technology[,
+  LangGraphTemporalOpenAI/Anthropic'],
+    integrations['SlackJiraGitHub'],
+    useCases['Backoffice automationSupport bots'],
+    "roi": 'Automates 15–40% tasks,
+    competitors[,
+  Akaike Agent StudioMendable Agents'],
+    "marketSize": '$12B automation,
+    growthRate:,
+  21% CAGR',
+    "variant": 'agents-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Policy engine, sandbox, audit.',
+    "launchDate": '2025-07-08,
+    "customers": 11,
+    "rating": 4.5,
+    "reviews": 8
+  },
+  {,
+    id: ,
+  edge-rate-limiter-saas',
+    "name": 'Edge Rate Limiter SaaS,
+    tagline:,
+  Protect APIs with globally distributed limits and quotas',
+    "price": '$39,
+    period:,
+  /month',
+    "description": 'Drop‑in SDK and managed configuration to apply token bucket and sliding‑window limits at the edge across regions with low latency.,
+    features['Global keyspace and quotasBurst and sliding window strategiesConfig UI and APIAnalytics and alerting'
+    ],
+    "popular": false,
+    icon: ,
+  🌐',
+    "color": 'from-slate-600 to-slate-800,
+    textColor:,
+  text-slate-200',
+    "link": 'https://ziontechgroup.com/services/edge-rate-limiter-saas,
+    "marketPosition": 'Simpler than building on CDN primitives.',
+    targetAudience['PlatformAPI Teams'],
+    "trialDays": 7,
+    setupTime:,
+  30 minutes',
+    "category": 'Platform & APIs,
+    "realService": true,
+    technology[,
+  Edge KVWASMCDN'],
+    integrations['Cloudflare WorkersVercel Edge'],
+    useCases['Abuse preventionFair usage'],
+    "roi": 'Prevents outages and overages,
+    competitors[,
+  Cloudflare RulesKong Rate Limit'],
+    "marketSize": '$2B API mgt,
+    growthRate:,
+  11% CAGR',
+    "variant": 'edge-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Edge counters, config UI, SDKs.',
+    "launchDate": '2025-06-25,
+    "customers": 20,
+    "rating": 4.4,
+    "reviews": 13
+  },
+  {,
+    id: ,
+  email-deliverability-optimizer',
+    "name": 'Email Deliverability Optimizer,
+    tagline:,
+  Warmup, reputation monitoring, and content linting',
+    "price": '$49,
+    period:,
+  /month',
+    "description": Improves email deliverability with domain warmup, content linting for spam triggers, and feedback loop integrations across major ESPs.',
+    features['Inbox placement testsWarmup schedules and IP poolsContent linting and A/B testsReputation and blacklist monitors'
+    ],
+    "popular": false,
+    icon: ,
+  ✉️',
+    "color": 'from-pink-600 to-rose-700,
+    textColor:,
+  text-pink-200',
+    "link": 'https://ziontechgroup.com/services/email-deliverability-optimizer,
+    "marketPosition": 'Focus on outcomes, not vanity metrics.',
+    targetAudience['MarketingGrowth'],
+    "trialDays": 7,
+    setupTime: ,
+  2 hours',
+    "category": 'Growth & Marketing,
+    "realService": true,
+    technology[,
+  ESP APIsSpamAssassinInbox tests'],
+    integrations['SendGridMailgunPostmark'],
+    useCases['CampaignsLifecycle email'],
+    "roi": 'Increases deliverability by 10–20%,
+    competitors[,
+  Warmup InboxGlockApps'],
+    "marketSize": '$4B email tools,
+    growthRate:,
+  9% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  ESP connectors, warmup engine.',
+    "launchDate": '2025-07-02,
+    "customers": 26,
+    "rating": 4.5,
+    "reviews": 17
+  },
+  {,
+    id: ,
+  data-contracts-hub',
+    "name": 'Data Contracts Hub,
+    tagline:,
+  Schema governance and SLAs for reliable data products',
+    "price": '$99,
+    period:,
+  /month',
+    "description": Define and enforce data contracts across producers and consumers with schema diffs, backward‑compat checks, and SLA monitoring.',
+    features['Schema registry and diffsCompatibility checks and approvalsSLAs and freshness monitoringIncident workflows and dashboards'
+    ],
+    "popular": false,
+    icon: ,
+  📊',
+    "color": 'from-emerald-700 to-teal-800,
+    textColor:,
+  text-emerald-200',
+    "link": 'https://ziontechgroup.com/services/data-contracts-hub,
+    "marketPosition": 'Brings product thinking to data.',
+    targetAudience['Data PlatformAnalytics'],
+    "trialDays": 7,
+    setupTime:,
+  1 day',
+    "category": 'Data Platform,
+    "realService": true,
+    technology[,
+  Kafka/Schema RegistrydbtAirflow'],
+    integrations['SnowflakeBigQueryRedshift'],
+    useCases['Data reliabilitySelf‑service data'],
+    "roi": 'Cuts data breakages by 40%,
+    competitors[,
+  Monte CarloDatafold'],
+    "marketSize": '$5B data ops,
+    growthRate:,
+  18% CAGR',
+    "variant": 'saas-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Contracts store, approvals, monitors.',
+    "launchDate": '2025-06-28,
+    "customers": 12,
+    "rating": 4.4,
+    "reviews": 10
+  },
+  {,
+    id: ,
+  security-chaos-gamedays',
+    "name": 'Security Chaos GameDays,
+    tagline:,
+  Hands‑on attack simulations and playbook hardening',
+    "price": $3,000,
+  ,
+    "period": '/engagement,
+    "description": 'Facilitated tabletop and live‑fire scenarios tailored to your stack. Validates detections, improves response muscle memory, and prioritizes investments.',
+    features['Custom runbooks and injectsBlue team/Red team rotationsGap analysis and roadmapExecutive readout and training'
+    ],
+    "popular": true,
+    icon: ,
+  🎯',
+    "color": 'from-red-700 to-rose-800,
+    textColor:,
+  text-red-200',
+    "link": 'https://ziontechgroup.com/services/security-chaos-gamedays,
+    "marketPosition": 'Outcome‑focused, no vendor bias.',
+    targetAudience['SecurityIT'],
+    "trialDays": 0,
+    setupTime: ,
+  Project kickoff in 1 week',
+    "category": 'Security Consulting,
+    "realService": true,
+    technology[,
+  ATT&CKDetection Engineering'],
+    integrations['SIEM/XDRSOAR'],
+    useCases['Resilience validationTraining'],
+    "roi": 'Reduces breach impact,
+    competitors[,
+  Big 4MSSPs'],
+    "marketSize": '$25B services,
+    growthRate:,
+  10% CAGR',
+    "variant": 'consulting-real,
+    "contactInfo": { mobile:,
+  +1 302 464 0950', "email": 'kleber@ziontechgroup.com, "address": '364 E Main St STE 1008 Middletown DE 19709' },
+    "realImplementation": true,
+    implementationDetails:,
+  Workshops, exercises, debrief.',
+    "launchDate": '2025-07-12,
+    "customers": 7,
+    "rating": 4.9,
+    "reviews": 6
 ]}}}}}
-export interface AdditionalRealService { id: string, name: string, tagline: string, price: string, description: string, features: string[], link: string, category: string, realImplementation: boolean, contactInfo: { mobile: string, email: string, address: string,},export const additionalEnhancedServices: AdditionalRealService[] = [ { id: "ai-automation-suite",name: "AI Automation Suite",tagline: "Intelligent automation for modern businesses",price: "$79/month",description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",features[ "Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard" ],link: "/services/ai-automation-suite",category: "AI & Automation",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ,},{ id:,ai-sales-outreach-agent',name: 'AI Sales Outreach Agent,tagline:,Personalized multi-channel sequences with compliance guardrails',price: '$99,period:,/month',description: Automates lead research and crafts compliant,personalized outreach across email and LinkedIn with adaptive follow-ups and CRM sync.,features: [ 'Account and persona research,'Personalized sequence generatorDeliverability and SPF/DKIM checks','CRM sync and analytics' ],popular: true,icon:,🤖',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-200',link: 'https: marketPosition:,Higher personalization at lower cost than legacy sequencers.',targetAudience: [ 'Sales,'Growth'],trialDays: 14,setupTime:,30 minutes',category: 'Growth & Marketing,realService: true,technology: [,LLMsLinkedIn/Email APIs'],integrations: [ 'HubSpot,SalesforceOutlook','Gmail'],useCases: [ 'Outbound SDR,Upsell campaigns'],roi: 'Improves reply rates by 2–3x,competitors: [,OutreachSalesloft (partial)'],marketSize: '$7B sales tech,growthRate:,12% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,OAuth connectors,sending pools,policy engine.',launchDate: '2025-07-20,customers: 33,rating: 4.7,reviews: 19 ,},{ id:,soc2-continuous-compliance',name: 'SOC 2 Continuous Compliance,tagline:,Controls,evidence,alerts and auditor-ready exports',price: '$199,period:,/month',description: Automates SOC 2 controls monitoring with cloud/IdP/device evidence collectors,control owners,exceptions,and exportable audit packs.,features: [ 'Automated evidence collection,'Control mappings and ownersExceptions and approvals','Auditor-ready exports' ],popular: true,icon:,🛡️',color: 'from-slate-700 to-zinc-800,textColor:,text-slate-200',link: 'https: marketPosition:,Fast time-to-audit without vendor lock-in.',targetAudience: [ 'Security,'ITEngineering'],trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology: [,AWS/Azure/GCP APIsOkta','JAMF'],integrations: [ 'AWS,AzureGCP','OktaGoogle Workspace','M365'],useCases: [ 'SOC 2 readiness,Continuous monitoring'],roi: 'Cuts audit prep by 60%,competitors: [,VantaDrata'],marketSize: '$5.5B GRC,growthRate:,13% CAGR',variant: 'security-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Connector SDK,controls engine,exports.',launchDate: '2025-07-05,customers: 16,rating: 4.6,reviews: 9 ,},{ id:,finops-cost-optimizer',name: 'FinOps Cost Optimizer,tagline:,Actionable savings across AWS,Azure,and GCP',price: '$79,period:,/month',description: Finds idle and over-provisioned resources,right-sizes compute,proposes commitments and schedules with one-click change sets.,features: [ 'Idle/oversized resource detection,'Rightsizing recommendationsCommitment and schedule planner','Change set preview and apply' ],popular: false,icon:,💸',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-200',link: 'https: marketPosition:,Focused SMB savings with low setup.',targetAudience: [ 'Platform,'Finance'],trialDays: 14,setupTime:,45 minutes',category: 'Cloud & DevOps,realService: true,technology: [,Cloud Billing APIsIaC'],integrations: [ 'AWS,AzureGCP','Terraform'],useCases: [ 'Cloud cost control,Budget enforcement'],roi: 'Saves 15–30% monthly spend,competitors: [,CloudZeroProsperOps (partial)'],marketSize: '$3B FinOps,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Analyzers,policy engine,IaC changers.',launchDate: '2025-07-10,customers: 20,rating: 4.5,reviews: 10 ,},{ id:,cloud-migration-factory',name: 'Cloud Migration Factory,tagline:,Blueprints,landing zones,and automated cutovers',price: $12,000,period: '/project,description:,Fixed-scope,repeatable cloud migration packages with secure landing zones,CI/CD,observability,and cost controls.',features: [ 'Landing zone setup,'Automated cutover runbooksObservability and FinOps','Security baselines' ],popular: true,icon:,☁️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-200',link: 'https: marketPosition:,Predictable migrations with lower risk.',targetAudience: [ 'IT,'Engineering'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'IT Services,realService: true,technology: [,AWSAzure','GCPTerraform'],integrations: [ 'Jira,GitHubGitLab'],useCases: [ 'Data center exit,Modernization'],roi: 'Reduces migration time by 30–50%,competitors: [,GSIsBoutique firms'],marketSize: '$150B cloud services,growthRate:,17% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Blueprints,pipelines,cutover playbooks.',launchDate: '2025-07-18,customers: 9,rating: 4.8,reviews: 5 ,},{ id:,data-quality-monitor',name: 'Data Quality Monitor,tagline:,Schema checks,freshness SLAs,and anomaly alerts',price: '$49,period:,/month',description: Monitors tables and pipelines for schema drift,null spikes,freshness breaches,and distribution anomalies with ownership routing.,features: [ 'Schema and null checks,'Freshness SLAsAnomaly detection','Ownership routing and runbooks' ],popular: false,icon:,📊',color: 'from-fuchsia-600 to-rose-700,textColor:,text-fuchsia-200',link: 'https: marketPosition:,Targeted data reliability for SMB analytics teams.',targetAudience: [ 'Data,'Analytics'],trialDays: 14,setupTime:,30 minutes',category: 'Data Platform,realService: true,technology: [,dbtAirflow','Warehouse APIs'],integrations: [ 'Snowflake,BigQueryRedshift'],useCases: [ 'Pipeline reliability,Dashboard trust'],roi: 'Cuts data incidents by 40%,competitors: [,Monte Carlo (partial)Databand'],marketSize: '$5B data ops,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Collectors,rules engine,alerting.',launchDate: '2025-07-08,customers: 14,rating: 4.4,reviews: 7 ,},{ id:,confluence-rag-knowledge-base',name: 'Confluence RAG Knowledge Base,tagline:,Secure enterprise Q&A over Confluence and Drive',price: '$59,period:,/month',description: Private,up-to-date Q&A over Confluence,Google Drive,and PDFs with granular permissions,citations,and Slack bot access.,features: [ 'Space/permissions-aware retrieval,'Citations and source linksSlack and web chat','Scheduled re-indexing' ],popular: true,icon:,🧠',color: 'from-violet-600 to-purple-700,textColor:,text-violet-200',link: 'https: marketPosition:,Secure,compliant RAG for internal knowledge.',targetAudience: [ 'Support,'EngineeringOps'],trialDays: 14,setupTime:,45 minutes',category: 'AI & Machine Learning,realService: true,technology: [,EmbeddingsVector DB','OAuth'],integrations: [ 'Confluence,Google DriveSlack'],useCases: [ 'Internal knowledge,Onboarding'],roi: 'Reduces time-to-answer by 70%,competitors: [,Guru (partial)Slite AI'],marketSize: '$2B knowledge tools,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Ingestion,chunking,permissions-aware retrieval.',launchDate: '2025-07-06,customers: 27,rating: 4.6,reviews: 13 ,},{ id:,e2e-test-recorder',name: 'E2E Test Recorder,tagline:,Record,stabilize,and run flaky-free end-to-end tests',price: '$39,period:,/month',description: Chrome extension and runner that records user flows,auto-stabilizes selectors,mocks network,and runs in CI.,features: [ 'Recorder and selector stabilizer,'Network mockingCI runner and dashboards','Slack alerts' ],popular: false,icon:,🧪',color: 'from-amber-600 to-orange-700,textColor:,text-amber-200',link: 'https: marketPosition:,Reduce flakiness without heavy scripting.',targetAudience: [ 'QA,'Eng'],trialDays: 14,setupTime:,20 minutes',category: 'Developer Experience,realService: true,technology: [,Playwright/CypressChrome Ext'],integrations: [ 'GitHub,GitLabCircleCI'],useCases: [ 'Regression testing,Release hardening'],roi: 'Cuts flaky failures by 80%,competitors: [,Walnut (partial)Mabl'],marketSize: '$3B QA tools,growthRate:,15% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Browser ext + CLI runner.',launchDate: '2025-07-11,customers: 11,rating: 4.3,reviews: 6 ,},{ id:,ai-meeting-notes',name: 'AI Meeting Notes & Actions,tagline:,Join,transcribe,summarize,and auto-create tasks',price: '$15,period:,/user/month',description: Records meetings,creates structured summaries with decisions and owners,and pushes action items to task systems.,features: [ 'Multi-platform meeting bot,'Summaries with decisions and risksAction items to tasks','Speaker diarization' ],popular: true,icon:,📝',color: 'from-pink-600 to-rose-700,textColor:,text-pink-200',link: 'https: marketPosition:,Lightweight alternative with better integrations.',targetAudience: [ 'All teams],trialDays: 14,setupTime:,10 minutes',category: 'Productivity,realService: true,technology: [,STTLLMs','Calendar APIs'],integrations: [ 'Zoom,Google MeetSlack','AsanaJira'],useCases: [ 'Meeting hygiene,Project execution'],roi: 'Saves 3–5 hours/person/month,competitors: [,FathomSembly (partial)'],marketSize: '$4B productivity AI,growthRate:,20% CAGR',variant: 'ai-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Meeting joiners,diarization,task push.',launchDate: '2025-07-09,customers: 42,rating: 4.6,reviews: 22 ,},{ id:,vendor-security-questionnaire-ai',name: 'Vendor Security Questionnaire AI,tagline:,Auto-fill SIG/CAIQ with evidence and citations',price: '$99,period:,/month',description: Parses security questionnaires,proposes answers from policies and evidence with citations and approval workflows.,features: [ 'Template ingestion (SIG/CAIQ),'Answer proposal with citationsReviewer workflows','Export to XLSX and portals' ],popular: false,icon:,📄',color: 'from-indigo-700 to-blue-800,textColor:,text-indigo-200',link: 'https: marketPosition:,Faster turnarounds with better quality.',targetAudience: [ 'Security,'Sales'],trialDays: 7,setupTime:,30 minutes',category: 'Security & Compliance,realService: true,technology: [,LLMsPolicy store'],integrations: [ 'Google Drive,OneDriveSharePoint'],useCases: [ 'RFPs,Due diligence'],roi: 'Cuts cycle time by 50%,competitors: [,Loopio (partial)Responsive'],marketSize: '$1.2B RFP tools,growthRate:,12% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Doc parser,answer retrieval,workflow.',launchDate: '2025-07-07,customers: 13,rating: 4.5,reviews: 8 ,},{ id:,accessibility-remediation-assistant',name: 'Accessibility Remediation Assistant,tagline:,WCAG audits,code suggestions,and CI checks',price: '$29,period:,/month',description: Runs accessibility scans,suggests code-level fixes with examples,and enforces gates in CI with issue creation.,features: [ 'Automated audits,'Code fix suggestionsCI gates and baselines','Issue sync and dashboards' ],popular: false,icon:,♿',color: 'from-cyan-700 to-teal-800,textColor:,text-cyan-200',link: 'https: marketPosition:,Developer-first a11y enforcement.',targetAudience: [ 'Frontend,'QA'],trialDays: 14,setupTime:,20 minutes',category: 'Quality & Monitoring,realService: true,technology: [,axe-corePlaywright'],integrations: [ 'GitHub,GitLabJira'],useCases: [ 'WCAG compliance,Shift-left'],roi: 'Reduces a11y regressions by 70%,competitors: [,Deque (partial)'],marketSize: '$0.8B a11y tools,growthRate:,11% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Scanner + PR annotations + CI.',launchDate: '2025-07-03,customers: 10,rating: 4.4,reviews: 6 ,},{ id:,managed-kubernetes-platformops',name: 'Managed Kubernetes PlatformOps,tagline:,SRE-grade clusters,GitOps,and 99.9% SLOs',price: $3,500,period: '/month,description:,Provision and operate hardened EKS/AKS/GKE clusters with GitOps,observability,incident response,and cost controls.',features: [ 'Hardened clusters and networking,'GitOps and policy as codeObservability and on-call','FinOps and capacity management' ],popular: true,icon:,🧰',color: 'from-sky-700 to-blue-800,textColor:,text-sky-200',link: 'https: marketPosition:,Productized SRE for SMB engineering teams.',targetAudience: [ 'Engineering,'IT'],trialDays: 0,setupTime:,2 weeks',category: 'IT Services,realService: true,technology: [,EKS/AKS/GKEArgoCD','IstioPrometheus'],integrations: [ 'AWS,AzureGCP','Datadog'],useCases: [ 'Platform engineering,Reliability'],roi: 'Accelerates delivery by 30%,competitors: [,Managed K8s vendors'],marketSize: '$12B DevOps services,growthRate:,19% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Blueprints + runbooks + SRE on-call.',launchDate: '2025-07-01,customers: 6,rating: 4.8,reviews: 4 ,},{ id:,zero-trust-access-rollout',name: 'Zero Trust Access Rollout,tagline:,IdP,device posture,and app segmentation in weeks',price: $18,000,period: '/engagement,description:,Deploys zero trust access with IdP integration,device posture checks,policy sets,and phased application onboarding.',features: [ 'IdP integration and SSO,'Device posture and MFAApp segmentation and policies','Runbooks and training' ],popular: false,icon:,🔐',color: 'from-slate-800 to-gray-900,textColor:,text-slate-200',link: 'https: marketPosition:,Outcome-driven zero trust without vendor lock.',targetAudience: [ 'Security,'IT'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'Security Consulting,realService: true,technology: [,Cloudflare Zero TrustOkta','MDM'],integrations: [ 'Okta,Azure ADCrowdStrike','Jamf'],useCases: [ 'Remote access,Least privilege'],roi: 'Lowers breach risk and access toil,competitors: [,MSSPsGSIs'],marketSize: '$25B services,growthRate:,10% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Policy design,rollout,hardening.',launchDate: '2025-07-14,customers: 5,rating: 4.7,reviews: 3 { id:,ai-email-responder',name: 'AI Email Responder,tagline:,Autonomous inbox triage with drafts,tone,and approvals',price: '$99,period:,/month',description: AI agent categorizes,prioritizes,and drafts replies with brand tone and policy guardrails,routing complex cases to humans.',features[ 'Inbox triage and SLA queuesDraft replies with tone control','Approvals and human handoffCSAT and deflection analytics' ],popular: true,icon:,📨',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Cheaper than legacy helpdesk add-ons with better guardrails and routing.',targetAudience: Support,success,operations',trialDays: 14,setupTime:,1 hour',category: 'AI & Machine Learning,realService: true,technology[,Gmail/Office APIs,LLMs,RAG'],integrations[ 'Zendesk,Intercom,Freshdesk,Slack'],useCases[ 'Ticket deflection,SLA compliance,CSAT lift'],roi: 'Cuts first-response time by 60%,competitors[,Intercom Fin,Ada,Forethought'],marketSize: '$15B service ops,growthRate:,18% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,OAuth connectors,policy engine,audit logs.',launchDate: '2025-06-01,customers: 40,rating: 4.6,reviews: 21 ,},{ id:,mobile-first-survey',name: 'Mobile-First Survey Tool,tagline:,Tap-friendly micro-surveys with AI insights',price: '$19,period:,/month',description: Launch branded,mobile-optimized surveys with AI-based insight clustering and churn-risk flags.',features[ 'One-tap answers and NPSAI clustering and summaries','Embeddable widgetsExport CSV/Sheets' ],popular: false,icon:,📱',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.',targetAudience: Product,growth,CX',trialDays: 7,setupTime:,15 minutes',category: 'Growth & Marketing,realService: true,technology[,Next.js,Edge Functions'],integrations[ 'HubSpot,Segment,GA4'],useCases[ 'NPS,Post-purchase survey,In-app feedback'],roi: 'Accelerates feedback cycles by 3x,competitors[,Typeform,Survicate'],marketSize: '$3.1B feedback tools,growthRate:,14% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Embeds,web SDK,event tracking.',launchDate: '2025-05-15,customers: 55,rating: 4.5,reviews: 18 ,},{ id:,event-management-dashboard',name: 'Event Management Dashboard,tagline:,Tickets,check-in,schedules,feedback in one place',price: '$89,period:,/month',description: All-in-one portal to sell tickets,manage RSVPs,schedule sessions,and analyze attendee feedback.',features[ 'Tickets and invoicesQR check-in and badges','Speaker and agenda plannerPost-event feedback analytics' ],popular: true,icon:,🎟️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Faster setup and lower fees than legacy event suites.',targetAudience: Marketing,ops,agencies',trialDays: 14,setupTime:,1 day',category: 'Business Operations,realService: true,technology[,Stripe,Webhooks,Next.js'],integrations[ 'Stripe,Zapier,HubSpot'],useCases[ 'Meetups,webinars,conferences'],roi: 'Cuts ops time by 40%,competitors[,Eventbrite,Hopin'],marketSize: '$6.1B events tech,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Ticketing,QR check-in,analytics.',launchDate: '2025-04-10,customers: 35,rating: 4.6,reviews: 24 ,},{ id:,churn-risk-alerts',name: 'Churn Risk Alerts for Slack,tagline:,Behavior + sentiment = proactive retention pings',price: '$49,period:,/month',description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.,features[ 'Usage anomaly detectionSentiment from tickets/reviews','Playbooks and tasksOwner assignment' ],popular: false,icon:,⚠️',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Actionable CS alerts without heavy CDPs.',targetAudience: Customer success,product',trialDays: 14,setupTime:,30 minutes',category: 'AI & Data,realService: true,technology[,Segment,Webhooks,LLMs'],integrations[ 'Slack,HubSpot,Salesforce'],useCases[ 'Churn prevention,Expansion triggers'],roi: 'Improves retention by 2–5 pts,competitors[,Vitally,Gainsight'],marketSize: '$4.2B CS tools,growthRate:,17% CAGR',variant: 'holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Event collector,rules engine,Slack app.',launchDate: '2025-03-01,customers: 28,rating: 4.5,reviews: 15 ,},{ id:,subscription-revenue-analytics',name: 'Subscription Revenue Analytics,tagline:,MRR,churn,cohorts with anomaly flags',price: '$59,period:,/month',description: Self-serve dashboards for MRR,churn,LTV/CAC,and cohorts with anomaly detection and revenue projections.',features[ 'MRR/ARR trends and cohortsAnomaly flags and forecasts','CSV/Stripe importsBoard-ready reports'],popular: true,icon:,📈',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,Faster deploy vs. BI stacks, purpose-built for SaaS.',targetAudience: Founders,finance,ops',trialDays: 14,setupTime:,45 minutes',category: 'Business Intelligence,realService: true,technology[,Next.js,ClickHouse/DBT optional'],integrations[ 'Stripe,Chargebee,Paddle'],useCases[ 'Board metrics,Revenue ops,Cohort analysis'],roi: 'Reduces reporting prep by 80%,competitors[,ChartMogul,ProfitWell'],marketSize: '$2.4B RevOps tools,growthRate:,20% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Data loaders,metric engine,exports.',launchDate: '2025-07-01,customers: 22,rating: 4.6,reviews: 12 ,},{ id:,iso-27001-evidence-kit',name: 'ISO 27001 Evidence Kit,tagline:,Prebuilt controls,evidence collectors,and audit packs',price: '$149,period:,/month',description: Automate common ISO 27001 evidence with connectors,control mappings,timelines,and exportable audit packs.',features[ 'Control library and mappingsEvidence collectors and snapshots','Exceptions and approvalsAudit-ready exports' ],popular: false,icon:,🛡️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Faster time-to-audit than generic GRC tools.',targetAudience: Security,compliance,IT',trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology[,Cloud APIs,IdP,Endpoint'],integrations[ 'AWS,Azure,GCP,Okta,JAMF'],useCases[ 'ISO readiness,Continuous compliance'],roi: 'Cuts audit prep by 60%,competitors[,Vanta,Drata'],marketSize: '$5.5B GRC,growthRate:,13% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Connectors + evidence timelines.',launchDate: '2025-06-15,customers: 18,rating: 4.5,reviews: 10 ,},{ id:,api-changelog-notifier',name: 'API Changelog Notifier,tagline:,Diffs,deprecations,and alerts for your integrators',price: '$19,period:,/month',description: Monitor OpenAPI/GraphQL changes and send release notes,breaking-change alerts,and migration timelines.',features[ 'Schema diffing and impactRelease notes generator','Deprecation timelinesEmail/Slack/webhook alerts' ],popular: false,icon:,🔔',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Turns API changes into transparent communication.',targetAudience: 'API/platform teams,trialDays: 7,setupTime:,10 minutes',category: 'Developer Experience,realService: true,technology[,OpenAPI/GraphQL parsers'],integrations[ 'GitHub,Slack,Email'],useCases[ 'Changelog,Deprecation management'],roi: 'Reduces integrator breakage by 70%,competitors[,ReadMe,Stoplight (partial)'],marketSize: '$1.5B dev tools,growthRate:,18% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Schema watchers + release generator.',launchDate: '2025-05-01,customers: 30,rating: 4.6,reviews: 14 ,},{ id:,runbook-generator',name: 'Runbook Generator,tagline:,Generate,version,and validate ops runbooks with AI',price: '$29,period:,/month',description: 'Create consistent runbooks from incident timelines and postmortems, validate steps and link to on-call.,features[ 'Templates and versioningAI draft from incidents','Step validation checklistsOn-call links and owners' ],popular: false,icon:,📘',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition:,Eliminates ad-hoc docs, codifies reliability.',targetAudience: SRE,platform,ops',trialDays: 14,setupTime:,20 minutes',category: 'Quality & Monitoring,realService: true,technology[,LLMs,Incident APIs'],integrations[ 'PagerDuty,Jira,Slack'],useCases[ 'SRE runbooks,On-call playbooks'],roi: 'Faster incident resolution by 20–30%,competitors[,Blameless (partial),Notion'],marketSize: '$7.2B DevOps,growthRate:,19% CAGR',variant: 'monitoring-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Incident parsers + templates.',launchDate: '2025-02-20,customers: 26,rating: 4.5,reviews: 11 ,},{ id:,incident-timeline-composer',name: 'Incident Timeline Composer,tagline:,Auto-build timelines and comms from alerts and chat',price: '$19,period:,/month',description: Aggregates alerts,changes,and chat to build a single incident timeline for comms and postmortems.',features[ 'Alert + change aggregationChat timeline extraction','Customer comms templatesPostmortem export' ],popular: false,icon:,🧩',color: 'from-rose-600 to-pink-700,textColor:,text-rose-300',link: 'https: marketPosition:,Makes incident comms accurate and fast.',targetAudience: SRE,support,comms',trialDays: 7,setupTime:,10 minutes',category: 'Observability,realService: true,technology[,Webhooks,LLMs'],integrations[ 'PagerDuty,Opsgenie,Slack,Statuspage'],useCases[ 'Major incident comms,RCA inputs'],roi: 'Reduces coordination overhead by 50%,competitors[,Blameless,Incident.io (partial)'],marketSize: '$7.2B DevOps,growthRate:,19% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Event collectors + composer.',launchDate: '2025-03-15,customers: 19,rating: 4.5,reviews: 9 ,},{ id:,ad-creative-generator',name: 'Ad Creative Generator,tagline:,Generate on-brand ads with variants and A/B insights',price: '$49,period:,/month',description: Create compliant,on-brand image and text ads with variants,audiences,and performance tips.',features[ 'Brand presets and guardrailsMulti-platform variants','Headlines and copy suggestionsPerformance tips and tags' ],popular: true,icon:,🎯',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition:,Faster creative cycles for small teams.',targetAudience: Growth,agencies,founders',trialDays: 7,setupTime:,10 minutes',category: 'Growth & Marketing,realService: true,technology[,LLMs,Vision models'],integrations[ 'Meta,Google Ads (export)'],useCases[ 'Ad variants,Landing page assets'],roi: 'Improves CTR by 10–20% on average,competitors[,Canva (partial),Jasper'],marketSize: '$8.9B martech genAI,growthRate:,22% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Brand presets + asset generator.',launchDate: '2025-07-15,customers: 33,rating: 4.6,reviews: 13 ,},{ id:,cloud-cost-optimizer-pro',name: 'Cloud Cost Optimizer Pro,tagline:,Automated rightsizing,lifecycle policies,and anomaly detection',price: '$99,period:,/month',description: Continuously analyze AWS,Azure,and GCP usage to recommend rightsizing,lifecycle policies,and scheduling. Detect anomalies and export IaC for approvals.',features[ "Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance" ],link: "/services/data-warehouse-solution",category: "Data & Analytics",realImplementation: true,implementationDetails:,SaaS analyzer with exporters for Terraform/Helm and alerting.',launchDate: '2025-01-15,customers: 90,rating: 4.6,reviews: 54 ,},{ id:,database-performance-monitor',name: 'Database Performance Monitor,tagline:,Proactive Postgres/MySQL insights and AI index suggestions',price: '$79,period:,/month',description: Capture slow queries,rank impact,generate index and query tuning suggestions with capacity forecasting and SLA/SLO dashboards.',features[ 'Slow query captureAI index suggestions','Connection pool tuningCapacity forecasting' ],popular: true,icon:,🗄️',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Modern alternative with AI-first insights and simple pricing.',targetAudience: DBAs,platform,backend teams',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,PostgreSQLMySQL','OpenTelemetry'],integrations[ 'GrafanaDatadog','New Relic'],useCases[ 'Performance tuningSLO management','Incident response'],roi: 'Reduce p95 latency by 20–50% in month 1,competitors[,Percona PMMDatadog APM','New Relic'],marketSize: '$6B DB monitoring,growthRate:,15% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Agent collectors with SaaS UI and AI advisory.',launchDate: '2024-12-12,customers: 60,rating: 4.6,reviews: 38 ,},{ id:,api-documentation-generator',name: 'API Documentation Generator,tagline:,Generate beautiful,accurate API docs from OpenAPI/GraphQL/Proto',price: '$49,period:,/month',description: Convert schemas into polished docs with SDK snippets,changelogs,and search. Publish instantly with versioning.',features[ 'Schema parsing (OAS/GraphQL/Proto)SDK snippets and examples','Changelogs and versionsFull-text search and themes' ],popular: true,icon:,📘',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Faster setup and authoring vs. traditional doc platforms.',targetAudience: Developers,platform,API teams',trialDays: 14,setupTime:,20 minutes',category: 'Developer Experience,realService: true,technology[,Next.jsMDX','OpenAPI'],integrations[ 'GitHubGitLab','Bitbucket'],useCases[ 'Public API docsInternal APIs','SDK portals'],roi: 'Ship and maintain docs 5x faster,competitors[,ReadMeRedocly','Stoplight'],marketSize: '$1.5B dev docs,growthRate:,18% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Schema importers,doc themes,and CI publishers.',launchDate: '2024-10-05,customers: 110,rating: 4.7,reviews: 81 ,},{ id:,email-deliverability-monitor',name: 'Email Deliverability Monitor,tagline:,Inbox placement,DMARC/SPF/DKIM checks,and blocklist alerts',price: '$39,period:,/month',description: Continuously verify email authentication,track inbox placement,and detect blocklist events with actionable recommendations.',features[ 'DMARC/SPF/DKIM verificationInbox placement checks','Blocklist monitoringDomain reputation score' ],popular: false,icon:,✉️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Simple,affordable monitoring for marketing and transactional systems.',targetAudience: Growth,marketing,platform',trialDays: 7,setupTime:,15 minutes',category: 'Marketing Ops,realService: true,technology[,DNSPostfix/SES APIs'],integrations[ 'SendGridSES','Mailgun'],useCases[ 'Auth complianceReputation monitoring','Alerting'],roi: 'Improve inbox rate by 5–15%,competitors[,MailMonitorPostmaster Tools'],marketSize: '$2B email tools,growthRate:,12% CAGR',variant: 'holographic,contactInfo: contact,realImplementation: true,implementationDetails:,DNS checkers,seed inbox tests,and alerting.',launchDate: '2025-01-01,customers: 45,rating: 4.5,reviews: 22 ,},{ id:,gdpr-dsar-automation',name: 'GDPR DSAR Automation,tagline:,Automate data subject access requests with auditable workflows',price: '$129,period:,/month',description: Intake,verify,and fulfill DSAR requests with identity verification,data discovery connectors,and audit logs.',features[ 'Secure request intake portalIdentity verification','Data discovery connectorsAudit logs and exports' ],popular: false,icon:,🛡️',color: 'from-rose-600 to-fuchsia-700,textColor:,text-rose-300',link: 'https: marketPosition:,Compliant automation for legal and privacy teams.',targetAudience: Privacy,legal,security',trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,OAuthPII discovery','Storage APIs'],integrations[ 'Google WorkspaceOneDrive','Okta'],useCases[ 'DSAR fulfillmentPrivacy compliance'],roi: 'Cut manual effort by 70%,competitors[,OneTrustTranscend'],marketSize: '$3B privacy ops,growthRate:,20% CAGR',variant: 'cyberpunk-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Secure portal,workflows,connectors,and exports.',launchDate: '2024-09-20,customers: 33,rating: 4.6,reviews: 19 ,},{ id:,api-security-scanner',name: 'API Security Scanner,tagline:,Automated OpenAPI fuzzing,auth checks,and OWASP API Top 10',price: '$99,period:,/month',description: Scan APIs against schemas,validate auth and rate limits,and detect common vulnerabilities with CI integration.',features[ 'OpenAPI-based scanningAuth and rate limit tests','OWASP API Top 10 checksCI pipeline integration' ],popular: true,icon:,🛡️',color: 'from-red-600 to-pink-700,textColor:,text-red-300',link: 'https: marketPosition:,Developer-friendly API security with schema awareness.',targetAudience: Security,platform,backend',trialDays: 14,setupTime:,30 minutes',category: 'Security,realService: true,technology[,OpenAPIFuzzing','Auth testing'],integrations[ 'GitHub ActionsGitLab CI','Jenkins'],useCases[ 'Security testingPre-deploy checks'],roi: 'Reduce security escapes by 60%,competitors[,StackHawkNoname'],marketSize: '$4B API security,growthRate:,23% CAGR',variant: 'quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted scanner with agents and reports.',launchDate: '2025-02-10,customers: 52,rating: 4.5,reviews: 28 ,},{ id:,api-observability-starter',name: 'API Observability Starter,tagline:,OpenTelemetry traces,logs and metrics with redaction and sampling',price: '$59,period:,/month',description: Instrument services quickly with OTel SDKs and get request traces,error analytics,and SLO dashboards. Includes PII redaction,sampling controls,and ready-made Grafana boards.',features[ 'One-line middleware for Node/Go/PythonPII redaction and sampling policies','Error and latency analyticsSLI/SLO dashboards and burn-rate alerts','Exporters for popular backendsAuto-ingest OpenAPI metadata' ],popular: false,icon:,📈',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-400',link: 'https: marketPosition:,Get 80% of value with 20% of setup for SMB teams.',targetAudience: SMB,startups,dev teams starting observability',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,OpenTelemetryGrafana','Tempo/Loki/PromNode.js'],integrations[ 'DatadogHoneycomb','Grafana CloudNew Relic'],useCases[ 'Error triageLatency analysis','SLO tracking'],roi: 'Reduce MTTR by 30–50% with basic but effective telemetry.,competitors[,Datadog APMNew Relic','Elastic APM'],marketSize: '$30B+ observability,growthRate:,18% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Opinionated OTel setup,token-based ingestion,curated dashboards and SLO primitives.',launchDate: '2025-02-01,customers: 33,rating: 4.5,reviews: 11 ,},{ id:,status-pages-slo',name: 'Status Pages & SLO,tagline:,Beautiful status pages and SLO dashboards for your services',price: '$39,period:,/month',description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.,features[ 'Custom branded status pagesSLO dashboards','Incident posts & timelinesSubscriber notifications' ],popular: false,icon:,📊',color: 'from-teal-600 to-emerald-700,textColor:,text-teal-300',link: 'https: marketPosition:,Integrated SLOs with customer-facing status for trust and transparency.',targetAudience: DevOps,SRE,product',trialDays: 7,setupTime:,30 minutes',category: 'Operations,realService: true,technology[,Next.jsOpenTelemetry','Webhook'],integrations[ 'DatadogNew Relic','PagerDuty'],useCases[ 'Customer commsReliability transparency'],roi: 'Reduce support tickets during incidents by 40%,competitors[,StatuspageBetter Uptime'],marketSize: '$1B status pages,growthRate:,10% CAGR',variant: 'neural-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted status pages driven by metrics and incidents.',launchDate: '2024-07-22,customers: 75,rating: 4.6,reviews: 35 ,},{ id:,uptime-slo-monitor',name: 'Uptime & SLO Monitor,tagline:,Synthetic checks with SLO dashboards and multi-region probes',price: '$49,period:,/month',description: Run multi-region synthetic checks,calculate SLOs,and receive proactive alerts with error budgets and burn rate alerts.',features[ 'Multi-region checksSLO calculation','Error budget policyBurn rate alerts' ],popular: true,icon:,📈',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Straightforward reliability toolkit with cost-effective pricing.',targetAudience: SRE,platform,engineering',trialDays: 14,setupTime:,15 minutes',category: 'Reliability,realService: true,technology[,Node.jsPlaywright','Prometheus'],integrations[ 'PagerDutySlack','Email'],useCases[ 'SLO governanceRelease checks'],roi: 'Catch issues before customers notice,competitors[,ChecklyUptimeRobot'],marketSize: '$1.2B synthetic,growthRate:,14% CAGR',variant: 'quantum-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Distributed workers with central analytics.',launchDate: '2024-11-10,customers: 130,rating: 4.7,reviews: 64 ,},{ id:,webhook-relay-replay',name: 'Webhook Relay & Replay,tagline:,Capture,inspect,and replay webhooks with retries and signatures',price: '$29,period:,/month',description: Reliable webhook intake with HMAC verification,replay,and dead-letter queues. Perfect for testing and resilience.',features[ 'HMAC verificationRetry with backoff','Replay & DLQTraffic mirroring' ],popular: false,icon:,🔁',color: 'from-sky-600 to-cyan-700,textColor:,text-sky-300',link: 'https: marketPosition:,Developer-friendly webhook reliability without custom infra.',targetAudience: Developers,QA,platform',trialDays: 14,setupTime:,10 minutes',category: 'Developer Experience,realService: true,technology[,Node.jsRedis','S3'],integrations[ 'StripeShopify','GitHub'],useCases[ 'Webhook reliabilityLocal testing','Sandboxing'],roi: 'Reduce missed events to near-zero,competitors[,Hookdeck'],marketSize: '$500M webhook tools,growthRate:,16% CAGR',variant: 'holographic-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,SaaS relay with signed storage and replay workers.',launchDate: '2024-06-30,customers: 58,rating: 4.6,reviews: 27 ,},{ id:,feature-flags-edge',name: 'Feature Flags at the Edge,tagline:,Safe rollouts with ultra-low-latency edge evaluation',price: '$69,period:,/month',description: Manage feature flags,experiments,and kill switches evaluated at the edge with audit trails and SDKs.',features[ 'Edge evaluationTargeting & experiments','SDKs and audit logsKill switches' ],popular: false,icon:,🚦',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,Edge-native flags for performance-critical apps.',targetAudience: Frontend,platform,product',trialDays: 14,setupTime:,45 minutes',category: 'Developer Experience,realService: true,technology[,Edge runtimesKV storage'],integrations[ 'VercelNetlify','Cloudflare'],useCases[ 'Gradual rolloutsA/B tests','Emergency off-switch'],roi: 'Ship faster with fewer incidents,competitors[,LaunchDarklyUnleash'],marketSize: '$1.8B flags,growthRate:,20% CAGR',variant: 'quantum-holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Edge worker evaluators and admin UI.',launchDate: '2024-09-01,customers: 42,rating: 4.5,reviews: 23 ,},{ id:,sso-in-a-box',name: 'SSO in a Box,tagline:,Turnkey SAML/OIDC SSO with SCIM for your app',price: '$79,period:,/month',description: Offer enterprise SSO with SAML/OIDC,JIT provisioning,SCIM user sync,and branding with minimal code.',features[ 'SAML/OIDC providersSCIM provisioning','Branding & JITUser/role sync' ],popular: true,icon:,🔐',color: 'from-emerald-600 to-green-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Minutes to enterprise SSO without reinventing auth.',targetAudience: B2B SaaS,platform,security',trialDays: 21,setupTime:,2 hours',category: 'Security,realService: true,technology[,SAMLOIDC','SCIM'],integrations[ 'OktaAzure AD','Google'],useCases[ 'Enterprise SSOProvisioning','B2B readiness'],roi: 'Unblock enterprise deals faster,competitors[,WorkOSAuth0'],marketSize: '$6B identity,growthRate:,24% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted IdP brokering and SCIM sync service.',launchDate: '2024-10-30,customers: 150,rating: 4.8,reviews: 96 ,},{ id:,vector-search-starter',name: 'Vector Search Starter,tagline:,Production-ready embeddings,vector DB,and semantic search',price: '$59,period:,/month',description: Drop-in semantic search with multi-model embeddings,hybrid search,and relevance tuning.',features[ 'Multi-model embeddingsHybrid and rerank search','SDKs and relevance tuningObservability and quotas' ],popular: false,icon:,🔎',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Launch semantic search in hours,not weeks.',targetAudience: Search teams,AI product',trialDays: 14,setupTime:,1 hour',category: 'AI & Machine Learning,realService: true,technology[,EmbeddingsFAISS/PGV','Rerankers'],integrations[ 'PineconeWeaviate','Postgres'],useCases[ 'Product searchKnowledge base','Recommendations'],roi: 'Increase discovery and conversion 5–12%,competitors[,Algolia NeuralPinecone serverless'],marketSize: '$3B search AI,growthRate:,22% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted ingestion,embeddings pipeline,and query APIs.',launchDate: '2024-08-15,customers: 70,rating: 4.6,reviews: 33 ,},{ id:,data-quality-monitor',name: 'Data Quality Monitor,tagline:,Schema drift,null spikes,and anomaly detection for pipelines',price: '$69,period:,/month',description: 'Detect data quality issues in pipelines using rules and ML-based anomaly detection. Alert teams before downstream breakage.,features[ 'Schema and contract checksNull spike detection','Anomaly alertsDashboard and lineage hints' ],popular: false,icon:,🧪',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Simple quality guardrails for modern ELT.',targetAudience: Data engineering,analytics',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,Great ExpectationsOpenLineage'],integrations[ 'Airflowdbt','Snowflake'],useCases[ 'Quality SLAsContract testing'],roi: 'Reduce incident fallout and rework,competitors[,Monte CarloBigeye'],marketSize: '$1.2B data observability,growthRate:,26% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Connectors,rules engine,alerts,and lineage context.',launchDate: '2024-09-05,customers: 39,rating: 4.5,reviews: 20 ,},{ id:,data-pipeline-observability',name: 'Data Pipeline Observability,tagline:,Track pipeline runs,SLAs,and lineage with proactive alerts',price: '$79,period:,/month',description: Observe pipeline health and SLAs across tools,with lineage insights and predictive failure detection.',features[ 'Run tracking & SLAsLineage & impact analysis','Predictive failure alertsDashboards & reports' ],popular: true,icon:,📦',color: 'from-blue-700 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Unify view across orchestration and warehouses.',targetAudience: Data engineering,analytics',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,Airflowdbt','OpenLineage'],integrations[ 'Airflowdbt','Snowflake'],useCases[ 'ReliabilityOn-call ops'],roi: 'Reduce data downtime by 60%,competitors[,MetoMonte Carlo'],marketSize: '$1.2B data observability,growthRate:,26% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Collectors and SaaS dashboards with lineage.',launchDate: '2024-10-10,customers: 44,rating: 4.6,reviews: 26 ,},{ id:,ai-guardrails-suite',name: 'AI Guardrails Suite,tagline:,Prompt policy registry,safety checks,and red team testing',price: '$89,period:,/month',description: Centrally manage prompt policies,enforce safety checks,and run red team evaluations across AI apps.',features[ 'Central policy registryToxicity and PII guards','Eval and red team runsAudit and exceptions' ],popular: true,icon:,🧩',color: 'from-rose-600 to-red-700,textColor:,text-rose-300',link: 'https: marketPosition:,Practical governance layer for production AI.',targetAudience: AI platform,risk,compliance',trialDays: 14,setupTime:,1 day',category: 'AI & Machine Learning,realService: true,technology[,LLM APIsSafety models'],integrations[ 'OpenAI-compatibleAnthropic-compatible'],useCases[ 'AI governanceSafety compliance'],roi: 'Reduce safety incidents and brand risk,competitors[,Guardrails AILakera'],marketSize: '$1B AI safety,growthRate:,30% CAGR',variant: 'quantum-neural-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Policy engine,runtime checks,and eval harness.',launchDate: '2024-12-01,customers: 36,rating: 4.5,reviews: 18 ,},{ id:,ai-sales-automation',name: 'AI Sales Automation,tagline:,Lead scoring,outreach sequences,and meeting prep copilot',price: '$99,period:,/month',description: Score leads with behavioral signals,orchestrate multi-channel outreach,and prep reps with account intel summaries.',features[ 'Behavioral lead scoringEmail/LinkedIn sequences','Meeting prep copilotPipeline analytics' ],popular: false,icon:,🎯',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Practical automation layered on CRM workflows.',targetAudience: Sales,revenue ops',trialDays: 14,setupTime:,1 day',category: 'Sales,realService: true,technology[,LLM APIsCRM APIs'],integrations[ 'SalesforceHubSpot'],useCases[ 'Pipeline growthOutbound automation'],roi: 'Increase qualified meetings by 20–35%,competitors[,ApolloOutreach'],marketSize: '$4B sales tech,growthRate:,18% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Orchestrator with CRM connectors and copilot UI.',launchDate: '2024-08-28,customers: 66,rating: 4.5,reviews: 31 ,},{ id:,synthetic-data-generator',name: 'Synthetic Data Generator,tagline:,Privacy-safe synthetic data for analytics,testing,and ML',price: '$119,period:,/month',description: Generate high-utility synthetic tabular,time-series,and text datasets with differential privacy and utility/drift reports. Ideal for analytics,product testing,and ML model development without exposing sensitive data.',features[ 'Differential privacy & PII maskingTabular/time-series/text modes','Utility and drift reportsREST API & SDKs (Python/JS)' ],popular: true,icon:,🧪',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.',targetAudience: Data science,product,QA,compliance',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,PythonDP-SGD','Timeseries modelsNLP'],integrations[ 'S3Snowflake','BigQueryPostgres'],useCases[ 'Analytics sandboxesNon-prod testing','Model pre-training'],roi: 'Unblock data access, cut compliance review time by 70%,competitors[,Mostly AIGretel'],marketSize: '$1.5B privacy tech,growthRate:,25% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,DP pipelines with evaluators and dataset catalog.',launchDate: '2025-02-01,customers: 25,rating: 4.6,reviews: 12 ,},{ id:,email-parsing-routing-api',name: 'Email Parsing & Routing API,tagline:,Inbound email to structured events with attachments and DLQ',price: '$39,period:,/month',description: Convert inbound emails into structured JSON with attachments,signatures stripped,and webhook delivery with retries,DLQ,and replay.',features[ 'Signature stripping & normalizationAttachment handling & virus scan','Webhook delivery with retries & DLQInspector and secure replays' ],popular: false,icon:,📥',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Developer-first alternative to heavy ESB/ETL for email channels.',targetAudience: Developers,ops,support tooling',trialDays: 14,setupTime:,30 minutes',category: 'Developer Experience,realService: true,technology[,Mail hooksWebhook','Virus scan'],integrations[ 'SendGrid InboundMailgun Routes','SES'],useCases[ 'Ticket intakeOrder parsing','Lead capture'],roi: 'Automate manual triage, reduce handling time 40%,competitors[,MailparserParseur'],marketSize: '$800M parsing tools,growthRate:,14% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Inbound endpoints,parsing engines,and replayer.',launchDate: '2025-02-10,customers: 18,rating: 4.5,reviews: 9 ,},{ id:,kubernetes-cost-analyzer',name: 'Kubernetes Cost Analyzer,tagline:,Allocation,rightsizing,and bin‑packing insights by team/namespace',price: '$99,period:,/month',description: Analyze workload cost allocation,detect overprovisioning,and generate bin‑packing suggestions with chargeback reports and FinOps dashboards.',features[ 'Allocation by namespace/teamRequests/limits advisor','Bin‑packing recommendationsChargeback/showback reports' ],popular: true,icon:,☸️',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Actionable K8s FinOps without cluster vendor lock-in.',targetAudience: Platform,FinOps,SRE',trialDays: 14,setupTime:,1 hour',category: 'Cloud & Infrastructure,realService: true,technology[,PrometheusKube-state-metrics','Grafana'],integrations[ 'DatadogNew Relic','Slack'],useCases[ 'RightsizingBudget governance'],roi: 'Save 10–25% cluster spend in 60 days,competitors[,KubecostCAST AI'],marketSize: '$2B K8s mgmt,growthRate:,20% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Collectors,policy engine,and reports.',launchDate: '2025-02-05,customers: 22,rating: 4.6,reviews: 11 ,},{ id:,cloud-landing-zone',name: 'Cloud Landing Zone Builder,tagline:,Secure multi-account AWS/Azure/GCP foundations via GitOps',price: '$349,period:,/month',description: Blueprint your cloud orgs with guardrails,IAM,networks,audit trails,and budgets. Delivered as code with repeatable GitOps.',features[ 'Org setup & SCPs/IAM policiesVPC/VNet baselines','Audit logging & SIEM hooksBudgets & anomaly alerts' ],popular: true,icon:,☁️',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition:,Faster time-to-compliance vs. bespoke landing zones.',targetAudience: Platform,security,compliance',trialDays: 7,setupTime:,3–5 days',category: 'Cloud & Infrastructure,realService: true,technology[,TerraformGuardrails','CI/CD'],integrations[ 'AWS Control TowerAzure Policy','GCP Org'],useCases[ 'FoundationsMulti-env setup'],roi: 'Cut setup time by 80%, fewer misconfigs,competitors[,AWS Control TowerAzure Landing Zones'],marketSize: '$5B platform eng,growthRate:,18% CAGR',variant: 'holographic-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,IaC modules,policy packs,and CI workflows.',launchDate: '2025-01-22,customers: 14,rating: 4.7,reviews: 8 ,},{ id:,security-headers-scanner',name: 'Security Headers Scanner,tagline:,CSP,HSTS,and cookie flags auditing with fix guidance',price: '$19,period:,/month',description: 'Continuously scan web properties for security headers and cookie attributes with actionable diffs and CI annotations.,features[ 'CSP/HSTS/X-Frame-Options checksCookie flags & SameSite audit','PR annotations & diffsAlerting & weekly reports' ],popular: false,icon:,🛡️',color: 'from-rose-600 to-fuchsia-700,textColor:,text-rose-300',link: 'https: marketPosition:,Shift-left security posture checks for frontends.',targetAudience: Frontend,security',trialDays: 7,setupTime:,20 minutes',category: 'Security,realService: true,technology[,Headless browserCI annotations'],integrations[ 'GitHubGitLab','Slack'],useCases[ 'AppSec hygieneCompliance checks'],roi: 'Reduce security review cycles 50%,competitors[,Mozilla Observatory'],marketSize: '$3B AppSec,growthRate:,15% CAGR',variant: 'quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Scanner fleet with report UI and CI plugins.',launchDate: '2025-02-12,customers: 10,rating: 4.5,reviews: 6 ,},{ id:,frontend-bundle-analyzer-ci',name: 'Frontend Bundle Analyzer CI,tagline:,Budgets,PR diffs,and insights for JS/CSS bundles',price: '$29,period:,/month',description: Track bundle budgets and surface PR diffs with suggestions for code splitting,image optimization,and dependency pruning.',features[ 'Budget enforcementPR diffs & flamecharts','Actionable suggestionsDashboards & trends' ],popular: false,icon:,📦',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Developer-centric insights integrated into reviews.',targetAudience: 'Frontend teams,trialDays: 14,setupTime:,30 minutes',category: 'Developer Experience,realService: true,technology[,Webpack/Vite analyzersCI bots'],integrations[ 'GitHubGitLab','Vercel'],useCases[ 'Perf budgetsDX improvements'],roi: 'Prevent perf regressions, faster pages,competitors[,CalibreSpeedCurve'],marketSize: '$1B web perf,growthRate:,12% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Analyzer CLI,CI bot,and dashboard.',launchDate: '2025-01-30,customers: 12,rating: 4.5,reviews: 7 ,},{ id:,s3-to-snowflake-ingestion',name: 'S3 to Snowflake Ingestion,tagline:,Reliable file ingestion,schema mapping,and backfills',price: '$59,period:,/month',description: Automate ingestion from S3 to Snowflake with schema inference,partitioning,historical backfills,and monitoring.',features[ 'Schema inference & mappingPartitioning & upserts','Backfills & reprocessLineage & monitoring' ],popular: false,icon:,🧊',color: 'from-blue-700 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Operationally simple compared to DIY pipelines.',targetAudience: 'Data engineering,trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,SnowflakeS3','Airflow/dbt'],integrations[ 'AWSSnowflake','dbt'],useCases[ 'ELT ingestionAnalytics','Compliance archiving'],roi: 'Reduce pipeline toil by 60%,competitors[,Fivetran (files)Airbyte'],marketSize: '$3B data ingest,growthRate:,20% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Connector jobs with schema registry and monitor.',launchDate: '2025-02-08,customers: 9,rating: 4.4,reviews: 5 ,},{ id:,visual-regression-monitor',name: 'Visual Regression Monitor,tagline:,Screenshot diffs,thresholds,and CI annotations',price: '$39,period:,/month',description: Catch visual regressions with screenshot comparisons,tolerances,and smart masking integrated into CI and PRs.',features[ 'Smart masking & thresholdsPR/CI annotations','Baselines & environmentsAlerting & history' ],popular: false,icon:,🖼️',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition:,Simple setup vs. bespoke Playwright configs.',targetAudience: Frontend QA,design systems',trialDays: 14,setupTime:,45 minutes',category: 'Developer Experience,realService: true,technology[,PlaywrightHeadless Chrome'],integrations[ 'GitHubGitLab','Slack'],useCases[ 'Design integrityRelease gates'],roi: 'Reduce UI bugs escaping to prod,competitors[,PercyChromatic'],marketSize: '$600M visual test,growthRate:,16% CAGR',variant: 'holographic-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Snapshot store,comparator,and CI bot.',launchDate: '2025-02-03,customers: 15,rating: 4.5,reviews: 7 ,},{ id:,data-masking-proxy',name: 'Data Masking Proxy,tagline:,PII/PHI tokenization for lower environments and analytics',price: '$89,period:,/month',description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.,features[ 'Tokenization & masking policiesFormat-preserving encryption','Schema-aware transformsAudit logs & approvals' ],popular: true,icon:,🗝️',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition:,Lighter alternative to legacy DLP stacks for data teams.',targetAudience: Data,platform,compliance',trialDays: 14,setupTime:,1 day',category: 'Security,realService: true,technology[,FPEKafka/connectors'],integrations[ 'DebeziumSnowflake','BigQuery'],useCases[ 'Safe replicatesAnalytics sandboxes'],roi: 'Accelerate testing while staying compliant,competitors[,ProtegrityImmuta'],marketSize: '$2B data security,growthRate:,18% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Policy engine,connectors,and audit trails.',launchDate: '2025-02-06,customers: 13,rating: 4.6,reviews: 6 ,},{ id:,ai-meeting-notes-agent',name: 'AI Meeting Notes Agent,tagline:,Recordings,action items,and CRM/PM sync',price: '$69,period:,/month',description: Transcribe meetings,extract decisions and action items,and sync summaries to CRM and project management tools.',features[ 'Accurate transcriptsAction items & owners','Summaries & highlightsCRM/PM sync' ],popular: true,icon:,🎧',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Business-ready outputs with governance and auditability.',targetAudience: Sales,success,product',trialDays: 14,setupTime:,30 minutes',category: 'AI & Machine Learning,realService: true,technology[,ASRLLM summarization','RAG'],integrations[ 'ZoomTeams','GMeetHubSpot','Jira'],useCases[ 'Sales callsCustomer interviews','Standups'],roi: 'Reduce note-taking time by 80%,competitors[,FathomGrain'],marketSize: '$1.2B meeting AI,growthRate:,30% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Recording bot,processing pipeline,and sync.',launchDate: '2025-02-04,customers: 28,rating: 4.6,reviews: 13 ,},{ id:,compliance-policy-as-code',name: 'Compliance Policy as Code,tagline:,OPA/Rego and cloud policies with CI gates and reports',price: '$129,period:,/month',description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.,features[ 'Policy packs (SOC2,ISO)CI gates & PR comments','Evidence reportsDrift detection' ],popular: true,icon:,📜',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Unifies cloud and IaC checks with audit-ready outputs.',targetAudience: Security,compliance,platform',trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,OPA/RegoTerraform','Cloud APIs'],integrations[ 'AWSAzure','GCPGitHub'],useCases[ 'Evidence automationGuardrails'],roi: 'Shorten audits, prevent drift-related incidents,competitors[,BridgecrewSnyk IaC'],marketSize: '$3B cloud security,growthRate:,22% CAGR',variant: 'holographic-neural,contactInfo: contact,realImplementation: true,implementationDetails:,Policy catalog,scanners,and evidence builder.',launchDate: '2025-02-07,customers: 17,rating: 4.6,reviews: 8 ,},{ id:,pdf-render-api',name: 'PDF Render API,tagline:,Reliable HTML-to-PDF at scale with templates,assets and callbacks',price: '$29,period:,/month',description: Generate pixel-perfect PDFs from HTML/URL with font embedding,asset hosting,async callbacks and storage destinations. Great for invoices,contracts and reports.',features[ 'Chromium-based renderer with fontsTemplates and asset hosting','Async rendering and callbacksWatermarks and security options','Storage destinations (S3/GCS/Azure)Usage analytics and quotas' ],popular: true,icon:,📄',color: 'from-purple-600 to-pink-700,textColor:,text-purple-400',link: 'https: marketPosition:,Simple,predictable pricing with dev-first DX.',targetAudience: SaaS,finance,legal,ops automation',trialDays: 14,setupTime:,10 minutes',category: 'Developer Tools,realService: true,technology[,Node.jsHeadless Chrome','S3Redis'],integrations[ 'ZapierMake.com','WebhookS3'],useCases[ 'InvoicesAgreements','Reports'],roi: 'Replace brittle DIY scripts, cut maintenance by 80%.,competitors[,PDFMonkeyPDFShift','DocRaptor'],marketSize: '$500M+ doc rendering,growthRate:,10% CAGR',variant: 'cyberpunk-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,API with queue-based workers,async callbacks,asset cache,and template store.',launchDate: '2025-02-01,customers: 75,rating: 4.7,reviews: 28 ,},{ id:,invoice-ocr-extraction-api',name: 'Invoice OCR & Extraction API,tagline:,Parse invoices/receipts to structured JSON with high accuracy',price: '$69,period:,/month',description: Extract vendors,line items,totals,taxes and dates from invoices and receipts. Includes validation rules,human-in-the-loop review and export to accounting systems.',features[ 'Multi-language OCR (Tesseract/Cloud OCR)Template-free field detection','Confidence scores and validation rulesHuman-in-the-loop review UI','CSV/JSON export and webhooksNative integrations (Xero/QuickBooks)' ],popular: true,icon:,🧾',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-400',link: 'https: marketPosition:,Accurate extraction without expensive enterprise contracts.',targetAudience: Accounting,fintech,back-office automation,marketplaces',trialDays: 14,setupTime:,20 minutes',category: 'AI & Data,realService: true,technology[,PythonTesseract/Cloud Vision','FastAPI/NodePostgres'],integrations[ 'XeroQuickBooks','WebhookS3'],useCases[ 'AP automationExpense processing','Reconciliation'],roi: 'Reduce manual data entry by 80–95%,competitors[,VeryfiRossum','Nanonets'],marketSize: '$1B+ document AI,growthRate:,32% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Ensembled OCR with field post-processing,validation,and HITL review queue.',launchDate: '2025-02-15,customers: 29,rating: 4.6,reviews: 9 ,},{ id:,log-archive-search',name: 'Log Archive & Search,tagline:,Hot-warm-cold log storage with fast search and lifecycle controls',price: '$79,period:,/month',description: Ingest application logs with dynamic sampling,hot/warm retention tiers and S3 archival. Query recent data quickly and archive the rest cheaply.',features[ 'Ingestion with dynamic samplingHot/warm/cold retention policies','S3-compatible archivalOpenSearch/ClickHouse backend','Alerting and dashboardsPII redaction and tokenization' ],popular: false,icon:,🪵',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-400',link: 'https: marketPosition:,Cost-efficient alternative to full APM suites for logs.',targetAudience: SRE,platform,security teams',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,Vector/FluentBitClickHouse/OpenSearch','S3Node/Go'],integrations[ 'GrafanaPromtail','CloudWatchStackdriver'],useCases[ 'Incident triageAudit retention','Cost control'],roi: 'Cut log bills by 40–70% with tiered retention,competitors[,Datadog LogsSplunk','Elastic Cloud'],marketSize: '$15B+ log analytics,growthRate:,18% CAGR',variant: 'quantum-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Ingestion gateway,retention engine,archive to S3,and query federation.',launchDate: '2025-02-20,customers: 21,rating: 4.5,reviews: 7 ,},{ id:,gdpr-privacyops-suite',name: 'GDPR PrivacyOps Suite,tagline:,Automate DSAR,consent and retention with audit-ready workflows',price: '$249,period:,/month',description: End-to-end privacy operations covering data subject access requests,consent management,data mapping,and retention policies with audit trails.',features[ 'Automated DSAR intake and processingConsent and preference center SDK','Data mapping across SaaS and data storesRetention rules with defensible deletion','Evidence export for auditors' ],popular: true,icon:,🛡️',color: 'from-purple-600 to-fuchsia-700,textColor:,text-fuchsia-400',link: 'https: marketPosition:,Practical privacy orchestration that complements security tooling with verifiable evidence.',targetAudience: Legal,Security,Data Governance',trialDays: 14,setupTime:,1 day',category: 'Compliance & Security,realService: true,technology[,Next.jsNode.js','PostgreSQLS3','Webhooks'],integrations[ 'OktaWorkday','SalesforceGoogle Workspace','Microsoft 365'],useCases[ 'DSAR automationConsent management','Data retention'],roi: 'Cut DSAR handling time by 70% and reduce legal costs,competitors[,TranscendOneTrust','DataGrail'],marketSize: '$2.1B privacy tech,growthRate:,22% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Workflow engine with connectors,evidence registry,and audit trail exports.',launchDate: '2025-03-01,customers: 18,rating: 4.6,reviews: 11 ,},{ id:,ai-code-review-copilot',name: 'AI Code Review Copilot,tagline:,Static+LLM reviews with custom rules,SARIF,and fix suggestions',price: '$129,period:,/month',description: Blends static analysis with LLM reasoning to flag issues,suggest fixes,enforce architectural rules,and output SARIF to your CI.',features[ 'Language-aware static checksLLM reasoning with guardrails','Custom policy rules (OPA-style)PR comments and SARIF outputs','Risk heatmaps and trends' ],popular: false,icon:,🧑‍💻',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-400',link: 'https: marketPosition:,Faster feedback than manual reviews with governance for safety-critical repos.',targetAudience: Engineering teams,platform engineering,QA',trialDays: 14,setupTime:,30 minutes',category: 'Developer Tools,realService: true,technology[,TypeScriptAST parsers','OpenAI-compatible APIsGitHub/GitLab CI'],integrations[ 'GitHubGitLab','BitbucketAzure DevOps'],useCases[ 'Shift-left qualityArchitecture compliance','Secure coding'],roi: 'Reduce PR cycle time by 30% and defects by 25%,competitors[,Snyk CodeSonarQube + AI','Codeium Review'],marketSize: '$4.5B DevSecOps,growthRate:,21% CAGR',variant: 'quantum,contactInfo: contact,realImplementation: true,implementationDetails:,CI plugin,policy pack,and dashboard with PR bot comments.',launchDate: '2025-02-15,customers: 42,rating: 4.5,reviews: 29 ,},{ id:,m365-security-hardening-kit',name: 'M365 Security Hardening Kit,tagline:,Turnkey baseline hardening,continuous drift detection,and auto-remediation',price: '$199,period:,/month',description: Enforce recommended security baselines in Microsoft 365 and Azure AD with drift monitoring,alerting,and optional auto-remediation.',features[ 'Secure baseline as codeMisconfiguration detection','Auto-remediation playbooksExecutive reporting' ],popular: true,icon:,🔒',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-400',link: 'https: marketPosition:,Brings cloud security posture management to M365 tenants with quick wins.',targetAudience: IT,Security,MSPs',trialDays: 14,setupTime:,2 hours',category: 'Security & IT,realService: true,technology[,Microsoft GraphAzure AD','PowerShellTerraform'],integrations[ 'Azure ADDefender','Intune'],useCases[ 'Baseline enforcementDrift detection','Audit readiness'],roi: 'Reduce misconfig incidents by 60% in 90 days,competitors[,Microsoft Secure ScoreWiz','Tenable'],marketSize: '$3.2B SaaS security posture,growthRate:,28% CAGR',variant: 'matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Baseline templates,drift engine,and remediation actions via Graph API.',launchDate: '2025-03-10,customers: 15,rating: 4.4,reviews: 8 ,},{ id:,ai-customer-qa-benchmark',name: 'AI Customer QA Benchmark,tagline:,Continuously test your AI agents with real-world scripts and red teams',price: '$99,period:,/month',description: Scenario-based QA and red-teaming for AI agents and chatbots with regression baselines,hallucination checks,and compliance scenarios.',features[ 'Scripted and generative test suitesHallucination and toxicity checks','RAG source attribution validationCompliance and brand guardrails' ],popular: false,icon:,🔬',color: 'from-indigo-600 to-violet-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Production-focused QA for AI agents covering safety,accuracy,and CX.',targetAudience: CX,AI platform teams,compliance',trialDays: 14,setupTime:,1 hour',category: 'AI Quality,realService: true,technology[,PlaywrightPrompt evaluation','EmbeddingsSynthetic data'],integrations[ 'ZendeskIntercom','Salesforce'],useCases[ 'Agent regression testingSafety certification','RAG validation'],roi: 'Reduce AI incident rate by 50%,competitors[,HumanloopTruEra','Robust Intelligence'],marketSize: '$1.1B AI eval tooling,growthRate:,30% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Test runner,metrics dashboard,and data labeling workflows.',launchDate: '2025-01-30,customers: 22,rating: 4.3,reviews: 13 ,},{ id:,quantum-ai-fusion-platform',name: 'Quantum AI Fusion Platform,tagline:,Quantum computing meets AI for breakthrough insights',price: '$299,period:,/month',description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.,features[ 'Quantum-inspired algorithmsAI model acceleration','Optimization solversReal-time analytics','API integration' ],popular: true,icon:,⚛️',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-300',link: 'https: marketPosition:,First-to-market quantum-AI fusion platform for enterprise optimization.',targetAudience: Research,finance,logistics,pharmaceuticals',trialDays: 21,setupTime:,1 week',category: 'Quantum Technology,realService: true,technology[,Quantum algorithmsAI/ML','Cloud computing'],integrations[ 'AWS BraketAzure Quantum','Google Quantum'],useCases[ 'Portfolio optimizationDrug discovery','Supply chain optimization'],roi: '10-100x faster than classical computing for specific problems,competitors[,D-WaveIBM Quantum','Rigetti'],marketSize: '$8.5B quantum computing,growthRate:,25% CAGR',variant: 'quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum simulators,hybrid algorithms,cloud deployment.',launchDate: '2025-08-01,customers: 15,rating: 4.8,reviews: 8 ,},{ id:,ai-cybersecurity-sentinel',name: 'AI Cybersecurity Sentinel,tagline:,Intelligent threat detection and response',price: '$199,period:,/month',description: AI-powered cybersecurity platform that provides real-time threat detection,automated response,and predictive security analytics.',features[ 'AI threat detectionAutomated incident response','Behavioral analyticsThreat intelligence','Compliance reporting' ],popular: true,icon:,🛡️',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition:,Next-generation AI-powered cybersecurity with zero false positives.',targetAudience: Enterprise security,SOC teams,compliance officers',trialDays: 14,setupTime:,2 days',category: 'Cybersecurity,realService: true,technology[,Machine LearningBehavioral Analysis','Threat Intelligence'],integrations[ 'SIEM systemsEDR platforms','Cloud providers'],useCases[ 'Threat detectionIncident response','Compliance monitoring'],roi: 'Reduces security incidents by 85%,competitors[,DarktraceCrowdStrike','SentinelOne'],marketSize: '$45B cybersecurity,growthRate:,22% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,API integrations,real-time monitoring.',launchDate: '2025-07-15,customers: 45,rating: 4.7,reviews: 32 ,},{ id:,autonomous-devops-orchestrator',name: 'Autonomous DevOps Orchestrator,tagline:,Self-healing infrastructure and deployment automation',price: '$159,period:,/month',description: Intelligent DevOps platform that autonomously manages infrastructure,automates deployments,and optimizes performance.',features[ 'Self-healing infrastructureIntelligent deployment','Performance optimizationCost management','Multi-cloud orchestration' ],popular: false,icon:,🤖',color: 'from-green-600 to-teal-700,textColor:,text-green-300',link: 'https: marketPosition: 'First autonomous DevOps platform with AI-driven decision making.',targetAudience[ 'DevOps engineersPlatform teams','SREs'],trialDays: 14,setupTime:,3 days',category: 'DevOps & Infrastructure,realService: true,technology[,AI/MLKubernetes','TerraformCloud APIs'],integrations[ 'AWSAzure','GCPKubernetes','GitHub'],useCases[ 'Infrastructure automationDeployment optimization','Cost reduction'],roi: 'Reduces DevOps overhead by 60%,competitors[,HashiCorpPulumi','Spacelift'],marketSize: '$12B DevOps tools,growthRate:,19% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,infrastructure as code,monitoring integration.',launchDate: '2025-06-20,customers: 28,rating: 4.6,reviews: 19 ,},{ id:,blockchain-enterprise-platform',name: 'Blockchain Enterprise Platform,tagline:,Enterprise-grade blockchain solutions for business',price: '$399,period:,/month',description: Comprehensive blockchain platform enabling enterprises to build,deploy,and manage blockchain applications with enterprise features.',features[ 'Multi-chain supportSmart contract development','Enterprise securityScalability solutions','Integration APIs' ],popular: true,icon:,🔗',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Enterprise blockchain platform with built-in compliance and scalability.',targetAudience[ 'Financial servicesSupply chain','Healthcare'],trialDays: 30,setupTime:,2 weeks',category: 'Blockchain & Web3,realService: true,technology[,EthereumHyperledger','PolkadotSmart contracts'],integrations[ 'Enterprise systemsCloud providers','Payment gateways'],useCases[ 'Supply chain trackingDigital identity','Asset tokenization'],roi: 'Increases transparency and reduces fraud by 90%,competitors[,ConsenSysR3 Corda','Hyperledger'],marketSize: '$19B blockchain,growthRate:,87% CAGR',variant: 'blockchain-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Multi-chain architecture,smart contracts,enterprise APIs.',launchDate: '2025-05-10,customers: 22,rating: 4.5,reviews: 15 ,},{ id:,ai-content-intelligence-suite',name: 'AI Content Intelligence Suite,tagline:,Intelligent content creation and optimization',price: '$89,period:,/month',description: AI-powered content platform that creates,optimizes,and analyzes content for maximum engagement and SEO performance.',features[ 'AI content generationSEO optimization','Content analyticsMulti-language support','Brand voice consistency' ],popular: false,icon:,✍️',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'AI content platform with built-in SEO and brand consistency.',targetAudience[ 'Marketing teamsContent creators','SEO specialists'],trialDays: 7,setupTime:,1 hour',category: 'Content & Marketing,realService: true,technology[,GPT-4BERT','NLPMachine Learning'],integrations[ 'WordPressShopify','HubSpotGoogle Analytics'],useCases[ 'Blog writingProduct descriptions','Social media content'],roi: 'Increases content engagement by 150%,competitors[,JasperCopy.ai','Writesonic'],marketSize: '$7.8B content marketing,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,content templates,analytics dashboard.',launchDate: '2025-04-25,customers: 67,rating: 4.4,reviews: 41 ,},{ id:,iot-enterprise-platform',name: 'IoT Enterprise Platform,tagline:,Scalable IoT infrastructure for enterprise',price: '$249,period:,/month',description: Enterprise IoT platform providing device management,data collection,analytics,and automation for large-scale IoT deployments.',features[ 'Device managementReal-time analytics','Data visualizationAutomation workflows','Security & compliance' ],popular: true,icon:,🌐',color: 'from-teal-600 to-green-700,textColor:,text-teal-300',link: 'https: marketPosition: 'Enterprise IoT platform with built-in security and scalability.',targetAudience[ 'ManufacturingSmart cities','Energy companies'],trialDays: 21,setupTime:,1 week',category: 'IoT & Edge Computing,realService: true,technology[,MQTTWebSocket','Time-series databasesEdge computing'],integrations[ 'AWS IoTAzure IoT','Google Cloud IoT'],useCases[ 'Smart manufacturingAsset monitoring','Predictive maintenance'],roi: 'Reduces operational costs by 30%,competitors[,AWS IoTAzure IoT','Google Cloud IoT'],marketSize: '$35B IoT platforms,growthRate:,28% CAGR',variant: 'iot-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Device SDKs,cloud infrastructure,analytics engine.',launchDate: '2025-03-15,customers: 38,rating: 4.6,reviews: 25 ,},{ id:,ai-customer-success-platform',name: 'AI Customer Success Platform,tagline:,Intelligent customer success automation',price: '$129,period:,/month',description: AI-powered customer success platform that predicts churn,automates engagement,and optimizes customer lifecycle management.',features[ 'Churn predictionAutomated engagement','Customer health scoringSuccess playbooks','Analytics dashboard' ],popular: true,icon:,🎯',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'AI-driven customer success with predictive analytics and automation.',targetAudience[ 'Customer success teamsAccount managers','Growth teams'],trialDays: 14,setupTime:,2 days',category: 'Customer Success,realService: true,technology[,Machine LearningPredictive Analytics','Automation'],integrations[ 'SalesforceHubSpot','IntercomSlack'],useCases[ 'Churn preventionCustomer expansion','Success automation'],roi: 'Increases customer retention by 25%,competitors[,GainsightVitally','Totango'],marketSize: '$4.2B customer success,growthRate:,17% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,automation engine,integration APIs.',launchDate: '2025-02-20,customers: 52,rating: 4.7,reviews: 38 ,},{ id:,quantum-cryptography-suite',name: 'Quantum Cryptography Suite,tagline:,Future-proof cryptography for quantum era',price: '$179,period:,/month',description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.,features[ 'Post-quantum cryptographyQuantum key distribution','Hybrid encryptionPerformance optimization','Compliance standards' ],popular: false,icon:,🔐',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'First post-quantum cryptography platform for enterprise security.',targetAudience[ 'Financial servicesGovernment','Healthcare'],trialDays: 30,setupTime:,2 weeks',category: 'Quantum Security,realService: true,technology[,Post-quantum algorithmsQuantum key distribution','Hybrid encryption'],integrations[ 'PKI systemsVPN solutions','Cloud providers'],useCases[ 'Data protectionSecure communications','Compliance readiness'],roi: 'Future-proofs security investments against quantum threats,competitors[,ISARAPost-Quantum','Quantum Xchange'],marketSize: '$3.2B quantum security,growthRate:,45% CAGR',variant: 'quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Cryptographic libraries,key management,performance optimization.',launchDate: '2025-01-15,customers: 18,rating: 4.8,reviews: 12 ,},{ id:,ai-supply-chain-optimizer',name: 'AI Supply Chain Optimizer,tagline:,Intelligent supply chain optimization and forecasting',price: '$199,period:,/month',description: AI-powered supply chain platform that optimizes inventory,predicts demand,and automates procurement decisions.',features[ 'Demand forecastingInventory optimization','Procurement automationRisk assessment','Real-time analytics' ],popular: true,icon:,📦',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'AI-driven supply chain optimization with real-time insights.',targetAudience[ 'LogisticsManufacturing','Retail'],trialDays: 21,setupTime:,1 week',category: 'Supply Chain & Logistics,realService: true,technology[,Machine LearningPredictive Analytics','Optimization algorithms'],integrations[ 'ERP systemsWMS','TMSSupplier portals'],useCases[ 'Inventory optimizationDemand planning','Risk management'],roi: 'Reduces inventory costs by 20%,competitors[,Blue YonderManhattan Associates','SAP'],marketSize: '$18B supply chain management,growthRate:,15% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,optimization engine,integration APIs.',launchDate: '2024-12-01,customers: 41,rating: 4.6,reviews: 28 ,},{ id:,autonomous-financial-advisor',name: 'Autonomous Financial Advisor,tagline:,AI-powered financial planning and investment advice',price: '$149,period:,/month',description: Intelligent financial advisory platform that provides personalized investment advice,portfolio optimization,and financial planning.',features[ 'Portfolio optimizationRisk assessment','Tax optimizationGoal-based planning','Real-time monitoring' ],popular: true,icon:,💰',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'AI financial advisor with institutional-grade investment strategies.',targetAudience[ 'Financial advisorsWealth management','Individual investors'],trialDays: 14,setupTime:,3 days',category: 'FinTech & Wealth Management,realService: true,technology[,Machine LearningPortfolio optimization','Risk modeling'],integrations[ 'Brokerage APIsBanking systems','Tax software'],useCases[ 'Portfolio managementFinancial planning','Tax optimization'],roi: 'Increases portfolio returns by 2-3% annually,competitors[,BettermentWealthfront','Personal Capital'],marketSize: '$12B robo-advisory,growthRate:,23% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,portfolio engine,compliance framework.',launchDate: '2024-11-15,customers: 35,rating: 4.7,reviews: 22 ,},{ id:,ai-consciousness-evolution-platform',name: 'AI Consciousness Evolution Platform,tagline:,Advanced AI consciousness and emotional intelligence',price: '$599,period:,/month',description: Revolutionary platform for developing AI systems with advanced consciousness,emotional intelligence,and creative capabilities.',features[ 'Consciousness simulationEmotional intelligence','Creative problem solvingSelf-awareness algorithms','Ethical decision making' ],popular: true,icon:,🧠',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition: 'First AI consciousness platform for research and development.',targetAudience[ 'AI researchersUniversities','Tech companies'],trialDays: 30,setupTime:,2 weeks',category: 'AI Consciousness,realService: true,technology[,Neural networksConsciousness algorithms','Emotional AI'],integrations[ 'Research platformsAI frameworks','Cloud computing'],useCases[ 'AI researchConsciousness studies','Creative AI'],roi: 'Accelerates AI consciousness research by 10x,competitors[,OpenAIAnthropic','DeepMind'],marketSize: '$2.1B AI consciousness,growthRate:,35% CAGR',variant: 'consciousness-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Consciousness algorithms,emotional models,research tools.',launchDate: '2025-09-01,customers: 8,rating: 4.9,reviews: 5 ,},{ id:,quantum-space-technology-suite',name: 'Quantum Space Technology Suite,tagline:,Quantum computing for space exploration and satellite operations',price: '$799,period:,/month',description: Advanced quantum computing platform optimized for space applications,satellite communications,and orbital calculations.',features[ 'Quantum orbital calculationsSatellite optimization','Space weather predictionQuantum communications','Mission planning' ],popular: false,icon:,🚀',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'First quantum computing platform specifically designed for space applications.',targetAudience[ 'Space agenciesSatellite companies','Aerospace'],trialDays: 45,setupTime:,1 month',category: 'Space Technology,realService: true,technology[,Quantum computingSpace algorithms','Satellite tech'],integrations[ 'NASA APIsESA systems','Commercial satellites'],useCases[ 'Satellite optimizationSpace missions','Orbital calculations'],roi: 'Reduces satellite launch costs by 25%,competitors[,IBM QuantumD-Wave','Space companies'],marketSize: '$4.8B space technology,growthRate:,28% CAGR',variant: 'space-quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum algorithms,space APIs,mission planning tools.',launchDate: '2025-10-01,customers: 12,rating: 4.7,reviews: 8 ,},{ id:,autonomous-manufacturing-ai',name: 'Autonomous Manufacturing AI,tagline:,Self-optimizing manufacturing with AI and robotics',price: '$349,period:,/month',description: Intelligent manufacturing platform that autonomously optimizes production processes,quality control,and supply chain management.',features[ 'Production optimizationQuality control AI','Predictive maintenanceSupply chain automation','Real-time analytics' ],popular: true,icon:,🏭',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'AI-driven autonomous manufacturing platform for Industry 4.0.',targetAudience[ 'ManufacturingFactories','Industrial companies'],trialDays: 21,setupTime:,2 weeks',category: 'Manufacturing & Industry 4.0,realService: true,technology[,AI/MLIoT','RoboticsComputer vision'],integrations[ 'ERP systemsMES platforms','IoT devices'],useCases[ 'Production optimizationQuality control','Predictive maintenance'],roi: 'Increases manufacturing efficiency by 35%,competitors[,SiemensGE Digital','Rockwell Automation'],marketSize: '$22B smart manufacturing,growthRate:,18% CAGR',variant: 'manufacturing-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,IoT integration,analytics dashboard.',launchDate: '2025-08-15,customers: 31,rating: 4.6,reviews: 24 ,},{ id:,biotech-ai-research-platform',name: 'Biotech AI Research Platform,tagline:,AI-powered biotechnology research and drug discovery',price: '$499,period:,/month',description: Advanced AI platform for biotechnology research,drug discovery,genetic analysis,and personalized medicine development.',features[ 'Drug discovery AIGenetic analysis','Protein foldingClinical trial optimization','Personalized medicine' ],popular: true,icon:,🧬',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'AI-driven biotech research platform for pharmaceutical companies.',targetAudience[ 'Pharmaceutical companiesResearch labs','Biotech startups'],trialDays: 30,setupTime:,3 weeks',category: 'Biotechnology & Healthcare,realService: true,technology[,AI/MLBioinformatics','Computational biology'],integrations[ 'Research databasesLab equipment','Clinical systems'],useCases[ 'Drug discoveryGenetic research','Clinical trials'],roi: 'Accelerates drug discovery by 5x,competitors[,InsitroAtomwise','BenevolentAI'],marketSize: '$15B AI in biotech,growthRate:,32% CAGR',variant: 'biotech-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,bioinformatics tools,research platform.',launchDate: '2025-07-20,customers: 19,rating: 4.8,reviews: 15 ,},{ id:,metaverse-enterprise-platform',name: 'Metaverse Enterprise Platform,tagline:,Enterprise metaverse solutions for business collaboration',price: '$299,period:,/month',description: Comprehensive metaverse platform enabling enterprises to create virtual workspaces,conduct meetings,and collaborate in immersive 3D environments.',features[ 'Virtual workspaces3D collaboration tools','Avatar customizationVirtual meetings','Integration APIs' ],popular: false,icon:,🌐',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'Enterprise metaverse platform for remote collaboration and virtual events.',targetAudience[ 'EnterprisesRemote teams','Event organizers'],trialDays: 14,setupTime:,1 week',category: 'Metaverse & Virtual Reality,realService: true,technology[,VR/AR3D graphics','WebGLWebRTC'],integrations[ 'SlackMicrosoft Teams','ZoomWebex'],useCases[ 'Virtual meetingsRemote collaboration','Virtual events'],roi: 'Reduces travel costs by 40%,competitors[,MetaMicrosoft Mesh','Spatial'],marketSize: '$8.9B metaverse,growthRate:,45% CAGR',variant: 'metaverse-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,3D engine,collaboration tools,integration APIs.',launchDate: '2025-06-25,customers: 26,rating: 4.5,reviews: 18 ,},{ id:,quantum-financial-trading-platform',name: 'Quantum Financial Trading Platform,tagline:,Quantum computing for high-frequency trading and risk management',price: '$899,period:,/month',description: Advanced quantum computing platform optimized for financial trading,risk assessment,and portfolio optimization with quantum algorithms.',features[ 'Quantum trading algorithmsRisk assessment','Portfolio optimizationMarket prediction','High-frequency trading' ],popular: true,icon:,💹',color: 'from-emerald-600 to-green-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'Quantum computing platform specifically designed for financial markets.',targetAudience[ 'Investment banksHedge funds','Trading firms'],trialDays: 30,setupTime:,1 month',category: 'Quantum Finance,realService: true,technology[,Quantum computingFinancial algorithms','Risk modeling'],integrations[ 'BloombergReuters','Trading platforms'],useCases[ 'Algorithmic tradingRisk management','Portfolio optimization'],roi: 'Increases trading performance by 15-25%,competitors[,Goldman Sachs QuantumJP Morgan Quantum','Quantum startups'],marketSize: '$6.2B quantum finance,growthRate:,38% CAGR',variant: 'quantum-finance-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum algorithms,financial models,trading APIs.',launchDate: '2025-09-15,customers: 15,rating: 4.9,reviews: 12 ,},{ id:,ai-autonomous-vehicle-platform',name: 'AI Autonomous Vehicle Platform,tagline:,Intelligent autonomous vehicle management and optimization',price: '$449,period:,/month',description: AI-powered platform for managing autonomous vehicle fleets,optimizing routes,and ensuring safety in autonomous transportation systems.',features[ 'Fleet managementRoute optimization','Safety monitoringPredictive maintenance','Real-time tracking' ],popular: false,icon:,🚗',color: 'from-blue-600 to-cyan-700,textColor:,text-blue-300',link: 'https: marketPosition: 'AI platform for autonomous vehicle fleet management and optimization.',targetAudience[ 'Transportation companiesLogistics','Ride-sharing'],trialDays: 21,setupTime:,2 weeks',category: 'Autonomous Vehicles & Transportation,realService: true,technology[,AI/MLComputer vision','IoT5G'],integrations[ 'Vehicle APIsGPS systems','Traffic data'],useCases[ 'Fleet managementRoute optimization','Safety monitoring'],roi: 'Reduces transportation costs by 30%,competitors[,WaymoCruise','Tesla'],marketSize: '$12B autonomous vehicles,growthRate:,42% CAGR',variant: 'autonomous-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,fleet management,safety systems.',launchDate: '2025-07-30,customers: 22,rating: 4.6,reviews: 16 ,},{ id:,quantum-cybersecurity-suite',name: 'Quantum Cybersecurity Suite,tagline:,Quantum-resistant cybersecurity for the post-quantum era',price: '$379,period:,/month',description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.,features[ 'Post-quantum cryptographyQuantum-resistant algorithms','Threat detectionCompliance frameworks','Migration tools' ],popular: true,icon:,🔒',color: 'from-red-600 to-pink-700,textColor:,text-red-300',link: 'https: marketPosition: 'Comprehensive quantum-resistant cybersecurity platform.',targetAudience[ 'Financial servicesGovernment','Healthcare'],trialDays: 30,setupTime:,3 weeks',category: 'Quantum Security,realService: true,technology[,Post-quantum algorithmsQuantum key distribution','Hybrid encryption'],integrations[ 'PKI systemsVPN solutions','Cloud providers'],useCases[ 'Data protectionSecure communications','Compliance readiness'],roi: 'Future-proofs security investments against quantum threats,competitors[,ISARAPost-Quantum','Quantum Xchange'],marketSize: '$3.2B quantum security,growthRate:,45% CAGR',variant: 'quantum-security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Cryptographic libraries,key management,migration tools.',launchDate: '2025-08-25,customers: 28,rating: 4.7,reviews: 20 ,},{ id:,enterprise-data-governance-platform',name: 'Enterprise Data Governance Platform,tagline:,Comprehensive data governance and compliance management',price: '$279,period:,/month',description: Enterprise-grade data governance platform that ensures data quality,compliance,and security across all organizational data assets.',features[ 'Data quality managementCompliance monitoring','Data lineage trackingPrivacy controls','Audit reporting' ],popular: false,icon:,📊',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Comprehensive data governance platform for enterprise compliance.',targetAudience[ 'EnterprisesFinancial services','Healthcare'],trialDays: 21,setupTime:,2 weeks',category: 'Data & Analytics,realService: true,technology[,Data governanceCompliance frameworks','Data quality'],integrations[ 'Data warehousesBI tools','Compliance systems'],useCases[ 'Data complianceQuality management','Audit preparation'],roi: 'Reduces compliance risks by 80%,competitors[,CollibraInformatica','Alation'],marketSize: '$7.2B data governance,growthRate:,16% CAGR',variant: 'data-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Governance framework,quality tools,compliance monitoring.',launchDate: '2025-05-20,customers: 34,rating: 4.5,reviews: 22 ,},{ id:,ai-powered-hr-analytics-suite',name: 'AI-Powered HR Analytics Suite,tagline:,Intelligent HR analytics and workforce optimization',price: '$189,period:,/month',description: AI-driven HR analytics platform that provides insights into workforce performance,retention,and optimization strategies.',features[ 'Workforce analyticsRetention prediction','Performance insightsDiversity metrics','Recruitment optimization' ],popular: true,icon:,👥',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'AI-driven HR analytics for modern workforce management.',targetAudience[ 'HR departmentsPeople operations','Talent acquisition'],trialDays: 14,setupTime:,1 week',category: 'HR & People Analytics,realService: true,technology[,AI/MLPeople analytics','Predictive modeling'],integrations[ 'HRIS systemsATS platforms','Performance tools'],useCases[ 'Workforce planningRetention strategies','Recruitment optimization'],roi: 'Improves retention by 20%,competitors[,VisierTableau','Power BI'],marketSize: '$3.8B HR analytics,growthRate:,19% CAGR',variant: 'hr-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Analytics engine,predictive models,HR integrations.',launchDate: '2025-04-15,customers: 47,rating: 4.6,reviews: 31 ,},{ id:,cloud-migration-automation-platform',name: 'Cloud Migration Automation Platform,tagline:,Automated cloud migration and optimization',price: '$399,period:,/month',description: Intelligent platform that automates cloud migration processes,optimizes costs,and ensures smooth transitions to cloud infrastructure.',features[ 'Migration automationCost optimization','Performance monitoringSecurity compliance','Multi-cloud support' ],popular: true,icon:,☁️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition: 'Automated cloud migration platform for enterprise transformation.',targetAudience[ 'EnterprisesIT departments','Cloud architects'],trialDays: 21,setupTime:,2 weeks',category: 'Cloud & Infrastructure,realService: true,technology[,AutomationCloud APIs','Migration tools'],integrations[ 'AWSAzure','GCPOn-premise systems'],useCases[ 'Cloud migrationCost optimization','Performance tuning'],roi: 'Reduces migration time by 60%,competitors[,CloudEndureAWS Migration Hub','Azure Migrate'],marketSize: '$18B cloud migration,growthRate:,24% CAGR',variant: 'cloud-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Migration engine,cost optimization,monitoring tools.',launchDate: '2025-03-25,customers: 29,rating: 4.7,reviews: 19 ,},{ id:,digital-transformation-consulting',name: 'Digital Transformation Consulting,tagline:,Strategic digital transformation and change management',price: '$1500,period:,/day',description: Expert consulting services for digital transformation,helping organizations navigate technological change and achieve digital maturity.',features[ 'Strategy developmentChange management','Technology assessmentProcess optimization','Implementation support' ],popular: false,icon:,🔄',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'Strategic digital transformation consulting for enterprise success.',targetAudience[ 'EnterprisesGovernment','Non-profits'],trialDays: 0,setupTime:,1 day',category: 'Consulting & Strategy,realService: true,technology[,Strategy frameworksChange management','Process optimization'],integrations[ 'Project managementCommunication tools','Analytics platforms'],useCases[ 'Digital strategyChange management','Process optimization'],roi: 'Accelerates transformation by 3x,competitors[,McKinseyBCG','Bain'],marketSize: '$45B digital transformation,growthRate:,21% CAGR',variant: 'consulting-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Strategy frameworks,change management,implementation support.',launchDate: '2025-02-10,customers: 12,rating: 4.9,reviews: 8 ,},{ id:,ai-ethics-compliance-framework',name: 'AI Ethics & Compliance Framework,tagline:,Ethical AI development and compliance management',price: '$249,period:,/month',description: Comprehensive framework for ensuring ethical AI development,compliance with regulations,and responsible AI deployment.',features[ 'Ethics guidelinesCompliance monitoring','Bias detectionTransparency tools','Audit frameworks' ],popular: true,icon:,⚖️',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'Comprehensive AI ethics and compliance framework.',targetAudience[ 'AI companiesEnterprises','Government'],trialDays: 14,setupTime:,1 week',category: 'AI Ethics & Compliance,realService: true,technology[,Ethics frameworksCompliance tools','Bias detection'],integrations[ 'AI platformsCompliance systems','Audit tools'],useCases[ 'AI ethicsCompliance management','Bias mitigation'],roi: 'Reduces compliance risks by 90%,competitors[,AI ethics startupsCompliance platforms'],marketSize: '$2.8B AI ethics,growthRate:,28% CAGR',variant: 'ethics-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Ethics framework,compliance tools,audit systems.',launchDate: '2025-01-20,customers: 18,rating: 4.8,reviews: 12 ,},{ id:,edge-computing-optimization-platform',name: 'Edge Computing Optimization Platform,tagline:,Intelligent edge computing and IoT optimization',price: '$199,period:,/month',description: Advanced platform for optimizing edge computing deployments,managing IoT devices,and reducing latency in distributed systems.',features[ 'Edge optimizationIoT management','Latency reductionResource allocation','Performance monitoring' ],popular: false,icon:,🌐',color: 'from-teal-600 to-green-700,textColor:,text-teal-300',link: 'https: marketPosition: 'Edge computing optimization platform for IoT and distributed systems.',targetAudience[ 'IoT companiesManufacturing','Smart cities'],trialDays: 21,setupTime:,1 week',category: 'Edge Computing & IoT,realService: true,technology[,Edge computingIoT management','Optimization algorithms'],integrations[ 'IoT platformsCloud providers','Edge devices'],useCases[ 'Edge optimizationIoT management','Performance tuning'],roi: 'Reduces latency by 40%,competitors[,AWS GreengrassAzure IoT Edge','Google Edge TPU'],marketSize: '$11B edge computing,growthRate:,32% CAGR',variant: 'edge-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Edge optimization,IoT management,performance monitoring.',launchDate: '2024-12-15,customers: 25,rating: 4.5,reviews: 17 ,},{ id:,zero-trust-security-implementation',name: 'Zero Trust Security Implementation,tagline:,Comprehensive zero trust security framework',price: '$329,period:,/month',description: Complete zero trust security implementation platform that provides identity verification,network segmentation,and continuous monitoring.',features[ 'Identity verificationNetwork segmentation','Continuous monitoringThreat detection','Compliance reporting' ],popular: true,icon:,🔐',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition: 'Comprehensive zero trust security implementation platform.',targetAudience[ 'EnterprisesGovernment','Financial services'],trialDays: 21,setupTime:,2 weeks',category: 'Cybersecurity,realService: true,technology[,Zero trustIdentity management','Network security'],integrations[ 'Identity providersNetwork equipment','Security tools'],useCases[ 'Security implementationCompliance','Threat prevention'],roi: 'Reduces security incidents by 95%,competitors[,Palo AltoCisco','Fortinet'],marketSize: '$38B zero trust security,growthRate:,26% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Zero trust framework,identity management,monitoring tools.',launchDate: '2024-11-25,customers: 36,rating: 4.7,reviews: 25 ,},{ id:,ai-powered-customer-experience-platform',name: 'AI-Powered Customer Experience Platform,tagline:,Intelligent customer experience optimization',price: '$179,period:,/month',description: AI-driven platform that optimizes customer experiences across all touchpoints,providing personalized interactions and predictive insights.',features[ 'Personalization engineCustomer journey mapping','Predictive analyticsOmnichannel support','Experience optimization' ],popular: true,icon:,🎯',color: 'from-pink-600 to-purple-700,textColor:,text-pink-300',link: 'https: marketPosition: 'AI-driven customer experience optimization platform.',targetAudience[ 'E-commerceRetail','Service companies'],trialDays: 14,setupTime:,1 week',category: 'Customer Experience,realService: true,technology[,AI/MLPersonalization','Predictive analytics'],integrations[ 'CRM systemsE-commerce platforms','Marketing tools'],useCases[ 'Customer personalizationJourney optimization','Experience improvement'],roi: 'Increases customer satisfaction by 35%,competitors[,Adobe ExperienceSalesforce','HubSpot'],marketSize: '$14B customer experience,growthRate:,22% CAGR',variant: 'cx-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Personalization engine,journey mapping,analytics tools.',launchDate: '2024-10-30,customers: 53,rating: 4.6,reviews: 38 ,},{ id:,ai-sales-agent-suite',name: 'AI Sales Agent Suite,tagline:,24/7 multi-channel outbound with human-like conversations',price: '$249,period:,/month',description: Autonomous AI agents that prospect,qualify,and book meetings across email,SMS,and LinkedIn with brand-safe guardrails.',features[ 'Multi-channel outreach (email/SMS/LinkedIn)Lead enrichment and scoring','Calendar booking and routingCompliance and opt-out handling' ],popular: true,icon:,🤖',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Purpose-built AI SDR that integrates with existing CRMs and sequences.',targetAudience: Sales,growth,founders',trialDays: 14,setupTime:,2 hours',category: 'AI & Automation,realService: true,technology[,LLMsRAG','Email APIsLinkedIn automation'],integrations[ 'HubSpotSalesforce','PipedriveOutreach'],useCases[ 'Outbound prospectingLead qualification','Meeting booking'],roi: '2–4x meetings per rep,competitors[,Regie.aiLyne.ai'],marketSize: '$12B sales tech,growthRate:,19% CAGR',variant: 'agentic-suite,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Sequencer with policy engine,identity warm-up,and deliverability checks.',launchDate: '2025-07-01,customers: 22,rating: 4.6,reviews: 14 ,},{ id:,enterprise-rag-knowledge-hub',name: 'Enterprise RAG Knowledge Hub,tagline:,Private,audited retrieval-augmented generation for teams',price: '$399,period:,/month',description: Secure RAG platform to ingest documents,control access,and answer questions with citations and audit trails.',features[ 'Document ingestion pipelinesRole-based access control','Citations and source viewingPII redaction and audit logs' ],popular: true,icon:,📚',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Security-first RAG alternative to generic chat bots.',targetAudience: Support,engineering,legal,HR',trialDays: 14,setupTime:,1 day',category: 'AI & Data,realService: true,technology[,Vector DBLLMs','EmbeddingsAccess policies'],integrations[ 'Google DriveConfluence','SharePointSlack'],useCases[ 'Internal Q&APolicy queries','Runbooks'],roi: 'Reduces time-to-answer by 70%,competitors[,GleanCohere Coral'],marketSize: '$9B knowledge AI,growthRate:,23% CAGR',variant: 'secure-rag,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Chunking,hybrid search,entitlements,and audit trails.',launchDate: '2025-06-15,customers: 31,rating: 4.7,reviews: 19 ,},{ id:,mlops-observability-suite',name: 'MLOps Observability Suite,tagline:,Monitor drift,bias,latency,and cost across models',price: '$499,period:,/month',description: 'Holistic monitoring and governance for machine learning and LLM systems with alerts and dashboards.,features[ 'Data and prediction drift alertsPrompt/trace logging','Cost and latency budgetsBias detection and A/B testing' ],popular: false,icon:,📈',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,End-to-end LLM + traditional ML monitoring in one tool.',targetAudience: Data science,platform,compliance',trialDays: 14,setupTime:,1 week',category: 'AI & Machine Learning,realService: true,technology[,OpenTelemetryLLM tracing','Vector DB'],integrations[ 'DatadogPrometheus','GrafanaSnowflake'],useCases[ 'Model qualityCost control','Incident response'],roi: 'Cuts model outages by 60%,competitors[,WhyLabsArize','Weights & Biases'],marketSize: '$4B MLOps,growthRate:,28% CAGR',variant: 'ml-observe,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,SDKs for logging,exporters,dashboards,and policies.',launchDate: '2025-05-28,customers: 17,rating: 4.5,reviews: 11 ,},{ id:,cloud-finops-optimizer',name: 'Cloud FinOps Optimizer,tagline:,Automatic cloud cost visibility and savings recommendations',price: '$199,period:,/month',description: FinOps platform to tag,allocate,and optimize multi-cloud spend with automated savings plans and anomaly alerts.',features[ 'Automated tagging and allocationRightsizing and RI/SP planning','Anomaly detectionUnit economics dashboards' ],popular: true,icon:,💰',color: 'from-green-600 to-teal-700,textColor:,text-green-300',link: 'https: marketPosition:,Engineer-friendly FinOps with prescriptive actions.',targetAudience: Finance,platform,SRE',trialDays: 14,setupTime:,3 days',category: 'Cloud & Infrastructure,realService: true,technology[,AWS/Azure/GCP APIsCost Explorer','BigQuery'],integrations[ 'AWSAzure','GCPSnowflake'],useCases[ 'Cost controlChargeback','Savings plans'],roi: '10–30% cloud savings,competitors[,CloudZeroCloudHealth'],marketSize: '$5B FinOps,growthRate:,21% CAGR',variant: 'finops,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Ingestion jobs,tagging guardrails,anomaly models,and action playbooks.',launchDate: '2025-06-05,customers: 41,rating: 4.7,reviews: 26 ,},{ id:,kubernetes-sre-assurance',name: 'Kubernetes SRE Assurance,tagline:,Golden paths,policy-as-code,and automated remediation',price: '$299,period:,/month',description: Operational guardrails for Kubernetes: policy checks,reliability SLOs,and auto-remediation with runbooks.',features[ 'Policy-as-code checksSLOs and error budgets','Self-healing actionsRunbook automation' ],popular: false,icon:,🧭',color: 'from-slate-600 to-gray-700,textColor:,text-slate-300',link: 'https: marketPosition:,Platform-ops friendly reliability guardrails for K8s.',targetAudience: SRE,platform,DevOps',trialDays: 7,setupTime:,1 week',category: 'Cloud & Infrastructure,realService: true,technology[,OPA/GatekeeperPrometheus','ArgoFlux'],integrations[ 'KubernetesDatadog','PagerDuty'],useCases[ 'Reliability,compliance,cost control'],roi: 'Reduces incidents by 40%,competitors[,FairwindsRafay'],marketSize: '$7B K8s tooling,growthRate:,25% CAGR',variant: 'sre-guardrails,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Admission controls,SLO agent,and action runners.',launchDate: '2025-05-10,customers: 19,rating: 4.5,reviews: 12 ,},{ id:,privacy-compliance-scanner',name: 'Privacy & Compliance Scanner,tagline:,PII/PHI discovery and policy enforcement for apps and data',price: '$159,period:,/month',description: Continuously scans repositories,data stores,and APIs for sensitive data,misconfigurations,and compliance gaps.',features[ 'PII/PHI/PCI discoverySecrets leakage detection','Policy enforcementCompliance reports (SOC2/GDPR/HIPAA)' ],popular: true,icon:,🛡️',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition:,DevSecOps-native compliance scanning and reporting.',targetAudience: Security,compliance,engineering',trialDays: 14,setupTime:,2 days',category: 'Security & Compliance,realService: true,technology[,Static analysisDLP','CodeQL'],integrations[ 'GitHubGitLab','BitbucketSnowflake'],useCases[ 'Compliance auditsSecurity posture'],roi: 'Cuts audit prep time by 70%,competitors[,NightfallSnyk'],marketSize: '$10B AppSec,growthRate:,20% CAGR',variant: 'privacy-guardian,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Connectors,scanners,policy engine,and dashboards.',launchDate: '2025-04-20,customers: 27,rating: 4.6,reviews: 16 ,},{ id:,agentic-rpa-studio',name: 'Agentic RPA Studio,tagline:,LLM-powered automation that adapts to UI and API changes',price: '$229,period:,/month',description: Next-gen RPA with LLM reasoning to build robust automations across web,desktop,and APIs with change resilience.',features[ 'No-code/low-code builderAutonomous healing of broken steps','Human-in-the-loop reviewAudit logs and RBAC' ],popular: false,icon:,🧠',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition:,Modern RPA alternative with AI-based resilience.',targetAudience: Ops,finance,HR,IT',trialDays: 14,setupTime:,1 week',category: 'Automation,realService: true,technology[,LLMsComputer vision','API orchestration'],integrations[ 'SAPSalesforce','WorkdayCustom apps'],useCases[ 'Back-office automationReconciliation','Reporting'],roi: 'Saves 20–50% of manual hours,competitors[,UiPathAutomation Anywhere'],marketSize: '$13B RPA,growthRate:,26% CAGR',variant: 'agent-rpa,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Hybrid recorder,vector memory,fallbacks,and approvals.',launchDate: '2025-06-22,customers: 13,rating: 4.4,reviews: 9 ,},{ id:,synthetic-data-generator',name: 'Synthetic Data Generator,tagline:,Privacy-safe synthetic datasets for analytics and AI',price: '$179,period:,/month',description: 'Generate high-fidelity synthetic data that preserves statistical properties while protecting privacy.,features[ 'Tabular/text/image generatorsDifferential privacy options','Bias reduction toolingQuality validation reports' ],popular: false,icon:,🧪',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Developer-first synthetic data with controls for privacy and bias.',targetAudience: Data science,product analytics',trialDays: 7,setupTime:,3 days',category: 'Data & Analytics,realService: true,technology[,GANsLLMs','Differential privacy'],integrations[ 'SnowflakeBigQuery','S3'],useCases[ 'Model trainingProduct analytics','Test data'],roi: 'Shortens data acquisition by 80%,competitors[,Mostly AIGretel'],marketSize: '$2.5B synthetic data,growthRate:,34% CAGR',variant: 'synthdata,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Schema inference,model training,evaluators,and export.',launchDate: '2025-05-02,customers: 11,rating: 4.5,reviews: 8 ,},{ id:,edge-iot-fleet-manager',name: 'Edge IoT Fleet Manager,tagline:,Secure device onboarding,OTA updates,and telemetry at scale',price: '$299,period:,/month',description: Manage edge devices with secure provisioning,remote updates,and real-time telemetry dashboards.',features[ 'Device identity and certificatesOTA updates and rollbacks','Rules engine and alertsDigital twins and dashboards' ],popular: false,icon:,📡',color: 'from-yellow-600 to-orange-700,textColor:,text-yellow-300',link: 'https: marketPosition:,Vendor-neutral IoT management for diverse fleets.',targetAudience: Operations,manufacturing,logistics',trialDays: 14,setupTime:,2 weeks',category: 'IoT & Edge,realService: true,technology[,MQTTDevice shadow','TLSTime-series DB'],integrations[ 'AWS IoTAzure IoT','GCP IoT'],useCases[ 'Remote monitoringPredictive maintenance'],roi: 'Reduces downtime by 25%,competitors[,BalenaParticle'],marketSize: '$15B IoT platforms,growthRate:,18% CAGR',variant: 'edge-fleet,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Provisioning service,OTA pipelines,telemetry storage,and rules.',launchDate: '2025-06-30,customers: 9,rating: 4.4,reviews: 6 ,},{ id:,data-quality-governance',name: 'Data Quality & Governance,tagline:,Automated data contracts,tests,and lineage for reliability',price: '$219,period:,/month',description: 'Define data contracts and run continuous tests with lineage and blast-radius analysis for safe changes.,features[ 'Data contracts and schemasQuality tests and SLOs','Lineage and impact analysisChange approvals and rollbacks' ],popular: false,icon:,🗂️',color: 'from-blue-600 to-cyan-700,textColor:,text-blue-300',link: 'https: marketPosition:,Contract-driven data reliability for analytics and ML.',targetAudience: Data engineering,analytics,platform',trialDays: 14,setupTime:,2 weeks',category: 'Data & Analytics,realService: true,technology[,Great Expectationsdbt','OpenLineage'],integrations[ 'SnowflakeBigQuery','RedshiftDatabricks'],useCases[ 'Reliable dashboardsML pipelines','Compliance'],roi: 'Cuts data incidents by 50%,competitors[,Monte CarloBigeye'],marketSize: '$3B data observability,growthRate:,24% CAGR',variant: 'data-gov,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Declarative contracts,test runners,lineage graph,and UI.',launchDate: '2025-05-18,customers: 15,rating: 4.5,reviews: 10 ,},{ id:,full-stack-observability',name: 'Full-Stack Observability,tagline:,Unified logs,metrics,traces,and user journeys',price: '$279,period:,/month',description: 'End-to-end visibility from frontend sessions to backend services with correlation and RCA.,features[ 'Session replayDistributed tracing','Metrics and SLOsRoot-cause analysis' ],popular: true,icon:,🕵️‍♂️',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition:,Business-impact aware observability with UX correlation.',targetAudience: SRE,product,engineering',trialDays: 14,setupTime:,1 week',category: 'DevOps & Reliability,realService: true,technology[,OpenTelemetryClickHouse','eBPF'],integrations[ 'KubernetesDatadog','Grafana'],useCases[ 'Outage RCAPerformance tuning','UX optimization'],roi: 'Mean-time-to-recovery reduced by 45%,competitors[,New RelicDynatrace'],marketSize: '$17B observability,growthRate:,20% CAGR',variant: 'obs-unified,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Unified collector,correlation engine,and dashboards.',launchDate: '2025-05-08,customers: 24,rating: 4.6,reviews: 13 ,},{ id:,dr-backup-as-a-service',name: 'Backup & DR as a Service,tagline:,Immutable backups and orchestrated disaster recovery',price: '$189,period:,/month',description: Managed backups with immutability,ransomware protection,and DR runbooks for rapid recovery.',features[ 'Policy-based backupsImmutability and encryption','DR drills and runbooksCross-cloud replication' ],popular: false,icon:,🔁',color: 'from-sky-600 to-indigo-700,textColor:,text-sky-300',link: 'https: marketPosition:,SaaS-first,cloud-native backup and recovery.',targetAudience: IT,compliance,security',trialDays: 7,setupTime:,1 week',category: 'IT Services,realService: true,technology[,SnapshotsObject storage','DR orchestration'],integrations[ 'AWSAzure','GCPVMware'],useCases[ 'Ransomware recoveryCompliance'],roi: 'Cuts RTO/RPO by 50%,competitors[,VeeamDruva'],marketSize: '$9B backup/DR,growthRate:,18% CAGR',variant: 'dr-saas,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Policy engine,storage backends,orchestration,and testing.',launchDate: '2025-06-12,customers: 12,rating: 4.5,reviews: 7 ,{ id:,gdpr-dsar-portal',name: 'GDPR DSAR Portal,tagline:,Automate GDPR/CCPA data subject access requests',price: '$99,period:,/month',description: Self‑service DSAR intake,identity verification,redaction,and export packages for GDPR/CCPA/CPRA.',features[ 'Identity verification & workflowPII discovery & redaction helpers','Export packs (JSON/CSV/PDF)Audit log & SLA tracking' ],popular: true,icon:,🗂️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'Faster compliance vs. custom spreadsheets and inbox workflows.',targetAudience[ 'LegalSecurity','IT'],trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,Next.jsLLM redaction assistants'],integrations[ 'OktaGSuite/M365','S3/Drive/SharePoint'],useCases[ 'DSAR automationRight to be forgotten','Access/export requests'],roi: 'Reduces DSAR handling time by 70%,competitors[,TranscendOneTrust'],marketSize: '$3B privacy ops,growthRate:,19% CAGR',variant: 'compliance-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Secure intake portal,identity checks,data connectors.' },{ id: 'soc2-evidence-collector,name:,SOC 2 Evidence Collector',tagline: 'Continuous control evidence with exportable audit packs,price:,$149',period: '/month,description: 'Automate evidence capture for SOC 2 controls: backups,MFA,access reviews,vulnerability scans,and change management.',features[ 'Control library & mappingsAutomated screenshots & API proofs','Exceptions & approvalsAudit-ready exports' ],popular: false,icon:,🛡️',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'Purpose-built automation without heavy GRC overhead.',targetAudience[ 'SecurityIT','Ops'],trialDays: 14,setupTime:,3 days',category: 'Security & Compliance,realService: true,technology[,APIsSchedulers','Immutable storage'],integrations[ 'AWS/Azure/GCPOkta','GitHub/GitLab'],useCases[ 'SOC 2 Type 1/2 evidenceInternal audits'],roi: 'Cuts audit prep by 50%,competitors[,DrataVanta'],marketSize: '$2.2B compliance tech,growthRate:,21% CAGR',variant: 'security-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Evidence jobs,artifact store,export packs.' },{ id: 'seo-change-monitor,name:,SEO Change Monitor',tagline: 'Track DOM/CWV changes that impact rankings,price:,$69',period: '/month,description: 'Monitors key templates for DOM diffs,CWV regressions,and indexation issues, alerts with suggested fixes.',features[ 'Template diff & render checksCore Web Vitals watch','Sitemaps & indexation alertsSlack/Email notifications' ],popular: false,icon:,🔎',color: 'from-yellow-500 to-orange-600,textColor:,text-yellow-300',link: 'https: marketPosition: 'Developer-first SEO observability.',targetAudience[ 'GrowthEngineering'],trialDays: 7,setupTime:,30 minutes',category: 'Growth & Marketing,realService: true,technology[,PlaywrightLighthouse CI'],integrations[ 'SlackGitHub'],useCases[ 'Regression watchRelease QA'],roi: 'Prevents SEO regressions post‑deploy,competitors[,Little WardenContentKing'],marketSize: '$1.2B SEO tooling,growthRate:,12% CAGR',variant: 'growth-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Scheduled headless audits,CWV collectors.' },{ id: 'cicd-flaky-test-detector,name:,CI/CD Flaky Test Detector',tagline: 'Identify and quarantine flaky tests automatically,price:,$59',period: '/month,description: 'Statistically detects flaky tests across pipelines, auto‑retries,quarantines,and creates PRs with suggested fixes.',features[ 'Flake scoring & trendsAuto‑retry/quarantine','PR annotations & ownershipCI cost impact reports' ],popular: true,icon:,🧪',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition: 'Reduce broken builds and wasted compute.',targetAudience[ 'EngineeringPlatform'],trialDays: 14,setupTime:,1 hour',category: 'Developer Productivity,realService: true,technology[,CI APIsTime-series DB'],integrations[ 'GitHub ActionsGitLab CI','CircleCI'],useCases[ 'Build stabilityDeveloper velocity'],roi: 'Cuts CI cost 10–30%,competitors[,BuildPulse'],marketSize: '$2B DevEx tools,growthRate:,18% CAGR',variant: 'devex-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Collectors,heuristics,annotations.' },{ id: 'cloud-cost-anomaly-guard,name:,Cloud Cost Anomaly Guard',tagline: 'Detect spend spikes before the bill arrives,price:,$79',period: '/month,description: 'Real‑time anomaly detection on cloud bills with service‑level drilldowns and automated guardrail playbooks.',features[ 'Daily anomaly detectionBudget guardrails & alerts','Owner routing & playbooksUnit economics dashboards' ],popular: true,icon:,💸',color: 'from-rose-600 to-pink-700,textColor:,text-rose-300',link: 'https: marketPosition: 'Fast time‑to‑value vs. full FinOps suites.',targetAudience[ 'FinancePlatform','Ops'],trialDays: 14,setupTime:,2 hours',category: 'FinOps,realService: true,technology[,CUR/BigQueryAnomaly ML'],integrations[ 'AWS/Azure/GCP billing'],useCases[ 'Spend controlAnomaly response'],roi: 'Saves 5–15% monthly spend,competitors[,CloudZeroVantage'],marketSize: '$3.5B FinOps,growthRate:,22% CAGR',variant: 'finops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Billing data loaders,anomaly engine.' },{ id: 'llm-prompt-injection-scanner,name:,LLM Prompt Injection Scanner',tagline: 'Continuously test LLM apps against injection & exfiltration,price:,$49',period: '/month,description: 'Attack harness that probes LLM endpoints for prompt injection,data exfiltration,and policy bypasses with reports.',features[ 'Attack libraries & corporaRed‑team scheduling','OWASP LLMRT mappingFix guidance & diffs' ],popular: false,icon:,🧰',color: 'from-purple-600 to-fuchsia-700,textColor:,text-purple-300',link: 'https: marketPosition: 'Developer‑centric safety testing.',targetAudience[ 'AISecurity'],trialDays: 7,setupTime:,45 minutes',category: 'AI Safety,realService: true,technology[,LLM APIsEval harness'],integrations[ 'OpenAIAnthropic','Vertex'],useCases[ 'Safety testingRelease gates'],roi: 'Prevents incidents and data leaks,competitors[,Lakera Guard'],marketSize: '$0.8B LLM safety,growthRate:,40% CAGR',variant: 'ai-safety-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Synthetic probes,scoring,reports.' },{ id: 'data-pipeline-sla-tracker,name:,Data Pipeline SLA Tracker',tagline: Track freshness,completeness,and SLOs for your data,price: '$89,period:,/month',description: Monitors data jobs for timeliness and completeness, errors page,freshness badges,and stakeholder alerts.',features[ 'Freshness & completeness checksRunbook links','Stakeholder alertsSLO/error budgets' ],popular: false,icon:,📊',color: 'from-cyan-600 to-emerald-700,textColor:,text-cyan-300',link: 'https: marketPosition: 'Lightweight observability for analytics teams.',targetAudience[ 'DataAnalytics'],trialDays: 14,setupTime:,1 day',category: 'Data & Analytics,realService: true,technology[,Airflow/Dbt hooksTime‑series DB'],integrations[ 'SnowflakeBigQuery','Redshift'],useCases[ 'Trust in dataStakeholder comms'],roi: 'Reduces broken dashboards by 60%,competitors[,Monte CarloMetaplane'],marketSize: '$2.6B data observability,growthRate:,28% CAGR',variant: 'data-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Connectors,checks,alerting.' },{ id: 'edge-image-optimizer,name:,Edge Image Optimizer',tagline: Adaptive,device‑aware images at the edge,price: '$39,period:,/month',description: Transforms and caches images at the edge for device and network conditions,improving Core Web Vitals.',features[ 'On‑the‑fly resize & formatsSmart cache keys','Signed URLsCWV dashboards' ],popular: true,icon:,🖼️',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Simpler pricing vs. bespoke CDNs.',targetAudience[ 'WebE‑commerce'],trialDays: 7,setupTime:,20 minutes',category: 'Performance,realService: true,technology[,Edge runtimeImage codecs'],integrations[ 'CloudflareNetlify','Vercel'],useCases[ 'CWV improvementBandwidth savings'],roi: 'Improves LCP by 20–40%,competitors[,imgixCloudinary'],marketSize: '$1.5B media optimization,growthRate:,17% CAGR',variant: 'perf-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Edge functions,cache,signed URLs.' },{ id: 'managed-kubernetes-sre,name:,Managed Kubernetes SRE',tagline: 'Hands‑on SRE for production Kubernetes,price:,$2,500',period: '/month,description: 'Runbooks,upgrades,backups,autoscaling,and incident response for your EKS/AKS/GKE clusters with SLOs.',features[ '24/7 on‑call with SLAsBackups & DR drills','Security hardeningCost & perf tuning' ],popular: true,icon:,☸️',color: 'from-slate-700 to-slate-900,textColor:,text-slate-200',link: 'https: marketPosition: 'Fractional SRE better than staffing alone.',targetAudience[ 'EngineeringPlatform'],trialDays: 0,setupTime:,1 week',category: 'IT Services,realService: true,technology[,KubernetesIaC','Observability'],integrations[ 'EKS/AKS/GKEDatadog','Grafana'],useCases[ 'Production readinessReliability'],roi: 'Improves uptime to 99.9%+,competitors[,Cloud providers PS'],marketSize: '$10B SRE services,growthRate:,15% CAGR',variant: 'it-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,SRE playbooks,IaC modules,on‑call.' },{ id: 'zero-trust-rollout-coaching,name:,Zero Trust Rollout Coaching',tagline: Identity,device,and network segmentation playbooks,price: $4,000,period: '/engagement,description: 'Hands‑on guidance to implement zero trust: SSO/MFA,device posture,micro‑segmentation,and access reviews.',features[ 'Architecture & roadmapQuick wins & pilots','Control mappingsChange management' ],popular: false,icon:,🔐',color: 'from-red-600 to-rose-700,textColor:,text-red-200',link: 'https: marketPosition: 'Actionable,tool‑agnostic coaching.',targetAudience[ 'ITSecurity'],trialDays: 0,setupTime:,Project start in 1 week',category: 'Security Consulting,realService: true,technology[,SSO/SCIMZTNA'],integrations[ 'OktaCloudflare','Zscaler'],useCases[ 'Zero trust rolloutAudit prep'],roi: 'Accelerates rollout by 2–3x,competitors[,Big 4 consultancies'],marketSize: '$20B security services,growthRate:,12% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Workshops,templates,control packs.' },{ id: 'vendor-risk-ai-assistant,name:,Vendor Risk AI Assistant',tagline: 'Automate security questionnaires and third‑party risk reviews,price:,$149',period: '/month,description: 'AI copilot that ingests vendor docs (SOC 2,ISO 27001,SIG,CAIQ),answers security questionnaires,flags gaps,and produces an executive risk summary with mitigation plans.',features[ 'Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe)Policy and control gap analysis','Risk register and remediation plansExport to PDF/CSV and Jira' ],popular: true,icon:,🛡️',color: 'from-amber-600 to-orange-700,textColor:,text-amber-200',link: 'https: marketPosition: 'Faster than manual reviews,integrates with your GRC.',targetAudience[ 'SecurityLegal','Procurement'],trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology[,LLMsRAG','Document AI'],integrations[ 'OneTrustDrata','Jira'],useCases[ 'Security questionnairesRenewal reviews'],roi: 'Cuts review time by 70%,competitors[,Secureframe Questionnaire AutomationWhistic'],marketSize: '$8B TPRM,growthRate:,14% CAGR',variant: 'ai-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Secure upload,policy mapping,audit log.',launchDate: '2025-07-01,customers: 18,rating: 4.7,reviews: 12 ,},{ id:,gdpr-dsar-portal',name: 'GDPR/CCPA DSAR Portal,tagline:,End‑to‑end subject access request automation',price: '$99,period:,/month',description: Hosted portal and workflow to intake,verify,process,and fulfill data subject requests (access,deletion,portability) with redaction and evidence trails.',features[ 'Identity verification and throttlingSystem of record inventory and connectors','Automated redaction and package assemblyEvidence and audit reports' ],popular: false,icon:,📜',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-200',link: 'https: marketPosition: 'Affordable alternative to heavy privacy suites.',targetAudience[ 'LegalSecurity','IT'],trialDays: 7,setupTime:,1 week',category: 'Privacy & Compliance,realService: true,technology[,Next.jsQueue/Workers','PII Redaction'],integrations[ 'SnowflakeSalesforce','Gmail/Drive'],useCases[ 'Access/Delete requestsDSR reporting'],roi: 'Reduces manual hours by 80%,competitors[,TranscendOneTrust'],marketSize: '$3B privacy ops,growthRate:,16% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Role‑based access,retention policies.',launchDate: '2025-06-15,customers: 22,rating: 4.6,reviews: 14 ,},{ id:,oncall-copilot',name: 'On‑Call Copilot,tagline:,LLM‑powered incident triage,runbooks,and postmortems',price: '$59,period:,/month',description: Connects to logs,metrics,traces,and alerts to propose likely causes,next actions,and execute safe runbook steps with approvals. Generates high‑quality postmortems.',features[ 'Contextual alert summariesRoot cause hypotheses and checks','Safe automations with approval gatesPostmortem generation and action items' ],popular: true,icon:,🚨',color: 'from-rose-600 to-red-700,textColor:,text-rose-200',link: 'https: marketPosition: 'Brings AI to existing on‑call stacks.',targetAudience[ 'SREDevOps','Platform'],trialDays: 14,setupTime:,2 hours',category: 'Observability & SRE,realService: true,technology[,LLMsVector Store','APM APIs'],integrations[ 'DatadogGrafana','PagerDuty'],useCases[ 'MTTR reductionOn‑call quality'],roi: 'Cuts MTTR by 35%,competitors[,FireHydrant AIRootly AI'],marketSize: '$7B AIOps,growthRate:,19% CAGR',variant: 'ai-ops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Read‑only mode,approvals,audit log.',launchDate: '2025-07-10,customers: 15,rating: 4.8,reviews: 9 ,},{ id:,ml-eval-harness',name: 'LLM/ML Evaluation Harness,tagline:,Test sets,guardrails,and scorecards for AI systems',price: '$129,period:,/month',description: Hosted evaluation platform that runs golden datasets and adversarial prompts across models,with regressions alerts,cost tracking,and governance‑ready reports.',features[ 'Datasets and prompt suitesAutomatic metric scoring and rubrics','Guardrail tests (toxicity/PII/Jailbreak)CI integrations and dashboards' ],popular: false,icon:,🧪',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-200',link: 'https: marketPosition: 'Evaluation without heavy MLOps lift.',targetAudience[ 'AI PlatformData Science'],trialDays: 7,setupTime:,1 day',category: 'AI & Machine Learning,realService: true,technology[,LangChain/LangGraphLangfuse','OpenAI/Anthropic'],integrations[ 'GitHub ActionsCircleCI'],useCases[ 'Model selectionRegression testing'],roi: 'Prevents degradations and outages,competitors[,HumanloopPromptLayer'],marketSize: '$2B model ops,growthRate:,22% CAGR',variant: 'mlops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Datasets store,eval runners,alerts.',launchDate: '2025-06-30,customers: 10,rating: 4.5,reviews: 7 ,},{ id:,finops-cost-anomaly-guard',name: 'FinOps Cost Anomaly Guard,tagline:,Detect,explain,and prevent cloud cost spikes',price: '$79,period:,/month',description: Continuously analyzes multi‑cloud bills and usage to catch anomalies,attribute spend to owners,and recommend rightsizing and commitment strategies.',features[ 'Anomaly detection and alertsUnit economics and tagging quality','Rightsizing and commitment plannerChargeback/showback reports' ],popular: true,icon:,💸',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-200',link: 'https: marketPosition: 'Actionable insights,not just dashboards.',targetAudience[ 'FinancePlatform','Engineering'],trialDays: 14,setupTime:,1 day',category: 'Cloud & FinOps,realService: true,technology[,Cloud APIsAnomaly ML','BI'],integrations[ 'AWSAzure','GCP'],useCases[ 'Cost controlsBudget alerts'],roi: 'Saves 10–25% monthly spend,competitors[,CloudZeroVantage'],marketSize: '$6B FinOps,growthRate:,20% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Cost collectors,anomaly models,alerts.',launchDate: '2025-07-05,customers: 28,rating: 4.7,reviews: 16 ,},{ id:,ai-rag-site-search',name: 'AI RAG Site Search,tagline:,Private,high‑relevance semantic search for your docs',price: '$59,period:,/month',description: Drop‑in semantic search widget with ingestion pipelines,embeddings,reranking,and citations. Keeps data private,deploys at the edge for speed.',features[ 'Crawlers and connectorsEmbeddings,rerankers,and guardrails','Citations and feedback loopsEdge caching and analytics' ],popular: false,icon:,🔎',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-200',link: 'https: marketPosition: 'Better relevance than keyword search,privacy‑first.',targetAudience[ 'DocsSupport','Marketing'],trialDays: 7,setupTime:,2 hours',category: 'AI & Machine Learning,realService: true,technology[,Pinecone/WeaviateOpenAI','FastAPI'],integrations[ 'ZendeskConfluence','Notion'],useCases[ 'Help centersInternal KB'],roi: 'Deflects 25% tickets,competitors[,Algolia Neural SearchElastic'],marketSize: '$10B search,growthRate:,13% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Ingestion workers,evals,analytics.',launchDate: '2025-06-20,customers: 34,rating: 4.6,reviews: 19 ,},{ id:,agentic-workflow-studio',name: 'Agentic Workflow Studio,tagline:,Visual builder for safe,multi‑agent automations',price: '$129,period:,/month',description: Design,simulate,and deploy multi‑agent workflows with guardrails,approvals,and human‑in‑the‑loop checkpoints. Observe runs and costs in real time.',features[ 'Drag‑and‑drop graph builderGuardrails and policy engine','Human‑in‑the‑loop checkpointsRun logs,costs,and metrics' ],popular: true,icon:,🕸️',color: 'from-purple-600 to-fuchsia-700,textColor:,text-purple-200',link: 'https: marketPosition: 'Faster time‑to‑value for safe agents.',targetAudience[ 'OpsAutomation','Engineering'],trialDays: 14,setupTime:,1 day',category: 'Automation & Orchestration,realService: true,technology[,LangGraphTemporal','OpenAI/Anthropic'],integrations[ 'SlackJira','GitHub'],useCases[ 'Backoffice automationSupport bots'],roi: 'Automates 15–40% tasks,competitors[,Akaike Agent StudioMendable Agents'],marketSize: '$12B automation,growthRate:,21% CAGR',variant: 'agents-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Policy engine,sandbox,audit.',launchDate: '2025-07-08,customers: 11,rating: 4.5,reviews: 8 ,},{ id:,edge-rate-limiter-saas',name: 'Edge Rate Limiter SaaS,tagline:,Protect APIs with globally distributed limits and quotas',price: '$39,period:,/month',description: 'Drop‑in SDK and managed configuration to apply token bucket and sliding‑window limits at the edge across regions with low latency.,features[ 'Global keyspace and quotasBurst and sliding window strategies','Config UI and APIAnalytics and alerting' ],popular: false,icon:,🌐',color: 'from-slate-600 to-slate-800,textColor:,text-slate-200',link: 'https: marketPosition: 'Simpler than building on CDN primitives.',targetAudience[ 'PlatformAPI Teams'],trialDays: 7,setupTime:,30 minutes',category: 'Platform & APIs,realService: true,technology[,Edge KVWASM','CDN'],integrations[ 'Cloudflare WorkersVercel Edge'],useCases[ 'Abuse preventionFair usage'],roi: 'Prevents outages and overages,competitors[,Cloudflare RulesKong Rate Limit'],marketSize: '$2B API mgt,growthRate:,11% CAGR',variant: 'edge-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Edge counters,config UI,SDKs.',launchDate: '2025-06-25,customers: 20,rating: 4.4,reviews: 13 ,},{ id:,email-deliverability-optimizer',name: 'Email Deliverability Optimizer,tagline:,Warmup,reputation monitoring,and content linting',price: '$49,period:,/month',description: Improves email deliverability with domain warmup,content linting for spam triggers,and feedback loop integrations across major ESPs.',features[ 'Inbox placement testsWarmup schedules and IP pools','Content linting and A/B testsReputation and blacklist monitors' ],popular: false,icon:,✉️',color: 'from-pink-600 to-rose-700,textColor:,text-pink-200',link: 'https: marketPosition: 'Focus on outcomes,not vanity metrics.',targetAudience[ 'MarketingGrowth'],trialDays: 7,setupTime:,2 hours',category: 'Growth & Marketing,realService: true,technology[,ESP APIsSpamAssassin','Inbox tests'],integrations[ 'SendGridMailgun','Postmark'],useCases[ 'CampaignsLifecycle email'],roi: 'Increases deliverability by 10–20%,competitors[,Warmup InboxGlockApps'],marketSize: '$4B email tools,growthRate:,9% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,ESP connectors,warmup engine.',launchDate: '2025-07-02,customers: 26,rating: 4.5,reviews: 17 ,},{ id:,data-contracts-hub',name: 'Data Contracts Hub,tagline:,Schema governance and SLAs for reliable data products',price: '$99,period:,/month',description: Define and enforce data contracts across producers and consumers with schema diffs,backward‑compat checks,and SLA monitoring.',features[ 'Schema registry and diffsCompatibility checks and approvals','SLAs and freshness monitoringIncident workflows and dashboards' ],popular: false,icon:,📊',color: 'from-emerald-700 to-teal-800,textColor:,text-emerald-200',link: 'https: marketPosition: 'Brings product thinking to data.',targetAudience[ 'Data PlatformAnalytics'],trialDays: 7,setupTime:,1 day',category: 'Data Platform,realService: true,technology[,Kafka/Schema Registrydbt','Airflow'],integrations[ 'SnowflakeBigQuery','Redshift'],useCases[ 'Data reliabilitySelf‑service data'],roi: 'Cuts data breakages by 40%,competitors[,Monte CarloDatafold'],marketSize: '$5B data ops,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Contracts store,approvals,monitors.',launchDate: '2025-06-28,customers: 12,rating: 4.4,reviews: 10 ,},{ id:,security-chaos-gamedays',name: 'Security Chaos GameDays,tagline:,Hands‑on attack simulations and playbook hardening',price: $3,000,period: '/engagement,description: 'Facilitated tabletop and live‑fire scenarios tailored to your stack. Validates detections,improves response muscle memory,and prioritizes investments.',features[ 'Custom runbooks and injectsBlue team/Red team rotations','Gap analysis and roadmapExecutive readout and training' ],popular: true,icon:,🎯',color: 'from-red-700 to-rose-800,textColor:,text-red-200',link: 'https: marketPosition: 'Outcome‑focused,no vendor bias.',targetAudience[ 'SecurityIT'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'Security Consulting,realService: true,technology[,ATT&CKDetection Engineering'],integrations[ 'SIEM/XDRSOAR'],useCases[ 'Resilience validationTraining'],roi: 'Reduces breach impact,competitors[,Big 4MSSPs'],marketSize: '$25B services,growthRate:,10% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' ,},realImplementation: true,implementationDetails:,Workshops,exercises,debrief.',launchDate: '2025-07-12,customers: 7,rating: 4.9,reviews: 6 ],}}}}}
+export interface AdditionalRealService { id: string, name: string, tagline: string, price: string, description: string, features: string[], link: string, category: string, realImplementation: boolean, contactInfo: { mobile: string, email: string, address: string},export const additionalEnhancedServices: AdditionalRealService[] = [ { id: "ai-automation-suite",name: "AI Automation Suite",tagline: "Intelligent automation for modern businesses",price: "$79/month",description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",features[ "Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard" ],link: "/services/ai-automation-suite",category: "AI & Automation",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" },{ id:,ai-sales-outreach-agent',name: 'AI Sales Outreach Agent,tagline:,Personalized multi-channel sequences with compliance guardrails',price: '$99,period:,/month',description: Automates lead research and crafts compliant,personalized outreach across email and LinkedIn with adaptive follow-ups and CRM sync.,features: [ 'Account and persona research,'Personalized sequence generatorDeliverability and SPF/DKIM checksCRM sync and analytics' ],popular: true,icon:,🤖',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-200',link: 'https: marketPosition:,Higher personalization at lower cost than legacy sequencers.',targetAudience: [ 'Sales,'Growth'],trialDays: 14,setupTime:,30 minutes',category: 'Growth & Marketing,realService: true,technology: [,LLMsLinkedIn/Email APIs'],integrations: [ 'HubSpot,SalesforceOutlookGmail'],useCases: [ 'Outbound SDR,Upsell campaigns'],roi: 'Improves reply rates by 2–3x,competitors: [,OutreachSalesloft (partial)'],marketSize: '$7B sales tech,growthRate:,12% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,OAuth connectors,sending pools,policy engine.',launchDate: '2025-07-20,customers: 33,rating: 4.7,reviews: 19 },{ id:,soc2-continuous-compliance',name: 'SOC 2 Continuous Compliance,tagline:,Controls,evidence,alerts and auditor-ready exports',price: '$199,period:,/month',description: Automates SOC 2 controls monitoring with cloud/IdP/device evidence collectors,control owners,exceptions,and exportable audit packs.,features: [ 'Automated evidence collection,'Control mappings and ownersExceptions and approvalsAuditor-ready exports' ],popular: true,icon:,🛡️',color: 'from-slate-700 to-zinc-800,textColor:,text-slate-200',link: 'https: marketPosition:,Fast time-to-audit without vendor lock-in.',targetAudience: [ 'Security,'ITEngineering'],trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology: [,AWS/Azure/GCP APIsOktaJAMF'],integrations: [ 'AWS,AzureGCPOktaGoogle Workspace','M365'],useCases: [ 'SOC 2 readiness,Continuous monitoring'],roi: 'Cuts audit prep by 60%,competitors: [,VantaDrata'],marketSize: '$5.5B GRC,growthRate:,13% CAGR',variant: 'security-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Connector SDK,controls engine,exports.',launchDate: '2025-07-05,customers: 16,rating: 4.6,reviews: 9 },{ id:,finops-cost-optimizer',name: 'FinOps Cost Optimizer,tagline:,Actionable savings across AWS,Azure,and GCP',price: '$79,period:,/month',description: Finds idle and over-provisioned resources,right-sizes compute,proposes commitments and schedules with one-click change sets.,features: [ 'Idle/oversized resource detection,'Rightsizing recommendationsCommitment and schedule plannerChange set preview and apply' ],popular: false,icon:,💸',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-200',link: 'https: marketPosition:,Focused SMB savings with low setup.',targetAudience: [ 'Platform,'Finance'],trialDays: 14,setupTime:,45 minutes',category: 'Cloud & DevOps,realService: true,technology: [,Cloud Billing APIsIaC'],integrations: [ 'AWS,AzureGCPTerraform'],useCases: [ 'Cloud cost control,Budget enforcement'],roi: 'Saves 15–30% monthly spend,competitors: [,CloudZeroProsperOps (partial)'],marketSize: '$3B FinOps,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Analyzers,policy engine,IaC changers.',launchDate: '2025-07-10,customers: 20,rating: 4.5,reviews: 10 },{ id:,cloud-migration-factory',name: 'Cloud Migration Factory,tagline:,Blueprints,landing zones,and automated cutovers',price: $12,000,period: '/project,description:,Fixed-scope,repeatable cloud migration packages with secure landing zones,CI/CD,observability,and cost controls.',features: [ 'Landing zone setup,'Automated cutover runbooksObservability and FinOpsSecurity baselines' ],popular: true,icon:,☁️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-200',link: 'https: marketPosition:,Predictable migrations with lower risk.',targetAudience: [ 'IT,'Engineering'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'IT Services,realService: true,technology: [,AWSAzureGCPTerraform'],integrations: [ 'Jira,GitHubGitLab'],useCases: [ 'Data center exit,Modernization'],roi: 'Reduces migration time by 30–50%,competitors: [,GSIsBoutique firms'],marketSize: '$150B cloud services,growthRate:,17% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Blueprints,pipelines,cutover playbooks.',launchDate: '2025-07-18,customers: 9,rating: 4.8,reviews: 5 },{ id:,data-quality-monitor',name: 'Data Quality Monitor,tagline:,Schema checks,freshness SLAs,and anomaly alerts',price: '$49,period:,/month',description: Monitors tables and pipelines for schema drift,null spikes,freshness breaches,and distribution anomalies with ownership routing.,features: [ 'Schema and null checks,'Freshness SLAsAnomaly detectionOwnership routing and runbooks' ],popular: false,icon:,📊',color: 'from-fuchsia-600 to-rose-700,textColor:,text-fuchsia-200',link: 'https: marketPosition:,Targeted data reliability for SMB analytics teams.',targetAudience: [ 'Data,'Analytics'],trialDays: 14,setupTime:,30 minutes',category: 'Data Platform,realService: true,technology: [,dbtAirflowWarehouse APIs'],integrations: [ 'Snowflake,BigQueryRedshift'],useCases: [ 'Pipeline reliability,Dashboard trust'],roi: 'Cuts data incidents by 40%,competitors: [,Monte Carlo (partial)Databand'],marketSize: '$5B data ops,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Collectors,rules engine,alerting.',launchDate: '2025-07-08,customers: 14,rating: 4.4,reviews: 7 },{ id:,confluence-rag-knowledge-base',name: 'Confluence RAG Knowledge Base,tagline:,Secure enterprise Q&A over Confluence and Drive',price: '$59,period:,/month',description: Private,up-to-date Q&A over Confluence,Google Drive,and PDFs with granular permissions,citations,and Slack bot access.,features: [ 'Space/permissions-aware retrieval,'Citations and source linksSlack and web chatScheduled re-indexing' ],popular: true,icon:,🧠',color: 'from-violet-600 to-purple-700,textColor:,text-violet-200',link: 'https: marketPosition:,Secure,compliant RAG for internal knowledge.',targetAudience: [ 'Support,'EngineeringOps'],trialDays: 14,setupTime:,45 minutes',category: 'AI & Machine Learning,realService: true,technology: [,EmbeddingsVector DBOAuth'],integrations: [ 'Confluence,Google DriveSlack'],useCases: [ 'Internal knowledge,Onboarding'],roi: 'Reduces time-to-answer by 70%,competitors: [,Guru (partial)Slite AI'],marketSize: '$2B knowledge tools,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Ingestion,chunking,permissions-aware retrieval.',launchDate: '2025-07-06,customers: 27,rating: 4.6,reviews: 13 },{ id:,e2e-test-recorder',name: 'E2E Test Recorder,tagline:,Record,stabilize,and run flaky-free end-to-end tests',price: '$39,period:,/month',description: Chrome extension and runner that records user flows,auto-stabilizes selectors,mocks network,and runs in CI.,features: [ 'Recorder and selector stabilizer,'Network mockingCI runner and dashboardsSlack alerts' ],popular: false,icon:,🧪',color: 'from-amber-600 to-orange-700,textColor:,text-amber-200',link: 'https: marketPosition:,Reduce flakiness without heavy scripting.',targetAudience: [ 'QA,'Eng'],trialDays: 14,setupTime:,20 minutes',category: 'Developer Experience,realService: true,technology: [,Playwright/CypressChrome Ext'],integrations: [ 'GitHub,GitLabCircleCI'],useCases: [ 'Regression testing,Release hardening'],roi: 'Cuts flaky failures by 80%,competitors: [,Walnut (partial)Mabl'],marketSize: '$3B QA tools,growthRate:,15% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Browser ext + CLI runner.',launchDate: '2025-07-11,customers: 11,rating: 4.3,reviews: 6 },{ id:,ai-meeting-notes',name: 'AI Meeting Notes & Actions,tagline:,Join,transcribe,summarize,and auto-create tasks',price: '$15,period:,/user/month',description: Records meetings,creates structured summaries with decisions and owners,and pushes action items to task systems.,features: [ 'Multi-platform meeting bot,'Summaries with decisions and risksAction items to tasksSpeaker diarization' ],popular: true,icon:,📝',color: 'from-pink-600 to-rose-700,textColor:,text-pink-200',link: 'https: marketPosition:,Lightweight alternative with better integrations.',targetAudience: [ 'All teams],trialDays: 14,setupTime:,10 minutes',category: 'Productivity,realService: true,technology: [,STTLLMsCalendar APIs'],integrations: [ 'Zoom,Google MeetSlackAsanaJira'],useCases: [ 'Meeting hygiene,Project execution'],roi: 'Saves 3–5 hours/person/month,competitors: [,FathomSembly (partial)'],marketSize: '$4B productivity AI,growthRate:,20% CAGR',variant: 'ai-futuristic,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Meeting joiners,diarization,task push.',launchDate: '2025-07-09,customers: 42,rating: 4.6,reviews: 22 },{ id:,vendor-security-questionnaire-ai',name: 'Vendor Security Questionnaire AI,tagline:,Auto-fill SIG/CAIQ with evidence and citations',price: '$99,period:,/month',description: Parses security questionnaires,proposes answers from policies and evidence with citations and approval workflows.,features: [ 'Template ingestion (SIG/CAIQ),'Answer proposal with citationsReviewer workflowsExport to XLSX and portals' ],popular: false,icon:,📄',color: 'from-indigo-700 to-blue-800,textColor:,text-indigo-200',link: 'https: marketPosition:,Faster turnarounds with better quality.',targetAudience: [ 'Security,'Sales'],trialDays: 7,setupTime:,30 minutes',category: 'Security & Compliance,realService: true,technology: [,LLMsPolicy store'],integrations: [ 'Google Drive,OneDriveSharePoint'],useCases: [ 'RFPs,Due diligence'],roi: 'Cuts cycle time by 50%,competitors: [,Loopio (partial)Responsive'],marketSize: '$1.2B RFP tools,growthRate:,12% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Doc parser,answer retrieval,workflow.',launchDate: '2025-07-07,customers: 13,rating: 4.5,reviews: 8 },{ id:,accessibility-remediation-assistant',name: 'Accessibility Remediation Assistant,tagline:,WCAG audits,code suggestions,and CI checks',price: '$29,period:,/month',description: Runs accessibility scans,suggests code-level fixes with examples,and enforces gates in CI with issue creation.,features: [ 'Automated audits,'Code fix suggestionsCI gates and baselinesIssue sync and dashboards' ],popular: false,icon:,♿',color: 'from-cyan-700 to-teal-800,textColor:,text-cyan-200',link: 'https: marketPosition:,Developer-first a11y enforcement.',targetAudience: [ 'Frontend,'QA'],trialDays: 14,setupTime:,20 minutes',category: 'Quality & Monitoring,realService: true,technology: [,axe-corePlaywright'],integrations: [ 'GitHub,GitLabJira'],useCases: [ 'WCAG compliance,Shift-left'],roi: 'Reduces a11y regressions by 70%,competitors: [,Deque (partial)'],marketSize: '$0.8B a11y tools,growthRate:,11% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Scanner + PR annotations + CI.',launchDate: '2025-07-03,customers: 10,rating: 4.4,reviews: 6 },{ id:,managed-kubernetes-platformops',name: 'Managed Kubernetes PlatformOps,tagline:,SRE-grade clusters,GitOps,and 99.9% SLOs',price: $3,500,period: '/month,description:,Provision and operate hardened EKS/AKS/GKE clusters with GitOps,observability,incident response,and cost controls.',features: [ 'Hardened clusters and networking,'GitOps and policy as codeObservability and on-callFinOps and capacity management' ],popular: true,icon:,🧰',color: 'from-sky-700 to-blue-800,textColor:,text-sky-200',link: 'https: marketPosition:,Productized SRE for SMB engineering teams.',targetAudience: [ 'Engineering,'IT'],trialDays: 0,setupTime:,2 weeks',category: 'IT Services,realService: true,technology: [,EKS/AKS/GKEArgoCDIstioPrometheus'],integrations: [ 'AWS,AzureGCPDatadog'],useCases: [ 'Platform engineering,Reliability'],roi: 'Accelerates delivery by 30%,competitors: [,Managed K8s vendors'],marketSize: '$12B DevOps services,growthRate:,19% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Blueprints + runbooks + SRE on-call.',launchDate: '2025-07-01,customers: 6,rating: 4.8,reviews: 4 },{ id:,zero-trust-access-rollout',name: 'Zero Trust Access Rollout,tagline:,IdP,device posture,and app segmentation in weeks',price: $18,000,period: '/engagement,description:,Deploys zero trust access with IdP integration,device posture checks,policy sets,and phased application onboarding.',features: [ 'IdP integration and SSO,'Device posture and MFAApp segmentation and policiesRunbooks and training' ],popular: false,icon:,🔐',color: 'from-slate-800 to-gray-900,textColor:,text-slate-200',link: 'https: marketPosition:,Outcome-driven zero trust without vendor lock.',targetAudience: [ 'Security,'IT'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'Security Consulting,realService: true,technology: [,Cloudflare Zero TrustOktaMDM'],integrations: [ 'Okta,Azure ADCrowdStrikeJamf'],useCases: [ 'Remote access,Least privilege'],roi: 'Lowers breach risk and access toil,competitors: [,MSSPsGSIs'],marketSize: '$25B services,growthRate:,10% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Policy design,rollout,hardening.',launchDate: '2025-07-14,customers: 5,rating: 4.7,reviews: 3 { id:,ai-email-responder',name: 'AI Email Responder,tagline:,Autonomous inbox triage with drafts,tone,and approvals',price: '$99,period:,/month',description: AI agent categorizes,prioritizes,and drafts replies with brand tone and policy guardrails,routing complex cases to humans.',features[ 'Inbox triage and SLA queuesDraft replies with tone controlApprovals and human handoffCSAT and deflection analytics' ],popular: true,icon:,📨',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Cheaper than legacy helpdesk add-ons with better guardrails and routing.',targetAudience: Support,success,operations',trialDays: 14,setupTime:,1 hour',category: 'AI & Machine Learning,realService: true,technology[,Gmail/Office APIs,LLMs,RAG'],integrations[ 'Zendesk,Intercom,Freshdesk,Slack'],useCases[ 'Ticket deflection,SLA compliance,CSAT lift'],roi: 'Cuts first-response time by 60%,competitors[,Intercom Fin,Ada,Forethought'],marketSize: '$15B service ops,growthRate:,18% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,OAuth connectors,policy engine,audit logs.',launchDate: '2025-06-01,customers: 40,rating: 4.6,reviews: 21 },{ id:,mobile-first-survey',name: 'Mobile-First Survey Tool,tagline:,Tap-friendly micro-surveys with AI insights',price: '$19,period:,/month',description: Launch branded,mobile-optimized surveys with AI-based insight clustering and churn-risk flags.',features[ 'One-tap answers and NPSAI clustering and summariesEmbeddable widgetsExport CSV/Sheets' ],popular: false,icon:,📱',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.',targetAudience: Product,growth,CX',trialDays: 7,setupTime:,15 minutes',category: 'Growth & Marketing,realService: true,technology[,Next.js,Edge Functions'],integrations[ 'HubSpot,Segment,GA4'],useCases[ 'NPS,Post-purchase survey,In-app feedback'],roi: 'Accelerates feedback cycles by 3x,competitors[,Typeform,Survicate'],marketSize: '$3.1B feedback tools,growthRate:,14% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Embeds,web SDK,event tracking.',launchDate: '2025-05-15,customers: 55,rating: 4.5,reviews: 18 },{ id:,event-management-dashboard',name: 'Event Management Dashboard,tagline:,Tickets,check-in,schedules,feedback in one place',price: '$89,period:,/month',description: All-in-one portal to sell tickets,manage RSVPs,schedule sessions,and analyze attendee feedback.',features[ 'Tickets and invoicesQR check-in and badgesSpeaker and agenda plannerPost-event feedback analytics' ],popular: true,icon:,🎟️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Faster setup and lower fees than legacy event suites.',targetAudience: Marketing,ops,agencies',trialDays: 14,setupTime:,1 day',category: 'Business Operations,realService: true,technology[,Stripe,Webhooks,Next.js'],integrations[ 'Stripe,Zapier,HubSpot'],useCases[ 'Meetups,webinars,conferences'],roi: 'Cuts ops time by 40%,competitors[,Eventbrite,Hopin'],marketSize: '$6.1B events tech,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Ticketing,QR check-in,analytics.',launchDate: '2025-04-10,customers: 35,rating: 4.6,reviews: 24 },{ id:,churn-risk-alerts',name: 'Churn Risk Alerts for Slack,tagline:,Behavior + sentiment = proactive retention pings',price: '$49,period:,/month',description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.,features[ 'Usage anomaly detectionSentiment from tickets/reviewsPlaybooks and tasksOwner assignment' ],popular: false,icon:,⚠️',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Actionable CS alerts without heavy CDPs.',targetAudience: Customer success,product',trialDays: 14,setupTime:,30 minutes',category: 'AI & Data,realService: true,technology[,Segment,Webhooks,LLMs'],integrations[ 'Slack,HubSpot,Salesforce'],useCases[ 'Churn prevention,Expansion triggers'],roi: 'Improves retention by 2–5 pts,competitors[,Vitally,Gainsight'],marketSize: '$4.2B CS tools,growthRate:,17% CAGR',variant: 'holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Event collector,rules engine,Slack app.',launchDate: '2025-03-01,customers: 28,rating: 4.5,reviews: 15 },{ id:,subscription-revenue-analytics',name: 'Subscription Revenue Analytics,tagline:,MRR,churn,cohorts with anomaly flags',price: '$59,period:,/month',description: Self-serve dashboards for MRR,churn,LTV/CAC,and cohorts with anomaly detection and revenue projections.',features[ 'MRR/ARR trends and cohortsAnomaly flags and forecastsCSV/Stripe importsBoard-ready reports'],popular: true,icon:,📈',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,Faster deploy vs. BI stacks, purpose-built for SaaS.',targetAudience: Founders,finance,ops',trialDays: 14,setupTime:,45 minutes',category: 'Business Intelligence,realService: true,technology[,Next.js,ClickHouse/DBT optional'],integrations[ 'Stripe,Chargebee,Paddle'],useCases[ 'Board metrics,Revenue ops,Cohort analysis'],roi: 'Reduces reporting prep by 80%,competitors[,ChartMogul,ProfitWell'],marketSize: '$2.4B RevOps tools,growthRate:,20% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Data loaders,metric engine,exports.',launchDate: '2025-07-01,customers: 22,rating: 4.6,reviews: 12 },{ id:,iso-27001-evidence-kit',name: 'ISO 27001 Evidence Kit,tagline:,Prebuilt controls,evidence collectors,and audit packs',price: '$149,period:,/month',description: Automate common ISO 27001 evidence with connectors,control mappings,timelines,and exportable audit packs.',features[ 'Control library and mappingsEvidence collectors and snapshotsExceptions and approvalsAudit-ready exports' ],popular: false,icon:,🛡️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Faster time-to-audit than generic GRC tools.',targetAudience: Security,compliance,IT',trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology[,Cloud APIs,IdP,Endpoint'],integrations[ 'AWS,Azure,GCP,Okta,JAMF'],useCases[ 'ISO readiness,Continuous compliance'],roi: 'Cuts audit prep by 60%,competitors[,Vanta,Drata'],marketSize: '$5.5B GRC,growthRate:,13% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Connectors + evidence timelines.',launchDate: '2025-06-15,customers: 18,rating: 4.5,reviews: 10 },{ id:,api-changelog-notifier',name: 'API Changelog Notifier,tagline:,Diffs,deprecations,and alerts for your integrators',price: '$19,period:,/month',description: Monitor OpenAPI/GraphQL changes and send release notes,breaking-change alerts,and migration timelines.',features[ 'Schema diffing and impactRelease notes generatorDeprecation timelinesEmail/Slack/webhook alerts' ],popular: false,icon:,🔔',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Turns API changes into transparent communication.',targetAudience: 'API/platform teams,trialDays: 7,setupTime:,10 minutes',category: 'Developer Experience,realService: true,technology[,OpenAPI/GraphQL parsers'],integrations[ 'GitHub,Slack,Email'],useCases[ 'Changelog,Deprecation management'],roi: 'Reduces integrator breakage by 70%,competitors[,ReadMe,Stoplight (partial)'],marketSize: '$1.5B dev tools,growthRate:,18% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Schema watchers + release generator.',launchDate: '2025-05-01,customers: 30,rating: 4.6,reviews: 14 },{ id:,runbook-generator',name: 'Runbook Generator,tagline:,Generate,version,and validate ops runbooks with AI',price: '$29,period:,/month',description: 'Create consistent runbooks from incident timelines and postmortems, validate steps and link to on-call.,features[ 'Templates and versioningAI draft from incidentsStep validation checklistsOn-call links and owners' ],popular: false,icon:,📘',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition:,Eliminates ad-hoc docs, codifies reliability.',targetAudience: SRE,platform,ops',trialDays: 14,setupTime:,20 minutes',category: 'Quality & Monitoring,realService: true,technology[,LLMs,Incident APIs'],integrations[ 'PagerDuty,Jira,Slack'],useCases[ 'SRE runbooks,On-call playbooks'],roi: 'Faster incident resolution by 20–30%,competitors[,Blameless (partial),Notion'],marketSize: '$7.2B DevOps,growthRate:,19% CAGR',variant: 'monitoring-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Incident parsers + templates.',launchDate: '2025-02-20,customers: 26,rating: 4.5,reviews: 11 },{ id:,incident-timeline-composer',name: 'Incident Timeline Composer,tagline:,Auto-build timelines and comms from alerts and chat',price: '$19,period:,/month',description: Aggregates alerts,changes,and chat to build a single incident timeline for comms and postmortems.',features[ 'Alert + change aggregationChat timeline extractionCustomer comms templatesPostmortem export' ],popular: false,icon:,🧩',color: 'from-rose-600 to-pink-700,textColor:,text-rose-300',link: 'https: marketPosition:,Makes incident comms accurate and fast.',targetAudience: SRE,support,comms',trialDays: 7,setupTime:,10 minutes',category: 'Observability,realService: true,technology[,Webhooks,LLMs'],integrations[ 'PagerDuty,Opsgenie,Slack,Statuspage'],useCases[ 'Major incident comms,RCA inputs'],roi: 'Reduces coordination overhead by 50%,competitors[,Blameless,Incident.io (partial)'],marketSize: '$7.2B DevOps,growthRate:,19% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Event collectors + composer.',launchDate: '2025-03-15,customers: 19,rating: 4.5,reviews: 9 },{ id:,ad-creative-generator',name: 'Ad Creative Generator,tagline:,Generate on-brand ads with variants and A/B insights',price: '$49,period:,/month',description: Create compliant,on-brand image and text ads with variants,audiences,and performance tips.',features[ 'Brand presets and guardrailsMulti-platform variantsHeadlines and copy suggestionsPerformance tips and tags' ],popular: true,icon:,🎯',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition:,Faster creative cycles for small teams.',targetAudience: Growth,agencies,founders',trialDays: 7,setupTime:,10 minutes',category: 'Growth & Marketing,realService: true,technology[,LLMs,Vision models'],integrations[ 'Meta,Google Ads (export)'],useCases[ 'Ad variants,Landing page assets'],roi: 'Improves CTR by 10–20% on average,competitors[,Canva (partial),Jasper'],marketSize: '$8.9B martech genAI,growthRate:,22% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Brand presets + asset generator.',launchDate: '2025-07-15,customers: 33,rating: 4.6,reviews: 13 },{ id:,cloud-cost-optimizer-pro',name: 'Cloud Cost Optimizer Pro,tagline:,Automated rightsizing,lifecycle policies,and anomaly detection',price: '$99,period:,/month',description: Continuously analyze AWS,Azure,and GCP usage to recommend rightsizing,lifecycle policies,and scheduling. Detect anomalies and export IaC for approvals.',features[ "Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance" ],link: "/services/data-warehouse-solution",category: "Data & Analytics",realImplementation: true,implementationDetails:,SaaS analyzer with exporters for Terraform/Helm and alerting.',launchDate: '2025-01-15,customers: 90,rating: 4.6,reviews: 54 },{ id:,database-performance-monitor',name: 'Database Performance Monitor,tagline:,Proactive Postgres/MySQL insights and AI index suggestions',price: '$79,period:,/month',description: Capture slow queries,rank impact,generate index and query tuning suggestions with capacity forecasting and SLA/SLO dashboards.',features[ 'Slow query captureAI index suggestionsConnection pool tuningCapacity forecasting' ],popular: true,icon:,🗄️',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Modern alternative with AI-first insights and simple pricing.',targetAudience: DBAs,platform,backend teams',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,PostgreSQLMySQLOpenTelemetry'],integrations[ 'GrafanaDatadogNew Relic'],useCases[ 'Performance tuningSLO managementIncident response'],roi: 'Reduce p95 latency by 20–50% in month 1,competitors[,Percona PMMDatadog APMNew Relic'],marketSize: '$6B DB monitoring,growthRate:,15% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Agent collectors with SaaS UI and AI advisory.',launchDate: '2024-12-12,customers: 60,rating: 4.6,reviews: 38 },{ id:,api-documentation-generator',name: 'API Documentation Generator,tagline:,Generate beautiful,accurate API docs from OpenAPI/GraphQL/Proto',price: '$49,period:,/month',description: Convert schemas into polished docs with SDK snippets,changelogs,and search. Publish instantly with versioning.',features[ 'Schema parsing (OAS/GraphQL/Proto)SDK snippets and examplesChangelogs and versionsFull-text search and themes' ],popular: true,icon:,📘',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Faster setup and authoring vs. traditional doc platforms.',targetAudience: Developers,platform,API teams',trialDays: 14,setupTime:,20 minutes',category: 'Developer Experience,realService: true,technology[,Next.jsMDXOpenAPI'],integrations[ 'GitHubGitLabBitbucket'],useCases[ 'Public API docsInternal APIsSDK portals'],roi: 'Ship and maintain docs 5x faster,competitors[,ReadMeRedoclyStoplight'],marketSize: '$1.5B dev docs,growthRate:,18% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Schema importers,doc themes,and CI publishers.',launchDate: '2024-10-05,customers: 110,rating: 4.7,reviews: 81 },{ id:,email-deliverability-monitor',name: 'Email Deliverability Monitor,tagline:,Inbox placement,DMARC/SPF/DKIM checks,and blocklist alerts',price: '$39,period:,/month',description: Continuously verify email authentication,track inbox placement,and detect blocklist events with actionable recommendations.',features[ 'DMARC/SPF/DKIM verificationInbox placement checksBlocklist monitoringDomain reputation score' ],popular: false,icon:,✉️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Simple,affordable monitoring for marketing and transactional systems.',targetAudience: Growth,marketing,platform',trialDays: 7,setupTime:,15 minutes',category: 'Marketing Ops,realService: true,technology[,DNSPostfix/SES APIs'],integrations[ 'SendGridSESMailgun'],useCases[ 'Auth complianceReputation monitoringAlerting'],roi: 'Improve inbox rate by 5–15%,competitors[,MailMonitorPostmaster Tools'],marketSize: '$2B email tools,growthRate:,12% CAGR',variant: 'holographic,contactInfo: contact,realImplementation: true,implementationDetails:,DNS checkers,seed inbox tests,and alerting.',launchDate: '2025-01-01,customers: 45,rating: 4.5,reviews: 22 },{ id:,gdpr-dsar-automation',name: 'GDPR DSAR Automation,tagline:,Automate data subject access requests with auditable workflows',price: '$129,period:,/month',description: Intake,verify,and fulfill DSAR requests with identity verification,data discovery connectors,and audit logs.',features[ 'Secure request intake portalIdentity verificationData discovery connectorsAudit logs and exports' ],popular: false,icon:,🛡️',color: 'from-rose-600 to-fuchsia-700,textColor:,text-rose-300',link: 'https: marketPosition:,Compliant automation for legal and privacy teams.',targetAudience: Privacy,legal,security',trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,OAuthPII discoveryStorage APIs'],integrations[ 'Google WorkspaceOneDriveOkta'],useCases[ 'DSAR fulfillmentPrivacy compliance'],roi: 'Cut manual effort by 70%,competitors[,OneTrustTranscend'],marketSize: '$3B privacy ops,growthRate:,20% CAGR',variant: 'cyberpunk-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Secure portal,workflows,connectors,and exports.',launchDate: '2024-09-20,customers: 33,rating: 4.6,reviews: 19 },{ id:,api-security-scanner',name: 'API Security Scanner,tagline:,Automated OpenAPI fuzzing,auth checks,and OWASP API Top 10',price: '$99,period:,/month',description: Scan APIs against schemas,validate auth and rate limits,and detect common vulnerabilities with CI integration.',features[ 'OpenAPI-based scanningAuth and rate limit testsOWASP API Top 10 checksCI pipeline integration' ],popular: true,icon:,🛡️',color: 'from-red-600 to-pink-700,textColor:,text-red-300',link: 'https: marketPosition:,Developer-friendly API security with schema awareness.',targetAudience: Security,platform,backend',trialDays: 14,setupTime:,30 minutes',category: 'Security,realService: true,technology[,OpenAPIFuzzingAuth testing'],integrations[ 'GitHub ActionsGitLab CIJenkins'],useCases[ 'Security testingPre-deploy checks'],roi: 'Reduce security escapes by 60%,competitors[,StackHawkNoname'],marketSize: '$4B API security,growthRate:,23% CAGR',variant: 'quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted scanner with agents and reports.',launchDate: '2025-02-10,customers: 52,rating: 4.5,reviews: 28 },{ id:,api-observability-starter',name: 'API Observability Starter,tagline:,OpenTelemetry traces,logs and metrics with redaction and sampling',price: '$59,period:,/month',description: Instrument services quickly with OTel SDKs and get request traces,error analytics,and SLO dashboards. Includes PII redaction,sampling controls,and ready-made Grafana boards.',features[ 'One-line middleware for Node/Go/PythonPII redaction and sampling policiesError and latency analyticsSLI/SLO dashboards and burn-rate alerts','Exporters for popular backendsAuto-ingest OpenAPI metadata' ],popular: false,icon:,📈',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-400',link: 'https: marketPosition:,Get 80% of value with 20% of setup for SMB teams.',targetAudience: SMB,startups,dev teams starting observability',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,OpenTelemetryGrafanaTempo/Loki/PromNode.js'],integrations[ 'DatadogHoneycombGrafana CloudNew Relic'],useCases[ 'Error triageLatency analysisSLO tracking'],roi: 'Reduce MTTR by 30–50% with basic but effective telemetry.,competitors[,Datadog APMNew RelicElastic APM'],marketSize: '$30B+ observability,growthRate:,18% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Opinionated OTel setup,token-based ingestion,curated dashboards and SLO primitives.',launchDate: '2025-02-01,customers: 33,rating: 4.5,reviews: 11 },{ id:,status-pages-slo',name: 'Status Pages & SLO,tagline:,Beautiful status pages and SLO dashboards for your services',price: '$39,period:,/month',description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.,features[ 'Custom branded status pagesSLO dashboardsIncident posts & timelinesSubscriber notifications' ],popular: false,icon:,📊',color: 'from-teal-600 to-emerald-700,textColor:,text-teal-300',link: 'https: marketPosition:,Integrated SLOs with customer-facing status for trust and transparency.',targetAudience: DevOps,SRE,product',trialDays: 7,setupTime:,30 minutes',category: 'Operations,realService: true,technology[,Next.jsOpenTelemetryWebhook'],integrations[ 'DatadogNew RelicPagerDuty'],useCases[ 'Customer commsReliability transparency'],roi: 'Reduce support tickets during incidents by 40%,competitors[,StatuspageBetter Uptime'],marketSize: '$1B status pages,growthRate:,10% CAGR',variant: 'neural-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted status pages driven by metrics and incidents.',launchDate: '2024-07-22,customers: 75,rating: 4.6,reviews: 35 },{ id:,uptime-slo-monitor',name: 'Uptime & SLO Monitor,tagline:,Synthetic checks with SLO dashboards and multi-region probes',price: '$49,period:,/month',description: Run multi-region synthetic checks,calculate SLOs,and receive proactive alerts with error budgets and burn rate alerts.',features[ 'Multi-region checksSLO calculationError budget policyBurn rate alerts' ],popular: true,icon:,📈',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Straightforward reliability toolkit with cost-effective pricing.',targetAudience: SRE,platform,engineering',trialDays: 14,setupTime:,15 minutes',category: 'Reliability,realService: true,technology[,Node.jsPlaywrightPrometheus'],integrations[ 'PagerDutySlackEmail'],useCases[ 'SLO governanceRelease checks'],roi: 'Catch issues before customers notice,competitors[,ChecklyUptimeRobot'],marketSize: '$1.2B synthetic,growthRate:,14% CAGR',variant: 'quantum-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Distributed workers with central analytics.',launchDate: '2024-11-10,customers: 130,rating: 4.7,reviews: 64 },{ id:,webhook-relay-replay',name: 'Webhook Relay & Replay,tagline:,Capture,inspect,and replay webhooks with retries and signatures',price: '$29,period:,/month',description: Reliable webhook intake with HMAC verification,replay,and dead-letter queues. Perfect for testing and resilience.',features[ 'HMAC verificationRetry with backoffReplay & DLQTraffic mirroring' ],popular: false,icon:,🔁',color: 'from-sky-600 to-cyan-700,textColor:,text-sky-300',link: 'https: marketPosition:,Developer-friendly webhook reliability without custom infra.',targetAudience: Developers,QA,platform',trialDays: 14,setupTime:,10 minutes',category: 'Developer Experience,realService: true,technology[,Node.jsRedisS3'],integrations[ 'StripeShopifyGitHub'],useCases[ 'Webhook reliabilityLocal testingSandboxing'],roi: 'Reduce missed events to near-zero,competitors[,Hookdeck'],marketSize: '$500M webhook tools,growthRate:,16% CAGR',variant: 'holographic-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,SaaS relay with signed storage and replay workers.',launchDate: '2024-06-30,customers: 58,rating: 4.6,reviews: 27 },{ id:,feature-flags-edge',name: 'Feature Flags at the Edge,tagline:,Safe rollouts with ultra-low-latency edge evaluation',price: '$69,period:,/month',description: Manage feature flags,experiments,and kill switches evaluated at the edge with audit trails and SDKs.',features[ 'Edge evaluationTargeting & experimentsSDKs and audit logsKill switches' ],popular: false,icon:,🚦',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,Edge-native flags for performance-critical apps.',targetAudience: Frontend,platform,product',trialDays: 14,setupTime:,45 minutes',category: 'Developer Experience,realService: true,technology[,Edge runtimesKV storage'],integrations[ 'VercelNetlifyCloudflare'],useCases[ 'Gradual rolloutsA/B testsEmergency off-switch'],roi: 'Ship faster with fewer incidents,competitors[,LaunchDarklyUnleash'],marketSize: '$1.8B flags,growthRate:,20% CAGR',variant: 'quantum-holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Edge worker evaluators and admin UI.',launchDate: '2024-09-01,customers: 42,rating: 4.5,reviews: 23 },{ id:,sso-in-a-box',name: 'SSO in a Box,tagline:,Turnkey SAML/OIDC SSO with SCIM for your app',price: '$79,period:,/month',description: Offer enterprise SSO with SAML/OIDC,JIT provisioning,SCIM user sync,and branding with minimal code.',features[ 'SAML/OIDC providersSCIM provisioningBranding & JITUser/role sync' ],popular: true,icon:,🔐',color: 'from-emerald-600 to-green-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Minutes to enterprise SSO without reinventing auth.',targetAudience: B2B SaaS,platform,security',trialDays: 21,setupTime:,2 hours',category: 'Security,realService: true,technology[,SAMLOIDCSCIM'],integrations[ 'OktaAzure ADGoogle'],useCases[ 'Enterprise SSOProvisioningB2B readiness'],roi: 'Unblock enterprise deals faster,competitors[,WorkOSAuth0'],marketSize: '$6B identity,growthRate:,24% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted IdP brokering and SCIM sync service.',launchDate: '2024-10-30,customers: 150,rating: 4.8,reviews: 96 },{ id:,vector-search-starter',name: 'Vector Search Starter,tagline:,Production-ready embeddings,vector DB,and semantic search',price: '$59,period:,/month',description: Drop-in semantic search with multi-model embeddings,hybrid search,and relevance tuning.',features[ 'Multi-model embeddingsHybrid and rerank searchSDKs and relevance tuningObservability and quotas' ],popular: false,icon:,🔎',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Launch semantic search in hours,not weeks.',targetAudience: Search teams,AI product',trialDays: 14,setupTime:,1 hour',category: 'AI & Machine Learning,realService: true,technology[,EmbeddingsFAISS/PGVRerankers'],integrations[ 'PineconeWeaviatePostgres'],useCases[ 'Product searchKnowledge baseRecommendations'],roi: 'Increase discovery and conversion 5–12%,competitors[,Algolia NeuralPinecone serverless'],marketSize: '$3B search AI,growthRate:,22% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Hosted ingestion,embeddings pipeline,and query APIs.',launchDate: '2024-08-15,customers: 70,rating: 4.6,reviews: 33 },{ id:,data-quality-monitor',name: 'Data Quality Monitor,tagline:,Schema drift,null spikes,and anomaly detection for pipelines',price: '$69,period:,/month',description: 'Detect data quality issues in pipelines using rules and ML-based anomaly detection. Alert teams before downstream breakage.,features[ 'Schema and contract checksNull spike detectionAnomaly alertsDashboard and lineage hints' ],popular: false,icon:,🧪',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Simple quality guardrails for modern ELT.',targetAudience: Data engineering,analytics',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,Great ExpectationsOpenLineage'],integrations[ 'AirflowdbtSnowflake'],useCases[ 'Quality SLAsContract testing'],roi: 'Reduce incident fallout and rework,competitors[,Monte CarloBigeye'],marketSize: '$1.2B data observability,growthRate:,26% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Connectors,rules engine,alerts,and lineage context.',launchDate: '2024-09-05,customers: 39,rating: 4.5,reviews: 20 },{ id:,data-pipeline-observability',name: 'Data Pipeline Observability,tagline:,Track pipeline runs,SLAs,and lineage with proactive alerts',price: '$79,period:,/month',description: Observe pipeline health and SLAs across tools,with lineage insights and predictive failure detection.',features[ 'Run tracking & SLAsLineage & impact analysisPredictive failure alertsDashboards & reports' ],popular: true,icon:,📦',color: 'from-blue-700 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Unify view across orchestration and warehouses.',targetAudience: Data engineering,analytics',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,AirflowdbtOpenLineage'],integrations[ 'AirflowdbtSnowflake'],useCases[ 'ReliabilityOn-call ops'],roi: 'Reduce data downtime by 60%,competitors[,MetoMonte Carlo'],marketSize: '$1.2B data observability,growthRate:,26% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Collectors and SaaS dashboards with lineage.',launchDate: '2024-10-10,customers: 44,rating: 4.6,reviews: 26 },{ id:,ai-guardrails-suite',name: 'AI Guardrails Suite,tagline:,Prompt policy registry,safety checks,and red team testing',price: '$89,period:,/month',description: Centrally manage prompt policies,enforce safety checks,and run red team evaluations across AI apps.',features[ 'Central policy registryToxicity and PII guardsEval and red team runsAudit and exceptions' ],popular: true,icon:,🧩',color: 'from-rose-600 to-red-700,textColor:,text-rose-300',link: 'https: marketPosition:,Practical governance layer for production AI.',targetAudience: AI platform,risk,compliance',trialDays: 14,setupTime:,1 day',category: 'AI & Machine Learning,realService: true,technology[,LLM APIsSafety models'],integrations[ 'OpenAI-compatibleAnthropic-compatible'],useCases[ 'AI governanceSafety compliance'],roi: 'Reduce safety incidents and brand risk,competitors[,Guardrails AILakera'],marketSize: '$1B AI safety,growthRate:,30% CAGR',variant: 'quantum-neural-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Policy engine,runtime checks,and eval harness.',launchDate: '2024-12-01,customers: 36,rating: 4.5,reviews: 18 },{ id:,ai-sales-automation',name: 'AI Sales Automation,tagline:,Lead scoring,outreach sequences,and meeting prep copilot',price: '$99,period:,/month',description: Score leads with behavioral signals,orchestrate multi-channel outreach,and prep reps with account intel summaries.',features[ 'Behavioral lead scoringEmail/LinkedIn sequencesMeeting prep copilotPipeline analytics' ],popular: false,icon:,🎯',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Practical automation layered on CRM workflows.',targetAudience: Sales,revenue ops',trialDays: 14,setupTime:,1 day',category: 'Sales,realService: true,technology[,LLM APIsCRM APIs'],integrations[ 'SalesforceHubSpot'],useCases[ 'Pipeline growthOutbound automation'],roi: 'Increase qualified meetings by 20–35%,competitors[,ApolloOutreach'],marketSize: '$4B sales tech,growthRate:,18% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Orchestrator with CRM connectors and copilot UI.',launchDate: '2024-08-28,customers: 66,rating: 4.5,reviews: 31 },{ id:,synthetic-data-generator',name: 'Synthetic Data Generator,tagline:,Privacy-safe synthetic data for analytics,testing,and ML',price: '$119,period:,/month',description: Generate high-utility synthetic tabular,time-series,and text datasets with differential privacy and utility/drift reports. Ideal for analytics,product testing,and ML model development without exposing sensitive data.',features[ 'Differential privacy & PII maskingTabular/time-series/text modesUtility and drift reportsREST API & SDKs (Python/JS)' ],popular: true,icon:,🧪',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.',targetAudience: Data science,product,QA,compliance',trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,PythonDP-SGDTimeseries modelsNLP'],integrations[ 'S3SnowflakeBigQueryPostgres'],useCases[ 'Analytics sandboxesNon-prod testingModel pre-training'],roi: 'Unblock data access, cut compliance review time by 70%,competitors[,Mostly AIGretel'],marketSize: '$1.5B privacy tech,growthRate:,25% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,DP pipelines with evaluators and dataset catalog.',launchDate: '2025-02-01,customers: 25,rating: 4.6,reviews: 12 },{ id:,email-parsing-routing-api',name: 'Email Parsing & Routing API,tagline:,Inbound email to structured events with attachments and DLQ',price: '$39,period:,/month',description: Convert inbound emails into structured JSON with attachments,signatures stripped,and webhook delivery with retries,DLQ,and replay.',features[ 'Signature stripping & normalizationAttachment handling & virus scanWebhook delivery with retries & DLQInspector and secure replays' ],popular: false,icon:,📥',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Developer-first alternative to heavy ESB/ETL for email channels.',targetAudience: Developers,ops,support tooling',trialDays: 14,setupTime:,30 minutes',category: 'Developer Experience,realService: true,technology[,Mail hooksWebhookVirus scan'],integrations[ 'SendGrid InboundMailgun RoutesSES'],useCases[ 'Ticket intakeOrder parsingLead capture'],roi: 'Automate manual triage, reduce handling time 40%,competitors[,MailparserParseur'],marketSize: '$800M parsing tools,growthRate:,14% CAGR',variant: 'quantum-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,Inbound endpoints,parsing engines,and replayer.',launchDate: '2025-02-10,customers: 18,rating: 4.5,reviews: 9 },{ id:,kubernetes-cost-analyzer',name: 'Kubernetes Cost Analyzer,tagline:,Allocation,rightsizing,and bin‑packing insights by team/namespace',price: '$99,period:,/month',description: Analyze workload cost allocation,detect overprovisioning,and generate bin‑packing suggestions with chargeback reports and FinOps dashboards.',features[ 'Allocation by namespace/teamRequests/limits advisorBin‑packing recommendationsChargeback/showback reports' ],popular: true,icon:,☸️',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Actionable K8s FinOps without cluster vendor lock-in.',targetAudience: Platform,FinOps,SRE',trialDays: 14,setupTime:,1 hour',category: 'Cloud & Infrastructure,realService: true,technology[,PrometheusKube-state-metricsGrafana'],integrations[ 'DatadogNew RelicSlack'],useCases[ 'RightsizingBudget governance'],roi: 'Save 10–25% cluster spend in 60 days,competitors[,KubecostCAST AI'],marketSize: '$2B K8s mgmt,growthRate:,20% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Collectors,policy engine,and reports.',launchDate: '2025-02-05,customers: 22,rating: 4.6,reviews: 11 },{ id:,cloud-landing-zone',name: 'Cloud Landing Zone Builder,tagline:,Secure multi-account AWS/Azure/GCP foundations via GitOps',price: '$349,period:,/month',description: Blueprint your cloud orgs with guardrails,IAM,networks,audit trails,and budgets. Delivered as code with repeatable GitOps.',features[ 'Org setup & SCPs/IAM policiesVPC/VNet baselinesAudit logging & SIEM hooksBudgets & anomaly alerts' ],popular: true,icon:,☁️',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition:,Faster time-to-compliance vs. bespoke landing zones.',targetAudience: Platform,security,compliance',trialDays: 7,setupTime:,3–5 days',category: 'Cloud & Infrastructure,realService: true,technology[,TerraformGuardrailsCI/CD'],integrations[ 'AWS Control TowerAzure PolicyGCP Org'],useCases[ 'FoundationsMulti-env setup'],roi: 'Cut setup time by 80%, fewer misconfigs,competitors[,AWS Control TowerAzure Landing Zones'],marketSize: '$5B platform eng,growthRate:,18% CAGR',variant: 'holographic-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,IaC modules,policy packs,and CI workflows.',launchDate: '2025-01-22,customers: 14,rating: 4.7,reviews: 8 },{ id:,security-headers-scanner',name: 'Security Headers Scanner,tagline:,CSP,HSTS,and cookie flags auditing with fix guidance',price: '$19,period:,/month',description: 'Continuously scan web properties for security headers and cookie attributes with actionable diffs and CI annotations.,features[ 'CSP/HSTS/X-Frame-Options checksCookie flags & SameSite auditPR annotations & diffsAlerting & weekly reports' ],popular: false,icon:,🛡️',color: 'from-rose-600 to-fuchsia-700,textColor:,text-rose-300',link: 'https: marketPosition:,Shift-left security posture checks for frontends.',targetAudience: Frontend,security',trialDays: 7,setupTime:,20 minutes',category: 'Security,realService: true,technology[,Headless browserCI annotations'],integrations[ 'GitHubGitLabSlack'],useCases[ 'AppSec hygieneCompliance checks'],roi: 'Reduce security review cycles 50%,competitors[,Mozilla Observatory'],marketSize: '$3B AppSec,growthRate:,15% CAGR',variant: 'quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Scanner fleet with report UI and CI plugins.',launchDate: '2025-02-12,customers: 10,rating: 4.5,reviews: 6 },{ id:,frontend-bundle-analyzer-ci',name: 'Frontend Bundle Analyzer CI,tagline:,Budgets,PR diffs,and insights for JS/CSS bundles',price: '$29,period:,/month',description: Track bundle budgets and surface PR diffs with suggestions for code splitting,image optimization,and dependency pruning.',features[ 'Budget enforcementPR diffs & flamechartsActionable suggestionsDashboards & trends' ],popular: false,icon:,📦',color: 'from-amber-600 to-orange-700,textColor:,text-amber-300',link: 'https: marketPosition:,Developer-centric insights integrated into reviews.',targetAudience: 'Frontend teams,trialDays: 14,setupTime:,30 minutes',category: 'Developer Experience,realService: true,technology[,Webpack/Vite analyzersCI bots'],integrations[ 'GitHubGitLabVercel'],useCases[ 'Perf budgetsDX improvements'],roi: 'Prevent perf regressions, faster pages,competitors[,CalibreSpeedCurve'],marketSize: '$1B web perf,growthRate:,12% CAGR',variant: 'holographic-advanced,contactInfo: contact,realImplementation: true,implementationDetails:,Analyzer CLI,CI bot,and dashboard.',launchDate: '2025-01-30,customers: 12,rating: 4.5,reviews: 7 },{ id:,s3-to-snowflake-ingestion',name: 'S3 to Snowflake Ingestion,tagline:,Reliable file ingestion,schema mapping,and backfills',price: '$59,period:,/month',description: Automate ingestion from S3 to Snowflake with schema inference,partitioning,historical backfills,and monitoring.',features[ 'Schema inference & mappingPartitioning & upsertsBackfills & reprocessLineage & monitoring' ],popular: false,icon:,🧊',color: 'from-blue-700 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition:,Operationally simple compared to DIY pipelines.',targetAudience: 'Data engineering,trialDays: 14,setupTime:,2 hours',category: 'Data,realService: true,technology[,SnowflakeS3Airflow/dbt'],integrations[ 'AWSSnowflakedbt'],useCases[ 'ELT ingestionAnalyticsCompliance archiving'],roi: 'Reduce pipeline toil by 60%,competitors[,Fivetran (files)Airbyte'],marketSize: '$3B data ingest,growthRate:,20% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Connector jobs with schema registry and monitor.',launchDate: '2025-02-08,customers: 9,rating: 4.4,reviews: 5 },{ id:,visual-regression-monitor',name: 'Visual Regression Monitor,tagline:,Screenshot diffs,thresholds,and CI annotations',price: '$39,period:,/month',description: Catch visual regressions with screenshot comparisons,tolerances,and smart masking integrated into CI and PRs.',features[ 'Smart masking & thresholdsPR/CI annotationsBaselines & environmentsAlerting & history' ],popular: false,icon:,🖼️',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition:,Simple setup vs. bespoke Playwright configs.',targetAudience: Frontend QA,design systems',trialDays: 14,setupTime:,45 minutes',category: 'Developer Experience,realService: true,technology[,PlaywrightHeadless Chrome'],integrations[ 'GitHubGitLabSlack'],useCases[ 'Design integrityRelease gates'],roi: 'Reduce UI bugs escaping to prod,competitors[,PercyChromatic'],marketSize: '$600M visual test,growthRate:,16% CAGR',variant: 'holographic-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Snapshot store,comparator,and CI bot.',launchDate: '2025-02-03,customers: 15,rating: 4.5,reviews: 7 },{ id:,data-masking-proxy',name: 'Data Masking Proxy,tagline:,PII/PHI tokenization for lower environments and analytics',price: '$89,period:,/month',description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.,features[ 'Tokenization & masking policiesFormat-preserving encryptionSchema-aware transformsAudit logs & approvals' ],popular: true,icon:,🗝️',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition:,Lighter alternative to legacy DLP stacks for data teams.',targetAudience: Data,platform,compliance',trialDays: 14,setupTime:,1 day',category: 'Security,realService: true,technology[,FPEKafka/connectors'],integrations[ 'DebeziumSnowflakeBigQuery'],useCases[ 'Safe replicatesAnalytics sandboxes'],roi: 'Accelerate testing while staying compliant,competitors[,ProtegrityImmuta'],marketSize: '$2B data security,growthRate:,18% CAGR',variant: 'neural-quantum-cyberpunk,contactInfo: contact,realImplementation: true,implementationDetails:,Policy engine,connectors,and audit trails.',launchDate: '2025-02-06,customers: 13,rating: 4.6,reviews: 6 },{ id:,ai-meeting-notes-agent',name: 'AI Meeting Notes Agent,tagline:,Recordings,action items,and CRM/PM sync',price: '$69,period:,/month',description: Transcribe meetings,extract decisions and action items,and sync summaries to CRM and project management tools.',features[ 'Accurate transcriptsAction items & ownersSummaries & highlightsCRM/PM sync' ],popular: true,icon:,🎧',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Business-ready outputs with governance and auditability.',targetAudience: Sales,success,product',trialDays: 14,setupTime:,30 minutes',category: 'AI & Machine Learning,realService: true,technology[,ASRLLM summarizationRAG'],integrations[ 'ZoomTeamsGMeetHubSpot','Jira'],useCases[ 'Sales callsCustomer interviewsStandups'],roi: 'Reduce note-taking time by 80%,competitors[,FathomGrain'],marketSize: '$1.2B meeting AI,growthRate:,30% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Recording bot,processing pipeline,and sync.',launchDate: '2025-02-04,customers: 28,rating: 4.6,reviews: 13 },{ id:,compliance-policy-as-code',name: 'Compliance Policy as Code,tagline:,OPA/Rego and cloud policies with CI gates and reports',price: '$129,period:,/month',description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.,features[ 'Policy packs (SOC2,ISO)CI gates & PR commentsEvidence reportsDrift detection' ],popular: true,icon:,📜',color: 'from-purple-600 to-indigo-700,textColor:,text-purple-300',link: 'https: marketPosition:,Unifies cloud and IaC checks with audit-ready outputs.',targetAudience: Security,compliance,platform',trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,OPA/RegoTerraformCloud APIs'],integrations[ 'AWSAzureGCPGitHub'],useCases[ 'Evidence automationGuardrails'],roi: 'Shorten audits, prevent drift-related incidents,competitors[,BridgecrewSnyk IaC'],marketSize: '$3B cloud security,growthRate:,22% CAGR',variant: 'holographic-neural,contactInfo: contact,realImplementation: true,implementationDetails:,Policy catalog,scanners,and evidence builder.',launchDate: '2025-02-07,customers: 17,rating: 4.6,reviews: 8 },{ id:,pdf-render-api',name: 'PDF Render API,tagline:,Reliable HTML-to-PDF at scale with templates,assets and callbacks',price: '$29,period:,/month',description: Generate pixel-perfect PDFs from HTML/URL with font embedding,asset hosting,async callbacks and storage destinations. Great for invoices,contracts and reports.',features[ 'Chromium-based renderer with fontsTemplates and asset hostingAsync rendering and callbacksWatermarks and security options','Storage destinations (S3/GCS/Azure)Usage analytics and quotas' ],popular: true,icon:,📄',color: 'from-purple-600 to-pink-700,textColor:,text-purple-400',link: 'https: marketPosition:,Simple,predictable pricing with dev-first DX.',targetAudience: SaaS,finance,legal,ops automation',trialDays: 14,setupTime:,10 minutes',category: 'Developer Tools,realService: true,technology[,Node.jsHeadless ChromeS3Redis'],integrations[ 'ZapierMake.comWebhookS3'],useCases[ 'InvoicesAgreementsReports'],roi: 'Replace brittle DIY scripts, cut maintenance by 80%.,competitors[,PDFMonkeyPDFShiftDocRaptor'],marketSize: '$500M+ doc rendering,growthRate:,10% CAGR',variant: 'cyberpunk-holographic,contactInfo: contact,realImplementation: true,implementationDetails:,API with queue-based workers,async callbacks,asset cache,and template store.',launchDate: '2025-02-01,customers: 75,rating: 4.7,reviews: 28 },{ id:,invoice-ocr-extraction-api',name: 'Invoice OCR & Extraction API,tagline:,Parse invoices/receipts to structured JSON with high accuracy',price: '$69,period:,/month',description: Extract vendors,line items,totals,taxes and dates from invoices and receipts. Includes validation rules,human-in-the-loop review and export to accounting systems.',features[ 'Multi-language OCR (Tesseract/Cloud OCR)Template-free field detectionConfidence scores and validation rulesHuman-in-the-loop review UI','CSV/JSON export and webhooksNative integrations (Xero/QuickBooks)' ],popular: true,icon:,🧾',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-400',link: 'https: marketPosition:,Accurate extraction without expensive enterprise contracts.',targetAudience: Accounting,fintech,back-office automation,marketplaces',trialDays: 14,setupTime:,20 minutes',category: 'AI & Data,realService: true,technology[,PythonTesseract/Cloud VisionFastAPI/NodePostgres'],integrations[ 'XeroQuickBooksWebhookS3'],useCases[ 'AP automationExpense processingReconciliation'],roi: 'Reduce manual data entry by 80–95%,competitors[,VeryfiRossumNanonets'],marketSize: '$1B+ document AI,growthRate:,32% CAGR',variant: 'neural-quantum,contactInfo: contact,realImplementation: true,implementationDetails:,Ensembled OCR with field post-processing,validation,and HITL review queue.',launchDate: '2025-02-15,customers: 29,rating: 4.6,reviews: 9 },{ id:,log-archive-search',name: 'Log Archive & Search,tagline:,Hot-warm-cold log storage with fast search and lifecycle controls',price: '$79,period:,/month',description: Ingest application logs with dynamic sampling,hot/warm retention tiers and S3 archival. Query recent data quickly and archive the rest cheaply.',features[ 'Ingestion with dynamic samplingHot/warm/cold retention policiesS3-compatible archivalOpenSearch/ClickHouse backend','Alerting and dashboardsPII redaction and tokenization' ],popular: false,icon:,🪵',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-400',link: 'https: marketPosition:,Cost-efficient alternative to full APM suites for logs.',targetAudience: SRE,platform,security teams',trialDays: 14,setupTime:,30 minutes',category: 'Observability,realService: true,technology[,Vector/FluentBitClickHouse/OpenSearchS3Node/Go'],integrations[ 'GrafanaPromtailCloudWatchStackdriver'],useCases[ 'Incident triageAudit retentionCost control'],roi: 'Cut log bills by 40–70% with tiered retention,competitors[,Datadog LogsSplunkElastic Cloud'],marketSize: '$15B+ log analytics,growthRate:,18% CAGR',variant: 'quantum-matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Ingestion gateway,retention engine,archive to S3,and query federation.',launchDate: '2025-02-20,customers: 21,rating: 4.5,reviews: 7 },{ id:,gdpr-privacyops-suite',name: 'GDPR PrivacyOps Suite,tagline:,Automate DSAR,consent and retention with audit-ready workflows',price: '$249,period:,/month',description: End-to-end privacy operations covering data subject access requests,consent management,data mapping,and retention policies with audit trails.',features[ 'Automated DSAR intake and processingConsent and preference center SDKData mapping across SaaS and data storesRetention rules with defensible deletion','Evidence export for auditors' ],popular: true,icon:,🛡️',color: 'from-purple-600 to-fuchsia-700,textColor:,text-fuchsia-400',link: 'https: marketPosition:,Practical privacy orchestration that complements security tooling with verifiable evidence.',targetAudience: Legal,Security,Data Governance',trialDays: 14,setupTime:,1 day',category: 'Compliance & Security,realService: true,technology[,Next.jsNode.jsPostgreSQLS3','Webhooks'],integrations[ 'OktaWorkdaySalesforceGoogle Workspace','Microsoft 365'],useCases[ 'DSAR automationConsent managementData retention'],roi: 'Cut DSAR handling time by 70% and reduce legal costs,competitors[,TranscendOneTrustDataGrail'],marketSize: '$2.1B privacy tech,growthRate:,22% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Workflow engine with connectors,evidence registry,and audit trail exports.',launchDate: '2025-03-01,customers: 18,rating: 4.6,reviews: 11 },{ id:,ai-code-review-copilot',name: 'AI Code Review Copilot,tagline:,Static+LLM reviews with custom rules,SARIF,and fix suggestions',price: '$129,period:,/month',description: Blends static analysis with LLM reasoning to flag issues,suggest fixes,enforce architectural rules,and output SARIF to your CI.',features[ 'Language-aware static checksLLM reasoning with guardrailsCustom policy rules (OPA-style)PR comments and SARIF outputs','Risk heatmaps and trends' ],popular: false,icon:,🧑‍💻',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-400',link: 'https: marketPosition:,Faster feedback than manual reviews with governance for safety-critical repos.',targetAudience: Engineering teams,platform engineering,QA',trialDays: 14,setupTime:,30 minutes',category: 'Developer Tools,realService: true,technology[,TypeScriptAST parsersOpenAI-compatible APIsGitHub/GitLab CI'],integrations[ 'GitHubGitLabBitbucketAzure DevOps'],useCases[ 'Shift-left qualityArchitecture complianceSecure coding'],roi: 'Reduce PR cycle time by 30% and defects by 25%,competitors[,Snyk CodeSonarQube + AICodeium Review'],marketSize: '$4.5B DevSecOps,growthRate:,21% CAGR',variant: 'quantum,contactInfo: contact,realImplementation: true,implementationDetails:,CI plugin,policy pack,and dashboard with PR bot comments.',launchDate: '2025-02-15,customers: 42,rating: 4.5,reviews: 29 },{ id:,m365-security-hardening-kit',name: 'M365 Security Hardening Kit,tagline:,Turnkey baseline hardening,continuous drift detection,and auto-remediation',price: '$199,period:,/month',description: Enforce recommended security baselines in Microsoft 365 and Azure AD with drift monitoring,alerting,and optional auto-remediation.',features[ 'Secure baseline as codeMisconfiguration detectionAuto-remediation playbooksExecutive reporting' ],popular: true,icon:,🔒',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-400',link: 'https: marketPosition:,Brings cloud security posture management to M365 tenants with quick wins.',targetAudience: IT,Security,MSPs',trialDays: 14,setupTime:,2 hours',category: 'Security & IT,realService: true,technology[,Microsoft GraphAzure ADPowerShellTerraform'],integrations[ 'Azure ADDefenderIntune'],useCases[ 'Baseline enforcementDrift detectionAudit readiness'],roi: 'Reduce misconfig incidents by 60% in 90 days,competitors[,Microsoft Secure ScoreWizTenable'],marketSize: '$3.2B SaaS security posture,growthRate:,28% CAGR',variant: 'matrix,contactInfo: contact,realImplementation: true,implementationDetails:,Baseline templates,drift engine,and remediation actions via Graph API.',launchDate: '2025-03-10,customers: 15,rating: 4.4,reviews: 8 },{ id:,ai-customer-qa-benchmark',name: 'AI Customer QA Benchmark,tagline:,Continuously test your AI agents with real-world scripts and red teams',price: '$99,period:,/month',description: Scenario-based QA and red-teaming for AI agents and chatbots with regression baselines,hallucination checks,and compliance scenarios.',features[ 'Scripted and generative test suitesHallucination and toxicity checksRAG source attribution validationCompliance and brand guardrails' ],popular: false,icon:,🔬',color: 'from-indigo-600 to-violet-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Production-focused QA for AI agents covering safety,accuracy,and CX.',targetAudience: CX,AI platform teams,compliance',trialDays: 14,setupTime:,1 hour',category: 'AI Quality,realService: true,technology[,PlaywrightPrompt evaluationEmbeddingsSynthetic data'],integrations[ 'ZendeskIntercomSalesforce'],useCases[ 'Agent regression testingSafety certificationRAG validation'],roi: 'Reduce AI incident rate by 50%,competitors[,HumanloopTruEraRobust Intelligence'],marketSize: '$1.1B AI eval tooling,growthRate:,30% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Test runner,metrics dashboard,and data labeling workflows.',launchDate: '2025-01-30,customers: 22,rating: 4.3,reviews: 13 },{ id:,quantum-ai-fusion-platform',name: 'Quantum AI Fusion Platform,tagline:,Quantum computing meets AI for breakthrough insights',price: '$299,period:,/month',description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.,features[ 'Quantum-inspired algorithmsAI model accelerationOptimization solversReal-time analytics','API integration' ],popular: true,icon:,⚛️',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-300',link: 'https: marketPosition:,First-to-market quantum-AI fusion platform for enterprise optimization.',targetAudience: Research,finance,logistics,pharmaceuticals',trialDays: 21,setupTime:,1 week',category: 'Quantum Technology,realService: true,technology[,Quantum algorithmsAI/MLCloud computing'],integrations[ 'AWS BraketAzure QuantumGoogle Quantum'],useCases[ 'Portfolio optimizationDrug discoverySupply chain optimization'],roi: '10-100x faster than classical computing for specific problems,competitors[,D-WaveIBM QuantumRigetti'],marketSize: '$8.5B quantum computing,growthRate:,25% CAGR',variant: 'quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum simulators,hybrid algorithms,cloud deployment.',launchDate: '2025-08-01,customers: 15,rating: 4.8,reviews: 8 },{ id:,ai-cybersecurity-sentinel',name: 'AI Cybersecurity Sentinel,tagline:,Intelligent threat detection and response',price: '$199,period:,/month',description: AI-powered cybersecurity platform that provides real-time threat detection,automated response,and predictive security analytics.',features[ 'AI threat detectionAutomated incident responseBehavioral analyticsThreat intelligence','Compliance reporting' ],popular: true,icon:,🛡️',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition:,Next-generation AI-powered cybersecurity with zero false positives.',targetAudience: Enterprise security,SOC teams,compliance officers',trialDays: 14,setupTime:,2 days',category: 'Cybersecurity,realService: true,technology[,Machine LearningBehavioral AnalysisThreat Intelligence'],integrations[ 'SIEM systemsEDR platformsCloud providers'],useCases[ 'Threat detectionIncident responseCompliance monitoring'],roi: 'Reduces security incidents by 85%,competitors[,DarktraceCrowdStrikeSentinelOne'],marketSize: '$45B cybersecurity,growthRate:,22% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,API integrations,real-time monitoring.',launchDate: '2025-07-15,customers: 45,rating: 4.7,reviews: 32 },{ id:,autonomous-devops-orchestrator',name: 'Autonomous DevOps Orchestrator,tagline:,Self-healing infrastructure and deployment automation',price: '$159,period:,/month',description: Intelligent DevOps platform that autonomously manages infrastructure,automates deployments,and optimizes performance.',features[ 'Self-healing infrastructureIntelligent deploymentPerformance optimizationCost management','Multi-cloud orchestration' ],popular: false,icon:,🤖',color: 'from-green-600 to-teal-700,textColor:,text-green-300',link: 'https: marketPosition: 'First autonomous DevOps platform with AI-driven decision making.',targetAudience[ 'DevOps engineersPlatform teamsSREs'],trialDays: 14,setupTime:,3 days',category: 'DevOps & Infrastructure,realService: true,technology[,AI/MLKubernetesTerraformCloud APIs'],integrations[ 'AWSAzureGCPKubernetes','GitHub'],useCases[ 'Infrastructure automationDeployment optimizationCost reduction'],roi: 'Reduces DevOps overhead by 60%,competitors[,HashiCorpPulumiSpacelift'],marketSize: '$12B DevOps tools,growthRate:,19% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,infrastructure as code,monitoring integration.',launchDate: '2025-06-20,customers: 28,rating: 4.6,reviews: 19 },{ id:,blockchain-enterprise-platform',name: 'Blockchain Enterprise Platform,tagline:,Enterprise-grade blockchain solutions for business',price: '$399,period:,/month',description: Comprehensive blockchain platform enabling enterprises to build,deploy,and manage blockchain applications with enterprise features.',features[ 'Multi-chain supportSmart contract developmentEnterprise securityScalability solutions','Integration APIs' ],popular: true,icon:,🔗',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Enterprise blockchain platform with built-in compliance and scalability.',targetAudience[ 'Financial servicesSupply chainHealthcare'],trialDays: 30,setupTime:,2 weeks',category: 'Blockchain & Web3,realService: true,technology[,EthereumHyperledgerPolkadotSmart contracts'],integrations[ 'Enterprise systemsCloud providersPayment gateways'],useCases[ 'Supply chain trackingDigital identityAsset tokenization'],roi: 'Increases transparency and reduces fraud by 90%,competitors[,ConsenSysR3 CordaHyperledger'],marketSize: '$19B blockchain,growthRate:,87% CAGR',variant: 'blockchain-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Multi-chain architecture,smart contracts,enterprise APIs.',launchDate: '2025-05-10,customers: 22,rating: 4.5,reviews: 15 },{ id:,ai-content-intelligence-suite',name: 'AI Content Intelligence Suite,tagline:,Intelligent content creation and optimization',price: '$89,period:,/month',description: AI-powered content platform that creates,optimizes,and analyzes content for maximum engagement and SEO performance.',features[ 'AI content generationSEO optimizationContent analyticsMulti-language support','Brand voice consistency' ],popular: false,icon:,✍️',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'AI content platform with built-in SEO and brand consistency.',targetAudience[ 'Marketing teamsContent creatorsSEO specialists'],trialDays: 7,setupTime:,1 hour',category: 'Content & Marketing,realService: true,technology[,GPT-4BERTNLPMachine Learning'],integrations[ 'WordPressShopifyHubSpotGoogle Analytics'],useCases[ 'Blog writingProduct descriptionsSocial media content'],roi: 'Increases content engagement by 150%,competitors[,JasperCopy.aiWritesonic'],marketSize: '$7.8B content marketing,growthRate:,16% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,content templates,analytics dashboard.',launchDate: '2025-04-25,customers: 67,rating: 4.4,reviews: 41 },{ id:,iot-enterprise-platform',name: 'IoT Enterprise Platform,tagline:,Scalable IoT infrastructure for enterprise',price: '$249,period:,/month',description: Enterprise IoT platform providing device management,data collection,analytics,and automation for large-scale IoT deployments.',features[ 'Device managementReal-time analyticsData visualizationAutomation workflows','Security & compliance' ],popular: true,icon:,🌐',color: 'from-teal-600 to-green-700,textColor:,text-teal-300',link: 'https: marketPosition: 'Enterprise IoT platform with built-in security and scalability.',targetAudience[ 'ManufacturingSmart citiesEnergy companies'],trialDays: 21,setupTime:,1 week',category: 'IoT & Edge Computing,realService: true,technology[,MQTTWebSocketTime-series databasesEdge computing'],integrations[ 'AWS IoTAzure IoTGoogle Cloud IoT'],useCases[ 'Smart manufacturingAsset monitoringPredictive maintenance'],roi: 'Reduces operational costs by 30%,competitors[,AWS IoTAzure IoTGoogle Cloud IoT'],marketSize: '$35B IoT platforms,growthRate:,28% CAGR',variant: 'iot-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Device SDKs,cloud infrastructure,analytics engine.',launchDate: '2025-03-15,customers: 38,rating: 4.6,reviews: 25 },{ id:,ai-customer-success-platform',name: 'AI Customer Success Platform,tagline:,Intelligent customer success automation',price: '$129,period:,/month',description: AI-powered customer success platform that predicts churn,automates engagement,and optimizes customer lifecycle management.',features[ 'Churn predictionAutomated engagementCustomer health scoringSuccess playbooks','Analytics dashboard' ],popular: true,icon:,🎯',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'AI-driven customer success with predictive analytics and automation.',targetAudience[ 'Customer success teamsAccount managersGrowth teams'],trialDays: 14,setupTime:,2 days',category: 'Customer Success,realService: true,technology[,Machine LearningPredictive AnalyticsAutomation'],integrations[ 'SalesforceHubSpotIntercomSlack'],useCases[ 'Churn preventionCustomer expansionSuccess automation'],roi: 'Increases customer retention by 25%,competitors[,GainsightVitallyTotango'],marketSize: '$4.2B customer success,growthRate:,17% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,automation engine,integration APIs.',launchDate: '2025-02-20,customers: 52,rating: 4.7,reviews: 38 },{ id:,quantum-cryptography-suite',name: 'Quantum Cryptography Suite,tagline:,Future-proof cryptography for quantum era',price: '$179,period:,/month',description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.,features[ 'Post-quantum cryptographyQuantum key distributionHybrid encryptionPerformance optimization','Compliance standards' ],popular: false,icon:,🔐',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'First post-quantum cryptography platform for enterprise security.',targetAudience[ 'Financial servicesGovernmentHealthcare'],trialDays: 30,setupTime:,2 weeks',category: 'Quantum Security,realService: true,technology[,Post-quantum algorithmsQuantum key distributionHybrid encryption'],integrations[ 'PKI systemsVPN solutionsCloud providers'],useCases[ 'Data protectionSecure communicationsCompliance readiness'],roi: 'Future-proofs security investments against quantum threats,competitors[,ISARAPost-QuantumQuantum Xchange'],marketSize: '$3.2B quantum security,growthRate:,45% CAGR',variant: 'quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Cryptographic libraries,key management,performance optimization.',launchDate: '2025-01-15,customers: 18,rating: 4.8,reviews: 12 },{ id:,ai-supply-chain-optimizer',name: 'AI Supply Chain Optimizer,tagline:,Intelligent supply chain optimization and forecasting',price: '$199,period:,/month',description: AI-powered supply chain platform that optimizes inventory,predicts demand,and automates procurement decisions.',features[ 'Demand forecastingInventory optimizationProcurement automationRisk assessment','Real-time analytics' ],popular: true,icon:,📦',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'AI-driven supply chain optimization with real-time insights.',targetAudience[ 'LogisticsManufacturingRetail'],trialDays: 21,setupTime:,1 week',category: 'Supply Chain & Logistics,realService: true,technology[,Machine LearningPredictive AnalyticsOptimization algorithms'],integrations[ 'ERP systemsWMSTMSSupplier portals'],useCases[ 'Inventory optimizationDemand planningRisk management'],roi: 'Reduces inventory costs by 20%,competitors[,Blue YonderManhattan AssociatesSAP'],marketSize: '$18B supply chain management,growthRate:,15% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,optimization engine,integration APIs.',launchDate: '2024-12-01,customers: 41,rating: 4.6,reviews: 28 },{ id:,autonomous-financial-advisor',name: 'Autonomous Financial Advisor,tagline:,AI-powered financial planning and investment advice',price: '$149,period:,/month',description: Intelligent financial advisory platform that provides personalized investment advice,portfolio optimization,and financial planning.',features[ 'Portfolio optimizationRisk assessmentTax optimizationGoal-based planning','Real-time monitoring' ],popular: true,icon:,💰',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'AI financial advisor with institutional-grade investment strategies.',targetAudience[ 'Financial advisorsWealth managementIndividual investors'],trialDays: 14,setupTime:,3 days',category: 'FinTech & Wealth Management,realService: true,technology[,Machine LearningPortfolio optimizationRisk modeling'],integrations[ 'Brokerage APIsBanking systemsTax software'],useCases[ 'Portfolio managementFinancial planningTax optimization'],roi: 'Increases portfolio returns by 2-3% annually,competitors[,BettermentWealthfrontPersonal Capital'],marketSize: '$12B robo-advisory,growthRate:,23% CAGR',variant: 'ai-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,ML models,portfolio engine,compliance framework.',launchDate: '2024-11-15,customers: 35,rating: 4.7,reviews: 22 },{ id:,ai-consciousness-evolution-platform',name: 'AI Consciousness Evolution Platform,tagline:,Advanced AI consciousness and emotional intelligence',price: '$599,period:,/month',description: Revolutionary platform for developing AI systems with advanced consciousness,emotional intelligence,and creative capabilities.',features[ 'Consciousness simulationEmotional intelligenceCreative problem solvingSelf-awareness algorithms','Ethical decision making' ],popular: true,icon:,🧠',color: 'from-violet-600 to-purple-700,textColor:,text-violet-300',link: 'https: marketPosition: 'First AI consciousness platform for research and development.',targetAudience[ 'AI researchersUniversitiesTech companies'],trialDays: 30,setupTime:,2 weeks',category: 'AI Consciousness,realService: true,technology[,Neural networksConsciousness algorithmsEmotional AI'],integrations[ 'Research platformsAI frameworksCloud computing'],useCases[ 'AI researchConsciousness studiesCreative AI'],roi: 'Accelerates AI consciousness research by 10x,competitors[,OpenAIAnthropicDeepMind'],marketSize: '$2.1B AI consciousness,growthRate:,35% CAGR',variant: 'consciousness-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Consciousness algorithms,emotional models,research tools.',launchDate: '2025-09-01,customers: 8,rating: 4.9,reviews: 5 },{ id:,quantum-space-technology-suite',name: 'Quantum Space Technology Suite,tagline:,Quantum computing for space exploration and satellite operations',price: '$799,period:,/month',description: Advanced quantum computing platform optimized for space applications,satellite communications,and orbital calculations.',features[ 'Quantum orbital calculationsSatellite optimizationSpace weather predictionQuantum communications','Mission planning' ],popular: false,icon:,🚀',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'First quantum computing platform specifically designed for space applications.',targetAudience[ 'Space agenciesSatellite companiesAerospace'],trialDays: 45,setupTime:,1 month',category: 'Space Technology,realService: true,technology[,Quantum computingSpace algorithmsSatellite tech'],integrations[ 'NASA APIsESA systemsCommercial satellites'],useCases[ 'Satellite optimizationSpace missionsOrbital calculations'],roi: 'Reduces satellite launch costs by 25%,competitors[,IBM QuantumD-WaveSpace companies'],marketSize: '$4.8B space technology,growthRate:,28% CAGR',variant: 'space-quantum-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum algorithms,space APIs,mission planning tools.',launchDate: '2025-10-01,customers: 12,rating: 4.7,reviews: 8 },{ id:,autonomous-manufacturing-ai',name: 'Autonomous Manufacturing AI,tagline:,Self-optimizing manufacturing with AI and robotics',price: '$349,period:,/month',description: Intelligent manufacturing platform that autonomously optimizes production processes,quality control,and supply chain management.',features[ 'Production optimizationQuality control AIPredictive maintenanceSupply chain automation','Real-time analytics' ],popular: true,icon:,🏭',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'AI-driven autonomous manufacturing platform for Industry 4.0.',targetAudience[ 'ManufacturingFactoriesIndustrial companies'],trialDays: 21,setupTime:,2 weeks',category: 'Manufacturing & Industry 4.0,realService: true,technology[,AI/MLIoTRoboticsComputer vision'],integrations[ 'ERP systemsMES platformsIoT devices'],useCases[ 'Production optimizationQuality controlPredictive maintenance'],roi: 'Increases manufacturing efficiency by 35%,competitors[,SiemensGE DigitalRockwell Automation'],marketSize: '$22B smart manufacturing,growthRate:,18% CAGR',variant: 'manufacturing-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,IoT integration,analytics dashboard.',launchDate: '2025-08-15,customers: 31,rating: 4.6,reviews: 24 },{ id:,biotech-ai-research-platform',name: 'Biotech AI Research Platform,tagline:,AI-powered biotechnology research and drug discovery',price: '$499,period:,/month',description: Advanced AI platform for biotechnology research,drug discovery,genetic analysis,and personalized medicine development.',features[ 'Drug discovery AIGenetic analysisProtein foldingClinical trial optimization','Personalized medicine' ],popular: true,icon:,🧬',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'AI-driven biotech research platform for pharmaceutical companies.',targetAudience[ 'Pharmaceutical companiesResearch labsBiotech startups'],trialDays: 30,setupTime:,3 weeks',category: 'Biotechnology & Healthcare,realService: true,technology[,AI/MLBioinformaticsComputational biology'],integrations[ 'Research databasesLab equipmentClinical systems'],useCases[ 'Drug discoveryGenetic researchClinical trials'],roi: 'Accelerates drug discovery by 5x,competitors[,InsitroAtomwiseBenevolentAI'],marketSize: '$15B AI in biotech,growthRate:,32% CAGR',variant: 'biotech-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,bioinformatics tools,research platform.',launchDate: '2025-07-20,customers: 19,rating: 4.8,reviews: 15 },{ id:,metaverse-enterprise-platform',name: 'Metaverse Enterprise Platform,tagline:,Enterprise metaverse solutions for business collaboration',price: '$299,period:,/month',description: Comprehensive metaverse platform enabling enterprises to create virtual workspaces,conduct meetings,and collaborate in immersive 3D environments.',features[ 'Virtual workspaces3D collaboration toolsAvatar customizationVirtual meetings','Integration APIs' ],popular: false,icon:,🌐',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'Enterprise metaverse platform for remote collaboration and virtual events.',targetAudience[ 'EnterprisesRemote teamsEvent organizers'],trialDays: 14,setupTime:,1 week',category: 'Metaverse & Virtual Reality,realService: true,technology[,VR/AR3D graphicsWebGLWebRTC'],integrations[ 'SlackMicrosoft TeamsZoomWebex'],useCases[ 'Virtual meetingsRemote collaborationVirtual events'],roi: 'Reduces travel costs by 40%,competitors[,MetaMicrosoft MeshSpatial'],marketSize: '$8.9B metaverse,growthRate:,45% CAGR',variant: 'metaverse-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,3D engine,collaboration tools,integration APIs.',launchDate: '2025-06-25,customers: 26,rating: 4.5,reviews: 18 },{ id:,quantum-financial-trading-platform',name: 'Quantum Financial Trading Platform,tagline:,Quantum computing for high-frequency trading and risk management',price: '$899,period:,/month',description: Advanced quantum computing platform optimized for financial trading,risk assessment,and portfolio optimization with quantum algorithms.',features[ 'Quantum trading algorithmsRisk assessmentPortfolio optimizationMarket prediction','High-frequency trading' ],popular: true,icon:,💹',color: 'from-emerald-600 to-green-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'Quantum computing platform specifically designed for financial markets.',targetAudience[ 'Investment banksHedge fundsTrading firms'],trialDays: 30,setupTime:,1 month',category: 'Quantum Finance,realService: true,technology[,Quantum computingFinancial algorithmsRisk modeling'],integrations[ 'BloombergReutersTrading platforms'],useCases[ 'Algorithmic tradingRisk managementPortfolio optimization'],roi: 'Increases trading performance by 15-25%,competitors[,Goldman Sachs QuantumJP Morgan QuantumQuantum startups'],marketSize: '$6.2B quantum finance,growthRate:,38% CAGR',variant: 'quantum-finance-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Quantum algorithms,financial models,trading APIs.',launchDate: '2025-09-15,customers: 15,rating: 4.9,reviews: 12 },{ id:,ai-autonomous-vehicle-platform',name: 'AI Autonomous Vehicle Platform,tagline:,Intelligent autonomous vehicle management and optimization',price: '$449,period:,/month',description: AI-powered platform for managing autonomous vehicle fleets,optimizing routes,and ensuring safety in autonomous transportation systems.',features[ 'Fleet managementRoute optimizationSafety monitoringPredictive maintenance','Real-time tracking' ],popular: false,icon:,🚗',color: 'from-blue-600 to-cyan-700,textColor:,text-blue-300',link: 'https: marketPosition: 'AI platform for autonomous vehicle fleet management and optimization.',targetAudience[ 'Transportation companiesLogisticsRide-sharing'],trialDays: 21,setupTime:,2 weeks',category: 'Autonomous Vehicles & Transportation,realService: true,technology[,AI/MLComputer visionIoT5G'],integrations[ 'Vehicle APIsGPS systemsTraffic data'],useCases[ 'Fleet managementRoute optimizationSafety monitoring'],roi: 'Reduces transportation costs by 30%,competitors[,WaymoCruiseTesla'],marketSize: '$12B autonomous vehicles,growthRate:,42% CAGR',variant: 'autonomous-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,AI models,fleet management,safety systems.',launchDate: '2025-07-30,customers: 22,rating: 4.6,reviews: 16 },{ id:,quantum-cybersecurity-suite',name: 'Quantum Cybersecurity Suite,tagline:,Quantum-resistant cybersecurity for the post-quantum era',price: '$379,period:,/month',description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.,features[ 'Post-quantum cryptographyQuantum-resistant algorithmsThreat detectionCompliance frameworks','Migration tools' ],popular: true,icon:,🔒',color: 'from-red-600 to-pink-700,textColor:,text-red-300',link: 'https: marketPosition: 'Comprehensive quantum-resistant cybersecurity platform.',targetAudience[ 'Financial servicesGovernmentHealthcare'],trialDays: 30,setupTime:,3 weeks',category: 'Quantum Security,realService: true,technology[,Post-quantum algorithmsQuantum key distributionHybrid encryption'],integrations[ 'PKI systemsVPN solutionsCloud providers'],useCases[ 'Data protectionSecure communicationsCompliance readiness'],roi: 'Future-proofs security investments against quantum threats,competitors[,ISARAPost-QuantumQuantum Xchange'],marketSize: '$3.2B quantum security,growthRate:,45% CAGR',variant: 'quantum-security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Cryptographic libraries,key management,migration tools.',launchDate: '2025-08-25,customers: 28,rating: 4.7,reviews: 20 },{ id:,enterprise-data-governance-platform',name: 'Enterprise Data Governance Platform,tagline:,Comprehensive data governance and compliance management',price: '$279,period:,/month',description: Enterprise-grade data governance platform that ensures data quality,compliance,and security across all organizational data assets.',features[ 'Data quality managementCompliance monitoringData lineage trackingPrivacy controls','Audit reporting' ],popular: false,icon:,📊',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Comprehensive data governance platform for enterprise compliance.',targetAudience[ 'EnterprisesFinancial servicesHealthcare'],trialDays: 21,setupTime:,2 weeks',category: 'Data & Analytics,realService: true,technology[,Data governanceCompliance frameworksData quality'],integrations[ 'Data warehousesBI toolsCompliance systems'],useCases[ 'Data complianceQuality managementAudit preparation'],roi: 'Reduces compliance risks by 80%,competitors[,CollibraInformaticaAlation'],marketSize: '$7.2B data governance,growthRate:,16% CAGR',variant: 'data-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Governance framework,quality tools,compliance monitoring.',launchDate: '2025-05-20,customers: 34,rating: 4.5,reviews: 22 },{ id:,ai-powered-hr-analytics-suite',name: 'AI-Powered HR Analytics Suite,tagline:,Intelligent HR analytics and workforce optimization',price: '$189,period:,/month',description: AI-driven HR analytics platform that provides insights into workforce performance,retention,and optimization strategies.',features[ 'Workforce analyticsRetention predictionPerformance insightsDiversity metrics','Recruitment optimization' ],popular: true,icon:,👥',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition: 'AI-driven HR analytics for modern workforce management.',targetAudience[ 'HR departmentsPeople operationsTalent acquisition'],trialDays: 14,setupTime:,1 week',category: 'HR & People Analytics,realService: true,technology[,AI/MLPeople analyticsPredictive modeling'],integrations[ 'HRIS systemsATS platformsPerformance tools'],useCases[ 'Workforce planningRetention strategiesRecruitment optimization'],roi: 'Improves retention by 20%,competitors[,VisierTableauPower BI'],marketSize: '$3.8B HR analytics,growthRate:,19% CAGR',variant: 'hr-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Analytics engine,predictive models,HR integrations.',launchDate: '2025-04-15,customers: 47,rating: 4.6,reviews: 31 },{ id:,cloud-migration-automation-platform',name: 'Cloud Migration Automation Platform,tagline:,Automated cloud migration and optimization',price: '$399,period:,/month',description: Intelligent platform that automates cloud migration processes,optimizes costs,and ensures smooth transitions to cloud infrastructure.',features[ 'Migration automationCost optimizationPerformance monitoringSecurity compliance','Multi-cloud support' ],popular: true,icon:,☁️',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition: 'Automated cloud migration platform for enterprise transformation.',targetAudience[ 'EnterprisesIT departmentsCloud architects'],trialDays: 21,setupTime:,2 weeks',category: 'Cloud & Infrastructure,realService: true,technology[,AutomationCloud APIsMigration tools'],integrations[ 'AWSAzureGCPOn-premise systems'],useCases[ 'Cloud migrationCost optimizationPerformance tuning'],roi: 'Reduces migration time by 60%,competitors[,CloudEndureAWS Migration HubAzure Migrate'],marketSize: '$18B cloud migration,growthRate:,24% CAGR',variant: 'cloud-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Migration engine,cost optimization,monitoring tools.',launchDate: '2025-03-25,customers: 29,rating: 4.7,reviews: 19 },{ id:,digital-transformation-consulting',name: 'Digital Transformation Consulting,tagline:,Strategic digital transformation and change management',price: '$1500,period:,/day',description: Expert consulting services for digital transformation,helping organizations navigate technological change and achieve digital maturity.',features[ 'Strategy developmentChange managementTechnology assessmentProcess optimization','Implementation support' ],popular: false,icon:,🔄',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition: 'Strategic digital transformation consulting for enterprise success.',targetAudience[ 'EnterprisesGovernmentNon-profits'],trialDays: 0,setupTime:,1 day',category: 'Consulting & Strategy,realService: true,technology[,Strategy frameworksChange managementProcess optimization'],integrations[ 'Project managementCommunication toolsAnalytics platforms'],useCases[ 'Digital strategyChange managementProcess optimization'],roi: 'Accelerates transformation by 3x,competitors[,McKinseyBCGBain'],marketSize: '$45B digital transformation,growthRate:,21% CAGR',variant: 'consulting-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Strategy frameworks,change management,implementation support.',launchDate: '2025-02-10,customers: 12,rating: 4.9,reviews: 8 },{ id:,ai-ethics-compliance-framework',name: 'AI Ethics & Compliance Framework,tagline:,Ethical AI development and compliance management',price: '$249,period:,/month',description: Comprehensive framework for ensuring ethical AI development,compliance with regulations,and responsible AI deployment.',features[ 'Ethics guidelinesCompliance monitoringBias detectionTransparency tools','Audit frameworks' ],popular: true,icon:,⚖️',color: 'from-green-600 to-emerald-700,textColor:,text-green-300',link: 'https: marketPosition: 'Comprehensive AI ethics and compliance framework.',targetAudience[ 'AI companiesEnterprisesGovernment'],trialDays: 14,setupTime:,1 week',category: 'AI Ethics & Compliance,realService: true,technology[,Ethics frameworksCompliance toolsBias detection'],integrations[ 'AI platformsCompliance systemsAudit tools'],useCases[ 'AI ethicsCompliance managementBias mitigation'],roi: 'Reduces compliance risks by 90%,competitors[,AI ethics startupsCompliance platforms'],marketSize: '$2.8B AI ethics,growthRate:,28% CAGR',variant: 'ethics-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Ethics framework,compliance tools,audit systems.',launchDate: '2025-01-20,customers: 18,rating: 4.8,reviews: 12 },{ id:,edge-computing-optimization-platform',name: 'Edge Computing Optimization Platform,tagline:,Intelligent edge computing and IoT optimization',price: '$199,period:,/month',description: Advanced platform for optimizing edge computing deployments,managing IoT devices,and reducing latency in distributed systems.',features[ 'Edge optimizationIoT managementLatency reductionResource allocation','Performance monitoring' ],popular: false,icon:,🌐',color: 'from-teal-600 to-green-700,textColor:,text-teal-300',link: 'https: marketPosition: 'Edge computing optimization platform for IoT and distributed systems.',targetAudience[ 'IoT companiesManufacturingSmart cities'],trialDays: 21,setupTime:,1 week',category: 'Edge Computing & IoT,realService: true,technology[,Edge computingIoT managementOptimization algorithms'],integrations[ 'IoT platformsCloud providersEdge devices'],useCases[ 'Edge optimizationIoT managementPerformance tuning'],roi: 'Reduces latency by 40%,competitors[,AWS GreengrassAzure IoT EdgeGoogle Edge TPU'],marketSize: '$11B edge computing,growthRate:,32% CAGR',variant: 'edge-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Edge optimization,IoT management,performance monitoring.',launchDate: '2024-12-15,customers: 25,rating: 4.5,reviews: 17 },{ id:,zero-trust-security-implementation',name: 'Zero Trust Security Implementation,tagline:,Comprehensive zero trust security framework',price: '$329,period:,/month',description: Complete zero trust security implementation platform that provides identity verification,network segmentation,and continuous monitoring.',features[ 'Identity verificationNetwork segmentationContinuous monitoringThreat detection','Compliance reporting' ],popular: true,icon:,🔐',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition: 'Comprehensive zero trust security implementation platform.',targetAudience[ 'EnterprisesGovernmentFinancial services'],trialDays: 21,setupTime:,2 weeks',category: 'Cybersecurity,realService: true,technology[,Zero trustIdentity managementNetwork security'],integrations[ 'Identity providersNetwork equipmentSecurity tools'],useCases[ 'Security implementationComplianceThreat prevention'],roi: 'Reduces security incidents by 95%,competitors[,Palo AltoCiscoFortinet'],marketSize: '$38B zero trust security,growthRate:,26% CAGR',variant: 'security-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Zero trust framework,identity management,monitoring tools.',launchDate: '2024-11-25,customers: 36,rating: 4.7,reviews: 25 },{ id:,ai-powered-customer-experience-platform',name: 'AI-Powered Customer Experience Platform,tagline:,Intelligent customer experience optimization',price: '$179,period:,/month',description: AI-driven platform that optimizes customer experiences across all touchpoints,providing personalized interactions and predictive insights.',features[ 'Personalization engineCustomer journey mappingPredictive analyticsOmnichannel support','Experience optimization' ],popular: true,icon:,🎯',color: 'from-pink-600 to-purple-700,textColor:,text-pink-300',link: 'https: marketPosition: 'AI-driven customer experience optimization platform.',targetAudience[ 'E-commerceRetailService companies'],trialDays: 14,setupTime:,1 week',category: 'Customer Experience,realService: true,technology[,AI/MLPersonalizationPredictive analytics'],integrations[ 'CRM systemsE-commerce platformsMarketing tools'],useCases[ 'Customer personalizationJourney optimizationExperience improvement'],roi: 'Increases customer satisfaction by 35%,competitors[,Adobe ExperienceSalesforceHubSpot'],marketSize: '$14B customer experience,growthRate:,22% CAGR',variant: 'cx-futuristic,contactInfo: contact,realImplementation: true,implementationDetails:,Personalization engine,journey mapping,analytics tools.',launchDate: '2024-10-30,customers: 53,rating: 4.6,reviews: 38 },{ id:,ai-sales-agent-suite',name: 'AI Sales Agent Suite,tagline:,24/7 multi-channel outbound with human-like conversations',price: '$249,period:,/month',description: Autonomous AI agents that prospect,qualify,and book meetings across email,SMS,and LinkedIn with brand-safe guardrails.',features[ 'Multi-channel outreach (email/SMS/LinkedIn)Lead enrichment and scoringCalendar booking and routingCompliance and opt-out handling' ],popular: true,icon:,🤖',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition:,Purpose-built AI SDR that integrates with existing CRMs and sequences.',targetAudience: Sales,growth,founders',trialDays: 14,setupTime:,2 hours',category: 'AI & Automation,realService: true,technology[,LLMsRAGEmail APIsLinkedIn automation'],integrations[ 'HubSpotSalesforcePipedriveOutreach'],useCases[ 'Outbound prospectingLead qualificationMeeting booking'],roi: '2–4x meetings per rep,competitors[,Regie.aiLyne.ai'],marketSize: '$12B sales tech,growthRate:,19% CAGR',variant: 'agentic-suite,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Sequencer with policy engine,identity warm-up,and deliverability checks.',launchDate: '2025-07-01,customers: 22,rating: 4.6,reviews: 14 },{ id:,enterprise-rag-knowledge-hub',name: 'Enterprise RAG Knowledge Hub,tagline:,Private,audited retrieval-augmented generation for teams',price: '$399,period:,/month',description: Secure RAG platform to ingest documents,control access,and answer questions with citations and audit trails.',features[ 'Document ingestion pipelinesRole-based access controlCitations and source viewingPII redaction and audit logs' ],popular: true,icon:,📚',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition:,Security-first RAG alternative to generic chat bots.',targetAudience: Support,engineering,legal,HR',trialDays: 14,setupTime:,1 day',category: 'AI & Data,realService: true,technology[,Vector DBLLMsEmbeddingsAccess policies'],integrations[ 'Google DriveConfluenceSharePointSlack'],useCases[ 'Internal Q&APolicy queriesRunbooks'],roi: 'Reduces time-to-answer by 70%,competitors[,GleanCohere Coral'],marketSize: '$9B knowledge AI,growthRate:,23% CAGR',variant: 'secure-rag,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Chunking,hybrid search,entitlements,and audit trails.',launchDate: '2025-06-15,customers: 31,rating: 4.7,reviews: 19 },{ id:,mlops-observability-suite',name: 'MLOps Observability Suite,tagline:,Monitor drift,bias,latency,and cost across models',price: '$499,period:,/month',description: 'Holistic monitoring and governance for machine learning and LLM systems with alerts and dashboards.,features[ 'Data and prediction drift alertsPrompt/trace loggingCost and latency budgetsBias detection and A/B testing' ],popular: false,icon:,📈',color: 'from-fuchsia-600 to-pink-700,textColor:,text-fuchsia-300',link: 'https: marketPosition:,End-to-end LLM + traditional ML monitoring in one tool.',targetAudience: Data science,platform,compliance',trialDays: 14,setupTime:,1 week',category: 'AI & Machine Learning,realService: true,technology[,OpenTelemetryLLM tracingVector DB'],integrations[ 'DatadogPrometheusGrafanaSnowflake'],useCases[ 'Model qualityCost controlIncident response'],roi: 'Cuts model outages by 60%,competitors[,WhyLabsArizeWeights & Biases'],marketSize: '$4B MLOps,growthRate:,28% CAGR',variant: 'ml-observe,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,SDKs for logging,exporters,dashboards,and policies.',launchDate: '2025-05-28,customers: 17,rating: 4.5,reviews: 11 },{ id:,cloud-finops-optimizer',name: 'Cloud FinOps Optimizer,tagline:,Automatic cloud cost visibility and savings recommendations',price: '$199,period:,/month',description: FinOps platform to tag,allocate,and optimize multi-cloud spend with automated savings plans and anomaly alerts.',features[ 'Automated tagging and allocationRightsizing and RI/SP planningAnomaly detectionUnit economics dashboards' ],popular: true,icon:,💰',color: 'from-green-600 to-teal-700,textColor:,text-green-300',link: 'https: marketPosition:,Engineer-friendly FinOps with prescriptive actions.',targetAudience: Finance,platform,SRE',trialDays: 14,setupTime:,3 days',category: 'Cloud & Infrastructure,realService: true,technology[,AWS/Azure/GCP APIsCost ExplorerBigQuery'],integrations[ 'AWSAzureGCPSnowflake'],useCases[ 'Cost controlChargebackSavings plans'],roi: '10–30% cloud savings,competitors[,CloudZeroCloudHealth'],marketSize: '$5B FinOps,growthRate:,21% CAGR',variant: 'finops,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Ingestion jobs,tagging guardrails,anomaly models,and action playbooks.',launchDate: '2025-06-05,customers: 41,rating: 4.7,reviews: 26 },{ id:,kubernetes-sre-assurance',name: 'Kubernetes SRE Assurance,tagline:,Golden paths,policy-as-code,and automated remediation',price: '$299,period:,/month',description: Operational guardrails for Kubernetes: policy checks,reliability SLOs,and auto-remediation with runbooks.',features[ 'Policy-as-code checksSLOs and error budgetsSelf-healing actionsRunbook automation' ],popular: false,icon:,🧭',color: 'from-slate-600 to-gray-700,textColor:,text-slate-300',link: 'https: marketPosition:,Platform-ops friendly reliability guardrails for K8s.',targetAudience: SRE,platform,DevOps',trialDays: 7,setupTime:,1 week',category: 'Cloud & Infrastructure,realService: true,technology[,OPA/GatekeeperPrometheusArgoFlux'],integrations[ 'KubernetesDatadogPagerDuty'],useCases[ 'Reliability,compliance,cost control'],roi: 'Reduces incidents by 40%,competitors[,FairwindsRafay'],marketSize: '$7B K8s tooling,growthRate:,25% CAGR',variant: 'sre-guardrails,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Admission controls,SLO agent,and action runners.',launchDate: '2025-05-10,customers: 19,rating: 4.5,reviews: 12 },{ id:,privacy-compliance-scanner',name: 'Privacy & Compliance Scanner,tagline:,PII/PHI discovery and policy enforcement for apps and data',price: '$159,period:,/month',description: Continuously scans repositories,data stores,and APIs for sensitive data,misconfigurations,and compliance gaps.',features[ 'PII/PHI/PCI discoverySecrets leakage detectionPolicy enforcementCompliance reports (SOC2/GDPR/HIPAA)' ],popular: true,icon:,🛡️',color: 'from-red-600 to-orange-700,textColor:,text-red-300',link: 'https: marketPosition:,DevSecOps-native compliance scanning and reporting.',targetAudience: Security,compliance,engineering',trialDays: 14,setupTime:,2 days',category: 'Security & Compliance,realService: true,technology[,Static analysisDLPCodeQL'],integrations[ 'GitHubGitLabBitbucketSnowflake'],useCases[ 'Compliance auditsSecurity posture'],roi: 'Cuts audit prep time by 70%,competitors[,NightfallSnyk'],marketSize: '$10B AppSec,growthRate:,20% CAGR',variant: 'privacy-guardian,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Connectors,scanners,policy engine,and dashboards.',launchDate: '2025-04-20,customers: 27,rating: 4.6,reviews: 16 },{ id:,agentic-rpa-studio',name: 'Agentic RPA Studio,tagline:,LLM-powered automation that adapts to UI and API changes',price: '$229,period:,/month',description: Next-gen RPA with LLM reasoning to build robust automations across web,desktop,and APIs with change resilience.',features[ 'No-code/low-code builderAutonomous healing of broken stepsHuman-in-the-loop reviewAudit logs and RBAC' ],popular: false,icon:,🧠',color: 'from-purple-600 to-pink-700,textColor:,text-purple-300',link: 'https: marketPosition:,Modern RPA alternative with AI-based resilience.',targetAudience: Ops,finance,HR,IT',trialDays: 14,setupTime:,1 week',category: 'Automation,realService: true,technology[,LLMsComputer visionAPI orchestration'],integrations[ 'SAPSalesforceWorkdayCustom apps'],useCases[ 'Back-office automationReconciliationReporting'],roi: 'Saves 20–50% of manual hours,competitors[,UiPathAutomation Anywhere'],marketSize: '$13B RPA,growthRate:,26% CAGR',variant: 'agent-rpa,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Hybrid recorder,vector memory,fallbacks,and approvals.',launchDate: '2025-06-22,customers: 13,rating: 4.4,reviews: 9 },{ id:,synthetic-data-generator',name: 'Synthetic Data Generator,tagline:,Privacy-safe synthetic datasets for analytics and AI',price: '$179,period:,/month',description: 'Generate high-fidelity synthetic data that preserves statistical properties while protecting privacy.,features[ 'Tabular/text/image generatorsDifferential privacy optionsBias reduction toolingQuality validation reports' ],popular: false,icon:,🧪',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-300',link: 'https: marketPosition:,Developer-first synthetic data with controls for privacy and bias.',targetAudience: Data science,product analytics',trialDays: 7,setupTime:,3 days',category: 'Data & Analytics,realService: true,technology[,GANsLLMsDifferential privacy'],integrations[ 'SnowflakeBigQueryS3'],useCases[ 'Model trainingProduct analyticsTest data'],roi: 'Shortens data acquisition by 80%,competitors[,Mostly AIGretel'],marketSize: '$2.5B synthetic data,growthRate:,34% CAGR',variant: 'synthdata,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Schema inference,model training,evaluators,and export.',launchDate: '2025-05-02,customers: 11,rating: 4.5,reviews: 8 },{ id:,edge-iot-fleet-manager',name: 'Edge IoT Fleet Manager,tagline:,Secure device onboarding,OTA updates,and telemetry at scale',price: '$299,period:,/month',description: Manage edge devices with secure provisioning,remote updates,and real-time telemetry dashboards.',features[ 'Device identity and certificatesOTA updates and rollbacksRules engine and alertsDigital twins and dashboards' ],popular: false,icon:,📡',color: 'from-yellow-600 to-orange-700,textColor:,text-yellow-300',link: 'https: marketPosition:,Vendor-neutral IoT management for diverse fleets.',targetAudience: Operations,manufacturing,logistics',trialDays: 14,setupTime:,2 weeks',category: 'IoT & Edge,realService: true,technology[,MQTTDevice shadowTLSTime-series DB'],integrations[ 'AWS IoTAzure IoTGCP IoT'],useCases[ 'Remote monitoringPredictive maintenance'],roi: 'Reduces downtime by 25%,competitors[,BalenaParticle'],marketSize: '$15B IoT platforms,growthRate:,18% CAGR',variant: 'edge-fleet,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Provisioning service,OTA pipelines,telemetry storage,and rules.',launchDate: '2025-06-30,customers: 9,rating: 4.4,reviews: 6 },{ id:,data-quality-governance',name: 'Data Quality & Governance,tagline:,Automated data contracts,tests,and lineage for reliability',price: '$219,period:,/month',description: 'Define data contracts and run continuous tests with lineage and blast-radius analysis for safe changes.,features[ 'Data contracts and schemasQuality tests and SLOsLineage and impact analysisChange approvals and rollbacks' ],popular: false,icon:,🗂️',color: 'from-blue-600 to-cyan-700,textColor:,text-blue-300',link: 'https: marketPosition:,Contract-driven data reliability for analytics and ML.',targetAudience: Data engineering,analytics,platform',trialDays: 14,setupTime:,2 weeks',category: 'Data & Analytics,realService: true,technology[,Great ExpectationsdbtOpenLineage'],integrations[ 'SnowflakeBigQueryRedshiftDatabricks'],useCases[ 'Reliable dashboardsML pipelinesCompliance'],roi: 'Cuts data incidents by 50%,competitors[,Monte CarloBigeye'],marketSize: '$3B data observability,growthRate:,24% CAGR',variant: 'data-gov,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Declarative contracts,test runners,lineage graph,and UI.',launchDate: '2025-05-18,customers: 15,rating: 4.5,reviews: 10 },{ id:,full-stack-observability',name: 'Full-Stack Observability,tagline:,Unified logs,metrics,traces,and user journeys',price: '$279,period:,/month',description: 'End-to-end visibility from frontend sessions to backend services with correlation and RCA.,features[ 'Session replayDistributed tracingMetrics and SLOsRoot-cause analysis' ],popular: true,icon:,🕵️‍♂️',color: 'from-orange-600 to-red-700,textColor:,text-orange-300',link: 'https: marketPosition:,Business-impact aware observability with UX correlation.',targetAudience: SRE,product,engineering',trialDays: 14,setupTime:,1 week',category: 'DevOps & Reliability,realService: true,technology[,OpenTelemetryClickHouseeBPF'],integrations[ 'KubernetesDatadogGrafana'],useCases[ 'Outage RCAPerformance tuningUX optimization'],roi: 'Mean-time-to-recovery reduced by 45%,competitors[,New RelicDynatrace'],marketSize: '$17B observability,growthRate:,20% CAGR',variant: 'obs-unified,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Unified collector,correlation engine,and dashboards.',launchDate: '2025-05-08,customers: 24,rating: 4.6,reviews: 13 },{ id:,dr-backup-as-a-service',name: 'Backup & DR as a Service,tagline:,Immutable backups and orchestrated disaster recovery',price: '$189,period:,/month',description: Managed backups with immutability,ransomware protection,and DR runbooks for rapid recovery.',features[ 'Policy-based backupsImmutability and encryptionDR drills and runbooksCross-cloud replication' ],popular: false,icon:,🔁',color: 'from-sky-600 to-indigo-700,textColor:,text-sky-300',link: 'https: marketPosition:,SaaS-first,cloud-native backup and recovery.',targetAudience: IT,compliance,security',trialDays: 7,setupTime:,1 week',category: 'IT Services,realService: true,technology[,SnapshotsObject storageDR orchestration'],integrations[ 'AWSAzureGCPVMware'],useCases[ 'Ransomware recoveryCompliance'],roi: 'Cuts RTO/RPO by 50%,competitors[,VeeamDruva'],marketSize: '$9B backup/DR,growthRate:,18% CAGR',variant: 'dr-saas,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Policy engine,storage backends,orchestration,and testing.',launchDate: '2025-06-12,customers: 12,rating: 4.5,reviews: 7 ,{ id:,gdpr-dsar-portal',name: 'GDPR DSAR Portal,tagline:,Automate GDPR/CCPA data subject access requests',price: '$99,period:,/month',description: Self‑service DSAR intake,identity verification,redaction,and export packages for GDPR/CCPA/CPRA.',features[ 'Identity verification & workflowPII discovery & redaction helpersExport packs (JSON/CSV/PDF)Audit log & SLA tracking' ],popular: true,icon:,🗂️',color: 'from-indigo-600 to-blue-700,textColor:,text-indigo-300',link: 'https: marketPosition: 'Faster compliance vs. custom spreadsheets and inbox workflows.',targetAudience[ 'LegalSecurityIT'],trialDays: 14,setupTime:,1 day',category: 'Compliance,realService: true,technology[,Next.jsLLM redaction assistants'],integrations[ 'OktaGSuite/M365S3/Drive/SharePoint'],useCases[ 'DSAR automationRight to be forgottenAccess/export requests'],roi: 'Reduces DSAR handling time by 70%,competitors[,TranscendOneTrust'],marketSize: '$3B privacy ops,growthRate:,19% CAGR',variant: 'compliance-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Secure intake portal,identity checks,data connectors.' },{ id: 'soc2-evidence-collector,name:,SOC 2 Evidence Collector',tagline: 'Continuous control evidence with exportable audit packs,price:,$149',period: '/month,description: 'Automate evidence capture for SOC 2 controls: backups,MFA,access reviews,vulnerability scans,and change management.',features[ 'Control library & mappingsAutomated screenshots & API proofsExceptions & approvalsAudit-ready exports' ],popular: false,icon:,🛡️',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-300',link: 'https: marketPosition: 'Purpose-built automation without heavy GRC overhead.',targetAudience[ 'SecurityITOps'],trialDays: 14,setupTime:,3 days',category: 'Security & Compliance,realService: true,technology[,APIsSchedulersImmutable storage'],integrations[ 'AWS/Azure/GCPOktaGitHub/GitLab'],useCases[ 'SOC 2 Type 1/2 evidenceInternal audits'],roi: 'Cuts audit prep by 50%,competitors[,DrataVanta'],marketSize: '$2.2B compliance tech,growthRate:,21% CAGR',variant: 'security-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Evidence jobs,artifact store,export packs.' },{ id: 'seo-change-monitor,name:,SEO Change Monitor',tagline: 'Track DOM/CWV changes that impact rankings,price:,$69',period: '/month,description: 'Monitors key templates for DOM diffs,CWV regressions,and indexation issues, alerts with suggested fixes.',features[ 'Template diff & render checksCore Web Vitals watchSitemaps & indexation alertsSlack/Email notifications' ],popular: false,icon:,🔎',color: 'from-yellow-500 to-orange-600,textColor:,text-yellow-300',link: 'https: marketPosition: 'Developer-first SEO observability.',targetAudience[ 'GrowthEngineering'],trialDays: 7,setupTime:,30 minutes',category: 'Growth & Marketing,realService: true,technology[,PlaywrightLighthouse CI'],integrations[ 'SlackGitHub'],useCases[ 'Regression watchRelease QA'],roi: 'Prevents SEO regressions post‑deploy,competitors[,Little WardenContentKing'],marketSize: '$1.2B SEO tooling,growthRate:,12% CAGR',variant: 'growth-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Scheduled headless audits,CWV collectors.' },{ id: 'cicd-flaky-test-detector,name:,CI/CD Flaky Test Detector',tagline: 'Identify and quarantine flaky tests automatically,price:,$59',period: '/month,description: 'Statistically detects flaky tests across pipelines, auto‑retries,quarantines,and creates PRs with suggested fixes.',features[ 'Flake scoring & trendsAuto‑retry/quarantinePR annotations & ownershipCI cost impact reports' ],popular: true,icon:,🧪',color: 'from-sky-600 to-blue-700,textColor:,text-sky-300',link: 'https: marketPosition: 'Reduce broken builds and wasted compute.',targetAudience[ 'EngineeringPlatform'],trialDays: 14,setupTime:,1 hour',category: 'Developer Productivity,realService: true,technology[,CI APIsTime-series DB'],integrations[ 'GitHub ActionsGitLab CICircleCI'],useCases[ 'Build stabilityDeveloper velocity'],roi: 'Cuts CI cost 10–30%,competitors[,BuildPulse'],marketSize: '$2B DevEx tools,growthRate:,18% CAGR',variant: 'devex-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Collectors,heuristics,annotations.' },{ id: 'cloud-cost-anomaly-guard,name:,Cloud Cost Anomaly Guard',tagline: 'Detect spend spikes before the bill arrives,price:,$79',period: '/month,description: 'Real‑time anomaly detection on cloud bills with service‑level drilldowns and automated guardrail playbooks.',features[ 'Daily anomaly detectionBudget guardrails & alertsOwner routing & playbooksUnit economics dashboards' ],popular: true,icon:,💸',color: 'from-rose-600 to-pink-700,textColor:,text-rose-300',link: 'https: marketPosition: 'Fast time‑to‑value vs. full FinOps suites.',targetAudience[ 'FinancePlatformOps'],trialDays: 14,setupTime:,2 hours',category: 'FinOps,realService: true,technology[,CUR/BigQueryAnomaly ML'],integrations[ 'AWS/Azure/GCP billing'],useCases[ 'Spend controlAnomaly response'],roi: 'Saves 5–15% monthly spend,competitors[,CloudZeroVantage'],marketSize: '$3.5B FinOps,growthRate:,22% CAGR',variant: 'finops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Billing data loaders,anomaly engine.' },{ id: 'llm-prompt-injection-scanner,name:,LLM Prompt Injection Scanner',tagline: 'Continuously test LLM apps against injection & exfiltration,price:,$49',period: '/month,description: 'Attack harness that probes LLM endpoints for prompt injection,data exfiltration,and policy bypasses with reports.',features[ 'Attack libraries & corporaRed‑team schedulingOWASP LLMRT mappingFix guidance & diffs' ],popular: false,icon:,🧰',color: 'from-purple-600 to-fuchsia-700,textColor:,text-purple-300',link: 'https: marketPosition: 'Developer‑centric safety testing.',targetAudience[ 'AISecurity'],trialDays: 7,setupTime:,45 minutes',category: 'AI Safety,realService: true,technology[,LLM APIsEval harness'],integrations[ 'OpenAIAnthropicVertex'],useCases[ 'Safety testingRelease gates'],roi: 'Prevents incidents and data leaks,competitors[,Lakera Guard'],marketSize: '$0.8B LLM safety,growthRate:,40% CAGR',variant: 'ai-safety-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Synthetic probes,scoring,reports.' },{ id: 'data-pipeline-sla-tracker,name:,Data Pipeline SLA Tracker',tagline: Track freshness,completeness,and SLOs for your data,price: '$89,period:,/month',description: Monitors data jobs for timeliness and completeness, errors page,freshness badges,and stakeholder alerts.',features[ 'Freshness & completeness checksRunbook linksStakeholder alertsSLO/error budgets' ],popular: false,icon:,📊',color: 'from-cyan-600 to-emerald-700,textColor:,text-cyan-300',link: 'https: marketPosition: 'Lightweight observability for analytics teams.',targetAudience[ 'DataAnalytics'],trialDays: 14,setupTime:,1 day',category: 'Data & Analytics,realService: true,technology[,Airflow/Dbt hooksTime‑series DB'],integrations[ 'SnowflakeBigQueryRedshift'],useCases[ 'Trust in dataStakeholder comms'],roi: 'Reduces broken dashboards by 60%,competitors[,Monte CarloMetaplane'],marketSize: '$2.6B data observability,growthRate:,28% CAGR',variant: 'data-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Connectors,checks,alerting.' },{ id: 'edge-image-optimizer,name:,Edge Image Optimizer',tagline: Adaptive,device‑aware images at the edge,price: '$39,period:,/month',description: Transforms and caches images at the edge for device and network conditions,improving Core Web Vitals.',features[ 'On‑the‑fly resize & formatsSmart cache keysSigned URLsCWV dashboards' ],popular: true,icon:,🖼️',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-300',link: 'https: marketPosition: 'Simpler pricing vs. bespoke CDNs.',targetAudience[ 'WebE‑commerce'],trialDays: 7,setupTime:,20 minutes',category: 'Performance,realService: true,technology[,Edge runtimeImage codecs'],integrations[ 'CloudflareNetlifyVercel'],useCases[ 'CWV improvementBandwidth savings'],roi: 'Improves LCP by 20–40%,competitors[,imgixCloudinary'],marketSize: '$1.5B media optimization,growthRate:,17% CAGR',variant: 'perf-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Edge functions,cache,signed URLs.' },{ id: 'managed-kubernetes-sre,name:,Managed Kubernetes SRE',tagline: 'Hands‑on SRE for production Kubernetes,price:,$2,500',period: '/month,description: 'Runbooks,upgrades,backups,autoscaling,and incident response for your EKS/AKS/GKE clusters with SLOs.',features[ '24/7 on‑call with SLAsBackups & DR drillsSecurity hardeningCost & perf tuning' ],popular: true,icon:,☸️',color: 'from-slate-700 to-slate-900,textColor:,text-slate-200',link: 'https: marketPosition: 'Fractional SRE better than staffing alone.',targetAudience[ 'EngineeringPlatform'],trialDays: 0,setupTime:,1 week',category: 'IT Services,realService: true,technology[,KubernetesIaCObservability'],integrations[ 'EKS/AKS/GKEDatadogGrafana'],useCases[ 'Production readinessReliability'],roi: 'Improves uptime to 99.9%+,competitors[,Cloud providers PS'],marketSize: '$10B SRE services,growthRate:,15% CAGR',variant: 'it-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,SRE playbooks,IaC modules,on‑call.' },{ id: 'zero-trust-rollout-coaching,name:,Zero Trust Rollout Coaching',tagline: Identity,device,and network segmentation playbooks,price: $4,000,period: '/engagement,description: 'Hands‑on guidance to implement zero trust: SSO/MFA,device posture,micro‑segmentation,and access reviews.',features[ 'Architecture & roadmapQuick wins & pilotsControl mappingsChange management' ],popular: false,icon:,🔐',color: 'from-red-600 to-rose-700,textColor:,text-red-200',link: 'https: marketPosition: 'Actionable,tool‑agnostic coaching.',targetAudience[ 'ITSecurity'],trialDays: 0,setupTime:,Project start in 1 week',category: 'Security Consulting,realService: true,technology[,SSO/SCIMZTNA'],integrations[ 'OktaCloudflareZscaler'],useCases[ 'Zero trust rolloutAudit prep'],roi: 'Accelerates rollout by 2–3x,competitors[,Big 4 consultancies'],marketSize: '$20B security services,growthRate:,12% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Workshops,templates,control packs.' },{ id: 'vendor-risk-ai-assistant,name:,Vendor Risk AI Assistant',tagline: 'Automate security questionnaires and third‑party risk reviews,price:,$149',period: '/month,description: 'AI copilot that ingests vendor docs (SOC 2,ISO 27001,SIG,CAIQ),answers security questionnaires,flags gaps,and produces an executive risk summary with mitigation plans.',features[ 'Questionnaire auto‑fill (SIG/CAIQ/NDA‑safe)Policy and control gap analysisRisk register and remediation plansExport to PDF/CSV and Jira' ],popular: true,icon:,🛡️',color: 'from-amber-600 to-orange-700,textColor:,text-amber-200',link: 'https: marketPosition: 'Faster than manual reviews,integrates with your GRC.',targetAudience[ 'SecurityLegalProcurement'],trialDays: 14,setupTime:,1 day',category: 'Security & Compliance,realService: true,technology[,LLMsRAGDocument AI'],integrations[ 'OneTrustDrataJira'],useCases[ 'Security questionnairesRenewal reviews'],roi: 'Cuts review time by 70%,competitors[,Secureframe Questionnaire AutomationWhistic'],marketSize: '$8B TPRM,growthRate:,14% CAGR',variant: 'ai-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Secure upload,policy mapping,audit log.',launchDate: '2025-07-01,customers: 18,rating: 4.7,reviews: 12 },{ id:,gdpr-dsar-portal',name: 'GDPR/CCPA DSAR Portal,tagline:,End‑to‑end subject access request automation',price: '$99,period:,/month',description: Hosted portal and workflow to intake,verify,process,and fulfill data subject requests (access,deletion,portability) with redaction and evidence trails.',features[ 'Identity verification and throttlingSystem of record inventory and connectorsAutomated redaction and package assemblyEvidence and audit reports' ],popular: false,icon:,📜',color: 'from-cyan-600 to-blue-700,textColor:,text-cyan-200',link: 'https: marketPosition: 'Affordable alternative to heavy privacy suites.',targetAudience[ 'LegalSecurityIT'],trialDays: 7,setupTime:,1 week',category: 'Privacy & Compliance,realService: true,technology[,Next.jsQueue/WorkersPII Redaction'],integrations[ 'SnowflakeSalesforceGmail/Drive'],useCases[ 'Access/Delete requestsDSR reporting'],roi: 'Reduces manual hours by 80%,competitors[,TranscendOneTrust'],marketSize: '$3B privacy ops,growthRate:,16% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Role‑based access,retention policies.',launchDate: '2025-06-15,customers: 22,rating: 4.6,reviews: 14 },{ id:,oncall-copilot',name: 'On‑Call Copilot,tagline:,LLM‑powered incident triage,runbooks,and postmortems',price: '$59,period:,/month',description: Connects to logs,metrics,traces,and alerts to propose likely causes,next actions,and execute safe runbook steps with approvals. Generates high‑quality postmortems.',features[ 'Contextual alert summariesRoot cause hypotheses and checksSafe automations with approval gatesPostmortem generation and action items' ],popular: true,icon:,🚨',color: 'from-rose-600 to-red-700,textColor:,text-rose-200',link: 'https: marketPosition: 'Brings AI to existing on‑call stacks.',targetAudience[ 'SREDevOpsPlatform'],trialDays: 14,setupTime:,2 hours',category: 'Observability & SRE,realService: true,technology[,LLMsVector StoreAPM APIs'],integrations[ 'DatadogGrafanaPagerDuty'],useCases[ 'MTTR reductionOn‑call quality'],roi: 'Cuts MTTR by 35%,competitors[,FireHydrant AIRootly AI'],marketSize: '$7B AIOps,growthRate:,19% CAGR',variant: 'ai-ops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Read‑only mode,approvals,audit log.',launchDate: '2025-07-10,customers: 15,rating: 4.8,reviews: 9 },{ id:,ml-eval-harness',name: 'LLM/ML Evaluation Harness,tagline:,Test sets,guardrails,and scorecards for AI systems',price: '$129,period:,/month',description: Hosted evaluation platform that runs golden datasets and adversarial prompts across models,with regressions alerts,cost tracking,and governance‑ready reports.',features[ 'Datasets and prompt suitesAutomatic metric scoring and rubricsGuardrail tests (toxicity/PII/Jailbreak)CI integrations and dashboards' ],popular: false,icon:,🧪',color: 'from-indigo-600 to-purple-700,textColor:,text-indigo-200',link: 'https: marketPosition: 'Evaluation without heavy MLOps lift.',targetAudience[ 'AI PlatformData Science'],trialDays: 7,setupTime:,1 day',category: 'AI & Machine Learning,realService: true,technology[,LangChain/LangGraphLangfuseOpenAI/Anthropic'],integrations[ 'GitHub ActionsCircleCI'],useCases[ 'Model selectionRegression testing'],roi: 'Prevents degradations and outages,competitors[,HumanloopPromptLayer'],marketSize: '$2B model ops,growthRate:,22% CAGR',variant: 'mlops-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Datasets store,eval runners,alerts.',launchDate: '2025-06-30,customers: 10,rating: 4.5,reviews: 7 },{ id:,finops-cost-anomaly-guard',name: 'FinOps Cost Anomaly Guard,tagline:,Detect,explain,and prevent cloud cost spikes',price: '$79,period:,/month',description: Continuously analyzes multi‑cloud bills and usage to catch anomalies,attribute spend to owners,and recommend rightsizing and commitment strategies.',features[ 'Anomaly detection and alertsUnit economics and tagging qualityRightsizing and commitment plannerChargeback/showback reports' ],popular: true,icon:,💸',color: 'from-emerald-600 to-teal-700,textColor:,text-emerald-200',link: 'https: marketPosition: 'Actionable insights,not just dashboards.',targetAudience[ 'FinancePlatformEngineering'],trialDays: 14,setupTime:,1 day',category: 'Cloud & FinOps,realService: true,technology[,Cloud APIsAnomaly MLBI'],integrations[ 'AWSAzureGCP'],useCases[ 'Cost controlsBudget alerts'],roi: 'Saves 10–25% monthly spend,competitors[,CloudZeroVantage'],marketSize: '$6B FinOps,growthRate:,20% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Cost collectors,anomaly models,alerts.',launchDate: '2025-07-05,customers: 28,rating: 4.7,reviews: 16 },{ id:,ai-rag-site-search',name: 'AI RAG Site Search,tagline:,Private,high‑relevance semantic search for your docs',price: '$59,period:,/month',description: Drop‑in semantic search widget with ingestion pipelines,embeddings,reranking,and citations. Keeps data private,deploys at the edge for speed.',features[ 'Crawlers and connectorsEmbeddings,rerankers,and guardrailsCitations and feedback loopsEdge caching and analytics' ],popular: false,icon:,🔎',color: 'from-blue-600 to-indigo-700,textColor:,text-blue-200',link: 'https: marketPosition: 'Better relevance than keyword search,privacy‑first.',targetAudience[ 'DocsSupportMarketing'],trialDays: 7,setupTime:,2 hours',category: 'AI & Machine Learning,realService: true,technology[,Pinecone/WeaviateOpenAIFastAPI'],integrations[ 'ZendeskConfluenceNotion'],useCases[ 'Help centersInternal KB'],roi: 'Deflects 25% tickets,competitors[,Algolia Neural SearchElastic'],marketSize: '$10B search,growthRate:,13% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Ingestion workers,evals,analytics.',launchDate: '2025-06-20,customers: 34,rating: 4.6,reviews: 19 },{ id:,agentic-workflow-studio',name: 'Agentic Workflow Studio,tagline:,Visual builder for safe,multi‑agent automations',price: '$129,period:,/month',description: Design,simulate,and deploy multi‑agent workflows with guardrails,approvals,and human‑in‑the‑loop checkpoints. Observe runs and costs in real time.',features[ 'Drag‑and‑drop graph builderGuardrails and policy engineHuman‑in‑the‑loop checkpointsRun logs,costs,and metrics' ],popular: true,icon:,🕸️',color: 'from-purple-600 to-fuchsia-700,textColor:,text-purple-200',link: 'https: marketPosition: 'Faster time‑to‑value for safe agents.',targetAudience[ 'OpsAutomationEngineering'],trialDays: 14,setupTime:,1 day',category: 'Automation & Orchestration,realService: true,technology[,LangGraphTemporalOpenAI/Anthropic'],integrations[ 'SlackJiraGitHub'],useCases[ 'Backoffice automationSupport bots'],roi: 'Automates 15–40% tasks,competitors[,Akaike Agent StudioMendable Agents'],marketSize: '$12B automation,growthRate:,21% CAGR',variant: 'agents-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Policy engine,sandbox,audit.',launchDate: '2025-07-08,customers: 11,rating: 4.5,reviews: 8 },{ id:,edge-rate-limiter-saas',name: 'Edge Rate Limiter SaaS,tagline:,Protect APIs with globally distributed limits and quotas',price: '$39,period:,/month',description: 'Drop‑in SDK and managed configuration to apply token bucket and sliding‑window limits at the edge across regions with low latency.,features[ 'Global keyspace and quotasBurst and sliding window strategiesConfig UI and APIAnalytics and alerting' ],popular: false,icon:,🌐',color: 'from-slate-600 to-slate-800,textColor:,text-slate-200',link: 'https: marketPosition: 'Simpler than building on CDN primitives.',targetAudience[ 'PlatformAPI Teams'],trialDays: 7,setupTime:,30 minutes',category: 'Platform & APIs,realService: true,technology[,Edge KVWASMCDN'],integrations[ 'Cloudflare WorkersVercel Edge'],useCases[ 'Abuse preventionFair usage'],roi: 'Prevents outages and overages,competitors[,Cloudflare RulesKong Rate Limit'],marketSize: '$2B API mgt,growthRate:,11% CAGR',variant: 'edge-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Edge counters,config UI,SDKs.',launchDate: '2025-06-25,customers: 20,rating: 4.4,reviews: 13 },{ id:,email-deliverability-optimizer',name: 'Email Deliverability Optimizer,tagline:,Warmup,reputation monitoring,and content linting',price: '$49,period:,/month',description: Improves email deliverability with domain warmup,content linting for spam triggers,and feedback loop integrations across major ESPs.',features[ 'Inbox placement testsWarmup schedules and IP poolsContent linting and A/B testsReputation and blacklist monitors' ],popular: false,icon:,✉️',color: 'from-pink-600 to-rose-700,textColor:,text-pink-200',link: 'https: marketPosition: 'Focus on outcomes,not vanity metrics.',targetAudience[ 'MarketingGrowth'],trialDays: 7,setupTime:,2 hours',category: 'Growth & Marketing,realService: true,technology[,ESP APIsSpamAssassinInbox tests'],integrations[ 'SendGridMailgunPostmark'],useCases[ 'CampaignsLifecycle email'],roi: 'Increases deliverability by 10–20%,competitors[,Warmup InboxGlockApps'],marketSize: '$4B email tools,growthRate:,9% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,ESP connectors,warmup engine.',launchDate: '2025-07-02,customers: 26,rating: 4.5,reviews: 17 },{ id:,data-contracts-hub',name: 'Data Contracts Hub,tagline:,Schema governance and SLAs for reliable data products',price: '$99,period:,/month',description: Define and enforce data contracts across producers and consumers with schema diffs,backward‑compat checks,and SLA monitoring.',features[ 'Schema registry and diffsCompatibility checks and approvalsSLAs and freshness monitoringIncident workflows and dashboards' ],popular: false,icon:,📊',color: 'from-emerald-700 to-teal-800,textColor:,text-emerald-200',link: 'https: marketPosition: 'Brings product thinking to data.',targetAudience[ 'Data PlatformAnalytics'],trialDays: 7,setupTime:,1 day',category: 'Data Platform,realService: true,technology[,Kafka/Schema RegistrydbtAirflow'],integrations[ 'SnowflakeBigQueryRedshift'],useCases[ 'Data reliabilitySelf‑service data'],roi: 'Cuts data breakages by 40%,competitors[,Monte CarloDatafold'],marketSize: '$5B data ops,growthRate:,18% CAGR',variant: 'saas-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Contracts store,approvals,monitors.',launchDate: '2025-06-28,customers: 12,rating: 4.4,reviews: 10 },{ id:,security-chaos-gamedays',name: 'Security Chaos GameDays,tagline:,Hands‑on attack simulations and playbook hardening',price: $3,000,period: '/engagement,description: 'Facilitated tabletop and live‑fire scenarios tailored to your stack. Validates detections,improves response muscle memory,and prioritizes investments.',features[ 'Custom runbooks and injectsBlue team/Red team rotationsGap analysis and roadmapExecutive readout and training' ],popular: true,icon:,🎯',color: 'from-red-700 to-rose-800,textColor:,text-red-200',link: 'https: marketPosition: 'Outcome‑focused,no vendor bias.',targetAudience[ 'SecurityIT'],trialDays: 0,setupTime:,Project kickoff in 1 week',category: 'Security Consulting,realService: true,technology[,ATT&CKDetection Engineering'],integrations[ 'SIEM/XDRSOAR'],useCases[ 'Resilience validationTraining'],roi: 'Reduces breach impact,competitors[,Big 4MSSPs'],marketSize: '$25B services,growthRate:,10% CAGR',variant: 'consulting-real,contactInfo: { mobile:,+1 302 464 0950',email: 'kleber@ziontechgroup.com,address: '364 E Main St STE 1008 Middletown DE 19709' },realImplementation: true,implementationDetails:,Workshops,exercises,debrief.',launchDate: '2025-07-12,customers: 7,rating: 4.9,reviews: 6 ]}}}}}
 ,

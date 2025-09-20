@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
       route: '/services / ai - content - marketing - suite'
@@ -9,12 +9,10 @@ export default function Page() {
       description: 'Transform your financial decision - making with AI - driven insights, predictive analytics, and automated portfolio optimization.',
       icon: TrendingUp,
       color: 'from - green - 600 to - emerald - 700',
-      features: ['AI - powered financial forecasting and trend analysis',
-        'Real - time market data integration and analysis',
-        'Automated financial reporting and compliance',
-        'Risk assessment and portfolio optimization'
+      features: ['AI - powered financial forecasting and trend analysisReal - time market data integration and analysis',
+        'Automated financial reporting and complianceRisk assessment and portfolio optimization'
       ],
-      benefits: ['25 - 40% better investment returns', '80% faster analysis time', '85% market prediction accuracy'],
+      benefits: ['25 - 40% better investment returns80% faster analysis time', '85% market prediction accuracy'],
       pricing: { starter: '$199 / mo', professional: '$499 / mo', enterprise: '$1,299 / mo' },
       route: '/services / ai - financial - analytics'
     },
@@ -24,12 +22,10 @@ export default function Page() {
       description: 'Transform your HR operations with AI - driven insights, automated workflows, and intelligent talent management.',
       icon: Users,
       color: 'from - orange - 600 to - red - 700',
-      features: ['AI - powered candidate screening and matching',
-        'Automated resume parsing and skill assessment',
-        'Intelligent interview scheduling and feedback',
-        'Employee performance analytics and insights'
+      features: ['AI - powered candidate screening and matchingAutomated resume parsing and skill assessment',
+        'Intelligent interview scheduling and feedbackEmployee performance analytics and insights'
       ],
-      benefits: ['60% faster time - to - hire', '40% better candidate quality', '30% reduced hiring costs'],
+      benefits: ['60% faster time - to - hire40% better candidate quality', '30% reduced hiring costs'],
       pricing: { starter: '$149 / mo', professional: '$399 / mo', enterprise: '$999 / mo' },
       route: '/services / ai - hr - talent - platform'
     },
@@ -39,16 +35,14 @@ export default function Page() {
       description: 'Transform your supply chain with AI - driven insights, predictive analytics, and automated optimization.',
       icon: Route,
       color: 'from - teal - 600 to - cyan - 700',
-      features: ['AI - powered demand forecasting and inventory optimization',
-        'Real - time supply chain visibility and tracking',
-        'Automated route optimization and logistics planning',;
-        'Supplier performance analytics and risk assessment';
-      ],;
-      benefits: ['20 - 30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],;
-      pricing: { starter: '$299 / mo', professional: '$799 / mo', enterprise: '$1,999 / mo' },;
-      route: '/services / ai - supply - chain - optimization';
-    };
-  ];
+      features: ['AI - powered demand forecasting and inventory optimizationReal - time supply chain visibility and tracking',
+        'Automated route optimization and logistics planningSupplier performance analytics and risk assessment',
+      ],
+      benefits: ['20 - 30% reduced inventory costs25% improved delivery times', '40% fewer disruptions'],
+      pricing: { starter: '$299 / mo', professional: '$799 / mo', enterprise: '$1,999 / mo' },
+      route: '/services / ai - supply - chain - optimization'
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text-white">
       <SEO
@@ -120,11 +114,11 @@ export default function Page() {
 
             Discover our comprehensive suite of AI - powered micro SaaS solutions designed to revolutionize
             how businesses operate, scale, and succeed in the digital age.</motion.p>
-        </div>;
+        </div>,
       </section>
 
       {/* Services Grid */}
-      <section className="pb -20">;
+      <section className="pb -20">,
         <div className="container mx - auto px-4">
           <div className="grid gap-8 md:grid - cols - 2 lg:grid - cols -3">
             {services.map ( (service, index) => (<motion.div
@@ -184,17 +178,17 @@ export default function Page() {
 
                 <Link
                   to={service.route}
-                  className="inline - flex items - center text-cyan - 400 hover:text-cyan - 300 text-sm font - semibold group - hover:translate - x-1 transition - all duration -300"
+                  className="inline - flex items - center text-cyan - 400 hover: text-cyan - 300 text-sm font - semibold group - hover:translate - x-1 transition - all duration -300"
 
                   Learn More < ArrowRight className="w-4 h-4 ml-1" />
-                </Link>;
+                </Link>,
               </motion.div>) ) }
           </div>
         </div>
       </section>
 
       {/* Why Choose Zion Tech Group */}
-      <section className="py-16 bg-slate -900 / 40">;
+      <section className="py-16 bg-slate -900 / 40">,
         <div className="container mx - auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font - bold text-white mb-4">Why Choose Zion Tech Group?</h2>
@@ -230,7 +224,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient - to - r from - cyan - 600 to - blue -600">;
+      <section className="py-16 bg-gradient - to - r from - cyan - 600 to - blue -600">,
         <div className="container mx - auto px-4 text-center">
           <h2 className="text-3xl font - bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-cyan - 100 mb-8 max - w-2xl mx -auto">
@@ -259,7 +253,7 @@ export default function Page() {
       </section>
 
       {/* Contact & Website Section */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div className="container mx - auto px-4 text-center">
           <div className="bg-slate - 900 / 40 rounded-2xl p - 8 max - w-4xl mx -auto">
             <h3 className="text-2xl font - bold text-white mb-6">Visit Our Website</h3>
@@ -267,15 +261,15 @@ export default function Page() {
               Learn more about our complete suite of AI - powered business solutions and discover
               how we can help transform your organization.</p>
             <a
-              href="https://ziontechgroup.com"
+              href="https: //ziontechgroup.com"
               target="_blank"
               rel="noreferrer"
               className="inline - flex items - center px-6 py-3 bg-gradient - to - r from - cyan - 400 to - blue - 500 text-slate - 900 font - semibold rounded-lg hover:from - cyan - 300 hover:to - blue - 400 transition - all duration -300"
-            >;
-              Visit ziontechgroup.com < ExternalLink className="w-4 h-4 ml-2" />;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            >,
+              Visit ziontechgroup.com < ExternalLink className="w-4 h-4 ml-2" />,
+            </a>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
 }}}

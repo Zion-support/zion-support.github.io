@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const innovative-business-solutions: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
@@ -12,5 +12,4 @@ const innovative-business-solutions: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
+    </div>)},

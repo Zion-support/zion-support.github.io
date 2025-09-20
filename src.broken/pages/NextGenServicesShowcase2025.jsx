@@ -1,11 +1,11 @@
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play  } from 'lucide-react';
+import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play  } from 'lucide-react',
 export default function Page() {
 ,
         {
             title: 'Smart Inventory Optimization System',
             description: 'AI - driven inventory management that predicts demand and automates reordering to prevent stockouts.',
             price: '$299 / month',
-            features['Demand forecasting AI', 'Automated reorder points', 'Multi - location management'],;
+            features['Demand forecasting AIAutomated reorder points', 'Multi - location management'],
             category: 'Supply Chain',
             trial: '30 days free'
         },
@@ -13,33 +13,33 @@ export default function Page() {
             title: 'Customer Behavior Prediction Engine',
             description: 'Advanced analytics platform that predicts customer behavior and identifies churn risks.',
             price: '$399 / month',
-            features['Churn prediction modeling', 'Customer lifetime value', 'Behavioral pattern analysis'],;
+            features['Churn prediction modelingCustomer lifetime value', 'Behavioral pattern analysis'],
             category: 'Customer Analytics',
             trial: '21 days free'
 
-    ];
+    ],
     const infrastructureServices = [{
             title: 'Quantum - Secure Cloud Infrastructure',
             description: 'Revolutionary cloud infrastructure protected by quantum - resistant encryption for ultimate security.',
             price: '$25,000 / month',
-            features['Post - quantum cryptography', 'Quantum key distribution', 'Zero - trust security model'],;
+            features['Post - quantum cryptographyQuantum key distribution', 'Zero - trust security model'],
             category: 'Cloud Security'
         },
         {
             title: 'Autonomous Infrastructure Management',
             description: 'Self - managing IT infrastructure that automatically optimizes performance and resolves issues.',
             price: '$12,000 / month',
-            features['Autonomous healing systems', 'Predictive failure analysis', '24 / 7 automated operations'],;
+            features['Autonomous healing systemsPredictive failure analysis', '24 / 7 automated operations'],
             category: 'Infrastructure Automation'
         },
         {
             title: 'Blockchain Infrastructure as a Service',
             description: 'Complete blockchain platform supporting multiple protocols and enterprise - grade security.',
             price: '$20,000 / month',
-            features['Multi - protocol blockchain support', 'Smart contract deployment', 'DeFi integration platform'],;
+            features['Multi - protocol blockchain supportSmart contract deployment', 'DeFi integration platform'],
             category: 'Blockchain Infrastructure'
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue -900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

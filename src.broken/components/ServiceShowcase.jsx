@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 
 export default function Page() {
-  };
+  },
   return ("
     <div className="py-12 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">"
       <div className="container mx-auto px-4">"
@@ -105,14 +105,14 @@ export default function Page() {
         <div className="text-center mt-12">
           <Button"
             size="lg"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-purple hover:to-zion-cyan text-white font-semibold px-8 py-4 text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
           >
             View All Services
           </Button>
         </div>
       </div>
     </div>
-  );
+  )
 }
 '"`
 =======

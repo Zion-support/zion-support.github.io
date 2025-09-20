@@ -1,24 +1,24 @@
-import { use_router } from 'next / router';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { AlertTriangle } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-  default: 'There was an issue with your authentication request.',}
+import { use_router } from 'next / router',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card',
+import { Button } from '@/components / ui / button',
+import { AlertTriangle } from 'lucide-react',
+import Link from 'next/link',
+import Head from 'next/head',
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
+  default: 'There was an issue with your authentication request.'}
 export default function AuthErrorPage() {,
   const { query } = useRouter(),
   const message = errorMessages[query.error as string] |errorMessages.default,
-const errorMessages: Record<string string> = {;
-  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-  default: 'There was an issue with your authentication request.';
-const errorMessages: Record<string, string> = {;
-  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
-  default: 'There was an issue with your authentication request.',} catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+const errorMessages: Record<string string> = {,
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
+  default: 'There was an issue with your authentication request.',
+const errorMessages: Record<string, string> = {,
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.',
+  default: 'There was an issue with your authentication request.'} catch (error) {,
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
-,
+
 }
 export default function AuthErrorPage() {,
   const { query } = useRouter(),
@@ -26,7 +26,7 @@ export default function AuthErrorPage() {,
   return (,
     <>,
       <Head>,
-        <title>Authentication Error - Zion Tech Marketplace</title>;
+        <title>Authentication Error - Zion Tech Marketplace</title>,
         <meta name=&quot,description&quot, content=&quot,Authentication error page&quot, />,
         <title>Authentication Error - Zion Tech Marketplace</title>,
         <meta name="description" content="Authentication error page" />,
@@ -52,12 +52,11 @@ export default function AuthErrorPage() {,
           </CardContent>,
         </Card>,
       </div>,
-    </>,
-  ),
+    </>)
 }
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
 }
-;
+,

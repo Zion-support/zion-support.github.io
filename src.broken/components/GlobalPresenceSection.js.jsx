@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock  } from 'lucide-react';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock  } from 'lucide-react',
 ,
   {
 "
@@ -22,8 +22,8 @@ import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, Ch
 "
     icon: <TrendingUp className="w-6 h-6" />,
     value: '98%',
-    label: 'Client Satisfaction'},
-];
+    label: 'Client Satisfaction'}
+],
 const partnerships = [{
 
     name: 'Microsoft',
@@ -81,8 +81,8 @@ const partnerships = [{
       'Strategic partner for AI, blockchain, and enterprise solutions',
     established: '2022',
     projects: 12,
-    status: 'Active'},
-];
+    status: 'Active'}
+],
 const industries = [{
 
     name: 'Financial Services',
@@ -98,12 +98,12 @@ const industries = [{
     countries: 20,
     satisfaction: '98%'},
   { name: 'Technology', projects: 150, countries: 25, satisfaction: '99%' },
-  { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' },
-];
+  { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' }
+],
 export function GlobalPresenceSection() {
-  const [selectedOffice, setSelectedOffice] = useState(null);
-  const [selectedPartnership, setSelectedPartnership] = useState(null);
-  const [hoveredIndustry, setHoveredIndustry] = useState(null);
+  const [selectedOffice, setSelectedOffice] = useState(null),
+  const [selectedPartnership, setSelectedPartnership] = useState(null),
+  const [hoveredIndustry, setHoveredIndustry] = useState(null),
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -113,7 +113,7 @@ export function GlobalPresenceSection() {
       transition: {
 
         staggerChildren: 0.15,
-        delayChildren: 0.1}}};
+        delayChildren: 0.1}}},
   const itemVariants = {
 
     hidden: { y: 30, opacity: 0 },
@@ -124,7 +124,7 @@ export function GlobalPresenceSection() {
       transition: {
 
         duration: 0.6,
-        ease: 'easeOut'}}};
+        ease: 'easeOut'}}},
   return ("
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}"
@@ -493,7 +493,7 @@ export function GlobalPresenceSection() {
                 Whether you're in San Francisco or Singapore, our global team is
                 ready to help you scale your business worldwide with
                 cutting-edge technology solutions.</p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
                 <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                   Find Your Local Office
                 </button>"
@@ -506,6 +506,6 @@ export function GlobalPresenceSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 '"

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  BarChart3, 
+  BarChart3,
   TrendingUp, 
   CheckCircle, 
  
@@ -148,93 +148,62 @@ import {
   Memory,
   HardDrive,
   Server
-} from 'lucide-react';
-
+} from "lucide-react";
 const WebsiteAnalytics = () => {
   const features = [
     {
-      icon: BarChart3,
-      title: 'Real-time Analytics',
-      description: 'Live website performance monitoring and insights'
-    },
+      icon: BarChart3,title: 'Real-time Analytics',description: 'Live website performance monitoring and insights'
+    };
     {
-      icon: Users2,
-      title: 'User Behavior Tracking',
-      description: 'Comprehensive user journey and interaction analysis'
-    },
+      icon: Users2,title: 'User Behavior Tracking',description: 'Comprehensive user journey and interaction analysis'
+    };
     {
-      icon: MousePointer,
-      title: 'Click Tracking',
-      description: 'Detailed click heatmaps and user interaction data'
-    },
+      icon: MousePointer,title: 'Click Tracking',description: 'Detailed click heatmaps and user interaction data'
+    };
     {
-      icon: Clock,
-      title: 'Performance Monitoring',
-      description: 'Page load times and performance optimization insights'
-    },
+      icon: Clock,title: 'Performance Monitoring',description: 'Page load times and performance optimization insights'
+    };
     {
-      icon: MapPin,
-      title: 'Geographic Analytics',
-      description: 'User location and regional performance data'
-    },
+      icon: MapPin,title: 'Geographic Analytics',description: 'User location and regional performance data'
+    };
     {
-      icon: Device,
-      title: 'Device Analytics',
-      description: 'Cross-device performance and user experience insights'
+      icon: Device,title: 'Device Analytics',description: 'Cross-device performance and user experience insights'
     }
   ];
-
   const benefits = [
-    'Improve website conversion rates by 35%',
-    'Reduce bounce rates by 25%',
-    'Optimize user experience based on data',
-    'Identify and fix performance bottlenecks',
-    'Make data-driven design decisions',
-    'Track marketing campaign effectiveness'
-  ];
+    'Improve website conversion rates by 35%Reduce bounce rates by 25%',
+    'Optimize user experience based on dataIdentify and fix performance bottlenecks',
+    'Make data-driven design decisionsTrack marketing campaign effectiveness'
+  ],
 
   const services = [
     {
-      icon: Monitor,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics dashboard with real-time data'
-    },
+      icon: Monitor,title: 'Analytics Dashboard',description: 'Comprehensive analytics dashboard with real-time data'
+    };
     {
-      icon: Eye2,
-      title: 'User Session Recording',
-      description: 'Record and analyze user sessions for insights'
-    },
+      icon: Eye2,title: 'User Session Recording',description: 'Record and analyze user sessions for insights'
+    };
     {
-      icon: TrendingUp,
-      title: 'Conversion Tracking',
-      description: 'Track conversions and optimize funnels'
-    },
+      icon: TrendingUp,title: 'Conversion Tracking',description: 'Track conversions and optimize funnels'
+    };
     {
-      icon: Search,
-      title: 'SEO Analytics',
-      description: 'Monitor search performance and rankings'
+      icon: Search,title: 'SEO Analytics',description: 'Monitor search performance and rankings'
     }
   ];
-
   const useCases = [
     {
-      industry: 'E-commerce',
-      description: 'Track sales funnels and customer behavior'
-    },
+      industry: 'E-commerce',description: 'Track sales funnels and customer behavior'
+    };
     {
-      industry: 'Marketing',
-      description: 'Measure campaign performance and ROI'
-    },
+      industry: 'Marketing',description: 'Measure campaign performance and ROI'
+    };
     {
-      industry: 'Content',
-      description: 'Analyze content engagement and user preferences'
-    },
+      industry: 'Content',description: 'Analyze content engagement and user preferences'
+    };
     {
-      industry: 'SaaS',
-      description: 'Monitor user onboarding and feature usage'
+      industry: 'SaaS',description: 'Monitor user onboarding and feature usage'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -459,7 +428,7 @@ const WebsiteAnalytics = () => {
               Join businesses worldwide that use our analytics solutions to 
               optimize their websites and improve user experience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -472,8 +441,6 @@ const WebsiteAnalytics = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default WebsiteAnalytics;
-

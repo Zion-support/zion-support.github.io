@@ -23,35 +23,35 @@
                   <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
   data: e.target.value
 =======
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react',
 export default function Page() {
-);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [showMintNFT, setShowMintNFT] = useState(false);
-    const [showSendTransaction, setShowSendTransaction] = useState(false);
-    const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3();
+),
+    const [activeTab, setActiveTab] = useState('overview'),
+    const [showMintNFT, setShowMintNFT] = useState(false),
+    const [showSendTransaction, setShowSendTransaction] = useState(false),
+    const { wallet, contracts, nfts, defiPositions, transactions, metrics, isConnecting, isProcessing, connectWallet, disconnectWallet, switchNetwork, addContract, mintNFT, sendTransaction, createDeFiPosition } = useBlockchainWeb3(),
     const [nftForm, setNftForm] = useState({
 
         name: '',
         description: '',
         image: ''
-    });
+    }),
     const [transactionForm, setTransactionForm] = useState({
 
         to: '',
         value: '',
         data: ''
-    });
+    }),
     const handleConnectWallet = useCallback(async () => {
         try {
-            await connectWallet();
-            // // // // // // // // console.error('Failed to connect wallet:', error);
+            await connectWallet(),
+            // // // // // // // // console.error('Failed to connect wallet:', error),
         }
             trackEvent('blockchain',dashboard',wallet_connected')}
         catch(error) {
 
             // console.error('Failed to connect wallet:', error)}
-    }, [connectWallet, trackEvent]);
+    }, [connectWallet, trackEvent]),
     const handleMintNFT = useCallback(async () => {
         if(nftForm.name.trim() && wallet) {
 
@@ -64,42 +64,42 @@ export default function Page() {
 
 `
 }`
-                };
-                await mintNFT(contracts[1]?.address || '', metadata);
-                setNftForm({ name: '', description: '', image: '' });
-                setShowMintNFT(false);
-                // // // // // // // // console.error('Failed to mint NFT:', error);
+                },
+                await mintNFT(contracts[1]?.address || '', metadata),
+                setNftForm({ name: '', description: '', image: '' }),
+                setShowMintNFT(false),
+                // // // // // // // // console.error('Failed to mint NFT:', error),
             }
                 trackEvent('blockchain',dashboard',nft_minted')}
             catch(error) {
 
                 // console.error('Failed to mint NFT:', error)}
         }
-    }, [nftForm, wallet, contracts, mintNFT, trackEvent]);
+    }, [nftForm, wallet, contracts, mintNFT, trackEvent]),
     const handleSendTransaction = useCallback(async () => {
         if(transactionForm.to.trim() && transactionForm.value && wallet) {
 
             try {
-                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);
-                setTransactionForm({ to: '', value: '', data: '' });
-                setShowSendTransaction(false);
-                // // // // // // // // console.error('Failed to send transaction:', error);
+                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null),
+                setTransactionForm({ to: '', value: '', data: '' }),
+                setShowSendTransaction(false),
+                // // // // // // // // console.error('Failed to send transaction:', error),
             }
                 trackEvent('blockchain',dashboard',transaction_sent')}
             catch(error) {
 
                 // console.error('Failed to send transaction:', error)}
         }
-    }, [transactionForm, wallet, sendTransaction, trackEvent]) ;
+    }, [transactionForm, wallet, sendTransaction, trackEvent]) ,
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'confirmed': return 'text-green-600 bg-green-100';
-            case 'pending': return 'text-yellow-600 bg-yellow-100';
-            case 'failed': return 'text-red-600 bg-red-100';
+            case 'confirmed': return 'text-green-600 bg-green-100',
+            case 'pending': return 'text-yellow-600 bg-yellow-100',
+            case 'failed': return 'text-red-600 bg-red-100',
             default: return 'text-gray-600 bg-gray-100'}
-    };`
+    },`
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}"
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">"
@@ -387,11 +387,11 @@ export default function Page() {
               </div>
             </motion.div>) }
         </AnimatePresence>
-      </div>;
+      </div>,
 
       {/* Mint NFT Modal */}
       <AnimatePresence>"
-        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
+        {showMintNFT && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">,
             <motion.div initial = {
 
   { scale: 0.9,
@@ -470,7 +470,7 @@ export default function Page() {
 
       {/* Send Transaction Modal */}
       <AnimatePresence>"
-        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">;
+        {showSendTransaction && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">,
             <motion.div initial = {
 
   { scale: 0.9,
@@ -546,6 +546,6 @@ export default function Page() {
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>)};
+    </div>)},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

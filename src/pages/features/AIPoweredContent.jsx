@@ -4,22 +4,22 @@ import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import Link from "next/link";
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
     useFeatureUsage('ZionGPT');
     const schema = {
-        "@context": "https://schema.org",
+        "@context": "https: //schema.org";
         "@type": "WebPage",
         "name": "AI Content Generation",
         "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
-        "url": "https://app.ziontechgroup.com/features/ai-content-generation"
+        "url": "https: //app.ziontechgroup.com/features/ai-content-generation"
     };
-    const { markAiExplored } = useAdvancedOnboardingStatus();
+    const { markAiExplored } = useAdvancedOnboardingStatus(),
     useEffect(() => {
-        markAiExplored();
-    }, [markAiExplored]);
+        markAiExplored(),
+    }, [markAiExplored]),
     return (<>
       <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -31,8 +31,8 @@ export default function AIPoweredContent() {
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             ZionGPT helps you craft high quality articles, service descriptions and FAQs in minutes.
           </p>
-          <img loading="lazy" src="https://placehold.co/800x400" alt="Screenshot of ZionGPT content tool" className="rounded-lg shadow-xl mx-auto mb-12"/>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp; Use Cases</h2>
+          <img loading="lazy" src="https: //placehold.co/800x400" alt="Screenshot of ZionGPT content tool" className="rounded-lg shadow-xl mx-auto mb-12"/>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Save time drafting marketing content for your products or services.</li>
             <li>Improve search rankings with keyword optimized text.</li>

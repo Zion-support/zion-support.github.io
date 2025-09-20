@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
+import type { NextPage } from 'next',
+import Link from 'next/link',
+import UseTokensButton from '../../components/tokens/UseTokensButton',
 
 const AiSeoAuditor: NextPage = () => {
-  const title = 'AiSeoAuditor - Zion Tech Solutions';
-  const desc = 'AiSeoAuditor service';
-  const ogImage = '/og/default.svg';
+  const title = 'AiSeoAuditor - Zion Tech Solutions',
+  const desc = 'AiSeoAuditor service',
+  const ogImage = '/og/default.svg',
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ const AiSeoAuditor: NextPage = () => {
         <Link href="/services"><a>Back to Services</a></Link>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default AiSeoAuditor;
+export default AiSeoAuditor,

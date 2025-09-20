@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface DocsProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Docs({ }: DocsProps) {,
@@ -8,7 +8,6 @@ export default function Docs({ }: DocsProps) {,
     <div>,
       <h1>Docs</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

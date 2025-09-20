@@ -1,2 +1,2 @@
 
-export default ai-search;
+export default ai-search,

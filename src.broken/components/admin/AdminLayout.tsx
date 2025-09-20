@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 
 interface AdminLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const navItems = [
@@ -10,8 +10,8 @@ const navItems = [
   { title: 'Services', href: '/admin/services' },
   { title: 'Users', href: '/admin/users' },
   { title: 'Reports', href: '/admin/reports' },
-  { title: 'Moderation', href: '/admin/moderation' },
-];
+  { title: 'Moderation', href: '/admin/moderation' }
+],
 
 export function AdminLayout({ children }: AdminLayoutProps) {
   return (
@@ -32,7 +32,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       </aside>
       <main className="flex-1 p-6 overflow-y-auto">{children}</main>
     </div>
-  );
+  ),
 }
 
-export default AdminLayout;
+export default AdminLayout,

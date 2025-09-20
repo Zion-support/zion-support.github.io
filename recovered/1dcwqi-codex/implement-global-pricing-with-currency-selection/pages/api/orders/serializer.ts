@@ -1,11 +1,11 @@
 export interface OrderRow {
-  id: string;
-  created_at: string;
-  total: number;
-  status: string;
-  invoice_url: string;
-  items?: any[];
-  shipping_address?: any;
+  id: string,
+  created_at: string,
+  total: number,
+  status: string,
+  invoice_url: string,
+  items?: any[],
+  shipping_address?: any
 }
 
 export function serializeOrder(row: OrderRow) {
@@ -16,10 +16,10 @@ export function serializeOrder(row: OrderRow) {
     status: row.status,
     invoiceUrl: row.invoice_url,
     items: row.items || [],
-    shippingAddress: row.shipping_address || null,
-  };
+    shippingAddress: row.shipping_address || null
+  },
 }
 
 export function serializeOrders(rows: OrderRow[]) {
-  return rows.map(serializeOrder);
+  return rows.map(serializeOrder)
 }

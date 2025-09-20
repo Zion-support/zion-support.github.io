@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-export default ComprehensiveServicesShowcase2025;
-import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced - 2025 - cutting - edge -services';
+import React, { useState } from 'react',
+export default ComprehensiveServicesShowcase2025,
+import { CUTTING_EDGE_SERVICES_2025 } from '../data/enhanced - 2025 - cutting - edge -services',
 export default function Page() {
 ,
-    },
-  };
+    }
+  },
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
-      },
-    },
-  };
+        duration: 0.5
+      }
+    }
+  },
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate -900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -309,9 +309,9 @@ export default function Page() {
               Try adjusting your search criteria or browse all our services.</p>
             <button
               onClick={ () => {
-                setSearchTerm('') ;
-                setSelectedCategory('all') ;
-                setSelectedIndustry('all') ;
+                setSearchTerm('') ,
+                setSelectedCategory('all') ,
+                setSelectedIndustry('all') ,
               }}
               className="bg-gradient - to - r from - blue - 600 to - purple - 600 text-white px-6 py-3 rounded-lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration -300"
             >
@@ -340,12 +340,12 @@ export default function Page() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover:bg-white hover:text-blue - 900 transition - all duration -300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font - semibold text-lg hover: bg-white hover:text-blue - 900 transition - all duration -300"
             >
               Download Case Studies
             </motion.button>
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) 
+},

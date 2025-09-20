@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Leaf,
   Zap,
@@ -24,110 +24,68 @@ import {
   Target,
   Award,
   BarChart3
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-
+} from "lucide-react";
+import SEO from "../../components/SEO";
 export default function GreenIT() {
   const features = [
     {
-      icon: Leaf,
-      title: 'Sustainable Infrastructure',
-      description: 'Design and implement eco-friendly IT infrastructure with reduced carbon footprint.'
-    },
+      icon: Leaf,title: 'Sustainable Infrastructure',description: 'Design and implement eco-friendly IT infrastructure with reduced carbon footprint.'
+    };
     {
-      icon: Zap,
-      title: 'Energy Optimization',
-      description: 'Optimize energy consumption through smart power management and efficient systems.'
-    },
+      icon: Zap,title: 'Energy Optimization',description: 'Optimize energy consumption through smart power management and efficient systems.'
+    };
     {
-      icon: Cloud,
-      title: 'Green Cloud Solutions',
-      description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
-    },
+      icon: Cloud,title: 'Green Cloud Solutions',description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
+    };
     {
-      icon: Recycle,
-      title: 'Circular IT Economy',
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'
+      icon: Recycle,title: 'Circular IT Economy',description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'
     }
   ];
-
   const solutions = [
     {
-      title: 'Energy-Efficient Data Centers',
-      description: 'Design and optimize data centers for maximum energy efficiency and minimal environmental impact',
-      icon: Database,
-      benefits: ['Reduced power consumption', 'Lower cooling costs', 'Improved PUE ratings']
+      title: 'Energy-Efficient Data Centers',description: 'Design and optimize data centers for maximum energy efficiency and minimal environmental impact',icon: Database,benefits: ['Reduced power consumptionLower cooling costs', 'Improved PUE ratings']
     },
     {
-      title: 'Renewable Energy Integration',
-      description: 'Integrate solar, wind, and other renewable energy sources into IT infrastructure',
-      icon: Sun,
-      benefits: ['Carbon-neutral operations', 'Energy cost savings', 'Sustainable power supply']
+      title: 'Renewable Energy Integration',description: 'Integrate solar, wind, and other renewable energy sources into IT infrastructure',
+      icon: Sun,benefits: ['Carbon-neutral operationsEnergy cost savings', 'Sustainable power supply']
     },
     {
-      title: 'Smart Power Management',
-      description: 'Implement intelligent power management systems for optimal energy usage',
-      icon: Gauge,
-      benefits: ['Automated power optimization', 'Real-time monitoring', 'Predictive maintenance']
+      title: 'Smart Power Management',description: 'Implement intelligent power management systems for optimal energy usage',icon: Gauge,benefits: ['Automated power optimizationReal-time monitoring', 'Predictive maintenance']
     },
     {
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
-      icon: Code,
-      benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance']
+      title: 'Green Software Development',description: 'Develop energy-efficient software applications and optimize existing systems',icon: Code,benefits: ['Reduced computational overheadLower energy consumption', 'Improved performance']
     }
-  ];
+  ],
 
   const useCases = [
     {
-      industry: 'Enterprise',
-      description: 'Large-scale IT infrastructure optimization and sustainability initiatives',
-      icon: Building,
-      metrics: ['Energy Savings', 'Carbon Reduction', 'Cost Optimization']
+      industry: 'Enterprise',description: 'Large-scale IT infrastructure optimization and sustainability initiatives',icon: Building,metrics: ['Energy SavingsCarbon Reduction', 'Cost Optimization']
     },
     {
-      industry: 'Healthcare',
-      description: 'Sustainable medical technology and energy-efficient healthcare IT systems',
-      icon: Heart,
-      metrics: ['Equipment Efficiency', 'Energy Costs', 'Environmental Impact']
+      industry: 'Healthcare',description: 'Sustainable medical technology and energy-efficient healthcare IT systems',icon: Heart,metrics: ['Equipment EfficiencyEnergy Costs', 'Environmental Impact']
     },
     {
-      industry: 'Education',
-      description: 'Green campus technology and sustainable educational IT infrastructure',
-      icon: GraduationCap,
-      metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
+      industry: 'Education',description: 'Green campus technology and sustainable educational IT infrastructure',icon: GraduationCap,metrics: ['Student ExperienceOperational Costs', 'Sustainability Goals']
     },
     {
-      industry: 'Manufacturing',
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',
-      icon: Factory,
-      metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance']
+      industry: 'Manufacturing',description: 'Smart manufacturing with energy-efficient automation and monitoring',icon: Factory,metrics: ['Production EfficiencyEnergy Consumption', 'Environmental Compliance']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: 'Cost Savings',
-      description: 'Reduce energy costs and operational expenses through efficient technology'
-    },
+      icon: TrendingUp,title: 'Cost Savings',description: 'Reduce energy costs and operational expenses through efficient technology'
+    };
     {
-      icon: Shield,
-      title: 'Compliance',
-      description: 'Meet environmental regulations and sustainability standards'
-    },
+      icon: Shield,title: 'Compliance',description: 'Meet environmental regulations and sustainability standards'
+    };
     {
-      icon: Globe,
-      title: 'Environmental Impact',
-      description: 'Reduce carbon footprint and contribute to environmental conservation'
-    },
+      icon: Globe,title: 'Environmental Impact',description: 'Reduce carbon footprint and contribute to environmental conservation'
+    };
     {
-      icon: Award,
-      title: 'Brand Reputation',
-      description: 'Enhance brand image through commitment to sustainability'
+      icon: Award,title: 'Brand Reputation',description: 'Enhance brand image through commitment to sustainability'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -351,7 +309,7 @@ export default function GreenIT() {
               Industry Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Green IT solutions are transforming industries across the globe,
+              Green IT solutions are transforming industries across the globe;
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
@@ -444,24 +402,16 @@ export default function GreenIT() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Assessment',
-                description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
-              },
+                step: '01',title: 'Assessment',description: 'Evaluate current IT infrastructure and identify sustainability opportunities'
+              };
               {
-                step: '02',
-                title: 'Strategy',
-                description: 'Develop comprehensive Green IT strategy and implementation roadmap'
-              },
+                step: '02',title: 'Strategy',description: 'Develop comprehensive Green IT strategy and implementation roadmap'
+              };
               {
-                step: '03',
-                title: 'Implementation',
-                description: 'Deploy sustainable solutions and optimize existing systems'
-              },
+                step: '03',title: 'Implementation',description: 'Deploy sustainable solutions and optimize existing systems'
+              };
               {
-                step: '04',
-                title: 'Optimization',
-                description: 'Monitor performance and continuously improve sustainability metrics'
+                step: '04',title: 'Optimization',description: 'Monitor performance and continuously improve sustainability metrics'
               }
             ].map((phase, index) => (
               <motion.div
@@ -494,11 +444,11 @@ export default function GreenIT() {
               Ready to Go Green with Your IT?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how Green IT solutions can transform your technology infrastructure,
+              Discover how Green IT solutions can transform your technology infrastructure;
               reduce environmental impact, and drive cost savings.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-500 hover:to-emerald-600 transition-all duration-300 hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white rounded-lg font-semibold hover: from-green-500 hover:to-emerald-600 transition-all duration-300 hover:scale-105">
                 Start Your Green IT Journey
               </button>
               <button className="px-8 py-4 border border-green-400 text-green-400 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
@@ -509,5 +459,5 @@ export default function GreenIT() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,12 +1,12 @@
 
 import {,
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenu;
-  SidebarMenuItem;
-  SidebarMenuButton;
-  SidebarGroupLabel;
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarGroupLabel,
 export function AppSidebar() {,
   return (,
     <Sidebar>,
@@ -89,8 +89,7 @@ export function AppSidebar() {,
           </SidebarGroupContent>,
         </SidebarGroup>,
       </SidebarContent>,
-    </Sidebar>,
-  );
+    </Sidebar>),
 }
-,
+
 }

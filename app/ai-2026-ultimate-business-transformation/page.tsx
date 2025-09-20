@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Ultimate Business Transformation - Revolutionary Breakthrough Guide';
-  description: 'Discover the ultimate AI business transformation strategies for 2026. Revolutionary breakthrough technologies, quantum computing, neural interfaces, and autonomous systems that will reshape enterprise operations.';
-  keywords: ['AI 2026business transformation', 'quantum computingneural interfaces', 'autonomous systemsenterprise AI', 'digital transformation'],
-};
+  title: 'AI 2026 Ultimate Business Transformation - Revolutionary Breakthrough Guide',
+  description: 'Discover the ultimate AI business transformation strategies for 2026. Revolutionary breakthrough technologies, quantum computing, neural interfaces, and autonomous systems that will reshape enterprise operations.',
+  keywords: ['AI 2026business transformationquantum computingneural interfaces', 'autonomous systemsenterprise AIdigital transformation']
+},
 export default function AI2026UltimateBusinessTransformationPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
@@ -55,7 +55,7 @@ export default function AI2026UltimateBusinessTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Revolutionary Technologies Section */,}
+      {/* Revolutionary Technologies Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">,
@@ -169,7 +169,7 @@ export default function AI2026UltimateBusinessTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Roadmap */,}
+      {/* Implementation Roadmap */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">,
@@ -223,7 +223,7 @@ export default function AI2026UltimateBusinessTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* ROI Calculator Section */,}
+      {/* ROI Calculator Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">,
@@ -272,7 +272,7 @@ export default function AI2026UltimateBusinessTransformationPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-blue-600/20">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md:text-5xl font-bold mb-8">,
@@ -298,5 +298,4 @@ export default function AI2026UltimateBusinessTransformationPage() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

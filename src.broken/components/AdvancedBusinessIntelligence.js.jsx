@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react',
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react',
 ,
   {
 
@@ -18,85 +18,85 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
     lastTrained: '2024-01-12T00:00:00.000Z',
     status: 'training',
     predictions: 15420,
-    category: 'Customer Analytics'},
-];
+    category: 'Customer Analytics'}
+],
 export function AdvancedBusinessIntelligence() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [timeRange, setTimeRange] = useState('30d');
-  const [autoRefresh, setAutoRefresh] = useState(true);
-  const [showPredictions, setShowPredictions] = useState(true);
-  const [data, setData] = useState(mockMetrics);
-  const [insights, setInsights] = useState(mockInsights);
-  const [models, setModels] = useState(mockModels);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const categories = ['all',Financial',Customer',Operations',Growth'];
+  const [isOpen, setIsOpen] = useState(false),
+  const [isMinimized, setIsMinimized] = useState(false),
+  const [isFullscreen, setIsFullscreen] = useState(false),
+  const [activeTab, setActiveTab] = useState('overview'),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [timeRange, setTimeRange] = useState('30d'),
+  const [autoRefresh, setAutoRefresh] = useState(true),
+  const [showPredictions, setShowPredictions] = useState(true),
+  const [data, setData] = useState(mockMetrics),
+  const [insights, setInsights] = useState(mockInsights),
+  const [models, setModels] = useState(mockModels),
+  const [isRefreshing, setIsRefreshing] = useState(false),
+  const categories = ['all',Financial',Customer',Operations',Growth'],
   const timeRanges = ['
     { value: '7d', label: '7 Days' },
     { value: '30d', label: '30 Days' },
     { value: '90d', label: '90 Days' },
-    { value: '1y', label: '1 Year' },
-  ];
+    { value: '1y', label: '1 Year' }
+  ],
   const filteredMetrics ='
     selectedCategory === 'all'
       ? data
-      : data.filter(metric => metric.category === selectedCategory);
+      : data.filter(metric => metric.category === selectedCategory),
   const refreshData = async () => {
-    setIsRefreshing(true);
+    setIsRefreshing(true),
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsRefreshing(false);
-  };
+    await new Promise(resolve => setTimeout(resolve, 1500)),
+    setIsRefreshing(false),
+  },
   useEffect(() => {
     if(autoRefresh) {
 
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
+      const interval = setInterval(refreshData, 30000), // Refresh every 30 seconds
+      return () => clearInterval(interval),
     }
-  }, [autoRefresh]);
+  }, [autoRefresh]),
   const getTrendIcon = trend => {
 
     switch(trend) {
 
       case 'up':
-        return <TrendingUp className="w-4 h-4 text-green-500" />;
+        return <TrendingUp className="w-4 h-4 text-green-500" />,
       case 'down':"
-        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />,
+      default: "
+        return <Activity className="w-4 h-4 text-gray-500" />
     }
-  };
+  },
   const getPriorityColor = priority => {
 
     switch(priority) {
 
       case 'high':'
-        return 'border-red-500 bg-red-50 dark:bg-red-900/20';
+        return 'border-red-500 bg-red-50 dark: bg-red-900/20',
       case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
+        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20',
       default:'
-        return 'border-green-500 bg-green-50 dark:bg-green-900/20';
+        return 'border-green-500 bg-green-50 dark:bg-green-900/20'
     }
-  };
+  },
   const getInsightIcon = type => {
 
     switch(type) {
 
       case 'prediction':"
-        return <Brain className="w-5 h-5 text-blue-500" />;
+        return <Brain className="w-5 h-5 text-blue-500" />,
       case 'anomaly':"
-        return <AlertTriangle className="w-5 h-5 text-red-500" />;
+        return <AlertTriangle className="w-5 h-5 text-red-500" />,
       case 'opportunity':"
-        return <Target className="w-5 h-5 text-green-500" />;
+        return <Target className="w-5 h-5 text-green-500" />,
       case 'risk':"
-        return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      default:"
-        return <Zap className="w-5 h-5 text-purple-500" />;
+        return <AlertTriangle className="w-5 h-5 text-orange-500" />,
+      default: "
+        return <Zap className="w-5 h-5 text-purple-500" />
     }
-  };
+  },
   const formatValue = (value, unit) => {
 
     if(unit === 'USD') {
@@ -106,25 +106,25 @@ export function AdvancedBusinessIntelligence() {
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 0,
-        maximumFractionDigits: 0}).format(value);
+        maximumFractionDigits: 0}).format(value),
     }
     if(unit === '%') {
 
-      return `${value.toFixed(1)}%`;
+      return `${value.toFixed(1)}%`,
     }
-    return new Intl.NumberFormat('en-US').format(value);
-  };
+    return new Intl.NumberFormat('en-US').format(value),
+  },
   if(!isOpen) {
 
     return ()
       <button
         onClick={() => setIsOpen(true)}"
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-300 hover:scale-110 z-40"
         title="Open Business Intelligence Dashboard"
       >"
         <Brain className="w-6 h-6" />
       </button>
-    );
+    )
   }
   if(isMinimized) {
 
@@ -137,13 +137,13 @@ export function AdvancedBusinessIntelligence() {
           </span>
           <button
             onClick={() => setIsMinimized(false)}"
-            className="ml-auto p-1 hover:bg-zion-slate-light rounded"
+            className="ml-auto p-1 hover: bg-zion-slate-light rounded"
           >"
             <Maximize2 className="w-4 h-4" />
           </button>
         </div>
       </div>
-    );
+    )
   }
   return ()
     <div'`
@@ -262,10 +262,10 @@ export function AdvancedBusinessIntelligence() {
           { id: 'overview', label: 'Overview', icon: BarChart3 },
           { id: 'insights', label: 'AI Insights', icon: Brain },
           { id: 'models', label: 'ML Models', icon: Zap },
-          { id: 'analytics', label: 'Analytics', icon: TrendingUp },
+          { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
 
-          const Icon = tab.icon;
+          const Icon = tab.icon,
           return ()
             <button
               key={tab.id}
@@ -278,7 +278,7 @@ export function AdvancedBusinessIntelligence() {
               <Icon className="w-4 h-4" />
               {tab.label}
             </button>
-          );
+          ),
         })}
       </div>
 
@@ -355,10 +355,10 @@ export function AdvancedBusinessIntelligence() {
                     label: 'Set Alerts',
                     icon: AlertTriangle,
                     action: () => {}},
-                  { label: 'Export Data', icon: Download, action: () => {} },
+                  { label: 'Export Data', icon: Download, action: () => {} }
                 ].map((item, index) => {
 
-                  const Icon = item.icon;
+                  const Icon = item.icon,
                   return ()
                     <button
                       key={index}
@@ -368,7 +368,7 @@ export function AdvancedBusinessIntelligence() {
                       <Icon className="w-4 h-4 mx-auto mb-2" />
                       {item.label}
                     </button>
-                  );
+                  ),
                 })}
               </div>
             </div>
@@ -494,6 +494,6 @@ export function AdvancedBusinessIntelligence() {
         )}
       </div>
     </div>
-  );
+  ),
 }
 '"`

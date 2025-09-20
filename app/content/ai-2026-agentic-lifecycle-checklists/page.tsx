@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agentic Lifecycle Checklists';
+  title: 'AI 2026: Agentic Lifecycle Checklists',
   description:,
-    'Practical, evaluation-first checklists for safe, reliable, and cost-effective autonomous agent lifecycles in production.',
-};
+    'Practical, evaluation-first checklists for safe, reliable, and cost-effective autonomous agent lifecycles in production.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -13,7 +13,7 @@ export default function Page() {,
           <p className="text-sm font-semibold opacity-90">NEW • September 2025</p>,
           <h1 className="text-3xl md:text-5xl font-bold mt-2">AI 2026: Agentic Lifecycle Checklists</h1>,
           <p className="text-lg md:text-xl opacity-90 mt-4 max-w-3xl">,
-            A set of concise, adoption-ready checklists covering evaluation gates, safety, observability;
+            A set of concise, adoption-ready checklists covering evaluation gates, safety, observability,
             incident response, change management, and cost control for enterprise agent platforms.,
           </p>,
           <div className="mt-6 flex gap-3">,
@@ -42,7 +42,7 @@ export default function Page() {,
             <p>,
               Start with the readiness checklist, adopt the pre-deploy gates to prevent regressions, then,
               wire in runtime observability and live evaluations. Standardize changes via approvals and,
-              progressive rollouts. Use the incident response checklist to operationalize a safe default;
+              progressive rollouts. Use the incident response checklist to operationalize a safe default,
               and continuously optimize costs.,
             </p>,
             <h2>Downloadable templates</h2>,
@@ -54,7 +54,6 @@ export default function Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

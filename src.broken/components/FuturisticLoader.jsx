@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
 
     const sizeClasses = {
@@ -12,14 +12,14 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
         medium: 'w-16 h-16',
   large: 'w-24 h-24'
 
-};
+},
     const textSizes = {
 
   small: 'text-sm',
         medium: 'text-lg',
   large: 'text-xl'
 
-};
+},
     const renderLoader = () => {
         switch(variant) {
 
@@ -40,7 +40,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
   animationDuration: '3s'
 
 }}></div>
-          </div>);
+          </div>),
             case 'neural':"
                 return (<div className="relative">
             {/* Neural Network Nodes */}`
@@ -61,7 +61,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
                 <line x1="50" y1="50" x2="50" y2="80" stroke="rgba(239, 68, 68, 0.3)" strokeWidth="1" className="animate-neural-network" style={{ animationDelay: '1.5s' }}/>
               </svg>
             </div>
-          </div>);
+          </div>),
             case 'quantum':"
                 return (<div className="relative">
             {/* Quantum Particles */}`
@@ -81,7 +81,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-400 rounded-full animate-cyber-spin" style={{ animationDelay: '1s' }}></div>'"
               <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-green-400 rounded-full animate-cyber-spin" style={{ animationDelay: '1.5s' }}></div>
             </div>
-          </div>);
+          </div>),
             case 'cyber':"
                 return (<div className="relative">
             {/* Cyber Grid */}`
@@ -104,7 +104,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
               <div className="absolute bottom-1 right-1 w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-1000"></div>"
               <div className="absolute bottom-1 left-1 w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-1500"></div>
             </div>
-          </div>);
+          </div>),
             default:`
                 return (<div className={`${sizeClasses[size]} relative`}>"
             <div className="absolute inset-0 rounded-full border-4 border-cyan-500/30 border-t-cyan-500 animate-spin"></div>"
@@ -114,9 +114,9 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
   animationDuration: '2s'
 
 }}></div>
-          </div>) ;
+          </div>) ,
         }
-    };"
+    },"
     return (<div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}`
       {text && (<div className={`text-center ${textSizes[size]}`}>"
@@ -127,6 +127,6 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-400"></div>
           </div>
         </div>)}
-    </div>)};
-export default FuturisticLoader;
+    </div>)},
+export default FuturisticLoader,
 }'"`

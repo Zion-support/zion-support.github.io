@@ -1,34 +1,34 @@
 
-import { UseFormReturn } from "react-hook-form";
+import { UseFormReturn } from "react-hook-form",
 import { 
-  FormField, 
+  FormField,
   FormItem, 
   FormLabel, 
   FormControl, 
   FormDescription, 
   FormMessage 
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
 import { 
-  Select, 
+  Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
   SelectValue 
-} from "@/components/ui/select";
-import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions";
-import { TalentProfile } from "@/types/talent";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "./ContractForm";
+} from "@/components/ui/select",
+import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
+import { TalentProfile } from "@/types/talent",
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
+import { ContractFormValues } from "./ContractForm",
 
 interface PaymentTermsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-  talent: TalentProfile;
-  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void;
+  form: UseFormReturn<ContractFormValues>,
+  talent: TalentProfile,
+  handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
 
 export function PaymentTermsFields({ 
-  form, 
+  form,
   talent,
   handleMilestonesGenerated 
 }: PaymentTermsFieldsProps) {
@@ -95,5 +95,5 @@ export function PaymentTermsFields({
         </div>
       )}
     </>
-  );
+  ),
 }

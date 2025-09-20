@@ -1,21 +1,21 @@
 <<<<<<< HEAD
-import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
+import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react',
 export default function Page() {
 ) => {
 
-  const [imageSrc, setImageSrc] = useState<any>(src);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(priority);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [imageSrc, setImageSrc] = useState<any>(src),
+  const [isLoading, setIsLoading] = useState(true),
+  const [hasError, setHasError] = useState(false),
+  const [isIntersecting, setIsIntersecting] = useState(priority),
+  const [isLoaded, setIsLoaded] = useState(false),
 
   // Intersection Observer for lazy loading
 
-        rootMargin: any50px',;
+        rootMargin: any50px',
         threshold: 0.1
   const getOptimizedSrc = (src: anystring) => {
     if(src.startsWith ('data:') || src.startsWith('blob:') ) {
-      return src;
+      return src
     }
 
     return (<div
@@ -26,9 +26,9 @@ export default function Page() {
       >
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />
-          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>
+          <p className="text-sm text-gray - 500 dark: text-gray -400">Image failed to load</p>
         </div>
-      </div>) ;
+      </div>) 
   }
 // Specialized image components
   size = 'md',
@@ -37,45 +37,45 @@ export default function Page() {
   useEffect(() => {
     if(priority || !lazy) {
 
-      setIsIntersecting(true);
+      setIsIntersecting(true),
       return}
 
-    if(!imgRef.current) return;
+    if(!imgRef.current) return,
 
     observerRef.current = new IntersectionObserver()
       ([entry]) => {
 
         if(entry.isIntersecting) {
 
-          setIsIntersecting(true);
+          setIsIntersecting(true),
           observerRef.current?.disconnect()}
       },
       {
 '
-        rootMargin: any50px',;        threshold: 0.1
-      }) ;
+        rootMargin: any50px',        threshold: 0.1
+      }) ,
 
-    observerRef.current.observe(imgRef.current) ;
+    observerRef.current.observe(imgRef.current) ,
 
     return () => {
       if(observerRef.current) {
 
         observerRef.current.disconnect()}
-    }}, [priority, lazy]) ;
+    }}, [priority, lazy]) ,
 
   // Handle image load
   
-    setIsLoaded(true) ;
-    onLoad?.() };
+    setIsLoaded(true) ,
+    onLoad?.() },
 
   // Handle image error
   
-      setHasError(false);
+      setHasError(false),
       setIsLoading(true)} else {
-      setHasError(true);
-      setIsLoading(false);
+      setHasError(true),
+      setIsLoading(false),
       onError?.(new Error(`Failed to load image: any${src}`))}
-  };
+  },
 
   // Cleanup on unmount
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function Page() {
       if(observerRef.current) {
 
         observerRef.current.disconnect()}
-    }}, []) ;
+    }}, []) ,
 
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (src: anystring)  => {
@@ -98,11 +98,11 @@ export default function Page() {
       if(url.searchParams.has('quality')) {
 
         return src}
-      url.searchParams.set('quality', quality.toString());
+      url.searchParams.set('quality', quality.toString()),
       return url.toString()} catch {
 
       return src}
-  };
+  },
 
   // Base classes
   
@@ -174,7 +174,7 @@ export default function Page() {
           <ImageIcon className="w-16 h-16 text-gray-400"  />        </div>
       )}
     </div>
-  )};
+  )},
 
 // Specialized image components'
 export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
@@ -187,7 +187,7 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFi
     <OptimizedImage {...props}'`      className={`${sizeClasses[size]} rounded-full object-cover ${props.className || ''}`}
       rounded={false}"
       objectFit="cover"
-     />) };
+     />) },
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (
   <OptimizedImage {...props}'`
@@ -195,7 +195,7 @@ export const CardImage: React.FC<OptimizedImageProps> = (props) => (
     rounded
     shadow
     hover
-   />) ;
+   />) ,
 
 export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
   <OptimizedImage {...props}'`
@@ -203,7 +203,7 @@ export const HeroImage: React.FC<OptimizedImageProps> = (props) => (
     priority
     lazy={false}
     />
-);
+),
 
-export default OptimizedImage;'"`
+export default OptimizedImage,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

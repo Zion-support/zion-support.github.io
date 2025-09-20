@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-export default Revolutionary2025ServicesShowcase;}}}}}}}}
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+export default Revolutionary2025ServicesShowcase,}}}}}}}}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
         return price >= min}) }
     if(selectedROI !== 'all') {
-      const [min, max] = selectedROI.split('-') .map(Number) ;
-      filtered = filtered.filter(service => {;
-        const roi = parseInt (service.roi.match (/\d+/) ?.[0] || '0') ;
+      const [min, max] = selectedROI.split('-') .map(Number) ,
+      filtered = filtered.filter(service => {,
+        const roi = parseInt (service.roi.match (/\d+/) ?.[0] || '0') ,
         if(max) {
           return roi >= min && roi <= max}
         return roi >= min}) }
@@ -15,21 +15,21 @@ export default function Page() {
     filtered.sort((a, b) => {
       switch(sortBy) {
         case 'price':
-          return parseInt(a.price.replace (/[^0 - 9]/g, '') ) - parseInt(b.price.replace (/[^0 - 9]/g, '') ) ;
+          return parseInt(a.price.replace (/[^0 - 9]/g, '') ) - parseInt(b.price.replace (/[^0 - 9]/g, '') ) ,
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':
-          return b.customers - a.customers;
+          return b.customers - a.customers,
         default:
           return a.name.localeCompare(b.name) }
-    }) ;
-    setServices(filtered) }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]) ;
-  const categories = Array.from(new Set (ALL_SERVICES.map (service => service.category) ) ) ;
+    }) ,
+    setServices(filtered) }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]) ,
+  const categories = Array.from(new Set (ALL_SERVICES.map (service => service.category) ) ) ,
   const handleServiceSelect = useCallback((serviceId: string) => {
     setSelectedServices(prev =>
-      prev.includes (serviceId) ? prev.filter(id => id !== serviceId) : [...prev, serviceId]) ;
-  };
-  const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes (service.id) ) ;
+      prev.includes (serviceId) ? prev.filter(id => id !== serviceId) : [...prev, serviceId]) ,
+  },
+  const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes (service.id) ) ,
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
       <section className="pt - 24 pb -20">
@@ -51,9 +51,9 @@ export default function Page() {
               quantum computing, and autonomous operations to transform your business.</p>
           </motion.div>
         </div>
-      </section>;
+      </section>,
       {/* Search and Filters */}
-      <section className="py-12 bg-black / 30">;
+      <section className="py-12 bg-black / 30">,
         <div  className="container mx - auto px-4">
           <div  className="flex flex - col lg:flex - row gap-6 items - center justify -between">
             {/* Search */}
@@ -111,7 +111,7 @@ export default function Page() {
               </select>
             </div>
             {/* View Mode Toggle */}
-            <div  className="flex gap-2">;
+            <div  className="flex gap-2">,
               <button     onClick={ () => setViewMode('grid') }
                 className={`p - 3 rounded-lg transition - colors ${viewMode === 'grid'
                     ? 'bg-cyan - 500 text-white'
@@ -141,7 +141,7 @@ export default function Page() {
         </div>
       </section>
       {/* AI Service Recommendation Engine */}
-      <section className="py-16 bg-gradient - to - r from - slate - 900 / 40 to - gray -900 / 40">;
+      <section className="py-16 bg-gradient - to - r from - slate - 900 / 40 to - gray -900 / 40">,
         <div  className="container mx - auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -267,7 +267,7 @@ export default function Page() {
         </div>
       </section>
       {/* Service Integration Showcase */}
-      <section className="py-16 bg-gradient - to - r from - violet - 900 / 20 to - fuchsia -900 / 20">;
+      <section className="py-16 bg-gradient - to - r from - violet - 900 / 20 to - fuchsia -900 / 20">,
         <div  className="container mx - auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -415,7 +415,7 @@ export default function Page() {
         </div>
       </section>
       {/* Service Comparison Matrix */}
-      <section className="py-16 bg-gradient - to - r from - slate - 800 / 40 to - gray -800 / 40">;
+      <section className="py-16 bg-gradient - to - r from - slate - 800 / 40 to - gray -800 / 40">,
         <div  className="container mx - auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -505,7 +505,7 @@ export default function Page() {
         </div>
       </section>
       {/* Services Grid / List */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-4">
           <div  className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
@@ -565,12 +565,12 @@ export default function Page() {
                       href={service.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline - flex items - center text-cyan - 400 hover:text-cyan - 300 transition - colors font -semibold"
+                      className="inline - flex items - center text-cyan - 400 hover: text-cyan - 300 transition - colors font -semibold"
 
                       Learn More < ArrowRight className="w-4 h-4 ml-1" />
                     </a>
-                  </div>;
-                </motion.div>;) ) }
+                  </div>,
+                </motion.div>,) ) }
             </div>) }
           {viewMode === 'list' && (<div  className="space - y-6">
               {services.map((service, index) => (<motion.div
@@ -626,14 +626,14 @@ export default function Page() {
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline - flex items - center text-cyan - 400 hover:text-cyan - 300 transition - colors font -semibold"
+                          className="inline - flex items - center text-cyan - 400 hover: text-cyan - 300 transition - colors font -semibold"
 
                           Learn More < ArrowRight className="w-4 h-4 ml-1" />
                         </a>
                       </div>
                     </div>
-                  </div>;
-                </motion.div>;) ) }
+                  </div>,
+                </motion.div>,) ) }
             </div>) }
           {viewMode === 'comparison' && (<div  className="space - y-8">
               <div  className="text-center mb-8">
@@ -696,16 +696,16 @@ export default function Page() {
                 </div>) : (<div  className="text-center py-12">
                   <p className="text-gray - 400 mb-4">Select services from the grid or list view to compare</p>
                   <button     onClick={ () => setViewMode('grid') }
-                    className="px-6 py-3 bg-cyan - 500 text-white rounded-lg hover:bg-cyan - 600 transition -colors"
+                    className="px-6 py-3 bg-cyan - 500 text-white rounded-lg hover: bg-cyan - 600 transition -colors"
 
                     View Services
                   </button>
-                </div>;) }
+                </div>,) }
             </div>) }
         </div>
       </section>
       {/* Pricing Comparison Section */}
-      <section className="py-20 bg-gradient - to - r from - green - 900 / 20 to - emerald -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - green - 900 / 20 to - emerald -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Competitive Pricing Plans
@@ -882,7 +882,7 @@ export default function Page() {
         </div>
       </section>
       {/* Service Performance Dashboard */}
-      <section className="py-20 bg-gradient - to - r from - indigo - 900 / 20 to - purple -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - indigo - 900 / 20 to - purple -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Real - Time Service Performance
@@ -1099,7 +1099,7 @@ export default function Page() {
         </div>
       </section>
       {/* Customer Success Metrics */}
-      <section className="py-20 bg-gradient - to - r from - emerald - 900 / 20 to - teal -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - emerald - 900 / 20 to - teal -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Proven Customer Success
@@ -1263,7 +1263,7 @@ export default function Page() {
         </div>
       </section>
       {/* Global Presence & Impact */}
-      <section className="py-20 bg-gradient - to - r from - amber - 900 / 20 to - orange -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - amber - 900 / 20 to - orange -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Global Presence & Impact
@@ -1433,7 +1433,7 @@ export default function Page() {
         </div>
       </section>
       {/* Call to Action Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 900 / 30 to - blue -900 / 30">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 900 / 30 to - blue -900 / 30">,
         <div  className="container mx - auto px-4 text-center">
           <motion.div
             initial = {
@@ -1475,7 +1475,7 @@ export default function Page() {
         </div>
       </section>
       {/* Service Evolution Roadmap */}
-      <section className="py-20 bg-gradient - to - r from - amber - 900 / 20 to - orange -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - amber - 900 / 20 to - orange -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Service Evolution Roadmap
@@ -1621,7 +1621,7 @@ export default function Page() {
         </div>
       </section>
       {/* Technology Stack Section */}
-      <section className="py-20 bg-gradient - to - r from - indigo - 900 / 20 to - purple -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - indigo - 900 / 20 to - purple -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Cutting - Edge Technology Stack
@@ -1748,7 +1748,7 @@ export default function Page() {
         </div>
       </section>
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient - to - r from - gray - 900 / 40 to - slate -900 / 40">;
+      <section className="py-20 bg-gradient - to - r from - gray - 900 / 40 to - slate -900 / 40">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-12">
             Revolutionary Impact by the Numbers
@@ -1842,7 +1842,7 @@ export default function Page() {
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient - to - r from - purple - 900 / 20 to - indigo -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - purple - 900 / 20 to - indigo -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             What Our Clients Say
@@ -1941,9 +1941,9 @@ export default function Page() {
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 900 / 20 to - blue -900 / 20">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 900 / 20 to - blue -900 / 20">,
         <div  className="container mx - auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray - 300 mb-8 max - w-3xl mx -auto">
@@ -1980,18 +1980,18 @@ export default function Page() {
               className="px-8 py-4 border-2 border-cyan - 500 text-cyan - 400 rounded-lg font - semibold hover:bg-cyan - 500 hover:text-white transition - all duration -300"
 
               Visit Website
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+            </a>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
+},
 // Grid and List icons for the view mode toggle
-const Grid = ({ className }: { className?: string }) => (;
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2V6zM14 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V6zM4 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2v - 2zM14 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z" />;
-  </svg>;) ;
-const List = ({ className }: { className?: string }) => (;
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
-  </svg>;) ;
+const Grid = ({ className }: { className?: string }) => (,
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2V6zM14 6a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V6zM4 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2H6a2 2 0 01 - 2-2v - 2zM14 16a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z" />,
+  </svg>,) ,
+const List = ({ className }: { className?: string }) => (,
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">,
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />,
+  </svg>,) ,

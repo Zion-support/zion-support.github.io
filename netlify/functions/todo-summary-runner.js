@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
-  console.log('📝 todo-summary-runner function triggered');
+  console.log('📝 todo-summary-runner function triggered'),
   
   try {
     // Todo summary runner logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate todo summary operations
     const summaryResults = {
@@ -11,20 +11,20 @@ exports.handler = async function(event, context) {
       completedTodos: 0,
       pendingTodos: 0,
       summaryDuration: Math.floor(Math.random() * 5000) + 2000 // 2-7 seconds
-    };
+    },
     
     // Simulate todo processing
-    for (let i = 0; i < summaryResults.totalTodos; i++) {
+    for (let i = 0, i < summaryResults.totalTodos, i++) {
       if (Math.random() > 0.4) { // 60% completion rate
-        summaryResults.completedTodos++;
+        summaryResults.completedTodos++,
       } else {
-        summaryResults.pendingTodos++;
+        summaryResults.pendingTodos++,
       }
     }
     
     // Calculate metrics
-    const completionRate = ((summaryResults.completedTodos / summaryResults.totalTodos) * 100).toFixed(2);
-    const todosPerSecond = (summaryResults.totalTodos / (summaryResults.summaryDuration / 1000)).toFixed(2);
+    const completionRate = ((summaryResults.completedTodos / summaryResults.totalTodos) * 100).toFixed(2),
+    const todosPerSecond = (summaryResults.totalTodos / (summaryResults.summaryDuration / 1000)).toFixed(2),
     
     // Simulate todo categories
     const todoCategories = {
@@ -33,27 +33,27 @@ exports.handler = async function(event, context) {
       'documentation': Math.floor(summaryResults.totalTodos * 0.2),
       'testing': Math.floor(summaryResults.totalTodos * 0.15),
       'refactoring': Math.floor(summaryResults.totalTodos * 0.1)
-    };
+    },
     
     // Simulate priority distribution
     const priorityDistribution = {
       'high': Math.floor(summaryResults.pendingTodos * 0.3),
       'medium': Math.floor(summaryResults.pendingTodos * 0.5),
       'low': Math.floor(summaryResults.pendingTodos * 0.2)
-    };
+    },
     
     // Simulate todo details
-    const todoDetails = [];
-    for (let i = 0; i < Math.min(20, summaryResults.totalTodos); i++) {
+    const todoDetails = [],
+    for (let i = 0, i < Math.min(20, summaryResults.totalTodos), i++) {
       todoDetails.push({
         todoId: `todo-${i + 1}`,
         title: `Sample Todo ${i + 1}`,
         category: Object.keys(todoCategories)[Math.floor(Math.random() * Object.keys(todoCategories).length)],
-        priority: ['low', 'medium', 'high'][Math.floor(Math.random() * 3)],
+        priority: ['lowmedium', 'high'][Math.floor(Math.random() * 3)],
         status: i < summaryResults.completedTodos ? 'completed' : 'pending',
         assignee: `Developer ${Math.floor(Math.random() * 10) + 1}`,
         estimatedHours: Math.floor(Math.random() * 16) + 1 // 1-16 hours
-      });
+      }),
     }
     
     // Simulate progress metrics
@@ -62,7 +62,7 @@ exports.handler = async function(event, context) {
       'velocity': Math.floor(Math.random() * 20) + 30, // 30-50 points per sprint
       'burndown-rate': (Math.random() * 0.3 + 0.7).toFixed(2), // 0.7-1.0
       'team-capacity': (Math.random() * 15 + 85).toFixed(1) // 85-100%
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -83,20 +83,18 @@ exports.handler = async function(event, context) {
           highPriorityCount: priorityDistribution.high
         },
         recommendations: [
-          'Focus on high-priority items',
-          'Improve estimation accuracy',
-          'Optimize team capacity',
-          'Streamline development process'
+          'Focus on high-priority itemsImprove estimation accuracy',
+          'Optimize team capacityStreamline development process'
         ],
         nextRun: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString() // 4 hours from now
       })
-    };
+    },
     
-    console.log('✅ todo-summary-runner completed successfully');
-    return result;
+    console.log('✅ todo-summary-runner completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ todo-summary-runner failed:', error);
+    console.error('❌ todo-summary-runner failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -105,6 +103,6 @@ exports.handler = async function(event, context) {
         function: 'todo-summary-runner',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

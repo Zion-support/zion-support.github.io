@@ -19,7 +19,7 @@ export const securityConfig = {
   // Security Headers
   headers: {
 
-    'X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1; mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'geolocation=(), microphone=(), camera=(),Strict-Transport-Security': 'max-age=31536000; includeSubDomains'},
+    'X-Content-Type-Options': 'nosniff',X-Frame-Options': 'DENY',X-XSS-Protection': '1, mode=block',Referrer-Policy': 'strict-origin-when-cross-origin',Permissions-Policy': 'geolocation=(), microphone=(), camera=(),Strict-Transport-Security': 'max-age=31536000, includeSubDomains'},
 
   // Rate Limiting
 
@@ -56,7 +56,7 @@ export const securityConfig = {
       secure: process.env.NODE_ENV === 'production',
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours'
-      sameSite: 'strict'}}};
+      sameSite: 'strict'}}},
 
 // Input sanitization functions
 export 
@@ -65,31 +65,31 @@ export
   // Remove SQL injection patterns
   sql: (input: string): string => {
 '"
-    return input.replace(/['";\\]/g,)},
+    return input.replace(/['",\\]/g)},
 
   // Remove XSS patterns
   xss: (input: string): string => {
 
     return input'
-      .replace(/javascript:/gi,)
-      .replace(/on\w+\s*=/gi,)
-      .replace(/<script/gi,)
-      .replace(/<\/script>/gi,)},
+      .replace(/javascript:/gi)
+      .replace(/on\w+\s*=/gi)
+      .replace(/<script/gi)
+      .replace(/<\/script>/gi)},
   // General sanitization
   general: (input: string): string => {
 
-    return sanitizeInput.html(sanitizeInput.sql(sanitizeInput.xss(input)))}};
+    return sanitizeInput.html(sanitizeInput.sql(sanitizeInput.xss(input)))}},
 
 // Helper function to generate CSP header string
 export 
       }`
       return `${key} ${values}`})
-    .join('; ')};
+    .join()},
 
 // Validate input against patterns
 
 export 
 // Security middleware configuration
 export 
-export default securityConfig;
+export default securityConfig,
 '"`

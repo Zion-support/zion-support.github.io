@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  MessageCircle, 
+  MessageCircle,
   Users, 
   Ticket, 
   Clock, 
@@ -43,80 +43,47 @@ import {
   TrendingUp,
   PieChart,
   LineChart
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function HelpdeskPlatform() {
   const features = [
     {
-      icon: Ticket,
-      title: "Ticket Management",
-      description: "Comprehensive ticket tracking and resolution workflow",
-      color: "from-blue-500 to-cyan-500"
-    },
+      icon: Ticket,title: "Ticket Management",description: "Comprehensive ticket tracking and resolution workflow",color: "from-blue-500 to-cyan-500"
+    };
     {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Multi-agent support with role-based access control",
-      color: "from-green-500 to-emerald-500"
-    },
+      icon: Users,title: "Team Collaboration",description: "Multi-agent support with role-based access control",color: "from-green-500 to-emerald-500"
+    };
     {
-      icon: Clock,
-      title: "Response Time Tracking",
-      description: "Monitor and optimize support response times",
-      color: "from-yellow-500 to-orange-500"
-    },
+      icon: Clock,title: "Response Time Tracking",description: "Monitor and optimize support response times",color: "from-yellow-500 to-orange-500"
+    };
     {
-      icon: BarChart3,
-      title: "Analytics & Reporting",
-      description: "Comprehensive performance metrics and insights",
-      color: "from-purple-500 to-pink-500"
-    },
+      icon: BarChart3,title: "Analytics & Reporting",description: "Comprehensive performance metrics and insights",color: "from-purple-500 to-pink-500"
+    };
     {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security and data protection",
-      color: "from-red-500 to-pink-500"
-    },
+      icon: Shield,title: "Security & Compliance",description: "Enterprise-grade security and data protection",color: "from-red-500 to-pink-500"
+    };
     {
-      icon: Cloud,
-      title: "Cloud Platform",
-      description: "Scalable cloud infrastructure for global support",
-      color: "from-indigo-500 to-blue-500"
+      icon: Cloud,title: "Cloud Platform",description: "Scalable cloud infrastructure for global support",color: "from-indigo-500 to-blue-500"
     }
   ];
-
   const services = [
     {
-      title: "Customer Support",
-      description: "Multi-channel customer support and ticket management",
-      icon: MessageCircle,
-      benefits: ["Email support", "Live chat", "Phone support", "Social media integration"]
+      title: "Customer Support",description: "Multi-channel customer support and ticket management",icon: MessageCircle,benefits: ["Email support", "Live chat", "Phone support", "Social media integration"]
     },
     {
-      title: "Internal IT Support",
-      description: "Employee IT support and technical assistance",
-      icon: Cpu,
-      benefits: ["Hardware support", "Software assistance", "Network issues", "Access management"]
+      title: "Internal IT Support",description: "Employee IT support and technical assistance",icon: Cpu,benefits: ["Hardware support", "Software assistance", "Network issues", "Access management"]
     },
     {
-      title: "Knowledge Base",
-      description: "Self-service knowledge base and documentation",
-      icon: FileText,
-      benefits: ["FAQ management", "Documentation", "Video tutorials", "Search functionality"]
+      title: "Knowledge Base",description: "Self-service knowledge base and documentation",icon: FileText,benefits: ["FAQ management", "Documentation", "Video tutorials", "Search functionality"]
     },
     {
-      title: "Automation & AI",
-      description: "AI-powered automation and intelligent routing",
-      icon: Brain,
-      benefits: ["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"]
+      title: "Automation & AI",description: "AI-powered automation and intelligent routing",icon: Brain,benefits: ["Auto-routing", "Chatbots", "Predictive analytics", "Smart suggestions"]
     }
-  ];
+  ],
 
   const integrations = [
     "CRM Systems", "Email Platforms", "Chat Tools", "Social Media", 
     "Project Management", "Analytics Tools", "Cloud Services", "Mobile Apps", "API Access", "Webhooks"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -295,7 +262,7 @@ export default function HelpdeskPlatform() {
               Join the modern helpdesk revolution with Zion Tech Group. Our platform is designed to 
               streamline support operations, improve customer satisfaction, and boost team productivity.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center space-x-2"
@@ -315,5 +282,5 @@ export default function HelpdeskPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Target, TrendingUp, Users, Mail, BarChart3, Zap, Shield, Globe, Phone, Mail as MailIcon, MapPin } from 'lucide-react';
-import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Target, TrendingUp, Users, Mail, BarChart3, Zap, Shield, Globe, Phone, Mail as MailIcon, MapPin } from 'lucide-react',
+import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 
 // Service data
 const serviceData = {
@@ -45,12 +45,9 @@ const serviceData = {
   ],
   marketPosition: 'Leading AI-powered marketing automation platform for businesses seeking to revolutionize customer acquisition and engagement through intelligent automation and predictive analytics.',
   useCases: [
-    'E-commerce marketing automation',
-    'B2B lead generation and nurturing',
-    'SaaS customer acquisition',
-    'Real estate marketing campaigns',
-    'Healthcare patient engagement',
-    'Financial services marketing'
+    'E-commerce marketing automationB2B lead generation and nurturing',
+    'SaaS customer acquisitionReal estate marketing campaigns',
+    'Healthcare patient engagementFinancial services marketing'
   ],
   roi: 'Average customer sees 320% ROI within 7 months through improved lead quality, conversion rates, and marketing efficiency.',
   contactInfo: {
@@ -58,5 +55,5 @@ const serviceData = {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
-};
-export default AISolutionsComprehensive2025;
+},
+export default AISolutionsComprehensive2025,

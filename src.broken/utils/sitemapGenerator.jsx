@@ -18,39 +18,39 @@
                   <span className="text-gray -500">Priority: {service.priority}</span>
                 </div>) ) }
 =======
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ${url.url}</loc>'`
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}'`
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}'`
         ${url.priority ? `<priority>${url.priority}</priority>` : ''}`
-      </url>`;
-            return urlElement.replace(/\s+/g,).trim();
-        }).join('');`
-        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
+      </url>`,
+            return urlElement.replace(/\s+/g).trim(),
+        }).join(''),`
+        return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`,
 
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
 '"
-        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>;
+        const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>,
         const sitemapElements = sitemaps.map(sitemap => {
 `
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>`
-      </sitemap>`;
-        }).join('');`
-        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
+      </sitemap>`,
+        }).join(''),`
+        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,
 
     /**
      * Generate robots.txt content
      */
     generateRobotsTxt() {
-        const { baseUrl } = this.config;`
+        const { baseUrl } = this.config,`
         return `User-agent: *
 Allow: /
 
@@ -58,7 +58,7 @@ Allow: /
 Sitemap: ${baseUrl}/sitemap.xml
 
   const generateSitemap = async () => {
-    setIsGenerating(true) ;
+    setIsGenerating(true) ,
 
     // Simulate sitemap generation
     setTimeout(() => {
@@ -82,17 +82,17 @@ Sitemap: ${baseUrl}/sitemap.xml
           { url: '/services/micro-saas', priority: '0.8', changefreq: 'weekly' }
         ],
         totalUrls: 10,
-        generatedAt: new Date () .toISOString () };
+        generatedAt: new Date () .toISOString () },
 
-      setSitemapData(sitemap) ;
-      setIsGenerating(false) ;
+      setSitemapData(sitemap) ,
+      setIsGenerating(false) ,
 
       if(onGenerate) {
 
-        onGenerate(sitemap);
+        onGenerate(sitemap),
       }
-    }, 2000) ;
-  };
+    }, 2000) ,
+  },
 
   return ("
     <div className="space-y-4">
@@ -128,10 +128,10 @@ Sitemap: ${baseUrl}/sitemap.xml
               <div>"
                 <span className="font-medium">Generated:</span> {new Date(sitemapData.generatedAt).toLocaleDateString()}
               </div>
-        // // // // // // // // console.error('Error generating sitemaps:', error);
-        throw error;
+        // // // // // // // // console.error('Error generating sitemaps:', error),
+        throw error,
 
-};
+},
             </div>
           </div>
           
@@ -159,12 +159,12 @@ Sitemap: ${baseUrl}/sitemap.xml
             </div>
           </div>
         </motion.div>) }
-    </div>) ;
-};
+    </div>) ,
+},
 
-export default SitemapGenerator;
+export default SitemapGenerator,
 
-export default to;
-export default to;
+export default to,
+export default to,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

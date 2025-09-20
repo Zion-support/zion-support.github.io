@@ -3,37 +3,37 @@
  * Advanced Alerting System for PM2 Automation,
  * Supports multiple notification channels and intelligent alert management,
  */,
-const nodemailer = require('nodemailer');
-const axios = require('axios');
+const nodemailer = require('nodemailer'),
+const axios = require('axios'),
 class AlertingSystem {,
   constructor(config = {}) {,
     this.config = {,
-      email: config.email || {};
-      slack: config.slack || {};
-      webhook: config.webhook || {};
+      email: config.email || {},
+      slack: config.slack || {},
+      webhook: config.webhook || {},
       thresholds: {,
         memory: config.thresholds?.memory || 100 * 1024 * 1024, // 100MB,
         cpu: config.thresholds?.cpu || 80, // 80%,
-        restartCount: config.thresholds?.restartCount || 10;
-        responseTime: config.thresholds?.responseTime || 5000 // 5 seconds,};
+        restartCount: config.thresholds?.restartCount || 10,
+        responseTime: config.thresholds?.responseTime || 5000 // 5 seconds},
       cooldown: config.cooldown || 300000, // 5 minutes,
-      maxAlerts: config.maxAlerts || 1000,};
-    this.alerts = new Map();
-    this.notificationHistory = new Map();
-    this.emailTransporter = null;
-    this.initializeEmailTransporter();
+      maxAlerts: config.maxAlerts || 1000},
+    this.alerts = new Map(),
+    this.notificationHistory = new Map(),
+    this.emailTransporter = null,
+    this.initializeEmailTransporter(),
   }
 ,
   initializeEmailTransporter() {,
     if (this.config.email.host && this.config.email.user && this.config.email.pass) {,
       this.emailTransporter = nodemailer.createTransporter({,
-        host: this.config.email.host;
-        port: this.config.email.port || 587;
-        secure: this.config.email.secure || false;
+        host: this.config.email.host,
+        port: this.config.email.port || 587,
+        secure: this.config.email.secure || false,
         auth: {,
-          user: this.config.email.user;
-          pass: this.config.email.pass,}
-      });
+          user: this.config.email.user,
+          pass: this.config.email.pass}
+      }),
     }
   }
 ,
@@ -41,157 +41,157 @@ class AlertingSystem {,
    * Process alerts and send notifications,
    */,
   async processAlerts(processes) {,
-    const newAlerts = [];
-    const currentTime = Date.now();
+    const newAlerts = [],
+    const currentTime = Date.now(),
     processes.forEach(process => {,
-      const alerts = this.checkProcessAlerts(process);
+      const alerts = this.checkProcessAlerts(process),
       alerts.forEach(alert => {,
         if (this.shouldSendAlert(alert, currentTime)) {,
-          newAlerts.push(alert);
-          this.alerts.set(alert.id, alert);
+          newAlerts.push(alert),
+          this.alerts.set(alert.id, alert),
         }
-      });
-    });
+      }),
+    }),
     // Send notifications for new alerts,
     for (const alert of newAlerts) {,
-      await this.sendNotifications(alert);
+      await this.sendNotifications(alert),
     }
 ,
     // Clean up old alerts,
-    this.cleanupOldAlerts(currentTime);
-    return newAlerts;
+    this.cleanupOldAlerts(currentTime),
+    return newAlerts,
   }
 ,
   /**,
    * Check a single process for potential alerts,
    */,
   checkProcessAlerts(process) {,
-    const alerts = [];
-    const currentTime = Date.now();
+    const alerts = [],
+    const currentTime = Date.now(),
     // Memory usage alert,
     if (process.memory > this.config.thresholds.memory) {,
       alerts.push({,
-        id: `memory-${process.name,}-${currentTime}`;
-        type: 'warning';
-        severity: 'medium';
-        process: process.name;
-        message: `High memory usage: ${Math.round(process.memory / 1024 / 1024),}MB`;
+        id: `memory-${process.name}-${currentTime}`,
+        type: 'warning',
+        severity: 'medium',
+        process: process.name,
+        message: `High memory usage: ${Math.round(process.memory / 1024 / 1024)}MB`,
         details: {,
-          current: process.memory;
-          threshold: this.config.thresholds.memory;
-          percentage: Math.round((process.memory / this.config.thresholds.memory) * 100),};
-        timestamp: currentTime;
-        category: 'resource',});
+          current: process.memory,
+          threshold: this.config.thresholds.memory,
+          percentage: Math.round((process.memory / this.config.thresholds.memory) * 100)},
+        timestamp: currentTime,
+        category: 'resource'}),
     }
 ,
     // CPU usage alert,
     if (process.cpu > this.config.thresholds.cpu) {,
       alerts.push({,
-        id: `cpu-${process.name,}-${currentTime}`;
-        type: 'warning';
-        severity: 'medium';
-        process: process.name;
-        message: `High CPU usage: ${process.cpu,}%`;
+        id: `cpu-${process.name}-${currentTime}`,
+        type: 'warning',
+        severity: 'medium',
+        process: process.name,
+        message: `High CPU usage: ${process.cpu}%`,
         details: {,
-          current: process.cpu;
-          threshold: this.config.thresholds.cpu;
-          percentage: Math.round((process.cpu / this.config.thresholds.cpu) * 100),};
-        timestamp: currentTime;
-        category: 'resource',});
+          current: process.cpu,
+          threshold: this.config.thresholds.cpu,
+          percentage: Math.round((process.cpu / this.config.thresholds.cpu) * 100)},
+        timestamp: currentTime,
+        category: 'resource'}),
     }
 ,
     // Process stopped alert,
     if (process.status === 'stopped') {,
       alerts.push({,
-        id: `stopped-${process.name,}-${currentTime}`;
-        type: 'error';
-        severity: 'high';
-        process: process.name;
-        message: `Process ${process.name,} is stopped`;
+        id: `stopped-${process.name}-${currentTime}`,
+        type: 'error',
+        severity: 'high',
+        process: process.name,
+        message: `Process ${process.name} is stopped`,
         details: {,
-          status: process.status;
-          uptime: process.uptime;
-          restartCount: process.restartCount,};
-        timestamp: currentTime;
-        category: 'status',});
+          status: process.status,
+          uptime: process.uptime,
+          restartCount: process.restartCount},
+        timestamp: currentTime,
+        category: 'status'}),
     }
 ,
     // High restart count alert,
     if (process.restartCount > this.config.thresholds.restartCount) {,
       alerts.push({,
-        id: `restart-${process.name,}-${currentTime}`;
-        type: 'warning';
-        severity: 'high';
-        process: process.name;
-        message: `High restart count: ${process.restartCount,}`;
+        id: `restart-${process.name}-${currentTime}`,
+        type: 'warning',
+        severity: 'high',
+        process: process.name,
+        message: `High restart count: ${process.restartCount}`,
         details: {,
-          current: process.restartCount;
-          threshold: this.config.thresholds.restartCount;
-          uptime: process.uptime,};
-        timestamp: currentTime;
-        category: 'stability',});
+          current: process.restartCount,
+          threshold: this.config.thresholds.restartCount,
+          uptime: process.uptime},
+        timestamp: currentTime,
+        category: 'stability'}),
     }
 ,
     // Process not responding alert (if uptime is very low),
     if (process.uptime < 60000 && process.status === 'online') { // Less than 1 minute,
       alerts.push({,
-        id: `unstable-${process.name,}-${currentTime}`;
-        type: 'warning';
-        severity: 'medium';
-        process: process.name;
-        message: `Process ${process.name,} appears unstable`;
+        id: `unstable-${process.name}-${currentTime}`,
+        type: 'warning',
+        severity: 'medium',
+        process: process.name,
+        message: `Process ${process.name} appears unstable`,
         details: {,
-          uptime: process.uptime;
-          status: process.status;
-          restartCount: process.restartCount,};
-        timestamp: currentTime;
-        category: 'stability',});
+          uptime: process.uptime,
+          status: process.status,
+          restartCount: process.restartCount},
+        timestamp: currentTime,
+        category: 'stability'}),
     }
 ,
-    return alerts;
+    return alerts,
   }
 ,
   /**,
    * Determine if an alert should be sent (cooldown logic),
    */,
   shouldSendAlert(alert, currentTime) {,
-    const alertKey = `${alert.process}-${alert.category}`;
-    const lastNotification = this.notificationHistory.get(alertKey);
+    const alertKey = `${alert.process}-${alert.category}`,
+    const lastNotification = this.notificationHistory.get(alertKey),
     if (!lastNotification) {,
-      return true;
+      return true,
     }
 ,
     // Check if enough time has passed since last notification,
-    return (currentTime - lastNotification) > this.config.cooldown;
+    return (currentTime - lastNotification) > this.config.cooldown,
   }
 ,
   /**,
    * Send notifications through all configured channels,
    */,
   async sendNotifications(alert) {,
-    const alertKey = `${alert.process}-${alert.category}`;
-    this.notificationHistory.set(alertKey, Date.now());
-    const promises = [];
+    const alertKey = `${alert.process}-${alert.category}`,
+    this.notificationHistory.set(alertKey, Date.now()),
+    const promises = [],
     // Email notifications,
     if (this.emailTransporter && this.config.email.recipients) {,
-      promises.push(this.sendEmailAlert(alert));
+      promises.push(this.sendEmailAlert(alert)),
     }
 ,
     // Slack notifications,
     if (this.config.slack.webhookUrl) {,
-      promises.push(this.sendSlackAlert(alert));
+      promises.push(this.sendSlackAlert(alert)),
     }
 ,
     // Webhook notifications,
     if (this.config.webhook.url) {,
-      promises.push(this.sendWebhookAlert(alert));
+      promises.push(this.sendWebhookAlert(alert)),
     }
 ,
     try {,
-      await Promise.allSettled(promises);
-      // // // // // // console.log(`✅ Notifications sent for alert: ${alert.id,}`);
+      await Promise.allSettled(promises),
+      // // // // // // console.log(`✅ Notifications sent for alert: ${alert.id}`),
     } catch (error) {,
-      console.error(`❌ Error sending notifications for alert ${alert.id}:`, error);
+      console.error(`❌ Error sending notifications for alert ${alert.id}:`, error),
     }
   }
 ,
@@ -199,18 +199,18 @@ class AlertingSystem {,
    * Send email alert,
    */,
   async sendEmailAlert(alert) {,
-    if (!this.emailTransporter) return;
-    const emailContent = this.formatEmailAlert(alert);
+    if (!this.emailTransporter) return,
+    const emailContent = this.formatEmailAlert(alert),
     try {,
       await this.emailTransporter.sendMail({,
-        from: this.config.email.from || this.config.email.user;
-        to: this.config.email.recipients;
-        subject: `[PM2 Alert] ${alert.severity.toUpperCase(),}: ${alert.message}`;
-        html: emailContent;
-        priority: alert.severity === 'high' ? 'high' : 'normal',});
-      // // // // // // console.log(`📧 Email alert sent for ${alert.process}`);
+        from: this.config.email.from || this.config.email.user,
+        to: this.config.email.recipients,
+        subject: `[PM2 Alert] ${alert.severity.toUpperCase()}: ${alert.message}`,
+        html: emailContent,
+        priority: alert.severity === 'high' ? 'high' : 'normal'}),
+      // // // // // // console.log(`📧 Email alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send email alert:`, error);
+      console.error(`❌ Failed to send email alert:`, error),
     }
   }
 ,
@@ -218,13 +218,13 @@ class AlertingSystem {,
    * Send Slack alert,
    */,
   async sendSlackAlert(alert) {,
-    if (!this.config.slack.webhookUrl) return;
-    const slackMessage = this.formatSlackAlert(alert);
+    if (!this.config.slack.webhookUrl) return,
+    const slackMessage = this.formatSlackAlert(alert),
     try {,
-      await axios.post(this.config.slack.webhookUrl, slackMessage);
-      // // // // // // console.log(`💬 Slack alert sent for ${alert.process}`);
+      await axios.post(this.config.slack.webhookUrl, slackMessage),
+      // // // // // // console.log(`💬 Slack alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send Slack alert:`, error);
+      console.error(`❌ Failed to send Slack alert:`, error),
     }
   }
 ,
@@ -232,19 +232,19 @@ class AlertingSystem {,
    * Send webhook alert,
    */,
   async sendWebhookAlert(alert) {,
-    if (!this.config.webhook.url) return;
+    if (!this.config.webhook.url) return,
     const webhookData = {,
-      ...alert;
-      timestamp: new Date(alert.timestamp).toISOString();
-      source: 'pm2-automation-alerting',};
+      ...alert,
+      timestamp: new Date(alert.timestamp).toISOString(),
+      source: 'pm2-automation-alerting'},
     try {,
       await axios.post(this.config.webhook.url, webhookData, {,
         headers: {,
-          'Content-Type': 'application/jsonUser-Agent': 'PM2-Automation-Alerting/1.0',};
-        timeout: 10000,});
-      // // // // // // console.log(`🌐 Webhook alert sent for ${alert.process}`);
+          'Content-Type': 'application/jsonUser-Agent': 'PM2-Automation-Alerting/1.0'},
+        timeout: 10000}),
+      // // // // // // console.log(`🌐 Webhook alert sent for ${alert.process}`),
     } catch (error) {,
-      console.error(`❌ Failed to send webhook alert:`, error);
+      console.error(`❌ Failed to send webhook alert:`, error),
     }
   }
 ,
@@ -253,29 +253,29 @@ class AlertingSystem {,
    */,
   formatEmailAlert(alert) {,
     const severityColors = {,
-      low: '#10b981';
-      medium: '#f59e0b';
-      high: '#ef4444',};
+      low: '#10b981',
+      medium: '#f59e0b',
+      high: '#ef4444'},
     return `,
       <!DOCTYPE html>,
       <html>,
       <head>,
         <style>,
-          body { font-family: Arial, sans-serif, line-height: 1.6 ,}
-          .alert { border-left: 4px solid ${severityColors[alert.severity],}, padding: 20px, margin: 20px 0, background: #f9fafb ,}
-          .header { background: #374151, color: white, padding: 20px, margin: -20px -20px 20px -20px ,}
-          .details { background: white, padding: 15px, border-radius: 5px, margin: 15px 0 ,}
-          .metric { display: inline-block, margin: 10px 20px 10px 0 ,}
-          .value { font-weight: bold, color: #667eea ,}
+          body { font-family: Arial, sans-serif, line-height: 1.6 }
+          .alert { border-left: 4px solid ${severityColors[alert.severity]}, padding: 20px, margin: 20px 0, background: #f9fafb }
+          .header { background: #374151, color: white, padding: 20px, margin: -20px -20px 20px -20px }
+          .details { background: white, padding: 15px, border-radius: 5px, margin: 15px 0 }
+          .metric { display: inline-block, margin: 10px 20px 10px 0 }
+          .value { font-weight: bold, color: #667eea }
         </style>,
       </head>,
       <body>,
         <div class="alert">,
           <div class="header">,
             <h2>🚨 PM2 Automation Alert</h2>,
-            <p><strong>Process: </strong> ${alert.process,}</p>,
-            <p><strong>Severity: </strong> ${alert.severity.toUpperCase(),}</p>,
-            <p><strong>Time: </strong> ${new Date(alert.timestamp).toLocaleString(),}</p>,
+            <p><strong>Process: </strong> ${alert.process}</p>,
+            <p><strong>Severity: </strong> ${alert.severity.toUpperCase()}</p>,
+            <p><strong>Time: </strong> ${new Date(alert.timestamp).toLocaleString()}</p>,
           </div>,
           <h3>${alert.message}</h3>,
           <div class="details">,
@@ -290,7 +290,7 @@ class AlertingSystem {,
         </div>,
       </body>,
       </html>,
-    `;
+    `,
   }
 ,
   /**,
@@ -298,42 +298,42 @@ class AlertingSystem {,
    */,
   formatSlackAlert(alert) {,
     const severityEmojis = {,
-      low: '🟢';
-      medium: '🟡';
-      high: '🔴',};
+      low: '🟢',
+      medium: '🟡',
+      high: '🔴'},
     const severityColors = {,
-      low: '#10b981';
-      medium: '#f59e0b';
-      high: '#ef4444',};
+      low: '#10b981',
+      medium: '#f59e0b',
+      high: '#ef4444'},
     return {,
       attachments: [{,
-        color: severityColors[alert.severity];
-        title: `🚨 PM2 Automation Alert`;
+        color: severityColors[alert.severity],
+        title: `🚨 PM2 Automation Alert`,
         fields: [,
           {,
-            title: 'Process';
-            value: alert.process;
-            short: true,};
+            title: 'Process',
+            value: alert.process,
+            short: true},
           {,
-            title: 'Severity';
-            value: `${severityEmojis[alert.severity],} ${alert.severity.toUpperCase()}`;
-            short: true,};
+            title: 'Severity',
+            value: `${severityEmojis[alert.severity]} ${alert.severity.toUpperCase()}`,
+            short: true},
           {,
-            title: 'Message';
-            value: alert.message;
-            short: false,};
+            title: 'Message',
+            value: alert.message,
+            short: false},
           {,
-            title: 'Time';
-            value: new Date(alert.timestamp).toLocaleString();
-            short: true,};
+            title: 'Time',
+            value: new Date(alert.timestamp).toLocaleString(),
+            short: true},
           {,
-            title: 'Category';
-            value: alert.category;
-            short: true,}
-        ];
-        footer: 'PM2 Automation Monitoring System';
-        ts: Math.floor(alert.timestamp / 1000),}],
-    };
+            title: 'Category',
+            value: alert.category,
+            short: true}
+        ],
+        footer: 'PM2 Automation Monitoring System',
+        ts: Math.floor(alert.timestamp / 1000)}]
+    },
   }
 ,
   /**,
@@ -341,21 +341,21 @@ class AlertingSystem {,
    */,
   cleanupOldAlerts(currentTime) {,
     const maxAge = 24 * 60 * 60 * 1000, // 24 hours,
-    const alertsToRemove = [];
+    const alertsToRemove = [],
     this.alerts.forEach((alert, id) => {,
       if (currentTime - alert.timestamp > maxAge) {,
-        alertsToRemove.push(id);
+        alertsToRemove.push(id),
       }
-    });
+    }),
     alertsToRemove.forEach(id => {,
-      this.alerts.delete(id);
-    });
+      this.alerts.delete(id),
+    }),
     // Limit total alerts,
     if (this.alerts.size > this.config.maxAlerts) {,
       const sortedAlerts = Array.from(this.alerts.entries()),
-        .sort((a, b) => b[1].timestamp - a[1].timestamp);
-      const toRemove = sortedAlerts.slice(this.config.maxAlerts);
-      toRemove.forEach(([id]) => this.alerts.delete(id));
+        .sort((a, b) => b[1].timestamp - a[1].timestamp),
+      const toRemove = sortedAlerts.slice(this.config.maxAlerts),
+      toRemove.forEach(([id]) => this.alerts.delete(id)),
     }
   }
 ,
@@ -363,7 +363,7 @@ class AlertingSystem {,
    * Get current alerts,
    */,
   getAlerts() {,
-    return Array.from(this.alerts.values());
+    return Array.from(this.alerts.values()),
   }
 ,
   /**,
@@ -371,7 +371,7 @@ class AlertingSystem {,
    */,
   getAlertsBySeverity(severity) {,
     return Array.from(this.alerts.values()),
-      .filter(alert => alert.severity === severity);
+      .filter(alert => alert.severity === severity),
   }
 ,
   /**,
@@ -379,24 +379,24 @@ class AlertingSystem {,
    */,
   getAlertsByProcess(processName) {,
     return Array.from(this.alerts.values()),
-      .filter(alert => alert.process === processName);
+      .filter(alert => alert.process === processName),
   }
 ,
   /**,
    * Clear all alerts,
    */,
   clearAlerts() {,
-    this.alerts.clear();
-    this.notificationHistory.clear();
+    this.alerts.clear(),
+    this.notificationHistory.clear(),
   }
 ,
   /**,
    * Update configuration,
    */,
   updateConfig(newConfig) {,
-    this.config = { ...this.config, ...newConfig };
+    this.config = { ...this.config, ...newConfig },
     if (newConfig.email) {,
-      this.initializeEmailTransporter();
+      this.initializeEmailTransporter(),
     }
   }
 ,
@@ -404,22 +404,22 @@ class AlertingSystem {,
    * Get system statistics,
    */,
   getStats() {,
-    const alerts = Array.from(this.alerts.values());
+    const alerts = Array.from(this.alerts.values()),
     return {,
-      totalAlerts: alerts.length;
+      totalAlerts: alerts.length,
       alertsBySeverity: {,
-        low: alerts.filter(a => a.severity === 'low').length;
-        medium: alerts.filter(a => a.severity === 'medium').length;
-        high: alerts.filter(a => a.severity === 'high').length,};
+        low: alerts.filter(a => a.severity === 'low').length,
+        medium: alerts.filter(a => a.severity === 'medium').length,
+        high: alerts.filter(a => a.severity === 'high').length},
       alertsByCategory: {,
-        resource: alerts.filter(a => a.category === 'resource').length;
-        status: alerts.filter(a => a.category === 'status').length;
-        stability: alerts.filter(a => a.category === 'stability').length,};
+        resource: alerts.filter(a => a.category === 'resource').length,
+        status: alerts.filter(a => a.category === 'status').length,
+        stability: alerts.filter(a => a.category === 'stability').length},
       recentAlerts: alerts,
         .sort((a, b) => b.timestamp - a.timestamp),
-        .slice(0, 10),
-    };
+        .slice(0, 10)
+    },
   }
 }
 ,
-module.exports = AlertingSystem;
+module.exports = AlertingSystem,

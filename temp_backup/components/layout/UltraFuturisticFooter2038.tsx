@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Globe, Phone, Mail, MapPin, 
   Brain, Atom, Shield, Rocket, Target, 
@@ -8,7 +8,7 @@ import {
   Twitter, Linkedin, Youtube, Github, 
   ArrowUp, Zap, Users, FileText, ShieldCheck, Database, Server, Lock, Key, Eye, Search, Bell, User, Cog,
   Cpu, Cloud, Settings, Monitor, Palette, Network, Layers, Code, Heart, ShoppingCart, Clock, MessageCircle, HelpCircle, Building, DollarSign
-} from 'lucide-react';
+} from 'lucide-react',
 
 const footerSections = [
   {
@@ -119,7 +119,7 @@ const footerSections = [
       { name: 'DevOps & Development', href: '/devops-services' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
@@ -132,19 +132,19 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
   { name: 'News', href: '/news', icon: <Bell className="w-4 h-4" /> },
   { name: 'Resources', href: '/resources', icon: <Database className="w-4 h-4" /> }
-];
+],
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-export default UltraFuturisticFooter2038;
+},
+export default UltraFuturisticFooter2038,

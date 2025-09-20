@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -33,7 +33,7 @@ export default function Page() {
     category: "Security",
     compliance["NIST", "ISO 27001", "HITRUST"]
   }
-];
+],
 
 const complianceStandards = [{
     name: "HIPAA",
@@ -59,7 +59,7 @@ const complianceStandards = [{
     icon: CheckCircle,
     requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
   }
-];
+],
 
 const successStories = [{
     id: 1,
@@ -88,7 +88,7 @@ const successStories = [{
     results: "95% accuracy rate, 30% faster diagnosis, FDA clearance",
     logo: "DD"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -118,16 +118,16 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "2 - 4 weeks"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Mobile Development', 'AI & Analytics', 'Software Systems', 'Platform Solutions', 'IoT & Hardware', 'Security'];
+  const categories = ['AllMobile Development', 'AI & AnalyticsSoftware Systems', 'Platform SolutionsIoT & Hardware', 'Security'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? healthcareSolutions
-    : healthcareSolutions.filter(solution => solution.category === selectedCategory) ;
+    : healthcareSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}

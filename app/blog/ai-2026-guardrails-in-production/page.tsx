@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Guardrails in Production';
-  description: 'Operational guardrails for safe, observable, and efficient autonomous systems in production.',
-};
+  title: 'AI 2026: Guardrails in Production',
+  description: 'Operational guardrails for safe, observable, and efficient autonomous systems in production.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -36,7 +36,6 @@ export default function Page() {,
           </ul>,
         </div>,
       </article>,
-    </main>,
-  );
+    </main>),
 }
 ,

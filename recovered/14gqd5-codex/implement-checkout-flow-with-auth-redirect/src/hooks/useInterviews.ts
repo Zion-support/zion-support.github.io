@@ -1,15 +1,15 @@
 
-import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
-import { toast } from '@/components/ui/use-toast';
+import { useState } from 'react',
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from '@/integrations/supabase/client',
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',
+import { toast } from '@/components/ui/use-toast',
 
 export function useInterviews() {
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const { user } = useAuth();
+  const [interviews, setInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  const { user } = useAuth(),
 
   // Request an interview as a client
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
@@ -18,12 +18,12 @@ export function useInterviews() {
         title: "Authentication required",
         description: "You must be logged in to request interviews",
         variant: "destructive"
-      });
-      return null;
+      }),
+      return null,
     }
 
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
 
     try {
       // Insert the interview into the database
@@ -39,45 +39,44 @@ export function useInterviews() {
           meeting_platform: interviewRequest.meeting_platform,
           interview_type: interviewRequest.interview_type,
           title: interviewRequest.title,
-          status: 'requested',
+          status: 'requested'
         })
         .select('*')
-        .single();
+        .single(),
 
       if (insertError) {
-        console.error("Error requesting interview:", insertError);
-        setError(insertError.message);
-        return null;
+        console.error("Error requesting interview:", insertError),
+        setError(insertError.message),
+        return null,
       }
 
       // Create notification for talent
       await createInterviewNotification(
         interviewRequest.talent_id,
-        'interview_request',
-        'New Interview Request',
+        'interview_requestNew Interview Request',
         `You have received an interview request for ${interviewRequest.scheduled_date}`,
         data.id
-      );
+      ),
 
-      return data;
+      return data,
     } catch (err: any) {
-      console.error("Error in requestInterview:", err);
-      setError(err.message);
-      return null;
+      console.error("Error in requestInterview:", err),
+      setError(err.message),
+      return null,
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
-      setInterviews([]);
-      return [];
+      setInterviews([]),
+      return [],
     }
 
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
 
     try {
       // Get interviews where the user is either the client or the talent
@@ -89,12 +88,12 @@ export function useInterviews() {
           talents:talent_id(id, full_name, profile_picture_url)
         `)
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
-        .order('scheduled_date', { ascending: true });
+        .order('scheduled_date', { ascending: true }),
 
       if (fetchError) {
-        console.error("Error fetching interviews:", fetchError);
-        setError(fetchError.message);
-        return [];
+        console.error("Error fetching interviews:", fetchError),
+        setError(fetchError.message),
+        return [],
       }
 
       // Transform the data to match Interview type
@@ -116,19 +115,19 @@ export function useInterviews() {
         client_name: interview.clients?.display_name,
         talent_name: interview.talents?.full_name,
         client_avatar: interview.clients?.avatar_url,
-        talent_avatar: interview.talents?.profile_picture_url,
-      }));
+        talent_avatar: interview.talents?.profile_picture_url
+      })),
 
-      setInterviews(formattedInterviews);
-      return formattedInterviews;
+      setInterviews(formattedInterviews),
+      return formattedInterviews,
     } catch (err: any) {
-      console.error("Error in fetchInterviews:", err);
-      setError(err.message);
-      return [];
+      console.error("Error in fetchInterviews:", err),
+      setError(err.message),
+      return [],
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   // Respond to an interview request (as talent)
   const respondToInterview = async (
@@ -140,12 +139,12 @@ export function useInterviews() {
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
         variant: "destructive"
-      });
-      return false;
+      }),
+      return false,
     }
 
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
 
     try {
       // Update the interview status
@@ -155,12 +154,12 @@ export function useInterviews() {
           status: response.status,
           updated_at: new Date().toISOString()
         })
-        .eq('id', interviewId);
+        .eq('id', interviewId),
 
       if (updateError) {
-        console.error("Error responding to interview:", updateError);
-        setError(updateError.message);
-        return false;
+        console.error("Error responding to interview:", updateError),
+        setError(updateError.message),
+        return false,
       }
 
       // Get the interview to notify the client
@@ -168,27 +167,27 @@ export function useInterviews() {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-        .single();
+        .single(),
 
       if (fetchError) {
-        console.error("Error fetching interview:", fetchError);
-        setError(fetchError.message);
-        return false;
+        console.error("Error fetching interview:", fetchError),
+        setError(fetchError.message),
+        return false,
       }
 
       // Create notification for client
-      let notificationType = 'interview_confirmed';
-      let title = 'Interview Confirmed';
-      let message = `Your interview request for ${interview.scheduled_date} has been confirmed`;
+      let notificationType = 'interview_confirmed',
+      let title = 'Interview Confirmed',
+      let message = `Your interview request for ${interview.scheduled_date} has been confirmed`,
 
       if (response.status === 'declined') {
-        notificationType = 'interview_declined';
-        title = 'Interview Declined';
-        message = `Your interview request has been declined`;
+        notificationType = 'interview_declined',
+        title = 'Interview Declined',
+        message = `Your interview request has been declined`,
       } else if (response.status === 'rescheduled') {
-        notificationType = 'interview_rescheduled';
-        title = 'Interview Rescheduled';
-        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`;
+        notificationType = 'interview_rescheduled',
+        title = 'Interview Rescheduled',
+        message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`,
       }
 
       await createInterviewNotification(
@@ -197,19 +196,19 @@ export function useInterviews() {
         title,
         message,
         interviewId
-      );
+      ),
 
       // Refresh the interviews list
-      await fetchInterviews();
-      return true;
+      await fetchInterviews(),
+      return true,
     } catch (err: any) {
-      console.error("Error in respondToInterview:", err);
-      setError(err.message);
-      return false;
+      console.error("Error in respondToInterview:", err),
+      setError(err.message),
+      return false,
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   // Helper function to create interview notifications
   const createInterviewNotification = async (
@@ -225,19 +224,19 @@ export function useInterviews() {
         type,
         title,
         message,
-        related_id: relatedId,
-      });
+        related_id: relatedId
+      }),
     } catch (error) {
-      console.error("Error creating notification:", error);
+      console.error("Error creating notification:", error),
     }
-  };
+  },
 
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
-    if (!user?.id) return false;
+    if (!user?.id) return false,
 
-    setIsLoading(true);
-    setError(null);
+    setIsLoading(true),
+    setError(null),
 
     try {
       // Get the interview first to check permissions and get IDs for notifications
@@ -245,17 +244,17 @@ export function useInterviews() {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-        .single();
+        .single(),
 
       if (fetchError) {
-        setError(fetchError.message);
-        return false;
+        setError(fetchError.message),
+        return false,
       }
 
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
-        setError("You don't have permission to cancel this interview");
-        return false;
+        setError("You don't have permission to cancel this interview"),
+        return false,
       }
 
       // Update the interview status
@@ -265,38 +264,37 @@ export function useInterviews() {
           status: 'cancelled',
           updated_at: new Date().toISOString()
         })
-        .eq('id', interviewId);
+        .eq('id', interviewId),
 
       if (updateError) {
-        setError(updateError.message);
-        return false;
+        setError(updateError.message),
+        return false,
       }
 
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
-        : interview.client_id;
+        : interview.client_id,
 
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId,
-        'interview_cancelled',
-        'Interview Cancelled',
+        'interview_cancelledInterview Cancelled',
         `The scheduled interview for ${interview.scheduled_date} has been cancelled`,
         interviewId
-      );
+      ),
 
       // Refresh the interviews list
-      await fetchInterviews();
-      return true;
+      await fetchInterviews(),
+      return true,
     } catch (err: any) {
-      console.error("Error in cancelInterview:", err);
-      setError(err.message);
-      return false;
+      console.error("Error in cancelInterview:", err),
+      setError(err.message),
+      return false,
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
 
   return {
     interviews,
@@ -305,6 +303,6 @@ export function useInterviews() {
     requestInterview,
     fetchInterviews,
     respondToInterview,
-    cancelInterview,
-  };
+    cancelInterview
+  },
 }

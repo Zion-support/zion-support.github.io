@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import type { Config } from 'tailwindcss',
+import defaultTheme from 'tailwindcss/defaultTheme',
 
 const config: Config = {
   darkMode: "class",
@@ -7,7 +7,7 @@ const config: Config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}"
   ],
   safelist: ['border-border'],
   theme: {
@@ -40,33 +40,33 @@ const config: Config = {
         },
         popover: {
           DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          foreground: 'hsl(var(--card-foreground))'
         },
         card: {
           DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          foreground: 'hsl(var(--card-foreground))'
         },
         // Custom Zion colors
         "zion-blue": {
           DEFAULT: "#0a0f1f",
           light: "#1e263b",
-          dark: "#090c1a",
+          dark: "#090c1a"
         },
         "zion-purple": {
           DEFAULT: "#a855f7",
           light: "#d8b4fe",
-          dark: "#9333ea",
+          dark: "#9333ea"
         },
         "zion-cyan": {
           DEFAULT: "#00e5ff",
           light: "#7df9ff",
-          dark: "#00c4cc",
+          dark: "#00c4cc"
         },
         "zion-slate": {
           DEFAULT: "#94A3B8",
           light: "#CBD5E1",
-          dark: "#64748B",
-        },
+          dark: "#64748B"
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -90,25 +90,23 @@ const config: Config = {
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          to: { height: '0' }
         },
         'gradient-x': {
           '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
+            'background-size': '200% 200%background-position': 'left center'
           },
           '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
+            'background-size': '200% 200%background-position': 'right center'
+          }
         },
         'float': {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '50%': { transform: 'translateY(-20px)' }
         },
         'glow': {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
+          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' }
         },
         'neon-pulse': {
           '0%, 100%': { 
@@ -116,16 +114,11 @@ const config: Config = {
           },
           '50%': { 
             textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff' 
-          },
+          }
         }
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+        'accordion-down': 'accordion-down 0.2s ease-outaccordion-up': 'accordion-up 0.2s ease-outgradient-x': 'gradient-x 15s ease infinitefloat': 'float 6s ease-in-out infiniteglow': 'glow 2s ease-in-out infinite alternateneon-pulse': 'neon-pulse 2s ease-in-out infinite alternate'
       }
     }
   },
@@ -134,6 +127,6 @@ const config: Config = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')
   ]
-};
+},
 
-export default config;
+export default config,

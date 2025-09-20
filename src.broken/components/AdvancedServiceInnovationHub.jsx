@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-export default AdvancedServiceInnovationHub;
-import { Badge } from './ui / badge';
+export default AdvancedServiceInnovationHub,
+import { Badge } from './ui / badge',
 export default function Page() {
- from './ui/badge';"
-import { Input } from './ui/input';
+ from './ui/badge',"
+import { Input } from './ui/input',
 export default function Page() {
 ,
         {
@@ -16,8 +16,8 @@ export default function Page() {
             timeline: '2025-2035',
             adoption: 70,
             investment: '$150B+',
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;
-            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],
+            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],
             status: 'Growing'
         },
         {
@@ -30,47 +30,47 @@ export default function Page() {
             timeline: '2030-2040',
             adoption: 40,
             investment: '$80B+',
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
-            technologies['Neural Interfaces',Signal Processing',AI/ML'],;
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],
+            technologies['Neural Interfaces',Signal Processing',AI/ML'],
             status: 'Emerging'
 
-    ];
+    ],
     const filteredTrends = useMemo(() => {
         return innovationTrends.filter(trend => {
 
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                trend.description.toLowerCase().includes(searchTerm.toLowerCase());
-            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
+                trend.description.toLowerCase().includes(searchTerm.toLowerCase()),
+            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]),
     const getImpactColor = (impact) => {
 
         switch(impact) {
 
-            case 'High': return 'bg-red-100 text-red-800';
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';
-            case 'Low': return 'bg-green-100 text-green-800';
+            case 'High': return 'bg-red-100 text-red-800',
+            case 'Medium': return 'bg-yellow-100 text-yellow-800',
+            case 'Low': return 'bg-green-100 text-green-800',
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    },
     const getStatusColor = (status) => {
 
         switch(status) {
 
-            case 'Emerging': return 'bg-blue-100 text-blue-800';
-            case 'Growing': return 'bg-green-100 text-green-800';
-            case 'Mature': return 'bg-orange-100 text-orange-800';
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';
+            case 'Emerging': return 'bg-blue-100 text-blue-800',
+            case 'Growing': return 'bg-green-100 text-green-800',
+            case 'Mature': return 'bg-orange-100 text-orange-800',
+            case 'Disruptive': return 'bg-purple-100 text-purple-800',
             default: return 'bg-gray-100 text-gray-800'}
-    };
+    },
     const getCategoryIcon = (category) => {
 
         switch(category) {
 '"
-            case 'quantum': return <Atom className="w-5 h-5"/>;'"
-            case 'ai': return <Brain className="w-5 h-5"/>;'"
-            case 'space-tech': return <Satellite className="w-5 h-5"/>;'"
-            case 'green-tech': return <Leaf className="w-5 h-5"/>;'"
-            case 'biotech-ai': return <Dna className="w-5 h-5"/>;"
+            case 'quantum': return <Atom className="w-5 h-5"/>,'"
+            case 'ai': return <Brain className="w-5 h-5"/>,'"
+            case 'space-tech': return <Satellite className="w-5 h-5"/>,'"
+            case 'green-tech': return <Leaf className="w-5 h-5"/>,'"
+            case 'biotech-ai': return <Dna className="w-5 h-5"/>,"
             default: return <Cpu className="w-5 h-5"/>}
-    };
+    },
     const categories = ['"
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"
@@ -78,7 +78,7 @@ export default function Page() {
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }
-    ];"
+    ],"
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {
@@ -556,9 +556,9 @@ export default function Page() {
           </div>
         </div>
       </motion.div>
-    </div>)};
-export default AdvancedServiceInnovationHub;
+    </div>)},
+export default AdvancedServiceInnovationHub,
 }}}}}}'"`
 =======
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

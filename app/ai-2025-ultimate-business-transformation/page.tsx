@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2025 Ultimate Business Transformation Guide';
-  description: 'Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.';
-  keywords: ['AI transformationbusiness AI', 'AI implementationdigital transformation', 'AI ROI2025 AI trends'],
-};
+  title: 'AI 2025 Ultimate Business Transformation Guide',
+  description: 'Discover the revolutionary AI technologies and strategies that will transform your business in 2025. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.',
+  keywords: ['AI transformationbusiness AIAI implementationdigital transformation', 'AI ROI2025 AI trends']
+},
 export default function AI2025UltimateBusinessTransformationPage() {,
   return (,
     <div>,
@@ -47,7 +47,7 @@ export default function AI2025UltimateBusinessTransformationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Transformation Areas */,}
+        {/* Key Transformation Areas */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">,
@@ -58,7 +58,7 @@ export default function AI2025UltimateBusinessTransformationPage() {,
                 <div className="text-4xl mb-4">🤖</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Autonomous Operations</h3>,
                 <p className="text-gray-600 mb-4">,
-                  Implement self-managing systems that operate 24/7 without human intervention;
+                  Implement self-managing systems that operate 24/7 without human intervention,
                   reducing costs by up to 60% and improving efficiency by 340%.,
                 </p>,
                 <ul className="text-sm text-gray-500 space-y-1">,
@@ -71,7 +71,7 @@ export default function AI2025UltimateBusinessTransformationPage() {,
                 <div className="text-4xl mb-4">🧠</div>,
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Cognitive Intelligence</h3>,
                 <p className="text-gray-600 mb-4">,
-                  Deploy advanced AI that thinks, learns, and adapts to your business needs;
+                  Deploy advanced AI that thinks, learns, and adapts to your business needs,
                   providing insights that drive strategic decision-making.,
                 </p>,
                 <ul className="text-sm text-gray-500 space-y-1">,
@@ -161,7 +161,7 @@ export default function AI2025UltimateBusinessTransformationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Roadmap */,}
+        {/* Implementation Roadmap */}
         <section className="py-16 bg-gray-50">,
           <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">,
@@ -210,7 +210,7 @@ export default function AI2025UltimateBusinessTransformationPage() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600 text-white">,
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
             <h2 className="text-3xl font-bold mb-6">,
@@ -238,4 +238,4 @@ export default function AI2025UltimateBusinessTransformationPage() {,
         </section>,
       </div>,
     </div>,
-  ),}
+  )}

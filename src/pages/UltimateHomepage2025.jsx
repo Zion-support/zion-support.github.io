@@ -1,58 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import SEO from "@/components/SEO";
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
-import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+import { Link } from "react-router-dom";
+import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from "lucide-react";
+import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
 export default function UltimateHomepage2025() {
-    const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-    const [isVisible, setIsVisible] = useState(false);
+    const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+    const [isVisible, setIsVisible] = useState(false),
     useEffect(() => {
-        setIsVisible(true);
+        setIsVisible(true),
         const interval = setInterval(() => {
-            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length);
-        }, 5000);
-        return () => clearInterval(interval);
+            setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length),
+        }, 5000),
+        return () => clearInterval(interval),
     }, []);
     const featuredServices = ultimateInnovativeServices2025.filter(service => service.popular).slice(0, 6);
     const allServices = ultimateInnovativeServices2025.slice(0, 9);
     const stats = [
-        { number: '10+', label: 'Revolutionary Services', icon: Rocket },
-        { number: '500+', label: 'Happy Customers', icon: Users },
-        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck },
+        { number: '10+', label: 'Revolutionary Services', icon: Rocket };
+        { number: '500+', label: 'Happy Customers', icon: Users };
+        { number: '99.9%', label: 'Uptime Guarantee', icon: ShieldCheck };
         { number: '24/7', label: 'Expert Support', icon: Clock }
     ];
     const benefits = [
         {
-            icon: Brain,
-            title: 'AI-Powered Intelligence',
-            description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
+            icon: Brain,title: 'AI-Powered Intelligence',description: 'Advanced artificial intelligence that learns, adapts, and optimizes your business processes automatically.',
             color: 'from-blue-500 to-cyan-500'
-        },
+        };
         {
-            icon: Shield,
-            title: 'Quantum-Secure Protection',
-            description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',
-            color: 'from-green-500 to-emerald-500'
-        },
+            icon: Shield,title: 'Quantum-Secure Protection',description: 'Unbreakable security with quantum-resistant encryption and AI-powered threat detection.',color: 'from-green-500 to-emerald-500'
+        };
         {
-            icon: Zap,
-            title: 'Autonomous Operations',
-            description: 'Self-managing systems that run your business operations with minimal human intervention.',
-            color: 'from-purple-500 to-indigo-500'
-        },
+            icon: Zap,title: 'Autonomous Operations',description: 'Self-managing systems that run your business operations with minimal human intervention.',color: 'from-purple-500 to-indigo-500'
+        };
         {
-            icon: BarChart3,
-            title: 'Predictive Analytics',
-            description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
+            icon: BarChart3,title: 'Predictive Analytics',description: 'Forecast trends, identify opportunities, and make data-driven decisions with confidence.',
             color: 'from-orange-500 to-red-500'
         }
     ];
     const industries = [
-        { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' },
-        { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' },
-        { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' },
-        { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' },
-        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' },
+        { name: 'Financial Services', icon: TrendingUp, color: 'from-emerald-500 to-teal-500' };
+        { name: 'Healthcare', icon: Users, color: 'from-red-500 to-pink-500' };
+        { name: 'Manufacturing', icon: Building2, color: 'from-blue-500 to-cyan-500' };
+        { name: 'Retail & E-commerce', icon: Globe, color: 'from-yellow-500 to-orange-500' };
+        { name: 'Technology', icon: Cpu, color: 'from-purple-500 to-indigo-500' };
         { name: 'Government', icon: Shield, color: 'from-gray-500 to-blue-500' }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -339,7 +329,7 @@ export default function UltimateHomepage2025() {
               Join the future of business with our revolutionary AI-powered, quantum-secure, and autonomous solutions. 
               Get in touch today to discover how we can help you achieve unprecedented growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Rocket className="w-5 h-5 mr-2"/>
                 Get Started Today
@@ -352,5 +342,5 @@ export default function UltimateHomepage2025() {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 }

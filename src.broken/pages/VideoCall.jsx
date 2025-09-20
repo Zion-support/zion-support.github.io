@@ -1,54 +1,54 @@
-import { useParams, useNavigate  } from 'react-router-dom';
-import { useState } from 'react';
- from 'react';
-import { Button } from '@/components / ui / button';
-import { SEO } from '@/components / SEO';
-import { export default function VideoCall () { Phone, PhoneOff, Video, VideoOff, Mic, MicOff, Monitor, Users, Settings, MessageCircle,  } from 'lucide-react';
+import { useParams, useNavigate  } from 'react-router-dom',
+import { useState } from 'react',
+ from 'react',
+import { Button } from '@/components / ui / button',
+import { SEO } from '@/components / SEO',
+import { export default function VideoCall () { Phone, PhoneOff, Video, VideoOff, Mic, MicOff, Monitor, Users, Settings, MessageCircle  } from 'lucide-react',
 
- = useParams () ;
-  const navigate = useNavigate () ;
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true);
-  const [isMuted, setIsMuted] = useState(false);
-  const [isScreenSharing, setIsScreenSharing] = useState(false);
+ = useParams () ,
+  const navigate = useNavigate () ,
+  const [isJoining, setIsJoining] = useState(false),
+  const [hasJoined, setHasJoined] = useState(false),
+  const [isVideoEnabled, setIsVideoEnabled] = useState(true),
+  const [isMuted, setIsMuted] = useState(false),
+  const [isScreenSharing, setIsScreenSharing] = useState(false),
   const [participants, setParticipants] = useState([{
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
       isMuted: false,
-      isScreenSharing: false,
-    },
-  ]);
+      isScreenSharing: false
+    }
+  ]),
 
   const handleJoinCall = () => {
-    setIsJoining(true) ;
+    setIsJoining(true) ,
     // Simulate connection delay
     setTimeout(() => {
-      setHasJoined(true) ;
-      setIsJoining(false) ;
-    }, 1500) ;
-  };
+      setHasJoined(true) ,
+      setIsJoining(false) ,
+    }, 1500) ,
+  },
 
   const handleLeaveCall = () => {
-    setHasJoined(false) ;
+    setHasJoined(false) ,
     // Navigate back after a short delay
     setTimeout(() => {
-      navigate(-1) ;
-    }, 1000) ;
-  };
+      navigate(-1) ,
+    }, 1000) ,
+  },
 
   const toggleVideo = () => {
-    setIsVideoEnabled(!isVideoEnabled) ;
-  };
+    setIsVideoEnabled(!isVideoEnabled) ,
+  },
 
   const toggleMute = () => {
-    setIsMuted(!isMuted) ;
-  };
+    setIsMuted(!isMuted) ,
+  },
 
   const toggleScreenShare = () => {
-    setIsScreenSharing(!isScreenSharing) ;
-  };
+    setIsScreenSharing(!isScreenSharing) ,
+  },
 
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -57,28 +57,28 @@ import { export default function VideoCall () { Phone, PhoneOff, Video, VideoOff
         name: 'Alex Chen',
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: false,
+        isScreenSharing: false
       },
       {
         id: 'user - 3',
         name: 'Taylor Kim',
         isVideoEnabled: false,
         isMuted: true,
-        isScreenSharing: false,
+        isScreenSharing: false
       },
       {
         id: 'user - 4',
         name: 'Jordan Smith',
         isVideoEnabled: true,
         isMuted: false,
-        isScreenSharing: true,
-      },
-    ];
-    const randomUser = mockUsers[Math.floor(Math.random () * mockUsers.length) ];
+        isScreenSharing: true
+      }
+    ],
+    const randomUser = mockUsers[Math.floor(Math.random () * mockUsers.length) ],
     if(!participants.find (p => p.id === randomUser.id) ) {
-      setParticipants(prev => [...prev, randomUser]) ;
+      setParticipants(prev => [...prev, randomUser]) ,
     }
-  };
+  },
 
   return (<>
       <SEO
@@ -210,5 +210,5 @@ import { export default function VideoCall () { Phone, PhoneOff, Video, VideoOff
             </div>
           </div>) }
       </main>
-    </>) ;
+    </>) ,
 }

@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-);
-  };
+),
+  },
   const getPositionClasses = () => {
     switch(position) {
 
       case 'bottom-left':'
-        return 'bottom-6 left-6';
+        return 'bottom-6 left-6',
       case 'top-right':'
-        return 'top-6 right-6';
+        return 'top-6 right-6',
       case 'top-left':'
-        return 'top-6 left-6';
-      default:'
-        return 'bottom-6 right-6';
+        return 'top-6 left-6',
+      default: '
+        return 'bottom-6 right-6'
     }
-  };
+  },
   const getExpandedPositionClasses = () => {
     switch(position) {
 
       case 'bottom-left':'
-        return 'bottom-6 left-6';
+        return 'bottom-6 left-6',
       case 'top-right':'
-        return 'top-6 right-6';
+        return 'top-6 right-6',
       case 'top-left':'
-        return 'top-6 left-6';
-      default:'
-        return 'bottom-6 right-6';
+        return 'top-6 left-6',
+      default: '
+        return 'bottom-6 right-6'
     }
-  };
+  },
   if(variant === 'minimal') {
 
     return ()
@@ -47,7 +47,7 @@ export default function Page() {
           </motion.button>
         )}
       </AnimatePresence>
-    );
+    ),
   }
   if(variant === 'featured') {
 
@@ -150,7 +150,7 @@ export default function Page() {
           )}
         </AnimatePresence>
       </div>
-    );
+    ),
   }
   // Default variant
   return ()`
@@ -235,6 +235,6 @@ export default function Page() {
         )}
       </AnimatePresence>
     </div>
-  );
+  ),
 }
 '"`

@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin, ShoppingCart, UserCheck, Video, LockIcon, GlobeIcon, CpuIcon
-} from 'lucide-react';
-import { realMarketServices } from '../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../data/2024-ai-emerging-tech-services';
+} from 'lucide-react',
+import { realMarketServices } from '../data/2024-real-market-services',
+import { aiEmergingTechServices } from '../data/2024-ai-emerging-tech-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function Pricing2034Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
-      services: ['AI Business Intelligence Pro', 'AI Video Generation Platform', 'AI-Powered Cybersecurity', 'AI Drug Discovery Platform'],
+      services: ['AI Business Intelligence ProAI Video Generation Platform', 'AI-Powered CybersecurityAI Drug Discovery Platform'],
       avgPrice: '$1,399/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -32,7 +32,7 @@ export default function Pricing2034Page() {
     {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
-      services: ['Quantum Machine Learning', 'Blockchain AI Platform', 'Edge AI Computing', 'AI Climate Modeling'],
+      services: ['Quantum Machine LearningBlockchain AI Platform', 'Edge AI ComputingAI Climate Modeling'],
       avgPrice: '$1,199/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -41,7 +41,7 @@ export default function Pricing2034Page() {
     {
       name: 'Enterprise IT Solutions',
       description: 'Autonomous operations and zero-trust security',
-      services: ['API Security & Monitoring', 'Customer Success Automation', 'HR Automation Suite', 'Project Management AI'],
+      services: ['API Security & MonitoringCustomer Success Automation', 'HR Automation SuiteProject Management AI'],
       avgPrice: '$299/month',
       savings: 'Save 50-70% vs. competitors',
       icon: Cpu,
@@ -50,7 +50,7 @@ export default function Pricing2034Page() {
     {
       name: 'Business Automation',
       description: 'Streamline business operations',
-      services: ['E-commerce Automation', 'Marketing Automation Suite', 'Financial Analytics Platform', 'Legal Document Automation'],
+      services: ['E-commerce AutomationMarketing Automation Suite', 'Financial Analytics PlatformLegal Document Automation'],
       avgPrice: '$319/month',
       savings: 'Save 40-60% vs. competitors',
       icon: ShoppingCart,
@@ -59,7 +59,7 @@ export default function Pricing2034Page() {
     {
       name: 'Robotics & Automation',
       description: 'Intelligent automation solutions',
-      services: ['Autonomous Robotics Platform', 'AI Content Generator Elite', 'AI Guardrails Suite', 'AI Business Intelligence'],
+      services: ['Autonomous Robotics PlatformAI Content Generator Elite', 'AI Guardrails SuiteAI Business Intelligence'],
       avgPrice: '$699/month',
       savings: 'Save 55-75% vs. competitors',
       icon: Rocket,
@@ -68,13 +68,13 @@ export default function Pricing2034Page() {
     {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
-      services: ['Quantum DNA Computing', 'Space Mining Automation', 'Metaverse AI Development', 'Holographic Events'],
+      services: ['Quantum DNA ComputingSpace Mining Automation', 'Metaverse AI DevelopmentHolographic Events'],
       avgPrice: '$21,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: Microscope,
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -85,16 +85,11 @@ export default function Pricing2034Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Basic Security Features',
-        'API Access (1000 calls/month)',
-        'Community Support'
+        'Access to 100+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeBasic Security Features',
+        'API Access (1000 calls/month)Community Support'
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600'
@@ -106,18 +101,12 @@ export default function Pricing2034Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Services',
-        'Advanced AI Features',
-        'Priority Support (4-hour response)',
-        '60-Day Free Trial',
-        'Advanced Analytics & Reporting',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Advanced Security Features',
-        'API Access (10,000 calls/month)',
-        'Dedicated Account Manager',
-        'Custom Integrations',
-        'White-label Solutions'
+        'Access to 200+ ServicesAdvanced AI Features',
+        'Priority Support (4-hour response)60-Day Free Trial',
+        'Advanced Analytics & ReportingPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'API Access (10,000 calls/month)Dedicated Account Manager',
+        'Custom IntegrationsWhite-label Solutions'
       ],
       popular: true,
       color: 'from-cyan-500 to-blue-500'
@@ -129,27 +118,21 @@ export default function Pricing2034Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services',
-        'Full AI Suite & Custom Models',
-        '24/7 Premium Support',
-        '90-Day Free Trial',
-        'Enterprise Analytics & BI',
-        'Dedicated Support Team',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security & Compliance',
-        'Unlimited API Access',
-        'Custom Development',
-        'On-premise Deployment',
-        'SLA Guarantees',
+        'Access to ALL ServicesFull AI Suite & Custom Models',
+        '24/7 Premium Support90-Day Free Trial',
+        'Enterprise Analytics & BIDedicated Support Team',
+        '99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Unlimited API AccessCustom Development',
+        'On-premise DeploymentSLA Guarantees',
         'Training & Certification'
       ],
       popular: false,
       color: 'from-purple-500 to-pink-500'
     }
-  ];
+  ],
 
   // All services for comprehensive pricing
-  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+  const allServices = [...realMarketServices, ...aiEmergingTechServices],
 
 const pricing-2034: React.FC = () => {
   return (
@@ -166,7 +149,7 @@ const pricing-2034: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default pricing-2034;
+export default pricing-2034,

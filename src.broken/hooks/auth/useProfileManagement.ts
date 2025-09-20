@@ -1,5 +1,5 @@
-// Hook for useProfileManagement;
+// Hook for useProfileManagement,
 export const useUseProfileManagement: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

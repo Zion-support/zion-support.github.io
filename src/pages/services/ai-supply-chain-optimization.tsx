@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Truck, 
+  Truck,
   Globe, 
   Zap, 
   Brain, 
@@ -23,63 +23,45 @@ import {
   Route,
   Warehouse,
   Cpu
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AISupplyChainOptimization() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Machine learning algorithms predict demand patterns with 94% accuracy, reducing stockouts and overstock by 60%"
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Demand Forecasting",description: "Machine learning algorithms predict demand patterns with 94% accuracy, reducing stockouts and overstock by 60%"
     },
     {
-      icon: <Route className="w-6 h-6" />,
-      title: "Intelligent Route Optimization",
-      description: "Real-time route planning that reduces delivery costs by 35% and improves delivery times by 40%"
+      icon: <Route className="w-6 h-6" />,title: "Intelligent Route Optimization",description: "Real-time route planning that reduces delivery costs by 35% and improves delivery times by 40%"
+    };
+    {
+      icon: <Warehouse className="w-6 h-6" />,title: "Smart Inventory Management",description: "Automated inventory tracking with predictive reordering and dynamic safety stock calculations"
+    };
+    {
+      icon: <Globe className="w-6 h-6" />,title: "Global Supply Chain Visibility",description: "End-to-end visibility across all suppliers, warehouses, and distribution centers in real-time"
     },
     {
-      icon: <Warehouse className="w-6 h-6" />,
-      title: "Smart Inventory Management",
-      description: "Automated inventory tracking with predictive reordering and dynamic safety stock calculations"
-    },
+      icon: <Shield className="w-6 h-6" />,title: "Risk Management & Compliance",description: "AI-driven risk assessment and automated compliance monitoring for regulatory requirements"
+    };
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Supply Chain Visibility",
-      description: "End-to-end visibility across all suppliers, warehouses, and distribution centers in real-time"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management & Compliance",
-      description: "AI-driven risk assessment and automated compliance monitoring for regulatory requirements"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into supply chain performance, cost analysis, and optimization opportunities"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Advanced Analytics Dashboard",description: "Comprehensive insights into supply chain performance, cost analysis, and optimization opportunities"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$499",
-      period: "/month",
-      features: [
-        "Up to 5 locations",
+      name: "Starter",price: "$499",period: "/month",features: [
+        "Up to 5 locations";
         "Basic demand forecasting",
         "Route optimization",
         "Email support",
         "Standard analytics"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$1,299",
-      period: "/month",
-      features: [
-        "Up to 25 locations",
+      name: "Professional",price: "$1,299",
+      period: "/month",features: [
+        "Up to 25 locations";
         "Advanced AI forecasting",
         "Multi-modal optimization",
         "Priority support",
@@ -88,13 +70,11 @@ export default function AISupplyChainOptimization() {
         "Custom integrations"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      features: [
-        "Unlimited locations",
+      name: "Enterprise",price: "$2,999",
+      period: "/month",features: [
+        "Unlimited locations";
         "Custom AI models",
         "Real-time optimization",
         "Dedicated support",
@@ -105,7 +85,6 @@ export default function AISupplyChainOptimization() {
       popular: false
     }
   ];
-
   const benefits = [
     "Reduce supply chain costs by 25-40%",
     "Improve delivery performance by 60%",
@@ -113,31 +92,26 @@ export default function AISupplyChainOptimization() {
     "Increase supplier collaboration efficiency",
     "Minimize supply chain disruptions",
     "Achieve 99.5% order fulfillment rate"
-  ];
+  ],
 
   const useCases = [
     {
-      industry: "E-commerce & Retail",
-      description: "Optimize fulfillment networks, reduce shipping costs, and improve customer delivery experience",
+      industry: "E-commerce & Retail",description: "Optimize fulfillment networks, reduce shipping costs, and improve customer delivery experience",
       savings: "35% cost reduction"
-    },
+    };
     {
-      industry: "Manufacturing",
-      description: "Streamline production planning, optimize supplier networks, and reduce lead times",
+      industry: "Manufacturing",description: "Streamline production planning, optimize supplier networks, and reduce lead times",
       savings: "40% efficiency gain"
-    },
+    };
     {
-      industry: "Healthcare & Pharmaceuticals",
-      description: "Ensure critical supplies availability, optimize distribution networks, and maintain compliance",
+      industry: "Healthcare & Pharmaceuticals",description: "Ensure critical supplies availability, optimize distribution networks, and maintain compliance",
       savings: "50% risk reduction"
-    },
+    };
     {
-      industry: "Food & Beverage",
-      description: "Optimize cold chain logistics, reduce waste, and improve freshness delivery",
+      industry: "Food & Beverage",description: "Optimize cold chain logistics, reduce waste, and improve freshness delivery",
       savings: "30% waste reduction"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -449,7 +423,7 @@ export default function AISupplyChainOptimization() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -488,5 +462,5 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
     </div>
-  );
+  )
 }

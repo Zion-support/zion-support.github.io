@@ -4,7 +4,7 @@ import React from 'react'
 export const metadata = {
   title: 'Production RAG Latency Budgets (2026) — Practical Guide',
   description:
-    'A pragmatic framework for setting and enforcing latency budgets for Retrieval-Augmented Generation (RAG) systems in production.',
+    'A pragmatic framework for setting and enforcing latency budgets for Retrieval-Augmented Generation (RAG) systems in production.'
 }
 
 export default function Page() {

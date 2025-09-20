@@ -1,42 +1,42 @@
 export interface EnterpriseAIService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const enterpriseAIServices: EnterpriseAIService[] = [
   // Enterprise AI Solutions
@@ -48,16 +48,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Comprehensive enterprise AI platform that orchestrates all AI operations, automates business processes, and provides intelligent insights across the entire organization.',
     features: [
-      'AI process automation',
-      'Intelligent workflow management',
-      'Real-time business intelligence',
-      'Predictive analytics',
-      'Natural language processing',
-      'Computer vision integration',
-      'Multi-department coordination',
-      'Advanced reporting dashboard',
-      'API for enterprise systems',
-      '24/7 AI monitoring'
+      'AI process automationIntelligent workflow management',
+      'Real-time business intelligencePredictive analytics',
+      'Natural language processingComputer vision integration',
+      'Multi-department coordinationAdvanced reporting dashboard',
+      'API for enterprise systems24/7 AI monitoring'
     ],
     popular: true,
     icon: '🏢',
@@ -70,11 +65,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '6-8 weeks',
     category: 'Enterprise AI & Automation',
     realService: true,
-    technology: ['AI/ML', 'Process Automation', 'Business Intelligence', 'Cloud Computing', 'API Integration'],
-    integrations: ['ERP systems', 'CRM platforms', 'HR systems', 'Financial systems', 'Legacy databases'],
-    useCases: ['Business process automation', 'Intelligent decision making', 'Predictive analytics', 'Customer intelligence', 'Operational efficiency'],
+    technology: ['AI/MLProcess Automation', 'Business IntelligenceCloud Computing', 'API Integration'],
+    integrations: ['ERP systemsCRM platforms', 'HR systemsFinancial systems', 'Legacy databases'],
+    useCases: ['Business process automationIntelligent decision making', 'Predictive analyticsCustomer intelligence', 'Operational efficiency'],
     roi: '1200% ROI through operational efficiency and intelligent automation',
-    competitors: ['IBM Watson ($1,000+/month)', 'Microsoft Azure AI ($500+/month)'],
+    competitors: ['IBM Watson ($1,000+/month)Microsoft Azure AI ($500+/month)'],
     marketSize: '$500B enterprise AI market',
     growthRate: '200% annual growth',
     variant: 'enterprise-futuristic',
@@ -100,16 +95,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Advanced AI platform that optimizes supply chains through predictive analytics, demand forecasting, and intelligent inventory management. Reduce costs by 40% while improving efficiency.',
     features: [
-      'Predictive demand forecasting',
-      'Intelligent inventory management',
-      'Route optimization',
-      'Supplier performance analytics',
-      'Risk assessment',
-      'Cost optimization',
-      'Real-time monitoring',
-      'Automated reporting',
-      'API for ERP integration',
-      'Mobile app support'
+      'Predictive demand forecastingIntelligent inventory management',
+      'Route optimizationSupplier performance analytics',
+      'Risk assessmentCost optimization',
+      'Real-time monitoringAutomated reporting',
+      'API for ERP integrationMobile app support'
     ],
     popular: true,
     icon: '📦',
@@ -122,11 +112,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '3-4 weeks',
     category: 'AI Supply Chain & Logistics',
     realService: true,
-    technology: ['AI/ML', 'Predictive Analytics', 'Supply Chain Management', 'IoT Integration', 'Cloud Computing'],
-    integrations: ['ERP systems', 'WMS platforms', 'Transportation systems', 'Supplier portals', 'E-commerce platforms'],
-    useCases: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Cost reduction'],
+    technology: ['AI/MLPredictive Analytics', 'Supply Chain ManagementIoT Integration', 'Cloud Computing'],
+    integrations: ['ERP systemsWMS platforms', 'Transportation systemsSupplier portals', 'E-commerce platforms'],
+    useCases: ['Demand forecastingInventory optimization', 'Route planningSupplier management', 'Cost reduction'],
     roi: '800% ROI through cost reduction and efficiency improvements',
-    competitors: ['SAP SCM ($2,000+/month)', 'Oracle SCM ($1,500+/month)'],
+    competitors: ['SAP SCM ($2,000+/month)Oracle SCM ($1,500+/month)'],
     marketSize: '$300B supply chain market',
     growthRate: '180% annual growth',
     variant: 'supply-chain-futuristic',
@@ -152,16 +142,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform that creates personalized customer experiences through predictive analytics, behavioral analysis, and intelligent automation.',
     features: [
-      'Predictive customer behavior',
-      'Personalized recommendations',
-      'Intelligent chatbots',
-      'Sentiment analysis',
-      'Customer journey mapping',
-      'Real-time personalization',
-      'A/B testing automation',
-      'Performance analytics',
-      'API for CRM integration',
-      'Multi-channel support'
+      'Predictive customer behaviorPersonalized recommendations',
+      'Intelligent chatbotsSentiment analysis',
+      'Customer journey mappingReal-time personalization',
+      'A/B testing automationPerformance analytics',
+      'API for CRM integrationMulti-channel support'
     ],
     popular: true,
     icon: '👥',
@@ -174,11 +159,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '2-3 weeks',
     category: 'AI Customer Experience',
     realService: true,
-    technology: ['AI/ML', 'Natural Language Processing', 'Predictive Analytics', 'Personalization', 'Chatbot Technology'],
-    integrations: ['CRM systems', 'E-commerce platforms', 'Marketing tools', 'Analytics platforms', 'Social media'],
-    useCases: ['Customer personalization', 'Intelligent recommendations', 'Customer service automation', 'Marketing optimization', 'Customer retention'],
+    technology: ['AI/MLNatural Language Processing', 'Predictive AnalyticsPersonalization', 'Chatbot Technology'],
+    integrations: ['CRM systemsE-commerce platforms', 'Marketing toolsAnalytics platforms', 'Social media'],
+    useCases: ['Customer personalizationIntelligent recommendations', 'Customer service automationMarketing optimization', 'Customer retention'],
     roi: '600% ROI through improved customer satisfaction and retention',
-    competitors: ['Salesforce Einstein ($1,000+/month)', 'Adobe Experience Cloud ($2,000+/month)'],
+    competitors: ['Salesforce Einstein ($1,000+/month)Adobe Experience Cloud ($2,000+/month)'],
     marketSize: '$200B customer experience market',
     growthRate: '250% annual growth',
     variant: 'customer-experience-futuristic',
@@ -204,16 +189,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Advanced AI platform for financial risk management that provides real-time risk assessment, fraud detection, and compliance monitoring for financial institutions.',
     features: [
-      'Real-time risk assessment',
-      'AI fraud detection',
-      'Compliance monitoring',
-      'Portfolio risk analysis',
-      'Market risk modeling',
-      'Credit risk evaluation',
-      'Regulatory reporting',
-      'Performance analytics',
-      'API for financial systems',
-      '24/7 monitoring'
+      'Real-time risk assessmentAI fraud detection',
+      'Compliance monitoringPortfolio risk analysis',
+      'Market risk modelingCredit risk evaluation',
+      'Regulatory reportingPerformance analytics',
+      'API for financial systems24/7 monitoring'
     ],
     popular: true,
     icon: '💳',
@@ -226,11 +206,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '4-5 weeks',
     category: 'AI Financial Services',
     realService: true,
-    technology: ['AI/ML', 'Risk Modeling', 'Fraud Detection', 'Compliance Monitoring', 'Real-time Analytics'],
-    integrations: ['Core banking systems', 'Trading platforms', 'Risk management systems', 'Regulatory databases', 'Market data feeds'],
-    useCases: ['Risk assessment', 'Fraud detection', 'Compliance monitoring', 'Portfolio management', 'Regulatory reporting'],
+    technology: ['AI/MLRisk Modeling', 'Fraud DetectionCompliance Monitoring', 'Real-time Analytics'],
+    integrations: ['Core banking systemsTrading platforms', 'Risk management systemsRegulatory databases', 'Market data feeds'],
+    useCases: ['Risk assessmentFraud detection', 'Compliance monitoringPortfolio management', 'Regulatory reporting'],
     roi: '900% ROI through risk reduction and compliance automation',
-    competitors: ['Bloomberg Terminal ($24,000/year)', 'Thomson Reuters ($1,000+/month)'],
+    competitors: ['Bloomberg Terminal ($24,000/year)Thomson Reuters ($1,000+/month)'],
     marketSize: '$150B financial risk management market',
     growthRate: '180% annual growth',
     variant: 'financial-risk-futuristic',
@@ -256,16 +236,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for healthcare analytics that provides predictive diagnostics, treatment optimization, and population health management.',
     features: [
-      'Predictive diagnostics',
-      'Treatment optimization',
-      'Population health management',
-      'Clinical decision support',
-      'Patient risk stratification',
-      'Healthcare analytics',
-      'Compliance monitoring',
-      'Performance reporting',
-      'API for EHR integration',
-      'HIPAA compliance'
+      'Predictive diagnosticsTreatment optimization',
+      'Population health managementClinical decision support',
+      'Patient risk stratificationHealthcare analytics',
+      'Compliance monitoringPerformance reporting',
+      'API for EHR integrationHIPAA compliance'
     ],
     popular: true,
     icon: '🏥',
@@ -278,11 +253,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '4-6 weeks',
     category: 'AI Healthcare & Analytics',
     realService: true,
-    technology: ['AI/ML', 'Healthcare Analytics', 'Predictive Medicine', 'Clinical Decision Support', 'Population Health'],
-    integrations: ['EHR systems', 'Medical devices', 'Lab systems', 'Insurance platforms', 'Research databases'],
-    useCases: ['Predictive diagnostics', 'Treatment optimization', 'Population health', 'Clinical research', 'Healthcare efficiency'],
+    technology: ['AI/MLHealthcare Analytics', 'Predictive MedicineClinical Decision Support', 'Population Health'],
+    integrations: ['EHR systemsMedical devices', 'Lab systemsInsurance platforms', 'Research databases'],
+    useCases: ['Predictive diagnosticsTreatment optimization', 'Population healthClinical research', 'Healthcare efficiency'],
     roi: '700% ROI through improved patient outcomes and operational efficiency',
-    competitors: ['Epic ($1,000+/month)', 'Cerner ($500+/month)'],
+    competitors: ['Epic ($1,000+/month)Cerner ($500+/month)'],
     marketSize: '$200B healthcare analytics market',
     growthRate: '220% annual growth',
     variant: 'healthcare-futuristic',
@@ -308,16 +283,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Advanced AI platform for manufacturing intelligence that provides predictive maintenance, quality control, and production optimization.',
     features: [
-      'Predictive maintenance',
-      'Quality control automation',
-      'Production optimization',
-      'Supply chain integration',
-      'Real-time monitoring',
-      'Performance analytics',
-      'Predictive analytics',
-      'Automated reporting',
-      'API for MES integration',
-      'IoT device support'
+      'Predictive maintenanceQuality control automation',
+      'Production optimizationSupply chain integration',
+      'Real-time monitoringPerformance analytics',
+      'Predictive analyticsAutomated reporting',
+      'API for MES integrationIoT device support'
     ],
     popular: true,
     icon: '🏭',
@@ -330,11 +300,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '3-4 weeks',
     category: 'AI Manufacturing & Industry 4.0',
     realService: true,
-    technology: ['AI/ML', 'IoT Integration', 'Predictive Analytics', 'Quality Control', 'Production Optimization'],
-    integrations: ['MES systems', 'ERP platforms', 'IoT devices', 'Quality control systems', 'Supply chain platforms'],
-    useCases: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Supply chain management', 'Performance monitoring'],
+    technology: ['AI/MLIoT Integration', 'Predictive AnalyticsQuality Control', 'Production Optimization'],
+    integrations: ['MES systemsERP platforms', 'IoT devicesQuality control systems', 'Supply chain platforms'],
+    useCases: ['Predictive maintenanceQuality control', 'Production optimizationSupply chain management', 'Performance monitoring'],
     roi: '600% ROI through operational efficiency and quality improvements',
-    competitors: ['Siemens Mindsphere ($500+/month)', 'GE Predix ($1,000+/month)'],
+    competitors: ['Siemens Mindsphere ($500+/month)GE Predix ($1,000+/month)'],
     marketSize: '$250B manufacturing intelligence market',
     growthRate: '200% annual growth',
     variant: 'manufacturing-futuristic',
@@ -360,16 +330,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for energy management that optimizes energy consumption, integrates renewable sources, and provides predictive analytics.',
     features: [
-      'Energy consumption optimization',
-      'Renewable energy integration',
-      'Predictive analytics',
-      'Real-time monitoring',
-      'Demand response',
-      'Grid optimization',
-      'Performance analytics',
-      'Automated reporting',
-      'API for energy systems',
-      'Mobile app support'
+      'Energy consumption optimizationRenewable energy integration',
+      'Predictive analyticsReal-time monitoring',
+      'Demand responseGrid optimization',
+      'Performance analyticsAutomated reporting',
+      'API for energy systemsMobile app support'
     ],
     popular: true,
     icon: '⚡',
@@ -382,11 +347,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '2-3 weeks',
     category: 'AI Energy & Sustainability',
     realService: true,
-    technology: ['AI/ML', 'Energy Management', 'Renewable Integration', 'Predictive Analytics', 'IoT Integration'],
-    integrations: ['Smart meters', 'Energy management systems', 'Renewable energy systems', 'Building automation', 'Grid systems'],
-    useCases: ['Energy optimization', 'Renewable integration', 'Demand response', 'Grid optimization', 'Cost reduction'],
+    technology: ['AI/MLEnergy Management', 'Renewable IntegrationPredictive Analytics', 'IoT Integration'],
+    integrations: ['Smart metersEnergy management systems', 'Renewable energy systemsBuilding automation', 'Grid systems'],
+    useCases: ['Energy optimizationRenewable integration', 'Demand responseGrid optimization', 'Cost reduction'],
     roi: '500% ROI through energy cost reduction and efficiency improvements',
-    competitors: ['Schneider Electric ($1,000+/month)', 'Siemens ($500+/month)'],
+    competitors: ['Schneider Electric ($1,000+/month)Siemens ($500+/month)'],
     marketSize: '$180B energy management market',
     growthRate: '180% annual growth',
     variant: 'energy-futuristic',
@@ -412,16 +377,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Advanced AI platform for personalized education that adapts to individual learning styles, provides intelligent tutoring, and tracks educational progress.',
     features: [
-      'Personalized learning paths',
-      'Intelligent tutoring',
-      'Progress tracking',
-      'Adaptive assessments',
-      'Learning analytics',
-      'Content recommendation',
-      'Student engagement',
-      'Performance reporting',
-      'API for LMS integration',
-      'Mobile app support'
+      'Personalized learning pathsIntelligent tutoring',
+      'Progress trackingAdaptive assessments',
+      'Learning analyticsContent recommendation',
+      'Student engagementPerformance reporting',
+      'API for LMS integrationMobile app support'
     ],
     popular: true,
     icon: '🎓',
@@ -434,11 +394,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '2-3 weeks',
     category: 'AI Education & Learning',
     realService: true,
-    technology: ['AI/ML', 'Personalized Learning', 'Educational Analytics', 'Adaptive Assessment', 'Content Recommendation'],
-    integrations: ['LMS platforms', 'Student information systems', 'Content management systems', 'Assessment platforms', 'Analytics tools'],
-    useCases: ['Personalized learning', 'Intelligent tutoring', 'Progress tracking', 'Content recommendation', 'Educational analytics'],
+    technology: ['AI/MLPersonalized Learning', 'Educational AnalyticsAdaptive Assessment', 'Content Recommendation'],
+    integrations: ['LMS platformsStudent information systems', 'Content management systemsAssessment platforms', 'Analytics tools'],
+    useCases: ['Personalized learningIntelligent tutoring', 'Progress trackingContent recommendation', 'Educational analytics'],
     roi: '400% ROI through improved learning outcomes and engagement',
-    competitors: ['Coursera ($49/month)', 'Udemy ($20/month)'],
+    competitors: ['Coursera ($49/month)Udemy ($20/month)'],
     marketSize: '$100B educational technology market',
     growthRate: '200% annual growth',
     variant: 'education-futuristic',
@@ -464,16 +424,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     period: '/month',
     description: 'Revolutionary AI platform for real estate that provides property valuation, market analysis, and investment recommendations.',
     features: [
-      'AI property valuation',
-      'Market analysis',
-      'Investment recommendations',
-      'Property search',
-      'Market predictions',
-      'Risk assessment',
-      'Performance analytics',
-      'Automated reporting',
-      'API for MLS integration',
-      'Mobile app support'
+      'AI property valuationMarket analysis',
+      'Investment recommendationsProperty search',
+      'Market predictionsRisk assessment',
+      'Performance analyticsAutomated reporting',
+      'API for MLS integrationMobile app support'
     ],
     popular: true,
     icon: '🏠',
@@ -486,11 +441,11 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     setupTime: '2-3 weeks',
     category: 'AI Real Estate & Property',
     realService: true,
-    technology: ['AI/ML', 'Property Valuation', 'Market Analysis', 'Predictive Analytics', 'Geospatial Analysis'],
-    integrations: ['MLS systems', 'Property databases', 'Market data feeds', 'Financial platforms', 'Analytics tools'],
-    useCases: ['Property valuation', 'Market analysis', 'Investment decisions', 'Risk assessment', 'Market predictions'],
+    technology: ['AI/MLProperty Valuation', 'Market AnalysisPredictive Analytics', 'Geospatial Analysis'],
+    integrations: ['MLS systemsProperty databases', 'Market data feedsFinancial platforms', 'Analytics tools'],
+    useCases: ['Property valuationMarket analysis', 'Investment decisionsRisk assessment', 'Market predictions'],
     roi: '500% ROI through improved investment decisions and market timing',
-    competitors: ['Zillow ($500/month)', 'Redfin ($300/month)'],
+    competitors: ['Zillow ($500/month)Redfin ($300/month)'],
     marketSize: '$120B real estate technology market',
     growthRate: '180% annual growth',
     variant: 'real-estate-futuristic',
@@ -507,4 +462,4 @@ export const enterpriseAIServices: EnterpriseAIService[] = [
     rating: 4.6,
     reviews: 52
   }
-];
+],

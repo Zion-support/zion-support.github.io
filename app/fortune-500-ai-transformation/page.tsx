@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import ErrorBoundary from '../components/ErrorBoundary';
-import SEO from '../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import ErrorBoundary from '../components/ErrorBoundary',
+import SEO from '../components/SEO',
 export const metadata = {,
-  title: 'Fortune 500 AI Transformation: Success Stories & ROI Analysis';
-  description: 'Explore real-world Fortune 500 AI transformation case studies. Discover how leading enterprises achieved 400%+ ROI through strategic AI implementation.';
-  keywords: ['Fortune 500 AIenterprise AI transformation', 'AI case studiesAI ROI analysis', 'enterprise automationAI success stories'],
-};
+  title: 'Fortune 500 AI Transformation: Success Stories & ROI Analysis',
+  description: 'Explore real-world Fortune 500 AI transformation case studies. Discover how leading enterprises achieved 400%+ ROI through strategic AI implementation.',
+  keywords: ['Fortune 500 AIenterprise AI transformationAI case studiesAI ROI analysis', 'enterprise automationAI success stories']
+},
 export default function Fortune500AITransformation() {,
   return (,
     <ErrorBoundary>,
@@ -45,7 +45,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Transformation Impact Metrics</h2>,
@@ -69,12 +69,12 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Case Studies Section */,}
+        {/* Case Studies Section */}
         <section id="case-studies" className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>,
             <div className="space-y-12">,
-              {/* Case Study 1 */,}
+              {/* Case Study 1 */}
               <div className="bg-gradient-to-r from-blue-900 to-purple-900 p-8 rounded-xl shadow-2xl">,
                 <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                   <div>,
@@ -123,7 +123,7 @@ export default function Fortune500AITransformation() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Case Study 2 */,}
+              {/* Case Study 2 */}
               <div className="bg-gradient-to-r from-green-900 to-blue-900 p-8 rounded-xl shadow-2xl">,
                 <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                   <div>,
@@ -172,7 +172,7 @@ export default function Fortune500AITransformation() {,
                   </div>,
                 </div>,
               </div>,
-              {/* Case Study 3 */,}
+              {/* Case Study 3 */}
               <div className="bg-gradient-to-r from-purple-900 to-pink-900 p-8 rounded-xl shadow-2xl">,
                 <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
                   <div>,
@@ -224,7 +224,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Framework */,}
+        {/* Implementation Framework */}
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-purple-900">,
           <div className="max-w-6xl mx-auto">,
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Proven Implementation Framework</h2>,
@@ -299,7 +299,7 @@ export default function Fortune500AITransformation() {,
             </div>,
           </div>,
         </section>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-purple-900">,
           <div className="max-w-4xl mx-auto text-center">,
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Join the Fortune 500 AI Revolution?</h2>,
@@ -323,5 +323,4 @@ export default function Fortune500AITransformation() {,
           </div>,
         </section>,
       </div>,
-    </ErrorBoundary>,
-  ),}
+    </ErrorBoundary>)}

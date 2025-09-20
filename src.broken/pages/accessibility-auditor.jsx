@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -9,7 +9,7 @@ export default function Page() {
             category: "Technical Accessibility",
             items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross - browser compatibility"]
         }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max - w-7xl mx -auto">
@@ -164,5 +164,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}

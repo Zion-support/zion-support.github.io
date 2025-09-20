@@ -1,45 +1,45 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface RevolutionaryITInfrastructureService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  category: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  benefits: string[],
+  category: string,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  isPopular?: boolean;
-  isNew?: boolean;
+    mobile: string,
+    email: string,
+    address: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] = [
@@ -52,18 +52,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Advanced zero trust network access platform that provides secure, identity-based access to applications and resources without exposing the network.',
     features: [
-      'Identity-based access control',
-      'Application-level security',
-      'Continuous verification',
-      'Micro-segmentation',
-      'Real-time monitoring',
-      'Compliance reporting'
+      'Identity-based access controlApplication-level security',
+      'Continuous verificationMicro-segmentation',
+      'Real-time monitoringCompliance reporting'
     ],
     benefits: [
-      'Eliminate network exposure',
-      'Reduce attack surface by 90%',
-      'Improve compliance posture',
-      'Enable secure remote work'
+      'Eliminate network exposureReduce attack surface by 90%',
+      'Improve compliance postureEnable secure remote work'
     ],
     category: 'Cybersecurity & Network',
     icon: '🛡️',
@@ -71,15 +66,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-red-200',
     link: 'https://ziontechgroup.com/services/zero-trust-network-access',
     marketPosition: 'Zero trust security for modern enterprises',
-    targetAudience: ['Security', 'IT', 'DevOps'],
+    targetAudience: ['SecurityIT', 'DevOps'],
     trialDays: 30,
     setupTime: '1 week',
     realService: true,
-    technology: ['Zero Trust Architecture', 'Identity Management', 'Network Security'],
-    integrations: ['Active Directory', 'Okta', 'Azure AD', 'AWS IAM'],
-    useCases: ['Remote work security', 'Application access', 'Network segmentation'],
+    technology: ['Zero Trust ArchitectureIdentity Management', 'Network Security'],
+    integrations: ['Active DirectoryOkta', 'Azure ADAWS IAM'],
+    useCases: ['Remote work securityApplication access', 'Network segmentation'],
     roi: 'Reduce security incidents by 80% and improve compliance by 90%',
-    competitors: ['Zscaler', 'Cloudflare', 'Palo Alto Networks'],
+    competitors: ['ZscalerCloudflare', 'Palo Alto Networks'],
     marketSize: '$30B Zero Trust Security',
     growthRate: '25% CAGR',
     variant: 'security-zero-trust',
@@ -106,18 +101,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Intelligent cloud cost optimization platform that uses AI to identify savings opportunities, optimize resource allocation, and implement cost controls.',
     features: [
-      'AI-powered cost analysis',
-      'Resource optimization',
-      'Cost allocation',
-      'Budget management',
-      'Automated scaling',
-      'Savings recommendations'
+      'AI-powered cost analysisResource optimization',
+      'Cost allocationBudget management',
+      'Automated scalingSavings recommendations'
     ],
     benefits: [
-      'Reduce cloud costs by 30-40%',
-      'Improve resource utilization',
-      'Automate cost optimization',
-      'Better budget control'
+      'Reduce cloud costs by 30-40%Improve resource utilization',
+      'Automate cost optimizationBetter budget control'
     ],
     category: 'Cloud & FinOps',
     icon: '💰',
@@ -125,15 +115,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/cloud-finops-optimizer',
     marketPosition: 'AI-powered cloud cost optimization',
-    targetAudience: ['Cloud', 'Finance', 'DevOps'],
+    targetAudience: ['CloudFinance', 'DevOps'],
     trialDays: 14,
     setupTime: '2 hours',
     realService: true,
-    technology: ['Machine Learning', 'Cloud APIs', 'Cost Analytics'],
-    integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Terraform'],
-    useCases: ['Cloud cost optimization', 'Resource management', 'Budget control'],
+    technology: ['Machine LearningCloud APIs', 'Cost Analytics'],
+    integrations: ['AWSAzure', 'GCPKubernetes', 'Terraform'],
+    useCases: ['Cloud cost optimizationResource management', 'Budget control'],
     roi: 'Save $50K+ annually in cloud costs',
-    competitors: ['CloudHealth', 'CloudCheckr', 'Apptio'],
+    competitors: ['CloudHealthCloudCheckr', 'Apptio'],
     marketSize: '$15B Cloud Management',
     growthRate: '20% CAGR',
     variant: 'cloud-finops',
@@ -160,18 +150,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Advanced compliance platform that uses AI to monitor, assess, and maintain compliance with various regulations and standards automatically.',
     features: [
-      'AI compliance monitoring',
-      'Automated assessments',
-      'Policy management',
-      'Risk scoring',
-      'Audit preparation',
-      'Real-time alerts'
+      'AI compliance monitoringAutomated assessments',
+      'Policy managementRisk scoring',
+      'Audit preparationReal-time alerts'
     ],
     benefits: [
-      'Reduce compliance costs by 60%',
-      'Improve compliance accuracy by 90%',
-      'Automate audit preparation',
-      'Real-time compliance monitoring'
+      'Reduce compliance costs by 60%Improve compliance accuracy by 90%',
+      'Automate audit preparationReal-time compliance monitoring'
     ],
     category: 'Compliance & Risk',
     icon: '📋',
@@ -179,15 +164,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/ai-compliance-assistant',
     marketPosition: 'AI-powered compliance for modern organizations',
-    targetAudience: ['Compliance', 'Legal', 'Risk Management'],
+    targetAudience: ['ComplianceLegal', 'Risk Management'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['AI/ML', 'Compliance Engines', 'Risk Modeling'],
-    integrations: ['GRC platforms', 'Security tools', 'Business systems'],
-    useCases: ['Regulatory compliance', 'Policy management', 'Risk assessment'],
+    technology: ['AI/MLCompliance Engines', 'Risk Modeling'],
+    integrations: ['GRC platformsSecurity tools', 'Business systems'],
+    useCases: ['Regulatory compliancePolicy management', 'Risk assessment'],
     roi: 'Reduce compliance costs by 60% and improve accuracy by 90%',
-    competitors: ['MetricStream', 'SAP GRC', 'IBM OpenPages'],
+    competitors: ['MetricStreamSAP GRC', 'IBM OpenPages'],
     marketSize: '$25B GRC Market',
     growthRate: '18% CAGR',
     variant: 'compliance-ai',
@@ -214,18 +199,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Comprehensive threat intelligence platform that uses AI to detect, analyze, and respond to cyber threats in real-time with predictive capabilities.',
     features: [
-      'AI threat detection',
-      'Predictive analytics',
-      'Threat hunting',
-      'Incident response',
-      'Intelligence sharing',
-      'Risk assessment'
+      'AI threat detectionPredictive analytics',
+      'Threat huntingIncident response',
+      'Intelligence sharingRisk assessment'
     ],
     benefits: [
-      'Detect threats 90% faster',
-      'Reduce false positives by 80%',
-      'Improve response time by 70%',
-      'Predict emerging threats'
+      'Detect threats 90% fasterReduce false positives by 80%',
+      'Improve response time by 70%Predict emerging threats'
     ],
     category: 'Cybersecurity & Threat Intelligence',
     icon: '🔍',
@@ -233,15 +213,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/advanced-threat-intelligence',
     marketPosition: 'AI-powered threat intelligence for enterprise security',
-    targetAudience: ['Security Operations', 'Threat Intelligence', 'Incident Response'],
+    targetAudience: ['Security OperationsThreat Intelligence', 'Incident Response'],
     trialDays: 30,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['Machine Learning', 'Threat Intelligence', 'Security Analytics'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Security tools'],
-    useCases: ['Threat detection', 'Incident response', 'Security monitoring'],
+    technology: ['Machine LearningThreat Intelligence', 'Security Analytics'],
+    integrations: ['SIEM systemsEDR platforms', 'Security tools'],
+    useCases: ['Threat detectionIncident response', 'Security monitoring'],
     roi: 'Prevent $1M+ in potential breach costs',
-    competitors: ['Recorded Future', 'ThreatConnect', 'Anomali'],
+    competitors: ['Recorded FutureThreatConnect', 'Anomali'],
     marketSize: '$20B Threat Intelligence',
     growthRate: '22% CAGR',
     variant: 'threat-intelligence',
@@ -267,18 +247,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Advanced infrastructure platform that prepares organizations for quantum computing while maintaining current performance and security standards.',
     features: [
-      'Quantum-resistant cryptography',
-      'Hybrid quantum-classical systems',
-      'Performance optimization',
-      'Security hardening',
-      'Migration planning',
-      'Future-proof architecture'
+      'Quantum-resistant cryptographyHybrid quantum-classical systems',
+      'Performance optimizationSecurity hardening',
+      'Migration planningFuture-proof architecture'
     ],
     benefits: [
-      'Prepare for quantum computing',
-      'Maintain current performance',
-      'Enhance security posture',
-      'Future-proof investments'
+      'Prepare for quantum computingMaintain current performance',
+      'Enhance security postureFuture-proof investments'
     ],
     category: 'Quantum Computing & Infrastructure',
     icon: '⚛️',
@@ -286,15 +261,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-cyan-200',
     link: 'https://ziontechgroup.com/services/quantum-ready-infrastructure',
     marketPosition: 'Quantum-ready infrastructure for forward-thinking organizations',
-    targetAudience: ['IT Infrastructure', 'Security', 'Research'],
+    targetAudience: ['IT InfrastructureSecurity', 'Research'],
     trialDays: 60,
     setupTime: '1 month',
     realService: true,
-    technology: ['Post-quantum cryptography', 'Quantum algorithms', 'Hybrid systems'],
-    integrations: ['Cloud platforms', 'Security tools', 'Development platforms'],
-    useCases: ['Infrastructure modernization', 'Security enhancement', 'Research support'],
+    technology: ['Post-quantum cryptographyQuantum algorithms', 'Hybrid systems'],
+    integrations: ['Cloud platformsSecurity tools', 'Development platforms'],
+    useCases: ['Infrastructure modernizationSecurity enhancement', 'Research support'],
     roi: 'Future-proof infrastructure investments worth $2M+',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Quantum'],
     marketSize: '$50B Quantum Computing',
     growthRate: '35% CAGR',
     variant: 'quantum-infrastructure',
@@ -321,18 +296,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Comprehensive security platform for edge computing environments that provides protection, monitoring, and compliance across distributed infrastructure.',
     features: [
-      'Edge device protection',
-      'Zero-trust security',
-      'Real-time monitoring',
-      'Threat detection',
-      'Compliance management',
-      'Automated response'
+      'Edge device protectionZero-trust security',
+      'Real-time monitoringThreat detection',
+      'Compliance managementAutomated response'
     ],
     benefits: [
-      'Secure edge deployments',
-      'Reduce attack surface',
-      'Improve compliance',
-      'Automate security'
+      'Secure edge deploymentsReduce attack surface',
+      'Improve complianceAutomate security'
     ],
     category: 'Edge Computing & Security',
     icon: '🌐',
@@ -340,15 +310,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/services/edge-computing-security',
     marketPosition: 'Comprehensive security for edge computing',
-    targetAudience: ['Edge Computing', 'IoT', 'Security'],
+    targetAudience: ['Edge ComputingIoT', 'Security'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['Zero Trust', 'Edge Security', 'IoT Protection'],
-    integrations: ['Edge platforms', 'IoT devices', 'Security tools'],
-    useCases: ['Edge security', 'IoT protection', 'Distributed infrastructure'],
+    technology: ['Zero TrustEdge Security', 'IoT Protection'],
+    integrations: ['Edge platformsIoT devices', 'Security tools'],
+    useCases: ['Edge securityIoT protection', 'Distributed infrastructure'],
     roi: 'Secure edge deployments worth $500K+',
-    competitors: ['Palo Alto Networks', 'Fortinet', 'Check Point'],
+    competitors: ['Palo Alto NetworksFortinet', 'Check Point'],
     marketSize: '$40B Edge Computing',
     growthRate: '30% CAGR',
     variant: 'edge-security',
@@ -374,18 +344,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Advanced network monitoring platform that uses AI to detect anomalies, predict issues, and optimize network performance automatically.',
     features: [
-      'AI anomaly detection',
-      'Predictive maintenance',
-      'Performance optimization',
-      'Real-time monitoring',
-      'Automated alerts',
-      'Network analytics'
+      'AI anomaly detectionPredictive maintenance',
+      'Performance optimizationReal-time monitoring',
+      'Automated alertsNetwork analytics'
     ],
     benefits: [
-      'Reduce network downtime by 80%',
-      'Improve performance by 40%',
-      'Predict issues before they occur',
-      'Automate network management'
+      'Reduce network downtime by 80%Improve performance by 40%',
+      'Predict issues before they occurAutomate network management'
     ],
     category: 'Network & Monitoring',
     icon: '📡',
@@ -393,15 +358,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/ai-network-monitoring',
     marketPosition: 'AI-powered network monitoring for modern networks',
-    targetAudience: ['Network Operations', 'DevOps', 'IT'],
+    targetAudience: ['Network OperationsDevOps', 'IT'],
     trialDays: 14,
     setupTime: '2 hours',
     realService: true,
-    technology: ['Machine Learning', 'Network Analytics', 'Predictive Modeling'],
-    integrations: ['Network devices', 'Monitoring tools', 'ITSM platforms'],
-    useCases: ['Network monitoring', 'Performance optimization', 'Issue prediction'],
+    technology: ['Machine LearningNetwork Analytics', 'Predictive Modeling'],
+    integrations: ['Network devicesMonitoring tools', 'ITSM platforms'],
+    useCases: ['Network monitoringPerformance optimization', 'Issue prediction'],
     roi: 'Reduce network downtime by 80% and improve performance by 40%',
-    competitors: ['SolarWinds', 'PRTG', 'Nagios'],
+    competitors: ['SolarWindsPRTG', 'Nagios'],
     marketSize: '$18B Network Monitoring',
     growthRate: '16% CAGR',
     variant: 'network-ai',
@@ -427,18 +392,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Comprehensive DevSecOps platform that integrates security into the development pipeline with automated testing, scanning, and compliance checks.',
     features: [
-      'Automated security scanning',
-      'CI/CD integration',
-      'Compliance automation',
-      'Vulnerability management',
-      'Policy enforcement',
-      'Security testing'
+      'Automated security scanningCI/CD integration',
+      'Compliance automationVulnerability management',
+      'Policy enforcementSecurity testing'
     ],
     benefits: [
-      'Integrate security into DevOps',
-      'Reduce security vulnerabilities',
-      'Automate compliance checks',
-      'Speed up development'
+      'Integrate security into DevOpsReduce security vulnerabilities',
+      'Automate compliance checksSpeed up development'
     ],
     category: 'DevSecOps & Automation',
     icon: '🔧',
@@ -446,15 +406,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/devsecops-automation',
     marketPosition: 'Comprehensive DevSecOps for modern development',
-    targetAudience: ['DevOps', 'Security', 'Development'],
+    targetAudience: ['DevOpsSecurity', 'Development'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['CI/CD', 'Security Scanning', 'Automation'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Azure DevOps'],
-    useCases: ['Security automation', 'Compliance', 'Development security'],
+    technology: ['CI/CDSecurity Scanning', 'Automation'],
+    integrations: ['GitHubGitLab', 'JenkinsAzure DevOps'],
+    useCases: ['Security automationCompliance', 'Development security'],
     roi: 'Reduce security vulnerabilities by 70% and speed up development by 30%',
-    competitors: ['Snyk', 'Veracode', 'Checkmarx'],
+    competitors: ['SnykVeracode', 'Checkmarx'],
     marketSize: '$12B DevSecOps',
     growthRate: '24% CAGR',
     variant: 'devsecops',
@@ -481,18 +441,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Advanced data privacy and governance platform that uses AI to manage data classification, privacy compliance, and governance across the organization.',
     features: [
-      'AI data classification',
-      'Privacy compliance',
-      'Data governance',
-      'Consent management',
-      'Data mapping',
-      'Audit trails'
+      'AI data classificationPrivacy compliance',
+      'Data governanceConsent management',
+      'Data mappingAudit trails'
     ],
     benefits: [
-      'Ensure privacy compliance',
-      'Improve data governance',
-      'Reduce compliance risks',
-      'Automate privacy management'
+      'Ensure privacy complianceImprove data governance',
+      'Reduce compliance risksAutomate privacy management'
     ],
     category: 'Data Privacy & Governance',
     icon: '🔒',
@@ -500,15 +455,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-slate-200',
     link: 'https://ziontechgroup.com/services/data-privacy-governance',
     marketPosition: 'AI-powered data privacy and governance',
-    targetAudience: ['Privacy', 'Legal', 'Data Governance'],
+    targetAudience: ['PrivacyLegal', 'Data Governance'],
     trialDays: 30,
     setupTime: '2 weeks',
     realService: true,
-    technology: ['AI/ML', 'Privacy Engineering', 'Data Governance'],
-    integrations: ['Data platforms', 'Privacy tools', 'Legal systems'],
-    useCases: ['Privacy compliance', 'Data governance', 'Consent management'],
+    technology: ['AI/MLPrivacy Engineering', 'Data Governance'],
+    integrations: ['Data platformsPrivacy tools', 'Legal systems'],
+    useCases: ['Privacy complianceData governance', 'Consent management'],
     roi: 'Reduce privacy risks by 80% and improve compliance by 90%',
-    competitors: ['OneTrust', 'TrustArc', 'BigID'],
+    competitors: ['OneTrustTrustArc', 'BigID'],
     marketSize: '$20B Data Privacy',
     growthRate: '20% CAGR',
     variant: 'privacy-governance',
@@ -534,18 +489,13 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     period: '/month',
     description: 'Comprehensive hybrid cloud management platform that provides unified management, monitoring, and optimization across multiple cloud and on-premises environments.',
     features: [
-      'Unified management',
-      'Multi-cloud orchestration',
-      'Performance optimization',
-      'Cost management',
-      'Security integration',
-      'Automated operations'
+      'Unified managementMulti-cloud orchestration',
+      'Performance optimizationCost management',
+      'Security integrationAutomated operations'
     ],
     benefits: [
-      'Unified cloud management',
-      'Optimize performance',
-      'Reduce costs',
-      'Improve security'
+      'Unified cloud managementOptimize performance',
+      'Reduce costsImprove security'
     ],
     category: 'Cloud & Infrastructure',
     icon: '☁️',
@@ -553,15 +503,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/hybrid-cloud-management',
     marketPosition: 'Unified hybrid cloud management for enterprises',
-    targetAudience: ['Cloud', 'Infrastructure', 'DevOps'],
+    targetAudience: ['CloudInfrastructure', 'DevOps'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['Multi-cloud', 'Orchestration', 'Automation'],
-    integrations: ['AWS', 'Azure', 'GCP', 'On-premises'],
-    useCases: ['Hybrid cloud management', 'Multi-cloud operations', 'Infrastructure optimization'],
+    technology: ['Multi-cloudOrchestration', 'Automation'],
+    integrations: ['AWSAzure', 'GCPOn-premises'],
+    useCases: ['Hybrid cloud managementMulti-cloud operations', 'Infrastructure optimization'],
     roi: 'Reduce cloud management overhead by 50% and improve performance by 30%',
-    competitors: ['VMware', 'Red Hat', 'HashiCorp'],
+    competitors: ['VMwareRed Hat', 'HashiCorp'],
     marketSize: '$35B Cloud Management',
     growthRate: '18% CAGR',
     variant: 'hybrid-cloud',
@@ -578,23 +528,23 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 20,
     isNew: true
   }
-];
+],
 
 export const getITInfrastructureServicesByCategory = (category: string) => {
-  return revolutionaryITInfrastructureServices2029.filter(service => service.category === category);
-};
+  return revolutionaryITInfrastructureServices2029.filter(service => service.category === category)
+},
 
 export const getPopularITInfrastructureServices = () => {
-  return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular);
-};
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular),
+},
 
 export const getNewITInfrastructureServices = () => {
-  return revolutionaryITInfrastructureServices2029.filter(service => service.isNew);
-};
+  return revolutionaryITInfrastructureServices2029.filter(service => service.isNew),
+},
 
 export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    return price >= minPrice && price <= maxPrice,
+  }),
+},

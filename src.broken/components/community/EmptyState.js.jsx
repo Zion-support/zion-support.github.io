@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { MessageSquare  } from 'lucide-react';
+import React from 'react',
+import Link from 'next/link',
+import { MessageSquare  } from 'lucide-react',
 export default function Page() {
 >{cta}</Link>
               </Button>
@@ -12,7 +12,7 @@ export default function Page() {
         </Tooltip>
       </TooltipProvider>
     </div>
-  );
-};
-export default EmptyState;
+  ),
+},
+export default EmptyState,
 '"

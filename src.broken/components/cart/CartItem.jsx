@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
 </p>"
@@ -23,6 +23,6 @@ export default function Page() {
         Remove
       </Button>
     </li>
-  );
+  ),
 }
 '"

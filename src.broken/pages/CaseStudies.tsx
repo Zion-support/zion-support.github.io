@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export default React.memo(function CaseStudies () {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
     { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },
     { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },
-    { id: 'government', name: 'Government', icon: Building, count: 0 },
-  ];
+    { id: 'government', name: 'Government', icon: Building, count: 0 }
+  ],
 
   const services = [{ id: 'all', name: 'All Services', icon: Zap, count: 0 },
     { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-  ];
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 }
+  ],
 
   const caseStudies = [{
       id: 1,
@@ -28,16 +28,14 @@ export default function Page() {
       solution:
         'Implemented an AI - powered analytics platform that processes real - time patient data, identifies patterns, and provides predictive insights.',
       results: [
-        '40% improvement in early disease detection',
-        '25% reduction in treatment costs',
-        '60% faster diagnosis times',
-        '95% accuracy in pattern recognition',
+        '40% improvement in early disease detection25% reduction in treatment costs',
+        '60% faster diagnosis times95% accuracy in pattern recognition'
       ],
       duration: '6 months',
       teamSize: '8 developers',
-      technologies: ['AI / ML', 'Python', 'TensorFlow', 'AWS', 'Healthcare APIs'],
+      technologies: ['AI / MLPython', 'TensorFlowAWS', 'Healthcare APIs'],
       featured: true,
-      image: '/api / placeholder / 600 / 400',
+      image: '/api / placeholder / 600 / 400'
     },
     {
       id: 2,
@@ -49,21 +47,17 @@ export default function Page() {
         'Global Finance needed to process complex risk calculations that would take traditional computers weeks to complete.',
       solution:
         'Developed a quantum computing solution that processes risk models in hours instead of weeks, enabling real - time risk assessment.',
-      results: ['1000x faster risk calculations',
-        'Real - time risk monitoring',
-        '30% improvement in risk accuracy',
-        '$50M annual cost savings',
+      results: ['1000x faster risk calculationsReal - time risk monitoring',
+        '30% improvement in risk accuracy$50M annual cost savings'
       ],
       duration: '12 months',
       teamSize: '12 researchers',
-      technologies: ['Quantum Computing',
-        'Qiskit',
-        'Python',
-        'IBM Quantum',
-        'Risk Models',
+      technologies: ['Quantum ComputingQiskit',
+        'PythonIBM Quantum',
+        'Risk Models'
       ],
       featured: true,
-      image: '/api / placeholder / 600 / 400',
+      image: '/api / placeholder / 600 / 400'
     },
     {
       id: 3,
@@ -75,21 +69,17 @@ export default function Page() {
         'SecureNet needed to protect customer data and prevent cyber attacks while maintaining seamless user experience.',
       solution:
         'Implemented a comprehensive zero - trust security architecture with AI - powered threat detection and automated response systems.',
-      results: ['99.9% threat detection rate',
-        'Zero security breaches',
-        '50% reduction in false positives',
-        '24 / 7 automated monitoring',
+      results: ['99.9% threat detection rateZero security breaches',
+        '50% reduction in false positives24 / 7 automated monitoring'
       ],
       duration: '8 months',
       teamSize: '10 security engineers',
-      technologies: ['Zero Trust',
-        'AI Security',
-        'Kubernetes',
-        'Terraform',
-        'SIEM',
+      technologies: ['Zero TrustAI Security',
+        'KubernetesTerraform',
+        'SIEM'
       ],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
+      image: '/api / placeholder / 600 / 400'
     },
     {
       id: 4,
@@ -101,16 +91,14 @@ export default function Page() {
         'TechCorp needed to modernize their legacy systems and improve deployment efficiency for their manufacturing software.',
       solution:
         'Migrated to cloud infrastructure and implemented CI / CD pipelines with automated testing and deployment processes.',
-      results: ['90% faster deployment times',
-        '99.9% uptime achieved',
-        '40% reduction in infrastructure costs',
-        'Automated scaling capabilities',
+      results: ['90% faster deployment times99.9% uptime achieved',
+        '40% reduction in infrastructure costsAutomated scaling capabilities'
       ],
       duration: '10 months',
       teamSize: '15 DevOps engineers',
-      technologies: ['AWS', 'Kubernetes', 'Docker', 'Jenkins', 'Terraform'],
+      technologies: ['AWSKubernetes', 'DockerJenkins', 'Terraform'],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
+      image: '/api / placeholder / 600 / 400'
     },
     {
       id: 5,
@@ -122,55 +110,51 @@ export default function Page() {
         'CitySmart needed to process data from thousands of IoT sensors in real - time for traffic management and public safety.',
       solution:
         'Deployed edge computing infrastructure that processes sensor data locally, reducing latency and improving response times.',
-      results: ['Real - time traffic optimization',
-        '30% reduction in response times',
-        'Scalable IoT infrastructure',
-        'Improved public safety',
+      results: ['Real - time traffic optimization30% reduction in response times',
+        'Scalable IoT infrastructureImproved public safety'
       ],
       duration: '14 months',
       teamSize: '20 engineers',
-      technologies: ['IoT',
-        'Edge Computing',
-        'Kubernetes',
-        'MQTT',
-        'Time Series DB',
+      technologies: ['IoTEdge Computing',
+        'KubernetesMQTT',
+        'Time Series DB'
       ],
       featured: false,
-      image: '/api / placeholder / 600 / 400',
-    },
-  ];
+      image: '/api / placeholder / 600 / 400'
+    }
+  ],
 
   // Calculate counts
   industries.forEach(industry => {
     if (industry.id === 'all') {
-      industry.count = caseStudies.length;
+      industry.count = caseStudies.length,
     } else {
-      industry.count = caseStudies.filter(cs => cs.industry === industry.id) .length;
+      industry.count = caseStudies.filter(cs => cs.industry === industry.id) .length,
     }
-  }) ;
+  }) ,
 
   services.forEach(service => {
     if (service.id === 'all') {
-      service.count = caseStudies.length;
+      service.count = caseStudies.length,
     } else {
-      service.count = caseStudies.filter(cs => cs.service === service.id) .length;
+      service.count = caseStudies.filter(cs => cs.service === service.id) .length,
     }
-  }) ;
+  }) ,
 
   const filteredCaseStudies = caseStudies.filter(cs => {
-    const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry;
-    const matchesService = selectedService === 'all' || cs.service === selectedService;
+    const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry,
+    const matchesService = selectedService === 'all' || cs.service === selectedService,
     const matchesSearch = cs.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       cs.company.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-      cs.challenge.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    return matchesIndustry && matchesService && matchesSearch;
-  }) ;
+      cs.challenge.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    return matchesIndustry && matchesService && matchesSearch,
+  }) ,
 
   const stats = [{ label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: Star },
     { label: 'Average ROI', value: '340%', icon: TrendingUp },
-    { label: 'Time to Value', value: '6 months', icon: Clock },
-  ];
+    { label: 'Time to Value', value: '6 months', icon: Clock }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 50 via - blue - 50 to - indigo -50">
       {/* Header */}
@@ -382,7 +366,7 @@ export default function Page() {
             <p className="text-blue - 100 mb-6 max - w-2xl mx -auto">
               Let's discuss how Zion Tech Group can help transform your business
               with cutting - edge technology solutions.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="inline - flex items - center px-6 py-3 bg-white text-blue - 600 font - medium rounded-lg hover:bg-gray - 50 transition -colors"
@@ -399,5 +383,5 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) ;
+    </div>) 
 }

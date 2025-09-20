@@ -2,7 +2,7 @@
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">,
                 <div className="flex flex-col items-center text-center">,
                   <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">,
-                    {user.displayName.split(' ').map(name => name[0]).join(''),}
+                    {user.displayName.split(' ').map(name => name[0]).join('')}
                   </div>,
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>,
                   <p className="text-zion-slate-light mb-2">{user.email}</p>,
@@ -11,7 +11,7 @@
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>,
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white",
-                    onClick={() => window.location.href = "/profile",}
+                    onClick={() => window.location.href = "/profile"}
                   >,
                     <UserCheck size={16} />,
                     Edit Profile,
@@ -27,7 +27,7 @@
                     <span className="text-zion-cyan font-medium">65%</span>,
                   </div>,
                   <div className="w-full bg-zion-blue rounded-full h-2">,
-                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" ,}}></div>,
+                    <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>,
                   </div>,
                   <div className="flex justify-between items-center">,
                     <span className="text-zion-slate-light">Community Points</span>,
@@ -45,7 +45,7 @@
                   </div>,
                       className="w-full flex items-center justify-center gap-2",
                       variant="outline",
-                      onClick={handleTestNotification,}
+                      onClick={handleTestNotification}
                     >,
                       <Send size={16} className="text-zion-cyan" />,
                       Send Test Notification,
@@ -93,7 +93,7 @@
                   <div className="flex items-center gap-2">,
                     <NotificationCenter />,
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white",
-                      onClick={logout,}
+                      onClick={logout}
                     >,
                       <LogOut size={16} className="mr-2" />,
                       Logout,
@@ -116,7 +116,7 @@
                   <div className="grid grid-cols-3 sm: grid-cols-4 gap-4">,
                     <div className="flex flex-col items-center">,
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">,
-                        <UserCheck size={24,} className="text-white" />,
+                        <UserCheck size={24} className="text-white" />,
                       </div>,
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>,
                     </div>,
@@ -152,7 +152,7 @@
       </div>,
       <Footer />,
     </>,
-  );
+  ),
 }
-,
+
 })

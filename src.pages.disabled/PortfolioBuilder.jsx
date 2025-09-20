@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface PortfolioBuilderProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {,
@@ -8,8 +8,7 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {,
     <div>,
       <h1>PortfolioBuilder</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

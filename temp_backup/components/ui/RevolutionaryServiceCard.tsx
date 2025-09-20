@@ -1,49 +1,49 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react',
 
 interface RevolutionaryServiceCardProps {
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    price: string;
-    period: string;
-    description: string;
-    features: string[];
-    popular: boolean;
-    icon: string;
-    color: string;
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
     contactInfo: {
-      mobile: string;
-      email: string;
-      address: string;
-      website: string;
-    };
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
-    reviews: number;
-  };
-  index: number;
+      mobile: string,
+      email: string,
+      address: string,
+      website: string
+    },
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number
+  },
+  index: number
 }
 
 const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {
@@ -71,7 +71,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
@@ -84,7 +84,7 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         ease: "easeInOut" as const
       }
     }
-  };
+  },
 
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -97,13 +97,13 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
         ease: "easeOut" as const
       }
     })
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">RevolutionaryServiceCard</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default RevolutionaryServiceCard;
+  ),
+},
+export default RevolutionaryServiceCard,

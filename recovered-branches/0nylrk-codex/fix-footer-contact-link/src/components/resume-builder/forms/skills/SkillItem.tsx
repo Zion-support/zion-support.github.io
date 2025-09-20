@@ -1,6 +1,6 @@
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
   return (,
     <Badge,
       key={skill.id} ,
@@ -19,5 +19,5 @@ import { Button } from '@/components/ui/button';
         <Trash2 className="h-3 w-3" />,
       </Button>,
     </Badge>,
-  );
-};
+  ),
+},

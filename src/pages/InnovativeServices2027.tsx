@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Shield, 
   Cloud, 
   Rocket, 
@@ -31,12 +31,11 @@ import {
   Banknote,
   Building,
   Phone
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import SEO from '../components/SEO';
-
+} from "lucide-react";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
+import SEO from "../components/SEO";
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Customer Success': Brain,
+  'AI & Customer Success': Brain;
   'Blockchain & DeFi': Lock,
   'Quantum Computing': Zap,
   'AI & Healthcare': Heart,
@@ -46,35 +45,25 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Space Tech': Satellite,
   'FinTech': Banknote,
   'IoT & Smart Cities': Building
-};
+},
 
 const categoryColors: { [key: string]: string } = {
-  'AI & Customer Success': 'from-cyan-500 to-blue-600',
-  'Blockchain & DeFi': 'from-purple-500 to-indigo-600',
-  'Quantum Computing': 'from-violet-500 to-purple-600',
-  'AI & Healthcare': 'from-emerald-500 to-green-600',
-  'Metaverse & AR/VR': 'from-pink-500 to-rose-600',
-  'Autonomous Systems': 'from-orange-500 to-red-600',
-  'Green Tech': 'from-green-500 to-emerald-600',
-  'Space Tech': 'from-slate-500 to-gray-600',
-  'FinTech': 'from-yellow-500 to-amber-600',
-  'IoT & Smart Cities': 'from-blue-500 to-cyan-600'
+  'AI & Customer Success': 'from-cyan-500 to-blue-600Blockchain & DeFi': 'from-purple-500 to-indigo-600Quantum Computing': 'from-violet-500 to-purple-600AI & Healthcare': 'from-emerald-500 to-green-600Metaverse & AR/VR': 'from-pink-500 to-rose-600Autonomous Systems': 'from-orange-500 to-red-600Green Tech': 'from-green-500 to-emerald-600Space Tech': 'from-slate-500 to-gray-600FinTech': 'from-yellow-500 to-amber-600IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
-
 export default function InnovativeServices2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation'),
 
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))],
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -84,11 +73,9 @@ export default function InnovativeServices2027() {
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
       case 'innovation':
         return a.innovationLevel === 'revolutionary' ? 1 : -1;
-      default:
-        return 0;
+      default: return 0
     }
   });
-
   return (
     <div className="min-h-screen bg-futuristic">
       <SEO 
@@ -208,8 +195,7 @@ export default function InnovativeServices2027() {
                   <div className={`p-6 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>
                     <div className="flex items-center justify-between mb-4">
                       {React.createElement(categoryIcons[service.category] || Star, {
-                        className: "w-8 h-8 text-white",
-                        size: 32
+                        className: "w-8 h-8 text-white",size: 32
                       })}
                       <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
                         {service.innovationLevel}
@@ -328,7 +314,7 @@ export default function InnovativeServices2027() {
               <button
                 onClick={() => {
                   setSelectedCategory('all');
-                  setSearchQuery('');
+                  setSearchQuery(''),
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >

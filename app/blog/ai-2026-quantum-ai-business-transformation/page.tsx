@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Metadata } from 'next',
+import Link from 'next/link',
 export const metadata: Metadata = {,
-  title: 'AI 2026: Quantum AI Business Transformation Guide';
-  description: 'Discover how quantum AI is revolutionizing business operations. Complete guide to quantum computing applications in enterprise environments.';
-  keywords: ['quantum AIquantum computing', 'business transformationenterprise AI', 'quantum algorithms'],
-};
+  title: 'AI 2026: Quantum AI Business Transformation Guide',
+  description: 'Discover how quantum AI is revolutionizing business operations. Complete guide to quantum computing applications in enterprise environments.',
+  keywords: ['quantum AIquantum computingbusiness transformationenterprise AI', 'quantum algorithms']
+},
 export default function QuantumAIBusinessTransformation() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -29,7 +29,7 @@ export default function QuantumAIBusinessTransformation() {,
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl mb-8">,
             <h2 className="text-2xl font-bold text-gray-900 mb-4">⚡ Quantum AI Revolution</h2>,
             <p className="text-gray-700 mb-4">,
-              Quantum AI represents the convergence of quantum computing and artificial intelligence;
+              Quantum AI represents the convergence of quantum computing and artificial intelligence,
               offering exponential computational power for complex business problems.,
             </p>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-center">,
@@ -218,5 +218,4 @@ export default function QuantumAIBusinessTransformation() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

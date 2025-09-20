@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -73,7 +73,7 @@ export default function Page() {
         category: "Content",
         link: "/request - quote?service = ai - content"
 
-];
+],
 const categories = [{ name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
     { name: "Strategy", value: "strategy", icon: <CheckCircle className="h-4 w-4"/> },
     { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
@@ -87,11 +87,11 @@ const categories = [{ name: "All", value: "all", icon: <Globe className="h-4 w-4
     { name: "Integration", value: "integration", icon: <Code className="h-4 w-4"/> },
     { name: "Security", value: "security", icon: <Lock className="h-4 w-4"/> },
     { name: "Content", value: "content", icon: <FileText className="h-4 w-4"/> }
-];
-    const [selectedCategory, setSelectedCategory] = React.useState("all");
+],
+    const [selectedCategory, setSelectedCategory] = React.useState("all"),
     const filteredServices = selectedCategory === "all"
         ? AIServices
-        : AIServices.filter(service => service.category.toLowerCase () === selectedCategory) ;
+        : AIServices.filter(service => service.category.toLowerCase () === selectedCategory) ,
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate via - zion - blue - dark to - zion -slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - purple - dark via - zion - purple to - zion - cyan py-20">

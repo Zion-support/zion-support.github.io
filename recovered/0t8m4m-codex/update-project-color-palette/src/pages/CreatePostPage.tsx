@@ -1,31 +1,31 @@
 
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
 
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
 }
 
 export default function CreatePostPage() {
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const [searchParams] = useSearchParams(),
   
   // Get category from URL query params if available
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
   
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
-  };
+  },
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -33,23 +33,23 @@ export default function CreatePostPage() {
       // For now, we'll just simulate a successful post creation
       
       // Parse tags into an array
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
+      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       
       toast({
         title: "Post created",
         description: "Your post has been published successfully"
-      });
+      }),
       
       // Redirect to the forum category
-      navigate(`/community/category/${values.categoryId}`);
+      navigate(`/community/category/${values.categoryId}`),
     } catch (error) {
       toast({
         title: "Error",
         description: "There was a problem creating your post",
         variant: "destructive"
-      });
+      }),
     }
-  };
+  },
 
   return (
     <AppLayout>
@@ -73,5 +73,5 @@ export default function CreatePostPage() {
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />
       </div>
     </AppLayout>
-  );
+  ),
 }

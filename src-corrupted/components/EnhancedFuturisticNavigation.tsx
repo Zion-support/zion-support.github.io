@@ -1,1 +1,1 @@
-export default EnhancedFuturisticNavigation;
+export default EnhancedFuturisticNavigation,

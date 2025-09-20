@@ -1,23 +1,21 @@
 exports.handler = async function(event, context) {
-  console.log('🤖 revenue-ideas-lab function triggered');
+  console.log('🤖 revenue-ideas-lab function triggered'),
   
   try {
     // Revenue ideas lab logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     // Simulate revenue ideas operations
     const ideasOperations = [
-      'market-opportunity-analysis',
-      'revenue-model-exploration',
-      'pricing-strategy-development',
-      'monetization-planning'
-    ];
+      'market-opportunity-analysisrevenue-model-exploration',
+      'pricing-strategy-developmentmonetization-planning'
+    ],
     
     // Simulate operation execution
-    const operationResults = {};
+    const operationResults = {},
     for (const operation of ideasOperations) {
-      await new Promise(resolve => setTimeout(resolve, 240)); // Simulate ideas generation time
-      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-exploration'; // 96% success rate
+      await new Promise(resolve => setTimeout(resolve, 240)), // Simulate ideas generation time
+      operationResults[operation] = Math.random() > 0.04 ? 'success' : 'needs-exploration', // 96% success rate
     }
     
     // Simulate revenue metrics
@@ -26,7 +24,7 @@ exports.handler = async function(event, context) {
       highPotentialIdeas: Math.floor(Math.random() * 20) + 10, // 10-30
       marketViability: Math.floor(Math.random() * 35) + 65, // 65-100%
       revenuePotential: Math.floor(Math.random() * 40) + 60 // 60-100
-    };
+    },
     
     const result = {
       statusCode: 200,
@@ -41,13 +39,13 @@ exports.handler = async function(event, context) {
         ideasQuality: revenueMetrics.marketViability > 90 ? 'excellent' : revenueMetrics.marketViability > 75 ? 'good' : 'needs-improvement',
         nextRun: new Date(Date.now() + 6 * 60 * 60 * 1000).toISOString() // 6 hours from now
       })
-    };
+    },
     
-    console.log('✅ revenue-ideas-lab completed successfully');
-    return result;
+    console.log('✅ revenue-ideas-lab completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ revenue-ideas-lab failed:', error);
+    console.error('❌ revenue-ideas-lab failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -56,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'revenue-ideas-lab',
         status: 'error'
       })
-    };
+    },
   }
-};
+},

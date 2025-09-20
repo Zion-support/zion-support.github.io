@@ -1,19 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import './globals.css';
-import '../styles/optimizations.css';
-import PerformanceMonitor from '../components/PerformanceMonitor';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import NewContentBanner from '../components/NewContentBanner';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedSEO from '../components/EnhancedSEO';
-import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026';
-import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026';
-import PerformanceOptimizations from '../components/PerformanceOptimizations';
+import React from 'react',
+import Link from 'next/link',
+import './globals.css',
+import '../styles/optimizations.css',
+import PerformanceMonitor from '../components/PerformanceMonitor',
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer',
+import NewContentBanner from '../components/NewContentBanner',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedSEO from '../components/EnhancedSEO',
+import AdvancedPerformanceMonitor2026 from '../components/AdvancedPerformanceMonitor2026',
+import UltimateAIAssistant2026 from '../components/UltimateAIAssistant2026',
+import PerformanceOptimizations from '../components/PerformanceOptimizations',
 export const metadata = {,
-  title: 'Zion Tech Group - AI & Technology Solutions';
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
-};
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'
+},
 function Header() {,
   return (,
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">,
@@ -33,7 +33,7 @@ function Header() {,
                 BREAKTHROUGH,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -124,7 +124,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -183,7 +183,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -227,7 +227,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -292,7 +292,7 @@ function Header() {,
                 SINGULARITY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -354,7 +354,7 @@ function Header() {,
                 ULTIMATE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -394,7 +394,7 @@ function Header() {,
                 TRANSCENDENT,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -434,7 +434,7 @@ function Header() {,
                 REVOLUTIONARY,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -474,7 +474,7 @@ function Header() {,
                 FUTURE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -511,7 +511,7 @@ function Header() {,
                 FUTURE,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -554,7 +554,7 @@ function Header() {,
                 NEW,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -874,7 +874,7 @@ function Header() {,
             <button className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold relative flex items-center">,
               Content Library,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -1012,7 +1012,7 @@ function Header() {,
                 BREAKTHROUGH,
               </span>,
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">,
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M19 9l-7 7-7-7" />,
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />,
               </svg>,
             </button>,
             <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover: opacity-100 group-hover:visible transition-all duration-200 z-50">,
@@ -1109,19 +1109,19 @@ function Header() {,
             Contact,
           </Link>,
         </div>,
-        {/* Mobile menu button */,}
+        {/* Mobile menu button */}
         <button,
           className="md: hidden p-2 rounded-md hover:bg-gray-100 transition-colors focus-visible:focus",
           aria-label="Toggle menu",
           aria-expanded="false",
         >,
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">,
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2,} d="M4 6h16M4 12h16M4 18h16" />,
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />,
           </svg>,
         </button>,
       </nav>,
     </header>,
-  );
+  ),
 }
 ,
 function Footer() {,
@@ -1244,24 +1244,24 @@ function Footer() {,
           </div>,
         </div>,
         <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center">,
-          © {new Date().getFullYear(),} Zion Tech Group. All rights reserved.,
+          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.,
         </div>,
       </div>,
     </footer>,
-  );
+  ),
 }
 ,
 export default function RootLayout({,
-  children,
+  children
 }: {,
-  children: React.ReactNode,}) {,
+  children: React.ReactNode}) {,
   return (,
     <html lang="en" className="scroll-smooth">,
       <head>,
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https: //fonts.googleapis.com" />,
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-        {/* DNS prefetch for performance */,}
+        {/* DNS prefetch for performance */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />,
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />,
         {/* Performance Optimizations */}
@@ -1271,40 +1271,40 @@ export default function RootLayout({,
           type="application/ld+json",
           dangerouslySetInnerHTML={{,
             __html: JSON.stringify({,
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "url": "https://zion.tech";
-              "logo": "https://zion.tech/logo.png";
-              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.";
-              "foundingDate": "2020";
+              "@context": "https: //schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://zion.tech",
+              "logo": "https://zion.tech/logo.png",
+              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.",
+              "foundingDate": "2020",
               "founders": [,
                 {,
-                  "@type": "Person";
-                  "name": "Zion Tech Group Founders",
+                  "@type": "Person",
+                  "name": "Zion Tech Group Founders"
                 }
-              ];
+              ],
               "address": {,
-                "@type": "PostalAddress";
-                "addressCountry": "US",
-              };
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
               "contactPoint": {,
-                "@type": "ContactPoint";
-                "telephone": "+1-555-ZION-TECH";
-                "contactType": "customer service";
-                "availableLanguage": "English",
-              };
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
               "sameAs": [,
-                "https://twitter.com/ziontechgroup";
-                "https://linkedin.com/company/zion-tech-group";
-                "https: //github.com/zion-tech-group",
-              ];
+                "https: //twitter.com/ziontechgroup",
+                "https://linkedin.com/company/zion-tech-group",
+                "https: //github.com/zion-tech-group"
+              ],
               "offers": {,
-                "@type": "Offer";
-                "description": "AI Solutions and Technology Services";
-                "category": "Technology Services",
+                "@type": "Offer",
+                "description": "AI Solutions and Technology Services",
+                "category": "Technology Services"
               }
-            }),
+            })
           }}
         />,
         {/* Additional SEO meta tags */}
@@ -1332,7 +1332,7 @@ export default function RootLayout({,
               >,
                 Skip to main content,
               </a>,
-              {/* Enhanced Navigation */,}
+              {/* Enhanced Navigation */}
               <EnhancedNavigation />,
               {/* New Content Banner */}
               <NewContentBanner />,
@@ -1388,5 +1388,5 @@ export default function RootLayout({,
         </div>,
       </body>,
     </html>,
-  ),
+  )
 }

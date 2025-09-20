@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' },
-  ];
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
+  ],
   const filteredServices = enhancedServices2025.filter(service => {
 
     const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
   const containerVariants = {
 
     hidden: { opacity: 0 },
@@ -21,7 +21,7 @@ export default function Page() {
       transition: {
 
         staggerChildren: 0.1,
-        delayChildren: 0.2}}};
+        delayChildren: 0.2}}},
   const itemVariants = {
 
     hidden: { opacity: 0, y: 20 },
@@ -29,7 +29,7 @@ export default function Page() {
 
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }}};
+      transition: { duration: 0.5 }}},
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}"
@@ -123,8 +123,7 @@ export default function Page() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            {filteredServices.map((service, index) => (
-              <motion.div
+            {filteredServices.map((service, index) => (<motion.div
                 key={service.id}
                 variants={itemVariants}"
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -140,7 +139,7 @@ export default function Page() {
                     {service.name}
                   </h3>"
                   <p className="text-sm text-blue-400 font-medium">
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>
                 </div>
 
@@ -249,8 +248,8 @@ export default function Page() {
               <button
                 onClick={() => {
 
-                  setSelectedCategory('all');
-                  setSearchTerm('');
+                  setSelectedCategory('all'),
+                  setSearchTerm(''),
                 }}"
                 className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
               >
@@ -342,7 +341,7 @@ export default function Page() {
             <p>
               Website:{' '}
               <a"
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 className="text-blue-400 hover:text-blue-300"
               >
                 https://ziontechgroup.com
@@ -352,7 +351,7 @@ export default function Page() {
         </div>
       </section>
     </div>
-  );
-};
-export default EnhancedServicesShowcase;
+  )
+},
+export default EnhancedServicesShowcase,
 '"`

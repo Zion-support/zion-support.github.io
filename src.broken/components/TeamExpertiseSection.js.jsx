@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -11,8 +11,8 @@ export default function Page() {
         experience: "11+ years","
         avatar: "/avatars/lisa-patel.jpg","
         bio: "Cybersecurity expert with deep knowledge of security frameworks, compliance standards, and threat detection systems.","
-        skills["Security Auditing", "Compliance", "Penetration Testing", "Incident Response", "Risk Assessment"],;"
-        achievements["40+ Security Projects", "CISSP Certified", "Security Excellence Award"],;
+        skills["Security Auditing", "Compliance", "Penetration Testing", "Incident Response", "Risk Assessment"],"
+        achievements["40+ Security Projects", "CISSP Certified", "Security Excellence Award"],
         rating: 4.9,
         projects: 53,"
         location: "Washington, DC","
@@ -28,15 +28,15 @@ export default function Page() {
         experience: "9+ years","
         avatar: "/avatars/alex-johnson.jpg","
         bio: "DevOps specialist focused on automation, continuous integration, and deployment optimization for high-performance systems.","
-        skills["Jenkins", "GitLab CI", "Terraform", "Ansible", "Monitoring"],;"
-        achievements["70+ DevOps Projects", "DevOps Certification", "Automation Award"],;
+        skills["Jenkins", "GitLab CI", "Terraform", "Ansible", "Monitoring"],"
+        achievements["70+ DevOps Projects", "DevOps Certification", "Automation Award"],
         rating: 4.7,
         projects: 81,"
         location: "Denver, CO","
         linkedin: "https://linkedin.com/in/alex-johnson","
         github: "https://github.com/alexjohnson-devops"
     }
-];
+],
 const expertiseAreas = [{
 "
         name: "Artificial Intelligence","
@@ -97,15 +97,15 @@ const expertiseAreas = [{
         projects: 80,"
         success: "99%"
     }
-];
+],
 const stats = ["
     { icon: <Users className="w-6 h-6"/>, value: "100+", label: "Expert Team Members" },"
     { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Completed" },"
     { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Average Rating" },"
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" }
-];
-    const [selectedMember, setSelectedMember] = useState(null);
-    const [hoveredExpertise, setHoveredExpertise] = useState(null);
+],
+    const [selectedMember, setSelectedMember] = useState(null),
+    const [hoveredExpertise, setHoveredExpertise] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -118,7 +118,7 @@ const stats = ["
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -135,7 +135,7 @@ const stats = ["
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

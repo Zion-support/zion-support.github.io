@@ -1,51 +1,34 @@
-import React from 'react';
-import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from 'lucide-react';
-
+import React from "react";
+import { Cloud, Server, Shield, Zap, Database, Globe, Cpu, BarChart3 } from "lucide-react";
 const CloudServices = () => {
   const cloudServices = [
     {
-      title: "Cloud Migration & Strategy",
-      description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
-      price: "From $8,500/project",
+      title: "Cloud Migration & Strategy",description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",price: "From $8,500/project",
       features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],
       icon: Cloud
-    },
+    };
     {
-      title: "Cloud-Native Development",
-      description: "Build scalable applications using cloud-native technologies and microservices architecture.",
-      price: "From $12,000/project",
+      title: "Cloud-Native Development",description: "Build scalable applications using cloud-native technologies and microservices architecture.",price: "From $12,000/project",
       features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"],
       icon: Server
-    },
+    };
     {
-      title: "Cloud Security & Compliance",
-      description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
-      price: "From $6,500/month",
+      title: "Cloud Security & Compliance",description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",price: "From $6,500/month",
       features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
     }
   ];
-
   const cloudPlatforms = [
     {
-      name: "Amazon Web Services",
-      description: "Comprehensive cloud services and infrastructure",
-      icon: Cloud,
-      features: ["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
+      name: "Amazon Web Services",description: "Comprehensive cloud services and infrastructure",icon: Cloud,features: ["EC2, S3, Lambda", "RDS, DynamoDB", "CloudFormation", "CloudWatch"]
     },
     {
-      name: "Microsoft Azure",
-      description: "Enterprise cloud platform with hybrid capabilities",
-      icon: Server,
-      features: ["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
+      name: "Microsoft Azure",description: "Enterprise cloud platform with hybrid capabilities",icon: Server,features: ["Virtual Machines", "Azure SQL", "Functions", "Monitor"]
     },
     {
-      name: "Google Cloud Platform",
-      description: "AI-first cloud platform with advanced analytics",
-      icon: Globe,
-      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
+      name: "Google Cloud Platform",description: "AI-first cloud platform with advanced analytics",icon: Globe,features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
     }
-  ];
+  ],
 
   const benefits = [
     "Scalable infrastructure that grows with your business",
@@ -54,12 +37,12 @@ const CloudServices = () => {
     "Faster time to market with cloud-native tools",
     "Global availability and disaster recovery",
     "Automated scaling and resource management"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -71,7 +54,7 @@ const CloudServices = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Accelerate your digital transformation with modern cloud infrastructure,
+              Accelerate your digital transformation with modern cloud infrastructure;
               DevOps practices, and scalable solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -197,7 +180,7 @@ const CloudServices = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Scale Your Infrastructure?
@@ -216,7 +199,6 @@ const CloudServices = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default CloudServices;

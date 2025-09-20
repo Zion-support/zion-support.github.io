@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   Code,
   Database,
@@ -11,64 +11,57 @@ import {
   Server,
   Cpu,
   Network
-} from 'lucide-react';
-
+} from "lucide-react";
 const technologyCategories = [
   {
-    category: "Frontend Technologies",
-    technologies: [
-      { name: "React", icon: "⚛️", proficiency: 95 },
-      { name: "Vue.js", icon: "💚", proficiency: 90 },
-      { name: "Angular", icon: "🅰️", proficiency: 85 },
-      { name: "TypeScript", icon: "📘", proficiency: 95 },
+    category: "Frontend Technologies",technologies: [
+      { name: "React", icon: "⚛️", proficiency: 95 };
+      { name: "Vue.js", icon: "💚", proficiency: 90 };
+      { name: "Angular", icon: "🅰️", proficiency: 85 };
+      { name: "TypeScript", icon: "📘", proficiency: 95 };
       { name: "Tailwind CSS", icon: "🎨", proficiency: 90 }
-    ],
+    ];
     color: "from-blue-500 to-cyan-500"
-  },
+  };
   {
-    category: "Backend Technologies",
-    technologies: [
-      { name: "Node.js", icon: "🟢", proficiency: 95 },
-      { name: "Python", icon: "🐍", proficiency: 90 },
-      { name: "Java", icon: "☕", proficiency: 85 },
-      { name: "Go", icon: "🐹", proficiency: 80 },
+    category: "Backend Technologies",technologies: [
+      { name: "Node.js", icon: "🟢", proficiency: 95 };
+      { name: "Python", icon: "🐍", proficiency: 90 };
+      { name: "Java", icon: "☕", proficiency: 85 };
+      { name: "Go", icon: "🐹", proficiency: 80 };
       { name: "Rust", icon: "🦀", proficiency: 75 }
-    ],
+    ];
     color: "from-green-500 to-emerald-500"
-  },
+  };
   {
-    category: "AI & Machine Learning",
-    technologies: [
-      { name: "TensorFlow", icon: "🧠", proficiency: 90 },
-      { name: "PyTorch", icon: "🔥", proficiency: 85 },
-      { name: "Scikit-learn", icon: "📊", proficiency: 90 },
-      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 },
+    category: "AI & Machine Learning",technologies: [
+      { name: "TensorFlow", icon: "🧠", proficiency: 90 };
+      { name: "PyTorch", icon: "🔥", proficiency: 85 };
+      { name: "Scikit-learn", icon: "📊", proficiency: 90 };
+      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 };
       { name: "Hugging Face", icon: "🤗", proficiency: 80 }
-    ],
+    ];
     color: "from-purple-500 to-pink-500"
-  },
+  };
   {
-    category: "Cloud & DevOps",
-    technologies: [
-      { name: "AWS", icon: "☁️", proficiency: 90 },
-      { name: "Azure", icon: "🔷", proficiency: 85 },
-      { name: "Google Cloud", icon: "🔵", proficiency: 80 },
-      { name: "Docker", icon: "🐳", proficiency: 90 },
+    category: "Cloud & DevOps",technologies: [
+      { name: "AWS", icon: "☁️", proficiency: 90 };
+      { name: "Azure", icon: "🔷", proficiency: 85 };
+      { name: "Google Cloud", icon: "🔵", proficiency: 80 };
+      { name: "Docker", icon: "🐳", proficiency: 90 };
       { name: "Kubernetes", icon: "⚓", proficiency: 85 }
-    ],
+    ];
     color: "from-orange-500 to-red-500"
   }
 ];
-
 const emergingTech = [
-  { name: "Quantum Computing", icon: "⚛️", status: "Research" },
-  { name: "Blockchain", icon: "🔗", status: "Production" },
-  { name: "Edge Computing", icon: "🌐", status: "Development" },
-  { name: "5G Networks", icon: "📡", status: "Integration" },
-  { name: "IoT Platforms", icon: "📱", status: "Production" },
+  { name: "Quantum Computing", icon: "⚛️", status: "Research" };
+  { name: "Blockchain", icon: "🔗", status: "Production" };
+  { name: "Edge Computing", icon: "🌐", status: "Development" };
+  { name: "5G Networks", icon: "📡", status: "Integration" };
+  { name: "IoT Platforms", icon: "📱", status: "Production" };
   { name: "AR/VR", icon: "🥽", status: "Research" }
 ];
-
 export function TechnologyStackSection() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -233,7 +226,7 @@ export function TechnologyStackSection() {
               Our expert team is ready to help you leverage the latest technologies
               to build scalable, secure, and innovative solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project
                 <Code className="ml-2 h-5 w-5" />
@@ -247,5 +240,5 @@ export function TechnologyStackSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

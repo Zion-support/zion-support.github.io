@@ -1,18 +1,18 @@
 
-import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
-import { useTheme } from "@/hooks/useTheme";
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
+import { format } from "date-fns",
+import { useTheme } from "@/hooks/useTheme",
 
 interface ChatMessageProps {
-  message: string;
-  isUser: boolean;
-  timestamp: Date;
+  message: string,
+  isUser: boolean,
+  timestamp: Date
 }
 
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme();
+  const { theme } = useTheme(),
   
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -51,24 +51,24 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 // Function to convert URLs and help links to actual clickable links
 function formatMessageWithLinks(message: string): string {
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urlRegex = /(https?:\/\/[^\s]+)/g,
   let formattedMessage = message.replace(
     urlRegex, 
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  );
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+  ),
   
   // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g;
+  const helpCenterRegex = /\[([^\]]+)\]/g,
   formattedMessage = formattedMessage.replace(
     helpCenterRegex, 
-    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  );
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+  ),
   
-  return formattedMessage;
+  return formattedMessage
 }

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react',
+import { Helmet } from 'react-helmet-async',
 export default function Page() {
 ,
                 publisher: {
@@ -15,7 +15,7 @@ export default function Page() {
                 datePublished: publishedTime,
                 dateModified: modifiedTime,
                 articleSection: section,
-                keywords: tags.join(',)
+                keywords: tags.join(')
             }),
             ...(type === 'service' && {
 
@@ -25,7 +25,7 @@ export default function Page() {
 
                     '@type': 'OfferCatalog',
                     name: 'Technology Services',
-                    itemListElement[;
+                    itemListElement[,
                         {
 
                             '@type': 'Offer',
@@ -59,17 +59,17 @@ export default function Page() {
                     ]
                 }
             })
-        };
+        },
         // Remove existing structured data'
-        const existingScript = document.querySelector('script[type="application/ld+json"]');
+        const existingScript = document.querySelector('script[type="application/ld+json"]'),
         if(existingScript) {
 
             existingScript.remove()}
         // Add new structured data'
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.text = JSON.stringify(structuredData);
-        document.head.appendChild(script);
+        const script = document.createElement('script'),
+        script.type = 'application/ld+json',
+        script.text = JSON.stringify(structuredData),
+        document.head.appendChild(script),
         // Add performance meta tags
         const performanceMeta = ['
             { name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
@@ -79,51 +79,51 @@ export default function Page() {
             { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
             { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
             { name: 'format-detection', content: 'telephone=no' }
-        ];
+        ],
         performanceMeta.forEach(meta => {
 
-            const metaTag = document.createElement('meta');
-            metaTag.name = meta.name;
-            metaTag.content = meta.content;
-            document.head.appendChild(metaTag) }) ;
+            const metaTag = document.createElement('meta'),
+            metaTag.name = meta.name,
+            metaTag.content = meta.content,
+            document.head.appendChild(metaTag) }) ,
         // Add resource hints
         const resourceHints = ['
             { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
             { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
             { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
             { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' }
-        ];
+        ],
         resourceHints.forEach(hint => {
 
-            const link = document.createElement('link');
-            link.rel = hint.rel;
-            link.href = hint.href;
-            if(hint.crossorigin) link.crossOrigin = hint.crossorigin;
-            document.head.appendChild(link) }) ;
+            const link = document.createElement('link'),
+            link.rel = hint.rel,
+            link.href = hint.href,
+            if(hint.crossorigin) link.crossOrigin = hint.crossorigin,
+            document.head.appendChild(link) }) ,
         return () => {
             // Cleanup on unmount'"
-            const addedScript = document.querySelector('script[type="application/ld+json"]');
+            const addedScript = document.querySelector('script[type="application/ld+json"]'),
             if(addedScript)
-                addedScript.remove();
+                addedScript.remove(),
             performanceMeta.forEach(meta => {
 "
-                const metaTag = document.querySelector(`meta[name="${meta.name}"]`);
+                const metaTag = document.querySelector(`meta[name="${meta.name}"]`),
                 if(metaTag)
-                    metaTag.remove()});
+                    metaTag.remove()}),
             resourceHints.forEach(hint => {
 "`
-                const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
+                const link = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`),
                 if(link)
-                    link.remove()})}}, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
+                    link.remove()})}}, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]),
     return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>"
       <meta name="description" content={description}/>"
       <meta name="keywords" content = {
 
-  keywords.join(',);
+  keywords.join('),
 
-}/>;"
+}/>,"
       <meta name="author" content={author}/>"
       <meta name="robots" content="index, follow"/>"
       <meta name="language" content="English"/>"
@@ -164,7 +164,7 @@ export default function Page() {
       {/* Security Headers */}"
       <meta httpEquiv="X-Content-Type-Options" content="nosniff"/>"
       <meta httpEquiv="X-Frame-Options" content="DENY"/>"
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block"/>"
+      <meta httpEquiv="X-XSS-Protection" content="1, mode=block"/>"
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
       
       {/* Performance Meta Tags */}"
@@ -175,7 +175,7 @@ export default function Page() {
       {/* Business Information */}"
       <meta name="geo.region" content="US-DE"/>"
       <meta name="geo.placename" content="Wilmington, Delaware"/>"
-      <meta name="geo.position" content="39.7447;-75.5484"/>"
+      <meta name="geo.position" content="39.7447,-75.5484"/>"
       <meta name="ICBM" content="39.7447, -75.5484"/>
       
       {/* Contact Information */}"
@@ -190,6 +190,6 @@ export default function Page() {
       {/* Service Areas */}"
       <meta name="service:area" content="Worldwide"/>"
       <meta name="service:type" content="Technology Consulting, AI Solutions, Cloud Services, Cybersecurity"/>
-    </Helmet>)};
-export default SEOEnhancer;
+    </Helmet>)},
+export default SEOEnhancer,
 '"`

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { motion } from 'framer-motion',
+import { Sun, Moon, Monitor } from 'lucide-react',
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = 'light' | 'dark' | 'system',
 
 const ThemeToggle: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">ThemeToggle</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default ThemeToggle;
+export default ThemeToggle,

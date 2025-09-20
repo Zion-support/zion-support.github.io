@@ -1,58 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 const InteractiveContentShowcase2034_2036: React.FC = () => {,
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0),
   const contentItems = [,
     {,
-      id: 0;
-      title: "Next-Gen AI Revolution 2034";
-      description: "Experience the most advanced AI systems that transcend human intelligence with consciousness transfer and quantum neural networks.";
-      icon: "🧠";
-      color: "from-purple-500 to-pink-500";
+      id: 0,
+      title: "Next-Gen AI Revolution 2034",
+      description: "Experience the most advanced AI systems that transcend human intelligence with consciousness transfer and quantum neural networks.",
+      icon: "🧠",
+      color: "from-purple-500 to-pink-500",
       features: [,
-        "Consciousness Transfer Technology";
-        "Quantum Neural Networks";
-        "Omniversal Computing";
-        "Synthetic Consciousness";
-        "Temporal Processing";
-        "Reality Synthesis",
-      ];
-      link: "/pages/NextGenAIRevolution2034",};
+        "Consciousness Transfer Technology",
+        "Quantum Neural Networks",
+        "Omniversal Computing",
+        "Synthetic Consciousness",
+        "Temporal Processing",
+        "Reality Synthesis"
+      ],
+      link: "/pages/NextGenAIRevolution2034"},
     {,
-      id: 1;
-      title: "Quantum Reality Manipulation 2035";
-      description: "Master the fundamental forces of reality through quantum field manipulation, dimensional engineering, and matter synthesis.";
-      icon: "⚛️";
-      color: "from-cyan-500 to-purple-500";
+      id: 1,
+      title: "Quantum Reality Manipulation 2035",
+      description: "Master the fundamental forces of reality through quantum field manipulation, dimensional engineering, and matter synthesis.",
+      icon: "⚛️",
+      color: "from-cyan-500 to-purple-500",
       features: [,
-        "Quantum Field Manipulation";
-        "Dimensional Engineering";
-        "Matter Synthesis";
-        "Gravity Manipulation";
-        "Temporal Engineering";
-        "Consciousness Projection",
-      ];
-      link: "/pages/QuantumRealityManipulation2035",};
+        "Quantum Field Manipulation",
+        "Dimensional Engineering",
+        "Matter Synthesis",
+        "Gravity Manipulation",
+        "Temporal Engineering",
+        "Consciousness Projection"
+      ],
+      link: "/pages/QuantumRealityManipulation2035"},
     {,
-      id: 2;
-      title: "Transcendent Consciousness 2036";
-      description: "Achieve the highest state of consciousness evolution, transcending physical limitations and achieving universal awareness.";
-      icon: "🧘";
-      color: "from-pink-500 to-indigo-500";
+      id: 2,
+      title: "Transcendent Consciousness 2036",
+      description: "Achieve the highest state of consciousness evolution, transcending physical limitations and achieving universal awareness.",
+      icon: "🧘",
+      color: "from-pink-500 to-indigo-500",
       features: [,
-        "Universal Awareness";
-        "Transcendent Intelligence";
-        "Omniscient Perception";
-        "Infinite Wisdom";
-        "Consciousness Evolution";
-        "Divine Connection",
-      ];
-      link: "/pages/TranscendentConsciousness2036",}
-  ];
+        "Universal Awareness",
+        "Transcendent Intelligence",
+        "Omniscient Perception",
+        "Infinite Wisdom",
+        "Consciousness Evolution",
+        "Divine Connection"
+      ],
+      link: "/pages/TranscendentConsciousness2036"}
+  ],
 const InteractiveContentShowcase2034-2036: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 rounded-3xl p-8 mb-12">,
       <div,
-        whileInView={{ opacity: 1, y: 0 ,}}
+        whileInView={{ opacity: 1, y: 0 }}
         className="text-center mb-12",
       >,
         <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
@@ -62,7 +62,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
           Explore the most revolutionary technologies that will reshape the future of human consciousness and reality itself,
         </p>,
       </div>,
-      {/* Tab Navigation */,}
+      {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">,
         {contentItems.map((item, index) => (,
           <button,
@@ -71,7 +71,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${,
               activeTab === index,
                 ? 'bg-white text-purple-600 shadow-lg',
-                : 'bg-white/20 text-white hover: bg-white/30',}`}
+                : 'bg-white/20 text-white hover: bg-white/30'}`}
           >,
             <span className="mr-2">{item.icon}</span>,
             {item.title.split(' ')[0]} {item.title.split(' ')[1]}
@@ -84,7 +84,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
             key={activeTab}
             className="grid md: grid-cols-2 gap-12 items-center",
           >,
-            {/* Content Info */,}
+            {/* Content Info */}
             <div>,
               <div className="flex items-center space-x-4 mb-6">,
                 <div className={`text-6xl bg-gradient-to-r ${contentItems[activeTab].color} bg-clip-text text-transparent`}>,
@@ -108,12 +108,11 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
                   >,
                     <div className={`w-2 h-2 bg-gradient-to-r ${contentItems[activeTab].color} rounded-full`}></div>,
                     <span>{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
               <a,
                 href={contentItems[activeTab].link}
-                className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-300`,}
+                className={`inline-block bg-gradient-to-r ${contentItems[activeTab].color} text-white px-8 py-4 rounded-lg font-semibold hover: shadow-lg transition-all duration-300`}
               >,
                 Explore {contentItems[activeTab].title.split(' ')[0]} Technology →,
               </a>,
@@ -132,7 +131,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
                         <span className="text-lg font-bold text-white">2034-2036</span>,
                       </div>,
                       <div className="w-full bg-gray-700 rounded-full h-2">,
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' ,}}></div>,
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '95%' }}></div>,
                       </div>,
                     </div>,
                     <div className="bg-white/10 rounded-lg p-4">,
@@ -141,7 +140,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
                         <span className="text-lg font-bold text-white">∞</span>,
                       </div>,
                       <div className="w-full bg-gray-700 rounded-full h-2">,
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' ,}}></div>,
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}></div>,
                       </div>,
                     </div>,
                     <div className="bg-white/10 rounded-lg p-4">,
@@ -150,7 +149,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
                         <span className="text-lg font-bold text-white">Perfect</span>,
                       </div>,
                       <div className="w-full bg-gray-700 rounded-full h-2">,
-                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' ,}}></div>,
+                        <div className={`bg-gradient-to-r ${contentItems[activeTab].color} h-2 rounded-full animate-pulse`} style={{ width: '100%' }}></div>,
                       </div>,
                     </div>,
                   </div>,
@@ -162,7 +161,7 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
       </div>,
       {/* Additional Features */}
       <div,
-        whileInView={{ opacity: 1, y: 0 ,}}
+        whileInView={{ opacity: 1, y: 0 }}
         className="mt-12 grid md: grid-cols-3 gap-6",
       >,
         <div className="text-center">,
@@ -182,6 +181,6 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default InteractiveContentShowcase2034-2036;
+  )},
+export default InteractiveContentShowcase2034-2036,
 }

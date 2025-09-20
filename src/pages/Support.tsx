@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { SEO } from "../components/SEO";
 import { 
-  HelpCircle, 
+  HelpCircle,
   MessageCircle, 
   Phone, 
   Mail, 
@@ -25,124 +25,72 @@ import {
   Rocket,
   Brain,
   Cloud
-} from 'lucide-react';
-
+} from "lucide-react";
 const Support: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: HelpCircle },
-    { id: 'technical', name: 'Technical Issues', icon: Monitor },
-    { id: 'billing', name: 'Billing & Account', icon: FileText },
-    { id: 'product', name: 'Product Support', icon: Rocket },
-    { id: 'integration', name: 'Integration Help', icon: Zap },
+    { id: 'all', name: 'All Categories', icon: HelpCircle };
+    { id: 'technical', name: 'Technical Issues', icon: Monitor };
+    { id: 'billing', name: 'Billing & Account', icon: FileText };
+    { id: 'product', name: 'Product Support', icon: Rocket };
+    { id: 'integration', name: 'Integration Help', icon: Zap };
     { id: 'general', name: 'General Questions', icon: Users }
   ];
-
   const supportChannels = [
     {
-      icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
-      availability: '24/7',
-      responseTime: '< 2 minutes',
-      priority: 'high',
-      href: '/support/chat'
-    },
+      icon: MessageCircle,title: 'Live Chat',description: 'Get instant help from our support team',availability: '24/7',responseTime: '< 2 minutes',priority: 'high',href: '/support/chat'
+    };
     {
-      icon: Ticket,
-      title: 'Support Tickets',
-      description: 'Submit detailed support requests',
-      availability: '24/7',
-      responseTime: '< 4 hours',
-      priority: 'medium',
-      href: '/support/tickets'
-    },
+      icon: Ticket,title: 'Support Tickets',description: 'Submit detailed support requests',availability: '24/7',responseTime: '< 4 hours',priority: 'medium',href: '/support/tickets'
+    };
     {
-      icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak directly with our experts',
-      availability: 'Mon-Fri, 9AM-6PM EST',
-      responseTime: 'Immediate',
-      priority: 'high',
-      href: '/support/phone'
-    },
+      icon: Phone,title: 'Phone Support',description: 'Speak directly with our experts',availability: 'Mon-Fri, 9AM-6PM EST',
+      responseTime: 'Immediate',priority: 'high',href: '/support/phone'
+    };
     {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Send us detailed questions',
-      availability: '24/7',
-      responseTime: '< 24 hours',
-      priority: 'medium',
-      href: '/support/email'
+      icon: Mail,title: 'Email Support',description: 'Send us detailed questions',availability: '24/7',responseTime: '< 24 hours',priority: 'medium',href: '/support/email'
     }
   ];
-
   const quickSolutions = [
     {
-      icon: BookOpen,
-      title: 'Knowledge Base',
-      description: 'Browse our comprehensive documentation',
-      articles: '500+ articles',
-      href: '/docs'
-    },
+      icon: BookOpen,title: 'Knowledge Base',description: 'Browse our comprehensive documentation',articles: '500+ articles',href: '/docs'
+    };
     {
-      icon: Video,
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides',
-      videos: '100+ tutorials',
-      href: '/tutorials'
-    },
+      icon: Video,title: 'Video Tutorials',description: 'Step-by-step video guides',videos: '100+ tutorials',href: '/tutorials'
+    };
     {
-      icon: Users,
-      title: 'Community Forum',
-      description: 'Connect with other users',
-      members: '10,000+ members',
+      icon: Users,title: 'Community Forum',description: 'Connect with other users',members: '10,000+ members',
       href: '/community'
-    },
+    };
     {
-      icon: FileText,
-      title: 'FAQ',
-      description: 'Frequently asked questions',
-      questions: '200+ FAQs',
-      href: '/faq'
+      icon: FileText,title: 'FAQ',description: 'Frequently asked questions',questions: '200+ FAQs',href: '/faq'
     }
   ];
-
   const commonIssues = [
     {
-      category: 'Technical',
-      title: 'How to reset my password?',
-      solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',
-      tags: ['password', 'login', 'account']
+      category: 'Technical',title: 'How to reset my password?',solution: 'Go to the login page and click "Forgot Password" to reset your password via email.',tags: ['passwordlogin', 'account']
     },
     {
-      category: 'Product',
-      title: 'How to integrate with my existing systems?',
-      solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',
-      tags: ['integration', 'api', 'documentation']
+      category: 'Product',title: 'How to integrate with my existing systems?',solution: 'We provide comprehensive API documentation and integration guides for all major platforms.',tags: ['integrationapi', 'documentation']
     },
     {
-      category: 'Billing',
-      title: 'How to update my billing information?',
-      solution: 'Navigate to your account settings and update your billing information in the billing section.',
-      tags: ['billing', 'account', 'payment']
+      category: 'Billing',title: 'How to update my billing information?',solution: 'Navigate to your account settings and update your billing information in the billing section.',tags: ['billingaccount', 'payment']
     },
     {
-      category: 'Technical',
-      title: 'Service is running slow, what should I do?',
+      category: 'Technical',title: 'Service is running slow, what should I do?',
       solution: 'Check your internet connection and try clearing your browser cache. If the issue persists, contact support.',
-      tags: ['performance', 'troubleshooting', 'speed']
+      tags: ['performancetroubleshooting', 'speed']
     }
-  ];
+  ],
 
   const filteredIssues = commonIssues.filter(issue => 
     (selectedCategory === 'all' || issue.category.toLowerCase() === selectedCategory) &&
     (issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.solution.toLowerCase().includes(searchQuery.toLowerCase()) ||
      issue.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  );
+  ),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -347,7 +295,7 @@ const Support: React.FC = () => {
             Our support team is ready to assist you with any questions or issues. 
             Don't hesitate to reach out - we're here to help you succeed.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">
               Contact Support
             </button>
@@ -358,7 +306,6 @@ const Support: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Support;

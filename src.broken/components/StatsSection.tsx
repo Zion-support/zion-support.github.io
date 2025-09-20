@@ -1,13 +1,13 @@
 <<<<<<< HEAD
   interface Stat {
-    number: string;
-    label: string;
-    icon: LucideIcon;
-    description: string;
+    number: string,
+    label: string,
+    icon: LucideIcon,
+    description: string
   }
 
   interface StatsSectionProps extends React.PropsWithChildren<{}> {
-    stats: Stat[];
+    stats: Stat[]
   }
 
   return (<section className="py-16 bg-gray -800">
@@ -54,6 +54,6 @@ export default function StatsSection() {
         </div>
       </div>
     </section>) }
-export default StatsSection;
+export default StatsSection,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

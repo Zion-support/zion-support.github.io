@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Custom Experiences",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "50% increase in portal usage, 45% reduction in appointment booking time, improved patient satisfaction",
     logo: "HP"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,42 +76,42 @@ const processSteps = [{
     icon: Gauge,
     duration: "Ongoing"
 
-];
+],
 
 const customerExperienceBenefits = [{
     title: "Improved Customer Satisfaction",
     description: "Better experiences lead to higher customer satisfaction and loyalty",
     icon: Heart,
-    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word - of - mouth referrals"];
-  },;
+    examples["Higher satisfaction scores", "Increased loyalty", "Positive reviews", "Word - of - mouth referrals"],
+  },
   {
     title: "Increased Conversion Rates",
     description: "Optimized experiences drive better business outcomes",
     icon: TrendingUp,
-    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"];
-  },;
+    examples["Higher conversion rates", "Reduced abandonment", "Increased sales", "Better ROI"],
+  },
   {
     title: "Reduced Support Costs",
     description: "Better experiences reduce the need for customer support",
     icon: Headphones,
-    examples["Fewer support tickets", "Lower support costs", "Self - service adoption", "Improved efficiency"];
-  },;
+    examples["Fewer support tickets", "Lower support costs", "Self - service adoption", "Improved efficiency"],
+  },
   {
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
-    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"];
+    examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'UX Design', 'Journey Mapping', 'Feedback Systems', 'Personalization', 'Support Platforms', 'Analytics'];
+  const categories = ['AllUX Design', 'Journey MappingFeedback Systems', 'PersonalizationSupport Platforms', 'Analytics'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? customerExperienceSolutions
-    : customerExperienceSolutions.filter(solution => solution.category === selectedCategory) ;
+    : customerExperienceSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -181,10 +181,10 @@ const customerExperienceBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Customer Experience Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -240,13 +240,13 @@ const customerExperienceBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Customer Experience Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -304,13 +304,13 @@ const customerExperienceBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -366,13 +366,13 @@ const customerExperienceBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -472,7 +472,7 @@ const customerExperienceBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -543,13 +543,13 @@ const customerExperienceBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

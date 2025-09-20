@@ -1,16 +1,16 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { Button } from '@/components/ui/button',
 import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react';
+import { signIn } from 'next-auth/react',
 
 export function AuthButtons() {
-  const [loadingProvider, setLoadingProvider] = useState<string | null>(null);
+  const [loadingProvider, setLoadingProvider] = useState<string | null>(null),
 
   const handleSignIn = async (provider: string) => {
-    setLoadingProvider(provider);
-    await signIn(provider);
-    setLoadingProvider(null); // Reset loading state
-  };
+    setLoadingProvider(provider),
+    await signIn(provider),
+    setLoadingProvider(null), // Reset loading state
+  },
 
   return (
     <div className="mt-6 grid grid-cols-4 gap-3">
@@ -61,5 +61,5 @@ export function AuthButtons() {
         )}
       </Button>
     </div>
-  );
+  ),
 }

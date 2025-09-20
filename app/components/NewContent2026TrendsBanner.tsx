@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function NewContent2026TrendsBanner() {,
   return (,
     <section className="py-20 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">,
@@ -38,7 +38,7 @@ export default function NewContent2026TrendsBanner() {,
             </Link>,
           </div>,
         </div>,
-        {/* Featured Content Grid */,}
+        {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">,
           <Link href="/blog/ai-2026-trends-predictions-ultimate-guide" className="group">,
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">,
@@ -77,7 +77,7 @@ export default function NewContent2026TrendsBanner() {,
             </div>,
           </Link>,
         </div>,
-        {/* Key Highlights */,}
+        {/* Key Highlights */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 text-center">,
           <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl">,
             <div className="text-3xl font-bold mb-2">500%</div>,
@@ -96,7 +96,7 @@ export default function NewContent2026TrendsBanner() {,
             <div className="text-sm opacity-90">Months to Success</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center mt-12">,
           <p className="text-lg mb-6 opacity-90">,
             Ready to transform your business with AI? Get started with our free resources and expert guidance.,
@@ -117,5 +117,4 @@ export default function NewContent2026TrendsBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

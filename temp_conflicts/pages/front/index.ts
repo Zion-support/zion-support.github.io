@@ -9,12 +9,12 @@ export const frontPages = [
     "modified": "2025-08-18T17:01:10.496Z",
     "relativePath": "front/index.tsx"
   }
-];
+],
 
 export function getFrontPage(name) {
-  return frontPages.find(p => p.name === name);
+  return frontPages.find(p => p.name === name),
 }
 
 export function getAllFrontPages() {
-  return frontPages;
+  return frontPages,
 }

@@ -1,16 +1,16 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Check, X } from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Check, X } from "lucide-react",
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+  TableRow
+} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 
 export function EnterprisePricingTable() {
   const plans = [
@@ -30,8 +30,8 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: false },
         { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false },
-      ],
+        { name: "Dedicated success manager", included: false }
+      ]
     },
     {
       name: "Business",
@@ -49,8 +49,8 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
         { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false },
-      ],
+        { name: "Dedicated success manager", included: false }
+      ]
     },
     {
       name: "Enterprise",
@@ -68,10 +68,10 @@ export function EnterprisePricingTable() {
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
         { name: "Custom integrations", included: true },
-        { name: "Dedicated success manager", included: true },
-      ],
-    },
-  ];
+        { name: "Dedicated success manager", included: true }
+      ]
+    }
+  ],
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
@@ -140,5 +140,5 @@ export function EnterprisePricingTable() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

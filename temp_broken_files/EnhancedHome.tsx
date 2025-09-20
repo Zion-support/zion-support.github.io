@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { ContentShowcase } from '../components/ContentShowcase';
-import { ServicesHighlight } from '../components/ServicesHighlight';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react',
+import { SEO } from '../components/SEO',
+import { ContentShowcase } from '../components/ContentShowcase',
+import { ServicesHighlight } from '../components/ServicesHighlight',
 const EnhancedHome: React.FC = () => {,
   return (,
     <div className="min-h-screen">,
@@ -45,12 +45,12 @@ const EnhancedHome: React.FC = () => {,
                 Watch Demo,
               </button>,
             </div>,
-            {/* Stats */,}
+            {/* Stats */}
             <div,
               className="grid grid-cols-2 lg: grid-cols-4 gap-8 max-w-4xl mx-auto",
             >,
               {stats.map((stat, index) => {,
-                const IconComponent = stat.icon;
+                const IconComponent = stat.icon,
                 return (,
                   <div key={index} className="text-center">,
                     <div className="flex justify-center mb-2">,
@@ -58,8 +58,7 @@ const EnhancedHome: React.FC = () => {,
                     </div>,
                     <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>,
                     <div className="text-blue-200 text-sm">{stat.label}</div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
           </div>,
@@ -81,11 +80,11 @@ const EnhancedHome: React.FC = () => {,
             {features.map((feature, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="text-center group",
               >,
                 <div className="text-6xl mb-4 group-hover: scale-110 transition-transform duration-300">,
-                  {feature.icon,}
+                  {feature.icon}
                 </div>,
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">,
                   {feature.title}
@@ -100,8 +99,7 @@ const EnhancedHome: React.FC = () => {,
                   Learn More,
                   <ArrowRight className="ml-1 w-4 h-4" />,
                 </Link>,
-              </div>,
-            )),}
+              </div>))}
           </div>,
         </div>,
       </section>,
@@ -120,13 +118,12 @@ const EnhancedHome: React.FC = () => {,
             {testimonials.map((testimonial, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white rounded-lg shadow-md p-6",
               >,
                 <div className="flex items-center mb-4">,
                   {[...Array(testimonial.rating)].map((_, i) => (,
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                 </div>,
                 <p className="text-gray-600 mb-6 italic">,
                   "{testimonial.content}",
@@ -178,7 +175,7 @@ const EnhancedHome: React.FC = () => {,
         </div>,
       </section>,
     </div>,
-  );
-export default EnhancedHome;
-</div></div>,
+  ),
+export default EnhancedHome,
+</div></div>
 }

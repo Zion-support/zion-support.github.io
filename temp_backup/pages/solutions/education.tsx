@@ -1,10 +1,10 @@
-import React from 'react';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   GraduationCap, Brain, Globe, Shield, Zap, Cpu, 
   Users, CheckCircle, ArrowRight, BarChart3, BookOpen
-} from 'lucide-react';
+} from 'lucide-react',
 export default function EducationSolutions() {,
   return (,
     <Layout>,
@@ -13,16 +13,16 @@ export default function EducationSolutions() {,
         <section className="relative py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="text-center",
             >,
               <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600 bg-clip-text text-transparent mb-6">,
                 Education Technology Solutions,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
-                Revolutionary AI-powered education solutions that transform learning;
+                Revolutionary AI-powered education solutions that transform learning,
                 enhance student engagement, and optimize educational outcomes.,
               </p>,
             </motion.div>,
@@ -32,23 +32,23 @@ export default function EducationSolutions() {,
         <section className="py-20 px-4">,
           <div className="container mx-auto max-w-6xl">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.2 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-center mb-16",
             >,
               <h2 className="text-4xl font-bold text-white mb-4">Our Education Solutions</h2>,
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">,
-                Cutting-edge technology solutions designed specifically for schools;
+                Cutting-edge technology solutions designed specifically for schools,
                 universities, training institutions, and educational organizations.,
               </p>,
             </motion.div>,
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
-              {/* Learning Platform */,}
+              {/* Learning Platform */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.3 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 className="bg-gradient-to-br from-emerald-900/20 to-teal-900/20 border border-emerald-500/20 rounded-2xl p-8 hover: border-emerald-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -58,7 +58,7 @@ export default function EducationSolutions() {,
                   <h3 className="text-2xl font-bold text-white">AI Learning Platform</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Intelligent learning platform with personalized curriculum;
+                  Intelligent learning platform with personalized curriculum,
                   adaptive assessments, and interactive content delivery.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -79,11 +79,11 @@ export default function EducationSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Student Analytics */,}
+              {/* Student Analytics */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.4 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
                 className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-2xl p-8 hover: border-blue-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -93,7 +93,7 @@ export default function EducationSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Student Analytics</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Comprehensive student analytics platform with performance tracking;
+                  Comprehensive student analytics platform with performance tracking,
                   progress monitoring, and predictive insights.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -114,11 +114,11 @@ export default function EducationSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Virtual Reality */,}
+              {/* Virtual Reality */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.5 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
                 className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-2xl p-8 hover: border-purple-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -149,11 +149,11 @@ export default function EducationSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Administrative Tools */,}
+              {/* Administrative Tools */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.6 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-2xl p-8 hover: border-yellow-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -163,7 +163,7 @@ export default function EducationSolutions() {,
                   <h3 className="text-2xl font-bold text-white">Administrative Platform</h3>,
                 </div>,
                 <p className="text-gray-300 mb-6">,
-                  Comprehensive administrative platform for student management;
+                  Comprehensive administrative platform for student management,
                   course scheduling, and institutional operations.,
                 </p>,
                 <ul className="space-y-2 mb-6">,
@@ -184,11 +184,11 @@ export default function EducationSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Collaboration Tools */,}
+              {/* Collaboration Tools */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.7 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
                 className="bg-gradient-to-br from-red-900/20 to-pink-900/20 border border-red-500/20 rounded-2xl p-8 hover: border-red-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -219,11 +219,11 @@ export default function EducationSolutions() {,
                   Learn More <ArrowRight className="w-4 h-4" />,
                 </a>,
               </motion.div>,
-              {/* Security & Privacy */,}
+              {/* Security & Privacy */}
               <motion.div,
-                initial={{ opacity: 0, y: 20 ,}}
-                animate={{ opacity: 1, y: 0 ,}}
-                transition={{ duration: 0.8, delay: 0.8 ,}}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
                 className="bg-gradient-to-br from-teal-900/20 to-cyan-900/20 border border-teal-500/20 rounded-2xl p-8 hover: border-teal-400/40 transition-all duration-300",
               >,
                 <div className="flex items-center gap-3 mb-6">,
@@ -257,13 +257,13 @@ export default function EducationSolutions() {,
             </div>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">,
           <div className="container mx-auto max-w-4xl text-center">,
             <motion.div,
-              initial={{ opacity: 0, y: 20 ,}}
-              animate={{ opacity: 1, y: 0 ,}}
-              transition={{ duration: 0.8, delay: 0.9 ,}}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Ready to Transform Education?,
@@ -290,6 +290,5 @@ export default function EducationSolutions() {,
           </div>,
         </section>,
       </div>,
-    </Layout>,
-  ),}
+    </Layout>)}
 ,

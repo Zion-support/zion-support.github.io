@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  TrendingUp, 
+  TrendingUp,
   BarChart3, 
   FileText, 
   Download, 
@@ -32,202 +32,98 @@ import {
   Clock,
   Mail,
   Phone
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function InvestorRelations() {
   const financialHighlights = [
     {
-      metric: 'Revenue Growth',
-      value: '156%',
-      change: '+23%',
-      period: 'YoY 2024',
-      icon: TrendingUp,
-      color: 'text-green-400'
-    },
+      metric: 'Revenue Growth',value: '156%',change: '+23%',period: 'YoY 2024',icon: TrendingUp,color: 'text-green-400'
+    };
     {
-      metric: 'Market Cap',
-      value: '$2.4B',
-      change: '+18%',
-      period: 'Current',
-      icon: DollarSign,
-      color: 'text-blue-400'
-    },
+      metric: 'Market Cap',value: '$2.4B',change: '+18%',period: 'Current',icon: DollarSign,color: 'text-blue-400'
+    };
     {
-      metric: 'Global Customers',
-      value: '1,200+',
-      change: '+45%',
-      period: 'YoY 2024',
-      icon: Users,
-      color: 'text-purple-400'
-    },
+      metric: 'Global Customers',value: '1,200+',
+      change: '+45%',period: 'YoY 2024',icon: Users,color: 'text-purple-400'
+    };
     {
-      metric: 'Market Presence',
-      value: '25+',
-      change: '+5',
-      period: 'Countries',
-      icon: Globe,
-      color: 'text-cyan-400'
+      metric: 'Market Presence',value: '25+',change: '+5',period: 'Countries',icon: Globe,color: 'text-cyan-400'
     }
   ];
-
   const quarterlyResults = [
     {
-      quarter: 'Q4 2024',
-      revenue: '$89.2M',
-      growth: '+23%',
-      margin: '34.2%',
-      customers: '1,247',
+      quarter: 'Q4 2024',revenue: '$89.2M',growth: '+23%',margin: '34.2%',customers: '1,247',
       status: 'Projected'
-    },
+    };
     {
-      quarter: 'Q3 2024',
-      revenue: '$72.5M',
-      growth: '+18%',
-      margin: '32.8%',
-      customers: '1,189',
+      quarter: 'Q3 2024',revenue: '$72.5M',growth: '+18%',margin: '32.8%',customers: '1,189',
       status: 'Reported'
-    },
+    };
     {
-      quarter: 'Q2 2024',
-      revenue: '$61.4M',
-      growth: '+15%',
-      margin: '31.5%',
-      customers: '1,134',
+      quarter: 'Q2 2024',revenue: '$61.4M',growth: '+15%',margin: '31.5%',customers: '1,134',
       status: 'Reported'
-    },
+    };
     {
-      quarter: 'Q1 2024',
-      revenue: '$53.4M',
-      growth: '+12%',
-      margin: '30.2%',
-      customers: '1,089',
+      quarter: 'Q1 2024',revenue: '$53.4M',growth: '+12%',margin: '30.2%',customers: '1,089',
       status: 'Reported'
     }
   ];
-
   const strategicInitiatives = [
     {
-      title: 'AI Platform Expansion',
-      description: 'Major investment in AI infrastructure and model development',
-      investment: '$45M',
-      timeline: '2024-2026',
-      status: 'In Progress',
-      impact: 'High'
-    },
+      title: 'AI Platform Expansion',description: 'Major investment in AI infrastructure and model development',investment: '$45M',timeline: '2024-2026',status: 'In Progress',impact: 'High'
+    };
     {
-      title: 'Global Market Entry',
-      description: 'Expansion into APAC and European markets',
-      investment: '$28M',
-      timeline: '2024-2025',
-      status: 'Planning',
-      impact: 'Medium'
-    },
+      title: 'Global Market Entry',description: 'Expansion into APAC and European markets',investment: '$28M',timeline: '2024-2025',status: 'Planning',impact: 'Medium'
+    };
     {
-      title: 'Quantum Computing R&D',
-      description: 'Research and development in quantum technologies',
-      investment: '$32M',
-      timeline: '2024-2027',
-      status: 'Research',
-      impact: 'Long-term'
-    },
+      title: 'Quantum Computing R&D',description: 'Research and development in quantum technologies',investment: '$32M',timeline: '2024-2027',status: 'Research',impact: 'Long-term'
+    };
     {
-      title: 'Cybersecurity Platform',
-      description: 'Next-generation security solutions development',
-      investment: '$38M',
-      timeline: '2024-2026',
-      status: 'Development',
-      impact: 'High'
+      title: 'Cybersecurity Platform',description: 'Next-generation security solutions development',investment: '$38M',timeline: '2024-2026',status: 'Development',impact: 'High'
     }
   ];
-
   const investorResources = [
     {
-      title: 'Annual Report 2024',
-      description: 'Comprehensive overview of our financial performance and strategic initiatives',
-      type: 'PDF',
-      size: '8.2 MB',
-      date: 'March 2024',
-      featured: true
-    },
+      title: 'Annual Report 2024',description: 'Comprehensive overview of our financial performance and strategic initiatives',type: 'PDF',size: '8.2 MB',date: 'March 2024',featured: true
+    };
     {
-      title: 'Q3 2024 Earnings Call',
-      description: 'Audio recording and transcript of our Q3 2024 earnings call',
-      type: 'Audio/Transcript',
-      size: '15.4 MB',
-      date: 'November 2024',
-      featured: false
-    },
+      title: 'Q3 2024 Earnings Call',description: 'Audio recording and transcript of our Q3 2024 earnings call',type: 'Audio/Transcript',size: '15.4 MB',date: 'November 2024',featured: false
+    };
     {
-      title: 'Investor Presentation',
-      description: 'Latest investor presentation with company overview and financial highlights',
-      type: 'PDF',
-      size: '12.8 MB',
-      date: 'December 2024',
-      featured: true
-    },
+      title: 'Investor Presentation',description: 'Latest investor presentation with company overview and financial highlights',type: 'PDF',size: '12.8 MB',date: 'December 2024',featured: true
+    };
     {
-      title: 'Corporate Governance',
-      description: 'Board composition, committee charters, and governance policies',
-      type: 'PDF',
-      size: '3.1 MB',
-      date: 'Updated Monthly',
-      featured: false
-    },
+      title: 'Corporate Governance',description: 'Board composition, committee charters, and governance policies',
+      type: 'PDF',size: '3.1 MB',date: 'Updated Monthly',featured: false
+    };
     {
-      title: 'ESG Report 2024',
-      description: 'Environmental, Social, and Governance performance report',
-      type: 'PDF',
-      size: '6.7 MB',
-      date: 'April 2024',
-      featured: false
-    },
+      title: 'ESG Report 2024',description: 'Environmental, Social, and Governance performance report',
+      type: 'PDF',size: '6.7 MB',date: 'April 2024',featured: false
+    };
     {
-      title: 'Financial Statements',
-      description: 'Quarterly and annual financial statements and disclosures',
-      type: 'PDF',
-      size: 'Various',
-      date: 'Quarterly',
-      featured: false
+      title: 'Financial Statements',description: 'Quarterly and annual financial statements and disclosures',type: 'PDF',size: 'Various',date: 'Quarterly',featured: false
     }
   ];
-
   const upcomingEvents = [
     {
-      title: 'Q4 2024 Earnings Call',
-      date: 'February 15, 2025',
-      time: '5:00 PM ET',
-      type: 'Earnings Call',
-      registration: 'Required'
-    },
+      title: 'Q4 2024 Earnings Call',date: 'February 15, 2025',
+      time: '5:00 PM ET',type: 'Earnings Call',registration: 'Required'
+    };
     {
-      title: 'Annual Shareholder Meeting',
-      date: 'May 20, 2025',
-      time: '10:00 AM ET',
-      type: 'Shareholder Meeting',
-      registration: 'Required'
-    },
+      title: 'Annual Shareholder Meeting',date: 'May 20, 2025',
+      time: '10:00 AM ET',type: 'Shareholder Meeting',registration: 'Required'
+    };
     {
-      title: 'Technology Investor Day',
-      date: 'March 28, 2025',
-      time: '9:00 AM ET',
-      type: 'Investor Event',
-      registration: 'Open'
-    },
+      title: 'Technology Investor Day',date: 'March 28, 2025',
+      time: '9:00 AM ET',type: 'Investor Event',registration: 'Open'
+    };
     {
-      title: 'Q1 2025 Earnings Call',
-      date: 'May 8, 2025',
-      time: '5:00 PM ET',
-      type: 'Earnings Call',
-      registration: 'Required'
+      title: 'Q1 2025 Earnings Call',date: 'May 8, 2025',
+      time: '5:00 PM ET',type: 'Earnings Call',registration: 'Required'
     }
   ];
-
   const contactInfo = {
-    investorRelations: 'investors@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    investorRelations: 'investors@ziontechgroup.com',phone: '+1 (302) 464-0950',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 

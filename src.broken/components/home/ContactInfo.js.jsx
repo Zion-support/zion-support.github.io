@@ -1,8 +1,8 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import React from 'react',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 export default function Page() {
-,
-  ];
+
+  ],
   return ("
     <section className="py-20 relative">
       {/* Background accent */}"
@@ -142,7 +142,7 @@ export default function Page() {
               <p className="text-sm text-muted-foreground mb-3">
                 Prefer to call? We're available 24/7 for urgent matters
               </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center text-sm">
                 <a"
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
@@ -163,6 +163,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"

@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   BarChart3, Brain, Zap, Target, CheckCircle, ArrowRight,
   Cpu, Database, Shield, Globe, Users, TrendingUp
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const AIBusinessIntelligence2043: React.FC = () => {
   const features = [
@@ -33,16 +33,13 @@ const AIBusinessIntelligence2043: React.FC = () => {
       description: 'Automated optimization recommendations for business processes',
       color: 'from-green-500 to-emerald-500'
     }
-  ];
+  ],
 
   const useCases = [
-    'Business Analytics',
-    'Performance Monitoring',
-    'Predictive Analytics',
-    'Data Visualization',
-    'Strategic Planning',
-    'Process Optimization'
-  ];
+    'Business AnalyticsPerformance Monitoring',
+    'Predictive AnalyticsData Visualization',
+    'Strategic PlanningProcess Optimization'
+  ],
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -182,7 +179,7 @@ const AIBusinessIntelligence2043: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 shadow-lg shadow-emerald-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-xl hover: from-emerald-600 hover:to-teal-700 transition-all duration-300 shadow-lg shadow-emerald-500/25"
               >
                 Start Your Journey
               </motion.button>
@@ -191,7 +188,7 @@ const AIBusinessIntelligence2043: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default AIBusinessIntelligence2043;
+export default AIBusinessIntelligence2043,

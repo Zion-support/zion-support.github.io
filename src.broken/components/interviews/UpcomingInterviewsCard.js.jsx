@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";"
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Button } from '@/components/ui/button';"
-import { useInterviews } from '@/hooks/useInterviews';"
-import { format, isPast, parseISO } from 'date-fns';"
-import Link from "next/link";"
-import { Calendar, Clock, Video  } from 'lucide-react';"
-import { Avatar } from '@/components/ui/avatar';
+import React, { useEffect, useState } from "react","
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Button } from '@/components/ui/button',"
+import { useInterviews } from '@/hooks/useInterviews',"
+import { format, isPast, parseISO } from 'date-fns',"
+import Link from "next/link","
+import { Calendar, Clock, Video  } from 'lucide-react',"
+import { Avatar } from '@/components/ui/avatar',
 
 export default function Page() {
-        };
-        loadInterviews()}, []);
+        },
+        loadInterviews()}, []),
     if(isLoading) {
 "
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -62,12 +62,12 @@ export default function Page() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
 
-            const interviewDate = parseISO(interview.scheduled_date);
-            const formattedTime = format(interviewDate,h:mm a');
+            const interviewDate = parseISO(interview.scheduled_date),
+            const formattedTime = format(interviewDate,h: mm a'),
             // Determine if interview is happening soon(within 30 minutes)
-            const now = new Date();
+            const now = new Date(),
             const isStartingSoon = interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-                interviewDate.getTime() > now.getTime();"
+                interviewDate.getTime() > now.getTime(),"
             return (<div key={interview.id} className="flex items-center gap-3">"
                 <Avatar className="h-10 w-10 bg-zion-purple/10">"
                   {interview.client_avatar || interview.talent_avatar ? (<img loading="lazy" src={interview.client_avatar || interview.talent_avatar} alt={interview.client_name || interview.talent_name}/>) : (<div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">"
@@ -89,7 +89,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            );
+            ),
           })}
         </div>
         "

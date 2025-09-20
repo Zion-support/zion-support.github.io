@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 const AIRevolutionaryBreakthrough2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-16">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-16">,
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">,
             <Brain className="w-5 h-5" />,
@@ -30,7 +30,7 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {,
             </Link>,
           </div>,
         </div>,
-        {/* Key Breakthroughs Section */,}
+        {/* Key Breakthroughs Section */}
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
           <div className="bg-gradient-to-br from-blue-800/30 to-purple-800/30 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">,
             <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">,
@@ -91,7 +91,7 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Technology Features */,}
+        {/* Technology Features */}
         <div className="mb-16">,
           <h2 className="text-4xl font-bold text-center mb-12">Revolutionary Technologies</h2>,
           <div className="grid md: grid-cols-2 gap-12">,
@@ -189,6 +189,5 @@ const AIRevolutionaryBreakthrough2026: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default AIRevolutionaryBreakthrough2026;
+    </div>)},
+export default AIRevolutionaryBreakthrough2026,

@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
+import React, { useState, useEffect } from 'react',
+import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025',
 
 export default function Page() {
     if(sortOrder === 'asc') {
@@ -8,18 +8,18 @@ export default function Page() {
       return aValue > bValue ? 1 : -1} else {
 
       return aValue < bValue ? 1 : -1}
-  }) ;
+  }) ,
 
   const getCategoryIcon = (category: anystring) => {
-    if(category === 'all') return < Rocket className="w-6 h-6" />;
+    if(category === 'all') return < Rocket className="w-6 h-6" />,
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w-6 h-6" />;
-  };
+      <Rocket className="w-6 h-6" />,
+  },
   const closeModal = () => {
-    setShowModal(false) ;
-    setSelectedService(null) ;
-  };
+    setShowModal(false) ,
+    setSelectedService(null) ,
+  },
 
   return (<div  className="min - h-screen futuristic -bg">
       {/* Matrix Rain Background Effect */}
@@ -104,14 +104,14 @@ export default function Page() {
   
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ? "
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
-      <Rocket className="w-6 h-6"  />};
+      <Rocket className="w-6 h-6"  />},
 
-    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
+    return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'},
 
-    setShowModal(true)};
+    setShowModal(true)},
 
   
-    setSelectedService (null) };
+    setSelectedService (null) },
   return ("
     <div className="min-h-screen futuristic-bg">
       {/* Matrix Rain Background Effect */}"
@@ -245,8 +245,8 @@ export default function Page() {
                 value={`${sortBy}-${sortOrder}`}
                 onChange={(e) => {
 
-                  const [newSortBy, newSortOrder] = e.target.value.split('-');
-                  setSortBy(newSortBy as );
+                  const [newSortBy, newSortOrder] = e.target.value.split('-'),
+                  setSortBy(newSortBy as ),
                   setSortOrder(newSortOrder as )}}"                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >"
                 <option value="name-desc">Name(A-Z)</option>"

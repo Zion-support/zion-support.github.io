@@ -1,39 +1,39 @@
 export interface SpecializedIndustryService {
-  id: string;
-  name: string;
-  tagline: string;
-  industry: string;
-  category: string;
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  industry: string,
+  category: string,
+  description: string,
+  features: string[],
+  benefits: string[],
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-  link: string;
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+    starter: number,
+    professional: number,
+    enterprise: number,
+    currency: string,
+    period: string
+  },
+  link: string,
+  icon: string,
+  isPopular?: boolean,
+  isNew?: boolean,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+    mobile: string,
+    email: string,
+    address: string
+  },
 }
 
 export const specializedIndustryServices: SpecializedIndustryService[] = [
@@ -46,22 +46,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'AI',
     description: 'Advanced AI platform that automates legal research, analyzes case law, and provides intelligent insights for legal professionals.',
     features: [
-      'AI Case Law Analysis',
-      'Legal Document Review',
-      'Precedent Identification',
-      'Risk Assessment',
-      'Compliance Checking',
-      'Document Generation',
-      'Legal Research Automation',
-      'Multi-jurisdiction Support'
+      'AI Case Law AnalysisLegal Document Review',
+      'Precedent IdentificationRisk Assessment',
+      'Compliance CheckingDocument Generation',
+      'Legal Research AutomationMulti-jurisdiction Support'
     ],
     benefits: [
-      'Reduce research time by 80%',
-      'Improve case outcomes by 35%',
-      'Automate routine legal tasks',
-      'Enhanced legal insights',
-      'Cost-effective legal services',
-      'Better client outcomes'
+      'Reduce research time by 80%Improve case outcomes by 35%',
+      'Automate routine legal tasksEnhanced legal insights',
+      'Cost-effective legal servicesBetter client outcomes'
     ],
     pricing: {
       starter: 1200,
@@ -74,14 +67,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     icon: '⚖️',
     isNew: true,
     marketPosition: 'Leading AI-powered legal research platform',
-    targetAudience: ['Law Firms', 'Legal Departments', 'Judges', 'Legal Researchers'],
+    targetAudience: ['Law FirmsLegal Departments', 'JudgesLegal Researchers'],
     trialDays: 30,
     setupTime: '2-3 weeks',
-    technology: ['Natural Language Processing', 'Machine Learning', 'Legal Analytics', 'Cloud Computing'],
-    integrations: ['Legal Databases', 'Case Management Systems', 'Document Management', 'Court Systems'],
-    useCases: ['Case Research', 'Document Review', 'Compliance', 'Risk Assessment'],
+    technology: ['Natural Language ProcessingMachine Learning', 'Legal AnalyticsCloud Computing'],
+    integrations: ['Legal DatabasesCase Management Systems', 'Document ManagementCourt Systems'],
+    useCases: ['Case ResearchDocument Review', 'ComplianceRisk Assessment'],
     roi: 'Improve legal efficiency by 60%',
-    competitors: ['Westlaw', 'LexisNexis', 'Casetext'],
+    competitors: ['WestlawLexisNexis', 'Casetext'],
     marketSize: '$8B legal tech market',
     growthRate: '20% CAGR',
     contactInfo: {
@@ -100,22 +93,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'Analytics',
     description: 'Comprehensive real estate analytics platform that uses AI to predict market trends, analyze property values, and provide investment insights.',
     features: [
-      'Market Trend Analysis',
-      'Property Valuation AI',
-      'Investment Opportunity Scoring',
-      'Risk Assessment',
-      'Portfolio Optimization',
-      'Market Forecasting',
-      'Comparative Analysis',
-      'Investment Recommendations'
+      'Market Trend AnalysisProperty Valuation AI',
+      'Investment Opportunity ScoringRisk Assessment',
+      'Portfolio OptimizationMarket Forecasting',
+      'Comparative AnalysisInvestment Recommendations'
     ],
     benefits: [
-      'Improve investment returns by 40%',
-      'Reduce market research time by 70%',
-      'Data-driven investment decisions',
-      'Risk mitigation',
-      'Portfolio optimization',
-      'Market timing insights'
+      'Improve investment returns by 40%Reduce market research time by 70%',
+      'Data-driven investment decisionsRisk mitigation',
+      'Portfolio optimizationMarket timing insights'
     ],
     pricing: {
       starter: 800,
@@ -127,14 +113,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/ai-real-estate-analytics',
     icon: '🏠',
     marketPosition: 'Leading AI-powered real estate analytics platform',
-    targetAudience: ['Real Estate Investors', 'Agents', 'Developers', 'Property Managers'],
+    targetAudience: ['Real Estate InvestorsAgents', 'DevelopersProperty Managers'],
     trialDays: 21,
     setupTime: '1-2 weeks',
-    technology: ['Machine Learning', 'Predictive Analytics', 'Data Visualization', 'Cloud Computing'],
-    integrations: ['MLS Systems', 'Property Databases', 'Financial Data', 'Market Data Sources'],
-    useCases: ['Investment Analysis', 'Market Research', 'Portfolio Management', 'Risk Assessment'],
+    technology: ['Machine LearningPredictive Analytics', 'Data VisualizationCloud Computing'],
+    integrations: ['MLS SystemsProperty Databases', 'Financial DataMarket Data Sources'],
+    useCases: ['Investment AnalysisMarket Research', 'Portfolio ManagementRisk Assessment'],
     roi: 'Improve investment ROI by 40%',
-    competitors: ['Zillow', 'Redfin', 'Real Capital Analytics'],
+    competitors: ['ZillowRedfin', 'Real Capital Analytics'],
     marketSize: '$12B real estate tech market',
     growthRate: '18% CAGR',
     contactInfo: {
@@ -153,22 +139,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'Automation',
     description: 'Advanced manufacturing platform that integrates IoT, AI, and automation to create intelligent, connected manufacturing operations.',
     features: [
-      'IoT Device Integration',
-      'Predictive Maintenance',
-      'Quality Control AI',
-      'Supply Chain Optimization',
-      'Energy Management',
-      'Production Planning',
-      'Real-time Monitoring',
-      'Automated Quality Assurance'
+      'IoT Device IntegrationPredictive Maintenance',
+      'Quality Control AISupply Chain Optimization',
+      'Energy ManagementProduction Planning',
+      'Real-time MonitoringAutomated Quality Assurance'
     ],
     benefits: [
-      'Increase production efficiency by 35%',
-      'Reduce downtime by 60%',
-      'Improve product quality by 25%',
-      'Lower operational costs by 30%',
-      'Real-time production insights',
-      'Automated quality control'
+      'Increase production efficiency by 35%Reduce downtime by 60%',
+      'Improve product quality by 25%Lower operational costs by 30%',
+      'Real-time production insightsAutomated quality control'
     ],
     pricing: {
       starter: 3000,
@@ -181,14 +160,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     icon: '🏭',
     isPopular: true,
     marketPosition: 'Leading Industry 4.0 manufacturing platform',
-    targetAudience: ['Manufacturers', 'Industrial Companies', 'Factories', 'Production Facilities'],
+    targetAudience: ['ManufacturersIndustrial Companies', 'FactoriesProduction Facilities'],
     trialDays: 45,
     setupTime: '6-8 weeks',
-    technology: ['IoT', 'Machine Learning', 'Automation', 'Cloud Computing'],
-    integrations: ['ERP Systems', 'MES Platforms', 'IoT Devices', 'Quality Control Systems'],
-    useCases: ['Production Optimization', 'Quality Control', 'Maintenance', 'Supply Chain'],
+    technology: ['IoTMachine Learning', 'AutomationCloud Computing'],
+    integrations: ['ERP SystemsMES Platforms', 'IoT DevicesQuality Control Systems'],
+    useCases: ['Production OptimizationQuality Control', 'MaintenanceSupply Chain'],
     roi: 'Improve manufacturing efficiency by 35%',
-    competitors: ['Siemens', 'GE Digital', 'PTC'],
+    competitors: ['SiemensGE Digital', 'PTC'],
     marketSize: '$25B smart manufacturing market',
     growthRate: '22% CAGR',
     contactInfo: {
@@ -207,22 +186,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'AI',
     description: 'Intelligent agriculture platform that uses AI, IoT, and data analytics to optimize farming operations and increase crop yields.',
     features: [
-      'Crop Monitoring AI',
-      'Soil Analysis',
-      'Weather Prediction',
-      'Irrigation Optimization',
-      'Pest Detection',
-      'Yield Prediction',
-      'Resource Management',
-      'Sustainability Tracking'
+      'Crop Monitoring AISoil Analysis',
+      'Weather PredictionIrrigation Optimization',
+      'Pest DetectionYield Prediction',
+      'Resource ManagementSustainability Tracking'
     ],
     benefits: [
-      'Increase crop yields by 30%',
-      'Reduce water usage by 25%',
-      'Optimize resource allocation',
-      'Improve sustainability',
-      'Reduce pesticide usage',
-      'Better crop planning'
+      'Increase crop yields by 30%Reduce water usage by 25%',
+      'Optimize resource allocationImprove sustainability',
+      'Reduce pesticide usageBetter crop planning'
     ],
     pricing: {
       starter: 500,
@@ -234,14 +206,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/precision-agriculture-platform',
     icon: '🌾',
     marketPosition: 'Leading AI-powered precision agriculture platform',
-    targetAudience: ['Farmers', 'Agricultural Companies', 'AgTech Startups', 'Research Institutions'],
+    targetAudience: ['FarmersAgricultural Companies', 'AgTech StartupsResearch Institutions'],
     trialDays: 30,
     setupTime: '2-3 weeks',
-    technology: ['Machine Learning', 'IoT', 'Satellite Imagery', 'Data Analytics'],
-    integrations: ['Weather APIs', 'Soil Sensors', 'Irrigation Systems', 'Farm Management Software'],
-    useCases: ['Crop Monitoring', 'Resource Optimization', 'Yield Prediction', 'Sustainability'],
+    technology: ['Machine LearningIoT', 'Satellite ImageryData Analytics'],
+    integrations: ['Weather APIsSoil Sensors', 'Irrigation SystemsFarm Management Software'],
+    useCases: ['Crop MonitoringResource Optimization', 'Yield PredictionSustainability'],
     roi: 'Improve agricultural productivity by 30%',
-    competitors: ['John Deere', 'Climate FieldView', 'FarmLogs'],
+    competitors: ['John DeereClimate FieldView', 'FarmLogs'],
     marketSize: '$15B precision agriculture market',
     growthRate: '28% CAGR',
     contactInfo: {
@@ -260,22 +232,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'Analytics',
     description: 'Advanced energy management platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability.',
     features: [
-      'Energy Consumption Analytics',
-      'Demand Response',
-      'Renewable Energy Integration',
-      'Grid Optimization',
-      'Carbon Footprint Tracking',
-      'Energy Efficiency Recommendations',
-      'Real-time Monitoring',
-      'Predictive Maintenance'
+      'Energy Consumption AnalyticsDemand Response',
+      'Renewable Energy IntegrationGrid Optimization',
+      'Carbon Footprint TrackingEnergy Efficiency Recommendations',
+      'Real-time MonitoringPredictive Maintenance'
     ],
     benefits: [
-      'Reduce energy costs by 25%',
-      'Improve energy efficiency by 30%',
-      'Reduce carbon footprint',
-      'Optimize energy consumption',
-      'Real-time energy insights',
-      'Sustainability compliance'
+      'Reduce energy costs by 25%Improve energy efficiency by 30%',
+      'Reduce carbon footprintOptimize energy consumption',
+      'Real-time energy insightsSustainability compliance'
     ],
     pricing: {
       starter: 1500,
@@ -287,14 +252,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/smart-energy-management',
     icon: '⚡',
     marketPosition: 'Leading AI-powered energy management platform',
-    targetAudience: ['Utilities', 'Commercial Buildings', 'Industrial Facilities', 'Government'],
+    targetAudience: ['UtilitiesCommercial Buildings', 'Industrial FacilitiesGovernment'],
     trialDays: 30,
     setupTime: '3-4 weeks',
-    technology: ['Machine Learning', 'IoT', 'Data Analytics', 'Cloud Computing'],
-    integrations: ['Smart Meters', 'Building Management Systems', 'Grid Systems', 'Renewable Energy Sources'],
-    useCases: ['Energy Optimization', 'Demand Management', 'Sustainability', 'Cost Reduction'],
+    technology: ['Machine LearningIoT', 'Data AnalyticsCloud Computing'],
+    integrations: ['Smart MetersBuilding Management Systems', 'Grid SystemsRenewable Energy Sources'],
+    useCases: ['Energy OptimizationDemand Management', 'SustainabilityCost Reduction'],
     roi: 'Reduce energy costs by 25%',
-    competitors: ['Schneider Electric', 'Siemens', 'Honeywell'],
+    competitors: ['Schneider ElectricSiemens', 'Honeywell'],
     marketSize: '$20B smart energy market',
     growthRate: '24% CAGR',
     contactInfo: {
@@ -313,22 +278,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'Automation',
     description: 'Comprehensive logistics platform that uses AI to optimize routes, reduce costs, and improve delivery efficiency.',
     features: [
-      'Route Optimization AI',
-      'Fleet Management',
-      'Real-time Tracking',
-      'Demand Forecasting',
-      'Inventory Optimization',
-      'Last-mile Delivery',
-      'Cost Analytics',
-      'Performance Monitoring'
+      'Route Optimization AIFleet Management',
+      'Real-time TrackingDemand Forecasting',
+      'Inventory OptimizationLast-mile Delivery',
+      'Cost AnalyticsPerformance Monitoring'
     ],
     benefits: [
-      'Reduce logistics costs by 30%',
-      'Improve delivery efficiency by 40%',
-      'Optimize route planning',
-      'Real-time visibility',
-      'Better customer service',
-      'Reduced carbon footprint'
+      'Reduce logistics costs by 30%Improve delivery efficiency by 40%',
+      'Optimize route planningReal-time visibility',
+      'Better customer serviceReduced carbon footprint'
     ],
     pricing: {
       starter: 2000,
@@ -340,14 +298,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/intelligent-logistics-platform',
     icon: '🚚',
     marketPosition: 'Leading AI-powered logistics optimization platform',
-    targetAudience: ['Logistics Companies', 'E-commerce', 'Manufacturers', 'Retailers'],
+    targetAudience: ['Logistics CompaniesE-commerce', 'ManufacturersRetailers'],
     trialDays: 21,
     setupTime: '3-4 weeks',
-    technology: ['Machine Learning', 'Route Optimization', 'IoT', 'Cloud Computing'],
-    integrations: ['TMS Systems', 'WMS Platforms', 'GPS Systems', 'Customer Portals'],
-    useCases: ['Route Optimization', 'Fleet Management', 'Inventory Management', 'Customer Delivery'],
+    technology: ['Machine LearningRoute Optimization', 'IoTCloud Computing'],
+    integrations: ['TMS SystemsWMS Platforms', 'GPS SystemsCustomer Portals'],
+    useCases: ['Route OptimizationFleet Management', 'Inventory ManagementCustomer Delivery'],
     roi: 'Reduce logistics costs by 30%',
-    competitors: ['Flexport', 'Convoy', 'KeepTruckin'],
+    competitors: ['FlexportConvoy', 'KeepTruckin'],
     marketSize: '$18B logistics tech market',
     growthRate: '26% CAGR',
     contactInfo: {
@@ -366,22 +324,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'AI',
     description: 'Advanced retail platform that uses AI to optimize inventory, personalize customer experiences, and increase sales.',
     features: [
-      'Inventory Optimization',
-      'Customer Personalization',
-      'Demand Forecasting',
-      'Price Optimization',
-      'Customer Analytics',
-      'Omnichannel Integration',
-      'Fraud Detection',
-      'Performance Analytics'
+      'Inventory OptimizationCustomer Personalization',
+      'Demand ForecastingPrice Optimization',
+      'Customer AnalyticsOmnichannel Integration',
+      'Fraud DetectionPerformance Analytics'
     ],
     benefits: [
-      'Increase sales by 25%',
-      'Reduce inventory costs by 20%',
-      'Improve customer satisfaction',
-      'Optimize pricing strategies',
-      'Better inventory management',
-      'Enhanced customer experience'
+      'Increase sales by 25%Reduce inventory costs by 20%',
+      'Improve customer satisfactionOptimize pricing strategies',
+      'Better inventory managementEnhanced customer experience'
     ],
     pricing: {
       starter: 1000,
@@ -393,14 +344,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/ai-retail-optimization',
     icon: '🛍️',
     marketPosition: 'Leading AI-powered retail optimization platform',
-    targetAudience: ['Retailers', 'E-commerce', 'Brick & Mortar', 'Omnichannel'],
+    targetAudience: ['RetailersE-commerce', 'Brick & MortarOmnichannel'],
     trialDays: 21,
     setupTime: '2-3 weeks',
-    technology: ['Machine Learning', 'Predictive Analytics', 'Personalization', 'Cloud Computing'],
-    integrations: ['POS Systems', 'E-commerce Platforms', 'CRM Systems', 'Inventory Management'],
-    useCases: ['Inventory Management', 'Customer Personalization', 'Price Optimization', 'Sales Analytics'],
+    technology: ['Machine LearningPredictive Analytics', 'PersonalizationCloud Computing'],
+    integrations: ['POS SystemsE-commerce Platforms', 'CRM SystemsInventory Management'],
+    useCases: ['Inventory ManagementCustomer Personalization', 'Price OptimizationSales Analytics'],
     roi: 'Increase retail sales by 25%',
-    competitors: ['Shopify', 'Salesforce', 'Adobe Commerce'],
+    competitors: ['ShopifySalesforce', 'Adobe Commerce'],
     marketSize: '$35B retail tech market',
     growthRate: '20% CAGR',
     contactInfo: {
@@ -419,22 +370,15 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     category: 'AI',
     description: 'Intelligent hospitality platform that uses AI to optimize operations, personalize guest experiences, and increase revenue.',
     features: [
-      'Guest Personalization',
-      'Revenue Management',
-      'Operational Optimization',
-      'Guest Analytics',
-      'Predictive Maintenance',
-      'Energy Management',
-      'Staff Scheduling',
-      'Quality Assurance'
+      'Guest PersonalizationRevenue Management',
+      'Operational OptimizationGuest Analytics',
+      'Predictive MaintenanceEnergy Management',
+      'Staff SchedulingQuality Assurance'
     ],
     benefits: [
-      'Increase guest satisfaction by 35%',
-      'Improve revenue by 25%',
-      'Optimize operations',
-      'Personalized guest experiences',
-      'Better staff management',
-      'Enhanced quality control'
+      'Increase guest satisfaction by 35%Improve revenue by 25%',
+      'Optimize operationsPersonalized guest experiences',
+      'Better staff managementEnhanced quality control'
     ],
     pricing: {
       starter: 800,
@@ -446,14 +390,14 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
     link: 'https://ziontechgroup.com/services/smart-hospitality-platform',
     icon: '🏨',
     marketPosition: 'Leading AI-powered hospitality management platform',
-    targetAudience: ['Hotels', 'Resorts', 'Restaurants', 'Hospitality Groups'],
+    targetAudience: ['HotelsResorts', 'RestaurantsHospitality Groups'],
     trialDays: 30,
     setupTime: '2-3 weeks',
-    technology: ['Machine Learning', 'IoT', 'Predictive Analytics', 'Cloud Computing'],
-    integrations: ['PMS Systems', 'Booking Engines', 'POS Systems', 'Guest Management'],
-    useCases: ['Guest Experience', 'Revenue Management', 'Operations', 'Quality Control'],
+    technology: ['Machine LearningIoT', 'Predictive AnalyticsCloud Computing'],
+    integrations: ['PMS SystemsBooking Engines', 'POS SystemsGuest Management'],
+    useCases: ['Guest ExperienceRevenue Management', 'OperationsQuality Control'],
     roi: 'Improve hospitality revenue by 25%',
-    competitors: ['Oracle Hospitality', 'Amadeus', 'Sabre'],
+    competitors: ['Oracle HospitalityAmadeus', 'Sabre'],
     marketSize: '$10B hospitality tech market',
     growthRate: '22% CAGR',
     contactInfo: {
@@ -462,20 +406,20 @@ export const specializedIndustryServices: SpecializedIndustryService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-];
+],
 
 export const getServicesByIndustry = (industry: string) => {
-  return specializedIndustryServices.filter(service => service.industry === industry);
-};
+  return specializedIndustryServices.filter(service => service.industry === industry)
+},
 
 export const getServicesByCategory = (category: string) => {
-  return specializedIndustryServices.filter(service => service.category === category);
-};
+  return specializedIndustryServices.filter(service => service.category === category)
+},
 
 export const getPopularServices = () => {
-  return specializedIndustryServices.filter(service => service.isPopular);
-};
+  return specializedIndustryServices.filter(service => service.isPopular),
+},
 
 export const getNewServices = () => {
-  return specializedIndustryServices.filter(service => service.isNew);
-};
+  return specializedIndustryServices.filter(service => service.isNew),
+},

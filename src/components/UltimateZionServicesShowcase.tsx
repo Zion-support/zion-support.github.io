@@ -1,50 +1,42 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ultimateZionServices2025 } from '../data/ultimate-zion-services-2025';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },
-    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },
+    { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' };
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' };
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' };
+    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' };
+    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' };
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' };
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' };
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' }
   ];
-
   const filteredServices = ultimateZionServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
+      opacity: 1,transition: {
+        staggerChildren: 0.1,delayChildren: 0.2
       }
     }
   };
-
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 };
     visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
+      opacity: 1,y: 0,transition: { duration: 0.5 }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Hero Section */}
@@ -173,7 +165,7 @@ const UltimateZionServicesShowcase: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                   <p className="text-sm text-purple-400 font-medium mb-2">
-                    {service.category.replace('-', ' ').toUpperCase()}
+                    {service.category.replace('- ').toUpperCase()}
                   </p>
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
                     {service.innovationLevel}
@@ -301,7 +293,7 @@ const UltimateZionServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -324,7 +316,6 @@ const UltimateZionServicesShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default UltimateZionServicesShowcase;

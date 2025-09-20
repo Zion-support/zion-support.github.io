@@ -1,39 +1,39 @@
-"use client";
-import React{ useEffectuseRef } from 'react';
-import { motion } from 'framer-motion';
+"use client",
+import React{ useEffectuseRef } from 'react',
+import { motion } from 'framer-motion',
 
 interface UltraFuturisticBackground2030Props {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null),
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const canvas = canvasRef.current,
+    if (!canvas) return,
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    const ctx = canvas.getContext('2d'),
+    if (!ctx) return,
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth,
+    canvas.height = window.innerHeight,
 
-    let animationId: number;
+    let animationId: number,
     let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-    }> = [];
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number
+    }> = [],
 
     // Initialize particles
     const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 150; i++) {
+      particles = [],
+      for (let i = 0, i < 150, i++) {
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -42,31 +42,31 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           size: Math.random() * 2 + 1,
           color: ['#00ffff'#ff00ff'#ffff00'#00ff00'#ff0080'][Math.floor(Math.random() * 5)],
           opacity: Math.random() * 0.8 + 0.2
-        });
+        }),
       }
-    };
+    },
 
     const animate = () => {
-      ctx.fillStyle = 'rgba(00.05)';
-      ctx.fillRect(0canvas.widthcanvas.height);
+      ctx.fillStyle = 'rgba(00.05)',
+      ctx.fillRect(0canvas.widthcanvas.height),
 
       // Update and draw particles
       particles.forEach((particleindex) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+        particle.x += particle.vx,
+        particle.y += particle.vy,
 
         // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0) particle.x = canvas.width,
+        if (particle.x > canvas.width) particle.x = 0,
+        if (particle.y < 0) particle.y = canvas.height,
+        if (particle.y > canvas.height) particle.y = 0,
 
         // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+        ctx.beginPath(),
+        ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2),
+        ctx.fillStyle = particle.color,
+        ctx.globalAlpha = particle.opacity,
+        ctx.fill(),
 
         // Draw connections
         particles.forEach((otherParticleotherIndex) => {
@@ -74,40 +74,40 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x2) + 
               Math.pow(particle.y - otherParticle.y2)
-            );
+            ),
             if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.xparticle.y);
-              ctx.lineTo(otherParticle.xotherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.3;
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
+              ctx.beginPath(),
+              ctx.moveTo(particle.xparticle.y),
+              ctx.lineTo(otherParticle.xotherParticle.y),
+              ctx.strokeStyle = particle.color,
+              ctx.globalAlpha = (100 - distance) / 100 * 0.3,
+              ctx.lineWidth = 0.5,
+              ctx.stroke(),
             }
           }
-        });
-      });
+        }),
+      }),
 
-      ctx.globalAlpha = 1;
-      animationId = requestAnimationFrame(animate);
-    };
+      ctx.globalAlpha = 1,
+      animationId = requestAnimationFrame(animate),
+    },
 
-    initParticles();
-    animate();
+    initParticles(),
+    animate(),
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    };
+      canvas.width = window.innerWidth,
+      canvas.height = window.innerHeight,
+      initParticles(),
+    },
 
-    window.addEventListener('resize'handleResize);
+    window.addEventListener('resize'handleResize),
 
     return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener('resize'handleResize);
-    };
-  }[]);
+      cancelAnimationFrame(animationId),
+      window.removeEventListener('resize'handleResize),
+    },
+  }[]),
 
 const UltraFuturisticBackground2030: React.FC = () => {
   return (
@@ -115,7 +115,7 @@ const UltraFuturisticBackground2030: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticBackground2030</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticBackground2030;
+export default UltraFuturisticBackground2030,

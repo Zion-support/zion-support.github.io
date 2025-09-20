@@ -1,13 +1,13 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
-,;
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;
-    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;
-    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
-  ];
+,
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },
+    { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 },
+  ],
 
   const matchedServices = [{
       id: 1,
@@ -80,20 +80,20 @@ export default function Page() {
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
-      reviews: 112,;
-      price: "$2,799 / mo",;
-      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
-      matchScore: 87,;
-      icon: Zap,;
-      featured: true;
-    };
-  ];
+      reviews: 112,
+      price: "$2,799 / mo",
+      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],
+      matchScore: 87,
+      icon: Zap,
+      featured: true
+    },
+  ],
 
-  const filteredServices = matchedServices.filter(service => {;
-    const matchesSearch = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
-                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+  const filteredServices = matchedServices.filter(service => {,
+    const matchesSearch = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||,
+                         service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -127,7 +127,7 @@ export default function Page() {
               <h1 className="text-4xl font - bold text-white">AI Service Matcher</h1>
             </div>
 
-            <h2 className="text-5xl md:text-6xl font - bold text-white mb-6 leading -tight">
+            <h2 className="text-5xl md: text-6xl font - bold text-white mb-6 leading -tight">
               Find Your Perfect < span className="block bg-gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg-clip - text text-transparent">
                 Technology Match
               </span>
@@ -151,12 +151,12 @@ export default function Page() {
                 Browse All Services
               </Link>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Search and Filter Section */}
-      <section className="py-16 bg-slate -800 / 50">;
+      <section className="py-16 bg-slate -800 / 50">,
         <div  className="container mx - auto px-4">
           <div  className="max - w-4xl mx -auto">
             {/* Search Bar */}
@@ -182,9 +182,9 @@ export default function Page() {
 
                   <category.icon className="w-4 h-4" />
                   {category.name}
-                  <span className="text-xs bg-white / 20 px-2 py-1 rounded-full">;
+                  <span className="text-xs bg-white / 20 px-2 py-1 rounded-full">,
                     {category.count}
-                  </span>;
+                  </span>,
                 </button>) ) }
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function Page() {
       </section>
 
       {/* Matched Services Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -254,7 +254,7 @@ export default function Page() {
                 </div>
 
                 {/* Service Info */}
-                <h3 className="text-xl font - bold text-white mb-3">{service.name}</h3>;
+                <h3 className="text-xl font - bold text-white mb-3">{service.name}</h3>,
                 <p className="text-slate - 300 mb-4 text-sm leading -relaxed">{service.description}</p>
 
                 {/* Rating and Price */}
@@ -299,7 +299,7 @@ export default function Page() {
               </motion.div>) ) }
           </div>
 
-          {filteredServices.length === 0 && (;
+          {filteredServices.length === 0 && (,
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -313,16 +313,16 @@ export default function Page() {
                 Try adjusting your search criteria or browse all our services.</p>
               <Link
                 to="/services"
-                className="inline - flex items - center px-6 py-3 bg-cyan - 500 text-white font - medium rounded-lg hover:bg-cyan - 400 transition - all duration -200"
+                className="inline - flex items - center px-6 py-3 bg-cyan - 500 text-white font - medium rounded-lg hover: bg-cyan - 400 transition - all duration -200"
 
                 Browse All Services < ArrowRight className="ml-2 w-4 h-4" />
-              </Link>;
+              </Link>,
             </motion.div>) }
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-slate -800 / 50">;
+      <section className="py-20 bg-slate -800 / 50">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial = {
@@ -365,7 +365,7 @@ export default function Page() {
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
 
-            ].map((step, index) => (;
+            ].map((step, index) => (,
               <motion.div
                 key={index}
                 initial = {
@@ -391,13 +391,13 @@ export default function Page() {
                 <div  className="text-2xl font - bold text-cyan - 400 mb-4">{step.step}</div>
                 <h3 className="text-xl font - bold text-white mb-3">{step.title}</h3>
                 <p className="text-slate -300">{step.description}</p>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">;
+      <section className="py-20 bg-gradient - to - r from - cyan - 500 / 10 via - blue - 500 / 10 to - purple -500 / 10">,
         <div  className="container mx - auto px-4 text-center">
           <motion.div
             initial = {
@@ -418,7 +418,7 @@ export default function Page() {
             <p className="text-xl text-slate - 300 mb-8 max - w-2xl mx -auto">
               Let our AI matcher find the perfect technology solutions for your business.Get started today and discover services tailored to your needs.</p>
 
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <Link
                 to="/contact"
                 className="inline - flex items - center px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 600 text-white font - semibold rounded-lg hover:from - cyan - 400 hover:to - blue - 500 transition - all duration - 200 hover:scale - 105 shadow-lg shadow-cyan -500 / 25"
@@ -429,11 +429,11 @@ export default function Page() {
                 to="/services"
                 className="inline - flex items - center px-8 py-4 border border-cyan - 400 / 30 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 / 10 transition - all duration -200"
               >
-                Browse All Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
-};
+                Browse All Services,
+              </Link>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
+},

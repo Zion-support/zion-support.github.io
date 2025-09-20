@@ -1,5 +1,5 @@
-"use client";
-import React, { useState, useEffect } from 'react';
+"use client",
+import React, { useState, useEffect } from 'react',
 BrainZapRocketStarArrowRightX,
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const AI2025BreakthroughAnnouncementBanner: React.FC = () => {,
@@ -10,7 +10,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {,
       >,
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">,
           <div className="flex items-center justify-between py-4">,
-            {/* Left side - Urgency Badge */,}
+            {/* Left side - Urgency Badge */}
             <div className="flex items-center gap-4">,
               <div,
                 key={currentBreakthrough}
@@ -44,7 +44,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {,
             <div className="flex items-center gap-4">,
               <a href="/ai-2025-breakthrough-announcement">,
                 <button,
-                  className={`bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} hover: opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`,}
+                  className={`bg-gradient-to-r ${breakthroughs[currentBreakthrough].color} hover: opacity-90 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 flex items-center gap-2`}
                 >,
                   <Star className="w-4 h-4" />,
                   Learn More,
@@ -60,7 +60,7 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Animated Background */,}
+        {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>,
         {/* Floating Particles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">,
@@ -69,20 +69,20 @@ const AI2025BreakthroughAnnouncementBanner: React.FC = () => {,
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-20];
-                opacity: [010],}}
-                duration: 3;
-                repeat: Infinity;
-                delay: Math.random() * 2,}}
+                y: [0-20],
+                opacity: [010]}}
+                duration: 3,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
             />,
           ))}
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AI2025BreakthroughAnnouncementBanner;
+  ),
+},
+export default AI2025BreakthroughAnnouncementBanner,
 </div></div>,

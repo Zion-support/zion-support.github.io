@@ -4,20 +4,20 @@ export type OrderStatus =
   | 'released'
   | 'disputed'
   | 'refunded'
-  | 'cancelled';
+  | 'cancelled',
 
 const transitions: Record<OrderStatus, OrderStatus[]> = {
-  pending: ['in_escrow', 'cancelled'],
-  in_escrow: ['released', 'disputed', 'refunded'],
+  pending: ['in_escrowcancelled'],
+  in_escrow: ['releaseddisputed', 'refunded'],
   released: [],
-  disputed: ['released', 'refunded'],
+  disputed: ['releasedrefunded'],
   refunded: [],
-  cancelled: [],
-};
+  cancelled: []
+},
 
 export function canTransition(
   current: OrderStatus,
   next: OrderStatus
 ) {
-  return transitions[current]?.includes(next);
+  return transitions[current]?.includes(next)
 }

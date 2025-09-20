@@ -1,26 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 const CloudServices = () => {
     const cloudServices = [
         {
-            title: "Cloud Migration & Strategy",
-            description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",
-            price: "From $8,500/project",
+            title: "Cloud Migration & Strategy",description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",price: "From $8,500/project",
             features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
         },
         {
-            title: "Cloud-Native Development",
-            description: "Build scalable applications using cloud-native technologies and microservices architecture.",
-            price: "From $12,000/project",
+            title: "Cloud-Native Development",description: "Build scalable applications using cloud-native technologies and microservices architecture.",price: "From $12,000/project",
             features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
         },
         {
-            title: "Cloud Security & Compliance",
-            description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
-            price: "From $6,500/month",
+            title: "Cloud Security & Compliance",description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",price: "From $6,500/month",
             features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
         }
-    ];
+    ],
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,7 +48,7 @@ const CloudServices = () => {
       </section>
 
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Infrastructure?</h2>
           <p className="text-xl mb-8">Transform your business with cloud-native solutions</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,6 +57,6 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default CloudServices;

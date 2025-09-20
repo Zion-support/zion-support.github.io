@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Autonomous Systems 2026 - Revolutionary Self-Managing Business Operations';
-  description: 'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 2026.';
-  keywords: ['autonomous systemsbusiness automation', 'self-managing operationszero-touch processes', 'intelligent automationenterprise operations'],
-};
+  title: 'Autonomous Systems 2026 - Revolutionary Self-Managing Business Operations',
+  description: 'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 2026.',
+  keywords: ['autonomous systemsbusiness automationself-managing operationszero-touch processes', 'intelligent automationenterprise operations']
+},
 export default function AutonomousSystems2026Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-purple-900 text-white">,
@@ -60,7 +60,7 @@ export default function AutonomousSystems2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Autonomous Technologies Section */,}
+      {/* Autonomous Technologies Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">,
@@ -145,7 +145,7 @@ export default function AutonomousSystems2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Implementation Phases */,}
+      {/* Implementation Phases */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">,
@@ -215,7 +215,7 @@ export default function AutonomousSystems2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Business Applications */,}
+      {/* Business Applications */}
       <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-7xl mx-auto">,
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">,
@@ -301,7 +301,7 @@ export default function AutonomousSystems2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* ROI Calculator */,}
+      {/* ROI Calculator */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-green-200 bg-clip-text text-transparent">,
@@ -363,14 +363,14 @@ export default function AutonomousSystems2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-green-600/20 to-blue-600/20">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl md:text-5xl font-bold mb-8">,
             Ready for Autonomous Operations?,
           </h2>,
           <p className="text-xl opacity-90 mb-12">,
-            Transform your business with fully autonomous systems that work around the clock;
+            Transform your business with fully autonomous systems that work around the clock,
             adapt to changing conditions, and continuously optimize performance. The future of business is autonomous.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -390,4 +390,4 @@ export default function AutonomousSystems2026Page() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

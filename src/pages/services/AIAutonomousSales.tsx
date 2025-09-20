@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  TrendingUp, 
+  TrendingUp,
   Brain, 
   Target, 
   BarChart3, 
@@ -23,50 +23,33 @@ import {
   Zap,
   Shield,
   DollarSign as DollarSignIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousSales: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Sales Intelligence',
-      description: 'Advanced machine learning for autonomous sales strategy and optimization'
-    },
+      icon: Brain,title: 'AI-Powered Sales Intelligence',description: 'Advanced machine learning for autonomous sales strategy and optimization'
+    };
     {
-      icon: Target,
-      title: 'Lead Generation',
-      description: 'Intelligent lead generation and qualification with AI-driven insights'
-    },
+      icon: Target,title: 'Lead Generation',description: 'Intelligent lead generation and qualification with AI-driven insights'
+    };
     {
-      icon: TrendingUp,
-      title: 'Sales Forecasting',
-      description: 'Predictive sales forecasting and revenue optimization'
-    },
+      icon: TrendingUp,title: 'Sales Forecasting',description: 'Predictive sales forecasting and revenue optimization'
+    };
     {
-      icon: BarChart3,
-      title: 'Sales Analytics',
-      description: 'Real-time analytics and insights into sales performance and trends'
-    },
+      icon: BarChart3,title: 'Sales Analytics',description: 'Real-time analytics and insights into sales performance and trends'
+    };
     {
-      icon: Users,
-      title: 'Customer Segmentation',
-      description: 'AI-driven customer segmentation and targeting strategies'
-    },
+      icon: Users,title: 'Customer Segmentation',description: 'AI-driven customer segmentation and targeting strategies'
+    };
     {
-      icon: DollarSignIcon,
-      title: 'Revenue Optimization',
-      description: 'Continuous optimization of sales processes and revenue generation'
+      icon: DollarSignIcon,title: 'Revenue Optimization',description: 'Continuous optimization of sales processes and revenue generation'
     }
   ];
-
   const benefits = [
-    'Increase sales revenue by 120%',
-    'Improve lead conversion by 80%',
-    'Reduce sales cycle by 60%',
-    'Automate sales processes',
-    '24/7 autonomous operation',
-    'Real-time sales insights'
-  ];
+    'Increase sales revenue by 120%Improve lead conversion by 80%',
+    'Reduce sales cycle by 60%Automate sales processes',
+    '24/7 autonomous operationReal-time sales insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -208,7 +191,7 @@ const AIAutonomousSales: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -226,7 +209,6 @@ const AIAutonomousSales: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousSales;

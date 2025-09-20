@@ -1,15 +1,13 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agent Risk Maturity Matrix — Governance to ROI';
+  title: 'AI 2026: Agent Risk Maturity Matrix — Governance to ROI',
   description:,
-    'Assess and improve agent risk maturity across policy, evals, telemetry, and operations to safely scale AI with measurable ROI.';
+    'Assess and improve agent risk maturity across policy, evals, telemetry, and operations to safely scale AI with measurable ROI.',
   keywords: [,
-    'AI governanceagent risk';
-    'maturity modelpolicy as code';
-    'evalsobservability';
-    'enterprise AIROI',
-  ],
-};
+    'AI governanceagent riskmaturity modelpolicy as code',
+    'evalsobservabilityenterprise AIROI'
+  ]
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -19,7 +17,7 @@ export default function Page() {,
             AI 2026: Agent Risk Maturity Matrix,
           </h1>,
           <p className="text-lg md:text-xl opacity-90 max-w-3xl">,
-            A practical maturity model to benchmark, prioritize, and uplift agent safety across policy, evals;
+            A practical maturity model to benchmark, prioritize, and uplift agent safety across policy, evals,
             telemetry, and operations—unlocking reliable scale and ROI.,
           </p>,
         </div>,
@@ -30,7 +28,7 @@ export default function Page() {,
             <h2>Why a Risk Maturity Matrix?</h2>,
             <p>,
               As autonomous agents become embedded in revenue, support, and operations, organizations need a,
-              common language to gauge readiness. This matrix defines levels across four pillars: Policy;
+              common language to gauge readiness. This matrix defines levels across four pillars: Policy,
               Evals, Telemetry, and Operations.,
             </p>,
             <h3>Four Pillars</h3>,
@@ -58,7 +56,7 @@ export default function Page() {,
             <h3>Getting Started</h3>,
             <p>,
               Start with a baseline assessment and prioritize gaps that reduce incident risk while enabling,
-              faster, safer delivery. Pair each uplift with measured impact: incident rate, rollback time;
+              faster, safer delivery. Pair each uplift with measured impact: incident rate, rollback time,
               conversion lift, and cost per outcome.,
             </p>,
             <div className="mt-8 p-6 bg-purple-50 border border-purple-200 rounded-xl">,
@@ -84,7 +82,6 @@ export default function Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
+import React, { useState, useEffect } from 'react',
+import { Link, useLocation  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
 
   const navigationItems = [{ name: 'Home', path: '/', icon: null },
     {
@@ -74,14 +74,14 @@ export default function Page() {
       ]
     },
     { name: 'Contact', path: '/contact', icon: null }
-  ];
+  ],
 
   const isActiveRoute = path => {
     if(path === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/',
     }
-    return location.pathname.startsWith(path);
-  };
+    return location.pathname.startsWith(path),
+  },
 
   return (<motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
@@ -251,5 +251,5 @@ export default function Page() {
         </motion.div>
       )}
     </motion.header>
-  );
+  ),
 }

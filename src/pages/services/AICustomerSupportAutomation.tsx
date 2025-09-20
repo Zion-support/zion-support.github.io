@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  MessageCircle, 
+  MessageCircle,
   Bot, 
   Brain, 
   Zap, 
@@ -29,50 +29,33 @@ import {
   FileText,
   Calendar,
   UserCheck
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 const AICustomerSupportAutomation = () => {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
+      icon: Bot,title: "AI-Powered Chatbots",description: "Intelligent chatbots that understand context, handle complex queries, and provide accurate responses 24/7 with 95%+ accuracy"
     },
     {
-      icon: Brain,
-      title: "Natural Language Processing",
-      description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
+      icon: Brain,title: "Natural Language Processing",description: "Advanced NLP that understands customer intent, sentiment, and provides personalized responses in multiple languages"
     },
     {
-      icon: Clock,
-      title: "24/7 Availability",
-      description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
+      icon: Clock,title: "24/7 Availability",description: "Round-the-clock customer support with instant responses, reducing wait times from hours to seconds"
     },
     {
-      icon: BarChart3,
-      title: "Smart Ticket Routing",
-      description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
+      icon: BarChart3,title: "Smart Ticket Routing",description: "AI-powered ticket classification and routing to the right agents based on complexity, urgency, and expertise"
     },
     {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
+      icon: TrendingUp,title: "Performance Analytics",description: "Comprehensive insights into support metrics, customer satisfaction, and agent performance with actionable recommendations"
     },
     {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
+      icon: Shield,title: "Enterprise Security",description: "Bank-grade security with data encryption, GDPR compliance, and role-based access control for sensitive customer information"
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
+      name: "Starter",price: "$199",period: "/month",description: "Perfect for small businesses and startups",features: [
         "Up to 1,000 conversations/month",
         "Basic AI chatbot",
         "5 agent licenses",
@@ -82,13 +65,9 @@ const AICustomerSupportAutomation = () => {
         "Basic analytics"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing businesses and teams",
-      features: [
+      name: "Professional",price: "$599",period: "/month",description: "Ideal for growing businesses and teams",features: [
         "Up to 10,000 conversations/month",
         "Advanced AI with NLP",
         "25 agent licenses",
@@ -100,14 +79,11 @@ const AICustomerSupportAutomation = () => {
         "White-label options"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large organizations with high support volumes",
-      features: [
-        "Unlimited conversations",
+      name: "Enterprise",price: "$1,999",
+      period: "/month",description: "For large organizations with high support volumes",features: [
+        "Unlimited conversations";
         "Custom AI models",
         "Unlimited agents",
         "Dedicated support",
@@ -120,90 +96,58 @@ const AICustomerSupportAutomation = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
-      title: "E-commerce Support",
-      description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
+      title: "E-commerce Support",description: "Handle order inquiries, returns, and product questions automatically while escalating complex issues to human agents",
       icon: ShoppingCart
-    },
+    };
     {
-      title: "SaaS Customer Success",
-      description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
+      title: "SaaS Customer Success",description: "Provide instant technical support, onboarding assistance, and feature explanations to improve user adoption",
       icon: Monitor
-    },
+    };
     {
-      title: "Financial Services",
-      description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
+      title: "Financial Services",description: "Handle account inquiries, transaction questions, and basic banking operations with security and compliance",
       icon: DollarSign
-    },
+    };
     {
-      title: "Healthcare Support",
-      description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
+      title: "Healthcare Support",description: "Manage appointment scheduling, general inquiries, and provide health information while maintaining HIPAA compliance",
       icon: Heart
     }
   ];
-
   const benefits = [
     {
-      icon: Clock,
-      title: "Faster Response",
-      value: "90%",
-      description: "Reduce response times from hours to seconds"
-    },
+      icon: Clock,title: "Faster Response",value: "90%",description: "Reduce response times from hours to seconds"
+    };
     {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      value: "60-80%",
-      description: "Lower support costs while improving quality"
-    },
+      icon: DollarSign,title: "Cost Reduction",value: "60-80%",description: "Lower support costs while improving quality"
+    };
     {
-      icon: Users,
-      title: "Customer Satisfaction",
-      value: "40%",
-      description: "Improve CSAT scores with instant support"
-    },
+      icon: Users,title: "Customer Satisfaction",value: "40%",description: "Improve CSAT scores with instant support"
+    };
     {
-      icon: TrendingUp,
-      title: "Efficiency Gain",
-      value: "3x",
-      description: "Handle more support requests with fewer agents"
+      icon: TrendingUp,title: "Efficiency Gain",value: "3x",description: "Handle more support requests with fewer agents"
     }
   ];
-
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      role: "Customer Success Director",
-      company: "TechFlow Solutions",
-      content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",
-      rating: 5
-    },
+      name: "Jennifer Adams",role: "Customer Success Director",company: "TechFlow Solutions",content: "Our AI support automation has transformed customer experience. Response times dropped from 4 hours to under 2 minutes.",rating: 5
+    };
     {
-      name: "Marcus Chen",
-      role: "Operations Manager",
-      company: "E-commerce Plus",
-      content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
+      name: "Marcus Chen",role: "Operations Manager",company: "E-commerce Plus",content: "The chatbot handles 70% of our inquiries automatically, freeing our agents to focus on complex customer issues.",
       rating: 5
-    },
+    };
     {
-      name: "Sarah Williams",
-      role: "VP of Support",
-      company: "CloudTech Inc",
-      content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",
-      rating: 5
+      name: "Sarah Williams",role: "VP of Support",company: "CloudTech Inc",content: "Customer satisfaction increased by 35% while reducing support costs by 65%. Game-changing technology.",rating: 5
     }
   ];
-
   const integrations = [
-    { name: "Slack", icon: MessageCircle, description: "Seamless team communication" },
-    { name: "Zendesk", icon: Headphones, description: "Ticket management integration" },
-    { name: "Salesforce", icon: Users, description: "CRM synchronization" },
-    { name: "Intercom", icon: Bot, description: "Live chat integration" },
-    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" },
+    { name: "Slack", icon: MessageCircle, description: "Seamless team communication" };
+    { name: "Zendesk", icon: Headphones, description: "Ticket management integration" };
+    { name: "Salesforce", icon: Users, description: "CRM synchronization" };
+    { name: "Intercom", icon: Bot, description: "Live chat integration" };
+    { name: "HubSpot", icon: BarChart3, description: "Marketing automation" };
     { name: "Microsoft Teams", icon: Monitor, description: "Team collaboration" }
   ];
-
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -234,7 +178,7 @@ const AICustomerSupportAutomation = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your customer support with AI automation that provides 24/7 availability, 
+              Transform your customer support with AI automation that provides 24/7 availability;
               instant responses, and reduces support costs by 60-80% while improving customer satisfaction.
             </p>
             
@@ -664,7 +608,7 @@ const AICustomerSupportAutomation = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
+                  className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover: bg-blue-400 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
                 </motion.button>
@@ -674,26 +618,25 @@ const AICustomerSupportAutomation = () => {
         </div>
       </div>
       </section>
-    );
+    )
 };
-
 // Add missing icon components
 const ShoppingCart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
   </svg>
-);
+),
 
 const DollarSign = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
   </svg>
-);
+),
 
 const Heart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
   </svg>
-);
+),
 
 export default AICustomerSupportAutomation;

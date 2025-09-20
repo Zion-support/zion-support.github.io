@@ -1,6 +1,6 @@
-import React from 'react';
-export default Mobile;
-import SEO from "../SEO";
+import React from 'react',
+export default Mobile,
+import SEO from "../SEO",
 
 const Mobile = () => {
     const mobileStats = [{
@@ -23,7 +23,7 @@ const Mobile = () => {
             label: "Mobile Conversion",
             description: "Higher conversion rates on mobile - optimized sites"
 
-    ];
+    ],
     return (<>
       <SEO title="Mobile - First Solutions - Zion Tech Group" description="Experience mobile - first design and development with Zion Tech Group.From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
 
@@ -170,5 +170,5 @@ const Mobile = () => {
           </div>
         </main>
       </div>
-    </>) };
+    </>) },
 }}}}

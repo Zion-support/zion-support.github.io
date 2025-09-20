@@ -1,12 +1,12 @@
 <<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react',
 export const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
- from 'lucide-react';
+ from 'lucide-react',
 
 interface AccessibilityEnhancerProps {
-  enabled?: boolean;
+  enabled?: boolean,
   showSettings?: boolean}
 
 export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
@@ -21,221 +21,221 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     keyboardNavigation: true,
     screenReader: false,
     focusIndicator: true
-  });
+  }),
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isScanning, setIsScanning] = useState(false);
-  const [issues, setIssues] = useState<any[]>([]);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
+  const [isScanning, setIsScanning] = useState(false),
+  const [issues, setIssues] = useState<any[]>([]),
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
-      // Skip if not in keyboard navigation mode;
-      if(!settings.keyboardNavigation) return;
+    const handleKeyDown = (event: KeyboardEvent) => {,
+      // Skip if not in keyboard navigation mode,
+      if(!settings.keyboardNavigation) return,
 
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement,
 
       // Tab navigation enhancement
       if(event.key = == 'Tab') {
-        const focusableElements = document.querySelectorAll(;
-          'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ';) ;
+        const focusableElements = document.querySelectorAll(,
+          'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ',) ,
 
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length-1] as HTMLElement;
+        const firstElement = focusableElements[0] as HTMLElement,
+        const lastElement = focusableElements[focusableElements.length-1] as HTMLElement,
 
-        if(event.shiftKey && target = == firstElement) {;
-          event.preventDefault () ;
-          lastElement.focus () ;
-        } else if(!event.shiftKey && target = == lastElement) {;
-          event.preventDefault () ;
-          firstElement.focus () ;
+        if(event.shiftKey && target = == firstElement) {,
+          event.preventDefault () ,
+          lastElement.focus () ,
+        } else if(!event.shiftKey && target = == lastElement) {,
+          event.preventDefault () ,
+          firstElement.focus () ,
         }
       }
 
       // Arrow key navigation for custom components
-      if(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes (event.key) ) {
-        const currentElement = target.closest('[data - navigation - group]') ;
+      if(['ArrowUpArrowDown', 'ArrowLeftArrowRight'].includes (event.key) ) {
+        const currentElement = target.closest('[data - navigation - group]') ,
         if(currentElement) {
-          event.preventDefault () ;
-          navigateWithArrows(currentElement, event.key) ;
+          event.preventDefault () ,
+          navigateWithArrows(currentElement, event.key) ,
         }
       }
 
       // Enter / Space for interactive elements
-      if(['Enter', ' '].includes (event.key) ) {
+      if(['Enter '].includes (event.key) ) {
         if(target.getAttribute ('role') === 'button' || target.classList.contains('interactive') ) {
-          event.preventDefault () ;
-          target.click () ;
+          event.preventDefault () ,
+          target.click () ,
         }
       }
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown) ;
-    return () => document.removeEventListener('keydown', handleKeyDown) ;
-  }, [settings.keyboardNavigation]) ;
+    document.addEventListener('keydown', handleKeyDown) ,
+    return () => document.removeEventListener('keydown', handleKeyDown) ,
+  }, [settings.keyboardNavigation]) ,
 
   // Arrow key navigation helper
   const navigateWithArrows = (container: Element, direction: string) => {
-    const focusableElements = Array.from(container.querySelectorAll (;
-      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ';) ) .filter(el => ! (el as HTMLElement) .hidden) ;
+    const focusableElements = Array.from(container.querySelectorAll (,
+      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"]) ',) ) .filter(el => ! (el as HTMLElement) .hidden) ,
 
-    const currentIndex = focusableElements.findIndex(el => el === document.activeElement) ;
-    let nextIndex = currentIndex;
+    const currentIndex = focusableElements.findIndex(el => el === document.activeElement) ,
+    let nextIndex = currentIndex,
 
     switch(direction) {
       case 'ArrowRight':
       case 'ArrowDown':
-        nextIndex = currentIndex < focusableElements.length-1 ? currentIndex + 1 : 0;
-        break;
+        nextIndex = currentIndex < focusableElements.length-1 ? currentIndex + 1 : 0,
+        break,
       case 'ArrowLeft':
       case 'ArrowUp':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length-1;
-        break;
-    } (focusableElements[nextIndex] as HTMLElement) ?.focus () ;
-  };
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length-1,
+        break,
+    } (focusableElements[nextIndex] as HTMLElement) ?.focus () ,
+  },
 
   // Screen reader announcements
-  const announcement = document.createElement('div') ;
-      announcement.setAttribute('aria - live', 'polite') ;
-      announcement.setAttribute('aria - atomic', 'true') ;
-      announcement.className="sr -only";
-      announcement.textContent = message;
+  const announcement = document.createElement('div') ,
+      announcement.setAttribute('aria - livepolite') ,
+      announcement.setAttribute('aria - atomictrue') ,
+      announcement.className="sr -only",
+      announcement.textContent = message,
 
-      document.body.appendChild(announcement) ;
+      document.body.appendChild(announcement) ,
 
       setTimeout(() => {
-        document.body.removeChild(announcement) ;
-      }, 1000) ;
+        document.body.removeChild(announcement) ,
+      }, 1000) ,
     }
-  }, [settings.screenReader]) ;
+  }, [settings.screenReader]) ,
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea') ;
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea') ,
 
-interactiveElements.forEach(element:  > {;
-      const el = element as HTMLElement;
+interactiveElements.forEach(element: > {,
+      const el = element as HTMLElement,
 
       // Add role if missing
-      if (el.tagName = == 'BUTTON' && !el.getAttribute ('role') ) {;
-        el.setAttribute('role', 'button') ;
+      if (el.tagName = == 'BUTTON' && !el.getAttribute ('role') ) {,
+        el.setAttribute('rolebutton') ,
       }
 
       // Add aria - label for elements without text
       if(!el.textContent?.trim () && !el.getAttribute('aria - label') ) {
-        const title = el.getAttribute('title') ;
+        const title = el.getAttribute('title') ,
         if(title) {
-          el.setAttribute('aria - label', title) ;
+          el.setAttribute('aria - label', title) ,
         }
       }
 
       // Add focus indicator
       if(settings.focusIndicator) {
-        el.classList.add('focus - visible') ;
+        el.classList.add('focus - visible') ,
       }
-    }) ;
-  }, [settings.focusIndicator]) ;
+    }) ,
+  }, [settings.focusIndicator]) ,
 
   // Add CSS for accessibility features
   useEffect(() => {
-    const style = document.createElement('style') ;
+    const style = document.createElement('style') ,
     style.textContent = `
-      /* High contrast mode */;
-      .high-contrast {;
-        --text-primary: #ffffff ! important;
-        --text-secondary: #e5e7eb ! important;
-        --bg-primary: #000000 ! important;
-        --bg-secondary: #1f2937 ! important;
-        --accent: #ffff00 ! important;
-        --border: #ffffff ! important;
+      /* High contrast mode */,
+      .high-contrast {,
+        --text-primary: #ffffff ! important,
+        --text-secondary: #e5e7eb ! important,
+        --bg-primary: #000000 ! important,
+        --bg-secondary: #1f2937 ! important,
+        --accent: #ffff00 ! important,
+        --border: #ffffff ! important
       }
 
       .high-contrast * {
-        color: var(--text-primary) !important;
-        background - color: var(--bg-primary) !important;
-        border-color: var(--border) !important;
+        color: var(--text-primary) !important,
+        background - color: var(--bg-primary) !important,
+        border-color: var(--border) !important
       }
 
       /* Large text mode */
       .large - text {
-        font - size: 1.2em ! important;
+        font - size: 1.2em ! important
       }
 
-      .large - text h1 { font - size: 2.5em ! important; }
-      .large - text h2 { font - size: 2em ! important; }
-      .large - text h3 { font - size: 1.75em ! important; }
-      .large - text p { font - size: 1.3em ! important; }
+      .large - text h1 { font - size: 2.5em ! important }
+      .large - text h2 { font - size: 2em ! important }
+      .large - text h3 { font - size: 1.75em ! important }
+      .large - text p { font - size: 1.3em ! important }
 
       /* Reduced motion */
       .reduced - motion *,
       .reduced - motion *::before,
       .reduced - motion *::after {
-        animation - duration: 0.01ms ! important;
-        animation - iteration - count: 1 ! important;
-        transition - duration: 0.01ms ! important;
-        scroll - behavior: auto ! important;
+        animation - duration: 0.01ms ! important,
+        animation - iteration - count: 1 ! important,
+        transition - duration: 0.01ms ! important,
+        scroll - behavior: auto ! important
       }
 
       /* Focus indicators */
-      .focus - visible:focus {
-        outline: 3px solid #3b82f6 ! important;
-        outline - offset: 2px ! important;
+      .focus - visible: focus {
+        outline: 3px solid #3b82f6 ! important,
+        outline - offset: 2px ! important
       }
 
-      .focus - visible:focus:not(:focus - visible) {
-        outline: none ! important;
+      .focus - visible: focus:not(:focus - visible) {
+        outline: none ! important
       }
 
       /* Screen reader only */
       .sr - only {
-        position: absolute ! important;
-        width: 1px ! important;
-        height: 1px ! important;
-        padding: 0 ! important;
-        margin: -1px ! important;
-        overflow: hidden ! important;
-        clip: rect(0, 0, 0, 0) !important;
-        white - space: nowrap ! important;
-        border: 0 ! important;
+        position: absolute ! important,
+        width: 1px ! important,
+        height: 1px ! important,
+        padding: 0 ! important,
+        margin: -1px ! important,
+        overflow: hidden ! important,
+        clip: rect(0, 0, 0, 0) !important,
+        white - space: nowrap ! important,
+        border: 0 ! important
       }
 
       /* Skip to main content link */
       .skip - link {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #000;
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        z - index: 1000;
+        position: absolute,
+        top: -40px,
+        left: 6px,
+        background: #000,
+        color: white,
+        padding: 8px,
+        text-decoration: none,
+        z - index: 1000
       }
 
-      .skip - link:focus {
-        top: 6px;
+      .skip - link: focus {
+        top: 6px
       }
-    `;
-    document.head.appendChild(style) ;
+    `,
+    document.head.appendChild(style) ,
 
     return () => {
-      document.head.removeChild(style) ;
+      document.head.removeChild(style) ,
   const applySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+    const root = document.documentElement,
 
     // High contrast
   const updateSetting = <K extends keyof AccessibilitySettings> (key: K,
     value: AccessibilitySettings[K]) => {
-    const newSettings = { ...settings, [key]: value };
-    saveSettings(newSettings) ;
+    const newSettings = { ...settings, [key]: value },
+    saveSettings(newSettings) ,
 
     // Show notification
-    const notification = `Updated ${key.replace(/ ([A - Z]) /g, ' $1') .toLowerCase () }`;
-    setNotifications(prev => [...prev, notification]) ;
+    const notification = `Updated ${key.replace(/ ([A - Z]) /g, ' $1') .toLowerCase () }`,
+    setNotifications(prev => [...prev, notification]) ,
     setTimeout(() => {
-      setNotifications(prev => prev.filter (n => n !== notification) ) ;
-    }, 3000) ;
-  };
+      setNotifications(prev => prev.filter (n => n !== notification) ) ,
+    }, 3000) ,
+  },
 
             {/* Accessibility Scan */}
             <div className="mb-6">
@@ -283,12 +283,12 @@ interactiveElements.forEach(element:  > {;
                 Reset All
               </button>
               <button     onClick={ () => setIsExpanded(false) }
-                className="flex - 1 px-4 py-2 bg-green - 600 hover:bg-green - 700 text-white text-sm rounded-lg transition -colors"
+                className="flex - 1 px-4 py-2 bg-green - 600 hover: bg-green - 700 text-white text-sm rounded-lg transition -colors"
               >
                 Apply
               </button>
             </div>
-          </motion.div>) : (;
+          </motion.div>) : (,
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -301,132 +301,132 @@ interactiveElements.forEach(element:  > {;
             <Eye className="w-6 h-6" />
           </motion.button>) }
       </AnimatePresence > const DEFAULT_SETTINGS: AccessibilitySettings = {
-  fontSize: 16,;
+  fontSize: 16,
   highContrast: false,
   reducedMotion: false,
   screenReader: false,
   keyboardNavigation: false,
   focusIndicator: true
-};
+},
 
   className = '',
   showPanel = false,
   onSettingsChange
 }) => {
-  const [isOpen, setIsOpen] = useState(showPanel);
-  const [settings, setSettings] = useState < AccessibilitySettings> (DEFAULT_SETTINGS) ;
-  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'> ('general') ;
+  const [isOpen, setIsOpen] = useState(showPanel),
+  const [settings, setSettings] = useState < AccessibilitySettings> (DEFAULT_SETTINGS) ,
+  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'> ('general') ,
 
   useEffect(() => {
-    const savedSettings = localStorage.getItem('zion - accessibility - settings') ;
+    const savedSettings = localStorage.getItem('zion - accessibility - settings') ,
     if(savedSettings) {
       try {
-        const parsed = JSON.parse(savedSettings) ;
-        setSettings({ ...DEFAULT_SETTINGS, ...parsed }) ;
-        applySettings({ ...DEFAULT_SETTINGS, ...parsed }) ;
+        const parsed = JSON.parse(savedSettings) ,
+        setSettings({ ...DEFAULT_SETTINGS, ...parsed }) ,
+        applySettings({ ...DEFAULT_SETTINGS, ...parsed }) ,
       } catch(error) {
-        console.warn('Failed to parse accessibility settings:', error) ;
+        console.warn('Failed to parse accessibility settings:', error) ,
       }
     }
-  }, []) ;
+  }, []) ,
 
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+    const root = document.documentElement,
 
     // Apply font size
-    root.style.setProperty('--zion - font - size - base', `${newSettings.fontSize}px`) ;
-    root.style.setProperty('--zion - font - size - sm', `${newSettings.fontSize * 0.875}px`) ;
-    root.style.setProperty('--zion - font - size - lg', `${newSettings.fontSize * 1.125}px`) ;
-    root.style.setProperty('--zion - font - size - xl', `${newSettings.fontSize * 1.25}px`) ;
+    root.style.setProperty('--zion - font - size - base', `${newSettings.fontSize}px`) ,
+    root.style.setProperty('--zion - font - size - sm', `${newSettings.fontSize * 0.875}px`) ,
+    root.style.setProperty('--zion - font - size - lg', `${newSettings.fontSize * 1.125}px`) ,
+    root.style.setProperty('--zion - font - size - xl', `${newSettings.fontSize * 1.25}px`) ,
 
     // Apply high contrast
     if(newSettings.highContrast) {
-      root.classList.add('high-contrast') ;
-      root.style.setProperty('--zion - bg-primary', '#000000') ;
-      root.style.setProperty('--zion - bg-secondary', '#1a1a1a') ;
-      root.style.setProperty('--zion - text-primary', '#ffffff') ;
-      root.style.setProperty('--zion - text-secondary', '#e5e5e5') ;
-      root.style.setProperty('--zion - border-color', '#ffffff') ;
+      root.classList.add('high-contrast') ,
+      root.style.setProperty('--zion - bg-primary#000000') ,
+      root.style.setProperty('--zion - bg-secondary#1a1a1a') ,
+      root.style.setProperty('--zion - text-primary#ffffff') ,
+      root.style.setProperty('--zion - text-secondary#e5e5e5') ,
+      root.style.setProperty('--zion - border-color#ffffff') ,
     } else {
-      root.classList.remove('high-contrast') ;
-      root.style.removeProperty('--zion - bg-primary') ;
-      root.style.removeProperty('--zion - bg-secondary') ;
-      root.style.removeProperty('--zion - text-primary') ;
-      root.style.removeProperty('--zion - text-secondary') ;
-      root.style.removeProperty('--zion - border-color') ;
+      root.classList.remove('high-contrast') ,
+      root.style.removeProperty('--zion - bg-primary') ,
+      root.style.removeProperty('--zion - bg-secondary') ,
+      root.style.removeProperty('--zion - text-primary') ,
+      root.style.removeProperty('--zion - text-secondary') ,
+      root.style.removeProperty('--zion - border-color') ,
     }
 
     // Apply reduced motion
     if(newSettings.reducedMotion) {
-      root.classList.add('reduced - motion') ;
+      root.classList.add('reduced - motion') ,
     } else {
-      root.classList.remove('reduced - motion') ;
+      root.classList.remove('reduced - motion') ,
     }
 
     // Apply focus indicator
     if(newSettings.focusIndicator) {
-      root.classList.add('focus - visible') ;
+      root.classList.add('focus - visible') ,
     } else {
-      root.classList.remove('focus - visible') ;
+      root.classList.remove('focus - visible') ,
     }
 
     // Apply keyboard navigation
     if(newSettings.keyboardNavigation) {
-      document.body.classList.add('keyboard - navigation') ;
+      document.body.classList.add('keyboard - navigation') ,
     } else {
-      document.body.classList.remove('keyboard - navigation') ;
+      document.body.classList.remove('keyboard - navigation') ,
     }
-  }, []) ;
+  }, []) ,
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings) ;
-    applySettings(newSettings) ;
-    localStorage.setItem('zion - accessibility - settings', JSON.stringify (newSettings) ) ;
-    onSettingsChange?.(newSettings) ;
-  }, [settings, applySettings, onSettingsChange]) ;
+    const newSettings = { ...settings, [key]: value },
+    setSettings(newSettings) ,
+    applySettings(newSettings) ,
+    localStorage.setItem('zion - accessibility - settings', JSON.stringify (newSettings) ) ,
+    onSettingsChange?.(newSettings) ,
+  }, [settings, applySettings, onSettingsChange]) ,
 
   const resetSettings = useCallback(() => {
-    setSettings(DEFAULT_SETTINGS) ;
-    applySettings(DEFAULT_SETTINGS) ;
-    localStorage.removeItem('zion - accessibility - settings') ;
-    onSettingsChange?.(DEFAULT_SETTINGS) ;
-  }, [applySettings, onSettingsChange]) ;
+    setSettings(DEFAULT_SETTINGS) ,
+    applySettings(DEFAULT_SETTINGS) ,
+    localStorage.removeItem('zion - accessibility - settings') ,
+    onSettingsChange?.(DEFAULT_SETTINGS) ,
+  }, [applySettings, onSettingsChange]) ,
 
   const increaseFontSize = useCallback(() => {
-    const newSize = Math.min(settings.fontSize + 2, 24) ;
-    updateSetting('fontSize', newSize) ;
-  }, [settings.fontSize, updateSetting]) ;
+    const newSize = Math.min(settings.fontSize + 2, 24) ,
+    updateSetting('fontSize', newSize) ,
+  }, [settings.fontSize, updateSetting]) ,
 
   const decreaseFontSize = useCallback(() => {
-    const newSize = Math.max(settings.fontSize - 2, 12) ;
-    updateSetting('fontSize', newSize) ;
-  }, [settings.fontSize, updateSetting]) ;
+    const newSize = Math.max(settings.fontSize - 2, 12) ,
+    updateSetting('fontSize', newSize) ,
+  }, [settings.fontSize, updateSetting]) ,
 
   const toggleHighContrast = useCallback(() => {
-    updateSetting('highContrast', !settings.highContrast) ;
-  }, [settings.highContrast, updateSetting]) ;
+    updateSetting('highContrast', !settings.highContrast) ,
+  }, [settings.highContrast, updateSetting]) ,
 
   const toggleReducedMotion = useCallback(() => {
-    updateSetting('reducedMotion', !settings.reducedMotion) ;
-  }, [settings.reducedMotion, updateSetting]) ;
+    updateSetting('reducedMotion', !settings.reducedMotion) ,
+  }, [settings.reducedMotion, updateSetting]) ,
 
   const toggleScreenReader = useCallback(() => {
-    updateSetting('screenReader', !settings.screenReader) ;
-  }, [settings.screenReader, updateSetting]) ;
+    updateSetting('screenReader', !settings.screenReader) ,
+  }, [settings.screenReader, updateSetting]) ,
 
   const toggleKeyboardNavigation = useCallback(() => {
-    updateSetting('keyboardNavigation', !settings.keyboardNavigation) ;
-  }, [settings.keyboardNavigation, updateSetting]) ;
+    updateSetting('keyboardNavigation', !settings.keyboardNavigation) ,
+  }, [settings.keyboardNavigation, updateSetting]) ,
 
   const toggleFocusIndicator = useCallback(() => {
-    updateSetting('focusIndicator', !settings.focusIndicator) ;
-  }, [settings.focusIndicator, updateSetting]) ;
+    updateSetting('focusIndicator', !settings.focusIndicator) ,
+  }, [settings.focusIndicator, updateSetting]) ,
 
-  const tabs = [{ id: 'general', label: 'General', icon: Settings },;
-    { id: 'visual', label: 'Visual', icon: Eye },;
+  const tabs = [{ id: 'general', label: 'General', icon: Settings },
+    { id: 'visual', label: 'Visual', icon: Eye },
     { id: 'navigation', label: 'Navigation', icon: Keyboard }
-  ] as const;
+  ] as const,
 
   return (<>
       {/* Floating Action Button */}
@@ -475,10 +475,10 @@ interactiveElements.forEach(element:  > {;
               </div>
 
               {/* Tabs */}
-              <div className="flex border-b border-gray - 200 dark:border-gray -700">
+              <div className="flex border-b border-gray - 200 dark: border-gray -700">
                 {tabs.map((tab) => {
-                  const Icon = tab.icon;
-                  const isActive = activeTab === tab.id;
+                  const Icon = tab.icon,
+                  const isActive = activeTab === tab.id,
 
                   return (<button     key={tab.id}
                       onClick={ () => setActiveTab(tab.id) }
@@ -489,7 +489,7 @@ interactiveElements.forEach(element:  > {;
                     >
                       <Icon className="w-4 h-4" />
                       <span>{tab.label}</span>
-                    </button>) ;
+                    </button>) ,
                 }) }
               </div>
 
@@ -695,15 +695,15 @@ interactiveElements.forEach(element:  > {;
       if(event.key === 'Tab') {
 
         if(event.shiftKey && target === firstElement) {
-          event.preventDefault();
+          event.preventDefault(),
           lastElement.focus()} else if(!event.shiftKey && target === lastElement) {
-          event.preventDefault();
+          event.preventDefault(),
           firstElement.focus()}
       }
-    };
+    },
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]),
 
   // Apply accessibility settings to the document
   
@@ -719,22 +719,22 @@ interactiveElements.forEach(element:  > {;
       root.classList.add('reduced-motion')} else {
       root.classList.remove('reduced-motion')}
 
-    root.style.setProperty('--font-size', `${newSettings.fontSize}px`);
-    root.style.setProperty('--line-height', newSettings.lineHeight.toString());
-    root.style.setProperty('--letter-spacing', `${newSettings.letterSpacing}px`)};
+    root.style.setProperty('--font-size', `${newSettings.fontSize}px`),
+    root.style.setProperty('--line-height', newSettings.lineHeight.toString()),
+    root.style.setProperty('--letter-spacing', `${newSettings.letterSpacing}px`)},
 
   // Save settings to localStorage
   
-    setSettings(newSettings);
-    applySettings(newSettings)};
+    setSettings(newSettings),
+    applySettings(newSettings)},
 
   // Update individual setting
   
-    saveSettings(newSettings)};
+    saveSettings(newSettings)},
 
   // Reset to default settings
   
-    saveSettings(defaultSettings)};
+    saveSettings(defaultSettings)},
 
   // Quick accessibility actions
   
@@ -742,9 +742,9 @@ interactiveElements.forEach(element:  > {;
   
   useEffect(() => {
     
-    return () => clearTimeout(timer)}, []);
+    return () => clearTimeout(timer)}, []),
 
-  if(!enabled || !isVisible) return null;
+  if(!enabled || !isVisible) return null,
 
   return (<>
       {/* Accessibility Toggle Button */}

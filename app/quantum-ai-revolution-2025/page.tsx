@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum AI Revolution 2025: The Next Frontier of Computing';
-  description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence that\'s reshaping the future of technology and business operations.';
-  keywords: ['quantum AIquantum computing', 'artificial intelligencequantum revolution', 'AI 2025quantum algorithms'],
-};
+  title: 'Quantum AI Revolution 2025: The Next Frontier of Computing',
+  description: 'Explore the revolutionary fusion of quantum computing and artificial intelligence that\'s reshaping the future of technology and business operations.',
+  keywords: ['quantum AIquantum computingartificial intelligencequantum revolution', 'AI 2025quantum algorithms']
+},
 export default function QuantumAIRevolution2025() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">,
@@ -19,7 +19,7 @@ export default function QuantumAIRevolution2025() {,
             Quantum AI Revolution 2025,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Witness the unprecedented fusion of quantum computing and artificial intelligence;
+            Witness the unprecedented fusion of quantum computing and artificial intelligence,
             creating solutions that were previously impossible and delivering exponential performance gains.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -38,7 +38,7 @@ export default function QuantumAIRevolution2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Quantum Capabilities */,}
+      {/* Quantum Capabilities */}
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white bg-opacity-10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -104,7 +104,7 @@ export default function QuantumAIRevolution2025() {,
               <div className="text-4xl mb-4">🎯</div>,
               <h3 className="text-2xl font-bold mb-4">Quantum Optimization</h3>,
               <p className="text-lg opacity-90 mb-4">,
-                Solve complex optimization problems across logistics;
+                Solve complex optimization problems across logistics,
                 finance, and resource allocation with quantum advantage.,
               </p>,
               <div className="bg-white bg-opacity-20 px-4 py-2 rounded-lg text-sm font-semibold">,
@@ -141,7 +141,7 @@ export default function QuantumAIRevolution2025() {,
               <div className="text-6xl font-bold text-green-400 mb-4">∞</div>,
               <h3 className="text-2xl font-bold text-white mb-4">Parallel Processing</h3>,
               <p className="text-gray-200 text-lg">,
-                Quantum superposition enables infinite parallel processing;
+                Quantum superposition enables infinite parallel processing,
                 solving multiple problems simultaneously.,
               </p>,
             </div>,
@@ -194,7 +194,7 @@ export default function QuantumAIRevolution2025() {,
           </div>,
         </div>,
       </section>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
         <div className="max-w-4xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-6">,
@@ -220,5 +220,4 @@ export default function QuantumAIRevolution2025() {,
           </div>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

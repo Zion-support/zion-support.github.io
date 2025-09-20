@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Building, Globe, Brain, Lock, Users, Target, Award } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Shield, Building, Globe, Brain, Lock, Users, Target, Award } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function GovernmentSolutions() {
   const solutions = [
@@ -41,7 +41,7 @@ export default function GovernmentSolutions() {
       description: "Improve citizen experience with digital solutions",
       href: "/intelligent-content-automation-platform"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function GovernmentSolutions() {
         </div>
       </div>
     </div>
-  );
-};
-export default government-solutions;
+  ),
+},
+export default government-solutions,

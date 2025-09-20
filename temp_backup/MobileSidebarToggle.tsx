@@ -1,24 +1,24 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
+import React, { useState } from 'react.ts',
+import { motion, AnimatePresence  } from 'framer-motion.ts',
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown  } from 'lucide-react.ts',
+import { Link, useLocation  } from 'react-router-dom.ts',
 
 export const MobileSidebarToggle: React.FC = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false),
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services'])),
+  const location = useLocation(),
 
   const toggleSection = (section: anystring)  => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
+      newExpanded.delete(section)
     } else {
-      newExpanded.add(section);
+      newExpanded.add(section),
     }
-    setExpandedSections(newExpanded);
-  };
+    setExpandedSections(newExpanded),
+  },
 
-  const isActive = (path: anystring)  => location.pathname === path;
+  const isActive = (path: anystring)  => location.pathname === path,
 
   const navigationSections = [
     {
@@ -62,13 +62,13 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
         { name: "Support Center", href: "/support", icon: HelpCircle }
       ]
     }
-  ];
+  ],
 
   const quickActions = [
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
-  ];
+  ],
 
 const MobileSidebarToggle: React.FC = () => {
   return (
@@ -76,7 +76,7 @@ const MobileSidebarToggle: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">MobileSidebarToggle</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default MobileSidebarToggle;
+export default MobileSidebarToggle,

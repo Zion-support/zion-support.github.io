@@ -1,58 +1,58 @@
 import React from 'react',''',
-import {SEO} from '../components/SEO';
+import {SEO} from '../components/SEO',
 const Pricing = (props: any) => {}
   const pricingTiers = [],
     {}
 ',
       name: 'Starter,
-      price: '$19',',
+      price: '$19,
       period: '/month,
       description:'',
         'Perfect for individuals and small teams getting started with AI tools,
       features: ['',
-        'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access',
-      ];
+        'AI Content Generation (100 credits/month),Basic AI Image Editing',AI Meeting Assistant (5 hours/month),Email Support',Basic Analytics Dashboard',Mobile App Access'
+      ],
       popular: false,',
       cta: 'Start Free Trial,
-      link: '/signup?plan=starter',};
+      link: '/signup?plan=starter'},
     {}
 ',
       name: 'Professional,
-      price: '$49',',
+      price: '$49,
       period: '/month,
-      description: 'Ideal for growing businesses and professional teams',',
+      description: 'Ideal for growing businesses and professional teams,
       features: ['',
-        'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools',
-      ];
+        'Everything in Starter',AI Content Generation (500 credits/month),Advanced AI Image & Video Editing',AI Code Assistant (Basic),AI Meeting Assistant (20 hours/month),AI Translation (10 languages),Priority Support',Advanced Analytics',API Access (1000 calls/month),Team Collaboration Tools'
+      ],
       popular: true,',
       cta: 'Start Free Trial,
-      link: '/signup?plan=professional',};
+      link: '/signup?plan=professional'},
     {}
 ',
       name: 'Business,
-      price: '$99',',
+      price: '$99,
       period: '/month,
-      description: 'Comprehensive solution for established businesses',',
+      description: 'Comprehensive solution for established businesses,
       features: ['',
-        'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features',
-      ];
+        'Everything in Professional',AI Content Generation (2000 credits/month),AI Code Assistant (Advanced),AI Data Analytics Platform',AI Threat Detection',Multi-Cloud Management',AI-Powered CRM',Business Process Automation',AI Meeting Assistant (Unlimited),AI Translation (100+ languages),24/7 Support',Custom Integrations',API Access (10000 calls/month),Advanced Security Features'
+      ],
       popular: false,',
       cta: 'Start Free Trial,
-      link: '/signup?plan=business',};
+      link: '/signup?plan=business'},
     {}
 ',
       name: 'Enterprise,
-      price: 'Custom',',
+      price: 'Custom,
       period: '',',
       description: '',
         'Tailored solutions for large organizations with specific requirements,
       features: ['',
-        'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications',
-      ];
+        'Everything in Business',Unlimited AI Content Generation',Custom AI Model Training',Zero Trust Security Suite',Edge Computing Solutions',AI Market Research Platform',AI Legal Document Review',AI Financial Advisor',AI Healthcare Assistant',Dedicated Account Manager',Custom Development',On-Premise Deployment',SLA Guarantees',Compliance Certifications'
+      ],
       popular: false,',
       cta: 'Contact Sales,
-      link: '/contact',}
-  ];
+      link: '/contact'}
+  ],
   return(),
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">""",
       <SEO """",
@@ -62,7 +62,7 @@ const Pricing = (props: any) => {}
         canonical="https: //ziontechgroup.com/pricing""",
        />,
 """,
-      {/* Hero Section */,}"""",
+      {/* Hero Section */}"""",
       <section className="pt-24 pb-16 px-4 sm: px-6 lg:px-8">"""",
         <div className="max-w-7xl mx-auto text-center">"""",
           <div className="mb-8">"""",
@@ -70,11 +70,11 @@ const Pricing = (props: any) => {}
               Simple, Transparent"""",
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">',
                 {' '}
-                Pricing;
+                Pricing,
               </span>""",
             </h1>"""",
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">,
-              Choose the perfect plan for your AI and technology needs. Start;
+              Choose the perfect plan for your AI and technology needs. Start,
               with a free trial and scale as you grow.,
             </p>,
           </div>,
@@ -86,22 +86,21 @@ const Pricing = (props: any) => {}
         <div className="max-w-7xl mx-auto">"""",
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
             {pricingTiers.map((tier, index) => (,
-              <div;
+              <div,
                 key={index}
                 className={`bg-slate-800/50 border rounded-xl p-8 ${}
 ',
                   tier.popular'',
                     ? 'border-blue-500 shadow-lg shadow-blue-500/25'''`,
-                    : 'border-white/10'``,
+                    : 'border-white/10'``
                 }`}
               >""",
                 {tier.popular && ("""",
                   <div className="text-center mb-4">"""",
                     <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">,
-                      Most Popular;
+                      Most Popular,
                     </span>,
-                  </div>,
-                )}""",
+                  </div>)}""",
 """",
                 <div className="text-center mb-6">"""",
                   <h3 className="text-2xl font-bold text-white mb-2">,
@@ -132,7 +131,7 @@ const Pricing = (props: any) => {}
 '''`,
                     tier.popular'''`'`,
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover: from-blue-600 hover:to-cyan-600'''`'`'`,
-                      : 'bg-transparent border border-white text-white hover:text-slate-900'````,}`}
+                      : 'bg-transparent border border-white text-white hover:text-slate-900'````}`}
                 >,
                   {tier.cta}
                 </a>,
@@ -148,7 +147,7 @@ const Pricing = (props: any) => {}
             Need a Custom Solution?""",
           </h2>"""",
           <p className="text-xl text-gray-300 mb-8">,
-            Contact us for enterprise pricing and custom solutions tailored to;
+            Contact us for enterprise pricing and custom solutions tailored to,
             your specific needs.""",
           </p>"""",
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""",
@@ -156,25 +155,25 @@ const Pricing = (props: any) => {}
               href="tel:+13024640950"""",
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105""",
             >,
-              📞 Call + 1 (302) 464 - 0950;
+              📞 Call + 1 (302) 464 - 0950,
             </a>""",
             <a"""",
               href="/contact"""",
               className="bg-transparent border-2 border-white text-white hover: bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all""",
             >,
-              Contact Sales;
+              Contact Sales,
             </a>,
           </div>,
         </div>,
       </section>,
     </div>,
-  ),
+  )
 }
 ,
-export default Pricing;
-export {Pricing};
-export {Pricing};
-export {Pricing};
-export {Pricing};
-export {Pricing};
+export default Pricing,
+export {Pricing},
+export {Pricing},
+export {Pricing},
+export {Pricing},
+export {Pricing},
 </SEO>,

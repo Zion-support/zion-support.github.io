@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
         { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
         { id: 'automation', name: 'Automation', icon: '⚡', count: 3 }
-    ];
+    ],
     const services = [{
 
             id: 'ai-strategy',
@@ -13,7 +13,7 @@ export default function Page() {
             icon: '🤖',
             price: 'From $2,500',
             category: 'ai',
-            features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],;
+            features['Strategic Planning',Implementation Roadmap',ROI Analysis',Team Training'],
             isPopular: true,
             color: 'from-zion-cyan to-zion-blue',
             href: '/services/ai'
@@ -26,7 +26,7 @@ export default function Page() {
             icon: '🔮',
             price: 'From $25,000',
             category: 'quantum',
-            features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],;
+            features['Quantum Algorithms',AI Integration',Performance Optimization',Scalable Architecture'],
             isNew: true,
             color: 'from-zion-purple to-zion-cyan',
             href: '/services/quantum'
@@ -39,7 +39,7 @@ export default function Page() {
             icon: '🧠',
             price: 'From $35,000',
             category: 'ai',
-            features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],;
+            features['Neural Networks',Efficient Processing',Scalable Architecture',Low Power Consumption'],
             color: 'from-zion-blue to-zion-cyan',
             href: '/services/ai'
         },
@@ -51,7 +51,7 @@ export default function Page() {
             icon: '🌐',
             price: 'From $15,000',
             category: 'cloud',
-            features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],;
+            features['Edge Deployment',Load Balancing',Real-time Processing',IoT Integration'],
             color: 'from-zion-cyan to-zion-green',
             href: '/services/cloud'
         },
@@ -63,7 +63,7 @@ export default function Page() {
             icon: '🔒',
             price: 'From $20,000',
             category: 'security',
-            features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],;
+            features['Data Privacy',Distributed Training',Secure Communication',Compliance Ready'],
             color: 'from-zion-green to-zion-cyan',
             href: '/services/security'
         },
@@ -75,7 +75,7 @@ export default function Page() {
             icon: '⚖️',
             price: 'From $18,000',
             category: 'ai',
-            features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],;
+            features['Ethical Guidelines',Compliance Tools',Audit Trails',Risk Assessment'],
             color: 'from-zion-yellow to-zion-orange',
             href: '/services/ai'
         },
@@ -87,7 +87,7 @@ export default function Page() {
             icon: '🔐',
             price: 'From $30,000',
             category: 'security',
-            features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],;
+            features['Post-Quantum Cryptography',Quantum Key Distribution',Threat Detection',Zero Trust'],
             isNew: true,
             color: 'from-zion-purple to-zion-red',
             href: '/services/security'
@@ -100,14 +100,14 @@ export default function Page() {
             icon: '⚙️',
             price: 'From $12,000',
             category: 'automation',
-            features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],;
+            features['Infrastructure as Code',Auto-scaling',Cost Optimization',Monitoring'],
             color: 'from-zion-orange to-zion-yellow',
             href: '/services/automation'
         }
-    ];
+    ],
     const filteredServices = activeCategory === 'all'
         ? services
-        : services.filter(service => service.category === activeCategory) ;
+        : services.filter(service => service.category === activeCategory) ,
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -119,7 +119,7 @@ export default function Page() {
                 staggerChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 20,
@@ -136,7 +136,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const categoryVariants = {
 
   hidden: { scale: 0.8,
@@ -153,7 +153,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}"
@@ -301,6 +301,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </section>)};
-export default InteractiveServiceShowcase;
+    </section>)},
+export default InteractiveServiceShowcase,
 '"`

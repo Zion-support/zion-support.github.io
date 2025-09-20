@@ -1,5 +1,5 @@
-import React from 'react';
-import { ActiveFilters } from '@/components/talent/ActiveFilters';
+import React from 'react',
+import { ActiveFilters } from '@/components/talent/ActiveFilters',
 
 export default function Page() {
       <ResultsHeader isLoading={isLoading} resultCount={totalCount} />
@@ -15,6 +15,6 @@ export default function Page() {
         clearFilters={activeFiltersProps.clearFilters}
       />
     </div>
-  );
+  ),
 }
 '"

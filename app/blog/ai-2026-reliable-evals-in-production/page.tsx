@@ -1,15 +1,14 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Reliable Evals in Production — Practical Guide';
-  description: 'Design production-grade evaluation pipelines with policy gates, SLOs, and incident-ready evidence.';
+  title: 'AI 2026: Reliable Evals in Production — Practical Guide',
+  description: 'Design production-grade evaluation pipelines with policy gates, SLOs, and incident-ready evidence.',
   keywords: [,
-    'AI evalsLLM evaluation';
-    'policy gatesSLOs';
-    'reliabilityproduction AI',
-  ],
-};
+    'AI evalsLLM evaluationpolicy gatesSLOs',
+    'reliabilityproduction AI'
+  ]
+},
 const ReliableEvalsInProduction: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -49,6 +48,5 @@ const ReliableEvalsInProduction: React.FC = () => {,
           <Link href="/blog/ai-2026-production-evidence-hub-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evidence Hub</Link>,
         </div>,
       </main>,
-    </div>,
-  ),};
-export default ReliableEvalsInProduction;
+    </div>)},
+export default ReliableEvalsInProduction,

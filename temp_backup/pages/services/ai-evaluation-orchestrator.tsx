@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  Brain, 
+  Brain,
   CheckCircle, 
   Shield, 
   Zap, 
@@ -15,7 +15,7 @@ import {
   Star,
   Users,
   Globe
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIEvaluationOrchestrator() {
   const features = [
@@ -39,29 +39,21 @@ export default function AIEvaluationOrchestrator() {
       title: 'Automated Testing',
       description: 'Continuous integration testing for AI models with automated quality gates'
     }
-  ];
+  ],
 
   const evaluationTypes = [
-    'Accuracy & Reliability Testing',
-    'Bias & Fairness Assessment',
-    'Safety & Harm Prevention',
-    'Performance Benchmarking',
-    'Adversarial Testing',
-    'Robustness Evaluation',
-    'Explainability Analysis',
-    'Compliance Verification'
-  ];
+    'Accuracy & Reliability TestingBias & Fairness Assessment',
+    'Safety & Harm PreventionPerformance Benchmarking',
+    'Adversarial TestingRobustness Evaluation',
+    'Explainability AnalysisCompliance Verification'
+  ],
 
   const industries = [
-    'Healthcare & Medical AI',
-    'Financial Services',
-    'Legal & Compliance',
-    'Education & Training',
-    'Customer Service',
-    'Content Generation',
-    'Autonomous Systems',
-    'Cybersecurity'
-  ];
+    'Healthcare & Medical AIFinancial Services',
+    'Legal & ComplianceEducation & Training',
+    'Customer ServiceContent Generation',
+    'Autonomous SystemsCybersecurity'
+  ],
 
 const ai-evaluation-orchestrator: React.FC = () => {
   return (
@@ -78,7 +70,7 @@ const ai-evaluation-orchestrator: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-evaluation-orchestrator;
+export default ai-evaluation-orchestrator,

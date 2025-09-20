@@ -1,6 +1,6 @@
 
-import { ProfileData } from "@/types/profile";
-import { TalentProfile } from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
 
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
@@ -11,7 +11,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
       ...profile,
       name: profile.name ?? profile.full_name,
       title: profile.title ?? profile.professional_title
-    };
+    },
   }
   
   // Convert ProfileData to TalentProfile
@@ -33,5 +33,5 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourlyRate || 0,
     rating_count: profile.reviewCount || 0,
     average_rating: profile.rating || 0
-  };
+  },
 }

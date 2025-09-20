@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Solutions | Zion Tech Group",
   description: "Professional solutions for your business needs.",
   keywords: "solutions, business, technology"
-};
+},
 
 export default function SolutionsPage() {
   return (
@@ -18,7 +18,7 @@ export default function SolutionsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
           <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
             <span className="text-2xl">🚀</span>
@@ -65,5 +65,5 @@ export default function SolutionsPage() {
         </Link>
       </div>
     </div>
-  );
+  )
 }

@@ -1,18 +1,18 @@
 
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { Link } from "react-router-dom";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useWhitelabel } from "@/context/WhitelabelContext",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { Link } from "react-router-dom",
 
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
   
   return (
     <>
@@ -50,7 +50,7 @@ export default function ZionHireAI() {
                   <Button 
                     variant="outline" 
                     size="lg"
-                    className="bg-transparent border-white text-white hover:bg-white/10"
+                    className="bg-transparent border-white text-white hover: bg-white/10"
                     asChild
                   >
                     <Link to="/enterprise/demo">
@@ -66,7 +66,7 @@ export default function ZionHireAI() {
                   alt="Zion Hire AI Dashboard" 
                   className="relative z-10 rounded-lg shadow-xl"
                   onError={(e) => {
-                    e.currentTarget.src = "https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
+                    e.currentTarget.src = "https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
                   }}
                 />
               </div>
@@ -255,7 +255,7 @@ export default function ZionHireAI() {
             </p>
             <Button 
               size="lg" 
-              className="bg-zion-purple hover:bg-zion-purple-light text-white"
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
               <Link to="/enterprise/demo">
@@ -267,5 +267,5 @@ export default function ZionHireAI() {
       </main>
       <Footer />
     </>
-  );
+  )
 }

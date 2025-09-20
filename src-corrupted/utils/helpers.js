@@ -1,6 +1,6 @@
-// helpers utility;
+// helpers utility,
 export const helpers = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: function() {}
 }
-export default helpers;
+export default helpers,

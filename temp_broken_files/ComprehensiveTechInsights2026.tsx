@@ -1,5 +1,4 @@
 import React from 'react',
-
 const QuantumComputingRevolution2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
@@ -13,6 +12,5 @@ const QuantumComputingRevolution2026: React.FC = () => {,
           </p>,
         </div>,
       </section>,
-    </div>,
-  ),};
-export default ComprehensiveTechInsights2026;
+    </div>)},
+export default ComprehensiveTechInsights2026,

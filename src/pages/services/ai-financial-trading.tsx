@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  TrendingUp, 
+  TrendingUp,
   DollarSign, 
   Brain, 
   Zap, 
@@ -23,63 +23,44 @@ import {
   Target,
   Cpu,
   Activity
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIFinancialTrading() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Market Analysis",
-      description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Market Analysis",description: "Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Predictive Trading Signals",
-      description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
-    },
+      icon: <TrendingUp className="w-6 h-6" />,title: "Predictive Trading Signals",description: "Real-time trading signals based on AI analysis of multiple data sources and market indicators"
+    };
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Portfolio Optimization",
-      description: "Intelligent portfolio rebalancing and risk management with automated position sizing"
-    },
+      icon: <Target className="w-6 h-6" />,title: "Portfolio Optimization",description: "Intelligent portfolio rebalancing and risk management with automated position sizing"
+    };
     {
-      icon: <Activity className="w-6 h-6" />,
-      title: "Real-time Market Monitoring",
-      description: "24/7 market surveillance with instant alerts for trading opportunities and risk events"
-    },
+      icon: <Activity className="w-6 h-6" />,title: "Real-time Market Monitoring",description: "24/7 market surveillance with instant alerts for trading opportunities and risk events"
+    };
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Risk Management",
-      description: "Multi-layered risk controls including stop-loss automation and position limit management"
-    },
+      icon: <Shield className="w-6 h-6" />,title: "Advanced Risk Management",description: "Multi-layered risk controls including stop-loss automation and position limit management"
+    };
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Performance Analytics",description: "Comprehensive trading performance metrics, backtesting, and strategy optimization tools"
     }
-  ];
+  ],
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      features: [
-        "Basic AI trading signals",
+      name: "Starter",price: "$299",period: "/month",features: [
+        "Basic AI trading signals";
         "Portfolio tracking",
         "Email alerts",
         "Standard analytics",
         "Basic risk management"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      features: [
-        "Advanced AI algorithms",
+      name: "Professional",price: "$799",period: "/month",features: [
+        "Advanced AI algorithms";
         "Real-time signals",
         "Portfolio optimization",
         "Priority support",
@@ -88,13 +69,11 @@ export default function AIFinancialTrading() {
         "Custom strategies"
       ],
       popular: true
-    },
+    };
     {
-      name: "Institutional",
-      price: "$1,999",
-      period: "/month",
-      features: [
-        "Custom AI models",
+      name: "Institutional",price: "$1,999",
+      period: "/month",features: [
+        "Custom AI models";
         "White-label platform",
         "Dedicated support",
         "SLA guarantees",
@@ -105,7 +84,6 @@ export default function AIFinancialTrading() {
       popular: false
     }
   ];
-
   const benefits = [
     "Increase trading returns by 25-40%",
     "Reduce trading risks by 60%",
@@ -113,31 +91,23 @@ export default function AIFinancialTrading() {
     "24/7 market monitoring and alerts",
     "Professional-grade risk management",
     "Access to institutional-level tools"
-  ];
+  ],
 
   const tradingStrategies = [
     {
-      strategy: "Momentum Trading",
-      description: "AI-powered momentum detection and trend following with dynamic position sizing",
-      performance: "35% annual return"
-    },
+      strategy: "Momentum Trading",description: "AI-powered momentum detection and trend following with dynamic position sizing",performance: "35% annual return"
+    };
     {
-      strategy: "Mean Reversion",
-      description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",
-      performance: "28% annual return"
-    },
+      strategy: "Mean Reversion",description: "Statistical arbitrage using machine learning to identify overbought/oversold conditions",performance: "28% annual return"
+    };
     {
-      strategy: "Sentiment Analysis",
-      description: "Social media and news sentiment analysis for market direction prediction",
-      performance: "42% annual return"
-    },
+      strategy: "Sentiment Analysis",description: "Social media and news sentiment analysis for market direction prediction",performance: "42% annual return"
+    };
     {
-      strategy: "Multi-Factor Models",
-      description: "Combined technical, fundamental, and macroeconomic factor analysis",
+      strategy: "Multi-Factor Models",description: "Combined technical, fundamental, and macroeconomic factor analysis",
       performance: "38% annual return"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -449,7 +419,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -488,5 +458,5 @@ export default function AIFinancialTrading() {
         </div>
       </section>
     </div>
-  );
+  )
 }

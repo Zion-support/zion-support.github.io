@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Brain,
   Cloud, 
   Shield, 
   Zap, 
@@ -38,81 +38,50 @@ import {
   Mail, 
   TrendingUp, 
   ArrowRight
-} from 'lucide-react';
-
+} from "lucide-react";
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence and machine learning services',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      title: 'AI-Powered Solutions',description: 'Cutting-edge artificial intelligence and machine learning services',icon: Brain,color: 'from-blue-500 to-cyan-500',features: ['Machine LearningNatural Language Processing', 'Computer VisionPredictive Analytics'],
       href: '/ai-solutions'
-    },
+    };
     {
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure and automated deployment solutions',
-      icon: Cloud,
-      color: 'from-purple-500 to-pink-500',
-      features: ['AWS/Azure/GCP', 'Container Orchestration', 'CI/CD Pipelines', 'Infrastructure as Code'],
+      title: 'Cloud & DevOps',description: 'Scalable cloud infrastructure and automated deployment solutions',icon: Cloud,color: 'from-purple-500 to-pink-500',features: ['AWS/Azure/GCPContainer Orchestration', 'CI/CD PipelinesInfrastructure as Code'],
       href: '/services/cloud-devops'
-    },
+    };
     {
-      title: 'Cybersecurity',
-      description: 'Comprehensive security and compliance solutions',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance Management', 'Incident Response'],
+      title: 'Cybersecurity',description: 'Comprehensive security and compliance solutions',icon: Shield,color: 'from-red-500 to-orange-500',features: ['Threat DetectionVulnerability Assessment', 'Compliance ManagementIncident Response'],
       href: '/services/cybersecurity'
-    },
+    };
     {
-      title: 'Digital Transformation',
-      description: 'End-to-end digital modernization services',
-      icon: Zap,
-      color: 'from-yellow-500 to-green-500',
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Digital Strategy'],
+      title: 'Digital Transformation',description: 'End-to-end digital modernization services',icon: Zap,color: 'from-yellow-500 to-green-500',features: ['Process AutomationLegacy Modernization', 'Change ManagementDigital Strategy'],
       href: '/services/digital-transformation'
-    },
+    };
     {
-      title: 'Data Analytics',
-      description: 'Advanced data insights and business intelligence',
-      icon: BarChart3,
-      color: 'from-indigo-500 to-purple-500',
-      features: ['Big Data Processing', 'Real-time Analytics', 'Data Visualization', 'Business Intelligence'],
+      title: 'Data Analytics',description: 'Advanced data insights and business intelligence',icon: BarChart3,color: 'from-indigo-500 to-purple-500',features: ['Big Data ProcessingReal-time Analytics', 'Data VisualizationBusiness Intelligence'],
       href: '/services/data-analytics'
-    },
+    };
     {
-      title: 'IoT Solutions',
-      description: 'Connected device ecosystems and smart infrastructure',
-      icon: Globe,
-      color: 'from-teal-500 to-blue-500',
-      features: ['Sensor Networks', 'Edge Computing', 'Smart Cities', 'Industrial IoT'],
+      title: 'IoT Solutions',description: 'Connected device ecosystems and smart infrastructure',icon: Globe,color: 'from-teal-500 to-blue-500',features: ['Sensor NetworksEdge Computing', 'Smart CitiesIndustrial IoT'],
       href: '/services/iot-solutions'
     }
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -187,7 +156,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
         >
           <Link
             to="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
           >
             View All Services
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -195,5 +164,5 @@ export const EnhancedServicesShowcase: React.FC = () => {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

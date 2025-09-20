@@ -1,9 +1,9 @@
-import { Helmet } from 'react - helmet -async';
-import { Link  } from 'react-router-dom';
- from 'react';
-  import { export default function HelpCenter () { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight,  } from 'lucide-react';
+import { Helmet } from 'react - helmet -async',
+import { Link  } from 'react-router-dom',
+ from 'react',
+  import { export default function HelpCenter () { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight  } from 'lucide-react',
 
-;
+,
 
   const helpCategories = {
     'getting - started': {
@@ -11,123 +11,120 @@ import { Link  } from 'react-router-dom';
       icon: BookOpen,
       articles: [{
           title: 'How to create your first account',
-          href: '/help / create - account',
+          href: '/help / create - account'
         },
         {
           title: 'Complete profile setup guide',
-          href: '/help / profile - setup',
+          href: '/help / profile - setup'
         },
         {
           title: 'Understanding the marketplace',
-          href: '/help / marketplace - guide',
+          href: '/help / marketplace - guide'
         },
-        { title: 'First steps for new users', href: '/help / first - steps' },
-      ],
+        { title: 'First steps for new users', href: '/help / first - steps' }
+      ]
     },
     marketplace: {
       title: 'Marketplace',
       icon: BookOpen,
       articles: [{
           title: 'How to list products and services',
-          href: '/help / list - products',
+          href: '/help / list - products'
         },
         { title: 'Managing your listings', href: '/help / manage - listings' },
         {
           title: 'Understanding pricing and fees',
-          href: '/help / pricing - fees',
+          href: '/help / pricing - fees'
         },
         {
           title: 'Marketplace policies and guidelines',
-          href: '/help / marketplace - policies',
-        },
-      ],
+          href: '/help / marketplace - policies'
+        }
+      ]
     },
     talent: {
       title: 'Talent & Hiring',
       icon: BookOpen,
       articles: [{
           title: 'Creating a talent profile',
-          href: '/help / talent - profile',
+          href: '/help / talent - profile'
         },
         { title: 'Finding and hiring talent', href: '/help / hire - talent' },
         {
           title: 'Managing projects and contracts',
-          href: '/help / manage - projects',
+          href: '/help / manage - projects'
         },
         {
           title: 'Payment and escrow system',
-          href: '/help / payment - system',
-        },
-      ],
+          href: '/help / payment - system'
+        }
+      ]
     },
     technical: {
       title: 'Technical Support',
       icon: BookOpen,
       articles: [{
           title: 'Common technical issues',
-          href: '/help / technical - issues',
+          href: '/help / technical - issues'
         },
         {
           title: 'Browser compatibility',
-          href: '/help / browser - compatibility',
+          href: '/help / browser - compatibility'
         },
         {
           title: 'Mobile app troubleshooting',
-          href: '/help / mobile - troubleshooting',
+          href: '/help / mobile - troubleshooting'
         },
-        { title: 'API and integration support', href: '/help / api - support' },
-      ],
+        { title: 'API and integration support', href: '/help / api - support' }
+      ]
     },
     billing: {
       title: 'Billing & Payments',
       icon: BookOpen,
       articles: [{
           title: 'Understanding your invoice',
-          href: '/help / invoice - guide',
+          href: '/help / invoice - guide'
         },
         {
           title: 'Payment methods and security',
-          href: '/help / payment - methods',
+          href: '/help / payment - methods'
         },
         {
           title: 'Refund and cancellation policy',
-          href: '/help / refund - policy',
+          href: '/help / refund - policy'
         },
         {
           title: 'Tax information and reporting',
-          href: '/help / tax - information',
-        },
-      ],
+          href: '/help / tax - information'
+        }
+      ]
     },
     account: {
       title: 'Account & Security',
       icon: BookOpen,
       articles: [{
           title: 'Account security best practices',
-          href: '/help / account - security',
+          href: '/help / account - security'
         },
         {
           title: 'Two - factor authentication setup',
-          href: '/help / 2fa - setup',
+          href: '/help / 2fa - setup'
         },
         {
           title: 'Password reset and recovery',
-          href: '/help / password - recovery',
+          href: '/help / password - recovery'
         },
         {
           title: 'Privacy settings and data control',
-          href: '/help / privacy - settings',
-        },
-      ],
-    },
-  };
-  const popularArticles = ['How to create your first account',
-    'Understanding the marketplace',
-    'Creating a talent profile',
-    'Finding and hiring talent',
-    'Payment and escrow system',
-    'Account security best practices',
-  ];
+          href: '/help / privacy - settings'
+        }
+      ]
+    }
+  },
+  const popularArticles = ['How to create your first accountUnderstanding the marketplace',
+    'Creating a talent profileFinding and hiring talent',
+    'Payment and escrow systemAccount security best practices'
+  ],
   return (<>
       <Helmet>
         <title > Help Center - Zion Tech Group</title>
@@ -243,7 +240,7 @@ import { Link  } from 'react-router-dom';
         {/* Contact Support */}
         <section className="py-16 px-4">
           <div className="container mx - auto text-center">
-            <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
               Still Need Help?
             </h2>
             <p className="text-xl text-zion - slate - light mb-8 max - w-2xl mx -auto">
@@ -305,5 +302,5 @@ import { Link  } from 'react-router-dom';
           </div>
         </section>
       </div>
-    </>) ;
+    </>) 
 }

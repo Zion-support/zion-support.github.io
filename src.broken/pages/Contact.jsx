@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -9,76 +9,76 @@ export default function Page() {
     value: 'Mon - Fri: 9:00 AM - 6:00 PM',
     description: 'Eastern Time Zone',
     action: null,
-    color: 'from - orange - 500 to - red - 500',
-  },
-];
+    color: 'from - orange - 500 to - red - 500'
+  }
+],
 
 const socialLinks = [{
     name: 'LinkedIn',
     icon: Linkedin,
     url: 'https://linkedin.com / company / ziontechgroup',
-    color: 'hover:text-blue - 500',
+    color: 'hover:text-blue - 500'
   },
   {
     name: 'Twitter',
     icon: Twitter,
     url: 'https://twitter.com / ziontechgroup',
-    color: 'hover:text-sky - 500',
+    color: 'hover:text-sky - 500'
   },
   {
     name: 'Facebook',
     icon: Facebook,
     url: 'https://facebook.com / ziontechgroup',
-    color: 'hover:text-blue - 600',
+    color: 'hover:text-blue - 600'
   },
   {
     name: 'Instagram',
     icon: Instagram,
     url: 'https://instagram.com / ziontechgroup',
-    color: 'hover:text-pink - 500',
+    color: 'hover:text-pink - 500'
   },
   {
     name: 'GitHub',
     icon: Github,
     url: 'https://github.com / ziontechgroup',
-    color: 'hover:text-gray - 400',
-  },
-];
+    color: 'hover:text-gray - 400'
+  }
+],
 
 const contactFormFields = [{
     name: 'firstName',
     label: 'First Name',
     type: 'text',
     required: true,
-    placeholder: 'Enter your first name',
+    placeholder: 'Enter your first name'
   },
   {
     name: 'lastName',
     label: 'Last Name',
     type: 'text',
     required: true,
-    placeholder: 'Enter your last name',
+    placeholder: 'Enter your last name'
   },
   {
     name: 'email',
     label: 'Email',
     type: 'email',
     required: true,
-    placeholder: 'Enter your email address',
+    placeholder: 'Enter your email address'
   },
   {
     name: 'phone',
     label: 'Phone',
     type: 'tel',
     required: false,
-    placeholder: 'Enter your phone number(optional) ',
+    placeholder: 'Enter your phone number(optional) '
   },
   {
     name: 'comp',
     label: 'Comp',
     type: 'text',
     required: false,
-    placeholder: 'Enter your comp name(optional) ',
+    placeholder: 'Enter your comp name(optional) '
   },
   {
     name: 'service',
@@ -86,17 +86,13 @@ const contactFormFields = [{
     type: 'select',
     required: true,
     options: [
-      'AI & Analytics',
-      'Cybersecurity',
-      'Cloud & DevOps',
-      'IoT & Edge Computing',
-      'Digital Transformation',
-      'Mobile Development',
-      'Micro SaaS Solutions',
-      'Other',
-    ],
-  },
-];
+      'AI & AnalyticsCybersecurity',
+      'Cloud & DevOpsIoT & Edge Computing',
+      'Digital TransformationMobile Development',
+      'Micro SaaS SolutionsOther'
+    ]
+  }
+],
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -105,32 +101,32 @@ const contactFormFields = [{
     phone: '',
     comp: '',
     service: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+    message: ''
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitSuccess, setSubmitSuccess] = useState(false),
 
   const handleInputChange = e => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
-      [name]: value,
-    }) ) ;
-  };
+      [name]: value
+    }) ) ,
+  },
 
   const handleSubmit = async e => {
-    e.preventDefault () ;
-    setIsSubmitting(true) ;
+    e.preventDefault () ,
+    setIsSubmitting(true) ,
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout (resolve, 2000) ) ;
+    await new Promise(resolve => setTimeout (resolve, 2000) ) ,
 
-    setIsSubmitting(false) ;
-    setSubmitSuccess(true) ;
+    setIsSubmitting(false) ,
+    setSubmitSuccess(true) ,
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setSubmitSuccess(false) ;
+      setSubmitSuccess(false) ,
       setFormData({
         firstName: '',
         lastName: '',
@@ -138,10 +134,10 @@ const contactFormFields = [{
         phone: '',
         comp: '',
         service: '',
-        message: '',
-      }) ;
-    }, 3000) ;
-  };
+        message: ''
+      }) ,
+    }, 3000) ,
+  },
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -483,5 +479,5 @@ const contactFormFields = [{
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

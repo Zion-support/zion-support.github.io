@@ -1,37 +1,37 @@
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3  } from 'lucide-react';
+import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3  } from 'lucide-react',
 export default function Page() {
-,;
+,
         {
             name: "Azure",
             description: "Microsoft Azure cloud migration services",
             icon: <Cloud className="h-8 w-8 text-zion -purple"/>,
-            features["VM", "SQL Database", "Blob Storage", "Functions"];
-        },;
+            features["VM", "SQL Database", "Blob Storage", "Functions"],
+        },
         {
             name: "Google Cloud",
             description: "Google Cloud Platform migration solutions",
             icon: <Cloud className="h-8 w-8 text-zion -blue"/>,
-            features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"];
-        },;
+            features["Compute Engine", "Cloud SQL", "Cloud Storage", "Cloud Functions"],
+        },
         {
             name: "Multi - Cloud",
             description: "Hybrid and multi - cloud migration strategies",
             icon: <Network className="h-8 w-8 text-zion -cyan"/>,
-            features["Hybrid Cloud", "Multi - Cloud", "Cloud Bursting", "Disaster Recovery"];
+            features["Hybrid Cloud", "Multi - Cloud", "Cloud Bursting", "Disaster Recovery"],
         }
-    ];
+    ],
     const pricingPlans = [{
             name: "Basic Migration",
             price: "$5,000",
             period: "one - time",
             description: "Essential cloud migration for small businesses",
-            features[;
+            features[,
                 "Cloud assessment",
                 "Basic migration plan",
                 "Data migration",
                 "Basic optimization",
                 "30 days support"
-            ],;
+            ],
             popular: false
         },
         {
@@ -39,14 +39,14 @@ export default function Page() {
             price: "$15,000",
             period: "one - time",
             description: "Comprehensive migration for growing businesses",
-            features[;
+            features[,
                 "Full cloud assessment",
                 "Detailed migration plan",
                 "Data & app migration",
                 "Performance optimization",
                 "90 days support",
                 "Training & documentation"
-            ],;
+            ],
             popular: true
         },
         {
@@ -54,17 +54,17 @@ export default function Page() {
             price: "$50,000",
             period: "one - time",
             description: "Full - scale migration for large organizations",
-            features[;
+            features[,
                 "Custom migration strategy",
                 "Multi - cloud migration",
                 "Advanced optimization",
                 "Dedicated team",
                 "1 year support",
                 "Custom integrations"
-            ],;
+            ],
             popular: false
 
-    ];
+    ],
     const testimonials = [{
             name: "Alex Rodriguez",
             role: "CTO, RetailTech Solutions",
@@ -83,7 +83,7 @@ export default function Page() {
             content: "From on - premise to AWS in 6 weeks.Zion's team delivered beyond our expectations with excellent documentation.",
             rating: 5
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
       <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud.Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com / cloud - migration - services"/>
 

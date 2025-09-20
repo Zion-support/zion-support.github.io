@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-, []);
+, []),
   const scrollToTop = () => {
     window.scrollTo({
 
       top: 0,
-      behavior: 'smooth'});
-  };
+      behavior: 'smooth'}),
+  },
   return ()
     <AnimatePresence>
       {isVisible && (
@@ -25,7 +25,7 @@ export default function Page() {
         </motion.button>
       )}
     </AnimatePresence>
-  );
-};
-export default EnhancedScrollToTop;
+  ),
+},
+export default EnhancedScrollToTop,
 '"

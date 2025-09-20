@@ -1,84 +1,84 @@
 
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
-import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/components/ui/use-toast",
+import { SEO } from "@/components/SEO",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { logErrorToProduction } from '@/utils/productionLogger',
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string };
+  const { profileId } = useParams() as { profileId?: string },
 
   interface ProfileData {
-    id: string;
-    full_name: string;
-    professional_title: string;
-    profile_picture_url?: string | null;
-    is_verified?: boolean;
-    location?: string | null;
-    availability?: string | null;
-    skills: string[];
-    bio?: string | null;
-    portfolio_links?: string[] | null;
-    experience?: string | null;
-    github_link?: string | null;
-    twitter_link?: string | null;
-    linkedin_link?: string | null;
-    hourly_rate?: number | null;
+    id: string,
+    full_name: string,
+    professional_title: string,
+    profile_picture_url?: string | null,
+    is_verified?: boolean,
+    location?: string | null,
+    availability?: string | null,
+    skills: string[],
+    bio?: string | null,
+    portfolio_links?: string[] | null,
+    experience?: string | null,
+    github_link?: string | null,
+    twitter_link?: string | null,
+    linkedin_link?: string | null,
+    hourly_rate?: number | null
   }
 
-  const [profileData, setProfileData] = useState<ProfileData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
+  const [profileData, setProfileData] = useState<ProfileData | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isError, setIsError] = useState(false),
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setIsError(false);
+      setIsLoading(true),
+      setIsError(false),
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single();
+          .single(),
 
         if (error) {
-          throw error;
+          throw error,
         }
 
-        setProfileData(data);
+        setProfileData(data),
       } catch (error) {
-        logError(error, { message: 'Error fetching profile' });
-        setIsError(true);
+        logError(error, { message: 'Error fetching profile' }),
+        setIsError(true),
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
-          variant: "destructive",
-        });
+          variant: "destructive"
+        }),
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
-    };
+    },
 
     if (profileId) {
-      fetchProfile();
+      fetchProfile(),
     }
-  }, [profileId]);
+  }, [profileId]),
 
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
       </div>
-    );
+    ),
   }
 
   if (isError || !profileData) {
@@ -86,7 +86,7 @@ export default function ProfilePage() {
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -254,5 +254,5 @@ export default function ProfilePage() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

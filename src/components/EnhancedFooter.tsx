@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { 
-  Phone, 
+  Phone,
   Mail, 
   MapPin, 
   Globe, 
@@ -46,86 +46,73 @@ import {
   Workflow,
   Eye,
   Sparkles
-} from 'lucide-react';
-
+} from "lucide-react";
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
-      title: "Services",
-      links: [
-        { name: "AI Services", href: "/ai-services", icon: Brain },
-        { name: "IT Services", href: "/it-services", icon: Cpu },
-        { name: "Micro SaaS", href: "/micro-saas", icon: ShoppingCart },
-        { name: "2025 Services", href: "/comprehensive-services-showcase-2025", icon: Star },
-        { name: "2026 Services", href: "/services2026", icon: TrendingUp },
-        { name: "2027 Services", href: "/services2027", icon: Rocket },
-        { name: "2029 Services", href: "/innovative-services-showcase-2029", icon: Sparkles },
+      title: "Services",links: [
+        { name: "AI Services", href: "/ai-services", icon: Brain };
+        { name: "IT Services", href: "/it-services", icon: Cpu };
+        { name: "Micro SaaS", href: "/micro-saas", icon: ShoppingCart };
+        { name: "2025 Services", href: "/comprehensive-services-showcase-2025", icon: Star };
+        { name: "2026 Services", href: "/services2026", icon: TrendingUp };
+        { name: "2027 Services", href: "/services2027", icon: Rocket };
+        { name: "2029 Services", href: "/innovative-services-showcase-2029", icon: Sparkles }
       ]
-    },
+    };
     {
-      title: "Solutions",
-      links: [
-        { name: "Enterprise", href: "/solutions/enterprise", icon: Building },
-        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
-        { name: "Finance", href: "/solutions/finance", icon: DollarSign },
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
-        { name: "Retail", href: "/solutions/retail", icon: ShoppingBag },
-        { name: "Education", href: "/solutions/education", icon: GraduationCap },
+      title: "Solutions",links: [
+        { name: "Enterprise", href: "/solutions/enterprise", icon: Building };
+        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart };
+        { name: "Finance", href: "/solutions/finance", icon: DollarSign };
+        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory };
+        { name: "Retail", href: "/solutions/retail", icon: ShoppingBag };
+        { name: "Education", href: "/solutions/education", icon: GraduationCap }
       ]
-    },
+    };
     {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "/about", icon: Users },
-        { name: "Our Team", href: "/team", icon: Users },
-        { name: "Careers", href: "/careers", icon: Star },
-        { name: "Partners", href: "/partners", icon: Handshake },
-        { name: "News", href: "/news", icon: Newspaper },
-        { name: "Blog", href: "/blog", icon: BookOpen },
+      title: "Company",links: [
+        { name: "About Us", href: "/about", icon: Users };
+        { name: "Our Team", href: "/team", icon: Users };
+        { name: "Careers", href: "/careers", icon: Star };
+        { name: "Partners", href: "/partners", icon: Handshake };
+        { name: "News", href: "/news", icon: Newspaper };
+        { name: "Blog", href: "/blog", icon: BookOpen }
       ]
-    },
+    };
     {
-      title: "Resources",
-      links: [
-        { name: "Documentation", href: "/docs", icon: FileText },
-        { name: "API Reference", href: "/api", icon: Code },
-        { name: "Developer Portal", href: "/developers", icon: Terminal },
-        { name: "White Papers", href: "/white-papers", icon: FileText },
-        { name: "Webinars", href: "/webinars", icon: Video },
-        { name: "Training", href: "/training", icon: GraduationCap },
+      title: "Resources",links: [
+        { name: "Documentation", href: "/docs", icon: FileText };
+        { name: "API Reference", href: "/api", icon: Code };
+        { name: "Developer Portal", href: "/developers", icon: Terminal };
+        { name: "White Papers", href: "/white-papers", icon: FileText };
+        { name: "Webinars", href: "/webinars", icon: Video };
+        { name: "Training", href: "/training", icon: GraduationCap }
       ]
-    },
+    };
     {
-      title: "Support",
-      links: [
-        { name: "Help Center", href: "/help", icon: HelpCircle },
-        { name: "Contact Support", href: "/contact", icon: MessageCircle },
-        { name: "Status Page", href: "/status", icon: Activity },
-        { name: "Request Quote", href: "/request-quote", icon: DollarSign },
-        { name: "FAQ", href: "/faq", icon: HelpCircle },
-        { name: "Live Chat", href: "/chat", icon: MessageCircle },
+      title: "Support",links: [
+        { name: "Help Center", href: "/help", icon: HelpCircle };
+        { name: "Contact Support", href: "/contact", icon: MessageCircle };
+        { name: "Status Page", href: "/status", icon: Activity };
+        { name: "Request Quote", href: "/request-quote", icon: DollarSign };
+        { name: "FAQ", href: "/faq", icon: HelpCircle };
+        { name: "Live Chat", href: "/chat", icon: MessageCircle }
       ]
     }
   ];
-
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-400" },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-400" },
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook, color: "hover:text-blue-600" },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram, color: "hover:text-pink-400" },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-400" },
-    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-400" },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-400" };
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-400" };
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook, color: "hover:text-blue-600" };
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram, color: "hover:text-pink-400" };
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-400" };
+    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-400" }
   ];
-
   const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
+    phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709",website: "https://ziontechgroup.com"
   };
-
   return (
     <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50 overflow-hidden">
       {/* Animated background elements */}
@@ -296,7 +283,7 @@ export function EnhancedFooter() {
               <p className="text-slate-300 mb-4">
                 Get the latest insights on AI, emerging technologies, and industry trends.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <div className="flex flex-col sm: flex-row gap-3 max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"

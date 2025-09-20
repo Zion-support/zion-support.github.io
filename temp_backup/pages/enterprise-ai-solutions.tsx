@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Building2, Zap, Target, Shield, TrendingUp, Globe, 
   CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function EnterpriseAISolutions() {
   const features = [
@@ -39,25 +39,19 @@ export default function EnterpriseAISolutions() {
       title: 'Global Enterprise Support',
       description: '24/7 global enterprise support with AI-powered automation and dedicated account management.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Improve operational efficiency by 300%',
-    'Reduce operational costs by 60%',
-    'Increase productivity by 200%',
-    'Enable data-driven decisions',
-    'Scale operations globally',
-    'Optimize business processes',
-    'Scale AI solutions enterprise-wide',
-    'Future-proof business operations'
-  ];
+    'Improve operational efficiency by 300%Reduce operational costs by 60%',
+    'Increase productivity by 200%Enable data-driven decisions',
+    'Scale operations globallyOptimize business processes',
+    'Scale AI solutions enterprise-wideFuture-proof business operations'
+  ],
 
   const useCases = [
-    'Process Automation', 'Data Analytics', 'Customer Intelligence',
-    'Supply Chain Optimization', 'Risk Management', 'Performance Monitoring',
-    'Business Intelligence', 'Predictive Analytics', 'Workflow Optimization',
-    'Enterprise Analytics', 'AI Strategy', 'Digital Transformation'
-  ];
+    'Process AutomationData Analytics', 'Customer IntelligenceSupply Chain Optimization', 'Risk ManagementPerformance Monitoring',
+    'Business IntelligencePredictive Analytics', 'Workflow OptimizationEnterprise Analytics', 'AI StrategyDigital Transformation'
+  ],
 
 const enterprise-ai-solutions: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const enterprise-ai-solutions: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default enterprise-ai-solutions;
+export default enterprise-ai-solutions,

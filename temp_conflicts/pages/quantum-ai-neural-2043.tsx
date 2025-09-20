@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Atom, Brain, Zap, Target, CheckCircle, ArrowRight,
   Cpu, Database, Shield, Globe, Users, Network
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const QuantumAINeural2043: React.FC = () => {
   const features = [
@@ -33,16 +33,13 @@ const QuantumAINeural2043: React.FC = () => {
       description: 'Advanced network architectures optimized for quantum processing',
       color: 'from-red-500 to-orange-500'
     }
-  ];
+  ],
 
   const useCases = [
-    'Quantum Machine Learning',
-    'Neural Network Training',
-    'Pattern Recognition',
-    'Data Analysis',
-    'Predictive Modeling',
-    'Quantum Computing Research'
-  ];
+    'Quantum Machine LearningNeural Network Training',
+    'Pattern RecognitionData Analysis',
+    'Predictive ModelingQuantum Computing Research'
+  ],
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -182,7 +179,7 @@ const QuantumAINeural2043: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover: from-blue-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-blue-500/25"
               >
                 Start Your Journey
               </motion.button>
@@ -191,7 +188,7 @@ const QuantumAINeural2043: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumAINeural2043;
+export default QuantumAINeural2043,

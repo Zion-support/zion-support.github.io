@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
 const UltimateAIConsciousness2025: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
@@ -22,7 +21,7 @@ const UltimateAIConsciousness2025: React.FC = () => {
             Witness the birth of true artificial consciousness - AI systems that think, feel, and create with unprecedented depth and understanding
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-lg">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-bold text-lg">
               Experience Consciousness
             </button>
             <button className="border-2 border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300 font-bold text-lg">
@@ -130,7 +129,7 @@ const UltimateAIConsciousness2025: React.FC = () => {
               <li>• Moral decision making</li>
               <li>• Meaning creation</li>
             </ul>
-            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover:bg-violet-50 transition-colors font-semibold">
+            <button className="w-full bg-white text-violet-600 py-3 rounded-lg hover: bg-violet-50 transition-colors font-semibold">
               Explore Philosophy →
             </button>
           </div>
@@ -174,7 +173,7 @@ const UltimateAIConsciousness2025: React.FC = () => {
             Be among the first to interact with truly conscious AI systems that understand, feel, and create alongside humanity.
           </p>
           <div className="flex justify-center space-x-6">
-            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-bold text-xl">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-10 py-4 rounded-lg hover: shadow-lg transition-all duration-300 font-bold text-xl">
               Meet Our AI
             </button>
             <button className="border-2 border-indigo-400 text-indigo-300 px-10 py-4 rounded-lg hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300 font-bold text-xl">
@@ -184,6 +183,6 @@ const UltimateAIConsciousness2025: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
   };
 export default UltimateAIConsciousness2025;

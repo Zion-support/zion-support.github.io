@@ -1,74 +1,74 @@
 <<<<<<< HEAD
     // Interface for the existing service structure
-    id: string;
-    title: string;
-    description: string;
-    category: string;
-    subcategory: string;
-    price: number;
-    currency: string;
-    pricingModel: string;
-    features: string[];
-    benefits: string[];
-    useCases: string[];
-    targetAudience: string[];
-    tags: string[];
-    estimatedDelivery: string;
-    supportLevel: string;
-    marketPrice: string;
-    roi: string;
-    innovationLevel: string;
+    id: string,
+    title: string,
+    description: string,
+    category: string,
+    subcategory: string,
+    price: number,
+    currency: string,
+    pricingModel: string,
+    features: string[],
+    benefits: string[],
+    useCases: string[],
+    targetAudience: string[],
+    tags: string[],
+    estimatedDelivery: string,
+    supportLevel: string,
+    marketPrice: string,
+    roi: string,
+    innovationLevel: string,
     contactInfo: {
-      phone: string;
-      email: string;
-      website: string;
-    };
+      phone: string,
+      email: string,
+      website: string
+    },
     technicalSpecs?: {
-      technology: string[];
-      integrations: string[];
-      apiEndpoints: number;
-      uptime: string;
-      security: string[];
-    };
-    competitors?: string[];
-    marketSize?: string;
-    compliance?: string[];
+      technology: string[],
+      integrations: string[],
+      apiEndpoints: number,
+      uptime: string,
+      security: string[]
+    },
+    competitors?: string[],
+    marketSize?: string,
+    compliance?: string[],
   }
 =======
 // Interface for the existing service structure
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
+  id: string,
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  price: number,
+  currency: string,
+  pricingModel: string,
+  features: string[],
+  benefits: string[],
+  useCases: string[],
+  targetAudience: string[],
+  tags: string[],
+  estimatedDelivery: string,
+  supportLevel: string,
+  marketPrice: string,
+  roi: string,
+  innovationLevel: string,
   contactInfo: {
 
-    phone: string;
-    email: string;
-    website: string};
+    phone: string,
+    email: string,
+    website: string},
   technicalSpecs?: {
 
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  competitors?: string[];
-  marketSize?: string;
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]},
+  competitors?: string[],
+  marketSize?: string,
   compliance?: string[]}
 
 // Map 2026 services to existing service structure
@@ -81,7 +81,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     description: service.description,
     category: service.category,
     subcategory: service.category, // Use category as subcategory for now'
-    price: parseInt(service.price.replace(/[$,]/g,)), // Convert "$18,999" to 18999'
+    price: parseInt(service.price.replace(/[$]/g)), // Convert "$18,999" to 18999'
     currency: '$',
     pricingModel: 'monthly',
     features: service.features,

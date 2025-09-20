@@ -1,9 +1,9 @@
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
+import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react',
 export default function Page() {
 ,"
         { metric: "50+", label: "Countries Served" },"
         { metric: "10+", label: "Years Experience" }
-    ];"
+    ],"
     return (<div className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="container mx-auto px-4">
         {/* Header Section */}"

@@ -1,2 +1,2 @@
 
-export default SimpleNavigation;
+export default SimpleNavigation,

@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   PenTool, FileText, Image, Video, Mic, Globe, 
   Zap, Shield, Users, CheckCircle, Star, Lock, 
   Smartphone, Monitor, TrendingUp, Palette
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIContentCreationSuite() {
   const features = [
@@ -39,25 +39,19 @@ export default function AIContentCreationSuite() {
       title: 'Smart Content Optimization',
       description: 'AI-powered SEO optimization and content performance analysis to maximize engagement.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Create content 10x faster than traditional methods',
-    'Reduce content creation costs by 70%',
-    'Improve content engagement by 50%',
-    'Generate unlimited content variations',
-    'Maintain consistent brand voice across all content',
-    'Scale content production effortlessly',
-    'Optimize content for better SEO performance',
-    'Create personalized content for different audiences'
-  ];
+    'Create content 10x faster than traditional methodsReduce content creation costs by 70%',
+    'Improve content engagement by 50%Generate unlimited content variations',
+    'Maintain consistent brand voice across all contentScale content production effortlessly',
+    'Optimize content for better SEO performanceCreate personalized content for different audiences'
+  ],
 
   const contentTypes = [
-    'Blog Posts & Articles', 'Social Media Content', 'Marketing Copy',
-    'Product Descriptions', 'Email Campaigns', 'Landing Pages',
-    'Video Scripts', 'Podcast Scripts', 'Press Releases',
-    'White Papers', 'Case Studies', 'Infographics'
-  ];
+    'Blog Posts & ArticlesSocial Media Content', 'Marketing CopyProduct Descriptions', 'Email CampaignsLanding Pages',
+    'Video ScriptsPodcast Scripts', 'Press ReleasesWhite Papers', 'Case StudiesInfographics'
+  ],
 
 const ai-content-creation-suite: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-content-creation-suite: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-content-creation-suite;
+export default ai-content-creation-suite,

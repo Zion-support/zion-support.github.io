@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import type { Job } from '@/types/jobs';
+import { Link } from 'react-router-dom',
+import { Card, CardContent } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
+import type { Job } from '@/types/jobs',
 
 interface JobCardProps {
-  job: Job;
+  job: Job
 }
 
 export function JobCard({ job }: JobCardProps) {
@@ -25,5 +25,5 @@ export function JobCard({ job }: JobCardProps) {
         </Link>
       </CardContent>
     </Card>
-  );
+  ),
 }

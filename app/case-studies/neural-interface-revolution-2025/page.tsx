@@ -1,18 +1,18 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import { Metadata } from 'next',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata: Metadata = {,
-  title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group';
-  description: 'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.';
-  keywords: ['neural interfacesBCI', 'brain-computer interfaceinnovation', 'future technologyproductivity', 'accessibility'];
+  title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group',
+  description: 'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.',
+  keywords: ['neural interfacesBCIbrain-computer interfaceinnovation', 'future technologyproductivityaccessibility'],
   openGraph: {,
-    title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business';
-    description: 'Brain-computer interfaces transforming business operations and productivity';
-    type: 'article';
-    publishedTime: '2025-01-14';
-    authors: ['Zion Tech Group'],}
-};
+    title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business',
+    description: 'Brain-computer interfaces transforming business operations and productivity',
+    type: 'article',
+    publishedTime: '2025-01-14',
+    authors: ['Zion Tech Group']}
+},
 export default function NeuralInterfaceRevolutionPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -44,7 +44,7 @@ export default function NeuralInterfaceRevolutionPage() {,
           </div>,
         </div>,
       </section>,
-      {/* Article Content */,}
+      {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
         <div className="prose prose-lg max-w-none">,
           <h2>The Dawn of Neural Interfaces</h2>,
@@ -312,7 +312,7 @@ export default function NeuralInterfaceRevolutionPage() {,
           <h2>The Future is Neural</h2>,
           <p>,
             Neural interfaces are not science fiction—they're a reality that's transforming businesses today.,
-            Companies that embrace this technology will have unprecedented advantages in productivity;
+            Companies that embrace this technology will have unprecedented advantages in productivity,
             accessibility, and human-machine collaboration.,
           </p>,
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl my-8 text-center">,
@@ -375,4 +375,4 @@ export default function NeuralInterfaceRevolutionPage() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}

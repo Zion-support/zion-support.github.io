@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 export default function Page() {
-`;
+`,
     // Default structured data for organization
     const defaultStructuredData = {
 
@@ -28,7 +28,7 @@ export default function Page() {
             "contactType": "customer service","
             "email": "kleber@ziontechgroup.com"
         },"
-        "sameAs"[;"
+        "sameAs"[,"
             "https://linkedin.com/company/ziontechgroup","
             "https://twitter.com/ziontechgroup","
             "https://github.com/ziontechgroup"
@@ -40,7 +40,7 @@ export default function Page() {
 "
             "@type": "OfferCatalog","
             "name": "Technology Services","
-            "itemListElement"[;
+            "itemListElement"[,
                 {
 "
                     "@type": "Offer","
@@ -60,13 +60,13 @@ export default function Page() {
                         "name": "Quantum AI Fusion Platform","
                         "description": "Revolutionary platform combining quantum computing with artificial intelligence"
 
-            ];
+            ]
 
-    };
-    const finalStructuredData = structuredData || defaultStructuredData;
-    return (<Helmet>;
+    },
+    const finalStructuredData = structuredData || defaultStructuredData,
+    return (<Helmet>,
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;"
+      <title>{fullTitle}</title>,"
       <meta name="description" content={description}/>"
       <meta name="keywords" content={keywords}/>"
       <meta name="author" content="Zion Tech Group"/>"
@@ -133,6 +133,6 @@ export default function Page() {
       {/* Performance Meta Tags */}"
       <meta name="renderer" content="webkit"/>"
       <meta name="force-rendering" content="webkit"/>
-    </Helmet>)};
-export default SEOMeta;
+    </Helmet>)},
+export default SEOMeta,
 }}}}'"`

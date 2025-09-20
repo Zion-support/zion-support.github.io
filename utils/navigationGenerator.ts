@@ -1,18 +1,18 @@
-import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation';
+import { NavigationItem, NavigationCategory, NavigationConfig } from '../types/navigation',
 
 export class NavigationGenerator {
-  private services: NavigationItem[] = [];
-  private categories: NavigationCategory[] = [];
-  private pages: NavigationItem[] = [];
+  private services: NavigationItem[] = [],
+  private categories: NavigationCategory[] = [],
+  private pages: NavigationItem[] = [],
 
   constructor() {
-    this.initializeNavigation();
+    this.initializeNavigation()
   }
 
   private async initializeNavigation() {
-    await this.discoverServices();
-    await this.discoverPages();
-    await this.generateCategories();
+    await this.discoverServices(),
+    await this.discoverPages(),
+    await this.generateCategories(),
   }
 
   // Auto-discover services from data and generate navigation
@@ -27,7 +27,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Advanced analytics platform with machine learning capabilities',
-        technologyStack: ['Python', 'TensorFlow', 'React', 'Node.js'],
+        technologyStack: ['PythonTensorFlow', 'ReactNode.js'],
         pricing: '$99/month',
         performance: {
           uptime: '99.9%',
@@ -44,7 +44,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Fully autonomous business management system',
-        technologyStack: ['Python', 'AI/ML', 'React', 'Node.js'],
+        technologyStack: ['PythonAI/ML', 'ReactNode.js'],
         pricing: '$299/month',
         performance: {
           uptime: '99.9%',
@@ -61,7 +61,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Advanced AI consciousness research and development platform',
-        technologyStack: ['Python', 'Neural Networks', 'Quantum Computing', 'React'],
+        technologyStack: ['PythonNeural Networks', 'Quantum ComputingReact'],
         pricing: '$499/month',
         performance: {
           uptime: '99.8%',
@@ -78,7 +78,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Intelligent research automation and analysis',
-        technologyStack: ['Python', 'NLP', 'React', 'FastAPI'],
+        technologyStack: ['PythonNLP', 'ReactFastAPI'],
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
@@ -95,7 +95,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Comprehensive business intelligence with AI insights',
-        technologyStack: ['Python', 'Machine Learning', 'React', 'PostgreSQL'],
+        technologyStack: ['PythonMachine Learning', 'ReactPostgreSQL'],
         pricing: '$149/month',
         performance: {
           uptime: '99.9%',
@@ -112,7 +112,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Automated content creation and management',
-        technologyStack: ['Python', 'GPT Models', 'React', 'Node.js'],
+        technologyStack: ['PythonGPT Models', 'ReactNode.js'],
         pricing: '$79/month',
         performance: {
           uptime: '99.8%',
@@ -129,7 +129,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Automated code review and quality analysis',
-        technologyStack: ['Python', 'Static Analysis', 'React', 'GitHub API'],
+        technologyStack: ['PythonStatic Analysis', 'ReactGitHub API'],
         pricing: '$59/month',
         performance: {
           uptime: '99.9%',
@@ -146,7 +146,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Intelligent decision-making automation system',
-        technologyStack: ['Python', 'Decision Trees', 'React', 'Redis'],
+        technologyStack: ['PythonDecision Trees', 'ReactRedis'],
         pricing: '$399/month',
         performance: {
           uptime: '99.9%',
@@ -163,7 +163,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Complete ecosystem management and optimization',
-        technologyStack: ['Python', 'AI Orchestration', 'React', 'Kubernetes'],
+        technologyStack: ['PythonAI Orchestration', 'ReactKubernetes'],
         pricing: '$599/month',
         performance: {
           uptime: '99.9%',
@@ -180,7 +180,7 @@ export class NavigationGenerator {
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'End-to-end business process automation',
-        technologyStack: ['Python', 'RPA', 'React', 'Workflow Engine'],
+        technologyStack: ['PythonRPA', 'ReactWorkflow Engine'],
         pricing: '$449/month',
         performance: {
           uptime: '99.9%',
@@ -199,7 +199,7 @@ export class NavigationGenerator {
         category: 'Cybersecurity',
         status: 'active',
         description: 'Comprehensive cybersecurity protection and monitoring',
-        technologyStack: ['Python', 'Security Tools', 'React', 'SIEM'],
+        technologyStack: ['PythonSecurity Tools', 'ReactSIEM'],
         pricing: '$299/month',
         performance: {
           uptime: '99.99%',
@@ -216,7 +216,7 @@ export class NavigationGenerator {
         category: 'Cybersecurity',
         status: 'active',
         description: 'Intelligent threat detection and response',
-        technologyStack: ['Python', 'AI Security', 'React', 'Threat Intel'],
+        technologyStack: ['PythonAI Security', 'ReactThreat Intel'],
         pricing: '$399/month',
         performance: {
           uptime: '99.99%',
@@ -233,7 +233,7 @@ export class NavigationGenerator {
         category: 'Cybersecurity',
         status: 'active',
         description: 'Automated SOC2 compliance and reporting',
-        technologyStack: ['Python', 'Compliance Tools', 'React', 'Audit API'],
+        technologyStack: ['PythonCompliance Tools', 'ReactAudit API'],
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
@@ -252,7 +252,7 @@ export class NavigationGenerator {
         category: 'Infrastructure',
         status: 'active',
         description: 'Enterprise-grade infrastructure management',
-        technologyStack: ['Kubernetes', 'Docker', 'Terraform', 'Monitoring'],
+        technologyStack: ['KubernetesDocker', 'TerraformMonitoring'],
         pricing: '$199/month',
         performance: {
           uptime: '99.9%',
@@ -269,7 +269,7 @@ export class NavigationGenerator {
         category: 'Infrastructure',
         status: 'active',
         description: 'Self-managing DevOps and CI/CD platform',
-        technologyStack: ['Jenkins', 'GitLab', 'Kubernetes', 'Monitoring'],
+        technologyStack: ['JenkinsGitLab', 'KubernetesMonitoring'],
         pricing: '$149/month',
         performance: {
           uptime: '99.9%',
@@ -286,7 +286,7 @@ export class NavigationGenerator {
         category: 'Infrastructure',
         status: 'beta',
         description: 'Next-generation quantum computing infrastructure',
-        technologyStack: ['Quantum Computing', 'Cloud Native', 'React', 'Quantum SDK'],
+        technologyStack: ['Quantum ComputingCloud Native', 'ReactQuantum SDK'],
         pricing: '$999/month',
         performance: {
           uptime: '99.8%',
@@ -305,7 +305,7 @@ export class NavigationGenerator {
         category: 'Blockchain',
         status: 'active',
         description: 'Intelligent blockchain data analysis',
-        technologyStack: ['Python', 'Blockchain APIs', 'React', 'Analytics'],
+        technologyStack: ['PythonBlockchain APIs', 'ReactAnalytics'],
         pricing: '$129/month',
         performance: {
           uptime: '99.9%',
@@ -324,7 +324,7 @@ export class NavigationGenerator {
         category: 'Content & Marketing',
         status: 'active',
         description: 'Automated content creation and optimization',
-        technologyStack: ['Python', 'NLP', 'React', 'CMS'],
+        technologyStack: ['PythonNLP', 'ReactCMS'],
         pricing: '$89/month',
         performance: {
           uptime: '99.8%',
@@ -341,7 +341,7 @@ export class NavigationGenerator {
         category: 'Content & Marketing',
         status: 'active',
         description: 'Intelligent marketing content automation',
-        technologyStack: ['Python', 'Marketing APIs', 'React', 'Analytics'],
+        technologyStack: ['PythonMarketing APIs', 'ReactAnalytics'],
         pricing: '$159/month',
         performance: {
           uptime: '99.9%',
@@ -358,7 +358,7 @@ export class NavigationGenerator {
         category: 'Content & Marketing',
         status: 'active',
         description: 'Dynamic content personalization system',
-        technologyStack: ['Python', 'ML Models', 'React', 'Personalization'],
+        technologyStack: ['PythonML Models', 'ReactPersonalization'],
         pricing: '$119/month',
         performance: {
           uptime: '99.9%',
@@ -377,7 +377,7 @@ export class NavigationGenerator {
         category: 'Research & Development',
         status: 'active',
         description: 'Automated research and data analysis',
-        technologyStack: ['Python', 'Research Tools', 'React', 'Data APIs'],
+        technologyStack: ['PythonResearch Tools', 'ReactData APIs'],
         pricing: '$179/month',
         performance: {
           uptime: '99.9%',
@@ -394,7 +394,7 @@ export class NavigationGenerator {
         category: 'Research & Development',
         status: 'active',
         description: 'Self-directed research and discovery',
-        technologyStack: ['Python', 'AI Research', 'React', 'Knowledge Graph'],
+        technologyStack: ['PythonAI Research', 'ReactKnowledge Graph'],
         pricing: '$299/month',
         performance: {
           uptime: '99.8%',
@@ -413,7 +413,7 @@ export class NavigationGenerator {
         category: 'Creative AI',
         status: 'beta',
         description: 'AI-powered creative direction and management',
-        technologyStack: ['Python', 'Creative AI', 'React', 'Design Tools'],
+        technologyStack: ['PythonCreative AI', 'ReactDesign Tools'],
         pricing: '$399/month',
         performance: {
           uptime: '99.8%',
@@ -430,7 +430,7 @@ export class NavigationGenerator {
         category: 'Legal AI',
         status: 'beta',
         description: 'Intelligent legal analysis and counsel',
-        technologyStack: ['Python', 'Legal AI', 'React', 'Legal APIs'],
+        technologyStack: ['PythonLegal AI', 'ReactLegal APIs'],
         pricing: '$499/month',
         performance: {
           uptime: '99.9%',
@@ -447,7 +447,7 @@ export class NavigationGenerator {
         category: 'Healthcare AI',
         status: 'beta',
         description: 'AI-powered healthcare diagnostics and analysis',
-        technologyStack: ['Python', 'Medical AI', 'React', 'Health APIs'],
+        technologyStack: ['PythonMedical AI', 'ReactHealth APIs'],
         pricing: '$799/month',
         performance: {
           uptime: '99.99%',
@@ -457,9 +457,9 @@ export class NavigationGenerator {
         lastUpdated: '2025-01-15',
         priority: 25
       }
-    ];
+    ],
 
-    return this.services;
+    return this.services,
   }
 
   // Discover and generate pages
@@ -597,24 +597,24 @@ export class NavigationGenerator {
         href: '/accessibility',
         priority: 22
       }
-    ];
+    ],
 
-    return this.pages;
+    return this.pages,
   }
 
   // Generate categories from services
   async generateCategories(): Promise<NavigationCategory[]> {
-    const categoryMap = new Map<string, NavigationItem[]>();
+    const categoryMap = new Map<string, NavigationItem[]>(),
     
     // Group services by category
     this.services.forEach(service => {
       if (service.category) {
         if (!categoryMap.has(service.category)) {
-          categoryMap.set(service.category, []);
+          categoryMap.set(service.category, []),
         }
-        categoryMap.get(service.category)!.push(service);
+        categoryMap.get(service.category)!.push(service),
       }
-    });
+    }),
 
     // Create category objects
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
@@ -625,7 +625,7 @@ export class NavigationGenerator {
       serviceCount: services.length,
       services: services.map(s => s.id),
       priority: this.getCategoryPriority(name)
-    }));
+    })),
 
     // Add additional categories for pages
     this.categories.push(
@@ -655,25 +655,17 @@ export class NavigationGenerator {
         services: [],
         priority: 3
       }
-    );
+    ),
 
-    return this.categories;
+    return this.categories,
   }
 
   // Get category icon
   private getCategoryIcon(categoryName: string): string {
     const iconMap: { [key: string]: string } = {
-      'AI & Machine Learning': '🤖',
-      'Cybersecurity': '🔒',
-      'Infrastructure': '🏗️',
-      'Blockchain': '⛓️',
-      'Content & Marketing': '📝',
-      'Research & Development': '🔬',
-      'Creative AI': '🎨',
-      'Legal AI': '⚖️',
-      'Healthcare AI': '🏥'
-    };
-    return iconMap[categoryName] || '🚀';
+      'AI & Machine Learning': '🤖Cybersecurity': '🔒Infrastructure': '🏗️Blockchain': '⛓️Content & Marketing': '📝Research & Development': '🔬Creative AI': '🎨Legal AI': '⚖️Healthcare AI': '🏥'
+    },
+    return iconMap[categoryName] || '🚀',
   }
 
   // Get category priority
@@ -688,8 +680,8 @@ export class NavigationGenerator {
       'Creative AI': 7,
       'Legal AI': 8,
       'Healthcare AI': 9
-    };
-    return priorityMap[categoryName] || 10;
+    },
+    return priorityMap[categoryName] || 10,
   }
 
   // Generate header navigation
@@ -737,7 +729,7 @@ export class NavigationGenerator {
         href: '/search',
         priority: 7
       }
-    ];
+    ],
   }
 
   // Generate footer navigation
@@ -785,28 +777,28 @@ export class NavigationGenerator {
         href: '/sitemap.xml',
         priority: 7
       }
-    ];
+    ],
   }
 
   // Generate sidebar navigation based on context
   generateSidebarNavigation(context: any): NavigationItem[] {
     switch (context.pageType) {
       case 'service':
-        return this.generateServiceSidebar(context.currentService);
+        return this.generateServiceSidebar(context.currentService),
       case 'category':
-        return this.generateCategorySidebar(context.currentCategory);
+        return this.generateCategorySidebar(context.currentCategory),
       case 'dashboard':
-        return this.generateDashboardSidebar();
+        return this.generateDashboardSidebar(),
       default:
-        return this.generateDefaultSidebar();
+        return this.generateDefaultSidebar()
     }
   }
 
   private generateServiceSidebar(serviceId?: string): NavigationItem[] {
-    if (!serviceId) return this.generateDefaultSidebar();
+    if (!serviceId) return this.generateDefaultSidebar(),
     
-    const service = this.services.find(s => s.id === serviceId);
-    if (!service) return this.generateDefaultSidebar();
+    const service = this.services.find(s => s.id === serviceId),
+    if (!service) return this.generateDefaultSidebar(),
 
     return [
       {
@@ -818,13 +810,13 @@ export class NavigationGenerator {
       {
         id: 'service-demo',
         label: 'Demo',
-        href: service.href.replace('/services/', '/demo/'),
+        href: service.href.replace('/services//demo/'),
         priority: 2
       },
       {
         id: 'service-docs',
         label: 'Documentation',
-        href: service.href.replace('/services/', '/docs/'),
+        href: service.href.replace('/services//docs/'),
         priority: 3
       },
       {
@@ -834,16 +826,16 @@ export class NavigationGenerator {
         priority: 4,
         isExternal: true
       }
-    ];
+    ],
   }
 
   private generateCategorySidebar(categoryId?: string): NavigationItem[] {
-    if (!categoryId) return this.generateDefaultSidebar();
+    if (!categoryId) return this.generateDefaultSidebar(),
     
-    const category = this.categories.find(c => c.id === categoryId);
-    if (!category) return this.generateDefaultSidebar();
+    const category = this.categories.find(c => c.id === categoryId),
+    if (!category) return this.generateDefaultSidebar(),
 
-    const categoryServices = this.services.filter(s => s.category === category.name);
+    const categoryServices = this.services.filter(s => s.category === category.name),
     
     return [
       {
@@ -859,7 +851,7 @@ export class NavigationGenerator {
         status: service.status,
         priority: service.priority || 10
       }))
-    ];
+    ],
   }
 
   private generateDashboardSidebar(): NavigationItem[] {
@@ -888,7 +880,7 @@ export class NavigationGenerator {
         href: '/dashboard/settings',
         priority: 4
       }
-    ];
+    ],
   }
 
   private generateDefaultSidebar(): NavigationItem[] {
@@ -911,13 +903,13 @@ export class NavigationGenerator {
         href: '/explore',
         priority: 3
       }
-    ];
+    ],
   }
 
   // Auto-update navigation when new services are added
   async updateNavigation(): Promise<void> {
-    await this.discoverServices();
-    await this.generateCategories();
+    await this.discoverServices(),
+    await this.generateCategories(),
   }
 
   // Get complete navigation configuration
@@ -945,6 +937,6 @@ export class NavigationGenerator {
           priority: 2
         }
       ]
-    };
+    },
   }
 }

@@ -1,57 +1,57 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import React from 'react';
-import { vi, describe, test, expect, beforeAll, afterAll } from 'vitest';
-import { MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react',
+import userEvent from '@testing-library/user-event',
+import React from 'react',
+import { vi, describe, test, expect, beforeAll, afterAll } from 'vitest',
+import { MemoryRouter } from 'react-router-dom',
 
 // Mock components and hooks for testing
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
     user: null,
-    loading: false,
-  }),
-}));
+    loading: false
+  })
+})),
 
 vi.mock('@/hooks/use-mobile', () => ({
-  useIsMobile: () => false,
-}));
+  useIsMobile: () => false
+})),
 
 vi.mock('@/context/MessagingContext', () => ({
   useMessaging: () => ({
-    unreadCount: 0,
-  }),
-}));
+    unreadCount: 0
+  })
+})),
 
 vi.mock('react-redux', async () => {
-  const actual = await vi.importActual('react-redux') as object;
+  const actual = await vi.importActual('react-redux') as object,
   return {
     ...actual,
     useSelector: () => ({
-      items: [],
+      items: []
     }),
     useDispatch: () => vi.fn()
-  };
-});
+  },
+}),
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
-    t: (key: string, fallback?: string) => fallback || key,
-  }),
-}));
+    t: (key: string, fallback?: string) => fallback || key
+  })
+})),
 
 // Component imports
-import { PrimaryNav } from '@/layout/PrimaryNav';
-import { Footer } from '@/components/Footer';
+import { PrimaryNav } from '@/layout/PrimaryNav',
+import { Footer } from '@/components/Footer',
 
 // Test wrapper component
 const TestWrapper = ({ children }: { children: React.ReactNode }) => (
   <MemoryRouter>
     {children}
   </MemoryRouter>
-);
+),
 
 describe('Responsive 320px Width Fixes (Issue #18)', () => {
-  const originalMatchMedia = window.matchMedia;
+  const originalMatchMedia = window.matchMedia,
 
   beforeAll(() => {
     Object.defineProperty(window, 'matchMedia', {
@@ -64,35 +64,35 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
         removeListener: vi.fn(),
         addEventListener: vi.fn(),
         removeEventListener: vi.fn(),
-        dispatchEvent: vi.fn(),
-      })),
-    });
-  });
+        dispatchEvent: vi.fn()
+      }))
+    }),
+  }),
 
   afterAll(() => {
-    window.matchMedia = originalMatchMedia;
-    vi.restoreAllMocks();
-  });
+    window.matchMedia = originalMatchMedia,
+    vi.restoreAllMocks(),
+  }),
 
 
   describe('Navigation Layout at 320px', () => {
     
     test('PrimaryNav renders without horizontal overflow', () => {
-      global.innerWidth = 320;
-      global.dispatchEvent(new Event('resize'));
+      global.innerWidth = 320,
+      global.dispatchEvent(new Event('resize')),
       
       render(
         <TestWrapper>
           <PrimaryNav />
         </TestWrapper>
-      );
+      ),
       
-      const header = screen.getByRole('navigation', { name: /primary/i });
-      expect(header).toBeInTheDocument();
+      const header = screen.getByRole('navigation', { name: /primary/i }),
+      expect(header).toBeInTheDocument(),
       
-      const container = header.querySelector('.container');
-      expect(container).toBeInTheDocument();
-    });
+      const container = header.querySelector('.container'),
+      expect(container).toBeInTheDocument(),
+    }),
     
     test('Search form uses responsive width at small screens', () => {
       render(
@@ -101,11 +101,11 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
             <PrimaryNav />
           </div>
         </TestWrapper>
-      );
+      ),
       
-      const mobileMenuButton = screen.getByLabelText(/toggle.*menu/i);
-      expect(mobileMenuButton).toBeInTheDocument();
-    });
+      const mobileMenuButton = screen.getByLabelText(/toggle.*menu/i),
+      expect(mobileMenuButton).toBeInTheDocument(),
+    }),
     
     test('Navigation elements wrap properly on narrow screens', () => {
       render(
@@ -114,15 +114,15 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
             <PrimaryNav />
           </div>
         </TestWrapper>
-      );
+      ),
       
-      const logo = screen.getByRole('link');
-      expect(logo).toBeInTheDocument();
+      const logo = screen.getByRole('link'),
+      expect(logo).toBeInTheDocument(),
       
-      const mobileButton = screen.getByLabelText(/toggle.*menu/i);
-      expect(mobileButton).toBeInTheDocument();
-    });
-  });
+      const mobileButton = screen.getByLabelText(/toggle.*menu/i),
+      expect(mobileButton).toBeInTheDocument(),
+    }),
+  }),
 
   describe('Footer Layout at 320px', () => {
     
@@ -133,75 +133,75 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
             <Footer />
           </div>
         </TestWrapper>
-      );
+      ),
       
-      expect(screen.getByText('Marketplace')).toBeInTheDocument();
-      expect(screen.getByText('Company')).toBeInTheDocument();
-      expect(screen.getByText('Newsletter')).toBeInTheDocument();
-    });
+      expect(screen.getByText('Marketplace')).toBeInTheDocument(),
+      expect(screen.getByText('Company')).toBeInTheDocument(),
+      expect(screen.getByText('Newsletter')).toBeInTheDocument(),
+    }),
     
     test('Footer social icons wrap correctly', () => {
       render(
         <TestWrapper>
           <Footer />
         </TestWrapper>
-      );
+      ),
       
-      expect(screen.getByLabelText('Twitter')).toBeInTheDocument();
-      expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument();
-      expect(screen.getByLabelText('Facebook')).toBeInTheDocument();
-      expect(screen.getByLabelText('Instagram')).toBeInTheDocument();
-      expect(screen.getByLabelText('GitHub')).toBeInTheDocument();
-    });
+      expect(screen.getByLabelText('Twitter')).toBeInTheDocument(),
+      expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument(),
+      expect(screen.getByLabelText('Facebook')).toBeInTheDocument(),
+      expect(screen.getByLabelText('Instagram')).toBeInTheDocument(),
+      expect(screen.getByLabelText('GitHub')).toBeInTheDocument(),
+    }),
     
     test('Footer newsletter section is responsive', () => {
       render(
         <TestWrapper>
           <Footer />
         </TestWrapper>
-      );
+      ),
       
-      const newsletterSection = screen.getByText('Newsletter');
-      expect(newsletterSection).toBeInTheDocument();
+      const newsletterSection = screen.getByText('Newsletter'),
+      expect(newsletterSection).toBeInTheDocument(),
       
-      expect(screen.getByText(/stay updated with the latest news/i)).toBeInTheDocument();
-    });
+      expect(screen.getByText(/stay updated with the latest news/i)).toBeInTheDocument(),
+    }),
     
     test('Footer legal links wrap properly', () => {
       render(
         <TestWrapper>
           <Footer />
         </TestWrapper>
-      );
+      ),
       
-      expect(screen.getByText('Privacy Policy')).toBeInTheDocument();
-      expect(screen.getByText('Terms of Service')).toBeInTheDocument();
-      expect(screen.getByText('API Status')).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Privacy Policy')).toBeInTheDocument(),
+      expect(screen.getByText('Terms of Service')).toBeInTheDocument(),
+      expect(screen.getByText('API Status')).toBeInTheDocument(),
+    }),
+  }),
 
   describe('CSS Class Applications', () => {
     
     test('Responsive utility classes exist', () => {
-      const testElement = document.createElement('div');
-      testElement.className = 'flex-wrap-320 clamp-width-320 grid-responsive-320';
+      const testElement = document.createElement('div'),
+      testElement.className = 'flex-wrap-320 clamp-width-320 grid-responsive-320',
       
-      expect(testElement.classList.contains('flex-wrap-320')).toBe(true);
-      expect(testElement.classList.contains('clamp-width-320')).toBe(true);
-      expect(testElement.classList.contains('grid-responsive-320')).toBe(true);
-    });
+      expect(testElement.classList.contains('flex-wrap-320')).toBe(true),
+      expect(testElement.classList.contains('clamp-width-320')).toBe(true),
+      expect(testElement.classList.contains('grid-responsive-320')).toBe(true),
+    }),
     
     test('Container has proper responsive padding', () => {
       render(
         <div className="container">
           Test content
         </div>
-      );
+      ),
       
-      const container = screen.getByText('Test content').parentElement;
-      expect(container).toHaveClass('container');
-    });
-  });
+      const container = screen.getByText('Test content').parentElement,
+      expect(container).toHaveClass('container'),
+    }),
+  }),
 
   describe('Touch Target Accessibility', () => {
     
@@ -210,14 +210,14 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
         <TestWrapper>
           <PrimaryNav />
         </TestWrapper>
-      );
+      ),
       
-      const mobileMenuButton = screen.getByLabelText(/toggle.*menu/i);
+      const mobileMenuButton = screen.getByLabelText(/toggle.*menu/i),
       
-      expect(mobileMenuButton).toHaveAttribute('aria-label');
-      expect(mobileMenuButton).toHaveAttribute('aria-expanded');
-    });
-  });
+      expect(mobileMenuButton).toHaveAttribute('aria-label'),
+      expect(mobileMenuButton).toHaveAttribute('aria-expanded'),
+    }),
+  }),
 
   describe('Text Wrapping and Overflow', () => {
     
@@ -226,29 +226,29 @@ describe('Responsive 320px Width Fixes (Issue #18)', () => {
         <div className="text-wrap-responsive" style={{ width: '280px' }}>
           This is a very long text that should wrap properly on narrow screens without causing horizontal overflow issues
         </div>
-      );
+      ),
       
-      const element = screen.getByText(/this is a very long text/i);
-      expect(element).toBeInTheDocument();
-      expect(element).toHaveClass('text-wrap-responsive');
-    });
-  });
+      const element = screen.getByText(/this is a very long text/i),
+      expect(element).toBeInTheDocument(),
+      expect(element).toHaveClass('text-wrap-responsive'),
+    }),
+  }),
 
   describe('Search Dropdown Responsiveness', () => {
     
     test('Search dropdown constrains to viewport width', () => {
-      const dropdown = document.createElement('div');
-      dropdown.className = 'search-dropdown';
-      dropdown.style.width = '320px';
+      const dropdown = document.createElement('div'),
+      dropdown.className = 'search-dropdown',
+      dropdown.style.width = '320px',
       
-      document.body.appendChild(dropdown);
+      document.body.appendChild(dropdown),
       
-      expect(dropdown.classList.contains('search-dropdown')).toBe(true);
+      expect(dropdown.classList.contains('search-dropdown')).toBe(true),
       
-      document.body.removeChild(dropdown);
-    });
-  });
-});
+      document.body.removeChild(dropdown),
+    }),
+  }),
+}),
 
 describe('Specific Issue #18 Validation', () => {
   
@@ -259,11 +259,11 @@ describe('Specific Issue #18 Validation', () => {
           <PrimaryNav />
         </div>
       </TestWrapper>
-    );
+    ),
     
-    const mobileButton = screen.getByLabelText(/toggle.*menu/i);
-    expect(mobileButton).toBeInTheDocument();
-  });
+    const mobileButton = screen.getByLabelText(/toggle.*menu/i),
+    expect(mobileButton).toBeInTheDocument(),
+  }),
   
   test('Footer columns stack without poor layout', () => {
     render(
@@ -272,44 +272,44 @@ describe('Specific Issue #18 Validation', () => {
           <Footer />
         </div>
       </TestWrapper>
-    );
+    ),
     
-    const sections = ['Marketplace', 'Company', 'Newsletter'];
+    const sections = ['MarketplaceCompany', 'Newsletter'],
     sections.forEach(section => {
-      expect(screen.getByText(section)).toBeInTheDocument();
-    });
+      expect(screen.getByText(section)).toBeInTheDocument(),
+    }),
     
-    expect(screen.getByText(/zion tech group.*all rights reserved/i)).toBeInTheDocument();
-  });
+    expect(screen.getByText(/zion tech group.*all rights reserved/i)).toBeInTheDocument(),
+  }),
   
   test('Flex-wrap behavior works correctly', () => {
-    const testContainer = document.createElement('div');
-    testContainer.className = 'flex-wrap-320';
-    testContainer.style.width = '320px';
+    const testContainer = document.createElement('div'),
+    testContainer.className = 'flex-wrap-320',
+    testContainer.style.width = '320px',
     
-    for (let i = 0; i < 5; i++) {
-      const child = document.createElement('div');
-      child.style.width = '80px';
-      child.textContent = `Item ${i + 1}`;
-      testContainer.appendChild(child);
+    for (let i = 0, i < 5, i++) {
+      const child = document.createElement('div'),
+      child.style.width = '80px',
+      child.textContent = `Item ${i + 1}`,
+      testContainer.appendChild(child),
     }
     
-    document.body.appendChild(testContainer);
+    document.body.appendChild(testContainer),
     
-    expect(testContainer.classList.contains('flex-wrap-320')).toBe(true);
+    expect(testContainer.classList.contains('flex-wrap-320')).toBe(true),
     
-    document.body.removeChild(testContainer);
-  });
+    document.body.removeChild(testContainer),
+  }),
   
   test('CSS clamp function works for width constraints', () => {
-    const testElement = document.createElement('div');
-    testElement.className = 'clamp-width-320';
-    testElement.style.width = 'clamp(8rem, 100%, 20rem)';
+    const testElement = document.createElement('div'),
+    testElement.className = 'clamp-width-320',
+    testElement.style.width = 'clamp(8rem, 100%, 20rem)',
     
-    document.body.appendChild(testElement);
+    document.body.appendChild(testElement),
     
-    expect(testElement.classList.contains('clamp-width-320')).toBe(true);
+    expect(testElement.classList.contains('clamp-width-320')).toBe(true),
     
-    document.body.removeChild(testElement);
-  });
-}); 
+    document.body.removeChild(testElement),
+  }),
+}), 

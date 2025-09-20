@@ -1,42 +1,42 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import InterviewCard from '../../components/interviews/InterviewCard';
-import type { Interview } from '../../utils/types/interview';
+import React, { useEffect, useMemo, useState } from 'react',
+import InterviewCard from '../../components/interviews/InterviewCard',
+import type { Interview } from '../../utils/types/interview',
 
 function getStoredUserId(): string {
-  if (typeof window === 'undefined') return '';
-  return localStorage.getItem('demoUserId') || '';
+  if (typeof window === 'undefined') return '',
+  return localStorage.getItem('demoUserId') || '',
 }
 
 function setStoredUserId(id: string) {
-  if (typeof window === 'undefined') return;
-  localStorage.setItem('demoUserId', id);
+  if (typeof window === 'undefined') return,
+  localStorage.setItem('demoUserId', id),
 }
 
 export default function InterviewsPage() {
-  const [userId, setUserId] = useState<string>('');
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [userId, setUserId] = useState<string>(''),
+  const [interviews, setInterviews] = useState<Interview[]>([]),
+  const [loading, setLoading] = useState(false),
 
   useEffect(() => {
-    const initial = getStoredUserId();
-    if (initial) setUserId(initial);
-  }, []);
+    const initial = getStoredUserId(),
+    if (initial) setUserId(initial),
+  }, []),
 
-  const canLoad = useMemo(() => Boolean(userId), [userId]);
+  const canLoad = useMemo(() => Boolean(userId), [userId]),
 
   async function load() {
-    if (!canLoad) return;
-    setLoading(true);
+    if (!canLoad) return,
+    setLoading(true),
     try {
-      const res = await fetch(`/api/interviews?userId=${userId}`);
-      const data = await res.json();
-      setInterviews(data.interviews || []);
+      const res = await fetch(`/api/interviews?userId=${userId}`),
+      const data = await res.json(),
+      setInterviews(data.interviews || []),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
   }
 
-  useEffect(() => { load(); }, [userId]);
+  useEffect(() => { load(), }, [userId]),
 
   return (
     <div className="space-y-4">
@@ -64,5 +64,5 @@ export default function InterviewsPage() {
         ))}
       </div>
     </div>
-  );
+  ),
 }

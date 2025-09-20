@@ -1,6 +1,5 @@
-import React from 'react';
-import SEO from '@/components/SEO';
-
+import React from "react";
+import SEO from "@/components/SEO";
 function ReturnsManagement() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
@@ -41,11 +40,11 @@ function ReturnsManagement() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {[{
-            plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns', '1 brand portal', '1 store integration']
+            plan: 'Starter', price: '$99/mo', features: ['Up to 500 returns1 brand portal', '1 store integration']
           },{
-            plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns', '3 brand portals', 'All major carriers']
+            plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns3 brand portals', 'All major carriers']
           },{
-            plan: 'Scale', price: 'Custom', features: ['Unlimited returns', 'SLA + SSO', 'Dedicated success manager']
+            plan: 'Scale', price: 'Custom', features: ['Unlimited returnsSLA + SSO', 'Dedicated success manager']
           }].map(({ plan, price, features }) => (
             <div key={plan} className="card-futuristic">
               <h3 className="text-lg font-semibold">{plan}</h3>
@@ -59,12 +58,11 @@ function ReturnsManagement() {
         </div>
 
         <p className="mt-10 text-sm text-zion-slate-light">
-          Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
+          Learn more at <a className="text-cyan-400 underline" href="https: //ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
         </p>
       </section>
     </div>
-  );
+  )
 }
 
 export default ReturnsManagement;
-

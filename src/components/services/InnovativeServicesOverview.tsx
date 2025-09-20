@@ -1,60 +1,57 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from '../../data/innovativeServices2025';
-
+import React, { useState, useMemo } from "react";
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 interface InnovativeServicesOverviewProps {
-  maxServices?: number;
-  category?: string;
-  showViewAllButton?: boolean;
+  maxServices?: number,
+  category?: string,
+  showViewAllButton?: boolean,
 }
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
-  maxServices = 6,
+  maxServices = 6;
   category,
   showViewAllButton = true
 }) => {
-  const [activeTab, setActiveTab] = useState('featured');
+  const [activeTab, setActiveTab] = useState('featured'),
 
   const tabs = [
-    { id: 'featured', label: 'Featured', count: 3 },
-    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },
-    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },
-    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },
-    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },
+    { id: 'featured', label: 'Featured', count: 3 };
+    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length };
+    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length };
+    { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length };
+    { id: 'business', label: 'Business', count: getServicesByCategory('Business').length };
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length }
   ];
-
   const filteredServices = useMemo(() => {
-    let services = INNOVATIVE_SERVICES_2025;
+    let services = INNOVATIVE_SERVICES_2025,
 
     if (category) {
-      services = getServicesByCategory(category);
+      services = getServicesByCategory(category),
     } else {
       switch (activeTab) {
         case 'featured':
-          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
-          break;
+          services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3),
+          break,
         case 'ai':
-          services = getServicesByCategory('AI Services');
-          break;
+          services = getServicesByCategory('AI Services'),
+          break,
         case 'it':
-          services = getServicesByCategory('IT Services');
-          break;
+          services = getServicesByCategory('IT Services'),
+          break,
         case 'saas':
-          services = getServicesByCategory('Micro SAAS');
-          break;
+          services = getServicesByCategory('Micro SAAS'),
+          break,
         case 'business':
-          services = getServicesByCategory('Business');
-          break;
+          services = getServicesByCategory('Business'),
+          break,
         case 'development':
-          services = getServicesByCategory('Development');
-          break;
-        default:
-          services = INNOVATIVE_SERVICES_2025;
+          services = getServicesByCategory('Development'),
+          break,
+        default: services = INNOVATIVE_SERVICES_2025
       }
     }
 
-    return services.slice(0, maxServices);
-  }, [activeTab, category, maxServices]);
+    return services.slice(0, maxServices),
+  }, [activeTab, category, maxServices]),
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
@@ -94,7 +91,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         </div>
 
         <div className="flex space-x-2">
-          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover:bg-blue-700 transition-colors">
+          <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover: bg-blue-700 transition-colors">
             Get Quote
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors">
@@ -104,10 +101,9 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       </div>
     </div>
   );
-
-  const totalServices = INNOVATIVE_SERVICES_2025.length;
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
+  const totalServices = INNOVATIVE_SERVICES_2025.length,
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0),
+  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices,
 
   return (
     <div className="bg-gray-50 py-16">
@@ -120,7 +116,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           </p>
 
           {/* Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">{totalServices}</div>
               <div className="text-gray-600">Total Services</div>
@@ -223,6 +219,6 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       </div>
     </div>
   );
-};
+},
 
 export default InnovativeServicesOverview;

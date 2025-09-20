@@ -1,164 +1,95 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 interface Testimonial {
-  id: number;
-  name: string;
-  position: string;
-  company: string;
-  content: string;
-  rating: number;
-  avatar: string;
-  logo: string;
-  category: 'enterprise' | 'startup' | 'agency' | 'government';
-  results: {
-    metric: string;
-    value: string;
-    change: string;
+  id: number,name: string,position: string,company: string,content: string,rating: number,avatar: string,logo: string,category: 'enterprise' | 'startup' | 'agency' | 'government',results: {
+    metric: string,value: string,change: string
   }[];
 }
 
 const testimonials: Testimonial[] = [
   {
-    id: 1,
-    name: "Sarah Chen",
-    position: "CTO",
-    company: "Fortune 500 Tech Corp",
-    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system performance by 300%. The team's expertise and dedication exceeded our expectations.",
-    rating: 5,
-    avatar: "/images/testimonials/sarah-chen.jpg",
-    logo: "/images/companies/fortune500-tech.png",
-    category: "enterprise",
-    results: [
-      { metric: "Cost Reduction", value: "40%", change: "decrease" },
-      { metric: "Performance", value: "300%", change: "increase" },
+    id: 1,name: "Sarah Chen",position: "CTO",company: "Fortune 500 Tech Corp",content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce operational costs by 40% while improving system performance by 300%. The team's expertise and dedication exceeded our expectations.",rating: 5,avatar: "/images/testimonials/sarah-chen.jpg",logo: "/images/companies/fortune500-tech.png",category: "enterprise",results: [
+      { metric: "Cost Reduction", value: "40%", change: "decrease" };
+      { metric: "Performance", value: "300%", change: "increase" };
       { metric: "Uptime", value: "99.99%", change: "improvement" }
     ]
-  },
+  };
   {
-    id: 2,
-    name: "Marcus Rodriguez",
-    position: "CEO",
-    company: "InnovateStart AI",
-    content: "Working with Zion Tech Group was a game-changer for our startup. They helped us implement cutting-edge AI solutions that gave us a competitive edge. Their cloud infrastructure setup was flawless and scalable.",
-    rating: 5,
-    avatar: "/images/testimonials/marcus-rodriguez.jpg",
-    logo: "/images/companies/innovate-ai.png",
-    category: "startup",
-    results: [
-      { metric: "Time to Market", value: "-60%", change: "faster" },
-      { metric: "Scalability", value: "500%", change: "increase" },
+    id: 2,name: "Marcus Rodriguez",position: "CEO",company: "InnovateStart AI",content: "Working with Zion Tech Group was a game-changer for our startup. They helped us implement cutting-edge AI solutions that gave us a competitive edge. Their cloud infrastructure setup was flawless and scalable.",rating: 5,avatar: "/images/testimonials/marcus-rodriguez.jpg",logo: "/images/companies/innovate-ai.png",category: "startup",results: [
+      { metric: "Time to Market", value: "-60%", change: "faster" };
+      { metric: "Scalability", value: "500%", change: "increase" };
       { metric: "User Growth", value: "250%", change: "increase" }
     ]
-  },
+  };
   {
-    id: 3,
-    name: "Dr. Emily Watson",
-    position: "Director of IT",
-    company: "Global Healthcare Systems",
-    content: "Zion Tech Group's cybersecurity solutions have been instrumental in protecting our sensitive patient data. Their compliance expertise and 24/7 monitoring give us peace of mind.",
-    rating: 5,
-    avatar: "/images/testimonials/emily-watson.jpg",
-    logo: "/images/companies/global-healthcare.png",
-    category: "enterprise",
-    results: [
-      { metric: "Security Incidents", value: "0", change: "reduction" },
-      { metric: "Compliance Score", value: "100%", change: "achievement" },
+    id: 3,name: "Dr. Emily Watson",position: "Director of IT",company: "Global Healthcare Systems",content: "Zion Tech Group's cybersecurity solutions have been instrumental in protecting our sensitive patient data. Their compliance expertise and 24/7 monitoring give us peace of mind.",rating: 5,avatar: "/images/testimonials/emily-watson.jpg",logo: "/images/companies/global-healthcare.png",category: "enterprise",results: [
+      { metric: "Security Incidents", value: "0", change: "reduction" };
+      { metric: "Compliance Score", value: "100%", change: "achievement" };
       { metric: "Response Time", value: "<5min", change: "improvement" }
     ]
-  },
+  };
   {
-    id: 4,
-    name: "David Kim",
-    position: "Managing Director",
-    company: "Digital Agency Pro",
-    content: "Zion Tech Group's digital transformation services helped us modernize our entire operation. Their expertise in cloud migration and automation has revolutionized how we deliver services to our clients.",
-    rating: 5,
-    avatar: "/images/testimonials/david-kim.jpg",
-    logo: "/images/companies/digital-agency.png",
-    category: "agency",
-    results: [
-      { metric: "Efficiency", value: "75%", change: "improvement" },
-      { metric: "Client Satisfaction", value: "98%", change: "increase" },
+    id: 4,name: "David Kim",position: "Managing Director",company: "Digital Agency Pro",content: "Zion Tech Group's digital transformation services helped us modernize our entire operation. Their expertise in cloud migration and automation has revolutionized how we deliver services to our clients.",rating: 5,avatar: "/images/testimonials/david-kim.jpg",logo: "/images/companies/digital-agency.png",category: "agency",results: [
+      { metric: "Efficiency", value: "75%", change: "improvement" };
+      { metric: "Client Satisfaction", value: "98%", change: "increase" };
       { metric: "Revenue Growth", value: "45%", change: "increase" }
     ]
-  },
+  };
   {
-    id: 5,
-    name: "Jennifer Adams",
-    position: "IT Director",
-    company: "Municipal Government",
-    content: "Zion Tech Group helped us modernize our government systems while maintaining strict security standards. Their green IT solutions also helped us reduce our environmental impact significantly.",
-    rating: 5,
-    avatar: "/images/testimonials/jennifer-adams.jpg",
-    logo: "/images/companies/municipal-gov.png",
-    category: "government",
-    results: [
-      { metric: "Energy Savings", value: "60%", change: "reduction" },
-      { metric: "Carbon Footprint", value: "75%", change: "reduction" },
+    id: 5,name: "Jennifer Adams",position: "IT Director",company: "Municipal Government",content: "Zion Tech Group helped us modernize our government systems while maintaining strict security standards. Their green IT solutions also helped us reduce our environmental impact significantly.",rating: 5,avatar: "/images/testimonials/jennifer-adams.jpg",logo: "/images/companies/municipal-gov.png",category: "government",results: [
+      { metric: "Energy Savings", value: "60%", change: "reduction" };
+      { metric: "Carbon Footprint", value: "75%", change: "reduction" };
       { metric: "Cost Savings", value: "35%", change: "reduction" }
     ]
-  },
+  };
   {
-    id: 6,
-    name: "Alex Thompson",
-    position: "VP of Engineering",
-    company: "FinTech Solutions Inc",
-    content: "Zion Tech Group's blockchain and AI solutions have revolutionized our financial services platform. Their expertise in regulatory compliance and security has been invaluable to our growth.",
-    rating: 5,
-    avatar: "/images/testimonials/alex-thompson.jpg",
-    logo: "/images/companies/fintech-solutions.png",
-    category: "enterprise",
-    results: [
-      { metric: "Transaction Speed", value: "1000%", change: "faster" },
-      { metric: "Security Score", value: "A+", change: "grade" },
+    id: 6,name: "Alex Thompson",position: "VP of Engineering",company: "FinTech Solutions Inc",content: "Zion Tech Group's blockchain and AI solutions have revolutionized our financial services platform. Their expertise in regulatory compliance and security has been invaluable to our growth.",rating: 5,avatar: "/images/testimonials/alex-thompson.jpg",logo: "/images/companies/fintech-solutions.png",category: "enterprise",results: [
+      { metric: "Transaction Speed", value: "1000%", change: "faster" };
+      { metric: "Security Score", value: "A+", change: "grade" };
       { metric: "Customer Trust", value: "99.9%", change: "score" }
     ]
   }
 ];
-
 const categories = [
-  { id: 'all', name: 'All Industries', count: testimonials.length },
-  { id: 'enterprise', name: 'Enterprise', count: testimonials.filter(t => t.category === 'enterprise').length },
-  { id: 'startup', name: 'Startup', count: testimonials.filter(t => t.category === 'startup').length },
-  { id: 'agency', name: 'Agency', count: testimonials.filter(t => t.category === 'agency').length },
+  { id: 'all', name: 'All Industries', count: testimonials.length };
+  { id: 'enterprise', name: 'Enterprise', count: testimonials.filter(t => t.category === 'enterprise').length };
+  { id: 'startup', name: 'Startup', count: testimonials.filter(t => t.category === 'startup').length };
+  { id: 'agency', name: 'Agency', count: testimonials.filter(t => t.category === 'agency').length };
   { id: 'government', name: 'Government', count: testimonials.filter(t => t.category === 'government').length }
 ];
-
 export function TestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false),
 
   const filteredTestimonials = selectedCategory === 'all' 
     ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory);
+    : testimonials.filter(t => t.category === selectedCategory),
 
   // Auto-play functionality
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
-    }, 8000);
+      setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),
+    }, 8000),
 
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, filteredTestimonials.length]);
+    return () => clearInterval(interval),
+  }, [isAutoPlaying, filteredTestimonials.length]),
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setCurrentTestimonial((prev) => (prev + 1) % filteredTestimonials.length),
+    setIsAutoPlaying(false),
+  },
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length);
-    setIsAutoPlaying(false);
-  };
+    setCurrentTestimonial((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length),
+    setIsAutoPlaying(false),
+  },
 
   const currentTestimonialData = filteredTestimonials[currentTestimonial];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -167,7 +98,6 @@ export function TestimonialsSection() {
       />
     ));
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background Pattern */}
@@ -363,7 +293,7 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
               <div className="text-gray-400">Projects Delivered</div>
@@ -384,5 +314,5 @@ export function TestimonialsSection() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

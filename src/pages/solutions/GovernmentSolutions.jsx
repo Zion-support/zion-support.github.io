@@ -1,45 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react";
 export default function GovernmentSolutions() {
     const solutions = [
         {
-            icon: Building2,
-            title: "Digital Government",
-            description: "Modern digital government platforms and citizen services",
-            features: ["Citizen Portals", "Digital Services", "E-Government", "Service Automation"]
+            icon: Building2,title: "Digital Government",description: "Modern digital government platforms and citizen services",features: ["Citizen Portals", "Digital Services", "E-Government", "Service Automation"]
         },
         {
-            icon: Shield,
-            title: "Government Security",
-            description: "Comprehensive cybersecurity and compliance solutions for government",
-            features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"]
+            icon: Shield,title: "Government Security",description: "Comprehensive cybersecurity and compliance solutions for government",features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"]
         },
         {
-            icon: Users,
-            title: "Citizen Experience",
-            description: "AI-powered citizen engagement and service delivery",
-            features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"]
+            icon: Users,title: "Citizen Experience",description: "AI-powered citizen engagement and service delivery",features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"]
         },
         {
-            icon: BarChart3,
-            title: "Government Analytics",
-            description: "Advanced analytics and insights for government decision-making",
-            features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"]
+            icon: BarChart3,title: "Government Analytics",description: "Advanced analytics and insights for government decision-making",features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"]
         },
         {
-            icon: Lock,
-            title: "Compliance & Audit",
-            description: "Automated compliance monitoring and regulatory reporting",
-            features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"]
+            icon: Lock,title: "Compliance & Audit",description: "Automated compliance monitoring and regulatory reporting",features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"]
         },
         {
-            icon: Zap,
-            title: "Process Automation",
-            description: "Intelligent automation for government operations and workflows",
-            features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
+            icon: Zap,title: "Process Automation",description: "Intelligent automation for government operations and workflows",features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
         }
-    ];
+    ],
     const benefits = [
         "Improved citizen satisfaction and engagement",
         "Enhanced operational efficiency and cost savings",
@@ -47,23 +29,15 @@ export default function GovernmentSolutions() {
         "Increased transparency and accountability",
         "Faster service delivery and response times",
         "Enhanced data security and privacy protection"
-    ];
+    ],
     const caseStudies = [
         {
-            organization: "State Government Agency",
-            specialty: "Digital Services",
-            challenge: "Outdated citizen services and long processing times",
-            solution: "Implemented modern digital government platform with AI automation",
-            results: "70% reduction in processing times, 85% improvement in citizen satisfaction"
+            organization: "State Government Agency",specialty: "Digital Services",challenge: "Outdated citizen services and long processing times",solution: "Implemented modern digital government platform with AI automation",results: "70% reduction in processing times, 85% improvement in citizen satisfaction"
         },
         {
-            organization: "Federal Department",
-            specialty: "Security & Compliance",
-            challenge: "Cybersecurity vulnerabilities and compliance gaps",
-            solution: "Comprehensive security framework with FedRAMP compliance",
-            results: "100% compliance achievement, 90% reduction in security incidents"
+            organization: "Federal Department",specialty: "Security & Compliance",challenge: "Cybersecurity vulnerabilities and compliance gaps",solution: "Comprehensive security framework with FedRAMP compliance",results: "100% compliance achievement, 90% reduction in security incidents"
         }
-    ];
+    ],
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -108,7 +82,7 @@ export default function GovernmentSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const Icon = solution.icon,
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>
@@ -201,7 +175,7 @@ export default function GovernmentSolutions() {
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our government solutions can improve citizen services, enhance security, and drive efficiency
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
             </Link>
@@ -211,5 +185,5 @@ export default function GovernmentSolutions() {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

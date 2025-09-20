@@ -1,4 +1,4 @@
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox  } from 'lucide-react';
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox  } from 'lucide-react',
 export default function Page() {
 />) : (<div className="flex h-full w-full items - center justify - center bg-muted text-lg font -medium uppercase">
                           {user?.displayName?.charAt(0) || "U"}

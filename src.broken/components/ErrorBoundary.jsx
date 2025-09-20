@@ -1,41 +1,41 @@
 <<<<<<< HEAD
- from 'lucide-react';
-import { Link, useNavigate  } from 'react-router-dom';
+ from 'lucide-react',
+import { Link, useNavigate  } from 'react-router-dom',
 
 ) {
 
-  const navigate = useNavigate();
-  const maxRetries = 3;
+  const navigate = useNavigate(),
+  const maxRetries = 3,
 
   const handleRetry = () => {
     if(retryCount < maxRetries) {
 
-      resetError();
+      resetError(),
     } else {
 
       // After max retries, redirect to home'
-      navigate('/');
+      navigate('/'),
     }
-  };
+  },
 
   const getErrorType = error => {
 
     if(error?.name === 'NetworkError' || error?.message?.includes('network')) {
 
-      return 'network';
+      return 'network',
     }
     if(error?.name === 'TypeError' || error?.message?.includes('undefined')) {
 
-      return 'runtime';
+      return 'runtime',
     }
     if(error?.name === 'ReferenceError') {
 
-      return 'reference';
+      return 'reference',
     }
-    return 'general';
-  };
+    return 'general',
+  },
 
-  const errorType = getErrorType(error);
+  const errorType = getErrorType(error),
 
   const errorMessages = {
 
@@ -63,10 +63,10 @@ import { Link, useNavigate  } from 'react-router-dom';
       icon: AlertTriangle,
       color: 'text-zion-purple'
     }
-  };
+  },
 
-  const currentError = errorMessages[errorType];
-  const IconComponent = currentError.icon;
+  const currentError = errorMessages[errorType],
+  const IconComponent = currentError.icon,
 
   return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center p-4">
       <div className="max-w-md w-full text-center">
@@ -164,96 +164,96 @@ import { Link, useNavigate  } from 'react-router-dom';
         </div>
       </div>
     </div>
-  );
+  ),
 }
 
 export function ErrorBoundary({ children, fallback, onError }) {
 
-  const [hasError, setHasError] = useState(false);
-  const [error, setError] = useState(null);
-  const [retryCount, setRetryCount] = useState(0);
+  const [hasError, setHasError] = useState(false),
+  const [error, setError] = useState(null),
+  const [retryCount, setRetryCount] = useState(0),
 
   useEffect(() => {
     const handleError = event => {
 
-      setHasError(true);
-      setError(event.error);
+      setHasError(true),
+      setError(event.error),
       if(onError) {
 
-        onError(event.error, { componentStack: event.error?.stack });
+        onError(event.error, { componentStack: event.error?.stack }),
       }
 
       // Log error to console in development
       if(process.env.NODE_ENV === 'development') {
-        // console.error('ErrorBoundary caught an error:', event.error);
+        // console.error('ErrorBoundary caught an error:', event.error),
       }
-    };
+    },
 
     const handleUnhandledRejection = event => {
 
-      setHasError(true);
-      setError(new Error(event.reason));
+      setHasError(true),
+      setError(new Error(event.reason)),
       if(onError) {
 
         onError(new Error(event.reason), {
 
-          componentStack: event.reason?.stack});
+          componentStack: event.reason?.stack}),
       }
 
       // Log error to console in development
       if(process.env.NODE_ENV === 'development') {
-        // console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+        // console.error('ErrorBoundary caught an unhandled rejection:', event.reason),
       }
-    };
+    },
 
-    window.addEventListener('error', handleError);
-    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    window.addEventListener('error', handleError),
+    window.addEventListener('unhandledrejection', handleUnhandledRejection),
 
     return () => {
 
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-    };
-  }, [onError]);
+      window.removeEventListener('error', handleError),
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection),
+    },
+  }, [onError]),
 
   const resetError = () => {
-    setHasError(false);
-    setError(null);
-    setRetryCount(prev => prev + 1);
-  };
+    setHasError(false),
+    setError(null),
+    setRetryCount(prev => prev + 1),
+  },
 
   if(hasError) {
 
     if(fallback) {
 
-      return fallback;
+      return fallback,
     }
     return (<ErrorFallback
         error={error || undefined}
         resetError={resetError}
         retryCount={retryCount}
       />
-    );
+    ),
   }
 
-  return <>{children}</>;
+  return <>{children}</>,
 }
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null),
 
   const handleError = error => {
 
-    setError(error);
-    // console.error('useErrorHandler caught an error:', error);
-  };
+    setError(error),
+    // console.error('useErrorHandler caught an error:', error),
+  },
 
   const clearError = () => {
-    setError(null);
-  };
+    setError(null),
+  },
 
-  return { error, handleError, clearError };
+  return { error, handleError, clearError },
 }
 
 // Higher-order component for error handling
@@ -264,10 +264,10 @@ export function withErrorBoundary(Component, fallback = null) {
     return (<ErrorBoundary fallback={fallback}>
         <Component {...props} />
       </ErrorBoundary>
-    );
-  };
+    ),
+  },
 }
 =======
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState, useEffect } from 'react',
+import { Button } from '@/components/ui/button',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

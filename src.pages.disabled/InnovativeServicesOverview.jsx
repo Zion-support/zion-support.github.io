@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface InnovativeServicesOverviewProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function InnovativeServicesOverview({ }: InnovativeServicesOverviewProps) {,
@@ -8,8 +8,7 @@ export default function InnovativeServicesOverview({ }: InnovativeServicesOvervi
     <div>,
       <h1>InnovativeServicesOverview</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

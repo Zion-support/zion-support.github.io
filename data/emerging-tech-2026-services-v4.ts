@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTech2026ServiceV4 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
   // Neuromorphic Computing Platform
@@ -49,16 +49,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Spiking neural networks',
-      'Adaptive processing',
-      'Hardware acceleration',
-      'Edge computing optimization',
-      'AI model training',
-      'Performance analytics',
-      'Custom chip design'
+      'Brain-inspired neural architectureUltra-low power consumption',
+      'Real-time learning capabilitiesSpiking neural networks',
+      'Adaptive processingHardware acceleration',
+      'Edge computing optimizationAI model training',
+      'Performance analyticsCustom chip design'
     ],
     popular: false,
     icon: '🧠',
@@ -71,11 +66,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Neuromorphic Computing',
     realService: true,
-    technology: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Python', 'C++', 'CUDA', 'AWS', 'Custom Hardware'],
-    integrations: ['TensorFlow', 'PyTorch', 'AI frameworks', 'IoT devices', 'Edge computing platforms'],
-    useCases: ['AI acceleration', 'Edge computing', 'Autonomous systems', 'Healthcare AI', 'Robotics'],
+    technology: ['Neuromorphic ChipsSpiking Neural Networks', 'PythonC++', 'CUDAAWS', 'Custom Hardware'],
+    integrations: ['TensorFlowPyTorch', 'AI frameworksIoT devices', 'Edge computing platforms'],
+    useCases: ['AI accelerationEdge computing', 'Autonomous systemsHealthcare AI', 'Robotics'],
     roi: 'Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip'],
+    competitors: ['Intel LoihiIBM TrueNorth', 'BrainChip'],
     marketSize: '$8B neuromorphic computing market by 2030',
     growthRate: '150% annual growth',
     variant: 'quantum-futuristic',
@@ -101,16 +96,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Next-generation quantum internet security gateway that provides unbreakable encryption using quantum key distribution, quantum-resistant algorithms, and post-quantum cryptography for ultra-secure communications.',
     features: [
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'Quantum-resistant algorithms',
-      'Real-time encryption',
-      'Quantum random number generation',
-      'Secure key management',
-      'Network monitoring',
-      'Threat detection',
-      'Compliance reporting',
-      'API integration'
+      'Quantum key distributionPost-quantum cryptography',
+      'Quantum-resistant algorithmsReal-time encryption',
+      'Quantum random number generationSecure key management',
+      'Network monitoringThreat detection',
+      'Compliance reportingAPI integration'
     ],
     popular: true,
     icon: '🔐',
@@ -123,11 +113,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Quantum Cybersecurity',
     realService: true,
-    technology: ['Quantum Computing', 'Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Python', 'PostgreSQL', 'AWS'],
-    integrations: ['Firewalls', 'VPNs', 'SD-WAN', 'Cloud platforms', 'Security tools'],
-    useCases: ['Secure communications', 'Data protection', 'Network security', 'Compliance', 'Government security'],
+    technology: ['Quantum ComputingQuantum Key Distribution', 'Post-Quantum CryptographyReact', 'PythonPostgreSQL', 'AWS'],
+    integrations: ['FirewallsVPNs', 'SD-WANCloud platforms', 'Security tools'],
+    useCases: ['Secure communicationsData protection', 'Network securityCompliance', 'Government security'],
     roi: 'Eliminate encryption vulnerabilities, ensure future-proof security, reduce security incidents by 99%',
-    competitors: ['Cisco', 'Palo Alto Networks', 'Fortinet'],
+    competitors: ['CiscoPalo Alto Networks', 'Fortinet'],
     marketSize: '$45B cybersecurity market',
     growthRate: '60% annual growth',
     variant: 'quantum-futuristic',
@@ -153,16 +143,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Revolutionary synthetic biology platform that combines AI, machine learning, and genetic engineering to design, simulate, and create novel biological systems for healthcare, agriculture, and industrial applications.',
     features: [
-      'AI-powered DNA design',
-      'Genetic circuit simulation',
-      'Protein engineering',
-      'Metabolic pathway design',
-      'CRISPR optimization',
-      'Biological modeling',
-      'Lab automation integration',
-      'Safety assessment',
-      'Regulatory compliance',
-      'Expert consultation'
+      'AI-powered DNA designGenetic circuit simulation',
+      'Protein engineeringMetabolic pathway design',
+      'CRISPR optimizationBiological modeling',
+      'Lab automation integrationSafety assessment',
+      'Regulatory complianceExpert consultation'
     ],
     popular: false,
     icon: '🧬',
@@ -175,11 +160,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Synthetic Biology',
     realService: true,
-    technology: ['AI/ML', 'Genetic Engineering', 'CRISPR', 'Python', 'React', 'PostgreSQL', 'AWS', 'Lab Automation'],
-    integrations: ['Lab equipment', 'DNA synthesizers', 'Sequencing platforms', 'Bioinformatics tools'],
-    useCases: ['Drug discovery', 'Agricultural improvement', 'Industrial enzymes', 'Biomaterials', 'Biofuels'],
+    technology: ['AI/MLGenetic Engineering', 'CRISPRPython', 'ReactPostgreSQL', 'AWSLab Automation'],
+    integrations: ['Lab equipmentDNA synthesizers', 'Sequencing platformsBioinformatics tools'],
+    useCases: ['Drug discoveryAgricultural improvement', 'Industrial enzymesBiomaterials', 'Biofuels'],
     roi: 'Accelerate research by 10x, reduce development costs by 70%, increase success rates by 300%',
-    competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Benchling'],
+    competitors: ['Ginkgo BioworksTwist Bioscience', 'Benchling'],
     marketSize: '$15B synthetic biology market',
     growthRate: '80% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Advanced autonomous drone fleet management platform that enables businesses to operate large-scale drone operations for delivery, surveillance, agriculture, and infrastructure inspection with zero human intervention.',
     features: [
-      'AI-powered flight planning',
-      'Autonomous navigation',
-      'Fleet coordination',
-      'Real-time monitoring',
-      'Predictive maintenance',
-      'Weather optimization',
-      'Regulatory compliance',
-      'Safety protocols',
-      'Analytics dashboard',
-      'API integration'
+      'AI-powered flight planningAutonomous navigation',
+      'Fleet coordinationReal-time monitoring',
+      'Predictive maintenanceWeather optimization',
+      'Regulatory complianceSafety protocols',
+      'Analytics dashboardAPI integration'
     ],
     popular: true,
     icon: '🚁',
@@ -227,11 +207,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Autonomous Drones',
     realService: true,
-    technology: ['Computer Vision', 'AI/ML', 'Autonomous Navigation', 'React', 'Python', 'PostgreSQL', 'AWS', 'IoT'],
-    integrations: ['Drone manufacturers', 'Weather APIs', 'Mapping services', 'Regulatory systems'],
-    useCases: ['Autonomous delivery', 'Agricultural monitoring', 'Infrastructure inspection', 'Security surveillance', 'Surveying'],
+    technology: ['Computer VisionAI/ML', 'Autonomous NavigationReact', 'PythonPostgreSQL', 'AWSIoT'],
+    integrations: ['Drone manufacturersWeather APIs', 'Mapping servicesRegulatory systems'],
+    useCases: ['Autonomous deliveryAgricultural monitoring', 'Infrastructure inspectionSecurity surveillance', 'Surveying'],
     roi: 'Reduce operational costs by 60%, increase coverage by 300%, eliminate human error',
-    competitors: ['DroneDeploy', 'PrecisionHawk', 'AirMap'],
+    competitors: ['DroneDeployPrecisionHawk', 'AirMap'],
     marketSize: '$50B drone services market',
     growthRate: '70% annual growth',
     variant: 'ai-autonomous',
@@ -257,16 +237,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Comprehensive brain-computer interface development kit that enables developers and researchers to create applications that read brain signals, control devices with thoughts, and develop next-generation human-computer interfaces.',
     features: [
-      'EEG signal processing',
-      'Neural pattern recognition',
-      'Device control interfaces',
-      'Real-time brain mapping',
-      'Machine learning models',
-      'API development tools',
-      'Hardware integration',
-      'Safety protocols',
-      'Documentation',
-      'Expert support'
+      'EEG signal processingNeural pattern recognition',
+      'Device control interfacesReal-time brain mapping',
+      'Machine learning modelsAPI development tools',
+      'Hardware integrationSafety protocols',
+      'DocumentationExpert support'
     ],
     popular: false,
     icon: '🧠',
@@ -279,11 +254,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '1 month',
     category: 'Brain-Computer Interface',
     realService: true,
-    technology: ['EEG Processing', 'Neural Networks', 'Machine Learning', 'Python', 'React', 'PostgreSQL', 'AWS', 'Hardware'],
-    integrations: ['EEG headsets', 'Medical devices', 'Gaming platforms', 'Accessibility tools'],
-    useCases: ['Medical research', 'Gaming interfaces', 'Accessibility tools', 'Prosthetic control', 'Communication aids'],
+    technology: ['EEG ProcessingNeural Networks', 'Machine LearningPython', 'ReactPostgreSQL', 'AWSHardware'],
+    integrations: ['EEG headsetsMedical devices', 'Gaming platformsAccessibility tools'],
+    useCases: ['Medical researchGaming interfaces', 'Accessibility toolsProsthetic control', 'Communication aids'],
     roi: 'Accelerate BCI research by 5x, reduce development costs by 80%, enable new applications',
-    competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],
+    competitors: ['NeuralinkKernel', 'CTRL-labs'],
     marketSize: '$3B BCI market by 2030',
     growthRate: '200% annual growth',
     variant: 'ai-futuristic',
@@ -309,16 +284,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Advanced quantum machine learning platform that leverages quantum computing to solve complex ML problems, accelerate training, and provide quantum advantage in optimization, classification, and pattern recognition.',
     features: [
-      'Quantum algorithms',
-      'Hybrid quantum-classical ML',
-      'Quantum feature maps',
-      'Quantum neural networks',
-      'Optimization solvers',
-      'Performance benchmarking',
-      'Model deployment',
-      'API access',
-      'Documentation',
-      'Expert consultation'
+      'Quantum algorithmsHybrid quantum-classical ML',
+      'Quantum feature mapsQuantum neural networks',
+      'Optimization solversPerformance benchmarking',
+      'Model deploymentAPI access',
+      'DocumentationExpert consultation'
     ],
     popular: true,
     icon: '⚛️',
@@ -331,11 +301,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '2 weeks',
     category: 'Quantum Machine Learning',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'Python', 'Qiskit', 'React', 'PostgreSQL', 'AWS'],
-    integrations: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Quantum hardware', 'Cloud platforms'],
-    useCases: ['Optimization problems', 'Pattern recognition', 'Financial modeling', 'Drug discovery', 'Logistics'],
+    technology: ['Quantum ComputingMachine Learning', 'PythonQiskit', 'ReactPostgreSQL', 'AWS'],
+    integrations: ['TensorFlowPyTorch', 'Scikit-learnQuantum hardware', 'Cloud platforms'],
+    useCases: ['Optimization problemsPattern recognition', 'Financial modelingDrug discovery', 'Logistics'],
     roi: 'Solve previously intractable problems, accelerate ML training by 100x, achieve quantum advantage',
-    competitors: ['IBM Qiskit', 'Google Cirq', 'Rigetti'],
+    competitors: ['IBM QiskitGoogle Cirq', 'Rigetti'],
     marketSize: '$20B quantum computing market',
     growthRate: '120% annual growth',
     variant: 'quantum-futuristic',
@@ -361,16 +331,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Revolutionary autonomous vehicle AI platform that provides level 5 autonomy capabilities, advanced perception, decision-making, and safety systems for cars, trucks, drones, and robots.',
     features: [
-      'Level 5 autonomy',
-      'Advanced perception systems',
-      'Real-time decision making',
-      'Safety protocols',
-      'Predictive maintenance',
-      'Fleet management',
-      'Regulatory compliance',
-      'Performance analytics',
-      'OTA updates',
-      'Expert support'
+      'Level 5 autonomyAdvanced perception systems',
+      'Real-time decision makingSafety protocols',
+      'Predictive maintenanceFleet management',
+      'Regulatory compliancePerformance analytics',
+      'OTA updatesExpert support'
     ],
     popular: true,
     icon: '🚗',
@@ -383,11 +348,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '3 months',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Computer Vision', 'AI/ML', 'Autonomous Navigation', 'React', 'Python', 'PostgreSQL', 'AWS', 'IoT'],
-    integrations: ['Vehicle systems', 'Sensor arrays', 'Mapping services', 'Traffic systems'],
-    useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery robots', 'Industrial automation', 'Mobility services'],
+    technology: ['Computer VisionAI/ML', 'Autonomous NavigationReact', 'PythonPostgreSQL', 'AWSIoT'],
+    integrations: ['Vehicle systemsSensor arrays', 'Mapping servicesTraffic systems'],
+    useCases: ['Self-driving carsAutonomous trucks', 'Delivery robotsIndustrial automation', 'Mobility services'],
     roi: 'Eliminate driver costs, improve safety by 99%, increase efficiency by 300%',
-    competitors: ['Waymo', 'Tesla', 'Cruise'],
+    competitors: ['WaymoTesla', 'Cruise'],
     marketSize: '$2T autonomous vehicle market by 2030',
     growthRate: '150% annual growth',
     variant: 'ai-autonomous',
@@ -413,16 +378,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     period: '/month',
     description: 'Comprehensive digital twin platform that creates real-time digital replicas of cities, enabling urban planning, infrastructure monitoring, traffic optimization, and citizen services through AI-powered simulation and analytics.',
     features: [
-      '3D city modeling',
-      'Real-time data integration',
-      'IoT sensor networks',
-      'Traffic optimization',
-      'Infrastructure monitoring',
-      'Citizen services',
-      'Predictive analytics',
-      'Urban planning tools',
-      'API access',
-      'Custom dashboards'
+      '3D city modelingReal-time data integration',
+      'IoT sensor networksTraffic optimization',
+      'Infrastructure monitoringCitizen services',
+      'Predictive analyticsUrban planning tools',
+      'API accessCustom dashboards'
     ],
     popular: false,
     icon: '🏙️',
@@ -435,11 +395,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     setupTime: '2 months',
     category: 'Digital Twin',
     realService: true,
-    technology: ['3D Modeling', 'IoT', 'AI/ML', 'React', 'Python', 'PostgreSQL', 'AWS', 'GIS'],
-    integrations: ['IoT sensors', 'Traffic systems', 'Utility networks', 'Government databases'],
-    useCases: ['Urban planning', 'Traffic management', 'Infrastructure monitoring', 'Citizen services', 'Emergency response'],
+    technology: ['3D ModelingIoT', 'AI/MLReact', 'PythonPostgreSQL', 'AWSGIS'],
+    integrations: ['IoT sensorsTraffic systems', 'Utility networksGovernment databases'],
+    useCases: ['Urban planningTraffic management', 'Infrastructure monitoringCitizen services', 'Emergency response'],
     roi: 'Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%',
-    competitors: ['Bentley Systems', 'Autodesk', 'Siemens'],
+    competitors: ['Bentley SystemsAutodesk', 'Siemens'],
     marketSize: '$30B smart city market',
     growthRate: '90% annual growth',
     variant: 'ai-futuristic',
@@ -456,4 +416,4 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     rating: 4.8,
     reviews: 25
   }
-];
+],

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  MessageCircle, 
+  MessageCircle,
   Brain, 
   Target, 
   BarChart3, 
@@ -24,50 +24,33 @@ import {
   Zap,
   Shield,
   Headphones
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousCustomerService: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Customer Service',
-      description: 'Advanced machine learning for autonomous customer support and issue resolution'
-    },
+      icon: Brain,title: 'AI-Powered Customer Service',description: 'Advanced machine learning for autonomous customer support and issue resolution'
+    };
     {
-      icon: MessageCircle,
-      title: 'Intelligent Chat Support',
-      description: 'AI-driven chat support with natural language processing and context awareness'
-    },
+      icon: MessageCircle,title: 'Intelligent Chat Support',description: 'AI-driven chat support with natural language processing and context awareness'
+    };
     {
-      icon: Target,
-      title: 'Issue Resolution',
-      description: 'Automated issue identification and resolution with intelligent routing'
-    },
+      icon: Target,title: 'Issue Resolution',description: 'Automated issue identification and resolution with intelligent routing'
+    };
     {
-      icon: BarChart3,
-      title: 'Service Analytics',
-      description: 'Real-time analytics and insights into customer service performance'
-    },
+      icon: BarChart3,title: 'Service Analytics',description: 'Real-time analytics and insights into customer service performance'
+    };
     {
-      icon: Headphones,
-      title: 'Voice Support',
-      description: 'AI-powered voice support with speech recognition and natural responses'
-    },
+      icon: Headphones,title: 'Voice Support',description: 'AI-powered voice support with speech recognition and natural responses'
+    };
     {
-      icon: TrendingUp,
-      title: 'Customer Satisfaction',
-      description: 'Continuous monitoring and improvement of customer satisfaction metrics'
+      icon: TrendingUp,title: 'Customer Satisfaction',description: 'Continuous monitoring and improvement of customer satisfaction metrics'
     }
   ];
-
   const benefits = [
-    'Improve customer satisfaction by 80%',
-    'Reduce response time by 90%',
-    'Increase issue resolution by 70%',
-    'Automate customer support',
-    '24/7 autonomous operation',
-    'Real-time customer insights'
-  ];
+    'Improve customer satisfaction by 80%Reduce response time by 90%',
+    'Increase issue resolution by 70%Automate customer support',
+    '24/7 autonomous operationReal-time customer insights'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -209,7 +192,7 @@ const AIAutonomousCustomerService: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Customer Service?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -227,7 +210,6 @@ const AIAutonomousCustomerService: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIAutonomousCustomerService;

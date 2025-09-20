@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface QuantumcomputingProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function Quantumcomputing({ }: QuantumcomputingProps) {,
@@ -8,7 +8,6 @@ export default function Quantumcomputing({ }: QuantumcomputingProps) {,
     <div>,
       <h1>Quantumcomputing</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 ,

@@ -1,46 +1,46 @@
-import { useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom',
 export default function Page() {
-/>;
+/>,
         case 'onboarding':
             return < Settings className = {
   cn(className,
-  "text-zion - cyan") }/>;
+  "text-zion - cyan") }/>,
         case 'system':
             return < AlertCircle className = {
   cn(className,
-  "text-yellow-500") }/>;
+  "text-yellow-500") }/>,
         default:
             return < Bell className = {
   cn(className,
-  "text-gray - 500") }/>;
+  "text-gray - 500") }/>,
     }
-};
+},
 const getNotificationTypeBadge = (type) => {
     switch(type) {
         case 'message':
-            return < Badge className="bg-blue -500">Message</Badge>;
+            return < Badge className="bg-blue -500">Message</Badge>,
         case 'quote_request':
-            return < Badge className="bg-purple -500">Quote Request</Badge>;
+            return < Badge className="bg-purple -500">Quote Request</Badge>,
         case 'booking_confirmation':
-            return < Badge className="bg-green -500">Booking</Badge>;
+            return < Badge className="bg-green -500">Booking</Badge>,
         case 'hire_request':
-            return < Badge className="bg-zion -purple">Hire Request</Badge>;
+            return < Badge className="bg-zion -purple">Hire Request</Badge>,
         case 'onboarding':
-            return < Badge className="bg-zion -cyan">Onboarding</Badge>;
+            return < Badge className="bg-zion -cyan">Onboarding</Badge>,
         case 'system':
-            return < Badge className="bg-yellow-500">System</Badge>;
+            return < Badge className="bg-yellow-500">System</Badge>,
         default:
             return < Badge variant="outline">Notification</Badge>}
-};
+},
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
-    const navigate = useNavigate () ;
+    const navigate = useNavigate () ,
     const handleAction = () => {
         if(!notification.read) {
             onMarkAsRead(notification.id) }
         if(notification.action_url) {
-            router(notification.action_url) ;
+            router(notification.action_url) ,
         }
-    };
+    },
     return (<div className = {
   cn ("border rounded-lg shadow-sm p - 4 mb-3 group transition - colors",
   notification.read ? "border-zion - blue - light bg-zion - blue - dark / 10" : "border-zion - cyan bg-zion - blue - dark / 30") }>
@@ -81,8 +81,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
             </Button>) }
         </div>
       </div>
-    </div>) };
-    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications () ;
+    </div>) },
+    const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications () ,
     return (<>
       <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace."/>
 

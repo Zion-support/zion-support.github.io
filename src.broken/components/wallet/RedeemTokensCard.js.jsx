@@ -1,9 +1,9 @@
-import React, { useState } from "react";"
-import { useWallet } from '@/hooks/useWallet';"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Button } from '@/components/ui/button';"
-import { Gift, ArrowRight, ExternalLink  } from 'lucide-react';"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import React, { useState } from "react","
+import { useWallet } from '@/hooks/useWallet',"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Button } from '@/components/ui/button',"
+import { Gift, ArrowRight, ExternalLink  } from 'lucide-react',"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog',
 export default function Page() {
  onOpenChange={setOpen}>
           <DialogTrigger asChild>"

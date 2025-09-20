@@ -1,27 +1,27 @@
 
 interface User {
 
-  id: string;
-  email: string;
-  name: string;
+  id: string,
+  email: string,
+  name: string,
 :src/store/authSlice.tsx
   avatar?: string}
   avatar?: string}
 
 interface AuthState {
 
-  isLoggedIn: boolean;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  user: User | null;
-  token: string | null;
+  isLoggedIn: boolean,
+  isAuthenticated: boolean,
+  isLoading: boolean,
+  user: User | null,
+  token: string | null,
 
 :src/store/authSlice.tsx
   error: string | null}
   error: string | null}
 
 }
-;
+,
 const initialState: AuthState = {
 
   isLoggedIn: false,
@@ -31,11 +31,11 @@ const initialState: AuthState = {
   token: null,
 :src/store/authSlice.tsx
   error: null}},
-  error: null,
+  error: null
 }},
     setUser: (state, action: PayloadAction<User>) => {
-      state.user = action.payload;
-      state.isAuthenticated = true;
+      state.user = action.payload,
+      state.isAuthenticated = true,
       state.error = null},
     setToken: (state, action: PayloadAction<string>) => {
 :src/store/authSlice.tsx
@@ -45,10 +45,10 @@ const initialState: AuthState = {
 
       state.token = action.payload},
     logout: (state) => {
-      state.isLoggedIn = false;
-      state.user = null;
-      state.isAuthenticated = false;
-      state.token = null;
+      state.isLoggedIn = false,
+      state.user = null,
+      state.isAuthenticated = false,
+      state.token = null,
       state.error = null},
     setLoading: (state, action: PayloadAction<boolean>) => {
 :src/store/authSlice.tsx
@@ -59,14 +59,14 @@ const initialState: AuthState = {
       state.error = action.payload},
     clearError: state => {
 
-      state.error = null}}});
+      state.error = null}}}),
       state.isLoading = action.payload},
     setError: (state, action: PayloadAction<string>) => {
       state.error = action.payload},
     clearError: (state) => {
-      state.error = null},
-  },
-});
+      state.error = null}
+  }
+}),
 
 export const {
 
@@ -76,6 +76,6 @@ export const {
   logout,
   setLoading,
   setError,
-  clearError} = authSlice.actions;
+  clearError} = authSlice.actions,
 
-export default authSlice.reducer;
+export default authSlice.reducer,

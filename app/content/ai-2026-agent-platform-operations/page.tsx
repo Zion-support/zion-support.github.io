@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Platform Operations';
-  description: 'Reference operating model for running agent platforms: SLOs, incident response, change management, and continuous evaluations.',
-};
+  title: 'AI 2026: Agent Platform Operations',
+  description: 'Reference operating model for running agent platforms: SLOs, incident response, change management, and continuous evaluations.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -37,7 +37,6 @@ export default function Page() {,
           </ul>,
         </div>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

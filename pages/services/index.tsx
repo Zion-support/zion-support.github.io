@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { servicesCatalog } from '../../src/data/servicesCatalog';
+import Head from 'next/head',
+import Link from 'next/link',
+import { servicesCatalog } from '../../src/data/servicesCatalog',
 
 export default function ServicesIndex() {
   return (
@@ -87,7 +87,7 @@ export default function ServicesIndex() {
               { href: '/services/developer-productivity-copilot', title: 'Developer Productivity Copilot', desc: 'AI PR reviews, test gen, CI insights.' },
               { href: '/services/ai-sales-assistant', title: 'AI Sales Assistant', desc: 'Qualify leads and personalize outreach.' },
               { href: '/services/security-posture-guardian', title: 'Security Posture Guardian', desc: 'Misconfig and secret scanning with fixes.' },
-              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' },
+              { href: '/services/ai-data-pipeline-optimizer', title: 'AI Data Pipeline Optimizer', desc: 'Optimize ETL/ELT and RAG pipelines.' }
             ].map((s) => (
               <Link key={s.href} href={s.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
@@ -105,12 +105,12 @@ export default function ServicesIndex() {
             <h3 className="text-2xl font-bold">Need something custom?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">We can assemble domain-specific agent factories to match your goals.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
+              <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: bg-white">Contact Us</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
             </div>
           </div>
         </section>
       </main>
     </div>
-  );
+  )
 }

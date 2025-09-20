@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Shield,
@@ -91,48 +91,29 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
-
+} from "lucide-react";
 const quickLinks = [
   {
-    title: "AI Services",
-    description: "Artificial Intelligence & Machine Learning",
-    icon: "🤖",
-    link: "/ai-services",
-    color: "from-purple-500 to-indigo-600"
-  },
+    title: "AI Services",description: "Artificial Intelligence & Machine Learning",icon: "🤖",link: "/ai-services",color: "from-purple-500 to-indigo-600"
+  };
   {
-    title: "Micro SAAS",
-    description: "Cloud-based Software Solutions",
-    icon: "☁️",
-    link: "/micro-saas",
-    color: "from-cyan-500 to-blue-600"
-  },
+    title: "Micro SAAS",description: "Cloud-based Software Solutions",icon: "☁️",link: "/micro-saas",color: "from-cyan-500 to-blue-600"
+  };
   {
-    title: "IT Services",
-    description: "Infrastructure & Technical Consulting",
-    icon: "⚡",
-    link: "/it-services",
-    color: "from-amber-500 to-orange-600"
-  },
+    title: "IT Services",description: "Infrastructure & Technical Consulting",icon: "⚡",link: "/it-services",color: "from-amber-500 to-orange-600"
+  };
   {
-    title: "Contact Us",
-    description: "Get in touch with our team",
-    icon: "📞",
-    link: "/contact",
-    color: "from-green-500 to-emerald-600"
+    title: "Contact Us",description: "Get in touch with our team",icon: "📞",link: "/contact",color: "from-green-500 to-emerald-600"
   }
 ];
-
 const serviceCategories = [
-  { name: "AI & ML", count: "50+", color: "from-purple-500 to-indigo-600" },
-  { name: "Cloud", count: "30+", color: "from-cyan-500 to-blue-600" },
-  { name: "Security", count: "25+", color: "from-red-500 to-pink-600" },
-  { name: "DevOps", count: "20+", color: "from-green-500 to-emerald-600" },
-  { name: "Data", count: "35+", color: "from-yellow-500 to-orange-600" },
+  { name: "AI & ML", count: "50+", color: "from-purple-500 to-indigo-600" };
+  { name: "Cloud", count: "30+", color: "from-cyan-500 to-blue-600" };
+  { name: "Security", count: "25+", color: "from-red-500 to-pink-600" };
+  { name: "DevOps", count: "20+", color: "from-green-500 to-emerald-600" };
+  { name: "Data", count: "35+", color: "from-yellow-500 to-orange-600" };
   { name: "IoT", count: "15+", color: "from-indigo-500 to-purple-600" }
 ];
-
 export function QuickAccess() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-800 via-slate-900 to-black">
@@ -236,7 +217,7 @@ export function QuickAccess() {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -254,5 +235,5 @@ export function QuickAccess() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

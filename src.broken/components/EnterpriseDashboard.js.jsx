@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,
         {
@@ -35,7 +35,7 @@ export default function Page() {
             change: -5,
             threshold: { warning: 100, critical: 150 },
             lastUpdated: new Date () }
-    ]) ;
+    ]) ,
     const [serviceStatuses] = useState([{
 
             id: 'web-server',
@@ -72,7 +72,7 @@ export default function Page() {
             responseTime: 2,
             errorRate: 0.001
         }
-    ]);
+    ]),
     const [securityAlerts] = useState([{
 
             id: 'alert-1',
@@ -82,7 +82,7 @@ export default function Page() {
             description: 'Multiple login attempts from different locations within short time frame',
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago'
             status: 'investigating',
-            affected['user-123',user-456'],;
+            affected['user-123',user-456'],
             source: 'Security Monitoring System'
         },
         {
@@ -94,10 +94,10 @@ export default function Page() {
             description: 'User attempted to access restricted resource without proper permissions',
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago'
             status: 'resolved',
-            affected['user-789'],;
+            affected['user-789'],
             source: 'Access Control System'
         }
-    ]) ;
+    ]) ,
     const [userActivities] = useState([{
 
             id: 'activity-1',
@@ -122,16 +122,16 @@ export default function Page() {
             userAgent: 'Firefox/89.0.2',
             status: 'success'
         }
-    ]) ;
+    ]) ,
     // Refresh data
     const refreshData = useCallback(async () => {
-        setIsRefreshing(true) ;
+        setIsRefreshing(true) ,
         try {
             // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await new Promise(resolve => setTimeout(resolve, 1000)),
             // Update timestamps(simplified for demo)
-            const now = new Date();
-            // console.log('Data refreshed at:', now.toLocaleTimeString());
+            const now = new Date(),
+            // console.log('Data refreshed at:', now.toLocaleTimeString()),
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {
 
                 tab: activeTab,
@@ -139,7 +139,7 @@ export default function Page() {
             }) }
         catch(error) {
 
-            // console.error('Failed to refresh data:', error);
+            // console.error('Failed to refresh data:', error),
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -147,13 +147,13 @@ export default function Page() {
         finally {
 
             setIsRefreshing(false)}
-    }, [activeTab, dateRange, trackEvent]);
+    }, [activeTab, dateRange, trackEvent]),
     // Auto-refresh effect
     useEffect(() => {
-        const interval = setInterval(refreshData, refreshInterval);
-        return () => clearInterval(interval)}, [refreshInterval, refreshData]);
+        const interval = setInterval(refreshData, refreshInterval),
+        return () => clearInterval(interval)}, [refreshInterval, refreshData]),
     // Filtered data
-    const filtered = securityAlerts;
+    const filtered = securityAlerts,
         if(filterStatus !== 'all') {
 
             filtered = filtered.filter(alert => alert.status === filterStatus)}
@@ -162,14 +162,14 @@ export default function Page() {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
-        return filtered}, [securityAlerts, filterStatus, searchQuery]);
-    const filtered = userActivities;
+        return filtered}, [securityAlerts, filterStatus, searchQuery]),
+    const filtered = userActivities,
         if(searchQuery) {
 
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
-        return filtered}, [userActivities, searchQuery]);
+        return filtered}, [userActivities, searchQuery]),
     // Get status color
     const getStatusColor = (status) => {
 
@@ -178,36 +178,36 @@ export default function Page() {
             case 'healthy':'
             case 'online':'
             case 'success':'
-                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30';
+                return 'text-green-600 bg-green-100 dark: text-green-400 dark:bg-green-900/30',
             case 'warning':'
             case 'degraded':'
             case 'pending':'
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30',
             case 'critical':'
             case 'offline':'
             case 'failure':'
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30',
             case 'maintenance':'
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30',
             default:'
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
-    };
+    },
     // Get severity color
     const getSeverityColor = (severity) => {
 
         switch(severity) {
 
             case 'critical':'
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';
+                return 'text-red-600 bg-red-100 dark: text-red-400 dark:bg-red-900/30',
             case 'high':'
-                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';
+                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30',
             case 'medium':'
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30',
             case 'low':'
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30',
             default:'
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
-    };"
+    },"
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}"
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">"
@@ -490,7 +490,7 @@ export default function Page() {
                           {alert.status}
                         </span>"
                         <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-300">
-                          {alert.type.replace('_',)}
+                          {alert.type.replace('_')}
                         </span>
                       </div>"
                       <span className="text-sm text-gray-500">
@@ -738,5 +738,5 @@ export default function Page() {
             </motion.div>) }
         </AnimatePresence>
       </div>
-    </div>)};
+    </div>)},
 '"`

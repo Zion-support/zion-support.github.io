@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -21,11 +21,11 @@ import {
   BarChart3,
   Network,
   Atom
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AI2026_2030UltimatePredictionsShowcase = () => {
-  const [activeTabsetActiveTab] = useState('overview');
-  const [currentPredictionsetCurrentPrediction] = useState(0);
+  const [activeTabsetActiveTab] = useState('overview'),
+  const [currentPredictionsetCurrentPrediction] = useState(0),
 
   const predictions = [
     {
@@ -73,54 +73,48 @@ const AI2026_2030UltimatePredictionsShowcase = () => {
       icon: Lightbulb,
       color: 'from-yellow-500 to-orange-500'
     }
-  ];
+  ],
 
   const keyTrends = [
     {
       category: 'Technology',
       trends: [
-        'Neural interfaces become mainstream',
-        'Quantum AI solves complex problems',
-        'Autonomous systems manage entire cities',
-        'AI achieves emotional intelligence',
+        'Neural interfaces become mainstreamQuantum AI solves complex problems',
+        'Autonomous systems manage entire citiesAI achieves emotional intelligence',
         'Consciousness becomes programmable'
       ]
     },
     {
       category: 'Business',
       trends: [
-        'Complete automation of routine tasks',
-        'AI-driven decision making at scale',
-        'New business models emerge',
-        'Human-AI collaboration becomes standard',
+        'Complete automation of routine tasksAI-driven decision making at scale',
+        'New business models emergeHuman-AI collaboration becomes standard',
         'Ethical AI becomes competitive advantage'
       ]
     },
     {
       category: 'Society',
       trends: [
-        'Universal basic income becomes necessary',
-        'Education system completely transforms',
-        'New forms of human-AI relationships',
-        'Consciousness rights become legal issue',
+        'Universal basic income becomes necessaryEducation system completely transforms',
+        'New forms of human-AI relationshipsConsciousness rights become legal issue',
         'Post-scarcity economy emerges'
       ]
     }
-  ];
+  ],
 
   const stats = [
     { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp },
     { label: 'Job Transformation'value: '80%'icon: Users },
     { label: 'Productivity Increase'value: '300%'icon: BarChart3 },
     { label: 'New Industries'value: '50+'icon: Network }
-  ];
+  ],
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
 
 const AI2026_2030UltimatePredictionsShowcase: React.FC = () => {
   return (
@@ -128,7 +122,7 @@ const AI2026_2030UltimatePredictionsShowcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">AI2026_2030UltimatePredictionsShowcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default AI2026_2030UltimatePredictionsShowcase;
+export default AI2026_2030UltimatePredictionsShowcase,

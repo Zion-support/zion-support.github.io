@@ -1,46 +1,46 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Code, Book, Zap, Shield, Globe, Database, Server, Lock, CheckCircle, ArrowRight } from 'lucide-react',
 
 const apiServices = [
   {
     title: 'RESTful API',
     description: 'Clean, intuitive REST API design',
     icon: Globe,
-    features: ['RESTful Design', 'JSON Responses', 'HTTP Status Codes', 'Error Handling']
+    features: ['RESTful DesignJSON Responses', 'HTTP Status CodesError Handling']
   },
   {
     title: 'GraphQL API',
     description: 'Flexible query language for APIs',
     icon: Code,
-    features: ['Single Endpoint', 'Type Safety', 'Real-time Subscriptions', 'Introspection']
+    features: ['Single EndpointType Safety', 'Real-time SubscriptionsIntrospection']
   },
   {
     title: 'WebSocket API',
     description: 'Real-time bidirectional communication',
     icon: Zap,
-    features: ['Real-time Updates', 'Low Latency', 'Persistent Connection', 'Event-driven']
+    features: ['Real-time UpdatesLow Latency', 'Persistent ConnectionEvent-driven']
   },
   {
     title: 'Authentication API',
     description: 'Secure user authentication and authorization',
     icon: Lock,
-    features: ['OAuth 2.0', 'JWT Tokens', 'Multi-factor Auth', 'Session Management']
+    features: ['OAuth 2.0JWT Tokens', 'Multi-factor AuthSession Management']
   },
   {
     title: 'Data API',
     description: 'Access and manage your data',
     icon: Database,
-    features: ['CRUD Operations', 'Data Validation', 'Query Optimization', 'Caching']
+    features: ['CRUD OperationsData Validation', 'Query OptimizationCaching']
   },
   {
     title: 'Analytics API',
     description: 'Track and analyze usage patterns',
     icon: Server,
-    features: ['Usage Metrics', 'Performance Data', 'Custom Events', 'Real-time Dashboards']
+    features: ['Usage MetricsPerformance Data', 'Custom EventsReal-time Dashboards']
   }
-];
+],
 
 const apiFeatures = [
   {
@@ -87,7 +87,7 @@ const apiFeatures = [
       "Sandbox environment"
     ]
   }
-];
+],
 
 export default function APIPage() {
   return (
@@ -104,6 +104,6 @@ export default function APIPage() {
         </div>
       </div>
     </div>
-  );
-};
-export default api;
+  ),
+},
+export default api,

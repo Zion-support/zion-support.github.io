@@ -1,91 +1,91 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             category: "5G & Edge Computing",
             icon: Network,
             description: "Advanced networking technologies enabling ultra - fast connectivity and edge processing",
-            technologies[;
+            technologies[,
                 {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise - grade 5G network optimization and management",
                     href: "/5g - enterprise - solutions",
-                    features["Network Slicing", "Edge Computing", "IoT Integration"],;
+                    features["Network Slicing", "Edge Computing", "IoT Integration"],
                     status: "Deployment Ready"
                 },
                 {
                     name: "Edge AI Processing",
                     description: "AI processing at the network edge for real - time applications",
                     href: "/services / edge - computing",
-                    features["Low Latency", "High Bandwidth", "Distributed Processing"],;
+                    features["Low Latency", "High Bandwidth", "Distributed Processing"],
                     status: "Production Ready"
 
-            ];
-        },;
+            ]
+        },
         {
             category: "Autonomous Systems",
             icon: Brain,
             description: "Self - learning and self - optimizing systems that operate independently",
-            technologies[;
+            technologies[,
                 {
                     name: "Autonomous Business Operations",
                     description: "AI - driven business process automation platform",
                     href: "/autonomous - business - operations - platform",
-                    features["Process Automation", "Decision Support", "Performance Analytics"],;
+                    features["Process Automation", "Decision Support", "Performance Analytics"],
                     status: "Production Ready"
                 },
                 {
                     name: "AI Autonomous Research Assistant",
                     description: "Intelligent research and development automation",
                     href: "/ai - autonomous - research-assistant",
-                    features["Research Automation", "Data Analysis", "Insight Generation"],;
+                    features["Research Automation", "Data Analysis", "Insight Generation"],
                     status: "Research & Development"
 
-            ];
-        },;
+            ]
+        },
         {
             category: "Advanced AI & ML",
             icon: Cpu,
             description: "Cutting - edge artificial intelligence and machine learning technologies",
-            technologies[;
+            technologies[,
                 {
                     name: "AI - Powered IT Asset Management",
                     description: "Intelligent IT asset lifecycle management",
                     href: "/ai - powered - it - asset - management",
-                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],;
+                    features["Asset Tracking", "Predictive Maintenance", "Cost Optimization"],
                     status: "Production Ready"
                 },
                 {
                     name: "AI Workflow Automation",
                     description: "Intelligent business process automation",
                     href: "/services / ai - workflow-automation",
-                    features["Process Optimization", "Error Reduction", "Efficiency Gains"],;
+                    features["Process Optimization", "Error Reduction", "Efficiency Gains"],
                     status: "Production Ready"
 
-            ];
-        },;
+            ]
+        },
         {
             category: "Blockchain & Web3",
             icon: CircuitBoard,
             description: "Decentralized technologies and next - generation internet infrastructure",
-            technologies[;
+            technologies[,
                 {
                     name: "Blockchain Enterprise Solutions",
                     description: "Enterprise - grade blockchain implementation and consulting",
                     href: "/services / blockchain - enterprise - solutions",
-                    features["Smart Contracts", "Supply Chain", "Digital Identity"],;
+                    features["Smart Contracts", "Supply Chain", "Digital Identity"],
                     status: "Production Ready"
                 },
                 {
                     name: "DeFi Infrastructure",
                     description: "Decentralized finance infrastructure and solutions",
                     href: "/services / blockchain - defi - solutions",
-                    features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],;
+                    features["DeFi Protocols", "Liquidity Management", "Risk Assessment"],
                     status: "Active Development"
 
-            ];
+            ],
 
-    ];
+    ],
     const researchAreas = [{
             title: "Quantum - Classical Hybrid Systems",
             description: "Researching the integration of quantum and classical computing for practical applications",
@@ -110,7 +110,7 @@ export default function Page() {
             progress: 80,
             timeline: "2025 - 2026"
 
-    ];
+    ],
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -118,7 +118,7 @@ export default function Page() {
             transition: {
                 staggerChildren: 0.1
 
-    };
+    },
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0
@@ -130,23 +130,22 @@ export default function Page() {
             transition: {
                 duration: 0.5
 
-    };
+    },
     const getStatusColor = (status) => {
         switch(status) {
-            case "Production Ready":
-                return "text-green - 400 bg-green - 400 / 20";
+            case "Production Ready": return "text-green - 400 bg-green - 400 / 20",
             case "Active Development":
-                return "text-yellow-400 bg-yellow-400 / 20";
+                return "text-yellow-400 bg-yellow-400 / 20",
             case "Research & Development":
-                return "text-blue - 400 bg-blue - 400 / 20";
+                return "text-blue - 400 bg-blue - 400 / 20",
             case "Emerging Technology":
-                return "text-purple - 400 bg-purple - 400 / 20";
+                return "text-purple - 400 bg-purple - 400 / 20",
             default:
                 return "text-gray - 400 bg-gray - 400 / 20"}
-    };
-    return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+    },
+    return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">,
       {/* Hero Section */}
-      <div className="relative overflow-hidden">;
+      <div className="relative overflow-hidden">,
         <div className="absolute inset - 0 bg-[linear - gradient (rgba (34,221,210,0.1) _1px,transparent_1px) ,linear - gradient(90deg,rgba (34,221,210,0.1) _1px,transparent_1px) ] bg-[size:50px_50px]"/>
 
         <div className="relative max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 pt - 32 pb -20">
@@ -167,7 +166,7 @@ export default function Page() {
             <p className="text-xl text-gray - 300 max - w-3xl mx - auto mb-8">
               Explore the cutting - edge technologies that are shaping the future.From quantum computing to autonomous systems, discover innovations that will transform industries.</p>
             <div className="flex flex - wrap justify - center gap-4">
-              <Link to="/contact" className="bg-gradient - to - r from - purple - 600 to - pink - 600 text-white px-8 py-3 rounded-lg font - semibold hover:from - purple - 700 hover:to - pink - 700 transition - all duration -300">
+              <Link to="/contact" className="bg-gradient - to - r from - purple - 600 to - pink - 600 text-white px-8 py-3 rounded-lg font - semibold hover: from - purple - 700 hover:to - pink - 700 transition - all duration -300">
                 Explore Innovations
               </Link>
               <Link to="/research-development" className="border border-purple - 400 text-purple - 400 px-8 py-3 rounded-lg font - semibold hover:bg-purple - 400 hover:text-white transition - all duration -300">
@@ -176,10 +175,10 @@ export default function Page() {
             </div>
           </motion.div>
         </div>
-      </div>;
+      </div>,
 
       {/* Technologies Grid */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 pb -20">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 pb -20">,
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space - y-16">
           {technologies.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>
               <div className="text-center mb-12">
@@ -228,7 +227,7 @@ export default function Page() {
       </div>
 
       {/* Research & Development Section */}
-      <div className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border-t border-purple -500 / 20">;
+      <div className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 border-t border-purple -500 / 20">,
         <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
@@ -283,7 +282,7 @@ export default function Page() {
       </div>
 
       {/* CTA Section */}
-      <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 py-20">;
+      <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8 py-20">,
         <motion.div initial = {
   { opacity: 0,
   y: 20
@@ -309,5 +308,5 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-    </div>) };
+    </div>) },
 }}}}}}}}}}}}}}

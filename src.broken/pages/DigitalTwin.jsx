@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -17,7 +17,7 @@ export default function Page() {
     useCase: "Monitoring",
     reliability: "Critical"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -46,7 +46,7 @@ const successStories = [{
     results: "15% improvement in grid efficiency, 40% reduction in outages, optimized energy distribution",
     logo: "RPG"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -76,7 +76,7 @@ const processSteps = [{
     icon: Brain,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const digitalTwinBenefits = [{
     title: "Real - time Monitoring",
@@ -102,16 +102,16 @@ const digitalTwinBenefits = [{
     icon: Gauge,
     examples["Energy optimization", "Maintenance planning", "Resource allocation"]
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Manufacturing', 'Smart Cities', 'Healthcare', 'Energy', 'Transportation', 'Buildings'];
+  const categories = ['AllManufacturing', 'Smart CitiesHealthcare', 'EnergyTransportation', 'Buildings'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? digitalTwinSolutions
-    : digitalTwinSolutions.filter(solution => solution.category === selectedCategory) ;
+    : digitalTwinSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}

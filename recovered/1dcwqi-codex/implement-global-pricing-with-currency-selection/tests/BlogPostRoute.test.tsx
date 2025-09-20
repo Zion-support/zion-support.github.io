@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import BlogPost from '@/pages/BlogPost';
-import { HelmetProvider } from 'react-helmet-async';
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter, Route, Routes } from 'react-router-dom',
+import BlogPost from '@/pages/BlogPost',
+import { HelmetProvider } from 'react-helmet-async',
 
 it('renders blog article from slug', async () => {
   render(
@@ -12,6 +12,6 @@ it('renders blog article from slug', async () => {
         </Routes>
       </MemoryRouter>
     </HelmetProvider>
-  );
-  expect(await screen.findByRole('heading')).toBeInTheDocument();
-});
+  ),
+  expect(await screen.findByRole('heading')).toBeInTheDocument(),
+}),

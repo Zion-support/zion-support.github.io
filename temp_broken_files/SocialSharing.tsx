@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function SocialSharing({  = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -8,8 +8,7 @@ const function SocialSharing({  = () => {,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  );
-};
-export default function SocialSharing({ ;
+    </div>),
+},
+export default function SocialSharing({ ,
 }}})))

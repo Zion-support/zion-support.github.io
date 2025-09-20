@@ -1,6 +1,6 @@
 describe('reset password flow', () => {
   it('submits email then resets password', () => {
-    cy.intercept('POST', '/auth/forgot-password', { statusCode: 200 }).as('forgot')
+    cy.intercept('POST/auth/forgot-password', { statusCode: 200 }).as('forgot')
     cy.intercept('POST', /\/auth\/reset-password\/.*/, { statusCode: 200 }).as('reset')
 
     cy.visit('/forgot-password')

@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Calendar,
   TrendingUp,
@@ -10,105 +10,105 @@ import {,
   Rocket,
   Shield,
   Users,
-  Lightbulb;
-  Target;
-  Award;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Code;
-  Database;
-  Cloud;
-  Cpu;
-  Network;
-  BarChart3;
-  Star;
-  ArrowRight,
-} from 'lucide-react';
+  Lightbulb,
+  Target,
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Database,
+  Cloud,
+  Cpu,
+  Network,
+  BarChart3,
+  Star,
+  ArrowRight
+} from 'lucide-react',
 const FuturePredictionsShowcase2025 = () => {,
-  const [activeYearsetActiveYear] = useState('2025');
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeYearsetActiveYear] = useState('2025'),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const predictions = {,
     '2025': {,
-      title: 'AI Revolution Begins';
-      color: 'from-purple-600 to-blue-600';
-      icon: Brain;
+      title: 'AI Revolution Begins',
+      color: 'from-purple-600 to-blue-600',
+      icon: Brain,
       predictions: [,
         {,
-          title: 'Neural Interface Breakthrough';
-          description: 'First commercial neural interface devices hit the market';
-          probability: '85%';
-          impact: 'High';
-          icon: Cpu,};
+          title: 'Neural Interface Breakthrough',
+          description: 'First commercial neural interface devices hit the market',
+          probability: '85%',
+          impact: 'High',
+          icon: Cpu},
         {,
-          title: 'Quantum AI Fusion';
-          description: 'Quantum computing integrated with AI systems';
-          probability: '70%';
-          impact: 'Revolutionary';
-          icon: Zap,};
+          title: 'Quantum AI Fusion',
+          description: 'Quantum computing integrated with AI systems',
+          probability: '70%',
+          impact: 'Revolutionary',
+          icon: Zap},
         {,
-          title: 'Consciousness AI';
-          description: 'AI systems achieve human-level consciousness';
-          probability: '60%';
-          impact: 'Transformative';
-          icon: Lightbulb,}
-      ],
-    };
+          title: 'Consciousness AI',
+          description: 'AI systems achieve human-level consciousness',
+          probability: '60%',
+          impact: 'Transformative',
+          icon: Lightbulb}
+      ]
+    },
     '2026': {,
-      title: 'Automation Mastery';
-      color: 'from-green-600 to-emerald-600';
-      icon: Rocket;
+      title: 'Automation Mastery',
+      color: 'from-green-600 to-emerald-600',
+      icon: Rocket,
       predictions: [,
         {,
-          title: 'Universal Automation';
-          description: '90% of business processes fully automated';
-          probability: '80%';
-          impact: 'High';
-          icon: Target,};
+          title: 'Universal Automation',
+          description: '90% of business processes fully automated',
+          probability: '80%',
+          impact: 'High',
+          icon: Target},
         {,
-          title: 'AI Workforce Integration';
-          description: 'AI and humans work seamlessly together';
-          probability: '75%';
-          impact: 'High';
-          icon: Users,};
+          title: 'AI Workforce Integration',
+          description: 'AI and humans work seamlessly together',
+          probability: '75%',
+          impact: 'High',
+          icon: Users},
         {,
-          title: 'Predictive Everything';
-          description: 'AI predicts and prevents all major issues';
-          probability: '65%';
-          impact: 'Medium';
-          icon: BarChart3,}
-      ],
-    };
+          title: 'Predictive Everything',
+          description: 'AI predicts and prevents all major issues',
+          probability: '65%',
+          impact: 'Medium',
+          icon: BarChart3}
+      ]
+    },
     '2030': {,
-      title: 'Transcendent Intelligence';
-      color: 'from-orange-600 to-red-600';
-      icon: Globe;
+      title: 'Transcendent Intelligence',
+      color: 'from-orange-600 to-red-600',
+      icon: Globe,
       predictions: [,
         {,
-          title: 'Global AI Network';
-          description: 'Worldwide interconnected AI consciousness';
-          probability: '50%';
-          impact: 'Revolutionary';
-          icon: Network,};
+          title: 'Global AI Network',
+          description: 'Worldwide interconnected AI consciousness',
+          probability: '50%',
+          impact: 'Revolutionary',
+          icon: Network},
         {,
-          title: 'Reality Simulation';
-          description: 'AI creates indistinguishable virtual realities';
-          probability: '40%';
-          impact: 'Transformative';
-          icon: Cloud,};
+          title: 'Reality Simulation',
+          description: 'AI creates indistinguishable virtual realities',
+          probability: '40%',
+          impact: 'Transformative',
+          icon: Cloud},
         {,
-          title: 'Immortality Research';
-          description: 'AI enables human consciousness transfer';
-          probability: '30%';
-          impact: 'Revolutionary';
-          icon: Shield,}
-      ],
+          title: 'Immortality Research',
+          description: 'AI enables human consciousness transfer',
+          probability: '30%',
+          impact: 'Revolutionary',
+          icon: Shield}
+      ]
     }
-  };
-  const years = Object.keys(predictions);
+  },
+  const years = Object.keys(predictions),
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -130,13 +130,13 @@ const FuturePredictionsShowcase2025 = () => {,
             from 2025 to 2030 and beyond.,
           </p>,
         </div>,
-        {/* Year Navigation */,}
+        {/* Year Navigation */}
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
           {years.map((year) => {,
-            const yearData = predictions[year];
-            const Icon = yearData.icon;
+            const yearData = predictions[year],
+            const Icon = yearData.icon,
             return (,
               <button,
                 key={year}
@@ -144,13 +144,13 @@ const FuturePredictionsShowcase2025 = () => {,
                 className={`flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${,
                   activeYear === year,
                     ? `bg-gradient-to-r ${yearData.color} text-white shadow-2xl scale-105`,
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
               >,
                 <Icon className="w-6 h-6" />,
                 {year}
                 <span className="text-sm opacity-75">{yearData.title}</span>,
               </button>,
-            );
+            ),
           })}
         </div>,
         {/* Predictions Display */}
@@ -159,15 +159,15 @@ const FuturePredictionsShowcase2025 = () => {,
             className="grid md: grid-cols-3 gap-8",
           >,
             {predictions[activeYear].predictions.map((predictionindex) => {,
-              const Icon = prediction.icon;
+              const Icon = prediction.icon,
               return (,
                 <div,
                   key={index}
                   className="group relative",
                 >,
                   <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover: border-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl">,
-                    {/* Gradient Overlay */,}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${predictions[activeYear].color} opacity-10 rounded-3xl group-hover: opacity-20 transition-opacity duration-500`,}></div>,
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${predictions[activeYear].color} opacity-10 rounded-3xl group-hover: opacity-20 transition-opacity duration-500`}></div>,
                     {/* Content */}
                     <div className="relative z-10">,
                       <div className="flex items-center gap-4 mb-6">,
@@ -195,8 +195,7 @@ const FuturePredictionsShowcase2025 = () => {,
                       </div>,
                     </div>,
                   </div>,
-                </div>,
-              ),})}
+                </div>)})}
           </div>,
         </div>,
         {/* Timeline Visualization */}
@@ -210,8 +209,8 @@ const FuturePredictionsShowcase2025 = () => {,
             {/* Timeline Points */}
             <div className="flex justify-between items-center">,
               {years.map((yearindex) => {,
-                const yearData = predictions[year];
-                const Icon = yearData.icon;
+                const yearData = predictions[year],
+                const Icon = yearData.icon,
                 return (,
                   <div key={year} className="flex flex-col items-center">,
                     <div className={`w-16 h-16 bg-gradient-to-r ${yearData.color} rounded-full flex items-center justify-center shadow-2xl z-10`}>,
@@ -221,8 +220,7 @@ const FuturePredictionsShowcase2025 = () => {,
                       <div className="text-2xl font-bold text-white">{year}</div>,
                       <div className="text-sm text-gray-400">{yearData.title}</div>,
                     </div>,
-                  </div>,
-                );
+                  </div>),
               })}
             </div>,
           </div>,
@@ -239,6 +237,6 @@ const FuturePredictionsShowcase2025 = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default FuturePredictionsShowcase2025;
+  ),
+export default FuturePredictionsShowcase2025,
 }

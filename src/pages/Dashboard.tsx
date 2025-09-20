@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  ArrowRight, 
+  ArrowRight,
   Calendar, 
   BarChart3, 
   Users, 
@@ -14,64 +14,38 @@ import {
   Bell,
   Search,
   Filter
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const quickActions = [
-  { name: 'New Project', icon: Plus, color: 'from-blue-500 to-cyan-500' },
-  { name: 'Add Service', icon: Cloud, color: 'from-purple-500 to-pink-500' },
-  { name: 'Security Scan', icon: Shield, color: 'from-green-500 to-emerald-500' },
+  { name: 'New Project', icon: Plus, color: 'from-blue-500 to-cyan-500' };
+  { name: 'Add Service', icon: Cloud, color: 'from-purple-500 to-pink-500' };
+  { name: 'Security Scan', icon: Shield, color: 'from-green-500 to-emerald-500' };
   { name: 'AI Analysis', icon: Brain, color: 'from-orange-500 to-red-500' }
 ];
-
 const upcomingEvents = [
   {
-    title: 'Team Meeting',
-    date: 'Today',
-    time: '2:00 PM',
-    type: 'Internal',
-    icon: Users
-  },
+    title: 'Team Meeting',date: 'Today',time: '2:00 PM',type: 'Internal',icon: Users
+  };
   {
-    title: 'Client Presentation',
-    date: 'Tomorrow',
-    time: '10:00 AM',
-    type: 'External',
-    icon: TrendingUp
-  },
+    title: 'Client Presentation',date: 'Tomorrow',time: '10:00 AM',type: 'External',icon: TrendingUp
+  };
   {
-    title: 'Security Review',
-    date: 'Friday',
-    time: '3:00 PM',
-    type: 'Review',
-    icon: Shield
+    title: 'Security Review',date: 'Friday',time: '3:00 PM',type: 'Review',icon: Shield
   }
 ];
-
 const recentProjects = [
   {
-    name: 'AI Business Intelligence Platform',
-    progress: 75,
-    status: 'In Progress',
-    team: 'AI Team'
-  },
+    name: 'AI Business Intelligence Platform',progress: 75,status: 'In Progress',team: 'AI Team'
+  };
   {
-    name: 'Cloud Migration Project',
-    progress: 45,
-    status: 'Planning',
-    team: 'DevOps Team'
-  },
+    name: 'Cloud Migration Project',progress: 45,status: 'Planning',team: 'DevOps Team'
+  };
   {
-    name: 'Cybersecurity Enhancement',
-    progress: 90,
-    status: 'Testing',
-    team: 'Security Team'
+    name: 'Cybersecurity Enhancement',progress: 90,status: 'Testing',team: 'Security Team'
   }
 ];
-
 export default function Dashboard() {
   const [searchQuery, setSearchQuery] = useState('');
-
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
@@ -115,9 +89,9 @@ export default function Dashboard() {
         {/* Stats Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
-            { label: 'Active Projects', value: '12', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
-            { label: 'Team Members', value: '48', icon: Users, color: 'from-purple-500 to-pink-500' },
-            { label: 'Services Running', value: '24', icon: Cloud, color: 'from-green-500 to-emerald-500' },
+            { label: 'Active Projects', value: '12', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' };
+            { label: 'Team Members', value: '48', icon: Users, color: 'from-purple-500 to-pink-500' };
+            { label: 'Services Running', value: '24', icon: Cloud, color: 'from-green-500 to-emerald-500' };
             { label: 'Security Score', value: '98%', icon: Shield, color: 'from-orange-500 to-red-500' }
           ].map((stat, index) => (
             <motion.div

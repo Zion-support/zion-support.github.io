@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ) => {
@@ -41,11 +41,11 @@ export default function Page() {
         </motion.div>
       )}
     </div>
-  );
-};
+  ),
+},
 
 // Optimized spinner for inline use
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
+export const InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }> = ({
   size = 'sm',
   className = ''
 }) => (
@@ -61,12 +61,12 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }>
     />
     <span className="sr-only">Loading</span>
   </div>
-);
+),
 
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{
-  text?: string;
-  showLogo?: boolean;
+  text?: string,
+  showLogo?: boolean,
   className?: string}> = ({
   text = 'Loading amazing experiences...',
   showLogo = true,
@@ -86,11 +86,11 @@ export const FullScreenLoader: React.FC<{
       <LoadingSpinner size="lg" color="cyan" text={text} />
     </div>
   </div>
-);
+),
 
-// Skeleton loading component;
+// Skeleton loading component,
 export const SkeletonLoader: React.FC<{
-  className?: string;
+  className?: string,
   lines?: number}> = ({
   className = '',
   lines = 3}) => (
@@ -102,6 +102,6 @@ export const SkeletonLoader: React.FC<{
       />
     ))}
   </div>
-);
+),
 
-export default LoadingSpinner;
+export default LoadingSpinner,

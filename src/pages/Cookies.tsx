@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { 
-  Cookie, 
+  Cookie,
   CheckCircle, 
   Settings, 
   Eye, 
@@ -11,138 +11,82 @@ import {
   Clock,
   Target,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 interface CookieType {
-  id: string;
-  name: string;
-  description: string;
-  color: string;
-  icon: React.ComponentType<any>;
-  examples: string[];
-  alwaysActive: boolean;
+  id: string,name: string,description: string,color: string,icon: React.ComponentType<any>,examples: string[],alwaysActive: boolean
 }
 
 interface CookieDetail {
-  name: string;
-  purpose: string;
-  duration: string;
-  provider: string;
-  type: 'essential' | 'analytics' | 'marketing' | 'functional';
+  name: string,purpose: string,duration: string,provider: string,type: 'essential' | 'analytics' | 'marketing' | 'functional'
 }
 
 const cookieTypes: CookieType[] = [
   {
-    id: 'essential',
-    name: 'Essential Cookies',
-    description: 'Required for basic website functionality',
-    color: 'from-blue-500/20 to-cyan-500/20',
-    icon: Shield,
-    examples: ['Authentication', 'Security', 'Basic navigation'],
+    id: 'essential',name: 'Essential Cookies',description: 'Required for basic website functionality',color: 'from-blue-500/20 to-cyan-500/20',icon: Shield,examples: ['AuthenticationSecurity', 'Basic navigation'],
     alwaysActive: true
-  },
+  };
   {
-    id: 'analytics',
-    name: 'Analytics Cookies',
-    description: 'Help us understand how visitors use our website',
-    color: 'from-purple-500/20 to-pink-500/20',
-    icon: Globe,
-    examples: ['Page views', 'User behavior', 'Performance metrics'],
+    id: 'analytics',name: 'Analytics Cookies',description: 'Help us understand how visitors use our website',color: 'from-purple-500/20 to-pink-500/20',icon: Globe,examples: ['Page viewsUser behavior', 'Performance metrics'],
     alwaysActive: false
-  },
+  };
   {
-    id: 'marketing',
-    name: 'Marketing Cookies',
-    description: 'Used to deliver personalized advertisements',
-    color: 'from-orange-500/20 to-red-500/20',
-    icon: Target,
-    examples: ['Ad targeting', 'Campaign tracking', 'Conversion analysis'],
+    id: 'marketing',name: 'Marketing Cookies',description: 'Used to deliver personalized advertisements',color: 'from-orange-500/20 to-red-500/20',icon: Target,examples: ['Ad targetingCampaign tracking', 'Conversion analysis'],
     alwaysActive: false
-  },
+  };
   {
-    id: 'functional',
-    name: 'Functional Cookies',
-    description: 'Enable enhanced functionality and personalization',
-    color: 'from-green-500/20 to-emerald-500/20',
-    icon: Settings,
-    examples: ['Language preferences', 'Custom settings', 'Enhanced features'],
+    id: 'functional',name: 'Functional Cookies',description: 'Enable enhanced functionality and personalization',color: 'from-green-500/20 to-emerald-500/20',icon: Settings,examples: ['Language preferencesCustom settings', 'Enhanced features'],
     alwaysActive: false
   }
 ];
-
 const cookieDetails: CookieDetail[] = [
   {
-    name: 'session_id',
-    purpose: 'Maintains user session',
-    duration: 'Session',
-    provider: 'Zion Tech Group',
-    type: 'essential'
-  },
+    name: 'session_id',purpose: 'Maintains user session',duration: 'Session',provider: 'Zion Tech Group',type: 'essential'
+  };
   {
-    name: 'analytics_id',
-    purpose: 'Tracks user behavior',
-    duration: '2 years',
-    provider: 'Google Analytics',
-    type: 'analytics'
-  },
+    name: 'analytics_id',purpose: 'Tracks user behavior',duration: '2 years',provider: 'Google Analytics',type: 'analytics'
+  };
   {
-    name: 'marketing_id',
-    purpose: 'Personalized advertising',
-    duration: '1 year',
-    provider: 'Facebook Pixel',
-    type: 'marketing'
-  },
+    name: 'marketing_id',purpose: 'Personalized advertising',duration: '1 year',provider: 'Facebook Pixel',type: 'marketing'
+  };
   {
-    name: 'preferences',
-    purpose: 'User preferences',
-    duration: '1 year',
-    provider: 'Zion Tech Group',
-    type: 'functional'
+    name: 'preferences',purpose: 'User preferences',duration: '1 year',provider: 'Zion Tech Group',type: 'functional'
   }
 ];
-
 const Cookies: React.FC = () => {
   const [cookiePreferences, setCookiePreferences] = useState({
-    essential: true,
-    analytics: false,
-    marketing: false,
-    functional: false
+    essential: true,analytics: false,marketing: false,functional: false
   });
-
   useEffect(() => {
     // Load saved preferences from localStorage
-    const saved = localStorage.getItem('cookiePreferences');
+    const saved = localStorage.getItem('cookiePreferences'),
     if (saved) {
       try {
-        const parsed = JSON.parse(saved);
-        setCookiePreferences({ ...cookiePreferences, ...parsed });
+        const parsed = JSON.parse(saved),
+        setCookiePreferences({ ...cookiePreferences, ...parsed }),
       } catch (e) {
-        console.error('Failed to parse cookie preferences');
+        console.error('Failed to parse cookie preferences'),
       }
     }
-  }, []);
+  }, []),
 
   const updateCookiePreference = (type: string, enabled: boolean) => {
-    const newPreferences = { ...cookiePreferences, [type]: enabled };
-    setCookiePreferences(newPreferences);
-    localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences));
-  };
+    const newPreferences = { ...cookiePreferences, [type]: enabled },
+    setCookiePreferences(newPreferences),
+    localStorage.setItem('cookiePreferences', JSON.stringify(newPreferences)),
+  },
 
   const acceptAll = () => {
     const allAccepted = {
-      essential: true,
-      analytics: true,
-      marketing: true,
-      functional: true
+      essential: true,analytics: true,marketing: true,functional: true
     };
-    setCookiePreferences(allAccepted);
-    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
-  };
+    setCookiePreferences(allAccepted),
+    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted)),
+  },
 
   const savePreferences = () => {
-    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences));
-  };
+    localStorage.setItem('cookiePreferences', JSON.stringify(cookiePreferences)),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -411,10 +355,10 @@ const Cookies: React.FC = () => {
               Questions About Cookies?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              If you have any questions about our cookie policy or how we use cookies, 
+              If you have any questions about our cookie policy or how we use cookies;
               please don't hesitate to contact us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="mailto:privacy@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 hover:scale-105"
@@ -434,7 +378,6 @@ const Cookies: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Cookies;

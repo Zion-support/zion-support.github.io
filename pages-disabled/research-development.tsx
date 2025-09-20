@@ -4,29 +4,29 @@ import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope
 export default function ResearchDevelopment() {,
 	const researchAreas = [,
 		{,
-			title: 'AI & Machine Learning';
-			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.';
-			projects['Multi-agent AI systemsFederated learning', 'Explainable AI'];
-			icon: FlaskConica l;
-			color: 'blue',};
+			title: 'AI & Machine Learning',
+			description: 'Advancing autonomous systems, neural networks, and intelligent automation technologies.',
+			projects['Multi-agent AI systemsFederated learningExplainable AI'],
+			icon: FlaskConica l,
+			color: 'blue'},
 		{,
-			title: 'Quantum Computing';
-			description: 'Exploring quantum algorithms and their applications in business and scientific computing.';
-			projects['Quantum neural networksQuantum cryptography', 'Quantum optimization'];
-			icon: Microscop e;
-			color: 'purple',};
+			title: 'Quantum Computing',
+			description: 'Exploring quantum algorithms and their applications in business and scientific computing.',
+			projects['Quantum neural networksQuantum cryptographyQuantum optimization'],
+			icon: Microscop e,
+			color: 'purple'},
 		{,
-			title: 'Edge Computing';
-			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.';
-			projects['Edge AI deployment5G integration', 'Autonomous edge systems'];
-			icon: Rocke t;
-			color: 'green',
+			title: 'Edge Computing',
+			description: 'Developing next-generation edge computing platforms for IoT and real-time applications.',
+			projects['Edge AI deployment5G integrationAutonomous edge systems'],
+			icon: Rocke t,
+			color: 'green'
 	],
-						</Link>;
-					</div>;
-				</div>;
-			</section>;
-		</>;
-	),
-};
+						</Link>,
+					</div>,
+				</div>,
+			</section>,
+		</>,
+	)
+},
 }

@@ -261,11 +261,11 @@ export default function App(): JSX.Element {,
                     </a>
                   </div>
                 </div>,
-                {/* Interactive Dynamic Content Carousel */,}
+                {/* Interactive Dynamic Content Carousel */}
                 <div className="mb-12">,
                   <div className="text-center mb-8">
                 </div>,
-                {/* NEW: Enhanced Content Carousel 2025 */,}
+                {/* NEW: Enhanced Content Carousel 2025 */}
                 <div className="mb-12">
                 </div>,
                 {/* Revolutionary Content Carousel 2027 */}
@@ -293,16 +293,16 @@ export default function App(): JSX.Element {,
                 {/* Interactive Tech Demo 2039 */}
                 <div className="mb-12">
                 </div>,
-                {/* NEW: Interactive Tech Demo 2034 - Latest Interactive Technology */,}
+                {/* NEW: Interactive Tech Demo 2034 - Latest Interactive Technology */}
                 <div className="mb-12">
                 </div>,
-                {/* NEW: Social Proof Showcase 2034 - Client Testimonials and Case Studies */,}
+                {/* NEW: Social Proof Showcase 2034 - Client Testimonials and Case Studies */}
                 <div className="mb-12">
                 </div>,
-                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */,}
+                {/* NEW: Revolutionary Tech Banner 2025 - Latest Technology Showcase */}
                 <div className="mb-12">
                 </div>,
-                {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */,}
+                {/* NEW: Ultimate Content Showcase 2025 - Comprehensive Technology Content */}
                 <div className="mb-12">
                 </div>,
 ,
@@ -336,7 +336,7 @@ export default function App(): JSX.Element {,
                     <a href="/pages/ComprehensiveServices2025" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">View all services</a>
                   </div>
                 </section>,
-                {/* Services Grid */,}
+                {/* Services Grid */}
                 <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">,
                     <div className="text-4xl mb-4">🤖</div>,
@@ -369,7 +369,7 @@ export default function App(): JSX.Element {,
                     </a>
                   </div>
                 </div>,
-                {/* Success Stories Section */,}
+                {/* Success Stories Section */}
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12">,
                   <div className="text-center mb-8">,
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">🏆 Client Success Stories</h2>,
@@ -411,7 +411,7 @@ export default function App(): JSX.Element {,
                     </div>
                   </div>
                 </div>,
-                {/* Latest News Section */,}
+                {/* Latest News Section */}
                 <div className="bg-white rounded-2xl p-8 shadow-lg mb-12">,
                   <div className="text-center mb-8">,
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">📰 Latest Technology Insights</h2>,
@@ -453,7 +453,7 @@ export default function App(): JSX.Element {,
                     </div>
                   </div>
                 </div>,
-                {/* NEW 2026 CONTENT SHOWCASE */,}
+                {/* NEW 2026 CONTENT SHOWCASE */}
                 <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">,
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
                   <div className="relative z-10">,
@@ -515,7 +515,7 @@ export default function App(): JSX.Element {,
                     </div>
                   </div>
                 </div>,
-                {/* REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */,}
+                {/* REVOLUTIONARY BREAKTHROUGH CONTENT SHOWCASE */}
                 <div className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-2xl p-12 mb-12 text-white relative overflow-hidden">,
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
                   <div className="relative z-10">,
@@ -577,7 +577,7 @@ export default function App(): JSX.Element {,
                     </div>
                   </div>
                 </div>,
-                {/* Interactive Technology Showcase */,}
+                {/* Interactive Technology Showcase */}
                 <div className="mb-12">,
                   <div className="text-center mb-8">,
                     <h2 className="text-4xl font-bold text-gray-900 mb-4">🚀 Interactive Technology Showcase</h2>,
@@ -585,7 +585,7 @@ export default function App(): JSX.Element {,
                   </div>,
                   <InteractiveTechShowcase />
                 </div>,
-                {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */,}
+                {/* NEW: Interactive Technology Showcase 2025 - Latest Interactive Features */}
                 <div className="mb-12">
                 </div>,
                 <div className="mb-12">
@@ -593,7 +593,7 @@ export default function App(): JSX.Element {,
                 {/* Interactive Technology Showcase 2028 */}
                 <div className="mb-12">
                 </div>,
-                {/* NEW: Interactive Technology Showcase 2026 */,}
+                {/* NEW: Interactive Technology Showcase 2026 */}
                 <div className="mb-12">
                 </div>,
                 {/* Interactive Technology Showcase 2035 */}
@@ -641,17 +641,17 @@ export default function App(): JSX.Element {,
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Blog</h1>,
                 <p className="text-xl text-gray-600">Coming soon - Latest insights and updates</p>
               </div>
-            </main>,} />,
+            </main>} />,
             <main className="container mx-auto px-4 py-16">,
               <div className="text-center">,
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>,
                 <p className="text-xl text-gray-600">Get in touch with our team</p>
               </div>
-            </main>,
+            </main>
           } />,
             <main className="container mx-auto px-4 py-16 text-center">,
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>,
               <p className="text-xl text-gray-600">The page you're looking for doesn't exist.</p>
-            </main>,
+            </main>
           } />
         </Routes>,

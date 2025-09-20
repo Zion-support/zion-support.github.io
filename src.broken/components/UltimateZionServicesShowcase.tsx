@@ -1,29 +1,29 @@
 <<<<<<< HEAD
 
-const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {,
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
   const categories = [{ id: 'all', name: 'All Services', icon: '🌟', color: 'from - purple - 600 to - pink - 600' },
-    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' },;
-    { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' },;
-    { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' },;
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' },;
-    { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },;
-    { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },;
-    { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' };
-        delayChildren: 0.2;
-      };
-    };
-  };
+    { id: 'quantum - computing', name: 'Quantum Computing', icon: '⚛️', color: 'from - blue - 600 to - cyan - 600' },
+    { id: 'blockchain - web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from - green - 600 to - emerald - 600' },
+    { id: 'space - tech', name: 'Space Technology', icon: '🛰️', color: 'from - indigo - 600 to - purple - 600' },
+    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from - red - 600 to - pink - 600' },
+    { id: 'emerging - tech', name: 'Emerging Tech', icon: '🚀', color: 'from - orange - 600 to - red - 600' },
+    { id: 'micro - saas', name: 'Micro SAAS', icon: '💻', color: 'from - blue - 600 to - indigo - 600' },
+    { id: 'it - services', name: 'IT Services', icon: '🖥️', color: 'from - gray - 600 to - slate - 600' },
+        delayChildren: 0.2
+      },
+    },
+  },
 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20
 
-;
-},;
-    visible: {;
+
+},
+    visible: {,
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -84,7 +84,7 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
                     </a> |
                     ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"
@@ -94,30 +94,30 @@ const UltimateZionServicesShowcase: React.FC = () : JSX.Element => {;
             <div  className="flex flex - col md:flex - row gap-4 justify -center">
               <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover:scale -105">
 =======
-const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {,
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
 
-    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
-    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
-    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },;
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },;
-    { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' };
-  ];
+    { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },
+    { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },
+    { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀', color: 'from-orange-600 to-red-600' },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻', color: 'from-blue-600 to-indigo-600' },
+    { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' },
+  ],
 
-      service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||;
-      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ;
-    return matchesCategory && matchesSearch}) ;
+      service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||,
+      service.tagline.toLowerCase () .includes(searchTerm.toLowerCase () ) ,
+    return matchesCategory && matchesSearch}) ,
 
       transition: {
-        staggerChildren: 0.1,;
-        delayChildren: 0.2}}}},;
+        staggerChildren: 0.1,
+        delayChildren: 0.2}}}},
     visible: {
 =======
-      opacity: 1,;
-      y: 0,;
-      transition: { duration: 0.5 }}};
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }}},
 
   return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -298,7 +298,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
                   </div>"
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>"
                   <p className="text-sm text-purple-400 font-medium mb-2">
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>"
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold">
                     {service.innovationLevel}
@@ -432,7 +432,7 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
 }}
             transition={{ duration: 0.6 }}
           >"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
@@ -446,12 +446,12 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
               </button>
             </div>"
             <div className="mt-6 text-sm text-gray-400">
-              <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
-              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) };
-export default UltimateZionServicesShowcase;'"`
+              <p>🌟 Trusted by Fortune 500 companies worldwide</p>,
+              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) },
+export default UltimateZionServicesShowcase,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,29 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import {,
-  Atom;
-  Zap;
-  Cpu;
-  Database;
-  Shield;
-  Globe;
-  Rocket;
-  Star;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Award;
-  Lightbulb;
-  Sparkles;
-  Infinity;
-  Brain;
-  Eye;
-  Layers,
-} from 'lucide-react';
+  Atom,
+  Zap,
+  Cpu,
+  Database,
+  Shield,
+  Globe,
+  Rocket,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
+  Lightbulb,
+  Sparkles,
+  Infinity,
+  Brain,
+  Eye,
+  Layers
+} from 'lucide-react',
 const QuantumReality2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-blue-900">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
@@ -58,7 +58,7 @@ const QuantumReality2025: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Quantum Stats */,}
+      {/* Quantum Stats */}
       <div className="py-24 bg-black/30 backdrop-blur-sm">,
         <div className="container mx-auto px-4">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-12">,
@@ -69,13 +69,12 @@ const QuantumReality2025: React.FC = () => {,
               >,
                 <div className="flex justify-center mb-6">,
                   <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl group-hover: scale-110 transition-transform duration-300">,
-                    {stat.icon,}
+                    {stat.icon}
                   </div>,
                 </div>,
                 <div className={`text-5xl font-bold mb-3 ${stat.color}`}>{stat.number}</div>,
                 <div className="text-gray-300 text-lg">{stat.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -101,7 +100,7 @@ const QuantumReality2025: React.FC = () => {,
               >,
                 <div className="flex items-center space-x-4 mb-8">,
                   <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">,
-                    {tech.icon,}
+                    {tech.icon}
                   </div>,
                   <h3 className="text-3xl font-bold text-white">{tech.title}</h3>,
                 </div>,
@@ -118,8 +117,7 @@ const QuantumReality2025: React.FC = () => {,
                       <div key={capIndex} className="flex items-center space-x-2 text-gray-300">,
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>,
                         <span>{capability}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                 </div>,
               </div>,
@@ -147,13 +145,12 @@ const QuantumReality2025: React.FC = () => {,
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/20 transition-all duration-300",
               >,
-                <h3 className="text-2xl font-bold text-white mb-4">{principle.principle,}</h3>,
+                <h3 className="text-2xl font-bold text-white mb-4">{principle.principle}</h3>,
                 <p className="text-gray-300 mb-4 text-lg">{principle.description}</p>,
                 <div className="bg-cyan-500/20 text-cyan-300 p-4 rounded-lg">,
-                  <strong>Example: </strong> {principle.example,}
+                  <strong>Example: </strong> {principle.example}
                 </div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -179,14 +176,13 @@ const QuantumReality2025: React.FC = () => {,
               >,
                 <div className="flex justify-center mb-6">,
                   <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">,
-                    {app.icon,}
+                    {app.icon}
                   </div>,
                 </div>,
                 <h3 className="text-xl font-bold text-white mb-4">{app.title}</h3>,
                 <p className="text-gray-300 mb-4">{app.description}</p>,
                 <div className="text-green-400 font-semibold">{app.impact}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
@@ -215,5 +211,5 @@ const QuantumReality2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default QuantumReality2025;
+  )},
+export default QuantumReality2025,

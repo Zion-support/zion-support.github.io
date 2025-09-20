@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Truck, Globe, Zap, Shield, BarChart3, 
   TrendingUp, Target, Users, CheckCircle, 
@@ -9,8 +9,8 @@ import {
   Lock, Clock, DollarSign, PieChart,
   Route, Package, Warehouse, Ship, Plane,
   Train, Car, Rocket, Atom, Brain, Eye
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const QuantumSupplyChainOptimizer: React.FC = () => {
   const features = [
@@ -50,7 +50,7 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
       description: "Self-learning algorithms continuously optimize supply chain operations without human intervention.",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
   const useCases = [
     {
@@ -77,7 +77,7 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
       description: "Optimize container routing, port scheduling, and vessel utilization.",
       benefits: ["35% fuel savings", "Faster port turnaround", "Reduced emissions"]
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -130,7 +130,7 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
       color: "from-green-500 to-emerald-500",
       popular: false
     }
-  ];
+  ],
 
   const integrations = [
     {
@@ -169,7 +169,7 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
       description: "AWS, Azure, Google Cloud, IBM Cloud",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ],
 
 const quantum-supply-chain-optimizer: React.FC = () => {
   return (
@@ -186,7 +186,7 @@ const quantum-supply-chain-optimizer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default quantum-supply-chain-optimizer;
+export default quantum-supply-chain-optimizer,

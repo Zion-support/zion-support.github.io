@@ -1,19 +1,19 @@
 <<<<<<< HEAD
-import { Badge } from '@/components / ui / badge';
- from '@/components / ui / button';
- from '@/components / ui / card';
- from '@/data / enhancedServices';
+import { Badge } from '@/components / ui / badge',
+ from '@/components / ui / button',
+ from '@/components / ui / card',
+ from '@/data / enhancedServices',
 
- from '@/components/ui/button';
- from '@/components/ui/card';
- from '@/components/ui/badge';
- from 'react-router-dom';
+ from '@/components/ui/button',
+ from '@/components/ui/card',
+ from '@/components/ui/badge',
+ from 'react-router-dom',
 export default function Page() {
 ) => {
 
-    const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
+    const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase())),
     if(categoryServices.length === 0)
-        return null;
+        return null,
     const getCategoryIcon = (categoryName) => {
 
         const iconMap = {
@@ -30,5 +30,5 @@ export default function Page() {
             'Real Estate & Property': <Home className="w-6 h-6"/>,"
             'Legal & Compliance': <Lock className="w-6 h-6"/>,"
 =======
-import React from 'react';
+import React from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

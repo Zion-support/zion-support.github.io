@@ -1,73 +1,73 @@
-import { Link  } from 'react-router-dom';
- from 'react';
+import { Link  } from 'react-router-dom',
+ from 'react',
 export default function RevolutionaryServices2030 () {
 export default React.memo(function RevolutionaryServices2030 () {
-export default RevolutionaryServices2030;
-import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
-import { motion, AnimatePresence  } from 'framer-motion';
+export default RevolutionaryServices2030,
+import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030',
+import { motion, AnimatePresence  } from 'framer-motion',
 
- from 'lucide - react';
+ from 'lucide - react',
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
+  const [sortBy, setSortBy] = useState('featured'),
 
-  const categories = [;
-    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from - zion - purple to - zion - orange' },;
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from - zion - cyan to - zion - purple' },;
-    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from - zion - purple to - zion - blue' },;
-    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from - zion - purple to - zion - red' },;
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from - zion - orange to - zion - green' };
-  ];
+  const categories = [,
+    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from - zion - purple to - zion - orange' },
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from - zion - cyan to - zion - purple' },
+    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from - zion - purple to - zion - blue' },
+    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from - zion - purple to - zion - red' },
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from - zion - orange to - zion - green' },
+  ],
 
-  const priceRanges = [;
-    { id: 'all', name: 'All Prices', range: 'All' },;
-    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;
-    { id: 'mid - range', name: 'Mid - Range', range: '$10,000 - $25,000' },;
-    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
-  ];
+  const priceRanges = [,
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },
+    { id: 'mid - range', name: 'Mid - Range', range: '$10,000 - $25,000' },
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' },
+  ],
 
-  const sortOptions = [;
-    { id: 'featured', name: 'Featured' },;
-    { id: 'price - low', name: 'Price: Low to High' },;
-    { id: 'price - high', name: 'Price: High to Low' },;
-    { id: 'innovation', name: 'Innovation Level' },;
-    { id: 'market - size', name: 'Market Size' };
-  ];
+  const sortOptions = [,
+    { id: 'featured', name: 'Featured' },
+    { id: 'price - low', name: 'Price: Low to High' },
+    { id: 'price - high', name: 'Price: High to Low' },
+    { id: 'innovation', name: 'Innovation Level' },
+    { id: 'market - size', name: 'Market Size' },
+  ],
 
   // Combine all revolutionary services
-  const allServices = [;
-    ...REVOLUTIONARY_SERVICES_2030,;
-    ...EMERGING_TECH_SERVICES_2030;
-  ];
+  const allServices = [,
+    ...REVOLUTIONARY_SERVICES_2030,
+    ...EMERGING_TECH_SERVICES_2030,
+  ],
 
   // Filter and sort services
-  const filteredServices = allServices.filter(service => {;
-    const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-    const priceMatch = selectedPriceRange === 'all' || (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) || (selectedPriceRange === 'mid - range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) || (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000) ;
+  const filteredServices = allServices.filter(service => {,
+    const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory,
+    const priceMatch = selectedPriceRange === 'all' || (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) || (selectedPriceRange === 'mid - range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) || (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000) ,
 
-    return categoryMatch && priceMatch;
-  }) ;
+    return categoryMatch && priceMatch,
+  }) ,
 
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+const ServiceCard = ({ service, type }: { service: any, type: 'microSaas' | 'itService' | 'aiService' }) => {
+  const [isExpanded, setIsExpanded] = useState(false),
 
   const getIcon = (category: string) => {
-    if(category.includes ('AI') || category.includes('Neural') ) return Brain;
-    if(category.includes ('Quantum') ) return Atom;
-    if(category.includes ('Space') ) return Satellite;
-    if(category.includes ('Bio') ) return Microscope;
-    if(category.includes ('Green') ) return Leaf;
-    if(category.includes ('Cybersecurity') ) return Shield;
-    if(category.includes ('Infrastructure') ) return Server;
-    if(category.includes ('Ethics') ) return Eye;
-    if(category.includes ('Multimodal') ) return Cpu;
-    if(category.includes ('Autonomous') ) return Bot;
-    return Zap;
-  };
+    if(category.includes ('AI') || category.includes('Neural') ) return Brain,
+    if(category.includes ('Quantum') ) return Atom,
+    if(category.includes ('Space') ) return Satellite,
+    if(category.includes ('Bio') ) return Microscope,
+    if(category.includes ('Green') ) return Leaf,
+    if(category.includes ('Cybersecurity') ) return Shield,
+    if(category.includes ('Infrastructure') ) return Server,
+    if(category.includes ('Ethics') ) return Eye,
+    if(category.includes ('Multimodal') ) return Cpu,
+    if(category.includes ('Autonomous') ) return Bot,
+    return Zap
+  },
 
-  const IconComponent = getIcon(service.category) ;
+  const IconComponent = getIcon(service.category) ,
 
   return (<motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -204,39 +204,39 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
           <div  className="mt-6">
             <Link
               to="/contact"
-              className="inline - flex items - center justify - center w-full px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text-white font - semibold rounded-xl transition - all duration - 300 transform hover:scale - 105 hover:shadow-lg hover:shadow-cyan -500 / 25"
+              className="inline - flex items - center justify - center w-full px-6 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 hover: from - cyan - 600 hover:to - blue - 600 text-white font - semibold rounded-xl transition - all duration - 300 transform hover:scale - 105 hover:shadow-lg hover:shadow-cyan -500 / 25"
             >
               Get Started < ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
       </div>
-    </motion.div>) ;
-};
+    </motion.div>) 
+},
 
 // Main Component
-  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'> ('all') ;
+  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'> ('all') ,
 
   const tabs = [{ id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
     { id: 'itServices', label: 'IT Services', count: allRevolutionaryServices2030.itServices.length },
-    { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length },
-  ];
+    { id: 'aiServices', label: 'AI Services', count: allRevolutionaryServices2030.aiServices.length }
+  ],
 
   const getFilteredServices = () => {
     switch(activeTab) {
       case 'microSaas':
-        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }) ) ;
+        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }) ) ,
       case 'itServices':
-        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }) ) ;
+        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }) ) ,
       case 'aiServices':
-        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }) ) ;
+        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }) ) ,
       default:
         return [...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }) ) ,
           ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }) ) ,
-          ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }) ) ];
+          ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }) ) ],
     }
-  };
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -339,13 +339,13 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                     : 'bg-slate - 800 / 50 text-slate - 300 hover:bg-slate - 700 / 50 border border-slate - 600 hover:border-cyan - 400 / 50'
                 }`}
               >
-;
-          {/* Services Grid */};
-          <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
-            <AnimatePresence>;
-              {sortedServices.map((service, index) => {;
-                const IconComponent = getServiceIcon(service.category) ;
-                const colorClass = getServiceColor(service.category) ;
+,
+          {/* Services Grid */},
+          <div  className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap-8">,
+            <AnimatePresence>,
+              {sortedServices.map((service, index) => {,
+                const IconComponent = getServiceIcon(service.category) ,
+                const colorClass = getServiceColor(service.category) ,
 
                 return (<motion.div
                     key = {service.id}
@@ -369,18 +369,18 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
   delay: index * 0.1
 
 }}
-                    className="bg-gray - 800 rounded-xl p - 6 hover:bg-gray - 700 transition - all duration - 300 transform hover:scale - 105 border border-gray - 700 hover:border-zion -cyan"
+                    className="bg-gray - 800 rounded-xl p - 6 hover: bg-gray - 700 transition - all duration - 300 transform hover:scale - 105 border border-gray - 700 hover:border-zion -cyan"
                   >
                     <option value="rating">Sort by Rating</option>
                     <option value="price">Sort by Price</option>
                     <option value="reviews">Sort by Reviews</option>
                     <option value="aiScore">Sort by AI Score</option>
                   </select>
-                </div>;
+                </div>,
               </div>
 
               {/* Category Filters */}
-              <div  className="mt-8">;
+              <div  className="mt-8">,
                 <div  className="flex flex - wrap gap-3">
                   <button     onClick={ () => setActiveCategory('all') }
                     className={`px-6 py-3 rounded-full font - semibold transition - all duration - 300 ${activeCategory === 'all'
@@ -398,7 +398,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                     >
                       {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category) .length}) </button>) ) }
                 </div>
-              </div>;
+              </div>,
             </div>
 
             {/* Services Grid */}
@@ -513,7 +513,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   </div>
                 </div>
               </motion.div>
-            </div>;
+            </div>,
                         Learn More
                       </Link>
 
@@ -527,24 +527,24 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                         </Link>
                         <Link
                           to={service.website}
-                          className="flex - 1 bg-gray - 700 text-white text-center py-2 px-3 rounded-lg text-sm font - medium hover:bg-gray - 600 transition - all duration -300"
-                        >;
-                          <Globe className="inline mr-1 h-3 w-3" />;
-                          Website;
-                        </Link>;
-                      </div>;
-                    </div>;
-                  </motion.div>;) ;
+                          className="flex - 1 bg-gray - 700 text-white text-center py-2 px-3 rounded-lg text-sm font - medium hover: bg-gray - 600 transition - all duration -300"
+                        >,
+                          <Globe className="inline mr-1 h-3 w-3" />,
+                          Website,
+                        </Link>,
+                      </div>,
+                    </div>,
+                  </motion.div>,) 
               }) }
             </AnimatePresence>
-          </div > Clear all filters;
+          </div > Clear all filters,
               </button>
             </div>) }
         </div>
       </div>
 
       {/* Footer CTA */}
-      <div  className="relative z - 10 pb -20">;
+      <div  className="relative z - 10 pb -20">,
         <div  className="container mx - auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -562,7 +562,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray -800">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gray -800">,
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -633,8 +633,8 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
           </div>
         </div>
       </div>
-    </div>) ;
-};
+    </div>) ,
+},
 
               >
                 <DollarSign className="mr-2 h-5 w-5" />
@@ -644,5 +644,5 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

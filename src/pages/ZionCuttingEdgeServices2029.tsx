@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   Users, 
@@ -19,50 +19,48 @@ import {
   CheckCircle,
   Clock,
   DollarSign
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
-import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { zionCuttingEdgeServices2029 } from "../../data/zion-2029-cutting-edge-services";
+import { zionEmergingTechServices2029 } from "../../data/zion-2029-emerging-tech-services";
 export default function ZionCuttingEdgeServices2029() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
 
-  const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029];
+  const allServices = [...zionCuttingEdgeServices2029, ...zionEmergingTechServices2029],
   
-  const categories = ['all', ...new Set(allServices.map(service => service.category))];
+  const categories = ['all', ...new Set(allServices.map(service => service.category))],
   
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     
-    let matchesPrice = true;
+    let matchesPrice = true,
     if (priceRange !== 'all') {
-      const [min, max] = priceRange.split('-').map(Number);
+      const [min, max] = priceRange.split('-').map(Number),
       if (max) {
-        matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max;
+        matchesPrice = service.pricing.starter >= min && service.pricing.starter <= max,
       } else {
-        matchesPrice = service.pricing.starter >= min;
+        matchesPrice = service.pricing.starter >= min,
       }
     }
     
-    return matchesSearch && matchesCategory && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesPrice,
+  }),
 
   const getPriceRangeLabel = (range: string) => {
     switch (range) {
-      case '0-1000': return '$0 - $1,000/month';
+      case '0-1000': return '$0 - $1,000/month',
       case '1000-3000': return '$1,000 - $3,000/month';
       case '3000-5000': return '$3,000 - $5,000/month';
       case '5000+': return '$5,000+/month';
-      default: return 'All Prices';
+      default: return 'All Prices'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -265,7 +263,7 @@ export default function ZionCuttingEdgeServices2029() {
                 {/* Market Info */}
                 <div className="mb-6 space-y-2">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-400">Market Size:</span>
+                    <span className="text-gray-400">Market Size: </span>
                     <span className="text-white font-semibold">{service.marketSize}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
@@ -334,8 +332,8 @@ export default function ZionCuttingEdgeServices2029() {
               <button
                 onClick={() => {
                   setSearchTerm('');
-                  setSelectedCategory('all');
-                  setPriceRange('all');
+                  setSelectedCategory('all'),
+                  setPriceRange('all'),
                 }}
                 className="mt-4 text-blue-400 hover:text-blue-300 underline"
               >
@@ -478,7 +476,7 @@ export default function ZionCuttingEdgeServices2029() {
             <div>
               <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
+                <li><a href="#services" className="text-gray-300 hover: text-white transition-colors">Our Services</a></li>
                 <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Main Website</a></li>
                 <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>
@@ -486,7 +484,7 @@ export default function ZionCuttingEdgeServices2029() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2029 Zion Tech Group. All rights reserved. | Revolutionizing technology, one innovation at a time.</p>
+            <p>&copy, 2029 Zion Tech Group. All rights reserved. | Revolutionizing technology, one innovation at a time.</p>
           </div>
         </div>
       </footer>

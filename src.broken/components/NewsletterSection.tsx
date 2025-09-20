@@ -1,16 +1,16 @@
 <<<<<<< HEAD
 
-      description: "Get exclusive access to tech trends and analysis";
-    },;
+      description: "Get exclusive access to tech trends and analysis"
+    },
             <p className="text-gray-300 text-lg mb-6">
               You're now subscribed to our newsletter.We'll keep you updated with the latest technology insights,
 =======
-      description: "Get exclusive access to tech trends and analysis"},;
-    {;
-      icon: Zap,;"
-      title: "Early Access",;"
-      description: "Be the first to know about beta programs and launches"};
-  ];
+      description: "Get exclusive access to tech trends and analysis"},
+    {,
+      icon: Zap,"
+      title: "Early Access","
+      description: "Be the first to know about beta programs and launches"},
+  ],
 =======
 
   if(isSubscribed) {
@@ -42,13 +42,13 @@
               service announcements, and exclusive content.</p>
             <button
               onClick={() => setIsSubscribed(false)}"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-              Subscribe Another Email;
-            </button>;
-          </motion.div>;
-        </div>;
-      </section>;) }
+              Subscribe Another Email,
+            </button>,
+          </motion.div>,
+        </div>,
+      </section>,) }
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">"
       <div className="max-w-7xl mx-auto px-6">"
@@ -106,7 +106,7 @@
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>"
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
-                </motion.div>;) ) }
+                </motion.div>,) ) }
             </div>
 "
             <div className="flex items-center text-sm text-gray-400">"
@@ -162,9 +162,9 @@
                 <button"
                   type="submit"
                   disabled={isLoading || !email}"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
 
-                  {isLoading ? (;"
+                  {isLoading ? (,"
                     <div className="flex items-center">"
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Subscribing...
@@ -184,16 +184,16 @@
                     Privacy Policy'
                   </a>{' '}
                   and{' '}"
-                  <a href="/terms" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <a href="/terms" className="text-cyan-400 hover: text-cyan-300 underline">
                     Terms of Service
                   </a>
                 </p>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </section>;) };
+            </div>,
+          </motion.div>,
+        </div>,
+      </div>,
+    </section>,) },
 
 export default NewsletterSection}}}'"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

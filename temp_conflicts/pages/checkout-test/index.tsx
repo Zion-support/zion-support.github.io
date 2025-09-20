@@ -1,57 +1,57 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { logError } from '@/utils/productionLogger';
-import { useState } from 'react'; // Only useState is needed from React
+import React, { useState } from 'react',
+import axios from 'axios',
+import { MARKETPLACE_LISTINGS } from '@/data/listingData',
+import { logError } from '@/utils/productionLogger',
+import { useState } from 'react', // Only useState is needed from React
 
 const CheckoutTestPage = () => {
-  // const [loading, setLoading] = useState(false); // loading is unused
-  const [, setLoading] = useState(false); // Keep setLoading if used, otherwise remove both
-  // const [testResults, setTestResults] = useState({}); // testResults is unused
+  // const [loading, setLoading] = useState(false), // loading is unused
+  const [, setLoading] = useState(false), // Keep setLoading if used, otherwise remove both
+  // const [testResults, setTestResults] = useState({}), // testResults is unused
 
   // Use real marketplace products for testing
-  // const testProducts = MARKETPLACE_LISTINGS.slice(0, 3); // testProducts is unused
+  // const testProducts = MARKETPLACE_LISTINGS.slice(0, 3), // testProducts is unused
 
   const handleCheckout = async () => {
-    setLoading(true);
-    const cart = [{ title: 'Test Product', price: 1.00, quantity: 1 }];
+    setLoading(true),
+    const cart = [{ title: 'Test Product', price: 1.00, quantity: 1 }],
     try {
       const { data } = await axios.post('/api/checkout-session', { 
         cartItems: cart,
         customer_email: 'test@example.com'
-      });
+      }),
       if (data.sessionId) {
-        alert('✅ Checkout session created successfully! In production, you would be redirected to Stripe.');
-        setTestResults(prev => ({ ...prev, checkout: 'success' }));
+        alert('✅ Checkout session created successfully! In production, you would be redirected to Stripe.'),
+        setTestResults(prev => ({ ...prev, checkout: 'success' })),
       }
     } catch (err) {
-      logError('Checkout error:', { data: err });
-      alert('❌ Checkout test failed. Check console for details.');
-      setTestResults(prev => ({ ...prev, checkout: 'error' }));
+      logError('Checkout error:', { data: err }),
+      alert('❌ Checkout test failed. Check console for details.'),
+      setTestResults(prev => ({ ...prev, checkout: 'error' })),
     } finally {
-      setLoading(false);
+      setLoading(false),
     }
-  };
+  },
 
   // const testPaymentIntent = async () => { // testPaymentIntent is unused
-  //   setLoading(true);
+  //   setLoading(true),
   //   try {
   //     const { data } = await axios.post('/api/create-payment-intent', {
   //       amount: 50.00,
   //       userId: 'test-user'
-  //     });
+  //     }),
   //     if (data.clientSecret) {
-  //       alert('✅ Payment intent created successfully!');
-  //       // setTestResults(prev => ({ ...prev, paymentIntent: 'success' })); // testResults is unused
+  //       alert('✅ Payment intent created successfully!'),
+  //       // setTestResults(prev => ({ ...prev, paymentIntent: 'success' })), // testResults is unused
   //     }
   //   } catch (err) {
-  //     logError('Payment intent error:', { data: err });
-  //     alert('❌ Payment intent test failed. Check console for details.');
-  //     // setTestResults(prev => ({ ...prev, paymentIntent: 'error' })); // testResults is unused
+  //     logError('Payment intent error:', { data: err }),
+  //     alert('❌ Payment intent test failed. Check console for details.'),
+  //     // setTestResults(prev => ({ ...prev, paymentIntent: 'error' })), // testResults is unused
   //   } finally {
-  //     setLoading(false);
+  //     setLoading(false),
   //   }
-  // };
+  // },
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', textAlign: 'center' }}>
@@ -69,7 +69,7 @@ const CheckoutTestPage = () => {
             border: 'none',
             borderRadius: '5px',
             fontSize: '16px',
-            cursor: 'pointer',
+            cursor: 'pointer'
           }}
         >
           Buy Now (Test)
@@ -77,7 +77,7 @@ const CheckoutTestPage = () => {
       </div>
       <p><small>This is a test checkout flow using Stripe test mode. No real charges will be made.</small></p>
     </div>
-  );
-};
+  ),
+},
 
-export default CheckoutTestPage;
+export default CheckoutTestPage,

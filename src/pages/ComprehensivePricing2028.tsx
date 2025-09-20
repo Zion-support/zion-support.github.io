@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { 
-  Check, 
+  Check,
   Star, 
   TrendingUp, 
   Zap, 
@@ -19,28 +19,25 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 import { 
-  COMPREHENSIVE_PRICING_PLANS_2028, 
+  COMPREHENSIVE_PRICING_PLANS_2028,
   SERVICE_CATEGORIES_2028, 
   MARKET_ANALYSIS_2028 
-} from '../data/comprehensivePricingGuide2028';
-
+} from "../data/comprehensivePricingGuide2028";
 export default function ComprehensivePricing2028() {
-  const [selectedPlan, setSelectedPlan] = useState('professional-2028');
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [selectedPlan, setSelectedPlan] = useState('professional-2028'),
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]),
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
         : [...prev, categoryId]
-    );
+    ),
   };
-
   const selectedPlanData = COMPREHENSIVE_PRICING_PLANS_2028.find(plan => plan.id === selectedPlan);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -79,7 +76,7 @@ export default function ComprehensivePricing2028() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
             >
-              Discover our revolutionary pricing plans for cutting-edge AI services, emerging technologies, 
+              Discover our revolutionary pricing plans for cutting-edge AI services, emerging technologies;
               and innovative solutions that will transform your business in 2028 and beyond.
             </motion.p>
             <motion.div 
@@ -411,7 +408,7 @@ export default function ComprehensivePricing2028() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations, 
+            Contact our team of experts to learn how our innovative 2028 services can revolutionize your operations;
             increase efficiency, and drive unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

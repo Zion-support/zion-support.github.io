@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
 =======
-    const [activeCategory, setActiveCategory] = useState('all');
+    const [activeCategory, setActiveCategory] = useState('all'),
     const categories = ['
         { id: 'all', name: 'All Services', icon: <Sparkles className="h-5 w-5"/> },"
         { id: 'ai-ml', name: 'AI & ML', icon: <Cpu className="h-5 w-5"/> },"
@@ -14,7 +14,7 @@ export default function Page() {
         { id: 'automation', name: 'Automation', icon: <Zap className="h-5 w-5"/> },"
         { id: 'cloud', name: 'Cloud', icon: <Cloud className="h-5 w-5"/> }
 >>>>>>> main
-    ];
+    ],
     const microSaasServices = [{
 
             id: 'ai-content-optimizer',
@@ -24,7 +24,7 @@ export default function Page() {
             category: 'ai-ml',
             price: '$29/month',
             rating: 4.9,
-            features['SEO optimization',Readability scoring',Content suggestions',Performance analytics'],;
+            features['SEO optimization',Readability scoring',Content suggestions',Performance analytics'],
             badge: 'Popular',
             color: 'from-purple-500 to-cyan-500'
         },
@@ -37,7 +37,7 @@ export default function Page() {
             category: 'security',
             price: '$99/month',
             rating: 4.8,
-            features['Real-time monitoring',AI threat detection',Automated response',Compliance reporting'],;
+            features['Real-time monitoring',AI threat detection',Automated response',Compliance reporting'],
             badge: 'New',
             color: 'from-blue-500 to-green-500'
         },
@@ -50,7 +50,7 @@ export default function Page() {
             category: 'analytics',
             price: '$49/month',
             rating: 4.7,
-            features['Interactive dashboards',Custom reports',Data integration',Real-time updates'],;
+            features['Interactive dashboards',Custom reports',Data integration',Real-time updates'],
             badge: 'Pro',
             color: 'from-green-500 to-teal-500'
         },
@@ -63,7 +63,7 @@ export default function Page() {
             category: 'automation',
             price: '$39/month',
             rating: 4.6,
-            features['AI personalization',Automated workflows',Advanced segmentation',Performance tracking'],;
+            features['AI personalization',Automated workflows',Advanced segmentation',Performance tracking'],
             badge: 'Featured',
             color: 'from-red-500 to-orange-500'
         },
@@ -76,7 +76,7 @@ export default function Page() {
             category: 'ai-ml',
             price: '$59/month',
             rating: 4.9,
-            features['24/7 availability',AI-powered responses',Multi-language support',Integration APIs'],;
+            features['24/7 availability',AI-powered responses',Multi-language support',Integration APIs'],
             badge: 'AI',
             color: 'from-pink-500 to-rose-500'
         },
@@ -89,7 +89,7 @@ export default function Page() {
             category: 'automation',
             price: '$19/month',
             rating: 4.5,
-            features['Automated invoicing',Expense tracking',Financial reporting',Payment reminders'],;
+            features['Automated invoicing',Expense tracking',Financial reporting',Payment reminders'],
             badge: 'Finance',
             color: 'from-yellow-500 to-amber-500'
         },
@@ -102,7 +102,7 @@ export default function Page() {
             category: 'cloud',
             price: '$79/month',
             rating: 4.8,
-            features['Multi-cloud support',Cost optimization',Performance monitoring',Security compliance'],;
+            features['Multi-cloud support',Cost optimization',Performance monitoring',Security compliance'],
             badge: 'Enterprise',
             color: 'from-indigo-500 to-purple-500'
         },
@@ -115,14 +115,14 @@ export default function Page() {
             category: 'ai-ml',
             price: '$45/month',
             rating: 4.7,
-            features['AI-powered analysis',Competitor insights',Keyword research',Performance tracking'],;
+            features['AI-powered analysis',Competitor insights',Keyword research',Performance tracking'],
             badge: 'SEO',
             color: 'from-emerald-500 to-blue-500'
 
-    ];
+    ],
     const filteredServices = activeCategory === 'all'
         ? microSaasServices
-        : microSaasServices.filter(service => service.category === activeCategory);"
+        : microSaasServices.filter(service => service.category === activeCategory),"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark/50 via-zion-slate/30 to-zion-blue-dark/50">"
       <div className="container mx-auto px-4">
         {/* Header */}"

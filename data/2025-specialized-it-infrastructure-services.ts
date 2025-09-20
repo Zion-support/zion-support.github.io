@@ -1,48 +1,48 @@
 export interface SpecializedITInfrastructureService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [
   {
     id: 'edge-computing-optimization-platform',
@@ -52,16 +52,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     period: '/month',
     description: 'Advanced edge computing optimization platform that intelligently distributes workloads, manages resources, and optimizes performance across distributed edge locations for maximum efficiency and cost savings.',
     features: [
-      'Intelligent workload distribution',
-      'Resource optimization',
-      'Performance monitoring',
-      'Cost management',
-      'Edge location management',
-      'Load balancing',
-      'Real-time analytics',
-      'Automated scaling',
-      'Security management',
-      'Compliance monitoring'
+      'Intelligent workload distributionResource optimization',
+      'Performance monitoringCost management',
+      'Edge location managementLoad balancing',
+      'Real-time analyticsAutomated scaling',
+      'Security managementCompliance monitoring'
     ],
     popular: true,
     icon: '🌐',
@@ -97,16 +92,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     period: '/month',
     description: 'Next-generation network infrastructure designed to be quantum-ready, featuring quantum-resistant encryption, advanced routing algorithms, and future-proof architecture for the quantum computing era.',
     features: [
-      'Quantum-resistant encryption',
-      'Advanced routing algorithms',
-      'Network virtualization',
-      'SDN capabilities',
-      'Security monitoring',
-      'Performance optimization',
-      'Scalability management',
-      'Compliance features',
-      'API integration',
-      'Analytics dashboard'
+      'Quantum-resistant encryptionAdvanced routing algorithms',
+      'Network virtualizationSDN capabilities',
+      'Security monitoringPerformance optimization',
+      'Scalability managementCompliance features',
+      'API integrationAnalytics dashboard'
     ],
     popular: false,
     icon: '🔮',
@@ -123,7 +113,7 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack'],
     useCases: ['Government networks, Financial networks, Healthcare networks, Research networks, Defense networks'],
     roi: 'Critical infrastructure organizations report priceless value for future security',
-    competitors: ['No direct competitors yet', 'Traditional network vendors'],
+    competitors: ['No direct competitors yetTraditional network vendors'],
     marketSize: '$2.1B quantum networking market',
     growthRate: '200% annual growth',
     contactInfo: contact,
@@ -142,16 +132,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     period: '/month',
     description: 'Intelligent DevOps automation platform that autonomously manages deployment pipelines, infrastructure provisioning, monitoring, and optimization using AI and machine learning for maximum efficiency.',
     features: [
-      'Automated CI/CD pipelines',
-      'Infrastructure as Code',
-      'Intelligent monitoring',
-      'Auto-scaling',
-      'Performance optimization',
-      'Security scanning',
-      'Compliance automation',
-      'Cost optimization',
-      'Real-time analytics',
-      'Integration capabilities'
+      'Automated CI/CD pipelinesInfrastructure as Code',
+      'Intelligent monitoringAuto-scaling',
+      'Performance optimizationSecurity scanning',
+      'Compliance automationCost optimization',
+      'Real-time analyticsIntegration capabilities'
     ],
     popular: true,
     icon: '⚡',
@@ -187,16 +172,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     period: '/month',
     description: 'Comprehensive zero trust security framework that continuously verifies every user, device, and connection while providing adaptive access control and real-time threat detection.',
     features: [
-      'Continuous verification',
-      'Adaptive access control',
-      'Threat detection',
-      'Identity management',
-      'Device trust scoring',
-      'Network segmentation',
-      'Behavioral analytics',
-      'Compliance reporting',
-      'API security',
-      'Integration capabilities'
+      'Continuous verificationAdaptive access control',
+      'Threat detectionIdentity management',
+      'Device trust scoringNetwork segmentation',
+      'Behavioral analyticsCompliance reporting',
+      'API securityIntegration capabilities'
     ],
     popular: true,
     icon: '🛡️',
@@ -232,16 +212,11 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     period: '/month',
     description: 'Advanced data center management platform that uses AI to optimize power consumption, cooling systems, server utilization, and overall efficiency for maximum cost savings and performance.',
     features: [
-      'Power optimization',
-      'Cooling management',
-      'Server utilization',
-      'Capacity planning',
-      'Energy efficiency',
-      'Performance monitoring',
-      'Predictive maintenance',
-      'Cost analytics',
-      'Compliance reporting',
-      'Integration capabilities'
+      'Power optimizationCooling management',
+      'Server utilizationCapacity planning',
+      'Energy efficiencyPerformance monitoring',
+      'Predictive maintenanceCost analytics',
+      'Compliance reportingIntegration capabilities'
     ],
     popular: false,
     icon: '🏢',
@@ -269,4 +244,4 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     rating: 4.6,
     reviews: 34
   }
-];
+],

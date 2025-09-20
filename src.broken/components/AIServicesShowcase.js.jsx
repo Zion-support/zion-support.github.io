@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
+import { Brain, Cpu, Database, Globe, Zap, ArrowRight, Code, Bot, Scan  } from 'lucide-react',
+import { Link  } from 'react-router-dom',
 ,
     {
 
@@ -12,7 +12,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.8,
         users: 8920,
         price: 'From $149/month',
-        features['Real-time processing',Custom models',Batch processing',SDK'],;
+        features['Real-time processing',Custom models',Batch processing',SDK'],
         icon: Cpu,
         color: 'from-blue-500 to-blue-700',
         status: 'beta'
@@ -26,7 +26,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.7,
         users: 12340,
         price: 'From $199/month',
-        features['Predictive analytics',Real-time insights',Custom dashboards',API'],;
+        features['Predictive analytics',Real-time insights',Custom dashboards',API'],
         icon: Database,
         color: 'from-green-500 to-green-700',
         status: 'active'
@@ -40,7 +40,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.6,
         users: 5670,
         price: 'From $299/month',
-        features['Global deployment',Auto-scaling',Load balancing',Monitoring'],;
+        features['Global deployment',Auto-scaling',Load balancing',Monitoring'],
         icon: Globe,
         color: 'from-orange-500 to-orange-700',
         status: 'new'
@@ -54,7 +54,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.8,
         users: 7420,
         price: 'From $199/month',
-        features['PR annotations',OWASP checks',Refactor suggestions'],;
+        features['PR annotations',OWASP checks',Refactor suggestions'],
         icon: Code,
         color: 'from-cyan-500 to-blue-600',
         status: 'active'
@@ -68,7 +68,7 @@ import { Link  } from 'react-router-dom';
         rating: 4.7,
         users: 6120,
         price: 'From $299/month',
-        features['Policy-aware retrieval',Redaction',Human-in-the-loop'],;
+        features['Policy-aware retrieval',Redaction',Human-in-the-loop'],
         icon: Bot,
         color: 'from-purple-600 to-fuchsia-600',
         status: 'active'
@@ -82,21 +82,21 @@ import { Link  } from 'react-router-dom';
         rating: 4.6,
         users: 3180,
         price: 'From $499/month',
-        features['Offline inference',Model drift alerts',Web dashboard'],;
+        features['Offline inference',Model drift alerts',Web dashboard'],
         icon: Scan,
         color: 'from-emerald-500 to-teal-600',
         status: 'beta'
     }
-];
-const categories = ['All',Conversational AI',Computer Vision',Data Analytics',Infrastructure',Developer AI'];
+],
+const categories = ['All',Conversational AI',Computer Vision',Data Analytics',Infrastructure',Developer AI'],
 export function AIServicesShowcase() {
 
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [selectedService, setSelectedService] = useState(null);
-    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [selectedCategory, setSelectedCategory] = useState('All'),
+    const [selectedService, setSelectedService] = useState(null),
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true),
     const filteredServices = selectedCategory === 'All'
         ? aiServices
-        : aiServices.filter(service => service.category === selectedCategory) ;
+        : aiServices.filter(service => service.category === selectedCategory) ,
     const getStatusBadge = (status) => {
 
         const statusConfig = {
@@ -107,11 +107,11 @@ export function AIServicesShowcase() {
 },
             beta: { color: 'bg-yellow-500', text: 'Beta' },
             new: { color: 'bg-blue-500', text: 'New' }
-        };
-        const config = statusConfig[status];
+        },
+        const config = statusConfig[status],
         return (<span className={`${config.color} text-white text-xs px-2 py-1 rounded-full font - medium`}>
         {config.text}
-      </span>) };
+      </span>) },
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -124,7 +124,7 @@ export function AIServicesShowcase() {
                 delayChildren: 0.2
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
@@ -142,7 +142,7 @@ export function AIServicesShowcase() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background with animated gradients */}"
       <div className="absolute inset-0">"

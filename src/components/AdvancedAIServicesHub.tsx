@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Zap, 
   Shield, 
   TrendingUp, 
@@ -13,139 +13,92 @@ import {
   Star,
   CheckCircle,
   Rocket
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 interface AIService {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  features: string[];
-  pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
+  id: string,name: string,description: string,category: string,features: string[],pricing: {
+    starter: number,professional: number,enterprise: number
   };
-  icon: React.ComponentType<any>;
-  route: string;
-  status: 'active' | 'beta' | 'coming-soon';
+  icon: React.ComponentType<any>,route: string,status: 'active' | 'beta' | 'coming-soon'
 }
 
 const AdvancedAIServicesHub: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
 
   const aiServices: AIService[] = [
     {
-      id: 'ai-project-management',
-      name: 'AI-Powered Project Management',
-      description: 'Intelligent project planning, resource allocation, and progress tracking with AI-driven insights.',
-      category: 'Project Management',
-      features: ['Smart Task Prioritization', 'Resource Optimization', 'Predictive Analytics', 'Risk Assessment'],
-      pricing: { starter: 99, professional: 299, enterprise: 599 },
-      icon: Brain,
-      route: '/services/ai-project-management',
-      status: 'active'
-    },
+      id: 'ai-project-management',name: 'AI-Powered Project Management',description: 'Intelligent project planning, resource allocation, and progress tracking with AI-driven insights.',
+      category: 'Project Management',features: ['Smart Task PrioritizationResource Optimization', 'Predictive AnalyticsRisk Assessment'],
+      pricing: { starter: 99, professional: 299, enterprise: 599 };
+      icon: Brain,route: '/services/ai-project-management',status: 'active'
+    };
     {
-      id: 'ai-customer-support',
-      name: 'AI Customer Support Automation',
-      description: '24/7 intelligent customer support with automated responses and sentiment analysis.',
-      category: 'Customer Support',
-      features: ['Intelligent Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Multi-language Support'],
-      pricing: { starter: 79, professional: 199, enterprise: 399 },
-      icon: Users,
-      route: '/services/ai-customer-support-automation',
-      status: 'active'
-    },
+      id: 'ai-customer-support',name: 'AI Customer Support Automation',description: '24/7 intelligent customer support with automated responses and sentiment analysis.',category: 'Customer Support',features: ['Intelligent ChatbotsTicket Routing', 'Sentiment AnalysisMulti-language Support'],
+      pricing: { starter: 79, professional: 199, enterprise: 399 };
+      icon: Users,route: '/services/ai-customer-support-automation',status: 'active'
+    };
     {
-      id: 'ai-financial-analytics',
-      name: 'AI Financial Analytics Platform',
-      description: 'Advanced financial forecasting, risk assessment, and compliance monitoring.',
-      category: 'Financial Services',
-      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics'],
-      pricing: { starter: 149, professional: 399, enterprise: 799 },
-      icon: TrendingUp,
-      route: '/services/ai-financial-analytics',
-      status: 'active'
-    },
+      id: 'ai-financial-analytics',name: 'AI Financial Analytics Platform',description: 'Advanced financial forecasting, risk assessment, and compliance monitoring.',
+      category: 'Financial Services',features: ['Financial ForecastingRisk Assessment', 'Compliance MonitoringReal-time Analytics'],
+      pricing: { starter: 149, professional: 399, enterprise: 799 };
+      icon: TrendingUp,route: '/services/ai-financial-analytics',status: 'active'
+    };
     {
-      id: 'ai-marketing-automation',
-      name: 'AI Marketing Automation',
-      description: 'Intelligent audience segmentation, content personalization, and campaign optimization.',
-      category: 'Marketing',
-      features: ['Audience Segmentation', 'Content Personalization', 'Campaign Optimization', 'ROI Tracking'],
-      pricing: { starter: 129, professional: 349, enterprise: 699 },
-      icon: Globe,
-      route: '/services/ai-marketing-automation',
-      status: 'active'
-    },
+      id: 'ai-marketing-automation',name: 'AI Marketing Automation',description: 'Intelligent audience segmentation, content personalization, and campaign optimization.',
+      category: 'Marketing',features: ['Audience SegmentationContent Personalization', 'Campaign OptimizationROI Tracking'],
+      pricing: { starter: 129, professional: 349, enterprise: 699 };
+      icon: Globe,route: '/services/ai-marketing-automation',status: 'active'
+    };
     {
-      id: 'ai-cybersecurity',
-      name: 'AI Cybersecurity Platform',
-      description: 'Advanced threat detection and automated security responses powered by machine learning.',
-      category: 'Cybersecurity',
-      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Compliance Reporting'],
-      pricing: { starter: 199, professional: 499, enterprise: 999 },
-      icon: Shield,
-      route: '/services/ai-cybersecurity',
-      status: 'beta'
-    },
+      id: 'ai-cybersecurity',name: 'AI Cybersecurity Platform',description: 'Advanced threat detection and automated security responses powered by machine learning.',category: 'Cybersecurity',features: ['Threat DetectionBehavioral Analysis', 'Automated ResponseCompliance Reporting'],
+      pricing: { starter: 199, professional: 499, enterprise: 999 };
+      icon: Shield,route: '/services/ai-cybersecurity',status: 'beta'
+    };
     {
-      id: 'ai-healthcare',
-      name: 'AI Healthcare Analytics',
-      description: 'Patient data analysis, diagnosis assistance, and treatment optimization.',
-      category: 'Healthcare',
-      features: ['Patient Analytics', 'Diagnosis Support', 'Treatment Optimization', 'Predictive Medicine'],
-      pricing: { starter: 299, professional: 699, enterprise: 1299 },
-      icon: Cpu,
-      route: '/services/ai-healthcare',
-      status: 'coming-soon'
+      id: 'ai-healthcare',name: 'AI Healthcare Analytics',description: 'Patient data analysis, diagnosis assistance, and treatment optimization.',
+      category: 'Healthcare',features: ['Patient AnalyticsDiagnosis Support', 'Treatment OptimizationPredictive Medicine'],
+      pricing: { starter: 299, professional: 699, enterprise: 1299 };
+      icon: Cpu,route: '/services/ai-healthcare',status: 'coming-soon'
     }
   ];
-
-  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
 
   const filteredServices = aiServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'status':
-        return a.status.localeCompare(b.status);
-      default:
-        return 0;
+        return a.status.localeCompare(b.status),
+      default: return 0
     }
   });
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-500';
-      case 'beta': return 'bg-yellow-500';
-      case 'coming-soon': return 'bg-blue-500';
-      default: return 'bg-gray-500';
+      case 'beta': return 'bg-yellow-500',
+      case 'coming-soon': return 'bg-blue-500',
+      default: return 'bg-gray-500'
     }
   };
-
   const getStatusText = (status: string) => {
     switch (status) {
       case 'active': return 'Live';
-      case 'beta': return 'Beta';
-      case 'coming-soon': return 'Coming Soon';
-      default: return 'Unknown';
+      case 'beta': return 'Beta',
+      case 'coming-soon': return 'Coming Soon',
+      default: return 'Unknown'
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
@@ -309,7 +262,7 @@ const AdvancedAIServicesHub: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -335,7 +288,6 @@ const AdvancedAIServicesHub: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AdvancedAIServicesHub;

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Operations Platform | Zion Tech Group';
-  description: 'A practical guide to build an autonomous, outcome-driven operations platform with AI agents, event-driven architecture, and human-in-the-loop controls.',
-};
+  title: 'AI 2026: Autonomous Operations Platform | Zion Tech Group',
+  description: 'A practical guide to build an autonomous, outcome-driven operations platform with AI agents, event-driven architecture, and human-in-the-loop controls.'
+},
 export default function AutonomousOpsPlatform2026() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -46,6 +46,5 @@ export default function AutonomousOpsPlatform2026() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

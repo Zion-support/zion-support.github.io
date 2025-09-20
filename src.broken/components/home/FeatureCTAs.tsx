@@ -1,12 +1,12 @@
 
-import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+import { useTranslation } from "react-i18next",
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 
   return ("
     <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">"
@@ -67,7 +67,7 @@ import { cn } from "@/lib/utils";
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Contact our team to discuss your specific needs and discover how our solutions can help your business grow
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link to="/contact">"
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-3">
                   Contact Us"
@@ -78,10 +78,10 @@ import { cn } from "@/lib/utils";
                   View All Services
                 </Button>
               </Link>
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </section>;
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+    </section>,
   )}
 '"

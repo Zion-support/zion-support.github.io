@@ -1,6 +1,6 @@
-import React from 'react';
-import { Steps, Step } from '@/components/ui/steps';
-;
+import React from 'react',
+import { Steps, Step } from '@/components/ui/steps',
+,
 export default function CheckoutProgress({ currentStep, className }) {
 
   return ()
@@ -9,6 +9,6 @@ export default function CheckoutProgress({ currentStep, className }) {
       <Step status="incomplete" label="Payment" />"
       <Step status="incomplete" label="Review" />
     </Steps>
-  );
+  ),
 }
 '"

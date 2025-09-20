@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { 
-  Menu, 
+  Menu,
   X, 
   Search, 
   User, 
@@ -11,60 +11,54 @@ import {
   Settings,
   Sun,
   Moon
-} from 'lucide-react';
-
+} from "lucide-react";
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [scrolled, setScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState(null),
+  const [isDarkMode, setIsDarkMode] = useState(false),
+  const location = useLocation(),
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+      setIsScrolled(window.scrollY > 10),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
   }, []);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
-
   const navigation = [
-    { name: 'Home', href: '/', current: location.pathname === '/' },
-    { name: 'About', href: '/about', current: location.pathname === '/about' },
-    { name: 'Services', href: '/services', current: location.pathname === '/services' },
-    { name: 'All Services', href: '/comprehensive-services', current: location.pathname === '/comprehensive-services' },
-    { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+    { name: 'Home', href: '/', current: location.pathname === '/' };
+    { name: 'About', href: '/about', current: location.pathname === '/about' };
+    { name: 'Services', href: '/services', current: location.pathname === '/services' };
+    { name: 'All Services', href: '/comprehensive-services', current: location.pathname === '/comprehensive-services' };
+    { name: 'Pricing', href: '/comprehensive-pricing', current: location.pathname === '/comprehensive-pricing' };
+    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' }
   ];
-
   const servicesDropdown = [
-    { name: 'AI Solutions', href: '/comprehensive-services#ai' },
-    { name: 'Quantum Technology', href: '/comprehensive-services#quantum' },
-    { name: 'Cybersecurity', href: '/comprehensive-services#cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' },
-    { name: 'DevOps', href: '/comprehensive-services#devops' },
+    { name: 'AI Solutions', href: '/comprehensive-services#ai' };
+    { name: 'Quantum Technology', href: '/comprehensive-services#quantum' };
+    { name: 'Cybersecurity', href: '/comprehensive-services#cybersecurity' };
+    { name: 'Cloud Infrastructure', href: '/comprehensive-services#cloud' };
+    { name: 'DevOps', href: '/comprehensive-services#devops' }
   ];
-
   const handleSearch = (e) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (searchQuery.trim()) {
       // Implement search functionality
-      console.log('Searching for:', searchQuery);
+      console.log('Searching for:', searchQuery),
     }
-    return location.pathname.startsWith(path);
-  };
+    return location.pathname.startsWith(path),
+  },
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(!isDarkMode),
     // Here you would typically update the theme context
   };
-
   return (
     <>
       <header 
@@ -305,7 +299,7 @@ export function AppHeader() {
       </header>
       
       {/* Spacer to prevent content from hiding behind fixed header */}
-      <div className="h-16 lg:h-20"></div>
+      <div className="h-16 lg: h-20"></div>
     </>
-  );
+  )
 }

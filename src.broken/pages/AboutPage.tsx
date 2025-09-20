@@ -3,7 +3,7 @@
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
             About Page
@@ -21,8 +21,8 @@ export default function AboutPage() {
             Get Started
           </Link>
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 import {
   Users,
   Target,
@@ -71,43 +71,43 @@ import {
   Twitter,
   Github,
   Facebook,
-  Instagram,
-} from 'lucide-react';
+  Instagram
+} from 'lucide-react',
 
 export function AboutPage() {
   const companyStats = [
     { label: 'Years of Experience', value: '5+', icon: Award },
     { label: 'Team Members', value: '50+', icon: Users },
     { label: 'Projects Completed', value: '200+', icon: Rocket },
-    { label: 'Countries Served', value: '25+', icon: Globe },
-  ];
+    { label: 'Countries Served', value: '25+', icon: Globe }
+  ],
 
   const coreValues = [
     {
       title: 'Innovation First',
               description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
       icon: Sparkles,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Client Success',
       description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.',
       icon: Target,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Excellence',
       description: 'We maintain the highest standards in everything we do, from code quality to customer service.',
       icon: Star,
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Integrity',
       description: 'We build trust through honest communication, transparent processes, and ethical business practices.',
       icon: Shield,
-      color: 'from-green-500 to-emerald-500',
-    },
-  ];
+      color: 'from-green-500 to-emerald-500'
+    }
+  ],
 
   const teamMembers = [
     {
@@ -116,7 +116,7 @@ export function AboutPage() {
       bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
       image: '/images/team/kleber-santos.jpg',
       linkedin: '#',
-      twitter: '#',
+      twitter: '#'
     },
     {
       name: 'Dr. Sarah Chen',
@@ -124,7 +124,7 @@ export function AboutPage() {
       bio: 'PhD in Computer Science specializing in artificial intelligence and machine learning.',
       image: '/images/team/sarah-chen.jpg',
       linkedin: '#',
-      twitter: '#',
+      twitter: '#'
     },
     {
       name: 'Marcus Rodriguez',
@@ -132,7 +132,7 @@ export function AboutPage() {
       bio: 'Former government cybersecurity expert with deep knowledge of threat intelligence.',
       image: '/images/team/marcus-rodriguez.jpg',
       linkedin: '#',
-      twitter: '#',
+      twitter: '#'
     },
     {
       name: 'Dr. James Kim',
@@ -140,42 +140,42 @@ export function AboutPage() {
       bio: 'Leading researcher in quantum algorithms and quantum machine learning.',
       image: '/images/team/james-kim.jpg',
       linkedin: '#',
-      twitter: '#',
-    },
-  ];
+      twitter: '#'
+    }
+  ],
 
   const milestones = [
     {
       year: '2020',
       title: 'Company Founded',
-      description: 'Zion Tech Group was established with a vision to revolutionize technology solutions.',
+      description: 'Zion Tech Group was established with a vision to revolutionize technology solutions.'
     },
     {
       year: '2021',
       title: 'First AI Platform Launch',
-      description: 'Successfully launched our flagship AI-powered business intelligence platform.',
+      description: 'Successfully launched our flagship AI-powered business intelligence platform.'
     },
     {
       year: '2022',
       title: 'International Expansion',
-      description: 'Expanded operations to serve clients across 25+ countries worldwide.',
+      description: 'Expanded operations to serve clients across 25+ countries worldwide.'
     },
     {
       year: '2023',
       title: 'Quantum Computing Breakthrough',
-      description: 'Achieved significant milestones in quantum computing research and development.',
+      description: 'Achieved significant milestones in quantum computing research and development.'
     },
     {
       year: '2024',
       title: 'Industry Recognition',
-      description: 'Named one of the top 10 most innovative tech companies by TechCrunch.',
+      description: 'Named one of the top 10 most innovative tech companies by TechCrunch.'
     },
     {
       year: '2025',
       title: 'Future Vision',
-      description: 'Continuing to push boundaries in AI, quantum computing, and emerging technologies.',
-    },
-  ];
+      description: 'Continuing to push boundaries in AI, quantum computing, and emerging technologies.'
+    }
+  ],
 
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Machine learning, deep learning, and AI automation' },
@@ -183,8 +183,8 @@ export function AboutPage() {
     { name: 'Cybersecurity', icon: Shield, description: 'Advanced threat detection and security solutions' },
     { name: 'Cloud Infrastructure', icon: Cloud, description: 'Scalable cloud solutions and DevOps automation' },
     { name: 'Data Analytics', icon: BarChart3, description: 'Big data processing and business intelligence' },
-    { name: 'IoT & Edge Computing', icon: Cpu, description: 'Connected devices and edge processing solutions' },
-  ];
+    { name: 'IoT & Edge Computing', icon: Cpu, description: 'Connected devices and edge processing solutions' }
+  ],
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -396,7 +396,7 @@ export function AboutPage() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how our innovative technology solutions can transform your business 
@@ -423,5 +423,5 @@ export function AboutPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

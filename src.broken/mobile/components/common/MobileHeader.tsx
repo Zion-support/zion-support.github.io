@@ -1,17 +1,17 @@
-import React from "react";
-import { useRouter } from 'next/router';
+import React from "react",
+import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
 
 interface MobileHeaderProps {
-  title: string;
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
+  title: string,
+  showBack?: boolean,
+  showNotifications?: boolean,
+  showSettings?: boolean,
+  className?: string,
+  onNotificationsClick?: () => void,
+  onSettingsClick?: () => void
 }
 
 export function MobileHeader({
@@ -21,9 +21,9 @@ export function MobileHeader({
   showSettings = false,
   className,
   onNotificationsClick,
-  onSettingsClick,
+  onSettingsClick
 }: MobileHeaderProps) {
-  const router = useRouter();
+  const router = useRouter(),
 
   return (
     <header className={cn(
@@ -71,5 +71,5 @@ export function MobileHeader({
         </div>
       </div>
     </header>
-  );
+  ),
 }

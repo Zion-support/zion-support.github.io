@@ -1,20 +1,20 @@
 
-      "United States": "🇺🇸";
-      "United Kingdom": "🇬🇧";
-      "Canada": "🇨🇦";
-      "Australia": "🇦🇺";
-      "Germany": "🇩🇪";
-      "France": "🇫🇷";
-      "Japan": "🇯🇵";
-      "China": "🇨🇳";
-      "Brazil": "🇧🇷";
-      "India": "🇮🇳";
-      "Russia": "🇷🇺";
-      "Singapore": "🇸🇬";
-      "South Korea": "🇰🇷";
-      "South Africa": "🇿🇦";
+      "United States": "🇺🇸",
+      "United Kingdom": "🇬🇧",
+      "Canada": "🇨🇦",
+      "Australia": "🇦🇺",
+      "Germany": "🇩🇪",
+      "France": "🇫🇷",
+      "Japan": "🇯🇵",
+      "China": "🇨🇳",
+      "Brazil": "🇧🇷",
+      "India": "🇮🇳",
+      "Russia": "🇷🇺",
+      "Singapore": "🇸🇬",
+      "South Korea": "🇰🇷",
+      "South Africa": "🇿🇦",
       // Default if no flag is found,
-        : "bg-zion-blue-dark border-zion-blue-light",
+        : "bg-zion-blue-dark border-zion-blue-light"
     }`}>,
       <CardHeader className="pb-2">,
         <div className="flex items-center justify-between">,
@@ -23,8 +23,7 @@
             <h3 className="text-lg font-semibold text-white truncate">{country.country}</h3>,
           </div>,
           {isPopular && (,
-            <Badge className="bg-zion-purple text-white border-none">Popular</Badge>,
-          )}
+            <Badge className="bg-zion-purple text-white border-none">Popular</Badge>)}
         </div>,
       </CardHeader>,
       <CardContent className="pb-4">,
@@ -34,7 +33,7 @@
         <div className="space-y-2 text-zion-slate-light">,
           <div className="flex items-start">,
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />,
-            <span>Typical response time: {getResponseTime(country.country),}</span>,
+            <span>Typical response time: {getResponseTime(country.country)}</span>,
           </div>,
           <div className="flex items-start">,
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />,
@@ -50,13 +49,13 @@
           </div>,
         </div>,
       </CardContent>,
-      <CardFooter>,
+      <CardFooter>
           }`}
         >,
           Select Service,
         </Button>,
       </CardFooter>,
     </Card>,
-  );
+  ),
 }
 ,

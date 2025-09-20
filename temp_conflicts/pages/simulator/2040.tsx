@@ -1,19 +1,19 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import dynamic from 'next/dynamic';
-import { useMemo, useState } from 'react';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import dynamic from 'next/dynamic',
+import { useMemo, useState } from 'react',
 
 // Dynamic import placeholder for future map component
-const WorldHeatmap = dynamic(() => import('../../components/simulator/WorldHeatmap'), { ssr: false, loading: () => <div className="h-80 w-full bg-gray-50 dark:bg-gray-900 animate-pulse rounded" /> });
+const WorldHeatmap = dynamic(() => import('../../components/simulator/WorldHeatmap'), { ssr: false, loading: () => <div className="h-80 w-full bg-gray-50 dark:bg-gray-900 animate-pulse rounded" /> }),
 
 export type SimulationParams = {
-  instances: number;
-  globalUsageUsd: number;
-  talentPassports: number;
-  nationTokenIntegrations: number;
-  daoVotesPerMonth: number;
-  freelanceGdpSharePct: number;
-};
+  instances: number,
+  globalUsageUsd: number,
+  talentPassports: number,
+  nationTokenIntegrations: number,
+  daoVotesPerMonth: number,
+  freelanceGdpSharePct: number
+},
 
 const defaultParams: SimulationParams = {
   instances: 1200,
@@ -21,18 +21,16 @@ const defaultParams: SimulationParams = {
   talentPassports: 25_000_000,
   nationTokenIntegrations: 65,
   daoVotesPerMonth: 120_000_000,
-  freelanceGdpSharePct: 18,
-};
+  freelanceGdpSharePct: 18
+},
 
 const Simulator2040: NextPage = () => {
-  const [params, setParams] = useState<SimulationParams>(defaultParams);
+  const [params, setParams] = useState<SimulationParams>(defaultParams),
 
   const narrativeThreads = useMemo(() => [
-    'AI governs 40% of global micro-economies',
-    'Zion is a protocol inside gov ID systems',
-    'ZionGPT writes 70% of job contracts',
-    'ZION$ is used for UN-backed work credits',
-  ], []);
+    'AI governs 40% of global micro-economiesZion is a protocol inside gov ID systems',
+    'ZionGPT writes 70% of job contractsZION$ is used for UN-backed work credits'
+  ], []),
 
   return (
     <div>
@@ -74,10 +72,10 @@ const Simulator2040: NextPage = () => {
               </div>
             </div>
 
-            <div className="rounded border border-gray-200 dark:border-gray-800 p-4 space-y-4">
+            <div className="rounded border border-gray-200 dark: border-gray-800 p-4 space-y-4">
               <h2 className="font-medium">Scenario Outputs</h2>
               <ScenarioCard title="Scenario 1: Protocol → Protocol Nation" summary="Zion transitions from a protocol to a sovereign protocol-nation layer with embedded compliance and labor treaties." />
-              <ScenarioCard title="Scenario 2: Protocol under attack" summary="Coordinated regulatory and network attacks fragment liquidity; Zion forks governance to preserve mission." />
+              <ScenarioCard title="Scenario 2: Protocol under attack" summary="Coordinated regulatory and network attacks fragment liquidity, Zion forks governance to preserve mission." />
               <ScenarioCard title="Scenario 3: Protocol adopted by 10 UN countries" summary="UN-bloc pilots ZION$ for work credits and disaster response, standardizing identity and contract rails." />
             </div>
 
@@ -92,27 +90,27 @@ const Simulator2040: NextPage = () => {
         </section>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-function ParamInput({ label, value, onChange }: { label: string; value: number; onChange: (v: number) => void }) {
+function ParamInput({ label, value, onChange }: { label: string, value: number, onChange: (v: number) => void }) {
   return (
     <label className="text-sm space-y-1">
       <span className="block text-gray-600 dark:text-gray-300">{label}</span>
       <input type="number" className="w-full rounded border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-2" value={value} onChange={(e)=>onChange(Number(e.target.value))} />
     </label>
-  );
+  ),
 }
 
-function ScenarioCard({ title, summary }: { title: string; summary: string }) {
+function ScenarioCard({ title, summary }: { title: string, summary: string }) {
   return (
     <div className="rounded border border-gray-200 dark:border-gray-800 p-3">
       <div className="font-medium">{title}</div>
       <div className="text-sm text-gray-700 dark:text-gray-200">{summary}</div>
     </div>
-  );
+  ),
 }
 
-const defaultTimelinePrompt = `Project what Zion becomes by Year 10, assuming 1M users, global DAO sync, and AI-generated governance. Forecast tech, risk, and new use cases.`;
+const defaultTimelinePrompt = `Project what Zion becomes by Year 10, assuming 1M users, global DAO sync, and AI-generated governance. Forecast tech, risk, and new use cases.`,
 
-export default Simulator2040;
+export default Simulator2040,

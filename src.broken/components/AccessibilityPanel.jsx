@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ) ) }
@@ -7,26 +7,26 @@ export default function Page() {
 
                 // console.error('Failed to parse accessibility settings:', error)}
         }
-    }, []) ;
+    }, []) ,
     useEffect(() => {
         // Apply settings to document
-        applySettings(settings);
+        applySettings(settings),
         // Save to localStorage'
-        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
+        localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]),
     const applySettings = (newSettings) => {
 
-        const root = document.documentElement;
+        const root = document.documentElement,
         // High contrast
         if(newSettings.highContrast) {
 
-            root.style.setProperty('--high-contrast',1');
+            root.style.setProperty('--high-contrast',1'),
             root.classList.add('high-contrast')}
         else {
 
-            root.style.setProperty('--high-contrast',0');
+            root.style.setProperty('--high-contrast',0'),
             root.classList.remove('high-contrast')}
         // Font size'
-        root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
+        root.style.setProperty('--font-size', `${newSettings.fontSize}%`),
         // Reduced motion
         if(newSettings.reducedMotion) {
 
@@ -42,7 +42,7 @@ export default function Page() {
 
             root.style.setProperty('--focus-visible',none')}
         // Color blindness'
-        root.classList.remove('protanopia',deuteranopia',tritanopia');
+        root.classList.remove('protanopia',deuteranopia',tritanopia'),
         if(newSettings.colorBlindness !== 'none') {
 
             root.classList.add(newSettings.colorBlindness)}
@@ -53,10 +53,10 @@ export default function Page() {
         else {
 
             root.classList.remove('focus-visible')}
-    };
+    },
     const updateSetting = (key, value) => {
 
-        setSettings(prev => ({ ...prev, [key]: value }))};
+        setSettings(prev => ({ ...prev, [key]: value }))},
     const resetSettings = () => {
         const defaultSettings = {
 

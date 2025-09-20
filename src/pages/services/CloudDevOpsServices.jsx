@@ -1,14 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from "lucide-react";
 const CloudDevOpsServices = () => {
     const cloudServices = [
         {
-            title: "Cloud Migration & Strategy",
-            description: "Seamless migration to cloud platforms with strategic planning and execution.",
-            icon: Cloud,
-            features: [
-                "Multi-cloud Strategy",
+            title: "Cloud Migration & Strategy",description: "Seamless migration to cloud platforms with strategic planning and execution.",icon: Cloud,features: [
+                "Multi-cloud Strategy";
                 "Legacy System Migration",
                 "Cost Optimization",
                 "Performance Optimization",
@@ -16,11 +13,8 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
-            title: "DevOps Implementation",
-            description: "Streamline development and operations with modern DevOps practices and tools.",
-            icon: GitFork,
-            features: [
-                "CI/CD Pipeline Setup",
+            title: "DevOps Implementation",description: "Streamline development and operations with modern DevOps practices and tools.",icon: GitFork,features: [
+                "CI/CD Pipeline Setup";
                 "Infrastructure as Code",
                 "Automated Testing",
                 "Deployment Automation",
@@ -28,11 +22,8 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
-            title: "Container Orchestration",
-            description: "Manage and scale containerized applications with Kubernetes and Docker.",
-            icon: Server,
-            features: [
-                "Kubernetes Deployment",
+            title: "Container Orchestration",description: "Manage and scale containerized applications with Kubernetes and Docker.",icon: Server,features: [
+                "Kubernetes Deployment";
                 "Docker Containerization",
                 "Service Mesh",
                 "Auto-scaling",
@@ -40,11 +31,8 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
-            title: "Database Management",
-            description: "Optimize and manage databases in cloud environments for performance and reliability.",
-            icon: Database,
-            features: [
-                "Database Migration",
+            title: "Database Management",description: "Optimize and manage databases in cloud environments for performance and reliability.",icon: Database,features: [
+                "Database Migration";
                 "Performance Tuning",
                 "Backup & Recovery",
                 "High Availability",
@@ -52,11 +40,8 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
-            title: "Security & Compliance",
-            description: "Ensure cloud security and compliance with industry standards and best practices.",
-            icon: Shield,
-            features: [
-                "Identity & Access Management",
+            title: "Security & Compliance",description: "Ensure cloud security and compliance with industry standards and best practices.",icon: Shield,features: [
+                "Identity & Access Management";
                 "Network Security",
                 "Data Encryption",
                 "Compliance Auditing",
@@ -64,18 +49,15 @@ const CloudDevOpsServices = () => {
             ]
         },
         {
-            title: "Monitoring & Observability",
-            description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
-            icon: Monitor,
-            features: [
-                "Real-time Monitoring",
+            title: "Monitoring & Observability",description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",icon: Monitor,features: [
+                "Real-time Monitoring";
                 "Log Management",
                 "Performance Metrics",
                 "Alert Management",
                 "Troubleshooting Tools"
             ]
         }
-    ];
+    ],
     const benefits = [
         "Faster time to market with automated deployments",
         "Improved reliability and uptime",
@@ -83,7 +65,7 @@ const CloudDevOpsServices = () => {
         "Enhanced security and compliance",
         "Scalable infrastructure that grows with your business",
         "Better collaboration between development and operations teams"
-    ];
+    ],
     const technologies = [
         "AWS, Azure, GCP",
         "Kubernetes & Docker",
@@ -91,24 +73,18 @@ const CloudDevOpsServices = () => {
         "Jenkins & GitLab CI",
         "Prometheus & Grafana",
         "ELK Stack"
-    ];
+    ],
     const cloudPlatforms = [
         {
-            name: "Amazon Web Services",
-            description: "Leading cloud platform with comprehensive services",
-            features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
+            name: "Amazon Web Services",description: "Leading cloud platform with comprehensive services",features: ["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"]
         },
         {
-            name: "Microsoft Azure",
-            description: "Enterprise-grade cloud solutions for Windows environments",
-            features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
+            name: "Microsoft Azure",description: "Enterprise-grade cloud solutions for Windows environments",features: ["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"]
         },
         {
-            name: "Google Cloud Platform",
-            description: "Innovative cloud services with AI and ML capabilities",
-            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
+            name: "Google Cloud Platform",description: "Innovative cloud services with AI and ML capabilities",features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
         }
-    ];
+    ],
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
@@ -239,7 +215,7 @@ const CloudDevOpsServices = () => {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">
+            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover: shadow-lg transition-all duration-300">
                 <p className="text-slate-700 font-semibold">{tech}</p>
               </div>))}
           </div>
@@ -248,7 +224,7 @@ const CloudDevOpsServices = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Modernize Your Infrastructure?
           </h2>
@@ -266,6 +242,6 @@ const CloudDevOpsServices = () => {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default CloudDevOpsServices;

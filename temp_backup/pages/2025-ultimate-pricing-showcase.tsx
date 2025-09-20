@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import Layout from '../components/layout/Layout';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import Layout from '../components/layout/Layout',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Filter, Star, TrendingUp, Brain, Atom, Rocket, Shield, 
   Cloud, Target, Building, Users, Code, Sparkles, Zap, Eye, 
   Heart, Infinity, ArrowRight, Phone, Mail, MapPin, Globe,
   Award, Clock, CheckCircle, ArrowUpRight, ChevronDown, DollarSign,
   Crown, Zap as ZapIcon, Shield as ShieldIcon, Rocket as RocketIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our new services
-import { realInnovativeMicroSaas2025 } from '../data/2025-real-innovative-micro-saas';
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { ultimateInnovativeMicroSaas2025V2 } from '../data/2025-ultimate-innovative-micro-saas-v2';
-import { cuttingEdgeITServices2025V2 } from '../data/2025-cutting-edge-it-services-v2';
-import { innovativeAIServices2025V2 } from '../data/2025-innovative-ai-services-v2';
+import { realInnovativeMicroSaas2025 } from '../data/2025-real-innovative-micro-saas',
+import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
+import { ultimateInnovativeMicroSaas2025V2 } from '../data/2025-ultimate-innovative-micro-saas-v2',
+import { cuttingEdgeITServices2025V2 } from '../data/2025-cutting-edge-it-services-v2',
+import { innovativeAIServices2025V2 } from '../data/2025-innovative-ai-services-v2',
 
 const UltimatePricingShowcase2025: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
-  const [isExpanded, setIsExpanded] = useState<{ [key: string]: boolean }>({});
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
+  const [isExpanded, setIsExpanded] = useState<{ [key: string]: boolean }>({}),
 
   // Combine all services
   const allServices = [
@@ -32,98 +32,98 @@ const UltimatePricingShowcase2025: React.FC = () => {
     ...ultimateInnovativeMicroSaas2025V2,
     ...cuttingEdgeITServices2025V2,
     ...innovativeAIServices2025V2
-  ];
+  ],
 
   // Get unique categories and types
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
-  const types = ['all', ...Array.from(new Set(allServices.map(s => s.type)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))],
+  const types = ['all', ...Array.from(new Set(allServices.map(s => s.type)))],
 
   // Filter services
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesType = selectedType === 'all' || service.type === selectedType;
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesType = selectedType === 'all' || service.type === selectedType,
     
-    let matchesPrice = true;
+    let matchesPrice = true,
     if (priceRange !== 'all') {
-      const starterPrice = parseFloat(service.pricing.starter.replace(/[^0-9.]/g, ''));
+      const starterPrice = parseFloat(service.pricing.starter.replace(/[^0-9.]/g, '')),
       switch (priceRange) {
         case 'budget':
-          matchesPrice = starterPrice <= 299;
-          break;
+          matchesPrice = starterPrice <= 299,
+          break,
         case 'mid-range':
-          matchesPrice = starterPrice > 299 && starterPrice <= 799;
-          break;
+          matchesPrice = starterPrice > 299 && starterPrice <= 799,
+          break,
         case 'premium':
-          matchesPrice = starterPrice > 799 && starterPrice <= 1499;
-          break;
+          matchesPrice = starterPrice > 799 && starterPrice <= 1499,
+          break,
         case 'enterprise':
-          matchesPrice = starterPrice > 1499;
-          break;
+          matchesPrice = starterPrice > 1499,
+          break,
       }
     }
     
-    return matchesSearch && matchesCategory && matchesType && matchesPrice;
-  });
+    return matchesSearch && matchesCategory && matchesType && matchesPrice,
+  }),
 
   const toggleExpanded = (id: string) => {
-    setIsExpanded(prev => ({ ...prev, [id]: !prev[id] }));
-  };
+    setIsExpanded(prev => ({ ...prev, [id]: !prev[id] })),
+  },
 
   const getCategoryIcon = (category: string) => {
-    if (category.includes('AI')) return <Brain className="w-5 h-5" />;
-    if (category.includes('Quantum')) return <Atom className="w-5 h-5" />;
-    if (category.includes('Space')) return <Rocket className="w-5 h-5" />;
-    if (category.includes('Cybersecurity') || category.includes('Security')) return <Shield className="w-5 h-5" />;
-    if (category.includes('Cloud') || category.includes('IT')) return <Cloud className="w-5 h-5" />;
-    if (category.includes('Business')) return <Target className="w-5 h-5" />;
-    return <Sparkles className="w-5 h-5" />;
-  };
+    if (category.includes('AI')) return <Brain className="w-5 h-5" />,
+    if (category.includes('Quantum')) return <Atom className="w-5 h-5" />,
+    if (category.includes('Space')) return <Rocket className="w-5 h-5" />,
+    if (category.includes('Cybersecurity') || category.includes('Security')) return <Shield className="w-5 h-5" />,
+    if (category.includes('Cloud') || category.includes('IT')) return <Cloud className="w-5 h-5" />,
+    if (category.includes('Business')) return <Target className="w-5 h-5" />,
+    return <Sparkles className="w-5 h-5" />
+  },
 
   const getCategoryColor = (category: string) => {
-    if (category.includes('AI')) return 'from-purple-500 to-pink-500';
-    if (category.includes('Quantum')) return 'from-blue-500 to-cyan-500';
-    if (category.includes('Space')) return 'from-indigo-500 to-purple-500';
-    if (category.includes('Cybersecurity') || category.includes('Security')) return 'from-red-500 to-orange-500';
-    if (category.includes('Cloud') || category.includes('IT')) return 'from-emerald-500 to-teal-500';
-    if (category.includes('Business')) return 'from-yellow-500 to-orange-500';
-    return 'from-gray-500 to-slate-500';
-  };
+    if (category.includes('AI')) return 'from-purple-500 to-pink-500',
+    if (category.includes('Quantum')) return 'from-blue-500 to-cyan-500',
+    if (category.includes('Space')) return 'from-indigo-500 to-purple-500',
+    if (category.includes('Cybersecurity') || category.includes('Security')) return 'from-red-500 to-orange-500',
+    if (category.includes('Cloud') || category.includes('IT')) return 'from-emerald-500 to-teal-500',
+    if (category.includes('Business')) return 'from-yellow-500 to-orange-500',
+    return 'from-gray-500 to-slate-500'
+  },
 
   const getPricingTierIcon = (tier: string) => {
     switch (tier) {
       case 'starter':
-        return <ZapIcon className="w-5 h-5" />;
+        return <ZapIcon className="w-5 h-5" />,
       case 'professional':
-        return <ShieldIcon className="w-5 h-5" />;
+        return <ShieldIcon className="w-5 h-5" />,
       case 'enterprise':
-        return <Crown className="w-5 h-5" />;
+        return <Crown className="w-5 h-5" />,
       default:
-        return <Star className="w-5 h-5" />;
+        return <Star className="w-5 h-5" />
     }
-  };
+  },
 
   const getPricingTierColor = (tier: string) => {
     switch (tier) {
       case 'starter':
-        return 'from-green-500 to-emerald-500';
+        return 'from-green-500 to-emerald-500',
       case 'professional':
-        return 'from-blue-500 to-cyan-500';
+        return 'from-blue-500 to-cyan-500',
       case 'enterprise':
-        return 'from-purple-500 to-pink-500';
+        return 'from-purple-500 to-pink-500',
       default:
-        return 'from-gray-500 to-slate-500';
+        return 'from-gray-500 to-slate-500'
     }
-  };
+  },
 
   const stats = [
     { number: `${allServices.length}+`, label: 'Innovative Services', icon: Star },
     { number: '$200B+', label: 'Total Market Size', icon: TrendingUp },
     { number: '4', label: 'Pricing Tiers', icon: Crown },
     { number: '24/7', label: 'AI Support Available', icon: Brain }
-  ];
+  ],
 
   const pricingRanges = [
     { value: 'all', label: 'All Prices' },
@@ -131,7 +131,7 @@ const UltimatePricingShowcase2025: React.FC = () => {
     { value: 'mid-range', label: 'Mid-Range ($300-$799)' },
     { value: 'premium', label: 'Premium ($800-$1499)' },
     { value: 'enterprise', label: 'Enterprise ($1500+)' }
-  ];
+  ],
 
 const 2025-ultimate-pricing-showcase: React.FC = () => {
   return (
@@ -148,7 +148,7 @@ const 2025-ultimate-pricing-showcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default 2025-ultimate-pricing-showcase;
+export default 2025-ultimate-pricing-showcase,

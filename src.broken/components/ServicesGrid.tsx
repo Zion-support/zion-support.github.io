@@ -3,22 +3,22 @@ export default function ServicesGrid() {
   return (<div className="grid grid - cols - 1 md: anygrid - cols - 2 gap-8">
       {services.map ( (service, index) => (<motion.div
 =======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { LucideIcon } from 'lucide-react';
+import React from 'react',
+import { Link } from 'react-router-dom',
+import { CheckCircle, ArrowRight } from 'lucide-react',
+import { LucideIcon } from 'lucide-react',
 
 interface Service {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  href: string;
-  features: string[];
-  color: string;
+  title: string,
+  description: string,
+  icon: LucideIcon,
+  href: string,
+  features: string[],
+  color: string
 }
 
 interface ServicesGridProps {
-  services: Service[];
+  services: Service[]
 }
 
   return ()
@@ -74,8 +74,8 @@ export function ServicesGrid({ services }: ServicesGridProps) {
         </div>
       ))}
     </div>
-  );
+  ),
 }
 
-export default ServicesGrid;
+export default ServicesGrid,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

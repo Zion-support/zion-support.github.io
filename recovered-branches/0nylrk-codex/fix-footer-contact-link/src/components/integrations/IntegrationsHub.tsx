@@ -1,12 +1,12 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-} from "@/components/ui/card";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { IntegrationCards } from "./IntegrationCards";
-import { ZapierIntegration } from "./ZapierIntegration";
-import { Badge } from "@/components/ui/badge";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+} from "@/components/ui/card",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { IntegrationCards } from "./IntegrationCards",
+import { ZapierIntegration } from "./ZapierIntegration",
+import { Badge } from "@/components/ui/badge",
         <div className="flex gap-2">,
           <Button variant="outline">View Documentation</Button>,
           <Button>Connect New Integration</Button>,
@@ -64,13 +64,13 @@ import { Badge } from "@/components/ui/badge";
             </ul>,
           </CardContent>,
           <CardFooter className="pt-4">,
-      <Tabs value={activeTab,} onValueChange={setActiveTab} className="w-full">,
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
         <TabsList className="grid grid-cols-3 md: w-[400px]">,
             <Button variant="outline" className="w-full">View All Activity</Button>,
           </CardFooter>,
         </Card>,
       </div>,
-      <Tabs value={activeTab,} onValueChange={setActiveTab} className="w-full">,
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
         <TabsList className="grid grid-cols-3 md: w-[400px]">,
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>,
           <TabsTrigger value="zapier">Zapier</TabsTrigger>,
@@ -108,8 +108,8 @@ import { Badge } from "@/components/ui/badge";
         </div>,
       </Tabs>,
     </div>,
-  ),}
-;
-  );
+  )}
+,
+  ),
 }
 ,

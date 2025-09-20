@@ -1,6 +1,6 @@
 
-import { createNotification } from './createNotification';
-import { HireRequestNotificationParams } from './types';
+import { createNotification } from './createNotification',
+import { HireRequestNotificationParams } from './types',
 
 /**
  * Creates a hire request notification for admin and talent
@@ -16,11 +16,11 @@ export async function createHireRequestNotifications({
 }: HireRequestNotificationParams) {
   const projectInfo = projectType 
     ? `${projectType} project` 
-    : "project";
+    : "project",
   
   const summaryText = projectSummary 
     ? `: "${projectSummary}"` 
-    : "";
+    : "",
   
   // Create notification for talent
   const talentNotification = await createNotification({
@@ -32,7 +32,7 @@ export async function createHireRequestNotifications({
     sendEmail: true,
     actionUrl: '/dashboard',
     actionText: 'View Request'
-  });
+  }),
   
   // Create notification for admin if admin ID is provided
   if (adminId) {
@@ -45,17 +45,17 @@ export async function createHireRequestNotifications({
       sendEmail: true,
       actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
-    });
+    }),
     
     return {
       success: talentNotification.success && adminNotification.success,
       talentNotification,
       adminNotification
-    };
+    },
   }
   
   return {
     success: talentNotification.success,
     talentNotification
-  };
+  },
 }

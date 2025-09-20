@@ -1,1 +1,1 @@
-export default TestimonialsSection;
+export default TestimonialsSection,

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Shield, FileText, ExternalLink, CheckCircle, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function GDPRDSARPortal() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -17,10 +16,10 @@ export default function GDPRDSARPortal() {
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[ 
-                { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' },
-                { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' },
-                { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
-                { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' },
+                { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' };
+                { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' };
+                { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' };
+                { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' }
               ].map((f) => (
                 <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>

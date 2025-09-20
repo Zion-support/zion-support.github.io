@@ -14,13 +14,12 @@ export default function TransportationLogisticsSolutions() {,
           <p className="text-gray-300">We help optimize routes, reduce costs, and increase reliability with AI-driven logistics platforms.</p>,
         </section>,
       </div>,
-    </>,
-  ),
-};
+    </>)
+},
   } catch (error) {,
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" ,});
+    console.error("Error:", error),
+    return res.status(500).json({ error: "Internal server error" }),
   }
-,
+
 }
 ,

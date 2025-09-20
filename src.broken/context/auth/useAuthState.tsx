@@ -3,49 +3,49 @@
 :src/context/auth/useAuthState.tsx
 
 interface User {
-  id: string;
-  email: string;
-  displayName?: string;
-  avatar?: string;
-  role?: string;
-  isEmailVerified?: boolean;
-  createdAt?: string;
+  id: string,
+  email: string,
+  displayName?: string,
+  avatar?: string,
+  role?: string,
+  isEmailVerified?: boolean,
+  createdAt?: string,
   updatedAt?: string
 }
 
 interface AuthTokens {
-  accessToken: string | null;
+  accessToken: string | null,
   refreshToken: string | null}
 
-  accessToken: string | null;
+  accessToken: string | null,
   refreshToken: string | null
 }
-;
+,
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unknown {
-  const [user, setUser] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState<typeof true>(true);
-  const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0);
+  const [user, setUser] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState<typeof true>(true),
+  const [onboardingStep, setOnboardingStep] = useState<typeof 0>(0),
   const [tokens, setTokens] = useState<any>({
 
     accessToken: null,
     refreshToken: null
-  });
+  }),
 
   useEffect(() => {
     // Check for existing auth state on mount
 :src/context/auth/useAuthState.tsx
     
-        if(typeof window !== 'null') {;
+        if(typeof window !== 'null') {,
           
           if(auth) {
 
-        if(typeof window !== 'null') {;
+        if(typeof window !== 'null') {,
           
           if(auth) {
             
             if(parsed.user && parsed.token) {
 
-              setUser(parsed.user);
+              setUser(parsed.user),
               setTokens({
 
                 accessToken: parsed.token,
@@ -64,17 +64,17 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
         // console.error('Error checking auth state:', error)} finally {
 
         setIsLoading(false)}
-    };
+    },
 
-    checkAuthState()}, []);
+    checkAuthState()}, []),
 
 /**
  * Custom hook to manage auth state
  */
 export function useAuthState() {
-  const [user, setUser] = useState<UserProfile | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [onboardingStep, setOnboardingStep] = useState<string | null>(null);
+  const [user, setUser] = useState<UserProfile | null>(null),
+  const [isLoading, setIsLoading] = useState<boolean>(true),
+  const [onboardingStep, setOnboardingStep] = useState<string | null>(null),
   
   return {
 
@@ -84,6 +84,6 @@ export function useAuthState() {
     setIsLoading,
     onboardingStep,
     setOnboardingStep
-  };
+  },
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

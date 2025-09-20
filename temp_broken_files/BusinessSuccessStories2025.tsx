@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   ArrowRight,
@@ -9,113 +9,113 @@ import {,
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  DollarSign;
-  BarChart3;
-  Clock;
-  Building2,
-} from 'lucide-react';
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  DollarSign,
+  BarChart3,
+  Clock,
+  Building2
+} from 'lucide-react',
 const BusinessSuccessStories2025 = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [activeStorysetActiveStory] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [activeStorysetActiveStory] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const successStories = [,
     {,
-      id: 1;
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      logo: 'TC';
-      challenge: 'Manual data processing causing 40% efficiency loss';
-      solution: 'Implemented AI-powered automation suite';
+      id: 1,
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      logo: 'TC',
+      challenge: 'Manual data processing causing 40% efficiency loss',
+      solution: 'Implemented AI-powered automation suite',
       results: {,
-        efficiency: '+300%';
-        costSavings: '$2.5M';
-        timeSaved: '2000 hours/month';
-        roi: '450%',};
-      testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.';
-      author: 'Sarah Johnson';
-      role: 'CEO';
-      rating: 5;
-      image: '/api/placeholder/400/300',};
+        efficiency: '+300%',
+        costSavings: '$2.5M',
+        timeSaved: '2000 hours/month',
+        roi: '450%'},
+      testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
+      author: 'Sarah Johnson',
+      role: 'CEO',
+      rating: 5,
+      image: '/api/placeholder/400/300'},
     {,
-      id: 2;
-      company: 'Global Finance Inc';
-      industry: 'Financial Services';
-      logo: 'GF';
-      challenge: 'Security breaches costing millions in damages';
-      solution: 'Deployed advanced cybersecurity framework';
+      id: 2,
+      company: 'Global Finance Inc',
+      industry: 'Financial Services',
+      logo: 'GF',
+      challenge: 'Security breaches costing millions in damages',
+      solution: 'Deployed advanced cybersecurity framework',
       results: {,
-        security: '99.9%';
-        costSavings: '$5.2M';
-        incidents: '0 breaches';
-        compliance: '100%',};
-      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
-      author: 'Michael Chen';
-      role: 'CTO';
-      rating: 5;
-      image: '/api/placeholder/400/300',};
+        security: '99.9%',
+        costSavings: '$5.2M',
+        incidents: '0 breaches',
+        compliance: '100%'},
+      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
+      author: 'Michael Chen',
+      role: 'CTO',
+      rating: 5,
+      image: '/api/placeholder/400/300'},
     {,
-      id: 3;
-      company: 'Manufacturing Plus';
-      industry: 'Manufacturing';
-      logo: 'MP';
-      challenge: 'Supply chain inefficiencies causing delays';
-      solution: 'AI-driven supply chain optimization';
+      id: 3,
+      company: 'Manufacturing Plus',
+      industry: 'Manufacturing',
+      logo: 'MP',
+      challenge: 'Supply chain inefficiencies causing delays',
+      solution: 'AI-driven supply chain optimization',
       results: {,
-        efficiency: '+250%';
-        costSavings: '$3.8M';
-        deliveryTime: '-60%';
-        quality: '+95%',};
-      testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
-      author: 'Emily Rodriguez';
-      role: 'Operations Director';
-      rating: 5;
-      image: '/api/placeholder/400/300',};
+        efficiency: '+250%',
+        costSavings: '$3.8M',
+        deliveryTime: '-60%',
+        quality: '+95%'},
+      testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
+      author: 'Emily Rodriguez',
+      role: 'Operations Director',
+      rating: 5,
+      image: '/api/placeholder/400/300'},
     {,
-      id: 4;
-      company: 'HealthCare First';
-      industry: 'Healthcare';
-      logo: 'HF';
-      challenge: 'Patient data management and compliance issues';
-      solution: 'Comprehensive data management and compliance system';
+      id: 4,
+      company: 'HealthCare First',
+      industry: 'Healthcare',
+      logo: 'HF',
+      challenge: 'Patient data management and compliance issues',
+      solution: 'Comprehensive data management and compliance system',
       results: {,
-        efficiency: '+180%';
-        costSavings: '$1.9M';
-        compliance: '100%';
-        patientSatisfaction: '+85%',};
-      testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.';
-      author: 'Dr. James Wilson';
-      role: 'Chief Medical Officer';
-      rating: 5;
-      image: '/api/placeholder/400/300',}
-  ];
+        efficiency: '+180%',
+        costSavings: '$1.9M',
+        compliance: '100%',
+        patientSatisfaction: '+85%'},
+      testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.',
+      author: 'Dr. James Wilson',
+      role: 'Chief Medical Officer',
+      rating: 5,
+      image: '/api/placeholder/400/300'}
+  ],
   const overallStats = [,
-    { label: 'Projects 'Completedvalue: '1,200+'icon: Target ,};
-    { label: 'Average 'ROIvalue: '300%'icon: TrendingUp ,};
-    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star ,};
-    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign ,}
-  ];
+    { label: 'Projects 'Completedvalue: '1,200+'icon: Target },
+    { label: 'Average 'ROIvalue: '300%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star },
+    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign }
+  ],
   const industries = [,
-    { name: ''Technologycount: 45icon: Brain ,};
-    { name: ''Financecount: 32icon: DollarSign ,};
-    { name: ''Healthcarecount: 28icon: Shield ,};
-    { name: ''Manufacturingcount: 25icon: Building2 ,};
-    { name: ''Retailcount: 20icon: Globe ,};
-    { name: ''Educationcount: 15icon: BookOpen ,}
-  ];
+    { name: ''Technologycount: 45icon: Brain },
+    { name: ''Financecount: 32icon: DollarSign },
+    { name: ''Healthcarecount: 28icon: Shield },
+    { name: ''Manufacturingcount: 25icon: Building2 },
+    { name: ''Retailcount: 20icon: Globe },
+    { name: ''Educationcount: 15icon: BookOpen }
+  ],
   return (,
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -126,28 +126,27 @@ const BusinessSuccessStories2025 = () => {,
             Discover how businesses across industries have transformed their operations and achieved remarkable results with our solutions.,
           </p>,
         </div>,
-        {/* Overall Stats */,}
+        {/* Overall Stats */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
           {overallStats.map((statindex) => (,
-            <div key={index,} className="text-center">,
+            <div key={index} className="text-center">,
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">,
                 <stat.icon className="w-8 h-8 text-white" />,
               </div>,
               <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>,
               <div className="text-gray-600">{stat.label}</div>,
-            </div>,
-          ))}
+            </div>))}
         </div>,
         {/* Success Stories Grid */}
         <div className="grid lg: grid-cols-2 gap-8 mb-16">,
           {successStories.map((storyindex) => (,
             <div,
-              key={story.id,}
+              key={story.id}
               className="bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-all duration-300",
             >,
-              {/* Company Header */,}
+              {/* Company Header */}
               <div className="flex items-center justify-between mb-6">,
                 <div className="flex items-center space-x-4">,
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">,
@@ -160,8 +159,7 @@ const BusinessSuccessStories2025 = () => {,
                 </div>,
                 <div className="flex items-center space-x-1">,
                   {[...Array(story.rating)].map((_i) => (,
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />,
-                  ))}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />))}
                 </div>,
               </div>,
               {/* Challenge & Solution */}
@@ -200,7 +198,7 @@ const BusinessSuccessStories2025 = () => {,
                 <ArrowRight className="w-4 h-4 ml-1" />,
               </a>,
             </div>,
-          )),}
+          ))}
         </div>,
         {/* Industries Served */}
         <div,
@@ -212,17 +210,16 @@ const BusinessSuccessStories2025 = () => {,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">,
             {industries.map((industryindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover: shadow-xl transition-all duration-300",
               >,
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-4">,
                   <industry.icon className="w-6 h-6 text-white" />,
                 </div>,
-                <h4 className="font-semibold text-gray-900 mb-2">{industry.name,}</h4>,
+                <h4 className="font-semibold text-gray-900 mb-2">{industry.name}</h4>,
                 <p className="text-2xl font-bold text-green-600">{industry.count}+</p>,
                 <p className="text-sm text-gray-600">Projects</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* CTA Section */}
@@ -254,5 +251,5 @@ const BusinessSuccessStories2025 = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default BusinessSuccessStories2025;
+  )},
+export default BusinessSuccessStories2025,

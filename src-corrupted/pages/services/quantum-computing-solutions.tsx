@@ -11,6 +11,5 @@ const quantum-computing-solutions: React.FC = () => {,
           <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default quantum-computing-solutions;
+    </div>)},
+export default quantum-computing-solutions,

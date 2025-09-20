@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Code, 
+  Code,
   Zap, 
   Shield, 
   Cloud, 
@@ -38,142 +38,69 @@ import {
   Download,
   Play,
   ExternalLink
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 export default function Developers() {
   const apis = [
     {
-      name: 'AI Analytics API',
-      description: 'Access our AI-powered analytics and insights through RESTful APIs',
-      category: 'Analytics',
-      endpoints: ['/v1/analytics', '/v1/insights', '/v1/predictions'],
-      documentation: '/docs/api/analytics',
-      status: 'Production'
-    },
+      name: 'AI Analytics API',description: 'Access our AI-powered analytics and insights through RESTful APIs',category: 'Analytics',endpoints: ['/v1/analytics/v1/insights', '/v1/predictions'],
+      documentation: '/docs/api/analytics',status: 'Production'
+    };
     {
-      name: 'AI Workflow API',
-      description: 'Integrate AI workflow automation into your applications',
-      category: 'Automation',
-      endpoints: ['/v1/workflows', '/v1/tasks', '/v1/triggers'],
-      documentation: '/docs/api/workflows',
-      status: 'Production'
-    },
+      name: 'AI Workflow API',description: 'Integrate AI workflow automation into your applications',category: 'Automation',endpoints: ['/v1/workflows/v1/tasks', '/v1/triggers'],
+      documentation: '/docs/api/workflows',status: 'Production'
+    };
     {
-      name: 'AI Content API',
-      description: 'Generate and manage AI-powered content programmatically',
-      category: 'Content',
-      endpoints: ['/v1/content', '/v1/generation', '/v1/optimization'],
-      documentation: '/docs/api/content',
-      status: 'Beta'
-    },
+      name: 'AI Content API',description: 'Generate and manage AI-powered content programmatically',category: 'Content',endpoints: ['/v1/content/v1/generation', '/v1/optimization'],
+      documentation: '/docs/api/content',status: 'Beta'
+    };
     {
-      name: 'AI Security API',
-      description: 'Integrate AI-powered security and compliance features',
-      category: 'Security',
-      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],
-      documentation: '/docs/api/security',
-      status: 'Production'
+      name: 'AI Security API',description: 'Integrate AI-powered security and compliance features',category: 'Security',endpoints: ['/v1/security/v1/compliance', '/v1/threats'],
+      documentation: '/docs/api/security',status: 'Production'
     }
   ];
-
   const sdks = [
     {
-      name: 'JavaScript/TypeScript',
-      description: 'Official SDK for Node.js and browser environments',
-      version: 'v2.1.0',
-      downloads: '50K+',
-      repository: 'https://github.com/ziontechgroup/js-sdk',
-      documentation: '/docs/sdk/javascript'
-    },
+      name: 'JavaScript/TypeScript',description: 'Official SDK for Node.js and browser environments',version: 'v2.1.0',downloads: '50K+',repository: 'https://github.com/ziontechgroup/js-sdk',documentation: '/docs/sdk/javascript'
+    };
     {
-      name: 'Python',
-      description: 'Python SDK for AI and analytics integration',
-      version: 'v1.8.0',
-      downloads: '25K+',
-      repository: 'https://github.com/ziontechgroup/python-sdk',
-      documentation: '/docs/sdk/python'
-    },
+      name: 'Python',description: 'Python SDK for AI and analytics integration',version: 'v1.8.0',downloads: '25K+',repository: 'https://github.com/ziontechgroup/python-sdk',documentation: '/docs/sdk/python'
+    };
     {
-      name: 'Java',
-      description: 'Java SDK for enterprise applications',
-      version: 'v1.5.0',
-      downloads: '15K+',
-      repository: 'https://github.com/ziontechgroup/java-sdk',
-      documentation: '/docs/sdk/java'
-    },
+      name: 'Java',description: 'Java SDK for enterprise applications',version: 'v1.5.0',downloads: '15K+',repository: 'https://github.com/ziontechgroup/java-sdk',documentation: '/docs/sdk/java'
+    };
     {
-      name: 'Go',
-      description: 'Go SDK for high-performance applications',
-      version: 'v1.2.0',
-      downloads: '8K+',
-      repository: 'https://github.com/ziontechgroup/go-sdk',
-      documentation: '/docs/sdk/go'
+      name: 'Go',description: 'Go SDK for high-performance applications',version: 'v1.2.0',downloads: '8K+',repository: 'https://github.com/ziontechgroup/go-sdk',documentation: '/docs/sdk/go'
     }
   ];
-
   const tools = [
     {
-      name: 'API Playground',
-      description: 'Interactive API testing and exploration tool',
-      icon: Play,
-      href: '/api-playground',
-      category: 'Testing'
-    },
+      name: 'API Playground',description: 'Interactive API testing and exploration tool',icon: Play,href: '/api-playground',category: 'Testing'
+    };
     {
-      name: 'SDK Generator',
-      description: 'Generate custom SDKs for your preferred language',
-      icon: Code,
-      href: '/sdk-generator',
-      category: 'Development'
-    },
+      name: 'SDK Generator',description: 'Generate custom SDKs for your preferred language',icon: Code,href: '/sdk-generator',category: 'Development'
+    };
     {
-      name: 'API Documentation',
-      description: 'Comprehensive API reference and guides',
-      icon: BookOpen,
-      href: '/docs',
-      category: 'Reference'
-    },
+      name: 'API Documentation',description: 'Comprehensive API reference and guides',icon: BookOpen,href: '/docs',category: 'Reference'
+    };
     {
-      name: 'Code Examples',
-      description: 'Ready-to-use code samples and tutorials',
-      icon: Terminal,
-      href: '/examples',
-      category: 'Learning'
+      name: 'Code Examples',description: 'Ready-to-use code samples and tutorials',icon: Terminal,href: '/examples',category: 'Learning'
     }
   ];
-
   const quickStartSteps = [
     {
-      step: 1,
-      title: 'Get API Keys',
-      description: 'Sign up for a developer account and obtain your API keys',
-      action: 'Sign Up',
-      href: '/signup'
-    },
+      step: 1,title: 'Get API Keys',description: 'Sign up for a developer account and obtain your API keys',action: 'Sign Up',href: '/signup'
+    };
     {
-      step: 2,
-      title: 'Choose SDK',
-      description: 'Select the SDK for your preferred programming language',
-      action: 'View SDKs',
-      href: '#sdks'
-    },
+      step: 2,title: 'Choose SDK',description: 'Select the SDK for your preferred programming language',action: 'View SDKs',href: '#sdks'
+    };
     {
-      step: 3,
-      title: 'Install & Configure',
-      description: 'Install the SDK and configure with your API keys',
-      action: 'Get Started',
-      href: '/docs/quickstart'
-    },
+      step: 3,title: 'Install & Configure',description: 'Install the SDK and configure with your API keys',action: 'Get Started',href: '/docs/quickstart'
+    };
     {
-      step: 4,
-      title: 'Make First Call',
-      description: 'Test your integration with our sample endpoints',
-      action: 'Try API',
-      href: '/api-playground'
+      step: 4,title: 'Make First Call',description: 'Test your integration with our sample endpoints',action: 'Try API',href: '/api-playground'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -442,7 +369,7 @@ export default function Developers() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-cyan-400" />
@@ -493,5 +420,5 @@ export default function Developers() {
         </div>
       </section>
     </div>
-  );
+  )
 }

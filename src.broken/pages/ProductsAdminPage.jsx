@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Input } from '@/components / ui / input';
+import React, { useState } from 'react',
+import { Input } from '@/components / ui / input',
 
 export default function Page() {
-          : p) ) ;
-  };
+          : p) ) ,
+  },
   return (<AdminLayout>
       <div className="space - y-4">
         <div className="flex items - center justify -between">
@@ -43,5 +43,5 @@ export default function Page() {
           </Table>
         </div>
       </div>
-    </AdminLayout>) ;
+    </AdminLayout>) ,
 }

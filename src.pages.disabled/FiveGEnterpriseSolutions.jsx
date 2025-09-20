@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 interface FiveGEnterpriseSolutionsProps {,
-  // Add props here as needed,
+  // Add props here as needed
 }
 ,
 export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {,
@@ -8,8 +8,7 @@ export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsPr
     <div>,
       <h1>FiveGEnterpriseSolutions</h1>,
       <p>This component is currently under development.</p>,
-    </div>,
-  );
+    </div>),
 }
 }
 ,

@@ -1,13 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Globe, Phone, Mail, MapPin, 
   Brain, Atom, Shield, Rocket, Target, 
   Star, 
   Twitter, Linkedin, Youtube, Github, 
   ArrowUp, MessageCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 
 
@@ -138,12 +138,12 @@ const footerSections = [
       { name: 'Sales Inquiries', href: '/contact' }
     ]
   }
-];
+],
 
 export default function UltraFuturisticFooter2037() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+    window.scrollTo({ top: 0, behavior: 'smooth' }),
+  },
 
   const footerSections = [
     {
@@ -195,7 +195,7 @@ export default function UltraFuturisticFooter2037() {
         { name: 'Case Studies', href: '/case-studies' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -204,14 +204,14 @@ export default function UltraFuturisticFooter2037() {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
+  ],
 
   const stats = [
     { icon: Users, value: '500+', label: 'Global Clients' },
     { icon: Rocket, value: '50+', label: 'Countries Served' },
     { icon: Award, value: '99.9%', label: 'Uptime SLA' },
     { icon: Shield, value: '100%', label: 'Security Compliance' }
-  ];
+  ],
 
 const UltraFuturisticFooter2037: React.FC = () => {
   return (
@@ -219,7 +219,7 @@ const UltraFuturisticFooter2037: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2037</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2037;
+export default UltraFuturisticFooter2037,

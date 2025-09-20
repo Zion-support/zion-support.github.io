@@ -1,6 +1,6 @@
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NewsletterForm } from "@/components/NewsletterForm",
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
 
 export function Footer() {
   return (
@@ -67,11 +67,11 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-zion-blue-light">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-zion-slate text-sm">
-              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link to="/privacy-policy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms-of-service" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
               <Link to="/cookie-policy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Cookie Policy</Link>
@@ -80,5 +80,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

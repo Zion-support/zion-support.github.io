@@ -1,48 +1,48 @@
 export interface EmergingTechnologyService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
   {
     id: 'metaverse-business-platform',
@@ -52,16 +52,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive metaverse platform for businesses to create virtual offices, conduct meetings, host events, and provide immersive customer experiences in 3D virtual environments.',
     features: [
-      '3D virtual environment creation',
-      'Digital twin solutions',
-      'Virtual meeting spaces',
-      'Immersive customer experiences',
-      'VR/AR integration',
-      'Multi-user collaboration',
-      'Custom branding options',
-      'Analytics and insights',
-      'API integration',
-      'Mobile accessibility'
+      '3D virtual environment creationDigital twin solutions',
+      'Virtual meeting spacesImmersive customer experiences',
+      'VR/AR integrationMulti-user collaboration',
+      'Custom branding optionsAnalytics and insights',
+      'API integrationMobile accessibility'
     ],
     popular: true,
     icon: '🌐',
@@ -97,16 +92,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced quantum machine learning platform that leverages quantum computing to solve complex optimization problems, accelerate AI training, and provide quantum advantage for specific use cases.',
     features: [
-      'Quantum algorithm optimization',
-      'AI training acceleration',
-      'Complex problem solving',
-      'Quantum advantage analysis',
-      'Hybrid classical-quantum computing',
-      'Performance benchmarking',
-      'API access',
-      'Custom algorithm development',
-      'Integration capabilities',
-      'Expert consultation'
+      'Quantum algorithm optimizationAI training acceleration',
+      'Complex problem solvingQuantum advantage analysis',
+      'Hybrid classical-quantum computingPerformance benchmarking',
+      'API accessCustom algorithm development',
+      'Integration capabilitiesExpert consultation'
     ],
     popular: false,
     icon: '⚛️',
@@ -123,7 +113,7 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     integrations: ['IBM Quantum, Google Quantum, AWS Braket, Azure Quantum, Custom quantum hardware'],
     useCases: ['Drug discovery, Financial modeling, Optimization problems, AI training, Research applications'],
     roi: 'Research institutions report 1000%+ ROI for specific quantum advantage applications',
-    competitors: ['No direct competitors yet', 'Traditional ML platforms'],
+    competitors: ['No direct competitors yetTraditional ML platforms'],
     marketSize: '$1.2B quantum ML market',
     growthRate: '250% annual growth',
     contactInfo: contact,
@@ -142,16 +132,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive autonomous robotics platform that enables businesses to deploy intelligent robots for manufacturing automation, quality inspection, warehouse operations, and autonomous delivery.',
     features: [
-      'Robot fleet management',
-      'Autonomous navigation',
-      'Computer vision integration',
-      'Task automation',
-      'Safety monitoring',
-      'Performance analytics',
-      'Remote operation',
-      'Integration capabilities',
-      'Custom robot development',
-      '24/7 support'
+      'Robot fleet managementAutonomous navigation',
+      'Computer vision integrationTask automation',
+      'Safety monitoringPerformance analytics',
+      'Remote operationIntegration capabilities',
+      'Custom robot development24/7 support'
     ],
     popular: true,
     icon: '🤖',
@@ -187,16 +172,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Advanced brain-computer interface platform that enables direct communication between the brain and computers for medical applications, research, and assistive technology development.',
     features: [
-      'Neural signal processing',
-      'Real-time brain monitoring',
-      'Medical application support',
-      'Research tools',
-      'Safety protocols',
-      'Data analytics',
-      'Integration capabilities',
-      'Custom development',
-      'Compliance features',
-      'Expert consultation'
+      'Neural signal processingReal-time brain monitoring',
+      'Medical application supportResearch tools',
+      'Safety protocolsData analytics',
+      'Integration capabilitiesCustom development',
+      'Compliance featuresExpert consultation'
     ],
     popular: false,
     icon: '🧠',
@@ -232,16 +212,11 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     period: '/month',
     description: 'Comprehensive space technology platform that provides satellite operations, space data analytics, orbital mechanics, and space infrastructure management for commercial and research applications.',
     features: [
-      'Satellite operations management',
-      'Space data analytics',
-      'Orbital mechanics calculations',
-      'Ground station integration',
-      'Space weather monitoring',
-      'Launch coordination',
-      'Mission planning',
-      'Data visualization',
-      'API access',
-      'Expert consultation'
+      'Satellite operations managementSpace data analytics',
+      'Orbital mechanics calculationsGround station integration',
+      'Space weather monitoringLaunch coordination',
+      'Mission planningData visualization',
+      'API accessExpert consultation'
     ],
     popular: false,
     icon: '🚀',
@@ -269,4 +244,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     rating: 4.8,
     reviews: 18
   }
-];
+],

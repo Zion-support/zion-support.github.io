@@ -1,57 +1,57 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-];
+,
+],
 
-const categories = [;
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
-];
+const categories = [,
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 },
+],
 
-const pricingModels = [;
-  { id: 'all', name: 'All Pricing' },;
-  { id: 'monthly', name: 'Monthly' },;
-  { id: 'yearly', name: 'Yearly' },;
-  { id: 'one - time', name: 'One - time' },;
-  { id: 'usage - based', name: 'Usage - based' };
-];
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricing, setSelectedPricing] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState < any> ('rating') ;
-  const [viewMode, setViewMode] = useState < any> ('grid') ;
-  const [expandedService, setExpandedService] = useState < any> (null) ;
+const pricingModels = [,
+  { id: 'all', name: 'All Pricing' },
+  { id: 'monthly', name: 'Monthly' },
+  { id: 'yearly', name: 'Yearly' },
+  { id: 'one - time', name: 'One - time' },
+  { id: 'usage - based', name: 'Usage - based' },
+],
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPricing, setSelectedPricing] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES),
+  const [sortBy, setSortBy] = useState < any> ('rating') ,
+  const [viewMode, setViewMode] = useState < any> ('grid') ,
+  const [expandedService, setExpandedService] = useState < any> (null) ,
   useEffect(() => {
-    let filtered = MICRO_SAAS_SERVICES;
+    let filtered = MICRO_SAAS_SERVICES,
     if(selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory) }
     if(selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing) };
-    if(searchQuery.trim () ) {;
-      const query = searchQuery.toLowerCase () ;
-      filtered = filtered.filter(service =>;
-        service.title.toLowerCase () .includes(query) ||;
-        service.description.toLowerCase () .includes(query) ||;
-        service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-        service.subcategory?.toLowerCase () .includes(query) ;) ;
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing) },
+    if(searchQuery.trim () ) {,
+      const query = searchQuery.toLowerCase () ,
+      filtered = filtered.filter(service =>,
+        service.title.toLowerCase () .includes(query) ||,
+        service.description.toLowerCase () .includes(query) ||,
+        service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||,
+        service.subcategory?.toLowerCase () .includes(query) ,) ,
     }
     filtered.sort((a, b) => {
       switch(sortBy) {
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0) ;
+          return (b.rating || 0) - (a.rating || 0) ,
         case 'price':
-          return (a.price || 0) - (b.price || 0) ;
+          return (a.price || 0) - (b.price || 0) ,
         case 'aiScore':
-          return b.aiScore - a.aiScore;
+          return b.aiScore - a.aiScore,
         case 'newest':
-          return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
+          return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ,
         default:
           return 0}
-    }) ;
-    setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
+    }) ,
+    setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ,
   const ServiceCard = ({ service }: { service}) => (<motion.div
       initial = {
   { opacity: 0,
@@ -176,13 +176,13 @@ const pricingModels = [;
           asChild
           className="w-full bg-gradient - to - r from - zion - cyan to - zion - blue hover:from - zion - cyan - light hover:to - zion - blue -light"
         >
-          <Link to={service.href}>;
-            Learn More;
-            <ArrowRight className="ml-2 w-4 h-4" />;
-          </Link>;
-        </Button>;
-      </div>;
-    </motion.div>;) ;
+          <Link to={service.href}>,
+            Learn More,
+            <ArrowRight className="ml-2 w-4 h-4" />,
+          </Link>,
+        </Button>,
+      </div>,
+    </motion.div>,) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       <SEO
@@ -331,7 +331,7 @@ const pricingModels = [;
                   <Badge variant="secondary" className="ml-2 bg-zion -purple / 80">
                     {category.count}
                   </Badge>
-                </Button>;) ) }
+                </Button>,) ) }
             </div>
             <div  className="flex flex - wrap gap-4">
               {pricingModels.map((pricing) => (<Button
@@ -349,14 +349,14 @@ const pricingModels = [;
               ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3'
               : 'grid - cols - 1'
           }`}>
-            {filteredServices.map((service) => (;
+            {filteredServices.map((service) => (,
               <ServiceCard key={service.id} service={service} />) ) }
           </div>
           <div  className="flex flex - wrap gap-4">
-            {pricingModels.map((pricing) => (<Button;
-                onClick={ () => {;
-                  setSelectedCategory('all') ;
-                  setSelectedPricing('all') ;
+            {pricingModels.map((pricing) => (<Button,
+                onClick={ () => {,
+                  setSelectedCategory('all') ,
+                  setSelectedPricing('all') ,
                   setSearchQuery('') }}
                 className="bg-zion - cyan hover:bg-zion - cyan -light"
               >
@@ -369,17 +369,17 @@ const pricingModels = [;
             ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3'
             : 'grid - cols - 1'
         }`}>
-          {filteredServices.map((service) => (;
-            <ServiceCard key={service.id} service={service} />) ) };
-        </div>;
-        {filteredServices.length === 0 && (;
-          <div  className="text-center py-16">;
-            <div  className="text-zion - slate - light text-lg mb-4">No services found matching your criteria</div>;
-            <Button;
-              onClick={ () => {;
-                setSelectedCategory('all') ;
-                setSelectedPricing('all') ;
-                setSearchQuery('') ;
+          {filteredServices.map((service) => (,
+            <ServiceCard key={service.id} service={service} />) ) },
+        </div>,
+        {filteredServices.length === 0 && (,
+          <div  className="text-center py-16">,
+            <div  className="text-zion - slate - light text-lg mb-4">No services found matching your criteria</div>,
+            <Button,
+              onClick={ () => {,
+                setSelectedCategory('all') ,
+                setSelectedPricing('all') ,
+                setSearchQuery('') ,
               }}
               className="bg-zion - cyan hover:bg-zion - cyan -light"
             >
@@ -388,7 +388,7 @@ const pricingModels = [;
           </div>) }
       </div>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - blue - dark / 20 to - zion -purple / 20">;
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient - to - r from - zion - blue - dark / 20 to - zion -purple / 20">,
         <div  className="max - w-4xl mx - auto text-center">
           <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
             Ready to Transform Your Business?
@@ -405,9 +405,9 @@ const pricingModels = [;
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </Button>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

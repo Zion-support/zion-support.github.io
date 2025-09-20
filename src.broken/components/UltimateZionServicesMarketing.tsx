@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 
-const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {,
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [{
       id: 'quantum - computing',
@@ -59,8 +59,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
     },
     {
       id: 'it - services',
-      name: 'Enterprise IT Services', ;
-  const selectedServices = getServicesByCategory(selectedCategory) ;
+      name: 'Enterprise IT Services', ,
+  const selectedServices = getServicesByCategory(selectedCategory) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       {/* Hero Section */}
@@ -119,7 +119,7 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     </a> |
                     ✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue - 400 hover:text-blue -300">
       {/* Bottom CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div  className="max - w-4xl mx - auto text-center">
           <motion.div
             className="bg-gradient - to - r from - purple - 600 / 20 to - pink - 600 / 20 backdrop - blur - lg rounded-2xl p - 8 border border-purple -400 / 30"
@@ -129,18 +129,18 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             <div  className="flex flex - col md:flex - row gap-4 justify -center">
               <button     className="bg-gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text-white font - semibold py-4 px-8 rounded-lg transition - all duration - 300 transform hover:scale -105">
 =======
-const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {,
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
-      icon: '🖥️', ;
-      color: 'from-gray-600 to-slate-600',;
-      description: 'Advanced infrastructure and DevOps solutions',;
-      marketSize: '$25.2 billion by 2027',;
-      growthRate: '150% annually'};
-  ];
+      icon: '🖥️', ,
+      color: 'from-gray-600 to-slate-600',
+      description: 'Advanced infrastructure and DevOps solutions',
+      marketSize: '$25.2 billion by 2027',
+      growthRate: '150% annually'},
+  ],
 
-    if(categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter(service => service.category === categoryId) };
+    if(categoryId === 'all') return ultimateZionServices2025,
+    return ultimateZionServices2025.filter(service => service.category === categoryId) },
 
   
   return ()
@@ -329,15 +329,15 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
               </button>) ) }
           </motion.div>
         </div>
-      </section>;
-;
-      {/* Category Overview */};
-      {selectedCategory !== 'all' && (;"
-        <section className="py-12 px-4 sm:px-6 lg:px-8">;"
-          <div className="max-w-7xl mx-auto">;
-            {(() => {;
+      </section>,
+,
+      {/* Category Overview */},
+      {selectedCategory !== 'all' && (,"
+        <section className="py-12 px-4 sm: px-6 lg:px-8">,"
+          <div className="max-w-7xl mx-auto">,
+            {(() => {,
               
-              if(!category) return null;
+              if(!category) return null,
               
               return ()
                 <motion.div "
@@ -369,13 +369,13 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                         <div className="text-purple-400 font-semibold">Market Size</div>"
                         <div className="text-white text-lg">{category.marketSize}</div>
                       </div>"
-                      <div className="bg-white/10 rounded-lg p-4">;"
-                        <div className="text-purple-400 font-semibold">Growth Rate</div>;"
-                        <div className="text-white text-lg">{category.growthRate}</div>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>;) }) () }          </div>
+                      <div className="bg-white/10 rounded-lg p-4">,"
+                        <div className="text-purple-400 font-semibold">Growth Rate</div>,"
+                        <div className="text-white text-lg">{category.growthRate}</div>,
+                      </div>,
+                    </div>,
+                  </div>,
+                </motion.div>,) }) () }          </div>
         </section>) }
 
       {/* Services Grid */}"
@@ -448,7 +448,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
                     {service.innovationLevel}
                   </div>"
                   <p className="text-sm text-purple-400 font-medium">
-                    {service.category.replace('-',).toUpperCase()}
+                    {service.category.replace('-').toUpperCase()}
                   </p>
                 </div>
 
@@ -579,7 +579,7 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
 }}
             transition={{ duration: 0.6 }}
           >"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>"
             <p className="text-xl text-gray-300 mb-8">
@@ -594,12 +594,12 @@ const UltimateZionServicesMarketing: React.FC = (): JSX.Element => {;
             </div>"
             <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>
-              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
-              <p>🌍 Global support • 24 / 7 availability • Enterprise - grade security</p>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) };
-export default UltimateZionServicesMarketing;'"`
+              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>,
+              <p>🌍 Global support • 24 / 7 availability • Enterprise - grade security</p>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) },
+export default UltimateZionServicesMarketing,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

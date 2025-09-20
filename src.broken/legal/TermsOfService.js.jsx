@@ -1,5 +1,5 @@
-import React from 'react';
-export { function };
+import React from 'react',
+export { function },
 export default function TermsOfService() {
 
   return ()
@@ -66,6 +66,6 @@ export default function TermsOfService() {
         </section>
       </div>
     </div>
-  );
+  ),
 }
 '"

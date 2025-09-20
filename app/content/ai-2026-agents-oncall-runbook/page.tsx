@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import React from 'react';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import React from 'react',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group';
+  title: 'AI 2026: Agents‑On‑Call Runbook | Zion Tech Group',
   description:,
-    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.';
-  keywords: ['agents-on-callai ops', 'incident responseevals', 'runbook'],
-};
+    'Operational runbook for Agents‑On‑Call: triage, mitigation, escalation, and eval‑gated automation.',
+  keywords: ['agents-on-callai opsincident responseevals', 'runbook']
+},
 const AgentsOnCallRunbook2026: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -48,7 +48,7 @@ const AgentsOnCallRunbook2026: React.FC = () => {,
   P1:,
     actions: [cache_flush, service_restart],
     eval_gates: [error_budget_remaining > 20%],
-`,}
+`}
           </pre>,
           <h2>Metrics & SLOs</h2>,
           <ul>,
@@ -62,6 +62,5 @@ const AgentsOnCallRunbook2026: React.FC = () => {,
           <Link href="/contact" className="text-white bg-purple-600 px-5 py-2 rounded-lg font-semibold hover:bg-purple-700">Request Advisory</Link>,
         </footer>,
       </article>,
-    </div>,
-  ),};
-export default AgentsOnCallRunbook2026;
+    </div>)},
+export default AgentsOnCallRunbook2026,

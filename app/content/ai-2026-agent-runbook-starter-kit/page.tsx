@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Agent Runbook Starter Kit | Zion Tech Group';
-  description: 'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.',
-};
+  title: 'AI 2026: Agent Runbook Starter Kit | Zion Tech Group',
+  description: 'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.'
+},
 export default function AgentRunbookStarterKit2026Page() {,
   return (,
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -27,11 +27,10 @@ export default function AgentRunbookStarterKit2026Page() {,
           <li>Continuously improve with lessons-learned and governance feedback</li>,
         </ol>,
         <p>,
-          Related resources: <Link className="text-purple-700 font-semibold" href="/content/ai-2026-agent-incident-response-playbook">Incident Response Playbook</Link> and{' ',}
+          Related resources: <Link className="text-purple-700 font-semibold" href="/content/ai-2026-agent-incident-response-playbook">Incident Response Playbook</Link> and{' '}
           <Link className="text-purple-700 font-semibold" href="/content/ai-2026-operational-guardrails">Operational Guardrails</Link>.,
         </p>,
       </div>,
-    </main>,
-  );
+    </main>),
 }
 ,

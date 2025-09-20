@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface InnovativeBusinessSolution {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution[] = [
   // AI-Powered Marketing Automation Platform
@@ -49,16 +49,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     period: '/month',
     description: 'Advanced AI platform that automates marketing campaigns, predicts customer behavior, and optimizes marketing ROI through intelligent automation.',
     features: [
-      'AI-powered campaign automation',
-      'Predictive customer segmentation',
-      'Dynamic content personalization',
-      'Multi-channel marketing orchestration',
-      'Real-time performance analytics',
-      'A/B testing automation',
-      'Lead scoring and nurturing',
-      'Email marketing automation',
-      'Social media management',
-      'ROI tracking and optimization'
+      'AI-powered campaign automationPredictive customer segmentation',
+      'Dynamic content personalizationMulti-channel marketing orchestration',
+      'Real-time performance analyticsA/B testing automation',
+      'Lead scoring and nurturingEmail marketing automation',
+      'Social media managementROI tracking and optimization'
     ],
     popular: true,
     icon: '📈',
@@ -101,16 +96,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     period: '/month',
     description: 'Advanced AI platform that provides sales intelligence, automates prospecting, and optimizes sales processes through data-driven insights.',
     features: [
-      'AI-powered lead scoring',
-      'Predictive sales analytics',
-      'Automated prospecting',
-      'Sales performance tracking',
-      'Customer behavior analysis',
-      'Pipeline optimization',
-      'Real-time sales alerts',
-      'Integration with CRM systems',
-      'Custom sales workflows',
-      'Advanced reporting dashboard'
+      'AI-powered lead scoringPredictive sales analytics',
+      'Automated prospectingSales performance tracking',
+      'Customer behavior analysisPipeline optimization',
+      'Real-time sales alertsIntegration with CRM systems',
+      'Custom sales workflowsAdvanced reporting dashboard'
     ],
     popular: true,
     icon: '💰',
@@ -153,16 +143,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     period: '/month',
     description: 'Advanced AI platform that automates HR processes, provides people analytics, and optimizes talent management through intelligent automation.',
     features: [
-      'AI-powered recruitment automation',
-      'Candidate screening and matching',
-      'Employee performance analytics',
-      'Automated onboarding workflows',
-      'Talent retention insights',
-      'HR process automation',
-      'Compliance monitoring',
-      'Employee engagement tracking',
-      'Custom HR workflows',
-      'Advanced analytics dashboard'
+      'AI-powered recruitment automationCandidate screening and matching',
+      'Employee performance analyticsAutomated onboarding workflows',
+      'Talent retention insightsHR process automation',
+      'Compliance monitoringEmployee engagement tracking',
+      'Custom HR workflowsAdvanced analytics dashboard'
     ],
     popular: true,
     icon: '👥',
@@ -205,16 +190,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     period: '/month',
     description: 'Advanced AI platform that provides financial analytics, automates financial processes, and delivers predictive insights for better financial decision-making.',
     features: [
-      'AI-powered financial forecasting',
-      'Real-time financial monitoring',
-      'Automated expense management',
-      'Cash flow optimization',
-      'Risk assessment and management',
-      'Financial reporting automation',
-      'Budget planning and tracking',
-      'Investment analysis',
-      'Compliance monitoring',
-      'Advanced financial dashboard'
+      'AI-powered financial forecastingReal-time financial monitoring',
+      'Automated expense managementCash flow optimization',
+      'Risk assessment and managementFinancial reporting automation',
+      'Budget planning and trackingInvestment analysis',
+      'Compliance monitoringAdvanced financial dashboard'
     ],
     popular: true,
     icon: '💼',
@@ -257,16 +237,11 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     period: '/month',
     description: 'Advanced AI platform that optimizes supply chain operations, predicts demand, and automates inventory management through intelligent analytics.',
     features: [
-      'AI-powered demand forecasting',
-      'Inventory optimization',
-      'Supplier performance analytics',
-      'Logistics optimization',
-      'Real-time supply chain monitoring',
-      'Risk assessment and mitigation',
-      'Cost optimization',
-      'Automated procurement',
-      'Custom supply chain workflows',
-      'Advanced analytics dashboard'
+      'AI-powered demand forecastingInventory optimization',
+      'Supplier performance analyticsLogistics optimization',
+      'Real-time supply chain monitoringRisk assessment and mitigation',
+      'Cost optimizationAutomated procurement',
+      'Custom supply chain workflowsAdvanced analytics dashboard'
     ],
     popular: true,
     icon: '🚚',
@@ -300,4 +275,4 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.8,
     reviews: 67
   }
-];
+],

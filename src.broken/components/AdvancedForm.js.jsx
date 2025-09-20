@@ -1,37 +1,37 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react',
 export default function Page() {
-);
-    const [validation, setValidation] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [showPassword, setShowPassword] = useState({});
-    const [progress, setProgress] = useState(0);
+),
+    const [validation, setValidation] = useState({}),
+    const [isSubmitting, setIsSubmitting] = useState(false),
+    const [isSubmitted, setIsSubmitted] = useState(false),
+    const [showPassword, setShowPassword] = useState({}),
+    const [progress, setProgress] = useState(0),
     // Initialize form data and validation
     useEffect(() => {
-        const initialValidation = {};
+        const initialValidation = {},
         fields.forEach(field => {
 
-            initialData[field.name] = field.type === 'checkbox' ? false : '';
+            initialData[field.name] = field.type === 'checkbox' ? false : '',
             initialValidation[field.name] = {
 
                 isValid: !field.required,
                 message: '',
                 isTouched: false
-            }});
-        setFormData(initialData);
-        setValidation(initialValidation)}, [fields]);
+            }}),
+        setFormData(initialData),
+        setValidation(initialValidation)}, [fields]),
     // Update progress based on filled fields
     useEffect(() => {
 
-        const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length;
-        const totalFields = fields.length;
-        setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]);
+        const filledFields = Object.values(formData).filter(value => typeof value === 'boolean' ? value : value.toString().trim() !== '').length,
+        const totalFields = fields.length,
+        setProgress((filledFields / totalFields) * 100)}, [formData, fields.length]),
     // Validate field
     const validateField = useCallback((name, value) => {
 
-        const field = fields.find(f => f.name === name);
+        const field = fields.find(f => f.name === name),
         if(!field)
-            return null;
+            return null,
         // Required field validation
         if(field.required) {
 
@@ -49,11 +49,11 @@ export default function Page() {
         // Type-specific validation'
         if(typeof value === 'string') {
 
-            const stringValue = value.trim();
+            const stringValue = value.trim(),
             // Email validation'
             if(field.type === 'email' && stringValue) {
 
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 if(!emailPattern.test(stringValue)) {
 
                     return 'Please enter a valid email address'}
@@ -61,7 +61,7 @@ export default function Page() {
             // Phone validation'
             if(field.type === 'tel' && stringValue) {
 
-                const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
+                const phonePattern = /^[\+]?[1-9][\d]{0,15}$/,
                 if(!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g,))) {
 
                     return 'Please enter a valid phone number'}
@@ -80,17 +80,17 @@ export default function Page() {
             // Custom validation
             if(field.validation?.custom) {
 
-                const customError = field.validation.custom(stringValue);
+                const customError = field.validation.custom(stringValue),
                 if(customError)
                     return customError}
         }
-        return null}, [fields]);
+        return null}, [fields]),
     // Handle field change
     const handleFieldChange = useCallback((name, value) => {
 
-        setFormData(prev => ({ ...prev, [name]: value }));
+        setFormData(prev => ({ ...prev, [name]: value })),
         // Validate field
-        const error = validateField(name, value);
+        const error = validateField(name, value),
         setValidation(prev => ({
 
             ...prev,
@@ -100,17 +100,17 @@ export default function Page() {
                 message: error || '',
                 isTouched: true
             }
-        }));
+        })),
         // Track form interaction
         if(enableAnalytics) {
 
             trackEvent('form',field_changed', name, null, { fieldName: name, value: String(value) })}
-    }, [validateField, enableAnalytics, trackEvent]);
+    }, [validateField, enableAnalytics, trackEvent]),
     // Handle field blur
     const handleFieldBlur = useCallback((name) => {
 
-        const value = formData[name];
-        const error = validateField(name, value);
+        const value = formData[name],
+        const error = validateField(name, value),
         setValidation(prev => ({
 
             ...prev,
@@ -121,14 +121,14 @@ export default function Page() {
                 message: error || '',
                 isTouched: true
             }
-        }))}, [formData, validateField]);
+        }))}, [formData, validateField]),
     // Check if form is valid
     const isFormValid = useCallback(() => {
-        return Object.values(validation).every(v => v.isValid)}, [validation]);
+        return Object.values(validation).every(v => v.isValid)}, [validation]),
     // Handle form submission
     const handleSubmit = useCallback(async (e) => {
 
-        e.preventDefault();
+        e.preventDefault(),
         if(!isFormValid()) {
 
             // Track validation error
@@ -139,24 +139,24 @@ export default function Page() {
                     errors: Object.values(validation).filter(v => !v.isValid).length
                 })}
             return}
-        setIsSubmitting(true);
+        setIsSubmitting(true),
         try {
             // Track form submission start
             if(enableAnalytics) {
 
                 trackEvent('form',submission_started',form_submitted')}
-            await onSubmit(formData);
+            await onSubmit(formData),
             // Track successful submission
             if(enableAnalytics) {
 
-                trackEvent('form',submission_success',form_completed');
+                trackEvent('form',submission_success',form_completed'),
                 trackConversion('form_submission', 1, { formType: title })}
-            setIsSubmitted(true);
+            setIsSubmitted(true),
             // Reset form after successful submission
             setTimeout(() => {
-                setIsSubmitted(false);
-                setFormData({});
-                setValidation({});
+                setIsSubmitted(false),
+                setFormData({}),
+                setValidation({}),
                 setProgress(0)}, 5000)}
         catch(error) {
             // Track submission error
@@ -170,27 +170,27 @@ export default function Page() {
         finally {
 
             setIsSubmitting(false)}
-    }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);
+    }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]),
     // Toggle password visibility
     const togglePasswordVisibility = useCallback((fieldName) => {
 
-        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []);
+        setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, []),
     // Get field icon
     const getFieldIcon = useCallback((field) => {
 
         switch(field.type) {
 '"
-            case 'email': return <Mail className="w-4 h-4"/>;'"
-            case 'tel': return <Phone className="w-4 h-4"/>;'"
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;'"
-            case 'select': return <Building className="w-4 h-4"/>;"
+            case 'email': return <Mail className="w-4 h-4"/>,'"
+            case 'tel': return <Phone className="w-4 h-4"/>,'"
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>,'"
+            case 'select': return <Building className="w-4 h-4"/>,"
             default: return <User className="w-4 h-4"/>}
-    }, []);
+    }, []),
     // Render field
     const renderField = useCallback((field) => {
 
-        const fieldValidation = validation[field.name];
-        const isPasswordField = field.name.toLowerCase().includes('password');
+        const fieldValidation = validation[field.name],
+        const isPasswordField = field.name.toLowerCase().includes('password'),
         return (<motion.div key={field.name} initial = {
 
   { opacity: 0,
@@ -283,7 +283,7 @@ export default function Page() {
 }} className="text-sm text-red-600 dark:text-red-400">
             {fieldValidation.message}
           </motion.p>)}
-      </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
+      </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]),
     if(isSubmitted) {
 
         return (<motion.div initial = {
@@ -375,5 +375,5 @@ export default function Page() {
             </motion.div>) }
         </AnimatePresence>
       </form>
-    </motion.div>)};
+    </motion.div>)},
 '"`

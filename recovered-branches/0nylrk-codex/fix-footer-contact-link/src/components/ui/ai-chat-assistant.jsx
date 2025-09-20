@@ -1,2 +1,2 @@
 
-export default ai-chat-assistant;
+export default ai-chat-assistant,

@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Agent Safety Evals 2026 | Zion Tech Group';
-  description: 'A pragmatic guide to designing and operating agent safety evaluations in 2026: red-teaming, harnesses, metrics, and governance to ship reliable agents.',
-};
+  title: 'Agent Safety Evals 2026 | Zion Tech Group',
+  description: 'A pragmatic guide to designing and operating agent safety evaluations in 2026: red-teaming, harnesses, metrics, and governance to ship reliable agents.'
+},
 export default function AgentSafetyEvals2026Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -40,6 +40,5 @@ export default function AgentSafetyEvals2026Page() {,
         <Link href="/content/genai-governance-2026" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">GenAI Governance 2026</Link>,
         <Link href="/blog/ai-2026-llm-evals-maturity-model" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">LLM Evals Maturity Model</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

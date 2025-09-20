@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
+  Shield,
   Lock, 
   Eye, 
   CheckCircle, 
@@ -32,92 +32,62 @@ import {
   Server,
   Database,
   Smartphone
-} from 'lucide-react';
-
+} from "lucide-react";
 const ZeroTrustNetworkAccess = () => {
   const features = [
     {
-      icon: Shield,
-      title: 'Identity Verification',
-      description: 'Multi-factor authentication and continuous identity validation'
-    },
+      icon: Shield,title: 'Identity Verification',description: 'Multi-factor authentication and continuous identity validation'
+    };
     {
-      icon: Lock,
-      title: 'Least Privilege Access',
-      description: 'Granular access controls based on user context and needs'
-    },
+      icon: Lock,title: 'Least Privilege Access',description: 'Granular access controls based on user context and needs'
+    };
     {
-      icon: Eye,
-      title: 'Continuous Monitoring',
-      description: 'Real-time monitoring of all network activities and access patterns'
-    },
+      icon: Eye,title: 'Continuous Monitoring',description: 'Real-time monitoring of all network activities and access patterns'
+    };
     {
-      icon: Network,
-      title: 'Micro-segmentation',
-      description: 'Network segmentation at the application and workload level'
-    },
+      icon: Network,title: 'Micro-segmentation',description: 'Network segmentation at the application and workload level'
+    };
     {
-      icon: Key,
-      title: 'Encrypted Communication',
-      description: 'End-to-end encryption for all data in transit and at rest'
-    },
+      icon: Key,title: 'Encrypted Communication',description: 'End-to-end encryption for all data in transit and at rest'
+    };
     {
-      icon: Monitor,
-      title: 'Threat Detection',
-      description: 'Advanced threat detection and automated response capabilities'
+      icon: Monitor,title: 'Threat Detection',description: 'Advanced threat detection and automated response capabilities'
     }
   ];
-
   const benefits = [
-    'Eliminate network perimeter vulnerabilities',
-    'Reduce attack surface by 90%',
-    'Enable secure remote work from anywhere',
-    'Comply with industry security standards',
-    'Improve incident response time by 80%',
-    'Enhance user experience with seamless access'
-  ];
+    'Eliminate network perimeter vulnerabilitiesReduce attack surface by 90%',
+    'Enable secure remote work from anywhereComply with industry security standards',
+    'Improve incident response time by 80%Enhance user experience with seamless access'
+  ],
 
   const useCases = [
     {
-      industry: 'Financial Services',
-      description: 'Secure access to banking systems and customer data'
-    },
+      industry: 'Financial Services',description: 'Secure access to banking systems and customer data'
+    };
     {
-      industry: 'Healthcare',
-      description: 'Protected access to patient records and medical systems'
-    },
+      industry: 'Healthcare',description: 'Protected access to patient records and medical systems'
+    };
     {
-      industry: 'Government',
-      description: 'Secure access to classified systems and citizen data'
-    },
+      industry: 'Government',description: 'Secure access to classified systems and citizen data'
+    };
     {
-      industry: 'Enterprise',
-      description: 'Protected access to corporate resources and applications'
+      industry: 'Enterprise',description: 'Protected access to corporate resources and applications'
     }
   ];
-
   const securityLayers = [
     {
-      icon: Fingerprint,
-      title: 'User Identity',
-      description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
+      icon: Fingerprint,title: 'User Identity',description: 'Multi-factor authentication, biometric verification, and behavioral analytics'
     },
     {
-      icon: Device,
-      title: 'Device Security',
-      description: 'Device health checks, compliance validation, and security posture assessment'
+      icon: Device,title: 'Device Security',description: 'Device health checks, compliance validation, and security posture assessment'
     },
     {
-      icon: Globe2,
-      title: 'Network Security',
-      description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
+      icon: Globe2,title: 'Network Security',description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
     },
     {
-      icon: Database,
-      title: 'Application Security',
-      description: 'API security, application-level access controls, and data protection'
+      icon: Database,title: 'Application Security',description: 'API security, application-level access controls, and data protection'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -343,7 +313,7 @@ const ZeroTrustNetworkAccess = () => {
               Join organizations worldwide that use our Zero Trust solution to protect 
               their digital assets and enable secure remote work.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -356,7 +326,6 @@ const ZeroTrustNetworkAccess = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default ZeroTrustNetworkAccess;

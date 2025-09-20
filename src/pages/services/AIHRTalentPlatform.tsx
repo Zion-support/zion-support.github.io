@@ -1,67 +1,43 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from 'lucide-react';
-
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award } from "lucide-react";
 export default function AIHRTalentPlatform() {
   const features = [
-    'AI-powered candidate screening and matching',
-    'Automated resume parsing and skill assessment',
-    'Intelligent interview scheduling and feedback',
-    'Employee performance analytics and insights',
-    'Predictive turnover analysis and retention strategies',
-    'Automated onboarding and training workflows',
-    'Diversity and inclusion analytics',
-    'Compliance monitoring and reporting'
-  ];
+    'AI-powered candidate screening and matchingAutomated resume parsing and skill assessment',
+    'Intelligent interview scheduling and feedbackEmployee performance analytics and insights',
+    'Predictive turnover analysis and retention strategiesAutomated onboarding and training workflows',
+    'Diversity and inclusion analyticsCompliance monitoring and reporting'
+  ],
 
   const benefits = [
-    'Reduce time-to-hire by 60%',
-    'Improve candidate quality by 40%',
-    'Reduce hiring costs by 30%',
-    'Increase employee retention by 25%',
-    'Automate routine HR tasks',
-    'Data-driven decision making'
+    'Reduce time-to-hire by 60%Improve candidate quality by 40%';
+    'Reduce hiring costs by 30%Increase employee retention by 25%';
+    'Automate routine HR tasksData-driven decision making'
   ];
-
   const pricing = [
     { 
-      name: 'Starter', 
-      price: '$149/mo', 
-      features: ['Up to 50 employees', 'Basic AI screening', 'Standard reporting', 'Email support'],
+      name: 'Starter',price: '$149/mo',features: ['Up to 50 employeesBasic AI screening', 'Standard reportingEmail support'],
       popular: false
-    },
+    };
     { 
-      name: 'Professional', 
-      price: '$399/mo', 
-      features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
+      name: 'Professional',price: '$399/mo',features: ['Up to 200 employeesAdvanced AI analytics', 'Custom workflowsPriority support', 'Integration APIs'],
       popular: true
-    },
+    };
     { 
-      name: 'Enterprise', 
-      price: '$999/mo', 
-      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
+      name: 'Enterprise',price: '$999/mo',features: ['Unlimited employeesFull AI suite', 'Custom AI trainingDedicated support', 'White-label solutionsAdvanced compliance'],
       popular: false
     }
   ];
-
   const useCases = [
-    'Recruitment and talent acquisition',
-    'Employee performance management',
-    'Learning and development',
-    'Workforce planning and analytics',
-    'Compliance and HR operations',
-    'Employee engagement and retention'
-  ];
+    'Recruitment and talent acquisitionEmployee performance management',
+    'Learning and developmentWorkforce planning and analytics',
+    'Compliance and HR operationsEmployee engagement and retention'
+  ],
 
   const platformModules = [
-    'Talent Acquisition',
-    'Performance Management',
-    'Learning & Development',
-    'Workforce Analytics',
-    'Employee Engagement',
-    'Compliance & Reporting',
-    'Onboarding & Offboarding',
-    'Succession Planning'
+    'Talent AcquisitionPerformance Management',
+    'Learning & DevelopmentWorkforce Analytics',
+    'Employee EngagementCompliance & Reporting',
+    'Onboarding & OffboardingSuccession Planning'
   ];
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -282,7 +258,7 @@ export default function AIHRTalentPlatform() {
       {/* Contact Section */}
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md: grid-cols-2 gap-8">
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <Phone className="w-8 h-8 text-orange-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
@@ -318,5 +294,5 @@ export default function AIHRTalentPlatform() {
         </div>
       </section>
     </div>
-  );
+  )
 }

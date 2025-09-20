@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
+,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light text-white relative overflow-hidden">
       {/* Animated Background */}
@@ -22,7 +22,7 @@ export default function Page() {
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M5 3a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2V5a2 2 0 00 - 2-2H5zM5 11a2 2 0 00 - 2 2v2a2 2 0 002 2h2a2 2 0 002 - 2v - 2a2 2 0 00 - 2-2H5zM11 5a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2V5zM11 13a2 2 0 012 - 2h2a2 2 0 012 2v2a2 2 0 01 - 2 2h-2a2 2 0 01 - 2-2v - 2z" />
       {/* Services Grid / List */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <motion.div
             className={viewMode === 'grid'
@@ -38,7 +38,7 @@ export default function Page() {
                 <div  className="mb-4">
                   <span className="inline - block px-3 py-1 bg-zion - purple / 20 text-zion - purple text-sm rounded-full border border-zion -purple / 30">
       {/* Why Choose Zion Tech Group */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white / 5">;
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8 bg-white / 5">,
         <div  className="max - w-7xl mx -auto">
           <motion.div
             className="text-center mb-16"
@@ -68,7 +68,7 @@ export default function Page() {
   
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? "
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : "
-      <Rocket className="w-6 h-6"  />};
+      <Rocket className="w-6 h-6"  />},
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {/* Animated Background */}"
@@ -176,10 +176,10 @@ export default function Page() {
             </div>
           </div>
         </div>
-      </section>;
+      </section>,
 
       {/* Services Grid/List */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">,"
         <div className="max-w-7xl mx-auto">
           <motion.div '
             className={viewMode === 'grid' "
@@ -255,7 +255,7 @@ export default function Page() {
       </section>
 
       {/* Why Choose Zion Tech Group */}"
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;"
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,"
         <div className="max-w-7xl mx-auto">
           <motion.div "
             className="text-center mb-16"
@@ -386,6 +386,6 @@ export default function Page() {
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>) };
-export default UltimateServicesShowcase2025;'"`
+    </div>) },
+export default UltimateServicesShowcase2025,'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

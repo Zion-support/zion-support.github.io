@@ -1,46 +1,46 @@
 
-import { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useState } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { useCart } from '@/context/CartContext';
-import type { CartItem } from '@/types/cart';
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { useCart } from '@/context/CartContext',
+import type { CartItem } from '@/types/cart',
 
 interface EquipmentSpecification {
-  name: string;
-  value: string;
+  name: string,
+  value: string
 }
 
 interface EquipmentDetails {
-  id: string;
-  name: string;
-  description: string;
-  brand: string;
-  category: string;
-  subcategory?: string;
-  images: string[];
-  videoUrl?: string;
-  modelUrl?: string;
-  price: number;
-  currency: string;
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean;
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[];
-  features: string[];
-  warranty?: string;
-  returnPolicy?: string;
-  videoUrl?: string;
-  modelUrl?: string;
+  id: string,
+  name: string,
+  description: string,
+  brand: string,
+  category: string,
+  subcategory?: string,
+  images: string[],
+  videoUrl?: string,
+  modelUrl?: string,
+  price: number,
+  currency: string,
+  rating?: number,
+  reviewCount?: number,
+  inStock: boolean,
+  expectedShipping?: string,
+  specifications: EquipmentSpecification[],
+  features: string[],
+  warranty?: string,
+  returnPolicy?: string,
+  videoUrl?: string,
+  modelUrl?: string
 }
 
 // Sample data - in a real app this would come from an API
@@ -67,11 +67,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     specifications: [
       { name: "CPU", value: "Dual Xeon" },
       { name: "Memory", value: "64GB RAM" },
-      { name: "Power", value: "Dual PSU" },
+      { name: "Power", value: "Dual PSU" }
     ],
     features: ["Hot-swappable drives", "Remote management"],
     warranty: "1 year manufacturer warranty",
-    returnPolicy: "30-day return policy",
+    returnPolicy: "30-day return policy"
   },
   "pro-camera-x1000": {
     id: "pro-camera-x1000",
@@ -168,20 +168,20 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     warranty: "3 years manufacturer warranty",
     returnPolicy: "21-day return policy for items in original condition"
   }
-};
+},
 
 export default function EquipmentDetail() {
-  const { id } = useParams() as { id?: string };
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  const { dispatch } = useCart();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-  const { unit, setUnit } = useUnitSystem();
+  const { id } = useParams() as { id?: string },
+  const navigate = useNavigate(),
+  const { isAuthenticated } = useAuth(),
+  const { dispatch } = useCart(),
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [quantity, setQuantity] = useState(1),
+  const [isAdding, setIsAdding] = useState(false),
+  const { unit, setUnit } = useUnitSystem(),
   
   // In a real app, this would fetch from an API
-  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined;
+  const equipment = id ? SAMPLE_EQUIPMENT[id] : undefined,
 
   const specsToDisplay = equipment
     ? [
@@ -195,15 +195,15 @@ export default function EquipmentDetail() {
                   equipment.heightCm,
                   equipment.depthCm,
                   unit
-                ),
-              },
+                )
+              }
             ]
           : []),
         ...(equipment.weightKg
           ? [{ name: 'Weight', value: formatWeight(equipment.weightKg, unit) }]
-          : []),
+          : [])
       ]
-    : [];
+    : [],
   
   if (!equipment) {
     return (
@@ -219,32 +219,32 @@ export default function EquipmentDetail() {
         </div>
         <Footer />
       </>
-    );
+    ),
   }
 
   const handleAddToCart = async () => {
-    setIsAdding(true);
+    setIsAdding(true),
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: equipment.id, title: equipment.name, price: equipment.price } // quantity removed
-    });
-    toast.success(`${quantity}× ${equipment.name} added`);
-    setTimeout(() => setIsAdding(false), 800);
-  };
+    }),
+    toast.success(`${quantity}× ${equipment.name} added`),
+    setTimeout(() => setIsAdding(false), 800),
+  },
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      const next = encodeURIComponent(`/checkout?sku=${id}`);
-      navigate(`/login?next=${next}`);
-      return;
+      const next = encodeURIComponent(`/checkout?sku=${id}`),
+      navigate(`/login?next=${next}`),
+      return,
     }
 
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: equipment.id, title: equipment.name, price: equipment.price } // quantity removed
-    });
-    router.push('/checkout');
-  };
+    }),
+    router.push('/checkout'),
+  },
 
   return (
     <>
@@ -469,5 +469,5 @@ export default function EquipmentDetail() {
       </div>
       <Footer />
     </>
-  );
+  ),
 }

@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -26,7 +26,7 @@ export default function Page() {
             description: "Scripts for video content and presentations",
             icon: <Video className="h-8 w-8 text-zion -blue"/>
 
-    ];
+    ],
 
     const pricingPlans = [{
             name: "Starter",
@@ -74,7 +74,7 @@ export default function Page() {
             ],
             popular: false
 
-    ];
+    ],
 
     const benefits = ["AI - powered content generation for any industry",
         "SEO - optimized content with keyword research",
@@ -88,7 +88,7 @@ export default function Page() {
         "Team collaboration tools",
         "API access for enterprise integration",
         "24 / 7 customer support"
-    ];
+    ],
 
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
             <SEO
@@ -238,7 +238,7 @@ export default function Page() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <section className="py-20 px-4 sm: px-6 lg:px-8">
                 <div className="max - w-4xl mx - auto text-center">
                     <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
                         Ready to Transform Your < span className="text-cyan -400">Content Creation</span>?
@@ -257,5 +257,5 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-        </div>) ;
+        </div>) ,
 </Card></Card></Card></Card></Card>}}}}}

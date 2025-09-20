@@ -1,48 +1,48 @@
 // src/components/governance/ProposalCard.tsx
-import React from 'react';
-import Link from 'next/link'; // Changed from react-router-dom
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'; // Adjust path if needed
-import { Badge } from '@/components/ui/badge'; // Adjust path
-import { Button } from '@/components/ui/button'; // Adjust path
+import React from 'react',
+import Link from 'next/link', // Changed from react-router-dom
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card', // Adjust path if needed
+import { Badge } from '@/components/ui/badge', // Adjust path
+import { Button } from '@/components/ui/button', // Adjust path
 
 // Mirror the Proposal type from backend/frontend, or define a relevant subset
 export interface Proposal {
-  id: number | string;
-  title: string;
-  summary: string;
-  proposal_type: string; // 'FEATURE', 'BUDGET', 'COMMUNITY_GRANT', 'GENERAL'
-  status: string; // 'PENDING_REVIEW', 'ACTIVE', 'CLOSED_SUCCESSFUL', etc.
-  proposer?: { username?: string; id?: number; } | null; // Assuming proposer might have a username
-  created_at: string;
-  voting_ends_at?: string | null;
+  id: number | string,
+  title: string,
+  summary: string,
+  proposal_type: string, // 'FEATUREBUDGET', 'COMMUNITY_GRANTGENERAL'
+  status: string, // 'PENDING_REVIEWACTIVE', 'CLOSED_SUCCESSFUL', etc.
+  proposer?: { username?: string, id?: number, } | null, // Assuming proposer might have a username
+  created_at: string,
+  voting_ends_at?: string | null,
   // Add other fields as needed for display
 }
 
 interface ProposalCardProps {
-  proposal: Proposal;
+  proposal: Proposal
 }
 
 const ProposalCard: React.FC<ProposalCardProps> = ({ proposal }) => {
   const summarySnippet = proposal.summary.length > 150
     ? proposal.summary.substring(0, 147) + '...'
-    : proposal.summary;
+    : proposal.summary,
 
   const getStatusVariant = (status: string): "default" | "secondary" | "destructive" | "outline" => {
-    if (status.includes('ACTIVE')) return 'default'; // Blue/Primary in shadcn often
-    if (status.includes('SUCCESSFUL') || status.includes('EXECUTED') || status.includes('QUEUED')) return 'secondary'; // Green-ish (shadcn secondary can be configured)
-    if (status.includes('FAILED') || status.includes('CANCELED')) return 'destructive'; // Red
-    return 'outline'; // Grey/Default outline
-  };
+    if (status.includes('ACTIVE')) return 'default', // Blue/Primary in shadcn often
+    if (status.includes('SUCCESSFUL') || status.includes('EXECUTED') || status.includes('QUEUED')) return 'secondary', // Green-ish (shadcn secondary can be configured)
+    if (status.includes('FAILED') || status.includes('CANCELED')) return 'destructive', // Red
+    return 'outline', // Grey/Default outline
+  },
 
   const getTypeVariant = (type: string): "default" | "secondary" | "destructive" | "outline" => {
      switch(type) {
-        case 'FEATURE': return 'default';
-        case 'BUDGET': return 'secondary';
-        case 'COMMUNITY_GRANT': return 'destructive'; // Example, adjust based on theme
-        case 'GENERAL': return 'outline';
-        default: return 'outline';
+        case 'FEATURE': return 'default',
+        case 'BUDGET': return 'secondary',
+        case 'COMMUNITY_GRANT': return 'destructive', // Example, adjust based on theme
+        case 'GENERAL': return 'outline',
+        default: return 'outline'
      }
-  };
+  },
 
   return (
     <Card>
@@ -74,7 +74,7 @@ const ProposalCard: React.FC<ProposalCardProps> = ({ proposal }) => {
         </Link>
       </CardFooter>
     </Card>
-  );
-};
+  ),
+},
 
-export default ProposalCard;
+export default ProposalCard,

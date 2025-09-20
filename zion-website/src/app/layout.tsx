@@ -1,71 +1,69 @@
 const inter = Inter({,
-  subsets: ['latin'];
-  display: 'swap';
-  preload: true;
-  fallback: ['system-uiarial'],});
+  subsets: ['latin'],
+  display: 'swap',
+  preload: true,
+  fallback: ['system-uiarial']}),
 export const metadata: Metadata = {,
   title: {,
-    default: 'Zion Tech Group - Revolutionary AI & Technology Solutions';
-    template: '%s | Zion Tech Group',};
-  description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.';
+    default: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
+    template: '%s | Zion Tech Group'},
+  description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.',
   keywords: [,
-    'AI solutionsquantum computing';
-    'autonomous systemsmachine learning';
-    'artificial intelligencetechnology consulting';
-    'enterprise AIneural networks';
-    'roboticsspace technology',
-  ];
-  authors: [{ name: 'Zion Tech Group' ,}];
-  creator: 'Zion Tech Group';
-  publisher: 'Zion Tech Group';
+    'AI solutionsquantum computingautonomous systemsmachine learning',
+    'artificial intelligencetechnology consultingenterprise AIneural networks',
+    'roboticsspace technology'
+  ],
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
   formatDetection: {,
-    email: false;
-    address: false;
-    telephone: false,};
-  metadataBase: new URL('https://ziontechgroup.com');
+    email: false,
+    address: false,
+    telephone: false},
+  metadataBase: new URL('https://ziontechgroup.com'),
   alternates: {,
-    canonical: '/',};
+    canonical: '/'},
   openGraph: {,
-    type: 'website';
-    locale: 'en_US';
-    url: 'https://ziontechgroup.com';
-    siteName: 'Zion Tech Group';
-    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions';
-    description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.';
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
+    description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.',
     images: [,
       {,
-        url: '/og-image.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Zion Tech Group - Revolutionary AI & Technology Solutions',}
-    ],
-  };
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Revolutionary AI & Technology Solutions'}
+    ]
+  },
   twitter: {,
-    card: 'summary_large_image';
-    site: '@ziontechgroup';
-    creator: '@ziontechgroup';
-    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions';
-    description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.';
-    images: ['/og-image.jpg'],};
+    card: 'summary_large_image',
+    site: '@ziontechgroup',
+    creator: '@ziontechgroup',
+    title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
+    description: 'Leading provider of cutting-edge AI solutions, quantum computing, autonomous systems, and next-generation technology services for enterprises worldwide.',
+    images: ['/og-image.jpg']},
   robots: {,
-    index: true;
-    follow: true;
+    index: true,
+    follow: true,
     googleBot: {,
-      index: true;
-      follow: true;
-      'max-video-preview': -1;
-      'max-image-preview': 'largemax-snippet': -1,
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'largemax-snippet': -1
     }
-  };
+  },
   verification: {,
-    google: 'your-google-verification-code';
-    yandex: 'your-yandex-verification-code';
-    yahoo: 'your-yahoo-verification-code',};
-  category: 'technology',};
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code'},
+  category: 'technology'},
 export default function RootLayout({,
-  children,
+  children
 }: {,
-  children: React.ReactNode,}) {,
+  children: React.ReactNode}) {,
   return (,
     <html lang="en" className={inter.className}>,
       <head>,

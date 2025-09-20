@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export default React.memo(function Press () {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
     { id: 'awards', name: 'Awards & Recognition', count: 8 },
-    { id: 'thought - leadership', name: 'Thought Leadership', count: 4 },
-  ];
+    { id: 'thought - leadership', name: 'Thought Leadership', count: 4 }
+  ],
 
   const pressReleases = [{
       id: 1,
@@ -19,7 +19,7 @@ export default function Page() {
       content:
         "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology.The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications.This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
       featured: true,
-      tags: ['Quantum AI', 'Technology Breakthrough', 'Innovation'],
+      tags: ['Quantum AITechnology Breakthrough', 'Innovation']
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ export default function Page() {
       content:
         "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz.The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand.This investment validates Zion Tech Group's position as a leader in next - generation technology solutions.",
       featured: true,
-      tags: ['Funding', 'Investment', 'Growth'],
+      tags: ['FundingInvestment', 'Growth']
     },
     {
       id: 3,
@@ -45,7 +45,7 @@ export default function Page() {
       content:
         "Zion Tech Group has been named to the prestigious Inc.5000 list of America's fastest - growing private companies, ranking in the top 100.This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions.The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
       featured: false,
-      tags: ['Award', 'Growth', 'Recognition'],
+      tags: ['AwardGrowth', 'Recognition']
     },
     {
       id: 4,
@@ -58,7 +58,7 @@ export default function Page() {
       content:
         'Zion Tech Group has launched its latest AI - powered cybersecurity platform, designed to provide enterprise - grade protection against increasingly sophisticated cyber threats.The platform leverages advanced machine learning algorithms to detect and respond to security incidents in real - time, offering organizations unprecedented levels of protection and threat intelligence.',
       featured: false,
-      tags: ['Cybersecurity', 'AI', 'Product Launch'],
+      tags: ['CybersecurityAI', 'Product Launch']
     },
     {
       id: 5,
@@ -72,7 +72,7 @@ export default function Page() {
       content:
         'Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations.The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.',
       featured: false,
-      tags: ['Thought Leadership', 'AI', 'Business Transformation'],
+      tags: ['Thought LeadershipAI', 'Business Transformation']
     },
     {
       id: 6,
@@ -85,9 +85,9 @@ export default function Page() {
       content:
         'Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets.This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.',
       featured: false,
-      tags: ['Global Expansion', 'Europe', 'Market Growth'],
-    },
-  ];
+      tags: ['Global ExpansionEurope', 'Market Growth']
+    }
+  ],
 
   const mediaCoverage = [{
       id: 1,
@@ -99,7 +99,7 @@ export default function Page() {
       excerpt:
         "In - depth feature on Zion Tech Group's innovative approach to combining quantum computing with artificial intelligence to solve complex business problems.",
       url: 'https://techcrunch.com / zion - tech-group - quantum - ai',
-      featured: true,
+      featured: true
     },
     {
       id: 2,
@@ -112,7 +112,7 @@ export default function Page() {
       excerpt:
         'Expert analysis of how autonomous business operations are transforming enterprise efficiency and decision - making processes.',
       url: 'https://hbr.org / autonomous - business - operations',
-      featured: true,
+      featured: true
     },
     {
       id: 3,
@@ -124,7 +124,7 @@ export default function Page() {
       excerpt:
         "Comprehensive coverage of Zion Tech Group's AI - powered cybersecurity solutions and their effectiveness against modern threats.",
       url: 'https://wired.com / ai - cybersecurity - zion',
-      featured: false,
+      featured: false
     },
     {
       id: 4,
@@ -136,9 +136,9 @@ export default function Page() {
       excerpt:
         "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
       url: 'https://venturebeat.com / zion - tech-group - startup',
-      featured: false,
-    },
-  ];
+      featured: false
+    }
+  ],
 
   const awards = [{
       id: 1,
@@ -148,7 +148,7 @@ export default function Page() {
       category: 'awards',
       description:
         'Ranked among the top 100 fastest - growing private companies in America',
-      image: '/images / awards / inc5000.png',
+      image: '/images / awards / inc5000.png'
     },
     {
       id: 2,
@@ -157,7 +157,7 @@ export default function Page() {
       year: '2023',
       category: 'awards',
       description: 'Recognized for excellence in AI - powered business solutions',
-      image: '/images / awards / tech-innovation.png',
+      image: '/images / awards / tech-innovation.png'
     },
     {
       id: 3,
@@ -167,32 +167,32 @@ export default function Page() {
       category: 'awards',
       description:
         'Outstanding achievement in AI - powered cybersecurity solutions',
-      image: '/images / awards / infosec.png',
-    },
-  ];
+      image: '/images / awards / infosec.png'
+    }
+  ],
 
   const filteredContent = selectedCategory === 'all'
       ? [...pressReleases, ...mediaCoverage, ...awards]
-      : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory) ;
+      : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory) ,
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+        staggerChildren: 0.1
+      }
+    }
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
+      transition: { duration: 0.6 }
+    }
+  },
 
   return (<div  className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -279,7 +279,7 @@ export default function Page() {
                   <div  className="p -8">
                     <div  className="flex items - center gap-3 mb-4">
                       <span className="px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-xs rounded-full border border-zion -cyan / 30">
-                        {item.category.replace ('-', ' ') .toUpperCase () }
+                        {item.category.replace ('- ') .toUpperCase () }
                       </span>
                       <span className="text-zion - slate - light text-sm flex items - center gap-1">
                         <Calendar className="w-3 h-3" />
@@ -353,7 +353,7 @@ export default function Page() {
                   <div  className="p -6">
                     <div  className="flex items - center gap-3 mb-4">
                       <span className="px-2 py-1 bg-zion - cyan / 20 text-zion - cyan text-xs rounded-full border border-zion -cyan / 30">
-                        {item.category.replace ('-', ' ') .toUpperCase () }
+                        {item.category.replace ('- ') .toUpperCase () }
                       </span>
                       <span className="text-zion - slate - light text-xs flex items - center gap-1">
                         <Calendar className="w-3 h-3" />
@@ -543,5 +543,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) ,
 }

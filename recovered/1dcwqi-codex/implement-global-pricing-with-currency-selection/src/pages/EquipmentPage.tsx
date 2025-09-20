@@ -1,7 +1,7 @@
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { useEffect, useState } from "react";
-import { generateRandomEquipment } from "@/utils/generateRandomEquipment";
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+import { useEffect, useState } from "react",
+import { generateRandomEquipment } from "@/utils/generateRandomEquipment",
 
 // Sample datacenter equipment listings
 const EQUIPMENT_LISTINGS: ProductListing[] = [
@@ -18,14 +18,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
       name: "DataCore",
       id: "datacore",
       avatarUrl:
-        "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1585079548264-ef0c62f1db1f?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1585079548264-ef0c62f1db1f?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-01T10:00:00.000Z",
     rating: 4.8,
-    reviewCount: 23,
+    reviewCount: 23
   },
   {
     id: "10gbe-switch",
@@ -38,14 +38,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Layer 3", "SFP+", "Managed"],
     author: {
       name: "NetWave",
-      id: "netwave",
+      id: "netwave"
     },
     images: [
-      "https://images.unsplash.com/photo-1587202372775-67d85b1cce31?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1587202372775-67d85b1cce31?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-05T12:30:00.000Z",
     rating: 4.7,
-    reviewCount: 15,
+    reviewCount: 15
   },
   {
     id: "intelligent-pdu",
@@ -58,14 +58,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Remote", "Metered", "24 Outlets"],
     author: {
       name: "PowerHub",
-      id: "powerhub",
+      id: "powerhub"
     },
     images: [
-      "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-18T09:15:00.000Z",
     rating: 4.9,
-    reviewCount: 32,
+    reviewCount: 32
   },
   {
     id: "modular-ups",
@@ -80,14 +80,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
       name: "VoltSecure",
       id: "voltsecure",
       avatarUrl:
-        "https://images.unsplash.com/photo-1615938073495-85f5e52db08e?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1615938073495-85f5e52db08e?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1615938073495-85f5e52db08e?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1615938073495-85f5e52db08e?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-01-22T11:45:00.000Z",
     rating: 4.6,
-    reviewCount: 12,
+    reviewCount: 12
   },
   {
     id: "fiber-patch-panel",
@@ -100,14 +100,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["LC", "1U", "Cable Management"],
     author: {
       name: "FiberLink",
-      id: "fiberlink",
+      id: "fiberlink"
     },
     images: [
-      "https://images.unsplash.com/photo-1552508744-1696a1be6c54?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1552508744-1696a1be6c54?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-02T14:20:00.000Z",
     rating: 4.5,
-    reviewCount: 9,
+    reviewCount: 9
   },
   {
     id: "precision-cooling",
@@ -122,14 +122,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
       name: "CoolWorks",
       id: "coolworks",
       avatarUrl:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100",
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100"
     },
     images: [
-      "https://images.unsplash.com/photo-1581093588401-1cfe5f157568?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1581093588401-1cfe5f157568?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-10T08:10:00.000Z",
     rating: 4.7,
-    reviewCount: 18,
+    reviewCount: 18
   },
   {
     id: "blade-server-chassis",
@@ -142,14 +142,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["8 Blades", "Hot Swap", "Redundant PSU"],
     author: {
       name: "ComputeMax",
-      id: "computemax",
+      id: "computemax"
     },
     images: [
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-12T10:00:00.000Z",
     rating: 4.7,
-    reviewCount: 11,
+    reviewCount: 11
   },
   {
     id: "40gbe-core-switch",
@@ -162,14 +162,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Layer 3", "QSFP+", "Redundant Fans"],
     author: {
       name: "NetWave",
-      id: "netwave",
+      id: "netwave"
     },
     images: [
-      "https://images.unsplash.com/photo-1581091870625-55858aad7cf0?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1581091870625-55858aad7cf0?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-07T09:20:00.000Z",
     rating: 4.8,
-    reviewCount: 16,
+    reviewCount: 16
   },
   {
     id: "firewall-appliance",
@@ -182,14 +182,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["NGFW", "VPN", "Gigabit"],
     author: {
       name: "SecureSys",
-      id: "securesys",
+      id: "securesys"
     },
     images: [
-      "https://images.unsplash.com/photo-1585861291871-e6c46a28d5c7?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1585861291871-e6c46a28d5c7?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-27T15:30:00.000Z",
     rating: 4.6,
-    reviewCount: 14,
+    reviewCount: 14
   },
   {
     id: "kvm-ip-switch",
@@ -202,14 +202,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["8 Ports", "Virtual Media", "Remote Access"],
     author: {
       name: "ManageIT",
-      id: "manageit",
+      id: "manageit"
     },
     images: [
-      "https://images.unsplash.com/photo-1603791440384-9465026a9b69?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1603791440384-9465026a9b69?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-12T08:55:00.000Z",
     rating: 4.4,
-    reviewCount: 10,
+    reviewCount: 10
   },
   {
     id: "flash-storage-array",
@@ -222,14 +222,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["NVMe", "SSD", "Redundant Controller"],
     author: {
       name: "DataCore",
-      id: "datacore",
+      id: "datacore"
     },
     images: [
-      "https://images.unsplash.com/photo-1581091870625-4c31b89f9518?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1581091870625-4c31b89f9518?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-04T11:10:00.000Z",
     rating: 4.9,
-    reviewCount: 20,
+    reviewCount: 20
   },
   {
     id: "tape-backup-library",
@@ -241,14 +241,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["LTO-9", "Redundant Power", "24 Slots"],
     author: {
       name: "ArchiveTech",
-      id: "archivetech",
+      id: "archivetech"
     },
     images: [
-      "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-01-30T16:40:00.000Z",
     rating: 4.5,
-    reviewCount: 7,
+    reviewCount: 7
   },
   {
     id: "server-rack-42u",
@@ -261,14 +261,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Adjustable Rails", "Lockable", "Ventilated"],
     author: {
       name: "RackMaster",
-      id: "rackmaster",
+      id: "rackmaster"
     },
     images: [
-      "https://images.unsplash.com/photo-1581091012184-e5857b5b3a4b?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1581091012184-e5857b5b3a4b?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-02-20T13:05:00.000Z",
     rating: 4.8,
-    reviewCount: 25,
+    reviewCount: 25
   },
   {
     id: "dc-monitoring",
@@ -281,14 +281,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Sensors", "Alerts", "Analytics"],
     author: {
       name: "DCVision",
-      id: "dcvision",
+      id: "dcvision"
     },
     images: [
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-08T18:00:00.000Z",
     rating: 4.7,
-    reviewCount: 13,
+    reviewCount: 13
   },
   {
     id: "high-capacity-router",
@@ -301,14 +301,14 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["BGP", "10GbE", "Redundant PSU"],
     author: {
       name: "NetWave",
-      id: "netwave",
+      id: "netwave"
     },
     images: [
-      "https://images.unsplash.com/photo-1604079625023-792d09e87a4d?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1604079625023-792d09e87a4d?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-09T08:45:00.000Z",
     rating: 4.6,
-    reviewCount: 17,
+    reviewCount: 17
   },
   {
     id: "cable-management-arm",
@@ -321,16 +321,16 @@ const EQUIPMENT_LISTINGS: ProductListing[] = [
     tags: ["Adjustable", "Tool-Less", "1U"],
     author: {
       name: "RackMaster",
-      id: "rackmaster",
+      id: "rackmaster"
     },
     images: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500"
     ],
     createdAt: "2024-03-03T06:25:00.000Z",
     rating: 4.4,
-    reviewCount: 5,
-  },
-];
+    reviewCount: 5
+  }
+],
 
 const EQUIPMENT_FILTERS = [
   { label: "Servers", value: "Servers" },
@@ -342,20 +342,20 @@ const EQUIPMENT_FILTERS = [
   { label: "Management", value: "Management" },
   { label: "Infrastructure", value: "Infrastructure" },
   { label: "AI", value: "AI" },
-  { label: "Robotics", value: "Robotics" },
-];
+  { label: "Robotics", value: "Robotics" }
+],
 
 export default function EquipmentPage() {
   const [listings, setListings] = useState<ProductListing[]>([
-    ...EQUIPMENT_LISTINGS,
-  ]);
+    ...EQUIPMENT_LISTINGS
+  ]),
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setListings((prev) => [...prev, generateRandomEquipment()]);
-    }, 120000); // add new equipment every 2 minutes
-    return () => clearInterval(interval);
-  }, []);
+      setListings((prev) => [...prev, generateRandomEquipment()]),
+    }, 120000), // add new equipment every 2 minutes
+    return () => clearInterval(interval),
+  }, []),
 
   return (
       <DynamicListingPage
@@ -367,5 +367,5 @@ export default function EquipmentPage() {
         initialPrice={{ min: 400, max: 50000 }}
         detailBasePath="/equipment"
       />
-  );
+  ),
 }

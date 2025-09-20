@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight,
   Rocket, Shield, Target, BookOpen,
@@ -11,37 +11,37 @@ import {
   BookOpenCheck,
   Building, MessageCircle,
   Target as TargetIcon, Brain as BrainIcon
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Custom ShoppingBag icon component
 const ShoppingBag = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
   </svg>
-);
+),
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const navigationItems: NavigationItem[] = [
@@ -365,36 +365,36 @@ const navigationItems: NavigationItem[] = [
       }
     ]
   }
-];
+],
 
 interface UltraFuturisticNavigation2036Props {
-  onMenuToggle: () => void;
-  'aria-expanded': boolean;
+  onMenuToggle: () => void,
+  'aria-expanded': boolean
 }
 
 export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expanded': ariaExpanded }: UltraFuturisticNavigation2036Props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const navRef = useRef<HTMLElement>(null);
-  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const navRef = useRef<HTMLElement>(null),
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({}),
 
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside),
+  }, []),
 
   useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleKeyDown]);
+    document.addEventListener('keydown', handleKeyDown),
+    return () => document.removeEventListener('keydown', handleKeyDown),
+  }, [handleKeyDown]),
 
   // Enhanced dropdown animation variants
   const dropdownVariants = {
@@ -412,7 +412,7 @@ export default function UltraFuturisticNavigation2036({ onMenuToggle, 'aria-expa
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
 const UltraFuturisticNavigation2036: React.FC = () => {
   return (
@@ -420,7 +420,7 @@ const UltraFuturisticNavigation2036: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2036</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2036;
+export default UltraFuturisticNavigation2036,

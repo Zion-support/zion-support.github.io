@@ -195,13 +195,13 @@
   fixable: link.fixable
 
 }))
-                        };
-                        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.href = url;
-                        a.download = 'link-health-report.json';
-                        a.click();"
+                        },
+                        const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' }),
+                        const url = URL.createObjectURL(blob),
+                        const a = document.createElement('a'),
+                        a.href = url,
+                        a.download = 'link-health-report.json',
+                        a.click(),"
                         URL.revokeObjectURL(url)}} className="w-full bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg transition-colors">
                       Export Report
                     </button>)}
@@ -214,9 +214,9 @@
       <style>{`
         .broken-link-highlight {
 
-          outline: 3px solid #f97316 !important;
-          outline-offset: 2px !important;
-          background-color: rgba(249, 115, 22, 0.1) !important;
+          outline: 3px solid #f97316 !important,
+          outline-offset: 2px !important,
+          background-color: rgba(249, 115, 22, 0.1) !important,
           transition: all 0.3s ease !important}
 
         .link-target-placeholder {
@@ -229,8 +229,8 @@
           50% { opacity: 0.7}
         }`
       `}</style>
-    </>)};
-export { BrokenLinkFixer };
-export default BrokenLinkFixer;
+    </>)},
+export { BrokenLinkFixer },
+export default BrokenLinkFixer,
 }}}}}}}}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

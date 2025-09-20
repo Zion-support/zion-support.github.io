@@ -1,2 +1,2 @@
 
-export default ContentQualityAnalyzer.js;
+export default ContentQualityAnalyzer.js,

@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import SEO from '../../../components/SEO';
+import Link from 'next/link',
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Evidence-Driven AI Operations';
-  description: 'Operate AI systems with evaluation-first practices: metrics, traces, test suites, and policy-as-code gates for safe scale.';
-  keywords: ['AI 2026AI operations', 'evaluationsobservability', 'policy-as-codegovernance'],
-};
+  title: 'AI 2026: Evidence-Driven AI Operations',
+  description: 'Operate AI systems with evaluation-first practices: metrics, traces, test suites, and policy-as-code gates for safe scale.',
+  keywords: ['AI 2026AI operationsevaluationsobservability', 'policy-as-codegovernance']
+},
 export default function EvidenceDrivenAIOperations2026Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -70,6 +70,5 @@ export default function EvidenceDrivenAIOperations2026Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

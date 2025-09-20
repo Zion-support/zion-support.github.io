@@ -1,10 +1,10 @@
 
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/components/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { DisputeDetail } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/components/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { DisputeDetail } from '@/components/disputes',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
 
 function DisputeDetailPage() {
   return (
@@ -19,7 +19,7 @@ function DisputeDetailPage() {
         <Footer />
       </>
     </ProtectedRoute>
-  );
+  ),
 }
 
-export default DisputeDetailPage;
+export default DisputeDetailPage,

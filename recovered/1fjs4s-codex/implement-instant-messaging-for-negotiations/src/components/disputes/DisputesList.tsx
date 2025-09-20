@@ -1,47 +1,46 @@
 
-import React, { useState } from "react";
-import { Dispute, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { Skeleton } from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-import { ShieldAlert } from "lucide-react";
-import { Link } from "react-router-dom";
+  TableRow
+} from "@/components/ui/table",
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+import { ShieldAlert } from "lucide-react",
+import { Link } from "react-router-dom",
 
 type DisputesListProps = {
-  disputes: Dispute[];
-  isLoading: boolean;
-};
+  disputes: Dispute[],
+  isLoading: boolean
+},
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
-    : disputes.filter(dispute => dispute.status === statusFilter);
+    : disputes.filter(dispute => dispute.status === statusFilter),
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open":
-        return "default";
+      case "open": return "default",
       case "under_review":
-        return "secondary";
+        return "secondary",
       case "resolved":
-        return "outline"; // Changed from "success" to "outline"
+        return "outline", // Changed from "success" to "outline"
       case "closed":
-        return "outline";
+        return "outline",
       default:
-        return "default";
+        return "default"
     }
-  };
+  },
 
   if (isLoading) {
     return (
@@ -78,7 +77,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           </Table>
         </div>
       </div>
-    );
+    ),
   }
 
   if (disputes.length === 0) {
@@ -90,7 +89,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    );
+    ),
   }
 
   return (
@@ -169,7 +168,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
                 </TableCell>
                 <TableCell>
                   <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                    {dispute.status.replace('_', ' ')}
+                    {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
                 <TableCell className="text-right">
@@ -183,5 +182,5 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         </Table>
       </div>
     </div>
-  );
+  ),
 }

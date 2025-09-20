@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Phone, Mail } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Menu, X, ChevronDown, Globe, Phone, Mail } from 'lucide-react',
 
 export default function FuturisticNav() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 20),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -45,13 +45,13 @@ export default function FuturisticNav() {
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
-  ];
+  ],
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
+  },
 
 const FuturisticNav: React.FC = () => {
   return (
@@ -59,7 +59,7 @@ const FuturisticNav: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">FuturisticNav</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default FuturisticNav;
+export default FuturisticNav,

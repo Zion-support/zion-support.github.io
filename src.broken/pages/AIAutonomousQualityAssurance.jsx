@@ -1,4 +1,4 @@
-import { Helmet } from 'react - helmet -async';
+import { Helmet } from 'react - helmet -async',
 
 export default function Page() {
           <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap-8 mb-16">
@@ -124,15 +124,11 @@ export default function Page() {
             <h2 className="text-4xl font - bold text-white text-center mb-12">
               Quality Assurance Solutions
             </h2>
-            <div className="grid md:grid - cols - 4 gap-6">
-              {['Software Quality Assurance',
-                'Product Quality Assurance',
-                'Service Quality Assurance',
-                'Process Quality Assurance',
-                'Data Quality Assurance',
-                'Performance Quality Assurance',
-                'Security Quality Assurance',
-                'Compliance Quality Assurance',
+            <div className="grid md: grid - cols - 4 gap-6">
+              {['Software Quality AssuranceProduct Quality Assurance',
+                'Service Quality AssuranceProcess Quality Assurance',
+                'Data Quality AssurancePerformance Quality Assurance',
+                'Security Quality AssuranceCompliance Quality Assurance'
               ].map (type => (<div
                   key={type}
                   className="bg-white / 5 rounded-lg p - 4 text-center border border-white / 10"
@@ -180,7 +176,7 @@ export default function Page() {
               Transform your quality with AI that continuously monitors and
               ensures excellence
             </p>
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <button className="bg-white text-blue - 600 px-8 py-3 rounded-lg font - semibold hover:bg-gray - 100 transition -colors">
                 Start Assuring Quality
               </button>
@@ -191,5 +187,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) 
+},

@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { 
-  Twitter, 
+  Twitter,
   Linkedin, 
   Facebook, 
   Instagram, 
@@ -34,122 +34,85 @@ import {
   Activity,
   Cpu,
   GraduationCap
-} from 'lucide-react';
-
+} from "lucide-react";
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  },
 
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const footerSections = [
     {
-      title: 'Company',
-      icon: Globe,
-      links: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Blog', path: '/blog', icon: Newspaper },
+      title: 'Company',icon: Globe,links: [
+        { name: 'About Us', path: '/about', icon: Users };
+        { name: 'Careers', path: '/careers', icon: Briefcase };
+        { name: 'Blog', path: '/blog', icon: Newspaper };
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
-    },
+    };
     {
-      title: 'Services',
-      icon: Zap,
-      links: [
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+      title: 'Services',icon: Zap,links: [
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud };
+        { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu };
+        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp };
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building };
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain };
         { name: 'All Services', path: '/services', icon: Zap }
       ]
-    },
+    };
     {
-      title: 'Resources',
-      icon: FileText,
-      links: [
-        { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      title: 'Resources',icon: FileText,links: [
+        { name: 'Blog', path: '/blog', icon: FileText };
+        { name: 'FAQ', path: '/faq', icon: HelpCircle };
         { name: 'Request a Quote', path: '/request-quote', icon: FileText }
       ]
-    },
+    };
     {
-      title: 'Support',
-      icon: Shield,
-      links: [
-        { name: 'Contact Us', path: '/contact', icon: Phone },
-        { name: 'Dashboard', path: '/dashboard', icon: Activity },
+      title: 'Support',icon: Shield,links: [
+        { name: 'Contact Us', path: '/contact', icon: Phone };
+        { name: 'Dashboard', path: '/dashboard', icon: Activity };
         { name: 'Login', path: '/login', icon: HelpCircle }
       ]
     }
   ];
-
   const legal = [
-    { name: "Privacy Policy", path: "/privacy" },
-    { name: "Terms of Service", path: "/terms" },
+    { name: "Privacy Policy", path: "/privacy" };
+    { name: "Terms of Service", path: "/terms" };
     { name: "Cookie Policy", path: "/cookies" }
   ];
-
   const socialLinks = [
     {
-      name: "LinkedIn",
-      url: "https://linkedin.com/company/ziontechgroup",
-      icon: Linkedin,
-      color: "hover:text-blue-600"
-    },
+      name: "LinkedIn",url: "https://linkedin.com/company/ziontechgroup",icon: Linkedin,color: "hover:text-blue-600"
+    };
     {
-      name: "Twitter",
-      url: "https://twitter.com/ziontechgroup",
-      icon: Twitter,
-      color: "hover:text-blue-400"
-    },
+      name: "Twitter",url: "https://twitter.com/ziontechgroup",icon: Twitter,color: "hover:text-blue-400"
+    };
     {
-      name: "Facebook",
-      url: "https://facebook.com/ziontechgroup",
-      icon: Facebook,
-      color: "hover:text-blue-600"
-    },
+      name: "Facebook",url: "https://facebook.com/ziontechgroup",icon: Facebook,color: "hover:text-blue-600"
+    };
     {
-      name: "Instagram",
-      url: "https://instagram.com/ziontechgroup",
-      icon: Instagram,
-      color: "hover:text-pink-500"
-    },
+      name: "Instagram",url: "https://instagram.com/ziontechgroup",icon: Instagram,color: "hover:text-pink-500"
+    };
     {
-      name: "GitHub",
-      url: "https://github.com/ziontechgroup",
-      icon: Github,
-      color: "hover:text-gray-400"
+      name: "GitHub",url: "https://github.com/ziontechgroup",icon: Github,color: "hover:text-gray-400"
     }
   ];
-
   const contactInfo = [
     {
-      name: "Email",
-      value: "kleber@ziontechgroup.com",
-      url: "mailto:kleber@ziontechgroup.com",
-      icon: Mail
-    },
+      name: "Email",value: "kleber@ziontechgroup.com",url: "mailto:kleber@ziontechgroup.com",icon: Mail
+    };
     {
-      name: "Phone",
-      value: "+1 302 464 0950",
-      url: "tel:+13024640950",
-      icon: Phone
-    },
+      name: "Phone",value: "+1 302 464 0950",url: "tel:+13024640950",icon: Phone
+    };
     {
-      name: "Address",
-      value: "364 E Main St STE 1008 Middletown DE 19709",
-      url: "https://maps.google.com/?q=364%20E%20Main%20St%20STE%201008%20Middletown%20DE%2019709",
-      icon: MapPin
+      name: "Address",value: "364 E Main St STE 1008 Middletown DE 19709",url: "https://maps.google.com/?q=364%20E%20Main%20St%20STE%201008%20Middletown%20DE%2019709",icon: MapPin
     }
   ];
-
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
+      <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"/>
       
       <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Main Footer Content */}
@@ -219,8 +182,8 @@ export function Footer() {
         <div className="border-t border-zion-slate-light/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright and Legal */}
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-zion-slate-light">
-              <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+            <div className="flex flex-col sm: flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-zion-slate-light">
+              <span>&copy, {currentYear} Zion Tech Group. All rights reserved.</span>
               <div className="flex space-x-4">
                 {legal.map((item) => (
                   <Link

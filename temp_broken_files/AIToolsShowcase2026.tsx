@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Sparkles,
   Zap,
@@ -9,146 +9,146 @@ import {,
   Star,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Lightbulb;
-  Target;
-  Globe;
-  Code;
-  Database;
-  Shield;
-  BarChart3;
-  MessageSquare;
-  Image;
-  Video;
-  FileText;
-  Search;
-  Settings;
-  Cpu;
-  Network,
-} from 'lucide-react';
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  Target,
+  Globe,
+  Code,
+  Database,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  Image,
+  Video,
+  FileText,
+  Search,
+  Settings,
+  Cpu,
+  Network
+} from 'lucide-react',
 const AIToolsShowcase2026 = () => {,
-  const [activeCategorysetActiveCategory] = useState('all');
-  const [hoveredToolsetHoveredTool] = useState<number | null>(null);
+  const [activeCategorysetActiveCategory] = useState('all'),
+  const [hoveredToolsetHoveredTool] = useState<number | null>(null),
   const categories = [,
-    { id: ''alllabel: 'All 'Toolsicon: Gridcount: 24 ,};
-    { id: ''automationlabel: ''Automationicon: Settingscount: 8 ,};
-    { id: ''analyticslabel: ''Analyticsicon: BarChart3count: 6 ,};
-    { id: ''contentlabel: ''Contenticon: FileTextcount: 5 ,};
-    { id: ''communicationlabel: ''Communicationicon: MessageSquarecount: 3 ,};
-    { id: ''developmentlabel: ''Developmenticon: Codecount: 2 ,}
-  ];
+    { id: ''alllabel: 'All 'Toolsicon: Gridcount: 24 },
+    { id: ''automationlabel: ''Automationicon: Settingscount: 8 },
+    { id: ''analyticslabel: ''Analyticsicon: BarChart3count: 6 },
+    { id: ''contentlabel: ''Contenticon: FileTextcount: 5 },
+    { id: ''communicationlabel: ''Communicationicon: MessageSquarecount: 3 },
+    { id: ''developmentlabel: ''Developmenticon: Codecount: 2 }
+  ],
   const aiTools = [,
     {,
-      id: 1;
-      name: 'Neural Code Generator';
-      description: 'AI-powered code generation that understands context and creates production-ready code';
-      category: 'development';
-      icon: Code;
-      color: 'from-blue-600 to-cyan-600';
-      features: ['Multi-language 'supportContext-aware 'generation', 'Real-time suggestions'];
-      rating: 4.9;
-      users: '50K+';
-      price: 'Free';
-      isNew: true;
-      isPopular: true,};
+      id: 1,
+      name: 'Neural Code Generator',
+      description: 'AI-powered code generation that understands context and creates production-ready code',
+      category: 'development',
+      icon: Code,
+      color: 'from-blue-600 to-cyan-600',
+      features: ['Multi-language 'supportContext-aware 'generationReal-time suggestions'],
+      rating: 4.9,
+      users: '50K+',
+      price: 'Free',
+      isNew: true,
+      isPopular: true},
     {,
-      id: 2;
-      name: 'Intelligent Data Analyzer';
-      description: 'Advanced analytics platform that automatically discovers insights from your data';
-      category: 'analytics';
-      icon: BarChart3;
-      color: 'from-green-600 to-emerald-600';
-      features: ['Auto-'discoveryPredictive 'modeling', 'Visual dashboards'];
-      rating: 4.8;
-      users: '35K+';
-      price: '$99/mo';
-      isNew: false;
-      isPopular: true,};
+      id: 2,
+      name: 'Intelligent Data Analyzer',
+      description: 'Advanced analytics platform that automatically discovers insights from your data',
+      category: 'analytics',
+      icon: BarChart3,
+      color: 'from-green-600 to-emerald-600',
+      features: ['Auto-'discoveryPredictive 'modelingVisual dashboards'],
+      rating: 4.8,
+      users: '35K+',
+      price: '$99/mo',
+      isNew: false,
+      isPopular: true},
     {,
-      id: 3;
-      name: 'Content Creation Suite';
-      description: 'Complete content generation platform for blogsocial mediand marketing';
-      category: 'content';
-      icon: FileText;
-      color: 'from-purple-600 to-pink-600';
-      features: ['Multi-format 'supportSEO 'optimization', 'Brand voice matching'];
-      rating: 4.7;
-      users: '75K+';
-      price: '$149/mo';
-      isNew: true;
-      isPopular: false,};
+      id: 3,
+      name: 'Content Creation Suite',
+      description: 'Complete content generation platform for blogsocial mediand marketing',
+      category: 'content',
+      icon: FileText,
+      color: 'from-purple-600 to-pink-600',
+      features: ['Multi-format 'supportSEO 'optimizationBrand voice matching'],
+      rating: 4.7,
+      users: '75K+',
+      price: '$149/mo',
+      isNew: true,
+      isPopular: false},
     {,
-      id: 4;
-      name: 'Smart Automation Hub';
-      description: 'Workflow automation that learns and adapts to your business processes';
-      category: 'automation';
-      icon: Settings;
-      color: 'from-orange-600 to-red-600';
-      features: ['Process 'learningCustom 'workflows', 'Integration hub'];
-      rating: 4.9;
-      users: '40K+';
-      price: '$199/mo';
-      isNew: false;
-      isPopular: true,};
+      id: 4,
+      name: 'Smart Automation Hub',
+      description: 'Workflow automation that learns and adapts to your business processes',
+      category: 'automation',
+      icon: Settings,
+      color: 'from-orange-600 to-red-600',
+      features: ['Process 'learningCustom 'workflowsIntegration hub'],
+      rating: 4.9,
+      users: '40K+',
+      price: '$199/mo',
+      isNew: false,
+      isPopular: true},
     {,
-      id: 5;
-      name: 'AI Customer Assistant';
-      description: 'Intelligent chatbot that provides personalized customer support 24/7';
-      category: 'communication';
-      icon: MessageSquare;
-      color: 'from-indigo-600 to-purple-600';
-      features: ['Natural 'conversationsMulti-'language', 'Sentiment analysis'];
-      rating: 4.6;
-      users: '60K+';
-      price: '$79/mo';
-      isNew: false;
-      isPopular: false,};
+      id: 5,
+      name: 'AI Customer Assistant',
+      description: 'Intelligent chatbot that provides personalized customer support 24/7',
+      category: 'communication',
+      icon: MessageSquare,
+      color: 'from-indigo-600 to-purple-600',
+      features: ['Natural 'conversationsMulti-'languageSentiment analysis'],
+      rating: 4.6,
+      users: '60K+',
+      price: '$79/mo',
+      isNew: false,
+      isPopular: false},
     {,
-      id: 6;
-      name: 'Visual Content Creator';
-      description: 'AI-powered image and video generation for marketing and social media';
-      category: 'content';
-      icon: Image;
-      color: 'from-pink-600 to-rose-600';
-      features: ['Image 'generationVideo 'creation', 'Style transfer'];
-      rating: 4.8;
-      users: '45K+';
-      price: '$129/mo';
-      isNew: true;
-      isPopular: true,};
+      id: 6,
+      name: 'Visual Content Creator',
+      description: 'AI-powered image and video generation for marketing and social media',
+      category: 'content',
+      icon: Image,
+      color: 'from-pink-600 to-rose-600',
+      features: ['Image 'generationVideo 'creationStyle transfer'],
+      rating: 4.8,
+      users: '45K+',
+      price: '$129/mo',
+      isNew: true,
+      isPopular: true},
     {,
-      id: 7;
-      name: 'Predictive Analytics Engine';
-      description: 'Machine learning platform for forecasting and trend analysis';
-      category: 'analytics';
-      icon: TrendingUp;
-      color: 'from-teal-600 to-cyan-600';
-      features: ['Time series 'analysisAnomaly 'detection', 'Custom models'];
-      rating: 4.7;
-      users: '25K+';
-      price: '$299/mo';
-      isNew: false;
-      isPopular: false,};
+      id: 7,
+      name: 'Predictive Analytics Engine',
+      description: 'Machine learning platform for forecasting and trend analysis',
+      category: 'analytics',
+      icon: TrendingUp,
+      color: 'from-teal-600 to-cyan-600',
+      features: ['Time series 'analysisAnomaly 'detectionCustom models'],
+      rating: 4.7,
+      users: '25K+',
+      price: '$299/mo',
+      isNew: false,
+      isPopular: false},
     {,
-      id: 8;
-      name: 'Smart Search Engine';
-      description: 'AI-powered search that understands intent and context';
-      category: 'automation';
-      icon: Search;
-      color: 'from-yellow-600 to-orange-600';
-      features: ['Semantic 'searchAuto-'categorization', 'Smart filters'];
-      rating: 4.5;
-      users: '30K+';
-      price: '$59/mo';
-      isNew: false;
-      isPopular: false,}
-  ];
+      id: 8,
+      name: 'Smart Search Engine',
+      description: 'AI-powered search that understands intent and context',
+      category: 'automation',
+      icon: Search,
+      color: 'from-yellow-600 to-orange-600',
+      features: ['Semantic 'searchAuto-'categorizationSmart filters'],
+      rating: 4.5,
+      users: '30K+',
+      price: '$59/mo',
+      isNew: false,
+      isPopular: false}
+  ],
   const filteredTools = activeCategory === 'all',
     ? aiTools,
-    : aiTools.filter(tool => tool.category === activeCategory);
+    : aiTools.filter(tool => tool.category === activeCategory),
   return (,
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">,
       {/* Animated Background */}
@@ -161,15 +161,15 @@ const AIToolsShowcase2026 = () => {,
               key={i}
               className="absolute w-1 h-1 bg-cyan-400/30 rounded-full",
               style={{,
-                left: `${Math.random() * 100,}%`;
-                top: `${Math.random() * 100,}%`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`
               }}
-                y: [0-50];
-                opacity: [010];
-                scale: [0.510.5],}}
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 3,}}
+                y: [0-50],
+                opacity: [010],
+                scale: [0.510.5]}}
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 3}}
             />,
           ))}
         </div>,
@@ -191,12 +191,12 @@ const AIToolsShowcase2026 = () => {,
             Discover our comprehensive suite of AI-powered tools designed to automateoptimizeand transform your business operations.,
           </p>,
         </div>,
-        {/* Category Filter */,}
+        {/* Category Filter */}
         <div,
           className="flex flex-wrap justify-center gap-3 mb-12",
         >,
           {categories.map((category) => {,
-            const Icon = category.icon;
+            const Icon = category.icon,
             return (,
               <button,
                 key={category.id}
@@ -204,7 +204,7 @@ const AIToolsShowcase2026 = () => {,
                 className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${,
                   activeCategory === category.id,
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25',
-                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',}`}
+                    : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white'}`}
               >,
                 <Icon className="w-4 h-4" />,
                 {category.label}
@@ -212,7 +212,7 @@ const AIToolsShowcase2026 = () => {,
                   {category.count}
                 </span>,
               </button>,
-            );
+            ),
           })}
         </div>,
         {/* Tools Grid */}
@@ -221,7 +221,7 @@ const AIToolsShowcase2026 = () => {,
         >,
           <div>,
             {filteredTools.map((toolindex) => {,
-              const Icon = tool.icon;
+              const Icon = tool.icon,
               return (,
                 <div,
                   key={tool.id}
@@ -229,19 +229,17 @@ const AIToolsShowcase2026 = () => {,
                   onHoverEnd={() => setHoveredTool(null)}
                   className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10",
                 >,
-                  {/* Badges */,}
+                  {/* Badges */}
                   <div className="flex items-center justify-between mb-4">,
                     <div className="flex gap-2">,
                       {tool.isNew && (,
                         <span className="text-xs font-medium text-green-300 bg-green-500/20 px-2 py-1 rounded-full">,
                           NEW,
-                        </span>,
-                      )}
+                        </span>)}
                       {tool.isPopular && (,
                         <span className="text-xs font-medium text-yellow-300 bg-yellow-500/20 px-2 py-1 rounded-full">,
                           POPULAR,
-                        </span>,
-                      )}
+                        </span>)}
                     </div>,
                     <div className={`w-12 h-12 bg-gradient-to-r ${tool.color} rounded-xl flex items-center justify-center`}>,
                       <Icon className="w-6 h-6 text-white" />,
@@ -249,7 +247,7 @@ const AIToolsShowcase2026 = () => {,
                   </div>,
                   {/* Tool Info */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover: text-cyan-300 transition-colors">,
-                    {tool.name,}
+                    {tool.name}
                   </h3>,
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">,
                     {tool.description}
@@ -260,8 +258,7 @@ const AIToolsShowcase2026 = () => {,
                       <div key={featureIndex} className="flex items-center gap-2">,
                         <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>,
                         <span className="text-xs text-gray-300">{feature}</span>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Stats */}
                   <div className="flex items-center justify-between mb-4">,
@@ -283,7 +280,7 @@ const AIToolsShowcase2026 = () => {,
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />,
                     </button>,
                   </div>,
-                  {/* Hover Overlay */,}
+                  {/* Hover Overlay */}
                   <div>,
                     {hoveredTool === tool.id && (,
                       <div,
@@ -292,11 +289,10 @@ const AIToolsShowcase2026 = () => {,
                         <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-full font-medium hover: shadow-lg hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">,
                           Get Started,
                         </button>,
-                      </div>,
-                    ),}
+                      </div>)}
                   </div>,
                 </div>,
-              );
+              ),
             })}
           </div>,
         </div>,
@@ -323,5 +319,5 @@ const AIToolsShowcase2026 = () => {,
         </div>,
       </div>,
     </div>,
-  );
-export default AIToolsShowcase2026;
+  ),
+export default AIToolsShowcase2026,

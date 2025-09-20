@@ -1,17 +1,17 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
   {
     id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
-    count: ALL_SERVICES.filter(s => s.category.includes ('Security') || s.tags.includes('Security') ) .length,
+    count: ALL_SERVICES.filter(s => s.category.includes ('Security') || s.tags.includes('Security') ) .length
   },
   {
     id: 'business - intelligence',
     name: 'Business Intelligence',
     icon: BarChart3,
-    count: ALL_SERVICES.filter(s => s.category.includes ('Business') || s.tags.includes('Business') ) .length,
+    count: ALL_SERVICES.filter(s => s.category.includes ('Business') || s.tags.includes('Business') ) .length
   },
   {
     id: 'industry - solutions',
@@ -19,31 +19,24 @@ export default function Page() {
     icon: Target,
     count: ALL_SERVICES.filter(s =>
       [
-        'Healthcare',
-        'Financial Services',
-        'Manufacturing',
-        'Energy',
-        'Transportation',
-        'Education',
-        'Real Estate',
-        'Agriculture',
-        'Legal Services',
-        'Media & Entertainment',
-      ].includes (s.category) ) .length,
+        'HealthcareFinancial Services',
+        'ManufacturingEnergy',
+        'TransportationEducation',
+        'Real EstateAgriculture',
+        'Legal ServicesMedia & Entertainment'
+      ].includes (s.category) ) .length
   },
   {
     id: 'emerging - tech',
     name: 'Emerging Tech',
     icon: Lightbulb,
     count: ALL_SERVICES.filter(s =>
-      ['Edge Computing',
-        'Digital Twin',
-        'Autonomous Systems',
-        'Neuromorphic Computing',
-        'Federated Learning',
-      ].includes (s.category) ) .length,
-  },
-];
+      ['Edge ComputingDigital Twin',
+        'Autonomous SystemsNeuromorphic Computing',
+        'Federated Learning'
+      ].includes (s.category) ) .length
+  }
+],
 
 // Contact information
 const CONTACT_INFO = {
@@ -52,37 +45,37 @@ const CONTACT_INFO = {
   address: '364 E Main St STE 1008, Middletown DE 19709',
   website: 'https://ziontechgroup.com',
   supportHours: '24 / 7',
-  responseTime: '< 2 hours',
-};
+  responseTime: '< 2 hours'
+},
 
 // Benefits section
 const BENEFITS = [{
     icon: <Zap className="h-6 w-6" />,
     title: 'Immediate Deployment',
     description:
-      'All services are ready for immediate deployment with no setup delays',
+      'All services are ready for immediate deployment with no setup delays'
   },
   {
     icon: <Shield className="h-6 w-6" />,
     title: 'Enterprise Security',
     description:
-      'Bank - level security with SOC 2 compliance and 24 / 7 monitoring',
+      'Bank - level security with SOC 2 compliance and 24 / 7 monitoring'
   },
   {
     icon: <Users className="h-6 w-6" />,
     title: 'Dedicated Support',
-    description: '24 / 7 technical support with dedicated account managers',
+    description: '24 / 7 technical support with dedicated account managers'
   },
   {
     icon: <TrendingUp className="h-6 w-6" />,
     title: 'Proven ROI',
-    description: 'Average 300% ROI within 6 months of implementation',
-  },
-];
+    description: 'Average 300% ROI within 6 months of implementation'
+  }
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('featured');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('featured'),
 
   // Filter services based on category and search
   const filteredServices = ALL_SERVICES.filter(service => {
@@ -90,28 +83,27 @@ const BENEFITS = [{
       service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       service.tags.some(tag =>
-        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-    return matchesCategory && matchesSearch;
-  }) ;
+    return matchesCategory && matchesSearch,
+  }) ,
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch(sortBy) {
       case 'featured':
-        return b.featured - a.featured;
+        return b.featured - a.featured,
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'price - low':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'price - high':
-        return b.price - a.price;
+        return b.price - a.price,
       case 'ai - score':
-        return b.aiScore - a.aiScore;
-      default:
-        return 0;
+        return b.aiScore - a.aiScore,
+      default: return 0
     }
-  }) ;
+  }) ,
 
   return (<div className="min - h-screen bg-background">
       {/* Hero Section */}
@@ -468,7 +460,7 @@ const BENEFITS = [{
           <div className="flex flex - wrap justify - center gap-4">
             <Button
               size="lg"
-              className="bg-white text-zion - blue hover:bg-gray -100"
+              className="bg-white text-zion - blue hover: bg-gray -100"
             >
               <Rocket className="h-5 w-5 mr-2" />
               Explore Services
@@ -484,5 +476,5 @@ const BENEFITS = [{
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

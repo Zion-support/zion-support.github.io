@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 
 export default function Accessibility() {
   return (
@@ -333,7 +333,7 @@ export default function Accessibility() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <a href="/contact" className="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors">
+                <a href="/contact" className="px-6 py-3 bg-green-500 hover: bg-green-600 text-white rounded-lg transition-colors">
                   Report Accessibility Issue
                 </a>
                 <a href="/contact" className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-colors">
@@ -356,5 +356,5 @@ export default function Accessibility() {
         </main>
       </div>
     </>
-  );
+  )
 }

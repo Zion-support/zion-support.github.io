@@ -1,102 +1,102 @@
-import React, { Component, ReactNode } from 'react';
-import { QueryClient } from '@tanstack/react-query';
-import * as Sentry from '@sentry/nextjs';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import React, { Component, ReactNode } from 'react',
+import { QueryClient } from '@tanstack/react-query',
+import * as Sentry from '@sentry/nextjs',
+import { Button } from '@/components/ui/button',
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
 import { RefreshCw, WifiOff } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 
 interface ApiErrorBoundaryProps {
-  children: ReactNode;
-  queryClient?: QueryClient;
-  fallback?: ReactNode;
+  children: ReactNode,
+  queryClient?: QueryClient,
+  fallback?: ReactNode
 }
 
 interface ApiErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
-  isRetrying: boolean;
-  isOnline: boolean;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: any,
+  isRetrying: boolean,
+  isOnline: boolean
 }
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
+  private retryTimeoutId: NodeJS.Timeout | null = null,
 
   constructor(props: ApiErrorBoundaryProps) {
-    super(props);
+    super(props),
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       isRetrying: false,
-      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-    };
+      isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true
+    },
   }
 
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
-      error,
-    };
+      error
+    },
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
     // Log to Sentry
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', 'ApiErrorBoundary');
-      scope.setContext('errorInfo', errorInfo);
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
+      scope.setTag('errorBoundaryApiErrorBoundary'),
+      scope.setContext('errorInfo', errorInfo),
+      scope.setLevel('error'),
+      Sentry.captureException(error),
+    }),
 
     this.setState({
       error,
-      errorInfo,
-    });
+      errorInfo
+    }),
 
-    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo);
+    logErrorToProduction('ApiErrorBoundary caught an error:', error, errorInfo),
   }
 
   componentDidMount() {
     // Listen for online/offline events
     if (typeof window !== 'undefined') {
-      window.addEventListener('online', this.handleOnline);
-      window.addEventListener('offline', this.handleOffline);
+      window.addEventListener('online', this.handleOnline),
+      window.addEventListener('offline', this.handleOffline),
     }
   }
 
   componentWillUnmount() {
     if (typeof window !== 'undefined') {
-      window.removeEventListener('online', this.handleOnline);
-      window.removeEventListener('offline', this.handleOffline);
+      window.removeEventListener('online', this.handleOnline),
+      window.removeEventListener('offline', this.handleOffline),
     }
     if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
+      clearTimeout(this.retryTimeoutId),
     }
   }
 
   handleOnline = () => {
-    this.setState({ isOnline: true });
+    this.setState({ isOnline: true }),
     // Auto-retry when coming back online
     if (this.state.hasError) {
-      this.handleRetry();
+      this.handleRetry(),
     }
-  };
+  },
 
   handleOffline = () => {
-    this.setState({ isOnline: false });
-  };
+    this.setState({ isOnline: false }),
+  },
 
   handleRetry = async () => {
-    this.setState({ isRetrying: true });
+    this.setState({ isRetrying: true }),
 
     try {
       // Invalidate all queries to force refetch
       if (this.props.queryClient) {
-        await this.props.queryClient.invalidateQueries();
-        await this.props.queryClient.refetchQueries();
+        await this.props.queryClient.invalidateQueries(),
+        await this.props.queryClient.refetchQueries(),
       }
 
       // Reset error state after a brief delay
@@ -105,15 +105,15 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
           hasError: false,
           error: null,
           errorInfo: null,
-          isRetrying: false,
-        });
-      }, 500);
+          isRetrying: false
+        }),
+      }, 500),
     } catch (retryError) {
-      logErrorToProduction('Retry failed:', { data: retryError });
-      Sentry.captureException(retryError);
-      this.setState({ isRetrying: false });
+      logErrorToProduction('Retry failed:', { data: retryError }),
+      Sentry.captureException(retryError),
+      this.setState({ isRetrying: false }),
     }
-  };
+  },
 
   render() {
     if (this.state.hasError) {
@@ -121,11 +121,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       const isNetworkError = this.state.error?.message?.includes('fetch') ||
                            this.state.error?.message?.includes('network') ||
                            this.state.error?.message?.includes('timeout') ||
-                           !this.state.isOnline;
+                           !this.state.isOnline,
 
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       return (
@@ -203,10 +203,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
             )}
           </div>
         </div>
-      );
+      ),
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }
 
@@ -214,11 +214,11 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 export const useApiErrorHandler = () => {
   const handleApiError = (error: Error) => {
     Sentry.withScope((scope) => {
-      scope.setTag('source', 'useApiErrorHandler');
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
+      scope.setTag('sourceuseApiErrorHandler'),
+      scope.setLevel('error'),
+      Sentry.captureException(error),
+    }),
+  },
 
-  return { handleApiError };
-}; 
+  return { handleApiError },
+}, 

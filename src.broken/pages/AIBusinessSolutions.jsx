@@ -1,27 +1,27 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             name: 'Manufacturing',
-            applications['Predictive maintenance', 'Quality control', 'Supply chain optimization', 'Production planning'];
-        },;
+            applications['Predictive maintenanceQuality control', 'Supply chain optimizationProduction planning'],
+        },
         {
             name: 'Retail',
-            applications['Inventory management', 'Customer segmentation', 'Price optimization', 'Demand forecasting'];
-        },;
+            applications['Inventory managementCustomer segmentation', 'Price optimizationDemand forecasting'],
+        },
         {
             name: 'Financial Services',
-            applications['Risk assessment', 'Fraud detection', 'Portfolio management', 'Customer service'];
-        },;
+            applications['Risk assessmentFraud detection', 'Portfolio managementCustomer service'],
+        },
         {
             name: 'Transportation',
-            applications['Route optimization', 'Fleet management', 'Predictive maintenance', 'Demand forecasting'];
-        },;
+            applications['Route optimizationFleet management', 'Predictive maintenanceDemand forecasting'],
+        },
         {
             name: 'Energy',
-            applications['Grid optimization', 'Predictive maintenance', 'Energy trading', 'Sustainability analysis'];
+            applications['Grid optimizationPredictive maintenance', 'Energy tradingSustainability analysis'],
         }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 text-white">
       <div className="max - w-7xl mx - auto px-4 py-16">
         {/* Hero Section */}

@@ -15,7 +15,7 @@ export const suspiciousPhrases = [
   "payment link",
   "urgent payment",
   "deal outside"
-];
+],
 
 // Email domains often used for throwaway accounts
 export const suspiciousEmailDomains = [
@@ -25,4 +25,4 @@ export const suspiciousEmailDomains = [
   "mailinator",
   "guerrillamail",
   "10minutemail"
-];
+],

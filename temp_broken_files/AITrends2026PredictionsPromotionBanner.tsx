@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 import {,
   TrendingUp,
@@ -8,56 +8,56 @@ import {,
   Zap,
   Rocket,
   ArrowRight,
-  X;
-  BarChart3;
-  Target;
-  Calendar;
-  Star;
-  Users;
-  Clock;
-  CheckCircle,
-} from 'lucide-react';
+  X,
+  BarChart3,
+  Target,
+  Calendar,
+  Star,
+  Users,
+  Clock,
+  CheckCircle
+} from 'lucide-react',
 const AITrends2026PredictionsPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentPredictionsetCurrentPrediction] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentPredictionsetCurrentPrediction] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-rotate predictions,
     const interval = setInterval(() => {,
-      setCurrentPrediction((prev) => (prev + 1) % predictions.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentPrediction((prev) => (prev + 1) % predictions.length),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
   const predictions = [,
     {,
-      title: 'AGI Breakthrough';
-      probability: 85;
-      timeline: 'Q3 2026';
-      impact: 'Revolutionary';
-      icon: Brain;
-      color: 'from-purple-500 to-blue-500',};
+      title: 'AGI Breakthrough',
+      probability: 85,
+      timeline: 'Q3 2026',
+      impact: 'Revolutionary',
+      icon: Brain,
+      color: 'from-purple-500 to-blue-500'},
     {,
-      title: 'Quantum Supremacy 2.0';
-      probability: 95;
-      timeline: 'Q1 2026';
-      impact: 'Revolutionary';
-      icon: Zap;
-      color: 'from-cyan-500 to-teal-500',};
+      title: 'Quantum Supremacy 2.0',
+      probability: 95,
+      timeline: 'Q1 2026',
+      impact: 'Revolutionary',
+      icon: Zap,
+      color: 'from-cyan-500 to-teal-500'},
     {,
-      title: 'Neural Interfaces';
-      probability: 90;
-      timeline: 'Q2 2026';
-      impact: 'Transformative';
-      icon: Rocket;
-      color: 'from-pink-500 to-rose-500',}
-  ];
+      title: 'Neural Interfaces',
+      probability: 90,
+      timeline: 'Q2 2026',
+      impact: 'Transformative',
+      icon: Rocket,
+      color: 'from-pink-500 to-rose-500'}
+  ],
   const stats = [,
-    { label: ''Predictionsvalue: '50+'icon: Target ,};
-    { label: 'Expert 'Analystsvalue: '200+'icon: Users ,};
-    { label: 'Updated 'Weeklyvalue: '24/7'icon: Clock ,}
-  ];
-  if (isDismissed) return null;
+    { label: ''Predictionsvalue: '50+'icon: Target },
+    { label: 'Expert 'Analystsvalue: '200+'icon: Users },
+    { label: 'Updated 'Weeklyvalue: '24/7'icon: Clock }
+  ],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -74,20 +74,20 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                 key={i}
                 className="absolute w-1 h-1 bg-white rounded-full opacity-40",
                 style={{,
-                  left: `${Math.random() * 100,}%`;
-                  top: `${Math.random() * 100,}%`,
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`
                 }}
-                  y: [0-30];
-                  opacity: [0.40.80.4],}}
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity;
-                  delay: Math.random() * 2,}}
+                  y: [0-30],
+                  opacity: [0.40.80.4]}}
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2}}
               />,
             ))}
           </div>,
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">,
-              {/* Left Content */,}
+              {/* Left Content */}
               <div className="flex-1 text-center lg: text-left">,
                 <div,
                   className="mb-6",
@@ -107,12 +107,12 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                     technological breakthroughs expected in 2026.,
                   </p>,
                 </div>,
-                {/* Rotating Predictions */,}
+                {/* Rotating Predictions */}
                 <div,
                   key={currentPrediction}
                   className="flex items-center justify-center lg: justify-start mb-6",
                 >,
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color,} flex items-center justify-center mr-4`}>,
+                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${predictions[currentPrediction].color} flex items-center justify-center mr-4`}>,
                     <predictions[currentPrediction].icon className="w-6 h-6 text-white" />,
                   </div>,
                   <div>,
@@ -135,7 +135,7 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                 <div className="flex flex-wrap gap-6 justify-center lg: justify-start mb-8">,
                   {stats.map((statindex) => (,
                     <div,
-                      key={index,}
+                      key={index}
                       className="text-center",
                     >,
                       <div className="flex items-center justify-center w-12 h-12 bg-white/10 rounded-full mb-2">,
@@ -143,8 +143,7 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                       </div>,
                       <div className="text-2xl font-bold text-white">{stat.value}</div>,
                       <div className="text-sm text-gray-300">{stat.label}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
                 {/* Action Buttons */}
                 <div className="flex flex-col sm: flex-row gap-4 justify-center lg:justify-start">,
@@ -165,16 +164,16 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                   </a>,
                 </div>,
               </div>,
-              {/* Right Content - Prediction Cards */,}
+              {/* Right Content - Prediction Cards */}
               <div,
                 className="flex-shrink-0 w-full lg: w-96",
               >,
                 <div className="grid grid-cols-1 gap-4">,
                   {predictions.map((predictionindex) => (,
                     <div,
-                      key={index,}
+                      key={index}
                       className={`p-4 rounded-xl bg-gradient-to-r ${prediction.color} bg-opacity-20 backdrop-blur-lg border border-white/20 hover: border-white/40 transition-all duration-300 ${,
-                        currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : '',}`}
+                        currentPrediction === index ? 'ring-2 ring-indigo-400 ring-opacity-50' : ''}`}
                     >,
                       <div className="flex items-center justify-between mb-3">,
                         <div className="flex items-center">,
@@ -198,8 +197,7 @@ const AITrends2026PredictionsPromotionBanner = () => {,
                         </div>,
                         <Star className="w-4 h-4 text-yellow-400" />,
                       </div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -212,8 +210,8 @@ const AITrends2026PredictionsPromotionBanner = () => {,
             <X className="w-4 h-4 text-white" />,
           </button>,
         </div>,
-      ),}
+      )}
     </div>,
-  );
-};
-export default AITrends2026PredictionsPromotionBanner;
+  ),
+},
+export default AITrends2026PredictionsPromotionBanner,

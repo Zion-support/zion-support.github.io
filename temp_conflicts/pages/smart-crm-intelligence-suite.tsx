@@ -1,24 +1,21 @@
 <<<<<<< HEAD
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react',
 
 export default function SmartCrmIntelligenceSuitePage() {
 	const contact = {
 		mobile: '+1 302 464 0950',
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709'
-	};
+	},
 
 	const features = [
-		'AI lead scoring and next-best-action',
-		'Account-based insights and intent signals',
-		'Conversational summaries and auto-logging',
-		'Pipeline risk alerts and forecast accuracy',
-		'Playbooks with automated outreach',
-		'Native integrations (Salesforce, HubSpot, Pipedrive)'
-	];
+		'AI lead scoring and next-best-actionAccount-based insights and intent signals',
+		'Conversational summaries and auto-loggingPipeline risk alerts and forecast accuracy',
+		'Playbooks with automated outreachNative integrations (Salesforce, HubSpot, Pipedrive)'
+	],
 
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -38,7 +35,7 @@ export default function SmartCrmIntelligenceSuitePage() {
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-							<p className="text-gray-300 leading-relaxed">Unify CRM activity, emails, meetings, and intent data to produce AI-driven scores, alerts, and playbooks. SDRs and AEs get prioritized tasks; managers get accurate forecasts and risk heatmaps.</p>
+							<p className="text-gray-300 leading-relaxed">Unify CRM activity, emails, meetings, and intent data to produce AI-driven scores, alerts, and playbooks. SDRs and AEs get prioritized tasks, managers get accurate forecasts and risk heatmaps.</p>
 						</Card>
 
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -75,9 +72,9 @@ export default function SmartCrmIntelligenceSuitePage() {
 			</div>
 		</UltraFuturisticBackground>
 =======
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 
 export default function SmartCRMSuite() {
 	return (
@@ -93,12 +90,12 @@ export default function SmartCRMSuite() {
 					<p className="text-gray-300 text-lg max-w-3xl mb-6">Transform CRM operations with AI-driven lead scoring, opportunity insights, and automated playbooks.</p>
 					<div className="flex gap-3">
 						<Link href="/services/smart-crm-intelligence-suite" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white">View Full Service</Link>
-						<a href="tel:+13024640950" className="px-6 py-3 border border-white/20 rounded-lg text-white/90">Call +1 302 464 0950</a>
+						<a href="tel: +13024640950" className="px-6 py-3 border border-white/20 rounded-lg text-white/90">Call +1 302 464 0950</a>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-6 py-3 border border-white/20 rounded-lg text-white/90">Email Us</a>
 					</div>
 				</div>
 			</section>
 		</>
-	);
+	)
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

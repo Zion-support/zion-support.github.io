@@ -1,4 +1,4 @@
-import { Check, X, Star, Clock, Phone, Mail  } from 'lucide-react';
+import { Check, X, Star, Clock, Phone, Mail  } from 'lucide-react',
 
 export default function Page() {
                   </CardTitle>"
@@ -21,7 +21,7 @@ export default function Page() {
                   </Button>
                 </CardContent>
               </Card>
-            );
+            ),
           })}
         </div>
 
@@ -257,6 +257,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"

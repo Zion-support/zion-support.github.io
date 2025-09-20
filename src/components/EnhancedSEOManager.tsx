@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  ogImage?: string;
-  ogType?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
+  title: string,description: string,keywords: string[];
+  ogImage?: string,
+  ogType?: string,
+  canonicalUrl?: string,
+  structuredData?: object
 }
 
 interface EnhancedSEOManagerProps {
-  seoData: SEOData;
-  children: React.ReactNode;
+  seoData: SEOData,children: React.ReactNode
 }
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
@@ -21,29 +17,29 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title
-      document.title = seoData.title;
+      document.title = seoData.title,
       
       // Update meta description
-      let metaDesc = document.querySelector('meta[name="description"]');
+      let metaDesc = document.querySelector('meta[name="description"]'),
       if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.setAttribute('name', 'description');
-        document.head.appendChild(metaDesc);
+        metaDesc = document.createElement('meta'),
+        metaDesc.setAttribute('namedescription'),
+        document.head.appendChild(metaDesc),
       }
-      metaDesc.setAttribute('content', seoData.description);
+      metaDesc.setAttribute('content', seoData.description),
       
       // Update keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      let metaKeywords = document.querySelector('meta[name="keywords"]'),
       if (!metaKeywords) {
-        metaKeywords = document.createElement('meta');
-        metaKeywords.setAttribute('name', 'keywords');
-        document.head.appendChild(metaKeywords);
+        metaKeywords = document.createElement('meta'),
+        metaKeywords.setAttribute('namekeywords'),
+        document.head.appendChild(metaKeywords),
       }
-      metaKeywords.setAttribute('content', seoData.keywords.join(', '));
-    };
+      metaKeywords.setAttribute('content', seoData.keywords.join()),
+    },
 
-    updateMetaTags();
-  }, [seoData]);
+    updateMetaTags(),
+  }, [seoData]),
 
   return (
     <>
@@ -79,13 +75,13 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         
         {/* Security */}
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self', script-src 'self' 'unsafe-inline' 'unsafe-eval', style-src 'self' 'unsafe-inline'," />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
       </Helmet>
       
       {children}
     </>
-  );
-};
+  ),
+},
 
 export default EnhancedSEOManager;

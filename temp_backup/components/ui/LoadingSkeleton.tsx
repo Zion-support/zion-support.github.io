@@ -1,15 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 interface SkeletonProps {
-  className?: string;
-  height?: string;
-  width?: string;
-  rounded?: string;
+  className?: string,
+  height?: string,
+  width?: string,
+  rounded?: string,
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
+  className = '',
   height = 'h-4', 
   width = 'w-full', 
   rounded = 'rounded' 
@@ -19,6 +19,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
       <h3 className="text-xl font-bold mb-4">LoadingSkeleton</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default LoadingSkeleton;
+  ),
+},
+export default LoadingSkeleton,

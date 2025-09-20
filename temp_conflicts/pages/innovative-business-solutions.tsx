@@ -1,7 +1,7 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
@@ -10,23 +10,23 @@ import {
   Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
   { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
-];
+],
 
 const serviceCategories = [
   {
@@ -35,7 +35,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
     icon: ChartIcon,
     color: 'from-blue-500 to-cyan-600',
-    features: ['Data Analysis', 'Predictive Analytics', 'Real-time Insights']
+    features: ['Data AnalysisPredictive Analytics', 'Real-time Insights']
   },
   {
     title: 'Marketing Automation',
@@ -43,7 +43,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
     icon: Megaphone,
     color: 'from-purple-500 to-pink-600',
-    features: ['Campaign Optimization', 'Content Personalization', 'ROI Tracking']
+    features: ['Campaign OptimizationContent Personalization', 'ROI Tracking']
   },
   {
     title: 'Sales Intelligence',
@@ -51,7 +51,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Sales Intelligence'),
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600',
-    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization']
+    features: ['Lead ScoringSales Forecasting', 'Pipeline Optimization']
   },
   {
     title: 'Customer Service',
@@ -59,7 +59,7 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'Customer Service'),
     icon: HeadphonesIcon,
     color: 'from-orange-500 to-red-600',
-    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis']
+    features: ['AI ChatbotsTicket Automation', 'Sentiment Analysis']
   },
   {
     title: 'HR Management',
@@ -67,9 +67,9 @@ const serviceCategories = [
     services: innovativeBusinessSolutions2025.filter(s => s.category === 'HR Management'),
     icon: TeamIcon,
     color: 'from-teal-500 to-cyan-600',
-    features: ['Recruitment Automation', 'Performance Analytics', 'Employee Engagement']
+    features: ['Recruitment AutomationPerformance Analytics', 'Employee Engagement']
   }
-];
+],
 
 const heroFeatures = [
   {
@@ -96,7 +96,7 @@ const heroFeatures = [
     icon: Sparkles,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
-];
+],
 
 const testimonials = [
   {
@@ -123,7 +123,7 @@ const testimonials = [
     rating: 5,
     avatar: '👨‍💻'
   }
-];
+],
 
 export default function InnovativeBusinessSolutions() {
   return (
@@ -414,5 +414,5 @@ export default function InnovativeBusinessSolutions() {
         </div>
       </section>
     </Layout>
-  );
+  ),
 }

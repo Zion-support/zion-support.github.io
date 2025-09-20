@@ -1,12 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: Shield,
       title: 'Secure Operations',
-      description: 'Enterprise - grade security with role - based access control and audit trails for all operations.';
-    };
-  ];
+      description: 'Enterprise - grade security with role - based access control and audit trails for all operations.'
+    },
+  ],
 
   const useCases = [{
       title: 'Supply Chain Management',
@@ -26,27 +26,20 @@ export default function Page() {
     {
       title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
-      icon: Users;
-    };
-  ];
+      icon: Users
+    },
+  ],
 
-  const benefits = ['Reduce operational costs by up to 40%',
-    'Improve process efficiency by 60%',
-    'Eliminate manual errors and delays',
-    '24 / 7 automated operations',
-    'Scalable infrastructure for growth',;
-    'Real - time monitoring and analytics';
-  ];
+  const benefits = ['Reduce operational costs by up to 40%Improve process efficiency by 60%',
+    'Eliminate manual errors and delays24 / 7 automated operations',
+    'Scalable infrastructure for growthReal - time monitoring and analytics',
+  ],
 
-  const industries = ['Manufacturing',
-    'Healthcare',
-    'Finance',
-    'Retail',
-    'Logistics',
-    'Technology',
-    'Energy',;
-    'Education';
-  ];
+  const industries = ['ManufacturingHealthcare',
+    'FinanceRetail',
+    'LogisticsTechnology',
+    'EnergyEducation',
+  ],
 
   const testimonials = [{
       name: 'Sarah Chen',
@@ -64,9 +57,9 @@ export default function Page() {
       name: 'Dr.Emily Watson',
       role: 'CEO, HealthTech Solutions',
       content: 'The AI - powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
-      rating: 5;
-    };
-  ];
+      rating: 5
+    },
+  ],
 
   return (<>
       <SEO
@@ -339,7 +332,7 @@ export default function Page() {
 
         {/* Footer Navigation */}
         <section className="py-12 border-t border-gray -700 / 50">
-          <div className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+          <div className="max - w-7xl mx - auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid - cols - 1 md:grid - cols - 4 gap-8">
               <div>
                 <h4 className="text-lg font - semibold text-green - 400 mb-4">Operations Platform</h4>
@@ -383,5 +376,5 @@ export default function Page() {
             </div>
           </div>
         </section>
-      </div>;
-    </>;) };
+      </div>,
+    </>,) },

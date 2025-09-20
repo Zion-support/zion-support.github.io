@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-    ];
+    ],
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -14,7 +14,7 @@ export default function Page() {
                 staggerChildren: 0.2
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -30,7 +30,7 @@ export default function Page() {
                 duration: 0.6
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>"

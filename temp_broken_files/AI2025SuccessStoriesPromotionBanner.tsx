@@ -1,50 +1,50 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Award,
   TrendingUp,
   Users,
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Quote;
-  Target;
-  Zap,
-} from 'lucide-react';
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Quote,
+  Target,
+  Zap
+} from 'lucide-react',
 const AI2025SuccessStoriesPromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [currentTestimonialsetCurrentTestimonial] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [currentTestimonialsetCurrentTestimonial] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }3000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
+    }3000),
+    return () => clearInterval(interval),
+  }[]),
   const testimonials = [,
     {,
-      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.";
-      company: "TechCorp Solutions";
-      industry: "Manufacturing";
-      result: "200% efficiency increase",};
+      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",
+      company: "TechCorp Solutions",
+      industry: "Manufacturing",
+      result: "200% efficiency increase"},
     {,
-      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.";
-      company: "FinanceFlow Inc";
+      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
+      company: "FinanceFlow Inc",
       industry: "Financial Services",
-      result: "99.8% accuracy rate",};
+      result: "99.8% accuracy rate"},
     {,
-      quote: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery.";
-      company: "HealthTech Partners";
-      industry: "Healthcare";
-      result: "300% faster analysis",}
-  ];
+      quote: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery.",
+      company: "HealthTech Partners",
+      industry: "Healthcare",
+      result: "300% faster analysis"}
+  ],
   const stats = [,
-    { icon: TrendingUpvalue: "340%"label: "Average ROI" ,};
-    { icon: Usersvalue: "850+"label: "Companies Served" ,};
-    { icon: Starvalue: "98%"label: "Success Rate" ,};
-    { icon: Targetvalue: "55%"label: "Cost Reduction" ,}
-  ];
+    { icon: TrendingUpvalue: "340%"label: "Average ROI" },
+    { icon: Usersvalue: "850+"label: "Companies Served" },
+    { icon: Starvalue: "98%"label: "Success Rate" },
+    { icon: Targetvalue: "55%"label: "Cost Reduction" }
+  ],
   return (,
     <section className="py-16 bg-gradient-to-r from-slate-900 via-purple-900 to-pink-900 relative overflow-hidden">,
       {/* Animated Background */}
@@ -55,7 +55,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
       </div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative">,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div,
             className="space-y-8",
           >,
@@ -75,7 +75,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
                 See the measurable impact and transformation stories from our clients.,
               </p>,
             </div>,
-            {/* Key Benefits */,}
+            {/* Key Benefits */}
             <div className="space-y-4">,
               <div className="flex items-center space-x-3">,
                 <CheckCircle className="w-6 h-6 text-green-400" />,
@@ -110,7 +110,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Testimonial & Stats */,}
+          {/* Right Content - Testimonial & Stats */}
           <div,
             className="space-y-8",
           >,
@@ -146,10 +146,9 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
                   <div,
                     key={index}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${,
-                      index === currentTestimonial ? 'bg-purple-400 w-8' : 'bg-white/30',
+                      index === currentTestimonial ? 'bg-purple-400 w-8' : 'bg-white/30'
                     }`}
-                  />,
-                ))}
+                  />))}
               </div>,
             </div>,
             {/* Stats Grid */}
@@ -164,8 +163,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
                   </div>,
                   <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>,
                   <div className="text-sm text-gray-300">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
         </div>,
@@ -187,7 +185,7 @@ const AI2025SuccessStoriesPromotionBanner = () => {,
         </div>,
       </div>,
     </section>,
-  );
-};
-export default AI2025SuccessStoriesPromotionBanner;
+  ),
+},
+export default AI2025SuccessStoriesPromotionBanner,
 </div></div></div></div>,

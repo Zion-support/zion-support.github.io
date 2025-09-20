@@ -1,5 +1,5 @@
-import React from 'react';
-import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react';
+import React from 'react',
+import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react',
 ) {
 
   const securityFeatures = [{
@@ -29,15 +29,15 @@ import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react';
       title: 'Zero-Knowledge Architecture',
       description: 'We cannot access your encrypted data',
       status: 'verified',
-      color: 'text-zion-purple'},
-  ];
+      color: 'text-zion-purple'}
+  ],
   const complianceBadges = ['
     { name: 'SOC 2', status: 'Certified', year: '2024', icon: CheckCircle },
     { name: 'ISO 27001', status: 'Certified', year: '2024', icon: CheckCircle },
     { name: 'GDPR', status: 'Compliant', year: '2024', icon: CheckCircle },
     { name: 'CCPA', status: 'Compliant', year: '2024', icon: CheckCircle },
-    { name: 'HIPAA', status: 'Ready', year: '2024', icon: AlertTriangle },
-  ];
+    { name: 'HIPAA', status: 'Ready', year: '2024', icon: AlertTriangle }
+  ],
   return ()
     <section'
       className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}
@@ -159,7 +159,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react';
             of security
           </p>
         </div>
-      </section>) ;
+      </section>) ,
   }
   // Compact version for smaller spaces
   return (<div
@@ -170,7 +170,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle  } from 'lucide-react';
         <span > SOC 2 Certified</span>
       </div>
     </section>
-  );
+  ),
 }
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
@@ -194,6 +194,6 @@ export function SecurityHeadersCompact({ className }) {
         <span>Zero-Knowledge</span>
       </div>
     </div>
-  );
+  ),
 }
 '"`

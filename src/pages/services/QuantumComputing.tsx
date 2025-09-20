@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Zap, 
+  Zap,
   Brain, 
   Shield, 
   Cloud, 
@@ -22,56 +22,37 @@ import {
   Server,
   CircuitBoard,
   Microchip
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 const QuantumComputing = () => {
   const features = [
     {
-      icon: Atom,
-      title: "Quantum Processing",
-      description: "Advanced quantum algorithms for complex computational problems"
-    },
+      icon: Atom,title: "Quantum Processing",description: "Advanced quantum algorithms for complex computational problems"
+    };
     {
-      icon: Brain,
-      title: "AI Integration",
-      description: "Seamless integration with machine learning and AI systems"
-    },
+      icon: Brain,title: "AI Integration",description: "Seamless integration with machine learning and AI systems"
+    };
     {
-      icon: Shield,
-      title: "Quantum Security",
-      description: "Unbreakable encryption using quantum key distribution"
-    },
+      icon: Shield,title: "Quantum Security",description: "Unbreakable encryption using quantum key distribution"
+    };
     {
-      icon: Cloud,
-      title: "Cloud Quantum",
-      description: "Access quantum computing power through our cloud platform"
+      icon: Cloud,title: "Cloud Quantum",description: "Access quantum computing power through our cloud platform"
     }
   ];
-
   const useCases = [
     {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for risk assessment and portfolio optimization",
-      icon: TrendingUp
-    },
+      title: "Financial Modeling",description: "Quantum algorithms for risk assessment and portfolio optimization",icon: TrendingUp
+    };
     {
-      title: "Drug Discovery",
-      description: "Molecular simulation and protein folding for pharmaceutical research",
-      icon: Brain
-    },
+      title: "Drug Discovery",description: "Molecular simulation and protein folding for pharmaceutical research",icon: Brain
+    };
     {
-      title: "Cryptography",
-      description: "Quantum-resistant encryption and secure communications",
-      icon: Lock
-    },
+      title: "Cryptography",description: "Quantum-resistant encryption and secure communications",icon: Lock
+    };
     {
-      title: "Optimization",
-      description: "Solving complex logistics and supply chain problems",
-      icon: Network
+      title: "Optimization",description: "Solving complex logistics and supply chain problems",icon: Network
     }
   ];
-
   const technologies = [
     "Quantum Annealing",
     "Quantum Machine Learning",
@@ -79,7 +60,7 @@ const QuantumComputing = () => {
     "Quantum Error Correction",
     "Quantum-Classical Hybrid Systems",
     "Quantum Cloud Infrastructure"
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -262,7 +243,7 @@ const QuantumComputing = () => {
               Join the quantum revolution and unlock unprecedented computational power for your business.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
@@ -281,7 +262,6 @@ const QuantumComputing = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default QuantumComputing;

@@ -1,2 +1,2 @@
 
-export default FuturisticHero.js;
+export default FuturisticHero.js,

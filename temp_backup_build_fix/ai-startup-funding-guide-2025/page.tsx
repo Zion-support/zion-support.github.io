@@ -1,5 +1,5 @@
-import React from 'react';
-import SEO from '../../../components/SEO';
+import React from 'react',
+import SEO from '../../../components/SEO',
 export default function AIStartupFundingGuide2025() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -10,7 +10,7 @@ export default function AIStartupFundingGuide2025() {,
         url="/blog/ai-startup-funding-guide-2025",
       />,
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">,
-        {/* Header */,}
+        {/* Header */}
         <div className="mb-12">,
           <div className="flex items-center gap-3 mb-6">,
             <span className="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">,
@@ -38,7 +38,7 @@ export default function AIStartupFundingGuide2025() {,
             </div>,
           </div>,
         </div>,
-        {/* Market Stats Banner */,}
+        {/* Market Stats Banner */}
         <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white mb-12">,
           <h2 className="text-2xl font-bold mb-6">2025 AI Funding Landscape</h2>,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
@@ -165,7 +165,7 @@ export default function AIStartupFundingGuide2025() {,
             </ul>,
           </div>,
         </section>,
-        {/* CTA Section */,}
+        {/* CTA Section */}
         <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 text-white text-center">,
           <h2 className="text-3xl font-bold mb-4">Ready to Fund Your AI Startup?</h2>,
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">,
@@ -182,7 +182,7 @@ export default function AIStartupFundingGuide2025() {,
             </Link>,
           </div>,
         </article>,
-        {/* Related Articles */,}
+        {/* Related Articles */}
         <div className="mt-16 pt-8 border-t border-gray-200">,
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>,
           <div className="grid md: grid-cols-2 gap-6">,
@@ -210,4 +210,4 @@ export default function AIStartupFundingGuide2025() {,
         </div>,
       </article>,
     </div>,
-  ),}
+  )}

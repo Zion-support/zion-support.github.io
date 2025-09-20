@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Innovative2029MicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] = [
   // AI & Machine Learning Services
@@ -49,16 +49,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     period: '/month',
     description: 'Revolutionary AI platform that understands, analyzes, and responds to human emotions in real-time. Perfect for customer service, mental health support, and human-AI interaction enhancement.',
     features: [
-      'Real-time emotion detection',
-      'Emotional response generation',
-      'Sentiment analysis AI',
-      'Emotional state tracking',
-      'Empathy simulation',
-      'Mood-based recommendations',
-      'Emotional health monitoring',
-      'Multi-modal emotion recognition',
-      'Emotional intelligence training',
-      'Emotional data analytics'
+      'Real-time emotion detectionEmotional response generation',
+      'Sentiment analysis AIEmotional state tracking',
+      'Empathy simulationMood-based recommendations',
+      'Emotional health monitoringMulti-modal emotion recognition',
+      'Emotional intelligence trainingEmotional data analytics'
     ],
     popular: true,
     icon: '❤️',
@@ -71,11 +66,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     setupTime: '2-4 weeks',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['Natural Language Processing', 'Computer Vision', 'Emotional AI', 'Machine Learning', 'Sentiment Analysis', 'Neural Networks'],
-    integrations: ['CRM systems', 'Chat platforms', 'Healthcare systems', 'Educational platforms', 'HR software', 'Communication tools'],
-    useCases: ['Customer service enhancement', 'Mental health support', 'Educational assistance', 'HR interactions', 'AI companionship', 'Emotional health monitoring'],
+    technology: ['Natural Language ProcessingComputer Vision', 'Emotional AIMachine Learning', 'Sentiment AnalysisNeural Networks'],
+    integrations: ['CRM systemsChat platforms', 'Healthcare systemsEducational platforms', 'HR softwareCommunication tools'],
+    useCases: ['Customer service enhancementMental health support', 'Educational assistanceHR interactions', 'AI companionshipEmotional health monitoring'],
     roi: 'Customer service companies report 400% ROI through improved customer satisfaction. Healthcare providers see 600% ROI in patient care quality.',
-    competitors: ['Sentiment analysis tools', 'Basic emotion detection', 'Customer service AI', 'Mental health chatbots'],
+    competitors: ['Sentiment analysis toolsBasic emotion detection', 'Customer service AIMental health chatbots'],
     marketSize: '$35B emotional AI market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
@@ -100,16 +95,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     period: '/month',
     description: 'Advanced AI platform that seamlessly processes and analyzes multiple data types including text, images, audio, and video simultaneously. Enables comprehensive understanding and analysis across all media formats.',
     features: [
-      'Multi-modal data processing',
-      'Cross-modal understanding',
-      'Unified AI analysis',
-      'Real-time fusion processing',
-      'Context-aware interpretation',
-      'Multi-format output generation',
-      'Seamless data integration',
-      'Advanced pattern recognition',
-      'Cross-modal learning',
-      'Unified API access'
+      'Multi-modal data processingCross-modal understanding',
+      'Unified AI analysisReal-time fusion processing',
+      'Context-aware interpretationMulti-format output generation',
+      'Seamless data integrationAdvanced pattern recognition',
+      'Cross-modal learningUnified API access'
     ],
     popular: true,
     icon: '🔗',
@@ -122,11 +112,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     setupTime: '3-6 weeks',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['Multimodal AI', 'Deep Learning', 'Computer Vision', 'Natural Language Processing', 'Audio Processing', 'Neural Networks'],
-    integrations: ['AI platforms', 'Media processing tools', 'Research platforms', 'Healthcare systems', 'Educational tools', 'Development platforms'],
-    useCases: ['Media analysis', 'Research studies', 'Healthcare diagnostics', 'Educational content', 'AI development', 'Data analysis'],
+    technology: ['Multimodal AIDeep Learning', 'Computer VisionNatural Language Processing', 'Audio ProcessingNeural Networks'],
+    integrations: ['AI platformsMedia processing tools', 'Research platformsHealthcare systems', 'Educational toolsDevelopment platforms'],
+    useCases: ['Media analysisResearch studies', 'Healthcare diagnosticsEducational content', 'AI developmentData analysis'],
     roi: 'AI companies report 500% ROI through unified multimodal capabilities. Research institutions see 700% ROI in comprehensive data analysis.',
-    competitors: ['Specialized AI tools', 'Single-modal platforms', 'Research AI platforms', 'Media analysis tools'],
+    competitors: ['Specialized AI toolsSingle-modal platforms', 'Research AI platformsMedia analysis tools'],
     marketSize: '$45B multimodal AI market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -152,16 +142,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     period: '/month',
     description: 'Revolutionary blockchain platform that uses quantum-resistant cryptography and quantum computing principles to provide unprecedented security, speed, and scalability for decentralized applications.',
     features: [
-      'Quantum-resistant cryptography',
-      'Enhanced blockchain security',
-      'Quantum computing integration',
-      'High-performance transactions',
-      'Advanced consensus mechanisms',
-      'Cross-chain interoperability',
-      'Smart contract automation',
-      'Quantum key distribution',
-      'Enhanced privacy features',
-      'Scalable architecture'
+      'Quantum-resistant cryptographyEnhanced blockchain security',
+      'Quantum computing integrationHigh-performance transactions',
+      'Advanced consensus mechanismsCross-chain interoperability',
+      'Smart contract automationQuantum key distribution',
+      'Enhanced privacy featuresScalable architecture'
     ],
     popular: false,
     icon: '⚛️',
@@ -174,11 +159,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     setupTime: '4-8 weeks',
     category: 'Blockchain & Web3',
     realService: true,
-    technology: ['Quantum Computing', 'Blockchain Technology', 'Cryptography', 'Smart Contracts', 'Distributed Systems', 'Quantum Cryptography'],
-    integrations: ['Financial systems', 'Government platforms', 'Healthcare systems', 'Supply chain platforms', 'Development tools', 'Analytics platforms'],
-    useCases: ['Financial transactions', 'Government records', 'Healthcare data', 'Supply chain tracking', 'Smart contracts', 'Decentralized applications'],
+    technology: ['Quantum ComputingBlockchain Technology', 'CryptographySmart Contracts', 'Distributed SystemsQuantum Cryptography'],
+    integrations: ['Financial systemsGovernment platforms', 'Healthcare systemsSupply chain platforms', 'Development toolsAnalytics platforms'],
+    useCases: ['Financial transactionsGovernment records', 'Healthcare dataSupply chain tracking', 'Smart contractsDecentralized applications'],
     roi: 'Financial institutions report 800% ROI through enhanced security. Government agencies see 1000% ROI in data protection.',
-    competitors: ['Enterprise blockchain', 'Traditional blockchain', 'Government blockchain', 'Financial blockchain'],
+    competitors: ['Enterprise blockchainTraditional blockchain', 'Government blockchainFinancial blockchain'],
     marketSize: '$60B blockchain market',
     growthRate: '400% annual growth',
     variant: 'blockchain-futuristic',
@@ -204,16 +189,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     period: '/month',
     description: 'Advanced AI platform that analyzes individual genetic, medical, and lifestyle data to create personalized treatment plans and accelerate drug discovery for precision medicine.',
     features: [
-      'Personalized treatment plans',
-      'Genetic analysis AI',
-      'Drug discovery acceleration',
-      'Lifestyle data integration',
-      'Treatment optimization',
-      'Drug interaction analysis',
-      'Clinical trial matching',
-      'Health outcome prediction',
-      'Precision medicine tools',
-      'Research collaboration'
+      'Personalized treatment plansGenetic analysis AI',
+      'Drug discovery accelerationLifestyle data integration',
+      'Treatment optimizationDrug interaction analysis',
+      'Clinical trial matchingHealth outcome prediction',
+      'Precision medicine toolsResearch collaboration'
     ],
     popular: true,
     icon: '🧬',
@@ -226,11 +206,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     setupTime: '6-12 weeks',
     category: 'Healthcare & Biotech',
     realService: true,
-    technology: ['AI & Machine Learning', 'Genomics', 'Medical Data Analysis', 'Drug Discovery', 'Precision Medicine', 'Clinical Analytics'],
-    integrations: ['Electronic health records', 'Genetic testing platforms', 'Clinical systems', 'Research databases', 'Pharmaceutical platforms', 'Analytics tools'],
-    useCases: ['Personalized treatment', 'Drug discovery', 'Clinical trials', 'Genetic analysis', 'Treatment optimization', 'Research collaboration'],
+    technology: ['AI & Machine LearningGenomics', 'Medical Data AnalysisDrug Discovery', 'Precision MedicineClinical Analytics'],
+    integrations: ['Electronic health recordsGenetic testing platforms', 'Clinical systemsResearch databases', 'Pharmaceutical platformsAnalytics tools'],
+    useCases: ['Personalized treatmentDrug discovery', 'Clinical trialsGenetic analysis', 'Treatment optimizationResearch collaboration'],
     roi: 'Healthcare providers report 600% ROI through improved treatment outcomes. Pharmaceutical companies see 800% ROI in drug discovery efficiency.',
-    competitors: ['Medical AI tools', 'Genetic analysis platforms', 'Drug discovery tools', 'Clinical research platforms'],
+    competitors: ['Medical AI toolsGenetic analysis platforms', 'Drug discovery toolsClinical research platforms'],
     marketSize: '$80B personalized medicine market',
     growthRate: '350% annual growth',
     variant: 'ai-healthcare',
@@ -256,16 +236,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     period: '/month',
     description: 'Advanced AI platform that orchestrates and optimizes all aspects of smart city infrastructure including transportation, energy, waste management, and public services for maximum efficiency and sustainability.',
     features: [
-      'Infrastructure optimization',
-      'Traffic flow management',
-      'Energy grid optimization',
-      'Waste management AI',
-      'Public service automation',
-      'Environmental monitoring',
-      'Predictive maintenance',
-      'Resource optimization',
-      'Emergency response coordination',
-      'Citizen experience enhancement'
+      'Infrastructure optimizationTraffic flow management',
+      'Energy grid optimizationWaste management AI',
+      'Public service automationEnvironmental monitoring',
+      'Predictive maintenanceResource optimization',
+      'Emergency response coordinationCitizen experience enhancement'
     ],
     popular: false,
     icon: '🏙️',
@@ -278,11 +253,11 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     setupTime: '3-6 months',
     category: 'Smart City & Infrastructure',
     realService: true,
-    technology: ['AI & Machine Learning', 'IoT Integration', 'Big Data Analytics', 'Predictive Analytics', 'Smart Infrastructure', 'Urban Planning'],
-    integrations: ['City systems', 'IoT devices', 'Infrastructure platforms', 'Government systems', 'Analytics platforms', 'Monitoring tools'],
-    useCases: ['City management', 'Infrastructure optimization', 'Traffic management', 'Energy optimization', 'Public services', 'Emergency response'],
+    technology: ['AI & Machine LearningIoT Integration', 'Big Data AnalyticsPredictive Analytics', 'Smart InfrastructureUrban Planning'],
+    integrations: ['City systemsIoT devices', 'Infrastructure platformsGovernment systems', 'Analytics platformsMonitoring tools'],
+    useCases: ['City managementInfrastructure optimization', 'Traffic managementEnergy optimization', 'Public servicesEmergency response'],
     roi: 'City governments report 1000% ROI through infrastructure optimization. Municipal agencies see 800% ROI in operational efficiency.',
-    competitors: ['City management platforms', 'Infrastructure tools', 'Urban planning software', 'Government platforms'],
+    competitors: ['City management platformsInfrastructure tools', 'Urban planning softwareGovernment platforms'],
     marketSize: '$100B smart city market',
     growthRate: '450% annual growth',
     variant: 'it-futuristic',
@@ -299,4 +274,4 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     rating: 4.7,
     reviews: 56
   }
-];
+],

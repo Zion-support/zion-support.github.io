@@ -1,39 +1,39 @@
-import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
+import { Brain, Cpu, Cloud, Zap, Globe, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react',
 
 export default function Page() {
-    ];
+    ],
     const filteredServices = allServices.filter(service => {
-        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
+        const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory,
         // All services have a price property
-        const servicePrice = service.price;
-        const priceMatch = selectedPriceRange === 'all' || (selectedPriceRange === '0 - 2000' && service.price < 2000) || (selectedPriceRange === '2000 - 5000' && service.price >= 2000 && service.price < 5000) || (selectedPriceRange === '5000+' && service.price >= 5000) ;
-        return categoryMatch && priceMatch}) ;
+        const servicePrice = service.price,
+        const priceMatch = selectedPriceRange === 'all' || (selectedPriceRange === '0 - 2000' && service.price < 2000) || (selectedPriceRange === '2000 - 5000' && service.price >= 2000 && service.price < 5000) || (selectedPriceRange === '5000+' && service.price >= 5000) ,
+        return categoryMatch && priceMatch}) ,
     const getCategoryIcon = (category) => {
         switch(category) {
             case 'AI & Analytics':
-                return Brain;
+                return Brain,
             case 'AI & Development':
-                return Cpu;
+                return Cpu,
             case 'Network Infrastructure':
-                return Globe;
+                return Globe,
             case 'Edge Computing':
-                return Cloud;
+                return Cloud,
             default:
                 return Zap}
-    };
+    },
     const getCategoryColor = (category) => {
         switch(category) {
             case 'AI & Analytics':
-                return 'from - purple - 500 to - pink - 600';
+                return 'from - purple - 500 to - pink - 600',
             case 'AI & Development':
-                return 'from - blue - 500 to - cyan - 600';
+                return 'from - blue - 500 to - cyan - 600',
             case 'Network Infrastructure':
-                return 'from - green - 500 to - emerald - 600';
+                return 'from - green - 500 to - emerald - 600',
             case 'Edge Computing':
-                return 'from - orange - 500 to - red - 600';
+                return 'from - orange - 500 to - red - 600',
             default:
                 return 'from - gray - 500 to - gray - 600'}
-    };
+    },
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - black to - blue - 900 text-white">
       <SEOHead title="Innovative New Services 2025 - Zion Tech Group" description="Discover our cutting - edge AI solutions, 5G infrastructure, edge computing, and autonomous systems.Transform your business with next - generation technology." keywords="AI solutions 2025, 5G enterprise, edge computing, autonomous systems, quantum technology, Zion Tech Group" type="website" url="https://ziontechgroup.com / innovative - new-services - 2025"/>
 
@@ -111,10 +111,10 @@ export default function Page() {
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max - w-7xl mx -auto">
-          <div className="grid lg:grid - cols - 2 xl:grid - cols - 3 gap-8">
+          <div className="grid lg: grid - cols - 2 xl:grid - cols - 3 gap-8">
             {filteredServices.map((service) => {
-            const IconComponent = getCategoryIcon(service.category) ;
-            const categoryColor = getCategoryColor(service.category) ;
+            const IconComponent = getCategoryIcon(service.category) ,
+            const categoryColor = getCategoryColor(service.category) ,
             return (<div key={service.id} className="bg-gradient - to - br from - gray - 800 to - gray - 900 rounded-2xl border border-gray - 700 overflow-hidden hover:border-cyan - 500 transition - all duration - 300 hover:transform hover:scale -105">
                   <div className="p -8">
                     {/* Header */}
@@ -196,7 +196,7 @@ export default function Page() {
               <h3 className="text-2xl font - bold text-gray - 400 mb-4">No services found</h3>
               <p className="text-gray - 500 mb-6">Try adjusting your filters to see more services</p>
               <button onClick={ () => {
-                setSelectedCategory('all') ;
+                setSelectedCategory('all') ,
                 setSelectedPriceRange('all') }} className="px-6 py-3 bg-cyan - 500 text-white rounded-lg hover:bg-cyan - 600 transition -colors">
                 Clear Filters
               </button>
@@ -223,5 +223,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

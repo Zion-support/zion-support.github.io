@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import Link from 'next/link',
 
 const categories = [
   { slug: 'ai-engineering', name: 'AI Engineering' },
   { slug: 'cloud-devops', name: 'Cloud & DevOps' },
   { slug: 'marketplace-mastery', name: 'Marketplace Mastery' },
   { slug: 'remote-work', name: 'Remote Work' }
-];
+],
 
 export default function AcademyHome() {
   return (
@@ -31,7 +31,7 @@ export default function AcademyHome() {
 
       <section>
         <h2 className="text-xl font-semibold mb-3">Featured Courses</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 gap-4">
           <Link href="/academy/course/ai-engineering-foundations">
             <a className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium">AI Engineering Foundations</div>
@@ -53,5 +53,5 @@ export default function AcademyHome() {
         </div>
       </section>
     </div>
-  );
+  )
 }

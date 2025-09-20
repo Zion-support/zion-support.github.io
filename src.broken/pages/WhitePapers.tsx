@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import SEO from '@/components / SEO';
+import React, { useState } from 'react',
+import SEO from '@/components / SEO',
 export default React.memo(function WhitePapers () {
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award,  } from 'lucide-react';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award  } from 'lucide-react',
 
 export default function Page() {
 ,
@@ -9,27 +9,27 @@ export default function Page() {
       id: 'data',
       name: 'Data & Analytics',
       icon: <Database className="w-5 h-5" />,
-      count: 7,
+      count: 7
     },
     {
       id: 'emerging',
       name: 'Emerging Technologies',
       icon: <Zap className="w-5 h-5" />,
-      count: 4,
+      count: 4
     },
     {
       id: 'strategy',
       name: 'Digital Strategy',
       icon: <Target className="w-5 h-5" />,
-      count: 6,
-    },
-  ];
+      count: 6
+    }
+  ],
 
   const sortOptions = [{ value: 'newest', label: 'Newest First' },
     { value: 'popular', label: 'Most Popular' },
     { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'downloads', label: 'Most Downloaded' },
-  ];
+    { value: 'downloads', label: 'Most Downloaded' }
+  ],
 
   const whitePapers = [{
       id: 1,
@@ -44,14 +44,12 @@ export default function Page() {
       rating: 4.9,
       featured: true,
       tags: [
-        'AI Research',
-        'Autonomous Systems',
-        'Business Intelligence',
-        'Innovation',
+        'AI ResearchAutonomous Systems',
+        'Business IntelligenceInnovation'
       ],
       coverImage: '/images / whitepapers / ai - autonomous - research.jpg',
       fileSize: '3.2 MB',
-      language: 'English',
+      language: 'English'
     },
     {
       id: 2,
@@ -65,14 +63,12 @@ export default function Page() {
       downloads: 16230,
       rating: 4.8,
       featured: true,
-      tags: ['Supply Chain',
-        'AI Optimization',
-        'Cost Reduction',
-        'Predictive Analytics',
+      tags: ['Supply ChainAI Optimization',
+        'Cost ReductionPredictive Analytics'
       ],
       coverImage: '/images / whitepapers / ai - supply - chain - optimization.jpg',
       fileSize: '2.8 MB',
-      language: 'English',
+      language: 'English'
     },
     {
       id: 4,
@@ -86,14 +82,12 @@ export default function Page() {
       downloads: 11230,
       rating: 4.6,
       featured: false,
-      tags: ['Data Analytics',
-        'Business Intelligence',
-        'Decision Making',
-        'Strategy',
+      tags: ['Data AnalyticsBusiness Intelligence',
+        'Decision MakingStrategy'
       ],
       coverImage: '/images / whitepapers / data - driven - decisions.jpg',
       fileSize: '2.6 MB',
-      language: 'English',
+      language: 'English'
     },
     {
       id: 5,
@@ -107,14 +101,12 @@ export default function Page() {
       downloads: 7560,
       rating: 4.9,
       featured: true,
-      tags: ['Quantum Computing',
-        'Emerging Tech',
-        'Future Computing',
-        'Innovation',
+      tags: ['Quantum ComputingEmerging Tech',
+        'Future ComputingInnovation'
       ],
       coverImage: '/images / whitepapers / quantum - computing.jpg',
       fileSize: '3.5 MB',
-      language: 'English',
+      language: 'English'
     },
     {
       id: 6,
@@ -128,79 +120,79 @@ export default function Page() {
       downloads: 8930,
       rating: 4.5,
       featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
+      tags: ['Digital TransformationROI', 'StrategyMeasurement'],
       coverImage: '/images / whitepapers / digital - transformation - roi.jpg',
       fileSize: '2.2 MB',
       language: 'English',
       rating: 4.5,
       featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
+      tags: ['Digital TransformationROI', 'StrategyMeasurement'],
       coverImage: '/images / whitepapers / digital - transformation - roi.jpg',
       fileSize: '2.2 MB',
-      language: 'English',
-    },
-  ];
+      language: 'English'
+    }
+  ],
 
   const featuredInsights = [{
       title: 'AI Adoption Trends 2025',
       description:
         'Key insights from our latest research on enterprise AI adoption',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/insights / ai - adoption - 2025',
+      link: '/insights / ai - adoption - 2025'
     },
     {
       title: 'Cybersecurity Landscape Report',
       description: 'Current threats and emerging security challenges',
       icon: <Shield className="w-6 h-6" />,
-      link: '/insights / cybersecurity - 2025',
+      link: '/insights / cybersecurity - 2025'
     },
     {
       title: 'Cloud Migration Success Stories',
       description: 'Real - world examples of successful cloud transformations',
       icon: <Cloud className="w-6 h-6" />,
-      link: '/insights / cloud - success - stories',
-    },
-  ];
+      link: '/insights / cloud - success - stories'
+    }
+  ],
 
   const getCategoryCount = (categoryId: string) => {
     if(categoryId === 'all') {
-      return whitePapers.length;
+      return whitePapers.length
     }
-    return whitePapers.filter(paper => paper.category === categoryId) .length;
-  };
+    return whitePapers.filter(paper => paper.category === categoryId) .length,
+  },
 
   // Update counts
   categories.forEach(cat => {
-    cat.count = getCategoryCount (cat.id) ;
-  }) ;
+    cat.count = getCategoryCount (cat.id) ,
+  }) ,
 
   const filteredPapers = whitePapers.filter(paper => {
     const matchesSearch = paper.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       paper.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
       paper.tags.some(tag =>
-        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+        tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
-    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory,
 
-    return matchesSearch && matchesCategory;
-  }) ;
+    return matchesSearch && matchesCategory,
+  }) ,
 
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
       month: 'long',
-      day: 'numeric',
-    }) ;
-  };
+      day: 'numeric'
+    }) ,
+  },
 
   const formatDownloads = (downloads: number) => {
     if(downloads >= 1000000) {
-      return (downloads / 1000000) .toFixed(1) + 'M';
+      return (downloads / 1000000) .toFixed(1) + 'M'
     } else if(downloads >= 1000) {
-      return (downloads / 1000) .toFixed(1) + 'K';
+      return (downloads / 1000) .toFixed(1) + 'K',
     }
-    return downloads.toString () ;
-  };
+    return downloads.toString () ,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -438,7 +430,7 @@ export default function Page() {
           <p className="text-xl text-zion - slate - light mb-8 max - w-2xl mx -auto">
             Subscribe to receive notifications about new white papers, research
             updates, and industry insights.</p>
-          <div  className="flex flex - col sm:flex - row gap-4 justify - center max - w-md mx -auto">
+          <div  className="flex flex - col sm: flex - row gap-4 justify - center max - w-md mx -auto">
             <input
               type="email"
               placeholder="Enter your email"
@@ -450,5 +442,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

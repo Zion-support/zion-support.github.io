@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
   {
     id: 5,
     title: "Safety & Security System",
     description: "Comprehensive safety and security systems for autonomous vehicles.",
     icon: Shield,
-    features[;
+    features[,
       "Safety monitoring",
       "Security protocols",
       "Emergency systems",
       "Compliance management"
-    ],;
+    ],
     price: "From $300,000",
     timeline: "32 - 44 weeks",
     category: "Safety",
-    technologies["AI Safety", "Security", "Compliance", "Emergency Systems"];
-  },;
+    technologies["AI Safety", "Security", "Compliance", "Emergency Systems"],
+  },
   {
     id: 6,
     title: "Fleet Management Platform",
     description: "AI - powered platform for managing autonomous vehicle fleets.",
     icon: Users,
-    features[;
+    features[,
       "Fleet optimization",
       "Route planning",
       "Performance analytics",
       "Operational efficiency"
-    ],;
+    ],
     price: "From $220,000",
     timeline: "26 - 38 weeks",
     category: "Fleet Management",
-    technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"];
+    technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"],
   }
-];
+],
 
 const vehicleTechnologies = [{
     name: "Computer Vision",
@@ -65,7 +65,7 @@ const vehicleTechnologies = [{
     useCase: "Decision Making",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -94,7 +94,7 @@ const successStories = [{
     results: "45% productivity increase, 55% cost reduction, 24 / 7 operation, better efficiency",
     logo: "IAL"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -124,42 +124,42 @@ const processSteps = [{
     icon: Gauge,
     duration: "4 - 8 weeks"
 
-];
+],
 
 const vehicleBenefits = [{
     title: "Enhanced Safety",
     description: "AI - powered systems provide superior safety and accident prevention",
     icon: Shield,
-    examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"];
-  },;
+    examples["Accident prevention", "Safety monitoring", "Emergency response", "Risk assessment"],
+  },
   {
     title: "Improved Efficiency",
     description: "Autonomous systems optimize vehicle performance and operations",
     icon: Zap,
-    examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"];
-  },;
+    examples["Route optimization", "Fuel efficiency", "Performance optimization", "Operational efficiency"],
+  },
   {
     title: "Cost Reduction",
     description: "AI systems reduce operational costs and improve resource utilization",
     icon: TrendingUp,
-    examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"];
-  },;
+    examples["Fuel savings", "Maintenance optimization", "Labor reduction", "Better ROI"],
+  },
   {
     title: "24 / 7 Operation",
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
-    examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"];
+    examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Perception', 'Navigation', 'Control', 'Maintenance', 'Safety', 'Fleet Management'];
+  const categories = ['AllPerception', 'NavigationControl', 'MaintenanceSafety', 'Fleet Management'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? autonomousVehicleSolutions
-    : autonomousVehicleSolutions.filter(solution => solution.category === selectedCategory) ;
+    : autonomousVehicleSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -231,10 +231,10 @@ const vehicleBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Vehicle Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -290,13 +290,13 @@ const vehicleBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Vehicle Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -354,13 +354,13 @@ const vehicleBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -416,13 +416,13 @@ const vehicleBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -522,7 +522,7 @@ const vehicleBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -593,13 +593,13 @@ const vehicleBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

@@ -1,42 +1,42 @@
 export interface AdvancedCybersecurityService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
   // Advanced Threat Intelligence Platform
@@ -48,16 +48,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary threat intelligence platform that uses AI and machine learning to predict, detect, and respond to cyber threats before they impact your organization. Achieve proactive cybersecurity with intelligent threat hunting.',
     features: [
-      'AI-powered threat prediction',
-      'Real-time threat detection',
-      'Behavioral analysis engine',
-      'Threat intelligence feeds',
-      'Automated incident response',
-      'Predictive analytics',
-      'Threat hunting automation',
-      'Risk assessment scoring',
-      'Compliance reporting',
-      '24/7 threat monitoring'
+      'AI-powered threat predictionReal-time threat detection',
+      'Behavioral analysis engineThreat intelligence feeds',
+      'Automated incident responsePredictive analytics',
+      'Threat hunting automationRisk assessment scoring',
+      'Compliance reporting24/7 threat monitoring'
     ],
     popular: true,
     icon: '🛡️',
@@ -70,11 +65,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '2 weeks',
     category: 'Advanced Cybersecurity',
     realService: true,
-    technology: ['AI/ML algorithms', 'Machine learning', 'Threat intelligence', 'Python', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Email security', 'Cloud platforms', 'Security tools'],
-    useCases: ['Threat detection', 'Incident response', 'Risk assessment', 'Compliance reporting', 'Security operations', 'Threat hunting'],
+    technology: ['AI/ML algorithmsMachine learning', 'Threat intelligencePython', 'ReactNode.js', 'PostgreSQL'],
+    integrations: ['SIEM systemsEDR platforms', 'FirewallsEmail security', 'Cloud platformsSecurity tools'],
+    useCases: ['Threat detectionIncident response', 'Risk assessmentCompliance reporting', 'Security operationsThreat hunting'],
     roi: 'Organizations report 500% ROI through reduced incident response time and improved threat detection.',
-    competitors: ['CrowdStrike', 'Palo Alto Networks', 'Darktrace', 'FireEye'],
+    competitors: ['CrowdStrikePalo Alto Networks', 'DarktraceFireEye'],
     marketSize: '$15B threat intelligence market',
     growthRate: '300% annual growth',
     variant: 'cyberpunk-holographic',
@@ -100,16 +95,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Complete zero trust security architecture implementation that eliminates traditional security perimeters and provides continuous verification of all users, devices, and applications. Achieve enterprise-grade security with zero trust principles.',
     features: [
-      'Identity verification system',
-      'Device trust scoring',
-      'Application access control',
-      'Network segmentation',
-      'Continuous monitoring',
-      'Privileged access management',
-      'Multi-factor authentication',
-      'Behavioral analytics',
-      'Compliance frameworks',
-      'Security automation'
+      'Identity verification systemDevice trust scoring',
+      'Application access controlNetwork segmentation',
+      'Continuous monitoringPrivileged access management',
+      'Multi-factor authenticationBehavioral analytics',
+      'Compliance frameworksSecurity automation'
     ],
     popular: true,
     icon: '🔐',
@@ -122,11 +112,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '8 weeks',
     category: 'Zero Trust Security',
     realService: true,
-    technology: ['Zero trust architecture', 'Identity management', 'Network security', 'Python', 'React', 'Node.js', 'Security protocols'],
-    integrations: ['Active Directory', 'LDAP systems', 'SSO platforms', 'Network infrastructure', 'Security tools', 'Cloud platforms'],
-    useCases: ['Enterprise security', 'Government security', 'Financial security', 'Healthcare security', 'Educational security', 'Cloud security'],
+    technology: ['Zero trust architectureIdentity management', 'Network securityPython', 'ReactNode.js', 'Security protocols'],
+    integrations: ['Active DirectoryLDAP systems', 'SSO platformsNetwork infrastructure', 'Security toolsCloud platforms'],
+    useCases: ['Enterprise securityGovernment security', 'Financial securityHealthcare security', 'Educational securityCloud security'],
     roi: 'Organizations report 400% ROI through improved security posture and reduced breach risk.',
-    competitors: ['Traditional security consulting', 'Zero trust platforms', 'Identity management vendors'],
+    competitors: ['Traditional security consultingZero trust platforms', 'Identity management vendors'],
     marketSize: '$25B zero trust market',
     growthRate: '350% annual growth',
     variant: 'cyberpunk-advanced',
@@ -152,16 +142,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary AI-powered Security Operations Center (SOC) that provides 24/7 security monitoring, threat detection, and automated incident response. Achieve enterprise-grade security operations with intelligent automation.',
     features: [
-      '24/7 security monitoring',
-      'AI-powered threat detection',
-      'Automated incident response',
-      'Threat intelligence integration',
-      'Security analytics dashboard',
-      'Compliance reporting',
-      'Vulnerability management',
-      'Security awareness training',
-      'Penetration testing',
-      'Security consulting'
+      '24/7 security monitoringAI-powered threat detection',
+      'Automated incident responseThreat intelligence integration',
+      'Security analytics dashboardCompliance reporting',
+      'Vulnerability managementSecurity awareness training',
+      'Penetration testingSecurity consulting'
     ],
     popular: true,
     icon: '🏢',
@@ -174,11 +159,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '4 weeks',
     category: 'Security Operations Center',
     realService: true,
-    technology: ['AI/ML algorithms', 'Security monitoring', 'Incident response', 'Python', 'React', 'Node.js', 'Security tools'],
-    integrations: ['SIEM systems', 'EDR platforms', 'Firewalls', 'Email security', 'Cloud platforms', 'Security tools'],
-    useCases: ['Security monitoring', 'Incident response', 'Threat hunting', 'Vulnerability management', 'Compliance reporting', 'Security consulting'],
+    technology: ['AI/ML algorithmsSecurity monitoring', 'Incident responsePython', 'ReactNode.js', 'Security tools'],
+    integrations: ['SIEM systemsEDR platforms', 'FirewallsEmail security', 'Cloud platformsSecurity tools'],
+    useCases: ['Security monitoringIncident response', 'Threat huntingVulnerability management', 'Compliance reportingSecurity consulting'],
     roi: 'Organizations report 600% ROI through improved security posture and reduced incident response time.',
-    competitors: ['Traditional SOC services', 'Security platforms', 'Managed security services'],
+    competitors: ['Traditional SOC servicesSecurity platforms', 'Managed security services'],
     marketSize: '$30B SOC market',
     growthRate: '250% annual growth',
     variant: 'cyberpunk-futuristic',
@@ -204,16 +189,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary quantum-resistant cryptography platform that provides post-quantum cryptographic algorithms to secure your data against future quantum computing threats. Future-proof your security infrastructure.',
     features: [
-      'Post-quantum algorithms',
-      'Quantum-resistant encryption',
-      'Key management system',
-      'Performance optimization',
-      'Compliance frameworks',
-      'Integration APIs',
-      'Security auditing',
-      'Performance monitoring',
-      'Compliance reporting',
-      '24/7 support'
+      'Post-quantum algorithmsQuantum-resistant encryption',
+      'Key management systemPerformance optimization',
+      'Compliance frameworksIntegration APIs',
+      'Security auditingPerformance monitoring',
+      'Compliance reporting24/7 support'
     ],
     popular: true,
     icon: '🔒',
@@ -226,11 +206,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '6 weeks',
     category: 'Quantum Cryptography',
     realService: true,
-    technology: ['Post-quantum cryptography', 'Quantum algorithms', 'Cryptographic protocols', 'Python', 'C++', 'Cryptographic libraries', 'Security protocols'],
-    integrations: ['Encryption systems', 'Key management', 'Security tools', 'Compliance systems', 'Government databases'],
-    useCases: ['Data encryption', 'Key management', 'Secure communications', 'Compliance requirements', 'Government security', 'Financial security'],
+    technology: ['Post-quantum cryptographyQuantum algorithms', 'Cryptographic protocolsPython', 'C++Cryptographic libraries', 'Security protocols'],
+    integrations: ['Encryption systemsKey management', 'Security toolsCompliance systems', 'Government databases'],
+    useCases: ['Data encryptionKey management', 'Secure communicationsCompliance requirements', 'Government securityFinancial security'],
     roi: 'Organizations report 300% ROI through future-proof security and compliance benefits.',
-    competitors: ['Traditional cryptography vendors', 'Quantum computing companies', 'Security platforms'],
+    competitors: ['Traditional cryptography vendorsQuantum computing companies', 'Security platforms'],
     marketSize: '$5B quantum cryptography market',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
@@ -256,16 +236,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary AI-powered vulnerability management platform that automatically discovers, assesses, and prioritizes vulnerabilities with intelligent remediation recommendations. Achieve proactive security with AI-driven vulnerability management.',
     features: [
-      'Automated vulnerability scanning',
-      'AI-powered risk assessment',
-      'Intelligent prioritization',
-      'Automated remediation',
-      'Compliance reporting',
-      'Performance monitoring',
-      'Integration APIs',
-      'Custom dashboards',
-      'Reporting automation',
-      '24/7 monitoring'
+      'Automated vulnerability scanningAI-powered risk assessment',
+      'Intelligent prioritizationAutomated remediation',
+      'Compliance reportingPerformance monitoring',
+      'Integration APIsCustom dashboards',
+      'Reporting automation24/7 monitoring'
     ],
     popular: true,
     icon: '🔍',
@@ -278,11 +253,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '3 weeks',
     category: 'Vulnerability Management',
     realService: true,
-    technology: ['AI/ML algorithms', 'Vulnerability scanning', 'Risk assessment', 'Python', 'React', 'Node.js', 'Security tools'],
-    integrations: ['Security tools', 'Compliance systems', 'Ticketing systems', 'Cloud platforms', 'Network infrastructure'],
-    useCases: ['Vulnerability assessment', 'Risk management', 'Compliance reporting', 'Security operations', 'Incident response', 'Security consulting'],
+    technology: ['AI/ML algorithmsVulnerability scanning', 'Risk assessmentPython', 'ReactNode.js', 'Security tools'],
+    integrations: ['Security toolsCompliance systems', 'Ticketing systemsCloud platforms', 'Network infrastructure'],
+    useCases: ['Vulnerability assessmentRisk management', 'Compliance reportingSecurity operations', 'Incident responseSecurity consulting'],
     roi: 'Organizations report 400% ROI through improved vulnerability management and reduced security risks.',
-    competitors: ['Qualys', 'Rapid7', 'Tenable', 'Traditional vulnerability scanners'],
+    competitors: ['QualysRapid7', 'TenableTraditional vulnerability scanners'],
     marketSize: '$20B vulnerability management market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
@@ -308,16 +283,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary cloud security posture management platform that provides comprehensive security monitoring, compliance management, and risk assessment for multi-cloud environments. Secure your cloud infrastructure with intelligent security management.',
     features: [
-      'Multi-cloud security monitoring',
-      'Compliance management',
-      'Risk assessment',
-      'Security automation',
-      'Policy enforcement',
-      'Incident response',
-      'Compliance reporting',
-      'Performance monitoring',
-      'Integration APIs',
-      '24/7 support'
+      'Multi-cloud security monitoringCompliance management',
+      'Risk assessmentSecurity automation',
+      'Policy enforcementIncident response',
+      'Compliance reportingPerformance monitoring',
+      'Integration APIs24/7 support'
     ],
     popular: true,
     icon: '☁️',
@@ -330,11 +300,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '4 weeks',
     category: 'Cloud Security',
     realService: true,
-    technology: ['Cloud security', 'Compliance management', 'Risk assessment', 'Python', 'React', 'Node.js', 'Cloud APIs'],
-    integrations: ['AWS', 'Azure', 'Google Cloud', 'Security tools', 'Compliance systems', 'Monitoring platforms'],
-    useCases: ['Cloud security', 'Compliance management', 'Risk assessment', 'Security operations', 'Incident response', 'Security consulting'],
+    technology: ['Cloud securityCompliance management', 'Risk assessmentPython', 'ReactNode.js', 'Cloud APIs'],
+    integrations: ['AWSAzure', 'Google CloudSecurity tools', 'Compliance systemsMonitoring platforms'],
+    useCases: ['Cloud securityCompliance management', 'Risk assessmentSecurity operations', 'Incident responseSecurity consulting'],
     roi: 'Organizations report 500% ROI through improved cloud security and compliance management.',
-    competitors: ['Prisma Cloud', 'AWS Security Hub', 'Azure Security Center', 'Traditional security tools'],
+    competitors: ['Prisma CloudAWS Security Hub', 'Azure Security CenterTraditional security tools'],
     marketSize: '$35B cloud security market',
     growthRate: '300% annual growth',
     variant: 'cyberpunk-futuristic',
@@ -360,16 +330,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary AI-powered penetration testing platform that provides intelligent security testing, vulnerability assessment, and security consulting. Achieve comprehensive security testing with AI-driven intelligence.',
     features: [
-      'AI-powered security testing',
-      'Automated vulnerability discovery',
-      'Intelligent attack simulation',
-      'Risk assessment',
-      'Compliance reporting',
-      'Security consulting',
-      'Custom testing scenarios',
-      'Performance monitoring',
-      'Integration APIs',
-      '24/7 support'
+      'AI-powered security testingAutomated vulnerability discovery',
+      'Intelligent attack simulationRisk assessment',
+      'Compliance reportingSecurity consulting',
+      'Custom testing scenariosPerformance monitoring',
+      'Integration APIs24/7 support'
     ],
     popular: true,
     icon: '🔓',
@@ -382,11 +347,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '2 weeks',
     category: 'Penetration Testing',
     realService: true,
-    technology: ['AI/ML algorithms', 'Security testing', 'Vulnerability assessment', 'Python', 'React', 'Node.js', 'Security tools'],
-    integrations: ['Security tools', 'Compliance systems', 'Reporting platforms', 'Cloud platforms', 'Network infrastructure'],
-    useCases: ['Security testing', 'Vulnerability assessment', 'Compliance testing', 'Security consulting', 'Risk assessment', 'Security operations'],
+    technology: ['AI/ML algorithmsSecurity testing', 'Vulnerability assessmentPython', 'ReactNode.js', 'Security tools'],
+    integrations: ['Security toolsCompliance systems', 'Reporting platformsCloud platforms', 'Network infrastructure'],
+    useCases: ['Security testingVulnerability assessment', 'Compliance testingSecurity consulting', 'Risk assessmentSecurity operations'],
     roi: 'Organizations report 400% ROI through improved security posture and reduced security risks.',
-    competitors: ['Traditional penetration testing', 'Security testing tools', 'Security consulting'],
+    competitors: ['Traditional penetration testingSecurity testing tools', 'Security consulting'],
     marketSize: '$15B penetration testing market',
     growthRate: '200% annual growth',
     variant: 'cyberpunk-advanced',
@@ -412,16 +377,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary blockchain security platform that provides comprehensive security monitoring, smart contract auditing, and compliance management for blockchain applications. Secure your blockchain infrastructure with intelligent security management.',
     features: [
-      'Smart contract auditing',
-      'Blockchain security monitoring',
-      'Compliance management',
-      'Risk assessment',
-      'Security automation',
-      'Incident response',
-      'Compliance reporting',
-      'Performance monitoring',
-      'Integration APIs',
-      '24/7 support'
+      'Smart contract auditingBlockchain security monitoring',
+      'Compliance managementRisk assessment',
+      'Security automationIncident response',
+      'Compliance reportingPerformance monitoring',
+      'Integration APIs24/7 support'
     ],
     popular: true,
     icon: '⛓️',
@@ -434,11 +394,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '4 weeks',
     category: 'Blockchain Security',
     realService: true,
-    technology: ['Blockchain security', 'Smart contract auditing', 'Compliance management', 'Python', 'React', 'Node.js', 'Blockchain APIs'],
-    integrations: ['Blockchain platforms', 'Smart contracts', 'Security tools', 'Compliance systems', 'Monitoring platforms'],
-    useCases: ['Smart contract auditing', 'Blockchain security', 'Compliance management', 'Risk assessment', 'Security operations', 'Security consulting'],
+    technology: ['Blockchain securitySmart contract auditing', 'Compliance managementPython', 'ReactNode.js', 'Blockchain APIs'],
+    integrations: ['Blockchain platformsSmart contracts', 'Security toolsCompliance systems', 'Monitoring platforms'],
+    useCases: ['Smart contract auditingBlockchain security', 'Compliance managementRisk assessment', 'Security operationsSecurity consulting'],
     roi: 'Organizations report 600% ROI through improved blockchain security and compliance management.',
-    competitors: ['Traditional blockchain security', 'Blockchain platforms', 'Security tools'],
+    competitors: ['Traditional blockchain securityBlockchain platforms', 'Security tools'],
     marketSize: '$10B blockchain security market',
     growthRate: '400% annual growth',
     variant: 'cyberpunk-futuristic',
@@ -464,16 +424,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     period: '/month',
     description: 'Revolutionary IoT security platform that provides comprehensive security monitoring, device management, and threat detection for Internet of Things devices. Secure your IoT infrastructure with intelligent security management.',
     features: [
-      'IoT device discovery',
-      'Security monitoring',
-      'Threat detection',
-      'Device management',
-      'Compliance management',
-      'Security automation',
-      'Incident response',
-      'Compliance reporting',
-      'Performance monitoring',
-      '24/7 support'
+      'IoT device discoverySecurity monitoring',
+      'Threat detectionDevice management',
+      'Compliance managementSecurity automation',
+      'Incident responseCompliance reporting',
+      'Performance monitoring24/7 support'
     ],
     popular: true,
     icon: '📱',
@@ -486,11 +441,11 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     setupTime: '4 weeks',
     category: 'IoT Security',
     realService: true,
-    technology: ['IoT security', 'Device management', 'Threat detection', 'Python', 'React', 'Node.js', 'IoT protocols'],
-    integrations: ['IoT devices', 'IoT platforms', 'Security tools', 'Compliance systems', 'Monitoring platforms'],
-    useCases: ['IoT security', 'Device management', 'Threat detection', 'Compliance management', 'Security operations', 'Security consulting'],
+    technology: ['IoT securityDevice management', 'Threat detectionPython', 'ReactNode.js', 'IoT protocols'],
+    integrations: ['IoT devicesIoT platforms', 'Security toolsCompliance systems', 'Monitoring platforms'],
+    useCases: ['IoT securityDevice management', 'Threat detectionCompliance management', 'Security operationsSecurity consulting'],
     roi: 'Organizations report 500% ROI through improved IoT security and device management.',
-    competitors: ['Traditional IoT security', 'IoT platforms', 'Security tools'],
+    competitors: ['Traditional IoT securityIoT platforms', 'Security tools'],
     marketSize: '$25B IoT security market',
     growthRate: '300% annual growth',
     variant: 'cyberpunk-futuristic',
@@ -507,4 +462,4 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     rating: 4.6,
     reviews: 78
   }
-];
+],

@@ -1,28 +1,28 @@
 export interface RealAdditionService2025Q3 {
-	id: string;
-	name: string;
-	tagline: string;
-	description: string;
-	price: string;
-	period: string;
-	category: string;
-	features: string[];
-	popular?: boolean;
-	link: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService: boolean;
-	technology?: string[];
-	integrations?: string[];
-	useCases?: string[];
-	roi?: string;
-	competitors?: string[];
-	marketSize?: string;
-	growthRate?: string;
-	launchDate?: string;
-	customers?: number;
-	rating?: number;
-	reviews?: number;
+	id: string,
+	name: string,
+	tagline: string,
+	description: string,
+	price: string,
+	period: string,
+	category: string,
+	features: string[],
+	popular?: boolean,
+	link: string,
+	trialDays?: number,
+	setupTime?: string,
+	realService: boolean,
+	technology?: string[],
+	integrations?: string[],
+	useCases?: string[],
+	roi?: string,
+	competitors?: string[],
+	marketSize?: string,
+	growthRate?: string,
+	launchDate?: string,
+	customers?: number,
+	rating?: number,
+	reviews?: number
 }
 export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 	{
@@ -34,10 +34,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'AI Assistants',
 		features: [
-			'Priority inbox and intent detection',
-			'Policy-aware auto-drafting with approvals',
-			'CRM sync and follow-up reminders',
-			'Tone and brand voice controls',
+			'Priority inbox and intent detectionPolicy-aware auto-drafting with approvals',
+			'CRM sync and follow-up remindersTone and brand voice controls',
 			'Analytics and SLA tracking'
 		],
 		popular: true,
@@ -45,11 +43,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		realService: true,
-		technology: ['Next.js', 'OpenAI', 'PostgreSQL'],
-		integrations: ['Gmail', 'Outlook', 'HubSpot', 'Salesforce'],
-		useCases: ['Shared inboxes', 'Lead response', 'Support triage'],
+		technology: ['Next.jsOpenAI', 'PostgreSQL'],
+		integrations: ['GmailOutlook', 'HubSpotSalesforce'],
+		useCases: ['Shared inboxesLead response', 'Support triage'],
 		roi: 'Cut average first response by 60%',
-		competitors: ['Superhuman AI', 'Gmail HelpMeWrite'],
+		competitors: ['Superhuman AIGmail HelpMeWrite'],
 		marketSize: '$10B+ email productivity',
 		growthRate: '20% CAGR',
 		launchDate: '2025-06-01',
@@ -66,10 +64,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Sales & Marketing',
 		features: [
-			'Link generation and UTM tagging',
-			'Fraud and self-referral checks',
-			'Conversion webhooks and API',
-			'Payout ledger and exports',
+			'Link generation and UTM taggingFraud and self-referral checks',
+			'Conversion webhooks and APIPayout ledger and exports',
 			'GDPR/CCPA friendly tracking'
 		],
 		popular: false,
@@ -77,11 +73,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '20 minutes',
 		realService: true,
-		technology: ['Next.js', 'Node.js', 'PostgreSQL'],
-		integrations: ['Shopify', 'Stripe', 'WooCommerce'],
-		useCases: ['Partner programs', 'Referral campaigns'],
+		technology: ['Next.jsNode.js', 'PostgreSQL'],
+		integrations: ['ShopifyStripe', 'WooCommerce'],
+		useCases: ['Partner programsReferral campaigns'],
 		roi: 'Grow referral revenue 10–25%',
-		competitors: ['Rewardful', 'ReferralCandy'],
+		competitors: ['RewardfulReferralCandy'],
 		marketSize: '$1.5B affiliate tooling',
 		growthRate: '15% CAGR',
 		launchDate: '2025-06-02',
@@ -98,10 +94,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Analytics & Business Intelligence',
 		features: [
-			'Prebuilt KPI templates',
-			'AI explanations for spikes and dips',
-			'Weekly email digests',
-			'Goal tracking and alerts',
+			'Prebuilt KPI templatesAI explanations for spikes and dips',
+			'Weekly email digestsGoal tracking and alerts',
 			'CSV and API export'
 		],
 		popular: true,
@@ -109,11 +103,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '45 minutes',
 		realService: true,
-		technology: ['Next.js', 'DuckDB', 'PostgreSQL'],
-		integrations: ['Stripe', 'GA4', 'HubSpot'],
-		useCases: ['Founder dashboards', 'Investor updates'],
+		technology: ['Next.jsDuckDB', 'PostgreSQL'],
+		integrations: ['StripeGA4', 'HubSpot'],
+		useCases: ['Founder dashboardsInvestor updates'],
 		roi: 'Save 4–8 hrs/week on reporting',
-		competitors: ['Geckoboard', 'Databox'],
+		competitors: ['GeckoboardDatabox'],
 		marketSize: '$30B+ BI',
 		growthRate: '14% CAGR',
 		launchDate: '2025-06-03',
@@ -130,10 +124,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'IT Operations',
 		features: [
-			'Email-to-ticket with SLA timers',
-			'Asset discovery (agentless + agent)',
-			'Knowledge base and macros',
-			'AI reply suggestions',
+			'Email-to-ticket with SLA timersAsset discovery (agentless + agent)',
+			'Knowledge base and macrosAI reply suggestions',
 			'Reports and CSAT'
 		],
 		popular: true,
@@ -141,11 +133,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '1 hour',
 		realService: true,
-		technology: ['Node.js', 'Next.js'],
-		integrations: ['Okta', 'Google Workspace', 'Microsoft 365'],
-		useCases: ['MSPs', 'Internal IT'],
+		technology: ['Node.jsNext.js'],
+		integrations: ['OktaGoogle Workspace', 'Microsoft 365'],
+		useCases: ['MSPsInternal IT'],
 		roi: 'Reduce resolution time 25–40%',
-		competitors: ['Freshservice', 'Zendesk'],
+		competitors: ['FreshserviceZendesk'],
 		marketSize: '$10B ITSM',
 		growthRate: '12% CAGR',
 		launchDate: '2025-06-04',
@@ -162,10 +154,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Productivity',
 		features: [
-			'Auto-join major meeting apps',
-			'Topic segmentation and speakers',
-			'Action items with owners',
-			'Email and Slack summaries',
+			'Auto-join major meeting appsTopic segmentation and speakers',
+			'Action items with ownersEmail and Slack summaries',
 			'Templates (standups, reviews)'
 		],
 		popular: false,
@@ -173,11 +163,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 7,
 		setupTime: '10 minutes',
 		realService: true,
-		technology: ['Whisper', 'Next.js'],
-		integrations: ['Zoom', 'Meet', 'Teams', 'Slack', 'Jira'],
-		useCases: ['Standups', 'Client calls', 'Hiring'],
+		technology: ['WhisperNext.js'],
+		integrations: ['ZoomMeet', 'TeamsSlack', 'Jira'],
+		useCases: ['StandupsClient calls', 'Hiring'],
 		roi: 'Save 3–5 hrs/person/month',
-		competitors: ['Grain', 'Fathom'],
+		competitors: ['GrainFathom'],
 		marketSize: '$5B+ meeting AI',
 		growthRate: '30% CAGR',
 		launchDate: '2025-06-05',
@@ -194,10 +184,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Data & Analytics',
 		features: [
-			'Freshness and volume checks',
-			'Anomaly detection on KPIs',
-			'Schema drift alerts',
-			'Ownership and runbooks',
+			'Freshness and volume checksAnomaly detection on KPIs',
+			'Schema drift alertsOwnership and runbooks',
 			'Insights and RCA templates'
 		],
 		popular: true,
@@ -205,11 +193,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '45 minutes',
 		realService: true,
-		technology: ['Node.js', 'SQL', 'OpenAI'],
-		integrations: ['BigQuery', 'Snowflake', 'Redshift', 'Slack'],
-		useCases: ['Prevent bad dashboards', 'Catch pipeline breaks'],
+		technology: ['Node.jsSQL', 'OpenAI'],
+		integrations: ['BigQuerySnowflake', 'RedshiftSlack'],
+		useCases: ['Prevent bad dashboardsCatch pipeline breaks'],
 		roi: 'Reduce bad data incidents 50%',
-		competitors: ['Monte Carlo', 'Bigeye'],
+		competitors: ['Monte CarloBigeye'],
 		marketSize: '$3B data observability',
 		growthRate: '25% CAGR',
 		launchDate: '2025-06-06',
@@ -226,10 +214,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Growth & Optimization',
 		features: [
-			'On-brand AI text and images',
-			'Visual editor and rollback',
-			'Holdout and sample sizing',
-			'Consent-aware analytics',
+			'On-brand AI text and imagesVisual editor and rollback',
+			'Holdout and sample sizingConsent-aware analytics',
 			'Insights and next-step recs'
 		],
 		popular: false,
@@ -237,11 +223,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		realService: true,
-		technology: ['Next.js', 'Tailwind', 'OpenAI'],
-		integrations: ['Segment', 'GA4', 'Vercel'],
-		useCases: ['Landing pages', 'Pricing pages'],
+		technology: ['Next.jsTailwind', 'OpenAI'],
+		integrations: ['SegmentGA4', 'Vercel'],
+		useCases: ['Landing pagesPricing pages'],
 		roi: 'Increase conversion 5–20%',
-		competitors: ['VWO', 'Optimizely'],
+		competitors: ['VWOOptimizely'],
 		marketSize: '$2B experimentation',
 		growthRate: '18% CAGR',
 		launchDate: '2025-06-07',
@@ -258,10 +244,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Content & Compliance',
 		features: [
-			'Brand policy linting for text and images',
-			'Inline suggestions and fixes',
-			'Asset library and approvals',
-			'Org-wide policies and roles',
+			'Brand policy linting for text and imagesInline suggestions and fixes',
+			'Asset library and approvalsOrg-wide policies and roles',
 			'Weekly compliance score'
 		],
 		popular: false,
@@ -269,11 +253,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '25 minutes',
 		realService: true,
-		technology: ['OpenAI', 'Next.js'],
-		integrations: ['Google Docs', 'Notion', 'Figma'],
-		useCases: ['Content ops', 'Agency delivery'],
+		technology: ['OpenAINext.js'],
+		integrations: ['Google DocsNotion', 'Figma'],
+		useCases: ['Content opsAgency delivery'],
 		roi: 'Reduce brand review cycles 50%',
-		competitors: ['Writer', 'Grammarly Business'],
+		competitors: ['WriterGrammarly Business'],
 		marketSize: '$2B brand management',
 		growthRate: '16% CAGR',
 		launchDate: '2025-06-08',
@@ -290,10 +274,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Security & Compliance',
 		features: [
-			'SBOM generation and diff',
-			'PR scanner for risky changes',
-			'Weekly security digest',
-			'Auto-created fix tickets',
+			'SBOM generation and diffPR scanner for risky changes',
+			'Weekly security digestAuto-created fix tickets',
 			'Policy exceptions workflow'
 		],
 		popular: false,
@@ -301,11 +283,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 7,
 		setupTime: '15 minutes',
 		realService: true,
-		technology: ['Node.js', 'CycloneDX'],
-		integrations: ['GitHub', 'GitLab', 'Jira', 'Slack'],
-		useCases: ['AppSec hygiene', 'Audit support'],
+		technology: ['Node.jsCycloneDX'],
+		integrations: ['GitHubGitLab', 'JiraSlack'],
+		useCases: ['AppSec hygieneAudit support'],
 		roi: 'Reduce vuln MTTR 30–50%',
-		competitors: ['Snyk', 'Dependabot (partial)'],
+		competitors: ['SnykDependabot (partial)'],
 		marketSize: '$6B AppSec',
 		growthRate: '20% CAGR',
 		launchDate: '2025-06-09',
@@ -322,10 +304,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Compliance Automation',
 		features: [
-			'Questionnaire templates (SOC2/ISO/NIST)',
-			'Evidence upload and mapping',
-			'Automated reminders and tasks',
-			'Risk scoring and approvals',
+			'Questionnaire templates (SOC2/ISO/NIST)Evidence upload and mapping',
+			'Automated reminders and tasksRisk scoring and approvals',
 			'Executive summary reports'
 		],
 		popular: true,
@@ -333,11 +313,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '1 hour',
 		realService: true,
-		technology: ['Next.js', 'PostgreSQL'],
-		integrations: ['Google Drive', 'OneDrive', 'Jira'],
-		useCases: ['Third-party risk', 'Annual reviews'],
+		technology: ['Next.jsPostgreSQL'],
+		integrations: ['Google DriveOneDrive', 'Jira'],
+		useCases: ['Third-party riskAnnual reviews'],
 		roi: 'Shorten cycle time 40–70%',
-		competitors: ['OneTrust', 'Whistic'],
+		competitors: ['OneTrustWhistic'],
 		marketSize: '$4B vendor risk',
 		growthRate: '22% CAGR',
 		launchDate: '2025-06-10',
@@ -354,10 +334,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Reliability & SRE',
 		features: [
-			'Channel orchestration (Slack/PagerDuty)',
-			'Templates per severity',
-			'Timeline auto-build from events',
-			'Customer-ready summaries',
+			'Channel orchestration (Slack/PagerDuty)Templates per severity',
+			'Timeline auto-build from eventsCustomer-ready summaries',
 			'Follow-up tracker'
 		],
 		popular: false,
@@ -365,9 +343,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '20 minutes',
 		realService: true,
-		technology: ['OpenAI', 'Next.js'],
-		integrations: ['PagerDuty', 'Opsgenie', 'Slack', 'Statuspage'],
-		useCases: ['Major incidents', 'Compliance'],
+		technology: ['OpenAINext.js'],
+		integrations: ['PagerDutyOpsgenie', 'SlackStatuspage'],
+		useCases: ['Major incidentsCompliance'],
 		roi: 'Cut comms toil 60%',
 		competitors: ['Rootly (partial)'],
 		marketSize: '$10B+ incident mgmt',
@@ -386,10 +364,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Privacy & Legal',
 		features: [
-			'Cookie and tracker inventory',
-			'Regional banners and consent logs',
-			'Policy generator with diffs',
-			'Weekly audits and alerts',
+			'Cookie and tracker inventoryRegional banners and consent logs',
+			'Policy generator with diffsWeekly audits and alerts',
 			'Exportable evidence packs'
 		],
 		popular: false,
@@ -397,11 +373,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 14,
 		setupTime: '15 minutes',
 		realService: true,
-		technology: ['Puppeteer', 'Node.js'],
-		integrations: ['Webflow', 'Shopify', 'WordPress'],
-		useCases: ['GDPR/CCPA compliance', 'Cookie audits'],
+		technology: ['PuppeteerNode.js'],
+		integrations: ['WebflowShopify', 'WordPress'],
+		useCases: ['GDPR/CCPA complianceCookie audits'],
 		roi: 'Reduce legal risk and fines',
-		competitors: ['OneTrust', 'Cookiebot'],
+		competitors: ['OneTrustCookiebot'],
 		marketSize: '$4B privacy tech',
 		growthRate: '22% CAGR',
 		launchDate: '2025-06-12',
@@ -418,10 +394,8 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		period: '/month',
 		category: 'Professional Services',
 		features: [
-			'On-brand templates and styles',
-			'Library of scopes and clauses',
-			'Auto pricing table suggestions',
-			'E-sign and PDF export',
+			'On-brand templates and stylesLibrary of scopes and clauses',
+			'Auto pricing table suggestionsE-sign and PDF export',
 			'Collaboration and approvals'
 		],
 		popular: true,
@@ -429,11 +403,11 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		trialDays: 7,
 		setupTime: '10 minutes',
 		realService: true,
-		technology: ['Next.js', 'OpenAI'],
-		integrations: ['DocuSign', 'HubSpot', 'Stripe'],
-		useCases: ['Agencies', 'Consultancies'],
+		technology: ['Next.jsOpenAI'],
+		integrations: ['DocuSignHubSpot', 'Stripe'],
+		useCases: ['AgenciesConsultancies'],
 		roi: 'Ship proposals 3x faster',
-		competitors: ['PandaDoc', 'Proposify'],
+		competitors: ['PandaDocProposify'],
 		marketSize: '$1B+ proposal tools',
 		growthRate: '12% CAGR',
 		launchDate: '2025-06-13',
@@ -441,4 +415,4 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		rating: 4.7,
 		reviews: 120
 	}
-];
+],

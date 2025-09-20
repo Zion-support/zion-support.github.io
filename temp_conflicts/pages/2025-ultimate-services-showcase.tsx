@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Cloud, Database, Lock, ChartBar,
   Zap, Globe, Users, Code, Server
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our new service data
-import { advancedEnterpriseAutomationServices2025 } from '../data/2025-advanced-enterprise-automation-services';
-import { advancedCybersecurityComplianceServices2025 } from '../data/2025-advanced-cybersecurity-compliance-services';
-import { advancedDataAnalyticsBIServices } from '../data/2025-advanced-data-analytics-bi-services';
-import { advancedCloudDevOpsServices } from '../data/2025-advanced-cloud-devops-services';
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedFintechBlockchainServices } from '../data/2025-advanced-fintech-blockchain-services';
+import { advancedEnterpriseAutomationServices2025 } from '../data/2025-advanced-enterprise-automation-services',
+import { advancedCybersecurityComplianceServices2025 } from '../data/2025-advanced-cybersecurity-compliance-services',
+import { advancedDataAnalyticsBIServices } from '../data/2025-advanced-data-analytics-bi-services',
+import { advancedCloudDevOpsServices } from '../data/2025-advanced-cloud-devops-services',
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services',
+import { advancedFintechBlockchainServices } from '../data/2025-advanced-fintech-blockchain-services',
 
 // Combine all services
 const allServices = [
@@ -25,54 +25,51 @@ const allServices = [
   ...advancedCloudDevOpsServices,
   ...advancedAIMLServices,
   ...advancedFintechBlockchainServices
-];
+],
 
 // Service categories
 const serviceCategories = [
-  'All Services',
-  'Enterprise Automation',
-  'Cybersecurity & Compliance',
-  'Data Analytics & BI',
-  'Cloud & DevOps',
-  'AI & Machine Learning',
+  'All ServicesEnterprise Automation',
+  'Cybersecurity & ComplianceData Analytics & BI',
+  'Cloud & DevOpsAI & Machine Learning',
   'Fintech & Blockchain'
-];
+],
 
 const getCategoryIcon = (category: string) => {
   switch (category) {
-    case 'Enterprise Automation': return <Building className="w-6 h-6" />;
-    case 'Cybersecurity & Compliance': return <Shield className="w-6 h-6" />;
-    case 'Data Analytics & BI': return <ChartBar className="w-6 h-6" />;
-    case 'Cloud & DevOps': return <Cloud className="w-6 h-6" />;
-    case 'AI & Machine Learning': return <Brain className="w-6 h-6" />;
-    case 'Fintech & Blockchain': return <Zap className="w-6 h-6" />;
-    default: return <Rocket className="w-6 h-6" />;
+    case 'Enterprise Automation': return <Building className="w-6 h-6" />,
+    case 'Cybersecurity & Compliance': return <Shield className="w-6 h-6" />,
+    case 'Data Analytics & BI': return <ChartBar className="w-6 h-6" />,
+    case 'Cloud & DevOps': return <Cloud className="w-6 h-6" />,
+    case 'AI & Machine Learning': return <Brain className="w-6 h-6" />,
+    case 'Fintech & Blockchain': return <Zap className="w-6 h-6" />,
+    default: return <Rocket className="w-6 h-6" />
   }
-};
+},
 
 const getCategoryColor = (category: string) => {
   switch (category) {
-    case 'Enterprise Automation': return 'from-blue-500 to-indigo-600';
-    case 'Cybersecurity & Compliance': return 'from-red-500 to-pink-600';
-    case 'Data Analytics & BI': return 'from-green-500 to-emerald-600';
-    case 'Cloud & DevOps': return 'from-purple-500 to-violet-600';
-    case 'AI & Machine Learning': return 'from-orange-500 to-red-600';
-    case 'Fintech & Blockchain': return 'from-yellow-500 to-orange-600';
-    default: return 'from-gray-500 to-gray-600';
+    case 'Enterprise Automation': return 'from-blue-500 to-indigo-600',
+    case 'Cybersecurity & Compliance': return 'from-red-500 to-pink-600',
+    case 'Data Analytics & BI': return 'from-green-500 to-emerald-600',
+    case 'Cloud & DevOps': return 'from-purple-500 to-violet-600',
+    case 'AI & Machine Learning': return 'from-orange-500 to-red-600',
+    case 'Fintech & Blockchain': return 'from-yellow-500 to-orange-600',
+    default: return 'from-gray-500 to-gray-600'
   }
-};
+},
 
 export default function UltimateServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState(allServices);
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [filteredServices, setFilteredServices] = useState(allServices),
 
   useEffect(() => {
-    let filtered = allServices;
+    let filtered = allServices,
     
     if (selectedCategory !== 'All Services') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
     
     if (searchTerm) {
@@ -80,11 +77,11 @@ export default function UltimateServicesShowcase2025() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
     
-    setFilteredServices(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredServices(filtered),
+  }, [searchTerm, selectedCategory]),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -450,7 +447,7 @@ export default function UltimateServicesShowcase2025() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-gray-800">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -476,8 +473,8 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 
 // Import icons
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react',

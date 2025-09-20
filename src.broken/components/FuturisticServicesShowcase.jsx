@@ -1,6 +1,6 @@
 <<<<<<< HEAD
   const ServiceCard = ({ service, index, isVisible }) => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false),
     return (<motion.div
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -28,16 +28,16 @@
                   animate={{
                     x: [0, Math.random () * 100 - 50],
                     y: [0, Math.random () * 100 - 50],
-                    opacity: [0.6, 0.2, 0.6],
+                    opacity: [0.6, 0.2, 0.6]
                   }}
                   transition={{
                     duration: 3 + Math.random () * 2,
                     repeat: Infinity,
-                    ease: 'easeInOut',
+                    ease: 'easeInOut'
                   }}
                   style={{
                     left: `${20 + Math.random () * 60}%`,
-                    top: `${20 + Math.random () * 60}%`,
+                    top: `${20 + Math.random () * 60}%`
                   }}
                 />) ) }
             </div>
@@ -167,14 +167,14 @@
             />
           </div>
         </div>
-      </motion.div>) ;
-  };
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [visibleServices, setVisibleServices] = useState(new Set () ) ;
+      </motion.div>) ,
+  },
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [visibleServices, setVisibleServices] = useState(new Set () ) ,
 =======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
  : {}}
@@ -353,17 +353,17 @@ export default function Page() {
         </div>
       </div>
     </motion.div>
-  );
-};
+  ),
+},
 export const FuturisticServicesShowcase = () => {
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [visibleServices, setVisibleServices] = useState(new Set());
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [visibleServices, setVisibleServices] = useState(new Set()),
   const categories = ['
     'all',
-    ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category)),
-  ];
+    ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category))
+  ],
   const filteredServices = ADVANCED_MICRO_SERVICES.filter(service => {
 
     const matchesSearch =
@@ -371,14 +371,14 @@ export const FuturisticServicesShowcase = () => {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    return matchesCategory && matchesSearch;
-  });
+      ),
+    return matchesCategory && matchesSearch,
+  }),
   // Set all services as visible initially for better UX
   useEffect(() => {
-    const allIndices = new Set(filteredServices.map((_, index) => index));
-    setVisibleServices(allIndices);
-  }, [filteredServices]);
+    const allIndices = new Set(filteredServices.map((_, index) => index)),
+    setVisibleServices(allIndices),
+  }, [filteredServices]),
   return ("
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
       {/* Animated Background */}"
@@ -472,7 +472,7 @@ export const FuturisticServicesShowcase = () => {
           className="text-center mt-20"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">"
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -491,7 +491,7 @@ export const FuturisticServicesShowcase = () => {
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Phone, Mail, MapPin, Globe, 
   Clock, ChevronDown, ChevronUp,
@@ -7,7 +7,7 @@ import {
   Sparkles,
   ArrowRight,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -16,17 +16,17 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST',
   rating: '4.9/5 (500+ Reviews)'
-};
+},
 
 const quickActions = [
   { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
   { name: 'Book Demo', href: '/contact', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Q4 2025 Services', href: '/q4-2025-innovative-services-showcase', icon: <Star className="w-4 h-4" /> },
   { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4" /> }
-];
+],
 
 export default function TopContactBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false),
 
 const TopContactBar: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ const TopContactBar: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">TopContactBar</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default TopContactBar;
+export default TopContactBar,

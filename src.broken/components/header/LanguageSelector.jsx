@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import { ChevronDown, Globe export const LanguageSelector = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('EN');
+    const [isOpen, setIsOpen] = useState(false),
+    const [currentLanguage, setCurrentLanguage] = useState('EN'),
     const languages = ['
         { code: 'EN', name: 'English', flag: '🇺🇸' },
         { code: 'ES', name: 'Español', flag: '🇪🇸' },
@@ -13,14 +13,14 @@ import { ChevronDown, Globe export const LanguageSelector = () => {
         { code: 'ZH', name: '中文', flag: '🇨🇳' },
         { code: 'JA', name: '日本語', flag: '🇯🇵' },
         { code: 'KO', name: '한국어', flag: '🇰🇷' }
-    ];
+    ],
     const handleLanguageChange = (languageCode) => {
 
-        setCurrentLanguage(languageCode);
-        setIsOpen(false);
+        setCurrentLanguage(languageCode),
+        setIsOpen(false),
         // Here you would typically implement language change logic
-    };
-    const currentLang = languages.find(lang => lang.code === currentLanguage);
+    },
+    const currentLang = languages.find(lang => lang.code === currentLanguage),
     return (<div className="relative">"
       <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">"
         <Globe className="w-4 h-4"/>"
@@ -38,5 +38,5 @@ import { ChevronDown, Globe export const LanguageSelector = () => {
               </button>))}
           </div>
         </div>)}
-    </div>)};
+    </div>)},
 '"`

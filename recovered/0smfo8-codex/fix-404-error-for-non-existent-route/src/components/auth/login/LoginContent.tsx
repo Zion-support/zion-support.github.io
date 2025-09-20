@@ -1,5 +1,5 @@
 
-import { LoginCard } from "./LoginCard";
+import { LoginCard } from "./LoginCard",
 
 export function LoginContent() {
   return (
@@ -20,5 +20,5 @@ export function LoginContent() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

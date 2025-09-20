@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
 ,"
             { label: "Development Speed", before: "6 months", after: "2 months", improvement: "67%" }
@@ -169,7 +169,7 @@ export default function Page() {
         rating: 5,
         featured: false
 
-];
+],
 const industryStats = ["
     { industry: "FinTech", projects: 45, successRate: "98%", avgROI: "340%" },"
     { industry: "Healthcare", projects: 38, successRate: "96%", avgROI: "280%" },"
@@ -177,7 +177,7 @@ const industryStats = ["
     { industry: "Manufacturing", projects: 41, successRate: "95%", avgROI: "310%" },"
     { industry: "Education", projects: 29, successRate: "94%", avgROI: "290%" },"
     { industry: "Energy", projects: 33, successRate: "97%", avgROI: "380%" }
-];
+],
 const overallStats = ["
     { icon: <Trophy className="w-6 h-6"/>, value: "238+", label: "Successful Projects" },"
     { icon: <Users className="w-6 h-6"/>, value: "180+", label: "Happy Clients" },"
@@ -185,9 +185,9 @@ const overallStats = ["
     { icon: <TrendingUp className="w-6 h-6"/>, value: "95%", label: "Success Rate" },"
     { icon: <DollarSign className="w-6 h-6"/>, value: "320%", label: "Average ROI" },"
     { icon: <Clock className="w-6 h-6"/>, value: "12 months", label: "Avg.Delivery Time" }
-];
-    const [selectedStory, setSelectedStory] = useState(null);
-    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+],
+    const [selectedStory, setSelectedStory] = useState(null),
+    const [hoveredIndustry, setHoveredIndustry] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -199,7 +199,7 @@ const overallStats = ["
                 staggerChildren: 0.15,
                 delayChildren: 0.1
 
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -215,7 +215,7 @@ const overallStats = ["
                 duration: 0.6,"
                 ease: "easeOut"
 
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

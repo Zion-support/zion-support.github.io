@@ -1,5 +1,5 @@
-import { useDispatch, useSelector  } from 'react-redux', export const useAppDispatch = () => useDispatch(), export const useAppSelector = useSelector, ;
-export const useAppDispatch = () => useDispatch();
+import { useDispatch, useSelector  } from 'react-redux', export const useAppDispatch = () => useDispatch(), export const useAppSelector = useSelector, ,
+export const useAppDispatch = () => useDispatch(),
 export const useAppSelector = useSelector,",
 const Hooks: Reac t.FC = () => {,
   return (,
@@ -21,7 +21,6 @@ const Hooks: Reac t.FC = () => {,
             >,
               Get Started,
             </a>,
-          </div>,
-  ),};
-export default Hooks,';
-"',';
+          </div>)},
+export default Hooks,',
+"',',

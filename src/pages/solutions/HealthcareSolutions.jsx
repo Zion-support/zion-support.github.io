@@ -1,45 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Heart, Stethoscope, Shield, Database, Brain, Activity, ArrowRight, CheckCircle, Star, TrendingUp } from "lucide-react";
 export default function HealthcareSolutions() {
     const solutions = [
         {
-            icon: Heart,
-            title: "Patient Care AI",
-            description: "AI-powered patient monitoring and personalized care recommendations",
-            features: ["Real-time Monitoring", "Predictive Analytics", "Personalized Treatment Plans", "Remote Patient Care"]
+            icon: Heart,title: "Patient Care AI",description: "AI-powered patient monitoring and personalized care recommendations",features: ["Real-time Monitoring", "Predictive Analytics", "Personalized Treatment Plans", "Remote Patient Care"]
         },
         {
-            icon: Stethoscope,
-            title: "Diagnostic Assistance",
-            description: "Advanced AI diagnostics and medical imaging analysis",
-            features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"]
+            icon: Stethoscope,title: "Diagnostic Assistance",description: "Advanced AI diagnostics and medical imaging analysis",features: ["Medical Image Analysis", "Symptom Assessment", "Disease Prediction", "Treatment Recommendations"]
         },
         {
-            icon: Shield,
-            title: "Healthcare Security",
-            description: "HIPAA-compliant security and data protection solutions",
-            features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"]
+            icon: Shield,title: "Healthcare Security",description: "HIPAA-compliant security and data protection solutions",features: ["Data Encryption", "Access Control", "Audit Trails", "Compliance Monitoring"]
         },
         {
-            icon: Database,
-            title: "Health Data Management",
-            description: "Secure and efficient healthcare data infrastructure",
-            features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"]
+            icon: Database,title: "Health Data Management",description: "Secure and efficient healthcare data infrastructure",features: ["Electronic Health Records", "Data Interoperability", "Analytics Platform", "Cloud Storage"]
         },
         {
-            icon: Brain,
-            title: "Clinical Decision Support",
-            description: "AI-powered clinical decision support systems",
-            features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"]
+            icon: Brain,title: "Clinical Decision Support",description: "AI-powered clinical decision support systems",features: ["Evidence-based Guidelines", "Risk Assessment", "Drug Interaction Checking", "Clinical Pathways"]
         },
         {
-            icon: Activity,
-            title: "Operational Efficiency",
-            description: "Streamlined healthcare operations and resource management",
-            features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
+            icon: Activity,title: "Operational Efficiency",description: "Streamlined healthcare operations and resource management",features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
         }
-    ];
+    ],
     const benefits = [
         "Improved patient outcomes and care quality",
         "Reduced medical errors and diagnostic time",
@@ -47,23 +29,15 @@ export default function HealthcareSolutions() {
         "Better patient engagement and satisfaction",
         "Streamlined administrative processes",
         "Enhanced data security and compliance"
-    ];
+    ],
     const caseStudies = [
         {
-            organization: "Regional Medical Center",
-            specialty: "Cardiology",
-            challenge: "High patient readmission rates and inefficient care coordination",
-            solution: "Implemented AI-powered patient monitoring and predictive analytics",
-            results: "25% reduction in readmissions, 40% improvement in care coordination"
+            organization: "Regional Medical Center",specialty: "Cardiology",challenge: "High patient readmission rates and inefficient care coordination",solution: "Implemented AI-powered patient monitoring and predictive analytics",results: "25% reduction in readmissions, 40% improvement in care coordination"
         },
         {
-            organization: "Urban Hospital Network",
-            specialty: "Emergency Medicine",
-            challenge: "Long wait times and resource allocation inefficiencies",
-            solution: "AI-driven triage system and resource optimization platform",
-            results: "30% reduction in wait times, 35% improvement in resource utilization"
+            organization: "Urban Hospital Network",specialty: "Emergency Medicine",challenge: "Long wait times and resource allocation inefficiencies",solution: "AI-driven triage system and resource optimization platform",results: "30% reduction in wait times, 35% improvement in resource utilization"
         }
-    ];
+    ],
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -108,7 +82,7 @@ export default function HealthcareSolutions() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index) => {
-            const Icon = solution.icon;
+            const Icon = solution.icon,
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white"/>
@@ -193,7 +167,7 @@ export default function HealthcareSolutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Healthcare?
@@ -211,5 +185,5 @@ export default function HealthcareSolutions() {
           </div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

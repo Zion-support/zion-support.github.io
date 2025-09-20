@@ -19,5 +19,4 @@ export default function Page() {,
         <li>Error budget: guarded</li>,
       </ul>,
       <p>Need help implementing eval-driven releases? Contact us to get production-ready in weeks.</p>,
-    </main>,
-  ),}
+    </main>)}

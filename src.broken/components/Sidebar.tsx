@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { Link, useLocation  } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom',
   return (<>
       {/* Mobile overlay */}
       <div
@@ -49,8 +49,8 @@ import { Link, useLocation  } from 'react-router-dom';
                 </div>
               )}
 =======
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link, useLocation } from 'react-router-dom',
 import {
   Menu,
   X,
@@ -97,12 +97,12 @@ import {
   Package,
   User,
   Code
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function Page() {
 ) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
+  const location = useLocation(),
+  const [expandedSections, setExpandedSections] = useState<string[]>(['mainservices']),
 
   const navigation: SidebarItem[] = [{
       id: 'main',
@@ -166,22 +166,22 @@ export default function Page() {
         { name: 'Request Quote', href: '/request-quote', icon: DollarSign, description: 'Get pricing' }
       ]
     }
-  ];
+  ],
 
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev =>
       prev.includes(sectionId)
         ? prev.filter(id => id !== sectionId)
         : [...prev, sectionId]
-    );
-  };
+    ),
+  },
 
   const isActive = (href: string) => {
     if (href === '/') {
-      return location.pathname === '/';
+      return location.pathname === '/'
     }
-    return location.pathname.startsWith(href);
-  };
+    return location.pathname.startsWith(href),
+  },
 
   return (
     <>
@@ -238,7 +238,7 @@ export default function Page() {
                         onClick={() => {
                           // Close sidebar on mobile after navigation
                           if (window.innerWidth < 1024) {
-                            onToggle();
+                            onToggle(),
                           }
                         }}
                         className={`
@@ -296,8 +296,8 @@ export default function Page() {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default Sidebar;
+export default Sidebar,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

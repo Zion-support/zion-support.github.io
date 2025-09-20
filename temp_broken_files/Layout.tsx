@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 const function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
@@ -9,7 +9,7 @@ const function Layout({ children, title = 'Zion Tech Group', description = 'Auto
         </div>,
       </div>,
     </div>,
-  );
-};
-export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {;
+  ),
+},
+export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {,
 }}}

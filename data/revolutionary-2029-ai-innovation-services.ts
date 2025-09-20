@@ -1,45 +1,45 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 
 export interface RevolutionaryAIInnovationService2029 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  category: string;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  benefits: string[],
+  category: string,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  isPopular?: boolean;
-  isNew?: boolean;
+    mobile: string,
+    email: string,
+    address: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
@@ -52,18 +52,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Advanced AI platform that autonomously reviews code, identifies bugs, suggests improvements, and ensures code quality across multiple programming languages.',
     features: [
-      'Multi-language code analysis',
-      'Automated bug detection',
-      'Code quality scoring',
-      'Security vulnerability scanning',
-      'Performance optimization suggestions',
-      'Integration with CI/CD pipelines'
+      'Multi-language code analysisAutomated bug detection',
+      'Code quality scoringSecurity vulnerability scanning',
+      'Performance optimization suggestionsIntegration with CI/CD pipelines'
     ],
     benefits: [
-      'Reduce code review time by 80%',
-      'Improve code quality by 40%',
-      'Catch 95% of bugs before deployment',
-      'Ensure consistent coding standards'
+      'Reduce code review time by 80%Improve code quality by 40%',
+      'Catch 95% of bugs before deploymentEnsure consistent coding standards'
     ],
     category: 'AI & Development',
     icon: '🔍',
@@ -71,15 +66,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-blue-200',
     link: 'https://ziontechgroup.com/services/ai-autonomous-code-reviewer',
     marketPosition: 'AI-powered code review for development teams',
-    targetAudience: ['Developers', 'DevOps', 'Engineering Managers'],
+    targetAudience: ['DevelopersDevOps', 'Engineering Managers'],
     trialDays: 14,
     setupTime: '30 minutes',
     realService: true,
-    technology: ['NLP', 'Static Analysis', 'Machine Learning'],
-    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jenkins', 'CircleCI'],
-    useCases: ['Code review automation', 'Quality assurance', 'Security scanning'],
+    technology: ['NLPStatic Analysis', 'Machine Learning'],
+    integrations: ['GitHubGitLab', 'BitbucketJenkins', 'CircleCI'],
+    useCases: ['Code review automationQuality assurance', 'Security scanning'],
     roi: 'Save 20+ hours per week in code review time',
-    competitors: ['SonarQube', 'CodeClimate', 'DeepCode'],
+    competitors: ['SonarQubeCodeClimate', 'DeepCode'],
     marketSize: '$8B Code Quality Tools',
     growthRate: '20% CAGR',
     variant: 'ai-development',
@@ -106,18 +101,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Comprehensive content creation platform that uses AI to generate high-quality, engaging content for blogs, social media, marketing campaigns, and more.',
     features: [
-      'AI-powered content generation',
-      'Multi-format content creation',
-      'SEO optimization',
-      'Brand voice consistency',
-      'Content calendar management',
-      'Performance analytics'
+      'AI-powered content generationMulti-format content creation',
+      'SEO optimizationBrand voice consistency',
+      'Content calendar managementPerformance analytics'
     ],
     benefits: [
-      'Generate 10x more content',
-      'Improve engagement by 45%',
-      'Reduce content creation costs by 60%',
-      'Maintain consistent brand voice'
+      'Generate 10x more contentImprove engagement by 45%',
+      'Reduce content creation costs by 60%Maintain consistent brand voice'
     ],
     category: 'AI & Content Marketing',
     icon: '✍️',
@@ -125,15 +115,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-green-200',
     link: 'https://ziontechgroup.com/services/ai-content-creation-suite',
     marketPosition: 'AI content creation for marketing teams',
-    targetAudience: ['Marketing', 'Content Creators', 'Agencies'],
+    targetAudience: ['MarketingContent Creators', 'Agencies'],
     trialDays: 14,
     setupTime: '1 hour',
     realService: true,
-    technology: ['GPT-4', 'BERT', 'Natural Language Generation'],
-    integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite'],
-    useCases: ['Blog writing', 'Social media', 'Email marketing', 'Ad copy'],
+    technology: ['GPT-4BERT', 'Natural Language Generation'],
+    integrations: ['WordPressHubSpot', 'MailchimpHootsuite'],
+    useCases: ['Blog writingSocial media', 'Email marketingAd copy'],
     roi: 'Increase content output by 10x while reducing costs by 60%',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
+    competitors: ['JasperCopy.ai', 'Writesonic'],
     marketSize: '$15B Content Marketing',
     growthRate: '18% CAGR',
     variant: 'ai-content',
@@ -160,18 +150,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Advanced project management platform that uses AI to predict project outcomes, optimize resource allocation, and automate project workflows.',
     features: [
-      'AI-powered project forecasting',
-      'Resource optimization',
-      'Risk assessment and mitigation',
-      'Automated task assignment',
-      'Real-time progress tracking',
-      'Predictive analytics'
+      'AI-powered project forecastingResource optimization',
+      'Risk assessment and mitigationAutomated task assignment',
+      'Real-time progress trackingPredictive analytics'
     ],
     benefits: [
-      'Improve project success rate by 35%',
-      'Reduce project delays by 50%',
-      'Optimize resource utilization by 40%',
-      'Predict and prevent project risks'
+      'Improve project success rate by 35%Reduce project delays by 50%',
+      'Optimize resource utilization by 40%Predict and prevent project risks'
     ],
     category: 'AI & Project Management',
     icon: '📊',
@@ -179,15 +164,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/ai-project-management',
     marketPosition: 'AI-powered project management for modern teams',
-    targetAudience: ['Project Managers', 'Team Leads', 'Executives'],
+    targetAudience: ['Project ManagersTeam Leads', 'Executives'],
     trialDays: 21,
     setupTime: '2 hours',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'NLP'],
-    integrations: ['Jira', 'Asana', 'Monday.com', 'Slack', 'Microsoft Teams'],
-    useCases: ['Software development', 'Marketing campaigns', 'Product launches'],
+    technology: ['Machine LearningPredictive Analytics', 'NLP'],
+    integrations: ['JiraAsana', 'Monday.comSlack', 'Microsoft Teams'],
+    useCases: ['Software developmentMarketing campaigns', 'Product launches'],
     roi: 'Increase project success rate by 35% and reduce delays by 50%',
-    competitors: ['Asana', 'Monday.com', 'ClickUp'],
+    competitors: ['AsanaMonday.com', 'ClickUp'],
     marketSize: '$12B Project Management',
     growthRate: '16% CAGR',
     variant: 'ai-project-management',
@@ -214,18 +199,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Intelligent SEO platform that uses AI to analyze search trends, optimize content, and improve search engine rankings automatically.',
     features: [
-      'AI keyword research',
-      'Content optimization',
-      'Technical SEO analysis',
-      'Competitor analysis',
-      'Ranking predictions',
-      'Automated reporting'
+      'AI keyword researchContent optimization',
+      'Technical SEO analysisCompetitor analysis',
+      'Ranking predictionsAutomated reporting'
     ],
     benefits: [
-      'Improve search rankings by 40%',
-      'Increase organic traffic by 60%',
-      'Reduce SEO workload by 70%',
-      'Stay ahead of algorithm changes'
+      'Improve search rankings by 40%Increase organic traffic by 60%',
+      'Reduce SEO workload by 70%Stay ahead of algorithm changes'
     ],
     category: 'AI & SEO',
     icon: '🔍',
@@ -233,15 +213,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-orange-200',
     link: 'https://ziontechgroup.com/services/ai-powered-seo',
     marketPosition: 'AI-powered SEO for growing businesses',
-    targetAudience: ['Marketing', 'SEO Specialists', 'Content Teams'],
+    targetAudience: ['MarketingSEO Specialists', 'Content Teams'],
     trialDays: 14,
     setupTime: '1 hour',
     realService: true,
-    technology: ['NLP', 'Machine Learning', 'Search Analytics'],
-    integrations: ['Google Analytics', 'Google Search Console', 'WordPress', 'Shopify'],
-    useCases: ['Website optimization', 'Content marketing', 'E-commerce SEO'],
+    technology: ['NLPMachine Learning', 'Search Analytics'],
+    integrations: ['Google AnalyticsGoogle Search Console', 'WordPressShopify'],
+    useCases: ['Website optimizationContent marketing', 'E-commerce SEO'],
     roi: 'Increase organic traffic by 60% and improve rankings by 40%',
-    competitors: ['Ahrefs', 'SEMrush', 'Moz'],
+    competitors: ['AhrefsSEMrush', 'Moz'],
     marketSize: '$20B SEO Tools',
     growthRate: '22% CAGR',
     variant: 'ai-seo',
@@ -267,18 +247,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI.',
     features: [
-      'AI-powered personalization',
-      'Customer journey optimization',
-      'Predictive analytics',
-      'Multi-channel automation',
-      'A/B testing automation',
-      'ROI optimization'
+      'AI-powered personalizationCustomer journey optimization',
+      'Predictive analyticsMulti-channel automation',
+      'A/B testing automationROI optimization'
     ],
     benefits: [
-      'Increase conversion rates by 45%',
-      'Reduce marketing costs by 30%',
-      'Improve customer engagement by 60%',
-      'Automate complex marketing workflows'
+      'Increase conversion rates by 45%Reduce marketing costs by 30%',
+      'Improve customer engagement by 60%Automate complex marketing workflows'
     ],
     category: 'AI & Marketing',
     icon: '🎯',
@@ -286,15 +261,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-pink-200',
     link: 'https://ziontechgroup.com/services/ai-marketing-automation',
     marketPosition: 'AI-powered marketing automation for growth teams',
-    targetAudience: ['Marketing', 'Growth', 'Sales'],
+    targetAudience: ['MarketingGrowth', 'Sales'],
     trialDays: 21,
     setupTime: '1 day',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'NLP'],
-    integrations: ['HubSpot', 'Salesforce', 'Mailchimp', 'Facebook Ads', 'Google Ads'],
-    useCases: ['Email marketing', 'Social media', 'Ad campaigns', 'Lead nurturing'],
+    technology: ['Machine LearningPredictive Analytics', 'NLP'],
+    integrations: ['HubSpotSalesforce', 'MailchimpFacebook Ads', 'Google Ads'],
+    useCases: ['Email marketingSocial media', 'Ad campaignsLead nurturing'],
     roi: 'Increase conversion rates by 45% and reduce marketing costs by 30%',
-    competitors: ['HubSpot', 'Marketo', 'Pardot'],
+    competitors: ['HubSpotMarketo', 'Pardot'],
     marketSize: '$25B Marketing Automation',
     growthRate: '20% CAGR',
     variant: 'ai-marketing',
@@ -320,18 +295,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Intelligent customer support platform that uses AI to provide instant responses, route tickets, and resolve customer issues automatically.',
     features: [
-      'AI-powered chatbots',
-      'Intelligent ticket routing',
-      'Automated issue resolution',
-      'Sentiment analysis',
-      'Knowledge base management',
-      'Performance analytics'
+      'AI-powered chatbotsIntelligent ticket routing',
+      'Automated issue resolutionSentiment analysis',
+      'Knowledge base managementPerformance analytics'
     ],
     benefits: [
-      'Reduce response time by 80%',
-      'Handle 10x more inquiries',
-      'Improve customer satisfaction by 40%',
-      'Reduce support costs by 50%'
+      'Reduce response time by 80%Handle 10x more inquiries',
+      'Improve customer satisfaction by 40%Reduce support costs by 50%'
     ],
     category: 'AI & Customer Support',
     icon: '💬',
@@ -339,15 +309,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-cyan-200',
     link: 'https://ziontechgroup.com/services/ai-customer-support-automation',
     marketPosition: 'AI-powered customer support for growing businesses',
-    targetAudience: ['Customer Support', 'Success Teams', 'Operations'],
+    targetAudience: ['Customer SupportSuccess Teams', 'Operations'],
     trialDays: 14,
     setupTime: '1 day',
     realService: true,
-    technology: ['NLP', 'Machine Learning', 'Sentiment Analysis'],
-    integrations: ['Zendesk', 'Intercom', 'Freshdesk', 'Slack', 'Microsoft Teams'],
-    useCases: ['Customer service', 'Technical support', 'Sales support'],
+    technology: ['NLPMachine Learning', 'Sentiment Analysis'],
+    integrations: ['ZendeskIntercom', 'FreshdeskSlack', 'Microsoft Teams'],
+    useCases: ['Customer serviceTechnical support', 'Sales support'],
     roi: 'Reduce support costs by 50% and improve response time by 80%',
-    competitors: ['Intercom', 'Zendesk', 'Freshdesk'],
+    competitors: ['IntercomZendesk', 'Freshdesk'],
     marketSize: '$18B Customer Support',
     growthRate: '16% CAGR',
     variant: 'ai-support',
@@ -374,18 +344,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Advanced financial analytics platform that uses AI to analyze financial data, predict trends, and provide actionable insights for better decision-making.',
     features: [
-      'AI-powered financial forecasting',
-      'Risk assessment and management',
-      'Portfolio optimization',
-      'Real-time market analysis',
-      'Compliance monitoring',
-      'Automated reporting'
+      'AI-powered financial forecastingRisk assessment and management',
+      'Portfolio optimizationReal-time market analysis',
+      'Compliance monitoringAutomated reporting'
     ],
     benefits: [
-      'Improve financial decision-making by 50%',
-      'Reduce financial risks by 40%',
-      'Optimize portfolio performance by 30%',
-      'Automate compliance reporting'
+      'Improve financial decision-making by 50%Reduce financial risks by 40%',
+      'Optimize portfolio performance by 30%Automate compliance reporting'
     ],
     category: 'AI & Finance',
     icon: '💰',
@@ -393,15 +358,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-yellow-200',
     link: 'https://ziontechgroup.com/services/ai-financial-analytics',
     marketPosition: 'AI-powered financial analytics for modern businesses',
-    targetAudience: ['Finance', 'Investment', 'Trading'],
+    targetAudience: ['FinanceInvestment', 'Trading'],
     trialDays: 21,
     setupTime: '1 week',
     realService: true,
-    technology: ['Machine Learning', 'Predictive Analytics', 'Risk Modeling'],
-    integrations: ['QuickBooks', 'Xero', 'Bloomberg', 'Reuters', 'Trading platforms'],
-    useCases: ['Financial planning', 'Investment analysis', 'Risk management'],
+    technology: ['Machine LearningPredictive Analytics', 'Risk Modeling'],
+    integrations: ['QuickBooksXero', 'BloombergReuters', 'Trading platforms'],
+    useCases: ['Financial planningInvestment analysis', 'Risk management'],
     roi: 'Improve financial decision-making by 50% and reduce risks by 40%',
-    competitors: ['Bloomberg', 'Reuters', 'FactSet'],
+    competitors: ['BloombergReuters', 'FactSet'],
     marketSize: '$35B Financial Analytics',
     growthRate: '18% CAGR',
     variant: 'ai-finance',
@@ -428,18 +393,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Intelligent legal document platform that uses AI to automate document creation, review, and analysis while ensuring compliance and accuracy.',
     features: [
-      'AI-powered document generation',
-      'Legal document review',
-      'Compliance checking',
-      'Contract analysis',
-      'Risk assessment',
-      'Automated workflows'
+      'AI-powered document generationLegal document review',
+      'Compliance checkingContract analysis',
+      'Risk assessmentAutomated workflows'
     ],
     benefits: [
-      'Reduce document creation time by 80%',
-      'Improve accuracy by 90%',
-      'Ensure compliance automatically',
-      'Reduce legal costs by 40%'
+      'Reduce document creation time by 80%Improve accuracy by 90%',
+      'Ensure compliance automaticallyReduce legal costs by 40%'
     ],
     category: 'AI & Legal',
     icon: '⚖️',
@@ -447,15 +407,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-slate-200',
     link: 'https://ziontechgroup.com/services/ai-legal-document-automation',
     marketPosition: 'AI-powered legal automation for law firms and businesses',
-    targetAudience: ['Legal', 'Compliance', 'HR'],
+    targetAudience: ['LegalCompliance', 'HR'],
     trialDays: 30,
     setupTime: '1 week',
     realService: true,
-    technology: ['NLP', 'Machine Learning', 'Document Analysis'],
-    integrations: ['DocuSign', 'Adobe Sign', 'Microsoft Word', 'Google Docs'],
-    useCases: ['Contract creation', 'Legal review', 'Compliance monitoring'],
+    technology: ['NLPMachine Learning', 'Document Analysis'],
+    integrations: ['DocuSignAdobe Sign', 'Microsoft WordGoogle Docs'],
+    useCases: ['Contract creationLegal review', 'Compliance monitoring'],
     roi: 'Reduce legal document costs by 40% and improve accuracy by 90%',
-    competitors: ['DocuSign', 'Adobe Sign', 'ContractPodAi'],
+    competitors: ['DocuSignAdobe Sign', 'ContractPodAi'],
     marketSize: '$12B Legal Tech',
     growthRate: '25% CAGR',
     variant: 'ai-legal',
@@ -481,18 +441,13 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     period: '/month',
     description: 'Intelligent interview platform that uses AI to assess candidate skills, personality, and cultural fit through advanced video analysis and assessment.',
     features: [
-      'AI-powered video analysis',
-      'Skills assessment',
-      'Personality evaluation',
-      'Cultural fit analysis',
-      'Bias detection',
-      'Performance scoring'
+      'AI-powered video analysisSkills assessment',
+      'Personality evaluationCultural fit analysis',
+      'Bias detectionPerformance scoring'
     ],
     benefits: [
-      'Improve hiring accuracy by 60%',
-      'Reduce hiring time by 50%',
-      'Eliminate unconscious bias',
-      'Standardize assessment process'
+      'Improve hiring accuracy by 60%Reduce hiring time by 50%',
+      'Eliminate unconscious biasStandardize assessment process'
     ],
     category: 'AI & HR',
     icon: '👥',
@@ -500,15 +455,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     textColor: 'text-indigo-200',
     link: 'https://ziontechgroup.com/services/ai-interview-assessment',
     marketPosition: 'AI-powered interview assessment for modern HR teams',
-    targetAudience: ['HR', 'Recruiting', 'Talent Acquisition'],
+    targetAudience: ['HRRecruiting', 'Talent Acquisition'],
     trialDays: 14,
     setupTime: '1 day',
     realService: true,
-    technology: ['Computer Vision', 'NLP', 'Machine Learning'],
-    integrations: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],
-    useCases: ['Candidate screening', 'Skills assessment', 'Cultural fit evaluation'],
+    technology: ['Computer VisionNLP', 'Machine Learning'],
+    integrations: ['WorkdayBambooHR', 'GreenhouseLever'],
+    useCases: ['Candidate screeningSkills assessment', 'Cultural fit evaluation'],
     roi: 'Improve hiring accuracy by 60% and reduce time-to-hire by 50%',
-    competitors: ['HireVue', 'Pymetrics', 'HackerRank'],
+    competitors: ['HireVuePymetrics', 'HackerRank'],
     marketSize: '$8B HR Tech',
     growthRate: '20% CAGR',
     variant: 'ai-hr',
@@ -524,23 +479,23 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.6,
     reviews: 23
   }
-];
+],
 
 export const getAIServicesByCategory = (category: string) => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.category === category);
-};
+  return revolutionaryAIInnovationServices2029.filter(service => service.category === category)
+},
 
 export const getPopularAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isPopular);
-};
+  return revolutionaryAIInnovationServices2029.filter(service => service.isPopular),
+},
 
 export const getNewAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
-};
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew),
+},
 
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
-    const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    const price = parseInt(service.price.replace('$', '').replace(, '')),
+    return price >= minPrice && price <= maxPrice,
+  }),
+},

@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Model Routing Cookbook';
-  description: 'Practical recipes for policy-gated routing, fallbacks, and cost-aware selection.',
-};
+  title: 'AI 2026: Model Routing Cookbook',
+  description: 'Practical recipes for policy-gated routing, fallbacks, and cost-aware selection.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 py-12">,
@@ -20,6 +20,5 @@ export default function Page() {,
       <div className="mt-8">,
         <Link href="/" className="text-purple-600 font-semibold hover: text-purple-800">← Back to Home</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

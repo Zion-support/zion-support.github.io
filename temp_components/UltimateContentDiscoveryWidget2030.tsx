@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Search
   Filter
@@ -34,18 +34,18 @@ import {
   Target,
   Rocket,
   CheckCircle
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentDiscoveryWidget2030 = () => {
-  const [isVisiblesetIsVisible] = useState(false);
-  const [searchQuerysetSearchQuery] = useState('');
-  const [selectedCategorysetSelectedCategory] = useState('all');
-  const [selectedTimeframesetSelectedTimeframe] = useState('all');
-  const [isExpandedsetIsExpanded] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [searchQuerysetSearchQuery] = useState(''),
+  const [selectedCategorysetSelectedCategory] = useState('all'),
+  const [selectedTimeframesetSelectedTimeframe] = useState('all'),
+  const [isExpandedsetIsExpanded] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
 
   const categories = [
     { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-500 to-gray-600' },
@@ -54,7 +54,7 @@ const UltimateContentDiscoveryWidget2030 = () => {
     { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-500 to-emerald-500' },
     { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-500 to-red-500' },
     { id: 'reality-manipulation'name: 'Reality Manipulation'icon: Zapcolor: 'from-yellow-500 to-orange-500' }
-  ];
+  ],
 
   const timeframes = [
     { id: 'all'name: 'All Time' },
@@ -62,7 +62,7 @@ const UltimateContentDiscoveryWidget2030 = () => {
     { id: 'week'name: 'This Week' },
     { id: 'month'name: 'This Month' },
     { id: 'year'name: 'This Year' }
-  ];
+  ],
 
   const trendingContent = [
     {
@@ -130,18 +130,18 @@ const UltimateContentDiscoveryWidget2030 = () => {
       isTrending: true,
       isFeatured: false
     }
-  ];
+  ],
 
   const filteredContent = trendingContent.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()),
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+    return matchesSearch && matchesCategory,
+  }),
 
   const getCategoryInfo = (categoryId) => {
-    return categories.find(cat => cat.id === categoryId) || categories[0];
-  };
+    return categories.find(cat => cat.id === categoryId) || categories[0],
+  },
 
 const UltimateContentDiscoveryWidget2030: React.FC = () => {
   return (
@@ -149,7 +149,7 @@ const UltimateContentDiscoveryWidget2030: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentDiscoveryWidget2030</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentDiscoveryWidget2030;
+export default UltimateContentDiscoveryWidget2030,

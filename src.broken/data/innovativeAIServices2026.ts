@@ -2,37 +2,37 @@
 // Cutting-edge AI solutions with market data and pricing
 
 export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
+  phone: string,
+  email: string,
+  website: string,
   address: string}
 
 export interface AIService2026 {
-  id: number;
-  name: string;
-  category: string;
-  pricing: string;
-  description: string;
-  price: number;
-  pricingModel: string;
-  userLimit: string;
-  features: string[];
-  benefits: string[];
-  targetAudience: string[];
-  tags: string[];
-  contactInfo: ServiceContact;
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  useCases: string[];
-  technologies: string[];
+  id: number,
+  name: string,
+  category: string,
+  pricing: string,
+  description: string,
+  price: number,
+  pricingModel: string,
+  userLimit: string,
+  features: string[],
+  benefits: string[],
+  targetAudience: string[],
+  tags: string[],
+  contactInfo: ServiceContact,
+  marketPrice: string,
+  competitors: string[],
+  roi: string,
+  setupTime: string,
+  integrations: string[],
+  freeTier: boolean,
+  trialPeriod: string,
+  innovationLevel: string,
+  marketSize: string,
+  growthRate: string,
+  useCases: string[],
+  technologies: string[],
   compliance: string[]}
 
 // Zion Tech Group Contact Information
@@ -41,7 +41,7 @@ const zionContact: ServiceContact = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+},
 
 // Innovative AI Services 2026
 export const innovativeAIServices2026: AIService2026[] = [{
@@ -565,4 +565,4 @@ export const innovativeAIServices2026: AIService2026[] = [{
     ],
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
   }
-];
+],

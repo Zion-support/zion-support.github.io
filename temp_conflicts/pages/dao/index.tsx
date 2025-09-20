@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react',
 
-type Holder = { address: string; amount: string };
+type Holder = { address: string, amount: string },
 
 type Metrics = {
-  updatedAt: number;
-  tokenDistribution: { address: string; percent: number }[];
-  topHolders: Holder[];
-  activeProposals: any[];
-  governanceParticipationRate: number;
-  cached?: boolean;
-};
+  updatedAt: number,
+  tokenDistribution: { address: string, percent: number }[],
+  topHolders: Holder[],
+  activeProposals: any[],
+  governanceParticipationRate: number,
+  cached?: boolean
+},
 
 export default function DaoMetrics() {
-  const [data, setData] = useState<Metrics | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<Metrics | null>(null),
+  const [loading, setLoading] = useState(true),
 
   useEffect(() => {
     async function load() {
-      setLoading(true);
-      const resp = await fetch('/api/dao/metrics');
-      const json = await resp.json();
-      setData(json);
-      setLoading(false);
+      setLoading(true),
+      const resp = await fetch('/api/dao/metrics'),
+      const json = await resp.json(),
+      setData(json),
+      setLoading(false),
     }
-    load();
-  }, []);
+    load(),
+  }, []),
 
-  if (loading) return <div>Loading...</div>;
-  if (!data) return <div>Error loading data</div>;
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
 
   return (
     <div className="space-y-6">
@@ -101,5 +101,5 @@ export default function DaoMetrics() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

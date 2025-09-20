@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -8,7 +8,7 @@ export default function Page() {
       description: 'Scalable cloud solutions for growing businesses',
       icon: <Cloud className="w-8 h-8" />,
       category: 'infrastructure',
-      features: ['Multi-cloud Management', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+      features: ['Multi-cloud ManagementAuto-scaling', 'Disaster RecoveryCost Optimization'],
       pricing: 'Starting at $999/month'
     },
     {
@@ -17,7 +17,7 @@ export default function Page() {
       description: 'Streamline development and deployment processes',
       icon: <Code className="w-8 h-8" />,
       category: 'development',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Performance Optimization'],
+      features: ['CI/CD PipelinesInfrastructure as Code', 'MonitoringPerformance Optimization'],
       pricing: 'Starting at $1,499/month'
     },
     {
@@ -26,7 +26,7 @@ export default function Page() {
       description: 'Cutting-edge quantum solutions for complex problems',
       icon: <Zap className="w-8 h-8" />,
       category: 'quantum',
-      features: ['Quantum Algorithms', 'Hybrid Computing', 'Research Support', 'Custom Solutions'],
+      features: ['Quantum AlgorithmsHybrid Computing', 'Research SupportCustom Solutions'],
       pricing: 'Contact for pricing'
     },
     {
@@ -35,10 +35,10 @@ export default function Page() {
       description: 'International business development and localization',
       icon: <Globe className="w-8 h-8" />,
       category: 'business',
-      features: ['Market Analysis', 'Localization', 'Compliance', 'Partnership Development'],
+      features: ['Market AnalysisLocalization', 'CompliancePartnership Development'],
       pricing: 'Starting at $3,999/month'
     }
-  ];
+  ],
 
   const categories = [{ id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI & Machine Learning', count: services.filter(s => s.category === 'ai').length },
@@ -47,18 +47,18 @@ export default function Page() {
     { id: 'development', name: 'Development', count: services.filter(s => s.category === 'development').length },
     { id: 'quantum', name: 'Quantum Computing', count: services.filter(s => s.category === 'quantum').length },
     { id: 'business', name: 'Business Services', count: services.filter(s => s.category === 'business').length }
-  ];
+  ],
 
   const filteredServices = activeTab === 'all' 
     ? services 
-    : services.filter(service => service.category === activeTab);
+    : services.filter(service => service.category === activeTab),
 
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (<div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900">
       {/* Hero Section */}
@@ -266,7 +266,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -283,7 +283,7 @@ export default function Page() {
         </div>
       </section>
     </div>
-  );
-};
+  )
+},
 
-export default EnhancedMainPage;
+export default EnhancedMainPage,

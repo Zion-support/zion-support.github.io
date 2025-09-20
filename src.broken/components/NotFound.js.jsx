@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         { path: '/blog', label: 'Blog', description: 'Latest insights and news' },
         { path: '/careers', label: 'Careers', description: 'Join our team' }
-    ];
+    ],
     const servicePages = ['
         { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },
         { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },
         { path: '/services/cybersecurity', label: 'Cybersecurity', description: 'Security and protection' },
         { path: '/services/infrastructure', label: 'IT Infrastructure', description: 'Enterprise IT solutions' }
-    ];
+    ],
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">"
       <motion.div className="max-w-4xl mx-auto text-center" initial = {
 
@@ -26,7 +26,7 @@ export default function Page() {
         {/* 404 Icon */}"
         <motion.div className="mb-8" animate = {
 
-  { scale[1, 1.1,;
+  { scale[1, 1.1,
   1] 
 
 }} transition = {
@@ -142,6 +142,6 @@ export default function Page() {
           </a>
         </motion.p>
       </motion.div>
-    </div>)};
-export default NotFound;
+    </div>)},
+export default NotFound,
 '"

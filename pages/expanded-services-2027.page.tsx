@@ -1,28 +1,28 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState, useMemo } from 'react';
-import { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import { useState, useMemo } from 'react',
+import { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027',
 
 const ExpandedServicesShowcase2027: NextPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   // Get unique categories and subcategories
   const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
-    return cats;
-  }, []);
+    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))],
+    return cats,
+  }, []),
 
   const subcategories = useMemo(() => {
     if (selectedCategory === 'all') {
-      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
-      return subcats;
+      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))],
+      return subcats,
     }
-    const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
-    return subcats;
-  }, [selectedCategory]);
+    const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))],
+    return subcats,
+  }, [selectedCategory]),
 
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
@@ -30,20 +30,20 @@ const ExpandedServicesShowcase2027: NextPage = () => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
+                           service.subcategory.toLowerCase().includes(searchTerm.toLowerCase()),
       
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory,
       
-      return matchesSearch && matchesCategory && matchesSubcategory;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory]);
+      return matchesSearch && matchesCategory && matchesSubcategory,
+    }),
+  }, [searchTerm, selectedCategory, selectedSubcategory]),
 
   const resetFilters = () => {
-    setSearchTerm('');
-    setSelectedCategory('all');
-    setSelectedSubcategory('all');
-  };
+    setSearchTerm(''),
+    setSelectedCategory('all'),
+    setSelectedSubcategory('all'),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -103,8 +103,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             <select
               value={selectedCategory}
               onChange={(e) => {
-                setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+                setSelectedCategory(e.target.value),
+                setSelectedSubcategory('all'),
               }}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
@@ -248,7 +248,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               Our expanded 2027 services portfolio is designed to give you the competitive edge. 
               Contact us today to discuss how we can help implement these cutting-edge solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
@@ -266,7 +266,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default ExpandedServicesShowcase2027;
+export default ExpandedServicesShowcase2027,

@@ -1,58 +1,58 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth",
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {,
   const updateProfile = async (data: Partial<UserProfile>) => {,
     try {,
-      setIsLoading(true);
+      setIsLoading(true),
       if (!data.id) {,
-        return { error: "User ID is required" ,};
+        return { error: "User ID is required" },
       }
 ,
       // Update user metadata,
-      const { error: authError ,} = await supabase.auth.updateUser({,
+      const { error: authError } = await supabase.auth.updateUser({,
         data: {,
-          display_name: data.displayName;
-          user_type: data.userType;
+          display_name: data.displayName,
+          user_type: data.userType,
       if (authError) {,
         toast({,
-          title: "Profile update failed";
-          description: authError.message;
-        return { error: authError ,};
+          title: "Profile update failed",
+          description: authError.message,
+        return { error: authError },
       }
 ,
       // Update profiles table,
-      const { error: profileError ,} = await supabase,
+      const { error: profileError } = await supabase,
         .from("profiles"),
         .update({,
-          display_name: data.displayName;
-          user_type: data.userType;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatarUrl || data.avatar_url;
-          profile_complete: data.profileComplete;
-        .eq("id", data.id);
+          display_name: data.displayName,
+          user_type: data.userType,
+          bio: data.bio,
+          headline: data.headline,
+          avatar_url: data.avatarUrl || data.avatar_url,
+          profile_complete: data.profileComplete,
+        .eq("id", data.id),
       if (profileError) {,
         toast({,
-          title: "Profile update failed";
-          description: profileError.message;
-        return { error: profileError ,};
+          title: "Profile update failed",
+          description: profileError.message,
+        return { error: profileError },
       }
 ,
       toast({,
-        title: "Profile updated";
-      return { success: true ,};
+        title: "Profile updated",
+      return { success: true },
     } catch (error: any) {,
-      console.error("Profile update error:", error);
+      console.error("Profile update error:", error),
       toast({,
-        title: "Profile update failed";
-        description: error.message || "An unexpected error occurred";
-      return { error };
+        title: "Profile update failed",
+        description: error.message || "An unexpected error occurred",
+      return { error },
     } finally {,
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
-  return { updateProfile };
-};
+  },
+  return { updateProfile },
+},
 }}}}}}}))))))

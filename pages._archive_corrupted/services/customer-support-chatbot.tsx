@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 export default function CustomerSupportChatbot() {,
   return (,
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">,
@@ -26,6 +26,5 @@ export default function CustomerSupportChatbot() {,
           <Link href="/contact" className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: bg-white">Get Started</Link>,
         </div>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,

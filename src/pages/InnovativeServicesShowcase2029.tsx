@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Shield, 
   Cloud, 
   Zap, 
@@ -45,29 +45,27 @@ import {
   Pause,
   Volume2,
   VolumeX
-} from 'lucide-react';
-import { innovativeMicroSAASServices2029 } from '../../data/innovative-micro-saas-2029';
-
+} from "lucide-react";
+import { innovativeMicroSAASServices2029 } from "../../data/innovative-micro-saas-2029";
 export default function InnovativeServicesShowcase2029() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [isPlaying, setIsPlaying] = useState(false),
+  const [isMuted, setIsMuted] = useState(false),
 
-  const categories = ['All', 'AI & Analytics', 'Cybersecurity', 'AI & Operations', 'Blockchain & Security', 'AI & Legal Tech', 'IoT & Edge Computing', 'AI & Healthcare', 'Quantum Computing & AI', 'AI & Fintech', 'Sustainability & Consulting'];
+  const categories = ['AllAI & Analytics', 'CybersecurityAI & Operations', 'Blockchain & SecurityAI & Legal Tech', 'IoT & Edge ComputingAI & Healthcare', 'Quantum Computing & AIAI & Fintech', 'Sustainability & Consulting'],
 
   const filteredServices = innovativeMicroSAASServices2029.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
-  const togglePlayPause = () => setIsPlaying(!isPlaying);
+  const togglePlayPause = () => setIsPlaying(!isPlaying),
   const toggleMute = () => setIsMuted(!isMuted);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -83,18 +81,16 @@ export default function InnovativeServicesShowcase2029() {
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
               animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
+                x: [0, 100, 0];
+                y: [0, -100, 0];
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                delay: Math.random() * 5,
+                duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
               }}
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`;
+                top: `${Math.random() * 100}%`
               }}
             />
           ))}
@@ -381,7 +377,7 @@ export default function InnovativeServicesShowcase2029() {
             <p className="text-gray-300 mb-8 text-lg">
               Get in touch with our team to discuss how these innovative solutions can drive your business forward.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105"
@@ -404,5 +400,5 @@ export default function InnovativeServicesShowcase2029() {
         </div>
       </div>
     </div>
-  );
+  )
 }

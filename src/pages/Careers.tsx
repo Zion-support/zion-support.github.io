@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { 
-  Briefcase, 
+  Briefcase,
   Users, 
   Heart, 
   Zap, 
@@ -14,173 +14,115 @@ import {
   DollarSign,
   ChevronDown,
   ExternalLink
-} from 'lucide-react';
-
+} from "lucide-react";
 const Careers: React.FC = () => {
-  const [expandedJob, setExpandedJob] = useState<string | null>(null);
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
+  const [expandedJob, setExpandedJob] = useState<string | null>(null),
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all'),
 
   const departments = [
-    { id: 'all', name: 'All Departments', count: 12 },
-    { id: 'engineering', name: 'Engineering', count: 5 },
-    { id: 'sales', name: 'Sales & Business Development', count: 3 },
-    { id: 'marketing', name: 'Marketing', count: 2 },
+    { id: 'all', name: 'All Departments', count: 12 };
+    { id: 'engineering', name: 'Engineering', count: 5 };
+    { id: 'sales', name: 'Sales & Business Development', count: 3 };
+    { id: 'marketing', name: 'Marketing', count: 2 };
     { id: 'operations', name: 'Operations', count: 2 }
   ];
-
   const jobListings = [
     {
-      id: 'senior-ai-engineer',
-      title: 'Senior AI Engineer',
-      department: 'engineering',
-      location: 'Remote / San Francisco, CA',
-      type: 'Full-time',
-      salary: '$120,000 - $180,000',
-      experience: '5+ years',
-      description: 'Join our AI team to develop cutting-edge machine learning solutions and autonomous systems.',
-      requirements: [
-        'Strong background in machine learning and deep learning',
-        'Experience with Python, TensorFlow, and PyTorch',
-        'Knowledge of cloud platforms (AWS, Azure, GCP)',
-        'Experience with MLOps and model deployment',
+      id: 'senior-ai-engineer',title: 'Senior AI Engineer',department: 'engineering',location: 'Remote / San Francisco, CA',
+      type: 'Full-time',salary: '$120,000 - $180,000',
+      experience: '5+ years',description: 'Join our AI team to develop cutting-edge machine learning solutions and autonomous systems.',requirements: [
+        'Strong background in machine learning and deep learningExperience with Python, TensorFlow, and PyTorch',
+        'Knowledge of cloud platforms (AWS, Azure, GCP)Experience with MLOps and model deployment',
         'Strong problem-solving and communication skills'
       ],
       responsibilities: [
-        'Design and implement AI/ML solutions',
-        'Optimize model performance and scalability',
-        'Collaborate with cross-functional teams',
-        'Mentor junior engineers',
+        'Design and implement AI/ML solutionsOptimize model performance and scalability';
+        'Collaborate with cross-functional teamsMentor junior engineers',
         'Stay current with AI/ML trends and technologies'
       ],
       benefits: [
-        'Competitive salary and equity',
-        'Flexible work arrangements',
-        'Professional development budget',
-        'Health, dental, and vision insurance',
+        'Competitive salary and equityFlexible work arrangements';
+        'Professional development budgetHealth, dental, and vision insurance',
         '401(k) with company match'
       ]
     },
     {
-      id: 'ai-sales-engineer',
-      title: 'AI Sales Engineer',
-      department: 'sales',
-      location: 'Remote / New York, NY',
-      type: 'Full-time',
-      salary: '$90,000 - $140,000',
-      experience: '3+ years',
-      description: 'Help clients understand and implement our AI solutions through technical expertise and sales acumen.',
-      requirements: [
-        'Technical background in AI/ML or software engineering',
-        'Experience in B2B sales or sales engineering',
-        'Strong presentation and communication skills',
-        'Ability to understand client needs and propose solutions',
+      id: 'ai-sales-engineer',title: 'AI Sales Engineer',department: 'sales',location: 'Remote / New York, NY',
+      type: 'Full-time',salary: '$90,000 - $140,000',
+      experience: '3+ years',description: 'Help clients understand and implement our AI solutions through technical expertise and sales acumen.',requirements: [
+        'Technical background in AI/ML or software engineeringExperience in B2B sales or sales engineering';
+        'Strong presentation and communication skillsAbility to understand client needs and propose solutions',
         'Experience with CRM systems'
       ],
       responsibilities: [
-        'Conduct technical demonstrations and presentations',
-        'Develop proof-of-concept solutions',
-        'Collaborate with sales and engineering teams',
-        'Provide technical support during sales process',
+        'Conduct technical demonstrations and presentationsDevelop proof-of-concept solutions';
+        'Collaborate with sales and engineering teamsProvide technical support during sales process',
         'Build relationships with technical stakeholders'
       ],
       benefits: [
-        'Base salary plus commission',
-        'Performance bonuses',
-        'Company car allowance',
-        'Health and wellness benefits',
+        'Base salary plus commissionPerformance bonuses';
+        'Company car allowanceHealth and wellness benefits',
         'Professional development opportunities'
       ]
     },
     {
-      id: 'product-marketing-manager',
-      title: 'Product Marketing Manager',
-      department: 'marketing',
-      location: 'Remote / Austin, TX',
-      type: 'Full-time',
-      salary: '$80,000 - $120,000',
-      experience: '4+ years',
-      description: 'Drive product positioning, messaging, and go-to-market strategies for our AI solutions.',
+      id: 'product-marketing-manager',title: 'Product Marketing Manager',department: 'marketing',location: 'Remote / Austin, TX',
+      type: 'Full-time',salary: '$80,000 - $120,000',
+      experience: '4+ years',description: 'Drive product positioning, messaging, and go-to-market strategies for our AI solutions.',
       requirements: [
-        'Experience in B2B SaaS product marketing',
-        'Strong analytical and creative skills',
-        'Experience with market research and competitive analysis',
-        'Excellent written and verbal communication',
+        'Experience in B2B SaaS product marketingStrong analytical and creative skills';
+        'Experience with market research and competitive analysisExcellent written and verbal communication',
         'Understanding of AI/ML technologies'
       ],
       responsibilities: [
-        'Develop product positioning and messaging',
-        'Create marketing collateral and campaigns',
-        'Conduct market research and competitive analysis',
-        'Work with product and sales teams',
+        'Develop product positioning and messagingCreate marketing collateral and campaigns';
+        'Conduct market research and competitive analysisWork with product and sales teams',
         'Track and analyze marketing metrics'
       ],
       benefits: [
-        'Competitive salary and benefits',
-        'Remote work flexibility',
-        'Marketing budget for tools and resources',
-        'Health and wellness benefits',
+        'Competitive salary and benefitsRemote work flexibility';
+        'Marketing budget for tools and resourcesHealth and wellness benefits',
         'Professional development opportunities'
       ]
     },
     {
-      id: 'devops-engineer',
-      title: 'DevOps Engineer',
-      department: 'engineering',
-      location: 'Remote / Seattle, WA',
-      type: 'Full-time',
-      salary: '$100,000 - $150,000',
-      experience: '3+ years',
-      description: 'Build and maintain our cloud infrastructure and deployment pipelines.',
-      requirements: [
-        'Experience with AWS, Azure, or GCP',
-        'Knowledge of Docker, Kubernetes, and CI/CD',
-        'Experience with infrastructure as code (Terraform)',
-        'Strong scripting skills (Python, Bash)',
+      id: 'devops-engineer',title: 'DevOps Engineer',department: 'engineering',location: 'Remote / Seattle, WA',
+      type: 'Full-time',salary: '$100,000 - $150,000',
+      experience: '3+ years',description: 'Build and maintain our cloud infrastructure and deployment pipelines.',requirements: [
+        'Experience with AWS, Azure, or GCPKnowledge of Docker, Kubernetes, and CI/CD',
+        'Experience with infrastructure as code (Terraform)Strong scripting skills (Python, Bash)',
         'Understanding of security best practices'
       ],
       responsibilities: [
-        'Manage cloud infrastructure and services',
-        'Automate deployment and scaling processes',
-        'Monitor system performance and reliability',
-        'Implement security and compliance measures',
+        'Manage cloud infrastructure and servicesAutomate deployment and scaling processes';
+        'Monitor system performance and reliabilityImplement security and compliance measures',
         'Collaborate with development teams'
       ],
       benefits: [
-        'Competitive salary and equity',
-        'Remote work flexibility',
-        'Cloud certification reimbursement',
-        'Health and wellness benefits',
+        'Competitive salary and equityRemote work flexibility';
+        'Cloud certification reimbursementHealth and wellness benefits',
         'Professional development budget'
       ]
     }
-  ];
+  ],
 
   const companyValues = [
     {
-      icon: <Zap className="w-8 h-8 text-zion-cyan" />,
-      title: 'Innovation First',
-      description: 'We push boundaries and embrace cutting-edge technologies to solve complex problems.'
-    },
+      icon: <Zap className="w-8 h-8 text-zion-cyan" />,title: 'Innovation First',description: 'We push boundaries and embrace cutting-edge technologies to solve complex problems.'
+    };
     {
-      icon: <Users className="w-8 h-8 text-zion-cyan" />,
-      title: 'Collaboration',
-      description: 'We believe in the power of diverse teams working together to achieve extraordinary results.'
-    },
+      icon: <Users className="w-8 h-8 text-zion-cyan" />,title: 'Collaboration',description: 'We believe in the power of diverse teams working together to achieve extraordinary results.'
+    };
     {
-      icon: <Heart className="w-8 h-8 text-zion-cyan" />,
-      title: 'Customer Focus',
-      description: 'Our customers\' success is our success. We build solutions that truly make a difference.'
-    },
+      icon: <Heart className="w-8 h-8 text-zion-cyan" />,title: 'Customer Focus',description: 'Our customers\' success is our success. We build solutions that truly make a difference.'
+    };
     {
-      icon: <Globe className="w-8 h-8 text-zion-cyan" />,
-      title: 'Global Impact',
-      description: 'We\'re committed to creating technology that benefits society and the environment.'
+      icon: <Globe className="w-8 h-8 text-zion-cyan" />,title: 'Global Impact',description: 'We\'re committed to creating technology that benefits society and the environment.'
     }
   ];
-
   const filteredJobs = selectedDepartment === 'all' 
     ? jobListings 
-    : jobListings.filter(job => job.department === selectedDepartment);
+    : jobListings.filter(job => job.department === selectedDepartment),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -428,24 +370,16 @@ const Careers: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                step: '1',
-                title: 'Apply',
-                description: 'Submit your resume and cover letter through our portal'
-              },
+                step: '1',title: 'Apply',description: 'Submit your resume and cover letter through our portal'
+              };
               {
-                step: '2',
-                title: 'Review',
-                description: 'Our team reviews your application within 48 hours'
-              },
+                step: '2',title: 'Review',description: 'Our team reviews your application within 48 hours'
+              };
               {
-                step: '3',
-                title: 'Interview',
-                description: 'Multiple rounds including technical and cultural fit'
-              },
+                step: '3',title: 'Interview',description: 'Multiple rounds including technical and cultural fit'
+              };
               {
-                step: '4',
-                title: 'Offer',
-                description: 'Receive your offer and join the Zion Tech family'
+                step: '4',title: 'Offer',description: 'Receive your offer and join the Zion Tech family'
               }
             ].map((step, index) => (
               <motion.div
@@ -482,7 +416,7 @@ const Careers: React.FC = () => {
               Send us your resume and we'll keep you in mind for future opportunities.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-zion-cyan text-slate-900 rounded-lg hover:bg-zion-cyan/90 transition-colors font-medium flex items-center justify-center gap-2">
                 <Mail className="w-5 h-5" />
                 Send Resume
@@ -496,7 +430,6 @@ const Careers: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Careers;

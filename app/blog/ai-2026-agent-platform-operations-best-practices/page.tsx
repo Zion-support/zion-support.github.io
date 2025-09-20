@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Platform Operations Best Practices';
-  description: 'SLOs, incident response, and change management patterns for safe, reliable agent platforms.',
-};
+  title: 'AI 2026: Agent Platform Operations Best Practices',
+  description: 'SLOs, incident response, and change management patterns for safe, reliable agent platforms.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -26,7 +26,6 @@ export default function Page() {,
         <li>Feature flags, staged rollouts, and eval suites in CI/CD.</li>,
         <li>Red-team tests for high-risk changes and fast rollback procedures.</li>,
       </ul>,
-    </main>,
-  );
+    </main>),
 }
 ,

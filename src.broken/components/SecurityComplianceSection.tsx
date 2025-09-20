@@ -29,10 +29,10 @@ function SecurityComplianceSection () {
   Globe,
   Server,
   Eye'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions']};
-  ];
+      benefits['Firewall protection',IDS/IPS systems',DDoS mitigation',VPN solutions']},
+  ],
 const securityFeatures = [{
 
     title: "SOC 2 Type II Compliance","
@@ -73,14 +73,14 @@ const securityFeatures = [{
     status: "Implemented","
     color: "from-indigo-500 to-purple-600"
   },
-  {;"
-    title: "End-to-End Encryption",;"
-    description: "256-bit AES encryption for all data in transit and at rest",;"
-    icon: "🔐",;"
-    status: "Active",;"
-    color: "from-teal-500 to-green-600"};
-];
-;
+  {,"
+    title: "End-to-End Encryption","
+    description: "256-bit AES encryption for all data in transit and at rest","
+    icon: "🔐","
+    status: "Active","
+    color: "from-teal-500 to-green-600"},
+],
+,
 const complianceFeatures = [{
 "
     category: "Data Protection",
@@ -104,15 +104,15 @@ const complianceFeatures = [{
   {
 "
     category: "Monitoring & Auditing",
-    features: [;"
-      "24/7 security monitoring",;"
-      "Comprehensive audit logs",;"
-      "Real-time alerts",;"
-      "Automated compliance reporting";
-    ]};
+    features: [,"
+      "24/7 security monitoring","
+      "Comprehensive audit logs","
+      "Real-time alerts","
+      "Automated compliance reporting",
+    ]},
 =======
-    ]};
-];
+    ]},
+],
 
 export function SecurityComplianceSection() {
   return ("
@@ -161,8 +161,8 @@ export function SecurityComplianceSection() {
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >;
-          {securityMetrics.map ( (metric, index) => {;
+        >,
+          {securityMetrics.map ( (metric, index) => {,
             
             return ("
               <div key = {metric.label} className="text-center">"
@@ -284,14 +284,14 @@ export function SecurityComplianceSection() {
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Security Performance Metrics
             </h3>
-            ;"
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;"
-              <div className="text-center">;"
-                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;"
-                <div className="text-gray-400 text-sm">Uptime SLA</div>;
-              </div>;"
-              <div className="text-center">;"
-                <div className="text-4xl font-bold text-green-400 mb-2">&lt;1s</div>"
+            ,"
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-6">,"
+              <div className="text-center">,"
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>,"
+                <div className="text-gray-400 text-sm">Uptime SLA</div>,
+              </div>,"
+              <div className="text-center">,"
+                <div className="text-4xl font-bold text-green-400 mb-2">&lt,1s</div>"
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>"
               <div className="text-center">"
@@ -335,7 +335,7 @@ export function SecurityComplianceSection() {
             </h3>"
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Get enterprise-grade security and compliance without the complexity.Our experts handle everything while you focus on your business.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Security Assessment"
                 <Shield className="ml-2 h-5 w-5"  />
@@ -346,16 +346,16 @@ export function SecurityComplianceSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default SecurityComplianceSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default SecurityComplianceSection;
-export default SecurityComplianceSection;
+export default SecurityComplianceSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default SecurityComplianceSection,
+export default SecurityComplianceSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

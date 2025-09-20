@@ -1,5 +1,5 @@
-import React from 'react';
-export default QuantumNeuralNetworkPlatform;
+import React from 'react',
+export default QuantumNeuralNetworkPlatform,
 import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPlatform = () => {
 
     const features = [{
@@ -22,7 +22,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             title: 'Quantum Security',
             description: 'Next - generation encryption and security protocols based on quantum mechanics principles.'
 
-    ];
+    ],
     const useCases = [{
             title: 'Financial Modeling',
             description: 'Advanced risk assessment, portfolio optimization, and market prediction using quantum neural networks.',
@@ -43,14 +43,11 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
             description: 'Faster and more efficient training of large language models and neural networks.',
             icon: Brain
 
-    ];
-    const benefits = ['Exponential speedup in complex computations',
-        'Enhanced accuracy in pattern recognition',
-        'Scalable architecture for growing datasets',
-        'Energy - efficient quantum - inspired algorithms',
-        'Seamless integration with existing AI systems',
-        'Real - time decision making capabilities'
-    ];
+    ],
+    const benefits = ['Exponential speedup in complex computationsEnhanced accuracy in pattern recognition',
+        'Scalable architecture for growing datasetsEnergy - efficient quantum - inspired algorithms',
+        'Seamless integration with existing AI systemsReal - time decision making capabilities'
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px-4 sm:px-6 lg:px-8">
@@ -94,7 +91,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
             {features.map ( (feature, index) => {
-            const IconComponent = feature.icon;
+            const IconComponent = feature.icon,
             return (<div key={index} className="bg-slate - 800 / 50 backdrop - blur - lg rounded-xl p - 6 border border-white / 10 hover:border-blue - 500 / 30 transition - all duration -300">
                   <div className="w-12 h-12 bg-gradient - to - r from - blue - 600 to - cyan - 600 rounded-lg flex items - center justify - center mb-4">
                     <IconComponent className="w-6 h-6 text-white"/>
@@ -120,7 +117,7 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const IconComponent = useCase.icon,
             return (<div key={index} className="bg-slate - 800 / 50 backdrop - blur - lg rounded-xl p - 8 border border-white / 10">
                   <div className="w-16 h-16 bg-gradient - to - r from - blue - 600 to - cyan - 600 rounded-xl flex items - center justify - center mb-6">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -252,5 +249,5 @@ import { Brain, Zap, Shield, TrendingUp, ArrowRight const QuantumNeuralNetworkPl
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

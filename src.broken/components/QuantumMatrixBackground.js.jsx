@@ -1,83 +1,83 @@
-import React, { useEffect, useRef } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useEffect, useRef } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-) `;
-                        ctx.lineWidth = 1;
+) `,
+                        ctx.lineWidth = 1,
                         ctx.stroke () }
                 }
             }
-        };
+        },
         // Neural network connections
         const drawNeuralConnections = () => {
-            for(let i = 0; i < particles.length; i++) {
+            for(let i = 0, i < particles.length, i++) {
 
-                for(let j = i + 1; j < particles.length; j++) {
+                for(let j = i + 1, j < particles.length, j++) {
 
-                    const p2 = particles[j];
-                    const distance = Math.sqrt(Math.pow (p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2) ) ;
+                    const p2 = particles[j],
+                    const distance = Math.sqrt(Math.pow (p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2) ) ,
                     if(distance < 150) {
 
-                        const strength = 1 - distance / 150;
-                        ctx.beginPath();
-                        ctx.moveTo(p1.x, p1.y);
-                        ctx.lineTo(p2.x, p2.y);`
-                        ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * strength})`;
-                        ctx.lineWidth = strength * 2;
+                        const strength = 1 - distance / 150,
+                        ctx.beginPath(),
+                        ctx.moveTo(p1.x, p1.y),
+                        ctx.lineTo(p2.x, p2.y),`
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 * strength})`,
+                        ctx.lineWidth = strength * 2,
                         ctx.stroke () }
                 }
             }
-        };
+        },
         // Animation loop
         const animate = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height) ;
+            ctx.clearRect(0, 0, canvas.width, canvas.height) ,
             // Update and draw particles
             particles.forEach((particle, index) => {
 
                 // Update position
-                particle.x += particle.vx;
-                particle.y += particle.vy;
-                particle.quantumState += 0.02;
+                particle.x += particle.vx,
+                particle.y += particle.vy,
+                particle.quantumState += 0.02,
                 // Quantum tunneling effect
                 if(Math.random() < 0.001 * intensityMultiplier) {
 
-                    particle.x = Math.random() * canvas.width;
+                    particle.x = Math.random() * canvas.width,
                     particle.y = Math.random() * canvas.height}
                 // Wrap around edges
-                if(particle.x < 0) particle.x = canvas.width;
-                if(particle.x > canvas.width) particle.x = 0;
-                if(particle.y < 0) particle.y = canvas.height;
-                if(particle.y > canvas.height) particle.y = 0;
+                if(particle.x < 0) particle.x = canvas.width,
+                if(particle.x > canvas.width) particle.x = 0,
+                if(particle.y < 0) particle.y = canvas.height,
+                if(particle.y > canvas.height) particle.y = 0,
                 // Draw particle with quantum effects
-                ctx.save () ;
-                ctx.globalAlpha = particle.opacity;
-                ctx.fillStyle = particle.color;
+                ctx.save () ,
+                ctx.globalAlpha = particle.opacity,
+                ctx.fillStyle = particle.color,
                 // Quantum superposition effect
-                const sizeVariation = Math.sin(particle.quantumState) * 0.5;
-                const finalSize = particle.size + sizeVariation;
-                ctx.beginPath () ;
-                ctx.arc(particle.x, particle.y, finalSize, 0, Math.PI * 2) ;
-                ctx.fill () ;
+                const sizeVariation = Math.sin(particle.quantumState) * 0.5,
+                const finalSize = particle.size + sizeVariation,
+                ctx.beginPath () ,
+                ctx.arc(particle.x, particle.y, finalSize, 0, Math.PI * 2) ,
+                ctx.fill () ,
                 // Quantum glow effect
-                ctx.shadowColor = particle.color;
-                ctx.shadowBlur = 10;
-                ctx.fill () ;
-                ctx.restore () }) ;
+                ctx.shadowColor = particle.color,
+                ctx.shadowBlur = 10,
+                ctx.fill () ,
+                ctx.restore () }) ,
             // Draw connections
             if(showParticles) {
 
-                drawNeuralConnections();
+                drawNeuralConnections(),
                 entangleParticles()}
-            requestAnimationFrame(animate)};
-        animate();
+            requestAnimationFrame(animate)},
+        animate(),
         // Handle resize
         const handleResize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight};
-        window.addEventListener('resize', handleResize);
+            canvas.width = window.innerWidth,
+            canvas.height = window.innerHeight},
+        window.addEventListener('resize', handleResize),
         return () => {
 
-            window.removeEventListener('resize', handleResize)}}, [intensity, showParticles]);
+            window.removeEventListener('resize', handleResize)}}, [intensity, showParticles]),
     return (<div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Quantum Matrix Canvas */}'"
       {showParticles && (<canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ opacity: intensity === 'high' ? 0.8 : intensity === 'medium' ? 0.6 : 0.4 }}/>)}
@@ -94,15 +94,15 @@ export default function Page() {
 
                 background: 'radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%),
                 border: '1px solid rgba(34, 221, 210,
-  0.5);
+  0.5),
 
 }} animate = {
 
   {
 
-                scale[1, 1.2, 1],;
-                opacity[0.3, 0.6, 0.3],;
-                rotate[0, 180,;
+                scale[1, 1.2, 1],
+                opacity[0.3, 0.6, 0.3],
+                rotate[0, 180,
   360]
 
 }} transition = {
@@ -121,15 +121,15 @@ export default function Page() {
 
                 background: 'linear-gradient(45deg, rgba(139, 92, 246, 0.3), rgba(59, 130, 246, 0.3)),
                 clipPath: 'polygon(50% 0%, 0% 100%,
-  100% 100%);
+  100% 100%),
 
 }} animate = {
 
   {
 
-                y[0, -20, 0],;
-                rotate[0, 360],;
-                opacity[0.4, 0.8,;
+                y[0, -20, 0],
+                rotate[0, 360],
+                opacity[0.4, 0.8,
   0.4]
 
 }} transition = {
@@ -147,14 +147,14 @@ export default function Page() {
   {
 
                 background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210,
-  0.4));
+  0.4)),
 
 }} animate = {
 
   {
 
-                scale[1, 1.5, 1],;
-                rotate[0, 180,;
+                scale[1, 1.5, 1],
+                rotate[0, 180,
   360]
 
 }} transition = {
@@ -177,8 +177,7 @@ export default function Page() {
 
   {
 
-                    y['-100vh',;
-  '100vh']
+                    y['-100vh100vh']
 
 }} transition = {
 
@@ -202,14 +201,14 @@ export default function Page() {
 
             background: 'radial-gradient(circle, rgba(34, 221, 210, 0.1) 0%, transparent 70%),
             border: '1px solid rgba(34, 221, 210,
-  0.2);
+  0.2),
 
 }} animate = {
 
   {
 
-            scale[1, 1.5, 1],;
-            opacity[0.1, 0.3,;
+            scale[1, 1.5, 1],
+            opacity[0.1, 0.3,
   0.1]
 
 }} transition = {
@@ -228,14 +227,14 @@ export default function Page() {
 
             background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%),
             border: '1px solid rgba(139, 92, 246,
-  0.2);
+  0.2),
 
 }} animate = {
 
   {
 
-            scale[1, 1.3, 1],;
-            opacity[0.1, 0.25,;
+            scale[1, 1.3, 1],
+            opacity[0.1, 0.25,
   0.1]
 
 }} transition = {
@@ -259,8 +258,8 @@ export default function Page() {
 
   {
 
-                scale[1, 1.5, 1],;
-                opacity[0.3, 0.8,;
+                scale[1, 1.5, 1],
+                opacity[0.3, 0.8,
   0.3]
 
 }} transition = {
@@ -273,5 +272,5 @@ export default function Page() {
 
 }}/>) ) }
       </div>
-    </div>)};
+    </div>)},
 '"`

@@ -1,17 +1,17 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from 'next/link',
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026 Enterprise Multimodal Agents Blueprint';
-  description: 'Downloadable enterprise blueprint for designing, operating, and governing multimodal agent systems in 2026.';
-  keywords: ['multimodal agentsenterprise blueprint', 'governanceoperating model'],
-};
+  title: 'AI 2026 Enterprise Multimodal Agents Blueprint',
+  description: 'Downloadable enterprise blueprint for designing, operating, and governing multimodal agent systems in 2026.',
+  keywords: ['multimodal agentsenterprise blueprintgovernanceoperating model']
+},
 export default function EnterpriseMultimodalAgentsBlueprintPage() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">,
       <section className="max-w-4xl mx-auto px-4 py-20 text-center">,
         <h1 className="text-5xl font-bold text-gray-900 mb-4">AI 2026 Enterprise Multimodal Agents Blueprint</h1>,
         <p className="text-xl text-gray-700 mb-8">,
-          A complete operating guide for enterprise-grade multimodal agent platforms: architecture, runbooks;
+          A complete operating guide for enterprise-grade multimodal agent platforms: architecture, runbooks,
           SLAs, risk controls, and cost governance.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -23,6 +23,5 @@ export default function EnterpriseMultimodalAgentsBlueprintPage() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}
 ,

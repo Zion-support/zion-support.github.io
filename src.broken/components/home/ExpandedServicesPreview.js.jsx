@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-;
+,
   return ()
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">"
       <div className="container mx-auto px-4">"
@@ -206,7 +206,7 @@ export default function Page() {
               Discover how our comprehensive tech solutions can drive your
               success
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link to="/expanded-services">
                 <Button"
                   size="lg"
@@ -230,6 +230,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"`

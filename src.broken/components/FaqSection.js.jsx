@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export function FaqSection() {
   return ()
     <div className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">"
@@ -45,6 +45,6 @@ export function FaqSection() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"

@@ -1,33 +1,33 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+import { motion, AnimatePresence } from 'framer-motion',
+import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
+import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services',
+import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services',
+import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas',
 
 export default function Revolutionary2027ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
   const allServices = [
     ...revolutionary2027AIServices,
     ...revolutionary2027ITServices,
     ...revolutionary2027MicroSaasServices
-  ];
+  ],
 
   // Dynamic category counts
-  const aiCount = allServices.filter(service => service.category.includes('AI')).length;
-  const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length;
-  const itCount = allServices.filter(service => service.category.includes('IT') || service.category.includes('Infrastructure')).length;
-  const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length;
-  const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
+  const aiCount = allServices.filter(service => service.category.includes('AI')).length,
+  const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length,
+  const itCount = allServices.filter(service => service.category.includes('IT') || service.category.includes('Infrastructure')).length,
+  const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length,
+  const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length,
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -36,7 +36,7 @@ export default function Revolutionary2027ServicesShowcase() {
     { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'holographic', name: 'Holographic', icon: '🎭', count: holographicCount }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -44,7 +44,7 @@ export default function Revolutionary2027ServicesShowcase() {
     { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
     { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
     { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name' },
@@ -52,33 +52,33 @@ export default function Revolutionary2027ServicesShowcase() {
     { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customers' },
     { id: 'launchDate', name: 'Launch Date' }
-  ];
+  ],
 
   const filteredServices = useMemo(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        if (selectedCategory === 'ai') return service.category.includes('AI');
-        if (selectedCategory === 'quantum') return service.category.includes('Quantum');
-        if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure');
-        if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health');
-        if (selectedCategory === 'holographic') return service.category.includes('Holographic');
-        return true;
-      });
+        if (selectedCategory === 'ai') return service.category.includes('AI'),
+        if (selectedCategory === 'quantum') return service.category.includes('Quantum'),
+        if (selectedCategory === 'it') return service.category.includes('IT') || service.category.includes('Infrastructure'),
+        if (selectedCategory === 'micro-saas') return service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health'),
+        if (selectedCategory === 'holographic') return service.category.includes('Holographic'),
+        return true,
+      }),
     }
 
     // Price range filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        if (selectedPriceRange === 'under-500') return price < 500;
-        if (selectedPriceRange === '500-2000') return price >= 500 && price < 2000;
-        if (selectedPriceRange === '2000-10000') return price >= 2000 && price < 10000;
-        if (selectedPriceRange === 'over-10000') return price >= 10000;
-        return true;
-      });
+        const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+        if (selectedPriceRange === 'under-500') return price < 500,
+        if (selectedPriceRange === '500-2000') return price >= 500 && price < 2000,
+        if (selectedPriceRange === '2000-10000') return price >= 2000 && price < 10000,
+        if (selectedPriceRange === 'over-10000') return price >= 10000,
+        return true,
+      }),
     }
 
     // Search filter
@@ -87,34 +87,33 @@ export default function Revolutionary2027ServicesShowcase() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
     // Sort
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':
-          return b.customers - a.customers;
+          return b.customers - a.customers,
         case 'launchDate':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-        default:
-          return a.name.localeCompare(b.name);
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return a.name.localeCompare(b.name)
       }
-    });
+    }),
 
-    return filtered;
-  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+    return filtered,
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
@@ -386,9 +385,9 @@ export default function Revolutionary2027ServicesShowcase() {
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
                 <Button 
                   onClick={() => {
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-                    setSelectedPriceRange('all');
+                    setSearchTerm(''),
+                    setSelectedCategory('all'),
+                    setSelectedPriceRange('all'),
                   }}
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white"
                 >
@@ -434,7 +433,7 @@ export default function Revolutionary2027ServicesShowcase() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300">
+              <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover: from-cyan-600 hover:to-blue-700 transform hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Your Transformation
               </Button>
@@ -447,5 +446,5 @@ export default function Revolutionary2027ServicesShowcase() {
         </div>
       </section>
     </UltraQuantumHolographicBackground>
-  );
+  )
 }

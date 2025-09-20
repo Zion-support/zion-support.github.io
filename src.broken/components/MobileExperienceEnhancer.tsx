@@ -1,47 +1,47 @@
 
 <<<<<<< HEAD
-    checkDevice();
-    window.addEventListener('resize', handleResize);
+    checkDevice(),
+    window.addEventListener('resize', handleResize),
             }
           } else if(gesture.direction === 'right') {
-        break;
+        break,
       case 'menu':
     // Add touch-action CSS for better touch handling
-    const style = document.createElement('style') ;
+    const style = document.createElement('style') ,
     style.textContent = `
       .mobile - device * {
-        touch-action: manipulation;
-        -webkit - tap - highlight - color: transparent;
+        touch-action: manipulation,
+        -webkit - tap - highlight - color: transparent
       }
 
       .mobile - device button,
       .mobile - device [] {
-        min - height: 44px;
-        min - width: 44px;
+        min - height: 44px,
+        min - width: 44px
       }
 
       .mobile - device input,
       .mobile - device select,
       .mobile - device textarea {
-        font - size: 16px;
+        font - size: 16px
       }
-    `;
+    `,
             {isMobile ? <Smartphone className="w-4 h-4"  /> : <Tablet className="w-4 h-4"  />}
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>
 =======
 
 export default function Page() {
- | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [showGestureGuide, setShowGestureGuide] = useState(false);
+ | null>(null),
+  const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number } | null>(null),
+  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]),
+  const [showMobileMenu, setShowMobileMenu] = useState(false),
+  const [showGestureGuide, setShowGestureGuide] = useState(false),
 
   // Detect device type and orientation
   useEffect(() => {
 
-      setIsMobile(isMobileDevice) ;
-      setIsTablet(isTabletDevice) ;
+      setIsMobile(isMobileDevice) ,
+      setIsTablet(isTabletDevice) ,
 
       // Set orientation
       if(window.innerHeight > window.innerWidth) {
@@ -54,29 +54,29 @@ export default function Page() {
     }} else {
 
           setDeviceOrientation('landscape')}
-      }, 100) };
-    checkDevice();'
-    window.addEventListener('resize', handleResize);'
-    window.addEventListener('orientationchange', handleOrientationChange);
+      }, 100) },
+    checkDevice(),'
+    window.addEventListener('resize', handleResize),'
+    window.addEventListener('orientationchange', handleOrientationChange),
 
     return () => {
 
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
+      window.removeEventListener('resize', handleResize),
+      window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ,
   // Touch gesture handling
   useEffect(() => {
-    if(!enabled || !enableSwipeNavigation) return;
+    if(!enabled || !enableSwipeNavigation) return,
 
     const handleTouchStart = (e: TouchEvent) => {
 
-      const touch = e.touches[0];      setTouchStart({
+      const touch = e.touches[0],      setTouchStart({
 
         x: touch.clientX,
         y: touch.clientY,
-        time: Date.now () ,
-      }) }};
+        time: Date.now () 
+      }) }},
 
-      setTouchEnd(touchEndData) ;
+      setTouchEnd(touchEndData) ,
 
       // Calculate gesture
 
@@ -87,13 +87,13 @@ export default function Page() {
 
           type: 'swipe',
           distance,
-          duration: deltaTime,
-        };
+          duration: deltaTime
+        },
 
         if(Math.abs(deltaX) > Math.abs(deltaY)) {
 
           // Horizontal swipe'
-          gesture.direction = deltaX > 0 ? 'right' : 'left';
+          gesture.direction = deltaX > 0 ? 'right' : 'left',
           
           // Handle horizontal navigation'
           if(gesture.direction === 'left') {
@@ -101,7 +101,7 @@ export default function Page() {
             // Swipe left - go forward
             if(window.history.length > 1) {
 
-              window.history.forward();
+              window.history.forward(),
             }'          } else if(gesture.direction === 'right') {
 
             // Swipe right - go back
@@ -111,7 +111,7 @@ export default function Page() {
         } else {
 
           // Vertical swipe'
-          gesture.direction = deltaY > 0 ? 'down' : 'up';
+          gesture.direction = deltaY > 0 ? 'down' : 'up',
           
           // Handle vertical gestures'
           if(gesture.direction === 'up' && distance > 100) {
@@ -123,51 +123,51 @@ export default function Page() {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}        }
 
         // Add to gesture history
-        setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]);
+        setGestureHistory(prev => [gesture, ...prev.slice(0, 9)]),
         
         // Log gesture for debugging'
         // console.log('Touch Gesture:', gesture)}
-    };
+    },
 
-    document.addEventListener('touchstart', handleTouchStart, { passive: false });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-    document.addEventListener('touchend', handleTouchEnd, { passive: false });
+    document.addEventListener('touchstart', handleTouchStart, { passive: false }),
+    document.addEventListener('touchmove', handleTouchMove, { passive: false }),
+    document.addEventListener('touchend', handleTouchEnd, { passive: false }),
 
     return () => {
 
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
-      document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]) ;
+      document.removeEventListener('touchstart', handleTouchStart),
+      document.removeEventListener('touchmove', handleTouchMove),
+      document.removeEventListener('touchend', handleTouchEnd)}}, [enabled, enableSwipeNavigation, touchStart]) ,
 
   // Enhanced mobile navigation
   
-        break;
+        break,
       case 'search':
         // Trigger search functionality'
         
         if(searchInput) {
 
           searchInput.focus()}
-        break;'      case 'menu':
-        setShowMobileMenu(!showMobileMenu);
-        break;
+        break,'      case 'menu':
+        setShowMobileMenu(!showMobileMenu),
+        break,
       case 'back':
         if(window.history.length > 1) {
 
           window.history.back()}
-        break;
+        break,
       case 'forward':
         if(window.history.length > 1) {
 
           window.history.forward()}
-        break}  }, [showMobileMenu]);
+        break}  }, [showMobileMenu]),
 
   // Mobile - specific optimizations
   useEffect(() => {
-    if(!enabled || !isMobile) return;
+    if(!enabled || !isMobile) return,
 
     // Add mobile-specific CSS classes'
-    document.documentElement.classList.add('mobile-device');
+    document.documentElement.classList.add('mobile-device'),
     
     // Optimize viewport for mobile'"
     
@@ -176,33 +176,33 @@ export default function Page() {
       viewport.setAttribute('content',width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
 
     // Add touch-action CSS for better touch handling'
-    const style = document.createElement('style');    style.textContent = `
+    const style = document.createElement('style'),    style.textContent = `
       .mobile-device * {
 
-        touch-action: manipulation;
+        touch-action: manipulation,
         -webkit-tap-highlight-color: transparent}
       
       .mobile-device button,"
       .mobile-device [] {
 
-        min-height: 44px;
+        min-height: 44px,
         min-width: 44px}
       
       .mobile-device input,
       .mobile-device select,
       .mobile-device textarea {
 
-        font-size: 16px}`    `;
-    document.head.appendChild(style) ;
+        font-size: 16px}`    `,
+    document.head.appendChild(style) ,
 
     return () => {
 
-      document.documentElement.classList.remove('mobile-device');
+      document.documentElement.classList.remove('mobile-device'),
       if(style.parentNode) {
 
         style.parentNode.removeChild(style)}
-    }}, [enabled, isMobile]) ;
-  if(!enabled) return null;
+    }}, [enabled, isMobile]) ,
+  if(!enabled) return null,
 
   return ()
     <>
@@ -412,9 +412,9 @@ export default function Page() {
         </motion.div>
       )}
     </>
-  )};
+  )},
 
-export default MobileExperienceEnhancer;
+export default MobileExperienceEnhancer,
 
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

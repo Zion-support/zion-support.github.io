@@ -1,5 +1,5 @@
-import 'dotenv/config';
-import { z } from 'zod';
+import 'dotenv/config',
+import { z } from 'zod',
 
 const ConfigSchema = z.object({
   SUPABASE_URL: z.string().url(),
@@ -19,13 +19,13 @@ const ConfigSchema = z.object({
     .optional()
     .transform((v) => (v ? v.toLowerCase() : 'false'))
     .transform((v) => v === '1' || v === 'true')
-});
+}),
 
-export type AppConfig = z.infer<typeof ConfigSchema>;
+export type AppConfig = z.infer<typeof ConfigSchema>,
 
-export const config: AppConfig = ConfigSchema.parse(process.env);
+export const config: AppConfig = ConfigSchema.parse(process.env),
 
 export const DEEP_LINKS = {
   talent: `${config.APP_BASE_URL}${config.DASHBOARD_DEEP_LINK_TALENT}`,
   client: `${config.APP_BASE_URL}${config.DASHBOARD_DEEP_LINK_CLIENT}`
-};
+},

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle import { motion  } from 'framer-motion';
+import React from 'react',
+import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -13,14 +13,14 @@ export default function Page() {
             title: "Best Practices",
             description: "Ensure code follows industry best practices and coding standards"
 
-    ];
+    ],
     const benefits = ["Reduce code review time by 80%",
         "Improve code quality and maintainability",
         "Detect security vulnerabilities early",
         "Ensure consistent coding standards",
         "Accelerate development cycles",
         "Reduce production bugs by 60%"
-    ];
+    ],
     const supportedLanguages = ["JavaScript / TypeScript",
         "Python",
         "Java",
@@ -31,7 +31,7 @@ export default function Page() {
         "Ruby",
         "Swift",
         "Kotlin"
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - zion - slate via - zion - slate - dark to - zion - slate -darker">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

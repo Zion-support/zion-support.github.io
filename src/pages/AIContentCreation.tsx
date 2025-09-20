@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  PenTool, 
+  PenTool,
   Brain, 
   Zap, 
   CheckCircle,
@@ -31,102 +31,70 @@ import {
   Target,
   Users,
   ArrowRight
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AIContentCreation() {
   const features = [
     {
-      icon: Type,
-      title: 'AI Text Generation',
-      description: 'Advanced language models for creating engaging, SEO-optimized content',
+      icon: Type,title: 'AI Text Generation',description: 'Advanced language models for creating engaging, SEO-optimized content',
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
-      icon: Image,
-      title: 'AI Image Creation',
-      description: 'Generate stunning visuals, graphics, and illustrations with AI',
+      icon: Image,title: 'AI Image Creation',description: 'Generate stunning visuals, graphics, and illustrations with AI',
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
-      icon: Video,
-      title: 'AI Video Production',
-      description: 'Create professional videos, animations, and multimedia content',
+      icon: Video,title: 'AI Video Production',description: 'Create professional videos, animations, and multimedia content',
       color: 'from-red-500 to-orange-500'
-    },
+    };
     {
-      icon: Music,
-      title: 'AI Audio Generation',
-      description: 'Generate background music, sound effects, and voiceovers',
+      icon: Music,title: 'AI Audio Generation',description: 'Generate background music, sound effects, and voiceovers',
       color: 'from-green-500 to-emerald-500'
-    },
+    };
     {
-      icon: Code,
-      title: 'AI Code Generation',
-      description: 'Automated code writing and technical documentation',
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: Code,title: 'AI Code Generation',description: 'Automated code writing and technical documentation',color: 'from-yellow-500 to-orange-500'
+    };
     {
-      icon: Palette,
-      title: 'AI Design Tools',
-      description: 'Intelligent design assistance and creative automation',
-      color: 'from-indigo-500 to-purple-500'
+      icon: Palette,title: 'AI Design Tools',description: 'Intelligent design assistance and creative automation',color: 'from-indigo-500 to-purple-500'
     }
   ];
-
   const benefits = [
-    'Increase content production by 10x',
-    'Reduce content creation costs by 70%',
-    'Improve SEO rankings and engagement',
-    'Maintain consistent brand voice',
-    'Scale content across multiple platforms',
-    '24/7 content generation capability'
-  ];
+    'Increase content production by 10xReduce content creation costs by 70%',
+    'Improve SEO rankings and engagementMaintain consistent brand voice',
+    'Scale content across multiple platforms24/7 content generation capability'
+  ],
 
   const useCases = [
     {
-      title: 'Marketing Content',
-      description: 'Generate blog posts, social media content, and marketing copy',
+      title: 'Marketing Content',description: 'Generate blog posts, social media content, and marketing copy',
       icon: Target
-    },
+    };
     {
-      title: 'Product Descriptions',
-      description: 'Create compelling product descriptions and e-commerce content',
-      icon: ShoppingCart
-    },
+      title: 'Product Descriptions',description: 'Create compelling product descriptions and e-commerce content',icon: ShoppingCart
+    };
     {
-      title: 'Technical Documentation',
-      description: 'Generate user manuals, API docs, and technical guides',
+      title: 'Technical Documentation',description: 'Generate user manuals, API docs, and technical guides',
       icon: FileText
-    },
+    };
     {
-      title: 'Creative Writing',
-      description: 'Novels, scripts, poetry, and creative storytelling',
+      title: 'Creative Writing',description: 'Novels, scripts, poetry, and creative storytelling',
       icon: PenTool
     }
   ];
-
   const contentTypes = [
     {
-      name: 'Blog Posts & Articles',
-      description: 'SEO-optimized content for websites and blogs',
-      examples: ['How-to guides', 'Industry insights', 'Product reviews']
+      name: 'Blog Posts & Articles',description: 'SEO-optimized content for websites and blogs',examples: ['How-to guidesIndustry insights', 'Product reviews']
     },
     {
-      name: 'Social Media Content',
-      description: 'Engaging posts for all social platforms',
-      examples: ['Captions', 'Hashtag suggestions', 'Visual content']
+      name: 'Social Media Content',description: 'Engaging posts for all social platforms',examples: ['CaptionsHashtag suggestions', 'Visual content']
     },
     {
-      name: 'Email Marketing',
-      description: 'Personalized email campaigns and newsletters',
-      examples: ['Subject lines', 'Email body', 'Call-to-actions']
+      name: 'Email Marketing',description: 'Personalized email campaigns and newsletters',examples: ['Subject linesEmail body', 'Call-to-actions']
     },
     {
-      name: 'Video Scripts',
-      description: 'Scripts for YouTube, TikTok, and marketing videos',
-      examples: ['Product demos', 'Educational content', 'Brand stories']
+      name: 'Video Scripts',description: 'Scripts for YouTube, TikTok, and marketing videos',
+      examples: ['Product demosEducational content', 'Brand stories']
     }
-  ];
+  ],
 
   return (
     <>
@@ -380,7 +348,7 @@ export default function AIContentCreation() {
                 Content Creation Use Cases
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform adapts to various content needs and industries, 
+                Our AI platform adapts to various content needs and industries;
                 providing tailored solutions for different content strategies.
               </p>
             </motion.div>
@@ -445,7 +413,7 @@ export default function AIContentCreation() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
                 >
                   Schedule Demo
                 </motion.button>
@@ -455,5 +423,5 @@ export default function AIContentCreation() {
         </section>
       </div>
     </>
-  );
+  )
 }

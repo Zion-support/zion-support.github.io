@@ -1,5 +1,5 @@
-import Head from 'next/head.ts';
-import Link from 'next/link';
+import Head from 'next/head.ts',
+import Link from 'next/link',
 export default function LandingPageGenerator() {,
   return (,
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">,
@@ -22,11 +22,10 @@ export default function LandingPageGenerator() {,
           <li>Netlify-ready static export</li>,
         </ul>,
         <div className="mt-8 flex gap-3">,
-          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: b g-white/10">Back to Services</a></Link>;
-          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white">Get Started</a></Link>;
-        </div>;
-      </main>;
-    </div>;
-  ),
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: b g-white/10">Back to Services</a></Link>,
+          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white">Get Started</a></Link>,
+        </div>,
+      </main>,
+    </div>)
 }
 ,

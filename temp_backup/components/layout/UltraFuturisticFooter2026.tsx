@@ -1,18 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
   Star, Mail, Phone, MapPin, 
   Linkedin, Github, Twitter, Facebook, Instagram, Youtube,
   Shield, Zap, Brain, Atom, Building, Cpu, ChevronRight, ArrowRight
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -147,7 +147,7 @@ const serviceCategories = [
       { name: 'Energy & Utilities Solutions', href: '/energy-utilities-solutions' }
     ]
   }
-];
+],
 
 const quickLinks = [
   { name: 'About Us', href: '/about' },
@@ -163,7 +163,7 @@ const quickLinks = [
   { name: 'Documentation', href: '/docs' },
   { name: 'Support', href: '/support' },
   { name: 'Contact', href: '/contact' }
-];
+],
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
@@ -172,7 +172,7 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
-];
+],
 
 const UltraFuturisticFooter2026: React.FC = () => {
   return (
@@ -180,7 +180,7 @@ const UltraFuturisticFooter2026: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2026</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticFooter2026;
+export default UltraFuturisticFooter2026,

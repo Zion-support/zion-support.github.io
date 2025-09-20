@@ -3,12 +3,12 @@
 export function PartnerDashboard() {,
   // Placeholder data - would come from API in real implementation,
   const stats = {,
-    totalReferrals: 42;
-    pendingReferrals: 8;
-    completedReferrals: 34;
-    conversionRate: 18.5;
-    totalRevenue: 850.00;
-    pendingRevenue: 200.00,};
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00},
   return (,
     <div className="space-y-6">,
       {/* Stats Overview */}
@@ -19,7 +19,7 @@ export function PartnerDashboard() {,
             <Users className="h-4 w-4 text-zion-cyan" />,
           </CardHeader>,
           <CardContent>,
-            <div className="text-2xl font-bold">{stats.totalReferrals,}</div>,
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>,
             <p className="text-xs text-zion-slate-light">,
             </p>,
           </CardContent>,
@@ -81,7 +81,6 @@ export function PartnerDashboard() {,
           </div>,
         </CardContent>,
       </Card>,
-    </div>,
-  );
+    </div>),
 }
 ,

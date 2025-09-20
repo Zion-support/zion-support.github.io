@@ -1,17 +1,16 @@
 export interface Real2027Q2Addition {,
-  "id": string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[],}
+  "id": string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[]}
 export const "real2027Q2Additions": Real2027Q2Addition[] = [{,
-    id: 'q2-2027-addition-1';
-    "name": 'Q2 2027 Addition 1';
-    "tagline": 'Second quarter 2027 addition';
-    "price": '$1299';
+    id: 'q2-2027-addition-1',
+    "name": 'Q2 2027 Addition 1',
+    "tagline": 'Second quarter 2027 addition',
+    "price": '$1299',
     "features": [,
-      'Q2 2027 featuresMid-year innovations';
-      'Advanced solutions',
+      'Q2 2027 featuresMid-year innovationsAdvanced solutions'
     ]}
-];
-export interface Real2027Q2Addition { id: string, name: string, tagline: string, price: string, features: string[],} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 featuresMid-year innovations','Advanced solutions']}];
+],
+export interface Real2027Q2Addition { id: string, name: string, tagline: string, price: string, features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 featuresMid-year innovationsAdvanced solutions']}],

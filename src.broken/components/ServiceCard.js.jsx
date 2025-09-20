@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion  } from 'framer-motion';
+import React from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -13,7 +13,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };
+    },
     const iconVariants = {
 
   hidden: { scale: 0.8,
@@ -33,14 +33,14 @@ export default function Page() {
         hover: {
 
             scale: 1.2,
-            rotate[0, -10, 10, 0],;
+            rotate[0, -10, 10, 0],
             transition: {
 
                 duration: 0.6,"
                 ease: "easeInOut"
             }
         }
-    };
+    },
     const featureVariants = {
 
   hover: {
@@ -53,7 +53,7 @@ export default function Page() {
 
 }
         }
-    };
+    },
     const badgeVariants = {
 
   hidden: { scale: 0,
@@ -70,7 +70,7 @@ export default function Page() {
                 ease: "backOut"
             }
         }
-    };"
+    },"
     return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">
       {/* Enhanced Popular Badge */}"
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
@@ -113,7 +113,7 @@ export default function Page() {
         {/* Enhanced Icon with Floating Animation */}"
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
 
-  { y[0, -5,;
+  { y[0, -5,
   0] 
 
 }} transition = {
@@ -168,7 +168,7 @@ export default function Page() {
               <span>Learn More</span>"
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
 
-  { x[0, 5,;
+  { x[0, 5,
   0] 
 
 }} transition = {
@@ -199,6 +199,6 @@ export default function Page() {
         <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-zion-purple/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-200"/>"
         <div className="absolute top-1/2 left-2 w-1 h-1 bg-zion-blue/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-float transition-all duration-500 delay-400"/>
       </div>
-    </motion.div>)};
-export default ServiceCard;
+    </motion.div>)},
+export default ServiceCard,
 '"

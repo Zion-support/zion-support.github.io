@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  DollarSign, 
+  DollarSign,
   TrendingUp, 
   Shield, 
   BarChart3, 
@@ -13,72 +13,44 @@ import {
   Star,
   Calculator,
   PieChart
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 const FinancialSolutions: React.FC = () => {
   const solutions = [
     {
-      title: 'AI Financial Analytics',
-      description: 'Advanced AI-powered analytics for comprehensive financial insights and decision-making.',
-      icon: BarChart3,
-      features: ['Real-time analytics', 'Predictive modeling', 'Risk assessment', 'Performance tracking']
+      title: 'AI Financial Analytics',description: 'Advanced AI-powered analytics for comprehensive financial insights and decision-making.',icon: BarChart3,features: ['Real-time analyticsPredictive modeling', 'Risk assessmentPerformance tracking']
     },
     {
-      title: 'AI Financial Risk Management',
-      description: 'Intelligent risk assessment and management systems for financial institutions.',
-      icon: Shield,
-      features: ['Risk modeling', 'Compliance monitoring', 'Fraud detection', 'Portfolio optimization']
+      title: 'AI Financial Risk Management',description: 'Intelligent risk assessment and management systems for financial institutions.',icon: Shield,features: ['Risk modelingCompliance monitoring', 'Fraud detectionPortfolio optimization']
     },
     {
-      title: 'AI Financial Trading',
-      description: 'AI-driven trading algorithms and market analysis for optimal investment decisions.',
-      icon: TrendingUp,
-      features: ['Algorithmic trading', 'Market analysis', 'Portfolio management', 'Risk mitigation']
+      title: 'AI Financial Trading',description: 'AI-driven trading algorithms and market analysis for optimal investment decisions.',icon: TrendingUp,features: ['Algorithmic tradingMarket analysis', 'Portfolio managementRisk mitigation']
     },
     {
-      title: 'FinOps Advisor',
-      description: 'Cloud financial operations optimization for cost management and efficiency.',
-      icon: Calculator,
-      features: ['Cost optimization', 'Resource management', 'Budget planning', 'ROI analysis']
+      title: 'FinOps Advisor',description: 'Cloud financial operations optimization for cost management and efficiency.',icon: Calculator,features: ['Cost optimizationResource management', 'Budget planningROI analysis']
     },
     {
-      title: 'Cloud FinOps Optimizer',
-      description: 'Comprehensive cloud financial operations management and optimization.',
-      icon: Cloud,
-      features: ['Cloud cost management', 'Resource optimization', 'Budget tracking', 'Efficiency metrics']
+      title: 'Cloud FinOps Optimizer',description: 'Comprehensive cloud financial operations management and optimization.',icon: Cloud,features: ['Cloud cost managementResource optimization', 'Budget trackingEfficiency metrics']
     },
     {
-      title: 'AI Compliance Assistant',
-      description: 'Automated compliance monitoring and reporting for financial regulations.',
-      icon: Lock,
-      features: ['Regulatory compliance', 'Automated reporting', 'Audit trails', 'Risk monitoring']
+      title: 'AI Compliance Assistant',description: 'Automated compliance monitoring and reporting for financial regulations.',icon: Lock,features: ['Regulatory complianceAutomated reporting', 'Audit trailsRisk monitoring']
     }
-  ];
+  ],
 
   const benefits = [
     {
-      title: 'Risk Mitigation',
-      description: 'Advanced AI algorithms identify and mitigate financial risks',
-      icon: Shield
-    },
+      title: 'Risk Mitigation',description: 'Advanced AI algorithms identify and mitigate financial risks',icon: Shield
+    };
     {
-      title: 'Cost Optimization',
-      description: 'Intelligent systems optimize financial operations and reduce costs',
-      icon: TrendingUp
-    },
+      title: 'Cost Optimization',description: 'Intelligent systems optimize financial operations and reduce costs',icon: TrendingUp
+    };
     {
-      title: 'Compliance Assurance',
-      description: 'Automated compliance monitoring ensures regulatory adherence',
-      icon: Lock
-    },
+      title: 'Compliance Assurance',description: 'Automated compliance monitoring ensures regulatory adherence',icon: Lock
+    };
     {
-      title: 'Data-Driven Decisions',
-      description: 'AI-powered insights enable better financial decision-making',
-      icon: Brain
+      title: 'Data-Driven Decisions',description: 'AI-powered insights enable better financial decision-making',icon: Brain
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
@@ -209,7 +181,7 @@ const FinancialSolutions: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss how our financial solutions can optimize your operations and drive growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:scale-105"
@@ -226,7 +198,6 @@ const FinancialSolutions: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  );
+  )
 };
-
 export default FinancialSolutions;

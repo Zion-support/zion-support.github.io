@@ -1,32 +1,32 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, 
   ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award
-} from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
-import UltraQuantumHolographicBackgroundV4 from '../components/ui/UltraQuantumHolographicBackgroundV4';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+} from 'lucide-react',
+import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4',
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4',
+import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4',
+import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4',
+import UltraQuantumHolographicBackgroundV4 from '../components/ui/UltraQuantumHolographicBackgroundV4',
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
 
 export default function Revolutionary2026ServicesShowcaseV4() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all new services
   const allServices = [
@@ -34,7 +34,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     ...emergingTech2026ServicesV4,
     ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4
-  ];
+  ],
 
   // Dynamic category counts
   const aiCount = allServices.filter(service => 
@@ -48,14 +48,14 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     service.category?.includes('AI Healthcare') || 
     service.category?.includes('AI Content') ||
     service.category?.includes('AI Emotional')
-  ).length;
+  ).length,
 
   const quantumCount = allServices.filter(service => 
     service.category?.includes('Quantum') || 
     service.category.includes('Space') || 
     service.category?.includes('Quantum Space') ||
     service.category?.includes('Quantum Internet')
-  ).length;
+  ).length,
 
   const enterpriseCount = allServices.filter(service => 
     service.category?.includes('Enterprise') || 
@@ -63,21 +63,21 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     service.category?.includes('Infrastructure') ||
     service.category?.includes('Security') ||
     service.category?.includes('Network')
-  ).length;
+  ).length,
 
   const microSaasCount = allServices.filter(service => 
     service.category?.includes('Micro SaaS') ||
     service.category?.includes('AI Content Marketing') ||
     service.category?.includes('AI Customer Success') ||
     service.category?.includes('AI Supply Chain')
-  ).length;
+  ).length,
 
   const emergingCount = allServices.filter(service => 
     service.category?.includes('Holographic') || 
     service.category?.includes('Autonomous') ||
     service.category?.includes('Brain-Computer') ||
     service.category?.includes('Space Technology')
-  ).length;
+  ).length,
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -86,7 +86,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -94,7 +94,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'medium', name: '$500 - $2,000', range: '$500 - $2,000' },
     { id: 'high', name: '$2,000+', range: '$2,000+' },
     { id: 'custom', name: 'Custom Pricing', range: 'Custom' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name', icon: '🔤' },
@@ -102,49 +102,47 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'popularity', name: 'Popularity', icon: '⭐' },
     { id: 'rating', name: 'Rating', icon: '🏆' },
     { id: 'newest', name: 'Newest', icon: '🆕' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = allServices;
+    let filtered = allServices,
 
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-            return service.category?.includes('AI') || service.category?.includes('Machine Learning');
+            return service.category?.includes('AI') || service.category?.includes('Machine Learning'),
           case 'quantum':
-            return service.category?.includes('Quantum') || service.category?.includes('Space');
+            return service.category?.includes('Quantum') || service.category?.includes('Space'),
           case 'enterprise':
-            return service.category?.includes('Enterprise') || service.category?.includes('IT') || service.category?.includes('Infrastructure');
+            return service.category?.includes('Enterprise') || service.category?.includes('IT') || service.category?.includes('Infrastructure'),
           case 'micro-saas':
-            return service.category?.includes('Micro SaaS') || service.category?.includes('AI Content') || service.category?.includes('AI Customer');
+            return service.category?.includes('Micro SaaS') || service.category?.includes('AI Content') || service.category?.includes('AI Customer'),
           case 'emerging':
-            return service.category?.includes('Holographic') || service.category?.includes('Autonomous') || service.category?.includes('Brain-Computer');
-          default:
-            return true;
+            return service.category?.includes('Holographic') || service.category?.includes('Autonomous') || service.category?.includes('Brain-Computer'),
+          default: return true
         }
-      });
+      }),
     }
 
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = service.price;
+        const price = service.price,
         switch (selectedPriceRange) {
           case 'low':
-            return price.includes('$') && parseInt(price.replace(/[^0-9]/g, '')) < 500;
+            return price.includes('$') && parseInt(price.replace(/[^0-9]/g, '')) < 500,
           case 'medium':
-            return price.includes('$') && (parseInt(price.replace(/[^0-9]/g, '')) >= 500 && parseInt(price.replace(/[^0-9]/g, '')) <= 2000);
+            return price.includes('$') && (parseInt(price.replace(/[^0-9]/g, '')) >= 500 && parseInt(price.replace(/[^0-9]/g, '')) <= 2000),
           case 'high':
-            return price.includes('$') && parseInt(price.replace(/[^0-9]/g, '')) > 2000;
+            return price.includes('$') && parseInt(price.replace(/[^0-9]/g, '')) > 2000,
           case 'custom':
-            return price.includes('Custom') || price.includes('custom');
-          default:
-            return true;
+            return price.includes('Custom') || price.includes('custom'),
+          default: return true
         }
-      });
+      }),
     }
 
     // Search filter
@@ -153,33 +151,33 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      ),
     }
 
     // Sort
     switch (sortBy) {
       case 'price':
         filtered.sort((a, b) => {
-          const aPrice = a.price.includes('Custom') ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
-          const bPrice = b.price.includes('Custom') ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
-          return aPrice - bPrice;
-        });
-        break;
+          const aPrice = a.price.includes('Custom') ? 999999 : parseInt(a.price.replace(/[^0-9]/g, '')),
+          const bPrice = b.price.includes('Custom') ? 999999 : parseInt(b.price.replace(/[^0-9]/g, '')),
+          return aPrice - bPrice,
+        }),
+        break,
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
+        break,
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
+        filtered.sort((a, b) => b.rating - a.rating),
+        break,
       case 'newest':
-        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime());
-        break;
+        filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()),
+        break,
       default:
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        filtered.sort((a, b) => a.name.localeCompare(b.name)),
     }
 
-    return filtered;
-  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
+    return filtered,
+  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -189,7 +187,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -200,7 +198,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         duration: 0.5
       }
     }
-  };
+  },
 
 const revolutionary-2026-services-showcase-v4: React.FC = () => {
   return (
@@ -217,7 +215,7 @@ const revolutionary-2026-services-showcase-v4: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default revolutionary-2026-services-showcase-v4;
+export default revolutionary-2026-services-showcase-v4,

@@ -1,67 +1,67 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
   {
     id: 5,
     title: "Emergency Response System",
     description: "Integrated emergency management and response coordination platform.",
     icon: Activity,
-    features[;
+    features[,
       "Real - time monitoring",
       "Alert systems",
       "Resource coordination",
       "Communication tools"
-    ],;
+    ],
     price: "From $70,000",
     timeline: "16 - 28 weeks",
     category: "Emergency Management",
-    compliance["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"];
-  },;
+    compliance["FISMA", "FedRAMP", "Emergency Protocols", "Interoperability"],
+  },
   {
     id: 6,
     title: "Regulatory Compliance Platform",
     description: "Automated compliance monitoring and reporting for government regulations.",
     icon: FileText,
-    features[;
+    features[,
       "Compliance tracking",
       "Automated reporting",
       "Audit trails",
       "Policy management"
-    ],;
+    ],
     price: "From $45,000",
     timeline: "12 - 20 weeks",
     category: "Compliance",
-    compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"];
+    compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"],
   }
-];
+],
 
 const complianceStandards = [{
     name: "FISMA",
     description: "Federal Information Security Management Act",
     icon: Shield,
-    requirements["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"];
-  },;
+    requirements["Risk Assessment", "Security Controls", "Continuous Monitoring", "Incident Response"],
+  },
   {
     name: "FedRAMP",
     description: "Federal Risk and Authorization Management Program",
     icon: Lock,
-    requirements["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"];
-  },;
+    requirements["Cloud Security", "Authorization Process", "Continuous Monitoring", "Security Assessment"],
+  },
   {
     name: "Section 508",
     description: "Accessibility requirements for federal electronic and information technology",
     icon: Users,
-    requirements["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"];
-  },;
+    requirements["Web Accessibility", "Document Accessibility", "Software Accessibility", "Testing & Validation"],
+  },
   {
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
-    requirements["Identify", "Protect", "Detect", "Respond", "Recover"];
+    requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
   }
-];
+],
 
 const successStories = [{
     id: 1,
@@ -90,7 +90,7 @@ const successStories = [{
     results: "40% faster processing, 70% cost reduction, improved user experience",
     logo: "CMS"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -120,16 +120,16 @@ const processSteps = [{
     icon: CheckCircle,
     duration: "2 - 4 weeks"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Citizen Services', 'Security', 'Analytics', 'System Modernization', 'Emergency Management', 'Compliance'];
+  const categories = ['AllCitizen Services', 'SecurityAnalytics', 'System ModernizationEmergency Management', 'Compliance'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? governmentSolutions
-    : governmentSolutions.filter(solution => solution.category === selectedCategory) ;
+    : governmentSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -199,10 +199,10 @@ const processSteps = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Compliance Standards */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -257,13 +257,13 @@ const processSteps = [{
                       <span>{req}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -319,13 +319,13 @@ const processSteps = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -425,7 +425,7 @@ const processSteps = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -496,13 +496,13 @@ const processSteps = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

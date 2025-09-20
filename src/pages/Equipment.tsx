@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
+import { Link } from "react-router-dom";
 import { 
-  Server, 
+  Server,
   Search, 
   Filter, 
   Grid, 
@@ -463,240 +463,134 @@ import {
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Equipment() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedCondition, setSelectedCondition] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedEquipment, setExpandedEquipment] = useState<string | null>(null);
-
   const categories = [
-    { id: 'all', name: 'All Categories', count: 38 },
-    { id: 'servers', name: 'Servers & Storage', count: 12 },
-    { id: 'networking', name: 'Networking', count: 8 },
-    { id: 'workstations', name: 'Workstations', count: 6 },
-    { id: 'peripherals', name: 'Peripherals', count: 5 },
-    { id: 'mobile', name: 'Mobile Devices', count: 4 },
+    { id: 'all', name: 'All Categories', count: 38 };
+    { id: 'servers', name: 'Servers & Storage', count: 12 };
+    { id: 'networking', name: 'Networking', count: 8 };
+    { id: 'workstations', name: 'Workstations', count: 6 };
+    { id: 'peripherals', name: 'Peripherals', count: 5 };
+    { id: 'mobile', name: 'Mobile Devices', count: 4 };
     { id: 'specialized', name: 'Specialized Equipment', count: 3 }
   ];
-
   const conditions = [
-    { id: 'all', name: 'All Conditions', count: 38 },
-    { id: 'new', name: 'New', count: 15 },
-    { id: 'refurbished', name: 'Refurbished', count: 12 },
-    { id: 'used', name: 'Used - Excellent', count: 8 },
+    { id: 'all', name: 'All Conditions', count: 38 };
+    { id: 'new', name: 'New', count: 15 };
+    { id: 'refurbished', name: 'Refurbished', count: 12 };
+    { id: 'used', name: 'Used - Excellent', count: 8 };
     { id: 'good', name: 'Used - Good', count: 3 }
   ];
-
   const equipmentInventory = [
     // Servers & Storage
     {
-      id: 'dell-poweredge-r750',
-      name: 'Dell PowerEdge R750 Server',
-      category: 'servers',
-      condition: 'new',
-      icon: Server,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'High-performance dual-socket server with enterprise-grade reliability and scalability.',
-      specs: {
+      id: 'dell-poweredge-r750',name: 'Dell PowerEdge R750 Server',category: 'servers',condition: 'new',icon: Server,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'High-performance dual-socket server with enterprise-grade reliability and scalability.',specs: {
         processor: '2x Intel Xeon Silver 4314 (16 cores, 32 threads)',
-        memory: '128GB DDR4 ECC Registered',
-        storage: '4x 1.92TB SSD + 2x 4TB HDD',
-        networking: '4x 1GbE + 2x 10GbE',
-        power: '750W Platinum PSU'
-      },
-      features: ['Redundant Power Supplies', 'iDRAC9 Management', 'Hot-swappable Drives', 'RAID Support', 'Enterprise Warranty'],
+        memory: '128GB DDR4 ECC Registered',storage: '4x 1.92TB SSD + 2x 4TB HDD',networking: '4x 1GbE + 2x 10GbE',power: '750W Platinum PSU'
+      };
+      features: ['Redundant Power SuppliesiDRAC9 Management', 'Hot-swappable DrivesRAID Support', 'Enterprise Warranty'],
       price: '$8,499',
       originalPrice: '$12,999',
-      discount: '35%',
-      availability: 'In Stock',
-      location: 'Austin, TX',
-      warranty: '3 Years',
-      rating: 4.8,
-      reviews: 42,
-      featured: true,
-      tags: ['Server', 'Enterprise', 'High Performance', 'Scalable', 'Reliable']
+      discount: '35%',availability: 'In Stock',location: 'Austin, TX',
+      warranty: '3 Years',rating: 4.8,reviews: 42,featured: true,tags: ['ServerEnterprise', 'High PerformanceScalable', 'Reliable']
     },
     {
-      id: 'hp-proliant-dl380',
-      name: 'HP ProLiant DL380 Gen10 Plus',
-      category: 'servers',
-      condition: 'refurbished',
-      icon: Server,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'Refurbished enterprise server with proven reliability and comprehensive support.',
-      specs: {
+      id: 'hp-proliant-dl380',name: 'HP ProLiant DL380 Gen10 Plus',category: 'servers',condition: 'refurbished',icon: Server,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Refurbished enterprise server with proven reliability and comprehensive support.',specs: {
         processor: '2x Intel Xeon Gold 6338 (32 cores, 64 threads)',
-        memory: '256GB DDR4 ECC Registered',
-        storage: '8x 900GB SAS HDD + 2x 480GB SSD',
-        networking: '4x 1GbE + 2x 25GbE',
-        power: '800W Platinum PSU'
-      },
-      features: ['HP iLO Advanced', 'Smart Array Controller', 'Flexible Storage', 'Energy Efficient', 'Certified Refurbished'],
+        memory: '256GB DDR4 ECC Registered',storage: '8x 900GB SAS HDD + 2x 480GB SSD',networking: '4x 1GbE + 2x 25GbE',power: '800W Platinum PSU'
+      };
+      features: ['HP iLO AdvancedSmart Array Controller', 'Flexible StorageEnergy Efficient', 'Certified Refurbished'],
       price: '$6,299',
       originalPrice: '$15,999',
-      discount: '61%',
-      availability: 'In Stock',
-      location: 'Dallas, TX',
-      warranty: '1 Year',
-      rating: 4.6,
-      reviews: 28,
-      featured: false,
-      tags: ['Server', 'Refurbished', 'Enterprise', 'High Memory', 'Cost Effective']
+      discount: '61%',availability: 'In Stock',location: 'Dallas, TX',
+      warranty: '1 Year',rating: 4.6,reviews: 28,featured: false,tags: ['ServerRefurbished', 'EnterpriseHigh Memory', 'Cost Effective']
     },
     // Networking
     {
-      id: 'cisco-catalyst-9300',
-      name: 'Cisco Catalyst 9300-48P Switch',
-      category: 'networking',
-      condition: 'new',
-      icon: Network,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'Next-generation enterprise switch with PoE+ support and advanced security features.',
-      specs: {
-        ports: '48x PoE+ Gigabit + 4x SFP+',
-        poe: '370W PoE+ Budget',
-        switching: '176 Gbps',
-        forwarding: '130 Mpps',
-        power: 'AC Power Supply'
-      },
-      features: ['PoE+ Support', 'Cisco DNA Ready', 'Advanced Security', 'Stackable', 'Energy Efficient'],
+      id: 'cisco-catalyst-9300',name: 'Cisco Catalyst 9300-48P Switch',category: 'networking',condition: 'new',icon: Network,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Next-generation enterprise switch with PoE+ support and advanced security features.',specs: {
+        ports: '48x PoE+ Gigabit + 4x SFP+',poe: '370W PoE+ Budget',switching: '176 Gbps',forwarding: '130 Mpps',power: 'AC Power Supply'
+      };
+      features: ['PoE+ SupportCisco DNA Ready', 'Advanced SecurityStackable', 'Energy Efficient'],
       price: '$4,999',
       originalPrice: '$7,499',
-      discount: '33%',
-      availability: 'In Stock',
-      location: 'San Francisco, CA',
-      warranty: 'Lifetime',
-      rating: 4.9,
-      reviews: 67,
-      featured: true,
-      tags: ['Switch', 'PoE+', 'Enterprise', 'Cisco', 'High Performance']
+      discount: '33%',availability: 'In Stock',location: 'San Francisco, CA',
+      warranty: 'Lifetime',rating: 4.9,reviews: 67,featured: true,tags: ['SwitchPoE+', 'EnterpriseCisco', 'High Performance']
     },
     // Workstations
     {
-      id: 'dell-precision-5820',
-      name: 'Dell Precision 5820 Workstation',
-      category: 'workstations',
-      condition: 'new',
-      icon: Cpu,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'Professional workstation designed for demanding applications and creative workflows.',
-      specs: {
+      id: 'dell-precision-5820',name: 'Dell Precision 5820 Workstation',category: 'workstations',condition: 'new',icon: Cpu,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Professional workstation designed for demanding applications and creative workflows.',specs: {
         processor: 'Intel Xeon W-3335 (12 cores, 24 threads)',
-        memory: '64GB DDR4 ECC',
-        graphics: 'NVIDIA RTX A4000 (16GB)',
-        storage: '1TB NVMe SSD + 2TB HDD',
-        power: '750W 80+ Gold'
-      },
-      features: ['ISV Certified', 'ECC Memory', 'Professional Graphics', 'Fast Storage', 'Expandable'],
+        memory: '64GB DDR4 ECC',graphics: 'NVIDIA RTX A4000 (16GB)',storage: '1TB NVMe SSD + 2TB HDD',power: '750W 80+ Gold'
+      };
+      features: ['ISV CertifiedECC Memory', 'Professional GraphicsFast Storage', 'Expandable'],
       price: '$3,299',
       originalPrice: '$4,999',
-      discount: '34%',
-      availability: 'In Stock',
-      location: 'Seattle, WA',
-      warranty: '3 Years',
-      rating: 4.7,
-      reviews: 35,
-      featured: false,
-      tags: ['Workstation', 'Professional', 'Graphics', 'Performance', 'Reliable']
+      discount: '34%',availability: 'In Stock',location: 'Seattle, WA',
+      warranty: '3 Years',rating: 4.7,reviews: 35,featured: false,tags: ['WorkstationProfessional', 'GraphicsPerformance', 'Reliable']
     },
     // Peripherals
     {
-      id: 'dell-ultrasharp-u2720q',
-      name: 'Dell UltraSharp U2720Q Monitor',
-      category: 'peripherals',
-      condition: 'refurbished',
-      icon: Monitor,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: '27-inch 4K monitor with exceptional color accuracy and connectivity options.',
-      specs: {
-        resolution: '3840 x 2160 (4K UHD)',
-        panel: 'IPS',
-        color: '99% sRGB, 95% DCI-P3',
+      id: 'dell-ultrasharp-u2720q',name: 'Dell UltraSharp U2720Q Monitor',category: 'peripherals',condition: 'refurbished',icon: Monitor,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: '27-inch 4K monitor with exceptional color accuracy and connectivity options.',specs: {
+        resolution: '3840 x 2160 (4K UHD)',panel: 'IPS',color: '99% sRGB, 95% DCI-P3',
         ports: 'HDMI, DisplayPort, USB-C',
         response: '5ms'
-      },
-      features: ['4K Resolution', 'Color Accurate', 'USB-C Hub', 'VESA Mount', 'Height Adjustable'],
-      price: '$399',
-      originalPrice: '$699',
-      discount: '43%',
-      availability: 'In Stock',
-      location: 'Chicago, IL',
-      warranty: '1 Year',
-      rating: 4.8,
-      reviews: 89,
-      featured: false,
-      tags: ['Monitor', '4K', 'Color Accurate', 'Professional', 'USB-C']
+      };
+      features: ['4K ResolutionColor Accurate', 'USB-C HubVESA Mount', 'Height Adjustable'],
+      price: '$399',originalPrice: '$699',discount: '43%',availability: 'In Stock',location: 'Chicago, IL',
+      warranty: '1 Year',rating: 4.8,reviews: 89,featured: false,tags: ['Monitor4K', 'Color AccurateProfessional', 'USB-C']
     },
     // Mobile Devices
     {
-      id: 'dell-latitude-5520',
-      name: 'Dell Latitude 5520 Laptop',
-      category: 'mobile',
-      condition: 'refurbished',
-      icon: Laptop,
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',
-      description: 'Business laptop with enterprise security features and long battery life.',
-      specs: {
+      id: 'dell-latitude-5520',name: 'Dell Latitude 5520 Laptop',category: 'mobile',condition: 'refurbished',icon: Laptop,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Business laptop with enterprise security features and long battery life.',specs: {
         processor: 'Intel Core i7-1185G7 (4 cores, 8 threads)',
-        memory: '16GB DDR4',
-        storage: '512GB NVMe SSD',
-        display: '15.6" FHD (1920x1080)',
-        battery: '68Whr (up to 12 hours)'
-      },
-      features: ['Enterprise Security', 'Long Battery Life', 'Fast Performance', 'Durable Design', 'Windows 11 Pro'],
-      price: '$799',
-      originalPrice: '$1,499',
-      discount: '47%',
-      availability: 'In Stock',
-      location: 'New York, NY',
-      warranty: '1 Year',
-      rating: 4.5,
-      reviews: 56,
-      featured: false,
-      tags: ['Laptop', 'Business', 'Security', 'Long Battery', 'Windows 11']
+        memory: '16GB DDR4',storage: '512GB NVMe SSD',display: '15.6" FHD (1920x1080)',battery: '68Whr (up to 12 hours)'
+      };
+      features: ['Enterprise SecurityLong Battery Life', 'Fast PerformanceDurable Design', 'Windows 11 Pro'],
+      price: '$799',originalPrice: '$1,499',
+      discount: '47%',availability: 'In Stock',location: 'New York, NY',
+      warranty: '1 Year',rating: 4.5,reviews: 56,featured: false,tags: ['LaptopBusiness', 'SecurityLong Battery', 'Windows 11']
     }
-  ];
+  ],
 
   const toggleEquipmentExpansion = (equipmentId: string) => {
-    setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId);
+    setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId)
   };
-
   const filteredEquipment = equipmentInventory.filter(equipment => {
-    if (selectedCategory !== 'all' && equipment.category !== selectedCategory) return false;
-    if (selectedCondition !== 'all' && equipment.condition !== selectedCondition) return false;
+    if (selectedCategory !== 'all' && equipment.category !== selectedCategory) return false,
+    if (selectedCondition !== 'all' && equipment.condition !== selectedCondition) return false,
     if (searchQuery) {
       return equipment.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
              equipment.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-             equipment.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+             equipment.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     }
-    return true;
-  });
+    return true,
+  }),
 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'servers': return 'bg-purple-500/20 text-purple-400';
-      case 'networking': return 'bg-blue-500/20 text-blue-400';
-      case 'workstations': return 'bg-green-500/20 text-green-400';
-      case 'peripherals': return 'bg-orange-500/20 text-orange-400';
-      case 'mobile': return 'bg-pink-500/20 text-pink-400';
-      case 'specialized': return 'bg-red-500/20 text-red-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'networking': return 'bg-blue-500/20 text-blue-400',
+      case 'workstations': return 'bg-green-500/20 text-green-400',
+      case 'peripherals': return 'bg-orange-500/20 text-orange-400',
+      case 'mobile': return 'bg-pink-500/20 text-pink-400',
+      case 'specialized': return 'bg-red-500/20 text-red-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const getConditionColor = (condition: string) => {
     switch (condition) {
       case 'new': return 'bg-green-500/20 text-green-400';
-      case 'refurbished': return 'bg-blue-500/20 text-blue-400';
-      case 'used': return 'bg-yellow-500/20 text-yellow-400';
-      case 'good': return 'bg-orange-500/20 text-orange-400';
-      default: return 'bg-slate-500/20 text-slate-400';
+      case 'refurbished': return 'bg-blue-500/20 text-blue-400',
+      case 'used': return 'bg-yellow-500/20 text-yellow-400',
+      case 'good': return 'bg-orange-500/20 text-orange-400',
+      default: return 'bg-slate-500/20 text-slate-400'
     }
   };
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -705,9 +599,8 @@ export default function Equipment() {
           i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
         }`}
       />
-    ));
+    )),
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -1141,7 +1034,7 @@ export default function Equipment() {
               or customize equipment to meet your specific requirements.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-purple-400 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
                 Get Quote
               </button>
@@ -1156,5 +1049,5 @@ export default function Equipment() {
         </div>
       </section>
     </div>
-  );
+  )
 }

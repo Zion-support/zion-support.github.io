@@ -1,5 +1,5 @@
-import React from 'react';
-import { Star, Quote  } from 'lucide-react';
+import React from 'react',
+import { Star, Quote  } from 'lucide-react',
 export default function Page() {
 ,
     {
@@ -23,8 +23,8 @@ export default function Page() {
         'The space technology solutions from Zion Tech Group are revolutionary.They helped us develop satellite systems that exceeded all our expectations.',
       rating: 5,
       avatar:'
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'},
-  ];
+        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'}
+  ],
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
@@ -81,13 +81,13 @@ export default function Page() {
         </div>
 "
         <div className="text-center mt-12">"
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover:from-orange-700 hover:to-red-700 transition-all duration-300">"
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 text-white font-semibold rounded-lg hover: from-orange-700 hover:to-red-700 transition-all duration-300">"
             <Quote className="w-5 h-5 mr-2" />
             Read More Success Stories
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+},
 '"

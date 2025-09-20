@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
 import { 
-  Truck, 
+  Truck,
   Brain, 
   BarChart3, 
   Zap, 
@@ -49,64 +49,43 @@ import {
   Zap as ZapIcon,
   Shield as ShieldIcon,
   Globe as GlobeIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AISupplyChainOptimization() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Forecasting",
-      description: "Advanced machine learning models predict demand with 95% accuracy, optimizing inventory levels and reducing stockouts."
+      icon: <Brain className="w-6 h-6" />,title: "AI-Powered Forecasting",description: "Advanced machine learning models predict demand with 95% accuracy, optimizing inventory levels and reducing stockouts."
     },
     {
-      icon: <Route className="w-6 h-6" />,
-      title: "Route Optimization",
-      description: "Real-time route optimization reduces delivery costs by 30% and improves delivery times by 40%."
+      icon: <Route className="w-6 h-6" />,title: "Route Optimization",description: "Real-time route optimization reduces delivery costs by 30% and improves delivery times by 40%."
+    };
+    {
+      icon: <BarChart3 className="w-6 h-6" />,title: "Predictive Analytics",description: "Identify supply chain risks before they impact operations with AI-driven predictive modeling."
+    };
+    {
+      icon: <Warehouse className="w-6 h-6" />,title: "Inventory Management",description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
+    };
+    {
+      icon: <Globe className="w-6 h-6" />,title: "Global Visibility",description: "End-to-end supply chain visibility across all suppliers, warehouses, and distribution centers."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Identify supply chain risks before they impact operations with AI-driven predictive modeling."
-    },
-    {
-      icon: <Warehouse className="w-6 h-6" />,
-      title: "Inventory Management",
-      description: "Smart inventory tracking with automated reorder points and demand-driven replenishment."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global Visibility",
-      description: "End-to-end supply chain visibility across all suppliers, warehouses, and distribution centers."
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Proactive risk assessment and mitigation strategies for supply chain disruptions."
+      icon: <Shield className="w-6 h-6" />,title: "Risk Management",description: "Proactive risk assessment and mitigation strategies for supply chain disruptions."
     }
   ];
-
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small to medium businesses",
-      features: [
-        "Up to 5 warehouses",
+      name: "Starter",price: "$499",period: "/month",description: "Perfect for small to medium businesses",features: [
+        "Up to 5 warehouses";
         "Basic demand forecasting",
         "Route optimization",
         "Email support",
         "Standard analytics dashboard"
       ],
       popular: false
-    },
+    };
     {
-      name: "Professional",
-      price: "$1,299",
-      period: "/month",
-      description: "Ideal for growing enterprises",
-      features: [
-        "Up to 25 warehouses",
+      name: "Professional",price: "$1,299",
+      period: "/month",description: "Ideal for growing enterprises",features: [
+        "Up to 25 warehouses";
         "Advanced AI forecasting",
         "Multi-modal optimization",
         "Priority support",
@@ -115,14 +94,10 @@ export default function AISupplyChainOptimization() {
         "Custom integrations"
       ],
       popular: true
-    },
+    };
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "For large organizations with complex supply chains",
-      features: [
-        "Unlimited warehouses",
+      name: "Enterprise",price: "Custom",period: "",description: "For large organizations with complex supply chains",features: [
+        "Unlimited warehouses";
         "Custom AI model training",
         "Dedicated account manager",
         "24/7 phone support",
@@ -134,107 +109,67 @@ export default function AISupplyChainOptimization() {
       popular: false
     }
   ];
-
   const benefits = [
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Cost Reduction",
-      description: "Reduce supply chain costs by 25-40% through optimized routes and inventory management"
-    },
+      icon: <DollarSign className="w-8 h-8" />,title: "Cost Reduction",description: "Reduce supply chain costs by 25-40% through optimized routes and inventory management"
+    };
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Faster Delivery",
-      description: "Improve delivery times by 30-50% with AI-powered route optimization"
-    },
+      icon: <Clock className="w-8 h-8" />,title: "Faster Delivery",description: "Improve delivery times by 30-50% with AI-powered route optimization"
+    };
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Risk Mitigation",
-      description: "Identify and prevent 90% of supply chain disruptions before they occur"
-    },
+      icon: <Shield className="w-8 h-8" />,title: "Risk Mitigation",description: "Identify and prevent 90% of supply chain disruptions before they occur"
+    };
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Increased Efficiency",
-      description: "Boost operational efficiency by 35% with automated processes and real-time insights"
+      icon: <TrendingUp className="w-8 h-8" />,title: "Increased Efficiency",description: "Boost operational efficiency by 35% with automated processes and real-time insights"
     }
   ];
-
   const useCases = [
     {
-      title: "E-commerce",
-      description: "Optimize fulfillment centers, last-mile delivery, and inventory management for online retailers",
+      title: "E-commerce",description: "Optimize fulfillment centers, last-mile delivery, and inventory management for online retailers",
       icon: <Package className="w-6 h-6" />
-    },
+    };
     {
-      title: "Manufacturing",
-      description: "Streamline production planning, supplier management, and distribution networks",
+      title: "Manufacturing",description: "Streamline production planning, supplier management, and distribution networks",
       icon: <Factory className="w-6 h-6" />
-    },
+    };
     {
-      title: "Logistics",
-      description: "Optimize multi-modal transportation, warehousing, and cross-border operations",
+      title: "Logistics",description: "Optimize multi-modal transportation, warehousing, and cross-border operations",
       icon: <Truck className="w-6 h-6" />
-    },
+    };
     {
-      title: "Retail",
-      description: "Improve store replenishment, seasonal planning, and omnichannel inventory",
+      title: "Retail",description: "Improve store replenishment, seasonal planning, and omnichannel inventory",
       icon: <Warehouse className="w-6 h-6" />
     }
   ];
-
   const transportationModes = [
     {
-      icon: <Truck className="w-8 h-8" />,
-      title: "Road Transport",
-      description: "Optimize truck routes, reduce fuel costs, and improve delivery efficiency"
+      icon: <Truck className="w-8 h-8" />,title: "Road Transport",description: "Optimize truck routes, reduce fuel costs, and improve delivery efficiency"
     },
     {
-      icon: <Ship className="w-8 h-8" />,
-      title: "Maritime",
-      description: "Optimize shipping routes, container utilization, and port operations"
+      icon: <Ship className="w-8 h-8" />,title: "Maritime",description: "Optimize shipping routes, container utilization, and port operations"
     },
     {
-      icon: <Plane className="w-8 h-8" />,
-      title: "Air Freight",
-      description: "Optimize air routes, cargo capacity, and time-sensitive deliveries"
+      icon: <Plane className="w-8 h-8" />,title: "Air Freight",description: "Optimize air routes, cargo capacity, and time-sensitive deliveries"
     },
     {
-      icon: <Train className="w-8 h-8" />,
-      title: "Rail Transport",
-      description: "Optimize rail networks, intermodal connections, and bulk cargo"
+      icon: <Train className="w-8 h-8" />,title: "Rail Transport",description: "Optimize rail networks, intermodal connections, and bulk cargo"
     }
-  ];
+  ],
 
   const keyMetrics = [
     {
-      icon: <Gauge className="w-6 h-6" />,
-      title: "Order Fill Rate",
-      current: "98.5%",
-      improvement: "+12%",
-      description: "Percentage of orders fulfilled completely and on time"
-    },
+      icon: <Gauge className="w-6 h-6" />,title: "Order Fill Rate",current: "98.5%",improvement: "+12%",description: "Percentage of orders fulfilled completely and on time"
+    };
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Cycle Time",
-      current: "2.3 days",
-      improvement: "-45%",
-      description: "Time from order placement to delivery"
-    },
+      icon: <Clock className="w-6 h-6" />,title: "Cycle Time",current: "2.3 days",improvement: "-45%",description: "Time from order placement to delivery"
+    };
     {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: "Cost per Order",
-      current: "$18.50",
-      improvement: "-32%",
-      description: "Total cost to fulfill a single order"
-    },
+      icon: <DollarSign className="w-6 h-6" />,title: "Cost per Order",current: "$18.50",improvement: "-32%",description: "Total cost to fulfill a single order"
+    };
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Inventory Turnover",
-      current: "8.2x",
-      improvement: "+28%",
-      description: "How quickly inventory is sold and replaced"
+      icon: <BarChart3 className="w-6 h-6" />,title: "Inventory Turnover",current: "8.2x",improvement: "+28%",description: "How quickly inventory is sold and replaced"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
@@ -620,7 +555,7 @@ export default function AISupplyChainOptimization() {
       </section>
 
       {/* Contact Information Footer */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
@@ -655,5 +590,5 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
     </div>
-  );
+  )
 }

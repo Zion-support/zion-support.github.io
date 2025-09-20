@@ -1,11 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Quantum Computing Business Revolution';
-  description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.';
-  keywords: ['quantum computingbusiness revolution', 'quantum algorithmsoptimization', 'AI 2026'],
-};
+  title: 'AI 2026: Quantum Computing Business Revolution',
+  description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.',
+  keywords: ['quantum computingbusiness revolutionquantum algorithmsoptimization', 'AI 2026']
+},
 export default function QuantumComputingBusinessRevolution() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -16,7 +16,7 @@ export default function QuantumComputingBusinessRevolution() {,
         url="/blog/ai-2026-quantum-computing-business-revolution",
       />,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div className="text-center mb-12">,
           <div className="inline-flex items-center bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-6 py-2 mb-6">,
             <span className="text-sm font-medium text-blue-700">⚛️ QUANTUM BREAKTHROUGH</span>,
@@ -42,7 +42,7 @@ export default function QuantumComputingBusinessRevolution() {,
             </Link>,
           </div>,
         </div>,
-        {/* Quantum Advantage */,}
+        {/* Quantum Advantage */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Quantum Advantage</h2>,
           <div className="grid md: grid-cols-3 gap-8">,
@@ -63,7 +63,7 @@ export default function QuantumComputingBusinessRevolution() {,
             </div>,
           </div>,
         </section>,
-        {/* Business Applications */,}
+        {/* Business Applications */}
         <section id="applications" className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Revolutionary Business Applications</h2>,
           <div className="space-y-8">,
@@ -73,7 +73,7 @@ export default function QuantumComputingBusinessRevolution() {,
                 <div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Supply Chain Optimization</h3>,
                   <p className="text-gray-600 mb-4">,
-                    Quantum algorithms can optimize complex supply chains with thousands of variables;
+                    Quantum algorithms can optimize complex supply chains with thousands of variables,
                     reducing costs by up to 40% and improving delivery times by 60%.,
                   </p>,
                   <div className="bg-green-50 p-4 rounded-lg">,
@@ -88,7 +88,7 @@ export default function QuantumComputingBusinessRevolution() {,
                 <div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Financial Portfolio Optimization</h3>,
                   <p className="text-gray-600 mb-4">,
-                    Quantum computing enables real-time portfolio optimization across millions of assets;
+                    Quantum computing enables real-time portfolio optimization across millions of assets,
                     maximizing returns while minimizing risk.,
                   </p>,
                   <div className="bg-blue-50 p-4 rounded-lg">,
@@ -129,7 +129,7 @@ export default function QuantumComputingBusinessRevolution() {,
             </div>,
           </div>,
         </section>,
-        {/* Implementation Roadmap */,}
+        {/* Implementation Roadmap */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quantum Implementation Roadmap</h2>,
           <div className="space-y-6">,
@@ -162,7 +162,7 @@ export default function QuantumComputingBusinessRevolution() {,
             </div>,
           </div>,
         </section>,
-        {/* Case Study */,}
+        {/* Case Study */}
         <section className="mb-12">,
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Case Study: Global Logistics Company</h2>,
           <div className="bg-gradient-to-r from-gray-900 to-blue-900 rounded-2xl p-8 text-white">,
@@ -250,7 +250,7 @@ export default function QuantumComputingBusinessRevolution() {,
             </Link>,
           </div>,
         </section>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <section className="mt-12">,
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Quantum Guides</h2>,
           <div className="grid md: grid-cols-2 gap-6">,
@@ -265,5 +265,4 @@ export default function QuantumComputingBusinessRevolution() {,
           </div>,
         </section>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

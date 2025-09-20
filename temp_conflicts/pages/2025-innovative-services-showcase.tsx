@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import SEO from '../components/SEO';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import SEO from '../components/SEO',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   Search, Grid, List, Star, TrendingUp, Users, Clock, CheckCircle,
   Brain, Atom, Shield, Target, Rocket, ArrowRight, Check, Palette, 
   Heart, Truck, GraduationCap, Building, Globe, Zap, Lock, Eye, Cloud, ShoppingCart
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all service data
-import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas';
-import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services';
-import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
-import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services';
-import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
+import { revolutionary2045AdvancedRealMicroSaas } from '../data/revolutionary-2045-advanced-real-micro-saas',
+import { revolutionary2045AdvancedITServices } from '../data/revolutionary-2045-advanced-it-services',
+import { revolutionary2045AdvancedAIServices } from '../data/revolutionary-2045-advanced-ai-services',
+import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services',
+import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-it-infrastructure-services',
+import { innovativeMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services',
 
 const InnovativeServicesShowcase2025: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const allServices = [
     ...revolutionary2045AdvancedRealMicroSaas,
@@ -27,7 +27,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     ...innovative2025AIAutonomousServices,
     ...innovativeITInfrastructureServices2025,
     ...innovativeMicroSaasServices2025
-  ];
+  ],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', count: allServices.length },
@@ -39,40 +39,40 @@ const InnovativeServicesShowcase2025: React.FC = () => {
     { id: 'edge-computing', name: 'Edge Computing', icon: Network, color: 'from-indigo-500 to-purple-500', count: allServices.filter(s => s.category.includes('Edge')).length },
     { id: 'devops', name: 'DevOps & Automation', icon: Code, color: 'from-orange-500 to-red-500', count: allServices.filter(s => s.category.includes('DevOps')).length },
     { id: 'data-analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-teal-500 to-cyan-500', count: allServices.filter(s => s.category.includes('Data')).length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   const getServiceCategory = (service: any) => {
-    if (service.category) return service.category;
-    if (service.type) return service.type;
-    return 'Other';
-  };
+    if (service.category) return service.category,
+    if (service.type) return service.type,
+    return 'Other'
+  },
 
   const getServicePricing = (service: any) => {
-    if (service.pricing?.starter) return service.pricing.starter;
-    if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-    if (service.price?.monthly) return `$${service.price.monthly}/month`;
-    return 'Contact for pricing';
-  };
+    if (service.pricing?.starter) return service.pricing.starter,
+    if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+    if (service.price?.monthly) return `$${service.price.monthly}/month`,
+    return 'Contact for pricing',
+  },
 
   const getServiceFeatures = (service: any) => {
-    if (service.features) return service.features;
-    if (service.keyFeatures) return service.keyFeatures;
-    return [];
-  };
+    if (service.features) return service.features,
+    if (service.keyFeatures) return service.keyFeatures,
+    return []
+  },
 
   const getServiceDescription = (service: any) => {
-    if (service.description) return service.description;
-    if (service.tagline) return service.tagline;
-    return 'No description available';
-  };
+    if (service.description) return service.description,
+    if (service.tagline) return service.tagline,
+    return 'No description available'
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -80,12 +80,9 @@ const InnovativeServicesShowcase2025: React.FC = () => {
         title="2025 Innovative Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge 2025 innovative services including AI automation, next-gen infrastructure, specialized industry solutions, and revolutionary micro SAAS platforms."
         keywords={[
-          'innovative services 2025',
-          'AI automation',
-          'next-gen infrastructure',
-          'specialized solutions',
-          'micro SAAS',
-          'Zion Tech Group'
+          'innovative services 2025AI automation',
+          'next-gen infrastructurespecialized solutions',
+          'micro SAASZion Tech Group'
         ]}
       />
 
@@ -420,7 +417,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
             Join hundreds of companies already leveraging our cutting-edge services 
             to drive growth, efficiency, and competitive advantage.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="https://ziontechgroup.com/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
@@ -437,7 +434,7 @@ const InnovativeServicesShowcase2025: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default InnovativeServicesShowcase2025;
+export default InnovativeServicesShowcase2025,

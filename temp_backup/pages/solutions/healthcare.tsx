@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, Activity } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Brain, Sparkles, Zap, Target, Users, Award, Clock, CheckCircle, Heart, Activity } from 'lucide-react',
+import Link from 'next/link',
+import Head from 'next/head',
 import { 
   Heart, Brain, Shield, Zap, BarChart3, Cpu, 
   CheckCircle, ArrowRight, Star, TrendingUp, Award, Clock
-} from 'lucide-react';
-import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturisticBackground2045';
+} from 'lucide-react',
+import UltraFuturisticBackground from '../../components/backgrounds/UltraFuturisticBackground2045',
 
 const HealthcareSolutionsPage: React.FC = () => {
   const solutions = [
@@ -39,21 +39,21 @@ const HealthcareSolutionsPage: React.FC = () => {
       icon: Sparkles,
       color: 'from-blue-500 to-cyan-500'
     }
-  ];
+  ],
 
   const features = [
     { icon: Brain, title: "AI Diagnosis", description: "Intelligent medical diagnosis" },
     { icon: Heart, title: "Bio-Computing", description: "Quantum biological integration" },
     { icon: Activity, title: "Drug Discovery", description: "Autonomous pharmaceutical research" },
     { icon: Zap, title: "Personalized Care", description: "Individualized treatment plans" }
-  ];
+  ],
 
   const stats = [
     { number: "99.9%", label: "Diagnosis Accuracy", icon: CheckCircle },
     { number: "1000x", label: "Research Speed", icon: Zap },
     { number: "24/7", label: "Monitoring", icon: Clock },
     { number: "50+", label: "Medical Partners", icon: Users }
-  ];
+  ],
 
   return (
     <Layout 
@@ -65,13 +65,13 @@ const HealthcareSolutionsPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-pink-900/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Heart, Brain, Shield, Zap, Cpu, Globe, 
   Users, Award, TrendingUp, CheckCircle, ArrowRight
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function HealthcareSolutions() {
   return (
@@ -467,7 +467,7 @@ export default function HealthcareSolutions() {
                 Join the healthcare revolution with our cutting-edge AI and quantum solutions. 
                 Let's build the future of medicine together.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a 
                   href="/contact?service=Healthcare-Solutions"
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
@@ -486,6 +486,6 @@ export default function HealthcareSolutions() {
         </section>
       </div>
     </div>
-  );
-};
-export default healthcare;
+  )
+},
+export default healthcare,

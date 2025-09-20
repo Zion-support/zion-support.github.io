@@ -1,7 +1,7 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-) ;
-  }, [searchTerm, selectedCategory, selectedPricingTier]) ;
+) ,
+  }, [searchTerm, selectedCategory, selectedPricingTier]) ,
   return (<div className="min - h-screen bg-zion - blue -dark">
       {/* Hero Section */}
       <div className="bg-gradient - to - br from - zion - blue to - zion - blue - dark py-20 px-4">
@@ -180,10 +180,10 @@ export default function Page() {
               </div>
               <Button
                 onClick={ () => {
-                  setSearchTerm('') ;
-                  setSelectedCategory('all') ;
-                  setSelectedSubcategory('all') ;
-                  setPriceRange('all') ;
+                  setSearchTerm('') ,
+                  setSelectedCategory('all') ,
+                  setSelectedSubcategory('all') ,
+                  setPriceRange('all') ,
                 }}
               >
                 Clear Filters
@@ -207,26 +207,26 @@ export default function Page() {
                 icon: <Zap className="w-8 h-8" />,
                 title: 'Innovation First',
                 description:
-                  'Cutting - edge AI and technology solutions that keep you ahead of the competition',
+                  'Cutting - edge AI and technology solutions that keep you ahead of the competition'
               },
               {
                 icon: <Shield className="w-8 h-8" />,
                 title: 'Enterprise Security',
                 description:
-                  'Bank - level security and compliance for all our solutions and services',
+                  'Bank - level security and compliance for all our solutions and services'
               },
               {
                 icon: <Building className="w-8 h-8" />,
                 title: 'Proven Results',
                 description:
-                  'Track record of successful implementations and measurable business outcomes',
+                  'Track record of successful implementations and measurable business outcomes'
               },
               {
                 icon: <Users className="w-8 h-8" />,
                 title: 'Expert Support',
                 description:
-                  '24 / 7 technical support and dedicated account management for enterprise clients',
-              },
+                  '24 / 7 technical support and dedicated account management for enterprise clients'
+              }
             ].map((feature, index) => (<div
                 key={index}
                 className="text-center p - 6 rounded-lg border border-zion - blue -light"
@@ -274,7 +274,7 @@ export default function Page() {
             <p > Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p > Website:{' '}
               <a
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 className="underline hover:text-white"
               >
                 https://ziontechgroup.com
@@ -283,5 +283,5 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) ;
+    </div>) 
 }

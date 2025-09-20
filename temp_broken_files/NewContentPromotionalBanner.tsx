@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react',
+import { X, ArrowRight, Sparkles, Zap, Star, TrendingUp } from 'lucide-react',
+import { Link } from 'react-router-dom',
 const NewContentPromotionalBanner: React.FC = () => {,
   return (,
     <div>,
@@ -9,7 +9,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
       >,
         <div className="max-w-7xl mx-auto px-4 py-3">,
           <div className="flex items-center justify-between">,
-            {/* Content */,}
+            {/* Content */}
             <div className="flex items-center space-x-4 flex-1">,
               {/* Navigation Arrows */}
               <button,
@@ -18,7 +18,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
               >,
                 <ArrowRight className="w-4 h-4 text-gray-400 rotate-180" />,
               </button>,
-              {/* Slide Content */,}
+              {/* Slide Content */}
                 <div,
                   key={currentSlide}
                   className="flex items-center space-x-4 flex-1",
@@ -39,7 +39,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
                   {/* CTA Button */}
                   <Link,
                     to={promotionalContent[currentSlide].link}
-                    className={`px-4 py-2 bg-gradient-to-r ${promotionalContent[currentSlide].gradient} text-white rounded-lg hover: shadow-lg transition-all duration-300 text-sm font-medium flex items-center space-x-2`,}
+                    className={`px-4 py-2 bg-gradient-to-r ${promotionalContent[currentSlide].gradient} text-white rounded-lg hover: shadow-lg transition-all duration-300 text-sm font-medium flex items-center space-x-2`}
                   >,
                     <span>{promotionalContent[currentSlide].linkText}</span>,
                     <ArrowRight className="w-3 h-3" />,
@@ -54,7 +54,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
                 <ArrowRight className="w-4 h-4 text-gray-400" />,
               </button>,
             </div>,
-            {/* Close Button */,}
+            {/* Close Button */}
             <button,
               onClick={handleClose}
               className="ml-4 p-1 hover: bg-gray-700/50 rounded-full transition-colors",
@@ -62,7 +62,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
               <X className="w-4 h-4 text-gray-400" />,
             </button>,
           </div>,
-          {/* Progress Indicators */,}
+          {/* Progress Indicators */}
           <div className="flex justify-center space-x-2 mt-3">,
             {promotionalContent.map((_, index) => (,
               <button,
@@ -71,7 +71,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${,
                   index === currentSlide,
                     ? 'bg-cyan-400 w-6',
-                    : 'bg-gray-600 hover: bg-gray-500',}`}
+                    : 'bg-gray-600 hover: bg-gray-500'}`}
               />,
             ))}
           </div>,
@@ -79,36 +79,36 @@ const NewContentPromotionalBanner: React.FC = () => {,
         {/* Floating Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">,
           <div,
-              y: [0, -10, 0];
-              rotate: [0, 5, 0],
+              y: [0, -10, 0],
+              rotate: [0, 5, 0]
             }}
-              duration: 3;
-              repeat: Infinity;
-              ease: "easeInOut",}}
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut"}}
             className="absolute top-2 left-10",
           >,
             <Star className="w-4 h-4 text-yellow-400 opacity-60" />,
           </div>,
           <div,
-              y: [0, 10, 0];
-              rotate: [0, -5, 0],
+              y: [0, 10, 0],
+              rotate: [0, -5, 0]
             }}
-              duration: 4;
-              repeat: Infinity;
-              ease: "easeInOut";
-              delay: 1,}}
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1}}
             className="absolute top-3 right-20",
           >,
             <Zap className="w-3 h-3 text-purple-400 opacity-60" />,
           </div>,
           <div,
-              y: [0, -8, 0];
-              x: [0, 5, 0],
+              y: [0, -8, 0],
+              x: [0, 5, 0]
             }}
-              duration: 5;
-              repeat: Infinity;
-              ease: "easeInOut";
-              delay: 2,}}
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2}}
             className="absolute top-1 right-32",
           >,
             <TrendingUp className="w-3 h-3 text-green-400 opacity-60" />,
@@ -116,7 +116,7 @@ const NewContentPromotionalBanner: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-};
-export { NewContentPromotionalBanner };
-export default NewContentPromotionalBanner;
+  ),
+},
+export { NewContentPromotionalBanner },
+export default NewContentPromotionalBanner,

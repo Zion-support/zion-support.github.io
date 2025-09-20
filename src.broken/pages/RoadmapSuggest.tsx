@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { NextSeo } from '@/components/NextSeo';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import Link from 'next/link';
+import React, { useState } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { NextSeo } from '@/components/NextSeo',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
+import { Button } from '@/components/ui/button',
+import { useAuth } from '@/hooks/useAuth',
+import { toast } from '@/hooks/use-toast',
+import Link from 'next/link',
 
 interface Suggestion {
-  id: string;
-  title: string;
-  description: string;
+  id: string,
+  title: string,
+  description: string
 }
 
 export default function RoadmapSuggestPage() {
-  const { user } = useAuth();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [submitted, setSubmitted] = useState<Suggestion[]>([]);
+  const { user } = useAuth(),
+  const [title, setTitle] = useState(''),
+  const [description, setDescription] = useState(''),
+  const [submitted, setSubmitted] = useState<Suggestion[]>([]),
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to suggest' });
-      return;
+      toast({ title: 'Login required', description: 'Please sign in to suggest' }),
+      return,
     }
-    const suggestion = { id: Date.now().toString(), title, description };
-    setSubmitted((prev) => [...prev, suggestion]);
-    setTitle('');
-    setDescription('');
-    toast({ title: 'Suggestion added', description: 'Thank you for your feedback' });
-  };
+    const suggestion = { id: Date.now().toString(), title, description },
+    setSubmitted((prev) => [...prev, suggestion]),
+    setTitle(''),
+    setDescription(''),
+    toast({ title: 'Suggestion added', description: 'Thank you for your feedback' }),
+  },
 
   return (
     <>
@@ -73,5 +73,5 @@ export default function RoadmapSuggestPage() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }

@@ -1,67 +1,67 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
   {
     id: 5,
-    title: "Monitoring & Observability",;
-    description: "Comprehensive monitoring and logging solutions for cloud applications.",;
-    icon: Activity,;
+    title: "Monitoring & Observability",
+    description: "Comprehensive monitoring and logging solutions for cloud applications.",
+    icon: Activity,
     features["Real - time monitoring",
       "Alert systems",
       "Log aggregation",
       "Performance metrics"
     ],
-    price: "From $10,000",;
-    timeline: "6 - 10 weeks",;
-    category: "Monitoring",;
+    price: "From $10,000",
+    timeline: "6 - 10 weeks",
+    category: "Monitoring",
     platforms["Prometheus", "Grafana", "ELK Stack", "Datadog"]
   },
   {
     id: 6,
-    title: "Security & Compliance",;
-    description: "Cloud security implementation and compliance management for enterprise applications.",;
-    icon: Shield,;
+    title: "Security & Compliance",
+    description: "Cloud security implementation and compliance management for enterprise applications.",
+    icon: Shield,
     features["Identity management",
       "Access controls",
       "Security scanning",
       "Compliance reporting"
     ],
-    price: "From $25,000",;
-    timeline: "12 - 20 weeks",;
-    category: "Security",;
+    price: "From $25,000",
+    timeline: "12 - 20 weeks",
+    category: "Security",
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
-];
+],
 
 const cloudPlatforms = [{
     name: "Amazon Web Services",
     description: "Leading cloud platform with comprehensive services",
     icon: Cloud,
-    features["EC2", "S3", "Lambda", "RDS", "ECS"];
-  },;
+    features["EC2", "S3", "Lambda", "RDS", "ECS"],
+  },
   {
     name: "Microsoft Azure",
     description: "Enterprise cloud platform with strong integration",
     icon: Server,
-    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"];
-  },;
+    features["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "AKS"],
+  },
   {
     name: "Google Cloud Platform",
     description: "Innovative cloud platform with AI / ML focus",
     icon: Globe,
-    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"];
-  },;
+    features["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "GKE"],
+  },
   {
     name: "Kubernetes",
     description: "Open - source container orchestration platform",
           icon: GitFork,
     features: ["Auto - scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
 
-    features["Auto - scaling", "Load Balancing", "Service Discovery", "Rolling Updates"];
+    features["Auto - scaling", "Load Balancing", "Service Discovery", "Rolling Updates"],
   }
-];
+],
 
 const successStories = [{
     id: 1,
@@ -90,7 +90,7 @@ const successStories = [{
     results: "Full compliance, enhanced security, 40% faster time - to - market",
     logo: "FS"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -120,16 +120,16 @@ const processSteps = [{
     icon: Zap,
     duration: "Ongoing"
 
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Cloud Infrastructure', 'DevOps', 'Containerization', 'IaC', 'Monitoring', 'Security'];
+  const categories = ['AllCloud Infrastructure', 'DevOpsContainerization', 'IaCMonitoring', 'Security'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? cloudDevOpsSolutions
-    : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory) ;
+    : cloudDevOpsSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -199,10 +199,10 @@ const processSteps = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Cloud Platforms */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -257,13 +257,13 @@ const processSteps = [{
                       <span>{feature}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -319,13 +319,13 @@ const processSteps = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -425,7 +425,7 @@ const processSteps = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -496,13 +496,13 @@ const processSteps = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

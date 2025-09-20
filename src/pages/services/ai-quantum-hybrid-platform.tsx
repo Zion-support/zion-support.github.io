@@ -1,7 +1,7 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
+import React from "react";
+import { SEO } from "../../components/SEO";
 import { 
-  Atom, 
+  Atom,
   Brain, 
   Zap, 
   Cpu, 
@@ -26,94 +26,60 @@ import {
   Target,
   Lightbulb,
   Gauge
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIQuantumHybridPlatform: React.FC = () => {
   const features = [
     {
-      icon: Atom,
-      title: 'Quantum Computing',
-      description: 'Leverage quantum bits for exponentially faster computational power'
-    },
+      icon: Atom,title: 'Quantum Computing',description: 'Leverage quantum bits for exponentially faster computational power'
+    };
     {
-      icon: Brain,
-      title: 'AI Integration',
-      description: 'Seamless integration of classical AI with quantum algorithms'
-    },
+      icon: Brain,title: 'AI Integration',description: 'Seamless integration of classical AI with quantum algorithms'
+    };
     {
-      icon: Zap,
-      title: 'Hybrid Processing',
-      description: 'Combines classical and quantum computing for optimal performance'
-    },
+      icon: Zap,title: 'Hybrid Processing',description: 'Combines classical and quantum computing for optimal performance'
+    };
     {
-      icon: Cpu,
-      title: 'Quantum-Classical Interface',
-      description: 'Bridging quantum and classical computing paradigms'
-    },
+      icon: Cpu,title: 'Quantum-Classical Interface',description: 'Bridging quantum and classical computing paradigms'
+    };
     {
-      icon: Users,
-      title: 'Multi-user Access',
-      description: 'Enterprise-grade platform for teams and organizations'
-    },
+      icon: Users,title: 'Multi-user Access',description: 'Enterprise-grade platform for teams and organizations'
+    };
     {
-      icon: Clock,
-      title: 'Real-time Processing',
-      description: 'Instant quantum-classical hybrid computations'
+      icon: Clock,title: 'Real-time Processing',description: 'Instant quantum-classical hybrid computations'
     }
   ];
-
   const capabilities = [
     {
-      icon: Atom,
-      title: 'Quantum Machine Learning',
-      description: 'Quantum-enhanced ML algorithms for superior pattern recognition'
-    },
+      icon: Atom,title: 'Quantum Machine Learning',description: 'Quantum-enhanced ML algorithms for superior pattern recognition'
+    };
     {
-      icon: Network,
-      title: 'Quantum Neural Networks',
-      description: 'Next-generation neural networks powered by quantum mechanics'
-    },
+      icon: Network,title: 'Quantum Neural Networks',description: 'Next-generation neural networks powered by quantum mechanics'
+    };
     {
-      icon: Shield,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum key distribution'
-    },
+      icon: Shield,title: 'Quantum Cryptography',description: 'Unbreakable encryption using quantum key distribution'
+    };
     {
-      icon: Globe,
-      title: 'Global Quantum Network',
-      description: 'Worldwide quantum computing infrastructure access'
-    },
+      icon: Globe,title: 'Global Quantum Network',description: 'Worldwide quantum computing infrastructure access'
+    };
     {
-      icon: Smartphone,
-      title: 'Mobile Quantum Access',
-      description: 'Access quantum computing power from anywhere'
-    },
+      icon: Smartphone,title: 'Mobile Quantum Access',description: 'Access quantum computing power from anywhere'
+    };
     {
-      icon: Monitor,
-      title: 'Quantum Monitoring',
-      description: 'Real-time quantum system performance tracking'
+      icon: Monitor,title: 'Quantum Monitoring',description: 'Real-time quantum system performance tracking'
     }
   ];
-
   const applications = [
-    'Drug Discovery & Molecular Modeling',
-    'Financial Modeling & Risk Analysis',
-    'Climate Change & Weather Prediction',
-    'Cryptography & Cybersecurity',
-    'Optimization Problems',
-    'Machine Learning & AI Training',
-    'Material Science & Engineering',
-    'Logistics & Supply Chain'
-  ];
+    'Drug Discovery & Molecular ModelingFinancial Modeling & Risk Analysis',
+    'Climate Change & Weather PredictionCryptography & Cybersecurity',
+    'Optimization ProblemsMachine Learning & AI Training',
+    'Material Science & EngineeringLogistics & Supply Chain'
+  ],
 
   const benefits = [
-    'Exponential speedup for complex problems',
-    'Unprecedented accuracy in simulations',
-    'Breakthrough discoveries in science',
-    'Enhanced AI capabilities',
-    'Future-proof technology investment',
-    'Competitive advantage in research'
-  ];
+    'Exponential speedup for complex problemsUnprecedented accuracy in simulations',
+    'Breakthrough discoveries in scienceEnhanced AI capabilities',
+    'Future-proof technology investmentCompetitive advantage in research'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -131,7 +97,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               <Atom className="w-4 h-4 mr-2" />
               Quantum AI Technology
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
               AI Quantum Hybrid Platform
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -159,7 +125,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
               Quantum-Classical Hybrid Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of quantum computing enhanced by artificial intelligence, 
+              Experience the power of quantum computing enhanced by artificial intelligence;
               delivering computational capabilities beyond imagination.
             </p>
           </div>
@@ -275,7 +241,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:bg-slate-700/50 hover:border-indigo-400/30 transition-all duration-200">
+              <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover: bg-slate-700/50 hover:border-indigo-400/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-indigo-400" />
                 </div>
@@ -296,7 +262,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
             Join the quantum revolution and access computational power that will transform 
             your industry and accelerate breakthrough discoveries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-400 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-purple-600 transition-all duration-200 hover:scale-105 shadow-lg">
               Access Platform
             </button>
@@ -307,7 +273,6 @@ const AIQuantumHybridPlatform: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AIQuantumHybridPlatform;

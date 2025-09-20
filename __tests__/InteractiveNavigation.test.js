@@ -1,4 +1,4 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import InteractiveNavigation from '../components/InteractiveNavigation';
+import React from 'react',
+import { render, screen, fireEvent } from '@testing-library/react',
+import '@testing-library/jest-dom',
+import InteractiveNavigation from '../components/InteractiveNavigation',

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 "
               className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-cyan transition-all duration-300 hover:scale-105"
@@ -144,7 +144,7 @@ export default function Page() {
               </p>"
               <p className="mt-2">
                 <a"
-                  href="https://ziontechgroup.com"
+                  href="https: //ziontechgroup.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zion-cyan hover:text-zion-cyan-dark"
@@ -157,6 +157,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 '"

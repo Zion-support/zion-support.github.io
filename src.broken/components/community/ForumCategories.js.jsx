@@ -1,5 +1,5 @@
-import React from 'react';
-export { function };
+import React from 'react',
+export { function },
 export default function ForumCategories() {
 
   const categories = [{
@@ -27,8 +27,8 @@ export default function ForumCategories() {
 
         title: 'API integration question',
         author: 'Developer123',
-        date: '2024-01-14'}},
-  ];
+        date: '2024-01-14'}}
+  ],
   return ()
     <div className="space-y-4">
       {categories.map(category => (
@@ -51,6 +51,6 @@ export default function ForumCategories() {
         </div>
       ))}
     </div>
-  );
+  ),
 }
 '"

@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Search, Grid, List, Filter,
   Brain, Atom, Shield, Target, Rocket,
   ArrowRight, Check, Star, TrendingUp,
   Building, Cpu, Database, Cloud, Lock,
   Globe, Zap, Users, BarChart3
-} from 'lucide-react';
-import SEO from '../components/SEO';
+} from 'lucide-react',
+import SEO from '../components/SEO',
 
 // Import our new 2037 service data
-import { real2037Q1InnovativeAdditions } from '../data/real-2037-q1-innovative-additions';
-import { real2037Q1ITInnovations } from '../data/real-2037-q1-it-innovations';
-import { real2037Q1MicroSaasInnovations } from '../data/real-2037-q1-micro-saas-innovations';
+import { real2037Q1InnovativeAdditions } from '../data/real-2037-q1-innovative-additions',
+import { real2037Q1ITInnovations } from '../data/real-2037-q1-it-innovations',
+import { real2037Q1MicroSaasInnovations } from '../data/real-2037-q1-micro-saas-innovations',
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 // Combine all services
 const all2037Services = [
   ...real2037Q1InnovativeAdditions,
   ...real2037Q1ITInnovations,
   ...real2037Q1MicroSaasInnovations
-];
+],
 
 const categories = [
   {
@@ -87,9 +87,9 @@ const categories = [
     color: 'from-purple-500 to-violet-600',
     count: all2037Services.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length
   }
-];
+],
 
-const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index }) => (
+const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index
     className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10 group"
   >
     <div className={`absolute inset-0 bg-gradient-to-r ${service.color || 'from-blue-500 to-purple-600'} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500 opacity-20`}></div>
-    <div className={`relative bg-gradient-to-r ${(service.color || 'from-blue-500 to-purple-600').replace('from-', 'from-').replace('to-', 'to-')} bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full`}>
+    <div className={`relative bg-gradient-to-r ${(service.color || 'from-blue-500 to-purple-600').replace('from-from-').replace('to-to-')} bg-opacity-10 border border-opacity-30 rounded-2xl p-8 hover:border-opacity-50 transition-all duration-300 h-full`}>
       <div className="flex items-start justify-between mb-6">
         <div className="text-4xl">{service.icon}</div>
         {service.popular && (
@@ -167,13 +167,13 @@ const ServiceCard: React.FC<{ service: any; index: number }> = ({ service, index
       </a>
       <a
         href={`mailto:${contact.email}?subject=Inquiry about ${service.name}`}
-        className="bg-gray-700 text-gray-300 py-2 px-4 rounded-lg hover:bg-gray-600 transition-colors duration-300 text-sm"
+        className="bg-gray-700 text-gray-300 py-2 px-4 rounded-lg hover: bg-gray-600 transition-colors duration-300 text-sm"
       >
         Contact
       </a>
     </div>
   </motion.div>
-);
+),
 
 const ContactSection: React.FC = () => (
   <section className="py-20 px-4 bg-gradient-to-br from-gray-900 to-black relative overflow-hidden">
@@ -249,7 +249,7 @@ const ContactSection: React.FC = () => (
       >
         <a
           href={`mailto:${contact.email}?subject=2037 Services Consultation`}
-          className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg transform hover:scale-105"
+          className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg transform hover:scale-105"
         >
           <span>Start Your Transformation</span>
           <ArrowRight className="w-5 h-5" />
@@ -257,20 +257,20 @@ const ContactSection: React.FC = () => (
       </motion.div>
     </div>
   </section>
-);
+),
 
 const ServicesShowcase2037: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
   const filteredServices = all2037Services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch,
+  }),
 
   return (
     <Layout>
@@ -436,7 +436,7 @@ const ServicesShowcase2037: React.FC = () => {
       {/* Contact Section */}
       <ContactSection />
     </Layout>
-  );
-};
+  ),
+},
 
-export default ServicesShowcase2037;
+export default ServicesShowcase2037,

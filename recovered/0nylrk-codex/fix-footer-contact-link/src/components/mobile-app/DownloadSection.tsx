@@ -1,12 +1,12 @@
 
-import React from "react";
-import { QrCodeIcon } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
+import React from "react",
+import { QrCodeIcon } from "lucide-react",
+import { AppStoreButtons } from "./AppStoreButtons",
 
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
-  const appStoreUrl = "#"; // Replace with actual App Store URL when available
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL when available
+  const appStoreUrl = "#", // Replace with actual App Store URL when available
+  const googlePlayUrl = "#", // Replace with actual Google Play URL when available
 
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
@@ -44,5 +44,5 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  ),
+},

@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 }}}
-import { motion, AnimatePresence  } from 'framer-motion';
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -11,7 +11,7 @@ export default function Page() {
       name: 'AI Customer Support Automation',
       description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
       category: 'customer-support',
-      features: ['Intelligent Chatbots', 'Automated Ticket Routing', 'Sentiment Analysis', '24/7 Support'],
+      features: ['Intelligent ChatbotsAutomated Ticket Routing', 'Sentiment Analysis24/7 Support'],
       pricing: { starter: 79, professional: 199, enterprise: 399 },
       icon: Users,
       route: '/services/ai-customer-support-automation',
@@ -22,7 +22,7 @@ export default function Page() {
       name: 'AI Financial Analytics Platform',
       description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
       category: 'finance',
-      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics'],
+      features: ['Financial ForecastingRisk Assessment', 'Compliance MonitoringReal-time Analytics'],
       pricing: { starter: 149, professional: 399, enterprise: 799 },
       icon: TrendingUp,
       route: '/services/ai-financial-analytics',
@@ -33,7 +33,7 @@ export default function Page() {
       name: 'AI Marketing Automation',
       description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
       category: 'marketing',
-      features: ['Audience Segmentation', 'Content Personalization', 'Multi-channel Campaigns', 'ROI Optimization'],
+      features: ['Audience SegmentationContent Personalization', 'Multi-channel CampaignsROI Optimization'],
       pricing: { starter: 129, professional: 349, enterprise: 699 },
       icon: Globe,
       route: '/services/ai-marketing-automation',
@@ -44,7 +44,7 @@ export default function Page() {
       name: 'AI Data Analytics Engine',
       description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
       category: 'analytics',
-      features: ['Data Processing', 'Pattern Recognition', 'Predictive Modeling', 'Business Intelligence'],
+      features: ['Data ProcessingPattern Recognition', 'Predictive ModelingBusiness Intelligence'],
       pricing: { starter: 199, professional: 499, enterprise: 999 },
       icon: Database,
       route: '/services/ai-data-analytics',
@@ -55,39 +55,39 @@ export default function Page() {
       name: 'AI Cybersecurity Suite',
       description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
       category: 'security',
-      features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention'],
+      features: ['Threat DetectionAutomated Response', 'Security MonitoringIncident Prevention'],
       pricing: { starter: 179, professional: 449, enterprise: 899 },
       icon: Shield,
       route: '/services/ai-cybersecurity',
       status: 'coming-soon'
     }
-  ];
+  ],
 
-    return matchesCategory && matchesSearch});
+    return matchesCategory && matchesSearch}),
 
       case 'price':
-        return a.pricing.starter - b.pricing.starter;
+        return a.pricing.starter - b.pricing.starter,
       case 'popularity':
-        return 0; // Default sorting
+        return 0, // Default sorting
       default:
         return 0}
-  });
+  }),
 
       case 'beta':
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'coming-soon':
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100 text-gray-800',
       default:
         return 'bg-gray-100 text-gray-800'}
-  };
+  },
 
       case 'beta':
-        return 'Beta';
+        return 'Beta',
       case 'coming-soon':
-        return 'Coming Soon';
+        return 'Coming Soon',
       default:
         return 'Unknown'}
-  };
+  },
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -230,20 +230,20 @@ export default function Page() {
             </h2>
             <p className="text-gray - 300 mb-8 max - w-2xl mx -auto">
               Our AI - powered solutions are designed to streamline operations, boost productivity, and drive growth.Get started today and experience the future of business automation.</p>
-            <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div  className="flex flex - col sm: flex - row gap-4 justify -center">
               <button     className="px-8 py-4 bg-gradient - to - r from - purple - 600 to - blue - 600 text-white font - semibold rounded-lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 flex items - center gap-2">
                 <Rocket className="w-5 h-5" />
                 Get Started
               </button>
               <button     className="px-8 py-4 bg-white / 10 backdrop - blur - sm border border-white / 20 text-white font - semibold rounded-lg hover:bg-white / 20 transition - all duration -300">
-                Schedule Demo;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
-};
+                Schedule Demo,
+              </button>,
+            </div>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) 
+},
 =======
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
@@ -362,7 +362,7 @@ export default function Page() {
         )}
       </div>
     </div>
-  )};
+  )},
 
-export default AdvancedAIServicesHub;
+export default AdvancedAIServicesHub,
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

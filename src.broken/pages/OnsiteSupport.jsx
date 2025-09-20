@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -48,7 +48,7 @@ export default function Page() {
     category: "Emergency",
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
-];
+],
 
 const successStories = [{
     id: 1,
@@ -77,7 +77,7 @@ const successStories = [{
     results: "Zero trading downtime, data integrity maintained, improved disaster recovery",
     logo: "FSF"
 
-];
+],
 
 const processSteps = [{
     step: 1,
@@ -107,7 +107,7 @@ const processSteps = [{
     icon: FileText,
     duration: "1 - 2 hours"
 
-];
+],
 
 const supportBenefits = [{
     title: "Rapid Response",
@@ -133,16 +133,16 @@ const supportBenefits = [{
     icon: Shield,
     examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Hardware', 'Networking', 'Software', 'Data', 'Security', 'Emergency'];
+  const categories = ['AllHardware', 'NetworkingSoftware', 'DataSecurity', 'Emergency'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? onsiteSupportSolutions
-    : onsiteSupportSolutions.filter(solution => solution.category === selectedCategory) ;
+    : onsiteSupportSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}

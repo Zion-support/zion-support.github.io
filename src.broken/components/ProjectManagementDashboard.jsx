@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [;
+import React, { useState } from 'react',
+import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X const mockProjects = [,
 
     {
 
@@ -11,15 +11,15 @@ import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChar
         progress: 65,
         startDate: '2024-01-15',
         endDate: '2024-06-30',
-        team['John Smith',Sarah Johnson',Mike Chen'],;
+        team['John Smith',Sarah Johnson',Mike Chen'],
         budget: 150000,
         spent: 97500,
-        tasks[;
+        tasks[,
             { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '2024-03-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
             { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '2024-04-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
             { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '2024-05-15', priority: 'medium', estimatedHours: 100, actualHours: 0 }
         ]
-    },;
+    },
     {
 
         id: '2',
@@ -30,14 +30,14 @@ import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChar
         progress: 25,
         startDate: '2024-03-01',
         endDate: '2024-08-31',
-        team['Emily Davis',Alex Rodriguez'],;
+        team['Emily Davis',Alex Rodriguez'],
         budget: 200000,
         spent: 50000,
-        tasks[;
+        tasks[,
             { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
             { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '2024-05-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
         ]
-    },;
+    },
     {
 
         id: '3',
@@ -48,71 +48,71 @@ import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChar
         progress: 90,
         startDate: '2024-02-01',
         endDate: '2024-04-30',
-        team['Lisa Wang',David Kim'],;
+        team['Lisa Wang',David Kim'],
         budget: 120000,
         spent: 108000,
-        tasks[;
+        tasks[,
             { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '2024-03-30', priority: 'high', estimatedHours: 200, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '2024-04-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]
 
-];
+],
 const statusColors = {
 
   'planning': 'bg-zion-blue text-white',in-progress': 'bg-zion-cyan text-white',review': 'bg-zion-gold text-white',completed': 'bg-zion-emerald text-white',on-hold': 'bg-zion-slate text-white'
 
-};
+},
 const priorityColors = {
 
   'low': 'bg-zion-emerald text-white',medium': 'bg-zion-gold text-white',high': 'bg-zion-orange text-white',critical': 'bg-red-500 text-white'
 
-};
+},
 export function ProjectManagementDashboard() {
-    const [isVisible, setIsVisible] = useState(false);
-    const [selectedProject, setSelectedProject] = useState(null);
-    const [filterStatus, setFilterStatus] = useState('all');
-    const [filterPriority, setFilterPriority] = useState('all');
-    const [searchQuery, setSearchQuery] = useState('');
-    const [viewMode, setViewMode] = useState('grid');
+    const [isVisible, setIsVisible] = useState(false),
+    const [selectedProject, setSelectedProject] = useState(null),
+    const [filterStatus, setFilterStatus] = useState('all'),
+    const [filterPriority, setFilterPriority] = useState('all'),
+    const [searchQuery, setSearchQuery] = useState(''),
+    const [viewMode, setViewMode] = useState('grid'),
     const filteredProjects = mockProjects.filter(project => {
 
-        const statusMatch = filterStatus === 'all' || project.status === filterStatus;
-        const priorityMatch = filterPriority === 'all' || project.priority === filterPriority;
+        const statusMatch = filterStatus === 'all' || project.status === filterStatus,
+        const priorityMatch = filterPriority === 'all' || project.priority === filterPriority,
         const searchMatch = project.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-            project.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-        return statusMatch && priorityMatch && searchMatch}) ;
+            project.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+        return statusMatch && priorityMatch && searchMatch}) ,
     const getStatusIcon = (status) => {
 
         switch(status) {
 
-            case 'planning': return <Calendar className="w-4 h-4"/>;'"
-            case 'in-progress': return <TrendingUp className="w-4 h-4"/>;'"
-            case 'review': return <Eye className="w-4 h-4"/>;'"
-            case 'completed': return <CheckCircle className="w-4 h-4"/>;'"
-            case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;"
+            case 'planning': return <Calendar className="w-4 h-4"/>,'"
+            case 'in-progress': return <TrendingUp className="w-4 h-4"/>,'"
+            case 'review': return <Eye className="w-4 h-4"/>,'"
+            case 'completed': return <CheckCircle className="w-4 h-4"/>,'"
+            case 'on-hold': return <AlertTriangle className="w-4 h-4"/>,"
             default: return <Clock className="w-4 h-4"/>}
-    };
+    },
     const getProgressColor = (progress) => {
 
         if(progress >= 80)
-            return 'bg-zion-emerald';
+            return 'bg-zion-emerald',
         if(progress >= 60)
-            return 'bg-zion-cyan';
+            return 'bg-zion-cyan',
         if(progress >= 40)
-            return 'bg-zion-gold';
+            return 'bg-zion-gold',
         if(progress >= 20)
-            return 'bg-zion-orange';
-        return 'bg-red-500'};
+            return 'bg-zion-orange',
+        return 'bg-red-500'},
     const calculateProjectHealth = (project) => {
 
-        const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length;
-        const totalTasks = project.tasks.length;
-        const budgetUtilization = (project.spent / project.budget) * 100;
+        const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length,
+        const totalTasks = project.tasks.length,
+        const budgetUtilization = (project.spent / project.budget) * 100,
         if(overdueTasks > 0 || budgetUtilization > 90)
-            return 'critical';
+            return 'critical',
         if(overdueTasks > 0 || budgetUtilization > 75)
-            return 'warning';
-        return 'healthy'};
+            return 'warning',
+        return 'healthy'},
     if(!isVisible) {
 "
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">"
@@ -183,7 +183,7 @@ export function ProjectManagementDashboard() {
                   </div>"
                   <div className="flex items-center gap-2">`
                     <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
-                      {project.status.replace('-',)}
+                      {project.status.replace('-')}
                     </span>`
                     <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[project.priority]}`}>
                       {project.priority}
@@ -266,7 +266,7 @@ export function ProjectManagementDashboard() {
                       </td>"
                       <td className="px-6 py-4">`
                         <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>
-                          {project.status.replace('-',)}
+                          {project.status.replace('-')}
                         </span>
                       </td>"
                       <td className="px-6 py-4">"
@@ -360,7 +360,7 @@ export function ProjectManagementDashboard() {
                     <div className="flex items-center justify-between">"
                       <span className="text-zion-slate-light">Status:</span>`
                       <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProject.status]}`}>
-                        {selectedProject.status.replace('-',)}
+                        {selectedProject.status.replace('-')}
                       </span>
                     </div>"
                     <div className="flex items-center justify-between">"
@@ -385,7 +385,7 @@ export function ProjectManagementDashboard() {
                           <span className={`px-2 py-1 text-xs rounded-full ${task.status === 'completed' ? 'bg-zion-emerald text-white' :'
                     task.status === 'in-progress' ? 'bg-zion-cyan text-white' :'`
                         task.status === 'review' ? 'bg-zion-gold text-white' : 'bg-zion-slate text-white'}`}>
-                            {task.status.replace('-',)}
+                            {task.status.replace('-')}
                           </span>
                         </div>"
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">

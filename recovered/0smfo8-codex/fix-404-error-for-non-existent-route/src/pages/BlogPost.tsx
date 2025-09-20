@@ -1,46 +1,46 @@
 
-import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
-import type { BlogPost as BlogPostType } from "@/types/blog";
-import { Separator } from "@/components/ui/separator";
-import { AppLayout } from "@/components/layout/AppLayout";
+import { useState, useEffect } from "react",
+import { useParams, Link, useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react",
+import type { BlogPost as BlogPostType } from "@/types/blog",
+import { Separator } from "@/components/ui/separator",
+import { AppLayout } from "@/components/layout/AppLayout",
 
 // Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts";
+import { BLOG_POSTS } from "@/data/blog-posts",
 
 export default function BlogPost() {
-  const { slug } = useParams() as { slug: string };
-  const navigate = useNavigate();
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
+  const { slug } = useParams() as { slug: string },
+  const navigate = useNavigate(),
+  const [post, setPost] = useState<BlogPostType | null>(null),
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
+  const [showShareMenu, setShowShareMenu] = useState(false),
   
   useEffect(() => {
     // Find the current post by slug
-    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug),
     
     if (currentPost) {
-      setPost(currentPost);
+      setPost(currentPost),
       
       // Find related posts (same category, excluding current post)
       const related = BLOG_POSTS.filter(p => 
         p.id !== currentPost.id && 
         (p.category === currentPost.category || 
          p.tags.some(tag => currentPost.tags.includes(tag)))
-      ).slice(0, 3);
+      ).slice(0, 3),
       
-      setRelatedPosts(related);
+      setRelatedPosts(related),
     } else {
       // Post not found
-      navigate("/blog", { replace: true });
+      navigate("/blog", { replace: true }),
     }
     
     // Scroll to top when post changes
-    window.scrollTo(0, 0);
-  }, [slug, navigate]);
+    window.scrollTo(0, 0),
+  }, [slug, navigate]),
   
   if (!post) {
     return (
@@ -49,25 +49,24 @@ export default function BlogPost() {
           <div className="animate-pulse">Loading article...</div>
         </div>
       </AppLayout>
-    );
+    ),
   }
   
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
+    const url = encodeURIComponent(window.location.href),
+    const title = encodeURIComponent(post.title),
     
     switch (platform) {
       case 'facebook':
-        return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`,
       case 'twitter':
-        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
       case 'linkedin':
-        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-      default:
-        return '#';
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+      default: return '#'
     }
-  };
+  },
   
   return (
     <AppLayout>
@@ -114,8 +113,8 @@ export default function BlogPost() {
                   alt={post.author.name} 
                   className="w-12 h-12 rounded-full mr-3"
                   onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80";
+                    const target = e.target as HTMLImageElement,
+                    target.src = "https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=100&h=100&q=80"
                   }}
                 />
                 <div>
@@ -188,8 +187,8 @@ export default function BlogPost() {
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+                  const target = e.target as HTMLImageElement,
+                  target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                 }}
               />
             </div>
@@ -233,8 +232,8 @@ export default function BlogPost() {
                           alt={relatedPost.title}
                           className="object-cover w-full h-full"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+                            const target = e.target as HTMLImageElement,
+                            target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                           }}
                         />
                       </div>
@@ -252,7 +251,7 @@ export default function BlogPost() {
             <div className="flex justify-between items-center mt-12">
               <Button
                 variant="outline"
-                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
                 asChild
               >
                 <Link to="/blog">
@@ -265,5 +264,5 @@ export default function BlogPost() {
         </div>
       </div>
     </AppLayout>
-  );
+  )
 }

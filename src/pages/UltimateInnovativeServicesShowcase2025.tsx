@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Brain,
   Cloud,
@@ -30,24 +30,23 @@ import {
   DollarSign,
   Clock,
   Shield as ShieldIcon
-} from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025';
-
+} from "lucide-react";
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "../data/ultimateInnovativeServices2025";
 export default function UltimateInnovativeServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-  const [sortBy, setSortBy] = useState<string>('innovation');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all'),
+  const [searchTerm, setSearchTerm] = useState<string>(''),
+  const [sortBy, setSortBy] = useState<string>('innovation'),
 
   const filteredServices = useMemo(() => {
-    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
+    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025,
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
 
     if (selectedSubcategory !== 'all') {
-      filtered = filtered.filter(service => service.subcategory === selectedSubcategory);
+      filtered = filtered.filter(service => service.subcategory === selectedSubcategory),
     }
 
     if (searchTerm) {
@@ -55,73 +54,69 @@ export default function UltimateInnovativeServicesShowcase2025() {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      ),
     }
 
     // Sort services
     switch (sortBy) {
       case 'price-low':
-        filtered = [...filtered].sort((a, b) => a.price - b.price);
-        break;
+        filtered = [...filtered].sort((a, b) => a.price - b.price),
+        break,
       case 'price-high':
-        filtered = [...filtered].sort((a, b) => b.price - a.price);
-        break;
+        filtered = [...filtered].sort((a, b) => b.price - a.price),
+        break,
       case 'roi':
         filtered = [...filtered].sort((a, b) => {
-          const aRoi = parseInt(a.roi.split('%')[0]);
-          const bRoi = parseInt(b.roi.split('%')[0]);
-          return bRoi - aRoi;
-        });
-        break;
+          const aRoi = parseInt(a.roi.split('%')[0]),
+          const bRoi = parseInt(b.roi.split('%')[0]),
+          return bRoi - aRoi,
+        }),
+        break,
       case 'delivery':
         filtered = [...filtered].sort((a, b) => {
-          const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
-          const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
-          return aWeeks - bWeeks;
-        });
-        break;
+          const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]),
+          const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]),
+          return aWeeks - bWeeks,
+        }),
+        break,
       default: // innovation
         filtered = [...filtered].sort((a, b) => {
-          const innovationOrder = ['Revolutionary', 'Breakthrough', 'Advanced'];
-          const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
-          const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
-          return aIndex - bIndex;
+          const innovationOrder = ['RevolutionaryBreakthrough', 'Advanced'],
+          const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]),
+          const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]),
+          return aIndex - bIndex,
         });
     }
 
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
-
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
-      case 'Blockchain & Web3': return <Globe className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'IoT & Edge Computing': return <Network className="w-6 h-6" />;
-      case 'Metaverse & AR/VR': return <Smartphone className="w-6 h-6" />;
-      case 'Robotics & Automation': return <Rocket className="w-6 h-6" />;
-      case 'Biotechnology': return <Database className="w-6 h-6" />;
-      case 'Space Technology': return <Zap className="w-6 h-6" />;
-      case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
-      default: return <Star className="w-6 h-6" />;
+      case 'Quantum Computing': return <Cpu className="w-6 h-6" />,
+      case 'Blockchain & Web3': return <Globe className="w-6 h-6" />,
+      case 'Cybersecurity': return <Shield className="w-6 h-6" />,
+      case 'IoT & Edge Computing': return <Network className="w-6 h-6" />,
+      case 'Metaverse & AR/VR': return <Smartphone className="w-6 h-6" />,
+      case 'Robotics & Automation': return <Rocket className="w-6 h-6" />,
+      case 'Biotechnology': return <Database className="w-6 h-6" />,
+      case 'Space Technology': return <Zap className="w-6 h-6" />,
+      case 'Green Technology': return <BarChart3 className="w-6 h-6" />,
+      default: return <Star className="w-6 h-6" />
     }
   };
-
   const getInnovationBadge = (level: string) => {
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':
-        return <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">🚀 Revolutionary</span>;
+        return <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">🚀 Revolutionary</span>,
       case 'Breakthrough':
-        return <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">💡 Breakthrough</span>;
+        return <span className="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">💡 Breakthrough</span>,
       case 'Advanced':
-        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
-      default:
-        return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>;
+        return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>,
+      default: return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
@@ -402,11 +397,11 @@ export default function UltimateInnovativeServicesShowcase2025() {
             <div className="mt-8 text-blue-100">
               <p className="text-lg font-medium mb-2">Zion Tech Group</p>
               <p className="text-sm">364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="text-sm">https://ziontechgroup.com</p>
+              <p className="text-sm">https: //ziontechgroup.com</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

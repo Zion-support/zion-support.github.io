@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export function TrustedBySection() {
   const companies = ['
-    'Microsoft',Google',Amazon',Meta',Apple',Netflix',
-  ];
+    'Microsoft',Google',Amazon',Meta',Apple',Netflix'
+  ],
   return ()
     <section className="py-16 bg-white/5">"
       <div className="container mx-auto px-4 text-center">"
@@ -18,6 +18,6 @@ export function TrustedBySection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"

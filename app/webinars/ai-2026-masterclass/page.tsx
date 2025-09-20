@@ -1,17 +1,17 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI';
-  description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions that drive real business results. Live session with Q&A.';
-  keywords: ['AI masterclassAI 2026', 'AI trainingAI implementation', 'business AI'];
+  title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI',
+  description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions that drive real business results. Live session with Q&A.',
+  keywords: ['AI masterclassAI 2026AI trainingAI implementation', 'business AI'],
   openGraph: {,
-    title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI';
-    description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions.';
-    type: 'event';
-    startTime: '2025-02-15T14:00:00.000Z';
-    endTime: '2025-02-15T16:00:00.000Z',}
-};
+    title: 'AI 2026 Masterclass: Transform Your Business with Next-Gen AI',
+    description: 'Join our exclusive AI 2026 Masterclass and learn how to implement cutting-edge AI solutions.',
+    type: 'event',
+    startTime: '2025-02-15T14:00:00.000Z',
+    endTime: '2025-02-15T16:00:00.000Z'}
+},
 export default function AI2026Masterclass() {,
   return (,
     <div className="max-w-4xl mx-auto px-4 py-8">,
@@ -48,14 +48,14 @@ export default function AI2026Masterclass() {,
               <div className="bg-blue-50 p-4 rounded-lg">,
                 <h3 className="font-semibold text-blue-900 mb-2">🚀 AI Trends 2026</h3>,
                 <p className="text-blue-800 text-sm">,
-                  Discover the revolutionary AI technologies that will transform industries;
+                  Discover the revolutionary AI technologies that will transform industries,
                   from quantum AI to neural interfaces and autonomous systems.,
                 </p>,
               </div>,
               <div className="bg-green-50 p-4 rounded-lg">,
                 <h3 className="font-semibold text-green-900 mb-2">💼 Business Implementation</h3>,
                 <p className="text-green-800 text-sm">,
-                  Learn proven strategies for implementing AI in your organization;
+                  Learn proven strategies for implementing AI in your organization,
                   including change management and ROI optimization.,
                 </p>,
               </div>,
@@ -324,4 +324,4 @@ export default function AI2026Masterclass() {,
         </footer>,
       </article>,
     </div>,
-  ),}
+  )}

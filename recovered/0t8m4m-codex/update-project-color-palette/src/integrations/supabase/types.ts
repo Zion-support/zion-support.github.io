@@ -38,7 +38,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       analytics_events: {
@@ -76,7 +76,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       api_keys: {
@@ -123,7 +123,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       api_logs: {
@@ -177,7 +177,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       certifications: {
@@ -221,7 +221,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       content: {
@@ -271,7 +271,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       contract_templates: {
@@ -309,7 +309,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       education: {
@@ -365,7 +365,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       fraud_detection_reports: {
@@ -479,7 +479,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       hire_requests: {
@@ -666,7 +666,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       jobs: {
@@ -716,7 +716,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       milestone_activities: {
@@ -764,7 +764,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       notification_preferences: {
@@ -799,7 +799,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       notifications: {
@@ -843,7 +843,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       partner_payouts: {
@@ -887,7 +887,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       partner_profiles: {
@@ -946,7 +946,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       partner_referral_links: {
@@ -990,7 +990,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       portfolio_projects: {
@@ -1040,7 +1040,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       profiles: {
@@ -1115,7 +1115,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       project_milestones: {
@@ -1172,7 +1172,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       project_notes: {
@@ -1211,7 +1211,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       projects: {
@@ -1275,7 +1275,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       quote_requests: {
@@ -1356,7 +1356,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       referral_codes: {
@@ -1388,7 +1388,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       referral_rewards: {
@@ -1443,7 +1443,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       referrals: {
@@ -1523,7 +1523,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       reminder_logs: {
@@ -1564,7 +1564,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       resume_skills: {
@@ -1602,7 +1602,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       review_reports: {
@@ -1647,7 +1647,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "reviews"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
       reviews: {
@@ -1726,7 +1726,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       scheduled_jobs: {
@@ -1806,7 +1806,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       talent_resumes: {
@@ -1847,7 +1847,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       tenant_administrators: {
@@ -1883,7 +1883,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       user_onboarding: {
@@ -1975,7 +1975,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       user_privacy_settings: {
@@ -2007,7 +2007,7 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       webhook_configs: {
@@ -2054,7 +2054,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       whitelabel_tenants: {
@@ -2113,7 +2113,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-          },
+          }
         ]
       }
       work_history: {
@@ -2166,7 +2166,7 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-          },
+          }
         ]
       }
     }
@@ -2229,7 +2229,7 @@ export type Database = {
         }[]
       }
       complete_referral: {
-        Args: { _referred_id: string; _user_type: string }
+        Args: { _referred_id: string, _user_type: string }
         Returns: undefined
       }
       create_notification: {
@@ -2264,7 +2264,7 @@ export type Database = {
         Returns: string
       }
       generate_fraud_report: {
-        Args: { year: number; month: number }
+        Args: { year: number, month: number }
         Returns: string
       }
       generate_referral_code: {
@@ -2272,7 +2272,7 @@ export type Database = {
         Returns: string
       }
       get_api_key_user_id: {
-        Args: { key_prefix: string; provided_key: string }
+        Args: { key_prefix: string, provided_key: string }
         Returns: string
       }
       get_current_tenant_id: {
@@ -2300,11 +2300,11 @@ export type Database = {
         Returns: undefined
       }
       update_onboarding_milestone: {
-        Args: { _user_id: string; _milestone: string; _status: boolean }
+        Args: { _user_id: string, _milestone: string, _status: boolean }
         Returns: undefined
       }
       verify_api_key: {
-        Args: { provided_key: string; stored_hash: string }
+        Args: { provided_key: string, stored_hash: string }
         Returns: boolean
       }
     }
@@ -2444,7 +2444,7 @@ export const Constants = {
         "jobs:write",
         "talent:read",
         "quotes:write",
-        "webhooks:manage",
+        "webhooks:manage"
       ],
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
@@ -2453,9 +2453,9 @@ export const Constants = {
         "accepted",
         "responded",
         "closed",
-        "archived",
+        "archived"
       ],
-      referral_status: ["pending", "completed", "expired"],
-    },
-  },
+      referral_status: ["pending", "completed", "expired"]
+    }
+  }
 } as const

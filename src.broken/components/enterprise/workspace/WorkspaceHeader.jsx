@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 export default function Page() {
  Workspace
             </h1>"
@@ -22,7 +22,7 @@ export default function Page() {
         </div>
       </div>
 "
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">"
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">"
         <div className="bg-card rounded-lg p-4 border border-border">"
           <div className="text-sm text-muted-foreground">
             Active Job Listings
@@ -43,6 +43,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 '"

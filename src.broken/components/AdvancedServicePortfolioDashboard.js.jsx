@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useMemo } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
     {
@@ -31,36 +31,36 @@ export default function Page() {
       growth: 42.1,
       complexity: 'Enterprise',
       marketDemand: 'Exploding',
-      technologyMaturity: 'Leading'},
-  ];
+      technologyMaturity: 'Leading'}
+  ],
   const filteredPortfolio = useMemo(() => {
     return portfolioData.filter(service => {
 
       const matchesSearch = service.title
         .toLowerCase()
-        .includes(searchTerm.toLowerCase());
+        .includes(searchTerm.toLowerCase()),
       return ()
         matchesCategory && matchesStatus && matchesComplexity && matchesSearch
-      );
-    });
-  }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]);
+      ),
+    }),
+  }, [selectedCategory, selectedStatus, selectedComplexity, searchTerm]),
   const portfolioMetrics = useMemo(() => {
 
-    const activeServices = portfolioData.filter(s => s.status === 'Active');
+    const activeServices = portfolioData.filter(s => s.status === 'Active'),
     const totalClients = portfolioData.reduce()
       (sum, s) => sum + s.clientCount,
       0
-    );
+    ),
     const avgPerformance =
       activeServices.length > 0
         ? activeServices.reduce((sum, s) => sum + s.performance, 0) /
           activeServices.length
-        : 0;
+        : 0,
     const portfolioGrowth =
       portfolioData.length > 0
         ? portfolioData.reduce((sum, s) => sum + s.growth, 0) /
           portfolioData.length
-        : 0;
+        : 0,
     return {
 
       totalServices: portfolioData.length,
@@ -69,72 +69,72 @@ export default function Page() {
       averagePerformance: Math.round(avgPerformance),
       portfolioGrowth: Math.round(portfolioGrowth),
       marketCoverage: Math.round((portfolioData.length / 50) * 100), // Assuming 50 total possible services
-    };
-  }, [portfolioData]);
+    },
+  }, [portfolioData]),
   const getStatusColor = status => {
 
     switch(status) {
 
       case 'Active':'
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'Development':'
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'Planning':'
-        return 'bg-yellow-100 text-yellow-800';
+        return 'bg-yellow-100 text-yellow-800',
       case 'Discontinued':'
-        return 'bg-red-100 text-red-800';
-      default:'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-red-100 text-red-800',
+      default: '
+        return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
   const getComplexityColor = complexity => {
 
     switch(complexity) {
 
       case 'Basic':'
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'Intermediate':'
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'Advanced':'
-        return 'bg-orange-100 text-orange-800';
+        return 'bg-orange-100 text-orange-800',
       case 'Enterprise':'
-        return 'bg-purple-100 text-purple-800';
-      default:'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-purple-100 text-purple-800',
+      default: '
+        return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
   const getMarketDemandColor = demand => {
 
     switch(demand) {
 
       case 'Low':'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-gray-100 text-gray-800',
       case 'Medium':'
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'High':'
-        return 'bg-orange-100 text-orange-800';
+        return 'bg-orange-100 text-orange-800',
       case 'Exploding':'
-        return 'bg-red-100 text-red-800';
-      default:'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-red-100 text-red-800',
+      default: '
+        return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
   const getTechnologyMaturityColor = maturity => {
 
     switch(maturity) {
 
       case 'Emerging':'
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'Growing':'
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'Mature':'
-        return 'bg-orange-100 text-orange-800';
+        return 'bg-orange-100 text-orange-800',
       case 'Leading':'
-        return 'bg-purple-100 text-purple-800';
-      default:'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-purple-100 text-purple-800',
+      default: '
+        return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
   const categories = ['
     { id: 'all', name: 'All Categories', count: portfolioData.length },
     {
@@ -161,8 +161,8 @@ export default function Page() {
 
       id: 'green-tech',
       name: 'Green Technology',
-      count: portfolioData.filter(s => s.category === 'green-tech').length},
-  ];
+      count: portfolioData.filter(s => s.category === 'green-tech').length}
+  ],
   return ()
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -373,10 +373,10 @@ export default function Page() {
               className="w-full"
               onClick={() => {
 
-                setSelectedCategory('all');
-                setSelectedStatus('all');
-                setSelectedComplexity('all');
-                setSearchTerm('');
+                setSelectedCategory('all'),
+                setSelectedStatus('all'),
+                setSelectedComplexity('all'),
+                setSearchTerm(''),
               }}
             >"
               <Filter className="w-4 h-4 mr-2" />
@@ -614,7 +614,7 @@ export default function Page() {
                   </h4>"
                   <p className="text-sm text-zion-slate-light">
                     {portfolioData.filter(s => s.growth > 30).length} services
-                    showing &gt;30% growth
+                    showing &gt,30% growth
                   </p>
                 </div>
               </div>
@@ -627,7 +627,7 @@ export default function Page() {
                   </h4>"
                   <p className="text-sm text-zion-slate-light">
                     {portfolioData.filter(s => s.performance > 90).length}{' '}
-                    services with &gt;90% performance
+                    services with &gt,90% performance
                   </p>
                 </div>
               </div>
@@ -693,7 +693,7 @@ export default function Page() {
         </div>
       </motion.div>
     </div>
-  );
-};
-export default AdvancedServicePortfolioDashboard;
+  ),
+},
+export default AdvancedServicePortfolioDashboard,
 '"`

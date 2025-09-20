@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Eye, Camera, Atom, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, TrendingUp,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const QuantumSensingImaging: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const QuantumSensingImaging: React.FC = () => {
       title: 'Multi-User Support',
       description: 'Enterprise-grade imaging for organizations of any size'
     }
-  ];
+  ],
 
   const imagingCapabilities = [
     {
       area: 'Quantum Imaging',
-      capabilities: ['Single-photon imaging', 'Quantum-enhanced microscopy', 'Quantum radar', 'Quantum lidar'],
+      capabilities: ['Single-photon imagingQuantum-enhanced microscopy', 'Quantum radarQuantum lidar'],
       improvement: '1000x better resolution',
       sensitivity: 'Single photon level'
     },
     {
       area: 'Quantum Sensing',
-      capabilities: ['Magnetic field sensing', 'Gravitational sensing', 'Temperature sensing', 'Pressure sensing'],
+      capabilities: ['Magnetic field sensingGravitational sensing', 'Temperature sensingPressure sensing'],
       improvement: '100x more sensitive',
       accuracy: 'Femtotesla range'
     },
     {
       area: 'Quantum Cameras',
-      capabilities: ['Infrared cameras', 'X-ray cameras', 'Gamma-ray cameras', 'Terahertz cameras'],
+      capabilities: ['Infrared camerasX-ray cameras', 'Gamma-ray camerasTerahertz cameras'],
       improvement: '500x better detection',
       range: 'Multi-spectral'
     },
     {
       area: 'Quantum Processing',
-      capabilities: ['Image enhancement', 'Noise reduction', 'Feature detection', 'Pattern recognition'],
+      capabilities: ['Image enhancementNoise reduction', 'Feature detectionPattern recognition'],
       improvement: '200x faster processing',
       quality: 'Ultra-high definition'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Medical Imaging',
       description: 'Quantum-enhanced medical imaging for early disease detection and precise diagnostics',
-      benefits: ['Sub-cellular resolution', 'Early disease detection', 'Reduced radiation exposure']
+      benefits: ['Sub-cellular resolutionEarly disease detection', 'Reduced radiation exposure']
     },
     {
       title: 'Security & Surveillance',
       description: 'Quantum imaging for advanced security and surveillance applications',
-      benefits: ['Stealth detection', 'Enhanced visibility', 'Real-time monitoring']
+      benefits: ['Stealth detectionEnhanced visibility', 'Real-time monitoring']
     },
     {
       title: 'Environmental Monitoring',
       description: 'Quantum sensing for pollution detection, climate monitoring, and resource exploration',
-      benefits: ['Real-time monitoring', 'Ultra-sensitive detection', 'Wide area coverage']
+      benefits: ['Real-time monitoringUltra-sensitive detection', 'Wide area coverage']
     },
     {
       title: 'Scientific Research',
       description: 'Quantum imaging for fundamental physics research and discovery',
-      benefits: ['Unprecedented precision', 'New physics discovery', 'Advanced instrumentation']
+      benefits: ['Unprecedented precisionNew physics discovery', 'Advanced instrumentation']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const QuantumSensingImaging: React.FC = () => {
       period: '/month',
       description: 'Perfect for research institutions and small imaging projects',
       features: [
-        'Up to 100 images/month',
-        'Basic quantum cameras',
-        'Standard imaging modes',
-        'Email support',
+        'Up to 100 images/monthBasic quantum cameras',
+        'Standard imaging modesEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const QuantumSensingImaging: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing imaging teams and industrial applications',
       features: [
-        'Up to 500 images/month',
-        'Advanced quantum cameras',
-        'Custom imaging configurations',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Up to 500 images/monthAdvanced quantum cameras',
+        'Custom imaging configurationsPriority support',
+        'Advanced analyticsAPI access',
         'Multi-user access'
       ],
       popular: true
@@ -128,17 +123,14 @@ const QuantumSensingImaging: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations and government agencies',
       features: [
-        'Unlimited images',
-        'Custom quantum camera development',
-        'Dedicated quantum infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Unlimited imagesCustom quantum camera development',
+        'Dedicated quantum infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const QuantumSensingImaging: React.FC = () => {
       position: "Environmental Director",
       company: "Environmental Research Institute"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const QuantumSensingImaging: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Image with Quantum Precision?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const QuantumSensingImaging: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default QuantumSensingImaging;
+export default QuantumSensingImaging,

@@ -1,38 +1,30 @@
-import React, { useState } from 'react';
-export default ServicesPricingPage;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default ServicesPricingPage,
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
-      features: ['Everything in Starter',
-        'Advanced AI Analytics',
-        'Custom Machine Learning Models',
-        'Priority Support',
-        '25 User Licenses',
-        'Advanced Security Features',
-        'Weekly Reports',
-        'API Access',
+      features: ['Everything in StarterAdvanced AI Analytics',
+        'Custom Machine Learning ModelsPriority Support',
+        '25 User LicensesAdvanced Security Features',
+        'Weekly ReportsAPI Access'
       ],
       popular: true,
-      icon: Shield,
+      icon: Shield
     },
     {
       id: 'enterprise',
       name: 'Enterprise',
       description: 'Complete solution for large organizations',
       price: { monthly: 1999, annual: 19999 },
-      features: ['Everything in Professional',
-        'Custom AI Solutions',
-        'Dedicated Support Team',
-        'Unlimited User Licenses',
-        'Enterprise Security',
-        'Real - time Analytics',
-        'Custom Integrations',
-        'On - site Training',
+      features: ['Everything in ProfessionalCustom AI Solutions',
+        'Dedicated Support TeamUnlimited User Licenses',
+        'Enterprise SecurityReal - time Analytics',
+        'Custom IntegrationsOn - site Training'
       ],
       popular: false,
-      icon: Cloud,
-    },
-  ];
+      icon: Cloud
+    }
+  ],
 
   const serviceCategories = [{
       id: 'ai - automation',
@@ -40,46 +32,38 @@ export default function Page() {
       icon: Zap,
       description: 'Intelligent automation solutions',
       services: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Document Processing',
-        'Predictive Analytics',
-      ],
+        'Process AutomationWorkflow Optimization',
+        'Intelligent Document ProcessingPredictive Analytics'
+      ]
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
       description: 'Advanced security solutions',
-      services: ['Threat Detection',
-        'Vulnerability Assessment',
-        'Security Monitoring',
-        'Incident Response',
-      ],
+      services: ['Threat DetectionVulnerability Assessment',
+        'Security MonitoringIncident Response'
+      ]
     },
     {
       id: 'cloud - management',
       name: 'Cloud Management',
       icon: Cloud,
       description: 'Cloud infrastructure solutions',
-      services: ['Cloud Migration',
-        'Infrastructure Management',
-        'Cost Optimization',
-        'Performance Monitoring',
-      ],
+      services: ['Cloud MigrationInfrastructure Management',
+        'Cost OptimizationPerformance Monitoring'
+      ]
     },
     {
       id: 'data - analytics',
       name: 'Data Analytics',
       icon: Database,
       description: 'Data - driven insights',
-      services: ['Business Intelligence',
-        'Data Visualization',
-        'Predictive Modeling',
-        'Real - time Analytics',
-      ],
-    },
-  ];
+      services: ['Business IntelligenceData Visualization',
+        'Predictive ModelingReal - time Analytics'
+      ]
+    }
+  ],
 
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -102,10 +86,10 @@ export default function Page() {
       'Healthcare Technology': <Heart className="h-5 w-5" />,
       FinTech: <TrendingUp className="h-5 w-5" />,
       'Education Technology': <GraduationCap className="h-5 w-5" />,
-      'Supply Chain': <Truck className="h-5 w-5" />,
-    };
-    return categoryIcons[category] || <Zap className="h-5 w-5" />;
-  };
+      'Supply Chain': <Truck className="h-5 w-5" />
+    },
+    return categoryIcons[category] || <Zap className="h-5 w-5" />,
+  },
 
   return (<>
       <SEO
@@ -298,7 +282,7 @@ export default function Page() {
               <p className="text-gray - 300 mb-8">
                 Contact our team to discuss your specific needs and get a
                 customized solution.</p>
-              <div  className="flex flex - col sm:flex - row gap-4 justify -center">
+              <div  className="flex flex - col sm: flex - row gap-4 justify -center">
                 <button     className="px-8 py-3 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white rounded-lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration -300">
                   <Mail className="w-5 h-5 inline mr-2" />
                   Contact Sales
@@ -312,6 +296,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-    </>) ;
-};
+    </>) 
+},
 

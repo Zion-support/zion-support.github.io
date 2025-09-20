@@ -1,37 +1,37 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     quantum: {
       name: 'Quantum Computing',
       icon: <Atom className="w-6 h-6" />,
-      color: 'from - indigo - 500 to - purple - 500',
+      color: 'from - indigo - 500 to - purple - 500'
     },
     devops: {
       name: 'DevOps & Automation',
       icon: <Workflow className="w-6 h-6" />,
-      color: 'from - blue - 500 to - cyan - 500',
+      color: 'from - blue - 500 to - cyan - 500'
     },
     cybersecurity: {
       name: 'Cybersecurity',
       icon: <Shield className="w-6 h-6" />,
-      color: 'from - red - 500 to - orange - 500',
+      color: 'from - red - 500 to - orange - 500'
     },
     analytics: {
       name: 'Analytics & BI',
       icon: <BarChart3 className="w-6 h-6" />,
-      color: 'from - green - 500 to - emerald - 500',
+      color: 'from - green - 500 to - emerald - 500'
     },
     cloud: {
       name: 'Cloud & Infrastructure',
       icon: <Cloud className="w-6 h-6" />,
-      color: 'from - sky - 500 to - blue - 500',
+      color: 'from - sky - 500 to - blue - 500'
     },
     'micro - saas': {
       name: 'Micro SAAS',
       icon: <Code className="w-6 h-6" />,
-      color: 'from - yellow-500 to - orange - 500',
-    },
-  };
+      color: 'from - yellow-500 to - orange - 500'
+    }
+  },
 
   const services = [// AI & Machine Learning
     {
@@ -42,15 +42,13 @@ export default function Page() {
       category: 'quantum',
       price: '$49,999 - $199,999',
       features: [
-        'Quantum - AI Integration',
-        'Hybrid Processing',
-        'Advanced ML',
-        'Real - time Optimization',
+        'Quantum - AI IntegrationHybrid Processing',
+        'Advanced MLReal - time Optimization'
       ],
       icon: <Atom className="w-8 h-8" />,
       color: 'from - purple - 500 to - pink - 500',
       link: '/services / ai - quantum - hybrid - platform',
-      featured: true,
+      featured: true
     },
     {
       id: 'ai - devops - automation',
@@ -59,15 +57,13 @@ export default function Page() {
         'AI - powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.',
       category: 'devops',
       price: '$29,999 - $119,999',
-      features: ['AI Code Review',
-        'Smart CI / CD',
-        'Predictive Monitoring',
-        'Auto - scaling',
+      features: ['AI Code ReviewSmart CI / CD',
+        'Predictive MonitoringAuto - scaling'
       ],
       icon: <Workflow className="w-8 h-8" />,
       color: 'from - blue - 500 to - cyan - 500',
       link: '/services / ai - devops - automation - platform',
-      featured: true,
+      featured: true
     },
     {
       id: 'ai - business - intelligence',
@@ -76,15 +72,13 @@ export default function Page() {
         'Revolutionary AI - powered business intelligence and analytics platform that transforms data into actionable insights.',
       category: 'analytics',
       price: '$19,999 - $79,999',
-      features: ['Predictive Analytics',
-        'Real - time Insights',
-        'AI - powered Reports',
-        'Custom Dashboards',
+      features: ['Predictive AnalyticsReal - time Insights',
+        'AI - powered ReportsCustom Dashboards'
       ],
       icon: <BarChart3 className="w-8 h-8" />,
       color: 'from - green - 500 to - emerald - 500',
       link: '/services / ai - business - intelligence - analytics',
-      featured: true,
+      featured: true
     },
     {
       id: 'ai - workflow-orchestrator',
@@ -93,15 +87,13 @@ export default function Page() {
         'Intelligent workflow automation platform that orchestrates complex business processes with AI - driven decision making.',
       category: 'ai - ml',
       price: '$24,999 - $99,999',
-      features: ['Process Automation',
-        'AI Decision Making',
-        'Workflow Optimization',
-        'Real - time Monitoring',
+      features: ['Process AutomationAI Decision Making',
+        'Workflow OptimizationReal - time Monitoring'
       ],
       icon: <Brain className="w-8 h-8" />,
       color: 'from - purple - 500 to - indigo - 500',
       link: '/services / ai - workflow-orchestrator',
-      featured: false,
+      featured: false
     },
     {
       id: 'ai - data - governance',
@@ -110,15 +102,13 @@ export default function Page() {
         'Comprehensive AI - powered data governance platform ensuring data quality, compliance, and security.',
       category: 'ai - ml',
       price: '$34,999 - $129,999',
-      features: ['Data Quality',
-        'Compliance Management',
-        'AI Monitoring',
-        'Security Controls',
+      features: ['Data QualityCompliance Management',
+        'AI MonitoringSecurity Controls'
       ],
       icon: <Shield className="w-8 h-8" />,
       color: 'from - indigo - 500 to - purple - 500',
       link: '/services / ai - data - governance - platform',
-      featured: false,
+      featured: false
     },
     {
       id: 'ai - customer - experience',
@@ -127,15 +117,13 @@ export default function Page() {
         'Advanced AI - powered customer experience analytics platform for deep customer insights and optimization.',
       category: 'analytics',
       price: '$22,999 - $89,999',
-      features: ['Customer Insights',
-        'Behavior Analysis',
-        'Predictive Modeling',
-        'Experience Optimization',
+      features: ['Customer InsightsBehavior Analysis',
+        'Predictive ModelingExperience Optimization'
       ],
       icon: <Users className="w-8 h-8" />,
       color: 'from - pink - 500 to - rose - 500',
       link: '/services / ai - customer - experience - analytics',
-      featured: false,
+      featured: false
     },
     {
       id: 'ai - financial - risk',
@@ -144,15 +132,13 @@ export default function Page() {
         'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',
       category: 'ai - ml',
       price: '$39,999 - $149,999',
-      features: ['Risk Assessment',
-        'Predictive Modeling',
-        'Real - time Monitoring',
-        'Compliance Reporting',
+      features: ['Risk AssessmentPredictive Modeling',
+        'Real - time MonitoringCompliance Reporting'
       ],
       icon: <TrendingUp className="w-8 h-8" />,
       color: 'from - emerald - 500 to - teal - 500',
       link: '/services / ai - financial - risk - management',
-      featured: false,
+      featured: false
     },
     {
       id: 'ai - code - review-security',
@@ -161,15 +147,13 @@ export default function Page() {
         'Advanced AI - powered code review and security scanning platform for automated vulnerability detection.',
       category: 'cybersecurity',
       price: '$27,999 - $109,999',
-      features: ['Code Analysis',
-        'Security Scanning',
-        'Vulnerability Detection',
-        'Automated Reviews',
+      features: ['Code AnalysisSecurity Scanning',
+        'Vulnerability DetectionAutomated Reviews'
       ],
       icon: <Code className="w-8 h-8" />,
       color: 'from - red - 500 to - pink - 500',
       link: '/services / ai - code - review-security - scanner',
-      featured: false,
+      featured: false
     },
     {
       id: 'zero - trust - network',
@@ -178,15 +162,13 @@ export default function Page() {
         'Modern zero - trust security architecture providing secure access to network resources.',
       category: 'cybersecurity',
       price: '$32,999 - $119,999',
-      features: ['Zero Trust',
-        'Identity Management',
-        'Secure Access',
-        'Network Security',
+      features: ['Zero TrustIdentity Management',
+        'Secure AccessNetwork Security'
       ],
       icon: <Lock className="w-8 h-8" />,
       color: 'from - orange - 500 to - red - 500',
       link: '/services / zero - trust - network - access',
-      featured: false,
+      featured: false
     },
     {
       id: 'cloud - devops',
@@ -195,15 +177,13 @@ export default function Page() {
         'Comprehensive cloud DevOps solutions for modern application development and deployment.',
       category: 'cloud',
       price: '$18,999 - $79,999',
-      features: ['Cloud Migration',
-        'CI / CD Pipelines',
-        'Infrastructure as Code',
-        'Monitoring',
+      features: ['Cloud MigrationCI / CD Pipelines',
+        'Infrastructure as CodeMonitoring'
       ],
       icon: <Cloud className="w-8 h-8" />,
       color: 'from - sky - 500 to - blue - 500',
       link: '/services / cloud - devops',
-      featured: false,
+      featured: false
     },
     {
       id: 'it - infrastructure',
@@ -212,15 +192,13 @@ export default function Page() {
         'Enterprise - grade IT infrastructure solutions for modern business operations.',
       category: 'cloud',
       price: '$25,999 - $99,999',
-      features: ['Infrastructure Design',
-        'Network Solutions',
-        'Security Implementation',
-        '24 / 7 Support',
+      features: ['Infrastructure DesignNetwork Solutions',
+        'Security Implementation24 / 7 Support'
       ],
       icon: <Server className="w-8 h-8" />,
       color: 'from - slate - 500 to - gray - 500',
       link: '/services / it - infrastructure',
-      featured: false,
+      featured: false
     },
     {
       id: 'micro - crm',
@@ -229,33 +207,31 @@ export default function Page() {
         'Lightweight, scalable CRM solution designed for growing businesses and startups.',
       category: 'micro - saas',
       price: '$9,999 - $39,999',
-      features: ['Customer Management',
-        'Sales Tracking',
-        'Automation',
-        'Analytics',
+      features: ['Customer ManagementSales Tracking',
+        'AutomationAnalytics'
       ],
       icon: <Users className="w-8 h-8" />,
       color: 'from - blue - 500 to - indigo - 500',
       link: '/services / micro - crm',
-      featured: false,
-    },
-  ];
+      featured: false
+    }
+  ],
 
   const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     const matchesSearch = service.title.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       service.description.toLowerCase () .includes(searchTerm.toLowerCase () ) ||
       service.features.some(feature =>
-        feature.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+        feature.toLowerCase () .includes(searchTerm.toLowerCase () ) ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
+    website: 'https://ziontechgroup.com'
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">
       <SEO
@@ -436,8 +412,8 @@ export default function Page() {
                 Try adjusting your search or filter criteria
               </p>
               <button     onClick={ () => {
-                  setSearchTerm('') ;
-                  setSelectedCategory('all') ;
+                  setSearchTerm('') ,
+                  setSelectedCategory('all') ,
                 }}
                 className="px-6 py-3 bg-gradient - to - r from - cyan - 500 to - purple - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration -300"
               >
@@ -522,7 +498,7 @@ export default function Page() {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <a
-                href="https://maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709"
+                href="https: //maps.google.com/?q = 364 + E+Main + St + STE + 1008 + Middletown + DE + 19709"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan - 400 hover:text-cyan - 300 transition - colors duration -300"
@@ -533,6 +509,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }
 

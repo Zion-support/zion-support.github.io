@@ -1,49 +1,49 @@
 // Revolutionary Pricing Guide 2030 - Zion Tech Group
 // Comprehensive pricing for cutting-edge micro SAAS, IT, and AI services
-;
+,
 export interface PricingTier {
 
-  id: string;
-  name: string;
-  price: number;
-  billingCycle: 'monthly' | 'yearly' | 'one-time';
-  description: string;
-  features: string[];
-  limitations: string[];
-  recommendedFor: string[];
-  savings?: number;
+  id: string,
+  name: string,
+  price: number,
+  billingCycle: 'monthly' | 'yearly' | 'one-time',
+  description: string,
+  features: string[],
+  limitations: string[],
+  recommendedFor: string[],
+  savings?: number,
   popular?: boolean}
-;
+,
 export interface EnterprisePricing {
 
-  id: string;
-  name: string;
-  description: string;
-  pricing: string;
-  features: string[];
-  benefits: string[];
-  customizations: string[];
+  id: string,
+  name: string,
+  description: string,
+  pricing: string,
+  features: string[],
+  benefits: string[],
+  customizations: string[],
   contactInfo: {
 
-    phone: string;
-    email: string;
-    website: string};
-;export interface ServicePricing {
+    phone: string,
+    email: string,
+    website: string},
+,export interface ServicePricing {
 
-  serviceId: string;
-  serviceName: string;
-  category: string;
-  tiers: PricingTier[];
-  enterprise: EnterprisePricing;
+  serviceId: string,
+  serviceName: string,
+  category: string,
+  tiers: PricingTier[],
+  enterprise: EnterprisePricing,
   marketComparison: {
 
-    competitors: string[];
-    ourAdvantage: string;
+    competitors: string[],
+    ourAdvantage: string,
     priceDifference: string}}
 
-// Zion Tech Group Contact Information;
+// Zion Tech Group Contact Information,
 
-// Revolutionary Micro SAAS Services Pricing;
+// Revolutionary Micro SAAS Services Pricing,
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [{
 "
     serviceId: "neuralflow-enterprise","
@@ -268,9 +268,9 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [{
       priceDifference: "30-50% more value for similar pricing"
     }
   }
-];
+],
 
-// Revolutionary IT Services Pricing;
+// Revolutionary IT Services Pricing,
 export const revolutionaryITServicesPricing: ServicePricing[] = [{
 "
     serviceId: "quantum-infrastructure-consulting","
@@ -359,9 +359,9 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [{
       priceDifference: "25-40% more value for similar pricing"
     }
   }
-];
+],
 
-// Revolutionary AI Services Pricing;
+// Revolutionary AI Services Pricing,
 export const revolutionaryAIServicesPricing: ServicePricing[] = [{
 "
     serviceId: "multimodal-ai-orchestration","
@@ -473,10 +473,10 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [{
       priceDifference: "20-35% more value for similar pricing"
     }
   }
-];
+],
 
-// Pricing Comparison and Recommendations;
+// Pricing Comparison and Recommendations,
 export 
-// Export all pricing data;
+// Export all pricing data,
 export 
 '"

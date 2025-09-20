@@ -1,13 +1,13 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 import { 
   Star, Brain, Atom, Shield, Rocket, Target,
   Users, Globe, Zap, TrendingUp, Award,
   Mail, Phone, MapPin, ArrowRight, ExternalLink,
   Github, Twitter, Linkedin, Facebook, Instagram,
   Youtube
-} from 'lucide-react';
+} from 'lucide-react',
 
 const footerSections = [
   {
@@ -50,7 +50,7 @@ const footerSections = [
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
   }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -59,7 +59,7 @@ const companyLinks = [
   { name: 'Press & Media', href: '/press' },
   { name: 'Partners', href: '/partners' },
   { name: 'Investors', href: '/investors' }
-];
+],
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -68,7 +68,7 @@ const resourceLinks = [
   { name: 'Blog & Insights', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'White Papers', href: '/white-papers' }
-];
+],
 
 const supportLinks = [
   { name: 'Help Center', href: '/help' },
@@ -77,7 +77,7 @@ const supportLinks = [
   { name: 'Community Forum', href: '/community' },
   { name: 'Training & Certification', href: '/training' },
   { name: 'Professional Services', href: '/professional-services' }
-];
+],
 
 const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> },
@@ -86,7 +86,7 @@ const socialLinks = [
   { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-];
+],
 
 export default function UltraFuturisticFooter2035() {
   return (
@@ -94,6 +94,6 @@ export default function UltraFuturisticFooter2035() {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticFooter2035</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default UltimateContentBanner2035;
+  ),
+},
+export default UltimateContentBanner2035,

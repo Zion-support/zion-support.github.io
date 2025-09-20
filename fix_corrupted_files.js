@@ -1,24 +1,24 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require("fs"),
+const path = require("path"),
 // Function to fix corrupted TypeScript files,
 function fixCorruptedFile(filePath) {,
   try {,
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs.readFileSync(filePath, "utf8"),
     // Fix common corruption patterns,
     content = content,
       // Fix import statements with extra commas,
       .replace(,
-        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t/g;
-        "import type { NextPage } from 'next'";
+        /import,\s*typ,\s*e\s*{\s*NextPa,\s*g,\s*e\s*}\s*fr,\s*o,\s*m\s*'ne,\s*x,\s*t/g,
+        "import type { NextPage } from 'next'",
       ),
       .replace(,
-        /import\s*{\s*NextPage\s*}\s*from\s*'next/g;
-        "import type { NextPage } from 'next'";
+        /import\s*{\s*NextPage\s*}\s*from\s*'next/g,
+        "import type { NextPage } from 'next'",
       ),
       // Fix component declarations,
       .replace(,
-        /const\s+(\w+),\s*:\s*NextPage\s*=\s*()\s*=>\s*{/g;
-        "const $1: NextPage = () => {";
+        /const\s+(\w+),\s*:\s*NextPage\s*=\s*()\s*=>\s*{/g,
+        "const $1: NextPage = () => {",
       ),
       // Fix JSX elements with extra commas,
       .replace(/<(\w+)\s*,\s*>/g, "<$1>"),
@@ -41,18 +41,18 @@ function fixCorruptedFile(filePath) {,
       .replace(/BlockchainSolutio,\s*n,\s*s/g, "BlockchainSolutions"),
       .replace(/Zion,\s*Tech,\s*Solutions/g, "Zion Tech Solutions"),
       // Fix comments,
-      .replace(/{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g;
-        "{/* TODO: Add page content */,}"),
+      .replace(/{\/\*\s*TODO:\s*Add,\s*page,\s*content\s*\/\*}/g,
+        "{/* TODO: Add page content */}"),
       // Remove extra spaces and commas,
       .replace(/\s*,\s*/g, " "),
       .replace(/\s+/g, " "),
-      .trim();
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath,}`);
-    return true;
+      .trim(),
+    fs.writeFileSync(filePath, content),
+    console.log(`Fixed: ${filePath}`),
+    return true,
   } catch (error) {,
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message),
+    return false,
   }
 }
 ,

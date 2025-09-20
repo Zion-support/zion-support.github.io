@@ -1,37 +1,27 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-// import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
-// import { enterpriseITInfrastructureServices2026 } from '../data/2025-enterprise-it-infrastructure-services';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+// import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
+// import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services";
 const UltimateServicesShowcase2026 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
-    const [sortBy, setSortBy] = useState('name');
+    const [selectedCategory, setSelectedCategory] = useState('all'),
+    const [searchTerm, setSearchTerm] = useState(''),
+    const [sortBy, setSortBy] = useState('name'),
     // Combine all services
-    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
+    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026],
     const categories = [
-        'all',
-        'Business Intelligence',
-        'Marketing Automation',
-        'Customer Service',
-        'Supply Chain Management',
-        'Financial Technology',
-        'Healthcare Technology',
-        'Legal Technology',
-        'Workflow Automation',
-        'Blockchain Technology',
-        'Internet of Things',
-        'Quantum Computing',
-        'Cybersecurity',
-        'Cloud Infrastructure',
-        'DevOps',
-        'Data Center Management',
-        'Network Security',
-        'Storage Management',
-        'Virtualization',
-        'IT Asset Management',
+        'allBusiness Intelligence',
+        'Marketing AutomationCustomer Service',
+        'Supply Chain ManagementFinancial Technology',
+        'Healthcare TechnologyLegal Technology',
+        'Workflow AutomationBlockchain Technology',
+        'Internet of ThingsQuantum Computing',
+        'CybersecurityCloud Infrastructure',
+        'DevOpsData Center Management',
+        'Network SecurityStorage Management',
+        'VirtualizationIT Asset Management',
         'Performance Monitoring'
-    ];
+    ],
     const filteredServices = allServices
         .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
         .filter(service => service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -40,58 +30,34 @@ const UltimateServicesShowcase2026 = () => {
         .sort((a, b) => {
         switch (sortBy) {
             case 'price':
-                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+                return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),
             case 'category':
-                return a.category.localeCompare(b.category);
+                return a.category.localeCompare(b.category),
             case 'rating':
-                return b.rating - a.rating;
+                return b.rating - a.rating,
             case 'name':
-            default:
-                return a.name.localeCompare(b.name);
+            default: return a.name.localeCompare(b.name)
         }
     });
     const getCategoryIcon = (category) => {
         const icons = {
-            'Business Intelligence': '📊',
-            'Marketing Automation': '🎯',
-            'Customer Service': '🤖',
-            'Supply Chain Management': '📦',
-            'Financial Technology': '💰',
-            'Healthcare Technology': '🏥',
-            'Legal Technology': '⚖️',
-            'Workflow Automation': '⚡',
-            'Blockchain Technology': '🔗',
-            'Internet of Things': '🌐',
-            'Quantum Computing': '🔮',
-            'Cybersecurity': '🛡️',
-            'Cloud Infrastructure': '☁️',
-            'DevOps': '⚡',
-            'Data Center Management': '🏢',
-            'Network Security': '🌐',
-            'Storage Management': '💾',
-            'Virtualization': '🖥️',
-            'IT Asset Management': '📱',
-            'Performance Monitoring': '📊'
-        };
-        return icons[category] || '🚀';
-    };
+            'Business Intelligence': '📊Marketing Automation': '🎯Customer Service': '🤖Supply Chain Management': '📦Financial Technology': '💰Healthcare Technology': '🏥Legal Technology': '⚖️Workflow Automation': '⚡Blockchain Technology': '🔗Internet of Things': '🌐Quantum Computing': '🔮Cybersecurity': '🛡️Cloud Infrastructure': '☁️DevOps': '⚡Data Center Management': '🏢Network Security': '🌐Storage Management': '💾Virtualization': '🖥️IT Asset Management': '📱Performance Monitoring': '📊'
+        },
+        return icons[category] || '🚀',
+    },
     const containerVariants = {
-        hidden: { opacity: 0 },
+        hidden: { opacity: 0 };
         visible: {
-            opacity: 1,
-            transition: {
+            opacity: 1,transition: {
                 staggerChildren: 0.1
             }
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { y: 20, opacity: 0 };
         visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
+            y: 0,opacity: 1,transition: {
+                duration: 0.5,ease: "easeOut"
             }
         }
     };
@@ -106,7 +72,7 @@ const UltimateServicesShowcase2026 = () => {
             </span>
           </motion.h1>
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services, 
+            Discover our comprehensive collection of 20+ cutting-edge innovative services;
             from AI-powered business solutions to enterprise IT infrastructure. 
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
@@ -325,6 +291,6 @@ const UltimateServicesShowcase2026 = () => {
           </div>
         </div>
       </section>
-    </div>);
-};
+    </div>),
+},
 export default UltimateServicesShowcase2026;

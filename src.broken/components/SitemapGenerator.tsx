@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 
 export default function Page() {
-, []);
+, []),
 
-    setSitemapData(sitemap) };
+    setSitemapData(sitemap) },
 
     .map(section => ({
 
@@ -11,21 +11,21 @@ export default function Page() {
       routes: anysection.routes.filter(route => {
 
         return matchesSearch && matchesCategory})}))
-    .filter(section => section.routes.length > 0);
+    .filter(section => section.routes.length > 0),
 
-    a.href = url;
-    a.download = 'sitemap.xml';
-    document.body.appendChild(a) ;
-    a.click () ;
-    document.body.removeChild(a) ;
-    URL.revokeObjectURL(url) };
+    a.href = url,
+    a.download = 'sitemap.xml',
+    document.body.appendChild(a) ,
+    a.click () ,
+    document.body.removeChild(a) ,
+    URL.revokeObjectURL(url) },
 
-    a.href = url;
-    a.download = 'sitemap.csv';
-    document.body.appendChild(a) ;
-    a.click () ;
-    document.body.removeChild(a) ;
-    URL.revokeObjectURL(url) };
+    a.href = url,
+    a.download = 'sitemap.csv',
+    document.body.appendChild(a) ,
+    a.click () ,
+    document.body.removeChild(a) ,
+    URL.revokeObjectURL(url) },
   return ("
     <div className="max-w-7xl mx-auto p-6 space-y-6">"
       <div className="bg-white rounded-lg shadow-lg p-6">"
@@ -195,14 +195,14 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>) };
+    </div>) },
 
 // Missing icon components"
-const Home = () => <Globe className="w-4 h-4"  />;"
-const Calendar = () => <BookOpen className="w-4 h-4"  />;"
-const Video = () => <MessageCircle className="w-4 h-4"  />;"
+const Home = () => <Globe className="w-4 h-4"  />,"
+const Calendar = () => <BookOpen className="w-4 h-4"  />,"
+const Video = () => <MessageCircle className="w-4 h-4"  />,"
 
-export default SitemapGenerator;
+export default SitemapGenerator,
 '"`
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 ArrowRightSparklesZapTrendingUpStar,
 export default function RevolutionaryAIContentPromotionBanner() {,
@@ -23,6 +23,6 @@ const function RevolutionaryAIContentPromotionBanner() { = () => {,
         </div>,
       </div>,
     </divsection>,
-  ),};
-export default function RevolutionaryAIContentPromotionBanner() {;
+  )},
+export default function RevolutionaryAIContentPromotionBanner() {,
 }}}}

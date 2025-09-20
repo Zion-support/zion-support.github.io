@@ -1,12 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Zap, Shield, Cpu, Database, Users, 
   ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
-} from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
 
 export default function DigitalTransformationPage() {
   const services = [
@@ -42,14 +42,14 @@ export default function DigitalTransformationPage() {
       icon: Users,
       color: "from-emerald-500 to-teal-500"
     }
-  ];
+  ],
 
   const stats = [
     { number: "500+", label: "Transformations Completed", icon: Rocket },
     { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
     { number: "300%", label: "ROI Improvement", icon: Star },
     { number: "24/7", label: "Support Available", icon: Clock }
-  ];
+  ],
 
 const transformation: React.FC = () => {
   return (
@@ -66,7 +66,7 @@ const transformation: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default transformation;
+export default transformation,

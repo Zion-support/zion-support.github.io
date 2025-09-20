@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  ArrowRight, 
+  ArrowRight,
   CheckCircle, 
   Cloud, 
   Cpu, 
@@ -13,93 +13,50 @@ import {
   BarChart3,
   Users,
   Rocket
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-
+} from "lucide-react";
+import { SEO } from "../components/SEO";
 const featuredServices = [
   {
-    name: 'AI-Powered Analytics',
-    description: 'Advanced machine learning algorithms that provide real-time insights and predictive analytics for your business.',
-    category: 'AI & ML',
-    color: 'from-blue-500 to-cyan-500',
-    icon: Brain,
-    features: ['Real-time data processing', 'Predictive analytics', 'Custom ML models', 'API integration'],
+    name: 'AI-Powered Analytics',description: 'Advanced machine learning algorithms that provide real-time insights and predictive analytics for your business.',category: 'AI & ML',color: 'from-blue-500 to-cyan-500',icon: Brain,features: ['Real-time data processingPredictive analytics', 'Custom ML modelsAPI integration'],
     href: '/services/ai-analytics'
-  },
+  };
   {
-    name: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions with automated deployment and management for optimal performance.',
-    category: 'Cloud',
-    color: 'from-purple-500 to-pink-500',
-    icon: Cloud,
-    features: ['Auto-scaling', 'Load balancing', 'Monitoring & alerts', 'Security compliance'],
+    name: 'Cloud Infrastructure',description: 'Scalable cloud solutions with automated deployment and management for optimal performance.',category: 'Cloud',color: 'from-purple-500 to-pink-500',icon: Cloud,features: ['Auto-scalingLoad balancing', 'Monitoring & alertsSecurity compliance'],
     href: '/services/cloud-infrastructure'
-  },
+  };
   {
-    name: 'Cybersecurity Suite',
-    description: 'Comprehensive security solutions protecting your digital assets from evolving threats.',
-    category: 'Security',
-    color: 'from-red-500 to-orange-500',
-    icon: Shield,
-    features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Compliance reporting'],
+    name: 'Cybersecurity Suite',description: 'Comprehensive security solutions protecting your digital assets from evolving threats.',category: 'Security',color: 'from-red-500 to-orange-500',icon: Shield,features: ['Threat detectionVulnerability assessment', 'Incident responseCompliance reporting'],
     href: '/services/cybersecurity'
-  },
+  };
   {
-    name: 'Performance Optimization',
-    description: 'Optimize your applications and infrastructure for maximum speed and efficiency.',
-    category: 'Performance',
-    color: 'from-green-500 to-emerald-500',
-    icon: Zap,
-    features: ['Performance monitoring', 'Optimization recommendations', 'Load testing', 'Caching strategies'],
+    name: 'Performance Optimization',description: 'Optimize your applications and infrastructure for maximum speed and efficiency.',category: 'Performance',color: 'from-green-500 to-emerald-500',icon: Zap,features: ['Performance monitoringOptimization recommendations', 'Load testingCaching strategies'],
     href: '/services/performance-optimization'
-  },
+  };
   {
-    name: 'Data Management',
-    description: 'Comprehensive data solutions including storage, processing, and analytics.',
-    category: 'Data',
-    color: 'from-indigo-500 to-blue-500',
-    icon: BarChart3,
-    features: ['Data warehousing', 'ETL pipelines', 'Data governance', 'Business intelligence'],
+    name: 'Data Management',description: 'Comprehensive data solutions including storage, processing, and analytics.',
+    category: 'Data',color: 'from-indigo-500 to-blue-500',icon: BarChart3,features: ['Data warehousingETL pipelines', 'Data governanceBusiness intelligence'],
     href: '/services/data-management'
-  },
+  };
   {
-    name: 'Team Collaboration',
-    description: 'Tools and platforms to enhance team productivity and communication.',
-    category: 'Collaboration',
-    color: 'from-yellow-500 to-orange-500',
-    icon: Users,
-    features: ['Project management', 'Communication tools', 'File sharing', 'Workflow automation'],
+    name: 'Team Collaboration',description: 'Tools and platforms to enhance team productivity and communication.',category: 'Collaboration',color: 'from-yellow-500 to-orange-500',icon: Users,features: ['Project managementCommunication tools', 'File sharingWorkflow automation'],
     href: '/services/team-collaboration'
   }
 ];
-
 const emergingTechnologies = [
   {
-    name: 'Quantum Computing',
-    description: 'Explore the future of computing with quantum algorithms and applications.',
-    icon: Cpu,
-    color: 'from-purple-600 to-indigo-600'
-  },
+    name: 'Quantum Computing',description: 'Explore the future of computing with quantum algorithms and applications.',icon: Cpu,color: 'from-purple-600 to-indigo-600'
+  };
   {
-    name: 'Edge Computing',
-    description: 'Process data closer to the source for faster response times and reduced latency.',
-    icon: Globe,
-    color: 'from-blue-600 to-cyan-600'
-  },
+    name: 'Edge Computing',description: 'Process data closer to the source for faster response times and reduced latency.',icon: Globe,color: 'from-blue-600 to-cyan-600'
+  };
   {
-    name: 'Blockchain Solutions',
-    description: 'Secure, transparent, and decentralized solutions for modern business needs.',
-    icon: Lock,
-    color: 'from-green-600 to-emerald-600'
-  },
+    name: 'Blockchain Solutions',description: 'Secure, transparent, and decentralized solutions for modern business needs.',
+    icon: Lock,color: 'from-green-600 to-emerald-600'
+  };
   {
-    name: 'IoT Integration',
-    description: 'Connect and manage your devices for smart automation and insights.',
-    icon: Rocket,
-    color: 'from-orange-600 to-red-600'
+    name: 'IoT Integration',description: 'Connect and manage your devices for smart automation and insights.',icon: Rocket,color: 'from-orange-600 to-red-600'
   }
 ];
-
 export default function InnovativeServicesLanding2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -266,7 +223,7 @@ export default function InnovativeServicesLanding2025() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Start Your Digital Transformation Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -279,5 +236,5 @@ export default function InnovativeServicesLanding2025() {
         </div>
       </section>
     </div>
-  );
+  )
 }

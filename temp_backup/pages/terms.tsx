@@ -1,37 +1,33 @@
-import React from 'react';
+import React from 'react',
       ]
     },
     {
       title: 'Quantum Technology Services',
       terms: [
-        'Quantum computing resources are allocated based on service tier',
-        'Users must comply with export control regulations',
-        'Performance metrics are provided for informational purposes only',
-        'Service interruptions may occur during quantum system calibration'
+        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulations',
+        'Performance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration'
       ]
     },
     {
       title: 'Cybersecurity Services',
       terms: [
-        'Security assessments are conducted according to industry standards',
-        'Vulnerability reports are confidential and must not be shared',
-        'Penetration testing requires written authorization',
-        'Incident response follows our established protocols'
+        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be shared',
+        'Penetration testing requires written authorizationIncident response follows our established protocols'
       ]
     }
-  ];
+  ],
 
   const prohibitedActivities = [
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion',
 import { 
   FileText, Shield, CheckCircle, AlertTriangle, 
   Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+} from 'lucide-react',
 
-import { motion } from 'framer-motion';
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion',
+import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 const Terms: React.FC = () => {
   const sections = [
@@ -42,7 +38,7 @@ const Terms: React.FC = () => {
     },
     {
       title: 'Use License',
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials; use the materials for any commercial purpose or for any public display; attempt to reverse engineer any software contained on Zion Tech Group's website; remove any copyright or other proprietary notations from the materials; or transfer the materials to another person or "mirror" the materials on any other server.`,
+      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
       icon: <Lock className="w-6 h-6 text-blue-400" />
     },
     {
@@ -65,7 +61,7 @@ const Terms: React.FC = () => {
       content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
       icon: <Shield className="w-6 h-6 text-red-400" />
     }
-  ];
+  ],
 
   const importantNotices = [
     {
@@ -83,7 +79,7 @@ const Terms: React.FC = () => {
       content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
       type: 'info'
     }
-  ];
+  ],
 
 const terms: React.FC = () => {
   return (
@@ -92,10 +88,10 @@ const terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
+import { motion } from 'framer-motion',
+import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO',
 
 const termsSections = [
   {
@@ -118,7 +114,7 @@ const termsSections = [
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
-];
+],
 
 export default function Terms() {
   return (
@@ -442,7 +438,7 @@ export default function Terms() {
         </div>
       </div>
     </div>
-  );
-};
+  ),
+},
 
-export default terms;
+export default terms,

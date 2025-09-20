@@ -202,7 +202,7 @@ export default function TermsPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Questions About Our Terms?
           </h2>
@@ -220,5 +220,5 @@ export default function TermsPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

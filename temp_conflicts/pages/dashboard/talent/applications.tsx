@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import EnhancedLayout from '../../../components/layout/EnhancedLayout';
-import { supabase } from '../../../utils/supabase/client';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
+import { supabase } from '../../../utils/supabase/client',
 
 // Types
 export type ApplicationStatus =
@@ -10,21 +10,21 @@ export type ApplicationStatus =
   | 'interview_scheduled'
   | 'offer_sent'
   | 'hired'
-  | 'not_selected';
+  | 'not_selected',
 
 export interface TalentApplication {
-  id: string;
-  job_title: string;
-  company_name?: string | null;
-  created_at: string; // ISO
-  status: ApplicationStatus;
+  id: string,
+  job_title: string,
+  company_name?: string | null,
+  created_at: string, // ISO
+  status: ApplicationStatus,
   // Resume fields - flexible to support either URL or storage object
-  resume_name?: string | null;
-  resume_url?: string | null;
-  resume_id?: string | null;
+  resume_name?: string | null,
+  resume_url?: string | null,
+  resume_id?: string | null,
   // Optional feedback fields (if provided by the client/company)
-  feedback?: string | null;
-  rejection_reason?: string | null;
+  feedback?: string | null,
+  rejection_reason?: string | null
 }
 
 // Status configuration
@@ -35,8 +35,8 @@ const STATUS_LABELS: Record<ApplicationStatus, string> = {
   interview_scheduled: 'Interview Scheduled',
   offer_sent: 'Offer Sent',
   hired: 'Hired',
-  not_selected: 'Not Selected',
-};
+  not_selected: 'Not Selected'
+},
 
 const STATUS_COLORS: Record<ApplicationStatus, string> = {
   submitted: 'bg-blue-100 text-blue-700 border-blue-200',
@@ -45,17 +45,14 @@ const STATUS_COLORS: Record<ApplicationStatus, string> = {
   interview_scheduled: 'bg-amber-100 text-amber-800 border-amber-200',
   offer_sent: 'bg-purple-100 text-purple-700 border-purple-200',
   hired: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-  not_selected: 'bg-rose-100 text-rose-700 border-rose-200',
-};
+  not_selected: 'bg-rose-100 text-rose-700 border-rose-200'
+},
 
 const STATUS_STEPS: ApplicationStatus[] = [
-  'submitted',
-  'viewed',
-  'shortlisted',
-  'interview_scheduled',
-  'offer_sent',
-  'hired', // success path
-];
+  'submittedviewed',
+  'shortlistedinterview_scheduled',
+  'offer_senthired', // success path
+],
 
 // Mock data fallback
 const MOCK_APPLICATIONS: TalentApplication[] = [
@@ -66,7 +63,7 @@ const MOCK_APPLICATIONS: TalentApplication[] = [
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 6).toISOString(),
     status: 'shortlisted',
     resume_name: 'resume_jane_doe.pdf',
-    resume_url: '#',
+    resume_url: '#'
   },
   {
     id: 'demo-2',
@@ -75,7 +72,7 @@ const MOCK_APPLICATIONS: TalentApplication[] = [
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 12).toISOString(),
     status: 'interview_scheduled',
     resume_name: 'resume_jane_doe.pdf',
-    resume_url: '#',
+    resume_url: '#'
   },
   {
     id: 'demo-3',
@@ -84,7 +81,7 @@ const MOCK_APPLICATIONS: TalentApplication[] = [
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 21).toISOString(),
     status: 'not_selected',
     resume_name: 'resume_jane_doe.pdf',
-    resume_url: '#',
+    resume_url: '#'
   },
   {
     id: 'demo-4',
@@ -93,42 +90,42 @@ const MOCK_APPLICATIONS: TalentApplication[] = [
     created_at: new Date(Date.now() - 1000 * 60 * 60 * 24 * 2).toISOString(),
     status: 'submitted',
     resume_name: 'resume_jane_doe.pdf',
-    resume_url: '#',
-  },
-];
+    resume_url: '#'
+  }
+],
 
 function formatDate(iso: string) {
   try {
     return new Date(iso).toLocaleDateString(undefined, {
       year: 'numeric',
       month: 'short',
-      day: 'numeric',
-    });
+      day: 'numeric'
+    }),
   } catch {
-    return iso;
+    return iso,
   }
 }
 
 function StatusBadge({ status }: { status: ApplicationStatus }) {
-  const label = STATUS_LABELS[status];
-  const classes = STATUS_COLORS[status];
+  const label = STATUS_LABELS[status],
+  const classes = STATUS_COLORS[status],
   return (
     <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium ${classes}`}>
       {label}
     </span>
-  );
+  ),
 }
 
 function StatusStepper({ status }: { status: ApplicationStatus }) {
-  const currentIndex = STATUS_STEPS.indexOf(status as (typeof STATUS_STEPS)[number]);
-  const isTerminalNegative = status === 'not_selected';
-  const effectiveIndex = isTerminalNegative ? 2 : currentIndex; // if rejected, show progress up to shortlist
+  const currentIndex = STATUS_STEPS.indexOf(status as (typeof STATUS_STEPS)[number]),
+  const isTerminalNegative = status === 'not_selected',
+  const effectiveIndex = isTerminalNegative ? 2 : currentIndex, // if rejected, show progress up to shortlist
 
   return (
     <div className="flex items-center gap-2 w-full">
       {STATUS_STEPS.map((step, index) => {
-        const isActive = index <= effectiveIndex;
-        const isLast = index === STATUS_STEPS.length - 1;
+        const isActive = index <= effectiveIndex,
+        const isLast = index === STATUS_STEPS.length - 1,
         return (
           <div key={step} className="flex items-center w-full">
             <div
@@ -139,17 +136,17 @@ function StatusStepper({ status }: { status: ApplicationStatus }) {
             />
             {!isLast && <div className="w-2" />}
           </div>
-        );
+        ),
       })}
     </div>
-  );
+  ),
 }
 
-function ResumePreview({ application, onUpdate }: { application: TalentApplication; onUpdate: (file: File) => Promise<void>; }) {
-  const fileInputRef = useRef<HTMLInputElement | null>(null);
-  const canEdit = ['submitted', 'viewed'].includes(application.status);
+function ResumePreview({ application, onUpdate }: { application: TalentApplication, onUpdate: (file: File) => Promise<void> }) {
+  const fileInputRef = useRef<HTMLInputElement | null>(null),
+  const canEdit = ['submittedviewed'].includes(application.status),
 
-  const triggerFilePicker = () => fileInputRef.current?.click();
+  const triggerFilePicker = () => fileInputRef.current?.click(),
 
   return (
     <div className="flex items-center gap-3 flex-wrap">
@@ -174,9 +171,9 @@ function ResumePreview({ application, onUpdate }: { application: TalentApplicati
         accept="application/pdf"
         className="hidden"
         onChange={async (e) => {
-          const file = e.target.files?.[0];
-          if (file) await onUpdate(file);
-          if (fileInputRef.current) fileInputRef.current.value = '';
+          const file = e.target.files?.[0],
+          if (file) await onUpdate(file),
+          if (fileInputRef.current) fileInputRef.current.value = '',
         }}
       />
       {canEdit && (
@@ -189,16 +186,16 @@ function ResumePreview({ application, onUpdate }: { application: TalentApplicati
         </button>
       )}
     </div>
-  );
+  ),
 }
 
-function ApplicationCard({ application, onUpdateResume }: { application: TalentApplication; onUpdateResume: (applicationId: string, file: File) => Promise<void>; }) {
+function ApplicationCard({ application, onUpdateResume }: { application: TalentApplication, onUpdateResume: (applicationId: string, file: File) => Promise<void> }) {
   const handleUpdate = useCallback(
     async (file: File) => {
-      await onUpdateResume(application.id, file);
+      await onUpdateResume(application.id, file),
     },
     [application.id, onUpdateResume]
-  );
+  ),
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-4 bg-white/70 dark:bg-black/40 backdrop-blur">
@@ -240,62 +237,62 @@ function ApplicationCard({ application, onUpdateResume }: { application: TalentA
           </button>
         )}
         {application.status === 'not_selected' && (
-          <button className="inline-flex items-center rounded-md bg-gray-200 dark:bg-gray-800 text-sm px-3 py-2 hover:opacity-80" onClick={() => {
-            const reason = application.feedback || application.rejection_reason;
-            alert(reason ? reason : 'No feedback provided.');
+          <button className="inline-flex items-center rounded-md bg-gray-200 dark: bg-gray-800 text-sm px-3 py-2 hover:opacity-80" onClick={() => {
+            const reason = application.feedback || application.rejection_reason,
+            alert(reason ? reason : 'No feedback provided.')
           }}>
             Why?
           </button>
         )}
       </div>
     </div>
-  );
+  ),
 }
 
 export default function TalentApplicationsPage() {
-  const [applications, setApplications] = useState<TalentApplication[] | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [userId, setUserId] = useState<string | null>(null);
+  const [applications, setApplications] = useState<TalentApplication[] | null>(null),
+  const [isLoading, setIsLoading] = useState<boolean>(true),
+  const [error, setError] = useState<string | null>(null),
+  const [userId, setUserId] = useState<string | null>(null),
 
   const sortedApplications = useMemo(() => {
-    if (!applications) return [];
-    return [...applications].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-  }, [applications]);
+    if (!applications) return [],
+    return [...applications].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()),
+  }, [applications]),
 
   // Fetch logged-in user and applications
   useEffect(() => {
-    let isMounted = true;
+    let isMounted = true,
     (async () => {
       try {
-        setIsLoading(true);
-        setError(null);
+        setIsLoading(true),
+        setError(null),
 
-        const { data: authData, error: authError } = await supabase.auth.getUser();
-        if (authError) throw authError;
-        const user = authData?.user as any;
-        const uid = user?.id ?? null;
+        const { data: authData, error: authError } = await supabase.auth.getUser(),
+        if (authError) throw authError,
+        const user = authData?.user as any,
+        const uid = user?.id ?? null,
         if (!uid) {
-          // Not logged in; show auth CTA
-          if (!isMounted) return;
-          setUserId(null);
-          setApplications([]);
-          setIsLoading(false);
-          return;
+          // Not logged in, show auth CTA
+          if (!isMounted) return,
+          setUserId(null),
+          setApplications([]),
+          setIsLoading(false),
+          return,
         }
 
-        const role = user?.user_metadata?.role || user?.app_metadata?.role;
-        const isTalent = role === 'talent' || (Array.isArray(role) && role.includes('talent'));
+        const role = user?.user_metadata?.role || user?.app_metadata?.role,
+        const isTalent = role === 'talent' || (Array.isArray(role) && role.includes('talent')),
         if (!isTalent) {
-          if (!isMounted) return;
-          setUserId(uid);
-          setApplications([]);
-          setError('You are not authorized to view this page. Talent role required.');
-          setIsLoading(false);
-          return;
+          if (!isMounted) return,
+          setUserId(uid),
+          setApplications([]),
+          setError('You are not authorized to view this page. Talent role required.'),
+          setIsLoading(false),
+          return,
         }
 
-        if (isMounted) setUserId(uid);
+        if (isMounted) setUserId(uid),
 
         const { data, error } = await supabase
           .from<TalentApplication>('job_applications')
@@ -303,51 +300,51 @@ export default function TalentApplicationsPage() {
             'id, job_title, company_name, created_at, status, resume_name, resume_url, resume_id, feedback, rejection_reason'
           )
           .eq('talent_id', uid)
-          .order('created_at', { ascending: false });
+          .order('created_at', { ascending: false }),
 
-        if (error) throw error;
+        if (error) throw error,
 
         if (isMounted) {
-          setApplications(data ?? []);
+          setApplications(data ?? []),
         }
       } catch (err: any) {
-        console.error('Failed to load applications:', err?.message || err);
+        console.error('Failed to load applications:', err?.message || err),
         if (isMounted) {
-          setError('Unable to load applications. Showing demo data.');
-          setApplications(MOCK_APPLICATIONS);
+          setError('Unable to load applications. Showing demo data.'),
+          setApplications(MOCK_APPLICATIONS),
         }
       } finally {
-        if (isMounted) setIsLoading(false);
+        if (isMounted) setIsLoading(false),
       }
-    })();
+    })(),
 
     return () => {
-      isMounted = false;
-    };
-  }, []);
+      isMounted = false,
+    },
+  }, []),
 
   const onUpdateResume = useCallback(
     async (applicationId: string, file: File) => {
       try {
-        if (!userId) throw new Error('You must be logged in to update resume');
+        if (!userId) throw new Error('You must be logged in to update resume'),
 
         // Upload to Supabase Storage (resumes bucket)
-        const path = `${userId}/${applicationId}/${Date.now()}_${file.name}`;
+        const path = `${userId}/${applicationId}/${Date.now()}_${file.name}`,
         const { data: uploadData, error: uploadError } = await supabase.storage
           .from('resumes')
-          .upload(path, file, { upsert: true, contentType: file.type });
-        if (uploadError) throw uploadError;
+          .upload(path, file, { upsert: true, contentType: file.type }),
+        if (uploadError) throw uploadError,
 
-        const { data: publicUrlData } = supabase.storage.from('resumes').getPublicUrl(uploadData.path);
-        const resumeUrl = publicUrlData.publicUrl;
+        const { data: publicUrlData } = supabase.storage.from('resumes').getPublicUrl(uploadData.path),
+        const resumeUrl = publicUrlData.publicUrl,
 
         // Update application row
         const { error: updateError } = await supabase
           .from('job_applications')
           .update({ resume_url: resumeUrl, resume_name: file.name })
           .eq('id', applicationId)
-          .eq('talent_id', userId);
-        if (updateError) throw updateError;
+          .eq('talent_id', userId),
+        if (updateError) throw updateError,
 
         // Refresh local state
         setApplications((prev) =>
@@ -356,14 +353,14 @@ export default function TalentApplicationsPage() {
               ? { ...app, resume_url: resumeUrl, resume_name: file.name }
               : app
           )
-        );
+        ),
       } catch (err: any) {
-        console.error('Failed to update resume:', err?.message || err);
-        alert(err?.message || 'Failed to update resume');
+        console.error('Failed to update resume:', err?.message || err),
+        alert(err?.message || 'Failed to update resume'),
       }
     },
     [userId]
-  );
+  ),
 
   return (
     <EnhancedLayout>
@@ -416,5 +413,5 @@ export default function TalentApplicationsPage() {
         )}
       </div>
     </EnhancedLayout>
-  );
+  ),
 }

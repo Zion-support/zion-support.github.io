@@ -1,5 +1,5 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+import type { NextPage } from 'next',
+import Head from 'next/head',
 
 const TalentSlugPage: NextPage = () => {
   return (
@@ -14,7 +14,7 @@ const TalentSlugPage: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  )
+},
 
-export default TalentSlugPage;
+export default TalentSlugPage,

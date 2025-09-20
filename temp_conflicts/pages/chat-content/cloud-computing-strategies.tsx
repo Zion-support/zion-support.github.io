@@ -1,5 +1,5 @@
 
-import Head from 'next/head';
+import Head from 'next/head',
 
 const CloudComputingStrategies = () => {
   return (
@@ -14,7 +14,7 @@ const CloudComputingStrategies = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default CloudComputingStrategies;
+export default CloudComputingStrategies,

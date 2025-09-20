@@ -1,7 +1,7 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import type { UserDetails } from "@/types/auth";
-import { safeStorage, safeSessionStorage } from './safeStorage';
+import { supabase } from "@/integrations/supabase/client",
+import type { UserDetails } from "@/types/auth",
+import { safeStorage, safeSessionStorage } from './safeStorage',
 
 /**
  * Utility function to clean up authentication state
@@ -9,30 +9,30 @@ import { safeStorage, safeSessionStorage } from './safeStorage';
  */
 export const cleanupAuthState = () => {
   // Remove standard auth tokens
-  safeStorage.removeItem('supabase.auth.token');
+  safeStorage.removeItem('supabase.auth.token'),
   
   // Remove all Supabase auth keys from localStorage
   try {
     Object.keys(localStorage).forEach((key) => {
       if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-        safeStorage.removeItem(key);
+        safeStorage.removeItem(key),
       }
-    });
+    }),
   } catch (e) {
-    console.warn('Storage access error:', e);
+    console.warn('Storage access error:', e),
   }
   
   // Remove from sessionStorage if in use
   try {
     Object.keys(sessionStorage || {}).forEach((key) => {
       if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-        safeSessionStorage.removeItem(key);
+        safeSessionStorage.removeItem(key),
       }
-    });
+    }),
   } catch (e) {
-    console.warn('Storage access error:', e);
+    console.warn('Storage access error:', e),
   }
-};
+},
 
 /**
  * Utility function to check new user registration and schedule welcome emails
@@ -45,7 +45,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .select("id")
       .eq("user_id", user.id)
       .eq("campaign_type", "welcome_series")
-      .maybeSingle();
+      .maybeSingle(),
       
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
@@ -62,7 +62,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
-        });
+        }),
         
       // Create entry in email_campaigns table
       await supabase
@@ -77,9 +77,9 @@ export const checkNewRegistration = async (user: UserDetails) => {
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
-        });
+        }),
     }
   } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error);
+    console.error("Error checking or scheduling welcome email:", error),
   }
-};
+},

@@ -1,14 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server',
 export async function POST(request: NextRequest) {
   try {
-    const performanceData = await request.json();
+    const performanceData = await request.json(),
     
     // Validate required fields
     if (!performanceData.metrics || !performanceData.url) {
       return NextResponse.json(
         { error: 'Missing required fields: metrics, url' },
         { status: 400 }
-      );
+      ),
     }
 
     // Log performance metrics (in production, you'd send this to your monitoring service)
@@ -16,8 +16,8 @@ export async function POST(request: NextRequest) {
       ...performanceData,
       timestamp: new Date().toISOString(),
       ip: request.ip || request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown',
-    });
+      userAgent: request.headers.get('user-agent') || 'unknown'
+    }),
     
     // In production, you would:
     // 1. Send to Google Analytics, Web Vitals, New Relic, DataDog, etc.
@@ -41,39 +41,39 @@ export async function POST(request: NextRequest) {
     //       }
     //     }]
     //   })
-    // });
+    // }),
     
     // Check for performance issues and potentially send alerts
-    const { metrics } = performanceData;
-    const issues: string[] = [];
+    const { metrics } = performanceData,
+    const issues: string[] = [],
     
     if (metrics.lcp && metrics.lcp > 4000) {
-      issues.push('LCP is above 4s threshold');
+      issues.push('LCP is above 4s threshold')
     }
     if (metrics.fid && metrics.fid > 100) {
-      issues.push('FID is above 100ms threshold');
+      issues.push('FID is above 100ms threshold'),
     }
     if (metrics.cls && metrics.cls > 0.25) {
-      issues.push('CLS is above 0.25 threshold');
+      issues.push('CLS is above 0.25 threshold'),
     }
     if (metrics.fcp && metrics.fcp > 3000) {
-      issues.push('FCP is above 3s threshold');
+      issues.push('FCP is above 3s threshold'),
     }
 
     if (issues.length > 0) {
-      console.warn('Performance issues detected:', issues);
+      console.warn('Performance issues detected:', issues),
       // In production, you might send alerts to your monitoring system
     }
 
     return NextResponse.json({
       success: true,
-      issues: issues.length > 0 ? issues : undefined,
-    });
+      issues: issues.length > 0 ? issues : undefined
+    }),
   } catch (error) {
-    console.error('Performance metrics error:', error);
+    console.error('Performance metrics error:', error),
     return NextResponse.json(
       { error: 'Failed to process performance metrics' },
       { status: 500 }
-    );
+    ),
   }
 }

@@ -1,12 +1,12 @@
 
 <<<<<<< HEAD
 interface Stat {
-  number: string;
-  label: string;
-  description: string;
-  avatar: string;
+  number: string,
+  label: string,
+  description: string,
+  avatar: string,
 icon: React.ComponentType<{ className?: string
-}>;
+}>,
   color: string}
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
@@ -15,27 +15,27 @@ interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
-  const [counts, setCounts] = useState<any>({});
+  const [counts, setCounts] = useState<any>({}),
 =======
   useEffect(() => {
     if(isInView) {
 
-          let current = 0;
+          let current = 0,
           
           const countTimer = setInterval(: unknown {
-            current += increment;            if (current >= targetNumber) {
+            current += increment,            if (current >= targetNumber) {
 
-              current = targetNumber;
+              current = targetNumber,
               clearInterval(countTimer)}
 
             setCounts(prev => ({
 
               ...prev,
               [stat.label]: Math.floor(current)
-            }))}, 50)})}, 500);
+            }))}, 50)})}, 500),
 
       return : unknown clearTimeout(timer)}
-  }, [isInView, stats]);
+  }, [isInView, stats]),
 
   return ()
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">"
@@ -101,7 +101,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Icon container */}
-              <div className={`relative w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>;"
+              <div className={`relative w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-xl group-hover:shadow-zion-cyan/30`}>,"
                 <stat.icon className="w-8 h-8 text-white" aria-hidden="true" />
                 {/* Glow effect */}"
                 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
@@ -133,13 +133,13 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               </p>
 
               {/* Hover indicator */}"
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
-            </motion.div>;
-          ))};
-        </div>;
-      </div>;
-    </section>;
-  )};
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover: w-1/2 transition-all duration-500" />
+            </motion.div>,
+          ))},
+        </div>,
+      </div>,
+    </section>,
+  )},
 
 export default StatsSection}}}}}'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

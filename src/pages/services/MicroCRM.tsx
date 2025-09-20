@@ -1,45 +1,34 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Users, 
+  Users,
   Target, 
   CheckCircle, 
   ArrowRight 
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function MicroCRM() {
   const services = [
     {
-      icon: Users,
-      title: 'Contact Management',
-      description: 'Organize and track customer information'
-    },
+      icon: Users,title: 'Contact Management',description: 'Organize and track customer information'
+    };
     {
-      icon: Target,
-      title: 'Sales Pipeline',
-      description: 'Manage sales opportunities and track progress'
-    },
+      icon: Target,title: 'Sales Pipeline',description: 'Manage sales opportunities and track progress'
+    };
     {
-      icon: CheckCircle,
-      title: 'Task Management',
-      description: 'Organize and prioritize business tasks'
+      icon: CheckCircle,title: 'Task Management',description: 'Organize and prioritize business tasks'
     }
   ];
-
   const benefits = [
-    'Improve customer relationships',
-    'Increase sales conversion rates',
-    'Streamline business processes',
-    'Better customer insights'
-  ];
+    'Improve customer relationshipsIncrease sales conversion rates',
+    'Streamline business processesBetter customer insights'
+  ],
 
   const useCases = [
-    { industry: 'Local Services', description: 'Manage appointments and customer follow-ups' },
-    { industry: 'Retail', description: 'Track customer preferences and purchase history' },
-    { industry: 'Consulting', description: 'Manage client relationships and project tracking' },
+    { industry: 'Local Services', description: 'Manage appointments and customer follow-ups' };
+    { industry: 'Retail', description: 'Track customer preferences and purchase history' };
+    { industry: 'Consulting', description: 'Manage client relationships and project tracking' };
     { industry: 'Healthcare', description: 'Patient appointment scheduling and follow-ups' }
   ];
-
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO
@@ -220,7 +209,7 @@ export default function MicroCRM() {
               Join businesses worldwide that use our Micro CRM to 
               build stronger customer relationships and grow sales.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -233,8 +222,6 @@ export default function MicroCRM() {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default MicroCRM;
-

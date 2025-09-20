@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet Security Platform
@@ -49,16 +49,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption using quantum key distribution and post-quantum cryptography algorithms.',
     features: [
-      'Quantum key distribution (QKD)',
-      'Post-quantum cryptography algorithms',
-      'Quantum-resistant encryption',
-      'Real-time threat detection',
-      'Zero-trust architecture',
-      'Quantum random number generation',
-      'Multi-layer security protocols',
-      'Compliance with NIST standards',
-      'Quantum network monitoring',
-      'Future-proof security infrastructure'
+      'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+      'Quantum-resistant encryptionReal-time threat detection',
+      'Zero-trust architectureQuantum random number generation',
+      'Multi-layer security protocolsCompliance with NIST standards',
+      'Quantum network monitoringFuture-proof security infrastructure'
     ],
     popular: true,
     icon: '🔐',
@@ -71,11 +66,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '8-16 weeks',
     category: 'Quantum & Cybersecurity',
     realService: true,
-    technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'React', 'Node.js', 'PostgreSQL', 'Quantum Computing APIs'],
-    integrations: ['Custom security protocols', 'Government standards', 'Enterprise security systems', 'Quantum networks', 'Blockchain platforms'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data protection', 'Defense communications', 'Critical infrastructure security'],
+    technology: ['Quantum Key DistributionPost-Quantum Cryptography', 'ReactNode.js', 'PostgreSQLQuantum Computing APIs'],
+    integrations: ['Custom security protocolsGovernment standards', 'Enterprise security systemsQuantum networks', 'Blockchain platforms'],
+    useCases: ['Government communicationsFinancial transactions', 'Healthcare data protectionDefense communications', 'Critical infrastructure security'],
     roi: 'Average customer sees 500% ROI within 18 months through enhanced security and compliance benefits.',
-    competitors: ['No direct competitors', 'Traditional encryption vendors', 'Custom solutions'],
+    competitors: ['No direct competitorsTraditional encryption vendors', 'Custom solutions'],
     marketSize: '$15B quantum security market',
     growthRate: '800% annual growth',
     variant: 'quantum-advanced',
@@ -101,16 +96,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced neural interface development platform that enables developers to create brain-computer interfaces for medical, gaming, and productivity applications.',
     features: [
-      'EEG signal processing',
-      'Brain-computer interface SDK',
-      'Real-time neural data analysis',
-      'Machine learning algorithms',
-      'Medical device compliance',
-      'Gaming integration tools',
-      'Productivity enhancement APIs',
-      'Neural data visualization',
-      'Custom algorithm development',
-      'Multi-platform support'
+      'EEG signal processingBrain-computer interface SDK',
+      'Real-time neural data analysisMachine learning algorithms',
+      'Medical device complianceGaming integration tools',
+      'Productivity enhancement APIsNeural data visualization',
+      'Custom algorithm developmentMulti-platform support'
     ],
     popular: true,
     icon: '🧠',
@@ -123,11 +113,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '4-8 weeks',
     category: 'Neural & Brain-Computer Interface',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'EEG Processing', 'ML Algorithms'],
-    integrations: ['Unity', 'Unreal Engine', 'Medical devices', 'Research platforms', 'Custom applications', 'IoT devices'],
-    useCases: ['Medical diagnostics', 'Gaming control', 'Productivity enhancement', 'Assistive technology', 'Research applications', 'Entertainment'],
+    technology: ['TensorFlowPyTorch', 'ReactNode.js', 'PostgreSQLRedis', 'EEG ProcessingML Algorithms'],
+    integrations: ['UnityUnreal Engine', 'Medical devicesResearch platforms', 'Custom applicationsIoT devices'],
+    useCases: ['Medical diagnosticsGaming control', 'Productivity enhancementAssistive technology', 'Research applicationsEntertainment'],
     roi: 'Average customer sees 400% ROI within 12 months through innovative product development.',
-    competitors: ['Neuralink', 'CTRL-labs', 'OpenBCI', 'Custom solutions'],
+    competitors: ['NeuralinkCTRL-labs', 'OpenBCICustom solutions'],
     marketSize: '$8B neural interface market',
     growthRate: '600% annual growth',
     variant: 'neural-quantum',
@@ -153,16 +143,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive autonomous vehicle development platform that provides AI algorithms, computer vision, and safety systems for building self-driving vehicles.',
     features: [
-      'Advanced computer vision algorithms',
-      'LIDAR and sensor fusion',
-      'Path planning and navigation',
-      'Safety and collision avoidance',
-      'Real-time decision making',
-      'Simulation and testing tools',
-      'Regulatory compliance',
-      'Fleet management system',
-      'Custom algorithm development',
-      'Multi-vehicle coordination'
+      'Advanced computer vision algorithmsLIDAR and sensor fusion',
+      'Path planning and navigationSafety and collision avoidance',
+      'Real-time decision makingSimulation and testing tools',
+      'Regulatory complianceFleet management system',
+      'Custom algorithm developmentMulti-vehicle coordination'
     ],
     popular: true,
     icon: '🚗',
@@ -175,11 +160,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '12-24 weeks',
     category: 'Autonomous & Transportation',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Computer Vision', 'LIDAR Processing', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Vehicle control systems', 'Sensor arrays', 'Mapping platforms', 'Traffic systems', 'Custom hardware', 'Simulation environments'],
-    useCases: ['Passenger vehicles', 'Delivery vehicles', 'Logistics automation', 'Public transportation', 'Research and development', 'Military applications'],
+    technology: ['TensorFlowPyTorch', 'Computer VisionLIDAR Processing', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['Vehicle control systemsSensor arrays', 'Mapping platformsTraffic systems', 'Custom hardwareSimulation environments'],
+    useCases: ['Passenger vehiclesDelivery vehicles', 'Logistics automationPublic transportation', 'Research and developmentMilitary applications'],
     roi: 'Average customer sees 300% ROI within 24 months through autonomous vehicle deployment.',
-    competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Custom solutions'],
+    competitors: ['WaymoCruise', 'Tesla AutopilotCustom solutions'],
     marketSize: '$65B autonomous vehicle market',
     growthRate: '450% annual growth',
     variant: 'neural-cyberpunk',
@@ -205,16 +190,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Comprehensive space technology development platform that enables companies to build satellites, space vehicles, and space infrastructure using cutting-edge AI and materials science.',
     features: [
-      'Satellite design and optimization',
-      'Space vehicle engineering',
-      'Advanced materials science',
-      'AI-powered mission planning',
-      'Space weather monitoring',
-      'Orbital mechanics calculations',
-      'Launch vehicle integration',
-      'Ground station management',
-      'Space debris tracking',
-      'Regulatory compliance tools'
+      'Satellite design and optimizationSpace vehicle engineering',
+      'Advanced materials scienceAI-powered mission planning',
+      'Space weather monitoringOrbital mechanics calculations',
+      'Launch vehicle integrationGround station management',
+      'Space debris trackingRegulatory compliance tools'
     ],
     popular: true,
     icon: '🚀',
@@ -227,11 +207,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '16-32 weeks',
     category: 'Space & Aerospace',
     realService: true,
-    technology: ['AI/ML Algorithms', 'Materials Science', 'Orbital Mechanics', 'React', 'Node.js', 'PostgreSQL', 'AWS', 'Custom APIs'],
-    integrations: ['Launch vehicles', 'Ground stations', 'Satellite systems', 'Space weather data', 'Regulatory databases', 'Custom hardware'],
-    useCases: ['Satellite deployment', 'Space exploration', 'Earth observation', 'Communications infrastructure', 'Research missions', 'Commercial space'],
+    technology: ['AI/ML AlgorithmsMaterials Science', 'Orbital MechanicsReact', 'Node.jsPostgreSQL', 'AWSCustom APIs'],
+    integrations: ['Launch vehiclesGround stations', 'Satellite systemsSpace weather data', 'Regulatory databasesCustom hardware'],
+    useCases: ['Satellite deploymentSpace exploration', 'Earth observationCommunications infrastructure', 'Research missionsCommercial space'],
     roi: 'Average customer sees 600% ROI within 36 months through space technology deployment.',
-    competitors: ['SpaceX', 'Blue Origin', 'Rocket Lab', 'Custom solutions'],
+    competitors: ['SpaceXBlue Origin', 'Rocket LabCustom solutions'],
     marketSize: '$450B space economy',
     growthRate: '700% annual growth',
     variant: 'quantum-space',
@@ -257,16 +237,11 @@ export const emergingTechServices: EmergingTechService[] = [
     period: '/month',
     description: 'Advanced biotechnology AI platform that accelerates drug discovery, protein engineering, and genetic research using machine learning and computational biology.',
     features: [
-      'Drug discovery algorithms',
-      'Protein structure prediction',
-      'Genetic sequence analysis',
-      'Molecular dynamics simulation',
-      'Clinical trial optimization',
-      'Biomarker identification',
-      'Drug repurposing tools',
-      'Regulatory compliance',
-      'Research collaboration tools',
-      'Custom model development'
+      'Drug discovery algorithmsProtein structure prediction',
+      'Genetic sequence analysisMolecular dynamics simulation',
+      'Clinical trial optimizationBiomarker identification',
+      'Drug repurposing toolsRegulatory compliance',
+      'Research collaboration toolsCustom model development'
     ],
     popular: true,
     icon: '🧬',
@@ -279,11 +254,11 @@ export const emergingTechServices: EmergingTechService[] = [
     setupTime: '8-16 weeks',
     category: 'Biotechnology & Healthcare',
     realService: true,
-    technology: ['TensorFlow', 'PyTorch', 'Computational Biology', 'Molecular Dynamics', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
-    integrations: ['Lab equipment', 'Research databases', 'Clinical systems', 'Regulatory platforms', 'Custom applications', 'Collaboration tools'],
-    useCases: ['Drug discovery', 'Protein engineering', 'Genetic research', 'Clinical trials', 'Biomarker research', 'Personalized medicine'],
+    technology: ['TensorFlowPyTorch', 'Computational BiologyMolecular Dynamics', 'ReactNode.js', 'PostgreSQLAWS'],
+    integrations: ['Lab equipmentResearch databases', 'Clinical systemsRegulatory platforms', 'Custom applicationsCollaboration tools'],
+    useCases: ['Drug discoveryProtein engineering', 'Genetic researchClinical trials', 'Biomarker researchPersonalized medicine'],
     roi: 'Average customer sees 400% ROI within 18 months through accelerated research and development.',
-    competitors: ['Insitro', 'Recursion', 'Atomwise', 'Custom solutions'],
+    competitors: ['InsitroRecursion', 'AtomwiseCustom solutions'],
     marketSize: '$95B biotech market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
@@ -300,4 +275,4 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.9,
     reviews: 20
   }
-];
+],

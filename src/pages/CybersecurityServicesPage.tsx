@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { SEOHead } from '../components/seo/SEOHead';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { SEOHead } from "../components/seo/SEOHead";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Shield,
   Lock,
@@ -30,116 +30,72 @@ import {
   Clock,
   DollarSign,
   Code
-} from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-
+} from "lucide-react";
+import { ENHANCED_SERVICES } from "@/data/enhancedServices";
+import { COMPREHENSIVE_SERVICES } from "@/data/comprehensiveServices";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { QuoteFormSection } from "@/components/QuoteFormSection";
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   service.category === 'Cybersecurity'
-);
+),
 const SECURITY_SERVICE_CATEGORIES = [
   {
-    id: 'threat-detection',
-    name: 'Threat Detection & Response',
-    description: 'AI-powered security monitoring and incident response',
-    icon: Eye,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
-  },
+    id: 'threat-detection',name: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',icon: Eye,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Threat Detection'))
+  };
   {
-    id: 'zero-trust',
-    name: 'Zero Trust Security',
-    description: 'Identity verification and access management',
-    icon: Lock,
-    services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
+    id: 'zero-trust',name: 'Zero Trust Security',description: 'Identity verification and access management',icon: Lock,services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
   }
 ];
 export default function CybersecurityServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   
   // Data arrays
   const securityTechnologies = [
-    'SIEM Platforms',
-    'EDR Solutions',
-    'Zero Trust Network',
-    'Identity Management',
-    'Threat Intelligence',
-    'Vulnerability Management',
-    'Incident Response',
-    'Security Automation'
-  ];
+    'SIEM PlatformsEDR Solutions',
+    'Zero Trust NetworkIdentity Management',
+    'Threat IntelligenceVulnerability Management',
+    'Incident ResponseSecurity Automation'
+  ],
 
   const complianceStandards = [
-    'SOC 2 Type II',
-    'ISO 27001',
-    'PCI DSS',
-    'NIST Framework',
-    'GDPR Compliance',
-    'HIPAA Security',
-    'FedRAMP',
-    'CIS Controls'
-  ];
+    'SOC 2 Type IIISO 27001',
+    'PCI DSSNIST Framework',
+    'GDPR ComplianceHIPAA Security',
+    'FedRAMPCIS Controls'
+  ],
 
   const threatIntelligence = [
-    'Dark Web Monitoring',
-    'Threat Hunting',
-    'Malware Analysis',
-    'APT Detection',
-    'IOC Management',
-    'Threat Modeling',
-    'Risk Assessment',
-    'Security Metrics'
+    'Dark Web MonitoringThreat Hunting',
+    'Malware AnalysisAPT Detection';
+    'IOC ManagementThreat Modeling';
+    'Risk AssessmentSecurity Metrics'
   ];
-
   const securityServices = [
     {
-      id: 1,
-      title: 'Threat Detection & Response',
-      description: 'AI-powered security monitoring and incident response',
-      category: 'Security',
-      icon: '🛡️',
-      features: ['Real-time monitoring', 'AI threat detection', 'Incident response'],
-      price: 2500,
-      currency: '$',
-      duration: 'Monthly'
-    },
+      id: 1,title: 'Threat Detection & Response',description: 'AI-powered security monitoring and incident response',category: 'Security',icon: '🛡️',features: ['Real-time monitoringAI threat detection', 'Incident response'],
+      price: 2500,currency: '$',duration: 'Monthly'
+    };
     {
-      id: 2,
-      title: 'Zero Trust Security',
-      description: 'Identity verification and access management',
-      category: 'Security',
-      icon: '🔐',
-      features: ['Identity management', 'Access control', 'Multi-factor auth'],
-      price: 1800,
-      currency: '$',
-      duration: 'Monthly'
-    },
+      id: 2,title: 'Zero Trust Security',description: 'Identity verification and access management',category: 'Security',icon: '🔐',features: ['Identity managementAccess control', 'Multi-factor auth'],
+      price: 1800,currency: '$',duration: 'Monthly'
+    };
     {
-      id: 3,
-      title: 'Compliance Management',
-      description: 'Regulatory compliance and audit support',
-      category: 'Security',
-      icon: '📋',
-      features: ['SOC 2 compliance', 'ISO 27001', 'GDPR support'],
-      price: 3200,
-      currency: '$',
-      duration: 'Monthly'
+      id: 3,title: 'Compliance Management',description: 'Regulatory compliance and audit support',category: 'Security',icon: '📋',features: ['SOC 2 complianceISO 27001', 'GDPR support'],
+      price: 3200,currency: '$',duration: 'Monthly'
     }
   ];
-
   const getCategoryIcon = (category: string) => {
     const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
-    return categoryData?.icon || Shield;
-  };
+    return categoryData?.icon || Shield
+  },
   const getPricingModelLabel = (model: string) => {
     switch (model) {
       case 'one-time': return 'One-time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
-      default: return model;
+      case 'monthly': return 'Monthly',
+      case 'hourly': return 'Hourly',
+      case 'project-based': return 'Project-based',
+      default: return model
     }
   };
   return (
@@ -147,13 +103,13 @@ export default function CybersecurityServicesPage() {
       <SEOHead
         title="Cybersecurity Services - Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
-        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
+        keywords={['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust']}
         structuredData={{
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org";
           "@type": "Service",
           "name": "Cybersecurity Services",
           "description": "Comprehensive cybersecurity solutions",
-          "url": "https://ziontechgroup.com/services/cybersecurity",
+          "url": "https: //ziontechgroup.com/services/cybersecurity";
           "provider": {
             "@type": "Organization",
             "name": "Zion Tech Group"
@@ -199,7 +155,7 @@ export default function CybersecurityServicesPage() {
         </section>
         {/* Security Service Categories */}
         <section className="py-16 bg-zion-blue-dark">
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight mb-4 text-white">Security Service Categories</h2>
               <p className="text-zion-slate-light max-w-3xl mx-auto">
@@ -210,7 +166,7 @@ export default function CybersecurityServicesPage() {
               {SECURITY_SERVICE_CATEGORIES.map((category) => {
                 const IconComponent = category.icon;
                 return (
-                  <Card key={category.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer border-red-500/20">
+                  <Card key={category.id} className="text-center hover: shadow-lg transition-shadow cursor-pointer border-red-500/20">
                     <CardHeader>
                       <div className="bg-red-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <IconComponent className="h-10 w-10 text-red-600" />
@@ -375,11 +331,11 @@ export default function CybersecurityServicesPage() {
             </div>
             <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-6">
               {[
-                { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
-                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
-                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' },
-                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
-                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
+                { name: 'SOC2', icon: '🔒', description: 'Security Controls' };
+                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' };
+                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' };
+                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' };
+                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' };
                 { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
               ].map((standard) => (
                 <Card key={standard.name} className="text-center hover:shadow-lg transition-shadow">
@@ -549,7 +505,7 @@ export default function CybersecurityServicesPage() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Cybersecurity Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -625,7 +581,7 @@ export default function CybersecurityServicesPage() {
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
                 setSearchQuery('');
-                setSelectedSubcategory('all');
+                setSelectedSubcategory('all'),
                 setPriceRange('all');
               }}>
                 Clear Filters
@@ -1246,7 +1202,7 @@ export default function CybersecurityServicesPage() {
       {/* Footer Contact */}
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-red-400">ZionTech Group</h3>
               <p className="text-gray-300 mb-6">
@@ -1278,11 +1234,11 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
+            <p>&copy, 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>
         </div>
       </div>
       <TrustedBySection />
     </div>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   MessageSquare, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredNaturalLanguageProcessing: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
       title: 'Multi-language Support',
       description: 'NLP across various languages and dialects'
     }
-  ];
+  ],
 
   const nlpCapabilities = [
     {
       area: 'Text Understanding',
-      capabilities: ['Sentiment analysis', 'Entity recognition', 'Topic modeling', 'Context understanding'],
+      capabilities: ['Sentiment analysisEntity recognition', 'Topic modelingContext understanding'],
       improvement: '99.9% accuracy',
       understanding: 'Advanced'
     },
     {
       area: 'Language Generation',
-      capabilities: ['Text generation', 'Summarization', 'Translation', 'Content creation'],
+      capabilities: ['Text generationSummarization', 'TranslationContent creation'],
       improvement: 'Human-like quality',
       generation: 'Natural'
     },
     {
       area: 'Conversation AI',
-      capabilities: ['Chatbots', 'Virtual assistants', 'Dialogue systems', 'Intent recognition'],
+      capabilities: ['ChatbotsVirtual assistants', 'Dialogue systemsIntent recognition'],
       improvement: '95% accuracy',
       conversation: 'Intelligent'
     },
     {
       area: 'Document Analysis',
-      capabilities: ['Document classification', 'Information extraction', 'Key insights', 'Automated summaries'],
+      capabilities: ['Document classificationInformation extraction', 'Key insightsAutomated summaries'],
       improvement: '100x faster',
       analysis: 'Efficient'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Customer Service',
       description: 'AI-powered chatbots and virtual assistants for customer support',
-      benefits: ['24/7 support', 'Instant responses', 'Multilingual support', 'Cost reduction']
+      benefits: ['24/7 supportInstant responses', 'Multilingual supportCost reduction']
     },
     {
       title: 'Content Creation',
       description: 'Automated content generation and writing assistance',
-      benefits: ['Content automation', 'Writing assistance', 'Multilingual content', 'SEO optimization']
+      benefits: ['Content automationWriting assistance', 'Multilingual contentSEO optimization']
     },
     {
       title: 'Business Intelligence',
       description: 'Text analysis and insights from customer feedback and documents',
-      benefits: ['Customer insights', 'Market analysis', 'Trend detection', 'Competitive intelligence']
+      benefits: ['Customer insightsMarket analysis', 'Trend detectionCompetitive intelligence']
     },
     {
       title: 'Healthcare & Medical',
       description: 'Medical text analysis and patient communication',
-      benefits: ['Medical documentation', 'Patient communication', 'Research analysis', 'Clinical insights']
+      benefits: ['Medical documentationPatient communication', 'Research analysisClinical insights']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with NLP',
       features: [
-        'Basic NLP features',
-        'Single language support',
-        'Standard processing',
-        'Email support',
+        'Basic NLP featuresSingle language support',
+        'Standard processingEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced NLP needs',
       features: [
-        'Advanced NLP features',
-        'Multi-language support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced NLP featuresMulti-language support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Conversation AI'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex NLP requirements',
       features: [
-        'Custom NLP development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom NLP developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
       position: "AI Director",
       company: "Advanced AI Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Process with AI-Powered Language Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredNaturalLanguageProcessing: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredNaturalLanguageProcessing;
+export default AIPoweredNaturalLanguageProcessing,

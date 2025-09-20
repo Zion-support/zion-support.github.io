@@ -1,17 +1,13 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
 ,
-    benefits: ['Reduce research time by 80%',
-      'Improve accuracy with AI validation',
-      'Scale research operations',
-      'Generate actionable insights',
+    benefits: ['Reduce research time by 80%Improve accuracy with AI validation',
+      'Scale research operationsGenerate actionable insights',
       'Maintain research quality standards'
     ],
-    useCases: ['Market research and analysis',
-      'Academic research projects',
-      'Competitive intelligence',
-      'Product development research',
+    useCases: ['Market research and analysisAcademic research projects',
+      'Competitive intelligenceProduct development research',
       'Scientific research collaboration'
     ],
     link: '/services / ai - autonomous - research-assistant',
@@ -23,28 +19,21 @@ export default function Page() {
     description: 'Next - generation cybersecurity solution powered by artificial intelligence for real - time threat detection, automated response, and predictive security.',
     category: 'AI & Security',
     icon: Shield,
-    features: ['AI - powered threat detection',
-      'Automated incident response',
-      'Predictive security analytics',
-      'Zero - day vulnerability detection',
-      'Behavioral analysis',
-      'Security orchestration'
+    features: ['AI - powered threat detectionAutomated incident response',
+      'Predictive security analyticsZero - day vulnerability detection',
+      'Behavioral analysisSecurity orchestration'
     ],
     pricing: {
       starter: '$499 / month',
       professional: '$1,299 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Detect threats 10x faster',
-      'Reduce false positives by 90%',
-      'Automate security responses',
-      'Predict and prevent attacks',
+    benefits: ['Detect threats 10x fasterReduce false positives by 90%',
+      'Automate security responsesPredict and prevent attacks',
       'Compliance automation'
     ],
-    useCases: ['Enterprise security operations',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
+    useCases: ['Enterprise security operationsFinancial institutions',
+      'Healthcare organizationsGovernment agencies',
       'Critical infrastructure'
     ],
     link: '/services / ai - cybersecurity - platform',
@@ -56,28 +45,21 @@ export default function Page() {
     description: 'Comprehensive AI platform for healthcare providers offering diagnostic assistance, patient monitoring, and predictive healthcare analytics.',
     category: 'AI & Healthcare',
     icon: Heart,
-    features: ['AI diagnostic assistance',
-      'Patient monitoring systems',
-      'Predictive health analytics',
-      'Medical image analysis',
-      'Drug interaction checking',
-      'Healthcare workflow automation'
+    features: ['AI diagnostic assistancePatient monitoring systems',
+      'Predictive health analyticsMedical image analysis',
+      'Drug interaction checkingHealthcare workflow automation'
     ],
     pricing: {
       starter: '$399 / month',
       professional: '$999 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Improve diagnostic accuracy',
-      'Reduce healthcare costs',
-      'Enhance patient outcomes',
-      'Streamline workflows',
+    benefits: ['Improve diagnostic accuracyReduce healthcare costs',
+      'Enhance patient outcomesStreamline workflows',
       'Enable preventive care'
     ],
-    useCases: ['Hospitals and clinics',
-      'Medical imaging centers',
-      'Pharmaceutical companies',
-      'Health insurance providers',
+    useCases: ['Hospitals and clinicsMedical imaging centers',
+      'Pharmaceutical companiesHealth insurance providers',
       'Research institutions'
     ],
     link: '/services / ai - healthcare - platform',
@@ -89,28 +71,21 @@ export default function Page() {
     description: 'Intelligent supply chain management platform that optimizes operations, predicts disruptions, and automates decision - making processes.',
     category: 'AI & Operations',
     icon: Workflow,
-    features: ['Demand forecasting',
-      'Inventory optimization',
-      'Route optimization',
-      'Risk assessment',
-      'Supplier management',
-      'Real - time monitoring'
+    features: ['Demand forecastingInventory optimization',
+      'Route optimizationRisk assessment',
+      'Supplier managementReal - time monitoring'
     ],
     pricing: {
       starter: '$599 / month',
       professional: '$1,499 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Reduce costs by 15 - 25%',
-      'Improve delivery times',
-      'Minimize inventory waste',
-      'Enhance supplier relationships',
+    benefits: ['Reduce costs by 15 - 25%Improve delivery times',
+      'Minimize inventory wasteEnhance supplier relationships',
       'Increase operational efficiency'
     ],
-    useCases: ['Manufacturing companies',
-      'Retail chains',
-      'Logistics providers',
-      'E - commerce platforms',
+    useCases: ['Manufacturing companiesRetail chains',
+      'Logistics providersE - commerce platforms',
       'Distribution networks'
     ],
     link: '/services / ai - supply - chain - optimization',
@@ -122,28 +97,21 @@ export default function Page() {
     description: 'Revolutionary platform combining AI and quantum computing for solving complex optimization problems and advanced simulations.',
     category: 'AI & Quantum',
     icon: Atom,
-    features: ['Quantum - AI hybrid algorithms',
-      'Complex optimization solving',
-      'Advanced simulations',
-      'Quantum machine learning',
-      'Hybrid computing workflows',
-      'Performance benchmarking'
+    features: ['Quantum - AI hybrid algorithmsComplex optimization solving',
+      'Advanced simulationsQuantum machine learning',
+      'Hybrid computing workflowsPerformance benchmarking'
     ],
     pricing: {
       starter: '$1,999 / month',
       professional: '$4,999 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Solve previously intractable problems',
-      'Exponential performance improvements',
-      'Advanced research capabilities',
-      'Competitive advantage',
+    benefits: ['Solve previously intractable problemsExponential performance improvements',
+      'Advanced research capabilitiesCompetitive advantage',
       'Future - proof technology'
     ],
-    useCases: ['Research institutions',
-      'Financial services',
-      'Pharmaceutical research',
-      'Climate modeling',
+    useCases: ['Research institutionsFinancial services',
+      'Pharmaceutical researchClimate modeling',
       'Cryptography and security'
     ],
     link: '/services / ai - quantum - hybrid - platform',
@@ -156,28 +124,21 @@ export default function Page() {
     description: 'Comprehensive DevOps automation platform for cloud - native applications with CI / CD pipelines, infrastructure as code, and monitoring.',
     category: 'IT & Cloud',
     icon: Cloud,
-    features: ['Automated CI / CD pipelines',
-      'Infrastructure as Code',
-      'Multi - cloud management',
-      'Monitoring and alerting',
-      'Security automation',
-      'Cost optimization'
+    features: ['Automated CI / CD pipelinesInfrastructure as Code',
+      'Multi - cloud managementMonitoring and alerting',
+      'Security automationCost optimization'
     ],
     pricing: {
       starter: '$299 / month',
       professional: '$799 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Deploy 10x faster',
-      'Reduce operational costs',
-      'Improve reliability',
-      'Enhance security',
+    benefits: ['Deploy 10x fasterReduce operational costs',
+      'Improve reliabilityEnhance security',
       'Scale efficiently'
     ],
-    useCases: ['Software development teams',
-      'DevOps engineers',
-      'Cloud architects',
-      'System administrators',
+    useCases: ['Software development teamsDevOps engineers',
+      'Cloud architectsSystem administrators',
       'Startup companies'
     ],
     link: '/services / cloud - devops - automation',
@@ -189,28 +150,21 @@ export default function Page() {
     description: 'Comprehensive IT infrastructure management solution for enterprise environments with monitoring, automation, and optimization.',
     category: 'IT & Infrastructure',
     icon: Server,
-    features: ['Infrastructure monitoring',
-      'Automated provisioning',
-      'Performance optimization',
-      'Security management',
-      'Backup and recovery',
-      'Capacity planning'
+    features: ['Infrastructure monitoringAutomated provisioning',
+      'Performance optimizationSecurity management',
+      'Backup and recoveryCapacity planning'
     ],
     pricing: {
       starter: '$199 / month',
       professional: '$599 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Reduce downtime by 99.9%',
-      'Lower operational costs',
-      'Improve performance',
-      'Enhance security posture',
+    benefits: ['Reduce downtime by 99.9%Lower operational costs',
+      'Improve performanceEnhance security posture',
       'Streamline management'
     ],
-    useCases: ['Enterprise IT departments',
-      'Data centers',
-      'Managed service providers',
-      'Educational institutions',
+    useCases: ['Enterprise IT departmentsData centers',
+      'Managed service providersEducational institutions',
       'Healthcare organizations'
     ],
     link: '/services / it - infrastructure',
@@ -223,28 +177,21 @@ export default function Page() {
     description: 'Lightweight, powerful CRM solution designed for small to medium businesses with essential features and easy customization.',
     category: 'Micro SAAS',
     icon: Users,
-    features: ['Contact management',
-      'Lead tracking',
-      'Sales pipeline',
-      'Email integration',
-      'Reporting and analytics',
-      'Mobile app access'
+    features: ['Contact managementLead tracking',
+      'Sales pipelineEmail integration',
+      'Reporting and analyticsMobile app access'
     ],
     pricing: {
       starter: '$29 / month',
       professional: '$79 / month',
       enterprise: '$199 / month'
     },
-    benefits: ['Affordable pricing',
-      'Easy to implement',
-      'Scalable solution',
-      'Improve customer relationships',
+    benefits: ['Affordable pricingEasy to implement',
+      'Scalable solutionImprove customer relationships',
       'Increase sales efficiency'
     ],
-    useCases: ['Small businesses',
-      'Sales teams',
-      'Real estate agents',
-      'Consultants',
+    useCases: ['Small businessesSales teams',
+      'Real estate agentsConsultants',
       'Startups'
     ],
     link: '/services / micro - crm',
@@ -256,34 +203,27 @@ export default function Page() {
     description: 'Intelligent business analytics platform that transforms data into actionable insights using advanced AI and machine learning.',
     category: 'AI & Analytics',
     icon: BarChart3,
-    features: ['AI - powered analytics',
-      'Predictive modeling',
-      'Interactive dashboards',
-      'Data visualization',
-      'Automated reporting',
-      'Real - time insights'
+    features: ['AI - powered analyticsPredictive modeling',
+      'Interactive dashboardsData visualization',
+      'Automated reportingReal - time insights'
     ],
     pricing: {
       starter: '$399 / month',
       professional: '$999 / month',
       enterprise: 'Custom'
     },
-    benefits: ['Make data - driven decisions',
-      'Identify trends and patterns',
-      'Predict future outcomes',
-      'Improve operational efficiency',
+    benefits: ['Make data - driven decisionsIdentify trends and patterns',
+      'Predict future outcomesImprove operational efficiency',
       'Gain competitive advantage'
     ],
-    useCases: ['Business analysts',
-      'Executives and managers',
-      'Marketing teams',
-      'Operations teams',
+    useCases: ['Business analystsExecutives and managers',
+      'Marketing teamsOperations teams',
       'Financial analysts'
     ],
     link: '/services / ai - business - intelligence',
     status: 'available'
   }
-];
+],
 
 const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: services.length },
   { id: 'ai', name: 'AI Services', icon: Brain, count: services.filter(s => s.category.includes ('AI') ) .length },
@@ -291,27 +231,27 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
   { id: 'micro - saas', name: 'Micro SAAS', icon: Zap, count: services.filter(s => s.category.includes ('Micro SAAS') ) .length },
   { id: 'security', name: 'Security', icon: Shield, count: services.filter(s => s.category.includes ('Security') ) .length },
   { id: 'healthcare', name: 'Healthcare', icon: Heart, count: services.filter(s => s.category.includes ('Healthcare') ) .length }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedService, setSelectedService] = useState < Service | null> (null) ;
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedService, setSelectedService] = useState < Service | null> (null) ,
 
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
-      service.category.toLowerCase () .includes(selectedCategory.replace ('-', ' ') ) ;
+      service.category.toLowerCase () .includes(selectedCategory.replace ('- ') ) ,
     const matchesSearch = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-      service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    return matchesCategory && matchesSearch;
-  }) ;
+      service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ,
+    return matchesCategory && matchesSearch,
+  }) ,
 
   const handleServiceClick = useCallback((service: Service) => {
-    setSelectedService(service) ;
-  };
+    setSelectedService(service) 
+  },
 
   const closeModal = () => {
-    setSelectedService(null) ;
-  };
+    setSelectedService(null) ,
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -392,7 +332,7 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
                 >
                   List
                 </button>
-              </div>;
+              </div>,
             </div>
           </div>
 
@@ -448,10 +388,10 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
             </div>
           </div>
         </div>
-      </section>;
+      </section>,
 
       {/* Categories */}
-      <section className="py-8">;
+      <section className="py-8">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="flex flex - wrap gap-3">
             {categories.map((category) => (<button     key={category.id}
@@ -468,7 +408,7 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
             {filteredServices.map((service, index) => (<motion.div
@@ -550,7 +490,7 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8 text-center">
           <div  className="bg-gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 rounded-3xl p - 12 border border-zion -cyan / 20">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
@@ -690,5 +630,5 @@ const categories = [{ id: 'all', name: 'All Services', icon: Globe, count: servi
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>) ;
+    </div>) ,
 }

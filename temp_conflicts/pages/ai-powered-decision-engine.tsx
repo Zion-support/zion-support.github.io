@@ -1,33 +1,28 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
-import { Check, ExternalLink, Settings, GitBranch, Shield } from 'lucide-react';
+import React from 'react',
+import SEO from '../components/SEO',
+import Link from 'next/link',
+import { Check, ExternalLink, Settings, GitBranch, Shield } from 'lucide-react',
 
 export default function AIPoweredDecisionEnginePage() {
-	const title = 'AI-Powered Decision Engine — Zion Tech Group';
-	const description = 'Operational decisioning platform combining rules, policies, and ML. Ship auditable, explainable decisions with low latency and governance.';
+	const title = 'AI-Powered Decision Engine — Zion Tech Group',
+	const description = 'Operational decisioning platform combining rules, policies, and ML. Ship auditable, explainable decisions with low latency and governance.',
 	const features = [
-		'Hybrid rules + ML strategies with A/B and multi-armed bandits',
-		'OPA/Rego policy checks and audit trails',
-		'Feature store integration and real-time features',
-		'Canary, shadow, and fail-open behaviors',
-		'Latency under 50ms with edge deployment options',
-		'Explainability reports and decision logs',
-		'Integrations: Kafka, Kinesis, Postgres, Redis',
-		'SDKs for Node, Python, Go'
-	];
+		'Hybrid rules + ML strategies with A/B and multi-armed banditsOPA/Rego policy checks and audit trails',
+		'Feature store integration and real-time featuresCanary, shadow, and fail-open behaviors',
+		'Latency under 50ms with edge deployment optionsExplainability reports and decision logs',
+		'Integrations: Kafka, Kinesis, Postgres, RedisSDKs for Node, Python, Go'
+	],
 
 	const pricingNotes = [
-		'Starter: $299–$899/mo (up to 10M decisions/mo)',
-		'Growth: $900–$3,999/mo (50M decisions/mo, HA)',
+		'Starter: $299–$899/mo (up to 10M decisions/mo)Growth: $900–$3,999/mo (50M decisions/mo, HA)',
 		'Enterprise: Custom (BYOK, on-prem, compliance)'
-	];
+	],
 
 	const references = [
 		{ name: 'DecisionRules pricing', url: 'https://decisionrules.io/pricing' },
 		{ name: 'Camunda pricing', url: 'https://camunda.com/pricing/' },
 		{ name: 'Open Policy Agent', url: 'https://www.openpolicyagent.org/' }
-	];
+	],
 
 	return (
 		<>
@@ -86,5 +81,5 @@ export default function AIPoweredDecisionEnginePage() {
 				</section>
 			</main>
 		</>
-	);
+	),
 }

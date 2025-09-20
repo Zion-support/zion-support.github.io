@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion, AnimatePresence } from 'framer-motion',
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',
+import { nextGenerationAIServices } from '../data/next-generation-ai-services',
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',
 
 export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
-  const popularServices = getPopularServices();
+  const popularServices = getPopularServices(),
   
   // Combine all services for comprehensive pricing
   const allServices = [
@@ -42,14 +42,14 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-  ];
+  ],
 
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
     {
       name: 'ArrowRight-Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
-      services: ['AI Quantum Financial Trading', 'AI Healthcare Diagnostics', 'AI Autonomous Manufacturing', 'AI Cybersecurity Threat Intelligence'],
+      services: ['AI Quantum Financial TradingAI Healthcare Diagnostics', 'AI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
       avgPrice: '$2,499/month',
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
@@ -58,7 +58,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Quantum & Emerging Tech 2026',
       description: 'Cutting-edge quantum and emerging technologies',
-      services: ['Quantum Internet Security', 'Neuromorphic Computing', 'DNA Computing', 'Photonic Computing', 'Holographic Display'],
+      services: ['Quantum Internet SecurityNeuromorphic Computing', 'DNA ComputingPhotonic Computing', 'Holographic Display'],
       avgPrice: '$4,199/month',
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
@@ -67,7 +67,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
-      services: ['Zero Trust Network Architecture', 'Edge Computing Orchestration', '5G Private Networks', 'Blockchain Infrastructure', 'AI DevOps Automation'],
+      services: ['Zero Trust Network ArchitectureEdge Computing Orchestration', '5G Private NetworksBlockchain Infrastructure', 'AI DevOps Automation'],
       avgPrice: '$5,199/month',
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
@@ -76,7 +76,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Innovative Micro SaaS 2026',
       description: 'Creative and practical SaaS tools',
-      services: ['AI Content Creation Studio', 'AI Business Intelligence Suite', 'AI Customer Success Platform', 'AI Meeting Transcriber'],
+      services: ['AI Content Creation StudioAI Business Intelligence Suite', 'AI Customer Success PlatformAI Meeting Transcriber'],
       avgPrice: '$299/month',
       savings: 'Save 40-60% vs. competitors',
       icon: Rocket,
@@ -85,7 +85,7 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Healthcare & Biotech 2026',
       description: 'AI-powered healthcare and biotechnology solutions',
-      services: ['AI Healthcare Diagnostics', 'DNA Computing Platform', 'Neuromorphic Healthcare AI', 'Quantum Medical Imaging'],
+      services: ['AI Healthcare DiagnosticsDNA Computing Platform', 'Neuromorphic Healthcare AIQuantum Medical Imaging'],
       avgPrice: '$3,999/month',
       savings: 'Save 65-80% vs. competitors',
       icon: FlaskConical,
@@ -94,13 +94,13 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
-      services: ['AI Quantum Financial Trading', 'Blockchain Infrastructure', 'Quantum Internet Security', 'Photonic Computing'],
+      services: ['AI Quantum Financial TradingBlockchain Infrastructure', 'Quantum Internet SecurityPhotonic Computing'],
       avgPrice: '$4,499/month',
       savings: 'Save 55-75% vs. competitors',
       icon: DollarSign,
       color: 'from-green-500 to-emerald-600'
     }
-  ];
+  ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -111,16 +111,11 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core Services',
-        'Basic AI Integration',
-        'Standard Support (24/7)',
-        '30-Day Free Trial',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        '99.5% Uptime Guarantee',
-        'Standard Security Features',
-        'Mobile App Access',
-        'API Access (1000 calls/month)'
+        'Access to 100+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features',
+        'Mobile App AccessAPI Access (1000 calls/month)'
       ],
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
@@ -135,18 +130,12 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 500+ Services',
-        'Advanced AI & Quantum Features',
-        'Priority Support (24/7)',
-        '60-Day Free Trial',
-        'Advanced Analytics & Reporting',
-        'Phone & Email Support',
-        '99.9% Uptime Guarantee',
-        'Enhanced Security Features',
-        'Custom Integrations',
-        'API Access (10,000 calls/month)',
-        'Users Collaboration Tools',
-        'Advanced Workflow Automation'
+        'Access to 500+ ServicesAdvanced AI & Quantum Features',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics & ReportingPhone & Email Support',
+        '99.9% Uptime GuaranteeEnhanced Security Features',
+        'Custom IntegrationsAPI Access (10,000 calls/month)',
+        'Users Collaboration ToolsAdvanced Workflow Automation'
       ],
       icon: <Star className="w-8 h-8" />,
       variant: 'holographic' as const,
@@ -161,20 +150,13 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month',
       savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services (1000+)',
-        'Full AI & Quantum Suite',
-        'Dedicated Support Users',
-        '90-Day Free Trial',
-        'Enterprise Analytics & BI',
-        '24/7 Dedicated Support',
-        '99.99% Uptime Guarantee',
-        'Enterprise Security & Compliance',
-        'Custom Development',
-        'Unlimited API Access',
-        'Advanced Users Management',
-        'White-label Solutions',
-        'Custom SLA Agreements',
-        'On-site Implementation'
+        'Access to ALL Services (1000+)Full AI & Quantum Suite',
+        'Dedicated Support Users90-Day Free Trial',
+        'Enterprise Analytics & BI24/7 Dedicated Support',
+        '99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Custom DevelopmentUnlimited API Access',
+        'Advanced Users ManagementWhite-label Solutions',
+        'Custom SLA AgreementsOn-site Implementation'
       ],
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-advanced' as const,
@@ -182,7 +164,7 @@ export default function PricingEnhanced2026Page() {
       cta: 'Contact Sales',
       color: 'from-yellow-500 to-orange-600'
     }
-  ];
+  ],
 
   // Featured services showcase
   const featuredServices = [
@@ -190,7 +172,7 @@ export default function PricingEnhanced2026Page() {
       name: 'AI Quantum Financial Trading',
       price: '$2,999/month',
       description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
-      features: ['Quantum-inspired AI algorithms', 'Real-time market analysis', 'Automated trading strategies'],
+      features: ['Quantum-inspired AI algorithmsReal-time market analysis', 'Automated trading strategies'],
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
       icon: '📈',
       color: 'from-green-500 to-emerald-600'
@@ -199,7 +181,7 @@ export default function PricingEnhanced2026Page() {
       name: 'Zero Trust Network Architecture 2026',
       price: '$6,999/month',
       description: 'ArrowRight-generation network security with continuous verification',
-      features: ['Continuous verification', 'Micro-segmentation', 'Real-time threat detection'],
+      features: ['Continuous verificationMicro-segmentation', 'Real-time threat detection'],
       link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026',
       icon: '🛡️',
       color: 'from-red-500 to-pink-600'
@@ -208,7 +190,7 @@ export default function PricingEnhanced2026Page() {
       name: 'AI Healthcare Diagnostics Platform',
       price: '$1,499/month',
       description: 'AI-powered medical diagnostics with 95% accuracy rate',
-      features: ['Medical image analysis', 'Diagnosis prediction', 'Treatment recommendations'],
+      features: ['Medical image analysisDiagnosis prediction', 'Treatment recommendations'],
       link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
       icon: '🏥',
       color: 'from-blue-500 to-cyan-600'
@@ -217,12 +199,12 @@ export default function PricingEnhanced2026Page() {
       name: 'Quantum Internet Security Platform',
       price: '$4,999/month',
       description: 'Unbreakable quantum encryption for the future internet',
-      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Real-time threat detection'],
+      features: ['Quantum key distributionPost-quantum cryptography', 'Real-time threat detection'],
       link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
       icon: '🔐',
       color: 'from-blue-500 to-cyan-600'
     }
-  ];
+  ],
 
 const pricing-enhanced-2026: React.FC = () => {
   return (
@@ -239,7 +221,7 @@ const pricing-enhanced-2026: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default pricing-enhanced-2026;
+export default pricing-enhanced-2026,

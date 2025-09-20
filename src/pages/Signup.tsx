@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Mail,
   Lock,
@@ -16,55 +16,44 @@ import {
 } from "lucide-react";
 export default function Signup() {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    password: '',
-    confirmPassword: ''
+    firstName: '',lastName: '',email: '',company: '',password: '',confirmPassword: ''
   });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isLoading, setIsLoading] = useState(false),
+  const [agreedToTerms, setAgreedToTerms] = useState(false),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
-      ...formData,
+      ...formData;
       [e.target.name]: e.target.value
-    });
-  };
+    }),
+  },
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!agreedToTerms) {
-      alert('Please agree to the terms and conditions');
-      return;
+      alert('Please agree to the terms and conditions'),
+      return
     }
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
+      alert('Passwords do not match'),
+      return,
     }
-    setIsLoading(true);
+    setIsLoading(true),
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000)),
     // Here you would typically make an API call to register
-    console.log('Signup attempt:', formData);
-    setIsLoading(false);
-  };
+    console.log('Signup attempt:', formData),
+    setIsLoading(false),
+  },
   const features = [
     {
-      icon: <Shield className="h-6 w-6 text-zion-cyan" />,
-      title: "Enterprise Security",
-      description: "Bank-level security protocols protect your data and ensure compliance"
-    },
+      icon: <Shield className="h-6 w-6 text-zion-cyan" />,title: "Enterprise Security",description: "Bank-level security protocols protect your data and ensure compliance"
+    };
     {
-      icon: <Zap className="h-6 w-6 text-zion-purple" />,
-      title: "Lightning Fast",
-      description: "Optimized performance for seamless user experience across all devices"
-    },
+      icon: <Zap className="h-6 w-6 text-zion-purple" />,title: "Lightning Fast",description: "Optimized performance for seamless user experience across all devices"
+    };
     {
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
-      title: "Team Collaboration",
-      description: "Built-in tools for seamless team communication and project management"
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,title: "Team Collaboration",description: "Built-in tools for seamless team communication and project management"
     }
   ];
   const benefits = [
@@ -74,7 +63,7 @@ export default function Signup() {
     "Exclusive partner discounts",
     "Early access to new features",
     "Dedicated account manager"
-  ];
+  ],
   return (
     <div className="min-h-screen bg-zion-blue text-white flex">
       {/* Left Side - Signup Form */}

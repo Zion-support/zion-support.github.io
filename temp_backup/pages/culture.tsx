@@ -1,14 +1,14 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Users, Heart, Star, Award, Globe, 
   ArrowRight, CheckCircle, TrendingUp, Infinity, 
   Eye, Sparkles, Clock, Zap, Lightbulb,
   Coffee, Gamepad2, BookOpen, Music, Camera,
   Palette, Dumbbell, TreePine, Globe2
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 const CulturePage: React.FC = () => {
   const culturePillars = [
@@ -60,7 +60,7 @@ const CulturePage: React.FC = () => {
         "Mentorship and knowledge sharing programs"
       ]
     }
-  ];
+  ],
 
   const workLifeBalance = [
     {
@@ -83,7 +83,7 @@ const CulturePage: React.FC = () => {
       title: "Unlimited PTO",
       description: "Take time off when you need it to recharge and stay balanced"
     }
-  ];
+  ],
 
   const funActivities = [
     {
@@ -106,7 +106,7 @@ const CulturePage: React.FC = () => {
       title: "Creative Workshops",
       description: "Regular art, craft, and creative skill-building sessions"
     }
-  ];
+  ],
 
   const growthOpportunities = [
     {
@@ -129,7 +129,7 @@ const CulturePage: React.FC = () => {
       title: "Mentorship",
       description: "Formal and informal mentorship programs"
     }
-  ];
+  ],
 
   const teamQuotes = [
     {
@@ -150,7 +150,7 @@ const CulturePage: React.FC = () => {
       role: "Space Technology Lead",
       avatar: "/images/team/emily-watson.jpg"
     }
-  ];
+  ],
 
 const culture: React.FC = () => {
   return (
@@ -167,7 +167,7 @@ const culture: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default culture;
+export default culture,

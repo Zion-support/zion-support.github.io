@@ -1,54 +1,54 @@
-import React, { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client'; // Corrected path
+import React, { useState } from 'react',
+import { supabase } from '@/integrations/supabase/client', // Corrected path
 
 interface WhitepaperSectionEditorProps {
-  title: string;
-  content: string;
-  onContentChange: (newContent: string) => void;
+  title: string,
+  content: string,
+  onContentChange: (newContent: string) => void
 }
 
 const WhitepaperSectionEditor: React.FC<WhitepaperSectionEditorProps> = ({ title, content, onContentChange }) => {
-  const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false);
-  const [suggestionsError, setSuggestionsError] = useState<string | null>(null);
-  const [suggestions, setSuggestions] = useState<string | null>(null);
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false),
+  const [suggestionsError, setSuggestionsError] = useState<string | null>(null),
+  const [suggestions, setSuggestions] = useState<string | null>(null),
+  const [showSuggestions, setShowSuggestions] = useState(false),
 
   const handleGetSuggestions = async () => {
-    setIsLoadingSuggestions(true);
-    setSuggestionsError(null);
-    setSuggestions(null);
-    setShowSuggestions(false);
+    setIsLoadingSuggestions(true),
+    setSuggestionsError(null),
+    setSuggestions(null),
+    setShowSuggestions(false),
 
     try {
       const { data, error: funcError } = await supabase.functions.invoke('get-whitepaper-section-suggestions', {
         body: {
           sectionTitle: title,
-          sectionContent: content,
-        },
-      });
+          sectionContent: content
+        }
+      }),
 
       if (funcError) {
-        throw new Error(`Supabase function error: ${funcError.message}`);
+        throw new Error(`Supabase function error: ${funcError.message}`),
       }
 
       if (data && data.error) {
-        throw new Error(`Suggestion generation error: ${data.error}`);
+        throw new Error(`Suggestion generation error: ${data.error}`),
       }
 
       if (!data || !data.suggestions) {
-        throw new Error('No suggestions received from the function.');
+        throw new Error('No suggestions received from the function.'),
       }
 
-      setSuggestions(data.suggestions);
-      setShowSuggestions(true);
+      setSuggestions(data.suggestions),
+      setShowSuggestions(true),
 
     } catch (e: any) {
-      console.error(`Error getting suggestions for section "${title}":`, e);
-      setSuggestionsError(e.message || 'An unexpected error occurred while fetching suggestions.');
+      console.error(`Error getting suggestions for section "${title}":`, e),
+      setSuggestionsError(e.message || 'An unexpected error occurred while fetching suggestions.'),
     } finally {
-      setIsLoadingSuggestions(false);
+      setIsLoadingSuggestions(false),
     }
-  };
+  },
 
   return (
     <div style={{ marginBottom: '20px', border: '1px solid #ccc', padding: '15px', borderRadius: '5px', position: 'relative' }}>
@@ -80,7 +80,7 @@ const WhitepaperSectionEditor: React.FC<WhitepaperSectionEditorProps> = ({ title
         </div>
       )}
     </div>
-  );
-};
+  ),
+},
 
-export default WhitepaperSectionEditor;
+export default WhitepaperSectionEditor,

@@ -1,16 +1,16 @@
-import { Link  } from 'react-router-dom';
- from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin  } from 'lucide-react';
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
+ from '@/data/enhancedServices',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin  } from 'lucide-react',
+import { Link  } from 'react-router-dom',
 ) => {
 
   const categoryServices = services.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase())
-  );
-  if(categoryServices.length === 0) return null;
+  ),
+  if(categoryServices.length === 0) return null,
   const getCategoryIcon = categoryName => {
 
     const iconMap = {
@@ -25,16 +25,16 @@ import { Link  } from 'react-router-dom';
       'Education & Training': <GraduationCap className="w-6 h-6" />,"
       'Supply Chain & Logistics': <Truck className="w-6 h-6" />,"
       'Real Estate & Property': <Home className="w-6 h-6" />,"
-      'Legal & Compliance': <Lock className="w-6 h-6" />};"
-    return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;
-  };
+      'Legal & Compliance': <Lock className="w-6 h-6" />},"
+    return iconMap[categoryName] || <Briefcase className="w-6 h-6" />,
+  },
   const getCategoryColor = categoryName => {
 
     const colorMap = {
 
-      'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'};
-    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
-  };
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'},
+    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark',
+  },
   return ("
     <div className="space-y-6">"
       <div className="flex items-center space-x-3 mb-6">
@@ -150,8 +150,8 @@ import { Link  } from 'react-router-dom';
         ))}
       </div>
     </div>
-  );
-};
+  ),
+},
 const BenefitsSection = () => ("
   <section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">"
     <div className="container mx-auto px-4">"
@@ -236,7 +236,7 @@ const BenefitsSection = () => ("
       </div>
     </div>
   </section>
-);
+),
 const ContactSection = () => ("
   <section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">"
     <div className="container mx-auto px-4 text-center">"
@@ -309,7 +309,7 @@ const ContactSection = () => ("
           <Button"
             size="lg"
             variant="outline"
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
           >
             Compare Services
           </Button>
@@ -317,7 +317,7 @@ const ContactSection = () => ("
       </div>
     </div>
   </section>
-);
+),
 export default function EnhancedServicesOverview() {
 
   return ("
@@ -368,6 +368,6 @@ export default function EnhancedServicesOverview() {
       {/* Contact Section */}
       <ContactSection />
     </div>
-  );
+  ),
 }
 '"`

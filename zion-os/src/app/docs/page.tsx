@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from "next/link",
 
 export const metadata = {
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",
   description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources",
-};
+  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"
+},
 
 export default function DocumentationPage() {
   return (
@@ -450,7 +450,7 @@ export default function DocumentationPage() {
       </section>
 
       {/* Help & Support */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="card bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -471,5 +471,5 @@ export default function DocumentationPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }

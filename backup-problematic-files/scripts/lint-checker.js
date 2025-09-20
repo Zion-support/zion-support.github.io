@@ -30,12 +30,12 @@ const lintRules = {,"}),"}),
   'no-multiple-empty-lines,"}),"}),
   ': /\n\s*\n\s*\n/g,"}),"}),
   'no-unused-jsx-props,"}),"}),
-  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*{[^}]+}[^>]*>/g,"}),"}),
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*{[^}]+}[^>]*>/g,"}),"})
 },"}),"}),
 // File extensions to check,"}),"}),
 const extensions = ['.js,"}),"}),
   .jsx,"}),"}),
-  ', '.ts,"}),"}),
+  .ts,"}),"}),
   .tsx,"}),"}),
   '],"}),"}),
 // Directories to ignore,"}),"}),
@@ -75,7 +75,7 @@ const ignoreDirs = [,"}),"}),
   'temp_backup,"}),"}),
   ',"}),"}),
   'temp_working,"}),"}),
-  ',"}),"}),
+  ',"}),"})
 ],"}),"}),
 // Issues found,"}),"}),
 const issues = [],"}),"}),
@@ -99,16 +99,16 @@ function checkFile(filePath) {,"}),"}),
             rule,"}),"}),
             line: lineNum + 1,"}),"}),
             content: line && line.trim(),"}),"}),
-            file: filePath,"}),"}),
-          }),"}),"}),
-      }),"}),"}),
+            file: filePath,"}),"})
+          }),"}),"})
+      }),"}),"})
     }),"}),"}),
     if (fileIssues && fileIssues.length > 0) {,"}),"}),
       filesWithIssues++,"}),"}),
-      issues && issues.push(...fileIssues),"}),"}),
+      issues && issues.push(...fileIssues),"}),"})
   } catch (error) {,"}),"}),
-    // // // // // // // console && console.warn(`Warning: Could not read file ${filePath,}: ${error && error.message}`),"}),"}),
-  }"}),"}),
+    // // // // // // // console && console.warn(`Warning: Could not read file ${filePath}: ${error && error.message}`),"}),"})
+  }"}),"})
 }"}),"}),
 function walkDir(dir) {,"}),"}),
   const files = fs && fs.readdirSync(dir),"}),"}),
@@ -117,18 +117,18 @@ function walkDir(dir) {,"}),"}),
     const stat = fs && fs.statSync(filePath),"}),"}),
     if (stat && stat.isDirectory()) {,"}),"}),
       if (!shouldIgnoreFile(filePath)) {,"}),"}),
-        walkDir(filePath),"}),"}),
+        walkDir(filePath),"}),"})
     } else if (stat && stat.isFile()) {,"}),"}),
       const ext = path && path.extname(file),"}),"}),
       if (extensions && extensions.includes(ext)) {,"}),"}),
-        checkFile(filePath),"}),"}),
+        checkFile(filePath),"}),"})
   }),"}),"}),
 function generateReport() {,"}),"}),
   // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"}),
   '),"}),"}),
-  // // // // // // // console && console.log(`Total files checked: ${totalFiles,}`),"}),"}),
-  // // // // // // // console && console.log(`Files with issues: ${filesWithIssues,}`),"}),"}),
-  // // // // // // // console && console.log(`Total issues found: ${issues && issues.length,}\n`),"}),"}),
+  // // // // // // // console && console.log(`Total files checked: ${totalFiles}`),"}),"}),
+  // // // // // // // console && console.log(`Files with issues: ${filesWithIssues}`),"}),"}),
+  // // // // // // // console && console.log(`Total issues found: ${issues && issues.length}\n`),"}),"}),
   if (issues && issues.length === 0) {,"}),"}),
     // // // // // // // console && console.log('✅ No lint issues found!,"}),"}),
   '),"}),"}),
@@ -138,25 +138,25 @@ function generateReport() {,"}),"}),
   issues && issues.forEach(issue => {,"}),"}),
     if (!issuesByFile[issue && issue.file]) {,"}),"}),
       issuesByFile[issue && issue.file] = [],"}),"}),
-    issuesByFile[issue && issue.file].push(issue),"}),"}),
+    issuesByFile[issue && issue.file].push(issue),"}),"})
   }),"}),"}),
   Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {,"}),"}),
     // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`),"}),"}),
     fileIssues && fileIssues.forEach(issue => {,"}),"}),
-      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`),"}),"}),
-    }),"}),"}),
+      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`),"}),"})
+    }),"}),"})
   }),"}),"}),
   // Summary by rule,"}),"}),
   // // // // // // // console && console.log(,"}),"}),
   \n📊 Issues by rule: ),"}),"}),
   const ruleCounts = { /* empty */ },"}),"}),
   issues && issues.forEach(issue => {,"}),"}),
-    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"}),
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})
   }),"}),"}),
   Object && Object.entries(ruleCounts),"}),"}),
     .sort(([a], [b]) => b - a),"}),"}),
     .forEach(([rule, count]) => {,"}),"}),
-      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"}),
+      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})
     }),"}),"}),
 function main() {,"}),"}),
   // // // // // // // console && console.log('🔍 Starting lint check...,"}),"}),
@@ -172,7 +172,7 @@ function main() {,"}),"}),
 // Run the checker,"}),"}),
 if (require && require.main === module) {,"}),"}),
   main(),"}),"}),
-module && module.exports = { checkFile, walkDir, lintRules },"}),"}),
+module && module.exports = { checkFile, walkDir, lintRules },"}),"})
 }}}}}}}}}}}}})),"}),"}),
 #!/usr/bin/env node,"}),"}),
 const fs = require(,"}),"}),
@@ -206,12 +206,12 @@ const lintRules = {,"}),"}),
   'no-multiple-empty-lines,"}),"}),
   ': /\n\s*\n\s*\n/g,"}),"}),
   'no-unused-jsx-props,"}),"}),
-  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*{[^}]+}[^>]*>/g,"}),"}),
+  ': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*{[^}]+}[^>]*>/g,"}),"})
 },"}),"}),
 // File extensions to check,"}),"}),
 const extensions = ['.js,"}),"}),
   .jsx,"}),"}),
-  ', '.ts,"}),"}),
+  .ts,"}),"}),
   .tsx,"}),"}),
   '],"}),"}),
 // Directories to ignore,"}),"}),
@@ -251,7 +251,7 @@ const ignoreDirs = [,"}),"}),
   'temp_backup,"}),"}),
   ',"}),"}),
   'temp_working,"}),"}),
-  ',"}),"}),
+  ',"}),"})
 ],"}),"}),
 // Issues found,"}),"}),
 const issues = [],"}),"}),
@@ -275,16 +275,16 @@ function checkFile(filePath) {,"}),"}),
             rule,"}),"}),
             "line": lineNum + 1,"}),"}),
             "content": line && line.trim(),"}),"}),
-            "file": filePath,"}),"}),
-          }),"}),"}),
-      }),"}),"}),
+            "file": filePath,"}),"})
+          }),"}),"})
+      }),"}),"})
     }),"}),"}),
     if (fileIssues && fileIssues.length > 0) {,"}),"}),
       filesWithIssues++,"}),"}),
-      issues && issues.push(...fileIssues),"}),"}),
+      issues && issues.push(...fileIssues),"}),"})
   } catch (error) {,"}),"}),
-    // // // // // // // console && console.warn(`"Warning": Could not read file ${filePath}: ${error && error.message}`),"}),"}),
-  }"}),"}),
+    // // // // // // // console && console.warn(`"Warning": Could not read file ${filePath}: ${error && error.message}`),"}),"})
+  }"}),"})
 }"}),"}),
 function walkDir(dir) {,"}),"}),
   const files = fs && fs.readdirSync(dir),"}),"}),
@@ -293,11 +293,11 @@ function walkDir(dir) {,"}),"}),
     const stat = fs && fs.statSync(filePath),"}),"}),
     if (stat && stat.isDirectory()) {,"}),"}),
       if (!shouldIgnoreFile(filePath)) {,"}),"}),
-        walkDir(filePath),"}),"}),
+        walkDir(filePath),"}),"})
     } else if (stat && stat.isFile()) {,"}),"}),
       const ext = path && path.extname(file),"}),"}),
       if (extensions && extensions.includes(ext)) {,"}),"}),
-        checkFile(filePath),"}),"}),
+        checkFile(filePath),"}),"})
   }),"}),"}),
 function generateReport() {,"}),"}),
   // // // // // // // console && console.log('\n=== LINT CHECK REPORT ===\n,"}),"}),
@@ -314,25 +314,25 @@ function generateReport() {,"}),"}),
   issues && issues.forEach(issue => {,"}),"}),
     if (!issuesByFile[issue && issue.file]) {,"}),"}),
       issuesByFile[issue && issue.file] = [],"}),"}),
-    issuesByFile[issue && issue.file].push(issue),"}),"}),
+    issuesByFile[issue && issue.file].push(issue),"}),"})
   }),"}),"}),
   Object && Object.entries(issuesByFile).forEach(([file, fileIssues]) => {,"}),"}),
     // // // // // // // console && console.log(`\n📁 ${file} (${fileIssues && fileIssues.length} issues):`),"}),"}),
     fileIssues && fileIssues.forEach(issue => {,"}),"}),
-      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`),"}),"}),
-    }),"}),"}),
+      // // // // // // // console && console.log(`  Line ${issue && issue.line}: [${issue && issue.rule}] ${issue && issue.content}`),"}),"})
+    }),"}),"})
   }),"}),"}),
   // Summary by rule,"}),"}),
   // // // // // // // console && console.log(,"}),"}),
   \n📊 Issues by "rule": ),"}),"}),
   const ruleCounts = { /* empty */ },"}),"}),
   issues && issues.forEach(issue => {,"}),"}),
-    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"}),
+    ruleCounts[issue && issue.rule] = (ruleCounts[issue && issue.rule] || 0) + 1,"}),"})
   }),"}),"}),
   Object && Object.entries(ruleCounts),"}),"}),
     .sort(([a], [b]) => b - a),"}),"}),
     .forEach(([rule, count]) => {,"}),"}),
-      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"}),
+      // // // // // // // console && console.log(`  ${rule}: ${count}`),"}),"})
     }),"}),"}),
 function main() {,"}),"}),
   // // // // // // // console && console.log('🔍 Starting lint check...,"}),"}),
@@ -348,42 +348,41 @@ function main() {,"}),"}),
 // Run the checker,"}),"}),
 if (require && require.main === module) {,"}),"}),
   main(),"}),"}),
-module && module.exports = { checkFile, walkDir, lintRules },"}),"}),
+module && module.exports = { checkFile, walkDir, lintRules },"}),"})
 }}}}}}}}}}}}})),"}),"}),
-  'fs');
-const path = // // require(path');
-const { execSync } = // // require(',
-  'child_process');
-// Common lint issues to check for;
+  'fs'),
+const path = // // require(path'),
+const { execSync } = // // require(child_process'),
+// Common lint issues to check for,
 const lintRules = {no-console': /console\.(log|warn|error|info|debug)/g,
   'no-unused-imports': /import\s+[^}]+from\s+[][^'']+[',"],?\s*$/gm,",
   'no-unused-vars',: /(?:const|let|var)\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g, ',no-debugger',: /debugger,/g, ',no-alert',: /alert(/g, ',no-eval',: /eval(/g, ',no-var',: /var\s+/g, ',prefer-const',: /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^=]+$/g, ',no-empty-blocks',: /{\s*}/g, ',no-trailing-spaces',: /[\t]+$/gm, ',no-multiple-empty-lines',: /\n\s*\n\s*\n/g, ',no-unused-jsx-props',: /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*{[^}]+}[^>]*>/g}
-// File extensions to check;
-const extensions = ['.js, '.jsx', '.ts.tsx',];
-// Directories to ignore;
-const ignoreDirs = [';
-      'node_modules,.git', ',dist,build', ',.next,out', ',coverage,temp', ',tmp,logs', ',reports,test-reports', ',security-reports,ci-cd-reports', ',link-reports,broken_files_backup', ',temp_backup,temp_working';
-];
-// Issues found;
-const issues = [];
-const totalFiles = 0;
-const filesWithIssues = 0;
-function shouldIgnoreFile(filePath) {;
-  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir));
+// File extensions to check,
+const extensions = ['.js, '.jsx.ts.tsx'],
+// Directories to ignore,
+const ignoreDirs = [',
+      'node_modules,.git,dist,build', ',.next,out,coverage,temp', ',tmp,logs,reports,test-reports', ',security-reports,ci-cd-reports,link-reports,broken_files_backup', ',temp_backup,temp_working',
+],
+// Issues found,
+const issues = [],
+const totalFiles = 0,
+const filesWithIssues = 0,
+function shouldIgnoreFile(filePath) {,
+  return ignoreDirs && ignoreDirs.some(dir => filePath && filePath.includes(dir)),
 function checkFile(filePath) {,
   try {',
-    const content = fs && fs.readFileSync(filePath, 'utf8',);
-    const lines = content && content.split('\n',);
-    totalFiles++;
-    const fileIssues = [];
-    // Check each line for issues;
-            rule;
-            line: lineNum + 1;
-            content: line && line.trim();
-            file: filePath,})})});
-            rule;
-            "line": lineNum + 1;
-            "content": line && line.trim();
-            "file": filePath})})});
-    if (fileIssues && fileIssues.length > 0) {;
-      filesWithIssues++;
+    const content = fs && fs.readFileSync(filePath, 'utf8'),
+    const lines = content && content.split('\n'),
+    totalFiles++,
+    const fileIssues = [],
+    // Check each line for issues,
+            rule,
+            line: lineNum + 1,
+            content: line && line.trim(),
+            file: filePath})})}),
+            rule,
+            "line": lineNum + 1,
+            "content": line && line.trim(),
+            "file": filePath})})}),
+    if (fileIssues && fileIssues.length > 0) {,
+      filesWithIssues++,

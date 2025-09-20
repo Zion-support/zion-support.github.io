@@ -1,5 +1,5 @@
-// Hook for useConversationState;
+// Hook for useConversationState,
 export const useUseConversationState: unknown = () => {,
-  // TODO: Implement hook logic;
-  return {};
-};
+  // TODO: Implement hook logic,
+  return {},
+},

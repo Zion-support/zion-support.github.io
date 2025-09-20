@@ -1,34 +1,34 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 MailArrowRightCheckCircleStarZapTrendingUpUsersAward,
 const NewsletterSignupPromotion2025 = () => {,
-  const [emailsetEmail] = useState('');
-  const [isSubscribedsetIsSubscribed] = useState(false);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [emailsetEmail] = useState(''),
+  const [isSubscribedsetIsSubscribed] = useState(false),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const handleSubmit = (e: React.FormEvent) => {,
-    e.preventDefault();
+    e.preventDefault(),
     if (email) {,
-      setIsSubscribed(true);
+      setIsSubscribed(true),
       // Here you would typically send the email to your backend,
-      console.log('Email subscribed: 'email),}
-  };
+      console.log('Email subscribed: 'email)}
+  },
   const benefits = [,
-    "Exclusive AI insights and trends";
-    "Early access to new features";
-    "Industry reports and case studies";
-    "Expert webinars and workshops";
-    "Special offers and discounts",
-  ];
+    "Exclusive AI insights and trends",
+    "Early access to new features",
+    "Industry reports and case studies",
+    "Expert webinars and workshops",
+    "Special offers and discounts"
+  ],
   const stats = [,
-    { icon: <Users className="w-6 h-6" />value: "50,000+"label: "Subscribers" ,};
-    { icon: <Star className="w-6 h-6" />value: "4.9/5"label: "Rating" ,};
-    { icon: <TrendingUp className="w-6 h-6" />value: "95%"label: "Open Rate" ,};
-    { icon: <Award className="w-6 h-6" />value: "Weekly"label: "Updates" ,}
-  ];
+    { icon: <Users className="w-6 h-6" />value: "50,000+"label: "Subscribers" },
+    { icon: <Star className="w-6 h-6" />value: "4.9/5"label: "Rating" },
+    { icon: <TrendingUp className="w-6 h-6" />value: "95%"label: "Open Rate" },
+    { icon: <Award className="w-6 h-6" />value: "Weekly"label: "Updates" }
+  ],
   if (isSubscribed) {,
     return (,
       <div className="py-16 bg-gradient-to-r from-green-500 to-blue-600">,
@@ -55,12 +55,11 @@ const NewsletterSignupPromotion2025 = () => {,
             </div>,
           </div>,
         </div>,
-      </div>,
-    ),}
+      </div>)}
 const NewsletterSignupPromotion2025: React.FC = () => {,
   return (,
     <div className="py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 relative overflow-hidden">,
-      {/* Animated Background Elements */,}
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">,
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full animate-pulse"></div>,
         <div className="absolute bottom-20 right-10 w-24 h-24 bg-white/10 rounded-full animate-pulse delay-1000"></div>,
@@ -69,7 +68,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
       </div>,
       <div className="relative max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
         <div className="grid lg:grid-cols-2 gap-12 items-center">,
-          {/* Left Column - Content */,}
+          {/* Left Column - Content */}
           <div,
             className="text-white",
           >,
@@ -86,7 +85,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
             <p className="text-xl mb-8 opacity-90">,
               Get exclusive insightsearly access to breakthrough technologiesand expert analysis delivered directly to your inbox.,
             </p>,
-            {/* Benefits List */,}
+            {/* Benefits List */}
             <div className="space-y-4 mb-8">,
               {benefits.map((benefitindex) => (,
                 <div,
@@ -95,8 +94,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
                 >,
                   <CheckCircle className="w-5 h-5 text-green-300" />,
                   <span className="text-lg">{benefit}</span>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             {/* Stats */}
             <div className="grid grid-cols-2 gap-6">,
@@ -110,8 +108,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
                   </div>,
                   <div className="text-2xl font-bold">{stat.value}</div>,
                   <div className="text-sm opacity-80">{stat.label}</div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
           </div>,
           {/* Right Column - Signup Form */}
@@ -155,7 +152,7 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
                 By subscribingyou agree to our privacy policy. Unsubscribe at any time.,
               </p>,
             </form>,
-            {/* Trust Indicators */,}
+            {/* Trust Indicators */}
             <div className="mt-8 pt-6 border-t border-gray-200">,
               <p className="text-sm text-gray-600 text-center mb-4">,
                 Trusted by industry leaders,
@@ -164,14 +161,13 @@ const NewsletterSignupPromotion2025: React.FC = () => {,
                 {["Microsoft"Google"Amazon"IBM"].map((companyindex) => (,
                   <div key={index} className="text-gray-500 font-semibold text-sm">,
                     {company}
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           </div>,
         </div>,
       </div>,
     </div>,
-  );
-export default NewsletterSignupPromotion2025;
+  ),
+export default NewsletterSignupPromotion2025,
 }}

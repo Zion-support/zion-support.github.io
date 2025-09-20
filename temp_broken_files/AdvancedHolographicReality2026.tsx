@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const AdvancedHolographicReality2026: React.FC = () => {,
   return (,
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">,
@@ -21,7 +21,7 @@ const AdvancedHolographicReality2026: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Features Section */,}
+      {/* Features Section */}
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center mb-16">,
           <h2 className="text-4xl font-bold mb-4">Revolutionary Holographic Features</h2>,
@@ -29,9 +29,9 @@ const AdvancedHolographicReality2026: React.FC = () => {,
         </div>,
         <div className="grid md: grid-cols-3 gap-8">,
           <div,
-            initial={{ opacity: 0, y: 50 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6 ,}}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all duration-300",
           >,
             <div className="text-6xl mb-4 text-center">👁️</div>,
@@ -46,9 +46,9 @@ const AdvancedHolographicReality2026: React.FC = () => {,
             </ul>,
           </div>,
           <div,
-            initial={{ opacity: 0, y: 50 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.2 ,}}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover: scale-105 transition-all duration-300",
           >,
             <div className="text-6xl mb-4 text-center">🌐</div>,
@@ -63,9 +63,9 @@ const AdvancedHolographicReality2026: React.FC = () => {,
             </ul>,
           </div>,
           <div,
-            initial={{ opacity: 0, y: 50 ,}}
-            whileInView={{ opacity: 1, y: 0 ,}}
-            transition={{ duration: 0.6, delay: 0.4 ,}}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="bg-gradient-to-br from-emerald-600/30 to-teal-600/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-400/30 hover: scale-105 transition-all duration-300",
           >,
             <div className="text-6xl mb-4 text-center">🧠</div>,
@@ -81,7 +81,7 @@ const AdvancedHolographicReality2026: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Applications Section */,}
+      {/* Applications Section */}
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center mb-16">,
           <h2 className="text-4xl font-bold mb-4">Revolutionary Applications</h2>,
@@ -110,7 +110,7 @@ const AdvancedHolographicReality2026: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Technology Specifications */,}
+      {/* Technology Specifications */}
       <div className="container mx-auto px-4 py-20">,
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-2xl p-12">,
           <div className="text-center mb-12">,
@@ -168,7 +168,6 @@ const AdvancedHolographicReality2026: React.FC = () => {,
         <div className="text-center">,
         </div>,
       </div>,
-    </div>,
-  );
-};
-export default AdvancedHolographicReality2026;
+    </div>),
+},
+export default AdvancedHolographicReality2026,

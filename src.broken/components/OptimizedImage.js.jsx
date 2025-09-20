@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react',
 
 export default function Page() {
 ,
@@ -6,30 +6,30 @@ export default function Page() {
 
         rootMargin: '50px',
         threshold: 0.1}
-    );
+    ),
     if(imageRef.current) {
 
-      observer.observe(imageRef.current);
+      observer.observe(imageRef.current),
     }
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect(),
+  }, [priority]),
   // Load image when in view
   useEffect(() => {
     if(isInView && !priority) {
 
-      setCurrentSrc(src);
+      setCurrentSrc(src),
     }
-  }, [isInView, src, priority]);
+  }, [isInView, src, priority]),
   const handleLoad = () => {
-    setIsLoaded(true);
-    setHasError(false);
-    onLoad?.();
-  };
+    setIsLoaded(true),
+    setHasError(false),
+    onLoad?.(),
+  },
   const handleError = () => {
-    setHasError(true);
-    setCurrentSrc(fallback);
-    onError?.();
-  };
+    setHasError(true),
+    setCurrentSrc(fallback),
+    onError?.(),
+  },
   return ()
     <div className={`relative overflow-hidden ${className}`}>
       <AnimatePresence>
@@ -85,6 +85,6 @@ export default function Page() {
         />
       )}
     </div>
-  );
-};
+  ),
+},
 '"`

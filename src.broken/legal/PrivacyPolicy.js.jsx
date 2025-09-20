@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-;
+import React from 'react',
+import ReactMarkdown from 'react-markdown',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+,
 export default function PrivacyPolicy() {
 
   return ()
@@ -24,6 +24,6 @@ export default function PrivacyPolicy() {
       </main>
       <Footer />
     </>
-  );
+  ),
 }
 '"`

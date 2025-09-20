@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Fail‑Safe Architectures for Autonomous Agents';
-  description: 'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.',
-};
+  title: 'AI 2026: Fail‑Safe Architectures for Autonomous Agents',
+  description: 'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -26,6 +26,5 @@ export default function Page() {,
         <Link href="/blog/ai-2026-safe-tool-use-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Safe Tool Use</Link>,
         <Link href="/content/ai-2026-zero-trust-agent-architecture" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Zero‑Trust Architecture</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

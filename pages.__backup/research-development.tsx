@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 export default function ResearchDevelopmentPage() {,
 	return (,
 		<>,
@@ -14,5 +14,4 @@ export default function ResearchDevelopmentPage() {,
 					<p className="text-white/80 max-w-2xl">Exploring AIquantumand autonomous systems.</p>,
 				</div>,
 			</main>,
-		</>,
-	),}
+		</>)}

@@ -1,32 +1,22 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
-import SEO from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from "lucide-react";
+import SEO from "@/components/SEO";
 const features = [
     {
-        title: "Intelligent Decision Making",
-        description: "AI-powered decision engine that analyzes market trends, customer behavior, and business metrics to make optimal business decisions.",
-        icon: Brain,
-        color: "from-purple-500 to-pink-500"
-    },
+        title: "Intelligent Decision Making",description: "AI-powered decision engine that analyzes market trends, customer behavior, and business metrics to make optimal business decisions.",
+        icon: Brain,color: "from-purple-500 to-pink-500"
+    };
     {
-        title: "Real-time Analytics",
-        description: "Continuous monitoring and analysis of business performance with instant insights and actionable recommendations.",
-        icon: BarChart3,
-        color: "from-blue-500 to-cyan-500"
-    },
+        title: "Real-time Analytics",description: "Continuous monitoring and analysis of business performance with instant insights and actionable recommendations.",icon: BarChart3,color: "from-blue-500 to-cyan-500"
+    };
     {
-        title: "Automated Operations",
-        description: "Streamline business processes with intelligent automation that adapts to changing business conditions.",
-        icon: Zap,
-        color: "from-green-500 to-emerald-500"
-    },
+        title: "Automated Operations",description: "Streamline business processes with intelligent automation that adapts to changing business conditions.",icon: Zap,color: "from-green-500 to-emerald-500"
+    };
     {
-        title: "Predictive Insights",
-        description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",
-        icon: TrendingUp,
-        color: "from-orange-500 to-red-500"
+        title: "Predictive Insights",description: "Forecast market trends, customer needs, and business opportunities with advanced predictive analytics.",
+        icon: TrendingUp,color: "from-orange-500 to-red-500"
     }
 ];
 const benefits = [
@@ -36,40 +26,28 @@ const benefits = [
     "Boost revenue growth through data-driven insights",
     "Minimize operational risks with predictive analytics",
     "Scale operations seamlessly with intelligent automation"
-];
+],
 const useCases = [
     {
-        title: "Enterprise Management",
-        description: "Comprehensive business management for large enterprises with multiple departments and complex operations.",
-        icon: Users
-    },
+        title: "Enterprise Management",description: "Comprehensive business management for large enterprises with multiple departments and complex operations.",icon: Users
+    };
     {
-        title: "Startup Growth",
-        description: "Accelerate startup growth with intelligent scaling strategies and market opportunity identification.",
-        icon: TrendingUp
-    },
+        title: "Startup Growth",description: "Accelerate startup growth with intelligent scaling strategies and market opportunity identification.",icon: TrendingUp
+    };
     {
-        title: "E-commerce Optimization",
-        description: "Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis.",
-        icon: Target
-    },
+        title: "E-commerce Optimization",description: "Optimize e-commerce operations with AI-driven inventory management and customer behavior analysis.",icon: Target
+    };
     {
-        title: "Financial Services",
-        description: "Enhance financial decision-making with real-time market analysis and risk assessment.",
-        icon: BarChart3
+        title: "Financial Services",description: "Enhance financial decision-making with real-time market analysis and risk assessment.",icon: BarChart3
     }
 ];
 const testimonials = [
     {
-        content: "The AI Autonomous Business Manager transformed our operations completely. We've seen a 40% increase in efficiency and our decision-making process is now lightning-fast.",
-        name: "Sarah Chen",
-        role: "CEO, TechFlow Solutions",
+        content: "The AI Autonomous Business Manager transformed our operations completely. We've seen a 40% increase in efficiency and our decision-making process is now lightning-fast.",name: "Sarah Chen",role: "CEO, TechFlow Solutions",
         rating: 5
-    },
+    };
     {
-        content: "Implementing this AI system was the best decision we made. It's like having a brilliant business strategist working 24/7.",
-        name: "Michael Rodriguez",
-        role: "COO, InnovateCorp",
+        content: "Implementing this AI system was the best decision we made. It's like having a brilliant business strategist working 24/7.",name: "Michael Rodriguez",role: "COO, InnovateCorp",
         rating: 5
     }
 ];
@@ -174,7 +152,7 @@ export default function AIAutonomousBusinessManager() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => {
-            const IconComponent = useCase.icon;
+            const IconComponent = useCase.icon,
             return (<motion.div key={useCase.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
@@ -220,7 +198,7 @@ export default function AIAutonomousBusinessManager() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+            <h2 className="text-3xl md: text-5xl font-bold mb-4 text-white">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -239,5 +217,5 @@ export default function AIAutonomousBusinessManager() {
           </motion.div>
         </div>
       </section>
-    </div>);
+    </div>)
 }

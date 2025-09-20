@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 =======
-import React from 'react';
+import React from 'react',
 ,
         {
 "
@@ -20,7 +20,7 @@ import React from 'react';
             link: "/chat","
             color: "from-zion-blue to-zion-purple"
 
-    ];
+    ],
     const officeLocations = [{
 "
             city: "Wilmington, DE","
@@ -42,7 +42,7 @@ import React from 'react';
             address: "1 Canary Wharf, London E14 5AB","
             icon: <MapPin className="w-5 h-5"/>
 
-    ];
+    ],
     const supportFeatures = [{
 "
             icon: <Clock className="w-6 h-6"/>,"
@@ -67,7 +67,7 @@ import React from 'react';
             title: "Global Reach","
             description: "Support available in multiple time zones"
 
-    ];"
+    ],"
     return (<section className="py-20 bg-gradient-to-br from-slate-900 via-zion-blue-dark to-slate-900">"
       <div className="container mx-auto px-4">
         {/* Section Header */}"

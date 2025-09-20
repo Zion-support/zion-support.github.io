@@ -1,38 +1,38 @@
-import React from 'react';
+import React from 'react',
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+  DialogTitle
+} from '@/components/ui/dialog',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Textarea } from '@/components/ui/textarea',
 import {
   Form,
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
-} from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { Send, Mail } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+  FormMessage
+} from '@/components/ui/form',
+import { useForm } from 'react-hook-form',
+import { yupResolver } from '@hookform/resolvers/yup',
+import * as yup from 'yup',
+import { Send, Mail } from 'lucide-react',
+import { toast } from '@/hooks/use-toast',
 
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  publisherName: string;
-  publisherEmail?: string;
+  isOpen: boolean,
+  onClose: () => void,
+  publisherName: string,
+  publisherEmail?: string
 }
 
 type FormValues = {
-  subject: string;
-  message: string;
-};
+  subject: string,
+  message: string
+},
 
 const schema = yup.object({
   subject: yup
@@ -42,46 +42,46 @@ const schema = yup.object({
   message: yup
     .string()
     .min(20, 'Message must be at least 20 characters')
-    .required('Message is required'),
-});
+    .required('Message is required')
+}),
 
 export function ContactPublisherModal({
   isOpen,
   onClose,
   publisherName,
-  publisherEmail,
+  publisherEmail
 }: ContactPublisherModalProps) {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false),
 
   const form = useForm<FormValues>({
     resolver: yupResolver(schema),
     mode: 'onChange',
-    defaultValues: { subject: '', message: '' },
-  });
+    defaultValues: { subject: '', message: '' }
+  }),
 
   const onSubmit = async (values: FormValues) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       const res = await fetch('/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
-      });
+        body: JSON.stringify(values)
+      }),
 
       if (res.status === 201) {
-        toast.success('Message sent');
-        form.reset();
-        onClose();
+        toast.success('Message sent'),
+        form.reset(),
+        onClose(),
       } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data.error || 'Failed to send message');
+        const data = await res.json().catch(() => ({})),
+        toast.error(data.error || 'Failed to send message'),
       }
     } catch (err: any) {
-      toast.error(err?.message || 'Failed to send message');
+      toast.error(err?.message || 'Failed to send message')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -148,5 +148,5 @@ export function ContactPublisherModal({
         </Form>
       </DialogContent>
     </Dialog>
-  );
+  ),
 }

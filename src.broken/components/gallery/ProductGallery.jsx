@@ -1,5 +1,5 @@
-import React, { useState, Suspense } from 'react';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import React, { useState, Suspense } from 'react',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
 
 export default function Page() {
             alt={`Product image ${selected + 1}`}"
@@ -71,6 +71,6 @@ export default function Page() {
         </TabsContent>
       )}
     </Tabs>
-  );
+  ),
 }
 '"`

@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 
 export default function QuantumComputingBreakthrough2025_2030Showcase() {
   const quantumBreakthroughs = [
@@ -58,7 +58,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       icon: "🌟",
       color: "from-yellow-500 to-green-500"
     }
-  ];
+  ],
 
   const industryImpact = [
     {
@@ -85,7 +85,7 @@ export default function QuantumComputingBreakthrough2025_2030Showcase() {
       roi: "15,000% ROI",
       timeline: "2027-2030"
     }
-  ];
+  ],
 
 const QuantumComputingBreakthrough2025_2030Showcase: React.FC = () => {
   return (
@@ -93,7 +93,7 @@ const QuantumComputingBreakthrough2025_2030Showcase: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">QuantumComputingBreakthrough2025_2030Showcase</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default QuantumComputingBreakthrough2025_2030Showcase;
+export default QuantumComputingBreakthrough2025_2030Showcase,

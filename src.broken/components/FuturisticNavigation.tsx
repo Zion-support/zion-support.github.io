@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 export default function Page() {
-, [location.pathname]);
+, [location.pathname]),
   
 =======
   useEffect(() => {
-    setActiveDropdown(null)}, [location.pathname]);
+    setActiveDropdown(null)}, [location.pathname]),
   
-    e.preventDefault();
+    e.preventDefault(),
     if(searchQuery.trim()) {
 
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`},
   
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) },
   
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) };
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown) },
   // Enhanced service categories with better organization
   
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
@@ -25,7 +25,7 @@ export default function Page() {
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
 =======
-      dropdown[;'
+      dropdown[,'
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },'
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },'
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },'
@@ -34,12 +34,12 @@ export default function Page() {
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
-    },;
+    },
     {
 "
       name: "Micro SAAS Solutions",
       icon: Cloud,
-      services[;"
+      services[,"
         { name: "Micro SAAS Services", href: "/micro-saas" },"
         { name: "Business Tools", href: "/micro-saas/business-tools" },"
         { name: "Productivity Apps", href: "/micro-saas/productivity" },"
@@ -47,12 +47,12 @@ export default function Page() {
         { name: "Custom Development", href: "/micro-saas/custom" },"
         { name: "Marketplace", href: "/marketplace" }
       ]
-    },;
+    },
     {
 "
       name: "IT Infrastructure",
       icon: Server,
-      services[;"
+      services[,"
         { name: "IT Services", href: "/it-services" },"
         { name: "Cloud Solutions", href: "/it-services/cloud" },"
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },"
@@ -60,12 +60,12 @@ export default function Page() {
         { name: "Data Management", href: "/it-services/data" },"
         { name: "Network Security", href: "/it-services/network-security" }
       ]
-    },;
+    },
     {
 "
       name: "Emerging Technologies",
       icon: Rocket,
-      services[;"
+      services[,"
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
         { name: "Edge Computing", href: "/emerging-tech/edge" },"
@@ -73,20 +73,20 @@ export default function Page() {
         { name: "Green Technology", href: "/green-it" },"
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
+    },
     {
 
       name: '2028 Services',
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[;
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
-      ]};
-  ];
+      dropdown[,
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' },
+      ]},
+  ],
   return ()
     <>`
       <header className={`sticky top-0 z-50 w-full transition-all duration-500 ${scrolled'
@@ -219,7 +219,7 @@ export default function Page() {
                     }`}  />                  </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && ;
+                    {activeDropdown === category.name && ,
                       <motion.div
                         initial = {
 
@@ -282,17 +282,17 @@ export default function Page() {
                                     </h4>
                                   </div>
                                 </Link>
-                              </motion.div>;) ) }
+                              </motion.div>,) ) }
                           </div>
-                        </div>;
+                        </div>,
                       </motion.div>) }
                   </AnimatePresence>
                 </div>) ) }
             </nav>
             {/* Right side actions */}"
-            <div className="flex items-center space-x-4">;
+            <div className="flex items-center space-x-4">,
               {/* Search */}"
-              <form onSubmit={handleSearch} className="hidden md:block">;"
+              <form onSubmit={handleSearch} className="hidden md: block">,"
                 <div className="relative">
                   <input"
                     type="text"
@@ -304,7 +304,7 @@ export default function Page() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"  />                </div>
               </form>
               {/* User actions */}"
-              <div className="flex items-center space-x-2">;
+              <div className="flex items-center space-x-2">,
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}"
@@ -326,11 +326,11 @@ export default function Page() {
               </div>
               {/* Mobile Sidebar Toggle */}
               <MobileSidebarToggle  />
-            </div>;
-          </div>;
-        </div>;
-      </header>;
+            </div>,
+          </div>,
+        </div>,
+      </header>,
     </>
-  )};
+  )},
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,8 +1,8 @@
-import React{ useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import React{ useMemo } from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 ArrowLeft,
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 export default function ServiceFallbackPage() {,
 	return (,
 		<UltraFuturisticBackground>,
@@ -37,6 +37,5 @@ export default function ServiceFallbackPage() {,
 					</Link>,
 				</div>,
 			</div>,
-		</UltraFuturisticBackground>,
-	),}
+		</UltraFuturisticBackground>)}
 ,

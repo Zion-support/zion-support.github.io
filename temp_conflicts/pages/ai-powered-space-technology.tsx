@@ -1,11 +1,11 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Brain, Zap, Shield, Clock, Users, 
   CheckCircle, ArrowRight, Award, BarChart3,
   MessageCircle, Phone, Mail, MapPin
-} from 'lucide-react';
+} from 'lucide-react',
 
 const AIPoweredSpaceTechnology: React.FC = () => {
   const features = [
@@ -39,57 +39,57 @@ const AIPoweredSpaceTechnology: React.FC = () => {
       title: 'Multi-mission Support',
       description: 'Space technology support across various missions and applications'
     }
-  ];
+  ],
 
   const spaceCapabilities = [
     {
       area: 'Mission Planning',
-      capabilities: ['Trajectory optimization', 'Resource planning', 'Risk assessment', 'Timeline optimization'],
+      capabilities: ['Trajectory optimizationResource planning', 'Risk assessmentTimeline optimization'],
       improvement: '99.9% accuracy',
       planning: 'Intelligent'
     },
     {
       area: 'Satellite Operations',
-      capabilities: ['Orbital control', 'Payload management', 'Communication optimization', 'Power management'],
+      capabilities: ['Orbital controlPayload management', 'Communication optimizationPower management'],
       improvement: 'Real-time control',
       operations: 'Advanced'
     },
     {
       area: 'Data Processing',
-      capabilities: ['Remote sensing', 'Image analysis', 'Signal processing', 'Data fusion'],
+      capabilities: ['Remote sensingImage analysis', 'Signal processingData fusion'],
       improvement: '1000x faster',
       processing: 'High-performance'
     },
     {
       area: 'Autonomous Systems',
-      capabilities: ['Self-navigation', 'Collision avoidance', 'Mission adaptation', 'Failure recovery'],
+      capabilities: ['Self-navigationCollision avoidance', 'Mission adaptationFailure recovery'],
       improvement: '99.99% reliability',
       autonomy: 'Robust'
     }
-  ];
+  ],
 
   const useCases = [
     {
       title: 'Satellite Communications',
       description: 'AI-powered space technology for satellite communication and networking',
-      benefits: ['Global connectivity', 'High-speed data', 'Reliable communication', 'Coverage optimization']
+      benefits: ['Global connectivityHigh-speed data', 'Reliable communicationCoverage optimization']
     },
     {
       title: 'Earth Observation',
       description: 'Space technology for environmental monitoring and Earth observation',
-      benefits: ['Climate monitoring', 'Disaster response', 'Resource management', 'Environmental protection']
+      benefits: ['Climate monitoringDisaster response', 'Resource managementEnvironmental protection']
     },
     {
       title: 'Space Exploration',
       description: 'AI-powered technology for deep space exploration and research',
-      benefits: ['Mission optimization', 'Data analysis', 'Autonomous navigation', 'Scientific discovery']
+      benefits: ['Mission optimizationData analysis', 'Autonomous navigationScientific discovery']
     },
     {
       title: 'Space Infrastructure',
       description: 'Space technology for orbital infrastructure and space station operations',
-      benefits: ['Infrastructure management', 'Life support systems', 'Maintenance automation', 'Safety enhancement']
+      benefits: ['Infrastructure managementLife support systems', 'Maintenance automationSafety enhancement']
     }
-  ];
+  ],
 
   const pricingPlans = [
     {
@@ -98,10 +98,8 @@ const AIPoweredSpaceTechnology: React.FC = () => {
       period: '/month',
       description: 'Perfect for small organizations starting with space technology development',
       features: [
-        'Basic space technology features',
-        'Single mission support',
-        'Standard operations',
-        'Email support',
+        'Basic space technology featuresSingle mission support',
+        'Standard operationsEmail support',
         'Basic analytics'
       ],
       popular: false
@@ -112,12 +110,9 @@ const AIPoweredSpaceTechnology: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing organizations with advanced space technology needs',
       features: [
-        'Advanced space technology features',
-        'Multi-mission support',
-        'Custom development',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
+        'Advanced space technology featuresMulti-mission support',
+        'Custom developmentPriority support',
+        'Advanced analyticsAPI access',
         'Real-time control'
       ],
       popular: true
@@ -128,17 +123,14 @@ const AIPoweredSpaceTechnology: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with complex space technology requirements',
       features: [
-        'Custom space technology development',
-        'Enterprise solutions',
-        'Dedicated infrastructure',
-        'Dedicated support team',
-        'Advanced analytics',
-        'Full API integration',
+        'Custom space technology developmentEnterprise solutions',
+        'Dedicated infrastructureDedicated support team',
+        'Advanced analyticsFull API integration',
         'Custom compliance frameworks'
       ],
       popular: false
     }
-  ];
+  ],
 
   const testimonials = [
     {
@@ -159,7 +151,7 @@ const AIPoweredSpaceTechnology: React.FC = () => {
       position: "Platform Director",
       company: "Advanced Space Corp"
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -495,7 +487,7 @@ const AIPoweredSpaceTechnology: React.FC = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Explore with AI-Powered Space Technology Intelligence?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -517,7 +509,7 @@ const AIPoweredSpaceTechnology: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default AIPoweredSpaceTechnology;
+export default AIPoweredSpaceTechnology,

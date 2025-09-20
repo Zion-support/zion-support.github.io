@@ -1,7 +1,6 @@
-import React from 'react';
-import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Shield, Globe, ExternalLink, CheckCircle, Wrench, Mail, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function SecurityHeadersCSPManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -15,10 +14,10 @@ export default function SecurityHeadersCSPManager() {
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {[
-              { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' },
-              { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' },
-              { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' },
-              { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' },
+              { title: 'Policy templates', desc: 'Prebuilt strict, balanced and relaxed CSP profiles.' };
+              { title: 'Per-app overrides', desc: 'Granular exceptions with expiry and approvals.' };
+              { title: 'Automated reports', desc: 'CSP report-uri ingestion with triage and fixes.' };
+              { title: 'CI/CD integration', desc: 'Fail builds on insecure headers or CSP regressions.' }
             ].map((f) => (
               <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
@@ -43,6 +42,6 @@ export default function SecurityHeadersCSPManager() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 

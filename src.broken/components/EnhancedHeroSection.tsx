@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
 =======
-  icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  icon: React.ComponentType<any>,
+  stats: { label: string, value: string, icon: React.ComponentType<any> }[],
   badge?: string}
 
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
 
-  const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0),  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
 
   const heroSlides: HeroSlide[] = [{
 
@@ -19,15 +19,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-ai-solutions.jpg","
       cta: "Explore AI Solutions","
       path: "/services/ai-business-intelligence","
-      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],;"
+      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],"
       gradient: "from-zion-cyan via-zion-purple to-zion-blue",
       icon: Brain,
-      stats[;"
+      stats[,"
         { label: "Accuracy Rate", value: "95%+", icon: Target },"
         { label: "ROI Increase", value: "450%", icon: TrendingUp },"
         { label: "Market Growth", value: "280%", icon: Rocket }
       ]
-    },;
+    },
     {
 "
       title: "Comprehensive IT Services","
@@ -36,15 +36,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-it-services.jpg","
       cta: "View Our Services","
       path: "/services","
-      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],;"
+      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],"
       gradient: "from-zion-blue via-zion-cyan to-zion-purple",
       icon: Shield,
-      stats[;"
+      stats[,"
         { label: "Uptime", value: "99.99%", icon: Target },"
         { label: "Cost Savings", value: "700%", icon: TrendingUp },"
         { label: "Response Time", value: "<5min", icon: Rocket }
       ]
-    },;
+    },
     {
 "
       title: "Green IT Solutions","
@@ -53,28 +53,28 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-green-it.jpg","
       cta: "Learn More","
       path: "/green-it","
-      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],;"
+      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],"
       gradient: "from-zion-cyan via-zion-blue to-zion-purple",
       icon: Globe,
-      stats[;"
+      stats[,"
         { label: "Energy Savings", value: "60%", icon: Target },"
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },"
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
 
-  ];
+  ],
 
   useEffect(() => {
-    if(!isAutoPlaying) return;
+    if(!isAutoPlaying) return,
 
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
-    return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ,
+    return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ,
 
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
-    setIsAutoPlaying(false) };
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ,
+    setIsAutoPlaying(false) },
 
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
-    setIsAutoPlaying(false) };
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ,
+    setIsAutoPlaying(false) },
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 20, repeat: Infinity }}
@@ -107,7 +107,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       </div>
 
       {/* Hero content */}"
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">;"
+      <div className="relative z-10 container mx-auto px-4 sm: px-6 lg:px-8">,"
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
@@ -196,7 +196,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10"
 "
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0"  />                      {feature}
-                    </motion.div>;) ) }
+                    </motion.div>,) ) }
                 </div>
 
                 {/* CTA Button */}
@@ -268,8 +268,8 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             </div>
 
             {/* Enhanced floating stats cards */}"
-            <div className="absolute -bottom-6 -left-6 space-y-4">;
-              {currentSlideData.stats.map((stat, index) => (;
+            <div className="absolute -bottom-6 -left-6 space-y-4">,
+              {currentSlideData.stats.map((stat, index) => (,
                 <motion.div
                   key={stat.label}
                   initial = {
@@ -314,7 +314,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
               transition={{ delay: 0.8 }}"
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl"
 "
-              <div className="flex items-center space-x-4">;"
+              <div className="flex items-center space-x-4">,"
                 <div className="p-3 bg-zion-cyan/20 rounded-xl">"
                   <Star className="w-6 h-6 text-zion-cyan"  />                </div>
                 <div>"
@@ -327,7 +327,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         </div>
 
         {/* Enhanced slide navigation */}"
-        <div className="flex items-center justify-center mt-16 space-x-4">;
+        <div className="flex items-center justify-center mt-16 space-x-4">,
           <motion.button
             onClick={prevSlide}"
             className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
@@ -390,14 +390,14 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
   { duration: 2,
   repeat: Infinity
 
-}};"
-            className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
-          />;
-        </motion.div>;"
-        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>;
-      </motion.div>;
-    </section>;) }
-}) ;
-export default EnhancedHeroSection;
+}},"
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2",
+          />,
+        </motion.div>,"
+        <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>,
+      </motion.div>,
+    </section>,) }
+}) ,
+export default EnhancedHeroSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

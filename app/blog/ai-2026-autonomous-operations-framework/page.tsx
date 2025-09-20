@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import SEO from '../../components/SEO';
+import Link from 'next/link',
+import SEO from '../../components/SEO',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Operations Framework - Zion Tech Group';
-  description: 'Build self-healing, self-optimizing systems with our comprehensive autonomous operations framework. Reduce manual intervention by 90% and achieve 99.9% uptime.',
-};
+  title: 'AI 2026: Autonomous Operations Framework - Zion Tech Group',
+  description: 'Build self-healing, self-optimizing systems with our comprehensive autonomous operations framework. Reduce manual intervention by 90% and achieve 99.9% uptime.'
+},
 export default function AutonomousOperationsFramework2026() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -170,5 +170,4 @@ export default function AutonomousOperationsFramework2026() {,
           </div>,
         </article>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

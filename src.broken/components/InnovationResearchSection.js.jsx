@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-,;
+,
     {
 
         id: 5,"
@@ -15,15 +15,15 @@ export default function Page() {
         patents: 4,"
         funding: "$1.5M","
         status: "Active",
-        highlights[;"
+        highlights[,"
             "Edge AI Deployment","
             "IoT Security Protocols","
             "Distributed Computing","
             "Real-time Processing"
-        ],;"
-        technologies["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],;"
-        partners["Intel", "ARM", "Qualcomm", "Industrial Partners"];
-    },;
+        ],"
+        technologies["Kubernetes", "Docker", "Custom Edge Runtime", "IoT Frameworks"],"
+        partners["Intel", "ARM", "Qualcomm", "Industrial Partners"],
+    },
     {
 
         id: 6,"
@@ -37,16 +37,16 @@ export default function Page() {
         patents: 3,"
         funding: "$1.2M","
         status: "Active",
-        highlights[;"
+        highlights[,"
             "Green AI Algorithms","
             "Energy-Efficient Computing","
             "Renewable Energy Integration","
             "Carbon Footprint Reduction"
-        ],;"
-        technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],;"
-        partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"];
+        ],"
+        technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],"
+        partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"],
     }
-];
+],
 const innovationStats = ["
     { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },"
     { icon: <Users className="w-6 h-6"/>, value: "80+", label: "Researchers" },"
@@ -54,7 +54,7 @@ const innovationStats = ["
     { icon: <Target className="w-6 h-6"/>, value: "30+", label: "Patents Filed" },"
     { icon: <TrendingUp className="w-6 h-6"/>, value: "$10M+", label: "Research Funding" },"
     { icon: <Star className="w-6 h-6"/>, value: "15+", label: "Industry Partners" }
-];
+],
 const researchLabs = [{
 "
         name: "AI Research Lab","
@@ -91,9 +91,9 @@ const researchLabs = [{
         projects: 9,
         researchers: 5
     }
-];
-    const [selectedResearch, setSelectedResearch] = useState(null);
-    const [hoveredLab, setHoveredLab] = useState(null);
+],
+    const [selectedResearch, setSelectedResearch] = useState(null),
+    const [hoveredLab, setHoveredLab] = useState(null),
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -106,7 +106,7 @@ const researchLabs = [{
                 delayChildren: 0.1
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { y: 30,
@@ -123,7 +123,7 @@ const researchLabs = [{
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}"
       <div className="absolute inset-0 opacity-5">"

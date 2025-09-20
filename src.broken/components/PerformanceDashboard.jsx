@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-;
+,
     const getScoreEmoji = (score) => {
 
         if(score >= 90)
-            return '🚀';
+            return '🚀',
         if(score >= 70)
-            return '⚠️';
-        return '🐌'};
+            return '⚠️',
+        return '🐌'},
     const getMetricIcon = (metricName) => {
 
         const icons = {

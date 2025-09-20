@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Brain,
   Zap,
@@ -8,88 +8,88 @@ import {,
   Target,
   ArrowRight,
   Star,
-  TrendingUp;
-  Users;
-  Shield;
-  Globe;
-  X;
-  Play;
-  Download;
-  Search;
-  Grid;
-  List;
-  Crown;
-  Gem;
-  Sparkles;
-  CheckCircle;
-  Award;
-  Code;
-  Settings;
-  Wrench;
-  Eye;
-  BarChart3;
-  MessageCircle;
-  Building,
-} from 'lucide-react';
+  TrendingUp,
+  Users,
+  Shield,
+  Globe,
+  X,
+  Play,
+  Download,
+  Search,
+  Grid,
+  List,
+  Crown,
+  Gem,
+  Sparkles,
+  CheckCircle,
+  Award,
+  Code,
+  Settings,
+  Wrench,
+  Eye,
+  BarChart3,
+  MessageCircle,
+  Building
+} from 'lucide-react',
 const AIInnovationHub2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentInnovationsetCurrentInnovation] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentInnovationsetCurrentInnovation] = useState(0),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     // Auto-rotate innovations,
     const interval = setInterval(() => {,
-      setCurrentInnovation((prev) => (prev + 1) % innovations.length);
-    }4000);
-    return () => clearInterval(interval);
-  }[]);
+      setCurrentInnovation((prev) => (prev + 1) % innovations.length),
+    }4000),
+    return () => clearInterval(interval),
+  }[]),
   const innovations = [,
     {,
-      icon: Brain;
-      title: 'Neural Architecture Search';
-      description: 'Automated discovery of optimal neural networks';
-      category: 'AI Core';
-      color: 'from-purple-500 to-pink-500';
-      rating: 4.9;
-      downloads: '50K+',};
+      icon: Brain,
+      title: 'Neural Architecture Search',
+      description: 'Automated discovery of optimal neural networks',
+      category: 'AI Core',
+      color: 'from-purple-500 to-pink-500',
+      rating: 4.9,
+      downloads: '50K+'},
     {,
-      icon: Zap;
-      title: 'Quantum Neural Networks';
-      description: 'Hybrid quantum-classical neural networks';
-      category: 'Quantum AI';
-      color: 'from-blue-500 to-cyan-500';
-      rating: 4.8;
-      downloads: '25K+',};
+      icon: Zap,
+      title: 'Quantum Neural Networks',
+      description: 'Hybrid quantum-classical neural networks',
+      category: 'Quantum AI',
+      color: 'from-blue-500 to-cyan-500',
+      rating: 4.8,
+      downloads: '25K+'},
     {,
-      icon: Shield;
-      title: 'Federated Learning';
-      description: 'Privacy-preserving distributed ML';
-      category: 'Privacy AI';
-      color: 'from-green-500 to-emerald-500';
-      rating: 4.7;
-      downloads: '75K+',};
+      icon: Shield,
+      title: 'Federated Learning',
+      description: 'Privacy-preserving distributed ML',
+      category: 'Privacy AI',
+      color: 'from-green-500 to-emerald-500',
+      rating: 4.7,
+      downloads: '75K+'},
     {,
-      icon: Rocket;
-      title: 'Edge AI Computing';
-      description: 'Ultra-low latency distributed processing';
-      category: 'Future Tech';
-      color: 'from-orange-500 to-red-500';
-      rating: 4.7;
-      downloads: '35K+',}
-  ];
+      icon: Rocket,
+      title: 'Edge AI Computing',
+      description: 'Ultra-low latency distributed processing',
+      category: 'Future Tech',
+      color: 'from-orange-500 to-red-500',
+      rating: 4.7,
+      downloads: '35K+'}
+  ],
   const categories = [,
-    { name: 'AI Core 'Technologiescount: '150+'icon: Brain ,};
-    { name: 'Business AI 'Solutionscount: '80+'icon: Target ,};
-    { name: 'Future 'Technologiescount: '45+'icon: Rocket ,};
-    { name: 'Tools & 'Utilitiescount: '120+'icon: Wrench ,}
-  ];
+    { name: 'AI Core 'Technologiescount: '150+'icon: Brain },
+    { name: 'Business AI 'Solutionscount: '80+'icon: Target },
+    { name: 'Future 'Technologiescount: '45+'icon: Rocket },
+    { name: 'Tools & 'Utilitiescount: '120+'icon: Wrench }
+  ],
   const stats = [,
-    { number: '400+'label: 'AI 'Innovationsicon: Brain ,};
-    { number: '1M+'label: ''Downloadsicon: Download ,};
-    { number: '4.8'label: 'Average 'Ratingicon: Star ,};
-    { number: '50+'label: ''Categoriesicon: Grid ,}
-  ];
-  if (isDismissed) return null;
+    { number: '400+'label: 'AI 'Innovationsicon: Brain },
+    { number: '1M+'label: ''Downloadsicon: Download },
+    { number: '4.8'label: 'Average 'Ratingicon: Star },
+    { number: '50+'label: ''Categoriesicon: Grid }
+  ],
+  if (isDismissed) return null,
   return (,
     <div>,
       {isVisible && (,
@@ -107,7 +107,7 @@ const AIInnovationHub2025PromotionBanner = () => {,
             {/* Content */}
             <div className="relative z-10 container mx-auto px-4 py-12">,
               <div className="flex flex-col lg: flex-row items-center justify-between gap-12">,
-                {/* Left Content */,}
+                {/* Left Content */}
                 <div className="flex-1 text-center lg: text-left">,
                   <div,
                     className="mb-8",
@@ -127,7 +127,7 @@ const AIInnovationHub2025PromotionBanner = () => {,
                       find everything you need to build the future.,
                     </p>,
                   </div>,
-                  {/* Rotating Innovation Showcase */,}
+                  {/* Rotating Innovation Showcase */}
                   <div,
                     key={currentInnovation}
                     className="mb-8",
@@ -156,14 +156,13 @@ const AIInnovationHub2025PromotionBanner = () => {,
                   >,
                     <div className="grid grid-cols-2 md: grid-cols-4 gap-4">,
                       {categories.map((categoryindex) => (,
-                        <div key={index,} className="text-center">,
+                        <div key={index} className="text-center">,
                           <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mb-2">,
                             <category.icon className="w-6 h-6 text-white" />,
                           </div>,
                           <div className="text-white font-semibold text-sm">{category.name}</div>,
                           <div className="text-gray-400 text-xs">{category.count}</div>,
-                        </div>,
-                      ))}
+                        </div>))}
                     </div>,
                   </div>,
                   {/* Stats */}
@@ -171,11 +170,10 @@ const AIInnovationHub2025PromotionBanner = () => {,
                     className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-8",
                   >,
                     {stats.map((statindex) => (,
-                      <div key={index,} className="text-center">,
+                      <div key={index} className="text-center">,
                         <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>,
                         <div className="text-sm text-gray-300">{stat.label}</div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Action Buttons */}
                   <div,
@@ -192,7 +190,7 @@ const AIInnovationHub2025PromotionBanner = () => {,
                     </button>,
                   </div>,
                 </div>,
-                {/* Right Content - Visual */,}
+                {/* Right Content - Visual */}
                 <div,
                   className="flex-1 max-w-lg",
                 >,
@@ -213,28 +211,25 @@ const AIInnovationHub2025PromotionBanner = () => {,
                       {/* Feature Grid */}
                       <div className="grid grid-cols-2 gap-4 mb-6">,
                         {[,
-                          { icon: Brainlabel: 'Neural 'Networkscolor: 'from-purple-500 to-pink-500' ,};
-                          { icon: Zaplabel: 'Quantum 'AIcolor: 'from-blue-500 to-cyan-500' ,};
-                          { icon: Shieldlabel: 'Privacy 'AIcolor: 'from-green-500 to-emerald-500' ,};
-                          { icon: Rocketlabel: 'Edge 'Computingcolor: 'from-orange-500 to-red-500' ,}
+                          { icon: Brainlabel: 'Neural 'Networkscolor: 'from-purple-500 to-pink-500' },
+                          { icon: Zaplabel: 'Quantum 'AIcolor: 'from-blue-500 to-cyan-500' },
+                          { icon: Shieldlabel: 'Privacy 'AIcolor: 'from-green-500 to-emerald-500' },
+                          { icon: Rocketlabel: 'Edge 'Computingcolor: 'from-orange-500 to-red-500' }
                         ].map((featureindex) => (,
                           <div key={index} className={`bg-gradient-to-r ${feature.color} rounded-xl p-4 text-center`}>,
                             <feature.icon className="w-6 h-6 text-white mx-auto mb-2" />,
                             <div className="text-white text-sm font-semibold">{feature.label}</div>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                       {/* Quick Stats */}
                       <div className="space-y-3">,
                         {[,
-                          '400+ AI Innovations1M+ Downloads';
-                          '4.8/5 Average Rating50+ Categories',
+                          '400+ AI Innovations1M+ Downloads4.8/5 Average Rating50+ Categories'
                         ].map((statindex) => (,
                           <div key={index} className="flex items-center">,
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />,
                             <span className="text-gray-300 text-sm">{stat}</span>,
-                          </div>,
-                        ))}
+                          </div>))}
                       </div>,
                     </div>,
                     {/* Floating Elements */}
@@ -260,12 +255,12 @@ const AIInnovationHub2025PromotionBanner = () => {,
               <X className="w-6 h-6" />,
             </button>,
           </div>,
-          {/* Bottom Gradient */,}
+          {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600" />,
         </div>,
       )}
     </div>,
-  );
-};
-export default AIInnovationHub2025PromotionBanner;
+  ),
+},
+export default AIInnovationHub2025PromotionBanner,
 </div></div></div></div>,

@@ -18,7 +18,6 @@ export default function ReviewsModeration() {,
   return (,
     <ProtectedRoute>,
       <ReviewsModerationContent />,
-    </ProtectedRoute>,
-  );
+    </ProtectedRoute>),
 }
 ,

@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Rocket, Zap, Target, Shield, TrendingUp, Globe, 
   CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function SpaceResourceMiningPlatform() {
   const features = [
@@ -39,25 +39,19 @@ export default function SpaceResourceMiningPlatform() {
       title: 'Logistics Management',
       description: 'Comprehensive logistics management for space mining operations and resource transportation.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Access unlimited space resources',
-    'Reduce Earth resource dependency by 80%',
-    'Enable space colonization by 2030',
-    'Create new economic opportunities',
-    'Accelerate space exploration by 500%',
-    'Enable sustainable resource extraction',
-    'Scale space operations globally',
-    'Future-proof resource security'
-  ];
+    'Access unlimited space resourcesReduce Earth resource dependency by 80%',
+    'Enable space colonization by 2030Create new economic opportunities',
+    'Accelerate space exploration by 500%Enable sustainable resource extraction',
+    'Scale space operations globallyFuture-proof resource security'
+  ],
 
   const useCases = [
-    'Asteroid Mining', 'Lunar Operations', 'Planetary Mining',
-    'Resource Mapping', 'Autonomous Extraction', 'Space Logistics',
-    'Resource Processing', 'Safety Management', 'Colonization Support',
-    'Economic Development', 'Space Infrastructure', 'Resource Security'
-  ];
+    'Asteroid MiningLunar Operations', 'Planetary MiningResource Mapping', 'Autonomous ExtractionSpace Logistics',
+    'Resource ProcessingSafety Management', 'Colonization SupportEconomic Development', 'Space InfrastructureResource Security'
+  ],
 
 const space-resource-mining-platform: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const space-resource-mining-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default space-resource-mining-platform;
+export default space-resource-mining-platform,

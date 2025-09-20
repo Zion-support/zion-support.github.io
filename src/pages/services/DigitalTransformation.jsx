@@ -1,50 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import SEO from "@/components/SEO";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 const DigitalTransformation = () => {
     const transformationServices = [
         {
-            title: "Process Automation",
-            description: "Streamline operations with intelligent automation solutions",
-            features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
+            title: "Process Automation",description: "Streamline operations with intelligent automation solutions",features: ["Workflow Automation", "RPA Implementation", "Business Process Optimization", "Efficiency Metrics"],
             icon: "🤖"
-        },
+        };
         {
-            title: "Workflow Optimization",
-            description: "Redesign and optimize business workflows for maximum efficiency",
-            features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
+            title: "Workflow Optimization",description: "Redesign and optimize business workflows for maximum efficiency",features: ["Process Mapping", "Bottleneck Analysis", "Workflow Redesign", "Performance Monitoring"],
             icon: "📊"
-        },
+        };
         {
-            title: "Change Management",
-            description: "Guide your organization through digital transformation with expert change management",
-            features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
+            title: "Change Management",description: "Guide your organization through digital transformation with expert change management",features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
             icon: "🔄"
-        },
+        };
         {
-            title: "Business Process Optimization",
-            description: "Streamline operations and improve efficiency through digital workflows",
-            features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
+            title: "Business Process Optimization",description: "Streamline operations and improve efficiency through digital workflows",features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
             icon: "⚡"
-        },
+        };
         {
-            title: "Customer Experience Enhancement",
-            description: "Create seamless digital experiences that delight your customers",
-            features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
+            title: "Customer Experience Enhancement",description: "Create seamless digital experiences that delight your customers",features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
             icon: "🎯"
-        },
+        };
         {
-            title: "Data & Analytics Strategy",
-            description: "Leverage data insights to drive informed business decisions",
-            features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
+            title: "Data & Analytics Strategy",description: "Leverage data insights to drive informed business decisions",features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
             icon: "📊"
-        },
+        };
         {
-            title: "Technology Infrastructure",
-            description: "Modernize your technology stack for scalability and performance",
-            features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
+            title: "Technology Infrastructure",description: "Modernize your technology stack for scalability and performance",features: ["Cloud Migration", "API Integration", "Microservices", "DevOps Practices"],
             icon: "🏗️"
         }
     ];
@@ -54,11 +40,11 @@ const DigitalTransformation = () => {
         "Reduced operational costs and waste",
         "Improved decision-making with real-time data",
         "Competitive advantage in the digital marketplace"
-    ];
+    ],
     const transformationApproach = [
-        { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" },
-        { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" },
-        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" },
+        { step: "Assessment", icon: "🔍", description: "Evaluate current state and identify opportunities" };
+        { step: "Strategy", icon: "📋", description: "Develop comprehensive transformation roadmap" };
+        { step: "Implementation", icon: "🚀", description: "Execute changes with agile methodology" };
         { step: "Optimization", icon: "📈", description: "Continuous improvement and scaling" }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
@@ -191,7 +177,7 @@ const DigitalTransformation = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -203,6 +189,6 @@ const DigitalTransformation = () => {
           </Link>
         </div>
       </section>
-    </div>);
+    </div>)
 };
 export default DigitalTransformation;

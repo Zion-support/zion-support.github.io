@@ -1,5 +1,5 @@
-import React from 'react';
-import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight  } from 'lucide-react';
+import React from 'react',
+import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight  } from 'lucide-react',
 
 export default function Page() {
 ,
@@ -16,8 +16,8 @@ export default function Page() {
       description: 'Start your project today',
       icon: Zap,
       href: '/contact',
-      color: 'from-yellow-500 to-orange-500'},
-  ];
+      color: 'from-yellow-500 to-orange-500'}
+  ],
 
   return ()
     <section className="py-16 bg-slate-800/30">"
@@ -61,7 +61,7 @@ export default function Page() {
         <div className="text-center mt-12">
           <a"
             href="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             View All Services"
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -69,6 +69,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
-};
+  )
+},
 '"`

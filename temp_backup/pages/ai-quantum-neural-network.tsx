@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, Zap, Target, Shield, TrendingUp, Globe, 
   CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Cpu
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIQuantumNeuralNetwork() {
   const features = [
@@ -39,25 +39,19 @@ export default function AIQuantumNeuralNetwork() {
       title: 'Global Quantum Network',
       description: 'Interconnected global quantum network enabling distributed quantum neural processing.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Accelerate AI training by 1000x',
-    'Improve accuracy by 500%',
-    'Enable quantum AI by 2030',
-    'Create quantum-resistant systems',
-    'Scale neural networks infinitely',
-    'Enable quantum consciousness',
-    'Scale quantum operations globally',
-    'Future-proof AI technology'
-  ];
+    'Accelerate AI training by 1000xImprove accuracy by 500%',
+    'Enable quantum AI by 2030Create quantum-resistant systems',
+    'Scale neural networks infinitelyEnable quantum consciousness',
+    'Scale quantum operations globallyFuture-proof AI technology'
+  ],
 
   const useCases = [
-    'AI Training', 'Pattern Recognition', 'Machine Learning',
-    'Quantum Computing', 'Neural Networks', 'Optimization',
-    'Security Systems', 'Data Processing', 'Problem Solving',
-    'Decision Making', 'Quantum AI', 'Future Technology'
-  ];
+    'AI TrainingPattern Recognition', 'Machine LearningQuantum Computing', 'Neural NetworksOptimization',
+    'Security SystemsData Processing', 'Problem SolvingDecision Making', 'Quantum AIFuture Technology'
+  ],
 
 const ai-quantum-neural-network: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-quantum-neural-network: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-quantum-neural-network;
+export default ai-quantum-neural-network,

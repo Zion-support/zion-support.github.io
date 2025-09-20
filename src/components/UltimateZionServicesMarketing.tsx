@@ -1,82 +1,38 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ultimateZionServices2025 } from '../data/ultimate-zion-services-2025';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesMarketing: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
 
   const categories = [
     { 
-      id: 'quantum-computing', 
-      name: 'Quantum Computing & AI', 
-      icon: '⚛️', 
-      color: 'from-blue-600 to-cyan-600',
-      description: 'Revolutionary quantum computing solutions that solve previously impossible problems',
-      marketSize: '$65.4 billion by 2027',
-      growthRate: '500% annually'
-    },
+      id: 'quantum-computing',name: 'Quantum Computing & AI',icon: '⚛️',color: 'from-blue-600 to-cyan-600',description: 'Revolutionary quantum computing solutions that solve previously impossible problems',marketSize: '$65.4 billion by 2027',growthRate: '500% annually'
+    };
     { 
-      id: 'blockchain-web3', 
-      name: 'Blockchain & Web3', 
-      icon: '🔗', 
-      color: 'from-green-600 to-emerald-600',
-      description: 'Next-generation decentralized solutions with AI optimization',
-      marketSize: '$67.4 billion by 2027',
-      growthRate: '400% annually'
-    },
+      id: 'blockchain-web3',name: 'Blockchain & Web3',icon: '🔗',color: 'from-green-600 to-emerald-600',description: 'Next-generation decentralized solutions with AI optimization',marketSize: '$67.4 billion by 2027',growthRate: '400% annually'
+    };
     { 
-      id: 'space-tech', 
-      name: 'Space Technology', 
-      icon: '🛰️', 
-      color: 'from-indigo-600 to-purple-600',
-      description: 'AI-powered satellite and space mission management',
-      marketSize: '$469.8 billion by 2027',
-      growthRate: '300% annually'
-    },
+      id: 'space-tech',name: 'Space Technology',icon: '🛰️',color: 'from-indigo-600 to-purple-600',description: 'AI-powered satellite and space mission management',marketSize: '$469.8 billion by 2027',growthRate: '300% annually'
+    };
     { 
-      id: 'biotech-ai', 
-      name: 'Biotech & AI', 
-      icon: '🧬', 
-      color: 'from-red-600 to-pink-600',
-      description: 'Revolutionary biomedical research and drug discovery',
-      marketSize: '$67.8 billion by 2027',
-      growthRate: '600% annually'
-    },
+      id: 'biotech-ai',name: 'Biotech & AI',icon: '🧬',color: 'from-red-600 to-pink-600',description: 'Revolutionary biomedical research and drug discovery',marketSize: '$67.8 billion by 2027',growthRate: '600% annually'
+    };
     { 
-      id: 'emerging-tech', 
-      name: 'Emerging Technology', 
-      icon: '🚀', 
-      color: 'from-orange-600 to-red-600',
-      description: 'Cutting-edge technologies that define the future',
-      marketSize: '$3.7 billion by 2027',
-      growthRate: '800% annually'
-    },
+      id: 'emerging-tech',name: 'Emerging Technology',icon: '🚀',color: 'from-orange-600 to-red-600',description: 'Cutting-edge technologies that define the future',marketSize: '$3.7 billion by 2027',growthRate: '800% annually'
+    };
     { 
-      id: 'micro-saas', 
-      name: 'Micro SAAS Solutions', 
-      icon: '💻', 
-      color: 'from-blue-600 to-indigo-600',
-      description: 'Intelligent business automation and optimization',
-      marketSize: '$15.8 billion by 2027',
-      growthRate: '200% annually'
-    },
+      id: 'micro-saas',name: 'Micro SAAS Solutions',icon: '💻',color: 'from-blue-600 to-indigo-600',description: 'Intelligent business automation and optimization',marketSize: '$15.8 billion by 2027',growthRate: '200% annually'
+    };
     { 
-      id: 'it-services', 
-      name: 'Enterprise IT Services', 
-      icon: '🖥️', 
-      color: 'from-gray-600 to-slate-600',
-      description: 'Advanced infrastructure and DevOps solutions',
-      marketSize: '$25.2 billion by 2027',
-      growthRate: '150% annually'
+      id: 'it-services',name: 'Enterprise IT Services',icon: '🖥️',color: 'from-gray-600 to-slate-600',description: 'Advanced infrastructure and DevOps solutions',marketSize: '$25.2 billion by 2027',growthRate: '150% annually'
     }
   ];
-
   const getServicesByCategory = (categoryId: string) => {
     if (categoryId === 'all') return ultimateZionServices2025;
-    return ultimateZionServices2025.filter(service => service.category === categoryId);
-  };
+    return ultimateZionServices2025.filter(service => service.category === categoryId)
+  },
 
-  const selectedServices = getServicesByCategory(selectedCategory);
+  const selectedServices = getServicesByCategory(selectedCategory),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
@@ -205,11 +161,11 @@ const UltimateZionServicesMarketing: React.FC = () => {
 
       {/* Category Overview */}
       {selectedCategory !== 'all' && (
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {(() => {
               const category = categories.find(c => c.id === selectedCategory);
-              if (!category) return null;
+              if (!category) return null,
               
               return (
                 <motion.div 
@@ -259,12 +215,10 @@ const UltimateZionServicesMarketing: React.FC = () => {
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
             variants={{
-              hidden: { opacity: 0 },
+              hidden: { opacity: 0 };
               visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1,
-                  delayChildren: 0.2
+                opacity: 1,transition: {
+                  staggerChildren: 0.1,delayChildren: 0.2
                 }
               }
             }} 
@@ -276,11 +230,9 @@ const UltimateZionServicesMarketing: React.FC = () => {
               <motion.div 
                 key={service.id} 
                 variants={{
-                  hidden: { opacity: 0, y: 20 },
+                  hidden: { opacity: 0, y: 20 };
                   visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.5 }
+                    opacity: 1,y: 0,transition: { duration: 0.5 }
                   }
                 }}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
@@ -295,7 +247,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
                     {service.innovationLevel}
                   </div>
                   <p className="text-sm text-purple-400 font-medium">
-                    {service.category.replace('-', ' ').toUpperCase()}
+                    {service.category.replace('- ').toUpperCase()}
                   </p>
                 </div>
 
@@ -420,7 +372,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+            <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -444,7 +396,6 @@ const UltimateZionServicesMarketing: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default UltimateZionServicesMarketing;

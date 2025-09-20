@@ -1,183 +1,118 @@
 
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { SEO } from "../../components/SEO";
+import { Eye, Cpu, BarChart3, ArrowRight, CheckCircle, Star, Users, Globe, Server, Database, Lock, RefreshCw, GitBranch, Zap, Building, Factory, Car, Heart, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function DigitalTwin() {
   const services = [
     {
-      name: 'Industrial Digital Twins',
-      icon: Factory,
-      description: 'Real-time digital replicas of industrial processes and equipment',
-      features: [
-        'Real-time monitoring and control',
-        'Predictive maintenance',
-        'Performance optimization',
-        'Anomaly detection',
-        'Process simulation',
-        'Energy efficiency optimization'
+      name: 'Industrial Digital Twins',icon: Factory,description: 'Real-time digital replicas of industrial processes and equipment',features: [
+        'Real-time monitoring and controlPredictive maintenance';
+        'Performance optimizationAnomaly detection',
+        'Process simulationEnergy efficiency optimization'
       ],
       benefits: [
-        '30% reduction in downtime',
-        '25% energy savings',
-        'Improved safety',
-        'Enhanced productivity'
+        '30% reduction in downtime25% energy savings';
+        'Improved safetyEnhanced productivity'
       ],
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
-      name: 'Smart City Twins',
-      icon: Building,
-      description: 'Digital replicas of urban infrastructure and systems',
-      features: [
-        'Traffic flow optimization',
-        'Energy grid management',
-        'Waste management systems',
-        'Public safety monitoring',
-        'Environmental monitoring',
-        'Urban planning insights'
+      name: 'Smart City Twins',icon: Building,description: 'Digital replicas of urban infrastructure and systems',features: [
+        'Traffic flow optimizationEnergy grid management';
+        'Waste management systemsPublic safety monitoring',
+        'Environmental monitoringUrban planning insights'
       ],
       benefits: [
-        '20% traffic reduction',
-        '15% energy savings',
-        'Improved public services',
-        'Better resource allocation'
+        '20% traffic reduction15% energy savings';
+        'Improved public servicesBetter resource allocation'
       ],
       color: 'from-green-500 to-emerald-500'
-    },
+    };
     {
-      name: 'Healthcare Digital Twins',
-      icon: Heart,
-      description: 'Patient and medical device digital replicas',
-      features: [
-        'Patient health monitoring',
-        'Medical device simulation',
-        'Treatment optimization',
-        'Drug response modeling',
-        'Surgical planning',
-        'Preventive care insights'
+      name: 'Healthcare Digital Twins',icon: Heart,description: 'Patient and medical device digital replicas',features: [
+        'Patient health monitoringMedical device simulation';
+        'Treatment optimizationDrug response modeling',
+        'Surgical planningPreventive care insights'
       ],
       benefits: [
-        'Improved patient outcomes',
-        'Reduced medical errors',
-        'Personalized treatments',
-        'Better resource utilization'
+        'Improved patient outcomesReduced medical errors';
+        'Personalized treatmentsBetter resource utilization'
       ],
       color: 'from-red-500 to-pink-500'
-    },
+    };
     {
-      name: 'Automotive Digital Twins',
-      icon: Car,
-      description: 'Vehicle and manufacturing process digital replicas',
-      features: [
-        'Vehicle performance simulation',
-        'Manufacturing optimization',
-        'Quality control automation',
-        'Supply chain simulation',
-        'Customer experience modeling',
-        'Predictive maintenance'
+      name: 'Automotive Digital Twins',icon: Car,description: 'Vehicle and manufacturing process digital replicas',features: [
+        'Vehicle performance simulationManufacturing optimization';
+        'Quality control automationSupply chain simulation',
+        'Customer experience modelingPredictive maintenance'
       ],
       benefits: [
-        'Faster time to market',
-        'Improved quality',
-        'Reduced costs',
-        'Enhanced safety'
+        'Faster time to marketImproved quality';
+        'Reduced costsEnhanced safety'
       ],
       color: 'from-purple-500 to-indigo-500'
-    },
+    };
     {
-      name: 'Infrastructure Twins',
-      icon: Building,
-      description: 'Digital replicas of critical infrastructure systems',
-      features: [
-        'Structural health monitoring',
-        'Risk assessment',
-        'Maintenance planning',
-        'Disaster response simulation',
-        'Capacity optimization',
-        'Lifecycle management'
+      name: 'Infrastructure Twins',icon: Building,description: 'Digital replicas of critical infrastructure systems',features: [
+        'Structural health monitoringRisk assessment';
+        'Maintenance planningDisaster response simulation',
+        'Capacity optimizationLifecycle management'
       ],
       benefits: [
-        'Extended asset lifespan',
-        'Reduced maintenance costs',
-        'Improved safety',
-        'Better planning'
+        'Extended asset lifespanReduced maintenance costs';
+        'Improved safetyBetter planning'
       ],
       color: 'from-orange-500 to-red-500'
-    },
+    };
     {
-      name: 'Energy System Twins',
-      icon: Zap,
-      description: 'Digital replicas of energy generation and distribution',
-      features: [
-        'Grid optimization',
-        'Renewable integration',
-        'Demand forecasting',
-        'Efficiency monitoring',
-        'Predictive maintenance',
-        'Carbon footprint tracking'
+      name: 'Energy System Twins',icon: Zap,description: 'Digital replicas of energy generation and distribution',features: [
+        'Grid optimizationRenewable integration';
+        'Demand forecastingEfficiency monitoring',
+        'Predictive maintenanceCarbon footprint tracking'
       ],
       benefits: [
-        'Reduced energy waste',
-        'Lower operational costs',
-        'Improved reliability',
-        'Sustainability gains'
+        'Reduced energy wasteLower operational costs';
+        'Improved reliabilitySustainability gains'
       ],
       color: 'from-emerald-500 to-green-500'
     }
   ];
-
   const technologies = [
-    { name: 'IoT Sensors', icon: Eye, category: 'Data Collection' },
-    { name: 'AI/ML', icon: Cpu, category: 'Intelligence' },
-    { name: 'Cloud Computing', icon: Cloud, category: 'Infrastructure' },
-    { name: 'Edge Computing', icon: Server, category: 'Processing' },
-    { name: '3D Modeling', icon: Eye, category: 'Visualization' },
-    { name: 'Real-time Analytics', icon: BarChart3, category: 'Analytics' },
-    { name: 'Blockchain', icon: Lock, category: 'Security' },
-    { name: '5G Networks', icon: Globe, category: 'Connectivity' },
-    { name: 'AR/VR', icon: Eye, category: 'Interaction' },
-    { name: 'Predictive Analytics', icon: BarChart3, category: 'Forecasting' },
-    { name: 'Machine Learning', icon: Cpu, category: 'AI' },
+    { name: 'IoT Sensors', icon: Eye, category: 'Data Collection' };
+    { name: 'AI/ML', icon: Cpu, category: 'Intelligence' };
+    { name: 'Cloud Computing', icon: Cloud, category: 'Infrastructure' };
+    { name: 'Edge Computing', icon: Server, category: 'Processing' };
+    { name: '3D Modeling', icon: Eye, category: 'Visualization' };
+    { name: 'Real-time Analytics', icon: BarChart3, category: 'Analytics' };
+    { name: 'Blockchain', icon: Lock, category: 'Security' };
+    { name: '5G Networks', icon: Globe, category: 'Connectivity' };
+    { name: 'AR/VR', icon: Eye, category: 'Interaction' };
+    { name: 'Predictive Analytics', icon: BarChart3, category: 'Forecasting' };
+    { name: 'Machine Learning', icon: Cpu, category: 'AI' };
     { name: 'Big Data', icon: Database, category: 'Data Processing' }
   ];
-
   const caseStudies = [
     {
-      company: 'ManufacturingCorp',
-      industry: 'Manufacturing',
-      challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health',
-      solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring',
-      results: [
-        '40% reduction in unplanned downtime',
-        '25% improvement in equipment efficiency',
+      company: 'ManufacturingCorp',industry: 'Manufacturing',challenge: 'Unplanned downtime costing $2M annually with limited visibility into equipment health',solution: 'Implemented comprehensive digital twin for all production lines with real-time monitoring',results: [
+        '40% reduction in unplanned downtime25% improvement in equipment efficiency';
         'Predictive maintenance accuracy of 95%'
       ]
     },
     {
-      company: 'SmartCity Metro',
-      industry: 'Municipal',
-      challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',
-      solution: 'Created city-wide digital twin integrating traffic, transit, and infrastructure systems',
+      company: 'SmartCity Metro',industry: 'Municipal',challenge: 'Traffic congestion and inefficient public transportation causing citizen complaints',solution: 'Created city-wide digital twin integrating traffic, transit, and infrastructure systems',
       results: [
-        '30% reduction in traffic congestion',
-        '20% improvement in transit efficiency',
+        '30% reduction in traffic congestion20% improvement in transit efficiency';
         '15% reduction in energy consumption'
       ]
     },
     {
-      company: 'HealthTech Hospital',
-      industry: 'Healthcare',
-      challenge: 'Medical device failures and inefficient patient care processes',
-      solution: 'Developed digital twins for critical medical devices and patient care workflows',
-      results: [
-        'Zero critical device failures',
-        '25% improvement in patient outcomes',
+      company: 'HealthTech Hospital',industry: 'Healthcare',challenge: 'Medical device failures and inefficient patient care processes',solution: 'Developed digital twins for critical medical devices and patient care workflows',results: [
+        'Zero critical device failures25% improvement in patient outcomes';
         '30% reduction in operational costs'
       ]
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -366,31 +301,19 @@ export default function DigitalTwin() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               {
-                step: '01',
-                title: 'Assessment & Planning',
-                description: 'Analyze assets and define digital twin scope and objectives',
-                icon: BarChart3
-              },
+                step: '01',title: 'Assessment & Planning',description: 'Analyze assets and define digital twin scope and objectives',icon: BarChart3
+              };
               {
-                step: '02',
-                title: 'Data Integration',
-                description: 'Connect IoT sensors and integrate existing data sources',
-                icon: Database
-              },
+                step: '02',title: 'Data Integration',description: 'Connect IoT sensors and integrate existing data sources',icon: Database
+              };
               {
-                step: '03',
-                title: 'Model Development',
-                description: 'Create accurate digital replicas with AI and ML capabilities',
-                icon: Cpu
-              },
+                step: '03',title: 'Model Development',description: 'Create accurate digital replicas with AI and ML capabilities',icon: Cpu
+              };
               {
-                step: '04',
-                title: 'Deployment & Optimization',
-                description: 'Deploy and continuously optimize the digital twin system',
-                icon: RefreshCw
+                step: '04',title: 'Deployment & Optimization',description: 'Deploy and continuously optimize the digital twin system',icon: RefreshCw
               }
             ].map((phase, index) => (
               <div key={index} className="text-center">
@@ -413,13 +336,13 @@ export default function DigitalTwin() {
               Ready to Create Your Digital Twin?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how Digital Twin technology can revolutionize your operations, 
+              Let's discuss how Digital Twin technology can revolutionize your operations;
               improve efficiency, and drive innovation in your industry.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
                 Get Started Today
               </Link>
@@ -434,5 +357,5 @@ export default function DigitalTwin() {
         </div>
       </section>
     </div>
-  );
+  )
 }

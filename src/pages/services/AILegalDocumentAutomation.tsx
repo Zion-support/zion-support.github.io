@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  FileText, 
+  FileText,
   Shield, 
   Zap, 
   CheckCircle, 
@@ -28,117 +28,75 @@ import {
   Building,
   Home,
   Heart
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AILegalDocumentAutomation() {
   const features = [
-    'AI-powered contract analysis and generation',
-    'Legal document template automation',
-    'Compliance checking and risk assessment',
-    'Multi-jurisdiction legal framework support',
-    'Real-time legal research and citation',
-    'Automated contract negotiation assistance',
-    'Legal document version control and tracking',
-    'Integration with legal practice management systems'
-  ];
+    'AI-powered contract analysis and generationLegal document template automation',
+    'Compliance checking and risk assessmentMulti-jurisdiction legal framework support',
+    'Real-time legal research and citationAutomated contract negotiation assistance',
+    'Legal document version control and trackingIntegration with legal practice management systems'
+  ],
 
   const benefits = [
-    'Reduce legal document creation time by 85%',
-    'Minimize legal risks and compliance errors',
-    'Standardize legal processes across organizations',
-    'Enable faster contract negotiations and closings',
-    'Reduce legal costs by 40-60%',
-    'Improve accuracy and consistency in legal documents'
+    'Reduce legal document creation time by 85%Minimize legal risks and compliance errors';
+    'Standardize legal processes across organizationsEnable faster contract negotiations and closings';
+    'Reduce legal costs by 40-60%Improve accuracy and consistency in legal documents'
   ];
-
   const useCases = [
     {
-      industry: 'Corporate Law',
-      description: 'Automated contract generation and management for businesses',
-      icon: Building,
-      applications: ['M&A contracts', 'Employment agreements', 'Vendor contracts', 'NDAs']
+      industry: 'Corporate Law',description: 'Automated contract generation and management for businesses',icon: Building,applications: ['M&A contractsEmployment agreements', 'Vendor contractsNDAs']
     },
     {
-      industry: 'Real Estate',
-      description: 'Streamlined property transaction documentation',
-      icon: Home,
-      applications: ['Purchase agreements', 'Lease contracts', 'Title documents', 'Closing paperwork']
+      industry: 'Real Estate',description: 'Streamlined property transaction documentation',icon: Home,applications: ['Purchase agreementsLease contracts', 'Title documentsClosing paperwork']
     },
     {
-      industry: 'Healthcare',
-      description: 'Compliance-focused medical practice documentation',
-      icon: Heart,
-      applications: ['Patient consent forms', 'HIPAA compliance', 'Medical contracts', 'Regulatory filings']
+      industry: 'Healthcare',description: 'Compliance-focused medical practice documentation',icon: Heart,applications: ['Patient consent formsHIPAA compliance', 'Medical contractsRegulatory filings']
     },
     {
-      industry: 'Startups & SMEs',
-      description: 'Cost-effective legal document automation',
-      icon: Rocket,
-      applications: ['Founder agreements', 'Investment documents', 'IP protection', 'Employment contracts']
+      industry: 'Startups & SMEs',description: 'Cost-effective legal document automation',icon: Rocket,applications: ['Founder agreementsInvestment documents', 'IP protectionEmployment contracts']
     }
-  ];
+  ],
 
   const pricing = [
     {
-      plan: 'Starter',
-      price: '$299',
-      period: '/month',
-      features: [
-        'Up to 50 documents/month',
-        'Basic contract templates',
-        'Standard compliance checks',
-        'Email support',
+      plan: 'Starter',price: '$299',period: '/month',features: [
+        'Up to 50 documents/monthBasic contract templates';
+        'Standard compliance checksEmail support',
         'Basic legal research tools'
       ],
       recommended: false
-    },
+    };
     {
-      plan: 'Professional',
-      price: '$799',
-      period: '/month',
-      features: [
-        'Up to 200 documents/month',
-        'Advanced contract templates',
-        'Multi-jurisdiction support',
-        'Priority support',
-        'Advanced legal research',
-        'Contract negotiation assistance'
+      plan: 'Professional',price: '$799',period: '/month',features: [
+        'Up to 200 documents/monthAdvanced contract templates';
+        'Multi-jurisdiction supportPriority support',
+        'Advanced legal researchContract negotiation assistance'
       ],
       recommended: true
-    },
+    };
     {
-      plan: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      features: [
-        'Unlimited documents',
-        'Custom template creation',
-        'White-label solutions',
-        '24/7 dedicated support',
-        'API access',
-        'Custom integrations'
+      plan: 'Enterprise',price: '$1,999',
+      period: '/month',features: [
+        'Unlimited documentsCustom template creation';
+        'White-label solutions24/7 dedicated support',
+        'API accessCustom integrations'
       ],
       recommended: false
     }
   ];
-
   const legalTechnologies = [
-    { name: 'Clio', url: 'https://www.clio.com/', category: 'Practice Management' },
-    { name: 'LexisNexis', url: 'https://www.lexisnexis.com/', category: 'Legal Research' },
-    { name: 'Westlaw', url: 'https://www.westlaw.com/', category: 'Legal Database' },
-    { name: 'DocuSign', url: 'https://www.docusign.com/', category: 'E-Signature' },
+    { name: 'Clio', url: 'https://www.clio.com/', category: 'Practice Management' };
+    { name: 'LexisNexis', url: 'https://www.lexisnexis.com/', category: 'Legal Research' };
+    { name: 'Westlaw', url: 'https://www.westlaw.com/', category: 'Legal Database' };
+    { name: 'DocuSign', url: 'https://www.docusign.com/', category: 'E-Signature' };
     { name: 'ContractPodAi', url: 'https://www.contractpodai.com/', category: 'Contract AI' }
   ];
-
   const complianceFrameworks = [
-    'GDPR (EU Data Protection)',
-    'CCPA (California Privacy)',
-    'SOX (Sarbanes-Oxley)',
-    'HIPAA (Healthcare Privacy)',
-    'GLBA (Financial Privacy)',
-    'ISO 27001 (Information Security)'
-  ];
+    'GDPR (EU Data Protection)CCPA (California Privacy)',
+    'SOX (Sarbanes-Oxley)HIPAA (Healthcare Privacy)',
+    'GLBA (Financial Privacy)ISO 27001 (Information Security)'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -166,7 +124,7 @@ export default function AILegalDocumentAutomation() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Automation</span>
             </h1>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your legal practice with AI-powered document automation, intelligent contract generation, 
+              Revolutionize your legal practice with AI-powered document automation, intelligent contract generation;
               and automated compliance management. Save time, reduce costs, and minimize legal risks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -480,7 +438,7 @@ export default function AILegalDocumentAutomation() {
                 </div>
                 <div className="flex items-center justify-center">
                   <Globe className="h-4 w-4 mr-2 text-blue-400" />
-                  <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">ziontechgroup.com</a>
+                  <a href="https: //ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-300">ziontechgroup.com</a>
                 </div>
               </div>
             </div>
@@ -488,5 +446,5 @@ export default function AILegalDocumentAutomation() {
         </div>
       </section>
     </div>
-  );
+  )
 }

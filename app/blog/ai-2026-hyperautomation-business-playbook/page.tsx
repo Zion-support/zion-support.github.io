@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import SEO from '../../components/SEO';
-import ErrorBoundary from '../../components/ErrorBoundary';
+import React from 'react',
+import Link from 'next/link',
+import SEO from '../../components/SEO',
+import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {,
-  title: 'AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide';
-  description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.';
-  keywords: ['hyperautomationAI automation', 'business transformationenterprise AI'],
-};
+  title: 'AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide',
+  description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',
+  keywords: ['hyperautomationAI automationbusiness transformationenterprise AI']
+},
 export default function AI2026HyperautomationPlaybook() {,
   return (,
     <ErrorBoundary>,
@@ -120,4 +120,4 @@ export default function AI2026HyperautomationPlaybook() {,
         </article>,
       </div>,
     </ErrorBoundary>,
-  ),}
+  )}

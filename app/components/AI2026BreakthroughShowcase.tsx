@@ -104,5 +104,4 @@ const AI2026BreakthroughShowcase: React.FC = () => {,
           </Link>,
         </div>,
       </div>,
-    </section>,
-  ),};
+    </section>)},

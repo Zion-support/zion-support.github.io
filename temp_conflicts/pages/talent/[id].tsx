@@ -1,73 +1,73 @@
-import React from 'react';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { TALENT_PROFILES } from '@/data/talentData';
-import type { TalentProfile } from '@/types/talent';
-import TalentDetails from '@/components/talent/TalentDetails';
-import NotFound from '@/components/NotFound';
+import React from 'react',
+import type { GetStaticPaths, GetStaticProps } from 'next',
+import { TALENT_PROFILES } from '@/data/talentData',
+import type { TalentProfile } from '@/types/talent',
+import TalentDetails from '@/components/talent/TalentDetails',
+import NotFound from '@/components/NotFound',
 
 interface TalentPageProps {
-  talent: TalentProfile | null;
+  talent: TalentProfile | null
 }
 
 const TalentProfilePage: React.FC = () => {
-  const { id } = useParams() as { id?: string };
-  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { id } = useParams() as { id?: string },
+  const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null),
+  const [loading, setLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
-      if (!id) return;
-      setLoading(true);
-      setError(null);
+      if (!id) return,
+      setLoading(true),
+      setError(null),
       try {
-        const res = await fetch(`/api/talent/${id}`);
+        const res = await fetch(`/api/talent/${id}`),
         if (res.status === 404) {
-          setError('Talent not found');
-          setProfile(null);
-          return;
+          setError('Talent not found'),
+          setProfile(null),
+          return,
         }
-        if (!res.ok) throw new Error('Failed to load profile');
-        const data = await res.json();
-        setProfile(data.profile);
+        if (!res.ok) throw new Error('Failed to load profile'),
+        const data = await res.json(),
+        setProfile(data.profile),
       } catch (err) {
-        setError('Talent not found');
+        setError('Talent not found'),
       } finally {
-        setLoading(false);
+        setLoading(false),
       }
-    };
+    },
 
     if (id) {
-      fetchProfile();
+      fetchProfile(),
     }
-  }, [id]);
+  }, [id]),
 
-  if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <ProfileErrorState error={error} />;
+  if (loading) return <ProfileLoadingState />,
+  if (error || !profile) return <ProfileErrorState error={error} />,
 
-  return <TalentDetails talent={talent} />;
-};
+  return <TalentDetails talent={talent} />,
+},
 
 const TalentPage: React.FC = () => {
-  const params = useParams();
-  const id = params.id as string;
+  const params = useParams(),
+  const id = params.id as string,
 
 export const getStaticProps: GetStaticProps<TalentPageProps> = async ({ params }) => {
-  const id = params?.id as string;
-  const talent = TALENT_PROFILES.find((t) => t.id === id) || null;
+  const id = params?.id as string,
+  const talent = TALENT_PROFILES.find((t) => t.id === id) || null,
 
   if (!talent) {
-    return { notFound: true };
+    return { notFound: true },
   }
 
   // Specific 404 error from API
   if (error && (error as any).status === 404) {
-    return <NotFound />;
+    return <NotFound />,
   }
 
   // Other errors (non-404)
   if (error) {
-    const err: any = error;
+    const err: any = error,
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <h2 className="text-2xl font-semibold mb-2">Error</h2>
@@ -75,13 +75,13 @@ export const getStaticProps: GetStaticProps<TalentPageProps> = async ({ params }
         {err.status && <p>Status: {err.status}</p>}
         <p>Message: {err.info?.error || err.info?.message || err.message}</p>
       </div>
-    );
+    ),
   }
 
   // API call was successful (no error thrown) but no profile found
   // This also implies !isLoading at this point.
   if (!data) {
-    return <NotFound />;
+    return <NotFound />,
   }
 
   // If we reach here, talent data is available
@@ -135,7 +135,7 @@ export const getStaticProps: GetStaticProps<TalentPageProps> = async ({ params }
         </div>
       </main>
     </>
-  );
-};
+  ),
+},
 
-export default TalentPage;
+export default TalentPage,

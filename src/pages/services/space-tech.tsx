@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { motion } from "framer-motion";
 import { 
-  Rocket, 
+  Rocket,
   Satellite, 
   Globe, 
   Zap, 
@@ -25,98 +25,65 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function SpaceTechnology() {
   const features = [
     {
-      icon: Satellite,
-      title: 'Satellite Technology',
-      description: 'Advanced satellite systems for communication, navigation, and Earth observation.',
-      benefits: ['Global connectivity', 'Real-time data collection', 'Navigation systems', 'Environmental monitoring']
+      icon: Satellite,title: 'Satellite Technology',description: 'Advanced satellite systems for communication, navigation, and Earth observation.',
+      benefits: ['Global connectivityReal-time data collection', 'Navigation systemsEnvironmental monitoring']
     },
     {
-      icon: Rocket,
-      title: 'Launch Systems',
-      description: 'Innovative launch vehicle technology and space transportation solutions.',
-      benefits: ['Cost-effective launches', 'Reusable systems', 'Payload optimization', 'Mission planning']
+      icon: Rocket,title: 'Launch Systems',description: 'Innovative launch vehicle technology and space transportation solutions.',benefits: ['Cost-effective launchesReusable systems', 'Payload optimizationMission planning']
     },
     {
-      icon: Brain,
-      title: 'AI Space Operations',
-      description: 'Artificial intelligence for autonomous space missions and operations.',
-      benefits: ['Autonomous navigation', 'Predictive maintenance', 'Mission optimization', 'Risk assessment']
+      icon: Brain,title: 'AI Space Operations',description: 'Artificial intelligence for autonomous space missions and operations.',benefits: ['Autonomous navigationPredictive maintenance', 'Mission optimizationRisk assessment']
     },
     {
-      icon: Network,
-      title: 'Space Communications',
-      description: 'Advanced communication networks for space missions and ground control.',
-      benefits: ['High-bandwidth links', 'Low-latency communication', 'Global coverage', 'Secure transmission']
+      icon: Network,title: 'Space Communications',description: 'Advanced communication networks for space missions and ground control.',benefits: ['High-bandwidth linksLow-latency communication', 'Global coverageSecure transmission']
     }
-  ];
+  ],
 
   const applications = [
     {
-      category: 'Commercial Space',
-      services: [
-        'Satellite internet and communications',
-        'Earth observation and imaging',
-        'Space tourism infrastructure',
-        'Commercial launch services'
+      category: 'Commercial Space',services: [
+        'Satellite internet and communicationsEarth observation and imaging';
+        'Space tourism infrastructureCommercial launch services'
       ]
     },
     {
-      category: 'Scientific Research',
-      services: [
-        'Space exploration missions',
-        'Astronomical observations',
-        'Climate and environmental research',
-        'Planetary science missions'
+      category: 'Scientific Research',services: [
+        'Space exploration missionsAstronomical observations';
+        'Climate and environmental researchPlanetary science missions'
       ]
     },
     {
-      category: 'Defense & Security',
-      services: [
-        'Space situational awareness',
-        'Satellite defense systems',
-        'Intelligence gathering',
-        'Strategic communications'
+      category: 'Defense & Security',services: [
+        'Space situational awarenessSatellite defense systems';
+        'Intelligence gatheringStrategic communications'
       ]
     },
     {
-      category: 'Infrastructure',
-      services: [
-        'Space station development',
-        'Lunar and Mars bases',
-        'Space manufacturing',
-        'Resource utilization'
+      category: 'Infrastructure',services: [
+        'Space station developmentLunar and Mars bases';
+        'Space manufacturingResource utilization'
       ]
     }
-  ];
+  ],
 
   const technologies = [
     {
-      name: 'Quantum Computing in Space',
-      description: 'Leveraging quantum computing for complex space calculations and simulations.',
-      icon: Atom
-    },
+      name: 'Quantum Computing in Space',description: 'Leveraging quantum computing for complex space calculations and simulations.',icon: Atom
+    };
     {
-      name: 'AI-Powered Mission Control',
-      description: 'Intelligent systems for autonomous space mission management.',
-      icon: Brain
-    },
+      name: 'AI-Powered Mission Control',description: 'Intelligent systems for autonomous space mission management.',icon: Brain
+    };
     {
-      name: 'Advanced Propulsion',
-      description: 'Next-generation propulsion systems for efficient space travel.',
-      icon: Rocket
-    },
+      name: 'Advanced Propulsion',description: 'Next-generation propulsion systems for efficient space travel.',icon: Rocket
+    };
     {
-      name: 'Space Cybersecurity',
-      description: 'Protecting space assets from cyber threats and attacks.',
-      icon: Shield
+      name: 'Space Cybersecurity',description: 'Protecting space assets from cyber threats and attacks.',icon: Shield
     }
   ];
-
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <SEO 
@@ -127,7 +94,7 @@ export default function SpaceTechnology() {
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         
         <div className="container-responsive relative z-10">
           <motion.div
@@ -226,7 +193,7 @@ export default function SpaceTechnology() {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Space Applications</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              From commercial space ventures to scientific research and defense applications, 
+              From commercial space ventures to scientific research and defense applications;
               our space technology solutions serve diverse mission requirements.
             </p>
           </motion.div>

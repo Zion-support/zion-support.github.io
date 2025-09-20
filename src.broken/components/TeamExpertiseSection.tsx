@@ -31,29 +31,29 @@ function TeamExpertiseSection () {
   CheckCircle,
   Globe,
   Rocket'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      projects: '50+'};
-  ];
+      projects: '50+'},
+  ],
 
-  {;"
-    icon: "🚀",;"
-    title: "Successful Projects",;"
-    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;"
-    count: "500+"};
-];
+  {,"
+    icon: "🚀","
+    title: "Successful Projects","
+    description: "Successfully delivered complex technology solutions for Fortune 500 companies","
+    count: "500+"},
+],
 
 const coreExpertise = ["
   "Artificial Intelligence & Machine Learning","
-  "Quantum Computing & Algorithms",;"
-  "Blockchain & Web3 Technologies",;"
-  "Cloud Infrastructure & DevOps",;"
-  "Cybersecurity & Compliance",;"
-  "Data Science & Analytics",;"
-  "IoT & Edge Computing",;"
-  "Mobile & Web Development";
+  "Quantum Computing & Algorithms","
+  "Blockchain & Web3 Technologies","
+  "Cloud Infrastructure & DevOps","
+  "Cybersecurity & Compliance","
+  "Data Science & Analytics","
+  "IoT & Edge Computing","
+  "Mobile & Web Development",
 =======
-];
+],
 
 export function TeamExpertiseSection() {
   return ("
@@ -103,8 +103,8 @@ export function TeamExpertiseSection() {
 
 }}"
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >;
-          {stats.map ( (stat, index) => {;
+        >,
+          {stats.map ( (stat, index) => {,
             
             return ("
               <div key = {stat.label} className="text-center">"
@@ -173,7 +173,7 @@ export function TeamExpertiseSection() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our certified professionals are ready to bring their expertise
               to your project and help you achieve exceptional results.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
                 <Rocket className="ml-2 h-5 w-5"  />
@@ -184,16 +184,16 @@ export function TeamExpertiseSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default TeamExpertiseSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default TeamExpertiseSection;
-export default TeamExpertiseSection;
+export default TeamExpertiseSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default TeamExpertiseSection,
+export default TeamExpertiseSection,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

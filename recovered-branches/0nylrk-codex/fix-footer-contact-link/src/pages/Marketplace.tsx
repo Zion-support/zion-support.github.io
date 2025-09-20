@@ -1,93 +1,93 @@
 
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
     }
     // Product type filter,
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {,
-      return false,
+      return false
     }
     // Location filter,
     if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {,
-      return false,
+      return false
     }
     // Availability filter,
     if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {,
-      return false,
+      return false
     }
     // Rating filter,
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {,
-      return false,
+      return false
     }
 ,
-    return true,
-  });
+    return true
+  }),
   const handleFilterChange = (filterType: string, value: string) => {,
-    console.log(`Filter changed: ${filterType,} = ${value}`),
-    return true,
-  });
+    console.log(`Filter changed: ${filterType} = ${value}`),
+    return true
+  }),
   const handleFilterChange = (filterType: string, value: string) => {,
-    // // // console.log(`Filter changed: ${filterType,} = ${value}`);
+    // // // console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {,
       case 'productType':,
         setSelectedProductTypes(prev =>,
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
-  const filterOptions = generateFilterOptions();
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions(),
   // Filter listings based on selected filters,
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {,
     // Search filter,
     if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&,
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&,
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {,
-      return false,
+      return false
     }
 ,
     // Product type filter,
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {,
-      return false;
+      return false,
     }
 ,
     // Location filter,
     if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {,
-      return false;
+      return false,
     }
 ,
     // Availability filter,
     if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {,
-      return false;
+      return false,
     }
 ,
     // Rating filter,
     if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {,
-      return false;
+      return false,
     }
 ,
-    return true;
-  });
+    return true,
+  }),
   const handleFilterChange = (filterType: string, value: string) => {,
-    console.log(`Filter changed: ${filterType,} = ${value}`);
+    console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {,
       case 'productType':,
         setSelectedProductTypes(prev =>,
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value],
-        );
-        break;
+        ),
+        break,
       case 'location':,
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value],
-        );
-        break;
-      case 'availability':,
+        ),
+        break,
+      case 'availability':
           }
         }
-      });
+      }),
     }
-                selectedProductTypes;
-                selectedLocations;
-                selectedAvailability;
-                selectedRating,
+                selectedProductTypes,
+                selectedLocations,
+                selectedAvailability,
+                selectedRating
               }}
               filterOptions={filterOptions}
               onFilterChange={handleFilterChange}
@@ -97,7 +97,7 @@
           </div>,
           {/* Main content */}
           <div className="lg: col-span-3">,
-            {/* Active filters display */,}
+            {/* Active filters display */}
             <ActiveFiltersBar,
               selectedProductTypes={selectedProductTypes}
               selectedLocations={selectedLocations}
@@ -119,10 +119,9 @@
             <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
               {filteredListings.length > 0 ? (,
                 filteredListings.map((listing) => (,
-                    listing={listing,}
+                    listing={listing}
                     onRequestQuote={handleRequestQuote}
-                  />,
-                )),
+                  />)),
               ) : (,
                 <div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">,
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>,

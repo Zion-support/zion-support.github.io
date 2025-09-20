@@ -1,87 +1,87 @@
 import React from 'react',
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeITInfrastructureServices2027';
-import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027';
+} from 'lucide-react',
+import { SEO } from '../components/SEO',
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027',
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeITInfrastructureServices2027',
+import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027',
 export default function ComprehensiveServicesLanding2027() {,
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState(''),
   // Combine all services,
   const allServices = [,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027;
-    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027;
-    ...EMERGING_TECHNOLOGY_SERVICES_2027,
-  ];
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2027,
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027,
+    ...EMERGING_TECHNOLOGY_SERVICES_2027
+  ],
   // Get unique categories with counts,
   const categories = [,
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' ,};
-    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' ,};
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' ,};
-    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' ,};
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' ,};
-    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' ,};
-    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' ,};
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' ,};
-    { id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' ,};
-    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: allServices.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' ,};
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' ,};
-    { id: 'FinTech', name: 'FinTech', count: allServices.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' ,};
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' ,};
-    { id: 'IT Infrastructure', name: 'IT Infrastructure', count: allServices.filter(s => s.category === 'IT Infrastructure').length, icon: '🏗️', color: 'from-gray-500 to-slate-500' ,};
-    { id: 'AI & Computing', name: 'AI & Computing', count: allServices.filter(s => s.category === 'AI & Computing').length, icon: '💻', color: 'from-cyan-500 to-blue-500' ,};
-    { id: 'Biotechnology', name: 'Biotechnology', count: allServices.filter(s => s.category === 'Biotechnology').length, icon: '🧬', color: 'from-green-500 to-emerald-500' ,};
-    { id: 'Energy Technology', name: 'Energy Technology', count: allServices.filter(s => s.category === 'Energy Technology').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' ,};
-    { id: 'Metaverse & AR/VR', name: 'Metaverse & AR/VR', count: allServices.filter(s => s.category === 'Metaverse & AR/VR').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' ,};
-    { id: 'Neurotechnology', name: 'Neurotechnology', count: allServices.filter(s => s.category === 'Neurotechnology').length, icon: '🧠', color: 'from-indigo-500 to-purple-500' ,};
-    { id: 'Quantum Technology', name: 'Quantum Technology', count: allServices.filter(s => s.category === 'Quantum Technology').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' ,};
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' ,};
-    { id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' ,}
-  ];
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
+    { id: 'AI & Business Intelligence', name: 'AI & Business Intelligence', count: allServices.filter(s => s.category === 'AI & Business Intelligence').length, icon: '🤖', color: 'from-purple-500 to-pink-500' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-red-500 to-orange-500' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-blue-500 to-cyan-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-pink-500 to-red-500' },
+    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category === 'Blockchain & Web3').length, icon: '🔗', color: 'from-yellow-500 to-orange-500' },
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category === 'IoT & Edge Computing').length, icon: '🌐', color: 'from-teal-500 to-cyan-500' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+    { id: 'Space Technology', name: 'Space Technology', count: allServices.filter(s => s.category === 'Space Technology').length, icon: '🚀', color: 'from-purple-500 to-pink-500' },
+    { id: 'Sustainable Technology', name: 'Sustainable Technology', count: allServices.filter(s => s.category === 'Sustainable Technology').length, icon: '🌱', color: 'from-green-500 to-teal-500' },
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-500 to-indigo-500' },
+    { id: 'FinTech', name: 'FinTech', count: allServices.filter(s => s.category === 'FinTech').length, icon: '💰', color: 'from-emerald-500 to-green-500' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-500 to-red-500' },
+    { id: 'IT Infrastructure', name: 'IT Infrastructure', count: allServices.filter(s => s.category === 'IT Infrastructure').length, icon: '🏗️', color: 'from-gray-500 to-slate-500' },
+    { id: 'AI & Computing', name: 'AI & Computing', count: allServices.filter(s => s.category === 'AI & Computing').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
+    { id: 'Biotechnology', name: 'Biotechnology', count: allServices.filter(s => s.category === 'Biotechnology').length, icon: '🧬', color: 'from-green-500 to-emerald-500' },
+    { id: 'Energy Technology', name: 'Energy Technology', count: allServices.filter(s => s.category === 'Energy Technology').length, icon: '⚡', color: 'from-yellow-500 to-orange-500' },
+    { id: 'Metaverse & AR/VR', name: 'Metaverse & AR/VR', count: allServices.filter(s => s.category === 'Metaverse & AR/VR').length, icon: '🌍', color: 'from-purple-500 to-indigo-500' },
+    { id: 'Neurotechnology', name: 'Neurotechnology', count: allServices.filter(s => s.category === 'Neurotechnology').length, icon: '🧠', color: 'from-indigo-500 to-purple-500' },
+    { id: 'Quantum Technology', name: 'Quantum Technology', count: allServices.filter(s => s.category === 'Quantum Technology').length, icon: '⚛️', color: 'from-indigo-500 to-purple-500' },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🚗', color: 'from-blue-500 to-indigo-500' },
+    { id: 'Robotics & Automation', name: 'Robotics & Automation', count: allServices.filter(s => s.category === 'Robotics & Automation').length, icon: '🤖', color: 'from-gray-500 to-slate-500' }
+  ],
   // Filter services based on category and search,
   const filteredServices = allServices.filter(service => {,
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch = searchQuery === '' ||,
       service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
-      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
   const toggleServiceExpansion = (serviceId: string) => {,
-    setExpandedService(expandedService === serviceId ? null : serviceId),};
+    setExpandedService(expandedService === serviceId ? null : serviceId)},
   const getCategoryIcon = (category: string) => {,
-    const iconMap: { [key: string]: React.ReactNode ,} = {,
-      'AI & Business Intelligence': <Brain className="w-6 h-6" />;
-      'Cybersecurity': <Shield className="w-6 h-6" />;
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />;
-      'AI & Healthcare': <Heart className="w-6 h-6" />;
-      'Blockchain & Web3': <Link className="w-6 h-6" />;
-      'IoT & Edge Computing': <Network className="w-6 h-6" />;
-      'Quantum Computing': <Atom className="w-6 h-6" />;
-      'Space Technology': <Satellite className="w-6 h-6" />;
-      'Sustainable Technology': <Leaf className="w-6 h-6" />;
-      'AI & Legal Tech': <FileText className="w-6 h-6" />;
-      'FinTech': <DollarSign className="w-6 h-6" />;
-      'AI & Content': <MessageSquare className="w-6 h-6" />;
-      'IT Infrastructure': <Database className="w-6 h-6" />;
-      'AI & Computing': <Cpu className="w-6 h-6" />;
-      'Biotechnology': <Dna className="w-6 h-6" />;
-      'Energy Technology': <Zap className="w-6 h-6" />;
-      'Metaverse & AR/VR': <Globe className="w-6 h-6" />;
-      'Neurotechnology': <Brain className="w-6 h-6" />;
-      'Quantum Technology': <Atom className="w-6 h-6" />;
-      'Autonomous Systems': <Car className="w-6 h-6" />;
-      'Robotics & Automation': <Bot className="w-6 h-6" />,
-    };
-    return iconMap[category] || <Star className="w-6 h-6" />;
-  };
+    const iconMap: { [key: string]: React.ReactNode } = {,
+      'AI & Business Intelligence': <Brain className="w-6 h-6" />,
+      'Cybersecurity': <Shield className="w-6 h-6" />,
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
+      'AI & Healthcare': <Heart className="w-6 h-6" />,
+      'Blockchain & Web3': <Link className="w-6 h-6" />,
+      'IoT & Edge Computing': <Network className="w-6 h-6" />,
+      'Quantum Computing': <Atom className="w-6 h-6" />,
+      'Space Technology': <Satellite className="w-6 h-6" />,
+      'Sustainable Technology': <Leaf className="w-6 h-6" />,
+      'AI & Legal Tech': <FileText className="w-6 h-6" />,
+      'FinTech': <DollarSign className="w-6 h-6" />,
+      'AI & Content': <MessageSquare className="w-6 h-6" />,
+      'IT Infrastructure': <Database className="w-6 h-6" />,
+      'AI & Computing': <Cpu className="w-6 h-6" />,
+      'Biotechnology': <Dna className="w-6 h-6" />,
+      'Energy Technology': <Zap className="w-6 h-6" />,
+      'Metaverse & AR/VR': <Globe className="w-6 h-6" />,
+      'Neurotechnology': <Brain className="w-6 h-6" />,
+      'Quantum Technology': <Atom className="w-6 h-6" />,
+      'Autonomous Systems': <Car className="w-6 h-6" />,
+      'Robotics & Automation': <Bot className="w-6 h-6" />
+    },
+    return iconMap[category] || <Star className="w-6 h-6" />,
+  },
   const formatPrice = (price: number) => {,
     if (price >= 1000) {,
-      return `$${(price / 1000).toFixed(1),}K`;
+      return `$${(price / 1000).toFixed(1)}K`,
     }
-    return `$${price}`;
-  };
+    return `$${price}`,
+  },
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
       <SEO,
@@ -105,7 +105,7 @@ export default function ComprehensiveServicesLanding2027() {,
           >,
             Discover our complete portfolio of cutting-edge technology services designed to,
             transform your business and drive innovation across every industry.,
-          {/* Search Bar */,}
+          {/* Search Bar */}
             className="max-w-2xl mx-auto mb-8",
           >,
             <div className="relative">,
@@ -121,7 +121,7 @@ export default function ComprehensiveServicesLanding2027() {,
           >,
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">,
               <Rocket className="w-8 h-8 text-cyan-400 mx-auto mb-3" />,
-              <div className="text-2xl font-bold text-white">{allServices.length,}</div>,
+              <div className="text-2xl font-bold text-white">{allServices.length}</div>,
               <div className="text-cyan-400 text-sm">Total Services</div>,
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">,
               <TargetIconDup className="w-8 h-8 text-green-400 mx-auto mb-3" />,
@@ -138,8 +138,8 @@ export default function ComprehensiveServicesLanding2027() {,
       {/* Category Navigation */}
       <section className="py-12 px-4">,
         <div className="max-w-7xl mx-auto">,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-12",
           >,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
@@ -147,17 +147,17 @@ export default function ComprehensiveServicesLanding2027() {,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
               Navigate through our comprehensive service categories to find the perfect,
               solution for your business needs.,
-          {/* Category Grid */,}
+          {/* Category Grid */}
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
             {categories.map((category, index) => (,
                 key={category.id}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 onClick={() => setActiveCategory(category.id)}
                 className={`p-6 rounded-2xl border transition-all duration-300 transform hover: scale-105 ${,
                   activeCategory === category.id,
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50',
-                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30',}`}
+                    : 'bg-white/10 backdrop-blur-lg border-white/20 hover:border-cyan-500/30'}`}
               >,
                 <div className="text-4xl mb-4">{category.icon}</div>,
                 <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>,
@@ -166,23 +166,23 @@ export default function ComprehensiveServicesLanding2027() {,
       {/* Services Showcase */}
       <section className="py-12 px-4">,
         <div className="max-w-7xl mx-auto">,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="text-center mb-12",
           >,
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,
-              {activeCategory === 'all' ? 'All Services' : `${activeCategory,} Services`}
+              {activeCategory === 'all' ? 'All Services' : `${activeCategory} Services`}
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
               {activeCategory === 'all',
                 ? 'Explore our complete portfolio of innovative services and solutions.',
-                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`,
+                : `Discover our specialized ${activeCategory.toLowerCase()} services designed to meet your specific needs.`
               }
           {/* Services Grid */}
           <div className="space-y-6">,
             {filteredServices.map((service, index) => (,
                 key={service.id}
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden",
               >,
                 <div className="p-6">,
@@ -195,11 +195,11 @@ export default function ComprehensiveServicesLanding2027() {,
                           {service.category}
                     <div className="text-right">,
                       <div className="text-3xl font-bold text-white">{formatPrice(service.price)}</div>,
-                      <div className="text-sm text-gray-400">Market: {service.marketPrice,}</div>,
+                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>,
                   <p className="text-gray-300 mb-4">{service.description}</p>,
                   <div className="grid grid-cols-1 md: grid-cols-4 gap-4 mb-4">,
                     <div className="text-center p-3 bg-white/5 rounded-lg">,
-                      <div className="text-2xl font-bold text-cyan-400">{service.rating,}</div>,
+                      <div className="text-2xl font-bold text-cyan-400">{service.rating}</div>,
                       <div className="text-xs text-gray-400">Rating</div>,
                     <div className="text-center p-3 bg-white/5 rounded-lg">,
                       <div className="text-2xl font-bold text-green-400">{service.roi}</div>,
@@ -219,13 +219,11 @@ export default function ComprehensiveServicesLanding2027() {,
                         <>,
                           <ChevronUp className="w-4 h-4 mr-2" />,
                           Hide Details,
-                        </>,
-                      ) : (,
+                        </>) : (,
                         <>,
                           <ChevronDown className="w-4 h-4 mr-2" />,
                           View Details,
-                        </>,
-                      ),}
+                        </>)}
                     <div className="flex items-center gap-3">,
                       <Link,
                         to={`/services/${service.id}`}
@@ -234,12 +232,12 @@ export default function ComprehensiveServicesLanding2027() {,
                         <BookOpen className="w-4 h-4 mr-2" />,
                         Learn More,
                       <a,
-                        href={`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title,}`}
+                        href={`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`}
                         className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300",
                       >,
                         Get Quote,
                         <ArrowRight className="w-4 h-4 ml-2" />,
-                {/* Expanded Details */,}
+                {/* Expanded Details */}
                       className="border-t border-white/20 bg-white/5",
                     >,
                       <div className="p-6">,
@@ -250,20 +248,17 @@ export default function ComprehensiveServicesLanding2027() {,
                               {service.tags.slice(0, 8).map((tag, tagIndex) => (,
                                 <div key={tagIndex} className="flex items-center">,
                                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />,
-                                  <span className="text-gray-300">{tag}</span>,
-                              ))}
+                                  <span className="text-gray-300">{tag}</span>))}
                           <div>,
                             <h4 className="text-lg font-semibold text-white mb-3">Integrations</h4>,
                             <div className="space-y-2">,
                               {service.integrations?.slice(0, 6).map((integration, integrationIndex) => (,
                                 <div key={integrationIndex} className="flex items-center">,
                                   <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>,
-                                  <span className="text-gray-300">{integration}</span>,
-                              ))}
+                                  <span className="text-gray-300">{integration}</span>))}
                               {service.integrations && service.integrations.length > 6 && (,
                                 <div className="text-gray-400 text-sm">,
-                                  +{service.integrations.length - 6} more integrations,
-                              )}
+                                  +{service.integrations.length - 6} more integrations)}
                         <div className="mt-6 p-4 bg-white/5 rounded-lg">,
                           <h4 className="text-lg font-semibold text-white mb-3">Competitive Analysis</h4>,
                           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
@@ -288,13 +283,12 @@ export default function ComprehensiveServicesLanding2027() {,
               >,
                 <div className="text-6xl mb-4">🔍</div>,
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
-                <p className="text-gray-400">Try adjusting your search or category selection</p>,
-            )}
+                <p className="text-gray-400">Try adjusting your search or category selection</p>)}
       {/* Call to Action */}
       <section className="py-20 px-4">,
         <div className="max-w-4xl mx-auto text-center">,
-            whileInView={{ opacity: 1, y: 0 ,}}
-            viewport={{ once: true ,}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20",
           >,
             <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">,
@@ -314,7 +308,7 @@ export default function ComprehensiveServicesLanding2027() {,
               >,
                 <Phone className="w-5 h-5" />,
                 Call Now,
-            {/* Contact Information */,}
+            {/* Contact Information */}
             <div className="mt-12 grid grid-cols-1 md: grid-cols-3 gap-6">,
               <div className="text-center">,
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />,
@@ -332,19 +326,18 @@ export default function ComprehensiveServicesLanding2027() {,
                 <div className="text-green-400 text-sm">,
                   364 E Main St STE 1008<br />,
                   Middletown DE 19709,
-  ),}
+  )}
 // Helper component for DNA icon,
 function Dna({ className }: { className?: string }) {,
   return (,
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">,
-      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>,
-  );
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>),
 }
-  Zap as ZapIconDup;
-  Shield as ShieldIconDup;
-  Cloud as CloudIconDup;
-  Brain as BrainIconDup;
-  Rocket as RocketIconDup;
+  Zap as ZapIconDup,
+  Shield as ShieldIconDup,
+  Cloud as CloudIconDup,
+  Brain as BrainIconDup,
+  Rocket as RocketIconDup,
   Leaf as LeafIconDup,
           <divdiv,
           </divdiv>,
@@ -361,8 +354,7 @@ function Dna({ className }: { className?: string }) {,
                 <div>,
                   {expandedService === service.id && (,
                     <divdiv,
-                    </divdiv>,
-                  )}
+                    </divdiv>)}
                 </div>,
               </divdiv>,
               <divdiv,

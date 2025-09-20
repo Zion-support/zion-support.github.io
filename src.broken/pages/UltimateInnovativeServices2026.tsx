@@ -1,38 +1,38 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     { id: 'synthetic - biology', name: 'Synthetic Biology', icon: Dna, color: 'from - zion - green to - zion - blue' },
     { id: 'space - technology', name: 'Space Technology', icon: Space, color: 'from - zion - blue to - zion - purple' },
-    { id: 'advanced - materials', name: 'Advanced Materials', icon: Layers, color: 'from - zion - orange to - zion - red' },;
-    { id: 'brain - computer - interface', name: 'Brain - Computer Interface', icon: Monitor, color: 'from - zion - purple to - zion - pink' },;
-    { id: 'digital - twin', name: 'Digital Twin', icon: Globe2, color: 'from - zion - cyan to - zion - green' },;
-    { id: 'extended - reality', name: 'Extended Reality', icon: Smartphone, color: 'from - zion - orange to - zion - purple' },;
-    { id: 'edge - ai', name: 'Edge AI', icon: Cpu, color: 'from - zion - green to - zion - cyan' },;
-    { id: 'federated - learning', name: 'Federated Learning', icon: Network, color: 'from - zion - purple to - zion - blue' },;
-    { id: 'sustainable - technology', name: 'Sustainable Technology', icon: Leaf, color: 'from - zion - green to - zion - blue' };
-  ];
+    { id: 'advanced - materials', name: 'Advanced Materials', icon: Layers, color: 'from - zion - orange to - zion - red' },
+    { id: 'brain - computer - interface', name: 'Brain - Computer Interface', icon: Monitor, color: 'from - zion - purple to - zion - pink' },
+    { id: 'digital - twin', name: 'Digital Twin', icon: Globe2, color: 'from - zion - cyan to - zion - green' },
+    { id: 'extended - reality', name: 'Extended Reality', icon: Smartphone, color: 'from - zion - orange to - zion - purple' },
+    { id: 'edge - ai', name: 'Edge AI', icon: Cpu, color: 'from - zion - green to - zion - cyan' },
+    { id: 'federated - learning', name: 'Federated Learning', icon: Network, color: 'from - zion - purple to - zion - blue' },
+    { id: 'sustainable - technology', name: 'Sustainable Technology', icon: Leaf, color: 'from - zion - green to - zion - blue' },
+  ],
 
-  const priceRanges = [;
-    { id: 'all', name: 'All Prices', range: 'All' },;
-    { id: 'under - 10k', name: 'Under $10K', range: 'Under $10,000' },;
-    { id: '10k - 20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
-    { id: 'over - 20k', name: 'Over $20K', range: 'Over $20,000' };
-  ];
+  const priceRanges = [,
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'under - 10k', name: 'Under $10K', range: 'Under $10,000' },
+    { id: '10k - 20k', name: '$10K - $20K', range: '$10,000 - $20,000' },
+    { id: 'over - 20k', name: 'Over $20K', range: 'Over $20,000' },
+  ],
 
-  const sortOptions = [;
-    { id: 'featured', name: 'Featured' },;
-    { id: 'price - low', name: 'Price: Low to High' },;
-    { id: 'price - high', name: 'Price: High to Low' },;
-    { id: 'innovation', name: 'Innovation Level' },;
-    { id: 'roi', name: 'ROI Potential' };
-  ];
+  const sortOptions = [,
+    { id: 'featured', name: 'Featured' },
+    { id: 'price - low', name: 'Price: Low to High' },
+    { id: 'price - high', name: 'Price: High to Low' },
+    { id: 'innovation', name: 'Innovation Level' },
+    { id: 'roi', name: 'ROI Potential' },
+  ],
 
         return 0}
-  }) ;
+  }) ,
 
-  const toggleServiceExpansion = (serviceId: string) => {;
-    setExpandedService(expandedService === serviceId ? null : serviceId) ;
-  };
+  const toggleServiceExpansion = (serviceId: string) => {,
+    setExpandedService(expandedService === serviceId ? null : serviceId) 
+  },
 
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       <SEO
@@ -91,12 +91,12 @@ export default function Page() {
                 <span > Proven ROI</span>
               </motion.div>
             </div>
-          </motion.div>;
+          </motion.div>,
         </div>
       </section>
 
       {/* Search and Filters */}
-      <section className="py-12 bg-white / 5 backdrop - blur -sm">;
+      <section className="py-12 bg-white / 5 backdrop - blur -sm">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="grid grid - cols - 1 lg:grid - cols - 4 gap-6">
             {/* Search */}
@@ -157,7 +157,7 @@ export default function Page() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16">;
+      <section className="py-16">,
         <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
           <div  className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font - bold text-white mb-4">
@@ -335,27 +335,27 @@ export default function Page() {
 
           {/* No Results */}
           {filteredServices.length === 0 && (<div  className="text-center py-16">
-              <div  className="text-6xl mb-4">🔍</div>;
-              <h3 className="text-2xl font - bold text-white mb-2">No Services Found</h3>;
-              <p className="text-zion - slate - 300 mb-6">;
-                Try adjusting your search criteria or browse all our innovative services.;
-              </p>;
-              <button;
-                onClick={ () => {;
-                  setSearchQuery('') ;
-                  setSelectedCategory('all') ;
-                  setSelectedPriceRange('all') ;
+              <div  className="text-6xl mb-4">🔍</div>,
+              <h3 className="text-2xl font - bold text-white mb-2">No Services Found</h3>,
+              <p className="text-zion - slate - 300 mb-6">,
+                Try adjusting your search criteria or browse all our innovative services.,
+              </p>,
+              <button,
+                onClick={ () => {,
+                  setSearchQuery('') ,
+                  setSelectedCategory('all') ,
+                  setSelectedPriceRange('all') ,
                 }}
-                className="px-6 py-3 bg-zion - cyan text-white rounded-lg hover:bg-zion - blue transition -colors"
+                className="px-6 py-3 bg-zion - cyan text-white rounded-lg hover: bg-zion - blue transition -colors"
               >
                 Clear Filters
               </button>
-            </div>;) }
+            </div>,) }
         </div>
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - blue / 10 to - zion -purple / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - blue / 10 to - zion -purple / 10">,
         <div  className="max - w-4xl mx - auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -371,7 +371,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-            <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-4xl md: text-5xl font - bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion - slate - 300 mb-8">
@@ -395,9 +395,9 @@ export default function Page() {
             <div  className="mt-8 text-zion - slate -400">
               <p > Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p > Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

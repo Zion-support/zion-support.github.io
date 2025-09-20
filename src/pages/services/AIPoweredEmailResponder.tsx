@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const AIPoweredEmailResponder: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -70,8 +69,7 @@ const AIPoweredEmailResponder: React.FC = () => {
         </section>
       </div>
     </div>
-  );
+  ),
 }
 
 export default AIPoweredEmailResponder;
-

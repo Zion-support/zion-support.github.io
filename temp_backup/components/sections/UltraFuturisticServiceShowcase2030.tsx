@@ -1,15 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 import { 
   Brain, Atom, Rocket, Target, Microscope, Cpu, 
   Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle,
   Phone, Mail, MapPin, Globe, TrendingUp, DollarSign
-} from 'lucide-react';
-import Link from 'next/link';
-import { cuttingEdgeInnovations2029 } from '../../data/2029-cutting-edge-innovations';
-import { innovativeMicroSaas2029 } from '../../data/2029-innovative-micro-saas';
-import { enterpriseITServices2029 } from '../../data/2029-enterprise-it-services';
-import { emergingTechServices2029 } from '../../data/2029-emerging-tech-services';
+} from 'lucide-react',
+import Link from 'next/link',
+import { cuttingEdgeInnovations2029 } from '../../data/2029-cutting-edge-innovations',
+import { innovativeMicroSaas2029 } from '../../data/2029-innovative-micro-saas',
+import { enterpriseITServices2029 } from '../../data/2029-enterprise-it-services',
+import { emergingTechServices2029 } from '../../data/2029-emerging-tech-services',
 
 const UltraFuturisticServiceShowcase2030: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const UltraFuturisticServiceShowcase2030: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticServiceShowcase2030</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticServiceShowcase2030;
+export default UltraFuturisticServiceShowcase2030,

@@ -8,6 +8,6 @@ export default function BrandKit() {,
         <p>Invite your AI audience to earn & help them get hired.</p>,
       </div>,
     </div>,
-  ),
+  )
 }
 ,

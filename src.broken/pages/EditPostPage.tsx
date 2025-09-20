@@ -1,19 +1,19 @@
 
-import { useState, useEffect } from "react";
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import { useToast } from "@/hooks/use-toast";
-import { ForumPost, ForumCategory } from "@/types/community";
-import { useAuth } from "@/hooks/useAuth";
+import { useState, useEffect } from "react",
+import Link from 'next/link',
+import { useRouter } from 'next/router',
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast",
+import { ForumPost, ForumCategory } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
 
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-  tags: string;
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
+  tags: string
 }
 
 // Mock post data
@@ -34,21 +34,21 @@ const mockPost: ForumPost = {
   replyCount: 12,
   isAnswered: true,
   isFeatured: true
-};
+},
 
 export default function EditPostPage() {
-  const router = useRouter();
-  const { postId } = router.query as { postId?: string };
-  const { toast } = useToast();
-  const { user } = useAuth();
-  const [post, setPost] = useState<ForumPost | null>(mockPost);
-  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter(),
+  const { postId } = router.query as { postId?: string },
+  const { toast } = useToast(),
+  const { user } = useAuth(),
+  const [post, setPost] = useState<ForumPost | null>(mockPost),
+  const [isLoading, setIsLoading] = useState(true),
   
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
-    setIsLoading(false);
-  }, [postId]);
+    setIsLoading(false),
+  }, [postId]),
   
   if (isLoading) {
     return (
@@ -57,7 +57,7 @@ export default function EditPostPage() {
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
         </div>
       </div>
-    );
+    ),
   }
   
   if (!post) {
@@ -68,12 +68,12 @@ export default function EditPostPage() {
           <Link href="/community">Back to Community</Link>
         </Button>
       </div>
-    );
+    ),
   }
   
   // Check if the user is the author or an admin
-  const isAuthor = user?.id === post.authorId;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAuthor = user?.id === post.authorId,
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
   if (!isAuthor && !isAdmin) {
     return (
@@ -84,7 +84,7 @@ export default function EditPostPage() {
           <Link href={`/community/post/${postId}`}>Back to Post</Link>
         </Button>
       </div>
-    );
+    ),
   }
   
   const initialValues: Partial<PostFormValues> = {
@@ -92,7 +92,7 @@ export default function EditPostPage() {
     content: post.content,
     categoryId: post.categoryId as ForumCategory,
     tags: post.tags.join(", ")
-  };
+  },
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -102,18 +102,18 @@ export default function EditPostPage() {
       toast({
         title: "Post updated",
         description: "Your post has been updated successfully"
-      });
+      }),
       
       // Redirect back to the post
-      router.push(`/community/post/${postId}`);
+      router.push(`/community/post/${postId}`),
     } catch (error) {
       toast({
         title: "Error",
         description: "There was a problem updating your post",
         variant: "destructive"
-      });
+      }),
     }
-  };
+  },
 
   return (
     <>
@@ -145,5 +145,5 @@ export default function EditPostPage() {
         />
       </div>
     </>
-  );
+  ),
 }

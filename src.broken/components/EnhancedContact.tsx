@@ -1,12 +1,12 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 interface ContactFormData {
-  name: string;
-  email: string;
-  phone: string;
-  comp: string;
-  service: string;
+  name: string,
+  email: string,
+  phone: string,
+  comp: string,
+  service: string,
   message: string
 }
 
@@ -17,27 +17,27 @@ export function EnhancedContact(...args[]):  {
 
   const [formData, setFormData] = useState<any>({
 
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
+    name: '',
+    email: '',
+    phone: '',
+    comp: '',
+    service: 'general',
     message: ''
-  }) ;
+  }) ,
 
-  const [errors, setErrors] = useState<any> ({}) ;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<any> ({}) ,
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
 
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
-    { value: 'cybersecurity', label: 'Cybersecurity' },;
-    { value: 'digital-transformation', label: 'Digital Transformation' },;
-    { value: 'consulting', label: 'IT Consulting' },;
-    { value: 'quantum-computing', label: 'Quantum Computing' },;
-    { value: 'green-it', label: 'Green IT Solutions' };
-  ];
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
+    { value: 'green-it', label: 'Green IT Solutions' },
+  ],
 
-    const newErrors: ContactFormErrors = {};
+    const newErrors: ContactFormErrors = {},
     }
       })} catch(error) {
 
@@ -65,26 +65,26 @@ export function EnhancedContact(...args[]):  {
 
       newErrors.message = 'Message is required'} else if(formData.message.length < 10) {
 
-      newErrors.message = 'Message must be at least 10 characters long'};
-;
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0};
+      newErrors.message = 'Message must be at least 10 characters long'},
+,
+    setErrors(newErrors),
+    return Object.keys(newErrors).length === 0},
 
       // // // // // // // // console.error('Error submitting form:', error)} finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }      })} catch(error) {
 '
       // console.error('Error submitting form:', error)} finally {
 
       setIsSubmitting(false)}
-  };
+  },
 
-    {;
-      icon: Clock,;
-      title: 'Business Hours',;
-      value: 'Mon-Fri: 9AM-6PM EST',;
-      description: 'Available during these hours'};  ];
+    {,
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Mon-Fri: 9AM-6PM EST',
+      description: 'Available during these hours'},  ],
 
   if(isSubmitted) {
 
@@ -170,12 +170,12 @@ export function EnhancedContact(...args[]):  {
 }}
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}"
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-          >;
-            Send Another Message;
-          </motion.button>;
-        </div>;
-      </motion.div>;) }
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover: from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
+          >,
+            Send Another Message,
+          </motion.button>,
+        </div>,
+      </motion.div>,) }
   return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -538,10 +538,10 @@ export function EnhancedContact(...args[]):  {
                   </>
                 )}
               </motion.button>
-            </form>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </div>;) }
+            </form>,
+          </motion.div>,
+        </div>,
+      </div>,
+    </div>,) }
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

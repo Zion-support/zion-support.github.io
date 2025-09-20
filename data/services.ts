@@ -1,26 +1,26 @@
 export interface Service {
-  id: string;
-  name: string;
-  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing';
-  description: string;
-  features: string[];
-  benefits: string[];
+  id: string,
+  name: string,
+  category: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'Education' | 'Marketing',
+  description: string,
+  features: string[],
+  benefits: string[],
   pricing: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-    period: string;
-  };
-  link: string;
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
+    starter: number,
+    professional: number,
+    enterprise: number,
+    currency: string,
+    period: string
+  },
+  link: string,
+  icon: string,
+  isPopular?: boolean,
+  isNew?: boolean
 }
 
 // Import enhanced services
-import { enhancedServices2025 } from './enhanced-2025-services';
-import { specializedIndustryServices } from './specialized-industry-services';
+import { enhancedServices2025 } from './enhanced-2025-services',
+import { specializedIndustryServices } from './specialized-industry-services',
 
 export const services: Service[] = [
   // AI Services
@@ -30,18 +30,13 @@ export const services: Service[] = [
     category: 'AI',
     description: 'Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration.',
     features: [
-      'Advanced NLP with GPT-4 integration',
-      'Multi-language support (50+ languages)',
-      'Custom training on your data',
-      'Analytics and performance insights',
-      'API integration and webhooks',
-      '24/7 customer support'
+      'Advanced NLP with GPT-4 integrationMulti-language support (50+ languages)',
+      'Custom training on your dataAnalytics and performance insights',
+      'API integration and webhooks24/7 customer support'
     ],
     benefits: [
-      'Reduce customer service costs by 60%',
-      'Handle 1000+ conversations simultaneously',
-      'Improve customer satisfaction by 40%',
-      '24/7 availability without human intervention'
+      'Reduce customer service costs by 60%Handle 1000+ conversations simultaneously',
+      'Improve customer satisfaction by 40%24/7 availability without human intervention'
     ],
     pricing: {
       starter: 99,
@@ -60,18 +55,13 @@ export const services: Service[] = [
     category: 'AI',
     description: 'Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.',
     features: [
-      'SEO-optimized content generation',
-      'Multiple content types (blogs, social, ads)',
-      'Plagiarism-free content',
-      'Brand voice customization',
-      'Content calendar management',
-      'Performance analytics'
+      'SEO-optimized content generationMultiple content types (blogs, social, ads)',
+      'Plagiarism-free contentBrand voice customization',
+      'Content calendar managementPerformance analytics'
     ],
     benefits: [
-      'Save 80% of content creation time',
-      'Improve SEO rankings by 45%',
-      'Generate 100+ articles per month',
-      'Maintain consistent brand voice'
+      'Save 80% of content creation timeImprove SEO rankings by 45%',
+      'Generate 100+ articles per monthMaintain consistent brand voice'
     ],
     pricing: {
       starter: 49,
@@ -89,18 +79,13 @@ export const services: Service[] = [
     category: 'AI',
     description: 'Transform raw data into actionable insights with machine learning algorithms and predictive analytics.',
     features: [
-      'Real-time data processing',
-      'Predictive analytics models',
-      'Custom dashboard creation',
-      'Automated reporting',
-      'Data visualization tools',
-      'API integration capabilities'
+      'Real-time data processingPredictive analytics models',
+      'Custom dashboard creationAutomated reporting',
+      'Data visualization toolsAPI integration capabilities'
     ],
     benefits: [
-      'Increase data-driven decisions by 70%',
-      'Reduce analysis time by 85%',
-      'Predict trends with 90% accuracy',
-      'Automate routine reporting tasks'
+      'Increase data-driven decisions by 70%Reduce analysis time by 85%',
+      'Predict trends with 90% accuracyAutomate routine reporting tasks'
     ],
     pricing: {
       starter: 199,
@@ -121,18 +106,13 @@ export const services: Service[] = [
     category: 'IT',
     description: 'Comprehensive IT management including network monitoring, security, and 24/7 technical support.',
     features: [
-      '24/7 network monitoring',
-      'Proactive issue resolution',
-      'Security patch management',
-      'Backup and disaster recovery',
-      'Help desk support',
-      'Monthly reporting and analytics'
+      '24/7 network monitoringProactive issue resolution',
+      'Security patch managementBackup and disaster recovery',
+      'Help desk supportMonthly reporting and analytics'
     ],
     benefits: [
-      'Reduce IT downtime by 95%',
-      'Lower IT costs by 30%',
-      'Improve system reliability',
-      'Focus on core business activities'
+      'Reduce IT downtime by 95%Lower IT costs by 30%',
+      'Improve system reliabilityFocus on core business activities'
     ],
     pricing: {
       starter: 299,
@@ -150,18 +130,13 @@ export const services: Service[] = [
     category: 'Security',
     description: 'Advanced cybersecurity solutions including threat detection, vulnerability assessment, and incident response.',
     features: [
-      'Real-time threat detection',
-      'Vulnerability scanning',
-      'Penetration testing',
-      'Security awareness training',
-      'Incident response planning',
-      'Compliance reporting'
+      'Real-time threat detectionVulnerability scanning',
+      'Penetration testingSecurity awareness training',
+      'Incident response planningCompliance reporting'
     ],
     benefits: [
-      'Protect against 99.9% of cyber threats',
-      'Meet industry compliance standards',
-      'Reduce security breach risk by 80%',
-      '24/7 security monitoring'
+      'Protect against 99.9% of cyber threatsMeet industry compliance standards',
+      'Reduce security breach risk by 80%24/7 security monitoring'
     ],
     pricing: {
       starter: 399,
@@ -180,18 +155,13 @@ export const services: Service[] = [
     category: 'Cloud',
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     features: [
-      'Migration strategy planning',
-      'Data migration tools',
-      'Performance optimization',
-      'Security implementation',
-      'Training and documentation',
-      'Post-migration support'
+      'Migration strategy planningData migration tools',
+      'Performance optimizationSecurity implementation',
+      'Training and documentationPost-migration support'
     ],
     benefits: [
-      'Reduce infrastructure costs by 40%',
-      'Improve scalability and flexibility',
-      'Enhanced disaster recovery',
-      'Access to latest technologies'
+      'Reduce infrastructure costs by 40%Improve scalability and flexibility',
+      'Enhanced disaster recoveryAccess to latest technologies'
     ],
     pricing: {
       starter: 2999,
@@ -211,18 +181,13 @@ export const services: Service[] = [
     category: 'SAAS',
     description: 'Collaborative project management tool with task tracking, team collaboration, and progress monitoring.',
     features: [
-      'Task and project tracking',
-      'Team collaboration tools',
-      'Time tracking and reporting',
-      'File sharing and storage',
-      'Mobile app access',
-      'Integration with popular tools'
+      'Task and project trackingTeam collaboration tools',
+      'Time tracking and reportingFile sharing and storage',
+      'Mobile app accessIntegration with popular tools'
     ],
     benefits: [
-      'Increase team productivity by 35%',
-      'Reduce project delays by 50%',
-      'Improve communication efficiency',
-      'Centralized project information'
+      'Increase team productivity by 35%Reduce project delays by 50%',
+      'Improve communication efficiencyCentralized project information'
     ],
     pricing: {
       starter: 29,
@@ -240,18 +205,13 @@ export const services: Service[] = [
     category: 'SAAS',
     description: 'Comprehensive CRM solution for managing customer relationships, sales pipeline, and marketing campaigns.',
     features: [
-      'Contact and lead management',
-      'Sales pipeline tracking',
-      'Email marketing automation',
-      'Customer support integration',
-      'Analytics and reporting',
-      'Mobile app access'
+      'Contact and lead managementSales pipeline tracking',
+      'Email marketing automationCustomer support integration',
+      'Analytics and reportingMobile app access'
     ],
     benefits: [
-      'Increase sales by 30%',
-      'Improve customer retention by 25%',
-      'Streamline sales processes',
-      'Better customer insights'
+      'Increase sales by 30%Improve customer retention by 25%',
+      'Streamline sales processesBetter customer insights'
     ],
     pricing: {
       starter: 39,
@@ -270,18 +230,13 @@ export const services: Service[] = [
     category: 'SAAS',
     description: 'Complete HR solution for employee management, payroll, benefits, and performance tracking.',
     features: [
-      'Employee database management',
-      'Payroll processing',
-      'Benefits administration',
-      'Performance reviews',
-      'Time and attendance',
-      'Compliance reporting'
+      'Employee database managementPayroll processing',
+      'Benefits administrationPerformance reviews',
+      'Time and attendanceCompliance reporting'
     ],
     benefits: [
-      'Reduce HR administrative tasks by 60%',
-      'Improve employee satisfaction',
-      'Ensure compliance with regulations',
-      'Better workforce analytics'
+      'Reduce HR administrative tasks by 60%Improve employee satisfaction',
+      'Ensure compliance with regulationsBetter workforce analytics'
     ],
     pricing: {
       starter: 49,
@@ -301,18 +256,13 @@ export const services: Service[] = [
     category: 'Development',
     description: 'Professional web development services including responsive design, e-commerce, and custom applications.',
     features: [
-      'Responsive web design',
-      'E-commerce integration',
-      'Custom functionality',
-      'SEO optimization',
-      'Performance optimization',
-      'Ongoing maintenance'
+      'Responsive web designE-commerce integration',
+      'Custom functionalitySEO optimization',
+      'Performance optimizationOngoing maintenance'
     ],
     benefits: [
-      'Professional online presence',
-      'Improved user experience',
-      'Better search engine rankings',
-      'Scalable and maintainable code'
+      'Professional online presenceImproved user experience',
+      'Better search engine rankingsScalable and maintainable code'
     ],
     pricing: {
       starter: 2999,
@@ -330,18 +280,13 @@ export const services: Service[] = [
     category: 'Development',
     description: 'Native and cross-platform mobile app development for iOS and Android platforms.',
     features: [
-      'Native iOS and Android development',
-      'Cross-platform solutions',
-      'UI/UX design',
-      'App store optimization',
-      'Testing and quality assurance',
-      'Post-launch support'
+      'Native iOS and Android developmentCross-platform solutions',
+      'UI/UX designApp store optimization',
+      'Testing and quality assurancePost-launch support'
     ],
     benefits: [
-      'Reach mobile users effectively',
-      'Improve customer engagement',
-      'Increase brand visibility',
-      'Generate additional revenue streams'
+      'Reach mobile users effectivelyImprove customer engagement',
+      'Increase brand visibilityGenerate additional revenue streams'
     ],
     pricing: {
       starter: 4999,
@@ -359,18 +304,13 @@ export const services: Service[] = [
     category: 'Development',
     description: 'Custom API development and third-party service integration for seamless data exchange.',
     features: [
-      'RESTful API development',
-      'GraphQL implementation',
-      'Third-party integrations',
-      'API documentation',
-      'Testing and monitoring',
-      'Performance optimization'
+      'RESTful API developmentGraphQL implementation',
+      'Third-party integrationsAPI documentation',
+      'Testing and monitoringPerformance optimization'
     ],
     benefits: [
-      'Enable system interoperability',
-      'Improve data flow efficiency',
-      'Reduce development time',
-      'Enhance user experience'
+      'Enable system interoperabilityImprove data flow efficiency',
+      'Reduce development timeEnhance user experience'
     ],
     pricing: {
       starter: 1999,
@@ -390,18 +330,13 @@ export const services: Service[] = [
     category: 'Analytics',
     description: 'Transform business data into actionable insights with advanced analytics and reporting tools.',
     features: [
-      'Data warehousing',
-      'Interactive dashboards',
-      'Custom reporting',
-      'Data visualization',
-      'Predictive analytics',
-      'Real-time monitoring'
+      'Data warehousingInteractive dashboards',
+      'Custom reportingData visualization',
+      'Predictive analyticsReal-time monitoring'
     ],
     benefits: [
-      'Make data-driven decisions',
-      'Identify business opportunities',
-      'Improve operational efficiency',
-      'Gain competitive advantage'
+      'Make data-driven decisionsIdentify business opportunities',
+      'Improve operational efficiencyGain competitive advantage'
     ],
     pricing: {
       starter: 399,
@@ -413,39 +348,39 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
   }
-];
+],
 
 // Enhanced Services from 2025
-export const enhancedServices = enhancedServices2025;
+export const enhancedServices = enhancedServices2025,
 
 // Specialized Industry Services
-export const specializedServices = specializedIndustryServices;
+export const specializedServices = specializedIndustryServices,
 
 // Combined Services Array
 export const allServices = [
   ...services,
   ...enhancedServices2025,
   ...specializedIndustryServices
-];
+],
 
 export const getServicesByCategory = (category: Service['category']) => {
-  return allServices.filter(service => service.category === category);
-};
+  return allServices.filter(service => service.category === category)
+},
 
 export const getPopularServices = () => {
-  return allServices.filter(service => service.isPopular);
-};
+  return allServices.filter(service => service.isPopular),
+},
 
 export const getNewServices = () => {
-  return allServices.filter(service => service.isNew);
-};
+  return allServices.filter(service => service.isNew),
+},
 
 export const getServicesByIndustry = (industry: string) => {
-  return specializedIndustryServices.filter(service => service.industry === industry);
-};
+  return specializedIndustryServices.filter(service => service.industry === industry)
+},
 
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
-  );
-};
+  )
+},

@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react',
+import { useNavigate } from 'react-router-dom',
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
 
 export default function Custom404() {
-  const navigate = useNavigate();
-  const [query, setQuery] = useState('');
+  const navigate = useNavigate(),
+  const [query, setQuery] = useState(''),
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`);
+      navigate(`/search?q=${encodeURIComponent(query)}`),
     }
-  };
+  },
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-6 text-center">
@@ -34,5 +34,5 @@ export default function Custom404() {
         Back to Marketplace
       </Button>
     </main>
-  );
+  ),
 }

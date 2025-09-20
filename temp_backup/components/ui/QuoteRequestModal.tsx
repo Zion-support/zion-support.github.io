@@ -1,32 +1,29 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
-import type { ServiceItem } from './EnhancedMarketplaceCard';
+import React, { useState } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import { X } from 'lucide-react',
+import type { ServiceItem } from './EnhancedMarketplaceCard',
 
 export type QuoteFormValues = {
-  serviceTitle: string;
-  projectDescription: string;
-  timelineStart?: string;
-  timelineEnd?: string;
-  budgetRange?: string;
-  email: string;
-};
+  serviceTitle: string,
+  projectDescription: string,
+  timelineStart?: string,
+  timelineEnd?: string,
+  budgetRange?: string,
+  email: string
+},
 
 type Props = {
-  open: boolean;
-  onClose: () => void;
-  service?: ServiceItem | null;
-  onSubmit: (values: QuoteFormValues) => Promise<void> | void;
-};
+  open: boolean,
+  onClose: () => void,
+  service?: ServiceItem | null,
+  onSubmit: (values: QuoteFormValues) => Promise<void> | void
+},
 
 const budgetOptions = [
-  'Under $1,000',
-  '$1,000 - $5,000',
-  '$5,000 - $10,000',
-  '$10,000 - $25,000',
-  '$25,000 - $50,000',
-  '$50,000+',
-];
+  'Under $1,000$1,000 - $5,000',
+  '$5,000 - $10,000$10,000 - $25,000',
+  '$25,000 - $50,000$50,000+'
+],
 
 export default function QuoteRequestModal({ open, onClose, service, onSubmit }: Props) {
   const [values, setValues] = useState<QuoteFormValues>({
@@ -35,31 +32,31 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
     timelineStart: '',
     timelineEnd: '',
     budgetRange: budgetOptions[0],
-    email: '',
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [confirmed, setConfirmed] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+    email: ''
+  }),
+  const [submitting, setSubmitting] = useState(false),
+  const [confirmed, setConfirmed] = useState(false),
+  const [error, setError] = useState<string | null>(null),
 
   React.useEffect(() => {
     if (service) {
-      setValues((prev) => ({ ...prev, serviceTitle: service.title }));
+      setValues((prev) => ({ ...prev, serviceTitle: service.title })),
     }
-  }, [service]);
+  }, [service]),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitting(true);
-    setError(null);
+    e.preventDefault(),
+    setSubmitting(true),
+    setError(null),
     try {
-      await onSubmit(values);
-      setConfirmed(true);
+      await onSubmit(values),
+      setConfirmed(true)
     } catch (err: any) {
-      setError(err?.message || 'Something went wrong');
+      setError(err?.message || 'Something went wrong')
     } finally {
-      setSubmitting(false);
+      setSubmitting(false),
     }
-  };
+  },
 
   const content = confirmed ? (
     <div className="text-center py-10">
@@ -147,7 +144,7 @@ export default function QuoteRequestModal({ open, onClose, service, onSubmit }: 
         </button>
       </div>
     </form>
-  );
+  ),
 
 const QuoteRequestModal: React.FC = () => {
   return (
@@ -155,7 +152,7 @@ const QuoteRequestModal: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">QuoteRequestModal</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default QuoteRequestModal;
+export default QuoteRequestModal,

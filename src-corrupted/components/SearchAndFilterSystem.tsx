@@ -1,2 +1,2 @@
 
-export default SearchAndFilterSystem;
+export default SearchAndFilterSystem,

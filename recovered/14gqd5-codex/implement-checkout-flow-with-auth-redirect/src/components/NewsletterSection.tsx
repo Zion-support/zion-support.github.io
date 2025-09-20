@@ -1,6 +1,6 @@
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
 export function NewsletterSection() {
   return (
@@ -17,5 +17,5 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }

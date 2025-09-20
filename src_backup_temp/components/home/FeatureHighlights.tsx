@@ -1,1 +1,1 @@
-export default FeatureHighlights;
+export default FeatureHighlights,

@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
+import Head from 'next/head',
+import Link from 'next/link',
+import React from 'react',
 
 export default function AutonomousContentGeneration() {
   return (
@@ -55,7 +55,7 @@ export default function AutonomousContentGeneration() {
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>
                   The content creation landscape is undergoing a fundamental
                   transformation. Autonomous AI systems are not just assisting
-                  human creators—they&apos;re becoming creators themselves.
+                  human creators—they&apos,re becoming creators themselves.
                 </p>
               </header>
 
@@ -71,8 +71,7 @@ export default function AutonomousContentGeneration() {
                 </p>
                 <p className='text-white/90 mb-4'>
                   Enter autonomous AI systems. These intelligent platforms can
-                  now:
-                </p>
+                  now: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • Generate high-quality written content across multiple
@@ -86,12 +85,12 @@ export default function AutonomousContentGeneration() {
 
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
-                  Zion Tech Group&apos;s Approach
+                  Zion Tech Group&apos,s Approach
                 </h2>
                 <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we&apos;ve developed a unique approach to
+                  At Zion Tech Group, we&apos,ve developed a unique approach to
                   autonomous content generation that combines the best of human
-                  creativity with AI efficiency. Our systems don&apos;t just
+                  creativity with AI efficiency. Our systems don&apos,t just
                   generate content—they understand context, audience, and
                   purpose.
                 </p>
@@ -195,7 +194,7 @@ export default function AutonomousContentGeneration() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we look to the future, autonomous content generation will
-                  become even more sophisticated. We&apos;re working on
+                  become even more sophisticated. We&apos,re working on
                   next-generation systems that will:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
@@ -224,12 +223,12 @@ export default function AutonomousContentGeneration() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   Autonomous content generation represents a paradigm shift in
-                  how we create and distribute content. It&apos;s not about
-                  replacing human creativity—it&apos;s about amplifying it and
+                  how we create and distribute content. It&apos,s not about
+                  replacing human creativity—it&apos,s about amplifying it and
                   making it more accessible.
                 </p>
                 <p className='text-white/90'>
-                  At Zion Tech Group, we&apos;re excited to be at the forefront
+                  At Zion Tech Group, we&apos,re excited to be at the forefront
                   of this revolution, helping organizations harness the power of
                   autonomous AI to create better content, reach more audiences,
                   and achieve their communication goals more effectively than
@@ -245,7 +244,7 @@ export default function AutonomousContentGeneration() {
               <div className='flex gap-4'>
                 <a
                   href='#'
-                  className='px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors'
+                  className='px-4 py-2 bg-blue-600 hover: bg-blue-700 rounded-lg text-white transition-colors'
                 >
                   Twitter
                 </a>
@@ -283,5 +282,5 @@ export default function AutonomousContentGeneration() {
         </main>
       </div>
     </>
-  );
+  )
 }

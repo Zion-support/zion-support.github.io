@@ -1,17 +1,17 @@
-;
-;
-;
+,
+,
+,
 }
-      {...props};
-    />;
-  );
-);
-Separator.displayName = SeparatorPrimitive.Root.displayName;
-;
-export { Separator };
+      {...props},
+    />,
+  ),
+),
+Separator.displayName = SeparatorPrimitive.Root.displayName,
+,
+export { Separator },
 export { Separator }
-</SeparatorPrimitive>;
-</typeof>;
+</SeparatorPrimitive>,
+</typeof>,
 </typeof>,
 export { Separator }
 ,

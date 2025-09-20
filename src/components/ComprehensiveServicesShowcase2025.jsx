@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Search, 
+  Search,
   Filter, 
   Star, 
   ArrowRight, 
@@ -42,106 +42,96 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/cleanInnovativeMicroSaasServices2025';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-
+} from "lucide-react";
+import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/cleanInnovativeMicroSaasServices2025";
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "../data/additionalInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 const ComprehensiveServicesShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
-  const [viewMode, setViewMode] = useState('grid');
-  const [selectedService, setSelectedService] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [sortBy, setSortBy] = useState('innovation'),
+  const [viewMode, setViewMode] = useState('grid'),
+  const [selectedService, setSelectedService] = useState(null),
 
   // Combine all services
   const allServices = [
     ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025,
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
-  ];
+  ],
 
   // Enhanced categories with new services
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-blue-600 to-cyan-500' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-purple-600 to-cyan-500' },
-    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-600 to-indigo-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-red-600 to-pink-500' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-600 to-violet-500' },
-    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: allServices.filter(s => s.category === 'AI & Green Tech').length, icon: '🌱', color: 'from-green-600 to-emerald-500' },
-    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: allServices.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-600 to-indigo-500' },
-    { id: 'AI & Blockchain', name: 'AI & Blockchain', count: allServices.filter(s => s.category === 'AI & Blockchain').length, icon: '🔗', color: 'from-green-600 to-emerald-500' },
-    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', count: allServices.filter(s => s.category === 'AI & Edge Computing').length, icon: '🌐', color: 'from-blue-600 to-cyan-500' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-purple-600 to-pink-500' },
-    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-indigo-600 to-purple-500' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-600 to-red-500' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-green-600 to-blue-500' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-purple-600 to-cyan-500' },
-    { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-600 to-orange-500' },
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-600 to-green-500' },
-    { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-600 to-blue-500' },
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' },
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-blue-600 to-cyan-500' };
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '🤖', color: 'from-purple-600 to-cyan-500' };
+    { id: 'AI & Legal Tech', name: 'AI & Legal Tech', count: allServices.filter(s => s.category === 'AI & Legal Tech').length, icon: '⚖️', color: 'from-blue-600 to-indigo-500' };
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-red-600 to-pink-500' };
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬', color: 'from-purple-600 to-violet-500' };
+    { id: 'AI & Green Tech', name: 'AI & Green Tech', count: allServices.filter(s => s.category === 'AI & Green Tech').length, icon: '🌱', color: 'from-green-600 to-emerald-500' };
+    { id: 'AI & Metaverse', name: 'AI & Metaverse', count: allServices.filter(s => s.category === 'AI & Metaverse').length, icon: '🌍', color: 'from-purple-600 to-indigo-500' };
+    { id: 'AI & Blockchain', name: 'AI & Blockchain', count: allServices.filter(s => s.category === 'AI & Blockchain').length, icon: '🔗', color: 'from-green-600 to-emerald-500' };
+    { id: 'AI & Edge Computing', name: 'AI & Edge Computing', count: allServices.filter(s => s.category === 'AI & Edge Computing').length, icon: '🌐', color: 'from-blue-600 to-cyan-500' };
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-purple-600 to-pink-500' };
+    { id: 'AI & Space Tech', name: 'AI & Space Tech', count: allServices.filter(s => s.category === 'AI & Space Tech').length, icon: '🚀', color: 'from-indigo-600 to-purple-500' };
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-orange-600 to-red-500' };
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-green-600 to-blue-500' };
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-purple-600 to-cyan-500' };
+    { id: 'Quantum Finance', name: 'Quantum Finance', count: allServices.filter(s => s.category === 'Quantum Finance').length, icon: '💰', color: 'from-yellow-600 to-orange-500' };
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: allServices.filter(s => s.category === 'Autonomous Systems').length, icon: '🤖', color: 'from-blue-600 to-green-500' };
+    { id: 'Neuromorphic Computing', name: 'Neuromorphic Computing', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length, icon: '🧠', color: 'from-purple-600 to-blue-500' };
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', count: allServices.filter(s => s.category === 'Synthetic Biology').length, icon: '🧬', color: 'from-green-600 to-blue-500' };
     { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' }
   ];
-
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+    return matchesCategory && matchesSearch,
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1,
       case 'price':
-        return a.price - b.price;
+        return a.price - b.price,
       case 'roi':
-        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
+        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]),
       case 'name':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
+        return a.title.localeCompare(b.title),
+      default: return 0
     }
   });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 };
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,transition: {
         staggerChildren: 0.1
       }
     }
   };
-
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 };
     visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
+      y: 0,opacity: 1,transition: {
         duration: 0.5
       }
     }
   };
-
       const getInnovationColor = (level) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-600 bg-purple-100';
-      case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
-      case 'Advanced': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'Revolutionary': return 'text-purple-600 bg-purple-100',
+      case 'Cutting-edge': return 'text-blue-600 bg-blue-100',
+      case 'Advanced': return 'text-green-600 bg-green-100',
+      default: return 'text-gray-600 bg-gray-100'
     }
   };
-
       const getCategoryIcon = (category) => {
-    const categoryData = categories.find(c => c.id === category);
-    return categoryData?.icon || '🚀';
-  };
+    const categoryData = categories.find(c => c.id === category),
+    return categoryData?.icon || '🚀',
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -618,7 +608,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                         <h4 className="font-medium text-gray-700 mb-2">Performance</h4>
                         <div className="space-y-2">
                           <div className="flex justify-between">
-                            <span>API Endpoints:</span>
+                            <span>API Endpoints: </span>
                             <span className="font-medium">{selectedService.technicalSpecs.apiEndpoints}</span>
                           </div>
                           <div className="flex justify-between">
@@ -652,6 +642,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       </AnimatePresence>
     </div>
   );
-};
+},
 
 export default ComprehensiveServicesShowcase2025;

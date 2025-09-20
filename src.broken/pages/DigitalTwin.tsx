@@ -1,25 +1,25 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       icon: Database,
       title: 'Data Synchronization',
       description: 'Real - time data flow between physical and digital worlds',
-      color: 'from - orange - 500 to - red - 500',
+      color: 'from - orange - 500 to - red - 500'
     },
     {
       icon: Cloud,
       title: 'Cloud Platform',
       description: 'Scalable cloud infrastructure for digital twin operations',
-      color: 'from - indigo - 500 to - blue - 500',
+      color: 'from - indigo - 500 to - blue - 500'
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise - grade security for sensitive operational data',
-      color: 'from - red - 500 to - pink - 500',
-    },
-  ];
+      color: 'from - red - 500 to - pink - 500'
+    }
+  ],
 
   const applications = [{
       title: 'Manufacturing',
@@ -27,48 +27,40 @@ export default function Page() {
         'Optimize production processes and predict equipment failures',
       icon: Factory,
       benefits: [
-        'Production optimization',
-        'Predictive maintenance',
-        'Quality control',
-      ],
+        'Production optimizationPredictive maintenance',
+        'Quality control'
+      ]
     },
     {
       title: 'Smart Cities',
       description: 'Monitor and manage urban infrastructure and services',
       icon: Building,
-      benefits: ['Traffic management', 'Energy optimization', 'Public safety'],
+      benefits: ['Traffic managementEnergy optimization', 'Public safety']
     },
     {
       title: 'Healthcare',
       description: 'Patient monitoring and medical device management',
       icon: Activity,
-      benefits: ['Patient care',
-        'Equipment monitoring',
-        'Treatment optimization',
-      ],
+      benefits: ['Patient careEquipment monitoring',
+        'Treatment optimization'
+      ]
     },
     {
       title: 'Transportation',
       description: 'Fleet management and infrastructure monitoring',
       icon: Truck,
-      benefits: ['Fleet optimization',
-        'Route planning',
-        'Maintenance scheduling',
-      ],
-    },
-  ];
+      benefits: ['Fleet optimizationRoute planning',
+        'Maintenance scheduling'
+      ]
+    }
+  ],
 
-  const technologies = ['IoT Sensors',
-    '3D Modeling',
-    'Machine Learning',
-    'Cloud Computing',
-    'Edge Computing',
-    '5G Networks',
-    'Blockchain',
-    'AR / VR',
-    'Computer Vision',
-    'Robotics',
-  ];
+  const technologies = ['IoT Sensors3D Modeling',
+    'Machine LearningCloud Computing',
+    'Edge Computing5G Networks',
+    'BlockchainAR / VR',
+    'Computer VisionRobotics'
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">
       {/* Hero Section */}
@@ -248,7 +240,7 @@ export default function Page() {
               Join the digital transformation revolution with Zion Tech Group.Our digital twin solutions are designed to drive efficiency,
               improve decision - making, and create new opportunities for
               innovation.</p>
-            <div className="flex flex - col sm:flex - row gap-4 justify - center items -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify - center items -center">
               <Link
                 to="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 text-white font - bold rounded-xl transition - all duration - 300 transform hover:scale - 105 shadow-lg hover:shadow-cyan - 500 / 25 flex items - center space - x-2"
@@ -267,5 +259,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
+    </div>) 
 }

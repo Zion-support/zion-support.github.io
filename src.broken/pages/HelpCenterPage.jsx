@@ -1,4 +1,4 @@
-import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings import { Link  } from 'react-router-dom';
+import { Search, MessageCircle, Phone, Mail, FileText, Users, ShoppingCart, User, Settings import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
         {
@@ -21,7 +21,7 @@ export default function Page() {
             question: "How do I contact customer support?",
             answer: "You can reach us through multiple channels: live chat on our website, email at support@ziontechgroup.com, or phone at + 1(555) 123 - 4567.We typically respond within 2 hours."
 
-    ];
+    ],
     return (<>
       <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform.Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com / help"/>
 

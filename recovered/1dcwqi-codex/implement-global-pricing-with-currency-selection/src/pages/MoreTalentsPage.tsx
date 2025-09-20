@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
+import { useState } from "react",
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
 
 const MORE_TALENT_LISTINGS: ProductListing[] = [
   {
@@ -18,7 +18,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-03-15T09:00:00.000Z",
     aiScore: 90,
     rating: 4.8,
-    reviewCount: 25,
+    reviewCount: 25
   },
   {
     id: "talent-8",
@@ -35,7 +35,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-03-20T10:30:00.000Z",
     aiScore: 92,
     rating: 4.7,
-    reviewCount: 18,
+    reviewCount: 18
   },
   {
     id: "talent-9",
@@ -52,7 +52,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-02-28T14:00:00.000Z",
     aiScore: 95,
     rating: 4.9,
-    reviewCount: 32,
+    reviewCount: 32
   },
   {
     id: "talent-10",
@@ -69,7 +69,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-03-05T11:20:00.000Z",
     aiScore: 93,
     rating: 4.8,
-    reviewCount: 22,
+    reviewCount: 22
   },
   {
     id: "talent-11",
@@ -86,7 +86,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-04-01T08:45:00.000Z",
     aiScore: 89,
     rating: 4.6,
-    reviewCount: 17,
+    reviewCount: 17
   },
   {
     id: "talent-12",
@@ -103,7 +103,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-02-18T13:10:00.000Z",
     aiScore: 94,
     rating: 4.8,
-    reviewCount: 30,
+    reviewCount: 30
   },
   {
     id: "talent-13",
@@ -120,7 +120,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-03-12T15:25:00.000Z",
     aiScore: 91,
     rating: 4.7,
-    reviewCount: 27,
+    reviewCount: 27
   },
   {
     id: "talent-14",
@@ -137,7 +137,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-01-30T10:10:00.000Z",
     aiScore: 96,
     rating: 4.9,
-    reviewCount: 34,
+    reviewCount: 34
   },
   {
     id: "talent-15",
@@ -154,7 +154,7 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-02-10T09:55:00.000Z",
     aiScore: 90,
     rating: 4.6,
-    reviewCount: 20,
+    reviewCount: 20
   },
   {
     id: "talent-16",
@@ -171,14 +171,14 @@ const MORE_TALENT_LISTINGS: ProductListing[] = [
     createdAt: "2024-04-05T12:40:00.000Z",
     aiScore: 93,
     rating: 4.8,
-    reviewCount: 28,
-  },
-];
+    reviewCount: 28
+  }
+],
 
-const MORE_TALENT_FILTERS = Array.from(new Set(MORE_TALENT_LISTINGS.map(t => t.category))).map(c => ({ label: c, value: c.toLowerCase().replace(/\s+/g, '-') }));
+const MORE_TALENT_FILTERS = Array.from(new Set(MORE_TALENT_LISTINGS.map(t => t.category))).map(c => ({ label: c, value: c.toLowerCase().replace(/\s+/g, '-') })),
 
 export default function MoreTalentsPage() {
-  const [listings] = useState<ProductListing[]>([...MORE_TALENT_LISTINGS]);
+  const [listings] = useState<ProductListing[]>([...MORE_TALENT_LISTINGS]),
   return (
     <DynamicListingPage
       title="More Talents"
@@ -188,5 +188,5 @@ export default function MoreTalentsPage() {
       categoryFilters={MORE_TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
     />
-  );
+  ),
 }

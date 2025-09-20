@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface RealMarketService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
@@ -49,16 +49,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
     features: [
-      'Real-time data analytics dashboard',
-      'AI-powered trend prediction',
-      'Custom KPI tracking and alerts',
-      'Automated report generation',
-      'Multi-source data integration',
-      'Predictive analytics modeling',
-      'Executive summary automation',
-      'Mobile-responsive interface',
-      'White-label reporting',
-      'API access for custom integrations'
+      'Real-time data analytics dashboardAI-powered trend prediction',
+      'Custom KPI tracking and alertsAutomated report generation',
+      'Multi-source data integrationPredictive analytics modeling',
+      'Executive summary automationMobile-responsive interface',
+      'White-label reportingAPI access for custom integrations'
     ],
     popular: true,
     icon: '📊',
@@ -101,16 +96,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Comprehensive customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and automate customer engagement workflows.',
     features: [
-      'Automated onboarding sequences',
-      'Health score monitoring',
-      'Churn prediction alerts',
-      'Customer journey mapping',
-      'Automated check-in emails',
-      'Success milestone tracking',
-      'Integration with CRM systems',
-      'Customer feedback collection',
-      'Success playbook automation',
-      'Performance analytics dashboard'
+      'Automated onboarding sequencesHealth score monitoring',
+      'Churn prediction alertsCustomer journey mapping',
+      'Automated check-in emailsSuccess milestone tracking',
+      'Integration with CRM systemsCustomer feedback collection',
+      'Success playbook automationPerformance analytics dashboard'
     ],
     popular: true,
     icon: '🎯',
@@ -153,16 +143,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Comprehensive API security and monitoring solution that protects your APIs from attacks, monitors performance, and ensures compliance with security standards.',
     features: [
-      'Real-time threat detection',
-      'API rate limiting and throttling',
-      'OAuth 2.0 and JWT management',
-      'API performance monitoring',
-      'Security compliance reporting',
-      'Automated security testing',
-      'API documentation generation',
-      'Developer portal management',
-      'Usage analytics and insights',
-      'Multi-cloud deployment support'
+      'Real-time threat detectionAPI rate limiting and throttling',
+      'OAuth 2.0 and JWT managementAPI performance monitoring',
+      'Security compliance reportingAutomated security testing',
+      'API documentation generationDeveloper portal management',
+      'Usage analytics and insightsMulti-cloud deployment support'
     ],
     popular: true,
     icon: '🔒',
@@ -205,16 +190,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'All-in-one e-commerce automation platform that streamlines inventory management, order processing, customer service, and marketing automation for online stores.',
     features: [
-      'Automated inventory management',
-      'Order processing automation',
-      'Customer service chatbot',
-      'Marketing automation workflows',
-      'Abandoned cart recovery',
-      'Personalized recommendations',
-      'Multi-channel integration',
-      'Analytics and reporting',
-      'Mobile app management',
-      'White-label solutions'
+      'Automated inventory managementOrder processing automation',
+      'Customer service chatbotMarketing automation workflows',
+      'Abandoned cart recoveryPersonalized recommendations',
+      'Multi-channel integrationAnalytics and reporting',
+      'Mobile app managementWhite-label solutions'
     ],
     popular: true,
     icon: '🛒',
@@ -257,16 +237,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Comprehensive HR automation platform that handles recruitment, onboarding, performance management, and employee engagement through AI-powered workflows.',
     features: [
-      'AI-powered recruitment automation',
-      'Automated onboarding workflows',
-      'Performance management system',
-      'Employee engagement tracking',
-      'Time and attendance management',
-      'Benefits administration',
-      'Compliance reporting',
-      'Employee self-service portal',
-      'Mobile app for employees',
-      'Integration with payroll systems'
+      'AI-powered recruitment automationAutomated onboarding workflows',
+      'Performance management systemEmployee engagement tracking',
+      'Time and attendance managementBenefits administration',
+      'Compliance reportingEmployee self-service portal',
+      'Mobile app for employeesIntegration with payroll systems'
     ],
     popular: true,
     icon: '👥',
@@ -309,16 +284,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Advanced financial analytics platform that provides real-time insights, automated reporting, and AI-powered forecasting for businesses of all sizes.',
     features: [
-      'Real-time financial dashboards',
-      'AI-powered cash flow forecasting',
-      'Automated financial reporting',
-      'Budget tracking and alerts',
-      'Expense categorization',
-      'Financial KPI monitoring',
-      'Multi-currency support',
-      'Tax preparation assistance',
-      'Investment portfolio tracking',
-      'Regulatory compliance reporting'
+      'Real-time financial dashboardsAI-powered cash flow forecasting',
+      'Automated financial reportingBudget tracking and alerts',
+      'Expense categorizationFinancial KPI monitoring',
+      'Multi-currency supportTax preparation assistance',
+      'Investment portfolio trackingRegulatory compliance reporting'
     ],
     popular: true,
     icon: '💰',
@@ -361,16 +331,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, and enhance team collaboration for better project outcomes.',
     features: [
-      'AI-powered project planning',
-      'Risk prediction and mitigation',
-      'Resource optimization',
-      'Team collaboration tools',
-      'Time tracking automation',
-      'Progress monitoring',
-      'Stakeholder reporting',
-      'Mobile app access',
-      'Integration with popular tools',
-      'White-label solutions'
+      'AI-powered project planningRisk prediction and mitigation',
+      'Resource optimizationTeam collaboration tools',
+      'Time tracking automationProgress monitoring',
+      'Stakeholder reportingMobile app access',
+      'Integration with popular toolsWhite-label solutions'
     ],
     popular: true,
     icon: '📋',
@@ -413,16 +378,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'Comprehensive marketing automation platform that streamlines email marketing, social media management, lead generation, and campaign analytics through intelligent automation.',
     features: [
-      'Email marketing automation',
-      'Social media management',
-      'Lead generation and scoring',
-      'Campaign analytics dashboard',
-      'A/B testing automation',
-      'Personalization engine',
-      'CRM integration',
-      'Marketing attribution',
-      'Mobile app management',
-      'White-label solutions'
+      'Email marketing automationSocial media management',
+      'Lead generation and scoringCampaign analytics dashboard',
+      'A/B testing automationPersonalization engine',
+      'CRM integrationMarketing attribution',
+      'Mobile app managementWhite-label solutions'
     ],
     popular: true,
     icon: '📢',
@@ -465,16 +425,11 @@ export const realMarketServices: RealMarketService[] = [
     period: '/month',
     description: 'AI-powered legal document automation platform that streamlines contract creation, document review, and legal workflow management for law firms and businesses.',
     features: [
-      'AI-powered contract generation',
-      'Document review automation',
-      'Legal workflow management',
-      'Compliance checking',
-      'E-signature integration',
-      'Document version control',
-      'Client portal access',
-      'Billing integration',
-      'Mobile app access',
-      'White-label solutions'
+      'AI-powered contract generationDocument review automation',
+      'Legal workflow managementCompliance checking',
+      'E-signature integrationDocument version control',
+      'Client portal accessBilling integration',
+      'Mobile app accessWhite-label solutions'
     ],
     popular: true,
     icon: '⚖️',
@@ -508,4 +463,4 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.8,
     reviews: 480
   }
-];
+],

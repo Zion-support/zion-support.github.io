@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Search, Filter, Star, Users, TrendingUp, Zap, 
   Brain, Rocket, Shield, Cpu, Globe, Target,
   ArrowRight, ExternalLink, Check, Phone, Mail, MapPin
-} from 'lucide-react';
-import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
-import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { advancedITServices } from '../data/advanced-it-services';
-import { extraServices } from '../data/extra-services';
+} from 'lucide-react',
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',
+import { innovativeAIServices } from '../data/innovative-ai-services',
+import { advancedITServices } from '../data/advanced-it-services',
+import { extraServices } from '../data/extra-services',
 
 export default function AllServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedVariant, setSelectedVariant] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedVariant, setSelectedVariant] = useState('all'),
 
   // Combine all services
   const allServices = [
@@ -24,32 +24,32 @@ export default function AllServicesPage() {
     ...innovativeAIServices,
     ...advancedITServices,
     ...extraServices
-  ];
+  ],
 
   // Get unique categories
-  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))],
 
   // Get unique variants
-  const variants = ['all', ...Array.from(new Set(allServices.map(service => service.variant)))];
+  const variants = ['all', ...Array.from(new Set(allServices.map(service => service.variant)))],
 
   // Filter services
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesVariant = selectedVariant === 'all' || service.variant === selectedVariant;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesVariant = selectedVariant === 'all' || service.variant === selectedVariant,
 
-    return matchesSearch && matchesCategory && matchesVariant;
-  });
+    return matchesSearch && matchesCategory && matchesVariant,
+  }),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,7 +60,7 @@ export default function AllServicesPage() {
         delayChildren: 0.2
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -72,7 +72,7 @@ export default function AllServicesPage() {
         ease: "easeOut" as const
       }
     }
-  };
+  },
 
 const all-services: React.FC = () => {
   return (
@@ -89,7 +89,7 @@ const all-services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default all-services;
+export default all-services,

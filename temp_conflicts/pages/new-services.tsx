@@ -1,7 +1,7 @@
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import Link from 'next/link',
 
 const items = [
 	{ name: 'AI Customer Journey Analytics', href: '/ai-customer-journey-analytics', blurb: 'Funnels, cohorts, LTV and churn prediction.' },
@@ -16,7 +16,7 @@ const items = [
 	{ name: 'Data Contracts & Governance', href: '/data-contracts-governance', blurb: 'Contracts, lineage, and quality SLAs.' },
 	{ name: 'PII Detection & Redaction', href: '/pii-detection-redaction', blurb: 'Detect and redact sensitive data.' },
 	{ name: 'Billing Analytics', href: '/billing-analytics', blurb: 'Revenue, churn, and anomaly dashboards.' }
-];
+],
 
 export default function NewServices() {
 	return (
@@ -43,5 +43,5 @@ export default function NewServices() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

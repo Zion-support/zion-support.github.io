@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView  } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, useInView  } from 'framer-motion',
 
 export default function Page() {
-  }, [inView, isInView]);
+  }, [inView, isInView]),
   if(!isInView) {
 
     return ()
@@ -13,7 +13,7 @@ export default function Page() {
           size={loadingSize}
         />
       </div>
-    );
+    ),
   }
   if(!isLoaded) {
 
@@ -25,7 +25,7 @@ export default function Page() {
           size={loadingSize}
         />
       </div>
-    );
+    ),
   }
   return ()
     <motion.div
@@ -36,7 +36,7 @@ export default function Page() {
     >
       {children}
     </motion.div>
-  );
-};
-export default LazyWrapper;
+  ),
+},
+export default LazyWrapper,
 '`

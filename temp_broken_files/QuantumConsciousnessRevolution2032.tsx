@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 const QuantumConsciousnessRevolution2032: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,
       <div className="container mx-auto px-4 py-12">,
-        {/* Hero Section */,}
+        {/* Hero Section */}
         <div,
           className="text-center mb-16",
         >,
@@ -143,7 +143,7 @@ const QuantumConsciousnessRevolution2032: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Benefits and Applications */,}
+        {/* Benefits and Applications */}
         <div,
           className="bg-gradient-to-r from-emerald-800/30 to-teal-800/30 backdrop-blur-sm rounded-3xl p-12 mb-16",
         >,
@@ -181,7 +181,7 @@ const QuantumConsciousnessRevolution2032: React.FC = () => {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div,
           className="text-center mt-16",
         >,
@@ -202,6 +202,5 @@ const QuantumConsciousnessRevolution2032: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),};
-export default QuantumConsciousnessRevolution2032;
+    </div>)},
+export default QuantumConsciousnessRevolution2032,

@@ -27,7 +27,7 @@ function collectAllServices(): ServiceItem[] {
 		innovativeAIServices,
 		addedMicroSaaS2025,
 		addedITServices2025,
-		addedAIServices2025,
+		addedAIServices2025
 	]
 	const map = new Map<string, ServiceItem>()
 	for (const arr of arrays) {
@@ -43,7 +43,7 @@ function collectAllServices(): ServiceItem[] {
 					features: Array.isArray(item.features) ? item.features : [],
 					icon: item.icon,
 					color: item.color,
-					textColor: item.textColor,
+					textColor: item.textColor
 				})
 			}
 		}

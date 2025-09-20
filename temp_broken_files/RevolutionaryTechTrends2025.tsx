@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react',
 import {,
-  Brain;
-  Zap;
-  Shield;
-  Cloud;
-  Code;
-  Database;
-  Smartphone;
-  Globe;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  TrendingUp;
-  Users;
-  Award;
-  Target,
-} from 'lucide-react';
+  Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Code,
+  Database,
+  Smartphone,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Target
+} from 'lucide-react',
 const RevolutionaryTechTrends2025: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">,
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>,
         <div className="relative z-10 container mx-auto px-4 py-24">,
@@ -57,11 +57,11 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
           </div>,
         </div>,
       </section>,
-      {/* Revolutionary Trends Section */,}
+      {/* Revolutionary Trends Section */}
       <section id="trends" className="py-24">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-5xl font-bold text-gray-900 mb-6">,
@@ -73,14 +73,14 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {trends.map((trend, index) => {,
-              const IconComponent = trend.icon;
+              const IconComponent = trend.icon,
               return (,
                 <div,
                   key={index}
-                  whileInView={{ opacity: 1, y: 0 ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-2xl p-8 shadow-xl hover: shadow-2xl transition-all duration-300 border border-gray-100 hover:scale-105",
                 >,
-                  <div className={`w-16 h-16 bg-gradient-to-r ${trend.color,} rounded-xl flex items-center justify-center mb-6`}>,
+                  <div className={`w-16 h-16 bg-gradient-to-r ${trend.color} rounded-xl flex items-center justify-center mb-6`}>,
                     <IconComponent className="w-8 h-8 text-white" />,
                   </div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{trend.title}</h3>,
@@ -89,19 +89,18 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
                     <div className="flex items-center text-sm text-gray-500">,
                       <TrendingUp className="w-4 h-4 mr-2" />,
                       <span className="font-medium">Impact: </span>,
-                      <span className="ml-2">{trend.impact,}</span>,
+                      <span className="ml-2">{trend.impact}</span>,
                     </div>,
                     <div className="flex items-center text-sm text-gray-500">,
                       <CheckCircle className="w-4 h-4 mr-2" />,
                       <span className="font-medium">Timeline: </span>,
-                      <span className="ml-2">{trend.timeline,}</span>,
+                      <span className="ml-2">{trend.timeline}</span>,
                     </div>,
                   </div>,
                   <a href="/contact" className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold">,
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />,
                   </a>,
-                </div>,
-              ),})}
+                </div>)})}
           </div>,
         </div>,
       </section>,
@@ -109,7 +108,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
       <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-5xl font-bold text-gray-900 mb-6">,
@@ -121,20 +120,19 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
           </div>,
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {benefits.map((benefit, index) => {,
-              const IconComponent = benefit.icon;
+              const IconComponent = benefit.icon,
               return (,
                 <div,
                   key={index}
-                  whileInView={{ opacity: 1, y: 0 ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
                   className="bg-white rounded-2xl p-8 shadow-lg hover: shadow-xl transition-all duration-300 text-center",
                 >,
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">,
                     <IconComponent className="w-8 h-8 text-white" />,
                   </div>,
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title,}</h3>,
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>,
                   <p className="text-gray-600">{benefit.description}</p>,
-                </div>,
-              );
+                </div>),
             })}
           </div>,
         </div>,
@@ -143,7 +141,7 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
       <section className="py-24 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">,
         <div className="container mx-auto px-4 text-center">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
           >,
             <h2 className="text-5xl font-bold mb-6">,
               Ready to Lead the Future?,
@@ -163,6 +161,6 @@ const RevolutionaryTechTrends2025: React.FC = () => {,
         </div>,
       </section>,
     </div>,
-  );
-export default RevolutionaryTechTrends2025;
+  ),
+export default RevolutionaryTechTrends2025,
 }

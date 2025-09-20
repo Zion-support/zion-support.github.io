@@ -1,7 +1,7 @@
 interface SupabaseUser {
-  id: string;
-  email?: string | null;
-  email_confirmed_at?: string | null; // Added email_confirmed_at
+  id: string,
+  email?: string | null,
+  email_confirmed_at?: string | null, // Added email_confirmed_at
 }
 
 /**
@@ -23,11 +23,11 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     role: profile.user_type || undefined, // Ensure null becomes undefined
     points: profile.points ?? 0,
     emailVerified: !!user.email_confirmed_at, // Map email_confirmed_at
-  };
+  },
 }
-;
+,
 export 
-    role: profile.role,;
-    isEmailVerified: profile.is_email_verified || false,;
-    createdAt: profile.created_at || supabaseUser.created_at,;
-    updatedAt: profile.updated_at || supabaseUser.updated_at}};
+    role: profile.role,
+    isEmailVerified: profile.is_email_verified || false,
+    createdAt: profile.created_at || supabaseUser.created_at,
+    updatedAt: profile.updated_at || supabaseUser.updated_at}},

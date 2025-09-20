@@ -1,4 +1,4 @@
-import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain  } from 'lucide-react';
+import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain  } from 'lucide-react',
 export default function Page() {
 ,
         {
@@ -19,7 +19,7 @@ export default function Page() {
             description: 'Technology market segments',
             icon: <Globe className="w-8 h-8 text-zion -orange"/>
 
-    ];
+    ],
     return (<div className="min - h-screen bg-zion - blue -dark">
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient - to - r from - zion - purple via - zion - blue - light to - zion - cyan relative overflow-hidden">
@@ -49,8 +49,7 @@ export default function Page() {
               <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick={ () => document.getElementById('portfolio - dashboard') ?.scrollIntoView({ behavior: 'smooth' }) }>
                 View Dashboard < ArrowRight className="w-5 h-5 ml-2"/>
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Portfolio Strategy Consultation',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Portfolio Strategy Consultation_blank') }>
                 Get Consultation
               </Button>
             </div>
@@ -255,13 +254,11 @@ export default function Page() {
               Our comprehensive portfolio dashboard provides the insights you need to make
               informed decisions and drive strategic growth in your technology investments.</p>
             <div className="flex flex - col sm:flex - row gap-4 justify -center">
-              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Portfolio Optimization Consultation',
-  '_blank') }>
+              <Button className="bg-white text-zion - purple hover:bg-zion - slate - light text-lg px-8 py-4" onClick = { () => window.open('mailto:kleber@ziontechgroup.com?subject = Portfolio Optimization Consultation_blank') }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Get Portfolio Strategy
               </Button>
-              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950',
-  '_blank') }>
+              <Button className="border-white text-white hover:bg-white hover:text-zion - purple text-lg px-8 py-4" onClick = { () => window.open('tel:+13024640950_blank') }>
                 <Shield className="w-5 h-5 mr-2"/>
                 Speak with an Expert
               </Button>
@@ -269,5 +266,5 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}

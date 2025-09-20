@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Brain, 
+  Brain,
   Zap, 
   TrendingUp, 
   BarChart3, 
@@ -21,42 +21,29 @@ import {
   Database,
   Workflow,
   Gauge
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { Link } from "react-router-dom";
 const AIBusinessProcessOptimization: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Process Analysis",
-      description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time."
+      icon: Brain,title: "AI-Powered Process Analysis",description: "Advanced machine learning algorithms analyze your business processes to identify inefficiencies, bottlenecks, and optimization opportunities in real-time."
     },
     {
-      icon: Workflow,
-      title: "Intelligent Workflow Automation",
-      description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
+      icon: Workflow,title: "Intelligent Workflow Automation",description: "Automatically design and implement optimized workflows that adapt to changing business conditions and learn from user behavior patterns."
+    };
+    {
+      icon: BarChart3,title: "Predictive Performance Analytics",description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
     },
     {
-      icon: BarChart3,
-      title: "Predictive Performance Analytics",
-      description: "Forecast process performance, resource requirements, and potential issues before they impact your operations using AI-driven predictive modeling."
+      icon: Zap,title: "Real-Time Optimization",description: "Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency."
     },
     {
-      icon: Zap,
-      title: "Real-Time Optimization",
-      description: "Continuously monitor and optimize processes in real-time, automatically adjusting parameters and workflows for maximum efficiency."
+      icon: Users,title: "Human-AI Collaboration",description: "Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance."
     },
     {
-      icon: Users,
-      title: "Human-AI Collaboration",
-      description: "Seamless integration between human workers and AI systems, with intelligent task allocation and decision support for optimal team performance."
-    },
-    {
-      icon: Shield,
-      title: "Compliance & Risk Management",
-      description: "Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards."
+      icon: Shield,title: "Compliance & Risk Management",description: "Built-in compliance monitoring and risk assessment, ensuring all process optimizations meet regulatory requirements and industry standards."
     }
-  ];
+  ],
 
   const benefits = [
     "Reduce process execution time by 40-60%",
@@ -65,54 +52,41 @@ const AIBusinessProcessOptimization: React.FC = () => {
     "Increase employee productivity by 30%",
     "Reduce manual errors by 90%",
     "Achieve 99.9% process uptime"
-  ];
+  ],
 
   const useCases = [
     {
-      title: "Manufacturing & Production",
-      description: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.",
+      title: "Manufacturing & Production",description: "Optimize production lines, inventory management, and quality control processes for maximum efficiency and minimal waste.",
       icon: Cpu
-    },
+    };
     {
-      title: "Financial Services",
-      description: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.",
+      title: "Financial Services",description: "Streamline loan processing, risk assessment, compliance workflows, and customer onboarding for faster service delivery.",
       icon: DollarSign
-    },
+    };
     {
-      title: "Healthcare & Life Sciences",
-      description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
+      title: "Healthcare & Life Sciences",description: "Optimize patient care workflows, clinical trial processes, and administrative operations for better patient outcomes.",
       icon: Users
-    },
+    };
     {
-      title: "Retail & E-commerce",
-      description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
+      title: "Retail & E-commerce",description: "Streamline order fulfillment, inventory management, customer service, and supply chain operations for seamless customer experiences.",
       icon: Globe
     }
   ];
-
   const pricing = [
     {
-      name: "Starter",
-      price: "$799",
-      period: "/month",
-      description: "Perfect for small businesses starting their process optimization journey",
-      features: [
-        "Up to 10 process workflows",
+      name: "Starter",price: "$799",period: "/month",description: "Perfect for small businesses starting their process optimization journey",features: [
+        "Up to 10 process workflows";
         "Basic AI analysis and recommendations",
         "Standard reporting and dashboards",
         "Email support",
         "Basic integration capabilities"
       ],
-      cta: "Start Free Trial",
-      popular: false
-    },
+      cta: "Start Free Trial",popular: false
+    };
     {
-      name: "Professional",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for growing companies with complex process optimization needs",
-      features: [
-        "Up to 50 process workflows",
+      name: "Professional",price: "$1,999",
+      period: "/month",description: "Ideal for growing companies with complex process optimization needs",features: [
+        "Up to 50 process workflows";
         "Advanced AI optimization algorithms",
         "Real-time monitoring and alerts",
         "Custom dashboards and reports",
@@ -120,16 +94,12 @@ const AIBusinessProcessOptimization: React.FC = () => {
         "Advanced integrations",
         "Process simulation and testing"
       ],
-      cta: "Start Free Trial",
-      popular: true
-    },
+      cta: "Start Free Trial",popular: true
+    };
     {
-      name: "Enterprise",
-      price: "$4,999",
-      period: "/month",
-      description: "Comprehensive solution for large enterprises with complex operations",
-      features: [
-        "Unlimited process workflows",
+      name: "Enterprise",price: "$4,999",
+      period: "/month",description: "Comprehensive solution for large enterprises with complex operations",features: [
+        "Unlimited process workflows";
         "Custom AI model training",
         "Advanced analytics and insights",
         "White-label solutions",
@@ -138,34 +108,23 @@ const AIBusinessProcessOptimization: React.FC = () => {
         "On-premise deployment options",
         "Advanced security and compliance"
       ],
-      cta: "Contact Sales",
-      popular: false
+      cta: "Contact Sales",popular: false
     }
   ];
-
   const roi = [
     {
-      metric: "Process Efficiency",
-      improvement: "40-60%",
-      description: "Faster execution and reduced cycle times"
-    },
+      metric: "Process Efficiency",improvement: "40-60%",description: "Faster execution and reduced cycle times"
+    };
     {
-      metric: "Cost Reduction",
-      improvement: "25-35%",
-      description: "Lower operational and labor costs"
-    },
+      metric: "Cost Reduction",improvement: "25-35%",description: "Lower operational and labor costs"
+    };
     {
-      metric: "Error Reduction",
-      improvement: "90%",
-      description: "Minimal manual errors and rework"
-    },
+      metric: "Error Reduction",improvement: "90%",description: "Minimal manual errors and rework"
+    };
     {
-      metric: "Productivity Gain",
-      improvement: "30%",
-      description: "Increased employee output and satisfaction"
+      metric: "Productivity Gain",improvement: "30%",description: "Increased employee output and satisfaction"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -457,7 +416,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
@@ -478,7 +437,7 @@ const AIBusinessProcessOptimization: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+      <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Star className="w-5 h-5 text-blue-400" />
@@ -496,7 +455,6 @@ const AIBusinessProcessOptimization: React.FC = () => {
         </div>
       </footer>
     </div>
-  );
+  )
 };
-
 export default AIBusinessProcessOptimization;

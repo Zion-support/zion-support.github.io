@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, ArrowRight, Phone, Mail, MapPin,
   Brain, Atom, Rocket, Target, Server, Building,
   Shield, Globe, Zap, TrendingUp, Users, Award
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import all our new services
-import { advancedAIAutomationPlatforms2025 } from '../data/2025-advanced-ai-automation-platforms';
-import { innovativeITInfrastructureSolutions2025 } from '../data/2025-innovative-it-infrastructure-solutions';
-import { specializedMicroSaasSolutions2025 } from '../data/2025-specialized-micro-saas-solutions';
-import { emergingTechnologyServices2025 } from '../data/2025-emerging-technology-services';
+import { advancedAIAutomationPlatforms2025 } from '../data/2025-advanced-ai-automation-platforms',
+import { innovativeITInfrastructureSolutions2025 } from '../data/2025-innovative-it-infrastructure-solutions',
+import { specializedMicroSaasSolutions2025 } from '../data/2025-specialized-micro-saas-solutions',
+import { emergingTechnologyServices2025 } from '../data/2025-emerging-technology-services',
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
-const ServiceCard = ({ service, index }: { service: any; index: number }) => (
+const ServiceCard = ({ service, index }: { service: any, index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
       <div className="mb-4">
         <h4 className="font-semibold mb-2">Target Audience:</h4>
         <div className="text-sm opacity-75">
-          {service.targetAudience.slice(0, 3).join(', ')}
+          {service.targetAudience.slice(0, 3).join()}
         </div>
       </div>
       
@@ -87,19 +87,19 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => (
       
       <a
         href={service.link}
-        className="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        className="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-gray-900 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
       >
         Learn More <ArrowRight className="w-4 h-4 ml-2" />
       </a>
     </div>
   </motion.div>
-);
+),
 
 const ServiceCategory = ({ title, services, icon: Icon, color }: { 
-  title: string; 
-  services: any[]; 
-  icon: any; 
-  color: string;
+  title: string, 
+  services: any[], 
+  icon: any, 
+  color: string
 }) => (
   <div className="mb-16">
     <div className="text-center mb-12">
@@ -118,7 +118,7 @@ const ServiceCategory = ({ title, services, icon: Icon, color }: {
       ))}
     </div>
   </div>
-);
+),
 
 const ContactSection = () => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -157,7 +157,7 @@ const ContactSection = () => (
         </a>
         <a
           href={`mailto:${contactInfo.email}`}
-          className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+          className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg font-semibold text-lg hover: bg-white hover:text-blue-600 transition-colors"
         >
           <Mail className="w-5 h-5 mr-2" />
           Send Email
@@ -165,7 +165,7 @@ const ContactSection = () => (
       </div>
     </div>
   </div>
-);
+),
 
 const StatsSection = () => (
   <div className="py-20 bg-gray-50">
@@ -209,7 +209,7 @@ const StatsSection = () => (
       </div>
     </div>
   </div>
-);
+),
 
 export default function UltimateServicesShowcase2025() {
   return (
@@ -226,6 +226,6 @@ export default function UltimateServicesShowcase2025() {
         </div>
       </div>
     </div>
-  );
-};
-export default 2025-ultimate-services-showcase;
+  ),
+},
+export default 2025-ultimate-services-showcase,

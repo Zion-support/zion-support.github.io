@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion } from "framer-motion";
 import {
   Brain,
   Shield,
@@ -29,18 +29,17 @@ import {
   Mail,
   MapPin,
   ExternalLink
-} from 'lucide-react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
-
+} from "lucide-react";
+import { INNOVATIVE_SERVICES } from "../data/servicesData";
 export default function InnovativeServicesShowcase2026() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('innovation'),
 
-  const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
+  const categories = ['AllAI & Automation', 'Quantum ComputingBlockchain', 'CybersecurityIoT', 'AI & ContentDevOps', 'FinanceSustainability'],
 
   const sortedServices = useMemo(() => {
-    let filtered = INNOVATIVE_SERVICES;
+    let filtered = INNOVATIVE_SERVICES,
 
     // Filter by search query
     if (searchQuery) {
@@ -48,12 +47,12 @@ export default function InnovativeServicesShowcase2026() {
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      );
+      ),
     }
 
     // Filter by category
     if (selectedCategory !== 'All') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
 
     // Sort services
@@ -65,52 +64,45 @@ export default function InnovativeServicesShowcase2026() {
           return b.innovationLevel === 'Revolutionary' ? 1 : -1;
         case 'roi':
           return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
-        default:
-          return 0;
+        default: return 0
       }
     });
-
-    return filtered;
-  }, [searchQuery, selectedCategory, sortBy]);
+    return filtered,
+  }, [searchQuery, selectedCategory, sortBy]),
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Automation':
         return <Cpu className="w-5 h-5" />;
       case 'Quantum Computing':
-        return <Zap className="w-5 h-5" />;
+        return <Zap className="w-5 h-5" />,
       case 'Blockchain':
-        return <Database className="w-5 h-5" />;
+        return <Database className="w-5 h-5" />,
       case 'Cybersecurity':
-        return <Shield className="w-5 h-5" />;
+        return <Shield className="w-5 h-5" />,
       case 'IoT':
-        return <Globe className="w-5 h-5" />;
+        return <Globe className="w-5 h-5" />,
       case 'AI & Content':
-        return <Cpu className="w-5 h-5" />;
+        return <Cpu className="w-5 h-5" />,
       case 'DevOps':
-        return <Database className="w-5 h-5" />;
+        return <Database className="w-5 h-5" />,
       case 'Finance':
-        return <TrendingUp className="w-5 h-5" />;
+        return <TrendingUp className="w-5 h-5" />,
       case 'Sustainability':
-        return <Leaf className="w-5 h-5" />;
-      default:
-        return <Star className="w-5 h-5" />;
+        return <Leaf className="w-5 h-5" />,
+      default: return <Star className="w-5 h-5" />
     }
   };
-
   const getInnovationBadge = (level: string) => {
     const colors = {
-      'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',
-      'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600'
+      'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600'
     };
-
     return (
       <span className={`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
         {level}
       </span>
-    );
-  };
+    ),
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -475,7 +467,7 @@ export default function InnovativeServicesShowcase2026() {
         </div>
       </section>
     </div>
-  );
-};
+  ),
+},
 
 export default InnovativeServicesShowcase2026;

@@ -1,41 +1,41 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 
 export default function Page() {
-,;
+,
   {
     id: 5,
     title: "Intelligent Customer Management Platform",
     description: "AI - powered platform for customer relationship and experience management.",
     icon: Users,
-    features[;
+    features[,
       "Customer insights",
       "Personalization",
       "Predictive marketing",
       "Customer service"
-    ],;
+    ],
     price: "From $220,000",
     timeline: "26 - 38 weeks",
     category: "Customer Management",
-    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"];
-  },;
+    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"],
+  },
   {
     id: 6,
     title: "Autonomous Financial Management Platform",
     description: "AI - driven platform for financial planning, analysis, and decision making.",
     icon: TrendingUp,
-    features[;
+    features[,
       "Financial forecasting",
       "Risk management",
       "Investment analysis",
       "Budget optimization"
-    ],;
+    ],
     price: "From $300,000",
     timeline: "32 - 44 weeks",
     category: "Financial",
-    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"];
+    technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"],
   }
-];
+],
 
 const platformTechnologies = [{
     name: "AI & Machine Learning",
@@ -65,7 +65,7 @@ const platformTechnologies = [{
     useCase: "Strategic Planning",
     reliability: "High"
 
-];
+],
 
 const successStories = [{
     id: 1,
@@ -94,42 +94,42 @@ const successStories = [{
     results: "40% customer satisfaction increase, 50% marketing ROI improvement, better customer retention",
     logo: "RCN"
 
-];
+],
 
 const platformBenefits = [{
     title: "Intelligent Decision Making",
     description: "AI - powered platform insights enable better, data - driven business decisions",
     icon: Brain,
-    examples["Data - driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
-  },;
+    examples["Data - driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"],
+  },
   {
     title: "Process Automation",
     description: "Automated workflows reduce manual effort and improve efficiency",
     icon: Zap,
-    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"];
-  },;
+    examples["Workflow automation", "Process optimization", "Reduced errors", "Faster execution"],
+  },
   {
     title: "Cost Optimization",
     description: "AI platform identifies cost - saving opportunities and optimizes resource allocation",
     icon: TrendingUp,
-    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"];
-  },;
+    examples["Resource optimization", "Cost reduction", "Efficiency improvement", "Better ROI"],
+  },
   {
     title: "Competitive Advantage",
     description: "AI platform capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"];
+    examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"],
   }
-];
+],
 
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedSolution, setSelectedSolution] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [selectedSolution, setSelectedSolution] = useState(null),
 
-  const categories = ['All', 'Analytics', 'Automation', 'Resource Management', 'Planning', 'Customer Management', 'Financial'];
+  const categories = ['AllAnalytics', 'AutomationResource Management', 'PlanningCustomer Management', 'Financial'],
 
   const filteredSolutions = selectedCategory === 'All'
     ? businessPlatformSolutions
-    : businessPlatformSolutions.filter(solution => solution.category === selectedCategory) ;
+    : businessPlatformSolutions.filter(solution => solution.category === selectedCategory) ,
 
   return (<div className="min - h-screen bg-futuristic">
       {/* Hero Section */}
@@ -201,10 +201,10 @@ const platformBenefits = [{
             </div>
           </motion.div>
         </div>
-      </section>;
+      </section>,
 
       {/* Platform Benefits */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -260,13 +260,13 @@ const platformBenefits = [{
                       <span className="text-zion - slate - light text-sm">{example}</span>
                     </div>) ) }
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Platform Technologies */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -324,13 +324,13 @@ const platformBenefits = [{
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -386,13 +386,13 @@ const platformBenefits = [{
                 <span className="inline - block px-3 py-1 bg-zion - cyan / 20 text-zion - cyan text-sm rounded-full border border-zion -cyan / 30">
                   {step.duration}
                 </span>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">;
+      <section className="py-20">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -492,7 +492,7 @@ const platformBenefits = [{
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion - blue -dark / 50">;
+      <section className="py-20 bg-zion - blue -dark / 50">,
         <div className="container -responsive">
           <motion.div
             initial = {
@@ -563,13 +563,13 @@ const platformBenefits = [{
                   {[...Array(5) ].map((_, i) => (<Star key={i} className="w-4 h-4 text-yellow-400 fill -current" />) ) }
                   <span className="text-zion - slate - light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">;
+      <section className="py-20 bg-gradient - to - r from - zion - cyan / 10 via - zion - purple / 10 to - zion -blue / 10">,
         <div className="container -responsive">
           <motion.div
             initial = {

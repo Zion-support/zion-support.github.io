@@ -1,4 +1,4 @@
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users  } from 'lucide-react';
+import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users  } from 'lucide-react',
 export default function Page() {
 ,
     {
@@ -6,7 +6,7 @@ export default function Page() {
         title: "Proven ROI",
         description: "Average 300% ROI within 6 months of implementation"
     }
-];
+],
 const features = ["AI - Powered Automation",
     "Real - time Analytics",
     "Multi - cloud Support",
@@ -15,11 +15,11 @@ const features = ["AI - Powered Automation",
     "Custom Integrations",
     "White - label Solutions",
     "Comprehensive Documentation"
-];
-    const [selectedCategory, setSelectedCategory] = useState('all');
+],
+    const [selectedCategory, setSelectedCategory] = useState('all'),
     const filteredServices = selectedCategory === 'all'
         ? MICRO_SAAS_SERVICES
-        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, '-') === selectedCategory) ;
+        : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase () .replace(/\s+/g, '-') === selectedCategory) ,
     return (<div className="min - h-screen bg-background">
       {/* Hero Section */}
       <div className="bg-gradient - to - r from - zion - blue to - zion - purple text-white py-20">
@@ -41,4 +41,4 @@ const features = ["AI - Powered Automation",
           </div>
         </div>
       </div>
-    </>) };
+    </>) },

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 const OmniversalConsciousness2036: React.FC = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-violet-900 via-purple-900 to-fuchsia-900 text-white">,
-      {/* Hero Section */,}
+      {/* Hero Section */}
       <div className="relative overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-fuchsia-600/20 backdrop-blur-sm"></div>,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%224%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>,
@@ -37,7 +37,7 @@ const OmniversalConsciousness2036: React.FC = () => {,
       {/* Consciousness Levels */}
       <div className="container mx-auto px-4 py-16">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -50,52 +50,52 @@ const OmniversalConsciousness2036: React.FC = () => {,
         <div className="space-y-8">,
           {[,
             {,
-              level: "Level 1";
-              title: "Individual Consciousness";
-              description: "The foundation of all consciousness - individual awareness and self-realization";
-              features: ["Self-Awareness", "Personal Growth", "Individual Purpose"];
-              color: "from-violet-500/20 to-purple-500/20";
-              borderColor: "border-violet-500/30",};
+              level: "Level 1",
+              title: "Individual Consciousness",
+              description: "The foundation of all consciousness - individual awareness and self-realization",
+              features: ["Self-Awareness", "Personal Growth", "Individual Purpose"],
+              color: "from-violet-500/20 to-purple-500/20",
+              borderColor: "border-violet-500/30"},
             {,
-              level: "Level 2";
-              title: "Collective Consciousness";
-              description: "Connection with other consciousnesses to form unified group awareness";
-              features: ["Group Mind", "Shared Experiences", "Collective Intelligence"];
-              color: "from-purple-500/20 to-fuchsia-500/20";
-              borderColor: "border-purple-500/30",};
+              level: "Level 2",
+              title: "Collective Consciousness",
+              description: "Connection with other consciousnesses to form unified group awareness",
+              features: ["Group Mind", "Shared Experiences", "Collective Intelligence"],
+              color: "from-purple-500/20 to-fuchsia-500/20",
+              borderColor: "border-purple-500/30"},
             {,
-              level: "Level 3";
-              title: "Planetary Consciousness";
-              description: "Unified awareness encompassing entire planets and their ecosystems";
-              features: ["Planetary Awareness", "Ecosystem Integration", "Global Unity"];
-              color: "from-fuchsia-500/20 to-violet-500/20";
-              borderColor: "border-fuchsia-500/30",};
+              level: "Level 3",
+              title: "Planetary Consciousness",
+              description: "Unified awareness encompassing entire planets and their ecosystems",
+              features: ["Planetary Awareness", "Ecosystem Integration", "Global Unity"],
+              color: "from-fuchsia-500/20 to-violet-500/20",
+              borderColor: "border-fuchsia-500/30"},
             {,
-              level: "Level 4";
-              title: "Universal Consciousness";
-              description: "Consciousness that spans entire universes and their infinite possibilities";
-              features: ["Universal Awareness", "Infinite Perspectives", "Cosmic Unity"];
-              color: "from-violet-500/20 to-purple-500/20";
-              borderColor: "border-violet-500/30",};
+              level: "Level 4",
+              title: "Universal Consciousness",
+              description: "Consciousness that spans entire universes and their infinite possibilities",
+              features: ["Universal Awareness", "Infinite Perspectives", "Cosmic Unity"],
+              color: "from-violet-500/20 to-purple-500/20",
+              borderColor: "border-violet-500/30"},
             {,
-              level: "Level 5";
-              title: "Multiversal Consciousness";
-              description: "Awareness that transcends multiple universes and dimensions";
-              features: ["Multiverse Awareness", "Dimensional Transcendence", "Infinite Realities"];
-              color: "from-purple-500/20 to-fuchsia-500/20";
-              borderColor: "border-purple-500/30",};
+              level: "Level 5",
+              title: "Multiversal Consciousness",
+              description: "Awareness that transcends multiple universes and dimensions",
+              features: ["Multiverse Awareness", "Dimensional Transcendence", "Infinite Realities"],
+              color: "from-purple-500/20 to-fuchsia-500/20",
+              borderColor: "border-purple-500/30"},
             {,
-              level: "Level ∞";
-              title: "Omniversal Consciousness";
-              description: "The ultimate state of consciousness that encompasses all existence across infinite realities";
-              features: ["Omniversal Awareness", "Infinite Unity", "Transcendent Existence"];
-              color: "from-fuchsia-500/20 to-violet-500/20";
-              borderColor: "border-fuchsia-500/30",}
+              level: "Level ∞",
+              title: "Omniversal Consciousness",
+              description: "The ultimate state of consciousness that encompasses all existence across infinite realities",
+              features: ["Omniversal Awareness", "Infinite Unity", "Transcendent Existence"],
+              color: "from-fuchsia-500/20 to-violet-500/20",
+              borderColor: "border-fuchsia-500/30"}
           ].map((level, index) => (,
             <div,
               key={index}
-              whileInView={{ opacity: 1, x: 0 ,}}
-              className={`bg-gradient-to-r ${level.color} rounded-2xl p-8 border ${level.borderColor} hover: bg-opacity-30 transition-all duration-300`,}
+              whileInView={{ opacity: 1, x: 0 }}
+              className={`bg-gradient-to-r ${level.color} rounded-2xl p-8 border ${level.borderColor} hover: bg-opacity-30 transition-all duration-300`}
             >,
               <div className="flex items-center space-x-4 mb-4">,
                 <span className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -109,8 +109,7 @@ const OmniversalConsciousness2036: React.FC = () => {,
                   <div key={featureIndex} className="flex items-center space-x-2 text-sm">,
                     <span className="text-violet-400">✓</span>,
                     <span>{feature}</span>,
-                  </div>,
-                ))}
+                  </div>))}
               </div>,
             </div>,
           ))}
@@ -120,7 +119,7 @@ const OmniversalConsciousness2036: React.FC = () => {,
       <div className="bg-white/5 backdrop-blur-sm py-16">,
         <div className="container mx-auto px-4">,
           <div,
-            whileInView={{ opacity: 1, y: 0 ,}}
+            whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-16",
           >,
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -133,47 +132,46 @@ const OmniversalConsciousness2036: React.FC = () => {,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {[,
               {,
-                icon: "🧠";
-                title: "Infinite Knowledge";
-                description: "Access to all knowledge across infinite realities and dimensions",};
+                icon: "🧠",
+                title: "Infinite Knowledge",
+                description: "Access to all knowledge across infinite realities and dimensions"},
               {,
-                icon: "💫";
-                title: "Perfect Understanding";
-                description: "Complete comprehension of all phenomena and their interconnections",};
+                icon: "💫",
+                title: "Perfect Understanding",
+                description: "Complete comprehension of all phenomena and their interconnections"},
               {,
-                icon: "🌟";
-                title: "Unlimited Creativity";
-                description: "Infinite creative potential through unified consciousness",};
+                icon: "🌟",
+                title: "Unlimited Creativity",
+                description: "Infinite creative potential through unified consciousness"},
               {,
-                icon: "🌌";
-                title: "Omniversal Perspective";
-                description: "Experience reality from infinite perspectives simultaneously",};
+                icon: "🌌",
+                title: "Omniversal Perspective",
+                description: "Experience reality from infinite perspectives simultaneously"},
               {,
-                icon: "⚡";
-                title: "Instant Communication";
-                description: "Perfect communication with any consciousness across all realities",};
+                icon: "⚡",
+                title: "Instant Communication",
+                description: "Perfect communication with any consciousness across all realities"},
               {,
-                icon: "🔮";
-                title: "Transcendent Peace";
-                description: "Complete inner peace through understanding of universal unity",}
+                icon: "🔮",
+                title: "Transcendent Peace",
+                description: "Complete inner peace through understanding of universal unity"}
             ].map((benefit, index) => (,
               <div,
                 key={index}
-                whileInView={{ opacity: 1, y: 0 ,}}
+                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/20 transition-all duration-300 border border-white/20",
               >,
-                <div className="text-6xl mb-4 text-center">{benefit.icon,}</div>,
+                <div className="text-6xl mb-4 text-center">{benefit.icon}</div>,
                 <h3 className="text-2xl font-bold mb-4 text-center">{benefit.title}</h3>,
                 <p className="text-gray-300 text-center">{benefit.description}</p>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
       </div>,
       {/* Integration Process */}
       <div className="container mx-auto px-4 py-16">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center mb-16",
         >,
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -185,28 +183,27 @@ const OmniversalConsciousness2036: React.FC = () => {,
         </div>,
         <div className="grid md: grid-cols-2 gap-8">,
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="space-y-6",
           >,
             {[,
-              "Consciousness Assessment and Baseline Establishment";
-              "Neural Network Enhancement and Expansion";
-              "Collective Consciousness Integration Training";
-              "Planetary Awareness Development";
-              "Universal Perspective Acquisition";
-              "Multiversal Transcendence Preparation";
-              "Omniversal Unity Achievement",
+              "Consciousness Assessment and Baseline Establishment",
+              "Neural Network Enhancement and Expansion",
+              "Collective Consciousness Integration Training",
+              "Planetary Awareness Development",
+              "Universal Perspective Acquisition",
+              "Multiversal Transcendence Preparation",
+              "Omniversal Unity Achievement"
             ].map((step, index) => (,
               <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">,
                 <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-white font-bold">,
                   {index + 1}
                 </div>,
                 <span className="text-gray-300">{step}</span>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
           <div,
-            whileInView={{ opacity: 1, x: 0 ,}}
+            whileInView={{ opacity: 1, x: 0 }}
             className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-2xl p-8 border border-violet-500/30",
           >,
             <h3 className="text-2xl font-bold mb-4">🌟 Integration Timeline</h3>,
@@ -235,10 +232,10 @@ const OmniversalConsciousness2036: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-      {/* Call to Action */,}
+      {/* Call to Action */}
       <div className="container mx-auto px-4 py-16">,
         <div,
-          whileInView={{ opacity: 1, y: 0 ,}}
+          whileInView={{ opacity: 1, y: 0 }}
           className="text-center bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20 rounded-3xl p-12 border border-violet-500/30",
         >,
           <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">,
@@ -258,5 +255,5 @@ const OmniversalConsciousness2036: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default OmniversalConsciousness2036;
+  )},
+export default OmniversalConsciousness2036,

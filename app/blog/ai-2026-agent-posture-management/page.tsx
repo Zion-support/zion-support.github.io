@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Agent Posture Management';
+  title: 'AI 2026: Agent Posture Management',
   description:,
-    'Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.',
-};
+    'Continuously assess, harden, and govern autonomous agents across environments with posture baselines, controls, and evaluations.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -29,7 +29,6 @@ export default function Page() {,
           <li>Report posture over time to drive risk reduction.</li>,
         </ol>,
       </article>,
-    </main>,
-  );
+    </main>),
 }
 ,

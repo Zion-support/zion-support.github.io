@@ -1,53 +1,52 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/components/header/Logo';
-import { PointsBadge } from '@/components/loyalty/PointsBadge';
-import { UserMenu } from '@/components/header/UserMenu';
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { ModeToggle } from '@/components/ModeToggle';
-import { useAuth } from '@/hooks/useAuth';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { useMessaging } from '@/context/MessagingContext';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { slugify } from '@/lib/slugify';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import type { RootState } from '@/store';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Logo } from "@/components/header/Logo";
+import { PointsBadge } from "@/components/loyalty/PointsBadge";
+import { UserMenu } from "@/components/header/UserMenu";
+import { LanguageSelector } from "@/components/header/LanguageSelector";
+import { ModeToggle } from "@/components/ModeToggle";
+import { useAuth } from "@/hooks/useAuth";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useMessaging } from "@/context/MessagingContext";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { slugify } from "@/lib/slugify";
+import { ResponsiveNavigation } from "@/components/navigation/ResponsiveNavigation";
+import { MobileMenu } from "@/components/header/MobileMenu";
+import { MobileBottomNav } from "@/components/header/MobileBottomNav";
+import { Menu, X, ShoppingCart } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/store";
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useLocation();
-  const [query, setQuery] = React.useState('');
-  const suggestions = generateSearchSuggestions();
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false),
+  const { user } = useAuth(),
+  const isLoggedIn = !!user,
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const router = useLocation(),
+  const [query, setQuery] = React.useState(''),
+  const suggestions = generateSearchSuggestions(),
 
-  let unreadCount = 0;
+  let unreadCount = 0,
   try {
-    const messaging = useMessaging();
+    const messaging = useMessaging(),
     unreadCount = messaging.unreadCount;
   } catch {
     // context not available
   }
 
   const cartCount = useSelector((s: RootState) =>
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
+    s.cart.items.reduce((sum, i) => sum + i.quantity, 0);
   );
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      console.log('PrimaryNav search submit:', query);
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
+      console.log('PrimaryNav search submit:', query),
+      router.push(`/search/${slugify(query)}`),
+      setQuery(''),
     }
-  };
+  },
 
   return (
     <>
@@ -73,29 +72,27 @@ export function PrimaryNav() {
                 value={query}
                 onChange={setQuery}
                 onSelectSuggestion={(sugg) => {
-                  console.log('PrimaryNav search suggestion selected:', sugg);
+                  console.log('PrimaryNav search suggestion selected:', sugg),
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
-                    router.push(`/marketplace/listing/${sugg.id}`);
+                    router.push(`/marketplace/listing/${sugg.id}`),
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
-                    router.push(sugg.slug);
+                    router.push(sugg.slug),
                   } else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-                    router.push(`/blog/${sugg.slug}`);
+                    router.push(`/blog/${sugg.slug}`),
                   } else {
                     // Default: search results page with slug
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
                   }
-                  setQuery('');
+                  setQuery(''),
 
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
-                    window.gtag('event', 'search_suggestion_click', {
-                      search_term: sugg.text,
-                      suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
+                    window.gtag('eventsearch_suggestion_click', {
+                      search_term: sugg.text,suggestion_type: sugg.type,suggestion_id: sugg.id || sugg.slug
                     });
                   }
                 }}
@@ -111,7 +108,7 @@ export function PrimaryNav() {
                   <Link
                     href="/cart"
                     className="relative p-1"
-                    aria-label={t('nav.cart', 'Cart')}
+                    aria-label={t('nav.cartCart')}
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (

@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   Filter,
@@ -16,74 +16,62 @@ import {
   Cloud,
   Shield,
   Globe
-} from 'lucide-react';
-
+} from "lucide-react";
 interface SearchResult {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  tags: string[];
-  location?: string;
-  date?: string;
-  rating?: number;
-  type: 'service' | 'article' | 'team' | 'technology';
+  id: string,title: string,description: string,category: string,tags: string[];
+  location?: string,
+  date?: string,
+  rating?: number,
+  type: 'service' | 'article' | 'team' | 'technology'
 }
 
 interface FilterOption {
-  id: string;
-  label: string;
-  value: string;
-  count: number;
+  id: string,label: string,value: string,count: number
 }
 
 interface SearchAndFilterSystemProps {
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;
-  placeholder?: string;
-  showFilters?: boolean;
+  placeholder?: string,
+  showFilters?: boolean
 }
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-  data,
+  data;
   onResultsChange,
   placeholder = "Search services, articles, team members...",
   showFilters = true
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [isSearchFocused, setIsSearchFocused] = useState(false),
+  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set()),
+  const [showFilterPanel, setShowFilterPanel] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance'),
 
   // Filter options
   const filterOptions = useMemo(() => {
     const categories = data.reduce((acc, item) => {
-      acc[item.category] = (acc[item.category] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+      acc[item.category] = (acc[item.category] || 0) + 1,
+      return acc,
+    }, {} as Record<string, number>),
 
     const types = data.reduce((acc, item) => {
-      acc[item.type] = (acc[item.type] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+      acc[item.type] = (acc[item.type] || 0) + 1,
+      return acc,
+    }, {} as Record<string, number>),
 
     return {
       categories: Object.entries(categories).map(([key, count]) => ({
-        id: key,
-        label: key.charAt(0).toUpperCase() + key.slice(1),
-        value: key,
+        id: key,label: key.charAt(0).toUpperCase() + key.slice(1),value: key;
         count
       })),
       types: Object.entries(types).map(([key, count]) => ({
-        id: key,
-        label: key.charAt(0).toUpperCase() + key.slice(1),
-        value: key,
+        id: key,label: key.charAt(0).toUpperCase() + key.slice(1),value: key;
         count
       }))
-    };
-  }, [data]);
+    },
+  }, [data]),
 
   // Filtered and sorted results
   const filteredResults = useMemo(() => {
@@ -92,10 +80,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       const matchesSearch = searchQuery === '' ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
 
       // Category filter
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
 
       // Active filters
       const matchesFilters = activeFilters.size === 0 ||
@@ -103,82 +91,76 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           item.tags.includes(filter) ||
           item.type === filter ||
           item.category === filter
-        );
+        ),
 
-      return matchesSearch && matchesCategory && matchesFilters;
-    });
+      return matchesSearch && matchesCategory && matchesFilters,
+    }),
 
     // Sort results
     switch (sortBy) {
       case 'date':
         results = results.sort((a, b) => {
-          if (!a.date || !b.date) return 0;
-          return new Date(b.date).getTime() - new Date(a.date).getTime();
-        });
-        break;
+          if (!a.date || !b.date) return 0,
+          return new Date(b.date).getTime() - new Date(a.date).getTime(),
+        }),
+        break,
       case 'rating':
         results = results.sort((a, b) => {
-          if (!a.rating || !b.rating) return 0;
-          return b.rating - a.rating;
-        });
-        break;
+          if (!a.rating || !b.rating) return 0,
+          return b.rating - a.rating,
+        }),
+        break,
       case 'name':
-        results = results.sort((a, b) => a.title.localeCompare(b.title));
-        break;
+        results = results.sort((a, b) => a.title.localeCompare(b.title)),
+        break,
       default: // relevance
         // Keep original order for relevance
-        break;
+        break
     }
 
     return results;
-  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]);
+  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
 
   // Update parent component with results
   useEffect(() => {
-    onResultsChange?.(filteredResults);
-  }, [filteredResults, onResultsChange]);
+    onResultsChange?.(filteredResults),
+  }, [filteredResults, onResultsChange]),
 
   // Toggle filter
   const toggleFilter = (filterId: string) => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
-      newFilters.delete(filterId);
+      newFilters.delete(filterId)
     } else {
-      newFilters.add(filterId);
+      newFilters.add(filterId),
     }
-    setActiveFilters(newFilters);
-  };
+    setActiveFilters(newFilters),
+  },
 
   // Clear all filters
   const clearAllFilters = () => {
-    setActiveFilters(new Set());
-    setSelectedCategory('all');
-    setSortBy('relevance');
-  };
+    setActiveFilters(new Set()),
+    setSelectedCategory('all'),
+    setSortBy('relevance'),
+  },
 
   // Get icon for type
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
-      case 'article': return <Tag className="w-4 h-4" />;
-      case 'team': return <Users className="w-4 h-4" />;
-      case 'technology': return <Brain className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />;
+      case 'article': return <Tag className="w-4 h-4" />,
+      case 'team': return <Users className="w-4 h-4" />,
+      case 'technology': return <Brain className="w-4 h-4" />,
+      default: return <Globe className="w-4 h-4" />
     }
   };
-
   // Get category color
   const getCategoryColor = (category: string) => {
     const colors = {
-      'ai': 'text-purple-400',
-      'cloud': 'text-blue-400',
-      'security': 'text-red-400',
-      'development': 'text-green-400',
-      'consulting': 'text-yellow-400',
-      'digital-transformation': 'text-cyan-400'
+      'ai': 'text-purple-400cloud': 'text-blue-400security': 'text-red-400development': 'text-green-400consulting': 'text-yellow-400digital-transformation': 'text-cyan-400'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400';
-  };
+    return colors[category as keyof typeof colors] || 'text-zinc-400',
+  },
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -340,7 +322,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['AI', 'Cloud', 'Security', 'DevOps', 'Digital Transformation', 'Machine Learning'].map((tag) => (
+                    {['AICloud', 'SecurityDevOps', 'Digital TransformationMachine Learning'].map((tag) => (
                       <button
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}
@@ -360,7 +342,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>
                   <div className="space-y-2">
-                    {['Global', 'North America', 'Europe', 'Asia Pacific'].map((location) => (
+                    {['GlobalNorth America', 'EuropeAsia Pacific'].map((location) => (
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"

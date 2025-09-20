@@ -1,2 +1,2 @@
 
-export default TestimonialCarousel.js;
+export default TestimonialCarousel.js,

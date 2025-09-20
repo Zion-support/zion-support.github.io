@@ -1,44 +1,43 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import { 
   Check, Star, TrendingUp, DollarSign,
   Crown, Award, Zap
-} from 'lucide-react';
-import Link from 'next/link';
+} from 'lucide-react',
+import Link from 'next/link',
 
 // Import our new service data
-import { innovative2025Q4Services } from '../data/innovative-2025-q4-new-services';
-import { emergingTech2025Q4Services } from '../data/emerging-tech-2025-q4-services';
+import { innovative2025Q4Services } from '../data/innovative-2025-q4-new-services',
+import { emergingTech2025Q4Services } from '../data/emerging-tech-2025-q4-services',
 
 // Combine all services
-const allServices = [...innovative2025Q4Services, ...emergingTech2025Q4Services];
+const allServices = [...innovative2025Q4Services, ...emergingTech2025Q4Services],
 
 const ComprehensivePricing2025Q4: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState<'price' | 'popularity' | 'rating' | 'newest'>('price');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState<'price' | 'popularity' | 'rating' | 'newest'>('price'),
 
   // Filter services by category
   const filteredServices = allServices.filter(service => {
-    if (selectedCategory === 'all') return true;
-    return service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-  });
+    if (selectedCategory === 'all') return true,
+    return service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
+  }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':
-        return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', ''));
+        return parseInt(a.price.replace('$', '').replace(, '')) - parseInt(b.price.replace('$', '').replace(, '')),
       case 'popularity':
-        return b.customers - a.customers;
+        return b.customers - a.customers,
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-      default:
-        return 0;
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+      default: return 0
     }
-  });
+  }),
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
@@ -47,13 +46,13 @@ const ComprehensivePricing2025Q4: React.FC = () => {
     { id: 'emerging', name: 'Emerging Technology', count: allServices.filter(s => s.category.toLowerCase().includes('emerging')).length },
     { id: 'space', name: 'Space Technology', count: allServices.filter(s => s.category.toLowerCase().includes('space')).length },
     { id: 'security', name: 'Security & Privacy', count: allServices.filter(s => s.category.toLowerCase().includes('security')).length }
-  ];
+  ],
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
 
 
 
@@ -72,8 +71,8 @@ const comprehensive-pricing-2025-q4: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
 
-export default QuantumRealityEngineering2025;
+export default QuantumRealityEngineering2025,

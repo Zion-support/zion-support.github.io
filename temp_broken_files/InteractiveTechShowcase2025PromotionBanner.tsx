@@ -1,49 +1,48 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   ArrowRight,
   Star,
   Zap,
-  TrendingUp;
-  Users;
-  Award;
-  Rocket;
-  Brain;
-  Shield;
-  Cloud;
-  BarChart3;
-  Eye;
-  MousePointer;
-  Settings;
-  Code;
-  Database;
-  Cpu;
-  Network,
-} from 'lucide-react';
+  TrendingUp,
+  Users,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Eye,
+  MousePointer,
+  Settings,
+  Code,
+  Database,
+  Cpu,
+  Network
+} from 'lucide-react',
 const InteractiveTechShowcase2025PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
   const features = [,
-    { icon: Braintext: 'AI 'Automationcolor: 'from-blue-500 to-purple-500' ,};
-    { icon: Shieldtext: ''Cybersecuritycolor: 'from-red-500 to-orange-500' ,};
-    { icon: Cloudtext: 'Cloud 'Solutionscolor: 'from-green-500 to-teal-500' ,};
-    { icon: BarChart3text: 'Data 'Analyticscolor: 'from-purple-500 to-pink-500' ,}
-  ];
+    { icon: Braintext: 'AI 'Automationcolor: 'from-blue-500 to-purple-500' },
+    { icon: Shieldtext: ''Cybersecuritycolor: 'from-red-500 to-orange-500' },
+    { icon: Cloudtext: 'Cloud 'Solutionscolor: 'from-green-500 to-teal-500' },
+    { icon: BarChart3text: 'Data 'Analyticscolor: 'from-purple-500 to-pink-500' }
+  ],
   const stats = [,
-    { value: '10'xlabel: 'Performance Gain' ,};
-    { value: '99.7%'label: 'Accuracy Rate' ,};
-    { value: '<2'slabel: 'Response Time' ,};
-    { value: '500+'label: 'Live Demos' ,}
-  ];
+    { value: '10'xlabel: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2'slabel: 'Response Time' },
+    { value: '500+'label: 'Live Demos' }
+  ],
   const demoSteps = [,
-    'Real-time Process AnalysisAI-Powered Optimization';
-    'Live Performance MetricsInstant Results Display',
-  ];
-  if (!isVisible) return null;
+    'Real-time Process AnalysisAI-Powered OptimizationLive Performance MetricsInstant Results Display'
+  ],
+  if (!isVisible) return null,
   return (,
     <div className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900 py-16 overflow-hidden">,
       {/* Animated Background */}
@@ -73,7 +72,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
             Experience our revolutionary AI systems live in action. See how our technology,
             processes dataoptimizes processesand delivers results in real-time.,
           </divp>,
-          {/* Interactive Demo Preview */,}
+          {/* Interactive Demo Preview */}
           <div,
             className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-white/10 max-w-4xl mx-auto mb-8",
           >,
@@ -111,8 +110,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
                     <div key={index} className="bg-white/5 rounded-lg p-3 text-center">,
                       <div className="text-2xl font-bold text-white">{stat.value}</div>,
                       <div className="text-sm text-gray-400">{stat.label}</div>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
               <div className="space-y-4">,
@@ -127,8 +125,7 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
                         <span className="text-white text-xs font-bold">{index + 1}</span>,
                       </div>,
                       <span className="text-gray-300">{step}</span>,
-                    </div>,
-                  ))}
+                    </div>))}
                 </div>,
               </div>,
             </div>,
@@ -138,18 +135,17 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
             className="flex flex-wrap justify-center gap-8 mb-12",
           >,
             {features.map((feature, index) => {,
-              const Icon = feature.icon;
+              const Icon = feature.icon,
               return (,
                 <div,
                   key={index}
                   className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20 hover: bg-white/20 transition-all duration-300",
                 >,
-                  <div className={`p-2 rounded-lg bg-gradient-to-r ${feature.color,}`}>,
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${feature.color}`}>,
                     <Icon className="w-5 h-5 text-white" />,
                   </div>,
                   <span className="text-white font-medium">{feature.text}</span>,
-                </div>,
-              );
+                </div>),
             })}
           </div>,
           {/* CTA Buttons */}
@@ -168,13 +164,13 @@ const InteractiveTechShowcase2025PromotionBanner = () => {,
             </button>,
           </div>,
         </div>,
-        {/* Floating Elements */,}
+        {/* Floating Elements */}
         <div className="absolute top-10 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>,
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>,
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>,
       </div>,
     </div>,
-  );
-export default InteractiveTechShowcase2025PromotionBanner;
-</div></div>,
+  ),
+export default InteractiveTechShowcase2025PromotionBanner,
+</div></div>
 }

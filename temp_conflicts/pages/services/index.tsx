@@ -211,7 +211,7 @@ const ServicesPage: NextPage = () => {
         }
       ]
     }
-  ];
+  ],
 
 const Services: NextPage = () => {
   const services = [
@@ -263,7 +263,7 @@ const Services: NextPage = () => {
       link: "/services/mobile-development",
       features: ["iOS Development", "Android Development", "Cross-Platform Apps", "App Maintenance"]
     }
-  ];
+  ],
 
   return (
     <>
@@ -371,7 +371,7 @@ const Services: NextPage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Let's discuss your project requirements and how we can help you achieve your technology goals.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Start Your Project
             </Link>
@@ -382,97 +382,86 @@ const Services: NextPage = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+},
 
-export default Services;
+export default Services,
 =======
-import React from 'react';
-import SEO from '../../components/SEO';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import UltraFuturisticServiceCard2026 from '../../components/ui/UltraFuturisticServiceCard2026';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
+import React from 'react',
+import SEO from '../../components/SEO',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import UltraFuturisticServiceCard2026 from '../../components/ui/UltraFuturisticServiceCard2026',
+import Link from 'next/link',
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
+import { additionalEnhancedServices } from '../../data/additional-real-services',
+import { extraServices } from '../../data/extra-services',
+import { newlyAddedServices } from '../../data/newly-added-services',
+import { curatedMarketServices } from '../../data/curated-market-services',
+import { realMarketServices } from '../../data/real-market-services',
+import { new2025Services } from '../../data/new-2025-services',
+import { marketValidatedServices } from '../../data/market-validated-services',
+import { moreRealServices2025 } from '../../data/more-real-services-2025',
+import { realOperationalServices } from '../../data/real-operational-services',
+import { verified2025Additions } from '../../data/verified-2025-additions',
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
-import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-import { added2026Q2Services } from '../../data/added-2026-q2-services';
-import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
-import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
-import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
-import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
-import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
-import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions';
-import { real2029Q1Additions } from '../../data/real-2029-q1-additions';
-import { real2029Q2Additions } from '../../data/real-2029-q2-additions';
-import { real2029Q3Additions } from '../../data/real-2029-q3-additions';
-import { real2029Q4Additions } from '../../data/real-2029-q4-additions';
-import { real2030Q1Additions } from '../../data/real-2030-q1-additions';
-import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions';
-import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions';
-import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
-import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
-import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-import { professionalServices } from '../../data/professional-services';
-import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions';
-import { real2035Q1Additions } from '../../data/real-2035-q1-additions';
-import { real2035Q2AdditionsExtra } from '../../data/real-2035-q2-additions-extra';
-import { real2025ExtraServices } from '../../data/real-2025-extra-services';
-import { real2026Q4ExpansionsV2 } from '../../data/real-2026-q4-expansions-v2';
-import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions';
-import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
-import { real2036InnovativeServices } from '../../data/real-2036-innovative-services';
-import { real2036ITServices } from '../../data/real-2036-it-services';
-import { real2036AIServices } from '../../data/real-2036-ai-services';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025',
+import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025',
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2',
+import { additionalLiveServices2025 } from '../../data/additional-live-services-2025',
+import { real2025Q2Additions } from '../../data/real-2025-q2-additions',
+import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3',
+import { realServicesQ22025 } from '../../data/real-services-q2-2025',
+import { realServicesQ32025 } from '../../data/real-services-q3-2025',
+import { realQ4Services2025 } from '../../data/real-2025-q4-additions',
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions',
+import { realMarketServicesExtended } from '../../data/real-market-services-extended',
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions',
+import { added2026Q2Services } from '../../data/added-2026-q2-services',
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions',
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions',
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services',
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions',
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions',
+import { real2028ServiceExpansions } from '../../data/real-2028-service-expansions',
+import { real2029Q1Additions } from '../../data/real-2029-q1-additions',
+import { real2029Q2Additions } from '../../data/real-2029-q2-additions',
+import { real2029Q3Additions } from '../../data/real-2029-q3-additions',
+import { real2029Q4Additions } from '../../data/real-2029-q4-additions',
+import { real2030Q1Additions } from '../../data/real-2030-q1-additions',
+import { real2031MicroSaasAdditions } from '../../data/real-2031-micro-saas-additions',
+import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-additions',
+import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions',
+import { real2030Q2Additions } from '../../data/real-2030-q2-additions',
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions',
+import { professionalServices } from '../../data/professional-services',
+import { real2032ServiceExpansions } from '../../data/real-2032-service-expansions',
+import { real2035Q1Additions } from '../../data/real-2035-q1-additions',
+import { real2035Q2AdditionsExtra } from '../../data/real-2035-q2-additions-extra',
+import { real2025ExtraServices } from '../../data/real-2025-extra-services',
+import { real2026Q4ExpansionsV2 } from '../../data/real-2026-q4-expansions-v2',
+import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions',
+import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3',
+import { real2036InnovativeServices } from '../../data/real-2036-innovative-services',
+import { real2036ITServices } from '../../data/real-2036-it-services',
+import { real2036AIServices } from '../../data/real-2036-ai-services',
 
 function toSlug(value: string) {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
 }
 
 const categories = [
-  'AI & Data',
-  'Developer Tools',
-  'Cloud & FinOps',
-  'Observability',
-  'Quality & Monitoring',
-  'Quantum Computing',
-  'Neuromorphic AI',
-  'Edge Computing',
-  'Cybersecurity',
-  'Supply Chain',
-  'Financial Services',
-  'Healthcare',
-  'Manufacturing',
-  'Retail',
-  'Education',
-  'Government',
-  'Energy',
-  'Transportation',
-  'Blockchain & Web3',
-  'IoT & Edge Computing',
-  'Enterprise Solutions',
-  'Innovation & Research'
-];
+  'AI & DataDeveloper Tools',
+  'Cloud & FinOpsObservability',
+  'Quality & MonitoringQuantum Computing',
+  'Neuromorphic AIEdge Computing',
+  'CybersecuritySupply Chain',
+  'Financial ServicesHealthcare',
+  'ManufacturingRetail',
+  'EducationGovernment',
+  'EnergyTransportation',
+  'Blockchain & Web3IoT & Edge Computing',
+  'Enterprise SolutionsInnovation & Research'
+],
 
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
@@ -533,48 +522,32 @@ export default function ServicesIndexPage() {
       real2036ITServices as unknown[],
       real2036AIServices as unknown[]
     )
-    .concat(real2036ServiceExpansions as unknown[]);
-  const byCategory: Record<string, unknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
+    .concat(real2036ServiceExpansions as unknown[]),
+  const byCategory: Record<string, unknown[]> = {},
+  for (const c of categories) byCategory[c] = [],
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string, string> = {
-    'AI & Data': 'AI & Data',
-    'AI & Machine Learning': 'AI & Data',
-    'GenAI': 'AI & Data',
-    'Cloud & FinOps': 'Cloud & FinOps',
-    'Cloud & Data': 'Cloud & FinOps',
-    'Platform Engineering': 'Cloud & FinOps',
-    'Observability': 'Observability',
-    'Observability & Telemetry': 'Observability',
-    'Quality & Monitoring': 'Quality & Monitoring',
-    'Security & Reliability': 'Quality & Monitoring',
-    'Security & Compliance': 'Quality & Monitoring',
-    'Developer Tools': 'Developer Tools',
-    'Growth & Marketing': 'Developer Tools'
-  };
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'
+  },
 
   // Create byCategory mapping
-  const byCategory: Record<string, unknown[]> = {};
-  for (const c of categories) byCategory[c] = [];
+  const byCategory: Record<string, unknown[]> = {},
+  for (const c of categories) byCategory[c] = [],
   
   for (const s of all) {
-    const service = s as { category?: string | string[] };
-    const rawCatValue = service.category;
-    const rawCat = Array.isArray(rawCatValue) ? (rawCatValue[0] || '') : (rawCatValue || '');
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
-    byCategory[mapped].push(s);
+    const service = s as { category?: string | string[] },
+    const rawCatValue = service.category,
+    const rawCat = Array.isArray(rawCatValue) ? (rawCatValue[0] || '') : (rawCatValue || ''),
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
+    byCategory[mapped].push(s),
   }
 
   const anchorMap: Record<string, string> = {
-    'AI & Data': 'ai',
-    'Developer Tools': 'developer-tools',
-    'Cloud & FinOps': 'cloud',
-    'Observability': 'observability',
-    'Quality & Monitoring': 'quality',
-  };
+    'AI & Data': 'aiDeveloper Tools': 'developer-toolsCloud & FinOps': 'cloudObservability': 'observabilityQuality & Monitoring': 'quality'
+  },
 
-  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12])));
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [shownCounts, setShownCounts] = React.useState<Record<string, number>>(() => Object.fromEntries(categories.map(c => [c, 12]))),
+  const [searchQuery, setSearchQuery] = React.useState(''),
 
 
 

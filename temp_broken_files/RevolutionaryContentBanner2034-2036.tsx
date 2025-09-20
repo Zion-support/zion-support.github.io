@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const RevolutionaryContentBanner2034_2036: React.FC = () => {,
   return (,
     <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-12 mb-12 text-white text-center relative overflow-hidden">,
@@ -15,7 +15,7 @@ const RevolutionaryContentBanner2034_2036: React.FC = () => {,
         <divp,
           className="text-2xl opacity-95 mb-8 max-w-6xl mx-auto",
         >,
-          Experience the most advanced technology content featuring Next-Gen AI Revolution 2034;
+          Experience the most advanced technology content featuring Next-Gen AI Revolution 2034,
           Quantum Reality Manipulation 2035, Transcendent Consciousness 2036, and revolutionary,
           breakthroughs in consciousness evolution, reality manipulation, and universal awareness,
         </divp>,
@@ -56,5 +56,5 @@ const RevolutionaryContentBanner2034_2036: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),};
-export default RevolutionaryContentBanner2034-2036;
+  )},
+export default RevolutionaryContentBanner2034-2036,

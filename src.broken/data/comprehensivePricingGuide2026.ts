@@ -1,48 +1,48 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-;
+,
 export interface PricingTier {
-  name: string;
-  price: number;
-  currency: string;
-  billing: string;
-  features: string[];
-  bestFor: string;
-  popular?: boolean};
+  name: string,
+  price: number,
+  currency: string,
+  billing: string,
+  features: string[],
+  bestFor: string,
+  popular?: boolean},
 export type PricingCategory = {
-  name: string;
-  description: string;
-  tiers: PricingTier[];
-  marketSize: string;
-  averageROI: string;
-  implementationTime: string};
+  name: string,
+  description: string,
+  tiers: PricingTier[],
+  marketSize: string,
+  averageROI: string,
+  implementationTime: string},
 
 export type PricingBenefit = {
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  pricingTiers: PricingTier[];
-  marketPrice: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  title: string,
+  description: string,
+  category: string,
+  subcategory: string,
+  pricingTiers: PricingTier[],
+  marketPrice: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
 
-    phone: string;
-    email: string;
-    website: string;
-    address: string};  technicalSpecs: {
+    phone: string,
+    email: string,
+    website: string,
+    address: string},  technicalSpecs: {
 
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[]};
-  aiCapabilities: string[];
-  complianceFeatures: string[];
+    technology: string[],
+    integrations: string[],
+    apiEndpoints: number,
+    uptime: string,
+    security: string[]},
+  aiCapabilities: string[],
+  complianceFeatures: string[],
   scalabilityFeatures: string[]}
-;export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [{
+,export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [{
 
     id: "ai-business-intelligence-platform-2026","
     title: "AI Business Intelligence Platform 2026","
@@ -318,9 +318,9 @@ export type PricingBenefit = {
       security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]
     }}
   }
-};
+},
 
-// BlockchainForge Pricing;
+// BlockchainForge Pricing,
 export const blockchainForgePricing: ServicePricing = {
 
   serviceId: 3,"
@@ -415,11 +415,11 @@ export const blockchainForgePricing: ServicePricing = {
     startupProgram: "70% off for qualified startups(first year)","
     referralProgram: "25% commission for successful referrals"
   }
-};
+},
 
-// Export all pricing guides;
+// Export all pricing guides,
 export 
-;export const PRICING_SUMMARY_2026 = {
+,export const PRICING_SUMMARY_2026 = {
 "
   overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
   keyBenefits: ["
@@ -445,15 +445,15 @@ export
 
 }}}}}}}}}}}}}}}"
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],"
-    complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],;"
+    complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],"
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]},  {
 "
     id: "autonomous-supply-chain-platform-2026","
-    title: "Autonomous Supply Chain Platform 2026",;"
-    description: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.",;"
-    category: "Supply Chain",;"
-    subcategory: "Autonomous Management",;
-    pricingTiers: [;
+    title: "Autonomous Supply Chain Platform 2026","
+    description: "AI-powered autonomous supply chain management platform that predicts disruptions, optimizes logistics, and automates decision-making for end-to-end supply chain visibility and efficiency.","
+    category: "Supply Chain","
+    subcategory: "Autonomous Management",
+    pricingTiers: [,
       {
 "
         name: "Business",
@@ -563,32 +563,32 @@ export
         innovationLevel: "Cutting-Edge"
       }
     ],"
-    marketPrice: "$5,999 - $18,000/month",;"
-    competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],;"
-    marketSize: "$67.2 billion by 2026",;"
-    growthRate: "30% annually",;
+    marketPrice: "$5,999 - $18,000/month","
+    competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"],"
+    marketSize: "$67.2 billion by 2026","
+    growthRate: "30% annually",
     contactInfo: {
 "
       phone: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com",;"
-      website: "https://ziontechgroup.com",;"
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com","
       address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"],"
-      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],;
-      apiEndpoints: 300,;"
-      uptime: "99.9%",;"
+      integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"],
+      apiEndpoints: 300,"
+      uptime: "99.9%","
       security: ["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"]},"
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"],"
-    complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],;"
+    complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"],"
     scalabilityFeatures: ["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"]},  {
 "
     id: "quantum-financial-trading-platform-2026","
-    title: "Quantum Financial Trading Platform 2026",;"
-    description: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.",;"
-    category: "FinTech",;"
-    subcategory: "Quantum Trading",;
-    pricingTiers: [;
+    title: "Quantum Financial Trading Platform 2026","
+    description: "Revolutionary quantum computing-powered financial trading platform that provides ultra-fast market analysis, risk assessment, and automated trading strategies with quantum advantage.","
+    category: "FinTech","
+    subcategory: "Quantum Trading",
+    pricingTiers: [,
       {
 "
         name: "Professional",
@@ -698,32 +698,32 @@ export
         innovationLevel: "Revolutionary"
       }
     ],"
-    marketPrice: "$15,999 - $50,000/month",;"
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"],;"
-    marketSize: "$12.3 billion by 2026",;"
-    growthRate: "50% annually",;
+    marketPrice: "$15,999 - $50,000/month","
+    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"],"
+    marketSize: "$12.3 billion by 2026","
+    growthRate: "50% annually",
     contactInfo: {
 "
       phone: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com",;"
-      website: "https://ziontechgroup.com",;"
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com","
       address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"],"
-      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],;
-      apiEndpoints: 500,;"
-      uptime: "99.99%",;"
+      integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
+      apiEndpoints: 500,"
+      uptime: "99.99%","
       security: ["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"]},"
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"],"
-    complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],;"
+    complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"],"
     scalabilityFeatures: ["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"]},  {
 "
     id: "autonomous-healthcare-diagnostics-2026","
-    title: "Autonomous Healthcare Diagnostics Platform 2026",;"
-    description: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.",;"
-    category: "Healthcare",;"
-    subcategory: "AI Diagnostics",;
-    pricingTiers: [;
+    title: "Autonomous Healthcare Diagnostics Platform 2026","
+    description: "AI-powered autonomous healthcare diagnostics platform that provides real-time medical imaging analysis, disease prediction, and treatment recommendations with FDA approval and HIPAA compliance.","
+    category: "Healthcare","
+    subcategory: "AI Diagnostics",
+    pricingTiers: [,
       {
 "
         name: "Clinical",
@@ -833,23 +833,23 @@ export
         innovationLevel: "Cutting-Edge"
       }
     ],"
-    marketPrice: "$7,999 - $22,000/month",;"
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"],;"
-    marketSize: "$45.2 billion by 2026",;"
-    growthRate: "35% annually",;
+    marketPrice: "$7,999 - $22,000/month","
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"],"
+    marketSize: "$45.2 billion by 2026","
+    growthRate: "35% annually",
     contactInfo: {
 "
       phone: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com",;"
-      website: "https://ziontechgroup.com",;"
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com","
       address: "364 E Main St STE 1008, Middletown DE 19709"},    technicalSpecs: {
 "
       technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"],"
-      integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],;
-      apiEndpoints: 400,;"
-      uptime: "99.9%",;"
+      integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"],
+      apiEndpoints: 400,"
+      uptime: "99.9%","
       security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"]},"
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"],"
-    complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],;"
-    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]}};
+    complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],"
+    scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]}},
 "

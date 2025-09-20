@@ -1,42 +1,42 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
       id: 'user - management',
       title: 'User Management',
-      description: 'Comprehensive user authentication and authorization systems',
-    };
-      icon: <Users className="w-8 h-8" />,;
-      features: ['Single Sign - On', 'Role - based Access', 'Multi - tenancy', 'User Analytics'],;
-      useCases: ['B2B Applications', 'Enterprise Software', 'Multi - user Platforms', 'SaaS Products'],;
-      pricing: 'Starting from $1,500 / month';
-    };
-  ];
-  const saasBenefits = [;
-    'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
-  ];
+      description: 'Comprehensive user authentication and authorization systems'
+    },
+      icon: <Users className="w-8 h-8" />,
+      features: ['Single Sign - OnRole - based Access', 'Multi - tenancyUser Analytics'],
+      useCases: ['B2B ApplicationsEnterprise Software', 'Multi - user PlatformsSaaS Products'],
+      pricing: 'Starting from $1,500 / month',
+    },
+  ],
+  const saasBenefits = [,
+    'ScalabilityCost Efficiency', 'Rapid DeploymentEasy Updates', 'AccessibilityIntegration',
+  ],
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,
+      transition: {,
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20
 
 },
-    visible: {;
-      opacity: 1,;
-      y: 0,;
-      transition: {;
-        duration: 0.5;
-      };
-    };
-  };
+    visible: {,
+      opacity: 1,
+      y: 0,
+      transition: {,
+        duration: 0.5
+      },
+    },
+  },
   return (<div className="min - h-screen bg-gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt -24">
       <div className="container mx - auto px-4 py-12">
         {/* Hero Section */}
@@ -108,7 +108,7 @@ export default function Page() {
                 {service.description}
               </p>
               {/* Features */}
-              <div className="mb-6">;
+              <div className="mb-6">,
                 <h4 className="text-white font - semibold mb-3">Key Features:</h4>
                 <ul className="space - y-2">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items - center text-sm text-zion - slate -light">
@@ -116,7 +116,7 @@ export default function Page() {
                       {feature}
                     </li>) ) }
                 </ul>
-              </div>;
+              </div>,
               {/* Use Cases */}
               <div className="mb-6">
                 <h4 className="text-white font - semibold mb-3">Use Cases:</h4>
@@ -132,9 +132,9 @@ export default function Page() {
               {/* CTA Button */}
               <Link
 to: {`/micro - saas/${service.id}`}
-                className="inline - flex items - center text-zion - cyan hover:text-zion - cyan - light transition - colors duration -300"
+                className="inline - flex items - center text-zion - cyan hover: text-zion - cyan - light transition - colors duration -300"
 
-                Learn More < ArrowRight className="w-4 h-4 ml-2 transition - transform duration - 300 group - hover:translate - x-1" />;
+                Learn More < ArrowRight className="w-4 h-4 ml-2 transition - transform duration - 300 group - hover:translate - x-1" />,
               </Link>
             </motion.div>) ) }
         </motion.div>
@@ -142,22 +142,22 @@ to: {`/micro - saas/${service.id}`}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
+  y: 30 
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.3 ;
+  delay: 0.3 
 
 }}
           className="mb-16"
 
-          <div className="text-center mb-8">;
+          <div className="text-center mb-8">,
             <h2 className="text-3xl font - bold text-white mb-4">
               Benefits of Micro SAAS
             </h2>
@@ -186,29 +186,29 @@ to: {`/micro - saas/${service.id}`}
                 className="bg-zion - blue - dark / 20 border border-zion - cyan / 20 rounded-lg p - 4 text-center hover:border-zion - cyan / 40 transition - all duration -300"
 
                 <div className="text-zion - cyan font -medium">{benefit}</div>
-              </motion.div>;) ) }
+              </motion.div>,) ) }
           </div>
         </motion.div>
         {/* Why Choose Our SAAS */}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
+  y: 30 
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.4 ;
+  delay: 0.4 
 
 }}
           className="mb-16"
 
-          <div className="text-center mb-8">;
+          <div className="text-center mb-8">,
             <h2 className="text-3xl font - bold text-white mb-4">
               Why Choose Our SAAS Solutions?
             </h2>
@@ -247,28 +247,28 @@ to: {`/micro - saas/${service.id}`}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 30 ;
+  y: 30 
 
 }}
           animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
           transition = {
   { duration: 0.8,
-  delay: 0.5 ;
+  delay: 0.5 
 
 }}
           className="text-center bg-zion - blue - dark / 30 backdrop - blur - sm border border-zion - cyan / 20 rounded-xl p -8"
 
-          <h2 className="text-3xl font - bold text-white mb-4">;
-            Ready to Build Your SAAS?;
+          <h2 className="text-3xl font - bold text-white mb-4">,
+            Ready to Build Your SAAS?,
           </h2>
           <p className="text-zion - slate - light mb-6 max - w-2xl mx -auto">
             Let our SAAS experts help you create a successful software product
             that scales with your business and delights your customers.</p>
-          <div className="flex flex - col sm:flex - row gap-4 justify -center">
+          <div className="flex flex - col sm: flex - row gap-4 justify -center">
             <Link
               to="/contact"
               className="px-8 py-3 bg-gradient - to - r from - zion - cyan to - zion - purple text-white rounded-lg font - medium hover:shadow-lg hover:shadow-zion - cyan / 25 transition - all duration - 300 hover:scale -105"
@@ -280,10 +280,10 @@ to: {`/micro - saas/${service.id}`}
               className="px-8 py-3 border border-zion - cyan text-zion - cyan rounded-lg font - medium hover:bg-zion - cyan hover:text-white transition - all duration -300"
 
               View SAAS Pricing
-            </Link>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
-};
+            </Link>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </div>,) 
+},
 }}}}}}

@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface Revolutionary2027AIInnovationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovationService[] = [
   // AI-Powered Drug Discovery Platform
@@ -49,16 +49,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     period: '/month',
     description: 'Revolutionary AI-powered drug discovery platform that accelerates pharmaceutical research through molecular analysis, target identification, and drug candidate prediction. Features advanced machine learning algorithms, molecular docking, and toxicity prediction.',
     features: [
-      'AI-powered molecular analysis',
-      'Target identification',
-      'Drug candidate prediction',
-      'Molecular docking simulation',
-      'Toxicity prediction',
-      'ADMET properties analysis',
-      'Virtual screening',
-      'Lead optimization',
-      'Clinical trial prediction',
-      'Regulatory compliance tools'
+      'AI-powered molecular analysisTarget identification',
+      'Drug candidate predictionMolecular docking simulation',
+      'Toxicity predictionADMET properties analysis',
+      'Virtual screeningLead optimization',
+      'Clinical trial predictionRegulatory compliance tools'
     ],
     popular: true,
     icon: '🧬',
@@ -71,11 +66,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     setupTime: '1 month',
     category: 'AI Healthcare & Biotech',
     realService: true,
-    technology: ['Deep Learning', 'Molecular Dynamics', 'Quantum Chemistry', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Lab management systems', 'Chemical databases', 'Clinical trial platforms', 'Regulatory databases', 'Research platforms'],
-    useCases: ['Drug discovery', 'Target identification', 'Lead optimization', 'Toxicity prediction', 'Clinical trial design', 'Regulatory compliance'],
+    technology: ['Deep LearningMolecular Dynamics', 'Quantum ChemistryReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Lab management systemsChemical databases', 'Clinical trial platformsRegulatory databases', 'Research platforms'],
+    useCases: ['Drug discoveryTarget identification', 'Lead optimizationToxicity prediction', 'Clinical trial designRegulatory compliance'],
     roi: 'Companies report 500% ROI through accelerated drug discovery and reduced research costs.',
-    competitors: ['Schrödinger', 'Atomwise', 'Insilico Medicine', 'BenevolentAI', 'Exscientia'],
+    competitors: ['SchrödingerAtomwise', 'Insilico MedicineBenevolentAI', 'Exscientia'],
     marketSize: '$35.8B market',
     growthRate: '285% annual growth',
     variant: 'ai-futuristic',
@@ -101,16 +96,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     period: '/month',
     description: 'Comprehensive climate intelligence platform that uses AI to monitor environmental changes, predict climate risks, and provide actionable insights for sustainability initiatives. Features satellite data analysis, climate modeling, and risk assessment tools.',
     features: [
-      'AI-powered climate monitoring',
-      'Satellite data analysis',
-      'Climate risk prediction',
-      'Environmental impact assessment',
-      'Sustainability reporting',
-      'Carbon footprint tracking',
-      'Climate modeling',
-      'Risk assessment tools',
-      'Compliance monitoring',
-      'Stakeholder reporting'
+      'AI-powered climate monitoringSatellite data analysis',
+      'Climate risk predictionEnvironmental impact assessment',
+      'Sustainability reportingCarbon footprint tracking',
+      'Climate modelingRisk assessment tools',
+      'Compliance monitoringStakeholder reporting'
     ],
     popular: false,
     icon: '🌍',
@@ -123,11 +113,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     setupTime: '2 weeks',
     category: 'AI Climate & Environment',
     realService: true,
-    technology: ['Machine Learning', 'Satellite Data Analysis', 'Climate Modeling', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Satellite data providers', 'Weather APIs', 'Environmental databases', 'Sustainability platforms', 'Reporting tools'],
-    useCases: ['Climate monitoring', 'Risk assessment', 'Sustainability reporting', 'Environmental compliance', 'Stakeholder communication', 'Policy development'],
+    technology: ['Machine LearningSatellite Data Analysis', 'Climate ModelingReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Satellite data providersWeather APIs', 'Environmental databasesSustainability platforms', 'Reporting tools'],
+    useCases: ['Climate monitoringRisk assessment', 'Sustainability reportingEnvironmental compliance', 'Stakeholder communicationPolicy development'],
     roi: 'Organizations report 320% ROI through improved sustainability practices and reduced environmental risks.',
-    competitors: ['Planet Labs', 'Descartes Labs', 'Climate Engine', 'Carbon Trust', 'CDP'],
+    competitors: ['Planet LabsDescartes Labs', 'Climate EngineCarbon Trust', 'CDP'],
     marketSize: '$12.3B market',
     growthRate: '195% annual growth',
     variant: 'ai-futuristic',
@@ -153,16 +143,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     period: '/month',
     description: 'Advanced autonomous vehicle platform that enables development and deployment of self-driving systems. Features computer vision, sensor fusion, path planning, and safety monitoring with AI-powered decision making.',
     features: [
-      'Computer vision systems',
-      'Sensor fusion algorithms',
-      'Path planning',
-      'Safety monitoring',
-      'AI decision making',
-      'Real-time processing',
-      'Simulation environment',
-      'Testing tools',
-      'Safety validation',
-      'Regulatory compliance'
+      'Computer vision systemsSensor fusion algorithms',
+      'Path planningSafety monitoring',
+      'AI decision makingReal-time processing',
+      'Simulation environmentTesting tools',
+      'Safety validationRegulatory compliance'
     ],
     popular: true,
     icon: '🚗',
@@ -175,11 +160,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     setupTime: '2 months',
     category: 'AI Autonomous Systems',
     realService: true,
-    technology: ['Computer Vision', 'Machine Learning', 'Sensor Fusion', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Vehicle systems', 'Sensor hardware', 'Simulation platforms', 'Testing environments', 'Safety systems'],
-    useCases: ['Autonomous driving', 'Fleet management', 'Logistics automation', 'Safety testing', 'Research and development', 'Regulatory compliance'],
+    technology: ['Computer VisionMachine Learning', 'Sensor FusionReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Vehicle systemsSensor hardware', 'Simulation platformsTesting environments', 'Safety systems'],
+    useCases: ['Autonomous drivingFleet management', 'Logistics automationSafety testing', 'Research and developmentRegulatory compliance'],
     roi: 'Companies report 450% ROI through accelerated autonomous vehicle development and improved safety.',
-    competitors: ['Waymo', 'Cruise', 'Tesla', 'Aurora', 'Argo AI'],
+    competitors: ['WaymoCruise', 'TeslaAurora', 'Argo AI'],
     marketSize: '$65.3B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
@@ -205,16 +190,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     period: '/month',
     description: 'Revolutionary quantum computing platform that combines quantum algorithms with AI optimization for solving complex computational problems. Features quantum algorithm development, AI optimization, and hybrid classical-quantum computing.',
     features: [
-      'Quantum algorithm development',
-      'AI optimization',
-      'Hybrid computing',
-      'Quantum error correction',
-      'Performance optimization',
-      'Application development',
-      'Simulation tools',
-      'Performance monitoring',
-      'API access',
-      'Developer tools'
+      'Quantum algorithm developmentAI optimization',
+      'Hybrid computingQuantum error correction',
+      'Performance optimizationApplication development',
+      'Simulation toolsPerformance monitoring',
+      'API accessDeveloper tools'
     ],
     popular: false,
     icon: '⚛️',
@@ -227,11 +207,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     setupTime: '3 months',
     category: 'AI Quantum Computing',
     realService: true,
-    technology: ['Quantum Computing', 'Machine Learning', 'Quantum Algorithms', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Quantum hardware', 'Classical computing', 'Research platforms', 'Development tools', 'Simulation environments'],
-    useCases: ['Scientific research', 'Financial modeling', 'Drug discovery', 'Optimization problems', 'Cryptography', 'Machine learning'],
+    technology: ['Quantum ComputingMachine Learning', 'Quantum AlgorithmsReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Quantum hardwareClassical computing', 'Research platformsDevelopment tools', 'Simulation environments'],
+    useCases: ['Scientific researchFinancial modeling', 'Drug discoveryOptimization problems', 'CryptographyMachine learning'],
     roi: 'Organizations report 600% ROI through quantum computing capabilities and AI optimization.',
-    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Rigetti', 'D-Wave'],
+    competitors: ['IBM QuantumGoogle Quantum', 'Microsoft Azure QuantumRigetti', 'D-Wave'],
     marketSize: '$18.7B market',
     growthRate: '350% annual growth',
     variant: 'quantum-futuristic',
@@ -257,16 +237,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     period: '/month',
     description: 'Comprehensive space technology platform that uses AI to optimize satellite operations, analyze space data, and advance space exploration missions. Features satellite optimization, space debris tracking, and mission planning.',
     features: [
-      'Satellite optimization',
-      'Space debris tracking',
-      'Mission planning',
-      'Space data analysis',
-      'Orbital mechanics',
-      'Communication optimization',
-      'Power management',
-      'Thermal control',
-      'Navigation systems',
-      'Mission analytics'
+      'Satellite optimizationSpace debris tracking',
+      'Mission planningSpace data analysis',
+      'Orbital mechanicsCommunication optimization',
+      'Power managementThermal control',
+      'Navigation systemsMission analytics'
     ],
     popular: false,
     icon: '🚀',
@@ -279,11 +254,11 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     setupTime: '2 months',
     category: 'AI Space Technology',
     realService: true,
-    technology: ['Machine Learning', 'Space Technology', 'Satellite Operations', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS', 'Docker'],
-    integrations: ['Satellite systems', 'Ground stations', 'Space databases', 'Mission control systems', 'Research platforms'],
-    useCases: ['Satellite operations', 'Mission planning', 'Space debris tracking', 'Communication optimization', 'Research missions', 'Commercial space'],
+    technology: ['Machine LearningSpace Technology', 'Satellite OperationsReact', 'Node.jsPostgreSQL', 'RedisAWS', 'Docker'],
+    integrations: ['Satellite systemsGround stations', 'Space databasesMission control systems', 'Research platforms'],
+    useCases: ['Satellite operationsMission planning', 'Space debris trackingCommunication optimization', 'Research missionsCommercial space'],
     roi: 'Organizations report 480% ROI through improved satellite operations and mission success.',
-    competitors: ['Maxar', 'Planet Labs', 'SpaceX', 'Blue Origin', 'Virgin Galactic'],
+    competitors: ['MaxarPlanet Labs', 'SpaceXBlue Origin', 'Virgin Galactic'],
     marketSize: '$28.9B market',
     growthRate: '265% annual growth',
     variant: 'space-futuristic',
@@ -300,4 +275,4 @@ export const revolutionary2027AIInnovationServices: Revolutionary2027AIInnovatio
     rating: 4.7,
     reviews: 85
   }
-];
+],

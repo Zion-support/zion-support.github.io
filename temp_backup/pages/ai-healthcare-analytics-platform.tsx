@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Heart, Activity, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Stethoscope
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [
@@ -39,25 +39,19 @@ export default function AIHealthcareAnalyticsPlatform() {
       title: 'Real-Time Health Monitoring',
       description: 'Continuous health monitoring with real-time alerts and automated intervention recommendations.'
     }
-  ];
+  ],
 
   const benefits = [
-    'Improve patient outcomes by 40%',
-    'Reduce diagnostic errors by 60%',
-    'Lower healthcare costs by 30%',
-    'Increase treatment efficiency by 50%',
-    'Improve patient satisfaction by 35%',
-    'Reduce readmission rates by 45%',
-    'Optimize resource allocation by 40%',
-    'Enhance clinical decision-making by 55%'
-  ];
+    'Improve patient outcomes by 40%Reduce diagnostic errors by 60%',
+    'Lower healthcare costs by 30%Increase treatment efficiency by 50%',
+    'Improve patient satisfaction by 35%Reduce readmission rates by 45%',
+    'Optimize resource allocation by 40%Enhance clinical decision-making by 55%'
+  ],
 
   const useCases = [
-    'Patient Monitoring', 'Disease Prediction', 'Treatment Optimization',
-    'Population Health', 'Clinical Research', 'Drug Discovery',
-    'Medical Imaging', 'Genomics Analysis', 'Epidemiology',
-    'Preventive Care', 'Chronic Disease Management', 'Emergency Response'
-  ];
+    'Patient MonitoringDisease Prediction', 'Treatment OptimizationPopulation Health', 'Clinical ResearchDrug Discovery',
+    'Medical ImagingGenomics Analysis', 'EpidemiologyPreventive Care', 'Chronic Disease ManagementEmergency Response'
+  ],
 
 const ai-healthcare-analytics-platform: React.FC = () => {
   return (
@@ -74,7 +68,7 @@ const ai-healthcare-analytics-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-healthcare-analytics-platform;
+export default ai-healthcare-analytics-platform,

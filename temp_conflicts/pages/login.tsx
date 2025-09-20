@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import Link from 'next/link'; // Import Link
+import { useEffect } from 'react',
+import { useRouter } from 'next/router',
+import Head from 'next/head',
+import Link from 'next/link', // Import Link
 
 export default function LoginRedirect() {
-  const router = useRouter();
+  const router = useRouter(),
 
   useEffect(() => {
     // Preserve any query parameters from the original URL
-    const { query } = router;
+    const { query } = router,
     const queryString = Object.keys(query).length > 0 
       ? '?' + new URLSearchParams(query as Record<string, string>).toString()
-      : '';
+      : '',
     
     // Redirect to Auth0-based login page
-    router.replace(`/auth/login${queryString}`);
-  }, [router]);
+    router.replace(`/auth/login${queryString}`),
+  }, [router]),
 
   return (
     <>
@@ -30,12 +30,12 @@ export default function LoginRedirect() {
           <p className="text-gray-600">Redirecting to login...</p>
           <p className="text-sm text-gray-500 mt-2">
             If you're not redirected automatically,{' '}
-            <Link href="/auth/login" className="text-blue-600 hover:underline">
+            <Link href="/auth/login" className="text-blue-600 hover: underline">
               click here
             </Link>
           </p>
         </div>
       </div>
     </>
-  );
+  )
 }

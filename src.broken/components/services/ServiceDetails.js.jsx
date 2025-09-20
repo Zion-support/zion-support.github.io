@@ -1,18 +1,18 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Server, Clock, MapPin  } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card',"
+import { Server, Clock, MapPin  } from 'lucide-react',
 export default function Page() {
-;"
-        return regions[country] || regions["default"]};
+,"
+        return regions[country] || regions["default"]},
     // Get region-specific instructions
     const getRegionalInstructions = (country) => {
 
         // In a real implementation, this would be much more detailed and specific"
-        const timezone = timeZones[country] || timeZones["default"];
+        const timezone = timeZones[country] || timeZones["default"],
         return `Our technicians in ${country} operate during business hours(8AM-6PM ${timezone}).` +`
             `Response times are typically within 4 hours for metropolitan areas.` +`
             `Please have site access permissions and contact details ready for our technicians.` +`
-            `For remote locations, additional travel fees may apply.`};
-    const datacenters = getDatacenters(country);"
+            `For remote locations, additional travel fees may apply.`},
+    const datacenters = getDatacenters(country),"
     return (<Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>"
         <CardTitle className="text-white flex items-center">"

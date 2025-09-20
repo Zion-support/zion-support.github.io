@@ -30,28 +30,28 @@ import {
   Twitter,
   Users,
   Zap
-} from 'lucide-react';
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+} from 'lucide-react',
+import React, { useState } from 'react',
+import { Link, useLocation } from 'react-router-dom',
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void
 }
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const location = useLocation(),
+  const [expandedSections, setExpandedSections] = useState<string[]>([]),
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
         : [...prev, section]
-    );
-  };
+    ),
+  },
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path,
 
   const navigation = {
     main: [
@@ -62,7 +62,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Partners', href: '/partners', icon: Users },
       { name: 'Careers', href: '/careers', icon: Briefcase },
       { name: 'Blog', href: '/blog', icon: Newspaper },
-      { name: 'Contact', href: '/contact', icon: Phone },
+      { name: 'Contact', href: '/contact', icon: Phone }
     ],
     services: [
       { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' },
@@ -70,7 +70,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' },
       { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' },
       { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' },
-      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },
+      { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' }
     ],
     solutions: [
       { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' },
@@ -78,7 +78,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' },
       { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' },
       { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' },
-      { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },
+      { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' }
     ],
     resources: [
       { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' },
@@ -86,7 +86,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' },
       { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' },
       { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
-      { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
+      { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' }
     ],
     company: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
@@ -94,28 +94,28 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Partners', href: '/partners', icon: Users, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
-      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
+      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' }
     ]
-  };
+  },
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
     { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
     { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },
-  ];
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' }
+  ],
 
   const contactInfo = [
     { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
-  ];
+    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' }
+  ],
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
     { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
-  ];
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' }
+  ],
 
   const renderNavSection = (title: string, items: any[], sectionKey: string) => (
     <div key={sectionKey} className="mb-6">
@@ -156,7 +156,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       )}
     </div>
-  );
+  ),
 
   return (
     <>
@@ -293,7 +293,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  ),
+},
 
-export default MainSidebar;
+export default MainSidebar,

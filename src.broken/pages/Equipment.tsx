@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-export default Equipment;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default Equipment,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
-  ];
+  ],
 
   const filteredItems = equipmentItems.filter(item =>
       item.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-      item.category.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
+      item.category.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ,
 
   return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate -900">
       <div  className="container mx - auto px-4 py-8">
@@ -144,6 +144,6 @@ export default function Page() {
             </div>) }
         </motion.div>
       </div>
-    </div>) ;
-};
+    </div>) ,
+},
 

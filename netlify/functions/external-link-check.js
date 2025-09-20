@@ -1,9 +1,9 @@
 exports.handler = async function(event, context) {
   try {
-    console.log('🤖 external-link-check function triggered');
+    console.log('🤖 external-link-check function triggered'),
     
     // External link check logic
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -16,13 +16,13 @@ exports.handler = async function(event, context) {
         brokenLinks: 3,
         fixedLinks: 3
       })
-    };
+    },
     
-    console.log('✅ external-link-check completed successfully');
-    return result;
+    console.log('✅ external-link-check completed successfully'),
+    return result,
     
   } catch (error) {
-    console.error('❌ external-link-check failed:', error);
+    console.error('❌ external-link-check failed:', error),
     return {
       statusCode: 500,
       body: JSON.stringify({
@@ -30,6 +30,6 @@ exports.handler = async function(event, context) {
         message: error.message,
         timestamp: new Date().toISOString()
       })
-    };
+    },
   }
-};
+},

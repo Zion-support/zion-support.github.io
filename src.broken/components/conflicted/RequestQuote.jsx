@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
   delay: 0.1
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
@@ -39,9 +39,9 @@ import React, { useState } from 'react';
                 <div className="space-y-4">
                   <div className="flex items-start">
 =======
-import { useState } from 'react';
-import { motion  } from 'framer-motion';
-;
+import { useState } from 'react',
+import { motion  } from 'framer-motion',
+,
 export default function RequestQuote() {
 
     const [formData, setFormData] = useState({
@@ -56,8 +56,8 @@ export default function RequestQuote() {
         timeline: '',
         description: '',
         urgency: 'medium'
-    });
-    const [submissionStatus, setSubmissionStatus] = useState('idle');
+    }),
+    const [submissionStatus, setSubmissionStatus] = useState('idle'),
     const projectTypes = ['
         { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications' },
         { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications' },
@@ -71,7 +71,7 @@ export default function RequestQuote() {
         { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup' },
         { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization' },
         { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance' }
-    ];
+    ],
     const budgetRanges = ['
         { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs' },
         { value: '10k-25k', label: '$10,000 - $25,000', description: 'Medium-sized applications' },
@@ -79,7 +79,7 @@ export default function RequestQuote() {
         { value: '50k-100k', label: '$50,000 - $100,000', description: 'Enterprise solutions' },
         { value: '100k-plus', label: '$100,000+', description: 'Large-scale projects' },
         { value: 'custom', label: 'Custom Pricing', description: 'Let\'s discuss your needs' }
-    ];
+    ],
     const timelineOptions = ['
         { value: 'asap', label: 'ASAP', description: 'Immediate start required' },
         { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed' },
@@ -87,29 +87,29 @@ export default function RequestQuote() {
         { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline' },
         { value: '3-plus-months', label: '3+ Months', description: 'Long-term project' },
         { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed' }
-    ];
+    ],
     const urgencyLevels = ['
         { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },
         { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400' },
         { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400' },
         { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400' }
-    ];
+    ],
     const handleInputChange = (e) => {
 
-        const { name, value } = e.target;
+        const { name, value } = e.target,
         setFormData(prev => ({
 
             ...prev,
             [name]: value
-        }))};
+        }))},
     const handleSubmit = async(e) => {
 
-        e.preventDefault();
-        setSubmissionStatus('submitting');
+        e.preventDefault(),
+        setSubmissionStatus('submitting'),
         // Simulate API call
         setTimeout(() => {
 
-            setSubmissionStatus('success');
+            setSubmissionStatus('success'),
             // Reset form after success
             setTimeout(() => {
                 setFormData({
@@ -124,9 +124,9 @@ export default function RequestQuote() {
                     timeline: '',
                     description: '',
                     urgency: 'medium'
-                });
-                setSubmissionStatus('idle')}, 3000)}, 2000)};
-    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
+                }),
+                setSubmissionStatus('idle')}, 3000)}, 2000)},
+    const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType,
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}"
       <section className="pt-32 pb-20 px-6">"

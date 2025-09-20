@@ -1,43 +1,43 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Award,
   TrendingUp,
   Users,
-  DollarSign;
-  ArrowRight;
-  Star;
-  X;
-  CheckCircle;
-  BarChart3,
-} from 'lucide-react';
+  DollarSign,
+  ArrowRight,
+  Star,
+  X,
+  CheckCircle,
+  BarChart3
+} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
-  const [isVisiblesetIsVisible] = useState(false);
-  const [isDismissedsetIsDismissed] = useState(false);
-  const [currentStatsetCurrentStat] = useState(0);
+  const [isVisiblesetIsVisible] = useState(false),
+  const [isDismissedsetIsDismissed] = useState(false),
+  const [currentStatsetCurrentStat] = useState(0),
   const stats = [,
-    { value: '500+'label: ''Projectsicon: CheckCircle ,};
-    { value: '99.2%'label: ''Satisfactionicon: Star ,};
-    { value: '340%'label: 'Average 'ROIicon: TrendingUp ,};
-    { value: '15+'label: 'Years 'Experienceicon: Award ,}
-  ];
+    { value: '500+'label: ''Projectsicon: CheckCircle },
+    { value: '99.2%'label: ''Satisfactionicon: Star },
+    { value: '340%'label: 'Average 'ROIicon: TrendingUp },
+    { value: '15+'label: 'Years 'Experienceicon: Award }
+  ],
   useEffect(() => {,
-    const timer = setTimeout(() => setIsVisible(true)2000);
-    return () => clearTimeout(timer);
-  }[]);
+    const timer = setTimeout(() => setIsVisible(true)2000),
+    return () => clearTimeout(timer),
+  }[]),
   useEffect(() => {,
     if (isVisible) {,
       const interval = setInterval(() => {,
-        setCurrentStat(prev => (prev + 1) % stats.length);
-      }1500);
-      return () => clearInterval(interval);
+        setCurrentStat(prev => (prev + 1) % stats.length),
+      }1500),
+      return () => clearInterval(interval),
     }
-  }[isVisiblestats.length]);
+  }[isVisiblestats.length]),
   const handleDismiss = () => {,
-    setIsDismissed(true);
-  };
-  if (isDismissed) return null;
+    setIsDismissed(true),
+  },
+  if (isDismissed) return null,
   return (,
     <div,
       className="relative bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-gray-900 overflow-hidden",
@@ -49,7 +49,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
       </div>,
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">,
         <div className="flex items-center justify-between">,
-          {/* Left Content */,}
+          {/* Left Content */}
           <div className="flex-1">,
             <div,
               className="flex items-center gap-3 mb-3",
@@ -60,8 +60,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
               </div>,
               <div className="flex items-center gap-1">,
                 {[...Array(5)].map((_i) => (,
-                  <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />,
-                ))}
+                  <Star key={i} className="w-4 h-4 text-yellow-300 fill-current" />))}
               </div>,
             </div>,
             <divh2,
@@ -88,16 +87,16 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
               </button>,
             </div>,
           </div>,
-          {/* Right Content - Rotating Stats */,}
+          {/* Right Content - Rotating Stats */}
           <div,
             className="hidden lg: flex items-center gap-8",
           >,
             <div className="relative w-24 h-24">,
               {stats.map((statindex) => (,
                 <div,
-                  key={stat.label,}
-                    opacity: currentStat === index ? 1 : 0;
-                    scale: currentStat === index ? 1 : 0.8,}}
+                  key={stat.label}
+                    opacity: currentStat === index ? 1 : 0,
+                    scale: currentStat === index ? 1 : 0.8}}
                   className="absolute inset-0 flex flex-col items-center justify-center",
                 >,
                   <div className="w-20 h-20 bg-black/20 rounded-full flex items-center justify-center shadow-lg">,
@@ -107,8 +106,7 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
                     <div className="text-2xl font-bold text-gray-900">{stat.value}</div>,
                     <div className="text-xs text-gray-700">{stat.label}</div>,
                   </div>,
-                </div>,
-              ))}
+                </div>))}
             </div>,
             <div className="text-center">,
               <div className="text-3xl font-bold text-gray-900 mb-1">,
@@ -136,22 +134,22 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
         </div>,
         {/* Floating Elements */}
         <div,
-            y: [0-60];
-            rotate: [020],}}
-            duration: 2;
-            repeat: Infinity;
-            ease: "easeInOut",}}
+            y: [0-60],
+            rotate: [020]}}
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"}}
           className="absolute top-3 right-3 w-5 h-5 bg-black/20 rounded-full flex items-center justify-center",
         >,
           <TrendingUp className="w-3 h-3 text-gray-900" />,
         </div>,
         <div,
-            y: [060];
-            rotate: [0-20],}}
-            duration: 2.5;
-            repeat: Infinity;
-            ease: "easeInOut";
-            delay: 1,}}
+            y: [060],
+            rotate: [0-20]}}
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1}}
           className="absolute bottom-3 left-3 w-4 h-4 bg-black/20 rounded-full flex items-center justify-center",
         >,
           <Award className="w-2 h-2 text-gray-900" />,
@@ -165,6 +163,6 @@ const RevolutionaryCaseStudiesShowcase2027PromotionBanner = () => {,
         <X className="w-3 h-3 text-gray-900" />,
       </button>,
     </div>,
-  ),};
-export default RevolutionaryCaseStudiesShowcase2027PromotionBanner;
+  )},
+export default RevolutionaryCaseStudiesShowcase2027PromotionBanner,
 </div></div></div>,

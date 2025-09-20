@@ -1,7 +1,7 @@
-import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';"
-import { SEO } from '@/components/SEO';"
-import { Navigate  } from 'react-router-dom';"
-import { useAuth } from '@/hooks/useAuth';
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime',"
+import { SEO } from '@/components/SEO',"
+import { Navigate  } from 'react-router-dom',"
+import { useAuth } from '@/hooks/useAuth',
 export default function Page() {
 ))}
     // If not authenticated, redirect

@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import React from 'react',
+import Link from 'next/link',
+import { Metadata } from 'next',
 export const metadata: Metadata = {,
-  title: 'Quantum Computing Breakthroughs 2026 - Zion Tech Group';
-  description: 'Discover the latest quantum computing breakthroughs in 2026. Learn about quantum supremacy, quantum algorithms, and business applications.';
-  keywords: 'quantum computing, quantum supremacy, quantum algorithms, quantum business applications, quantum technology 2026';
+  title: 'Quantum Computing Breakthroughs 2026 - Zion Tech Group',
+  description: 'Discover the latest quantum computing breakthroughs in 2026. Learn about quantum supremacy, quantum algorithms, and business applications.',
+  keywords: 'quantum computing, quantum supremacy, quantum algorithms, quantum business applications, quantum technology 2026',
   openGraph: {,
-    title: 'Quantum Computing Breakthroughs 2026';
-    description: 'Latest quantum computing breakthroughs and business applications';
-    type: 'website',}
-};
+    title: 'Quantum Computing Breakthroughs 2026',
+    description: 'Latest quantum computing breakthroughs and business applications',
+    type: 'website'}
+},
 export default function QuantumComputingBreakthroughs() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">,
@@ -182,7 +182,7 @@ export default function QuantumComputingBreakthroughs() {,
             </div>,
           </div>,
         </div>,
-        {/* ROI and Impact */,}
+        {/* ROI and Impact */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 mb-16">,
           <h2 className="text-3xl font-bold text-white mb-8 text-center">,
             Quantum Computing ROI & Impact,
@@ -218,7 +218,7 @@ export default function QuantumComputingBreakthroughs() {,
             </div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div className="text-center">,
           <h2 className="text-3xl font-bold text-white mb-6">,
             Ready to Harness Quantum Computing Power?,
@@ -242,7 +242,7 @@ export default function QuantumComputingBreakthroughs() {,
             </Link>,
           </div>,
         </div>,
-        {/* Related Content */,}
+        {/* Related Content */}
         <div className="mt-16">,
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Related Quantum Computing Content</h3>,
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -279,5 +279,4 @@ export default function QuantumComputingBreakthroughs() {,
           </div>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

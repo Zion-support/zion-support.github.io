@@ -1,10 +1,10 @@
-import { MicroSaasService } from './enhanced-real-micro-saas-services';
+import { MicroSaasService } from './enhanced-real-micro-saas-services',
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 export const enterpriseITSolutions: MicroSaasService[] = [
 	{
 		id: 'enterprise-data-governance-automation',
@@ -14,14 +14,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
 		features: [
-			'Automated data quality monitoring',
-			'Compliance and regulatory tracking',
-			'Data lineage and cataloging',
-			'Privacy and security controls',
-			'Master data management',
-			'Data stewardship workflows',
-			'Real-time compliance reporting',
-			'Integration with enterprise systems'
+			'Automated data quality monitoringCompliance and regulatory tracking',
+			'Data lineage and catalogingPrivacy and security controls',
+			'Master data managementData stewardship workflows',
+			'Real-time compliance reportingIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🏛️',
@@ -58,14 +54,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade API governance platform that provides centralized API management, security controls, compliance monitoring, and lifecycle management across all enterprise APIs.',
 		features: [
-			'Centralized API management',
-			'Security and access controls',
-			'API lifecycle management',
-			'Compliance and audit trails',
-			'API performance monitoring',
-			'Developer portal and documentation',
-			'API versioning and deprecation',
-			'Integration with enterprise systems'
+			'Centralized API managementSecurity and access controls',
+			'API lifecycle managementCompliance and audit trails',
+			'API performance monitoringDeveloper portal and documentation',
+			'API versioning and deprecationIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🔌',
@@ -102,14 +94,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade identity and access management platform that provides advanced authentication, authorization, and identity governance with automated compliance and security controls.',
 		features: [
-			'Multi-factor authentication',
-			'Single sign-on (SSO)',
-			'Identity governance and administration',
-			'Privileged access management',
-			'Compliance and audit reporting',
-			'Automated provisioning and deprovisioning',
-			'Risk-based access controls',
-			'Integration with enterprise systems'
+			'Multi-factor authenticationSingle sign-on (SSO)',
+			'Identity governance and administrationPrivileged access management',
+			'Compliance and audit reportingAutomated provisioning and deprovisioning',
+			'Risk-based access controlsIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '🆔',
@@ -146,14 +134,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade workflow automation platform that uses AI to optimize business processes, automate complex workflows, and integrate with enterprise systems for seamless operations.',
 		features: [
-			'AI-powered workflow optimization',
-			'Complex process automation',
-			'Enterprise system integration',
-			'Workflow analytics and insights',
-			'Compliance and audit trails',
-			'Multi-tenant architecture',
-			'Advanced workflow designer',
-			'Real-time monitoring and alerts'
+			'AI-powered workflow optimizationComplex process automation',
+			'Enterprise system integrationWorkflow analytics and insights',
+			'Compliance and audit trailsMulti-tenant architecture',
+			'Advanced workflow designerReal-time monitoring and alerts'
 		],
 		popular: true,
 		icon: '⚙️',
@@ -190,14 +174,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month',
 		description: 'Enterprise-grade monitoring and observability platform that provides comprehensive visibility into infrastructure, applications, and business metrics with intelligent alerting and automated incident response.',
 		features: [
-			'Infrastructure monitoring',
-			'Application performance monitoring',
-			'Business metrics tracking',
-			'Intelligent alerting and escalation',
-			'Automated incident response',
-			'Distributed tracing',
-			'Log aggregation and analysis',
-			'Integration with enterprise systems'
+			'Infrastructure monitoringApplication performance monitoring',
+			'Business metrics trackingIntelligent alerting and escalation',
+			'Automated incident responseDistributed tracing',
+			'Log aggregation and analysisIntegration with enterprise systems'
 		],
 		popular: true,
 		icon: '📊',
@@ -226,4 +206,4 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.8,
 		reviews: 38
 	}
-];
+],

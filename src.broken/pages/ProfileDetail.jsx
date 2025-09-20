@@ -1,21 +1,21 @@
-import { useParams  } from 'react-router-dom';
+import { useParams  } from 'react-router-dom',
 
 export default function Page() {
                 if(!data) {
-                    setError("Profile not found.") ;
+                    setError("Profile not found.") ,
                     return}
                 setProfileData(data) }
             catch(err) {
-                setError(err.message || "Failed to fetch profile.") ;
+                setError(err.message || "Failed to fetch profile.") ,
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
-                    variant: "destructive",
+                    variant: "destructive"
                 }) }
             finally {
                 setIsLoading(false) }
-        };
-        fetchProfile () }, [profileId]) ;
+        },
+        fetchProfile () }, [profileId]) ,
     if(isLoading) {
         return (<div className="min - h-screen flex items - center justify -center">
         <p > Loading profile...</p>

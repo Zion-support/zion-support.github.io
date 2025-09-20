@@ -9,7 +9,7 @@ export function slugify(text: unknownstring): string {,
     .trim(),
     .replace(/[^\w\s-]/g, '') // Remove special characters except spaces and hyphens,
     .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens,
-    .replace(/^-+|-+$/g, ''), // Remove leading/trailing hyphens,
+    .replace(/^-+|-+$/g, ''), // Remove leading/trailing hyphens
 }
 ,
 /**,
@@ -20,7 +20,7 @@ export function slugify(text: unknownstring): string {,
 export function deslugify(slug: string): string {,
   return slug,
     .replace(/-/g, ' '),
-    .replace(/\b\w/g, (char)  => char.toUpperCase());
+    .replace(/\b\w/g, (char)  => char.toUpperCase()),
 }
 ,
 /**,
@@ -30,15 +30,15 @@ export function deslugify(slug: string): string {,
  * @returns A unique slug,
  */,
 export function generateUniqueSlug(text: string, existingSlugs: string[]): string {,
-  let slug = slugify(text);
-  let counter = 1;
-  let uniqueSlug = slug;
+  let slug = slugify(text),
+  let counter = 1,
+  let uniqueSlug = slug,
   while (existingSlugs.includes(uniqueSlug)) {,
-    uniqueSlug = `${slug}-${counter}`;
-    counter++;
+    uniqueSlug = `${slug}-${counter}`,
+    counter++,
   }
 ,
-  return uniqueSlug;
+  return uniqueSlug,
 }
 ,
-export default slugify;
+export default slugify,

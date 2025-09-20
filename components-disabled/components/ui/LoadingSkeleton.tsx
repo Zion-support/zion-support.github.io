@@ -1,1 +1,1 @@
-export default LoadingSkeleton;
+export default LoadingSkeleton,

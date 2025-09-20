@@ -1,8 +1,8 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from "react";
+import { SEO } from "../components/SEO";
+import { motion } from "framer-motion";
 import { 
-  BookOpen, 
+  BookOpen,
   Code, 
   FileText, 
   Search, 
@@ -42,259 +42,135 @@ import {
   Smartphone,
   Tablet,
   Laptop
-} from 'lucide-react';
-
+} from "lucide-react";
 export const Documentation: React.FC = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
   const [expandedSections, setExpandedSections] = React.useState<string[]>(['getting-started']);
-
   const categories = [
-    { id: 'all', name: 'All', count: 0, active: true },
-    { id: 'getting-started', name: 'Getting Started', count: 8, active: false },
-    { id: 'api', name: 'API Reference', count: 12, active: false },
-    { id: 'sdks', name: 'SDKs & Libraries', count: 6, active: false },
-    { id: 'tutorials', name: 'Tutorials', count: 15, active: false },
-    { id: 'examples', count: 10, active: false },
-    { id: 'deployment', name: 'Deployment', count: 8, active: false },
+    { id: 'all', name: 'All', count: 0, active: true };
+    { id: 'getting-started', name: 'Getting Started', count: 8, active: false };
+    { id: 'api', name: 'API Reference', count: 12, active: false };
+    { id: 'sdks', name: 'SDKs & Libraries', count: 6, active: false };
+    { id: 'tutorials', name: 'Tutorials', count: 15, active: false };
+    { id: 'examples', count: 10, active: false };
+    { id: 'deployment', name: 'Deployment', count: 8, active: false };
     { id: 'troubleshooting', name: 'Troubleshooting', count: 5, active: false }
   ];
-
   const documentationSections = [
     {
-      id: 'getting-started',
-      title: 'Getting Started',
-      icon: Play,
-      color: 'from-green-500 to-emerald-500',
-      articles: [
+      id: 'getting-started',title: 'Getting Started',icon: Play,color: 'from-green-500 to-emerald-500',articles: [
         {
-          title: 'Quick Start Guide',
-          description: 'Get up and running with Zion Tech Group services in under 10 minutes',
-          difficulty: 'Beginner',
-          readTime: '5 min',
-          featured: true,
-          path: '/docs/getting-started/quick-start'
-        },
+          title: 'Quick Start Guide',description: 'Get up and running with Zion Tech Group services in under 10 minutes',difficulty: 'Beginner',readTime: '5 min',featured: true,path: '/docs/getting-started/quick-start'
+        };
         {
-          title: 'Installation & Setup',
-          description: 'Complete installation guide for all platforms and environments',
-          difficulty: 'Beginner',
-          readTime: '15 min',
-          featured: false,
-          path: '/docs/getting-started/installation'
-        },
+          title: 'Installation & Setup',description: 'Complete installation guide for all platforms and environments',difficulty: 'Beginner',readTime: '15 min',featured: false,path: '/docs/getting-started/installation'
+        };
         {
-          title: 'First Project',
-          description: 'Create your first AI-powered application step by step',
-          difficulty: 'Beginner',
-          readTime: '20 min',
-          featured: true,
-          path: '/docs/getting-started/first-project'
-        },
+          title: 'First Project',description: 'Create your first AI-powered application step by step',difficulty: 'Beginner',readTime: '20 min',featured: true,path: '/docs/getting-started/first-project'
+        };
         {
-          title: 'Authentication',
-          description: 'Set up secure authentication for your applications',
-          difficulty: 'Intermediate',
-          readTime: '12 min',
-          featured: false,
-          path: '/docs/getting-started/authentication'
+          title: 'Authentication',description: 'Set up secure authentication for your applications',difficulty: 'Intermediate',readTime: '12 min',featured: false,path: '/docs/getting-started/authentication'
         }
       ]
-    },
+    };
     {
-              id: 'api',
-        title: 'API Reference',
-        icon: Code2,
-      color: 'from-blue-500 to-cyan-500',
-      articles: [
+              id: 'api',title: 'API Reference',icon: Code2,color: 'from-blue-500 to-cyan-500',articles: [
         {
-          title: 'REST API Overview',
-          description: 'Complete REST API documentation with examples',
-          difficulty: 'Intermediate',
-          readTime: '25 min',
-          featured: true,
-          path: '/docs/api/rest-overview'
-        },
+          title: 'REST API Overview',description: 'Complete REST API documentation with examples',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/api/rest-overview'
+        };
         {
-          title: 'GraphQL API',
-          description: 'GraphQL endpoint documentation and schema reference',
-          difficulty: 'Advanced',
-          readTime: '30 min',
-          featured: false,
-          path: '/docs/api/graphql'
-        },
+          title: 'GraphQL API',description: 'GraphQL endpoint documentation and schema reference',difficulty: 'Advanced',readTime: '30 min',featured: false,path: '/docs/api/graphql'
+        };
         {
-          title: 'WebSocket API',
-          description: 'Real-time communication API documentation',
-          difficulty: 'Advanced',
-          readTime: '20 min',
-          featured: false,
-          path: '/docs/api/websocket'
-        },
+          title: 'WebSocket API',description: 'Real-time communication API documentation',difficulty: 'Advanced',readTime: '20 min',featured: false,path: '/docs/api/websocket'
+        };
         {
-          title: 'Rate Limiting',
-          description: 'Understanding API rate limits and best practices',
-          difficulty: 'Intermediate',
-          readTime: '10 min',
-          featured: false,
-          path: '/docs/api/rate-limiting'
+          title: 'Rate Limiting',description: 'Understanding API rate limits and best practices',difficulty: 'Intermediate',readTime: '10 min',featured: false,path: '/docs/api/rate-limiting'
         }
       ]
-    },
+    };
     {
-      id: 'sdks',
-      title: 'SDKs & Libraries',
-      icon: Package,
-      color: 'from-purple-500 to-pink-500',
-      articles: [
+      id: 'sdks',title: 'SDKs & Libraries',icon: Package,color: 'from-purple-500 to-pink-500',articles: [
         {
-          title: 'JavaScript/TypeScript SDK',
-          description: 'Official SDK for Node.js and browser environments',
-          difficulty: 'Intermediate',
-          readTime: '18 min',
-          featured: true,
-          path: '/docs/sdks/javascript'
-        },
+          title: 'JavaScript/TypeScript SDK',description: 'Official SDK for Node.js and browser environments',difficulty: 'Intermediate',readTime: '18 min',featured: true,path: '/docs/sdks/javascript'
+        };
         {
-          title: 'Python SDK',
-          description: 'Python client library with examples and best practices',
-          difficulty: 'Intermediate',
-          readTime: '20 min',
-          featured: true,
-          path: '/docs/sdks/python'
-        },
+          title: 'Python SDK',description: 'Python client library with examples and best practices',difficulty: 'Intermediate',readTime: '20 min',featured: true,path: '/docs/sdks/python'
+        };
         {
-          title: 'Java SDK',
-          description: 'Java client library for enterprise applications',
-          difficulty: 'Intermediate',
-          readTime: '22 min',
-          featured: false,
-          path: '/docs/sdks/java'
-        },
+          title: 'Java SDK',description: 'Java client library for enterprise applications',difficulty: 'Intermediate',readTime: '22 min',featured: false,path: '/docs/sdks/java'
+        };
         {
-          title: 'Mobile SDKs',
-          description: 'iOS and Android SDKs for mobile applications',
-          difficulty: 'Advanced',
-          readTime: '25 min',
-          featured: false,
-          path: '/docs/sdks/mobile'
+          title: 'Mobile SDKs',description: 'iOS and Android SDKs for mobile applications',difficulty: 'Advanced',readTime: '25 min',featured: false,path: '/docs/sdks/mobile'
         }
       ]
-    },
+    };
     {
-      id: 'tutorials',
-      title: 'Tutorials',
-      icon: BookOpen,
-      color: 'from-orange-500 to-red-500',
-      articles: [
+      id: 'tutorials',title: 'Tutorials',icon: BookOpen,color: 'from-orange-500 to-red-500',articles: [
         {
-          title: 'Building an AI Chatbot',
-          description: 'Create a conversational AI chatbot from scratch',
-          difficulty: 'Intermediate',
-          readTime: '45 min',
-          featured: true,
-          path: '/docs/tutorials/ai-chatbot'
-        },
+          title: 'Building an AI Chatbot',description: 'Create a conversational AI chatbot from scratch',difficulty: 'Intermediate',readTime: '45 min',featured: true,path: '/docs/tutorials/ai-chatbot'
+        };
         {
-          title: 'Image Recognition API',
-          description: 'Implement computer vision in your applications',
-          difficulty: 'Intermediate',
-          readTime: '35 min',
-          featured: true,
-          path: '/docs/tutorials/image-recognition'
-        },
+          title: 'Image Recognition API',description: 'Implement computer vision in your applications',difficulty: 'Intermediate',readTime: '35 min',featured: true,path: '/docs/tutorials/image-recognition'
+        };
         {
-          title: 'Natural Language Processing',
-          description: 'Build text analysis and language understanding features',
-          difficulty: 'Advanced',
-          readTime: '50 min',
-          featured: false,
-          path: '/docs/tutorials/nlp'
-        },
+          title: 'Natural Language Processing',description: 'Build text analysis and language understanding features',difficulty: 'Advanced',readTime: '50 min',featured: false,path: '/docs/tutorials/nlp'
+        };
         {
-          title: 'Real-time Analytics Dashboard',
-          description: 'Create live data visualization dashboards',
-          difficulty: 'Advanced',
-          readTime: '60 min',
-          featured: false,
-          path: '/docs/tutorials/analytics-dashboard'
+          title: 'Real-time Analytics Dashboard',description: 'Create live data visualization dashboards',difficulty: 'Advanced',readTime: '60 min',featured: false,path: '/docs/tutorials/analytics-dashboard'
         }
       ]
-    },
+    };
     {
-      id: 'deployment',
-      title: 'Deployment',
-      icon: Server,
-      color: 'from-indigo-500 to-purple-500',
-      articles: [
+      id: 'deployment',title: 'Deployment',icon: Server,color: 'from-indigo-500 to-purple-500',articles: [
         {
-          title: 'Docker Deployment',
-          description: 'Containerize and deploy your applications',
-          difficulty: 'Intermediate',
-          readTime: '25 min',
-          featured: true,
-          path: '/docs/deployment/docker'
-        },
+          title: 'Docker Deployment',description: 'Containerize and deploy your applications',difficulty: 'Intermediate',readTime: '25 min',featured: true,path: '/docs/deployment/docker'
+        };
         {
-          title: 'Kubernetes Orchestration',
-          description: 'Scale your applications with Kubernetes',
-          difficulty: 'Advanced',
-          readTime: '40 min',
-          featured: false,
-          path: '/docs/deployment/kubernetes'
-        },
+          title: 'Kubernetes Orchestration',description: 'Scale your applications with Kubernetes',difficulty: 'Advanced',readTime: '40 min',featured: false,path: '/docs/deployment/kubernetes'
+        };
         {
-          title: 'Cloud Deployment',
-          description: 'Deploy to AWS, Azure, and Google Cloud',
-          difficulty: 'Intermediate',
-          readTime: '30 min',
-          featured: false,
-          path: '/docs/deployment/cloud'
-        },
+          title: 'Cloud Deployment',description: 'Deploy to AWS, Azure, and Google Cloud',
+          difficulty: 'Intermediate',readTime: '30 min',featured: false,path: '/docs/deployment/cloud'
+        };
         {
-          title: 'CI/CD Pipeline',
-          description: 'Set up automated deployment pipelines',
-          difficulty: 'Advanced',
-          readTime: '35 min',
-          featured: false,
-          path: '/docs/deployment/cicd'
+          title: 'CI/CD Pipeline',description: 'Set up automated deployment pipelines',difficulty: 'Advanced',readTime: '35 min',featured: false,path: '/docs/deployment/cicd'
         }
       ]
     }
   ];
-
   const toggleSection = (sectionId: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionId) 
         ? prev.filter(id => id !== sectionId)
         : [...prev, sectionId]
-    );
-  };
+    ),
+  },
 
   const filteredSections = documentationSections.filter(section => 
     selectedCategory === 'all' || section.id === selectedCategory
-  );
+  ),
 
   const allArticles = documentationSections.flatMap(section => 
     section.articles.map(article => ({ ...article, section: section.title }))
   );
-
   const filteredArticles = allArticles.filter(article =>
     article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     article.section.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  ),
 
   // Update category counts
   React.useEffect(() => {
     categories.forEach(cat => {
       if (cat.id !== 'all') {
-        const section = documentationSections.find(s => s.id === cat.id);
-        cat.count = section ? section.articles.length : 0;
+        const section = documentationSections.find(s => s.id === cat.id),
+        cat.count = section ? section.articles.length : 0,
       }
-    });
-    categories[0].count = allArticles.length;
-  }, []);
+    }),
+    categories[0].count = allArticles.length,
+  }, []),
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -578,9 +454,9 @@ export const Documentation: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/docs/api-playground' },
-              { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/docs/sdks/downloads' },
-              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' },
+              { name: 'API Playground', icon: Terminal, color: 'from-green-500 to-emerald-500', href: '/docs/api-playground' };
+              { name: 'SDK Downloads', icon: Download, color: 'from-blue-500 to-cyan-500', href: '/docs/sdks/downloads' };
+              { name: 'Code Examples', icon: Code2, color: 'from-purple-500 to-pink-500', href: '/docs/examples' };
               { name: 'Support Forum', icon: Globe, color: 'from-orange-500 to-red-500', href: '/support' }
             ].map((action, index) => (
               <motion.a
@@ -621,7 +497,7 @@ export const Documentation: React.FC = () => {
               Get expert guidance, code reviews, and implementation support.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
                 Contact Developer Support
               </button>
@@ -633,7 +509,6 @@ export const Documentation: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default Documentation;

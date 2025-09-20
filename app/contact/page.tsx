@@ -1,8 +1,8 @@
 
 export const metadata = {,
-  title: 'Contact | Zion Tech Group';
-  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
-};
+  title: 'Contact | Zion Tech Group',
+  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.'
+},
 export default function ContactPage() {,
   return (,
     <div className="animate-fade-in">,
@@ -123,7 +123,7 @@ export default function ContactPage() {,
                 <textarea,
                   id="message",
                   name="message",
-                  rows={4,}
+                  rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
                   placeholder="Tell us about your project or requirements...",
                   required,
@@ -148,6 +148,5 @@ export default function ContactPage() {,
           </a>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

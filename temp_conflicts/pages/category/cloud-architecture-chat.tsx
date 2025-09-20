@@ -1,6 +1,6 @@
 
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from 'next/head',
+import Link from 'next/link',
 
 const CloudArchitectureChat = () => {
   return (
@@ -16,7 +16,7 @@ const CloudArchitectureChat = () => {
         <Link href="/blog"><a>Back to Blog</a></Link>
       </main>
     </div>
-  );
-};
+  ),
+},
 
-export default CloudArchitectureChat;
+export default CloudArchitectureChat,

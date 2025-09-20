@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Search, X } from 'lucide-react';
-
+import React, { useState } from "react";
+import { Search, X } from "lucide-react";
 export function EnhancedSearchInput({ 
   placeholder = "Search services, solutions...",
   className = "",
@@ -8,29 +7,28 @@ export function EnhancedSearchInput({
   showClear = true,
   compact = false
 }) {
-  const [query, setQuery] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
+  const [query, setQuery] = useState(''),
+  const [isFocused, setIsFocused] = useState(false),
 
   const handleSearch = (e) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (onSearch && query.trim()) {
-      onSearch(query.trim());
+      onSearch(query.trim()),
     }
-  };
+  },
 
   const handleClear = () => {
-    setQuery('');
+    setQuery(''),
     if (onSearch) {
-      onSearch('');
+      onSearch(''),
     }
-  };
+  },
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      handleSearch(e);
+      handleSearch(e),
     }
   };
-
   return (
     <div className={`relative ${className}`}>
       <form onSubmit={handleSearch} className="relative">
@@ -70,7 +68,7 @@ export function EnhancedSearchInput({
             <div className="px-4 py-2 text-sm text-gray-400 border-b border-zion-blue-light/20">
               Quick suggestions
             </div>
-            {['AI Services', 'Cloud Solutions', 'Cybersecurity', 'IT Consulting'].map((suggestion, index) => (
+            {['AI ServicesCloud Solutions', 'CybersecurityIT Consulting'].map((suggestion, index) => (
               <button
                 key={index}
                 onClick={() => {

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-  return twMerge(clsx (inputs) ) ;
+  return twMerge(clsx (inputs) ) ,
 }
 =======
 

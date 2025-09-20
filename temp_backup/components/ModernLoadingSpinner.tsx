@@ -1,11 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react',
+import { motion } from 'framer-motion',
 
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'quantum';
-  text?: string;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'quantum',
+  text?: string,
+  className?: string,
 }
 
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
@@ -19,7 +19,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
-  };
+  },
 
   const renderSpinner = () => {
     switch (variant) {
@@ -52,7 +52,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               }}
             />
           </div>
-        );
+        ),
 
       case 'dots':
         return (
@@ -74,7 +74,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               />
             ))}
           </div>
-        );
+        ),
 
       case 'bars':
         return (
@@ -97,7 +97,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               />
             ))}
           </div>
-        );
+        ),
 
       case 'quantum':
         return (
@@ -146,7 +146,7 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               }}
             />
           </div>
-        );
+        ),
 
       default:
         return (
@@ -164,15 +164,15 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
               }}
             />
           </div>
-        );
+        ),
     }
-  };
+  },
 
   return (
     <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
       <h3 className="text-xl font-bold mb-4">ModernLoadingSpinner</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
-export default ModernLoadingSpinner;
+  ),
+},
+export default ModernLoadingSpinner,

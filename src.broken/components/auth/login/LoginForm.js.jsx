@@ -1,24 +1,24 @@
-import { useState } from 'react';"
-import { useForm } from 'react-hook-form';"
-import { useNavigate  } from 'react-router-dom';"
-import { zodResolver } from '@hookform/resolvers/zod';"
-import { z } from 'zod';"
-import { LogIn, User, Eye, EyeOff  } from 'lucide-react';"
-import { useAuth } from '@/hooks/useAuth';"
-import { Button } from '@/components/ui/button';"
-import { Input } from '@/components/ui/input';"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';"
-import { Link  } from 'react-router-dom';"
-import { LoadingOverlay } from '@/components/LoadingOverlay';
+import { useState } from 'react',"
+import { useForm } from 'react-hook-form',"
+import { useNavigate  } from 'react-router-dom',"
+import { zodResolver } from '@hookform/resolvers/zod',"
+import { z } from 'zod',"
+import { LogIn, User, Eye, EyeOff  } from 'lucide-react',"
+import { useAuth } from '@/hooks/useAuth',"
+import { Button } from '@/components/ui/button',"
+import { Input } from '@/components/ui/input',"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form',"
+import { Link  } from 'react-router-dom',"
+import { LoadingOverlay } from '@/components/LoadingOverlay',
 export default function Page() {
-);
+),
     const onSubmit = async(data) => {
 
         if(isSubmitting)
-            return;
+            return,
         try {
-            setIsSubmitting(true);
-            const { error } = await login(data.email, data.password);
+            setIsSubmitting(true),
+            const { error } = await login(data.email, data.password),
             if(error) {
 "
                 form.setError("root", { message: error })}
@@ -29,7 +29,7 @@ export default function Page() {
         finally {
 
             setIsSubmitting(false)}
-    };
+    },
     return (<Form {...form}>"
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
     >"
@@ -76,9 +76,9 @@ export default function Page() {
         </Button>
       </form>
       <LoadingOverlay visible={isLoading || isSubmitting}/>
-    </Form>)};
-export { LoginForm };
-export default LoginForm;
-;
-export default LoginForm;
-export default LoginForm;"
+    </Form>)},
+export { LoginForm },
+export default LoginForm,
+,
+export default LoginForm,
+export default LoginForm,"

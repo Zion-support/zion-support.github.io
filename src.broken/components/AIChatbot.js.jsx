@@ -1,14 +1,14 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useCallback, useEffect, useRef } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 export default function Page() {
-);
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [messages, setMessages] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-    const [isTyping, setIsTyping] = useState(false);
-    const messagesEndRef = useRef(null);
-    const inputRef = useRef(null);
+),
+    const [isOpen, setIsOpen] = useState(false),
+    const [isMinimized, setIsMinimized] = useState(false),
+    const [messages, setMessages] = useState([]),
+    const [inputValue, setInputValue] = useState(''),
+    const [isTyping, setIsTyping] = useState(false),
+    const messagesEndRef = useRef(null),
+    const inputRef = useRef(null),
     // Initialize chatbot
     useEffect(() => {
         if(isOpen && messages.length === 0) {
@@ -17,22 +17,22 @@ export default function Page() {
 
                 intent: 'greeting',
                 confidence: 1.0,
-                suggestions[;"
+                suggestions[,"
                     "Tell me about your services","
                     "How can I get a quote?","
                     "What technologies do you use?","
                     "Contact information"
                 ]
             })}
-    }, [isOpen, messages.length, welcomeMessage]);
+    }, [isOpen, messages.length, welcomeMessage]),
     // Auto-scroll to bottom
     useEffect(() => {
 
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]),
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {
 
-        trackEvent('chatbot', action,chatbot_interaction', null, metadata)}, [trackEvent]);
+        trackEvent('chatbot', action,chatbot_interaction', null, metadata)}, [trackEvent]),
     // Add message to chat
     const addMessage = useCallback((message) => {
 
@@ -43,18 +43,18 @@ export default function Page() {
 `
 }_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
-        };
+        },
         setMessages(prev => {
 
-            const updated = [...prev, newMessage];
+            const updated = [...prev, newMessage],
             // Keep only the last maxMessages
-            return updated.slice(-maxMessages)});
+            return updated.slice(-maxMessages)}),
         // Update conversation context
         if(enableContext && message.content.length > 10) {
 
-            // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed
+            // setConversationContext(prev => [...prev.slice(-4), message.content]), // This line was removed
         }
-        return newMessage}, [maxMessages, enableContext]);
+        return newMessage}, [maxMessages, enableContext]),
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {
 
@@ -63,22 +63,22 @@ export default function Page() {
             type: 'bot',
             content,
             metadata
-        });
+        }),
         // Track bot response'
         trackChatbotInteraction('bot_response', {
 
             messageId: message.id,
             intent: metadata?.intent,
             confidence: metadata?.confidence
-        });
-        return message}, [addMessage, trackChatbotInteraction]);
+        }),
+        return message}, [addMessage, trackChatbotInteraction]),
     // Simulate AI processing
     const simulateAIProcessing = useCallback(async (userInput) => {
 
         // Simulate processing delay
-        await new Promise(resolve => setTimeout(resolve, responseDelay));
+        await new Promise(resolve => setTimeout(resolve, responseDelay)),
         // Simple AI logic - in production, this would connect to a real AI service
-        const input = userInput.toLowerCase();
+        const input = userInput.toLowerCase(),
         // Intent recognition'
         if(input.includes('service') || input.includes('offer')) {
 "
@@ -96,42 +96,42 @@ export default function Page() {
 "
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions.Would you like me to share some case studies?"}
         // Default response with suggestions'"
-        return "I understand you're asking about '" + userInput + "'.Let me help you better.Could you provide more details about what you're looking for?"}, [responseDelay]);
+        return "I understand you're asking about '" + userInput + "'.Let me help you better.Could you provide more details about what you're looking for?"}, [responseDelay]),
     // Handle user input
     const handleUserInput = useCallback(async (input) => {
 
         if(!input.trim())
-            return;
+            return,
         // Add user message
         const userMessage = addMessage({
 
             type: 'user',
             content: input.trim()
-        });
+        }),
         // Track user input'
         trackChatbotInteraction('user_input', {
 
             messageId: userMessage.id,
             inputLength: input.length
-        });
+        }),
         // Clear input'
-        setInputValue('');
-        setIsTyping(true);
+        setInputValue(''),
+        setIsTyping(true),
         try {
             // Get AI response
-            const response = await simulateAIProcessing(input);
+            const response = await simulateAIProcessing(input),
             // Add bot response
             addBotMessage(response, {
 
                 intent: 'response',
                 confidence: 0.9,
-                suggestions[;"
+                suggestions[,"
                     "Tell me more","
                     "Get a quote","
                     "View services","
                     "Contact sales"
                 ]
-            });
+            }),
             // Track successful interaction'
             trackChatbotInteraction('conversation_success', {
 
@@ -144,7 +144,7 @@ export default function Page() {
 
                 intent: 'error',
                 confidence: 0.8
-            });
+            }),
             trackChatbotInteraction('conversation_error', {
 
                 error: error instanceof Error ? error.message : 'Unknown error'
@@ -152,30 +152,30 @@ export default function Page() {
         finally {
 
             setIsTyping(false)}
-    }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
+    }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]),
     // Handle form submission
     const handleSubmit = useCallback((e) => {
 
-        e.preventDefault();
-        handleUserInput(inputValue)}, [inputValue, handleUserInput]);
+        e.preventDefault(),
+        handleUserInput(inputValue)}, [inputValue, handleUserInput]),
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
 
-        handleUserInput(suggestion);
-        trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
+        handleUserInput(suggestion),
+        trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]),
     // Toggle chatbot
     const toggleChatbot = useCallback(() => {
-        setIsOpen(!isOpen);
-        trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
+        setIsOpen(!isOpen),
+        trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]),
     // Minimize/maximize
     const toggleMinimize = useCallback(() => {
-        setIsMinimized(!isMinimized);
-        trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
+        setIsMinimized(!isMinimized),
+        trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]),
     // Clear conversation
     const clearConversation = useCallback(() => {
-        setMessages([]);
-        // setConversationContext([]); // This line was removed'
-        trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
+        setMessages([]),
+        // setConversationContext([]), // This line was removed'
+        trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]),
     // Get typing indicator"
     const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"
       <Bot className="w-5 h-5 text-blue-500"/>"
@@ -184,8 +184,8 @@ export default function Page() {
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>'"
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
       </div>"
-      <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
-    </motion.div>);
+      <span className="text-sm text-gray-600 dark: text-gray-400">AI is typing...</span>
+    </motion.div>),
     // Get message suggestions
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
 
@@ -201,7 +201,7 @@ export default function Page() {
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
           {suggestion}
         </button>))}
-    </motion.div>);
+    </motion.div>),
     return (<>
       {/* Chatbot Toggle Button */}"
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >"
@@ -317,5 +317,5 @@ export default function Page() {
               </>) }
           </motion.div>) }
       </AnimatePresence>
-    </>)};
+    </>)},
 '"`

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
  / {company?.teamLimit || '∞'}
@@ -33,6 +33,6 @@ export default function Page() {
         <Button>Customize Workspace</Button>
       </div>
     </div>
-  );
+  ),
 }
 '"

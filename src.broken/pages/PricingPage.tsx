@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react',
+import { Link } from 'react-router-dom',
 
 export default function PricingPage() {
   return (
@@ -23,8 +23,8 @@ export default function PricingPage() {
             Get Started
           </Link>
 =======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react',
+import { Link } from 'react-router-dom',
 import {
   Check,
   Star,
@@ -56,12 +56,12 @@ import {
   ArrowRight,
   CheckCircle,
   X,
-  Info,
-} from 'lucide-react';
+  Info
+} from 'lucide-react',
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const [selectedPlan, setSelectedPlan] = useState('professional');
+  const [billingCycle, setBillingCycle] = useState('monthly'),
+  const [selectedPlan, setSelectedPlan] = useState('professional'),
 
   const plans = [
     {
@@ -70,19 +70,16 @@ export default function PricingPage() {
       description: 'Perfect for small businesses getting started',
       price: {
         monthly: 299,
-        yearly: 2990,
+        yearly: 2990
       },
       features: [
-        'AI-powered analytics dashboard',
-        'Basic cybersecurity features',
-        'Email support',
-        '5 user accounts',
-        '10GB storage',
-        'Basic reporting',
+        'AI-powered analytics dashboardBasic cybersecurity features',
+        'Email support5 user accounts',
+        '10GB storageBasic reporting'
       ],
       popular: false,
       color: 'from-gray-500 to-gray-600',
-      icon: Rocket,
+      icon: Rocket
     },
     {
       id: 'professional',
@@ -90,22 +87,18 @@ export default function PricingPage() {
       description: 'Ideal for growing businesses with advanced needs',
       price: {
         monthly: 599,
-        yearly: 5990,
+        yearly: 5990
       },
       features: [
-        'Everything in Starter',
-        'Advanced AI & ML capabilities',
-        'Enhanced cybersecurity',
-        'Priority support',
-        '25 user accounts',
-        '100GB storage',
-        'Advanced analytics',
-        'Custom integrations',
-        'API access',
+        'Everything in StarterAdvanced AI & ML capabilities',
+        'Enhanced cybersecurityPriority support',
+        '25 user accounts100GB storage',
+        'Advanced analyticsCustom integrations',
+        'API access'
       ],
       popular: true,
       color: 'from-cyan-500 to-blue-600',
-      icon: Brain,
+      icon: Brain
     },
     {
       id: 'enterprise',
@@ -113,25 +106,20 @@ export default function PricingPage() {
       description: 'Comprehensive solution for large organizations',
       price: {
         monthly: 1299,
-        yearly: 12990,
+        yearly: 12990
       },
       features: [
-        'Everything in Professional',
-        'Custom AI model development',
-        'Enterprise-grade security',
-        '24/7 dedicated support',
-        'Unlimited user accounts',
-        'Unlimited storage',
-        'Custom development',
-        'On-premise deployment',
-        'SLA guarantees',
-        'Dedicated account manager',
+        'Everything in ProfessionalCustom AI model development',
+        'Enterprise-grade security24/7 dedicated support',
+        'Unlimited user accountsUnlimited storage',
+        'Custom developmentOn-premise deployment',
+        'SLA guaranteesDedicated account manager'
       ],
       popular: false,
       color: 'from-purple-500 to-pink-600',
-      icon: Shield,
-    },
-  ];
+      icon: Shield
+    }
+  ],
 
   const addOns = [
     {
@@ -139,71 +127,71 @@ export default function PricingPage() {
       description: 'Custom AI model development and training',
       price: {
         monthly: 299,
-        yearly: 2990,
+        yearly: 2990
       },
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500'
     },
     {
       name: 'Advanced Security',
       description: 'Enhanced cybersecurity and compliance features',
       price: {
         monthly: 199,
-        yearly: 1990,
+        yearly: 1990
       },
       icon: Shield,
-      color: 'from-red-500 to-orange-500',
+      color: 'from-red-500 to-orange-500'
     },
     {
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
       price: {
         monthly: 499,
-        yearly: 4990,
+        yearly: 4990
       },
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       name: 'Custom Development',
       description: 'Tailored software development services',
       price: {
         monthly: 799,
-        yearly: 7990,
+        yearly: 7990
       },
       icon: Cpu,
-      color: 'from-green-500 to-emerald-500',
-    },
-  ];
+      color: 'from-green-500 to-emerald-500'
+    }
+  ],
 
   const faqs = [
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also arrange custom payment terms.',
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can also arrange custom payment terms.'
     },
     {
       question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing adjustments.',
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing adjustments.'
     },
     {
       question: 'Is there a setup fee?',
-      answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.',
+      answer: 'No setup fees for our standard plans. Custom enterprise solutions may have one-time setup costs depending on complexity.'
     },
     {
       question: 'What kind of support do you provide?',
-      answer: 'Starter plans include email support, Professional plans get priority support, and Enterprise plans include 24/7 dedicated support with a dedicated account manager.',
+      answer: 'Starter plans include email support, Professional plans get priority support, and Enterprise plans include 24/7 dedicated support with a dedicated account manager.'
     },
     {
       question: 'Do you offer discounts for nonprofits?',
-      answer: 'Yes, we offer special pricing for qualified nonprofit organizations. Please contact our sales team for more information.',
+      answer: 'Yes, we offer special pricing for qualified nonprofit organizations. Please contact our sales team for more information.'
     },
     {
       question: 'Can I cancel my subscription anytime?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.',
-    },
-  ];
+      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
+    }
+  ],
 
-  const savings = billingCycle === 'yearly' ? 20 : 0;
+  const savings = billingCycle === 'yearly' ? 20 : 0,
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -357,7 +345,7 @@ export default function PricingPage() {
                   <span className="text-sm text-gray-400 font-normal">/month</span>
                 </div>
                 <Link
-                  to={`/contact?addon=${addon.name.toLowerCase().replace(' ', '-')}`}
+                  to={`/contact?addon=${addon.name.toLowerCase().replace(' -')}`}
                   className="inline-flex items-center w-full justify-center px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors duration-200"
                 >
                   Add Service
@@ -397,7 +385,7 @@ export default function PricingPage() {
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Choose the perfect plan for your business and start transforming 
@@ -424,7 +412,7 @@ export default function PricingPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 <<<<<<< HEAD
 =======

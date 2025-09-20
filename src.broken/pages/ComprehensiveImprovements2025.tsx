@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -6,8 +6,7 @@ export default function Page() {
       icon: Zap,
       color: 'from - yellow-500 to - orange - 500',
       title: 'Future - Ready Solutions',
-      items: ['Digital Twin - Virtual system replicas',
-        'Digital Transformation - Strategic technology consulting',
+      items: ['Digital Twin - Virtual system replicasDigital Transformation - Strategic technology consulting',
         'IT Consulting - Technology strategy & planning'
       ]
     },
@@ -16,14 +15,12 @@ export default function Page() {
       icon: Atom,
       color: 'from - indigo - 500 to - purple - 500',
       title: 'Next - Gen Innovation',
-      items: [;
-        'Quantum Computing - Next - gen computational power',;
-        'IoT Edge Computing - Smart device networks',;
-        'Space Tech-Space technology solutions',;
-        'Green IT - Sustainable technology solutions';
-      ];
-    };
-  ];
+      items: [,
+        'Quantum Computing - Next - gen computational powerIoT Edge Computing - Smart device networks',
+        'Space Tech-Space technology solutionsGreen IT - Sustainable technology solutions',
+      ],
+    },
+  ],
 
   const features = [{
       title: 'Futuristic Design',
@@ -54,14 +51,14 @@ export default function Page() {
       description: 'Advanced SEO with structured data and performance metrics',
       icon: Search,
       color: 'from - indigo - 500 to - purple - 500'
-    },;
-    {;
-      title: 'Analytics Driven',;
-      description: 'Comprehensive analytics and performance monitoring',;
-      icon: BarChart3,;
-      color: 'from - blue - 500 to - cyan - 500';
-    };
-  ];
+    },
+    {,
+      title: 'Analytics Driven',
+      description: 'Comprehensive analytics and performance monitoring',
+      icon: BarChart3,
+      color: 'from - blue - 500 to - cyan - 500'
+    },
+  ],
 
   const benefits = [{
       title: 'Enhanced User Experience',
@@ -92,21 +89,21 @@ export default function Page() {
       description: 'Optimized for search engines and improved discoverability',
       icon: Search,
       color: 'from - indigo - 500 to - purple - 500'
-    },;
-    {;
-      title: 'Security Enhanced',;
-      description: 'Advanced security measures and privacy protection',;
-      icon: Shield,;
-      color: 'from - red - 500 to - orange - 500';
-    };
-  ];
+    },
+    {,
+      title: 'Security Enhanced',
+      description: 'Advanced security measures and privacy protection',
+      icon: Shield,
+      color: 'from - red - 500 to - orange - 500'
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <EnhancedSEOManager
         title="Comprehensive Improvements 2025 - Zion Tech Group"
         description="Discover the revolutionary platform enhancements that make Zion Tech Group the most advanced business technology solution available today."
         keywords = {
-  ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
+  ['platform improvementsAI services', 'technology enhancementsdigital transformation',
   'Zion Tech Group']
 
 }
@@ -399,7 +396,7 @@ export default function Page() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font - bold text-white mb-6">
+            <h2 className="text-3xl md: text-5xl font - bold text-white mb-6">
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray - 300 mb-8 max - w-2xl mx -auto">
@@ -418,11 +415,11 @@ export default function Page() {
                 className="border border-purple - 500 text-purple - 400 px-8 py-4 rounded-lg font - semibold hover:bg-purple - 500 hover:text-white transition - all duration - 300 text-lg"
               >
                 <ArrowRight className="w-5 h-5 mr-2 inline" />
-                Explore Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;) ;
+                Explore Services,
+              </Link>,
+            </div>,
+          </motion.div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

@@ -1,15 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react',
+import { Helmet } from 'react-helmet-async',
 export function SEOHead(props: any) {,
-  const fullTitle = `${title,} | Zion Tech Group - AI & Technology Solutions`;
+  const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`,
   const defaultKeywords = [,
-    'AI servicestechnology solutions';
-    'enterprise automationcybersecurity';
-    'quantum computingblockchain solutions';
-    'cloud servicesdigital transformation';
-    'Zion Tech Group',
-  ];
-  const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
+    'AI servicestechnology solutionsenterprise automationcybersecurity',
+    'quantum computingblockchain solutionscloud servicesdigital transformation',
+    'Zion Tech Group'
+  ],
+  const allKeywords = [...new Set([...defaultKeywords, ...keywords])],
   return (,
     <Helmet>,
       <title>{fullTitle}</title>,
@@ -19,17 +17,17 @@ export function SEOHead(props: any) {,
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`}  />,
       {canonicalUrl && <link rel="canonical" href={canonicalUrl}  />}
 ,
-      <meta property="og: title" content={fullTitle,}  />,
-      <meta property="og: description" content={description,}  />,
-      <meta property="og: type" content={ogType,}  />,
-      <meta property="og: image" content={ogImage,}  />,
-      <meta property="og: url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),}  />,
+      <meta property="og: title" content={fullTitle}  />,
+      <meta property="og: description" content={description}  />,
+      <meta property="og: type" content={ogType}  />,
+      <meta property="og: image" content={ogImage}  />,
+      <meta property="og: url" content={canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '')}  />,
       <meta property="og: site_name" content="Zion Tech Group"  />,
       <meta property="og:locale" content="en_US"  />,
       <meta name="twitter:card" content="summary_large_image"  />,
-      <meta name="twitter:title" content={fullTitle,}  />,
-      <meta name="twitter: description" content={description,}  />,
-      <meta name="twitter: image" content={ogImage,}  />,
+      <meta name="twitter:title" content={fullTitle}  />,
+      <meta name="twitter: description" content={description}  />,
+      <meta name="twitter: image" content={ogImage}  />,
       <meta name="twitter: site" content="@ziontechgroup"  />,
       <meta name="viewport" content="width=device-width, initial-scale=1.0"  />,
       <meta name="theme-color" content="#0ea5e9"  />,
@@ -42,28 +40,28 @@ export function SEOHead(props: any) {,
 ,
       <script type="application/ld+json">,
         {JSON.stringify({,
-          "@context": "https://schema.org";
-          "@type": "Organization";
-          "name": "Zion Tech Group";
-          "url": "https://ziontechgroup.com";
-          "logo": "https://ziontechgroup.com/images/logo.png";
-          "description": "Leading provider of AI services, technology solutions, and digital transformation";
+          "@context": "https: //schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/images/logo.png",
+          "description": "Leading provider of AI services, technology solutions, and digital transformation",
           "contactPoint": {,
-            "@type": "ContactPoint";
-            "telephone": "+1-302-464-0950";
-            "contactType": "customer service";
-            "email": "kleber@ziontechgroup.com",
-          };
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
           "address": {,
-            "@type": "PostalAddress";
-            "streetAddress": "364 E Main St STE 1008";
-            "addressLocality": "Middletown";
-            "addressRegion": "DE";
-            "postalCode": "19709";
-            "addressCountry": "US",
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
           }
         })}
       </script>,
     </Helmet>,
-  );
+  ),
 }

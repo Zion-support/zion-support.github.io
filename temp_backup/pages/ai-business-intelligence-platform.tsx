@@ -1,11 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import { 
   Brain, BarChart3, TrendingUp, Zap, Shield, 
   Users, Target, Award, CheckCircle, ArrowRight,
   Star, Globe, Lock, BarChart, PieChart, LineChart
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AIBusinessIntelligencePlatform() {
   const features = [
@@ -39,24 +39,20 @@ export default function AIBusinessIntelligencePlatform() {
       title: 'Collaborative Insights',
       description: 'Share insights across teams with real-time collaboration tools and customizable dashboards.'
     }
-  ];
+  ],
 
   const useCases = [
-    'Sales Performance Analysis',
-    'Customer Behavior Insights',
-    'Financial Forecasting',
-    'Marketing ROI Optimization',
-    'Operational Efficiency Tracking',
-    'Competitive Analysis',
-    'Supply Chain Optimization',
-    'Risk Assessment & Management'
-  ];
+    'Sales Performance AnalysisCustomer Behavior Insights',
+    'Financial ForecastingMarketing ROI Optimization',
+    'Operational Efficiency TrackingCompetitive Analysis',
+    'Supply Chain OptimizationRisk Assessment & Management'
+  ],
 
   const integrations = [
-    'Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 
-    'QuickBooks', 'Zapier', 'Slack', 'Microsoft Teams',
-    'AWS', 'Google Cloud', 'Azure', 'Snowflake'
-  ];
+    'SalesforceHubSpot', 'Google AnalyticsShopify', 
+    'QuickBooksZapier', 'SlackMicrosoft Teams',
+    'AWSGoogle Cloud', 'AzureSnowflake'
+  ],
 
 const ai-business-intelligence-platform: React.FC = () => {
   return (
@@ -73,7 +69,7 @@ const ai-business-intelligence-platform: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-business-intelligence-platform;
+export default ai-business-intelligence-platform,

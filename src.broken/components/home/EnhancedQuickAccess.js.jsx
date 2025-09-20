@@ -1,8 +1,8 @@
-import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime';"
-import { Link  } from 'react-router-dom';"
-import { useTranslation } from 'react-i18next';"
-import { motion  } from 'framer-motion';"
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap  } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime',"
+import { Link  } from 'react-router-dom',"
+import { useTranslation } from 'react-i18next',"
+import { motion  } from 'framer-motion',"
+import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone, Sparkles, Zap  } from 'lucide-react',
 export default function Page() {
 ),"
             link: "/talent","
@@ -55,7 +55,7 @@ export default function Page() {
             borderColor: "border-zion-purple/20","
             hoverColor: "hover:border-zion-purple/40"
         }
-    ];
+    ],
     const containerVariants = {
 
         hidden: { opacity: 0 },
@@ -68,7 +68,7 @@ export default function Page() {
                 delayChildren: 0.2
             }
         }
-    };
+    },
     const itemVariants = {
 
   hidden: { opacity: 0, y: 20,
@@ -86,7 +86,7 @@ export default function Page() {
                 ease: "easeOut"
             }
         }
-    };"
+    },"
     return (_jsxs("section", { className: "relative py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark overflow-hidden", children[_jsxs("div", { className: "absolute inset-0", children[_jsx("div", { className: "absolute top-10 left-10 w-32 h-32 bg-zion-purple/5 rounded-full blur-3xl" }), _jsx("div", { className: "absolute bottom-10 right-10 w-40 h-40 bg-zion-cyan/5 rounded-full blur-3xl" }), _jsx("div", { className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-blue/5 rounded-full blur-3xl" })] }), _jsxs("div", { className: "container mx-auto px-4 relative z-10", children[_jsxs(motion.div, { className: "text-center mb-16", initial: { opacity: 0, y: 30 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true }, transition: { duration: 0.8 }, children[_jsxs("div", { className: "inline-flex items-center gap-2 mb-4 px-4 py-2 bg-zion-blue/20 border border-zion-blue/30 rounded-full backdrop-blur-sm", children[_jsx(Sparkles, { className: "h-4 w-4 text-zion-cyan" }), _jsx("span", { className: "text-zion-cyan text-sm font-medium", children: "Quick Access" })] }), _jsx("h2", { className: "text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-4", children: "Everything You Need" }), _jsx("p", { className: "text-zion-slate-light text-lg md:text-xl max-w-2xl mx-auto", children: "Jump directly to our most popular features and discover the power of Zion" })] }), _jsx(motion.div, { className: "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: quickLinks.map((link, index) => (_jsx(motion.div, { variants: itemVariants, whileHover: {
 
                                 y: -8,

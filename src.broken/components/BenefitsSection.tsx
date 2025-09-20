@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 export /**
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
+export default BenefitsSection,}}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading',
 export default function Page() {
 ,
   {
@@ -33,61 +33,61 @@ export default function Page() {
       "Transparent cost structure"
     ]
 
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
+import { GradientHeading } from "./GradientHeading",
+import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
 
 interface BenefitsSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
+  className?: string,
+  style?: React.CSSProperties,
 }
 
 const getBenefits = (t: any) => [
   {
     title: t('benefits.ai_matchmaking'),
     description: t('benefits.ai_matchmaking_desc'),
-    icon: <Bot className="w-8 h-8" />,
+    icon: <Bot className="w-8 h-8" />
   },
   {
     title: t('benefits.global_availability'),
     description: t('benefits.global_availability_desc'),
-    icon: <Globe className="w-8 h-8" />,
+    icon: <Globe className="w-8 h-8" />
   },
   {
     title: t('benefits.support_24_7'),
     description: t('benefits.support_24_7_desc'),
-    icon: <Clock className="w-8 h-8" />,
+    icon: <Clock className="w-8 h-8" />
   },
   {
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
-    icon: <TrendingDown className="w-8 h-8" />,
-  },
-];
+    icon: <TrendingDown className="w-8 h-8" />
+  }
+],
 
-  const [hoveredIndex, setHoveredIndex] = useState < number | null> (null) ;
+  const [hoveredIndex, setHoveredIndex] = useState < number | null> (null) ,
 
-  const stats = [;"
+  const stats = [,"
     { value: "500+", label: "Projects Delivered", icon: <Rocket className="w-6 h-6"  /> },"
     { value: "50+", label: "Expert Team Members", icon: <Users className="w-6 h-6"  /> },"
     { value: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6"  /> },"
-    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6"  /> }  ];
+    { value: "24/7", label: "Support Availability", icon: <Clock className="w-6 h-6"  /> }  ],
 
   return ("
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;
+    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">,
       {/* Background pattern */}"
-      <div className="absolute inset-0 opacity-5">;"
+      <div className="absolute inset-0 opacity-5">,"
         <div className="absolute inset-0" style={{
 
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
           backgroundSize: '40px 40px'
         }} />
-      </div>;
+      </div>,
 
       {/* Floating decorative elements */}"
-      <div className="absolute inset-0">;
+      <div className="absolute inset-0">,
         <motion.div"
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 }}"
@@ -129,7 +129,7 @@ const getBenefits = (t: any) => [
           whileInView="visible"
           viewport={{ once: true }}
 
-          {stats.map((stat, index) => (;
+          {stats.map((stat, index) => (,
             <motion.div
               key={index}
               variants={statsVariants}"
@@ -140,7 +140,7 @@ const getBenefits = (t: any) => [
               </div>"
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>"
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
-            </motion.div>;
+            </motion.div>,
           ))}
         </motion.div>
 
@@ -238,12 +238,12 @@ const getBenefits = (t: any) => [
           transition={{ duration: 0.6, delay: 0.6 }}"
           className="text-center mt-16"
 "
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;"
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">,"
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join hundreds of satisfied clients who have already experienced the Zion Tech Group difference
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
                 Get Started Today
               </button>"
@@ -254,8 +254,8 @@ const getBenefits = (t: any) => [
           </div>
         </motion.div>
       </div>
-    </section>) ;
-</div>};
+    </section>) ,
+</div>},
 
       </div>
     </section>) }

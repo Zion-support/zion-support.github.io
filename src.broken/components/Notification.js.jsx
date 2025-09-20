@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react',
 ,
   error: {
 
@@ -21,7 +21,7 @@ import { CheckCircle, XCircle, Info, X, AlertTriangle  } from 'lucide-react';
     bgColor: 'bg-zion-gold/10',
     borderColor: 'border-zion-gold/20',
     textColor: 'text-zion-gold',
-    iconColor: 'text-zion-gold'}};
+    iconColor: 'text-zion-gold'}},
 export function Notification({
 
   id,
@@ -31,23 +31,23 @@ export function Notification({
   duration = 5000,
   onClose}) {
 
-  const [isVisible, setIsVisible] = useState(true);
-  const styles = notificationStyles[type];
-  const Icon = styles.icon;
+  const [isVisible, setIsVisible] = useState(true),
+  const styles = notificationStyles[type],
+  const Icon = styles.icon,
   useEffect(() => {
     if(duration > 0) {
 
       const timer = setTimeout(() => {
-        handleClose();
-      }, duration);
-      return () => clearTimeout(timer);
+        handleClose(),
+      }, duration),
+      return () => clearTimeout(timer),
     }
-  }, [duration]);
+  }, [duration]),
   const handleClose = () => {
-    setIsVisible(false);
-    setTimeout(() => onClose(id), 300);
-  };
-  if(!isVisible) return null;
+    setIsVisible(false),
+    setTimeout(() => onClose(id), 300),
+  },
+  if(!isVisible) return null,
   return ()
     <div
       className={`${styles.bgColor} ${styles.borderColor} border rounded-lg p-4 shadow-lg animate-fade-in max-w-sm`}
@@ -62,14 +62,14 @@ export function Notification({
         </div>
         <button
           onClick={handleClose}"
-          className="text-muted-foreground hover:text-foreground transition-colors"
+          className="text-muted-foreground hover: text-foreground transition-colors"
           
         >"
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
-  );
+  )
 }
 export function NotificationContainer({ notifications, onClose }) {
 
@@ -83,6 +83,6 @@ export function NotificationContainer({ notifications, onClose }) {
         />
       ))}
     </div>
-  );
+  ),
 }
 '"`

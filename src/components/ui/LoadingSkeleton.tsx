@@ -1,24 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
+import React from "react";
+import { motion } from "framer-motion";
 interface SkeletonProps {
-  className?: string;
-  count?: number;
-  height?: string;
-  width?: string;
-  rounded?: string | boolean;
-  animated?: boolean;
+  className?: string,
+  count?: number,
+  height?: string,
+  width?: string,
+  rounded?: string | boolean,
+  animated?: boolean,
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
-  className = '', 
+  className = '';
   count = 1, 
   height = 'h-4', 
   width = 'w-full', 
   rounded = 'rounded',
   animated = true
 }) => {
-  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`,
   
   if (animated) {
     return (
@@ -28,12 +27,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             key={index}
             className={`animate-pulse ${baseClasses}`}
             animate={{
-              opacity: [0.5, 1, 0.5],
+              opacity: [0.5, 1, 0.5]
             }}
             transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
+              duration: 1.5,repeat: Infinity,ease: "easeInOut"
             }}
           />
         ))}
@@ -50,8 +47,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         />
       ))}
     </>
-  );
-};
+  ),
+},
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
@@ -67,7 +64,6 @@ export const CardSkeleton: React.FC = () => (
     <Skeleton height="h-4" width="w-4/6" />
   </div>
 );
-
 export const HeroSkeleton: React.FC = () => (
   <div className="animate-pulse">
     <div className="h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8"></div>
@@ -81,7 +77,6 @@ export const HeroSkeleton: React.FC = () => (
     </div>
   </div>
 );
-
 export const ServiceCardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-pulse">
     <div className="w-16 h-16 bg-gray-300 rounded-lg mb-4"></div>
@@ -94,11 +89,10 @@ export const ServiceCardSkeleton: React.FC = () => (
     </div>
   </div>
 );
-
 interface TableSkeletonProps {
-  rows?: number;
-  columns?: number;
-  className?: string;
+  rows?: number,
+  columns?: number,
+  className?: string
 }
 
 export function TableSkeleton({ 
@@ -133,24 +127,24 @@ export function TableSkeleton({
         ))}
       </div>
     </div>
-  );
+  ),
 }
 
 interface ListSkeletonProps {
-  items?: number;
-  className?: string;
+  items?: number,
+  className?: string,
   showAvatar?: boolean;
 }
 
 export function ListSkeleton({ 
-  items = 5, 
-  className = '',
+  items = 5;
+  className = '';
   showAvatar = false 
 }: ListSkeletonProps) {
   return (
     <div className={`space-y-4 ${className}`}>
       {Array.from({ length: items }).map((_, index) => (
-        <div key={index} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <div key={index} className="flex items-center space-x-4 p-4 bg-white dark: bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
           {showAvatar && (
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
           )}
@@ -165,16 +159,16 @@ export function ListSkeleton({
 }
 
 interface GridSkeletonProps {
-  items?: number;
-  columns?: number;
-  className?: string;
-  showImage?: boolean;
+  items?: number,
+  columns?: number,
+  className?: string,
+  showImage?: boolean,
 }
 
 export function GridSkeleton({ 
-  items = 6, 
-  columns = 3, 
-  className = '',
+  items = 6;
+  columns = 3;
+  className = '';
   showImage = true 
 }: GridSkeletonProps) {
   return (

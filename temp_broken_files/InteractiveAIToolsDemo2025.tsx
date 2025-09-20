@@ -1,6 +1,6 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   Play,
   Pause,
@@ -11,32 +11,32 @@ import {,
   Zap,
   Brain,
   Cpu,
-  Database;
-  BarChart3;
-  Image;
-  FileText;
-  Code;
-  Video;
-  Music;
-  CheckCircle;
-  AlertCircle;
-  Clock;
-  Star;
-  ArrowRight;
-  Sparkles,
-} from 'lucide-react';
+  Database,
+  BarChart3,
+  Image,
+  FileText,
+  Code,
+  Video,
+  Music,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Star,
+  ArrowRight,
+  Sparkles
+} from 'lucide-react',
 interface AITool {,
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  icon: React.ReactNode;
-  status: 'ready' | 'processing' | 'completed' | 'error';
-  input: string;
-  output: string;
-  processingTime: number;
-  accuracy: number;
-  features: string[],}
+  id: string,
+  name: string,
+  description: string,
+  category: string,
+  icon: React.ReactNode,
+  status: 'ready' | 'processing' | 'completed' | 'error',
+  input: string,
+  output: string,
+  processingTime: number,
+  accuracy: number,
+  features: string[]}
 ,
 const InteractiveAIToolsDemo2025: React.FC = () => {,
   return (,
@@ -48,7 +48,7 @@ const InteractiveAIToolsDemo2025: React.FC = () => {,
             <CardTitle>Analytics Overview</CardTitle>,
           </CardHeader>,
           <CardContent>,
-            <BarChart width={300,} height={200} data={data}>,
+            <BarChart width={300} height={200} data={data}>,
               <CartesianGrid strokeDasharray="3 3" />,
               <XAxis dataKey="name" />,
               <YAxis />,
@@ -58,10 +58,9 @@ const InteractiveAIToolsDemo2025: React.FC = () => {,
           </CardContent>,
         </Card>,
       </div>,
-    </div>,
-  );
-};
-export default UserDashboard,`;
+    </div>),
+},
+export default UserDashboard,`,
     'data-analyzer': `📊 Data Analysis Results,
 Dataset: Sales Performance Q1-Q3 2025,
 Records Analyzed: 15,847 transactions,
@@ -79,55 +78,55 @@ Recommendations:,
 1. Increase inventory for AI Solutions by 30%,
 2. Launch targeted marketing campaign for Q4,
 3. Implement customer retention program,
-4. Prepare for increased demand in December`;
-    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.',};
-  const currentTool = aiTools.find(tool => tool.id === selectedTool) || aiTools[0];
+4. Prepare for increased demand in December`,
+    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.'},
+  const currentTool = aiTools.find(tool => tool.id === selectedTool) || aiTools[0],
   const handleProcess = async () => {,
-    if (!inputText.trim()) return;
-    setIsProcessing(true);
-    setProgress(0);
+    if (!inputText.trim()) return,
+    setIsProcessing(true),
+    setProgress(0),
     // Simulate processing,
     const interval = setInterval(() => {,
       setProgress(prev => {,
         if (prev >= 100) {,
-          clearInterval(interval);
-          setIsProcessing(false);
+          clearInterval(interval),
+          setIsProcessing(false),
           setResults(prev => ({,
-            ...prev;
-            [selectedTool]: sampleOutputs[selectedTool as keyof typeof sampleOutputs] || 'Processing complete!',
-          }));
-          return 100;
+            ...prev,
+            [selectedTool]: sampleOutputs[selectedTool as keyof typeof sampleOutputs] || 'Processing complete!'
+          })),
+          return 100,
         }
-        return prev + Math.random() * 15;
-      });
-    }200);
-  };
+        return prev + Math.random() * 15,
+      }),
+    }200),
+  },
   const handleReset = () => {,
-    setInputText();
+    setInputText(),
     setResults(prev => {,
-      const newResults = { ...prev };
-      delete newResults[selectedTool];
-      return newResults;
-    });
-    setProgress(0);
-    setIsProcessing(false);
-  };
+      const newResults = { ...prev },
+      delete newResults[selectedTool],
+      return newResults,
+    }),
+    setProgress(0),
+    setIsProcessing(false),
+  },
   const handleDownload = () => {,
-    const result = results[selectedTool];
+    const result = results[selectedTool],
     if (result) {,
-      const blob = new Blob([result]{ type: 'text/plain' ,});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${currentTool.name}-output.txt`;
-      a.click();
-      URL.revokeObjectURL(url);
+      const blob = new Blob([result]{ type: 'text/plain' }),
+      const url = URL.createObjectURL(blob),
+      const a = document.createElement('a'),
+      a.href = url,
+      a.download = `${currentTool.name}-output.txt`,
+      a.click(),
+      URL.revokeObjectURL(url),
     }
-  };
+  },
   return (,
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -143,26 +142,26 @@ Recommendations:,
           </p>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
-          {/* Tools Sidebar */,}
+          {/* Tools Sidebar */}
           <div className="lg: col-span-1">,
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">,
               <h3 className="text-2xl font-bold text-white mb-6">AI Tools</h3>,
               <div className="space-y-3">,
                 {aiTools.map((tool) => (,
                   <button,
-                    key={tool.id,}
+                    key={tool.id}
                     onClick={() => {,
-                      setSelectedTool(tool.id);
-                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || );
+                      setSelectedTool(tool.id),
+                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || ),
                     }}
                     className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${,
                       selectedTool === tool.id,
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg',
-                        : 'bg-white/5 text-gray-300 hover: bg-white/10',}`}
+                        : 'bg-white/5 text-gray-300 hover: bg-white/10'}`}
                   >,
                     <div className="flex items-center mb-2">,
                       <div className={`p-2 rounded-lg mr-3 ${,
-                        selectedTool === tool.id ? 'bg-white/20' : 'bg-white/10',
+                        selectedTool === tool.id ? 'bg-white/20' : 'bg-white/10'
                       }`}>,
                         {tool.icon}
                       <div>,
@@ -176,7 +175,7 @@ Recommendations:,
           {/* Main Demo Area */}
           <div className="lg: col-span-2">,
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">,
-              {/* Tool Header */,}
+              {/* Tool Header */}
               <div className="flex items-center justify-between mb-8">,
                 <div className="flex items-center">,
                   <div className="p-3 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 mr-4">,
@@ -201,7 +200,7 @@ Recommendations:,
                   placeholder={sampleInputs[selectedTool as keyof typeof sampleInputs]}
                   className="w-full h-32 p-4 bg-white/5 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none",
                 />,
-              {/* Action Buttons */,}
+              {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 mb-8">,
                 <button,
                   onClick={handleProcess}
@@ -212,13 +211,11 @@ Recommendations:,
                     <>,
                       <Pause className="w-5 h-5 mr-2" />,
                       Processing...,
-                    </>,
-                  ) : (,
+                    </>) : (,
                     <>,
                       <Play className="w-5 h-5 mr-2" />,
                       Process,
-                    </>,
-                  ),}
+                    </>)}
                 <button,
                   onClick={handleReset}
                   className="flex items-center px-6 py-3 bg-white/10 text-white rounded-lg font-semibold hover: bg-white/20 transition-all duration-300",
@@ -227,12 +224,11 @@ Recommendations:,
                   Reset,
                 {results[selectedTool] && (,
                   <button,
-                    onClick={handleDownload,}
+                    onClick={handleDownload}
                     className="flex items-center px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover: bg-blue-600 transition-all duration-300",
                   >,
                     <Download className="w-5 h-5 mr-2" />,
-                    Download,
-                ),}
+                    Download)}
               {/* Progress Bar */}
               {isProcessing && (,
                 <div,
@@ -258,8 +254,7 @@ Recommendations:,
                       className="text-gray-300 whitespace-pre-wrap",
                     >,
                       {results[selectedTool]}
-                    </div>,
-                  ) : (,
+                    </div>) : (,
                     <div className="text-gray-500 italic">,
                       {isProcessing ? 'Processing your request...' : 'Click "Process" to see the AI output'}
                   )}
@@ -270,8 +265,7 @@ Recommendations:,
                   {currentTool.features.map((featureindex) => (,
                     <div key={index} className="flex items-center p-3 bg-white/5 rounded-lg">,
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />,
-                      <span className="text-gray-300 text-sm">{feature}</span>,
-                  ))}
+                      <span className="text-gray-300 text-sm">{feature}</span>))}
         {/* Call to Action */}
         <div,
           className="text-center mt-20",
@@ -292,5 +286,5 @@ Recommendations:,
         </div>,
       </div>,
     </div>,
-  );
-export default InteractiveAIToolsDemo2025;
+  ),
+export default InteractiveAIToolsDemo2025,

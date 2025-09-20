@@ -1,16 +1,16 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useNavigate } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { FavoriteButton } from "@/components/FavoriteButton",
+import { useNavigate } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
 
 export interface TalentCardProps {
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isAuthenticated: boolean;
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isAuthenticated: boolean
 }
 
 export function TalentCard({
@@ -19,29 +19,29 @@ export function TalentCard({
   onRequestHire,
   isAuthenticated
 }: TalentCardProps) {
-  const navigate = useNavigate();
+  const navigate = useNavigate(),
   
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    navigate(`/talent/${talent.id}`);
+    navigate(`/talent/${talent.id}`),
     
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
-      onViewProfile(talent.id);
+      onViewProfile(talent.id),
     }
-  };
+  },
 
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if (onRequestHire) {
-      onRequestHire(talent);
+      onRequestHire(talent)
     }
-  };
+  },
 
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [],
 
   return (
     <Card
@@ -148,10 +148,10 @@ export function TalentCard({
               size="sm"
               variant="ghost"
               onClick={(e) => {
-                e.stopPropagation();
-                handleViewProfile();
+                e.stopPropagation(),
+                handleViewProfile(),
               }}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               View <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
@@ -159,5 +159,5 @@ export function TalentCard({
         </div>
       </div>
     </Card>
-  );
+  )
 }

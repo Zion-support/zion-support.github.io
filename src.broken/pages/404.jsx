@@ -1,12 +1,12 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 
 export default function Page() {
-    ];
+    ],
     const quickLinks = [{ name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Search },
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Users }
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - black via - gray - 900 to - blue - 900 flex items - center justify - center px-4">
       <div className="max - w-4xl mx - auto text-center">
         {/* 404 Header */}
@@ -79,5 +79,5 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </div>) };
+    </div>) },
 }

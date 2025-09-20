@@ -10,9 +10,9 @@
       transition: {
         duration: 0.6,
         staggerChildren: 0.2
-      };
-    };
-  };
+      },
+    },
+  },
 
   return (
     <section
@@ -43,7 +43,7 @@
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helper', 'Enter the main contact for this request.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.name_helperEnter the main contact for this request.')}</p>
               <Input
                 type="email"
                 value={email}
@@ -57,26 +57,26 @@
                 onChange={(e) => setPhone(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helper', 'Include a direct line for urgent updates.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.phone_helperInclude a direct line for urgent updates.')}</p>
               <Input
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helper', 'Who do you represent?')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.company_helperWho do you represent?')}</p>
               <Input
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white"
                 required
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helper', 'Where do you need on-site support?')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.location_helperWhere do you need on-site support?')}</p>
               <Textarea
                 value={details}
                 onChange={(e) => setDetails(e.target.value)}
                 className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]"
               />
-              <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helper', 'Share any important context for our technicians.')}</p>
+              <p className="text-xs text-zion-slate-light">{t('onsite_form.details_helperShare any important context for our technicians.')}</p>
               <Button
                 type="submit"
                 disabled={isSubmitting}
@@ -90,7 +90,7 @@
             </form>
           </div>
           <p className="text-xs text-center text-zion-slate-light mt-3">
-            {t('onsite_form.privacy_notice', 'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+            {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
           </p>
         </div>
       </div>
@@ -197,29 +197,29 @@
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center">
 =======
-import React, { useState } from "react";
-import Image from "next/image";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import axios from "axios";
+import React, { useState } from "react",
+import Image from "next/image",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { useToast } from "@/hooks/use-toast",
+import axios from "axios",
 import { Loader2 } from 'lucide-react'
-import { useTranslation } from "react-i18next";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useTranslation } from "react-i18next",
+import {logErrorToProduction} from '@/utils/productionLogger',
 
-  const [location, setLocation] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [location, setLocation] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   
-  const handleSubmit = async e: React.FormEvent {;    e.preventDefault();
+  const handleSubmit = async e: React.FormEvent {,    e.preventDefault(),
     if(location.trim()) {
 
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       // Simulate API call
       setTimeout(: unknown {
-        setIsSubmitting(false);
-        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}};
+        setIsSubmitting(false),
+        router(`/it-onsite-services?location = ${encodeURIComponent(location)}`)}, 1000)}}}}}}}}}},
 
             "
             <div className="space-y-6">"
@@ -272,11 +272,11 @@ import {logErrorToProduction} from '@/utils/productionLogger';
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>"
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>
               </div>
-            </div>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </section>;
+            </div>,
+          </motion.div>,
+        </div>,
+      </div>,
+    </section>,
   )}
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

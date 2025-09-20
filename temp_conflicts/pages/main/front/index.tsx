@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
 
 export default function FrontLanding() {
   return (
@@ -86,10 +86,10 @@ export default function FrontLanding() {
             {/* Quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                ['24/7', 'Autonomous'],
-                ['Main', 'Direct Sync'],
-                ['0 Ops', 'Cloud‑Native'],
-                ['Safety', 'Guardrails'],
+                ['24/7Autonomous'],
+                ['MainDirect Sync'],
+                ['0 OpsCloud‑Native'],
+                ['SafetyGuardrails']
               ].map(([k, v]) => (
                 <motion.div
                   key={k}
@@ -112,14 +112,10 @@ export default function FrontLanding() {
               <div className="marquee">
                 <div className="marquee__track">
                   {[
-                    'Autonomous Agents',
-                    'Repo Sync to Main',
-                    'Zero‑Ops Cloud',
-                    'Safety Guardrails',
-                    'A11y + Performance',
-                    'Observability',
-                    'SEO Automation',
-                    'Design Evolution',
+                    'Autonomous AgentsRepo Sync to Main',
+                    'Zero‑Ops CloudSafety Guardrails',
+                    'A11y + PerformanceObservability',
+                    'SEO AutomationDesign Evolution'
                   ].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" /> {label}
@@ -132,13 +128,13 @@ export default function FrontLanding() {
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
               {[
-                ['Automation Hub', '/automation'],
-                ['SEO Audit', '/reports/seo'],
-                ['AI Trends', '/reports/ai-trends'],
-                ['Competitive Intelligence', '/reports/competitive-intel'],
-                ['Performance Budget', '/reports/performance-budget'],
-                ['Newsroom', '/newsroom'],
-                ['Site Health', '/site-health'],
+                ['Automation Hub/automation'],
+                ['SEO Audit/reports/seo'],
+                ['AI Trends/reports/ai-trends'],
+                ['Competitive Intelligence/reports/competitive-intel'],
+                ['Performance Budget/reports/performance-budget'],
+                ['Newsroom/newsroom'],
+                ['Site Health/site-health']
               ].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
@@ -231,7 +227,7 @@ export default function FrontLanding() {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-14">
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
               <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">AI SEO Auditor</div>
   <div className="mt-1 text-sm text-white/75">On‑site improvements</div>
@@ -275,7 +271,7 @@ export default function FrontLanding() {
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
   <a href="/.netlify/functions/alt-text-suggester-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">Alt‑Text Suggester</div>
-  <div className="mt-1 text-sm text-white/75">Proposes accessible alt text; commits reports</div>
+  <div className="mt-1 text-sm text-white/75">Proposes accessible alt text, commits reports</div>
   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
   <a href="/.netlify/functions/components-catalog-runner" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
   <div className="text-base font-semibold">Components Catalog</div>
@@ -298,21 +294,21 @@ export default function FrontLanding() {
         <aside className="fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 lg:block">
           <nav aria-label="Quick section navigation" className="space-y-2">
             {[
-              ['#command-center', 'Command'],
-              ['#feature-map', 'Map'],
-              ['#engines', 'Engines'],
-              ['#suites', 'Suites'],
-              ['#capabilities', 'Capabilities'],
-              ['#use-cases', 'Use Cases'],
-              ['#pillars', 'Pillars'],
-              ['#benefits', 'Benefits'],
-              ['#templates', 'Templates'],
-              ['#demos', 'Demos'],
-              ['#highlights', 'Highlights'],
-              ['#cases', 'Cases'],
-              ['#reports', 'Reports'],
-              ['#guardrails', 'Guardrails'],
-              ['#roadmap', 'Docs'],
+              ['#command-centerCommand'],
+              ['#feature-mapMap'],
+              ['#enginesEngines'],
+              ['#suitesSuites'],
+              ['#capabilitiesCapabilities'],
+              ['#use-casesUse Cases'],
+              ['#pillarsPillars'],
+              ['#benefitsBenefits'],
+              ['#templatesTemplates'],
+              ['#demosDemos'],
+              ['#highlightsHighlights'],
+              ['#casesCases'],
+              ['#reportsReports'],
+              ['#guardrailsGuardrails'],
+              ['#roadmapDocs']
             ].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
@@ -334,7 +330,7 @@ export default function FrontLanding() {
 
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">We run outside GitHub Actions using scheduled cloud functions and orchestrators. Explore the engines below.</p>
 
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             <a
               href="/api/front-enhancer"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"
@@ -359,7 +355,7 @@ export default function FrontLanding() {
             >
               <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
               <div className="text-lg font-semibold">Performance Budget Watcher</div>
-              <p className="mt-1 text-sm text-white/75">Monitors asset sizes; flags budget risks.</p>
+              <p className="mt-1 text-sm text-white/75">Monitors asset sizes, flags budget risks.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Open report →</div>
             </a>
             <a
@@ -468,12 +464,12 @@ export default function FrontLanding() {
               { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
               { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
               { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
-              { label: 'Smart Redirect Manager', desc: 'Fixes internal 404s; updates public/_redirects and report.', href: '/.netlify/functions/redirect-manager' },
+              { label: 'Smart Redirect Manager', desc: 'Fixes internal 404s, updates public/_redirects and report.', href: '/.netlify/functions/redirect-manager' },
               { label: 'A11y Alt‑Text Auditor', desc: 'Scans for missing alt attributes and publishes reports.', href: '/.netlify/functions/a11y-audit-runner' },
               { label: 'Terminology Consistency', desc: 'Normalizes product terminology across docs and README.', href: '/.netlify/functions/terminology-consistency-runner' },
               { label: 'Cloud Automation Inventor', desc: 'Drafts new useful cloud automations on a fast cadence.', href: '/.netlify/functions/cloud-automation-inventor' },
               { label: 'Autonomous Front Advertiser', desc: 'Curates homepage promos with live cloud function links.', href: '/.netlify/functions/autonomous-front-advertiser' },
-              { label: 'Hyper Sync Committer', desc: 'Commits heartbeat stamps to keep pipelines hot.', href: '/.netlify/functions/hyper-sync-committer' },
+              { label: 'Hyper Sync Committer', desc: 'Commits heartbeat stamps to keep pipelines hot.', href: '/.netlify/functions/hyper-sync-committer' }
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -502,7 +498,7 @@ export default function FrontLanding() {
               { Icon: Gauge, title: 'Site Health', desc: 'A11y, performance, and link integrity', href: '/site-health' },
               { Icon: Globe, title: 'AI Trends Radar', desc: 'Signals that inspire new automations', href: '/reports/ai-trends' },
               { Icon: GitBranch, title: 'Main Sync', desc: 'Safe, incremental diffs shipped continuously', href: '/automation' },
-              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth quality gates', href: '/site-health' },
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth quality gates', href: '/site-health' }
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
@@ -536,7 +532,7 @@ export default function FrontLanding() {
               { label: 'Reduce engineering toil', desc: 'Automated upgrades, refactors, and maintenance', href: '/automation' },
               { label: 'Ship faster with confidence', desc: 'Small safe diffs synced to main', href: '/automation' },
               { label: 'Stay compliant & accessible', desc: 'Policy guardrails and WCAG checks', href: '/site-health' },
-              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' },
+              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' }
             ].map((b) => (
               <Link key={b.label} href={b.href}>
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -568,7 +564,7 @@ export default function FrontLanding() {
               { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: 'https://github.com/Zion-Holdings/zion.app/actions', external: true },
               { title: 'Site Health', desc: 'A11y, performance, link checks dashboards', href: '/site-health' },
               { title: 'AI SEO Auditor', desc: 'Continuous on‑site audits with safe proposed diffs', href: '/reports/seo' },
-              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' },
+              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' }
             ].map((suite) => (
               <article key={suite.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -599,7 +595,7 @@ export default function FrontLanding() {
             {[
               { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },
               { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' },
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' },
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }
             ].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -662,7 +658,7 @@ export default function FrontLanding() {
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
               { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
               { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
-              { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' },
+              { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }
             ].map((f) => (
               <motion.article
                 key={f.title}
@@ -705,7 +701,7 @@ export default function FrontLanding() {
                   { label: 'Cleaner codebase', href: '/automation' },
                   { label: 'Better content curation', href: '/newsroom' },
                   { label: 'Operational visibility', href: '/site-health' },
-                  { label: 'Experiment velocity', href: '/automation' },
+                  { label: 'Experiment velocity', href: '/automation' }
                 ]
                   .flatMap((item) => [item, item])
                   .map((item, idx) => (
@@ -746,7 +742,7 @@ export default function FrontLanding() {
               { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' },
               { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' },
               { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' },
-              { label: 'Docs & Guides', desc: 'Technical notes', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true },
+              { label: 'Docs & Guides', desc: 'Technical notes', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true }
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
@@ -815,7 +811,7 @@ export default function FrontLanding() {
               { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higher‑order systems.', href: '/automation' },
               { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' },
               { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' },
-              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' },
+              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
@@ -902,7 +898,7 @@ export default function FrontLanding() {
               { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' },
               { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' },
               { Icon: Cpu, title: 'Zero-Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' },
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' }
             ].map(({ Icon, title, desc, href, external }) => (
               external ? (
                 <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring">
@@ -937,14 +933,14 @@ export default function FrontLanding() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ['SEO Automation', 'On-site scans and safe diffs to improve visibility', '/reports/seo'],
-              ['Site Health', 'A11y, performance, and resilient links at a glance', '/site-health'],
-              ['Automation Hub', 'Factories and live autonomous workflows', '/automation'],
-              ['AI Trends Radar', 'Signals inspiring new factories and experiments', '/reports/ai-trends'],
-              ['Newsroom', 'Curated updates and product evolution highlights', '/newsroom'],
-              ['Live Pipelines', 'Observe CI pipelines, logs, and artifacts', 'https://github.com/Zion-Holdings/zion.app/actions'],
-              ['Documentation', 'Technical notes, guides, and changelog', 'https://github.com/Zion-Holdings/zion.app/tree/main/docs'],
-              ['AI Changelog', 'Summarized autonomous changes and highlights', 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md'],
+              ['SEO AutomationOn-site scans and safe diffs to improve visibility', '/reports/seo'],
+              ['Site HealthA11y, performance, and resilient links at a glance', '/site-health'],
+              ['Automation HubFactories and live autonomous workflows', '/automation'],
+              ['AI Trends RadarSignals inspiring new factories and experiments', '/reports/ai-trends'],
+              ['NewsroomCurated updates and product evolution highlights', '/newsroom'],
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts', 'https://github.com/Zion-Holdings/zion.app/actions'],
+              ['DocumentationTechnical notes, guides, and changelog', 'https://github.com/Zion-Holdings/zion.app/tree/main/docs'],
+              ['AI ChangelogSummarized autonomous changes and highlights', 'https://github.com/Zion-Holdings/zion.app/blob/main/docs/CHANGELOG_AI.md']
             ].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -984,7 +980,7 @@ export default function FrontLanding() {
               { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
               { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
               { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
-              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' },
+              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' }
             ].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1012,7 +1008,7 @@ export default function FrontLanding() {
               { label: 'Automated Edits', value: '3,500+', href: '/automation' },
               { label: 'Uptime', value: '99.95%', href: '/site-health' },
               { label: 'A11y Checks', value: '20k+', href: '/site-health' },
-              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' },
+              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' }
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30">
@@ -1038,7 +1034,7 @@ export default function FrontLanding() {
             {[
               { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
               { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' },
+              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }
             ].map((c) => (
               <motion.article
                 key={c.title}
@@ -1061,10 +1057,8 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits</h2>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human intervention',
-              'Rapid feedback loop with safe, incremental edits',
-              'Continuous delivery directly to main branch',
-              'Fewer regressions via layered checks and reports',
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branchFewer regressions via layered checks and reports'
             ].map((b) => (
               <motion.div
                 key={b}
@@ -1155,7 +1149,7 @@ export default function FrontLanding() {
               { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
               { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
               { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' },
-              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true },
+              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: 'https://github.com/Zion-Holdings/zion.app/tree/main/docs', external: true }
             ].map((item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
@@ -1221,7 +1215,7 @@ export default function FrontLanding() {
               { label: 'Zero‑Ops Cloud‑Native', desc: 'No servers to babysit', href: '/automation' },
               { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' },
               { label: 'Faster Iteration Loops', desc: 'Shorten idea‑to‑impact', href: '/newsroom' },
-              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' },
+              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' }
             ].map((b) => (
               <Link key={b.label} href={b.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
@@ -1331,7 +1325,7 @@ export default function FrontLanding() {
               { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' },
               { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' },
               { title: 'Deps Auto‑Upgrade (cloud)', desc: 'Continuously bumps deps and pushes PRs safely.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
-              { title: 'Sitemap Pinger', desc: 'Regenerates sitemap and pings search engines.', href: '/.netlify/functions/sitemap-pinger' },
+              { title: 'Sitemap Pinger', desc: 'Regenerates sitemap and pings search engines.', href: '/.netlify/functions/sitemap-pinger' }
             ].map((card) => (
               <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1471,5 +1465,5 @@ export default function FrontLanding() {
         </button>
       )}
     </div>
-  );
+  ),
 }

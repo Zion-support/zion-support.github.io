@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe export const ServiceIncludes = () => {
   const servicePackages = [{
 
@@ -6,58 +6,58 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       description: 'Essential IT services for small businesses',
       price: 'Starting at $299/month',
       popular: false,
-      includes[;
+      includes[,
         '24/7 Help Desk Support',Remote Troubleshooting',Basic Network Monitoring',Monthly Health Reports',Email Support',Up to 25 Users',Basic Security Monitoring',Backup Verification'
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'On-site Visits',Hardware Installation',Advanced Security Features',Priority Support',Custom Reporting',Strategic IT Planning'
-      ],;
-      features[;
+      ],
+      features[,
         { name: 'Response Time', value: '4-8 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Basic', icon: Shield },
         { name: 'Reporting', value: 'Monthly', icon: FileText }
       ]
-    },;
+    },
     {
 
       name: 'Professional Package',
       description: 'Comprehensive IT services for growing businesses',
       price: 'Starting at $599/month',
       popular: true,
-      includes[;
+      includes[,
         'Everything in Basic Package',On-site Support(2 visits/month),Hardware Installation & Setup',Advanced Network Security',Weekly Performance Reports',Phone & Email Support',Up to 100 Users',Emergency Response(4hr),Network Optimization',Security Audits(Quarterly),User Training Sessions',Strategic IT Consulting'
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'Unlimited On-site Visits',Dedicated IT Manager',Custom Software Development',Hardware Procurement',Advanced Analytics'
-      ],;
-      features[;
+      ],
+      features[,
         { name: 'Response Time', value: '2-4 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Advanced', icon: Shield },
         { name: 'Reporting', value: 'Weekly', icon: FileText }
       ]
-    },;
+    },
     {
 
       name: 'Enterprise Package',
       description: 'Full-service IT management for large organizations',
       price: 'Starting at $1,299/month',
       popular: false,
-      includes[;
+      includes[,
         'Everything in Professional Package',Unlimited On-site Support',Dedicated IT Manager',Advanced Security Suite',Real-time Monitoring & Alerting',Daily Performance Reports',Unlimited Users',Emergency Response(2hr),Strategic IT Planning',Compliance Management',Custom Solutions Development',Advanced Analytics & Insights',Executive Reporting',Vendor Management',Technology Roadmap Planning'
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         'Custom Hardware Development',Third-party Software Licensing',Legal Compliance Services',Insurance Requirements'
-      ],;
-      features[;
+      ],
+      features[,
         { name: 'Response Time', value: '1-2 hours', icon: Clock },
         { name: 'Support Hours', value: '24/7', icon: Users },
         { name: 'Security Level', value: 'Enterprise', icon: Shield },
         { name: 'Reporting', value: 'Daily', icon: FileText }
       ]
 
-  ];
+  ],
 
   const additionalServices = [{
 
@@ -101,7 +101,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
       description: 'Complete cloud infrastructure migration services',
       icon: Globe
 
-  ];
+  ],
 
   return ()
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">"
@@ -126,7 +126,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
                   : 'border-gray-200 hover:border-gray-300'`
               }`}
 
-              {pkg.popular && (;"
+              {pkg.popular && (,"
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                   <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                     Most Popular
@@ -196,7 +196,7 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
 
                   Get Started
                 </button>
-              </div>;
+              </div>,
             </div>
           ))}
         </div>
@@ -286,5 +286,5 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         </div>
       </div>
     </section>
-  )};
+  )},
 '"`

@@ -1,5 +1,5 @@
 <<<<<<< HEAD
- from 'lucide-react';
+ from 'lucide-react',
 
 const mockSystemMetrics = [{
 
@@ -72,8 +72,8 @@ const mockSystemMetrics = [{
     trend: 'down',
     change: -3.2,
     category: 'Performance',
-    lastUpdated: '2024-01-15T10:00:00.000Z'},
-];
+    lastUpdated: '2024-01-15T10:00:00.000Z'}
+],
 
 const mockPerformanceAlerts = [{
 
@@ -86,7 +86,7 @@ const mockPerformanceAlerts = [{
     timestamp: '2024-01-15T10:00:00.000Z',
     affected: ['Web Server 1',Application Server 2'],
     recommendations: ['
-      'Scale horizontally',Optimize database queries',Review background processes',
+      'Scale horizontally',Optimize database queries',Review background processes'
     ],
     status: 'active'},
   {
@@ -100,91 +100,91 @@ const mockPerformanceAlerts = [{
     timestamp: '2024-01-15T09:45:00.000Z',
     affected: ['Database Cluster',Application Servers'],
     recommendations: ['
-      'Increase connection pool size',Implement connection pooling',Monitor query performance',
+      'Increase connection pool size',Implement connection pooling',Monitor query performance'
     ],
-    status: 'active'},
-];
+    status: 'active'}
+],
 
 export function AdvancedPerformanceMonitor({ enabled = true }) {
 
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [selectedMetric, setSelectedMetric] = useState(null);
-  const [refreshInterval, setRefreshInterval] = useState(5000);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const [showAlerts, setShowAlerts] = useState(true);
-  const [performanceScore, setPerformanceScore] = useState(87);
-  const [trendData, setTrendData] = useState([]);
-  const [systemHealth, setSystemHealth] = useState('good');
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false),
+  const [isMinimized, setIsMinimized] = useState(false),
+  const [selectedMetric, setSelectedMetric] = useState(null),
+  const [refreshInterval, setRefreshInterval] = useState(5000),
+  const [isRefreshing, setIsRefreshing] = useState(false),
+  const [showAlerts, setShowAlerts] = useState(true),
+  const [performanceScore, setPerformanceScore] = useState(87),
+  const [trendData, setTrendData] = useState([]),
+  const [systemHealth, setSystemHealth] = useState('good'),
+  const [optimizationSuggestions, setOptimizationSuggestions] = useState([]),
 
-  const containerRef = useRef(null) ;
+  const containerRef = useRef(null) ,
 
   useEffect(() => {
-    if(!enabled) return;
+    if(!enabled) return,
 
     const interval = setInterval(() => {
-      refreshMetrics () ;
-    }, refreshInterval) ;
+      refreshMetrics () ,
+    }, refreshInterval) ,
 
-    return () => clearInterval(interval) ;
-  }, [enabled, refreshInterval]) ;
+    return () => clearInterval(interval) ,
+  }, [enabled, refreshInterval]) ,
 
   const refreshMetrics = async () => {
-    setIsRefreshing(true) ;
+    setIsRefreshing(true) ,
     // Simulate API call
-    await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-    setIsRefreshing(false) ;
-  };
+    await new Promise(resolve => setTimeout (resolve, 1000) ) ,
+    setIsRefreshing(false) ,
+  },
 
   const getStatusColor = status => {
 
     switch(status) {
 
       case 'critical':'
-        return 'text-red-500';
+        return 'text-red-500',
       case 'warning':'
-        return 'text-yellow-500';
+        return 'text-yellow-500',
       case 'normal':'
-        return 'text-green-500';
-      default:'
-        return 'text-gray-500';
+        return 'text-green-500',
+      default: '
+        return 'text-gray-500'
     }
-  };
+  },
 
   const getStatusIcon = status => {
 
     switch(status) {
 
       case 'critical':
-        return <AlertTriangle className="w-4 h-4 text-red-500" />;
+        return <AlertTriangle className="w-4 h-4 text-red-500" />,
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500" />,
       case 'normal':"
-        return <CheckCircle className="w-4 h-4 text-green-500" />;
-      default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <CheckCircle className="w-4 h-4 text-green-500" />,
+      default: "
+        return <Activity className="w-4 h-4 text-gray-500" />
     }
-  };
+  },
 
   const getTrendIcon = trend => {
 
     switch(trend) {
 
       case 'up':"
-        return <TrendingUp className="w-4 h-4 text-red-500" />;
+        return <TrendingUp className="w-4 h-4 text-red-500" />,
       case 'down':
         return ("
           <TrendingUp className="w-4 h-4 text-green-500 transform rotate-180" />
-        );
+        ),
       case 'stable':"
-        return <BarChart3 className="w-4 h-4 text-blue-500" />;
-      default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <BarChart3 className="w-4 h-4 text-blue-500" />,
+      default: "
+        return <Activity className="w-4 h-4 text-gray-500" />
     }
-  };
+  },
 
-  if(!enabled) return null;
+  if(!enabled) return null,
 
   if(isMinimized) {
 
@@ -192,11 +192,11 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
       <div className="fixed bottom-4 right-4 z-50">
         <button
           onClick={() => setIsMinimized(false)}"
-          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover:bg-zion-blue/80 transition-all duration-300"
+          className="bg-zion-blue text-white p-3 rounded-full shadow-lg hover: bg-zion-blue/80 transition-all duration-300"
         >"
           <Maximize2 className="w-5 h-5" />
         </button>
-      </div>) ;
+      </div>) 
   }
 
   return ()
@@ -366,9 +366,9 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
             </div>
           </div>) }
       </div>
-    </div>) ;
+    </div>) ,
 }
 '"`
 =======
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react',
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

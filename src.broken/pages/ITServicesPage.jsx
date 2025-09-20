@@ -1,5 +1,5 @@
-import React from 'react';
-import { Badge } from '@/components / ui / badge';
+import React from 'react',
+import { Badge } from '@/components / ui / badge',
 export default function Page() {
 ,
     {
@@ -7,238 +7,195 @@ export default function Page() {
       description:
         'Expert database administration, optimization, and migration services for all major database platforms.',
       price: '$1,000 - $6,000 / month',
-      features: ['Performance tuning',
-        'Backup & recovery',
-        'Security hardening',
-        'Migration support',
-        'High availability',
-        'Monitoring',
+      features: ['Performance tuningBackup & recovery',
+        'Security hardeningMigration support',
+        'High availabilityMonitoring'
       ],
       icon: <Database className="h-8 w-8 text-green -500" />,
       category: 'Database',
       link: 'https://ziontechgroup.com / database - management',
       details:
-        'Professional database management services ensuring optimal performance, security, and reliability for your critical data.',
+        'Professional database management services ensuring optimal performance, security, and reliability for your critical data.'
     },
     {
       title: 'Network Infrastructure',
       description:
         'Design, implement, and maintain robust network solutions with enterprise - grade security.',
       price: '$2,500 - $20,000',
-      features: ['Network design',
-        'Security implementation',
-        'Monitoring',
-        '24 / 7 support',
-        'SD - WAN',
-        'Network automation',
+      features: ['Network designSecurity implementation',
+        'Monitoring24 / 7 support',
+        'SD - WANNetwork automation'
       ],
       icon: <Globe className="h-8 w-8 text-purple -500" />,
       category: 'Networking',
       link: 'https://ziontechgroup.com / network - infrastructure',
       details:
-        'Enterprise - grade network infrastructure with advanced security, monitoring, and automation capabilities.',
+        'Enterprise - grade network infrastructure with advanced security, monitoring, and automation capabilities.'
     },
     {
       title: 'IT Consulting & Strategy',
       description:
         'Strategic IT planning and digital transformation guidance for modern businesses.',
       price: '$150 - $300 / hour',
-      features: ['Technology assessment',
-        'Roadmap planning',
-        'Vendor selection',
-        'ROI analysis',
-        'Digital transformation',
-        'IT governance',
+      features: ['Technology assessmentRoadmap planning',
+        'Vendor selectionROI analysis',
+        'Digital transformationIT governance'
       ],
       icon: <CheckCircle className="h-8 w-8 text-cyan -500" />,
       category: 'Consulting',
       link: 'https://ziontechgroup.com / it - consulting',
       details:
-        'Strategic IT consulting helping businesses align technology with business objectives and drive digital transformation.',
+        'Strategic IT consulting helping businesses align technology with business objectives and drive digital transformation.'
     },
     {
       title: 'Managed IT Services',
       description:
         'Complete IT management for small to enterprise businesses with proactive monitoring and support.',
       price: '$500 - $5,000 / month',
-      features: ['Help desk support',
-        'System administration',
-        'Security management',
-        'Backup services',
-        'Proactive monitoring',
-        'Vendor management',
+      features: ['Help desk supportSystem administration',
+        'Security managementBackup services',
+        'Proactive monitoringVendor management'
       ],
       icon: <Settings className="h-8 w-8 text-indigo -500" />,
       category: 'Managed Services',
       badge: 'New',
       link: 'https://ziontechgroup.com / managed - it',
       details:
-        'Comprehensive managed IT services providing peace of mind with 24 / 7 monitoring, support, and proactive maintenance.',
+        'Comprehensive managed IT services providing peace of mind with 24 / 7 monitoring, support, and proactive maintenance.'
     },
     {
       title: 'Data Center Services',
       description:
         'On - premise and colocation data center solutions with enterprise - grade infrastructure.',
       price: '$1,000 - $10,000 / month',
-      features: ['Hardware provisioning',
-        'Environmental monitoring',
-        'Power management',
-        'Security',
-        'Backup power',
-        'Climate control',
+      features: ['Hardware provisioningEnvironmental monitoring',
+        'Power managementSecurity',
+        'Backup powerClimate control'
       ],
       icon: <Server className="h-8 w-8 text-gray -500" />,
       category: 'Data Center',
       link: 'https://ziontechgroup.com / data - center',
       details:
-        'Enterprise - grade data center services with redundant power, cooling, and security systems for mission - critical applications.',
+        'Enterprise - grade data center services with redundant power, cooling, and security systems for mission - critical applications.'
     },
     {
       title: 'Mobile App Development',
       description:
         'Custom mobile applications for iOS and Android with modern development practices.',
       price: '$15,000 - $100,000',
-      features: ['UI / UX design',
-        'Native development',
-        'Testing',
-        'App store deployment',
-        'Maintenance',
-        'Performance optimization',
+      features: ['UI / UX designNative development',
+        'TestingApp store deployment',
+        'MaintenancePerformance optimization'
       ],
       icon: <Smartphone className="h-8 w-8 text-orange -500" />,
       category: 'Development',
       link: 'https://ziontechgroup.com / mobile - development',
       details:
-        'Professional mobile app development with modern frameworks, comprehensive testing, and ongoing maintenance support.',
+        'Professional mobile app development with modern frameworks, comprehensive testing, and ongoing maintenance support.'
     },
     {
       title: 'Web Development',
       description:
         'Modern web applications and e - commerce solutions with responsive design and SEO optimization.',
       price: '$10,000 - $75,000',
-      features: ['Responsive design',
-        'SEO optimization',
-        'Performance tuning',
-        'Maintenance',
-        'Security',
-        'Analytics integration',
+      features: ['Responsive designSEO optimization',
+        'Performance tuningMaintenance',
+        'SecurityAnalytics integration'
       ],
       icon: <Globe className="h-8 w-8 text-teal -500" />,
       category: 'Development',
       link: 'https://ziontechgroup.com / web - development',
       details:
-        'Modern web development services creating fast, secure, and scalable web applications optimized for search engines.',
+        'Modern web development services creating fast, secure, and scalable web applications optimized for search engines.'
     },
     {
       title: 'AI & Machine Learning',
       description:
         'Custom AI solutions and machine learning models for business automation and insights.',
       price: '$5,000 - $50,000',
-      features: ['Custom AI models',
-        'Data preprocessing',
-        'Model training',
-        'API integration',
-        'Performance monitoring',
-        'Continuous learning',
+      features: ['Custom AI modelsData preprocessing',
+        'Model trainingAPI integration',
+        'Performance monitoringContinuous learning'
       ],
       icon: <Brain className="h-8 w-8 text-pink -500" />,
       category: 'AI / ML',
       badge: 'Innovative',
       link: 'https://ziontechgroup.com / ai - ml',
       details:
-        'Cutting - edge AI and machine learning solutions automating business processes and providing actionable insights from data.',
+        'Cutting - edge AI and machine learning solutions automating business processes and providing actionable insights from data.'
     },
     {
       title: 'Blockchain Development',
       description:
         'Blockchain solutions including smart contracts, DApps, and enterprise blockchain integration.',
       price: '$20,000 - $150,000',
-      features: ['Smart contracts',
-        'DApp development',
-        'Blockchain integration',
-        'Security auditing',
-        'DeFi solutions',
-        'NFT platforms',
+      features: ['Smart contractsDApp development',
+        'Blockchain integrationSecurity auditing',
+        'DeFi solutionsNFT platforms'
       ],
       icon: <Lock className="h-8 w-8 text-emerald -500" />,
       category: 'Blockchain',
       badge: 'Emerging',
       link: 'https://ziontechgroup.com / blockchain',
       details:
-        'Innovative blockchain development services creating secure, transparent, and decentralized solutions for modern businesses.',
+        'Innovative blockchain development services creating secure, transparent, and decentralized solutions for modern businesses.'
     },
     {
       title: 'IoT Solutions',
       description:
         'Internet of Things platforms and solutions for connected devices and smart systems.',
       price: '$8,000 - $60,000',
-      features: ['IoT platform development',
-        'Device integration',
-        'Data analytics',
-        'Real - time monitoring',
-        'Automation',
-        'Security',
+      features: ['IoT platform developmentDevice integration',
+        'Data analyticsReal - time monitoring',
+        'AutomationSecurity'
       ],
       icon: <Wifi className="h-8 w-8 text-blue -500" />,
       category: 'IoT',
       link: 'https://ziontechgroup.com / iot - solutions',
       details:
-        'Comprehensive IoT solutions connecting devices, collecting data, and creating intelligent automation systems.',
+        'Comprehensive IoT solutions connecting devices, collecting data, and creating intelligent automation systems.'
     },
     {
       title: 'Data Analytics & BI',
       description:
         'Business intelligence solutions with advanced analytics, reporting, and data visualization.',
       price: '$3,000 - $25,000',
-      features: ['Data warehousing',
-        'ETL processes',
-        'Advanced analytics',
-        'Interactive dashboards',
-        'Predictive modeling',
-        'Real - time reporting',
+      features: ['Data warehousingETL processes',
+        'Advanced analyticsInteractive dashboards',
+        'Predictive modelingReal - time reporting'
       ],
       icon: <BarChart3 className="h-8 w-8 text-purple -500" />,
       category: 'Analytics',
       link: 'https://ziontechgroup.com / data - analytics',
       details:
-        'Comprehensive data analytics and business intelligence solutions transforming raw data into actionable business insights.',
+        'Comprehensive data analytics and business intelligence solutions transforming raw data into actionable business insights.'
     },
     {
       title: 'Disaster Recovery',
       description:
         'Comprehensive disaster recovery and business continuity solutions for critical business operations.',
       price: '$2,000 - $15,000',
-      features: ['Backup strategies',
-        'Recovery planning',
-        'Testing',
-        'Documentation',
-        'Training',
-        '24 / 7 support',
+      features: ['Backup strategiesRecovery planning',
+        'TestingDocumentation',
+        'Training24 / 7 support'
       ],
       icon: <HardDrive className="h-8 w-8 text-red -500" />,
       category: 'Recovery',
       link: 'https://ziontechgroup.com / disaster - recovery',
       details:
-        'Robust disaster recovery solutions ensuring business continuity and rapid recovery from any disruption.',
-    },
-  ];
+        'Robust disaster recovery solutions ensuring business continuity and rapid recovery from any disruption.'
+    }
+  ],
 
-  const categories = ['All Services',
-    'Cloud',
-    'Security',
-    'DevOps',
-    'Database',
-    'Networking',
-    'Consulting',
-    'Managed Services',
-    'Data Center',
-    'Development',
-    'AI / ML',
-    'Blockchain',
-    'IoT',
-    'Analytics',
-    'Recovery',
-  ];
+  const categories = ['All ServicesCloud',
+    'SecurityDevOps',
+    'DatabaseNetworking',
+    'ConsultingManaged Services',
+    'Data CenterDevelopment',
+    'AI / MLBlockchain',
+    'IoTAnalytics',
+    'Recovery'
+  ],
 
   return (<>
       <SEO
@@ -322,6 +279,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </>) ;
-};
+    </>) ,
+},
 

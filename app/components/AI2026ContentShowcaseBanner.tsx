@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export default function AI2026ContentShowcaseBanner() {,
   return (,
     <section className="py-12 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">,
@@ -17,7 +17,7 @@ export default function AI2026ContentShowcaseBanner() {,
           </p>,
         </div>,
         <div className="grid md: grid-cols-3 gap-8">,
-          {/* Enterprise Implementation Guide */,}
+          {/* Enterprise Implementation Guide */}
           <div className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
             <div className="flex items-center mb-4">,
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mr-4">,
@@ -30,7 +30,7 @@ export default function AI2026ContentShowcaseBanner() {,
             </div>,
             <h3 className="text-xl font-bold text-gray-900 mb-3">AI 2026: Enterprise Implementation Mastery</h3>,
             <p className="text-gray-600 mb-6 leading-relaxed">,
-              The definitive guide to successfully implementing AI at enterprise scale. Learn proven strategies;
+              The definitive guide to successfully implementing AI at enterprise scale. Learn proven strategies,
               architectures, and governance frameworks that drive real business value.,
             </p>,
             <div className="space-y-2 mb-6">,
@@ -59,7 +59,7 @@ export default function AI2026ContentShowcaseBanner() {,
               <span>→</span>,
             </Link>,
           </div>,
-          {/* Manufacturing Success Case Study */,}
+          {/* Manufacturing Success Case Study */}
           <div className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
             <div className="flex items-center mb-4">,
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">,
@@ -93,7 +93,7 @@ export default function AI2026ContentShowcaseBanner() {,
               <span>→</span>,
             </Link>,
           </div>,
-          {/* AI Trends & Predictions */,}
+          {/* AI Trends & Predictions */}
           <div className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,
             <div className="flex items-center mb-4">,
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">,
@@ -106,7 +106,7 @@ export default function AI2026ContentShowcaseBanner() {,
             </div>,
             <h3 className="text-xl font-bold text-gray-900 mb-3">AI 2026: Trends & Predictions</h3>,
             <p className="text-gray-600 mb-6 leading-relaxed">,
-              Comprehensive analysis of AI trends for 2026, including emerging technologies;
+              Comprehensive analysis of AI trends for 2026, including emerging technologies,
               market predictions, and strategic insights for business leaders.,
             </p>,
             <div className="space-y-2 mb-6">,
@@ -136,7 +136,7 @@ export default function AI2026ContentShowcaseBanner() {,
             </Link>,
           </div>,
         </div>,
-        {/* Additional Resources */,}
+        {/* Additional Resources */}
         <div className="mt-12 text-center">,
           <div className="bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">,
             <h3 className="text-2xl font-bold text-gray-900 mb-4">More AI 2026 Resources</h3>,
@@ -164,5 +164,4 @@ export default function AI2026ContentShowcaseBanner() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}

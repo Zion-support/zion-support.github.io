@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { Link, useLocation  } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom',
 
 export default function Page() {
 ,
@@ -115,41 +115,41 @@ export default function Page() {
     label: 'Resources',
     href: '/resources',
     icon: <BarChart3 className="w-4 h-4" />,
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10) ;
-    };
+    const handleScroll = () => {,
+      setIsScrolled(window.scrollY > 10) ,
+    },
 
-    window.addEventListener('scroll', handleScroll) ;
-    return () => window.removeEventListener('scroll', handleScroll) ;
-  }, []) ;
+    window.addEventListener('scroll', handleScroll) ,
+    return () => window.removeEventListener('scroll', handleScroll) ,
+  }, []) ,
 
   useEffect(() => {
-    setIsOpen(false) ;
-    setActiveDropdown(null) ;
-  }, [location]) ;
+    setIsOpen(false) ,
+    setActiveDropdown(null) ,
+  }, [location]) ,
 
-  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system') => {;
-    setTheme(newTheme) ;
-    onThemeChange?.(newTheme) ;
+  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system') => {,
+    setTheme(newTheme) ,
+    onThemeChange?.(newTheme) ,
 
-    const root = document.documentElement;
-    root.classList.remove('light', 'dark') ;
+    const root = document.documentElement,
+    root.classList.remove('lightdark') ,
 
-    if(newTheme = == 'system') {;
-      const systemTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
-      root.classList.add(systemTheme) ;
+    if(newTheme = == 'system') {,
+      const systemTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light',
+      root.classList.add(systemTheme) 
     } else {
-      root.classList.add(newTheme) ;
+      root.classList.add(newTheme) ,
     }
 
-    localStorage.setItem('zion - theme', newTheme) ;
-  }, [onThemeChange]) ;
+    localStorage.setItem('zion - theme', newTheme) ,
+  }, [onThemeChange]) ,
   const contactInfo = {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"
-  };
+  },
 
   return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled
         ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg'
@@ -335,40 +335,40 @@ export default function Page() {
     ]
   },
   { label: 'Contact', href: '/contact' }
-];
+],
 
 export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
-className:  '',;
-  onThemeChange }) => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [theme, setTheme] = useState<any>('system');
-  const [isScrolled, setIsScrolled] = useState(false);
+className:  '',
+  onThemeChange }) => {,
+  const [isOpen, setIsOpen] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<any>(null),
+  const [theme, setTheme] = useState<any>('system'),
+  const [isScrolled, setIsScrolled] = useState(false),
   
   useEffect(() => {
     
-      setIsScrolled(window.scrollY > 10) };
+      setIsScrolled(window.scrollY > 10) },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll)}, []),
 
   useEffect(() => {
-    setIsOpen(false);
-    setActiveDropdown(null)}, [location]);
+    setIsOpen(false),
+    setActiveDropdown(null)}, [location]),
 
-    setTheme(newTheme);
-    onThemeChange?.(newTheme);
+    setTheme(newTheme),
+    onThemeChange?.(newTheme),
 
-    root.classList.remove('light',dark');
+    root.classList.remove('light',dark'),
     '
-    if(newTheme = == 'system') {;
+    if(newTheme = == 'system') {,
       
       root.classList.add(systemTheme)} else {
 
       root.classList.add(newTheme)}
     '
-    localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}};
+    localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}},
 
       isScrolled '
         ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' '
@@ -583,5 +583,5 @@ className:  '',;
           </motion.div>) }
       </AnimatePresence>
     </nav>
-  )};'"`
+  )},'"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

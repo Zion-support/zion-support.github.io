@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export const FuturisticLoader = ({
 
   size = 'medium',
@@ -9,12 +9,12 @@ export const FuturisticLoader = ({
 
     small: 'w-8 h-8',
     medium: 'w-16 h-16',
-    large: 'w-24 h-24'};
+    large: 'w-24 h-24'},
   const textSizes = {
 
     small: 'text-sm',
     medium: 'text-lg',
-    large: 'text-xl'};
+    large: 'text-xl'},
   const renderLoader = () => {
     switch(variant) {
 
@@ -39,7 +39,7 @@ export const FuturisticLoader = ({
               style={{ animationDirection: 'reverse', animationDuration: '3s' }}
             ></div>
           </div>
-        );
+        ),
       case 'neural':
         return ("
           <div className="relative">
@@ -100,7 +100,7 @@ export const FuturisticLoader = ({
               </svg>
             </div>
           </div>
-        );
+        ),
       case 'quantum':
         return ("
           <div className="relative">
@@ -131,7 +131,7 @@ export const FuturisticLoader = ({
               ></div>
             </div>
           </div>
-        );
+        ),
       case 'cyber':
         return ("
           <div className="relative">
@@ -158,7 +158,7 @@ export const FuturisticLoader = ({
               <div className="absolute bottom-1 left-1 w-1 h-1 bg-cyan-400 rounded-full animate-pulse animation-delay-1500"></div>
             </div>
           </div>
-        );
+        ),
       default:
         return ()`
           <div className={`${sizeClasses[size]} relative`}>"
@@ -168,9 +168,9 @@ export const FuturisticLoader = ({
               style={{ animationDirection: 'reverse', animationDuration: '2s' }}
             ></div>
           </div>
-        );
+        ),
     }
-  };
+  },
   return ("
     <div className="flex flex-col items-center justify-center space-y-4">
       {renderLoader()}
@@ -185,7 +185,7 @@ export const FuturisticLoader = ({
         </div>
       )}
     </div>
-  );
-};
-export default FuturisticLoader;
+  ),
+},
+export default FuturisticLoader,
 '"`

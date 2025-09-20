@@ -1,19 +1,19 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-,;
+,
         {
             name: "Professional",
             price: "$2,999",
             period: "/month",
             description: "Ideal for growing enterprises",
-            features[;
+            features[,
                 "Up to 50 quantum edge nodes",
                 "Advanced quantum algorithms",
                 "Enhanced security features",
                 "Priority support",
                 "Advanced analytics & reporting",
                 "Custom integration support"
-            ],;
+            ],
             popular: true
         },
         {
@@ -21,7 +21,7 @@ export default function Page() {
             price: "$5,999",
             period: "/month",
             description: "For large - scale deployments",
-            features[;
+            features[,
                 "Unlimited quantum edge nodes",
                 "Custom quantum algorithm development",
                 "Military - grade security",
@@ -31,7 +31,7 @@ export default function Page() {
                 "SLA guarantees"
             ]
 
-    ];
+    ],
     const useCases = [{
             title: "Financial Services",
             description: "Real - time risk assessment and algorithmic trading with quantum speed",
@@ -52,7 +52,7 @@ export default function Page() {
             description: "Complex simulations and data analysis at quantum speeds",
             icon: Server
 
-    ];
+    ],
     return (<div className="min - h-screen bg-gradient - to - br from - gray - 900 via - black to - gray - 900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -229,5 +229,5 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>) };
+    </div>) },
 }}}}

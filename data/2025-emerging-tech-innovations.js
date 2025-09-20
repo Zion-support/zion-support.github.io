@@ -8,30 +8,23 @@ export const emergingTechInnovations2025 = [
         price: '$2,999',
         period: '/month',
         features: [
-            'Access to 100+ qubit quantum processors',
-            'Quantum algorithm library and optimization tools',
-            'Hybrid quantum-classical computing workflows',
-            'Real-time quantum circuit visualization',
-            'Advanced quantum error correction',
-            'Quantum machine learning frameworks',
-            'API access for custom quantum applications',
-            'Expert quantum computing consultation',
-            'Training and certification programs',
-            '24/7 quantum computing support'
+            'Access to 100+ qubit quantum processorsQuantum algorithm library and optimization tools',
+            'Hybrid quantum-classical computing workflowsReal-time quantum circuit visualization',
+            'Advanced quantum error correctionQuantum machine learning frameworks',
+            'API access for custom quantum applicationsExpert quantum computing consultation',
+            'Training and certification programs24/7 quantum computing support'
         ],
         category: 'Quantum Computing & Advanced Computing',
         marketSize: '$8.7B',
-        targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
+        targetAudience: ['Pharmaceutical companiesFinancial institutions', 'Research universitiesGovernment agencies', 'Technology companies'],
         competitiveAdvantage: 'Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation',
         useCases: [
-            'Drug discovery and molecular modeling',
-            'Financial portfolio optimization',
-            'Cryptography and cybersecurity',
-            'Materials science research',
+            'Drug discovery and molecular modelingFinancial portfolio optimization',
+            'Cryptography and cybersecurityMaterials science research',
             'Machine learning acceleration'
         ],
-        integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Google Quantum AI', 'D-Wave Leap'],
-        compliance: ['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
+        integrations: ['AWS BraketAzure Quantum', 'IBM QuantumGoogle Quantum AI', 'D-Wave Leap'],
+        compliance: ['ISO 27001SOC2', 'FedRAMPGDPR', 'CCPA'],
         website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
         contact: {
             phone: '+1 302 464 0950',
@@ -40,16 +33,16 @@ export const emergingTechInnovations2025 = [
         },
         trialDays: 7,
         setupTime: '2-4 weeks',
-        competitors: ['IBM Quantum', 'Google Quantum AI', 'D-Wave', 'Rigetti', 'IonQ'],
+        competitors: ['IBM QuantumGoogle Quantum AI', 'D-WaveRigetti', 'IonQ'],
         roi: 'Average customer accelerates research by 10x and reduces computational costs by 60%',
         launchDate: '2024-01-10',
         customers: 85,
         rating: 4.9,
         reviews: 45,
-        technologyStack: ['Quantum processors', 'Quantum algorithms', 'Hybrid computing', 'Error correction'],
+        technologyStack: ['Quantum processorsQuantum algorithms', 'Hybrid computingError correction'],
         innovationLevel: 'Cutting-edge quantum technology with 5-10 year roadmap',
         futureProofing: 'Continuous quantum hardware upgrades and algorithm optimization',
-        researchPartnerships: ['MIT', 'Stanford', 'Caltech', 'NASA', 'DARPA']
+        researchPartnerships: ['MITStanford', 'CaltechNASA', 'DARPA']
     },
     // Space Technology Solutions
     {
@@ -60,30 +53,23 @@ export const emergingTechInnovations2025 = [
         price: '$799',
         period: '/month',
         features: [
-            'Real-time satellite data processing and analysis',
-            'AI-powered image recognition and classification',
-            'Multi-spectral and hyperspectral data analysis',
-            'Change detection and monitoring over time',
-            'Custom alert system for critical events',
-            'Integration with GIS and mapping platforms',
-            'Mobile app for field workers',
-            'API access for custom applications',
-            'Advanced data visualization tools',
-            'Expert geospatial analysis support'
+            'Real-time satellite data processing and analysisAI-powered image recognition and classification',
+            'Multi-spectral and hyperspectral data analysisChange detection and monitoring over time',
+            'Custom alert system for critical eventsIntegration with GIS and mapping platforms',
+            'Mobile app for field workersAPI access for custom applications',
+            'Advanced data visualization toolsExpert geospatial analysis support'
         ],
         category: 'Space Technology & Satellite Analytics',
         marketSize: '$12.3B',
-        targetAudience: ['Agricultural companies', 'Urban planners', 'Environmental agencies', 'Insurance companies', 'Disaster response organizations'],
+        targetAudience: ['Agricultural companiesUrban planners', 'Environmental agenciesInsurance companies', 'Disaster response organizations'],
         competitiveAdvantage: 'Real-time processing, AI-powered analysis, comprehensive satellite coverage, expert geospatial support',
         useCases: [
-            'Precision agriculture and crop monitoring',
-            'Urban development and infrastructure planning',
-            'Environmental impact assessment',
-            'Disaster response and recovery',
+            'Precision agriculture and crop monitoringUrban development and infrastructure planning',
+            'Environmental impact assessmentDisaster response and recovery',
             'Insurance risk assessment'
         ],
-        integrations: ['ArcGIS', 'QGIS', 'Google Earth Engine', 'Planet Labs', 'Maxar', 'ESA Copernicus'],
-        compliance: ['ISO 19100', 'OGC standards', 'GDPR', 'CCPA', 'Environmental regulations'],
+        integrations: ['ArcGISQGIS', 'Google Earth EnginePlanet Labs', 'MaxarESA Copernicus'],
+        compliance: ['ISO 19100OGC standards', 'GDPRCCPA', 'Environmental regulations'],
         website: 'https://ziontechgroup.com/satellite-data-analytics-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -92,16 +78,16 @@ export const emergingTechInnovations2025 = [
         },
         trialDays: 14,
         setupTime: '1-2 weeks',
-        competitors: ['Planet Labs', 'Maxar', 'DigitalGlobe', 'Airbus Defence', 'ESA'],
+        competitors: ['Planet LabsMaxar', 'DigitalGlobeAirbus Defence', 'ESA'],
         roi: 'Average customer improves operational efficiency by 45% and reduces costs by 35%',
         launchDate: '2024-02-15',
         customers: 320,
         rating: 4.8,
         reviews: 180,
-        technologyStack: ['Satellite imagery', 'AI/ML processing', 'GIS integration', 'Cloud computing'],
+        technologyStack: ['Satellite imageryAI/ML processing', 'GIS integrationCloud computing'],
         innovationLevel: 'Advanced space technology with continuous satellite constellation expansion',
         futureProofing: 'Next-generation satellite launches and AI algorithm improvements',
-        researchPartnerships: ['NASA', 'ESA', 'NOAA', 'USGS', 'Academic institutions']
+        researchPartnerships: ['NASAESA', 'NOAAUSGS', 'Academic institutions']
     },
     // Advanced IoT & Edge Computing
     {
@@ -112,30 +98,23 @@ export const emergingTechInnovations2025 = [
         price: '$399',
         period: '/month',
         features: [
-            'Edge AI processing with 99.9% uptime',
-            'Real-time data analytics and decision making',
-            'Automated device management and provisioning',
-            'Advanced security and encryption at the edge',
-            'Scalable edge computing infrastructure',
-            'Integration with major IoT protocols',
-            'Custom edge application development',
-            'Remote monitoring and management',
-            'Predictive maintenance capabilities',
-            '24/7 edge computing support'
+            'Edge AI processing with 99.9% uptimeReal-time data analytics and decision making',
+            'Automated device management and provisioningAdvanced security and encryption at the edge',
+            'Scalable edge computing infrastructureIntegration with major IoT protocols',
+            'Custom edge application developmentRemote monitoring and management',
+            'Predictive maintenance capabilities24/7 edge computing support'
         ],
         category: 'IoT & Edge Computing',
         marketSize: '$15.6B',
-        targetAudience: ['Manufacturing companies', 'Smart cities', 'Healthcare facilities', 'Energy companies', 'Transportation companies'],
+        targetAudience: ['Manufacturing companiesSmart cities', 'Healthcare facilitiesEnergy companies', 'Transportation companies'],
         competitiveAdvantage: 'Edge-first architecture, real-time processing, comprehensive IoT support, advanced security',
         useCases: [
-            'Smart manufacturing and Industry 4.0',
-            'Smart city infrastructure management',
-            'Healthcare monitoring and diagnostics',
-            'Energy grid optimization',
+            'Smart manufacturing and Industry 4.0Smart city infrastructure management',
+            'Healthcare monitoring and diagnosticsEnergy grid optimization',
             'Autonomous vehicle systems'
         ],
-        integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens MindSphere'],
-        compliance: ['ISO 27001', 'SOC2', 'GDPR', 'CCPA', 'Industry-specific standards'],
+        integrations: ['AWS IoTAzure IoT', 'Google Cloud IoTIBM Watson IoT', 'Siemens MindSphere'],
+        compliance: ['ISO 27001SOC2', 'GDPRCCPA', 'Industry-specific standards'],
         website: 'https://ziontechgroup.com/iot-edge-intelligence-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -144,16 +123,16 @@ export const emergingTechInnovations2025 = [
         },
         trialDays: 21,
         setupTime: '2-3 weeks',
-        competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'IBM Watson IoT', 'Siemens'],
+        competitors: ['AWS IoTAzure IoT', 'Google Cloud IoTIBM Watson IoT', 'Siemens'],
         roi: 'Average customer reduces latency by 80% and bandwidth costs by 60%',
         launchDate: '2024-03-01',
         customers: 450,
         rating: 4.7,
         reviews: 220,
-        technologyStack: ['Edge computing', 'IoT protocols', 'AI/ML', '5G networks', 'Blockchain'],
+        technologyStack: ['Edge computingIoT protocols', 'AI/ML5G networks', 'Blockchain'],
         innovationLevel: 'Advanced edge computing with continuous AI optimization',
         futureProofing: '5G integration and next-generation edge hardware',
-        researchPartnerships: ['Intel', 'NVIDIA', 'Qualcomm', 'Academic institutions']
+        researchPartnerships: ['IntelNVIDIA', 'QualcommAcademic institutions']
     },
     // Advanced Blockchain Solutions
     {
@@ -164,30 +143,23 @@ export const emergingTechInnovations2025 = [
         price: '$899',
         period: '/month',
         features: [
-            'Multi-blockchain support (Ethereum, Hyperledger, Solana)',
-            'Smart contract development and deployment',
-            'Advanced consensus mechanisms and scalability',
-            'Digital identity and authentication',
-            'Supply chain traceability and transparency',
-            'Tokenization and asset management',
-            'Regulatory compliance and reporting',
-            'API access for custom integrations',
-            'Advanced analytics and monitoring',
-            'Expert blockchain consultation'
+            'Multi-blockchain support (Ethereum, Hyperledger, Solana)Smart contract development and deployment',
+            'Advanced consensus mechanisms and scalabilityDigital identity and authentication',
+            'Supply chain traceability and transparencyTokenization and asset management',
+            'Regulatory compliance and reportingAPI access for custom integrations',
+            'Advanced analytics and monitoringExpert blockchain consultation'
         ],
         category: 'Blockchain & Web3 Technology',
         marketSize: '$19.8B',
-        targetAudience: ['Financial institutions', 'Supply chain companies', 'Healthcare organizations', 'Government agencies', 'Technology companies'],
+        targetAudience: ['Financial institutionsSupply chain companies', 'Healthcare organizationsGovernment agencies', 'Technology companies'],
         competitiveAdvantage: 'Multi-blockchain support, enterprise-grade security, regulatory compliance, expert consultation',
         useCases: [
-            'Supply chain transparency and traceability',
-            'Digital identity and authentication',
-            'Financial services and payments',
-            'Healthcare data management',
+            'Supply chain transparency and traceabilityDigital identity and authentication',
+            'Financial services and paymentsHealthcare data management',
             'Government services and voting'
         ],
-        integrations: ['Ethereum', 'Hyperledger Fabric', 'Solana', 'Polygon', 'AWS Blockchain', 'Azure Blockchain'],
-        compliance: ['GDPR', 'CCPA', 'SOX', 'PCI DSS', 'Industry-specific regulations'],
+        integrations: ['EthereumHyperledger Fabric', 'SolanaPolygon', 'AWS BlockchainAzure Blockchain'],
+        compliance: ['GDPRCCPA', 'SOXPCI DSS', 'Industry-specific regulations'],
         website: 'https://ziontechgroup.com/enterprise-blockchain-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -196,16 +168,16 @@ export const emergingTechInnovations2025 = [
         },
         trialDays: 14,
         setupTime: '3-4 weeks',
-        competitors: ['IBM Blockchain', 'Microsoft Azure Blockchain', 'Amazon Managed Blockchain', 'ConsenSys', 'R3 Corda'],
+        competitors: ['IBM BlockchainMicrosoft Azure Blockchain', 'Amazon Managed BlockchainConsenSys', 'R3 Corda'],
         roi: 'Average customer improves transparency by 90% and reduces fraud by 70%',
         launchDate: '2024-01-20',
         customers: 280,
         rating: 4.8,
         reviews: 150,
-        technologyStack: ['Blockchain networks', 'Smart contracts', 'Cryptography', 'Distributed systems'],
+        technologyStack: ['Blockchain networksSmart contracts', 'CryptographyDistributed systems'],
         innovationLevel: 'Advanced blockchain technology with continuous protocol improvements',
         futureProofing: 'Layer 2 scaling solutions and cross-chain interoperability',
-        researchPartnerships: ['Ethereum Foundation', 'Hyperledger', 'Academic institutions']
+        researchPartnerships: ['Ethereum FoundationHyperledger', 'Academic institutions']
     },
     // Advanced Robotics & Automation
     {
@@ -216,30 +188,23 @@ export const emergingTechInnovations2025 = [
         price: '$1,299',
         period: '/month',
         features: [
-            'AI-powered computer vision and object recognition',
-            'Advanced robotics control and programming',
-            'Collaborative robot (cobot) management',
-            'Predictive maintenance and monitoring',
-            'Integration with existing manufacturing systems',
-            'Custom automation workflow design',
-            'Real-time performance analytics',
-            'Remote monitoring and control',
-            'Safety compliance and monitoring',
-            'Expert robotics consultation'
+            'AI-powered computer vision and object recognitionAdvanced robotics control and programming',
+            'Collaborative robot (cobot) managementPredictive maintenance and monitoring',
+            'Integration with existing manufacturing systemsCustom automation workflow design',
+            'Real-time performance analyticsRemote monitoring and control',
+            'Safety compliance and monitoringExpert robotics consultation'
         ],
         category: 'Robotics & Automation',
         marketSize: '$14.2B',
-        targetAudience: ['Manufacturing companies', 'Logistics providers', 'Warehouse operators', 'Healthcare facilities', 'Research institutions'],
+        targetAudience: ['Manufacturing companiesLogistics providers', 'Warehouse operatorsHealthcare facilities', 'Research institutions'],
         competitiveAdvantage: 'AI-first robotics, flexible automation, comprehensive integration, expert support',
         useCases: [
-            'Manufacturing automation and assembly',
-            'Warehouse and logistics automation',
-            'Quality control and inspection',
-            'Material handling and transportation',
+            'Manufacturing automation and assemblyWarehouse and logistics automation',
+            'Quality control and inspectionMaterial handling and transportation',
             'Research and development'
         ],
-        integrations: ['Siemens', 'Rockwell Automation', 'ABB', 'KUKA', 'FANUC', 'Universal Robots'],
-        compliance: ['ISO 13482', 'ANSI/RIA R15.06', 'OSHA standards', 'Industry-specific safety'],
+        integrations: ['SiemensRockwell Automation', 'ABBKUKA', 'FANUCUniversal Robots'],
+        compliance: ['ISO 13482ANSI/RIA R15.06', 'OSHA standardsIndustry-specific safety'],
         website: 'https://ziontechgroup.com/ai-robotics-automation-platform',
         contact: {
             phone: '+1 302 464 0950',
@@ -248,16 +213,16 @@ export const emergingTechInnovations2025 = [
         },
         trialDays: 30,
         setupTime: '4-6 weeks',
-        competitors: ['ABB', 'KUKA', 'FANUC', 'Universal Robots', 'Rethink Robotics'],
+        competitors: ['ABBKUKA', 'FANUCUniversal Robots', 'Rethink Robotics'],
         roi: 'Average customer increases productivity by 50% and reduces labor costs by 40%',
         launchDate: '2024-02-01',
         customers: 180,
         rating: 4.9,
         reviews: 95,
-        technologyStack: ['Robotics', 'Computer vision', 'AI/ML', 'IoT sensors', '5G networks'],
+        technologyStack: ['RoboticsComputer vision', 'AI/MLIoT sensors', '5G networks'],
         innovationLevel: 'Advanced robotics with continuous AI and safety improvements',
         futureProofing: 'Next-generation robotics hardware and AI algorithms',
-        researchPartnerships: ['MIT Robotics Lab', 'Stanford Robotics', 'Carnegie Mellon Robotics']
+        researchPartnerships: ['MIT Robotics LabStanford Robotics', 'Carnegie Mellon Robotics']
     }
-];
-export default emergingTechInnovations2025;
+],
+export default emergingTechInnovations2025,

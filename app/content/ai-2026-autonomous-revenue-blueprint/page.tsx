@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Autonomous Revenue Blueprint';
-  description: 'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.',
-};
+  title: 'AI 2026: Autonomous Revenue Blueprint',
+  description: 'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -43,6 +43,5 @@ export default function Page() {,
         <Link href="/blog/ai-2026-autonomous-revenue-agents" className="bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">Read Revenue Agents Guide</Link>,
         <Link href="/content/ai-2026-evaluation-harness-blueprint" className="border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">Evaluation Harness</Link>,
       </div>,
-    </main>,
-  ),}
+    </main>)}
 ,

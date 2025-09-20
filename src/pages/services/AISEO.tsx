@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Search, 
+  Search,
   TrendingUp, 
   Target, 
   BarChart3, 
@@ -23,50 +23,33 @@ import {
   Brain,
   Zap,
   Shield
-} from 'lucide-react';
-
+} from "lucide-react";
 const AISEO: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Keyword Research',
-      description: 'Advanced algorithms to discover high-value keywords and search opportunities'
-    },
+      icon: Brain,title: 'AI-Powered Keyword Research',description: 'Advanced algorithms to discover high-value keywords and search opportunities'
+    };
     {
-      icon: Target,
-      title: 'Content Optimization',
-      description: 'AI-driven recommendations to improve content relevance and search rankings'
-    },
+      icon: Target,title: 'Content Optimization',description: 'AI-driven recommendations to improve content relevance and search rankings'
+    };
     {
-      icon: TrendingUp,
-      title: 'Performance Tracking',
-      description: 'Real-time monitoring of SEO metrics and ranking improvements'
-    },
+      icon: TrendingUp,title: 'Performance Tracking',description: 'Real-time monitoring of SEO metrics and ranking improvements'
+    };
     {
-      icon: Shield,
-      title: 'Technical SEO Audit',
-      description: 'Automated detection and fixing of technical SEO issues'
-    },
+      icon: Shield,title: 'Technical SEO Audit',description: 'Automated detection and fixing of technical SEO issues'
+    };
     {
-      icon: Zap,
-      title: 'Competitive Analysis',
-      description: 'AI-powered insights into competitor strategies and opportunities'
-    },
+      icon: Zap,title: 'Competitive Analysis',description: 'AI-powered insights into competitor strategies and opportunities'
+    };
     {
-      icon: BarChart3,
-      title: 'Ranking Predictions',
-      description: 'Predict future ranking changes based on current optimization efforts'
+      icon: BarChart3,title: 'Ranking Predictions',description: 'Predict future ranking changes based on current optimization efforts'
     }
   ];
-
   const benefits = [
-    'Improve search rankings by 40%',
-    'Increase organic traffic by 60%',
-    'Reduce SEO audit time by 80%',
-    'Boost conversion rates by 25%',
-    'Identify new keyword opportunities',
-    'Automate technical SEO fixes'
-  ];
+    'Improve search rankings by 40%Increase organic traffic by 60%',
+    'Reduce SEO audit time by 80%Boost conversion rates by 25%',
+    'Identify new keyword opportunitiesAutomate technical SEO fixes'
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -89,7 +72,7 @@ const AISEO: React.FC = () => {
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage artificial intelligence to optimize your website for search engines, 
+              Leverage artificial intelligence to optimize your website for search engines;
               discover untapped keyword opportunities, and drive sustainable organic traffic growth.
             </p>
             
@@ -208,7 +191,7 @@ const AISEO: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Dominate Search Rankings?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -226,7 +209,6 @@ const AISEO: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
-
 export default AISEO;

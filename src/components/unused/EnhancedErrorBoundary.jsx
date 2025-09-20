@@ -1,70 +1,60 @@
-import React, { Component } from 'react';
-import { motion } from 'framer-motion';
-import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from '@heroicons/react/24/outline';
-
+import React, { Component } from "react";
+import { motion } from "framer-motion";
+import { ExclamationTriangleIcon, ArrowPathIcon, HomeIcon, DocumentTextIcon, BugAntIcon } from "@heroicons/react/24/outline";
 class EnhancedErrorBoundary extends Component {
     constructor(props) {
-        super(props);
+        super(props),
         this.state = {
-            hasError: false,
-            error: null,
-            errorInfo: null,
-            errorId: null,
-            showStackTrace: false
+            hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
         };
     }
 
     static getDerivedStateFromError(error) {
         return {
-            hasError: true,
+            hasError: true;
             error,
             errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-        };
+        },
     }
 
     componentDidCatch(error, errorInfo) {
-        this.setState({ errorInfo });
+        this.setState({
+errorInfo 
+}),
         // Log error to console
-        console.error('Error caught by boundary:', error, errorInfo);
+        console.error('Error caught by boundary:', error, errorInfo),
         // Call custom error handler if provided
         if (this.props.onError) {
-            this.props.onError(error, errorInfo);
+            this.props.onError(error, errorInfo),
         }
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo);
+        this.reportError(error, errorInfo),
     }
 
     static generateErrorId() {
-        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     }
 
     reportError(error, errorInfo) {
         // In a real application, you would send this to your error reporting service
         // For example: Sentry, LogRocket, Bugsnag, etc.
         const errorReport = {
-            id: this.state.errorId,
-            timestamp: new Date().toISOString(),
-            error: {
-                name: error.name,
-                message: error.message,
-                stack: error.stack
-            },
+            id: this.state.errorId,timestamp: new Date().toISOString(),error: {
+                name: error.name,message: error.message,stack: error.stack
+            };
             errorInfo: {
                 componentStack: errorInfo.componentStack
-            },
-            userAgent: navigator.userAgent,
-            url: window.location.href,
-            viewport: {
-                width: window.innerWidth,
-                height: window.innerHeight
+            };
+            userAgent: navigator.userAgent,url: window.location.href,viewport: {
+                width: window.innerWidth,height: window.innerHeight
             }
         };
         // Log to console for development
         if (process.env.NODE_ENV === 'development') {
-            console.group('Error Report');
-            console.log('Error ID:', errorReport.id);
-            console.log('Error Details:', errorReport);
-            console.groupEnd();
+            console.group('Error Report'),
+            console.log('Error ID:', errorReport.id),
+            console.log('Error Details:', errorReport),
+            console.groupEnd(),
         }
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
@@ -72,26 +62,23 @@ class EnhancedErrorBoundary extends Component {
 
     handleRetry() {
         this.setState({
-            hasError: false,
-            error: null,
-            errorInfo: null,
-            errorId: null,
-            showStackTrace: false
-        });
+hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
+        
+});
     }
 
     handleGoHome() {
-        window.location.href = '/';
+        window.location.href = '/',
     }
 
     handleReportIssue() {
-        const error = this.state.error;
-        const errorInfo = this.state.errorInfo;
+        const error = this.state.error,
+        const errorInfo = this.state.errorInfo,
         if (error && errorInfo) {
             const issueBody = `
 ## Error Report
 
-**Error ID:** ${this.state.errorId}
+**Error ID: ** ${this.state.errorId}
 
 **Error Message:** ${error.message}
 
@@ -111,10 +98,9 @@ ${errorInfo.componentStack}
 
 Please provide any additional context about what you were doing when this error occurred.
             `;
-            
             // Open email client with pre-filled error report
-            const mailtoLink = `mailto:support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
-            window.open(mailtoLink);
+            const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
+            window.open(mailtoLink),
         }
     }
 
@@ -126,7 +112,7 @@ Please provide any additional context about what you were doing when this error 
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
-                return this.props.fallback;
+                return this.props.fallback,
             }
             // Default error UI
             return (
@@ -243,7 +229,7 @@ Please provide any additional context about what you were doing when this error 
                                 <p>If this problem persists, please contact our support team.</p>
                                 <p className="mt-1">
                                     <a 
-                                        href="mailto:support@ziontechgroup.com" 
+                                        href="mailto: support@ziontechgroup.com" 
                                         className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
                                     >
                                         support@ziontechgroup.com
@@ -253,7 +239,7 @@ Please provide any additional context about what you were doing when this error 
                         </div>
                     </motion.div>
                 </div>
-            );
+            )
         }
 
         return this.props.children;

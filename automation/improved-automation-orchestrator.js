@@ -1,248 +1,248 @@
 
-const winston = require('winston');
+const winston = require('winston'),
 const logger = winston.createLogger({,
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(,
-    winston.format.timestamp();
-    winston.format.errors({ stack: true ,});
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
     winston.format.json(),
-  );
-  defaultMeta: { service: 'automation-script' ,};
+  ),
+  defaultMeta: { service: 'automation-script' },
   transports: [,
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' ,});
-    new winston.transports.File({ filename: 'logs/combined.log' ,}),
-  ],
-});
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' })
+  ]
+}),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple(),}));
+    format: winston.format.simple()})),
 }
 ,
-const { spawn } = require('child_process');
-const express = require('express');
-const socketIo = require('socket.io');
-const path = require('path');
-const fs = require('fs');
+const { spawn } = require('child_process'),
+const express = require('express'),
+const socketIo = require('socket.io'),
+const path = require('path'),
+const fs = require('fs'),
 class ImprovedAutomationOrchestrator {,
   constructor() {,
-    this.port = 3008;
-    this.automationSystems = new Map();
-    this.portManager = new PortManager();
-    this.app = express();
-    this.server = null;
-    this.io = null;
-    this.isRunning = false;
+    this.port = 3008,
+    this.automationSystems = new Map(),
+    this.portManager = new PortManager(),
+    this.app = express(),
+    this.server = null,
+    this.io = null,
+    this.isRunning = false,
     this.systemConfigs = {,
       continuous-improvement': {,
-        script: 'continuous-improvement/index.js';
-        name: Continuous Improvement System';
-        description: Monitors and improves code quality, performance, and security';
-        autoRestart: true;
-        maxRestarts: 5,};
+        script: 'continuous-improvement/index.js',
+        name: Continuous Improvement System',
+        description: Monitors and improves code quality, performance, and security',
+        autoRestart: true,
+        maxRestarts: 5},
       enhanced-infinite-improvement': {,
-        script: 'enhanced-infinite-improvement.js';
-        name: Enhanced Infinite Improvement Loop';
-        description: AI-powered continuous improvement with learning capabilities';
-        autoRestart: true;
-        maxRestarts: 3,};
+        script: 'enhanced-infinite-improvement.js',
+        name: Enhanced Infinite Improvement Loop',
+        description: AI-powered continuous improvement with learning capabilities',
+        autoRestart: true,
+        maxRestarts: 3},
       autonomous-system': {,
-        script: 'autonomous-system.js';
-        name: Autonomous Automation System';
-        description: Multi-module autonomous system for various tasks';
-        autoRestart: true;
-        maxRestarts: 5,};
+        script: 'autonomous-system.js',
+        name: Autonomous Automation System',
+        description: Multi-module autonomous system for various tasks',
+        autoRestart: true,
+        maxRestarts: 5},
       intelligent-orchestrator': {,
-        script: 'intelligent-automation-orchestrator.js';
-        name: Intelligent Automation Orchestrator';
-        description: Coordinates and manages all automation systems';
-        autoRestart: false;
-        maxRestarts: 1,}
-    };
+        script: 'intelligent-automation-orchestrator.js',
+        name: Intelligent Automation Orchestrator',
+        description: Coordinates and manages all automation systems',
+        autoRestart: false,
+        maxRestarts: 1}
+    },
   }
 ,
   async initialize() {,
-    logger.info('🚀 Initializing Improved Automation Orchestrator...');
+    logger.info('🚀 Initializing Improved Automation Orchestrator...'),
     // Setup Express server,
-    this.setupExpressServer();
+    this.setupExpressServer(),
     // Setup WebSocket,
-    this.setupWebSocket();
+    this.setupWebSocket(),
     // Setup health endpoints,
-    this.setupHealthEndpoints();
+    this.setupHealthEndpoints(),
     // Initialize automation systems,
-    await this.initializeAutomationSystems();
-    logger.info('✅ Improved Automation Orchestrator initialized successfully');
+    await this.initializeAutomationSystems(),
+    logger.info('✅ Improved Automation Orchestrator initialized successfully'),
   }
 ,
   setupExpressServer() {,
-    this.app.use(express.json());
-    this.app.use(express.static(path.join(__dirname, ..')));
+    this.app.use(express.json()),
+    this.app.use(express.static(path.join(__dirname, ..'))),
     this.server = this.app.listen(this.port, () => {,
-      logger.info(`🌐 Improved Automation Orchestrator running on port ${this.port}`);
-    });
+      logger.info(`🌐 Improved Automation Orchestrator running on port ${this.port}`),
+    }),
   }
 ,
   setupWebSocket() {,
     this.io = socketIo(this.server, {,
       cors: {,
-        origin: "*";
-        methods: ["GET", "POST"],
+        origin: "*",
+        methods: ["GET", "POST"]
       }
-    });
+    }),
     this.io.on('connection', (socket) => {,
-      logger.info('🔌 Client connected to orchestrator');
+      logger.info('🔌 Client connected to orchestrator'),
       socket.on('get-status', () => {,
-        socket.emit('status-update', this.getSystemStatus());
-      });
+        socket.emit('status-update', this.getSystemStatus()),
+      }),
       socket.on('start-system', (systemName) => {,
-        this.startSystem(systemName);
-      });
+        this.startSystem(systemName),
+      }),
       socket.on('stop-system', (systemName) => {,
-        this.stopSystem(systemName);
-      });
+        this.stopSystem(systemName),
+      }),
       socket.on('restart-system', (systemName) => {,
-        this.restartSystem(systemName);
-      });
-    });
+        this.restartSystem(systemName),
+      }),
+    }),
   }
 ,
   setupHealthEndpoints() {,
     this.app.get('/health', (req, res) => {,
       res.json({,
-        status: 'healthy';
-        timestamp: new Date().toISOString();
-        systems: this.getSystemStatus();
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        systems: this.getSystemStatus(),
         orchestrator: {,
-          port: this.port;
-          uptime: process.uptime();
-          memory: process.memoryUsage(),}
-      });
-    });
+          port: this.port,
+          uptime: process.uptime(),
+          memory: process.memoryUsage()}
+      }),
+    }),
     this.app.get('/api/systems', (req, res) => {,
-      res.json(this.getSystemStatus());
-    });
+      res.json(this.getSystemStatus()),
+    }),
     this.app.post('/api/systems/:name/start', (req, res) => {,
-      const systemName = req.params.name;
-      this.startSystem(systemName);
-      res.json({ success: true, message: `Starting ${systemName,}` });
-    });
+      const systemName = req.params.name,
+      this.startSystem(systemName),
+      res.json({ success: true, message: `Starting ${systemName}` }),
+    }),
     this.app.post('/api/systems/:name/stop', (req, res) => {,
-      const systemName = req.params.name;
-      this.stopSystem(systemName);
-      res.json({ success: true, message: `Stopping ${systemName,}` });
-    });
+      const systemName = req.params.name,
+      this.stopSystem(systemName),
+      res.json({ success: true, message: `Stopping ${systemName}` }),
+    }),
     this.app.post('/api/systems/:name/restart', (req, res) => {,
-      const systemName = req.params.name;
-      this.restartSystem(systemName);
-      res.json({ success: true, message: `Restarting ${systemName,}` });
-    });
+      const systemName = req.params.name,
+      this.restartSystem(systemName),
+      res.json({ success: true, message: `Restarting ${systemName}` }),
+    }),
   }
 ,
   async initializeAutomationSystems() {,
-    logger.info('🤖 Initializing automation systems...');
+    logger.info('🤖 Initializing automation systems...'),
     for (const [systemName, config] of Object.entries(this.systemConfigs)) {,
       if (systemName === 'intelligent-orchestrator') continue, // Skip self,
       const system = {,
-        name: systemName;
-        config: config;
-        process: null;
-        status: 'stopped';
-        restarts: 0;
-        lastStart: null;
-        lastError: null;
-        logs: [],};
-      this.automationSystems.set(systemName, system);
+        name: systemName,
+        config: config,
+        process: null,
+        status: 'stopped',
+        restarts: 0,
+        lastStart: null,
+        lastError: null,
+        logs: []},
+      this.automationSystems.set(systemName, system),
     }
 ,
-    logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`);
+    logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`),
   }
 ,
   async startSystem(systemName) {,
-    const system = this.automationSystems.get(systemName);
+    const system = this.automationSystems.get(systemName),
     if (!system) {,
-      logger.error(`❌ System ${systemName} not found`);
-      return false;
+      logger.error(`❌ System ${systemName} not found`),
+      return false,
     }
 ,
     if (system.status === 'running') {,
-      logger.info(`⚠️  System ${systemName} is already running`);
-      return true;
+      logger.info(`⚠️  System ${systemName} is already running`),
+      return true,
     }
 ,
     try {,
-      logger.info(`🚀 Starting ${systemName}...`);
-      const scriptPath = path.join(__dirname, system.config.script);
+      logger.info(`🚀 Starting ${systemName}...`),
+      const scriptPath = path.join(__dirname, system.config.script),
       if (!fs.existsSync(scriptPath)) {,
-        throw new Error(`Script not found: ${scriptPath,}`);
+        throw new Error(`Script not found: ${scriptPath}`),
       }
 ,
       const child = spawn('node', [scriptPath], {,
-        cwd: __dirname;
-        stdio: ['pipe', pipe', pipe'];
-        env: { ...process.env, NODE_ENV: 'production' ,}
-      });
-      system.process = child;
-      system.status = starting';
-      system.lastStart = new Date();
-      system.lastError = null;
+        cwd: __dirname,
+        stdio: ['pipe', pipe', pipe'],
+        env: { ...process.env, NODE_ENV: 'production' }
+      }),
+      system.process = child,
+      system.status = starting',
+      system.lastStart = new Date(),
+      system.lastError = null,
       child.stdout.on('data', (data) => {,
-        const log = data.toString().trim();
-        system.logs.push({ timestamp: new Date(), type: 'stdout', message: log ,});
-        if (system.logs.length > 100) system.logs.shift();
-        logger.info(`[${systemName}] ${log}`);
-      });
+        const log = data.toString().trim(),
+        system.logs.push({ timestamp: new Date(), type: 'stdout', message: log }),
+        if (system.logs.length > 100) system.logs.shift(),
+        logger.info(`[${systemName}] ${log}`),
+      }),
       child.stderr.on('data', (data) => {,
-        const log = data.toString().trim();
-        system.logs.push({ timestamp: new Date(), type: 'stderr', message: log ,});
-        if (system.logs.length > 100) system.logs.shift();
-        logger.error(`[${systemName}] ERROR: ${log,}`);
-      });
+        const log = data.toString().trim(),
+        system.logs.push({ timestamp: new Date(), type: 'stderr', message: log }),
+        if (system.logs.length > 100) system.logs.shift(),
+        logger.error(`[${systemName}] ERROR: ${log}`),
+      }),
       child.on('close', (code) => {,
-        system.status = stopped';
-        system.process = null;
+        system.status = stopped',
+        system.process = null,
         if (code !== 0) {,
-          system.lastError = `Process exited with code ${code}`;
-          logger.error(`❌ System ${systemName} exited with code ${code}`);
+          system.lastError = `Process exited with code ${code}`,
+          logger.error(`❌ System ${systemName} exited with code ${code}`),
           if (system.config.autoRestart && system.restarts < system.config.maxRestarts) {,
-            system.restarts++;
+            system.restarts++,
           }
         }
 ,
-        this.broadcastStatus();
-      });
+        this.broadcastStatus(),
+      }),
       child.on('error', (error) => {,
-        system.status = error';
-        system.lastError = error.message;
-        logger.error(`❌ Failed to start ${systemName}:`, error.message);
-        this.broadcastStatus();
-      });
+        system.status = error',
+        system.lastError = error.message,
+        logger.error(`❌ Failed to start ${systemName}:`, error.message),
+        this.broadcastStatus(),
+      }),
       // Wait for system to start,
-      await this.waitForSystemStart(systemName);
+      await this.waitForSystemStart(systemName),
       if (system.status === 'running') {,
-        logger.info(`✅ ${systemName} started successfully`);
-        this.broadcastStatus();
-        return true;
+        logger.info(`✅ ${systemName} started successfully`),
+        this.broadcastStatus(),
+        return true,
       } else {,
-        throw new Error(`System failed to start properly`);
+        throw new Error(`System failed to start properly`),
       }
-,
+
     } catch (error) {,
-      system.status = error';
-      system.lastError = error.message;
-      logger.error(`❌ Failed to start ${systemName}:`, error.message);
-      this.broadcastStatus();
-      return false;
+      system.status = error',
+      system.lastError = error.message,
+      logger.error(`❌ Failed to start ${systemName}:`, error.message),
+      this.broadcastStatus(),
+      return false,
     }
   }
 ,
   async waitForSystemStart(systemName, timeout = 30000) {,
-    const system = this.automationSystems.get(systemName);
-    const startTime = Date.now();
+    const system = this.automationSystems.get(systemName),
+    const startTime = Date.now(),
     return new Promise((resolve) => {,
       const checkStatus = () => {,
         if (system.status === 'running') {,
-          resolve(true);
+          resolve(true),
         } else if (Date.now() - startTime > timeout) {,
-          resolve(false);
+          resolve(false),
         } else {,
 const timeoutId =,
 const timeoutId =,
@@ -290,124 +290,124 @@ const timeoutId =,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
-const timeoutId = setTimeout(checkStatus,                                                1000);
+const timeoutId = setTimeout(checkStatus,                                                1000),
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
         }
-      };
-      checkStatus();
-    });
+      },
+      checkStatus(),
+    }),
   }
 ,
   stopSystem(systemName) {,
-    const system = this.automationSystems.get(systemName);
+    const system = this.automationSystems.get(systemName),
     if (!system || !system.process) {,
-      logger.info(`⚠️  System ${systemName} is not running`);
-      return false;
+      logger.info(`⚠️  System ${systemName} is not running`),
+      return false,
     }
 ,
-    logger.info(`🛑 Stopping ${systemName}...`);
-    system.process.kill('SIGTERM');
-    system.status = stopping';
-    this.broadcastStatus();
-    return true;
+    logger.info(`🛑 Stopping ${systemName}...`),
+    system.process.kill('SIGTERM'),
+    system.status = stopping',
+    this.broadcastStatus(),
+    return true,
   }
 ,
   restartSystem(systemName) {,
-    logger.info(`🔄 Restarting ${systemName}...`);
-    this.stopSystem(systemName);
+    logger.info(`🔄 Restarting ${systemName}...`),
+    this.stopSystem(systemName),
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
@@ -454,142 +454,142 @@ const timeoutId =,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
-const timeoutId = setTimeout(() => this.startSystem(systemName),                                                2000);
+const timeoutId = setTimeout(() => this.startSystem(systemName),                                                2000),
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
   }
 ,
   getSystemStatus() {,
-    const status = {};
+    const status = {},
     for (const [name, system] of this.automationSystems) {,
       status[name] = {,
-        name: system.config.name;
-        description: system.config.description;
-        status: system.status;
-        restarts: system.restarts;
-        lastStart: system.lastStart;
-        lastError: system.lastError;
-        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0,};
+        name: system.config.name,
+        description: system.config.description,
+        status: system.status,
+        restarts: system.restarts,
+        lastStart: system.lastStart,
+        lastError: system.lastError,
+        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0},
     }
-    return status;
+    return status,
   }
 ,
   broadcastStatus() {,
     if (this.io) {,
-      this.io.emit('status-update', this.getSystemStatus());
+      this.io.emit('status-update', this.getSystemStatus()),
     }
   }
 ,
   async start() {,
     if (this.isRunning) {,
-      logger.info('⚠️  Orchestrator is already running');
-      return;
+      logger.info('⚠️  Orchestrator is already running'),
+      return,
     }
 ,
-    await this.initialize();
-    this.isRunning = true;
+    await this.initialize(),
+    this.isRunning = true,
     // Start all automation systems,
-    logger.info('🚀 Starting all automation systems...');
+    logger.info('🚀 Starting all automation systems...'),
     for (const systemName of this.automationSystems.keys()) {,
-      await this.startSystem(systemName);
-      await this.sleep(2000), // Wait between starts,
+      await this.startSystem(systemName),
+      await this.sleep(2000), // Wait between starts
     }
 ,
-    logger.info('✅ All automation systems started');
-    logger.info(`📊 Dashboard: http://localhost:${this.port,}`);
-    logger.info(`🔗 API: http://localhost:${this.port,}/health`);
+    logger.info('✅ All automation systems started'),
+    logger.info(`📊 Dashboard: http://localhost:${this.port}`),
+    logger.info(`🔗 API: http://localhost:${this.port}/health`),
   }
 ,
   sleep(ms) {,
@@ -640,150 +640,150 @@ const timeoutId =,
 const timeoutId =,
 const timeoutId =,
 const timeoutId =,
-const timeoutId = setTimeout(resolve,                                                ms);
+const timeoutId = setTimeout(resolve,                                                ms),
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-;
+,
 // Store timeoutId for cleanup if needed,
-);
+),
   }
 }
 ,
 class PortManager {,
   constructor() {,
-    this.usedPorts = new Set();
+    this.usedPorts = new Set(),
   }
 ,
   async findAvailablePort(startPort = 3000) {,
-    const net = require('net');
+    const net = require('net'),
     for (let port = startPort, port < startPort + 100, port++) {,
-      if (this.usedPorts.has(port)) continue;
+      if (this.usedPorts.has(port)) continue,
       try {,
-        await this.isPortAvailable(port);
-        this.usedPorts.add(port);
-        return port;
+        await this.isPortAvailable(port),
+        this.usedPorts.add(port),
+        return port,
       } catch (error) {,
-        continue;
+        continue,
       }
     }
 ,
-    throw new Error('No available ports found'),
+    throw new Error('No available ports found')
   }
 ,
   isPortAvailable(port) {,
     return new Promise((resolve, reject) => {,
-      const server = require('net').createServer();
+      const server = require('net').createServer(),
       server.listen(port, () => {,
-        server.close();
-        resolve(port);
-      });
+        server.close(),
+        resolve(port),
+      }),
       server.on('error', () => {,
-        reject(new Error(`Port ${port} is not available`));
-      });
-    });
+        reject(new Error(`Port ${port} is not available`)),
+      }),
+    }),
   }
 ,
   releasePort(port) {,
-    this.usedPorts.delete(port);
+    this.usedPorts.delete(port),
   }
 }
 ,
 // Start the orchestrator,
 if (require.main === module) {,
-  const orchestrator = new ImprovedAutomationOrchestrator();
+  const orchestrator = new ImprovedAutomationOrchestrator(),
   orchestrator.start().catch(error => {,
-    logger.error('❌ Failed to start Improved Automation Orchestrator:', error);
-    process.exit(1);
-  });
+    logger.error('❌ Failed to start Improved Automation Orchestrator:', error),
+    process.exit(1),
+  }),
 }
 ,
-module.exports = ImprovedAutomationOrchestrator;
+module.exports = ImprovedAutomationOrchestrator,

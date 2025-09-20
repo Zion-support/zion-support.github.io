@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 
 export default function FaucetPage() {
-  const [address, setAddress] = useState('dev:alice');
-  const [amount, setAmount] = useState(100);
-  const [balance, setBalance] = useState<number | null>(null);
-  const [status, setStatus] = useState<string>('');
+  const [address, setAddress] = useState('dev: alice'),
+  const [amount, setAmount] = useState(100),
+  const [balance, setBalance] = useState<number | null>(null),
+  const [status, setStatus] = useState<string>(''),
 
   async function refresh() {
-    const res = await fetch(`/api/devnet/faucet?address=${encodeURIComponent(address)}`);
-    const data = await res.json();
-    setBalance(data.balance ?? 0);
+    const res = await fetch(`/api/devnet/faucet?address=${encodeURIComponent(address)}`),
+    const data = await res.json(),
+    setBalance(data.balance ?? 0),
   }
 
   async function mint() {
-    setStatus('Minting...');
+    setStatus('Minting...'),
     const res = await fetch('/api/devnet/faucet', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ address, amount }),
-    });
-    const data = await res.json();
-    setStatus(data.error ? `Error: ${data.error}` : `Minted ${data.minted} ZION$`);
-    refresh();
+      body: JSON.stringify({ address, amount })
+    }),
+    const data = await res.json(),
+    setStatus(data.error ? `Error: ${data.error}` : `Minted ${data.minted} ZION$`),
+    refresh(),
   }
 
-  useEffect(() => { refresh(); }, []);
+  useEffect(() => { refresh(), }, []),
 
   return (
     <div className="p-6 max-w-xl mx-auto space-y-4">
@@ -38,5 +38,5 @@ export default function FaucetPage() {
       </div>
       {status && <p className="text-sm text-gray-600">{status}</p>}
     </div>
-  );
+  ),
 }

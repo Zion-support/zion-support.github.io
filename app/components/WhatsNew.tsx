@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react',
+import Link from 'next/link',
 const WhatsNew: React.FC = () => {,
   return (,
     <section className="py-12 bg-gradient-to-r from-blue-50 to-purple-50">,
@@ -35,6 +35,5 @@ const WhatsNew: React.FC = () => {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),};
-export default WhatsNew;
+    </section>)},
+export default WhatsNew,

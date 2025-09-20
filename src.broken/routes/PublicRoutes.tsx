@@ -1,6 +1,6 @@
-import { Route, Routes } from "react-router-dom";
-import WhitepaperViewPage from "@/pages/WhitepaperViewPage";
-import NotFoundPage from "../pages/404"; // Corrected path using relative path
+import { Route, Routes } from "react-router-dom",
+import WhitepaperViewPage from "@/pages/WhitepaperViewPage",
+import NotFoundPage from "../pages/404", // Corrected path using relative path
 
 const PublicRoutes = () => {
   return (
@@ -10,7 +10,7 @@ const PublicRoutes = () => {
       {/* Fallback for /whitepaper/view/ without ID or other specific public sub-routes */}
       <Route path="/whitepaper/view/*" element={<NotFoundPage />} />
     </Routes>
-  );
-};
+  ),
+},
 
-export default PublicRoutes;
+export default PublicRoutes,

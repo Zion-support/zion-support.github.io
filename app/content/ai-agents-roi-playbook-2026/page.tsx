@@ -1,9 +1,9 @@
-import SEO from '../../../components/SEO';
+import SEO from '../../../components/SEO',
 export const metadata = {,
-  title: 'AI Agents ROI Playbook 2026 | Zion Tech Group';
+  title: 'AI Agents ROI Playbook 2026 | Zion Tech Group',
   description:,
-    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.',
-};
+    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.'
+},
 export default function AIAgentsROIPlaybook2026() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -42,23 +42,22 @@ export default function AIAgentsROIPlaybook2026() {,
             <p className="mb-2 font-semibold text-emerald-800">Next steps</p>,
             <p>,
               Apply this model with the <a href="/content/ai-2026-evaluation-harness-blueprint" className="text-emerald-700 font-semibold hover: text-emerald-900">Evaluation Harness Blueprint</a>,
-              {' ',}and the <a href="/content/ai-2026-agent-release-checklists" className="text-emerald-700 font-semibold hover: text-emerald-900">Agent Release Checklists</a>.,
+              {' '}and the <a href="/content/ai-2026-agent-release-checklists" className="text-emerald-700 font-semibold hover: text-emerald-900">Agent Release Checklists</a>.,
             </p>,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,
 export const metadata = {,
-  title: 'AI Agents ROI Playbook 2026';
-  description: 'Step-by-step playbook to quantify and realize ROI from AI agents.',};
+  title: 'AI Agents ROI Playbook 2026',
+  description: 'Step-by-step playbook to quantify and realize ROI from AI agents.'},
 export default function AIAgentsROIPlaybook2026() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Agents ROI Playbook 2026</h1>,
       <p className="text-gray-600 mb-8">,
-        Proven methods to identify high-value agent opportunities, model expected returns, and track realized value across cost, speed;
+        Proven methods to identify high-value agent opportunities, model expected returns, and track realized value across cost, speed,
         and quality metrics.,
       </p>,
       <section className="prose max-w-none">,
@@ -74,7 +73,6 @@ export default function AIAgentsROIPlaybook2026() {,
           Start with a clear baseline, define leading indicators, and implement weekly value reviews to remove blockers and capture gains.,
         </p>,
       </section>,
-    </main>,
-  );
+    </main>),
 }
 ,

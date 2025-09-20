@@ -9,7 +9,7 @@ export default function Page() {,
         <p className="mt-2 text-gray-400">2025-09-15</p>,
         <div className="prose prose-invert mt-8">,
           <p>,
-            Unify cost, quality, and latency using offline benchmarks and live canary evals to route traffic;
+            Unify cost, quality, and latency using offline benchmarks and live canary evals to route traffic,
             manage budgets, and make evidence-based model choices.,
           </p>,
           <h2>What’s inside</h2>,
@@ -31,6 +31,5 @@ export default function Page() {,
           </p>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}
 ,

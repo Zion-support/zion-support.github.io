@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
 const AdvancedTechInnovation2027: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
@@ -11,7 +10,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */};
+        {/* Hero Section */},
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-sm font-bold mb-6 animate-pulse">
             🚀 ADVANCED INNOVATION • 2027
@@ -24,7 +23,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </p>
         </div>
 
-        {/* Innovation Categories */};
+        {/* Innovation Categories */},
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="group bg-gradient-to-br from-blue-600/30 to-indigo-600/30 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-bounce">🧠</div>
@@ -43,7 +42,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
             </div>
           </div>
 
-          <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+          <div className="group bg-gradient-to-br from-cyan-600/30 to-blue-600/30 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/30 hover: scale-105 transition-all duration-300 cursor-pointer">
             <div className="text-6xl mb-4 text-center group-hover:animate-spin">⚡</div>
             <h3 className="text-2xl font-bold mb-4 text-center">Quantum AI</h3>
             <p className="text-cyan-100 mb-6 text-center">
@@ -132,7 +131,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
         {/* Innovation Timeline */};
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">Q1</span>
@@ -218,10 +217,10 @@ const AdvancedTechInnovation2027: React.FC = () => {
           </div>
         </div>
 
-        {/* Global Impact */};
+        {/* Global Impact */},
         <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-purple-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Global Impact Statistics</h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl font-bold text-purple-400 mb-2">2B+</div>
               <div className="text-lg opacity-90">Lives Transformed</div>
@@ -247,7 +246,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
             Join us in shaping the future of technology. Our advanced innovations are transforming industries and creating new possibilities for humanity.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a 
               href="/pages/ComprehensiveServices2025" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-lg"
@@ -264,6 +263,6 @@ const AdvancedTechInnovation2027: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
   };
 export default AdvancedTechInnovation2027;

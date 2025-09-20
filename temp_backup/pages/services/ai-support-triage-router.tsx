@@ -1,9 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
-  MessageCircle, 
+  MessageCircle,
   CheckCircle, 
   Shield, 
   Zap, 
@@ -19,7 +19,7 @@ import {
   Smartphone,
   Mail,
   Phone
-} from 'lucide-react';
+} from 'lucide-react',
 
 export default function AISupportTriageRouter() {
   const features = [
@@ -43,42 +43,29 @@ export default function AISupportTriageRouter() {
       title: 'Performance Analytics',
       description: 'Real-time insights into support team performance and ticket resolution metrics'
     }
-  ];
+  ],
 
   const capabilities = [
-    'Natural Language Processing',
-    'Sentiment Analysis',
-    'Urgency Detection',
-    'Category Classification',
-    'Customer Priority Scoring',
-    'Agent Skill Matching',
-    'Workload Balancing',
-    'Escalation Management',
-    'Multi-language Support',
-    'Integration APIs'
-  ];
+    'Natural Language ProcessingSentiment Analysis',
+    'Urgency DetectionCategory Classification',
+    'Customer Priority ScoringAgent Skill Matching',
+    'Workload BalancingEscalation Management',
+    'Multi-language SupportIntegration APIs'
+  ],
 
   const channels = [
-    'Email Support',
-    'Live Chat',
-    'Phone Support',
-    'Social Media',
-    'Help Desk Tickets',
-    'Mobile App Support',
-    'Self-Service Portal',
-    'Knowledge Base'
-  ];
+    'Email SupportLive Chat',
+    'Phone SupportSocial Media',
+    'Help Desk TicketsMobile App Support',
+    'Self-Service PortalKnowledge Base'
+  ],
 
   const benefits = [
-    'Reduced Response Times',
-    'Improved Customer Satisfaction',
-    'Better Agent Utilization',
-    'Lower Support Costs',
-    'Increased First-Call Resolution',
-    'Proactive Issue Prevention',
-    'Scalable Support Operations',
-    '24/7 Automated Routing'
-  ];
+    'Reduced Response TimesImproved Customer Satisfaction',
+    'Better Agent UtilizationLower Support Costs',
+    'Increased First-Call ResolutionProactive Issue Prevention',
+    'Scalable Support Operations24/7 Automated Routing'
+  ],
 
 const ai-support-triage-router: React.FC = () => {
   return (
@@ -95,7 +82,7 @@ const ai-support-triage-router: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+},
 
-export default ai-support-triage-router;
+export default ai-support-triage-router,

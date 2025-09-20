@@ -1,105 +1,105 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import {,
-  FileText;
-  Download;
-  Calendar;
-  User;
-  Tag;
-  ArrowRight;
-  TrendingUp;
-  BarChart3;
-  Brain;
-  Atom;
-  Globe;
-  Shield;
-  Zap;
-  Eye;
-  Clock;
-  Award,
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+  FileText,
+  Download,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
+  TrendingUp,
+  BarChart3,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Zap,
+  Eye,
+  Clock,
+  Award
+} from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const ReportsPage: React.FC = () => {,
   const reports = [,
     {,
-      title: 'The Future of Quantum Computing in Enterprise: 2024-2030';
-      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
-      date: '2024-01-15';
-      author: 'Dr. Sarah Chen & Quantum Research Team';
-      category: 'Technology Trends';
-      tags: ['Quantum ComputingEnterprise', 'Market AnalysisFuture Tech'];
-      pages: 45;
-      downloads: 1247;
-      views: 5678;
-      featured: true;
-      icon: <Atom className="w-8 h-8" />;
-      color: 'from-purple-500 to-pink-500',};
+      title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.',
+      date: '2024-01-15',
+      author: 'Dr. Sarah Chen & Quantum Research Team',
+      category: 'Technology Trends',
+      tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
+      pages: 45,
+      downloads: 1247,
+      views: 5678,
+      featured: true,
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500'},
     {,
-      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices';
-      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
-      date: '2024-01-10';
-      author: 'AI Research Division';
-      category: 'Business Intelligence';
-      tags: ['AIROI', 'Fortune 500Best Practices'];
-      pages: 38;
-      downloads: 892;
-      views: 3456;
-      featured: false;
-      icon: <Brain className="w-8 h-8" />;
-      color: 'from-blue-500 to-cyan-500',};
+      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
+      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.',
+      date: '2024-01-10',
+      author: 'AI Research Division',
+      category: 'Business Intelligence',
+      tags: ['AIROIFortune 500Best Practices'],
+      pages: 38,
+      downloads: 892,
+      views: 3456,
+      featured: false,
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500'},
     {,
-      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape';
-      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.';
-      date: '2024-01-08';
-      author: 'Cybersecurity Research Team';
-      category: 'Security';
-      tags: ['CybersecurityAI Threats', 'Threat LandscapeDefense'];
-      pages: 52;
-      downloads: 1567;
-      views: 6789;
-      featured: false;
-      icon: <Shield className="w-8 h-8" />;
-      color: 'from-red-500 to-orange-500',};
+      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
+      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.',
+      date: '2024-01-08',
+      author: 'Cybersecurity Research Team',
+      category: 'Security',
+      tags: ['CybersecurityAI ThreatsThreat LandscapeDefense'],
+      pages: 52,
+      downloads: 1567,
+      views: 6789,
+      featured: false,
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from-red-500 to-orange-500'},
     {,
-      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding';
-      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
-      date: '2024-01-05';
-      author: 'Market Research Team';
-      category: 'Market Analysis';
-      tags: ['Venture CapitalInvestment', 'InnovationGlobal Markets'];
-      pages: 41;
-      downloads: 734;
-      views: 2890;
-      featured: false;
-      icon: <TrendingUp className="w-8 h-8" />;
-      color: 'from-green-500 to-emerald-500',};
+      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
+      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.',
+      date: '2024-01-05',
+      author: 'Market Research Team',
+      category: 'Market Analysis',
+      tags: ['Venture CapitalInvestmentInnovationGlobal Markets'],
+      pages: 41,
+      downloads: 734,
+      views: 2890,
+      featured: false,
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500'},
     {,
-      title: 'Edge Computing & IoT: Transforming Industries in Real-Time';
-      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.';
-      date: '2024-01-03';
-      author: 'IoT Research Division';
-      category: 'Emerging Tech';
-      tags: ['Edge ComputingIoT', 'Industry 4.0Real-time'];
-      pages: 36;
-      downloads: 623;
-      views: 2345;
-      featured: false;
-      icon: <Zap className="w-8 h-8" />;
-      color: 'from-yellow-500 to-orange-500',};
+      title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
+      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.',
+      date: '2024-01-03',
+      author: 'IoT Research Division',
+      category: 'Emerging Tech',
+      tags: ['Edge ComputingIoTIndustry 4.0Real-time'],
+      pages: 36,
+      downloads: 623,
+      views: 2345,
+      featured: false,
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-yellow-500 to-orange-500'},
     {,
-      title: 'Sustainable Technology: Green Computing & Environmental Impact';
-      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
-      date: '2024-01-01';
-      author: 'Sustainability Research Team';
-      category: 'Sustainability';
-      tags: ['Green ComputingSustainability', 'Environmental ImpactClean Tech'];
-      pages: 43;
-      downloads: 445;
-      views: 1789;
-      featured: false;
-      icon: <Globe className="w-8 h-8" />;
-      color: 'from-teal-500 to-green-500',}
-  ];
+      title: 'Sustainable Technology: Green Computing & Environmental Impact',
+      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.',
+      date: '2024-01-01',
+      author: 'Sustainability Research Team',
+      category: 'Sustainability',
+      tags: ['Green ComputingSustainabilityEnvironmental ImpactClean Tech'],
+      pages: 43,
+      downloads: 445,
+      views: 1789,
+      featured: false,
+      icon: <Globe className="w-8 h-8" />,
+      color: 'from-teal-500 to-green-500'}
+  ],
   return (,
     <UltraAdvancedFuturisticBackground>,
       <div className="min-h-screen">,
@@ -111,7 +111,7 @@ const ReportsPage: React.FC = () => {,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
           {categories.map((category) => (,
             <Link,
-              key={category.name,}
+              key={category.name}
               href={category.href}
               className="group bg-slate-900/50 border border-white/10 rounded-lg p-8 hover: border-cyan-400/50 transition-all hover:scale-105",
             >,
@@ -145,8 +145,8 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 Featured Report,
@@ -156,11 +156,11 @@ const ReportsPage: React.FC = () => {,
               <div,
                 key={index}
                 className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12 hover: border-cyan-400/40 transition-all duration-300",
-                whileInView={{ opacity: 1, y: 0 ,}}
-                viewport={{ once: true ,}}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
               >,
                 <div className="flex flex-col lg: flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8">,
-                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color,} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>,
+                  <div className={`w-24 h-24 bg-gradient-to-br ${report.color} rounded-2xl flex items-center justify-center text-white flex-shrink-0`}>,
                     {report.icon}
                   </div>,
                   <div className="flex-1">,
@@ -197,8 +197,7 @@ const ReportsPage: React.FC = () => {,
                       {report.tags.map((tag, tagIndex) => (,
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">,
                           {tag}
-                        </span>,
-                      ))}
+                        </span>))}
                     </div>,
                   </div>,
                 </div>,
@@ -213,7 +212,7 @@ const ReportsPage: React.FC = () => {,
                   </button>,
                 </div>,
               </div>,
-            )),}
+            ))}
           </div>,
         </section>,
         {/* Categories Filter */}
@@ -221,8 +220,8 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">,
             <div,
               className="text-center mb-16",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
                 All Reports,
@@ -231,11 +230,11 @@ const ReportsPage: React.FC = () => {,
                 Explore our comprehensive research across different technology domains,
               </p>,
             </div>,
-            {/* Category Pills */,}
+            {/* Category Pills */}
             <div,
               className="flex flex-wrap justify-center gap-4 mb-12",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               {categories.map((category, index) => (,
                 <button,
@@ -243,7 +242,7 @@ const ReportsPage: React.FC = () => {,
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${,
                     category.active,
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white',
-                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50',}`}
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50'}`}
                 >,
                   {category.name} ({category.count}),
                 </button>,
@@ -255,8 +254,8 @@ const ReportsPage: React.FC = () => {,
                 <article,
                   key={index}
                   className="bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover: border-cyan-400/40 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30",
-                  whileInView={{ opacity: 1, y: 0 ,}}
-                  viewport={{ once: true ,}}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                 >,
                   <div className={`w-16 h-16 bg-gradient-to-br ${report.color} rounded-xl flex items-center justify-center text-white mb-6`}>,
                     {report.icon}
@@ -293,7 +292,7 @@ const ReportsPage: React.FC = () => {,
                     </button>,
                   </div>,
                 </article>,
-              )),}
+              ))}
             </div>,
           </div>,
         </section>,
@@ -302,8 +301,8 @@ const ReportsPage: React.FC = () => {,
           <div className="max-w-4xl mx-auto text-center">,
             <div,
               className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 border border-cyan-400/20 rounded-3xl p-12",
-              whileInView={{ opacity: 1, y: 0 ,}}
-              viewport={{ once: true ,}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
             >,
               <h2 className="text-4xl font-bold text-white mb-6">,
                 Need Custom Research?,
@@ -331,7 +330,7 @@ const ReportsPage: React.FC = () => {,
         </section>,
       </div>,
     </UltraAdvancedFuturisticBackground>,
-  ),};
-export default ReportsPage;
-</div></div>,
+  )},
+export default ReportsPage,
+</div></div>
 }))

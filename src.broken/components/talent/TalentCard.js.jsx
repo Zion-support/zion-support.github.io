@@ -1,19 +1,19 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react',
+import { Button } from '@/components/ui/button',
 
 export default function Page() {
-  };
+  },
   const handleBook = e => {
 
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault(),
+    e.stopPropagation(),
     if(onBook) {
 
-      onBook(talent);
+      onBook(talent),
     }
-  };
+  },
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [],
   return ()
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
@@ -128,7 +128,7 @@ export default function Page() {
               size="sm"
               variant="ghost"
               onClick={handleMessage}"
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
               Message
             </Button>
@@ -136,8 +136,8 @@ export default function Page() {
         </div>
       </div>
     </Card>
-  );
-};
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
+  )
+},
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
 '"`

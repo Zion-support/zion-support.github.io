@@ -1,24 +1,24 @@
 
-import React from "react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 
 interface EmptyStateProps {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
+  icon: React.ReactNode,
+  title: string,
+  description: string,
   action?: {
-    text: string;
-    href?: string;
-    onClick?: () => void;
-  };
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
   secondaryAction?: {
-    text: string;
-    href?: string;
-    onClick?: () => void;
-  };
-  className?: string;
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  className?: string,
 }
 
 export function EmptyState({
@@ -27,7 +27,7 @@ export function EmptyState({
   description,
   action,
   secondaryAction,
-  className,
+  className
 }: EmptyStateProps) {
   return (
     <div
@@ -77,5 +77,5 @@ export function EmptyState({
         )}
       </div>
     </div>
-  );
+  ),
 }

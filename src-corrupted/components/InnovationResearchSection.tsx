@@ -1,2 +1,2 @@
 
-export default InnovationResearchSection;
+export default InnovationResearchSection,

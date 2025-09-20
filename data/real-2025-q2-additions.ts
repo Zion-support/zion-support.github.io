@@ -1,9 +1,9 @@
 export interface Real2025Q2Addition {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[]
 }
 export const real2025Q2Additions: Real2025Q2Addition[] = [
   {
@@ -12,10 +12,8 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
     tagline: 'Never miss decisions and follow‑ups again',
     price: '$29/mo+',
     features: [
-      'Auto-transcription with speaker labels',
-      'Decision and action item extraction',
-      'Email and Slack follow‑ups',
-      'Workspace search'
+      'Auto-transcription with speaker labelsDecision and action item extraction',
+      'Email and Slack follow‑upsWorkspace search'
     ]
   },
   {
@@ -24,10 +22,8 @@ export const real2025Q2Additions: Real2025Q2Addition[] = [
     tagline: 'Proactive reliability with customer‑facing transparency',
     price: '$19/mo+',
     features: [
-      'Global checks and alerting',
-      'SLA calculations per customer',
-      'Incident timelines and labels',
-      'Hosted status pages'
+      'Global checks and alertingSLA calculations per customer',
+      'Incident timelines and labelsHosted status pages'
     ]
   }
-];
+],

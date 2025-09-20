@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import BlogPost from '@/pages/BlogPost';
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter, Route, Routes } from 'react-router-dom',
+import BlogPost from '@/pages/BlogPost',
 
 it('renders blog article from slug', async () => {
   render(
@@ -9,6 +9,6 @@ it('renders blog article from slug', async () => {
         <Route path='/blog/:slug' element={<BlogPost />} />
       </Routes>
     </MemoryRouter>
-  );
-  expect(await screen.findByRole('heading')).toBeInTheDocument();
-});
+  ),
+  expect(await screen.findByRole('heading')).toBeInTheDocument(),
+}),

@@ -1,14 +1,14 @@
 <<<<<<< HEAD
-export default Sitemap;
+export default Sitemap,
 
 =======
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
             { path: '/blog', label: 'Blog', description: 'Latest insights and technology trends' }
-        ],;
-        services[;
+        ],
+        services[,
             { path: '/services', label: 'All Services', description: 'Complete overview of our services' },
             { path: '/services/ai', label: 'AI Solutions', description: 'Artificial Intelligence & Machine Learning' },
             { path: '/services/cloud', label: 'Cloud & DevOps', description: 'Cloud Infrastructure & DevOps Automation' },
@@ -16,8 +16,8 @@ export default function Page() {
             { path: '/services/infrastructure', label: 'Infrastructure', description: 'IT Infrastructure & Management' },
             { path: '/services/consulting', label: 'Consulting', description: 'Strategic Technology Consulting' },
             { path: '/services/transformation', label: 'Digital Transformation', description: 'Business Process Transformation' }
-        ],;
-        aiAutonomous[;
+        ],
+        aiAutonomous[,
             { path: '/ai-autonomous-analytics', label: 'AI Analytics', description: 'Advanced data analytics powered by AI' },
             { path: '/ai-autonomous-automation', label: 'AI Automation', description: 'Intelligent process automation' },
             { path: '/ai-autonomous-security', label: 'AI Security', description: 'AI-powered security solutions' },
@@ -28,21 +28,21 @@ export default function Page() {
             { path: '/ai-autonomous-data', label: 'AI Data', description: 'AI data processing and management' },
             { path: '/ai-autonomous-engineering', label: 'AI Engineering', description: 'AI engineering solutions' },
             { path: '/ai-autonomous-integration', label: 'AI Integration', description: 'AI system integration services' }
-        ],;
-        pricing[;
+        ],
+        pricing[,
             { path: '/comprehensive-pricing-2025', label: 'Pricing 2025', description: 'Current year pricing plans' },
             { path: '/comprehensive-pricing', label: 'Comprehensive Pricing', description: 'Detailed pricing information' }
-        ],;
-        showcase[;
+        ],
+        showcase[,
             { path: '/services-showcase', label: 'Services Showcase', description: 'Showcase of our services' },
             { path: '/comprehensive-services-showcase', label: 'Comprehensive Services Showcase', description: 'Complete overview of all services' },
             { path: '/innovative-services-2025', label: 'Innovative Services 2025', description: 'Latest innovative services' }
-        ],;
-        legal[;
+        ],
+        legal[,
             { path: '/privacy', label: 'Privacy Policy', description: 'Our privacy policy and data handling' },
             { path: '/terms', label: 'Terms of Service', description: 'Terms and conditions of service' }
         ]
-    };
+    },
     return (<div className="bg-slate-50 py-16">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="text-center mb-12">"
@@ -161,14 +161,14 @@ export default function Page() {
             'AI Autonomous Audit',AI Autonomous Compliance',AI Autonomous Creativity',AI Autonomous Customer Service',AI Autonomous Database Security',AI Autonomous Decision Engine',AI Autonomous Design',AI Autonomous DevOps',AI Autonomous Edge Security',AI Autonomous Education',AI Autonomous Finance',AI Autonomous Forensics',AI Autonomous Governance',AI Autonomous Healthcare',AI Autonomous Hybrid Security',AI Autonomous Identity Security',AI Autonomous Incident Response',AI Autonomous Infrastructure Security',AI Autonomous Invention',AI Autonomous IoT Security',AI Autonomous Learning',AI Autonomous Legal Counsel',AI Autonomous Logistics',AI Autonomous Malware Analysis',AI Autonomous Management',AI Autonomous Manufacturing',AI Autonomous Marketing',AI Autonomous Microservice Security',AI Autonomous Mobile Security',AI Autonomous Monitoring',AI Autonomous Network Security',AI Autonomous Optimization',AI Autonomous Orchestration',AI Autonomous Penetration Testing',AI Autonomous Planning',AI Autonomous Prediction',AI Autonomous Quality Assurance',AI Autonomous Reasoning',AI Autonomous Recommendation',AI Autonomous Risk Management',AI Autonomous Robotics',AI Autonomous Scientific Research',AI Autonomous Serverless Security',AI Autonomous Software Engineering',AI Autonomous Speech',AI Autonomous Synthesis',AI Autonomous Systems Platform',AI Autonomous Testing',AI Autonomous Threat Detection',AI Autonomous Threat Intelligence',AI Autonomous Trading',AI Autonomous Translation',AI Autonomous Virtual Assistant',AI Autonomous Vision',AI Autonomous Vulnerability Assessment',AI Autonomous Web Security',AI Autonomous Workflow',AI Autonomous Writing',AI Autonomous Zero Trust Security'
         ].map((service) => {
 
-            const path = '/' + service.toLowerCase().replace(/\s+/g,-').replace(/ai-autonomous-/,ai-autonomous-');"
+            const path = '/' + service.toLowerCase().replace(/\s+/g,-').replace(/ai-autonomous-/,ai-autonomous-'),"
             return (<Link key={service} to={path} className="block p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-200 text-center">"
                   <div className="font-medium text-slate-900 text-sm">{service}</div>
                 </Link>)})}
           </div>
         </div>
       </div>
-    </div>)};
-export default Sitemap;
+    </div>)},
+export default Sitemap,
 '"
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,43 +1,43 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Zap, Star } from "lucide-react";
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Link } from "react-router-dom",
+import { useTranslation } from "react-i18next",
+import { motion } from "framer-motion",
+import { ArrowRight, Sparkles, Zap, Star } from "lucide-react",
 export function HeroSection() {,
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const containerVariants = {,
-    hidden: { opacity: 0 ,};
+    hidden: { opacity: 0 },
     visible: {,
-      opacity: 1;
+      opacity: 1,
       transition: {,
-        staggerChildren: 0.2;
-        delayChildren: 0.1,}
+        staggerChildren: 0.2,
+        delayChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {,
-    hidden: { y: 30, opacity: 0 ,};
+    hidden: { y: 30, opacity: 0 },
     visible: {,
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {,
-        duration: 0.6;
-        ease: "easeOut",}
+        duration: 0.6,
+        ease: "easeOut"}
     }
-  };
+  },
   const floatingVariants = {,
     animate: {,
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {,
-        duration: 3;
-        repeat: Infinity;
-        ease: "easeInOut",}
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"}
     }
-  };
+  },
   return (,
     <section className="relative overflow-hidden py-20 md: py-32 min-h-screen flex items-center">,
-      {/* Enhanced background gradient effect */,}
+      {/* Enhanced background gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>,
       {/* Animated floating particles with better positioning */}
       <motion.div,
@@ -55,33 +55,33 @@ export function HeroSection() {,
           className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50",
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: "1s" ,}}
+          style={{ animationDelay: "1s" }}
         />,
         <motion.div,
           className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60",
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: "2s" ,}}
+          style={{ animationDelay: "2s" }}
         />,
         <motion.div,
           className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30",
           variants={floatingVariants}
           animate="animate",
-          style={{ animationDelay: "0.5s" ,}}
+          style={{ animationDelay: "0.5s" }}
         />,
       </motion.div>,
       {/* Floating tech icons */}
       <motion.div,
         className="absolute top-20 right-20 opacity-20",
-        animate={{ rotate: 360 ,}}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" ,}}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >,
         <Sparkles className="w-16 h-16 text-zion-cyan" />,
       </motion.div>,
       <motion.div,
         className="absolute bottom-20 left-20 opacity-20",
-        animate={{ rotate: -360 ,}}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" ,}}
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
       >,
         <Zap className="w-12 h-12 text-zion-purple" />,
       </motion.div>,
@@ -93,12 +93,12 @@ export function HeroSection() {,
         >,
           <motion.div variants={itemVariants}>,
             <GradientHeading className="mb-6 text-5xl md: text-7xl font-bold leading-tight">,
-              {t('home.hero_title'),}
+              {t('home.hero_title')}
             </GradientHeading>,
           </motion.div>,
           <motion.div variants={itemVariants}>,
             <p className="text-xl md: text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">,
-              {t('home.hero_subtitle'),}
+              {t('home.hero_subtitle')}
             </p>,
           </motion.div>,
           {/* Feature highlights */}
@@ -128,7 +128,7 @@ export function HeroSection() {,
               <Link,
                 to="/signup",
                 role="button",
-                aria-label={t('auth.signup'),}
+                aria-label={t('auth.signup')}
                 tabIndex={0}
                 data-testid="hero-signup-btn",
                 className="flex items-center gap-2",
@@ -142,7 +142,7 @@ export function HeroSection() {,
               to="/marketplace",
               className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-xl",
             >,
-              {t('home.browse_marketplace'),}
+              {t('home.browse_marketplace')}
               <ArrowRight className="w-5 h-5" />,
             </Link>,
           </motion.div>,
@@ -161,6 +161,6 @@ export function HeroSection() {,
         </motion.div>,
       </div>,
     </section>,
-  );
+  ),
 }
 ,

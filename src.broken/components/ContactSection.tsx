@@ -1,12 +1,12 @@
 export function ContactSection(...args[]):  {
 
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
+import { useState } from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import z from "zod",
 import { Mail } from 'lucide-react'
 
   { opacity: 0,
@@ -60,7 +60,7 @@ import { Mail } from 'lucide-react'
                 className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4"
 "
                 <contact.icon className="h-8 w-8 text-white" />
-              </a>;"
+              </a>,"
               <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>"
               <p className="text-zion-slate-light">{contact.value}</p>
             </motion.div>
@@ -85,19 +85,19 @@ import { Mail } from 'lucide-react'
 
           <Link"
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 
             Contact Us Today"
-            <ArrowRight className="ml-2 h-5 w-5"  />;
-          </Link>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
-export default ContactSection;
+            <ArrowRight className="ml-2 h-5 w-5"  />,
+          </Link>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default ContactSection,
+export default ContactSection,
+export default ContactSection,
+export default ContactSection,
+export default ContactSection,
+export default ContactSection,
+export default ContactSection,
 '"

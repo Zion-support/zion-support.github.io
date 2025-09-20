@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default SupplyChain;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default SupplyChain,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -10,19 +10,15 @@ export default function Page() {
       description:
         'Automated warehouse operations and inventory control systems.',
       icon: Building,
-      features: ['Automated picking',
-        'Space optimization',
-        'Order fulfillment',
-        'Quality control',
+      features: ['Automated pickingSpace optimization',
+        'Order fulfillmentQuality control'
       ],
       price: 'From $120,000',
       timeline: '24 - 36 weeks',
       category: 'Warehouse',
-      technologies: ['WMS',
-        'Automation',
-        'IoT Sensors',
-        'Robotics Integration',
-      ],
+      technologies: ['WMSAutomation',
+        'IoT SensorsRobotics Integration'
+      ]
     },
     {
       id: 5,
@@ -30,19 +26,15 @@ export default function Page() {
       description:
         'Comprehensive supplier relationship and performance management platforms.',
       icon: Users,
-      features: ['Supplier onboarding',
-        'Performance tracking',
-        'Risk assessment',
-        'Compliance monitoring',
+      features: ['Supplier onboardingPerformance tracking',
+        'Risk assessmentCompliance monitoring'
       ],
       price: 'From $70,000',
       timeline: '16 - 24 weeks',
       category: 'Supplier Management',
-      technologies: ['SRM Platforms',
-        'Analytics',
-        'Risk Management',
-        'Compliance Tools',
-      ],
+      technologies: ['SRM PlatformsAnalytics',
+        'Risk ManagementCompliance Tools'
+      ]
     },
     {
       id: 6,
@@ -50,21 +42,17 @@ export default function Page() {
       description:
         'Advanced analytics and reporting for supply chain performance optimization.',
       icon: BarChart3,
-      features: ['Performance metrics',
-        'Cost analysis',
-        'Trend identification',
-        'Predictive insights',
+      features: ['Performance metricsCost analysis',
+        'Trend identificationPredictive insights'
       ],
       price: 'From $90,000',
       timeline: '16 - 24 weeks',
       category: 'Analytics',
-      technologies: ['Business Intelligence',
-        'Data Visualization',
-        'Predictive Models',
-        'Real - time Dashboards',
-      ],
-    },
-  ];
+      technologies: ['Business IntelligenceData Visualization',
+        'Predictive ModelsReal - time Dashboards'
+      ]
+    }
+  ],
 
   const successStories = [{
       logo: '🚛',
@@ -75,7 +63,7 @@ export default function Page() {
       solution:
         'Implemented end - to - end supply chain visibility platform with real - time tracking and analytics.',
       results:
-        '30% reduction in operational costs, 40% improvement in delivery times, 25% increase in customer satisfaction.',
+        '30% reduction in operational costs, 40% improvement in delivery times, 25% increase in customer satisfaction.'
     },
     {
       logo: '🏭',
@@ -86,7 +74,7 @@ export default function Page() {
       solution:
         'Deployed AI - powered inventory management system with demand forecasting and automated reordering.',
       results:
-        '35% reduction in inventory costs, 50% decrease in stockouts, 20% improvement in order fulfillment.',
+        '35% reduction in inventory costs, 50% decrease in stockouts, 20% improvement in order fulfillment.'
     },
     {
       logo: '📦',
@@ -97,9 +85,9 @@ export default function Page() {
       solution:
         'Implemented AI - driven route optimization with real - time traffic data and dynamic routing.',
       results:
-        '25% reduction in delivery times, 30% decrease in fuel costs, 40% improvement in customer satisfaction.',
-    },
-  ];
+        '25% reduction in delivery times, 30% decrease in fuel costs, 40% improvement in customer satisfaction.'
+    }
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
       {/* Hero Section */}
@@ -281,7 +269,7 @@ export default function Page() {
               transform your operations, reduce costs, and improve customer
               satisfaction.</p>
 
-            <div className="flex flex - col sm:flex - row gap-4 justify -center">
+            <div className="flex flex - col sm: flex - row gap-4 justify -center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient - to - r from - blue - 600 to - cyan - 600 text-white font - semibold rounded-xl hover:shadow-lg hover:shadow-blue - 500 / 25 transition - all duration - 300 transform hover:scale -105"
@@ -298,6 +286,6 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},
 

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Zap, Brain, Atom, Bot, Heart, Shield, Rocket, TrendingUp, Users, CheckCircle, Play, Sparkles, Globe, Cpu, Database, Network, Cloud, Lock, Eye, Target, BarChart3, Lightbulb, Code, TestTube, Leaf, Car, Microscope, BrainCircuit, Award, Clock, DollarSign, Phone, Mail, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
+import { ArrowRight, Star, Zap, Brain, Atom, Bot, Heart, Shield, Rocket, TrendingUp, Users, CheckCircle, Play, Sparkles, Globe, Cpu, Database, Network, Cloud, Lock, Eye, Target, BarChart3, Lightbulb, Code, TestTube, Leaf, Car, Microscope, BrainCircuit, Award, Clock, DollarSign, Phone, Mail, MapPin } from 'lucide-react',
 
 export default function UltraAdvancedHero2026V2() {
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
+  const [isVisible, setIsVisible] = useState(false),
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const featuredServices = [
     {
@@ -47,31 +47,28 @@ export default function UltraAdvancedHero2026V2() {
       price: '$3,799/mo',
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ],
 
   const stats = [
     { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" /> },
     { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" /> },
     { label: 'Micro SaaS', value: '100+', icon: <Code className="w-6 h-6" /> },
     { label: 'Success Rate', value: '99.9%', icon: <CheckCircle className="w-6 h-6" /> }
-  ];
+  ],
 
   const benefits = [
-    'Up to 100x faster AI processing',
-    'Quantum advantage in complex calculations',
-    'Revolutionary consciousness development',
-    'Industry-leading automation solutions',
-    'Global enterprise deployment',
-    '24/7 AI-powered support'
-  ];
+    'Up to 100x faster AI processingQuantum advantage in complex calculations',
+    'Revolutionary consciousness developmentIndustry-leading automation solutions',
+    'Global enterprise deployment24/7 AI-powered support'
+  ],
 
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+      setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length),
+    }, 4000),
+    return () => clearInterval(interval),
+  }, []),
 
 const UltraAdvancedHero2026V2: React.FC = () => {
   return (
@@ -79,7 +76,7 @@ const UltraAdvancedHero2026V2: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraAdvancedHero2026V2</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraAdvancedHero2026V2;
+export default UltraAdvancedHero2026V2,

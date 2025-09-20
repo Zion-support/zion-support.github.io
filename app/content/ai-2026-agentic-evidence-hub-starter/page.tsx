@@ -1,7 +1,7 @@
 export const metadata = {,
-  title: 'AI 2026: Agentic Evidence Hub — Starter Kit';
-  description: 'Spin up a lightweight hub to centralize eval results, incidents, approvals, and policy evidence for autonomous agents.',
-};
+  title: 'AI 2026: Agentic Evidence Hub — Starter Kit',
+  description: 'Spin up a lightweight hub to centralize eval results, incidents, approvals, and policy evidence for autonomous agents.'
+},
 export default function Page() {,
   return (,
     <main className="min-h-screen bg-white">,
@@ -42,6 +42,5 @@ export default function Page() {,
           </div>,
         </div>,
       </section>,
-    </main>,
-  ),}
+    </main>)}
 ,

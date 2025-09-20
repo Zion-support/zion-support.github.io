@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense } from 'react',
 export default function Page() {
 ,
     "announcements": {
@@ -9,7 +9,7 @@ export default function Page() {
         adminOnly: true,
         icon: "Megaphone"
 
-};
+},
 const iconMap = {
   "Briefcase": Briefcase,
     "MessageSquare": MessageSquare,
@@ -17,16 +17,16 @@ const iconMap = {
     "FileText": FileText,
   "Megaphone": Megaphone
 
-};
-function CategoryContent({ categoryId, category, IconComponent, user, }) {
-    const [searchQuery, setSearchQuery] = useState("");
-    const { posts = [], loading, } = usePostsByCategory(categoryId) ;
-    const errorMessage = null;
+},
+function CategoryContent({ categoryId, category, IconComponent, user }) {
+    const [searchQuery, setSearchQuery] = useState(""),
+    const { posts = [], loading } = usePostsByCategory(categoryId) ,
+    const errorMessage = null,
     const filteredPosts = searchQuery
         ? posts.filter((post) => post.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
             post.content.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
-            post.tags.some((tag) => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ) : posts;
-    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin") ;
+            post.tags.some((tag) => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ) : posts,
+    const canCreatePost = categoryId !== "announcements" || (user?.userType === "admin" || user?.role === "admin") ,
     return (<div className="container py-8">
       <div className="flex items - center gap-3 mb-6">
         <Link to="/community" className="text-sm text-muted - foreground hover:text-foreground">
@@ -66,12 +66,12 @@ function CategoryContent({ categoryId, category, IconComponent, user, }) {
           {canCreatePost && <CreatePostButton categoryId={categoryId}/>}
         </div>) }
     </div>) }
-    const { categoryId } = useParams () ;
-    const { user } = useAuth () ;
+    const { categoryId } = useParams () ,
+    const { user } = useAuth () ,
     if(!categoryId || !categoriesInfo[categoryId]) {
         return < NotFound />}
-    const category = categoriesInfo[categoryId];
-    const IconComponent = iconMap[category.icon] || MessageSquare;
+    const category = categoriesInfo[categoryId],
+    const IconComponent = iconMap[category.icon] || MessageSquare,
     return (<>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {
   `community, forum,

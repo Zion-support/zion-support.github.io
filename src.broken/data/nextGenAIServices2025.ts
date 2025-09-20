@@ -1,13 +1,13 @@
 <<<<<<< HEAD
     },
     estimatedTime: '8-16 weeks',
-    technologies['Reinforcement Learning',Deep Learning',Neural Networks',Python',PyTorch',TensorFlow'],;
+    technologies['Reinforcement Learning',Deep Learning',Neural Networks',Python',PyTorch',TensorFlow'],
     aiScore: 98,
     marketPrice: '$2,999-$19,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance['AI Safety',Transparency',Accountability',Bias Prevention']},;
+    ethicalCompliance['AI Safety',Transparency',Accountability',Bias Prevention']},
   {
 
     id: 'advanced-nlp-platform',
@@ -15,16 +15,16 @@
     description: 'State-of-the-art NLP with multilingual understanding and generation',
     longDescription: 'Break language barriers with our advanced NLP platform.Features multilingual understanding, context-aware generation, and domain-specific language models.',
     icon: 'MessageCircle',
-    color: 'from-blue-500 to-indigo-600',
+    color: 'from-blue-500 to-indigo-600'
     },
     estimatedTime: '4-8 weeks',
-    technologies['GPT-4',BERT',Transformer Models',Python',Hugging Face',FastAPI'],;
+    technologies['GPT-4',BERT',Transformer Models',Python',Hugging Face',FastAPI'],
     aiScore: 96,
     marketPrice: '$799-$4,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Bias Detection',Content Filtering',Privacy Protection',Transparency']},;
+    ethicalCompliance['Bias Detection',Content Filtering',Privacy Protection',Transparency']},
   {
 
     id: 'computer-vision-ai',
@@ -32,16 +32,16 @@
     description: 'Next-generation computer vision with 3D understanding and spatial awareness',
     longDescription: 'See the world through AI eyes with our advanced computer vision platform.Features 3D understanding, spatial awareness, and real-time object recognition.',
     icon: 'Eye',
-    color: 'from-green-500 to-emerald-600',
+    color: 'from-green-500 to-emerald-600'
     },
     estimatedTime: '6-12 weeks',
-    technologies['OpenCV',PyTorch',TensorFlow',CUDA',3D Vision',Computer Vision'],;
+    technologies['OpenCV',PyTorch',TensorFlow',CUDA',3D Vision',Computer Vision'],
     aiScore: 97,
     marketPrice: '$1,299-$7,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Privacy Protection',Bias Prevention',Transparency',Accountability']},;
+    ethicalCompliance['Privacy Protection',Bias Prevention',Transparency',Accountability']},
   {
 
     id: 'ai-ethics-platform',
@@ -49,16 +49,16 @@
     description: 'Comprehensive AI ethics framework and governance tools',
     longDescription: 'Ensure responsible AI development with our comprehensive ethics platform.Features bias detection, fairness metrics, transparency tools, and governance frameworks.',
     icon: 'Shield',
-    color: 'from-teal-500 to-cyan-600',
+    color: 'from-teal-500 to-cyan-600'
     },
     estimatedTime: '2-6 weeks',
-    technologies['Python',Fairness Metrics',Bias Detection',Explainable AI',Governance Tools'],;
+    technologies['Python',Fairness Metrics',Bias Detection',Explainable AI',Governance Tools'],
     aiScore: 94,
     marketPrice: '$599-$3,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Ethical Guidelines',Bias Prevention',Transparency',Accountability']},;
+    ethicalCompliance['Ethical Guidelines',Bias Prevention',Transparency',Accountability']},
   {
 
     id: 'quantum-ai-hybrid',
@@ -66,16 +66,16 @@
     description: 'Hybrid quantum-classical AI for complex problem solving',
     longDescription: 'Combine the power of quantum computing with classical AI to solve previously intractable problems.Our hybrid approach delivers exponential speedups for specific applications.',
     icon: 'Rocket',
-    color: 'from-violet-500 to-fuchsia-600',
+    color: 'from-violet-500 to-fuchsia-600'
     },
     estimatedTime: '12-20 weeks',
-    technologies['Qiskit',Cirq',PyTorch',TensorFlow',Quantum Hardware',Hybrid Algorithms'],;
+    technologies['Qiskit',Cirq',PyTorch',TensorFlow',Quantum Hardware',Hybrid Algorithms'],
     aiScore: 99,
     marketPrice: '$4,999-$29,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'beta',
     researchLevel: 'research',
-    ethicalCompliance['AI Safety',Quantum Ethics',Research Ethics',Transparency']},;
+    ethicalCompliance['AI Safety',Quantum Ethics',Research Ethics',Transparency']},
   {
 
     id: 'federated-learning-platform',
@@ -83,16 +83,16 @@
     description: 'Privacy-preserving distributed machine learning',
     longDescription: 'Train AI models across distributed data sources without sharing raw data.Our federated learning platform ensures privacy while enabling collaborative AI development.',
     icon: 'Network',
-    color: 'from-orange-500 to-red-600',
+    color: 'from-orange-500 to-red-600'
     },
     estimatedTime: '8-16 weeks',
-    technologies['Federated Learning',Homomorphic Encryption',Secure Multi-party Computation',Python',PyTorch',TensorFlow'],;
+    technologies['Federated Learning',Homomorphic Encryption',Secure Multi-party Computation',Python',PyTorch',TensorFlow'],
     aiScore: 95,
     marketPrice: '$1,999-$12,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
-    ethicalCompliance['Privacy Protection',Data Security',Transparency',Accountability']},;
+    ethicalCompliance['Privacy Protection',Data Security',Transparency',Accountability']},
   {
 
     id: 'ai-research-platform',
@@ -100,16 +100,16 @@
     description: 'Comprehensive platform for AI research and experimentation',
     longDescription: 'Accelerate your AI research with our comprehensive platform.Features experimental tools, research frameworks, and collaboration tools for AI researchers.',
     icon: 'TestTube',
-    color: 'from-indigo-500 to-purple-600',
+    color: 'from-indigo-500 to-purple-600'
     },
     estimatedTime: '2-4 weeks',
-    technologies['Research Tools',Experiment Tracking',Version Control',Collaboration Tools',Python',Jupyter'],;
+    technologies['Research Tools',Experiment Tracking',Version Control',Collaboration Tools',Python',Jupyter'],
     aiScore: 93,
     marketPrice: '$299-$1,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'research',
-    ethicalCompliance['Research Ethics',Transparency',Reproducibility',Open Science']},;
+    ethicalCompliance['Research Ethics',Transparency',Reproducibility',Open Science']},
   {
 
     id: 'ai-optimization-engine',
@@ -120,32 +120,32 @@
     color: 'from-yellow-500 to-orange-600',
 =======
 export interface NextGenAIService {
-  id: string;
-  title: string;
-  description: string;
-  longDescription: string;
-  icon: string;
-  color: string;
-  category: 'ai' | 'machine-learning' | 'deep-learning' | 'nlp' | 'computer-vision' | 'autonomous-systems' | 'ai-ethics' | 'ai-research';
-  features: string[];
-  benefits: string[];
-  useCases: string[];
+  id: string,
+  title: string,
+  description: string,
+  longDescription: string,
+  icon: string,
+  color: string,
+  category: 'ai' | 'machine-learning' | 'deep-learning' | 'nlp' | 'computer-vision' | 'autonomous-systems' | 'ai-ethics' | 'ai-research',
+  features: string[],
+  benefits: string[],
+  useCases: string[],
 pricing: {
 
-    starter: string;
-    professional: string;
-    enterprise: string;
+    starter: string,
+    professional: string,
+    enterprise: string,
     custom: string
-};
-  estimatedTime: string;
-  technologies: string[];
-  image?: string;
-  aiScore: number;
-  marketPrice: string;
-  contactLink: string;
-  status: 'active' | 'beta' | 'coming-soon';
-  researchLevel: 'production' | 'research' | 'experimental';
-  ethicalCompliance: string[]};
+},
+  estimatedTime: string,
+  technologies: string[],
+  image?: string,
+  aiScore: number,
+  marketPrice: string,
+  contactLink: string,
+  status: 'active' | 'beta' | 'coming-soon',
+  researchLevel: 'production' | 'research' | 'experimental',
+  ethicalCompliance: string[]},
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
 
     id: 'autonomous-ai-systems',
@@ -155,15 +155,15 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
     icon: 'Brain',
     color: 'from-purple-500 to-pink-600',
     category: 'autonomous-systems',
-    features[;
+    features[,
       'Self-learning algorithms',Autonomous decision making',Continuous optimization',Adaptive behavior',Goal-oriented learning',Ethical constraint enforcement'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Reduced human intervention',Continuous improvement',Adaptive problem solving',Scalable AI operations'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Autonomous vehicles',Smart cities',Industrial automation',Robotic systems'
-    ],;
+    ],
     pricing: {
 
       starter: '$2,999/month',
@@ -171,31 +171,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$19,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '8-16 weeks','
-    technologies['Reinforcement Learning', 'Deep Learning', 'Neural Networks', 'Python', 'PyTorch', 'TensorFlow'],;
+    estimatedTime: '8-16 weeks
+    technologies['Reinforcement Learning', 'Deep LearningNeural Networks', 'PythonPyTorch', 'TensorFlow'],
     aiScore: 98,'
-    marketPrice: '$2,999-$19,999/month','
+    marketPrice: '$2,999-$19,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'beta','
+    status: 'beta
     researchLevel: 'research','
-    ethicalCompliance['AI Safety', 'Transparency', 'Accountability', 'Bias Prevention']},;  {
+    ethicalCompliance['AI SafetyTransparency', 'AccountabilityBias Prevention']},  {
 '
-    id: 'advanced-nlp-platform','
+    id: 'advanced-nlp-platform
     title: 'Advanced Natural Language Processing','
-    description: 'State-of-the-art NLP with multilingual understanding and generation','
+    description: 'State-of-the-art NLP with multilingual understanding and generation
     longDescription: 'Break language barriers with our advanced NLP platform.Features multilingual understanding, context-aware generation, and domain-specific language models.','
-    icon: 'MessageCircle','
+    icon: 'MessageCircle
     color: 'from-blue-500 to-indigo-600','
     category: 'nlp',
-    features[;
+    features[,
       'Multilingual understanding',Context-aware generation',Domain-specific models',Sentiment analysis',Entity recognition',Language translation'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Global communication',Improved customer service',Content localization',Multilingual support'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Global businesses',Customer service',Content creation',Language learning'
-    ],;
+    ],
     pricing: {
 
       starter: '$799/month',
@@ -203,31 +203,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$4,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '4-8 weeks','
-    technologies['GPT-4', 'BERT', 'Transformer Models', 'Python', 'Hugging Face', 'FastAPI'],;
+    estimatedTime: '4-8 weeks
+    technologies['GPT-4', 'BERTTransformer Models', 'PythonHugging Face', 'FastAPI'],
     aiScore: 96,'
-    marketPrice: '$799-$4,999/month','
+    marketPrice: '$799-$4,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'active','
+    status: 'active
     researchLevel: 'production','
-    ethicalCompliance['Bias Detection', 'Content Filtering', 'Privacy Protection', 'Transparency']},;  {
+    ethicalCompliance['Bias DetectionContent Filtering', 'Privacy ProtectionTransparency']},  {
 '
-    id: 'computer-vision-ai','
+    id: 'computer-vision-ai
     title: 'Advanced Computer Vision AI','
-    description: 'Next-generation computer vision with 3D understanding and spatial awareness','
+    description: 'Next-generation computer vision with 3D understanding and spatial awareness
     longDescription: 'See the world through AI eyes with our advanced computer vision platform.Features 3D understanding, spatial awareness, and real-time object recognition.','
-    icon: 'Eye','
+    icon: 'Eye
     color: 'from-green-500 to-emerald-600','
     category: 'computer-vision',
-    features[;
+    features[,
       '3D object recognition',Spatial understanding',Real-time processing',Multi-modal vision',Depth perception',Motion tracking'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Enhanced visual understanding',Improved accuracy',Real-time processing',3D spatial awareness'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Autonomous vehicles',Robotics',Augmented reality',Security systems'
-    ],;
+    ],
     pricing: {
 
       starter: '$1,299/month',
@@ -235,31 +235,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$7,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '6-12 weeks','
-    technologies['OpenCV', 'PyTorch', 'TensorFlow', 'CUDA', '3D Vision', 'Computer Vision'],;
+    estimatedTime: '6-12 weeks
+    technologies['OpenCV', 'PyTorchTensorFlow', 'CUDA3D Vision', 'Computer Vision'],
     aiScore: 97,'
-    marketPrice: '$1,299-$7,999/month','
+    marketPrice: '$1,299-$7,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'active','
+    status: 'active
     researchLevel: 'production','
-    ethicalCompliance['Privacy Protection', 'Bias Prevention', 'Transparency', 'Accountability']},;  {
+    ethicalCompliance['Privacy ProtectionBias Prevention', 'TransparencyAccountability']},  {
 '
-    id: 'ai-ethics-platform','
+    id: 'ai-ethics-platform
     title: 'AI Ethics & Governance Platform','
-    description: 'Comprehensive AI ethics framework and governance tools','
+    description: 'Comprehensive AI ethics framework and governance tools
     longDescription: 'Ensure responsible AI development with our comprehensive ethics platform.Features bias detection, fairness metrics, transparency tools, and governance frameworks.','
-    icon: 'Shield','
+    icon: 'Shield
     color: 'from-teal-500 to-cyan-600','
     category: 'ai-ethics',
-    features[;
+    features[,
       'Bias detection & mitigation',Fairness metrics',Transparency tools',Governance frameworks',Ethical guidelines',Compliance monitoring'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Responsible AI development',Regulatory compliance',Reduced bias',Trustworthy AI systems'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'AI development teams',Regulatory bodies',Ethics committees',Compliance officers'
-    ],;
+    ],
     pricing: {
 
       starter: '$599/month',
@@ -267,31 +267,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$3,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '2-6 weeks','
-    technologies['Python', 'Fairness Metrics', 'Bias Detection', 'Explainable AI', 'Governance Tools'],;
+    estimatedTime: '2-6 weeks
+    technologies['Python', 'Fairness MetricsBias Detection', 'Explainable AIGovernance Tools'],
     aiScore: 94,'
-    marketPrice: '$599-$3,999/month','
+    marketPrice: '$599-$3,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'active','
+    status: 'active
     researchLevel: 'production','
-    ethicalCompliance['Ethical Guidelines', 'Bias Prevention', 'Transparency', 'Accountability']},;  {
+    ethicalCompliance['Ethical GuidelinesBias Prevention', 'TransparencyAccountability']},  {
 '
-    id: 'quantum-ai-hybrid','
+    id: 'quantum-ai-hybrid
     title: 'Quantum-Classical AI Hybrid','
-    description: 'Hybrid quantum-classical AI for complex problem solving','
+    description: 'Hybrid quantum-classical AI for complex problem solving
     longDescription: 'Combine the power of quantum computing with classical AI to solve previously intractable problems.Our hybrid approach delivers exponential speedups for specific applications.','
-    icon: 'Rocket','
+    icon: 'Rocket
     color: 'from-violet-500 to-fuchsia-600','
     category: 'ai-research',
-    features[;
+    features[,
       'Quantum neural networks',Hybrid algorithms',Quantum advantage',Classical AI integration',Optimization problems',Research tools'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Exponential speedups',New problem-solving capabilities',Research breakthroughs',Competitive advantage'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Pharmaceutical research',Financial modeling',Climate science',Materials science'
-    ],;
+    ],
     pricing: {
 
       starter: '$4,999/month',
@@ -299,31 +299,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$29,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '12-20 weeks','
-    technologies['Qiskit', 'Cirq', 'PyTorch', 'TensorFlow', 'Quantum Hardware', 'Hybrid Algorithms'],;
+    estimatedTime: '12-20 weeks
+    technologies['Qiskit', 'CirqPyTorch', 'TensorFlowQuantum Hardware', 'Hybrid Algorithms'],
     aiScore: 99,'
-    marketPrice: '$4,999-$29,999/month','
+    marketPrice: '$4,999-$29,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'beta','
+    status: 'beta
     researchLevel: 'research','
-    ethicalCompliance['AI Safety', 'Quantum Ethics', 'Research Ethics', 'Transparency']},;  {
+    ethicalCompliance['AI SafetyQuantum Ethics', 'Research EthicsTransparency']},  {
 '
-    id: 'federated-learning-platform','
+    id: 'federated-learning-platform
     title: 'Federated Learning Platform','
-    description: 'Privacy-preserving distributed machine learning','
+    description: 'Privacy-preserving distributed machine learning
     longDescription: 'Train AI models across distributed data sources without sharing raw data.Our federated learning platform ensures privacy while enabling collaborative AI development.','
-    icon: 'Network','
+    icon: 'Network
     color: 'from-orange-500 to-red-600','
     category: 'machine-learning',
-    features[;
+    features[,
       'Distributed training',Privacy preservation',Secure aggregation',Model synchronization',Performance monitoring',Collaborative learning'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Privacy preservation',Collaborative learning',Reduced data transfer',Regulatory compliance'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Healthcare collaboration',Financial services',Cross-organization AI',Privacy-sensitive domains'
-    ],;
+    ],
     pricing: {
 
       starter: '$1,999/month',
@@ -331,31 +331,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$12,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '8-16 weeks','
-    technologies['Federated Learning', 'Homomorphic Encryption', 'Secure Multi-party Computation', 'Python', 'PyTorch', 'TensorFlow'],;
+    estimatedTime: '8-16 weeks
+    technologies['Federated Learning', 'Homomorphic EncryptionSecure Multi-party Computation', 'PythonPyTorch', 'TensorFlow'],
     aiScore: 95,'
-    marketPrice: '$1,999-$12,999/month','
+    marketPrice: '$1,999-$12,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'active','
+    status: 'active
     researchLevel: 'production','
-    ethicalCompliance['Privacy Protection', 'Data Security', 'Transparency', 'Accountability']},;  {
+    ethicalCompliance['Privacy ProtectionData Security', 'TransparencyAccountability']},  {
 '
-    id: 'ai-research-platform','
+    id: 'ai-research-platform
     title: 'AI Research & Development Platform','
-    description: 'Comprehensive platform for AI research and experimentation','
+    description: 'Comprehensive platform for AI research and experimentation
     longDescription: 'Accelerate your AI research with our comprehensive platform.Features experimental tools, research frameworks, and collaboration tools for AI researchers.','
-    icon: 'TestTube','
+    icon: 'TestTube
     color: 'from-indigo-500 to-purple-600','
     category: 'ai-research',
-    features[;
+    features[,
       'Experimental frameworks',Research tools',Collaboration features',Version control',Experiment tracking',Result analysis'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Faster research cycles',Better collaboration',Reproducible results',Research acceleration'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'AI research labs',Academic institutions',Corporate R&D',Startup research'
-    ],;
+    ],
     pricing: {
 
       starter: '$299/month',
@@ -363,31 +363,31 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       enterprise: '$1,999/month',
       custom: 'Contact us'
     },'
-    estimatedTime: '2-4 weeks','
-    technologies['Research Tools', 'Experiment Tracking', 'Version Control', 'Collaboration Tools', 'Python', 'Jupyter'],;
+    estimatedTime: '2-4 weeks
+    technologies['Research Tools', 'Experiment TrackingVersion Control', 'Collaboration ToolsPython', 'Jupyter'],
     aiScore: 93,'
-    marketPrice: '$299-$1,999/month','
+    marketPrice: '$299-$1,999/month
     contactLink: 'https://ziontechgroup.com/contact','
-    status: 'active','
+    status: 'active
     researchLevel: 'research','
-    ethicalCompliance['Research Ethics', 'Transparency', 'Reproducibility', 'Open Science']},;  {
+    ethicalCompliance['Research EthicsTransparency', 'ReproducibilityOpen Science']},  {
 '
-    id: 'ai-optimization-engine','
+    id: 'ai-optimization-engine
     title: 'AI Optimization Engine','
-    description: 'Advanced optimization algorithms for complex decision making','
+    description: 'Advanced optimization algorithms for complex decision making
     longDescription: 'Solve complex optimization problems with our AI-powered engine.Features genetic algorithms, neural optimization, and multi-objective optimization for business applications.','
-    icon: 'Target','
+    icon: 'Target
     color: 'from-yellow-500 to-orange-600','
     category: 'machine-learning',
-    features[;
+    features[,
       'Genetic algorithms',Neural optimization',Multi-objective optimization',Constraint handling',Real-time optimization',Scalable algorithms'
-    ],;
-    benefits[;
+    ],
+    benefits[,
       'Optimal solutions',Faster decision making',Cost optimization',Resource efficiency'
-    ],;
-    useCases[;
+    ],
+    useCases[,
       'Supply chain optimization',Resource allocation',Scheduling problems',Portfolio optimization'
-    ],;
+    ],
     pricing: {
 
       starter: '$899/month',
@@ -396,19 +396,19 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [{
       custom: 'Contact us'
     },
     estimatedTime: '4-8 weeks',
-    technologies['Genetic Algorithms',Neural Networks',Optimization Libraries',Python',SciPy',NumPy'],;
+    technologies['Genetic Algorithms',Neural Networks',Optimization Libraries',Python',SciPy',NumPy'],
     aiScore: 94,
     marketPrice: '$899-$5,999/month',
     contactLink: 'https://ziontechgroup.com/contact',
     status: 'active',
     researchLevel: 'production',
     ethicalCompliance['Fairness',Transparency',Bias Prevention',Accountability']}
-];
+],
 export 
-  if(category === 'All') {;
-    return NEXT_GEN_AI_SERVICES_2025;
+  if(category === 'All') {,
+    return NEXT_GEN_AI_SERVICES_2025,
 
-  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)},
 export 
-  return NEXT_GEN_AI_SERVICES_2025};
+  return NEXT_GEN_AI_SERVICES_2025},
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

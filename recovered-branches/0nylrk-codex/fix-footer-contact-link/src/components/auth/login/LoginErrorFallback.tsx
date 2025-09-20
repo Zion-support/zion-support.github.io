@@ -1,13 +1,13 @@
-import React from 'react';
-import { AlertCircle, RefreshCw } from 'lucide-react';
+import React from 'react',
+import { AlertCircle, RefreshCw } from 'lucide-react',
 interface LoginErrorFallbackProps {,
-  error?: Error;
-  resetError?: () => void;
+  error?: Error,
+  resetError?: () => void,
 }
 ,
 export const LoginErrorFallback: React.FC<LoginErrorFallbackProps> = ({,
-  error;
-  resetError,
+  error,
+  resetError
 }) => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-red-800 flex items-center justify-center py-12 px-4 sm: px-6 lg:px-8">,
@@ -25,10 +25,9 @@ export const LoginErrorFallback: React.FC<LoginErrorFallbackProps> = ({,
           {error && (,
             <div className="bg-red-900/50 border border-red-700 rounded-lg p-4 mb-6">,
               <p className="text-red-200 text-sm">,
-                {error.message || 'An unexpected error occurred',}
+                {error.message || 'An unexpected error occurred'}
               </p>,
-            </div>,
-          )}
+            </div>)}
 ,
           <div className="space-y-4">,
             {resetError && (,
@@ -38,8 +37,7 @@ export const LoginErrorFallback: React.FC<LoginErrorFallbackProps> = ({,
               >,
                 <RefreshCw className="h-4 w-4 mr-2" />,
                 Try Again,
-              </button>,
-            ),}
+              </button>)}
 ,
             <button,
               onClick={() => window.location.reload()}
@@ -52,5 +50,5 @@ export const LoginErrorFallback: React.FC<LoginErrorFallbackProps> = ({,
         </div>,
       </div>,
     </div>,
-  ),};
-export default LoginErrorFallback;
+  )},
+export default LoginErrorFallback,

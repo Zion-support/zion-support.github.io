@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState, useEffect, useRef } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+import Link from 'next/link',
 import { 
-  Menu, 
+  Menu,
   X, 
   ChevronDown, 
   Search, 
@@ -21,29 +21,29 @@ import {
   Zap,
   Rocket,
   Star
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  label: string;
-  href: string;
-  children?: NavigationItem[];
-  isExternal?: boolean;
-  icon?: React.ComponentType<{ className?: string }>;
-  description?: string;
+  label: string,
+  href: string,
+  children?: NavigationItem[],
+  isExternal?: boolean,
+  icon?: React.ComponentType<{ className?: string }>,
+  description?: string,
 }
 
 interface UltraFuturisticNavigation2026Props {
-  className?: string;
+  className?: string,
 }
 
 const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props> = ({ className = '' }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isDarkMode, setIsDarkMode] = useState(true);
-  const [searchQuery, setSearchQuery] = useState('');
-  const navRef = useRef<HTMLElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setIsOpen] = useState(false),
+  const [isScrolled, setIsScrolled] = useState(false),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [isDarkMode, setIsDarkMode] = useState(true),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const navRef = useRef<HTMLElement>(null),
+  const dropdownRef = useRef<HTMLDivElement>(null),
 
   // Enhanced navigation items with icons and descriptions
   const navigationItems: NavigationItem[] = [
@@ -265,33 +265,33 @@ const UltraFuturisticNavigation2026: React.FC<UltraFuturisticNavigation2026Props
         }
       ]
     }
-  ];
+  ],
 
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+      setIsScrolled(window.scrollY > 20),
+    },
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   // Handle click outside dropdown
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+        setActiveDropdown(null)
       }
-    };
+    },
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+    document.addEventListener('mousedown', handleClickOutside),
+    return () => document.removeEventListener('mousedown', handleClickOutside),
+  }, []),
 
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label);
-  };
+    setActiveDropdown(activeDropdown === label ? null : label)
+  },
 
 const UltraFuturisticNavigation2026: React.FC = () => {
   return (
@@ -299,7 +299,7 @@ const UltraFuturisticNavigation2026: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltraFuturisticNavigation2026</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltraFuturisticNavigation2026;
+export default UltraFuturisticNavigation2026,

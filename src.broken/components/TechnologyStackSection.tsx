@@ -67,10 +67,10 @@ function TechnologyStackSection () {
   Server,
   Cpu,
   Network'
-} from 'lucide-react';
+} from 'lucide-react',
 
-      color: 'from-red-500 to-pink-500'};
-  ];
+      color: 'from-red-500 to-pink-500'},
+  ],
 const technologyCategories = [{
 
     category: "Frontend Technologies",
@@ -112,13 +112,13 @@ const technologyCategories = [{
     category: "Cloud & DevOps",
     technologies: ["
       { name: "AWS", icon: "☁️", proficiency: 90 },"
-      { name: "Azure", icon: "🔷", proficiency: 85 },;"
-      { name: "Google Cloud", icon: "🔵", proficiency: 80 },;"
-      { name: "Docker", icon: "🐳", proficiency: 90 },;"
-      { name: "Kubernetes", icon: "⚓", proficiency: 85 };
-    ],;"
-    color: "from-orange-500 to-red-500"};
-];
+      { name: "Azure", icon: "🔷", proficiency: 85 },"
+      { name: "Google Cloud", icon: "🔵", proficiency: 80 },"
+      { name: "Docker", icon: "🐳", proficiency: 90 },"
+      { name: "Kubernetes", icon: "⚓", proficiency: 85 },
+    ],"
+    color: "from-orange-500 to-red-500"},
+],
 
 =======
 export function TechnologyStackSection() {
@@ -241,7 +241,7 @@ export function TechnologyStackSection() {
                 </div>
               )})}
           </div>
-        </motion.div>;
+        </motion.div>,
 
         {/* Technology Philosophy */}
         <motion.div "
@@ -328,7 +328,7 @@ export function TechnologyStackSection() {
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our expert team is ready to help you leverage the latest technologies
               to build scalable, secure, and innovative solutions.</p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Start Your Project"
                 <Code className="ml-2 h-5 w-5"  />
@@ -339,16 +339,16 @@ export function TechnologyStackSection() {
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;) };
+      </div>,
+    </section>,) },
 
-export default TechnologyStackSection;"
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;) }
-export default TechnologyStackSection;
-export default TechnologyStackSection;
+export default TechnologyStackSection,"
+            <span className="text-2xl">→</span>,
+          </div>,
+        </motion.div>,
+      </div>,
+    </section>,) }
+export default TechnologyStackSection,
+export default TechnologyStackSection,
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

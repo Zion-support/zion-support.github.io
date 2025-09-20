@@ -1,7 +1,7 @@
-'use client';
+'use client',
 
-import React{ useStateuseEffect } from 'react';
-import { motionAnimatePresence } from 'framer-motion';
+import React{ useStateuseEffect } from 'react',
+import { motionAnimatePresence } from 'framer-motion',
 import { 
   Brain
   Zap
@@ -29,16 +29,16 @@ import {
   Bookmark,
   Download,
   ExternalLink
-} from 'lucide-react';
+} from 'lucide-react',
 
 const UltimateContentShowcase2029 = () => {
-  const [activeTabsetActiveTab] = useState('ai-breakthroughs');
-  const [hoveredCardsetHoveredCard] = useState(null);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeTabsetActiveTab] = useState('ai-breakthroughs'),
+  const [hoveredCardsetHoveredCard] = useState(null),
+  const [isVisiblesetIsVisible] = useState(false),
 
   useEffect(() => {
-    setIsVisible(true);
-  }[]);
+    setIsVisible(true),
+  }[]),
 
   const contentCategories = [
     {
@@ -69,7 +69,7 @@ const UltimateContentShowcase2029 = () => {
       color: 'from-orange-500 to-red-500',
       description: 'Self-managing intelligent systems'
     }
-  ];
+  ],
 
   const aiBreakthroughs = [
     {
@@ -132,7 +132,7 @@ const UltimateContentShowcase2029 = () => {
       tags: ['AI'Healthcare'Prediction'Medicine'],
       featured: false
     }
-  ];
+  ],
 
   const quantumComputing = [
     {
@@ -165,7 +165,7 @@ const UltimateContentShowcase2029 = () => {
       tags: ['Quantum'Internet'Security'Network'],
       featured: false
     }
-  ];
+  ],
 
   const neuralInterfaces = [
     {
@@ -198,7 +198,7 @@ const UltimateContentShowcase2029 = () => {
       tags: ['Neural'Memory'Enhancement'Implant'],
       featured: false
     }
-  ];
+  ],
 
   const autonomousSystems = [
     {
@@ -231,24 +231,23 @@ const UltimateContentShowcase2029 = () => {
       tags: ['AI'Robotics'Control'Universal'],
       featured: false
     }
-  ];
+  ],
 
   const getContentByCategory = (category) => {
     switch (category) {
       case 'ai-breakthroughs':
-        return aiBreakthroughs;
+        return aiBreakthroughs,
       case 'quantum-computing':
-        return quantumComputing;
+        return quantumComputing,
       case 'neural-interfaces':
-        return neuralInterfaces;
+        return neuralInterfaces,
       case 'autonomous-systems':
-        return autonomousSystems;
-      default:
-        return aiBreakthroughs;
+        return autonomousSystems,
+      default: return aiBreakthroughs
     }
-  };
+  },
 
-  const currentContent = getContentByCategory(activeTab);
+  const currentContent = getContentByCategory(activeTab),
 
 const UltimateContentShowcase2029: React.FC = () => {
   return (
@@ -256,7 +255,7 @@ const UltimateContentShowcase2029: React.FC = () => {
       <h3 className="text-xl font-bold mb-4">UltimateContentShowcase2029</h3>
       <p className="text-gray-300">Revolutionary technology component</p>
     </div>
-  );
-};
+  )
+},
 
-export default UltimateContentShowcase2029;
+export default UltimateContentShowcase2029,

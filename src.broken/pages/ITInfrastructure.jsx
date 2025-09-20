@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-export default ITInfrastructure;
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+export default ITInfrastructure,
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -9,11 +9,11 @@ export default function Page() {
     title: 'Cloud Infrastructure',
     description: 'Hybrid and multi - cloud infrastructure solutions.',
     icon: Cloud,
-    features: ['Cloud design', 'Migration', 'Management', 'Optimization'],
+    features: ['Cloud designMigration', 'ManagementOptimization'],
     price: 'From $200,000',
     timeline: '24 - 36 weeks',
     category: 'Cloud',
-    technologies: ['Cloud Design', 'Migration', 'Management', 'Optimization'],
+    technologies: ['Cloud DesignMigration', 'ManagementOptimization']
   },
   {
     id: 5,
@@ -21,50 +21,44 @@ export default function Page() {
     description:
       'Comprehensive security infrastructure and compliance solutions.',
     icon: Shield,
-    features: ['Security design', 'Implementation', 'Monitoring', 'Compliance'],
+    features: ['Security designImplementation', 'MonitoringCompliance'],
     price: 'From $180,000',
     timeline: '22 - 34 weeks',
     category: 'Security',
-    technologies: ['Security Design',
-      'Implementation',
-      'Monitoring',
-      'Compliance',
-    ],
+    technologies: ['Security DesignImplementation',
+      'MonitoringCompliance'
+    ]
   },
   {
     id: 6,
     title: 'Data Center Infrastructure',
     description: 'Modern data center design and implementation solutions.',
     icon: Building,
-    features: ['Data center design',
-      'Implementation',
-      'Management',
-      'Optimization',
+    features: ['Data center designImplementation',
+      'ManagementOptimization'
     ],
     price: 'From $250,000',
     timeline: '28 - 40 weeks',
     category: 'Data Center',
-    technologies: ['Data Center Design',
-      'Implementation',
-      'Management',
-      'Optimization',
-    ],
-  },
-];
+    technologies: ['Data Center DesignImplementation',
+      'ManagementOptimization'
+    ]
+  }
+],
 
 const ITInfrastructure = () => {
-  const [selectedSolution, setSelectedSolution] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSolution, setSelectedSolution] = useState(null),
+  const [isModalOpen, setIsModalOpen] = useState(false),
 
   const openModal = solution => {
-    setSelectedSolution(solution) ;
-    setIsModalOpen(true) ;
-  };
+    setSelectedSolution(solution) ,
+    setIsModalOpen(true) ,
+  },
 
   const closeModal = () => {
-    setIsModalOpen(false) ;
-    setSelectedSolution(null) ;
-  };
+    setIsModalOpen(false) ,
+    setSelectedSolution(null) ,
+  },
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 text-white">
       {/* Header Section */}
@@ -194,6 +188,6 @@ const ITInfrastructure = () => {
             </div>
           </motion.div>
         </div>) }
-    </div>) ;
-};
+    </div>) ,
+},
 

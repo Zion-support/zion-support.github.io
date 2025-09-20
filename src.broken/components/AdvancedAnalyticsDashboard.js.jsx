@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react',
+import { motion  } from 'framer-motion',
 export default function Page() {
 ,
-  ];
+  ],
   const servicePerformance = [{
 
       name: 'AI CRM Platform',
@@ -42,43 +42,43 @@ export default function Page() {
       growth: 8.7,
       clients: 67,
       revenue: 340000,
-      status: 'stable'},
-  ];
+      status: 'stable'}
+  ],
   const categoryDistribution = ['
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },
     { label: 'Blockchain', value: 25, color: 'from-green-500 to-emerald-600' },
     { label: 'Cybersecurity', value: 15, color: 'from-red-500 to-pink-600' },
-    { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' },
-  ];
+    { label: 'IoT', value: 5, color: 'from-orange-500 to-yellow-600' }
+  ],
   const getStatusIcon = status => {
 
     switch(status) {
 
       case 'trending':"
-        return <TrendingUp className="w-4 h-4 text-green-500" />;
+        return <TrendingUp className="w-4 h-4 text-green-500" />,
       case 'stable':"
-        return <Activity className="w-4 h-4 text-blue-500" />;
+        return <Activity className="w-4 h-4 text-blue-500" />,
       case 'declining':"
-        return <TrendingDown className="w-4 h-4 text-red-500" />;
-      default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <TrendingDown className="w-4 h-4 text-red-500" />,
+      default: "
+        return <Activity className="w-4 h-4 text-gray-500" />
     }
-  };
+  },
   const getStatusColor = status => {
 
     switch(status) {
 
       case 'trending':'
-        return 'bg-green-100 text-green-800';
+        return 'bg-green-100 text-green-800',
       case 'stable':'
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-blue-100 text-blue-800',
       case 'declining':'
-        return 'bg-red-100 text-red-800';
-      default:'
-        return 'bg-gray-100 text-gray-800';
+        return 'bg-red-100 text-red-800',
+      default: '
+        return 'bg-gray-100 text-gray-800'
     }
-  };
+  },
   return ("
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -397,7 +397,7 @@ export default function Page() {
         </div>
       </motion.div>
     </div>
-  );
-};
-export default AdvancedAnalyticsDashboard;
+  ),
+},
+export default AdvancedAnalyticsDashboard,
 '"`

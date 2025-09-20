@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Atom, Cpu, Brain, Zap, Shield, Globe, Rocket, Target } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from 'react',
+import { motion } from 'framer-motion',
+import { Atom, Cpu, Brain, Zap, Shield, Globe, Rocket, Target } from 'lucide-react',
+import Layout from '../components/layout/Layout',
 
 export default function QuantumComputing() {
   const services = [
@@ -41,7 +41,7 @@ export default function QuantumComputing() {
       description: "Quantum algorithms for financial market optimization",
       href: "/quantum-financial-trading-platform"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
@@ -57,6 +57,6 @@ export default function QuantumComputing() {
         </div>
       </div>
     </div>
-  );
-};
-export default quantum-computing;
+  ),
+},
+export default quantum-computing,

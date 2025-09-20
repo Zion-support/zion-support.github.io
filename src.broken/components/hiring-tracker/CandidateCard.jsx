@@ -1,18 +1,18 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react',
+import { useState } from 'react',
 export default function Page() {
- from 'react-router-dom';"
-import { Card, CardContent } from '@/components/ui/card';"
-import { Avatar } from '@/components/ui/avatar';"
-import { Button } from '@/components/ui/button';"
-import { Textarea } from '@/components/ui/textarea';"
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
-import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';"
-import { toast } from '@/hooks/use-toast';"
-import { HireConfirmationModal } from './HireConfirmationModal';
+ from 'react-router-dom',"
+import { Card, CardContent } from '@/components/ui/card',"
+import { Avatar } from '@/components/ui/avatar',"
+import { Button } from '@/components/ui/button',"
+import { Textarea } from '@/components/ui/textarea',"
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu',"
+import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge',"
+import { toast } from '@/hooks/use-toast',"
+import { HireConfirmationModal } from './HireConfirmationModal',
 export default function Page() {
-)};
+)},
     return (<>
       <Draggable draggableId={application.id} index={index}>"
         {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>"

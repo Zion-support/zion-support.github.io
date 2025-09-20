@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, { useState, useEffect } from 'react',
+import { motion, AnimatePresence  } from 'framer-motion',
 
 export default function Page() {
-        }, 5000);
-        return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
+        }, 5000),
+        return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]),
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length) };
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length) },
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) };
+        setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) },
     const goToSlide = (index) => {
 
-        setCurrentSlide(index)};
+        setCurrentSlide(index)},
     const toggleAutoPlay = () => {
-        setIsAutoPlaying(!isAutoPlaying) ;
+        setIsAutoPlaying(!isAutoPlaying) ,
         if(!isAutoPlaying) {
 
             setIsPlaying(true)}
-    };"
+    },"
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}"
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">"
@@ -144,7 +144,7 @@ export default function Page() {
                   {heroSlides[currentSlide].ctaText}
                   <motion.div animate = {
 
-  { x[0, 5,;
+  { x[0, 5,
   0] 
 
 }} transition = {
@@ -208,6 +208,6 @@ export default function Page() {
           <p>Use ← → keys or click to navigate</p>
         </div>
       </div>
-    </div>)};
-export default EnhancedHero;
+    </div>)},
+export default EnhancedHero,
 '"`

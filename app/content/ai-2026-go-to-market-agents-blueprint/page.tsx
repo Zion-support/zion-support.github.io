@@ -1,17 +1,15 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group';
+  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
   description:,
-    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.';
+    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',
   keywords: [,
-    'go-to-market agentsGTM agents';
-    'sales automationmarketing automation';
-    'policy-as-codeevals';
-    'governance',
-  ],
-};
+    'go-to-market agentsGTM agentssales automationmarketing automation',
+    'policy-as-codeevalsgovernance'
+  ]
+},
 export default function GoToMarketAgentsBlueprintPage() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -63,19 +61,17 @@ export default function GoToMarketAgentsBlueprintPage() {,
           </div>,
         </article>,
       </main>,
-    </div>,
-  ),}
+    </div>)}
 ,
 export const metadata = {,
-  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group';
+  title: 'AI 2026: Go-To-Market Agents Blueprint | Zion Tech Group',
   description:,
-    'Design GTM agents for pipeline, deal acceleration, and expansion with policy-as-code guardrails and eval-gated delivery.';
+    'Design GTM agents for pipeline, deal acceleration, and expansion with policy-as-code guardrails and eval-gated delivery.',
   keywords: [,
-    'GTM agentsrevenue AI';
-    'sales agentspolicy-as-code';
-    'eval-gated deliveryAI governance',
-  ],
-};
+    'GTM agentsrevenue AIsales agentspolicy-as-code',
+    'eval-gated deliveryAI governance'
+  ]
+},
 export default function Page() {,
   return (,
     <div className="min-h-screen bg-white">,
@@ -140,5 +136,5 @@ export default function Page() {,
         </div>,
       </section>,
     </div>,
-  ),}
+  )}
 ,

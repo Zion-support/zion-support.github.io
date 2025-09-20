@@ -1,34 +1,34 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button',
 export default function Page() {
-)});
-      const data = await res.json().catch(() => ({}));
+)}),
+      const data = await res.json().catch(() => ({})),
       if(res.ok) {
 
         // Handle different success statuses'
         if(data.status === 'already_subscribed') {
 
-          toast.success(data.message || "You're already subscribed!");
+          toast.success(data.message || "You're already subscribed!"),
         } else {
 
-          toast.success(data.message || 'Thanks for subscribing!');
+          toast.success(data.message || 'Thanks for subscribing!'),
         }
-        setIsSubmitted(true);
-        setEmail('');
+        setIsSubmitted(true),
+        setEmail(''),
       } else {
 
         // Handle error responses'
-        // console.error('Newsletter subscription failed:', data);
-        toast.error(data.error || 'Subscription failed.Please try again.');
+        // console.error('Newsletter subscription failed:', data),
+        toast.error(data.error || 'Subscription failed.Please try again.'),
       }
     } catch(err) {
 
-      // console.error('Newsletter subscription error:', err);
-      toast.error('Unable to subscribe right now.Please try again later.');
+      // console.error('Newsletter subscription error:', err),
+      toast.error('Unable to subscribe right now.Please try again later.'),
     } finally {
 
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
-  };
+  },
   return ("
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">"
       <div className="flex items-center mb-4">"
@@ -48,7 +48,7 @@ export default function Page() {
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">"
           <p className="text-white font-medium">Thank you for subscribing!</p>"
           <p className="text-zion-slate-light mt-1">
-            We&apos;ll keep you updated with the latest from Zion.</p>
+            We&apos,ll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
         <form
@@ -88,6 +88,6 @@ export default function Page() {
         <span > Join 10,000 + tech professionals who already subscribe</span>
       </div>
     </div>
-  );
+  ),
 }
 '"

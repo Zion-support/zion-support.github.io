@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
-import WalletPage from '@/pages/Wallet';
-import * as useWalletHook from '@/hooks/useWallet';
+import { render, screen } from '@testing-library/react',
+import WalletPage from '@/pages/Wallet',
+import * as useWalletHook from '@/hooks/useWallet',
 
 describe('WalletPage', () => {
   it('renders balance heading', () => {
@@ -11,12 +11,12 @@ describe('WalletPage', () => {
       fetchWallet: jest.fn(),
       fetchTransactions: jest.fn(),
       earnTokens: jest.fn(),
-      spendTokens: jest.fn(),
-    } as any);
+      spendTokens: jest.fn()
+    } as any),
 
-    render(<WalletPage />);
+    render(<WalletPage />),
     expect(
       screen.getByRole('heading', { name: /balance/i })
-    ).toBeInTheDocument();
-  });
-});
+    ).toBeInTheDocument(),
+  }),
+}),

@@ -1,11 +1,11 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react',
 const LanguageProvider({ children }) {
 
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('en'),
     const t = (key) => {
 
-        return translations[language]?.[key] || key};
-    const isRTL = language === 'ar' || language === 'he';
+        return translations[language]?.[key] || key},
+    const isRTL = language === 'ar' || language === 'he',
     return (<LanguageContext.Provider value = {
 
   { language, setLanguage, t,
@@ -13,9 +13,9 @@ const LanguageProvider({ children }) {
 
 }}>
       {children}
-    </LanguageContext.Provider>)};
+    </LanguageContext.Provider>)},
 export function useLanguage() {
-    const context = useContext(LanguageContext);
+    const context = useContext(LanguageContext),
     if(!context) {
 
         throw new Error('useLanguage must be used within a LanguageProvider')}

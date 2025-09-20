@@ -38,30 +38,30 @@ function EnhancedAccessibilityPanel () {
   Pause,
   SkipBack,
   SkipForward,
-  Volume1} from 'lucide-react';
+  Volume1} from 'lucide-react',
 
 interface AccessibilitySettings {
 
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  fontSize: number;
-  lineHeight: number;
-  letterSpacing: number;
+  highContrast: boolean,
+  largeText: boolean,
+  reducedMotion: boolean,
+  screenReader: boolean,
+  focusIndicator: boolean,
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
+  fontSize: number,
+  lineHeight: number,
+  letterSpacing: number,
   wordSpacing: number}
 interface AccessibilityIssue {
-  id: string;
-  type: 'error' | 'warning' | 'info';
-  message: string;
-  element?: string;
-  recommendation: string;
-  severity: 'low' | 'medium' | 'high';
+  id: string,
+  type: 'error' | 'warning' | 'info',
+  message: string,
+  element?: string,
+  recommendation: string,
+  severity: 'low' | 'medium' | 'high',
 export function EnhancedAccessibilityPanel() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
     highContrast: false,
@@ -73,15 +73,15 @@ export function EnhancedAccessibilityPanel() {
     fontSize: 16,
     lineHeight: 1.5,
     letterSpacing: 0,
-    wordSpacing: 0});
-  const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [isScanning, setIsScanning] = useState(false);
-  const [currentFocus, setCurrentFocus] = useState<string>('');
-  const [keyboardMode, setKeyboardMode] = useState(false);
+    wordSpacing: 0}),
+  const [issues, setIssues] = useState<AccessibilityIssue[]>([]),
+  const [isScanning, setIsScanning] = useState(false),
+  const [currentFocus, setCurrentFocus] = useState<string>(''),
+  const [keyboardMode, setKeyboardMode] = useState(false),
 
   // Apply accessibility settings
   
-      setSettings(updatedSettings);
+      setSettings(updatedSettings),
 
       // Apply high contrast
       if(updatedSettings.highContrast) {
@@ -116,25 +116,25 @@ export function EnhancedAccessibilityPanel() {
       document.documentElement.style.setProperty('
         '--color-blindness',
         updatedSettings.colorBlindness
-      );
+      ),
 
       // Apply typography settings
       document.documentElement.style.setProperty('
         '--font-size',
         `${updatedSettings.fontSize}px`
-      );
+      ),
       document.documentElement.style.setProperty('
         '--line-height',
         updatedSettings.lineHeight.toString()
-      );
+      ),
       document.documentElement.style.setProperty('
         '--letter-spacing',`
         `${updatedSettings.letterSpacing}px`
-      );
+      ),
       document.documentElement.style.setProperty('
         '--word-spacing',`
         `${updatedSettings.wordSpacing}px`
-      );
+      ),
 
       // Save to localStorage
       localStorage.setItem('
@@ -142,20 +142,20 @@ export function EnhancedAccessibilityPanel() {
         JSON.stringify(updatedSettings)
       )},
     [settings]
-  );
+  ),
 
   // Load settings from localStorage
   useEffect(() => {
 '
-    const saved = localStorage.getItem('accessibility-settings');    if(saved) {
+    const saved = localStorage.getItem('accessibility-settings'),    if(saved) {
 
       try {
         
-        setSettings(savedSettings) ;
+        setSettings(savedSettings) ,
         applySettings(savedSettings) } catch(error) {
 
         // console.warn('Failed to load accessibility settings:', error)}    }
-  }, [applySettings]) ;
+  }, [applySettings]) ,
 
   // Keyboard navigation support
   useEffect(() => {
@@ -172,37 +172,37 @@ export function EnhancedAccessibilityPanel() {
         switch(event.key) {
 
           case 'ArrowDown':
-            event.preventDefault();
+            event.preventDefault(),
             
-            (focusableElements[nextIndex] as HTMLElement)?.focus();
-            break;
+            (focusableElements[nextIndex] as HTMLElement)?.focus(),
+            break,
           case 'ArrowUp':
-            event.preventDefault();
+            event.preventDefault(),
             const prevIndex =
               currentIndex > 0
                 ? currentIndex - 1
-                : focusableElements.length-1;            (focusableElements[prevIndex] as HTMLElement)?.focus();
+                : focusableElements.length-1,            (focusableElements[prevIndex] as HTMLElement)?.focus(),
             break}
       }
-    };
+    },
 
-      document.body.classList.remove('keyboard-navigation')};
+      document.body.classList.remove('keyboard-navigation')},
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('keydown', handleKeyDown),
+    document.addEventListener('mousedown', handleMouseDown),
 
     return () => {
 
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)}}, [isVisible, keyboardMode]) ;
+      document.removeEventListener('keydown', handleKeyDown),
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isVisible, keyboardMode]) ,
 
   // Accessibility audit
   
-    const newIssues: AccessibilityIssue[] = [];
+    const newIssues: AccessibilityIssue[] = [],
 
     try {
       // Check for missing alt text'
-      const images = document.querySelectorAll('img');      images.forEach((img, index) => {
+      const images = document.querySelectorAll('img'),      images.forEach((img, index) => {
 '
         if(!img.alt && !img.getAttribute('aria-label')) {
 
@@ -215,14 +215,14 @@ export function EnhancedAccessibilityPanel() {
             recommendation:'
               'Add descriptive alt text or aria-label for screen readers',
             severity: 'high'})}
-      }) ;
+      }) ,
 
       // Check for proper heading structure'
       
-      let previousLevel = 0;
+      let previousLevel = 0,
       headings.forEach((heading, index) => {
 
-        const level = parseInt(heading.tagName.charAt(1));        if(level > previousLevel + 1) {
+        const level = parseInt(heading.tagName.charAt(1)),        if(level > previousLevel + 1) {
 
           newIssues.push({
 `
@@ -232,13 +232,13 @@ export function EnhancedAccessibilityPanel() {
             element: heading.tagName.toLowerCase(),
             recommendation: 'Maintain proper heading hierarchy(h1 → h2 → h3),
             severity: 'medium'})}
-        previousLevel = level}) ;
+        previousLevel = level}) ,
 
       // Check for proper form labels'
       
       formInputs.forEach((input, index) => {
 
-        const id = input.getAttribute('id');"`
+        const id = input.getAttribute('id'),"`
 
         if(!label && !ariaLabel && !input.getAttribute('aria-labelledby')) {
 
@@ -250,7 +250,7 @@ export function EnhancedAccessibilityPanel() {
             element: input.tagName.toLowerCase(),
             recommendation: 'Add label element or aria-label attribute',
             severity: 'high'})}
-      }) ;
+      }) ,
 
       // Check for proper ARIA attributes'
       
@@ -268,7 +268,7 @@ export function EnhancedAccessibilityPanel() {
             recommendation:'
               'Add aria-controls or aria-owns to indicate controlled content',
             severity: 'medium'})}
-      }) ;
+      }) ,
 
       // Check for sufficient color contrast(simplified)
       
@@ -286,14 +286,14 @@ export function EnhancedAccessibilityPanel() {
             recommendation:'
               'Ensure sufficient contrast between text and background colors',
             severity: 'medium'})}
-      }) ;
+      }) ,
 
       // Check for keyboard navigation
       
       interactiveElements.forEach((element, index) => {
 
 =======
-      );      interactiveElements.forEach((element, index) => {
+      ),      interactiveElements.forEach((element, index) => {
 '
         if(element.tagName === 'BUTTON' && !element.getAttribute('type')) {
 
@@ -309,27 +309,27 @@ export function EnhancedAccessibilityPanel() {
 
       // console.error('Accessibility audit failed:', error)}
 
-    setIssues(newIssues) ;
-    setIsScanning(false) }, []) ;
+    setIssues(newIssues) ,
+    setIsScanning(false) }, []) ,
 
   // Get issue icon
   
       case 'warning':"
-        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />;
+        return <AlertTriangle className="w-4 h-4 text-yellow-500"  />,
       case 'info':"
-        return <Info className="w-4 h-4 text-blue-500"  />;
+        return <Info className="w-4 h-4 text-blue-500"  />,
       default:"
         return <Info className="w-4 h-4 text-gray-500"  />}
-  };
+  },
 
   // Get severity color
   
       case 'medium':'
-        return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
+        return 'border-yellow-500 bg-yellow-50 dark: bg-yellow-900/20',
       case 'low':'
-        return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20';
+        return 'border-blue-500 bg-blue-50 dark:bg-blue-900/20',
       default:'
-        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  };
+        return 'border-gray-500 bg-gray-50 dark:bg-gray-900/20'}  },
 
   return ()
     <>
@@ -500,7 +500,7 @@ export function EnhancedAccessibilityPanel() {
 
                       value: 'deuteranopia',
                       label: 'Deuteranopia(Green-Blind)},
-                    { value: 'tritanopia', label: 'Tritanopia(Blue-Blind)},
+                    { value: 'tritanopia', label: 'Tritanopia(Blue-Blind)}
                   ].map(option => (
                     <label
                       key={option.value}"
@@ -602,8 +602,8 @@ export function EnhancedAccessibilityPanel() {
                     fontSize: 16,
                     lineHeight: 1.5,
                     letterSpacing: 0,
-                    wordSpacing: 0};
-                  setSettings(defaultSettings);
+                    wordSpacing: 0},
+                  setSettings(defaultSettings),
                   applySettings(defaultSettings)}}"
                 className="w-full flex items-center justify-center space-x-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors"
               >"

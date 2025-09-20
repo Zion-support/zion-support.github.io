@@ -1,110 +1,110 @@
-"use client";
-'use client';
-import React, { useState, useEffect } from 'react';
+"use client",
+'use client',
+import React, { useState, useEffect } from 'react',
 import {,
   TrendingUp,
   Users,
   DollarSign,
   Clock,
   CheckCircle,
-  ArrowRight;
-  Star;
-  Award;
-  Target;
-  Zap;
-  BarChart3;
-  Globe;
-  Shield;
-  Lightbulb,
-} from 'lucide-react';
+  ArrowRight,
+  Star,
+  Award,
+  Target,
+  Zap,
+  BarChart3,
+  Globe,
+  Shield,
+  Lightbulb
+} from 'lucide-react',
 const AI2025SuccessStoriesShowcase = () => {,
-  const [activeStorysetActiveStory] = useState(0);
-  const [isVisiblesetIsVisible] = useState(false);
+  const [activeStorysetActiveStory] = useState(0),
+  const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {,
-    setIsVisible(true);
+    setIsVisible(true),
     const interval = setInterval(() => {,
-      setActiveStory((prev) => (prev + 1) % successStories.length);
-    }5000);
-    return () => clearInterval(interval);
-  }[]);
+      setActiveStory((prev) => (prev + 1) % successStories.length),
+    }5000),
+    return () => clearInterval(interval),
+  }[]),
   const successStories = [,
     {,
-      id: 1;
-      company: "TechCorp Solutions";
-      industry: "Manufacturing";
-      challenge: "Manual quality control processes causing 15% defect rate";
-      solution: "AI-powered computer vision for real-time quality inspection";
+      id: 1,
+      company: "TechCorp Solutions",
+      industry: "Manufacturing",
+      challenge: "Manual quality control processes causing 15% defect rate",
+      solution: "AI-powered computer vision for real-time quality inspection",
       results: {,
-        efficiency: "+200%";
-        cost: "-60%";
-        quality: "99.2%";
-        time: "-75%",};
-      icon: Target;
-      color: "from-blue-500 to-cyan-500";
-      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",};
+        efficiency: "+200%",
+        cost: "-60%",
+        quality: "99.2%",
+        time: "-75%"},
+      icon: Target,
+      color: "from-blue-500 to-cyan-500",
+      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%."},
     {,
-      id: 2;
-      company: "FinanceFlow Inc";
-      industry: "Financial Services";
-      challenge: "Manual fraud detection missing 8% of fraudulent transactions";
-      solution: "Machine learning algorithms for real-time fraud detection";
+      id: 2,
+      company: "FinanceFlow Inc",
+      industry: "Financial Services",
+      challenge: "Manual fraud detection missing 8% of fraudulent transactions",
+      solution: "Machine learning algorithms for real-time fraud detection",
       results: {,
-        efficiency: "+150%";
-        cost: "-45%";
-        quality: "99.8%";
-        time: "-80%",};
-      icon: Shield;
-      color: "from-green-500 to-emerald-500";
-      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",};
+        efficiency: "+150%",
+        cost: "-45%",
+        quality: "99.8%",
+        time: "-80%"},
+      icon: Shield,
+      color: "from-green-500 to-emerald-500",
+      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses."},
     {,
-      id: 3;
-      company: "HealthTech Partners";
-      industry: "Healthcare";
-      challenge: "Manual patient data analysis taking 40 hours per week";
-      solution: "AI-powered medical image analysis and patient data processing";
+      id: 3,
+      company: "HealthTech Partners",
+      industry: "Healthcare",
+      challenge: "Manual patient data analysis taking 40 hours per week",
+      solution: "AI-powered medical image analysis and patient data processing",
       results: {,
-        efficiency: "+300%";
-        cost: "-70%";
-        quality: "98.5%";
-        time: "-85%",};
-      icon: Lightbulb;
-      color: "from-purple-500 to-pink-500";
-      testimonial: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery.",};
+        efficiency: "+300%",
+        cost: "-70%",
+        quality: "98.5%",
+        time: "-85%"},
+      icon: Lightbulb,
+      color: "from-purple-500 to-pink-500",
+      testimonial: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery."},
     {,
-      id: 4;
-      company: "RetailMax";
-      industry: "E-commerce";
-      challenge: "Poor customer service response times and low satisfaction";
-      solution: "AI chatbot and recommendation engine for personalized shopping";
+      id: 4,
+      company: "RetailMax",
+      industry: "E-commerce",
+      challenge: "Poor customer service response times and low satisfaction",
+      solution: "AI chatbot and recommendation engine for personalized shopping",
       results: {,
-        efficiency: "+180%";
-        cost: "-50%";
-        quality: "95%";
-        time: "-90%",};
-      icon: Users;
-      color: "from-orange-500 to-red-500";
-      testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!",}
-  ];
+        efficiency: "+180%",
+        cost: "-50%",
+        quality: "95%",
+        time: "-90%"},
+      icon: Users,
+      color: "from-orange-500 to-red-500",
+      testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!"}
+  ],
   const metrics = [,
-    { icon: TrendingUplabel: "Average ROI"value: "340%" ,};
-    { icon: Clocklabel: "Time Saved"value: "75%" ,};
-    { icon: DollarSignlabel: "Cost Reduction"value: "55%" ,};
-    { icon: CheckCirclelabel: "Success Rate"value: "98%" ,}
-  ];
+    { icon: TrendingUplabel: "Average ROI"value: "340%" },
+    { icon: Clocklabel: "Time Saved"value: "75%" },
+    { icon: DollarSignlabel: "Cost Reduction"value: "55%" },
+    { icon: CheckCirclelabel: "Success Rate"value: "98%" }
+  ],
   const industries = [,
-    { name: "Manufacturing"count: "150+"icon: Target ,};
-    { name: "Healthcare"count: "120+"icon: Lightbulb ,};
-    { name: "Finance"count: "200+"icon: Shield ,};
-    { name: "Retail"count: "180+"icon: Users ,};
-    { name: "Education"count: "90+"icon: Award ,};
-    { name: "Logistics"count: "110+"icon: Globe ,}
-  ];
+    { name: "Manufacturing"count: "150+"icon: Target },
+    { name: "Healthcare"count: "120+"icon: Lightbulb },
+    { name: "Finance"count: "200+"icon: Shield },
+    { name: "Retail"count: "180+"icon: Users },
+    { name: "Education"count: "90+"icon: Award },
+    { name: "Logistics"count: "110+"icon: Globe }
+  ],
   return (,
     <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">,
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%3D%220.03%22%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%221.5%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')] opacity-40"></div>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 relative">,
-        {/* Header */,}
+        {/* Header */}
         <div,
           className="text-center mb-16",
         >,
@@ -121,10 +121,10 @@ const AI2025SuccessStoriesShowcase = () => {,
             See the measurable impact and transformation stories.,
           </p>,
         </div>,
-        {/* Success Stories Carousel */,}
+        {/* Success Stories Carousel */}
         <div className="mb-16">,
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
-            {/* Story Navigation */,}
+            {/* Story Navigation */}
             <div className="space-y-4">,
               <h3 className="text-2xl font-bold text-white mb-6">Featured Success Stories</h3>,
               {successStories.map((storyindex) => (,
@@ -133,7 +133,7 @@ const AI2025SuccessStoriesShowcase = () => {,
                   className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${,
                     activeStory === index,
                       ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/50',
-                      : 'bg-white/5 border border-white/10 hover: bg-white/10',}`}
+                      : 'bg-white/5 border border-white/10 hover: bg-white/10'}`}
                   onClick={() => setActiveStory(index)}
                 >,
                   <div className="flex items-center space-x-3">,
@@ -152,7 +152,7 @@ const AI2025SuccessStoriesShowcase = () => {,
             {/* Active Story Display */}
             <div className="lg: col-span-2">,
                 <div,
-                  key={activeStory,}
+                  key={activeStory}
                   className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8 border border-white/20",
                 >,
                   {/* Story Header */}
@@ -172,7 +172,7 @@ const AI2025SuccessStoriesShowcase = () => {,
                         <Target className="w-5 h-5 mr-2 text-red-400" />,
                         Challenge,
                       </h4>,
-                      <p className="text-gray-300">{successStories[activeStory].challenge,}</p>,
+                      <p className="text-gray-300">{successStories[activeStory].challenge}</p>,
                     </div>,
                     <div>,
                       <h4 className="text-lg font-semibold text-white mb-3 flex items-center">,
@@ -185,11 +185,10 @@ const AI2025SuccessStoriesShowcase = () => {,
                   {/* Results Grid */}
                   <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-6">,
                     {Object.entries(successStories[activeStory].results).map(([keyvalue]index) => (,
-                      <div key={key,} className="text-center p-4 bg-white/5 rounded-lg">,
+                      <div key={key} className="text-center p-4 bg-white/5 rounded-lg">,
                         <div className="text-2xl font-bold text-white mb-1">{value}</div>,
                         <div className="text-sm text-gray-300 capitalize">{key}</div>,
-                      </div>,
-                    ))}
+                      </div>))}
                   </div>,
                   {/* Testimonial */}
                   <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20">,
@@ -216,7 +215,7 @@ const AI2025SuccessStoriesShowcase = () => {,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
             {metrics.map((metricindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 rounded-xl border border-white/20",
               >,
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">,
@@ -224,8 +223,7 @@ const AI2025SuccessStoriesShowcase = () => {,
                 </div>,
                 <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>,
                 <div className="text-gray-300">{metric.label}</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Industries Served */}
@@ -234,16 +232,15 @@ const AI2025SuccessStoriesShowcase = () => {,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">,
             {industries.map((industryindex) => (,
               <div,
-                key={index,}
+                key={index}
                 className="text-center p-4 bg-white/5 rounded-xl border border-white/10 hover: border-purple-500/50 transition-all duration-300 group",
               >,
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 mb-3 group-hover:from-purple-500 group-hover:to-pink-500 transition-all duration-300">,
                   <industry.icon className="w-6 h-6 text-purple-300 group-hover:text-white transition-colors" />,
                 </div>,
-                <div className="text-lg font-semibold text-white mb-1">{industry.name,}</div>,
+                <div className="text-lg font-semibold text-white mb-1">{industry.name}</div>,
                 <div className="text-sm text-gray-400">{industry.count} companies</div>,
-              </div>,
-            ))}
+              </div>))}
           </div>,
         </div>,
         {/* Call to Action */}
@@ -268,5 +265,5 @@ const AI2025SuccessStoriesShowcase = () => {,
         </div>,
       </div>,
     </section>,
-  ),};
-export default AI2025SuccessStoriesShowcase;
+  )},
+export default AI2025SuccessStoriesShowcase,

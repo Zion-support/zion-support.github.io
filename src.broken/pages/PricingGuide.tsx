@@ -1,26 +1,26 @@
-import { Link  } from 'react-router-dom';
+import { Link  } from 'react-router-dom',
 export default function Page() {
-;
-  };
+,
+  },
 
   const pricingPlans = [{
       name: "Starter",
       icon: Zap,
       description: "Perfect for small businesses getting started with AI",
       price: { monthly: 299, yearly: 2990 },
-      features[;
+      features[,
         "AI Business Intelligence Basic",
         "Cloud Infrastructure(10GB) ",
         "Basic Support(Email) ",
         "Monthly Reports",
         "2 User Licenses"
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         "Advanced Analytics",
         "Custom AI Models",
         "Priority Support",
         "API Access"
-      ],;
+      ],
       cta: "Get Started",
       popular: false
     },
@@ -29,7 +29,7 @@ export default function Page() {
       icon: Brain,
       description: "Ideal for growing companies with advanced needs",
       price: { monthly: 799, yearly: 7990 },
-      features[;
+      features[,
         "Everything in Starter",
         "Advanced AI Analytics",
         "Custom AI Model Training",
@@ -38,12 +38,12 @@ export default function Page() {
         "API Access",
         "10 User Licenses",
         "Quarterly Strategy Sessions"
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[,
         "Enterprise Security",
         "Custom Development",
         "Dedicated Account Manager"
-      ],;
+      ],
       cta: "Start Free Trial",
       popular: true
     },
@@ -52,7 +52,7 @@ export default function Page() {
       icon: Rocket,
       description: "Full - scale solutions for large organizations",
       price: { monthly: 2499, yearly: 24990 },
-      features[;
+      features[,
         "Everything in Professional",
         "Enterprise Security Suite",
         "Custom Development",
@@ -63,53 +63,53 @@ export default function Page() {
         "Monthly Strategy Sessions",
         "Custom Integration",
         "SLA Guarantees"
-    };
-      ],;
-      notIncluded: [],;
-      cta: "Contact Sales",;
-      popular: false;
-    };
-  ];
+    },
+      ],
+      notIncluded: [],
+      cta: "Contact Sales",
+      popular: false
+    },
+  ],
 
   const servicePricing = [{
       category: "AI & Machine Learning",
       icon: Brain,
-      services[;
+      services[,
         { name: "AI Business Intelligence", price: "From $299 / month", description: "Advanced analytics and insights" },
         { name: "AI Sales Copilot", price: "From $199 / month", description: "Intelligent sales automation" },
         { name: "AI Compliance Assistant", price: "From $399 / month", description: "Automated compliance management" },
         { name: "LLM Content Studio", price: "From $149 / month", description: "AI - powered content creation" }
       ]
-    },;
+    },
     {
       category: "Cloud & DevOps",
       icon: Cloud,
-      services[;
+      services[,
         { name: "Cloud DevOps", price: "From $599 / month", description: "End - to - end cloud solutions" },
         { name: "Cloud FinOps Optimizer", price: "From $299 / month", description: "Cost optimization strategies" },
         { name: "FinOps Advisor", price: "From $499 / month", description: "Financial operations consulting" }
       ]
-    },;
+    },
     {
       category: "Cybersecurity",
       icon: Shield,
-      services[;
+      services[,
         { name: "AI Compliance Copilot", price: "From $399 / month", description: "AI - powered security compliance" },
         { name: "Zero Trust Architecture", price: "From $799 / month", description: "Modern security framework" },
         { name: "Incident Response Platform", price: "From $599 / month", description: "Rapid threat response" }
       ]
-    },;
+    },
     {
       category: "IT Infrastructure",
       icon: Cpu,
-      services[;
-        { name: "IT Infrastructure Management", price: "From $699 / month", description: "Enterprise infrastructure management" },;
-        { name: "Digital Twin", price: "From $899 / month", description: "Virtual infrastructure modeling" },;
-        { name: "IT Consulting", price: "From $299 / hour", description: "Strategic IT guidance" },;
-        { name: "Onsite Support", price: "From $199 / hour", description: "Local technical assistance" };
-      ];
-    };
-  ];
+      services[,
+        { name: "IT Infrastructure Management", price: "From $699 / month", description: "Enterprise infrastructure management" },
+        { name: "Digital Twin", price: "From $899 / month", description: "Virtual infrastructure modeling" },
+        { name: "IT Consulting", price: "From $299 / hour", description: "Strategic IT guidance" },
+        { name: "Onsite Support", price: "From $199 / hour", description: "Local technical assistance" },
+      ],
+    },
+  ],
 
     <div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -163,7 +163,7 @@ export default function Page() {
                     }`}
 
                     Yearly
-                    {savings > 0 && (;
+                    {savings > 0 && (,
                       <span className="ml-1 text-xs bg-green - 500 text-white px-2 py-1 rounded-full">
                         Save {savings}%
                       </span>) }
@@ -175,7 +175,7 @@ export default function Page() {
         </div>
 
         {/* Background Elements */}
-        <div  className="absolute inset - 0 -z -10">;
+        <div  className="absolute inset - 0 -z -10">,
           <div  className="absolute inset - 0 bg-gradient - to - r from - cyan - 500 / 10 to - blue -500 / 10" />
           <div  className="absolute top - 20 left - 20 w-72 h-72 bg-cyan - 500 / 20 rounded-full blur -3xl" />
           <div  className="absolute bottom - 20 right - 20 w-96 h-96 bg-blue - 500 / 20 rounded-full blur -3xl" />
@@ -183,7 +183,7 @@ export default function Page() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-7xl mx -auto">
           <div  className="text-center mb-16">
             <h2 className="text-3xl font - bold text-white mb-4">Choose Your Plan</h2>
@@ -243,13 +243,13 @@ export default function Page() {
                         </div>) ) }
                     </>) }
                 </div>
-              </div>;) ) }
+              </div>,) ) }
           </div>
         </div>
       </section>
 
       {/* Service - Specific Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate -800 / 30">;
+      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate -800 / 30">,
         <div  className="max - w-7xl mx -auto">
           <div  className="text-center mb-16">
             <h2 className="text-3xl font - bold text-white mb-4">Service - Specific Pricing</h2>
@@ -280,7 +280,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm: px-6 lg:px-8">,
         <div  className="max - w-4xl mx - auto text-center">
           <div  className="bg-gradient - to - r from - cyan - 600 / 20 to - blue - 600 / 20 border border-cyan - 500 / 30 rounded-2xl p -12">
             <h2 className="text-3xl font - bold text-white mb-6">
@@ -303,9 +303,9 @@ export default function Page() {
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;) ;
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+    </div>,) 
 }

@@ -1,2 +1,2 @@
 
-export default InteractiveHero.js;
+export default InteractiveHero.js,

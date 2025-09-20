@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {,
-  title: 'AI 2026: Revenue Ops with Autonomous Agents';
-  description: 'Pipeline generation, deal acceleration, and expansion using governed agent workflows with eval-gated upgrades.',
-};
+  title: 'AI 2026: Revenue Ops with Autonomous Agents',
+  description: 'Pipeline generation, deal acceleration, and expansion using governed agent workflows with eval-gated upgrades.'
+},
 export default function Page() {,
   return (,
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -23,6 +23,5 @@ export default function Page() {,
         <li>Eval-gated upgrades and A/B canaries with rollback.</li>,
         <li>Audit trails for approvals and data access decisions.</li>,
       </ul>,
-    </main>,
-  ),}
+    </main>)}
 ,

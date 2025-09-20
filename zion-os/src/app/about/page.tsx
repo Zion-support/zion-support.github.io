@@ -177,7 +177,7 @@ export default function AboutPage() {
                 Leading researcher in autonomous systems and AI consciousness evolution
               </p>
       <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Join Us in Shaping the Future
           </h2>
@@ -192,12 +192,12 @@ export default function AboutPage() {
               View Careers
             </a>
 =======
-import Link from 'next/link';
+import Link from 'next/link',
 
 export const metadata = {
   title: 'About Us - Zion Tech Group',
-  description: 'Learn about Zion Tech Group, our mission, leadership team, and commitment to AI-powered innovation and technology excellence.',
-};
+  description: 'Learn about Zion Tech Group, our mission, leadership team, and commitment to AI-powered innovation and technology excellence.'
+},
 
 export default function AboutPage() {
   const leadership = [
@@ -213,7 +213,7 @@ export default function AboutPage() {
       bio: 'Expert team of AI researchers and engineers pushing the boundaries of artificial intelligence.',
       image: '/api/placeholder/150/150'
     }
-  ];
+  ],
 
   const values = [
     {
@@ -236,7 +236,7 @@ export default function AboutPage() {
       description: 'We stay ahead of the curve by constantly evolving our knowledge and capabilities.',
       icon: '📚'
     }
-  ];
+  ],
 
   const milestones = [
     {
@@ -269,7 +269,7 @@ export default function AboutPage() {
       title: 'Global AI Leadership',
       description: 'Recognized as a global leader in AI-powered business transformation.'
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen">
@@ -394,7 +394,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Join Us on This Journey</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Ready to transform your business with AI-powered innovation? Let's discuss how Zion Tech Group can help you achieve your goals.
@@ -416,6 +416,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  );
+  )
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

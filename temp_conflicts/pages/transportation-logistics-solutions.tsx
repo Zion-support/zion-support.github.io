@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 
 export default function TransportationLogisticsSolutions() {
 	return (
@@ -15,5 +15,5 @@ export default function TransportationLogisticsSolutions() {
 				<p className="text-gray-300 max-w-3xl">Optimize routes, reduce fuel consumption, and improve on-time performance with AI-powered planning and real-time telemetry.</p>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

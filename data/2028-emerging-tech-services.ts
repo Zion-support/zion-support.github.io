@@ -1,43 +1,43 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTech2028Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string | string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string | string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 export const emergingTech2028Services: EmergingTech2028Service[] = [
   // Biometric Authentication Platform
@@ -49,16 +49,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Next-generation biometric authentication platform that uses facial recognition, fingerprint scanning, voice analysis, and behavioral biometrics to provide secure, frictionless identity verification.',
     features: [
-      'Multi-modal biometric authentication',
-      'Facial recognition technology',
-      'Fingerprint scanning',
-      'Voice biometrics',
-      'Behavioral analysis',
-      'Liveness detection',
-      'Anti-spoofing measures',
-      'Compliance management',
-      'Analytics dashboard',
-      'API for applications'
+      'Multi-modal biometric authenticationFacial recognition technology',
+      'Fingerprint scanningVoice biometrics',
+      'Behavioral analysisLiveness detection',
+      'Anti-spoofing measuresCompliance management',
+      'Analytics dashboardAPI for applications'
     ],
     popular: true,
     icon: '👁️',
@@ -66,16 +61,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/biometric-authentication',
     marketPosition: 'Leading biometric authentication platform with the highest accuracy rates and security standards. Used by financial institutions, healthcare organizations, and government agencies.',
-    targetAudience: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Technology companies', 'Retail chains', 'Educational institutions'],
+    targetAudience: ['Financial institutionsHealthcare organizations', 'Government agenciesTechnology companies', 'Retail chainsEducational institutions'],
     trialDays: 30,
     setupTime: '2 weeks',
     category: 'Biometric Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Identity providers', 'SSO systems', 'Mobile apps', 'Web applications', 'Security tools'],
-    useCases: ['User authentication', 'Access control', 'Identity verification', 'Fraud prevention', 'Compliance management'],
+    technology: ['PythonTensorFlow', 'Computer VisionNLP', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['Identity providersSSO systems', 'Mobile appsWeb applications', 'Security tools'],
+    useCases: ['User authenticationAccess control', 'Identity verificationFraud prevention', 'Compliance management'],
     roi: 'Financial institutions report 400% ROI through reduced fraud and improved security.',
-    competitors: ['Face ID', 'Touch ID', 'Windows Hello'],
+    competitors: ['Face IDTouch ID', 'Windows Hello'],
     marketSize: '$18B biometric market',
     growthRate: '30% annual growth',
     variant: 'biometric-futuristic',
@@ -101,16 +96,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Advanced edge computing platform that intelligently distributes workloads, optimizes performance, and manages resources across distributed edge locations for maximum efficiency and reliability.',
     features: [
-      'Intelligent workload distribution',
-      'Edge resource optimization',
-      'Real-time performance monitoring',
-      'Automated scaling',
-      'Load balancing',
-      'Edge security management',
-      'Performance analytics',
-      'Mobile management app',
-      'API for edge applications',
-      'Comprehensive dashboard'
+      'Intelligent workload distributionEdge resource optimization',
+      'Real-time performance monitoringAutomated scaling',
+      'Load balancingEdge security management',
+      'Performance analyticsMobile management app',
+      'API for edge applicationsComprehensive dashboard'
     ],
     popular: true,
     icon: '⚡',
@@ -118,16 +108,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration',
     marketPosition: 'Leading edge computing orchestration platform with the most advanced AI-driven optimization algorithms. Used by major cloud providers and enterprise companies.',
-    targetAudience: ['Cloud providers', 'Enterprise companies', 'IoT companies', 'Telecommunications', 'Manufacturing', 'Retail chains'],
+    targetAudience: ['Cloud providersEnterprise companies', 'IoT companiesTelecommunications', 'ManufacturingRetail chains'],
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Python', 'Kubernetes', 'Docker', 'AWS', 'Azure', 'GCP', 'React', 'Node.js'],
-    integrations: ['Cloud platforms', 'IoT devices', 'Edge servers', 'Monitoring tools', 'Security systems'],
-    useCases: ['IoT applications', 'Real-time processing', 'Content delivery', 'Industrial automation', 'Smart cities'],
+    technology: ['PythonKubernetes', 'DockerAWS', 'AzureGCP', 'ReactNode.js'],
+    integrations: ['Cloud platformsIoT devices', 'Edge serversMonitoring tools', 'Security systems'],
+    useCases: ['IoT applicationsReal-time processing', 'Content deliveryIndustrial automation', 'Smart cities'],
     roi: 'Enterprise companies report 500% ROI through improved performance and reduced latency.',
-    competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT'],
+    competitors: ['AWS GreengrassAzure IoT Edge', 'Google Cloud IoT'],
     marketSize: '$22B edge computing market',
     growthRate: '35% annual growth',
     variant: 'edge-futuristic',
@@ -153,16 +143,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Advanced 5G network optimization platform that uses AI and machine learning to monitor, analyze, and optimize 5G network performance for maximum efficiency and user experience.',
     features: [
-      'Real-time 5G monitoring',
-      'AI-powered optimization',
-      'Network performance analytics',
-      'Quality of service management',
-      'Traffic optimization',
-      'Energy efficiency',
-      'Predictive maintenance',
-      'Mobile management app',
-      'API for network tools',
-      'Comprehensive reporting'
+      'Real-time 5G monitoringAI-powered optimization',
+      'Network performance analyticsQuality of service management',
+      'Traffic optimizationEnergy efficiency',
+      'Predictive maintenanceMobile management app',
+      'API for network toolsComprehensive reporting'
     ],
     popular: true,
     icon: '📡',
@@ -170,16 +155,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/5g-network-optimization',
     marketPosition: 'Leading 5G network optimization platform with the most advanced AI algorithms. Used by major telecommunications companies and network operators.',
-    targetAudience: ['Telecommunications companies', 'Network operators', 'Mobile carriers', 'Infrastructure providers', 'Government agencies', 'Enterprise companies'],
+    targetAudience: ['Telecommunications companiesNetwork operators', 'Mobile carriersInfrastructure providers', 'Government agenciesEnterprise companies'],
     trialDays: 60,
     setupTime: '4 weeks',
     category: '5G Technology',
     realService: true,
-    technology: ['Python', 'TensorFlow', '5G protocols', 'AWS', 'Docker', 'React', 'Node.js', 'PostgreSQL'],
-    integrations: ['5G core networks', 'Radio access networks', 'Network management systems', 'Monitoring tools', 'Analytics platforms'],
-    useCases: ['Network optimization', 'Performance monitoring', 'Quality management', 'Traffic optimization', 'Energy efficiency'],
+    technology: ['PythonTensorFlow', '5G protocolsAWS', 'DockerReact', 'Node.jsPostgreSQL'],
+    integrations: ['5G core networksRadio access networks', 'Network management systemsMonitoring tools', 'Analytics platforms'],
+    useCases: ['Network optimizationPerformance monitoring', 'Quality managementTraffic optimization', 'Energy efficiency'],
     roi: 'Telecommunications companies report 600% ROI through improved network performance and reduced operational costs.',
-    competitors: ['Ericsson', 'Nokia', 'Huawei'],
+    competitors: ['EricssonNokia', 'Huawei'],
     marketSize: '$35B 5G infrastructure market',
     growthRate: '40% annual growth',
     variant: '5g-futuristic',
@@ -205,16 +190,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Revolutionary blockchain-based supply chain platform that provides end-to-end transparency, traceability, and security for global supply chains.',
     features: [
-      'Blockchain-based tracking',
-      'End-to-end transparency',
-      'Smart contract automation',
-      'Real-time monitoring',
-      'Quality assurance',
-      'Compliance management',
-      'Analytics dashboard',
-      'Mobile tracking app',
-      'API for integrations',
-      'Comprehensive reporting'
+      'Blockchain-based trackingEnd-to-end transparency',
+      'Smart contract automationReal-time monitoring',
+      'Quality assuranceCompliance management',
+      'Analytics dashboardMobile tracking app',
+      'API for integrationsComprehensive reporting'
     ],
     popular: true,
     icon: '🔗',
@@ -222,16 +202,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/blockchain-supply-chain',
     marketPosition: 'Leading blockchain supply chain platform with the most comprehensive tracking and transparency features. Used by major logistics companies and manufacturers.',
-    targetAudience: ['Logistics companies', 'Manufacturers', 'Retail chains', 'Food companies', 'Pharmaceutical companies', 'Automotive industry'],
+    targetAudience: ['Logistics companiesManufacturers', 'Retail chainsFood companies', 'Pharmaceutical companiesAutomotive industry'],
     trialDays: 30,
     setupTime: '3 weeks',
     category: 'Blockchain Technology',
     realService: true,
-    technology: ['Ethereum', 'Hyperledger', 'Python', 'Solidity', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['ERP systems', 'WMS systems', 'Logistics platforms', 'Quality management', 'Compliance systems'],
-    useCases: ['Product tracking', 'Quality assurance', 'Compliance management', 'Fraud prevention', 'Supply chain optimization'],
+    technology: ['EthereumHyperledger', 'PythonSolidity', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['ERP systemsWMS systems', 'Logistics platformsQuality management', 'Compliance systems'],
+    useCases: ['Product trackingQuality assurance', 'Compliance managementFraud prevention', 'Supply chain optimization'],
     roi: 'Logistics companies report 400% ROI through improved transparency and reduced fraud.',
-    competitors: ['IBM Food Trust', 'VeChain', 'Walmart Blockchain'],
+    competitors: ['IBM Food TrustVeChain', 'Walmart Blockchain'],
     marketSize: '$20B blockchain supply chain market',
     growthRate: '45% annual growth',
     variant: 'blockchain-futuristic',
@@ -257,16 +237,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Complete AI-powered content creation suite that generates high-quality articles, videos, images, and social media content with minimal human intervention.',
     features: [
-      'AI article generation',
-      'Video content creation',
-      'Image generation',
-      'Social media automation',
-      'Content optimization',
-      'SEO integration',
-      'Analytics dashboard',
-      'Mobile content app',
-      'API for applications',
-      'Multi-language support'
+      'AI article generationVideo content creation',
+      'Image generationSocial media automation',
+      'Content optimizationSEO integration',
+      'Analytics dashboardMobile content app',
+      'API for applicationsMulti-language support'
     ],
     popular: true,
     icon: '✍️',
@@ -274,16 +249,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-content-creation',
     marketPosition: 'Leading AI content creation platform with the most advanced natural language processing and multimedia generation capabilities. Used by marketing agencies and content creators.',
-    targetAudience: ['Marketing agencies', 'Content creators', 'Businesses', 'Publishers', 'E-commerce companies', 'Social media managers'],
+    targetAudience: ['Marketing agenciesContent creators', 'BusinessesPublishers', 'E-commerce companiesSocial media managers'],
     trialDays: 30,
     setupTime: '1 week',
     category: 'AI Content Creation',
     realService: true,
-    technology: ['Python', 'GPT-4', 'DALL-E', 'Stable Diffusion', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['CMS platforms', 'Social media APIs', 'Marketing tools', 'Analytics platforms', 'SEO tools'],
-    useCases: ['Content marketing', 'Social media management', 'Blog creation', 'Video production', 'Image generation'],
+    technology: ['PythonGPT-4', 'DALL-EStable Diffusion', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['CMS platformsSocial media APIs', 'Marketing toolsAnalytics platforms', 'SEO tools'],
+    useCases: ['Content marketingSocial media management', 'Blog creationVideo production', 'Image generation'],
     roi: 'Marketing agencies report 500% ROI through increased content production and improved engagement.',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic'],
+    competitors: ['JasperCopy.ai', 'Writesonic'],
     marketSize: '$15B AI content creation market',
     growthRate: '50% annual growth',
     variant: 'ai-content',
@@ -309,16 +284,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers.',
     features: [
-      'Quantum algorithm optimization',
-      'Quantum neural networks',
-      'Quantum feature selection',
-      'Quantum clustering',
-      'Real-time quantum processing',
-      'Classical ML integration',
-      'Performance analytics',
-      'API for applications',
-      'Comprehensive documentation',
-      'Expert support'
+      'Quantum algorithm optimizationQuantum neural networks',
+      'Quantum feature selectionQuantum clustering',
+      'Real-time quantum processingClassical ML integration',
+      'Performance analyticsAPI for applications',
+      'Comprehensive documentationExpert support'
     ],
     popular: true,
     icon: '🧠',
@@ -326,16 +296,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning',
     marketPosition: 'First-to-market quantum machine learning platform. Provides quantum computing capabilities for complex ML problems with unprecedented speed.',
-    targetAudience: ['Research institutions', 'Pharmaceutical companies', 'Financial institutions', 'Technology companies', 'Government agencies', 'Universities'],
+    targetAudience: ['Research institutionsPharmaceutical companies', 'Financial institutionsTechnology companies', 'Government agenciesUniversities'],
     trialDays: 14,
     setupTime: '4 weeks',
     category: 'Quantum Machine Learning',
     realService: true,
-    technology: ['Qiskit', 'Cirq', 'Python', 'TensorFlow Quantum', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Quantum computers', 'Classical ML frameworks', 'Data platforms', 'Research tools', 'Analytics platforms'],
-    useCases: ['Drug discovery', 'Financial modeling', 'Climate modeling', 'Optimization problems', 'Scientific research'],
+    technology: ['QiskitCirq', 'PythonTensorFlow Quantum', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['Quantum computersClassical ML frameworks', 'Data platformsResearch tools', 'Analytics platforms'],
+    useCases: ['Drug discoveryFinancial modeling', 'Climate modelingOptimization problems', 'Scientific research'],
     roi: 'Research institutions report 800% ROI through accelerated discoveries and breakthrough research.',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Quantum'],
+    competitors: ['IBM QuantumGoogle Quantum AI', 'Microsoft Quantum'],
     marketSize: '$12B quantum computing market',
     growthRate: '60% annual growth',
     variant: 'quantum-futuristic',
@@ -361,16 +331,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Complete autonomous vehicle fleet management platform that optimizes routes, monitors performance, and ensures safety for autonomous vehicle operations.',
     features: [
-      'Route optimization AI',
-      'Real-time monitoring',
-      'Safety protocols',
-      'Performance analytics',
-      'Maintenance scheduling',
-      'Fleet coordination',
-      'Mobile management app',
-      'API for vehicles',
-      'Compliance management',
-      'Comprehensive reporting'
+      'Route optimization AIReal-time monitoring',
+      'Safety protocolsPerformance analytics',
+      'Maintenance schedulingFleet coordination',
+      'Mobile management appAPI for vehicles',
+      'Compliance managementComprehensive reporting'
     ],
     popular: true,
     icon: '🚗',
@@ -378,16 +343,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-fleet',
     marketPosition: 'Leading autonomous vehicle fleet management platform with the most advanced AI optimization and safety features. Used by transportation companies and logistics providers.',
-    targetAudience: ['Transportation companies', 'Logistics providers', 'Ride-sharing companies', 'Delivery services', 'Public transit', 'Automotive manufacturers'],
+    targetAudience: ['Transportation companiesLogistics providers', 'Ride-sharing companiesDelivery services', 'Public transitAutomotive manufacturers'],
     trialDays: 60,
     setupTime: '4 weeks',
     category: 'Autonomous Vehicles',
     realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'ROS', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Vehicle APIs', 'GPS systems', 'Traffic data', 'Weather services', 'Maintenance systems'],
-    useCases: ['Fleet optimization', 'Route planning', 'Safety monitoring', 'Maintenance management', 'Performance tracking'],
+    technology: ['PythonTensorFlow', 'Computer VisionROS', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['Vehicle APIsGPS systems', 'Traffic dataWeather services', 'Maintenance systems'],
+    useCases: ['Fleet optimizationRoute planning', 'Safety monitoringMaintenance management', 'Performance tracking'],
     roi: 'Transportation companies report 600% ROI through improved efficiency and reduced operational costs.',
-    competitors: ['Waymo', 'Tesla', 'Cruise'],
+    competitors: ['WaymoTesla', 'Cruise'],
     marketSize: '$28B autonomous vehicle market',
     growthRate: '55% annual growth',
     variant: 'autonomous-futuristic',
@@ -413,16 +378,11 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     period: '/month',
     description: 'Advanced digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, optimization, and predictive maintenance.',
     features: [
-      '3D digital twin creation',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Performance optimization',
-      'Maintenance scheduling',
-      'Simulation capabilities',
-      'Analytics dashboard',
-      'Mobile monitoring app',
-      'API for integrations',
-      'Comprehensive reporting'
+      '3D digital twin creationReal-time monitoring',
+      'Predictive analyticsPerformance optimization',
+      'Maintenance schedulingSimulation capabilities',
+      'Analytics dashboardMobile monitoring app',
+      'API for integrationsComprehensive reporting'
     ],
     popular: true,
     icon: '🔄',
@@ -430,16 +390,16 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/digital-twin-platform',
     marketPosition: 'Leading digital twin platform with the most advanced 3D modeling and real-time monitoring capabilities. Used by manufacturing, energy, and infrastructure companies.',
-    targetAudience: ['Manufacturing companies', 'Energy companies', 'Infrastructure companies', 'Utilities', 'Transportation', 'Healthcare'],
+    targetAudience: ['Manufacturing companiesEnergy companies', 'Infrastructure companiesUtilities', 'TransportationHealthcare'],
     trialDays: 60,
     setupTime: '6 weeks',
     category: 'Digital Twin Technology',
     realService: true,
-    technology: ['Unity3D', 'Unreal Engine', 'Python', 'TensorFlow', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['IoT sensors', 'SCADA systems', 'ERP systems', 'Maintenance systems', 'Analytics platforms'],
-    useCases: ['Asset monitoring', 'Predictive maintenance', 'Performance optimization', 'Process simulation', 'Quality control'],
+    technology: ['Unity3DUnreal Engine', 'PythonTensorFlow', 'AWSDocker', 'ReactNode.js'],
+    integrations: ['IoT sensorsSCADA systems', 'ERP systemsMaintenance systems', 'Analytics platforms'],
+    useCases: ['Asset monitoringPredictive maintenance', 'Performance optimizationProcess simulation', 'Quality control'],
     roi: 'Manufacturing companies report 700% ROI through improved efficiency and reduced downtime.',
-    competitors: ['Siemens', 'GE Digital', 'PTC'],
+    competitors: ['SiemensGE Digital', 'PTC'],
     marketSize: '$32B digital twin market',
     growthRate: '40% annual growth',
     variant: 'digital-twin-futuristic',
@@ -456,4 +416,4 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     rating: 4.8,
     reviews: 89
   }
-];
+],

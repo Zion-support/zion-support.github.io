@@ -1,23 +1,23 @@
-import type { NextPage } from 'next';
-import dynamic from 'next/dynamic';
-import Book from '../components/ui/Book';
-import uiEvolution from '../data/reports/ui-evolution/ui-evolution-analysis.json';
-import responsiveReport from '../data/reports/responsive/responsive-analysis.json';
+import type { NextPage } from 'next',
+import dynamic from 'next/dynamic',
+import Book from '../components/ui/Book',
+import uiEvolution from '../data/reports/ui-evolution/ui-evolution-analysis.json',
+import responsiveReport from '../data/reports/responsive/responsive-analysis.json',
 
 const ZionBookPage: NextPage = () => {
   const timeline = Array.isArray(uiEvolution.items)
     ? uiEvolution.items.slice(0, 12).map((it: any, idx: number) => ({
         date: `Milestone ${idx + 1}`,
         title: it.file?.split('/').pop() || 'UI Evolution',
-        description: Array.isArray(it.issues) ? `Issues: ${it.issues.slice(0, 3).join(', ')}` : undefined,
+        description: Array.isArray(it.issues) ? `Issues: ${it.issues.slice(0, 3).join()}` : undefined
       }))
-    : [];
+    : [],
 
   const metrics = [
     { label: 'Analyzed Files', value: String(uiEvolution.filesAnalyzed || 0) },
     { label: 'Report Timestamp', value: uiEvolution.timestamp || '' },
-    { label: 'Responsive Issues', value: String((responsiveReport?.items || []).length || 0) },
-  ];
+    { label: 'Responsive Issues', value: String((responsiveReport?.items || []).length || 0) }
+  ],
 
   const chapters = [
     {
@@ -38,7 +38,7 @@ const ZionBookPage: NextPage = () => {
             <li>Trust: Cryptographic and social primitives for coordination.</li>
           </ul>
         </div>
-      ),
+      )
     },
     {
       id: 'blueprint',
@@ -59,7 +59,7 @@ const ZionBookPage: NextPage = () => {
             <li>Academy</li>
           </ul>
         </div>
-      ),
+      )
     },
     {
       id: 'constitution',
@@ -77,7 +77,7 @@ const ZionBookPage: NextPage = () => {
             Align incentives, minimize rent-seeking, maximize learning velocity, and preserve user agency.
           </p>
         </div>
-      ),
+      )
     },
     {
       id: 'design',
@@ -89,7 +89,7 @@ const ZionBookPage: NextPage = () => {
           <h3 className="print-subtitle">Screenshots per module</h3>
           <p>Drop assets in <code>/public/book/</code> to include automatically.</p>
         </div>
-      ),
+      )
     },
     {
       id: 'footprint',
@@ -101,7 +101,7 @@ const ZionBookPage: NextPage = () => {
           <h3 className="print-subtitle">Talent reach + ecosystem metrics</h3>
           <p>Metrics summarized below.</p>
         </div>
-      ),
+      )
     },
     {
       id: 'road-to-v10',
@@ -116,11 +116,11 @@ const ZionBookPage: NextPage = () => {
           <h3 className="print-subtitle">DAO votes</h3>
           <p>Embed on-chain snapshots when available.</p>
           <h3 className="print-subtitle">Zion’s future as protocol, not platform</h3>
-          <p>Interfaces remain open; clients compete on UX and services.</p>
+          <p>Interfaces remain open, clients compete on UX and services.</p>
         </div>
-      ),
-    },
-  ];
+      )
+    }
+  ],
 
   return (
     <Book
@@ -131,7 +131,7 @@ const ZionBookPage: NextPage = () => {
       timeline={timeline}
       metrics={metrics}
     />
-  );
-};
+  ),
+},
 
-export default ZionBookPage;
+export default ZionBookPage,

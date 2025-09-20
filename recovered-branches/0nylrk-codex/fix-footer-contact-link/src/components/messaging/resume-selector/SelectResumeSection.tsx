@@ -1,7 +1,7 @@
 
 export function SelectResumeSection({,
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
 })

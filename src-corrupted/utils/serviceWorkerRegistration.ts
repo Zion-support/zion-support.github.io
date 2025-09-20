@@ -1,6 +1,6 @@
-// serviceWorkerRegistration utility;
+// serviceWorkerRegistration utility,
 export const serviceWorkerRegistration = {,
-  // Placeholder utility functions;
+  // Placeholder utility functions,
 init: () => {}
 }
-export default serviceWorkerRegistration;
+export default serviceWorkerRegistration,

@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import Marketplace from '../pages/Marketplace';
-import { MemoryRouter } from 'react-router-dom';
+import type { Meta, StoryObj } from '@storybook/react',
+import Marketplace from '../pages/Marketplace',
+import { MemoryRouter } from 'react-router-dom',
 
 const meta: Meta<typeof Marketplace> = {
   title: 'Pages/Marketplace',
@@ -12,20 +12,20 @@ const meta: Meta<typeof Marketplace> = {
       </MemoryRouter>
     )
   ]
-};
-export default meta;
-type Story = StoryObj<typeof Marketplace>;
+},
+export default meta,
+type Story = StoryObj<typeof Marketplace>,
 
 export const Grid: Story = {
   render: () => {
-    localStorage.setItem('marketplaceView', 'grid');
-    return <Marketplace />;
+    localStorage.setItem('marketplaceViewgrid'),
+    return <Marketplace />,
   }
-};
+},
 
 export const List: Story = {
   render: () => {
-    localStorage.setItem('marketplaceView', 'list');
-    return <Marketplace />;
+    localStorage.setItem('marketplaceViewlist'),
+    return <Marketplace />,
   }
-};
+},

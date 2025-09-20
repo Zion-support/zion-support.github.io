@@ -2,16 +2,16 @@
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
-  recommendation: TeamRecommendation;
-  projectBrief: ProjectBrief; // For budget comparison
-  onInviteTalent: talentId: string, roleTitle: string void;
-  // onEditRole: roleId: string void; // For future add/remove
-  // onRemoveRole: roleId: string void; // For future add/remove
+  recommendation: TeamRecommendation,
+  projectBrief: ProjectBrief, // For budget comparison
+  onInviteTalent: talentId: string, roleTitle: string void,
+  // onEditRole: roleId: string void, // For future add/remove
+  // onRemoveRole: roleId: string void, // For future add/remove
 
 }
-;
+,
 export 
-  if(!recommendation) return null;
+  if(!recommendation) return null,
 
   return ("
     <div className="space-y-8 mt-6">"
@@ -67,19 +67,19 @@ export
           <AlertDescription>
             The AI could not determine specific roles based on the provided brief.You might want to refine your project goals or scope.</AlertDescription>
         </Alert>
-      )};
-    </div>;
-  )};
+      )},
+    </div>,
+  )},
 
 // Helper component for summary cards
-const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => ("
+const InfoCard = ({ title, value, icon }: { title: string, value: string, icon: React.ReactNode })  => ("
   <Card className="bg-secondary/50 p-3 shadow-sm">"
     <div className="flex items-center text-muted-foreground mb-1">
       {icon}"
       <h4 className="ml-1.5 font-medium">{title}</h4>
     </div>"
-    <p className="font-semibold text-primary text-base pl-1">{value}</p>;
-  </Card>;
-);
+    <p className="font-semibold text-primary text-base pl-1">{value}</p>,
+  </Card>,
+),
 '"`
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

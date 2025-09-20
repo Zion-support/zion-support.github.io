@@ -1,12 +1,12 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import { 
   Globe, Users, Shield, Zap, Target, Lock, 
   Vote, BarChart3, Clock, Star, ArrowRight,
   CheckCircle, Play, BookOpen, MessageCircle, Phone,
   Cpu, Database, Network, Server, Monitor, FileText
-} from 'lucide-react';
+} from 'lucide-react',
 
 const BlockchainGovernancePlatform: React.FC = () => {
   const features = [
@@ -40,18 +40,14 @@ const BlockchainGovernancePlatform: React.FC = () => {
       title: 'Automated Execution',
       description: 'Instant execution of governance decisions through smart contract automation.'
     }
-  ];
+  ],
 
   const useCases = [
-    'DAO Governance',
-    'Corporate Voting',
-    'Community Decision Making',
-    'Regulatory Compliance',
-    'Supply Chain Governance',
-    'Financial Services',
-    'Healthcare Governance',
-    'Educational Institutions'
-  ];
+    'DAO GovernanceCorporate Voting',
+    'Community Decision MakingRegulatory Compliance',
+    'Supply Chain GovernanceFinancial Services',
+    'Healthcare GovernanceEducational Institutions'
+  ],
 
   const pricing = [
     {
@@ -59,10 +55,8 @@ const BlockchainGovernancePlatform: React.FC = () => {
       price: '$999',
       period: 'month',
       features: [
-        'Basic voting system',
-        'Up to 100 participants',
-        'Standard security',
-        'Email support',
+        'Basic voting systemUp to 100 participants',
+        'Standard securityEmail support',
         'Basic analytics'
       ]
     },
@@ -71,12 +65,9 @@ const BlockchainGovernancePlatform: React.FC = () => {
       price: '$1,999',
       period: 'month',
       features: [
-        'Advanced governance tools',
-        'Up to 1000 participants',
-        'Enhanced security',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations'
+        'Advanced governance toolsUp to 1000 participants',
+        'Enhanced securityPriority support',
+        'Advanced analyticsCustom integrations'
       ],
       popular: true
     },
@@ -85,15 +76,12 @@ const BlockchainGovernancePlatform: React.FC = () => {
       price: '$3,999',
       period: 'month',
       features: [
-        'Full governance suite',
-        'Unlimited participants',
-        'Enterprise security',
-        'Dedicated support',
-        'Custom development',
-        'SLA guarantees'
+        'Full governance suiteUnlimited participants',
+        'Enterprise securityDedicated support',
+        'Custom developmentSLA guarantees'
       ]
     }
-  ];
+  ],
 
   return (
     <Layout>
@@ -299,7 +287,7 @@ const BlockchainGovernancePlatform: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Join the blockchain governance revolution and create transparent, fair decision-making systems
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                   Start Free Trial
                 </button>
@@ -315,7 +303,7 @@ const BlockchainGovernancePlatform: React.FC = () => {
         </section>
       </div>
     </Layout>
-  );
-};
+  )
+},
 
-export default BlockchainGovernancePlatform;
+export default BlockchainGovernancePlatform,

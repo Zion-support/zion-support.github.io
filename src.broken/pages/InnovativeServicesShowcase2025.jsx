@@ -1,6 +1,6 @@
-import React from 'react';
-export default InnovativeServicesShowcase2025;
-import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase';
+import React from 'react',
+export default InnovativeServicesShowcase2025,
+import EnhancedComprehensiveServicesShowcase from '../components/EnhancedComprehensiveServicesShowcase',
 
 const InnovativeServicesShowcase2025 = () => {
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900 text-white">
@@ -326,7 +326,7 @@ const InnovativeServicesShowcase2025 = () => {
       {/* Contact & Get Started */}
       <section className="py-20 bg-gradient - to - r from - blue - 900 / 50 to - cyan -900 / 50">
         <div className="max - w-4xl mx - auto text-center">
-          <h2 className="text-3xl md:text-4xl font - bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font - bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray - 300 mb-8">
@@ -398,5 +398,5 @@ const InnovativeServicesShowcase2025 = () => {
           </div>
         </div>
       </section>
-    </div>) ;
-};
+    </div>) 
+},

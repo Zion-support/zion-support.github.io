@@ -1,49 +1,49 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from '../types/service-variants',
 export interface AdvancedAIAutomationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string[],
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string
+  },
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   {
     id: 'ai-autonomous-customer-service',
@@ -53,16 +53,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Fully autonomous AI customer service platform that handles customer inquiries, resolves issues, and provides personalized support without human intervention. Uses advanced NLP and machine learning for natural conversations.',
     features: [
-      'Natural language processing',
-      'Multi-language support',
-      'Emotion detection',
-      'Intelligent routing',
-      'Knowledge base integration',
-      'Real-time analytics',
-      'Seamless human handoff',
-      'Voice and text support',
-      'Integration with CRM systems',
-      'Performance optimization'
+      'Natural language processingMulti-language support',
+      'Emotion detectionIntelligent routing',
+      'Knowledge base integrationReal-time analytics',
+      'Seamless human handoffVoice and text support',
+      'Integration with CRM systemsPerformance optimization'
     ],
     popular: true,
     icon: '🤖',
@@ -70,7 +65,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-customer-service',
     marketPosition: 'Competes with Intercom ($74/month), Zendesk ($49/month). Our advantage: 90% automation rate with 95% customer satisfaction.',
-    targetAudience: ['E-commerce businesses', 'SaaS companies', 'Customer support teams', 'Retail chains', 'Service providers'],
+    targetAudience: ['E-commerce businessesSaaS companies', 'Customer support teamsRetail chains', 'Service providers'],
     trialDays: 21,
     setupTime: '1 week',
     category: 'Customer Experience',
@@ -98,16 +93,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Advanced predictive maintenance platform that uses IoT sensors, machine learning, and AI to predict equipment failures, optimize maintenance schedules, and reduce downtime costs.',
     features: [
-      'IoT sensor integration',
-      'Machine learning algorithms',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Maintenance scheduling',
-      'Cost optimization',
-      'Performance tracking',
-      'Alert system',
-      'Historical data analysis',
-      'Mobile app access'
+      'IoT sensor integrationMachine learning algorithms',
+      'Real-time monitoringPredictive analytics',
+      'Maintenance schedulingCost optimization',
+      'Performance trackingAlert system',
+      'Historical data analysisMobile app access'
     ],
     popular: false,
     icon: '🔧',
@@ -115,7 +105,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-predictive-maintenance',
     marketPosition: 'Competes with Uptake ($500/month), C3.ai ($1,000/month). Our advantage: 85% accuracy in failure prediction with 40% cost reduction.',
-    targetAudience: ['Manufacturing companies', 'Industrial facilities', 'Energy companies', 'Transportation', 'Healthcare facilities'],
+    targetAudience: ['Manufacturing companiesIndustrial facilities', 'Energy companiesTransportation', 'Healthcare facilities'],
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'Industrial IoT',
@@ -143,16 +133,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent marketing automation platform that continuously optimizes campaigns, budgets, and strategies using AI. Automatically adjusts bids, targeting, and creative elements for maximum performance.',
     features: [
-      'Campaign optimization',
-      'Budget allocation',
-      'A/B testing automation',
-      'Audience targeting',
-      'Creative optimization',
-      'ROI tracking',
-      'Cross-channel coordination',
-      'Predictive analytics',
-      'Performance reporting',
-      'Integration capabilities'
+      'Campaign optimizationBudget allocation',
+      'A/B testing automationAudience targeting',
+      'Creative optimizationROI tracking',
+      'Cross-channel coordinationPredictive analytics',
+      'Performance reportingIntegration capabilities'
     ],
     popular: true,
     icon: '📈',
@@ -160,7 +145,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-marketing-optimization',
     marketPosition: 'Competes with Marin Software ($500/month), Kenshoo ($1,000/month). Our advantage: 35% better ROI through autonomous optimization.',
-    targetAudience: ['Marketing agencies', 'E-commerce businesses', 'B2B companies', 'Digital marketers', 'Brand managers'],
+    targetAudience: ['Marketing agenciesE-commerce businesses', 'B2B companiesDigital marketers', 'Brand managers'],
     trialDays: 14,
     setupTime: '2 weeks',
     category: 'Digital Marketing',
@@ -188,16 +173,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent financial advisory platform that provides personalized investment advice, portfolio management, and financial planning using advanced AI algorithms and market analysis.',
     features: [
-      'Portfolio analysis',
-      'Investment recommendations',
-      'Risk assessment',
-      'Financial planning',
-      'Market analysis',
-      'Tax optimization',
-      'Retirement planning',
-      'Goal tracking',
-      'Performance monitoring',
-      'Regulatory compliance'
+      'Portfolio analysisInvestment recommendations',
+      'Risk assessmentFinancial planning',
+      'Market analysisTax optimization',
+      'Retirement planningGoal tracking',
+      'Performance monitoringRegulatory compliance'
     ],
     popular: false,
     icon: '💰',
@@ -205,7 +185,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-advisory',
     marketPosition: 'Competes with Betterment ($0.25% assets), Wealthfront ($0.25% assets). Our advantage: Fixed monthly pricing with unlimited advice.',
-    targetAudience: ['Individual investors', 'Financial advisors', 'Wealth management firms', 'Banks', 'Credit unions'],
+    targetAudience: ['Individual investorsFinancial advisors', 'Wealth management firmsBanks', 'Credit unions'],
     trialDays: 30,
     setupTime: '1-2 weeks',
     category: 'FinTech',
@@ -233,16 +213,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     period: '/month',
     description: 'Intelligent supply chain optimization platform that uses AI to forecast demand, optimize inventory levels, and streamline logistics operations for maximum efficiency and cost savings.',
     features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Supplier management',
-      'Logistics optimization',
-      'Risk assessment',
-      'Cost analysis',
-      'Performance tracking',
-      'Real-time monitoring',
-      'Predictive analytics',
-      'Integration capabilities'
+      'Demand forecastingInventory optimization',
+      'Supplier managementLogistics optimization',
+      'Risk assessmentCost analysis',
+      'Performance trackingReal-time monitoring',
+      'Predictive analyticsIntegration capabilities'
     ],
     popular: false,
     icon: '🚚',
@@ -250,7 +225,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-supply-chain-optimization',
     marketPosition: 'Competes with SAP Ariba ($50/user/month), Oracle SCM ($100/user/month). Our advantage: 30% cost reduction through AI optimization.',
-    targetAudience: ['Manufacturing companies', 'Retail chains', 'Logistics providers', 'E-commerce businesses', 'Distribution centers'],
+    targetAudience: ['Manufacturing companiesRetail chains', 'Logistics providersE-commerce businesses', 'Distribution centers'],
     trialDays: 30,
     setupTime: '4-6 weeks',
     category: 'Supply Chain Management',
@@ -270,5 +245,5 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.6,
     reviews: 43
   }
-];
-export default advancedAIAutomationServices2025;
+],
+export default advancedAIAutomationServices2025,

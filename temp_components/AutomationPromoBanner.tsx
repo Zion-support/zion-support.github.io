@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from 'next/link',
 export default function AutomationPromoBanner() {,
   return (,
     <div className="mx-auto my-6 max-w-5xl rounded-xl border border-white/10 bg-white/5 p-4 text-white">,
@@ -10,5 +10,4 @@ export default function AutomationPromoBanner() {,
           <Link href="/sitemap.xml"><a className="underline hover:no-underline">Sitemap</a></Link>,
         </div>,
       </div>,
-    </div>,
-  ),}
+    </div>)}

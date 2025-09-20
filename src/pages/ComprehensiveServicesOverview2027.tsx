@@ -1,10 +1,10 @@
 
-import SEO from '@/components/SEO';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import Input from '@/components/ui/Input';
-import { MICRO_SAAS_SERVICES } from '@/data/microSaasServices';
-import { motion } from 'framer-motion';
+import SEO from "@/components/SEO";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Input from "@/components/ui/Input";
+import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+import { motion } from "framer-motion";
 import {
     ArrowRight,
     BarChart3,
@@ -15,122 +15,78 @@ import {
     MessageCircle,
     Search,
     Star
-} from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-
+} from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
   {
-    id: 'micro-crm',
-    title: 'Micro CRM',
-    description: 'Lightweight customer relationship management for small businesses',
-    category: 'Business Tools',
-    subcategory: 'CRM',
-    pricingModel: 'monthly',
-    price: 29,
-    rating: 4.8,
-    reviewCount: 156,
-    aiScore: 95,
-    featured: true,
-    createdAt: '2024-01-15',
-    href: '/services/micro-crm',
-    tags: ['CRM', 'Business', 'Automation'],
+    id: 'micro-crm',title: 'Micro CRM',description: 'Lightweight customer relationship management for small businesses',category: 'Business Tools',subcategory: 'CRM',pricingModel: 'monthly',price: 29,rating: 4.8,reviewCount: 156,aiScore: 95,featured: true,createdAt: '2024-01-15',href: '/services/micro-crm',tags: ['CRMBusiness', 'Automation'],
     images: ['/images/micro-crm.jpg']
-  },
+  };
   {
-    id: 'helpdesk-platform',
-    title: 'Helpdesk Platform',
-    description: 'Streamlined customer support and ticket management system',
-    category: 'Customer Support',
-    subcategory: 'Helpdesk',
-    pricingModel: 'monthly',
-    price: 39,
-    rating: 4.7,
-    reviewCount: 89,
-    aiScore: 92,
-    featured: false,
-    createdAt: '2024-02-01',
-    href: '/services/helpdesk-platform',
-    tags: ['Support', 'Helpdesk', 'Customer Service'],
+    id: 'helpdesk-platform',title: 'Helpdesk Platform',description: 'Streamlined customer support and ticket management system',category: 'Customer Support',subcategory: 'Helpdesk',pricingModel: 'monthly',price: 39,rating: 4.7,reviewCount: 89,aiScore: 92,featured: false,createdAt: '2024-02-01',href: '/services/helpdesk-platform',tags: ['SupportHelpdesk', 'Customer Service'],
     images: ['/images/helpdesk.jpg']
-  },
+  };
   {
-    id: 'website-analytics',
-    title: 'Website Analytics',
-    description: 'Comprehensive website performance and user behavior analytics',
-    category: 'Analytics',
-    subcategory: 'Web Analytics',
-    pricingModel: 'monthly',
-    price: 19,
-    rating: 4.9,
-    reviewCount: 234,
-    aiScore: 98,
-    featured: true,
-    createdAt: '2024-01-10',
-    href: '/services/website-analytics',
-    tags: ['Analytics', 'Web', 'Performance'],
+    id: 'website-analytics',title: 'Website Analytics',description: 'Comprehensive website performance and user behavior analytics',category: 'Analytics',subcategory: 'Web Analytics',pricingModel: 'monthly',price: 19,rating: 4.9,reviewCount: 234,aiScore: 98,featured: true,createdAt: '2024-01-10',href: '/services/website-analytics',tags: ['AnalyticsWeb', 'Performance'],
     images: ['/images/analytics.jpg']
   }
 ];
-
 const categories = [
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length };
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 };
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 };
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
 ];
-
 const pricingModels = [
-  { id: 'all', name: 'All Pricing' },
-  { id: 'monthly', name: 'Monthly' },
-  { id: 'yearly', name: 'Yearly' },
-  { id: 'one-time', name: 'One-time' },
+  { id: 'all', name: 'All Pricing' };
+  { id: 'monthly', name: 'Monthly' };
+  { id: 'yearly', name: 'Yearly' };
+  { id: 'one-time', name: 'One-time' };
   { id: 'usage-based', name: 'Usage-based' }
 ];
-
 export default function ComprehensiveServicesOverview2027() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPricing, setSelectedPricing] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES);
-  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedPricing, setSelectedPricing] = useState('all'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [filteredServices, setFilteredServices] = useState(MICRO_SAAS_SERVICES),
+  const [sortBy, setSortBy] = useState<'rating' | 'price' | 'aiScore' | 'newest'>('rating'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [expandedService, setExpandedService] = useState<string | null>(null),
 
   useEffect(() => {
-    let filtered = MICRO_SAAS_SERVICES;
+    let filtered = MICRO_SAAS_SERVICES,
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory),
     }
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing);
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing),
     }
     if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase(),
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
-      );
+      ),
     }
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0),
         case 'price':
           return (a.price || 0) - (b.price || 0);
         case 'aiScore':
           return b.aiScore - a.aiScore;
         case 'newest':
           return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-        default:
-          return 0;
+        default: return 0
       }
     });
-    setFilteredServices(filtered);
-  }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
+    setFilteredServices(filtered),
+  }, [selectedCategory, selectedPricing, searchQuery, sortBy]),
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
@@ -240,7 +196,7 @@ export default function ComprehensiveServicesOverview2027() {
 
         {/* Filters and Controls */}
         <div className="mb-12 space-y-6">
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col sm: flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-4">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
@@ -377,7 +333,7 @@ export default function ComprehensiveServicesOverview2027() {
             <Button
               onClick={() => {
                 setSelectedCategory('all');
-                setSelectedPricing('all');
+                setSelectedPricing('all'),
                 setSearchQuery('');
               }}
               className="bg-zion-cyan hover:bg-zion-cyan-light"
@@ -389,7 +345,7 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -414,5 +370,5 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       </section>
     </div>
-  );
+  )
 }

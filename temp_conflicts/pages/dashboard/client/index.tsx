@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
-import type { GetServerSideProps } from 'next';
-import { JOBS } from '../../../data/jobs';
-import { APPLICATIONS } from '../../../data/applications';
-import ApplicationsTable from '../../../components/marketplace/ApplicationsTable';
+import React, { useState } from 'react',
+import type { GetServerSideProps } from 'next',
+import { JOBS } from '../../../data/jobs',
+import { APPLICATIONS } from '../../../data/applications',
+import ApplicationsTable from '../../../components/marketplace/ApplicationsTable',
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const clientId = 'client-demo-001';
+  const clientId = 'client-demo-001',
   if (!clientId) {
-    return { redirect: { destination: '/auth', permanent: false } };
+    return { redirect: { destination: '/auth', permanent: false } },
   }
-  return { props: { clientId } };
-};
+  return { props: { clientId } },
+},
 
-type Props = { clientId: string };
+type Props = { clientId: string },
 
 const ClientDashboardPage: React.FC<Props> = ({ clientId }) => {
-  const [openJobIds, setOpenJobIds] = useState<Record<string, boolean>>({});
+  const [openJobIds, setOpenJobIds] = useState<Record<string, boolean>>({}),
 
-  const jobsForClient = JOBS.filter((j) => j.clientId === clientId);
+  const jobsForClient = JOBS.filter((j) => j.clientId === clientId),
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
       <h1 className="text-2xl font-semibold mb-1">Client Dashboard</h1>
-      <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-6">Review and manage applications across your jobs.</p>
+      <p className="text-sm text-neutral-600 dark: text-neutral-300 mb-6">Review and manage applications across your jobs.</p>
 
       <div className="space-y-4">
         {jobsForClient.map((job) => {
-          const apps = APPLICATIONS.filter((a) => a.jobId === job.id);
-          const isOpen = !!openJobIds[job.id];
+          const apps = APPLICATIONS.filter((a) => a.jobId === job.id),
+          const isOpen = !!openJobIds[job.id],
           return (
             <section key={job.id} className="border border-neutral-200 dark:border-neutral-800 rounded-lg">
               <button
@@ -49,14 +49,14 @@ const ClientDashboardPage: React.FC<Props> = ({ clientId }) => {
                 </div>
               ) : null}
             </section>
-          );
+          ),
         })}
         {jobsForClient.length === 0 ? (
           <div className="p-6 text-sm text-neutral-500 border border-dashed rounded-lg">No jobs yet.</div>
         ) : null}
       </div>
     </main>
-  );
-};
+  ),
+},
 
-export default ClientDashboardPage;
+export default ClientDashboardPage,

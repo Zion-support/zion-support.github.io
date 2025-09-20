@@ -1,40 +1,40 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useRef, useEffect } from 'react',
+import Link from 'next/link',
+import { motion, AnimatePresence } from 'framer-motion',
 import { 
   ChevronDown, Menu, X, Search, User, Bell, Settings, LogOut, Home, Briefcase, Users, Globe, Zap, Cpu, Brain, Rocket, Shield, Database, Server, CpuIcon, ZapIcon, Truck, BookOpen, FileText, Handshake, Newspaper, Grid, Atom, BarChart3, Palette, PaletteIcon, GraduationCap, HeartIcon, DollarSign, Target, Network, Cloud, Layers, Code, MessageCircle, TrendingUp, Monitor, Lock, Building, Phone, Mail, ArrowRight, Star, Sparkles, Eye, Fingerprint, Satellite, Telescope, Microscope, FlaskConical, TargetIcon, Globe2, ShieldCheck, LockKeyhole, Wifi, Bluetooth, Radio, SatelliteDish, Orbit
-} from 'lucide-react';
+} from 'lucide-react',
 
 interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-  description?: string;
-  children?: NavigationItem[];
-  badge?: string;
-  title?: string;
-  featured?: boolean;
-  category?: string;
-  color?: string;
-  price?: string;
-  rating?: number;
-  reviews?: number;
+  name: string,
+  href: string,
+  icon?: React.ReactNode,
+  description?: string,
+  children?: NavigationItem[],
+  badge?: string,
+  title?: string,
+  featured?: boolean,
+  category?: string,
+  color?: string,
+  price?: string,
+  rating?: number,
+  reviews?: number
 }
 
 interface UltraAdvancedFuturisticNavigation2041Props {
-  onMenuToggle?: () => void;
-  isMenuOpen?: boolean;
+  onMenuToggle?: () => void,
+  isMenuOpen?: boolean,
 }
 
 function normalizeHref(href: string): string {
-  if (!href) return href;
+  if (!href) return href,
   if (href.startsWith('http://') || href.startsWith('https://') || href.startsWith('mailto:') || href.startsWith('tel:')) {
-    return href;
+    return href
   }
-  if (!href.startsWith('/')) return href;
-  const hasQueryOrHash = href.includes('?') || href.includes('#');
-  if (hasQueryOrHash) return href;
-  return href.endsWith('/') ? href : href + '/';
+  if (!href.startsWith('/')) return href,
+  const hasQueryOrHash = href.includes('?') || href.includes('#'),
+  if (hasQueryOrHash) return href,
+  return href.endsWith('/') ? href : href + '/',
 }
 
 const navigationItems: NavigationItem[] = [
@@ -458,12 +458,12 @@ const navigationItems: NavigationItem[] = [
       { name: 'Support Center', href: '/support', icon: <MessageCircle className="w-4 h-4" /> }
     ]
   }
-];
+],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
-export default UltraAdvancedFuturisticNavigation2041;
+},
+export default UltraAdvancedFuturisticNavigation2041,

@@ -1,4 +1,4 @@
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar',
 
 export default function Page() {
  cover`}"
@@ -75,6 +75,6 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
+  ),
 }
 '"`

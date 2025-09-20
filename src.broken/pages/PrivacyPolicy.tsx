@@ -1,6 +1,6 @@
-import React from 'react';
-export default PrivacyPolicy;}
-import { motion  } from 'framer-motion';
+import React from 'react',
+export default PrivacyPolicy,}
+import { motion  } from 'framer-motion',
 
 export default function Page() {
 ,
@@ -51,40 +51,40 @@ export default function Page() {
       title: 'Changes to This Policy',
       icon: AlertTriangle,
       content: `We may update this Privacy Policy from time to time.We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
-    },;
-    {;
-      id: 'contact',;
-      title: 'Contact Us',;
-      icon: Mail,;
-      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`;
-    };
-  ];
+    },
+    {,
+      id: 'contact',
+      title: 'Contact Us',
+      icon: Mail,
+      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`,
+    },
+  ],
 
   const dataCategories = [{
       category: 'Personal Information',
-      examples: ['Name, email address, phone number', 'Company and job title', 'Billing and payment information'],
+      examples: ['Name, email address, phone numberCompany and job title', 'Billing and payment information'],
       purpose: 'Account management, service delivery, billing',
       retention: 'As long as your account is active plus 7 years'
     },
     {
       category: 'Usage Data',
-      examples: ['Service usage patterns', 'Feature interactions', 'Performance metrics'],
+      examples: ['Service usage patternsFeature interactions', 'Performance metrics'],
       purpose: 'Service improvement, analytics, troubleshooting',
       retention: '2 years from collection'
     },
     {
       category: 'Technical Data',
-      examples: ['IP address, device information', 'Browser type and version', 'Operating system'],
+      examples: ['IP address, device informationBrowser type and version', 'Operating system'],
       purpose: 'Security, fraud prevention, service optimization',
       retention: '1 year from collection'
-    },;
-    {;
-      category: 'Communication Data',;
-      examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],;
-      purpose: 'Customer support, service improvement',;
-      retention: '3 years from last interaction';
-    };
-  ];
+    },
+    {,
+      category: 'Communication Data',
+      examples: ['Support tickets, chat logsEmail communications', 'Feedback and surveys'],
+      purpose: 'Customer support, service improvement',
+      retention: '3 years from last interaction'
+    },
+  ],
 
   const securityMeasures = [{
       measure: 'Encryption',
@@ -109,14 +109,14 @@ export default function Page() {
     {
       measure: 'Employee Training',
       description: 'Regular security training for all employees to ensure data protection awareness',
-      icon: Users;
-    },;
-    {;
-      measure: 'Incident Response',;
-      description: 'Comprehensive incident response plan for handling security breaches',;
-      icon: AlertTriangle;
-    };
-  ];
+      icon: Users
+    },
+    {,
+      measure: 'Incident Response',
+      description: 'Comprehensive incident response plan for handling security breaches',
+      icon: AlertTriangle
+    },
+  ],
 
   return (<>
       <Helmet>
@@ -539,17 +539,17 @@ export default function Page() {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
               animate = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
               transition = {
   { duration: 0.6,
-  delay: 0.2 ;
+  delay: 0.2 
 
 }}
             >
@@ -591,7 +591,7 @@ export default function Page() {
         </section>
 
         {/* Policy Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-4xl mx -auto">
             <motion.div
               initial = {
@@ -627,7 +627,7 @@ export default function Page() {
         </section>
 
         {/* Data Categories Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -697,7 +697,7 @@ export default function Page() {
         </section>
 
         {/* Security Measures Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">;
+        <section className="py-16 px-4 sm: px-6 lg:px-8">,
           <div className="max - w-7xl mx -auto">
             <motion.div
               initial = {
@@ -752,7 +752,7 @@ export default function Page() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - green - 600 to - emerald -700">;
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient - to - r from - green - 600 to - emerald -700">,
           <div className="max - w-4xl mx - auto text-center">
             <motion.div
               initial = {
@@ -972,23 +972,23 @@ export default function Page() {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.6 ;
+  delay: 0.6 
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Globe className="w-8 h-8 text-zion -cyan" />
                 International Data Transfers
               </h2>
@@ -1003,23 +1003,23 @@ export default function Page() {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.7 ;
+  delay: 0.7 
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <AlertTriangle className="w-8 h-8 text-zion -cyan" />
                 Children's Privacy
               </h2>
@@ -1034,23 +1034,23 @@ export default function Page() {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.8 ;
+  delay: 0.8 
 
 }}
               viewport={{ once: true }}
               className="mb-12"
 
-              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">;
+              <h2 className="text-3xl font - bold text-white mb-6 flex items - center gap-3">,
                 <Calendar className="w-8 h-8 text-zion -cyan" />
                 Changes to This Policy
               </h2>
@@ -1081,17 +1081,17 @@ export default function Page() {
             <motion.div
               initial = {
   { opacity: 0,
-  y: 20 ;
+  y: 20 
 
 }}
               whileInView = {
   { opacity: 1,
-  y: 0 ;
+  y: 0 
 
 }}
               transition = {
   { duration: 0.8,
-  delay: 0.9 ;
+  delay: 0.9 
 
 }}
               viewport={{ once: true }}
@@ -1129,13 +1129,13 @@ export default function Page() {
               </div>
 
               <div className="mt-8">
-                <button     className="px-8 py-4 bg-white text-green - 600 font - semibold rounded-lg hover:bg-green - 50 transition -colors">
+                <button     className="px-8 py-4 bg-white text-green - 600 font - semibold rounded-lg hover: bg-green - 50 transition -colors">
                   Contact Privacy Team
-                </button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;) ;
-};
+                </button>,
+              </div>,
+            </motion.div>,
+          </div>,
+        </section>,
+      </div>,
+    </>,) 
+},

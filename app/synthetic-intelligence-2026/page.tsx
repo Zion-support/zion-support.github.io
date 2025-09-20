@@ -1,11 +1,11 @@
-import React from 'react';
-import SEO from '../../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../../components/SEO',
+import Link from 'next/link',
 export const metadata = {,
-  title: 'Synthetic Intelligence 2026 - The Future of AI Consciousness';
-  description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.';
-  keywords: ['synthetic intelligence 2026AI consciousness', 'artificial consciousnesscreative AI', 'synthetic beings'],
-};
+  title: 'Synthetic Intelligence 2026 - The Future of AI Consciousness',
+  description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',
+  keywords: ['synthetic intelligence 2026AI consciousnessartificial consciousnesscreative AI', 'synthetic beings']
+},
 export default function SyntheticIntelligence2026Page() {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">,
@@ -25,7 +25,7 @@ export default function SyntheticIntelligence2026Page() {,
             Synthetic Intelligence 2026,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
-            Experience the dawn of synthetic intelligence. Artificial consciousness, creative AI;
+            Experience the dawn of synthetic intelligence. Artificial consciousness, creative AI,
             and synthetic beings that will revolutionize human-AI collaboration and creativity.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -44,7 +44,7 @@ export default function SyntheticIntelligence2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Core Capabilities */,}
+      {/* Core Capabilities */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -130,7 +130,7 @@ export default function SyntheticIntelligence2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Impact Statistics */,}
+      {/* Impact Statistics */}
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">,
         <div className="max-w-6xl mx-auto text-center">,
           <h2 className="text-4xl font-bold text-white mb-12">,
@@ -156,7 +156,7 @@ export default function SyntheticIntelligence2026Page() {,
           </div>,
         </div>,
       </section>,
-      {/* Applications */,}
+      {/* Applications */}
       <section className="py-16 px-4">,
         <div className="max-w-6xl mx-auto">,
           <h2 className="text-4xl font-bold text-white text-center mb-12">,
@@ -199,5 +199,4 @@ export default function SyntheticIntelligence2026Page() {,
           </Link>,
         </div>,
       </section>,
-    </div>,
-  ),}
+    </div>)}

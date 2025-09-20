@@ -1,4 +1,4 @@
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 ) {
 
     const sizeClasses = {
@@ -7,14 +7,14 @@ import { motion  } from 'framer-motion';
         md: 'w-12 h-12',
   lg: 'w-16 h-16'
 
-};
+},
     const colorClasses = {
 
   primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
   white: 'text-white'
 
-};
+},
     const spinnerVariants = {
 
   animate: {
@@ -28,13 +28,13 @@ import { motion  } from 'framer-motion';
 
 }
         }
-    };
+    },
     const pulseVariants = {
 
   animate: {
 
-            scale[1, 1.2, 1],;
-            opacity[0.5, 1, 0.5],;
+            scale[1, 1.2, 1],
+            opacity[0.5, 1, 0.5],
             transition: {
 
                 duration: 2,
@@ -43,7 +43,7 @@ import { motion  } from 'framer-motion';
 
 }
         }
-    };"
+    },"
     const LoaderContent = () => (<div className="flex flex-col items-center justify-center space-y-4">"
       <motion.div variants={spinnerVariants} animate="animate" className={`${sizeClasses[size]} ${colorClasses[color]}`}>"
         <svg className="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">"
@@ -54,7 +54,7 @@ import { motion  } from 'framer-motion';
       {text && (<motion.p variants={pulseVariants} animate="animate" className="text-zion-slate-light text-center font-medium">
           {text}
         </motion.p>) }
-    </div>) ;
+    </div>) ,
     if(fullScreen) {
 "
         return (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-sm flex items-center justify-center z-50">

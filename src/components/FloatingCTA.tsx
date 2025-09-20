@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   MessageCircle,
   X,
@@ -96,11 +96,9 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
-
+} from "lucide-react";
 export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <>
       {/* Floating Action Button */}

@@ -1,6 +1,6 @@
 
-import React from "react";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
 export function EnterpriseCTA() {,
   return (,
     <section className="py-20 px-4 md: px-6">,
@@ -59,6 +59,5 @@ export function EnterpriseCTA() {,
           </div>,
         </div>,
       </div>,
-    </section>,
-  ),}
+    </section>)}
 ,

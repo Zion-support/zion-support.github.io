@@ -1,2 +1,2 @@
 
-export default InteractiveTestimonials.js;
+export default InteractiveTestimonials.js,

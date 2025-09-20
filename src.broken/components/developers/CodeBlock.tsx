@@ -1,13 +1,13 @@
 
-import { useState } from 'react';
+import { useState } from 'react',
 import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 
 interface CodeBlockProps {
-  code: string;
-  language?: string;
-  showLineNumbers?: boolean;
-  className?: string;
+  code: string,
+  language?: string,
+  showLineNumbers?: boolean,
+  className?: string
 }
 
 export function CodeBlock({ 
@@ -16,15 +16,15 @@ export function CodeBlock({
   showLineNumbers = false,
   className
 }: CodeBlockProps) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false),
 
   const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
+    await navigator.clipboard.writeText(code),
+    setCopied(true),
     setTimeout(() => {
-      setCopied(false);
-    }, 2000);
-  };
+      setCopied(false),
+    }, 2000),
+  },
 
   return (
     <div className={cn(
@@ -59,7 +59,7 @@ export function CodeBlock({
         </div>
       )}
     </div>
-  );
+  ),
 }
 
-export default CodeBlock;
+export default CodeBlock,

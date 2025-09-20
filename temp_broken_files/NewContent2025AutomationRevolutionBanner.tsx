@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 // import Link from 'next/link', // Replaced with regular anchor tags for React compatibility,
 const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
   return (,
     <divsection,
       className="relative bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-16 overflow-hidden",
     >,
-      {/* Background Pattern */,}
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">,
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%253Csvg%20width%253D%252260%2522%20height%253D%252260%2522%20viewBox%253D%25220%25200%252060%252060%2522%20xmlns%253D%2522http%253A%2F%2Fwww.w3.org%2F2000%2Fsvg%2522%253E%253Cg%20fill%253D%2522none%2522%20fill-rule%253D%2522evenodd%2522%253E%253Cg%20fill%3D%22%2523ffffff%22%20fill-opacity%253D%25220.1%2522%253E%253Ccircle%20cx%253D%252230%2522%20cy%253D%252230%2522%20r%3D%224%22%2F%253E%253C%2Fg%253E%253C%2Fg%253E%253C%2Fsvg%253E')]"></div>,
       </div>,
@@ -29,7 +29,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
           </divp>,
         </div>,
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">,
-          {/* Featured Content Card */,}
+          {/* Featured Content Card */}
           <div,
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20",
           >,
@@ -59,7 +59,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
               <span className="ml-2">→</span>,
             </a>,
           </div>,
-          {/* Case Study Card */,}
+          {/* Case Study Card */}
           <div,
             className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20",
           >,
@@ -95,7 +95,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
             </a>,
           </div>,
         </div>,
-        {/* Key Statistics */,}
+        {/* Key Statistics */}
         <div,
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8",
         >,
@@ -116,7 +116,7 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
             <div className="text-gray-300 text-sm">Success Rate</div>,
           </div>,
         </div>,
-        {/* Call to Action */,}
+        {/* Call to Action */}
         <div,
           className="text-center",
         >,
@@ -137,6 +137,6 @@ const NewContent2025AutomationRevolutionBanner: React.FC = () => {,
         </div>,
       </div>,
     </divsection>,
-  ),};
-export default NewContent2025AutomationRevolutionBanner;
+  )},
+export default NewContent2025AutomationRevolutionBanner,
 </div></div></div>,

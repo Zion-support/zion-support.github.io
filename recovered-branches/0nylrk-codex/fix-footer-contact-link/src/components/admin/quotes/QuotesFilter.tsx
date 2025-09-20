@@ -1,11 +1,11 @@
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-  setDateRange;
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter,
+  dateRange,
+  setDateRange,
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">,
       <CardContent className="p-6">,
         <div className="grid grid-cols-1 md: grid-cols-4 gap-4 items-end">,
@@ -13,13 +13,13 @@
             <Input,
               placeholder="Search quotes...",
               className="pl-10 bg-zion-blue border-zion-blue-light text-white",
-              value={searchQuery,}
+              value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />,
           </div>,
           <div>,
             <p className="text-zion-slate-light text-sm mb-2">Status</p>,
-            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value),}>,
+            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>,
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">,
                 <SelectValue placeholder="Status" />,
               </SelectTrigger>,
@@ -35,7 +35,7 @@
           </div>,
           <div>,
             <p className="text-zion-slate-light text-sm mb-2">Archive</p>,
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value),}>,
+            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>,
               <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">,
                 <SelectValue placeholder="Archive Status" />,
               </SelectTrigger>,
@@ -72,24 +72,24 @@
                   onSelect={setDateRange}
                   numberOfMonths={2}
 ,
-                />;
-              </PopoverContent>;
-            </Popover>;
-          </div>;
-        </div>;
-        <div className="mt - 4 flex justify - end">;
-          <Button;
-            variant="outline";
+                />,
+              </PopoverContent>,
+            </Popover>,
+          </div>,
+        </div>,
+        <div className="mt - 4 flex justify - end">,
+          <Button,
+            variant="outline",
             on_click={on_reset}
-            className="border - zion - blue - light text - zion - slate - light";
-          >;
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
+            className="border - zion - blue - light text - zion - slate - light",
+          >,
+            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters,
+          </Button>,
+        </div>,
+      </CardContent>,
+    </Card>),
 }
-;
+,
                 />,
               </PopoverContent>,
             </Popover>,
@@ -106,5 +106,5 @@
         </div>,
       </CardContent>,
     </Card>,
-  );
-};
+  ),
+},

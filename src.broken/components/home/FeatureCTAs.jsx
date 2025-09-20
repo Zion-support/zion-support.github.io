@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
+import React from 'react',
+import { Link  } from 'react-router-dom',
 export default function Page() {
 ,
     {
@@ -24,8 +24,8 @@ export default function Page() {
       link: '/zion-hire-ai',
       badge: 'Premium',
       details:'
-        'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'},
-  ];
+        'Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.'}
+  ],
 
   const ctaItems = [{
 
@@ -58,8 +58,8 @@ export default function Page() {
       href: '/resources',
       icon: TrendingUp,
       color: 'from-orange-500 to-orange-600',
-      hoverColor: 'from-orange-600 to-orange-700'},
-  ];
+      hoverColor: 'from-orange-600 to-orange-700'}
+  ],
 
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -127,6 +127,6 @@ export default function Page() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
 '"`

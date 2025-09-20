@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export default React.memo(function OnsiteSupport (...args[]) :  {
-import { motion  } from 'framer-motion';
+import { motion  } from 'framer-motion',
 export default function Page() {
-;
-  ];
+,
+  ],
 
   const benefits = [{
       icon: Clock,
@@ -16,10 +16,8 @@ export default function Page() {
       icon: Globe,
       color: 'from - green - 500 to - emerald - 500',
       areas: [
-        'New York Metro Area',
-        'Washington DC Metro',
-        'Philadelphia Metro',
-        'Baltimore Metro'
+        'New York Metro AreaWashington DC Metro',
+        'Philadelphia MetroBaltimore Metro'
       ],
       responseTime: '4 - 8 hours'
     },
@@ -28,14 +26,12 @@ export default function Page() {
       description: 'Available nationwide for enterprise clients',
       icon: Building,
       color: 'from - purple - 500 to - pink - 500',
-      areas: ['Major metropolitan areas',;
-        'Enterprise client locations',;
-        'Strategic partnerships',;
-        'Emergency response';
-      ],;
-      responseTime: '8 - 24 hours';
-    };
-  ];
+      areas: ['Major metropolitan areasEnterprise client locations',
+        'Strategic partnershipsEmergency response',
+      ],
+      responseTime: '8 - 24 hours'
+    },
+  ],
 
   const supportTiers = [{
       title: 'Basic Support',
@@ -50,10 +46,8 @@ export default function Page() {
       icon: Star,
       color: 'from - green - 500 to - emerald - 500',
       features: [
-        '2 - hour response time',
-        'Extended hours support',
-        'Advanced troubleshooting',
-        'Priority scheduling',
+        '2 - hour response timeExtended hours support',
+        'Advanced troubleshootingPriority scheduling',
         'Monthly maintenance visits'
       ],
       pricing: 'Starting at $200 / hour'
@@ -63,15 +57,13 @@ export default function Page() {
       description: 'Premium support for large organizations',
       icon: Award,
       color: 'from - purple - 500 to - pink - 500',
-      features: ['1 - hour response time',
-        '24 / 7 availability',;
-        'Dedicated support team',;
-        'Custom maintenance plans',;
-        'Strategic consultation';
-      ],;
-      pricing: 'Custom pricing';
-    };
-  ];
+      features: ['1 - hour response time24 / 7 availability',
+        'Dedicated support teamCustom maintenance plans',
+        'Strategic consultation',
+      ],
+      pricing: 'Custom pricing'
+    },
+  ],
 
   const responseProcess = [{
       step: '1',
@@ -99,14 +91,14 @@ export default function Page() {
       icon: CheckCircle,
       color: 'from - orange - 500 to - red - 500'
     },
-    {;
-      step: '5',;
-      title: 'Follow-up',;
-      description: 'Post - resolution support and documentation',;
-      icon: Mail,;
-      color: 'from - yellow-500 to - orange - 500';
-    };
-  ];
+    {,
+      step: '5',
+      title: 'Follow-up',
+      description: 'Post - resolution support and documentation',
+      icon: Mail,
+      color: 'from - yellow-500 to - orange - 500'
+    },
+  ],
 
   const contactInfo = [{
       title: 'Onsite Support Team',
@@ -115,14 +107,14 @@ export default function Page() {
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    {;
-      title: 'Emergency Support',;
-      description: '24 / 7 emergency response hotline',;
-      email: 'emergency@ziontechgroup.com',;
-      phone: '+1 302 464 0950',;
-      address: 'Available 24 / 7 for critical issues';
-    };
-  ];
+    {,
+      title: 'Emergency Support',
+      description: '24 / 7 emergency response hotline',
+      email: 'emergency@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: 'Available 24 / 7 for critical issues'
+    },
+  ],
 
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -334,12 +326,12 @@ export default function Page() {
                   <div className="text-slate - 300 font -medium">{area.responseTime}</div>
                 </div>
               </div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </div>
       </div>
 
       {/* Support Tiers */}
-      <div className="bg-slate - 800 / 20 py-16">;
+      <div className="bg-slate - 800 / 20 py-16">,
         <div className="container mx - auto px-4">
           <motion.h2
             initial = {
@@ -398,7 +390,7 @@ export default function Page() {
       </section>
 
       {/* Response Process */}
-      <div className="container mx - auto px-4 py-16">;
+      <div className="container mx - auto px-4 py-16">,
         <motion.h2
           initial = {
   { opacity: 0,
@@ -445,12 +437,12 @@ export default function Page() {
               </div>
               <h3 className="text-lg font - semibold text-white mb-2">{step.title}</h3>
               <p className="text-slate - 400 text-sm">{step.description}</p>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </div>
       </div>
 
       {/* Benefits */}
-      <div className="bg-slate - 800 / 20 py-16">;
+      <div className="bg-slate - 800 / 20 py-16">,
         <div className="container mx - auto px-4">
           <motion.h2
             initial = {
@@ -513,7 +505,7 @@ export default function Page() {
       </section>
 
       {/* Contact Information */}
-      <div className="container mx - auto px-4 py-16">;
+      <div className="container mx - auto px-4 py-16">,
         <motion.h2
           initial = {
   { opacity: 0,
@@ -586,12 +578,12 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </motion.div>;) ) }
+            </motion.div>,) ) }
         </div>
       </div>
 
       {/* Call to Action */}
-      <div className="container mx - auto px-4 py-16">;
+      <div className="container mx - auto px-4 py-16">,
         <motion.div
           initial = {
   { opacity: 0,
@@ -616,11 +608,11 @@ export default function Page() {
           <p className="text-slate - 300 max - w-2xl mx - auto mb-6">
             Don't let technical issues slow down your business.Contact us today to schedule
             onsite support or discuss your technical needs.</p>
-          <button     className="bg-gradient - to - r from - green - 500 to - emerald - 500 hover:from - green - 600 hover:to - emerald - 600 text-white font - medium py-3 px-8 rounded-lg transition - all duration - 300 flex items - center space - x-2 mx -auto">;
-            <span > Schedule Onsite Support</span>;
-            <ArrowRight className="w-4 h-4" />;
-          </button>;
-        </motion.div>;
-      </div>;
-    </div>;) ;
+          <button     className="bg-gradient - to - r from - green - 500 to - emerald - 500 hover: from - green - 600 hover:to - emerald - 600 text-white font - medium py-3 px-8 rounded-lg transition - all duration - 300 flex items - center space - x-2 mx -auto">,
+            <span > Schedule Onsite Support</span>,
+            <ArrowRight className="w-4 h-4" />,
+          </button>,
+        </motion.div>,
+      </div>,
+    </div>,) 
 }
