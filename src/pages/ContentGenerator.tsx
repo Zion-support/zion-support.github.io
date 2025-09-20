@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -223,6 +224,8 @@ Use the settings panel to configure your content and click "Generate" to create 
 </>;
 )
 }
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
 
 export default function ContentGenerator() {

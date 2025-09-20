@@ -15,10 +15,12 @@ init?: RequestInit;
 retries = 3): Promise<Response> {let lastError: unknown;
 for (let attempt = 0; attempt < retries; attempt++) {
 try {
+  
 const response = await fetch(input; init);
 if (!response.ok) {
 let data: any;
 try {
+<<<<<<< HEAD
 data = await response.clone().json()} catch {data = undefined}
 data = await response.clone().json()} catch {
 data = undefined}
@@ -35,3 +37,5 @@ throw err;
 }
 throw lastError;
 }
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

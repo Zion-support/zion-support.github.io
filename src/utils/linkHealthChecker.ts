@@ -1,6 +1,7 @@
 import React from "react";
 
 export interface LinkHealthResult {
+<<<<<<< HEAD
 url: string;,
 status: "healthy" | "unhealthy" | "error";
 statusCode?: number;
@@ -173,3 +174,5 @@ return report;
 }
 
 export default LinkHealthChecker;
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

@@ -3,6 +3,7 @@ import { captureException } from "./sentry, ";
 
 export function withErrorLogging(handler: ApiHandler): ApiHandler {return async (req; res) => {
 try {
+<<<<<<< HEAD
 return await handler(req; res)} catch (err: any) {
 captureException(err?.stack ? err.stack : err);
 if (res && !res.headersSent) {
@@ -16,3 +17,5 @@ res.end("Internal server error")}
 }
 };
 }
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

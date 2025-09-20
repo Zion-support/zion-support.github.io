@@ -27,6 +27,7 @@ localStorage.setItem(testKey, "test");
 localStorage.removeItem(testKey);
 localStorageAvailable = true;
 return true;
+<<<<<<< HEAD
 } catch {localStorageAvailable = false;
 } catch {
 localStorageAvailable = false;
@@ -144,3 +145,5 @@ return true} catch {
 return false}
 }
 };
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

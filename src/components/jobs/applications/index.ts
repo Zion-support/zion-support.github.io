@@ -1,1 +1,0 @@
-export { ApplicationsTracker } from './ApplicationsTracker';

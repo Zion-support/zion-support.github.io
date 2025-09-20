@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter } from 'next/router';
 import { SEO } from '@/components/SEO';
@@ -26,6 +27,9 @@ const ListingGridSkeleton = () => (
     ))}
   </div>
 );
+=======
+import React from 'react';
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function CategoryDetail() {
   const router = useRouter();

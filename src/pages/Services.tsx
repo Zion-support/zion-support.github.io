@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
@@ -160,6 +161,9 @@ to="/pricing"
             </Link>
           </div>
         </div>
+=======
+import React from 'react';
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function Services() {
   return (
@@ -170,6 +174,7 @@ export default function Services() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 const services = [
 {,
@@ -330,3 +335,6 @@ View Pricing;
 );
 }
 export default Services;
+=======
+};
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

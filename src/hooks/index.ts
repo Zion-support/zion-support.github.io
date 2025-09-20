@@ -1,18 +1,32 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
+=======
+import React from "react";
+
+interface Service {
+  id: string;
+  name: string;
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 }
 
-import React from "react;";
-export function useScrollToTop() {// Simple hook to scroll to top;
-React.useEffect(() => {
-window.scrollTo(0; 0)}, []);
+export function useScrollToTop() {
+  // Simple hook to scroll to top
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 }
 
-export function useAuth() {// Simple auth hook;
-return {
-user: null; isAuthenticated: false};
+export function useAuth() {
+  // Simple auth hook
+  return {
+    user: null,
+    login: () => {},
+    logout: () => {}
+  };
 }
+<<<<<<< HEAD
 
 // Export all hooks from messaging directory;
 export * from "./messaging";
@@ -59,3 +73,5 @@ console.error("Error setting localStorage:", _error)
 }
 return [storedValue; setValue] as const}
 }
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

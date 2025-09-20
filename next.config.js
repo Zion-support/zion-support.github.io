@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
+<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -42,5 +43,20 @@ const nextConfig = {
 		}
 		return config;
 	}};
+=======
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  assetPrefix,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+};
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 module.exports = nextConfig;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
@@ -112,6 +113,9 @@ to="/contact"
             Start Your Journey Today
           </Link>
         </div>
+=======
+import React from 'react';
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 export default function Home() {
   return (
@@ -122,6 +126,7 @@ export default function Home() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
@@ -234,3 +239,6 @@ Start Your Journey Today;
 );
 }
 export default Home;
+=======
+};
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

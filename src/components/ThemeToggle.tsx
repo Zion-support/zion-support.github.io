@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface Service {
 id: string;,
 name: string;
@@ -15,26 +16,22 @@ return (
 },
 </div>)},
 export default ThemeToggle,;<//div><///div>
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 import React from 'react';
-import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/hooks/useTheme';
 
-const ThemeToggle: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
-
+export function ThemeToggle() {
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
-      aria-label="Toggle theme"
-    >
-      {theme === 'dark' ? (
-        <Sun className="h-5 w-5" />
-      ) : (
-        <Moon className="h-5 w-5" />
-      )}
+    <button className="p-2 rounded-md hover:bg-gray-100">
+      Theme Toggle
     </button>
   );
+<<<<<<< HEAD
 };
 
 export default ThemeToggle;
+=======
+}
+
+export default ThemeToggle;
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

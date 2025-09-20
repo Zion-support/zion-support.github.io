@@ -1,8 +1,14 @@
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
+<<<<<<< HEAD
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import Header from "@/components/Header";
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
+=======
+import ErrorBoundary from "@/components/GlobalErrorBoundary"; // Import ErrorBoundary
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+// Ideally this would come from a shared data source or API;
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
 
 const categories = [
   {
@@ -68,4 +74,8 @@ export default function AllCategoriesPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5

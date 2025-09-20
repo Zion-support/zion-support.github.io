@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -26,6 +27,16 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
         {description}
       </p>
     </Link>
+=======
+import React from 'react';
+
+export function CategoryCard({ category }) {
+  return (
+    <div className="p-4 border rounded-lg hover:shadow-md transition-shadow">
+      <h3 className="font-semibold">{category.name}</h3>
+      <p className="text-gray-600">{category.description}</p>
+    </div>
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
   );
 }
 

@@ -1,4 +1,5 @@
 interface Service {
+<<<<<<< HEAD
 id: string;,
 name: string;
 }
@@ -40,3 +41,5 @@ for (let i = 0i < counti++) {
 listings.push(generateRandomListing());
 };
 return listings}
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
