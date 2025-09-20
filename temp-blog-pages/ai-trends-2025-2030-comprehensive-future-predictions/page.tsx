@@ -1,12 +1,12 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft; Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react',
+import { ArrowLeft, Calendar, Clock, User,  Share2, BookOpen, Download, TrendingUp, Brain, Zap,  ArrowUpRight, Star, Award } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
   description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
   keywords: ['AI TrendsFuture TechnologyEnterprise AIPredictions', '2025-2030Quantum AIAGINeural Interfaces'],
-  openGraph: {,
+  openGraph: {
     title: 'AI Trends 2025-2030: Comprehensive Future Predictions & Enterprise Impact',
     description: 'Discover the revolutionary AI trends that will reshape business, technology, and society from 2025-2030. Expert predictions, implementation strategies, and ROI insights.',
     type: 'article',

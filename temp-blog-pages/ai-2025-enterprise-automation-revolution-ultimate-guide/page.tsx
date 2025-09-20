@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI 2025 Enterprise Automation Revolution: Ultimate Guide',
   description: 'Discover the revolutionary AI automation solutions transforming enterprises in 2025. Complete guide to implementation, benefits, and future trends.',
-  keywords: ['AI automationenterprise AIbusiness automationAI 2025', 'digital transformation']
+  keywords: ['AI automationenterprise AIbusiness automationAI 2025', 'digital transformation'],
 }
 export default function AI2025EnterpriseAutomationRevolution() {
   return (

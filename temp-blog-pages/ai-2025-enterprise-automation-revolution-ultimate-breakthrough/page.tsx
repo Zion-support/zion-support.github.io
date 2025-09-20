@@ -5,12 +5,13 @@ export const metadata: Metadata = {
   title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
   description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions. Complete guide to enterprise AI transformation.',
   keywords: ['AI automationenterprise AImachine learningROI', 'digital transformationFortune 500'],
-  openGraph: {,
+  openGraph: {
     title: 'AI 2025: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
     description: 'Discover how Fortune 500 companies are achieving 500%+ ROI with advanced AI automation and machine learning solutions.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group']}
+    authors: ['Zion Tech Group']
+  }
 }
 export default function AI2025EnterpriseAutomationRevolution() {
   return (
