@@ -109,11 +109,28 @@ zion-website/
 *.py
 *.sh
 *.cjs
+
+# Only ignore specific problematic root files, not all JS/TS files
+*_backup*
+*_disabled*
+*_temp*
+
+# Ignore corrupted and problematic files
+src-corrupted/
+quantum-ai-*/
 *.js
-*.jsx
-*.ts
-*.tsx
-!src/
+!src/**/*.js
+!src/**/*.ts
+!src/**/*.jsx
+!src/**/*.tsx
 !App.tsx
 !index.html
 !main.jsx
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js
+!babel.config.js
+!jest.config.js
+!hardhat.config.js
+!ecosystem.config.js
+!next.config.js
