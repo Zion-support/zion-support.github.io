@@ -1,15 +1,17 @@
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,  } from "@/components/ui/card",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
+import React from 'react';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { CAREER_JOBS,  } from "@/data/careersJobs";
+import { CAREER_JOBS } from "@/data/careersJobs";
+
 export default function Careers() {
-return (
+  return (
     <>
-      <SEO,
-title='Careers at Zion - Join Our Team'
+      <SEO
+        title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers AI jobs tech careers remote work startup jobs'
         canonical='https://app.ziontechgroup.com/careers'
