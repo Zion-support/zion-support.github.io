@@ -40,17 +40,17 @@ export default function AI2026UltimateBusinessTransformationPage() {
             </div>
           </div>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105"
             >
-              Start Transformation,
+              Start Transformation
             </Link>
-            <Link,
-              href="/services",
+            <Link
+              href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
-              Explore Services,
+              Explore Services
             </Link>
           </div>
         </div>
@@ -233,10 +233,10 @@ export default function AI2026UltimateBusinessTransformationPage() {
             <div>
               <div>
                 <label className="block text-sm font-medium mb-2">Current Annual Revenue</label>
-                <input,
-                  type="number",
+                <input
+                  type="number"
                   className="w-full bg-white/20 border border-white/30 rounded-lg px-4 py-2 text-white placeholder-white/50"
-                  placeholder="$1,000,000",
+                  placeholder="$1,000,000"
                 />
               </div>
               <div>
@@ -263,11 +263,11 @@ export default function AI2026UltimateBusinessTransformationPage() {
               <div className="text-4xl font-bold text-green-400">15,000%</div>
               <p className="text-sm opacity-80 mt-2">Based on industry averages and breakthrough technologies</p>
             </div>
-            <Link,
-              href="/contact",
-              className="bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 rounded-lg font-semibold hover: from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 inline-block"
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105 inline-block"
             >
-              Get Detailed Analysis,
+              Get Detailed Analysis
             </Link>
           </div>
         </div>
@@ -283,17 +283,17 @@ export default function AI2026UltimateBusinessTransformationPage() {
             The future is now, and it starts with your decision to lead.,
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-pink-500 to-purple-500 px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all transform hover:scale-105"
             >
-              Start Your Transformation,
+              Start Your Transformation
             </Link>
-            <Link,
-              href="/ai-2026-revolution",
+            <Link
+              href="/ai-2026-revolution"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors"
             >
-              Explore More Content,
+              Explore More Content
             </Link>
           </div>
         </div>

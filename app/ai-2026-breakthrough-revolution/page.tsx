@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/Card';
+import Card from '../../components/ui/EnhancedCard';
 export const metadata = {
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
@@ -11,8 +11,8 @@ export default function AI2026BreakthroughRevolution() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2026 Breakthrough Revolution"
+        description="Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology."
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
       />
@@ -31,17 +31,17 @@ export default function AI2026BreakthroughRevolution() {
               to autonomous business systems, discover how AI is revolutionizing every aspect of human life.,
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
               >
-                Get Early Access,
+                Get Early Access
               </Link>
-              <Link,
-                href="/ai-2026",
+              <Link
+                href="/ai-2026"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
               >
-                Explore More,
+                Explore More
               </Link>
             </div>
           </div>
@@ -177,17 +177,17 @@ export default function AI2026BreakthroughRevolution() {
             to revolutionize their operations and achieve unprecedented success.,
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all transform hover:scale-105"
             >
-              Start Your AI Journey,
+              Start Your AI Journey
             </Link>
-            <Link,
-              href="/ai-2026",
+            <Link
+              href="/ai-2026"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all"
             >
-              Learn More,
+              Learn More
             </Link>
           </div>
         </div>
