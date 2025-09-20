@@ -71,4 +71,31 @@ export default function Blog() {
   }
 
   return (
+    <>
+      <Header />
+      <main className='min-h-screen bg-gray-900 text-white'>
+        <div className='container mx-auto px-4 py-8'>
+          <h1 className='text-4xl font-bold mb-8'>Blog</h1>
+          <p className='text-gray-400 mb-8'>
+            {filteredPosts.length} posts found
+          </p>
+          <div className='grid gap-6'>
+            {filteredPosts.map((post) => (
+              <div key={post.id} className='bg-gray-800 rounded-lg p-6'>
+                <h2 className='text-2xl font-bold mb-2'>{post.title}</h2>
+                <p className='text-gray-400 mb-4'>{post.excerpt}</p>
+                <div className='flex gap-2'>
+                  {post.tags.map((tag) => (
+                    <span key={tag} className='bg-blue-600 px-2 py-1 rounded text-sm'>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
+  );
 }
