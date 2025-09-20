@@ -5,6 +5,9 @@ const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
   trailingSlash: true,
+  
+  // Configure pages directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
   // Performance optimizations
   compress: true,
@@ -55,6 +58,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Force static export
+  distDir: 'out',
 };
 
 module.exports = nextConfig;
