@@ -1,51 +1,79 @@
 import React, { useState } from "react";
 interface FormData {
-  name: string,email: string,company: string,service: string,message: string,budget: string
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+  budget: string;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',email: '',company: '',service: '',message: '',budget: ''
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: '',
+    budget: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target,
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    })),
-  },
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000)),
+      await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        name: '',email: '',company: '',service: '',message: '',budget: ''
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: '',
+        budget: ''
       });
     } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  },
+  };
 
   const services = [
+<<<<<<< HEAD
+    'AI Services',
+    'Micro SaaS',
+    'IT Services',
+    'Quantum Computing',
+    'Blockchain',
+    'Space Technology'
+  ];
+=======
     'AI ServicesMicro SaaS';
     'IT ServicesQuantum Computing',
     'BlockchainSpace Technology'
   ],
+>>>>>>> origin/main
 
   const budgetRanges = [
-    'Under $5,000$5,000 - $25,000',
-    '$25,000 - $100,000$100,000 - $500,000',
+    'Under $5,000',
+    '$5,000 - $25,000',
+    '$25,000 - $100,000',
+    '$100,000 - $500,000',
     'Over $500,000'
-  ],
+  ];
 
   return (
     <div className="max-w-2xl mx-auto">

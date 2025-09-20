@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from "react";
 interface AccessibilitySettings {
-  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,largeText: false,reducedMotion: false,focusVisible: true,screenReader: false,keyboardNavigation: true
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: true,
+    screenReader: false,
+    keyboardNavigation: true
   });
   const [announcements, setAnnouncements] = useState<string[]>([]);
 

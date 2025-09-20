@@ -57,8 +57,8 @@ import { SEO } from "../components/SEO";
 import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030";
 import { COMPREHENSIVE_PRICING_GUIDE_2030 } from "../data/comprehensivePricingGuide2030";
 export default function Services() {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);

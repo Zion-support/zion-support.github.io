@@ -81,7 +81,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       section,
       tags
     });
-
   }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
@@ -145,7 +144,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
       ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
       ...(data.section && { "articleSection": data.section }),
-      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
+      ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join(', ') })
     };
 
     const script = document.createElement('script');
