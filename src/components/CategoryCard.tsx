@@ -1,40 +1,53 @@
+<<<<<<< HEAD
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-
-interface Category {
-  id: string;
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-  count: number;
-}
 
 interface CategoryCardProps {
-  category: Category;
-  className?: string;
+  category: {
+    id: string;
+    name: string;
+    description: string;
+    icon?: string;
+    count?: number;
+  };
+  onClick?: () => void;
 }
 
-export function CategoryCard({ category, className = '' }: CategoryCardProps) {
+export function CategoryCard({ category, onClick }: CategoryCardProps) {
+=======
+
+import React from "react";
+import Link from "next/link";
+
+interface CategoryCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  href: string;
+}
+
+export function CategoryCard({ title, description, icon, href }: CategoryCardProps) {
+>>>>>>> pr-22703
   return (
-    <Card className={`bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-200 ${className}`}>
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <div className="text-blue-400">
-            {category.icon}
-          </div>
-          <span className="text-sm text-gray-300">
-            {category.count} items
-          </span>
+    <Link
+      href={href}
+      className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200 hover:border-blue-300"
+    >
+      <div className="flex items-center mb-4">
+        <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors duration-200">
+          {icon}
         </div>
-        <CardTitle className="text-white text-lg">
-          {category.name}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-gray-300 text-sm">
-          {category.description}
-        </p>
-      </CardContent>
-    </Card>
+      </div>
+<<<<<<< HEAD
+      <p className="text-gray-600">{category.description}</p>
+    </div>
+=======
+      <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+        {title}
+      </h3>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        {description}
+      </p>
+    </Link>
+>>>>>>> pr-22703
   );
 }

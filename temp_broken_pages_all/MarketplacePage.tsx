@@ -1,4 +1,5 @@
-<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/MarketplacePage.tsx
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from "lucide-react";
 import { NextSeo } from "@/components/NextSeo";
 import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
@@ -11,6 +12,19 @@ import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { INITIAL_MARKETPLACE_PRODUCTS } from "@/data/initialMarketplaceProducts";
 import { useCurrency } from "@/hooks/useCurrency";
+import { ArrowUp,, Filter,, SortAsc,, Sparkles,, TrendingUp,, Star,, ShoppingCart,, AlertTriangle, RefreshCw,  } from 'lucide-react'
+import { NextSeo, ,  } from '@/components/NextSeo';
+import { useInfiniteScrollPagination, ,  } from '@/hooks/useInfiniteScroll';
+import { ProductListing, ,  } from '@/types/listings';
+import { SkeletonCard, ,  } from '@/components/ui/skeleton';
+import { Button, ,  } from '@/components/ui/button';
+import { Badge, ,  } from '@/components/ui/badge';
+import { Card,, CardContent,, CardHeader, ,  } from '@/components/ui/card';
+import Spinner from '@/components/ui/spinner';
+import { MARKETPLACE_LISTINGS, ,  } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS, ,  } from '@/data/initialMarketplaceProducts';
+import { useCurrency, ,  } from '@/hooks/useCurrency';
+>>>>>>>> pr-22690:temp-broken-files/MarketplacePage.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Market insights component
 }}
@@ -81,5 +95,26 @@ export default function MarketplacePage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MarketplacePage.tsx
+}
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function MarketplacePage() {
+  return (
+    <>
+      <SEO 
+        title="MarketplacePage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">MarketplacePage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

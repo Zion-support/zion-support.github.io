@@ -16,40 +16,20 @@ import { useAuth } from "@/hooks/useAuth";,
 import { UserProfile } from "@/types/auth";,
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-export default function TalentProfilePage() {return (
+
+export default function TalentProfilePage() {
+  return (
     <>
-      <SEO
-title = {profile.full_name}
-        description = {profile.bio |'Talent profile'}
-        ogImage = {profile.profile_picture_url}
+      <SEO 
+        title="TalentProfilePage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
-      <div className='min-h-screen bg-zion-blue pb-12'>
-        <TalentProfile
-profile={profile}
-          onRequestHire={handleRequestHire}
-          onMessageTalent={handleMessageTalent}
-        />
-        <BackToDirectoryButton />
-        {/* Sticky action buttons that appear when scrolling */}
-        <StickyAction>
-          <div className='p-2 flex gap-2'>
-            <Button
-size='sm'
-              className='bg-zion-purple text-white hover:bg-zion-purple-dark'
-              onClick={handleRequestHire}
-            >
-              <Handshake className='mr-2 h-4 w-4' />
-              Hire Now
-            </Button>
-            <Button
-size='sm'
-              variant='outline'
-              className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
-              onClick={handleMessageTalent}
-            >
-              <MessageSquare className='mr-2 h-4 w-4' />
-              Message
-            </Button>
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">TalentProfilePage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </StickyAction>
         {/* Request to Hire Modal */}

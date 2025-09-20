@@ -1,25 +1,31 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { cn } from "@/lib/utils";
 
 interface BadgeProps {
   children: React.ReactNode;
+  variant?: "default" | "secondary" | "destructive" | "outline";
   className?: string;
-  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
 }
 
-export function Badge({ children, className, variant = 'default' }: BadgeProps) {
-  const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
-  
+const Badge: React.FC<BadgeProps> = ({
+  children,
+  className = "",
+  variant = "default"
+}) => {
+  const baseClasses = "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors";
+
   const variantClasses = {
-    default: 'bg-blue-100 text-blue-800',
-    secondary: 'bg-gray-100 text-gray-800',
-    destructive: 'bg-red-100 text-red-800',
-    outline: 'border border-gray-200 text-gray-800'
+    default: "border-transparent bg-primary text-primary-foreground",
+    secondary: "border-transparent bg-secondary text-secondary-foreground",
+    destructive: "border-transparent bg-destructive text-destructive-foreground",
+    outline: "text-foreground"
   };
 
   return (
-    <span className={cn(baseClasses, variantClasses[variant], className)}>
+    <div className={cn(baseClasses, variantClasses[variant], className)}>
       {children}
-    </span>
+    </div>
   );
-}
+};
+
+export { Badge };

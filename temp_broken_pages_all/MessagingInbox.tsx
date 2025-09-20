@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
+=======
+>>>>>>> pr-22703
 import React { useEffect useState } from 'react';
+<<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
 import { useMessaging } from "@/context/MessagingContext";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
@@ -10,6 +14,8 @@ import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router"; // Changed from react-router-dom
 
+<<<<<<< HEAD
+=======
 import React { useEffect useState } from 'react';
 import { MessageSquare, Video } from "lucide-react";
 import { useMessaging } from "@/context/MessagingContext";
@@ -20,6 +26,27 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
+import { MessageSquare, Video,  } from 'lucide-react';
+import { useMessaging,  } from '@/context/MessagingContext';
+import { ProtectedRoute,  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView,  } from '@/components/messaging';
+import { useIsMobile,  } from '@/hooks/use-mobile';
+import { toast,  } from 'sonner';
+import { Button,  } from '@/components/ui/button';
+import { LoadingSpinner,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router'; // Changed from react-router-dom
+
+import React { useEffect useState } from 'react';
+import { MessageSquare, Video,  } from 'lucide-react'
+import { useMessaging, ,  } from '@/context/MessagingContext';
+import { ProtectedRoute, ,  } from '@/components/ProtectedRoute';
+import { ConversationsList,, ConversationDetailView, ,  } from '@/components/messaging';
+import { useIsMobile, ,  } from '@/hooks/use-mobile';
+import { toast, ,  } from 'sonner';
+import { Button, ,  } from '@/components/ui/button';
+import { LoadingSpinner, ,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router', // Changed from react-router-dom,
+>>>>>>>> pr-22690:temp-broken-files/MessagingInbox.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function MessagingInbox() {markAsRead;
     fetchConversations;
@@ -61,13 +88,28 @@ conversations = {conversations}
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+>>>>>>> pr-22703
+export default function MessagingInbox() {
+  return (
+    <>
+      <SEO 
+        title="MessagingInbox - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">MessagingInbox</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}
       </div>
-    </ProtectedRoute>
-);
+    </>
+  );
 }
 loadData () ;
 }, [fetchConversations]);
@@ -102,4 +144,7 @@ export default function MessagingInbox() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx
+=======
+>>>>>>> pr-22703

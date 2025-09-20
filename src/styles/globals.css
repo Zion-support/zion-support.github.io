@@ -2,7 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
 body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -14,4 +36,202 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+=======
+/* Zion Tech Group Custom Styles */
+:root {
+  --zion-blue-dark: #0f172a;
+  --zion-blue-light: #1e293b;
+  --zion-slate: #334155;
+  --zion-purple-dark: #581c87;
+  --zion-cyan: #06b6d4;
+  --zion-green: #10b981;
+  --zion-orange: #f59e0b;
+  --zion-red: #ef4444;
+
+  --background: 0 0% 7%;
+  --foreground: 142 71% 45%;
+
+  --card: 0 0% 7%;
+  --card-foreground: 142 71% 45%;
+
+  --popover: 0 0% 7%;
+  --popover-foreground: 142 71% 45%;
+
+  --primary: 216 84% 50%;
+  --primary-foreground: 142 71% 45%;
+
+  --secondary: 0 0% 68%;
+  --secondary-foreground: 0 0% 7%;
+
+  --muted: 0 0% 68%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 228 12% 92%;
+  --accent-foreground: 0 0% 7%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 142 71% 45%;
+
+  --border: 0 0% 68%;
+  --input: 0 0% 68%;
+  --ring: 216 84% 53%;
+
+  --radius: 0.5rem;
+
+  --sidebar-background: 228 12% 92%;
+  --sidebar-foreground: 0 0% 7%;
+  --sidebar-primary: 216 84% 53%;
+  --sidebar-primary-foreground: 142 71% 45%;
+  --sidebar-accent: 0 0% 68%;
+  --sidebar-accent-foreground: 0 0% 7%;
+  --sidebar-border: 0 0% 68%;
+  --sidebar-ring: 216 84% 53%;
+}
+
+.dark {
+    --background: 0 0% 7%;
+    --foreground: 142 71% 45%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 142 71% 45%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 142 71% 45%;
+
+    --primary: 216 84% 50%;
+    --primary-foreground: 142 71% 45%;
+
+    --secondary: 0 0% 68%;
+    --secondary-foreground: 0 0% 7%;
+
+    --muted: 0 0% 68%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 228 12% 92%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 142 71% 45%;
+
+    --border: 0 0% 68%;
+    --input: 0 0% 68%;
+    --ring: 216 84% 53%;
+    --sidebar-background: 228 12% 92%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 216 84% 53%;
+    --sidebar-primary-foreground: 142 71% 45%;
+    --sidebar-accent: 0 0% 68%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 0 0% 68%;
+    --sidebar-ring: 216 84% 53%;
+}
+
+.light {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 262 83% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 40% 96%;
+    --sidebar-foreground: 224 71% 4%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 224 71% 4%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 262 83% 58%;
+  }
+
+@layer base {
+  * {
+    border-color: #374151;
+  }
+
+  body {
+    @apply bg-gray-900 text-white font-sans;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0ea5e9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #5b21b6;
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7c3aed;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    background: rgba(6, 182, 212, 0.3);
+    color: #ffffff;
+  }
+
+  ::-moz-selection {
+    background: rgba(6, 182, 212, 0.3);
+    color: #ffffff;
+  }
+
+  /* Focus outline */
+  *:focus {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
+>>>>>>> pr-22703
+  }
 }

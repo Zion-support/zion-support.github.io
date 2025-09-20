@@ -9,22 +9,16 @@ export default function ZionHireAI() {
   const { isAuthenticated } = useAuth();
   return (
     <>
-            </p>
-            <Button
-size='lg'
-              className='bg-zion-purple hover:bg-zion-purple-light text-white'
-              asChild
-            >
-              <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
-            <Button
-size="lg"
-              className="bg-zion-purple hover: bg-zion-purple-light text-white"
-              asChild
-            >
-              <Link href="/enterprise/demo">
-                Schedule a Demo
-              </Link>
-            </Button>
+      <SEO 
+        title="ZionHireAI - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">ZionHireAI</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </section>
       </main>

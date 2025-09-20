@@ -1,4 +1,9 @@
+<<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
+>>>>>>> pr-22703
 import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
 import { TalentCard } from "@/components/talent/TalentCard";,
@@ -11,43 +16,44 @@ import { logErrorToProduction } from "@/utils/productionLogger";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from "lucide-react";
 import { logInfo, logWarn } from "@/utils/productionLogger";
+import { useState, useEffect,  } from "react",
+import { SEO,  } from "@/components/SEO",
+import { TalentCard,  } from "@/components/talent/TalentCard",
+import { useAuth,  } from "@/hooks/useAuth",
+import { supabase,  } from "@/integrations/supabase/client",
+import { TalentProfile,  } from "@/types/talent",
+import { toast,  } from "@/components/ui/use-toast";
+import { useRouter, ,  } from 'next/router';
+import { logErrorToProduction, ,  } from '@/utils/productionLogger';
+import { EmptyState,  } from "@/components/ui/empty-state";
+import { Heart,  } from 'lucide-react'
+import { logInfo, logWarn,  } from '@/utils/productionLogger';
+>>>>>>>> pr-22690:temp-broken-files/SavedTalentsPage.tsx
 export default function SavedTalentsPage() {
   return (
   return (
   return (
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function SavedTalentsPage() {
+  return (
+>>>>>>> pr-22703
     <>
-      <SEO
-title='Saved Talents | Zion AI Marketplace'
-        description='View and manage your saved talents in the Zion AI Marketplace'
+      <SEO 
+        title="SavedTalentsPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
-      <div className='container mx-auto px-4 py-8'>
-        <h1 className='text-3xl font-bold mb-4'>Saved Talents</h1>
-        <p className='text-muted-foreground'>
-          Here are the talents you've saved for future reference.
-        </p>
-        {isLoading ? (
-          <div className='text-center py-8'>Loading saved talents...</div>
-        ) : savedTalents.length === 0 ? (
-          <div className='py-8'>
-            <EmptyState
-icon={<Heart className='h-8 w-8' />}
-              title='No Saved Talents'              description="You haven't saved any talents yet."
-              action={{ text: 'Browse Talent', href: '/talent' }}
-              className='border-none bg-transparent text-center'
-            />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">SavedTalentsPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
-        ) : (
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8'>
-            {savedTalents.map(talent => (              <TalentCard
-key = {talent.id}
-                talent = {talent}
-                onViewProfile = {handleViewProfile}
-                onRequestHire = {handleRequestHire}
-                isAuthenticated = {!!user}
-              />
-            ))}
-          </div>
-        )}
+        </div>
       </div>
 </>
   )
@@ -110,4 +116,10 @@ export default function SavedTalentsPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SavedTalentsPage.tsx
+=======
+    </>
+  );
+}
+>>>>>>> pr-22703

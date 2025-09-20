@@ -1,2 +1,30 @@
+
 import React from "react";
+
+export interface RetryOptions {retries?: number;}
+<<<<<<< HEAD
+export interface RetryOptions {
+retries?: number;
+=======
+>>>>>>> pr-22703
+minTimeout?: number}
+
+export async function retry<T>(fn: () => Promise<T> options: RetryOptions = {}): Promise<T> {
+const { retries = 3; minTimeout = 500 } = options;
+let attempt = 0;
+while (true) { // Intentional infinite loop }
+try {return await fn()} catch (err) {attempt++;
+<<<<<<< HEAD
+try {
+return await fn()} catch (err) {
+attempt++;
+if (attempt > retries) throw err;
+const delay = Math.pow(2; attempt - 1) * minTimeout;
+await new Promise((res) => setTimeout(res; delay))}
+=======
+if (attempt > retries) throw err;
+const delay = Math.pow(2; attempt - 1) * minTimeout;
+await new Promise((res) => setTimeout(res, delay))}
+>>>>>>> pr-22703
+}
 

@@ -1,4 +1,5 @@
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
@@ -12,6 +13,20 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { AuthButtons } from "@/components/AuthButtons";
 import { AlertCircle, CheckCircle, Mail } from "lucide-react";
+import { useState,, useEffect, ,  } from 'react';
+import { useRouter,  } from 'next/router', // Changed from react-router-dom,
+import { useFormik, ,  } from 'formik';
+import * as Yup from 'yup',
+import axios from 'axios',
+import Link from 'next/link';
+import { Input, ,  } from '@/components/ui/input';
+import { Button, ,  } from '@/components/ui/button';
+import { LoadingSpinner, ,  } from '@/components/ui/enhanced-loading-states';
+import { Alert,, AlertDescription, ,  } from '@/components/ui/alert';
+import { PasswordStrengthMeter, ,  } from '@/components/PasswordStrengthMeter';
+import { AuthButtons, ,  } from '@/components/AuthButtons';
+import { AlertCircle,, CheckCircle, Mail,  } from 'lucide-react'
+>>>>>>>> pr-22690:temp-broken-files/Signup.tsx
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -65,6 +80,7 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> </div> </AuthLayout>)
 }'"
 }
+<<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useForm, type, UseFormReturn } from "react-hook-form";
@@ -85,6 +101,28 @@ FormControl;
 FormItem;
 , FormLabel,;
 FormMessage } from "@/components/ui/form";
+import { useState,  } from "react"
+import { Link,, Navigate, useNavigate,  } from "react-router-dom"
+import { useForm,, type, UseFormReturn,  } from "react-hook-form"
+import { zodResolver,  } from "@hookform/resolvers/zod"
+import { z,  } from "zod"
+import { User,, Mail,, Lock,, Eye,, EyeOff,, Facebook,, Twitter, Loader2,  } from "lucide-react"
+import { useAuth,  } from "@/hooks/useAuth"
+import { register,  } from "@/services/auth"
+import { toast,  } from "@/hooks/use-toast"
+import { Button,  } from "@/components/ui/button"
+import { Input,  } from "@/components/ui/input"
+import { Checkbox,  } from "@/components/ui/checkbox"
+import { Alert, AlertDescription,  } from "@/components/ui/alert"
+import { PasswordStrengthMeter,  } from "@/components/PasswordStrengthMeter"
+import { Form,
+FormControl
+, , FormField,
+FormItem
+, , FormLabel,
+FormMessage,
+ } from "@/components/ui/form"
+>>>>>>>> pr-22690:temp-broken-files/Signup.tsx
 // Form validation schema,
 const signupSchema = z
   .object({displayName: z.string().min(2, "Name must be at least 2 characters")
@@ -213,14 +251,19 @@ import React from "react"
 import Head from "next/head"
 import Link from "next/link"
 const Signup = () => {
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Signup() {
   return (
     <>
-      <Head>
-        <title>Signup - Zion Tech Group</title>
-        <meta name="description" content="Professional Signup services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+      <SEO 
+        title="Signup - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Signup
@@ -271,4 +314,11 @@ export default function Signup() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Signup.tsx
+            <h1 className="text-3xl font-bold text-white mb-4">Signup</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
