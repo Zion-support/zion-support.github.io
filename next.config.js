@@ -9,6 +9,7 @@ const nextConfig = {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
 	},
+	// metadataBase is now handled in layout.tsx
 	eslint: {
 		ignoreDuringBuilds: true,
 		dirs: []

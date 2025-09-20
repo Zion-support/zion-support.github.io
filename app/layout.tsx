@@ -12,7 +12,7 @@ function Header() {
         >
           Zion Tech Group
         </Link>
-        <div>
+        <div className="hidden md:flex space-x-6">
           <Link
             href="/content-showcase"
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus font-semibold"
@@ -20,16 +20,22 @@ function Header() {
             Content Library
           </Link>
           <Link
-            href="/services"
+            href="/ai-2025"
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
-            Services
+            AI Solutions
           </Link>
           <Link
-            href="/case-studies"
+            href="/automation"
             className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
           >
-            Case Studies
+            Automation
+          </Link>
+          <Link
+            href="/success-stories"
+            className="text-gray-700 hover:text-blue-600 transition-colors focus-visible:focus"
+          >
+            Success Stories
           </Link>
           <Link
             href="/contact"
@@ -49,45 +55,46 @@ function Header() {
           </svg>
         </button>
       </nav>
-    </header>)
+    </header>
+  )
 }
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
-      <div>
-        <div>
+    <footer className="border-t border-gray-200 mt-10 py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
-            <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Services</h3>
+            <div className="space-y-2">
               <Link
-                href="/services"
+                href="/ai-2025"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                All Services
+                AI Solutions
               </Link>
               <Link
-                href="/services/micro-saas"
+                href="/automation"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                Micro SaaS
+                Automation
               </Link>
               <Link
-                href="/services/ai-services"
+                href="/autonomous-systems-2026"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                AI Services
+                Autonomous Systems
               </Link>
               <Link
-                href="/services/it-services"
+                href="/tools"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
-                IT Services
+                AI Tools
               </Link>
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
-            <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Company</h3>
+            <div className="space-y-2">
               <Link
                 href="/"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
@@ -95,10 +102,39 @@ function Footer() {
                 Home
               </Link>
               <Link
+                href="/content-showcase"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Content Library
+              </Link>
+              <Link
+                href="/success-stories"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Success Stories
+              </Link>
+              <Link
                 href="/contact"
                 className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
               >
                 Contact
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Resources</h3>
+            <div className="space-y-2">
+              <Link
+                href="/tools/ai-roi-calculator"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                ROI Calculator
+              </Link>
+              <Link
+                href="/tools/ai-readiness-assessment"
+                className="block text-gray-600 hover:text-blue-600 transition-colors focus-visible:focus"
+              >
+                Readiness Assessment
               </Link>
               <a
                 href="https://ziontechgroup.com"
@@ -111,8 +147,8 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3>
-            <div>
+            <h3 className="font-semibold text-gray-900 mb-4">Contact Info</h3>
+            <div className="space-y-2 text-gray-600">
               <div>Mobile: +1 302 464 0950</div>
               <div>
                 Email: <a
@@ -129,7 +165,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
         </div>
       </div>
@@ -144,9 +180,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
+      <body className="min-h-screen bg-white">
         <Header />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
