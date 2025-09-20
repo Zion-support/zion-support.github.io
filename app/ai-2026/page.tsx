@@ -1,16 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import SEO from '../../components/SEO';
+import SEO from '../../components/SEO'
 export const metadata = {
-<<<<<<< HEAD
-  title: 'AI 2026 - Future AI Technologies | Zion Tech Group'
-  description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.'
-  keywords: ['AI 2026', 'future AI', 'quantum AI', 'revolutionary technology', 'artificial general intelligence']
-=======
   title: 'AI 2026 - Future AI Technologies | Zion Tech Group',
   description: 'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
-  keywords: ['AI 2026future AIquantum AIrevolutionary technology', 'artificial general intelligence']
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
+  keywords: ['AI 2026future AIquantum AIrevolutionary technology', 'artificial general intelligence'],
 }
 export default function AI2026Page() {
   return (

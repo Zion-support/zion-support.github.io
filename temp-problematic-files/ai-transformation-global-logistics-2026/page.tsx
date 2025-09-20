@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-<<<<<<< HEAD:app/case-studies/ai-transformation-global-logistics-2026/page.tsx
   title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain'
   description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.'
   keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains']
@@ -11,15 +10,6 @@ export const metadata: Metadata = {
     description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.'
     type: 'article'
     publishedTime: '2025-01-17T00:00:00.000Z'
-=======
-  title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
-  description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.',
-  keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains'],
-  openGraph: {
-    title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
-    description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.',
-    type: 'article',
-    publishedTime: '2025-01-17T00:00:00.000Z',
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/ai-transformation-global-logistics-2026/page.tsx
     authors: ['Zion Tech Group']}
 }

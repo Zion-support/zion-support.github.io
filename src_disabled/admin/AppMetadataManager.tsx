@@ -1,15 +1,10 @@
 
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
+import React from "react"
+import { SEO } from "@/components/SEO"
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager"
 
 const AppMetadataManager: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-      <SEO 
-=======
     <>
       <SEO
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
@@ -28,7 +23,7 @@ const AppMetadataManager: React.FC = () => {
         <MetadataManager />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AppMetadataManager;
+export default AppMetadataManager

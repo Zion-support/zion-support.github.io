@@ -1,16 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
-import SEO from '../../components/SEO';
+import SEO from '../../components/SEO'
 export const metadata = {
-<<<<<<< HEAD
-  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group'
-  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.'
-  keywords: ['analytics', 'data analytics', 'business intelligence', 'predictive analytics', 'real-time analytics']
-=======
   title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group',
   description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
-  keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics']
->>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
+  keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics'],
 }
 export default function AnalyticsPage() {
   return (
