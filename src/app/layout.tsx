@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
+<<<<<<< HEAD
   children: React.ReactNode
 }) {
   return (
@@ -46,3 +47,23 @@ export default function RootLayout({
     </html>
   )
 }
+=======
+return (
+<html lang="en" suppressHydrationWarning>;
+<body className={inter.className}>;
+<ThemeProvider defaultTheme="system" storageKey="zion-theme">;
+<div className="min-h-screen bg-background">;
+<Header />;
+<main className="flex-1">;
+{children}
+</main>;
+<Footer />;
+</div>;
+<Toaster />;
+<SonnerToaster />;
+</ThemeProvider>;
+</body>;
+</html>;
+)
+}<//html><///html>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-1975
