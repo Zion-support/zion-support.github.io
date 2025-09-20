@@ -5,10 +5,10 @@ module.exports = {
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": [
+    "@typescript-eslint/no-unused-vars": [
       "warn",
       { argsIgnorePattern: "^_" }
     ],
-    "no-explicit-any": "warn"
+    "@typescript-eslint/no-explicit-any": "warn"
   }
 };
