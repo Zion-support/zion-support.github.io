@@ -3,9 +3,16 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ziontechgroup.com'),
   title: 'Blog - AI, Quantum Computing & Technology Insights',
   description: 'Stay updated with the latest insights, trends, and innovations in AI, quantum computing, and technology from Zion Tech Group experts.',
-  keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news']
+  keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news'],
+  openGraph: {
+    title: 'Blog - AI, Quantum Computing & Technology Insights',
+    description: 'Latest insights and innovations in AI and technology.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/blog'
+  }
 }
 
 export default function BlogPage() {

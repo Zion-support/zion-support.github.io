@@ -1,7 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zion.app/sitemap.xml
+<<<<<<< HEAD
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -11,7 +13,22 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /services/
-Allow: /ai-2025
-Allow: /ai-2026-breakthrough-revolution
-Allow: /autonomous-systems-2026
+Allow: /services
+Allow: /contact
+Allow: /products
+Allow: /about
+Allow: /careers
+Allow: /blog
+
+# Crawl delay (optional)
+Crawl-delay: 1
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Revolutionary Technology Content 2026
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_headers
+Disallow: /*.backup
+Disallow: /*.log
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

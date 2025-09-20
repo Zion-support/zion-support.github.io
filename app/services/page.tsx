@@ -3,9 +3,16 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ziontechgroup.com'),
   title: 'Our Services - AI, Quantum Computing & Automation Solutions',
   description: 'Comprehensive technology services including AI implementation, quantum computing solutions, intelligent automation, and digital transformation consulting.',
-  keywords: ['AI services', 'quantum computing', 'automation', 'digital transformation', 'technology consulting', 'AI implementation']
+  keywords: ['AI services', 'quantum computing', 'automation', 'digital transformation', 'technology consulting', 'AI implementation'],
+  openGraph: {
+    title: 'Our Services - AI, Quantum Computing & Automation Solutions',
+    description: 'Comprehensive technology services for enterprise transformation.',
+    type: 'website',
+    url: 'https://ziontechgroup.com/services'
+  }
 }
 
 export default function ServicesPage() {
@@ -53,6 +60,8 @@ export default function ServicesPage() {
       features: ['Investment Analysis', 'ROI Projections', 'Cost Optimization', 'Value Assessment']
     }
   ]
+
+  const categories = ['All', 'AI', 'Quantum Computing', 'Automation', 'Ethics', 'Digital Transformation', 'Machine Learning']
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
