@@ -1,153 +1,119 @@
 #!/bin/bash
 
-# Aggressive Merge All Branches Script
+# Aggressive Merge All - Process all remaining branches with aggressive conflict resolution
 set -e
 
-echo "🚀 Starting Aggressive Merge All Branches Process..."
-echo "⏰ Started at: $(date)"
+echo "🚀 Starting Aggressive Merge All..."
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-BLUE='\033[0;34m'
-NC='\033[0m' # No Color
-
-print_status() {
-    echo -e "${BLUE}[INFO]${NC} $1"
+# Function to log with timestamp
+log() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
 }
 
-print_success() {
-    echo -e "${GREEN}[SUCCESS]${NC} $1"
-}
-
-print_warning() {
-    echo -e "${YELLOW}[WARNING]${NC} $1"
-}
-
-print_error() {
-    echo -e "${RED}[ERROR]${NC} $1"
-}
-
-# Ensure we're on main and it's up to date
-print_status "Ensuring main branch is up to date..."
+# Ensure we're on main and up to date
 git checkout main
 git pull origin main
 
-# Get all available branches (excluding main and HEAD)
-ALL_BRANCHES=$(git branch -r | grep -v 'origin/main' | grep -v 'origin/HEAD' | sed 's/origin\///' | tr -d ' ' | head -100)
+# Get ALL cursor branches
+log "🔍 Getting all cursor branches..."
+branches=$(git branch -r | grep "cursor/" | sed 's/origin\///')
 
-print_status "Found $(echo "$ALL_BRANCHES" | wc -l) branches to process"
+total_branches=$(echo "$branches" | wc -l)
+log "📊 Found $total_branches cursor branches to process"
 
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-TOTAL_PROCESSED=0
+success_count=0
+failed_count=0
+conflict_count=0
+processed_count=0
+skipped_count=0
 
-# Function to merge a branch with aggressive conflict resolution
-merge_branch_aggressive() {
-    local branch="$1"
+for branch in $branches; do
+    processed_count=$((processed_count + 1))
+    log "🔄 Processing $processed_count/$total_branches: $branch"
     
-    print_status "Processing branch: $branch"
-    
-    # Fetch the branch
-    git fetch origin "$branch" 2>/dev/null || {
-        print_warning "Failed to fetch branch $branch, skipping..."
-        return 1
-    }
-    
-    # Check if branch is already merged
-    if git branch --merged main | grep -q "$branch"; then
-        print_warning "Branch $branch is already merged, skipping..."
-        return 0
+    # Skip if branch is very old or likely to cause issues
+    if [[ "$branch" == *"old"* ]] || [[ "$branch" == *"backup"* ]] || [[ "$branch" == *"temp"* ]]; then
+        log "⏭️ Skipping potentially problematic branch: $branch"
+        skipped_count=$((skipped_count + 1))
+        continue
     fi
     
-    # Try to merge with aggressive strategy
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
-        print_success "Successfully merged $branch"
-        git commit -m "Merge branch $branch - $(date)" 2>/dev/null || true
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-        return 0
+    # Try to merge with aggressive conflict resolution
+    if git merge "origin/$branch" --no-edit 2>/dev/null; then
+        log "✅ Merged $branch"
+        success_count=$((success_count + 1))
+    elif git merge "origin/$branch" --no-edit 2>&1 | grep -q "Already up to date"; then
+        log "ℹ️ $branch already up to date"
+        success_count=$((success_count + 1))
     else
-        print_warning "Merge conflicts detected in $branch, attempting aggressive resolution..."
+        log "⚠️ Conflicts in $branch, resolving aggressively..."
+        conflict_count=$((conflict_count + 1))
         
-        # Get conflicted files
-        local conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || true)
+        # Ultra aggressive conflict resolution
+        # 1. Get conflicted files
+        conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
         
         if [ -n "$conflicted_files" ]; then
-            print_status "Resolving conflicts in: $conflicted_files"
+            log "🔧 Resolving conflicts in: $conflicted_files"
             
-            # Aggressive conflict resolution - prefer incoming changes for most files
+            # For each conflicted file, use aggressive resolution
             for file in $conflicted_files; do
-                if [[ "$file" == "package.json" ]] || [[ "$file" == "package-lock.json" ]] || [[ "$file" == "yarn.lock" ]]; then
-                    # Keep main version for package files
-                    git checkout --ours "$file" 2>/dev/null || true
-                elif [[ "$file" == "netlify.toml" ]] || [[ "$file" == "next.config.js" ]] || [[ "$file" == "tsconfig.json" ]]; then
-                    # Keep main version for config files
-                    git checkout --ours "$file" 2>/dev/null || true
-                else
-                    # For all other files, prefer incoming changes
-                    git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+                if [ -f "$file" ]; then
+                    # For most files, prefer incoming changes (theirs)
+                    git checkout --theirs "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
                 fi
             done
             
-            # Add all resolved files
-            git add . 2>/dev/null || true
-            
-            # Commit the merge
-            if git commit -m "Aggressive merge of $branch - $(date)" 2>/dev/null; then
-                print_success "Successfully resolved conflicts and merged $branch"
-                SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-                return 0
+            # Try to commit the resolved conflicts
+            if git commit --no-edit 2>/dev/null; then
+                log "✅ Resolved conflicts and merged $branch"
+                success_count=$((success_count + 1))
             else
-                print_error "Failed to commit resolved conflicts for $branch"
-                git merge --abort 2>/dev/null || true
-                FAILED_MERGES=$((FAILED_MERGES + 1))
-                return 1
+                # If commit fails, try to add all files and commit
+                git add . 2>/dev/null || true
+                if git commit --no-edit 2>/dev/null; then
+                    log "✅ Resolved conflicts and merged $branch (with all files)"
+                    success_count=$((success_count + 1))
+                else
+                    log "❌ Failed to resolve conflicts in $branch"
+                    git merge --abort 2>/dev/null || true
+                    failed_count=$((failed_count + 1))
+                fi
             fi
         else
-            print_error "No conflicted files found, but merge failed. Aborting..."
+            # No conflicts but merge failed, try to abort and continue
             git merge --abort 2>/dev/null || true
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
+            failed_count=$((failed_count + 1))
         fi
     fi
-}
-
-# Process each branch
-for branch in $ALL_BRANCHES; do
-    TOTAL_PROCESSED=$((TOTAL_PROCESSED + 1))
-    print_status "[$TOTAL_PROCESSED] Processing branch: $branch"
     
-    if merge_branch_aggressive "$branch"; then
-        print_success "Branch $branch processed successfully"
-    else
-        print_error "Failed to process branch $branch"
+    # Push every 25 merges for efficiency
+    if [ $((success_count % 25)) -eq 0 ] && [ $success_count -gt 0 ]; then
+        log "🔄 Pushing changes after $success_count successful merges..."
+        git push origin main 2>/dev/null || log "⚠️ Push failed, continuing..."
     fi
     
-    # Push changes every 20 merges
-    if [ $((SUCCESSFUL_MERGES % 20)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-        print_status "Pushing progress to remote..."
-        git push origin main 2>/dev/null || print_warning "Could not push main"
+    # Show progress every 100 branches
+    if [ $((processed_count % 100)) -eq 0 ]; then
+        log "📊 Progress: $processed_count processed, $success_count merged, $conflict_count conflicts, $failed_count failed, $skipped_count skipped"
     fi
     
-    # Show progress every 10 branches
-    if [ $((TOTAL_PROCESSED % 10)) -eq 0 ]; then
-        print_status "Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed"
+    # Safety check - if too many failures, stop
+    if [ $failed_count -gt 100 ]; then
+        log "⚠️ Too many failures ($failed_count), stopping for safety"
+        break
     fi
 done
 
 # Final push
-print_status "Pushing final changes to remote..."
-git push origin main 2>/dev/null || print_warning "Could not push main"
+log "🔄 Final push..."
+git push origin main
 
-# Summary
-echo ""
-print_success "Aggressive merge process completed!"
-echo "📊 Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   📈 Total processed: $TOTAL_PROCESSED"
-echo "⏰ Completed at: $(date)"
-
-print_success "🎉 Aggressive merge process completed!"
+log "📊 Aggressive Merge All Summary:"
+log "✅ Successfully merged: $success_count branches"
+log "⚠️ Conflicts resolved: $conflict_count branches"
+log "❌ Failed: $failed_count branches"
+log "⏭️ Skipped: $skipped_count branches"
+log "📋 Total processed: $processed_count branches"
+log "🎉 Aggressive merge all completed!"
