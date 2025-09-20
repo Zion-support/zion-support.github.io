@@ -190,8 +190,7 @@ fixed = fixed.replace(/\{\s*,\s*\}/g, "{}");
 totalFilesFixed: this.fixes.length,
 totalErrors: this.errors.length,
 fixes: this.fixes,
-errors: this.errors,
-}
+errors: this.errors}
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
   }

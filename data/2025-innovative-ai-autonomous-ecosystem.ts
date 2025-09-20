@@ -318,4 +318,4 @@ export const innovative2025AIAutonomousEcosystem = [
     demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
     documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
   }
-];
+],

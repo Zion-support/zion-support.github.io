@@ -10,22 +10,22 @@ const dataDir = path.resolve(process.cwd(), 'data/fraud'),
 const eventsPath = path.join(dataDir, 'events.jsonl'),
 const actionsPath = path.join(dataDir, 'actions.jsonl'),
 const privacyPath = path.join(dataDir, 'privacy.json'),
-function ensureFiles() {,
+function ensureFiles() : any {,
   fs.ensureDirSync(dataDir),
   if (!fs.existsSync(eventsPath)) fs.writeFileSync(eventsPath, ''),
   if (!fs.existsSync(actionsPath)) fs.writeFileSync(actionsPath, ''),
-  if (!fs.existsSync(privacyPath)) fs.writeFileSync(privacyPath, JSON.stringify({})),
-}
+  if (!fs.existsSync(privacyPath)) fs.writeFileSync(privacyPath, JSON.stringify({}));
+};
 ,
-function isSupabaseConfigured() {,
-  return !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE),
-}
+function isSupabaseConfigured() : any {,
+  return !!(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE);
+};
 ,
-function getSupabaseAdmin() {,
+function getSupabaseAdmin() : any {,
   const url = process.env.SUPABASE_URL!,
   const key = process.env.SUPABASE_SERVICE_ROLE!,
-  return createClient(url, key, { auth: { persistSession: false } }),
-}
+  return createClient(url, key, { auth: { persistSession: false } });
+};
 ,
 export class FraudStore {,
   async saveEvent(record: Omit<StoredFraudRecord, 'id'> & { id?: string }): Promise<StoredFraudRecord> {,
@@ -54,8 +54,8 @@ export class FraudStore {,
     const idx = events.findIndex((e) => e.id === fraudId),
     if (idx >= 0) {,
       events[idx].status = status,
-      await this._writeAllEvents(events),
-    }
+      await this._writeAllEvents(events);
+};
   }
 ,
   async recordAction(action: Omit<AdminActionRecord, 'id' | 'createdAt'> & { id?: string, createdAt?: string }): Promise<AdminActionRecord> {,
@@ -88,15 +88,15 @@ export class FraudStore {,
 ,
     ensureFiles(),
     const events = await this._readAllEvents(),
-    const filtered = events.filter((e) => {,
+    const filtered = events.filter((e) : any => {,
       if (filters.source && e.source !== filters.source) return false,
       if (filters.userId && e.userId !== filters.userId) return false,
       if (filters.status && e.status !== filters.status) return false,
       if (filters.label && e.gpt?.label !== filters.label) return false,
       return true,
     }),
-    return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(offset, offset + limit),
-  }
+    return filtered.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1)).slice(offset, offset + limit);
+};
 ,
   async countEventsByIp(ip: stringsource: MonitoredSourcewithinMinutes: number): Promise<number> {,
     const since = Date.now() - withinMinutes * 60_000,
@@ -108,8 +108,8 @@ export class FraudStore {,
         .eq('ipAddress', ip),
         .eq('source', source),
         .gte('createdAt', new Date(since).toISOString()),
-      return (data?.length ?? 0),
-    }
+      return (data?.length ?? 0);
+};
 ,
     ensureFiles(),
     const events = await this._readAllEvents(),
@@ -140,8 +140,8 @@ export class FraudStore {,
     const json = JSON.parse(fs.readFileSync(privacyPath, 'utf8') || '{}'),
     return (,
       json[userId] || { userId, monitoringContentAnalysisOptOut: falseupdatedAt: now }
-    ),
-  }
+    );
+};
 ,
   async setPrivacySettings(userId: string, monitoringContentAnalysisOptOut: boolean): Promise<PrivacySettings> {,
     const updated: PrivacySettings = { userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() },
@@ -175,11 +175,11 @@ export class FraudStore {,
     } else {,
       ensureFiles(),
       events = await this._readAllEvents(),
-      events = events.filter((e) => {,
+      events = events.filter((e) : any => {,
         const ts = Date.parse(e.createdAt),
         return ts >= start.getTime() && ts < end.getTime(),
-      }),
-    }
+      });
+};
 ,
     const totals = {,
       all: events.length,
@@ -213,7 +213,7 @@ export class FraudStore {,
     return text,
       .split('\n'),
       .filter(Boolean),
-      .map((line) => {,
+      .map((line) : any => {,
         try {,
           return JSON.parse(line) as StoredFraudRecord,
         } catch {,
@@ -226,8 +226,8 @@ export class FraudStore {,
   private async _writeAllEvents(events: StoredFraudRecord[]): Promise<void> {,
     ensureFiles(),
     const content = events.map((e) => JSON.stringify(e)).join('\n') + '\n',
-    await fs.writeFile(eventsPath, content, 'utf8'),
-  }
+    await fs.writeFile(eventsPath, content, 'utf8');
+};
 ,
   private async _readAllActions(): Promise<AdminActionRecord[]> {,
     ensureFiles(),
@@ -235,7 +235,7 @@ export class FraudStore {,
     return text,
       .split('\n'),
       .filter(Boolean),
-      .map((line) => {,
+      .map((line) : any => {,
         try {,
           return JSON.parse(line) as AdminActionRecord,
         } catch {,
@@ -247,8 +247,8 @@ export class FraudStore {,
 }
 ,
 export function getFraudStore(): FraudStore {,
-  return new FraudStore(),
-}
+  return new FraudStore();
+};
 ,
 export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>): FraudEvent {,
   const id = uuidv4(),
@@ -259,5 +259,5 @@ export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent, 'source
     content: partial.content ?? null,
     metadata: partial.metadata ?? null,
     ipAddress: partial.ipAddress ?? null,
-    createdAt: partial.createdAt ?? new Date().toISOString()},
-}
+    createdAt: partial.createdAt ?? new Date().toISOString()};
+  }

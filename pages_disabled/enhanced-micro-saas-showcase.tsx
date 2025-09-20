@@ -14,7 +14,7 @@ import UltraFuturisticNavigation2033 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 import { realMicroSaasServices2025, microSaasCategories } from '../data/2025-real-micro-saas-expansion';
 
-export default function EnhancedMicroSaasShowcase() {
+export default function EnhancedMicroSaasShowcase() : any {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
@@ -24,7 +24,7 @@ export default function EnhancedMicroSaasShowcase() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const filteredServices = realMicroSaasServices2025
     .filter(service => 
@@ -34,7 +34,7 @@ export default function EnhancedMicroSaasShowcase() {
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase()))
     )
-    .sort((a, b) => {
+    .sort((a, b) : any => {
       if (sortBy === 'price') {
         return a.pricing.starter.price - b.pricing.starter.price;
       } else if (sortBy === 'category') {
@@ -51,7 +51,7 @@ export default function EnhancedMicroSaasShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -62,7 +62,7 @@ export default function EnhancedMicroSaasShowcase() {
         duration: 0.6
       }
     }
-  };
+  },
 
   return (
     <>
@@ -339,7 +339,7 @@ export default function EnhancedMicroSaasShowcase() {
                   {/* Market Info */}
                   <div className="mb-6 grid grid-cols-2 gap-4 text-sm">
                     <div>
-                      <span className="text-gray-400">Market Size:</span>
+                      <span className="text-gray-400">Market Size: </span>
                       <div className="text-cyan-400 font-medium">{service.marketSize}</div>
                     </div>
                     <div>
@@ -387,7 +387,7 @@ export default function EnhancedMicroSaasShowcase() {
                 <p className="text-gray-300 mb-6">Try adjusting your search criteria or category filter</p>
                 <button
                   onClick={() => {
-                    setSearchQuery('');
+                    setSearchQuery(''),
                     setSelectedCategory('all');
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
@@ -458,4 +458,4 @@ export default function EnhancedMicroSaasShowcase() {
               </UltraFuturisticBackground2035>
     </>
   );
-}
+};

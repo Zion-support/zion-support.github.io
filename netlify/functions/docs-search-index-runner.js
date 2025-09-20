@@ -91,6 +91,6 @@ exports.handler = async function(event, context) {
         function: 'docs-search-index-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

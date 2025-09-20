@@ -1,5 +1,5 @@
 import React from "react",
-const function ServicesShowcase2026V3() { = () => {,
+const function ServicesShowcase2026V3() : any { = () => {,
   return (,
                 <a,
                   href="#services",
@@ -72,12 +72,12 @@ const function ServicesShowcase2026V3() { = () => {,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
-          <h1 className="text-5xl font-bold mb-6">function ServicesShowcase2026V3() {</h1>,
+          <h1 className="text-5xl font-bold mb-6">function ServicesShowcase2026V3() : any {</h1>,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
     </div>,
   ),
 },
-export default function ServicesShowcase2026V3() {,
-}}}
+export default function ServicesShowcase2026V3() : any {;
+  }}}

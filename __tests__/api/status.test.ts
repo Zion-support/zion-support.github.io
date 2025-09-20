@@ -11,4 +11,4 @@ describe('/api/status API Endpoint', () => {'  it('returns service status list',
     await handler(req, res),
     expect(res._getStatusCode()).toBe(405),
   }),
-}),
+}),'

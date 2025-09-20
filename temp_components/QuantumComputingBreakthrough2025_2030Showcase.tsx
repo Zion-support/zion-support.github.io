@@ -2,7 +2,7 @@ import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 
-export default function QuantumComputingBreakthrough2025_2030Showcase() {
+export default function QuantumComputingBreakthrough2025_2030Showcase() : any {
   const quantumBreakthroughs = [
     {
       year: "2025",
@@ -96,4 +96,5 @@ const QuantumComputingBreakthrough2025_2030Showcase: React.FC = () => {
   )
 },
 
-export default QuantumComputingBreakthrough2025_2030Showcase,
+export default QuantumComputingBreakthrough2025_2030Showcase;
+  }

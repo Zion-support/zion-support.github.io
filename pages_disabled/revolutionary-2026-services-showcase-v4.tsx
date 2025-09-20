@@ -13,7 +13,7 @@ import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 
-export default function Revolutionary2026ServicesShowcaseV4() {
+export default function Revolutionary2026ServicesShowcaseV4() : any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -25,7 +25,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   // Combine all new services
   const allServices = [
@@ -84,7 +84,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -92,7 +92,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'medium', name: '$500 - $2,000', range: '$500 - $2,000' },
     { id: 'high', name: '$2,000+', range: '$2,000+' },
     { id: 'custom', name: 'Custom Pricing', range: 'Custom' }
-  ];
+  ],
 
   const sortOptions = [
     { id: 'name', name: 'Name', icon: '🔤' },
@@ -100,7 +100,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     { id: 'popularity', name: 'Popularity', icon: '⭐' },
     { id: 'rating', name: 'Rating', icon: '🏆' },
     { id: 'newest', name: 'Newest', icon: '🆕' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -120,9 +120,8 @@ export default function Revolutionary2026ServicesShowcaseV4() {
             return service.category?.includes('Micro SaaS') || service.category?.includes('AI Content') || service.category?.includes('AI Customer');
           case 'emerging':
             return service.category?.includes('Holographic') || service.category?.includes('Autonomous') || service.category?.includes('Brain-Computer');
-          default:
-            return true;
-        }
+          default: return true;
+  }
       });
     }
 
@@ -139,9 +138,8 @@ export default function Revolutionary2026ServicesShowcaseV4() {
             return price.includes('$') && parseInt(price.replace(/[^0-9]/g, '')) > 2000;
           case 'custom':
             return price.includes('Custom') || price.includes('custom');
-          default:
-            return true;
-        }
+          default: return true;
+  }
       });
     }
 
@@ -157,7 +155,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
     // Sort
     switch (sortBy) {
       case 'price':
-        filtered.sort((a, b) => {
+        filtered.sort((a, b) : any => {
           const aPrice = a.price.includes('Custom') ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
           const bPrice = b.price.includes('Custom') ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
           return aPrice - bPrice;
@@ -187,7 +185,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -198,7 +196,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -236,7 +234,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
               </p>
               
               {/* Contact Info */}
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+              <div className="flex flex-col sm: flex-row justify-center items-center gap-6 mb-12">
                 <div className="flex items-center gap-2 text-purple-300">
                   <Phone className="w-5 h-5" />
                   <span>{contactInfo.mobile}</span>
@@ -379,7 +377,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
                   <p className="text-gray-400 mb-8">Try adjusting your search criteria or filters</p>
                   <button
                     onClick={() => {
-                      setSearchTerm('');
+                      setSearchTerm(''),
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                     }}
@@ -557,4 +555,4 @@ export default function Revolutionary2026ServicesShowcaseV4() {
       </main>
     </UltraAdvancedFuturisticBackground>
   );
-}
+};

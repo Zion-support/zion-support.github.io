@@ -9,7 +9,7 @@ import { vi, test, expect } from 'vitest',
 
 vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: null }) })),
 
-function TestRoutes() {
+function TestRoutes() : any {
   const router = useRouter(),
   return (
     <div>
@@ -17,9 +17,8 @@ function TestRoutes() {
       {router.pathname === '/' && <div>Home</div>}
       {router.pathname === '/marketplace' && <div>Marketplace</div>}
     </div>
-  ),
-}
-
+  );
+};
 test('rating persists after navigation', async () => {
   const user = userEvent.setup(),
   render(
@@ -39,5 +38,5 @@ test('rating persists after navigation', async () => {
   await user.click(screen.getByText('Go')),
   expect(screen.getByText('Marketplace')).toBeInTheDocument(),
   const starsAfter = screen.getAllByLabelText(/Rate/),
-  expect(starsAfter.filter(s => s.className.includes('text-yellow-400')).length).toBe(5),
-}),
+  expect(starsAfter.filter(s => s.className.includes('text-yellow-400')).length).toBe(5);
+  }),

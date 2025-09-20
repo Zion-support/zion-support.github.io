@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Revolutionary brain-computer interfaces enabling 300% productivity gains through direct thought control. Explore the future of human-computer interaction.'
   keywords: ['neural interfacesbrain-computer interfaceBCIcognitive enhancement', 'AI 2025']
 }
-export default function NeuralInterfaces2025Page() {
+export default function NeuralInterfaces2025Page() : any {
   return (
     <div>
       <SEO

@@ -3,12 +3,12 @@
 import React, { useState, useEffect } from 'react';
 
 interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  conversionRate: number;
+  pageViews: number,
+  uniqueVisitors: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  topPages: Array<{ page: string, views: number }>,
+  conversionRate: number,
 }
 
 const ModernAnalyticsDashboard: React.FC = () => {
@@ -40,7 +40,7 @@ const ModernAnalyticsDashboard: React.FC = () => {
             { page: '/contact', views: 6543 }
           ],
           conversionRate: 4.2
-        });
+        }),
         setLoading(false);
       }, 1000);
     };
@@ -48,13 +48,13 @@ const ModernAnalyticsDashboard: React.FC = () => {
     fetchAnalytics();
   }, []);
 
-  const formatDuration = (seconds: number) => {
+  const formatDuration = (seconds: number) : any => {
     const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
+  const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
 
-  const formatNumber = (num: number) => {
+  const formatNumber = (num: number) : any => {
     return new Intl.NumberFormat().format(num);
   };
 

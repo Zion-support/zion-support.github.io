@@ -69,8 +69,7 @@ const EnhancedHeader: React.FC = () => {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <button,
-onClick={() => toggleDropdown(item.name)}
+                  <button onClick={() => toggleDropdown(item.name)}
                     className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     <span>{item.name}</span>
@@ -91,8 +90,7 @@ initial={{ opacity: 0, y: -10 }}
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
                     >
                       {item.dropdown.map((dropdownItem) => (
-                        <Link,
-key={dropdownItem.name}
+                        <Link key={dropdownItem.name}
                           href={dropdownItem.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                         >
@@ -111,8 +109,7 @@ key={dropdownItem.name}
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <form onSubmit={handleSearch} className="relative">
-              <input,
-type="text"
+              <input type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
@@ -133,8 +130,7 @@ type="text"
             </div>
           </div>
           {/* Mobile Menu Button */}
-          <button,
-onClick={() => setIsOpen(!isOpen)}
+          <button onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -152,8 +148,7 @@ initial={{ opacity: 0, height: 0 }}
               <div className="px-4 py-4 space-y-4">
                 {/* Mobile Search */}
                 <form onSubmit={handleSearch} className="relative">
-                  <input,
-type="text"
+                  <input type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search..."
@@ -166,8 +161,7 @@ type="text"
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
-                        <button,
-onClick={() => toggleDropdown(item.name)}
+                        <button onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
                         >
                           <span>{item.name}</span>
@@ -176,8 +170,7 @@ onClick={() => toggleDropdown(item.name)}
                         {activeDropdown === item.name && (
                           <div className="ml-4 space-y-2">
                             {item.dropdown.map((dropdownItem) => (
-                              <Link,
-key={dropdownItem.name}
+                              <Link key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 onClick={closeMobileMenu}
                                 className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
@@ -189,8 +182,7 @@ key={dropdownItem.name}
                         )}
                       </div>
                     ) : (
-                      <Link,
-href={item.href}
+                      <Link href={item.href}
                         onClick={closeMobileMenu}
                         className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
                       >

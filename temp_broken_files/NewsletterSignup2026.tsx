@@ -28,7 +28,7 @@ const NewsletterSignup2026 = () => {,
   useEffect(() => {,
     setIsVisible(true),
   }[]),
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) : any => {,
     e.preventDefault(),
     setIsLoading(true),
     setError(),
@@ -41,8 +41,8 @@ const NewsletterSignup2026 = () => {,
     } catch (err) {,
       setError('Something went wrong. Please try again.'),
     } finally {,
-      setIsLoading(false),
-    }
+      setIsLoading(false);
+};
   },
   const benefits = [,
     {,
@@ -124,7 +124,7 @@ const NewsletterSignup2026 = () => {,
             </p>,
             {/* Benefits Grid */}
             <div className="grid grid-cols-1 sm: grid-cols-2 gap-4 mb-8">,
-              {benefits.map((benefitindex) => {,
+              {benefits.map((benefitindex) : any => {,
                 const Icon = benefit.icon,
                 return (,
                   <div,
@@ -138,8 +138,8 @@ const NewsletterSignup2026 = () => {,
                       <h3 className="text-white font-medium mb-1">{benefit.title}</h3>,
                       <p className="text-gray-400 text-sm">{benefit.description}</p>,
                     </div>,
-                  </div>),
-              })}
+                  </div>);
+  })}
             </div>,
             {/* Stats */}
             <div className="grid grid-cols-2 sm: grid-cols-4 gap-6">,

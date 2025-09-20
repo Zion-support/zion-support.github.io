@@ -192,7 +192,7 @@ const RevolutionaryTechShowcase2030: React.FC = () => {,
     const interval = setInterval(() => {,
       setActiveTech((prev) => (prev + 1) % technologies.length),
     }, 5000),
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, []),
   return (,
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">,

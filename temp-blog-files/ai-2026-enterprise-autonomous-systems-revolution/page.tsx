@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover how autonomous AI systems are transforming enterprise operations in 2026. Complete implementation guide with real-world case studies and ROI analysis.'
   keywords: ['AI 2026Autonomous SystemsEnterprise AIDigital Transformation', 'Machine LearningAI Implementation']
 }
-export default function AI2026EnterpriseAutonomousSystemsRevolution() {
+export default function AI2026EnterpriseAutonomousSystemsRevolution() : any {
   return (
     <div>
       <SEO

@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function GDPRDSARAutomation() {,
+export default function GDPRDSARAutomation() : any {,
   return (,
     <>,
       <Head>,

@@ -20,8 +20,8 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
     // Check if banner was previously dismissed,
     const dismissed = localStorage.getItem('ai-innovation-banner-dismissed'),
     if (!dismissed) {,
-      setIsVisible(true),
-    }
+      setIsVisible(true);
+};
   }[]),
   const handleDismiss = () => {,
     setIsDismissed(true),
@@ -124,7 +124,7 @@ const AIInnovationShowcase2025PromotionBanner = () => {,
           />,
         </div>,
       </div>,
-    </div>),
-},
+    </div>);
+  },
 export default AIInnovationShowcase2025PromotionBanner,
-</div></div>,
+</div></div>,'

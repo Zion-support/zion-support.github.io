@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function SpaceTechnologyPage() {
+export default function SpaceTechnologyPage() : any {
   const services = [
     {
       title: "Satellite Intelligence",
@@ -46,7 +46,7 @@ export default function SpaceTechnologyPage() {
       price: "$1,999/month",
       icon: Rocket
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function SpaceTechnologyPage() {
       title: "AI-Powered",
       description: "Intelligent systems that optimize space operations"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function SpaceTechnologyPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }

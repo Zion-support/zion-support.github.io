@@ -47,9 +47,8 @@ exports.handler = async function(event, context) {
         maintainabilityScore: Math.floor(Math.random() * 30) + 70, // 70-100
         performanceScore: Math.floor(Math.random() * 35) + 65, // 65-100
         documentationScore: Math.floor(Math.random() * 40) + 60 // 60-100
-      }),
-    }
-    
+      });
+};
     // Calculate average health scores
     const averageHealthScores = {
       overall: (healthScores.reduce((sum, score) => sum + score.overallScore, 0) / healthScores.length).toFixed(1),
@@ -69,9 +68,8 @@ exports.handler = async function(event, context) {
         severity: ['lowmedium', 'highcritical'][Math.floor(Math.random() * 4)],
         description: `Issue ${i + 1} detected in repository`,
         recommendedAction: 'Review and address the identified issue'
-      }),
-    }
-    
+      });
+};
     const result = {
       statusCode: 200,
       body: JSON.stringify({
@@ -112,6 +110,6 @@ exports.handler = async function(event, context) {
         function: 'repo-radar-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

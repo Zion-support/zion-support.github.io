@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const NetlifyBuildMonitor = require('./netlify-monitor'),
 const NetlifyErrorFixer = require('./netlify-error-fixer'),
@@ -30,8 +30,8 @@ class AutomationTester {,
 ,
   log(message, level = 'info') {,
     const timestamp = new Date().toISOString(),
-    logger.info(`[${timestamp}] [${level.toUpperCase()}] ${message}`),
-  }
+    logger.info(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+};
 ,
   async runAllTests() {,
     this.log('Starting Netlify automation system tests...'),
@@ -55,8 +55,8 @@ class AutomationTester {,
       this.log('All tests completed')
     } catch (error) {,
       this.log(`Test suite failed: ${error.message}`, error'),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   }
 ,
   async testMonitorInitialization() {,
@@ -65,12 +65,12 @@ class AutomationTester {,
       const monitor = new NetlifyBuildMonitor(),
       // Test basic properties,
       if (!monitor.config) {,
-        throw new Error('Monitor config not initialized'),
-      }
+        throw new Error('Monitor config not initialized');
+};
 ,
       if (!monitor.status) {,
-        throw new Error('Monitor status not initialized'),
-      }
+        throw new Error('Monitor status not initialized');
+};
 ,
       // Test event system,
       let eventReceived = false,
@@ -79,15 +79,15 @@ class AutomationTester {,
       }),
       monitor.emit('test'),
       if (!eventReceived) {,
-        throw new Error('Event system not working'),
-      }
+        throw new Error('Event system not working');
+};
 ,
       this.addTestResult(Monitor Initialization',
         true,
         Monitor initialized successfully'),
     } catch (error) {,
-      this.addTestResult('Monitor Initialization', false, error.message),
-    }
+      this.addTestResult('Monitor Initialization', false, error.message);
+};
   }
 ,
   async testErrorFixerInitialization() {,
@@ -96,8 +96,8 @@ class AutomationTester {,
       const fixer = new NetlifyErrorFixer(),
       // Test fix strategies,
       if (!fixer.fixStrategies) {,
-        throw new Error('Fix strategies not initialized'),
-      }
+        throw new Error('Fix strategies not initialized');
+};
 ,
       const expectedStrategies = [,
         build-timeout',
@@ -111,16 +111,16 @@ class AutomationTester {,
       ],
       for (const strategy of expectedStrategies) {,
         if (!fixer.fixStrategies[strategy]) {,
-          throw new Error(`Missing fix strategy: ${strategy}`),
-        }
+          throw new Error(`Missing fix strategy: ${strategy}`);
+};
       }
 ,
       this.addTestResult(Error Fixer Initialization',
         true,
         Error fixer initialized successfully'),
     } catch (error) {,
-      this.addTestResult('Error Fixer Initialization', false, error.message),
-    }
+      this.addTestResult('Error Fixer Initialization', false, error.message);
+};
   }
 ,
   async testAutomationInitialization() {,
@@ -129,23 +129,23 @@ class AutomationTester {,
       const automation = new NetlifyBuildAutomation(),
       // Test basic properties,
       if (!automation.monitor) {,
-        throw new Error('Monitor not initialized'),
-      }
+        throw new Error('Monitor not initialized');
+};
 ,
       if (!automation.fixer) {,
-        throw new Error('Fixer not initialized'),
-      }
+        throw new Error('Fixer not initialized');
+};
 ,
       if (!automation.config) {,
-        throw new Error('Config not initialized'),
-      }
+        throw new Error('Config not initialized');
+};
 ,
       this.addTestResult(Automation Initialization',
         true,
         Automation system initialized successfully'),
     } catch (error) {,
-      this.addTestResult('Automation Initialization', false, error.message),
-    }
+      this.addTestResult('Automation Initialization', false, error.message);
+};
   }
 ,
   async testConfigurationValidation() {,
@@ -179,8 +179,8 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file)),
         true,
         Configuration validation passed'),
     } catch (error) {,
-      this.addTestResult('Configuration Validation', false, error.message),
-    }
+      this.addTestResult('Configuration Validation', false, error.message);
+};
   }
 ,
   async testErrorDetection() {,
@@ -194,24 +194,24 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file)),
         logs: Error: JavaScript heap out of memory}
 const errors = monitor.analyzeBuildError(mockBuild),
       if (!Array.isArray(errors)) {,
-        throw new Error('Error analysis should return an array'),
-      }
+        throw new Error('Error analysis should return an array');
+};
 ,
       if (errors.length === 0) {,
-        throw new Error('Error analysis should detect errors in mock data'),
-      }
+        throw new Error('Error analysis should detect errors in mock data');
+};
 ,
       const memoryError = errors.find((error) => error.type === 'memory_error'),
       if (!memoryError) {,
-        throw new Error('Memory error not detected in mock data'),
-      }
+        throw new Error('Memory error not detected in mock data');
+};
 ,
       this.addTestResult(Error Detection',
         true,
         Error detection working correctly'),
     } catch (error) {,
-      this.addTestResult('Error Detection', false, error.message),
-    }
+      this.addTestResult('Error Detection', false, error.message);
+};
   }
 ,
   async testFixStrategies() {,
@@ -222,22 +222,22 @@ const errors = monitor.analyzeBuildError(mockBuild),
       for (const [strategyName, strategy] of Object.entries(,
         fixer.fixStrategies)) {,
         if (typeof strategy !== 'function') {,
-          throw new Error(`Fix strategy ${strategyName} is not a function`),
-        }
+          throw new Error(`Fix strategy ${strategyName} is not a function`);
+};
       }
 ,
       // Test error fixing with invalid strategy,
       const result = await fixer.fixError('invalid-strategy'),
       if (result !== false) {,
-        throw new Error('Invalid strategy should return false'),
-      }
+        throw new Error('Invalid strategy should return false');
+};
 ,
       this.addTestResult(Fix Strategies',
         true,
         Fix strategies working correctly'),
     } catch (error) {,
-      this.addTestResult('Fix Strategies', false, error.message),
-    }
+      this.addTestResult('Fix Strategies', false, error.message);
+};
   }
 ,
   async testFileOperations() {,
@@ -250,8 +250,8 @@ const testData = { test: true, timestamp: new Date().toISOString() },
       // Test file reading,
       const readData = JSON.parse(fs.readFileSync(testFile, 'utf8')),
       if (readData.test !== testData.test) {,
-        throw new Error('File read/write data mismatch'),
-      }
+        throw new Error('File read/write data mismatch');
+};
 ,
       // Clean up,
       fs.unlinkSync(testFile),
@@ -259,8 +259,8 @@ const testData = { test: true, timestamp: new Date().toISOString() },
         true,
         File operations working correctly'),
     } catch (error) {,
-      this.addTestResult('File Operations', false, error.message),
-    }
+      this.addTestResult('File Operations', false, error.message);
+};
   }
 ,
   addTestResult(testName, passed, message) {,
@@ -270,8 +270,8 @@ const testData = { test: true, timestamp: new Date().toISOString() },
       message,
       timestamp: new Date().toISOString()}),
 const status = passed ? PASS' : FAIL',
-    this.log(`${status}: ${testName} - ${message}`, passed ? info' : error'),
-  }
+    this.log(`${status}: ${testName} - ${message}`, passed ? info' : error');
+};
 ,
   async generateTestReport() {,
     this.log('Generating test report...'),
@@ -308,8 +308,8 @@ const report = {,
       logger.info('\nFAILED TESTS: '),
       failedTests.forEach((test) => {,
         logger.info(`- ${test.test}: ${test.message}`),
-      }),
-    }
+      });
+};
 ,
     return report,
   }
@@ -342,5 +342,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0),
-}),
+  process.exit(0);
+  }),'

@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs').promises,
 const path = require('path'),
@@ -40,8 +40,8 @@ const path = require('path'),
     .replace(/,\s*\n\s*)/g, \n      )),
     .replace(/,\s*\n\s*}/g, \n    }),
   await fs.writeFile(filePath, fixedContent, utf8'),
-  logger.info('✅ Fixed remaining syntax errors'),
-}
+  logger.info('✅ Fixed remaining syntax errors');
+};
 ,
 fixRemainingSyntax().catch(console.error),
     } catch (error) {,
@@ -52,8 +52,8 @@ fixRemainingSyntax().catch(console.error),
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...'),
-  }
+    console.log('Stopping Script...');
+};
 }
 ,
 // Start the script,
@@ -62,8 +62,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = Script,
 // Graceful shutdown handling,

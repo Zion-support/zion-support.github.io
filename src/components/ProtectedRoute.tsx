@@ -7,6 +7,7 @@ interface ProtectedRouteProps {
 }
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
+<<<<<<< HEAD
   const [isClient, setIsClient] = useState(false);
   const location = useLocation();
 
@@ -42,3 +43,13 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
 }
 
 export default ProtectedRoute;
+=======
+  // For now, just render the children without authentication check
+  // In a real implementation, this would check authentication status
+  return <>{children}</>;
+<<<<<<< HEAD
+};
+=======
+}
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

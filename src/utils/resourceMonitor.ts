@@ -3,6 +3,10 @@ import React from "react";
 interface ResourceError {
 <<<<<<< HEAD
 url: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;
@@ -176,6 +180,10 @@ return summary;
 const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;
 =======
+<<<<<<< HEAD
   
 url: string;
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

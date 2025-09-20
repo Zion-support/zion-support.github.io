@@ -10,7 +10,7 @@ export class ApiError extends Error {
 }
 export async function apiClient(input, init, retries = 3) {
     let lastError;
-    for (let attempt = 0; attempt < retries; attempt++) {
+    for (let attempt = 0, attempt < retries, attempt++) {
         try {
   
             const response = await fetch(input, init);

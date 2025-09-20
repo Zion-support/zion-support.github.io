@@ -77,11 +77,11 @@ const CookiePolicy: NextPage = () => {
                 preferred language and other settings, which can make your next visit easier and more useful.
               </p>
               
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md: grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3">How Cookies Work</h3>
                   <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
-                    <li>Stored in your browser&apos;s file directory</li>
+                    <li>Stored in your browser&apos,s file directory</li>
                     <li>Sent back to the website on subsequent visits</li>
                     <li>Can only be read by the website that created them</li>
                     <li>Cannot access other files on your device</li>
@@ -209,8 +209,7 @@ const CookiePolicy: NextPage = () => {
             
             <div className="space-y-6">
               <p className="text-gray-600">
-                Some cookies on our website are set by third-party services that we use to enhance functionality:
-              </p>
+                Some cookies on our website are set by third-party services that we use to enhance functionality: </p>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -299,7 +298,7 @@ const CookiePolicy: NextPage = () => {
               <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                 <p className="text-green-800 text-sm">
                   <strong>Cookie Preferences Center:</strong> You can manage your cookie preferences at any time 
-                  by clicking the &quot;Cookie Settings&quot; link in our footer or cookie banner.
+                  by clicking the &quot,Cookie Settings&quot; link in our footer or cookie banner.
                 </p>
               </div>
             </div>
@@ -531,7 +530,7 @@ const CookiePolicy: NextPage = () => {
               We&apos;re committed to transparency in our cookie practices. 
               If you have questions or need help managing your preferences, don&apos;t hesitate to reach out.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
@@ -552,6 +551,6 @@ const CookiePolicy: NextPage = () => {
       <Footer />
     </div>
   );
-};
+  };
 
 export default CookiePolicy;

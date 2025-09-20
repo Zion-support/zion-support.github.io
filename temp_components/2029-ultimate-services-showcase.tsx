@@ -17,7 +17,7 @@ import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
 
-export default function UltimateServicesShowcase2029() {
+export default function UltimateServicesShowcase2029() : any {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedPriceRangesetSelectedPriceRange] = useState('all'),
@@ -108,4 +108,5 @@ const 2029-ultimate-services-showcase: React.FC = () => {
   )
 },
 
-export default 2029-ultimate-services-showcase,
+export default 2029-ultimate-services-showcase;
+  }

@@ -41,22 +41,22 @@ class MessagingStorage {,
 export async function searchMessages(query: stringuserId: stringlimit?: number): Promise<MessageSearchResult[]> {,
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit),
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {,
-  return messagingStorage.createConversation(conversation),
-}
+  return messagingStorage.createConversation(conversation);
+};
 export async function getConversation(id: string): Promise<Conversation | null> {,
   return messagingStorage.getConversation(id)}
 ,
 export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {,
-  return messagingStorage.updateConversation(id, updates),
-}
+  return messagingStorage.updateConversation(id, updates);
+};
 ,
 export async function getMessagesByConversation(conversationId: stringlimit?: numberoffset?: number): Promise<Message[]> {,
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset),
-}
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+};
 ,
 export async function getConversationsByUser(userId: stringincludeArchived?: boolean): Promise<Conversation[]> {,
-  return messagingStorage.getConversationsByUser(userId, includeArchived),
-}
+  return messagingStorage.getConversationsByUser(userId, includeArchived);
+};
 export async function getUnreadMessageCount(userId: string): Promise<number> {,
   return messagingStorage.getUnreadMessageCount(userId)}
 
@@ -66,35 +66,35 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {,
 }
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {,
 export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {,
-  return messagingStorage.createConversation(conversation),
-}
+  return messagingStorage.createConversation(conversation);
+};
 export async function getConversation(id: string): Promise<Conversation | null> {,
   return messagingStorage.getConversation(id)}
 export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {,
-  return messagingStorage.updateConversation(id, updates),
-}
+  return messagingStorage.updateConversation(id, updates);
+};
 export async function getMessagesByConversation(conversationId: stringlimit?: number, offset?: number): Promise<Message[]> {,
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset),
-}
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+};
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {,
 export async function updateConversation(id: stringupdates: Partial<Conversation>): Promise<Conversation | null> {,
-  return messagingStorage.updateConversation(id, updates),
-}
+  return messagingStorage.updateConversation(id, updates);
+};
 ,
 export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {,
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset),
-}
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+};
 ,
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {,
-  return messagingStorage.getConversationsByUser(userId, includeArchived),
-}
+  return messagingStorage.getConversationsByUser(userId, includeArchived);
+};
 export async function getUnreadMessageCount(userId: string): Promise<number> {,
   return messagingStorage.getUnreadMessageCount(userId)}
 ,
 export async function searchMessages(query: stringuserId: string, limit?: number): Promise<MessageSearchResult[]> {,
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {,
-  return messagingStorage.searchMessages(query, userId, limit),
-}
+  return messagingStorage.searchMessages(query, userId, limit);
+};
 // Utility functions,
 export function createMessageData(,
   conversationId: string,
@@ -147,8 +147,8 @@ export function generateMessageId(): string {,
 }
 ,
 export function generateConversationId(): string {,
-  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-}
+  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
 ,
 export function formatMessageTime(isoString: string): string {,
   const date = new Date(isoString),

@@ -39,12 +39,9 @@ setTimeout(() => (inThrottle = false), limit)}
 export const getPerformanceMetrics: any = () => {;
 const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
 const paint = performance.getEntriesByType("paint");
-<<<<<<< HEAD
 return {
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-=======
 return {,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 loadTime: navigation.loadEventEnd - navigation.loadEventStart; domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;,
 firstPaint: paint.find(entry => entry.name === "first-paint")?.startTime || 0; firstContentfulPaint: paint.find(entry => entry.name === "first-contentful-paint")?.startTime || 0};
 };
@@ -55,4 +52,8 @@ console.log("Performance Metrics:", metrics)};
 // TypeScript file;
 export const placeholder = "placeholder";
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

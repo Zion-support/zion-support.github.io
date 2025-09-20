@@ -3,11 +3,10 @@ import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { corsHeaders } from "../_shared/cors.ts",
 
-serve(async (req) => {
+serve(async (req) : any => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
-  }
-
+    return new Response(null, { headers: corsHeaders });
+};
   const supabase = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
@@ -56,9 +55,8 @@ serve(async (req) => {
         return new Response(
           JSON.stringify({ paymentIntentId: intent.id }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
-
+        );
+};
       case "release": {
         if (!paymentIntentId)
           throw new Error("paymentIntentId required"),
@@ -74,9 +72,8 @@ serve(async (req) => {
         return new Response(
           JSON.stringify({ message: "released" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
-
+        );
+};
       case "dispute": {
         if (!orderId) throw new Error("orderId required"),
         await supabase
@@ -86,20 +83,19 @@ serve(async (req) => {
         return new Response(
           JSON.stringify({ message: "dispute filed" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-        ),
-      }
-
+        );
+};
       default:
         return new Response(
           JSON.stringify({ error: "invalid action" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 400 }
-        ),
-    }
+        );
+};
   } catch (err) {
     console.error("escrow-service error", err),
     return new Response(
       JSON.stringify({ error: err.message }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" }, status: 500 }
-    ),
+    );
   }
 }),

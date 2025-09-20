@@ -180,15 +180,15 @@ const AIToolsUltimateShowcase2026PromotionBanner = () => {,
                     </div>,
                     {/* Categories Grid */}
                     <div className="grid grid-cols-2 gap-3 mb-4">,
-                      {categories.slice(04).map((categoryindex) => {,
+                      {categories.slice(04).map((categoryindex) : any => {,
                         const CategoryIcon = category.icon,
                         return (,
                           <div key={index} className="bg-white/5 rounded-lg p-3 text-center">,
                             <CategoryIcon className="w-6 h-6 text-indigo-400 mx-auto mb-2" />,
                             <div className="text-sm font-bold text-white">{category.name}</div>,
                             <div className="text-xs text-gray-400">{category.count}</div>,
-                          </div>),
-                      })}
+                          </div>);
+  })}
                     </div>,
                     {/* Active Tool */}
                     <div className="bg-white/5 rounded-lg p-4 mb-4">,

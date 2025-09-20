@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.'
   keywords: ['AI customer successpredictive analyticscustomer retentionAI support', 'customer experience']
 }
-export default function AI2026CustomerSuccessRevolution() {
+export default function AI2026CustomerSuccessRevolution() : any {
   return (
     <div>
       <div>

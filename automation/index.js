@@ -29,8 +29,8 @@ function loadConfiguration() {,
       const infiniteConfigData = fs.readFileSync(infiniteConfigPath, 'utf8'),
       infiniteConfig = JSON.parse(infiniteConfigData),
     } catch (error) {,
-      console.warn('⚠️ Failed to load infinite-improvement-config.json:', error.message),
-    }
+      console.warn('⚠️ Failed to load infinite-improvement-config.json:', error.message);
+};
   }
 ,
   // Default configuration,
@@ -108,8 +108,8 @@ async function main() {,
         await improvementLauncher.initialize(),
         console.log('✅ Infinite Improvement Loop initialized'),
       } catch (error) {,
-        console.warn('⚠️ Failed to initialize Infinite Improvement Loop:', error.message),
-      }
+        console.warn('⚠️ Failed to initialize Infinite Improvement Loop:', error.message);
+};
     }
 ,
     // Parse command line arguments,
@@ -127,8 +127,8 @@ async function main() {,
         await improvementLauncher.start(),
         console.log('✅ Infinite Improvement Loop started successfully'),
       } catch (error) {,
-        console.warn('⚠️ Failed to start Infinite Improvement Loop:', error.message),
-      }
+        console.warn('⚠️ Failed to start Infinite Improvement Loop:', error.message);
+};
     }
 ,
     console.log('✅ Intelligent Automation System started successfully'),
@@ -141,8 +141,8 @@ async function main() {,
           await improvementLauncher.stop(),
           console.log('✅ Infinite Improvement Loop stopped'),
         } catch (error) {,
-          console.warn('⚠️ Error stopping Infinite Improvement Loop:', error.message),
-        }
+          console.warn('⚠️ Error stopping Infinite Improvement Loop:', error.message);
+};
       }
 ,
       // Stop orchestrator,
@@ -151,8 +151,8 @@ async function main() {,
     }),
   } catch (error) {,
     console.error('❌ Failed to start automation system:', error),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 function parseArguments() {,
@@ -182,8 +182,8 @@ function parseArguments() {,
         parsed.config = args[++i],
         break,
       default:  ,
-        console.warn(`⚠️ Unknown argument: ${arg}`),
-    }
+        console.warn(`⚠️ Unknown argument: ${arg}`);
+};
   }
 ,
   return parsed,
@@ -210,15 +210,15 @@ Features:,
   • Intelligent decision making,
   • Self-healing and error recovery,
   • Real-time reporting and notifications,
-  `),
-}
+  `);
+};
 ,
 // Run the main function,
 if (require.main === module) {,
   main().catch((error) => {,
     console.error('❌ Fatal error:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = { main, loadConfiguration },

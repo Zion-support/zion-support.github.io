@@ -5,7 +5,7 @@ interface SEOProps {
   description?: string
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description }) => {
+const SEO: React.FC<SEOProps> = ({ title, description }) : any => {
   return (
     <div>
       {title && <h1 className="text-2xl font-bold mb-4">{title}</h1>}

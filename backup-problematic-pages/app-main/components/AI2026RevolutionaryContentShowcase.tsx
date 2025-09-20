@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function AI2026RevolutionaryContentShowcase() {
+export default function AI2026RevolutionaryContentShowcase() : any {
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div>

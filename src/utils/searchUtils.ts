@@ -3,6 +3,10 @@ import { SearchSuggestion } from "@/types/search, ";
 export interface SearchResult {
 <<<<<<< HEAD
 id: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 title: string;,
 description: string;,
 type: "product" | "talent" | "blog" | "service" | "doc";
@@ -344,12 +348,9 @@ return count;
 export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
-<<<<<<< HEAD
 maxPrice: 10000;
 minRating: 0;
-=======
 maxPrice: 10000;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 minRating: 0;,
 sort: "relevance"});
 export default {
@@ -368,6 +369,10 @@ getActiveFilterCount;
 getDefaultFilters;
 };
 =======
+<<<<<<< HEAD
   
 id: string;
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

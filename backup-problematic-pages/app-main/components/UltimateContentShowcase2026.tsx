@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default function UltimateContentShowcase2026() {
+export default function UltimateContentShowcase2026() : any {
   return (
     <section className="py-16 bg-white">
       <div>

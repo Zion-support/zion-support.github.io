@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function AITrends2025_2030ComprehensiveFuturePredictions() {
+export default function AITrends2025_2030ComprehensiveFuturePredictions() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

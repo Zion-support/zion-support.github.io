@@ -24,8 +24,8 @@ exports.handler = async function(event, context) {,
     const deps = [],
     const rootDeps = lock.dependencies || {},
     for (const [name, meta] of Object.entries(rootDeps)) {,
-      if (typeof meta === 'object' && meta.version) deps.push({ name, version: meta.version }),
-    }
+      if (typeof meta === 'object' && meta.version) deps.push({ name, version: meta.version });
+};
 ,
     // Limit for runtime,
     const LIMIT = parseInt(process.env.OSV_LIMIT || '100', 10),
@@ -35,8 +35,8 @@ exports.handler = async function(event, context) {,
       try {,
         results.push(await osvQuery(d.name, d.version)),
       } catch (e) {,
-        results.push({ pkg: d.name, version: d.version, error: String(e) }),
-      }
+        results.push({ pkg: d.name, version: d.version, error: String(e) });
+};
     }
 ,
     const payload = { generatedAt: new Date().toISOString(), checked: slice.length, findings: results.filter(r => (r.vulns||[]).length > 0) },
@@ -59,6 +59,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

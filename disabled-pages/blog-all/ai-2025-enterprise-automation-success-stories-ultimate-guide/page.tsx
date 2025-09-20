@@ -1,7 +1,7 @@
 import React from 'react';
 import SEO from '@/components/SEO';
 
-export default function AIEnterpriseAutomationSuccessStoriesPage() {
+export default function AIEnterpriseAutomationSuccessStoriesPage() : any {
   return (
     <div>
       <SEO
@@ -18,4 +18,4 @@ export default function AIEnterpriseAutomationSuccessStoriesPage() {
       </div>
     </div>
   );
-}
+  }

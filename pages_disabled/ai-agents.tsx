@@ -5,7 +5,7 @@ import UIButton from '../components/ui/Button';
 import { ArrowRight, Check as CheckIcon } from 'lucide-react';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 
-export default function AIAgentsStudioPage() {
+export default function AIAgentsStudioPage() : any {
   const agentServices = innovativeAIServices.filter((s) =>
     ['AI Orchestration & Automation', 'AI & Cybersecurity', 'AI & Business Intelligence'].includes(s.category) ||
     ['ai-agent-orchestrator', 'ai-phone-agent', 'ai-sales-automation', 'ai-meeting-transcriber-pro'].includes(s.id)

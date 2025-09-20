@@ -85,8 +85,8 @@ async function main() {
     const p = path.join(artifactsDir, rel, `${name}.json`),
     if (fs.existsSync(p)) {
       const json = JSON.parse(fs.readFileSync(p, "utf8")),
-      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2)),
-    }
+      fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(json.abi, null, 2));
+};
   }
 }
 

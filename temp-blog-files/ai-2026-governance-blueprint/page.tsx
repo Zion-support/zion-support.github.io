@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Guide: Enterprise AI Governance (2026)'
   description: 
     'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.'}
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">

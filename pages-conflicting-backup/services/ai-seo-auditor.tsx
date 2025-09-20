@@ -1,7 +1,7 @@
 import Head from 'next/head',
 import Link from 'next/link',
 
-export default function AISEOAuditor() {
+export default function AISEOAuditor() : any {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

@@ -5,7 +5,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
 
 // High-signal, production-suitable services to diversify Micro SaaS, IT and AI offerings
 export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
@@ -789,7 +789,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/synthetic-data-generator',
-    marketPosition: 'Faster than in-house approaches; simpler than research toolkits while maintaining privacy guarantees.',
+    marketPosition: 'Faster than in-house approaches, simpler than research toolkits while maintaining privacy guarantees.',
     targetAudience: 'Data science, product, QA, compliance',
     trialDays: 14,
     setupTime: '2 hours',
@@ -798,7 +798,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Python', 'DP-SGD', 'Timeseries models', 'NLP'],
     integrations: ['S3', 'Snowflake', 'BigQuery', 'Postgres'],
     useCases: ['Analytics sandboxes', 'Non-prod testing', 'Model pre-training'],
-    roi: 'Unblock data access; cut compliance review time by 70%',
+    roi: 'Unblock data access, cut compliance review time by 70%',
     competitors: ['Mostly AI', 'Gretel'],
     marketSize: '$1.5B privacy tech',
     growthRate: '25% CAGR',
@@ -838,7 +838,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Mail hooks', 'Webhook', 'Virus scan'],
     integrations: ['SendGrid Inbound', 'Mailgun Routes', 'SES'],
     useCases: ['Ticket intake', 'Order parsing', 'Lead capture'],
-    roi: 'Automate manual triage; reduce handling time 40%',
+    roi: 'Automate manual triage, reduce handling time 40%',
     competitors: ['Mailparser', 'Parseur'],
     marketSize: '$800M parsing tools',
     growthRate: '14% CAGR',
@@ -918,7 +918,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Terraform', 'Guardrails', 'CI/CD'],
     integrations: ['AWS Control Tower', 'Azure Policy', 'GCP Org'],
     useCases: ['Foundations', 'Multi-env setup'],
-    roi: 'Cut setup time by 80%; fewer misconfigs',
+    roi: 'Cut setup time by 80%, fewer misconfigs',
     competitors: ['AWS Control Tower', 'Azure Landing Zones'],
     marketSize: '$5B platform eng',
     growthRate: '18% CAGR',
@@ -998,7 +998,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Webpack/Vite analyzers', 'CI bots'],
     integrations: ['GitHub', 'GitLab', 'Vercel'],
     useCases: ['Perf budgets', 'DX improvements'],
-    roi: 'Prevent perf regressions; faster pages',
+    roi: 'Prevent perf regressions, faster pages',
     competitors: ['Calibre', 'SpeedCurve'],
     marketSize: '$1B web perf',
     growthRate: '12% CAGR',
@@ -1198,7 +1198,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['OPA/Rego', 'Terraform', 'Cloud APIs'],
     integrations: ['AWS', 'Azure', 'GCP', 'GitHub'],
     useCases: ['Evidence automation', 'Guardrails'],
-    roi: 'Shorten audits; prevent drift-related incidents',
+    roi: 'Shorten audits, prevent drift-related incidents',
     competitors: ['Bridgecrew', 'Snyk IaC'],
     marketSize: '$3B cloud security',
     growthRate: '22% CAGR',
@@ -1240,7 +1240,7 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     technology: ['Node.js', 'Headless Chrome', 'S3', 'Redis'],
     integrations: ['Zapier', 'Make.com', 'Webhook', 'S3'],
     useCases: ['Invoices', 'Agreements', 'Reports'],
-    roi: 'Replace brittle DIY scripts; cut maintenance by 80%.',
+    roi: 'Replace brittle DIY scripts, cut maintenance by 80%.',
     competitors: ['PDFMonkey', 'PDFShift', 'DocRaptor'],
     marketSize: '$500M+ doc rendering',
     growthRate: '10% CAGR',
@@ -1337,4 +1337,4 @@ export const additionalEnhancedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 7
   }
-];
+],

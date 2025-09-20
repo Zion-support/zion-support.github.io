@@ -536,7 +536,7 @@ export const enhancedServices2025: EnhancedService[] = [
   }
 ],
 
-export const getServicesByCategory = (category: EnhancedService['category']) => {
+export const getServicesByCategory = (category: EnhancedService['category']) : any => {
   return enhancedServices2025.filter(service => service.category === category)
 },
 
@@ -545,11 +545,11 @@ export const getPopularServices = () => {
 },
 
 export const getNewServices = () => {
-  return enhancedServices2025.filter(service => service.isNew),
-},
+  return enhancedServices2025.filter(service => service.isNew);
+  },
 
-export const getServicesByAudience = (audience: string) => {
+export const getServicesByAudience = (audience: string) : any => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)
   )
-},
+},'

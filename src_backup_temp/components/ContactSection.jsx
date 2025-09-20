@@ -12,7 +12,7 @@ export default function ContactSection.js({ }: ContactSection.jsProps) {,
       <h1>ContactSection.js</h1>,
       <p>This component is currently under development.</p>,
     </div>),
-export default Component,
-}
+export default Component;
+  }
 
-}}}
+}}}"

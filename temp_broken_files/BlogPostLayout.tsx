@@ -11,5 +11,5 @@ const function BlogPostLayout({ postcontent }: BlogPostLayoutProps) { = () => {,
     </div>,
   ),
 },
-export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {,
-}}}
+export default function BlogPostLayout({ postcontent }: BlogPostLayoutProps) {;
+  }}}

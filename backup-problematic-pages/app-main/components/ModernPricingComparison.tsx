@@ -109,7 +109,7 @@ const ModernPricingComparison: React.FC = () => {
     }
   ]
 
-  const getColorClasses = (color: string, isPopular: boolean = false) => {
+  const getColorClasses = (color: string, isPopular: boolean = false) : any => {
     const colors = {
       blue: isPopular 
         ? 'bg-blue-600 border-blue-600 text-white' 
@@ -165,7 +165,7 @@ const ModernPricingComparison: React.FC = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {pricingTiers.map((tier) => {
+          {pricingTiers.map((tier) : any => {
             const isPopular = tier.popular
             const currentPrice = isYearly ? tier.price.yearly : tier.price.monthly
             const monthlyEquivalent = isYearly ? tier.price.yearly / 12 : tier.price.monthly

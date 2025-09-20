@@ -36,7 +36,7 @@ const LocationMap: React.FC = () => {
 
       {/* Location Details */}
       <div className="p-8 bg-gray-50">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md: grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Office Hours</h3>
             <div className="space-y-2 text-gray-600">
@@ -100,6 +100,6 @@ const LocationMap: React.FC = () => {
       </div>
     </div>
   );
-};
+  };
 
 export default LocationMap;

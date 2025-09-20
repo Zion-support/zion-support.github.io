@@ -8,6 +8,6 @@ export default function Careers({ }: CareersProps) {,
     <div>,
       <h1>Careers</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

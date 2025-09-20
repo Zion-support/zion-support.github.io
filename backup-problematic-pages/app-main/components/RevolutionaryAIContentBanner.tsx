@@ -1,5 +1,5 @@
 import React from 'react'
-const RevolutionaryAIContentBanner: React.FC = () => {;
+const RevolutionaryAIContentBanner: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">RevolutionaryAIContentBanner</h3>

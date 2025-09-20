@@ -51,9 +51,8 @@ process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 // Polyfill URL.revokeObjectURL
 if (!URL.revokeObjectURL) {
   // @ts-ignore
-  URL.revokeObjectURL = jest.fn(),
-}
-
+  URL.revokeObjectURL = jest.fn();
+};
 // Polyfill BroadcastChannel
 if (!global.BroadcastChannel) {
   // @ts-ignore
@@ -130,7 +129,7 @@ jest.mock('firebase/app', () => ({
 jest.mock('firebase/firestore', () => {
   // Mock collection function to be available on the db instance (for v8 style)
   // and as a top-level export (for v9 style).
-  const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) => {
+  const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) : any => {
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath : pathIfV8,
     return {
       path: actualPath,
@@ -149,7 +148,7 @@ jest.mock('firebase/firestore', () => {
     },
   }),
 
-  const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {
+  const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) : any => {
     let basePath = '',
     if (typeof firestoreInstanceOrCollectionRef.path === 'string') {
       basePath = firestoreInstanceOrCollectionRef.path,
@@ -248,9 +247,8 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 
 // Polyfill for URL.revokeObjectURL
 if (typeof URL.revokeObjectURL === 'undefined') {
-  URL.revokeObjectURL = jest.fn(),
-}
-
+  URL.revokeObjectURL = jest.fn();
+};
 // Polyfill for BroadcastChannel
 if (typeof BroadcastChannel === 'undefined') {
   // @ts-expect-error - BroadcastChannel polyfill for test environment
@@ -271,9 +269,8 @@ if (typeof BroadcastChannel === 'undefined') {
 
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {
-  window.scrollTo = jest.fn(),
-}
-
+  window.scrollTo = jest.fn();
+};
 // Mock axios.create to return axios itself
 import axios from 'axios',
 // @ts-ignore
@@ -431,15 +428,14 @@ if (global.vi && !global.vi.restoreAllMocks) {
   window.performance = {},
 }
 if (typeof window !== 'undefined' && !window.performance.getEntriesByType) {
-  window.performance.getEntriesByType = jest.fn().mockReturnValue([]),
-}
+  window.performance.getEntriesByType = jest.fn().mockReturnValue([]);
+};
 if (typeof window !== 'undefined' && !window.performance.mark) {
-  window.performance.mark = jest.fn(),
-}
+  window.performance.mark = jest.fn();
+};
 if (typeof window !== 'undefined' && !window.performance.measure) {
-  window.performance.measure = jest.fn(),
-}
-
+  window.performance.measure = jest.fn();
+};
 // Mock @supabase/ssr createBrowserClient so components don't crash in tests
 jest.mock('@supabase/ssr', () => ({
   createBrowserClient: () => ({
@@ -468,5 +464,5 @@ if (global.vi) {
   // @ts-ignore
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest),
   // @ts-ignore
-  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest),
-}
+  if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest);
+  }

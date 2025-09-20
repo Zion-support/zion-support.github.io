@@ -52,9 +52,8 @@ exports.handler = async function(event, context) {
         newFormat: ['webpjpg', 'png'][Math.floor(Math.random() * 3)],
         sizeReduction: Math.floor(Math.random() * 80) + 20, // 20-100% reduction
         quality: Math.floor(Math.random() * 20) + 80 // 80-100% quality
-      }),
-    }
-    
+      });
+};
     // Simulate social media previews
     const socialPreviews = {
       'facebook-ready': Math.floor(updateResults.updatedPages * 0.95),
@@ -102,6 +101,6 @@ exports.handler = async function(event, context) {
         function: 'og-image-update-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

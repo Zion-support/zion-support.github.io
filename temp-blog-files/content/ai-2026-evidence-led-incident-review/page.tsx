@@ -4,7 +4,7 @@ export const metadata = {
   description:
     'Run blameless, evidence‑first incident reviews for agentic systems with eval traces, policy events, and corrective actions.'
 }
-export default function EvidenceLedIncidentReviewPage() {
+export default function EvidenceLedIncidentReviewPage() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <p className="text-sm text-rose-600 font-semibold mb-2">Incident Response</p>

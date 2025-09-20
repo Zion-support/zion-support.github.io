@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function AI20262030FuturePredictionsBreakthroughBanner() {,
+export default function AI20262030FuturePredictionsBreakthroughBanner() : any {,
   return (,
     <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-16 px-4">,
       <div className="max-w-7xl mx-auto">,
@@ -98,5 +98,5 @@ export default function AI20262030FuturePredictionsBreakthroughBanner() {,
           </div>,
         </div>,
       </div>,
-    </div>),
-}
+    </div>);
+  }

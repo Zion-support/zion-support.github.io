@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'site-404-map-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

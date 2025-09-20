@@ -20,51 +20,51 @@ const fixViteEnv = () => {
   const content = `/// <reference types="vite/client" />
 
 declare module '*.svg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.png' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.jpg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.jpeg' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.gif' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 declare module '*.webp' {
-  const content: string;
+  const content: string,
   export default content;
 }
 
 interface ImportMetaEnv {
-  readonly VITE_API_URL: string;
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_VERSION: string;
-  readonly VITE_ENVIRONMENT: 'development' | 'production' | 'test';
+  readonly VITE_API_URL: string,
+  readonly VITE_APP_TITLE: string,
+  readonly VITE_APP_DESCRIPTION: string,
+  readonly VITE_APP_VERSION: string,
+  readonly VITE_ENVIRONMENT: 'development' | 'production' | 'test',
   readonly PORT?: string;
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv,
 }
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: any[]) => void,
   }
 }
 
@@ -86,7 +86,7 @@ const fixFile = (filePath) => {
       // Fix broken React component syntax
       { pattern: /export\s+const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm, replacement: 'export const $1 = () => {' },
       // Fix missing semicolons after imports
-      { pattern: /import\s+([^;]+)\s*from\s+['"]([^'"]+)['"]\s*$/gm, replacement: 'import $1 from "$2";' },
+      { pattern: /import\s+([^,]+)\s*from\s+['"]([^'"]+)['"]\s*$/gm, replacement: 'import $1 from "$2",' },
       // Fix broken JSX syntax
       { pattern: /(\w+)\s*{\s*$/gm, replacement: '$1 {' },
       // Fix missing closing braces
@@ -129,7 +129,7 @@ const removeProblematicFiles = () => {
     if (fs.existsSync(filePath)) {
       try {
         fs.unlinkSync(filePath);
-        console.log(`✅ Removed problematic file: ${file}`);
+        console.log(`✅ Removed problematic file: ${file}`),
       } catch (error) {
         console.log(`⚠️  Could not remove ${file}: ${error.message}`);
       }
@@ -180,12 +180,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 @import 'tailwindcss/utilities';
 
 body {
-  margin: 0;
+  margin: 0,
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased,
+  -moz-osx-font-smoothing: grayscale,
 }
 
 code {
@@ -198,7 +198,7 @@ code {
   Object.entries(cleanFiles).forEach(([filePath, content]) => {
     const fullPath = path.join(process.cwd(), filePath);
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created clean file: ${filePath}`);
+    console.log(`✅ Created clean file: ${filePath}`),
   });
 };
 
@@ -240,12 +240,12 @@ criticalFiles.forEach(file => {
   if (fs.existsSync(filePath)) {
     if (fixFile(filePath)) {
       console.log(`✅ Fixed: ${file}`);
-    }
+};
   }
 });
 
 console.log('🎉 Critical fixes completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm run type-check" to verify TypeScript');
 console.log('2. Run "npm run build" to test the build');
-console.log('3. Run "npm run lint" to check for remaining issues');
+console.log('3. Run "npm run lint" to check for remaining issues');}}}}}}}}'"

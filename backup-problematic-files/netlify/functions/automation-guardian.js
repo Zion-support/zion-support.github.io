@@ -50,5 +50,5 @@ exports.handler = async () => {,
   step('automation-guardian', () => runNode('automation/automation-guardian-10min.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-},
-}
+};
+  }

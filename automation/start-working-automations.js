@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 /**,
  * Start Working Automations Script,
@@ -53,8 +53,8 @@ class WorkingAutomationStarter {,
       this.keepAlive(),
     } catch (error) {,
       logger.error('❌ Failed to start automation systems:', error),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   }
 ,
   async startCoreOrchestrator() {,
@@ -87,8 +87,8 @@ class WorkingAutomationStarter {,
       this.runningSystems.set('coreOrchestrator', orchestrator),
       logger.info('✅ Core Automation Orchestrator started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Core Orchestrator:', error.message),
-    }
+      logger.error('❌ Failed to start Core Orchestrator:', error.message);
+};
   }
 ,
   async startNetlifyAutomation() {,
@@ -103,8 +103,8 @@ class WorkingAutomationStarter {,
       this.runningSystems.set('netlifyMonitor', netlifyMonitor),
       logger.info('✅ Netlify Automation started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Netlify Automation:', error.message),
-    }
+      logger.error('❌ Failed to start Netlify Automation:', error.message);
+};
   }
 ,
   async startPerformanceMonitoring() {,
@@ -117,8 +117,8 @@ class WorkingAutomationStarter {,
       this.runningSystems.set('performanceMonitor', performanceMonitor),
       logger.info('✅ Performance Monitoring started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Performance Monitoring:', error.message),
-    }
+      logger.error('❌ Failed to start Performance Monitoring:', error.message);
+};
   }
 ,
   async startTaskAutomation() {,
@@ -131,8 +131,8 @@ class WorkingAutomationStarter {,
       this.runningSystems.set('dependencyUpdater', dependencyUpdater),
       logger.info('✅ Task Automation started'),
     } catch (error) {,
-      logger.error('❌ Failed to start Task Automation:', error.message),
-    }
+      logger.error('❌ Failed to start Task Automation:', error.message);
+};
   }
 ,
   printStatus() {,
@@ -140,13 +140,13 @@ class WorkingAutomationStarter {,
     logger.info('='.repeat(40)),
     for (const [name, system] of this.runningSystems) {,
       const status = system.isRunning ? '🟢 Running' : '🔴 Stopped',
-      logger.info(`${name}: ${status}`),
-    }
+      logger.info(`${name}: ${status}`);
+};
 ,
     const duration = Date.now() - this.startTime,
     logger.info(`\n⏱️  Startup time: ${duration}ms`),
-    logger.info(`📈 Systems running: ${this.runningSystems.size}`),
-  }
+    logger.info(`📈 Systems running: ${this.runningSystems.size}`);
+};
 ,
   keepAlive() {,
     logger.info('\n🔄 Keeping automation systems alive...'),
@@ -157,12 +157,12 @@ class WorkingAutomationStarter {,
       for (const [name, system] of this.runningSystems) {,
         try {,
           if (system.stop) {,
-            await system.stop(),
-          }
+            await system.stop();
+};
           logger.info(`✅ Stopped ${name}`),
         } catch (error) {,
-          logger.error(`❌ Error stopping ${name}:`, error.message),
-        }
+          logger.error(`❌ Error stopping ${name}:`, error.message);
+};
       }
 ,
       logger.info('👋 All systems stopped. Goodbye!'),
@@ -173,8 +173,8 @@ class WorkingAutomationStarter {,
       // Heartbeat,
       const runningCount = Array.from(this.runningSystems.values()).filter(s => s.isRunning).length,
       if (runningCount < this.runningSystems.size) {,
-        logger.warn(`⚠️  Some systems may have stopped. Running: ${runningCount}/${this.runningSystems.size}`),
-      }
+        logger.warn(`⚠️  Some systems may have stopped. Running: ${runningCount}/${this.runningSystems.size}`);
+};
     }, 300000), // Check every 5 minutes
   }
 }
@@ -185,7 +185,7 @@ if (require.main === module) {,
   starter.startAllWorkingSystems().catch((error) => {,
     logger.error('Failed to start automation systems:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = WorkingAutomationStarter,

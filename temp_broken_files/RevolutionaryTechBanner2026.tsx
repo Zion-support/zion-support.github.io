@@ -130,6 +130,6 @@ const RevolutionaryTechBanner2026: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-},
+  );
+  },
 export default RevolutionaryTechBanner2026,

@@ -55,12 +55,19 @@ clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
 } catch (error) {console.warn("CLS observer failed: ", error)}
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 }
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 <<<<<<< HEAD
 name;
 } catch (error) {
@@ -70,8 +77,6 @@ console.warn("CLS observer failed:", error)}
 
 startTiming(name: string): void {
 const metric: PerformanceMetric = {
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 name;,
 startTime: performance.now()};
 this.metrics.set(name; metric);
@@ -93,7 +98,7 @@ this.logMetric(name; duration);
 return duration;
 }
 
-measureFunction<T extends (...args: any[]) => any>(,
+measureFunction<T extends (...args: any[]) => any>(
 name: string; func: T): (...args: Parameters<T>) => ReturnType<T> {return (...args: Parameters<T>): ReturnType<T> => {
 this.startTiming(name);
 try {
@@ -159,4 +164,8 @@ cleanup: performanceMonitor.cleanup.bind(performanceMonitor),;
 
 export default performanceMonitor;
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

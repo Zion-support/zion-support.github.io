@@ -618,11 +618,11 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
 ],
 
 // Helper functions for service management
-export const getServiceById = (id: string) => {
+export const getServiceById = (id: string) : any => {
   return cuttingEdgeComprehensiveServices2027.find(service => service.id === id)
 },
 
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) : any => {
   return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)
 },
 
@@ -630,14 +630,14 @@ export const getPopularServices = () => {
   return cuttingEdgeComprehensiveServices2027.filter(service => service.popular),
 },
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
   return cuttingEdgeComprehensiveServices2027.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });
+  },
 
-export const searchServices = (query: string) => {
+export const searchServices = (query: string) : any => {
   const lowercaseQuery = query.toLowerCase(),
   return cuttingEdgeComprehensiveServices2027.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||

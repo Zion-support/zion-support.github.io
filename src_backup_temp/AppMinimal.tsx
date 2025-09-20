@@ -12,4 +12,4 @@ export default function AppMinimal(props: any) {return (,
       </div>',
     </div>,
   ),,',
-"}",
+"}",'

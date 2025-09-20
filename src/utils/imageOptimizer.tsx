@@ -20,7 +20,12 @@ if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
+=======
+return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
+<<<<<<< HEAD
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
 }
@@ -32,7 +37,7 @@ if() {
 const img = entry.target; as; HTMLImageElement;
 this.loadImage(img);
 };
-}),},{
+})},{
 rootMargin: "50px 0px"threshol;d: 0.0o1;
 }
 })},{
@@ -66,7 +71,7 @@ return src;
 // This; is; a placeholder; for; the optimization logic;
 let optimizedUrl = src;
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams();
-if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
+if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`}
 if (width || height || quality !== 80 || format !== "webp") { const params = new URLSearchParams(),;
 if (width) params.append("w"width.toString()),if (height) params.append("h"height.toString()),if (quality !== 80) params.append("q"quality.toString())if (format !== "webp") params.append("f"format);optimizedUrl = `${src}?${params.toString()}`,}
 ;
@@ -110,14 +115,11 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";
 });
-<<<<<<< HEAD
 widthheightformat: "webp";});
 const placeholderDataURL = blurDataURL || generateBlurDataURL()
 React.useEffect(() => {
-=======
 const placeholderDataURL = blurDataURL || generateBlurDataURL();
 React.useEffect(() => {;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 if() {;
 observeImage(imageRef);
 };
@@ -163,5 +165,9 @@ onError={handleError}
 );
 },export; default; ImageOptimizer,<//div><///div>}}
 =======
+<<<<<<< HEAD
 return ImageOptimizer.instance};private initializeIntersectionObserver(): void {
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

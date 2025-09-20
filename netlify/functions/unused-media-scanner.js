@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'unused-media-scanner',
         status: 'error'
       })
-    },
+    };
   }
 },

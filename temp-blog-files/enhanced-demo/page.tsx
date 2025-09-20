@@ -8,7 +8,7 @@ import PerformanceMonitor from '../../components/PerformanceMonitor';
 import EnhancedLoadingSpinner from '../../components/EnhancedLoadingSpinner';
 import EnhancedErrorBoundary from '../../components/EnhancedErrorBoundary';
 import InteractiveAICalculator from '../../components/InteractiveAICalculator';
-export default function EnhancedDemoPage() {
+export default function EnhancedDemoPage() : any {
   return (
     <EnhancedErrorBoundary>
       <div>

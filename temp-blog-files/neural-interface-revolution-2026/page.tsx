@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
 }
-export default function NeuralInterfaceRevolution() {
+export default function NeuralInterfaceRevolution() : any {
   return (
     <div>
       <div>

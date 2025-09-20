@@ -95,8 +95,8 @@ const NextGenAIShowcase2026 = () => {,
       const interval = setInterval(() => {,
         setActiveDemo((prev) => (prev + 1) % demos.length),
       }4000),
-      return () => clearInterval(interval),
-    }
+      return () => clearInterval(interval);
+};
   }[isPlayingdemos.length]),
   useEffect(() => {,
     // Simulate AI thinking animation,
@@ -232,8 +232,8 @@ const NextGenAIShowcase2026 = () => {,
                   key={index}
                   onClick={() => {,
                     setActiveDemo(index),
-                    setIsPlaying(false),
-                  }}
+                    setIsPlaying(false);
+  }}
                   className={`p-3 rounded-full transition-all duration-300 ${,
                     activeDemo === index,
                       ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg scale-110',

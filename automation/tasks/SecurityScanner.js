@@ -46,20 +46,20 @@ class SecurityScanner {,
       },
       // Run different types of scans,
       if (this.config.scanTypes.includes('npm')) {,
-        scanResults.npmVulnerabilities = await this.scanNpmVulnerabilities(),
-      }
+        scanResults.npmVulnerabilities = await this.scanNpmVulnerabilities();
+};
 ,
       if (this.config.scanTypes.includes('code')) {,
-        scanResults.codeIssues = await this.scanCodeSecurity(),
-      }
+        scanResults.codeIssues = await this.scanCodeSecurity();
+};
 ,
       if (this.config.scanTypes.includes('secrets')) {,
-        scanResults.secretsFound = await this.scanForSecrets(),
-      }
+        scanResults.secretsFound = await this.scanForSecrets();
+};
 ,
       if (this.config.scanTypes.includes('dependencies')) {,
-        scanResults.dependencyIssues = await this.scanDependencies(),
-      }
+        scanResults.dependencyIssues = await this.scanDependencies();
+};
 ,
       // Generate summary,
       scanResults.summary = this.generateSummary(scanResults),
@@ -70,13 +70,13 @@ class SecurityScanner {,
       const highSeverityIssues = this.vulnerabilities.filter(v => v.severity === 'high' || v.severity === 'critical'),
       if (highSeverityIssues.length > 0) {,
         logger.warn(`⚠️ Found ${highSeverityIssues.length} high-severity security issues`),
-        await this.handleHighSeverityIssues(highSeverityIssues),
-      }
+        await this.handleHighSeverityIssues(highSeverityIssues);
+};
 ,
       // Auto-fix if enabled and issues are low-medium severity,
       if (this.config.autoFix) {,
-        await this.autoFixIssues(scanResults),
-      }
+        await this.autoFixIssues(scanResults);
+};
 ,
       // Generate report,
       await this.generateSecurityReport(scanResults),
@@ -109,8 +109,8 @@ class SecurityScanner {,
             title: vuln.title || 'Unknown vulnerability',
             description: vuln.description || 'No description available',
             recommendation: vuln.recommendation || 'Update package',
-            via: vuln.via || []}),
-        }
+            via: vuln.via || []});
+};
       }
 ,
       logger.info(`📦 Found ${vulnerabilities.length} npm vulnerabilities`),
@@ -131,8 +131,8 @@ class SecurityScanner {,
         const fileIssues = this.analyzeCodeSecurity(content, file),
         issues.push(...fileIssues),
       } catch (error) {,
-        logger.warn(`⚠️ Could not read file ${file}: ${error.message}`),
-      }
+        logger.warn(`⚠️ Could not read file ${file}: ${error.message}`);
+};
     }
 ,
     logger.info(`🔍 Found ${issues.length} code security issues`),
@@ -151,18 +151,18 @@ class SecurityScanner {,
           if (stat.isDirectory()) {,
             // Skip node_modules, .git, etc.,
             if (!['node_modules.gitdistbuild', 'coverage'].includes(item)) {,
-              await scanDirectory(fullPath),
-            }
+              await scanDirectory(fullPath);
+};
           } else if (stat.isFile()) {,
             const ext = path.extname(item),
             if (extensions.includes(ext)) {,
-              files.push(fullPath),
-            }
+              files.push(fullPath);
+};
           }
         }
       } catch (error) {,
-        logger.warn(`⚠️ Could not scan directory ${dir}: ${error.message}`),
-      }
+        logger.warn(`⚠️ Could not scan directory ${dir}: ${error.message}`);
+};
     },
     await scanDirectory(process.cwd()),
     return files,
@@ -187,8 +187,8 @@ class SecurityScanner {,
           line: this.findLineNumber(content, matches[0]),
           severity: 'high',
           description: 'Hardcoded secret found',
-          recommendation: 'Move secrets to environment variables'}),
-      }
+          recommendation: 'Move secrets to environment variables'});
+};
     }),
     // Check for SQL injection patterns,
     const sqlPatterns = [,
@@ -204,8 +204,8 @@ class SecurityScanner {,
           line: this.findLineNumber(content, matches[0]),
           severity: 'high',
           description: 'Potential SQL injection',
-          recommendation: 'Use parameterized queries'}),
-      }
+          recommendation: 'Use parameterized queries'});
+};
     }),
     return issues,
   }
@@ -247,12 +247,12 @@ class SecurityScanner {,
           count: matches.length,
           severity: 'critical',
           description: 'Secret found in code',
-          recommendation: 'Remove secrets from code and use environment variables'}),
-          }
+          recommendation: 'Remove secrets from code and use environment variables'});
+};
         }),
       } catch (error) {,
-        logger.warn(`⚠️ Could not read file ${file}: ${error.message}`),
-      }
+        logger.warn(`⚠️ Could not read file ${file}: ${error.message}`);
+};
     }
 ,
     logger.info(`🔐 Found ${secrets.length} potential secrets`),
@@ -273,8 +273,8 @@ class SecurityScanner {,
       const vulnerablePackages = await this.checkForVulnerablePackages(dependencies),
       issues.push(...vulnerablePackages),
     } catch (error) {,
-      logger.error('❌ Failed to scan dependencies:', error.message),
-    }
+      logger.error('❌ Failed to scan dependencies:', error.message);
+};
 ,
     logger.info(`📋 Found ${issues.length} dependency issues`),
     return issues,
@@ -298,12 +298,12 @@ class SecurityScanner {,
               created: data.time.created,
               severity: 'medium',
               description: 'Package is older than 2 years',
-              recommendation: 'Consider updating to a newer version'}),
-          }
+              recommendation: 'Consider updating to a newer version'});
+};
         }
       } catch (error) {,
-        logger.debug(`Could not check package ${packageName}: ${error.message}`),
-      }
+        logger.debug(`Could not check package ${packageName}: ${error.message}`);
+};
     }
 ,
     return issues,
@@ -355,13 +355,13 @@ class SecurityScanner {,
     await this.createSecurityReport(issues),
     // Generate recommendations,
     const recommendations = this.generateRecommendations(issues),
-    logger.info('📋 Security recommendations:', recommendations),
-  }
+    logger.info('📋 Security recommendations:', recommendations);
+};
 ,
   async sendSecurityAlert(issues) {,
     // This would send alerts via Slack, email, etc.,
-    logger.warn('🚨 Security alert would be sent here'),
-  }
+    logger.warn('🚨 Security alert would be sent here');
+};
 ,
   async createSecurityReport(issues) {,
     const report = {,
@@ -374,25 +374,25 @@ class SecurityScanner {,
     },
     const reportPath = path.join(process.cwd(), 'security-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
-    logger.info(`📄 Security report saved to ${reportPath}`),
-  }
+    logger.info(`📄 Security report saved to ${reportPath}`);
+};
 ,
   generateRecommendations(issues) {,
     const recommendations = [],
     const secretIssues = issues.filter(i => i.type === 'secret' || i.type === 'hardcoded_secret'),
     if (secretIssues.length > 0) {,
-      recommendations.push('Move all secrets to environment variables'),
-    }
+      recommendations.push('Move all secrets to environment variables');
+};
 ,
     const sqlIssues = issues.filter(i => i.type === 'sql_injection'),
     if (sqlIssues.length > 0) {,
-      recommendations.push('Use parameterized queries to prevent SQL injection'),
-    }
+      recommendations.push('Use parameterized queries to prevent SQL injection');
+};
 ,
     const npmIssues = issues.filter(i => i.type === 'npm'),
     if (npmIssues.length > 0) {,
-      recommendations.push('Update vulnerable npm packages'),
-    }
+      recommendations.push('Update vulnerable npm packages');
+};
 ,
     return recommendations,
   }
@@ -409,17 +409,17 @@ class SecurityScanner {,
           fixedCount++,
         }
       } catch (error) {,
-        logger.warn(`⚠️ Could not auto-fix issue: ${error.message}`),
-      }
+        logger.warn(`⚠️ Could not auto-fix issue: ${error.message}`);
+};
     }
 ,
-    logger.info(`🔧 Auto-fixed ${fixedCount} issues`),
-  }
+    logger.info(`🔧 Auto-fixed ${fixedCount} issues`);
+};
 ,
   async removeSensitiveLogs(filePath) {,
     // This would remove or mask sensitive information in logs,
-    logger.info(`🔧 Removing sensitive logs from ${filePath}`),
-  }
+    logger.info(`🔧 Removing sensitive logs from ${filePath}`);
+};
 ,
   async generateSecurityReport(scanResults) {,
     const report = {,
@@ -428,8 +428,8 @@ class SecurityScanner {,
       details: scanResults},
     const reportPath = path.join(process.cwd(), 'security-scan-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
-    logger.info(`📄 Security scan report saved to ${reportPath}`),
-  }
+    logger.info(`📄 Security scan report saved to ${reportPath}`);
+};
 ,
   getStatus() {,
     return {,
@@ -471,8 +471,8 @@ Examples: node SecurityScanner.js --run,
   } else if (args.includes('--status')) {,
     console.log(JSON.stringify(scanner.getStatus(), null, 2)),
   } else {,
-    console.log('Use --help for usage information'),
+    console.log('Use --help for usage information');
   }
 }
 ,
-module.exports = SecurityScanner,))
+module.exports = SecurityScanner,))"

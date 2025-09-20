@@ -57,12 +57,12 @@ full name,
 professional title,
 profile picture url,
 hourly rate,
-bio
+bio,
 years experience,
 key projects,
-skills
+skills,
 location,
-availability
+availability,
 is verified) `)
 }finally {
   

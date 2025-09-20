@@ -126,8 +126,8 @@ const tsHelpers = {,
       function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
       function step(result:any) { result.done ? resolve(result.value) :adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next()),
-    }),
-  }
+    });
+};
 },
 ,
 // Inject TypeScript helpers into global scope,
@@ -175,8 +175,8 @@ if (typeof window !== 'undefined') {,
     ,
     // Call original error handler for other errors,
     if (originalOnError) {,
-      return originalOnError.call(this, message, source, lineno, colno, error),
-    }
+      return originalOnError.call(this, message, source, lineno, colno, error);
+};
     return false,
   },
 ,
@@ -194,8 +194,8 @@ if (typeof window !== 'undefined') {,
     ,
     // Call original handler for other rejections,
     if (originalOnUnhandledRejection) {,
-      return originalOnUnhandledRejection.call(this, event),
-    }
+      return originalOnUnhandledRejection.call(this, event);
+};
   },
 }
 ,
@@ -215,8 +215,8 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {,
     if (typeof (global as any)[helper] === 'undefined') {,
       (global as any)[helper] = (tsHelpers as any)[helper],
     }
-  }),
-}
+  });
+};
 ,
 // Export a verification function for testing,
 export const verifyPolyfills = () => {,
@@ -232,8 +232,8 @@ export const verifyPolyfills = () => {,
 ,
 // Auto-verify in development,
 if (process.env.NODE_ENV === 'development') {,
-  setTimeout(() => verifyPolyfills(), 100),
-}
+  setTimeout(() => verifyPolyfills(), 100);
+};
 ,export default {}, // Ensure this can be imported as a module,
 /* eslint-disable @typescript-eslint/no-explicit-any */ /* eslint-disable @typescript-eslint/no-unused-vars */ /* eslint-disable @typescript-eslint/no-this-alias */ /* eslint-disable prefer-const */ /** * Serverless Environment Polyfill * * - Missing global objects * - Webpack chunk loading issues * - TypeScript helper function issues * * This runs as the VERY FIRST script before any other code loads. */ //Type declarations for global augmentation ,
 }
@@ -250,8 +250,8 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {,
 }) ,
 }return new (P || (P = Promise) ) (function (resolve: any, reject: any) {,
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () ),
-}),
-}
+});
+};
 },
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {',
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {,
@@ -266,5 +266,5 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {,
   ',
 }//Node.js environment polyfills (for SSR/build time) if (typeof global !== 'undefined'&& typeof window === 'undefined') {',
   //Ensure Node.js global has necessary polyfills if (typeof global.self === 'undefined') {,
-  return Object.values (checks) .every (Boolean),
-},
+  return Object.values (checks) .every (Boolean);
+  },'

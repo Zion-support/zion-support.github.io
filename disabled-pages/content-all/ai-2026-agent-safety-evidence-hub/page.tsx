@@ -3,7 +3,7 @@ export const metadata = {
   title: 'AI 2026: Agent Safety Evidence Hub',
   description: 'Centralize eval results, incidents, and approvals to prove safety at scale.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900">AI 2026: Agent Safety Evidence Hub</h1>

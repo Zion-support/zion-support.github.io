@@ -2,15 +2,15 @@ import { Router } from 'express',
 import { body, validationResult } from 'express-validator',
 const router = Router(),
 // Validation middleware,
-const validate = (req: any, res: any, next: any) => {,
+const validate = (req: any, res: any, next: any) : any => {,
   const errors = validationResult(req),
   if (!errors.isEmpty()) {,
-    return res.status(400).json({ errors: errors.array() }),
-  }
+    return res.status(400).json({ errors: errors.array() });
+};
   next(),
 },
 // GET /api/users,
-router.get('/users', async (_req, res) => {,
+router.get('/users', async (_req, res) : any => {,
   try {,
     // Example data - replace with actual database query,
     const users = [,
@@ -24,15 +24,15 @@ router.get('/users', async (_req, res) => {,
   } catch (error) {,
     res.status(500).json({,
       success: false,
-      error: 'Failed to fetch users'}),
-  }
+      error: 'Failed to fetch users'});
+};
 }),
 // POST /api/users,
 router.post('/users', [,
   body('name').isLength({ min: 2 }).trim().escape(),
   body('email').isEmail().normalizeEmail(),
   validate
-], async (req: any, res: any) => {,
+], async (req: any, res: any) : any => {,
   try {,
     const { name, email } = req.body,
     // Example user creation - replace with actual database operation,
@@ -48,11 +48,11 @@ router.post('/users', [,
   } catch (error) {,
     res.status(500).json({,
       success: false,
-      error: 'Failed to create user'}),
-  }
+      error: 'Failed to create user'});
+};
 }),
 // GET /api/users/:id,
-router.get('/users/:id', async (req, res) => {,
+router.get('/users/:id', async (req, res) : any => {,
   try {,
     const { id } = req.params,
     // Example user lookup - replace with actual database query,
@@ -64,8 +64,8 @@ router.get('/users/:id', async (req, res) => {,
     if (!user) {,
       return res.status(404).json({,
         success: false,
-        error: 'User not found'}),
-    }
+        error: 'User not found'});
+};
 ,
     return res.json({,
       success: true,
@@ -73,7 +73,7 @@ router.get('/users/:id', async (req, res) => {,
   } catch (error) {,
     return res.status(500).json({,
       success: false,
-      error: 'Failed to fetch user'}),
+      error: 'Failed to fetch user'});
   }
 }),
 export default router,

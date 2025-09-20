@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react',
 
-export function useUnreadNotificationsCount() {
+export function useUnreadNotificationsCount() : any {
   const [unreadCount, setUnreadCount] = useState(0),
 
   useEffect(() => {
@@ -20,5 +20,5 @@ export function useUnreadNotificationsCount() {
     return () => clearInterval(interval),
   }, []),
 
-  return unreadCount,
-}
+  return unreadCount;
+  }

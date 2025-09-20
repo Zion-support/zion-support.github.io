@@ -89,7 +89,7 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {,
             </div>,
             {/* Center - Rotating Stats */}
             <div className="hidden md: flex items-center gap-8">,
-              {stats.map((statindex) => {,
+              {stats.map((statindex) : any => {,
                 const Icon = stat.icon,
                 return (,
                   <div,
@@ -101,8 +101,8 @@ const SuccessStoriesShowcase2025PromotionBanner = () => {,
                     <Icon className="w-8 h-8 mx-auto mb-2" />,
                     <div className="text-2xl font-bold">{stat.value}</div>,
                     <div className="text-xs opacity-80">{stat.label}</div>,
-                  </div>),
-              })}
+                  </div>);
+  })}
             </div>,
             {/* Right Content - CTA Buttons */}
             <div className="flex flex-col sm: flex-row items-center gap-3">,

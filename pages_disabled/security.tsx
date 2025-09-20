@@ -5,7 +5,7 @@ import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, Map
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function Security() {
+export default function Security() : any {
   const securityMeasures = [
     {
       id: 'data-protection',
@@ -63,7 +63,7 @@ export default function Security() {
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
-  ];
+  ],
 
   return (
     <>
@@ -269,8 +269,7 @@ export default function Security() {
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                If you discover a security vulnerability, please report it to our security team immediately:
-              </p>
+                If you discover a security vulnerability, please report it to our security team immediately: </p>
               
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-center">
@@ -305,4 +304,4 @@ export default function Security() {
       </div>
     </>
   );
-}
+  }'

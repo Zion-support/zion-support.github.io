@@ -52,6 +52,6 @@ exports.handler = async function(event, context) {
         function: 'front-visionary-expander',
         status: 'error'
       })
-    },
+    };
   }
 },

@@ -17,8 +17,8 @@ exports.handler = async function(event, context) {,
     const paths = new Set(['/']),
     for (const page of Object.keys(index.pages||{})) {,
       paths.add(page),
-      for (const ln of (index.pages[page].links||[])) paths.add(ln),
-    }
+      for (const ln of (index.pages[page].links||[])) paths.add(ln);
+};
 ,
     // Limit to avoid very long runs,
     const LIMIT = parseInt(process.env.DEEP_LINK_LIMIT || '200', 10),
@@ -30,8 +30,8 @@ exports.handler = async function(event, context) {,
         const res = await fetch(url, { method: 'HEAD' }),
         results.push({ path: p, status: res.status, ok: res.ok }),
       } catch (e) {,
-        results.push({ path: p, status: 0, ok: false, error: String(e) }),
-      }
+        results.push({ path: p, status: 0, ok: false, error: String(e) });
+};
     }
 ,
     const failing = results.filter(r => !r.ok),
@@ -80,12 +80,12 @@ exports.handler = async function(event, context) {,
           method: 'POST',
           headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/json' },
           body: JSON.stringify({ title, body, labels: ['automationlink-health'] })
-        }),
-      }
+        });
+};
     }
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, report: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

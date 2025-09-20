@@ -114,9 +114,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Create ticket API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Create ticket API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return data,
     } catch (error) {
@@ -134,9 +133,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Get ticket API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Get ticket API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return {
         ...data,
@@ -165,9 +163,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Update ticket API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Update ticket API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return {
         ...data,
@@ -196,9 +193,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Add message API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Add message API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return {
         ...data,
@@ -220,9 +216,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`AI response API error: ${response.statusText}`),
-      }
-
+        throw new Error(`AI response API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return {
         ...data,
@@ -243,9 +238,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Get customer profile API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Get customer profile API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return {
         ...data,
@@ -266,9 +260,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Get metrics API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Get metrics API error: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       console.error('Error getting metrics:', error),
@@ -286,9 +279,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Search tickets API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Search tickets API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return data.tickets.map((ticket: any) => ({
         ...ticket,
@@ -316,9 +308,8 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Auto assign tickets API error: ${response.statusText}`);
+};
       return await response.json(),
     } catch (error) {
       console.error('Error auto-assigning tickets:', error),
@@ -337,15 +328,14 @@ export class AICustomerServiceService {
       }),
 
       if (!response.ok) {
-        throw new Error(`Generate report API error: ${response.statusText}`),
-      }
-
+        throw new Error(`Generate report API error: ${response.statusText}`);
+};
       const data = await response.json(),
       return data.downloadUrl,
     } catch (error) {
       console.error('Error generating report:', error),
-      throw error,
-    }
+      throw error;
+  }
   }
 }
 

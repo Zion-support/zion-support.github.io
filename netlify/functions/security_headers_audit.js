@@ -15,8 +15,8 @@ exports.handler = async function(event, context) {,
         for (const k of must) present[k] = res.headers.has(k),
         results.push({ route, status: res.status, present }),
       } catch (e) {,
-        results.push({ route, status: 0, error: String(e) }),
-      }
+        results.push({ route, status: 0, error: String(e) });
+};
     }
 ,
     const payload = { origin, results, generatedAt: new Date().toISOString() },
@@ -53,6 +53,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

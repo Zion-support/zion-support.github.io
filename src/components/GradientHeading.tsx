@@ -5,6 +5,7 @@ import React from &apos;react&apos; import { cn } from &apos,@/lib / utils&apos,
 import _React from "react",;
 import { cn } from "@/lib / utils,";;
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 
 interface GradientHeadingProps {
   children: React.ReactNode;
@@ -12,6 +13,11 @@ interface GradientHeadingProps {
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl";
 =======
 import React from 'react';
+=======
+=======
+import React from 'react';
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 
 interface GradientHeadingProps {
   title: string;
@@ -56,5 +62,13 @@ export function GradientHeading({
       )}
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

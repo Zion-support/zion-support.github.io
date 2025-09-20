@@ -1,5 +1,5 @@
 import React from 'react'
-const RevolutionaryContent2025Showcase: React.FC = () => {;
+const RevolutionaryContent2025Showcase: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">RevolutionaryContent2025Showcase</h3>

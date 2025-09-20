@@ -39,6 +39,6 @@ exports.handler = async function(event, context) {
         function: 'image-optimizer-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

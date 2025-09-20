@@ -124,8 +124,7 @@ export const errorTracker = new ErrorTracker();
 // Global error handler,
 if (=> {
     errorTracker.trackError(event.error, {
-colno: event.colno,
-});
+colno: event.colno});
   });
   window.addEventListener('unhandledrejection', (event) => {
     errorTracker.trackError(new Error(event.reason), {
@@ -201,8 +200,7 @@ getPoolStatus() {
       total: this.connections.length,
 available: this.availableConnections.length,
 used: this.usedConnections.size,
-max: this.maxConnections,
-}
+max: this.maxConnections}
   }
 export const connectionPool = new ConnectionPool();`
 fs.writeFileSync(fullPath, content);

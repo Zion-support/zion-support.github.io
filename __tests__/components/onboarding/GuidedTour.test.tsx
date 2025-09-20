@@ -4,7 +4,7 @@ import { GuidedTour } from '@/components/onboarding/GuidedTour',
 import { describe, test, expect, beforeEach } from 'vitest',
 
 // Helper to add target elements to the DOM
-function setupTargets() {
+function setupTargets() : any {
   const profile = document.createElement('button'),
   profile.id = 'profile-link',
   profile.textContent = 'profile',
@@ -13,9 +13,8 @@ function setupTargets() {
   const notif = document.createElement('a'),
   notif.id = 'notifications-link',
   notif.textContent = 'notifications',
-  document.body.appendChild(notif),
-}
-
+  document.body.appendChild(notif);
+};
 describe('GuidedTour', () => {
   beforeEach(() => {
     document.body.innerHTML = '',

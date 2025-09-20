@@ -47,6 +47,6 @@ exports.handler = async function(event, context) {
         function: 'todo-scanner-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

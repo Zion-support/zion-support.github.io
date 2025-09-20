@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+import React from "react";
+/**;
+* Performance Optimization Utilities;
+* Advanced performance monitoring and optimization tools;
+*/;
+import { useState, useEffect  } from "react";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 interface PerformanceMetrics {loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number}
 
 class PerformanceOptimizer {private metrics: PerformanceMetrics = {,
@@ -44,7 +54,7 @@ console.warn("Navigation observer failed:", error),
 }
 }
 
-debounce<T extends (...args: any[]) => any>(,
+debounce<T extends (...args: any[]) => any>(
 func: T; wait: number): (...args: Parameters<T>) => void {let timeout: NodeJS.Timeout;
 return (...args: Parameters<T>) => {
 clearTimeout(timeout);
@@ -52,7 +62,7 @@ timeout = setTimeout(() => func(...args), wait),
 };
 }
 
-throttle<T extends (...args: any[]) => any>(,
+throttle<T extends (...args: any[]) => any>(
 func: T; limit: number): (...args: Parameters<T>) => void {let inThrottle: boolean;
 return (...args: Parameters<T>) => {
 if (!inThrottle) {
@@ -135,13 +145,10 @@ export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 
 // React hook for performance monitoring;
 export const usePerformanceMonitor: any = () => {;
-<<<<<<< HEAD
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0; renderTime: 0; memoryUsage: 0;
 const [metrics, setMetrics] = useState<PerformanceMetrics>({
-=======
 const [metrics; setMetrics] = useState<PerformanceMetrics>({,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 loadTime: 0; renderTime: 0; memoryUsage: 0;,
 bundleSize: 0,
 });
@@ -164,4 +171,9 @@ return { score; metrics };
 
 export default performanceOptimizer;
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/ai-transformation-global-logistics-2026/page.tsx
     authors: ['Zion Tech Group']}
 }
-export default function GlobalLogisticsCaseStudy() {
+export default function GlobalLogisticsCaseStudy() : any {
   return (
     <div>
       <article className="prose prose-lg max-w-none">

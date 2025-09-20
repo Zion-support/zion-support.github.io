@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Cursor Auto-Save Automation,
@@ -43,8 +43,8 @@ class CursorAutoSave {,
     setInterval(() => {,
       this.triggerAutoSave(),
     }, 30000), // Every 30 seconds,
-    logger.info('✅ Cursor Auto-Save Automation is running'),
-  }
+    logger.info('✅ Cursor Auto-Save Automation is running');
+};
 ,
   watchProjectFiles() {,
     const projectRoot = process.cwd(),
@@ -59,8 +59,8 @@ class CursorAutoSave {,
     watchDirs.forEach(dir => {,
       const dirPath = path.join(projectRoot, dir),
       if (fs.existsSync(dirPath)) {,
-        this.watchDirectory(dirPath),
-      }
+        this.watchDirectory(dirPath);
+};
     }),
     // Watch root files,
     const rootFiles = [,
@@ -72,23 +72,23 @@ class CursorAutoSave {,
     rootFiles.forEach(file => {,
       const filePath = path.join(projectRoot, file),
       if (fs.existsSync(filePath)) {,
-        this.watchFile(filePath),
-      }
-    }),
-  }
+        this.watchFile(filePath);
+};
+    });
+};
 ,
   watchDirectory(dirPath) {,
     try {,
       fs.watch(dirPath, { recursive: true }, (eventType, filename) => {,
         if (filename && this.shouldWatchFile(filename)) {,
           const fullPath = path.join(dirPath, filename),
-          this.onFileChange(fullPath, eventType),
-        }
+          this.onFileChange(fullPath, eventType);
+};
       }),
       logger.info(`👀 Watching directory: ${dirPath}`),
     } catch (error) {,
-      logger.info(`⚠️  Could not watch directory ${dirPath}: ${error.message}`),
-    }
+      logger.info(`⚠️  Could not watch directory ${dirPath}: ${error.message}`);
+};
   }
 ,
   watchFile(filePath) {,
@@ -98,22 +98,22 @@ class CursorAutoSave {,
       }),
       logger.info(`👀 Watching file: ${filePath}`),
     } catch (error) {,
-      logger.info(`⚠️  Could not watch file ${filePath}: ${error.message}`),
-    }
+      logger.info(`⚠️  Could not watch file ${filePath}: ${error.message}`);
+};
   }
 ,
   shouldWatchFile(filename) {,
     const extensions = ['.js', .jsx', .ts', .tsx', .json', .css', .scss', .md'],
-    return extensions.some(ext => filename.endsWith(ext)),
-  }
+    return extensions.some(ext => filename.endsWith(ext));
+};
 ,
   onFileChange(filePath, eventType) {,
     if (eventType === 'change') {,
       logger.info(`📝 File changed: ${filePath}`),
       // Debounce the auto-save,
       if (this.debounceTimers.has(filePath)) {,
-        clearTimeout(this.debounceTimers.get(filePath)),
-      }
+        clearTimeout(this.debounceTimers.get(filePath));
+};
 ,
       this.debounceTimers.set(filePath, setTimeout(() => {,
         this.triggerAutoSave(),
@@ -135,10 +135,10 @@ class CursorAutoSave {,
         logger.info('📦 Changes detected, auto-saving...'),
         this.autoSaveChanges(),
       } else {,
-        logger.info('✅ No changes to save'),
-      }
-    }),
-  }
+        logger.info('✅ No changes to save');
+};
+    });
+};
 ,
   autoSaveChanges() {,
     // Add all changes,
@@ -169,8 +169,8 @@ class CursorAutoSave {,
           logger.info('🚀 Changes pushed to remote'),
         }),
       }),
-    }),
-  }
+    });
+};
 ,
   stop() {,
     logger.info('🛑 Stopping Cursor Auto-Save Automation...'),
@@ -178,8 +178,8 @@ class CursorAutoSave {,
     // Clear all debounce timers,
     this.debounceTimers.forEach(timer => clearTimeout(timer)),
     this.debounceTimers.clear(),
-    logger.info('✅ Cursor Auto-Save Automation stopped'),
-  }
+    logger.info('✅ Cursor Auto-Save Automation stopped');
+};
 }
 ,
 // Run the auto-save system,
@@ -194,7 +194,7 @@ if (require.main === module) {,
     autoSave.stop(),
     process.exit(0),
   }),
-  autoSave.start(),
-}
+  autoSave.start();
+  }
 ,
 module.exports = CursorAutoSave,

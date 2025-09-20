@@ -3,7 +3,7 @@ export const metadata = {
   title: 'AI 2026: Evaluation Harness Starter Kit'
   description: 'Ready-to-run scenarios, metrics, and CI hooks to begin eval-driven development.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-gray-900">AI 2026: Evaluation Harness Starter Kit</h1>

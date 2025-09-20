@@ -912,20 +912,20 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ],
 
 // Helper function to get services by category
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] : any => {
   if (category === 'All') {
     return ALL_EXPANDED_SERVICES_2027
   }
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category),
-},
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
+  },
 
 // Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {
+export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] : any => {
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)
 },
 
 // Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[] => {
+export const searchExpandedServices = (query: string): ExpandedService2027[] : any => {
   const lowercaseQuery = query.toLowerCase(),
   return ALL_EXPANDED_SERVICES_2027.filter(service => 
     service.name.toLowerCase().includes(lowercaseQuery) ||

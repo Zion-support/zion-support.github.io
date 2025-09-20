@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Practical, evaluation-first checklists for safe, reliable, and cost-effective autonomous agent lifecycles in production.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-16">

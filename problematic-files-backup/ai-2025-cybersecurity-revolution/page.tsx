@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover how AI is revolutionizing cybersecurity in 2025. Learn about advanced threat detection, automated response systems, and next-generation security solutions.',
   keywords: ['AI CybersecurityThreat DetectionSecurity AutomationAI Security', '2025 Trends']
 }
-export default function AICybersecurity2025Page() {
+export default function AICybersecurity2025Page() : any {
   return (
     <div>
       <SEO

@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.',
   keywords: ['AI implementationenterprise AI strategyAI white paperAI best practices', 'AI transformation frameworkAI implementation guide']
 }
-export default function AIImplementationWhitePaper2025() {
+export default function AIImplementationWhitePaper2025() : any {
   return (
     <ErrorBoundary>
       <SEO

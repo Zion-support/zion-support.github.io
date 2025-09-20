@@ -10,7 +10,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function CaseStudiesPage() {
+export default function CaseStudiesPage() : any {
   const caseStudies = [
     {
       id: 1,
@@ -162,4 +162,5 @@ const case-studies: React.FC = () => {
   )
 },
 
-export default case-studies,
+export default case-studies;
+  }'

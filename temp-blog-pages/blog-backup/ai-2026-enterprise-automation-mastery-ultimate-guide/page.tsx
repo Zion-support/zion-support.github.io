@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     tags: ['AIEnterprise AutomationBusiness TransformationAI 2026']
   }
 }
-export default function AI2026EnterpriseAutomationGuide() {
+export default function AI2026EnterpriseAutomationGuide() : any {
   return (
     <div>
       <SEO

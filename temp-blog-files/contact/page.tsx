@@ -3,7 +3,7 @@ export const metadata = {
   title: 'Contact | Zion Tech Group'
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.'
 }
-export default function ContactPage() {
+export default function ContactPage() : any {
   return (
     <div>
       <div>
@@ -21,3 +21,4 @@ export default function ContactPage() {
               </div>
             </div>
             <div>
+})

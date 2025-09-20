@@ -10,7 +10,7 @@ export const metadata = {
 		'speech AIenterprise automation'
 	]
 }
-export default function EnterpriseMultimodalAgentsBlueprint2026() {
+export default function EnterpriseMultimodalAgentsBlueprint2026() : any {
 	return (
 		<ErrorBoundary>
 			<SEO

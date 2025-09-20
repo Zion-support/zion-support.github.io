@@ -94,9 +94,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.trends || [],
     } catch (error) {
@@ -117,9 +116,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.competitors || [],
     } catch (error) {
@@ -140,9 +138,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.segments || [],
     } catch (error) {
@@ -163,9 +160,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.report,
     } catch (error) {
@@ -183,9 +179,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.trends || [],
     } catch (error) {
@@ -206,9 +201,8 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.downloadUrl,
     } catch (error) {
@@ -229,15 +223,14 @@ export class AIMarketResearchService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.scheduleId,
     } catch (error) {
       console.error('Error scheduling report:', error),
-      throw error,
-    }
+      throw error;
+  }
   }
 }
 

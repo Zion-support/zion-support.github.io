@@ -31,8 +31,7 @@ class ComprehensiveMergeResolver {
       const result = execSync(command, {
         "encoding": 'utf8'
         "stdio": 'pipe'
-        ...options,
-});
+        ...options});
       return { "success": true, "output": result }} catch (error) {
       this.log(`❌ Command "failed": ${error.message}`);
       return { "success": false, "error": error.message }}
@@ -79,13 +78,11 @@ class ComprehensiveMergeResolver {
                 content.includes('                content.includes(' ')) {
               conflictFiles.push(itemPath)}
           } catch (error) {
-            // Skip files that can't be read,
-}
+            // Skip files that can't be read}
         }
       }
     } catch (error) {
-      // Skip directories that can't be read,
-}
+      // Skip directories that can't be read}
   }
   async resolveConflictFile(filePath) {
     try {

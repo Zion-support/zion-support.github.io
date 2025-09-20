@@ -5,7 +5,7 @@ export const metadata = {
   title: 'AI 2026: Agents‑On‑Call Automation'
   description: 'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.'
 }
-export default function AgentsOnCallAutomationPage() {
+export default function AgentsOnCallAutomationPage() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agents‑On‑Call Automation</h1>
@@ -50,7 +50,7 @@ export const metadata = {
     'evalsplaybooks'
   ]
 }
-export default function AgentsOnCallAutomation2026() {
+export default function AgentsOnCallAutomation2026() : any {
   return (
     <div>
       <SEO

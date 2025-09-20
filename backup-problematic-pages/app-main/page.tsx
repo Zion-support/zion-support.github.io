@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function HomePage() {
+export default function HomePage() : any {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}

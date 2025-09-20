@@ -7,7 +7,7 @@ import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-inn
 import UltraAdvancedFuturisticBackground2026V2 from '../components/ui/UltraAdvancedFuturisticBackground2026V2';
 import UltraAdvancedNavigation2026V2 from '../components/layout/UltraAdvancedNavigation2026V2';
 
-export default function EnhancedServicesShowcase2026V2() {
+export default function EnhancedServicesShowcase2026V2() : any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -74,7 +74,7 @@ export default function EnhancedServicesShowcase2026V2() {
     { id: 'emerging', name: 'Emerging Technologies', icon: '🔬', count: emergingTechCount, color: 'from-green-600 to-teal-600' },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount, color: 'from-orange-600 to-red-600' },
     { id: 'metaverse', name: 'Metaverse & VR', icon: '🌌', count: metaverseCount, color: 'from-purple-600 to-blue-600' }
-  ];
+  ],
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
@@ -90,7 +90,7 @@ export default function EnhancedServicesShowcase2026V2() {
     { id: 'price-high', name: 'Price: High to Low' },
     { id: 'rating', name: 'Rating' },
     { id: 'newest', name: 'Newest First' }
-  ];
+  ],
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -136,8 +136,8 @@ export default function EnhancedServicesShowcase2026V2() {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
-    if (category?.includes('AI') || category?.includes('Machine Learning')) return <Brain className="w-5 h-5" />;
+  const getCategoryIcon = (category: string) : any => {
+    if (category?.includes('AI') || category?.includes('Machine Learning')) return <Brain className="w-5 h-5" />,
     if (category?.includes('Quantum')) return <Atom className="w-5 h-5" />;
     if (category?.includes('Emerging Tech')) return <Microscope className="w-5 h-5" />;
     if (category?.includes('Micro SaaS')) return <Code className="w-5 h-5" />;
@@ -436,4 +436,4 @@ export default function EnhancedServicesShowcase2026V2() {
       </UltraAdvancedFuturisticBackground2026V2>
     </>
   );
-}
+  }

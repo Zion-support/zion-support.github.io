@@ -11,5 +11,5 @@ export async function sendWarningEmail(payload: WarningEmailPayload): Promise<vo
   const logPath = path.join(logDir, 'emails.log'),
   await fs.ensureDir(logDir),
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`,
-  await fs.appendFile(logPathline, 'utf8'),
-}
+  await fs.appendFile(logPathline, 'utf8');
+};

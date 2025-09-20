@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function AIWhitePaperBanner() {
+export default function AIWhitePaperBanner() : any {
   return (
     <section className="py-8 bg-gradient-to-r from-gray-900 via-slate-900 to-gray-900">
       <div>

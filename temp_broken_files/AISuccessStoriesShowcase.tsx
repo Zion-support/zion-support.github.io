@@ -122,7 +122,7 @@ const AISuccessStoriesShowcase = () => {,
           whileInView={{ opacity: 1, y: 0 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16",
         >,
-          {metrics.map((metricindex) => {,
+          {metrics.map((metricindex) : any => {,
             const Icon = metric.icon,
             return (,
               <div key={index} className="text-center">,
@@ -136,7 +136,7 @@ const AISuccessStoriesShowcase = () => {,
         </div>,
         {/* Story Navigation */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">,
-          {successStories.map((storyindex) => {,
+          {successStories.map((storyindex) : any => {,
             const Icon = story.icon,
             return (,
               <button,
@@ -249,5 +249,5 @@ const AISuccessStoriesShowcase = () => {,
       </div>,
     </section>,
   ),
-export default AISuccessStoriesShowcase,
-}
+export default AISuccessStoriesShowcase;
+  }

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 interface Service {
 id: string;,
 name: string;
@@ -8,13 +12,18 @@ name: string;
 import React from "react";
 const ThemeToggle: React.FC = () => {
 ,
-return (,
+return (
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className = "text-xl font-bold mb-4">ThemeToggle</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
 export default ThemeToggle,;<//div><///div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 import React from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '@/hooks/useTheme';
@@ -35,6 +44,18 @@ const ThemeToggle: React.FC = () => {
       )}
     </button>
   );
+<<<<<<< HEAD
 };
 
 export default ThemeToggle;
+=======
+<<<<<<< HEAD
+};
+
+export default ThemeToggle;
+=======
+}
+
+export default ThemeToggle;
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.'
   keywords: ['synthetic intelligence 2026AI consciousnessartificial consciousnesscreative AI', 'synthetic beings']
 }
-export default function SyntheticIntelligence2026Page() {
+export default function SyntheticIntelligence2026Page() : any {
   return (
     <div>
       <SEO

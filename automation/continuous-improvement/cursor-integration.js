@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Enhanced Cursor AI Integration for Zion App,
@@ -71,8 +71,8 @@ class CursorIntegration {,
         action: 'ping',        workspaceId: this.config.workspaceId}),
       logger.info('🔗 Cursor API connection successful'),      return true,
     } catch (error) {,
-      throw new Error(`Failed to connect to Cursor API: ${error.message}`),
-    }
+      throw new Error(`Failed to connect to Cursor API: ${error.message}`);
+};
   }
 ,
   /**,
@@ -134,8 +134,8 @@ const analysis = this.parseSecurityResponse(response),
     logger.info('💡 Getting improvement suggestions from Cursor AI...'),
     const prompt = this.buildImprovementPrompt(analysis),
     const response = await this.callCursorAPI(prompt),
-    return this.parseImprovementResponse(response),
-  }
+    return this.parseImprovementResponse(response);
+};
 ,
   /**,
    * Apply code improvements,
@@ -151,8 +151,8 @@ const analysis = this.parseSecurityResponse(response),
         results.push({,
           suggestion,
           status: 'failed',
-          error: error.message}),
-      }
+          error: error.message});
+};
     }
 ,
     return results,
@@ -172,11 +172,11 @@ const walkDir = (dir) => {,
         const stat = fs.statSync(fullPath),
         if (stat.isDirectory()) {,
           if (!excludeDirs.includes(item)) {,
-            walkDir(fullPath),
-          }
+            walkDir(fullPath);
+};
         } else if (extensions.includes(path.extname(item))) {,
-          files.push(fullPath),
-        }
+          files.push(fullPath);
+};
       }
     },
     walkDir(this.config.projectPath),
@@ -205,8 +205,8 @@ const stats = fs.statSync(file),
           lines: content.split('\n').length,
           lastModified: stats.mtime.toISOString()}),
       } catch (error) {,
-        logger.warn(`Warning: Could not read file ${file}: ${error.message}`),
-      }
+        logger.warn(`Warning: Could not read file ${file}: ${error.message}`);
+};
     }
 ,
     // Run linting,
@@ -447,8 +447,8 @@ const req = https.request(options, (res) => {,
           try {,
             resolve(JSON.parse(data)),
           } catch (error) {,
-            reject(new Error('Invalid JSON response from Cursor API')),
-          }
+            reject(new Error('Invalid JSON response from Cursor API'));
+};
         }),
       }),
       req.on('error', reject),
@@ -458,8 +458,8 @@ const req = https.request(options, (res) => {,
       }),
       req.write(postData),
       req.end(),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Parse code quality response,
@@ -611,14 +611,14 @@ const changes = this.parseCodeChanges(response),
           results.push(result),
         } else if (change.type === 'delete') {,
           const result = await this.deleteFile(change.file),
-          results.push(result),
-        }
+          results.push(result);
+};
       } catch (error) {,
         results.push({,
           change,
           status: 'failed',
-          error: error.message}),
-      }
+          error: error.message});
+};
     }
 ,
     return results,
@@ -646,8 +646,8 @@ const changes = this.parseCodeChanges(response),
         status: 'modified',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Failed to modify file ${filePath}: ${error.message}`),
-    }
+      throw new Error(`Failed to modify file ${filePath}: ${error.message}`);
+};
   }
 ,
   /**,
@@ -658,8 +658,8 @@ const changes = this.parseCodeChanges(response),
       const fullPath = path.resolve(filePath),
       const dir = path.dirname(fullPath),
       if (!fs.existsSync(dir)) {,
-        fs.mkdirSync(dir, { recursive: true }),
-      }
+        fs.mkdirSync(dir, { recursive: true });
+};
 ,
       fs.writeFileSync(fullPath, content),
       return {,
@@ -667,8 +667,8 @@ const changes = this.parseCodeChanges(response),
         status: 'created',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Failed to create file ${filePath}: ${error.message}`),
-    }
+      throw new Error(`Failed to create file ${filePath}: ${error.message}`);
+};
   }
 ,
   /**,
@@ -683,8 +683,8 @@ const changes = this.parseCodeChanges(response),
         status: 'deleted',
         timestamp: new Date().toISOString()},
     } catch (error) {,
-      throw new Error(`Failed to delete file ${filePath}: ${error.message}`),
-    }
+      throw new Error(`Failed to delete file ${filePath}: ${error.message}`);
+};
   }
 ,
   /**,
@@ -750,8 +750,8 @@ const sizeInfo = {},
       isConnected: this.isConnected,
       lastAnalysis: this.lastAnalysis?.type || null,
       historyLength: this.analysisHistory.length,
-      timestamp: new Date().toISOString()},
+      timestamp: new Date().toISOString()};
   }
 }
 ,
-module.exports = CursorIntegration,
+module.exports = CursorIntegration,'

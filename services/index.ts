@@ -155,5 +155,5 @@ export const getServiceStats = () => {
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
+  };
   },
-},

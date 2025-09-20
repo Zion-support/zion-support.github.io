@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     publishedTime: '2024-12-27T00:00:00.000Z'
     authors: ['Zion Tech Group']}
 }
-export default function AI2026QuantumMLBreakthrough() {
+export default function AI2026QuantumMLBreakthrough() : any {
   return (
     <div>
       <SEO
@@ -173,7 +173,7 @@ export default function AI2026QuantumMLBreakthrough() {
             <div>
               <Link
                 href="/tools/quantum-ai-readiness-assessment-2026"
-                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center"
               >
                 Quantum Readiness Assessment
               </Link>
@@ -209,7 +209,7 @@ export default function AI2026QuantumMLBreakthrough() {
             <Link href="/tools/quantum-ai-roi-calculator-2026" className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum AI ROI Calculator 2026</h3>
               <p>
-                Calculate the potential return on investment for quantum AI implementation.;
+                Calculate the potential return on investment for quantum AI implementation.,
               </p>
               <span className="text-purple-600 font-semibold">Calculate ROI →</span>
             </Link>

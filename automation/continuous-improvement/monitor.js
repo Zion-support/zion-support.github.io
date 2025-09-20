@@ -30,8 +30,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 class ContinuousImprovementMonitor {,
   constructor() {,
@@ -59,8 +59,8 @@ class ContinuousImprovementMonitor {,
     cron.schedule('0 2 * * *', () => {,
       this.triggerImprovements(),
     }),
-    logger.info('✅ Continuous improvement monitor started'),
-  }
+    logger.info('✅ Continuous improvement monitor started');
+};
 ,
   async stop() {,
     if (!this.isMonitoring) {,
@@ -70,10 +70,10 @@ class ContinuousImprovementMonitor {,
 ,
     this.isMonitoring = false,
     if (this.interval) {,
-      clearInterval(this.interval),
-    }
-    logger.info('🛑 Continuous improvement monitor stopped'),
-  }
+      clearInterval(this.interval);
+};
+    logger.info('🛑 Continuous improvement monitor stopped');
+};
 ,
   async collectMetrics() {,
     try {,
@@ -91,15 +91,15 @@ class ContinuousImprovementMonitor {,
       this.history.push(metrics),
       // Keep only last 100 entries,
       if (this.history.length > 100) {,
-        this.history = this.history.slice(-100),
-      }
+        this.history = this.history.slice(-100);
+};
 ,
       // Save metrics,
       await this.saveMetrics(metrics),
       logger.info('📊 Metrics collected successfully'),
     } catch (error) {,
-      logger.error('❌ Error collecting metrics:', error),
-    }
+      logger.error('❌ Error collecting metrics:', error);
+};
   }
 ,
   async getCodeQualityMetrics() {,
@@ -131,11 +131,11 @@ class ContinuousImprovementMonitor {,
         const coverageMatch = coverageResult.match(/(\d+)%/),
         metrics.testCoverage = coverageMatch ? parseInt(coverageMatch[1]) : 0,
       } catch (error) {,
-        logger.warn('Failed to get test coverage:', error.message),
-      }
+        logger.warn('Failed to get test coverage:', error.message);
+};
     } catch (error) {,
-      logger.error('Error getting code quality metrics:', error),
-    }
+      logger.error('Error getting code quality metrics:', error);
+};
 ,
     return metrics,
   }
@@ -153,8 +153,8 @@ class ContinuousImprovementMonitor {,
         const sizeMatch = buildResult.match(/Bundle Size: (\d+\.?\d*) KB/),
         metrics.bundleSize = sizeMatch ? parseFloat(sizeMatch[1]) : 0
       } catch (error) {,
-        logger.warn('Failed to analyze bundle size:', error.message),
-      }
+        logger.warn('Failed to analyze bundle size:', error.message);
+};
 ,
       // Run Lighthouse audit,
       try {,
@@ -165,11 +165,11 @@ class ContinuousImprovementMonitor {,
         metrics.loadTime =,
           data.lhr.audits['first-contentful-paint'].numericValue,
       } catch (error) {,
-        logger.warn('Failed to run Lighthouse audit:', error.message),
-      }
+        logger.warn('Failed to run Lighthouse audit:', error.message);
+};
     } catch (error) {,
-      logger.error('Error getting performance metrics:', error),
-    }
+      logger.error('Error getting performance metrics:', error);
+};
 ,
     return metrics,
   }
@@ -185,8 +185,8 @@ class ContinuousImprovementMonitor {,
         const data = JSON.parse(auditResult),
         metrics.vulnerabilities = Object.keys(data.vulnerabilities || {}).length,
       } catch (error) {,
-        logger.warn('Failed to run security audit:', error.message),
-      }
+        logger.warn('Failed to run security audit:', error.message);
+};
 ,
       // Check for outdated packages,
       try {,
@@ -195,11 +195,11 @@ class ContinuousImprovementMonitor {,
         const data = JSON.parse(outdatedResult),
         metrics.outdatedPackages = Object.keys(data).length,
       } catch (error) {,
-        logger.warn('Failed to check outdated packages:', error.message),
-      }
+        logger.warn('Failed to check outdated packages:', error.message);
+};
     } catch (error) {,
-      logger.error('Error getting security metrics:', error),
-    }
+      logger.error('Error getting security metrics:', error);
+};
 ,
     return metrics,
   }
@@ -236,8 +236,8 @@ class ContinuousImprovementMonitor {,
         // No vulnerabilities
       }
     } catch (error) {,
-      logger.error('Error getting dependency metrics:', error),
-    }
+      logger.error('Error getting dependency metrics:', error);
+};
 ,
     return metrics,
   }
@@ -255,8 +255,8 @@ class ContinuousImprovementMonitor {,
       metrics.lastBuild = new Date().toISOString(),
     } catch (error) {,
       metrics.buildSuccess = false,
-      logger.warn('Build failed:', error.message),
-    }
+      logger.warn('Build failed:', error.message);
+};
 ,
     return metrics,
   }
@@ -268,16 +268,16 @@ class ContinuousImprovementMonitor {,
         type: 'code_quality',
         severity: 'high',
         message: `High number of lint errors: ${metrics.codeQuality.lintErrors}`,
-        action: 'Run lint fixes and review code quality'}),
-    }
+        action: 'Run lint fixes and review code quality'});
+};
 ,
     if (metrics.codeQuality.testCoverage < 80) {,
       metrics.alerts.push({,
         type: 'code_quality',
         severity: 'medium',
         message: `Low test coverage: ${metrics.codeQuality.testCoverage}%`,
-        action: 'Add more tests to improve coverage'}),
-    }
+        action: 'Add more tests to improve coverage'});
+};
 ,
     // Performance issues,
     if (metrics.performance.bundleSize > 1000) {,
@@ -285,16 +285,16 @@ class ContinuousImprovementMonitor {,
         type: 'performance',
         severity: 'medium',
         message: `Large bundle size: ${metrics.performance.bundleSize} KB`,
-        action: 'Optimize bundle size and implement code splitting'}),
-    }
+        action: 'Optimize bundle size and implement code splitting'});
+};
 ,
     if (metrics.performance.lighthouseScore < 80) {,
       metrics.alerts.push({,
         type: 'performance',
         severity: 'high',
         message: `Low Lighthouse score: ${metrics.performance.lighthouseScore}`,
-        action: 'Optimize performance and accessibility'}),
-    }
+        action: 'Optimize performance and accessibility'});
+};
 ,
     // Security issues,
     if (metrics.security.vulnerabilities > 0) {,
@@ -302,16 +302,16 @@ class ContinuousImprovementMonitor {,
         type: 'security',
         severity: 'high',
         message: `Security vulnerabilities detected: ${metrics.security.vulnerabilities}`,
-        action: 'Run npm audit fix and review dependencies'}),
-    }
+        action: 'Run npm audit fix and review dependencies'});
+};
 ,
     if (metrics.security.outdatedPackages > 10) {,
       metrics.alerts.push({,
         type: 'security',
         severity: 'medium',
         message: `Many outdated packages: ${metrics.security.outdatedPackages}`,
-        action: 'Update dependencies to latest versions'}),
-    }
+        action: 'Update dependencies to latest versions'});
+};
   }
 ,
   async saveMetrics(metrics) {,
@@ -319,8 +319,8 @@ class ContinuousImprovementMonitor {,
       const reportPath = path.join(__dirname, 'monitor-report.json'),
       await fs.promises.writeFile(reportPath, JSON.stringify(metrics, null, 2)),
     } catch (error) {,
-      logger.error('Failed to save metrics:', error),
-    }
+      logger.error('Failed to save metrics:', error);
+};
   }
 ,
   async triggerImprovements() {,
@@ -331,8 +331,8 @@ class ContinuousImprovementMonitor {,
       await commitPush.execute(),
       logger.info('✅ Automated improvements completed'),
     } catch (error) {,
-      logger.error('❌ Failed to trigger improvements:', error),
-    }
+      logger.error('❌ Failed to trigger improvements:', error);
+};
   }
 ,
   async monitorCodeQuality() {,
@@ -349,8 +349,8 @@ class ContinuousImprovementMonitor {,
         // Could trigger test generation here
       }
     } catch (error) {,
-      logger.error('Error monitoring code quality:', error),
-    }
+      logger.error('Error monitoring code quality:', error);
+};
   }
 ,
   // File watcher for immediate feedback,
@@ -375,7 +375,7 @@ class ContinuousImprovementMonitor {,
         }, 5000), // Wait 5 seconds for file to be saved
       }
     }),
-    logger.info('👀 File watcher started'),
+    logger.info('👀 File watcher started');
   }
 }
 ,

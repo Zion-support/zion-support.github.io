@@ -6,7 +6,7 @@ export const metadata = {
   description:
     'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.'
 }
-export default function AgentFleetManagementHandbook2026() {
+export default function AgentFleetManagementHandbook2026() : any {
   return (
     <main className="min-h-screen bg-white">
       <SEO

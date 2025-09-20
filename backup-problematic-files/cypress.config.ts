@@ -67,4 +67,4 @@ supportFile: cypress/support/e2e.ts',
       // implement node event listeners here,
     }
   }
-}),
+}),'

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -79,8 +79,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
     // Start the infinite loop,
     this.runInfiniteLoop(),
     // Start monitoring,
-    this.startMonitoring(),
-  }
+    this.startMonitoring();
+};
 ,
   async setup() {,
     logger.info('⚙️ Setting up total control environment...'),
@@ -89,8 +89,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
     for (const dir of dirs) {,
       const dirPath = path.join(this.projectRoot, dir),
       if (!fs.existsSync(dirPath)) {,
-        fs.mkdirSync(dirPath, { recursive: true }),
-      }
+        fs.mkdirSync(dirPath, { recursive: true });
+};
     }
 ,
     // Ensure git is initialized,
@@ -100,8 +100,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
       logger.info('📦 Initializing git repository...'),
       execSync('git init'),
       execSync('git add .'),
-      execSync('git commit -m "Initial commit before total control improvement system"'),
-    }
+      execSync('git commit -m "Initial commit before total control improvement system"');
+};
   }
 ,
   async runInfiniteLoop() {,
@@ -114,8 +114,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
         const improvements = await this.generateImprovements(analysis),
         // Apply improvements,
         if (improvements.length > 0) {,
-          await this.applyImprovements(improvements),
-        }
+          await this.applyImprovements(improvements);
+};
 ,
         // Update statistics,
         this.updateStats(),
@@ -131,8 +131,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
           timestamp: new Date().toISOString()}),
         this.stats.errors++,
         // Wait before retrying,
-        await this.sleep(5000),
-      }
+        await this.sleep(5000);
+};
     }
   }
 ,
@@ -172,8 +172,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
                 size: stat.size,
                 modified: stat.mtime,
                 type: path.extname(fullPath),
-                hasIssues: this.hasFileIssues(fullPath)}),
-            }
+                hasIssues: this.hasFileIssues(fullPath)});
+};
           } catch (error) {,
             // Skip files that can't be accessed
           }
@@ -192,8 +192,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
     const relevantFiles = ['package.json', README.md', Dockerfile', .env.example'],
     const ext = path.extname(filePath),
     const fileName = path.basename(filePath),
-    return relevantExtensions.includes(ext) || relevantFiles.includes(fileName),
-  }
+    return relevantExtensions.includes(ext) || relevantFiles.includes(fileName);
+};
 ,
   hasFileIssues(filePath) {,
     try {,
@@ -426,16 +426,16 @@ class TotalControlImprovementSystem extends EventEmitter {,
         type: 'security',
         priority: 'critical',
         description: `Fix ${analysis.security.issues.length} security issues`,
-        action: fix-security}),
-    }
+        action: fix-security});
+};
 ,
     if (!analysis.build.success) {,
       improvements.push({,
         type: 'build-errors',
         priority: 'critical',
         description: Fix build errors',
-        action: fix-build}),
-    }
+        action: fix-build});
+};
 ,
     // High priority improvements,
     if (analysis.performance.buildTime > 30000) {,
@@ -443,16 +443,16 @@ class TotalControlImprovementSystem extends EventEmitter {,
         type: 'performance',
         priority: 'high',
         description: Optimize build performance',
-        action: optimize-build}),
-    }
+        action: optimize-build});
+};
 ,
     if (analysis.accessibility.issues && analysis.accessibility.issues.length > 0) {,
       improvements.push({,
         type: 'accessibility',
         priority: 'high',
         description: `Fix ${analysis.accessibility.issues.length} accessibility issues`,
-        action: fix-accessibility}),
-    }
+        action: fix-accessibility});
+};
 ,
     // Medium priority improvements,
     if (analysis.quality.todos > 0) {,
@@ -460,24 +460,24 @@ class TotalControlImprovementSystem extends EventEmitter {,
         type: 'code-quality',
         priority: 'medium',
         description: `Address ${analysis.quality.todos} TODO/FIXME comments`,
-        action: fix-todos}),
-    }
+        action: fix-todos});
+};
 ,
     if (analysis.tests.result && analysis.tests.result.includes('FAIL')) {,
       improvements.push({,
         type: 'testing',
         priority: 'medium',
         description: Fix failing tests',
-        action: fix-tests}),
-    }
+        action: fix-tests});
+};
 ,
     if (analysis.dependencies.outdated && Object.keys(analysis.dependencies.outdated).length > 0) {,
       improvements.push({,
         type: 'dependencies',
         priority: 'medium',
         description: Update outdated dependencies',
-        action: update-dependencies}),
-    }
+        action: update-dependencies});
+};
 ,
     // Low priority improvements,
     if (analysis.seo.issues && analysis.seo.issues.length > 0) {,
@@ -485,19 +485,19 @@ class TotalControlImprovementSystem extends EventEmitter {,
         type: 'seo',
         priority: 'low',
         description: `Fix ${analysis.seo.issues.length} SEO issues`,
-        action: fix-seo}),
-    }
+        action: fix-seo});
+};
 ,
     if (analysis.types.issues > 0) {,
       improvements.push({,
         type: 'type-safety',
         priority: 'low',
         description: `Fix ${analysis.types.issues} type safety issues`,
-        action: fix-types}),
-    }
+        action: fix-types});
+};
 ,
-    return improvements.slice(0, this.config.maxConcurrentImprovements),
-  }
+    return improvements.slice(0, this.config.maxConcurrentImprovements);
+};
 ,
   async applyImprovements(improvements) {,
     logger.info(`🔧 Applying ${improvements.length} improvements...`),
@@ -542,16 +542,15 @@ class TotalControlImprovementSystem extends EventEmitter {,
         this.stats.totalIssuesFixed++,
         // Commit changes,
         if (this.config.autoCommit) {,
-          await this.commitChanges(improvement.description),
-        }
-
+          await this.commitChanges(improvement.description);
+};
       } catch (error) {,
         logger.error(`  ❌ Failed to apply improvement: ${error.message}`),
         this.errors.push({,
           improvement,
           error: error.message,
-          timestamp: new Date().toISOString()}),
-      }
+          timestamp: new Date().toISOString()});
+};
     }
   }
 ,
@@ -573,12 +572,12 @@ class TotalControlImprovementSystem extends EventEmitter {,
           ),
           fs.writeFileSync(file, content),
         } catch (error) {,
-          logger.error(`    ❌ Failed to fix security issue in ${file}: ${error.message}`),
-        }
+          logger.error(`    ❌ Failed to fix security issue in ${file}: ${error.message}`);
+};
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix security issues: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix security issues: ${error.message}`);
+};
   }
 ,
   async fixBuildErrors() {,
@@ -589,8 +588,8 @@ class TotalControlImprovementSystem extends EventEmitter {,
       // Try to build again,
       execSync('npm run build', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix build errors: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix build errors: ${error.message}`);
+};
   }
 ,
   async optimizeBuild() {,
@@ -615,11 +614,11 @@ module.exports.optimization = {,
 },`,
         }
 ,
-        fs.writeFileSync(webpackConfig, content),
-      }
+        fs.writeFileSync(webpackConfig, content);
+};
     } catch (error) {,
-      logger.error(`    ❌ Failed to optimize build: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to optimize build: ${error.message}`);
+};
   }
 ,
   async fixAccessibilityIssues() {,
@@ -643,12 +642,12 @@ module.exports.optimization = {,
           ),
           fs.writeFileSync(file, content),
         } catch (error) {,
-          logger.error(`    ❌ Failed to fix accessibility in ${file}: ${error.message}`),
-        }
+          logger.error(`    ❌ Failed to fix accessibility in ${file}: ${error.message}`);
+};
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix accessibility issues: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix accessibility issues: ${error.message}`);
+};
   }
 ,
   async fixTodos() {,
@@ -666,12 +665,12 @@ module.exports.optimization = {,
           }),
           fs.writeFileSync(file, content),
         } catch (error) {,
-          logger.error(`    ❌ Failed to fix TODOs in ${file}: ${error.message}`),
-        }
+          logger.error(`    ❌ Failed to fix TODOs in ${file}: ${error.message}`);
+};
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix TODOs: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix TODOs: ${error.message}`);
+};
   }
 ,
   async fixTests() {,
@@ -679,17 +678,17 @@ module.exports.optimization = {,
     try {,
       const testResult = execSync('npm test 2>&1', { stdio: 'pipe' }).toString(),
       if (testResult.includes('Cannot find module')) {,
-        execSync('npm install', { stdio: 'pipe' }),
-      }
+        execSync('npm install', { stdio: 'pipe' });
+};
 ,
       if (testResult.includes('SyntaxError')) {,
-        execSync('node automation/syntax-fixer.js', { stdio: 'pipe' }),
-      }
+        execSync('node automation/syntax-fixer.js', { stdio: 'pipe' });
+};
 ,
       execSync('npm test', { stdio: 'pipe' }),
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix tests: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix tests: ${error.message}`);
+};
   }
 ,
   async updateDependencies() {,
@@ -703,13 +702,13 @@ module.exports.optimization = {,
           try {,
             execSync(`npm install ${pkg}@latest`, { stdio: 'pipe' }),
           } catch (error) {,
-            logger.info(`    ⚠️ Could not update ${pkg} to latest: ${error.message}`),
-          }
+            logger.info(`    ⚠️ Could not update ${pkg} to latest: ${error.message}`);
+};
         }
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to update dependencies: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to update dependencies: ${error.message}`);
+};
   }
 ,
   async fixSEOIssues() {,
@@ -728,17 +727,17 @@ module.exports.optimization = {,
               /<head>/g,
               `<head>,
     <meta name="description" content="Auto-generated description by total control system" />"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-    <meta name="keywords" content="auto-generated,keywords" />`""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""),
-          }
+    <meta name="keywords" content="auto-generated,keywords" />`"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""");
+};
 ,
           fs.writeFileSync(file, content),
         } catch (error) {,
-          logger.error(`    ❌ Failed to fix SEO in ${file}: ${error.message}`),
-        }
+          logger.error(`    ❌ Failed to fix SEO in ${file}: ${error.message}`);
+};
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix SEO issues: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix SEO issues: ${error.message}`);
+};
   }
 ,
   async fixTypeSafetyIssues() {,
@@ -761,12 +760,12 @@ module.exports.optimization = {,
           content = content.replace(/\/\*\s*@ts-nocheck\s*\*\/\s*/g),
           fs.writeFileSync(file, content),
         } catch (error) {,
-          logger.error(`    ❌ Failed to fix type safety in ${file}: ${error.message}`),
-        }
+          logger.error(`    ❌ Failed to fix type safety in ${file}: ${error.message}`);
+};
       }
     } catch (error) {,
-      logger.error(`    ❌ Failed to fix type safety issues: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to fix type safety issues: ${error.message}`);
+};
   }
 ,
   async commitChanges(message) {,
@@ -774,19 +773,19 @@ module.exports.optimization = {,
       execSync('git add .', { stdio: 'pipe' }),
       execSync(`git commit -m "Total Control: ${message}"`, { stdio: 'pipe' }),
       if (this.config.autoPush) {,
-        execSync('git push', { stdio: 'pipe' }),
-      }
+        execSync('git push', { stdio: 'pipe' });
+};
 ,
       logger.info(`    ✅ Committed: ${message}`),
     } catch (error) {,
-      logger.error(`    ❌ Failed to commit changes: ${error.message}`),
-    }
+      logger.error(`    ❌ Failed to commit changes: ${error.message}`);
+};
   }
 ,
   updateStats() {,
     this.stats.cycles = this.cycleCount,
-    this.stats.lastCycle = new Date().toISOString(),
-  }
+    this.stats.lastCycle = new Date().toISOString();
+};
 ,
   async generateCycleReport() {,
     const report = {,
@@ -796,8 +795,8 @@ module.exports.optimization = {,
       lastImprovements: this.improvements.slice(-5),
       lastErrors: this.errors.slice(-5)},
     const reportPath = path.join(this.projectRoot, reports', `cycle-${this.cycleCount}.json`),
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
-  }
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+};
 ,
   startDashboard() {,
     const http = require('http'),
@@ -1053,21 +1052,21 @@ const timeoutId = setTimeout(() => location.reload(),                           
     }),
     server.listen(this.dashboardPort, () => {,
       logger.info(`📊 Total Control Dashboard running on http: //localhost:${this.dashboardPort}`),
-    }),
-  }
+    });
+};
 ,
   startMonitoring() {,
     setInterval(() => {,
       const usage = process.memoryUsage(),
       logger.info(`📊 Memory usage: ${Math.round(usage.heapUsed / 1024 / 1024)}MB`),
-    }, 60000),
-  }
+    }, 60000);
+};
 ,
   async stop() {,
     logger.info('🛑 Stopping Total Control Improvement System...'),
     this.isRunning = false,
-    await this.generateFinalReport(),
-  }
+    await this.generateFinalReport();
+};
 ,
   async generateFinalReport() {,
     const report = {,
@@ -1086,22 +1085,22 @@ const timeoutId = setTimeout(() => location.reload(),                           
     const reportPath = path.join(this.projectRoot, 'total-control-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Total Control report saved to: ${reportPath}`),
-    logger.info(`📈 Summary: ${report.summary.totalCycles} cycles, ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`),
-  }
+    logger.info(`📈 Summary: ${report.summary.totalCycles} cycles, ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`);
+};
 ,
   generateRecommendations() {,
     const recommendations = [],
     if (this.stats.errors > this.stats.improvements) {,
-      recommendations.push('Consider reducing improvement frequency to minimize errors'),
-    }
+      recommendations.push('Consider reducing improvement frequency to minimize errors');
+};
 ,
     if (this.improvements.length === 0) {,
-      recommendations.push('No improvements were applied. Consider adjusting improvement criteria'),
-    }
+      recommendations.push('No improvements were applied. Consider adjusting improvement criteria');
+};
 ,
     if (this.stats.totalIssuesFixed > 0) {,
-      recommendations.push(`Successfully fixed ${this.stats.totalIssuesFixed} issues. System is working effectively.`),
-    }
+      recommendations.push(`Successfully fixed ${this.stats.totalIssuesFixed} issues. System is working effectively.`);
+};
 ,
     return recommendations,
   }
@@ -1296,8 +1295,8 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-),
-  }
+);
+};
 ,
   getStatus() {,
     return {,
@@ -1326,7 +1325,7 @@ if (require.main === module) {,
   system.start().catch(error => {,
     logger.error('❌ Failed to start total control system:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = TotalControlImprovementSystem,

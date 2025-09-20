@@ -31,7 +31,7 @@ export default function LazyImage({
     if (priority) return
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry]) : any => {
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
@@ -45,7 +45,7 @@ export default function LazyImage({
     }
 
     return () => observer.disconnect()
-  }, [priority])
+  }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true)

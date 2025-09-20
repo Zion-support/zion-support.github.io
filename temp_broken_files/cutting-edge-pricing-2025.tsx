@@ -89,7 +89,7 @@ const stats = [,
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
 ,
-export default function CuttingEdgePricing2025() {,
+export default function CuttingEdgePricing2025() : any {,
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const allServices = [,
     ...cuttingEdgeAIServices2025,
@@ -374,20 +374,20 @@ export default function CuttingEdgePricing2025() {,
         </section>,
       </Layout>,
     </>,
-  ),
-}
+  );
+};
 import React from "react",
-const function CuttingEdgePricing2025() { = () => {,
+const function CuttingEdgePricing2025() : any { = () => {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">,
       <div className="container mx-auto px-4 py-20">,
         <div className="text-center">,
-          <h1 className="text-5xl font-bold mb-6">function CuttingEdgePricing2025() {</h1>,
+          <h1 className="text-5xl font-bold mb-6">function CuttingEdgePricing2025() : any {</h1>,
           <p className="text-xl opacity-90">Coming soon - Revolutionary technology solutions</p>,
         </div>,
       </div>,
     </div>,
   ),
 },
-export default function CuttingEdgePricing2025() {,
-}}}]
+export default function CuttingEdgePricing2025() : any {;
+  }}}]

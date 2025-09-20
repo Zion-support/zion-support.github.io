@@ -1,5 +1,5 @@
 import React from 'react'
-const EnhancedContentNavigation: React.FC = () => {;
+const EnhancedContentNavigation: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">EnhancedContentNavigation</h3>

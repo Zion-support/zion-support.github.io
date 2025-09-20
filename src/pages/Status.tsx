@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";,
+import { useState; useEffect } from "react";,
+import { AlertCircle; CheckCircle, Clock; ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import Link from "next/link",;
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from "@/utils/productionLogger";
+interface ServiceStatus {
+  )}
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 import React from 'react';
 
 export default function Status() {
@@ -9,4 +24,11 @@ export default function Status() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+)}
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 }

@@ -403,4 +403,8 @@ strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedC
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

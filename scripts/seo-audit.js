@@ -47,8 +47,8 @@ class SEOAuditor {
 
   ensureReportsDirectory() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+};
   }
 
   async analyzeSEO() {
@@ -61,9 +61,8 @@ class SEOAuditor {
     this.seoMetrics.links = this.analyzeLinks(),
     this.seoMetrics.performance = this.analyzePerformance(),
     
-    console.log('📈 SEO metrics collected:', this.seoMetrics),
-  }
-
+    console.log('📈 SEO metrics collected:', this.seoMetrics);
+};
   analyzeMetaTags() {
     // Simulate meta tag analysis
     const score = Math.floor(Math.random() * 40) + 60, // 60-100
@@ -146,34 +145,28 @@ class SEOAuditor {
     
     if (this.seoMetrics.metaTags < 80) {
       recommendations.push('Optimize meta titles and descriptions for better click-through rates'),
-      recommendations.push('Ensure all pages have unique meta tags'),
-    }
-    
+      recommendations.push('Ensure all pages have unique meta tags');
+};
     if (this.seoMetrics.headings < 80) {
       recommendations.push('Improve heading structure (H1, H2, H3 hierarchy)'),
-      recommendations.push('Ensure each page has only one H1 tag'),
-    }
-    
+      recommendations.push('Ensure each page has only one H1 tag');
+};
     if (this.seoMetrics.images < 80) {
       recommendations.push('Optimize images with proper alt text and compression'),
-      recommendations.push('Implement lazy loading for images'),
-    }
-    
+      recommendations.push('Implement lazy loading for images');
+};
     if (this.seoMetrics.links < 80) {
       recommendations.push('Fix broken internal links'),
-      recommendations.push('Improve internal linking structure'),
-    }
-    
+      recommendations.push('Improve internal linking structure');
+};
     if (this.seoMetrics.performance < 80) {
       recommendations.push('Optimize page load speed'),
-      recommendations.push('Implement Core Web Vitals improvements'),
-    }
-    
+      recommendations.push('Implement Core Web Vitals improvements');
+};
     if (recommendations.length === 0) {
       recommendations.push('Maintain current SEO standards'),
-      recommendations.push('Continue monitoring for SEO opportunities'),
-    }
-    
+      recommendations.push('Continue monitoring for SEO opportunities');
+};
     return recommendations,
   }
 
@@ -185,9 +178,8 @@ class SEOAuditor {
     console.log(`📄 SEO report saved to: ${filepath}`),
     
     // Also create an HTML report
-    this.createHTMLReport(report),
-  }
-
+    this.createHTMLReport(report);
+};
   createHTMLReport(report) {
     const htmlContent = `
 <!DOCTYPE html>
@@ -248,9 +240,8 @@ class SEOAuditor {
     const htmlFilepath = path.join(this.reportsDir, htmlFilename),
     
     fs.writeFileSync(htmlFilepath, htmlContent),
-    console.log(`🌐 HTML report saved to: ${htmlFilepath}`),
-  }
-
+    console.log(`🌐 HTML report saved to: ${htmlFilepath}`);
+};
   printReport(report) {
     console.log('\n📊 SEO Audit Report'),
     console.log('===================='),
@@ -268,8 +259,8 @@ class SEOAuditor {
     console.log('\n💡 Recommendations: '),
     report.recommendations.forEach((rec, index) => {
       console.log(`  ${index + 1}. ${rec}`),
-    }),
-  }
+    });
+};
 }
 
 // CLI interface
@@ -283,7 +274,7 @@ if (require.main === module) {
     .catch(error => {
       console.error('❌ SEO audit failed:', error.message),
       process.exit(1),
-    }),
-}
+    });
+  }
 
 module.exports = SEOAuditor,

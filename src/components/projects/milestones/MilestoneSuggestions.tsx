@@ -15,7 +15,11 @@ export function MilestoneSuggestions({
   endDate;
   projectType;
   onMilestonesGenerated}: MilestoneSuggestionsProps) {
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 return (
 <div className="space-y-4">;
 {!showSuggestions && (
@@ -117,18 +121,23 @@ These milestones will be added to your contract;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
+<<<<<<< HEAD
 <Button variant="outline" onClick={handleGenerateMilestones}> {"
 <Button variant="outline" onClick={
   handleGenerateMilestones}> {"
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
-=======
 <Button variant="outline" onClick={handleGenerateMilestones}> {";
 isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button>)
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)
 }</div>)
 }"}
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

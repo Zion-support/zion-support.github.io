@@ -1,7 +1,11 @@
 <<<<<<< HEAD
 import React from "react";
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -50,7 +54,11 @@ const inter = Inter({ subsets: ["latin"] });
 =======
 
 const inter = Inter({ subsets: ["latin"] })
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 
 export const metadata: Metadata = {
   title: "Zion Holdings - AI-Powered Solutions",
@@ -63,24 +71,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://zion.app",
-    title: "Zion Holdings - AI-Powered Solutions",
-    description: "Leading provider of AI-powered business solutions and innovative technology services",
-    siteName: "Zion Holdings",
-  },
+<<<<<<< HEAD
+    url: "https://ziontechgroup.com",
+    title: "Zion Tech Group - Innovative Technology Solutions",
+    description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
+    siteName: "Zion Tech Group"},
   twitter: {
     card: "summary_large_image",
-    title: "Zion Holdings - AI-Powered Solutions",
-    description: "Leading provider of AI-powered business solutions and innovative technology services",
-  },
+    title: "Zion Tech Group - Innovative Technology Solutions",
+    description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions."},
   viewport: "width=device-width, initial-scale=1",
-  themeColor: "#0ea5e9",
-}
+  themeColor: "#0ea5e9"};
 
 export default function RootLayout({
+<<<<<<< HEAD
   children,
 }: {
 <<<<<<< HEAD
+=======
+  children}: {
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
 children: React.ReactNode;
 }) {
 return (
@@ -122,6 +132,29 @@ return (
   );
 }
 =======
+<<<<<<< HEAD
 // Merge conflict resolved - keeping working version
 >>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+    url: "https://zion.app",
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
+    siteName: "Zion Holdings",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#0ea5e9",
+}
+
+export default function RootLayout({
+  children,
+}: {
+// Merge conflict resolved - keeping working version
+>>>>>>> 9c334060803f415d6d017f9e5353d20ebc0b1d26
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e

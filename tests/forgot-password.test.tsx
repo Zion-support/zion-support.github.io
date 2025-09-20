@@ -40,6 +40,6 @@ describe('ForgotPasswordPage fetch failure', () => {
     }),
 
     expect(screen.getByRole('alert')).toBeInTheDocument(),
+  });
   }),
-}),
 

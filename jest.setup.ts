@@ -4,8 +4,8 @@ import '@testing-library/jest-dom';
 // Mock global objects that might not be available in test environment,
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
-unobserve: jest.fn()
-  disconnect: jest.fn(),}));}));
+unobserve: jest.fn(),
+disconnect: jest.fn(),}));}));
 // Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -16,15 +16,15 @@ onchange: null,
 addListener: jest.fn(), // deprecated,
 removeListener: jest.fn(), // deprecated,
 addEventListener: jest.fn(),
-removeEventListener: jest.fn()
-    dispatchEvent: jest.fn()
+removeEventListener: jest.fn(),
+dispatchEvent: jest.fn()
   }))
 });
 // Mock IntersectionObserver,
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
-unobserve: jest.fn()
-  disconnect: jest.fn()
+unobserve: jest.fn(),
+disconnect: jest.fn()
 }));
 // Mock console methods to reduce noise in tests,
 const originalConsoleError = console.error;

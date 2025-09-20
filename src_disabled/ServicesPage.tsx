@@ -401,8 +401,8 @@ const SERVICE_FILTERS = [
   { label: 'Compliance', value: 'compliance' }
 ]
 
-export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES])
+export default function ServicesPage() : any {
+  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
 
   useEffect(() => {
     const interval = setInterval(() => {

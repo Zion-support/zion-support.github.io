@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function Fortune500TransformationBanner() {
+export default function Fortune500TransformationBanner() : any {
   return (
     <section className="py-8 bg-gradient-to-r from-blue-900 via-purple-900 to-blue-900">
       <div>

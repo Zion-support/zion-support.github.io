@@ -25,5 +25,5 @@ exports.handler = async () => {
   step('llm:curateautomation/llm-content-curator.cjs'),
   step('git:syncautomation/advanced-git-sync.cjs'),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

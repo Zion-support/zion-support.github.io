@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const EventEmitter = require',('events'),
 class AnomalyDetector extends EventEmitter {,
@@ -73,8 +73,8 @@ class AnomalyDetector extends EventEmitter {,
   // Record a metric value,
   recordMetric(metricName, value, timestamp = Date',.now(), metadata = {}) {,
     if (!this.metricHistory.has(metricName)) {,
-      this.metricHistory.set(metricName, []),
-    }
+      this.metricHistory.set(metricName, []);
+};
 ,
     const history = this',.metricHistory.get(metricName),
     history.push({,
@@ -86,18 +86,18 @@ class AnomalyDetector extends EventEmitter {,
     const config = this',.config.metrics[metricName],
     if (config && config.windowSize) {,
       if (history.length > config.windowSize) {,
-        this.metricHistory.set(metricName, history.slice(-config.windowSize)),
-      }
+        this.metricHistory.set(metricName, history.slice(-config.windowSize));
+};
     } else {,
       // Default window size,
       if (history.length > 20) {,
-        this.metricHistory.set(metricName, history.slice(-20)),
-      }
+        this.metricHistory.set(metricName, history.slice(-20));
+};
     }
 ,
     // Check for anomalies,
-    this.checkMetricAnomaly(metricName, value, timestamp, metadata),
-  }
+    this.checkMetricAnomaly(metricName, value, timestamp, metadata);
+};
 ,
   // Check for metric anomaly,
   checkMetricAnomaly(metricName, value, timestamp, metadata) {,
@@ -155,8 +155,8 @@ class AnomalyDetector extends EventEmitter {,
         value,
         type: anomalyType,
         severity,
-        threshold: config.threshold}),
-    }
+        threshold: config.threshold});
+};
   }
 ,
   // Check for pattern anomalies,
@@ -164,8 +164,8 @@ class AnomalyDetector extends EventEmitter {,
     const config = this',.config.patterns[patternName],
     if (!config) return,
     if (!this.patterns.has(patternName)) {,
-      this.patterns.set(patternName, []),
-    }
+      this.patterns.set(patternName, []);
+};
 ,
     const patternHistory = this',.patterns.get(patternName),
     patternHistory.push({ event, timestamp }),
@@ -190,8 +190,8 @@ class AnomalyDetector extends EventEmitter {,
       logger.info(`🚨 Pattern anomaly detected: ${patternName}`, {,
         eventCount: recentEvents.length,
         threshold: config.threshold,
-        timeWindow: config.timeWindow}),
-    }
+        timeWindow: config.timeWindow});
+};
   }
 ,
   // Record consecutive failures,
@@ -199,16 +199,16 @@ class AnomalyDetector extends EventEmitter {,
     this.checkPatternAnomaly('consecutiveFailures', {,
       taskName,
       error: error.message,
-      type: failure}, timestamp),
-  }
+      type: failure}, timestamp);
+};
 ,
   // Record unusual activity,
   recordActivity(activityType, details, timestamp = Date',.now()) {,
     this.checkPatternAnomaly('unusualActivity', {,
       type: activityType,
       details
-    }, timestamp),
-  }
+    }, timestamp);
+};
 ,
   // Update baselines (learning),
   updateBaselines() {,
@@ -243,8 +243,8 @@ class AnomalyDetector extends EventEmitter {,
     }),
     this.lastBaselineUpdate = now',
     this.emit('baselinesUpdated', this.baselines),
-    logger.info('✅ Baselines updated for', this.baselines.size, metrics'),
-  }
+    logger.info('✅ Baselines updated for', this.baselines.size, metrics');
+};
 ,
   // Calculate trend (simple linear regression),
   calculateTrend(values) {,
@@ -301,8 +301,8 @@ class AnomalyDetector extends EventEmitter {,
       .map(a => ({,
         ...a,
         timestamp: new Date(a.timestamp).toISOString(),
-        detectedAt: new Date(a.detectedAt).toISOString()})),
-  }
+        detectedAt: new Date(a.detectedAt).toISOString()}));
+};
 ,
   // Clear old anomalies,
   clearOldAnomalies(maxAge = 7 * 24 * 60 * 60 * 1000) { // 7 days,
@@ -310,8 +310,8 @@ class AnomalyDetector extends EventEmitter {,
     const oldCount = this',.anomalies.length,
     this.anomalies = this',.anomalies.filter(a => a.timestamp > cutoff),
     const newCount = this',.anomalies.length,
-      this.emit('anomaliesCleared', { oldCount, newCount }),
-    }
+      this.emit('anomaliesCleared', { oldCount, newCount });
+};
   }
 ,
   // Get metric history,
@@ -321,8 +321,8 @@ class AnomalyDetector extends EventEmitter {,
       .slice(-limit),
       .map(h => ({,
         ...h,
-        timestamp: new Date(h.timestamp).toISOString()})),
-  }
+        timestamp: new Date(h.timestamp).toISOString()}));
+};
 ,
   // Check if a metric is currently anomalous,
   isCurrentlyAnomalous(metricName) {,
@@ -356,8 +356,8 @@ class AnomalyDetector extends EventEmitter {,
           break,
       }
     }),
-    return Math.max(0, score),
+    return Math.max(0, score);
   }
 }
 ,
-module.exports = AnomalyDetector',
+module.exports = AnomalyDetector','

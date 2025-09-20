@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function AiCodeReviewCopilotPage() {
+export default function AiCodeReviewCopilotPage() : any {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-code-review-copilot'));
   if (!service) return null;
 
@@ -51,5 +51,5 @@ export default function AiCodeReviewCopilotPage() {
       </div>
     </Layout>
   );
-}
+  }
 

@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Strategic AI Roadmap for Executives'
   description: 'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 2026.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-16">

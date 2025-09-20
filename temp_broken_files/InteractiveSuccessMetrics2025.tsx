@@ -112,8 +112,8 @@ const InteractiveSuccessMetrics2025 = () => {,
         start += increment,
         if (start >= target) {,
           start = target,
-          clearInterval(timer),
-        }
+          clearInterval(timer);
+};
         setAnimatedValues(prev => ({,
           ...prev,
           [key]: key.includes('clients') || key.includes('satisfaction'),
@@ -127,8 +127,8 @@ const InteractiveSuccessMetrics2025 = () => {,
       const interval = setInterval(() => {,
         setCurrentMetric((prev) => (prev + 1) % metrics.length),
       }3000),
-      return () => clearInterval(interval),
-    }
+      return () => clearInterval(interval);
+};
   }[isPlayingmetrics.length]),
   const containerVariants = {,
     hidden: { opacity: 0, y: 50 },
@@ -324,7 +324,7 @@ const InteractiveSuccessMetrics2025 = () => {,
         </div>,
       </div>,
     </section>,
-  ),
-},
+  );
+  },
 export default InteractiveSuccessMetrics2025,
 </div></div></div></div>,

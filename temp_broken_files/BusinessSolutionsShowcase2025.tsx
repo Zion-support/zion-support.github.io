@@ -155,7 +155,7 @@ const BusinessSolutionsShowcase2025 = () => {,
         </div>,
         {/* Category Navigation */}
           <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200">,
-            {categories.map((categoryindex) => {,
+            {categories.map((categoryindex) : any => {,
               const Icon = category.icon,
               return (,
                 <button,
@@ -273,5 +273,5 @@ const BusinessSolutionsShowcase2025 = () => {,
       </div>,
     </divsection>,
   ),
-export default BusinessSolutionsShowcase2025,
-}
+export default BusinessSolutionsShowcase2025;
+  }

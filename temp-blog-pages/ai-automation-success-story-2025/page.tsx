@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function AIAutomationSuccessStoryPage() {
+export default function AIAutomationSuccessStoryPage() : any {
   return (
     <div>
       {/* Hero Section */}

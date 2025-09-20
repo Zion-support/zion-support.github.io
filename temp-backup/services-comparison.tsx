@@ -8,6 +8,6 @@ export default function Servicescomparison({ }: ServicescomparisonProps) {,
     <div>,
       <h1>Servicescomparison</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

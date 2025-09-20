@@ -216,5 +216,5 @@ describe('/api/reviews API Endpoint', () => {
       expect(res._getStatusCode()).toBe(400),
       expect(res._getJSONData()).toEqual({ error: 'productId is required in the URL path and must be a string.' }),
     }),
+  });
   }),
-}),

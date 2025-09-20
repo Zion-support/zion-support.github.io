@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -49,8 +49,8 @@ class AutonomousOrchestrator {,
     ],
     this.projectRoot = process.cwd(),
     this.logDir = path.join(this.projectRoot, 'logs'),
-    this.pidFile = path.join(this.projectRoot, automation', .orchestrator.pid'),
-  }
+    this.pidFile = path.join(this.projectRoot, automation', .orchestrator.pid');
+};
 ,
   async start() {,
     logger.info('🚀 [Orchestrator] Entering start()),
@@ -61,25 +61,25 @@ class AutonomousOrchestrator {,
     this.startMonitoring(),
     this.setupGracefulShutdown(),
     logger.info('✅ [Orchestrator] All automation scripts launched'),
-    setInterval(() => this.checkProcessHealth(), 30000),
-  }
+    setInterval(() => this.checkProcessHealth(), 30000);
+};
 ,
   async setup() {,
     if (!fs.existsSync(this.logDir)) {,
-      fs.mkdirSync(this.logDir, { recursive: true }),
-    }
+      fs.mkdirSync(this.logDir, { recursive: true });
+};
     const automationDir = path.join(this.projectRoot, 'automation'),
     if (!fs.existsSync(automationDir)) {,
-      fs.mkdirSync(automationDir, { recursive: true }),
-    }
+      fs.mkdirSync(automationDir, { recursive: true });
+};
   }
 ,
   async startAllScripts() {,
     for (const script of this.scripts) {,
       logger.info(`[Orchestrator] Launching script: ${script.name}`),
       await this.startScript(script),
-      logger.info(`[Orchestrator] Launched script: ${script.name}`),
-    }
+      logger.info(`[Orchestrator] Launched script: ${script.name}`);
+};
   }
 ,
   async startScript(script) {,
@@ -110,27 +110,27 @@ class AutonomousOrchestrator {,
         restartCount: 0}),
       logger.info(`✅ ${script.name} started (PID: ${proc.pid})`),
     } catch (error) {,
-      logger.error(`❌ Failed to start ${script.name}:`, error.message),
-    }
+      logger.error(`❌ Failed to start ${script.name}:`, error.message);
+};
   }
 ,
   handleProcessExit(script) {,
     const procInfo = this.processes.get(script.name),
     if (!procInfo) return,
     if (script.autoRestart && procInfo.restartCount < this.maxRestartAttempts) {} else {,
-      this.processes.delete(script.name),
-    }
+      this.processes.delete(script.name);
+};
   }
 ,
   startMonitoring() {,
-    setInterval(() => this.checkProcessHealth(), 30000),
-  }
+    setInterval(() => this.checkProcessHealth(), 30000);
+};
 ,
   checkProcessHealth() {,
     for (const [name, procInfo] of this.processes) {,
       if (procInfo.process.killed) {,
-        this.handleProcessExit(procInfo.script),
-      }
+        this.handleProcessExit(procInfo.script);
+};
     }
   }
 ,
@@ -142,8 +142,8 @@ class AutonomousOrchestrator {,
     process.on('SIGTERM', async () => {,
       await this.stop(),
       process.exit(0),
-    }),
-  }
+    });
+};
 ,
   async stop() {,
     this.isRunning = false,
@@ -153,10 +153,10 @@ class AutonomousOrchestrator {,
       } catch (e) {}
     }
     if (fs.existsSync(this.pidFile)) {,
-      fs.unlinkSync(this.pidFile),
-    }
-    logger.info('✅ Orchestrator stopped'),
-  }
+      fs.unlinkSync(this.pidFile);
+};
+    logger.info('✅ Orchestrator stopped');
+};
 ,
   getStatus() {,
     const status = {,
@@ -189,11 +189,11 @@ if (require.main === module) {,
     }),
   } else if (command === 'status') {,
     const status = orchestrator.getStatus(),
-    logger.info('📊 Orchestrator Status:', JSON.stringify(status, null, 2)),
+    logger.info('📊 Orchestrator Status:', JSON.stringify(status, null, 2));
   } else {,
     logger.info('Usage: '),
     logger.info('  node automation/autonomous-orchestrator.js start   - Start all automation scripts'),
     logger.info('  node automation/autonomous-orchestrator.js stop    - Stop all automation scripts'),
     logger.info('  node automation/autonomous-orchestrator.js status  - Show status of all scripts')
   }
-} ,
+} ,'

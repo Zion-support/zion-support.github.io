@@ -146,8 +146,7 @@ if() {
 apiCache.set(cacheKeyapiResponsetagscacheTTL);
 };
 // Update; rate; limiter;
-this.updateRateLimit(url);return apiResponse,
-} catch (error) {lastError = new ApiError({
+this.updateRateLimit(url);return apiResponse} catch (error) {lastError = new ApiError({
 this.updateRateLimit(url);return apiResponse} catch (error) {
 lastError = new ApiError({
 message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;,
@@ -310,4 +309,8 @@ baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retry
 baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;});export { ApiError };
 export; default; EnhancedApiClient;
 =======
+<<<<<<< HEAD
 >>>>>>> 8c478e615056772e765dbc204462fa984d447432
+=======
+>>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+>>>>>>> fa217cbfb4549abecf73c2d4ba24f5825051d65e
