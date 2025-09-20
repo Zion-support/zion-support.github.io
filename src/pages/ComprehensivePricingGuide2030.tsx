@@ -606,4 +606,4 @@ export default function ComprehensivePricingGuide2030() {
       </footer>
     </div>
   )
-}
+};

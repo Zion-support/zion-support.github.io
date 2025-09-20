@@ -31,7 +31,7 @@ interface AnalyticsData {
     click, s: numbe, r,scroll, s: numbe, r,
     formSubmission, s: numbe, r,error, s: number
   };
-}
+};
 
 interface AdvancedAnalyticsProps {
   enable, d: boolean;
@@ -39,7 +39,6 @@ interface AdvancedAnalyticsProps {
   enableHeatmap?: boolea, n,
   enableSessionRecording?: boolea, n,
   enableAITesting?: boolean
-}
 
 export function AdvancedAnalytics({ 
   enable,  d, 
@@ -550,4 +549,3 @@ export function AdvancedAnalytics({
       </AnimatePresence>
     </>
   );
-}

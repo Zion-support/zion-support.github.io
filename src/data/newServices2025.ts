@@ -2,7 +2,7 @@ export interface NewService {
   id: string,title: string,description: string,category: string;
   subcategory?: string,
   price: number,currency: string,pricingModel: string,features: string[],benefits: string[],tags: string[],marketPrice: string
-}
+};
 
 export const NEW_SERVICES_2025: NewService[] = [
   {
@@ -64,5 +64,5 @@ export const NEW_SERVICES_2025: NewService[] = [
     id: 'invoice-ocr',title: 'Invoice OCR & AP Automation',description: 'Extract fields from invoices and sync to your accounting system with approvals.',category: 'Operations',subcategory: 'Finance',price: 199,currency: '$',pricingModel: 'monthly',features: ['OCR + LLM post-processingDuplicate detection', 'ApprovalsQuickBooks/Xero sync'],
     benefits: ['Reduce AP time by 70%Fewer errors'],tags: ['OCRFinance', 'AP'],
     marketPrice: '$199–$999/mo + setup $2k–$8k'
-  }
+  };
 ];

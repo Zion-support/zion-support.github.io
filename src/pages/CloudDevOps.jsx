@@ -84,7 +84,7 @@ const cloudDevOpsSolutions = [
     ],
     price: "From $25,000",
     timeline: "12-20 weeks",category: "Security",platforms: ["IAM", "VPC", "Security Groups", "WAF"]
-  }
+  };
 ],
 
 const cloudPlatforms = [
@@ -99,7 +99,7 @@ const cloudPlatforms = [
   },
   {
     name: "Kubernetes",description: "Open-source container orchestration platform",icon: GitFork,features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
-  }
+  };
 ],
 
 const successStories = [
@@ -115,7 +115,7 @@ const successStories = [
     id: 3,company: "Financial Services",industry: "Finance",challenge: "Needed secure, compliant cloud infrastructure",
     solution: "Built secure cloud platform with automated compliance",results: "Full compliance, enhanced security, 40% faster time-to-market",
     logo: "FS"
-  }
+  };
 ];
 const processSteps = [
   {
@@ -130,7 +130,7 @@ const processSteps = [
   {
     step: 4,title: "Optimization",description: "Monitor, optimize, and continuously improve the system",
     icon: Zap,duration: "Ongoing"
-  }
+  };
 ];
 export default function CloudDevOps() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -466,4 +466,4 @@ export default function CloudDevOps() {
       </section>
     </div>
   )
-}
+};

@@ -8,7 +8,7 @@ export interface FinancialAIService2028 {
   competitors?: string[],
   marketSize?: string,
   regulatoryCompliance?: string[],
-}
+};
 
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = [
   // AI-Powered Algorithmic Trading Platform
@@ -259,7 +259,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: FinancialAIService2028[] = 
     },
     competitors: ["Lemonade", "Root Insurance", "Metromile", "Oscar Health", "Hippo"],
     marketSize: "$94.7 billion by 2028",regulatoryCompliance: ["Insurance regulations", "SOC 2", "ISO 27001", "Data privacy laws"]
-  }
+  };
 ],
 
 export default SPECIALIZED_FINANCIAL_AI_SERVICES_2028;

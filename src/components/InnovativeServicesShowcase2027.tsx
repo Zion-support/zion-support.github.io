@@ -357,4 +357,3 @@ export const InnovativeServicesShowcase202, 7: React.FC = () => {
       </div>
     </section>
   )
-};

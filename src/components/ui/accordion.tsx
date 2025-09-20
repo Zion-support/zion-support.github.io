@@ -5,7 +5,7 @@ interface AccordionProps {
   className?: string,
   type?: 'single' | 'multiple',
   defaultValue?: string | string[]
-}
+};
 
 export function Accordion({
   children,
@@ -39,14 +39,12 @@ export function Accordion({
       })}
     </div>
   );
-}
 
 interface AccordionItemProps {
   children: React.ReactNode,value: string;
   className?: string,
   isOpen?: boolean,
   onToggle?: () => void
-}
 
 export function AccordionItem({
   children,
@@ -64,14 +62,12 @@ export function AccordionItem({
       })}
     </div>
   );
-}
 
 interface AccordionTriggerProps {
   children: React.ReactNode;
   className?: string,
   isOpen?: boolean,
   onToggle?: () => void
-}
 
 export function AccordionTrigger({
   children,
@@ -92,13 +88,11 @@ export function AccordionTrigger({
       />
     </button>
   );
-}
 
 interface AccordionContentProps {
   children: React.ReactNode;
   className?: string,
   isOpen?: boolean
-}
 
 export function AccordionContent({
   children,
@@ -111,4 +105,3 @@ export function AccordionContent({
       {children}
     </div>
   );
-}

@@ -302,4 +302,4 @@ export function AppHeader() {
       <div className="h-16 lg: h-20"></div>
     </>
   )
-}
+};

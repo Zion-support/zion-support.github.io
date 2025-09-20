@@ -485,4 +485,4 @@ export default function Status() {
       </section>
     </div>
   )
-}
+};

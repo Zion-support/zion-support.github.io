@@ -7,7 +7,7 @@ export interface NewInnovativeService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
   // AI Legal Document Automation
@@ -159,6 +159,6 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     },
     competitors: ["Alpaca", "QuantConnect", "Zerodha", "Robinhood", "Interactive Brokers"],
     marketSize: "$12.5 billion by 2025"
-  }
+  };
 ];
 export default NEW_INNOVATIVE_SERVICES_2025;

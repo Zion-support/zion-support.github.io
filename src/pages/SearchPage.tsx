@@ -50,7 +50,7 @@ interface SearchResult {
   readTime?: number,
   relevance: number;
   featured?: boolean
-}
+};
 ;
 const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();

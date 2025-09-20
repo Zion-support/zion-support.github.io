@@ -64,7 +64,7 @@ const NewsletterSectio, n: React.FC = () => {
         </div>
       </section>
     )
-  }
+  };
 ;
   return (<section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">

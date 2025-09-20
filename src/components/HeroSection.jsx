@@ -304,4 +304,4 @@ export function HeroSection() {
             </motion.div>
         </section>
     )
-}
+};

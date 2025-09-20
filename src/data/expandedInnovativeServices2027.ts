@@ -15,7 +15,7 @@ export interface ExpandedService2027 {
     uptime: string,security: string[],compliance: string[],apiEndpoints: number,scalability: string
   },
   support: string,rating: number,reviews: number,launchDate: string,status: 'active' | 'beta' | 'coming-soon'
-}
+};
 
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const advancedCybersecurityServices: ExpandedService2027[] = [
@@ -102,7 +102,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       apiEndpoints: 150,scalability: 'Enterprise-grade'
     },
     support: 'Business hours + emergency support',rating: 4.8,reviews: 189,launchDate: '2027-02-01',status: 'active'
-  }
+  };
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
@@ -189,7 +189,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       apiEndpoints: 250,scalability: 'Millions of events per second'
     },
     support: '24/7 technical support',rating: 4.8,reviews: 198,launchDate: '2027-02-15',status: 'active'
-  }
+  };
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
@@ -277,7 +277,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       apiEndpoints: 200,scalability: 'Unlimited developers and projects'
     },
     support: 'Business hours + emergency support',rating: 4.7,reviews: 245,launchDate: '2027-02-05',status: 'active'
-  }
+  };
 ];
 // 4. ADVANCED IOT & EDGE COMPUTING
 export const advancedIoTServices: ExpandedService2027[] = [
@@ -366,7 +366,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       apiEndpoints: 500,scalability: 'City-wide deployment'
     },
     support: '24/7 city operations support',rating: 4.9,reviews: 156,launchDate: '2027-02-10',status: 'active'
-  }
+  };
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY
 export const advancedFinTechServices: ExpandedService2027[] = [
@@ -452,7 +452,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       compliance: ['DeFi standardsSmart contract best practices'],apiEndpoints: 300,scalability: 'Layer 2 solutions'
     },
     support: 'Community + Developer support',rating: 4.6,reviews: 423,launchDate: '2027-01-01',status: 'active'
-  }
+  };
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY
 export const advancedHealthcareServices: ExpandedService2027[] = [
@@ -540,7 +540,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       apiEndpoints: 300,scalability: 'Unlimited providers and patients'
     },
     support: '24/7 healthcare support',rating: 4.7,reviews: 289,launchDate: '2027-01-15',status: 'active'
-  }
+  };
 ];
 // Export all expanded services
 export const ALL_EXPANDED_SERVICES_2027 = [
@@ -570,7 +570,6 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 // Helper function to get services by subcategory
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)
-};
 // Helper function to search services
 export const searchExpandedServices = (query: string): ExpandedService2027[] => {
   const lowercaseQuery = query.toLowerCase();
@@ -581,4 +580,3 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   )
-};

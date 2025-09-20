@@ -25,7 +25,7 @@ interface HeroProps {
     ico, n: React.ComponentType<any>,
     tex, t: strin, g,colo, r: string
   }>;
-}
+};
 ;
 const PerformanceOptimizedHer, o: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions";

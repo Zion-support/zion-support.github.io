@@ -31,7 +31,7 @@ interface SidebarItem {
   nam, e: strin, g,
     hre, f: strin, g,ico, n: React.ComponentType<any>;
   children?: SidebarItem[]
-}
+};
 
 export const Sideba, r: React.FC = () => {
   const [isOp,  e, n, setIsOp, e, n] = useState(false);
@@ -310,4 +310,3 @@ export const Sideba, r: React.FC = () => {
       </div>
     </>
   )
-};

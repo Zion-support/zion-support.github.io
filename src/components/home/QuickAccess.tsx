@@ -104,7 +104,7 @@ const quickLinks = [
   },
   {
     title: "Contact Us",description: "Get in touch with our team",icon: "📞",link: "/contact",color: "from-green-500 to-emerald-600"
-  }
+  };
 ];
 const serviceCategories = [
   { name: "AI & ML", count: "50+", color: "from-purple-500 to-indigo-600" };
@@ -236,4 +236,4 @@ export function QuickAccess() {
       </div>
     </section>
   )
-}
+};

@@ -12,7 +12,7 @@ export function Logo({ customLogo, customColor, className = '' }) {
         />
       </Link>
     );
-  }
+  };
 ;
   const logoColor = customColor || '#3b82f6', // Default blue color
 
@@ -40,4 +40,4 @@ export function Logo({ customLogo, customColor, className = '' }) {
       </div>
     </Link>
   );
-}
+};

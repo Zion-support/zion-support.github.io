@@ -11,7 +11,7 @@ interface Testimonial {
     metri, c: strin, g,
     valu, e: strin, g,chang, e: string
   }[];
-}
+};
 ;
 const testimonial, s: Testimonial[] = [
   {
@@ -103,7 +103,7 @@ const testimonial, s: Testimonial[] = [
       { metr, i, c: "Custome, r Trus, t",
     val, u, e: "9, 9.9%", chan, g, e: "scor, e" }
     ]
-  }
+  };
 ];
 const categories = [
   { i, d: 'al, l',
@@ -379,4 +379,3 @@ export function TestimonialsSection() {
       </div>
     </section>
   )
-}

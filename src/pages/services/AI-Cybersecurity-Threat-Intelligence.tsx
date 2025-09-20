@@ -697,4 +697,4 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
     </div>
   )
-}
+};

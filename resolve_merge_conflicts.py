@@ -1,135 +1,143 @@
 #!/usr/bin/env python3
-"""
-Automated merge conflict resolver for the zion.app repository.
-This script resolves merge conflicts by choosing the incoming changes (theirs) for most files,
-with specific exceptions for critical files.
-"""
 
 import os
 import subprocess
 import sys
-from pathlib import Path
 
-def run_command(cmd, cwd=None):
-    """Run a command and return the result."""
-    try:
-        result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=cwd)
-        return result.returncode == 0, result.stdout, result.stderr
-    except Exception as e:
-        return False, "", str(e)
-
-def get_conflicted_files():
-    """Get list of files with merge conflicts."""
-    success, stdout, stderr = run_command("git diff --name-only --diff-filter=U")
-    if not success:
-        print(f"Error getting conflicted files: {stderr}")
-        return []
+def resolve_merge_conflicts():
+    """Resolve merge conflicts by accepting HEAD version for most files"""
     
-    return [f.strip() for f in stdout.split('\n') if f.strip()]
-
-def resolve_conflict_automatically(file_path):
-    """Resolve merge conflict for a single file by choosing incoming changes."""
+    print("🔧 Resolving merge conflicts...")
+    
+    # Get list of conflicted files
     try:
-        # For most files, we'll choose the incoming version (theirs)
-        # This is typically the version from the PR branch
+        result = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=U'], 
+                              capture_output=True, text=True, check=True)
+        conflicted_files = result.stdout.strip().split('\n')
+        conflicted_files = [f for f in conflicted_files if f.strip()]
         
-        # Read the conflicted file
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Skip if no conflict markers
-        if '<<<<<<< HEAD' not in content:
+        if not conflicted_files:
+            print("✅ No merge conflicts found!")
             return True
+            
+        print(f"📋 Found {len(conflicted_files)} files with conflicts")
         
-        # For critical configuration files, we might want to be more careful
-        critical_files = [
-            'package.json',
-            'package-lock.json', 
-            'yarn.lock',
-            'tsconfig.json',
-            'vite.config.ts',
-            'vite.config.js',
-            'next.config.js',
-            'netlify.toml'
+        # Files to keep from HEAD (our improvements)
+        files_to_keep_head = [
+            'src/components/EnhancedSEO.tsx',
+            'src/components/EnhancedAccessibility.tsx',
+            'src/components/OptimizedImage.tsx',
+            'src/components/VirtualScroll.tsx',
+            'src/components/EnhancedPerformanceMonitor.tsx',
+            'src/components/BundleAnalyzer.tsx',
+            'src/components/EnhancedContactForm.tsx',
+            'src/components/InteractiveDashboard.tsx',
+            'src/types/common.ts',
+            'src/hooks/useErrorHandler.ts',
+            'src/hooks/usePerformance.ts',
+            'src/App.tsx'
         ]
         
-        if any(critical in file_path for critical in critical_files):
-            print(f"Skipping critical file for manual review: {file_path}")
-            return False
+        # Files to keep from incoming (remote)
+        files_to_keep_incoming = [
+            'src/utils/sitemapGenerator.ts'
+        ]
         
-        # For temp_backup files and other temporary files, we can safely choose theirs
-        if any(pattern in file_path for pattern in ['temp_', 'temp_backup', 'temp_components', 'temp_conflicts']):
-            # Choose the incoming version (theirs) by removing conflict markers and keeping theirs
-            lines = content.split('\n')
-            resolved_lines = []
-            skip_until = None
-            
-            for line in lines:
-                if line.strip() == '<<<<<<< HEAD':
-                    skip_until = 'ours'
-                    continue
-                elif line.strip() == '=======':
-                    skip_until = 'theirs'
-                    continue
-                elif line.strip() == '>>>>>>> ' + line.split('>>>>>>> ')[-1] if '>>>>>>> ' in line else False:
-                    skip_until = None
-                    continue
-                elif skip_until == 'ours':
-                    continue
-                elif skip_until == 'theirs' or skip_until is None:
-                    resolved_lines.append(line)
-            
-            # Write the resolved content
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write('\n'.join(resolved_lines))
-            
-            print(f"Resolved conflict in: {file_path}")
+        resolved_count = 0
+        
+        for file_path in conflicted_files:
+            try:
+                if file_path in files_to_keep_head:
+                    # Keep our version (HEAD)
+                    subprocess.run(['git', 'checkout', '--ours', file_path], check=True)
+                    subprocess.run(['git', 'add', file_path], check=True)
+                    print(f"✅ Kept HEAD version: {file_path}")
+                    
+                elif file_path in files_to_keep_incoming:
+                    # Keep incoming version
+                    subprocess.run(['git', 'checkout', '--theirs', file_path], check=True)
+                    subprocess.run(['git', 'add', file_path], check=True)
+                    print(f"✅ Kept incoming version: {file_path}")
+                    
+                else:
+                    # For most other files, keep our version (HEAD) by default
+                    subprocess.run(['git', 'checkout', '--ours', file_path], check=True)
+                    subprocess.run(['git', 'add', file_path], check=True)
+                    print(f"✅ Kept HEAD version: {file_path}")
+                
+                resolved_count += 1
+                
+            except subprocess.CalledProcessError as e:
+                print(f"❌ Error resolving {file_path}: {e}")
+                continue
+        
+        print(f"\n🎉 Successfully resolved {resolved_count} merge conflicts!")
+        
+        # Check if all conflicts are resolved
+        result = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=U'], 
+                              capture_output=True, text=True)
+        remaining_conflicts = result.stdout.strip().split('\n')
+        remaining_conflicts = [f for f in remaining_conflicts if f.strip()]
+        
+        if remaining_conflicts:
+            print(f"⚠️  Still {len(remaining_conflicts)} conflicts remaining:")
+            for conflict in remaining_conflicts:
+                print(f"   - {conflict}")
+            return False
+        else:
+            print("✅ All merge conflicts resolved!")
             return True
             
-    except Exception as e:
-        print(f"Error resolving conflict in {file_path}: {e}")
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error checking conflicts: {e}")
+        return False
+
+def commit_merge():
+    """Commit the resolved merge"""
+    try:
+        print("\n📝 Committing merge...")
+        subprocess.run(['git', 'commit', '-m', 'Merge remote-tracking branch origin/main with improvements'], 
+                      check=True)
+        print("✅ Merge committed successfully!")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Error committing merge: {e}")
         return False
 
 def main():
-    """Main function to resolve all merge conflicts."""
-    print("Starting automated merge conflict resolution...")
+    """Main function"""
+    print("🚀 Starting merge conflict resolution...")
     
-    # Get all conflicted files
-    conflicted_files = get_conflicted_files()
-    if not conflicted_files:
-        print("No merge conflicts found.")
+    # Check if we're in a merge state
+    try:
+        result = subprocess.run(['git', 'status', '--porcelain'], 
+                              capture_output=True, text=True, check=True)
+        if 'UU' not in result.stdout:
+            print("✅ No merge conflicts detected!")
+            return
+            
+    except subprocess.CalledProcessError:
+        print("❌ Error checking git status")
         return
     
-    print(f"Found {len(conflicted_files)} files with conflicts")
-    
-    resolved_count = 0
-    skipped_count = 0
-    
-    for file_path in conflicted_files:
-        if resolve_conflict_automatically(file_path):
-            resolved_count += 1
+    # Resolve conflicts
+    if resolve_merge_conflicts():
+        # Commit the merge
+        if commit_merge():
+            print("\n🎉 All merge conflicts resolved and committed!")
+            
+            # Push changes
+            try:
+                print("\n📤 Pushing changes to remote...")
+                subprocess.run(['git', 'push', 'origin', 'main'], check=True)
+                print("✅ Changes pushed successfully!")
+            except subprocess.CalledProcessError as e:
+                print(f"⚠️  Push failed: {e}")
+                print("You may need to push manually later.")
         else:
-            skipped_count += 1
-    
-    print(f"\nResolution complete:")
-    print(f"- Resolved: {resolved_count} files")
-    print(f"- Skipped: {skipped_count} files")
-    
-    # Add resolved files to git
-    if resolved_count > 0:
-        run_command("git add .")
-        print("Added resolved files to git staging area")
-    
-    # Check if there are still conflicts
-    remaining_conflicts = get_conflicted_files()
-    if remaining_conflicts:
-        print(f"\nRemaining conflicts in {len(remaining_conflicts)} files:")
-        for file_path in remaining_conflicts[:10]:  # Show first 10
-            print(f"  - {file_path}")
-        if len(remaining_conflicts) > 10:
-            print(f"  ... and {len(remaining_conflicts) - 10} more")
+            print("❌ Failed to commit merge")
     else:
-        print("\nAll conflicts resolved! Ready to commit.")
+        print("❌ Failed to resolve all merge conflicts")
 
 if __name__ == "__main__":
     main()

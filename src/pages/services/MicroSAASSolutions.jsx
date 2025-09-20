@@ -189,4 +189,4 @@ export default function MicroSAASSolutions() {
         </div>
       </section>
     </div>)
-}
+};

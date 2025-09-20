@@ -12,7 +12,7 @@ export interface ComprehensiveService2025 {
   marketSize?: string,
   launchDate?: string,
   betaAccess?: boolean,
-}
+};
 
 // Combine all services into one comprehensive catalog
 export const COMPREHENSIVE_SERVICES_CATALOG_2025: ComprehensiveService2025[] = [
@@ -106,7 +106,6 @@ export const calculateServiceStats = () => {
     }))
   };
   return stats,
-};
 
 // Get services by category
 export const getServicesByCategory = (category: string) => {
@@ -120,19 +119,16 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   )
-};
 // Get services by innovation level
 export const getServicesByInnovationLevel = (level: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   )
-};
 // Get services by support level
 export const getServicesBySupportLevel = (level: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.supportLevel.toLowerCase() === level.toLowerCase()
   )
-};
 // Search services
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase();
@@ -189,7 +185,6 @@ export const getServicesByIndustry = (industry: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     categories.some(category => service.category.includes(category))
   );
-};
 // Get service recommendations based on user preferences
 export const getServiceRecommendations = (preferences: {
   industry?: string;
@@ -201,29 +196,28 @@ export const getServiceRecommendations = (preferences: {
 
   if (preferences.industry) {
     recommendations = getServicesByIndustry(preferences.industry);
-  }
+  };
 ;
   if (preferences.budget) {
     recommendations = recommendations.filter(service => service.price <= preferences.budget!);
-  }
+  };
 ;
   if (preferences.innovationLevel) {
     recommendations = recommendations.filter(service =>
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()
     ),
-  }
+  };
 ;
   if (preferences.supportLevel) {
     recommendations = recommendations.filter(service =>
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
     ),
-  }
+  };
 ;
   return recommendations.sort((a, b) => {
     const aScore = parseInt(a.roi.replace(/\D/g, '')),
     const bScore = parseInt(b.roi.replace(/\D/g, '')),
     return bScore - aScore,
   }),
-};
 
 export default COMPREHENSIVE_SERVICES_CATALOG_2025;

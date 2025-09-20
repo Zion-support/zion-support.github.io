@@ -295,4 +295,4 @@ export default function AIHRTalentPlatform() {
       </section>
     </div>
   )
-}
+};

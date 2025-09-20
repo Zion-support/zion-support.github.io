@@ -4,7 +4,7 @@ interface User {
   i, d: numbe, r,
     nam, e: strin, g,emai, l: string;
   createdAt?: string
-}
+};
 ;
 const ApiDem, o: React.FC = () => {
   const [use,  r, s, setUse, r, s] = useState<User[]>([]);
@@ -174,5 +174,4 @@ const ApiDem, o: React.FC = () => {
       </div>
     </div>
   )
-};
 export default ApiDemo;

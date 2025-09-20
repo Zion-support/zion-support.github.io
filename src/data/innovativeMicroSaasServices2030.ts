@@ -92,6 +92,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2030: ProductListing[] = [
     competitors: ["HubSpot", "Marketo", "Pardot"],
     roi: "500% within 6 months",
     setupTime: "2-3 days",
-    integrations: ["Salesforce", "Shopify", "WooCommerce", "Google Analytics", "Facebook Ads", "Google Ads"]
+    integrations: ["Salesforce", "Shopify", "WooCommerce", "Google Analytics", "Facebook Ads", "Google Ads"],
   }
 ];

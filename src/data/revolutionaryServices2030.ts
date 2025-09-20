@@ -3,24 +3,20 @@
 
 export interface ServiceContact {
   phone: string,email: string,website: string,address: string
-}
+};
 
 export interface MicroSaasService {
   id: number,name: string,category: string,pricing: string,description: string,price: number,pricingModel: string,userLimit: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,competitors: string[],roi: string,setupTime: string,integrations: string[],freeTier: boolean,trialPeriod: string,innovationLevel: string,marketSize: string,growthRate: string
-}
 
 export interface ITService {
   id: number,name: string,category: string,description: string,hourlyRate: number,projectRate: number,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,responseTime: string,sla: string,certifications: string[],deliveryTime: string,support: string,innovationLevel: string,marketSize: string,compliance: string[]
-}
 
 export interface AIService {
   id: number,name: string,category: string,description: string,pricing: string,price: number,pricingModel: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,aiModels: string[],accuracy: string,trainingData: string,compliance: string[],aiScore: number,useCases: string[],innovationLevel: string,marketSize: string,ethicalAI: string[]
-}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {,
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
-};
 // Revolutionary Micro SAAS Services 2030
 export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
   {
@@ -607,7 +603,7 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
     },
     competitors: ["Goldman Sachs", "JPMorgan Chase", "Morgan Stanley"],
     marketSize: "$300+ billion by 2030"
-  }
+  };
 ];
 // Revolutionary IT Services 2030
 export const revolutionaryITServices2030: ITService[] = [
@@ -688,7 +684,7 @@ export const revolutionaryITServices2030: ITService[] = [
     contactInfo: zionContact,marketPrice: "$300-350/hour, $100K-150K/project",
     responseTime: "1-2 hours",sla: "99.99% security uptime",certifications: ["CISSP", "CISM", "CCSP", "SANS GIAC", "Zero Trust"],
     deliveryTime: "4-8 months",support: "24/7 security operations center",innovationLevel: "Advanced",marketSize: "$7.6 billion",compliance: ["ISO 27001", "NIST", "SOC 2", "PCI DSS", "HIPAA"]
-  }
+  };
 ],
 
 // Revolutionary AI Services 2030
@@ -778,28 +774,24 @@ export const revolutionaryAIServices2030: AIService[] = [
     compliance: ["Research protocols", "Data security", "Quantum standards"],
     aiScore: 9.9,useCases: ["Drug discovery", "Financial modeling", "Climate simulation", "Cryptography"],
     innovationLevel: "Revolutionary",marketSize: "$6.2 billion",ethicalAI: ["Quantum ethics", "Research integrity", "Safety protocols", "Transparency"]
-  }
+  };
 ],
 
 // Export all services
 export const allRevolutionaryServices2030 = {
   microSaas: revolutionaryMicroSaasServices2030,itServices: revolutionaryITServices2030,aiServices: revolutionaryAIServices2030
-};
 export const getRevolutionaryServicesByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryService2030[] => {
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   )
-};
 export const getRevolutionaryFeaturedServices = (limit: number = 10): RevolutionaryService2030[] => {
   return REVOLUTIONARY_SERVICES_2030
     .filter(service => service.featured)
     .slice(0, limit);
-};
 export const getRevolutionaryTrendingServices = (limit: number = 10): RevolutionaryService2030[] => {
   return REVOLUTIONARY_SERVICES_2030
     .filter(service => service.trending)
     .slice(0, limit);
-};
 export const searchRevolutionaryServices = (query: string): RevolutionaryService2030[] => {
   const lowercaseQuery = query.toLowerCase();
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
@@ -807,17 +799,14 @@ export const searchRevolutionaryServices = (query: string): RevolutionaryService
     service.description.toLowerCase().includes(lowercaseQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   )
-};
 
 export const getRevolutionaryServicesByInnovationLevel = (level: string): RevolutionaryService2030[] => {
   return REVOLUTIONARY_SERVICES_2030.filter(service => service.innovationLevel === level)
-};
 export const getRevolutionaryServicesByTechnology = (technology: string): RevolutionaryService2030[] => {
   const lowercaseTech = technology.toLowerCase();
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
   )
-};
 
 export const getRevolutionaryServicesStats = () => {
   const totalServices = REVOLUTIONARY_SERVICES_2030.length;

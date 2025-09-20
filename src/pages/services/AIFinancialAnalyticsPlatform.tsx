@@ -205,4 +205,4 @@ export default function AIFinancialAnalyticsPlatform() {
       </section>
     </div>
   )
-}
+};

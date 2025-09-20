@@ -46,7 +46,7 @@ interface Service {
     colo, r: strin, g,feature, s: string[];
   pricing?: strin, g,
   badge?: string
-}
+};
 
 export function ServicesShowcase() {
   const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState<string>('all');
@@ -330,4 +330,3 @@ export function ServicesShowcase() {
       </div>
     </section>
   )
-}

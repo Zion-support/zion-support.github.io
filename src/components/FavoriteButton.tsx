@@ -4,7 +4,7 @@ interface FavoriteButtonProps {
   itemI, d: strin, g,
     itemTyp, e: 'product' | 'talent' | 'equipment' | 'service';
   className?: string
-}
+};
 
 export function FavoriteButton({ itemI,  d, itemTyp, e, className = '' }: FavoriteButtonProps) {
   const [isFavorit, e, d, setIsFavorit, e, d] = useState(false);
@@ -39,4 +39,3 @@ export function FavoriteButton({ itemI,  d, itemTyp, e, className = '' }: Favori
       />
     </button>
   );
-}

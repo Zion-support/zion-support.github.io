@@ -108,7 +108,7 @@ export const EMERGING_TECH_SERVICES_2029: ProductListing[] = [
     marketPrice: "$50,000-80,000",
     competitors: ["SpaceX Starlink", "OneWeb", "Amazon Kuiper"],
     roi: "600% within 24 months",setupTime: "16-20 weeks",integrations: ["Satellite Networks", "Ground Stations", "Space Hardware", "AI Frameworks", "Cloud Computing", "5G Networks"]
-  }
+  };
 ],
 
 export default EMERGING_TECH_SERVICES_2029;

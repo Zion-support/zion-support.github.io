@@ -5,7 +5,7 @@ export interface Service {
   targetMarket: string,useCases: string[],technologies: string[],integration: string[],support: string[],compliance: string[],marketPosition: string,competitiveAdvantage: string,roi: string,implementationTime: string,contactInfo: {,
     phone: string,email: string,website: string
   };
-}
+};
 
 export const innovativeServices2029: Service[] = [
   // AI-Powered Micro SAAS Services
@@ -259,7 +259,7 @@ export const innovativeServices2029: Service[] = [
     marketPosition: 'Leading AI workflow automation platform with intelligent process optimization',competitiveAdvantage: 'AI algorithms that continuously learn and optimize workflows based on performance data',roi: '300% ROI through improved efficiency and reduced operational costs',implementationTime: '3-5 weeks',contactInfo: {,
       phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/services/ai-workflow-orchestrator'
     }
-  }
+  };
 ];
 export const serviceCategories = [
   {
@@ -276,7 +276,7 @@ export const serviceCategories = [
   },
   {
     id: 'automation',name: 'Automation & Integration',description: 'Streamline operations with intelligent automation',icon: '⚡',count: 1
-  }
+  };
 ];
 export const pricingTiers = {
   starter: {,
@@ -290,5 +290,4 @@ export const pricingTiers = {
   enterprise: {,
     name: 'Enterprise',price: 'Custom pricing',features: ['Full feature setDedicated support', 'Custom developmentUnlimited users', 'White-label options'],
     bestFor: 'Large organizations'
-  }
-};
+  };

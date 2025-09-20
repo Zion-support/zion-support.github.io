@@ -15,11 +15,10 @@ import {
 import { SEO } from "../components/SEO";
 interface CookieType {
   id: string,name: string,description: string,color: string,icon: React.ComponentType<any>,examples: string[],alwaysActive: boolean
-}
+};
 
 interface CookieDetail {
   name: string,purpose: string,duration: string,provider: string,type: 'essential' | 'analytics' | 'marketing' | 'functional'
-}
 ;
 const cookieTypes: CookieType[] = [
   {
@@ -37,7 +36,7 @@ const cookieTypes: CookieType[] = [
   {
     id: 'functional',name: 'Functional Cookies',description: 'Enable enhanced functionality and personalization',color: 'from-green-500/20 to-emerald-500/20',icon: Settings,examples: ['Language preferencesCustom settings', 'Enhanced features'],
     alwaysActive: false
-  }
+  };
 ];
 const cookieDetails: CookieDetail[] = [
   {
@@ -51,7 +50,7 @@ const cookieDetails: CookieDetail[] = [
   },
   {
     name: 'preferences',purpose: 'User preferences',duration: '1 year',provider: 'Zion Tech Group',type: 'functional'
-  }
+  };
 ];
 const Cookies: React.FC = () => {
   const [cookiePreferences, setCookiePreferences] = useState({
@@ -379,5 +378,4 @@ const Cookies: React.FC = () => {
       </section>
     </div>
   )
-};
 export default Cookies;

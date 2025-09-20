@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 interface WhitelabelContextType {
   isWhitelabeled: boolean,brandName: string,brandLogo: string,primaryColor: string,secondaryColor: string,setBrandName: (name: string) => void,setBrandLogo: (logo: string) => void,setPrimaryColor: (color: string) => void,setSecondaryColor: (color: string) => void
-}
+};
 ;
 const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined);
 export const useWhitelabel = () => {
@@ -10,11 +10,9 @@ export const useWhitelabel = () => {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   };
   return context,
-};
 
 interface WhitelabelProviderProps {
   children: ReactNode
-}
 
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children }) => {
   const [brandName, setBrandName] = useState('Zion Tech Group');
@@ -38,4 +36,3 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ children
       {children}
     </WhitelabelContext.Provider>
   );
-};

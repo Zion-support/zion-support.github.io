@@ -231,4 +231,4 @@ export default function AIAnalyticsDashboard() {
         </div>
       </section>
     </div>)
-}
+};

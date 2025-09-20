@@ -9,7 +9,7 @@ export interface ComprehensiveAIService2029 {
   marketSize?: string,
   demoUrl?: string,
   documentationUrl?: string,
-}
+};
 
 export const COMPREHENSIVE_AI_SERVICES_2029: ComprehensiveAIService2029[] = [
   // AI-Powered Business Intelligence
@@ -452,6 +452,6 @@ export const COMPREHENSIVE_AI_SERVICES_2029: ComprehensiveAIService2029[] = [
     },
     competitors: ["CrowdStrike", "SentinelOne", "Cylance", "Darktrace", "Cisco"],
     marketSize: "$22.1B (Cybersecurity)",demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity-platform",documentationUrl: "https://ziontechgroup.com/docs/ai-cybersecurity-platform"
-  }
+  };
 ];
 export default COMPREHENSIVE_AI_SERVICES_2029;

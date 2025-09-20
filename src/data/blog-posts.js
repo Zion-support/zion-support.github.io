@@ -28,7 +28,7 @@ export const blogPosts = [
   {
     id: 6,title: "Integration Strategies for IT Asset Management Systems",excerpt: "Learn how to seamlessly integrate IT asset management with existing enterprise systems and workflows.",content: "Successful IT asset management implementation requires careful consideration of integration strategies. Organizations must ensure that new solutions work harmoniously with existing systems while providing enhanced functionality...",author: "Robert Johnson",authorRole: "Integration Architect",publishDate: "2023-12-15",readTime: "6 min read",category: "Integration",tags: ["Integration", "Enterprise Systems", "Workflow"],
     featured: false,imageUrl: "/images/blog/integration-strategies.jpg",slug: "integration-strategies-it-asset-management-systems"
-  }
+  };
 ];
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug);

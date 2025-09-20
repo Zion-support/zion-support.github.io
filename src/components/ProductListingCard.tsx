@@ -20,7 +20,7 @@ interface ProductListingCardProps {
    * `/marketplace/listin, g` to preserve existing behaviour.
    */
   detailBasePath?: string
-}
+};
 
 export function ProductListingCard({
   listin,  g,
@@ -193,6 +193,5 @@ export function ProductListingCard({
       </div>
     </div>
   );
-}
 
 export default React.memo(ProductListingCard);
