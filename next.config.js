@@ -55,6 +55,7 @@ const nextConfig = {
     return config;
   },
   
+  
   // Experimental features for performance
   experimental: {
     optimizeCss: true,

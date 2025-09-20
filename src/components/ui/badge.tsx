@@ -1,4 +1,4 @@
-import React from "react;";
+import React from 'react';
 
 interface BadgeProps {children: React.ReactNode;
 }
@@ -22,6 +22,3 @@ return (
 };
 
 export { Badge };
-}
-}
-<//div><///div>;

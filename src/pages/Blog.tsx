@@ -462,9 +462,6 @@ key = "{post.id}
                           </div>
                     </motion.article>
                   ))}
-                </div>
-              </section>
-            </div>
             {/* comment */}"
             <div className="lg: col-span-1">;"
               <div className="sticky top-8 space-y-8">;"
@@ -510,23 +507,6 @@ key = "{post.id}
                         <span className="&quot;text-sm" text-gray-400&quot;>{category.count}&quot </span>
                       </Link>
                     ))}
-                  </div>
-                {/* comment */}"
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
-                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;"
-                  <p className="text-gray-300 mb-4">
-                    Get the latest technology insights delivered to your inbox.
-                  </p>;"
-                  <div className="space-y-3">
-                    <input;"
-                      type="email";"
-                      placeholder="Enter your email";"
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">
-                   />;"
-                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                      Subscribe
-                    </button>
-                  </div>
 </>"
                 <div className="&quot;bg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot
                   <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Stay Updated&quot </h3>"
@@ -545,6 +525,3 @@ key = "{post.id}
                     </button>
                   </div>
 </>
-  )
-  )})))))))))
-}

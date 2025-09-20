@@ -7,10 +7,6 @@ interface Props {
 
 interface State {
   
-  hasError: boolean;
-  error?: Error;
-}
-
 export default class GlobalErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
@@ -39,19 +35,4 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
               <h1 className="ml-3 text-xl font-semibold text-gray-900">Something went wrong</h1>
             </div>
             <p className="text-gray-600 mb-4">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}

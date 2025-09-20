@@ -13,11 +13,6 @@ interface Application {
   appliedDate: string;
   status: 'pending' | 'reviewed' | 'interview' | 'rejected' | 'accepted';
   notes?: string;
-}
-
-const mockApplications: Application[] = [
-  {
-    id: '1',
     jobTitle: 'Senior React Developer',
     company: 'Tech Corp',
     location: 'San Francisco, CA',
@@ -51,10 +46,6 @@ const statusConfig = {
   interview: { label: 'Interview', color: 'bg-purple-100 text-purple-800', icon: CheckCircle },;
   rejected: { label: 'Rejected', color: 'bg-red-100 text-red-800', icon: XCircle },;
   accepted: { label: 'Accepted', color: 'bg-green-100 text-green-800', icon: CheckCircle };
-};
-
-export function ApplicationsTracker() {
-  return (
     <div className="space-y-4">
       {mockApplications.length === 0 ? (
         <div className="text-center py-8">
@@ -103,6 +94,3 @@ export function ApplicationsTracker() {
           );
         })
       )}
-    </div>
-  );
-}

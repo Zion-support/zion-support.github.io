@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { BookOpen, Key, Webhook, List } from 'lucide-react';
+
 interface TabDefinition {
   
   id: string;
@@ -7,12 +10,6 @@ label: string;
 export function DeveloperPortal() {}
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
-  // Define the tabs,
-const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen },
-{ id: 'api-keys', label: 'API Keys', icon: Key }
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
 { id: 'logs', label: 'Logs', icon: List }
   ]
   return (activeTab === tab.id
@@ -26,16 +23,6 @@ const tabs: TabDefinition[] = [
               </button>
             )
           })}
-        </div>
-      </div>
-      {/* Tab content */}
-      <div>
-        {activeTab === 'documentation' && <ApiDocumentation />}
-        {activeTab === 'api-keys' && <ApiKeysManager />}
-        {activeTab === 'webhooks' && <WebhooksManager />}
-        {activeTab === 'logs' && <ApiLogs />}
-      </div>
-    </div>
   )
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -67,4 +54,3 @@ export default function ProtectedDeveloperPortal() {
 }
 }
   )
-}

@@ -26,6 +26,3 @@ export function CategoryCard({ title, description, icon, href }: CategoryCardPro
       <p className="text-gray-600 text-sm">
         {description}
       </p>
-    </Link>
-  );
-}
