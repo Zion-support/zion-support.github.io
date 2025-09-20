@@ -10,8 +10,8 @@ export default function NeuralInterfaces2025Page() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="Neural Interfaces 2025"
+        description="Explore the future of neural interfaces and brain-computer integration"
         keywords="neural interfaces, brain-computer interface, BCI, cognitive enhancement, AI 2025"
         url="/neural-interfaces-2025"
       />

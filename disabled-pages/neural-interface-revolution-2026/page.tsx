@@ -5,10 +5,11 @@ export const metadata: Metadata = {
   title: 'Neural Interface Revolution 2026 - Zion Tech Group',
   description: 'Explore the neural interface revolution of 2026. Learn about brain-computer interfaces, neural augmentation, and mind-machine integration.',
   keywords: 'neural interface, brain-computer interface, BCI, neural augmentation, mind-machine interface, neurotechnology 2026',
-  openGraph: {,
+  openGraph: {
     title: 'Neural Interface Revolution 2026',
     description: 'Revolutionary neural interface technology and brain-computer interfaces',
-    type: 'website'}
+    type: 'website'
+  }
 }
 export default function NeuralInterfaceRevolution() {
   return (
