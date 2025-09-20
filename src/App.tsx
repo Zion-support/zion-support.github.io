@@ -40,11 +40,9 @@ const App: React.FC = () => {
               <Route path="/contact" element={<LazyContact />} />
             </Routes>
           </React.Suspense>
-          <PerformanceOptimizer />
-          <EnhancedAccessibility />
-        </AccessibilityEnhancer>
+        </EnhancedAccessibility>
       </ThemeProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 

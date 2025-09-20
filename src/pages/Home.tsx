@@ -42,7 +42,7 @@ import {
   Mail, 
   TrendingUp 
 } from 'lucide-react';
-import { SEO } from "@/components/SEO";
+import SEO from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 import { ErrorBoundary } from "@/components/ui/ErrorBoundary";

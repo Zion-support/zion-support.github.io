@@ -53,7 +53,7 @@ import {
   Car,
   Settings
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import SEO from '../components/SEO';
 import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030';
 import { COMPREHENSIVE_PRICING_GUIDE_2030 } from '../data/comprehensivePricingGuide2030';
 
