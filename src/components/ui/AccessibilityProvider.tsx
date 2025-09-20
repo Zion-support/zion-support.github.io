@@ -6,8 +6,8 @@ isReducedMotion: boolean;
 isLargeText: boolean;
 toggleHighContrast: () => void;
 toggleReducedMotion: () => void;
-toggleLargeText: () => void;
-focusTrap: (element: HTMLElement | null) => void;
+toggleLargeText: () => void;,
+focusTrap: (element: HTMLElement | null) => void;,
 announceToScreenReader: (message: string) => void;
 }
 }
@@ -239,9 +239,9 @@ Large Text;
 <p>Ctrl/Cmd + K: High Contrast</p>;
 <p>Ctrl/Cmd + M: Reduced Motion</p>;
 <p>Ctrl/Cmd + L: Large Text</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };
 

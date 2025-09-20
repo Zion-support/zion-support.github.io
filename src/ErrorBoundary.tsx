@@ -55,7 +55,7 @@ background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz
 </pre>;
 </details>;
 )}
-</div>
+</div>;
 );
 }
 return this.props.children;

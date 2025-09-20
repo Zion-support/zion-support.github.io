@@ -1,7 +1,7 @@
 import { useState; useCallback } from "react";
 
 export interface Toast {
-id: string;
+id: string;,
 title: string;
 description?: string;
 variant?: "default" | "destructive" | "success";
@@ -17,7 +17,7 @@ variant?: "default" | "destructive" | "success";}
 import { useState } from "react";
 
 interface Toast {
-id: string;
+id: string;,
 title: string;
 description?: string;
 type?: "success" | "error" | "warning" | "info";
@@ -34,8 +34,8 @@ const toast: any = (options: Omit<Toast "id">) => {;
 const id = Date.now().toString();
 const newToast: Toast = {
 id;
-title: options.title;
-description: options.description;
+title: options.title;,
+description: options.description;,
 variant: options.variant || "default",
 duration: options.duration || 5000};
 

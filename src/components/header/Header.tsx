@@ -22,8 +22,8 @@ export interface HeaderProps {;
 hideLogin?: boolean;
 customLogo?: string;
 customTheme?: {
-primaryColor: string;
-backgroundColor: string;
+primaryColor: string;,
+backgroundColor: string;,
 textColor: string;
 }
 }
@@ -49,8 +49,8 @@ textColor: "#ffffff", // Default light text;
 } : undefined);
 
 const headerStyle = effectiveTheme ? {;
-backgroundColor: effectiveTheme.backgroundColor;
-color: effectiveTheme.textColor;
+backgroundColor: effectiveTheme.backgroundColor;,
+color: effectiveTheme.textColor;,
 borderColor: `${effectiveTheme.primaryColor}20`;
 } : {};
 
@@ -104,7 +104,7 @@ style={headerStyle}
 <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">;
 <div className="ml-6 flex-1 hidden md:block">;
 <MainNavigation />;
-</div>
+</div>;
 
 {/* Desktop Search */}
 <form onSubmit={handleSubmit} className="hidden lg:block w-64 mx-4">;
@@ -120,10 +120,10 @@ searchSuggestions={searchSuggestions}
 </form>;
 
 
-</div>
+</div>;
 
 {/* Animated Header Border */}
-<div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+<div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>;
 {/* Desktop Actions */}
 <div className="hidden lg:flex items-center gap-3">;
 <Button;
@@ -142,14 +142,14 @@ Pricing;
 <div className="flex items-center gap-2 hidden md:flex">;
 <LanguageSelector />;
 {!hideLogin && <UserMenu />}
-</div>
+</div>;
 
 {/* Mobile Menu */}
 <MobileMenu className="md:hidden" />;
-</div>
+</div>;
 {/* Mobile Menu */}
 <MobileMenu className="md:hidden" />;
-</div>
+</div>;
 <>;
 <header;
 className={`sticky top-0 z-50 w-full transition-all duration-300 ${
@@ -165,12 +165,12 @@ style={headerStyle}
 {/* Desktop Navigation */}
 <div className="ml-6 flex-1 hidden lg:block">;
 <MainNavigation />;
-</div>
+</div>;
 
 {/* Search Bar */}
 <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-6">;
 <div className="relative group">;
-<div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
 <EnhancedSearchInput;
 value={query}
 onChange={setQuery}
@@ -182,8 +182,8 @@ searchSuggestions={searchSuggestions}
 />;
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
 <SearchIcon className="h-4 w-4 text-zion-slate-light" />;
-</div>
-</div>
+</div>;
+</div>;
 </form>;
 
 {/* Right Side Actions */}
@@ -204,8 +204,8 @@ className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan 
 >;
 {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Mobile Search Bar */}
 <div className="lg:hidden px-4 pb-4">;
@@ -223,10 +223,10 @@ placeholder="Search services; talent; equipment...";
 />;
 <div className="absolute right-3 top-1/2 transform -translate-y-1/2">;
 <SearchIcon className="h-4 w-4 text-zion-slate-light" />;
-</div>
-</div>
+</div>;
+</div>;
 </form>;
-</div>
+</div>;
 </header>;
 
 {/* Mobile Navigation Menu */}
@@ -241,7 +241,7 @@ className="p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-z
 >;
 <X className="h-5 w-5" />;
 </button>;
-</div>
+</div>;
 
 <nav className="flex-1 p-4">;
 <ul className="space-y-2">;
@@ -366,12 +366,12 @@ className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hov
 >;
 Sign Up;
 </Link>;
-</div>
+</div>;
 )}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {/* Neon glow effect */}

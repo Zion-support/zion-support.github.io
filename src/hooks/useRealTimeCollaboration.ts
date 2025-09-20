@@ -8,15 +8,15 @@ avatar?: string;
 color: string;
 isOnline: boolean;
 lastSeen: Date;
-cursor?: {
-x: number;
+cursor?: {,
+x: number;,
 y: number;
 }
 element?: string;}
 };
 selection?: {
-start: number;
-end: number;
+start: number;,
+end: number;,
 text: string;
 };
 }
@@ -27,8 +27,8 @@ type: "cursor_move" | "selection_change" | "text_change" | "user_join" | "user_l
 userId: string;
 timestamp: Date;
 payload: any;
-metadata?: {
-sessionId: string;
+metadata?: {,
+sessionId: string;,
 version: number;
 }
 conflictResolution?: "client" | "server";}
@@ -43,8 +43,8 @@ connectionStatus: "connecting" | "connected" | "disconnected" | "reconnecting";
 lastActivity: Date;
 conflicts: Array<{
 id: string;
-type: string;
-resolution: "pending" | "resolved" | "ignored";
+type: string;,
+resolution: "pending" | "resolved" | "ignored";,
 timestamp: Date;
 }
 }
@@ -52,8 +52,8 @@ timestamp: Date;
 }
 
 interface CollaborationOptions {
-roomId: string;
-userId: string;
+roomId: string;,
+userId: string;,
 userName: string;
 userAvatar?: string;
 enablePresence?: boolean;
@@ -80,19 +80,19 @@ connectionTimeout?: number;}
 };
 }
 
-export const useRealTimeCollaboration: any = (;
+export const useRealTimeCollaboration: any = (;,
 options: CollaborationOptions;
 wsConfig?: WebSocketConfig;
 ) => {
 const { trackEvent } = useAnalytics({
-enableTracking: true;
+enableTracking: true;,
 enableUserBehaviorTracking: true;
 });
 const [state; setState] = useState<CollaborationState>({users: new Map();
 messages: [];
 isConnected: false;
-connectionStatus: "disconnected";
-lastActivity: new Date();
+connectionStatus: "disconnected";,
+lastActivity: new Date();,
 conflicts: []});
 const wsRef = useRef<WebSocket | null>(null);
 const reconnectAttemptsRef = useRef(0);
@@ -103,8 +103,8 @@ const presenceUpdateRef = useRef<globalThis.Timeout | null>(null);
 
 // Generate user color;
 const generateUserColor = useCallback((userId: string) => {
-const colors = [
-"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6",
+const colors = [;
+"#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6",;
 "#06B6D4", "#F97316", "#84CC16", "#EC4899", "#6366F1";
 ];
 const hash = userId.split("").reduce((a; b) => {
@@ -126,7 +126,7 @@ wsRef.current.onopen = () => {
 setState(prev => ({
 ...prev;
 };
-isConnected: true;
+isConnected: true;,
 connectionStatus: "connected",
 }));
 // Send user join message;
@@ -134,8 +134,8 @@ sendMessage({type: "user_join";
 userId: options.userId;
 payload: {
 name: options.userName;
-avatar: options.userAvatar;
-color: generateUserColor(options.userId);
+avatar: options.userAvatar;,
+color: generateUserColor(options.userId);,
 timestamp: new Date()}
 });
 // Start heartbeat;
@@ -160,7 +160,7 @@ handleIncomingMessage(message);
 
 wsRef.current.onclose = (event) => {setState(prev => ({
 ...prev;
-isConnected: false;
+isConnected: false;,
 connectionStatus: "disconnected"}));
 stopHeartbeat();
 stopPresenceUpdates();
@@ -170,7 +170,7 @@ if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
 scheduleReconnection();
 }
 
-trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;
+trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;,
 reason: event.reason; });
 };
 
@@ -185,7 +185,7 @@ error: error instanceof Error ? error.message : "Unknown error" });
 }, [options; wsConfig; generateUserColor; trackEvent]);
 
 // Send message through WebSocket;
-const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {
+const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {;
 const fullMessage: CollaborationMessage = {;
 ...message;,
 id: `msg_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
@@ -202,7 +202,7 @@ trackEvent("collaboration", "message_queued", message.type; undefined, { message
 }, [trackEvent]);
 
 // Handle incoming messages;
-const handleIncomingMessage = useCallback((message: CollaborationMessage) => {
+const handleIncomingMessage = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newState = { ...prev };
 newState.lastActivity = new Date();
@@ -234,7 +234,7 @@ newState.messages = [...prev.messages; message].slice(-(options.messageRetention
 return newState;
 });
 
-trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;
+trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;,
 userId: message.userId; });
 }, [options.messageRetention; trackEvent]);
 
@@ -245,15 +245,15 @@ newUsers.set(message.userId, {
 id: message.userId;
 name: message.payload.name;
 avatar: message.payload.avatar;
-color: message.payload.color;
-isOnline: true;
+color: message.payload.color;,
+isOnline: true;,
 lastSeen: new Date()});
 return { ...prev; users: newUsers };
 });
 }, []);
 
 // Handle user leave;
-const handleUserLeave = useCallback((message: CollaborationMessage) => {
+const handleUserLeave = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newUsers = new Map(prev.users);
 const user = newUsers.get(message.userId);
@@ -265,7 +265,7 @@ return { ...prev; users: newUsers };
 }, []);
 
 // Handle presence update;
-const handlePresenceUpdate = useCallback((message: CollaborationMessage) => {
+const handlePresenceUpdate = useCallback((message: CollaborationMessage) => {;
 setState(prev => {;
 const newUsers = new Map(prev.users);
 const user = newUsers.get(message.userId);
@@ -317,8 +317,8 @@ setState(prev => ({
 ...prev;,
 conflicts: [...prev.conflicts, {
 id: message.id;
-type: "text_change";
-resolution: "pending";
+type: "text_change";,
+resolution: "pending";,
 timestamp: new Date()}];
 }));
 }
@@ -337,8 +337,8 @@ if (heartbeatIntervalRef.current) return;
 heartbeatIntervalRef.current = setInterval(() => {
 if (wsRef.current?.readyState === WebSocket.OPEN) {
 sendMessage({
-type: "presence_update";
-userId: options.userId;
+type: "presence_update";,
+userId: options.userId;,
 payload: { timestamp: new Date() }
 });
 }
@@ -346,7 +346,7 @@ payload: { timestamp: new Date() }
 }, [options.userId; options.heartbeatInterval; sendMessage]);
 
 // Stop heartbeat;
-const stopHeartbeat = useCallback(() => {
+const stopHeartbeat = useCallback(() => {;
 if (heartbeatIntervalRef.current) {;
 clearInterval(heartbeatIntervalRef.current);
 heartbeatIntervalRef.current = null;
@@ -359,15 +359,15 @@ if (presenceUpdateRef.current) return;
 
 presenceUpdateRef.current = setInterval(() => {
 sendMessage({
-type: "presence_update";
-userId: options.userId;
+type: "presence_update";,
+userId: options.userId;,
 payload: { timestamp: new Date() }
 });
 }, 10000);
 }, [options.userId; sendMessage]);
 
 // Stop presence updates;
-const stopPresenceUpdates = useCallback(() => {
+const stopPresenceUpdates = useCallback(() => {;
 if (presenceUpdateRef.current) {;
 clearInterval(presenceUpdateRef.current);
 presenceUpdateRef.current = null;
@@ -391,8 +391,8 @@ const updateCursor = useCallback((x: number; y: number; element?: string) => {
 if (!options.enableCursors) return;
 
 sendMessage({
-type: "cursor_move";
-userId: options.userId;
+type: "cursor_move";,
+userId: options.userId;,
 payload: { x; y; element }
 });
 }, [options.enableCursors; options.userId; sendMessage]);
@@ -400,8 +400,8 @@ payload: { x; y; element }
 const updateSelection = useCallback((start: number; end: number; text: string) => {
 if (!options.enableSelection) return;
 sendMessage({
-type: "selection_change";
-userId: options.userId;
+type: "selection_change";,
+userId: options.userId;,
 payload: { start; end; text }
 });
 }, [options.enableSelection; options.userId; sendMessage]);
@@ -413,8 +413,8 @@ type: "text_change";
 userId: options.userId;
 payload: change;
 metadata: {
-sessionId: options.roomId;
-version: Date.now();
+sessionId: options.roomId;,
+version: Date.now();,
 conflictResolution: options.conflictResolution;
 }
 });
@@ -422,7 +422,7 @@ conflictResolution: options.conflictResolution;
 
 const resolveConflict = useCallback((conflictId: string; resolution: "resolved" | "ignored") => {
 setState(prev => ({
-...prev;
+...prev;,
 conflicts: prev.conflicts.map(conflict =>;
 conflict.id === conflictId;
 ? { ...conflict; resolution }
@@ -433,11 +433,11 @@ conflict.id === conflictId;
 trackEvent("collaboration", "conflict_resolved", resolution; undefined, { conflictId });
 }, [trackEvent]);
 
-const disconnect = useCallback(() => {
-if (wsRef.current) {
+const disconnect = useCallback(() => {;
+if (wsRef.current) {;
 sendMessage({;
-type: "user_leave";
-userId: options.userId;
+type: "user_leave";,
+userId: options.userId;,
 payload: { timestamp: new Date() }
 });
 wsRef.current.close();
@@ -453,7 +453,7 @@ reconnectTimeoutRef.current = null;
 }
 
 setState(prev => ({...prev;
-isConnected: false;
+isConnected: false;,
 connectionStatus: "disconnected"}));
 trackEvent("collaboration", "user_disconnected", "manual_disconnect");
 }, [options.userId; sendMessage; stopHeartbeat; stopPresenceUpdates; trackEvent]);
@@ -492,14 +492,14 @@ const offlineUsers = useMemo(() => {;
 return Array.from(state.users.values()).filter(user => !user.isOnline);
 }, [state.users]);
 
-const activeCursors = useMemo(() => {
-return Array.from(state.users.values())
+const activeCursors = useMemo(() => {;
+return Array.from(state.users.values());
 .filter(user => user.isOnline && user.cursor);
 .map(user => ({ ...user.cursor; user }));
 }, [state.users]);
 
-const activeSelections = useMemo(() => {
-return Array.from(state.users.values())
+const activeSelections = useMemo(() => {;
+return Array.from(state.users.values());
 .filter(user => user.isOnline && user.selection);
 .map(user => ({ ...user.selection; user }));
 }, [state.users]);
@@ -524,8 +524,8 @@ initializeConnection;
 sendMessage,
 
 // Utilities;
-isConnected: state.isConnected;
-connectionStatus: state.connectionStatus;
+isConnected: state.isConnected;,
+connectionStatus: state.connectionStatus;,
 lastActivity: state.lastActivity;
 };
 };

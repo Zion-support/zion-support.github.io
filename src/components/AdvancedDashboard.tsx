@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -43,9 +43,9 @@ metric.trend === "down" ? "text-red-400" : "text-gray-400";
 </p>;
 </motion.div>;
 ))}
-</div>
+</div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

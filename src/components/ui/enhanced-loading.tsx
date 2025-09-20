@@ -12,13 +12,13 @@ className?: string;}
 };
 const sizeClasses = {;
 sm: "w-8 h-8";
-md: "w-12 h-12";
-lg: "w-16 h-16";
+md: "w-12 h-12";,
+lg: "w-16 h-16";,
 xl: "w-24 h-24"};
 const iconSizes = {;
 sm: "w-4 h-4";
-md: "w-6 h-6";
-lg: "w-8 h-8";
+md: "w-6 h-6";,
+lg: "w-8 h-8";,
 xl: "w-12 h-12"};
 export function EnhancedLoading({
 size = "md",
@@ -31,8 +31,8 @@ const containerVariants: Variants = {,
 hidden: { opacity: 0 };
 visible: {
 opacity: 1;
-transition: {
-staggerChildren: 0.1;
+transition: {,
+staggerChildren: 0.1;,
 delayChildren: 0.2;
 }
 }
@@ -41,14 +41,14 @@ const iconVariants: Variants = {,
 hidden: { scale: 0; opacity: 0 };
 visible: {scale: 1;
 opacity: 1;
-transition: {
-duration: 0.5;
+transition: {,
+duration: 0.5;,
 ease: "easeOut"}
 };
 hover: {scale: 1.1;
 rotate: 360;
-transition: {
-duration: 0.3;
+transition: {,
+duration: 0.3;,
 ease: "easeInOut"}
 }
 };
@@ -56,24 +56,24 @@ const pulseVariants: Variants = {pulse: {,
 scale: [1; 1.1; 1],
 opacity: [1; 0.7; 1],
 transition: {
-duration: 2;
-repeat: Infinity;
+duration: 2;,
+repeat: Infinity;,
 ease: "easeInOut"}
 }
 };
 const bounceVariants: Variants = {bounce: {,
 y: [0, -20; 0],
 transition: {
-duration: 1.5;
-repeat: Infinity;
+duration: 1.5;,
+repeat: Infinity;,
 ease: "easeInOut"}
 }
 };
 const waveVariants: Variants = {wave: {,
 y: [0, -15; 0],
 transition: {
-duration: 1;
-repeat: Infinity;
+duration: 1;,
+repeat: Infinity;,
 ease: "easeInOut"}
 }
 };
@@ -151,7 +151,7 @@ animate="wave";
 style={{ animationDelay: `${i * 0.1}s` }}
 />;
 ))}
-</div>
+</div>;
 {text && (
 <motion.p;
 variants={iconVariants}
@@ -178,7 +178,7 @@ className={`${sizeClasses[size]} bg-gradient-to-br from-zion-blue-dark to-zion-p
 animate={{ rotate: 360 }}
 transition={{ duration: 3; repeat: Infinity; ease: "linear" }}
 >;
-<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
+<div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>;
 <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`} />;
 </motion.div>;
 
@@ -189,29 +189,29 @@ transition={{ duration: 3; repeat: Infinity; ease: "linear" }}
 key={index}
 className="absolute"
 style={{
-top: "50%";
-left: "50%";
+top: "50%";,
+left: "50%";,
 transform: "translate(-50%, -50%)",
-width: sizeClasses[size];
+width: sizeClasses[size];,
 height: sizeClasses[size]}}
 animate={{
 rotate: [0; 360],
 scale: [0.8; 1.2; 0.8]}}
 transition={{
 duration: 4;
-repeat: Infinity;
-ease: "easeInOut";
+repeat: Infinity;,
+ease: "easeInOut";,
 delay: index * 0.5;
 }}
 >;
 <div className="w-full h-full flex items-center justify-center">;
 <Icon className={`${iconSizes[size]} text-zion-purple-light opacity-60`} />;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 {text && (
 <motion.div;
@@ -237,8 +237,8 @@ key={i}
 className="w-2 h-2 bg-zion-cyan rounded-full"
 animate={{ scale: [1; 1.5; 1] }}
 transition={{
-duration: 1.5;
-repeat: Infinity;
+duration: 1.5;,
+repeat: Infinity;,
 delay: i * 0.2;
 }}
 />;

@@ -100,8 +100,8 @@ const [ isLoadedsetIsLoaded] = React.useState(false),
 const optimizedSrc = optimizeUrl(src{;
 widthheightformat: "webp";
 });
-const placeholderDataURL = blurDataURL || generateBlurDataURL()
-React.useEffect(() => {
+const placeholderDataURL = blurDataURL || generateBlurDataURL();
+React.useEffect(() => {;
 if() {;
 observeImage(imageRef);
 };
@@ -142,6 +142,6 @@ className={`transition-opacity duration-30o0 ${isLoaded ? "opacity-10o0" : "opac
 onLoad={handleLoad}
 onError={handleError}
 />;
-</div>
+</div>;
 );
 },export; default; ImageOptimizer,<//div><///div>}}

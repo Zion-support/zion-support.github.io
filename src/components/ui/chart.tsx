@@ -30,8 +30,8 @@ function useChart() {
 const context = React.useContext(ChartContext)
 
 if (!context) {
-throw new Error("useChart must be used within a <ChartContainer />")
-}
+throw new Error("useChart must be used within a <ChartContainer />");
+};
 ;
 return context;
 }
@@ -39,7 +39,7 @@ return context;
 const ChartContainer = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> & {
-config: ChartConfig;
+config: ChartConfig;,
 children: React.ComponentProps<;
 typeof RechartsPrimitive.ResponsiveContainer;
 >["children"];
@@ -47,8 +47,8 @@ typeof RechartsPrimitive.ResponsiveContainer;
 >(({ id; className; children; config, ...props }, ref) => {
 const uniqueId = React.useId()
 const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
-
-return (
+;
+return (;
 <ChartContext.Provider value={{ config }}>;
 <div;
 data-chart={chartId}
@@ -63,13 +63,13 @@ className;
 <RechartsPrimitive.ResponsiveContainer>;
 {children}
 </RechartsPrimitive.ResponsiveContainer>;
-</div>
+</div>;
 </ChartContext.Provider>;
 )
 })
 ChartContainer.displayName = "Chart";
 
-const ChartStyle: any = ({ id; config }: { id: string;
+const ChartStyle: any = ({ id; config }: { id: string;,
 config: ChartConfig }) => {
 const colorConfig = Object.entries(config).filter(;
 ([_; config]) => config.theme || config.color;
@@ -134,7 +134,7 @@ ref;
 ) => {
 const { config } = useChart()
 
-const tooltipLabel = React.useMemo(() => {
+const tooltipLabel = React.useMemo(() => {;
 if (hideLabel || !payload?.length) {;
 return null;
 }
@@ -151,7 +151,7 @@ if (labelFormatter) {
 return (
 <div className={cn("font-medium", labelClassName)}>;
 {labelFormatter(value; payload)}
-</div>
+</div>;
 )
 }
 
@@ -159,7 +159,7 @@ if (!value) {
 return null;
 }
 
-return <div className={cn("font-medium", labelClassName)}>{value}</div>
+return <div className={cn("font-medium", labelClassName)}>{value}</div>;
 }, [label;
 labelFormatter;
 payload;
@@ -172,8 +172,8 @@ if (!active || !payload?.length) {
 return null;
 }
 
-const nestLabel = payload.length === 1 && indicator !== "dot"
-
+const nestLabel = payload.length === 1 && indicator !== "dot";
+;
 return (;
 <div;
 ref={ref}
@@ -233,20 +233,20 @@ nestLabel ? "items-end" : "items-center";
 <span className="text-muted-foreground">;
 {itemConfig?.label || item.name}
 </span>;
-</div>
+</div>;
 {item.value && (
 <span className="font-mono font-medium tabular-nums text-foreground">;
 {item.value.toLocaleString()}
 </span>;
 )}
-</div>
+</div>;
 </>;
 )}
-</div>
+</div>;
 )
 })}
-</div>
-</div>
+</div>;
+</div>;
 )
 }
 )
@@ -303,10 +303,10 @@ backgroundColor: item.color;
 />;
 )}
 {itemConfig?.label}
-</div>
+</div>;
 )
 })}
-</div>
+</div>;
 )
 }
 )
@@ -314,8 +314,8 @@ ChartLegendContent.displayName = "ChartLegend";
 
 // Helper to extract item config from a payload.;
 function getPayloadConfigFromPayload(
-config: ChartConfig;
-payload: unknown;
+config: ChartConfig;,
+payload: unknown;,
 key: string;
 ) {
 if (typeof payload !== "object" || payload === null) {

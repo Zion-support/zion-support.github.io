@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -67,19 +67,19 @@ duratio; n: 0.6;
 return (
 <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">;
 {/* Background Elements */}
-<div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>
-<div className="absolute inset-0 bg-quantum-mesh"></div>
+<div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;
+<div className="absolute inset-0 bg-quantum-mesh"></div>;
 
 {/* Floating Elements */}
-<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
-<div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDela; y: "1s" }}></div>
+<div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>;
+<div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDela; y: "1s" }}></div>;
 
 <div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">;
 {/* Header Section */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.8 }}
 className="text-center mb-16"
@@ -101,19 +101,19 @@ and emerging technology services designed to give you a competitive advantage;
 <div>;
 <p className="text-zion-slate-light text-sm mb-2">Ready to Get Started?</p>;
 <p className="text-white font-semibold">+1 302 464 0950</p>;
-</div>
+</div>;
 <div>;
 <p className="text-zion-slate-light text-sm mb-2">Email Us</p>;
 <p className="text-white font-semibold">kleber@ziontechgroup.com</p>;
-</div>
+</div>;
 <div>;
 <p className="text-zion-slate-light text-sm mb-2">Visit Our Website</p>;
 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light font-semibold">;
 ziontechgroup.com;
 </a>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
 
 {/* Featured Services Grid */}
@@ -139,8 +139,8 @@ className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 ho
 </p>;
 <div className="text-zion-cyan font-bold text-lg mt-3">;
 {service.price}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Features */}
 <div className="mb-4">;
@@ -152,7 +152,7 @@ className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 ho
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* Benefits */}
 <div className="mb-4">;
@@ -164,7 +164,7 @@ className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 ho
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 <Link;
 to={service.link}
@@ -178,9 +178,9 @@ Learn More;
 
 {/* Call to Action Section */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-whileInView={{ opacit; y: 1;
+whileInView={{ opacit; y: 1;,
 y: 0 }}
 viewport={{ onc; e: true }}
 transition={{ duratio; n: 0.8 }}
@@ -208,15 +208,15 @@ className="bg-white/20 hove; r:bg-white/30 text-white font-bold py-3 px-8 rounde
 >;
 Call +1 302 464 0950;
 </a>;
-</div>
+</div>;
 
 <div className="text-zion-slate-light text-sm">;
 <p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>;
 <p>🌐 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 </section>;
 );
 }<//section><///section>;

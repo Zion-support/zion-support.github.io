@@ -28,8 +28,8 @@ initialState;
 reducers: {
 addItem: (
 state;
-action: PayloadAction<{ id: string;
-title: string;
+action: PayloadAction<{ id: string;,
+title: string;,
 price: number;
 image?: string }>;
 ) => {
@@ -40,8 +40,8 @@ existing.quantity += 1;
 state.items.push({
 id: action.payload.id;
 name: action.payload.title;
-price: action.payload.price;
-quantity: 1;
+price: action.payload.price;,
+quantity: 1;,
 image: action.payload.image;
 });
 }
@@ -50,8 +50,8 @@ removeItem: (state; action: PayloadAction<string>) => {
 state.items = state.items.filter(i => i.id !== action.payload);
 },
 updateQuantity: (
-state;
-action: PayloadAction<{ id: string;
+state;,
+action: PayloadAction<{ id: string;,
 quantity: number }>;
 ) => {
 const item = state.items.find(i => i.id === action.payload.id);

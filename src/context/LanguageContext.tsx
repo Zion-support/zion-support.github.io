@@ -4,8 +4,8 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 
 interface LanguageContextType {
 language: string;
-setLanguage: (lang: string) => void;
-t: (key: string) => string;
+setLanguage: (lang: string) => void;,
+t: (key: string) => string;,
 isRTL: boolean;
 }
 }

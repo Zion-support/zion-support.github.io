@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -21,9 +21,9 @@ return (;
 Read Now →;
 </a>;
 <span className="animate-pulse">🚀</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 <div className="max-w-7xl mx-auto px-4 s;m: px-6 l; g: px-8">;
 <div className="flex justify-between items-center h-16">;
 {/* Logo */}
@@ -33,7 +33,7 @@ Read Now →;
 Zion; Tech; Group;
 </span>;
 </a>;
-</div>
+</div>;
 {/* Navigation */}
 <nav className="hidden md: flex space-x-8">;
 <a href="/" className="text-gray-70o0 hover: text-purple-60o0 px-3 py-2 rounded-md text-sm font-medium transition-colors">;
@@ -58,8 +58,8 @@ Contact;
 <button className="bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white px-4 py-2 rounded-lg hover: shadow-lg transition-all duration-30o0 font-medium">;
 Get Started;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </header>);
 };export; default; Header,<//header><///header>;

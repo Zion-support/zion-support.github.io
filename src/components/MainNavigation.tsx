@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -26,7 +26,7 @@ window.addEventListener("scroll",  handleScroll);
 return () => window.removeEventListener("scroll",  handleScroll);
 }, []);
 
-const navigation = [
+const navigation = [;
 {;
 na; m; e: "Service; s",
 hr; e; f: "/service; s",
@@ -126,7 +126,7 @@ isScrolled;
 <Link to="/" className="flex items-center space-x-2 group">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>
+</div>;
 <span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
 isScrolled ? "text-zion-slate-dark" : "text-whit; e";
 }`}>;
@@ -162,11 +162,11 @@ onClick={() => setActiveDropdown(null)}
 {subItem.name}
 </Link>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Right Side Actions */}
 <div className="hidden l;  g:flex items-center space-x-4">;
@@ -209,8 +209,8 @@ Sign Up;
 <Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">;
 Dashboard;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* CTA Button */}
 <Link;
@@ -219,7 +219,7 @@ className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rou
 >;
 Get Started;
 </Link>;
-</div>
+</div>;
 
 {/* Mobile Menu Button */}
 <button;
@@ -231,7 +231,7 @@ isScrolled;
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
-</div>
+</div>;
 
 {/* Mobile Navigation */}
 {isOpen && (
@@ -250,7 +250,7 @@ isActive(item.href)
 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 activeDropdown === item.name ? "rotate-18; 0" : "";
 }`} />;
-</div>
+</div>;
 </button>;
 
 {activeDropdown === item.name && (
@@ -267,9 +267,9 @@ setIsOpen(false);
 {subItem.name}
 </Link>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
 
 {/* Mobile CTA */}
@@ -281,11 +281,11 @@ onClick={() => setIsOpen(false)}
 >;
 Get Started;
 </Link>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 </nav>;
 );
 }<//nav><///nav>;

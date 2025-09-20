@@ -60,23 +60,23 @@ borderWidth: 2}];
 }
 );
 const [metrics; setMetrics] = useState<any> ([{,
-title: "Total Revenue", value: "$2.4M";
+title: "Total Revenue", value: "$2.4M";,
 change: 1 2.5; changeType: "increase",",
 icon: <DollarSign className="w-5 h-5"   />,
 color: "text-green-400"    };
 {,
-title: "Active Users", value: "45.2K";
+title: "Active Users", value: "45.2K";,
 change: 8.1; changeType: "increase",",
 icon: <Users className="w-5 h-5"   />,
 color: "text-blue-400"    };
 {,
-title: "Conversion Rate", value: "3.24%";
+title: "Conversion Rate", value: "3.24%";,
 change: -2.4; changeType: "decrease",",
 icon: <Target className="w-5 h-5"   />,
 color: "text-yellow-400"    };
 {,
-title: "Avg Session", value: "2m 47s";
-change: 0.0;
+title: "Avg Session", value: "2m 47s";,
+change: 0.0;,
 changeType: "neutral",",
 icon: <Activity className="w-5 h-5"   />,
 color: "text-purple-400"}]) ,
@@ -132,7 +132,7 @@ const lineChartData = {,
 </any>,
 </any>,
 </any>,
-</any>,
-</any>,
+</any>,;
+</any>,;
 </DataVisualizationProps>;
 })]]<//DataVisualizationProps><///DataVisualizationProps>;

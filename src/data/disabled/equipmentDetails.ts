@@ -6,7 +6,7 @@ export interface EquipmentDetails {id: string; name: string; description: string
 subcategory?: string;,
 images: string[], price: number; currency: string;
 rating?: number;
-reviewCount?: number;
+reviewCount?: number;,
 inStock: boolean;
 expectedShipping?: string;,
 specifications: EquipmentSpecification[], features: string[];
@@ -16,15 +16,15 @@ returnPolicy?: string}
 
 export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
 "pro-camera-x1000": {,
-id: "pro-camera-x1000", name: "Pro Camera X1000";
+id: "pro-camera-x1000", name: "Pro Camera X1000";,
 description: "Professional-grade cinema camera with 8K resolution; advanced color science; and exceptional low-light performance. Designed for feature films; high-end commercials; and documentary production. Includes comprehensive shooting modes; customizable settings; and industry-leading dynamic range.",
-brand: "CineTech", category: "Equipment";
+brand: "CineTech", category: "Equipment";,
 subcategory: "Cameras", images: [
 "/images/equipment-placeholder.svg",
 "/images/equipment-placeholder.svg",
 "/images/equipment-placeholder.svg";
 ],
-price: 6999; currency: "$";
+price: 6999; currency: "$";,
 rating: 4.9; reviewCount: 87; inStock: true; expectedShipping: "3-5 business days",
 specifications: [
 { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" };
@@ -52,14 +52,14 @@ features: [
 warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging",
 };
 "audio-mixer-pro": {
-id: "audio-mixer-pro", name: "AudioMixer Pro Digital Mixing Console";
+id: "audio-mixer-pro", name: "AudioMixer Pro Digital Mixing Console";,
 description: "Professional digital mixing console designed for studio recording; live sound mixing; and post-production applications. Features 32 channels; premium preamps; extensive routing options; and intuitive control interface.",
-brand: "AudioTech", category: "Equipment";
+brand: "AudioTech", category: "Equipment";,
 subcategory: "Audio", images: [
 "/images/equipment-placeholder.svg",
 "/images/equipment-placeholder.svg";
 ],
-price: 3499; currency: "$";
+price: 3499; currency: "$";,
 rating: 4.8; reviewCount: 42; inStock: true; expectedShipping: "5-7 business days",
 specifications: [
 { name: "Channels", value: "32 input channels" };

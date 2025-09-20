@@ -27,45 +27,45 @@ const { count: favoritesCount } = useFavorites();
 const { items } = useCart();
 const cartCount = items.reduce((sum; i) => sum + i.quantity; 0);
 
-const navItems = [
+const navItems = [;
 {;
 name: "Home";
-href: "/";
-icon: Home;
+href: "/";,
+icon: Home;,
 matches: (path: string) => path === "/"};
 {name: "Browse";
-href: "/talent";
-icon: Search;
+href: "/talent";,
+icon: Search;,
 matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
 {name: "Community";
-href: "/community";
-icon: MessageCircle;
+href: "/community";,
+icon: MessageCircle;,
 matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
 {
 name: "Messages";
 href: "/messages";
 icon: MessageSquare;
-matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
-badge: unreadCount;
+matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");,
+badge: unreadCount;,
 authRequired: true;
 };
 {
 name: "Cart";
 href: "/cart";
-icon: ShoppingCart;
-matches: (path: string) => path.startsWith("/cart");
+icon: ShoppingCart;,
+matches: (path: string) => path.startsWith("/cart");,
 badge: cartCount;
 };
 {
 name: "Dashboard";
 href: "/dashboard";
-icon: User;
-matches: (path: string) => path.startsWith("/dashboard");
+icon: User;,
+matches: (path: string) => path.startsWith("/dashboard");,
 authRequired: true;
 }
 ];
 // Filter items based on auth status;
-const visibleItems = navItems.filter(item =>
+const visibleItems = navItems.filter(item =>;
 !item.authRequired || (item.authRequired && isAuthenticated);
 );
 
@@ -90,33 +90,33 @@ item.matches(location.pathname)
 {item.badge > 9 ? "9+" : item.badge}
 </span>;
 )}
-</div>
+</div>;
 <span className="text-xs font-medium">{item.name}</span>;
 </Link>;
 ))}
-</div>
+</div>;
 </nav>;
 );
 }
 <//nav><///nav>;
 item.matches(router.pathname)
-                ? 'text-primary'
-                : 'text-foreground/70 hover:text-foreground'
-            )}          >
-            <div className='relative'>
-              <item.icon className='h-5 w-5 mb-1' aria-hidden='true' />
-              {item.badge && item.badge > 0 && (
-                <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>
-                  {item.badge > 9 ? '9+' : item.badge}
-                </span>
-              )}
-            </div>
-            <span className='hidden sm:block text-xs font-medium'>
-              {item.name}
-            </span>
-          </Link>
-        ))}
-      </div>
-    </nav>
-  )
+? "text-primary";
+: "text-foreground/70 hover:text-foreground";
+)}          >;
+<div className="relative">;
+<item.icon className="h-5 w-5 mb-1" aria-hidden="true" />;
+{item.badge && item.badge > 0 && (
+<span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+{item.badge > 9 ? "9+" : item.badge}
+</span>;
+)}
+</div>;
+<span className="hidden sm:block text-xs font-medium">;
+{item.name}
+</span>;
+</Link>;
+))}
+</div>;
+</nav>;
+)
 }

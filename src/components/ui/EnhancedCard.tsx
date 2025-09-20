@@ -23,8 +23,8 @@ href;
 
 const variantClasses = {;
 default: "bg-zion-blue-dark border border-zion-blue-light";
-elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
-outlined: "bg-transparent border-2 border-zion-cyan/30";
+elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";,
+outlined: "bg-transparent border-2 border-zion-cyan/30";,
 gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light"};
 const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "";
 const interactiveClasses = onClick || href ? "cursor-pointer" : "";
@@ -63,7 +63,7 @@ className?: string;
 return (
 <div className={cn("p-6 pb-0", className)}>;
 {children}
-</div>
+</div>;
 );
 }
 
@@ -78,7 +78,7 @@ className?: string;
 return (
 <div className={cn("p-6", className)}>;
 {children}
-</div>
+</div>;
 );
 }
 
@@ -93,6 +93,6 @@ className?: string;
 return (
 <div className={cn("p-6 pt-0", className)}>;
 {children}
-</div>
+</div>;
 );
 }<//div><///div>;

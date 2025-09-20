@@ -24,7 +24,7 @@ const suggestionsRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
 if (query.trim()) {
-const filtered = suggestions.filter(suggestion =>
+const filtered = suggestions.filter(suggestion =>;
 suggestion.title.toLowerCase().includes(query.toLowerCase()) ||;
 suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
@@ -120,7 +120,7 @@ className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 t
 >;
 <ArrowDown className="w-4 h-4" />;
 </button>;
-</div>
+</div>;
 </form>;
 
 {showSuggestions && filteredSuggestions.length > 0 && (
@@ -141,129 +141,129 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 "bg-purple-100 text-purple-600";
 }`}>;
 {suggestion.type.charAt(0).toUpperCase()}
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex-1 min-w-0">;
 <div className="font-medium text-gray-900 truncate">;
 {suggestion.title}
-</div>
+</div>;
 {suggestion.description && (
 <div className="text-sm text-gray-500 truncate">;
 {suggestion.description}
-</div>
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 </button>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 );
 };<//div><///div>;
-  /**
-   * Optional callback when a suggestion is selected. This allows parent
-   * components to perform actions such as navigation.
-   */
-   * Optional list of fallback suggestions (e.g. recent searches).
-   * If provided these will be shown when the input is empty.
-   */
-  searchSuggestions?: SearchSuggestion[]
+/**;
+* Optional callback when a suggestion is selected. This allows parent;
+* components to perform actions such as navigation.;
+*/;
+* Optional list of fallback suggestions (e.g. recent searches).;
+* If provided these will be shown when the input is empty.;
+*/;
+searchSuggestions?: SearchSuggestion[];
 }
 export function EnhancedSearchInput({setHighlightedIndex(-1)
-            }
-            setValueOnFocus(null)
-          }}
-          onKeyDown = {handleKeyDown}
-          aria-label = {t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off"
-        />
-        {value && (<button
+}
+setValueOnFocus(null)
+}}
+onKeyDown = {handleKeyDown}
+aria-label = {t("general.search")}
+className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+aria-autocomplete="list";
+aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+autoComplete="off";
+/>;
+{value && (<button;
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick = {() => onChange('')}
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-      <AutocompleteSuggestions
+onClick = {() => onChange("")}
+aria-label="Clear search";
+>;
+<X className="h-4 w-4" />;
+</button>;
+)}
+</div>;
+<AutocompleteSuggestions;
 suggestions = {filteredSuggestions}
-        searchTerm = {value}
-        onSelectSuggestion = {handleSelectSuggestion}
-        visible = {isFocused}
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-      />
-    </div>
-  )
+searchTerm = {value}
+onSelectSuggestion = {handleSelectSuggestion}
+visible = {isFocused}
+highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controls;
+/>;
+</div>;
+)
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
 }
-const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {switch (e.key) {'
-  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {'
-  case 'Escape': e.preventDefault ()
+const handleKeyDown: any = (e: React.KeyboardEvent<HTMLInputElement>) => {switch (e.key) {"
+case "ArrowDown": if (isFocused && filteredSuggestions.length > 0) {";
+case "Escape": e.preventDefault ()
 setIsFocused (false)
 setHighlightedIndex (-1)
 setValueOnFocus (null)
-inputRef.current?.blur ()
-break,
+inputRef.current?.blur ();
+break;,
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false)
 break}
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={'
-  () => onChange ('') "
+> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={";
+() => onChange ("") ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions /> </div>)
-}'"  )
-      default:
-        break,
+}""  )
+default:
+break,
 }
-  }
-  return (<div
+}
+return (<div;
 className="relative w-full"
-      ref={containerRef}
-      role="combobox"
-      aria-expanded={isFocused && filteredSuggestions.length > 0}
-      aria-haspopup="listbox"
-      aria-controls="autocomplete-suggestions-list">
-      <div className="relative">
-        <Search
+ref={containerRef}
+role="combobox";
+aria-expanded={isFocused && filteredSuggestions.length > 0}
+aria-haspopup="listbox";
+aria-controls="autocomplete-suggestions-list">;
+<div className="relative">;
+<Search;
 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
-        />
-        <Input
+/>;
+<Input;
 ref={inputRef}
-          type="text"
-          value={value}
-          onChange={(e) => {
-            onChange(e.target.value)
+type="text"
+value={value}
+onChange={(e) => {
+onChange(e.target.value)
 }}
-          onFocus={() => setIsFocused(true)}
-          onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-        />
-        {value && (
-          <button
+onFocus={() => setIsFocused(true)}
+onKeyDown={handleKeyDown}
+placeholder={placeholder}
+className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+aria-autocomplete="list";
+aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+/>;
+{value && (
+<button;
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick={() => onChange('')}
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-      <AutocompleteSuggestions
+onClick={() => onChange("")}
+>;
+<X className="h-4 w-4" />;
+</button>;
+)}
+</div>;
+<AutocompleteSuggestions;
 suggestions={filteredSuggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelectSuggestion}
-        visible={isFocused}
-        highlightedIndex={highlightedIndex}
-        listId="autocomplete-suggestions-list"
-      />
-    </div>
-  )
+searchTerm={value}
+onSelectSuggestion={handleSelectSuggestion}
+visible={isFocused}
+highlightedIndex={highlightedIndex}
+listId="autocomplete-suggestions-list";
+/>;
+</div>;
+)
 }

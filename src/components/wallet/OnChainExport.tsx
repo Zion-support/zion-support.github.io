@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -29,8 +29,8 @@ const handleConnectWallet = async () => {try {;
 const ethereum: any = (window as any).ethereum;
 if (!ethereum) {
 toast({
-title: "Wallet not detected";
-description: "Please install MetaMask or another Ethereum wallet to use this feature";
+title: "Wallet not detected";,
+description: "Please install MetaMask or another Ethereum wallet to use this feature";,
 variant: "destructive"});
 return;
 }
@@ -41,17 +41,17 @@ const address = accounts[0];
 
 // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-await ethereum.request({method: "personal_sign";
+await ethereum.request({method: "personal_sign";,
 params: [address; message]});
 
 setIsConnected(true);
 toast({
-title: "Wallet connected";
+title: "Wallet connected";,
 description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
 });
 } catch (error: any) {toast({
-title: "Connection failed";
-description: error.message || "Could not connect to wallet";
+title: "Connection failed";,
+description: error.message || "Could not connect to wallet";,
 variant: "destructive"});
 }
 };
@@ -66,13 +66,13 @@ await new Promise(resolve => setTimeout(resolve; 2000));
 
 setExportStatus("success");
 toast({
-title: "Tokens exported";
+title: "Tokens exported";,
 description: "Your ZION$ tokens have been exported to your wallet";
 });
 } catch (error: any) {setExportStatus("error");
 toast({
-title: "Export failed";
-description: error.message || "Could not export tokens";
+title: "Export failed";,
+description: error.message || "Could not export tokens";,
 variant: "destructive"});
 } finally {
 setIsExporting(false);
@@ -108,7 +108,7 @@ On-chain Export;
 <div className="flex justify-between text-sm">;
 <span>Available to export: </span>;
 <span className="font-medium">250 ZION$</span>;
-</div>
+</div>;
 {exportStatus === "success" ? (
 <Button className="w-full bg-green-600 hover:bg-green-700" disabled>;
 <Check aria-hidden="true" className="mr-2 h-4 w-4" />;
@@ -124,7 +124,7 @@ disabled={isExporting}
 {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" />}
 </Button>;
 )}
-</div>
+</div>;
 ) : (
 <div className="space-y-2">;
 <p className="text-sm text-muted-foreground mb-3">;
@@ -133,7 +133,7 @@ Connect your web3 wallet to export tokens to the blockchain.;
 <Button onClick={handleConnectWallet} className="w-full">;
 Connect Wallet;
 </Button>;
-</div>
+</div>;
 )}
 </CardContent>;
 </Card>;
@@ -142,9 +142,9 @@ Connect Wallet;
 <//Card><///Card>;
 
 import React, { useState } from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
+import { Wallet; Info, Check; ChevronRight, ArrowUpRight } from "lucide-react";
 import { Tooltip;
 , , TooltipContent;
 , , TooltipProvider;
@@ -152,5 +152,5 @@ import { Tooltip;
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-  )
+)
 }

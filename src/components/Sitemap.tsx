@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -90,7 +90,7 @@ return (
 <p className="text-lg text-slate-600 max-w-2xl mx-auto">;
 Navigate through all our pages and services to find exactly what you need;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-8">;
 {/* Main Pages */}
@@ -102,13 +102,13 @@ Navigate through all our pages and services to find exactly what you need;
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* Core Services */}
 <div className="bg-white rounded-lg shadow-sm p-6">;
@@ -120,13 +120,13 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* AI Autonomous Services */}
 <div className="bg-white rounded-lg shadow-sm p-6">;
@@ -138,13 +138,13 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* Pricing & Showcase */}
 <div className="bg-white rounded-lg shadow-sm p-6">;
@@ -156,8 +156,8 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
@@ -167,13 +167,13 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 {/* Legal & Resources */}
 <div className="bg-white rounded-lg shadow-sm p-6">;
@@ -185,8 +185,8 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to={item.path}
 className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">{item.label}</div>
-<div className="text-sm text-slate-600">{item.description}</div>
+<div className="font-medium text-slate-900">{item.label}</div>;
+<div className="text-sm text-slate-600">{item.description}</div>;
 </Link>;
 </li>;
 ))}
@@ -195,8 +195,8 @@ className="block p-3 rounded-lg hove;  r:bg-slate-50 transition-colors duration-
 to="/ai-consumer-willingness-to-try";
 className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">AI Consumer Research</div>
-<div className="text-sm text-slate-600">Research on AI consumer adoption</div>
+<div className="font-medium text-slate-900">AI Consumer Research</div>;
+<div className="text-sm text-slate-600">Research on AI consumer adoption</div>;
 </Link>;
 </li>;
 <li>;
@@ -204,12 +204,12 @@ className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-2
 to="/ai-consumer-willingness-to-use";
 className="block p-3 rounded-lg hove; r:bg-slate-50 transition-colors duration-200"
 >;
-<div className="font-medium text-slate-900">AI Consumer Insights</div>
-<div className="text-sm text-slate-600">Consumer insights for AI products</div>
+<div className="font-medium text-slate-900">AI Consumer Insights</div>;
+<div className="text-sm text-slate-600">Consumer insights for AI products</div>;
 </Link>;
 </li>;
 </ul>;
-</div>
+</div>;
 
 {/* Quick Links */}
 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-sm p-6">;
@@ -233,9 +233,9 @@ className="block w-full text-center bg-white text-slate-900 px-6 py-3 rounded-lg
 >;
 Explore Services;
 </Link>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Additional AI Services Grid */}
 <div className="mt-12">;
@@ -271,14 +271,14 @@ key={service}
 to={path}
 className="block p-4 bg-white rounded-lg shadow-sm hove;  r: shadow-md transition-all duration-200 text-center"
 >;
-<div className="font-medium text-slate-900 text-sm">{service}</div>
+<div className="font-medium text-slate-900 text-sm">{service}</div>;
 </Link>;
 );
 })}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 );
 };
 

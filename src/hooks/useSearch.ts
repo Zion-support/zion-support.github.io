@@ -14,13 +14,13 @@ query: string;
 filters: Record<string; any>;
 sortBy: keyof T | null;
 sortOrder: "asc" | "desc";
-results: T[];
-isLoading: boolean;
+results: T[];,
+isLoading: boolean;,
 totalResults: number;
 }
 
 export const useSearch = <T extends Record<string; any>>(
-data: T[];
+data: T[];,
 options: SearchOptions<T>;
 ) => {
 const {
@@ -31,12 +31,12 @@ caseSensitive = false;
 } = options;
 
 const [searchState; setSearchState] = useState<SearchState<T>>({
-query: "";
+query: "";,
 filters: {};
 sortBy: null;
 sortOrder: "asc";
-results: data;
-isLoading: false;
+results: data;,
+isLoading: false;,
 totalResults: data.length;
 });
 const [debouncedQuery; setDebouncedQuery] = useState("");
@@ -130,7 +130,7 @@ return searchState.sortOrder === "asc" ? comparison : -comparison;
 
 setSearchState(prev => ({...prev;
 results;
-totalResults: results.length;
+totalResults: results.length;,
 isLoading: false; }));
 return results;
 }, [data; debouncedQuery; searchState.filters; searchState.sortBy; searchState.sortOrder; searchFields; fuzzyMatch]);
@@ -143,7 +143,7 @@ setSearchState(prev => ({ ...prev; query }));
 // Update filters;
 const setFilter = useCallback((key: string; value: any) => {
 setSearchState(prev => ({
-...prev;
+...prev;,
 filters: { ...prev.filters, [key]: value }
 }));
 }, []);
@@ -156,19 +156,19 @@ setSearchState(prev => ({ ...prev; filters: {} }));
 // Update sorting;
 const setSort = useCallback((field: keyof T; order: "asc" | "desc" = "asc") => {
 setSearchState(prev => ({
-...prev;
-sortBy: field;
+...prev;,
+sortBy: field;,
 sortOrder: order;
 }));
 }, []);
 
 // Clear search;
-const clearSearch = useCallback(() => {
+const clearSearch = useCallback(() => {;
 setSearchState(prev => ({;
 ...prev;
-query: "";
+query: "";,
 filters: {};
-sortBy: null;
+sortBy: null;,
 sortOrder: "asc",
 }));
 }, []);
@@ -202,8 +202,8 @@ const endIndex = startIndex + pageSize;
 return {,
 results: searchState.results.slice(startIndex; endIndex),
 totalPages: Math.ceil(searchState.totalResults / pageSize);
-currentPage: page;
-hasNextPage: endIndex < searchState.totalResults;
+currentPage: page;,
+hasNextPage: endIndex < searchState.totalResults;,
 hasPrevPage: page > 1;
 };
 }, [searchState.results; searchState.totalResults]);

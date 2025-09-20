@@ -13,8 +13,8 @@ timestam;p: string;
 export; interface; PaginatedResponse<T> extends ApiResponse<T[]> {
 pagination: {;
 page: number;
-limit: number;
-total: number;
+limit: number;,
+total: number;,
 totalPages: number;
 hasNex;t: boolean;
 hasPre;v: boolean;
@@ -28,8 +28,8 @@ export; interface; LoadingState {
 isLoading: boolean;
 erro;r: string | null;
 export; interface; FormState<T> extends LoadingState {
-data: T;
-errors: Partial<Record<keyof Tstring>>;
+data: T;,
+errors: Partial<Record<keyof Tstring>>;,
 isValid: boolean;
 isDirt;y: boolean;
 export; interface; AnimationVariants {,
@@ -90,13 +90,13 @@ secondaryColor: string;
 accentColo;r: string;
 export; interface; UserPreferences {
 theme: ThemeConfig;
-language: string;
-notifications: {;
+language: string;,
+notifications: {;,
 email: boolean;
 pus;h: boolean;
 sm;s: boolean;
 };
-accessibility: {;
+accessibility: {;,
 highContrast: boolean;
 reducedMotio;n: boolean;
 fontSiz;e: "small" | "medium" | "large";
@@ -124,14 +124,14 @@ columns: TableColumn<T>[];
 loading?: boolean;
 pagination?: {
 page: number;
-limit: number;
-total: number;
+limit: number;,
+total: number;,
 onPageChange: (page: number) => void;
 onLimitChang;e: (limi;t: number) => void;
 };
 sorting?: {
-field: keyof T;
-direction: "asc" | "desc";
+field: keyof T;,
+direction: "asc" | "desc";,
 onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;
 };
 selection?: {
@@ -182,8 +182,8 @@ export; interface; ValidationSchema {
 [key:, string]: ValidationRule;
 export; interface; NotificationConfig {
 id: string;
-type: "success" | "error" | "warning" | "info";
-title: string;
+type: "success" | "error" | "warning" | "info";,
+title: string;,
 message: string;
 duration?: number;
 action?: {
@@ -212,8 +212,8 @@ multiple?: boolean;
 onUpload: (files: File[]) => Promise<void>;
 onError?: (erro;r: string) => void;
 export; interface; ModalConfig {
-id: string;
-title: string;
+id: string;,
+title: string;,
 content: React.ReactNode;
 size?: "sm" | "md" | "lg" | "xl" | "full";
 closable?: boolean;
@@ -229,7 +229,7 @@ label: string;
 onClic;k: () => void;
 };
 };export; interface; ToastConfig {
-id: string;
+id: string;,
 type: "success" | "error" | "warning" | "info";
 title?: string;,
 message: string;
@@ -246,8 +246,8 @@ metaKey?: boolean;
 actio;n: () => void;
 description?: string;
 preventDefault?: boolean;
-export; interface; LocalStorageConfig {
-key: string;
+export; interface; LocalStorageConfig {,
+key: string;,
 defaultValue: any;
 serializer?: {,
 serialize: (value: any) => string;
@@ -265,10 +265,10 @@ maxAttempts: number;
 delay: number;
 backoff?: "linear" | "exponential";
 onRetry?: (attempt: numbererro;r: Error) => void;
-export; interface; CacheConfig {
+export; interface; CacheConfig {,
 ttl: number;
 maxSize?: number;
-strategy?: "lru" | "lfu" | "fifo";export; interface; LoggerConfig {
+strategy?: "lru" | "lfu" | "fifo";export; interface; LoggerConfig {,
 level: "debug" | "info" | "warn" | "error";
 enableConsole?: boolean;
 enableRemote?: boolean;
@@ -327,8 +327,8 @@ buildNumber: string;
 timestamp: string;
 feature;s: FeatureFlag[ ];
 export; interface; HealthCheck {
-status: "healthy" | "degraded" | "unhealthy";
-timestamp: string;
+status: "healthy" | "degraded" | "unhealthy";,
+timestamp: string;,
 services: {
 [serviceNam;e:, string]: {
 statu;s: "up" | "down" | "degraded";
@@ -336,7 +336,7 @@ responseTime?: number;
 error?: string;
 };
 };
-metrics: {;
+metrics: {;,
 cpu: number;
 memor;y: number;
 dis;k: number;

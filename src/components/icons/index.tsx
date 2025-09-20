@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -73,7 +73,7 @@ export const Search: any = ({ className = "", ...props }: React.SVGProps<SVGSVGE
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />;
 </svg>;
 );<//svg><///svg>;
-export default Icon, // Default export the Icon component,
-export const Icons = iconMap, // Export the map if you need to refer to available icons,
-export default Icon, // Default export the Icon component,
-export const Icons = iconMap, // Export the map if you need to refer to available icons
+export default Icon, // Default export the Icon component;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+export default Icon, // Default export the Icon component;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;

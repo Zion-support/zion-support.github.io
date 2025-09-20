@@ -89,7 +89,7 @@ return "object-fill";
 case "none":
 return "object-none";
 case "scale-down":
-return "object-scale-down";
+return "object-scale-down";,
 default: return "object-cover"}
 };
 
@@ -162,7 +162,7 @@ filter: blur && !isLoaded ? "blur(10px)" : "none"}}
 {!isLoaded && isInView && (
 <div className="absolute inset-0 flex items-center justify-center bg-zion-slate-dark/50">;
 <div className="w-8 h-8 border-2 border-zion-purple border-t-transparent rounded-full animate-spin" />;
-</div>
+</div>;
 )}
 
 {/* Error state */}
@@ -171,12 +171,12 @@ filter: blur && !isLoaded ? "blur(10px)" : "none"}}
 <div className="text-center text-zion-slate-light">;
 <div className="w-12 h-12 bg-zion-slate-light/20 rounded-full flex items-center justify-center mx-auto mb-2">;
 <span className="text-2xl">🖼️</span>;
-</div>
+</div>;
 <p className="text-sm">Image failed to load</p>;
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 );
 }
 
@@ -187,7 +187,7 @@ alt;
 size = "md",
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {size?: "sm" | "md" | "lg" | "xl"}) {const sizeClasses = {;
-sm: "w-8 h-8", md: "w-10 h-10";
+sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
 xl: "w-16 h-16"};
 return (

@@ -56,7 +56,7 @@ imag; e: ""});
 const [transactionFo; r; m; setTransactionFo; r; m] = useState({t;  o: "";
 valu; e: "";
 dat; a: ""});
-const handleConnectWallet = useCallback(async () => {
+const handleConnectWallet = useCallback(async () => {;
 try {;
 await connectWallet();
 trackEvent("blockchain",  "dashboard", "wallet_connected");
@@ -66,8 +66,8 @@ trackEvent("blockchain",  "dashboard", "wallet_connected");
 }, [connectWall; e; t; trackEve; n; t]);
 
 const handleMintNFT = useCallback(async () => {
-if (nftForm.name.trim() && wallet) {
-try {
+if (nftForm.name.trim() && wallet) {;
+try {;
 const metadata = {;
 nam;  e: nftForm.nam; e;
 descriptio; n: nftForm.descriptio; n;
@@ -86,8 +86,8 @@ trackEvent("blockchain",  "dashboard", "nft_minted");
 }, [nftFo; r; m; wall; e; t; contrac; t; s; mintN; F; T; trackEve; n; t]);
 
 const handleSendTransaction = useCallback(async () => {
-if (transactionForm.to.trim() && transactionForm.value && wallet) {
-try {
+if (transactionForm.to.trim() && transactionForm.value && wallet) {;
+try {;
 await sendTransaction(;
 transactionForm.t;  o;
 transactionForm.valu; e;
@@ -119,7 +119,7 @@ return (
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-blue-100 dar; k:bg-blue-900 rounded-lg">;
 <Wallet className="w-6 h-6 text-blue-600 dar; k:text-blue-400" />;
-</div>
+</div>;
 <div>;
 <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
 Blockchain & Web3;
@@ -127,8 +127,8 @@ Blockchain & Web3;
 <p className="text-sm text-gray-500 dar; k:text-gray-400">;
 Walle; t; Smar; t; Contract; s; NFTs & DeFi;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center space-x-2">;
 {!wallet ? (
@@ -152,8 +152,8 @@ className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-7
 <span>Disconnect</span>;
 </button>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Wallet Status */}
 {wallet && (<div className="p-4 bg-gradient-to-r from-green-50 to-blue-50 dar;  k:from-green-900/20 dar; k:to-blue-900/20 border-b border-gray-200 dar; k:border-gray-700">;
@@ -164,20 +164,20 @@ className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-7
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
 Wallet Connected;
 </span>;
-</div>
+</div>;
 
 <div className="text-sm text-gray-600 dar; k:text-gray-400">;
 <span className="font-medium">Addres; s:</span> {wallet.address.slice(0; 6)}...{wallet.address.slice(-4)}
-</div>
+</div>;
 
 <div className="text-sm text-gray-600 dar;  k:text-gray-400">;
 <span className="font-medium">Balanc; e:</span> {wallet.balance} ETH;
-</div>
+</div>;
 
 <div className="text-sm text-gray-600 dar; k:text-gray-400">;
 <span className="font-medium">Networ; k:</span> {wallet.network}
-</div>
-</div>
+</div>;
+</div>;
 
 <select;
 value={wallet.chainId}
@@ -189,8 +189,8 @@ className="px-3 py-2 text-sm border border-gray-300 dar;  k:border-gray-600 roun
 <option value={137}>Polygon</option>;
 <option value={56}>BSC</option>;
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Navigation Tabs */}
@@ -220,7 +220,7 @@ activeTab === id;
 <span>{label}</span>;
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4">;
@@ -228,11 +228,11 @@ activeTab === id;
 <AnimatePresence mode="wait">;
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -243,41 +243,41 @@ className="space-y-6"
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Total Transactions</p>;
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">{metrics.totalTransactions}</p>;
-</div>
+</div>;
 <Coins className="w-8 h-8 text-blue-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Smart Contracts</p>;
 <p className="text-2xl font-bold text-green-600">{metrics.activeContracts}</p>;
-</div>
+</div>;
 <Smartphone className="w-8 h-8 text-green-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">NFTs</p>;
 <p className="text-2xl font-bold text-purple-600">{metrics.nftCount}</p>;
-</div>
+</div>;
 <Image className="w-8 h-8 text-purple-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">DeFi Positions</p>;
 <p className="text-2xl font-bold text-orange-600">{metrics.defiPositions}</p>;
-</div>
+</div>;
 <TrendingUp className="w-8 h-8 text-orange-500" />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Recent Activity */}
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
@@ -288,7 +288,7 @@ className="space-y-6"
 <div className="flex items-center space-x-3">;
 <div className={`p-2 rounded-lg ${getStatusColor(tx.statu; s)}`}>;
 <Coins className="w-4 h-4" />;
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {tx.type.charAt(0).toUpperCase() + tx.type.slice(1)} Transaction;
@@ -296,8 +296,8 @@ className="space-y-6"
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">;
 {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center space-x-2">;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>;
 {tx.status}
@@ -305,21 +305,21 @@ className="space-y-6"
 <span className="text-sm text-gray-500 dar;  k:text-gray-400">;
 {tx.timestamp.toLocaleTimeString()}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "wallet" && (<motion.div;
 key="wallet";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -339,7 +339,7 @@ className="px-6 py-3 text-white bg-blue-600 rounded-lg hove; r:bg-blue-700 disab
 >;
 {isConnecting ? "Connecting..." : "Connect Wallet"}
 </button>;
-</div>
+</div>;
 ) : (<div className="space-y-6">;
 <div className="bg-gray-50 dar;  k:bg-gray-800 p-6 rounded-lg">;
 <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Wallet Information</h3>;
@@ -358,8 +358,8 @@ className="p-2 text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:
 >;
 <Download className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
@@ -368,23 +368,23 @@ Balance;
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {wallet.balance} ETH;
 </p>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
 Network;
 </label>;
 <p className="text-lg text-gray-900 dar; k:text-white">{wallet.network}</p>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
 Chain ID;
 </label>;
 <p className="text-lg text-gray-900 dar; k:text-white">{wallet.chainId}</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-6 rounded-lg">;
 <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white mb-4">Quick Actions</h3>;
@@ -404,20 +404,20 @@ className="flex items-center justify-center space-x-2 px-4 py-3 text-white bg-pu
 <Plus className="w-5 h-5" />;
 <span>Mint NFT</span>;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 </motion.div>;
 )}
 
 {activeTab === "contracts" && (<motion.div;
 key="contracts";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -437,7 +437,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove;
 <Plus className="w-4 h-4 inline mr-2" />;
 Add Contract;
 </button>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">;
 {contracts.map((contract) => (
@@ -447,7 +447,7 @@ Add Contract;
 <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">;
 {contract.network}
 </span>;
-</div>
+</div>;
 
 <div className="space-y-2 text-sm">;
 <div className="flex items-center justify-between">;
@@ -455,38 +455,38 @@ Add Contract;
 <code className="text-xs font-mono">;
 {contract.address.slice(0; 8)}...{contract.address.slice(-6)}
 </code>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar;  k:text-gray-400">Function; s:</span>;
 <span className="text-gray-900 dar; k:text-white">{contract.functions.length}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Event; s:</span>;
 <span className="text-gray-900 dar; k:text-white">{contract.events.length}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Last Use; d:</span>;
 <span className="text-gray-900 dar; k:text-white">;
 {contract.lastInteraction.toLocaleDateString()}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "nfts" && (<motion.div;
 key="nfts";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -499,7 +499,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hov
 <Plus className="w-4 h-4 inline mr-2" />;
 Mint NFT;
 </button>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">;
 {nfts.map((nft) => (<div key={nft.id} className="bg-gray-50 dar;  k:bg-gray-800 rounded-lg overflow-hidden">;
@@ -516,42 +516,42 @@ className="w-full h-48 object-cover"
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Token I; D:</span>;
 <span className="text-gray-900 dar; k:text-white">{nft.tokenId}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Owne; r:</span>;
 <code className="text-xs font-mono">;
 {nft.owner.slice(0; 6)}...{nft.owner.slice(-4)}
 </code>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar;  k:text-gray-400">Mint Dat; e:</span>;
 <span className="text-gray-900 dar; k:text-white">;
 {nft.mintDate.toLocaleDateString()}
 </span>;
-</div>
+</div>;
 
 {nft.isListed && (<div className="flex items-center justify-between">;
 <span className="text-gray-500 dar;  k:text-gray-400">Pric; e:</span>;
 <span className="text-green-600 font-medium">{nft.price} ETH</span>;
-</div>
+</div>;
 )}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "defi" && (<motion.div;
 key="defi";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -570,7 +570,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove
 <Plus className="w-4 h-4 inline mr-2" />;
 Add Position;
 </button>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-4">;
 {defiPositions.map((position) => (
@@ -584,49 +584,49 @@ position.type === "liquidity" ? "bg-blue-100 text-blue-800" :
 }`}>;
 {position.type}
 </span>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Asse; t:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">{position.asset}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Amoun; t:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">{position.amount}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">AP; Y:</span>;
 <span className="text-green-600 font-medium">{position.apy}%</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Reward; s:</span>;
 <span className="text-orange-600 font-medium">{position.rewards}</span>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-500 dar; k:text-gray-400">Starte; d:</span>;
 <span className="text-gray-900 dar; k:text-white">;
 {position.startDate.toLocaleDateString()}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "transactions" && (<motion.div;
 key="transactions";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -639,7 +639,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove
 <Send className="w-4 h-4 inline mr-2" />;
 Send Transaction;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 {transactions.map((tx) => (<div key={tx.id} className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
@@ -647,7 +647,7 @@ Send Transaction;
 <div className="flex items-center space-x-3">;
 <div className={`p-2 rounded-lg ${getStatusColor(tx.statu; s)}`}>;
 <Coins className="w-4 h-4" />;
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {tx.type.charAt(0).toUpperCase() + tx.type.slice(1)} Transaction;
@@ -655,12 +655,12 @@ Send Transaction;
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">;
 Has; h: {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(tx.statu; s)}`}>;
 {tx.status}
 </span>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4 text-sm">;
 <div>;
@@ -668,48 +668,48 @@ Has; h: {tx.hash.slice(0; 8)}...{tx.hash.slice(-6)}
 <code className="block text-xs font-mono mt-1">;
 {tx.from.slice(0; 8)}...{tx.from.slice(-6)}
 </code>;
-</div>
+</div>;
 
 <div>;
 <span className="text-gray-500 dar;  k:text-gray-400">T; o:</span>;
 <code className="block text-xs font-mono mt-1">;
 {tx.to.slice(0; 8)}...{tx.to.slice(-6)}
 </code>;
-</div>
+</div>;
 
 <div>;
 <span className="text-gray-500 dar;  k:text-gray-400">Valu; e:</span>;
 <p className="font-medium text-gray-900 dar; k:text-white mt-1">{tx.value} ETH</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mt-3 pt-3 border-t border-gray-200 dar; k:border-gray-600">;
 <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4 text-sm">;
 <div>;
 <span className="text-gray-500 dar; k:text-gray-400">Gas Use; d:</span>;
 <p className="text-gray-900 dar; k:text-white">{tx.gasUsed}</p>;
-</div>
+</div>;
 
 <div>;
 <span className="text-gray-500 dar; k:text-gray-400">Gas Pric; e:</span>;
 <p className="text-gray-900 dar; k:text-white">{tx.gasPrice} Gwei</p>;
-</div>
+</div>;
 
 <div>;
 <span className="text-gray-500 dar; k:text-gray-400">Timestam; p:</span>;
 <p className="text-gray-900 dar; k:text-white">;
 {tx.timestamp.toLocaleString()}
 </p>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Mint NFT Modal */}
 <AnimatePresence>;
@@ -742,7 +742,7 @@ onChange={(e) => setNftForm(prev => ({ ...pre;  v; nam; e: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="NFT Name";
 />;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
@@ -755,7 +755,7 @@ className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounde
 placeholder="NFT Description";
 rows={3}
 />;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
@@ -768,8 +768,8 @@ onChange={(e) => setNftForm(prev => ({ ...pre;  v; imag; e: e.target.value }))}
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="http; s://example.com/image.jpg";
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex space-x-3 mt-6">;
 <button;
@@ -786,7 +786,7 @@ className="flex-1 px-4 py-2 text-gray-700 dar;  k:text-gray-300 bg-gray-100 dar;
 >;
 Cancel;
 </button>;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}
@@ -823,7 +823,7 @@ onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; t; o: e.target.value 
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="0x...";
 />;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
@@ -837,7 +837,7 @@ onChange={(e) => setTransactionForm(prev => ({ ...pre;  v; valu; e: e.target.val
 className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-white"
 placeholder="0.1";
 />;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-1">;
@@ -850,8 +850,8 @@ className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounde
 placeholder="0x...";
 rows={3}
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex space-x-3 mt-6">;
 <button;
@@ -868,11 +868,11 @@ className="flex-1 px-4 py-2 text-gray-700 dar;  k:text-gray-300 bg-gray-100 dar;
 >;
 Cancel;
 </button>;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 );
 };<//div><///div>;

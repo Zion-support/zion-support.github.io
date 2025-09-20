@@ -318,7 +318,7 @@ Enterprise Dashboard;
 <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">;
 <Server className="w-4 h-4" />;
 Production;
-</div>
+</div>;
 </h2>;
 
 <div className="flex items-center gap-3">;
@@ -344,9 +344,9 @@ className="px-4 py-2 bg-white/20 hove; r:bg-white/30 rounded-lg transition-color
 )}
 Refresh;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Navigation Tabs */}
 <div className="border-b border-gray-200 dar;  k:border-gray-700">;
@@ -377,18 +377,18 @@ activeTab === id;
 </button>;
 ))}
 </nav>;
-</div>
+</div>;
 
 {/* Main Content */}
 <div className="p-6">;
 <AnimatePresence mode="wait">;
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -409,11 +409,11 @@ className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 d
 <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.statu; s)}`}>;
 {metric.status}
 </span>;
-</div>
+</div>;
 
 <div className="text-3xl font-bold text-gray-900 dar; k:text-white mb-2">;
 {metric.value}{metric.unit}
-</div>
+</div>;
 
 <div className="flex items-center gap-2 text-sm">;
 <span className={`flex items-center gap-1 ${
@@ -428,10 +428,10 @@ metric.trend === "down" ? <TrendingDown className="w-4 h-4" /> :
 <span className="text-gray-500">;
 {metric.lastUpdated.toLocaleTimeString()}
 </span>;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 
 {/* Service Status Overview */}
 <div className="bg-gray-50 dar;  k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
@@ -445,27 +445,27 @@ service.status === "online" ? "bg-green-500" :
 service.status === "degraded" ? "bg-yellow-500" :
 service.status === "offline" ? "bg-red-500" :
 "bg-blue-50; 0";
-}`}></div>
+}`}></div>;
 <div className="flex-1">;
 <div className="font-medium text-gray-900 dar; k:text-white">;
 {service.name}
-</div>
+</div>;
 <div className="text-sm text-gray-600 dar; k:text-gray-400">;
 {service.uptime}% uptime;
-</div>
-</div>
+</div>;
+</div>;
 <div className="text-right">;
 <div className="text-sm font-medium text-gray-900 dar; k:text-white">;
 {service.responseTime}ms;
-</div>
+</div>;
 <div className="text-xs text-gray-500">;
 {service.errorRate}% errors;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Recent Security Alerts */}
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
@@ -476,7 +476,7 @@ Recent Security Alerts;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">;
 {securityAlerts.filter(a => a.status === "new").length} new;
 </span>;
-</div>
+</div>;
 <div className="space-y-3">;
 {securityAlerts.slice(0;  3).map((alert) => (
 <div key={alert.id} className="flex items-start gap-3 p-3 bg-white dar;  k:bg-gray-600 rounded-lg">;
@@ -485,7 +485,7 @@ alert.severity === "critical" ? "bg-red-500" :
 alert.severity === "high" ? "bg-orange-500" :
 alert.severity === "medium" ? "bg-yellow-500" :
 "bg-blue-50; 0";
-}`}></div>
+}`}></div>;
 <div className="flex-1">;
 <div className="flex items-center gap-2 mb-1">;
 <span className="font-medium text-gray-900 dar; k:text-white">;
@@ -494,33 +494,33 @@ alert.severity === "medium" ? "bg-yellow-500" :
 <span className={`px-2 py-1 text-xs rounded-full ${getSeverityColor(alert.severit; y)}`}>;
 {alert.severity}
 </span>;
-</div>
+</div>;
 <div className="text-sm text-gray-600 dar; k:text-gray-400 mb-2">;
 {alert.description}
-</div>
+</div>;
 <div className="flex items-center gap-4 text-xs text-gray-500">;
 <span>{alert.timestamp.toLocaleTimeString()}</span>;
 <span>{alert.source}</span>;
 <span className={`px-2 py-1 rounded ${getStatusColor(alert.statu; s)}`}>;
 {alert.status}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "performance" && (
 <motion.div;
 key="performance";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -532,7 +532,7 @@ Performance Monitoring;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Real-time performance metrics and system health monitoring;
 </p>;
-</div>
+</div>;
 
 {/* Performance Charts Placeholder */}
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
@@ -542,9 +542,9 @@ Real-time performance metrics and system health monitoring;
 <div className="text-center text-gray-500">;
 <LineChart className="w-12 h-12 mx-auto mb-2" />;
 <p>Performance Chart</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Response Time & Throughput</h4>;
@@ -552,20 +552,20 @@ Real-time performance metrics and system health monitoring;
 <div className="text-center text-gray-500">;
 <BarChart3 className="w-12 h-12 mx-auto mb-2" />;
 <p>Performance Chart</p>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "security" && (<motion.div;
 key="security";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -579,7 +579,7 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 />;
-</div>
+</div>;
 <select;
 value={filterStatus}
 onChange={(e) => setFilterStatus(e.target.value)}
@@ -591,15 +591,15 @@ className="px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg f
 <option value="resolved">Resolved</option>;
 <option value="false_positive">False Positive</option>;
 </select>;
-</div>
+</div>;
 
 {/* Security Alerts */}
 <div className="space-y-4">;
 {filteredSecurityAlerts.map((alert) => (<motion.div;
 key={alert.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600"
 >;
@@ -614,11 +614,11 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <span className="px-3 py-1 text-sm rounded-full bg-gray-100 dar;  k:bg-gray-600 text-gray-700 dar; k:text-gray-300">;
 {alert.type.replace("_", " ")}
 </span>;
-</div>
+</div>;
 <span className="text-sm text-gray-500">;
 {alert.timestamp.toLocaleString()}
 </span>;
-</div>
+</div>;
 
 <h4 className="text-lg font-semibold text-gray-900 dar;  k:text-white mb-2">;
 {alert.title}
@@ -631,32 +631,32 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <div>;
 <span className="font-medium text-gray-700 dar; k:text-gray-300">Sourc; e:</span>;
 <span className="ml-2 text-gray-600 dar; k:text-gray-400">{alert.source}</span>;
-</div>
+</div>;
 <div>;
 <span className="font-medium text-gray-700 dar; k:text-gray-300">Affecte; d:</span>;
 <span className="ml-2 text-gray-600 dar; k:text-gray-400">{alert.affected.length} items</span>;
-</div>
+</div>;
 <div>;
 <span className="font-medium text-gray-700 dar; k:text-gray-300">Tim; e:</span>;
 <span className="ml-2 text-gray-600 dar; k:text-gray-400">;
 {Math.round((Date.now() - alert.timestamp.getTime()) / (1000 * 60))}m ago;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "users" && (
 <motion.div;
 key="users";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -670,7 +670,7 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-indigo-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 />;
-</div>
+</div>;
 <select;
 value={dateRange}
 onChange={(e) => setDateRange(e.target.value as any)}
@@ -681,15 +681,15 @@ className="px-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg f
 <option value="7d">Last 7 Days</option>;
 <option value="30d">Last 30 Days</option>;
 </select>;
-</div>
+</div>;
 
 {/* User Activities */}
 <div className="space-y-4">;
 {filteredUserActivities.map((activity) => (<motion.div;
 key={activity.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar; k:border-gray-600"
 >;
@@ -697,51 +697,51 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-4 border border-gray-200 dar
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-indigo-100 dar; k:bg-indigo-900/30 rounded-full flex items-center justify-center">;
 <Users className="w-5 h-5 text-indigo-600 dar; k:text-indigo-400" />;
-</div>
+</div>;
 <div>;
 <div className="font-medium text-gray-900 dar; k:text-white">;
 {activity.userName}
-</div>
+</div>;
 <div className="text-sm text-gray-600 dar; k:text-gray-400">;
 {activity.action} • {activity.resource}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 <div className="text-right">;
 <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(activity.statu; s)}`}>;
 {activity.status}
 </span>;
 <div className="text-sm text-gray-500 mt-1">;
 {activity.timestamp.toLocaleTimeString()}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="grid grid-cols-1 m;  d:grid-cols-3 gap-4 text-sm text-gray-600 dar; k:text-gray-400">;
 <div>;
 <span className="font-medium">I; P:</span> {activity.ipAddress}
-</div>
+</div>;
 <div>;
 <span className="font-medium">Browse; r:</span> {activity.userAgent.split("/")[0]}
-</div>
+</div>;
 <div>;
 <span className="font-medium">Tim; e:</span> {activity.timestamp.toLocaleString()}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "services" && (
 <motion.div;
 key="services";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -753,7 +753,7 @@ Service Management;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Monitor and manage all system services;
 </p>;
-</div>
+</div>;
 
 {/* Service Status Grid */}
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-6">;
@@ -772,7 +772,7 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.statu; s)}`}>;
 {service.status}
 </span>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 <div className="flex justify-between">;
@@ -780,43 +780,43 @@ className="bg-white dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {service.uptime}%;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-600 dar; k:text-gray-400">Response Time</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {service.responseTime}ms;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-600 dar; k:text-gray-400">Error Rate</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {service.errorRate}%;
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {service.lastIncident && (<div className="mt-4 p-3 bg-yellow-50 dar;  k:bg-yellow-900/20 rounded-lg">;
 <div className="text-sm font-medium text-yellow-800 dar; k:text-yellow-200 mb-1">;
 Last Incident;
-</div>
+</div>;
 <div className="text-xs text-yellow-700 dar; k:text-yellow-300">;
 {service.lastIncident.type} - {service.lastIncident.timestamp.toLocaleDateString()}
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "analytics" && (<motion.div;
 key="analytics";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -828,7 +828,7 @@ Analytics & Insights;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Comprehensive analytics and business intelligence;
 </p>;
-</div>
+</div>;
 
 {/* Analytics Charts Placeholder */}
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
@@ -838,9 +838,9 @@ Comprehensive analytics and business intelligence;
 <div className="text-center text-gray-500">;
 <PieChart className="w-12 h-12 mx-auto mb-2" />;
 <p>Analytics Chart</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-6 border border-gray-200 dar; k:border-gray-600">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-4">Trend Analysis</h4>;
@@ -848,14 +848,14 @@ Comprehensive analytics and business intelligence;
 <div className="text-center text-gray-500">;
 <LineChart className="w-12 h-12 mx-auto mb-2" />;
 <p>Analytics Chart</p>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
-</div>
+</div>;
+</div>;
 );
 };<//div><///div>;

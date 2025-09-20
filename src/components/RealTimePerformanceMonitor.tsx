@@ -5,8 +5,8 @@ import { motion } from "framer-motion, ";
 interface PerformanceMetrics {
 timestamp: number;
 memory: number;
-cpu: number;
-fps: number;
+cpu: number;,
+fps: number;,
 network: number;
 }
 }
@@ -88,27 +88,27 @@ className="text-green-400 hover:text-white transition-colors"
 >;
 ×;
 </button>;
-</div>
+</div>;
 
 {/* Current Metrics */}
 <div className="grid grid-cols-2 gap-2 mb-3">;
 <div className="text-center">;
-<div className="text-green-400 font-bold">{currentMetric.memory.toFixed(1)} MB</div>
-<div className="text-gray-400 text-xs">Memory</div>
-</div>
+<div className="text-green-400 font-bold">{currentMetric.memory.toFixed(1)} MB</div>;
+<div className="text-gray-400 text-xs">Memory</div>;
+</div>;
 <div className="text-center">;
-<div className="text-blue-400 font-bold">{currentMetric.fps.toFixed(0)} FPS</div>
-<div className="text-gray-400 text-xs">Frame Rate</div>
-</div>
+<div className="text-blue-400 font-bold">{currentMetric.fps.toFixed(0)} FPS</div>;
+<div className="text-gray-400 text-xs">Frame Rate</div>;
+</div>;
 <div className="text-center">;
-<div className="text-yellow-400 font-bold">{currentMetric.cpu.toFixed(1)}%</div>
-<div className="text-gray-400 text-xs">CPU Usage</div>
-</div>
+<div className="text-yellow-400 font-bold">{currentMetric.cpu.toFixed(1)}%</div>;
+<div className="text-gray-400 text-xs">CPU Usage</div>;
+</div>;
 <div className="text-center">;
-<div className="text-purple-400 font-bold">{currentMetric.network.toFixed(0)}ms</div>
-<div className="text-gray-400 text-xs">Network</div>
-</div>
-</div>
+<div className="text-purple-400 font-bold">{currentMetric.network.toFixed(0)}ms</div>;
+<div className="text-gray-400 text-xs">Network</div>;
+</div>;
+</div>;
 
 {/* Mini Charts */}
 <div className="space-y-1">;
@@ -124,8 +124,8 @@ className="w-1 bg-green-400"
 style={{ height: `${(metric.memory / 100) * 100}%` }}
 />;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-gray-400 text-xs">FPS Trend:</span>;
@@ -139,13 +139,13 @@ className="w-1 bg-blue-400"
 style={{ height: `${(metric.fps / 60) * 100}%` }}
 />;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 <div className="mt-3 pt-2 border-t border-gray-700 text-center">;
 <span className="text-gray-500 text-xs">Press Ctrl+Shift+M to toggle</span>;
-</div>
+</div>;
 </motion.div>;
 );
 };

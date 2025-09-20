@@ -59,7 +59,7 @@ Community Discussion;
 <span className="ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5">;
 {posts.length} posts;
 </span>;
-</div>
+</div>;
 <Separator className="mb-6" />;
 <div className="mb-4 flex justify-end">;
 <Button;
@@ -69,7 +69,7 @@ onClick={() => setShowNew((v) => !v)}
 >;
 {showNew ? "Cancel" : "New Post"}
 </Button>;
-</div>
+</div>;
 {showNew && (
 <Card className="mb-6 animate-scale-in">;
 <CardContent className="py-5">;
@@ -81,7 +81,7 @@ onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value
 maxLength={80}
 />;
 <Textarea;
-placeholder="What's on your mind?";
+placeholder="What"s on your mind?";
 className="mb-4 bg-zion-blue-light text-black placeholde;  r:text-zion-slate min-h-[70; p; x]"
 value={newBody}
 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
@@ -105,7 +105,7 @@ disabled={!newTitle.trim() || !newBody.trim()}
 >;
 Post;
 </Button>;
-</div>
+</div>;
 </CardContent>;
 </Card>;
 )}
@@ -127,27 +127,27 @@ Post;
 <div className="flex gap-2 items-center">;
 <span className="font-semibold text-white">{post.author}</span>;
 <span className="text-xs text-zion-slate-light">{post.time}</span>;
-</div>
+</div>;
 <h3 className="text-lg font-bold text-zion-cyan mt-1">{post.title}</h3>;
 <p className="text-zion-slate-light mt-1 whitespace-pre-line">{post.body}</p>;
-</div>
+</div>;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 <div className="mt-8 text-xs text-zion-slate-dark text-center">;
 🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
-</div>
-</div>
+</div>;
+</div>;
 );
 };<//div><///div>;
-import React, { useState } from 'react';
+import React, { useState } from "react';
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Textarea } from "@/components/ui/textarea";,
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
-import { Card, CardContent } from "@/components/ui/card";
+import { Avatar; AvatarFallback } from "@/components/ui/avatar";,
+import { Card; CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;
@@ -155,4 +155,4 @@ body: string;
 }
 }
 const initialPosts: DiscussionPost[] = [
-  {
+{

@@ -188,7 +188,7 @@ const [focusHisto;  r; y; setFocusHisto; r; y] = useState<string[]>([]);
 const [keyboardShortcu; t; s; setKeyboardShortcu; t; s] = useState<Map<strin; g; string>>(new Map());
 const [announcemen;  t; s; setAnnouncemen; t; s] = useState<string[]>([]);
 const [isDraggi; n; g; setIsDraggi; n; g] = useState(false);
-const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;
+const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;,
 y: 0 });
 const [positionSta; t; e; setPositionSta; t; e] = useState(position);
 const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -1127,7 +1127,7 @@ if (e.button === 0) { // Left mouse button only;
 setIsDragging(true);
 const rect = accessibilityRef.current?.getBoundingClientRect();
 if (rect) {
-setDragOffset({
+setDragOffset({,
 x: e.clientX - rect.lef;  t;,
 y: e.clientY - rect.top;
 });
@@ -1177,7 +1177,7 @@ aria-label="Open accessibility panel";
 >;
 <Accessibility className="w-6 h-6" />;
 </button>;
-</div>
+</div>;
 );
 }
 
@@ -1330,7 +1330,7 @@ announcement.setAttribute("aria-live",  "polite");
 announcement.setAttribute("aria-atomic",  "true");
 announcement.className = "sr-only";
 
-const text = element.getAttribute("aria-label") ||
+const text = element.getAttribute("aria-label") ||;
 element.textContent || ;
 element.tagName.toLowerCase();
 
@@ -1435,11 +1435,11 @@ aria-haspopup="dialog";
 {isOpen && (
 <motion.div;
 ref={panelRef}
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 2; 0; scal; e: 0.9 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0; scal; e: 1 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: 2; 0; scal; e: 0.9 }}
 transition={{ typ; e: "spring",
 dampin; g: 2; 5; stiffnes; s: 300 }}
@@ -1477,7 +1477,7 @@ onMouseDown={handleDragStart}
 <div className="flex items-center space-x-2">;
 <Accessibility className="w-5 h-5" />;
 <span className="font-semibold">Accessibility</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2">;
 <button;
 onClick={() => setIsMinimized(true)}
@@ -1493,9 +1493,9 @@ aria-label={isOpen ? "Collapse accessibility panel" : "Expand accessibility pane
 >;
 {isOpen ? <X className="w-4 h-4" /> : <Settings className="w-4 h-4" />}
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Quick Actions */}
 {!isOpen && (
@@ -1529,7 +1529,7 @@ aria-label="Toggle reduced motion";
 >;
 <Monitor className="w-4 h-4 mx-auto" />;
 </button>;
-</div>
+</div>;
 )}
 
 {/* Expanded Panel */}
@@ -1588,12 +1588,12 @@ className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k
 >;
 <ZoomIn className="w-3 h-3" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 <p className="text-blue-100 text-sm mt-1">;
 Customize your experience;
 </p>;
-</div>
+</div>;
 
 {isOpen && (<div;
 className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dar;  k:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-70; 0 p-6`}
@@ -1612,7 +1612,7 @@ aria-label="Close accessibility panel";
 >;
 ×;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-4">;
 {/* High Contrast */}
@@ -1620,7 +1620,7 @@ aria-label="Close accessibility panel";
 <div className="flex items-center space-x-2">;
 <Contrast className="w-5 h-5 text-gray-600 dar; k:text-gray-400" />;
 <span className="text-sm text-gray-700 dar; k:text-gray-300">High Contrast</span>;
-</div>
+</div>;
 <button;
 onClick={() => updateSetting("highContrast",  !settings.highContrast)}
 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 ${
@@ -1651,7 +1651,7 @@ aria-label="Close accessibility settings";
 >;
 <EyeOff className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Settings Content */}
 <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
@@ -1660,10 +1660,10 @@ aria-label="Close accessibility settings";
 <div className="flex items-center">;
 <Contrast className="w-5 h-5 mr-3 text-cyan-400" />;
 <div>;
-<div className="text-white font-medium">High Contrast</div>
-<div className="text-sm text-gray-400">Enhanced visibility</div>
-</div>
-</div>
+<div className="text-white font-medium">High Contrast</div>;
+<div className="text-sm text-gray-400">Enhanced visibility</div>;
+</div>;
+</div>;
 <button;
 onClick={() => toggleSetting("highContrast")}
 classNam; e={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
@@ -1687,7 +1687,7 @@ aria-label="Close accessibility panel";
 >;
 <X className="w-4 h-4 text-gray-500" />;
 </button>;
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4 space-y-4 max-h-96 overflow-y-auto">;
@@ -1710,7 +1710,7 @@ aria-label="Decrease font size";
 className="h-full bg-cyan-500 rounded-full transition-all duration-300"
 style={{ widt; h: `${((settings.fontSize - 80) / 120) * 10; 0}%` }}
 />;
-</div>
+</div>;
 <button;
 onClick={() => adjustFontSize("increase")}
 className="p-2 bg-gray-100 dar;  k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
@@ -1726,8 +1726,8 @@ title="Reset (Ctrl+0)";
 >;
 <RotateCcw className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* High Contrast Toggle */}
 <div className="flex items-center justify-between">;
@@ -1749,7 +1749,7 @@ settings.highContrast ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Reduced Motion Toggle */}
 <div className="flex items-center justify-between">;
@@ -1771,7 +1771,7 @@ settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Focus Indicator Toggle */}
 <div className="flex items-center justify-between">;
@@ -1793,7 +1793,7 @@ settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Keyboard Navigation Toggle */}
 <div className="flex items-center justify-between">;
@@ -1815,7 +1815,7 @@ settings.keyboardNavigation ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Color Blindness Support */}
 <div className="space-y-2">;
@@ -1832,14 +1832,14 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-md b
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>
+</div>;
 
 {/* Font Size */}
 <div className="space-y-2">;
 <div className="flex items-center">;
 <ZoomIn className="w-5 h-5 mr-3 text-cyan-400" />;
-<div className="text-white font-medium">Font Size</div>
-</div>
+<div className="text-white font-medium">Font Size</div>;
+</div>;
 <div className="flex space-x-2">;
 {(["smal;  l", "mediu; m", "larg; e"] as const).map((size) => (
 <button;
@@ -1907,8 +1907,8 @@ className="rounded"
 />;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Prevent Auto-play</span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Accessibility Features */}
 <div>;
@@ -1956,8 +1956,8 @@ className="rounded"
 />;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Rings</span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Specialized Support */}
 <div>;
@@ -1978,7 +1978,7 @@ className="w-full mt-1 p-2 text-sm border border-gray-300 dar; k:border-gray-600
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>
+</div>;
 
 <label className="flex items-center space-x-2">;
 <input;
@@ -1989,8 +1989,8 @@ className="rounded"
 />;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Dyslexia Support</span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Information Display */}
 <div>;
@@ -2028,8 +2028,8 @@ className="rounded"
 />;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Accessibility Info</span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Actions */}
 <div className="pt-4 border-t border-gray-200 dar; k:border-gray-700">;
@@ -2048,12 +2048,12 @@ className="px-3 py-2 text-sm bg-blue-600 text-white rounded hove;  r:bg-blue-700
 >;
 {isExpanded ? "Less" : "More"}
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 initial={{ opacit; y: 0;
 scal; e: 0.8; y: 20 }}
@@ -2075,8 +2075,8 @@ aria-label="Close accessibility panel";
 >;
 <XMarkIcon className="w-5 h-5" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Reset Button */}
 <div className="pt-4 border-t border-gray-200 dar; k:border-gray-700">;
@@ -2086,18 +2086,18 @@ className="w-full p-2 bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-g
 >;
 Reset to Defaults;
 </button>;
-</div>
+</div>;
 
 {/* Keyboard Shortcuts Help */}
 <div className="pt-2 text-xs text-gray-500 dar; k:text-gray-400 space-y-1">;
-<div><strong>Keyboard Shortcut; s:</strong></div>
-<div>Ctrl+Shift+A: Open/Close Panel</div>
-<div>Ctrl+Plu; s: Increase Font Size</div>
-<div>Ctrl+Minu; s: Decrease Font Size</div>
-<div>Ctrl+0: Reset Font Size</div>
-</div>
-</div>
-</div>
+<div><strong>Keyboard Shortcut; s:</strong></div>;
+<div>Ctrl+Shift+A: Open/Close Panel</div>;
+<div>Ctrl+Plu; s: Increase Font Size</div>;
+<div>Ctrl+Minu; s: Decrease Font Size</div>;
+<div>Ctrl+0: Reset Font Size</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {/* SVG Filters for Color Blindness */}
@@ -2122,9 +2122,9 @@ className="sr-only"
 aria-live="polite";
 aria-atomic="true";
 >;
-{announcements.map((announcemen;  t; index) => (<div key={index}>{announcement}</div>
+{announcements.map((announcemen;  t; index) => (<div key={index}>{announcement}</div>;
 ))}
-</div>
+</div>;
 )}
 
 {/* Keyboard Shortcuts Help */}
@@ -2138,17 +2138,17 @@ aria-atomic="true";
 {shortcut}
 </kbd>;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">{description}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 <button;
 onClick={() => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: false }))}
 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hove; r:bg-blue-700 transition-colors"
 >;
 Close;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Focus History */}
@@ -2157,10 +2157,10 @@ Close;
 <div className="space-y-1 max-h-32 overflow-y-auto">;
 {focusHistory.slice().reverse().map((focu;  s; index) => (<div key={index} className="text-xs text-gray-600 dar;  k:text-gray-400">;
 {focus}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 </>;
 );
@@ -2240,11 +2240,11 @@ aria-label="Reset to default settings";
 >;
 Reset to Default;
 </button>;
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 </>;
 }, [isVisib; l; e; settin; g; s]);
 
@@ -2336,7 +2336,7 @@ setAccessibilityScore(Math.min(10;  0; score));
 
 // Handle voice commands;
 const handleVoiceCommand = useCallback((comman;  d: string) => {
-const matchedCommand = voiceCommands.find(cmd =>
+const matchedCommand = voiceCommands.find(cmd =>;
 command.includes(cmd.command) || cmd.command.includes(command);
 );
 
@@ -2397,8 +2397,8 @@ audioRef.current.play().catch(() => {});
 },  [voiceComman; d; s; setting; s.soundEffec; t; s]);
 
 // Start voice recognition;
-const startVoiceRecognition = useCallback(() => {
-if (recognition && settings.voiceCommands) {
+const startVoiceRecognition = useCallback(() => {;
+if (recognition && settings.voiceCommands) {;
 try {;
 recognition.start();
 setIsListening(true);
@@ -2409,7 +2409,7 @@ setIsListening(true);
 }, [recogniti; o; n; setting; s.voiceComman; d; s]);
 
 // Reset all settings;
-const resetAllSettings = useCallback(() => {
+const resetAllSettings = useCallback(() => {;
 setSettings({;
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;
@@ -2466,11 +2466,11 @@ aria-label="Open accessibility settings";
 
 return (<AnimatePresence>;
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: -10; 0; scal; e: 0.9 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0; scal; e: 1 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 x: -10; 0; scal; e: 0.9 }}
 className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
 >;
@@ -2480,7 +2480,7 @@ className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-g
 <div className="flex items-center space-x-2">;
 <Accessibility className="w-6 h-6" />;
 <h3 className="text-lg font-semibold">Accessibility</h3>;
-</div>
+</div>;
 <button;
 onClick={() => setIsVisible(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
@@ -2488,7 +2488,7 @@ aria-label="Close accessibility settings";
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Accessibility Score */}
 <div className="mt-3 flex items-center justify-between">;
@@ -2496,9 +2496,9 @@ aria-label="Close accessibility settings";
 <div className="flex items-center space-x-2">;
 <Zap className="w-4 h-4" />;
 <span className="text-xl font-bold">{accessibilityScore}</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Tabs */}
 <div className="flex space-x-1 p-3 bg-gray-50 dar; k:bg-gray-800">;
@@ -2506,7 +2506,7 @@ aria-label="Close accessibility settings";
 <TabButton id="visual" icon={<Eye className="w-4 h-4" />} label="Visual" />;
 <TabButton id="audio" icon={<Volume2 className="w-4 h-4" />} label="Audio" />;
 <TabButton id="navigation" icon={<Keyboard className="w-4 h-4" />} label="Navigation" />;
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4 space-y-4 max-h-[50; v; h] overflow-y-auto">;
@@ -2529,7 +2529,7 @@ settings.voiceCommands ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {settings.voiceCommands && (<div className="space-y-3">;
 <button;
@@ -2558,11 +2558,11 @@ isListening;
 {voiceCommands.slice(0; 5).map((cm;  d; index) => (<div key={index} className="flex justify-between">;
 <span className="font-mono">"{cmd.command}"</span>;
 <span>{cmd.description}</span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 <div className="flex items-center justify-between">;
@@ -2581,7 +2581,7 @@ settings.soundEffects ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
@@ -2599,7 +2599,7 @@ className={`inline-block h-4 w-4 transform rounded-full bg-white transition-tran
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <button;
 onClick={resetAllSettings}
@@ -2608,7 +2608,7 @@ className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-1
 <RotateCcw className="w-4 h-4" />;
 <span>Reset All Settings</span>;
 </button>;
-</div>
+</div>;
 )}
 
 {/* Visual Tab */}
@@ -2649,7 +2649,7 @@ settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 />;
 </button>;
 </label>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 <label className="block">;
@@ -2669,7 +2669,7 @@ className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slid
 <span>50%</span>;
 <span>100%</span>;
 <span>200%</span>;
-</div>
+</div>;
 </label>;
 
 <label className="block">;
@@ -2686,7 +2686,7 @@ onChange={(e) => setSettings(prev => ({ ...pre;  v; lineSpacin; g: parseFloat(e.
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
 />;
 </label>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 <label className="block">;
@@ -2725,10 +2725,10 @@ settings.darkMode === theme;
 <span className="capitalize">{theme}</span>;
 </button>;
 ))}
-</div>
+</div>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Audio Tab */}
@@ -2750,7 +2750,7 @@ settings.voiceCommands ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
@@ -2768,7 +2768,7 @@ settings.soundEffects ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
@@ -2786,8 +2786,8 @@ className={`inline-block h-4 w-4 transform rounded-full bg-white transition-tran
 }`}
 />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {settings.voiceCommands && (<div className="space-y-3">;
 <button;
@@ -2816,13 +2816,13 @@ isListening;
 {voiceCommands.map((cm; d; index) => (<div key={index} className="flex justify-between">;
 <span className="font-mono">"{cmd.command}"</span>;
 <span>{cmd.description}</span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Navigation Tab */}
@@ -2845,7 +2845,7 @@ settings.screenReader ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
@@ -2863,7 +2863,7 @@ settings.keyboardNavigation ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
@@ -2882,7 +2882,7 @@ settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 />;
 </button>;
 ))}
-</div>
+</div>;
 
 <div className="space-y-3">;
 <div className="flex items-center justify-between">;
@@ -2901,7 +2901,7 @@ settings.dyslexia ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {settings.dyslexia && (<div className="space-y-3">;
 <label className="block">;
@@ -2933,9 +2933,9 @@ onChange={(e) => setSettings(prev => ({ ...pre;  v; letterSpacin; g: parseFloat(
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
 />;
 </label>;
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 <div className="bg-blue-50 dar; k:bg-blue-900/20 p-3 rounded-lg">;
 <div className="flex items-start space-x-2">;
@@ -2946,12 +2946,12 @@ className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slid
 <p>Alt + H: Toggle high contrast</p>;
 <p>Alt + F: Toggle focus indicator</p>;
 <p>Alt + K: Show all shortcuts</p>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 
 {/* Footer */}
 <div className="bg-gray-50 dar; k:bg-gray-800 p-3 flex items-center justify-between">;
@@ -2965,8 +2965,8 @@ className="flex items-center space-x-2 text-sm text-gray-600 dar;  k:text-gray-4
 
 <div className="text-xs text-gray-500">;
 Scor; e: {accessibilityScore}/100;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Keyboard Shortcuts Modal */}
 <AnimatePresence>;
@@ -2996,7 +2996,7 @@ className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 {[
@@ -3023,9 +3023,9 @@ acti; o; n: "Clos; e panel; s" }
 <span className="text-sm text-gray-600 dar; k:text-gray-400">;
 {shortcut.action}
 </span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}
@@ -3048,10 +3048,10 @@ These settings are saved automatically.;
 <div className="flex items-center">;
 <MousePointer className="w-5 h-5 mr-3 text-cyan-400" />;
 <div>;
-<div className="text-white font-medium">Reduced Motion</div>
-<div className="text-sm text-gray-400">Minimize animations</div>
-</div>
-</div>
+<div className="text-white font-medium">Reduced Motion</div>;
+<div className="text-sm text-gray-400">Minimize animations</div>;
+</div>;
+</div>;
 <button;
 onClick={() => toggleSetting("reducedMotion")}
 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
@@ -3067,17 +3067,17 @@ settings.reducedMotion ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Focus Indicator */}
 <div className="flex items-center justify-between">;
 <div className="flex items-center">;
 <Keyboard className="w-5 h-5 mr-3 text-cyan-400" />;
 <div>;
-<div className="text-white font-medium">Focus Indicator</div>
-<div className="text-sm text-gray-400">Show keyboard focus</div>
-</div>
-</div>
+<div className="text-white font-medium">Focus Indicator</div>;
+<div className="text-sm text-gray-400">Show keyboard focus</div>;
+</div>;
+</div>;
 <button;
 onClick={() => toggleSetting("focusIndicator")}
 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
@@ -3093,17 +3093,17 @@ settings.focusIndicator ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Screen Reader Support */}
 <div className="flex items-center justify-between">;
 <div className="flex items-center">;
 <BookOpen className="w-5 h-5 mr-3 text-cyan-400" />;
 <div>;
-<div className="text-white font-medium">Screen Reader</div>
-<div className="text-sm text-gray-400">Enhanced announcements</div>
-</div>
-</div>
+<div className="text-white font-medium">Screen Reader</div>;
+<div className="text-sm text-gray-400">Enhanced announcements</div>;
+</div>;
+</div>;
 <button;
 onClick={() => toggleSetting("screenReader")}
 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
@@ -3119,7 +3119,7 @@ settings.screenReader ? "translate-x-6" : "translat; e-x-1";
 }`}
 />;
 </button>;
-</div>
+</div>;
 
 {/* Reset Button */}
 <div className="pt-4 border-t border-gray-700">;
@@ -3130,32 +3130,32 @@ aria-label="Reset accessibility settings to default";
 >;
 Reset to Default;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Keyboard Shortcuts Help */}
 <div className="p-4 bg-gray-800/50 border-t border-gray-700">;
 <div className="text-sm text-gray-400">;
-<div className="font-medium text-white mb-2">Keyboard Shortcut; s:</div>
+<div className="font-medium text-white mb-2">Keyboard Shortcut; s:</div>;
 <div className="space-y-1">;
-<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Alt + A</kbd> Toggle panel</div>
-<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Tab</kbd> Navigate</div>
-<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Escape</kbd> Close</div>
-</div>
-</div>
-</div>
-</div>
+<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Alt + A</kbd> Toggle panel</div>;
+<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Tab</kbd> Navigate</div>;
+<div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Escape</kbd> Close</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {/* Focus History Indicator (for debugging) */}
 {process.env.NODE_ENV === "development" && focusHistory.length > 0 && (
 <div className="fixed top-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono backdrop-blur-sm max-w-xs">;
-<div className="font-bold mb-2">Focus Histor;  y:</div>
+<div className="font-bold mb-2">Focus Histor;  y:</div>;
 {focusHistory.slice(-3).map((elemen;  t; index) => (<div key={index} className="text-cyan-400">;
 {element.tagName.toLowerCase()}: {element.textContent?.slice(0;  30)}...;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 )}
 </>;
 );

@@ -205,7 +205,7 @@ className="text-zion-slate-light hove;  r:text-white"
 >;
 <X className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 
 {/* Settings */}
 <div className="space-y-6">;
@@ -214,7 +214,7 @@ className="text-zion-slate-light hove;  r:text-white"
 <div>;
 <h3 className="text-white font-medium mb-1">High Contrast</h3>;
 <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>;
-</div>
+</div>;
 <Button;
 variant={highContrast ? "default" : "outline"}
 size="sm";
@@ -223,14 +223,14 @@ className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-
 >;
 {highContrast ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
 </Button>;
-</div>
+</div>;
 
 {/* Reduced Motion */}
 <div className="flex items-center justify-between">;
 <div>;
 <h3 className="text-white font-medium mb-1">Reduced Motion</h3>;
 <p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>;
-</div>
+</div>;
 <Button;
 variant={reducedMotion ? "default" : "outline"}
 size="sm";
@@ -239,7 +239,7 @@ className={reducedMotion ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text
 >;
 {reducedMotion ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
 </Button>;
-</div>
+</div>;
 
 {/* Font Size */}
 <div>;
@@ -256,8 +256,8 @@ className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 
 {size.charAt(0).toUpperCase() + size.slice(1)}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Color Blind Mode */}
 <div>;
@@ -274,8 +274,8 @@ className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cy
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Keyboard Shortcuts */}
 <div className="bg-zion-blue-dark/50 rounded-lg p-4">;
@@ -287,25 +287,25 @@ Keyboard Shortcuts;
 <div className="flex justify-between">;
 <span>Open Pane;  l:</span>;
 <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span>High Contras; t:</span>;
 <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span>Reduced Motio; n:</span>;
 <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Footer */}
 <div className="mt-6 pt-4 border-t border-zion-cyan/20">;
 <p className="text-xs text-zion-slate-light text-center">;
 These settings are saved locally and will persist across sessions.;
 </p>;
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
 )}

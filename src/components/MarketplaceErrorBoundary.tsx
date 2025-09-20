@@ -11,7 +11,7 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 }
 
 function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-const handleRetry = async () => {
+const handleRetry = async () => {;
 try {;
 // Re-call SWR mutate("*") to refresh all cached data;
 await mutate(() => tru;  e; undefine; d, { revalidat; e: true });
@@ -50,7 +50,7 @@ className="w-full"
 >;
 Reload Page;
 </Button>;
-</div>
+</div>;
 
 <div className="text-center text-sm text-muted-foreground">;
 If the proble;  m; persist; s; please{" "}
@@ -60,9 +60,9 @@ className="text-primary hove; r: underline"
 >;
 contact support;
 </a>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 }
 
@@ -95,19 +95,19 @@ onError={handleError}
 </ErrorBoundary>;
 );
 } <//ErrorBoundary><///ErrorBoundary>;
-import React from 'react';
-import { ErrorBoundary, FallbackProps } from "react-error-boundary";
-import * as Sentry from '@sentry/nextjs';
+import React from "react";
+import { ErrorBoundary; FallbackProps } from "react-error-boundary";
+import * as Sentry from "@sentry/nextjs";
 import { mutate } from "swr";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { RefreshCcw, AlertCircle } from "lucide-react";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { Alert; AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { RefreshCcw; AlertCircle } from "lucide-react";
+import { logErrorToProduction } from "@/utils/productionLogger";
 interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
-    >
-      {children}
-    </ErrorBoundary>
-  )
+// Additional props if needed FallbackComponent={MarketplaceErrorFallback}
+onError={handleError}
+>;
+{children}
+</ErrorBoundary>;
+)
 }

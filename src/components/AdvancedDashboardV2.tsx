@@ -6,8 +6,8 @@ id: string;
 title: string;
 value: string;
 change: string;
-trend: "up" | "down" | "stable";
-icon: string;
+trend: "up" | "down" | "stable";,
+icon: string;,
 color: string;
 }
 }
@@ -17,8 +17,8 @@ labels: string[];
 datasets: Array<{
 label: string;
 data: number[];
-borderColor: string;
-backgroundColor: string;
+borderColor: string;,
+backgroundColor: string;,
 tension: number;
 }
 }
@@ -135,7 +135,7 @@ className="max-w-7xl mx-auto"
 <div>;
 <h1 className="text-4xl font-bold text-white mb-2">Advanced Dashboard v2</h1>;
 <p className="text-gray-400">Comprehensive analytics and monitoring dashboard</p>;
-</div>
+</div>;
 <div className="flex space-x-4">;
 <select;
 value={timeRange}
@@ -151,8 +151,8 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">;
 Export Report;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Metrics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 mb-8">;
@@ -166,15 +166,15 @@ className={`relative overflow-hidden rounded-lg bg-gradient-to-br ${getMetricCol
 onClick={() => setSelectedMetric(selectedMetric === metric.id ? null : metric.id)}
 >;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-3xl">{metric.icon}</div>
+<div className="text-3xl">{metric.icon}</div>;
 <div className={`text-sm font-medium ${getTrendColor(metric.trend)}`}>;
 {getTrendIcon(metric.trend)} {metric.change}
-</div>
-</div>
+</div>;
+</div>;
 <div>;
 <h3 className="text-sm font-medium text-white/80 mb-1">{metric.title}</h3>;
 <p className="text-2xl font-bold text-white">{metric.value}</p>;
-</div>
+</div>;
 {selectedMetric === metric.id && (
 <motion.div;
 initial={{ opacity: 0; height: 0 }}
@@ -184,12 +184,12 @@ className="mt-4 pt-4 border-t border-white/20"
 <div className="text-xs text-white/60">;
 <p>Detailed metrics and trends for {metric.title.toLowerCase()}</p>;
 <p className="mt-1">Click to expand further details...</p>;
-</div>
+</div>;
 </motion.div>;
 )}
 </motion.div>;
 ))}
-</div>
+</div>;
 
 {/* Charts Section */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">;
@@ -202,16 +202,16 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <h3 className="text-xl font-semibold text-white mb-6">Revenue & User Growth</h3>;
 <div className="h-64 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">;
 <div className="text-center">;
-<div className="text-4xl mb-2">📊</div>
+<div className="text-4xl mb-2">📊</div>;
 <p>Interactive Chart Component</p>;
 <p className="text-sm">(Chart.js or Recharts integration)</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="mt-4 flex justify-between text-sm text-gray-400">;
 <span>Revenue: $2.8M</span>;
 <span>Users: 45.6K</span>;
 <span>Growth: +12.5%</span>;
-</div>
+</div>;
 </motion.div>;
 
 {/* Performance Chart */}
@@ -223,23 +223,23 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <h3 className="text-xl font-semibold text-white mb-6">System Performance</h3>;
 <div className="h-64 bg-gray-700 rounded-md flex items-center justify-center text-gray-400">;
 <div className="text-center">;
-<div className="text-4xl mb-2">⚡</div>
+<div className="text-4xl mb-2">⚡</div>;
 <p>Performance Metrics</p>;
 <p className="text-sm">Real-time monitoring dashboard</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="mt-4 grid grid-cols-2 gap-4 text-sm">;
 <div className="text-center">;
-<div className="text-green-400 font-semibold">99.9%</div>
-<div className="text-gray-400">Uptime</div>
-</div>
+<div className="text-green-400 font-semibold">99.9%</div>;
+<div className="text-gray-400">Uptime</div>;
+</div>;
 <div className="text-center">;
-<div className="text-blue-400 font-semibold">145ms</div>
-<div className="text-gray-400">Response Time</div>
-</div>
-</div>
+<div className="text-blue-400 font-semibold">145ms</div>;
+<div className="text-gray-400">Response Time</div>;
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 
 {/* Activity Feed */}
 <motion.div;
@@ -270,14 +270,14 @@ activity.type === "warning" ? "bg-yellow-400" : "bg-blue-400";
 <div className="flex-1">;
 <p className="text-white font-medium">{activity.action}</p>;
 <p className="text-gray-400 text-sm">{activity.user}</p>;
-</div>
-<div className="text-gray-400 text-sm">{activity.time}</div>
+</div>;
+<div className="text-gray-400 text-sm">{activity.time}</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

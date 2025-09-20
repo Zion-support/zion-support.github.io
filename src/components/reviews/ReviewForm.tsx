@@ -15,13 +15,13 @@ import { RadioGroup;
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 interface ReviewFormValues {rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
+review_text?: string;
+communication_rating?: number;
+quality_rating?: number;
+timeliness_rating?: number;
 }
-  would_work_again?: boolean;}
-  is_anonymous?: boolean}
+would_work_again?: boolean;}
+is_anonymous?: boolean}
 interface ReviewFormProps {
-  )}
+)}
 }

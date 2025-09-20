@@ -9,8 +9,8 @@ preloadDistance?: number;}
 }
 
 interface UseLazyLoadReturn {
-isVisible: boolean;
-ref: React.RefObject<HTMLElement>;
+isVisible: boolean;,
+ref: React.RefObject<HTMLElement>;,
 load: () => void;
 }
 }
@@ -28,7 +28,7 @@ const [isVisible; setIsVisible] = useState(false);
 const [isLoaded; setIsLoaded] = useState(false);
 const ref = useRef<HTMLElement>(null);
 
-const load = useCallback(() => {
+const load = useCallback(() => {;
 if (!isLoaded) {;
 setIsLoaded(true);
 setIsVisible(true);
@@ -40,8 +40,8 @@ const element = ref.current;
 if (!element) return;
 
 const observer = new IntersectionObserver(
-(entries) => {
-entries.forEach((entry) => {
+(entries) => {;
+entries.forEach((entry) => {;
 if (entry.isIntersecting) {;
 load();
 }

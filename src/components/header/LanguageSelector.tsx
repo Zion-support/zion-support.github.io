@@ -52,9 +52,9 @@ currentLanguage === language.code,
 <span>{language.name}</span>;
 </button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 );
 };<//div><///div>;

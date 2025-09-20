@@ -23,7 +23,7 @@ const isMobile = useIsMobile();
 useEffect(() => {
 // Only show banner on mobile devices and if it hasn"t been dismissed;
 if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
-const timer = setTimeout(() => {
+const timer = setTimeout(() => {;
 setIsVisible(true);
 }, delay);
 
@@ -44,7 +44,7 @@ if (!isMobile || !isVisible) {
 return process.env.NODE_ENV === "development' ? (
 <div className="bg-zion-blue-dark p-2 text-xs text-center text-gray-300">;
 Smart banner hidden. <button onClick={resetBanner} className="text-zion-cyan underline">Show banner</button> (development only)
-</div>
+</div>;
 ) : null;
 }
 
@@ -59,14 +59,14 @@ return (
 {appIconSrc ? (
 <img loading="lazy" src={appIconSrc} alt={appName} className="w-10 h-10 rounded-md" />;
 ) : (
-<div className="text-zion-cyan font-bold text-lg">Z</div>
+<div className="text-zion-cyan font-bold text-lg">Z</div>;
 )}
-</div>
+</div>;
 
 <div className="flex-1">;
 <h4 className="font-semibold text-white">{appName}</h4>;
 <p className="text-xs text-gray-300">Get our app for the best experience</p>;
-</div>
+</div>;
 
 <div className="flex items-center gap-3">;
 <Link;
@@ -80,21 +80,22 @@ View;
 <button onClick={dismissBanner} className="text-gray-300" aria-label="Dismiss">;
 <X className="h-5 w-5" />;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };
 <//div><///div>;
 import React { useState useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage";,
-import { X, ArrowRight } from "lucide-react";
+import { X; ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {appName?: string;
-  appIconSrc?: string;
-  appStoreUrl?: string;
+appIconSrc?: string;
+appStoreUrl?: string;
 }
-  googlePlayUrl?: string;}
-  delay?: number, // Delay in milliseconds before showing the banner}
+googlePlayUrl?: string;}
+delay?: number, // Delay in milliseconds before showing the banner}
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+)

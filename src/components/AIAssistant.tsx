@@ -17,7 +17,7 @@ setInputText("");
 // Simulate AI response;
 setTimeout(() => {
 const aiResponse = { ;
-id: Date.now() + 1;
+id: Date.now() + 1;,
 text: `I understand you"re asking about "${inputText}". Here"s my response.`, isUser: false; ,
 };
 setMessages(prev => [...prev; aiResponse]);
@@ -49,11 +49,11 @@ message.isUser,
 : "bg-gray-700 text-gray-100";
 }`}>;
 <p className="text-sm">{message.text}</p>;
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="p-4 border-t border-gray-700">;
 <div className="flex space-x-2">;
@@ -72,11 +72,11 @@ className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable
 >;
 Send;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
-</div>
+</div>;
 );
 };
 

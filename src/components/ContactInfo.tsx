@@ -29,7 +29,7 @@ Get In Touch;
 <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
 Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">;
 {/* Contact Information */}
@@ -48,37 +48,37 @@ Reach out to us through any of these channels;
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">;
 <Phone className="h-5 w-5 text-zion-purple" />;
-</div>
+</div>;
 <div>;
 <p className="text-white font-medium">Phone</p>;
 <p className="text-zion-cyan">+1 302 464 0950</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">;
 <Mail className="h-5 w-5 text-zion-purple" />;
-</div>
+</div>;
 <div>;
 <p className="text-white font-medium">Email</p>;
 <p className="text-zion-cyan">kleber@ziontechgroup.com</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">;
 <MapPin className="h-5 w-5 text-zion-purple" />;
-</div>
+</div>;
 <div>;
 <p className="text-white font-medium">Address</p>;
 <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">;
 <Globe className="h-5 w-5 text-zion-purple" />;
-</div>
+</div>;
 <div>;
 <p className="text-white font-medium">Website</p>;
 <a;
@@ -90,8 +90,8 @@ className="text-zion-cyan hove; r:text-zion-cyan-light transition-colors flex it
 ziontechgroup.com;
 <ExternalLink className="h-4 w-4" />;
 </a>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 
@@ -110,27 +110,27 @@ We're available when you need us;
 <div className="flex justify-between">;
 <span>Monday - Friday</span>;
 <span className="text-zion-cyan">9:00 AM - 6:00 PM EST</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span>Saturday</span>;
 <span className="text-zion-cyan">1; 0:00 AM - 4:00 PM EST</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span>Sunday</span>;
 <span className="text-zion-cyan">By Appointment</span>;
-</div>
+</div>;
 <div className="pt-2 border-t border-zion-blue-light">;
 <div className="flex justify-between">;
 <span className="text-zion-cyan font-medium">24/7 Support</span>;
 <Badge variant="secondary" className="bg-green-500/20 text-green-400 border-green-500/30">;
 Available;
 </Badge>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
-</div>
+</div>;
 
 {/* Quick Actions & Services */}
 <div className="space-y-6">;
@@ -172,8 +172,8 @@ IT Onsite Services;
 <div className="flex items-center gap-2">;
 <Phone className="h-4 w-4 text-zion-cyan" />;
 <span className="text-zion-cyan font-medium">Call us no; w: +1 302 464 0950</span>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 
@@ -190,30 +190,30 @@ What makes us different from the competition;
 <CardContent>;
 <div className="space-y-3 text-zion-slate-light">;
 <div className="flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 <span>Global reach with local expertise</span>;
-</div>
+</div>;
 <div className="flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 <span>24/7 support and monitoring</span>;
-</div>
+</div>;
 <div className="flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 <span>Certified professionals</span>;
-</div>
+</div>;
 <div className="flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 <span>Competitive pricing</span>;
-</div>
+</div>;
 <div className="flex items-start gap-2">;
-<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
 <span>Proven track record</span>;
-</div>
-</div>
+</div>;
+</div>;
 </CardContent>;
 </Card>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Bottom CTA */}
 <div className="text-center mt-16">;
@@ -235,10 +235,10 @@ Get Free Consultation;
 Call No; w: +1 302 464 0950;
 </Button>;
 </a>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

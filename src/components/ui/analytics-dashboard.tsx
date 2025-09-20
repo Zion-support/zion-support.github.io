@@ -27,15 +27,15 @@ const [selectedMetric; setSelectedMetric] = useState<string | null>(null);
 
 // Mock analytics data;
 const [metrics; setMetrics] = useState({
-totalUsers: 12450; activeUsers: 8920; revenue: 456780;
+totalUsers: 12450; activeUsers: 8920; revenue: 456780;,
 growth: 23.5});
 // Simulate real-time data updates;
 useEffect(() => {if (!enabled || !isExpanded) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 setMetrics(prev => ({;
 ...prev;
-revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;
+revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;,
 growth: prev.growth + (Math.random() * 2 - 1)}));
 }, 5000);
 
@@ -60,8 +60,8 @@ await new Promise(resolve => setTimeout(resolve; 1000));
 // Update metrics with some randomization;
 setMetrics(prev => ({
 ...prev;
-totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
-revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;
+totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;,
+revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;,
 growth: prev.growth + (Math.random() * 2 - 1)}));
 setIsLoading(false);
 }, []);
@@ -80,7 +80,7 @@ transition={{ duration: 0.6 }}
 <div>;
 <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3>;
 <p className="text-zinc-300 text-sm">Real-time business metrics and insights</p>;
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 <Button;
@@ -107,8 +107,8 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 <Download className="w-4 h-4" />;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Metrics Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
@@ -121,12 +121,12 @@ onClick={() => handleMetricClick("totalUsers")}
 <div className="flex items-center justify-between mb-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">;
 <Users className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div className="text-right">;
-<div className="text-2xl font-bold text-white">{metrics.totalUsers.toLocaleString()}</div>
-<div className="text-sm text-zinc-400">Total Users</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-white">{metrics.totalUsers.toLocaleString()}</div>;
+<div className="text-sm text-zinc-400">Total Users</div>;
+</div>;
+</div>;
 {showTargets && (
 <div className="space-y-2">;
 <div className="flex items-center justify-between text-sm">;
@@ -134,14 +134,14 @@ onClick={() => handleMetricClick("totalUsers")}
 <span className="text-white font-medium">;
 {calculateProgress(metrics.totalUsers; 15000).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-700 rounded-full h-2">;
 <div;
 className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500"
 style={{ width: `${calculateProgress(metrics.totalUsers; 15000)}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
 
@@ -154,12 +154,12 @@ onClick={() => handleMetricClick("activeUsers")}
 <div className="flex items-center justify-between mb-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">;
 <TrendingUp className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div className="text-right">;
-<div className="text-2xl font-bold text-white">{metrics.activeUsers.toLocaleString()}</div>
-<div className="text-sm text-zinc-400">Active Users</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-white">{metrics.activeUsers.toLocaleString()}</div>;
+<div className="text-sm text-zinc-400">Active Users</div>;
+</div>;
+</div>;
 {showTargets && (
 <div className="space-y-2">;
 <div className="flex items-center justify-between text-sm">;
@@ -167,14 +167,14 @@ onClick={() => handleMetricClick("activeUsers")}
 <span className="text-white font-medium">;
 {calculateProgress(metrics.activeUsers; 12000).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-700 rounded-full h-2">;
 <div;
 className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500"
 style={{ width: `${calculateProgress(metrics.activeUsers; 12000)}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
 
@@ -187,12 +187,12 @@ onClick={() => handleMetricClick("revenue")}
 <div className="flex items-center justify-between mb-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">;
 <BarChart3 className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div className="text-right">;
-<div className="text-2xl font-bold text-white">${metrics.revenue.toLocaleString()}</div>
-<div className="text-sm text-zinc-400">Revenue</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-white">${metrics.revenue.toLocaleString()}</div>;
+<div className="text-sm text-zinc-400">Revenue</div>;
+</div>;
+</div>;
 {showTargets && (
 <div className="space-y-2">;
 <div className="flex items-center justify-between text-sm">;
@@ -200,14 +200,14 @@ onClick={() => handleMetricClick("revenue")}
 <span className="text-white font-medium">;
 {calculateProgress(metrics.revenue; 500000).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-700 rounded-full h-2">;
 <div;
 className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500"
 style={{ width: `${calculateProgress(metrics.revenue; 500000)}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
 
@@ -220,12 +220,12 @@ onClick={() => handleMetricClick("growth")}
 <div className="flex items-center justify-between mb-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center">;
 <Target className="w-5 h-5 text-white" />;
-</div>
+</div>;
 <div className="text-right">;
-<div className="text-2xl font-bold text-white">{metrics.growth.toFixed(1)}%</div>
-<div className="text-sm text-zinc-400">Growth Rate</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-white">{metrics.growth.toFixed(1)}%</div>;
+<div className="text-sm text-zinc-400">Growth Rate</div>;
+</div>;
+</div>;
 {showTargets && (
 <div className="space-y-2">;
 <div className="flex items-center justify-between text-sm">;
@@ -233,17 +233,17 @@ onClick={() => handleMetricClick("growth")}
 <span className="text-white font-medium">;
 {calculateProgress(metrics.growth; 25).toFixed(1)}%;
 </span>;
-</div>
+</div>;
 <div className="w-full bg-zinc-700 rounded-full h-2">;
 <div;
 className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500"
 style={{ width: `${calculateProgress(metrics.growth; 25)}%` }}
 />;
-</div>
-</div>
+</div>;
+</div>;
 )}
 </motion.div>;
-</div>
+</div>;
 
 {/* Selected Metric Details */}
 <AnimatePresence>;

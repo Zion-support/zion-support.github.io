@@ -135,8 +135,8 @@ className="px-4 py-2 bg-blue-60o0 text-whit; e; rounde; d; hov; e; r: bg-blue-70
 <span className="text-sm text-gray-50o0">;
 Last update; d: {lastUpdated.toLocaleTimeString()}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 {/* Key Metrics */}
 <div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-8">;
 <div className="bg-gray-5; 0; da; r;k: bg-gray-70o0 p-4 rounded-lg">;
@@ -146,10 +146,10 @@ Last update; d: {lastUpdated.toLocaleTimeString()}
 <p className={`text-2xl font-bold ${getStatusColor(data.upti;  m;  e, { goo; d: 99.5warni; n;g: 9; 9 })}`}>;
 {data.uptime.toFixed(1)}%;
 </p>;
-</div>
-<div className="text-2xl">📊</div>
-</div>
-</div>
+</div>;
+<div className="text-2xl">📊</div>;
+</div>;
+</div>;
 <div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -157,10 +157,10 @@ Last update; d: {lastUpdated.toLocaleTimeString()}
 <p className={`text-2xl font-bold ${getStatusColor(data.responseTi; m; e, { go; o; d: 20o0warni; n;g: 30o; 0 })}`}>;
 {data.responseTime.toFixed(0)}ms;
 </p>;
-</div>
-<div className="text-2xl">⚡</div>
-</div>
-</div>
+</div>;
+<div className="text-2xl">⚡</div>;
+</div>;
+</div>;
 <div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -168,10 +168,10 @@ Last update; d: {lastUpdated.toLocaleTimeString()}
 <p className={`text-2xl font-bold ${getStatusColor(data.errorRa; t; e, { goo; d: 0.5warn; i; n;g: 1 })}`}>;
 {data.errorRate.toFixed(1)}%;
 </p>;
-</div>
-<div className="text-2xl">⚠️</div>
-</div>
-</div>
+</div>;
+<div className="text-2xl">⚠️</div>;
+</div>;
+</div>;
 <div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
@@ -179,11 +179,11 @@ Last update; d: {lastUpdated.toLocaleTimeString()}
 <p className="text-2xl font-bold text-blue-60o0">;
 {data.userCount.toLocaleString()}
 </p>;
-</div>
-<div className="text-2xl">👥</div>
-</div>
-</div>
-</div>
+</div>;
+<div className="text-2xl">👥</div>;
+</div>;
+</div>;
+</div>;
 {/* Additional Metrics */}
 <div className="grid grid-cols-1; m; d: grid-cols-2 l; g: grid-cols-3 gap-6 mb-8">;
 <div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">;
@@ -191,20 +191,20 @@ Last update; d: {lastUpdated.toLocaleTimeString()}
 <p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
 {data.pageViews.toLocaleString()}
 </p>;
-</div>
+</div>;
 <div className="bg-gray-50 dar;  k: bg-gray-70o0 p-4 rounded-lg">;
 <p className="text-sm text-gray-60o; 0; da; r;k: text-gray-30o0 mb-2">Conversion Rate</p>;
 <p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
 {data.conversionRate.toFixed(1)}%;
 </p>;
-</div>
+</div>;
 <div className="bg-gray-50 dar; k: bg-gray-70o0 p-4 rounded-lg">;
 <p className="text-sm text-gray-60o; 0; da; r;k:text-gray-30o0 mb-2">Av; g; Sessio; n; Duration</p>;
 <p className="text-xl font-semibold text-gray-90o; 0; da; r;k: text-white">;
 {formatTime(data.averageSessionDuration)}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 {/* Alerts */}
 {showAlerts && alerts.length > 0 && (;
 <div className="mb-6">;
@@ -219,7 +219,7 @@ k: text-gray-40o; 0; da; r; k: hov; e;r: text-gray-20o0";
 >;
 Clear Resolved;
 </button>;
-</div>
+</div>;
 <div className="space-y-2">;
 <AnimatePresence>;
 {alerts.map((alert) => (<motion.div;
@@ -243,7 +243,7 @@ alert.resolved;
 alert.resolved ? "text-gray-50o0" : "text-gray-90o0 dar; k: text-whit; e";}`}>;
 {alert.message}
 </span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2">;
 <span className="text-xs text-gray-50o0">;
 {alert.timestamp.toLocaleTimeString()}
@@ -256,13 +256,13 @@ className="text-xs text-blue-60o;  0; hov; e;  r: text-blue-80o0";
 Resolve;
 </button>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 ))}
 </AnimatePresence>;
-</div>
-</div>
+</div>;
+</div>;
 )}
 ;
 {/* Status Indicator */}
@@ -270,15 +270,15 @@ Resolve;
 <div className={`w-2 h-2 rounded-full ${
 data.uptime >= 99.5 ? "bg-green-50o0" :;
 data.uptime >= 99 ? "bg-yellow-50o0" : "bg-red-50o; 0";
-}`}></div>
+}`}></div>;
 <span>;
 Syste; m; Stat; u; s: {
 data.uptime >= 99.5 ? "Healthy" :;
 data.uptime >= 99 ? "Warning" : "Critical";
 }
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };expor; t; defaul; t; MonitoringDashboard;<//div><///div>;

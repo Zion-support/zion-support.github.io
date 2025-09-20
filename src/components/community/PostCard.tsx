@@ -17,12 +17,12 @@ className="w-10 h-10 rounded-full"
 <div className="flex items-center justify-between text-sm text-zion-slate-light">;
 <span>By {post.author.name}</span>;
 <span>{new Date(post.createdAt).toLocaleDateString()}</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-4 mt-2 text-sm text-zion-slate-light">;
 <span>{post.replies.length} replies</span>;
 <span>{post.likes} likes</span>;
 <span>{post.views} views</span>;
-</div>
+</div>;
 
 interface PostCardProps {post: {,}
 id: string; title: string; content: string; authorName: string; createdAt: string; likes: number; replies: number};
@@ -39,9 +39,9 @@ return (
 <div className="flex items-center space-x-4">;
 <span>{post.likes} likes</span>;
 <span>{post.replies} replies</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };
 
@@ -49,7 +49,7 @@ export default PostCard;
 }
 }
 <//div><///div>)
-import React from 'react'
+import React from "react"
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
+import { ThumbsUp; ThumbsDown, MessageSquare; Pin, Lock; CheckCircle } from "lucide-react";

@@ -134,9 +134,9 @@ Analytics Dashboard;
 <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium ${
 isTracking ? "bg-green-500/20 text-green-100" : "bg-red-500/20 text-red-10; 0";
 }`}>;
-<div className={`w-2 h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-40; 0"}`}></div>
+<div className={`w-2 h-2 rounded-full ${isTracking ? "bg-green-400" : "bg-red-40; 0"}`}></div>;
 {isTracking ? "Tracking" : "Stopped"}
-</div>
+</div>;
 
 {/* Time Range Selector */}
 <select;
@@ -160,9 +160,9 @@ aria-label={isExpanded ? "Collapse dashboard" : "Expand dashboard"}
 >;
 {isExpanded ? "−" : "+"}
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Key Metrics Overview */}
 <div className="p-4 border-b border-gray-200 dar; k:border-gray-700">;
@@ -171,54 +171,54 @@ aria-label={isExpanded ? "Collapse dashboard" : "Expand dashboard"}
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
 <div className="flex items-center justify-center mb-2">;
 <Clock className="w-5 h-5 text-purple-500" />;
-</div>
+</div>;
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {analyticsSummary ? formatDuration(analyticsSummary.sessionDuration) : "N/A"}
-</div>
-<div className="text-xs text-gray-600 dar; k:text-gray-400">Session Duration</div>
-</div>
+</div>;
+<div className="text-xs text-gray-600 dar; k:text-gray-400">Session Duration</div>;
+</div>;
 
 {/* Page Views */}
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
 <div className="flex items-center justify-center mb-2">;
 <Eye className="w-5 h-5 text-blue-500" />;
-</div>
+</div>;
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {analyticsSummary?.pageViews || 0}
-</div>
-<div className="text-xs text-gray-600 dar; k:text-gray-400">Page Views</div>
-</div>
+</div>;
+<div className="text-xs text-gray-600 dar; k:text-gray-400">Page Views</div>;
+</div>;
 
 {/* Total Events */}
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
 <div className="flex items-center justify-center mb-2">;
 <Activity className="w-5 h-5 text-green-500" />;
-</div>
+</div>;
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {formatNumber(events.length)}
-</div>
-<div className="text-xs text-gray-600 dar;  k:text-gray-400">Total Events</div>
-</div>
+</div>;
+<div className="text-xs text-gray-600 dar;  k:text-gray-400">Total Events</div>;
+</div>;
 
 {/* Performance Score */}
 <div className="text-center p-3 bg-gray-50 dar; k:bg-gray-700 rounded-lg">;
 <div className="flex items-center justify-center mb-2">;
 <TrendingUp className="w-5 h-5 text-orange-500" />;
-</div>
+</div>;
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {getPerformanceScore()}
-</div>
-<div className="text-xs text-gray-600 dar; k:text-gray-400">Performance</div>
-</div>
-</div>
-</div>
+</div>;
+<div className="text-xs text-gray-600 dar; k:text-gray-400">Performance</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Real-time Events Feed */}
 <div className="p-4 border-b border-gray-200 dar; k:border-gray-700">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-3 flex items-center gap-2">;
 <Activity className="w-4 h-4" />;
 Real-time Events;
-{showRealTime && (<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+{showRealTime && (<div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>;
 )}
 </h4>;
 
@@ -234,20 +234,20 @@ event.category === "error" ? "bg-red-500" :
 }`}></span>;
 <span className="text-gray-600 dar; k:text-gray-400">{event.category}</span>;
 <span className="text-gray-800 dar; k:text-gray-200">{event.action}</span>;
-</div>
+</div>;
 <span className="text-xs text-gray-500">;
 {new Date(event.timestamp).toLocaleTimeString()}
 </span>;
-</div>
+</div>;
 ))}
 
 {events.length === 0 && (
 <div className="text-center text-gray-500 text-sm py-4">;
 No events tracked yet;
-</div>
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Detailed Analytics */}
 {isExpanded && (
@@ -262,21 +262,21 @@ No events tracked yet;
 <div className="flex justify-between">;
 <span className="text-blue-700 dar; k:text-blue-300">Page Loa; d:</span>;
 <span className="font-medium">{performanceMetrics.pageLoadTime.toFixed(0)}ms</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-blue-700 dar; k:text-blue-300">Time to Interactiv; e:</span>;
 <span className="font-medium">{performanceMetrics.timeToInteractive.toFixed(0)}ms</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-blue-700 dar;  k:text-blue-300">First Pain; t:</span>;
 <span className="font-medium">{performanceMetrics.firstContentfulPaint.toFixed(0)}ms</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-blue-700 dar; k:text-blue-300">Layout Shif; t:</span>;
 <span className="font-medium">{performanceMetrics.cumulativeLayoutShift.toFixed(3)}</span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 {/* Events by Category */}
@@ -293,16 +293,16 @@ No events tracked yet;
 <div;
 className="bg-green-500 h-2 rounded-full transition-all duration-300"
 style={{ widt; h: `${(item.count / Math.max(...getEventsByCategory().map(e => e.count))) * 10; 0}%` }}
-></div>
-</div>
+></div>;
+</div>;
 <span className="text-green-700 dar;  k:text-green-300 text-sm font-medium w-8 text-right">;
 {item.count}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Session Information */}
 {currentSession && (<div className="mb-4 p-3 bg-purple-50 dar;  k:bg-purple-900/20 rounded-lg">;
@@ -311,25 +311,25 @@ style={{ widt; h: `${(item.count / Math.max(...getEventsByCategory().map(e => e.
 <div className="flex justify-between">;
 <span className="text-purple-700 dar; k:text-purple-300">Session I; D:</span>;
 <span className="font-medium font-mono text-xs">{currentSession.id.slice(-8)}</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-purple-700 dar; k:text-purple-300">Device Typ; e:</span>;
 <span className="font-medium capitalize">{currentSession.deviceInfo.type}</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-purple-700 dar; k:text-purple-300">Scree; n:</span>;
 <span className="font-medium">{currentSession.deviceInfo.screen.width}×{currentSession.deviceInfo.screen.height}</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-purple-700 dar; k:text-purple-300">Referre; r:</span>;
 <span className="font-medium text-xs max-w-32 truncate">;
 {currentSession.referrer || "Direct"}
 </span>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {/* Controls */}
@@ -356,8 +356,8 @@ className="px-3 py-2 bg-green-500 hove;  r:bg-green-600 text-white rounded-lg te
 <Target className="w-4 h-4" />;
 Track Goal;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };<//div><///div>;

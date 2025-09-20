@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -20,12 +20,12 @@ const ServiceCard: any = ({ service }: { service: any }) => (
 {/* Featured Badge */}
 <div className="absolute -top-2 -right-2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">;
 Featured;
-</div>
+</div>;
 
 {/* Service Icon */}
 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">;
 <Zap className="w-8 h-8 text-white" />;
-</div>
+</div>;
 
 {/* Service Info */}
 <div className="space-y-3">;
@@ -42,23 +42,23 @@ Featured;
 <Zap className="w-4 h-4 text-zion-cyan" />;
 <span className="text-sm text-zion-slate-light">AI Score:</span>;
 <span className="text-zion-cyan font-bold">{service.aiScore}%</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-1">;
 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />;
 <span className="text-sm text-white">{service.rating}</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Pricing */}
 <div className="flex items-center justify-between">;
 <div>;
 <span className="text-xl font-bold text-white">{service.currency}{service.price}</span>;
 <span className="text-zion-slate-light text-sm ml-1">/mo</span>;
-</div>
+</div>;
 <Badge variant="outline" className="border-zion-purple/30 text-zion-purple">;
 {service.subcategory}
 </Badge>;
-</div>
+</div>;
 
 {/* Key Benefits */}
 <div className="space-y-2">;
@@ -66,9 +66,9 @@ Featured;
 <div key={index} className="flex items-start space-x-2">;
 <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />;
 <span className="text-xs text-zion-slate-light">{benefit}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Learn More Button */}
 <Button;
@@ -80,8 +80,8 @@ Learn More;
 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
 </Link>;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 
 return (
@@ -95,7 +95,7 @@ return (
 <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-full px-6 py-2 mb-6">;
 <Zap className="w-5 h-5 text-zion-cyan" />;
 <span className="text-zion-cyan font-medium">Featured Services</span>;
-</div>
+</div>;
 <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-6">;
 Micro SAAS Solutions;
 </h2>;
@@ -103,46 +103,46 @@ Micro SAAS Solutions;
 Transform your business with our cutting-edge micro SAAS services. From AI-powered automation;
 to enterprise IT solutions; we provide innovative tools that drive growth and efficiency.;
 </p>;
-</div>
+</div>;
 
 {/* Featured Services Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
 {featuredServices.map((service) => (
 <ServiceCard key={service.id} service={service} />;
 ))}
-</div>
+</div>;
 
 {/* Stats Section */}
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">;
 <div className="text-center">;
 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">;
 <TrendingUp className="w-8 h-8 text-white" />;
-</div>
-<div className="text-3xl font-bold text-white mb-2">15+</div>
-<div className="text-zion-slate-light">AI Services</div>
-</div>
+</div>;
+<div className="text-3xl font-bold text-white mb-2">15+</div>;
+<div className="text-zion-slate-light">AI Services</div>;
+</div>;
 <div className="text-center">;
 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">;
 <Shield className="w-8 h-8 text-white" />;
-</div>
-<div className="text-3xl font-bold text-white mb-2">8+</div>
-<div className="text-zion-slate-light">IT Solutions</div>
-</div>
+</div>;
+<div className="text-3xl font-bold text-white mb-2">8+</div>;
+<div className="text-zion-slate-light">IT Solutions</div>;
+</div>;
 <div className="text-center">;
 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">;
 <Code className="w-8 h-8 text-white" />;
-</div>
-<div className="text-3xl font-bold text-white mb-2">12+</div>
-<div className="text-zion-slate-light">Business Tools</div>
-</div>
+</div>;
+<div className="text-3xl font-bold text-white mb-2">12+</div>;
+<div className="text-zion-slate-light">Business Tools</div>;
+</div>;
 <div className="text-center">;
 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">;
 <Users className="w-8 h-8 text-white" />;
-</div>
-<div className="text-3xl font-bold text-white mb-2">500+</div>
-<div className="text-zion-slate-light">Happy Clients</div>
-</div>
-</div>
+</div>;
+<div className="text-3xl font-bold text-white mb-2">500+</div>;
+<div className="text-zion-slate-light">Happy Clients</div>;
+</div>;
+</div>;
 
 {/* CTA Section */}
 <div className="text-center">;
@@ -175,10 +175,10 @@ className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white"
 Get Consultation;
 </Link>;
 </Button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

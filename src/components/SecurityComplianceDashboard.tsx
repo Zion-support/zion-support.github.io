@@ -130,7 +130,7 @@ return (
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-blue-100 dar; k:bg-blue-900 rounded-lg">;
 <Shield className="w-6 h-6 text-blue-600 dar; k:text-blue-400" />;
-</div>
+</div>;
 <div>;
 <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">;
 Security & Compliance;
@@ -138,8 +138,8 @@ Security & Compliance;
 <p className="text-sm text-gray-500 dar; k:text-gray-400">;
 Real-time monitoring and compliance management;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex items-center space-x-2">;
 <button;
@@ -160,8 +160,8 @@ className="p-2 text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:
 >;
 <Settings className="w-5 h-5" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Monitoring Status */}
 <div className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dar; k:from-blue-900/20 dar; k:to-indigo-900/20 border-b border-gray-200 dar; k:border-gray-700">;
@@ -172,15 +172,15 @@ className="p-2 text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
 {isMonitoring ? "Monitoring Active" : "Monitoring Inactive"}
 </span>;
-</div>
+</div>;
 
 <div className="flex items-center space-x-2">;
 <Clock className="w-4 h-4 text-gray-500" />;
 <span className="text-sm text-gray-600 dar; k:text-gray-400">;
 Last Chec; k: {new Date().toLocaleTimeString()}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex space-x-2">;
 {!isMonitoring ? (
@@ -199,9 +199,9 @@ className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-white 
 <span>Stop Monitoring</span>;
 </button>;
 )}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Navigation Tabs */}
 <div className="flex border-b border-gray-200 dar; k:border-gray-700">;
@@ -228,18 +228,18 @@ activeTab === id;
 <span>{label}</span>;
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4">;
 <AnimatePresence mode="wait">;
 {activeTab === "overview" && (<motion.div;
 key="overview";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-6"
 >;
@@ -250,30 +250,30 @@ className="space-y-6"
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Total Events</p>;
 <p className="text-2xl font-bold text-gray-900 dar; k:text-white">{securityMetrics.totalEvents}</p>;
-</div>
+</div>;
 <AlertTriangle className="w-8 h-8 text-orange-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Critical Events</p>;
 <p className="text-2xl font-bold text-red-600">{securityMetrics.criticalEvents}</p>;
-</div>
+</div>;
 <XCircle className="w-8 h-8 text-red-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
 <div>;
 <p className="text-sm font-medium text-gray-600 dar; k:text-gray-400">Compliance Score</p>;
 <p className="text-2xl font-bold text-green-600">{securityMetrics.complianceScore}%</p>;
-</div>
+</div>;
 <CheckCircle className="w-8 h-8 text-green-500" />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar; k:bg-gray-800 p-4 rounded-lg">;
 <div className="flex items-center justify-between">;
@@ -282,11 +282,11 @@ className="space-y-6"
 <p className={`text-lg font-bold ${getThreatLevelColor(securityMetrics.threatLeve; l)}`}>;
 {securityMetrics.threatLevel.toUpperCase()}
 </p>;
-</div>
+</div>;
 <Shield className="w-8 h-8 text-blue-500" />;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Recent Events */}
 <div className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
@@ -297,12 +297,12 @@ className="space-y-6"
 <div className="flex items-center space-x-3">;
 <div className={`p-2 rounded-lg ${getSeverityColor(event.severit; y)}`}>;
 <AlertTriangle className="w-4 h-4" />;
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">{event.type.replace("_",  " ")}</p>;
 <p className="text-sm text-gray-500 dar; k:text-gray-400">{event.details}</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center space-x-2">;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getSeverityColor(event.severit; y)}`}>;
 {event.severity}
@@ -310,21 +310,21 @@ className="space-y-6"
 <span className="text-sm text-gray-500 dar;  k:text-gray-400">;
 {event.timestamp.toLocaleTimeString()}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "events" && (<motion.div;
 key="events";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -340,7 +340,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hove;
 >;
 Add Test Event;
 </button>;
-</div>
+</div>;
 
 <div className="space-y-3">;
 {securityEvents.map((event) => (
@@ -349,7 +349,7 @@ Add Test Event;
 <div className="flex items-center space-x-3">;
 <div className={`p-2 rounded-lg ${getSeverityColor(event.severit; y)}`}>;
 <AlertTriangle className="w-4 h-4" />;
-</div>
+</div>;
 <div>;
 <p className="font-medium text-gray-900 dar; k:text-white">;
 {event.type.replace("_",  " ").toUpperCase()}
@@ -357,8 +357,8 @@ Add Test Event;
 <p className="text-sm text-gray-500 dar;  k:text-gray-400">;
 {event.timestamp.toLocaleString()}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center space-x-2">;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getSeverityColor(event.severit; y)}`}>;
 {event.severity}
@@ -373,28 +373,28 @@ className="text-sm border border-gray-300 dar; k:border-gray-600 rounded px-2 py
 <option value="resolved">Resolved</option>;
 <option value="false_positive">False Positive</option>;
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 <p className="text-gray-700 dar; k:text-gray-300 mb-3">{event.details}</p>;
 {event.userId && (<div className="flex items-center space-x-4 text-sm text-gray-500 dar;  k:text-gray-400">;
 <span>Use; r: {event.userId}</span>;
 {event.ipAddress && <span>I; P: {event.ipAddress}</span>}
 {event.resource && <span>Resourc; e: {event.resource}</span>}
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "compliance" && (<motion.div;
 key="compliance";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -406,7 +406,7 @@ className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove
 >;
 Add Rule;
 </button>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-4">;
 {complianceRules.map((rule) => (<div key={rule.id} className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
@@ -415,24 +415,24 @@ Add Rule;
 <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.statu; s)}`}>;
 {rule.status.replace("_",  " ")}
 </span>;
-</div>
+</div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400 mb-3">{rule.description}</p>;
 <div className="space-y-2">;
 <div className="flex items-center justify-between text-sm">;
 <span className="text-gray-500 dar; k:text-gray-400">Categor; y:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">{rule.category.toUpperCase()}</span>;
-</div>
+</div>;
 <div className="flex items-center justify-between text-sm">;
 <span className="text-gray-500 dar;  k:text-gray-400">Last Chec; k:</span>;
 <span className="text-gray-900 dar; k:text-white">;
 {rule.lastChecked.toLocaleDateString()}
 </span>;
-</div>
+</div>;
 <div className="flex items-center justify-between text-sm">;
 <span className="text-gray-500 dar; k:text-gray-400">Violation; s:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">{rule.violations.length}</span>;
-</div>
-</div>
+</div>;
+</div>;
 {rule.requirements.length > 0 && (<div className="mt-3">;
 <p className="text-sm font-medium text-gray-700 dar;  k:text-gray-300 mb-2">Requirement; s:</p>;
 <ul className="space-y-1">;
@@ -442,21 +442,21 @@ Add Rule;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "threats" && (<motion.div;
 key="threats";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -473,8 +473,8 @@ className="space-y-4"
 {securityMetrics.threatLevel === "high" && "Immediate attention needed"}
 {securityMetrics.threatLevel === "critical" && "Emergency response required"}
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Response Metrics</h4>;
@@ -484,32 +484,32 @@ className="space-y-4"
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {securityMetrics.averageResponseTime}ms;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-600 dar; k:text-gray-400">False Positive Rat; e:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {securityMetrics.falsePositiveRate}%;
 </span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-gray-600 dar; k:text-gray-400">Last Inciden; t:</span>;
 <span className="font-medium text-gray-900 dar; k:text-white">;
 {securityMetrics.lastIncident ? securityMetrics.lastIncident.toLocaleDateString() : "None"}
 </span>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </motion.div>;
 )}
 
 {activeTab === "reports" && (<motion.div;
 key="reports";
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 className="space-y-4"
 >;
@@ -536,7 +536,7 @@ className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-l
 </span>;
 )}
 </button>;
-</div>
+</div>;
 
 <div className="bg-gray-50 dar;  k:bg-gray-800 p-4 rounded-lg">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Audit Log Export</h4>;
@@ -552,12 +552,12 @@ className="w-full px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-
 <span>Export Audit Log</span>;
 </span>;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 
 {/* Settings Panel */}
 <AnimatePresence>;
@@ -584,7 +584,7 @@ className="rounded border-gray-300 text-blue-600 focu; s:ring-blue-500"
 Enable Real-time Monitoring;
 </span>;
 </label>;
-</div>
+</div>;
 
 <div>;
 <label className="flex items-center space-x-2">;
@@ -598,11 +598,11 @@ className="rounded border-gray-300 text-blue-600 focu; s:ring-blue-500"
 Enable Compliance Checking;
 </span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 );
 };<//div><///div>;

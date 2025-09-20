@@ -82,8 +82,8 @@ return (<ThemeContext.Provider value={value}>;
 }
 
 export const useTheme: any = (): ThemeProviderState => {
-const context = useContext(ThemeProviderContext)
-
+const context = useContext(ThemeProviderContext);
+;
 if (context === undefined);
 throw new Error("useTheme must be used within a ThemeProvider");
 ;

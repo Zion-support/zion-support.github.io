@@ -8,7 +8,7 @@ id: "ai-automation-suite",
 title: "AI Process Automation Suite",
 description: "Complete workflow automation solution using AI to streamline business processes; reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping; RPA integration; and analytics dashboard.",
 category: "AI Automation",
-price: 2999;
+price: 2999;,
 currency: "$",
 tags: ["Process Automation", "RPA", "Workflow Optimization", "AI"],
 author: {,
@@ -26,7 +26,7 @@ aiScore: 96;
 title: "AI-Powered Customer Insights Platform",
 description: "Advanced customer behavior analysis using machine learning to predict churn; identify upsell opportunities; and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
 category: "Customer Analytics",
-price: 1899;
+price: 1899;,
 currency: "$",
 tags: ["Customer Analytics", "Predictive Analytics", "CRM Integration", "Personalization"],
 author: {,
@@ -35,7 +35,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z",
-rating: 4.8; reviewCount: 89;
+rating: 4.8; reviewCount: 89;,
 location: "Global",
 availability: "1-2 Weeks",
 aiScore: 93;
@@ -44,7 +44,7 @@ aiScore: 93;
 title: "AI Content Optimization Engine",
 description: "Intelligent content optimization tool that analyzes and improves SEO; readability; and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
 category: "Content Marketing",
-price: 799;
+price: 799;,
 currency: "$",
 tags: ["Content Optimization", "SEO", "NLP", "Marketing"],
 author: {,
@@ -53,7 +53,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T09:15:00.000Z",
-rating: 4.7; reviewCount: 234;
+rating: 4.7; reviewCount: 234;,
 location: "Global",
 availability: "Immediate",
 aiScore: 91;
@@ -64,7 +64,7 @@ aiScore: 91;
 title: "Multi-Cloud Orchestration Platform",
 description: "Unified management platform for AWS; Azure; and Google Cloud with automated cost optimization; security compliance monitoring; and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
 category: "Cloud Management",
-price: 4499;
+price: 4499;,
 currency: "$",
 tags: ["Multi-Cloud", "Cost Optimization", "Security", "Disaster Recovery"],
 author: {,
@@ -81,7 +81,7 @@ aiScore: 94;
 title: "Edge Computing Infrastructure Solution",
 description: "Distributed edge computing platform for IoT devices; reducing latency and bandwidth costs. Includes edge node management; data processing; and real-time analytics capabilities.",
 category: "Edge Computing",
-price: 5999;
+price: 5999;,
 currency: "$",
 tags: ["Edge Computing", "IoT", "Low Latency", "Real-time Analytics"],
 author: {,
@@ -90,7 +90,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-05T13:20:00.000Z",
-rating: 4.8; reviewCount: 45;
+rating: 4.8; reviewCount: 45;,
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 92;
@@ -101,7 +101,7 @@ aiScore: 92;
 title: "AI-Powered Threat Detection System",
 description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis; anomaly detection; and automated incident response.",
 category: "Cybersecurity",
-price: 6999;
+price: 6999;,
 currency: "$",
 tags: ["Threat Detection", "Machine Learning", "Incident Response", "Behavioral Analysis"],
 author: {,
@@ -118,7 +118,7 @@ aiScore: 95;
 title: "Zero Trust Security Implementation",
 description: "Complete zero trust security framework implementation including identity verification; device trust scoring; and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
 category: "Security Framework",
-price: 8999;
+price: 8999;,
 currency: "$",
 tags: ["Zero Trust", "Identity Management", "Compliance", "Security Framework"],
 author: {,
@@ -127,7 +127,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-15T10:15:00.000Z",
-rating: 4.8; reviewCount: 67;
+rating: 4.8; reviewCount: 67;,
 location: "Global",
 availability: "6-8 Weeks",
 aiScore: 93;
@@ -138,7 +138,7 @@ aiScore: 93;
 title: "Real-Time Data Pipeline Platform",
 description: "Streaming data processing platform for real-time analytics; event processing; and data integration. Supports Apache Kafka; Apache Flink; and provides real-time dashboards and alerts.",
 category: "Data Engineering",
-price: 3499;
+price: 3499;,
 currency: "$",
 tags: ["Real-time Processing", "Data Pipeline", "Streaming", "Analytics"],
 author: {,
@@ -147,7 +147,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-20T12:00:00.000Z",
-rating: 4.7; reviewCount: 89;
+rating: 4.7; reviewCount: 89;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;
@@ -156,7 +156,7 @@ aiScore: 90;
 title: "AI-Powered Predictive Maintenance",
 description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.",
 category: "Predictive Analytics",
-price: 5499;
+price: 5499;,
 currency: "$",
 tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Equipment Optimization"],
 author: {,
@@ -165,7 +165,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-25T14:45:00.000Z",
-rating: 4.8; reviewCount: 56;
+rating: 4.8; reviewCount: 56;,
 location: "Global",
 availability: "4-5 Weeks",
 aiScore: 92;
@@ -176,7 +176,7 @@ aiScore: 92;
 title: "AI-Enhanced Business Intelligence Suite",
 description: "Advanced BI platform with natural language querying; automated insights generation; and predictive analytics. Includes customizable dashboards; automated reporting; and mobile access.",
 category: "Business Intelligence",
-price: 2499;
+price: 2499;,
 currency: "$",
 tags: ["Business Intelligence", "Natural Language", "Predictive Analytics", "Automated Insights"],
 author: {,
@@ -195,7 +195,7 @@ aiScore: 94;
 title: "AI-Powered Code Review Assistant",
 description: "Intelligent code review tool that analyzes code quality; security vulnerabilities; and performance issues. Integrates with GitHub; GitLab; and provides detailed recommendations and automated fixes.",
 category: "Developer Tools",
-price: 1299;
+price: 1299;,
 currency: "$",
 tags: ["Code Review", "Code Quality", "Security", "Performance Analysis"],
 author: {,
@@ -204,7 +204,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-05T11:20:00.000Z",
-rating: 4.8; reviewCount: 234;
+rating: 4.8; reviewCount: 234;,
 location: "Global",
 availability: "Immediate",
 aiScore: 93;
@@ -213,7 +213,7 @@ aiScore: 93;
 title: "DevOps Automation Platform",
 description: "Complete CI/CD automation platform with infrastructure as code; automated testing; deployment orchestration; and monitoring. Reduces deployment time by 80% and improves reliability.",
 category: "DevOps",
-price: 3999;
+price: 3999;,
 currency: "$",
 tags: ["CI/CD", "Infrastructure as Code", "Automation", "Monitoring"],
 author: {,
@@ -222,7 +222,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-10T13:45:00.000Z",
-rating: 4.8; reviewCount: 98;
+rating: 4.8; reviewCount: 98;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 91;
@@ -233,7 +233,7 @@ aiScore: 91;
 title: "Digital Transformation Strategy & Implementation",
 description: "End-to-end digital transformation consulting including strategy development; technology assessment; change management; and implementation support. Helps businesses modernize operations and improve customer experience.",
 category: "Digital Transformation",
-price: 15999;
+price: 15999;,
 currency: "$",
 tags: ["Digital Transformation", "Strategy", "Change Management", "Technology Assessment"],
 author: {,
@@ -252,7 +252,7 @@ aiScore: 95;
 title: "Healthcare AI Analytics Platform",
 description: "HIPAA-compliant AI platform for healthcare analytics; patient outcome prediction; and operational optimization. Includes clinical decision support; resource allocation; and compliance monitoring.",
 category: "Healthcare Technology",
-price: 12999;
+price: 12999;,
 currency: "$",
 tags: ["Healthcare", "HIPAA", "Clinical Analytics", "Patient Outcomes"],
 author: {,
@@ -261,7 +261,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-20T14:30:00.000Z",
-rating: 4.9; reviewCount: 34;
+rating: 4.9; reviewCount: 34;,
 location: "Global",
 availability: "6-8 Weeks",
 aiScore: 94;
@@ -270,7 +270,7 @@ aiScore: 94;
 title: "FinTech Compliance & Fraud Detection AI",
 description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening; KYC verification; transaction monitoring; and regulatory reporting automation.",
 category: "Financial Technology",
-price: 8999;
+price: 8999;,
 currency: "$",
 tags: ["FinTech", "Compliance", "Fraud Detection", "AML", "KYC"],
 author: {,
@@ -279,7 +279,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-03-25T16:15:00.000Z",
-rating: 4.8; reviewCount: 67;
+rating: 4.8; reviewCount: 67;,
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 93;
@@ -290,7 +290,7 @@ aiScore: 93;
 title: "Enterprise Blockchain Solutions",
 description: "Custom blockchain development for supply chain transparency; smart contracts; and decentralized applications. Includes private blockchain networks; smart contract development; and integration services.",
 category: "Blockchain",
-price: 19999;
+price: 19999;,
 currency: "$",
 tags: ["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],
 author: {,
@@ -307,7 +307,7 @@ aiScore: 95;
 title: "Quantum Computing Readiness Assessment",
 description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification; technology evaluation; and implementation roadmap for quantum advantage.",
 category: "Quantum Computing",
-price: 14999;
+price: 14999;,
 currency: "$",
 tags: ["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],
 author: {,
@@ -316,7 +316,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com"},
 images: ["https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-04-01T09:45:00.000Z",
-rating: 4.8; reviewCount: 12;
+rating: 4.8; reviewCount: 12;,
 location: "Global",
 availability: "4-6 Weeks",
 aiScore: 94;
@@ -325,7 +325,7 @@ aiScore: 94;
 title: "AI Website Personalization",
 description: "Dynamic on-site personalization that adapts content; offers; and CTAs per visitor segment using first-party data and ML scoring.",
 category: "Growth & CRO",
-price: 1299;
+price: 1299;,
 currency: "$",
 tags: ["Personalization", "CRO", "A/B Testing", "Segmentation"],
 author: {,
@@ -336,7 +336,7 @@ images: [
 "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-05T09:00:00.000Z",
-rating: 4.7; reviewCount: 76;
+rating: 4.7; reviewCount: 76;,
 location: "Global",
 availability: "1-2 Weeks",
 aiScore: 90;
@@ -345,7 +345,7 @@ aiScore: 90;
 title: "Managed Help Desk (24/7)",
 description: "End-user IT support with SLA-backed response times; onboarding; remote assistance; and monthly reporting.",
 category: "Managed IT",
-price: 49;
+price: 49;,
 currency: "$",
 tags: ["Help Desk", "SLA", "Support", "ITSM"],
 author: {,
@@ -356,7 +356,7 @@ images: [
 "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-07T10:30:00.000Z",
-rating: 4.8; reviewCount: 142;
+rating: 4.8; reviewCount: 142;,
 location: "USA & Remote",
 availability: "Immediate",
 aiScore: 85;
@@ -365,7 +365,7 @@ aiScore: 85;
 title: "Managed Endpoint Security (NGAV/EDR)",
 description: "Next-gen antivirus and endpoint detection and response with central monitoring; threat hunting; and automated quarantine.",
 category: "Cybersecurity",
-price: 7;
+price: 7;,
 currency: "$",
 tags: ["EDR", "AV", "Threat Hunting", "Monitoring"],
 author: {,
@@ -376,7 +376,7 @@ images: [
 "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-09T12:00:00.000Z",
-rating: 4.7; reviewCount: 98;
+rating: 4.7; reviewCount: 98;,
 location: "Global",
 availability: "Immediate",
 aiScore: 88;
@@ -385,7 +385,7 @@ aiScore: 88;
 title: "ReviewResponder.ai",
 description: "Auto-generate professional responses to customer reviews across Google; Yelp; and Facebook with tone controls and approvals.",
 category: "Micro SaaS",
-price: 19;
+price: 19;,
 currency: "$",
 tags: ["Reputation", "Social", "Automation", "AI Copy"],
 author: {,
@@ -396,7 +396,7 @@ images: [
 "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-11T08:45:00.000Z",
-rating: 4.6; reviewCount: 211;
+rating: 4.6; reviewCount: 211;,
 location: "Global",
 availability: "Immediate",
 aiScore: 87;
@@ -405,7 +405,7 @@ aiScore: 87;
 title: "InvoiceSync (AI for AP)",
 description: "AI-assisted invoice capture; reconciliation; duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
 category: "Micro SaaS",
-price: 15;
+price: 15;,
 currency: "$",
 tags: ["AP", "OCR", "Accounting", "Automation"],
 author: {,
@@ -416,7 +416,7 @@ images: [
 "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-13T09:10:00.000Z",
-rating: 4.5; reviewCount: 67;
+rating: 4.5; reviewCount: 67;,
 location: "Global",
 availability: "Immediate",
 aiScore: 86;
@@ -425,7 +425,7 @@ aiScore: 86;
 title: "UptimePulse (Monitoring)",
 description: "Global uptime; SSL; DNS; and performance monitoring with Core Web Vitals and public status pages.",
 category: "Micro SaaS",
-price: 9;
+price: 9;,
 currency: "$",
 tags: ["Monitoring", "Uptime", "Status Page", "Alerts"],
 author: {,
@@ -436,7 +436,7 @@ images: [
 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-04-15T11:25:00.000Z",
-rating: 4.6; reviewCount: 83;
+rating: 4.6; reviewCount: 83;,
 location: "Global",
 availability: "Immediate",
 aiScore: 84;
@@ -445,14 +445,14 @@ aiScore: 84;
 title: "Data Quality & Observability",
 description: "End-to-end data quality monitoring with anomaly detection; lineage; SLAs; and incident workflows for modern data stacks.",
 category: "Data Platform",
-price: 2799;
+price: 2799;,
 currency: "$",
 tags: ["Data Quality", "Lineage", "SLAs", "Observability"]},
 {id: "mlops-platform",
 title: "Managed MLOps Platform",
 description: "End-to-end model lifecycle management with CI/CD for ML; feature store; model registry; automated evaluations; and safe rollout.",
 category: "AI Platform",
-price: 7999;
+price: 7999;,
 currency: "$",
 tags: ["MLOps", "Model Registry", "Feature Store", "CI/CD"],
 author: {,
@@ -471,7 +471,7 @@ aiScore: 94;
 title: "Cloud FinOps Cost Optimization",
 description: "Data-driven cloud spend optimization across AWS; Azure; and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
 category: "Cloud Management",
-price: 2499;
+price: 2499;,
 currency: "$",
 tags: ["FinOps", "Cost Optimization", "AWS", "Azure", "GCP"],
 author: {,
@@ -482,7 +482,7 @@ images: [
 "https://images.unsplash.com/photo-1508711043292-8f5023f1c3d9?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-12T09:30:00.000Z",
-rating: 4.7; reviewCount: 102;
+rating: 4.7; reviewCount: 102;,
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 88;
@@ -491,7 +491,7 @@ aiScore: 88;
 title: "SOC 2 Compliance Automation",
 description: "Automated evidence collection; control monitoring; policy management; and audit readiness with mapped tasks and dashboards.",
 category: "Security & Compliance",
-price: 3999;
+price: 3999;,
 currency: "$",
 tags: ["SOC 2", "Compliance", "Audit", "GRC"],
 author: {,
@@ -510,7 +510,7 @@ aiScore: 90;
 title: "AI Sales SDR Automation",
 description: "Outbound research; personalized messaging; meeting scheduling; and CRM updates driven by AI agents with human-in-the-loop.",
 category: "Sales Automation",
-price: 1299;
+price: 1299;,
 currency: "$",
 tags: ["SDR", "Outreach", "Personalization", "CRM"],
 author: {,
@@ -521,7 +521,7 @@ images: [
 "https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-22T08:15:00.000Z",
-rating: 4.6; reviewCount: 133;
+rating: 4.6; reviewCount: 133;,
 location: "Global",
 availability: "Immediate",
 aiScore: 89;
@@ -530,7 +530,7 @@ aiScore: 89;
 title: "Data Governance & Catalog",
 description: "Centralized data catalog with lineage; PII detection; access workflows; and policy enforcement for compliance and productivity.",
 category: "Data Governance",
-price: 2999;
+price: 2999;,
 currency: "$",
 tags: ["Data Catalog", "Lineage", "PII", "Access Control"],
 author: {,
@@ -541,7 +541,7 @@ images: [
 "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
 ],
 createdAt: "2024-03-28T13:40:00.000Z",
-rating: 4.8; reviewCount: 58;
+rating: 4.8; reviewCount: 58;,
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 91;
@@ -550,7 +550,7 @@ aiScore: 91;
 title: "LLM Evaluation & Safety Lab",
 description: "Red teaming; prompt-injection hardening; grounding; and automated evals for accuracy; bias; toxicity; and safety.",
 category: "AI Safety",
-price: 4999;
+price: 4999;,
 currency: "$",
 tags: ["LLM", "Safety", "Evaluations", "Red Teaming"],
 author: {,
@@ -577,8 +577,8 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 { label: "Development & DevOps", value: "development-devops" },
 { label: "Digital Transformation", value: "digital-transformation" },
 { label: "Healthcare Technology", value: "healthcare-tech" },
-{ label: "Financial Technology", value: "fintech" },
-{ label: "Blockchain", value: "blockchain" },
+{ label: "Financial Technology", value: "fintech" },;
+{ label: "Blockchain", value: "blockchain" },;
 { label: "Quantum Computing", value: "quantum-computing" };
 ];
 
@@ -595,7 +595,7 @@ export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 // Contact information;
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
-email: "kleber@ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
+email: "kleber@ziontechgroup.com",;
+address: "364 E Main St STE 1008 Middletown DE 19709",;
 website: "https://ziontechgroup.com",;
 };

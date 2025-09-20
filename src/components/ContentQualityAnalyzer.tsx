@@ -210,18 +210,18 @@ onClick={(e) => e.stopPropagation()}
 <div className="flex items-center space-x-3">;
 <FileText className="w-8 h-8" />;
 <h2 className="text-2xl font-bold">Content Quality Analyzer</h2>;
-</div>
+</div>;
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hove;  r:text-white transition-colors"
 >;
 ✕;
 </button>;
-</div>
+</div>;
 <p className="text-purple-100 mt-2">;
 Analyze and improve content quality across all website pages;
 </p>;
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-6 space-y-6">;
@@ -229,22 +229,22 @@ Analyze and improve content quality across all website pages;
 {report && (
 <div className="grid grid-cols-1 m; d:grid-cols-4 gap-4">;
 <div className="bg-gray-800 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-white">{report.totalPages}</div>
-<div className="text-gray-400 text-sm">Total Pages</div>
-</div>
+<div className="text-2xl font-bold text-white">{report.totalPages}</div>;
+<div className="text-gray-400 text-sm">Total Pages</div>;
+</div>;
 <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-red-400">{report.criticalIssues}</div>
-<div className="text-red-400 text-sm">Critical Issues</div>
-</div>
+<div className="text-2xl font-bold text-red-400">{report.criticalIssues}</div>;
+<div className="text-red-400 text-sm">Critical Issues</div>;
+</div>;
 <div className="bg-yellow-900/20 border border-yellow-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-yellow-400">{report.mediumIssues}</div>
-<div className="text-yellow-400 text-sm">Medium Issues</div>
-</div>
+<div className="text-2xl font-bold text-yellow-400">{report.mediumIssues}</div>;
+<div className="text-yellow-400 text-sm">Medium Issues</div>;
+</div>;
 <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">;
-<div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>
-<div className="text-blue-400 text-sm">With Meta Descriptions</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-blue-400">{report.pagesWithMetaDescriptions}</div>;
+<div className="text-blue-400 text-sm">With Meta Descriptions</div>;
+</div>;
+</div>;
 )}
 
 {/* Actions */}
@@ -286,7 +286,7 @@ selectedFilter === "low";
 >;
 Low;
 </button>;
-</div>
+</div>;
 
 <button;
 onClick={startAnalysis}
@@ -299,7 +299,7 @@ className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rou
 )}
 <span>{isAnalyzing ? "Analyzing..." : "Analyze Content"}</span>;
 </button>;
-</div>
+</div>;
 
 {/* Search */}
 <div className="relative">;
@@ -311,7 +311,7 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent"
 />;
-</div>
+</div>;
 
 {/* Issues Table */}
 <div className="bg-gray-800 rounded-lg overflow-hidden">;
@@ -347,13 +347,13 @@ Actions;
 <span className={`text-sm font-medium ${getSeverityColor(issue.severit; y)}`}>;
 {issue.severity.charAt(0).toUpperCase() + issue.severity.slice(1)}
 </span>;
-</div>
+</div>;
 </td>;
 <td className="px-6 py-4 whitespace-nowrap">;
 <div className="max-w-xs">;
 <div className="text-sm font-medium text-white">;
 {issue.pageTitle || "Untitled"}
-</div>
+</div>;
 <a;
 href={issue.pageUrl}
 target="_blank";
@@ -362,7 +362,7 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 >;
 {issue.pageUrl}
 </a>;
-</div>
+</div>;
 </td>;
 <td className="px-6 py-4 whitespace-nowrap">;
 <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">;
@@ -373,11 +373,11 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 <div className="max-w-md">;
 <div className="text-sm text-gray-300 mb-2">;
 {issue.description}
-</div>
+</div>;
 <div className="text-xs text-purple-400">;
 <strong>Recommendatio; n:</strong> {issue.recommendation}
-</div>
-</div>
+</div>;
+</div>;
 </td>;
 <td className="px-6 py-4 whitespace-nowrap">;
 <span className={`text-sm font-medium ${getStatusColor(issue.statu; s)}`}>;
@@ -395,14 +395,14 @@ className="text-purple-400 hove;  r:text-purple-300 transition-colors text-xs tr
 <button className="p-2 text-yellow-400 hove; r:text-yellow-300 transition-colors" title="Edit">;
 <Edit3 className="w-4 h-4" />;
 </button>;
-</div>
+</div>;
 </td>;
 </tr>;
 ))}
 </tbody>;
 </table>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Quick Actions */}
 <div className="grid grid-cols-1 m; d:grid-cols-3 gap-4">;
@@ -416,7 +416,7 @@ Quick Fixes;
 <li>• Include meta descriptions</li>;
 <li>• Add proper heading structure</li>;
 </ul>;
-</div>
+</div>;
 
 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/20 rounded-lg p-4">;
 <h3 className="text-lg font-semibold text-blue-400 mb-2 flex items-center">;
@@ -428,7 +428,7 @@ Content Metrics;
 <li>• Include 2-3 images per page</li>;
 <li>• Use proper heading hierarchy</li>;
 </ul>;
-</div>
+</div>;
 
 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/20 rounded-lg p-4">;
 <h3 className="text-lg font-semibold text-purple-400 mb-2 flex items-center">;
@@ -440,9 +440,9 @@ SEO Impact;
 <li>• Improved user engagement</li>;
 <li>• Higher conversion rates</li>;
 </ul>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
 )}

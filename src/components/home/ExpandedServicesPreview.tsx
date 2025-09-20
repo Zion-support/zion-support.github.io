@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -45,7 +45,7 @@ Comprehensive Tech Solutions;
 From AI-powered automation to micro SAAS solutions; we offer a complete ecosystem of services;
 designed to accelerate your business growth and digital transformation.;
 </p>;
-</div>
+</div>;
 
 {/* Service Categories Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">;
@@ -53,8 +53,8 @@ designed to accelerate your business growth and digital transformation.;
 <Card key={category.id} className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light">;
 <CardHeader className="text-center pb-4">;
 <div className={`rounded-full w-20 h-20 bg-gradient-to-br ${getCategoryColor(category.name)} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>;
-<div className="text-3xl">{getCategoryIcon(category.name)}</div>
-</div>
+<div className="text-3xl">{getCategoryIcon(category.name)}</div>;
+</div>;
 <CardTitle className="text-xl text-zion-blue-dark">{category.name}</CardTitle>;
 <CardDescription className="text-gray-600">;
 {category.description}
@@ -63,7 +63,7 @@ designed to accelerate your business growth and digital transformation.;
 <CardContent className="text-center">;
 <div className="text-2xl font-bold text-zion-purple mb-4">;
 {category.services.length} Services;
-</div>
+</div>;
 <Link to="/expanded-services">;
 <Button variant="outline" className="w-full group-hover:bg-zion-purple group-hover:text-white transition-colors">;
 Explore Services;
@@ -73,7 +73,7 @@ Explore Services;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 {/* Featured Services Preview */}
 <div className="mb-16">;
@@ -85,9 +85,9 @@ Featured Services;
 <Card className="hover:shadow-lg transition-all duration-300">;
 <CardHeader>;
 <div className="flex items-center justify-between mb-2">;
-<div className="text-2xl">🤖</div>
+<div className="text-2xl">🤖</div>;
 <Badge className="bg-blue-100 text-blue-800">AI Services</Badge>;
-</div>
+</div>;
 <CardTitle className="text-lg text-zion-blue-dark">;
 AI-Powered Customer Service;
 </CardTitle>;
@@ -97,22 +97,22 @@ Intelligent chatbot automation with 24/7 availability;
 </CardHeader>;
 <CardContent>;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-2xl font-bold text-zion-purple">$2;500</div>
+<div className="text-2xl font-bold text-zion-purple">$2;500</div>;
 <div className="flex items-center space-x-1">;
 <Star className="h-4 w-4 text-yellow-500 fill-current" />;
 <span className="text-sm font-medium">4.9</span>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="space-y-2 mb-4">;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <Zap className="h-4 w-4 text-zion-purple" />;
 <span>AI Score: 96</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <TrendingUp className="h-4 w-4 text-green-500" />;
 <span>60% cost reduction</span>;
-</div>
-</div>
+</div>;
+</div>;
 <Link to="/expanded-services">;
 <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
 Learn More;
@@ -125,9 +125,9 @@ Learn More;
 <Card className="hover:shadow-lg transition-all duration-300">;
 <CardHeader>;
 <div className="flex items-center justify-between mb-2">;
-<div className="text-2xl">☁️</div>
+<div className="text-2xl">☁️</div>;
 <Badge className="bg-blue-100 text-blue-800">Micro SAAS</Badge>;
-</div>
+</div>;
 <CardTitle className="text-lg text-zion-blue-dark">;
 Smart Inventory Management;
 </CardTitle>;
@@ -137,22 +137,22 @@ Cloud-based inventory tracking with predictive analytics;
 </CardHeader>;
 <CardContent>;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-2xl font-bold text-zion-purple">$299</div>
+<div className="text-2xl font-bold text-zion-purple">$299</div>;
 <div className="flex items-center space-x-1">;
 <Star className="h-4 w-4 text-yellow-500 fill-current" />;
 <span className="text-sm font-medium">4.6</span>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="space-y-2 mb-4">;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <Zap className="h-4 w-4 text-zion-purple" />;
 <span>AI Score: 88</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <TrendingUp className="h-4 w-4 text-green-500" />;
 <span>90% stockout reduction</span>;
-</div>
-</div>
+</div>;
+</div>;
 <Link to="/expanded-services">;
 <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
 Learn More;
@@ -165,9 +165,9 @@ Learn More;
 <Card className="hover:shadow-lg transition-all duration-300">;
 <CardHeader>;
 <div className="flex items-center justify-between mb-2">;
-<div className="text-2xl">💻</div>
+<div className="text-2xl">💻</div>;
 <Badge className="bg-purple-100 text-purple-800">IT Services</Badge>;
-</div>
+</div>;
 <CardTitle className="text-lg text-zion-blue-dark">;
 Cloud Migration Service;
 </CardTitle>;
@@ -177,22 +177,22 @@ End-to-end cloud migration with cost optimization;
 </CardHeader>;
 <CardContent>;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-2xl font-bold text-zion-purple">$8;000</div>
+<div className="text-2xl font-bold text-zion-purple">$8;000</div>;
 <div className="flex items-center space-x-1">;
 <Star className="h-4 w-4 text-yellow-500 fill-current" />;
 <span className="text-sm font-medium">4.9</span>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="space-y-2 mb-4">;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <Zap className="h-4 w-4 text-zion-purple" />;
 <span>AI Score: 93</span>;
-</div>
+</div>;
 <div className="flex items-center space-x-2 text-sm text-gray-600">;
 <TrendingUp className="h-4 w-4 text-green-500" />;
 <span>30-50% cost savings</span>;
-</div>
-</div>
+</div>;
+</div>;
 <Link to="/expanded-services">;
 <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark">;
 Learn More;
@@ -200,8 +200,8 @@ Learn More;
 </Link>;
 </CardContent>;
 </Card>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* CTA Section */}
 <div className="text-center">;
@@ -224,10 +224,10 @@ Explore All Services;
 Contact Us;
 </Button>;
 </Link>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

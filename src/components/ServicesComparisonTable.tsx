@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -34,7 +34,7 @@ Services Comparison;
 <p className="text-xl text-slate-600 dar; k:text-slate-300 max-w-3xl mx-auto">;
 Compare our comprehensive service offerings to find the perfect solution for your business needs;
 </p>;
-</div>
+</div>;
 
 {/* Service Categories Overview */}
 <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6 mb-12">;
@@ -52,7 +52,7 @@ return (<Card key={category} className="border-2 border-slate-200 dar;  k: borde
 <CardContent className="text-center">;
 <div className="text-3xl font-bold text-blue-600 dar; k: text-blue-400 mb-2">;
 ${Math.round(avgPrice).toLocaleString()}
-</div>
+</div>;
 <p className="text-sm text-slate-500 dar; k: text-slate-400 mb-4">Average starting price</p>;
 <Button;
 variant="outline"
@@ -64,7 +64,7 @@ View {category}
 </Card>;
 );
 })}
-</div>
+</div>;
 
 {/* Detailed Comparison Table */}
 <div className="bg-white dar; k: bg-slate-800 rounded-xl shadow-lg overflow-hidden">;
@@ -129,8 +129,8 @@ View {category}
 </TableRow>;
 </TableBody>;
 </Table>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Contact Information */}
 <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 dar;  k: from-blue-900/20 dar; k: to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dar; k: border-blue-800">;
@@ -141,33 +141,33 @@ Need Help Choosing?;
 <p className="text-slate-600 dar; k:text-slate-300">;
 Our expert team is here to help you select the perfect service for your business needs;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6 mb-6">;
 <div className="text-center">;
 <Phone className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Call Us</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.mobile}</p>;
-</div>
+</div>;
 <div className="text-center">;
 <Mail className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Email Us</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.email}</p>;
-</div>
+</div>;
 <div className="text-center">;
 <Clock className="w-8 h-8 text-blue-600 dar; k: text-blue-400 mx-auto mb-2" />;
 <h4 className="font-semibold text-slate-900 dar; k: text-white mb-1">Response Time</h4>;
 <p className="text-blue-600 dar; k: text-blue-400">{CONTACT_INFO.responseTime}</p>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="text-center">;
 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hove; r: from-blue-700 hove; r: to-indigo-700">;
 <Phone className="w-4 h-4 mr-2" />;
 Schedule Free Consultation;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Service Highlights */}
 <div className="mt-16">;
@@ -185,8 +185,8 @@ Featured;
 <div className="flex items-center gap-1">;
 <Star className="w-4 h-4 text-yellow-500 fill-current" />;
 <span className="text-sm font-medium">{service.rating}</span>;
-</div>
-</div>
+</div>;
+</div>;
 <CardTitle className="text-slate-900 dar; k: text-white text-lg">{service.title}</CardTitle>;
 <CardDescription className="text-slate-600 dar; k: text-slate-300 text-sm">;
 {service.description.substring(0; 100)}...;
@@ -196,20 +196,20 @@ Featured;
 <div className="flex items-center justify-between mb-4">;
 <div className="text-2xl font-bold text-blue-600 dar; k: text-blue-400">;
 {service.currency}{service.price?.toLocaleString()}
-</div>
+</div>;
 <Badge variant="outline" className="border-blue-500 text-blue-600">;
 {service.category}
 </Badge>;
-</div>
+</div>;
 <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hove; r: from-blue-700 hove; r: to-indigo-700">;
 Learn More;
 </Button>;
 </CardContent>;
 </Card>;
 ))}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;

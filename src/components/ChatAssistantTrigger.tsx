@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -73,13 +73,13 @@ import { useState } from "react";,
 import { MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";,
 import { ChatAssistant } from "@/components/ChatAssistant";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from "@/utils/productionLogger";
 export function ChatAssistantTrigger() {
-role: 'Virtual Assistant'
-          }}
-          onSendMessage = {handleSendMessage}
-        />
-      )}
-</>
-  )
+role: "Virtual Assistant";
+}}
+onSendMessage = {handleSendMessage}
+/>;
+)}
+</>;
+)
 }

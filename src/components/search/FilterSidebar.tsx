@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -15,6 +15,6 @@ return (,
 },
 </div>)},
 export default FilterSidebar,;<//div><///div>
-import React from 'react';
+import React from "react";
 interface FilterSidebarProps {className?: string;}
-  children?: React.ReactNode}
+children?: React.ReactNode}

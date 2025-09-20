@@ -9,8 +9,8 @@ import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
 talent: TalentProfile;
-onBook: (talent: TalentProfile) => void;
-onMessage: (talent: TalentProfile) => void;
+onBook: (talent: TalentProfile) => void;,
+onMessage: (talent: TalentProfile) => void;,
 isAuthenticated: boolean;
 }
 }
@@ -65,22 +65,22 @@ className="w-full h-full object-cover"
 ) : (
 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
 {talent.full_name?.charAt(0) || "T"}
-</div>
+</div>;
 )}
-</div>
+</div>;
 {talent.is_verified && (
 <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;
 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-</div>
+</div>;
 )}
-</div>
+</div>;
 
 {/* Main Info */}
 <div className="flex-1">;
 <div className="flex justify-between items-start">;
 <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;
 <FavoriteButton itemId={talent.id} itemType="talent" className="-mt-1" />;
-</div>
+</div>;
 <p className="text-white font-medium">{talent.professional_title}</p>;
 
 {/* Location & Availability */}
@@ -89,17 +89,17 @@ className="w-full h-full object-cover"
 <div className="flex items-center text-zion-slate-light">;
 <MapPin className="h-4 w-4 mr-1" />;
 <span>{talent.location}</span>;
-</div>
+</div>;
 )}
 {talent.availability_type && (
 <div className="flex items-center text-zion-slate-light">;
 <Clock className="h-4 w-4 mr-1" />;
 <span>{talent.availability_type}</span>;
-</div>
+</div>;
 )}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Skills */}
 {skills.length > 0 && (
@@ -118,8 +118,8 @@ className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-lig
 +{(talent.skills?.length || 0) - 5} more;
 </span>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Hourly Rate & Actions */}
@@ -129,11 +129,11 @@ className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-lig
 <div className="text-white font-bold">;
 ${talent.hourly_rate}
 <span className="text-zion-slate-light font-normal">/hr</span>;
-</div>
+</div>;
 ) : (
-<div className="text-zion-slate-light">Rate not specified</div>
+<div className="text-zion-slate-light">Rate not specified</div>;
 )}
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 {isAuthenticated && (
@@ -154,9 +154,9 @@ className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
 >;
 Message;
 </Button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </Card>;
 );
 };
@@ -164,12 +164,12 @@ Message;
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = "TalentCard";
 <//Card><///Card>;
-import React from 'react';
+import React from "react";
 import { useRouter } from "next/router";
 import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";,
-import { Card, CardContent, CardFooter } from "@/components/ui/card";,
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Card; CardContent, CardFooter } from "@/components/ui/card";,
+import { MapPin; Clock, ArrowRight; CheckCircle2 } from "lucide-react";
 import { FavoriteButton } from "@/components/FavoriteButton";,
 import { TalentProfile } from "@/types/talent";
 import { RatingStars } from "@/components/RatingStars";

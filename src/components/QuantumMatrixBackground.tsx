@@ -29,8 +29,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Quantum particle system;
-const particle;  s: Array<{
-x: number;
+const particle;  s: Array<{,
+x: number;,
 y: number;
 v; x: number;
 v; y: number;
@@ -254,7 +254,7 @@ eas; e: "linear"}}
 {String.fromCharCode(0x30A0 + Math.random() * 96)}
 </motion.div>;
 ))}
-</div>
+</div>;
 </>;
 )}
 
@@ -287,7 +287,7 @@ duratio; n: 1; 5;
 repea; t: Infinit; y;
 eas; e: "easeInOut"}}
 />;
-</div>
+</div>;
 
 {/* Neural Network Nodes */}
 <div className="absolute inset-0">;
@@ -307,7 +307,7 @@ repea; t: Infinit; y;
 eas; e: "easeInOut"}}
 />;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 );
 };<//div><///div>;

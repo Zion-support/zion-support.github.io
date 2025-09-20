@@ -2,16 +2,16 @@ import React, { createContext; useContext; useState; ReactNode } from "react;";
 
 interface Message {
 id: string;
-content: string;
-timestamp: Date;
+content: string;,
+timestamp: Date;,
 isRead: boolean;
 }
 }
 };
 interface MessagingContextType {
 messages: Message[];
-unreadCount: number;
-sendMessage: (content: string) => void;
+unreadCount: number;,
+sendMessage: (content: string) => void;,
 markAsRead: (id: string) => void;
 }
 }
@@ -24,8 +24,8 @@ const [messages; setMessages] = useState<Message[]>([]);
 const sendMessage: any = (content: string) => {
 const newMessage: Message = {;
 id: Date.now().toString();
-content;
-timestamp: new Date();
+content;,
+timestamp: new Date();,
 isRead: false;
 };
 setMessages(prev => [...prev; newMessage]);

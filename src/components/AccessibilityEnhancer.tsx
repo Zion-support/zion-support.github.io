@@ -105,7 +105,7 @@ Skip to main content;
 <a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">;
 Skip to navigation;
 </a>;
-</div>
+</div>;
 
 {/* Accessibility Toggle Button */}
 <Button;
@@ -139,7 +139,7 @@ aria-label="Close accessibility settings";
 >;
 ×;
 </Button>;
-</div>
+</div>;
 <CardDescription>;
 Customize your experience for better accessibility;
 </CardDescription>;
@@ -165,7 +165,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="large-text" className="text-sm">;
@@ -179,7 +179,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="focus-indicator" className="text-sm">;
@@ -201,7 +201,7 @@ id="high-contrast";
 checked={settings.highContrast}
 onCheckedChange={(checked) => handleSettingChange("highContrast",  checked)}
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="large-text" className="text-sm">;
@@ -212,7 +212,7 @@ id="large-text";
 checked={settings.largeText}
 onCheckedChange={(checked) => handleSettingChange("largeText",  checked)}
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="focus-indicator" className="text-sm">;
@@ -223,8 +223,8 @@ id="focus-indicator";
 checked={settings.focusIndicator}
 onCheckedChange={(checked) => handleSettingChange("focusIndicator",  checked)}
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <Separator />;
 <label htmlFor="high-contrast" className="text-sm">;
@@ -237,7 +237,7 @@ checked={settings.highContrast}
 onChange={(e) => handleSettingChange("highContrast",  e.target.checked)}
 className="ml-2"
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <label htmlFor="large-text" className="text-sm">;
@@ -250,7 +250,7 @@ checked={settings.largeText}
 onChange={(e) => handleSettingChange("largeText",  e.target.checked)}
 className="ml-2"
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <label htmlFor="focus-indicator" className="text-sm">;
@@ -263,8 +263,8 @@ checked={settings.focusIndicator}
 onChange={(e) => handleSettingChange("focusIndicator",  e.target.checked)}
 className="ml-2"
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="border-t border-border my-2" />;
 
@@ -287,7 +287,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="keyboard-nav" className="text-sm">;
@@ -309,7 +309,7 @@ id="reduced-motion";
 checked={settings.reducedMotion}
 onCheckedChange={(checked) => handleSettingChange("reducedMotion",  checked)}
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="keyboard-nav" className="text-sm">;
@@ -320,8 +320,8 @@ id="keyboard-nav";
 checked={settings.keyboardNavigation}
 onCheckedChange={(checked) => handleSettingChange("keyboardNavigation",  checked)}
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <Separator />;
 <label htmlFor="reduced-motion" className="text-sm">;
@@ -334,7 +334,7 @@ checked={settings.reducedMotion}
 onChange={(e) => handleSettingChange("reducedMotion",  e.target.checked)}
 className="ml-2"
 />;
-</div>
+</div>;
 
 <div className="flex items-center justify-between">;
 <label htmlFor="keyboard-nav" className="text-sm">;
@@ -347,8 +347,8 @@ checked={settings.keyboardNavigation}
 onChange={(e) => handleSettingChange("keyboardNavigation",  e.target.checked)}
 className="ml-2"
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="border-t border-border my-2" />;
 
@@ -389,8 +389,8 @@ id="screen-reader";
 checked={settings.screenReader}
 onCheckedChange={(checked) => handleSettingChange("screenReader",  checked)}
 />;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Quick Actions */}
 <div className="pt-2">;
@@ -403,7 +403,7 @@ className="w-full"
 <span className="mr-2">⚙️</span>;
 Reset to Defaults;
 </Button>;
-</div>
+</div>;
 </CardContent>;
 </Card>;
 )}

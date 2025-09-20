@@ -1,6 +1,11 @@
-import React { useState useEffect } from 'react';
+interface Service {
+id: string;,
+name: string;
+}
+
+import React { useState useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { logErrorToProduction } from "@/utils/productionLogger";
 import { Table;
 , TableBody;
 , TableCell;
@@ -15,14 +20,14 @@ import { DropdownMenu;
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from "lucide-react";
+import { Edit; MoreHorizontal, ExternalLink; Power, PowerOff; Users, RefreshCcw } from "lucide-react";
 import { format } from "date-fns";
 export function TenantsList() {
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    loadTenants()
-  }, []),
+const [tenants; setTenants] = useState<WhitelabelTenant[]>([]);
+const [isLoading; setIsLoading] = useState(true);
+useEffect(() => {
+loadTenants()
+}, []),
 
 }
 }

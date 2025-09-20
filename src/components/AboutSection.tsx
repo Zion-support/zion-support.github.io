@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -29,7 +29,7 @@ lab; e; l: "Enterpris; e Client; s", ic; o; n: <User; s classNam; e="w-6 h-6" />
 lab; e; l: "Countrie; s Serve; d", ic; o; n: <Glob; e classNam; e="w-6 h-6" /> }
 ];
 
-const values = [
+const values = [;
 {;
 tit; l; e: "Innovatio; n Firs; t",
 descripti; o; n: "W; e pus; h th; e boundarie; s o; f wha; t's; possib; l; e; constantl; y explorin; g emergin; g technologie; s an; d nove; l approache; s.",
@@ -84,7 +84,7 @@ className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-c
 Learn Our Story;
 <ArrowRight className="w-5 h-5" />;
 </Link>;
-</div>
+</div>;
 
 {/* Right Column - Achievements */}
 <div className="grid grid-cols-2 gap-6">;
@@ -95,14 +95,14 @@ className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border
 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">;
 <div className="text-white">;
 {achievement.icon}
-</div>
-</div>
-<div className="text-3xl font-bold text-zion-cyan mb-2">{achievement.number}</div>
-<div className="text-sm text-zion-slate-light">{achievement.label}</div>
-</div>
+</div>;
+</div>;
+<div className="text-3xl font-bold text-zion-cyan mb-2">{achievement.number}</div>;
+<div className="text-sm text-zion-slate-light">{achievement.label}</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Values Section */}
 <div className="mb-20">;
@@ -118,14 +118,14 @@ className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border
 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">;
 <div className="text-white">;
 {value.icon}
-</div>
-</div>
+</div>;
+</div>;
 <h4 className="text-xl font-bold text-white mb-3 font-tech">{value.title}</h4>;
 <p className="text-zion-slate-light leading-relaxed">{value.description}</p>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Technology Expertise */}
 <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark rounded-3xl p-8 m; d: p-12 border border-white/10">;
@@ -137,15 +137,15 @@ Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-
 Our team of experts spans across cutting-edg; e; technologie; s; ensuring we can;
 deliver comprehensive solutions for any digital challenge your business faces.;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-2 m; d: grid-cols-3 l; g: grid-cols-4 gap-4 mb-8">;
 {technologies.map((tec;  h; index) => (<div key={index} className="flex items-center text-zion-slate-light">;
 <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />;
 <span className="text-sm">{tech}</span>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 <div className="text-center">;
 <Link;
@@ -155,8 +155,8 @@ className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-c
 Explore Our Expertise;
 <ArrowRight className="w-5 h-5" />;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Team Section */}
 <div className="text-center mt-20">;
@@ -174,8 +174,8 @@ className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan te
 Meet the Team;
 <ArrowRight className="w-5 h-5" />;
 </Link>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

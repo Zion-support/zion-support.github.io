@@ -38,14 +38,14 @@ metadata: {
 lastUpdated: string;
 version: string;
 downloads: number;
-verified: boolean;
-featured: boolean;
+verified: boolean;,
+featured: boolean;,
 complexity: "beginner" | "intermediate" | "advanced" | "expert";
 }
 }
 };
 actions?: {
-label: string;
+label: string;,
 icon: React.ComponentType<{ className?: string }>;
 action: () => void;
 variant?: "default" | "outline" | "ghost";
@@ -79,8 +79,8 @@ const [viewMode; setViewMode] = useState<"grid" | "list" | "carousel">("grid");
 const [filters; setFilters] = useState({
 category: [] as string[];
 status: [] as CardItem["status"][];
-complexity: [] as CardItem["metadata"]["complexity"][];
-verified: false;
+complexity: [] as CardItem["metadata"]["complexity"][];,
+verified: false;,
 featured: false;
 });
 const [searchQuery; setSearchQuery] = useState("");
@@ -94,7 +94,7 @@ const galleryRef = useRef<HTMLDivElement>(null);
 // Filter and sort items;
 const filteredAndSortedItems = items;
 .filter(item => {
-const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
@@ -212,7 +212,7 @@ return (
 <p className="text-zinc-300 text-sm">;
 {filteredAndSortedItems.length} items • Interactive 3D experience;
 </p>;
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 {/* View Mode Toggle */}
@@ -231,7 +231,7 @@ mode === "list" ? <List className="w-4 h-4" /> :
 <Play className="w-4 h-4" />}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Carousel Controls */}
 {viewMode === "carousel" && (
@@ -253,7 +253,7 @@ className="text-zinc-400 hover:text-white p-2"
 >;
 <RotateCcw className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 )}
 
 {/* Sort Controls */}
@@ -276,8 +276,8 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 {sortOrder === "asc" ? "↑" : "↓"}
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Search and Filters */}
 {showFilters && (
@@ -292,7 +292,7 @@ onChange={(e) => setSearchQuery(e.target.value)}
 placeholder="Search cards...";
 className="w-full pl-10 pr-4 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
 />;
-</div>
+</div>;
 
 {/* Filter Chips */}
 <div className="flex flex-wrap gap-2">;
@@ -333,8 +333,8 @@ className={filters.category.includes(category) ? "bg-zion-cyan text-zion-blue-da
 {category}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Grid View */}
@@ -352,7 +352,7 @@ getComplexityColor={getComplexityColor}
 getCategoryIcon={getCategoryIcon}
 />;
 ))}
-</div>
+</div>;
 )}
 
 {/* List View */}
@@ -373,7 +373,7 @@ onClick={() => handleCardClick(item)}
 const CategoryIcon = getCategoryIcon(item.category);
 return <CategoryIcon className="w-8 h-8 text-white" />;
 })()}
-</div>
+</div>;
 
 {/* Content */}
 <div className="flex-1">;
@@ -385,7 +385,7 @@ return <CategoryIcon className="w-8 h-8 text-white" />;
 <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>;
 {item.metadata.complexity}
 </Badge>;
-</div>
+</div>;
 <p className="text-zinc-400 text-sm line-clamp-2">{item.description}</p>;
 <div className="flex items-center gap-4 mt-2 text-xs text-zinc-500">;
 <span className="flex items-center gap-1">;
@@ -395,8 +395,8 @@ return <CategoryIcon className="w-8 h-8 text-white" />;
 <span>({item.reviews} reviews)</span>;
 <span>•</span>;
 <span>{item.metadata.downloads.toLocaleString()} downloads</span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Actions */}
 <div className="flex items-center gap-2">;
@@ -416,10 +416,10 @@ className="text-xs"
 {action.label}
 </Button>;
 ))}
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 )}
 
 {/* Carousel View */}
@@ -443,10 +443,10 @@ getComplexityColor={getComplexityColor}
 getCategoryIcon={getCategoryIcon}
 isCarousel={true}
 />;
-</div>
+</div>;
 ))}
 </motion.div>;
-</div>
+</div>;
 
 {/* Carousel Navigation */}
 <div className="flex items-center justify-center gap-2 mt-4">;
@@ -458,8 +458,8 @@ className={`w-2 h-2 rounded-full transition-all duration-200 ${
 index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover: bg-zinc-500"}`}
 />;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Selected Item Modal */}
@@ -492,7 +492,7 @@ className="text-zinc-400 hover:text-white"
 >;
 <X className="w-4 h-4" />;
 </Button>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
 {/* Image and Basic Info */}
@@ -502,7 +502,7 @@ className="text-zinc-400 hover:text-white"
 const CategoryIcon = getCategoryIcon(selectedItem.category);
 return <CategoryIcon className="w-24 h-24 text-white" />;
 })()}
-</div>
+</div>;
 
 <div className="space-y-3">;
 <div className="flex items-center gap-2">;
@@ -517,7 +517,7 @@ return <CategoryIcon className="w-24 h-24 text-white" />;
 Verified;
 </Badge>;
 )}
-</div>
+</div>;
 
 <div className="flex items-center gap-4 text-sm text-zinc-400">;
 <span className="flex items-center gap-1">;
@@ -526,13 +526,13 @@ Verified;
 </span>;
 <span>•</span>;
 <span>{selectedItem.metadata.downloads.toLocaleString()} downloads</span>;
-</div>
+</div>;
 
 {selectedItem.price && (
-<div className="text-lg font-semibold text-zion-cyan">{selectedItem.price}</div>
+<div className="text-lg font-semibold text-zion-cyan">{selectedItem.price}</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Details */}
 <div className="space-y-4">;
@@ -545,10 +545,10 @@ Verified;
 <div key={index} className="flex items-center gap-2 text-sm text-zinc-300">;
 <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />;
 {feature}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div>;
 <h4 className="text-white font-medium mb-2">Tags</h4>;
@@ -558,8 +558,8 @@ Verified;
 {tag}
 </Badge>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {selectedItem.actions && (
 <div>;
@@ -577,16 +577,16 @@ disabled={action.disabled}
 {action.label}
 </Button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>
+</div>;
 );
 }
 
@@ -595,8 +595,8 @@ interface Card3DProps {
 item: CardItem;
 index: number;
 onClick: () => void;
-onAction: (itemId: string; action: string) => void;
-getStatusColor: (status: CardItem["status"]) => string;
+onAction: (itemId: string; action: string) => void;,
+getStatusColor: (status: CardItem["status"]) => string;,
 getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;
 }
 }
@@ -675,7 +675,7 @@ transition={{ duration: 0.3 }}
 <div className="flex items-start justify-between mb-4">;
 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">;
 <CategoryIcon className="w-6 h-6 text-white" />;
-</div>
+</div>;
 
 <div className="flex items-center gap-2">;
 <Badge variant="outline" className={`text-xs ${getStatusColor(item.status)}`}>;
@@ -684,8 +684,8 @@ transition={{ duration: 0.3 }}
 <Badge variant="outline" className={`text-xs ${getComplexityColor(item.metadata.complexity)}`}>;
 {item.metadata.complexity}
 </Badge>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Title and Description */}
 <div className="flex-1">;
@@ -695,7 +695,7 @@ transition={{ duration: 0.3 }}
 <p className="text-zinc-300 text-sm line-clamp-3">;
 {item.description}
 </p>;
-</div>
+</div>;
 
 {/* Footer */}
 <div className="space-y-3">;
@@ -706,7 +706,7 @@ transition={{ duration: 0.3 }}
 {item.rating} ({item.reviews})
 </span>;
 <span>{item.metadata.downloads.toLocaleString()} downloads</span>;
-</div>
+</div>;
 
 {/* Tags */}
 <div className="flex flex-wrap gap-1">;
@@ -719,7 +719,7 @@ className="text-xs border-zion-blue-light/30 text-zinc-400 hover: text-white"
 {tag}
 </Badge>;
 ))}
-</div>
+</div>;
 
 {/* Actions */}
 <div className="flex items-center gap-2">;
@@ -748,9 +748,9 @@ className="p-2 text-zinc-400 hover:text-white text-xs"
 >;
 <Eye className="w-4 h-4" />;
 </Button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Hover Overlay */}
 <motion.div;

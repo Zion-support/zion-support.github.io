@@ -1,5 +1,5 @@
 interface Service {
-id: string;
+id: string;,
 name: string;
 }
 }
@@ -31,86 +31,86 @@ ArrowRight;
 
 export function ServicesShowcase() {const featuredServices = [;
 {;
-title: "AI Content Generator";
+title: "AI Content Generator";,
 description: "Generate high-quality content; code; and documentation using advanced AI models.",
-icon: <Brain className="h-12 w-12 text-zion-cyan" />;
-price: "$29/month";
+icon: <Brain className="h-12 w-12 text-zion-cyan" />;,
+price: "$29/month";,
 features: ["Blog posts", "Technical docs", "Marketing copy", "Code snippets"],
 category: "AI Services";
-badge: "Popular";
-link: "/ai-content-generator";
+badge: "Popular";,
+link: "/ai-content-generator";,
 glowColor: "#00ffff"};
 {title: "Cybersecurity Assessment";
 description: "Comprehensive security audits and vulnerability assessments for your digital infrastructure.";
-icon: <Shield className="h-12 w-12 text-red-400" />;
-price: "$299/month";
+icon: <Shield className="h-12 w-12 text-red-400" />;,
+price: "$299/month";,
 features: ["Security audits", "Penetration testing", "Vulnerability scans", "Compliance reports"],
 category: "Security";
-badge: "Enterprise";
-link: "/cybersecurity-assessment";
+badge: "Enterprise";,
+link: "/cybersecurity-assessment";,
 glowColor: "#ef4444"};
 {title: "Cloud Migration Service";
 description: "Seamless migration to cloud platforms with minimal downtime and optimized performance.";
-icon: <Cloud className="h-12 w-12 text-blue-400" />;
-price: "$499/month";
+icon: <Cloud className="h-12 w-12 text-blue-400" />;,
+price: "$499/month";,
 features: ["AWS/Azure/GCP", "Zero downtime", "Performance optimization", "24/7 support"],
 category: "Cloud Services";
-badge: "Professional";
-link: "/cloud-migration";
+badge: "Professional";,
+link: "/cloud-migration";,
 glowColor: "#3b82f6"};
 {title: "Data Analytics Dashboard";
 description: "Real-time business intelligence and analytics to drive data-driven decision making.";
-icon: <BarChart3 className="h-12 w-12 text-green-400" />;
-price: "$99/month";
+icon: <BarChart3 className="h-12 w-12 text-green-400" />;,
+price: "$99/month";,
 features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization"],
 category: "Analytics";
-badge: "Business";
-link: "/data-analytics";
+badge: "Business";,
+link: "/data-analytics";,
 glowColor: "#22c55e"};
 {title: "AI Model Training";
-description: "Custom AI model development and training for your specific business requirements.";
-icon: <Brain className="h-12 w-12 text-purple-400" />;
+description: "Custom AI model development and training for your specific business requirements.";,
+icon: <Brain className="h-12 w-12 text-purple-400" />;,
 price: "$1;999/month",
 features: ["Custom models", "Industry-specific", "Training pipelines", "Model deployment"],
 category: "AI Development";
-badge: "Advanced";
-link: "/ai-model-training";
+badge: "Advanced";,
+link: "/ai-model-training";,
 glowColor: "#a855f7"};
-{title: "Network Infrastructure";
+{title: "Network Infrastructure";,
 description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
-icon: <Network className="h-12 w-12 text-yellow-400" />;
-price: "$399/month";
+icon: <Network className="h-12 w-12 text-yellow-400" />;,
+price: "$399/month";,
 features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
 category: "Infrastructure";
-badge: "Professional";
-link: "/network-infrastructure";
+badge: "Professional";,
+link: "/network-infrastructure";,
 glowColor: "#eab308"}
 ];
-const emergingServices = [
+const emergingServices = [;
 {;
 title: "Quantum Computing API";
 description: "Access to quantum computing resources for complex calculations and simulations.";
 icon: <Zap className="h-10 w-10 text-pink-400" />;
-price: "$0.10/quantum-second";
-category: "Quantum Computing";
+price: "$0.10/quantum-second";,
+category: "Quantum Computing";,
 link: "/quantum-computing-api"};
 {title: "Edge Computing Platform";
 description: "Distributed computing platform for low-latency applications and real-time processing.";
 icon: <Layers className="h-10 w-10 text-cyan-400" />;
-price: "$0.50/hour";
-category: "Edge Computing";
+price: "$0.50/hour";,
+category: "Edge Computing";,
 link: "/edge-computing"};
 {title: "Blockchain Integration";
 description: "Integrate blockchain technology into your applications for enhanced security and transparency.";
 icon: <Key className="h-10 w-10 text-emerald-400" />;
-price: "$199/month";
-category: "Blockchain";
+price: "$199/month";,
+category: "Blockchain";,
 link: "/blockchain-integration"};
-{title: "IoT Device Management";
+{title: "IoT Device Management";,
 description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
 icon: <Network className="h-10 w-10 text-blue-400" />;
-price: "$0.50/device/month";
-category: "IoT Platform";
+price: "$0.50/device/month";,
+category: "IoT Platform";,
 link: "/iot-device-management"}
 ];
 return (
@@ -129,7 +129,7 @@ Micro SAAS Services;
 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">;
 Discover our comprehensive suite of micro SAAS solutions designed to accelerate your business growth and digital transformation.;
 </p>;
-</div>
+</div>;
 
 {/* Featured Services Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">;
@@ -144,11 +144,11 @@ className="h-full group hover:scale-105 transition-transform duration-300"
 <div className="flex justify-between items-start mb-4">;
 <div className="p-3 rounded-lg bg-black/20 backdrop-blur-sm">;
 {service.icon}
-</div>
+</div>;
 <Badge variant="secondary" className="bg-primary/20 text-primary">;
 {service.badge}
 </Badge>;
-</div>
+</div>;
 <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">;
 {service.title}
 </CardTitle>;
@@ -165,7 +165,7 @@ className="h-full group hover:scale-105 transition-transform duration-300"
 <span className="text-lg font-bold text-primary">;
 {service.price}
 </span>;
-</div>
+</div>;
 
 <ul className="space-y-2">;
 {service.features.map((feature; featureIndex) => (
@@ -184,10 +184,10 @@ className="h-full group hover:scale-105 transition-transform duration-300"
 <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
 </Link>;
 </Button>;
-</div>
+</div>;
 </FuturisticCard>;
 ))}
-</div>
+</div>;
 
 {/* Emerging Technologies */}
 <div className="text-center mb-12">;
@@ -199,7 +199,7 @@ Emerging Technologies;
 <p className="text-muted-foreground">;
 Stay ahead of the curve with cutting-edge technology solutions;
 </p>;
-</div>
+</div>;
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
 {emergingServices.map((service; index) => (
@@ -208,8 +208,8 @@ Stay ahead of the curve with cutting-edge technology solutions;
 <div className="flex justify-center mb-3">;
 <div className="p-2 rounded-lg bg-black/20">;
 {service.icon}
-</div>
-</div>
+</div>;
+</div>;
 <CardTitle className="text-lg text-center group-hover:text-primary transition-colors">;
 {service.title}
 </CardTitle>;
@@ -223,10 +223,10 @@ Stay ahead of the curve with cutting-edge technology solutions;
 <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded">;
 {service.category}
 </span>;
-</div>
+</div>;
 <div className="text-lg font-bold text-primary">;
 {service.price}
-</div>
+</div>;
 <Button asChild size="sm" className="w-full">;
 <Link to={service.link}>;
 Learn More;
@@ -235,7 +235,7 @@ Learn More;
 </CardContent>;
 </Card>;
 ))}
-</div>
+</div>;
 
 {/* CTA Section */}
 <div className="text-center mt-16">;
@@ -258,10 +258,10 @@ Explore All Services;
 Request Custom Quote;
 </Link>;
 </Button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </section>;
 );
 }<//section><///section>;

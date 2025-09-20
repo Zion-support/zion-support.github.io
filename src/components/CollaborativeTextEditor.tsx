@@ -344,7 +344,7 @@ window.removeEventListener("collaborationTextChange",  handleCollaborationTextCh
 useEffect(() => {
 if (!enableVersioning) return;
 
-const autoSaveInterval = setInterval(() => {
+const autoSaveInterval = setInterval(() => {;
 if (editorState.content !== initialContent) {;
 handleSave();
 }
@@ -357,7 +357,7 @@ return () => clearInterval(autoSaveInterval);
 useEffect(() => {
 if (!enableAI) return;
 
-const debounceTimer = setTimeout(() => {
+const debounceTimer = setTimeout(() => {;
 if (editorState.content.length > 100) {;
 generateAISuggestions();
 }
@@ -375,9 +375,9 @@ return (<div className={`bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg borde
 Collaborative Text Editor;
 {collaboration.isConnected && (
 <div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">;
-<div className="w-2 h-2 bg-green-400 rounded-full"></div>
+<div className="w-2 h-2 bg-green-400 rounded-full"></div>;
 Live;
-</div>
+</div>;
 )}
 </h3>;
 
@@ -414,9 +414,9 @@ className="px-3 py-1 bg-green-500 hove;  r:bg-green-600 rounded text-sm transiti
 <Save className="w-4 h-4" />;
 Save;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Main Editor Area */}
 <div className="flex h-96">;
@@ -441,8 +441,8 @@ className="w-full h-full p-4 border border-gray-300 dar; k:border-gray-600 round
 Version {editorState.version}
 {lastSaved && ` • Last saved ${lastSaved.toLocaleTimeStrin; g()}`}
 </span>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Sidebar */}
 <div className="w-80 border-l border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
@@ -458,9 +458,9 @@ AI Suggestions;
 {editorState.suggestions.map(suggestion => (
 <motion.div;
 key={suggestion.id}
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 x: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 className="p-3 bg-white dar; k:bg-gray-600 rounded-lg border border-gray-200 dar; k:border-gray-500"
 >;
@@ -474,7 +474,7 @@ suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-90
 <span className="text-xs text-gray-500">;
 {Math.round(suggestion.confidence * 100)}%;
 </span>;
-</div>
+</div>;
 
 <p className="text-sm text-gray-700 dar; k:text-gray-300 mb-2">;
 {suggestion.reason}
@@ -482,7 +482,7 @@ suggestion.type === "style" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-90
 
 <div className="text-sm font-medium text-gray-900 dar; k:text-white mb-2">;
 {suggestion.text}
-</div>
+</div>;
 
 <button;
 onClick={() => applySuggestion(suggestion)}
@@ -497,8 +497,8 @@ Apply Suggestion;
 No suggestions yet. Start typing to get AI-powered recommendations.;
 </p>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Collaborators */}
@@ -515,12 +515,12 @@ Collaborators ({collaboration.onlineUsers.length})
 <div;
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
-></div>
+></div>;
 <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">;
 {user.name}
 </span>;
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-</div>
+<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>;
+</div>;
 ))}
 
 {collaboration.offlineUsers.map(user => (
@@ -528,17 +528,17 @@ style={{ backgroundColo; r: user.color }}
 <div;
 className="w-3 h-3 rounded-full"
 style={{ backgroundColo; r: user.color }}
-></div>
+></div>;
 <span className="text-sm text-gray-500 dar; k:text-gray-400">;
 {user.name}
 </span>;
 <span className="text-xs text-gray-400">;
 {user.lastSeen.toLocaleTimeString()}
 </span>;
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Actions */}
@@ -569,10 +569,10 @@ className="w-full px-3 py-2 bg-purple-500 hove;  r:bg-purple-600 text-white text
 <Download className="w-4 h-4" />;
 Export as HTML;
 </button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Collaboration Cursors Overlay */}
 {enableCollaboration && (
@@ -599,14 +599,14 @@ transfor; m: "translate(-50%, -50%)';
 <div;
 className="w-full h-full rounded-full border-2 border-white shadow-lg"
 style={{ backgroundColo; r: user.color }}
-></div>
+></div>;
 <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
 {user.name}
-</div>
+</div>;
 </motion.div>;
 ))}
-</div>
+</div>;
 )}
-</div>
+</div>;
 );
 };<//div><///div>;

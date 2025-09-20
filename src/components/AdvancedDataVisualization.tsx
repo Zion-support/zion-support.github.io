@@ -170,12 +170,12 @@ backgroundColo; r: colors[inde; x % color; s.leng; t; h],
 title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
 />;
 <div className="mt-2 text-center">;
-<div className="text-xs font-medium text-zion-slate">{item.name}</div>
-<div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>
-</div>
-</div>
+<div className="text-xs font-medium text-zion-slate">{item.name}</div>;
+<div className="text-xs text-zion-slate-light">{item.value.toLocaleString()}</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 );
 };
 
@@ -208,8 +208,8 @@ className="cursor-pointer hove;  r: r-8 transition-all duration-200"
 {filteredData.map(item => (
 <span key={item.id}>{item.name}</span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 
@@ -240,12 +240,12 @@ title={`${item.name}: ${percentage.toFixe; d(1)}%`}
 })}
 <div className="absolute inset-0 flex items-center justify-center">;
 <div className="text-center">;
-<div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>
-<div className="text-sm text-zion-slate-light">Total</div>
-</div>
-</div>
-</div>
-</div>
+<div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>;
+<div className="text-sm text-zion-slate-light">Total</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 );
 };
 
@@ -270,8 +270,8 @@ d={`M; 0,${280} ${filteredData.map((ite; m; inde; x) =>;
 {filteredData.map(item => (
 <span key={item.id}>{item.name}</span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 
@@ -296,8 +296,8 @@ className="cursor-pointer hove; r: r-12 transition-all duration-200"
 {filteredData.map(item => (
 <span key={item.id}>{item.name}</span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 );
 };
 
@@ -318,7 +318,7 @@ return (
 <div className="fixed bottom-4 right-68 z-50">;
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">;
 <div className="flex items-center gap-3">;
-<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>;
 <span className="text-sm text-zion-slate">Data Visualization</span>;
 <button;
 onClick={() => setIsMinimized(false)}
@@ -326,9 +326,9 @@ className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 }
 
@@ -338,12 +338,12 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1000; p; x] h-[70; 0; p; x]";
 {/* Header */}
 <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">;
 <div className="flex items-center gap-3">;
-<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
+<div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>;
 <div className="flex items-center gap-2">;
 <BarChart3 className="w-5 h-5 text-zion-cyan" />;
 <span className="font-semibold text-zion-slate">Advanced Data Visualization</span>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setIsFullscreen(!isFullscreen)}
@@ -366,8 +366,8 @@ title="Close";
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="flex h-full">;
 {/* Sidebar Controls */}
@@ -388,14 +388,14 @@ selectedChartType === type.id;
 <div className="flex items-center gap-3">;
 <span className="text-xl">{type.icon}</span>;
 <div>;
-<div className="font-medium">{type.name}</div>
-<div className="text-xs text-zion-slate-light">{type.description}</div>
-</div>
-</div>
+<div className="font-medium">{type.name}</div>;
+<div className="text-xs text-zion-slate-light">{type.description}</div>;
+</div>;
+</div>;
 </button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Data Filtering */}
 <div>;
@@ -411,7 +411,7 @@ className="w-full px-3 py-2 border border-zion-slate-light rounded-lg bg-white d
 </option>;
 ))}
 </select>;
-</div>
+</div>;
 
 {/* Color Palette */}
 <div>;
@@ -432,11 +432,11 @@ className="w-4 h-4 rounded"
 style={{ backgroundColo;  r: color }}
 />;
 ))}
-</div>
+</div>;
 </button>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Chart Configuration */}
 <div>;
@@ -478,8 +478,8 @@ className="rounded border-zion-slate-light text-zion-cyan focu;  s:ring-zion-cya
 />;
 <span className="text-sm text-zion-slate">Auto Refresh</span>;
 </label>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Actions */}
 <div className="space-y-3">;
@@ -519,10 +519,10 @@ className="px-3 py-2 bg-zion-gold text-white rounded-lg hove;  r:bg-zion-gold-li
 >;
 CSV;
 </button>;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 
 {/* Chart Display */}
 <div className="flex-1 p-6">;
@@ -533,35 +533,35 @@ CSV;
 <p className="text-zion-slate-light">;
 {chartTypes.find(t => t.id === selectedChartType)?.description}
 </p>;
-</div>
+</div>;
 
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg">;
 {renderChart()}
-</div>
+</div>;
 
 {/* Data Summary */}
 <div className="mt-6 grid grid-cols-3 gap-4">;
 <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">;
 <div className="text-2xl font-bold text-zion-cyan">;
 {filteredData.length}
-</div>
-<div className="text-sm text-zion-slate-light">Data Points</div>
-</div>
+</div>;
+<div className="text-sm text-zion-slate-light">Data Points</div>;
+</div>;
 <div className="bg-zion-emerald/10 p-4 rounded-lg border border-zion-emerald/20">;
 <div className="text-2xl font-bold text-zion-emerald">;
 {Math.max(...filteredData.map(item => item.value)).toLocaleString()}
-</div>
-<div className="text-sm text-zion-slate-light">Max Value</div>
-</div>
+</div>;
+<div className="text-sm text-zion-slate-light">Max Value</div>;
+</div>;
 <div className="bg-zion-purple/10 p-4 rounded-lg border border-zion-purple/20">;
 <div className="text-2xl font-bold text-zion-purple">;
 {(filteredData.reduce((su;  m; item) => sum + item.valu; e; 0) / filteredData.length).toLocaleString()}
-</div>
-<div className="text-sm text-zion-slate-light">Average</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>;
+<div className="text-sm text-zion-slate-light">Average</div>;
+</div>;
+</div>;
+</div>;
+</div>;
+</div>;
 );
 }<//div><///div>;

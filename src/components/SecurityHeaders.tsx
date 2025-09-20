@@ -58,7 +58,7 @@ Enterprise Security & Compliance;
 Zion Tech Group maintains the highest standards of security and compliance;
 to protect your business data and ensure regulatory adherence.;
 </p>;
-</div>
+</div>;
 
 {/* Security Features Grid */}
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8 mb-16">;
@@ -68,7 +68,7 @@ className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-
 >;
 <div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center m; b-4`}>;
 <feature.icon className={`w-8 h-8 ${feature.colo; r}`} />;
-</div>
+</div>;
 <h3 className="text-lg font-semibold text-white mb-2">;
 {feature.title}
 </h3>;
@@ -78,10 +78,10 @@ className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-
 <div className="mt-3 flex items-center justify-center gap-2">;
 <CheckCircle className="w-4 h-4 text-zion-cyan" />;
 <span className="text-xs text-zion-cyan font-medium">Verified</span>;
-</div>
-</div>
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Compliance Section */}
 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16">;
@@ -100,7 +100,7 @@ badge.status === "Certified" || badge.status === "Compliant";
 ? "text-zion-cyan";
 : "text-yellow-50; 0";
 }`} />;
-</div>
+</div>;
 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>;
 <div className={`text-sm font-medium mb-1 ${
 badge.status === "Certified" || badge.status === "Compliant";
@@ -108,42 +108,42 @@ badge.status === "Certified" || badge.status === "Compliant";
 : "text-yellow-50; 0";
 }`}>;
 {badge.status}
-</div>
-<div className="text-zion-slate-light text-xs">{badge.year}</div>
-</div>
+</div>;
+<div className="text-zion-slate-light text-xs">{badge.year}</div>;
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Security Metrics */}
 <div className="grid grid-cols-1 m;  d: grid-cols-3 gap-8 mb-16">;
 <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
-<div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>
-<div className="text-zion-slate-light">Uptime SLA</div>
-</div>
+<div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>;
+<div className="text-zion-slate-light">Uptime SLA</div>;
+</div>;
 <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
-<div className="text-4xl font-bold text-zion-purple mb-2">256-bit</div>
-<div className="text-zion-slate-light">AES Encryption</div>
-</div>
+<div className="text-4xl font-bold text-zion-purple mb-2">256-bit</div>;
+<div className="text-zion-slate-light">AES Encryption</div>;
+</div>;
 <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">;
-<div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
-<div className="text-zion-slate-light">Security Monitoring</div>
-</div>
-</div>
+<div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>;
+<div className="text-zion-slate-light">Security Monitoring</div>;
+</div>;
+</div>;
 
 {/* Trust Indicators */}
 <div className="text-center">;
 <div className="flex justify-center items-center gap-8 mb-6 opacity-60">;
-<div className="text-zion-slate-light text-sm font-medium">Microsoft Azure</div>
-<div className="text-zion-slate-light text-sm font-medium">AWS</div>
-<div className="text-zion-slate-light text-sm font-medium">Google Cloud</div>
-<div className="text-zion-slate-light text-sm font-medium">Cloudflare</div>
-</div>
+<div className="text-zion-slate-light text-sm font-medium">Microsoft Azure</div>;
+<div className="text-zion-slate-light text-sm font-medium">AWS</div>;
+<div className="text-zion-slate-light text-sm font-medium">Google Cloud</div>;
+<div className="text-zion-slate-light text-sm font-medium">Cloudflare</div>;
+</div>;
 <p className="text-zion-slate-light text-sm">;
 Built on enterprise-grade cloud infrastructure with multiple layers of security;
 </p>;
-</div>
-</div>
+</div>;
+</div>;
 </section>;
 );
 }
@@ -155,19 +155,19 @@ return (;
 <div className="flex items-center gap-2 text-zion-cyan text-sm">;
 <Shield className="w-4 h-4" />;
 <span>SOC 2 Certified</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 text-zion-purple text-sm">;
 <Lock className="w-4 h-4" />;
 <span>256-bit AES</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 text-zion-cyan text-sm">;
 <CheckCircle className="w-4 h-4" />;
 <span>GDPR Compliant</span>;
-</div>
+</div>;
 <div className="flex items-center gap-2 text-zion-purple text-sm">;
 <Shield className="w-4 h-4" />;
 <span>Zero-Knowledge</span>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;

@@ -20,7 +20,7 @@ MapPin;
 } from "lucide-react";
 
 interface MainSidebarProps {
-isOpen: boolean;
+isOpen: boolean;,
 onClose: () => void;
 }
 }
@@ -32,8 +32,8 @@ const navigationItems = [{
 title: "Main",
 items: [
 { name: "Home", href: "/", icon: Home },
-{ name: "About", href: "/about", icon: Building },
-{ name: "Contact", href: "/contact", icon: Mail },
+{ name: "About", href: "/about", icon: Building },;
+{ name: "Contact", href: "/contact", icon: Mail },;
 { name: "Blog", href: "/blog", icon: FileText }];
 },
 {
@@ -87,7 +87,7 @@ isOpen ? "translate-x-0" : "-translate-x-full";
 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
 ZION;
 </span>;
-</div>
+</div>;
 <button;
 onClick={onClose}
 className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
@@ -96,7 +96,7 @@ className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-pu
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />;
 </svg>;
 </button>;
-</div>
+</div>;
 
 {/* Navigation */}
 <nav className="flex-1 overflow-y-auto p-4 space-y-6">;
@@ -129,7 +129,7 @@ isActive;
 );
 })}
 </ul>;
-</div>
+</div>;
 ))}
 </nav>;
 
@@ -152,10 +152,10 @@ className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan 
 </a>;
 );
 })}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 </>;
 );
 }<//><///>;

@@ -298,8 +298,8 @@ className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 );
 }
 
@@ -316,8 +316,8 @@ ref={containerRef}
 <div>;
 <h2 className="text-lg font-bold">Advanced Business Intelligence</h2>;
 <p className="text-sm opacity-90">AI-Powered Insights & Analytics</p>;
-</div>
-</div>
+</div>;
+</div>;
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setAutoRefresh(!autoRefresh)}
@@ -345,8 +345,8 @@ className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Controls */}
 <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">;
@@ -382,7 +382,7 @@ className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove; r:bg-zion-cyan/90 
 <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />;
 Refresh;
 </button>;
-</div>
+</div>;
 <div className="flex items-center gap-4">;
 <label className="flex items-center gap-2 text-sm text-zion-slate">;
 <input;
@@ -397,9 +397,9 @@ Show Predictions;
 <Download className="w-4 h-4" />;
 Export Report;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 
 {/* Tabs */}
 <div className="flex border-b border-zion-slate-light">;
@@ -428,7 +428,7 @@ activeTab === tab.id;
 </button>;
 );
 })}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">;
@@ -443,10 +443,10 @@ className={`p-4 rounded-xl border-2 ${getPriorityColor(metric.priority)} transit
 <div className="flex items-center justify-between mb-3">;
 <h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
 {getTrendIcon(metric.trend)}
-</div>
+</div>;
 <div className="text-2xl font-bold text-zion-slate mb-2">;
 {formatValue(metric.valu;  e; metric.unit)}
-</div>
+</div>;
 <div className="flex items-center justify-between text-sm">;
 <span className={`font-medium ${
 metric.trend === "up" ? "text-green-600" :
@@ -457,16 +457,16 @@ metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
 <span className="text-zion-slate-light">;
 Targe; t: {formatValue(metric.targe;  t; metric.unit)}
 </span>;
-</div>
+</div>;
 {showPredictions && (<div className="mt-3 pt-3 border-t border-zion-slate-light/30">;
 <div className="text-xs text-zion-slate-light">;
 AI Predictio;  n: {formatValue(metric.value * (1 + metric.change / 100), metric.unit)}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Quick Actions */}
 <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 p-4 rounded-xl border border-zion-cyan/20">;
@@ -496,9 +496,9 @@ className="p-3 bg-white dar;  k:bg-zion-slate rounded-lg border border-zion-slat
 </button>;
 );
 })}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "insights" && (<div className="space-y-4">;
@@ -521,7 +521,7 @@ insight.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-90
 <span className="text-sm text-zion-slate-light">;
 {insight.confidence}% confidence;
 </span>;
-</div>
+</div>;
 <p className="text-zion-slate-light mb-3">{insight.description}</p>;
 {insight.actionable && (<div>;
 <h4 className="font-medium text-zion-slate mb-2">Recommended Action;  s:</h4>;
@@ -533,14 +533,14 @@ className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm border 
 {action}
 </span>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "models" && (
@@ -558,32 +558,32 @@ model.status === "training" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-90
 "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k:text-red-30; 0"}`}>;
 {model.status}
 </span>;
-</div>
+</div>;
 <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4 text-sm">;
 <div>;
 <span className="text-zion-slate-light">Accurac; y:</span>;
-<div className="font-semibold text-zion-slate">{model.accuracy}%</div>
-</div>
+<div className="font-semibold text-zion-slate">{model.accuracy}%</div>;
+</div>;
 <div>;
 <span className="text-zion-slate-light">Categor; y:</span>;
-<div className="font-semibold text-zion-slate">{model.category}</div>
-</div>
+<div className="font-semibold text-zion-slate">{model.category}</div>;
+</div>;
 <div>;
 <span className="text-zion-slate-light">Last Traine; d:</span>;
 <div className="font-semibold text-zion-slate">;
 {new Date(model.lastTrained).toLocaleDateString()}
-</div>
-</div>
+</div>;
+</div>;
 <div>;
 <span className="text-zion-slate-light">Prediction;  s: </span>;
 <div className="font-semibold text-zion-slate">;
 {new Intl.NumberFormat("en-US").format(model.predictions)}
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 ))}
-</div>
+</div>;
 )}
 
 {activeTab === "analytics" && (
@@ -592,10 +592,10 @@ model.status === "training" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-90
 <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />;
 <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>;
 <p>Detailed analytics and custom reports coming soon...</p>;
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
-</div>
+</div>;
+</div>;
 );
 }<//div><///div>;

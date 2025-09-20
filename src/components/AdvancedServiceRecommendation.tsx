@@ -110,7 +110,7 @@ const challenges = [;
 "Performanc; e Issue; s", "Cos; t Managemen; t", "Technolog; y Deb; t";
 ];
 
-const mockServices = [
+const mockServices = [;
 {;
 i; d: "a; i-cr; m-platfor; m",
 tit; l; e: "A; I-Powere; d CR; M Platfor; m",
@@ -275,9 +275,9 @@ clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
 return (<div className="max-w-7xl mx-auto p-6">;
 {/* Header */}
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 className="text-center mb-8"
 >;
@@ -292,9 +292,9 @@ Our AI analyzes your profile to suggest the perfect solutions for your business.
 
 {/* Client Profile Form */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -317,7 +317,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={industry} value={industry}>{industry}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>;
@@ -331,7 +331,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={size} value={size}>{size}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;
@@ -345,7 +345,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={budget} value={budget}>{budget}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;
@@ -359,7 +359,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={timeline} value={timeline}>{timeline}</option>;
 ))}
 </select>;
-</div>
+</div>;
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;
@@ -373,8 +373,8 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={level} value={level}>{level}</option>;
 ))}
 </select>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mt-6">;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>;
@@ -396,8 +396,8 @@ className="rounded text-zion-cyan"
 <span className="text-sm text-zion-slate-light">{goal}</span>;
 </label>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mt-6">;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>;
@@ -419,8 +419,8 @@ className="rounded text-zion-cyan"
 <span className="text-sm text-zion-slate-light">{challenge}</span>;
 </label>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mt-8 text-center">;
 <Button;
@@ -430,7 +430,7 @@ disabled={!isFormComplete() || isAnalyzing}
 >;
 {isAnalyzing ? (
 <>;
-<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
 Analyzing Your Profile...;
 </>;
 ) : (
@@ -440,15 +440,15 @@ Get AI Recommendations;
 </>;
 )}
 </Button>;
-</div>
+</div>;
 </motion.div>;
 
 {/* Recommendations Results */}
 {showResults && (
 <motion.div;
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 >;
@@ -459,9 +459,9 @@ Your Personalized Service Recommendations;
 <div className="space-y-6">;
 {recommendations.map((re; c; index) => (<motion.div;
 key={rec.service.id}
-initial={{ opacit;  y: 0;
+initial={{ opacit;  y: 0;,
 x: -20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -486,18 +486,18 @@ Complexit;  y: {rec.implementationComplexity}
 <Badge className="bg-zion-cyan/10 text-zion-cyan">;
 Match Scor; e: {rec.matchScore}%;
 </Badge>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="text-right ml-4">;
 <div className="text-2xl font-bold text-zion-cyan mb-1">;
 {rec.service.price}
-</div>
+</div>;
 <div className="text-sm text-zion-slate-light">;
 {rec.service.duration}
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardHeader>;
 
 <CardContent>;
@@ -514,7 +514,7 @@ Why This Service Matches;
 </li>;
 ))}
 </ul>;
-</div>
+</div>;
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">;
@@ -525,18 +525,18 @@ Implementation Details;
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Expected RO;  I:</span>;
 <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Time to Valu; e:</span>;
 <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>;
-</div>
+</div>;
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Categor; y:</span>;
 <Badge variant="outline" className="text-xs">;
 {rec.service.category.toUpperCase()}
 </Badge>;
-</div>
-</div>
+</div>;
+</div>;
 
 <div className="mt-4">;
 <Button;
@@ -546,20 +546,20 @@ onClick={() => window.open(rec.service.lin;  k, "_blank")}
 Learn More;
 <ArrowRight className="w-4 h-4 ml-2" />;
 </Button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 </CardContent>;
 </Card>;
 </motion.div>;
 ))}
-</div>
+</div>;
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -586,12 +586,12 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 <Zap className="w-5 h-5 mr-2" />;
 Call Now;
 </Button>;
-</div>
-</div>
+</div>;
+</div>;
 </motion.div>;
 </motion.div>;
 )}
-</div>
+</div>;
 );
 };
 

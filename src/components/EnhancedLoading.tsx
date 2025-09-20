@@ -41,7 +41,7 @@ dela; y: i * 0.2;
 }}
 />;
 ))}
-</div>
+</div>;
 );
 const renderPulse: any = () => (;
 <motion.div;
@@ -70,7 +70,7 @@ dela; y: i * 0.1;
 }}
 />;
 ))}
-</div>
+</div>;
 );
 const renderVariant: any = () => {
 switch (variant) {
@@ -96,7 +96,7 @@ transition={{ dela; y: 0.3 }}
 {text}
 </motion.p>;
 )}
-</div>
+</div>;
 );
 };
 

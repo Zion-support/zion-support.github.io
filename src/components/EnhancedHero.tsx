@@ -53,7 +53,7 @@ ic; o; n: "☁️"}
 useEffect(() => {
 if (!isAutoPlaying) return;
 
-const interval = setInterval(() => {
+const interval = setInterval(() => {;
 if (isPlaying) {;
 setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
 }
@@ -94,7 +94,7 @@ return (
 {/* Background Video/Image Placeholder */}
 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">;
 <div className="absolute inset-0 bg-black/50" />;
-</div>
+</div>;
 
 {/* Hero Content */}
 <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m:px-6 l; g:px-8">;
@@ -102,11 +102,11 @@ return (
 <AnimatePresence mode="wait">;
 <motion.div;
 key={currentSlide}
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 20 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
-exit={{ opacit; y: 0;
+exit={{ opacit; y: 0;,
 y: -20 }}
 transition={{ duratio; n: 0.5 }}
 className="space-y-6"
@@ -126,9 +126,9 @@ className="text-8xl mb-6"
 
 {/* Title */}
 <motion.h1;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.3 }}
@@ -139,9 +139,9 @@ className="text-4xl s; m:text-5xl l; g:text-7xl font-bold text-white leading-tig
 
 {/* Subtitle */}
 <motion.h2;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.4 }}
@@ -152,9 +152,9 @@ className="text-2xl s; m:text-3xl l; g:text-4xl font-semibold text-blue-300 lead
 
 {/* Description */}
 <motion.p;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.5 }}
@@ -165,9 +165,9 @@ className="text-lg s; m:text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto le
 
 {/* CTA Button */}
 <motion.div;
-initial={{ opacit; y: 0;
+initial={{ opacit; y: 0;,
 y: 30 }}
-animate={{ opacit; y: 1;
+animate={{ opacit; y: 1;,
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.6 }}
@@ -190,8 +190,8 @@ className="ml-2"
 </motion.div>;
 </motion.div>;
 </AnimatePresence>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Navigation Controls */}
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">;
@@ -225,8 +225,8 @@ isAutoPlaying;
 >;
 Auto-play {isAutoPlaying ? "ON" : "OFF"}
 </button>;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Slide Indicators */}
 <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">;
@@ -241,8 +241,8 @@ index === currentSlide;
 aria-label={`Go to slide ${inde; x + 1}`}
 />;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Navigation Arrows */}
 <button;
@@ -265,9 +265,9 @@ aria-label="Next slide";
 <div className="absolute top-4 right-4 z-20">;
 <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">;
 <p>Use ← → keys or click to navigate</p>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 );
 };
 

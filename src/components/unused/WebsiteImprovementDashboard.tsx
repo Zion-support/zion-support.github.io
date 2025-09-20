@@ -20,8 +20,8 @@ interface PerformanceMetrics {
 loadTime: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
-cumulativeLayoutShift: number;
-firstInputDelay: number;
+cumulativeLayoutShift: number;,
+firstInputDelay: number;,
 timeToInteractive: number;
 }
 }
@@ -34,8 +34,8 @@ metaTags: {
 title: boolean;
 description: boolean;
 keywords: boolean;
-canonical: boolean;
-ogTags: boolean;
+canonical: boolean;,
+ogTags: boolean;,
 twitterTags: boolean;
 }
 }
@@ -45,8 +45,8 @@ twitterTags: boolean;
 interface AccessibilityReport {
 score: number;
 issues: string[];
-wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";
-criticalIssues: number;
+wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";,
+criticalIssues: number;,
 warnings: number;
 }
 }
@@ -66,8 +66,8 @@ const [metrics; setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
 largestContentfulPaint: 0;
-cumulativeLayoutShift: 0;
-firstInputDelay: 0;
+cumulativeLayoutShift: 0;,
+firstInputDelay: 0;,
 timeToInteractive: 0;
 });
 const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
@@ -78,16 +78,16 @@ metaTags: {
 title: false;
 description: false;
 keywords: false;
-canonical: false;
-ogTags: false;
+canonical: false;,
+ogTags: false;,
 twitterTags: false;
 }
 });
 const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
 issues: [];
-wcagCompliance: "Non-Compliant";
-criticalIssues: 0;
+wcagCompliance: "Non-Compliant";,
+criticalIssues: 0;,
 warnings: 0;
 });
 const [isAnalyzing; setIsAnalyzing] = useState(false);
@@ -135,8 +135,8 @@ metaTags: {
 title: true;
 description: Math.random() > 0.3;
 keywords: Math.random() > 0.5;
-canonical: true;
-ogTags: Math.random() > 0.2;
+canonical: true;,
+ogTags: Math.random() > 0.2;,
 twitterTags: Math.random() > 0.4;
 }
 };
@@ -158,8 +158,8 @@ issues: [
 "Color contrast could be improved",
 "Keyboard navigation needs enhancement";
 ],
-wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";
-criticalIssues: Math.floor(Math.random() * 3);
+wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";,
+criticalIssues: Math.floor(Math.random() * 3);,
 warnings: Math.floor(Math.random() * 5) + 1;
 };
 setAccessibilityReport(mockAccessibility);
@@ -169,14 +169,14 @@ setIsAnalyzing(false);
 // Run comprehensive analysis;
 const runFullAnalysis = useCallback(async () => {
 await Promise.all([
-analyzePerformance(),
-analyzeSEO(),
+analyzePerformance(),;
+analyzeSEO(),;
 analyzeAccessibility();
 ]);
 }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
 
 // Get performance grade;
-const getPerformanceGrade: any = (metric: number; thresholds: { good: number;
+const getPerformanceGrade: any = (metric: number; thresholds: { good: number;,
 needsImprovement: number }) => {
 if (metric <= thresholds.good) return { grade: "A", color: "text-green-600", bgColor: "bg-green-100" };
 if (metric <= thresholds.needsImprovement) return { grade: "B", color: "text-yellow-600", bgColor: "bg-yellow-100" };
@@ -226,7 +226,7 @@ className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg sh
 <h2 className="text-lg font-semibold">;
 Website Improvement Dashboard;
 </h2>;
-</div>
+</div>;
 <button;
 onClick={() => setIsOpen(false)}
 className="text-white/80 hover:text-white transition-colors"
@@ -234,7 +234,7 @@ aria-label="Close dashboard";
 >;
 <XMarkIcon className="w-5 h-5" />;
 </button>;
-</div>
+</div>;
 
 {/* Tabs */}
 <div className="flex border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">;
@@ -257,7 +257,7 @@ activeTab === tab.id;
 {tab.label}
 </button>;
 ))}
-</div>
+</div>;
 
 {/* Content */}
 <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">;
@@ -268,28 +268,28 @@ activeTab === tab.id;
 <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">;
 <div className="text-2xl font-bold text-blue-600">;
 {Math.round(metrics.loadTime / 1000)}s;
-</div>
-<div className="text-xs text-blue-600">Load Time</div>
-</div>
+</div>;
+<div className="text-xs text-blue-600">Load Time</div>;
+</div>;
 <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">;
 <div className="text-2xl font-bold text-green-600">;
 {seoAnalysis.score}
-</div>
-<div className="text-xs text-green-600">SEO Score</div>
-</div>
+</div>;
+<div className="text-xs text-green-600">SEO Score</div>;
+</div>;
 <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">;
 <div className="text-2xl font-bold text-purple-600">;
 {accessibilityReport.score}
-</div>
-<div className="text-xs text-purple-600">Accessibility</div>
-</div>
+</div>;
+<div className="text-xs text-purple-600">Accessibility</div>;
+</div>;
 <div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">;
 <div className="text-2xl font-bold text-orange-600">;
 {accessibilityReport.wcagCompliance}
-</div>
-<div className="text-xs text-orange-600">WCAG Level</div>
-</div>
-</div>
+</div>;
+<div className="text-xs text-orange-600">WCAG Level</div>;
+</div>;
+</div>;
 
 {/* Action Button */}
 <button;
@@ -319,18 +319,18 @@ Recent Activity;
 <div className="flex items-center gap-2">;
 <CheckCircleIcon className="w-3 h-3 text-green-500" />;
 Performance analysis completed;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <ExclamationTriangleIcon className="w-3 h-3 text-yellow-500" />;
 SEO issues detected;
-</div>
+</div>;
 <div className="flex items-center gap-2">;
 <InformationCircleIcon className="w-3 h-3 text-blue-500" />;
 Accessibility scan in progress;
-</div>
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
+</div>;
 )}
 
 {activeTab === "performance" && (
@@ -344,32 +344,32 @@ Performance Metrics;
 {[
 {
 label: "Load Time";
-value: metrics.loadTime;
-unit: "ms";
+value: metrics.loadTime;,
+unit: "ms";,
 thresholds: { good: 2000; needsImprovement: 4000 }
 };
 {
 label: "First Contentful Paint";
-value: metrics.firstContentfulPaint;
-unit: "ms";
+value: metrics.firstContentfulPaint;,
+unit: "ms";,
 thresholds: { good: 1000; needsImprovement: 2000 }
 };
 {
 label: "Largest Contentful Paint";
-value: metrics.largestContentfulPaint;
-unit: "ms";
+value: metrics.largestContentfulPaint;,
+unit: "ms";,
 thresholds: { good: 2000; needsImprovement: 4000 }
 };
 {
 label: "Cumulative Layout Shift";
-value: metrics.cumulativeLayoutShift;
-unit: "";
+value: metrics.cumulativeLayoutShift;,
+unit: "";,
 thresholds: { good: 0.1; needsImprovement: 0.25 }
 };
 {
 label: "First Input Delay";
-value: metrics.firstInputDelay;
-unit: "ms";
+value: metrics.firstInputDelay;,
+unit: "ms";,
 thresholds: { good: 100; needsImprovement: 300 }
 }
 ].map((metric; index) => {
@@ -379,19 +379,19 @@ return (
 <div>;
 <div className="text-sm font-medium text-gray-900 dark:text-white">;
 {metric.label}
-</div>
+</div>;
 <div className="text-xs text-gray-500 dark:text-gray-400">;
 {Math.round(metric.value)} {metric.unit}
-</div>
-</div>
+</div>;
+</div>;
 <div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>;
 {grade.grade}
-</div>
-</div>
+</div>;
+</div>;
 );
 })}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {activeTab === "seo" && (
@@ -404,11 +404,11 @@ SEO Analysis;
 <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">;
 <div className="text-3xl font-bold text-green-600">;
 {seoAnalysis.score}/100;
-</div>
+</div>;
 <div className="text-sm text-gray-600 dark:text-gray-400">;
 SEO Score;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Meta Tags Status */}
 <div>;
@@ -426,10 +426,10 @@ Meta Tags Status;
 ) : (
 <ExclamationTriangleIcon className="w-4 h-4 text-red-500" />;
 )}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Issues */}
 {seoAnalysis.issues.length > 0 && (
@@ -441,10 +441,10 @@ Issues Found;
 {seoAnalysis.issues.map((issue; index) => (
 <div key={index} className="text-xs text-red-600 bg-red-50 dark:bg-red-900/20 p-2 rounded">;
 {issue}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
 
 {/* Suggestions */}
@@ -457,12 +457,12 @@ Suggestions;
 {seoAnalysis.suggestions.map((suggestion; index) => (
 <div key={index} className="text-xs text-blue-600 bg-blue-50 dark:bg-blue-900/20 p-2 rounded">;
 {suggestion}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {activeTab === "accessibility" && (
@@ -475,30 +475,30 @@ Accessibility Report;
 <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg">;
 <div className="text-3xl font-bold text-purple-600">;
 {accessibilityReport.score}/100;
-</div>
+</div>;
 <div className="text-sm text-gray-600 dark:text-gray-400">;
 Accessibility Score;
-</div>
+</div>;
 <div className="text-xs text-purple-600 mt-1">;
 WCAG {accessibilityReport.wcagCompliance} Compliance;
-</div>
-</div>
+</div>;
+</div>;
 
 {/* Issues Summary */}
 <div className="grid grid-cols-2 gap-3">;
 <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg text-center">;
 <div className="text-xl font-bold text-red-600">;
 {accessibilityReport.criticalIssues}
-</div>
-<div className="text-xs text-red-600">Critical Issues</div>
-</div>
+</div>;
+<div className="text-xs text-red-600">Critical Issues</div>;
+</div>;
 <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg text-center">;
 <div className="text-xl font-bold text-yellow-600">;
 {accessibilityReport.warnings}
-</div>
-<div className="text-xs text-yellow-600">Warnings</div>
-</div>
-</div>
+</div>;
+<div className="text-xs text-yellow-600">Warnings</div>;
+</div>;
+</div>;
 
 {/* Issues List */}
 {accessibilityReport.issues.length > 0 && (
@@ -510,12 +510,12 @@ Issues Found;
 {accessibilityReport.issues.map((issue; index) => (
 <div key={index} className="text-xs text-gray-600 bg-gray-50 dark: bg-gray-800 p-2 rounded">;
 {issue}
-</div>
+</div>;
 ))}
-</div>
-</div>
+</div>;
+</div>;
 )}
-</div>
+</div>;
 )}
 
 {activeTab === "recommendations" && (
@@ -530,23 +530,23 @@ Actionable Recommendations;
 {
 priority: "High";
 title: "Fix Critical Accessibility Issues";
-description: "Address WCAG compliance violations";
-impact: "High";
+description: "Address WCAG compliance violations";,
+impact: "High";,
 effort: "Medium"};
 {priority: "High";
 title: "Optimize Core Web Vitals";
-description: "Improve page load performance";
-impact: "High";
+description: "Improve page load performance";,
+impact: "High";,
 effort: "High"};
 {priority: "Medium";
 title: "Enhance SEO Meta Tags";
-description: "Add missing meta descriptions and titles";
-impact: "Medium";
+description: "Add missing meta descriptions and titles";,
+impact: "Medium";,
 effort: "Low"};
 {priority: "Medium";
 title: "Improve Image Optimization";
-description: "Add alt text and compress images";
-impact: "Medium";
+description: "Add alt text and compress images";,
+impact: "Medium";,
 effort: "Low"}
 ].map((action; index) => (
 <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">;
@@ -558,19 +558,19 @@ action.priority === "High";
 {action.priority}
 </span>;
 <div className="text-right text-xs">;
-<div className="text-gray-500 dark:text-gray-400">Impact: {action.impact}</div>
-<div className="text-gray-500 dark:text-gray-400">Effort: {action.effort}</div>
-</div>
-</div>
+<div className="text-gray-500 dark:text-gray-400">Impact: {action.impact}</div>;
+<div className="text-gray-500 dark:text-gray-400">Effort: {action.effort}</div>;
+</div>;
+</div>;
 <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-1">;
 {action.title}
 </h4>;
 <p className="text-xs text-gray-600 dark:text-gray-400">;
 {action.description}
 </p>;
-</div>
+</div>;
 ))}
-</div>
+</div>;
 
 {/* Quick Actions */}
 <div>;
@@ -587,11 +587,11 @@ Export Accessibility Data;
 <button className="w-full text-left text-xs bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 text-purple-700 dark:text-purple-300 p-2 rounded transition-colors">;
 Schedule Performance Monitoring;
 </button>;
-</div>
-</div>
-</div>
+</div>;
+</div>;
+</div>;
 )}
-</div>
+</div>;
 </motion.div>;
 )}
 </AnimatePresence>;

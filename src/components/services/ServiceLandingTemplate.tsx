@@ -1,27 +1,27 @@
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card; CardContent, CardFooter } from "@/components/ui/card";
 export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
+title: string;,
+description: string;
+icon?: React.ReactNode;
 }
 
 export interface Testimonial {
-  name: string;
-  role?: string;
-  text: string;
-  avatar?: string;
+name: string;
+role?: string;,
+text: string;
+avatar?: string;
 }
 
 interface ServiceLandingTemplateProps {
-  title: string;
-  subtitle: string;
-  heroImage?: string;
-  description: string;
-  benefits: Benefit[];
-  ctaText: string;
-  ctaLink: string;
-  testimonials?: Testimonial[];
+title: string;
+subtitle: string;
+heroImage?: string;
+description: string;
+benefits: Benefit[];,
+ctaText: string;,
+ctaLink: string;
+testimonials?: Testimonial[];
 }
