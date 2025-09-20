@@ -13,7 +13,7 @@ export function AppWrapper({ children }: AppWrapperProps) {
         <AccessibilityEnhancer>
           {children}
         </AccessibilityEnhancer>
-      </PerformanceOptimizer>
+      </PerformanceOptimizer>;
     </ErrorBoundary>;
   );
-}<//ErrorBoundary>
+}<//ErrorBoundary><///ErrorBoundary>

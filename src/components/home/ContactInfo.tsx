@@ -16,7 +16,7 @@ import { Phone;
 } from "lucide-react, ";
 
 export function ContactInfo() {
-  const contactMethods = [
+  const contactMethods = [;
     {;
       title: "Phone Support";
       description: "Speak directly with our technical experts";
@@ -220,4 +220,4 @@ export function ContactInfo() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

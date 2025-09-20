@@ -158,4 +158,4 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
       </CardContent>
     </Card>
   );
-}<//Card>
+}<//Card><///Card>

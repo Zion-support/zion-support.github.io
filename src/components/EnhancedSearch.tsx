@@ -1,3 +1,3 @@
 
-export default EnhancedSearch,
+export default EnhancedSearch,;
 ;

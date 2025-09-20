@@ -7,4 +7,4 @@ const PageLoader: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default PageLoader,;<//div>
+export default PageLoader,;<//div><///div>

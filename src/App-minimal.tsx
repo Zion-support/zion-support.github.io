@@ -30,4 +30,4 @@ const Home = () => (
   );
 };
 
-export default App;<//ErrorBoundary>
+export default App;<//ErrorBoundary><///ErrorBoundary>

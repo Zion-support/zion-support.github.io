@@ -153,4 +153,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   );
 };
-<//Card>
+<//Card><///Card>

@@ -7,4 +7,4 @@ const EnhancedMainPage: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default EnhancedMainPage,;<//div>
+export default EnhancedMainPage,;<//div><///div>

@@ -35,4 +35,4 @@ export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ ;
     </WhitelabelContext.Provider>
   );
 };
-<//WhitelabelContext.Provider>
+<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

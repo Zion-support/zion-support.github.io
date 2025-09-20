@@ -23,7 +23,7 @@ const sizeClasses = {
 };
     export function EnhancedLoading({ 
   size = "md", 
-  variant = "default", 
+  variant = "default", ;
   text = "Loading...",;
   showIcons = true;
   className = ""
@@ -261,4 +261,4 @@ const sizeClasses = {
       )}
     </motion.div>
   );
-}<//motion.div>
+}<//motion.div><///motion.div>

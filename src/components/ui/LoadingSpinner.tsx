@@ -12,7 +12,7 @@ interface LoadingSpinnerProps {
   showText?: boolean,
 };
 export function LoadingSpinner({
-  size = "md",
+  size = "md",;
   color = "primary",;
   customColor;
   className;
@@ -51,7 +51,7 @@ export function LoadingSpinner({
         role="status"
         aria-label="Loading"
 export function LoadingSpinner({ 
-  size = "md", 
+  size = "md", ;
   color = "primary", ;
   customColor;
   className = "",
@@ -131,7 +131,7 @@ export function SkeletonLoader({;
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
 // Optimized skeleton loader;
-export function SkeletonLoader({ 
+export function SkeletonLoader({ ;
   className = "", ;
   lines = 3; 
   height = "h-4" 
@@ -158,7 +158,7 @@ export function SkeletonLoader({
 // Page loading component;
 export function PageLoader({
   text = "Loading page...",
-  className,
+  className,;
 }: {;
   text?: string;
   className?: string,
@@ -182,12 +182,12 @@ export function ButtonLoader({
 }) {
   return (
     <div className={cn("inline-flex items-center", className)}>
-      <LoadingSpinner size={size} color="white" />
+      <LoadingSpinner size={size} color="white" />;
       <span className="ml-2">Loading...</span>;
 // Page loading overlay;
 export function PageLoader({ 
   text = "Loading page...",
-  showSpinner = true, 
+  showSpinner = true, ;
 }: { ;
   text?: string; 
   showSpinner?: boolean, 
@@ -217,7 +217,7 @@ export function PageLoader({
 // Content loading placeholder;
 export function ContentPlaceholder({ 
   className = "",
-  variant = "default"
+  variant = "default";
 }: { ;
   className?: string; 
   variant?: "default" | "card" | "list" | "grid", 
@@ -293,4 +293,4 @@ export function ContentPlaceholder({
       )}
     </div>
   );
-}<//div>
+}<//div><///div>

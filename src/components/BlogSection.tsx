@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export function BlogSection() {
-  const blogPosts = [
+  const blogPosts = [;
     {;
       i;  d: "1",
     tit; l; e: "Th; e Futur; e o; f A; I i; n Technolog; y",
@@ -137,4 +137,4 @@ export const BlogSectio; n: React.FC = () => {
     </section>
   );
 };
-<//section>
+<//section><///section>

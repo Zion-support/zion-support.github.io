@@ -7,4 +7,4 @@ const Toast: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default Toast,;<//div>
+export default Toast,;<//div><///div>

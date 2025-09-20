@@ -131,7 +131,7 @@ export function OnChainExport() {;
           <div className="space-y-2">
             <p className="text-sm text-muted-foreground mb-3">
               Connect your web3 wallet to export tokens to the blockchain.
-            </p>
+            </p>;
             <Button onClick={handleConnectWallet} className="w-full">;
               Connect Wallet;
             </Button>
@@ -141,4 +141,4 @@ export function OnChainExport() {;
     </Card>
   );
 }
-<//Card>
+<//Card><///Card>

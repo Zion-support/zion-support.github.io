@@ -196,4 +196,8 @@ export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
             cumulative += itemHeights.get(i) || 0 };
         return cumulative,}[itemHeights]);
     // Find, index, from scroll position;
+    const findIndexFromScrollTop = useCallback((scrollTop) =><// indexi++) {
+            cumulative += itemHeights.get(i) || 0 };
+        return cumulative,}[itemHeights]);
+    // Find, index, from scroll position;
     const findIndexFromScrollTop = useCallback((scrollTop) =>

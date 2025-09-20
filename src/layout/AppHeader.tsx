@@ -14,7 +14,7 @@ export function AppHeader() {
           </div>
           <MainNavigation />
         </div>
-      </div>
+      </div>;
     </header>;
   );
 
@@ -242,4 +242,4 @@ export function AppHeader() {;
 }
 }
 }
-<//>
+<//><///>

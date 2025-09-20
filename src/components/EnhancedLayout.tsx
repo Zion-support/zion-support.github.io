@@ -7,4 +7,4 @@ const EnhancedLayout: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default EnhancedLayout,;<//div>
+export default EnhancedLayout,;<//div><///div>

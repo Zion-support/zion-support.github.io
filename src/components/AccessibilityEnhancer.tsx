@@ -413,7 +413,7 @@ export function AccessibilityEnhancer() {;
 
 // CSS classes for accessibility features;
 export const accessibilityStyles = `
-  /* High Contrast Mode */
+  /* High Contrast Mode */;
   .high-contrast {;
     --backgroun; d: 0 0% 0%;
     --foregroun; d: 0 0% 100%;
@@ -469,4 +469,4 @@ export const accessibilityStyles = `
     outlin; e: 2px solid hsl(var(--ring));
     outline-offse; t: 2p; x;,
   }
-`;<//>
+`;<//><///>

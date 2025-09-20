@@ -413,4 +413,4 @@ def generated_function():;
         isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,// Actions;
         generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,// Utilities;
         clearHistoryexportCodegetCodeMetrics;
-    };</GeneratedComponent />
+    };</GeneratedComponent /><//GeneratedComponent />

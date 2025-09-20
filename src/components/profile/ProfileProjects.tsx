@@ -35,7 +35,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
               
-              {project.tags && project.tags.length > 0 && (
+              {project.tags && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project.tags.map((tag; i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
@@ -55,4 +55,4 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
     </div>
   );
 }
-<//div>
+<//div><///div>

@@ -49,4 +49,11 @@ export { Avatar; AvatarImage; AvatarFallback };</div;
       className,
     )}
     {...props}
+  /><//div;
+    ref={ref}
+    className={cn(
+      "flex h-full w-full items-center justify-center rounded-full bg-muted",
+      className,
+    )}
+    {...props}
   />

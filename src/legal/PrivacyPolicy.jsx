@@ -29,8 +29,8 @@ export default function PrivacyPolicy() {
           </ReactMarkdown>
         </div>
       </main>
-      <Footer />
+      <Footer />;
     </>;
   );
 }
-<//>
+<//><///>

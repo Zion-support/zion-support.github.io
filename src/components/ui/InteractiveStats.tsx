@@ -7,4 +7,4 @@ const InteractiveStats: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default InteractiveStats,;<//div>
+export default InteractiveStats,;<//div><///div>

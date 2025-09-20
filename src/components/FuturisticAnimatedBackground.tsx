@@ -10,6 +10,6 @@ export default function FuturisticAnimatedBackground(props: any) {return (,
           Professional FuturisticAnimatedBackground services to help your business grow.,
         </p>,
       </div>",
-    </div>,
+    </div>,;
   ),,',;
-"}, ";<//div>
+"}, ";<//div><///div>

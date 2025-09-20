@@ -23,7 +23,7 @@ import { Brain;
 } from "lucide-react, ";
 
 export function ServicesShowcase() {
-  const featuredServices = [
+  const featuredServices = [;
     {;
       title: "AI Content Generator";
       description: "Generate high-quality content; code; and documentation using advanced AI models.",
@@ -276,4 +276,4 @@ export function ServicesShowcase() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

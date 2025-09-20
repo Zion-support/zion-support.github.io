@@ -7,4 +7,4 @@ const form: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default form,;<//div>
+export default form,;<//div><///div>

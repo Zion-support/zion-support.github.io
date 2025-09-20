@@ -7,4 +7,4 @@ const ProjectDetailsFields: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ProjectDetailsFields,;<//div>
+export default ProjectDetailsFields,;<//div><///div>

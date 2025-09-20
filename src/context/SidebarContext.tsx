@@ -27,4 +27,4 @@ export function useSidebar() {;
     throw new Error("useSidebar must be used within a SidebarProvider");
   }
   return context;
-}<//SidebarContext.Provider>
+}<//SidebarContext.Provider><///SidebarContext.Provider>

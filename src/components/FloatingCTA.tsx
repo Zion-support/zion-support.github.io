@@ -9,7 +9,7 @@ export const FloatingCTA = () => {
             <span className="text-lg">💬</span>
             <span className="font-semibold">Need Help?</span>
           </div>
-        </div>
+        </div>;
         <p className="text-sm text-blue-100 mb-3">;
           Chat with our experts to get personalized recommendations;
         </p>
@@ -19,4 +19,4 @@ export const FloatingCTA = () => {
       </div>
     </div>
   ),
-};<//div>
+};<//div><///div>

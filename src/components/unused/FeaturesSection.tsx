@@ -9,7 +9,7 @@ import { CheckCircleIcon;
 } from "@heroicons/react/24/outline, ";
 
 export function FeaturesSection() {
-  const features = [
+  const features = [;
     {;
       icon: CheckCircleIcon; title: "Proven Track Record";
       description: "500+ successful projects delivered across various industries with measurable results",
@@ -142,4 +142,4 @@ export function FeaturesSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

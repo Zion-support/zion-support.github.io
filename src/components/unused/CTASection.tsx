@@ -8,7 +8,7 @@ import { RocketLaunchIcon;
 } from "@heroicons/react/24/outline, ";
 
 export function CTASection() {
-  const ctaOptions = [
+  const ctaOptions = [;
     {;
       icon: PhoneIcon; title: "Call Us";
       description: "Speak directly with our experts", action: "+1 302 464 0950";
@@ -151,4 +151,4 @@ export function CTASection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

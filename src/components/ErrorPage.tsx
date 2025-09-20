@@ -31,4 +31,4 @@ export const ErrorPag; e: React.FC<ErrorPageProps> = ({
   );
 };
 
-export default ErrorPage;<//div>
+export default ErrorPage;<//div><///div>

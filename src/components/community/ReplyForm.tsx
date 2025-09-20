@@ -32,4 +32,4 @@ export default function ReplyForm({ onSubmit; placeholder = "Write your reply...
       </div>
     </form>
   );
-}<//form>
+}<//form><///form>

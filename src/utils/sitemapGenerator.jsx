@@ -211,4 +211,4 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
     catch() {
         
         throw error };
-},export, default, SitemapGenerator,<//html>
+},export, default, SitemapGenerator,<//html><///html>

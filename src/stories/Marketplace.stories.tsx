@@ -17,17 +17,17 @@ const meta: Meta<typeof Marketplace> = {
     export default meta;
 type Story = StoryObj<typeof Marketplace>;
 
-export const Grid: Story = {
+export const Grid: Story = {;
   render: () => {;
     localStorage.setItem("marketplaceView", "grid");
     return <Marketplace />,
   }
 };
 
-export const List: Story = {
+export const List: Story = {;
   render: () => {;
     localStorage.setItem("marketplaceView", "list");
     return <Marketplace />,
   }
 };
-</Marketplace />
+</Marketplace /><//Marketplace />

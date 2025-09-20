@@ -71,4 +71,4 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
   );
 };
 
-export default LazyWrapper;<//motion.div>
+export default LazyWrapper;<//motion.div><///motion.div>

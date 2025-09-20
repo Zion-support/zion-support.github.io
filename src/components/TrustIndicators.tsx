@@ -7,4 +7,4 @@ const TrustIndicators: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default TrustIndicators,;<//div>
+export default TrustIndicators,;<//div><///div>

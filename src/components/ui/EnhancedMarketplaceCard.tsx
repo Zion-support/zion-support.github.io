@@ -7,4 +7,4 @@ const EnhancedMarketplaceCard: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default EnhancedMarketplaceCard,;<//div>
+export default EnhancedMarketplaceCard,;<//div><///div>

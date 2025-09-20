@@ -113,7 +113,7 @@ ToastDescription.displayName = ToastPrimitives.Description.displayName;
 type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>
 
 type ToastActionElement = React.ReactElement<typeof ToastAction>
-
+;
 export {;
   type ToastProps;
   type ToastActionElement;
@@ -145,4 +145,4 @@ export function toast({;
     variant,
     ...prop; s;
   }
-}</ToastProps, "title" | "description" | "action" | "variant">
+}</ToastProps, "title" | "description" | "action" | "variant"><//ToastProps, "title" | "description" | "action" | "variant">

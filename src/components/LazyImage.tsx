@@ -12,7 +12,7 @@ interface LazyImageProps {
 };
 export const LazyImage: React.FC<LazyImageProps> = ({
   src,
-  alt,
+  alt,;
   className = '',;
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
   onLoad,
@@ -71,4 +71,4 @@ export const LazyImage: React.FC<LazyImageProps> = ({
 };
 
 export default LazyImage;
-<//div>
+<//div><///div>

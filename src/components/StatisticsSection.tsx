@@ -31,7 +31,7 @@ const stats = [
 export function StatisticsSection() {
   return (
     <section className="py-20 bg-gradient-to-r from-zion-slate-dark via-zion-slate to-zion-blue-dark">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
           <h2 className="text-3xl m;  d:text-4xl font-bold text-white mb-4">
             Zion by the Numbers;
@@ -81,4 +81,4 @@ export function StatisticsSection() {
       </div>
     </section>
   );
-}<//section>
+}<//section><///section>

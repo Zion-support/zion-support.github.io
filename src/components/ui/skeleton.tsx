@@ -16,4 +16,7 @@ function Skeleton({
 export { Skeleton };</div;
       className={cn("animate-pulse rounded-md bg-muted, ", className)}
       {...props}
+    /><//div;
+      className={cn("animate-pulse rounded-md bg-muted, ", className)}
+      {...props}
     />

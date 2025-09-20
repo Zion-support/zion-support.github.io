@@ -24,10 +24,10 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
     >
       {announcements.map((announcement, index) => (
         <div key={index}>{announcement}</div>
-      ))}
+      ))};
     </div>;
   );
 };
 
 export default ScreenReaderAnnouncements;
-<//div>
+<//div><///div>

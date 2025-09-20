@@ -7,4 +7,4 @@ const ResponsiveLayout: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ResponsiveLayout,;<//div>
+export default ResponsiveLayout,;<//div><///div>

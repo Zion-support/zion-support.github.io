@@ -29,7 +29,7 @@ export const AdvancedAnalytics: React.FC = () => {
       { source: 'Direct', percentage: 25 },
       { source: 'Social Media', percentage: 15 },
       { source: 'Referral', percentage: 10 },
-      { source: 'Email', percentage: 5 }
+      { source: 'Email', percentage: 5 };
     ];
   });
 
@@ -185,4 +185,4 @@ export const AdvancedAnalytics: React.FC = () => {
 };
 
 export default AdvancedAnalytics;
-<//div>
+<//div><///div>

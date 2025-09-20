@@ -18,4 +18,4 @@ export interface AuthContextType {;
     onboardingStep: number; setOnboardingStep: (step: number) => void;
     tokens: AuthTokens; setTokens: (tokens: AuthTokens) => void,
 };
-export const AuthContext = React.createContext<AuthContextType | undefined>(undefined);</AuthContextType | undefined>
+export const AuthContext = React.createContext<AuthContextType | undefined>(undefined);</AuthContextType | undefined><//AuthContextType | undefined>
