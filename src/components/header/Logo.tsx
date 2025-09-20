@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom, ';
 
 export const Logo: React.FC = () => {
   return (
-=======
-=======
     <Link to="/" className="flex items-center group">
       <div className="flex items-center space-x-2">
         {/* Icon */}
@@ -24,8 +22,6 @@ export const Logo: React.FC = () => {
             TECH GROUP
           </div>
         </div>
-=======
-=======
       </div>
       <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>

@@ -10,7 +10,6 @@ interface User {
   avatarUrl?: string;
 }
 
-=======
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -43,7 +42,6 @@ export function useAuth() {
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
-=======
   };
 
   const logout = () => {
@@ -64,7 +62,6 @@ export function useAuth() {
     return mockUser;
   };
 
-=======
   return {
     user,
     loading,
@@ -75,7 +72,5 @@ export function useAuth() {
     isAdmin: user?.role === 'admin'
   };
 }
-=======
 };
-=======
 }

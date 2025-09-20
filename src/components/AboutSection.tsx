@@ -1,9 +1,8 @@
-import React from 'react;';
-import Link from 'next/link;';
-=======
-=======
-import { Link } from 'react-router-dom, ';
-import { Awar, d, 
+import React from 'react';
+import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { 
+  Awar, d, 
   User, s, 
   Glob, e, 
   Targe, t, 
@@ -11,7 +10,7 @@ import { Awar, d,
   Shiel, d,
   CheckCircl, e,
   ArrowRight
-} from 'lucide-react, ';
+} from 'lucide-react';
 
 export function AboutSection() {
   const achievements = [
@@ -172,7 +171,7 @@ export function AboutSection() {
           </p>
           <Link
             to="/team"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove, r:bg-zion-cyan hove, r: text-white transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove, r:bg-zion-cyan hove, r:text-white transition-all duration-300"
           >
             Meet the Team
             <ArrowRight className="w-5 h-5" />
