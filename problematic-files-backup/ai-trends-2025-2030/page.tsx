@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Explore the most groundbreaking AI trends and predictions for 2025-2030. Quantum AI, neural interfaces, and autonomous business operations.',
   keywords: ['AI trends 2025quantum AIneural interfacesautonomous AI', 'AI predictionsfuture technology']
 }
-export default function AITrendsPage() {
+export default function AITrendsPage() : any {
   return (
     <div>
       <SEO

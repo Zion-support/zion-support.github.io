@@ -15,13 +15,13 @@ import type { NextRequest } from "next/server",
   ),
   // Cache Control for static assets,
   if (request.nextUrl.pathname.startsWith('/_next/static/')) {,
-    response.headers.set('Cache-Controlpublic, max-age=31536000, immutable'),
-  }
+    response.headers.set('Cache-Controlpublic, max-age=31536000, immutable');
+};
 ,
   // Cache Control for images,
   if (request.nextUrl.pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {,
-    response.headers.set('Cache-Controlpublic, max-age=86400'),
-  }
+    response.headers.set('Cache-Controlpublic, max-age=86400');
+};
 ,
   // Rate limiting headers (basic implementation),
   const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown',
@@ -35,8 +35,8 @@ import type { NextRequest } from "next/server",
   // Remove server information,
   response.headers.delete('X-Powered-By'),
   response.headers.delete('Server'),
-  return response,
-}
+  return response;
+  }
 ,
 ursor/fix-lint-push-and-merge-to-main-ae4e,
   // Security headers,

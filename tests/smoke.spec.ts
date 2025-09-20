@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test',
 
 test.describe('Smoke Tests', () => {
-  test('homepage loads successfully', async ({ page }) => {
+  test('homepage loads successfully', async ({ page }) : any => {
     await page.goto('/'),
     
     // Check page loads without errors
@@ -17,7 +17,7 @@ test.describe('Smoke Tests', () => {
     await expect(page.locator('footer')).toBeVisible(),
   }),
 
-  test('explore page loads successfully', async ({ page }) => {
+  test('explore page loads successfully', async ({ page }) : any => {
     await page.goto('/explore/'),
     
     // Check page loads
@@ -27,7 +27,7 @@ test.describe('Smoke Tests', () => {
     await expect(page.locator('main').first()).toBeVisible(),
   }),
 
-  test('front page loads successfully', async ({ page }) => {
+  test('front page loads successfully', async ({ page }) : any => {
     await page.goto('/front/'),
     
     // Check page loads - update title expectation to match actual
@@ -37,7 +37,7 @@ test.describe('Smoke Tests', () => {
     await expect(page.locator('main').first()).toBeVisible(),
   }),
 
-  test('newsroom page loads successfully', async ({ page }) => {
+  test('newsroom page loads successfully', async ({ page }) : any => {
     await page.goto('/newsroom'),
     
     // Check page loads
@@ -47,7 +47,7 @@ test.describe('Smoke Tests', () => {
     await expect(page.locator('main').first()).toBeVisible(),
   }),
 
-  test('contact page loads successfully', async ({ page }) => {
+  test('contact page loads successfully', async ({ page }) : any => {
     await page.goto('/contact'),
     
     // Check page loads
@@ -57,7 +57,7 @@ test.describe('Smoke Tests', () => {
     await expect(page.locator('form')).toBeVisible(),
   }),
 
-  test('search functionality works', async ({ page }) => {
+  test('search functionality works', async ({ page }) : any => {
     await page.goto('/'),
     
     // Look for search input
@@ -68,11 +68,11 @@ test.describe('Smoke Tests', () => {
       await searchInput.press('Enter'),
       
       // Should navigate to search results or show results
-      await expect(page).not.toHaveURL('/'),
-    }
+      await expect(page).not.toHaveURL('/');
+};
   }),
 
-  test('navigation between pages works', async ({ page }) => {
+  test('navigation between pages works', async ({ page }) : any => {
     await page.goto('/'),
     
     // Find navigation links
@@ -90,8 +90,8 @@ test.describe('Smoke Tests', () => {
         await expect(page).toHaveURL(href),
         
         // Page should load - use first() to handle multiple main elements
-        await expect(page.locator('main').first()).toBeVisible(),
-      }
+        await expect(page.locator('main').first()).toBeVisible();
+};
     }
   }),
 }),

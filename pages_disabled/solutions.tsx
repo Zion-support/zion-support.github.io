@@ -9,7 +9,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function SolutionsPage() {
+export default function SolutionsPage() : any {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
   const industries = [
@@ -21,7 +21,7 @@ export default function SolutionsPage() {
     { id: 'education', name: 'Education', icon: <GraduationCap className="w-6 h-6" /> },
     { id: 'retail', name: 'Retail & E-commerce', icon: <Building className="w-6 h-6" /> },
     { id: 'government', name: 'Government', icon: <Shield className="w-6 h-6" /> }
-  ];
+  ],
 
   const solutions = [
     // Financial Services
@@ -187,7 +187,7 @@ export default function SolutionsPage() {
       id: 'ai-education-platform',
       title: 'AI Education Platform',
       industry: 'education',
-      description: 'Personalized learning platform that adapts to each student&apos;s needs using artificial intelligence.',
+      description: 'Personalized learning platform that adapts to each student&apos,s needs using artificial intelligence.',
       features: [
         'Personalized learning paths',
         'Adaptive assessments',
@@ -407,7 +407,7 @@ export default function SolutionsPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need a Custom Solution?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Don&apos;t see exactly what you need? Our team of experts can create custom solutions 
+              Don&apos,t see exactly what you need? Our team of experts can create custom solutions 
               tailored to your specific industry requirements and business challenges.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -487,4 +487,4 @@ export default function SolutionsPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }'

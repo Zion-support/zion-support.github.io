@@ -3,7 +3,7 @@ import OpenAI from "openai",
 const apiKey = process.env.OPENAI_API_KEY || "",
 export const openai = new OpenAI({ apiKey }),
 
-export const generateEmbedding = async (input: string, model = "text-embedding-3-small") => {
+export const generateEmbedding = async (input: string, model = "text-embedding-3-small") : any => {
   const response = await openai.embeddings.create({ model, input }),
   const [embedding] = response.data,
   return embedding.embedding,
@@ -27,7 +27,7 @@ export const scoreResumeWithGPT = async (args: {
   resumeText: string,
   jobDescription: string,
   skillTags?: string[]
-}): Promise<ScoreResult> => {
+}): Promise<ScoreResult> : any => {
   const { resumeText, jobDescription, skillTags = [] } = args,
 
   const system = `You are a recruiting assistant. Compare a candidate's resume to a job description.
@@ -64,5 +64,5 @@ export const scoreResumeWithGPT = async (args: {
       experienceAlignment: { summary: "", score: 0 },
       techStack: { matched: [], missing: [], score: 0 }
     }
-  },
-},
+  };
+  },'

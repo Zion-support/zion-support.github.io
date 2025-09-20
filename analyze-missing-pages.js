@@ -54,8 +54,7 @@ actualPages.forEach((page) => {
           brokenLinks.push({
             page,
 brokenLink: `/${link}`
-            fullLink,
-});
+            fullLink});
         }
       });
     }

@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function SolutionsPage() {
+export default function SolutionsPage() : any {
   const solutionCategories = [
     {
       title: "Enterprise Solutions",
@@ -72,7 +72,7 @@ export default function SolutionsPage() {
       title: "Proven Results",
       description: "Track record of successful implementations and transformations"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -252,4 +252,4 @@ export default function SolutionsPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }'

@@ -168,7 +168,7 @@ const caseStudies = [
 const industries = ['AllTechnology', 'HealthcareFinance', 'BankingManufacturing', 'Retail'],
 const technologies = ['AllAI/ML', 'Cloud ComputingCybersecurity', 'IoTData Analytics', 'DevOps'],
 
-export default function CaseStudies() {
+export default function CaseStudies() : any {
   const [selectedIndustry, setSelectedIndustry] = useState('All'),
   const [selectedTechnology, setSelectedTechnology] = useState('All'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -181,7 +181,7 @@ export default function CaseStudies() {
                          study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase()),
     
-    return matchesIndustry && matchesTechnology && matchesSearch,
+    return matchesIndustry && matchesTechnology && matchesSearch;
   }),
 
   return (
@@ -404,4 +404,4 @@ export default function CaseStudies() {
       </section>
     </div>
   )
-}
+}'

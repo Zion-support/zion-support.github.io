@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from '../../../components/SEO';
 import Link from 'next/link'
-export default function AIImplementationMasterGuide2025() {
+export default function AIImplementationMasterGuide2025() : any {
   return (
     <div>
       <SEO
@@ -373,7 +373,7 @@ export default function AIImplementationMasterGuide2025() {
             Get instant access to proven strategies, templates, and frameworks.
           </p>
           <div>
-            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg">
+            <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-lg">
               📥 Download Free Guide
             </button>
             <Link
@@ -409,7 +409,7 @@ export default function AIImplementationMasterGuide2025() {
                   AI ROI Calculator
                 </h4>
                 <p>
-                  Calculate potential return on AI investments;
+                  Calculate potential return on AI investments,
                 </p>
               </div>
             </Link>

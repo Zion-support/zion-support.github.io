@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const { spawn, exec } = require('child_process'),
 const fs = require('fs'),
@@ -39,13 +39,13 @@ class ImprovedWatchdog {,
     // Create log directory if it doesn't exist,
     const logDir = path.dirname(this.config.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true }),
-    }
+      fs.mkdirSync(logDir, { recursive: true });
+};
 ,
     // Load existing processes,
     await this.loadExistingProcesses(),
-    logger.info('✅ Improved Watchdog System initialized'),
-  }
+    logger.info('✅ Improved Watchdog System initialized');
+};
 ,
   async loadExistingProcesses() {,
     const pidFile = path.join(__dirname, .watchdog.pid'),
@@ -58,12 +58,12 @@ class ImprovedWatchdog {,
               ...info,
               restarts: 0,
               lastCheck: Date.now()}),
-            logger.info(`📋 Loaded existing process: ${name} (PID: ${info.pid})`),
-          }
+            logger.info(`📋 Loaded existing process: ${name} (PID: ${info.pid})`);
+};
         }
       } catch (error) {,
-        logger.warn('⚠️  Failed to load existing processes:', error.message),
-      }
+        logger.warn('⚠️  Failed to load existing processes:', error.message);
+};
     }
   }
 ,
@@ -109,16 +109,16 @@ class ImprovedWatchdog {,
         processInfo.status = stopped',
         processInfo.child = null,
         if (code !== 0 && processInfo.restarts < this.config.maxRestarts) {,
-          this.scheduleRestart(name),
-        }
+          this.scheduleRestart(name);
+};
       }),
       child.on('error', (error) => {,
         this.log(`${name} process error: ${error.message}`),
         processInfo.status = error',
         processInfo.child = null,
         if (processInfo.restarts < this.config.maxRestarts) {,
-          this.scheduleRestart(name),
-        }
+          this.scheduleRestart(name);
+};
       }),
       this.processes.set(name, processInfo),
       this.saveProcessInfo(),
@@ -286,8 +286,8 @@ const timeoutId = setTimeout(() => {,
     logger.info(`🔄 Restarting ${name}...`),
     // Stop the current process,
     if (processInfo.child) {,
-      processInfo.child.kill('SIGTERM'),
-    }
+      processInfo.child.kill('SIGTERM');
+};
 ,
     // Wait a bit then restart,
 const timeoutId =,
@@ -432,16 +432,16 @@ const timeoutId = setTimeout(async () => {,
 ,
 // Store timeoutId for cleanup if needed,
 ,
-    }, 1000),
-  }
+    }, 1000);
+};
 ,
   stopProcess(name) {,
     const processInfo = this.processes.get(name),
     if (!processInfo) return false,
     logger.info(`🛑 Stopping ${name}...`),
     if (processInfo.child) {,
-      processInfo.child.kill('SIGTERM'),
-    }
+      processInfo.child.kill('SIGTERM');
+};
 ,
     this.processes.delete(name),
     this.saveProcessInfo(),
@@ -455,12 +455,12 @@ const timeoutId = setTimeout(async () => {,
         this.log(`⚠️  Process ${name} (PID: ${processInfo.pid}) is not responding`),
         processInfo.status = stopped',
         if (processInfo.restarts < this.config.maxRestarts) {,
-          this.scheduleRestart(name),
-        }
+          this.scheduleRestart(name);
+};
       }
 ,
-      processInfo.lastCheck = Date.now(),
-    }
+      processInfo.lastCheck = Date.now();
+};
   }
 ,
   saveProcessInfo() {,
@@ -474,16 +474,16 @@ const timeoutId = setTimeout(async () => {,
         startTime: processInfo.startTime},
     }
 ,
-    fs.writeFileSync(pidFile, JSON.stringify(data, null, 2)),
-  }
+    fs.writeFileSync(pidFile, JSON.stringify(data, null, 2));
+};
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
     const logMessage = `[${timestamp}] ${message}`,
     logger.info(logMessage),
     // Append to log file,
-    fs.appendFileSync(this.config.logFile, logMessage + \n'),
-  }
+    fs.appendFileSync(this.config.logFile, logMessage + \n');
+};
 ,
   getStatus() {,
     const status = {},
@@ -512,8 +512,8 @@ const timeoutId = setTimeout(async () => {,
     }, this.config.checkInterval),
     logger.info('🐕 Improved Watchdog System started'),
     logger.info(`📊 Check interval: ${this.config.checkInterval}ms`),
-    logger.info(`📝 Log file: ${this.config.logFile}`),
-  }
+    logger.info(`📝 Log file: ${this.config.logFile}`);
+};
 ,
   stop() {,
     if (this.checkInterval) {,
@@ -523,12 +523,12 @@ const timeoutId = setTimeout(async () => {,
 ,
     // Stop all processes,
     for (const [name] of this.processes) {,
-      this.stopProcess(name),
-    }
+      this.stopProcess(name);
+};
 ,
     this.isRunning = false,
-    logger.info('🛑 Improved Watchdog System stopped'),
-  }
+    logger.info('🛑 Improved Watchdog System stopped');
+};
 }
 ,
 // Start the watchdog,
@@ -549,7 +549,7 @@ if (require.main === module) {,
   watchdog.start().catch(error => {,
     logger.error('❌ Failed to start Improved Watchdog:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = ImprovedWatchdog,

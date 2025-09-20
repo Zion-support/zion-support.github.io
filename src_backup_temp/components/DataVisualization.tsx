@@ -10,7 +10,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({,
 title: "Data Analytics Dashboard",
   showMetrics = true,
   showCharts = true,
-  showActions = true}) => {,
+  showActions = true}) : any => {,
   const [selectedTimeRange, setSelectedTimeRange] = useState<any>('7d'),
   const [isLoading, setIsLoading] = useState<any>(false),  const [activeChart, setActiveChart] = useState<any>('bar'),
 ,
@@ -149,4 +149,4 @@ setChartData(prev: > ({,
 </any>,
 </any>,
 </DataVisualizationProps>
-})]]
+})]]'

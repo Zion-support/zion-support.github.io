@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AiFinancialPlanningPlatform() {
+export default function AiFinancialPlanningPlatform() : any {
 	return (
 		<ServiceLanding
 			title="AI Financial Planning Platform"
@@ -21,7 +21,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
-			canonical="https://ziontechgroup.com/ai-financial-planning-platform"
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	);
-}
+  }

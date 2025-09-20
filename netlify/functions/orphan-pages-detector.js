@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'orphan-pages-detector',
         status: 'error'
       })
-    },
+    };
   }
 },

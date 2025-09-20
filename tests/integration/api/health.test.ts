@@ -8,6 +8,6 @@ export default function Health.test({ }: Health.testProps) {,
     <div>,
       <h1>Health.test</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

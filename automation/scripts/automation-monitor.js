@@ -27,8 +27,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 class AutomationMonitor {,
   constructor() {,
@@ -50,8 +50,8 @@ class AutomationMonitor {,
       errors: []},
     this.healthCheckProcess = null,
     this.fixProcess = null,
-    this.loadStatus(),
-  }
+    this.loadStatus();
+};
 ,
   async start() {,
     logger.info('🚀 Starting Automation Monitor'),
@@ -91,8 +91,8 @@ class AutomationMonitor {,
           logger.warn(`⚠️ Health check failed (${this.status.consecutiveFailures}/${this.config.maxConsecutiveFailures})`),
           if (this.status.consecutiveFailures >= this.config.maxConsecutiveFailures) {,
             logger.error('❌ Too many consecutive failures, triggering emergency fix'),
-            await this.triggerEmergencyFix(),
-          }
+            await this.triggerEmergencyFix();
+};
         }
 ,
         this.saveStatus(),
@@ -103,17 +103,17 @@ class AutomationMonitor {,
           timestamp: new Date().toISOString(),
           type: 'health_check_error',
           error: error.message}),
-        this.saveStatus(),
-      }
+        this.saveStatus();
+};
 ,
       // Schedule next health check,
       if (this.status.isRunning) {,
-        setTimeout(runHealthCheck, this.config.healthCheckInterval),
-      }
+        setTimeout(runHealthCheck, this.config.healthCheckInterval);
+};
     },
     // Start the first health check,
-    runHealthCheck(),
-  }
+    runHealthCheck();
+};
 ,
   startFixCheckLoop() {,
     const runFixCheck = async () => {,
@@ -128,8 +128,8 @@ class AutomationMonitor {,
           this.status.totalFixes++,
           logger.info('✅ Fix check completed successfully'),
         } else {,
-          logger.warn('⚠️ Fix check failed'),
-        }
+          logger.warn('⚠️ Fix check failed');
+};
 ,
         this.saveStatus(),
       } catch (error) {,
@@ -138,17 +138,17 @@ class AutomationMonitor {,
           timestamp: new Date().toISOString(),
           type: 'fix_check_error',
           error: error.message}),
-        this.saveStatus(),
-      }
+        this.saveStatus();
+};
 ,
       // Schedule next fix check,
       if (this.status.isRunning) {,
-        setTimeout(runFixCheck, this.config.fixCheckInterval),
-      }
+        setTimeout(runFixCheck, this.config.fixCheckInterval);
+};
     },
     // Start the first fix check,
-    runFixCheck(),
-  }
+    runFixCheck();
+};
 ,
   async triggerEmergencyFix() {,
     logger.info('🚨 Triggering emergency fix...'),
@@ -165,13 +165,13 @@ class AutomationMonitor {,
         logger.info('✅ Emergency fix completed successfully'),
         this.status.consecutiveFailures = 0,
       } else {,
-        logger.error('❌ Emergency fix failed'),
-      }
+        logger.error('❌ Emergency fix failed');
+};
 ,
       this.saveStatus(),
     } catch (error) {,
-      logger.error('❌ Emergency fix error:', error),
-    }
+      logger.error('❌ Emergency fix error:', error);
+};
   }
 ,
   async stopAutomationProcesses() {,
@@ -189,16 +189,16 @@ class AutomationMonitor {,
               execSync(`kill ${pid}`),
               logger.info(`Stopped process ${pid}`),
             } catch (killError) {,
-              logger.warn(`Could not stop process ${pid}: ${killError.message}`),
-            }
+              logger.warn(`Could not stop process ${pid}: ${killError.message}`);
+};
           }
         }
       } catch (psError) {,
         // Process list command failed, continue
       }
     } catch (error) {,
-      logger.warn('⚠️ Could not stop automation processes:', error.message),
-    }
+      logger.warn('⚠️ Could not stop automation processes:', error.message);
+};
   }
 ,
   keepAlive() {,
@@ -227,8 +227,8 @@ class AutomationMonitor {,
         type: 'unhandled_rejection',
         error: reason.toString()}),
       this.saveStatus(),
-    }),
-  }
+    });
+};
 ,
   stop() {,
     logger.info('🛑 Stopping Automation Monitor...'),
@@ -236,16 +236,16 @@ class AutomationMonitor {,
     this.saveStatus(),
     // Clean up processes,
     if (this.healthCheckProcess) {,
-      this.healthCheckProcess.kill(),
-    }
+      this.healthCheckProcess.kill();
+};
 ,
     if (this.fixProcess) {,
-      this.fixProcess.kill(),
-    }
+      this.fixProcess.kill();
+};
 ,
     logger.info('✅ Automation Monitor stopped'),
-    process.exit(0),
-  }
+    process.exit(0);
+};
 ,
   getStatus() {,
     return {,
@@ -263,25 +263,25 @@ class AutomationMonitor {,
         },
       }
     } catch (error) {,
-      logger.warn('Could not load status file:', error.message),
-    }
+      logger.warn('Could not load status file:', error.message);
+};
   }
 ,
   saveStatus() {,
     try {,
       if (!fs.existsSync(this.config.logsDir)) {,
-        fs.mkdirSync(this.config.logsDir, { recursive: true }),
-      }
+        fs.mkdirSync(this.config.logsDir, { recursive: true });
+};
 ,
       fs.writeFileSync(this.config.statusFile, JSON.stringify(this.status, null, 2)),
     } catch (error) {,
-      logger.error('Error saving status:', error),
-    }
+      logger.error('Error saving status:', error);
+};
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms)),
-  }
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
 }
 ,
 // Run the monitor if this script is executed directly,
@@ -290,7 +290,7 @@ if (require.main === module) {,
   monitor.start().catch(error => {,
     logger.error('Failed to start monitor:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = AutomationMonitor,

@@ -11,5 +11,5 @@ const function Layout({ children, title = 'Zion Tech Group', description = 'Auto
     </div>,
   ),
 },
-export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {,
-}}}
+export default function Layout({ children, title = 'Zion Tech Group', description = 'Autonomous, cloud-native app with self-running automations' }: LayoutProps) {;
+  }}}

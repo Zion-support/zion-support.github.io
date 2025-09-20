@@ -14,8 +14,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const https = require('https'),
 const path = require('path'),
@@ -40,14 +40,14 @@ class NetlifyBuildMonitor {,
       buildHistory: [],
       errors: [],
       fixes: []},
-    this.loadStatus(),
-  }
+    this.loadStatus();
+};
 ,
   log(message, level = 'info') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`,
-    logger.log(level, message),
-  }
+    logger.log(level, message);
+};
 ,
   loadStatus() {,
     try {,
@@ -58,8 +58,8 @@ class NetlifyBuildMonitor {,
         },
       }
     } catch (error) {,
-      this.log(`Error loading status: ${error.message}`, 'error'),
-    }
+      this.log(`Error loading status: ${error.message}`, 'error');
+};
   }
 ,
   saveStatus() {,
@@ -69,8 +69,8 @@ class NetlifyBuildMonitor {,
         JSON.stringify(this.status, null, 2),
       ),
     } catch (error) {,
-      this.log(`Error saving status: ${error.message}`, 'error'),
-    }
+      this.log(`Error saving status: ${error.message}`, 'error');
+};
   }
 ,
   async makeNetlifyRequest(endpoint, method = 'GET', data = null) {,
@@ -87,8 +87,8 @@ class NetlifyBuildMonitor {,
       },
       if (data) {,
         const postData = JSON.stringify(data),
-        options.headers['Content-Length'] = Buffer.byteLength(postData),
-      }
+        options.headers['Content-Length'] = Buffer.byteLength(postData);
+};
 ,
       const req = https.request(options, (res) => {,
         let body = '',
@@ -100,19 +100,19 @@ class NetlifyBuildMonitor {,
             const response = JSON.parse(body),
             resolve(response),
           } catch (error) {,
-            reject(new Error(`Invalid JSON response: ${body}`)),
-          }
+            reject(new Error(`Invalid JSON response: ${body}`));
+};
         }),
       }),
       req.on('error', (error) => {,
         reject(error),
       }),
       if (data) {,
-        req.write(JSON.stringify(data)),
-      }
+        req.write(JSON.stringify(data));
+};
       req.end(),
-    }),
-  }
+    });
+};
 ,
   async getSiteBuilds() {,
     try {,
@@ -196,8 +196,8 @@ class NetlifyBuildMonitor {,
       if (packageJson.scripts.build) {,
         packageJson.scripts.build = packageJson.scripts.build.replace(,
           /next build/,
-          'NODE_OPTIONS="--max-old-space-size=4096" next build'),
-      }
+          'NODE_OPTIONS="--max-old-space-size=4096" next build');
+};
 ,
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2)),
       this.status.fixes.push({,
@@ -218,8 +218,8 @@ class NetlifyBuildMonitor {,
       const nextConfigPath = path.join(process.cwd(), 'next.config.js'),
       let nextConfig = '',
       if (fs.existsSync(nextConfigPath)) {,
-        nextConfig = fs.readFileSync(nextConfigPath, 'utf8'),
-      }
+        nextConfig = fs.readFileSync(nextConfigPath, 'utf8');
+};
 ,
       if (!nextConfig.includes('experimental')) {,
         nextConfig += `,
@@ -306,8 +306,8 @@ module.exports = {,
         }),
       } catch (error) {,
         this.log(`Error in monitoring loop: ${error.message}`, 'error'),
-        await new Promise((resolve) => setTimeout(resolve, 5000)),
-      }
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+};
     }
   }
 ,
@@ -329,16 +329,16 @@ module.exports = {,
           if (error) {,
             const fixed = await this.fixBuildError(error),
             if (fixed) {,
-              await this.commitAndPushFixes(),
-            }
+              await this.commitAndPushFixes();
+};
           }
         }
       }
 ,
       this.saveStatus(),
     } catch (error) {,
-      this.log(`Error checking builds: ${error.message}`, 'error'),
-    }
+      this.log(`Error checking builds: ${error.message}`, 'error');
+};
   }
 ,
   generateReport() {,
@@ -353,14 +353,14 @@ module.exports = {,
       fs.writeFileSync(this.config.logFile, JSON.stringify(report, null, 2)),
       this.log(`Report generated: ${this.config.logFile}`, 'info'),
     } catch (error) {,
-      this.log(`Error generating report: ${error.message}`, 'error'),
-    }
+      this.log(`Error generating report: ${error.message}`, 'error');
+};
   }
 ,
   stop() {,
     this.log('Stopping Netlify build monitoring...'),
     this.status.isRunning = false,
-    this.saveStatus(),
+    this.saveStatus();
   }
 }
 ,

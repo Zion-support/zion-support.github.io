@@ -1,7 +1,7 @@
 import React from 'react',
 import SEO from '../../../components/SEO',
 import Link from 'next/link',
-export default function AIEnterpriseTransformation2025() {,
+export default function AIEnterpriseTransformation2025() : any {,
   return (,
     <div className="min-h-screen bg-white">,
       <SEO,
@@ -274,4 +274,4 @@ export default function AIEnterpriseTransformation2025() {,
         </div>,
       </div>,
     </div>,
-  )}
+  )}'

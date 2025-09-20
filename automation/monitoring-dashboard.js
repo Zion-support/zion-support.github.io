@@ -27,14 +27,14 @@ class AutomationDashboard {,
     this.setupMiddleware(),
     this.setupRoutes(),
     this.setupSocketIO(),
-    this.startMonitoring(),
-  }
+    this.startMonitoring();
+};
 ,
   setupMiddleware() {,
     this.app.use(express.json()),
     this.app.use(express.static(path.join(__dirname, 'dashboard-ui'))),
-    this.app.use('/api', this.apiRouter()),
-  }
+    this.app.use('/api', this.apiRouter());
+};
 ,
   apiRouter() {,
     const router = express.Router(),
@@ -57,8 +57,8 @@ class AutomationDashboard {,
         if (err) {,
           res.status(500).json({ error: err.message }),
         } else {,
-          res.json(logs),
-        }
+          res.json(logs);
+};
       }),
     }),
     // Restart process,
@@ -68,8 +68,8 @@ class AutomationDashboard {,
         if (err) {,
           res.status(500).json({ error: err.message }),
         } else {,
-          res.json({ message: `Process ${processName} restarted successfully` }),
-        }
+          res.json({ message: `Process ${processName} restarted successfully` });
+};
       }),
     }),
     // Stop process,
@@ -79,8 +79,8 @@ class AutomationDashboard {,
         if (err) {,
           res.status(500).json({ error: err.message }),
         } else {,
-          res.json({ message: `Process ${processName} stopped successfully` }),
-        }
+          res.json({ message: `Process ${processName} stopped successfully` });
+};
       }),
     }),
     // Start process,
@@ -90,8 +90,8 @@ class AutomationDashboard {,
         if (err) {,
           res.status(500).json({ error: err.message }),
         } else {,
-          res.json({ message: `Process ${processName} started successfully` }),
-        }
+          res.json({ message: `Process ${processName} started successfully` });
+};
       }),
     }),
     return router,
@@ -107,8 +107,8 @@ class AutomationDashboard {,
         timestamp: new Date().toISOString(),
         uptime: process.uptime(),
         version: '1.0.0'}),
-    }),
-  }
+    });
+};
 ,
   setupSocketIO() {,
     this.io.on('connection', (socket) => {,
@@ -120,8 +120,8 @@ class AutomationDashboard {,
       socket.on('disconnect', () => {,
         // // // // // // console.log('Client disconnected from dashboard'),
       }),
-    }),
-  }
+    });
+};
 ,
   async startMonitoring() {,
     try {,
@@ -140,8 +140,8 @@ class AutomationDashboard {,
       }),
     } catch (error) {,
       console.error('Failed to start monitoring dashboard:', error),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   }
 ,
   connectPM2() {,
@@ -151,11 +151,11 @@ class AutomationDashboard {,
           reject(err),
         } else {,
           // // // // // // console.log('✅ Connected to PM2'),
-          resolve(),
-        }
+          resolve();
+};
       }),
-    }),
-  }
+    });
+};
 ,
   updateProcessStatus() {,
     pm2.list((err, processes) => {,
@@ -197,8 +197,8 @@ class AutomationDashboard {,
         this.metrics.averageMemory = Math.round(this.metrics.totalMemory / this.metrics.totalProcesses),
         this.metrics.averageCPU = Math.round((this.metrics.totalCPU / this.metrics.totalProcesses) * 100) / 100,
       }
-    }),
-  }
+    });
+};
 ,
   checkAlerts() {,
     const newAlerts = [],
@@ -211,8 +211,8 @@ class AutomationDashboard {,
           process: name,
           message: `High memory usage: ${Math.round(process.memory / 1024 / 1024)}MB`,
           timestamp: new Date().toISOString(),
-          severity: 'medium'}),
-      }
+          severity: 'medium'});
+};
 ,
       // CPU usage alert,
       if (process.cpu > 80) { // 80%,
@@ -222,8 +222,8 @@ class AutomationDashboard {,
           process: name,
           message: `High CPU usage: ${process.cpu}%`,
           timestamp: new Date().toISOString(),
-          severity: 'medium'}),
-      }
+          severity: 'medium'});
+};
 ,
       // Process stopped alert,
       if (process.status === 'stopped') {,
@@ -233,8 +233,8 @@ class AutomationDashboard {,
           process: name,
           message: `Process ${name} is stopped`,
           timestamp: new Date().toISOString(),
-          severity: 'high'}),
-      }
+          severity: 'high'});
+};
 ,
       // High restart count alert,
       if (process.restartCount > 10) {,
@@ -244,8 +244,8 @@ class AutomationDashboard {,
           process: name,
           message: `High restart count: ${process.restartCount}`,
           timestamp: new Date().toISOString(),
-          severity: 'medium'}),
-      }
+          severity: 'medium'});
+};
     }),
     // Add new alerts,
     this.alerts = [...newAlerts, ...this.alerts].slice(0, 100), // Keep last 100 alerts
@@ -254,37 +254,37 @@ class AutomationDashboard {,
   broadcastUpdates() {,
     this.io.emit('processes', Array.from(this.processes.values())),
     this.io.emit('metrics', this.metrics),
-    this.io.emit('alerts', this.alerts),
-  }
+    this.io.emit('alerts', this.alerts);
+};
 ,
   stop() {,
     if (this.monitoringInterval) {,
-      clearInterval(this.monitoringInterval),
-    }
+      clearInterval(this.monitoringInterval);
+};
     pm2.disconnect(),
     this.server.close(),
-    // // // // // // console.log('🛑 Dashboard stopped'),
-  }
+    // // // // // // console.log('🛑 Dashboard stopped');
+};
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', () => {,
   // // // // // // console.log('\n🛑 Shutting down dashboard...'),
   if (global.dashboard) {,
-    global.dashboard.stop(),
-  }
+    global.dashboard.stop();
+};
   process.exit(0),
 }),
 process.on('SIGTERM', () => {,
   // // // // // // console.log('\n🛑 Shutting down dashboard...'),
   if (global.dashboard) {,
-    global.dashboard.stop(),
-  }
+    global.dashboard.stop();
+};
   process.exit(0),
 }),
 // Start dashboard,
 if (require.main === module) {,
-  global.dashboard = new AutomationDashboard(),
-}
+  global.dashboard = new AutomationDashboard();
+  }
 ,
 module.exports = AutomationDashboard,

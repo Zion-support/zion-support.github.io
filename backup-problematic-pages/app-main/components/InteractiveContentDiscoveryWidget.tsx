@@ -1,5 +1,5 @@
 import React from 'react'
-const InteractiveContentDiscoveryWidget: React.FC = () => {;
+const InteractiveContentDiscoveryWidget: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">InteractiveContentDiscoveryWidget</h3>

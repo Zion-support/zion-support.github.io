@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website'
     url: '/micro-saas'}
 }
-export default function MicroSaaS() {
+export default function MicroSaaS() : any {
   return (
     <div>
       <SEO

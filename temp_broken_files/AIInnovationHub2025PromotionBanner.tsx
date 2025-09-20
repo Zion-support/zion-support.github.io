@@ -260,7 +260,7 @@ const AIInnovationHub2025PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default AIInnovationHub2025PromotionBanner,
 </div></div></div></div>,

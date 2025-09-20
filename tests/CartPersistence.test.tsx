@@ -9,9 +9,9 @@ import { getCartKey } from '@/utils/cartUtils';
 
 vi.mock('next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
-}));
+})),
 
-const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 };
+const item = { id: '1', name: 'Test Item', price: 10, quantity: 1 },
 
 function renderCart(user: any) {
   return render(
@@ -26,7 +26,7 @@ function renderCart(user: any) {
       </CartProvider>
     </AuthContext.Provider>
   );
-}
+  }
 
 describe('cart persistence', () => {
   it('shows item added before login after logging in', () => {
@@ -46,7 +46,7 @@ describe('cart persistence', () => {
           </MemoryRouter>
         </CartProvider>
       </AuthContext.Provider>
-    );
+    ),
 
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument();
     expect(screen.getByText('Checkout')).toBeInTheDocument();

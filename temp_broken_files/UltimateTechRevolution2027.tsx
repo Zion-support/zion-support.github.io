@@ -246,4 +246,4 @@ import React from 'react',
         </div>,
     </div>,
   )},
-export default UltimateTechRevolution2027,
+export default UltimateTechRevolution2027,'

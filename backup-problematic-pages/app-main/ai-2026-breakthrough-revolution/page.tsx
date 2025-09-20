@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Revolutionary AI breakthroughs that will change everything in 2026'
 }
 
-export default function AI2026BreakthroughRevolution() {
+export default function AI2026BreakthroughRevolution() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

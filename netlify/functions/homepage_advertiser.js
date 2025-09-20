@@ -27,6 +27,6 @@ exports.handler = async function(event, context) {
         function: 'homepage_advertiser',
         status: 'error'
       })
-    },
+    };
   }
 },

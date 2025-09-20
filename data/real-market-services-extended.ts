@@ -1,10 +1,10 @@
 =======
 export interface RealMarketServiceExtended {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  features: string[],
 }
 
 export const realMarketServicesExtended: RealMarketServiceExtended[] = [

@@ -184,4 +184,5 @@ const AdvancedTechShowcase2029: React.FC = () => {
   )
 },
 
-export default AdvancedTechShowcase2029,
+export default AdvancedTechShowcase2029;
+  }'

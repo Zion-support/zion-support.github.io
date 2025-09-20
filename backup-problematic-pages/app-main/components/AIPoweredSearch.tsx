@@ -14,7 +14,8 @@ interface SearchResult {
 
 const AIPoweredSearch: React.FC = () => {
   const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
+  const [results, setResults] = useState<SearchResult[]>([]);
+
   const [isSearching, setIsSearching] = useState(false)
   const [showResults, setShowResults] = useState(false)
 
@@ -62,7 +63,7 @@ const AIPoweredSearch: React.FC = () => {
     }
   ]
 
-  const handleSearch = async (searchQuery: string) => {
+  const handleSearch = async (searchQuery: string) : any => {
     if (!searchQuery.trim()) {
       setResults([])
       setShowResults(false)
@@ -92,7 +93,7 @@ const AIPoweredSearch: React.FC = () => {
     setShowResults(true)
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) : any => {
     const value = e.target.value
     setQuery(value)
     
@@ -104,7 +105,7 @@ const AIPoweredSearch: React.FC = () => {
     }
   }
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = (result: SearchResult) : any => {
     setShowResults(false)
     setQuery(result.title)
     // In a real app, you'd navigate to the result URL

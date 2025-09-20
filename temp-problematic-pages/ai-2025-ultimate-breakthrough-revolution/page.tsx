@@ -23,7 +23,7 @@ export const metadata: Metadata = {,
     ]
   }
 },
-export default function AI2025UltimateBreakthroughRevolution() {,
+export default function AI2025UltimateBreakthroughRevolution() : any {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white">,
       {/* Hero Section */}

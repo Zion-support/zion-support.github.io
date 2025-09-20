@@ -121,23 +121,23 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   }
 ],
 
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) : any => {
   if (category === 'all') return INNOVATIVE_SERVICES_2025,
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category)
 },
 
-export const getServicesByPriceRange = (priceRange: string) => {
+export const getServicesByPriceRange = (priceRange: string) : any => {
   if (priceRange === 'all') return INNOVATIVE_SERVICES_2025,
   
   const [min, max] = priceRange.split('-').map(Number),
   if (priceRange === '3000+') {
-    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000),
-  }
+    return INNOVATIVE_SERVICES_2025.filter(service => service.price >= 3000);
+};
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= min && service.price <= max),
 },
 
-export const getTopRatedServices = (limit: number = 5) => {
+export const getTopRatedServices = (limit: number = 5) : any => {
   return [...INNOVATIVE_SERVICES_2025]
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, limit),
-},
+    .slice(0, limit);
+  },

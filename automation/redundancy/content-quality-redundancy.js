@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-CONTENT-QUALITY] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -48,8 +48,8 @@ function checkContentQuality() {,
           if (urlMatch) {,
             const url = urlMatch[2],
             if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {,
-              brokenLinks.push({ file, url, context: urlMatch[1] }),
-            }
+              brokenLinks.push({ file, url, context: urlMatch[1] });
+};
           }
         }
       }
@@ -78,18 +78,18 @@ function checkSEOElements() {,
         const content = fs.readFileSync(path.join(pagesDir, file), 'utf8'),
         // Check for title,
         if (!content.includes('# ')) {,
-          seoIssues.push({ file, issue: 'Missing H1 title' }),
-        }
+          seoIssues.push({ file, issue: 'Missing H1 title' });
+};
 ,
         // Check for meta description,
         if (!content.includes('description: ') && !content.includes('meta:')) {,
-          seoIssues.push({ file, issue: 'Missing meta description' }),
-        }
+          seoIssues.push({ file, issue: 'Missing meta description' });
+};
 ,
         // Check for keywords,
         if (!content.includes('keywords: ') && !content.includes('tags:')) {,
-          seoIssues.push({ file, issue: 'Missing keywords/tags' }),
-        }
+          seoIssues.push({ file, issue: 'Missing keywords/tags' });
+};
       }
     }
 ,
@@ -120,12 +120,12 @@ function generateContentReport(contentQuality, seoElements) {,
   },
   // Analyze overall quality,
   if (contentQuality.brokenLinks?.count > 0) {,
-    report.contentQuality.summary.issues.push(`${contentQuality.brokenLinks.count} broken links detected`),
-  }
+    report.contentQuality.summary.issues.push(`${contentQuality.brokenLinks.count} broken links detected`);
+};
 ,
   if (seoElements.seoIssues?.count > 0) {,
-    report.contentQuality.summary.issues.push(`${seoElements.seoIssues.count} SEO issues detected`),
-  }
+    report.contentQuality.summary.issues.push(`${seoElements.seoIssues.count} SEO issues detected`);
+};
 ,
   if (report.contentQuality.summary.issues.length > 0) {,
     report.contentQuality.summary.overallQuality = "needs_attention",
@@ -176,11 +176,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -194,12 +194,12 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Content quality redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = { main, checkContentQuality, checkSEOElements, generateContentReport },

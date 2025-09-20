@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Discover how AI-powered automation is revolutionizing enterprise operations in 2025. Learn about cutting-edge technologies, implementation strategies, and real-world success stories.',
   keywords: ['AIEnterprise AutomationDigital Transformation2025 Trends', 'Business Intelligence']
 }
-export default function AIEnterpriseAutomation2025Page() {
+export default function AIEnterpriseAutomation2025Page() : any {
   return (
     <div>
       <SEO

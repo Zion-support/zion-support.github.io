@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/tools`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
-    },
+      priority: 0.8
+  },
   ]
 }

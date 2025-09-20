@@ -25,5 +25,5 @@ exports.handler = async () => {
   logStep('content:gap-analyzer', () => runNode('automation/content-gap-analyzer.cjs')),
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

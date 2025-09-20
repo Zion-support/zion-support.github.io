@@ -5,7 +5,7 @@ export const metadata = {
 	description: 'A practical blueprint to define, measure, and govern risk for autonomous agents using scorecards and policy-as-code.'
 },
 
-export default function EnterpriseAgentRiskScorecards2026() {
+export default function EnterpriseAgentRiskScorecards2026() : any {
 	return (
 		<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
 			<section className="container mx-auto px-6 py-14">
@@ -63,7 +63,7 @@ export default function EnterpriseAgentRiskScorecards2026() {
 
 import React from 'react'
 
-export default function EnterpriseAgentRiskScorecards() {
+export default function EnterpriseAgentRiskScorecards() : any {
   return (
     <main className="prose prose-invert max-w-3xl mx-auto py-10 px-4">
       <h1>Enterprise Agent Risk Scorecards (2026)</h1>

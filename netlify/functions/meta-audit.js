@@ -25,5 +25,5 @@ exports.handler = async () => {
   step('dead-code:scanautomation/dead-code-scanner.cjs'),
   step('git:syncautomation/advanced-git-sync.cjs'),
 
-  return { statusCode: 200, body: logs.join('\n') },
-},
+  return { statusCode: 200, body: logs.join('\n') };
+  },

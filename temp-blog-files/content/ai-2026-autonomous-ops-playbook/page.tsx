@@ -6,7 +6,7 @@ export const metadata = {
   description:
     'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.'
 }
-export default function AutonomousOpsPlaybook2026() {
+export default function AutonomousOpsPlaybook2026() : any {
   return (
     <main className="min-h-screen bg-white">
       <SEO

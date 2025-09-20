@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
   keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics'],
 }
-export default function AnalyticsPage() {
+export default function AnalyticsPage() : any {
   return (
     <div>
       <SEO

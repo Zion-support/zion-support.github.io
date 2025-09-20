@@ -118,24 +118,24 @@ export class ContentOptimizer {,
                 "type": 'word_count',
                 "severity": 'medium',
                 "message": "`Content is too short. Aim for at least ${this.MIN_WORD_COUNT"} words.`,
-            }),
-        }
+            });
+};
 ,
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {,
             issues.push({,
                 "type": 'heading_count',
                 "severity": 'low',
                 "message": "`Add more headings to improve content structure.`,
-            "}),
-        }
+            "});
+};
 ,
         if (metrics.imageCount < this.MIN_IMAGE_COUNT) {,
             issues.push({,
                 "type": 'image_count',
                 "severity": 'low',
                 "message": "`Consider adding images to make content more engaging.`,
-            "}),
-        }
+            "});
+};
 ,
         if (metrics.linkCount < this.MIN_LINK_COUNT) {,
             issues.push({,
@@ -149,29 +149,29 @@ export class ContentOptimizer {,
                 severity: 'medium',
                 message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
             }
-    ),
-        }
+    );
+};
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {,
             issues.push({,
                 type: 'heading_count',
                 severity: 'low',
                 message: `Add more headings to improve content structure.`}
-    ),
-        }
+    );
+};
         if (metrics.imageCount < this.MIN_IMAGE_COUNT) {,
             issues.push({,
                 type: 'image_count',
                 severity: 'low',
                 message: `Consider adding images to make content more engaging.`}
-    ),
-        }
+    );
+};
         if (metrics.linkCount < this.MIN_LINK_COUNT) {,
             issues.push({,
                 type: 'link_count',
                 severity: 'low',
                 message: `Add more internal and external links for better SEO.`}
-    ),
-        }
+    );
+};
 ,
         return issues,
     }
@@ -213,8 +213,8 @@ export class ContentOptimizer {,
             return `${optimizationComments}\n\n${optimizedContent}`,
         }
 ,
-        return optimizedContent,
-    }
+        return optimizedContent;
+  }
 }
 ,
 export default ContentOptimizer,
@@ -223,4 +223,4 @@ export default ContentOptimizer,
 </h1>,
 </title>,
 </a>,
-</h>,
+</h>,"

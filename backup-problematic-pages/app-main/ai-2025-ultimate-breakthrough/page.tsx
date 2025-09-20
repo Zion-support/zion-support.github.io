@@ -7,7 +7,7 @@ export const metadata = {
   keywords: ['AI breakthrough', 'AI 2025', 'artificial intelligence', 'business transformation'],
 }
 
-export default function AI2025UltimateBreakthroughPage() {
+export default function AI2025UltimateBreakthroughPage() : any {
   return (
     <div>
       <h1>AI 2025 Ultimate Breakthrough</h1>

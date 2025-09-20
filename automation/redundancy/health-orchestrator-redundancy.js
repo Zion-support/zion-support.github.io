@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-HEALTH-ORCHESTRATOR] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -216,20 +216,20 @@ function generateHealthReport(pm2Status, systemResources, redundancyReports, git
   },
   // Analyze overall health,
   if (pm2Status.pm2Status?.error) {,
-    report.healthOrchestrator.summary.issues.push("PM2 status check failed"),
-  }
+    report.healthOrchestrator.summary.issues.push("PM2 status check failed");
+};
 ,
   if (systemResources.systemResources?.error) {,
-    report.healthOrchestrator.summary.issues.push("System resources check failed"),
-  }
+    report.healthOrchestrator.summary.issues.push("System resources check failed");
+};
 ,
   if (redundancyReports.redundancyReports?.recentReports < 5) {,
-    report.healthOrchestrator.summary.issues.push("Some redundancy reports are outdated"),
-  }
+    report.healthOrchestrator.summary.issues.push("Some redundancy reports are outdated");
+};
 ,
   if (gitStatus.gitStatus?.hasChanges) {,
-    report.healthOrchestrator.summary.issues.push("Uncommitted changes detected"),
-  }
+    report.healthOrchestrator.summary.issues.push("Uncommitted changes detected");
+};
 ,
   if (report.healthOrchestrator.summary.issues.length > 0) {,
     report.healthOrchestrator.summary.overallHealth = "needs_attention",
@@ -287,11 +287,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -307,13 +307,13 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Health orchestrator redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = {,
   main,

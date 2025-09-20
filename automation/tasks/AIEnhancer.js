@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const AutomationTask = require('../continuous-improvement/AutomationTask'),
 const { execSync, spawn } = require('child_process'),
@@ -34,8 +34,8 @@ class AIEnhancer extends AutomationTask {,
       ...config
     }),
     this.enhancementHistory = [],
-    this.aiConfig = this.loadAIConfig(),
-  }
+    this.aiConfig = this.loadAIConfig();
+};
 ,
   async run() {,
     logger.info('🤖 Starting AI enhancement process...'),
@@ -48,20 +48,20 @@ class AIEnhancer extends AutomationTask {,
       },
       // Run different types of AI enhancements,
       if (this.config.enhancementTypes.includes('code')) {,
-        results.enhancements.code = await this.enhanceCode(),
-      }
+        results.enhancements.code = await this.enhanceCode();
+};
 ,
       if (this.config.enhancementTypes.includes('documentation')) {,
-        results.enhancements.documentation = await this.enhanceDocumentation(),
-      }
+        results.enhancements.documentation = await this.enhanceDocumentation();
+};
 ,
       if (this.config.enhancementTypes.includes('tests')) {,
-        results.enhancements.tests = await this.enhanceTests(),
-      }
+        results.enhancements.tests = await this.enhanceTests();
+};
 ,
       if (this.config.enhancementTypes.includes('performance')) {,
-        results.enhancements.performance = await this.enhancePerformance(),
-      }
+        results.enhancements.performance = await this.enhancePerformance();
+};
 ,
       // Generate suggestions,
       results.suggestions = await this.generateSuggestions(results.enhancements),
@@ -71,8 +71,8 @@ class AIEnhancer extends AutomationTask {,
       this.enhancementHistory.push(results),
       // Apply enhancements if enabled,
       if (this.config.autoApply) {,
-        await this.applyEnhancements(results),
-      }
+        await this.applyEnhancements(results);
+};
 ,
       this.lastStatus = success',
       this.lastRun = new Date(),
@@ -111,8 +111,8 @@ class AIEnhancer extends AutomationTask {,
       for (const file of codeFiles.slice(0, 5)) { // Limit to 5 files per run,
         const enhancement = await this.enhanceCodeFile(file),
         if (enhancement) {,
-          enhancements.push(enhancement),
-        }
+          enhancements.push(enhancement);
+};
       }
 ,
       return {,
@@ -132,15 +132,15 @@ class AIEnhancer extends AutomationTask {,
       const srcDir = path.join(process.cwd(), src'),
       await this.scanDirectory(srcDir, extensions, codeFiles),
     } catch (error) {,
-      logger.warn('⚠️ Could not scan src directory:', error.message),
-    }
+      logger.warn('⚠️ Could not scan src directory:', error.message);
+};
 ,
     try {,
       const pagesDir = path.join(process.cwd(), pages'),
       await this.scanDirectory(pagesDir, extensions, codeFiles),
     } catch (error) {,
-      logger.warn('⚠️ Could not scan pages directory:', error.message),
-    }
+      logger.warn('⚠️ Could not scan pages directory:', error.message);
+};
 ,
     return codeFiles,
   }
@@ -159,8 +159,8 @@ class AIEnhancer extends AutomationTask {,
             name: entry.name,
             size: stats.size,
             relativePath: path.relative(process.cwd(), fullPath)
-          }),
-        }
+          });
+};
       }
     } catch (error) {,
       // Directory might not exist
@@ -203,8 +203,8 @@ class AIEnhancer extends AutomationTask {,
     }
 ,
     // Fallback to local analysis,
-    return this.localCodeAnalysis(content, filename),
-  }
+    return this.localCodeAnalysis(content, filename);
+};
 ,
   generateCodeAnalysisPrompt(content, filename) {,
     return `Analyze the following code and provide suggestions for improvement:  ,
@@ -241,8 +241,8 @@ Format the response as JSON with the following structure:,
       case local':,
         return await this.callLocalAI(prompt),
       default:  ,
-        throw new Error(`Unknown AI provider: ${provider}`),
-    }
+        throw new Error(`Unknown AI provider: ${provider}`);
+};
   }
 ,
   async callOpenAI(prompt) {,
@@ -303,13 +303,13 @@ Format the response as JSON with the following structure:,
   parseAIResponse(response) {,
     try {,
       if (typeof response === 'string') {,
-        return JSON.parse(response),
-      }
+        return JSON.parse(response);
+};
       return response,
     } catch (error) {,
       logger.warn('⚠️ Failed to parse AI response:', error),
-      return this.localCodeAnalysis(''),
-    }
+      return this.localCodeAnalysis('');
+};
   }
 ,
   localCodeAnalysis(content, filename) {,
@@ -321,16 +321,16 @@ Format the response as JSON with the following structure:,
         type: 'quality',
         description: Remove console.log statements from production code',
         code: // Remove or use proper logging',
-        impact: low}),
-    }
+        impact: low});
+};
 ,
     if (content.includes('var )) {,
       suggestions.push({,
         type: 'quality',
         description: Use const or let instead of var',
         code: const variable = value,
-        impact: medium}),
-    }
+        impact: medium});
+};
 ,
     return {,
       suggestions: suggestions,
@@ -349,8 +349,8 @@ Format the response as JSON with the following structure:,
       for (const file of docFiles.slice(0, 3)) { // Limit to 3 files per run,
         const enhancement = await this.enhanceDocumentationFile(file),
         if (enhancement) {,
-          enhancements.push(enhancement),
-        }
+          enhancements.push(enhancement);
+};
       }
 ,
       return {,
@@ -370,8 +370,8 @@ Format the response as JSON with the following structure:,
       const docsDir = path.join(process.cwd(), docs'),
       await this.scanDirectory(docsDir, extensions, docFiles),
     } catch (error) {,
-      logger.warn('⚠️ Could not scan docs directory:', error.message),
-    }
+      logger.warn('⚠️ Could not scan docs directory:', error.message);
+};
 ,
     try {,
       const readmePath = path.join(process.cwd(), README.md'),
@@ -457,8 +457,8 @@ Format the response as JSON with the following structure:,
       for (const file of testFiles.slice(0, 3)) { // Limit to 3 files per run,
         const enhancement = await this.enhanceTestFile(file),
         if (enhancement) {,
-          enhancements.push(enhancement),
-        }
+          enhancements.push(enhancement);
+};
       }
 ,
       return {,
@@ -479,15 +479,15 @@ Format the response as JSON with the following structure:,
       const testDir = path.join(process.cwd(), __tests__'),
       await this.scanDirectory(testDir, extensions, testFiles),
     } catch (error) {,
-      logger.warn('⚠️ Could not scan __tests__ directory:', error.message),
-    }
+      logger.warn('⚠️ Could not scan __tests__ directory:', error.message);
+};
 ,
     try {,
       const srcDir = path.join(process.cwd(), src'),
       await this.scanDirectory(srcDir, extensions, testFiles, patterns),
     } catch (error) {,
-      logger.warn('⚠️ Could not scan src for test files:', error.message),
-    }
+      logger.warn('⚠️ Could not scan src for test files:', error.message);
+};
 ,
     return testFiles,
   }
@@ -510,8 +510,8 @@ Format the response as JSON with the following structure:,
               name: entry.name,
               size: stats.size,
               relativePath: path.relative(process.cwd(), fullPath)
-            }),
-          }
+            });
+};
         }
       }
     } catch (error) {,
@@ -696,8 +696,8 @@ Format the response as JSON with the following structure:,
         if (enhancement.enhancements) {,
           for (const item of enhancement.enhancements) {,
             if (item.suggestions) {,
-              suggestions.push(...item.suggestions.map(s => ({ ...s, source: type }))),
-            }
+              suggestions.push(...item.suggestions.map(s => ({ ...s, source: type })));
+};
           }
         }
       }
@@ -735,8 +735,8 @@ Format the response as JSON with the following structure:,
         await this.applySuggestion(suggestion),
         applied.push(suggestion),
       } catch (error) {,
-        logger.error(`❌ Failed to apply suggestion:`, error),
-      }
+        logger.error(`❌ Failed to apply suggestion:`, error);
+};
     }
 ,
     logger.info(`✅ Applied ${applied.length} enhancements`),
@@ -957,8 +957,8 @@ const timeoutId = setTimeout(resolve,                                           
   async checkAIConfiguration() {,
     for (const [provider, config] of Object.entries(this.aiConfig)) {,
       if (config.enabled && !config.apiKey) {,
-        logger.warn(`⚠️ ${provider} is enabled but no API key configured`),
-      }
+        logger.warn(`⚠️ ${provider} is enabled but no API key configured`);
+};
     }
   }
 ,
@@ -973,7 +973,7 @@ const timeoutId = setTimeout(resolve,                                           
         configured: !!config.apiKey})),
       lastEnhancement: this.enhancementHistory.length > 0,
         ? this.enhancementHistory[this.enhancementHistory.length - 1],
-        : null},
+        : null};
   }
 }
 ,

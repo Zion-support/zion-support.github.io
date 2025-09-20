@@ -12,7 +12,7 @@ function mockReq(body: any) {
   return { method: 'POST', body } as any,
 }
 
-function mockRes() {
+function mockRes() : any {
   const res: any = {},
   res.status = vi.fn().mockReturnValue(res),
   res.json = vi.fn().mockReturnValue(res),
@@ -48,5 +48,5 @@ describe('register API', () => {
     await handler(req, res),
     expect(res.status).toHaveBeenCalledWith(409),
     expect(res.json).toHaveBeenCalledWith({ message: 'User already registered' }),
+  });
   }),
-}),

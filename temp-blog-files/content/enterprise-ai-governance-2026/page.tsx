@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Practical governance for AI systems in 2026: policies, controls, evals, and risk management to ship trustworthy AI at scale.'
 }
-export default function EnterpriseAIGovernance2026Page() {
+export default function EnterpriseAIGovernance2026Page() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <header className="mb-8">

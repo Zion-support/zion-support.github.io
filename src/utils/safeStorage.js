@@ -68,7 +68,7 @@ export const safeStorage = {;
             }
             return inMemoryStore[key] || null;
         }
-    },
+    };
     setItem: (key, value) => {
         if (typeof window === 'undefined')
             return;
@@ -83,7 +83,7 @@ export const safeStorage = {;
             }
             inMemoryStore[key] = value;
         }
-    },
+    };
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
@@ -98,7 +98,7 @@ export const safeStorage = {;
             }
             delete inMemoryStore[key];
         }
-    },
+    };
     clear: () => {
         if (typeof window === 'undefined') {
             for (const key in inMemoryStore) {
@@ -116,7 +116,7 @@ export const safeStorage = {;
                 delete inMemoryStore[key];
             }
         }
-    },
+    };
     get isAvailable() {
         return isLocalStorageAvailable();
     }
@@ -134,7 +134,7 @@ export const safeSessionStorage = {;
         catch (e) {
             return sessionMemoryStore[key] || null;
         }
-    },
+    };
     setItem: (key, value) => {
         if (typeof window === 'undefined')
             return;
@@ -145,7 +145,7 @@ export const safeSessionStorage = {;
         catch (e) {
             sessionMemoryStore[key] = value;
         }
-    },
+    };
     removeItem: (key) => {
         if (typeof window === 'undefined')
             return;
@@ -156,7 +156,7 @@ export const safeSessionStorage = {;
         catch (e) {
             delete sessionMemoryStore[key];
         }
-    },
+    };
     clear: () => {
         if (typeof window === 'undefined') {
             for (const key in sessionMemoryStore) {
@@ -174,7 +174,7 @@ export const safeSessionStorage = {;
                 delete sessionMemoryStore[key];
             }
         }
-    },
+    };
     get isAvailable() {
         try {
   
@@ -191,3 +191,4 @@ export const safeSessionStorage = {;
         }
     }
 };
+'

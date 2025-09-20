@@ -103,8 +103,8 @@ function main() {,
   cleanReportFiles(),
   // Clean disabled/backup directories,
   let totalRemoved = 0,
-  ),
-      }
+  );
+  }
     }
   }
   console.log("\n Cleanup "Summary": "),

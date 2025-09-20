@@ -15,22 +15,22 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
 const { execSync } = require('child_process'),
 class PerformanceChecker {,
     constructor() {,
-        this.projectRoot = process.cwd(),
-    }
+        this.projectRoot = process.cwd();
+};
 ,
     loadConfig() {,
         const configPath = path.join(__dirname, '..config.json'),
         if (fs.existsSync(configPath)) {,
-            return JSON.parse(fs.readFileSync(configPath, 'utf8')),
-        }
+            return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+};
         return {,
             performanceThreshold: 80,
             bundleSizeLimit: '2MB',
@@ -41,8 +41,8 @@ class PerformanceChecker {,
     ensureLogDirectory() {,
         const logDir = path.dirname(this.logFile),
         if (!fs.existsSync(logDir)) {,
-            fs.mkdirSync(logDir, { recursive: true }),
-        }
+            fs.mkdirSync(logDir, { recursive: true });
+};
     }
 
     }
@@ -147,8 +147,8 @@ switch (command) {,
     case 'report':,
         performanceChecker.generatePerformanceReport().catch(error => {,
             console.error('Failed to generate performance report:', error.message),
-            process.exit(1),
-        }),
+            process.exit(1);
+  }),
         break,
     default: ,
         console.log(`,

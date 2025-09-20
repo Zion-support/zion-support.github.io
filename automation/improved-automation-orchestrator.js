@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const { spawn } = require('child_process'),
 const express = require('express'),
@@ -70,16 +70,16 @@ class ImprovedAutomationOrchestrator {,
     this.setupHealthEndpoints(),
     // Initialize automation systems,
     await this.initializeAutomationSystems(),
-    logger.info('✅ Improved Automation Orchestrator initialized successfully'),
-  }
+    logger.info('✅ Improved Automation Orchestrator initialized successfully');
+};
 ,
   setupExpressServer() {,
     this.app.use(express.json()),
     this.app.use(express.static(path.join(__dirname, ..'))),
     this.server = this.app.listen(this.port, () => {,
       logger.info(`🌐 Improved Automation Orchestrator running on port ${this.port}`),
-    }),
-  }
+    });
+};
 ,
   setupWebSocket() {,
     this.io = socketIo(this.server, {,
@@ -102,8 +102,8 @@ class ImprovedAutomationOrchestrator {,
       socket.on('restart-system', (systemName) => {,
         this.restartSystem(systemName),
       }),
-    }),
-  }
+    });
+};
 ,
   setupHealthEndpoints() {,
     this.app.get('/health', (req, res) => {,
@@ -134,8 +134,8 @@ class ImprovedAutomationOrchestrator {,
       const systemName = req.params.name,
       this.restartSystem(systemName),
       res.json({ success: true, message: `Restarting ${systemName}` }),
-    }),
-  }
+    });
+};
 ,
   async initializeAutomationSystems() {,
     logger.info('🤖 Initializing automation systems...'),
@@ -150,11 +150,11 @@ class ImprovedAutomationOrchestrator {,
         lastStart: null,
         lastError: null,
         logs: []},
-      this.automationSystems.set(systemName, system),
-    }
+      this.automationSystems.set(systemName, system);
+};
 ,
-    logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`),
-  }
+    logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`);
+};
 ,
   async startSystem(systemName) {,
     const system = this.automationSystems.get(systemName),
@@ -172,8 +172,8 @@ class ImprovedAutomationOrchestrator {,
       logger.info(`🚀 Starting ${systemName}...`),
       const scriptPath = path.join(__dirname, system.config.script),
       if (!fs.existsSync(scriptPath)) {,
-        throw new Error(`Script not found: ${scriptPath}`),
-      }
+        throw new Error(`Script not found: ${scriptPath}`);
+};
 ,
       const child = spawn('node', [scriptPath], {,
         cwd: __dirname,
@@ -222,9 +222,8 @@ class ImprovedAutomationOrchestrator {,
         this.broadcastStatus(),
         return true,
       } else {,
-        throw new Error(`System failed to start properly`),
-      }
-
+        throw new Error(`System failed to start properly`);
+};
     } catch (error) {,
       system.status = error',
       system.lastError = error.message,
@@ -388,8 +387,8 @@ const timeoutId = setTimeout(checkStatus,                                       
         }
       },
       checkStatus(),
-    }),
-  }
+    });
+};
 ,
   stopSystem(systemName) {,
     const system = this.automationSystems.get(systemName),
@@ -568,8 +567,8 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
 ,
   broadcastStatus() {,
     if (this.io) {,
-      this.io.emit('status-update', this.getSystemStatus()),
-    }
+      this.io.emit('status-update', this.getSystemStatus());
+};
   }
 ,
   async start() {,
@@ -589,8 +588,8 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
 ,
     logger.info('✅ All automation systems started'),
     logger.info(`📊 Dashboard: http://localhost:${this.port}`),
-    logger.info(`🔗 API: http://localhost:${this.port}/health`),
-  }
+    logger.info(`🔗 API: http://localhost:${this.port}/health`);
+};
 ,
   sleep(ms) {,
     return new Promise(resolve =>,
@@ -734,14 +733,14 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-),
-  }
+);
+};
 }
 ,
 class PortManager {,
   constructor() {,
-    this.usedPorts = new Set(),
-  }
+    this.usedPorts = new Set();
+};
 ,
   async findAvailablePort(startPort = 3000) {,
     const net = require('net'),
@@ -769,12 +768,12 @@ class PortManager {,
       server.on('error', () => {,
         reject(new Error(`Port ${port} is not available`)),
       }),
-    }),
-  }
+    });
+};
 ,
   releasePort(port) {,
-    this.usedPorts.delete(port),
-  }
+    this.usedPorts.delete(port);
+};
 }
 ,
 // Start the orchestrator,
@@ -783,7 +782,7 @@ if (require.main === module) {,
   orchestrator.start().catch(error => {,
     logger.error('❌ Failed to start Improved Automation Orchestrator:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = ImprovedAutomationOrchestrator,

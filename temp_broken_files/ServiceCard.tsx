@@ -15,7 +15,7 @@ interface ServiceCardProps {,
   onClick: (service: { slug: string }) => void,
 }
 ,
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) => {,
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, onClick }) : any => {,
   return (,
     <div,
       className={`relative group cursor-pointer ${,
@@ -24,10 +24,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, isCurrent, on
       onClick={() => onClick(service)}
       role="button",
       tabIndex={0}
-      onKeyDown={(e) => {,
+      onKeyDown={(e) : any => {,
         if (e.key === 'Enter' || e.key === ' ') {,
-          onClick(service),
-        }
+          onClick(service);
+};
       }}
       aria-label={`Learn more about ${service.name}`}
     >,
@@ -178,5 +178,5 @@ const ServiceCard = () => {,
       </div>,
     </div>)
 },
-export default ServiceCard,
-})
+export default ServiceCard;
+  })

@@ -323,4 +323,4 @@ const RevolutionaryCaseStudiesShowcase2027 = () => {,
       </div>,
     </section>,
   )},
-export default RevolutionaryCaseStudiesShowcase2027,
+export default RevolutionaryCaseStudiesShowcase2027,'

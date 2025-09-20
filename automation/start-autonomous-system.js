@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Autonomous Automation System - Main Entry Point,
@@ -83,8 +83,8 @@ class AutonomousAutomationSystem {,
       try {,
         await fs.access(dirPath),
       } catch {,
-        await fs.mkdir(dirPath, { recursive: true }),
-      }
+        await fs.mkdir(dirPath, { recursive: true });
+};
     }
   }
 ,
@@ -348,8 +348,8 @@ const timeoutId = setTimeout(resolve,                                           
       for (const [taskName, taskStatus] of Object.entries(status.tasks.status)) {,
         const statusIcon = taskStatus.enabled ? 🟢' : 🔴',
         const runningIcon = taskStatus.isRunning ? ⚡' : ⏸️',
-        logger.info(`${statusIcon} ${taskName}: ${runningIcon} ${taskStatus.successRate.toFixed(1)}% success`),
-      }
+        logger.info(`${statusIcon} ${taskName}: ${runningIcon} ${taskStatus.successRate.toFixed(1)}% success`);
+};
     }
 ,
     logger.info('\n🎯 System Features: '),
@@ -366,20 +366,20 @@ const timeoutId = setTimeout(resolve,                                           
       logger.info(`\n🛑 Received ${signal}. Shutting down gracefully...`),
       try {,
         if (this.isRunning) {,
-          await this.stop(),
-        }
+          await this.stop();
+};
 ,
         logger.info('✅ Shutdown completed successfully'),
         process.exit(0),
       } catch (error) {,
         logger.error('❌ Error during shutdown:', error),
-        process.exit(1),
-      }
+        process.exit(1);
+};
     },
     process.on('SIGINT', () => shutdown('SIGINT')),
     process.on('SIGTERM', () => shutdown('SIGTERM')),
-    process.on('SIGQUIT', () => shutdown('SIGQUIT')),
-  }
+    process.on('SIGQUIT', () => shutdown('SIGQUIT'));
+};
 ,
   async generateReport() {,
     if (!this.orchestrator) {,
@@ -405,8 +405,8 @@ const timeoutId = setTimeout(resolve,                                           
     logger.info('🚨 Emergency stop initiated...'),
     try {,
       if (this.orchestrator) {,
-        await this.orchestrator.emergencyStop(),
-      }
+        await this.orchestrator.emergencyStop();
+};
 ,
       this.isRunning = false,
       logger.info('✅ Emergency stop completed'),
@@ -468,8 +468,8 @@ async function main()  {,
 
   } catch (error) {,
     logger.error('❌ System error:', error),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 // Start the system if this file is executed directly,
@@ -477,7 +477,7 @@ if (require.main === module) {,
   main().catch(error => {,
     logger.error('❌ Fatal error:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
-module.exports = AutonomousAutomationSystem,
+module.exports = AutonomousAutomationSystem,'

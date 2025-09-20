@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Trustworthy AI Systems Blueprint',
   description: 'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.'
 }
-export default function TrustworthyAISystemsBlueprintPage() {
+export default function TrustworthyAISystemsBlueprintPage() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gray-900 text-white py-16">

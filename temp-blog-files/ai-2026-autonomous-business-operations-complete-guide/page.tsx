@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Master autonomous business operations with our comprehensive 2026 guide. Learn implementation strategies, best practices, and real-world case studies for transforming your business with AI.'
   keywords: ['autonomous business operationsAI automationbusiness transformationenterprise AI', 'operational excellence']
 }
-export default function AutonomousBusinessOperationsGuide() {
+export default function AutonomousBusinessOperationsGuide() : any {
   return (
     <div>
       <SEO

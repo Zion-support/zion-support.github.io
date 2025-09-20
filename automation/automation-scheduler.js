@@ -66,8 +66,8 @@ class AutomationScheduler {,
         this.config = { ...this.config, ...config.scheduler },
         logger.info('📋 Configuration loaded successfully'),
       } catch (error) {,
-        logger.warn('⚠️ Failed to load configuration, using defaults:', error.message),
-      }
+        logger.warn('⚠️ Failed to load configuration, using defaults:', error.message);
+};
     }
   }
 ,
@@ -78,14 +78,14 @@ class AutomationScheduler {,
     for (const dir of dirs) {,
       const dirPath = path.join(process.cwd(), 'automation', dir),
       if (!fs.existsSync(dirPath)) {,
-        fs.mkdirSync(dirPath, { recursive: true }),
-      }
+        fs.mkdirSync(dirPath, { recursive: true });
+};
     }
 ,
     // Initialize task history,
     await this.loadTaskHistory(),
-    logger.info('✅ Scheduler initialized'),
-  }
+    logger.info('✅ Scheduler initialized');
+};
 ,
   startMonitoring() {,
     // Monitor every minute,
@@ -96,21 +96,21 @@ class AutomationScheduler {,
     setInterval(() => {,
       this.cleanupOldLogs(),
     }, 24 * 60 * 60 * 1000),
-    logger.info('📊 Monitoring started'),
-  }
+    logger.info('📊 Monitoring started');
+};
 ,
   async monitorTasks() {,
     const now = new Date(),
     // Check each scheduled task,
     for (const [taskName, schedule] of Object.entries(this.config.schedules)) {,
       if (this.shouldRunTask(taskName, schedule, now)) {,
-        await this.scheduleTask(taskName),
-      }
+        await this.scheduleTask(taskName);
+};
     }
 ,
     // Check for stuck tasks,
-    this.checkForStuckTasks(),
-  }
+    this.checkForStuckTasks();
+};
 ,
   shouldRunTask(taskName, schedule, now) {,
     // Simple cron-like parsing (basic implementation),
@@ -144,8 +144,8 @@ class AutomationScheduler {,
   getLastRunTime(taskName) {,
     const history = this.taskHistory.filter(h => h.taskName === taskName),
     if (history.length === 0) return 0,
-    return Math.max(...history.map(h => new Date(h.timestamp).getTime())),
-  }
+    return Math.max(...history.map(h => new Date(h.timestamp).getTime()));
+};
 ,
   getMinInterval(schedule) {,
     // Calculate minimum interval between runs (in milliseconds),
@@ -199,16 +199,16 @@ class AutomationScheduler {,
         taskInfo.endTime = new Date(),
         taskInfo.status = 'failed',
         taskInfo.error = error.message,
-        this.runningTasks.delete(taskName),
-      }
+        this.runningTasks.delete(taskName);
+};
     }
   }
 ,
   async runTask(taskName) {,
     const taskPath = path.join(__dirname, 'tasks', `${taskName}.js`),
     if (!fs.existsSync(taskPath)) {,
-      throw new Error(`Task file not found: ${taskPath}`),
-    }
+      throw new Error(`Task file not found: ${taskPath}`);
+};
 ,
     return new Promise((resolve, reject) => {,
       const timeout = setTimeout(() => {,
@@ -235,15 +235,15 @@ class AutomationScheduler {,
             stderr,
             exitCode: code}),
         } else {,
-          reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`)),
-        }
+          reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`));
+};
       }),
       taskProcess.on('error', (error) => {,
         clearTimeout(timeout),
         reject(error),
       }),
-    }),
-  }
+    });
+};
 ,
   checkForStuckTasks() {,
     const now = new Date(),
@@ -253,8 +253,8 @@ class AutomationScheduler {,
       if (runningTime > stuckThreshold) {,
         logger.warn(`⚠️ Task ${taskName} appears to be stuck (running for ${runningTime}ms)`),
         // Force kill stuck task,
-        this.forceKillTask(taskName),
-      }
+        this.forceKillTask(taskName);
+};
     }
   }
 ,
@@ -265,8 +265,8 @@ class AutomationScheduler {,
       taskInfo.endTime = new Date(),
       taskInfo.error = 'Task was killed due to timeout',
       this.runningTasks.delete(taskName),
-      logger.warn(`🔪 Killed stuck task: ${taskName}`),
-    }
+      logger.warn(`🔪 Killed stuck task: ${taskName}`);
+};
   }
 ,
   async loadTaskHistory() {,
@@ -292,8 +292,8 @@ class AutomationScheduler {,
       const recentHistory = this.taskHistory.slice(-1000),
       fs.writeFileSync(historyPath, JSON.stringify(recentHistory, null, 2)),
     } catch (error) {,
-      logger.error('❌ Failed to save task history:', error.message),
-    }
+      logger.error('❌ Failed to save task history:', error.message);
+};
   }
 ,
   async cleanupOldLogs() {,
@@ -311,12 +311,12 @@ class AutomationScheduler {,
           const stats = fs.statSync(filePath),
           if (stats.mtime < cutoffDate) {,
             fs.unlinkSync(filePath),
-            logger.info(`🗑️  Removed old file: ${file}`),
-          }
-        }),
-      }
-    }),
-  }
+            logger.info(`🗑️  Removed old file: ${file}`);
+};
+        });
+};
+    });
+};
 ,
   keepAlive() {,
     // Keep the process running,
@@ -329,8 +329,8 @@ class AutomationScheduler {,
       logger.info('🛑 Shutting down scheduler...'),
       await this.stop(),
       process.exit(0),
-    }),
-  }
+    });
+};
 ,
   async stop() {,
     logger.info('🛑 Stopping automation scheduler...'),
@@ -341,19 +341,19 @@ class AutomationScheduler {,
       const maxWaitTime = 30000, // 30 seconds,
       const startTime = Date.now(),
       while (this.runningTasks.size > 0 && (Date.now() - startTime) < maxWaitTime) {,
-        await new Promise(resolve => setTimeout(resolve, 1000)),
-      }
+        await new Promise(resolve => setTimeout(resolve, 1000));
+};
 ,
       // Force kill remaining tasks,
       for (const [taskName] of this.runningTasks) {,
-        this.forceKillTask(taskName),
-      }
+        this.forceKillTask(taskName);
+};
     }
 ,
     // Save final state,
     await this.saveTaskHistory(),
-    logger.success('✅ Automation scheduler stopped'),
-  }
+    logger.success('✅ Automation scheduler stopped');
+};
 ,
   getStatus() {,
     return {,
@@ -391,8 +391,8 @@ Examples: node automation-scheduler.js --start,
   } else if (args.includes('--status')) {,
     console.log(JSON.stringify(scheduler.getStatus(), null, 2)),
   } else {,
-    console.log('Use --help for usage information'),
+    console.log('Use --help for usage information');
   }
 }
 ,
-module.exports = AutomationScheduler,
+module.exports = AutomationScheduler,'

@@ -208,10 +208,10 @@ const Homepage2044: React.FC = () => {,
                       onClick={() => handleServiceClick(service)}
                       role="button",
                       tabIndex={0}
-                      onKeyDown={(e) => {,
+                      onKeyDown={(e) : any => {,
                         if (e.key === 'Enter' || e.key === ' ') {,
-                          handleServiceClick(service),
-                        }
+                          handleServiceClick(service);
+};
                       }}
                       aria-label={`Learn more about ${service.name}`}
                     >,
@@ -331,7 +331,7 @@ const Homepage2044: React.FC = () => {,
         </main>,
       </Layout>,
     </>,
-  ),
-},
+  );
+  },
 export default Homepage2044,
 </div></div></div></div></div>,

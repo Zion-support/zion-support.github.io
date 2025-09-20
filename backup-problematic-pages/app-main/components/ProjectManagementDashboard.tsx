@@ -3,34 +3,35 @@
 import React, { useState, useEffect } from 'react';
 
 interface Project {
-  id: string;
-  name: string;
-  status: 'planning' | 'development' | 'testing' | 'deployment' | 'completed';
-  progress: number;
-  startDate: string;
-  endDate: string;
-  team: string[];
-  budget: number;
-  spent: number;
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  client: string;
-  description: string;
-  tasks: Task[];
+  id: string,
+  name: string,
+  status: 'planning' | 'development' | 'testing' | 'deployment' | 'completed',
+  progress: number,
+  startDate: string,
+  endDate: string,
+  team: string[],
+  budget: number,
+  spent: number,
+  priority: 'low' | 'medium' | 'high' | 'critical',
+  client: string,
+  description: string,
+  tasks: Task[],
 }
 
 interface Task {
-  id: string;
-  title: string;
-  status: 'todo' | 'in-progress' | 'review' | 'done';
-  assignee: string;
-  dueDate: string;
-  priority: 'low' | 'medium' | 'high';
-  estimatedHours: number;
-  actualHours: number;
+  id: string,
+  title: string,
+  status: 'todo' | 'in-progress' | 'review' | 'done',
+  assignee: string,
+  dueDate: string,
+  priority: 'low' | 'medium' | 'high',
+  estimatedHours: number,
+  actualHours: number,
 }
 
 const ProjectManagementDashboard: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
+
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<'overview' | 'timeline' | 'budget'>('overview');
 
@@ -96,7 +97,8 @@ const ProjectManagementDashboard: React.FC = () => {
           { id: '11', title: 'Deployment Setup', status: 'review', assignee: 'Emma Davis', dueDate: '2025-02-28', priority: 'medium', estimatedHours: 20, actualHours: 18 }
         ]
       }
-    ];
+    ]);
+
 
     setProjects(mockProjects);
   }, []);
@@ -112,7 +114,7 @@ const ProjectManagementDashboard: React.FC = () => {
     }
   };
 
-  const getPriorityColor = (priority: string) => {
+  const getPriorityColor = (priority: string) : any => {
     switch (priority) {
       case 'low': return 'text-green-600';
       case 'medium': return 'text-yellow-600';
@@ -122,7 +124,7 @@ const ProjectManagementDashboard: React.FC = () => {
     }
   };
 
-  const getTaskStatusColor = (status: string) => {
+  const getTaskStatusColor = (status: string) : any => {
     switch (status) {
       case 'todo': return 'bg-gray-100 text-gray-800';
       case 'in-progress': return 'bg-blue-100 text-blue-800';
@@ -132,7 +134,7 @@ const ProjectManagementDashboard: React.FC = () => {
     }
   };
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: number) : any => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -301,7 +303,7 @@ const ProjectManagementDashboard: React.FC = () => {
                         {task.status.replace('-', ' ').toUpperCase()}
                       </span>
                     </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-300">
+                    <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm text-gray-300">
                       <div>
                         <span className="block">Assignee</span>
                         <span className="font-medium text-white">{task.assignee}</span>

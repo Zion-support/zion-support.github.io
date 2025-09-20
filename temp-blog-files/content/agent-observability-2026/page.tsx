@@ -3,7 +3,7 @@ export const metadata = {
 	title: 'Agent Observability 2026: Evals, Telemetry, and Guardrails'
 	description: 'Design an end-to-end observability stack for AI agents with metrics, tracing, and automated evals.'
 }
-export default function AgentObservability2026() {
+export default function AgentObservability2026() : any {
 	return (
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
 			<h1 className="text-4xl font-bold text-gray-900 mb-4">Agent Observability 2026</h1>

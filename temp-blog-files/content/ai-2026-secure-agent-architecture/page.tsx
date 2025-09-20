@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Secure Agent Architecture | Zion Tech Group'
   description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 2026.'
 }
-export default function SecureAgentArchitecture2026Page() {
+export default function SecureAgentArchitecture2026Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">

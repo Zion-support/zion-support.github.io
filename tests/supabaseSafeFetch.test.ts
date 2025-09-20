@@ -6,6 +6,7 @@ it('checkOnline returns false when navigator is offline', async () => {
     value: { onLine: false },
     writable: true,
   });
+
   const result = await client.checkOnline();
   expect(result).toBe(false);
 });
@@ -13,10 +14,10 @@ it('checkOnline returns false when navigator is offline', async () => {
 // Test that checkOnline returns false when navigator is undefined
 it('checkOnline returns false when navigator is undefined', async () => {
   const original = (global as any).navigator;
-  Object.defineProperty(global, 'navigator', { value: undefined, configurable: true, writable: true });
+  Object.defineProperty(global, 'navigator', { value: undefined, configurable: true, writable: true }),
   const result = await client.checkOnline();
   expect(result).toBe(false);
-  Object.defineProperty(global, 'navigator', { value: original, configurable: true, writable: true });
+  Object.defineProperty(global, 'navigator', { value: original, configurable: true, writable: true }),
 });
 
 // Test that safeFetch throws custom error when fetch fails
@@ -27,7 +28,7 @@ it('safeFetch throws when fetch rejects', async () => {
   });
   jest.spyOn(client, 'checkOnline').mockResolvedValue(true);
   jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error'));
-  await expect(client.safeFetch('https://example.com')).rejects.toThrow('Failed to connect to Supabase');
+  await expect(client.safeFetch('https: //example.com')).rejects.toThrow('Failed to connect to Supabase'),
 });
 
 // Test that safeFetch preserves headers passed as a Headers object
@@ -36,8 +37,9 @@ it('safeFetch preserves Headers object values', async () => {
     value: { onLine: true },
     writable: true,
   });
-  const headers = new Headers({ apikey: 'test-key' });
-  const fetchSpy = jest.fn().mockResolvedValue({ ok: true, status: 200 } as Response);
+
+  const headers = new Headers({ apikey: 'test-key' }),
+  const fetchSpy = jest.fn().mockResolvedValue({ ok: true, status: 200 } as Response),
   jest.spyOn(client, 'checkOnline').mockResolvedValue(true);
   (global as any).fetch = fetchSpy;
 

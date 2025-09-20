@@ -83,8 +83,8 @@ export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTes
           error: 'Unknown error',
           timestamp: timestamp,
           serviceName: endpoint.serviceName, // Pass serviceName
-        }),
-      }
+        });
+};
     }
   }
   return results,
@@ -92,7 +92,7 @@ export async function measureLatency(endpoints: Endpoint[]): Promise<EndpointTes
 
 // Example usage (will be moved to the main cron script later)
 /*
-async function main() {
+async function main() : any {
   const exampleEndpoints: Endpoint[] = [
     { name: 'Django Ping', baseURL: process.env.DJANGO_API_BASE_URL || 'http://localhost:8000', path: '/api/ping/' },
     { name: 'Next.js Health', baseURL: process.env.NEXTJS_API_BASE_URL || 'http://localhost:3000', path: '/api/health' },
@@ -111,10 +111,10 @@ async function main() {
     } else {
       console.log(
         `${result.name} (${result.url}) - ${result.method}: SUCCESS - Status: ${result.status}, Latency: ${result.latencyMs}ms`
-      ),
-    }
-  }),
-}
+      );
+};
+  });
+  }
 
 main().catch(console.error),
 */

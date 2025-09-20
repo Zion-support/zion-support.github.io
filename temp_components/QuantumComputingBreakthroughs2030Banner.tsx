@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function QuantumComputingBreakthroughs2030Banner() {,
+export default function QuantumComputingBreakthroughs2030Banner() : any {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-cyan-900 text-white py-16">,
       {/* Animated background */}
@@ -77,5 +77,5 @@ export default function QuantumComputingBreakthroughs2030Banner() {,
       <div className="absolute bottom-10 left-20 text-2xl animate-bounce delay-1000">🧠</div>,
       <div className="absolute bottom-20 right-10 text-3xl animate-pulse delay-500">🚀</div>,
     </div>,
-  ),
-}
+  );
+  }

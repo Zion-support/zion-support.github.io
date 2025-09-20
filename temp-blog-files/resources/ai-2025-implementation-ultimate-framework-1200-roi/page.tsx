@@ -1,13 +1,13 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon, DocumentTextIcon, ChartBarIcon, CheckCircleIcon } from '@heroicons/react/24/outline'
 export const metadata: Metadata = {
   title: 'AI 2025 Implementation Ultimate Framework: Complete Roadmap to 1,200% ROI'
   description: 'Comprehensive framework providing a complete roadmap for implementing AI solutions that deliver 1,200% ROI within 18 months. Based on analysis of 500+ successful implementations.'
   keywords: 'AI implementation, framework, roadmap, ROI, AI strategy, implementation guide, best practices, 2025'
 }
-export default function AI2025ImplementationFrameworkPage() {
+export default function AI2025ImplementationFrameworkPage() : any {
   return (
     <div>
       {/* Header */}
@@ -225,7 +225,7 @@ export default function AI2025ImplementationFrameworkPage() {
                   <h5 className="text-lg font-semibold text-gray-900 mb-2">Phased Approach</h5>
                   <ul className="text-gray-700 space-y-1">
                     <li>• Department-by-department rollout</li>
-                    <li>• Function-by-function implementation</li>;
+                    <li>• Function-by-function implementation</li>,
                     <li>• Geographic expansion</li>
                     <li>• Use case expansion</li>
                   </ul>

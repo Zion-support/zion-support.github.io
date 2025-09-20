@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Operationalize governance with verifiable evidence: evaluation results, approvals, and runtime telemetry as first-class artifacts.'
 }
-export default function EvidenceDrivenGovernancePage() {
+export default function EvidenceDrivenGovernancePage() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Evidence-Driven AI Governance</h1>

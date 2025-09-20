@@ -102,6 +102,6 @@ const RevolutionaryAdvertisingBanner2026: React.FC = () => {,
         </motion.div>,
       )}
     </AnimatePresence>,
-  ),
-},
+  );
+  },
 export default RevolutionaryAdvertisingBanner2026,

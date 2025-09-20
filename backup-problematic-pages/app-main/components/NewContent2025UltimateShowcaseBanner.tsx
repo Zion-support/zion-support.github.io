@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-const NewContent2025UltimateShowcaseBanner: React.FC = () => {;
+const NewContent2025UltimateShowcaseBanner: React.FC = () => {,
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div>
@@ -8,7 +8,7 @@ const NewContent2025UltimateShowcaseBanner: React.FC = () => {;
           <div>
             <span className="text-sm font-medium">✨ ULTIMATE SHOWCASE 2025</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+          <h2 className="text-4xl md: text-6xl font-bold mb-6">
             Revolutionary Content
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
               Now Available
@@ -69,4 +69,4 @@ const NewContent2025UltimateShowcaseBanner: React.FC = () => {;
         </div>
       </div>
     </section>)}
-export default NewContent2025UltimateShowcaseBanner;
+export default NewContent2025UltimateShowcaseBanner,

@@ -54,9 +54,8 @@ describe('/api/categories API Endpoint', () => {
     // Ensure CATEGORIES has data for this test case
     const _originalCategories = [...CATEGORIES],
     if (CATEGORIES.length === 0) {
-        CATEGORIES.push({ id: 'fallback1', name: 'Fallback Category', slug: 'fallback-cat', icon: 'FallbackIcon' }),
-    }
-
+        CATEGORIES.push({ id: 'fallback1', name: 'Fallback Category', slug: 'fallback-cat', icon: 'FallbackIcon' });
+};
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
     }),
@@ -69,8 +68,8 @@ describe('/api/categories API Endpoint', () => {
 
     // Restore original CATEGORIES if modified
     if (_originalCategories.length === 0 && CATEGORIES.length > 0) {
-        CATEGORIES.pop(),
-    }
+        CATEGORIES.pop();
+};
   }),
 
   test('should return empty array if DB query returns empty array and CATEGORIES is also empty', async () => {
@@ -124,5 +123,5 @@ describe('/api/categories API Endpoint', () => {
     expect(res._getStatusCode()).toBe(405),
     expect(res._getJSONData()).toEqual({ error: 'Method POST Not Allowed' }),
     expect(mockPrismaCategory.findMany).not.toHaveBeenCalled(),
+  });
   }),
-}),

@@ -1,14 +1,14 @@
 import { ServiceVariant } from '../types/service-variants';
 =======
 export interface RealMicroSaasService2024 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  variant: string;
-  features: string[];
-  rating: number;
-  customers: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  variant: string,
+  features: string[],
+  rating: number,
+  customers: string,
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
@@ -489,4 +489,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     reviews: 1050
 =======
   }
-];
+],
+'

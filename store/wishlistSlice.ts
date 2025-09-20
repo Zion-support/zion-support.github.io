@@ -16,7 +16,7 @@ export const getApiUrl = () => {,
 },
 export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(,
   'wishlist/loadFromDB',
-  async (userId: string) => {,
+  async (userId: string) : any => {,
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`),
     if (!res.ok) throw new Error('Failed to load'),
     return (await res.json()) as WishlistItem[],
@@ -33,13 +33,13 @@ const wishlistSlice = createSlice({,
       if (!exists) state.items.push(action.payload)
     },
     removeFromWishlist(state, action: PayloadAction<{ id: string }>) {,
-      state.items = state.items.filter((item) => item.id !== action.payload.id),
-    }
+      state.items = state.items.filter((item) => item.id !== action.payload.id);
+};
   },
-  extraReducers: (builder) => {,
-    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {,
+  extraReducers: (builder) : any => {,
+    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) : any => {,
       state.items = action.payload,
-    }),
+    });
   }
 }),
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions,

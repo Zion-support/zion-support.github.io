@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AiHrAnalyticsPlatform() {
+export default function AiHrAnalyticsPlatform() : any {
 	return (
 		<ServiceLanding
 			title="AI HR Analytics Platform"
@@ -21,7 +21,7 @@ export default function AiHrAnalyticsPlatform() {
 				"Engagement drivers and action suggestions"
 			]}
 			industries={["SaaS", "Retail", "Healthcare", "Manufacturing"]}
-			canonical="https://ziontechgroup.com/ai-hr-analytics-platform"
+			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	);
-}
+  }

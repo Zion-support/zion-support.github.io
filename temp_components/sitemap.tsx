@@ -11,7 +11,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 
-export default function SitemapPage() {
+export default function SitemapPage() : any {
   const currentYear = new Date().getFullYear(),
 
   const mainPages = [
@@ -297,5 +297,5 @@ export default function SitemapPage() {
 
       <EnhancedFooter />
     </div>
-  ),
-}
+  );
+  }

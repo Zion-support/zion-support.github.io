@@ -20,7 +20,7 @@ class LintErrorFixer {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-    }
+};
   }
 
   log(message) {
@@ -38,7 +38,7 @@ class LintErrorFixer {
       const otherLines = [];
       let inImportBlock = false;
 
-      for (let i = 0; i < lines.length; i++) {
+      for (let i = 0, i < lines.length, i++) {
         const line = lines[i];
         if (line.trim().startsWith('import ')) {
           inImportBlock = true;
@@ -65,9 +65,9 @@ class LintErrorFixer {
         return true;
       });
 
-      const newContent = [...usedImports, ...otherLines].join('\n');
+  const newContent = [...usedImports, ...otherLines].join('\n');
       fs.writeFileSync(filePath, newContent);
-      this.log(`✅ Fixed unused imports in: ${filePath}`);
+      this.log(`✅ Fixed unused imports in: ${filePath}`),
       return true;
     } catch (error) {
       this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`);
@@ -81,8 +81,8 @@ class LintErrorFixer {
       const result = execSync(`npx tsc --noEmit --project .`, { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
-      this.log(`✅ TypeScript check passed for: ${filePath}`);
+      }),
+      this.log(`✅ TypeScript check passed for: ${filePath}`),
       return true;
     } catch (error) {
       this.log(`❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`);
@@ -99,7 +99,7 @@ class LintErrorFixer {
 
         if (fixedContent !== content) {
           fs.writeFileSync(filePath, fixedContent);
-          this.log(`✅ Fixed TypeScript issues in: ${filePath}`);
+          this.log(`✅ Fixed TypeScript issues in: ${filePath}`),
           return true;
         }
       } catch (fixError) {
@@ -114,8 +114,8 @@ class LintErrorFixer {
       const result = execSync(`npx eslint "${filePath}" --fix`, { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
-      this.log(`✅ Fixed ESLint errors in: ${filePath}`);
+      }),
+      this.log(`✅ Fixed ESLint errors in: ${filePath}`),
       return true;
     } catch (error) {
       this.log(`❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`);
@@ -124,7 +124,7 @@ class LintErrorFixer {
   }
 
   async fixFile(filePath) {
-    this.log(`🔧 Fixing issues in: ${filePath}`);
+    this.log(`🔧 Fixing issues in: ${filePath}`),
     
     const fixes = [
       this.fixUnusedImports(filePath),
@@ -135,7 +135,7 @@ class LintErrorFixer {
     const results = await Promise.all(fixes);
     const successCount = results.filter(Boolean).length;
     
-    this.log(`📊 Fixed ${successCount}/3 issue types in: ${filePath}`);
+    this.log(`📊 Fixed ${successCount}/3 issue types in: ${filePath}`),
     return successCount > 0;
   }
 
@@ -209,12 +209,11 @@ switch (command) {
       fixer.fixFile(filePath);
     } else {
       console.log('Usage: node lint-error-fixer.js file <filepath>');
-    }
+};
     break;
   case 'all':
     fixer.fixAllFiles();
     break;
-  default:
-    console.log('Usage: node lint-error-fixer.js [file <filepath>|all]');
+  default: console.log('Usage: node lint-error-fixer.js [file <filepath>|all]'),
     process.exit(1);
 }

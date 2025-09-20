@@ -4,7 +4,7 @@ import Comprehensive2029ServicesShowcase from '../components/sections/Comprehens
 import UltraFuturisticNavigation2031 from '../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 
-export default function Comprehensive2029ServicesPage() {
+export default function Comprehensive2029ServicesPage() : any {
   return (
     <>
       <Head>
@@ -59,7 +59,7 @@ export default function Comprehensive2029ServicesPage() {
                 "email": "kleber@ziontechgroup.com"
               },
               "sameAs": [
-                "https://ziontechgroup.com"
+                "https: //ziontechgroup.com"
               ]
             })
           }}
@@ -75,4 +75,4 @@ export default function Comprehensive2029ServicesPage() {
       </div>
     </>
   );
-}
+  }

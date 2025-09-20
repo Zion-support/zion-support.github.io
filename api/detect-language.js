@@ -8,5 +8,5 @@ export default function handler(req, res) {
     }
   }
   res.setHeader('Set-Cookie', `zion_language=${lang}, Path=/, Max-Age=31536000`),
-  res.status(200).json({ lang }),
-}
+  res.status(200).json({ lang });
+};

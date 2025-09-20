@@ -12,7 +12,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import { advancedMicroSaasServices2026 } from '../data/2026-advanced-micro-saas-expansion';
 import { specializedIndustrySolutions2026 } from '../data/2026-specialized-industry-solutions';
 
-export default function Comprehensive2026ServicesShowcase() {
+export default function Comprehensive2026ServicesShowcase() : any {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -39,7 +39,7 @@ export default function Comprehensive2026ServicesShowcase() {
     { id: 'Real Estate Technology', name: 'PropTech', icon: '🏠', count: allServices.filter(s => s.category === 'Real Estate Technology').length },
     { id: 'Legal Technology', name: 'LegalTech', icon: '⚖️', count: allServices.filter(s => s.category === 'Legal Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: allServices.filter(s => s.category === 'Manufacturing Technology').length }
-  ];
+  ],
 
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -49,8 +49,8 @@ export default function Comprehensive2026ServicesShowcase() {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
+  const getCategoryIcon = (category: string) : any => {
+    const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀';
   };
 
@@ -62,7 +62,7 @@ export default function Comprehensive2026ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -73,7 +73,7 @@ export default function Comprehensive2026ServicesShowcase() {
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -358,7 +358,7 @@ export default function Comprehensive2026ServicesShowcase() {
               onClick={(e) => e.stopPropagation()}
             >
               {selectedService && (() => {
-                const service = allServices.find(s => s.id === selectedService);
+                const service = allServices.find(s => s.id === selectedService),
                 if (!service) return null;
 
                 return (
@@ -466,7 +466,7 @@ export default function Comprehensive2026ServicesShowcase() {
                           <h3 className="text-xl font-semibold text-cyan-400 mb-3">Market Information</h3>
                           <div className="space-y-2 text-sm">
                             <div className="flex justify-between">
-                              <span className="text-white/60">Market Size:</span>
+                              <span className="text-white/60">Market Size: </span>
                               <span className="text-white/80">{service.marketSize}</span>
                             </div>
                             <div className="flex justify-between">
@@ -525,7 +525,7 @@ export default function Comprehensive2026ServicesShowcase() {
                     </div>
                   </div>
                 );
-              })()}
+  })()}
             </motion.div>
           </motion.div>
         )}

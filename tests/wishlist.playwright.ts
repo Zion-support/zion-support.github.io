@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test',
 // Basic wishlist flow
 // This test assumes a seeded product listing is available on the home page
 
-test('can save item to wishlist and remove it', async ({ page }) => {
+test('can save item to wishlist and remove it', async ({ page }) : any => {
   // Login (using any available credentials in the test env)
   await page.goto('/login'),
   await page.fill('input[name="email"]user@example.com'),

@@ -17,6 +17,6 @@ const DatabaseDesignChat: NextPage = () => {
       </main>
     </div>
   );
-};
+  };
 
 export default DatabaseDesignChat;

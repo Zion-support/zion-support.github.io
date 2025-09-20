@@ -99,5 +99,5 @@ async function checkUltimateRedundancyHealth() {
       platform: process.platform,
       nodeVersion: process.version
     }
-  },
-}
+  };
+  }

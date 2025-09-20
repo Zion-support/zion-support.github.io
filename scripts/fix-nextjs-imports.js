@@ -69,8 +69,8 @@ function walkDir(dir, extensions = ['.jsx.js.tsx.ts']) {,
       }
     }),
   } catch (error) {,
-    console.log(`⚠️ Could not read directory ${dir}:`, error.message),
-  }
+    console.log(`⚠️ Could not read directory ${dir}:`, error.message);
+};
 ,
   return filesFixed,
 }
@@ -95,7 +95,7 @@ function main() {,
     console.log('3. Update any remaining Next.js specific patterns'),
     console.log('4. Run the enhanced testing automation to verify fixes')
   } else {,
-    console.log('\n✅ No Next.js imports found to fix'),
+    console.log('\n✅ No Next.js imports found to fix');
   }
 }
 ,

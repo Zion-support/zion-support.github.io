@@ -3,10 +3,10 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  bundleSize: string;
-  cacheHitRate: number;
+  loadTime: number,
+  renderTime: number,
+  bundleSize: string,
+  cacheHitRate: number,
 }
 
 interface PerformanceOptimizerProps {
@@ -17,7 +17,7 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableMonitoring = true,
   showMetrics = false
-}) => {
+}) : any => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -25,7 +25,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     cacheHitRate: 0
   });
 
-  useEffect(() => {
+    useEffect(() => {
     if (!enableMonitoring) return;
 
     const startTime = performance.now();
@@ -38,7 +38,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       // Estimate bundle size from resource entries
       const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-      const totalSize = resources.reduce((acc, resource) => {
+      const totalSize = resources.reduce((acc, resource) : any => {
         return acc + (resource.transferSize || 0);
       }, 0);
       const bundleSize = `${(totalSize / 1024).toFixed(2)} KB`;
@@ -62,7 +62,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       measurePerformance();
     } else {
       window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
+      return () => { window.removeEventListener('load', measurePerformance); };
     }
 
     // Preload critical resources
@@ -93,7 +93,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const images = document.querySelectorAll('img[data-src]');
     
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries) => {
+      const imageObserver = new IntersectionObserver((entries) : any => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;

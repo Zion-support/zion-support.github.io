@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function AutomationPage() {
+export default function AutomationPage() : any {
   const automationTypes = [
     {
       id: 1,
@@ -124,7 +124,7 @@ export default function AutomationPage() {
     }
   ]
 
-  const getColorClasses = (color: string) => {
+  const getColorClasses = (color: string) : any => {
     const colors = {
       blue: "from-blue-500 to-blue-700 bg-blue-50 text-blue-600",
       green: "from-green-500 to-green-700 bg-green-50 text-green-600",

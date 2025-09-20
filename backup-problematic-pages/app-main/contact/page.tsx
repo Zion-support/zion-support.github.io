@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   keywords: ['contact', 'consultation', 'AI solutions', 'enterprise technology', 'support'],
 }
 
-export default function ContactPage() {
+export default function ContactPage() : any {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Copy‑paste approval policies, risk tiers, and evidence fields wired to evaluation gates and runtime guardrails.'
 }
-export default function EvidenceLedApprovalsStarterPage() {
+export default function EvidenceLedApprovalsStarterPage() : any {
   return (
     <div>
       <main className="container mx-auto px-6 py-12">

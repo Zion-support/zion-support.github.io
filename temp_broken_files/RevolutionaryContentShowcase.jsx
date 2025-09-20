@@ -110,6 +110,6 @@ const RevolutionaryContentShowcase = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-},
+  );
+  },
 export default RevolutionaryContentShowcase,

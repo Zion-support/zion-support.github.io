@@ -15,17 +15,14 @@ let resend: Resend | null = null,
 if (resendApiKey) {
   resend = new Resend(resendApiKey)
 } else {
-  logStructured("ERROR", "RESEND_API_KEY is not set. Email functionality will be disabled.", {}, FUNCTION_NAME),
-}
-
-
-serve(async (req) => {
+  logStructured("ERROR", "RESEND_API_KEY is not set. Email functionality will be disabled.", {}, FUNCTION_NAME);
+};
+serve(async (req) : any => {
   initSentry(),
 
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders }),
-  }
-
+    return new Response(null, { headers: corsHeaders });
+};
   let requestData,
   try {
     requestData = await req.json(),
@@ -33,9 +30,8 @@ serve(async (req) => {
     logStructured("INFO", "Received send-email request", { to, subjectPreview: subject?.substring(0, 50) }, FUNCTION_NAME),
 
     if (!resend) {
-      throw new Error("Resend client is not initialized due to missing API key."),
-    }
-
+      throw new Error("Resend client is not initialized due to missing API key.");
+};
     const emailResponse = await resend.emails.send({
       from: Deno.env.get("RESEND_FROM_EMAIL") || "Lovable <onboarding@resend.dev>", // Make FROM configurable
       to: [to],
@@ -66,6 +62,6 @@ serve(async (req) => {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500
-    }),
+    });
   }
 }),

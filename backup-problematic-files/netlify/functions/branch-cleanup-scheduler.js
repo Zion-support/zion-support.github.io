@@ -48,5 +48,5 @@ exports.handler = async () => {,
   step('git:branch-cleanup', () => runNode('automation/branch-cleanup.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
-},
-}
+};
+  }

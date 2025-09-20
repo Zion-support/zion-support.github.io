@@ -61,6 +61,6 @@ const InteractiveContentPromoter: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-},
+  );
+  },
 export default InteractiveContentPromoter,

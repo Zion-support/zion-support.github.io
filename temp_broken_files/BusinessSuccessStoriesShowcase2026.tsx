@@ -180,24 +180,24 @@ const BusinessSuccessStoriesShowcase2026 = () => {,
   ],
   const featuredStories = successStories.filter(story => story.featured),
   const allStories = successStories,
-  const getIndustryIcon = (industry) => {,
+  const getIndustryIcon = (industry) : any => {,
     switch (industry) {,
-      case 'Technology': return Brain,
-      case 'Financial Services': return Shield,
-      case 'Manufacturing': return Zap,
-      case 'Retail': return Globe,
-      case 'Healthcare': return Target,
-      case 'Logistics': return Truck,
+      case 'Technology': return Brain;
+      case 'Financial Services': return Shield;
+      case 'Manufacturing': return Zap;
+      case 'Retail': return Globe;
+      case 'Healthcare': return Target;
+      case 'Logistics': return Truck;
       default: return Building}
   },
-  const getIndustryColor = (industry) => {,
+  const getIndustryColor = (industry) : any => {,
     switch (industry) {,
-      case 'Technology': return 'from-purple-500 to-blue-500',
-      case 'Financial Services': return 'from-green-500 to-teal-500',
-      case 'Manufacturing': return 'from-orange-500 to-red-500',
-      case 'Retail': return 'from-pink-500 to-rose-500',
-      case 'Healthcare': return 'from-blue-500 to-indigo-500',
-      case 'Logistics': return 'from-yellow-500 to-orange-500',
+      case 'Technology': return 'from-purple-500 to-blue-500';
+      case 'Financial Services': return 'from-green-500 to-teal-500';
+      case 'Manufacturing': return 'from-orange-500 to-red-500';
+      case 'Retail': return 'from-pink-500 to-rose-500';
+      case 'Healthcare': return 'from-blue-500 to-indigo-500';
+      case 'Logistics': return 'from-yellow-500 to-orange-500';
       default: return 'from-slate-500 to-slate-600'}
   },
   return (,
@@ -227,7 +227,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {,
         >,
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">Featured Success Stories</h3>,
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,
-            {featuredStories.map((storyindex) => {,
+            {featuredStories.map((storyindex) : any => {,
               const IndustryIcon = getIndustryIcon(story.industry),
               const industryColor = getIndustryColor(story.industry),
               return (,
@@ -334,7 +334,7 @@ const BusinessSuccessStoriesShowcase2026 = () => {,
         >,
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">All Success Stories</h3>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            {allStories.map((storyindex) => {,
+            {allStories.map((storyindex) : any => {,
               const IndustryIcon = getIndustryIcon(story.industry),
               const industryColor = getIndustryColor(story.industry),
               return (,
@@ -426,5 +426,5 @@ const BusinessSuccessStoriesShowcase2026 = () => {,
       </div>,
     </div>,
   ),
-export default BusinessSuccessStoriesShowcase2026,
-}
+export default BusinessSuccessStoriesShowcase2026;
+  }'

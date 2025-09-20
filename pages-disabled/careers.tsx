@@ -7,7 +7,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
       title: "Senior AI Engineer"
       department: "AI & Machine Learning"
       location: "San Francisco, CA / Remote"
-export default function CareersPage() {
+export default function CareersPage() : any {
   const openPositions = [
     {
       title: "Senior AI Engineer"
@@ -374,3 +374,4 @@ export default function CareersPage() {
 }
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
+'

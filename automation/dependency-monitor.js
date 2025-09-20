@@ -14,14 +14,14 @@ class DependencyMonitor {,
     // Ensure logs directory exists,
     this.ensureLogsDirectory(),
     // Initialize monitoring,
-    this.startMonitoring(),
-  }
+    this.startMonitoring();
+};
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true }),
-    }
+      fs.mkdirSync(logsDir, { recursive: true });
+};
   }
 ,
   log(message, level = 'INFO') {,
@@ -31,8 +31,8 @@ class DependencyMonitor {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
   }
 ,
   async startMonitoring() {,
@@ -53,8 +53,8 @@ class DependencyMonitor {,
     setTimeout(() => {,
       this.performDependencyCheck(),
     }, 15000),
-    this.log('Dependency monitoring started successfully'),
-  }
+    this.log('Dependency monitoring started successfully');
+};
 ,
   async performDependencyCheck() {,
     if (this.monitoring) return,
@@ -66,9 +66,8 @@ class DependencyMonitor {,
         this.log(`Found ${issues.length} dependency issues, attempting fixes...`),
         await this.autoFixDependencyIssues(issues),
       } else {,
-        this.log('No dependency issues detected, all packages are up to date'),
-      }
-
+        this.log('No dependency issues detected, all packages are up to date');
+};
     } catch (error) {,
       this.log(`Dependency check failed: ${error.message}`, 'ERROR'),
     } finally {,
@@ -85,16 +84,16 @@ class DependencyMonitor {,
         type: 'outdated_packages',
         severity: 'medium',
         description: `${outdatedPackages.length} outdated packages found`,
-        details: outdatedPackages}),
-    }
+        details: outdatedPackages});
+};
 ,
     // Check for missing dependencies,
     if (await this.hasMissingDependencies()) {,
       issues.push({,
         type: 'missing_dependencies',
         severity: 'high',
-        description: 'Missing critical dependencies detected'}),
-    }
+        description: 'Missing critical dependencies detected'});
+};
 ,
     // Check for peer dependency issues,
     const peerDependencyIssues = await this.checkPeerDependencies(),
@@ -103,8 +102,8 @@ class DependencyMonitor {,
         type: 'peer_dependency_issues',
         severity: 'medium',
         description: `${peerDependencyIssues.length} peer dependency issues found`,
-        details: peerDependencyIssues}),
-    }
+        details: peerDependencyIssues});
+};
 ,
     // Check for dependency conflicts,
     const dependencyConflicts = await this.checkDependencyConflicts(),
@@ -113,8 +112,8 @@ class DependencyMonitor {,
         type: 'dependency_conflicts',
         severity: 'high',
         description: `${dependencyConflicts.length} dependency conflicts detected`,
-        details: dependencyConflicts}),
-    }
+        details: dependencyConflicts});
+};
 ,
     return issues,
   }
@@ -131,8 +130,8 @@ class DependencyMonitor {,
           name: pkg,
           current: outdated[pkg].current,
           wanted: outdated[pkg].wanted,
-          latest: outdated[pkg].latest})),
-      }
+          latest: outdated[pkg].latest}));
+};
 ,
       return [],
     } catch (error) {,
@@ -198,10 +197,10 @@ class DependencyMonitor {,
       if (dependencies.problems) {,
         dependencies.problems.forEach(problem => {,
           if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {,
-            issues.push(problem),
-          }
-        }),
-      }
+            issues.push(problem);
+};
+        });
+};
 ,
       return issues,
     } catch (error) {,
@@ -213,10 +212,10 @@ class DependencyMonitor {,
           if (dependencies.problems) {,
             dependencies.problems.forEach(problem => {,
               if (problem.includes('peer dep missing') || problem.includes('peer dependency')) {,
-                issues.push(problem),
-              }
-            }),
-          }
+                issues.push(problem);
+};
+            });
+};
 ,
           return issues,
         } catch (parseError) {,
@@ -239,10 +238,10 @@ class DependencyMonitor {,
       if (dependencies.problems) {,
         dependencies.problems.forEach(problem => {,
           if (problem.includes('conflict') || problem.includes('incompatible')) {,
-            issues.push(problem),
-          }
-        }),
-      }
+            issues.push(problem);
+};
+        });
+};
 ,
       return issues,
     } catch (error) {,
@@ -254,10 +253,10 @@ class DependencyMonitor {,
           if (dependencies.problems) {,
             dependencies.problems.forEach(problem => {,
               if (problem.includes('conflict') || problem.includes('incompatible')) {,
-                issues.push(problem),
-              }
-            }),
-          }
+                issues.push(problem);
+};
+            });
+};
 ,
           return issues,
         } catch (parseError) {,
@@ -290,8 +289,8 @@ class DependencyMonitor {,
         this.dependenciesUpdated++,
         this.log(`Successfully fixed: ${issue.type}`),
       } catch (error) {,
-        this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR'),
-      }
+        this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
+};
     }
   }
 ,
@@ -312,8 +311,8 @@ class DependencyMonitor {,
       const updatedReport = `${reportContent}\n\nUpdate completed successfully at ${new Date().toISOString()}`,
       fs.writeFileSync(reportPath, updatedReport),
     } catch (error) {,
-      throw new Error(`Failed to update packages: ${error.message}`),
-    }
+      throw new Error(`Failed to update packages: ${error.message}`);
+};
   }
 ,
   async fixMissingDependencies() {,
@@ -324,8 +323,8 @@ class DependencyMonitor {,
         stdio: 'inherit'}),
       this.log('Dependencies installed successfully'),
     } catch (error) {,
-      throw new Error(`Failed to install dependencies: ${error.message}`),
-    }
+      throw new Error(`Failed to install dependencies: ${error.message}`);
+};
   }
 ,
   async fixPeerDependencies(issues) {,
@@ -342,8 +341,8 @@ class DependencyMonitor {,
       const reportPath = path.join(this.projectRoot, 'logspeer-dependency-report.txt'),
       const reportContent = `Peer Dependency Issues Report - ${new Date().toISOString()}\n\n${issues.join('\n')}\n\nThese issues require manual attention.`,
       fs.writeFileSync(reportPath, reportContent),
-      this.log(`Peer dependency report saved to: ${reportPath}`),
-    }
+      this.log(`Peer dependency report saved to: ${reportPath}`);
+};
   }
 ,
   async fixDependencyConflicts(conflicts) {,
@@ -360,8 +359,8 @@ class DependencyMonitor {,
       const reportPath = path.join(this.projectRoot, 'logsdependency-conflict-report.txt'),
       const reportContent = `Dependency Conflict Report - ${new Date().toISOString()}\n\n${conflicts.join('\n')}\n\nThese conflicts require manual attention.`,
       fs.writeFileSync(reportPath, reportContent),
-      this.log(`Dependency conflict report saved to: ${reportPath}`),
-    }
+      this.log(`Dependency conflict report saved to: ${reportPath}`);
+};
   }
 ,
   async performSecurityAudit() {,
@@ -378,12 +377,11 @@ class DependencyMonitor {,
         // Try to auto-fix vulnerabilities,
         await this.autoFixSecurityVulnerabilities(audit),
       } else {,
-        this.log('No security vulnerabilities found'),
-      }
-
+        this.log('No security vulnerabilities found');
+};
     } catch (error) {,
-      this.log(`Security audit failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Security audit failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async autoFixSecurityVulnerabilities(audit) {,
@@ -404,8 +402,8 @@ class DependencyMonitor {,
       const reportPath = path.join(this.projectRoot, 'logssecurity-audit-report.txt'),
       const reportContent = `Security Audit Report - ${new Date().toISOString()}\n\nVulnerabilities found: ${this.vulnerabilitiesFound}\nAuto-fix failed. Manual intervention required.\n\nAudit details:\n${JSON.stringify(audit, null, 2)}`,
       fs.writeFileSync(reportPath, reportContent),
-      this.log(`Security audit report saved to: ${reportPath}`),
-    }
+      this.log(`Security audit report saved to: ${reportPath}`);
+};
   }
 ,
   async performWeeklyUpdates() {,
@@ -421,15 +419,15 @@ class DependencyMonitor {,
           `${pkg.name}: ${pkg.current} → ${pkg.latest} (MAJOR)`,
         ).join('\n')}\n\nReview these updates carefully as they may contain breaking changes.`,
         fs.writeFileSync(reportPath, reportContent),
-        this.log(`Major updates report saved to: ${reportPath}`),
-      }
+        this.log(`Major updates report saved to: ${reportPath}`);
+};
 ,
       // Perform minor and patch updates,
       await this.performSafeUpdates(),
       this.log('Weekly dependency updates completed'),
     } catch (error) {,
-      this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Weekly dependency updates failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async checkMajorUpdates() {,
@@ -450,8 +448,8 @@ class DependencyMonitor {,
           .map(pkg => ({,
             name: pkg,
             current: outdated[pkg].current,
-            latest: outdated[pkg].latest})),
-      }
+            latest: outdated[pkg].latest}));
+};
 ,
       return [],
     } catch (error) {,
@@ -467,8 +465,8 @@ class DependencyMonitor {,
         stdio: 'inherit'}),
       this.log('Safe updates completed'),
     } catch (error) {,
-      this.log(`Safe updates failed: ${error.message}`, 'WARN'),
-    }
+      this.log(`Safe updates failed: ${error.message}`, 'WARN');
+};
   }
 ,
   async cleanupOldReports() {,
@@ -485,14 +483,14 @@ class DependencyMonitor {,
             const stats = fs.statSync(filePath),
             if (now - stats.mtime.getTime() > maxAge) {,
               fs.unlinkSync(filePath),
-              this.log(`Removed old report: ${file}`),
-            }
+              this.log(`Removed old report: ${file}`);
+};
           }
         }
       }
     } catch (error) {,
-      this.log(`Report cleanup failed: ${error.message}`, 'WARN'),
-    }
+      this.log(`Report cleanup failed: ${error.message}`, 'WARN');
+};
   }
 ,
   getStats() {,
@@ -506,20 +504,20 @@ class DependencyMonitor {,
   async stop() {,
     this.log('Stopping dependency monitor...'),
     this.monitoring = false,
-    process.exit(0),
-  }
+    process.exit(0);
+};
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', async () => {,
   if (monitor) {,
-    await monitor.stop(),
-  }
+    await monitor.stop();
+};
 }),
 process.on('SIGTERM', async () => {,
   if (monitor) {,
-    await monitor.stop(),
-  }
+    await monitor.stop();
+};
 }),
 // Start the monitor,
 const monitor = new DependencyMonitor(),
@@ -527,5 +525,5 @@ const monitor = new DependencyMonitor(),
 setInterval(() => {,
   // Heartbeat,
   const stats = monitor.getStats(),
-  monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`),
-}, 900000), // Every 15 minutes,
+  monitor.log(`Monitor heartbeat - Vulnerabilities: ${stats.vulnerabilitiesFound}, Dependencies Updated: ${stats.dependenciesUpdated}, Uptime: ${Math.round(stats.uptime)}s`);
+  }, 900000), // Every 15 minutes,

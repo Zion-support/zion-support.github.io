@@ -291,9 +291,8 @@ describe('Specific Issue #18 Validation', () => {
       const child = document.createElement('div'),
       child.style.width = '80px',
       child.textContent = `Item ${i + 1}`,
-      testContainer.appendChild(child),
-    }
-    
+      testContainer.appendChild(child);
+};
     document.body.appendChild(testContainer),
     
     expect(testContainer.classList.contains('flex-wrap-320')).toBe(true),
@@ -311,5 +310,5 @@ describe('Specific Issue #18 Validation', () => {
     expect(testElement.classList.contains('clamp-width-320')).toBe(true),
     
     document.body.removeChild(testElement),
-  }),
-}), 
+  });
+  }), 

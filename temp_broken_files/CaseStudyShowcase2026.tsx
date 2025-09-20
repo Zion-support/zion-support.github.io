@@ -201,7 +201,7 @@ const CaseStudyShowcase2026 = () => {,
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
-          {Object.entries(industries).map(([keyindustry]) => {,
+          {Object.entries(industries).map(([keyindustry]) : any => {,
             const Icon = industry.icon,
             return (,
               <button,
@@ -215,8 +215,8 @@ const CaseStudyShowcase2026 = () => {,
                 <Icon className="w-5 h-5 mr-2" />,
                 {industry.title}
               </button>,
-            ),
-          })}
+            );
+  })}
         </div>,
         {/* Case Studies Grid */}
           <div,

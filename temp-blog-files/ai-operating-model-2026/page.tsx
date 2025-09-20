@@ -3,7 +3,7 @@ export const metadata = {
 	title: 'AI Operating Model 2026'
 	description: 'Design an outcome-driven AI operating model: teams, processes, and platforms.'
 }
-export default function AIOperatingModel2026() {
+export default function AIOperatingModel2026() : any {
 	return (
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
 			<h1 className="text-4xl font-bold text-gray-900 mb-4">AI Operating Model 2026</h1>

@@ -1,5 +1,5 @@
 import React from 'react'
-const Analytics: React.FC = () => {;
+const Analytics: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">Analytics</h3>

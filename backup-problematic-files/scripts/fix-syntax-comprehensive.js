@@ -65,5 +65,5 @@ async function main() {,
     'src/**/*.tsxsrc/**/*.tscomponents/**/*.tsxcomponents/**/*.ts',
     'pages/**/*.tsxpages/**/*.ts'
   ],
-  let totalFixed = 0,
-}}}}}}))]]
+  let totalFixed = 0;
+  }}}}}}))]]"

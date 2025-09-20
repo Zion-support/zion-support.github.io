@@ -29,7 +29,7 @@ export const use_auth = () =>: any {,
   return {,
     user,
     loading,
-    login: (email: string, password: string) => {,
+    login: (email: string, password: string) : any => {,
       // Simulate login,
       set_user ({ id: "1", email, name: "User" }),
     },
@@ -37,5 +37,5 @@ export const use_auth = () =>: any {,
       set_user (null)}
   }
 }
-,
-})
+;
+  })

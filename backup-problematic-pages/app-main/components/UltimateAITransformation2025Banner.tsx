@@ -58,6 +58,6 @@ const UltimateAITransformation2025Banner: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default UltimateAITransformation2025Banner;

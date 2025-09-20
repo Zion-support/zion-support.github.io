@@ -24,8 +24,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const { exec } = require('child_process'),
 const path = require('path'),
@@ -57,12 +57,12 @@ const proc = exec(cmd, { cwd: __dirname }),
       `\n[${new Date().toISOString()}] Script ${script} exited with code ${code}\n`,
     ),
     out.end(),
-  }),
-}
+  });
+};
 ,
 function runAll()  {,
-  SCRIPTS.forEach(runScript),
-}
+  SCRIPTS.forEach(runScript);
+};
 ,
 // Run immediately,
 runAll(),
@@ -77,8 +77,8 @@ logger.info(Performance automation runner started. Logs in automation/performanc
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...'),
-  }
+    console.log('Stopping Script...');
+};
 }
 ,
 // Start the script,
@@ -87,8 +87,8 @@ if (require.main === module) {,
   script.start().catch(error => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = Script,
 // Graceful shutdown handling,

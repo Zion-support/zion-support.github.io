@@ -21,7 +21,7 @@ import './src/utils/server-polyfill',
 let Sentry: any = null,
 let onRequestError: any = null,
 
-async function initializeSentryOrMock() {
+async function initializeSentryOrMock() : any {
   if (process.env['NEXT_RUNTIME'] === 'edge') {
     console.log(
       'instrumentation.ts: Edge runtime detected. Forcing Sentry mock.',
@@ -51,8 +51,8 @@ async function initializeSentryOrMock() {
         Sentry = sentryModule,
         // If ./sentry has specific onRequestError, it should be imported here too.
         // For now, assuming @sentry/nextjs covers it or it's not critical for this path.
-        console.log('instrumentation.ts: Actual Sentry SDK loaded for Node.js.'),
-      }
+        console.log('instrumentation.ts: Actual Sentry SDK loaded for Node.js.');
+};
     } catch (error) {
       console.warn('instrumentation.ts: Sentry SDK import/init failed for Node.js, falling back to mock:',
         error),
@@ -63,8 +63,8 @@ async function initializeSentryOrMock() {
   } else {
     // Client-side environment, Sentry is typically handled by _app.tsx or similar client-specific setup.
     // The instrumentation hook (register function) primarily runs server-side (Node or Edge).
-    console.log('instrumentation.ts: Client-side context detected, Sentry init deferred to client-specific logic.'),
-  }
+    console.log('instrumentation.ts: Client-side context detected, Sentry init deferred to client-specific logic.');
+};
 }
 
 // Call initializeSentryOrMock at module load time.
@@ -74,7 +74,7 @@ const sentryInitializationPromise = initializeSentryOrMock(),
 
 export { onRequestError }, // This might be null if not set by mock/actual
 
-export async function register() {
+export async function register() : any {
   await sentryInitializationPromise, // Ensure initialization is complete
 
   console.log('instrumentation.ts: register() called'),
@@ -112,8 +112,8 @@ export async function register() {
         'instrumentation.ts: Sentry disabled in development (no valid DSN configured)',
       ),
     } else {
-      console.warn('instrumentation.ts: Sentry DSN not configured for production environment'),
-    }
+      console.warn('instrumentation.ts: Sentry DSN not configured for production environment');
+};
     return,
   }
 
@@ -151,13 +151,13 @@ export async function register() {
         return event,
       },
 
-      initialScope: (scope: any) => {
+      initialScope: (scope: any) : any => {
         if (SENTRY_RELEASE) {
-          scope.setTag('release', SENTRY_RELEASE),
-        }
+          scope.setTag('release', SENTRY_RELEASE);
+};
         if (SENTRY_ENVIRONMENT) {
-          scope.setTag('environment', SENTRY_ENVIRONMENT),
-        }
+          scope.setTag('environment', SENTRY_ENVIRONMENT);
+};
         scope.setTag('runtimeserver-side'),
         return scope,
       },
@@ -173,6 +173,6 @@ export async function register() {
 
     console.log('instrumentation.ts: Server-side Sentry initialized successfully'),
   } catch (error) {
-    console.error('instrumentation.ts: Failed to initialize Sentry:', error),
+    console.error('instrumentation.ts: Failed to initialize Sentry:', error);
   }
 }

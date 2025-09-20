@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket } from 'lucide-react'
 
 
-export default function ResearchDevelopment() {
+export default function ResearchDevelopment() : any {
 	const researchAreas = [
 		{
 			title: 'AI & Machine Learning',
@@ -122,7 +122,7 @@ export default function ResearchDevelopment() {
 						</p>
 					</div>
 					<div className="grid gap-8 lg:grid-cols-3">
-						{researchAreas.map((area, index) => {
+						{researchAreas.map((area, index) : any => {
 							const IconComponent = area.icon
 							const colorClasses = {
 								blue: 'bg-blue-100 text-blue-600',

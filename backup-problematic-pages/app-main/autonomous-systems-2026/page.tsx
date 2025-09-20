@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: ['autonomous systems', 'business automation', 'self-managing operations', 'zero-touch processes', 'intelligent automation', 'enterprise operations']
 }
 
-export default function AutonomousSystems2026Page() {
+export default function AutonomousSystems2026Page() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

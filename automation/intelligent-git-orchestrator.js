@@ -23,8 +23,8 @@ class IntelligentGitOrchestrator {,
     this.mlModelFile = path.join(__dirname, 'logsml-model.json'),
     this.ensureDirectories(),
     this.initializeAnalytics(),
-    this.loadMLModel(),
-  }
+    this.loadMLModel();
+};
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
@@ -67,8 +67,8 @@ class IntelligentGitOrchestrator {,
   ensureDirectories() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true }),
-    }
+      fs.mkdirSync(logDir, { recursive: true });
+};
   }
 ,
   initializeAnalytics() {,
@@ -88,8 +88,8 @@ class IntelligentGitOrchestrator {,
       fs.writeFileSync(,
         this.analyticsFile,
         JSON.stringify(initialAnalytics, null, 2),
-      ),
-    }
+      );
+};
   }
 ,
   loadMLModel() {,
@@ -98,11 +98,11 @@ class IntelligentGitOrchestrator {,
       try {,
         this.mlModel = JSON.parse(fs.readFileSync(this.mlModelFile, 'utf8')),
       } catch (error) {,
-        this.mlModel = this.createInitialMLModel(),
-      }
+        this.mlModel = this.createInitialMLModel();
+};
     } else {,
-      this.mlModel = this.createInitialMLModel(),
-    }
+      this.mlModel = this.createInitialMLModel();
+};
   }
 ,
   createInitialMLModel() {,
@@ -120,8 +120,8 @@ class IntelligentGitOrchestrator {,
       this.mlModel.lastTrained = new Date().toISOString(),
       fs.writeFileSync(this.mlModelFile, JSON.stringify(this.mlModel, null, 2)),
     } catch (error) {,
-      this.log(`Error saving ML model: ${error.message}`, 'warn'),
-    }
+      this.log(`Error saving ML model: ${error.message}`, 'warn');
+};
   }
 ,
   log(message, level = 'info') {,
@@ -130,8 +130,8 @@ class IntelligentGitOrchestrator {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
@@ -140,8 +140,8 @@ class IntelligentGitOrchestrator {,
     } else if (level === 'success') {,
       console.log(`✅ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`),
-    }
+      console.log(`ℹ️ ${message}`);
+};
   }
 ,
   async executeCommand(command, options = {}) {,
@@ -170,8 +170,8 @@ class IntelligentGitOrchestrator {,
     return result.output,
       .trim(),
       .split('\n'),
-      .filter((line) => line.length > 0),
-  }
+      .filter((line) => line.length > 0);
+};
 ,
   async getCurrentBranch() {,
     const result = await this.executeCommand('git branch --show-current'),
@@ -179,8 +179,8 @@ class IntelligentGitOrchestrator {,
       this.log(`Error getting current branch: ${result.error}`, 'error'),
       return 'main',
     }
-    return result.output.trim(),
-  }
+    return result.output.trim();
+};
 ,
   async getRemoteStatus() {,
     const result = await this.executeCommand('git status -uno'),
@@ -204,8 +204,8 @@ class IntelligentGitOrchestrator {,
     ],
     return files.some((file) =>,
       conflictPatterns.some((pattern) => pattern.test(file)),
-    ),
-  }
+    );
+};
 ,
   async smartBatchFiles(files) {,
     if (!this.config.intelligentGit.smartBatching) {,
@@ -222,8 +222,8 @@ class IntelligentGitOrchestrator {,
       } else {,
         // Split large groups into smaller batches,
         for (let i = 0, i < group.length, i += maxBatchSize) {,
-          batches.push(group.slice(i, i + maxBatchSize)),
-        }
+          batches.push(group.slice(i, i + maxBatchSize));
+};
       }
     }
 ,
@@ -250,8 +250,8 @@ class IntelligentGitOrchestrator {,
         if (dir.includes('automation')) {,
           groups.automation.push(file),
         } else {,
-          groups.javascript.push(file),
-        }
+          groups.javascript.push(file);
+};
       } else if (ext === '.css' || ext === '.scss' || ext === '.sass') {,
         groups.styles.push(file),
       } else if (,
@@ -265,11 +265,11 @@ class IntelligentGitOrchestrator {,
       } else if (filename.includes('test') || filename.includes('spec')) {,
         groups.tests.push(file),
       } else {,
-        groups.other.push(file),
-      }
+        groups.other.push(file);
+};
     }),
-    return Object.values(groups).filter((group) => group.length > 0),
-  }
+    return Object.values(groups).filter((group) => group.length > 0);
+};
 ,
   generateIntelligentCommitMessage(files, batchIndex = 0) {,
     const fileGroups = this.groupFilesByType(files),
@@ -399,14 +399,14 @@ class IntelligentGitOrchestrator {,
         analytics.totalErrors++,
         analytics.errorHistory.push({,
           timestamp: new Date().toISOString(),
-          error: error}),
-      }
+          error: error});
+};
 ,
       analytics.lastUpdated = new Date().toISOString(),
       fs.writeFileSync(this.analyticsFile, JSON.stringify(analytics, null, 2)),
     } catch (error) {,
-      this.log(`Error updating analytics: ${error.message}`, 'warn'),
-    }
+      this.log(`Error updating analytics: ${error.message}`, 'warn');
+};
   }
 ,
   async autoFix() {,
@@ -422,11 +422,11 @@ class IntelligentGitOrchestrator {,
         if (result.success) {,
           this.log(`${fix.name} completed successfully`),
         } else {,
-          this.log(`${fix.name} failed: ${result.error}`, 'warn'),
-        }
+          this.log(`${fix.name} failed: ${result.error}`, 'warn');
+};
       } catch (error) {,
-        this.log(`${fix.name} failed: ${error.message}`, 'warn'),
-      }
+        this.log(`${fix.name} failed: ${error.message}`, 'warn');
+};
     }
 ,
     return true,
@@ -439,8 +439,8 @@ class IntelligentGitOrchestrator {,
     const remoteStatus = await getRemoteStatus(),
     if (remoteStatus && (remoteStatus.isBehind || remoteStatus.hasDiverged)) {,
       this.log('Remote repository has changes, pulling latest...'),
-      await this.executeCommand('git pull origin main'),
-    }
+      await this.executeCommand('git pull origin main');
+};
 ,
     // Get git status,
     const status = await this.getGitStatus(),
@@ -453,8 +453,8 @@ class IntelligentGitOrchestrator {,
     const allFiles = status.map((line) => line.split(' ').pop()),
     const hasConflictRisk = this.predictConflicts(allFiles),
     if (hasConflictRisk) {,
-      this.log('Conflict risk detected, taking precautions...warn'),
-    }
+      this.log('Conflict risk detected, taking precautions...warn');
+};
 ,
     // Auto-fix,
     await this.autoFix(),
@@ -474,8 +474,8 @@ class IntelligentGitOrchestrator {,
       if (i > 0) {,
         await new Promise((resolve) =>,
           setTimeout(resolve, this.config.intelligentGit.commitDelay),
-        ),
-      }
+        );
+};
 ,
       const committed = await this.commit(message),
       if (committed) {,
@@ -488,8 +488,8 @@ class IntelligentGitOrchestrator {,
       await new Promise((resolve) =>,
         setTimeout(resolve, this.config.intelligentGit.pushDelay),
       ),
-      await this.push(),
-    }
+      await this.push();
+};
 ,
     // Update ML model,
     this.saveMLModel(),
@@ -518,8 +518,8 @@ class IntelligentGitOrchestrator {,
       this.log(`File changed: ${filePath}`),
       // Clear existing timeout,
       if (commitTimeout) {,
-        clearTimeout(commitTimeout),
-      }
+        clearTimeout(commitTimeout);
+};
 ,
       // Set new timeout for commit,
       commitTimeout = setTimeout(async () => {,
@@ -529,8 +529,8 @@ class IntelligentGitOrchestrator {,
     watcher.on('error', (error) => {,
       this.log(`Watcher error: ${error.message}`, 'error'),
     }),
-    this.log('✅ Intelligent file watcher started. Changes will be auto-committed after 2 seconds of inactivity.'),
-  }
+    this.log('✅ Intelligent file watcher started. Changes will be auto-committed after 2 seconds of inactivity.');
+};
 ,
   async getAnalytics() {,
     try {,
@@ -568,8 +568,8 @@ switch (command) {,
   case 'fix':,
     orchestrator.autoFix().catch((error) => {,
       console.error('Auto-fix failed:', error.message),
-      process.exit(1),
-    }),
+      process.exit(1);
+  }),
     break,
   default: console.log(`,
 🚀 Intelligent Git Orchestrator,

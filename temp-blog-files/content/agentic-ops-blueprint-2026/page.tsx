@@ -4,7 +4,7 @@ export const metadata = {
 	description:
 		'A pragmatic blueprint to operationalize agentic workflows across the enterprise with safety, observability, and ROI.'
 }
-export default function AgenticOpsBlueprint2026() {
+export default function AgenticOpsBlueprint2026() : any {
 	return (
 		<main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
 			<h1 className="text-4xl font-bold text-gray-900 mb-4">Agentic Ops Blueprint 2026</h1>

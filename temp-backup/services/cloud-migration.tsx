@@ -8,6 +8,6 @@ export default function Cloudmigration({ }: CloudmigrationProps) {,
     <div>,
       <h1>Cloudmigration</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

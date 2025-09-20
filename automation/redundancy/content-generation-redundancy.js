@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-CONTENT-GENERATION] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,20 +26,20 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
 function runGit(args, options = {}) {,
-  return run("git", args, options),
-}
+  return run("git", args, options);
+};
 ,
 function ensureRepoRoot() {,
   const gitDir = path.join(process.cwd(), ".git"),
   if (!fs.existsSync(gitDir)) {,
-    throw new Error(`No .git directory found in ${process.cwd()}`),
-  }
+    throw new Error(`No .git directory found in ${process.cwd()}`);
+};
 }
 ,
 function scanContentDirectories() {,
@@ -65,8 +65,8 @@ function scanContentDirectories() {,
             const itemStats = fs.statSync(itemPath),
             if (itemStats.isFile()) {,
               const ext = path.extname(item).toLowerCase(),
-              return ['.md.js.jsx.ts', '.tsx.html.txt'].includes(ext),
-            }
+              return ['.md.js.jsx.ts', '.tsx.html.txt'].includes(ext);
+};
             return false,
           }),
           contentResults.push({,
@@ -74,16 +74,16 @@ function scanContentDirectories() {,
             exists: true,
             totalItems: items.length,
             contentFiles: contentFiles.length,
-            healthy: contentFiles.length > 0}),
-        }
+            healthy: contentFiles.length > 0});
+};
       } else {,
         contentResults.push({,
           directory: dir,
           exists: false,
           totalItems: 0,
           contentFiles: 0,
-          healthy: false}),
-      }
+          healthy: false});
+};
     }
 ,
     log(`Content scan completed: ${contentResults.filter(r => r.healthy).length}/${contentResults.length} directories have content`),
@@ -187,8 +187,8 @@ function validateContentStructure() {,
           file: file,
           exists: false,
           size: 0,
-          healthy: false}),
-      }
+          healthy: false});
+};
     }
 ,
     // Check for content directories,
@@ -209,15 +209,15 @@ function validateContentStructure() {,
             file: dir,
             exists: false,
             size: 0,
-            healthy: false}),
-        }
+            healthy: false});
+};
       } else {,
         validationResults.push({,
           file: dir,
           exists: false,
           size: 0,
-          healthy: false}),
-      }
+          healthy: false});
+};
     }
 ,
     const healthy = validationResults.filter(r => r.healthy).length,
@@ -354,13 +354,12 @@ async function main() {,
     if (contentScan.filter(r => r.healthy).length > 0 && structureValidation.healthy === structureValidation.total) {,
       process.exit(0),
     } else {,
-      process.exit(1),
-    }
-
+      process.exit(1);
+};
   } catch (error) {,
     log(`Fatal error: ${String(error)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 // Run if called directly,
@@ -368,8 +367,8 @@ if (require.main === module) {,
   main().catch(error => {,
     log(`Unhandled error: ${String(error)}`),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = {,
   main,

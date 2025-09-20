@@ -17,12 +17,9 @@ jest.mock("next/router", () => ({
       events: {,
 on: jest.fn(),
         off: jest.fn(),
-        emit: jest.fn(),
-      },
-      isFallback: false,
-    };
-  },
-}));
+        emit: jest.fn()},
+      isFallback: false};
+  }}));
 
 // Mock Next.js Image component,
 jest.mock("next/image", () => {

@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI 2026: Operational Guardrails',
   description: 'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.'
 }
-export default function OperationalGuardrails2026Page() {
+export default function OperationalGuardrails2026Page() : any {
   return (
     <main className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">AI 2026: Operational Guardrails</h1>

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Zion App - Enhanced Infinite Improvement Loop System,
@@ -117,8 +117,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     this.aiProviders = new Map(),
     this.selfHealingEnabled = true,
     this.adaptiveLearningEnabled = true,
-    this.portManager = new PortManager(),
-  }
+    this.portManager = new PortManager();
+};
 ,
   /**,
    * Initialize AI providers,
@@ -130,35 +130,35 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
       this.aiProviders.set('cursor', {,
         name: Cursor AI',
         enabled: true,
-        analyze: (data) => this.analyzeWithCursor(data)}),
-    }
+        analyze: (data) => this.analyzeWithCursor(data)});
+};
 ,
     // Initialize OpenAI,
     if (AI_CONFIG.OPENAI.API_KEY) {,
       this.aiProviders.set('openai', {,
         name: OpenAI GPT-4',
         enabled: true,
-        analyze: (data) => this.analyzeWithOpenAI(data)}),
-    }
+        analyze: (data) => this.analyzeWithOpenAI(data)});
+};
 ,
     // Initialize Claude,
     if (AI_CONFIG.CLAUDE.API_KEY) {,
       this.aiProviders.set('claude', {,
         name: 'Claude',
         enabled: true,
-        analyze: (data) => this.analyzeWithClaude(data)}),
-    }
+        analyze: (data) => this.analyzeWithClaude(data)});
+};
 ,
     // Initialize Local AI,
     if (AI_CONFIG.LOCAL_AI.ENABLED) {,
       this.aiProviders.set('local', {,
         name: Local AI',
         enabled: true,
-        analyze: (data) => this.analyzeWithLocalAI(data)}),
-    }
+        analyze: (data) => this.analyzeWithLocalAI(data)});
+};
 ,
-    logger.info(`✅ Initialized ${this.aiProviders.size} AI providers`),
-  }
+    logger.info(`✅ Initialized ${this.aiProviders.size} AI providers`);
+};
 ,
   /**,
    * Setup Express server with port management,
@@ -193,8 +193,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         await this.queueImprovement(type, priority, data),
         res.json({ success: true, message: Improvement queued successfully' }),
       } catch (error) {,
-        res.status(500).json({ success: false, error: error.message }),
-      }
+        res.status(500).json({ success: false, error: error.message });
+};
     }),
     // Get improvement history,
     this.app.get('/history', (req, res) => {,
@@ -205,8 +205,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
       res.json({,
         successfulPatterns: this.learningData.successfulPatterns,
         failedPatterns: this.learningData.failedPatterns}),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Setup WebSocket for real-time updates,
@@ -227,8 +227,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
       socket.on('disconnect', () => {,
         logger.info('🔌 Client disconnected from improvement loop'),
       }),
-    }),
-  }
+    });
+};
 ,
   /**,
    * Start the enhanced infinite improvement loop,
@@ -271,15 +271,15 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     logger.info('🛑 Stopping Enhanced Infinite Improvement Loop...'),
     this.isRunning = false,
     if (this.server) {,
-      this.server.close(),
-    }
+      this.server.close();
+};
 ,
     if (this.io) {,
-      this.io.close(),
-    }
+      this.io.close();
+};
 ,
-    logger.info('✅ Enhanced Infinite Improvement Loop stopped'),
-  }
+    logger.info('✅ Enhanced Infinite Improvement Loop stopped');
+};
 ,
   /**,
    * Start the main improvement loop,
@@ -297,8 +297,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         const improvements = await this.identifyImprovements(analysis),
         // Queue improvements,
         for (const improvement of improvements) {,
-          await this.queueImprovement(improvement.type, improvement.priority, improvement.data),
-        }
+          await this.queueImprovement(improvement.type, improvement.priority, improvement.data);
+};
 ,
         // Process improvement queue,
         await this.processImprovementQueue(),
@@ -306,8 +306,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         await this.evaluateImprovements(),
         // Learn from results,
         if (this.adaptiveLearningEnabled) {,
-          await this.learnFromResults(),
-        }
+          await this.learnFromResults();
+};
 ,
         // Update metrics,
         await this.updateMetrics(),
@@ -334,29 +334,29 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     // Quick scan every 2 minutes,
     cron.schedule('*/2 * * * *', async () => {,
       if (this.isRunning) {,
-        await this.performQuickScan(),
-      }
+        await this.performQuickScan();
+};
     }),
     // Performance check every 10 minutes,
     cron.schedule('*/10 * * * *', async () => {,
       if (this.isRunning) {,
-        await this.performPerformanceCheck(),
-      }
+        await this.performPerformanceCheck();
+};
     }),
     // Security scan every 45 minutes,
     cron.schedule('*/45 * * * *', async () => {,
       if (this.isRunning) {,
-        await this.performSecurityScan(),
-      }
+        await this.performSecurityScan();
+};
     }),
     // Full audit every hour,
     cron.schedule('0 * * * *', async () => {,
       if (this.isRunning) {,
-        await this.performFullAudit(),
-      }
+        await this.performFullAudit();
+};
     }),
-    logger.info('⏰ Scheduled tasks started'),
-  }
+    logger.info('⏰ Scheduled tasks started');
+};
 ,
   /**,
    * Analyze codebase using multiple AI providers,
@@ -379,8 +379,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
           const aiAnalysis = await provider.analyze(analysis),
           analysis[`${name}Insights`] = aiAnalysis,
         } catch (error) {,
-          logger.warn(`⚠️ Error with ${name} analysis:`, error.message),
-        }
+          logger.warn(`⚠️ Error with ${name} analysis:`, error.message);
+};
       }
     }
 ,
@@ -398,8 +398,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'performance',
         priority: 'high',
         data: { currentScore: analysis.performance, targetScore: AI_CONFIG.THRESHOLDS.PERFORMANCE_SCORE }
-      }),
-    }
+      });
+};
 ,
     // Security improvements,
     if (analysis.security < AI_CONFIG.THRESHOLDS.SECURITY_SCORE) {,
@@ -407,8 +407,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'security',
         priority: 'critical',
         data: { currentScore: analysis.security, targetScore: AI_CONFIG.THRESHOLDS.SECURITY_SCORE }
-      }),
-    }
+      });
+};
 ,
     // Code quality improvements,
     if (analysis.codeQuality < AI_CONFIG.THRESHOLDS.CODE_QUALITY_SCORE) {,
@@ -416,8 +416,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'codeQuality',
         priority: 'medium',
         data: { currentScore: analysis.codeQuality, targetScore: AI_CONFIG.THRESHOLDS.CODE_QUALITY_SCORE }
-      }),
-    }
+      });
+};
 ,
     // Accessibility improvements,
     if (analysis.accessibility < AI_CONFIG.THRESHOLDS.ACCESSIBILITY_SCORE) {,
@@ -425,8 +425,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'accessibility',
         priority: 'medium',
         data: { currentScore: analysis.accessibility, targetScore: AI_CONFIG.THRESHOLDS.ACCESSIBILITY_SCORE }
-      }),
-    }
+      });
+};
 ,
     // SEO improvements,
     if (analysis.seo < AI_CONFIG.THRESHOLDS.SEO_SCORE) {,
@@ -434,8 +434,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'seo',
         priority: 'low',
         data: { currentScore: analysis.seo, targetScore: AI_CONFIG.THRESHOLDS.SEO_SCORE }
-      }),
-    }
+      });
+};
 ,
     // Test coverage improvements,
     if (analysis.testCoverage < AI_CONFIG.THRESHOLDS.TEST_COVERAGE) {,
@@ -443,8 +443,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         type: 'testCoverage',
         priority: 'medium',
         data: { currentScore: analysis.testCoverage, targetScore: AI_CONFIG.THRESHOLDS.TEST_COVERAGE }
-      }),
-    }
+      });
+};
 ,
     return improvements,
   }
@@ -464,8 +464,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     logger.info(`📋 Queued improvement: ${type} (${priority})`),
     // Emit WebSocket update,
     if (this.io) {,
-      this.io.emit('improvementQueued', improvement),
-    }
+      this.io.emit('improvementQueued', improvement);
+};
 ,
     return improvement
   }
@@ -512,8 +512,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         this.activeImprovements.delete(improvement.id),
         // Emit WebSocket update,
         if (this.io) {,
-          this.io.emit('improvementCompleted', improvement),
-        }
+          this.io.emit('improvementCompleted', improvement);
+};
       }
     }
   }
@@ -536,8 +536,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
       case testCoverage':,
         return await this.implementTestCoverageImprovement(improvement.data),
       default:  ,
-        throw new Error(`Unknown improvement type: ${improvement.type}`),
-    }
+        throw new Error(`Unknown improvement type: ${improvement.type}`);
+};
   }
 ,
   /**,
@@ -556,8 +556,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
       testCoverage: newAnalysis.testCoverage,
       bundleSize: newAnalysis.bundleSize,
       loadTime: newAnalysis.loadTime},
-    logger.info('📊 Updated health metrics:', this.healthMetrics),
-  }
+    logger.info('📊 Updated health metrics:', this.healthMetrics);
+};
 ,
   /**,
    * Learn from improvement results,
@@ -573,8 +573,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     // Update learning data,
     this.learningData.successfulPatterns = successfulPatterns,
     this.learningData.failedPatterns = failedPatterns,
-    logger.info(`🧠 Learned from ${successful.length} successful and ${failed.length} failed improvements`),
-  }
+    logger.info(`🧠 Learned from ${successful.length} successful and ${failed.length} failed improvements`);
+};
 ,
   /**,
    * Analyze improvement patterns,
@@ -610,8 +610,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
     logger.info(`📈 Success rate: ${successRate.toFixed(2)}%`),
     logger.info(`📊 Total improvements: ${this.totalImprovements}`),
     logger.info(`✅ Successful: ${this.successfulImprovements}`),
-    logger.info(`❌ Failed: ${this.failedImprovements}`),
-  }
+    logger.info(`❌ Failed: ${this.failedImprovements}`);
+};
 ,
   /**,
    * Emit status update via WebSocket,
@@ -625,8 +625,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
         failedImprovements: this.failedImprovements,
         healthMetrics: this.healthMetrics,
         queueLength: this.improvementQueue.length,
-        activeImprovements: this.activeImprovements.size}),
-    }
+        activeImprovements: this.activeImprovements.size});
+};
   }
 ,
   /**,
@@ -647,8 +647,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
 ,
       logger.info('✅ Self-healing completed'),
     } catch (healingError) {,
-      logger.error('❌ Self-healing failed:', healingError),
-    }
+      logger.error('❌ Self-healing failed:', healingError);
+};
   }
 ,
   /**,
@@ -656,8 +656,8 @@ class EnhancedInfiniteImprovementLoop extends EventEmitter {,
    */,
   async restartFailedServices() {,
     // Implementation for restarting failed services,
-    logger.info('🔄 Restarting failed services...'),
-  }
+    logger.info('🔄 Restarting failed services...');
+};
 ,
   // AI Analysis Methods,
   async analyzeWithCursor(data) {,
@@ -886,8 +886,8 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-),
-  }
+);
+};
 }
 ,
 // Port Manager Class,
@@ -905,11 +905,11 @@ class PortManager {,
           // Try next port,
           this.findAvailablePort(startPort + 1).then(resolve).catch(reject),
         } else {,
-          reject(err),
-        }
+          reject(err);
+};
       }),
-    }),
-  }
+    });
+};
 }
 ,
 // Start the enhanced infinite improvement loop,
@@ -929,7 +929,7 @@ if (require.main === module) {,
     logger.info('\n🛑 Received SIGTERM, shutting down gracefully...'),
     await improvementLoop.stop(),
     process.exit(0),
-  }),
-}
+  });
+  }
 ,
-module.exports = EnhancedInfiniteImprovementLoop,
+module.exports = EnhancedInfiniteImprovementLoop,'

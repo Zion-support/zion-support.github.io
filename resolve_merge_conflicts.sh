@@ -1,20 +1,30 @@
 #!/bin/bash
 
-# Comprehensive Merge Conflict Resolution Script
-# This script will systematically resolve all merge conflicts and merge branches
+echo "Resolving all merge conflicts by accepting incoming changes from remote main..."
 
-set -e
+# Get list of all conflicted files
+git status --porcelain | grep "^UU\|^AU\|^UA\|^DD\|^AD\|^DA" | awk '{print $2}' > conflicted_files.txt
 
-echo "🚀 Starting comprehensive merge conflict resolution..."
-
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "🔧 Resolving conflicts in: $file"
-    
-    if [[ ! -f "$file" ]]; then
-        echo "⚠️  File $file does not exist, skipping..."
-        return
+# Accept incoming changes for all conflicted files
+while IFS= read -r file; do
+    if [ -f "$file" ]; then
+        echo "Resolving conflict in: $file"
+        git checkout --theirs "$file"
+        git add "$file"
     fi
-    
-    # Check if file has conflict markers
+done < conflicted_files.txt
+
+# For modify/delete conflicts, accept the deletion (remove the file)
+git status --porcelain | grep "^DU\|^UD" | awk '{print $2}' | while read -r file; do
+    if [ -f "$file" ]; then
+        echo "Removing file (deleted in incoming): $file"
+        git rm "$file"
+    fi
+done
+
+echo "Merge conflicts resolved. Committing changes..."
+
+# Commit the resolved conflicts
+git commit -m "Resolve merge conflicts: accept incoming changes from remote main"
+
+echo "Merge conflicts resolution completed!"

@@ -8,17 +8,17 @@ const ContactForm: React.FC = () => {
     email: '',
     company: '',
     message: ''
-  });
+  }),
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) : any => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
@@ -26,7 +26,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
             Name *
@@ -95,6 +95,6 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
-};
+  };
 
 export default ContactForm;

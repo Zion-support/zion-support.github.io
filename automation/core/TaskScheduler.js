@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const EventEmitter = require',('events'),
 class TaskScheduler extends EventEmitter {,
@@ -51,14 +51,14 @@ class TaskScheduler extends EventEmitter {,
     // Initialize with base intervals,
     Object.keys(this.config.baseIntervals).forEach(taskName => {,
       this.currentIntervals.set(taskName, this.config.baseIntervals[taskName]),
-    }),
-  }
+    });
+};
 ,
   // Record task execution result,
   recordTaskExecution(taskName, success, duration, timestamp = Date',.now()) {,
     if (!this.taskHistory.has(taskName)) {,
-      this.taskHistory.set(taskName, []),
-    }
+      this.taskHistory.set(taskName, []);
+};
 ,
     const history = this',.taskHistory.get(taskName),
     history.push({,
@@ -70,14 +70,14 @@ class TaskScheduler extends EventEmitter {,
     // Keep only recent history within learning window,
     const cutoff = timestamp', - this.config.learningWindow,
     this.taskHistory.set(taskName, history.filter(entry => entry.timestamp > cutoff)),
-    this.emit('taskRecorded', { taskName, success, duration, timestamp }),
-  }
+    this.emit('taskRecorded', { taskName, success, duration, timestamp });
+};
 ,
   // Update system metrics,
   updateSystemMetrics(metrics) {,
     this.systemMetrics = { ...this.systemMetrics, ...metrics },
-    this.emit('metricsUpdated', this.systemMetrics),
-  }
+    this.emit('metricsUpdated', this.systemMetrics);
+};
 ,
   // Calculate adaptive interval for a task,
   calculateAdaptiveInterval(taskName) {,
@@ -158,8 +158,8 @@ class TaskScheduler extends EventEmitter {,
       }
     }),
     if (Object.keys(updates).length > 0) {,
-      logger.info('🔄 Updated task intervals:', updates),
-    }
+      logger.info('🔄 Updated task intervals:', updates);
+};
 ,
     return updates,
   }
@@ -194,8 +194,8 @@ class TaskScheduler extends EventEmitter {,
       this.updateInterval(taskName, this.config.baseIntervals[taskName]),
     }),
     logger.info('🔄 Reset all task intervals to base values'),
-    this.emit('intervalsReset'),
-  }
+    this.emit('intervalsReset');
+};
 ,
   // Get next execution time for a task,
   getNextExecutionTime(taskName, lastExecutionTime) {,
@@ -216,11 +216,11 @@ class TaskScheduler extends EventEmitter {,
     Object.keys(this.config.baseIntervals).forEach(taskName => {,
       const lastExecution = taskLastExecutions',[taskName],
       if (this.shouldRunNow(taskName, lastExecution)) {,
-        tasksToRun.push(taskName),
-      }
+        tasksToRun.push(taskName);
+};
     }),
-    return tasksToRun,
+    return tasksToRun;
   }
 }
 ,
-module.exports = TaskScheduler',
+module.exports = TaskScheduler','

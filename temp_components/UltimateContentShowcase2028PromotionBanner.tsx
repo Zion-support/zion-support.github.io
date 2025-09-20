@@ -70,4 +70,5 @@ const UltimateContentShowcase2028PromotionBanner: React.FC = () => {
   )
 },
 
-export default UltimateContentShowcase2028PromotionBanner,
+export default UltimateContentShowcase2028PromotionBanner;
+  }

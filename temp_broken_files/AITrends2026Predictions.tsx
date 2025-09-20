@@ -51,8 +51,8 @@ const AITrends2026Predictions = () => {,
           jobs: Math.floor(targets.jobs * easeOut),
           investment: Math.floor(targets.investment * easeOut)}),
         if (step >= steps) {,
-          clearInterval(interval),
-        }
+          clearInterval(interval);
+};
       }stepDuration),
     },
     const timer = setTimeout(animateStats500),
@@ -285,7 +285,7 @@ const AITrends2026Predictions = () => {,
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
-          {categoryTabs.map((tab) => {,
+          {categoryTabs.map((tab) : any => {,
             const category = categories[tab as keyof typeof categories],
             const Icon = category.icon,
             return (,
@@ -300,8 +300,8 @@ const AITrends2026Predictions = () => {,
                 <Icon className="w-5 h-5 mr-2" />,
                 {category.title}
               </button>,
-            ),
-          })}
+            );
+  })}
         </div>,
         {/* Predictions Grid */}
         <div,

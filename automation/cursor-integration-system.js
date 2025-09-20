@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 /**,
  * Cursor Integration System,
@@ -61,16 +61,16 @@ class CursorIntegrationSystem extends EventEmitter {,
     try {,
       // Initialize components,
       if (this.config.enableChatAutomation) {,
-        await this.initializeChatAutomation(),
-      }
+        await this.initializeChatAutomation();
+};
 ,
       if (this.config.enableChatMonitor) {,
-        await this.initializeChatMonitor(),
-      }
+        await this.initializeChatMonitor();
+};
 ,
       if (this.config.enableTodoQueue) {,
-        await this.initializeTodoQueueManager(),
-      }
+        await this.initializeTodoQueueManager();
+};
 ,
       // Setup integration,
       this.setupIntegration(),
@@ -101,8 +101,8 @@ class CursorIntegrationSystem extends EventEmitter {,
       this.integrationStats.queueItemsAdded++,
       this.integrationStats.lastActivity = new Date().toISOString(),
       logger.info(`📋 Item queued via chat automation: ${item.text}`),
-    }),
-  }
+    });
+};
 ,
   async initializeChatMonitor() {,
     logger.info('👀 Initializing Cursor Chat Monitor...'),
@@ -117,10 +117,10 @@ class CursorIntegrationSystem extends EventEmitter {,
       logger.info(`💬 Chat processed: ${chatData.id}`),
       // Auto-process chat if enabled,
       if (this.config.autoProcessChats && this.chatAutomation) {,
-        this.processChatWithAutomation(chatData),
-      }
-    }),
-  }
+        this.processChatWithAutomation(chatData);
+};
+    });
+};
 ,
   async initializeTodoQueueManager() {,
     logger.info('📋 Initializing Todo and Queue Manager...'),
@@ -136,8 +136,8 @@ class CursorIntegrationSystem extends EventEmitter {,
     }),
     this.todoQueueManager.on('itemQueued', (item) => {,
       logger.info(`📋 Item queued via manager: ${item.title}`),
-    }),
-  }
+    });
+};
 ,
   setupIntegration() {,
     logger.info('🔗 Setting up integration between components...'),
@@ -153,8 +153,8 @@ class CursorIntegrationSystem extends EventEmitter {,
             source: 'cursor_chat_automation',
             chatId: todo.chatId}),
         } catch (error) {,
-          logger.error('Error adding todo to manager:', error),
-        }
+          logger.error('Error adding todo to manager:', error);
+};
       }),
       this.chatAutomation.on('itemQueued', async (item) => {,
         try {,
@@ -166,18 +166,18 @@ class CursorIntegrationSystem extends EventEmitter {,
             source: 'cursor_chat_automation',
             chatId: item.chatId}),
         } catch (error) {,
-          logger.error('Error adding item to queue:', error),
-        }
-      }),
-    }
+          logger.error('Error adding item to queue:', error);
+};
+      });
+};
 ,
     // Connect chat monitor to chat automation,
     if (this.chatMonitor && this.chatAutomation) {,
       this.chatMonitor.on('chatProcessed', (chatData) => {,
         // Process chat with automation,
         this.processChatWithAutomation(chatData),
-      }),
-    }
+      });
+};
   }
 ,
   async processChatWithAutomation(chatData) {,
@@ -192,8 +192,8 @@ class CursorIntegrationSystem extends EventEmitter {,
       // Process the chat,
       await this.chatAutomation.processChat(chat),
     } catch (error) {,
-      logger.error('Error processing chat with automation:', error),
-    }
+      logger.error('Error processing chat with automation:', error);
+};
   }
 ,
   async processManualChat(content, metadata = {}) {,
@@ -206,48 +206,48 @@ class CursorIntegrationSystem extends EventEmitter {,
       ...metadata
     },
     if (this.chatAutomation) {,
-      await this.chatAutomation.processChat(chat),
-    }
+      await this.chatAutomation.processChat(chat);
+};
 ,
     return chat,
   }
 ,
   async addManualTodo(todoData) {,
     if (!this.todoQueueManager) {,
-      throw new Error('Todo/Queue Manager not initialized'),
-    }
+      throw new Error('Todo/Queue Manager not initialized');
+};
 ,
     return await this.todoQueueManager.addTodo({,
       ...todoData,
-      source: 'manual'}),
-  }
+      source: 'manual'});
+};
 ,
   async addManualQueueItem(itemData) {,
     if (!this.todoQueueManager) {,
-      throw new Error('Todo/Queue Manager not initialized'),
-    }
+      throw new Error('Todo/Queue Manager not initialized');
+};
 ,
     return await this.todoQueueManager.addToQueue({,
       ...itemData,
-      source: 'manual'}),
-  }
+      source: 'manual'});
+};
 ,
   getTodos(filter = {}) {,
     if (!this.todoQueueManager) return [],
     let todos = Array.from(this.todoQueueManager.todos.values()),
     // Apply filters,
     if (filter.priority) {,
-      todos = todos.filter((todo) => todo.priority === filter.priority),
-    }
+      todos = todos.filter((todo) => todo.priority === filter.priority);
+};
     if (filter.status) {,
-      todos = todos.filter((todo) => todo.status === filter.status),
-    }
+      todos = todos.filter((todo) => todo.status === filter.status);
+};
     if (filter.category) {,
-      todos = todos.filter((todo) => todo.category === filter.category),
-    }
+      todos = todos.filter((todo) => todo.category === filter.category);
+};
     if (filter.source) {,
-      todos = todos.filter((todo) => todo.source === filter.source),
-    }
+      todos = todos.filter((todo) => todo.source === filter.source);
+};
 ,
     return todos,
   }
@@ -257,27 +257,27 @@ class CursorIntegrationSystem extends EventEmitter {,
     let items = this.todoQueueManager.queue,
     // Apply filters,
     if (filter.type) {,
-      items = items.filter((item) => item.type === filter.type),
-    }
+      items = items.filter((item) => item.type === filter.type);
+};
     if (filter.status) {,
-      items = items.filter((item) => item.status === filter.status),
-    }
+      items = items.filter((item) => item.status === filter.status);
+};
     if (filter.priority) {,
-      items = items.filter((item) => item.priority === filter.priority),
-    }
+      items = items.filter((item) => item.priority === filter.priority);
+};
 ,
     return items,
   }
 ,
   getChatHistory(limit = 50) {,
     if (!this.chatMonitor) return [],
-    return this.chatMonitor.getRecentChats(limit),
-  }
+    return this.chatMonitor.getRecentChats(limit);
+};
 ,
   searchChats(query) {,
     if (!this.chatMonitor) return [],
-    return this.chatMonitor.searchChats(query),
-  }
+    return this.chatMonitor.searchChats(query);
+};
 ,
   async generateIntegrationReport() {,
     const report = {,
@@ -325,19 +325,19 @@ class CursorIntegrationSystem extends EventEmitter {,
     logger.info('🛑 Stopping Cursor Integration System...'),
     this.isRunning = false,
     if (this.chatAutomation) {,
-      this.chatAutomation.stop(),
-    }
+      this.chatAutomation.stop();
+};
 ,
     if (this.chatMonitor) {,
-      this.chatMonitor.stop(),
-    }
+      this.chatMonitor.stop();
+};
 ,
     if (this.todoQueueManager) {,
-      this.todoQueueManager.stop(),
-    }
+      this.todoQueueManager.stop();
+};
 ,
-    logger.info('✅ Cursor Integration System stopped'),
-  }
+    logger.info('✅ Cursor Integration System stopped');
+};
 }
 ,
 // Export the class,
@@ -358,6 +358,6 @@ if (require.main === module) {,
     logger.info('\n🛑 Shutting down Cursor Integration System...'),
     await integration.stop(),
     process.exit(0),
-  }),
-}
+  });
+  }
 ,

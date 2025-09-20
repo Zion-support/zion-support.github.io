@@ -5,7 +5,7 @@ export const metadata = {
   description:
     'Copy‑paste approval policies, risk tiers, and evidence fields wired to evaluation gates and runtime guardrails.'
 }
-export default function EvidenceLedApprovalsStarterPage() {
+export default function EvidenceLedApprovalsStarterPage() : any {
   return (
     <div>
       <main className="container mx-auto px-6 py-12">
@@ -48,8 +48,7 @@ risk_tiers:
     approvers: [service_owner, oncall]
   - name: high
     approvers: [service_owner, oncall, security]
-evidence: 
-  - name: eval_pass_rate
+evidence: - name: eval_pass_rate
     required: true
     description: ">= 95% pass across critical evals"
   - name: rollback_plan
@@ -69,7 +68,7 @@ gates:
 `}</code></pre>
             <h3>Next steps</h3>
             <ul>
-              <li>Instrument evals and export a single pass/fail metric per gate</li>;
+              <li>Instrument evals and export a single pass/fail metric per gate</li>,
               <li>Attach links to traces, incidents, and post‑release checks</li>
               <li>Promote from starter to blueprint as your maturity grows</li>
             </ul>

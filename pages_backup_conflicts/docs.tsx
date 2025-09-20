@@ -8,6 +8,6 @@ export default function Docs({ }: DocsProps) {,
     <div>,
       <h1>Docs</h1>,
       <p>This component is currently under development.</p>,
-    </div>),
-}
+    </div>);
+  }
 ,

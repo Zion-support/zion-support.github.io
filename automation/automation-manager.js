@@ -66,13 +66,13 @@ class AutomationManager {,
         const testData = JSON.parse(await fs.readFile(testReportPath, 'utf8')),
         this.testResults = new Map(,
           testData.results.map(result => [result.testName, result]),
-        ),
-      }
+        );
+};
 ,
       logger.info(`📊 Test completed: ${this.testResults.size} systems tested`),
     } catch (error) {,
-      logger.error('❌ Testing failed:', error.message),
-    }
+      logger.error('❌ Testing failed:', error.message);
+};
   }
 ,
   async fixIssues() {,
@@ -85,8 +85,8 @@ class AutomationManager {,
     // Fix configuration issues,
     fixes.push(await this.fixConfigurations()),
     this.fixes = fixes.flat(),
-    logger.info(`🔧 Applied ${this.fixes.length} fixes`),
-  }
+    logger.info(`🔧 Applied ${this.fixes.length} fixes`);
+};
 ,
   async fixSyntaxErrors() {,
     const fixes = [],
@@ -110,12 +110,12 @@ class AutomationManager {,
           content = content.replace(fix.pattern, fix.replacement),
           if (content !== originalContent) {,
             await fs.writeFile(fix.file, content, 'utf8'),
-            fixes.push(`Fixed syntax in ${fix.file}`),
-          }
+            fixes.push(`Fixed syntax in ${fix.file}`);
+};
         }
       } catch (error) {,
-        logger.error(`Error fixing ${fix.file}:`, error.message),
-      }
+        logger.error(`Error fixing ${fix.file}:`, error.message);
+};
     }
 ,
     return fixes,
@@ -131,11 +131,11 @@ class AutomationManager {,
         // Add async dependency,
         packageJson.dependencies.async = "^3.2.5",
         await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2)),
-        fixes.push('Added async dependency to package.json'),
-      }
+        fixes.push('Added async dependency to package.json');
+};
     } catch (error) {,
-      logger.error('Error fixing dependencies:', error.message),
-    }
+      logger.error('Error fixing dependencies:', error.message);
+};
 ,
     return fixes,
   }
@@ -147,18 +147,18 @@ class AutomationManager {,
       const logsDir = path.join(__dirname, 'logs'),
       if (!await this.fileExists(logsDir)) {,
         await fs.mkdir(logsDir, { recursive: true }),
-        fixes.push('Created logs directory'),
-      }
+        fixes.push('Created logs directory');
+};
 ,
       // Ensure data directory exists,
       const dataDir = path.join(__dirname, 'data'),
       if (!await this.fileExists(dataDir)) {,
         await fs.mkdir(dataDir, { recursive: true }),
-        fixes.push('Created data directory'),
-      }
+        fixes.push('Created data directory');
+};
     } catch (error) {,
-      logger.error('Error fixing configurations:', error.message),
-    }
+      logger.error('Error fixing configurations:', error.message);
+};
 ,
     return fixes,
   }
@@ -175,8 +175,8 @@ class AutomationManager {,
       this.systems.set('automationStarter', starter),
       logger.info('✅ Working systems started'),
     } catch (error) {,
-      logger.error('❌ Failed to start working systems:', error.message),
-    }
+      logger.error('❌ Failed to start working systems:', error.message);
+};
   }
 ,
   async monitorAndReport() {,
@@ -186,8 +186,8 @@ class AutomationManager {,
       await this.generateHealthReport(),
     }, 300000), // Every 5 minutes,
     // Generate initial report,
-    await this.generateHealthReport(),
-  }
+    await this.generateHealthReport();
+};
 ,
   async generateHealthReport() {,
     const report = {,
@@ -205,8 +205,8 @@ class AutomationManager {,
     // Save report,
     const reportPath = path.join(__dirname, 'automation-health-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
-    logger.info(`📊 Health report generated: ${report.systems.running}/${report.systems.total} systems running`),
-  }
+    logger.info(`📊 Health report generated: ${report.systems.running}/${report.systems.total} systems running`);
+};
 ,
   async getSystemHealth() {,
     const health = {},
@@ -267,8 +267,8 @@ node automation-manager.js monitor,
       const scriptPath = path.join(process.cwd(), script.name),
       await fs.writeFile(scriptPath, script.content),
       await fs.chmod(scriptPath, 0o755), // Make executable,
-      logger.info(`✅ Created ${script.name}`),
-    }
+      logger.info(`✅ Created ${script.name}`);
+};
   }
 ,
   async runCommand(command) {,
@@ -292,8 +292,8 @@ node automation-manager.js monitor,
         await this.createAutomationScripts(),
         break,
       default:,
-        logger.info('Available commands: run, test, fix, start, monitor, create-scripts'),
-    }
+        logger.info('Available commands: run, test, fix, start, monitor, create-scripts');
+};
   }
 }
 ,
@@ -304,7 +304,7 @@ if (require.main === module) {,
   manager.runCommand(command).catch(error => {,
     logger.error('Automation manager failed:', error),
     process.exit(1),
-  }),
-}
+  });
+  }
 ,
 module.exports = AutomationManager,

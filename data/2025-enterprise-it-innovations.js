@@ -467,4 +467,4 @@ export const enterpriseITInnovationServices2025 = [
         rating: 4.6,
         reviews: 67
     }
-];
+],

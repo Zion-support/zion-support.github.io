@@ -41,7 +41,7 @@ const mockedAuthService = authService as Mocked<typeof authService>,
 const mockedToast = originalToast as MockInstance<any,any>,
 const mockedSupabase = supabase as Mocked<typeof supabase>,
 
-const TestConsumer: React.FC<{loginPayload?: {email: string, pass: string}}> = ({ loginPayload }) => {
+const TestConsumer: React.FC<{loginPayload?: {email: string, pass: string}}> = ({ loginPayload }) : any => {
   const { login, isLoading, user } = useAuth(),
 
   const handleLogin = async () => {
@@ -130,7 +130,7 @@ describe('AuthProvider Login Timeout', () => {
       error: null
     }),
 
-    (mockedSupabase.auth.onAuthStateChange as MockInstance<any,any>).mockImplementation((callback:any) => {
+    (mockedSupabase.auth.onAuthStateChange as MockInstance<any,any>).mockImplementation((callback:any) : any => {
         act(() => {
             callback('SIGNED_IN', { user: { id: 'supabase-user-id', email: 'success@example.com' }, session: {} }),
         }),
@@ -200,5 +200,5 @@ describe('AuthProvider Login Timeout', () => {
       variant: "destructive"
     }),
     expect(screen.getByTestId('user').textContent).toBe('null'),
+  });
   }),
-}),

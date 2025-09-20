@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function SecurityPostureManagement() {,
+export default function SecurityPostureManagement() : any {,
   return (,
     <>,
       <Head>,

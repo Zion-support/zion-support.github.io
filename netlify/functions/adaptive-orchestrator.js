@@ -47,6 +47,6 @@ exports.handler = async function(event, context) {
         function: 'adaptive-orchestrator',
         status: 'error'
       })
-    },
+    };
   }
 },

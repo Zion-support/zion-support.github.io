@@ -24,8 +24,8 @@ class CursorSyncOrchestrator {,
   loadConfig() {,
     const configPath = path.join(__dirname, 'cursor-sync-orchestrator-config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
-    }
+      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+};
     return {,
       enabled: true,
       syncInterval: 60000, // 1 minute,
@@ -47,8 +47,8 @@ class CursorSyncOrchestrator {,
       try {,
         return JSON.parse(fs.readFileSync(stateFile, 'utf8')),
       } catch (error) {,
-        this.log(`Error loading sync state: ${error.message}`, 'warn'),
-      }
+        this.log(`Error loading sync state: ${error.message}`, 'warn');
+};
     }
     return {,
       lastSync: null,
@@ -64,8 +64,8 @@ class CursorSyncOrchestrator {,
       try {,
         return JSON.parse(fs.readFileSync(registryFile, 'utf8')),
       } catch (error) {,
-        this.log(`Error loading computer registry: ${error.message}`, 'warn'),
-      }
+        this.log(`Error loading computer registry: ${error.message}`, 'warn');
+};
     }
     return {},
   }
@@ -73,8 +73,8 @@ class CursorSyncOrchestrator {,
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true }),
-    }
+      fs.mkdirSync(logDir, { recursive: true });
+};
   }
 ,
   generateComputerId() {,
@@ -83,8 +83,8 @@ class CursorSyncOrchestrator {,
     const platform = os.platform(),
     const arch = os.arch(),
     const hash = crypto.createHash('md5').update(`${hostname}-${platform}-${arch}`).digest('hex'),
-    return hash.substring(0, 8),
-  }
+    return hash.substring(0, 8);
+};
 ,
   log(message, level = 'info') {,
     const timestamp = new Date().toISOString(),
@@ -92,16 +92,16 @@ class CursorSyncOrchestrator {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
     } else if (level === 'warn') {,
       console.warn(`⚠️ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`),
-    }
+      console.log(`ℹ️ ${message}`);
+};
   }
 ,
   saveSyncState() {,
@@ -109,8 +109,8 @@ class CursorSyncOrchestrator {,
     try {,
       fs.writeFileSync(stateFile, JSON.stringify(this.syncState, null, 2)),
     } catch (error) {,
-      this.log(`Error saving sync state: ${error.message}`, 'error'),
-    }
+      this.log(`Error saving sync state: ${error.message}`, 'error');
+};
   }
 ,
   saveComputerRegistry() {,
@@ -118,8 +118,8 @@ class CursorSyncOrchestrator {,
     try {,
       fs.writeFileSync(registryFile, JSON.stringify(this.computers, null, 2)),
     } catch (error) {,
-      this.log(`Error saving computer registry: ${error.message}`, 'error'),
-    }
+      this.log(`Error saving computer registry: ${error.message}`, 'error');
+};
   }
 ,
   registerComputer() {,
@@ -133,8 +133,8 @@ class CursorSyncOrchestrator {,
       version: require('../package.json').version || 'unknown'},
     this.computers[this.config.computerId] = computerInfo,
     this.saveComputerRegistry(),
-    this.log(`Registered computer: ${computerInfo.hostname} (${this.config.computerId})`),
-  }
+    this.log(`Registered computer: ${computerInfo.hostname} (${this.config.computerId})`);
+};
 ,
   async checkGitStatus() {,
     try {,
@@ -214,16 +214,16 @@ class CursorSyncOrchestrator {,
     const typeMap = {,
       '.ts': 'TypeScript.tsx': 'TypeScript React.js': 'JavaScript.jsx': 'JavaScript React.css': 'CSS.scss': 'SCSS.json': 'Configuration.md': 'Documentation.html': 'HTML.py': 'Python.sh': 'Shell Script'
     },
-    return typeMap[ext] || ext.slice(1).toUpperCase(),
-  }
+    return typeMap[ext] || ext.slice(1).toUpperCase();
+};
 ,
   generateDescription(fileTypes) {,
     const descriptions = [],
     for (const [type, count] of Object.entries(fileTypes)) {,
-      descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`),
-    }
-    return descriptions.join(),
-  }
+      descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`);
+};
+    return descriptions.join();
+};
 ,
   async commitChanges(message) {,
     try {,
@@ -292,8 +292,8 @@ class CursorSyncOrchestrator {,
         this.log('📥 Remote changes detected, pulling first...'),
         const pulled = await this.pullChanges(),
         if (!pulled) {,
-          await this.resolveConflicts(),
-        }
+          await this.resolveConflicts();
+};
       }
 ,
       // Check for local changes,
@@ -341,12 +341,12 @@ class CursorSyncOrchestrator {,
     this.syncState.lastComputerSync[this.config.computerId] = new Date().toISOString(),
     // Update computer registry,
     if (this.computers[this.config.computerId]) {,
-      this.computers[this.config.computerId].lastSeen = new Date().toISOString(),
-    }
+      this.computers[this.config.computerId].lastSeen = new Date().toISOString();
+};
 ,
     this.saveSyncState(),
-    this.saveComputerRegistry(),
-  }
+    this.saveComputerRegistry();
+};
 ,
   async runWithRetry() {,
     for (let attempt = 1, attempt <= this.config.retryAttempts, attempt++) {,
@@ -358,8 +358,8 @@ class CursorSyncOrchestrator {,
 ,
       if (attempt < this.config.retryAttempts) {,
         this.log(`Retrying in ${this.config.retryDelay}ms...`, 'warn'),
-        await this.sleep(this.config.retryDelay),
-      }
+        await this.sleep(this.config.retryDelay);
+};
     }
 ,
     this.log('All retry attempts failederror'),
@@ -367,8 +367,8 @@ class CursorSyncOrchestrator {,
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms)),
-  }
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
 ,
   async startOrchestrator() {,
     this.log('🚀 Starting Cursor Sync Orchestrator...'),
@@ -386,15 +386,15 @@ class CursorSyncOrchestrator {,
       }
 ,
       // Wait for next sync interval,
-      await this.sleep(this.config.syncInterval),
-    }
+      await this.sleep(this.config.syncInterval);
+};
   }
 ,
   async runOnce() {,
     this.log('🔄 Running single orchestrated sync...'),
     this.registerComputer(),
-    return await this.runWithRetry(),
-  }
+    return await this.runWithRetry();
+};
 ,
   getStatus() {,
     return {,
@@ -417,8 +417,8 @@ if (command === 'once') {,
 } else if (command === 'continuous') {,
   orchestrator.startOrchestrator(),
 } else if (command === 'status') {,
-  console.log(JSON.stringify(orchestrator.getStatus(), null, 2)),
-} else {,
+  console.log(JSON.stringify(orchestrator.getStatus(), null, 2));
+  } else {,
   console.log('Usage: node cursor-sync-orchestrator.js [once|continuous|status]'),
   process.exit(1)
 } ,
