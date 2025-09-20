@@ -77,6 +77,9 @@ function findAndFixFiles(dir) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
+function fixedCount = 0,
+for (const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       fixedCount += findAndFixFiles(filePath);
     } else if (file.endsWith('.tsx') && file.includes('-')) {
