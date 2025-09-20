@@ -62,7 +62,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
       }));
 
       if (logToConsole) {
-        console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
+        // Navigation timing metrics collected
       }
     }
   }, [enableNavigationTiming, logToConsole]);
@@ -75,7 +75,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
     const slowResources = resources.filter(resource => resource.duration > 1000);
 
     if (slowResources.length > 0 && logToConsole) {
-      console.warn('Slow resources detected:', slowResources);
+      // Slow resources detected - could be logged to external service
     }
 
     return resources;
@@ -93,13 +93,15 @@ export function usePerformance(options: PerformanceOptions = {}) {
           if (entry.name === 'first-contentful-paint') {
             const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }));
-            if (logToConsole) console.log('FCP:', fcp);
+            if (logToConsole) {
+              // FCP metric collected
+            }
           }
         });
       });
       observerRef.current.observe({ entryTypes: ['paint'] });
     } catch (e) {
-      console.warn('FCP monitoring not supported');
+      // FCP monitoring not supported
     }
 
     // Largest Contentful Paint
@@ -110,12 +112,14 @@ export function usePerformance(options: PerformanceOptions = {}) {
         if (lastEntry) {
           const lcp = lastEntry.startTime;
           setMetrics(prev => ({ ...prev, lcp }));
-          if (logToConsole) console.log('LCP:', lcp);
+          if (logToConsole) {
+            // LCP metric collected
+          }
         }
       });
       lcpObserverRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
     } catch (e) {
-      console.warn('LCP monitoring not supported');
+      // LCP monitoring not supported
     }
 
     // Cumulative Layout Shift
@@ -128,11 +132,13 @@ export function usePerformance(options: PerformanceOptions = {}) {
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-        if (logToConsole) console.log('CLS:', clsValue);
+        if (logToConsole) {
+          // CLS metric collected
+        }
       });
       clsObserverRef.current.observe({ entryTypes: ['layout-shift'] });
     } catch (e) {
-      console.warn('CLS monitoring not supported');
+      // CLS monitoring not supported
     }
   }, [enableWebVitals, logToConsole]);
 
@@ -150,7 +156,9 @@ export function usePerformance(options: PerformanceOptions = {}) {
       firstInputDelay = firstInputTime - (performance.timeOrigin || 0);
 
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }));
-      if (logToConsole) console.log('FID:', firstInputDelay);
+      if (logToConsole) {
+        // FID metric collected
+      }
 
       // Remove listeners after first input
       document.removeEventListener('pointerdown', firstInputHandler);
@@ -284,10 +292,10 @@ export function usePerformance(options: PerformanceOptions = {}) {
       
       // Log metrics for debugging (remove in production)
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Performance metrics stored locally:', analyticsData);
+        // Performance metrics stored locally
       }
     } catch (error) {
-      console.warn('Failed to store performance metrics locally:', error);
+      // Failed to store performance metrics locally
     }
   }, [metrics, sendToAnalytics, getPerformanceScore]);
 
@@ -337,7 +345,7 @@ export function useComponentPerformance(componentName: string) {
       
       // Log slow components
       if (totalTime > 16) { // 16ms = 60fps threshold
-        console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`);
+        // Slow component render detected
       }
     };
   }, [componentName]);

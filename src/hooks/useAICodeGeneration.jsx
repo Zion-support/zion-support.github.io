@@ -53,7 +53,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to generate code:', error);
+            // Error generating code - could be logged to external service
             trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -88,7 +88,7 @@ export const useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed to analyze code:', error);
+            // Error analyzing code - could be logged to external service
             trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -135,7 +135,7 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {
-            console.error('Failed to optimize code:', error);
+            // Error optimizing code - could be logged to external service
             trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -161,7 +161,7 @@ export const useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {
-            console.error('Failed to generate tests:', error);
+            // Error generating tests - could be logged to external service
             trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -187,7 +187,7 @@ export const useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {
-            console.error('Failed to generate documentation:', error);
+            // Error generating documentation - could be logged to external service
             trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });

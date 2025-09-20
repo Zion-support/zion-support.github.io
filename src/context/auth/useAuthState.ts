@@ -43,7 +43,7 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error);
+        // Error checking auth state - could be logged to external service
       } finally {
         setIsLoading(false);
       }
