@@ -6,7 +6,7 @@
   base = "."
   # Force static site build
   functions = "netlify/functions"
- # ci: retrigger Netlify deploy (no functional change) 2025-09-17T12:00:01Z
+ # ci: retrigger Netlify deploy (build fixes verified) 2025-09-20T02:12:00Z
 
 [build.environment]
   NODE_VERSION = "20"
