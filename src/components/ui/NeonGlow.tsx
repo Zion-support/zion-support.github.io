@@ -1,9 +1,9 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import React from 'react;';
+import { cn } from '@/lib/utils, ';
 
 interface NeonGlowProps {
   children: React.ReactNode;
-  color?: 'zion-cyan' | 'zion-purple' | 'zion-blue' | 'custom';
+    color?: 'zion-cyan' | 'zion-purple' | 'zion-blue' | 'custom';
   intensity?: 'low' | 'medium' | 'high';
   className?: string;
   customColor?: string;
@@ -25,17 +25,16 @@ export function NeonGlow({
       low: {
         textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`,
         filter: `drop-shadow(0 0 2px ${baseColor})`
-      },
+      };
       medium: {
         textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`,
         filter: `drop-shadow(0 0 5px ${baseColor}) drop-shadow(0 0 10px ${baseColor})`
-      },
+      };
       high: {
         textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`,
         filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`
       }
     };
-
     return intensityMap[intensity];
   };
 

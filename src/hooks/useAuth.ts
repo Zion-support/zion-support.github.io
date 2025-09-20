@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react, ';
 
 interface User {
   id: string;
-  email: string;
-  name: string;
-  role: 'user' | 'admin' | 'moderator';
-  userType?: string;
+    email: string;
+    name: string;
+    role: 'user' | 'admin' | 'moderator';
+    userType?: string;
   displayName?: string;
   avatarUrl?: string;
 }
@@ -35,12 +35,11 @@ export function useAuth() {
   const login = async (email: string, password: string) => {
     // Implement actual login logic here
     const mockUser: User = {
-      id: '1',
+      id: '1';
       email,
-      name: 'User',
+      name: 'User';
       role: 'user'
     };
-    
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
@@ -55,12 +54,11 @@ export function useAuth() {
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
-      id: '1',
+      id: '1';
       email,
       name,
       role: 'user'
     };
-    
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
@@ -73,7 +71,7 @@ export function useAuth() {
     login,
     logout,
     register,
-    isAuthenticated: !!user,
+    isAuthenticated: !!user;
     isAdmin: user?.role === 'admin'
   };
 }

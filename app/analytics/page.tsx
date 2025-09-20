@@ -1,90 +1,102 @@
 import React from 'react'
 import Link from 'next/link'
-import SEO from '../../components/SEO'
-
+import SEO from '../../components/SEO';
 export const metadata = {
+<<<<<<< HEAD
   title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group'
   description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.'
   keywords: ['analytics', 'data analytics', 'business intelligence', 'predictive analytics', 'real-time analytics']
+=======
+  title: 'Analytics Revolution 2025 - Advanced Data Analytics | Zion Tech Group',
+  description: 'Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.',
+  keywords: ['analyticsdata analyticsbusiness intelligencepredictive analytics', 'real-time analytics']
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
-
 export default function AnalyticsPage() {
   return (
     <div>
       <SEO
         title="Analytics Revolution 2025 - Advanced Data Analytics"
-        description="Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics."
+        description="Transform your data into actionable insights with our advanced analytics solutions"
         keywords="analytics, data analytics, business intelligence, predictive analytics, real-time analytics"
         url="/analytics"
       />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Analytics Revolution 2025
           </h1>
-          <p className="text-xl mb-8">
-            Transform your data into actionable insights with our advanced analytics solutions. Real-time processing, predictive intelligence, and AI-powered analytics.
+          <p>
+            Transform your data into powerful insights with AI-powered analytics, real-time processing
+            and predictive intelligence that drives business success.
           </p>
-          <div className="flex gap-4">
+          <div>
             <Link
-              href="/contact"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/analytics/demo"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Started
+              Try Analytics Demo
             </Link>
             <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              href="/analytics/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
-              View Services
+              Get Free Consultation
             </Link>
           </div>
         </div>
       </section>
-      
       {/* Features Grid */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Features</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Solutions</h2>
+          <div>
+            <div>
               <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Real-time Analytics</h3>
-              <p className="text-gray-600">
-                Process and analyze data in real-time for instant insights and decision making.
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Real-Time Analytics</h3>
+              <p>
+                Process and analyze data streams in real-time with sub-millisecond latency for instant insights.
               </p>
+              <Link href="/analytics/real-time" className="text-indigo-600 font-semibold hover:text-indigo-800">
+                Learn More →
+              </Link>
             </div>
-            <div className="text-center">
+            <div>
               <div className="text-4xl mb-4">🔮</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Predictive Intelligence</h3>
-              <p className="text-gray-600">
-                Forecast trends and outcomes with advanced machine learning algorithms.
+              <p>
+                Advanced machine learning models that predict trends and outcomes with 95%+ accuracy.
               </p>
+              <Link href="/analytics/predictive" className="text-indigo-600 font-semibold hover:text-indigo-800">
+                Learn More →
+              </Link>
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Business Intelligence</h3>
-              <p className="text-gray-600">
-                Comprehensive dashboards and reports for data-driven business decisions.
+            <div>
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Automated Insights</h3>
+              <p>
+                AI automatically generates actionable insights and recommendations from your data.
               </p>
+              <Link href="/analytics/automated" className="text-indigo-600 font-semibold hover:text-indigo-800">
+                Learn More →
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 text-center">
+        <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to Transform Your Data?
+            Ready to Revolutionize Your Analytics?
           </h2>
-          <p className="text-gray-600 mb-8">
-            Start your analytics journey today and unlock the power of your data.
+          <p>
+            Join 500+ companies that have transformed their data strategy with our analytics solutions.
           </p>
           <Link
             href="/contact"
-            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
           >
             Start Your Analytics Journey
           </Link>

@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group'
   description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.'
   keywords: ['AI automationROIenterprisesuccess story', 'productivitycost reduction']
@@ -12,13 +13,25 @@ export const metadata: Metadata = {
     type: 'article'
     publishedTime: '2025-01-14'
     authors: ['Zion Tech Group']}
+=======
+  title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group',
+  description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',
+  keywords: ['AI automationROIenterprisesuccess story', 'productivitycost reduction'],
+  openGraph: {
+    title: 'AI Automation Success Story: 500% ROI Achievement',
+    description: 'Fortune 500 company achieves 500% ROI through intelligent automation',
+    type: 'article',
+    publishedTime: '2025-01-14',
+    authors: ['Zion Tech Group']
+  }
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
 export default function AIAutomationSuccessStoryPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI Automation Success Story: 500% ROI Achievement"
+        description="Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%."
         keywords="AI automation, ROI, enterprise, success story, productivity, cost reduction"
         url="/blog/ai-automation-success-story-2025"
       />
@@ -219,4 +232,6 @@ export default function AIAutomationSuccessStoryPage() {
           </div>
         </div>
       </section>
-    </div>)}
+    </div>
+  )
+}

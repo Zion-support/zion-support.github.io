@@ -1,50 +1,50 @@
 export interface EmergingTechService {
   id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  category: string;
-  technology: string;
-  marketSize: string;
-  targetAudience: string;
-  competitiveAdvantage: string;
-  useCases: string[];
-  integrations: string[];
-  compliance: string[];
-  website: string;
-  contact: {
+    name: string;
+    tagline: string;
+    description: string;
+    price: string;
+    period: string;
+    features: string[];
+    category: string;
+    technology: string;
+    marketSize: string;
+    targetAudience: string;
+    competitiveAdvantage: string;
+    useCases: string[];
+    integrations: string[];
+    compliance: string[];
+    website: string;
+    contact: {
     phone: string;
     email: string;
     address: string;
-  };
+     };
   trialDays: number;
-  setupTime: string;
-  competitors: string[];
-  roi: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  innovationLevel: string;
-  futurePotential: string;
-  researchPartners: string[];
-  patents: string[];
+    setupTime: string;
+    competitors: string[];
+    roi: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
+    reviews: number;
+    innovationLevel: string;
+    futurePotential: string;
+    researchPartners: string[];
+    patents: string[];
 }
 
 export const emergingTechServices2025: EmergingTechService[] = [
   // Quantum Computing Services
   {
-    id: 'quantum-computing-as-a-service',
-    name: 'Quantum Computing as a Service',
-    tagline: 'Enterprise quantum computing access with advanced algorithm optimization',
+    id: 'quantum-computing-as-a-service';
+    name: 'Quantum Computing as a Service';
+    tagline: 'Enterprise quantum computing access with advanced algorithm optimization';
     description: 'Revolutionary quantum computing platform that provides enterprise access to quantum processors through the cloud. Features advanced algorithm optimization, quantum error correction, and hybrid quantum-classical workflows for complex computational problems.',
     price: '$3,999',
-    period: '/month',
+    period: '/month';
     features: [
-      'Access to 1000+ qubit quantum processors',
+      'Access to 1000+ qubit quantum processors';
       'Advanced quantum algorithm optimization',
       'Quantum error correction and mitigation',
       'Hybrid quantum-classical workflows',
@@ -55,13 +55,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Quantum software development kits',
       '24/7 quantum computing support'
     ],
-    category: 'Quantum Computing',
-    technology: 'Quantum Processing',
-    marketSize: '$12.8B',
+    category: 'Quantum Computing';
+    technology: 'Quantum Processing';
+    marketSize: '$12.8B';
     targetAudience: 'Research institutions, pharmaceutical companies, financial institutions, logistics companies, government agencies',
     competitiveAdvantage: 'Largest quantum processor access, advanced error correction, hybrid workflows, and comprehensive algorithm optimization',
     useCases: [
-      'Drug discovery and molecular simulation',
+      'Drug discovery and molecular simulation';
       'Financial portfolio optimization',
       'Logistics and route optimization',
       'Cryptography and security',
@@ -69,36 +69,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Jupyter Notebooks', 'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Custom APIs'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'HIPAA', 'FISMA', 'NIST'],
-    website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
+    website: 'https://ziontechgroup.com/quantum-computing-as-a-service';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 60,
-    setupTime: '2-4 weeks',
+    };
+    trialDays: 60;
+    setupTime: '2-4 weeks';
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
-    roi: 'Average enterprise sees 2000% ROI through quantum-accelerated solutions',
-    launchDate: '2024-04-15',
-    customers: 35,
-    rating: 4.9,
-    reviews: 18,
-    innovationLevel: 'Breakthrough',
-    futurePotential: 'Transformational',
+    roi: 'Average enterprise sees 2000% ROI through quantum-accelerated solutions';
+    launchDate: '2024-04-15';
+    customers: 35;
+    rating: 4.9;
+    reviews: 18;
+    innovationLevel: 'Breakthrough';
+    futurePotential: 'Transformational';
     researchPartners: ['MIT', 'Stanford', 'Caltech', 'CERN'],
     patents: ['Quantum Error Correction Method', 'Hybrid Quantum-Classical Workflow', 'Quantum Algorithm Optimization']
   },
 
   // Neuromorphic Computing
   {
-    id: 'neuromorphic-computing-platform',
-    name: 'Neuromorphic Computing Platform',
-    tagline: 'Brain-inspired computing for next-generation AI applications',
+    id: 'neuromorphic-computing-platform';
+    name: 'Neuromorphic Computing Platform';
+    tagline: 'Brain-inspired computing for next-generation AI applications';
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural architecture for ultra-efficient AI processing. Provides brain-inspired algorithms, spiking neural networks, and energy-efficient computing for edge AI applications.',
     price: '$2,199',
-    period: '/month',
+    period: '/month';
     features: [
-      'Spiking neural network frameworks',
+      'Spiking neural network frameworks';
       'Brain-inspired learning algorithms',
       'Ultra-low power consumption',
       'Real-time pattern recognition',
@@ -109,13 +109,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Real-time sensor processing',
       'Edge AI deployment tools'
     ],
-    category: 'Neuromorphic Computing',
-    technology: 'Brain-Inspired AI',
-    marketSize: '$8.9B',
+    category: 'Neuromorphic Computing';
+    technology: 'Brain-Inspired AI';
+    marketSize: '$8.9B';
     targetAudience: 'AI research institutions, robotics companies, IoT device manufacturers, autonomous systems developers, edge computing companies',
     competitiveAdvantage: 'First commercial neuromorphic platform, brain-inspired algorithms, ultra-low power consumption, and real-time edge processing',
     useCases: [
-      'Autonomous robotics',
+      'Autonomous robotics';
       'IoT edge computing',
       'Real-time pattern recognition',
       'Energy-efficient AI',
@@ -123,36 +123,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip Akida', 'Custom Hardware', 'Edge Devices'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'NIST', 'IEEE Standards'],
-    website: 'https://ziontechgroup.com/neuromorphic-computing-platform',
+    website: 'https://ziontechgroup.com/neuromorphic-computing-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 45,
-    setupTime: '4-6 weeks',
+    };
+    trialDays: 45;
+    setupTime: '4-6 weeks';
     competitors: ['Intel', 'IBM', 'BrainChip', 'General Vision'],
-    roi: 'Average company reduces AI power consumption by 80% and improves real-time processing by 300%',
-    launchDate: '2024-05-20',
-    customers: 28,
-    rating: 4.8,
-    reviews: 15,
-    innovationLevel: 'Emerging',
-    futurePotential: 'High',
+    roi: 'Average company reduces AI power consumption by 80% and improves real-time processing by 300%';
+    launchDate: '2024-05-20';
+    customers: 28;
+    rating: 4.8;
+    reviews: 15;
+    innovationLevel: 'Emerging';
+    futurePotential: 'High';
     researchPartners: ['Stanford Neuroscience Institute', 'MIT Brain Research', 'UC Berkeley'],
     patents: ['Spiking Neural Network Architecture', 'Brain-Inspired Learning Algorithm', 'Neuromorphic Hardware Interface']
   },
 
   // DNA Computing & Storage
   {
-    id: 'dna-computing-storage-platform',
-    name: 'DNA Computing & Storage Platform',
-    tagline: 'Revolutionary DNA-based computing and data storage solutions',
+    id: 'dna-computing-storage-platform';
+    name: 'DNA Computing & Storage Platform';
+    tagline: 'Revolutionary DNA-based computing and data storage solutions';
     description: 'Groundbreaking platform that leverages DNA molecules for computing and ultra-dense data storage. Provides DNA synthesis, molecular computing algorithms, and biological data processing for next-generation computational challenges.',
     price: '$4,999',
-    period: '/month',
+    period: '/month';
     features: [
-      'DNA synthesis and sequencing',
+      'DNA synthesis and sequencing';
       'Molecular computing algorithms',
       'Ultra-dense data storage',
       'Biological data processing',
@@ -163,13 +163,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Molecular programming tools',
       'Biological computing frameworks'
     ],
-    category: 'DNA Computing',
-    technology: 'Molecular Computing',
-    marketSize: '$6.2B',
+    category: 'DNA Computing';
+    technology: 'Molecular Computing';
+    marketSize: '$6.2B';
     targetAudience: 'Biotechnology companies, research institutions, pharmaceutical companies, government agencies, cybersecurity firms',
     competitiveAdvantage: 'First commercial DNA computing platform, molecular algorithms, ultra-dense storage, and biological computing frameworks',
     useCases: [
-      'Ultra-dense data storage',
+      'Ultra-dense data storage';
       'Molecular cryptography',
       'Biological computing',
       'DNA-based algorithms',
@@ -177,36 +177,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['DNA Sequencers', 'Synthesis Equipment', 'Bioinformatics Tools', 'Research Platforms', 'Cloud Computing'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'HIPAA', 'Biosafety Standards'],
-    website: 'https://ziontechgroup.com/dna-computing-storage-platform',
+    website: 'https://ziontechgroup.com/dna-computing-storage-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 90,
-    setupTime: '8-12 weeks',
+    };
+    trialDays: 90;
+    setupTime: '8-12 weeks';
     competitors: ['Microsoft Research', 'Illumina', 'Oxford Nanopore', 'Twist Bioscience'],
-    roi: 'Average research institution achieves 1000x data storage density and accelerates molecular research by 500%',
-    launchDate: '2024-06-10',
-    customers: 15,
-    rating: 4.9,
-    reviews: 8,
-    innovationLevel: 'Experimental',
-    futurePotential: 'Revolutionary',
+    roi: 'Average research institution achieves 1000x data storage density and accelerates molecular research by 500%';
+    launchDate: '2024-06-10';
+    customers: 15;
+    rating: 4.9;
+    reviews: 8;
+    innovationLevel: 'Experimental';
+    futurePotential: 'Revolutionary';
     researchPartners: ['Harvard Medical School', 'MIT Biology', 'Stanford Genetics'],
     patents: ['DNA Computing Method', 'Molecular Storage System', 'Biological Algorithm Framework']
   },
 
   // Photonic Computing
   {
-    id: 'photonic-computing-platform',
-    name: 'Photonic Computing Platform',
-    tagline: 'Light-speed computing with photonic processors and optical networks',
+    id: 'photonic-computing-platform';
+    name: 'Photonic Computing Platform';
+    tagline: 'Light-speed computing with photonic processors and optical networks';
     description: 'Advanced photonic computing platform that uses light instead of electricity for ultra-fast processing and communication. Provides photonic processors, optical neural networks, and light-speed data transmission for next-generation computing.',
     price: '$2,899',
-    period: '/month',
+    period: '/month';
     features: [
-      'Photonic processors and chips',
+      'Photonic processors and chips';
       'Optical neural networks',
       'Light-speed data transmission',
       'Photonic memory systems',
@@ -217,13 +217,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Light-based cryptography',
       'Optical computing tools'
     ],
-    category: 'Photonic Computing',
-    technology: 'Light-Based Computing',
-    marketSize: '$9.7B',
+    category: 'Photonic Computing';
+    technology: 'Light-Based Computing';
+    marketSize: '$9.7B';
     targetAudience: 'Telecommunications companies, data centers, research institutions, defense contractors, high-performance computing companies',
     competitiveAdvantage: 'First commercial photonic platform, light-speed processing, optical neural networks, and photonic quantum integration',
     useCases: [
-      'High-speed telecommunications',
+      'High-speed telecommunications';
       'Data center optimization',
       'Optical computing',
       'Light-speed cryptography',
@@ -231,36 +231,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Fiber Optic Networks', 'Optical Equipment', 'Telecom Systems', 'Data Center Infrastructure', 'Research Platforms'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'NIST', 'Telecom Standards'],
-    website: 'https://ziontechgroup.com/photonic-computing-platform',
+    website: 'https://ziontechgroup.com/photonic-computing-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 60,
-    setupTime: '6-10 weeks',
+    };
+    trialDays: 60;
+    setupTime: '6-10 weeks';
     competitors: ['Intel', 'IBM', 'Hewlett Packard', 'Cisco'],
-    roi: 'Average telecom company improves data transmission speed by 1000x and reduces energy consumption by 70%',
-    launchDate: '2024-07-25',
-    customers: 42,
-    rating: 4.8,
-    reviews: 22,
-    innovationLevel: 'Emerging',
-    futurePotential: 'High',
+    roi: 'Average telecom company improves data transmission speed by 1000x and reduces energy consumption by 70%';
+    launchDate: '2024-07-25';
+    customers: 42;
+    rating: 4.8;
+    reviews: 22;
+    innovationLevel: 'Emerging';
+    futurePotential: 'High';
     researchPartners: ['MIT Photonics', 'Stanford Optics', 'Caltech Quantum'],
     patents: ['Photonic Processor Design', 'Optical Neural Network', 'Light-Speed Computing Method']
   },
 
   // Biological Computing
   {
-    id: 'biological-computing-platform',
-    name: 'Biological Computing Platform',
-    tagline: 'Living computers powered by biological systems and cellular networks',
+    id: 'biological-computing-platform';
+    name: 'Biological Computing Platform';
+    tagline: 'Living computers powered by biological systems and cellular networks';
     description: 'Revolutionary biological computing platform that uses living cells, proteins, and biological networks for computation. Provides cellular computing frameworks, protein-based algorithms, and biological circuit design for next-generation computing.',
     price: '$3,299',
-    period: '/month',
+    period: '/month';
     features: [
-      'Cellular computing frameworks',
+      'Cellular computing frameworks';
       'Protein-based algorithms',
       'Biological circuit design',
       'Living computer systems',
@@ -271,13 +271,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Biological cryptography',
       'Living system integration'
     ],
-    category: 'Biological Computing',
-    technology: 'Living Systems',
-    marketSize: '$7.8B',
+    category: 'Biological Computing';
+    technology: 'Living Systems';
+    marketSize: '$7.8B';
     targetAudience: 'Biotechnology companies, pharmaceutical companies, research institutions, medical device companies, agricultural companies',
     competitiveAdvantage: 'First commercial biological platform, living computers, cellular algorithms, and protein-based computing',
     useCases: [
-      'Medical diagnostics',
+      'Medical diagnostics';
       'Drug discovery',
       'Agricultural optimization',
       'Environmental monitoring',
@@ -285,36 +285,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Laboratory Equipment', 'Biological Systems', 'Medical Devices', 'Research Platforms', 'Cloud Computing'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'HIPAA', 'Biosafety Standards', 'FDA'],
-    website: 'https://ziontechgroup.com/biological-computing-platform',
+    website: 'https://ziontechgroup.com/biological-computing-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 75,
-    setupTime: '10-16 weeks',
+    };
+    trialDays: 75;
+    setupTime: '10-16 weeks';
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],
-    roi: 'Average biotech company accelerates research by 400% and reduces laboratory costs by 60%',
-    launchDate: '2024-08-30',
-    customers: 25,
-    rating: 4.9,
-    reviews: 12,
-    innovationLevel: 'Experimental',
-    futurePotential: 'Revolutionary',
+    roi: 'Average biotech company accelerates research by 400% and reduces laboratory costs by 60%';
+    launchDate: '2024-08-30';
+    customers: 25;
+    rating: 4.9;
+    reviews: 12;
+    innovationLevel: 'Experimental';
+    futurePotential: 'Revolutionary';
     researchPartners: ['MIT Biology', 'Stanford Bioengineering', 'UC Berkeley'],
     patents: ['Biological Computing Method', 'Cellular Algorithm Framework', 'Living Computer System']
   },
 
   // Swarm Robotics
   {
-    id: 'swarm-robotics-platform',
-    name: 'Swarm Robotics Platform',
-    tagline: 'Coordinated multi-robot systems for complex autonomous operations',
+    id: 'swarm-robotics-platform';
+    name: 'Swarm Robotics Platform';
+    tagline: 'Coordinated multi-robot systems for complex autonomous operations';
     description: 'Advanced swarm robotics platform that enables coordinated operation of multiple robots for complex tasks. Provides swarm intelligence algorithms, multi-robot coordination, and autonomous decision-making for industrial and research applications.',
     price: '$1,899',
-    period: '/month',
+    period: '/month';
     features: [
-      'Swarm intelligence algorithms',
+      'Swarm intelligence algorithms';
       'Multi-robot coordination',
       'Autonomous decision-making',
       'Distributed computing',
@@ -325,13 +325,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Swarm simulation',
       'Deployment tools'
     ],
-    category: 'Swarm Robotics',
-    technology: 'Multi-Robot Systems',
-    marketSize: '$11.3B',
+    category: 'Swarm Robotics';
+    technology: 'Multi-Robot Systems';
+    marketSize: '$11.3B';
     targetAudience: 'Manufacturing companies, logistics companies, research institutions, defense contractors, agricultural companies',
     competitiveAdvantage: 'Most advanced swarm platform, intelligent coordination, autonomous decision-making, and comprehensive deployment tools',
     useCases: [
-      'Manufacturing automation',
+      'Manufacturing automation';
       'Logistics optimization',
       'Search and rescue',
       'Agricultural automation',
@@ -339,36 +339,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Robot Operating System', 'Industrial Robots', 'IoT Devices', 'Cloud Computing', 'Simulation Platforms'],
     compliance: ['ISO 13482', 'ISO 27001', 'SOC2', 'GDPR', 'Safety Standards'],
-    website: 'https://ziontechgroup.com/swarm-robotics-platform',
+    website: 'https://ziontechgroup.com/swarm-robotics-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 45,
-    setupTime: '6-8 weeks',
+    };
+    trialDays: 45;
+    setupTime: '6-8 weeks';
     competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC'],
-    roi: 'Average manufacturer improves automation efficiency by 300% and reduces operational costs by 40%',
-    launchDate: '2024-09-15',
-    customers: 68,
-    rating: 4.8,
-    reviews: 35,
-    innovationLevel: 'Emerging',
-    futurePotential: 'High',
+    roi: 'Average manufacturer improves automation efficiency by 300% and reduces operational costs by 40%';
+    launchDate: '2024-09-15';
+    customers: 68;
+    rating: 4.8;
+    reviews: 35;
+    innovationLevel: 'Emerging';
+    futurePotential: 'High';
     researchPartners: ['MIT Robotics', 'Stanford AI', 'Carnegie Mellon Robotics'],
     patents: ['Swarm Coordination Algorithm', 'Multi-Robot Communication', 'Autonomous Decision System']
   },
 
   // Brain-Computer Interfaces
   {
-    id: 'brain-computer-interface-platform',
-    name: 'Brain-Computer Interface Platform',
-    tagline: 'Direct neural interface for human-computer interaction and control',
+    id: 'brain-computer-interface-platform';
+    name: 'Brain-Computer Interface Platform';
+    tagline: 'Direct neural interface for human-computer interaction and control';
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers. Provides neural signal processing, thought-to-action conversion, and assistive technology for medical and research applications.',
     price: '$5,999',
-    period: '/month',
+    period: '/month';
     features: [
-      'Neural signal processing',
+      'Neural signal processing';
       'Thought-to-action conversion',
       'Brain pattern recognition',
       'Neural feedback systems',
@@ -379,13 +379,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'BCI applications',
       'Training and calibration'
     ],
-    category: 'Brain-Computer Interfaces',
-    technology: 'Neural Interface',
-    marketSize: '$15.4B',
+    category: 'Brain-Computer Interfaces';
+    technology: 'Neural Interface';
+    marketSize: '$15.4B';
     targetAudience: 'Medical device companies, research institutions, rehabilitation centers, assistive technology companies, gaming companies',
     competitiveAdvantage: 'Most advanced BCI platform, neural signal processing, medical integration, and comprehensive development tools',
     useCases: [
-      'Medical rehabilitation',
+      'Medical rehabilitation';
       'Assistive technology',
       'Research applications',
       'Gaming and entertainment',
@@ -393,36 +393,36 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Medical Devices', 'Research Equipment', 'Gaming Systems', 'Assistive Technology', 'Cloud Computing'],
     compliance: ['FDA 510(k)', 'CE Mark', 'ISO 13485', 'HIPAA', 'GDPR', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/brain-computer-interface-platform',
+    website: 'https://ziontechgroup.com/brain-computer-interface-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 120,
-    setupTime: '12-20 weeks',
+    };
+    trialDays: 120;
+    setupTime: '12-20 weeks';
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Emotiv'],
-    roi: 'Average medical company improves patient outcomes by 200% and reduces rehabilitation time by 60%',
-    launchDate: '2024-10-20',
-    customers: 18,
-    rating: 4.9,
-    reviews: 9,
-    innovationLevel: 'Breakthrough',
-    futurePotential: 'Transformational',
+    roi: 'Average medical company improves patient outcomes by 200% and reduces rehabilitation time by 60%';
+    launchDate: '2024-10-20';
+    customers: 18;
+    rating: 4.9;
+    reviews: 9;
+    innovationLevel: 'Breakthrough';
+    futurePotential: 'Transformational';
     researchPartners: ['Stanford Neuroscience', 'MIT Brain Research', 'Johns Hopkins Medicine'],
     patents: ['Neural Signal Processing', 'Thought-to-Action Conversion', 'BCI Development Framework']
   },
 
   // Synthetic Biology
   {
-    id: 'synthetic-biology-platform',
-    name: 'Synthetic Biology Platform',
-    tagline: 'Design and engineering of biological systems for novel applications',
+    id: 'synthetic-biology-platform';
+    name: 'Synthetic Biology Platform';
+    tagline: 'Design and engineering of biological systems for novel applications';
     description: 'Advanced synthetic biology platform that enables design and engineering of biological systems for novel applications. Provides DNA design tools, genetic circuit engineering, and biological system optimization for research and commercial applications.',
     price: '$2,799',
-    period: '/month',
+    period: '/month';
     features: [
-      'DNA design and synthesis',
+      'DNA design and synthesis';
       'Genetic circuit engineering',
       'Biological system optimization',
       'Protein engineering tools',
@@ -433,13 +433,13 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Laboratory integration',
       'Research collaboration'
     ],
-    category: 'Synthetic Biology',
-    technology: 'Biological Engineering',
-    marketSize: '$13.7B',
+    category: 'Synthetic Biology';
+    technology: 'Biological Engineering';
+    marketSize: '$13.7B';
     targetAudience: 'Biotechnology companies, pharmaceutical companies, agricultural companies, research institutions, chemical companies',
     competitiveAdvantage: 'Most comprehensive synthetic biology platform, advanced design tools, automation, and comprehensive laboratory integration',
     useCases: [
-      'Drug development',
+      'Drug development';
       'Agricultural optimization',
       'Chemical production',
       'Environmental remediation',
@@ -447,22 +447,22 @@ export const emergingTechServices2025: EmergingTechService[] = [
     ],
     integrations: ['Laboratory Equipment', 'DNA Synthesis', 'Sequencing Platforms', 'Research Databases', 'Cloud Computing'],
     compliance: ['ISO 27001', 'SOC2', 'GDPR', 'Biosafety Standards', 'FDA Guidelines'],
-    website: 'https://ziontechgroup.com/synthetic-biology-platform',
+    website: 'https://ziontechgroup.com/synthetic-biology-platform';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    trialDays: 60,
-    setupTime: '8-12 weeks',
+    };
+    trialDays: 60;
+    setupTime: '8-12 weeks';
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],
-    roi: 'Average biotech company accelerates development by 300% and reduces laboratory costs by 50%',
-    launchDate: '2024-11-25',
-    customers: 52,
-    rating: 4.8,
-    reviews: 28,
-    innovationLevel: 'Emerging',
-    futurePotential: 'High',
+    roi: 'Average biotech company accelerates development by 300% and reduces laboratory costs by 50%';
+    launchDate: '2024-11-25';
+    customers: 52;
+    rating: 4.8;
+    reviews: 28;
+    innovationLevel: 'Emerging';
+    futurePotential: 'High';
     researchPartners: ['MIT Biology', 'Stanford Bioengineering', 'UC Berkeley'],
     patents: ['DNA Design Method', 'Genetic Circuit Framework', 'Biological System Optimization']
   }

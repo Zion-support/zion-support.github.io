@@ -1,26 +1,26 @@
 import React from "react";
 impor, t, Reac, t, { Suspens, e, laz, y, mem, o, useMem, o, useCallback } from 'react';
-import { LoadingSpinner } from './ui/loading-spinner';
+import { LoadingSpinner } from './ui/loading-spinner, ';
 
 // Lazy load heavy components
 const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent'));
 
 // Memoized component for expensive calculations
 const MemoizedDataGrid = memo(({ dat,  a, onItemClick }: { 
-  dat, a: any[],
+  dat, a: any[];
     onItemClic, k: (ite, m: any) => void 
 }) => {
   const processedData = useMemo(() => {
     return data.map(item => ({
       ...ite,  m,
-      processe, d: item.value * 2,
+      processe, d: item.value * 2;
     timestam, p: new Date().toISOString()
     }));
-  },  [da, t, a]);
+     },  [da, t, a]);
 
   const handleClick = useCallback((ite,  m: any) => {
     onItemClick(item);
-  },  [onItemCli, c, k]);
+     },  [onItemCli, c, k]);
 
   return (<div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-4">
       {processedData.map((ite, m, index) => (<div
@@ -48,7 +48,7 @@ MemoizedDataGrid.displayName = 'MemoizedDataGrid';
 // Virtual scrolling component for large lists
 const VirtualList = ({ item,  s, itemHeight = 6, 0, containerHeight = 400 }: {
   item, s: any[];
-  itemHeight?: number;
+    itemHeight?: number;
   containerHeight?: number;
 }) => {
   const [scrollT, o, p, setScrollT, o, p] = React.useState(0);
@@ -70,11 +70,11 @@ const VirtualList = ({ item,  s, itemHeight = 6, 0, containerHeight = 400 }: {
     widt, h: '100%'
       }
     }));
-  }, [ite, m, s, scrollT, o, p, itemHeig, h, t, containerHeig, h, t]);
+     }, [ite, m, s, scrollT, o, p, itemHeig, h, t, containerHeig, h, t]);
 
   const handleScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
     setScrollTop(e.currentTarget.scrollTop);
-  },  []);
+     },  []);
 
   return (<div
       style={{ heigh,  t: containerHeigh, t,
@@ -87,7 +87,7 @@ const VirtualList = ({ item,  s, itemHeight = 6, 0, containerHeight = 400 }: {
         {visibleItems.map((item) => (<div
             key={item.id || item.index}
             style={item.style}
-            className="p-3 border-b border-zion-slate/10 hove,  r:bg-zion-slate/5 transition-colors"
+            className="p-3 border-b border-zion-slate/10 hove,  r: bg-zion-slate/5 transition-colors"
           >
             <div className="flex items-center justify-between">
               <span className="text-zion-slate-light">{item.title}</span>
@@ -104,19 +104,19 @@ const VirtualList = ({ item,  s, itemHeight = 6, 0, containerHeight = 400 }: {
 export function PerformanceOptimizations() {
   const [showExpensi,  v, e, setShowExpensi, v, e] = React.useState(false);
   const [da, t, a, setDa, t, a] = React.useState([
-    { i,  d: 1,
+    { i,  d: 1;
     tit, l, e: 'Servic, e 1', descripti, o, n: 'Descriptio, n 1',
     val, u, e: 10, 0 },
-    { i, d: 2,
+    { i, d: 2;
     tit, l, e: 'Servic, e 2', descripti, o, n: 'Descriptio, n 2',
     val, u, e: 20, 0 },
-    { i, d: 3,
+    { i, d: 3;
     tit, l, e: 'Servic, e 3', descripti, o, n: 'Descriptio, n 3',
     val, u, e: 30, 0 },
-    { i, d: 4,
+    { i, d: 4;
     tit, l, e: 'Servic, e 4', descripti, o, n: 'Descriptio, n 4',
     val, u, e: 40, 0 },
-    { i, d: 5,
+    { i, d: 5;
     tit, l, e: 'Servic, e 5', descripti, o, n: 'Descriptio, n 5',
     val, u, e: 50, 0 },
   ]);
@@ -167,7 +167,7 @@ export function PerformanceOptimizations() {
         </h3>
         <VirtualList 
           items={Array.from({ lengt, h: 1000 }, (_, i) => ({
-            i,  d: i,
+            i,  d: i;
     titl, e: `Ite, m ${i + 1}`,
             valu, e: Math.floor(Math.random() * 1000)
           }))}
@@ -202,7 +202,7 @@ export function PerformanceOptimizations() {
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Performance Metrics
         </h3>
-        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 m, d: grid-cols-3 gap-4">
           <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">
             <div className="text-2xl font-bold text-zion-cyan">{data.length}</div>
             <div className="text-zion-slate text-sm">Total Items</div>

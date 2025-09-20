@@ -1,21 +1,30 @@
 import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
-import Card from '../../components/ui/EnhancedCard';
+import Card from '../../components/ui/Card';
+
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence'
   description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.'
   keywords: ['AI 2026artificial intelligence breakthroughmachine learning revolutionneural networks', 'quantum AI']
+=======
+  title: 'AI 2026 Breakthrough Revolution - The Future of Artificial Intelligence',
+  description: 'Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology.',
+  keywords: ['AI 2026', 'artificial intelligence breakthrough', 'machine learning revolution', 'neural networks', 'quantum AI']
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
+
 export default function AI2026BreakthroughRevolution() {
   return (
     <div>
       <SEO
         title="AI 2026 Breakthrough Revolution"
-        description="Discover the revolutionary AI breakthroughs of 2026 that are transforming industries and reshaping the future of technology."
+        description="Experience the revolutionary AI breakthrough technologies of 2026"
         keywords="AI 2026, artificial intelligence breakthrough, machine learning revolution, neural networks, quantum AI"
         url="/ai-2026-breakthrough-revolution"
       />
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div>
@@ -193,3 +202,12 @@ export default function AI2026BreakthroughRevolution() {
         </div>
       </section>
     </div>)}
+=======
+      <div>
+        <h1>AI 2026 Breakthrough Revolution</h1>
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  )
+}
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39

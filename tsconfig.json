@@ -89,6 +89,8 @@
     "lib/**/*.tsx",
     "pages/**/*.ts",
     "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "types/**/*.ts"
   ],
   "exclude": [

@@ -1,17 +1,17 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react, ';
 export const useAccessibility = () => {
     const [preferences, setPreferences] = useState({
-        highContrast: false,
-        largeText: false,
-        reducedMotion: false,
-        focusIndicator: true,
-        screenReader: false,
+        highContrast: false;
+        largeText: false;
+        reducedMotion: false;
+        focusIndicator: true;
+        screenReader: false;
         keyboardNavigation: true
     });
     const [settings, setSettings] = useState({
-        fontSize: 'medium',
-        colorScheme: 'default',
-        motionPreference: 'no-preference',
+        fontSize: 'medium';
+        colorScheme: 'default';
+        motionPreference: 'no-preference';
         focusStyle: 'default'
     });
     // Load preferences from localStorage

@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom',
+import { Link   } from 'react-router-dom',
 import React, { useState } from 'react',
 import { motion  } from 'framer-motion',
 import { motion, AnimatePresence  } from 'framer-motion',
@@ -47,11 +47,11 @@ function FeaturedListingsSection("props": "any) {          initial = {,
                   </span>,
                 </div>,
 ",
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover: scal e-110 transition-transform duration-300">,
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-3xl mb-4 group-hover: scal e-110 transition-transform duration-300">;
                   {service.image}
                 </div>,
 ",
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">,
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover: tex t-blue-600 transition-colors">;
                   {service.title}
 ",
                 <p className="text-gray-600 mb-4 leading-relaxed">,
@@ -114,4 +114,4 @@ function FeaturedListingsSection("props": "any) {          initial = {,
     </section>,) "}
 '",
 </motion>,
-</motion>,
+</motion, >;

@@ -2,52 +2,52 @@ export class LinkHealthChecker {
     config;
     constructor(config = {}) {
         this.config = {
-            timeout: config.timeout || 10000,
-            retries: config.retries || 3,
-            userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
+            timeout: config.timeout || 10000;
+            retries: config.retries || 3;
+            userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0';
             followRedirects: config.followRedirects !== false
         };
-    }
+     }
     async checkLink(url) {
         const startTime = Date.now();
         try {
             const response = await fetch(url, {
-                method: 'HEAD',
-                signal: AbortSignal.timeout(this.config.timeout),
+                method: 'HEAD';
+                signal: AbortSignal.timeout(this.config.timeout);
                 headers: {
                     'User-Agent': this.config.userAgent
-                },
+                };
                 redirect: this.config.followRedirects ? 'follow' : 'manual'
             });
-            const responseTime = Date.now() - startTime;
+    const responseTime = Date.now() - startTime;
             if (response.ok || response.status < 400) {
                 return {
                     url,
-                    status: 'healthy',
-                    statusCode: response.status,
+                    status: 'healthy';
+                    statusCode: response.status;
                     responseTime,
                     lastChecked: new Date()
                 };
-            }
+     }
             else {
                 return {
                     url,
-                    status: 'unhealthy',
-                    statusCode: response.status,
+                    status: 'unhealthy';
+                    statusCode: response.status;
                     responseTime,
-                    error: `HTTP ${response.status}: ${response.statusText}`,
+                    error: `HTTP ${response.status}: ${response.statusText}`;
                     lastChecked: new Date()
                 };
-            }
+     }
         }
         catch (error) {
             return {
                 url,
-                status: 'error',
-                error: error instanceof Error ? error.message : 'Unknown error',
+                status: 'error';
+                error: error instanceof Error ? error.message : 'Unknown error';
                 lastChecked: new Date()
             };
-        }
+     }
     }
     async checkMultipleLinks(urls) {
         const results = [];
@@ -59,11 +59,11 @@ export class LinkHealthChecker {
             catch (error) {
                 results.push({
                     url,
-                    status: 'error',
-                    error: error instanceof Error ? error.message : 'Unknown error',
+                    status: 'error';
+                    error: error instanceof Error ? error.message : 'Unknown error';
                     lastChecked: new Date()
                 });
-            }
+     }
         }
         return results;
     }
@@ -86,11 +86,11 @@ export class LinkHealthChecker {
         }
         return {
             url,
-            status: 'error',
-            error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
+            status: 'error';
+            error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`;
             lastChecked: new Date()
         };
-    }
+     }
     getHealthSummary(results) {
         const total = results.length;
         const healthy = results.filter(r => r.status === 'healthy').length;
@@ -115,25 +115,25 @@ export class LinkHealthChecker {
         const timestamp = new Date().toISOString();
         let report = `Link Health Report - ${timestamp}\n`;
         report += `=====================================\n\n`;
-        report += `Summary:\n`;
-        report += `- Total Links: ${summary.total}\n`;
-        report += `- Healthy: ${summary.healthy}\n`;
-        report += `- Unhealthy: ${summary.unhealthy}\n`;
-        report += `- Errors: ${summary.errors}\n`;
-        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
-        report += `Detailed Results:\n`;
-        report += `=================\n\n`;
+        report += `Summary: \n`;
+    report += `- Total Links: ${summary.total}\n`;
+    report += `- Healthy: ${summary.healthy}\n`;
+    report += `- Unhealthy: ${summary.unhealthy}\n`;
+    report += `- Errors: ${summary.errors}\n`;
+    report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
+    report += `Detailed Results: \n`;
+    report += `=================\n\n`;
         results.forEach((result, index) => {
             report += `${index + 1}. ${result.url}\n`;
             report += `   Status: ${result.status}\n`;
-            if (result.statusCode)
+    if (result.statusCode)
                 report += `   Status Code: ${result.statusCode}\n`;
-            if (result.responseTime)
+    if (result.responseTime)
                 report += `   Response Time: ${result.responseTime}ms\n`;
-            if (result.error)
+    if (result.error)
                 report += `   Error: ${result.error}\n`;
-            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
-        });
+    report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
+     });
         return report;
     }
 }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react, ';
 export function useApiKeys() {
     const [apiKeys, setApiKeys] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -29,14 +29,14 @@ export function useApiKeys() {
     };
     const createApiKey = async (name, scopes) => {
         const newKey = {
-            id: Date.now().toString(),
+            id: Date.now().toString();
             name,
             key: `zion_${Math.random().toString(36).substr(2, 9)}`,
             scopes,
-            createdAt: new Date().toISOString(),
+            createdAt: new Date().toISOString();
             isActive: true
         };
-        const updatedKeys = [...apiKeys, newKey];
+    const updatedKeys = [...apiKeys, newKey];
         setApiKeys(updatedKeys);
         setNewApiKey(newKey.key);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
@@ -49,7 +49,7 @@ export function useApiKeys() {
     };
     const toggleApiKey = async (id) => {
         const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, isActive: !key.isActive } : key);
-        setApiKeys(updatedKeys);
+    setApiKeys(updatedKeys);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };
     const updateApiKeyScopes = async (id, scopes) => {
@@ -60,7 +60,7 @@ export function useApiKeys() {
     const regenerateApiKey = async (id) => {
         const newKey = `zion_${Math.random().toString(36).substr(2, 9)}`;
         const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, key: newKey } : key);
-        setApiKeys(updatedKeys);
+    setApiKeys(updatedKeys);
         setNewApiKey(newKey);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };

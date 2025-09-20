@@ -1,5 +1,5 @@
-import { supabase } from '@/integrations/supabase/client';
-import { ForumPost } from '@/types/community';
+import { supabase } from '@/integrations/supabase/client, ';
+import { ForumPost } from '@/types/community, ';
 
 export async function fetchPostsByCategory(categoryId: string): Promise<ForumPost[]> {
   const { data, error } = await supabase
@@ -7,8 +7,7 @@ export async function fetchPostsByCategory(categoryId: string): Promise<ForumPos
     .select('*')
     .eq('category_id', categoryId)
     .order('created_at', { ascending: false });
-
-  if (error) {
+    if (error) {
     throw new Error(error.message);
   }
 

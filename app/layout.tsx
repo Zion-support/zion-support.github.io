@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function Header() {;
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
@@ -47,9 +48,24 @@ function Header() {;
         </button>
       </nav>
     </header>)
+=======
+import React from 'react'
+import { Metadata } from 'next'
+// import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group',
+  description: 'Leading technology solutions provider',
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39
 }
-function Footer() {;
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
+<<<<<<< HEAD
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
       <div>
         <div>
@@ -131,3 +147,12 @@ function Footer() {;
         </div>
       </div>
     </footer>
+=======
+    <html lang="en">
+      <body>
+        {children}
+      </body>
+    </html>
+  )
+}
+>>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39

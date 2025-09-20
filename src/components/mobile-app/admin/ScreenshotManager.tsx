@@ -1,10 +1,10 @@
 
 import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Upload, Trash2, Plus } from "lucide-react";
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card, ";
+import { Button } from "@/components/ui/button, ";
+import { Upload, Trash2, Plus } from "lucide-react, ";
+import { AppPlatform } from "./MetadataManager, ";
+import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
   platform: AppPlatform;
@@ -12,8 +12,8 @@ interface ScreenshotManagerProps {
 
 type Screenshot = {
   id: string;
-  url: string;
-  file: File;
+    url: string;
+    file: File;
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
@@ -24,13 +24,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files));
-    }
+     }
   };
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
-    
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
       return;
@@ -49,7 +48,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     
     const newScreenshots = filesToAdd.map(file => ({
       id: Math.random().toString(36).substring(2, 9),
-      url: URL.createObjectURL(file),
+      url: URL.createObjectURL(file);
       file
     }));
     
@@ -63,8 +62,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id);
-      
-      // Revoke object URL to avoid memory leaks
+    // Revoke object URL to avoid memory leaks
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
         URL.revokeObjectURL(removed.url);

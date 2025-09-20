@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react, ";
 
 interface User {
   id: string;
-  email: string;
-  displayName?: string;
+    email: string;
+    displayName?: string;
   avatar?: string;
   role?: string;
   isEmailVerified?: boolean;
@@ -13,7 +13,7 @@ interface User {
 
 interface AuthTokens {
   accessToken: string | null;
-  refreshToken: string | null;
+    refreshToken: string | null;
 }
 
 export const useAuthState = () => {
@@ -21,8 +21,8 @@ export const useAuthState = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<AuthTokens>({
-    accessToken: null,
-    refreshToken: null,
+    accessToken: null;
+    refreshToken: null;
   });
 
   useEffect(() => {
@@ -36,8 +36,8 @@ export const useAuthState = () => {
             if (parsed.user && parsed.token) {
               setUser(parsed.user);
               setTokens({
-                accessToken: parsed.token,
-                refreshToken: parsed.refreshToken || null,
+                accessToken: parsed.token;
+                refreshToken: parsed.refreshToken || null;
               });
             }
           }

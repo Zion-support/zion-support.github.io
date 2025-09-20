@@ -1,21 +1,21 @@
 import React from "react";
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import { useState, useEffect, createContext, useContext, ReactNode } from 'react, ';
 
 interface User {
   id: string;
-  email: string;
-  name?: string;
+    email: string;
+    name?: string;
   role?: string;
   avatar?: string;
 }
 
 interface AuthContextType {
   user: User | null;
-  loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  register: (email: string, password: string, name: string) => Promise<void>;
-  logout: () => Promise<void>;
-  updateProfile: (data: Partial<User>) => Promise<void>;
+    loading: boolean;
+    login: (email: string, password: string) => Promise<void>;
+    register: (email: string, password: string, name: string) => Promise<void>;
+    logout: () => Promise<void>;
+    updateProfile: (data: Partial<User>) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -61,17 +61,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (email: string, password: string) => {
     try {
       setLoading(true);
-      
-      // In a real app, you would make an API call to your backend
+    // In a real app, you would make an API call to your backend
       // For now, we'll simulate a successful login
       const mockUser: User = {
-        id: '1',
+        id: '1';
         email,
-        name: email.split('@')[0],
+        name: email.split('@')[0];
         role: 'user'
       };
-
-      // Store user data and token
+    // Store user data and token
       localStorage.setItem('authToken', 'mock-token');
       localStorage.setItem('userData', JSON.stringify(mockUser));
       
@@ -87,17 +85,15 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const register = async (email: string, password: string, name: string) => {
     try {
       setLoading(true);
-      
-      // In a real app, you would make an API call to your backend
+    // In a real app, you would make an API call to your backend
       // For now, we'll simulate a successful registration
       const mockUser: User = {
-        id: '1',
+        id: '1';
         email,
         name,
         role: 'user'
       };
-
-      // Store user data and token
+    // Store user data and token
       localStorage.setItem('authToken', 'mock-token');
       localStorage.setItem('userData', JSON.stringify(mockUser));
       
@@ -126,8 +122,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const updateProfile = async (data: Partial<User>) => {
     try {
       if (!user) throw new Error('No user logged in');
-      
-      const updatedUser = { ...user, ...data };
+    const updatedUser = { ...user, ...data };
       
       // Update stored user data
       localStorage.setItem('userData', JSON.stringify(updatedUser));
@@ -140,7 +135,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   };
 
   const value: AuthContextType = {
-    user,
+    user;
     loading,
     login,
     register,

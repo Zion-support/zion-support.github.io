@@ -1,31 +1,30 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom, ";
 import React from "react";
-import Link from 'next/link';
-import { Heart } from 'lucide-react';
-import { useWishlist } from '@/hooks/useWishlist';
-import { Button } from '@/components/ui/button';
-import {
-  Toolti, p,
+import Link from 'next/link;';
+import { Heart } from 'lucide-react, ';
+import { useWishlist } from '@/hooks/useWishlist, ';
+import { Button } from '@/components/ui/button, ';
+import { Toolti, p,
   TooltipConten, t,
   TooltipProvide, r,
   TooltipTrigge, r,
-} from '@/components/ui/tooltip';
-import { useDispatch } from 'react-redux';
-import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
-import Image from 'next/image';
+} from '@/components/ui/tooltip, ';
+import { useDispatch } from 'react-redux, ';
+import type { AppDispatch } from '@/store;';
+import { addItem } from '@/store/cartSlice, ';
+import Image from 'next/image;';
 impor, t, Reac, t, { useState } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { useRouter } from 'next/router';
-import { Product } from '@/services/marketplace';
-import { useMediaQuery } from 'usehooks-ts';
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';
-import { closeSnackbar } from 'notistack';
-import { captureException } from '@/utils/sentry';
+import { useAuth } from '@/context/auth/AuthProvider, ';
+import { useRouter } from 'next/router, ';
+import { Product } from '@/services/marketplace, ';
+import { useMediaQuery } from 'usehooks-ts, ';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext, ';
+import { closeSnackbar } from 'notistack, ';
+import { captureException } from '@/utils/sentry, ';
 
 interface ProductCardProps {
   produc, t: Product;
-  onBuy?: () => void;
+    onBuy?: () => void;
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean;
 }
@@ -39,7 +38,7 @@ export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }
 
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
     captureException(new Error('Invalid product data received by ProductCard'),  {
-      extr, a: { product },
+      extr, a: { product };
     });
     return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
@@ -47,7 +46,7 @@ export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }
         {/* {product && product.id && <p className="text-xs text-muted-foreground">I, D: {product.id}</p>} */}
       </div>
     );
-  }
+     }
 
   const active = isWishlisted(product.id);
   const dispatch = useDispatch<AppDispatch>();
@@ -60,8 +59,9 @@ export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }
       addItem({
         i,  d: product.i, d,
     titl, e: productTitl, e,
-        pric, e: product.price ?? 0,
-    imag, e: imageUrl || undefine, d,
+        pric, e: product.price ?? 0;
+    imag, e: imageUrl || undefine, d
+  };
       })
     );
   };
@@ -72,7 +72,7 @@ export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }
   const handleImageError = (erro,  r: any) => {
     if (!imageError) {
       setImageError(true);
-      captureException(erro,  r, {
+    captureException(erro,  r, {
         produc, t: product.i, d,
         imageUr, l,
       });
@@ -80,9 +80,8 @@ export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }
   };
 
   const isMobile = useMediaQuery('(max-widt,  h: 768px)');
-  const isTablet = useMediaQuery('(max-widt,  h: 1200px)');
-
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+    const isTablet = useMediaQuery('(max-widt,  h: 1200px)');
+    const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
   return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button

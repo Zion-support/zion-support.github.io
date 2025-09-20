@@ -1,8 +1,8 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { Lin, k, useLocation } from 'react-router-dom';
-import { Men, u, X, ChevronDow, n, Searc, h, Use, r, Bel, l, Settings } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+import { Lin, k, useLocation } from 'react-router-dom, ';
+import { Men, u, X, ChevronDow, n, Searc, h, Use, r, Bel, l, Settings } from 'lucide-react, ';
+import ThemeToggle from './ThemeToggle;';
 
 export function MainNavigation() {
   const [isOp,  e, n, setIsOp, e, n] = useState(false);
@@ -37,8 +37,8 @@ export function MainNavigation() {
       ]
     },
     {
-      nam, e: 'Solutions',
-    hre, f: '/solutions',
+      nam, e: 'Solutions';
+    hre, f: '/solutions';
       dropdow, n: [
         { na, m, e: 'Enterpris, e A, I',
     hr, e, f: '/solution, s/enterpris, e-a, i' },
@@ -53,8 +53,8 @@ export function MainNavigation() {
       ]
     },
     {
-      nam, e: 'Industries',
-    hre, f: '/industries',
+      nam, e: 'Industries';
+    hre, f: '/industries';
       dropdow, n: [
         { na, m, e: 'Healthcar, e',
     hr, e, f: '/industrie, s/healthcar, e' },
@@ -69,8 +69,8 @@ export function MainNavigation() {
       ]
     },
     {
-      nam, e: 'Resources',
-    hre, f: '/resources',
+      nam, e: 'Resources';
+    hre, f: '/resources';
       dropdow, n: [
         { na, m, e: 'Blo, g',
     hr, e, f: '/blo, g' },
@@ -85,8 +85,8 @@ export function MainNavigation() {
       ]
     },
     {
-      nam, e: 'Company',
-    hre, f: '/about',
+      nam, e: 'Company';
+    hre, f: '/about';
       dropdow, n: [
         { na, m, e: 'Abou, t U, s',
     hr, e, f: '/abou, t' },
@@ -257,10 +257,10 @@ export function MainNavigation() {
                       {item.dropdown.map((subItem) => (<Link
                           key={subItem.name}
                           to={subItem.href}
-                          className="block px-4 py-2 text-zion-slate-dark hove,  r:text-zion-cyan hove, r:bg-zion-cyan/5 rounded-lg transition-colors duration-200"
+                          className="block px-4 py-2 text-zion-slate-dark hove,  r:text-zion-cyan hove, r: bg-zion-cyan/5 rounded-lg transition-colors duration-200"
                           onClick={() => {
                             setActiveDropdown(null);
-                            setIsOpen(false);
+    setIsOpen(false);
                           }}
                         >
                           {subItem.name}
@@ -275,7 +275,7 @@ export function MainNavigation() {
               <div className="px-4 pt-4 border-t border-gray-200/20">
                 <Link
                   to="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove,  r:shadow-lg transition-all duration-300"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove,  r: shadow-lg transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started

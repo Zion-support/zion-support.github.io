@@ -1,42 +1,41 @@
-import React, { useState } from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { Mail, Calendar, DollarSign, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react;';
+import { Button } from '../ui/Button, ';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card, ';
+import { Input } from '../ui/Input, ';
+import { Textarea } from '../ui/Textarea, ';
+import { Mail, Calendar, DollarSign, MessageSquare } from 'lucide-react, ';
 
 interface HireNowCTAProps {
   talentName: string;
-  hourlyRate?: number;
+    hourlyRate?: number;
   onHire?: (data: HireData) => void;
 }
 
 interface HireData {
   projectDescription: string;
-  budget: string;
-  startDate: string;
-  message: string;
+    budget: string;
+    startDate: string;
+    message: string;
 }
 
 export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState<HireData>({
-    projectDescription: '',
-    budget: '',
-    startDate: '',
+    projectDescription: '';
+    budget: '';
+    startDate: '';
     message: ''
   });
-
-  const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onHire) {
       onHire(formData);
     }
     // Reset form and close
     setFormData({
-      projectDescription: '',
-      budget: '',
-      startDate: '',
+      projectDescription: '';
+      budget: '';
+      startDate: '';
       message: ''
     });
     setIsFormOpen(false);
@@ -44,7 +43,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       [e.target.name]: e.target.value
     }));
   };
@@ -104,7 +103,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                   value={formData.budget}
                   onChange={handleChange}
                   placeholder="e.g., $1000-5000"
-                  className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                  className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
                   required
                 />
               </div>

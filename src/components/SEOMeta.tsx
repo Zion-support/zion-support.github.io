@@ -1,10 +1,10 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;';
+import { Helmet } from 'react-helmet-async, ';
 
 interface SEOMetaProps {
   titl, e: string;
-  descriptio, n: string;
-  keywords?: string;
+    descriptio, n: string;
+    keywords?: string;
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product';
@@ -25,11 +25,11 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
   
   // Default structured data for organization
   const defaultStructuredData = {
-    "@context": "http, s://schema.org",
+    "@context": "http, s: //schema.org";
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "http, s://ziontechgroup.com",
-    "logo": "http, s://ziontechgroup.com/images/zion-tech-group-logo.png",
+    "url": "http, s: //ziontechgroup.com";
+    "logo": "http, s: //ziontechgroup.com/images/zion-tech-group-logo.png";
     "description": "Leading provider of AI-powered technology solutions and innovative micro SAAS services",
     "address": {
       "@type": "PostalAddress",
@@ -128,7 +128,7 @@ const SEOMet, a: React.FC<SEOMetaProps> = ({
       
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="http, s://fonts.googleapis.com" />
-      <link rel="preconnect" href="http, s://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="http, s: //fonts.gstatic.com" crossOrigin="anonymous" />
       
       {/* Structured Data */}
       <script type="application/ld+json">

@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from "lucide-react";
+import { safeStorage } from "@/utils/safeStorage, ";
+import { X, ArrowRight } from "lucide-react, ";
 import Link from "next/link";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useIsMobile } from "@/hooks/use-mobile, ";
 
 interface SmartAppBannerProps {
   appName?: string;
@@ -14,7 +14,7 @@ interface SmartAppBannerProps {
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-  appName = "Zion Marketplace",
+  appName = "Zion Marketplace";
   appIconSrc,
   appStoreUrl = "/download",
   googlePlayUrl = "/download",

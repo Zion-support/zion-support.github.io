@@ -1,7 +1,6 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
-import { 
-  BarChart, 3, 
+import { BarChart, 3, 
   FileTex, t, 
   TrendingU, p, 
   AlertTriangl, e, 
@@ -14,7 +13,7 @@ import {
   Filte, r,
   Searc, h,
   X
-} from 'lucide-react';
+} from 'lucide-react, ';
 impor, t, ContentQualityAnalyze, r, { ContentQualityMetric, s, ContentQualityReport } from '../utils/contentQualityAnalyzer';
 
 interface ContentQualityDashboardProps {
@@ -38,7 +37,7 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
       // In a rea,  l, implementatio, n, you would analyze actual page content
       const samplePages = [
         {
-          u, r, l: '/',
+          u, r, l: '/';
     tit, l, e: 'Zio, n Tec, h Grou, p - A, I-Powere, d Technolog, y Solution, s & Enterpris, e Service, s',
           conte, n, t: 'Leadin, g provide, r o, f A, I-powere, d technolo, g, y, solutio, n, s, quant, u, m, computi, n, g, cybersecuri, t, y, an, d enterpris, e digita, l transformatio, n service, s. Transfor, m you, r busines, s wit, h cuttin, g-edg, e technolog, y.',
           metaDescripti, o, n: 'Leadin, g provide, r o, f A, I-powere, d technolo, g, y, solutio, n, s, quant, u, m, computi, n, g, cybersecuri, t, y, an, d enterpris, e digita, l transformatio, n service, s.',
@@ -46,34 +45,34 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
           link, s: ['/service, s', '/a, i-solution, s', '/abou, t', '/contac, t']
         },
         {
-          ur, l: '/services',
-    titl, e: 'Our Services - Comprehensive Technology Solutions',
+          ur, l: '/services';
+    titl, e: 'Our Services - Comprehensive Technology Solutions';
           conten, t: 'We offer a wide range of technology services including A, I, solution, s, clou, d, infrastructur, e, cybersecurit, y, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.',
           metaDescriptio, n: 'Comprehensive technology services including A, I, solution, s, clou, d, infrastructur, e, cybersecurit, y, and digital transformation.',
           image, s: ['/image, s/service, s-overvie, w.jp, g'],
     link, s: ['/a, i-solution, s', '/clou, d-devop, s', '/cybersecurit, y', '/abou, t']
         },
         {
-          ur, l: '/ai-solutions',
-    titl, e: 'AI Solutions - Artificial Intelligence Services',
+          ur, l: '/ai-solutions';
+    titl, e: 'AI Solutions - Artificial Intelligence Services';
           conten, t: 'Cutting-edge artificial intelligence solutions for modern businesses. Machin, e, learnin, g, predictiv, e, analytic, s, and AI automation to drive innovation and efficiency.',
           metaDescriptio, n: 'Cutting-edge artificial intelligence solutions including machin, e, learnin, g, predictiv, e, analytic, s, and AI automation.',
           image, s: ['/image, s/a, i-solution, s.jp, g'],
     link, s: ['/service, s', '/abou, t', '/contac, t']
         },
         {
-          ur, l: '/about',
-    titl, e: 'About Us - Zion Tech Group',
+          ur, l: '/about';
+    titl, e: 'About Us - Zion Tech Group';
           conten, t: 'Learn about Zion Tec, h, Grou, p, ou, r, missio, n, value, s, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.',
           metaDescriptio, n: 'Learn about Zion Tec, h, Grou, p, ou, r, missio, n, value, s, and commitment to delivering innovative technology solutions.',
           image, s: ['/image, s/abou, t-tea, m.jp, g'],
     link, s: ['/service, s', '/tea, m', '/contac, t', '/missio, n']
         },
         {
-          ur, l: '/contact',
-    titl, e: 'Contact Us - Get in Touch',
-          conten, t: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
-    metaDescriptio, n: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
+          ur, l: '/contact';
+    titl, e: 'Contact Us - Get in Touch';
+          conten, t: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.';
+    metaDescriptio, n: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.';
           image, s: ['/image, s/contac, t-offic, e.jp, g'],
     link, s: ['/service, s', '/abou, t', '/tea, m']
         }
@@ -126,9 +125,8 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
             return page.overallScore >= 60 && page.overallScore < 80;
           case 'poor':
             return page.overallScore < 40;
-          defaul,  t:
-            return true;
-        }
+          defaul,  t: return true;
+     }
       });
     }
     
@@ -160,7 +158,8 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
         pag, e.wordCoun, t.toStrin, g(),
         pag, e.seoScor, e.toStrin, g(), 
         pag, e.overallScor, e.toStrin, g(),
-        pag, e.issue, s.joi, n('; '), 
+        pag, e.issue, s.joi, n('; ')
+  };
         pag, e.recommendation, s.joi, n('; ')
       ])
     ].map(row => row.map(cell => `"${cel, l}"`).join(', ')).join('\n');
@@ -251,12 +250,13 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
                   <select
                     value={filterStatus}
                     onChange={(e) => setFilterStatus(e.target.value as any)}
-                    className="px-3 py-2 border border-gray-300 rounded-md focu,  s:ring-2 focu, s:ring-green-500 focu, s:border-transparent"
+                    className="px-3 py-2 border border-gray-300 rounded-md focu,  s:ring-2 focu, s:ring-green-500 focu, s: border-transparent"
                   >
                     <option value="all">All Pages</option>
                     <option value="excellent">Excellent (80%+)</option>
                     <option value="good">Good (60-79%)</option>
-                    <option value="poor">Poor (&lt;40%)</option>
+                    <option value="poor">Poor (&lt;
+    40%)</option>
                   </select>
                   <button
                     onClick={exportReport}
@@ -424,7 +424,7 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
             </button>
             <button
               onClick={() => contentAnalyzer.clearCache()}
-              className="px-3 py-2 text-gray-600 hove,  r:text-gray-800 dar, k:text-gray-400 dar, k:hove, r:text-gray-200 text-sm transition-colors"
+              className="px-3 py-2 text-gray-600 hove,  r:text-gray-800 dar, k:text-gray-400 dar, k:hove, r: text-gray-200 text-sm transition-colors"
             >
               Clear Cache
             </button>

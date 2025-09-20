@@ -1,11 +1,11 @@
 import React from "react";
-import { CartItem as CartItemType } from '@/types/cart';
-import { Button } from '@/components/ui/button';
+import { CartItem as CartItemType } from '@/types/cart, ';
+import { Button } from '@/components/ui/button, ';
 
 interface CartItemProps {
   item: CartItemType;
-  onRemove?: (id: string) => void;
-  onUpdateQuantity?: (id: string, qty: number) => void;
+    onRemove?: (id: string) => void;
+    onUpdateQuantity?: (id: string, qty: number) => void;
 }
 
 export function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {

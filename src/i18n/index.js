@@ -1,9 +1,9 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import { safeStorage } from '../utils/safeStorage';
-import enTranslation from '../../public/locales/en-US/common.json';
-import esTranslation from '../../public/locales/es-ES/common.json';
+import i18n from 'i18next;';
+import { initReactI18next } from 'react-i18next, ';
+import LanguageDetector from 'i18next-browser-languagedetector;';
+import { safeStorage } from '../utils/safeStorage, ';
+import enTranslation from '../../public/locales/en-US/common.json;';
+import esTranslation from '../../public/locales/es-ES/common.json;';
 const storedLang = safeStorage.getItem('i18n_lang') || undefined;
 if (!i18n) {
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");
@@ -17,31 +17,31 @@ else {
         resources: {
             en: {
                 translation: enTranslation
-            },
+            };
             'en-US': {
                 translation: enTranslation
-            },
+            };
             es: {
                 translation: esTranslation
             }
-        },
-        lng: storedLang,
+        };
+        lng: storedLang;
         fallbackLng: 'en', // Default language
         preload: ['en-US', 'es-ES'],
         supportedLngs: ['en', 'en-US', 'es', 'es-ES', 'fr', 'pt', 'ar'],
-        debug: process.env.NODE_ENV === 'development',
+        debug: process.env.NODE_ENV === 'development';
         interpolation: {
             escapeValue: false, // React already escapes by default
         },
         detection: {
             // Avoid using localStorage directly to prevent cross-context errors
-            order: ['navigator'],
+            order: ['navigator'];
             caches: []
-        },
+        };
     })
         .catch(error => {
         console.error('Error initializing i18next or its detector:', { data: error });
-        // This helps prevent an unhandled promise rejection if init fails.
+    // This helps prevent an unhandled promise rejection if init fails.
     });
     // Add this check at the beginning of the relevant section
     if (typeof window !== 'undefined') {

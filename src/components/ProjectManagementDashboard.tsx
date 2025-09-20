@@ -1,36 +1,36 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useRe, f, useEffect } from 'react';
-import { Calenda, r, User, s, CheckCircl, e, Cloc, k, AlertTriangl, e, TrendingU, p, BarChart, 3, Plu, s, Filte, r, Searc, h, MoreVertica, l, Edi, t, Trash, 2, Ey, e, X } from 'lucide-react';
+import { Calenda, r, User, s, CheckCircl, e, Cloc, k, AlertTriangl, e, TrendingU, p, BarChart, 3, Plu, s, Filte, r, Searc, h, MoreVertica, l, Edi, t, Trash, 2, Ey, e, X } from 'lucide-react, ';
 
 interface Project {
   i, d: string;
-  nam, e: string;
-  descriptio, n: string;
-  statu, s: 'planning' | 'in-progress' | 'review' | 'completed' | 'on-hold';
-  priorit, y: 'low' | 'medium' | 'high' | 'critical';
-  progres, s: number;
-  startDat, e: string;
-  endDat, e: string;
-  tea, m: string[];
-  budge, t: number;
-  spen, t: number;
-  task, s: Task[];
+    nam, e: string;
+    descriptio, n: string;
+    statu, s: 'planning' | 'in-progress' | 'review' | 'completed' | 'on-hold';
+    priorit, y: 'low' | 'medium' | 'high' | 'critical';
+    progres, s: number;
+    startDat, e: string;
+    endDat, e: string;
+    tea, m: string[];
+    budge, t: number;
+    spen, t: number;
+    task, s: Task[];
 }
 
 interface Task {
   i, d: string;
-  nam, e: string;
-  statu, s: 'todo' | 'in-progress' | 'review' | 'completed';
-  assigne, e: string;
-  dueDat, e: string;
-  priorit, y: 'low' | 'medium' | 'high' | 'critical';
-  estimatedHour, s: number;
-  actualHour, s: number;
+    nam, e: string;
+    statu, s: 'todo' | 'in-progress' | 'review' | 'completed';
+    assigne, e: string;
+    dueDat, e: string;
+    priorit, y: 'low' | 'medium' | 'high' | 'critical';
+    estimatedHour, s: number;
+    actualHour, s: number;
 }
 
 const mockProject, s: Project[] = [
   {
-    i, d: '1',
+    i, d: '1';
     na, m, e: 'A, I-Powere, d E-commerc, e Platfor, m',
     descripti, o, n: 'Nex, t-generatio, n e-commerc, e solutio, n wit, h A, I recommendation, s',
     stat, u, s: 'i, n-progres, s',
@@ -42,67 +42,67 @@ const mockProject, s: Project[] = [
     budge, t: 15000, 0,
     spen, t: 9750, 0,
     task, s: [
-      { i, d: '1',
+      { i, d: '1';
     na, m, e: 'Fronten, d Developmen, t', stat, u, s: 'complete, d',
     assign, e, e: 'Joh, n Smit, h', dueDa, t, e: '202, 4-0, 3-1, 5',
     priori, t, y: 'hig, h', estimatedHou, r, s: 8, 0,
     actualHou, r, s: 7, 5 },
-      { i, d: '2',
+      { i, d: '2';
     na, m, e: 'Backen, d AP, I', stat, u, s: 'i, n-progres, s',
     assign, e, e: 'Sara, h Johnso, n', dueDa, t, e: '202, 4-0, 4-3, 0',
     priori, t, y: 'hig, h', estimatedHou, r, s: 1, 2, 0,
     actualHou, r, s: 8, 5 },
-      { i, d: '3',
+      { i, d: '3';
     na, m, e: 'A, I Integratio, n', stat, u, s: 'tod, o',
     assign, e, e: 'Mik, e Che, n', dueDa, t, e: '202, 4-0, 5-1, 5',
     priori, t, y: 'mediu, m', estimatedHou, r, s: 1, 0, 0,
     actualHou, r, s: 0 }
     ]
-  },
+  };
   {
-    i, d: '2',
-    nam, e: 'Blockchain Supply Chain Tracker',
-    descriptio, n: 'Transparent supply chain tracking using blockchain',
-    statu, s: 'planning',
-    priorit, y: 'critical',
+    i, d: '2';
+    nam, e: 'Blockchain Supply Chain Tracker';
+    descriptio, n: 'Transparent supply chain tracking using blockchain';
+    statu, s: 'planning';
+    priorit, y: 'critical';
     progres, s: 2, 5,
-    startDat, e: '2024-03-01',
-    endDat, e: '2024-08-31',
+    startDat, e: '2024-03-01';
+    endDat, e: '2024-08-31';
     tea, m: ['Emil, y Davi, s', 'Ale, x Rodrigue, z'],
     budge, t: 20000, 0,
     spen, t: 5000, 0,
     task, s: [
-      { i, d: '4',
+      { i, d: '4';
     na, m, e: 'Smar, t Contrac, t Developmen, t', stat, u, s: 'i, n-progres, s',
     assign, e, e: 'Emil, y Davi, s', dueDa, t, e: '202, 4-0, 4-1, 5',
     priori, t, y: 'critica, l', estimatedHou, r, s: 1, 5, 0,
     actualHou, r, s: 6, 0 },
-      { i, d: '5',
+      { i, d: '5';
     na, m, e: 'Fronten, d Interfac, e', stat, u, s: 'tod, o',
     assign, e, e: 'Ale, x Rodrigue, z', dueDa, t, e: '202, 4-0, 5-3, 0',
     priori, t, y: 'hig, h', estimatedHou, r, s: 9, 0,
     actualHou, r, s: 0 }
     ]
-  },
+  };
   {
-    i, d: '3',
-    nam, e: 'Mobile Banking App',
-    descriptio, n: 'Secure mobile banking with biometric authentication',
-    statu, s: 'review',
-    priorit, y: 'high',
+    i, d: '3';
+    nam, e: 'Mobile Banking App';
+    descriptio, n: 'Secure mobile banking with biometric authentication';
+    statu, s: 'review';
+    priorit, y: 'high';
     progres, s: 9, 0,
-    startDat, e: '2024-02-01',
-    endDat, e: '2024-04-30',
+    startDat, e: '2024-02-01';
+    endDat, e: '2024-04-30';
     tea, m: ['Lis, a Wan, g', 'Davi, d Ki, m'],
     budge, t: 12000, 0,
     spen, t: 10800, 0,
     task, s: [
-      { i, d: '6',
+      { i, d: '6';
     na, m, e: 'Cor, e Bankin, g Feature, s', stat, u, s: 'complete, d',
     assign, e, e: 'Lis, a Wan, g', dueDa, t, e: '202, 4-0, 3-3, 0',
     priori, t, y: 'hig, h', estimatedHou, r, s: 2, 0, 0,
     actualHou, r, s: 19, 0 },
-      { i, d: '7',
+      { i, d: '7';
     na, m, e: 'Securit, y Testin, g', stat, u, s: 'revie, w',
     assign, e, e: 'Davi, d Ki, m', dueDa, t, e: '202, 4-0, 4-1, 5',
     priori, t, y: 'critica, l', estimatedHou, r, s: 4, 0,
@@ -151,7 +151,7 @@ export function ProjectManagementDashboard() {
       case 'completed': return <CheckCircle className="w-4 h-4" />;
       case 'on-hold': return <AlertTriangle className="w-4 h-4" />;
       defaul,  t: return <Clock className="w-4 h-4" />;
-    }
+     }
   };
 
   const getProgressColor = (progres, s: number) => {
@@ -178,13 +178,13 @@ export function ProjectManagementDashboard() {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 left-36 p-3 bg-zion-gold hove,  r:bg-zion-orange text-white rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 left-36 p-3 bg-zion-gold hove,  r:bg-zion-orange text-white rounded-full shadow-lg hove, r: shadow-xl transition-all duration-300 z-50"
         title="Show Project Management Dashboard"
       >
         <BarChart3 className="w-5 h-5" />
       </button>
     );
-  }
+     }
 
   return (<div className="fixed inset-4 bg-white dar,  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
       {/* Header */}

@@ -1,6 +1,6 @@
 import React from "react";
-import { RouteRoutes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { RouteRoutes } from "react-router-dom, ";
+import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import, Marketplace, from "@/pages/Marketplace";
 import, Categories, from "@/pages/Categories";
 import, CategoryDetail, from "@/pages/CategoryDetail";
@@ -68,6 +68,4 @@ const MarketplaceRoutes = () => {
             <VideoCall />;
           </ProtectedRoute>}/>;
     </Routes>);
-},;
-export, default, MarketplaceRoutes;
-;
+},export, default, MarketplaceRoutes,

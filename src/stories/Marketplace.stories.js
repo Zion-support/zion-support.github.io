@@ -1,15 +1,15 @@
-import Marketplace from '../pages/Marketplace';
-import { MemoryRouter } from 'react-router-dom';
+import Marketplace from '../pages/Marketplace;';
+import { MemoryRouter } from 'react-router-dom, ';
 const meta = {
-    title: 'Pages/Marketplace',
-    component: Marketplace,
+    title: 'Pages/Marketplace';
+    component: Marketplace;
     decorators: [
         (Story) => (<MemoryRouter>
         <Story />
       </MemoryRouter>)
     ]
 };
-export default meta;
+    export default meta;
 export const Grid = {
     render: () => {
         localStorage.setItem('marketplaceView', 'grid');

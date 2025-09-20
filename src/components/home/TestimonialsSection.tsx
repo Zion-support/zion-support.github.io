@@ -1,34 +1,33 @@
-import React from 'react';
+import React from 'react;';
 
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
-      rating: 5,
+      name: 'Sarah Johnson';
+      role: 'CTO';
+      company: 'TechCorp Inc.';
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.';
+      rating: 5;
       avatar: '👩‍💼'
-    },
+    };
     {
-      name: 'Michael Chen',
-      role: 'VP of Engineering',
-      company: 'InnovateLabs',
-      content: 'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
-      rating: 5,
+      name: 'Michael Chen';
+      role: 'VP of Engineering';
+      company: 'InnovateLabs';
+      content: 'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.';
+      rating: 5;
       avatar: '👨‍💻'
-    },
+    };
     {
-      name: 'Emily Rodriguez',
-      role: 'Operations Director',
-      company: 'Global Solutions',
-      content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
-      rating: 5,
+      name: 'Emily Rodriguez';
+      role: 'Operations Director';
+      company: 'Global Solutions';
+      content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.';
+      rating: 5;
       avatar: '👩‍🔬'
     }
   ];
-
-  const renderStars = (rating: number) => {
+    const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
@@ -50,7 +49,7 @@ export function TestimonialsSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover: shadow-lg transition-shadow duration-300">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mr-4">
                   {testimonial.avatar}

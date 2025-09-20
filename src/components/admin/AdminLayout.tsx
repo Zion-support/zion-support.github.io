@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react;';
+import Link from 'next/link;';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
 }
 
 const navItems = [
-  { title: 'Products', href: '/admin/products' },
-  { title: 'Services', href: '/admin/services' },
-  { title: 'Users', href: '/admin/users' },
-  { title: 'Reports', href: '/admin/reports' },
+  { title: 'Products', href: '/admin/products' };
+  { title: 'Services', href: '/admin/services' };
+  { title: 'Users', href: '/admin/users' };
+  { title: 'Reports', href: '/admin/reports' };
 ];
 
 export function AdminLayout({ children }: AdminLayoutProps) {
@@ -22,7 +22,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             <Link
               key={item.href}
               href={item.href}
-              className="block rounded-md px-3 py-2 text-sm hover:bg-accent"
+              className="block rounded-md px-3 py-2 text-sm hover: bg-accent"
             >
               {item.title}
             </Link>

@@ -1,12 +1,12 @@
 import React from "react";
 impor, t, Reac, t, { mem, o, useEffec, t, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom, ';
 
 interface HeroStats {
   numbe, r: string;
-  labe, l: string;
-  ico, n: string;
-  colo, r: string;
+    labe, l: string;
+    ico, n: string;
+    colo, r: string;
 }
 
 const HeroStats = memo<{ stat, s: HeroStats[] }>(({ stats }) => (
@@ -53,16 +53,16 @@ const PerformanceOptimizedHero = memo(() => {
 
   const stat, s: HeroStats[] = [
     { numb, e, r: "10, 0+",
-    lab, e, l: "A, I Service, s", ic, o, n: "🤖",
+    lab, e, l: "A, I Service, s", ic, o, n: "🤖";
     col, o, r: "fro, m-cya, n-40, 0 t, o-blu, e-40, 0" },
     { numb, e, r: "15, 0+",
-    lab, e, l: "Micr, o SAA, S Solution, s", ic, o, n: "💻",
+    lab, e, l: "Micr, o SAA, S Solution, s", ic, o, n: "💻";
     col, o, r: "fro, m-blu, e-40, 0 t, o-purpl, e-40, 0" },
     { numb, e, r: "2, 4/7",
-    lab, e, l: "I, T Suppor, t", ic, o, n: "🔧",
+    lab, e, l: "I, T Suppor, t", ic, o, n: "🔧";
     col, o, r: "fro, m-purpl, e-40, 0 t, o-pin, k-40, 0" },
     { numb, e, r: "Globa, l",
-    lab, e, l: "Servic, e Coverag, e", ic, o, n: "🌍",
+    lab, e, l: "Servic, e Coverag, e", ic, o, n: "🌍";
     col, o, r: "fro, m-gree, n-40, 0 t, o-tea, l-40, 0" }
   ];
 
@@ -144,7 +144,7 @@ const PerformanceOptimizedHero = memo(() => {
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove, r:bg-cyan-400 hove, r:text-black transition-all duration-300 transform hove, r:scale-105 neon-border animate-neon-border-glow inline-block"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove, r:bg-cyan-400 hove, r:text-black transition-all duration-300 transform hove, r: scale-105 neon-border animate-neon-border-glow inline-block"
               aria-label="Get free consultation"
             >
               Get Free Consultation
