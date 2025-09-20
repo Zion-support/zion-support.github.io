@@ -1,23 +1,22 @@
-import React, { lazy } from 'react';
+import * as React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './components/ThemeProvider';
-import { Suspense } from 'react';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load components for better performance
-const LazyHome = lazy(() => import('./components/Home'));
-const LazyServices = lazy(() => import('./components/Services'));
-const LazyAbout = lazy(() => import('./components/About'));
-const LazyContact = lazy(() => import('./components/Contact'));
+const LazyHome = React.lazy(() => import('./components/Home'));
+const LazyServices = React.lazy(() => import('./components/Services'));
+const LazyAbout = React.lazy(() => import('./components/About'));
+const LazyContact = React.lazy(() => import('./components/Contact'));
 
 const App: React.FC = () => {
   return (
     <ThemeProvider>
       <AccessibilityEnhancer>
         <PerformanceMonitor />
-        <Suspense fallback={
+        <React.Suspense fallback={
           <div className="min-h-screen bg-gray-900 flex items-center justify-center">
             <LoadingSpinner size="lg" text="Loading application..." />
           </div>
@@ -28,7 +27,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<LazyAbout />} />
             <Route path="/contact" element={<LazyContact />} />
           </Routes>
-        </Suspense>
+          </React.Suspense>
       </AccessibilityEnhancer>
     </ThemeProvider>
   );
