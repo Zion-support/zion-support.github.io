@@ -9,11 +9,11 @@ export default function NewContent2026BreakthroughShowcase() {
             <span className="text-sm font-medium text-green-700">🌟 BREAKTHROUGH CONTENT</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            New Content 2026: The Breakthrough Showcase,
+            New Content 2026: The Breakthrough Showcase
           </h2>
           <p>
-            Experience the most comprehensive collection of AI and technology guides ever created.,
-            These breakthrough resources are transforming businesses across every industry.,
+            Experience the most comprehensive collection of AI and technology guides ever created.
+            These breakthrough resources are transforming businesses across every industry.
           </p>
         </div>
         {/* Featured Content Cards */}
@@ -26,8 +26,8 @@ export default function NewContent2026BreakthroughShowcase() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous Business Operations</h3>
             <p>
-              Master the complete implementation of autonomous operations with our comprehensive 90-day roadmap.,
-              Achieve 300% productivity gains and 40% cost reduction.,
+              Master the complete implementation of autonomous operations with our comprehensive 90-day roadmap.
+              Achieve 300% productivity gains and 40% cost reduction.
             </p>
             <div>
               <div>
@@ -43,11 +43,11 @@ export default function NewContent2026BreakthroughShowcase() {
                 <span className="font-semibold text-blue-600">90 Days</span>
               </div>
             </div>
-            <Link,
-              href="/blog/ai-2026-autonomous-business-operations-complete-guide",
+            <Link
+              href="/blog/ai-2026-autonomous-business-operations-complete-guide"
               className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
-              Read Complete Guide →,
+              Read Complete Guide →
             </Link>
           </div>
           {/* Quantum Computing Card */}
@@ -58,8 +58,8 @@ export default function NewContent2026BreakthroughShowcase() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Quantum Computing Revolution</h3>
             <p>
-              Discover how quantum computing is solving complex business problems in minutes instead of years.,
-              Learn practical applications and implementation strategies.,
+              Discover how quantum computing is solving complex business problems in minutes instead of years.
+              Learn practical applications and implementation strategies.
             </p>
             <div>
               <div>
@@ -75,11 +75,11 @@ export default function NewContent2026BreakthroughShowcase() {
                 <span className="font-semibold text-blue-600">15+ Industries</span>
               </div>
             </div>
-            <Link,
-              href="/blog/ai-2026-quantum-computing-business-revolution",
+            <Link
+              href="/blog/ai-2026-quantum-computing-business-revolution"
               className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              Explore Quantum Future →,
+              Explore Quantum Future →
             </Link>
           </div>
           {/* Neural Interface Card */}
@@ -90,8 +90,8 @@ export default function NewContent2026BreakthroughShowcase() {
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Neural Interface Revolution</h3>
             <p>
-              Transform human-computer interaction with brain-computer interfaces.,
-              Control systems with your thoughts and achieve unprecedented efficiency.,
+              Transform human-computer interaction with brain-computer interfaces.
+              Control systems with your thoughts and achieve unprecedented efficiency.
             </p>
             <div>
               <div>
@@ -107,11 +107,11 @@ export default function NewContent2026BreakthroughShowcase() {
                 <span className="font-semibold text-green-600">$85M</span>
               </div>
             </div>
-            <Link,
-              href="/blog/ai-2026-neural-interface-revolution-business-transformation",
+            <Link
+              href="/blog/ai-2026-neural-interface-revolution-business-transformation"
               className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
-              Discover Neural Tech →,
+              Discover Neural Tech →
             </Link>
           </div>
         </div>
@@ -143,21 +143,21 @@ export default function NewContent2026BreakthroughShowcase() {
         <div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Business?</h3>
           <p>
-            Join hundreds of companies already using our breakthrough guides to achieve unprecedented success.,
-            Start your transformation journey today.,
+            Join hundreds of companies already using our breakthrough guides to achieve unprecedented success.
+            Start your transformation journey today.
           </p>
           <div>
-            <Link,
-              href="/services",
+            <Link
+              href="/services"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
-              Explore Our Services,
+              Explore Our Services
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
             >
-              Get Expert Consultation,
+              Get Expert Consultation
             </Link>
           </div>
         </div>

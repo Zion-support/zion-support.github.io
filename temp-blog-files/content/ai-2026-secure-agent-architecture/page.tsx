@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Secure Agent Architecture | Zion Tech Group',
+  title: 'AI 2026: Secure Agent Architecture | Zion Tech Group'
   description: 'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 2026.'
 }
 export default function SecureAgentArchitecture2026Page() {
@@ -11,7 +11,7 @@ export default function SecureAgentArchitecture2026Page() {
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">AI 2026: Secure Agent Architecture</h1>
           <p>
-            Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents.,
+            Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents.
           </p>
         </div>
       </section>
@@ -19,7 +19,7 @@ export default function SecureAgentArchitecture2026Page() {
         <div>
           <h2>Threat Model</h2>
           <p>
-            Analyze prompt injection, data exfiltration, tool abuse, and supply chain risks. Apply layered mitigations and continuous monitoring.,
+            Analyze prompt injection, data exfiltration, tool abuse, and supply chain risks. Apply layered mitigations and continuous monitoring.
           </p>
           <h2>Controls</h2>
           <ul>
@@ -30,7 +30,7 @@ export default function SecureAgentArchitecture2026Page() {
           </ul>
           <h2>Compliance</h2>
           <p>
-            Map controls to SOC 2, ISO 27001, and AI governance frameworks. Maintain audit logs and incident response playbooks.,
+            Map controls to SOC 2, ISO 27001, and AI governance frameworks. Maintain audit logs and incident response playbooks.
           </p>
           <p>
             Need a secure rollout?{' '}

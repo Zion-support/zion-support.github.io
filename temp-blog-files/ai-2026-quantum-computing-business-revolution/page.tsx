@@ -2,8 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Quantum Computing Business Revolution',
-  description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.',
+  title: 'AI 2026: Quantum Computing Business Revolution'
+  description: 'Discover how quantum computing is revolutionizing business operations in 2026. Learn about quantum algorithms, optimization, and real-world applications transforming industries.'
   keywords: ['quantum computingbusiness revolutionquantum algorithmsoptimization', 'AI 2026']
 }
 export default function QuantumComputingBusinessRevolution() {
@@ -22,23 +22,23 @@ export default function QuantumComputingBusinessRevolution() {
             <span className="text-sm font-medium text-blue-700">⚛️ QUANTUM BREAKTHROUGH</span>
           </div>
           <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
-            AI 2026: Quantum Computing Business Revolution,
+            AI 2026: Quantum Computing Business Revolution
           </h1>
           <p>
-            Quantum computing is no longer science fiction. Discover how businesses are leveraging quantum algorithms to solve complex problems, optimize operations, and achieve breakthrough results.,
+            Quantum computing is no longer science fiction. Discover how businesses are leveraging quantum algorithms to solve complex problems, optimize operations, and achieve breakthrough results.
           </p>
           <div>
-            <Link,
-              href="#applications",
+            <Link
+              href="#applications"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
-              Explore Applications,
+              Explore Applications
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
-              Quantum Consultation,
+              Quantum Consultation
             </Link>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default function QuantumComputingBusinessRevolution() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Supply Chain Optimization</h3>
                   <p>
-                    Quantum algorithms can optimize complex supply chains with thousands of variables,
-                    reducing costs by up to 40% and improving delivery times by 60%.,
+                    Quantum algorithms can optimize complex supply chains with thousands of variables
+                    reducing costs by up to 40% and improving delivery times by 60%.
                   </p>
                   <div>
                     <p className="text-green-800 font-semibold">Real Result: Fortune 500 retailer saved $50M annually</p>
@@ -88,8 +88,8 @@ export default function QuantumComputingBusinessRevolution() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Financial Portfolio Optimization</h3>
                   <p>
-                    Quantum computing enables real-time portfolio optimization across millions of assets,
-                    maximizing returns while minimizing risk.,
+                    Quantum computing enables real-time portfolio optimization across millions of assets
+                    maximizing returns while minimizing risk.
                   </p>
                   <div>
                     <p className="text-blue-800 font-semibold">Real Result: Investment firm increased returns by 25%</p>
@@ -103,8 +103,8 @@ export default function QuantumComputingBusinessRevolution() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Drug Discovery & Development</h3>
                   <p>
-                    Quantum simulation accelerates molecular modeling, reducing drug development time,
-                    from years to months while improving accuracy.,
+                    Quantum simulation accelerates molecular modeling, reducing drug development time
+                    from years to months while improving accuracy.
                   </p>
                   <div>
                     <p className="text-purple-800 font-semibold">Real Result: Pharma company cut R&D time by 70%</p>
@@ -118,8 +118,8 @@ export default function QuantumComputingBusinessRevolution() {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">Cybersecurity & Encryption</h3>
                   <p>
-                    Quantum cryptography provides unbreakable security while quantum-resistant algorithms,
-                    protect against future quantum attacks.,
+                    Quantum cryptography provides unbreakable security while quantum-resistant algorithms
+                    protect against future quantum attacks.
                   </p>
                   <div>
                     <p className="text-red-800 font-semibold">Real Result: Bank achieved 100% quantum security</p>
@@ -170,13 +170,13 @@ export default function QuantumComputingBusinessRevolution() {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Challenge</h3>
                 <p>
-                  A global logistics company needed to optimize delivery routes across 50 countries,
-                  with over 100,000 daily shipments, facing exponentially complex routing problems.,
+                  A global logistics company needed to optimize delivery routes across 50 countries
+                  with over 100,000 daily shipments, facing exponentially complex routing problems.
                 </p>
                 <h3 className="text-2xl font-bold mb-4">Quantum Solution</h3>
                 <p>
-                  Implemented quantum annealing algorithms to solve the traveling salesman problem,
-                  at scale, optimizing routes in real-time.,
+                  Implemented quantum annealing algorithms to solve the traveling salesman problem
+                  at scale, optimizing routes in real-time.
                 </p>
               </div>
               <div>
@@ -233,20 +233,20 @@ export default function QuantumComputingBusinessRevolution() {
         <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for the Quantum Revolution?</h2>
           <p>
-            Don't get left behind in the quantum revolution. Start your quantum transformation journey today.,
+            Don't get left behind in the quantum revolution. Start your quantum transformation journey today.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Start Quantum Journey,
+              Start Quantum Journey
             </Link>
-            <Link,
-              href="/services",
+            <Link
+              href="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Explore Quantum Services,
+              Explore Quantum Services
             </Link>
           </div>
         </section>

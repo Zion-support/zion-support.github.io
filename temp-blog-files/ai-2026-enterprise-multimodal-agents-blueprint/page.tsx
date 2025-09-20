@@ -3,10 +3,10 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 export const metadata = {
-	title: 'AI 2026: Enterprise Multimodal Agents Blueprint',
-	description: 'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',
-	keywords: [,
-		'enterprise AI agentsmultimodal AIAI blueprintvision-language models',
+	title: 'AI 2026: Enterprise Multimodal Agents Blueprint'
+	description: 'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.'
+	keywords: [
+		'enterprise AI agentsmultimodal AIAI blueprintvision-language models'
 		'speech AIenterprise automation'
 	]
 }
@@ -27,23 +27,23 @@ export default function EnterpriseMultimodalAgentsBlueprint2026() {
 								<span className="text-sm font-medium">🧩 MULTIMODAL BLUEPRINT</span>
 							</div>
 							<h1 className="text-4xl md:text-6xl font-bold mb-6">
-								AI 2026: Enterprise Multimodal Agents Blueprint,
+								AI 2026: Enterprise Multimodal Agents Blueprint
 							</h1>
 							<p>
-								Design, implement, and scale multimodal AI agents that understand and act across text, images, audio, and data to deliver autonomous enterprise outcomes.,
+								Design, implement, and scale multimodal AI agents that understand and act across text, images, audio, and data to deliver autonomous enterprise outcomes.
 							</p>
 							<div>
-								<Link,
-									href="/services",
+								<Link
+									href="/services"
 									className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 								>
-									Start Your Build,
+									Start Your Build
 								</Link>
-								<Link,
-									href="/contact",
+								<Link
+									href="/contact"
 									className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
 								>
-									Talk to Experts,
+									Talk to Experts
 								</Link>
 							</div>
 						</div>
@@ -54,7 +54,7 @@ export default function EnterpriseMultimodalAgentsBlueprint2026() {
 						<div>
 							<h2 className="text-3xl font-bold text-emerald-900 mb-4">Executive Summary</h2>
 							<p>
-								Multimodal agents enable richer perception and more robust decision-making by fusing insights from text, images, audio, and structured systems. This blueprint lays out an actionable architecture for production-grade deployment.,
+								Multimodal agents enable richer perception and more robust decision-making by fusing insights from text, images, audio, and structured systems. This blueprint lays out an actionable architecture for production-grade deployment.
 							</p>
 						</div>
 						<h2 className="text-3xl font-bold text-gray-900 mb-6">Reference Architecture</h2>
@@ -98,20 +98,20 @@ export default function EnterpriseMultimodalAgentsBlueprint2026() {
 						<div>
 							<h3 className="text-2xl font-bold mb-4">Build Your Multimodal Agent Program</h3>
 							<p>
-								Accelerate delivery with proven blueprints, reference stacks, and enterprise readiness checklists.,
+								Accelerate delivery with proven blueprints, reference stacks, and enterprise readiness checklists.
 							</p>
 							<div>
-								<Link,
-									href="/services/ai-automation",
+								<Link
+									href="/services/ai-automation"
 									className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
 								>
-									Explore Our Services,
+									Explore Our Services
 								</Link>
-								<Link,
-									href="/contact",
+								<Link
+									href="/contact"
 									className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors"
 								>
-									Schedule Consultation,
+									Schedule Consultation
 								</Link>
 							</div>
 						</div>

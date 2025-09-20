@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Operational Resilience Blueprint',
+  title: 'AI 2026: Operational Resilience Blueprint'
   description:
     'Design resilient AI and agent systems with eval-gated rollouts, chaos drills, and safe-mode fallbacks.'
 }
@@ -10,18 +10,18 @@ export default function Page() {
       <header className="mb-8">
         <p className="text-sm text-purple-700 font-semibold">New on the blog</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
-          AI 2026: Operational Resilience Blueprint,
+          AI 2026: Operational Resilience Blueprint
         </h1>
         <p>
-          Practices and patterns to withstand incidents without customer impact: progressive delivery, eval gates,
-          blast-radius controls, and graceful degradation.,
+          Practices and patterns to withstand incidents without customer impact: progressive delivery, eval gates
+          blast-radius controls, and graceful degradation.
         </p>
       </header>
       <article className="prose prose-purple max-w-none">
         <h2>Why resilience for autonomous systems</h2>
         <p>
-          As organizations adopt autonomous agents, resilience becomes a first-class concern. This blueprint proposes,
-          a pragmatic approach combining evaluation harnesses, policy-as-code, and production guardrails.,
+          As organizations adopt autonomous agents, resilience becomes a first-class concern. This blueprint proposes
+          a pragmatic approach combining evaluation harnesses, policy-as-code, and production guardrails.
         </p>
         <h3>Key building blocks</h3>
         <ul>
@@ -32,8 +32,8 @@ export default function Page() {
         </ul>
         <h3>Get started</h3>
         <p>
-          Start with a small set of critical scenarios and wire them into your deployment pipeline. Add telemetry and,
-          alerts keyed to evaluation IDs, then iterate.,
+          Start with a small set of critical scenarios and wire them into your deployment pipeline. Add telemetry and
+          alerts keyed to evaluation IDs, then iterate.
         </p>
       </article>
       <div>

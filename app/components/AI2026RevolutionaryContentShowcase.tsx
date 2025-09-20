@@ -10,11 +10,11 @@ export default function AI2026RevolutionaryContentShowcase() {
             <span className="text-sm font-medium">⚡ REVOLUTIONARY AI 2026 CONTENT</span>
           </div>
           <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
-            Transform Your Business with AI 2026 Insights,
+            Transform Your Business with AI 2026 Insights
           </h2>
           <p>
-            Access cutting-edge research, implementation guides, and breakthrough strategies,
-            that will revolutionize your business operations in 2026.,
+            Access cutting-edge research, implementation guides, and breakthrough strategies
+            that will revolutionize your business operations in 2026.
           </p>
         </div>
         {/* Content Showcase Grid */}
@@ -25,21 +25,21 @@ export default function AI2026RevolutionaryContentShowcase() {
               <div className="text-3xl mb-2">🤖</div>
               <h3 className="text-xl font-bold text-white mb-2">Autonomous Business Systems</h3>
               <p>
-                Next-generation self-managing AI systems,
+                Next-generation self-managing AI systems
               </p>
             </div>
             <div>
               <p>
-                Discover how autonomous AI business systems will revolutionize enterprise operations with,
-                self-managing processes, predictive decision-making, and intelligent optimization.,
+                Discover how autonomous AI business systems will revolutionize enterprise operations with
+                self-managing processes, predictive decision-making, and intelligent optimization.
               </p>
               <div>
                 <span className="text-sm text-gray-500">Published: Dec 27, 2024</span>
-                <Link,
-                  href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution",
+                <Link
+                  href="/blog/ai-2026-next-generation-autonomous-business-systems-revolution"
                   className="text-purple-600 font-semibold hover: text-purple-800 transition-colors"
                 >
-                  Read Full Article →,
+                  Read Full Article →
                 </Link>
               </div>
             </div>
@@ -50,21 +50,21 @@ export default function AI2026RevolutionaryContentShowcase() {
               <div className="text-3xl mb-2">⚛️</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Machine Learning</h3>
               <p>
-                Revolutionary computational breakthroughs,
+                Revolutionary computational breakthroughs
               </p>
             </div>
             <div>
               <p>
-                Explore how quantum machine learning will transform business optimization with,
-                unprecedented computational power, optimization capabilities, and decision-making precision.,
+                Explore how quantum machine learning will transform business optimization with
+                unprecedented computational power, optimization capabilities, and decision-making precision.
               </p>
               <div>
                 <span className="text-sm text-gray-500">Published: Dec 27, 2024</span>
-                <Link,
-                  href="/blog/ai-2026-quantum-machine-learning-business-breakthrough",
+                <Link
+                  href="/blog/ai-2026-quantum-machine-learning-business-breakthrough"
                   className="text-purple-600 font-semibold hover: text-purple-800 transition-colors"
                 >
-                  Read Full Article →,
+                  Read Full Article →
                 </Link>
               </div>
             </div>
@@ -75,21 +75,21 @@ export default function AI2026RevolutionaryContentShowcase() {
               <div className="text-3xl mb-2">🏢</div>
               <h3 className="text-xl font-bold text-white mb-2">Enterprise Automation</h3>
               <p>
-                Complete implementation guide,
+                Complete implementation guide
               </p>
             </div>
             <div>
               <p>
-                The ultimate guide to enterprise automation breakthrough with complete strategies,
-                frameworks, and implementation roadmaps for business transformation.,
+                The ultimate guide to enterprise automation breakthrough with complete strategies
+                frameworks, and implementation roadmaps for business transformation.
               </p>
               <div>
                 <span className="text-sm text-gray-500">Published: Dec 27, 2024</span>
-                <Link,
-                  href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide",
+                <Link
+                  href="/blog/ai-2026-enterprise-automation-breakthrough-ultimate-guide"
                   className="text-purple-600 font-semibold hover: text-purple-800 transition-colors"
                 >
-                  Read Full Article →,
+                  Read Full Article →
                 </Link>
               </div>
             </div>
@@ -100,20 +100,20 @@ export default function AI2026RevolutionaryContentShowcase() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
             <p>
-              Get personalized insights and implementation guidance for your AI transformation journey.,
+              Get personalized insights and implementation guidance for your AI transformation journey.
             </p>
             <div>
-              <Link,
-                href="/tools/ai-transformation-readiness-assessment",
+              <Link
+                href="/tools/ai-transformation-readiness-assessment"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start AI Readiness Assessment,
+                Start AI Readiness Assessment
               </Link>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Get Expert Consultation,
+                Get Expert Consultation
               </Link>
             </div>
           </div>

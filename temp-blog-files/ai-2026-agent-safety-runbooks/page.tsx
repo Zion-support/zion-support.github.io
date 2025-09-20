@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Agent Safety Runbooks',
+  title: 'AI 2026: Agent Safety Runbooks'
   description:
     'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.'
 }
@@ -12,16 +12,16 @@ export default function AgentSafetyRunbooksPage() {
         <div className="text-sm font-semibold text-purple-700 mb-2">Guide</div>
         <h1 className="text-4xl font-bold text-gray-900">AI 2026: Agent Safety Runbooks</h1>
         <p>
-          Practical, evidence‑driven runbooks to prevent and contain harmful behaviors, protect,
-          data, and maintain user trust. Designed for eval‑gated autonomy.,
+          Practical, evidence‑driven runbooks to prevent and contain harmful behaviors, protect
+          data, and maintain user trust. Designed for eval‑gated autonomy.
         </p>
       </header>
       <section className="space-y-8">
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">1. Prompt Injection & Data Exfiltration</h2>
           <p>
-            Enforce isolation domains, sanitize tools I/O, and validate outbound actions. Add,
-            evaluations that simulate injection and leakage scenarios before releases.,
+            Enforce isolation domains, sanitize tools I/O, and validate outbound actions. Add
+            evaluations that simulate injection and leakage scenarios before releases.
           </p>
           <ul className="list-disc pl-6 mt-4 text-gray-700 space-y-2">
             <li>Tool permission tiers with deny‑by‑default</li>
@@ -32,8 +32,8 @@ export default function AgentSafetyRunbooksPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">2. Hallucination & Unsafe Actions</h2>
           <p>
-            Require source‑backed citations and tool‑verified facts for high‑impact outputs.,
-            Gate irreversible actions on evaluation passes and human approvals.,
+            Require source‑backed citations and tool‑verified facts for high‑impact outputs.
+            Gate irreversible actions on evaluation passes and human approvals.
           </p>
           <ul className="list-disc pl-6 mt-4 text-gray-700 space-y-2">
             <li>Evidence score and uncertainty thresholds</li>
@@ -44,8 +44,8 @@ export default function AgentSafetyRunbooksPage() {
         <article className="bg-white p-6 rounded-xl shadow">
           <h2 className="text-2xl font-bold text-gray-900 mb-3">3. Abuse, Harassment, and Policy Violations</h2>
           <p>
-            Continuous content safety checks, policy‑as‑code enforcement, and escalation paths for,
-            sensitive categories.,
+            Continuous content safety checks, policy‑as‑code enforcement, and escalation paths for
+            sensitive categories.
           </p>
           <ul className="list-disc pl-6 mt-4 text-gray-700 space-y-2">
             <li>Safety classifiers + rules engines in the loop</li>
@@ -56,10 +56,10 @@ export default function AgentSafetyRunbooksPage() {
       </section>
       <nav className="mt-12 flex flex-wrap gap-3">
         <Link href="/content/ai-2026-secure-tooling-permissions-blueprint" className="inline-block bg-purple-600 text-white px-5 py-3 rounded-lg font-semibold hover: bg-purple-700">
-          Secure Tooling Blueprint,
+          Secure Tooling Blueprint
         </Link>
         <Link href="/blog/ai-2026-agent-observability-blueprint" className="inline-block border border-purple-600 text-purple-700 px-5 py-3 rounded-lg font-semibold hover:bg-purple-50">
-          Observability Blueprint,
+          Observability Blueprint
         </Link>
       </nav>
     </main>)}
