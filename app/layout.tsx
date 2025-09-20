@@ -1,5 +1,10 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -24,7 +29,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-}
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0ea5e9",
+};
 
 export default function RootLayout({
   children,
@@ -32,11 +43,22 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className="min-h-screen bg-background">
-          {children}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen bg-background">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <Toaster />
+            <SonnerToaster />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

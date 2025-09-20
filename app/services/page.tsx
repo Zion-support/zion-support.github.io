@@ -1,92 +1,201 @@
 import React from 'react';
-import Link from 'next/link';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Database, 
+  Code, 
+  Smartphone,
+  BarChart3,
+  Lock,
+  Server,
+  Cpu
+} from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Custom AI solutions including machine learning models, natural language processing, and computer vision.",
-      icon: "🤖",
-      features: ["Custom ML Models", "NLP Solutions", "Computer Vision", "Predictive Analytics"]
-    },
-    {
-      title: "Web Development",
-      description: "Modern web applications built with the latest technologies and best practices.",
-      icon: "🌐",
-      features: ["React/Next.js", "Full-Stack Development", "API Integration", "Performance Optimization"]
-    },
-    {
+      icon: Cloud,
       title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services for modern businesses.",
-      icon: "☁️",
-      features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps", "Containerization"]
+      description: "Comprehensive cloud infrastructure and migration services",
+      features: [
+        "AWS, Azure, Google Cloud expertise",
+        "Cloud migration and optimization",
+        "Serverless architecture design",
+        "Cost optimization strategies"
+      ],
+      color: "text-blue-400"
     },
     {
-      title: "Data Analytics",
-      description: "Transform your data into actionable insights with advanced analytics solutions.",
-      icon: "📊",
-      features: ["Data Visualization", "Business Intelligence", "Real-time Analytics", "Data Warehousing"]
-    },
-    {
+      icon: Shield,
       title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and infrastructure.",
-      icon: "🔒",
-      features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"]
+      description: "Advanced security solutions to protect your digital assets",
+      features: [
+        "Threat detection and response",
+        "Vulnerability assessments",
+        "Compliance and governance",
+        "Security training and awareness"
+      ],
+      color: "text-green-400"
     },
     {
-      title: "Consulting",
-      description: "Strategic technology consulting to help you make informed decisions.",
-      icon: "💡",
-      features: ["Technology Strategy", "Digital Transformation", "Process Optimization", "Training"]
+      icon: Zap,
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions powered by artificial intelligence",
+      features: [
+        "Custom AI model development",
+        "Machine learning pipelines",
+        "Natural language processing",
+        "Computer vision solutions"
+      ],
+      color: "text-yellow-400"
+    },
+    {
+      icon: Users,
+      title: "Digital Transformation",
+      description: "Complete digital overhaul for modern businesses",
+      features: [
+        "Process automation",
+        "Legacy system modernization",
+        "Change management",
+        "Digital strategy consulting"
+      ],
+      color: "text-purple-400"
+    },
+    {
+      icon: Globe,
+      title: "Web Development",
+      description: "Modern, responsive web applications",
+      features: [
+        "React, Next.js, Vue.js development",
+        "Progressive Web Apps (PWA)",
+        "E-commerce solutions",
+        "API development and integration"
+      ],
+      color: "text-cyan-400"
+    },
+    {
+      icon: Database,
+      title: "Data Analytics",
+      description: "Turn data into actionable insights",
+      features: [
+        "Business intelligence dashboards",
+        "Data warehousing solutions",
+        "Predictive analytics",
+        "Real-time data processing"
+      ],
+      color: "text-orange-400"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications",
+      features: [
+        "iOS and Android development",
+        "React Native solutions",
+        "Flutter applications",
+        "Mobile app optimization"
+      ],
+      color: "text-pink-400"
+    },
+    {
+      icon: BarChart3,
+      title: "Business Intelligence",
+      description: "Data-driven decision making solutions",
+      features: [
+        "Custom reporting dashboards",
+        "KPI tracking and monitoring",
+        "Data visualization",
+        "Performance analytics"
+      ],
+      color: "text-indigo-400"
+    },
+    {
+      icon: Lock,
+      title: "Data Privacy & Compliance",
+      description: "Ensure compliance with data protection regulations",
+      features: [
+        "GDPR compliance implementation",
+        "Privacy impact assessments",
+        "Data governance frameworks",
+        "Audit and compliance reporting"
+      ],
+      color: "text-red-400"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Our Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer comprehensive technology solutions to help your business thrive 
-            in the digital age. From AI and machine learning to cloud infrastructure 
-            and cybersecurity.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive innovation
           </p>
         </div>
+      </section>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                    <span className="text-blue-600 mr-2">✓</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+      {/* Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <service.icon className={`h-8 w-8 ${service.color}`} />
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </div>
+                  <CardDescription className="text-gray-300">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
-          <p className="text-blue-100 mb-6">
-            Contact us today to discuss your project and learn how we can help 
-            your business achieve its technology goals.
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business
           </p>
-          <Link 
-            href="/contact" 
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors inline-block"
-          >
-            Contact Us
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Get Free Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+              View Our Portfolio
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
