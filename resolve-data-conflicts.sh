@@ -8,13 +8,6 @@ resolve_data_conflicts() {
     echo "Resolving conflicts in: $file"
     
     # Remove all conflict markers and keep the incoming version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> origin\/merge\/2027-services/d' "$file"
-    
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
     
     # Fix common syntax issues
     sed -i 's/export interface CuttingEdgeInnovation2027 {;/export interface CuttingEdgeInnovationService2027 {/g' "$file"

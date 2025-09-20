@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
-export default function Page() {
-) => {
->>>>>>> main
-
-  const [imageSrc, setImageSrc] = useState<any>(src);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isIntersecting, setIsIntersecting] = useState(priority);
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  // Intersection Observer for lazy loading
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
     if(priority || !lazy) {
 
@@ -30,14 +15,8 @@ export default function Page() {
           observerRef.current?.disconnect()}
       },
       {
-<<<<<<< HEAD
-
-        rootMargin: any50px',;
-        threshold: 0.1
-=======
 '
         rootMargin: any50px',;        threshold: 0.1
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       }) ;
 
     observerRef.current.observe(imgRef.current) ;
@@ -71,20 +50,12 @@ export default function Page() {
     }}, []) ;
 
   // Generate optimized src with quality parameter
-<<<<<<< HEAD
-  const getOptimizedSrc = (src: anystring) => {
-    if(src.startsWith ('data:') || src.startsWith('blob:') ) {
-      return src;
-    }
-
-=======
   const getOptimizedSrc = (src: anystring)  => {
 
     if(src.startsWith('data:') || src.startsWith('blob:')) {
 
       return src}
     
->>>>>>> main
     // Add quality parameter for external images if possible
     try {
       
@@ -101,15 +72,10 @@ export default function Page() {
   
   // Loading skeleton
   if(!isIntersecting) {
-<<<<<<< HEAD
-    return (<div
-        className={`${baseClasses} bg-gray - 200 dark:bg-gray - 700 animate - pulse`}
-=======
 
     return ()
       <div `
         className={`${baseClasses} bg-gray-200 dark:bg-gray-700 animate-pulse`}
->>>>>>> main
         style={{ width, height }}
       >
         <div className="w-full h-full flex items-center justify-center">"
@@ -118,19 +84,6 @@ export default function Page() {
       </div>) }
   // Error state
   if(hasError) {
-<<<<<<< HEAD
-    return (<div
-        className={`${baseClasses} bg-gray - 100 dark:bg-gray - 800 flex items - center justify - center`}
-        style={{ width, height }}
-      >
-        <div className="text-center">
-          <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />
-          <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>
-        </div>
-      </div>) ;
-  }
-=======
->>>>>>> main
 
     return ()
       <div `
@@ -190,14 +143,8 @@ export default function Page() {
 // Specialized image components'
 export const AvatarImage: React.FC<Omit<OptimizedImageProps,rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({
 
-<<<<<<< HEAD
-// Specialized image components
-  size = 'md',
-  ...props
-=======
   size = 'md', 
   ...props 
->>>>>>> main
 }) => {
 
   return ()

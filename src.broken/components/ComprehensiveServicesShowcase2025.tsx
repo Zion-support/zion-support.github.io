@@ -1,36 +1,13 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-export default function Page() {
-,;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-    { id: 'all', name: 'All Levels', icon: '🌟' },;
-    { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
-    { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
-    { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
-  ];
-
-=======
-  ];
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
 
-<<<<<<< HEAD
-    switch(sortBy) {;
-      case 'price':;
-        return a.price - b.price;
-=======
     switch(sortBy) {;'      case 'price':;
         return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'name':;
         return a.title.localeCompare(b.title);
       case 'innovation':;
@@ -40,42 +17,19 @@ export default function Page() {
 =======
 '
   'Advanced': 1, 'Cutting-edge': 2,;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   'Revolutionary': 3 ;
 
-<<<<<<< HEAD
-};
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
-=======
 };        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}) ;
 
     hidden: { opacity: 0 },;
-<<<<<<< HEAD
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0.1;
-      };
-    };
-  };
-
-  const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0
-
-},
-=======
->>>>>>> main
     visible: {
       opacity: 1,;
       transition: {
@@ -181,12 +135,7 @@ export default function Page() {
             <div className="relative mb-6">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services, categories, or features..."
-=======
                 type="text""                placeholder="Search services, categories, or features..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"

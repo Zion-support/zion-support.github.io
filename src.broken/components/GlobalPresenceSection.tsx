@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
-function GlobalPresenceSection () {
-=======
->>>>>>> main
 
   Globe,
   MapPin,
@@ -51,21 +42,13 @@ const globalOffices = [{
     description: "Canadian market and development center"};
 ];
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
 =======
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function GlobalPresenceSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -89,13 +72,8 @@ export function GlobalPresenceSection() {
         </motion.div>
 
         {/* Global Statistics */}
-<<<<<<< HEAD
-        <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
-=======
         <motion.div "
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -142,13 +120,8 @@ export function GlobalPresenceSection() {
         </motion.div>
 
         {/* Global Offices */}
-<<<<<<< HEAD
-        <motion.div
-          className="mb-16";
-=======
         <motion.div "
           className="mb-16";
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -172,20 +145,12 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
-<<<<<<< HEAD
-
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">
-            {globalOffices.map((office, index) => (<motion.div
-                key={office.city}
-                className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 text-center hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25 group"
-=======
           "
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {globalOffices.map((office, index) => (
               <motion.div
                 key={office.city}"
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
->>>>>>> main
                 initial = {
 
   { opacity: 0,
@@ -209,19 +174,6 @@ export function GlobalPresenceSection() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">"
                   <span className="text-2xl">{office.icon}</span>
                 </div>
-<<<<<<< HEAD
-
-                <div className="mb-2">
-                  <span className="px-3 py-1 bg-blue - 600 / 20 text-blue - 400 text-xs font - semibold rounded-full">
-                    {office.type}
-                  </span>
-                </div>
-
-                <h4 className="text-lg font - bold text-white mb-1">{office.city}</h4>
-                <p className="text-gray - 400 text-sm mb-3">{office.country}</p>
-                <p className="text-gray - 300 text-xs">{office.description}</p>
-              </motion.div>) ) }
-=======
                 "
                 <div className="mb-2">"
                   <span className="px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-semibold rounded-full">
@@ -234,18 +186,12 @@ export function GlobalPresenceSection() {
                 <p className="text-gray-300 text-xs">{office.description}</p>
               </motion.div>
             ))}
->>>>>>> main
           </div>
         </motion.div>
 
         {/* Global Map Visualization */}
-<<<<<<< HEAD
-        <motion.div
-          className="text-center mb-12"
-=======
         <motion.div "
           className="text-center mb-12"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -265,16 +211,6 @@ export function GlobalPresenceSection() {
   delay: 0.8
 
 }}
-<<<<<<< HEAD
-        >
-          <div className="bg-slate - 800 border border-slate - 700 rounded-2xl p -8">
-            <div className="w-24 h-24 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-full flex items - center justify - center mx - auto mb-6">
-              <span className="text-4xl">🌍</span>
-            </div>
-            <h3 className="text-2xl font - bold text-white mb-4">Worldwide Coverage</h3>
-            <p className="text-gray - 300 text-lg max - w-2xl mx -auto">
-              Our distributed team and cloud infrastructure ensure seamless service delivery
-=======
         >"
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">"
@@ -283,18 +219,12 @@ export function GlobalPresenceSection() {
             <h3 className="text-2xl font-bold text-white mb-4">Worldwide Coverage</h3>"
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Our distributed team and cloud infrastructure ensure seamless service delivery 
->>>>>>> main
               across all time zones and regions, with local expertise and global capabilities.</p>
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="text-center"
-=======
         <motion.div "
           className="text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,

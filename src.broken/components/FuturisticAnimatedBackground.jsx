@@ -1,15 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 
-<<<<<<< HEAD
-    const canvasRef = useRef(null) ;
-    const animationRef = useRef () ;
-    useEffect(() => {
-=======
     const canvasRef = useRef(null);
     const animationRef = useRef();
     useEffect(() => {
->>>>>>> main
         const canvas = canvasRef.current;
         if(!canvas)
             return;

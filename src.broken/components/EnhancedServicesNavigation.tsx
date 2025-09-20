@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-
-const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<any> (null) ;
-
-        {
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 "
           title: "Code Review & Security","
           url: "/services/ai-code-review-security","
@@ -216,16 +207,10 @@ const EnhancedServicesNavigation: React.FC = () : JSX.Element => {;
                           <p className="text-sm opacity-90">{category.description}</p>
                         </div>
                       </div>
-<<<<<<< HEAD
-
-                      <div  className="space - y-2">
-                        {category.services.map((service, serviceIndex) => (<motion.div
-=======
                       "
                       <div className="space-y-2">
                         {category.services.map((service, serviceIndex) => (
                           <motion.div
->>>>>>> main
                             key={service.title}
                             initial = {
 

@@ -11,12 +11,6 @@ resolve_conflicts() {
     echo "Resolving conflicts in $file..."
     
     # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Found conflicts in $file, resolving..."
-        
-        # Remove conflict markers and keep both versions where possible
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
         
         echo "Resolved conflicts in $file"
     fi

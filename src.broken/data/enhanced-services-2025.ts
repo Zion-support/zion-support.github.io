@@ -72,23 +72,17 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [// AI-Powered Auto
         website: string};
 ;
 
-<<<<<<< HEAD
-};
-
-=======
   ;
 =======
 '
   mobile: '+1 302 464 0950','
     email: 'kleber@ziontechgroup.com','
     address: '364 E Main St STE 1008 Middletown DE 19709',;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ;
   website: 'https://ziontechgroup.com'};
 ;
->>>>>>> main
 export const enhancedServices2025: EnhancedService[] = [{
 
         id: 'ai-powered-code-review-assistant',
@@ -465,9 +459,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$299 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Automated security vulnerability detection',Code quality scoring and metrics',Best practice recommendations',Integration with GitHub/GitLab/Bitbucket',Custom rule configuration',Team performance analytics',Automated PR comments',Compliance checking(SOC2, HIPAA),Performance impact analysis',Multi-language support'
-=======
       'Automated security vulnerability detection','
       'Code quality scoring and metrics','
       'Best practice recommendations','
@@ -477,7 +468,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Automated PR comments','
       'Compliance checking(SOC2, HIPAA)','
       'Performance impact analysis','      'Multi-language support'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Reduce code review time by 40-60%',Improve code quality by 25%',Catch security issues before deployment',Standardize coding practices',Reduce technical debt'
@@ -511,9 +501,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$499 one-time'},
     features = ['
-<<<<<<< HEAD
-      'AI-powered threat detection',Automated incident response workflows',Real-time alerting and notifications',Incident timeline tracking',Post-mortem analysis tools',Integration with security tools',Compliance reporting',Team collaboration features',Knowledge base management',Performance metrics dashboard'
-=======
       'AI-powered threat detection','
       'Automated incident response workflows','
       'Real-time alerting and notifications','
@@ -523,7 +510,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Compliance reporting','
       'Team collaboration features','
       'Knowledge base management','      'Performance metrics dashboard'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],"
     useCases["Enterprise security", "Compliance", "Threat prevention", "Incident response"],"
     integrations["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],"
@@ -592,9 +578,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$199 one-time'},
     features = ['
-<<<<<<< HEAD
-      'OCR invoice processing',Automated approval workflows',Payment integration',Analytics dashboard',Multi-currency support',Vendor management',Compliance checking',Mobile app access',API integration',Custom reporting'
-=======
       'OCR invoice processing','
       'Automated approval workflows','
       'Payment integration','
@@ -604,7 +587,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Compliance checking','
       'Mobile app access','
       'API integration','      'Custom reporting'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Reduce processing time by 90%',Improve accuracy by 95%',Automate approval processes',Enhance vendor relationships',Maintain compliance standards'
@@ -638,9 +620,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$299 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Automated onboarding workflows',Predictive churn analysis',Support ticket routing',Success metrics tracking',Customer health scoring',Automated outreach campaigns',Integration with CRM systems',Performance analytics',Custom dashboards',API access'
-=======
       'Automated onboarding workflows','
       'Predictive churn analysis','
       'Support ticket routing','
@@ -650,7 +629,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Integration with CRM systems','
       'Performance analytics','
       'Custom dashboards','      'API access'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],"
     useCases["Personal finance", "Investment management", "Retirement planning", "Risk management"],"
     integrations["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],"
@@ -719,9 +697,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$399 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Real-time data visualization',Custom dashboard builder',Predictive analytics',Data integration tools',Automated reporting',Mobile app access',API access',Custom alerts',Data export capabilities',Team collaboration'
-=======
       'Real-time data visualization','
       'Custom dashboard builder','
       'Predictive analytics','
@@ -731,7 +706,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'API access','
       'Custom alerts','
       'Data export capabilities','      'Team collaboration'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Improve decision making by 40%',Reduce reporting time by 80%',Identify new opportunities',Optimize business processes',Enhance team productivity'
@@ -765,9 +739,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$2,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      '24/7 network monitoring',Real-time threat detection',Incident response support',Compliance reporting',Vulnerability assessment',Security consulting',Penetration testing',Security awareness training',Incident post-mortem',Continuous improvement'
-=======
       '24/7 network monitoring','
       'Real-time threat detection','
       'Incident response support','
@@ -777,7 +748,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Penetration testing','
       'Security awareness training','
       'Incident post-mortem','      'Continuous improvement'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Proactive threat detection',24/7 security monitoring',Compliance assurance',Reduced security risks',Expert security guidance'
@@ -811,9 +781,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$1,500 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Automated backup scheduling',Cloud storage integration',Disaster recovery planning',Recovery testing',RTO optimization',Data encryption',Compliance support',24/7 support',Recovery documentation',Business continuity planning'
-=======
       'Automated backup scheduling','
       'Cloud storage integration','
       'Disaster recovery planning','
@@ -823,7 +790,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Compliance support','
       '24/7 support','
       'Recovery documentation','      'Business continuity planning'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       '99.99% recovery success rate',Automated backup processes',Cloud redundancy',Compliance assurance',Business continuity'
@@ -856,9 +822,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$1,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Asset discovery and tracking',License management',Depreciation tracking',Maintenance scheduling',Cost optimization',Compliance reporting',Vendor management',Contract tracking',Mobile app access',API integration'
-=======
       'Asset discovery and tracking','
       'License management','
       'Depreciation tracking','
@@ -868,7 +831,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Vendor management','
       'Contract tracking','
       'Mobile app access','      'API integration'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Optimize IT costs by 30%',Improve compliance tracking',Automate maintenance scheduling',Enhance asset visibility',Reduce audit time'
@@ -902,9 +864,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$5,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Natural language processing',Multi-language support',Integration APIs',Analytics dashboard',Custom training',Voice recognition',Sentiment analysis',Escalation handling',Knowledge base integration',Performance monitoring'
-=======
       'Natural language processing','
       'Multi-language support','
       'Integration APIs','
@@ -914,7 +873,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Sentiment analysis','
       'Escalation handling','
       'Knowledge base integration','      'Performance monitoring'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       '24/7 customer support',Instant response times',Reduce support costs by 40%',Improve customer satisfaction',Scale support operations'
@@ -947,9 +905,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$8,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Data modeling and analysis',Forecasting algorithms',Visualization tools',API integration',Custom model training',Real-time predictions',Performance monitoring',Automated insights',Scenario planning',Risk assessment'
-=======
       'Data modeling and analysis','
       'Forecasting algorithms','
       'Visualization tools','
@@ -959,7 +914,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Performance monitoring','
       'Automated insights','
       'Scenario planning','      'Risk assessment'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Improve decision making by 50%',Identify new opportunities',Reduce risks',Optimize operations',Increase revenue'
@@ -992,9 +946,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$10,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Object detection and recognition',Image classification',Video analysis',Custom model training',Real-time processing',Quality control automation',Process monitoring',Analytics dashboard',API access',Mobile integration'
-=======
       'Object detection and recognition','
       'Image classification','
       'Video analysis','
@@ -1004,7 +955,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Process monitoring','
       'Analytics dashboard','
       'API access','      'Mobile integration'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Automate quality control by 80%',Improve process efficiency',Reduce human error',24/7 monitoring',Scalable solutions'
@@ -1038,9 +988,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$25,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Quantum algorithm development',Optimization problem solving',Cryptography services',Scientific simulations',Quantum consulting',Training and education',Research collaboration',Performance benchmarking',Custom development',Ongoing support'
-=======
       'Quantum algorithm development','
       'Optimization problem solving','
       'Cryptography services','
@@ -1050,7 +997,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Research collaboration','
       'Performance benchmarking','
       'Custom development','      'Ongoing support'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Solve previously intractable problems',Exponential performance improvements',Future-proof technology',Competitive advantage',Research leadership'
@@ -1083,9 +1029,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       enterprise: 'Custom pricing',;
       setup: '$15,000 one-time'},
     features = ['
-<<<<<<< HEAD
-      'Smart contract development',DeFi application building',NFT platform development',Blockchain infrastructure',Web3 consulting',Security auditing',Token economics',Governance systems',Cross-chain solutions',Mobile integration'
-=======
       'Smart contract development','
       'DeFi application building','
       'NFT platform development','
@@ -1095,7 +1038,6 @@ export const enhancedServices2025: EnhancedService[] = [{
       'Token economics','
       'Governance systems','
       'Cross-chain solutions','      'Mobile integration'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ],
     benefits = ['
       'Decentralized solutions',Transparent operations',Reduced intermediaries',Enhanced security',Innovation leadership'

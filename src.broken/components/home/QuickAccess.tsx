@@ -258,51 +258,24 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30 ;
-
-}}
-=======
   y: 30 }}
->>>>>>> main
           whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
-  y: 0 ;
-
-}}
-=======
   y: 0 }}
->>>>>>> main
           transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
-  delay: 0.4 ;
-
-}}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>
-=======
   delay: 0.4 }}
           viewport={{ once: true }}"          className="text-center"
         >"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">'"
             <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
->>>>>>> main
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link
-=======
               <Link "
->>>>>>> main
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
 

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { useNavigate  } from 'react-router-dom';
-import { useNavigate  } from 'react-router-dom';
- from 'react';
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useDebounce } from '@/hooks / useDebounce';
- from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
-
-  icon?: React.ComponentType < any>}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface SearchFilter {
   type: string[];
   category: string[];
@@ -107,7 +94,6 @@ const searchData: SearchResult[] = [// Services
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;'
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;'
   { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;'  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function EnhancedSearch({
@@ -116,12 +102,7 @@ export function EnhancedSearch({
   placeholder = 'Search for AI services, quantum solutions...',;
   onSearch,;
   variant = 'default'}: EnhancedSearchProps) {;
-<<<<<<< HEAD
-  const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
-=======
   const [isOpen, setIsOpen] = useState(false);'  const [query, setQuery] = useState('');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -163,28 +144,6 @@ export function EnhancedSearch({
     category: [],
     tags: []
   }) ;
-<<<<<<< HEAD
-
-  const searchRef = useRef < HTMLDivElement> (null) ;
-  const inputRef = useRef < HTMLInputElement> (null) ;
-  const navigate = useNavigate () ;
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent) => {
-      if(event.key === 'Escape') {
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;
-      } else if(event.key === 'ArrowDown') {
-        event.preventDefault () ;
-        setSelectedIndex(prev =>
-          prev < results.length-1 ? prev + 1 : prev) ;
-      } else if(event.key === 'ArrowUp') {
-        event.preventDefault () ;
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
-      } else if(event.key === 'Enter' && selectedIndex >= 0) {
-        event.preventDefault () ;
-=======
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -200,7 +159,6 @@ export function EnhancedSearch({
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if(event.key === 'Enter' && selectedIndex >= 0) {
 
         event.preventDefault();
->>>>>>> main
         if(results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex])}      }
@@ -217,18 +175,6 @@ export function EnhancedSearch({
       setResults([]);
       return}
 
-<<<<<<< HEAD
-    const searchResults = searchData
-      .filter(item => {
-        const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
-                           item.description.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
-                           item.tags.some(tag => tag.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ) ;
-
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
-                              filters.category.length === 0 || filters.category.includes(item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
-
-=======
     
       .filter(item => {
 
@@ -237,7 +183,6 @@ export function EnhancedSearch({
 
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;        
->>>>>>> main
         return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
 
     setResults(searchResults) }, [debouncedQuery, filters]) ;
@@ -256,16 +201,9 @@ export function EnhancedSearch({
       if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
-<<<<<<< HEAD
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-=======
       }    };
 '
     document.addEventListener('mousedown', handleClickOutside);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
@@ -278,12 +216,7 @@ export function EnhancedSearch({
 
       // Add to recent searches;
       
-<<<<<<< HEAD
-      setRecentSearches(updated);
-      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-=======
       setRecentSearches(updated);'      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Navigate to search results or close search
       setIsOpen(false);
@@ -364,7 +297,6 @@ setFilters(prev: > ({;
 =======
 '
     setQuery('');    setResults([]);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setIsOpen(false);
     setSelectedIndex(-1)};
 

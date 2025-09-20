@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { MobileSidebarToggle } from './MobileSidebarToggle';
-export default function Page() {
-, [location.pathname]);
-  
-=======
   useEffect(() => {
     setActiveDropdown(null)}, [location.pathname]);
   
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     e.preventDefault();
     if(searchQuery.trim()) {
 
@@ -35,7 +28,6 @@ export default function Page() {
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' },'
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' },'
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },'        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {

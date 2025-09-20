@@ -93,16 +93,11 @@ export default function Page() {
   { left: 0,
   right: 0
 
-<<<<<<< HEAD
-}} dragElastic={1} onDragEnd = { (e, { offset,
-  velocity
-=======
 
 }} dragElastic={1} onDragEnd = {
 
   (e, { offset,
   velocity 
->>>>>>> main
 
 }) => {
 

@@ -23,19 +23,12 @@ export const AppScreenshots = () => {
           <Button variant="ghost" size="icon" className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" onClick={() => scroll("left")} >"
             <ChevronLeft className="h-6 w-6"/>
           </Button>
-<<<<<<< HEAD
-
-          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
-  { scrollbarWidth: "none",
-  msOverflowStyle: "none"
-=======
           "
           <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
 "
   { scrollbarWidth: "none","
   msOverflowStyle: "none" 
 
->>>>>>> main
 
 }}>"
             {mockScreenshots.map((screenshot) => (<div key={screenshot.id} className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">"

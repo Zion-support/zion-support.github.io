@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
-interface AnalyticsData {
-
-  id: string;
-  metric: string;
-  value: number;
-  change: number;
-  trend: 'up' | 'down' | 'stable';
-  category: string;
-  timestamp: Date;
-  target?: number;
-  unit?: string}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface ChartData {
 
   labels: string[];
