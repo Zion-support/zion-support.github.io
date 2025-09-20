@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import SEO from '../../components/SEO'
 
 export const metadata = {
@@ -6,10 +7,13 @@ export const metadata = {
   description: 'Discover the ultimate AI breakthroughs of 2025. Revolutionary technologies that will transform your business.',
   keywords: ['AI breakthrough', 'AI 2025', 'artificial intelligence', 'business transformation']
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
 
 export default function AI2025UltimateBreakthroughPage() {
   return (
     <div>
+<<<<<<< HEAD
       <SEO
         title="AI 2025 Ultimate Breakthrough"
         description="Discover the ultimate AI breakthroughs of 2025. Revolutionary technologies that will transform your business."
@@ -20,6 +24,9 @@ export default function AI2025UltimateBreakthroughPage() {
         <h1 className="text-4xl font-bold text-center mb-8">AI 2025 Ultimate Breakthrough</h1>
         <p className="text-center text-gray-600">Coming soon - Revolutionary AI technologies</p>
       </div>
+=======
+      <h1>AI 2025 Ultimate Breakthrough</h1>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
     </div>
   )
 }
