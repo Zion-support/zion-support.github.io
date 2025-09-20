@@ -1,4 +1,4 @@
-import React from "react;";
+import React from "
 
 export function DisputeDashboard() {return (
 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">;

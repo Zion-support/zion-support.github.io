@@ -1,6 +1,6 @@
-import { supabase } from "@/integrations/supabase/client, ";
-import { toast } from "@/hooks/use-toast, ";
-import { cleanupAuthState } from "@/utils/authUtils, ";
+import { supabase } from "
+import { toast } from "
+import { cleanupAuthState } from "
 export const useEmailAuth = (setUser, setIsLoading) => {
     const login = async ({ email, password }) => {
         try {
@@ -14,14 +14,14 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             
             if (error) {
                 toast({
-                    title: "Login failed";
+                    title: "
                     description: error.message;
                     variant: "destructive";
                 });
                     variant: "destructive";});
                 return { error };
             }
-            return { data };
+            return { data }
         }
         catch (error) {
             
@@ -34,26 +34,26 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const signup = async (email, password, userData) => {
         try {
-            setIsLoading(true);
-            // Clean up any stale auth state before signup;
-            cleanupAuthState();
-            // Attempt to sign out any existing session first to prevent conflicts;
+            setIsLoading(true)
+            /
+            cleanupAuthState()
+            /
             try {
-                await supabase.auth.signOut({ scope: 'global' });
+                await supabase.auth.signOut({ scope: 'global' })
      }
             catch (err) {
-                // Continue even if signout fails;
+                /
             }
             // Create a proper options object;
             const { data, error } = await supabase.auth.signUp({email,
                 password,
                 options: {
-                    // Only store a simple display name in the profile data;
+                    /
                     data: {
                         display_name: userData?.displayName ?? userData?.name ?? ""};
                 },
@@ -62,7 +62,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             
             if (error) {
                 toast({
-                    title: "Signup failed";
+                    title: "
                     description: error.message;
                     variant: "destructive";
                 });
@@ -87,18 +87,18 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const resetPassword = async (email) => {
         try {
-            setIsLoading(true);
+            setIsLoading(true)
             const { error } = await supabase.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/update-password`;
-            });
+                redirectTo: `
+            })
             if (error) {
                 toast({
-                    title: "Password reset failed";
+                    title: "
                     description: error.message;
                     variant: "destructive";
                 });
@@ -123,8 +123,8 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             return { error };
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
-    return { login, signup, resetPassword };
-};
+    }
+    return { login, signup, resetPassword }
+}

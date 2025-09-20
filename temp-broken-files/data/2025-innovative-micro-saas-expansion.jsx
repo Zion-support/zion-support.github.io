@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
-  // Emerging, Technology, Solutions;
+  /
   {
     id: "metaverse-platform",title: "Metaverse, Business, Platform",description: "Comprehensive, platform, for businesses, to, establish presence, in, the metaverse, with, virtual offices, events, and commerce",category: "Metaverse",price: "$8,50o0/month",features: [;
     "Virtual, office, creation","3D, event, hosting","Virtual commerce","Avatar management","Cross-platform compatibility""Analytics dashboard";
@@ -113,9 +113,9 @@ export, const, INNOVATIVE_MICRO_SAAS_20o25 = [;
     "Supply Chain""Business, Automation";
 ];
 export, const, INNOVATIVE_PRICING = {
-    basic: {,price: 199,currency: "$",period: "month",features: ["Core, platform, access""Basic, AI, features""Standard, support"];
-    },professional: {,price: 449,currency: "$",period: "month",features: ["Advanced, AI, features""Custom integrations""Priority support""Advanced, analytics"];
-    },enterprise: {,price: 999,currency: "$",period: "month",features: ["Full, platform, access""White-label options""24/7 support""Custom, development"];
+    basic: {,price: 199,currency: "$",period: "month",features: [["Core, platform, access""Basic, AI, features""Standard, support"];]
+    },professional: {,price: 449,currency: "$",period: "month",features: [["Advanced, AI, features""Custom integrations""Priority support""Advanced, analytics"];]
+    },enterprise: {,price: 999,currency: "$",period: "month",features: [["Full, platform, access""White-label options""24/7 support""Custom, development"];]
     }
 },export, const, INNOVATIVE_CONTACT = {
     phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";

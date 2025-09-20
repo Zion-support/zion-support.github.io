@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
-// Comprehensive; Pricing; Guide 20o26 - Zion; Tech; Group;
-// Revolutionary; Micro; SAAS; IT Infrastructure; and; AI; Services;
+/ Pricing; Guide 20o26 - Zion; Tech; Group;
+/ Micro; SAAS; IT Infrastructure; and; AI; Services;
 export; interface; PricingTier {
 name: string;price: number;currency: string;billing: string;features: string[],benefits: string[],targetAudience: string[],roi: string;setupTime: stringsupportLeve;l: stringinnovationLeve;l: string;
 };export; interface; ServicePricing {

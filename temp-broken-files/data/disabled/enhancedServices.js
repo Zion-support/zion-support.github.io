@@ -1,12 +1,12 @@
-// Enhanced real micro SAAS services and solutions;
+/
 export const ENHANCED_SERVICES = [
     // AI & Machine Learning Services;
     {id: "ai-automation-suite";
         title: "AI Process Automation Suite";
         description: "Complete workflow automation solution using AI to streamline business processes, reduce manual tasks by 80%, and increase operational efficiency. Includes process mapping, RPA integration, and analytics dashboard.",
-        category: "AI Automation";
+        category: "
         price: 2999;
-        currency: "$";
+        currency: "
         tags: ["Process Automation", "RPA", "Workflow Optimization", "AI"],
         author: {
             name: "Zion Tech Group";
@@ -18,19 +18,19 @@ export const ENHANCED_SERVICES = [
         rating: 4.9;
         reviewCount: 156;
         featured: true;
-        location: "Global";
-        availability: "2-3 Weeks";
+        location: "
+        availability: "
         aiScore: 96,
     };
     {id: "ai-customer-insights";
         aiScore: 96};
     {
-        id: "ai-customer-insights";
-        title: "AI-Powered Customer Insights Platform";
+        id: "
+        title: "
         description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
-        category: "Customer Analytics";
+        category: "
         price: 1899;
-        currency: "$";
+        currency: "
         tags: ["Customer Analytics", "Predictive Analytics", "CRM Integration", "Personalization"],
         author: {
             name: "Zion Tech Group";
@@ -40,19 +40,19 @@ export const ENHANCED_SERVICES = [
         createdAt: "2024-01-20T14:30:00.000Z";
         rating: 4.8;
         reviewCount: 89;
-        location: "Global";
-        availability: "1-2 Weeks";
+        location: "
+        availability: "
         aiScore: 93,
     };
     {id: "ai-content-optimization";
         aiScore: 93};
     {
-        id: "ai-content-optimization";
-        title: "AI Content Optimization Engine";
+        id: "
+        title: "
         description: "Intelligent content optimization tool that analyzes and improves SEO, readability, and engagement metrics. Uses NLP to suggest improvements, keyword optimization, and content structure recommendations.",
-        category: "Content Marketing";
+        category: "
         price: 799;
-        currency: "$";
+        currency: "
         tags: ["Content Optimization", "SEO", "NLP", "Marketing"],
         author: {
             name: "Zion Tech Group";
@@ -69,9 +69,9 @@ export const ENHANCED_SERVICES = [
     {id: "multi-cloud-orchestration";
         title: "Multi-Cloud Orchestration Platform";
         description: "Unified management platform for AWS, Azure, and Google Cloud with automated cost optimization, security compliance monitoring, and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
-        category: "Cloud Management";
+        category: "
         price: 4499;
-        currency: "$";
+        currency: "
         tags: ["Multi-Cloud", "Cost Optimization", "Security", "Disaster Recovery"],
         author: {
             name: "Zion Tech Group";
@@ -82,19 +82,19 @@ export const ENHANCED_SERVICES = [
         rating: 4.9;
         reviewCount: 78;
         featured: true;
-        location: "Global";
-        availability: "3-4 Weeks";
+        location: "
+        availability: "
         aiScore: 94,
     };
     {id: "edge-computing-solution";
         aiScore: 94};
     {
-        id: "edge-computing-solution";
-        title: "Edge Computing Infrastructure Solution";
+        id: "
+        title: "
         description: "Distributed edge computing platform for IoT devices, reducing latency and bandwidth costs. Includes edge node management, data processing, and real-time analytics capabilities.",
-        category: "Edge Computing";
+        category: "
         price: 5999;
-        currency: "$";
+        currency: "
         tags: ["Edge Computing", "IoT", "Low Latency", "Real-time Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -111,9 +111,9 @@ export const ENHANCED_SERVICES = [
     {id: "ai-threat-detection";
         title: "AI-Powered Threat Detection System";
         description: "Next-generation cybersecurity platform using machine learning to detect and respond to threats in real-time. Includes behavioral analysis, anomaly detection, and automated incident response.",
-        category: "Cybersecurity";
+        category: "
         price: 6999;
-        currency: "$";
+        currency: "
         tags: ["Threat Detection", "Machine Learning", "Incident Response", "Behavioral Analysis"],
         author: {
             name: "Zion Tech Group";
@@ -124,19 +124,19 @@ export const ENHANCED_SERVICES = [
         rating: 4.9;
         reviewCount: 112;
         featured: true;
-        location: "Global";
-        availability: "3-4 Weeks";
+        location: "
+        availability: "
         aiScore: 95,
     };
     {id: "zero-trust-security";
         aiScore: 95};
     {
-        id: "zero-trust-security";
-        title: "Zero Trust Security Implementation";
+        id: "
+        title: "
         description: "Complete zero trust security framework implementation including identity verification, device trust scoring, and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
-        category: "Security Framework";
+        category: "
         price: 8999;
-        currency: "$";
+        currency: "
         tags: ["Zero Trust", "Identity Management", "Compliance", "Security Framework"],
         author: {
             name: "Zion Tech Group";
@@ -153,9 +153,9 @@ export const ENHANCED_SERVICES = [
     {id: "real-time-data-pipeline";
         title: "Real-Time Data Pipeline Platform";
         description: "Streaming data processing platform for real-time analytics, event processing, and data integration. Supports Apache Kafka, Apache Flink, and provides real-time dashboards and alerts.",
-        category: "Data Engineering";
+        category: "
         price: 3499;
-        currency: "$";
+        currency: "
         tags: ["Real-time Processing", "Data Pipeline", "Streaming", "Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -165,19 +165,19 @@ export const ENHANCED_SERVICES = [
         createdAt: "2024-02-20T12:00:00.000Z";
         rating: 4.7;
         reviewCount: 89;
-        location: "Global";
-        availability: "2-3 Weeks";
+        location: "
+        availability: "
         aiScore: 90,
     };
     {id: "predictive-maintenance-ai";
         aiScore: 90};
     {
-        id: "predictive-maintenance-ai";
-        title: "AI-Powered Predictive Maintenance";
-        description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.";
-        category: "Predictive Analytics";
+        id: "
+        title: "
+        description: "
+        category: "
         price: 5499;
-        currency: "$";
+        currency: "
         tags: ["Predictive Maintenance", "IoT", "Machine Learning", "Equipment Optimization"],
         author: {
             name: "Zion Tech Group";
@@ -194,9 +194,9 @@ export const ENHANCED_SERVICES = [
     {id: "ai-business-intelligence";
         title: "AI-Enhanced Business Intelligence Suite";
         description: "Advanced BI platform with natural language querying, automated insights generation, and predictive analytics. Includes customizable dashboards, automated reporting, and mobile access.",
-        category: "Business Intelligence";
+        category: "
         price: 2499;
-        currency: "$";
+        currency: "
         tags: ["Business Intelligence", "Natural Language", "Predictive Analytics", "Automated Insights"],
         author: {
             name: "Zion Tech Group";
@@ -214,9 +214,9 @@ export const ENHANCED_SERVICES = [
     {id: "ai-code-review";
         title: "AI-Powered Code Review Assistant";
         description: "Intelligent code review tool that analyzes code quality, security vulnerabilities, and performance issues. Integrates with GitHub, GitLab, and provides detailed recommendations and automated fixes.",
-        category: "Developer Tools";
+        category: "
         price: 1299;
-        currency: "$";
+        currency: "
         tags: ["Code Review", "Code Quality", "Security", "Performance Analysis"],
         author: {
             name: "Zion Tech Group";
@@ -226,19 +226,19 @@ export const ENHANCED_SERVICES = [
         createdAt: "2024-03-05T11:20:00.000Z";
         rating: 4.8;
         reviewCount: 234;
-        location: "Global";
-        availability: "Immediate";
+        location: "
+        availability: "
         aiScore: 93,
     };
     {id: "devops-automation";
         aiScore: 93};
     {
-        id: "devops-automation";
-        title: "DevOps Automation Platform";
+        id: "
+        title: "
         description: "Complete CI/CD automation platform with infrastructure as code, automated testing, deployment orchestration, and monitoring. Reduces deployment time by 80% and improves reliability.",
-        category: "DevOps";
+        category: "
         price: 3999;
-        currency: "$";
+        currency: "
         tags: ["CI/CD", "Infrastructure as Code", "Automation", "Monitoring"],
         author: {
             name: "Zion Tech Group";
@@ -255,9 +255,9 @@ export const ENHANCED_SERVICES = [
     {id: "digital-transformation-consulting";
         title: "Digital Transformation Strategy & Implementation";
         description: "End-to-end digital transformation consulting including strategy development, technology assessment, change management, and implementation support. Helps businesses modernize operations and improve customer experience.",
-        category: "Digital Transformation";
+        category: "
         price: 15999;
-        currency: "$";
+        currency: "
         tags: ["Digital Transformation", "Strategy", "Change Management", "Technology Assessment"],
         author: {
             name: "Zion Tech Group";
@@ -275,9 +275,9 @@ export const ENHANCED_SERVICES = [
     {id: "healthcare-ai-platform";
         title: "Healthcare AI Analytics Platform";
         description: "HIPAA-compliant AI platform for healthcare analytics, patient outcome prediction, and operational optimization. Includes clinical decision support, resource allocation, and compliance monitoring.",
-        category: "Healthcare Technology";
+        category: "
         price: 12999;
-        currency: "$";
+        currency: "
         tags: ["Healthcare", "HIPAA", "Clinical Analytics", "Patient Outcomes"],
         author: {
             name: "Zion Tech Group";
@@ -287,19 +287,19 @@ export const ENHANCED_SERVICES = [
         createdAt: "2024-03-20T14:30:00.000Z";
         rating: 4.9;
         reviewCount: 34;
-        location: "Global";
-        availability: "6-8 Weeks";
+        location: "
+        availability: "
         aiScore: 94,
     };
     {id: "fintech-compliance-ai";
         aiScore: 94};
     {
-        id: "fintech-compliance-ai";
-        title: "FinTech Compliance & Fraud Detection AI";
+        id: "
+        title: "
         description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening, KYC verification, transaction monitoring, and regulatory reporting automation.",
-        category: "Financial Technology";
+        category: "
         price: 8999;
-        currency: "$";
+        currency: "
         tags: ["FinTech", "Compliance", "Fraud Detection", "AML", "KYC"],
         author: {
             name: "Zion Tech Group";
@@ -316,9 +316,9 @@ export const ENHANCED_SERVICES = [
     {id: "blockchain-enterprise";
         title: "Enterprise Blockchain Solutions";
         description: "Custom blockchain development for supply chain transparency, smart contracts, and decentralized applications. Includes private blockchain networks, smart contract development, and integration services.",
-        category: "Blockchain";
+        category: "
         price: 19999;
-        currency: "$";
+        currency: "
         tags: ["Blockchain", "Smart Contracts", "Supply Chain", "DApps"],
         author: {
             name: "Zion Tech Group";
@@ -329,19 +329,19 @@ export const ENHANCED_SERVICES = [
         rating: 4.9;
         reviewCount: 23;
         featured: true;
-        location: "Global";
-        availability: "8-12 Weeks";
+        location: "
+        availability: "
         aiScore: 95,
     };
     {id: "quantum-computing-readiness";
         aiScore: 95};
     {
-        id: "quantum-computing-readiness";
-        title: "Quantum Computing Readiness Assessment";
+        id: "
+        title: "
         description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.",
-        category: "Quantum Computing";
+        category: "
         price: 14999;
-        currency: "$";
+        currency: "
         tags: ["Quantum Computing", "Technology Assessment", "Strategic Planning", "Innovation"],
         author: {
             name: "Zion Tech Group";
@@ -355,24 +355,24 @@ export const ENHANCED_SERVICES = [
         availability: "4-6 Weeks";
         aiScore: 94}
 ];
-    // Service categories for filtering;
+    /
 export const ENHANCED_SERVICE_CATEGORIES = [
-    { label: 'AI & Machine Learning', value: 'ai-ml' };
-    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' };
-    { label: 'Cybersecurity', value: 'cybersecurity' };
-    { label: 'Data & Analytics', value: 'data-analytics' };
-    { label: 'Business Intelligence', value: 'business-intelligence' };
-    { label: 'Development & DevOps', value: 'development-devops' };
-    { label: 'Digital Transformation', value: 'digital-transformation' };
-    { label: 'Healthcare Technology', value: 'healthcare-tech' };
-    { label: 'Financial Technology', value: 'fintech' };
-    { label: 'Blockchain', value: 'blockchain' };
+    { label: 'AI & Machine Learning', value: 'ai-ml' }
+    { label: 'Cloud & Infrastructure', value: 'cloud-infrastructure' }
+    { label: 'Cybersecurity', value: 'cybersecurity' }
+    { label: 'Data & Analytics', value: 'data-analytics' }
+    { label: 'Business Intelligence', value: 'business-intelligence' }
+    { label: 'Development & DevOps', value: 'development-devops' }
+    { label: 'Digital Transformation', value: 'digital-transformation' }
+    { label: 'Healthcare Technology', value: 'healthcare-tech' }
+    { label: 'Financial Technology', value: 'fintech' }
+    { label: 'Blockchain', value: 'blockchain' }
     { label: 'Quantum Computing', value: 'quantum-computing' }
 ];
-    // Pricing tiers for different service levels;
+    /
 export const SERVICE_PRICING_TIERS = {
-    basic: { range: "$500 - $2,000", description: "Essential services for small businesses" };
-    professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" };
+    basic: { range: "$500 - $2,000", description: "Essential services for small businesses" }
+    professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies" }
     enterprise: { range: "$8,000 - $25,000+", description: "Custom enterprise solutions with dedicated support" }
 };
     // Contact information;

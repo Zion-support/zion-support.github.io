@@ -1,49 +1,49 @@
-import { useState } from 'react, ';
-import Link from 'next/link;';
-import { useRouter } from 'next/router, ';
-import { Logo } from '@/components/header/Logo, ';
-import { PointsBadge } from '@/components/loyalty/PointsBadge, ';
-import { UserMenu } from '@/components/header/UserMenu, ';
-import { LanguageSelector } from '@/components/header/LanguageSelector, ';
-import { ModeToggle } from '@/components/ModeToggle, ';
-import { useAuth } from '@/hooks/useAuth, ';
-import { useIsMobile } from '@/hooks/use-mobile, ';
-import { useMessaging } from '@/context/MessagingContext, ';
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput, ';
-import { generateSearchSuggestions } from '@/data/marketplaceData, ';
-import { slugify } from '@/lib/slugify, ';
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation, ';
-import { MobileMenu } from '@/components/header/MobileMenu, ';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav, ';
-import { Menu, X, ShoppingCart } from 'lucide-react, ';
-import { useTranslation } from 'react-i18next, ';
-import { useSelector } from 'react-redux, ';
+import import { useState } from 'react, ';
+import import Link from 'next/link;';
+import import { useRouter } from 'next/router, ';
+import import { Logo } from '@/components/header/Logo, ';
+import import { PointsBadge } from '@/components/loyalty/PointsBadge, ';
+import import { UserMenu } from '@/components/header/UserMenu, ';
+import import { LanguageSelector } from '@/components/header/LanguageSelector, ';
+import import { ModeToggle } from '@/components/ModeToggle, ';
+import import { useAuth } from '@/hooks/useAuth, ';
+import import { useIsMobile } from '@/hooks/use-mobile, ';
+import import { useMessaging } from '@/context/MessagingContext, ';
+import import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput, ';
+import import { generateSearchSuggestions } from '@/data/marketplaceData, ';
+import import { slugify } from '@/lib/slugify, ';
+import import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation, ';
+import import { MobileMenu } from '@/components/header/MobileMenu, ';
+import import { MobileBottomNav } from '@/components/header/MobileBottomNav, ';
+import import { Menu, X, ShoppingCart } from 'lucide-react, ';
+import import { useTranslation } from 'react-i18next, ';
+import import { useSelector } from 'react-redux, ';
 export function PrimaryNav() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const { user } = useAuth();
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const { user } = useAuth()
     const isLoggedIn = !!user;
-    const isMobile = useIsMobile();
-    const { t } = useTranslation();
-    const router = useRouter();
-    const [query, setQuery] = useState('');
-    const suggestions = generateSearchSuggestions();
+    const isMobile = useIsMobile()
+    const { t } = useTranslation()
+    const router = useRouter()
+    const [query, setQuery] = useState('')
+    const suggestions = generateSearchSuggestions()
     let unreadCount = 0;
     try {
-        const messaging = useMessaging();
+        const messaging = useMessaging()
         unreadCount = messaging.unreadCount;
     }
     catch {
-        // context not available;
+        /
     }
-    const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
+    const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0))
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (query.trim()) {
             
-            router.push(`/search/${slugify(query)}`);
-            setQuery('');
+            router.push(`/search/${slugify(query)}`)
+            setQuery('')
         }
-    };
+    }
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
@@ -60,22 +60,22 @@ export function PrimaryNav() {
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
             
-            // Handle different suggestion types with proper navigation;
+            /
             if (sugg.id) {
-                // Product listings with IDs go to product detail page;
-                router.push(`/marketplace/listing/${sugg.id}`);
+                /
+                router.push(`/marketplace/listing/${sugg.id}`)
             }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                // Documentation suggestions navigate directly to their path;
-                router.push(sugg.slug);
+                /
+                router.push(sugg.slug)
             }
             else if (sugg.type === 'blog' && sugg.slug) {
-                // Blog posts navigate to blog detail page;
-                router.push(`/blog/${sugg.slug}`);
+                /
+                router.push(`/blog/${sugg.slug}`)
             }
             else {
-                // Default: search results page with slug;
-                router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
+                /
+                router.push(`/search/${sugg.slug || slugify(sugg.text)}`)
      }
             setQuery('');
             // Track analytics event;

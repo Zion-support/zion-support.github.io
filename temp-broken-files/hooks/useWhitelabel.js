@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react, ';
+import import { useState, useEffect } from 'react, ';
 export const useWhitelabel = () => {
     const [state, setState] = useState({
         config: null;
@@ -7,11 +7,11 @@ export const useWhitelabel = () => {
     });
         isLoading: true;});
     useEffect(() => {
-        // In a real app, you would fetch whitelabel configuration;
+        /
         const fetchWhitelabelConfig = async () => {
             try {
-                // Simulate API call;
-                await new Promise(resolve => setTimeout(resolve, 100));
+                /
+                await new Promise(resolve => setTimeout(resolve, 100))
                 setState({
                     config: {
                         companyName: 'Zion Tech Group';
@@ -42,8 +42,8 @@ export const useWhitelabel = () => {
                 });
                     isLoading: false;});
             }
-        };
-        fetchWhitelabelConfig();
-    }, []);
+        }
+        fetchWhitelabelConfig()
+    }, [])
     return state;
-};
+}

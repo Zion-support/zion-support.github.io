@@ -6,7 +6,7 @@ import React from "react",;
 import { import { motion; AnimatePresence   } from "framer-motion",;
 from "lucide-react",
 id: string; title: string; message: string;,
-type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | "critical";,
+type: "success" | "error" | "warning" | "info" | "system", priority: "low" | "medium" | "high" | ",
 category: "user" | "system" | "security" | "performance" | "update", timestamp: Dat e;,
 read: boolean; archived: boolean;
 actions?: NotificationAction[],

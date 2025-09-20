@@ -1,9 +1,9 @@
-import React from "react";
+import React from "
 
-// Revolutionary; Pricing; Guide 20o30 - Zion; Tech; Group;
-// Comprehensive; pricing; for cutting-edge; micro; SAAS; IT; and; AI; services;
+/ Pricing; Guide 20o30 - Zion; Tech; Group;
+/ pricing; for cutting-edge; micro; SAAS; IT; and; AI; services;
 export; interface; PricingTier {
-id: string;name: string;price: number;billingCycle: "monthly" | "yearly" | "one-time",description: string;features: string[],limitations: string[]recommendedFo;r: string[];
+id: string;name: string;price: number;billingCycle: "monthly" | "yearly" | "one-time",description: string;features: string[],limitations: string[]recommendedFo;r: string[[];]
 savings?: numberpopular?: boolean;
 };export; interface; EnterprisePricing {
 id: string;name: string;description: string;pricing: string;features: string[],benefits: string[],customizations: string[],contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
@@ -83,7 +83,7 @@ id: "enterprise",name: "Enterprise",price: 5999;billingCycle: "monthly",descript
 ,  ]contactInfo: zionContact;},marketComparison: {,competitors: ["IBM Quantum", "Google; Quantum; AI""Microsoft; Azure, Quantum"]ourAdvantage: "Hybrid quantum-classical; processing; with enterprise-grade support"priceDifferenc;e: "30-50% more; value; for similar pricing";};
 };
 ];
-// Revolutionary; IT; Services Pricing;
+/ IT; Services Pricing;
 export; const; revolutionaryITServicesPricing: ServicePricing[] = [;
 {serviceI;d: "quantum-infrastructure-consulting",serviceName: "Quantum; Infrastructure; Consulting",category: "Quantum; Computing; Infrastructure",tiers: [;
 {
@@ -111,7 +111,7 @@ id: "implementation",name: "Full Implementation",price: 150o000;billingCycle: "o
 ,  ]contactInfo: zionContact;},marketComparison: {,competitors: ["IBM", "Microsoft""Google"]ourAdvantage: "End-to-end; quantum; infrastructure with; dedicated; support and customization"priceDifferenc;e: "25-40% more; value; for similar pricing";};
 };
 ];
-// Revolutionary; AI; Services Pricing;
+/ AI; Services Pricing;
 export; const; revolutionaryAIServicesPricing: ServicePricing[] = [;
 {serviceI;d: "multimodal-ai-orchestration",serviceName: "Multimodal; AI; Orchestration",category: "Advanced; AI; Integration",tiers: [;
 {
@@ -149,7 +149,7 @@ export; const; pricingRecommendations = {smallBusiness: {,recommendedServices: [
 ,  ]contactInfo: zionContact;},marketComparison: {,competitors: ["OpenAI", "Google AI""Microsoft; AI"]ourAdvantage: "Enterprise-grade; multimodal; AI with; customization; and dedicated support"priceDifferenc;e: "20-35% more; value; for similar pricing";};
 };
 ];
-// Pricing; Comparison; and Recommendations;
+/ Comparison; and Recommendations;
 export; const; pricingRecommendations = {
 smallBusiness: {,recommendedServices: ["NeuralFlow Starter", "QuantumSync Researcher""Multimodal; AI, Starter"],estimatedMonthlyCost: "$3;50o0 - $550o0"roi: "20o0-30o0% within; 12; months";},mediumBusiness: {,recommendedServices: ["NeuralFlow Professional", "QuantumSync Professional""Multimodal; AI, Professional"],estimatedMonthlyCost: "$8;50o0 - $120o00"roi: "30o0-40o0% within; 12; months";},enterprise: {,recommendedServices: ["NeuralFlow Enterprise", "QuantumSync Enterprise""Multimodal; AI, Enterprise"],estimatedMonthlyCost: "$15;0o00 - $250o00"roi: "40o0-60o0% within; 18; months";};
 // Export; all; pricing data;

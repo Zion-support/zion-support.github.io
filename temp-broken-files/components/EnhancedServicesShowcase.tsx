@@ -31,8 +31,8 @@ const services = [{,
 "category": "AI & Automation",;
 "features": "["Process optimization"", "AI-powered workflowsReal-time analyticsScalable automation"],;
 "benefits": "["Reduce manual work by 70-85%"", "Improve efficiency by 60%Cut operational costs by 40-50%"],;
-"color": "from-cyan-500 to-blue-600";
-};
+"color": "
+}
 "glowColor": "cyan"},
 {,
 "title": "AI Cybersecurity",
@@ -108,14 +108,14 @@ TrendingUp;
 Users;
 Clock;
 CheckCircle;
-Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {;
+Search} from lucide-reactexport const EnhancedServicesShowcase: React.FC = () => {
 ;
 const services = [{,;
 title: AI Workflow Automation,";
-};
-description: "Transform business operations with intelligent automation that learns and scales";
-price: "From $299/month";
-path: "/services/ai-workflow-automation";
+}
+description: "
+price: "
+path: "
 icon: GitFor k;
 category: "AI & Automation";
 features: ["Process optimizationAI-powered workflowsReal-time analyticsScalable automation"];
@@ -123,10 +123,10 @@ benefits: ["Reduce manual work by 70-85%Improve efficiency by 60%Cut operational
 color: "from-cyan-500 to-blue-600";,
 glowColor: "cyan"};
 {,
-title: "AI Cybersecurity";
-description: "Protect your business with AI-powered threat detection and prevention";
-price: "From $499/month";
-path: "/services/ai-cybersecurity";
+title: "
+description: "
+price: "
+path: "
 icon: Shiel d;
 category: "Security";
 features: ["Threat detectionBehavioral analyticsAutomated responseCompliance monitoring"];
@@ -137,7 +137,7 @@ glowColor: "purple"};
 title: "Quantum Computing";,
 description: "Solve complex problems 1000x faster with quantum computing solutions";,
 price: "From $2;999/month",
-path: "/services/quantum-computing-solutions";
+path: "
 icon: Ato m;
 category: "Quantum Tech";
 features: ["Quantum algorithmsML accelerationFinancial modelingDrug discovery"];
@@ -145,10 +145,10 @@ benefits: ["1000x faster computationBreakthrough discoveriesUnbreakable encrypti
 color: "from-green-500 to-emerald-600";,
 glowColor: "green"};
 {,
-title: "IoT Edge Computing";
-description: "Process data at the edge and reduce latency by 90%";
-price: "From $399/month";
-path: "/services/iot-edge-computing";
+title: "
+description: "
+price: "
+path: "
 icon: Cp u;
 category: "IoT & Edge";
 features: ["Edge processingDevice managementReal-time analyticsAI at the edge"];
@@ -156,10 +156,10 @@ benefits: ["Reduce latency by 90%Cut bandwidth costs by 60-80%Scale to millions 
 color: "from-orange-500 to-red-600";,
 glowColor: "orange"};
 {,
-title: "Cloud & DevOps";,
+title: ",
 description: "Build; deploy; and scale with enterprise-grade cloud infrastructure",
-price: "From $799/month";
-path: "/services/cloud-devops";
+price: "
+path: "
 icon: Clou d;
 category: "Infrastructure";
 features: ["Cloud migrationCI/CD pipelinesInfrastructure as codeMonitoring & alerting"];
@@ -170,7 +170,7 @@ glowColor: "blue"};
 title: "AI Sales Copilot";,
 description: "Automate sales processes and boost conversion rates with AI";,
 price: "From $1;500/month",
-path: "/services/ai-sales-copilot";
+path: "
 icon: Brai n;
 category: "Sales AI";
 features: ["Lead scoringCRM automationSales analyticsPredictive insights"];
@@ -189,7 +189,7 @@ staggerChildren: 0.1}
 ;
 const categories = ["AllAI & AnalyticsQuantum ComputingCybersecurity", "Cloud & DevOpsData & AnalyticsBlockchain & Web3"],;
 ,;
-export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory; setSelectedCategory] = useState<any>("All"),
+export export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory; setSelectedCategory] = useState<any>("All"),
 const [hoveredService; setHoveredService] = useState<string | null>(null),
 </string>,
 </any>,

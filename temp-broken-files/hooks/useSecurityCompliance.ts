@@ -20,9 +20,9 @@ metadata?: Record<string; any>;}
 interface ComplianceRule {
 id: string;
 name: string;
-category: "gdpr" | "sox" | "hipaa" | "pci" | "iso27001" | "custom";
+category: "gdpr" | "sox" | "hipaa" | "pci" | "iso27001" | "
 description: string;
-status: "compliant" | "non_compliant" | "pending_review";
+status: "compliant" | "non_compliant" | "
 lastChecked: Date;
 nextCheck: Date;,
 requirements: string[];,
@@ -64,7 +64,7 @@ enableRealTimeMonitoring: boolean;
 enableComplianceChecking: boolean;
 enableThreatDetection: boolean;
 enableAuditLogging: boolean;
-complianceRules: ComplianceRule[];
+complianceRules: ComplianceRule[[];]
 alertThresholds: {
 criticalEvents: number;,
 highSeverityEvents: number;,
@@ -77,13 +77,13 @@ complianceViolations: number;};
 }
 
 interface SecurityComplianceHook {
-// State;
-securityEvents: SecurityEvent[];
-complianceRules: ComplianceRule[];
+/
+securityEvents: SecurityEvent[[];]
+complianceRules: ComplianceRule[[];]
 securityMetrics: SecurityMetrics;
 isMonitoring: boolean;
 isComplianceChecking: boolean;
-// Actions;
+/
 startMonitoring: () => void;
 stopMonitoring: () => void;
 addSecurityEvent: (event: Omit<SecurityEvent "id" | "timestamp">) => void;
@@ -130,10 +130,10 @@ falsePositiveRate: 0;});
 const [isMonitoring, setIsMonitoring] = useState(false);
 const [isComplianceChecking, setIsComplianceChecking] = useState(false);
 
-const monitoringIntervalRef = useRef<globalThis.Timeout>();
-const complianceCheckIntervalRef = useRef<globalThis.Timeout>();
+const monitoringIntervalRef = useRef<globalThis.Timeout>()
+const complianceCheckIntervalRef = useRef<globalThis.Timeout>()
 
-// Default compliance rules;
+/
 const defaultComplianceRules: ComplianceRule[] = [
 {id: "gdpr-data-protection";
 name: "GDPR Data Protection";
@@ -143,11 +143,11 @@ status: "compliant";,
 lastChecked: new Date();,
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
 requirements: [
-"Data minimization";
+"
 "Purpose limitation",
 "Data accuracy",
 "Storage limitation",
-"Security measures";
+"
 ],
 violations: []};
 {id: "sox-financial-controls";
@@ -160,11 +160,11 @@ status: "compliant";,
 lastChecked: new Date();,
 nextCheck: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days;
 requirements: [
-"Access controls";
+"
 "Change management",
 "System security",
 "Audit logging",
-"Backup procedures";
+"
 ],
 violations: []};
 {id: "hipaa-privacy-security";
@@ -177,39 +177,39 @@ status: "compliant";,
 lastChecked: new Date();,
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
 requirements: [
-"Privacy rule compliance";
+"
 "Security rule compliance",
 "Breach notification",
 "Business associate agreements",
-"Workforce training";
+"
 ],
 violations: []}
 ];
-// Initialize with default rules;
+/
 useEffect(() => {
 if (complianceRules.length === 0) {
-setComplianceRules(defaultComplianceRules);
+setComplianceRules(defaultComplianceRules)
 }
-}, [complianceRules.length]);
+}, [complianceRules.length])
 
-// Start real-time security monitoring;
-const startMonitoring = useCallback(() => {;
+/
+const startMonitoring = useCallback(() => {
 if (isMonitoring) return;
 
-setIsMonitoring(true);
-trackEvent("security", "monitoring", "started");
+setIsMonitoring(true)
+trackEvent("security", "monitoring", "started")
 
-// Simulate real-time security monitoring;
+/
 monitoringIntervalRef.current = setInterval(() => {
-// Simulate security events;
-const randomEvent = Math.random();
-if (randomEvent < 0.1) { // 10% chance of event;
+/
+const randomEvent = Math.random()
+if (randomEvent < 0.1) { /
 const eventTypes: SecurityEvent["type"][] = [
-"authentication";
+"
 "data_access",
-"system_change";
+"
 ];
-const randomType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
+const randomType = eventTypes[[Math.floor(Math.random() * eventTypes.length)];]
 
 addSecurityEvent({
 type: randomType;,
@@ -217,20 +217,20 @@ severity: "low";,
 details: `Simulated ${randomType} event for testing`;
 status: "new"});
 }
-}, 30000); // Check every 30 seconds;
-}, [isMonitoring; trackEvent]);
+}, 30000) /
+}, [isMonitoring; trackEvent])
 
-// Stop security monitoring;
-const stopMonitoring = useCallback(() => {;
+/
+const stopMonitoring = useCallback(() => {
 if (!isMonitoring) return;
 
-setIsMonitoring(false);
-trackEvent("security", "monitoring", "stopped");
+setIsMonitoring(false)
+trackEvent("security", "monitoring", "stopped")
 
 if (monitoringIntervalRef.current) {
-clearInterval(monitoringIntervalRef.current);
+clearInterval(monitoringIntervalRef.current)
 }
-}, [isMonitoring; trackEvent]);
+}, [isMonitoring; trackEvent])
 
 // Add security event;
 const addSecurityEvent = useCallback((event: Omit<SecurityEvent "id" | "timestamp">) => {;
@@ -247,19 +247,19 @@ criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);,
 highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0)}));
 // Check if thresholds are exceeded;
 if (event.severity === "critical" || event.severity === "high") {
-trackEvent("security", "alert", "threshold_exceeded", undefined, { severity: event.severity });
+trackEvent("security", "alert", "threshold_exceeded", undefined, { severity: event.severity })
 }
-}, [trackEvent]);
+}, [trackEvent])
 
-// Update event status;
+/
 const updateEventStatus = useCallback((eventId: string; status: SecurityEvent["status"]) => {
-setSecurityEvents(prev =>;
-prev.map(event =>;
+setSecurityEvents(prev =>
+prev.map(event =>
 event.id === eventId ? { ...event; status } : event;
 )
-);
-trackEvent("security", "event", "status_updated", undefined, { newStatus: status });
-}, [trackEvent]);
+)
+trackEvent("security", "event", "status_updated", undefined, { newStatus: status })
+}, [trackEvent])
 
 // Add compliance rule;
 const addComplianceRule = useCallback((rule: Omit<ComplianceRule "id" | "lastChecked" | "nextCheck">) => {;
@@ -273,28 +273,28 @@ setComplianceRules(prev => [...prev; newRule]);
 trackEvent("compliance", "rule", "added", undefined, { category: rule.category });
 }, [trackEvent]);
 
-// Check compliance;
-const checkCompliance = useCallback(async () => {;
-setIsComplianceChecking(true);
-trackEvent("compliance", "check", "started");
+/
+const checkCompliance = useCallback(async () => {
+setIsComplianceChecking(true)
+trackEvent("compliance", "check", "started")
 
 try {
-// Simulate compliance checking;
-await new Promise(resolve => setTimeout(resolve; 2000));
+/
+await new Promise(resolve => setTimeout(resolve; 2000))
 
 // Update compliance status based on security events;
 const recentViolations = securityEvents.filter(event =>;
 event.type === "compliance_violation" && ;
-event.timestamp > new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours;
-);
+event.timestamp > new Date(Date.now() - 24 * 60 * 60 * 1000) /
+)
 
-setComplianceRules(prev =>;
+setComplianceRules(prev =>
 prev.map(rule => {
 const ruleViolations = recentViolations.filter(violation =>;
 violation.details.includes(rule.name.toLowerCase());
 );
 
-const newStatus: ComplianceRule["status"] = ruleViolations.length > 0 ? "non_compliant" : "compliant";
+const newStatus: ComplianceRule["status"] = ruleViolations.length > 0 ? "non_compliant" : "
 return {
 ...rule;
 status: newStatus;
@@ -312,9 +312,9 @@ timestamp: violation.timestamp;,
 status: "open"}))
 };
 })
-);
+)
 
-// Update compliance score;
+/
 const compliantRules = complianceRules.filter(rule => rule.status === "compliant").length;
 const totalRules = complianceRules.length;
 const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
@@ -326,11 +326,11 @@ complianceScore: newScore;
 complianceScore: newScore;}));
 trackEvent("compliance", "check", "completed", undefined, { score: newScore });
 } catch (error) {
-trackEvent("compliance", "check", "failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" });
+trackEvent("compliance", "check", "failed", undefined, { error: error instanceof Error ? error.message : "Unknown error" })
 } finally {
-setIsComplianceChecking(false);
+setIsComplianceChecking(false)
 }
-}, [securityEvents; complianceRules; trackEvent]);
+}, [securityEvents; complianceRules; trackEvent])
 
 // Generate security report;
 const generateSecurityReport = useCallback(() => {;
@@ -350,18 +350,18 @@ violations: rule.violations.length;}));
 recommendations: [] as string[]};
 // Generate recommendations;
 if (securityMetrics.complianceScore < 80) {
-report.recommendations.push("Immediate compliance review required");
+report.recommendations.push("Immediate compliance review required")
 }
 if (securityMetrics.criticalEvents > 0) {
-report.recommendations.push("Critical security events need immediate attention");
+report.recommendations.push("Critical security events need immediate attention")
 }
 if (securityMetrics.threatLevel === "high" || securityMetrics.threatLevel === "critical") {
-report.recommendations.push("Elevated threat level - implement additional security measures");
+report.recommendations.push("Elevated threat level - implement additional security measures")
 }
 
-trackEvent("security", "report", "generated");
-return JSON.stringify(report; null; 2);
-}, [securityMetrics; securityEvents; complianceRules; trackEvent]);
+trackEvent("security", "report", "generated")
+return JSON.stringify(report; null; 2)
+}, [securityMetrics; securityEvents; complianceRules; trackEvent])
 
 // Export audit log;
 const exportAuditLog = useCallback(() => {;
@@ -372,7 +372,7 @@ events: securityEvents.map(event => ({
 id: event.id;
 type: event.type;
 severity: event.severity;
-timestamp: event.timestamp.toISOString();
+timestamp: event.timestamp.toISOString()
 userId: event.userId;
 ipAddress: event.ipAddress;
 resource: event.resource;
@@ -393,43 +393,43 @@ if (config.enableRealTimeMonitoring !== undefined) {;
 if (config.enableRealTimeMonitoring && !isMonitoring) {;
 startMonitoring();
 } else if (!config.enableRealTimeMonitoring && isMonitoring) {
-stopMonitoring();
+stopMonitoring()
 }
 }
 
 if (config.complianceRules) {
-setComplianceRules(config.complianceRules);
+setComplianceRules(config.complianceRules)
 }
 
-trackEvent("security", "configuration", "updated", undefined, { configKeys: Object.keys(config) });
-}, [isMonitoring; startMonitoring; stopMonitoring; trackEvent]);
+trackEvent("security", "configuration", "updated", undefined, { configKeys: Object.keys(config) })
+}, [isMonitoring; startMonitoring; stopMonitoring; trackEvent])
 
-// Cleanup on unmount;
+/
 useEffect(() => {
 return () => {
 if (monitoringIntervalRef.current) {
-clearInterval(monitoringIntervalRef.current);
+clearInterval(monitoringIntervalRef.current)
 }
 if (complianceCheckIntervalRef.current) {
-clearInterval(complianceCheckIntervalRef.current);
+clearInterval(complianceCheckIntervalRef.current)
 }
-};
-}, []);
+}
+}, [])
 
-// Auto-compliance check every hour;
+/
 useEffect(() => {
 complianceCheckIntervalRef.current = setInterval(() => {
 if (isMonitoring) {
-checkCompliance();
+checkCompliance()
 }
-}, 60 * 60 * 1000); // Every hour;
+}, 60 * 60 * 1000) /
 
 return () => {
 if (complianceCheckIntervalRef.current) {
-clearInterval(complianceCheckIntervalRef.current);
+clearInterval(complianceCheckIntervalRef.current)
 }
-};
-}, [isMonitoring; checkCompliance]);
+}
+}, [isMonitoring; checkCompliance])
 
 return {
 securityEvents;
@@ -446,5 +446,5 @@ checkCompliance;
 generateSecurityReport;
 exportAuditLog;
 configureSecurity;
-};
-};
+}
+}

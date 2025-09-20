@@ -16,9 +16,9 @@ export function WhitelabelProvider({ children }) {const [isWhitelabel] = useStat
     return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
 }
 export function useWhitelabel() {
-    const context = useContext(WhitelabelContext);
+    const context = useContext(WhitelabelContext)
     if (context === undefined) {
-        throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+        throw new Error('useWhitelabel must be used within a WhitelabelProvider')
     }
     return context;
 }
@@ -37,8 +37,8 @@ const defaultConfig = {companyName: 'Zion Tech Group';
     const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);
 export const WhitelabelProvider = ({ children, config = {} }) => {
-    const mergedConfig = { ...defaultConfig, ...config };
+    const mergedConfig = { ...defaultConfig, ...config }
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}
-    </WhitelabelContext.Provider>);
-};
+    </WhitelabelContext.Provider>)
+}

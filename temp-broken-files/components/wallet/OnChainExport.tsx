@@ -36,18 +36,18 @@ variant: "destructive"});
 return;
 }
 
-// Request accounts;
-const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-const address = accounts[0];
+/
+const accounts = await ethereum.request({ method: "eth_requestAccounts" })
+const address = accounts[[0];]
 
 // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
 await ethereum.request({method: "personal_sign";,
 params: [address; message]});
 
-setIsConnected(true);
+setIsConnected(true)
 toast({
-title: "Wallet connected";,
+title: ",
 description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
 });
 } catch (error: any) {toast({
@@ -55,17 +55,16 @@ title: "Connection failed";,
 description: error.message || "Could not connect to wallet";,
 variant: "destructive"});
 }
-};
 
-const handleExportTokens = async () => {;
-setIsExporting(true);
-setExportStatus("processing");
+const handleExportTokens = async () => {
+setIsExporting(true)
+setExportStatus("processing")
 
 try {
-// Simulate token export;
-await new Promise(resolve => setTimeout(resolve; 2000));
+/
+await new Promise(resolve => setTimeout(resolve; 2000))
 
-setExportStatus("success");
+setExportStatus("success")
 toast({
 title: "Tokens exported";,
 description: "Your ZION$ tokens have been exported to your wallet";
@@ -76,71 +75,71 @@ title: "Export failed";,
 description: error.message || "Could not export tokens";,
 variant: "destructive"});
 } finally {
-setIsExporting(false);
+setIsExporting(false)
 }
-};
+}
 
 return (
-<Card>;
-<CardHeader>;
-<CardTitle className="flex items-center gap-2">;
+<Card>
+<CardHeader>
+<CardTitle className="flex items-center gap-2">
 {isConnected ? (
-<Wallet aria-hidden="true" className="h-5 w-5 text-primary" />;
+<Wallet aria-hidden="true" className="h-5 w-5 text-primary" />
 ) : (
-<Wallet aria-hidden="true" className="h-5 w-5" />;
+<Wallet aria-hidden="true" className="h-5 w-5" />
 )}
 On-chain Export;
-<TooltipProvider>;
-<Tooltip>;
-<TooltipTrigger asChild>;
-<Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help" />;
-</TooltipTrigger>;
-<TooltipContent>;
-<p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
-</TooltipContent>;
-</Tooltip>;
-</TooltipProvider>;
-</CardTitle>;
-<CardDescription>Export your ZION$ to an external wallet</CardDescription>;
-</CardHeader>;
-<CardContent>;
+<TooltipProvider>
+<Tooltip>
+<TooltipTrigger asChild>
+<Info aria-label="More info" className="h-4 w-4 text-muted-foreground cursor-help" />
+</TooltipTrigger>
+<TooltipContent>
+<p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
+</TooltipContent>
+</Tooltip>
+</TooltipProvider>
+</CardTitle>
+<CardDescription>Export your ZION$ to an external wallet</CardDescription>
+</CardHeader>
+<CardContent>
 {isConnected ? (
-<div className="space-y-4">;
-<div className="flex justify-between text-sm">;
-<span>Available to export: </span>;
-<span className="font-medium">250 ZION$</span>;
-</div>;
+<div className="space-y-4">
+<div className="flex justify-between text-sm">
+<span>Available to export: </span>
+<span className="font-medium">250 ZION$</span>
+</div>
 {exportStatus === "success" ? (
-<Button className="w-full bg-green-600 hover:bg-green-700" disabled>;
-<Check aria-hidden="true" className="mr-2 h-4 w-4" />;
+<Button className="w-full bg-green-600 hover:bg-green-700" disabled>
+<Check aria-hidden="true" className="mr-2 h-4 w-4" />
 Tokens Exported;
-</Button>;
+</Button>
 ) : (
 <Button;
 className="w-full"
 onClick={handleExportTokens}
 disabled={isExporting}
->;
+>
 {isExporting ? "Processing..." : "Export Tokens"}
 {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4" />}
-</Button>;
+</Button>
 )}
-</div>;
+</div>
 ) : (
-<div className="space-y-2">;
-<p className="text-sm text-muted-foreground mb-3">;
-Connect your web3 wallet to export tokens to the blockchain.;
-</p>;
-<Button onClick={handleConnectWallet} className="w-full">;
+<div className="space-y-2">
+<p className="text-sm text-muted-foreground mb-3">
+Connect your web3 wallet to export export tokens to the blockchain.;
+</p>
+<Button onClick={handleConnectWallet} className="w-full">
 Connect Wallet;
-</Button>;
-</div>;
+</Button>
+</div>
 )}
-</CardContent>;
-</Card>;
-);
+</CardContent>
+</Card>
+)
 }
-<//Card><///Card>;
+<//Card><///Card>
 
 import React, { useState } from "react",;
 import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";

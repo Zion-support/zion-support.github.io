@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface SpecializedITInfrastructureService2025 {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
 benefits: string[], useCases: string[];,
@@ -14,9 +14,9 @@ documentationUrl?: string;
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_2025: SpecializedITInfrastructureService2025[] = [
-// Edge Computing Orchestration Platform;
+/
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
-// Edge Computing Infrastructure Platform;
+/
 {,
 id: "edge-computing-infrastructure-platform",
 title: "Edge Computing Infrastructure Platform",
@@ -34,28 +34,28 @@ features: [
 "Load balancing",
 "Edge security",
 "Monitoring and analytics",
-"Scalable infrastructure";
+"
 ],
 benefits: [
 "Reduced latency by 90%",
 "Lower bandwidth costs",
 "Real-time processing",
 "Improved user experience",
-"Scalable edge network";
+"
 ],
 useCases: [
 "IoT applications",
 "Real-time analytics",
 "Content delivery",
 "Autonomous systems",
-"Gaming platforms";
+"
 ],
 targetAudience: [
 "IoT companies",
 "Content providers",
 "Gaming companies",
 "Manufacturing firms",
-"Technology companies";
+"
 ],
 tags: ["Edge Computing", "Infrastructure", "Real-time", "IoT", "Low Latency"],
 estimatedDelivery: "6-8 weeks",
@@ -86,28 +86,28 @@ features: [
 "Quantum network protocols",
 "Quantum security",
 "Network monitoring",
-"Scalable architecture";
+"
 ],
 benefits: [
 "Unbreakable encryption",
 "Quantum advantage",
 "Future-proof infrastructure",
 "Ultra-secure communications",
-"Quantum network scalability";
+"
 ],
 useCases: [
 "Government communications",
 "Financial institutions",
 "Healthcare data",
 "Military communications",
-"Research networks";
+"
 ],
 targetAudience: [
 "Government agencies",
 "Financial institutions",
 "Healthcare organizations",
 "Defense contractors",
-"Research institutions";
+"
 ],
 tags: ["Quantum Networking", "Quantum Security", "Infrastructure", "Encryption", "Communications"],
 estimatedDelivery: "10-12 weeks",
@@ -137,28 +137,28 @@ features: [
 "Network slicing",
 "Security and compliance",
 "Performance monitoring",
-"Scalable infrastructure";
+"
 ],
 benefits: [
 "10x faster connectivity",
 "Ultra-low latency",
 "Massive IoT support",
 "Enterprise-grade security",
-"Future-ready infrastructure";
+"
 ],
 useCases: [
 "Smart manufacturing",
 "Autonomous vehicles",
 "Remote surgery",
 "AR/VR applications",
-"Industrial IoT";
+"
 ],
 targetAudience: [
 "Manufacturing companies",
 "Healthcare organizations",
 "Transportation companies",
 "Technology firms",
-"Industrial companies";
+"
 ],
 tags: ["5G", "Enterprise", "Infrastructure", "IoT", "Connectivity"],
 estimatedDelivery: "8-10 weeks",
@@ -188,28 +188,28 @@ features: [
 "Automated incident response",
 "Performance optimization",
 "Cost optimization",
-"Security automation";
+"
 ],
 benefits: [
 "Reduce downtime by 90%",
 "Automate 80% of operations",
 "Reduce operational costs",
 "Improve system reliability",
-"24/7 autonomous operation";
+"
 ],
 useCases: [
 "Web applications",
 "Microservices",
 "Cloud-native apps",
 "E-commerce platforms",
-"SaaS applications";
+"
 ],
 targetAudience: [
 "DevOps engineers",
 "Site reliability engineers",
 "Cloud architects",
 "Startup companies",
-"Enterprise IT teams";
+"
 ],
 tags: ["DevOps", "Automation", "AI", "Cloud", "Infrastructure"],
 estimatedDelivery: "3-4 weeks",
@@ -244,28 +244,28 @@ features: [
 "Threat detection",
 "Compliance monitoring",
 "Security automation",
-"Incident response";
+"
 ],
 benefits: [
 "Reduce security breaches by 95%",
 "Comply with regulations",
 "Improve security posture",
 "Automate security operations",
-"Protect all assets";
+"
 ],
 useCases: [
 "Enterprise security",
 "Government agencies",
 "Financial services",
 "Healthcare",
-"Critical infrastructure";
+"
 ],
 targetAudience: [
 "CISOs",
 "Security teams",
 "IT administrators",
 "Compliance officers",
-"Government agencies";
+"
 ],
 tags: ["Zero Trust", "Security", "Compliance", "Infrastructure", "Automation"],
 estimatedDelivery: "4-6 weeks",
@@ -300,28 +300,28 @@ features: [
 "Sustainable hardware",
 "Energy-efficient algorithms",
 "Green certification",
-"Sustainability reporting";
+"
 ],
 benefits: [
 "Reduce energy costs by 40%",
 "Achieve carbon neutrality",
 "Improve brand reputation",
 "Comply with regulations",
-"Support sustainability goals";
+"
 ],
 useCases: [
 "Data centers",
 "Cloud computing",
 "Edge computing",
 "HPC clusters",
-"Enterprise IT";
+"
 ],
 targetAudience: [
 "Data center operators",
 "Cloud providers",
 "Enterprise IT",
 "Sustainability officers",
-"Government agencies";
+"
 ],
 tags: ["Green Computing", "Sustainability", "Energy Efficiency", "Carbon Neutral", "Infrastructure"],
 estimatedDelivery: "4-6 weeks",
@@ -346,8 +346,8 @@ title: "Hybrid Multi-Cloud Orchestration",
 description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure; optimizing costs; performance; and compliance.",
 category: "IT Infrastructure",
 subcategory: "Cloud Orchestration",
-price: 1900,
-// Hybrid Cloud Infrastructure Platform;
+price: 1900;
+/
 {
 id: "hybrid-cloud-infrastructure-platform",
 title: "Hybrid Cloud Infrastructure Platform",
@@ -364,28 +364,28 @@ features: [
 "Security compliance",
 "Performance monitoring",
 "Automated scaling",
-"Disaster recovery";
+"
 ],
 benefits: [
 "Optimized cost structure",
 "Flexible deployment",
 "Enhanced security",
 "Improved performance",
-"Scalable infrastructure";
+"
 ],
 useCases: [
 "Enterprise applications",
 "Data analytics",
 "Development environments",
 "Backup and recovery",
-"Compliance requirements";
+"
 ],
 targetAudience: [
 "Enterprise companies",
 "Technology firms",
 "Financial institutions",
 "Healthcare organizations",
-"Government agencies";
+"
 ],
 tags: ["Hybrid Cloud", "Cloud Infrastructure", "Multi-cloud", "Enterprise", "Scalability"],
 estimatedDelivery: "6-8 weeks",
@@ -415,28 +415,28 @@ features: [
 "Resource allocation",
 "Capacity planning",
 "Anomaly detection",
-"Automated scaling";
+"
 ],
 benefits: [
 "Reduced downtime by 80%",
 "Optimized performance",
 "Lower operational costs",
 "Proactive maintenance",
-"Automated operations";
+"
 ],
 useCases: [
 "Data center management",
 "Cloud infrastructure",
 "Network operations",
 "Server management",
-"Storage optimization";
+"
 ],
 targetAudience: [
 "IT operations teams",
 "DevOps engineers",
 "Infrastructure managers",
 "System administrators",
-"Technology companies";
+"
 ],
 tags: ["AI", "Infrastructure Management", "Automation", "Monitoring", "Optimization"],
 estimatedDelivery: "4-6 weeks",

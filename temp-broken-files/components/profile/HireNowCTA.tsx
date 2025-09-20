@@ -13,7 +13,7 @@ interface HireNowCTAProps {
 talentName: string;
 hourlyRate?: number;
 onHire?: (data: HireData) => void;,
-};
+}
 interface HireData {
 projectDescription: string;
 budget: string;
@@ -54,127 +54,139 @@ setFormData({projectDescription: "";
 budget: "";,
 startDate: "";,
 message: "",
-});
-setIsFormOpen(false);
-};
+})
+const handleSubmit: any = (e: React.FormEvent) => {;
+e.preventDefault()
+if (onHire) {
+onHire(formData)
+}
+/
+setFormData({
+projectDescription: "
+budget: "
+startDate: ",
+message: "",
+})
+setIsFormOpen(false)
+}
 
 const handleChange: any = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 setFormData(prev => ({;
 ...prev;
 [e.target.name]: e.target.value;
-}));
-};
+}))
+}
 
 return (
-<Card className="bg-zion-blue-light border-zion-blue-lighter">;
-<CardHeader>;
-<CardTitle className="text-white flex items-center gap-2">;
-<MessageSquare className="h-5 w-5 text-zion-cyan" />;
+<Card className="bg-zion-blue-light border-zion-blue-lighter">
+<CardHeader>
+<CardTitle className="text-white flex items-center gap-2">
+<MessageSquare className="h-5 w-5 text-zion-cyan" />
 Hire {talentName}
-</CardTitle>;
-</CardHeader>;
-<CardContent>;
+</CardTitle>
+</CardHeader>
+<CardContent>
 {!isFormOpen ? (
-<div className="space-y-4">;
+<div className="space-y-4">
 {hourlyRate && (
-<div className="flex items-center gap-2 text-zion-slate-light">;
-<DollarSign className="h-4 w-4" />;
-<span>Starting at ${hourlyRate}/hour</span>;
-</div>;
+<div className="flex items-center gap-2 text-zion-slate-light">
+<DollarSign className="h-4 w-4" />
+<span>Starting at ${hourlyRate}/hour</span>
+</div>
 )}
-<p className="text-zion-slate-light text-sm">;
+<p className="text-zion-slate-light text-sm">
 Ready to start your project? Send a message to discuss details and get started.;
-</p>;
+</p>
 <Button;
 onClick={() => setIsFormOpen(true)}
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
->;
+>
 Start Project Discussion;
-</Button>;
-</div>;
+</Button>
+</div>
 ) : (
-<form onSubmit={handleSubmit} className="space-y-4">;
-<div>;
-<label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">;
+<form onSubmit={handleSubmit} className="space-y-4">
+<div>
+<label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">
 Project Description;
-</label>;
+</label>
 <Textarea;
-id="projectDescription";
-name="projectDescription";
+id="
+name="
 value={formData.projectDescription}
 onChange={handleChange}
-placeholder="Describe your project requirements...";
+placeholder="
 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
 required;
-/>;
-</div>;
+/>
+</div>
 
-<div className="grid grid-cols-2 gap-4">;
-<div>;
-<label htmlFor="budget" className="block text-sm font-medium text-white mb-2">;
+<div className="grid grid-cols-2 gap-4">
+<div>
+<label htmlFor="budget" className="block text-sm font-medium text-white mb-2">
 Budget Range;
-</label>;
+</label>
 <Input;
-id="budget";
-name="budget";
+id="
+name="
 value={formData.budget}
 onChange={handleChange}
-placeholder="e.g., $1000-5000";
+placeholder="
 className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
 required;
-/>;
-</div>;
+/>
+</div>
 
-<div>;
-<label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
+<div>
+<label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">
 Start Date;
-</label>;
+</label>
 <Input;
-id="startDate";
-name="startDate";
+id="
+name="
 type="date"
 value={formData.startDate}
 onChange={handleChange}
 className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
 required;
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
-<div>;
-<label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
+<div>
+<label htmlFor="message" className="block text-sm font-medium text-white mb-2">
 Additional Message;
-</label>;
+</label>
 <Textarea;
-id="message";
-name="message";
+id="
+name="
 value={formData.message}
 onChange={handleChange}
-placeholder="Any additional details or questions...";
+placeholder="
 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
 rows={3}
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex gap-3">;
+<div className="flex gap-3">
 <Button;
 type="submit"
 className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
->;
+>
 Send Message;
-</Button>;
+</Button>
 <Button;
 type="button"
 variant="outline"
 onClick={() => setIsFormOpen(false)}
 className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->;
+>
 Cancel;
-</Button>;
-</div>;
-</form>;
+</Button>
+</div>
+</form>
 )}
-</CardContent>;
-</Card>;
-);
-}<//Card><///Card>;
+</CardContent>
+</Card>
+)
+}<//Card><///Card>

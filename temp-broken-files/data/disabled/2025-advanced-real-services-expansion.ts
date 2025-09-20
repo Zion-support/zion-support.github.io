@@ -1,4 +1,4 @@
-import { ServiceVariant } from "../types/service-variants, ";
+import { ServiceVariant } from "
 
 export interface AdvancedRealService {
 id: string;
@@ -7,7 +7,7 @@ tagline: string;
 price: string;
 period: string;
 description: string;
-features: string[];
+features: string[[];]
 popular: boolean;
 icon: string;
 color: string;
@@ -19,11 +19,11 @@ trialDays: number;
 setupTime: string;
 category: string;
 realService: boolean;
-technology: string[];
-integrations: string[];
-useCases: string[];
+technology: string[[];]
+integrations: string[[];]
+useCases: string[[];]
 roi: string;
-competitors: string[];
+competitors: string[[];]
 marketSize: string;
 growthRate: string;
 variant: string;
@@ -57,10 +57,10 @@ export const advancedRealServices2025: AdvancedRealService[] = [
 name: "AI Legal Document Analysis Platform";,
 tagline: "Intelligent legal document review and analysis with AI-powered insights";,
 price: "$1;299",
-period: "/month";,
+period: ",
 description: "Advanced legal document analysis platform using AI to review contracts; identify risks; extract key terms; and provide legal insights with 95% accuracy.",
 features: [
-"AI-powered contract analysis";
+"
 "Risk identification and scoring",
 "Legal term extraction",
 "Compliance checking",
@@ -69,7 +69,7 @@ features: [
 "Case law integration",
 "Custom legal templates",
 "Multi-language support",
-"Audit trail and reporting";
+"
 ],
 popular: true;
 icon: "⚖️";
@@ -85,11 +85,11 @@ realService: true;,
 technology: ["Python; TensorFlow; NLP; React; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["DocuSign; Adobe Acrobat; Microsoft Office; Salesforce; Clio; PracticePanther"],
 useCases: ["Contract review; Due diligence; Legal research; Compliance checking; Risk assessment"],
-roi: "Law firms report 300% ROI through faster document review and reduced legal costs.";,
+roi: ",
 competitors: ["Kira Systems; eBrevia; Luminance; ThoughtRiver"],
-marketSize: "$2.8B legal AI market";
-growthRate: "40% annual growth";
-variant: "ai-legal-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -97,13 +97,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "AI-powered legal document analysis platform with advanced NLP; contract risk assessment; and compliance automation.",
-launchDate: "2025-02-01";
+launchDate: "
 customers: 38;
 rating: 4.9;,
 reviews: 24;,
 marketPrice: "$1;200-$1;800/month",
 certifications: ["SOC 2 Type II", "GDPR Compliant", "HIPAA Compliant"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "24/7 technical support with dedicated account manager",
 };
 sla: "99.9% uptime guarantee";,
@@ -116,7 +116,7 @@ price: "$2;999",
 period: "/month";,
 description: "Revolutionary cybersecurity platform implementing post-quantum cryptography algorithms to protect against future quantum computing threats.";,
 features: [
-"Post-quantum cryptography";
+"
 "Quantum-resistant encryption",
 "Advanced threat detection",
 "Zero-trust architecture",
@@ -125,7 +125,7 @@ features: [
 "Compliance automation",
 "Incident response tools",
 "Security analytics",
-"API security protection";
+"
 ],
 popular: true;
 icon: "🔐";
@@ -141,11 +141,11 @@ realService: true;,
 technology: ["Post-quantum algorithms; Rust; Go; React; Kubernetes; AWS; Azure"],
 integrations: ["Active Directory; Okta; Duo; Splunk; ServiceNow; Jira"],
 useCases: ["Data protection; Network security; Application security; Compliance; Incident response"],
-roi: "Organizations report 250% ROI through reduced security incidents and compliance automation.";,
+roi: ",
 competitors: ["Palo Alto Networks; CrowdStrike; SentinelOne; Carbon Black"],
-marketSize: "$4.2B quantum cybersecurity market";
-growthRate: "55% annual growth";
-variant: "quantum-security-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -153,13 +153,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "Quantum-safe cybersecurity platform with post-quantum cryptography; advanced threat detection; and zero-trust architecture.",
-launchDate: "2025-01-20";
+launchDate: "
 customers: 25;
 rating: 4.8;,
 reviews: 18;,
 marketPrice: "$2;500-$4;000/month",
 certifications: ["SOC 2 Type II", "ISO 27001", "FedRAMP", "NIST Compliance"],
-sla: "99.99% uptime guarantee";,
+sla: ",
 support: "24/7 security operations center with dedicated security engineers",
 };
 sla: "99.99% uptime guarantee";,
@@ -169,10 +169,10 @@ support: "24/7 security operations center with dedicated security engineers"};
 name: "AI Healthcare Analytics Platform";,
 tagline: "Intelligent healthcare data analytics and predictive medicine";,
 price: "$1;899",
-period: "/month";,
+period: ",
 description: "Advanced healthcare analytics platform using AI to analyze patient data; predict outcomes; and optimize treatment plans with clinical decision support.",
 features: [
-"AI-powered patient analytics";
+"
 "Predictive medicine algorithms",
 "Clinical decision support",
 "Population health insights",
@@ -181,7 +181,7 @@ features: [
 "Real-time monitoring",
 "HIPAA compliance tools",
 "Integration with EHR systems",
-"Advanced reporting and dashboards";
+"
 ],
 popular: true;
 icon: "🏥";
@@ -197,11 +197,11 @@ realService: true;,
 technology: ["Python; TensorFlow; PyTorch; React; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["Epic; Cerner; Allscripts; Athenahealth; Practice Fusion; eClinicalWorks"],
 useCases: ["Patient care optimization; Population health management; Clinical research; Quality improvement; Cost reduction"],
-roi: "Healthcare organizations report 400% ROI through improved patient outcomes and reduced costs.";,
+roi: ",
 competitors: ["Epic; Cerner; Allscripts; Athenahealth"],
-marketSize: "$3.5B healthcare AI market";
-growthRate: "45% annual growth";
-variant: "ai-healthcare-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -209,13 +209,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "AI-powered healthcare analytics platform with predictive medicine; clinical decision support; and population health insights.",
-launchDate: "2025-01-10";
+launchDate: "
 customers: 42;
 rating: 4.9;,
 reviews: 29;,
 marketPrice: "$1;500-$2;500/month",
 certifications: ["HIPAA Compliant", "SOC 2 Type II", "HITECH Certified", "FDA Cleared"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "24/7 clinical support with dedicated healthcare specialists",
 };
 sla: "99.9% uptime guarantee";,
@@ -225,10 +225,10 @@ support: "24/7 clinical support with dedicated healthcare specialists"};
 name: "Blockchain Supply Chain Transparency Platform";,
 tagline: "End-to-end supply chain visibility with blockchain technology";,
 price: "$1;599",
-period: "/month";,
+period: ",
 description: "Revolutionary supply chain platform using blockchain technology to provide complete transparency; traceability; and authenticity verification.",
 features: [
-"Blockchain-based tracking";
+"
 "End-to-end visibility",
 "Smart contract automation",
 "Quality assurance",
@@ -237,7 +237,7 @@ features: [
 "Supplier management",
 "Inventory optimization",
 "Sustainability tracking",
-"API integrations";
+"
 ],
 popular: false;
 icon: "⛓️";
@@ -253,11 +253,11 @@ realService: true;,
 technology: ["Ethereum; Hyperledger; Solidity; React; Node.js; PostgreSQL; AWS"],
 integrations: ["SAP; Oracle; Salesforce; Shopify; WooCommerce; Magento"],
 useCases: ["Product traceability; Quality assurance; Compliance; Sustainability; Risk management"],
-roi: "Companies report 350% ROI through improved transparency and reduced fraud.";,
+roi: ",
 competitors: ["IBM Food Trust; VeChain; Provenance; OriginTrail"],
-marketSize: "$1.8B blockchain supply chain market";
-growthRate: "50% annual growth";
-variant: "blockchain-supply-chain-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -265,13 +265,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "Blockchain-based supply chain transparency platform with smart contracts; real-time tracking; and compliance automation.",
-launchDate: "2025-02-15";
+launchDate: "
 customers: 31;
 rating: 4.7;,
 reviews: 22;,
 marketPrice: "$1;200-$2;000/month",
 certifications: ["ISO 9001", "ISO 14001", "SOC 2 Type II", "GDPR Compliant"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "Business hours support with dedicated supply chain specialists",
 };
 sla: "99.9% uptime guarantee";,
@@ -281,10 +281,10 @@ support: "Business hours support with dedicated supply chain specialists"};
 name: "AI Financial Risk Management Platform";,
 tagline: "Intelligent financial risk assessment and mitigation";,
 price: "$2;499",
-period: "/month";,
+period: ",
 description: "Advanced financial risk management platform using AI to assess credit risk; market risk; and operational risk with real-time monitoring and alerts.",
 features: [
-"AI-powered risk assessment";
+"
 "Real-time risk monitoring",
 "Credit risk modeling",
 "Market risk analysis",
@@ -293,7 +293,7 @@ features: [
 "Stress testing",
 "Scenario analysis",
 "Risk reporting",
-"Integration with financial systems";
+"
 ],
 popular: true;
 icon: "💰";
@@ -309,11 +309,11 @@ realService: true;,
 technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["Bloomberg; Reuters; FactSet; Morningstar; Salesforce; SAP"],
 useCases: ["Credit risk assessment; Market risk analysis; Compliance; Portfolio management; Regulatory reporting"],
-roi: "Financial institutions report 300% ROI through improved risk management and regulatory compliance.";,
+roi: ",
 competitors: ["RiskMetrics; Bloomberg; FactSet; Morningstar"],
-marketSize: "$2.2B financial risk management market";
-growthRate: "35% annual growth";
-variant: "ai-risk-management-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -321,13 +321,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "AI-powered financial risk management platform with real-time monitoring; predictive analytics; and regulatory compliance.",
-launchDate: "2025-01-25";
+launchDate: "
 customers: 28;
 rating: 4.8;,
 reviews: 19;,
 marketPrice: "$2;000-$3;500/month",
 certifications: ["SOC 2 Type II", "ISO 27001", "PCI DSS", "GDPR Compliant"],
-sla: "99.99% uptime guarantee";,
+sla: ",
 support: "24/7 financial support with dedicated risk specialists",
 };
 sla: "99.99% uptime guarantee";,
@@ -337,10 +337,10 @@ support: "24/7 financial support with dedicated risk specialists"};
 name: "Edge Computing IoT Platform";,
 tagline: "Intelligent edge computing for IoT devices and real-time processing";,
 price: "$1;299",
-period: "/month";,
+period: ",
 description: "Advanced edge computing platform for IoT devices providing real-time data processing; local analytics; and intelligent decision-making at the edge.",
 features: [
-"Edge computing infrastructure";
+"
 "Real-time data processing",
 "Local AI inference",
 "Device management",
@@ -349,7 +349,7 @@ features: [
 "Scalable architecture",
 "API management",
 "Monitoring and analytics",
-"Integration with cloud platforms";
+"
 ],
 popular: false;
 icon: "🌐";
@@ -365,11 +365,11 @@ realService: true;,
 technology: ["Kubernetes; Docker; Python; Go; React; PostgreSQL; Redis; Multi-cloud"],
 integrations: ["AWS IoT; Azure IoT; Google Cloud IoT; Siemens MindSphere; PTC ThingWorx"],
 useCases: ["Industrial IoT; Smart cities; Energy management; Transportation; Healthcare monitoring"],
-roi: "Organizations report 250% ROI through reduced latency and improved real-time decision making.";,
+roi: ",
 competitors: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; Siemens MindSphere"],
-marketSize: "$1.5B edge computing market";
-growthRate: "40% annual growth";
-variant: "edge-computing-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -377,13 +377,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "Edge computing IoT platform with real-time processing; local AI inference; and multi-cloud integration.",
-launchDate: "2025-02-10";
+launchDate: "
 customers: 35;
 rating: 4.6;,
 reviews: 26;,
 marketPrice: "$1;000-$1;800/month",
 certifications: ["ISO 27001", "SOC 2 Type II", "GDPR Compliant", "NIST Compliance"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "Business hours support with dedicated IoT specialists",
 };
 sla: "99.9% uptime guarantee";,
@@ -396,7 +396,7 @@ price: "$899";,
 period: "/month";,
 description: "Advanced marketing automation platform using AI to personalize campaigns; optimize customer journeys; and maximize ROI through intelligent automation.",
 features: [
-"AI-powered personalization";
+"
 "Customer journey optimization",
 "Predictive analytics",
 "A/B testing automation",
@@ -405,7 +405,7 @@ features: [
 "Lead scoring",
 "Campaign optimization",
 "ROI tracking",
-"Integration with marketing tools";
+"
 ],
 popular: true;
 icon: "📢";
@@ -421,11 +421,11 @@ realService: true;,
 technology: ["Python; TensorFlow; React; Node.js; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["Salesforce; HubSpot; Mailchimp; Facebook Ads; Google Ads; LinkedIn Ads"],
 useCases: ["Lead generation; Customer acquisition; Campaign optimization; Personalization; ROI improvement"],
-roi: "Companies report 400% ROI through improved conversion rates and reduced customer acquisition costs.";,
+roi: ",
 competitors: ["HubSpot; Marketo; Pardot; ActiveCampaign"],
-marketSize: "$2.8B marketing automation market";
-growthRate: "30% annual growth";
-variant: "ai-marketing-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -433,13 +433,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "AI-powered marketing automation suite with personalization; predictive analytics; and campaign optimization.",
-launchDate: "2025-01-15";
+launchDate: "
 customers: 67;
 rating: 4.8;,
 reviews: 41;,
 marketPrice: "$800-$1;500/month",
 certifications: ["SOC 2 Type II", "GDPR Compliant", "CAN-SPAM Compliant", "ISO 27001"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "Business hours support with dedicated marketing specialists",
 };
 sla: "99.9% uptime guarantee";,
@@ -452,7 +452,7 @@ price: "$4;999",
 period: "/month";,
 description: "Cutting-edge quantum machine learning platform combining quantum computing with AI to solve complex problems that are impossible for classical computers.";,
 features: [
-"Quantum machine learning algorithms";
+"
 "Quantum neural networks",
 "Quantum optimization",
 "Hybrid classical-quantum computing",
@@ -461,7 +461,7 @@ features: [
 "API access to quantum computers",
 "Performance benchmarking",
 "Research collaboration tools",
-"Educational resources";
+"
 ],
 popular: true;
 icon: "🔮";
@@ -477,11 +477,11 @@ realService: true;,
 technology: ["Qiskit; Cirq; PennyLane; Python; React; PostgreSQL; Quantum simulators"],
 integrations: ["IBM Quantum; Google Quantum; AWS Braket; Azure Quantum; D-Wave"],
 useCases: ["Drug discovery; Financial modeling; Optimization problems; Cryptography; Scientific research"],
-roi: "Research institutions report 500% ROI through breakthrough discoveries and accelerated research.";,
+roi: ",
 competitors: ["IBM Quantum; Google Quantum; D-Wave; Rigetti"],
-marketSize: "$800M quantum computing market";
-growthRate: "60% annual growth";
-variant: "quantum-ml-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -489,13 +489,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "Quantum machine learning platform with hybrid classical-quantum computing; advanced algorithms; and research collaboration tools.",
-launchDate: "2025-01-01";
+launchDate: "
 customers: 15;
 rating: 4.9;,
 reviews: 12;,
 marketPrice: "$4;000-$6;000/month",
 certifications: ["ISO 27001", "SOC 2 Type II", "Research Collaboration Agreements"],
-sla: "99.5% uptime guarantee";,
+sla: ",
 support: "Research hours support with dedicated quantum specialists",
 };
 sla: "99.5% uptime guarantee";,
@@ -505,10 +505,10 @@ support: "Research hours support with dedicated quantum specialists"};
 name: "AI HR Analytics Platform";,
 tagline: "Intelligent human resources analytics and talent management";,
 price: "$1;199",
-period: "/month";,
+period: ",
 description: "Advanced HR analytics platform using AI to analyze employee data; predict turnover; optimize recruitment; and improve workplace productivity.",
 features: [
-"AI-powered employee analytics";
+"
 "Turnover prediction",
 "Recruitment optimization",
 "Performance analytics",
@@ -517,7 +517,7 @@ features: [
 "Workforce planning",
 "Talent acquisition insights",
 "Compliance monitoring",
-"Integration with HR systems";
+"
 ],
 popular: false;
 icon: "👥";
@@ -533,11 +533,11 @@ realService: true;,
 technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["Workday; BambooHR; ADP; Paychex; Greenhouse; Lever"],
 useCases: ["Employee retention; Recruitment optimization; Performance management; Workforce planning; Compliance"],
-roi: "Companies report 300% ROI through improved employee retention and recruitment efficiency.";,
+roi: ",
 competitors: ["Workday; BambooHR; ADP; Paychex"],
-marketSize: "$1.8B HR analytics market";
-growthRate: "35% annual growth";
-variant: "ai-hr-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -545,13 +545,13 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "AI-powered HR analytics platform with employee insights; turnover prediction; and recruitment optimization.",
-launchDate: "2025-02-01";
+launchDate: "
 customers: 45;
 rating: 4.7;,
 reviews: 33;,
 marketPrice: "$1;000-$1;800/month",
 certifications: ["SOC 2 Type II", "GDPR Compliant", "EEOC Compliant", "ISO 27001"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "Business hours support with dedicated HR specialists",
 };
 sla: "99.9% uptime guarantee";,
@@ -561,10 +561,10 @@ support: "Business hours support with dedicated HR specialists"};
 name: "Sustainable Energy Management Platform";,
 tagline: "AI-powered energy optimization and sustainability management";,
 price: "$1;799",
-period: "/month";,
+period: ",
 description: "Advanced energy management platform using AI to optimize energy consumption; reduce costs; and improve sustainability across facilities and operations.",
 features: [
-"AI-powered energy optimization";
+"
 "Real-time consumption monitoring",
 "Predictive maintenance",
 "Renewable energy integration",
@@ -573,7 +573,7 @@ features: [
 "Energy cost analysis",
 "Demand response optimization",
 "Grid integration",
-"Mobile app and dashboards";
+"
 ],
 popular: false;
 icon: "🌱";
@@ -589,11 +589,11 @@ realService: true;,
 technology: ["Python; TensorFlow; IoT sensors; React; PostgreSQL; Redis; Docker; AWS"],
 integrations: ["Building management systems; SCADA systems; Solar inverters; Smart meters; Utility APIs"],
 useCases: ["Energy optimization; Cost reduction; Sustainability reporting; Predictive maintenance; Compliance"],
-roi: "Organizations report 250% ROI through energy cost reduction and sustainability improvements.";,
+roi: ",
 competitors: ["Schneider Electric; Siemens; Honeywell; Johnson Controls"],
-marketSize: "$1.2B energy management market";
-growthRate: "30% annual growth";
-variant: "sustainable-energy-enterprise";
+marketSize: "
+growthRate: "
+variant: "
 contactInfo: {
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
@@ -601,16 +601,16 @@ address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 realImplementation: true;,
 implementationDetails: "Sustainable energy management platform with AI optimization; real-time monitoring; and sustainability tracking.",
-launchDate: "2025-01-30";
+launchDate: "
 customers: 28;
 rating: 4.6;,
 reviews: 19;,
 marketPrice: "$1;500-$2;500/month",
 certifications: ["ISO 50001", "LEED Certification", "SOC 2 Type II", "Energy Star Partner"],
-sla: "99.9% uptime guarantee";,
+sla: ",
 support: "Business hours support with dedicated energy specialists",
 }
 sla: "99.9% uptime guarantee";,
 support: "Business hours support with dedicated energy specialists"}
 ];
-export default advancedRealServices2025;
+export export default advancedRealServices2025;

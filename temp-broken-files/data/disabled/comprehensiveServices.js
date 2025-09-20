@@ -3,10 +3,10 @@ export const COMPREHENSIVE_SERVICES = [
     {id: "ai-chatbot-enterprise";
         title: "Enterprise AI Chatbot Development";
         description: "Custom AI-powered chatbots for customer service, sales, and support. Integrates with CRM, knowledge bases, and existing systems. Includes training, deployment, and ongoing optimization.",
-        category: "AI Services";
-        subcategory: "Chatbots & Virtual Assistants";
+        category: "
+        subcategory: "
         price: 8999;
-        currency: "$";
+        currency: "
         tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Natural Language Processing"],
         author: {
             name: "Zion Tech Group";
@@ -17,21 +17,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.9;
         reviewCount: 156;
         featured: true;
-        location: "Global";
-        availability: "2-3 Weeks";
+        location: "
+        availability: "
         aiScore: 95;
         pricingTier: "Professional",
     };
     {id: "ai-content-generation";
         pricingTier: "Professional"};
     {
-        id: "ai-content-generation";
-        title: "AI Content Generation Suite Pro";
+        id: "
+        title: "
         description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.",
-        category: "AI Services";
-        subcategory: "Content Generation";
+        category: "
+        subcategory: "
         price: 800;
-        currency: "$";
+        currency: "
         tags: ["AI", "Content Creation", "Marketing", "SEO", "Automation"],
         author: {
             name: "Zion Tech Group";
@@ -42,21 +42,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.8;
         reviewCount: 89;
         featured: true;
-        location: "Global";
-        availability: "1-2 Weeks";
+        location: "
+        availability: "
         aiScore: 96;
         pricingTier: "Starter",
     };
     {id: "ai-business-intelligence";
         pricingTier: "Starter"};
     {
-        id: "ai-business-intelligence";
-        title: "AI-Powered Business Intelligence Platform";
+        id: "
+        title: "
         description: "Advanced analytics and business intelligence platform with AI-driven insights, predictive analytics, and real-time dashboards.",
-        category: "AI Services";
-        subcategory: "Business Intelligence";
+        category: "
+        subcategory: "
         price: 4500;
-        currency: "$";
+        currency: "
         tags: ["AI", "Business Intelligence", "Analytics", "Predictive", "Dashboard"],
         author: {
             name: "Zion Tech Group";
@@ -67,18 +67,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.9;
         reviewCount: 234;
         featured: true;
-        location: "Global";
-        availability: "4-6 Weeks";
+        location: "
+        availability: "
         aiScore: 98;
         pricingTier: "Enterprise"};
     // IT Infrastructure & Cloud Services;
     {id: "cloud-migration-expert";
         title: "Cloud Migration & Optimization Expert";
         description: "Complete cloud migration services with cost optimization, security implementation, and performance tuning for AWS, Azure, and Google Cloud.",
-        category: "IT Services";
-        subcategory: "Cloud Services";
+        category: "
+        subcategory: "
         price: 3500;
-        currency: "$";
+        currency: "
         tags: ["Cloud Migration", "AWS", "Azure", "Optimization", "Security"],
         author: {
             name: "Zion Tech Group";
@@ -89,21 +89,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.7;
         reviewCount: 156;
         featured: true;
-        location: "Global";
-        availability: "3-5 Weeks";
+        location: "
+        availability: "
         aiScore: 92;
         pricingTier: "Professional",
     };
     {id: "cybersecurity-audit";
         pricingTier: "Professional"};
     {
-        id: "cybersecurity-audit";
-        title: "Complete Cybersecurity Audit & Implementation";
+        id: "
+        title: "
         description: "Comprehensive security assessment, penetration testing, and security infrastructure implementation with compliance reporting.",
-        category: "IT Services";
-        subcategory: "Cybersecurity";
+        category: "
+        subcategory: "
         price: 6000;
-        currency: "$";
+        currency: "
         tags: ["Cybersecurity", "Audit", "Penetration Testing", "Compliance", "Security"],
         author: {
             name: "Zion Tech Group";
@@ -114,21 +114,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.9;
         reviewCount: 189;
         featured: true;
-        location: "Global";
-        availability: "4-8 Weeks";
+        location: "
+        availability: "
         aiScore: 97;
         pricingTier: "Enterprise",
     };
     {id: "devops-automation";
         pricingTier: "Enterprise"};
     {
-        id: "devops-automation";
-        title: "DevOps Automation & CI/CD Suite";
+        id: "
+        title: "
         description: "Complete DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation.",
-        category: "IT Services";
-        subcategory: "DevOps";
+        category: "
+        subcategory: "
         price: 2800;
-        currency: "$";
+        currency: "
         tags: ["DevOps", "CI/CD", "Automation", "Infrastructure", "Monitoring"],
         author: {
             name: "Zion Tech Group";
@@ -139,18 +139,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.8;
         reviewCount: 134;
         featured: true;
-        location: "Global";
-        availability: "3-4 Weeks";
+        location: "
+        availability: "
         aiScore: 94;
         pricingTier: "Professional"};
     // Business Process Automation;
     {id: "workflow-automation";
         title: "Business Workflow Automation Platform";
         description: "Custom workflow automation solution to streamline business processes, reduce manual work, and improve efficiency.",
-        category: "Business Solutions";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 2200;
-        currency: "$";
+        currency: "
         tags: ["Workflow", "Automation", "Business Process", "Efficiency", "Productivity"],
         author: {
             name: "Zion Tech Group";
@@ -161,21 +161,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.7;
         reviewCount: 98;
         featured: true;
-        location: "Global";
-        availability: "2-4 Weeks";
+        location: "
+        availability: "
         aiScore: 93;
         pricingTier: "Professional",
     };
     {id: "customer-support-ai";
         pricingTier: "Professional"};
     {
-        id: "customer-support-ai";
-        title: "AI-Powered Customer Support Automation";
+        id: "
+        title: "
         description: "Intelligent customer support system with ticket routing, automated responses, and customer satisfaction tracking.",
-        category: "Business Solutions";
-        subcategory: "Customer Support";
+        category: "
+        subcategory: "
         price: 1800;
-        currency: "$";
+        currency: "
         tags: ["Customer Support", "AI", "Automation", "Ticket Management", "Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -186,18 +186,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.6;
         reviewCount: 76;
         featured: true;
-        location: "Global";
-        availability: "2-3 Weeks";
+        location: "
+        availability: "
         aiScore: 91;
         pricingTier: "Starter"};
     // E-commerce & Digital Marketing;
     {id: "ecommerce-ai-optimization";
         title: "E-commerce AI Optimization Suite";
         description: "AI-powered e-commerce optimization including product recommendations, pricing optimization, and customer behavior analysis.",
-        category: "E-commerce";
-        subcategory: "AI Optimization";
+        category: "
+        subcategory: "
         price: 3200;
-        currency: "$";
+        currency: "
         tags: ["E-commerce", "AI", "Optimization", "Recommendations", "Analytics"],
         author: {
             name: "Zion Tech Group";
@@ -208,21 +208,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.8;
         reviewCount: 145;
         featured: true;
-        location: "Global";
-        availability: "3-5 Weeks";
+        location: "
+        availability: "
         aiScore: 95;
         pricingTier: "Professional",
     };
     {id: "digital-marketing-automation";
         pricingTier: "Professional"};
     {
-        id: "digital-marketing-automation";
-        title: "Digital Marketing Automation Platform";
+        id: "
+        title: "
         description: "Comprehensive marketing automation platform with email campaigns, social media management, and lead nurturing.",
-        category: "Digital Marketing";
-        subcategory: "Automation";
+        category: "
+        subcategory: "
         price: 1500;
-        currency: "$";
+        currency: "
         tags: ["Marketing", "Automation", "Email", "Social Media", "Lead Generation"],
         author: {
             name: "Zion Tech Group";
@@ -233,18 +233,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.7;
         reviewCount: 112;
         featured: true;
-        location: "Global";
-        availability: "2-3 Weeks";
+        location: "
+        availability: "
         aiScore: 92;
         pricingTier: "Starter"};
     // Healthcare & FinTech Solutions;
     {id: "healthcare-ai-diagnostics";
         title: "Healthcare AI Diagnostic Platform";
         description: "AI-powered medical diagnostic platform with image analysis, patient data management, and clinical decision support.",
-        category: "Healthcare";
-        subcategory: "AI Diagnostics";
+        category: "
+        subcategory: "
         price: 8500;
-        currency: "$";
+        currency: "
         tags: ["Healthcare", "AI", "Diagnostics", "Medical", "Image Analysis"],
         author: {
             name: "Zion Tech Group";
@@ -255,21 +255,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.9;
         reviewCount: 67;
         featured: true;
-        location: "Global";
-        availability: "8-12 Weeks";
+        location: "
+        availability: "
         aiScore: 99;
         pricingTier: "Enterprise",
     };
     {id: "fintech-compliance-security";
         pricingTier: "Enterprise"};
     {
-        id: "fintech-compliance-security";
-        title: "FinTech Compliance & Security Suite";
+        id: "
+        title: "
         description: "Complete financial technology compliance solution with security protocols, regulatory reporting, and audit trails.",
-        category: "FinTech";
-        subcategory: "Compliance & Security";
+        category: "
+        subcategory: "
         price: 7200;
-        currency: "$";
+        currency: "
         tags: ["FinTech", "Compliance", "Security", "Regulatory", "Audit"],
         author: {
             name: "Zion Tech Group";
@@ -280,18 +280,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.8;
         reviewCount: 89;
         featured: true;
-        location: "Global";
-        availability: "6-10 Weeks";
+        location: "
+        availability: "
         aiScore: 96;
         pricingTier: "Enterprise"};
     // IoT & Smart Solutions;
     {id: "iot-management-platform";
         title: "Enterprise IoT Management Platform";
         description: "Comprehensive IoT platform for device management, data collection, and real-time monitoring across multiple locations.",
-        category: "IoT Solutions";
-        subcategory: "Management Platform";
+        category: "
+        subcategory: "
         price: 5500;
-        currency: "$";
+        currency: "
         tags: ["IoT", "Device Management", "Monitoring", "Real-time", "Enterprise"],
         author: {
             name: "Zion Tech Group";
@@ -302,21 +302,21 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.7;
         reviewCount: 123;
         featured: true;
-        location: "Global";
-        availability: "5-8 Weeks";
+        location: "
+        availability: "
         aiScore: 94;
         pricingTier: "Professional",
     };
     {id: "smart-building-automation";
         pricingTier: "Professional"};
     {
-        id: "smart-building-automation";
-        title: "Smart Building Automation System";
+        id: "
+        title: "
         description: "Intelligent building management system with energy optimization, security monitoring, and automated controls.",
-        category: "IoT Solutions";
-        subcategory: "Building Automation";
+        category: "
+        subcategory: "
         price: 4200;
-        currency: "$";
+        currency: "
         tags: ["Smart Building", "Automation", "Energy", "Security", "IoT"],
         author: {
             name: "Zion Tech Group";
@@ -327,19 +327,19 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.6;
         reviewCount: 87;
         featured: true;
-        location: "Global";
-        availability: "4-6 Weeks";
+        location: "
+        availability: "
         aiScore: 93;
         pricingTier: "Professional"};
     // Education & Training Solutions;
     {
-        id: "ai-learning-management";
-        title: "AI-Powered Learning Management System";
+        id: "
+        title: "
         description: "Intelligent LMS with personalized learning paths, adaptive assessments, and progress tracking for educational institutions.",
-        category: "Education";
-        subcategory: "Learning Management";
+        category: "
+        subcategory: "
         price: 3800;
-        currency: "$";
+        currency: "
         tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
         author: {
             name: "Zion Tech Group";
@@ -353,18 +353,18 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.8;
         reviewCount: 156;
         featured: true;
-        location: "Global";
-        availability: "4-7 Weeks";
+        location: "
+        availability: "
         aiScore: 95;
         pricingTier: "Professional"};
     {
-        id: "vr-ar-training";
-        title: "VR/AR Training & Simulation Platform";
+        id: "
+        title: "
         description: "Immersive virtual and augmented reality training platform for corporate training, skill development, and simulation.",
-        category: "Education";
-        subcategory: "VR/AR Training";
+        category: "
+        subcategory: "
         price: 6500;
-        currency: "$";
+        currency: "
         tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
         author: {
             name: "Zion Tech Group";
@@ -377,8 +377,8 @@ export const COMPREHENSIVE_SERVICES = [
         rating: 4.9;
         reviewCount: 78;
         featured: true;
-        location: "Global";
-        availability: "6-10 Weeks";
+        location: "
+        availability: "
         aiScore: 97;
         pricingTier: "Enterprise"}
 ];
@@ -403,9 +403,9 @@ export const SERVICE_SUBCATEGORIES = {
     "FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
     "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
     "Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"]
-};
+}
 export const PRICING_TIERS = {
     "Starter": { min: 500, max: 2000, label: "Starter ($500 - $2,000)" },
     "Professional": { min: 2000, max: 5000, label: "Professional ($2,000 - $5,000)" },
     "Enterprise": { min: 5000, max: 10000, label: "Enterprise ($5,000 - $10,000)" }
-};
+}

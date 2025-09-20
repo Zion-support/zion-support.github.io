@@ -16,8 +16,8 @@ import { ActiveProjectsCard,  } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard,  } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile,  } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
-  const { jobs, isLoading } = useJobs();
+  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all")
+  const { jobs, isLoading } = useJobs()
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = null;

@@ -1,4 +1,4 @@
-// Enhanced IT Services for 2025;
+/
 export const enhancedITServices2025 = [
     {id: 1;
         name: "Cloud Migration & Strategy";
@@ -7,7 +7,7 @@ export const enhancedITServices2025 = [
         hourlyRate: 150;
         projectRate: 25000;
         features: [
-            "Cloud strategy assessment";
+            "
             "Migration planning",
             "Data migration",
             "Application modernization",
@@ -17,7 +17,7 @@ export const enhancedITServices2025 = [
             "Training & support"
         ],
         benefits: [
-            "40% cost reduction";
+            "
             "Improved scalability",
             "Enhanced security",
             "Better performance",
@@ -33,21 +33,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$150-250/hour, $25K-100K per project",
         competitors: ["Accenture", "Deloitte", "AWS Professional Services"],
-        responseTime: "4 hours";
-        sla: "99.9% uptime guarantee";
+        responseTime: "
+        sla: "
         certifications: ["AWS Solutions Architect", "Azure Solutions Architect", "GCP Professional Cloud Architect"],
-        deliveryTime: "4-12 weeks";
-        support: "24/7 support included";
+        deliveryTime: "
+        support: "
         expertise: ["Cloud Architecture", "DevOps", "Security", "Performance Optimization"],
         technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Zero-trust architecture", "Encryption", "IAM", "Compliance monitoring"],
         integrationCapabilities: ["API integration", "Legacy system migration", "Third-party tools"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "1 year";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -57,13 +57,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 2;
-        name: "Cybersecurity Assessment & Implementation";
-        category: "Cybersecurity";
+        name: "
+        category: "
         description: "Comprehensive cybersecurity services including assessment, implementation, and ongoing monitoring for enterprise security",
         hourlyRate: 175;
         projectRate: 35000;
         features: [
-            "Security assessment";
+            "
             "Vulnerability scanning",
             "Penetration testing",
             "Security implementation",
@@ -73,7 +73,7 @@ export const enhancedITServices2025 = [
             "24/7 monitoring"
         ],
         benefits: [
-            "99.9% threat detection";
+            "
             "Compliance assurance",
             "Risk reduction",
             "Cost savings",
@@ -89,21 +89,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$175-300/hour, $35K-150K per project",
         competitors: ["PwC", "KPMG", "Deloitte Cyber"],
-        responseTime: "2 hours for critical issues";
-        sla: "99.99% security guarantee";
+        responseTime: "
+        sla: "
         certifications: ["CISSP", "CISM", "CEH", "CompTIA Security+"],
-        deliveryTime: "6-16 weeks";
-        support: "24/7 security operations center";
+        deliveryTime: "
+        support: "
         expertise: ["Threat Intelligence", "Incident Response", "Compliance", "Security Architecture"],
         technologies: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Vulnerability scanners"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Zero-trust", "Multi-factor auth", "Encryption", "Audit logging"],
         integrationCapabilities: ["Security tools", "SIEM systems", "Compliance platforms"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "1 year";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -113,13 +113,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 3;
-        name: "DevOps Implementation & Automation";
-        category: "DevOps";
+        name: "
+        category: "
         description: "End-to-end DevOps implementation with CI/CD pipelines, automation, and infrastructure as code for modern development teams",
         hourlyRate: 140;
         projectRate: 20000;
         features: [
-            "CI/CD pipeline setup";
+            "
             "Infrastructure as Code",
             "Automation implementation",
             "Monitoring setup",
@@ -129,7 +129,7 @@ export const enhancedITServices2025 = [
             "Ongoing support"
         ],
         benefits: [
-            "90% faster deployments";
+            "
             "Reduced errors",
             "Better collaboration",
             "Cost optimization",
@@ -145,21 +145,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$140-200/hour, $20K-80K per project",
         competitors: ["ThoughtWorks", "Red Hat", "Atlassian"],
-        responseTime: "8 hours";
-        sla: "99.5% uptime guarantee";
+        responseTime: "
+        sla: "
         certifications: ["AWS DevOps Engineer", "Azure DevOps Engineer", "Kubernetes Administrator"],
-        deliveryTime: "3-8 weeks";
-        support: "Business hours + emergency support";
+        deliveryTime: "
+        support: "
         expertise: ["CI/CD", "Infrastructure", "Automation", "Monitoring", "Security"],
         technologies: ["Jenkins", "GitLab CI", "Kubernetes", "Docker", "Terraform", "Ansible"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Secure pipelines", "Access controls", "Audit logging", "Compliance"],
         integrationCapabilities: ["Version control", "Cloud platforms", "Monitoring tools", "Security tools"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "6 months";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -169,13 +169,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 4;
-        name: "Data Center Design & Implementation";
-        category: "Infrastructure";
+        name: "
+        category: "
         description: "Comprehensive data center services including design, implementation, and management for enterprise-grade infrastructure",
         hourlyRate: 160;
         projectRate: 50000;
         features: [
-            "Data center design";
+            "
             "Infrastructure implementation",
             "Network architecture",
             "Storage solutions",
@@ -185,7 +185,7 @@ export const enhancedITServices2025 = [
             "Documentation"
         ],
         benefits: [
-            "Optimized performance";
+            "
             "Reduced costs",
             "Enhanced security",
             "Better reliability",
@@ -201,21 +201,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$160-250/hour, $50K-500K per project",
         competitors: ["HPE", "Dell", "Cisco", "IBM"],
-        responseTime: "4 hours";
-        sla: "99.99% uptime guarantee";
+        responseTime: "
+        sla: "
         certifications: ["Cisco CCNP", "VMware VCP", "Microsoft MCSE"],
-        deliveryTime: "8-24 weeks";
-        support: "24/7 support included";
+        deliveryTime: "
+        support: "
         expertise: ["Data Center Design", "Network Architecture", "Storage", "Security", "Power Management"],
         technologies: ["Cisco", "VMware", "Microsoft", "HPE", "Dell", "NetApp"],
         compliance: ["SOC 2", "ISO 27001", "TIA-942", "Uptime Institute"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Physical security", "Network security", "Access controls", "Monitoring"],
         integrationCapabilities: ["Legacy systems", "Cloud platforms", "Monitoring tools", "Security systems"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "3 years";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -225,13 +225,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 5;
-        name: "Network Security & Firewall Implementation";
-        category: "Network Security";
-        description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";
+        name: "
+        category: "
+        description: "
         hourlyRate: 145;
         projectRate: 18000;
         features: [
-            "Security assessment";
+            "
             "Firewall implementation",
             "Network segmentation",
             "Intrusion detection",
@@ -241,7 +241,7 @@ export const enhancedITServices2025 = [
             "Ongoing maintenance"
         ],
         benefits: [
-            "99.9% threat protection";
+            "
             "Network segmentation",
             "Compliance assurance",
             "Cost optimization",
@@ -257,21 +257,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$145-200/hour, $18K-75K per project",
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
-        responseTime: "4 hours";
-        sla: "99.9% security guarantee";
+        responseTime: "
+        sla: "
         certifications: ["Cisco CCNP Security", "Palo Alto Networks", "CompTIA Security+"],
-        deliveryTime: "2-6 weeks";
-        support: "Business hours + emergency support";
+        deliveryTime: "
+        support: "
         expertise: ["Network Security", "Firewall Management", "VPN", "Intrusion Detection"],
         technologies: ["Cisco ASA", "Palo Alto Networks", "Fortinet", "Check Point", "OpenVPN"],
         compliance: ["SOC 2", "ISO 27001", "PCI DSS", "HIPAA"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Next-gen firewall", "Intrusion detection", "VPN", "Network segmentation"],
         integrationCapabilities: ["Security tools", "Monitoring systems", "Compliance platforms"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "1 year";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -281,13 +281,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 6;
-        name: "Business Intelligence & Analytics Implementation";
-        category: "Data & Analytics";
+        name: "
+        category: "
         description: "Comprehensive BI and analytics implementation with data warehousing, reporting, and advanced analytics capabilities",
         hourlyRate: 155;
         projectRate: 30000;
         features: [
-            "Data assessment";
+            "
             "Data warehouse design",
             "ETL implementation",
             "Reporting setup",
@@ -297,7 +297,7 @@ export const enhancedITServices2025 = [
             "User training"
         ],
         benefits: [
-            "Data-driven decisions";
+            "
             "360-degree business view",
             "Operational efficiency",
             "Competitive advantage",
@@ -313,21 +313,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$155-225/hour, $30K-120K per project",
         competitors: ["Deloitte", "Accenture", "PwC", "Tableau Professional Services"],
-        responseTime: "8 hours";
-        sla: "99.5% availability guarantee";
+        responseTime: "
+        sla: "
         certifications: ["Microsoft Power BI", "Tableau", "Snowflake", "AWS Data Analytics"],
-        deliveryTime: "6-16 weeks";
-        support: "Business hours + emergency support";
+        deliveryTime: "
+        support: "
         expertise: ["Data Architecture", "ETL", "Reporting", "Analytics", "Data Governance"],
         technologies: ["Power BI", "Tableau", "Snowflake", "AWS", "Azure", "SQL Server"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "SOX"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Data encryption", "Access controls", "Audit logging", "Compliance"],
         integrationCapabilities: ["ERP systems", "CRM systems", "Cloud platforms", "Legacy systems"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "1 year";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -337,13 +337,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 7;
-        name: "Mobile App Development & Integration";
-        category: "Mobile Development";
-        description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";
+        name: "
+        category: "
+        description: "
         hourlyRate: 120;
         projectRate: 15000;
         features: [
-            "App design & development";
+            "
             "Cross-platform development",
             "API integration",
             "Testing & QA",
@@ -353,7 +353,7 @@ export const enhancedITServices2025 = [
             "Maintenance & updates"
         ],
         benefits: [
-            "Native performance";
+            "
             "Cross-platform compatibility",
             "Cost-effective development",
             "Faster time to market",
@@ -369,21 +369,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$120-180/hour, $15K-100K per project",
         competitors: ["Appinventiv", "Fueled", "Y Media Labs", "Dom & Tom"],
-        responseTime: "24 hours";
-        sla: "99% availability guarantee";
+        responseTime: "
+        sla: "
         certifications: ["Apple Developer", "Google Developer", "React Native", "Flutter"],
-        deliveryTime: "8-20 weeks";
-        support: "Business hours + emergency support";
+        deliveryTime: "
+        support: "
         expertise: ["iOS Development", "Android Development", "Cross-platform", "UI/UX", "API Integration"],
         technologies: ["Swift", "Kotlin", "React Native", "Flutter", "Node.js", "Firebase"],
         compliance: ["GDPR", "CCPA", "App Store guidelines", "Google Play policies"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["App security", "Data encryption", "Secure API", "Compliance"],
         integrationCapabilities: ["Backend systems", "Third-party APIs", "Payment gateways", "Analytics"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "6 months";
+        warrantyPeriod: "
         disasterRecovery: false;
         backupSolutions: true;
         monitoringTools: true;
@@ -393,13 +393,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 8;
-        name: "IT Consulting & Digital Transformation";
-        category: "Consulting";
+        name: "
+        category: "
         description: "Strategic IT consulting services for digital transformation, technology assessment, and strategic planning",
         hourlyRate: 200;
         projectRate: 40000;
         features: [
-            "Technology assessment";
+            "
             "Digital strategy",
             "Technology roadmap",
             "Vendor selection",
@@ -409,7 +409,7 @@ export const enhancedITServices2025 = [
             "Ongoing advisory"
         ],
         benefits: [
-            "Strategic direction";
+            "
             "Cost optimization",
             "Risk mitigation",
             "Competitive advantage",
@@ -425,21 +425,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$200-300/hour, $40K-200K per project",
         competitors: ["McKinsey", "BCG", "Bain", "Deloitte Digital"],
-        responseTime: "24 hours";
-        sla: "Professional service guarantee";
+        responseTime: "
+        sla: "
         certifications: ["PMP", "ITIL", "TOGAF", "Agile"],
-        deliveryTime: "4-20 weeks";
-        support: "Business hours + scheduled meetings";
+        deliveryTime: "
+        support: "
         expertise: ["Digital Strategy", "Technology Assessment", "Change Management", "Project Management"],
         technologies: ["Enterprise Architecture", "Cloud Platforms", "Digital Tools", "Analytics"],
         compliance: ["Industry standards", "Best practices", "Regulatory requirements"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Security assessment", "Compliance review", "Risk management"],
         integrationCapabilities: ["Legacy systems", "New technologies", "Business processes"],
         maintenanceIncluded: false;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "N/A";
+        warrantyPeriod: "
         disasterRecovery: false;
         backupSolutions: false;
         monitoringTools: false;
@@ -449,13 +449,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 9;
-        name: "Managed IT Services & Support";
-        category: "Managed Services";
+        name: "
+        category: "
         description: "Comprehensive managed IT services including 24/7 monitoring, support, and proactive maintenance for businesses",
         hourlyRate: 85;
         projectRate: 12000;
         features: [
-            "24/7 monitoring";
+            "
             "Proactive maintenance",
             "Help desk support",
             "Security management",
@@ -465,7 +465,7 @@ export const enhancedITServices2025 = [
             "Monthly reporting"
         ],
         benefits: [
-            "Reduced IT costs";
+            "
             "Proactive maintenance",
             "24/7 support",
             "Better performance",
@@ -481,21 +481,21 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$85-150/hour, $12K-60K per month",
         competitors: ["Datto", "ConnectWise", "Kaseya", "SolarWinds"],
-        responseTime: "1 hour for critical issues";
-        sla: "99.9% uptime guarantee";
+        responseTime: "
+        sla: "
         certifications: ["ITIL", "CompTIA", "Microsoft", "Cisco"],
-        deliveryTime: "2-4 weeks";
-        support: "24/7 support included";
+        deliveryTime: "
+        support: "
         expertise: ["IT Infrastructure", "Network Management", "Security", "Support"],
         technologies: ["RMM tools", "PSA platforms", "Monitoring tools", "Security tools"],
         compliance: ["SOC 2", "ISO 27001", "Industry specific"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["Security monitoring", "Threat detection", "Compliance management"],
         integrationCapabilities: ["Existing tools", "Cloud platforms", "Security systems"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "Ongoing";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
@@ -505,13 +505,13 @@ export const enhancedITServices2025 = [
         reportingCapabilities: true};
     {
         id: 10;
-        name: "Web Application Development & Hosting";
-        category: "Web Development";
-        description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";
+        name: "
+        category: "
+        description: "
         hourlyRate: 110;
         projectRate: 18000;
         features: [
-            "Full-stack development";
+            "
             "Responsive design",
             "Database design",
             "API development",
@@ -521,7 +521,7 @@ export const enhancedITServices2025 = [
             "Maintenance & updates"
         ],
         benefits: [
-            "Modern technology stack";
+            "
             "Responsive design",
             "Scalable architecture",
             "Security best practices",
@@ -537,24 +537,24 @@ export const enhancedITServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$110-170/hour, $18K-80K per project",
         competitors: ["Toptal", "Upwork", "Freelancer", "Agency rates"],
-        responseTime: "24 hours";
-        sla: "99.5% uptime guarantee";
+        responseTime: "
+        sla: "
         certifications: ["Microsoft", "AWS", "Google Cloud", "React", "Node.js"],
-        deliveryTime: "6-16 weeks";
-        support: "Business hours + emergency support";
+        deliveryTime: "
+        support: "
         expertise: ["Frontend Development", "Backend Development", "Database Design", "DevOps"],
         technologies: ["React", "Node.js", "Python", "PostgreSQL", "AWS", "Docker"],
         compliance: ["GDPR", "CCPA", "WCAG", "Security standards"],
-        scalability: "Enterprise-grade";
+        scalability: "
         securityFeatures: ["HTTPS", "Security headers", "Input validation", "Authentication"],
         integrationCapabilities: ["Third-party APIs", "Payment gateways", "Analytics", "CRM systems"],
         maintenanceIncluded: true;
         trainingIncluded: true;
         documentationProvided: true;
-        warrantyPeriod: "6 months";
+        warrantyPeriod: "
         disasterRecovery: true;
         backupSolutions: true;
         monitoringTools: true;
         reportingCapabilities: true}
 ];
-    export default enhancedITServices2025;
+    export export default enhancedITServices2025;

@@ -1,5 +1,5 @@
-import React, { useState } from "react;";
-import { Button } from "@/components/ui/button, ";
+import React, { useState } from "
+import { Button } from "
 
 interface ReplyFormProps {onSubmit: (content: string) => void;
 }
@@ -9,29 +9,29 @@ export default function ReplyForm({ onSubmit; placeholder = "Write your reply...
 interface ReplyFormProps {
 onSubmit: (content: string) => void;
 placeholder?: string,
-};
-export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
-const [content; setContent] = useState("");
+}
+export export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
+const [content; setContent] = useState("")
 
 const handleSubmit: any = (e: React.FormEvent) => {;
-e.preventDefault();
+e.preventDefault()
 if (content.trim()) {
-onSubmit(content);
+onSubmit(content)
 setContent(""),
 }
-};
+}
 
 return (
-<form onSubmit={handleSubmit} className="mt-4">;
+<form onSubmit={handleSubmit} className="mt-4">
 <textarea;
 value={content}
 onChange={(e) => setContent(e.target.value)}
 placeholder={placeholder}
 className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none"
 rows={3}
-/>;
-<div className="mt-2 flex justify-end">;
-<Button type="submit" disabled={!content.trim()}>;
+/>
+<div className="mt-2 flex justify-end">
+<Button type="submit" disabled={!content.trim()}>
 Post Reply;
 </Button>;
 </div>;
@@ -49,7 +49,7 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 interface ReplyFormProps {
-  onSubmit: (content: string) => Promise<void>;
+  onSubmit: (content: string) => Promise<void>
   parentId?: string,
 interface ReplyFormValues {
   content: string

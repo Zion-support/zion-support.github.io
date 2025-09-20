@@ -15,4 +15,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default SkeletonLoader,;<//div><///div>
+export export default SkeletonLoader,;<//div><///div>

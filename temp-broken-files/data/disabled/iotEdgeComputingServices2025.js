@@ -1,14 +1,14 @@
-// IoT & Edge Computing Services for 2025;
+/
 export const iotEdgeComputingServices2025 = [
     {id: 1;
         name: "Smart City IoT Platform";
         category: "Smart Cities";
         description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems",
-        pricing: "Enterprise";
+        pricing: "
         price: 2500;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Traffic management";
+            "
             "Environmental monitoring",
             "Smart lighting control",
             "Waste management",
@@ -18,7 +18,7 @@ export const iotEdgeComputingServices2025 = [
             "Air quality monitoring"
         ],
         benefits: [
-            "Reduced operational costs";
+            "
             "Improved citizen services",
             "Environmental sustainability",
             "Enhanced public safety",
@@ -42,11 +42,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["End-to-end encryption", "Device authentication", "Secure data transmission", "Privacy protection"],
-        integrationTime: "6-12 weeks";
-        scalability: "City-wide deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -58,14 +58,14 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true};
     {
         id: 2;
-        name: "Industrial IoT Edge AI";
-        category: "Industrial IoT";
+        name: "
+        category: "
         description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
-        pricing: "Enterprise";
+        pricing: "
         price: 1800;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Predictive maintenance";
+            "
             "Quality control automation",
             "Energy optimization",
             "Asset tracking",
@@ -75,7 +75,7 @@ export const iotEdgeComputingServices2025 = [
             "Autonomous operations"
         ],
         benefits: [
-            "Reduced downtime";
+            "
             "Improved efficiency",
             "Cost savings",
             "Enhanced safety",
@@ -99,11 +99,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "15 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Industrial security", "Network segmentation", "Access controls", "Audit logging"],
-        integrationTime: "4-8 weeks";
-        scalability: "Enterprise deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -115,14 +115,14 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true};
     {
         id: 3;
-        name: "Healthcare IoT Monitor";
-        category: "Healthcare IoT";
+        name: "
+        category: "
         description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
-        pricing: "Professional";
+        pricing: "
         price: 1200;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Patient monitoring";
+            "
             "Medical device integration",
             "Health analytics",
             "Remote patient care",
@@ -132,7 +132,7 @@ export const iotEdgeComputingServices2025 = [
             "Data visualization"
         ],
         benefits: [
-            "Improved patient care";
+            "
             "Reduced readmissions",
             "Better outcomes",
             "Cost savings",
@@ -156,11 +156,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "Lifetime (medical records)";
-        uptime: "99.99%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"],
-        integrationTime: "3-6 weeks";
-        scalability: "Multi-facility deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -172,14 +172,14 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true};
     {
         id: 4;
-        name: "Retail IoT Analytics";
-        category: "Retail IoT";
+        name: "
+        category: "
         description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
-        pricing: "Professional";
+        pricing: "
         price: 800;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Customer behavior tracking";
+            "
             "Inventory optimization",
             "Smart shelves",
             "Queue management",
@@ -189,7 +189,7 @@ export const iotEdgeComputingServices2025 = [
             "Performance analytics"
         ],
         benefits: [
-            "Increased sales";
+            "
             "Better customer experience",
             "Reduced costs",
             "Improved efficiency",
@@ -213,11 +213,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "5 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Data encryption", "Privacy protection", "Access controls", "Secure transmission"],
-        integrationTime: "2-4 weeks";
-        scalability: "Multi-store deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -229,14 +229,14 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true};
     {
         id: 5;
-        name: "Agricultural IoT Suite";
-        category: "Agricultural IoT";
+        name: "
+        category: "
         description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
-        pricing: "Professional";
+        pricing: "
         price: 600;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Soil monitoring";
+            "
             "Weather tracking",
             "Crop health monitoring",
             "Automated irrigation",
@@ -246,7 +246,7 @@ export const iotEdgeComputingServices2025 = [
             "Supply chain tracking"
         ],
         benefits: [
-            "Increased crop yields";
+            "
             "Reduced water usage",
             "Lower costs",
             "Better sustainability",
@@ -270,11 +270,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Data encryption", "Secure transmission", "Access controls", "Privacy protection"],
-        integrationTime: "2-4 weeks";
-        scalability: "Multi-farm deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -286,14 +286,14 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true};
     {
         id: 6;
-        name: "Energy IoT Grid";
-        category: "Energy IoT";
+        name: "
+        category: "
         description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",
-        pricing: "Enterprise";
+        pricing: "
         price: 1500;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Smart grid management";
+            "
             "Renewable energy integration",
             "Demand response",
             "Energy storage optimization",
@@ -303,7 +303,7 @@ export const iotEdgeComputingServices2025 = [
             "Energy analytics"
         ],
         benefits: [
-            "Grid reliability";
+            "
             "Energy efficiency",
             "Cost savings",
             "Renewable integration",
@@ -327,11 +327,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "20 years";
-        uptime: "99.99%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Grid security", "Cybersecurity", "Access controls", "Real-time monitoring"],
-        integrationTime: "6-12 weeks";
-        scalability: "Grid-wide deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -339,4 +339,4 @@ export const iotEdgeComputingServices2025 = [
         aiIntegration: true;
         predictiveAnalytics: true}
 ];
-    export default iotEdgeComputingServices2025;
+    export export default iotEdgeComputingServices2025;

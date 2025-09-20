@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface EmergingTechService {id: string; title: string; description: string;,
 category: "Blockchain" | "IoT" | "Edge Computing" | "5G" | "AR/VR" | "Robotics" | "Quantum Computing" | "Biotechnology" | "Green Tech" | "Space Tech", subcategory: string;,
@@ -11,9 +11,9 @@ oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
-features: string[], benefits: string[];,
-useCases: string[], targetAudience: string[];
-tags?: string[];
+features: string[], benefits: string[[];],
+useCases: string[], targetAudience: string[[];]
+tags?: string[[];]
 estimatedDelivery?: string;
 supportLevel?: string;,
 marketPrice: string; competitiveAdvantage: string; contactInfo: {,
@@ -25,7 +25,7 @@ rating: number; reviewCount: number; launchDate: string;,
 status: "Active" | "Beta" | "Coming Soon", innovationScore: number;}
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
-// Blockchain Services;
+/
 {,
 id: "enterprise-blockchain-platform",
 title: "Zion Enterprise Blockchain Platform",
@@ -45,14 +45,14 @@ features: [
 "Security auditing",
 "Compliance frameworks",
 "API integration",
-"Analytics dashboard";
+"
 ],
 benefits: [
 "Reduce transaction costs by 40-80%",
 "Improve supply chain transparency",
 "Enhance data security and integrity",
 "Automate complex business processes",
-"Build trust through decentralization";
+"
 ],
 useCases: [
 "Supply chain tracking",
@@ -60,7 +60,7 @@ useCases: [
 "Cross-border payments",
 "Asset tokenization",
 "Voting systems",
-"Intellectual property protection";
+"
 ],
 targetAudience: [
 "Financial institutions",
@@ -68,7 +68,7 @@ targetAudience: [
 "Healthcare organizations",
 "Government agencies",
 "Logistics companies",
-"Real estate firms";
+"
 ],
 currency: "$",
 pricingModel: "subscription",
@@ -110,14 +110,14 @@ features: [
 "Security and encryption",
 "Scalable infrastructure",
 "API and SDK support",
-"Custom dashboards";
+"
 ],
 benefits: [
 "Monitor and control devices remotely",
 "Collect real-time operational data",
 "Automate business processes",
 "Improve operational efficiency",
-"Reduce maintenance costs";
+"
 ],
 useCases: [
 "Smart manufacturing",
@@ -125,7 +125,7 @@ useCases: [
 "Smart cities",
 "Agricultural monitoring",
 "Energy management",
-"Fleet tracking";
+"
 ],
 targetAudience: [
 "Manufacturing companies",
@@ -133,7 +133,7 @@ targetAudience: [
 "Municipalities",
 "Agricultural businesses",
 "Energy companies",
-"Transportation firms";
+"
 ],
 marketPrice: "$199 - $899/month",
 competitiveAdvantage: "End-to-end IoT solution; edge computing capabilities; and industry-specific templates",
@@ -170,14 +170,14 @@ features: [
 "Security and encryption",
 "Performance monitoring",
 "Automated scaling",
-"Multi-cloud integration";
+"
 ],
 benefits: [
 "Reduce latency by 60-80%",
 "Lower bandwidth costs",
 "Improve application performance",
 "Enhanced data privacy",
-"Real-time decision making";
+"
 ],
 useCases: [
 "Autonomous vehicles",
@@ -185,7 +185,7 @@ useCases: [
 "Real-time analytics",
 "Content delivery networks",
 "Smart retail",
-"Telecommunications";
+"
 ],
 targetAudience: [
 "Technology companies",
@@ -193,7 +193,7 @@ targetAudience: [
 "Manufacturing companies",
 "Retail chains",
 "Transportation companies",
-"Content providers";
+"
 ],
 marketPrice: "$249 - $1; 299/month",
 competitiveAdvantage: "Intelligent workload distribution; edge AI integration; and seamless multi-cloud support",
@@ -230,14 +230,14 @@ features: [
 "Security and threat detection",
 "Analytics and reporting",
 "Automated optimization",
-"API integration";
+"
 ],
 benefits: [
 "Improve network performance by 30-50%",
 "Reduce operational costs",
 "Enhance user experience",
 "Optimize resource utilization",
-"Enable new 5G use cases";
+"
 ],
 useCases: [
 "Telecommunications networks",
@@ -245,7 +245,7 @@ useCases: [
 "Smart city infrastructure",
 "Industrial automation",
 "Connected vehicles",
-"Augmented reality applications";
+"
 ],
 targetAudience: [
 "Telecommunications providers",
@@ -253,7 +253,7 @@ targetAudience: [
 "Government agencies",
 "Smart city initiatives",
 "Industrial companies",
-"Technology providers";
+"
 ],
 marketPrice: "$399 - $2; 499/month",
 competitiveAdvantage: "AI-powered optimization; comprehensive monitoring; and automated network management",
@@ -290,14 +290,14 @@ features: [
 "Custom app development",
 "Integration APIs",
 "Content management system",
-"Device management";
+"
 ],
 benefits: [
 "Improve training effectiveness by 40%",
 "Reduce training costs",
 "Enhance remote collaboration",
 "Create immersive customer experiences",
-"Increase employee engagement";
+"
 ],
 useCases: [
 "Employee training and onboarding",
@@ -305,7 +305,7 @@ useCases: [
 "Customer product demonstrations",
 "Design and prototyping",
 "Virtual events and conferences",
-"Healthcare training";
+"
 ],
 targetAudience: [
 "Training organizations",
@@ -313,7 +313,7 @@ targetAudience: [
 "Healthcare providers",
 "Educational institutions",
 "Real estate companies",
-"Event organizers";
+"
 ],
 marketPrice: "$179 - $799/month",
 competitiveAdvantage: "Enterprise-grade platform; comprehensive toolset; and seamless integration capabilities",
@@ -350,14 +350,14 @@ features: [
 "Performance analytics",
 "Remote operation capabilities",
 "Custom programming",
-"Maintenance support";
+"
 ],
 benefits: [
 "Increase productivity by 25-40%",
 "Reduce operational costs",
 "Improve product quality",
 "Enhance workplace safety",
-"24/7 operation capability";
+"
 ],
 useCases: [
 "Manufacturing automation",
@@ -365,7 +365,7 @@ useCases: [
 "Quality inspection",
 "Material handling",
 "Assembly operations",
-"Service robotics";
+"
 ],
 targetAudience: [
 "Manufacturing companies",
@@ -373,7 +373,7 @@ targetAudience: [
 "Warehouse operators",
 "Quality control teams",
 "Service industries",
-"Research institutions";
+"
 ],
 marketPrice: "$25; 000 - $100; 000",
 competitiveAdvantage: "AI-powered intelligence; collaborative capabilities; and comprehensive safety features",
@@ -410,14 +410,14 @@ features: [
 "Cloud-based access",
 "Real-time collaboration",
 "API integration",
-"Expert consultation";
+"
 ],
 benefits: [
 "Accelerate quantum research",
 "Reduce hardware costs",
 "Faster algorithm development",
 "Collaborative development",
-"Future-proof technology";
+"
 ],
 useCases: [
 "Cryptography research",
@@ -425,7 +425,7 @@ useCases: [
 "Financial modeling",
 "Optimization problems",
 "Machine learning",
-"Material science";
+"
 ],
 targetAudience: [
 "Research institutions",
@@ -433,7 +433,7 @@ targetAudience: [
 "Financial services",
 "Technology companies",
 "Government agencies",
-"Universities";
+"
 ],
 marketPrice: "$599 - $3; 999/month",
 competitiveAdvantage: "Advanced simulation capabilities; expert consultation; and comprehensive toolset",
@@ -470,14 +470,14 @@ features: [
 "Data visualization tools",
 "Collaborative research tools",
 "Compliance management",
-"API integration";
+"
 ],
 benefits: [
 "Accelerate drug discovery by 3-5x",
 "Reduce research costs",
 "Improve success rates",
 "Enable personalized medicine",
-"Streamline regulatory compliance";
+"
 ],
 useCases: [
 "Drug discovery and development",
@@ -485,7 +485,7 @@ useCases: [
 "Clinical trials",
 "Personalized medicine",
 "Agricultural biotechnology",
-"Environmental biotechnology";
+"
 ],
 targetAudience: [
 "Pharmaceutical companies",
@@ -493,7 +493,7 @@ targetAudience: [
 "Research institutions",
 "Healthcare providers",
 "Agricultural companies",
-"Environmental organizations";
+"
 ],
 marketPrice: "$449 - $2; 999/month",
 competitiveAdvantage: "Advanced AI algorithms; comprehensive research tools; and regulatory compliance features",
@@ -530,14 +530,14 @@ features: [
 "Sustainability reporting",
 "Compliance management",
 "Analytics dashboard",
-"Mobile applications";
+"
 ],
 benefits: [
 "Reduce carbon footprint by 20-40%",
 "Lower energy costs",
 "Improve sustainability metrics",
 "Meet regulatory requirements",
-"Enhance brand reputation";
+"
 ],
 useCases: [
 "Corporate sustainability",
@@ -545,7 +545,7 @@ useCases: [
 "Waste reduction programs",
 "Environmental compliance",
 "Green building certification",
-"Supply chain sustainability";
+"
 ],
 targetAudience: [
 "Large corporations",
@@ -553,7 +553,7 @@ targetAudience: [
 "Educational institutions",
 "Healthcare organizations",
 "Manufacturing companies",
-"Real estate developers";
+"
 ],
 marketPrice: "$199 - $1; 299/month",
 competitiveAdvantage: "Comprehensive sustainability platform; regulatory compliance; and measurable impact tracking",
@@ -590,14 +590,14 @@ features: [
 "Space weather monitoring",
 "Launch vehicle optimization",
 "Space debris tracking",
-"Expert consultation";
+"
 ],
 benefits: [
 "Optimize satellite operations",
 "Reduce mission costs",
 "Improve data quality",
 "Enhance mission success rates",
-"Access to space expertise";
+"
 ],
 useCases: [
 "Satellite communications",
@@ -605,7 +605,7 @@ useCases: [
 "Space exploration",
 "Aerospace engineering",
 "Defense applications",
-"Scientific research";
+"
 ],
 targetAudience: [
 "Space agencies",
@@ -613,7 +613,7 @@ targetAudience: [
 "Aerospace companies",
 "Defense contractors",
 "Research institutions",
-"Telecommunications companies";
+"
 ],
 marketPrice: "$799 - $5; 999/month",
 competitiveAdvantage: "Comprehensive space technology platform; expert consultation; and advanced analytics capabilities",
@@ -652,7 +652,7 @@ features: [
 "Advanced quantum algorithms",
 "Multi-qubit support",
 "Cloud-based quantum access",
-"Performance benchmarking tools";
+"
 ],
 benefits: [
 "Solve previously intractable problems",
@@ -660,7 +660,7 @@ benefits: [
 "Breakthrough discoveries in science",
 "Future-proof technology investment",
 "Competitive advantage in research",
-"Access to quantum computing resources";
+"
 ],
 useCases: [
 "Pharmaceutical research",
@@ -668,7 +668,7 @@ useCases: [
 "Financial modeling",
 "Climate prediction",
 "Logistics optimization",
-"Cryptography research";
+"
 ],
 targetAudience: [
 "Research institutions",
@@ -676,7 +676,7 @@ targetAudience: [
 "Financial services firms",
 "Academic researchers",
 "Technology companies",
-"Government agencies";
+"
 ],
 marketPrice: "$3; 000 - $15; 000/month",
 competitiveAdvantage: "Revolutionary quantum advantage for complex computational problems",
@@ -714,7 +714,7 @@ features: [
 "Space weather monitoring",
 "Mission control dashboard",
 "Real-time telemetry",
-"Space debris tracking";
+"
 ],
 benefits: [
 "Access to space-based data",
@@ -722,7 +722,7 @@ benefits: [
 "Earth observation insights",
 "Space research opportunities",
 "Competitive space advantage",
-"Innovation in space tech";
+"
 ],
 useCases: [
 "Telecommunications",
@@ -730,7 +730,7 @@ useCases: [
 "Climate monitoring",
 "Navigation systems",
 "Space research",
-"Defense applications";
+"
 ],
 targetAudience: [
 "Space companies",
@@ -738,7 +738,7 @@ targetAudience: [
 "Research institutions",
 "Government agencies",
 "Defense contractors",
-"Technology companies";
+"
 ],
 marketPrice: "$2; 000 - $8; 000/month",
 competitiveAdvantage: "Comprehensive space technology platform with real-time satellite management",
@@ -776,7 +776,7 @@ features: [
 "Brain mapping algorithms",
 "Neuroplasticity training",
 "Mental state analysis",
-"Brain-computer applications";
+"
 ],
 benefits: [
 "Revolutionary human-computer interaction",
@@ -784,7 +784,7 @@ benefits: [
 "Gaming innovation opportunities",
 "Cognitive enhancement capabilities",
 "Research advancement",
-"Competitive technology advantage";
+"
 ],
 useCases: [
 "Healthcare applications",
@@ -792,7 +792,7 @@ useCases: [
 "Cognitive enhancement",
 "Research and development",
 "Assistive technology",
-"Human augmentation";
+"
 ],
 targetAudience: [
 "Healthcare companies",
@@ -800,7 +800,7 @@ targetAudience: [
 "Research institutions",
 "Technology companies",
 "Medical device manufacturers",
-"Academic researchers";
+"
 ],
 marketPrice: "$2; 500 - $10; 000/month",
 competitiveAdvantage: "Advanced brain-computer interface technology for healthcare and gaming",
@@ -838,7 +838,7 @@ features: [
 "Machine learning models",
 "Simulation environment",
 "Testing frameworks",
-"Regulatory compliance";
+"
 ],
 benefits: [
 "Accelerate autonomous vehicle development",
@@ -846,7 +846,7 @@ benefits: [
 "Improve safety standards",
 "Faster time to market",
 "Competitive advantage",
-"Innovation leadership";
+"
 ],
 useCases: [
 "Automotive industry",
@@ -854,7 +854,7 @@ useCases: [
 "Robotics companies",
 "Transportation services",
 "Logistics companies",
-"Research institutions";
+"
 ],
 targetAudience: [
 "Automotive manufacturers",
@@ -862,7 +862,7 @@ targetAudience: [
 "Robotics firms",
 "Technology companies",
 "Research institutions",
-"Startups";
+"
 ],
 marketPrice: "$1; 800 - $6; 000/month",
 competitiveAdvantage: "Comprehensive autonomous vehicle development platform with advanced AI",
@@ -900,7 +900,7 @@ features: [
 "Distributed quantum computing",
 "Quantum internet protocols",
 "Real-time quantum communication",
-"Quantum network management";
+"
 ],
 benefits: [
 "Unbreakable encryption",
@@ -908,7 +908,7 @@ benefits: [
 "Future-proof networking",
 "Enhanced security",
 "Quantum computing access",
-"Innovation leadership";
+"
 ],
 useCases: [
 "Financial institutions",
@@ -916,7 +916,7 @@ useCases: [
 "Healthcare organizations",
 "Defense contractors",
 "Technology companies",
-"Research institutions";
+"
 ],
 targetAudience: [
 "Telecommunications companies",
@@ -924,7 +924,7 @@ targetAudience: [
 "Government agencies",
 "Technology companies",
 "Research institutions",
-"Defense contractors";
+"
 ],
 marketPrice: "$2; 200 - $8; 000/month",
 competitiveAdvantage: "Next-generation quantum internet with ultra-secure communication",
@@ -962,7 +962,7 @@ features: [
 "Consciousness research tools",
 "AI ethics and safety",
 "Consciousness testing",
-"Research collaboration tools";
+"
 ],
 benefits: [
 "Advance AI consciousness research",
@@ -970,7 +970,7 @@ benefits: [
 "Develop safer AI systems",
 "Philosophical insights",
 "Research breakthroughs",
-"Ethical AI development";
+"
 ],
 useCases: [
 "AI research institutions",
@@ -978,7 +978,7 @@ useCases: [
 "Psychology research",
 "Technology companies",
 "Academic institutions",
-"AI ethics organizations";
+"
 ],
 targetAudience: [
 "AI researchers",
@@ -986,7 +986,7 @@ targetAudience: [
 "Psychologists",
 "Technology companies",
 "Academic institutions",
-"Research organizations";
+"
 ],
 marketPrice: "$1; 600 - $5; 000/month",
 competitiveAdvantage: "Revolutionary AI consciousness research platform",
@@ -1024,7 +1024,7 @@ features: [
 "Regulatory compliance",
 "Real-time risk monitoring",
 "Stress testing tools",
-"Financial analytics dashboard";
+"
 ],
 benefits: [
 "Solve complex financial problems",
@@ -1032,7 +1032,7 @@ benefits: [
 "Optimize portfolio performance",
 "Reduce computational time",
 "Competitive advantage",
-"Future-proof technology";
+"
 ],
 useCases: [
 "Investment banks",
@@ -1040,7 +1040,7 @@ useCases: [
 "Asset management firms",
 "Insurance companies",
 "Financial regulators",
-"Risk management firms";
+"
 ],
 targetAudience: [
 "Quantitative analysts",
@@ -1048,7 +1048,7 @@ targetAudience: [
 "Portfolio managers",
 "Financial engineers",
 "Investment advisors",
-"Financial institutions";
+"
 ],
 marketPrice: "$2; 800 - $12; 000/month",
 competitiveAdvantage: "Quantum advantage in financial modeling and risk assessment",
@@ -1086,7 +1086,7 @@ features: [
 "Performance analytics",
 "Real-time optimization",
 "IoT device management",
-"Robotics integration";
+"
 ],
 benefits: [
 "Increase production efficiency by 40%",
@@ -1094,7 +1094,7 @@ benefits: [
 "Improve product quality",
 "24/7 autonomous operation",
 "Predictive maintenance",
-"Competitive manufacturing advantage";
+"
 ],
 useCases: [
 "Manufacturing companies",
@@ -1102,7 +1102,7 @@ useCases: [
 "Electronics manufacturing",
 "Pharmaceutical production",
 "Food processing",
-"Chemical manufacturing";
+"
 ],
 targetAudience: [
 "Manufacturing managers",
@@ -1110,7 +1110,7 @@ targetAudience: [
 "Plant managers",
 "Technology officers",
 "Production engineers",
-"Business owners";
+"
 ],
 marketPrice: "$1; 500 - $5; 000/month",
 competitiveAdvantage: "Comprehensive autonomous manufacturing with Industry 4.0 integration",
@@ -1148,7 +1148,7 @@ features: [
 "Toxicity prediction",
 "Clinical trial optimization",
 "Real-time molecular simulation",
-"Research collaboration tools";
+"
 ],
 benefits: [
 "Accelerate drug discovery by 100x",
@@ -1156,7 +1156,7 @@ benefits: [
 "Improve drug efficacy",
 "Faster time to market",
 "Breakthrough discoveries",
-"Competitive research advantage";
+"
 ],
 useCases: [
 "Pharmaceutical companies",
@@ -1164,7 +1164,7 @@ useCases: [
 "Research institutions",
 "Academic institutions",
 "Government agencies",
-"Healthcare organizations";
+"
 ],
 targetAudience: [
 "Drug discovery researchers",
@@ -1172,7 +1172,7 @@ targetAudience: [
 "Pharmaceutical scientists",
 "Research institutions",
 "Biotechnology companies",
-"Academic researchers";
+"
 ],
 marketPrice: "$3; 200 - $15; 000/month",
 competitiveAdvantage: "Revolutionary quantum acceleration in drug discovery",
@@ -1215,10 +1215,10 @@ innovationLevel: "Advanced holographic platform for commercial applications",
 uniqueValue: "First comprehensive platform for creating and distributing holographic content across multiple display types"};
 ];
 
-export default EMERGING_TECH_SERVICES;
-// Return all services since innovationScore property doesn"t exist;
-// In the future; this could be enhanced with actual innovation scoring;
+export export default EMERGING_TECH_SERVICES;
+/
+/ this could be enhanced with actual innovation scoring;
 return EMERGING_TECH_SERVICES;
-};
-return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
-};
+}
+return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore)
+}

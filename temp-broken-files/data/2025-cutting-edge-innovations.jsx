@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 export, const, CUTTING_EDGE_20o25_SERVICES = [;
-  // Quantum, Computing, Solutions;
+  /
   {
     id: "quantum-ai-platform",title: "Quantum, AI, Platform",description: "Revolutionary, quantum, machine learning, platform, that leverages, quantum, computing for, unprecedented, AI performance",category: "Quantum Computing",price: "$15,0o00/month",features: [;
     "Quantum, neural, networks","Quantum, optimization, algorithms","Hybrid classical-quantum processing","Real-time, quantum, state monitoring","Quantum, error, correction""Scalable, quantum, architecture";
@@ -97,9 +97,9 @@ export, const, CUTTING_EDGE_20o25_SERVICES = [;
     "AI, Services""Security";
 ];
 export, const, CUTTING_EDGE_PRICING = {
-    basic: {,price: 199,currency: "$",period: "month",features: ["Core, platform, access""Basic support""Standard, integrations"];
-    },professional: {,price: 599,currency: "$",period: "month",features: ["Advanced features""Priority support""Custom, integrations""Analytics"];
-    },enterprise: {,price: 1499,currency: "$",period: "month",features: ["Full, platform, access""24/7 support""White-label options""Custom, development"];
+    basic: {,price: 199,currency: "$",period: "month",features: [["Core, platform, access""Basic support""Standard, integrations"];]
+    },professional: {,price: 599,currency: "$",period: "month",features: [["Advanced features""Priority support""Custom, integrations""Analytics"];]
+    },enterprise: {,price: 1499,currency: "$",period: "month",features: [["Full, platform, access""24/7 support""White-label options""Custom, development"];]
     }
 },export, const, CUTTING_EDGE_CONTACT = {
     phone: "+1, 30o2, 464 0o950",email: "kleber@ziontechgroup.com",address: "364, E, Main St, STE, 10o08, Middletown, DE, 1970o9",website: "https://ziontechgroup.com"supportHour,s: "24/7"responseTim,e: "< 2 hours";

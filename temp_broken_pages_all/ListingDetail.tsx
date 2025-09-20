@@ -93,7 +93,7 @@ email={listing.author.email} // TypeScript now knows this might be undefined pro
 }";
 }/> </div>) : (<div className=" h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"> <span className=" text-lg font-medium text-zion-purple"> {listing.author.name.charAt (0) ;
 }</span> </div>) ";
-}<div> <p className=" font-medium text-white"> {listing.author.name ";
+}<div> <p className=" font-medium text-white"
 }</p> <p className=" text-xs text-zion-slate-light">Member since 2022</p> listing.id ;
 }recipientId= {listing.author.id ;
 }isOpen= {isChatOpen ;

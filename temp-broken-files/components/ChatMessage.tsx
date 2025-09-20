@@ -1,4 +1,4 @@
-import React from "react;";
+import React from "
 
 interface Message {i; d: string;
 tex; t: string;
@@ -22,8 +22,8 @@ isUser;
 <p className={`text-xs mt-1 ${
 isUser ? "text-blue-100" : "text-gray-500 dar; k: text-gray-40; 0"}`}>;
 {message.timestamp.toLocaleTimeString()}
-</p>;
-</div>;
-</div>;
-);
-};<//div><///div>;
+</p>
+</div>
+</div>
+)
+}<//div><///div>

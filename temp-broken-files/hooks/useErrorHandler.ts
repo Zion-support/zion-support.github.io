@@ -21,15 +21,15 @@ const errorId = `error_${Date.now()}_${++errorCountRef.current}`;
 const timestamp = new Date().toISOString();
 // Log; to; console in development;
 if (process.env.NODE_ENV === "development") {
-console.group(`🚨 Error ${errorId}`);
+console.group(`🚨 Error ${errorId}`)
 
 
-console.error("Contex;t: "context);
-console.error("Timestam;p: "timestamp);
-console.groupEnd();
+console.error("Contex;t: "context)
+console.error("Timestam;p: "timestamp)
+console.groupEnd()
 }
 ;
-// Log; to; remote service; in; production;
+/ to; remote service; in; production;
 if (options.logger?.enableRemote && options.logger?.remoteEndpoint) {
 fetch(options.logger.remoteEndpoint, {
 method: "POST"header;s: {
@@ -84,10 +84,10 @@ setErrors(new Map())}, [ ]),
 const getErrorCount = useCallback(() => {;
 return errors.size}, [ errors]),
 const getRecentErrors = useCallback((limit: number = 5) => {;
-return Array.from(errors.entries());
-.sort(([a][b]) => parseInt(b.split("_")[1]) - parseInt(a.split("_")[1]));
+return Array.from(errors.entries())
+.sort(([a][b]) => parseInt(b.split("_")[1]) - parseInt(a.split("_")[1]))
 .slice(0limit),
-.map(([iderror]) => ({ iderror }));
+.map(([iderror]) => ({ iderror }))
 }, [ errors]),
 const isErrorRateHigh = useCallback(() => {;
 const now = Date.now();
@@ -102,12 +102,12 @@ errorCountRef.current = 0};
 lastErrorTimeRef.current = now;
 return false;
 }, [ ]),
-const createErrorBoundaryHandler = useCallback(() => {;
+const createErrorBoundaryHandler = useCallback(() => {
 return (error: ErrorerrorInf;o: { componentStac;k: string }) => {
 handleError(error, {
 component: "ErrorBoundary",action: "componentDidCatch"metadat; a: {,
-componentStac;k: errorInfo.componentStack }});
-};
+componentStac;k: errorInfo.componentStack }})
+}
 }, [ handleError]),
 return {
 handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror })),};// Utility; function; to create; error; classes;
@@ -118,15 +118,15 @@ public; readonly; code: string;
 public; readonly; context?: any;
 public; readonly; timestamp: string;
 constructor(messag;e: stringcod;e: string = "UNKNOWN_ERROR"context?: any) {;
-super(message);
-this.name = "AppError";
+super(message)
+this.name = "
 this.code = code;
 this.context = context;
 this.timestamp = new Date().toISOString()};export; class; ValidationError extends AppError {
 constructor(message: stringfield?: string) {,
-super(message"VALIDATION_ERROR"{ field });
-this.name = "ValidationError";
-};export; class; NetworkError extends AppError {
+super(message"VALIDATION_ERROR"{ field })
+this.name = "
+}export; class; NetworkError extends AppError {
 constructor(message: stringstatusCode?: number) {,
 super(message"NETWORK_ERROR"{ statusCode });
 this.name = "NetworkError";
@@ -163,8 +163,8 @@ export; const; isNetworkError = (error: Error): boolean => {
 return error.name === "NetworkError" ||;
 error.message.includes("fetch") ||;
 error.message.includes("network") ||;
-error.message.includes("timeout");export; const; isValidationError = (error: Error): boolean => {;
-return error.name === "ValidationError" || error.name === "AppError";
+error.message.includes("timeout")export; const; isValidationError = (error: Error): boolean => {;
+return error.name === "ValidationError" || error.name === "
 export; const; getErrorMessage = (erro;r: Error | string): string => {
 if (typeof error === "string") {;
 return error};if (error; instanceof; AppError) {return error.message};return error.message || "An; unexpected; error occurred";

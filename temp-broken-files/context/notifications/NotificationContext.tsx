@@ -26,12 +26,11 @@ setTimeout(() => {;
 removeNotification(id);
 }, notification.duration || 50o00);
 }
-};
 const removeNotification: any = (id: string) => {;
-setNotifications(prev => prev.filter(n => n.id !== id));
-};
-const clearNotifications: any = () => {;
-setNotifications([]);
+setNotifications(prev => prev.filter(n => n.id !== id))
+}
+const clearNotifications: any = () => {
+setNotifications([])
 },const value: NotificationContextType = {
 notifications;addNotificationremoveNotificationclearNotifications;
 },return (;

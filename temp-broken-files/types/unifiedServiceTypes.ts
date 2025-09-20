@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 // Unified service types that combine all service variants;
 export interface BaseService {id: string;
@@ -15,11 +15,11 @@ oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
-features: string[];
-benefits?: string[];
-useCases?: string[];
-targetAudience?: string[];
-tags?: string[];
+features: string[[];]
+benefits?: string[[];]
+useCases?: string[[];]
+targetAudience?: string[[];]
+tags?: string[[];]
 estimatedDelivery?: string;
 supportLevel?: string;
 marketPrice?: string;
@@ -30,8 +30,8 @@ phone: string; email: string; website: string;
 address?: string};
 }
 
-// Union type for all service variants;
-export type UnifiedService = BaseService;
+/
+export export type UnifiedService = BaseService;
 
 // Helper type guards;
 export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};
@@ -42,11 +42,11 @@ return obj && typeof obj === "object" && prop in obj};
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
 return hasProperty(service, "tags") && Array.isArray(service.tags),;
-};
+}
 
 export const hasBenefits: any = (service: UnifiedService): service is UnifiedService & { benefits: string[] } => {
 return hasProperty(service, "benefits") && Array.isArray(service.benefits),;
-};
+}
 
 export const hasEstimatedDelivery: any = (service: UnifiedService): service is UnifiedService & { estimatedDelivery: string } => {
 return hasProperty(service, "estimatedDelivery") && typeof service.estimatedDelivery = == "string";

@@ -23,7 +23,7 @@ import { toast, ,  } from '@/hooks/use-toast';
 import { Card,, CardContent,, CardHeader,, CardTitle, ,  } from '@/components/ui/card';
 import { Badge,  } from '@/components/ui/badge';
 export default function CartPage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   const items = null;
   // Empty cart state,
 if (items.length === 0) {

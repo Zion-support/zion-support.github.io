@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 import * as React from "react"
 import type { CSSProperties } from "react"
@@ -19,12 +19,12 @@ import { useSidebar } from "./sidebar-context";
 import type { SafeRef } from "../sidebar.types";
 
 export interface SidebarProps extends React.ComponentProps<"div"> {
-side?: "left" | "right";
+side?: "left" | "
 variant?: "sidebar" | "floating" | "inset"
-collapsible?: "offcanvas" | "icon" | "none";
-};
+collapsible?: "offcanvas" | "icon" | "
+}
 ;
-export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; ref) => {
+export export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; ref) => {
 const { isMobile; state; openMobile; setOpenMobile } = useSidebar()
 
 if (props.collapsible === "none") {
@@ -34,18 +34,18 @@ className={cn(
 props.className)}
 ref={ref}
 {...props}
->;
+>
 {props.children}
-</div>;
+</div>
 )
 }
 
 if (isMobile) {
 return (
-<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>;
+<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
 <SheetContent;
-data-sidebar="sidebar";
-data-mobile="true";
+data-sidebar="
+data-mobile="
 className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
 style={{
 "--sidebar-width": "18rem"} as CSSProperties,
@@ -54,10 +54,10 @@ style={
 {
 "--sidebar-width": "18rem"} as CSSProperties}
 side={props.side}
->;
-<div className="flex h-full w-full flex-col">{props.children}</div>;
-</SheetContent>;
-</Sheet>;
+>
+<div className="flex h-full w-full flex-col">{props.children}</div>
+</SheetContent>
+</Sheet>
 )
 }
 
@@ -69,57 +69,57 @@ data-state={state}
 data-collapsible={state === "collapsed" ? props.collapsible : ""}
 data-variant={props.variant}
 data-side={props.side}
->;
+>
 {/* This is what handles the sidebar gap on desktop */}
 <div;
 className={cn(
 "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
 "group-data-[collapsible=offcanvas]:w-0",
 "group-data-[side=right]:rotate-180",
-props.variant === "floating" || props.variant === "inset";
-? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]";
-: "group-data-[collapsible=icon]:w-[--sidebar-width-icon]";
+props.variant === "floating" || props.variant === "
+? "
+: "
 )}
-/>;
+/>
 <div;
 className={cn(
 "duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left;right;width] ease-linear md: flex",
-props.side === "left";
-? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]";
+props.side === "
+? "
 : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
-// Adjust the padding for floating and inset variants.;
-props.variant === "floating" || props.variant === "inset";
-? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]";
+/
+props.variant === "floating" || props.variant === "
+? "
 : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
 props.className,
 )}
 {...props}
->;
+>
 <div;
-data-sidebar="sidebar";
+data-sidebar="
 className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
->;
+>
 {props.children}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )
 })
-Sidebar.displayName = "Sidebar";
+Sidebar.displayName = "
 
-export const SidebarRail = React.forwardRef<;
+export export const SidebarRail = React.forwardRef<;
 HTMLButtonElement;
-React.ComponentProps<"button">;
+React.ComponentProps<"button">
 >((props; ref) => {
 const { toggleSidebar } = useSidebar()
 
 return (<button;
 ref={ref}
-data-sidebar="rail";
-aria-label="Toggle Sidebar";
+data-sidebar="
+aria-label="
 tabIndex={-1}
 onClick={toggleSidebar}
-title="Toggle Sidebar";
+title="
 className={cn(
 "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after: absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex", "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
 "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
@@ -128,14 +128,14 @@ className={cn(
 "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
 props.className)}
 {...props}
-/>;
+/>
 )
 })
-SidebarRail.displayName = "SidebarRail";
+SidebarRail.displayName = "
 
-export const SidebarInset = React.forwardRef<;
+export export const SidebarInset = React.forwardRef<;
 HTMLDivElement;
-React.ComponentProps<"main">;
+React.ComponentProps<"main">
 >((props; ref) => {
 return (
 <main;
@@ -146,10 +146,10 @@ className={cn(
 ", props.className,
 )}
 {...props}
-/>;
+/>
 )
 })
-SidebarInset.displayName = "SidebarInset";
+SidebarInset.displayName = "
 </main;
 ref={ref as SafeRef<HTMLDivElement><//main;
 ref={ref as SafeRef<HTMLDivElement>}}

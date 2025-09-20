@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface ServiceContact {
 phone: string;
@@ -20,10 +20,10 @@ description: string;
 pricing: string;
 price: number;
 pricingModel: string;
-features: string[];
-benefits: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 contactInfo: ServiceContact;
 marketPrice: string;
 technologyStack: string[];
@@ -38,7 +38,7 @@ innovationScore: number;
 supportLevel: string;,
 innovationScore: number;}
 
-// Specialized Innovative Services for 2025;
+/
 export const specializedInnovativeServices2025: SpecializedService[] = [
 {id: 1;
 name: "Digital Twin & Simulation Platform";
@@ -49,22 +49,22 @@ pricing: "Enterprise";
 price: 8500;,
 pricingModel: "monthly";,
 features: [
-"3D digital twin creation";
+"
 "Real-time simulation",
 "Predictive modeling",
 "IoT sensor integration",
 "Performance optimization",
 "Scenario testing",
 "Collaborative visualization",
-"API integration";
+"
 ],
 benefits: [
-"Reduce physical testing costs";
+"
 "Improve system performance",
 "Enable predictive maintenance",
 "Optimize operations",
 "Risk-free scenario testing",
-"Enhanced decision making";
+"
 ],
 targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Healthcare", "Transportation"],
 tags: ["Digital Twins", "Simulation", "IoT", "3D Modeling", "Predictive Analytics"],
@@ -94,22 +94,22 @@ pricing: "Enterprise";
 price: 12000;,
 pricingModel: "monthly";,
 features: [
-"Federated learning algorithms";
+"
 "Privacy-preserving computation",
 "Distributed model training",
 "Secure aggregation",
 "Differential privacy",
 "Multi-party computation",
 "Model performance analytics",
-"Compliance monitoring";
+"
 ],
 benefits: [
-"Maintain data privacy";
+"
 "Collaborative AI training",
 "Regulatory compliance",
 "Enhanced security",
 "Scalable AI development",
-"Trusted AI solutions";
+"
 ],
 targetAudience: ["Healthcare", "Financial services", "Government", "Research institutions", "Enterprises"],
 tags: ["Federated Learning", "Privacy AI", "Secure AI", "Distributed Learning", "Compliance"],
@@ -139,22 +139,22 @@ pricing: "Enterprise";
 price: 25000;,
 pricingModel: "monthly";,
 features: [
-"Neuromorphic processors";
+"
 "Spiking neural networks",
 "Event-driven computing",
 "Low-power AI processing",
 "Real-time learning",
 "Adaptive algorithms",
 "Hardware acceleration",
-"Development tools";
+"
 ],
 benefits: [
-"1000x more energy efficient";
+"
 "Real-time learning capabilities",
 "Adaptive AI systems",
 "Reduced power consumption",
 "Faster processing",
-"Future-proof computing";
+"
 ],
 targetAudience: ["Research institutions", "AI companies", "Hardware manufacturers", "Government", "Defense"],
 tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Spiking Neural Networks", "Low-Power AI", "Hardware AI"],
@@ -184,22 +184,22 @@ pricing: "Premium";
 price: 15000;,
 pricingModel: "monthly";,
 features: [
-"Holographic 3D displays";
+"
 "Real-time 3D rendering",
 "Interactive holographic UI",
 "Telepresence systems",
 "3D content creation tools",
 "Multi-user collaboration",
 "Gesture recognition",
-"Spatial audio";
+"
 ],
 benefits: [
-"Immersive 3D experiences";
+"
 "Enhanced remote collaboration",
 "Interactive visualization",
 "Future-ready technology",
 "Competitive advantage",
-"Innovative user interfaces";
+"
 ],
 targetAudience: ["Entertainment", "Education", "Healthcare", "Architecture", "Design companies"],
 tags: ["Holographic Display", "3D Visualization", "Telepresence", "Immersive Technology", "3D UI"],
@@ -229,22 +229,22 @@ pricing: "Enterprise";
 price: 18000;,
 pricingModel: "monthly";,
 features: [
-"Ambient intelligence systems";
+"
 "Context-aware computing",
 "Predictive environment control",
 "Multi-sensor integration",
 "Adaptive user interfaces",
 "Energy optimization",
 "Health monitoring",
-"Privacy protection";
+"
 ],
 benefits: [
-"Intelligent environment adaptation";
+"
 "Improved user experience",
 "Energy efficiency",
 "Health and wellness",
 "Automated environment control",
-"Future-ready infrastructure";
+"
 ],
 targetAudience: ["Smart cities", "Healthcare facilities", "Office buildings", "Homes", "Public spaces"],
 tags: ["Ambient Intelligence", "Smart Environments", "IoT", "Context-Aware Computing", "Predictive AI"],
@@ -274,22 +274,22 @@ pricing: "Enterprise";
 price: 22000;,
 pricingModel: "monthly";,
 features: [
-"Swarm coordination algorithms";
+"
 "Autonomous navigation",
 "Collective decision making",
 "Multi-robot communication",
 "Task distribution",
 "Fault tolerance",
 "Performance optimization",
-"Safety monitoring";
+"
 ],
 benefits: [
-"Scalable robotic operations";
+"
 "Improved efficiency",
 "Enhanced reliability",
 "Cost-effective automation",
 "Complex task execution",
-"Future robotics technology";
+"
 ],
 targetAudience: ["Manufacturing", "Logistics", "Agriculture", "Search and rescue", "Research institutions"],
 tags: ["Swarm Robotics", "Autonomous Systems", "Multi-Robot Coordination", "Collective Intelligence", "Robotics"],
@@ -319,22 +319,22 @@ pricing: "Premium";
 price: 14000;,
 pricingModel: "monthly";,
 features: [
-"Genetic algorithms";
+"
 "Evolutionary programming",
 "Swarm intelligence",
 "Neural evolution",
 "Adaptive optimization",
 "Multi-objective evolution",
 "Bio-inspired algorithms",
-"Performance analytics";
+"
 ],
 benefits: [
-"Superior optimization results";
+"
 "Adaptive problem solving",
 "Innovative AI approaches",
 "Efficient search algorithms",
 "Natural-inspired solutions",
-"Competitive AI advantage";
+"
 ],
 targetAudience: ["Research institutions", "AI companies", "Optimization specialists", "Financial services", "Manufacturing"],
 tags: ["Bio-Inspired Computing", "Evolutionary Algorithms", "Genetic Programming", "Swarm Intelligence", "AI Optimization"],
@@ -364,22 +364,22 @@ pricing: "Enterprise";
 price: 35000;,
 pricingModel: "monthly";,
 features: [
-"Quantum neural networks";
+"
 "Quantum feature mapping",
 "Quantum optimization",
 "Quantum classification",
 "Quantum regression",
 "Hybrid quantum-classical AI",
 "Quantum algorithm library",
-"Performance benchmarking";
+"
 ],
 benefits: [
-"Exponential speedup for AI";
+"
 "Superior pattern recognition",
 "Quantum advantage in ML",
 "Future-proof AI technology",
 "Breakthrough AI capabilities",
-"Competitive AI leadership";
+"
 ],
 targetAudience: ["AI research institutions", "Quantum computing companies", "Financial services", "Government", "Defense"],
 tags: ["Quantum AI", "Quantum Machine Learning", "Quantum Neural Networks", "Quantum Computing", "AI"],
@@ -399,4 +399,4 @@ innovationScore: 9.6;
 supportLevel: "enterprise";,
 innovationScore: 9.6;}
 ];
-export default specializedInnovativeServices2025;
+export export default specializedInnovativeServices2025;

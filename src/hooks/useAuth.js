@@ -1,0 +1,139 @@
+import import { useState, useEffect } from 'react, ';
+export function useAuth() {
+    const [user, setUser] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
+    useEffect(() => {
+        /
+        const storedUser = localStorage.getItem('zion_user')
+        if (storedUser) {
+            try {
+                setUser(JSON.parse(storedUser))
+            }
+            catch (error) {
+                
+                localStorage.removeItem('zion_user')
+            }
+        }
+        setIsLoading(false)
+    }, [])
+    const login = async (email, password) => {
+        setIsLoading(true)
+        try {
+            /
+            await new Promise(resolve => setTimeout(resolve, 1000))
+            const mockUser = {
+                id: '1';
+                name: 'Demo User';
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+            }
+    setUser(mockUser)
+            localStorage.setItem('zion_user', JSON.stringify(mockUser))
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false)
+        }
+    }
+    const logout = async () => {
+        setIsLoading(true)
+        try {
+            /
+            await new Promise(resolve => setTimeout(resolve, 500))
+            setUser(null)
+            localStorage.removeItem('zion_user')
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false)
+        }
+    }
+    const signup = async (email, password, name) => {
+        setIsLoading(true)
+        try {
+            /
+            await new Promise(resolve => setTimeout(resolve, 1000))
+            const mockUser = {
+                id: '1';
+                name,
+                email,
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
+            }
+    setUser(mockUser)
+            localStorage.setItem('zion_user', JSON.stringify(mockUser))
+        }
+        catch (error) {
+            
+            throw error;
+        }
+        finally {
+            setIsLoading(false)
+        }
+    }
+    return {
+        user,
+        login,
+        logout,
+        signup,
+        isLoading;
+    const [loading, setLoading] = useState(true)
+    useEffect(() => {
+        // Check if user is logged in (e.g., check localStorage, cookies, etc.)
+        const checkAuth = () => {
+            const storedUser = localStorage.getItem('zion_user')
+            if (storedUser) {
+                try {
+                    setUser(JSON.parse(storedUser))
+                }
+                catch (error) {
+                    
+                }
+            }
+            setLoading(false)
+        }
+        checkAuth()
+    }, [])
+    const login = async (email, password) => {
+        /
+        const mockUser = {
+            id: '1';
+            email,
+            name: 'User';
+            role: 'user',
+        }
+    setUser(mockUser)
+        localStorage.setItem('zion_user', JSON.stringify(mockUser))
+        return mockUser;
+    }
+    const logout = () => {
+        setUser(null)
+        localStorage.removeItem('zion_user')
+    }
+    const register = async (email, password, name) => {
+        /
+        const mockUser = {
+            id: '1';
+            email,
+            name,
+            role: 'user',
+        }
+    setUser(mockUser)
+        localStorage.setItem('zion_user', JSON.stringify(mockUser))
+        return mockUser;
+    }
+    return {
+        user,
+        loading,
+        login,
+        logout,
+        register,
+        isAuthenticated: !!user;
+        isAdmin: user?.role === 'admin',
+    }
+}

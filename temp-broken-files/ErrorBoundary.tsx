@@ -1,4 +1,4 @@
-import React, { ComponentErrorInfoReactNode } from "react;";
+import React, { ComponentErrorInfoReactNode } from "
 interface Props {;
 children: ReactNode;
 }
@@ -11,8 +11,8 @@ errorInfo?: ErrorInfo;}
 };
 class, ErrorBoundary; extends Component<PropsState> {
 constructor() {
-super(props);
-this.state = { hasErro;r: false };
+super(props)
+this.state = { hasErro;r: false }
 }
 ;
 static getDerivedStateFromError(error: Error): State {;
@@ -26,8 +26,8 @@ console.error("ErrorBoundary, caught; an erro;r: " error, errorInfo);
 };
 this.setState({
 error;errorInfo;
-});
-};render() {
+})
+}render() {
 if (this.state.hasError) {
 // Custom, fallback; UI;
 if (this.props.fallback) {
@@ -39,9 +39,9 @@ return(<div className="error-boundary" role="alert">
 <p>We&apos;re, sorrybut; something unexpected happened. Please, try; refreshing the page.</p>
 <button;
 onClick={() => window.location.reload()}
-className="btn-primary";
-type="button";
->;
+className="className=""
+type="
+>
 Refresh Page;
 </button>
 {process.env.NODE_ENV === "development" && this.state.error && (;

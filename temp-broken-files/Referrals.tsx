@@ -40,9 +40,9 @@ import { Share, Users,  } from 'lucide-react'
 import { useRouter,  } from 'next/router', // Changed from useNavigate,
 import { Card,
 CardContent
-, , CardDescription,
+,, ,, CardDescription,
 CardHeader
-, , CardTitle,
+,, ,, CardTitle,
  } from '@/components/ui/card'
 import { Tabs,, TabsContent,, TabsList, TabsTrigger,  } from '@/components/ui/tabs'
 import { useRouter,  } from 'next/router'; // Changed from useNavigate,

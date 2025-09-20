@@ -1,4 +1,4 @@
-// Innovative IT Services for 2025;
+/
 export const innovativeITServices2025 = [
     {id: 1;
         name: "Zero-Trust Network Architecture";
@@ -7,7 +7,7 @@ export const innovativeITServices2025 = [
         hourlyRate: 150;
         projectRate: 25000;
         features: [
-            "Identity verification";
+            "
             "Micro-segmentation",
             "Continuous monitoring",
             "Adaptive access controls",
@@ -17,7 +17,7 @@ export const innovativeITServices2025 = [
             "Incident response"
         ],
         benefits: [
-            "Enhanced security posture";
+            "
             "Reduced attack surface",
             "Compliance automation",
             "Cost savings",
@@ -35,20 +35,20 @@ export const innovativeITServices2025 = [
         responseTime: "2 hours";
         sla: "99.9% uptime";
         certifications: ["CISSP", "CISM", "CCSP", "SANS"],
-        deliveryTime: "4-6 weeks";
+        deliveryTime: "
         support: "24/7 premium support",
     };
     {id: 2;
         support: "24/7 premium support"};
     {
         id: 2;
-        name: "Quantum-Ready Infrastructure";
-        category: "Infrastructure";
-        description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
+        name: "
+        category: "
+        description: "
         hourlyRate: 200;
         projectRate: 50000;
         features: [
-            "Post-quantum cryptography";
+            "
             "Quantum-resistant algorithms",
             "Hybrid encryption systems",
             "Future-proof architecture",
@@ -58,7 +58,7 @@ export const innovativeITServices2025 = [
             "Training and documentation"
         ],
         benefits: [
-            "Future-proof security";
+            "
             "Competitive advantage",
             "Regulatory compliance",
             "Long-term cost savings",
@@ -76,20 +76,20 @@ export const innovativeITServices2025 = [
         responseTime: "4 hours";
         sla: "99.95% uptime";
         certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Security"],
-        deliveryTime: "8-12 weeks";
+        deliveryTime: "
         support: "24/7 enterprise support",
     };
     {id: 3;
         support: "24/7 enterprise support"};
     {
         id: 3;
-        name: "AI-Powered DevOps Automation";
-        category: "DevOps";
+        name: "
+        category: "
         description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
         hourlyRate: 125;
         projectRate: 30000;
         features: [
-            "AI deployment optimization";
+            "
             "Intelligent monitoring",
             "Automated testing",
             "Performance optimization",
@@ -99,7 +99,7 @@ export const innovativeITServices2025 = [
             "Self-healing systems"
         ],
         benefits: [
-            "Faster deployments";
+            "
             "Reduced errors",
             "Cost optimization",
             "Improved reliability",
@@ -117,20 +117,20 @@ export const innovativeITServices2025 = [
         responseTime: "4 hours";
         sla: "99.9% uptime";
         certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
-        deliveryTime: "3-4 weeks";
+        deliveryTime: "
         support: "Business hours + emergency support",
     };
     {id: 4;
         support: "Business hours + emergency support"};
     {
         id: 4;
-        name: "Edge Computing Infrastructure";
-        category: "Infrastructure";
-        description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
+        name: "
+        category: "
+        description: "
         hourlyRate: 140;
         projectRate: 35000;
         features: [
-            "Edge node deployment";
+            "
             "Latency optimization",
             "IoT integration",
             "Data processing",
@@ -140,7 +140,7 @@ export const innovativeITServices2025 = [
             "Maintenance automation"
         ],
         benefits: [
-            "Reduced latency";
+            "
             "Better performance",
             "Cost optimization",
             "Scalability",
@@ -158,20 +158,20 @@ export const innovativeITServices2025 = [
         responseTime: "6 hours";
         sla: "99.9% uptime";
         certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
-        deliveryTime: "6-8 weeks";
+        deliveryTime: "
         support: "Business hours + emergency support",
     };
     {id: 5;
         support: "Business hours + emergency support"};
     {
         id: 5;
-        name: "Blockchain Infrastructure Services";
-        category: "Blockchain";
+        name: "
+        category: "
         description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
         hourlyRate: 175;
         projectRate: 45000;
         features: [
-            "Blockchain architecture design";
+            "
             "Smart contract development",
             "Node deployment",
             "Security implementation",
@@ -181,7 +181,7 @@ export const innovativeITServices2025 = [
             "Integration services"
         ],
         benefits: [
-            "Enhanced security";
+            "
             "Transparency",
             "Cost reduction",
             "Automation",
@@ -199,20 +199,20 @@ export const innovativeITServices2025 = [
         responseTime: "8 hours";
         sla: "99.9% uptime";
         certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
-        deliveryTime: "8-10 weeks";
+        deliveryTime: "
         support: "24/7 premium support",
     };
     {id: 6;
         support: "24/7 premium support"};
     {
         id: 6;
-        name: "Green IT Infrastructure";
-        category: "Sustainability";
-        description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
+        name: "
+        category: "
+        description: "
         hourlyRate: 130;
         projectRate: 32000;
         features: [
-            "Energy-efficient design";
+            "
             "Carbon footprint analysis",
             "Renewable energy integration",
             "Cooling optimization",
@@ -222,7 +222,7 @@ export const innovativeITServices2025 = [
             "Compliance monitoring"
         ],
         benefits: [
-            "Cost savings";
+            "
             "Environmental impact",
             "Regulatory compliance",
             "Brand reputation",
@@ -240,20 +240,20 @@ export const innovativeITServices2025 = [
         responseTime: "6 hours";
         sla: "99.9% uptime";
         certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
-        deliveryTime: "6-8 weeks";
+        deliveryTime: "
         support: "Business hours + emergency support",
     };
     {id: 7;
         support: "Business hours + emergency support"};
     {
         id: 7;
-        name: "AI Infrastructure Optimization";
-        category: "AI Infrastructure";
+        name: "
+        category: "
         description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
         hourlyRate: 180;
         projectRate: 55000;
         features: [
-            "GPU cluster design";
+            "
             "Distributed training setup",
             "Inference optimization",
             "Model deployment",
@@ -263,7 +263,7 @@ export const innovativeITServices2025 = [
             "Monitoring and alerting"
         ],
         benefits: [
-            "Faster AI training";
+            "
             "Cost optimization",
             "Better performance",
             "Scalability",
@@ -281,20 +281,20 @@ export const innovativeITServices2025 = [
         responseTime: "4 hours";
         sla: "99.95% uptime";
         certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"],
-        deliveryTime: "8-12 weeks";
+        deliveryTime: "
         support: "24/7 premium support",
     };
     {id: 8;
         support: "24/7 premium support"};
     {
         id: 8;
-        name: "Hybrid Cloud Architecture";
-        category: "Cloud";
-        description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";
+        name: "
+        category: "
+        description: "
         hourlyRate: 145;
         projectRate: 38000;
         features: [
-            "Hybrid architecture design";
+            "
             "Cloud migration strategy",
             "Integration services",
             "Security implementation",
@@ -304,7 +304,7 @@ export const innovativeITServices2025 = [
             "Compliance monitoring"
         ],
         benefits: [
-            "Flexibility";
+            "
             "Cost optimization",
             "Security control",
             "Scalability",

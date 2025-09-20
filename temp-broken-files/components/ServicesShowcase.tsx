@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "
 
 export const ServicesShowcase: any = () => {return (
 <div className="py-16 bg-gray-50">;
@@ -27,33 +27,33 @@ export const ServicesShowcase: any = () => {return (
 </div>;
 <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">;
 Learn More;
-</button>;
-</div>;
-<div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
-<h3 className="text-xl font-bold text-gray-900 mb-2">Cybersecurity Suite</h3>;
-<p className="text-gray-600 mb-4">Comprehensive security solutions</p>;
-<div className="flex items-center justify-between mb-4">;
-<div className="flex items-center gap-1">;
-<span className="text-yellow-400">⭐</span>;
-<span className="text-sm font-medium">4.8</span>;
-</div>;
-<div className="text-lg font-bold text-blue-600">$12; 000</div>;
-</div>;
-<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">;
+</button>
+</div>
+<div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+<h3 className="text-xl font-bold text-gray-900 mb-2">Cybersecurity Suite</h3>
+<p className="text-gray-600 mb-4">Comprehensive security solutions</p>
+<div className="flex items-center justify-between mb-4">
+<div className="flex items-center gap-1">
+<span className="text-yellow-400">⭐</span>
+<span className="text-sm font-medium">4.8</span>
+</div>
+<div className="text-lg font-bold text-blue-600">$12; 000</div>
+</div>
+<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
 Learn More;
-</button>;
-</div>;
-<div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">;
-<h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Infrastructure</h3>;
-<p className="text-gray-600 mb-4">Scalable cloud solutions</p>;
-<div className="flex items-center justify-between mb-4">;
-<div className="flex items-center gap-1">;
-<span className="text-yellow-400">⭐</span>;
-<span className="text-sm font-medium">4.7</span>;
-</div>;
-<div className="text-lg font-bold text-blue-600">$8; 000</div>;
-</div>;
-<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">;
+</button>
+</div>
+<div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+<h3 className="text-xl font-bold text-gray-900 mb-2">Cloud Infrastructure</h3>
+<p className="text-gray-600 mb-4">Scalable cloud solutions</p>
+<div className="flex items-center justify-between mb-4">
+<div className="flex items-center gap-1">
+<span className="text-yellow-400">⭐</span>
+<span className="text-sm font-medium">4.7</span>
+</div>
+<div className="text-lg font-bold text-blue-600">$8; 000</div>
+</div>
+<button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
 Learn More,
 </button>;
 </div>;

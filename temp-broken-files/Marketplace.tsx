@@ -97,25 +97,25 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }//Navigate to admin products page router.push ('/admin/products') ;
-}, [isAuthenticated user router toast]);
-//Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
+}, [isAuthenticated user router toast])
+//Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const const params = {; = {
   page  limit, ... (filterCategory && {;
   category: filterCategory ;
-});
+})
 sort: sortBy ;
-};';
-//Use static data that's already of type ProductListing[] let items: ProductListing[] = [...MARKETPLACE LISTINGS];
+}';
+//Use static data that's already of type ProductListing[] let items: ProductListing[] = [[...MARKETPLACE LISTINGS];]
 //Apply category filter from params return (price >= priceRange[0] && price <= priceRange[1] && ai >= minAiScore && rating >= minRating && (!filterLocation |location.includes (filterLocation.toLowerCase () ) ) && (!filterAvailability |availability === filterAvailability.toLowerCase () ) items.sort ( (a b) => {switch (sortBy) {';
-  case 'price-low': return (a.price |0) - (b.price |0);';
-case 'price-high': return (b.price |0) - (a.price |0);';
-case 'rating': return (b.rating |0) - (a.rating |0);';
-case 'popular': return (b.reviewCount |0) - (a.reviewCount |0);';
-case 'ai-score': return (b.aiScore |0) - (a.aiScore |0);';
+  case 'price-low': return (a.price |0) - (b.price |0)';
+case 'price-high': return (b.price |0) - (a.price |0)';
+case 'rating': return (b.rating |0) - (a.rating |0)';
+case 'popular': return (b.reviewCount |0) - (a.reviewCount |0)';
+case 'ai-score': return (b.aiScore |0) - (a.aiScore |0)';
 case 'newest': ;
 }else {handleApiError (err), //This might show a toast or log to Sentry ;
-}, [filterCategory sortBy showRecommended priceRange minAiScore minRating filterAvailability filterLocation handleApiError toast]);
+}, [filterCategory sortBy showRecommended priceRange minAiScore minRating filterAvailability filterLocation handleApiError toast])
 //useInfiniteScrollPagination hook ;
 }, [products loading scrollToTop toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {{;
   opacity: 0 y: 20 ;
@@ -199,8 +199,8 @@ length: 12 ;
 }/> </motion.div> {/* Product Grid */ ;
 }<motion.div > <ProductCard product= {{';
   id: product.id name: product.title title: product.title description: product.description |'', price: product.price |0 currency: product.currency category: product.category tags: product.tags images: product.images rating: product.rating |0 reviewCount: product.reviewCount |0 created at: product.createdAt updated at: product.createdAt,  //Use createdAt for both stock: product.stock in stock: (product.stock |0) > 0 ;
-}onBuy= {async () => {;
-  if (!isAuthenticated) {;
+}onBuy= {async () => {
+  if (if (!isAuthenticated) {;) {
   //though ProductCard will reset its state in .finally () regardless. throw error ;
 }buyDisabled= {false ;
 }//Still false ProductCard handles its own disabled state based on auth /> {/* AI Score Badge */ ;
@@ -252,22 +252,22 @@ opacity: 0 scale: 0 ;
 }</AnimatePresence> </div>) ;
 }'"
   )
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Marketplace = () => {return (;
-    <>;
-      <Head>;
-        <title>Marketplace - Zion Tech Group</title>;
-        <meta name="description" content="Professional Marketplace services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+import React from "
+import Head from "
+import Link from "
+const Marketplace = () => {return (
+    <>
+      <Head>
+        <title>Marketplace - Zion Tech Group</title>
+        <meta name="description" content="Professional Marketplace services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Marketplace;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
               Professional Marketplace services and solutions;
             </p>;
             <div className="grid md:grid-cols-2 gap-8 mb-12">;
@@ -292,8 +292,8 @@ const Marketplace = () => {return (;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
                 Contact Us;
               </Link>;
 import React from 'react';

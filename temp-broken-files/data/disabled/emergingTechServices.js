@@ -1141,15 +1141,15 @@ export const EMERGING_TECH_SERVICES = [
         innovationScore: 96}
 ];
 export const getEmergingTechServiceByCategory = (category) => {
-    return EMERGING_TECH_SERVICES.filter(service => service.category === category);
-};
+    return EMERGING_TECH_SERVICES.filter(service => service.category === category)
+}
 export const getEmergingTechServiceBySubcategory = (subcategory) => {
-    return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
-};
+    return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory)
+}
 export const getFeaturedEmergingTechServices = () => {
-    // Return first 8 services since rating property doesn't exist;
-    return EMERGING_TECH_SERVICES.slice(0, 8);
-};
+    /
+    return EMERGING_TECH_SERVICES.slice(0, 8)
+}
 export const getServicesByInnovationScore = (minScore) => {
     ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
         integrations;
@@ -1165,7 +1165,7 @@ export const getServicesByInnovationScore = (minScore) => {
         innovationLevel;
     "Advanced holographic platform for commercial applications",
         uniqueValue;
-    "First comprehensive platform for creating and distributing holographic content across multiple display types";
-};
+    "
+}
 
-export default EMERGING_TECH_SERVICES;
+export export default EMERGING_TECH_SERVICES;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 interface RequestInfo {}; interface RequestInit {};
 // API, base; URL - will, use; proxy in development, direct; URL, in production;
@@ -16,7 +16,7 @@ method?: string;body?: string;headers: Record<stringstring>export, async; functi
 const { method = "GET"bodyheaders = {} } = options;
 const config: RequestInit = {
 methodheader;s: {;
-"Content-Type": "application/json";
+"Content-Type": "
 ...headers;
 }
 },if (body) { config.body = body },

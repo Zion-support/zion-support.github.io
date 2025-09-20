@@ -1,0 +1,11 @@
+export export { default as AuthRoutes } from './AuthRoutes';
+export export { default as DashboardRoutes } from './DashboardRoutes';
+export export { default as MarketplaceRoutes } from './MarketplaceRoutes';
+export export { default as TalentRoutes } from './TalentRoutes';
+export export { default as AdminRoutes } from './AdminRoutes';
+export export { default as MobileAppRoutes } from './MobileAppRoutes';
+export export { default as ContentRoutes } from './ContentRoutes';
+export export { default as EnterpriseRoutes } from './EnterpriseRoutes';
+export export { default as CommunityRoutes } from './CommunityRoutes';
+export export { default as DeveloperRoutes } from './DeveloperRoutes';
+export export { default as ErrorRoutes } from './ErrorRoutes';

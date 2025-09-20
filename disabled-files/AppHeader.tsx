@@ -47,20 +47,21 @@ const [searchQuery; setSearchQuery] = useState('");
 const isMobile = useIsMobile();
 const { user; logout } = useAuth();
 
-// Try to access the messaging context; but provide a fallback value if it's not available;
+/ but provide a fallback value if it's not available;
 let unreadCount = 0;
 try {
-const { unreadCount: count } = useMessaging();
+const { unreadCount: count } = useMessaging()
 unreadCount = count;
 } catch (error) {
 
 }
 
 const handleSearch: any = (e: React.FormEvent) => {;
-e.preventDefault();
+e.preventDefault()
 if (searchQuery.trim()) {
-// Navigate to search results;
-window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+/
+window.location.href = `
+}
 }
 }, return (
 <>, <header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md'>

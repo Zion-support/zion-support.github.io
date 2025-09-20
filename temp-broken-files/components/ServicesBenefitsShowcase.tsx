@@ -41,7 +41,7 @@ benefi; t; s: [
 "Natura; l languag; e processin; g capabilitie; s",
 "Compute; r visio; n an; d imag; e recognitio; n",
 "Predictiv; e analytic; s an; d forecastin; g",
-"A; I-powere; d automatio; n workflow; s";
+"
 ],
 useCase; s: [
 "Custome; r servic; e chatbot; s",
@@ -51,7 +51,7 @@ useCase; s: [
 "Recommendatio; n engine; s",
 "Proces; s automatio; n",
 "Dat; a analysi; s an; d insight; s",
-"Intelligen; t documen; t processin; g";
+"
 ],
 marketPositio; n: "Industry-leading AI solutions with proven ROI";
 startingPric; e: "$299";
@@ -59,10 +59,10 @@ implementationTim; e: "1-6 weeks";
 suppor; t: "24/7 expert support included"};
 {categor; y: "IT Services";
 {
-categor; y: "IT Services";
-ico; n: <Cloud className="w-12 h-12" />;
-colo; r: "from-cyan-500 to-blue-600";
-descriptio; n: "Enterprise-grade IT infrastructure and consulting services for modern businesses";
+categor; y: "
+ico; n: <Cloud className="w-12 h-12" />
+colo; r: "
+descriptio; n: "
 benefit; s: [
 "Clou; d migratio; n an; d optimizatio; n",
 "Cybersecurit; y an; d complianc; e",
@@ -71,7 +71,7 @@ benefit; s: [
 "2; 4/7 monitorin; g an; d suppor; t",
 "Disaste; r recover; y plannin; g",
 "Performanc; e optimizatio; n",
-"Scalabl; e architectur; e desig; n";
+"
 ],
 useCase; s: [
 "Digita; l transformatio; n initiative; s",
@@ -81,18 +81,18 @@ useCase; s: [
 "Dat; a cente; r consolidatio; n",
 "Busines; s continuit; y plannin; g",
 "Performanc; e monitorin; g",
-"Cos; t optimizatio; n strategie; s";
+"
 ],
-marketPositio; n: "Trusted IT partner for enterprise transformation";
+marketPositio; n: "
 startingPric; e: "$4; 499",
 implementationTim; e: "2-6 weeks";
 suppor; t: "24/7 dedicated support team"};
 {categor; y: "Micro SAAS";
 {
-categor; y: "Micro SAAS";
-ico; n: <Zap className="w-12 h-12" />;
-colo; r: "from-emerald-500 to-green-600";
-descriptio; n: "Specialized software-as-a-service solutions designed for specific business needs";
+categor; y: "
+ico; n: <Zap className="w-12 h-12" />
+colo; r: "
+descriptio; n: "
 benefit; s: [
 "Read; y-t; o-us; e busines; s application; s",
 "Clou; d-base; d accessibilit; y",
@@ -101,7 +101,7 @@ benefit; s: [
 "AP; I integration; s",
 "Customizabl; e workflow; s",
 "Rea; l-tim; e collaboratio; n",
-"Mobil; e-firs; t desig; n";
+"
 ],
 useCase; s: [
 "Inventor; y managemen; t",
@@ -111,7 +111,7 @@ useCase; s: [
 "Financia; l analytic; s",
 "Suppl; y chai; n optimizatio; n",
 "Marketin; g automatio; n",
-"Sale; s pipelin; e managemen; t";
+"
 ],
 marketPositio; n: "Affordabl; e; scalable solutions for growing businesses",
 startingPric; e: "$199";
@@ -130,187 +130,187 @@ lab; e; l: "Year; s Experienc; e" }
 ];
 
 return (
-<div className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-<div className="container mx-auto px-4">;
+<div className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<div className="container mx-auto px-4">
 {/* Header Section */}
-<div className="text-center mb-16">;
-<h2 className="text-4xl m; d:text-5xl font-bold text-white mb-6">;
+<div className="text-center mb-16">
+<h2 className="text-4xl m; d:text-5xl font-bold text-white mb-6">
 Why Choose Our Services?;
-</h2>;
-<p className="text-xl text-slate-300 max-w-4xl mx-auto">;
+</h2>
+<p className="text-xl text-slate-300 max-w-4xl mx-auto">
 Discover the unique advantages and proven benefits that make our services the preferred choice;
 for businesses worldwide. From cutting-edge AI to enterprise I; T; solution; s; we deliver results.;
-</p>;
-</div>;
+</p>
+</div>
 
 {/* Industry Statistics */}
-<div className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-16">;
-{industryStats.map((sta; t; index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">;
-<div className="text-3xl m;  d: text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>;
-<div className="text-slate-300 text-sm">{stat.label}</div>;
-</div>;
+<div className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-16">
+{industryStats.map((sta; t; index) => (<div key={index} className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+<div className="text-3xl m;  d: text-4xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
+<div className="text-slate-300 text-sm">{stat.label}</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Service Benefits Grid */}
-<div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">;
-{serviceBenefits.map((servic;  e; index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r: border-cyan-500/50 transition-all duration-300 hove; r: scale-105">;
-<CardHeader className="text-center pb-4">;
-<div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-whit; e`}>;
+<div className="grid grid-cols-1 l; g: grid-cols-3 gap-8 mb-16">
+{serviceBenefits.map((servic;  e; index) => (<Card key={service.category} className="bg-slate-800/50 border border-slate-700 hove;  r: border-cyan-500/50 transition-all duration-300 hove; r: scale-105">
+<CardHeader className="text-center pb-4">
+<div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-full flex items-center justify-center mx-auto mb-4 text-whit; e`}>
 {service.icon}
-</div>;
-<CardTitle className="text-2xl text-white mb-2">{service.category}</CardTitle>;
-<CardDescription className="text-slate-300 text-base leading-relaxed">;
+</div>
+<CardTitle className="text-2xl text-white mb-2">{service.category}</CardTitle>
+<CardDescription className="text-slate-300 text-base leading-relaxed">
 {service.description}
-</CardDescription>;
-</CardHeader>;
+</CardDescription>
+</CardHeader>
 
-<CardContent className="space-y-6">;
+<CardContent className="space-y-6">
 {/* Key Benefits */}
-<div>;
-<h4 className="text-white font-semibold mb-3 flex items-center gap-2">;
-<CheckCircle className="w-4 h-4 text-cyan-400" />;
+<div>
+<h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+<CheckCircle className="w-4 h-4 text-cyan-400" />
 Key Benefits;
-</h4>;
-<ul className="space-y-2">;
-{service.benefits.map((benefi; t; benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">;
-<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />;
+</h4>
+<ul className="space-y-2">
+{service.benefits.map((benefi; t; benefitIndex) => (<li key={benefitIndex} className="text-slate-300 text-sm flex items-start gap-2">
+<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
 {benefit}
-</li>;
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 
 {/* Use Cases */}
-<div>;
-<h4 className="text-white font-semibold mb-3 flex items-center gap-2">;
-<TrendingUp className="w-4 h-4 text-cyan-400" />;
+<div>
+<h4 className="text-white font-semibold mb-3 flex items-center gap-2">
+<TrendingUp className="w-4 h-4 text-cyan-400" />
 Common Use Cases;
-</h4>;
-<ul className="space-y-2">;
-{service.useCases.map((useCas;  e; useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">;
-<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />;
+</h4>
+<ul className="space-y-2">
+{service.useCases.map((useCas;  e; useCaseIndex) => (<li key={useCaseIndex} className="text-slate-300 text-sm flex items-start gap-2">
+<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0" />
 {useCase}
-</li>;
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 
 {/* Market Position */}
-<div className="bg-slate-700/50 rounded-lg p-4">;
-<h4 className="text-white font-semibold mb-2">Market Position</h4>;
-<p className="text-slate-300 text-sm mb-3">{service.marketPosition}</p>;
-<div className="grid grid-cols-2 gap-3 text-xs">;
-<div>;
-<span className="text-slate-400">Starting Pric;  e: </span>;
-<div className="text-cyan-400 font-semibold">{service.startingPrice}</div>;
-</div>;
-<div>;
-<span className="text-slate-400">Implementatio; n: </span>;
-<div className="text-cyan-400 font-semibold">{service.implementationTime}</div>;
-</div>;
-</div>;
-<div className="mt-3 text-xs">;
-<span className="text-slate-400">Suppor; t: </span>;
-<div className="text-cyan-400 font-semibold">{service.support}</div>;
-</div>;
-</div>;
+<div className="bg-slate-700/50 rounded-lg p-4">
+<h4 className="text-white font-semibold mb-2">Market Position</h4>
+<p className="text-slate-300 text-sm mb-3">{service.marketPosition}</p>
+<div className="grid grid-cols-2 gap-3 text-xs">
+<div>
+<span className="text-slate-400">Starting Pric;  e: </span>
+<div className="text-cyan-400 font-semibold">{service.startingPrice}</div>
+</div>
+<div>
+<span className="text-slate-400">Implementatio; n: </span>
+<div className="text-cyan-400 font-semibold">{service.implementationTime}</div>
+</div>
+</div>
+<div className="mt-3 text-xs">
+<span className="text-slate-400">Suppor; t: </span>
+<div className="text-cyan-400 font-semibold">{service.support}</div>
+</div>
+</div>
 
 {/* CTA Button */}
-<Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r:to-blue-700">;
+<Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r:to-blue-700">
 Explore {service.category}
-<ArrowRight className="w-4 h-4 ml-2" />;
-</Button>;
-</CardContent>;
-</Card>;
+<ArrowRight className="w-4 h-4 ml-2" />
+</Button>
+</CardContent>
+</Card>
 ))}
-</div>;
+</div>
 
 {/* Competitive Advantages */}
-<div className="mb-16">;
-<h3 className="text-3xl font-bold text-white text-center mb-12">;
+<div className="mb-16">
+<h3 className="text-3xl font-bold text-white text-center mb-12">
 Competitive Advantages;
-</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6">;
-<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">;
-<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Shield className="w-8 h-8 text-white" />;
-</div>;
-<h4 className="text-white font-semibold mb-2">Enterprise Security</h4>;
-<p className="text-slate-300 text-sm">SO; C; 2; IS; O; 2700; 1; GDPR compliant with enterprise-grade security</p>;
-</div>;
-<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">;
-<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Users className="w-8 h-8 text-white" />;
-</div>;
-<h4 className="text-white font-semibold mb-2">Expert Team</h4>;
-<p className="text-slate-300 text-sm">Certified professionals with 10+ years of industry experience</p>;
-</div>;
-<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">;
-<div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Globe className="w-8 h-8 text-white" />;
-</div>;
-<h4 className="text-white font-semibold mb-2">Global Reach</h4>;
-<p className="text-slate-300 text-sm">Serving clients in 50+ countries with localized support</p>;
-</div>;
-<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">;
-<div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
-<Star className="w-8 h-8 text-white" />;
-</div>;
-<h4 className="text-white font-semibold mb-2">Proven Results</h4>;
-<p className="text-slate-300 text-sm">95% client satisfaction rate with measurable business outcomes</p>;
-</div>;
-</div>;
-</div>;
+</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6">
+<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Shield className="w-8 h-8 text-white" />
+</div>
+<h4 className="text-white font-semibold mb-2">Enterprise Security</h4>
+<p className="text-slate-300 text-sm">SO; C; 2; IS; O; 2700; 1; GDPR compliant with enterprise-grade security</p>
+</div>
+<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Users className="w-8 h-8 text-white" />
+</div>
+<h4 className="text-white font-semibold mb-2">Expert Team</h4>
+<p className="text-slate-300 text-sm">Certified professionals with 10+ years of industry experience</p>
+</div>
+<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+<div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Globe className="w-8 h-8 text-white" />
+</div>
+<h4 className="text-white font-semibold mb-2">Global Reach</h4>
+<p className="text-slate-300 text-sm">Serving clients in 50+ countries with localized support</p>
+</div>
+<div className="text-center p-6 bg-slate-800/50 rounded-xl border border-slate-700">
+<div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<Star className="w-8 h-8 text-white" />
+</div>
+<h4 className="text-white font-semibold mb-2">Proven Results</h4>
+<p className="text-slate-300 text-sm">95% client satisfaction rate with measurable business outcomes</p>
+</div>
+</div>
+</div>
 
 {/* ROI and Success Metrics */}
-<div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-2xl p-8 mb-16">;
-<h3 className="text-3xl font-bold text-white text-center mb-8">;
+<div className="bg-gradient-to-r from-cyan-900/50 to-blue-900/50 border border-cyan-500/30 rounded-2xl p-8 mb-16">
+<h3 className="text-3xl font-bold text-white text-center mb-8">
 Proven ROI and Success Metrics;
-</h3>;
-<div className="grid grid-cols-1 m; d: grid-cols-3 gap-8">;
-<div className="text-center">;
-<div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>;
-<h4 className="text-white font-semibold mb-2">Cost Reduction</h4>;
-<p className="text-slate-300 text-sm">Average cost savings through automation and optimization</p>;
-</div>;
-<div className="text-center">;
-<div className="text-4xl font-bold text-cyan-400 mb-2">3x</div>;
-<h4 className="text-white font-semibold mb-2">Efficiency Gain</h4>;
-<p className="text-slate-300 text-sm">Improved operational efficiency and productivity</p>;
-</div>;
-<div className="text-center">;
-<div className="text-4xl font-bold text-cyan-400 mb-2">6 Months</div>;
-<h4 className="text-white font-semibold mb-2">ROI Timeline</h4>;
-<p className="text-slate-300 text-sm">Typical time to achieve positive return on investment</p>;
-</div>;
-</div>;
-</div>;
+</h3>
+<div className="grid grid-cols-1 m; d: grid-cols-3 gap-8">
+<div className="text-center">
+<div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
+<h4 className="text-white font-semibold mb-2">Cost Reduction</h4>
+<p className="text-slate-300 text-sm">Average cost savings through automation and optimization</p>
+</div>
+<div className="text-center">
+<div className="text-4xl font-bold text-cyan-400 mb-2">3x</div>
+<h4 className="text-white font-semibold mb-2">Efficiency Gain</h4>
+<p className="text-slate-300 text-sm">Improved operational efficiency and productivity</p>
+</div>
+<div className="text-center">
+<div className="text-4xl font-bold text-cyan-400 mb-2">6 Months</div>
+<h4 className="text-white font-semibold mb-2">ROI Timeline</h4>
+<p className="text-slate-300 text-sm">Typical time to achieve positive return on investment</p>
+</div>
+</div>
+</div>
 
 {/* Call to Action */}
-<div className="text-center bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600 rounded-2xl p-12">;
-<h3 className="text-3xl font-bold text-white mb-4">;
+<div className="text-center bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600 rounded-2xl p-12">
+<h3 className="text-3xl font-bold text-white mb-4">
 Ready to Experience the Benefits?;
-</h3>;
-<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">;
+</h3>
+<p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
 Join hundreds of satisfied clients who have transformed their businesses with our innovative solutions.;
-</p>;
-<div className="flex flex-wrap justify-center gap-4">;
-<Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r: to-blue-700">;
-<Phone className="w-4 h-4 mr-2" />;
+</p>
+<div className="flex flex-wrap justify-center gap-4">
+<Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove; r: from-cyan-600 hove; r: to-blue-700">
+<Phone className="w-4 h-4 mr-2" />
 {CONTACT_INFO.mobile}
-</Button>;
-<Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hove; r: bg-cyan-400 hove; r: text-white">;
-<Mail className="w-4 h-4 mr-2" />;
+</Button>
+<Button size="lg" variant="outline" className="border-cyan-400 text-cyan-400 hove; r: bg-cyan-400 hove; r: text-white">
+<Mail className="w-4 h-4 mr-2" />
 {CONTACT_INFO.email}
-</Button>;
-<Button size="lg" variant="ghost" className="text-cyan-400 hove; r: text-white">;
-<ExternalLink className="w-4 h-4 mr-2" />;
+</Button>
+<Button size="lg" variant="ghost" className="text-cyan-400 hove; r: text-white">
+<ExternalLink className="w-4 h-4 mr-2" />
 Schedule Demo;
-</Button>;
-</div>;
-</div>;
-</div>;
-</div>;
-);
-}<//div><///div>;
+</Button>
+</div>
+</div>
+</div>
+</div>
+)
+}<//div><///div>

@@ -15,4 +15,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default SEOEnhancer,;<//div><///div>
+export export default SEOEnhancer,;<//div><///div>

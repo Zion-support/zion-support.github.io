@@ -1,4 +1,4 @@
-// Neuromorphic Computing Services;
+/
 export const neuromorphicComputingServices2025 = [
     {id: 1;
         name: "Brain-Inspired AI Platform";
@@ -6,9 +6,9 @@ export const neuromorphicComputingServices2025 = [
         description: "Revolutionary neuromorphic computing platform that mimics human brain architecture for ultra-efficient AI processing and learning";
         pricing: "Enterprise";
         price: 8000;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Spiking neural networks";
+            "
             "Event-driven processing",
             "Low-power consumption",
             "Real-time learning",
@@ -18,7 +18,7 @@ export const neuromorphicComputingServices2025 = [
             "Scalable deployment"
         ],
         benefits: [
-            "1000x energy efficiency";
+            "
             "Real-time processing",
             "Continuous learning",
             "Brain-like intelligence",
@@ -34,14 +34,14 @@ export const neuromorphicComputingServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$8,000-30,000/month",
         aiModels: ["Spiking Neural Networks", "Event-driven models", "Bio-inspired algorithms"],
-        accuracy: "98.5%";
-        trainingData: "Neuromorphic datasets";
+        accuracy: "
+        trainingData: "
         compliance: ["Research standards", "Safety protocols", "Data protection"],
         aiScore: 98;
         useCases: ["Autonomous systems", "Robotics", "Edge computing", "Cognitive computing"]
     }
 ];
-// Brain-Computer Interface Services;
+/
 export const brainComputerInterfaceServices2025 = [
     {id: 1;
         name: "Neural Control Platform";
@@ -49,10 +49,10 @@ export const brainComputerInterfaceServices2025 = [
         pricing: "Enterprise";
         description: "Advanced brain-computer interface platform for direct neural control, communication, and cognitive enhancement applications",
         price: 3500;
-        pricingModel: "monthly";
-        userLimit: "Up to 100 users";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Neural signal processing";
+            "
             "Thought-to-text conversion",
             "Cognitive enhancement",
             "Assistive technology",
@@ -62,7 +62,7 @@ export const brainComputerInterfaceServices2025 = [
             "Training modules"
         ],
         benefits: [
-            "Direct neural control";
+            "
             "Enhanced communication",
             "Cognitive improvement",
             "Assistive capabilities",
@@ -78,23 +78,23 @@ export const brainComputerInterfaceServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,500-12,000/month",
         competitors: ["Neuralink", "Kernel", "CTRL-labs"],
-        roi: "600% within 24 months";
-        setupTime: "6-8 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"],
         freeTier: false;
         trialPeriod: "30 days"}
 ];
-    // Synthetic Biology Services;
+    /
 export const syntheticBiologyServices2025 = [
     {id: 1;
         name: "Bio-Design Studio";
         category: "Synthetic Biology";
         description: "Comprehensive synthetic biology platform for designing, modeling, and engineering biological systems with AI assistance",
-        pricing: "Enterprise";
+        pricing: "
         price: 5000;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "DNA design tools";
+            "
             "Protein engineering",
             "Metabolic pathway design",
             "CRISPR editing",
@@ -104,7 +104,7 @@ export const syntheticBiologyServices2025 = [
             "Research collaboration"
         ],
         benefits: [
-            "Faster bio-design";
+            "
             "Reduced costs",
             "Better outcomes",
             "Safety assurance",
@@ -120,14 +120,14 @@ export const syntheticBiologyServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$5,000-20,000/month",
         aiModels: ["Bio-AI models", "Protein folding", "Metabolic modeling", "Design algorithms"],
-        accuracy: "96.2%";
-        trainingData: "Biological datasets";
+        accuracy: "
+        trainingData: "
         compliance: ["FDA", "EPA", "Biosafety", "Research ethics"],
         aiScore: 96;
         useCases: ["Drug development", "Biofuels", "Agriculture", "Biomaterials"]
     }
 ];
-// Advanced Robotics Services;
+/
 export const advancedRoboticsServices2025 = [
     {id: 1;
         name: "Autonomous Robotics Platform";
@@ -135,10 +135,10 @@ export const advancedRoboticsServices2025 = [
         pricing: "Enterprise";
         description: "Next-generation autonomous robotics platform with AI-powered navigation, manipulation, and human-robot collaboration",
         price: 2800;
-        pricingModel: "monthly";
-        userLimit: "Unlimited robots";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Autonomous navigation";
+            "
             "Object manipulation",
             "Human-robot collaboration",
             "Learning algorithms",
@@ -148,7 +148,7 @@ export const advancedRoboticsServices2025 = [
             "Analytics dashboard"
         ],
         benefits: [
-            "24/7 operation";
+            "
             "Enhanced safety",
             "Cost reduction",
             "Scalable operations",
@@ -164,13 +164,13 @@ export const advancedRoboticsServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,800-8,000/month",
         competitors: ["Boston Dynamics", "ABB", "KUKA"],
-        roi: "400% within 18 months";
-        setupTime: "4-6 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"],
         freeTier: false;
         trialPeriod: "30 days"}
 ];
-    // Advanced Materials Services;
+    /
 export const advancedMaterialsServices2025 = [
     {id: 1;
         name: "Smart Materials Platform";
@@ -178,10 +178,10 @@ export const advancedMaterialsServices2025 = [
         pricing: "Professional";
         description: "Innovative smart materials platform for designing, testing, and deploying materials with adaptive properties and AI optimization",
         price: 599;
-        pricingModel: "monthly";
-        userLimit: "Up to 50 users";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Material design tools";
+            "
             "Property optimization",
             "Simulation modeling",
             "Testing automation",
@@ -191,7 +191,7 @@ export const advancedMaterialsServices2025 = [
             "Research collaboration"
         ],
         benefits: [
-            "Faster development";
+            "
             "Better performance",
             "Cost optimization",
             "Quality improvement",
@@ -207,13 +207,13 @@ export const advancedMaterialsServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$599-1,999/month",
         competitors: ["Materialise", "Autodesk", "Dassault"],
-        roi: "350% within 15 months";
-        setupTime: "2-3 weeks";
+        roi: "
+        setupTime: "
         integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"],
         freeTier: true;
         trialPeriod: "14 days"}
 ];
-    // Advanced Energy Services;
+    /
 export const advancedEnergyServices2025 = [
     {id: 1;
         name: "Fusion Energy Management";
@@ -221,10 +221,10 @@ export const advancedEnergyServices2025 = [
         pricing: "Enterprise";
         description: "Revolutionary fusion energy management platform for monitoring, controlling, and optimizing fusion reactor operations",
         price: 4500;
-        pricingModel: "monthly";
-        userLimit: "Unlimited users";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Reactor monitoring";
+            "
             "Plasma control",
             "Energy optimization",
             "Safety systems",
@@ -234,7 +234,7 @@ export const advancedEnergyServices2025 = [
             "Research tools"
         ],
         benefits: [
-            "Clean energy production";
+            "
             "Unlimited fuel supply",
             "Safety assurance",
             "Cost optimization",
@@ -250,13 +250,13 @@ export const advancedEnergyServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$4,500-15,000/month",
         competitors: ["ITER", "Commonwealth Fusion", "General Fusion"],
-        roi: "800% within 36 months";
-        setupTime: "8-12 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"],
         freeTier: false;
         trialPeriod: "60 days"}
 ];
-    // Advanced Transportation Services;
+    /
 export const advancedTransportationServices2025 = [
     {id: 1;
         name: "Hyperloop Management System";
@@ -264,10 +264,10 @@ export const advancedTransportationServices2025 = [
         pricing: "Enterprise";
         description: "Comprehensive hyperloop transportation management platform for high-speed vacuum tube transportation systems";
         price: 3200;
-        pricingModel: "monthly";
-        userLimit: "Unlimited passengers";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Route optimization";
+            "
             "Passenger management",
             "Safety monitoring",
             "Energy optimization",
@@ -277,7 +277,7 @@ export const advancedTransportationServices2025 = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Ultra-fast travel";
+            "
             "Energy efficiency",
             "Safety assurance",
             "Cost optimization",
@@ -293,13 +293,13 @@ export const advancedTransportationServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,200-10,000/month",
         competitors: ["Virgin Hyperloop", "Hyperloop TT", "Hardt Hyperloop"],
-        roi: "500% within 24 months";
-        setupTime: "6-8 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"],
         freeTier: false;
         trialPeriod: "45 days"}
 ];
-    // Advanced Communication Services;
+    /
 export const advancedCommunicationServices2025 = [
     {id: 1;
         name: "Quantum Communication Network";
@@ -307,10 +307,10 @@ export const advancedCommunicationServices2025 = [
         pricing: "Enterprise";
         description: "Secure quantum communication network platform with quantum key distribution and unbreakable encryption";
         price: 5500;
-        pricingModel: "monthly";
-        userLimit: "Unlimited connections";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Quantum key distribution";
+            "
             "Quantum encryption",
             "Network security",
             "Real-time communication",
@@ -320,7 +320,7 @@ export const advancedCommunicationServices2025 = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Unbreakable security";
+            "
             "Quantum advantage",
             "Future-proof technology",
             "Compliance achievement",
@@ -336,13 +336,13 @@ export const advancedCommunicationServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$5,500-20,000/month",
         competitors: ["ID Quantique", "Toshiba", "NTT"],
-        roi: "600% within 30 months";
-        setupTime: "8-12 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"],
         freeTier: false;
         trialPeriod: "60 days"}
 ];
-    // Advanced Manufacturing Services;
+    /
 export const advancedManufacturingServices2025 = [
     {id: 1;
         name: "4D Printing Platform";
@@ -350,10 +350,10 @@ export const advancedManufacturingServices2025 = [
         pricing: "Professional";
         description: "Revolutionary 4D printing platform for creating materials that can change shape and properties over time";
         price: 899;
-        pricingModel: "monthly";
-        userLimit: "Up to 100 users";
+        pricingModel: "
+        userLimit: "
         features: [
-            "4D design tools";
+            "
             "Material programming",
             "Shape-shifting control",
             "Time-based activation",
@@ -363,7 +363,7 @@ export const advancedManufacturingServices2025 = [
             "Research collaboration"
         ],
         benefits: [
-            "Dynamic materials";
+            "
             "Adaptive products",
             "Innovation leadership",
             "Market differentiation",
@@ -379,13 +379,13 @@ export const advancedManufacturingServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$899-2,999/month",
         competitors: ["Stratasys", "3D Systems", "HP"],
-        roi: "400% within 18 months";
-        setupTime: "3-4 weeks";
+        roi: "
+        setupTime: "
         integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"],
         freeTier: true;
         trialPeriod: "21 days"}
 ];
-    // Advanced Gaming Services;
+    /
 export const advancedGamingServices2025 = [
     {id: 1;
         name: "Neural Gaming Platform";
@@ -393,10 +393,10 @@ export const advancedGamingServices2025 = [
         pricing: "Professional";
         description: "Next-generation neural gaming platform that uses brain-computer interfaces for direct neural control and immersive experiences";
         price: 399;
-        pricingModel: "monthly";
-        userLimit: "Up to 1000 users";
+        pricingModel: "
+        userLimit: "
         features: [
-            "Neural control";
+            "
             "Brain-computer interface",
             "Immersive experiences",
             "Cognitive training",
@@ -406,7 +406,7 @@ export const advancedGamingServices2025 = [
             "Developer tools"
         ],
         benefits: [
-            "Direct neural control";
+            "
             "Immersive gameplay",
             "Cognitive enhancement",
             "Accessibility improvement",
@@ -422,8 +422,8 @@ export const advancedGamingServices2025 = [
             address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$399-1,299/month",
         competitors: ["Valve", "Oculus", "Neuralink"],
-        roi: "500% within 15 months";
-        setupTime: "2-3 weeks";
+        roi: "
+        setupTime: "
         integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"],
         freeTier: true;
         trialPeriod: "14 days"}
@@ -442,14 +442,14 @@ export const allCuttingEdgeServices2025 = {neuromorphic: neuromorphicComputingSe
     // Combined all services export;
 export const allUltimateServices2025 = {
     ...allCuttingEdgeServices2025;
-};
-// Helper functions for cutting-edge services;
+}
+/
 export const getCuttingEdgeServicesByCategory = (category) => {
-    const allServices = Object.values(allCuttingEdgeServices2025).flat();
-    return allServices.filter(service => service.category === category);
-};
+    const allServices = Object.values(allCuttingEdgeServices2025).flat()
+    return allServices.filter(service => service.category === category)
+}
 export const getCuttingEdgeServicesByPriceRange = (minPrice, maxPrice) => {
-    const allServices = Object.values(allCuttingEdgeServices2025).flat();
+    const allServices = Object.values(allCuttingEdgeServices2025).flat()
     return allServices.filter(service => {
         if ('price' in service && typeof service.price === 'number') {
             return service.price >= minPrice && service.price <= maxPrice;
@@ -458,15 +458,15 @@ export const getCuttingEdgeServicesByPriceRange = (minPrice, maxPrice) => {
             return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice;
         }
         return false;
-    });
-};
+    })
+}
 export const getCuttingEdgePopularServices = (limit = 10) => {
-    const allServices = Object.values(allCuttingEdgeServices2025).flat();
-    return allServices.slice(0, limit);
-};
+    const allServices = Object.values(allCuttingEdgeServices2025).flat()
+    return allServices.slice(0, limit)
+}
 export const searchCuttingEdgeServices = (query) => {
-    const allServices = Object.values(allCuttingEdgeServices2025).flat();
-    const searchTerm = query.toLowerCase();
+    const allServices = Object.values(allCuttingEdgeServices2025).flat()
+    const searchTerm = query.toLowerCase()
     return allServices.filter(service => service.name.toLowerCase().includes(searchTerm) ||
         service.description.toLowerCase().includes(searchTerm) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm)));

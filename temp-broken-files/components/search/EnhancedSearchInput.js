@@ -1,39 +1,39 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useRef, useEffect } from 'react';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/Input';
+import { jsx as _jsx, jsxs as _jsxs } from "
+import import { useState, useRef, useEffect } from 'react';
+import import { Search, X } from 'lucide-react';
+import import { Input } from '@/components/ui/Input';
 export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searchSuggestions, placeholder = "Search...", className = "" }) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-    const wrapperRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false)
+    const [filteredSuggestions, setFilteredSuggestions] = useState([])
+    const wrapperRef = useRef(null)
     useEffect(() => {
         if (value.trim()) {
-            const filtered = searchSuggestions.filter(suggestion => suggestion.text.toLowerCase().includes(value.toLowerCase())).slice(0, 5);
-            setFilteredSuggestions(filtered);
-            setIsOpen(filtered.length > 0);
+            const filtered = searchSuggestions.filter(suggestion => suggestion.text.toLowerCase().includes(value.toLowerCase())).slice(0, 5)
+            setFilteredSuggestions(filtered)
+            setIsOpen(filtered.length > 0)
         }
         else {
-            setFilteredSuggestions([]);
-            setIsOpen(false);
+            setFilteredSuggestions([])
+            setIsOpen(false)
         }
-    }, [value, searchSuggestions]);
+    }, [value, searchSuggestions])
     useEffect(() => {
         function handleClickOutside(event) {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-                setIsOpen(false);
+                setIsOpen(false)
             }
         }
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
     const handleSuggestionClick = (suggestion) => {
-        onSelectSuggestion(suggestion.text);
-        setIsOpen(false);
-    };
+        onSelectSuggestion(suggestion.text)
+        setIsOpen(false)
+    }
     const handleClear = () => {
-        onChange('');
-        setIsOpen(false);
-    };
+        onChange('')
+        setIsOpen(false)
+    }
     const getTypeIcon = (type) => {
         switch (type) {
             case 'talent':
@@ -50,86 +50,86 @@ export function EnhancedSearchInput({ value, onChange, onSelectSuggestion, searc
     };
     return (_jsxs("div", { ref: wrapperRef, className: `relative ${className}`, children: [_jsxs("div", { className: "relative", children: [_jsx(Search, { className: "absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" }), _jsx(Input, { type: "text", value: value, onChange: (e) => onChange(e.target.value), placeholder: placeholder, className: "pl-10 pr-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan", onFocus: () => value.trim() && filteredSuggestions.length > 0 && setIsOpen(true) }), value && (_jsx("button", { onClick: handleClear, className: "absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors", "aria-label": "Clear search", children: _jsx(X, { className: "h-4 w-4" }) }))] }), isOpen && filteredSuggestions.length > 0 && (_jsx("div", { className: "absolute top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto", children: filteredSuggestions.map((suggestion) => (_jsxs("button", { onClick: () => handleSuggestionClick(suggestion), className: "flex items-center w-full px-4 py-3 text-left hover:bg-zion-blue transition-colors", children: [_jsx("span", { className: "mr-3 text-lg", children: getTypeIcon(suggestion.type) }), _jsxs("div", { className: "flex-1", children: [_jsx("div", { className: "text-white font-medium", children: suggestion.text }), _jsx("div", { className: "text-zion-slate-light text-sm capitalize", children: suggestion.type })] })] }, suggestion.id))) }))] }));
 }
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowDown } from 'lucide-react';
+import import React, { useState, useEffect, useRef } from 'react';
+import import { Search, X, ArrowDown } from 'lucide-react';
 export const EnhancedSearchInput = ({ placeholder = "Search for services, talent, or equipment...", onSearch, suggestions = [], className = "" }) => {
-    const [query, setQuery] = useState('');
-    const [showSuggestions, setShowSuggestions] = useState(false);
-    const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-    const [selectedIndex, setSelectedIndex] = useState(-1);
-    const inputRef = useRef(null);
-    const suggestionsRef = useRef(null);
+    const [query, setQuery] = useState('')
+    const [showSuggestions, setShowSuggestions] = useState(false)
+    const [filteredSuggestions, setFilteredSuggestions] = useState([])
+    const [selectedIndex, setSelectedIndex] = useState(-1)
+    const inputRef = useRef(null)
+    const suggestionsRef = useRef(null)
     useEffect(() => {
         if (query.trim()) {
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
-                suggestion.description?.toLowerCase().includes(query.toLowerCase()));
-            setFilteredSuggestions(filtered.slice(0, 5));
-            setShowSuggestions(true);
-            setSelectedIndex(-1);
+                suggestion.description?.toLowerCase().includes(query.toLowerCase()))
+            setFilteredSuggestions(filtered.slice(0, 5))
+            setShowSuggestions(true)
+            setSelectedIndex(-1)
         }
         else {
-            setFilteredSuggestions([]);
-            setShowSuggestions(false);
+            setFilteredSuggestions([])
+            setShowSuggestions(false)
         }
-    }, [query, suggestions]);
+    }, [query, suggestions])
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {
-                setShowSuggestions(false);
+                setShowSuggestions(false)
             }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => document.removeEventListener('mousedown', handleClickOutside)
+    }, [])
     const handleInputChange = (e) => {
-        setQuery(e.target.value);
-    };
+        setQuery(e.target.value)
+    }
     const handleClear = () => {
-        setQuery('');
-        setShowSuggestions(false);
-        inputRef.current?.focus();
-    };
+        setQuery('')
+        setShowSuggestions(false)
+        inputRef.current?.focus()
+    }
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
         if (query.trim() && onSearch) {
-            onSearch(query.trim());
-            setShowSuggestions(false);
+            onSearch(query.trim())
+            setShowSuggestions(false)
         }
-    };
+    }
     const handleSuggestionClick = (suggestion) => {
-        setQuery(suggestion.title);
-        setShowSuggestions(false);
+        setQuery(suggestion.title)
+        setShowSuggestions(false)
         if (onSearch) {
-            onSearch(suggestion.title);
+            onSearch(suggestion.title)
         }
-    };
+    }
     const handleKeyDown = (e) => {
         if (!showSuggestions)
             return;
         switch (e.key) {
             case 'ArrowDown':
-                e.preventDefault();
-                setSelectedIndex(prev => prev < filteredSuggestions.length - 1 ? prev + 1 : prev);
+                e.preventDefault()
+                setSelectedIndex(prev => prev < filteredSuggestions.length - 1 ? prev + 1 : prev)
                 break;
             case 'ArrowUp':
-                e.preventDefault();
-                setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+                e.preventDefault()
+                setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)
                 break;
             case 'Enter':
-                e.preventDefault();
+                e.preventDefault()
                 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
-                    handleSuggestionClick(filteredSuggestions[selectedIndex]);
+                    handleSuggestionClick(filteredSuggestions[selectedIndex])
                 }
                 else if (query.trim()) {
-                    handleSubmit(e);
+                    handleSubmit(e)
                 }
                 break;
             case 'Escape':
-                setShowSuggestions(false);
-                setSelectedIndex(-1);
+                setShowSuggestions(false)
+                setSelectedIndex(-1)
                 break;
         }
-    };
+    }
     return (<div className={`relative ${className}`} ref={suggestionsRef}>
       <form onSubmit={handleSubmit} className="relative">
         <div className="relative">
@@ -165,5 +165,5 @@ export const EnhancedSearchInput = ({ placeholder = "Search for services, talent
               </div>
             </button>))}
         </div>)}
-    </div>);
-};
+    </div>)
+}

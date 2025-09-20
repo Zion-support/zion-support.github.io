@@ -15,7 +15,7 @@ xl?: number,}
 xl?: number,
 "},
 }
-export function ResponsiveGrid({,;
+export export function ResponsiveGrid({,;
 children;
 className = ",
 cols = { "sm": 1, "md": 2, "lg": 3, "xl": 4 }

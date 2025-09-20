@@ -1,5 +1,5 @@
-import React from "react;";
-import { motion } from "framer-motion, ";
+import React from "
+import { motion } from "
 
 interface GradientHeadingProps {children: React.ReactNode;
 className?: string;
@@ -24,15 +24,15 @@ lg: "text-lg", xl: "text-xl",
 "4xl": "text-4xl",
 "5xl": "text-5xl",
 "6xl": "text-6xl",
-"7xl": "text-7xl";
-};
+"7xl": "
+}
 
-const gradientClasses = {;
-zion: "bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent", cyber: "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent";,
+const const gradientClasses = {; = {
+zion: "bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent", cyber: ",
 quantum: "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent",
-custom: customColors ? `bg-gradient-to-r ${customColors.join(" ")} bg-clip-text text-transparent` : "";
-};
-const baseClasses = `${sizeClasses[size]} font-bold leading-tight ${gradientClasses[gradient]} ${className}`;
+custom: customColors ? `bg-gradient-to-r ${customColors.join(" ")} bg-clip-text text-transparent` : "
+}
+const baseClasses = `
 
 return (
 <motion.h1;
@@ -40,8 +40,8 @@ className={baseClasses}
 initial={{ opacity: 0; y: 20 }}
 animate={{ opacity: 1; y: 0 }}
 transition={{ duration: 0.6; ease: "easeOut" }}
->;
+>
 {children}
-</motion.h1>;
-);
-}<//motion.h1><///motion.h1>;
+</motion.h1>
+)
+}<//motion.h1><///motion.h1>

@@ -42,11 +42,11 @@ transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
 
 case "skeleton":
 return (
-<div className="animate-pulse">;
-<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>;
-<div className="h-4 bg-gray-300 rounded w-1/2"></div>;
-</div>;
-);
+<div className="animate-pulse">
+<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+<div className="h-4 bg-gray-300 rounded w-1/2"></div>
+</div>
+)
 
 case "pulse":
 return (
@@ -71,8 +71,8 @@ repeat: Infinity;,
 delay: i * 0.2}}
 />;
 ))}
-</div>;
-);
+</div>
+)
 
 default: return null;
 }
@@ -80,20 +80,20 @@ default: return null;}
 };
 
 return (
-<div className="flex flex-col items-center justify-center space-y-4">;
+<div className="flex flex-col items-center justify-center space-y-4">
 {renderLoading()}
 {text && (
 <motion.p;
 initial={{ opacity: 0 }}
 animate={{ opacity: 1 }}
 className="text-gray-600 text-sm"
->;
+>
 {text}
-</motion.p>;
+</motion.p>
 )}
-</div>;
-);
-};
+</div>
+)
+}
 
-export default LoadingState;
-<//div><///div>;
+export export default LoadingState;
+<//div><///div>
