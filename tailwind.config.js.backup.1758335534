@@ -10,9 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
+<<<<<<< HEAD
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+=======
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -23,6 +27,7 @@ export default {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-767d
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -31,10 +36,13 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+<<<<<<< HEAD
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-767d
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -43,6 +51,7 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+<<<<<<< HEAD
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -50,6 +59,10 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+=======
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -60,6 +73,7 @@ export default {
           "3": "hsl(var(--chart-3))",
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-767d
         },
       },
       borderRadius: {
