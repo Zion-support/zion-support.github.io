@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 <<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 import { useRouter } from "next/router";, // Changed from useParams,
@@ -20,31 +21,31 @@ import { SEO, ,  } from '@/components/SEO';
 >>>>>>>> pr-22690:temp-broken-files/ProductPage.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ProductPage() {return (
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function ProductPage() {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProductPage.tsx
     <>
-      <SEO
-title = {product.title}
-        description = {product.description}
-        ogImage = {product.images?.[0]}
+      <SEO 
+        title="ProductPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
-        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
-        {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64">
-            <Image
-src = {product.images[0] |'/placeholder.svg'}
-              alt = {product.title}
-              className="object-cover rounded-md"
-            />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">ProductPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
-        ) : null}
-        <p className="mb-6">{product.description}</p>
-        <Button onClick={handleAdd} disabled={adding |inCart}>
-          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-        </Button>
+        </div>
       </div>
-</>
+    </>
   );
 }
+<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 //Only fetch if id is available (from router) ;
 }const inCart = items.some (i => i.id === product.id);
 const handleAdd = () => {if (inCart) return;
@@ -76,3 +77,5 @@ export default function ProductPage() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProductPage.tsx
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/ProductPage.tsx

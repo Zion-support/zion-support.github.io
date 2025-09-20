@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary";
@@ -67,5 +68,27 @@ export default function AllCategoriesPage() {
         </ErrorBoundary>
       </div>
     </div>
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function AllCategoriesPage() {
+  return (
+    <>
+      <SEO 
+        title="AllCategoriesPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">AllCategoriesPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb
   );
 }

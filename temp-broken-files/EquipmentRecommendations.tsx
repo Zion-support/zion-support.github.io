@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp-broken-files/EquipmentRecommendations.tsx
 <<<<<<< HEAD:temp_broken_pages_all/EquipmentRecommendations.tsx
 import { Loader2 } from "lucide-react";
 import Link from 'next/link';
@@ -41,23 +42,26 @@ asChild
       </Dialog>
     )
   }
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function EquipmentRecommendations() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentRecommendations.tsx
   return (
-    <div className='min-h-screen bg-zion-blue py-8 px-4'>
-      <h1 className='text-2xl font-bold text-white mb-6'>
-        AI Equipment Recommendations
-      </h1>
-        <div className='flex justify-center py-20'>
-          <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />
-        </div>
-      )}
-      {error && <ErrorState error='Failed to load recommendations.' />}
-      <div className='columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4'>
-        {listings.map(listing => (
-          <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing) => (
-          <div key={listing.id} className="break-inside-avoid mb-4">
+    <>
+      <SEO 
+        title="EquipmentRecommendations - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">EquipmentRecommendations</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
+<<<<<<< HEAD:temp-broken-files/EquipmentRecommendations.tsx
         ))}
 import React from 'react';
 
@@ -72,3 +76,10 @@ export default function EquipmentRecommendations() {
     </div>
   );
 }
+=======
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/EquipmentRecommendations.tsx

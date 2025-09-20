@@ -1,4 +1,5 @@
 <<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
+<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
 import React { useState useEffect useCallback } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
 import { supabase } from "@/integrations/supabase/client";
@@ -97,3 +98,27 @@ export default function WhitepaperGeneratorPage() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/WhitepaperGeneratorPage.tsx
 }
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function WhitepaperGeneratorPage() {
+  return (
+    <>
+      <SEO 
+        title="WhitepaperGeneratorPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">WhitepaperGeneratorPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/WhitepaperGeneratorPage.tsx

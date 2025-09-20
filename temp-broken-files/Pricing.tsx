@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp-broken-files/Pricing.tsx
 <<<<<<< HEAD:temp_broken_pages_all/Pricing.tsx
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
@@ -59,36 +60,28 @@ features: [
 popular: false;
 }
   ];
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Pricing() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Pricing.tsx
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">Simple Transparent Pricing</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your business. All plans include our core features with no hidden fees.
-          </p>
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <span className={`text-lg ${!isAnnual ? 'text-white font-semibold' : 'text-blue-200'}`}>Monthly</span>
-            <button
-onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                isAnnual ? 'bg-white' : 'bg-blue-200'
-              }`}
-            >
-              <span
-className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-transform ${
-                  isAnnual ? 'translate-x-6' : 'translate-x-1'
-                }`}
-              />
-            </button>
-            <span className={`text-lg ${isAnnual ? 'text-white font-semibold' : 'text-blue-200'}`}>
-              Annual <span className="text-green-300">(Save 20%)</span>
-            </span>
+    <>
+      <SEO 
+        title="Pricing - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Pricing</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
       </div>
+<<<<<<< HEAD:temp-broken-files/Pricing.tsx
       {/* Pricing Cards */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,3 +206,8 @@ export default function Pricing() {
     </div>
   );
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Pricing.tsx

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 <<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
@@ -17,13 +18,19 @@ export default function GreenIT() {
   return (
   return (
   return (
+=======
+import { SEO } from "@/components/SEO";
+
+export default function GreenIT() {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/GreenIT.tsx
     <>
-      <SEO
-title="Green IT Solutions - Sustainable Technology"
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
-        keywords="green IT sustainable technology eco-friendly computing energy efficient hardware"
-        canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
+      <SEO 
+        title="GreenIT - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
       />
+<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -993,3 +1000,16 @@ export default function GreenIT() {
     </div>
   );
 }
+=======
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">GreenIT</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/GreenIT.tsx

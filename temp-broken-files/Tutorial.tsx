@@ -1,3 +1,4 @@
+<<<<<<< HEAD:temp-broken-files/Tutorial.tsx
 <<<<<<< HEAD:temp_broken_pages_all/Tutorial.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
@@ -30,37 +31,28 @@ if (!tutorial) {
       </div>
     )
   }
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Tutorial() {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Tutorial.tsx
   return (
     <>
-      <SEO title={tutorial.title} description={tutorial.excerpt} />
-      <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
-        <div className='container mx-auto max-w-3xl'>
-          <Button
-variant='outline'
-            className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-            asChild
-          >
-            <Link href='/tutorials'>
-              <ArrowLeft className='mr-2 h-4 w-4' /> Back to Tutorials
-            </Link>
-          </Button>
-          <h1 className='text-3xl font-bold text-white mb-4'>
-            {tutorial.title}
-          </h1>
-          <p className='text-zion-slate-light mb-8'>{tutorial.excerpt}</p>
-          <div className='prose prose-invert'>
-            <ReactMarkdown>{tutorial.content}</ReactMarkdown>
+      <SEO 
+        title="Tutorial - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Tutorial</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
-          {tutorial.author && (
-            <p className='mt-8 text-white font-semibold'>
-              —{' '}
-              {typeof tutorial.author === 'string'
-                ? tutorial.author
-                : tutorial.author.name}
-            </p>
-          )}
         </div>
       </div>
+<<<<<<< HEAD:temp-broken-files/Tutorial.tsx
 </>
   )
 import React from 'react';
@@ -76,3 +68,8 @@ export default function Tutorial() {
   );
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Tutorial.tsx
 }
+=======
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/Tutorial.tsx
