@@ -110,6 +110,33 @@ zion-website/
 *.sh
 *.cjs
 
+<<<<<<< HEAD
+# Only ignore specific problematic root files, not all JS/TS files
+*_backup*
+*_disabled*
+*_temp*
+
+# Ignore corrupted and problematic files
+src-corrupted/
+quantum-ai-*/
+*.js
+!src/**/*.js
+!src/**/*.ts
+!src/**/*.jsx
+!src/**/*.tsx
+!App.tsx
+!index.html
+!main.jsx
+!vite.config.js
+!tailwind.config.js
+!postcss.config.js
+!babel.config.js
+!jest.config.js
+!hardhat.config.js
+!ecosystem.config.js
+!next.config.js
+=======
 # Disabled components and utils
 components-disabled/
 utils-disabled/
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-d9b4
