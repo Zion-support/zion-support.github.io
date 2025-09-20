@@ -126,3 +126,13 @@ const UltimateTechShowcase2026: React.FC = () => {
               >
                 <span className="mr-2">{category.icon}</span>
                 {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default UltimateTechShowcase2026;

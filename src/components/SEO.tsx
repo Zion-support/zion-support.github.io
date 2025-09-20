@@ -1,8 +1,26 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;
+  noindex?: boolean;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+}
+
 export function SEO({
   title,
   description,
   keywords,
-  // Default to the Google Drive image URL
   ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogUrl,
   canonical,
@@ -93,7 +111,23 @@ export function SEO({
   return (
     <Helmet>
       <title>{fullTitle}</title>
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={ogUrl || fullCanonical} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={ogUrl || fullCanonical} />
+      <meta property="twitter:title" content={fullTitle} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={ogImage} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonical} />
@@ -107,6 +141,9 @@ export function SEO({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Robots */}
+      {noindex && <meta name="robots" content="noindex,nofollow" />}
       
       {/* Structured Data */}
       <script type="application/ld+json">

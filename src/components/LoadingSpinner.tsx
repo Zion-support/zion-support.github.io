@@ -1,29 +1,40 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  color?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'blue' | 'gray' | 'white' | 'green';
   text?: string;
+  className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'medium', 
-  color = '#8B5CF6', 
-  text 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'blue',
+  text,
+  className = ''
 }) => {
   const sizeClasses = {
-    small: 'w-4 h-4',
-    medium: 'w-8 h-8',
-    large: 'w-12 h-12'
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12',
+    xl: 'h-16 w-16'
+  };
+
+  const colorClasses = {
+    blue: 'text-blue-600',
+    gray: 'text-gray-600',
+    white: 'text-white',
+    green: 'text-green-600'
   };
 
   return (
-    <div className="loading-spinner-container">
-      <div 
-        className={`loading-spinner ${sizeClasses[size]}`}
-        style={{ borderColor: `${color} transparent transparent transparent` }}
-      />
-      {text && <p className="loading-text">{text}</p>}
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-200 border-t-current ${sizeClasses[size]} ${colorClasses[color]}`}></div>
+      {text && (
+        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
+          {text}
+        </p>
+      )}
     </div>
   );
 };

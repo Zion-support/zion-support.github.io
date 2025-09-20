@@ -1,1 +1,2 @@
-import ReactDOM from 'react-dom/client';
+// This file is a placeholder for build configuration
+// ReactDOM import removed as it's not used

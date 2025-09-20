@@ -82,3 +82,9 @@ const UltimateTechRevolution2025: React.FC = () => {
             </button>
           </div>
         </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default UltimateTechRevolution2025;
