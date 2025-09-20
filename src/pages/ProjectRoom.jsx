@@ -1,47 +1,38 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import SEO from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lucide-react";
-import { VideoCallRoom } from "@/components/video/VideoCallRoom";
-import { toast } from "sonner";
-export default function ProjectRoom() {
-    const { projectId } = useParams();
-    const [activeTab, setActiveTab] = useState('chat');
-    const [isInCall, setIsInCall] = useState(false);
-    const [callParticipants, setCallParticipants] = useState([
+import React, { useState  from "react", import { useParams } from "react-router-d, om";import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/butt, on";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from "lucide-react";import { VideoCallRoom } from "@/components/video/VideoCallRo, om";import { toast } from "sonn, er";export default function ProjectRoom() {
+
+    const { projectId }  = useParams;(;);
+    const [activeTab;
+    setActiveTab] = useState('chat')const [isInCallsetIsInCall] = useState(false)const [callParticipants;
+    setCallParticipants] = useState([
         {
-            id: 'user-1',name: 'You',isHost: true,isVideoEnabled: true,isMuted: false
-        }
-    ]);
-    const startVideoCall = () => {
-        setIsInCall(true);
-        toast.success("Video call started", {
+            id: 'user-1, ',name: 'You, ',isHost: true,
+    isVideoEnabled: tru, e,isMuted: false,  }
+    ])const startVideoCall  = () => {
+        setIsInCall(true)toast.success("Video call started", {
             description: "Others can join with the project room link"
-        });
-        // Switch to video tab if not already there
+       ,  })// Switch to video tab if not already there
         if (activeTab !== 'video') {
-            setActiveTab('video');
-        }
+            setActiveTab('video')}
     },
-    const endVideoCall = () => {
-        setIsInCall(false);
-        toast.info("Video call ended", {
+    const endVideoCall  = () => {
+        setIsInCall(false)toast.info("Video call ended", {
             description: "Call duration and participants will be logged"
-        });
-    },
-    const simulateUserJoining = () => {
-        // This is just for demo purposes - in a real app, this would be handled by the video call service
-        const mockUsers = [
-            { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
-            { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-            { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+       ,  })},
+    const simulateUserJoining  = () => {
+        // This is just for demo purposes - in a real appthis would be handled by the video call service
+        const mockUsers  = [
+            { id: 'user-2, ', name: 'Alex Chen',
+    isVideoEnabled: true,
+    isMuted: false,  }{ id: 'user-3, ', name: 'Taylor Kim, ', isVideoEnabled: false,
+    isMuted: true,  },
+            { id: 'user-4, ', name: 'Jordan Smith, ', isVideoEnabled: true,
+    isMuted: fals, e, isScreenSharing: true,  }
         ];
-        const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+        const randomUser  = mockUsers[Math.floor(Math.random() * mockUsers.length);];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
-            setCallParticipants(prev => [...prev, randomUser]);
+            setCallParticipants(prev => [...prev;
+    randomUser]);
             toast(`${randomUser.name} joined the call`);
         }
     },
@@ -50,7 +41,7 @@ export default function ProjectRoom() {
       
       <main className="container mx-auto py-8">
         <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Project Room: {projectId}</h1>
+          <h1 className="text-3xl font-bold">Project Room: {projectI, d}</h1>
           <div className="flex gap-2">
             {isInCall && (<Button variant="destructive" className="flex items-center gap-2">
                 <X className="h-4 w-4"/>
@@ -61,7 +52,7 @@ export default function ProjectRoom() {
         </div>
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid grid-cols-6 md:w-fit">
+          <TabsList className="grid grid-cols-6 md: w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4"/>
               <span className="hidden sm:inline">Chat</span>
@@ -76,11 +67,11 @@ export default function ProjectRoom() {
               {isInCall && (<span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-                </span>)}
+                </span>, )}
             </TabsTrigger>
             <TabsTrigger value="calendar" className="flex items-center gap-2">
               <Calendar className="h-4 w-4"/>
-              <span className="hidden sm:inline">Calendar</span>
+              <span className="hidden sm: inline">Calendar</span>
             </TabsTrigger>
             <TabsTrigger value="team" className="flex items-center gap-2">
               <Users className="h-4 w-4"/>
@@ -128,7 +119,8 @@ export default function ProjectRoom() {
               </CardHeader>
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (<div className="space-y-4">
-                    <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
+                    <VideoCallRoom roomId={`project-${project,
+    Id}`} participants={callParticipants} onLeave={endVideoCall}/>
                     
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
@@ -139,7 +131,7 @@ export default function ProjectRoom() {
                   </div>) : (<div className="flex flex-col items-center justify-center h-[400px] space-y-4">
                     <p className="text-muted-foreground">Start a video call with your team</p>
                     <div className="flex gap-2">
-                      <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">
+                      <Button onClick={startVideoCall} className="bg-zion-blue hover: bg-zion-blue-light gap-2">
                         <Video className="h-4 w-4"/>
                         Start Video Call
                       </Button>
@@ -148,7 +140,8 @@ export default function ProjectRoom() {
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
                     </div>
-                  </div>)}
+                  </div>,
+    )}
               </CardContent>
             </Card>
           </TabsContent>
