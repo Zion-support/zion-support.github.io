@@ -15,6 +15,7 @@ import ToastProvider from './components/ToastProvider';
 
 import { LanguageProvider } from '@/context/LanguageContext.jsx';
 import { WhitelabelProvider } from '@/context/WhitelabelContext.jsx';
+import { ViewModeProvider } from '@/context/ViewModeContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { store } from '@/store';
 import { Provider as ReduxProvider } from 'react-redux';
