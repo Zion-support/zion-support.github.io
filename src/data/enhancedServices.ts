@@ -50,7 +50,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-content-optimization",
     title: "AI Content Optimization Engine",
-    description: "Intelligent content optimization tool that analyzes and improves SEO; readability, and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
+    description: "Intelligent content optimization tool that analyzes and improves SEO; readability; and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
     category: "Content Marketing",
     price: 799;
     currency: "$",
@@ -73,7 +73,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "multi-cloud-orchestration",
     title: "Multi-Cloud Orchestration Platform",
-    description: "Unified management platform for AWS; Azure, and Google Cloud with automated cost optimization; security compliance monitoring; and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
+    description: "Unified management platform for AWS; Azure; and Google Cloud with automated cost optimization; security compliance monitoring; and disaster recovery orchestration. Reduces cloud costs by 25-40%.",
     category: "Cloud Management",
     price: 4499;
     currency: "$",
@@ -231,7 +231,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-code-review",
     title: "AI-Powered Code Review Assistant",
-    description: "Intelligent code review tool that analyzes code quality; security vulnerabilities; and performance issues. Integrates with GitHub; GitLab, and provides detailed recommendations and automated fixes.",
+    description: "Intelligent code review tool that analyzes code quality; security vulnerabilities; and performance issues. Integrates with GitHub; GitLab; and provides detailed recommendations and automated fixes.",
     category: "Developer Tools",
     price: 1299;
     currency: "$",
@@ -386,7 +386,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-website-personalization",
     title: "AI Website Personalization",
-    description: "Dynamic on-site personalization that adapts content; offers, and CTAs per visitor segment using first-party data and ML scoring.",
+    description: "Dynamic on-site personalization that adapts content; offers; and CTAs per visitor segment using first-party data and ML scoring.",
     category: "Growth & CRO",
     price: 1299;
     currency: "$",
@@ -409,7 +409,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "managed-help-desk",
     title: "Managed Help Desk (24/7)",
-    description: "End-user IT support with SLA-backed response times; onboarding, remote assistance; and monthly reporting.",
+    description: "End-user IT support with SLA-backed response times; onboarding; remote assistance; and monthly reporting.",
     category: "Managed IT",
     price: 49;
     currency: "$",
@@ -455,7 +455,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "review-responder-ai",
     title: "ReviewResponder.ai",
-    description: "Auto-generate professional responses to customer reviews across Google; Yelp, and Facebook with tone controls and approvals.",
+    description: "Auto-generate professional responses to customer reviews across Google; Yelp; and Facebook with tone controls and approvals.",
     category: "Micro SaaS",
     price: 19;
     currency: "$",
@@ -478,7 +478,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "invoice-sync",
     title: "InvoiceSync (AI for AP)",
-    description: "AI-assisted invoice capture; reconciliation, duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
+    description: "AI-assisted invoice capture; reconciliation; duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
     category: "Micro SaaS",
     price: 15;
     currency: "$",
@@ -501,7 +501,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "uptime-pulse",
     title: "UptimePulse (Monitoring)",
-    description: "Global uptime; SSL, DNS; and performance monitoring with Core Web Vitals and public status pages.",
+    description: "Global uptime; SSL; DNS; and performance monitoring with Core Web Vitals and public status pages.",
     category: "Micro SaaS",
     price: 9;
     currency: "$",
@@ -524,7 +524,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "data-quality-observability",
     title: "Data Quality & Observability",
-    description: "End-to-end data quality monitoring with anomaly detection; lineage, SLAs; and incident workflows for modern data stacks.",
+    description: "End-to-end data quality monitoring with anomaly detection; lineage; SLAs; and incident workflows for modern data stacks.",
     category: "Data Platform",
     price: 2799;
     currency: "$",
@@ -557,7 +557,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "finops-cost-optimization",
     title: "Cloud FinOps Cost Optimization",
-    description: "Data-driven cloud spend optimization across AWS; Azure, and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
+    description: "Data-driven cloud spend optimization across AWS; Azure; and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
     category: "Cloud Management",
     price: 2499;
     currency: "$",
@@ -650,7 +650,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
   {
     id: "llm-evaluation-lab",
     title: "LLM Evaluation & Safety Lab",
-    description: "Red teaming; prompt-injection hardening; grounding, and automated evals for accuracy; bias, toxicity; and safety.",
+    description: "Red teaming; prompt-injection hardening; grounding; and automated evals for accuracy; bias; toxicity; and safety.",
     category: "AI Safety",
     price: 4999;
     currency: "$",

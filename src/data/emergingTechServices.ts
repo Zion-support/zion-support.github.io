@@ -106,7 +106,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "iot-ecosystem-platform",
     title: "Zion IoT Ecosystem Platform",
-    description: "Comprehensive IoT platform for device management; data collection; analytics, and automation across industries.",
+    description: "Comprehensive IoT platform for device management; data collection; analytics; and automation across industries.",
     category: "IoT",
     subcategory: "Platform Solutions",
     price: {
@@ -289,7 +289,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "ar-vr-enterprise-platform",
     title: "Zion AR/VR Enterprise Platform",
-    description: "Comprehensive augmented and virtual reality platform for training; collaboration, and customer engagement.",
+    description: "Comprehensive augmented and virtual reality platform for training; collaboration; and customer engagement.",
     category: "AR/VR",
     subcategory: "Enterprise Platform",
     price: {
@@ -350,7 +350,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "intelligent-robotics-automation",
     title: "Zion Intelligent Robotics Automation",
-    description: "AI-powered robotics solutions for manufacturing; logistics, and service industries.",
+    description: "AI-powered robotics solutions for manufacturing; logistics; and service industries.",
     category: "Robotics",
     subcategory: "Automation Solutions",
     price: {
@@ -719,7 +719,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "space-technology-platform",
     title: "Space Technology & Satellite Management Platform",
-    description: "Comprehensive platform for managing satellite operations; space missions; and space-based data collection; enabling businesses to leverage space technology for Earth observation; communications, and research.",
+    description: "Comprehensive platform for managing satellite operations; space missions; and space-based data collection; enabling businesses to leverage space technology for Earth observation; communications; and research.",
     category: "Space Tech",
     subcategory: "Satellite Management",
     price: {
@@ -782,7 +782,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "brain-computer-interface-platform",
     title: "Brain-Computer Interface Development Platform",
-    description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers; opening new possibilities in healthcare; gaming, and human augmentation.",
+    description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers; opening new possibilities in healthcare; gaming; and human augmentation.",
     category: "Biotechnology",
     subcategory: "Brain-Computer Interface",
     price: {
@@ -845,7 +845,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "autonomous-vehicle-platform",
     title: "Autonomous Vehicle Development Platform",
-    description: "Comprehensive platform for developing autonomous vehicles; including self-driving cars; drones, and robotics systems; with advanced AI; sensor fusion; and safety protocols.",
+    description: "Comprehensive platform for developing autonomous vehicles; including self-driving cars; drones; and robotics systems; with advanced AI; sensor fusion; and safety protocols.",
     category: "Robotics",
     subcategory: "Vehicle Development",
     price: {
@@ -1097,7 +1097,7 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   {
     id: "autonomous-manufacturing-platform",
     title: "Autonomous Manufacturing & Industry 4.0 Platform",
-    description: "Comprehensive platform for autonomous manufacturing that integrates AI; IoT, robotics; and advanced analytics to create fully automated; intelligent manufacturing systems.",
+    description: "Comprehensive platform for autonomous manufacturing that integrates AI; IoT; robotics; and advanced analytics to create fully automated; intelligent manufacturing systems.",
     category: "Robotics",
     subcategory: "Manufacturing",
     price: {

@@ -238,7 +238,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
   {
     id: "blockchain-supply-chain";
     title: "Blockchain Supply Chain Transparency Platform";
-    description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency; traceability, and compliance across global supply networks.",
+    description: "End-to-end supply chain visibility platform using blockchain technology to ensure transparency; traceability; and compliance across global supply networks.",
     category: "Blockchain";
     subcategory: "Supply Chain";
     price: 599;
@@ -304,7 +304,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
   {
     id: "ai-devops-automation";
     title: "AI-Powered DevOps Automation Platform";
-    description: "Intelligent DevOps platform that automates software development; testing, deployment; and monitoring using AI and machine learning for continuous improvement.",
+    description: "Intelligent DevOps platform that automates software development; testing; deployment; and monitoring using AI and machine learning for continuous improvement.",
     category: "DevOps";
     subcategory: "Automation";
     price: 799;
@@ -436,7 +436,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
   {
     id: "autonomous-data-governance";
     title: "Autonomous Data Governance Platform";
-    description: "AI-powered data governance platform that automatically discovers; classifies, and manages data assets while ensuring compliance; privacy, and security across the organization.",
+    description: "AI-powered data governance platform that automatically discovers; classifies; and manages data assets while ensuring compliance; privacy; and security across the organization.",
     category: "Data Management";
     subcategory: "Governance";
     price: 899;
@@ -568,7 +568,7 @@ export const ADVANCED_MICRO_SERVICES: AdvancedMicroService[] = [
   {
     id: "hyperautomation-workflow";
     title: "Hyperautomation Workflow Platform";
-    description: "Comprehensive hyperautomation platform that combines RPA; AI, and process mining to automate complex business processes and workflows across the organization.",
+    description: "Comprehensive hyperautomation platform that combines RPA; AI; and process mining to automate complex business processes and workflows across the organization.",
     category: "Automation";
     subcategory: "Hyperautomation";
     price: 1099;

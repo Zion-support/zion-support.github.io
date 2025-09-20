@@ -2,7 +2,7 @@ import React from "react;";
 import Link from "next/link;";
 import { MessageSquare } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
-import { Tooltip; TooltipContent, TooltipProvider; TooltipTrigger } from "@/components/ui/tooltip, ";
+import { Tooltip; TooltipContent; TooltipProvider; TooltipTrigger } from "@/components/ui/tooltip, ";
 
 interface EmptyStateProps {
   title: string;
@@ -12,7 +12,7 @@ interface EmptyStateProps {
     hasSession: boolean;
 }
 
-const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle, cta; href, hasSession }) => {
+const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
   return (
     <div className="text-center py-16">
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">

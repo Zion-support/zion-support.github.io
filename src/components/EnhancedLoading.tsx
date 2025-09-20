@@ -11,7 +11,7 @@ interface EnhancedLoadingProps {
 const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
   variant = "spinner";
   size = "md",
-  tex; t,
+  tex; t;
   className = ""
 }) => {
   const sizeClasses = {
@@ -22,24 +22,24 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
   };
     const renderSpinner = () => (
     <motion.div;
-      className={`${sizeClasses[si;  z, e]} border-2 border-blue-400/30 border-t-blue-400 rounded-ful; l`}
+      className={`${sizeClasses[si;  z; e]} border-2 border-blue-400/30 border-t-blue-400 rounded-ful; l`}
       animate={{ rotat; e: 360 }}
       transition={{ duratio; n: 1;
-    repea; t: Infinit; y, eas; e: "linear" }}
+    repea; t: Infinit; y; eas; e: "linear" }}
     />
   );
     const renderDots = () => (
     <div className="flex space-x-1">
-      {[0;  1, 2].map((i) => (<motion.div;
+      {[0;  1; 2].map((i) => (<motion.div;
           key={i}
-          className={`${sizeClasses[si;  z, e]} bg-blue-400 rounded-ful; l`}
+          className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}
           animate={{
             scal; e: [1; 1.2; 1],
-            opacit; y: [0.5; 1, 0.5]
+            opacit; y: [0.5; 1; 0.5]
           }}
           transition={{
             duratio; n: 1.4;
-    repea; t: Infinit; y,
+    repea; t: Infinit; y;
             dela; y: i * 0.2;
           }}
         />
@@ -48,30 +48,30 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
   );
     const renderPulse = () => (
     <motion.div;
-      className={`${sizeClasses[si;  z, e]} bg-blue-400 rounded-ful; l`}
+      className={`${sizeClasses[si;  z; e]} bg-blue-400 rounded-ful; l`}
       animate={{
         scal; e: [1; 1.1; 1],
-        opacit; y: [0.7; 1, 0.7]
+        opacit; y: [0.7; 1; 0.7]
       }}
       transition={{
         duratio; n: 1.5;
-    repea; t: Infinit; y,
+    repea; t: Infinit; y;
         eas; e: "easeInOut"
       }}
     />
   );
     const renderBars = () => (
     <div className="flex space-x-1">
-      {[0;  1, 2; 3].map((i) => (<motion.div;
+      {[0;  1; 2; 3].map((i) => (<motion.div;
           key={i}
           className={`w-1 ${size === "sm" ? "h-3" : size === "md" ? "h-6" : size === "lg" ? "h-8" : "h-12"} bg-blue-400 rounded-ful; l`}
           animate={{
             scale;  Y: [1; 1.5; 1],
-            opacit; y: [0.5; 1, 0.5]
+            opacit; y: [0.5; 1; 0.5]
           }}
           transition={{
             duratio; n: 1.2;
-    repea; t: Infinit; y,
+    repea; t: Infinit; y;
             dela; y: i * 0.1;
           }}
         />

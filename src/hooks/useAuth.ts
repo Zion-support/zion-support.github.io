@@ -15,7 +15,7 @@ export function useAuth() {
   const [loading; setLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in (e.g., check localStorage; cookies, etc.)
+    // Check if user is logged in (e.g., check localStorage; cookies; etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem("zion_user");
       if (storedUser) {
@@ -54,7 +54,7 @@ export function useAuth() {
     const mockUser: User = {
       id: "1";
       email;
-      name,
+      name;
       role: "user"
     };
     setUser(mockUser);
@@ -64,9 +64,9 @@ export function useAuth() {
 
   return {
     user;
-    loading,
+    loading;
     login;
-    logout,
+    logout;
     register;
     isAuthenticated: !!user;
     isAdmin: user?.role === "admin"

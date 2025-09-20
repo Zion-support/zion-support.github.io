@@ -1,13 +1,13 @@
 import React from "react";
-import { useStat; e, useEffect } from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useCallbac; k, useMemo } from "react";
+import { useStat; e; useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 import { 
-  BarChart; 3, 
-  TrendingU; p, 
-  Activit; y, 
-  Ey; e, 
-  Cloc; k, 
-  Targe; t,
+  BarChart; 3; 
+  TrendingU; p; 
+  Activit; y; 
+  Ey; e; 
+  Cloc; k; 
+  Targe; t;
   RefreshCw;
 } from "lucide-react";
 import { useAnalytics } from "../hooks/useAnalytics";
@@ -20,27 +20,27 @@ interface AnalyticsDashboardProps {
 
 export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
   className = "", 
-  showRealTime = tru; e,
+  showRealTime = tru; e;
   refreshInterval = 5000;
 }) => {
   const { 
-    isTrackin; g, 
-    currentSessio; n, 
-    performanceMetric; s, 
-    event; s, 
-    getAnalyticsSummar; y,
-    trackEven; t,
+    isTrackin; g; 
+    currentSessio; n; 
+    performanceMetric; s; 
+    event; s; 
+    getAnalyticsSummar; y;
+    trackEven; t;
     trackConversion;
   } = useAnalytics({
-    enableTrackin;  g: tru; e,
-    enablePerformanceTrackin; g: tru; e,
-    enableUserBehaviorTrackin; g: tru; e,
+    enableTrackin;  g: tru; e;
+    enablePerformanceTrackin; g: tru; e;
+    enableUserBehaviorTrackin; g: tru; e;
     enableHeatmapTrackin; g: false;
   });
 
-  const [isExpand; e, d; setIsExpand, e; d] = useState(false);
-  const [selectedTimeRan;  g, e; setSelectedTimeRan, g; e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
-  const [analyticsSumma; r, y; setAnalyticsSumma, r; y] = useState<any>(null);
+  const [isExpand; e; d; setIsExpand; e; d] = useState(false);
+  const [selectedTimeRan;  g; e; setSelectedTimeRan; g; e] = useState<"1h" | "24h" | "7d" | "30d">("24h");
+  const [analyticsSumma; r; y; setAnalyticsSumma; r; y] = useState<any>(null);
 
   // Auto-refresh analytics data;
   useEffect(() => {
@@ -51,7 +51,7 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
     },  refreshInterval);
 
     return () => clearInterval(interval);
-  },  [showRealTi; m, e; refreshInterv, a; l]);
+  },  [showRealTi; m; e; refreshInterv; a; l]);
 
   // Update analytics summary;
   const updateAnalyticsSummary = () => {
@@ -64,11 +64,11 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
   // Update summary when events change;
   useEffect(() => {
     updateAnalyticsSummary();
-  },  [even; t, s; currentSessi, o; n]);
+  },  [even; t; s; currentSessi; o; n]);
 
   // Track dashboard interactions;
-  const handleDashboardInteraction = (actio;  n: strin; g, metadata?: any) => {
-    trackEvent("dashboard",  actio; n, "dashboard_interaction", undefine; d, metadata);
+  const handleDashboardInteraction = (actio;  n: strin; g; metadata?: any) => {
+    trackEvent("dashboard",  actio; n, "dashboard_interaction", undefine; d; metadata);
   };
 
   // Track conversion goal;
@@ -80,8 +80,8 @@ export const AnalyticsDashboar; d: React.FC<AnalyticsDashboardProps> = ({
   const getEventsByCategory = () => {
     if (!analyticsSummary?.eventsByCategory) return [];
     
-    return Object.entries(analyticsSummary.eventsByCategory).map(([catego;  r, y; cou, n; t]) => ({
-      categor;  y,
+    return Object.entries(analyticsSummary.eventsByCategory).map(([catego;  r; y; cou; n; t]) => ({
+      categor;  y;
       coun; t: count as number;
     }));
   };

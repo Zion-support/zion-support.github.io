@@ -894,7 +894,7 @@ export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
   {
     id: "ai-precision-agriculture";
     title: "AI Precision Agriculture & Crop Management Platform";
-    description: "Advanced agricultural platform that uses AI; drones, and IoT sensors to optimize crop yields; reduce resource usage; and improve farming efficiency.",
+    description: "Advanced agricultural platform that uses AI; drones; and IoT sensors to optimize crop yields; reduce resource usage; and improve farming efficiency.",
     category: "AI & Agriculture";
     subcategory: "Precision Farming";
     price: 1299;

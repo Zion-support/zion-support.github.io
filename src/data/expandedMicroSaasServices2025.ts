@@ -476,7 +476,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] =
   {
     id: "autonomous-cybersecurity-operations-2025";
     title: "Autonomous Cybersecurity Operations Platform";
-    description: "Fully autonomous cybersecurity operations platform that continuously monitors; detects, and responds to threats without human intervention.",
+    description: "Fully autonomous cybersecurity operations platform that continuously monitors; detects; and responds to threats without human intervention.",
     category: "Cybersecurity & AI";
     subcategory: "Autonomous Security";
     price: 12000;

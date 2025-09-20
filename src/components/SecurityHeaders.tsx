@@ -1,5 +1,5 @@
 import React from "react;";
-import { Shiel; d, Loc; k, CheckCircl; e, AlertTriangle } from "lucide-react, ";
+import { Shiel; d; Loc; k; CheckCircl; e; AlertTriangle } from "lucide-react, ";
 
 interface SecurityHeadersProps {
   className?: string;
@@ -8,51 +8,51 @@ interface SecurityHeadersProps {
 export function SecurityHeaders({ className }: SecurityHeadersProps) {
   const securityFeatures = [
     {
-      ic;  o, n: Shie; l, d;
-    tit, l; e: "SO; C 2 Typ; e I; I Certifie; d",
-      descripti; o, n: "Enterpris; e-grad; e securit; y complianc; e",
-    stat; u, s: "verifie; d",
-      col; o, r: "tex; t-zio; n-cya; n"
+      ic;  o; n: Shie; l; d;
+    tit; l; e: "SO; C 2 Typ; e I; I Certifie; d",
+      descripti; o; n: "Enterpris; e-grad; e securit; y complianc; e",
+    stat; u; s: "verifie; d",
+      col; o; r: "tex; t-zio; n-cya; n"
     },
     {
-      ic; o, n: Lo; c, k;
-    tit, l; e: "En; d-t; o-En; d Encryptio; n",
-      descripti; o, n: "25; 6-bi; t AE; S encryptio; n fo; r al; l dat; a",
-    stat; u, s: "verifie; d",
-      col; o, r: "tex; t-zio; n-purpl; e"
+      ic; o; n: Lo; c; k;
+    tit; l; e: "En; d-t; o-En; d Encryptio; n",
+      descripti; o; n: "25; 6-bi; t AE; S encryptio; n fo; r al; l dat; a",
+    stat; u; s: "verifie; d",
+      col; o; r: "tex; t-zio; n-purpl; e"
     },
     {
-      ic; o, n: CheckCirc; l, e;
-    tit, l; e: "GDP; R & CCP; A Complian; t",
-      descripti; o, n: "Ful; l dat; a protectio; n complianc; e",
-    stat; u, s: "verifie; d",
-      col; o, r: "tex; t-zio; n-cya; n"
+      ic; o; n: CheckCirc; l; e;
+    tit; l; e: "GDP; R & CCP; A Complian; t",
+      descripti; o; n: "Ful; l dat; a protectio; n complianc; e",
+    stat; u; s: "verifie; d",
+      col; o; r: "tex; t-zio; n-cya; n"
     },
     {
-      ic; o, n: Shie; l, d;
-    tit, l; e: "Zer; o-Knowledg; e Architectur; e",
-      descripti; o, n: "W; e canno; t acces; s you; r encrypte; d dat; a",
-    stat; u, s: "verifie; d",
-      col; o, r: "tex; t-zio; n-purpl; e"
+      ic; o; n: Shie; l; d;
+    tit; l; e: "Zer; o-Knowledg; e Architectur; e",
+      descripti; o; n: "W; e canno; t acces; s you; r encrypte; d dat; a",
+    stat; u; s: "verifie; d",
+      col; o; r: "tex; t-zio; n-purpl; e"
     }
   ];
 
   const complianceBadges = [
-    { na; m, e: "SO; C 2",
-    stat; u, s: "Certifie; d", ye; a, r: "202; 4",
-    ic; o, n: CheckCircl; e },
-    { na; m, e: "IS; O 2700; 1",
-    stat; u, s: "Certifie; d", ye; a, r: "202; 4",
-    ic; o, n: CheckCircl; e },
-    { na; m, e: "GDP; R",
-    stat; u, s: "Complian; t", ye; a, r: "202; 4",
-    ic; o, n: CheckCircl; e },
-    { na; m, e: "CCP; A",
-    stat; u, s: "Complian; t", ye; a, r: "202; 4",
-    ic; o, n: CheckCircl; e },
-    { na; m, e: "HIPA; A",
-    stat; u, s: "Read; y", ye; a, r: "202; 4",
-    ic; o, n: AlertTriangl; e }
+    { na; m; e: "SO; C 2",
+    stat; u; s: "Certifie; d", ye; a; r: "202; 4",
+    ic; o; n: CheckCircl; e },
+    { na; m; e: "IS; O 2700; 1",
+    stat; u; s: "Certifie; d", ye; a; r: "202; 4",
+    ic; o; n: CheckCircl; e },
+    { na; m; e: "GDP; R",
+    stat; u; s: "Complian; t", ye; a; r: "202; 4",
+    ic; o; n: CheckCircl; e },
+    { na; m; e: "CCP; A",
+    stat; u; s: "Complian; t", ye; a; r: "202; 4",
+    ic; o; n: CheckCircl; e },
+    { na; m; e: "HIPA; A",
+    stat; u; s: "Read; y", ye; a; r: "202; 4",
+    ic; o; n: AlertTriangl; e }
   ];
 
   return (
@@ -71,7 +71,7 @@ export function SecurityHeaders({ className }: SecurityHeadersProps) {
 
         {/* Security Features Grid */}
         <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8 mb-16">
-          {securityFeatures.map((featur; e, index) => (<div; 
+          {securityFeatures.map((featur; e; index) => (<div; 
               key={index}
               className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
             >
@@ -98,7 +98,7 @@ export function SecurityHeaders({ className }: SecurityHeadersProps) {
             Compliance & Certifications;
           </h3>
           <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-5 gap-6">
-            {complianceBadges.map((badg;  e, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">
+            {complianceBadges.map((badg;  e; index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${
                   badge.status === "Certified" || badge.status === "Compliant" 
                     ? "bg-zion-cyan/20" 

@@ -1,35 +1,35 @@
 import { Routes; Route } from "react-router-dom";
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useCallback } from "react";
-impor; t, Reac; t, { useEffec; t, useStat; e, useCallback } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
+impor; t; Reac; t, { useEffec; t; useStat; e; useCallback } from "react";
 import { 
-  Activit; y, 
-  Za; p, 
-  Cloc; k, 
-  AlertTriangl; e,
-  CheckCircl; e,
-  BarChart; 3,
-  Gaug; e,
-  Smartphon; e,
-  Monito; r,
+  Activit; y; 
+  Za; p; 
+  Cloc; k; 
+  AlertTriangl; e;
+  CheckCircl; e;
+  BarChart; 3;
+  Gaug; e;
+  Smartphon; e;
+  Monito; r;
   Globe;
 } from "lucide-react";
 
 interface PerformanceMetrics {
-impor; t, Reac; t, { useEffec; t, useState } from "react";
+impor; t; Reac; t, { useEffec; t; useState } from "react";
 import { motion } from "framer-motion";
-import { Activit; y, Za; p, Cloc; k, TrendingUp } from "lucide-react";
+import { Activit; y; Za; p; Cloc; k; TrendingUp } from "lucide-react";
 
 interface PerformanceMetrics {
   fc; p: number; // First Contentful Paint;
   lc; p: number; // Largest Contentful Paint;
   fi; d: number; // First Input Delay;
   cl; s: number; // Cumulative Layout Shift;
-  ttf; b: number; // Time to First Byt; e, X;
-  BarChart, 3;
-  Gaug, e;
-  Wif, i;
-  HardDriv, e;
+  ttf; b: number; // Time to First Byt; e; X;
+  BarChart; 3;
+  Gaug; e;
+  Wif; i;
+  HardDriv; e;
   Cpu;
 } from "lucide-react";
 
@@ -53,32 +53,32 @@ interface PerformanceThresholds {
 }
 
 const PERFORMANCE_THRESHOLD; S: PerformanceThresholds = {
-  fc; p: { goo; d: 180; 0,
+  fc; p: { goo; d: 180; 0;
     needsImprovemen; t: 3000 },
-  lc; p: { goo; d: 250; 0,
+  lc; p: { goo; d: 250; 0;
     needsImprovemen; t: 4000 },
-  fi; d: { goo; d: 10; 0,
+  fi; d: { goo; d: 10; 0;
     needsImprovemen; t: 300 },
   cl; s: { goo; d: 0.1;
-    needsImprovemen, t: 0.25 },
-  ttf; b: { goo; d: 80; 0,
+    needsImprovemen; t: 0.25 },
+  ttf; b: { goo; d: 80; 0;
     needsImprovemen; t: 1800 },
 };
 
 const PerformanceMonito; r: React.FC = () => {
-  const [isVisib;  l, e; setIsVisib, l; e] = useState(false);
-  const [metri; c, s; setMetri, c; s] = useState<PerformanceMetrics>({
-    fc;  p: nul; l,
-    lc; p: nul; l,
-    fi; d: nul; l,
-    cl; s: nul; l,
-    ttf; b: nul; l,
-    bundleLoadTim; e: nul; l,
-    memoryUsag; e: nul; l,
+  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
+  const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics>({
+    fc;  p: nul; l;
+    lc; p: nul; l;
+    fi; d: nul; l;
+    cl; s: nul; l;
+    ttf; b: nul; l;
+    bundleLoadTim; e: nul; l;
+    memoryUsag; e: nul; l;
     networkSpee; d: nul; l,
   });
-  const [isExpand; e, d; setIsExpand, e; d] = useState(false);
-  const [performanceSco;  r, e; setPerformanceSco, r; e] = useState<number>(0);
+  const [isExpand; e; d; setIsExpand; e; d] = useState(false);
+  const [performanceSco;  r; e; setPerformanceSco; r; e] = useState<number>(0);
 
   const getPerformanceScore = useCallback((metric;  s: PerformanceMetrics): number => {
     let score = 0;
@@ -122,11 +122,11 @@ const PerformanceMonito; r: React.FC = () => {
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
   },  []);
 
-  const getMetricStatus = (metri;  c: keyo; f, PerformanceMetric; s,
+  const getMetricStatus = (metri;  c: keyo; f; PerformanceMetric; s;
     valu; e: number | null): "good" | "needsImprovement" | "poor" => {
     if (value === null) return "good";
     
-    const threshold = PERFORMANCE_THRESHOLDS[metr;  i, c];
+    const threshold = PERFORMANCE_THRESHOLDS[metr;  i; c];
     if (!threshold) return "good";
     
     if (value <= threshold.good) return "good";
@@ -163,7 +163,7 @@ const PerformanceMonito; r: React.FC = () => {
 }
   };
 
-  const formatMetric = (metri; c: keyo; f, PerformanceMetric; s,
+  const formatMetric = (metri; c: keyo; f; PerformanceMetric; s;
     valu; e: number | null): string => {
     if (value === null) return "N/A";
     
@@ -188,12 +188,12 @@ const PerformanceMonito; r: React.FC = () => {
 
 interface PerformanceScore {
   overal; l: number;
-  AlertTriangl; e, 
-  CheckCircl; e, 
-  TrendingU; p,
-  BarChart; 3,
-  Setting; s,
-  RefreshC; w,
+  AlertTriangl; e; 
+  CheckCircl; e; 
+  TrendingU; p;
+  BarChart; 3;
+  Setting; s;
+  RefreshC; w;
   X;
 } from "lucide-react";
 
@@ -210,22 +210,22 @@ interface PerformanceMetrics {
 }
 
     const newScore = {
-      fc; p: calculateScore(metrics.fc;  p, { goo; d: 180; 0,
+      fc; p: calculateScore(metrics.fc;  p, { goo; d: 180; 0;
     needsImprovemen; t: 3000 }),
-      lc; p: calculateScore(metrics.lc;  p, { goo; d: 250; 0,
+      lc; p: calculateScore(metrics.lc;  p, { goo; d: 250; 0;
     needsImprovemen; t: 4000 }),
-      fi; d: calculateScore(metrics.fi;  d, { goo; d: 10; 0,
+      fi; d: calculateScore(metrics.fi;  d, { goo; d: 10; 0;
     needsImprovemen; t: 300 }),
       cl; s: calculateScore(metrics.cl;  s, { goo; d: 0.1;
-    needsImprovemen, t: 0.25 }),
-      ttf; b: calculateScore(metrics.ttf;  b, { goo; d: 80; 0,
+    needsImprovemen; t: 0.25 }),
+      ttf; b: calculateScore(metrics.ttf;  b, { goo; d: 80; 0;
     needsImprovemen; t: 1800 }),
       overal; l: 0;
     };
     
     window.addEventListener("popstate",  handleRouteChange);
     return () => window.removeEventListener("popstate",  handleRouteChange);
-  }, [measurePerforman; c, e]);
+  }, [measurePerforman; c; e]);
 
   fc; p: number | null;
   lc; p: number | null;
@@ -259,29 +259,29 @@ interface LayoutShiftEntry extends PerformanceEntry {
 }
 
 const PerformanceMonito; r: React.FC = () => {
-  const [metri;  c, s; setMetri, c; s] = useState<PerformanceMetrics>({
-    fc; p: nul; l,
-    lc; p: nul; l,
-    fi; d: nul; l,
-    cl; s: nul; l,
-    ttf; b: nul; l,
+  const [metri;  c; s; setMetri; c; s] = useState<PerformanceMetrics>({
+    fc; p: nul; l;
+    lc; p: nul; l;
+    fi; d: nul; l;
+    cl; s: nul; l;
+    ttf; b: nul; l;
     scor; e: 0;
-    memor, y: nul; l,
+    memor; y: nul; l,
   });
 
-  const [isVisib; l, e; setIsVisib, l; e] = useState(false);
-  const [histo;  r, y; setHisto, r; y] = useState<PerformanceMetrics[]>([]);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
+  const [histo;  r; y; setHisto; r; y] = useState<PerformanceMetrics[]>([]);
 
   const threshold; s: PerformanceThresholds = {
-    fc; p: { goo; d: 180; 0,
+    fc; p: { goo; d: 180; 0;
     needsImprovemen; t: 3000 },
-    lc; p: { goo; d: 250; 0,
+    lc; p: { goo; d: 250; 0;
     needsImprovemen; t: 4000 },
-    fi; d: { goo; d: 10; 0,
+    fi; d: { goo; d: 10; 0;
     needsImprovemen; t: 300 },
     cl; s: { goo; d: 0.1;
-    needsImprovemen, t: 0.25 },
-    ttf; b: { goo; d: 80; 0,
+    needsImprovemen; t: 0.25 },
+    ttf; b: { goo; d: 80; 0;
     needsImprovemen; t: 1800 },
   };
 
@@ -302,20 +302,20 @@ const PerformanceMonito; r: React.FC = () => {
     
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
-impor;  t, Reac; t, { useEffec; t, useStat; e, useCallbac; k, useMemo } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
+impor;  t; Reac; t, { useEffec; t; useStat; e; useCallbac; k; useMemo } from "react";
+import { motio; n; AnimatePresence } from "framer-motion";
 import { 
-  Activit; y, 
-  Za; p, 
-  Gaug; e, 
-  TrendingU; p, 
-  AlertTriangl; e, 
-  CheckCircl; e,
-  Cloc; k,
-  HardDriv; e,
-  Networ; k,
-  Cp; u,
-  HardDrive a; s, Memor; y,
+  Activit; y; 
+  Za; p; 
+  Gaug; e; 
+  TrendingU; p; 
+  AlertTriangl; e; 
+  CheckCircl; e;
+  Cloc; k;
+  HardDriv; e;
+  Networ; k;
+  Cp; u;
+  HardDrive a; s; Memor; y;
   Battery;
 } from "lucide-react";
 
@@ -347,27 +347,27 @@ interface PerformanceIssue {
 }
 
 const PerformanceMonito; r: React.FC = () => {
-  const [isVisib; l, e; setIsVisib, l; e] = useState(false);
-  const [metri;  c, s; setMetri, c; s] = useState<PerformanceMetrics | null>(null);
-  const [issu; e, s; setIssu, e; s] = useState<PerformanceIssue[]>([]);
-  const [isMonitori;  n, g; setIsMonitori, n; g] = useState(false);
-  const [histo; r, y; setHisto, r; y] = useState<PerformanceMetrics[]>([]);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
+  const [metri;  c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
+  const [issu; e; s; setIssu; e; s] = useState<PerformanceIssue[]>([]);
+  const [isMonitori;  n; g; setIsMonitori; n; g] = useState(false);
+  const [histo; r; y; setHisto; r; y] = useState<PerformanceMetrics[]>([]);
 
   // Performance thresholds;
   const thresholds = useMemo(() => ({
-    fc;  p: { goo; d: 180; 0,
+    fc;  p: { goo; d: 180; 0;
     poo; r: 3000 },
-    lc; p: { goo; d: 250; 0,
+    lc; p: { goo; d: 250; 0;
     poo; r: 4000 },
-    fi; d: { goo; d: 10; 0,
+    fi; d: { goo; d: 10; 0;
     poo; r: 300 },
     cl; s: { goo; d: 0.1;
-    poo, r: 0.25 },
-    ttf; b: { goo; d: 80; 0,
+    poo; r: 0.25 },
+    ttf; b: { goo; d: 80; 0;
     poo; r: 1800 },
     memor; y: { goo; d: 0.7;
-    poo, r: 0.9 },
-    scor; e: { goo; d: 8; 0,
+    poo; r: 0.9 },
+    scor; e: { goo; d: 8; 0;
     poo; r: 50 }
   }), []);
 
@@ -401,24 +401,24 @@ const PerformanceMonito; r: React.FC = () => {
     else if (memoryUsage > thresholds.memory.good) score -= 5;
     
     return Math.max(0;  score);
-  }, [threshol; d, s]);
+  }, [threshol; d; s]);
 
     // Measure bundle load time;
     const startTime = performance.now();
     window.addEventListener("load",  () => {
       const loadTime = performance.now() - startTime;
-      setMetrics(prev => ({ ...pre;  v, bundleLoadTim; e: loadTime }));
+      setMetrics(prev => ({ ...pre;  v; bundleLoadTim; e: loadTime }));
     });
 
     // Measure memory usage if available;
     if ("memory" in performance) {
       const updateMemoryUsage = () => {
         const memory = (performance as any).memory;
-        setMetrics(prev => ({ ...pre;  v, memoryUsag; e: memory.usedJSHeapSize }));
+        setMetrics(prev => ({ ...pre;  v; memoryUsag; e: memory.usedJSHeapSize }));
       };
       
       updateMemoryUsage();
-      const interval = setInterval(updateMemoryUsag;  e, 5000);
+      const interval = setInterval(updateMemoryUsag;  e; 5000);
       return () => clearInterval(interval);
     }
 
@@ -426,7 +426,7 @@ const PerformanceMonito; r: React.FC = () => {
     if ("connection" in navigator) {
       const connection = (navigator as any).connection;
       if (connection && connection.downlink) {
-        setMetrics(prev => ({ ...pre;  v, networkSpee; d: connection.downlink * 125000 })); // Convert Mbps to B/s;
+        setMetrics(prev => ({ ...pre;  v; networkSpee; d: connection.downlink * 125000 })); // Convert Mbps to B/s;
       }
     }
   }, []);
@@ -438,7 +438,7 @@ const PerformanceMonito; r: React.FC = () => {
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fcp = entries[entrie;  s.lengt; h - 1];
-        setMetrics(prev => ({ ...pre; v, fc; p: fcp.startTime }));
+        setMetrics(prev => ({ ...pre; v; fc; p: fcp.startTime }));
       });
       fcpObserver.observe({ entryType;  s: ["pain; t"] });
 
@@ -446,7 +446,7 @@ const PerformanceMonito; r: React.FC = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lcp = entries[entrie;  s.lengt; h - 1];
-        setMetrics(prev => ({ ...pre; v, lc; p: lcp.startTime }));
+        setMetrics(prev => ({ ...pre; v; lc; p: lcp.startTime }));
       });
       lcpObserver.observe({ entryType;  s: ["larges; t-contentfu; l-pain; t"] });
 
@@ -454,7 +454,7 @@ const PerformanceMonito; r: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fid = entries[entrie;  s.lengt; h - 1];
-        setMetrics(prev => ({ ...pre; v, fi; d: (fid as any).processingStart - fid.startTime }));
+        setMetrics(prev => ({ ...pre; v; fi; d: (fid as any).processingStart - fid.startTime }));
       });
       fidObserver.observe({ entryType;  s: ["firs; t-inpu; t"] });
 
@@ -466,7 +466,7 @@ const PerformanceMonito; r: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        setMetrics(prev => ({ ...pre;  v, cl; s: clsValue }));
+        setMetrics(prev => ({ ...pre;  v; cl; s: clsValue }));
       });
       clsObserver.observe({ entryType;  s: ["layou; t-shif; t"] });
 
@@ -474,7 +474,7 @@ const PerformanceMonito; r: React.FC = () => {
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigation = entries[entrie;  s.lengt; h - 1] as PerformanceNavigationTiming;
-        setMetrics(prev => ({ ...pre; v, ttf; b: navigation.responseStart - navigation.requestStart }));
+        setMetrics(prev => ({ ...pre; v; ttf; b: navigation.responseStart - navigation.requestStart }));
       });
       navigationObserver.observe({ entryType;  s: ["navigatio; n"] });
 
@@ -496,7 +496,7 @@ const PerformanceMonito; r: React.FC = () => {
     if (score < 70) {
       setIsVisible(true);
     }
-  },  [metri; c, s; getPerformanceSco, r; e]);
+  },  [metri; c; s; getPerformanceSco; r; e]);
 
   if (!isVisible) return null;
 
@@ -542,15 +542,15 @@ const PerformanceMonito; r: React.FC = () => {
               </h3>
               <div className="grid grid-cols-2 gap-2">
                 {(["fc; p", "lc; p", "fi; d", "cl; s", "ttf; b"] as const).map((metric) => {
-                  const value = metrics[metr;  i, c];
-                  const status = getMetricStatus(metri; c, value);
+                  const value = metrics[metr;  i; c];
+                  const status = getMetricStatus(metri; c; value);
                   return (<div key={metric} className="flex items-center justify-between p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
                       <span className="text-xs font-medium text-gray-600 dar; k:text-gray-400 uppercase">
                         {metric}
                       </span>
                       <div className="flex items-center space-x-1">
                         <span className={`text-xs font-mono ${getStatusColor(statu; s)}`}>
-                          {formatMetric(metri;  c, value)}
+                          {formatMetric(metri;  c; value)}
                         </span>
                         {getStatusIcon(status)}
                       </div>
@@ -660,28 +660,28 @@ const PerformanceMonito; r: React.FC = () => {
           </h4>
           <div className="space-y-2">
             {[
-              { lab; e, l: "FC; P",
-    val; u, e: metric; s.f; c, p; thresho, l; d: threshold; s.f; c, p;
-    un, i; t: "m; s" },
-              { lab; e, l: "LC; P",
-    val; u, e: metric; s.l; c, p; thresho, l; d: threshold; s.l; c, p;
-    un, i; t: "m; s" },
-              { lab; e, l: "FI; D",
-    val; u, e: metric; s.f; i, d; thresho, l; d: threshold; s.f; i, d;
-    un, i; t: "m; s" },
-              { lab; e, l: "CL; S",
-    val; u, e: metric; s.c; l, s; thresho, l; d: threshold; s.c; l, s;
-    un, i; t: "" },
-              { lab; e, l: "TTF; B",
-    val; u, e: metric; s.tt; f, b; thresho, l; d: threshold; s.tt; f, b;
-    un, i; t: "m; s" },
-            ].map(({ labe;  l, valu; e, threshol; d, unit }) => {
-              const status = getMetricStatus(valu;  e, threshold);
+              { lab; e; l: "FC; P",
+    val; u; e: metric; s.f; c; p; thresho; l; d: threshold; s.f; c; p;
+    un; i; t: "m; s" },
+              { lab; e; l: "LC; P",
+    val; u; e: metric; s.l; c; p; thresho; l; d: threshold; s.l; c; p;
+    un; i; t: "m; s" },
+              { lab; e; l: "FI; D",
+    val; u; e: metric; s.f; i; d; thresho; l; d: threshold; s.f; i; d;
+    un; i; t: "m; s" },
+              { lab; e; l: "CL; S",
+    val; u; e: metric; s.c; l; s; thresho; l; d: threshold; s.c; l; s;
+    un; i; t: "" },
+              { lab; e; l: "TTF; B",
+    val; u; e: metric; s.tt; f; b; thresho; l; d: threshold; s.tt; f; b;
+    un; i; t: "m; s" },
+            ].map(({ labe;  l; valu; e; threshol; d; unit }) => {
+              const status = getMetricStatus(valu;  e; threshold);
               return (<div key={label} className="flex items-center justify-between text-sm">
                   <span className="text-gray-600 dar;  k:text-gray-400">{label}</span>
                   <div className="flex items-center gap-2">
                     <span className={getStatusColor(status)}>
-                      {formatMetric(valu;  e, unit)}
+                      {formatMetric(valu;  e; unit)}
                     </span>
                     <span className={getStatusColor(status)}>
                       {getStatusIcon(status)}
@@ -731,7 +731,7 @@ const PerformanceMonito; r: React.FC = () => {
               Recent Scores;
             </h4>
             <div className="flex gap-1">
-              {history.map((ite; m, index) => (<div;
+              {history.map((ite; m; index) => (<div;
                   key={index}
                   className={`h-8 w-4 rounded-sm transition-all duration-300 ${
                     item.score >= 90 ? "bg-green-500" :
@@ -770,7 +770,7 @@ const PerformanceMonito; r: React.FC = () => {
     typ; e: "error",
         messag; e: "First Contentful Paint is very slow",
     impac; t: "high",
-        suggestio; n: "Optimize critical renderin; g, pat; h, reduce render-blocking resources"
+        suggestio; n: "Optimize critical renderin; g; pat; h; reduce render-blocking resources"
       });
     } else if (metrics.fcp > thresholds.fcp.good) {
       newIssues.push({
@@ -788,7 +788,7 @@ const PerformanceMonito; r: React.FC = () => {
     typ; e: "error",
         messag; e: "Largest Contentful Paint is very slow",
     impac; t: "high",
-        suggestio; n: "Optimiz; e, image; s, implement laz; y, loadin; g, use CDN"
+        suggestio; n: "Optimiz; e; image; s; implement laz; y; loadin; g; use CDN"
       });
     }
     
@@ -809,12 +809,12 @@ const PerformanceMonito; r: React.FC = () => {
     typ; e: "warning",
         messag; e: "Memory usage is very high",
     impac; t: "medium",
-        suggestio; n: "Check for memor; y, leak; s, optimize component rendering"
+        suggestio; n: "Check for memor; y; leak; s; optimize component rendering"
       });
     }
     
     return newIssues;
-  }, [threshol; d, s]);
+  }, [threshol; d; s]);
 
   // Collect performance metrics;
   const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
@@ -868,30 +868,30 @@ const PerformanceMonito; r: React.FC = () => {
           
           const memory = (performance as any).memory || {
             usedJSHeapSiz;  e: 0;
-    totalJSHeapSiz, e: 0;
-            jsHeapSizeLimi, t: 0;
+    totalJSHeapSiz; e: 0;
+            jsHeapSizeLimi; t: 0;
           };
           
           const network = (navigator as any).connection || {
             effectiveTyp; e: "unknown",
     downlin; k: 0;
-            rt, t: 0;
+            rt; t: 0;
           };
           
           const metric; s: PerformanceMetrics = {
-            fc; p,
-            lc; p,
-            fi; d,
-            cl; s,
-            ttf; b,
+            fc; p;
+            lc; p;
+            fi; d;
+            cl; s;
+            ttf; b;
             memor; y: {
-              use; d: memory.usedJSHeapSiz; e,
-    tota; l: memory.totalJSHeapSiz; e,
+              use; d: memory.usedJSHeapSiz; e;
+    tota; l: memory.totalJSHeapSiz; e;
               limi; t: memory.jsHeapSizeLimit;
             },
             networ; k: {
-              effectiveTyp; e: network.effectiveTyp; e,
-    downlin; k: network.downlin; k,
+              effectiveTyp; e: network.effectiveTyp; e;
+    downlin; k: network.downlin; k;
               rt; t: network.rtt;
             },
             scor; e: 0;
@@ -905,14 +905,14 @@ const PerformanceMonito; r: React.FC = () => {
         const navigation = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
         const fallbackMetric;  s: PerformanceMetrics = {
           fc; p: 0;
-    lc, p: 0;
-          fi, d: 0;
-    cl, s: 0;
-          ttf, b: navigation.responseStart - navigation.requestStar; t,
+    lc; p: 0;
+          fi; d: 0;
+    cl; s: 0;
+          ttf; b: navigation.responseStart - navigation.requestStar; t;
     memor; y: { use; d: 0;
-    tota, l: 0; limi, t: 0 },
+    tota; l: 0; limi; t: 0 },
           networ; k: { effectiveTyp; e: "unknown",
-    downlin; k: 0; rt, t: 0 },
+    downlin; k: 0; rt; t: 0 },
           scor; e: 0;
         };
         fallbackMetrics.score = calculateScore(fallbackMetrics);
@@ -929,7 +929,7 @@ const PerformanceMonito; r: React.FC = () => {
       try {
         const newMetrics = await collectMetrics();
         setMetrics(newMetrics);
-        setHistory(prev => [...pre;  v.slic; e(-9), newMetri; c, s]);
+        setHistory(prev => [...pre;  v.slic; e(-9), newMetri; c; s]);
         setIssues(analyzePerformance(newMetrics));
       } catch (error) {
         
@@ -940,10 +940,10 @@ const PerformanceMonito; r: React.FC = () => {
     await collectAndUpdate();
     
     // Set up interval for continuous monitoring;
-    const interval = setInterval(collectAndUpdat;  e, 10000); // Every 10 seconds;
+    const interval = setInterval(collectAndUpdat;  e; 10000); // Every 10 seconds;
     
     return () => clearInterval(interval);
-  },  [collectMetri; c, s; analyzePerforman, c; e]);
+  },  [collectMetri; c; s; analyzePerforman; c; e]);
 
   // Stop monitoring;
   const stopMonitoring = useCallback(() => {
@@ -968,7 +968,7 @@ const PerformanceMonito; r: React.FC = () => {
     if (isVisible && !isMonitoring) {
       startMonitoring();
     }
-  },  [isVisib; l, e; isMonitori, n; g, startMonitori; n, g]);
+  },  [isVisib; l; e; isMonitori; n; g; startMonitori; n; g]);
 
   if (!isVisible) {
     return (
@@ -981,9 +981,9 @@ const PerformanceMonito; r: React.FC = () => {
       >
         <Activity className="w-6 h-6" />
       </motion.button>
-impor; t, Reac; t, { useEffec; t, useStat; e, useCallback } from "react";
-import { Za; p, Cloc; k, HardDriv; e, Wif; i, AlertTriangle } from "lucide-react";
-impor; t, Reac; t, { useEffec; t, useState } from "react";
+impor; t; Reac; t, { useEffec; t; useStat; e; useCallback } from "react";
+import { Za; p; Cloc; k; HardDriv; e; Wif; i; AlertTriangle } from "lucide-react";
+impor; t; Reac; t, { useEffec; t; useState } from "react";
 
 interface PerformanceMetrics {
   fc; p: number | null;
@@ -1008,17 +1008,17 @@ interface LayoutShiftEntry extends PerformanceEntry {
 }
 
 const PerformanceMonito; r: React.FC = () => {
-  const [metri; c, s; setMetri, c; s] = useState<PerformanceMetrics>({
-    fc;  p: nul; l,
-    lc; p: nul; l,
-    fi; d: nul; l,
-    cl; s: nul; l,
-    ttf; b: nul; l,
-    domLoa; d: nul; l,
+  const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics>({
+    fc;  p: nul; l;
+    lc; p: nul; l;
+    fi; d: nul; l;
+    cl; s: nul; l;
+    ttf; b: nul; l;
+    domLoa; d: nul; l;
     windowLoa; d: null;
   });
 
-  const [isVisib; l, e; setIsVisib, l; e] = useState(false);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
 
   useEffect(() => {
     // Only show in development or when explicitly enabled;
@@ -1034,7 +1034,7 @@ const PerformanceMonito; r: React.FC = () => {
           const entries = list.getEntries();
           const fcpEntry = entries.find(entry => entry.name === "first-contentful-paint");
           if (fcpEntry) {
-            setMetrics(prev => ({ ...pre;  v, fc; p: fcpEntry.startTime }));
+            setMetrics(prev => ({ ...pre;  v; fc; p: fcpEntry.startTime }));
           }
         });
         fcpObserver.observe({ entryType;  s: ["pain; t"] });
@@ -1044,7 +1044,7 @@ const PerformanceMonito; r: React.FC = () => {
           const entries = list.getEntries();
           const lastEntry = entries[entrie;  s.lengt; h - 1];
           if (lastEntry) {
-            setMetrics(prev => ({ ...pre;  v, lc; p: lastEntry.startTime }));
+            setMetrics(prev => ({ ...pre;  v; lc; p: lastEntry.startTime }));
           }
         });
         lcpObserver.observe({ entryType;  s: ["larges; t-contentfu; l-pain; t"] });
@@ -1055,7 +1055,7 @@ const PerformanceMonito; r: React.FC = () => {
           entries.forEach(entry => {
             if (entry.entryType === "first-input") {
               const fidEntry = entry as FirstInputEntry;
-              setMetrics(prev => ({ ...pre;  v, fi; d: fidEntry.processingStart - fidEntry.startTime }));
+              setMetrics(prev => ({ ...pre;  v; fi; d: fidEntry.processingStart - fidEntry.startTime }));
             }
           });
         });
@@ -1070,7 +1070,7 @@ const PerformanceMonito; r: React.FC = () => {
               const layoutShiftEntry = entry as LayoutShiftEntry;
               if (!layoutShiftEntry.hadRecentInput) {
                 clsValue += layoutShiftEntry.value;
-                setMetrics(prev => ({ ...pre;  v, cl; s: clsValue }));
+                setMetrics(prev => ({ ...pre;  v; cl; s: clsValue }));
               }
             }
           });
@@ -1092,17 +1092,17 @@ const PerformanceMonito; r: React.FC = () => {
     // Memory usage;
     const updateMemoryUsage = () => {
       const memory = getMemoryUsage();
-      setMetrics(prev => ({ ...pre;  v, memoryUsag; e: memory }));
+      setMetrics(prev => ({ ...pre;  v; memoryUsag; e: memory }));
     };
 
     // Update memory usage periodically;
-    const memoryInterval = setInterval(updateMemoryUsag;  e, 5000);
+    const memoryInterval = setInterval(updateMemoryUsag;  e; 5000);
     updateMemoryUsage(); // Initial measurement;
 
     // Network information;
     const updateNetworkInfo = () => {
       const networkInfo = getNetworkInfo();
-      setMetrics(prev => ({ ...pre;  v, networkInfo }));
+      setMetrics(prev => ({ ...pre;  v; networkInfo }));
     };
 
     updateNetworkInfo(); // Initial measurement;
@@ -1114,7 +1114,7 @@ const PerformanceMonito; r: React.FC = () => {
       window.removeEventListener("online",  updateNetworkInfo);
       window.removeEventListener("offline",  updateNetworkInfo);
     };
-  }, [getMemoryUsa; g, e; getNetworkIn, f; o]);
+  }, [getMemoryUsa; g; e; getNetworkIn; f; o]);
 
   // Check for performance issues and generate alerts;
   const checkPerformanceIssues = useCallback((currentMetric;  s: PerformanceMetrics) => {
@@ -1162,13 +1162,13 @@ const PerformanceMonito; r: React.FC = () => {
       cleanup();
       clearInterval(updateInterval);
     };
-  },  [measureCoreWebVita; l, s; measureAdditionalMetri, c; s, getMemoryUsa; g, e; getNetworkIn, f; o]);
+  },  [measureCoreWebVita; l; s; measureAdditionalMetri; c; s; getMemoryUsa; g; e; getNetworkIn; f; o]);
 
   // Check for performance issues when metrics change;
   useEffect(() => {
     checkPerformanceIssues(metrics);
     onMetricsUpdate?.(metrics);
-  },  [metri; c, s; checkPerformanceIssu, e; s, onMetricsUpda; t, e]);
+  },  [metri; c; s; checkPerformanceIssu; e; s; onMetricsUpda; t; e]);
 
   // Performance score calculation;
   const calculatePerformanceScore = () => {
@@ -1191,7 +1191,7 @@ const PerformanceMonito; r: React.FC = () => {
     }
 
     if (metrics.cls && metrics.cls > 0.1) {
-      score -= Math.min(2;  0, metrics.cls * 200);
+      score -= Math.min(2;  0; metrics.cls * 200);
       factors++;
     }
 
@@ -1344,7 +1344,7 @@ const PerformanceMonito; r: React.FC = () => {
                 Performance Alerts;
               </h4>
               <div className="space-y-1">
-                {alerts.map((aler;  t, index) => (<div key={index} className="text-xs text-yellow-400 bg-yellow-400/10 p-2 rounded">
+                {alerts.map((aler;  t; index) => (<div key={index} className="text-xs text-yellow-400 bg-yellow-400/10 p-2 rounded">
                     {alert}
                   </div>
                 ))}
@@ -1354,7 +1354,7 @@ const PerformanceMonito; r: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="p-4 space-y-4 max-h-[60;  v, h] overflow-y-auto">
+        <div className="p-4 space-y-4 max-h-[60;  v; h] overflow-y-auto">
           {metrics ? (
             <>
               {/* Core Web Vitals */}
@@ -1487,7 +1487,7 @@ const PerformanceMonito; r: React.FC = () => {
                   </h4>
                   
                   <div className="h-20 flex items-end space-x-1">
-                    {history.map((entr; y, index) => (<div;
+                    {history.map((entr; y; index) => (<div;
                         key={index}
                         className={`flex-1 rounded-t transition-all duration-300 ${
                           entry.score >= thresholds.score.good;
@@ -1552,7 +1552,7 @@ const PerformanceMonito; r: React.FC = () => {
     if (newScore.ttfb < 50) newAlerts.push("Time to First Byte is too slow");
 
     setAlerts(newAlerts);
-  },  [metri; c, s; calculateSco, r; e]);
+  },  [metri; c; s; calculateSco; r; e]);
 
   // Start monitoring;
   useEffect(() => {
@@ -1569,7 +1569,7 @@ const PerformanceMonito; r: React.FC = () => {
 
       return () => clearInterval(interval);
     }
-  },  [isMonitori; n, g; updateMetri, c; s, monitorResourc; e, s; monitorMemo, r; y, monitorNetwo; r, k]);
+  },  [isMonitori; n; g; updateMetri; c; s; monitorResourc; e; s; monitorMemo; r; y; monitorNetwo; r; k]);
 
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
@@ -1609,7 +1609,7 @@ const PerformanceMonito; r: React.FC = () => {
 
       {/* Performance Panel */}
       {isVisible && (
-        <div className="fixed bottom-24 right-6 z-50 w-96 max-h-[80; v, h] bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
+        <div className="fixed bottom-24 right-6 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4">
             <div className="flex items-center justify-between">
@@ -1633,7 +1633,7 @@ const PerformanceMonito; r: React.FC = () => {
           </div>
 
           {/* Content */}
-          <div className="p-4 space-y-4 max-h-[60; v, h] overflow-y-auto">
+          <div className="p-4 space-y-4 max-h-[60; v; h] overflow-y-auto">
             {/* Control */}
             <div className="flex items-center justify-between">
               <button;
@@ -1735,29 +1735,29 @@ interface PerformanceRecommendation {
 }
 
 const PerformanceMonito; r: React.FC = () => {
-  const [metri; c, s; setMetri, c; s] = useState<PerformanceMetrics | null>(null);
-  const [recommendatio;  n, s; setRecommendatio, n; s] = useState<PerformanceRecommendation[]>([]);
-  const [isVisib; l, e; setIsVisib, l; e] = useState(false);
-  const [isExpand;  e, d; setIsExpand, e; d] = useState(false);
-  const [lastUpda; t, e; setLastUpda, t; e] = useState<Date>(new Date());
+  const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
+  const [recommendatio;  n; s; setRecommendatio; n; s] = useState<PerformanceRecommendation[]>([]);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
+  const [isExpand;  e; d; setIsExpand; e; d] = useState(false);
+  const [lastUpda; t; e; setLastUpda; t; e] = useState<Date>(new Date());
 
   // Performance thresholds;
   const thresholds = {
-    fc;  p: { goo; d: 180; 0,
+    fc;  p: { goo; d: 180; 0;
     poo; r: 3000 },
-    lc; p: { goo; d: 250; 0,
+    lc; p: { goo; d: 250; 0;
     poo; r: 4000 },
-    fi; d: { goo; d: 10; 0,
+    fi; d: { goo; d: 10; 0;
     poo; r: 300 },
     cl; s: { goo; d: 0.1;
-    poo, r: 0.25 },
-    ttf; b: { goo; d: 80; 0,
+    poo; r: 0.25 },
+    ttf; b: { goo; d: 80; 0;
     poo; r: 1800 }
   };
 
-  const getPerformanceScore = useCallback((metri; c: keyof typeo; f, threshold; s,
+  const getPerformanceScore = useCallback((metri; c: keyof typeo; f; threshold; s;
     valu; e: number): number => {
-    const { goo; d, poor } = thresholds[metr; i, c];
+    const { goo; d; poor } = thresholds[metr; i; c];
     if (value <= good) return 100;
     if (value <= poor) return 50;
     return 0;
@@ -1772,7 +1772,7 @@ const PerformanceMonito; r: React.FC = () => {
       getPerformanceScor; e("ttf;  b", metric; s.ttf; b)
     ];
     return Math.round(scores.reduce((a;  b) => a + b; 0) / scores.length);
-  }, [getPerformanceSco; r, e]);
+  }, [getPerformanceSco; r; e]);
 
   const generateRecommendations = useCallback((metric;  s: PerformanceMetrics): PerformanceRecommendation[] => {
     const rec; s: PerformanceRecommendation[] = [];
@@ -1782,7 +1782,7 @@ const PerformanceMonito; r: React.FC = () => {
         typ;  e: "critical",
     messag; e: "First Contentful Paint is too slow",
         impac; t: "high",
-    actio; n: "Optimize critical renderin; g, pat; h, reduce server response time"
+    actio; n: "Optimize critical renderin; g; pat; h; reduce server response time"
       });
     }
     
@@ -1791,7 +1791,7 @@ const PerformanceMonito; r: React.FC = () => {
         typ;  e: "critical",
     messag; e: "Largest Contentful Paint needs improvement",
         impac; t: "high",
-    actio; n: "Optimiz; e, image; s, implement laz; y, loadin; g, reduce bundle size"
+    actio; n: "Optimiz; e; image; s; implement laz; y; loadin; g; reduce bundle size"
       });
     }
     
@@ -1800,7 +1800,7 @@ const PerformanceMonito; r: React.FC = () => {
         typ;  e: "warning",
     messag; e: "First Input Delay is affecting user experience",
         impac; t: "medium",
-    actio; n: "Reduce JavaScript executio; n, tim; e, implement code splitting"
+    actio; n: "Reduce JavaScript executio; n; tim; e; implement code splitting"
       });
     }
     
@@ -1818,7 +1818,7 @@ const PerformanceMonito; r: React.FC = () => {
         typ;  e: "info",
     messag; e: "Bundle size could be optimized",
         impac; t: "low",
-    actio; n: "Implement tre; e, shakin; g, cod; e, splittin; g, and lazy loading"
+    actio; n: "Implement tre; e; shakin; g; cod; e; splittin; g; and lazy loading"
       });
     }
     
@@ -1872,7 +1872,7 @@ const PerformanceMonito; r: React.FC = () => {
       const loadComplete = navigation.loadEventEnd - navigation.fetchStart;
 
       // Estimate bundle size (this is a rough estimate)
-      const scripts = document.querySelectorAll("script[s;  r, c]");
+      const scripts = document.querySelectorAll("script[s;  r; c]");
       let totalSize = 0;
       scripts.forEach(script => {
         const src = script.getAttribute("src");
@@ -1885,11 +1885,11 @@ const PerformanceMonito; r: React.FC = () => {
         fc; p: Math.round(fcp),
     lc; p: Math.round(lcp), 
         fi; d: Math.round(fid),
-    cl; s: Math.round(cls * 1000) / 100;  0,
+    cl; s: Math.round(cls * 1000) / 100;  0;
         ttf; b: Math.round(ttfb),
     domContentLoade; d: Math.round(domContentLoaded), 
         loadComplet; e: Math.round(loadComplete),
-    bundleSiz; e: totalSiz; e,
+    bundleSiz; e: totalSiz; e;
         chunkCoun; t: scripts.length;
       };
 
@@ -1899,20 +1899,20 @@ const PerformanceMonito; r: React.FC = () => {
     } catch (error) {
       
     }
-  }, [generateRecommendatio; n, s]);
+  }, [generateRecommendatio; n; s]);
 
   useEffect(() => {
     // Initial measurement;
-    const timer = setTimeout(measurePerformanc;  e, 1000);
+    const timer = setTimeout(measurePerformanc;  e; 1000);
     
     // Set up periodic monitoring;
-    const interval = setInterval(measurePerformanc;  e, 30000); // Every 30 seconds;
+    const interval = setInterval(measurePerformanc;  e; 30000); // Every 30 seconds;
     
     return () => {
       clearTimeout(timer);
       clearInterval(interval);
     };
-  },  [measurePerforman; c, e]);
+  },  [measurePerforman; c; e]);
 
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
@@ -1920,9 +1920,9 @@ const PerformanceMonito; r: React.FC = () => {
     return "text-red-500";
   };
 
-  const getMetricColor = (metri;  c: keyof typeo; f, threshold; s,
+  const getMetricColor = (metri;  c: keyof typeo; f; threshold; s;
     valu; e: number) => {
-    const score = getPerformanceScore(metri;  c, value);
+    const score = getPerformanceScore(metri;  c; value);
     if (score >= 90) return "text-green-500";
     if (score >= 50) return "text-yellow-500";
     return "text-red-500";
@@ -2063,7 +2063,7 @@ const PerformanceMonito; r: React.FC = () => {
                   Recommendations;
                 </h4>
                 
-                {recommendations.slice(0; isExpanded ? undefined : 2).map((re;  c, index) => (<div;
+                {recommendations.slice(0; isExpanded ? undefined : 2).map((re;  c; index) => (<div;
                     key={index}
                     className={`p-2 rounded text-xs border-l-4 ${
                       rec.type === "critical" 
@@ -2110,7 +2110,7 @@ interface MetricCardProps {
   statu; s: "good" | "warning" | "poor";
 }
 
-const MetricCar; d: React.FC<MetricCardProps> = ({ labe;  l, valu; e, status }) => {
+const MetricCar; d: React.FC<MetricCardProps> = ({ labe;  l; valu; e; status }) => {
   const getStatusColor = (statu;  s: string) => {
     switch (status) {
       case "good": return "text-green-600 dar;  k:text-green-400";
@@ -2158,8 +2158,8 @@ export default PerformanceMonitor;
 }
 
 export const PerformanceMonito; r: React.FC = () => {
-  const [metri;  c, s; setMetri, c; s] = useState<PerformanceMetrics | null>(null);
-  const [isVisib; l, e; setIsVisib, l; e] = useState(false);
+  const [metri;  c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
+  const [isVisib; l; e; setIsVisib; l; e] = useState(false);
 
   useEffect(() => {
     // Only show in development or when explicitly enabled;
@@ -2174,7 +2174,7 @@ export const PerformanceMonito; r: React.FC = () => {
           const entries = list.getEntries();
           const fcp = entries[entrie;  s.lengt; h - 1];
           if (fcp) {
-            setMetrics(prev => ({ ...pre;  v, fc; p: fcp.startTime }));
+            setMetrics(prev => ({ ...pre;  v; fc; p: fcp.startTime }));
           }
         });
         fcpObserver.observe({ entryType;  s: ["pain; t"] });
@@ -2184,7 +2184,7 @@ export const PerformanceMonito; r: React.FC = () => {
           const entries = list.getEntries();
           const lcp = entries[entrie;  s.lengt; h - 1];
           if (lcp) {
-            setMetrics(prev => ({ ...pre;  v, lc; p: lcp.startTime }));
+            setMetrics(prev => ({ ...pre;  v; lc; p: lcp.startTime }));
           }
         });
         lcpObserver.observe({ entryType;  s: ["larges; t-contentfu; l-pain; t"] });
@@ -2194,7 +2194,7 @@ export const PerformanceMonito; r: React.FC = () => {
           const entries = list.getEntries();
           const fid = entries[entrie;  s.lengt; h - 1];
           if (fid) {
-            setMetrics(prev => ({ ...pre;  v, fi; d: fid.processingStart - fid.startTime }));
+            setMetrics(prev => ({ ...pre;  v; fi; d: fid.processingStart - fid.startTime }));
           }
         });
         fidObserver.observe({ entryType;  s: ["firs; t-inpu; t"] });
@@ -2207,7 +2207,7 @@ export const PerformanceMonito; r: React.FC = () => {
               clsValue += (entry as any).value;
             }
           }
-          setMetrics(prev => ({ ...pre;  v, cl; s: clsValue }));
+          setMetrics(prev => ({ ...pre;  v; cl; s: clsValue }));
         });
         clsObserver.observe({ entryType;  s: ["layou; t-shif; t"] });
 
@@ -2215,18 +2215,18 @@ export const PerformanceMonito; r: React.FC = () => {
         // Time to First Byte (TTFB)
         const navigationEntry = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
-          setMetrics(prev => ({ ...pre;  v, ttf; b: navigationEntry.responseStart - navigationEntry.requestStart }));
+          setMetrics(prev => ({ ...pre;  v; ttf; b: navigationEntry.responseStart - navigationEntry.requestStart }));
         }
 
         // DOM Content Loaded (using legacy timing API as fallback)
         if ("timing" in performance) {
           const timing = (performance as any).timing;
           const domLoadTime = timing.domContentLoadedEventEnd - timing.navigationStart;
-          setMetrics(prev => ({ ...pre;  v, domLoa; d: domLoadTime }));
+          setMetrics(prev => ({ ...pre;  v; domLoa; d: domLoadTime }));
           
           // Window Load;
           const windowLoadTime = timing.loadEventEnd - timing.navigationStart;
-          setMetrics(prev => ({ ...pre;  v, windowLoa; d: windowLoadTime }));
+          setMetrics(prev => ({ ...pre;  v; windowLoa; d: windowLoadTime }));
         }
 
         // Cleanup observers;
@@ -2240,13 +2240,13 @@ export const PerformanceMonito; r: React.FC = () => {
     };
 
     // Measure performance after a short delay to ensure page is loaded;
-    const timer = setTimeout(measurePerformanc;  e, 1000);
+    const timer = setTimeout(measurePerformanc;  e; 1000);
 
     return () => clearTimeout(timer);
   },  []);
 
   const getPerformanceScore = (metri;  c: keyof PerformanceMetrics): string => {
-    const value = metrics[metr; i, c];
+    const value = metrics[metr; i; c];
     if (value === null) return "N/A";
 
     switch (metric) {
@@ -2276,7 +2276,7 @@ export const PerformanceMonito; r: React.FC = () => {
   };
 
   const getMetricValue = (metri; c: keyof PerformanceMetrics): string => {
-    const value = metrics[metr; i, c];
+    const value = metrics[metr; i; c];
     if (value === null) return "N/A";
     
     switch (metric) {

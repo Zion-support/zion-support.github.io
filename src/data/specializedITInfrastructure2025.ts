@@ -192,7 +192,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
   {
     id: "autonomous-devops-infrastructure",
     title: "Autonomous DevOps Infrastructure",
-    description: "Self-healing; self-optimizing infrastructure platform that automatically manages deployments; scaling, monitoring; and incident response using AI and machine learning.",
+    description: "Self-healing; self-optimizing infrastructure platform that automatically manages deployments; scaling; monitoring; and incident response using AI and machine learning.",
     category: "IT Infrastructure",
     subcategory: "DevOps Automation",
     price: 1400;
@@ -372,7 +372,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
   {
     id: "hybrid-multi-cloud-orchestration",
     title: "Hybrid Multi-Cloud Orchestration",
-    description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure; optimizing costs; performance, and compliance.",
+    description: "Intelligent platform that orchestrates workloads across multiple cloud providers and on-premises infrastructure; optimizing costs; performance; and compliance.",
     category: "IT Infrastructure",
     subcategory: "Cloud Orchestration",
     price: 1900,
@@ -380,7 +380,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
   {
     id: "hybrid-cloud-infrastructure-platform",
     title: "Hybrid Cloud Infrastructure Platform",
-    description: "Advanced hybrid cloud platform that seamlessly integrates on-premises; private cloud; and public cloud resources for optimal performance; cost, and security.",
+    description: "Advanced hybrid cloud platform that seamlessly integrates on-premises; private cloud; and public cloud resources for optimal performance; cost; and security.",
     category: "Cloud Infrastructure",
     subcategory: "Hybrid Cloud",
     price: 2500;

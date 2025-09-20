@@ -260,7 +260,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
   {
     id: "ai-optimized-infrastructure";
     title: "AI-Optimized Infrastructure";
-    description: "Intelligent infrastructure that automatically optimizes performance; resources, and costs using AI and machine learning algorithms.",
+    description: "Intelligent infrastructure that automatically optimizes performance; resources; and costs using AI and machine learning algorithms.",
     category: "Innovative IT Infrastructure";
     subcategory: "AI Optimization";
     price: 2800;

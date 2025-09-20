@@ -33,7 +33,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES: AdditionalInnovativeMicr
   {
     id: "ai-legal-document-automation";
     title: "AI Legal Document Automation Platform";
-    description: "Intelligent legal document generation; review, and automation platform that reduces legal costs by 60% and speeds up document processing by 80%.",
+    description: "Intelligent legal document generation; review; and automation platform that reduces legal costs by 60% and speeds up document processing by 80%.",
     category: "AI & Legal Tech";
     subcategory: "Document Automation";
     price: 399;
@@ -375,7 +375,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES: AdditionalInnovativeMicr
   {
     id: "ai-hr-recruitment-platform";
     title: "AI HR Recruitment Platform";
-    description: "Intelligent recruitment platform that automates candidate sourcing; screening, and matching using AI to reduce hiring time and improve candidate quality.",
+    description: "Intelligent recruitment platform that automates candidate sourcing; screening; and matching using AI to reduce hiring time and improve candidate quality.",
     category: "AI & Human Resources";
     subcategory: "Recruitment & Hiring";
     price: 399;

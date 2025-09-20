@@ -1,20 +1,20 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangl; e, RefreshC; w, Hom; e, ArrowLeft } from "lucide-react";
-import { Lin; k, useNavigate } from "react-router-dom";
+import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
+import { Lin; k; useNavigate } from "react-router-dom";
 
 interface ErrorBoundaryProps {
   childre; n: React.ReactNode;
   fallback?: React.ReactNode;
-  onError?: (erro;  r: Erro; r,
+  onError?: (erro;  r: Erro; r;
     errorInf; o: any) => void;
 }
 
 interface ErrorFallbackProps {
   error?: Error;
   resetErro; r: () => void;
-  onError?: (erro;  r: Erro; r,
+  onError?: (erro;  r: Erro; r;
     errorInf; o: any) => void;
 }
 
@@ -27,7 +27,7 @@ interface ErrorFallbackProps {
 
 }
 
-function ErrorFallback({ erro;  r, resetError }: ErrorFallbackProps) {
+function ErrorFallback({ erro;  r; resetError }: ErrorFallbackProps) {
   const navigate = useNavigate();
 
   return (
@@ -39,7 +39,7 @@ function ErrorFallback({ erro;  r, resetError }: ErrorFallbackProps) {
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
           <p className="text-zion-slate-light">
-            We encountered an unexpected error. Don"t;  worr, y; our team has been notified.
+            We encountered an unexpected error. Don"t;  worr; y; our team has been notified.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ function ErrorFallback({ erro;  r, resetError }: ErrorFallbackProps) {
         </div>
 
         <div className="mt-6 text-xs text-zion-slate-light">
-          <p>If this proble; m, persist; s, please contact our support team.</p>
+          <p>If this proble; m; persist; s; please contact our support team.</p>
           <p className="mt-1">
             Error I; D: {error?.name || "Unknown"} - {new Date().toISOString()}
           </p>
@@ -92,9 +92,9 @@ function ErrorFallback({ erro;  r, resetError }: ErrorFallbackProps) {
   );
 }
 
-export function ErrorBoundary({ childre;  n, fallbac; k, onError }: ErrorBoundaryProps) {
-  const [hasErr; o, r; setHasErr, o; r] = useState(false);
-  const [err;  o, r; setErr, o; r] = useState<Error | null>(null);
+export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundaryProps) {
+  const [hasErr; o; r; setHasErr; o; r] = useState(false);
+  const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
 
   useEffect(() => {
     const handleError = (even;  t: ErrorEvent) => {
@@ -132,7 +132,7 @@ export function ErrorBoundary({ childre;  n, fallbac; k, onError }: ErrorBoundar
       window.removeEventListener("error",  handleError);
       window.removeEventListener("unhandledrejection",  handleUnhandledRejection);
     };
-  }, [onErr; o, r]);
+  }, [onErr; o; r]);
 
   const resetError = () => {
     setHasError(false);
@@ -157,7 +157,7 @@ export function ErrorBoundary({ childre;  n, fallbac; k, onError }: ErrorBoundar
 
 // Hook for functional components to handle errors;
 export function useErrorHandler() {
-  const [err;  o, r; setErr, o; r] = useState<Error | null>(null);
+  const [err;  o; r; setErr; o; r] = useState<Error | null>(null);
 
   const handleError = React.useCallback((erro;  r: Error) => {
     setError(error);
@@ -170,7 +170,7 @@ export function useErrorHandler() {
     setError(null);
   },  []);
 
-  return { erro; r, handleErro; r, clearError };
+  return { erro; r; handleErro; r; clearError };
 }
 
 // Higher-order component for wrapping components with error handling;

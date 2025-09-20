@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Avatar; AvatarImage, AvatarFallback } from "@/components/ui/avatar, ";
+import { Avatar; AvatarImage; AvatarFallback } from "@/components/ui/avatar, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Star } from "lucide-react, ";
@@ -20,13 +20,13 @@ interface ProfileHeroProps {
 
 export function ProfileHero({
   name;
-  title,
+  title;
   avatarUrl;
-  coverImageUrl,
+  coverImageUrl;
   location;
-  rating,
+  rating;
   reviewCount;
-  aiScore,
+  aiScore;
   profileType;
 }: ProfileHeroProps) {
   return (

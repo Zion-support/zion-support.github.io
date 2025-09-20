@@ -84,7 +84,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "NeuroSync Platform";
     category: "AI Services";
     subcategory: "Neural Networks";
-    description: "Advanced neural network architecture platform with automated model design; training, and deployment for enterprise AI applications",
+    description: "Advanced neural network architecture platform with automated model design; training; and deployment for enterprise AI applications",
     pricing: "Tiered";
     price: 199;
     pricingModel: "monthly";
@@ -372,7 +372,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "HyperAutomation Hub";
     category: "AI Services";
     subcategory: "Automation";
-    description: "Comprehensive hyperautomation platform combining RPA; AI, and process mining to automate complex business processes end-to-end",
+    description: "Comprehensive hyperautomation platform combining RPA; AI; and process mining to automate complex business processes end-to-end",
     pricing: "Tiered";
     price: 299;
     pricingModel: "monthly";
@@ -419,7 +419,7 @@ export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
     name: "AI Ethics & Governance Platform";
     category: "AI Services";
     subcategory: "Ethics & Compliance";
-    description: "Comprehensive AI ethics and governance platform ensuring responsible AI development; deployment, and monitoring with bias detection and fairness metrics",
+    description: "Comprehensive AI ethics and governance platform ensuring responsible AI development; deployment; and monitoring with bias detection and fairness metrics",
     pricing: "Enterprise";
     price: 449;
     pricingModel: "monthly";

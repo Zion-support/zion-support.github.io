@@ -6,7 +6,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Development",
-    description: "Custom AI-powered chatbots for customer service; sales, and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment, and ongoing optimization.",
+    description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment; and ongoing optimization.",
     category: "AI Services",
     subcategory: "Chatbots & Virtual Assistants",
     price: 8999;
@@ -86,7 +86,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "cloud-migration-expert",
     title: "Cloud Migration & Optimization Expert",
-    description: "Complete cloud migration services with cost optimization; security implementation; and performance tuning for AWS; Azure, and Google Cloud.",
+    description: "Complete cloud migration services with cost optimization; security implementation; and performance tuning for AWS; Azure; and Google Cloud.",
     category: "IT Services",
     subcategory: "Cloud Services",
     price: 3500;
@@ -134,7 +134,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "devops-automation",
     title: "DevOps Automation & CI/CD Suite",
-    description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring, and deployment automation.",
+    description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation.",
     category: "IT Services",
     subcategory: "DevOps",
     price: 2800;
@@ -201,7 +201,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "cloud-migration-consulting",
     title: "Cloud Migration & Optimization Consulting",
-    description: "End-to-end cloud migration services for AWS; Azure, and Google Cloud. Includes assessment; planning, migration execution; and cost optimization strategies.",
+    description: "End-to-end cloud migration services for AWS; Azure; and Google Cloud. Includes assessment; planning; migration execution; and cost optimization strategies.",
     category: "IT Services",
     subcategory: "Cloud Solutions",
     price: 5999;
@@ -433,7 +433,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "cybersecurity-audit-compliance",
     title: "Cybersecurity Audit & Compliance",
-    description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR, and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
+    description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR; and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
     category: "IT Services",
     subcategory: "Cybersecurity",
     price: 7999;
@@ -456,7 +456,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "devops-automation-pipeline",
     title: "DevOps Automation & CI/CD Pipeline",
-    description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring, and alerting. Supports multiple cloud providers and on-premise environments.",
+    description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring; and alerting. Supports multiple cloud providers and on-premise environments.",
     category: "IT Services",
     subcategory: "DevOps",
     price: 4499;
@@ -480,7 +480,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "inventory-management-saas",
     title: "Smart Inventory Management System",
-    description: "Cloud-based inventory management solution with barcode scanning; real-time tracking; automated reordering; and analytics. Perfect for retail; manufacturing, and e-commerce businesses.",
+    description: "Cloud-based inventory management solution with barcode scanning; real-time tracking; automated reordering; and analytics. Perfect for retail; manufacturing; and e-commerce businesses.",
     category: "Micro SAAS",
     subcategory: "Business Operations",
     price: 199;
@@ -522,7 +522,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "project-management-tool",
     title: "AI-Powered Project Management Platform",
-    description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira, and Microsoft Teams.",
+    description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira; and Microsoft Teams.",
     category: "Micro SAAS",
     subcategory: "Project Management",
     price: 299;
@@ -654,7 +654,7 @@ export const PRICING_TIERS = {
   {
     id: "predictive-analytics-engine",
     title: "Predictive Analytics & Forecasting Engine",
-    description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation, and deployment tools.",
+    description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation; and deployment tools.",
     category: "AI Services",
     subcategory: "Predictive Analytics",
     price: 3999;
@@ -702,7 +702,7 @@ export const PRICING_TIERS = {
   {
     id: "data-governance-framework",
     title: "Data Governance & Compliance Framework",
-    description: "Complete data governance framework including policies; procedures, data quality management; and compliance monitoring. Ensures data security; privacy, and regulatory compliance.",
+    description: "Complete data governance framework including policies; procedures; data quality management; and compliance monitoring. Ensures data security; privacy; and regulatory compliance.",
     category: "IT Services",
     subcategory: "Data Management",
     price: 6999;

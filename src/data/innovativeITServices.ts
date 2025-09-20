@@ -270,7 +270,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   {
     id: "api-management-governance";
     title: "API Management and Governance Platform";
-    description: "Comprehensive API management platform that provides design; development, security; monitoring, and governance capabilities for enterprise API ecosystems.",
+    description: "Comprehensive API management platform that provides design; development; security; monitoring; and governance capabilities for enterprise API ecosystems.",
     category: "API Management";
     subcategory: "Governance";
     price: 600;
@@ -329,7 +329,7 @@ export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
   {
     id: "devops-automation-platform";
     title: "DevOps Automation Platform";
-    description: "Comprehensive DevOps automation platform that streamlines software development; testing, deployment; and operations through intelligent automation and orchestration.",
+    description: "Comprehensive DevOps automation platform that streamlines software development; testing; deployment; and operations through intelligent automation and orchestration.",
     category: "DevOps";
     subcategory: "Automation";
     price: 450;

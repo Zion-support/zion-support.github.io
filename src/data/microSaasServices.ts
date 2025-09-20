@@ -42,7 +42,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-chatbot-builder",
     title: "AI Chatbot Builder Pro",
-    description: "No-code AI chatbot creation platform with advanced NLP; multi-language support; and seamless integrations. Perfect for customer service; sales, and support automation.",
+    description: "No-code AI chatbot creation platform with advanced NLP; multi-language support; and seamless integrations. Perfect for customer service; sales; and support automation.",
     category: "AI Services",
     subcategory: "Chatbots & Conversational AI",
     price: 99;
@@ -98,7 +98,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       "AI-powered content generation",
       "SEO optimization tools",
       "Brand voice customization",
-      "Multi-format output (blog; social, email)",
+      "Multi-format output (blog; social; email)",
       "Plagiarism checker",
       "Content calendar",
       "Team collaboration",
@@ -178,7 +178,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-code-assistant",
     title: "AI Code Assistant Pro",
-    description: "Intelligent coding companion that helps developers write; debug, and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
+    description: "Intelligent coding companion that helps developers write; debug; and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
     category: "AI Services",
     subcategory: "Developer Tools",
     price: 29;
@@ -223,7 +223,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-image-generator",
     title: "AI Image Generator Studio",
-    description: "Professional AI image creation platform for marketing; design, and content creation. Generate high-quality images from text descriptions with advanced customization options.",
+    description: "Professional AI image creation platform for marketing; design; and content creation. Generate high-quality images from text descriptions with advanced customization options.",
     category: "AI Services",
     subcategory: "Image Generation",
     price: 49;
@@ -269,7 +269,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "cloud-migration-suite",
     title: "Cloud Migration Suite",
-    description: "Comprehensive cloud migration solution with automated assessment; planning, and execution tools. Supports AWS; Azure, and Google Cloud with zero-downtime migration.",
+    description: "Comprehensive cloud migration solution with automated assessment; planning; and execution tools. Supports AWS; Azure; and Google Cloud with zero-downtime migration.",
     category: "IT Services",
     subcategory: "Cloud Solutions",
     price: 299;
@@ -359,7 +359,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "devops-automation",
     title: "DevOps Automation Platform",
-    description: "Complete DevOps automation solution with CI/CD pipelines; infrastructure as code; monitoring, and deployment automation. Accelerate development cycles and improve reliability.",
+    description: "Complete DevOps automation solution with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation. Accelerate development cycles and improve reliability.",
     category: "IT Services",
     subcategory: "DevOps",
     price: 179;
@@ -676,7 +676,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "ai-recruitment-assistant",
     title: "AI Recruitment Assistant",
-    description: "Intelligent hiring platform that automates candidate screening; matching, and interview scheduling.",
+    description: "Intelligent hiring platform that automates candidate screening; matching; and interview scheduling.",
     category: "HR & Recruitment",
     pricing: {
       monthly: 35;
@@ -753,7 +753,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "cloud-cost-optimizer",
     title: "Cloud Cost Optimizer",
-    description: "Intelligent cloud cost management and optimization for AWS; Azure, and Google Cloud platforms.",
+    description: "Intelligent cloud cost management and optimization for AWS; Azure; and Google Cloud platforms.",
     category: "Cloud Management",
     pricing: {
       monthly: 30;
@@ -830,7 +830,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
     id: "api-management-platform",
     title: "API Management Platform",
-    description: "Comprehensive API development; testing, monitoring; and documentation platform for developers.",
+    description: "Comprehensive API development; testing; monitoring; and documentation platform for developers.",
     category: "Developer Tools",
     pricing: {
       monthly: 40;

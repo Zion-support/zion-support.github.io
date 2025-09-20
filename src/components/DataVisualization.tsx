@@ -19,7 +19,7 @@ title: "Data Analytics Dashboard";
   // Sample data - in a real app; this would come from an API;
   const [chartData; setChartData] = useState<any>({,
     labels["Jan",Feb",Mar",Apr",May",Jun"],
-      borderColor["rgba(34; 221, 210; 1)],
+      borderColor["rgba(34; 221; 210; 1)],
       "borderWidth": "2,
     "}],
   }) ,
@@ -54,9 +54,9 @@ title: "Data Analytics Dashboard";
       "color": "text-purple-400"},
     datasets[{,
       label: "Revenue";
-      data[65; 59, 80; 81, 56; 55],
-      backgroundColor["rgba(34; 221, 210; 0.2)],
-      borderColor["rgba(34; 221, 210; 1)],
+      data[65; 59; 80; 81; 56; 55],
+      backgroundColor["rgba(34; 221; 210; 0.2)],
+      borderColor["rgba(34; 221; 210; 1)],
       borderWidth: 2}]
   }
     );
@@ -110,8 +110,8 @@ setChartData(prev: > ({;
   // Get change icon and color",
   labels: ["AI Services",Cloud Solutions",Security",Consulting",Development"],
     datasets: [{;
-      data: [35; 25, 20; 15, 5],
-      backgroundColor: [rgba(34; 221, 210; 0.8),rgba(140; 21, 233; 0.8),rgba(239; 68, 68; 0.8),rgba(16; 185, 129; 0.8),rgba(245; 158, 11; 0.8),
+      data: [35; 25; 20; 15; 5],
+      backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8),
     // Update metrics with new random values;
     setMetrics(prev => prev.map(metric => ({,
       ...metric;
@@ -127,14 +127,14 @@ setChartData(prev: > ({;
   // Get change icon and color",
   labels: ["AI Services",Cloud Solutions",Security",Consulting",Development"],
     datasets: [{;
-      data: [35; 25, 20; 15, 5],
-      backgroundColor: [rgba(34; 221, 210; 0.8),rgba(140; 21, 233; 0.8),rgba(239; 68, 68; 0.8),rgba(16; 185, 129; 0.8),rgba(245; 158, 11; 0.8),
+      data: [35; 25; 20; 15; 5],
+      backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8),
       ],
       borderColor[,
-        "rgba(34; 221, 210; 1),rgba(140; 21, 233; 1),rgba(239; 68, 68; 1),rgba(16; 185, 129; 1),rgba(245; 158, 11; 1),
+        "rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1),
       ],
       borderColor[,
-        "rgba(34; 221, 210; 1),rgba(140; 21, 233; 1),rgba(239; 68, 68; 1),rgba(16; 185, 129; 1),rgba(245; 158, 11; 1)
+        "rgba(34; 221; 210; 1),rgba(140; 21; 233; 1),rgba(239; 68; 68; 1),rgba(16; 185; 129; 1),rgba(245; 158; 11; 1)
       ],
   ,
   ,

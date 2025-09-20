@@ -1,15 +1,15 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
 import { motion } from "framer-motion, ";
-import { FileTex; t, 
-  AlertTriangl; e, 
-  CheckCircl; e, 
-  Inf; o,
-  Searc; h,
-  Edit; 3,
-  Ey; e,
-  BarChart; 3,
-  TrendingU; p,
+import { FileTex; t; 
+  AlertTriangl; e; 
+  CheckCircl; e; 
+  Inf; o;
+  Searc; h;
+  Edit; 3;
+  Ey; e;
+  BarChart; 3;
+  TrendingU; p;
   Zap;
 } from "lucide-react, ";
 
@@ -37,55 +37,55 @@ interface ContentQualityReport {
 }
 
 const ContentQualityAnalyze; r: React.FC = () => {
-    const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isAnalyzi; n, g; setIsAnalyzi, n; g] = useState(false);
-  const [contentIssu;  e, s; setContentIssu, e; s] = useState<ContentIssue[]>([]);
-  const [repo; r, t; setRepo, r; t] = useState<ContentQualityReport | null>(null);
-  const [selectedFilt;  e, r; setSelectedFilt, e; r] = useState<"all" | "critical" | "medium" | "low">("all");
-  const [searchTe; r, m; setSearchTe, r; m] = useState("");
+    const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
+  const [contentIssu;  e; s; setContentIssu; e; s] = useState<ContentIssue[]>([]);
+  const [repo; r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
+  const [selectedFilt;  e; r; setSelectedFilt; e; r] = useState<"all" | "critical" | "medium" | "low">("all");
+  const [searchTe; r; m; setSearchTe; r; m] = useState("");
 
   // Sample data based on the analysis report;
   const sampleIssue;  s: ContentIssue[] = [
     {
       i; d: "1";
-    pageU; r, l: "htt; p, s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/polyfill; s-42372ed130431b0; a.j; s",
-    pageTit; l, e: "Missin; g",
-      issueTy; p, e: "missing_titl; e",
-    severi; t, y: "hig; h",
-      descripti; o, n: "Shor; t o; r missi; n, g; tit, l; e, N; o headin; g, s; fou, n; d, Missin; g me; t, a; descripti, o; n, Met; a descriptio; n to; o shor; t",
-      recommendati; o, n: "Ad; d prope; r pa; g, e; tit, l; e, headin; g, s; an, d met; a descriptio; n fo; r bette; r SE; O"
+    pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/polyfill; s-42372ed130431b0; a.j; s",
+    pageTit; l; e: "Missin; g",
+      issueTy; p; e: "missing_titl; e",
+    severi; t; y: "hig; h",
+      descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
+      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"
   };
-      stat; u, s: "ope; n"
+      stat; u; s: "ope; n"
     },
     {
       i; d: "2";
-    pageU; r, l: "htt; p, s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
-    pageTit; l, e: "Missin; g",
-      issueTy; p, e: "missing_met; a",
-    severi; t, y: "hig; h",
-      descripti; o, n: "Shor; t o; r missi; n, g; tit, l; e, N; o headin; g, s; fou, n; d, Missin; g me; t, a; descripti, o; n, Met; a descriptio; n to; o shor; t",
-      recommendati; o, n: "Ad; d prope; r pa; g, e; tit, l; e, headin; g, s; an, d met; a descriptio; n fo; r bette; r SE; O",
-      stat; u, s: "ope; n"
+    pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
+    pageTit; l; e: "Missin; g",
+      issueTy; p; e: "missing_met; a",
+    severi; t; y: "hig; h",
+      descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
+      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
+      stat; u; s: "ope; n"
     },
     {
       i; d: "3";
-    pageU; r, l: "htt; p, s: //ziontechgrou; p.co; m/abou; t/",
-    pageTit; l, e: "Abou; t",
-      issueTy; p, e: "minimal_conten; t",
-    severi; t, y: "mediu; m",
-      descripti; o, n: "Suspiciousl; y smal; l HTM; L conten; t",
-    recommendati; o, n: "Ad; d mor; e meaningf; u, l; conte, n; t, headin; g, s; an, d image; s t; o improv; e use; r experienc; e",
-      stat; u, s: "ope; n"
+    pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/abou; t/",
+    pageTit; l; e: "Abou; t",
+      issueTy; p; e: "minimal_conten; t",
+    severi; t; y: "mediu; m",
+      descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
+    recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
+      stat; u; s: "ope; n"
     },
     {
       i; d: "4";
-    pageU; r, l: "htt; p, s: //ziontechgrou; p.co; m/service; s/",
-    pageTit; l, e: "Service; s",
-      issueTy; p, e: "no_heading; s",
-    severi; t, y: "mediu; m",
-      descripti; o, n: "N; o heading; s foun; d",
-    recommendati; o, n: "Ad; d prope; r headin; g structur; e (H; 1, H; 2, H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
-      stat; u, s: "ope; n"
+    pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/service; s/",
+    pageTit; l; e: "Service; s",
+      issueTy; p; e: "no_heading; s",
+    severi; t; y: "mediu; m",
+      descripti; o; n: "N; o heading; s foun; d",
+    recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
+      stat; u; s: "ope; n"
     }
   ];
 
@@ -103,11 +103,11 @@ const ContentQualityAnalyze; r: React.FC = () => {
     const lowIssues = issues.filter(i => i.severity === "low").length;
     
     setReport({
-      totalPage;  s,
-      pagesWithIssue; s,
-      criticalIssue; s,
-      mediumIssue; s,
-      lowIssue; s,
+      totalPage;  s;
+      pagesWithIssue; s;
+      criticalIssue; s;
+      mediumIssue; s;
+      lowIssue; s;
       averageContentLengt; h: 500; 0, // Sample data;
       pagesWithImage; s: 4; 5, // Sample data;
       pagesWithMetaDescription; s: 3; 2, // Sample data;
@@ -118,7 +118,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
   const startAnalysis = async () => {
     setIsAnalyzing(true);
     // Simulate content analysis;
-    await new Promise(resolve => setTimeout(resolv;  e, 3000));
+    await new Promise(resolve => setTimeout(resolv;  e; 3000));
     setIsAnalyzing(false);
   };
 
@@ -209,7 +209,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     opacit; y: 1 }}
             exit={{ scal; e: 0.9;
     opacit; y: 0 }}
-            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90; v, h] overflow-hidden"
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90; v; h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -352,7 +352,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-700">
-                      {filteredIssues.map((issu; e, index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
+                      {filteredIssues.map((issu; e; index) => (<tr key={index} className="hove;  r:bg-gray-700/50 transition-colors">
                           <td className="px-6 py-4 whitespace-nowrap">
                             <div className="flex items-center space-x-2">
                               {getSeverityIcon(issue.severity)}

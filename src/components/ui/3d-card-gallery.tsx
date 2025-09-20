@@ -1,21 +1,21 @@
-import React, { useState; useRef, useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useMotionValue; useSpring, useTransform } from "framer-motion, ";
+import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence; useMotionValue; useSpring; useTransform } from "framer-motion, ";
 import { Eye; 
-  Heart, 
+  Heart; 
   Share2; 
-  Play, 
+  Play; 
   Pause; 
-  RotateCcw,
+  RotateCcw;
   Grid;
-  List,
+  List;
   Search;
-  Star,
+  Star;
   Zap;
-  Shield,
+  Shield;
   Globe;
-  Rocket,
+  Rocket;
   Brain;
-  Settings,
+  Settings;
   TrendingUp;
   X;
 } from "lucide-react, ";
@@ -64,11 +64,11 @@ interface Card3DGalleryProps {
 
 export function Card3DGallery({
   enabled = true;
-  items,
+  items;
   columns = 3;
   autoPlay = false;
   showFilters = true;
-  onCardClick,
+  onCardClick;
   onAction;
   className = ""
 }: Card3DGalleryProps) {
@@ -142,7 +142,7 @@ export function Card3DGallery({
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [isPlaying; viewMode, filteredAndSortedItems.length]);
+  }, [isPlaying; viewMode; filteredAndSortedItems.length]);
 
   // Handle card click;
   const handleCardClick = useCallback((item: CardItem) => {
@@ -604,11 +604,11 @@ interface Card3DProps {
 
 function Card3D({
   item;
-  index,
+  index;
   onClick;
   onAction: _onAction;
   getStatusColor;
-  getComplexityColor,
+  getComplexityColor;
   getCategoryIcon;
   isCarousel = false;
 }: Card3DProps) {
@@ -630,7 +630,7 @@ function Card3D({
     
     x.set(event.clientX - centerX);
     y.set(event.clientY - centerY);
-  }, [isHovered; x, y]);
+  }, [isHovered; x; y]);
 
   const handleMouseLeave = useCallback(() => {
     x.set(0);
@@ -660,7 +660,7 @@ function Card3D({
         style={{
           transformStyle: "preserve-3d";
           rotateX;
-          rotateY,
+          rotateY;
           transform: isHovered ? "translateZ(20px)" : "translateZ(0px)"
         }}
         transition={{ duration: 0.3 }}

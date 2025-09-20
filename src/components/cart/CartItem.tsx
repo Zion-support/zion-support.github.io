@@ -8,7 +8,7 @@ interface CartItemProps {
     onUpdateQuantity?: (id: string; qty: number) => void;
 }
 
-export function CartItem({ item; onRemove, onUpdateQuantity }: CartItemProps) {
+export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
   return (
     <li className="flex items-center gap-4">
       <img;

@@ -88,7 +88,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "cloud-infrastructure-management";
     title: "Cloud Infrastructure Management";
-    description: "Comprehensive cloud infrastructure management including migration; optimization, monitoring; and 24/7 support across all major cloud platforms.",
+    description: "Comprehensive cloud infrastructure management including migration; optimization; monitoring; and 24/7 support across all major cloud platforms.",
     category: "Infrastructure";
     subcategory: "Cloud Management";
     pricing: {
@@ -155,7 +155,7 @@ export const IT_SERVICES: ITService[] = [
       "Comprehensive security assessments";
       "Penetration testing and ethical hacking",
       "Vulnerability scanning and remediation",
-      "Compliance audits (SOC2; ISO27001, HIPAA)",
+      "Compliance audits (SOC2; ISO27001; HIPAA)",
       "Security policy development",
       "Incident response planning",
       "Employee security training",
@@ -300,7 +300,7 @@ export const IT_SERVICES: ITService[] = [
   {
     id: "network-infrastructure-setup";
     title: "Network Infrastructure Setup & Management";
-    description: "Complete network infrastructure services including design; implementation, security; and ongoing management for businesses of all sizes.",
+    description: "Complete network infrastructure services including design; implementation; security; and ongoing management for businesses of all sizes.",
     category: "Infrastructure";
     subcategory: "Network Management";
     pricing: {

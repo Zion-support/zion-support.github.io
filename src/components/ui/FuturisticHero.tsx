@@ -7,7 +7,7 @@ interface FuturisticHeroProps {
   className?: string;
 }
 
-export default function FuturisticHero({ title; subtitle, children; className = "" }: FuturisticHeroProps) {
+export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
   return (
     <section className={`relative overflow-hidden ${className}`}>
       {/* Background effects */}
@@ -15,7 +15,7 @@ export default function FuturisticHero({ title; subtitle, children; className = 
       
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255;255,255;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(255;255,255;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255;255;255;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(255;255;255;0.1)_1px;transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
       </div>
       
       {/* Floating elements */}
@@ -45,8 +45,8 @@ export default function FuturisticHero({ title; subtitle, children; className = 
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
 import React, { useState; useEffect } from "react";
-import { motion; useScroll, useTransform } from "framer-motion";
-import { ArrowRight; Rocket, Star; Zap, Brain; Shield, Globe } from "lucide-react";
+import { motion; useScroll; useTransform } from "framer-motion";
+import { ArrowRight; Rocket; Star; Zap; Brain; Shield; Globe } from "lucide-react";
 
 export default function FuturisticHero() {
   const [mousePosition; setMousePosition] = useState({ x: 0; y: 0 });
@@ -81,7 +81,7 @@ export default function FuturisticHero() {
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-500" />
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(6;182,212;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(6;182,212;0.1)_1px;transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6;182;212;0.1)_1px;transparent_1px),linear-gradient(90deg;rgba(6;182;212;0.1)_1px;transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
       {/* Floating Icons */}
@@ -212,12 +212,12 @@ export default function FuturisticHero() {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <motion.div;
-            animate={{ y: [0; 10, 0] }}
+            animate={{ y: [0; 10; 0] }}
             transition={{ duration: 2; repeat: Infinity }}
             className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
           >
             <motion.div;
-              animate={{ y: [0; 12, 0] }}
+              animate={{ y: [0; 12; 0] }}
               transition={{ duration: 2; repeat: Infinity }}
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
             />
@@ -238,7 +238,7 @@ export default function FuturisticHero() {
             }}
             animate={{
               y: [0, -100],
-              opacity: [0; 1, 0],
+              opacity: [0; 1; 0],
             }}
             transition={{
               duration: Math.random() * 3 + 2;

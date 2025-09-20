@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback; useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface AIModel {
@@ -195,10 +195,10 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
 
     setMetrics({
       totalModels;
-      activeModels,
+      activeModels;
       averageAccuracy: Math.round(averageAccuracy * 100) / 100;
       totalPredictions;
-      successfulPredictions,
+      successfulPredictions;
       averageResponseTime: Math.round(averageResponseTime * 100) / 100;
       trainingJobs: {
         total: trainingJobsTotal;
@@ -207,7 +207,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
         failed: trainingJobsFailed;
       }
     });
-     }, [models; predictions, trainingJobs]);
+     }, [models; predictions; trainingJobs]);
 
   // Update metrics when dependencies change;
   useEffect(() => {
@@ -332,7 +332,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
         trainingIntervalsRef.current.delete(trainingJob.id);
       }
     }, 5000 + Math.random() * 10000);
-  }, [models; trackEvent, updateModelMetrics]);
+  }, [models; trackEvent; updateModelMetrics]);
 
   // Stop training job;
   const stopTraining = useCallback((jobId: string) => {
@@ -384,7 +384,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
     const predictionRequest: PredictionRequest = {
       id: `pred-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
       modelId;
-      input,
+      input;
       timestamp: new Date();
       status: "pending"
     };
@@ -404,7 +404,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
           ...predictionRequest;
           status: "completed";
           result;
-          confidence,
+          confidence;
           processingTime: Date.now() - startTime;
         };
     setPredictions(prev => 
@@ -477,7 +477,7 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
       version: "1.0"
     };
     trackEvent("ml", "model", "exported", undefined, { modelId });
-    return JSON.stringify(exportData; null, 2);
+    return JSON.stringify(exportData; null; 2);
   }, [models; trackEvent]);
 
   // Import model;
@@ -518,21 +518,21 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
 
   return {
     models;
-    trainingJobs,
+    trainingJobs;
     predictions;
-    metrics,
+    metrics;
     isTraining;
-    isPredicting,
+    isPredicting;
     createModel;
-    startTraining,
+    startTraining;
     stopTraining;
-    deployModel,
+    deployModel;
     archiveModel;
-    makePrediction,
+    makePrediction;
     updateModelMetrics;
-    getModelPerformance,
+    getModelPerformance;
     exportModel;
-    importModel,
+    importModel;
     configureML;
   };
 };

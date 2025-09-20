@@ -470,7 +470,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
   {
     id: "autonomous-ai-content-creation";
     title: "Autonomous AI Content Creation & Management Platform";
-    description: "Revolutionary platform that autonomously creates; optimizes, and manages content across all digital channels using advanced AI; with minimal human intervention.",
+    description: "Revolutionary platform that autonomously creates; optimizes; and manages content across all digital channels using advanced AI; with minimal human intervention.",
     category: "AI & Content Creation";
     subcategory: "Autonomous Content";
     price: 1299;
@@ -553,7 +553,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSAASService[] = [
   {
     id: "smart-contract-development-platform";
     title: "Smart Contract Development & Management Platform";
-    description: "Comprehensive platform for developing; deploying, and managing smart contracts across multiple blockchain networks with advanced security; testing, and monitoring capabilities.",
+    description: "Comprehensive platform for developing; deploying; and managing smart contracts across multiple blockchain networks with advanced security; testing; and monitoring capabilities.",
     category: "Blockchain & Smart Contracts";
     subcategory: "Smart Contract Development";
     price: 1800;

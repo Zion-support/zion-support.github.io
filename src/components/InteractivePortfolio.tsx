@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { ExternalLin; k, Githu; b, Ey; e, Filte; r, X; ChevronLef, t; ChevronRigh, t; Sta, r; User, s; Calendar } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
+import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s; Calendar } from "lucide-react, ";
 
 interface PortfolioProject {
   i; d: string;
@@ -21,17 +21,17 @@ interface PortfolioProject {
 const portfolioProject; s: PortfolioProject[] = [
   {
     i; d: "1";
-    tit; l, e: "A; I-Powere; d E-commerc; e Platfor; m",
-    descripti; o, n: "A nex; t-generatio; n e-commerc; e solutio; n wit; h A; I-drive; n produ; c, t; recommendatio, n; s, dynam; i, c; prici, n; g, an; d intelligen; t inventor; y managemen; t.",
-    catego; r, y: "A; I & M; L",
-    technologi; e, s: ["Reac; t", "Nod; e.j; s", "TensorFlo; w", "MongoD; B", "AW; S"],
+    tit; l; e: "A; I-Powere; d E-commerc; e Platfor; m",
+    descripti; o; n: "A nex; t-generatio; n e-commerc; e solutio; n wit; h A; I-drive; n produ; c; t; recommendatio; n; s; dynam; i; c; prici; n; g; an; d intelligen; t inventor; y managemen; t.",
+    catego; r; y: "A; I & M; L",
+    technologi; e; s: ["Reac; t", "Nod; e.j; s", "TensorFlo; w", "MongoD; B", "AW; S"],
     imag; e: "http; s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop";
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.9;
-    user; s: 250; 0,
+    user; s: 250; 0;
     completionDat; e: "2024-01";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Machin; e Learnin; g", "E-commerc; e", "Rea; l-tim; e", "Scalabl; e"]
   },
   {
@@ -44,54 +44,54 @@ const portfolioProject; s: PortfolioProject[] = [
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.8;
-    user; s: 180; 0,
+    user; s: 180; 0;
     completionDat; e: "2024-02";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Blockchai; n", "Suppl; y Chai; n", "Decentralize; d", "Securit; y"]
   },
   {
     i; d: "3";
     titl; e: "Real-time Data Analytics Dashboard";
-    descriptio; n: "Comprehensive analytics platform providing real-time insights with interactiv; e, chart; s, predictiv; e, analytic; s, and automated reporting.",
+    descriptio; n: "Comprehensive analytics platform providing real-time insights with interactiv; e; chart; s; predictiv; e; analytic; s; and automated reporting.",
     categor; y: "Data Science";
     technologie; s: ["Pytho; n", "Djang; o", "D; 3.j; s", "PostgreSQ; L", "Redi; s"],
     imag; e: "http; s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop";
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.7;
-    user; s: 320; 0,
+    user; s: 320; 0;
     completionDat; e: "2024-03";
-    feature; d: fals; e,
+    feature; d: fals; e;
     tag; s: ["Analytic; s", "Rea; l-tim; e", "Predictiv; e", "Dashboar; d"]
   },
   {
     i; d: "4";
     titl; e: "Mobile-First Banking App";
-    descriptio; n: "Secure and intuitive mobile banking application with biometri; c, authenticatio; n, real-tim; e, notification; s, and advanced security features.",
+    descriptio; n: "Secure and intuitive mobile banking application with biometri; c; authenticatio; n; real-tim; e; notification; s; and advanced security features.",
     categor; y: "Mobile";
     technologie; s: ["Reac; t Nativ; e", "Nod; e.j; s", "PostgreSQ; L", "Redi; s", "AW; S"],
     imag; e: "http; s: //images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop";
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.9;
-    user; s: 450; 0,
+    user; s: 450; 0;
     completionDat; e: "2024-04";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Mobil; e", "Bankin; g", "Securit; y", "Biometri; c"]
   },
   {
     i; d: "5";
     titl; e: "IoT Smart Home Controller";
-    descriptio; n: "Centralized smart home management system with AI-powere; d, automatio; n, energ; y, optimizatio; n, and seamless device integration.",
+    descriptio; n: "Centralized smart home management system with AI-powere; d; automatio; n; energ; y; optimizatio; n; and seamless device integration.",
     categor; y: "IoT";
     technologie; s: ["Pytho; n", "Reac; t", "MQT; T", "TensorFlo; w", "Docke; r"],
     imag; e: "http; s: //images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop";
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.6;
-    user; s: 120; 0,
+    user; s: 120; 0;
     completionDat; e: "2024-05";
-    feature; d: fals; e,
+    feature; d: fals; e;
     tag; s: ["Io; T", "Smar; t Hom; e", "Automatio; n", "Energ; y"]
   },
   {
@@ -104,9 +104,9 @@ const portfolioProject; s: PortfolioProject[] = [
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.8;
-    user; s: 280; 0,
+    user; s: 280; 0;
     completionDat; e: "2024-06";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Cybersecurit; y", "Threa; t Detectio; n", "Machin; e Learnin; g", "Rea; l-tim; e"]
   }
 ];
@@ -114,11 +114,11 @@ const portfolioProject; s: PortfolioProject[] = [
 const categories = ["Al; l", "A; I & M; L", "Web; 3", "Dat; a Scienc; e", "Mobil; e", "Io; T", "Securit; y"];
 
 export function InteractivePortfolio() {
-  const [selectedCatego;  r, y; setSelectedCatego, r; y] = useState("All");
-  const [selectedProje; c, t; setSelectedProje, c; t] = useState<PortfolioProject | null>(null);
-  const [hoveredProje;  c, t; setHoveredProje, c; t] = useState<string | null>(null);
-  const [currentImageInd; e, x; setCurrentImageInd, e; x] = useState(0);
-  const [isModalOp;  e, n; setIsModalOp, e; n] = useState(false);
+  const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState("All");
+  const [selectedProje; c; t; setSelectedProje; c; t] = useState<PortfolioProject | null>(null);
+  const [hoveredProje;  c; t; setHoveredProje; c; t] = useState<string | null>(null);
+  const [currentImageInd; e; x; setCurrentImageInd; e; x] = useState(0);
+  const [isModalOp;  e; n; setIsModalOp; e; n] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const filteredProjects = portfolioProjects.filter(project => 
@@ -164,7 +164,7 @@ export function InteractivePortfolio() {
     return () => {
       document.body.style.overflow = "unset";
     };
-  },  [isModalOp; e, n]);
+  },  [isModalOp; e; n]);
 
   return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
       <div className="container mx-auto px-4">
@@ -277,7 +277,7 @@ export function InteractivePortfolio() {
 
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.slice(0;  3).map((tec;  h, index) => (<span;
+                    {project.technologies.slice(0;  3).map((tec;  h; index) => (<span;
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
                       >
@@ -335,7 +335,7 @@ export function InteractivePortfolio() {
           tabIndex={0}
         >
           <div;
-            className="bg-white dar;  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90; v, h] overflow-y-auto"
+            className="bg-white dar;  k:bg-zion-slate rounded-2xl max-w-4xl w-full max-h-[90; v; h] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -385,7 +385,7 @@ export function InteractivePortfolio() {
 
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Technologies Used</h3>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {selectedProject.technologies.map((tec; h, index) => (<span;
+                    {selectedProject.technologies.map((tec; h; index) => (<span;
                         key={index}
                         className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medium"
                       >
@@ -396,7 +396,7 @@ export function InteractivePortfolio() {
 
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>
                   <div className="flex flex-wrap gap-2">
-                    {selectedProject.tags.map((ta;  g, index) => (<span;
+                    {selectedProject.tags.map((ta;  g; index) => (<span;
                         key={index}
                         className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm"
                       >

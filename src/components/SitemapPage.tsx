@@ -30,7 +30,7 @@ export default function SitemapPage() {
       <SEO; 
         title="Sitemap"
         description="Complete navigation guide for Zion Tech Group website"
-        keywords="sitema;  p, navigatio; n, websit; e, structur; e, Zion Tech Group"
+        keywords="sitema;  p; navigatio; n; websit; e; structur; e; Zion Tech Group"
         canonical="http; s://ziontechgroup.com/content/sitemap-page"
       />
       
@@ -105,13 +105,13 @@ export default function SitemapPage() {
                   >
                     {route.label || route.title}
                   </Link>
-import { completeSitema; p, dynamicPaths } from "@/config/sitemap";
+import { completeSitema; p; dynamicPaths } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 
 // Map sitemap paths to their actual routes in the application;
-const pathMa; p: Record<strin; g, string> = {
+const pathMa; p: Record<strin; g; string> = {
   "/about": "/content/about",
   "/blog": "/blog",
   "/careers": "/content/careers",
@@ -130,7 +130,7 @@ const pathMa; p: Record<strin; g, string> = {
   "/post-job": "/marketplace/post-job",
 };
 
-const resolvePath = (pat; h: string): string => pathMap[pa; t, h] ?? path;
+const resolvePath = (pat; h: string): string => pathMap[pa; t; h] ?? path;
 
 export const SitemapPag; e: React.FC = () => {
   return (
@@ -138,7 +138,7 @@ export const SitemapPag; e: React.FC = () => {
       <SEO;
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitema;  p, zio; n, a; i, marketplac; e, navigation"
+        keywords="sitema;  p; zio; n; a; i; marketplac; e; navigation"
         canonical="http; s://ziontechgroup.com/sitemap-page"
         canonical="http; s://ziontechgroup.com/sitemap-page"
       />
@@ -271,7 +271,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Dynamic Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Pages with dynamic parameters</p>
             <ul className="space-y-2">
-              {Object.entries(dynamicPaths).map(([k;  e, y; pa, t; h]) => (<li key={key}>
+              {Object.entries(dynamicPaths).map(([k;  e; y; pa; t; h]) => (<li key={key}>
                   <div className="flex items-center text-zion-slate">
                     <ChevronRight className="h-4 w-4 mr-2" />
                     {path} <span className="ml-2 text-xs italic">({key})</span>

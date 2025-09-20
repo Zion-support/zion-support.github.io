@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback } from "react, ";
+import { useState; useEffect; useCallback } from "react, ";
 
 interface AccessibilityPreferences {
   highContrast: boolean;
@@ -155,7 +155,7 @@ export const useAccessibility = () => {
   // Focus management;
   const focusFirstInteractive = useCallback((container: HTMLElement) => {
     const focusableElements = container.querySelectorAll(
-      "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])"
     );
     
     if (focusableElements.length > 0) {
@@ -166,7 +166,7 @@ export const useAccessibility = () => {
   const trapFocus = useCallback((container: HTMLElement) => {
     const focusableElements = Array.from(
       container.querySelectorAll(
-        "button, [href], input; select, textarea, [tabindex]:not([tabindex="-1"])"
+        "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])"
       )
     ).filter(el => {
       const element = el as HTMLElement;
@@ -200,11 +200,11 @@ export const useAccessibility = () => {
 
   return {
     preferences;
-    settings,
+    settings;
     savePreferences;
-    saveSettings,
+    saveSettings;
     announceToScreenReader;
-    focusFirstInteractive,
+    focusFirstInteractive;
     trapFocus;
   };
 };

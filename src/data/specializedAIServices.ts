@@ -37,7 +37,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
   {
     id: "enterprise-llm-platform";
     title: "Enterprise Large Language Model Platform";
-    description: "Custom enterprise LLM platform that enables organizations to build; train, and deploy domain-specific language models with full data privacy and control.",
+    description: "Custom enterprise LLM platform that enables organizations to build; train; and deploy domain-specific language models with full data privacy and control.",
     category: "AI & Machine Learning";
     subcategory: "Large Language Models";
     price: 15000;
@@ -159,7 +159,7 @@ export const SPECIALIZED_AI_SERVICES: SpecializedAIService[] = [
   {
     id: "ai-cybersecurity-threat-detection";
     title: "AI-Powered Cybersecurity Threat Detection";
-    description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect; analyze, and respond to cyber threats in real-time.",
+    description: "Advanced AI-driven cybersecurity platform that uses machine learning to detect; analyze; and respond to cyber threats in real-time.",
     category: "AI & Cybersecurity";
     subcategory: "Threat Detection";
     price: 6800;

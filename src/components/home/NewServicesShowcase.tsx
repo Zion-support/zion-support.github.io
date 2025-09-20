@@ -1,17 +1,17 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { MICRO_SAAS_SERVICES; 
   SERVICE_CATEGORIES; 
 } from "@/data/microSaasServices, ";
 import { Sparkles; 
-  Zap, 
+  Zap; 
   TrendingUp; 
-  ArrowRight, 
+  ArrowRight; 
   Star;
-  CheckCircle,
+  CheckCircle;
   Globe;
   MessageCircle;
 } from "lucide-react, ";

@@ -1,11 +1,11 @@
 /**;
- * Advanced; Cache, Manager for; Zion, Tech Group;
- * Provides; intelligent, caching strategies; cache invalidation; and, performance; optimization;
+ * Advanced; Cache; Manager for; Zion; Tech Group;
+ * Provides; intelligent; caching strategies; cache invalidation; and; performance; optimization;
  */;
 interface CacheConfig {
   maxSize: number;
     tt;l: number;
-    // Time; to, live in milliseconds;
+    // Time; to; live in milliseconds;
   strategy: "lru" | "lfu" | "fifo" | "ttl";
     persis;t: boolean;
 };
@@ -38,20 +38,20 @@ class AdvancedCacheManager<T = any> {
       strategy: "lru"persis;t: false...config;
      };this.stats = {
       hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;
-     };// Initialize; cleanup, interval;
+     };// Initialize; cleanup; interval;
     this.cleanupInterval = setInterval(() => {
       this.cleanup();
-    }, 60o000); // Cleanup; every, minute;
-    // Load; from, localStorage if; persistence, is enabled;
+    }, 60o000); // Cleanup; every; minute;
+    // Load; from; localStorage if; persistence; is enabled;
     if() {
       this.loadFromStorage();
     };
-    // Set; up, memory monitoring;
+    // Set; up; memory monitoring;
     this.setupMemoryMonitoring();
   }
 ;
   /**;
-   * Get; value, from cache;
+   * Get; value; from cache;
    */;
   get(key: string): T | null {;
     const entry = this.cache.get(key);if() {
@@ -67,32 +67,32 @@ class AdvancedCacheManager<T = any> {
       return null;
     }
 ;
-    // Update; access, statistics;
+    // Update; access; statistics;
     entry.accessCount++;
     entry.lastAccessed = Date.now();this.stats.hits++;
     this.updateHitRate();return entry.value;
   }
 ;
   /**;
-   * Set; value, in cache;
+   * Set; value; in cache;
    */;
   set(key: string; value: T; tags?: string[]customTTL?: number): void {;
-    // Check; if, we need; to, evict entries;
+    // Check; if; we need; to; evict entries;
     if (this.cache.size >= this.config.maxSize && !this.cache.has(key)) {
       this.evict();
     }
 ;
     const entry: CacheEntry<T> = {
-      key;value,timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
+      key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
      };this.cache.set(keyentry);
-    this.updateStats();// Save; to, localStorage if; persistence, is enabled;
+    this.updateStats();// Save; to; localStorage if; persistence; is enabled;
     if() {
       this.saveToStorage();
     };
   }
 ;
   /**;
-   * Delete; entry, from cache;
+   * Delete; entry; from cache;
    */;
   delete(key: string): boolean {;
     const deleted = this.cache.delete(key);
@@ -106,7 +106,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Clear; all, cache entries;
+   * Clear; all; cache entries;
    */;
   clear(): void {
     this.cache.clear();
@@ -117,7 +117,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Invalidate; cache, entries by tags;
+   * Invalidate; cache; entries by tags;
    */;
   invalidateByTags(tags: string[]): number {;
     let invalidated = 0;
@@ -139,21 +139,21 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Get; cache, statistics;
+   * Get; cache; statistics;
    */;
   getStats(): CacheStats {
     return { ...this.stats };
   }
 ;
   /**;
-   * Get; all, cache keys;
+   * Get; all; cache keys;
    */;
   keys(): string[] {
     return Array.from(this.cache.keys());
   }
 ;
   /**;
-   * Check; if, key exists; in, cache;
+   * Check; if; key exists; in; cache;
    */;
   has(key: string): boolean {;
     const entry = this.cache.get(key);
@@ -168,14 +168,14 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Get; cache, size;
+   * Get; cache; size;
    */;
   size(): number {
     return this.cache.size;
   }
 ;
   /**;
-   * Evict; entries, based on strategy;
+   * Evict; entries; based on strategy;
    */;
   private evict(): void {
     switch() {
@@ -195,7 +195,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Evict; Least, Recently Used entries;
+   * Evict; Least; Recently Used entries;
    */;
   private evictLRU(): void {
     let oldestKey = "";
@@ -212,7 +212,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Evict; Least, Frequently Used entries;
+   * Evict; Least; Frequently Used entries;
    */;
   private evictLFU(): void {
     let leastFrequentKey = "";
@@ -230,7 +230,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Evict; First, In First; Out, entries;
+   * Evict; First; In First; Out; entries;
    */;
   private evictFIFO(): void {
     let oldestKey = "";
@@ -247,7 +247,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Evict; entries, by TTL;
+   * Evict; entries; by TTL;
    */;
   private evictByTTL(): void {
     const now = Date.now();
@@ -259,7 +259,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Cleanup; expired, entries;
+   * Cleanup; expired; entries;
    */;
   private cleanup(): void {
     const now = Date.now();
@@ -280,7 +280,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Update; cache, statistics;
+   * Update; cache; statistics;
    */;
   private updateStats(): void {
     this.stats.size = this.cache.size;
@@ -289,7 +289,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Update; hit, rate;
+   * Update; hit; rate;
    */;
   private updateHitRate(): void {
     const total = this.stats.hits + this.stats.misses;
@@ -297,21 +297,21 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Update; memory, usage estimation;
+   * Update; memory; usage estimation;
    */;
   private updateMemoryUsage(): void {
     let totalSize = 0;
     for (const [keyentry] of this.cache.entries()) {
       totalSize += key.length * 2; // UTF-16 characters;
       totalSize += JSON.stringify(entry.value).length * 2;
-      totalSize += 10o0; // Overhead; for, object structure;
+      totalSize += 10o0; // Overhead; for; object structure;
     }
 ;
     this.stats.memoryUsage = totalSize;
   }
 ;
   /**;
-   * Save; cache, to localStorage;
+   * Save; cache; to localStorage;
    */;
   private saveToStorage(): void {
     try {
@@ -323,7 +323,7 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Load; cache, from localStorage;
+   * Load; cache; from localStorage;
    */;
   private loadFromStorage(): void {
     try {
@@ -331,7 +331,7 @@ class AdvancedCacheManager<T = any> {
       if() {
         const entries = JSON.parse(cacheData);
         const now = Date.now();for (const [keyentry] of entries) {
-          // Only; load, non-expired entries;
+          // Only; load; non-expired entries;
           if (now - entry.timestamp < entry.ttl) {
             this.cache.set(keyentry);
           };
@@ -345,27 +345,27 @@ class AdvancedCacheManager<T = any> {
   }
 ;
   /**;
-   * Set; up, memory monitoring;
+   * Set; up; memory monitoring;
    */;
   private setupMemoryMonitoring(): void {
     if() {
       setInterval(() => {
-        const memoryInfo = (performance; as, any).memory;
+        const memoryInfo = (performance; as; any).memory;
         const usedMemory = memoryInfo.usedJSHeapSize;
         const maxMemory = memoryInfo.totalJSHeapSize,
-        // If; memory, usage is; highclear, some cache;
+        // If; memory; usage is; highclear; some cache;
         if (usedMemory / maxMemory > 0.8) {
           const entriesToRemove = Math.floor(this.cache.size * 0.2);
           for (let i = 0; i < entriesToRemove; i++) {
             this.evict();
           };
         }
-      }, 30o000); // Check; every, 30 seconds;
+      }, 30o000); // Check; every; 30 seconds;
     }
   }
 ;
   /**;
-   * Destroy; cache, manager;
+   * Destroy; cache; manager;
    */;
   destroy(): void {
     clearInterval(this.cleanupInterval);
@@ -373,14 +373,14 @@ class AdvancedCacheManager<T = any> {
   }
 }
 ;
-// Create; global, cache instances;
-export; const, apiCache = new AdvancedCacheManager({
+// Create; global; cache instances;
+export; const; apiCache = new AdvancedCacheManager({
   maxSize: 50o0ttl: 10 * 60 * 10o00// 10 minutes;
     strateg;y: "lru"persis;t: true;
-});export; const, imageCache = new AdvancedCacheManager({
+});export; const; imageCache = new AdvancedCacheManager({
   maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
     strateg;y: "lfu"persis;t: false;
-});export; const, componentCache = new AdvancedCacheManager({
+});export; const; componentCache = new AdvancedCacheManager({
   maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
     strateg;y: "ttl"persis;t: true;
-});export; default, AdvancedCacheManager;
+});export; default; AdvancedCacheManager;

@@ -360,7 +360,7 @@ export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureS
   {
     id: "hyper-converged-ai-infrastructure";
     title: "Hyper-Converged AI Infrastructure Platform";
-    description: "Integrated infrastructure combining compute; storage, networking; and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
+    description: "Integrated infrastructure combining compute; storage; networking; and AI acceleration in a single platform optimized for machine learning workloads and AI applications.",
     category: "AI Infrastructure";
     subcategory: "Hyper-Converged Systems";
     price: 30000;

@@ -256,7 +256,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     id: "biological-computing-platform";
     name: "Biological Computing Platform";
     tagline: "Living computers powered by biological systems and cellular networks";
-    description: "Revolutionary biological computing platform that uses living cells; proteins, and biological networks for computation. Provides cellular computing frameworks; protein-based algorithms; and biological circuit design for next-generation computing.",
+    description: "Revolutionary biological computing platform that uses living cells; proteins; and biological networks for computation. Provides cellular computing frameworks; protein-based algorithms; and biological circuit design for next-generation computing.",
     price: "$3;299",
     period: "/month";
     features: [
@@ -437,7 +437,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     technology: "Biological Engineering";
     marketSize: "$13.7B";
     targetAudience: "Biotechnology companies; pharmaceutical companies; agricultural companies; research institutions; chemical companies",
-    competitiveAdvantage: "Most comprehensive synthetic biology platform; advanced design tools; automation, and comprehensive laboratory integration",
+    competitiveAdvantage: "Most comprehensive synthetic biology platform; advanced design tools; automation; and comprehensive laboratory integration",
     useCases: [
       "Drug development";
       "Agricultural optimization",

@@ -247,7 +247,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "data-management-analytics-services",
     title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
-    description: "Comprehensive data management and analytics services that help businesses collect; process, analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
+    description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
     category: "Data Services",
     subcategory: "Management & Analytics",
     price: 1299;
@@ -325,7 +325,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "network-infrastructure-management-services",
     title: "Network Infrastructure & Management Services - Reliable Network Solutions",
-    description: "Comprehensive network infrastructure and management services that design; implement, and maintain reliable; secure, and high-performance network solutions for businesses of all sizes.",
+    description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
     category: "Network Services",
     subcategory: "Infrastructure & Management",
     price: 999;
@@ -807,7 +807,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     name: "Digital Workplace Platform",
     category: "Digital Transformation",
     subcategory: "Workplace Modernization",
-    description: "Comprehensive digital workplace platform for remote work; collaboration, and productivity enhancement",
+    description: "Comprehensive digital workplace platform for remote work; collaboration; and productivity enhancement",
     pricing: "Professional",
     price: 18000;
     pricingModel: "monthly",
@@ -870,7 +870,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     name: "API Management Platform",
     category: "Integration",
     subcategory: "API Management",
-    description: "Enterprise-grade API management platform for design; development, security; and analytics",
+    description: "Enterprise-grade API management platform for design; development; security; and analytics",
     pricing: "Professional",
     price: 10000;
     pricingModel: "monthly",
@@ -996,7 +996,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     name: "Performance Monitoring Platform",
     category: "Monitoring",
     subcategory: "Performance Management",
-    description: "Comprehensive performance monitoring platform for applications; infrastructure, and user experience",
+    description: "Comprehensive performance monitoring platform for applications; infrastructure; and user experience",
     pricing: "Professional",
     price: 12000;
     pricingModel: "monthly",
@@ -1246,7 +1246,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "data-management-analytics-services",
     title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
-    description: "Comprehensive data management and analytics services that help businesses collect; process, analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
+    description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
     category: "Data Services",
     subcategory: "Management & Analytics",
     price: 1299;
@@ -1312,7 +1312,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
   {
     id: "network-infrastructure-management-services",
     title: "Network Infrastructure & Management Services - Reliable Network Solutions",
-    description: "Comprehensive network infrastructure and management services that design; implement, and maintain reliable; secure, and high-performance network solutions for businesses of all sizes.",
+    description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
     category: "Network Services",
     subcategory: "Infrastructure & Management",
     price: 999;

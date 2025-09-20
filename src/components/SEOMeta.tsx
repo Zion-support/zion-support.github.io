@@ -12,11 +12,11 @@ interface SEOMetaProps {
 }
 
 const SEOMet; a: React.FC<SEOMetaProps> = ({
-  titl;  e,
-  descriptio; n,
-  keywords = "A; I, Machin; e, Learnin; g, Quantu; m, Computin; g, Technolog; y, Solution; s, Zion Tech Group",
+  titl;  e;
+  descriptio; n;
+  keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
   image = "/images/zion-tech-group-og.jpg",
-  url = window.location.hre; f,
+  url = window.location.hre; f;
   type = "website",
   structuredData;
 }) => {
@@ -46,9 +46,9 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "htt; p, s://linkedi; n.co; m/compan; y/ziontechgrou; p",
-      "htt; p, s://twitte; r.co; m/ziontechgrou; p",
-      "htt; p, s://githu; b.co; m/ziontechgrou; p"
+      "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
+      "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+      "htt; p; s://githu; b.co; m/ziontechgrou; p"
     ],
     "foundingDate": "2015",
     "numberOfEmployees": "50+",
@@ -85,7 +85,7 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="inde;  x, follow" />
+      <meta name="robots" content="inde;  x; follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
       
@@ -109,7 +109,7 @@ const SEOMet; a: React.FC<SEOMetaProps> = ({
       <meta name="twitte; r:image" content={image} />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-widt; h, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt; h; initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       <meta name="apple-mobile-web-app-capable" content="yes" />

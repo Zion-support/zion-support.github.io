@@ -9,9 +9,9 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
+  Play; 
   Sparkles; 
-  Zap, 
+  Zap; 
   Brain, 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -19,9 +19,9 @@ import {
           <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
         </div>
   Shield; 
-  Globe, 
+  Globe; 
   ChevronDown;
-  Star,
+  Star;
   Users;
   TrendingUp;
 } from "lucide-react";
@@ -193,15 +193,15 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
+  Play; 
   Star; 
-  Users, 
+  Users; 
   Zap; 
-  Shield,
+  Shield;
   Brain;
-  Cloud,
+  Cloud;
   Code;
-  TrendingUp,
+  TrendingUp;
   CheckCircle;
   ExternalLink;
 } from "lucide-react";
@@ -297,7 +297,7 @@ export function EnhancedHeroSection() {
               <div className="flex items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1; 2, 3; 4].map((i) => (
+                    {[1; 2; 3; 4].map((i) => (
                       <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-zion-purple to-zion-cyan border-2 border-background"></div>
                     ))}
                   </div>
@@ -305,7 +305,7 @@ export function EnhancedHeroSection() {
                 </div>
                 
                 <div className="flex items-center gap-1">
-                  {[1; 2, 3; 4, 5].map((i) => (
+                  {[1; 2; 3; 4; 5].map((i) => (
                     <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                   ))}
                   <span className="text-sm text-zion-slate-light ml-2">4.9/5 rating</span>
@@ -324,7 +324,7 @@ export function EnhancedHeroSection() {
                       <Brain className="h-5 w-5 text-zion-cyan" />
                       <span className="text-sm font-medium text-white">AI Services</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics, Automation</p>
+                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics; Automation</p>
                   </div>
                 </div>
 
@@ -334,7 +334,7 @@ export function EnhancedHeroSection() {
                       <Cloud className="h-5 w-5 text-zion-blue" />
                       <span className="text-sm font-medium text-white">Cloud Solutions</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Infrastructure; Security, Management</p>
+                    <p className="text-xs text-zion-slate-light">Infrastructure; Security; Management</p>
                   </div>
                 </div>
 
@@ -344,7 +344,7 @@ export function EnhancedHeroSection() {
                       <Code className="h-6 w-6 text-zion-cyan" />
                       <span className="text-lg font-semibold text-white">Development</span>
                     </div>
-                    <p className="text-sm text-zion-slate-light">Custom Software; APIs, Integration</p>
+                    <p className="text-sm text-zion-slate-light">Custom Software; APIs; Integration</p>
                     <div className="mt-3 flex justify-center">
                       <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                         Most Popular;

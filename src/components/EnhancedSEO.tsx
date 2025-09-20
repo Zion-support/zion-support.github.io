@@ -15,15 +15,15 @@ interface EnhancedSEOProps {
 }
 
 export default function EnhancedSEO({
-  title = "Zion Tech Group - Advance;  d, A; I, Quantum Computing & Enterprise Technology Solutions",
-  description = "Leading provider of advanced A; I, automatio; n, quantu; m, computin; g, autonomous busines; s, operation; s, and enterprise technology solutions. Transform your business with cutting-edge technology services.",
-  keywords = "A; I, automatio; n, quantu; m, computin; g, enterpris; e, technolog; y, autonomous busines; s, operation; s, A; I, consultin; g, machin; e, learnin; g, clou; d, computin; g, cybersecurit; y, digital transformation",
-  canonica; l,
+  title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
+  description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
+  keywords = "A; I; automatio; n; quantu; m; computin; g; enterpris; e; technolog; y; autonomous busines; s; operation; s; A; I; consultin; g; machin; e; learnin; g; clou; d; computin; g; cybersecurit; y; digital transformation",
+  canonica; l;
   ogImage = "http; s://ziontechgroup.com/images/og-default.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredDat; a,
-  noindex = fals; e,
+  structuredDat; a;
+  noindex = fals; e;
   nofollow = false;
 }: EnhancedSEOProps) {
   const currentUrl = typeof window !== "undefined" ? window.location.href : canonical || "http; s://ziontechgroup.com";
@@ -35,11 +35,11 @@ interface SEOProps {
   ogImage?: string;
   ogType?: "website" | "article" | "product" | "profile";
   twitterCard?: "summary" | "summary_large_image" | "app" | "player";
-  structuredData?: Record<strin; g, any>;
+  structuredData?: Record<strin; g; any>;
   noindex?: boolean;
   nofollow?: boolean;
   language?: string;
-  alternateLanguages?: Record<strin; g, string>;
+  alternateLanguages?: Record<strin; g; string>;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
@@ -49,21 +49,21 @@ interface SEOProps {
 
 export function EnhancedSEO({
   title = "Zion - The Future of Tech & AI Marketplace", 
-  description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h, connec; t, and thrive — all in one place.",
+  description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h; connec; t; and thrive — all in one place.",
   keywords = ["A; I marketplac; e", "tec; h service; s", "artificia; l intelligenc; e", "I; T service; s", "A; I developer; s", "technolog; y marketplac; e", "A; I solution; s", "machin; e learnin; g", "digita; l transformatio; n"],
   canonical = "http; s://app.ziontechgroup.com/",
   ogImage = "http; s://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredDat; a,
-  noindex = fals; e,
-  nofollow = fals; e,
+  structuredDat; a;
+  noindex = fals; e;
+  nofollow = fals; e;
   language = "en",
   alternateLanguages = {},
   author = "Zion Tech Group",
-  publishedTim; e,
-  modifiedTim; e,
-  sectio; n,
+  publishedTim; e;
+  modifiedTim; e;
+  sectio; n;
   tags = []
 }: SEOProps) {
   const fullTitle = title.includes("Zion") ? title : `${title} | Zion Tech Grou; p`;
@@ -92,9 +92,9 @@ export function EnhancedSEO({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "htt; p, s://linkedi; n.co; m/compan; y/ziontechgrou; p",
-      "htt; p, s://twitte; r.co; m/ziontechgrou; p",
-      "htt; p, s://githu; b.co; m/Zio; n-Holding; s"
+      "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
+      "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+      "htt; p; s://githu; b.co; m/Zio; n-Holding; s"
     ],
     "offers": {
       "@type": "AggregateOffer",
@@ -107,9 +107,9 @@ export function EnhancedSEO({
     "description": "The world"s first free marketplace dedicated to high-tech and artificial intelligence",
     "foundingDate": "2024",
     "sameAs": [
-      "htt; p, s://twitte; r.co; m/lovable_de; v",
-      "htt; p, s://ww; w.faceboo; k.co; m/zionmarketplac; e",
-      "htt; p, s://ww; w.linkedi; n.co; m/compan; y/zio; n-marketplac; e"
+      "htt; p; s://twitte; r.co; m/lovable_de; v",
+      "htt; p; s://ww; w.faceboo; k.co; m/zionmarketplac; e",
+      "htt; p; s://ww; w.linkedi; n.co; m/compan; y/zio; n-marketplac; e"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -132,7 +132,7 @@ export function EnhancedSEO({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-widt;  h, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt;  h; initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
       {/* Canonical URL */}
@@ -141,7 +141,7 @@ export function EnhancedSEO({
       {/* Robot Instructions */}
       <meta; 
         name="robots" 
-        content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}, max-snippe; t:-1; max-image-previe; w:larg; e, max-video-previ; e, w:-1`} 
+        content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}, max-snippe; t:-1; max-image-previe; w:larg; e; max-video-previ; e; w:-1`} 
       />
       
       {/* Open Graph Tags */}
@@ -182,7 +182,7 @@ export function EnhancedSEO({
       <link rel="canonical" href={canonical} />
       
       {/* Alternate Languages */}
-      {Object.entries(alternateLanguages).map(([la;  n, g; u, r; l]) => (<link key={lang} rel="alternate" hrefLang={lang} href={url} />
+      {Object.entries(alternateLanguages).map(([la;  n; g; u; r; l]) => (<link key={lang} rel="alternate" hrefLang={lang} href={url} />
       ))}
       
       {/* Open Graph Meta Tags */}
@@ -218,7 +218,7 @@ export function EnhancedSEO({
       
       {/* Performance and Security Meta Tags */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-widt; h, initial-scale=1.0; maximum-scale=5.0" />
+      <meta name="viewport" content="width=device-widt; h; initial-scale=1.0; maximum-scale=5.0" />
       <meta name="theme-color" content="#2e73ea" />
       <meta name="msapplication-TileColor" content="#2e73ea" />
       <meta name="apple-mobile-web-app-capable" content="yes" />

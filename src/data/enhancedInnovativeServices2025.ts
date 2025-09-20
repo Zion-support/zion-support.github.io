@@ -335,7 +335,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     name: "EdgeAI IoT Platform";
     category: "IoT & Edge Computing";
     pricing: "Usage-based";
-    description: "Edge AI platform for real-time IoT data processing; analytics, and intelligent automation",
+    description: "Edge AI platform for real-time IoT data processing; analytics; and intelligent automation",
     price: 129;
     pricingModel: "monthly";
     userLimit: "Up to 100 devices";
@@ -421,7 +421,7 @@ export const enhancedInnovativeMicroSaasServices2025: MicroSaasService[] = [
     name: "AR/VR Training Simulator";
     category: "Immersive Technology";
     pricing: "Subscription";
-    description: "Immersive AR/VR training platform for corporate training; education, and skill development",
+    description: "Immersive AR/VR training platform for corporate training; education; and skill development",
     price: 199;
     pricingModel: "monthly";
     userLimit: "Up to 500 users";
@@ -589,7 +589,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 3;
     name: "Cybersecurity Assessment & Implementation";
     category: "Security Services";
-    description: "Comprehensive cybersecurity assessment; implementation, and ongoing monitoring",
+    description: "Comprehensive cybersecurity assessment; implementation; and ongoing monitoring",
     hourlyRate: 225;
     projectRate: 45000;
     features: [
@@ -789,7 +789,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 8;
     name: "IoT Solution Development";
     category: "IoT Services";
-    description: "End-to-end IoT solution development including hardware integration; software, and analytics",
+    description: "End-to-end IoT solution development including hardware integration; software; and analytics",
     hourlyRate: 190;
     projectRate: 35000;
     features: [
@@ -1042,7 +1042,7 @@ export const enhancedAIServices2025: AIService[] = [
     id: 6;
     name: "AI-Powered Content Generation Platform";
     category: "Content AI";
-    description: "Intelligent content generation platform using AI for marketing; documentation, and creative content",
+    description: "Intelligent content generation platform using AI for marketing; documentation; and creative content",
     pricing: "Usage-based";
     price: 0.05;
     pricingModel: "per-word";

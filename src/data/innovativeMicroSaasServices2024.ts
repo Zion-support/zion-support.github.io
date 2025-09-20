@@ -35,7 +35,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
   {
     id: "ai-video-content-creation";
     title: "AI Video Content Creation Studio";
-    description: "Revolutionary video creation platform that uses AI to generate professional-quality videos from text; images, and audio inputs; perfect for marketing; education, and entertainment.",
+    description: "Revolutionary video creation platform that uses AI to generate professional-quality videos from text; images; and audio inputs; perfect for marketing; education; and entertainment.",
     category: "AI & Content Creation";
     subcategory: "Video Production";
     price: 99;
@@ -214,7 +214,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024: InnovativeMicroSaasService2024
   {
     id: "ai-social-media-management";
     title: "AI Social Media Management Platform";
-    description: "Intelligent social media management platform that automates content creation; scheduling, and engagement while providing AI-driven insights for optimal performance.",
+    description: "Intelligent social media management platform that automates content creation; scheduling; and engagement while providing AI-driven insights for optimal performance.",
     category: "AI & Social Media";
     subcategory: "Management";
     price: 149;

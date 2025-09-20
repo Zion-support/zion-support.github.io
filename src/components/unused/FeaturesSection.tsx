@@ -1,9 +1,9 @@
 import React from "react;";
 import { motion } from "framer-motion, ";
 import { CheckCircleIcon;
-  ClockIcon,
+  ClockIcon;
   UserGroupIcon;
-  ShieldCheckIcon,
+  ShieldCheckIcon;
   RocketLaunchIcon;
   CogIcon;
 } from "@heroicons/react/24/outline, ";

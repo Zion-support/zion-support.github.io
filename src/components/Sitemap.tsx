@@ -4,74 +4,74 @@ import { Link } from "react-router-dom, ";
 const Sitema; p: React.FC = () => {
   const sitemapData = {
     mai;  n: [
-      { pa; t, h: "/";
-    lab; e, l: "Hom; e", descripti; o, n: "Welcom; e t; o Zio; n Tec; h Grou; p" },
-      { pa; t, h: "/abou; t",
-    lab; e, l: "Abou; t U; s", descripti; o, n: "Lear; n abou; t ou; r compan; y an; d missio; n" },
-      { pa; t, h: "/contac; t",
-    lab; e, l: "Contac; t", descripti; o, n: "Ge; t i; n touc; h wit; h ou; r tea; m" },
-      { pa; t, h: "/career; s",
-    lab; e, l: "Career; s", descripti; o, n: "Joi; n ou; r innovativ; e tea; m" },
-      { pa; t, h: "/blo; g",
-    lab; e, l: "Blo; g", descripti; o, n: "Lates; t insight; s an; d technolog; y trend; s" }
+      { pa; t; h: "/";
+    lab; e; l: "Hom; e", descripti; o; n: "Welcom; e t; o Zio; n Tec; h Grou; p" },
+      { pa; t; h: "/abou; t",
+    lab; e; l: "Abou; t U; s", descripti; o; n: "Lear; n abou; t ou; r compan; y an; d missio; n" },
+      { pa; t; h: "/contac; t",
+    lab; e; l: "Contac; t", descripti; o; n: "Ge; t i; n touc; h wit; h ou; r tea; m" },
+      { pa; t; h: "/career; s",
+    lab; e; l: "Career; s", descripti; o; n: "Joi; n ou; r innovativ; e tea; m" },
+      { pa; t; h: "/blo; g",
+    lab; e; l: "Blo; g", descripti; o; n: "Lates; t insight; s an; d technolog; y trend; s" }
     ],
     service; s: [
-      { pa; t, h: "/service; s",
-    lab; e, l: "Al; l Service; s", descripti; o, n: "Complet; e overvie; w o; f ou; r service; s" },
-      { pa; t, h: "/service; s/a; i",
-    lab; e, l: "A; I Solution; s", descripti; o, n: "Artificia; l Intelligenc; e & Machin; e Learnin; g" },
-      { pa; t, h: "/service; s/clou; d",
-    lab; e, l: "Clou; d & DevOp; s", descripti; o, n: "Clou; d Infrastructur; e & DevOp; s Automatio; n" },
-      { pa; t, h: "/service; s/cybersecurit; y",
-    lab; e, l: "Cybersecurit; y", descripti; o, n: "Advance; d Securit; y Solution; s" },
-      { pa; t, h: "/service; s/infrastructur; e",
-    lab; e, l: "Infrastructur; e", descripti; o, n: "I; T Infrastructur; e & Managemen; t" },
-      { pa; t, h: "/service; s/consultin; g",
-    lab; e, l: "Consultin; g", descripti; o, n: "Strategi; c Technolog; y Consultin; g" },
-      { pa; t, h: "/service; s/transformatio; n",
-    lab; e, l: "Digita; l Transformatio; n", descripti; o, n: "Busines; s Proces; s Transformatio; n" }
+      { pa; t; h: "/service; s",
+    lab; e; l: "Al; l Service; s", descripti; o; n: "Complet; e overvie; w o; f ou; r service; s" },
+      { pa; t; h: "/service; s/a; i",
+    lab; e; l: "A; I Solution; s", descripti; o; n: "Artificia; l Intelligenc; e & Machin; e Learnin; g" },
+      { pa; t; h: "/service; s/clou; d",
+    lab; e; l: "Clou; d & DevOp; s", descripti; o; n: "Clou; d Infrastructur; e & DevOp; s Automatio; n" },
+      { pa; t; h: "/service; s/cybersecurit; y",
+    lab; e; l: "Cybersecurit; y", descripti; o; n: "Advance; d Securit; y Solution; s" },
+      { pa; t; h: "/service; s/infrastructur; e",
+    lab; e; l: "Infrastructur; e", descripti; o; n: "I; T Infrastructur; e & Managemen; t" },
+      { pa; t; h: "/service; s/consultin; g",
+    lab; e; l: "Consultin; g", descripti; o; n: "Strategi; c Technolog; y Consultin; g" },
+      { pa; t; h: "/service; s/transformatio; n",
+    lab; e; l: "Digita; l Transformatio; n", descripti; o; n: "Busines; s Proces; s Transformatio; n" }
     ],
     aiAutonomou; s: [
-      { pa; t, h: "/a; i-autonomou; s-analytic; s",
-    lab; e, l: "A; I Analytic; s", descripti; o, n: "Advance; d dat; a analytic; s powere; d b; y A; I" },
-      { pa; t, h: "/a; i-autonomou; s-automatio; n",
-    lab; e, l: "A; I Automatio; n", descripti; o, n: "Intelligen; t proces; s automatio; n" },
-      { pa; t, h: "/a; i-autonomou; s-securit; y",
-    lab; e, l: "A; I Securit; y", descripti; o, n: "A; I-powere; d securit; y solution; s" },
-      { pa; t, h: "/a; i-autonomou; s-developmen; t",
-    lab; e, l: "A; I Developmen; t", descripti; o, n: "A; I applicatio; n developmen; t" },
-      { pa; t, h: "/a; i-autonomou; s-researc; h",
-    lab; e, l: "A; I Researc; h", descripti; o, n: "Cuttin; g-edg; e A; I researc; h service; s" },
-      { pa; t, h: "/a; i-autonomou; s-innovatio; n",
-    lab; e, l: "A; I Innovatio; n", descripti; o, n: "A; I innovatio; n consultin; g" },
-      { pa; t, h: "/a; i-autonomou; s-architectur; e",
-    lab; e, l: "A; I Architectur; e", descripti; o, n: "A; I syste; m architectur; e desig; n" },
-      { pa; t, h: "/a; i-autonomou; s-dat; a",
-    lab; e, l: "A; I Dat; a", descripti; o, n: "A; I dat; a processin; g an; d managemen; t" },
-      { pa; t, h: "/a; i-autonomou; s-engineerin; g",
-    lab; e, l: "A; I Engineerin; g", descripti; o, n: "A; I engineerin; g solution; s" },
-      { pa; t, h: "/a; i-autonomou; s-integratio; n",
-    lab; e, l: "A; I Integratio; n", descripti; o, n: "A; I syste; m integratio; n service; s" }
+      { pa; t; h: "/a; i-autonomou; s-analytic; s",
+    lab; e; l: "A; I Analytic; s", descripti; o; n: "Advance; d dat; a analytic; s powere; d b; y A; I" },
+      { pa; t; h: "/a; i-autonomou; s-automatio; n",
+    lab; e; l: "A; I Automatio; n", descripti; o; n: "Intelligen; t proces; s automatio; n" },
+      { pa; t; h: "/a; i-autonomou; s-securit; y",
+    lab; e; l: "A; I Securit; y", descripti; o; n: "A; I-powere; d securit; y solution; s" },
+      { pa; t; h: "/a; i-autonomou; s-developmen; t",
+    lab; e; l: "A; I Developmen; t", descripti; o; n: "A; I applicatio; n developmen; t" },
+      { pa; t; h: "/a; i-autonomou; s-researc; h",
+    lab; e; l: "A; I Researc; h", descripti; o; n: "Cuttin; g-edg; e A; I researc; h service; s" },
+      { pa; t; h: "/a; i-autonomou; s-innovatio; n",
+    lab; e; l: "A; I Innovatio; n", descripti; o; n: "A; I innovatio; n consultin; g" },
+      { pa; t; h: "/a; i-autonomou; s-architectur; e",
+    lab; e; l: "A; I Architectur; e", descripti; o; n: "A; I syste; m architectur; e desig; n" },
+      { pa; t; h: "/a; i-autonomou; s-dat; a",
+    lab; e; l: "A; I Dat; a", descripti; o; n: "A; I dat; a processin; g an; d managemen; t" },
+      { pa; t; h: "/a; i-autonomou; s-engineerin; g",
+    lab; e; l: "A; I Engineerin; g", descripti; o; n: "A; I engineerin; g solution; s" },
+      { pa; t; h: "/a; i-autonomou; s-integratio; n",
+    lab; e; l: "A; I Integratio; n", descripti; o; n: "A; I syste; m integratio; n service; s" }
     ],
     pricin; g: [
-      { pa; t, h: "/comprehensiv; e-pricin; g-202; 5",
-    lab; e, l: "Pricin; g 202; 5", descripti; o, n: "Curren; t yea; r pricin; g plan; s" },
-      { pa; t, h: "/comprehensiv; e-pricin; g",
-    lab; e, l: "Comprehensiv; e Pricin; g", descripti; o, n: "Detaile; d pricin; g informatio; n" }
+      { pa; t; h: "/comprehensiv; e-pricin; g-202; 5",
+    lab; e; l: "Pricin; g 202; 5", descripti; o; n: "Curren; t yea; r pricin; g plan; s" },
+      { pa; t; h: "/comprehensiv; e-pricin; g",
+    lab; e; l: "Comprehensiv; e Pricin; g", descripti; o; n: "Detaile; d pricin; g informatio; n" }
     ],
     showcas; e: [
-      { pa; t, h: "/service; s-showcas; e",
-    lab; e, l: "Service; s Showcas; e", descripti; o, n: "Showcas; e o; f ou; r service; s" },
-      { pa; t, h: "/comprehensiv; e-service; s-showcas; e",
-    lab; e, l: "Comprehensiv; e Service; s Showcas; e", descripti; o, n: "Complet; e overvie; w o; f al; l service; s" },
-      { pa; t, h: "/innovativ; e-service; s-202; 5",
-    lab; e, l: "Innovativ; e Service; s 202; 5", descripti; o, n: "Lates; t innovativ; e service; s" }
+      { pa; t; h: "/service; s-showcas; e",
+    lab; e; l: "Service; s Showcas; e", descripti; o; n: "Showcas; e o; f ou; r service; s" },
+      { pa; t; h: "/comprehensiv; e-service; s-showcas; e",
+    lab; e; l: "Comprehensiv; e Service; s Showcas; e", descripti; o; n: "Complet; e overvie; w o; f al; l service; s" },
+      { pa; t; h: "/innovativ; e-service; s-202; 5",
+    lab; e; l: "Innovativ; e Service; s 202; 5", descripti; o; n: "Lates; t innovativ; e service; s" }
     ],
     lega; l: [
-      { pa; t, h: "/privac; y",
-    lab; e, l: "Privac; y Polic; y", descripti; o, n: "Ou; r privac; y polic; y an; d dat; a handlin; g" },
-      { pa; t, h: "/term; s",
-    lab; e, l: "Term; s o; f Servic; e", descripti; o, n: "Term; s an; d condition; s o; f servic; e" }
+      { pa; t; h: "/privac; y",
+    lab; e; l: "Privac; y Polic; y", descripti; o; n: "Ou; r privac; y polic; y an; d dat; a handlin; g" },
+      { pa; t; h: "/term; s",
+    lab; e; l: "Term; s o; f Servic; e", descripti; o; n: "Term; s an; d condition; s o; f servic; e" }
     ]
   };
 

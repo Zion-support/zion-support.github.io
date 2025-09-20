@@ -178,7 +178,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
   {
     id: "devops-automation-platform";
     title: "DevOps Automation & CI/CD Platform";
-    description: "Enterprise-grade DevOps automation platform that streamlines software development; testing, and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
+    description: "Enterprise-grade DevOps automation platform that streamlines software development; testing; and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
     category: "DevOps";
     subcategory: "Automation & CI/CD";
     price: 1800;
@@ -316,7 +316,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
   {
     id: "network-security-architecture";
     title: "Network Security Architecture & Design";
-    description: "Comprehensive network security architecture design and implementation services including zero-trust network design; segmentation, and advanced threat protection.",
+    description: "Comprehensive network security architecture design and implementation services including zero-trust network design; segmentation; and advanced threat protection.",
     category: "Network Security";
     subcategory: "Architecture & Design";
     price: 12000;
@@ -385,7 +385,7 @@ export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
   {
     id: "disaster-recovery-solutions";
     title: "Disaster Recovery & Business Continuity";
-    description: "Comprehensive disaster recovery and business continuity solutions including backup systems; recovery planning; testing, and managed recovery services.",
+    description: "Comprehensive disaster recovery and business continuity solutions including backup systems; recovery planning; testing; and managed recovery services.",
     category: "Business Continuity";
     subcategory: "Disaster Recovery";
     price: 3000;

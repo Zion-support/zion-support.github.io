@@ -77,11 +77,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "2-3 weeks";
     category: "Legal Technology";
     realService: true;
-    technology: ["Python; TensorFlow, NLP; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["DocuSign; Adobe Acrobat; Microsoft Office; Salesforce, Clio; PracticePanther"],
+    technology: ["Python; TensorFlow; NLP; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["DocuSign; Adobe Acrobat; Microsoft Office; Salesforce; Clio; PracticePanther"],
     useCases: ["Contract review; Due diligence; Legal research; Compliance checking; Risk assessment"],
     roi: "Law firms report 300% ROI through faster document review and reduced legal costs.";
-    competitors: ["Kira Systems; eBrevia, Luminance; ThoughtRiver"],
+    competitors: ["Kira Systems; eBrevia; Luminance; ThoughtRiver"],
     marketSize: "$2.8B legal AI market";
     growthRate: "40% annual growth";
     variant: "ai-legal-enterprise";
@@ -133,11 +133,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "4-6 weeks";
     category: "Cybersecurity";
     realService: true;
-    technology: ["Post-quantum algorithms; Rust, Go; React, Kubernetes; AWS, Azure"],
-    integrations: ["Active Directory; Okta, Duo; Splunk, ServiceNow; Jira"],
-    useCases: ["Data protection; Network security; Application security; Compliance, Incident response"],
+    technology: ["Post-quantum algorithms; Rust; Go; React; Kubernetes; AWS; Azure"],
+    integrations: ["Active Directory; Okta; Duo; Splunk; ServiceNow; Jira"],
+    useCases: ["Data protection; Network security; Application security; Compliance; Incident response"],
     roi: "Organizations report 250% ROI through reduced security incidents and compliance automation.";
-    competitors: ["Palo Alto Networks; CrowdStrike, SentinelOne; Carbon Black"],
+    competitors: ["Palo Alto Networks; CrowdStrike; SentinelOne; Carbon Black"],
     marketSize: "$4.2B quantum cybersecurity market";
     growthRate: "55% annual growth";
     variant: "quantum-security-enterprise";
@@ -189,11 +189,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "6-8 weeks";
     category: "Healthcare Technology";
     realService: true;
-    technology: ["Python; TensorFlow, PyTorch; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["Epic; Cerner, Allscripts; Athenahealth, Practice Fusion; eClinicalWorks"],
+    technology: ["Python; TensorFlow; PyTorch; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Epic; Cerner; Allscripts; Athenahealth; Practice Fusion; eClinicalWorks"],
     useCases: ["Patient care optimization; Population health management; Clinical research; Quality improvement; Cost reduction"],
     roi: "Healthcare organizations report 400% ROI through improved patient outcomes and reduced costs.";
-    competitors: ["Epic; Cerner, Allscripts; Athenahealth"],
+    competitors: ["Epic; Cerner; Allscripts; Athenahealth"],
     marketSize: "$3.5B healthcare AI market";
     growthRate: "45% annual growth";
     variant: "ai-healthcare-enterprise";
@@ -221,7 +221,7 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     tagline: "End-to-end supply chain visibility with blockchain technology";
     price: "$1;599",
     period: "/month";
-    description: "Revolutionary supply chain platform using blockchain technology to provide complete transparency; traceability, and authenticity verification.",
+    description: "Revolutionary supply chain platform using blockchain technology to provide complete transparency; traceability; and authenticity verification.",
     features: [
       "Blockchain-based tracking";
       "End-to-end visibility",
@@ -245,11 +245,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "3-4 weeks";
     category: "Blockchain & Supply Chain";
     realService: true;
-    technology: ["Ethereum; Hyperledger, Solidity; React, Node.js; PostgreSQL, AWS"],
-    integrations: ["SAP; Oracle, Salesforce; Shopify, WooCommerce; Magento"],
-    useCases: ["Product traceability; Quality assurance; Compliance, Sustainability; Risk management"],
+    technology: ["Ethereum; Hyperledger; Solidity; React; Node.js; PostgreSQL; AWS"],
+    integrations: ["SAP; Oracle; Salesforce; Shopify; WooCommerce; Magento"],
+    useCases: ["Product traceability; Quality assurance; Compliance; Sustainability; Risk management"],
     roi: "Companies report 350% ROI through improved transparency and reduced fraud.";
-    competitors: ["IBM Food Trust; VeChain, Provenance; OriginTrail"],
+    competitors: ["IBM Food Trust; VeChain; Provenance; OriginTrail"],
     marketSize: "$1.8B blockchain supply chain market";
     growthRate: "50% annual growth";
     variant: "blockchain-supply-chain-enterprise";
@@ -301,11 +301,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "4-6 weeks";
     category: "Financial Technology";
     realService: true;
-    technology: ["Python; TensorFlow, Scikit-learn; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["Bloomberg; Reuters, FactSet; Morningstar, Salesforce; SAP"],
-    useCases: ["Credit risk assessment; Market risk analysis; Compliance, Portfolio management; Regulatory reporting"],
+    technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Bloomberg; Reuters; FactSet; Morningstar; Salesforce; SAP"],
+    useCases: ["Credit risk assessment; Market risk analysis; Compliance; Portfolio management; Regulatory reporting"],
     roi: "Financial institutions report 300% ROI through improved risk management and regulatory compliance.";
-    competitors: ["RiskMetrics; Bloomberg, FactSet; Morningstar"],
+    competitors: ["RiskMetrics; Bloomberg; FactSet; Morningstar"],
     marketSize: "$2.2B financial risk management market";
     growthRate: "35% annual growth";
     variant: "ai-risk-management-enterprise";
@@ -357,9 +357,9 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "2-3 weeks";
     category: "Edge Computing & IoT";
     realService: true;
-    technology: ["Kubernetes; Docker, Python; Go, React; PostgreSQL, Redis; Multi-cloud"],
+    technology: ["Kubernetes; Docker; Python; Go; React; PostgreSQL; Redis; Multi-cloud"],
     integrations: ["AWS IoT; Azure IoT; Google Cloud IoT; Siemens MindSphere; PTC ThingWorx"],
-    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation, Healthcare monitoring"],
+    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation; Healthcare monitoring"],
     roi: "Organizations report 250% ROI through reduced latency and improved real-time decision making.";
     competitors: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; Siemens MindSphere"],
     marketSize: "$1.5B edge computing market";
@@ -413,11 +413,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "1-2 weeks";
     category: "Marketing Technology";
     realService: true;
-    technology: ["Python; TensorFlow, React; Node.js; PostgreSQL, Redis; Docker, AWS"],
-    integrations: ["Salesforce; HubSpot, Mailchimp; Facebook Ads; Google Ads; LinkedIn Ads"],
-    useCases: ["Lead generation; Customer acquisition; Campaign optimization; Personalization, ROI improvement"],
+    technology: ["Python; TensorFlow; React; Node.js; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Salesforce; HubSpot; Mailchimp; Facebook Ads; Google Ads; LinkedIn Ads"],
+    useCases: ["Lead generation; Customer acquisition; Campaign optimization; Personalization; ROI improvement"],
     roi: "Companies report 400% ROI through improved conversion rates and reduced customer acquisition costs.";
-    competitors: ["HubSpot; Marketo, Pardot; ActiveCampaign"],
+    competitors: ["HubSpot; Marketo; Pardot; ActiveCampaign"],
     marketSize: "$2.8B marketing automation market";
     growthRate: "30% annual growth";
     variant: "ai-marketing-enterprise";
@@ -469,9 +469,9 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "8-12 weeks";
     category: "Quantum Computing";
     realService: true;
-    technology: ["Qiskit; Cirq, PennyLane; Python, React; PostgreSQL, Quantum simulators"],
+    technology: ["Qiskit; Cirq; PennyLane; Python; React; PostgreSQL; Quantum simulators"],
     integrations: ["IBM Quantum; Google Quantum; AWS Braket; Azure Quantum; D-Wave"],
-    useCases: ["Drug discovery; Financial modeling; Optimization problems; Cryptography, Scientific research"],
+    useCases: ["Drug discovery; Financial modeling; Optimization problems; Cryptography; Scientific research"],
     roi: "Research institutions report 500% ROI through breakthrough discoveries and accelerated research.";
     competitors: ["IBM Quantum; Google Quantum; D-Wave; Rigetti"],
     marketSize: "$800M quantum computing market";
@@ -525,11 +525,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "2-3 weeks";
     category: "Human Resources Technology";
     realService: true;
-    technology: ["Python; TensorFlow, Scikit-learn; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["Workday; BambooHR, ADP; Paychex, Greenhouse; Lever"],
+    technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Workday; BambooHR; ADP; Paychex; Greenhouse; Lever"],
     useCases: ["Employee retention; Recruitment optimization; Performance management; Workforce planning; Compliance"],
     roi: "Companies report 300% ROI through improved employee retention and recruitment efficiency.";
-    competitors: ["Workday; BambooHR, ADP; Paychex"],
+    competitors: ["Workday; BambooHR; ADP; Paychex"],
     marketSize: "$1.8B HR analytics market";
     growthRate: "35% annual growth";
     variant: "ai-hr-enterprise";
@@ -581,11 +581,11 @@ export const advancedRealServices2025: AdvancedRealService[] = [
     setupTime: "4-6 weeks";
     category: "Energy & Sustainability";
     realService: true;
-    technology: ["Python; TensorFlow, IoT sensors; React, PostgreSQL; Redis, Docker; AWS"],
+    technology: ["Python; TensorFlow; IoT sensors; React; PostgreSQL; Redis; Docker; AWS"],
     integrations: ["Building management systems; SCADA systems; Solar inverters; Smart meters; Utility APIs"],
     useCases: ["Energy optimization; Cost reduction; Sustainability reporting; Predictive maintenance; Compliance"],
     roi: "Organizations report 250% ROI through energy cost reduction and sustainability improvements.";
-    competitors: ["Schneider Electric; Siemens, Honeywell; Johnson Controls"],
+    competitors: ["Schneider Electric; Siemens; Honeywell; Johnson Controls"],
     marketSize: "$1.2B energy management market";
     growthRate: "30% annual growth";
     variant: "sustainable-energy-enterprise";

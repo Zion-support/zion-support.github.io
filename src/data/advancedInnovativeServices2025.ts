@@ -40,7 +40,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "ai-multimodal-orchestrator";
     title: "AI Multimodal Orchestrator Pro";
-    description: "Revolutionary AI platform that seamlessly orchestrates text; image, video; and audio processing for comprehensive content understanding and generation.",
+    description: "Revolutionary AI platform that seamlessly orchestrates text; image; video; and audio processing for comprehensive content understanding and generation.",
     category: "Advanced AI & ML";
     subcategory: "Multimodal AI";
     price: 2499;
@@ -114,7 +114,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
     currency: "$";
     pricingModel: "monthly";
     features: [
-      "Multi-chain support (Ethereum; Polygon, Solana)",
+      "Multi-chain support (Ethereum; Polygon; Solana)",
       "Smart contract development & auditing",
       "Supply chain transparency tracking",
       "DeFi integration capabilities",
@@ -172,7 +172,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "quantum-optimization-platform";
     title: "Quantum Optimization Platform Elite";
-    description: "Advanced quantum computing platform for solving complex optimization problems in logistics; finance, and scientific research with hybrid quantum-classical algorithms.",
+    description: "Advanced quantum computing platform for solving complex optimization problems in logistics; finance; and scientific research with hybrid quantum-classical algorithms.",
     category: "Quantum Computing";
     subcategory: "Optimization";
     price: 5999;
@@ -237,7 +237,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "ai-threat-intelligence-platform";
     title: "AI Threat Intelligence Platform Pro";
-    description: "Next-generation cybersecurity platform that uses AI to detect; analyze, and respond to advanced threats in real-time with predictive capabilities.",
+    description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to advanced threats in real-time with predictive capabilities.",
     category: "Advanced Cybersecurity";
     subcategory: "Threat Intelligence";
     price: 3499;
@@ -302,7 +302,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "edge-ai-orchestrator";
     title: "Edge AI Orchestrator Platform";
-    description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics; automation, and decision-making.",
+    description: "Intelligent edge computing platform that brings AI processing closer to data sources for real-time analytics; automation; and decision-making.",
     category: "Edge Computing & IoT";
     subcategory: "Edge AI";
     price: 1999;
@@ -367,7 +367,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "real-time-data-fabric";
     title: "Real-Time Data Fabric Platform";
-    description: "Unified data platform that provides real-time data processing; analytics, and insights across multiple sources with AI-powered automation.",
+    description: "Unified data platform that provides real-time data processing; analytics; and insights across multiple sources with AI-powered automation.",
     category: "Advanced Data Analytics";
     subcategory: "Real-time Processing";
     price: 2799;
@@ -432,7 +432,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "autonomous-workflow-orchestrator";
     title: "Autonomous Workflow Orchestrator Pro";
-    description: "Intelligent workflow automation platform that uses AI to design; optimize, and execute complex business processes autonomously.",
+    description: "Intelligent workflow automation platform that uses AI to design; optimize; and execute complex business processes autonomously.",
     category: "Autonomous Systems";
     subcategory: "Workflow Automation";
     price: 1899;
@@ -497,7 +497,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025: AdvancedInnovativeService2025[] 
   {
     id: "digital-twin-platform";
     title: "Digital Twin Platform Elite";
-    description: "Advanced digital twin platform for creating virtual replicas of physical assets; processes, and systems with real-time monitoring and predictive capabilities.",
+    description: "Advanced digital twin platform for creating virtual replicas of physical assets; processes; and systems with real-time monitoring and predictive capabilities.",
     category: "Digital Twin Technology";
     subcategory: "Asset Management";
     price: 4499;

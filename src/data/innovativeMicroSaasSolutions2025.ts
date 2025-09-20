@@ -30,7 +30,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025: InnovativeMicroSaasSolution20
   {
     id: "ai-content-generation-suite";
     title: "AI-Powered Content Generation Suite";
-    description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos, social media posts; and marketing materials.",
+    description: "Comprehensive AI platform that generates high-quality; SEO-optimized content across multiple formats including articles; videos; social media posts; and marketing materials.",
     category: "AI Content Creation";
     subcategory: "Content Generation";
     price: 199;

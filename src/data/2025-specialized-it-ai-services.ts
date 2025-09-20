@@ -77,11 +77,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "12-16 weeks";
     category: "Neuromorphic Computing";
     realService: true;
-    technology: ["Neuromorphic chips; Python, C++, CUDA; React, PostgreSQL; Specialized hardware"],
-    integrations: ["Intel Loihi; BrainChip, SpiNNaker; Research platforms; Academic tools"],
+    technology: ["Neuromorphic chips; Python; C++, CUDA; React; PostgreSQL; Specialized hardware"],
+    integrations: ["Intel Loihi; BrainChip; SpiNNaker; Research platforms; Academic tools"],
     useCases: ["AI research; Pattern recognition; Real-time processing; Cognitive computing; Neuromorphic research"],
     roi: "Research institutions report 600% ROI through breakthrough discoveries and accelerated AI research.";
-    competitors: ["Intel Loihi; BrainChip, SpiNNaker; IBM TrueNorth"],
+    competitors: ["Intel Loihi; BrainChip; SpiNNaker; IBM TrueNorth"],
     marketSize: "$500M neuromorphic computing market";
     growthRate: "70% annual growth";
     variant: "neuromorphic-research-enterprise";
@@ -133,11 +133,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "6-8 weeks";
     category: "Privacy AI";
     realService: true;
-    technology: ["Python; TensorFlow, PyTorch; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["TensorFlow; PyTorch, OpenMined; Healthcare systems; Financial platforms"],
+    technology: ["Python; TensorFlow; PyTorch; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["TensorFlow; PyTorch; OpenMined; Healthcare systems; Financial platforms"],
     useCases: ["Healthcare AI; Financial modeling; Government analytics; Research collaboration; Privacy-preserving ML"],
     roi: "Organizations report 400% ROI through improved AI capabilities while maintaining data privacy.";
-    competitors: ["OpenMined; TensorFlow Federated; PySyft, IBM Federated Learning"],
+    competitors: ["OpenMined; TensorFlow Federated; PySyft; IBM Federated Learning"],
     marketSize: "$1.2B federated learning market";
     growthRate: "50% annual growth";
     variant: "federated-learning-enterprise";
@@ -165,7 +165,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     tagline: "Comprehensive framework for ethical AI development and governance";
     price: "$1;899",
     period: "/month";
-    description: "Advanced AI ethics and governance platform providing comprehensive frameworks; tools, and monitoring for responsible AI development and deployment.",
+    description: "Advanced AI ethics and governance platform providing comprehensive frameworks; tools; and monitoring for responsible AI development and deployment.",
     features: [
       "Ethical AI guidelines";
       "Bias detection and mitigation",
@@ -189,7 +189,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "4-6 weeks";
     category: "AI Governance";
     realService: true;
-    technology: ["Python; TensorFlow, React; PostgreSQL, Redis; Docker, AWS"],
+    technology: ["Python; TensorFlow; React; PostgreSQL; Redis; Docker; AWS"],
     integrations: ["AI development platforms; Compliance tools; Governance systems; Audit platforms"],
     useCases: ["AI development oversight; Bias detection; Compliance monitoring; Risk assessment; Ethical auditing"],
     roi: "Organizations report 300% ROI through improved AI governance and reduced compliance risks.";
@@ -245,9 +245,9 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "4-6 weeks";
     category: "Edge Computing";
     realService: true;
-    technology: ["Kubernetes; Docker, Python; Go, React; PostgreSQL, Redis; Multi-cloud"],
+    technology: ["Kubernetes; Docker; Python; Go; React; PostgreSQL; Redis; Multi-cloud"],
     integrations: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; Edge devices; Cloud platforms"],
-    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation, Edge AI deployment"],
+    useCases: ["Industrial IoT; Smart cities; Energy management; Transportation; Edge AI deployment"],
     roi: "Organizations report 300% ROI through improved edge AI performance and reduced latency.";
     competitors: ["AWS Greengrass; Azure IoT Edge; Google Cloud IoT; EdgeX Foundry"],
     marketSize: "$1.8B edge AI market";
@@ -301,11 +301,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "2-3 weeks";
     category: "DevOps & Automation";
     realService: true;
-    technology: ["Python; TensorFlow, Kubernetes; Docker, React; PostgreSQL, Redis; Multi-cloud"],
-    integrations: ["GitLab; Jenkins, GitHub Actions; AWS, Azure; Google Cloud; Kubernetes"],
+    technology: ["Python; TensorFlow; Kubernetes; Docker; React; PostgreSQL; Redis; Multi-cloud"],
+    integrations: ["GitLab; Jenkins; GitHub Actions; AWS; Azure; Google Cloud; Kubernetes"],
     useCases: ["CI/CD optimization; Infrastructure automation; Deployment automation; Performance optimization; Security automation"],
     roi: "Organizations report 350% ROI through improved deployment efficiency and reduced operational costs.";
-    competitors: ["GitLab; Jenkins, GitHub Actions; CircleCI, Travis CI"],
+    competitors: ["GitLab; Jenkins; GitHub Actions; CircleCI; Travis CI"],
     marketSize: "$2.5B DevOps automation market";
     growthRate: "35% annual growth";
     variant: "ai-devops-enterprise";
@@ -333,7 +333,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     tagline: "Intelligent data quality management and validation";
     price: "$1;299",
     period: "/month";
-    description: "Advanced data quality platform using AI to automatically detect; validate, and improve data quality across enterprise systems.",
+    description: "Advanced data quality platform using AI to automatically detect; validate; and improve data quality across enterprise systems.",
     features: [
       "AI-powered data validation";
       "Automatic quality scoring",
@@ -357,11 +357,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "2-3 weeks";
     category: "Data Quality & Analytics";
     realService: true;
-    technology: ["Python; TensorFlow, Scikit-learn; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["Snowflake; Databricks, AWS Redshift; Google BigQuery; Azure Synapse; Tableau"],
+    technology: ["Python; TensorFlow; Scikit-learn; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Snowflake; Databricks; AWS Redshift; Google BigQuery; Azure Synapse; Tableau"],
     useCases: ["Data validation; Quality improvement; Compliance monitoring; Analytics preparation; Data governance"],
     roi: "Organizations report 400% ROI through improved data quality and reduced data-related errors.";
-    competitors: ["Informatica; Talend, Dataiku; Alteryx"],
+    competitors: ["Informatica; Talend; Dataiku; Alteryx"],
     marketSize: "$1.8B data quality market";
     growthRate: "30% annual growth";
     variant: "ai-data-quality-enterprise";
@@ -389,7 +389,7 @@ export const specializedITServices2025: SpecializedITService[] = [
     tagline: "Intelligent API management with AI-driven optimization";
     price: "$1;199",
     period: "/month";
-    description: "Advanced API management platform using AI to optimize performance; security, and analytics for enterprise API ecosystems.",
+    description: "Advanced API management platform using AI to optimize performance; security; and analytics for enterprise API ecosystems.",
     features: [
       "AI-powered API optimization";
       "Intelligent rate limiting",
@@ -413,11 +413,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "2-3 weeks";
     category: "API Management";
     realService: true;
-    technology: ["Python; TensorFlow, Node.js; React, PostgreSQL; Redis, Docker; Kubernetes"],
-    integrations: ["Kong; Apigee, AWS API Gateway; Azure API Management; Google Cloud Endpoints"],
+    technology: ["Python; TensorFlow; Node.js; React; PostgreSQL; Redis; Docker; Kubernetes"],
+    integrations: ["Kong; Apigee; AWS API Gateway; Azure API Management; Google Cloud Endpoints"],
     useCases: ["API optimization; Security management; Performance monitoring; Developer experience; Integration management"],
     roi: "Organizations report 300% ROI through improved API performance and reduced development time.";
-    competitors: ["Kong; Apigee, AWS API Gateway; Azure API Management"],
+    competitors: ["Kong; Apigee; AWS API Gateway; Azure API Management"],
     marketSize: "$1.5B API management market";
     growthRate: "25% annual growth";
     variant: "ai-api-enterprise";
@@ -469,11 +469,11 @@ export const specializedITServices2025: SpecializedITService[] = [
     setupTime: "4-6 weeks";
     category: "Network Security";
     realService: true;
-    technology: ["Python; TensorFlow, Network protocols; React, PostgreSQL; Redis, Docker; AWS"],
-    integrations: ["Palo Alto Networks; Cisco, Fortinet; Splunk, ServiceNow; Jira"],
-    useCases: ["Threat detection; Network monitoring; Incident response; Compliance, Security automation"],
+    technology: ["Python; TensorFlow; Network protocols; React; PostgreSQL; Redis; Docker; AWS"],
+    integrations: ["Palo Alto Networks; Cisco; Fortinet; Splunk; ServiceNow; Jira"],
+    useCases: ["Threat detection; Network monitoring; Incident response; Compliance; Security automation"],
     roi: "Organizations report 350% ROI through improved threat detection and reduced security incidents.";
-    competitors: ["Palo Alto Networks; Cisco, Fortinet; Check Point"],
+    competitors: ["Palo Alto Networks; Cisco; Fortinet; Check Point"],
     marketSize: "$3.2B network security market";
     growthRate: "40% annual growth";
     variant: "ai-network-security-enterprise";

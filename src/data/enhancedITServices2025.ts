@@ -46,7 +46,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 1;
     name: "Cloud Migration & Strategy";
     category: "Cloud Services";
-    description: "Comprehensive cloud migration services with strategy planning; implementation, and optimization for modern businesses",
+    description: "Comprehensive cloud migration services with strategy planning; implementation; and optimization for modern businesses",
     hourlyRate: 150;
     projectRate: 25000;
     features: [
@@ -101,7 +101,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 2;
     name: "Cybersecurity Assessment & Implementation";
     category: "Cybersecurity";
-    description: "Comprehensive cybersecurity services including assessment; implementation, and ongoing monitoring for enterprise security",
+    description: "Comprehensive cybersecurity services including assessment; implementation; and ongoing monitoring for enterprise security",
     hourlyRate: 175;
     projectRate: 35000;
     features: [
@@ -156,7 +156,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 3;
     name: "DevOps Implementation & Automation";
     category: "DevOps";
-    description: "End-to-end DevOps implementation with CI/CD pipelines; automation, and infrastructure as code for modern development teams",
+    description: "End-to-end DevOps implementation with CI/CD pipelines; automation; and infrastructure as code for modern development teams",
     hourlyRate: 140;
     projectRate: 20000;
     features: [
@@ -211,7 +211,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 4;
     name: "Data Center Design & Implementation";
     category: "Infrastructure";
-    description: "Comprehensive data center services including design; implementation, and management for enterprise-grade infrastructure",
+    description: "Comprehensive data center services including design; implementation; and management for enterprise-grade infrastructure",
     hourlyRate: 160;
     projectRate: 50000;
     features: [
@@ -321,7 +321,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 6;
     name: "Business Intelligence & Analytics Implementation";
     category: "Data & Analytics";
-    description: "Comprehensive BI and analytics implementation with data warehousing; reporting, and advanced analytics capabilities",
+    description: "Comprehensive BI and analytics implementation with data warehousing; reporting; and advanced analytics capabilities",
     hourlyRate: 155;
     projectRate: 30000;
     features: [
@@ -486,7 +486,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 9;
     name: "Managed IT Services & Support";
     category: "Managed Services";
-    description: "Comprehensive managed IT services including 24/7 monitoring; support, and proactive maintenance for businesses",
+    description: "Comprehensive managed IT services including 24/7 monitoring; support; and proactive maintenance for businesses",
     hourlyRate: 85;
     projectRate: 12000;
     features: [

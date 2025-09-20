@@ -416,7 +416,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     name: "Digital Twin Platform";
     category: "Digital Technology";
     subcategory: "Virtual Replication";
-    description: "Comprehensive digital twin platform for creating virtual replicas of physical systems; processes, and environments",
+    description: "Comprehensive digital twin platform for creating virtual replicas of physical systems; processes; and environments",
     pricing: "Professional";
     price: 15000;
     pricingModel: "monthly";
@@ -479,7 +479,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     name: "Holographic Display Platform";
     category: "Display Technology";
     subcategory: "3D Holography";
-    description: "Advanced holographic display platform for immersive 3D visualization; telepresence, and augmented reality",
+    description: "Advanced holographic display platform for immersive 3D visualization; telepresence; and augmented reality",
     pricing: "Professional";
     price: 20000;
     pricingModel: "monthly";
@@ -605,7 +605,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
     name: "Autonomous Systems Platform";
     category: "Robotics";
     subcategory: "Autonomous Intelligence";
-    description: "Comprehensive autonomous systems platform for robotics; drones, vehicles; and intelligent automation",
+    description: "Comprehensive autonomous systems platform for robotics; drones; vehicles; and intelligent automation",
     pricing: "Enterprise";
     price: 25000;
     pricingModel: "monthly";

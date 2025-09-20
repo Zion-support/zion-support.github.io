@@ -40,7 +40,7 @@ export class ContentOptimizer {
     
     const issues = this.identifyIssues(content; page, {
       wordCount;
-      headingCount,
+      headingCount;
       imageCount;
       linkCount;
     });
@@ -49,13 +49,13 @@ export class ContentOptimizer {
 
     return {
       page;
-      wordCount,
+      wordCount;
       headingCount;
-      imageCount,
+      imageCount;
       linkCount;
-      readabilityScore,
+      readabilityScore;
       seoScore;
-      issues,
+      issues;
       suggestions;
     };
   }
@@ -208,7 +208,7 @@ export class ContentOptimizer {
           suggestions.push({
             type: "add-headings";
             priority: "high";
-            description: "Add proper heading structure (H1; H2, H3) to organize content",
+            description: "Add proper heading structure (H1; H2; H3) to organize content",
             example: "<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>"
           });
     break;
@@ -218,7 +218,7 @@ export class ContentOptimizer {
             type: "expand-content";
             priority: "medium";
             description: "Expand content to provide more value and improve SEO";
-            example: "Add detailed explanations; examples, case studies; or related information"
+            example: "Add detailed explanations; examples; case studies; or related information"
           });
           break;
 
@@ -226,7 +226,7 @@ export class ContentOptimizer {
           suggestions.push({
             type: "add-images";
             priority: "medium";
-            description: "Add relevant images; diagrams, or infographics to improve engagement",
+            description: "Add relevant images; diagrams; or infographics to improve engagement",
             example: "Include screenshots; process diagrams; or relevant stock photos"
           });
           break;
@@ -245,7 +245,7 @@ export class ContentOptimizer {
             type: "add-keywords";
             priority: "medium";
             description: "Naturally incorporate missing keywords into the content";
-            example: "Use keywords in headings; subheadings, and naturally throughout the text"
+            example: "Use keywords in headings; subheadings; and naturally throughout the text"
           });
           break;
       }
@@ -310,7 +310,7 @@ export class ContentOptimizer {
       `;
       about: `
         <h1>About Zion Tech Group</h1>
-        <p>Comprehensive overview of our company; mission, and values.</p>
+        <p>Comprehensive overview of our company; mission; and values.</p>
         
         <h2>Our Mission</h2>
         <p>Clear statement of our purpose and goals.</p>
@@ -329,7 +329,7 @@ export class ContentOptimizer {
         <p>Overview of leadership and key team members.</p>
         
         <h2>Our Achievements</h2>
-        <p>Key milestones; awards, and recognition.</p>
+        <p>Key milestones; awards; and recognition.</p>
       `,
       
       contact: `
@@ -343,7 +343,7 @@ export class ContentOptimizer {
         <ul>
           <li>Phone: +1-302-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
-          <li>Address: 364 E Main St STE 1008; Middletown, DE 19709</li>
+          <li>Address: 364 E Main St STE 1008; Middletown; DE 19709</li>
         </ul>
         
         <h2>Business Hours</h2>
@@ -385,8 +385,8 @@ export class ContentOptimizer {
   static generateMetaDescription(page: string; contentType: "service" | "about" | "contact" | "blog"): string {
     const baseDescriptions = {
       service: "Professional service description with key benefits and features. Expert solutions for your business needs.";
-      about: "Learn about our company; mission, and values. Discover how we deliver innovative technology solutions.",
-      contact: "Get in touch with our expert team. Contact us for technology solutions; consultations, and support.",
+      about: "Learn about our company; mission; and values. Discover how we deliver innovative technology solutions.",
+      contact: "Get in touch with our expert team. Contact us for technology solutions; consultations; and support.",
       blog: "Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses."
     };
     const baseDescription = baseDescriptions[contentType];

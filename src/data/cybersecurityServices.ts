@@ -125,7 +125,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
   {
     id: "cloud-security-posture";
     title: "Cloud Security Posture Management Platform";
-    description: "Comprehensive cloud security platform that continuously monitors; assesses, and improves the security posture of multi-cloud environments.",
+    description: "Comprehensive cloud security platform that continuously monitors; assesses; and improves the security posture of multi-cloud environments.",
     category: "Cybersecurity";
     subcategory: "Cloud Security";
     price: 2400;
@@ -174,7 +174,7 @@ export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
   {
     id: "privacy-compliance-automation";
     title: "Privacy Compliance & Data Protection Automation Platform";
-    description: "Automated privacy compliance platform that helps organizations manage GDPR; CCPA, and other privacy regulations while protecting sensitive data.",
+    description: "Automated privacy compliance platform that helps organizations manage GDPR; CCPA; and other privacy regulations while protecting sensitive data.",
     category: "Cybersecurity";
     subcategory: "Privacy & Compliance";
     price: 1900;

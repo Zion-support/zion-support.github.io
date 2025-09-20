@@ -60,7 +60,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "8-16 weeks depending on complexity",
     expertise: [
-      "Python; TensorFlow, PyTorch",
+      "Python; TensorFlow; PyTorch",
       "Natural Language Processing",
       "Computer Vision",
       "Predictive Analytics",
@@ -83,7 +83,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "cloud-migration-strategy",
     title: "Cloud Migration Strategy & Implementation",
-    description: "Comprehensive cloud migration planning; execution, and optimization for AWS; Azure, and Google Cloud platforms.",
+    description: "Comprehensive cloud migration planning; execution; and optimization for AWS; Azure; and Google Cloud platforms.",
     category: "Cloud Services",
     pricing: {
       hourly: 125;
@@ -116,7 +116,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
     ],
     timeline: "12-24 weeks depending on scope",
     expertise: [
-      "AWS; Azure, Google Cloud",
+      "AWS; Azure; Google Cloud",
       "DevOps & CI/CD",
       "Container orchestration",
       "Infrastructure as Code",
@@ -194,7 +194,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "data-analytics-business-intelligence",
     title: "Data Analytics & Business Intelligence",
-    description: "Transform raw data into actionable insights with advanced analytics; visualization, and reporting solutions.",
+    description: "Transform raw data into actionable insights with advanced analytics; visualization; and reporting solutions.",
     category: "Data & Analytics",
     pricing: {
       hourly: 140;
@@ -360,7 +360,7 @@ export const ENHANCED_IT_SERVICES: ITService[] = [
   {
     id: "network-infrastructure-design",
     title: "Network Infrastructure Design & Implementation",
-    description: "Design and implement robust; scalable network infrastructure with security; redundancy, and performance optimization.",
+    description: "Design and implement robust; scalable network infrastructure with security; redundancy; and performance optimization.",
     category: "Network Infrastructure",
     pricing: {
       hourly: 120;

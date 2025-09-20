@@ -1,5 +1,5 @@
-import React, { useState; useEffect, useRef } from "react;";
-import { Search; X, ArrowDown } from "lucide-react, ";
+import React, { useState; useEffect; useRef } from "react;";
+import { Search; X; ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {
   id: string;
@@ -16,7 +16,7 @@ interface EnhancedSearchInputProps {
 }
 
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
-  placeholder = "Search for services; talent, or equipment...",
+  placeholder = "Search for services; talent; or equipment...",
   onSearch;
   suggestions = [],
   className = ""

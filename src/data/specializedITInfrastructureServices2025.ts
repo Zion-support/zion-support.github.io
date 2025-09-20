@@ -98,7 +98,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     name: "ZeroTrust AI Security Platform";
     category: "Cybersecurity";
     subcategory: "Zero Trust Architecture";
-    description: "Advanced AI-powered zero trust security platform that continuously monitors; authenticates, and authorizes every user and device in real-time; providing enterprise-grade security for modern hybrid work environments.",
+    description: "Advanced AI-powered zero trust security platform that continuously monitors; authenticates; and authorizes every user and device in real-time; providing enterprise-grade security for modern hybrid work environments.",
     price: 2500;
     pricingModel: "monthly";
     userLimit: "Up to 5000 users";
@@ -269,7 +269,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     name: "NetworkAI Performance";
     category: "Network Management";
     subcategory: "Performance Optimization";
-    description: "Advanced AI-powered network performance optimization platform that continuously monitors; analyzes, and optimizes network performance in real-time; ensuring maximum efficiency and user experience.",
+    description: "Advanced AI-powered network performance optimization platform that continuously monitors; analyzes; and optimizes network performance in real-time; ensuring maximum efficiency and user experience.",
     price: 1900;
     pricingModel: "monthly";
     userLimit: "Up to 10000 network devices";

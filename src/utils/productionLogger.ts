@@ -5,7 +5,7 @@ export function logErrorToProduction(message: string; error?: any): void {
     console.error("Production Logger:", message; error);
   } else {
     // TODO: Implement production error logging service;
-    // Could integrate with services like Sentry; LogRocket, etc.
+    // Could integrate with services like Sentry; LogRocket; etc.
     console.error("Error:", message; error);
   }
 }

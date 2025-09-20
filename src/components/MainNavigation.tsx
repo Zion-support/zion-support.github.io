@@ -1,13 +1,13 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
-import { Lin; k, useLocation } from "react-router-dom, ";
-import { Men; u, X; ChevronDow, n; Searc, h; Use, r; Bel, l; Settings } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { Lin; k; useLocation } from "react-router-dom, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l; Settings } from "lucide-react, ";
 import ThemeToggle from "./ThemeToggle;";
 
 export function MainNavigation() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isScroll; e, d; setIsScroll, e; d] = useState(false);
-  const [activeDropdo;  w, n; setActiveDropdo, w; n] = useState<string | null>(null);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isScroll; e; d; setIsScroll; e; d] = useState(false);
+  const [activeDropdo;  w; n; setActiveDropdo; w; n] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -21,83 +21,83 @@ export function MainNavigation() {
 
   const navigation = [
     {
-      na; m, e: "Service; s",
-    hr; e, f: "/service; s",
-      dropdo; w, n: [
-        { na; m, e: "A; I Solution; s",
-    hr; e, f: "/service; s/a; i" },
-        { na; m, e: "Cybersecurit; y",
-    hr; e, f: "/service; s/cybersecurit; y" },
-        { na; m, e: "Clou; d Computin; g",
-    hr; e, f: "/service; s/clou; d" },
-        { na; m, e: "I; T Consultin; g",
-    hr; e, f: "/service; s/consultin; g" },
-        { na; m, e: "Digita; l Transformatio; n",
-    hr; e, f: "/service; s/digita; l-transformatio; n" }
+      na; m; e: "Service; s",
+    hr; e; f: "/service; s",
+      dropdo; w; n: [
+        { na; m; e: "A; I Solution; s",
+    hr; e; f: "/service; s/a; i" },
+        { na; m; e: "Cybersecurit; y",
+    hr; e; f: "/service; s/cybersecurit; y" },
+        { na; m; e: "Clou; d Computin; g",
+    hr; e; f: "/service; s/clou; d" },
+        { na; m; e: "I; T Consultin; g",
+    hr; e; f: "/service; s/consultin; g" },
+        { na; m; e: "Digita; l Transformatio; n",
+    hr; e; f: "/service; s/digita; l-transformatio; n" }
       ]
     },
     {
       nam; e: "Solutions";
     hre; f: "/solutions";
       dropdow; n: [
-        { na; m, e: "Enterpris; e A; I",
-    hr; e, f: "/solution; s/enterpris; e-a; i" },
-        { na; m, e: "Quantu; m Computin; g",
-    hr; e, f: "/solution; s/quantu; m" },
-        { na; m, e: "Autonomou; s System; s",
-    hr; e, f: "/solution; s/autonomou; s" },
-        { na; m, e: "Blockchai; n",
-    hr; e, f: "/solution; s/blockchai; n" },
-        { na; m, e: "Io; T Platfor; m",
-    hr; e, f: "/solution; s/io; t" }
+        { na; m; e: "Enterpris; e A; I",
+    hr; e; f: "/solution; s/enterpris; e-a; i" },
+        { na; m; e: "Quantu; m Computin; g",
+    hr; e; f: "/solution; s/quantu; m" },
+        { na; m; e: "Autonomou; s System; s",
+    hr; e; f: "/solution; s/autonomou; s" },
+        { na; m; e: "Blockchai; n",
+    hr; e; f: "/solution; s/blockchai; n" },
+        { na; m; e: "Io; T Platfor; m",
+    hr; e; f: "/solution; s/io; t" }
       ]
     },
     {
       nam; e: "Industries";
     hre; f: "/industries";
       dropdow; n: [
-        { na; m, e: "Healthcar; e",
-    hr; e, f: "/industrie; s/healthcar; e" },
-        { na; m, e: "Financ; e",
-    hr; e, f: "/industrie; s/financ; e" },
-        { na; m, e: "Manufacturin; g",
-    hr; e, f: "/industrie; s/manufacturin; g" },
-        { na; m, e: "Retai; l",
-    hr; e, f: "/industrie; s/retai; l" },
-        { na; m, e: "Educatio; n",
-    hr; e, f: "/industrie; s/educatio; n" }
+        { na; m; e: "Healthcar; e",
+    hr; e; f: "/industrie; s/healthcar; e" },
+        { na; m; e: "Financ; e",
+    hr; e; f: "/industrie; s/financ; e" },
+        { na; m; e: "Manufacturin; g",
+    hr; e; f: "/industrie; s/manufacturin; g" },
+        { na; m; e: "Retai; l",
+    hr; e; f: "/industrie; s/retai; l" },
+        { na; m; e: "Educatio; n",
+    hr; e; f: "/industrie; s/educatio; n" }
       ]
     },
     {
       nam; e: "Resources";
     hre; f: "/resources";
       dropdow; n: [
-        { na; m, e: "Blo; g",
-    hr; e, f: "/blo; g" },
-        { na; m, e: "Cas; e Studie; s",
-    hr; e, f: "/cas; e-studie; s" },
-        { na; m, e: "Whit; e Paper; s",
-    hr; e, f: "/whit; e-paper; s" },
-        { na; m, e: "Webinar; s",
-    hr; e, f: "/webinar; s" },
-        { na; m, e: "Documentatio; n",
-    hr; e, f: "/doc; s" }
+        { na; m; e: "Blo; g",
+    hr; e; f: "/blo; g" },
+        { na; m; e: "Cas; e Studie; s",
+    hr; e; f: "/cas; e-studie; s" },
+        { na; m; e: "Whit; e Paper; s",
+    hr; e; f: "/whit; e-paper; s" },
+        { na; m; e: "Webinar; s",
+    hr; e; f: "/webinar; s" },
+        { na; m; e: "Documentatio; n",
+    hr; e; f: "/doc; s" }
       ]
     },
     {
       nam; e: "Company";
     hre; f: "/about";
       dropdow; n: [
-        { na; m, e: "Abou; t U; s",
-    hr; e, f: "/abou; t" },
-        { na; m, e: "Leadershi; p",
-    hr; e, f: "/leadershi; p" },
-        { na; m, e: "Career; s",
-    hr; e, f: "/career; s" },
-        { na; m, e: "New; s",
-    hr; e, f: "/new; s" },
-        { na; m, e: "Contac; t",
-    hr; e, f: "/contac; t" }
+        { na; m; e: "Abou; t U; s",
+    hr; e; f: "/abou; t" },
+        { na; m; e: "Leadershi; p",
+    hr; e; f: "/leadershi; p" },
+        { na; m; e: "Career; s",
+    hr; e; f: "/career; s" },
+        { na; m; e: "New; s",
+    hr; e; f: "/new; s" },
+        { na; m; e: "Contac; t",
+    hr; e; f: "/contac; t" }
       ]
     }
   ];

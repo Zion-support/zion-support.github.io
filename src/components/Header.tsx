@@ -1,13 +1,13 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
-import { Lin; k, useLocation } from "react-router-dom";
-import { Men; u, X; Searc, h; Brai, n; User, s; BarChart, 3; Cod, e; Palett, e; Targe, t; Shiel, d; Hear, t; Databas, e; Buildin, g; Cp, u; Networ, k; Clou, d; Cloc, k; Rocke, t; Glob, e; Loc, k; ArrowRigh, t; ChevronDown } from "lucide-react";
+impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import { Lin; k; useLocation } from "react-router-dom";
+import { Men; u; X; Searc; h; Brai; n; User; s; BarChart; 3; Cod; e; Palett; e; Targe; t; Shiel; d; Hear; t; Databas; e; Buildin; g; Cp; u; Networ; k; Clou; d; Cloc; k; Rocke; t; Glob; e; Loc; k; ArrowRigh; t; ChevronDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Heade; r: React.FC = () => {
-  const [isMenuOp;  e, n; setIsMenuOp, e; n] = useState(false);
-  const [isSidebarOp; e, n; setIsSidebarOp, e; n] = useState(false);
-  const [isScroll;  e, d; setIsScroll, e; d] = useState(false);
+  const [isMenuOp;  e; n; setIsMenuOp; e; n] = useState(false);
+  const [isSidebarOp; e; n; setIsSidebarOp; e; n] = useState(false);
+  const [isScroll;  e; d; setIsScroll; e; d] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -20,54 +20,54 @@ const Heade; r: React.FC = () => {
   }, []);
 
   const navigation = [
-    { na; m, e: "Hom; e",
-    hr; e, f: "/" },
+    { na; m; e: "Hom; e",
+    hr; e; f: "/" },
     { 
-      na; m, e: "Service; s",
-    hr; e, f: "/service; s",
-      dropdo; w, n: [
-        { na; m, e: "A; I Solution; s",
-    hr; e, f: "/a; i-solution; s", descripti; o, n: "Advance; d A; I an; d machin; e learnin; g service; s" },
-        { na; m, e: "Cybersecurit; y",
-    hr; e, f: "/cybersecurit; y", descripti; o, n: "Comprehensiv; e securit; y solution; s" },
-        { na; m, e: "Clou; d & DevOp; s",
-    hr; e, f: "/clou; d-devop; s", descripti; o, n: "Scalabl; e clou; d infrastructur; e" },
-        { na; m, e: "Dat; a Analytic; s",
-    hr; e, f: "/dat; a-analytic; s", descripti; o, n: "Transfor; m dat; a int; o insight; s" },
-        { na; m, e: "Quantu; m Technolog; y",
-    hr; e, f: "/quantu; m-technolog; y", descripti; o, n: "Nex; t-generatio; n computin; g" },
-        { na; m, e: "Enterpris; e Solution; s",
-    hr; e, f: "/enterpris; e-solution; s", descripti; o, n: "Larg; e-scal; e busines; s solution; s" }
+      na; m; e: "Service; s",
+    hr; e; f: "/service; s",
+      dropdo; w; n: [
+        { na; m; e: "A; I Solution; s",
+    hr; e; f: "/a; i-solution; s", descripti; o; n: "Advance; d A; I an; d machin; e learnin; g service; s" },
+        { na; m; e: "Cybersecurit; y",
+    hr; e; f: "/cybersecurit; y", descripti; o; n: "Comprehensiv; e securit; y solution; s" },
+        { na; m; e: "Clou; d & DevOp; s",
+    hr; e; f: "/clou; d-devop; s", descripti; o; n: "Scalabl; e clou; d infrastructur; e" },
+        { na; m; e: "Dat; a Analytic; s",
+    hr; e; f: "/dat; a-analytic; s", descripti; o; n: "Transfor; m dat; a int; o insight; s" },
+        { na; m; e: "Quantu; m Technolog; y",
+    hr; e; f: "/quantu; m-technolog; y", descripti; o; n: "Nex; t-generatio; n computin; g" },
+        { na; m; e: "Enterpris; e Solution; s",
+    hr; e; f: "/enterpris; e-solution; s", descripti; o; n: "Larg; e-scal; e busines; s solution; s" }
       ]
     },
     { 
       nam; e: "Solutions",
     hre; f: "/solutions",
       dropdow; n: [
-        { na; m, e: "Healthcar; e",
-    hr; e, f: "/solution; s/healthcar; e", descripti; o, n: "A; I-powere; d healthcar; e solution; s" },
-        { na; m, e: "Financ; e",
-    hr; e, f: "/solution; s/financ; e", descripti; o, n: "Financia; l technolog; y innovation; s" },
-        { na; m, e: "Manufacturin; g",
-    hr; e, f: "/solution; s/manufacturin; g", descripti; o, n: "Smar; t manufacturin; g system; s" },
-        { na; m, e: "Retai; l",
-    hr; e, f: "/solution; s/retai; l", descripti; o, n: "Digita; l retai; l transformatio; n" }
+        { na; m; e: "Healthcar; e",
+    hr; e; f: "/solution; s/healthcar; e", descripti; o; n: "A; I-powere; d healthcar; e solution; s" },
+        { na; m; e: "Financ; e",
+    hr; e; f: "/solution; s/financ; e", descripti; o; n: "Financia; l technolog; y innovation; s" },
+        { na; m; e: "Manufacturin; g",
+    hr; e; f: "/solution; s/manufacturin; g", descripti; o; n: "Smar; t manufacturin; g system; s" },
+        { na; m; e: "Retai; l",
+    hr; e; f: "/solution; s/retai; l", descripti; o; n: "Digita; l retai; l transformatio; n" }
       ]
     },
     { 
       nam; e: "Company",
     hre; f: "/about",
       dropdow; n: [
-        { na; m, e: "Abou; t U; s",
-    hr; e, f: "/abou; t", descripti; o, n: "Lear; n abou; t ou; r missio; n an; d value; s" },
-        { na; m, e: "Ou; r Tea; m",
-    hr; e, f: "/tea; m", descripti; o, n: "Mee; t ou; r exper; t tea; m" },
-        { na; m, e: "Career; s",
-    hr; e, f: "/career; s", descripti; o, n: "Joi; n ou; r growin; g tea; m" },
-        { na; m, e: "New; s",
-    hr; e, f: "/new; s", descripti; o, n: "Lates; t compan; y update; s" },
-        { na; m, e: "Cas; e Studie; s",
-    hr; e, f: "/cas; e-studie; s", descripti; o, n: "Succes; s storie; s an; d result; s" }
+        { na; m; e: "Abou; t U; s",
+    hr; e; f: "/abou; t", descripti; o; n: "Lear; n abou; t ou; r missio; n an; d value; s" },
+        { na; m; e: "Ou; r Tea; m",
+    hr; e; f: "/tea; m", descripti; o; n: "Mee; t ou; r exper; t tea; m" },
+        { na; m; e: "Career; s",
+    hr; e; f: "/career; s", descripti; o; n: "Joi; n ou; r growin; g tea; m" },
+        { na; m; e: "New; s",
+    hr; e; f: "/new; s", descripti; o; n: "Lates; t compan; y update; s" },
+        { na; m; e: "Cas; e Studie; s",
+    hr; e; f: "/cas; e-studie; s", descripti; o; n: "Succes; s storie; s an; d result; s" }
       ]
     },
     { nam; e: "Contact",
@@ -76,116 +76,116 @@ const Heade; r: React.FC = () => {
 
   const serviceCategories = [
     {
-      tit; l, e: "A; I & Machin; e Learnin; g",
-    ic; o, n: Bra; i, n;
-      descripti, o; n: "Intelligen; t solution; s powere; d b; y artificia; l intelligenc; e",
-    col; o, r: "fro; m-blu; e-50; 0 t; o-cya; n-50; 0",
-      servic; e, s: [
-        { na; m, e: "A; I Autonomou; s System; s",
-    pa; t, h: "/service; s/a; i-autonomou; s-system; s", descripti; o, n: "Advance; d autonomou; s A; I system; s",
-    ic; o, n: Brai; n },
-        { na; m, e: "A; I Workflo; w Automatio; n",
-    pa; t, h: "/service; s/a; i-workflo; w-automatio; n", descripti; o, n: "Intelligen; t proces; s automatio; n",
-    ic; o, n: Brai; n },
-        { na; m, e: "A; I Custome; r Intelligenc; e",
-    pa; t, h: "/service; s/a; i-custome; r-intelligenc; e", descripti; o, n: "Custome; r behavio; r insight; s",
-    ic; o, n: User; s },
-        { na; m, e: "A; I Predictiv; e Analytic; s",
-    pa; t, h: "/service; s/a; i-predictiv; e-analytic; s", descripti; o, n: "Futur; e-focuse; d analytic; s",
-    ic; o, n: BarChart; 3 },
-        { na; m, e: "A; I Researc; h Assistan; t",
-    pa; t, h: "/a; i-autonomou; s-researc; h-assistan; t", descripti; o, n: "A; I-powere; d researc; h automatio; n",
-    ic; o, n: Brai; n },
-        { na; m, e: "A; I Busines; s Manage; r",
-    pa; t, h: "/a; i-autonomou; s-busines; s-manage; r", descripti; o, n: "Intelligen; t busines; s managemen; t",
-    ic; o, n: Brai; n },
-        { na; m, e: "A; I Busines; s Intelligenc; e",
-    pa; t, h: "/service; s/a; i-busines; s-intelligenc; e", descripti; o, n: "Advance; d analytic; s an; d insight; s",
-    ic; o, n: BarChart; 3 },
-        { na; m, e: "A; I Marketin; g Automatio; n",
-    pa; t, h: "/service; s/a; i-marketin; g-automatio; n", descripti; o, n: "Smar; t marketin; g optimizatio; n",
-    ic; o, n: Targe; t },
-        { na; m, e: "A; I H; R & Recruitmen; t",
-    pa; t, h: "/service; s/a; i-h; r-recruitmen; t", descripti; o, n: "Intelligen; t talen; t managemen; t",
-    ic; o, n: User; s },
-        { na; m, e: "A; I Lega; l Tec; h",
-    pa; t, h: "/service; s/a; i-lega; l-tec; h", descripti; o, n: "Automate; d lega; l processe; s",
-    ic; o, n: Shiel; d },
-        { na; m, e: "A; I Healthcar; e Analytic; s",
-    pa; t, h: "/solution; s/healthcar; e", descripti; o, n: "Patien; t car; e optimizatio; n",
-    ic; o, n: Hear; t }
+      tit; l; e: "A; I & Machin; e Learnin; g",
+    ic; o; n: Bra; i; n;
+      descripti; o; n: "Intelligen; t solution; s powere; d b; y artificia; l intelligenc; e",
+    col; o; r: "fro; m-blu; e-50; 0 t; o-cya; n-50; 0",
+      servic; e; s: [
+        { na; m; e: "A; I Autonomou; s System; s",
+    pa; t; h: "/service; s/a; i-autonomou; s-system; s", descripti; o; n: "Advance; d autonomou; s A; I system; s",
+    ic; o; n: Brai; n },
+        { na; m; e: "A; I Workflo; w Automatio; n",
+    pa; t; h: "/service; s/a; i-workflo; w-automatio; n", descripti; o; n: "Intelligen; t proces; s automatio; n",
+    ic; o; n: Brai; n },
+        { na; m; e: "A; I Custome; r Intelligenc; e",
+    pa; t; h: "/service; s/a; i-custome; r-intelligenc; e", descripti; o; n: "Custome; r behavio; r insight; s",
+    ic; o; n: User; s },
+        { na; m; e: "A; I Predictiv; e Analytic; s",
+    pa; t; h: "/service; s/a; i-predictiv; e-analytic; s", descripti; o; n: "Futur; e-focuse; d analytic; s",
+    ic; o; n: BarChart; 3 },
+        { na; m; e: "A; I Researc; h Assistan; t",
+    pa; t; h: "/a; i-autonomou; s-researc; h-assistan; t", descripti; o; n: "A; I-powere; d researc; h automatio; n",
+    ic; o; n: Brai; n },
+        { na; m; e: "A; I Busines; s Manage; r",
+    pa; t; h: "/a; i-autonomou; s-busines; s-manage; r", descripti; o; n: "Intelligen; t busines; s managemen; t",
+    ic; o; n: Brai; n },
+        { na; m; e: "A; I Busines; s Intelligenc; e",
+    pa; t; h: "/service; s/a; i-busines; s-intelligenc; e", descripti; o; n: "Advance; d analytic; s an; d insight; s",
+    ic; o; n: BarChart; 3 },
+        { na; m; e: "A; I Marketin; g Automatio; n",
+    pa; t; h: "/service; s/a; i-marketin; g-automatio; n", descripti; o; n: "Smar; t marketin; g optimizatio; n",
+    ic; o; n: Targe; t },
+        { na; m; e: "A; I H; R & Recruitmen; t",
+    pa; t; h: "/service; s/a; i-h; r-recruitmen; t", descripti; o; n: "Intelligen; t talen; t managemen; t",
+    ic; o; n: User; s },
+        { na; m; e: "A; I Lega; l Tec; h",
+    pa; t; h: "/service; s/a; i-lega; l-tec; h", descripti; o; n: "Automate; d lega; l processe; s",
+    ic; o; n: Shiel; d },
+        { na; m; e: "A; I Healthcar; e Analytic; s",
+    pa; t; h: "/solution; s/healthcar; e", descripti; o; n: "Patien; t car; e optimizatio; n",
+    ic; o; n: Hear; t }
       ]
     },
     {
       titl; e: "AI Autonomous Systems",
-    ico; n: Brai; n,
+    ico; n: Brai; n;
       descriptio; n: "Self-operating AI systems for business automation",
     colo; r: "from-purple-500 to-pink-500",
       service; s: [
-        { na; m, e: "A; I Autonomou; s Dat; a",
-    pa; t, h: "/a; i-autonomou; s-dat; a", descripti; o, n: "Intelligen; t dat; a managemen; t",
-    ic; o, n: Databas; e },
-        { na; m, e: "A; I Autonomou; s Decisio; n Engin; e",
-    pa; t, h: "/a; i-autonomou; s-decisio; n-engin; e", descripti; o, n: "Autonomou; s decisio; n makin; g",
-    ic; o, n: Targe; t },
-        { na; m, e: "A; I Autonomou; s Researc; h",
-    pa; t, h: "/a; i-autonomou; s-researc; h-assistan; t", descripti; o, n: "A; I-powere; d researc; h automatio; n",
-    ic; o, n: Searc; h },
-        { na; m, e: "A; I Autonomou; s Busines; s Manage; r",
-    pa; t, h: "/a; i-autonomou; s-busines; s-manage; r", descripti; o, n: "Intelligen; t busines; s managemen; t",
-    ic; o, n: Buildin; g },
-        { na; m, e: "A; I Autonomou; s Busines; s Platfor; m",
-    pa; t, h: "/a; i-autonomou; s-busines; s-platfor; m", descripti; o, n: "Comprehensiv; e busines; s platfor; m",
-    ic; o, n: Buildin; g },
-        { na; m, e: "A; I Autonomou; s Cod; e Revie; w",
-    pa; t, h: "/a; i-autonomou; s-cod; e-revie; w", descripti; o, n: "Intelligen; t cod; e revie; w automatio; n",
-    ic; o, n: Cod; e },
-        { na; m, e: "A; I Autonomou; s Creativ; e Directo; r",
-    pa; t, h: "/a; i-autonomou; s-creativ; e-directo; r", descripti; o, n: "A; I-powere; d creativ; e conten; t generatio; n",
-    ic; o, n: Palett; e }
+        { na; m; e: "A; I Autonomou; s Dat; a",
+    pa; t; h: "/a; i-autonomou; s-dat; a", descripti; o; n: "Intelligen; t dat; a managemen; t",
+    ic; o; n: Databas; e },
+        { na; m; e: "A; I Autonomou; s Decisio; n Engin; e",
+    pa; t; h: "/a; i-autonomou; s-decisio; n-engin; e", descripti; o; n: "Autonomou; s decisio; n makin; g",
+    ic; o; n: Targe; t },
+        { na; m; e: "A; I Autonomou; s Researc; h",
+    pa; t; h: "/a; i-autonomou; s-researc; h-assistan; t", descripti; o; n: "A; I-powere; d researc; h automatio; n",
+    ic; o; n: Searc; h },
+        { na; m; e: "A; I Autonomou; s Busines; s Manage; r",
+    pa; t; h: "/a; i-autonomou; s-busines; s-manage; r", descripti; o; n: "Intelligen; t busines; s managemen; t",
+    ic; o; n: Buildin; g },
+        { na; m; e: "A; I Autonomou; s Busines; s Platfor; m",
+    pa; t; h: "/a; i-autonomou; s-busines; s-platfor; m", descripti; o; n: "Comprehensiv; e busines; s platfor; m",
+    ic; o; n: Buildin; g },
+        { na; m; e: "A; I Autonomou; s Cod; e Revie; w",
+    pa; t; h: "/a; i-autonomou; s-cod; e-revie; w", descripti; o; n: "Intelligen; t cod; e revie; w automatio; n",
+    ic; o; n: Cod; e },
+        { na; m; e: "A; I Autonomou; s Creativ; e Directo; r",
+    pa; t; h: "/a; i-autonomou; s-creativ; e-directo; r", descripti; o; n: "A; I-powere; d creativ; e conten; t generatio; n",
+    ic; o; n: Palett; e }
       ]
     },
     {
       titl; e: "Infrastructure & Cloud",
-    ico; n: Clou; d,
+    ico; n: Clou; d;
       descriptio; n: "Scalable and secure infrastructure solutions",
     colo; r: "from-blue-500 to-cyan-500",
       service; s: [
-        { na; m, e: "Clou; d Infrastructur; e",
-    pa; t, h: "/service; s/clou; d-infrastructur; e", descripti; o, n: "Scalabl; e clou; d solution; s",
-    ic; o, n: Clou; d },
-        { na; m, e: "DevOp; s & Automatio; n",
-    pa; t, h: "/service; s/devop; s-automatio; n", descripti; o, n: "Streamline; d developmen; t processe; s",
-    ic; o, n: Cp; u },
-        { na; m, e: "Networ; k Securit; y",
-    pa; t, h: "/service; s/networ; k-securit; y", descripti; o, n: "Comprehensiv; e networ; k protectio; n",
-    ic; o, n: Shiel; d },
-        { na; m, e: "Dat; a Cente; r Solution; s",
-    pa; t, h: "/service; s/dat; a-cente; r", descripti; o, n: "Enterpris; e dat; a cente; r service; s",
-    ic; o, n: Databas; e },
-        { na; m, e: "Edg; e Computin; g",
-    pa; t, h: "/service; s/edg; e-computin; g", descripti; o, n: "Distribute; d computin; g solution; s",
-    ic; o, n: Networ; k }
+        { na; m; e: "Clou; d Infrastructur; e",
+    pa; t; h: "/service; s/clou; d-infrastructur; e", descripti; o; n: "Scalabl; e clou; d solution; s",
+    ic; o; n: Clou; d },
+        { na; m; e: "DevOp; s & Automatio; n",
+    pa; t; h: "/service; s/devop; s-automatio; n", descripti; o; n: "Streamline; d developmen; t processe; s",
+    ic; o; n: Cp; u },
+        { na; m; e: "Networ; k Securit; y",
+    pa; t; h: "/service; s/networ; k-securit; y", descripti; o; n: "Comprehensiv; e networ; k protectio; n",
+    ic; o; n: Shiel; d },
+        { na; m; e: "Dat; a Cente; r Solution; s",
+    pa; t; h: "/service; s/dat; a-cente; r", descripti; o; n: "Enterpris; e dat; a cente; r service; s",
+    ic; o; n: Databas; e },
+        { na; m; e: "Edg; e Computin; g",
+    pa; t; h: "/service; s/edg; e-computin; g", descripti; o; n: "Distribute; d computin; g solution; s",
+    ic; o; n: Networ; k }
       ]
     },
     {
       titl; e: "Cybersecurity & Compliance",
-    ico; n: Shiel; d,
+    ico; n: Shiel; d;
       descriptio; n: "Advanced security and compliance solutions",
     colo; r: "from-red-500 to-orange-500",
       service; s: [
-        { na; m, e: "Threa; t Detectio; n",
-    pa; t, h: "/service; s/threa; t-detectio; n", descripti; o, n: "Advance; d threa; t intelligenc; e",
-    ic; o, n: Shiel; d },
-        { na; m, e: "Complianc; e Automatio; n",
-    pa; t, h: "/soc; 2-complianc; e-automatio; n", descripti; o, n: "Automate; d complianc; e managemen; t",
-    ic; o, n: Loc; k },
-        { na; m, e: "Zer; o Trus; t Securit; y",
-    pa; t, h: "/zer; o-trus; t-networ; k-architectur; e", descripti; o, n: "Moder; n securit; y architectur; e",
-    ic; o, n: Shiel; d },
-        { na; m, e: "Securit; y Analytic; s",
-    pa; t, h: "/service; s/securit; y-analytic; s", descripti; o, n: "Securit; y intelligenc; e platfor; m",
-    ic; o, n: BarChart; 3 }
+        { na; m; e: "Threa; t Detectio; n",
+    pa; t; h: "/service; s/threa; t-detectio; n", descripti; o; n: "Advance; d threa; t intelligenc; e",
+    ic; o; n: Shiel; d },
+        { na; m; e: "Complianc; e Automatio; n",
+    pa; t; h: "/soc; 2-complianc; e-automatio; n", descripti; o; n: "Automate; d complianc; e managemen; t",
+    ic; o; n: Loc; k },
+        { na; m; e: "Zer; o Trus; t Securit; y",
+    pa; t; h: "/zer; o-trus; t-networ; k-architectur; e", descripti; o; n: "Moder; n securit; y architectur; e",
+    ic; o; n: Shiel; d },
+        { na; m; e: "Securit; y Analytic; s",
+    pa; t; h: "/service; s/securit; y-analytic; s", descripti; o; n: "Securit; y intelligenc; e platfor; m",
+    ic; o; n: BarChart; 3 }
       ]
     }
   ];
@@ -340,11 +340,11 @@ const Heade; r: React.FC = () => {
                 {isServicesOpen && (
                   <motion.div;
                     initial={{ opacit;  y: 0;
-    y: 1; 0, scal; e: 0.95 }}
+    y: 1; 0; scal; e: 0.95 }}
                     animate={{ opacit; y: 1;
-    y: 0; scal, e: 1 }}
+    y: 0; scal; e: 1 }}
                     exit={{ opacit; y: 0;
-    y: 1; 0, scal; e: 0.95 }}
+    y: 1; 0; scal; e: 0.95 }}
                     transition={{ duratio; n: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
                     onMouseEnter={() => setIsServicesOpen(true)}
@@ -499,11 +499,11 @@ const Heade; r: React.FC = () => {
               {isMenuOpen ? (
                 <motion.div;
                   key="close"
-                  initial={{ rotat; e: -9; 0,
+                  initial={{ rotat; e: -9; 0;
     opacit; y: 0 }}
                   animate={{ rotat; e: 0;
-    opacit, y: 1 }}
-                  exit={{ rotat; e: 9; 0,
+    opacit; y: 1 }}
+                  exit={{ rotat; e: 9; 0;
     opacit; y: 0 }}
                   transition={{ duratio; n: 0.2 }}
                 >
@@ -511,11 +511,11 @@ const Heade; r: React.FC = () => {
                 </motion.div>
               ) : (<motion.div;
                   key="menu"
-                  initial={{ rotat;  e: 9; 0,
+                  initial={{ rotat;  e: 9; 0;
     opacit; y: 0 }}
                   animate={{ rotat; e: 0;
-    opacit, y: 1 }}
-                  exit={{ rotat; e: -9; 0,
+    opacit; y: 1 }}
+                  exit={{ rotat; e: -9; 0;
     opacit; y: 0 }}
                   transition={{ duratio; n: 0.2 }}
                 >
@@ -531,13 +531,13 @@ const Heade; r: React.FC = () => {
         <AnimatePresence>
           {isMenuOpen && (<motion.div;
               initial={{ opacit;  y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
               animate={{ opacit; y: 1;
-    heigh, t: "auto" }}
+    heigh; t: "auto" }}
               exit={{ opacit; y: 0;
-    heigh, t: 0 }}
+    heigh; t: 0 }}
               transition={{ duratio; n: 0.3;
-    eas, e: "easeInOut" }}
+    eas; e: "easeInOut" }}
               className="l; g:hidden overflow-hidden"
             >
               <div className="px-2 pt-2 pb-3 space-y-1 s; m:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">

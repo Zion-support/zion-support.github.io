@@ -1,24 +1,24 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
-import { Lin; k, useLocation } from "react-router-dom, ";
-import { motio; n, AnimatePresenc; e, Variants } from "framer-motion, ";
-import { Men; u, X; ChevronDow, n; Searc, h; Use, r; Bell } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { Lin; k; useLocation } from "react-router-dom, ";
+import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bell } from "lucide-react, ";
 
 interface MobileNavigationProps {
   isOpe; n: boolean;
     onToggl; e: () => void;
 }
 
-const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onToggle }) => {
-  const [activeDropdo; w, n; setActiveDropdo, w; n] = useState<string | null>(null);
-  const [searchQue;  r, y; setSearchQue, r; y] = useState("");
+const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n; onToggle }) => {
+  const [activeDropdo; w; n; setActiveDropdo; w; n] = useState<string | null>(null);
+  const [searchQue;  r; y; setSearchQue; r; y] = useState("");
   const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
 
   // Close menu when route changes;
   useEffect(() => {
     onToggle();
-  },  [locatio; n.pathna; m, e]);
+  },  [locatio; n.pathna; m; e]);
 
   // Close menu when clicking outside;
   useEffect(() => {
@@ -37,71 +37,71 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
       document.removeEventListener("mousedown",  handleClickOutside);
       document.body.style.overflow = "unset";
     };
-  }, [isOp; e, n; onTogg, l; e]);
+  }, [isOp; e; n; onTogg; l; e]);
 
   const navigationItems = [
     {
-      lab; e, l: "Service; s",
-    hr; e, f: "/service; s",
-      childr; e, n: [
-        { lab; e, l: "A; I & Machin; e Learnin; g",
-    hr; e, f: "/service; s/a; i" },
-        { lab; e, l: "Quantu; m Computin; g",
-    hr; e, f: "/service; s/quantu; m" },
-        { lab; e, l: "Cybersecurit; y",
-    hr; e, f: "/service; s/cybersecurit; y" },
-        { lab; e, l: "Clou; d Service; s",
-    hr; e, f: "/service; s/clou; d" },
-        { lab; e, l: "Digita; l Transformatio; n",
-    hr; e, f: "/service; s/transformatio; n" },
-        { lab; e, l: "Consultin; g",
-    hr; e, f: "/service; s/consultin; g" }
+      lab; e; l: "Service; s",
+    hr; e; f: "/service; s",
+      childr; e; n: [
+        { lab; e; l: "A; I & Machin; e Learnin; g",
+    hr; e; f: "/service; s/a; i" },
+        { lab; e; l: "Quantu; m Computin; g",
+    hr; e; f: "/service; s/quantu; m" },
+        { lab; e; l: "Cybersecurit; y",
+    hr; e; f: "/service; s/cybersecurit; y" },
+        { lab; e; l: "Clou; d Service; s",
+    hr; e; f: "/service; s/clou; d" },
+        { lab; e; l: "Digita; l Transformatio; n",
+    hr; e; f: "/service; s/transformatio; n" },
+        { lab; e; l: "Consultin; g",
+    hr; e; f: "/service; s/consultin; g" }
       ]
     },
     {
       labe; l: "Solutions";
     hre; f: "/solutions";
       childre; n: [
-        { lab; e, l: "Enterpris; e Solution; s",
-    hr; e, f: "/solution; s/enterpris; e" },
-        { lab; e, l: "Startu; p Solution; s",
-    hr; e, f: "/solution; s/startu; p" },
-        { lab; e, l: "Governmen; t Solution; s",
-    hr; e, f: "/solution; s/governmen; t" },
-        { lab; e, l: "Healthcar; e Solution; s",
-    hr; e, f: "/solution; s/healthcar; e" }
+        { lab; e; l: "Enterpris; e Solution; s",
+    hr; e; f: "/solution; s/enterpris; e" },
+        { lab; e; l: "Startu; p Solution; s",
+    hr; e; f: "/solution; s/startu; p" },
+        { lab; e; l: "Governmen; t Solution; s",
+    hr; e; f: "/solution; s/governmen; t" },
+        { lab; e; l: "Healthcar; e Solution; s",
+    hr; e; f: "/solution; s/healthcar; e" }
       ]
     },
     {
       labe; l: "Industries";
     hre; f: "/industries";
       childre; n: [
-        { lab; e, l: "Technolog; y",
-    hr; e, f: "/industrie; s/technolog; y" },
-        { lab; e, l: "Healthcar; e",
-    hr; e, f: "/industrie; s/healthcar; e" },
-        { lab; e, l: "Financ; e",
-    hr; e, f: "/industrie; s/financ; e" },
-        { lab; e, l: "Manufacturin; g",
-    hr; e, f: "/industrie; s/manufacturin; g" },
-        { lab; e, l: "Educatio; n",
-    hr; e, f: "/industrie; s/educatio; n" }
+        { lab; e; l: "Technolog; y",
+    hr; e; f: "/industrie; s/technolog; y" },
+        { lab; e; l: "Healthcar; e",
+    hr; e; f: "/industrie; s/healthcar; e" },
+        { lab; e; l: "Financ; e",
+    hr; e; f: "/industrie; s/financ; e" },
+        { lab; e; l: "Manufacturin; g",
+    hr; e; f: "/industrie; s/manufacturin; g" },
+        { lab; e; l: "Educatio; n",
+    hr; e; f: "/industrie; s/educatio; n" }
       ]
     },
     {
       labe; l: "Company";
     hre; f: "/about";
       childre; n: [
-        { lab; e, l: "Abou; t U; s",
-    hr; e, f: "/abou; t" },
-        { lab; e, l: "Career; s",
-    hr; e, f: "/career; s" },
-        { lab; e, l: "New; s",
-    hr; e, f: "/new; s" },
-        { lab; e, l: "Pres; s",
-    hr; e, f: "/pres; s" },
-        { lab; e, l: "Contac; t",
-    hr; e, f: "/contac; t" }
+        { lab; e; l: "Abou; t U; s",
+    hr; e; f: "/abou; t" },
+        { lab; e; l: "Career; s",
+    hr; e; f: "/career; s" },
+        { lab; e; l: "New; s",
+    hr; e; f: "/new; s" },
+        { lab; e; l: "Pres; s",
+    hr; e; f: "/pres; s" },
+        { lab; e; l: "Contac; t",
+    hr; e; f: "/contac; t" }
       ]
     }
   ];
@@ -171,7 +171,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed top-0 right-0 h-full w-80 max-w-[85; v, w] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
+            className="fixed top-0 right-0 h-full w-80 max-w-[85; v; w] bg-zion-blue-dark border-l border-zion-cyan/30 z-50 overflow-hidden"
           >
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-zion-cyan/20">
@@ -289,7 +289,7 @@ const MobileNavigatio;  n: React.FC<MobileNavigationProps> = ({ isOpe; n, onTogg
                 <div className="space-y-2 text-sm text-zion-slate-light">
                   <p>📱 +1 302 464 0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
-                  <p>📍 Middletow; n, DE 19709</p>
+                  <p>📍 Middletow; n; DE 19709</p>
                 </div>
               </div>
             </div>

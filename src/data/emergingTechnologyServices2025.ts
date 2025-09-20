@@ -190,7 +190,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
   {
     id: "blockchain-supply-chain-platform-2025";
     title: "Blockchain-Based Supply Chain Platform";
-    description: "Revolutionary supply chain platform leveraging blockchain technology for transparent; secure, and efficient supply chain management with real-time tracking and smart contracts.",
+    description: "Revolutionary supply chain platform leveraging blockchain technology for transparent; secure; and efficient supply chain management with real-time tracking and smart contracts.",
     category: "Blockchain & Web3";
     subcategory: "Supply Chain";
     price: 5999;
@@ -336,7 +336,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
   {
     id: "ai-cybersecurity-platform-2025";
     title: "AI-Powered Cybersecurity Platform";
-    description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect; prevent, and respond to cyber threats in real-time with autonomous defense capabilities.",
+    description: "Next-generation cybersecurity platform that uses artificial intelligence and machine learning to detect; prevent; and respond to cyber threats in real-time with autonomous defense capabilities.",
     category: "Cybersecurity";
     subcategory: "AI-Powered Security";
     price: 7999;
@@ -482,7 +482,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
   {
     id: "ai-drug-discovery-platform-2025";
     title: "AI-Powered Drug Discovery Platform";
-    description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification; design, and optimization of new pharmaceutical compounds.",
+    description: "Revolutionary drug discovery platform that uses artificial intelligence and machine learning to accelerate the identification; design; and optimization of new pharmaceutical compounds.",
     category: "Healthcare Technology";
     subcategory: "Drug Discovery";
     price: 19999;
@@ -555,7 +555,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025: EmergingTechnologyService2025[] 
   {
     id: "autonomous-vehicle-technology-platform-2025";
     title: "Autonomous Vehicle Technology Platform";
-    description: "Advanced autonomous vehicle technology platform that provides the software; sensors, and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
+    description: "Advanced autonomous vehicle technology platform that provides the software; sensors; and AI algorithms needed to develop and deploy autonomous vehicles for various applications.",
     category: "Autonomous Vehicles";
     subcategory: "Technology Platform";
     price: 15999;

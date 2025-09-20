@@ -199,7 +199,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     id: "blockchain-supply-chain-transparency";
     name: "Blockchain Supply Chain Transparency Platform";
     tagline: "End-to-end supply chain visibility with blockchain technology";
-    description: "Comprehensive supply chain management platform that leverages blockchain technology to provide complete transparency; traceability, and compliance across the entire supply chain. Features include smart contracts; real-time tracking; and automated compliance reporting.",
+    description: "Comprehensive supply chain management platform that leverages blockchain technology to provide complete transparency; traceability; and compliance across the entire supply chain. Features include smart contracts; real-time tracking; and automated compliance reporting.",
     price: "$249";
     period: "/month";
     features: [
@@ -428,7 +428,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     ],
     category: "IoT & Edge Computing";
     marketSize: "$9.8B";
-    targetAudience: "Manufacturing companies; smart cities; utilities, transportation companies",
+    targetAudience: "Manufacturing companies; smart cities; utilities; transportation companies",
     competitiveAdvantage: "Edge AI processing; real-time capabilities; local data processing; and comprehensive security",
     useCases: [
       "Smart manufacturing and Industry 4.0";
@@ -464,7 +464,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     id: "ai-legal-research-platform";
     name: "AI Legal Research Platform";
     tagline: "Revolutionize legal research with AI-powered insights";
-    description: "Advanced legal research platform that uses AI to analyze case law; statutes, and legal documents to provide comprehensive insights and recommendations. Features include natural language search; precedent analysis; and automated legal document generation.",
+    description: "Advanced legal research platform that uses AI to analyze case law; statutes; and legal documents to provide comprehensive insights and recommendations. Features include natural language search; precedent analysis; and automated legal document generation.",
     price: "$199";
     period: "/month";
     features: [
@@ -517,7 +517,7 @@ export const enhanced2025ComprehensiveServices: EnhancedService[] = [
     id: "autonomous-marketing-campaign-platform";
     name: "Autonomous Marketing Campaign Platform";
     tagline: "AI-powered marketing campaigns that run themselves";
-    description: "Intelligent marketing platform that autonomously creates; optimizes, and manages marketing campaigns across multiple channels. Features include AI-generated content; automated A/B testing; and real-time performance optimization.",
+    description: "Intelligent marketing platform that autonomously creates; optimizes; and manages marketing campaigns across multiple channels. Features include AI-generated content; automated A/B testing; and real-time performance optimization.",
     price: "$179";
     period: "/month";
     features: [

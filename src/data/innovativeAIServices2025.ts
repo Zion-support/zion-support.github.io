@@ -161,7 +161,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   {
     id: "ai-content-creation-studio-2025";
     title: "AI Content Creation Studio";
-    description: "Comprehensive AI-powered content creation platform that generates high-quality text; images, videos; and multimedia content for marketing and communication.",
+    description: "Comprehensive AI-powered content creation platform that generates high-quality text; images; videos; and multimedia content for marketing and communication.",
     category: "AI & Content Creation";
     subcategory: "Multimedia Content";
     price: 4200;
@@ -413,7 +413,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   {
     id: "ai-supply-chain-risk-management-2025";
     title: "AI Supply Chain Risk Management Platform";
-    description: "Intelligent supply chain risk management platform that identifies; assesses, and mitigates risks across global supply chains using AI and predictive analytics.",
+    description: "Intelligent supply chain risk management platform that identifies; assesses; and mitigates risks across global supply chains using AI and predictive analytics.",
     category: "AI & Supply Chain";
     subcategory: "Risk Management";
     price: 7800;
@@ -539,7 +539,7 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService2025[] = [
   {
     id: "ai-creative-design-studio-2025";
     title: "AI Creative Design Studio";
-    description: "Revolutionary AI-powered creative design platform that generates logos; graphics, websites; and creative content with human-like creativity and style.",
+    description: "Revolutionary AI-powered creative design platform that generates logos; graphics; websites; and creative content with human-like creativity and style.",
     category: "AI & Creative Design";
     subcategory: "Design Automation";
     price: 3800;

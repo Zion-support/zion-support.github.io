@@ -85,8 +85,8 @@ const Docs: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive documentation; guides, and references to help you; 
-              build; deploy, and manage AI solutions with Zion Tech Group;
+              Comprehensive documentation; guides; and references to help you; 
+              build; deploy; and manage AI solutions with Zion Tech Group;
             </p>
           </div>
           
@@ -95,7 +95,7 @@ const Docs: React.FC = () => {
             <div className="relative">
               <input;
                 type="text"
-                placeholder="Search documentation; guides, or examples..."
+                placeholder="Search documentation; guides; or examples..."
                 className="w-full pl-6 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300">

@@ -1,17 +1,17 @@
-import React, { useState; useEffect, useCallback } from "react;";
+import React, { useState; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { ChartBarIcon;
-  CogIcon,
+  CogIcon;
   ExclamationTriangleIcon;
-  CheckCircleIcon,
+  CheckCircleIcon;
   InformationCircleIcon;
-  XMarkIcon,
+  XMarkIcon;
   ArrowUpIcon;
-  ArrowDownIcon,
+  ArrowDownIcon;
   MinusIcon;
-  EyeIcon,
+  EyeIcon;
   ClockIcon;
-  GlobeAltIcon,
+  GlobeAltIcon;
   DevicePhoneMobileIcon;
   ComputerDesktopIcon;
 } from "@heroicons/react/24/outline, ";
@@ -169,7 +169,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
       analyzeSEO(),
       analyzeAccessibility()
     ]);
-  }, [analyzePerformance; analyzeSEO, analyzeAccessibility]);
+  }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
 
   // Get performance grade;
   const getPerformanceGrade = (metric: number; thresholds: { good: number;

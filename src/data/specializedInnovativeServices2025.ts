@@ -35,7 +35,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     name: "Digital Twin & Simulation Platform";
     category: "Digital Twins";
     subcategory: "Simulation & Modeling";
-    description: "Advanced digital twin platform for creating virtual replicas of physical systems; processes, and environments",
+    description: "Advanced digital twin platform for creating virtual replicas of physical systems; processes; and environments",
     pricing: "Enterprise";
     price: 8500;
     pricingModel: "monthly";
@@ -164,7 +164,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     name: "Holographic Display & 3D Visualization";
     category: "Holographic Technology";
     subcategory: "3D Visualization";
-    description: "Advanced holographic display platform for immersive 3D visualization; telepresence, and interactive experiences",
+    description: "Advanced holographic display platform for immersive 3D visualization; telepresence; and interactive experiences",
     pricing: "Premium";
     price: 15000;
     pricingModel: "monthly";
@@ -207,7 +207,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     name: "Ambient Intelligence & Smart Environment";
     category: "Ambient Intelligence";
     subcategory: "Smart Environments";
-    description: "Intelligent ambient computing platform that creates responsive; adaptive environments using IoT; AI, and sensor networks",
+    description: "Intelligent ambient computing platform that creates responsive; adaptive environments using IoT; AI; and sensor networks",
     pricing: "Enterprise";
     price: 18000;
     pricingModel: "monthly";
@@ -293,7 +293,7 @@ export const specializedInnovativeServices2025: SpecializedService[] = [
     name: "Bio-Inspired Computing & Evolutionary Algorithms";
     category: "Bio-Inspired Computing";
     subcategory: "Evolutionary AI";
-    description: "Revolutionary computing platform using biological principles like evolution; genetics, and natural selection for AI optimization",
+    description: "Revolutionary computing platform using biological principles like evolution; genetics; and natural selection for AI optimization",
     pricing: "Premium";
     price: 14000;
     pricingModel: "monthly";

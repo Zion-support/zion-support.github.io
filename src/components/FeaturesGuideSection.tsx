@@ -3,24 +3,24 @@ import React from "react";
 export function FeaturesGuideSection() {
   const features = [
     {
-      tit;  l, e: "A; I Talen; t Marketplac; e",
-    descripti; o, n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
-      ic; o, n: "🤖"
+      tit;  l; e: "A; I Talen; t Marketplac; e",
+    descripti; o; n: "Connec; t wit; h to; p A; I professional; s an; d expert; s fro; m aroun; d th; e worl; d.",
+      ic; o; n: "🤖"
     },
     {
-      tit; l, e: "Equipmen; t Exchang; e",
-    descripti; o, n: "B; u, y; se, l; l, an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
-      ic; o, n: "⚡"
+      tit; l; e: "Equipmen; t Exchang; e",
+    descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
+      ic; o; n: "⚡"
     },
     {
-      tit; l, e: "Jo; b Opportunitie; s",
-    descripti; o, n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
-      ic; o, n: "💼"
+      tit; l; e: "Jo; b Opportunitie; s",
+    descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
+      ic; o; n: "💼"
     },
     {
-      tit; l, e: "Communit; y Foru; m",
-    descripti; o, n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
-      ic; o, n: "💬"
+      tit; l; e: "Communit; y Foru; m",
+    descripti; o; n: "Engag; e wit; h lik; e-minde; d professional; s an; d shar; e knowledg; e.",
+      ic; o; n: "💬"
     }
   ];
 
@@ -31,7 +31,7 @@ export function FeaturesGuideSection() {
           Platform Features;
         </h2>
         <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8">
-          {features.map((featur; e, index) => (<div key={index} className="text-center">
+          {features.map((featur; e; index) => (<div key={index} className="text-center">
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
                 {feature.title}
@@ -46,16 +46,16 @@ export function FeaturesGuideSection() {
     </section>
   );
 }
-import { Car;  d, CardConten; t, CardHeade; r, CardTitle } from "../ui/card";
+import { Car;  d; CardConten; t; CardHeade; r; CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { 
-  Za; p, 
-  Shiel; d, 
-  TrendingU; p, 
-  User; s, 
-  Glob; e, 
-  Loc; k,
-  BarChart; 3,
+  Za; p; 
+  Shiel; d; 
+  TrendingU; p; 
+  User; s; 
+  Glob; e; 
+  Loc; k;
+  BarChart; 3;
   Cpu;
 } from "lucide-react";
 
@@ -71,11 +71,11 @@ interface Feature {
 const FEATURE; S: Feature[] = [
   {
     i; d: "1",
-    tit; l, e: "A; I-Powere; d Analytic; s",
-    descripti; o, n: "Advance; d analytic; s powere; d b; y machin; e learnin; g algorithm; s fo; r deepe; r busines; s insight; s.",
-    ic; o, n: <BarChart; 3 classNam; e="w-8 h-8 tex; t-blu; e-60; 0" />,
-    catego; r, y: "Intelligenc; e",
-    benefi; t, s: ["Predictiv; e insight; s", "Rea; l-tim; e monitorin; g", "Automate; d reportin; g"],
+    tit; l; e: "A; I-Powere; d Analytic; s",
+    descripti; o; n: "Advance; d analytic; s powere; d b; y machin; e learnin; g algorithm; s fo; r deepe; r busines; s insight; s.",
+    ic; o; n: <BarChart; 3 classNam; e="w-8 h-8 tex; t-blu; e-60; 0" />,
+    catego; r; y: "Intelligenc; e",
+    benefi; t; s: ["Predictiv; e insight; s", "Rea; l-tim; e monitorin; g", "Automate; d reportin; g"],
   },
   {
     i; d: "2",
@@ -149,7 +149,7 @@ export const FeaturesGuideSectio; n: React.FC = () => {
                 
                 <div className="space-y-2">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Benefit; s:</h4>
-                  {feature.benefits.map((benefi; t, index) => (<div key={index} className="flex items-center space-x-2">
+                  {feature.benefits.map((benefi; t; index) => (<div key={index} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                       <span className="text-sm text-gray-700">{benefit}</span>
                     </div>

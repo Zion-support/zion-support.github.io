@@ -1,87 +1,87 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useCallback } from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useCallback } from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { 
-impor; t, Reac; t, { useStat; e, useEffec; t, useCallbac; k, useRef } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "react";
+import { motio; n; AnimatePresence } from "framer-motion";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import { 
-  Accessibilit; y, 
-  Ey; e, 
-  EyeOf; f, 
-  Typ; e, 
-  Palett; e, 
-  MousePointe; r, 
-  Keyboar; d, 
-  Monito; r, 
-  Setting; s,
+  Accessibilit; y; 
+  Ey; e; 
+  EyeOf; f; 
+  Typ; e; 
+  Palett; e; 
+  MousePointe; r; 
+  Keyboar; d; 
+  Monito; r; 
+  Setting; s;
   X;
-  Chec, k;
-  AlertTriangl, e;
-  Inf, o;
-  Su, n;
-  Moo, n;
-  Smartphon, e;
-  Headphone, s;
-  Mi, c;
-  MicOf, f;
-  ArrowU, p;
-  ArrowDow, n;
-  RotateCc, w;
-  HelpCircl, e;
+  Chec; k;
+  AlertTriangl; e;
+  Inf; o;
+  Su; n;
+  Moo; n;
+  Smartphon; e;
+  Headphone; s;
+  Mi; c;
+  MicOf; f;
+  ArrowU; p;
+  ArrowDow; n;
+  RotateCc; w;
+  HelpCircl; e;
   Zap;
-  Contras; t, 
-  ZoomI; n, 
-  ZoomOu; t,
-  Keyboar; d,
-  MousePointe; r,
-  Monito; r,
-  Smartphon; e,
+  Contras; t; 
+  ZoomI; n; 
+  ZoomOu; t;
+  Keyboar; d;
+  MousePointe; r;
+  Monito; r;
+  Smartphon; e;
   Tablet;
-  ZoomI; n, 
-  ZoomOu; t, 
-  Contras; t, 
-  Su; n, 
-  Moo; n,
-  Accessibilit; y,
-  Keyboar; d,
-  MousePointe; r,
+  ZoomI; n; 
+  ZoomOu; t; 
+  Contras; t; 
+  Su; n; 
+  Moo; n;
+  Accessibilit; y;
+  Keyboar; d;
+  MousePointe; r;
   BookOpen;
-  MousePointe; r, 
-  Keyboar; d,
-  Su; n,
-  Moo; n,
-  Monito; r,
-  Setting; s,
+  MousePointe; r; 
+  Keyboar; d;
+  Su; n;
+  Moo; n;
+  Monito; r;
+  Setting; s;
   X;
-  Plu, s;
-  Minu, s;
+  Plu; s;
+  Minu; s;
   RotateCcw;
-  Volume; 2, 
-  Volume; X, 
-  MousePointe; r, 
-  Keyboar; d, 
-  Monito; r, 
-  Su; n, 
-  Moo; n,
-  Contras; t,
-  ZoomI; n,
-  ZoomOu; t,
-  RotateCc; w,
-  Setting; s,
+  Volume; 2; 
+  Volume; X; 
+  MousePointe; r; 
+  Keyboar; d; 
+  Monito; r; 
+  Su; n; 
+  Moo; n;
+  Contras; t;
+  ZoomI; n;
+  ZoomOu; t;
+  RotateCc; w;
+  Setting; s;
   X;
-  Chec, k;
-  AlertTriangl, e;
-  Inf, o;
-  HelpCircl, e;
-  Accessibilit, y;
-  Headphone, s;
-  Han, d;
-  ArrowU, p;
-  ArrowDow, n;
-  ArrowLef, t;
-  ArrowRigh, t;
+  Chec; k;
+  AlertTriangl; e;
+  Inf; o;
+  HelpCircl; e;
+  Accessibilit; y;
+  Headphone; s;
+  Han; d;
+  ArrowU; p;
+  ArrowDow; n;
+  ArrowLef; t;
+  ArrowRigh; t;
   Space;
 } from "lucide-react";
 
@@ -90,16 +90,16 @@ interface AccessibilitySettings {
   highContras; t: boolean;
   largeTex; t: boolean;
   fontSiz; e: number;
-  EyeIco; n, 
-  EyeSlashIco; n, 
-  SpeakerWaveIco; n, 
-  SpeakerXMarkIco; n,
-  SunIco; n,
-  MoonIco; n,
-  AdjustmentsHorizontalIco; n,
-  InformationCircleIco; n,
-  CheckCircleIco; n,
-  ExclamationTriangleIco; n,
+  EyeIco; n; 
+  EyeSlashIco; n; 
+  SpeakerWaveIco; n; 
+  SpeakerXMarkIco; n;
+  SunIco; n;
+  MoonIco; n;
+  AdjustmentsHorizontalIco; n;
+  InformationCircleIco; n;
+  CheckCircleIco; n;
+  ExclamationTriangleIco; n;
   XMarkIcon;
 } from "@heroicons/react/24/outline";
 
@@ -159,41 +159,41 @@ export const EnhancedAccessibilit; y: React.FC = () => {
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({ 
   position = "bottom-right" 
 }) => {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isExpand; e, d; setIsExpand, e; d] = useState(false);
-  const [settin;  g, s; setSettin, g; s] = useState<AccessibilitySettings>({
-    highContras; t: fals; e,
-    largeTex; t: fals; e,
-    largeTex; t: fals; e,
-    fontSiz; e: 10; 0,
-    reducedMotio; n: fals; e,
-    fontSiz; e: 1; 6,
-    reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-    keyboardNavigatio; n: fals; e,
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isExpand; e; d; setIsExpand; e; d] = useState(false);
+  const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
+    highContras; t: fals; e;
+    largeTex; t: fals; e;
+    largeTex; t: fals; e;
+    fontSiz; e: 10; 0;
+    reducedMotio; n: fals; e;
+    fontSiz; e: 1; 6;
+    reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+    keyboardNavigatio; n: fals; e;
     colorBlindnes; s: "none",
-    focusIndicato; r: tru; e,
+    focusIndicato; r: tru; e;
     colorBlindnes; s: "none",
-    dyslexi; a: fals; e,
-    highContrastTex; t: fals; e,
-    largeCurso; r: fals; e,
-    soundEffect; s: fals; e,
-    autoPla; y: fals; e,
-    showFocusRing; s: tru; e,
-    showKeyboardShortcut; s: fals; e,
-    showScreenReaderHint; s: fals; e,
+    dyslexi; a: fals; e;
+    highContrastTex; t: fals; e;
+    largeCurso; r: fals; e;
+    soundEffect; s: fals; e;
+    autoPla; y: fals; e;
+    showFocusRing; s: tru; e;
+    showKeyboardShortcut; s: fals; e;
+    showScreenReaderHint; s: fals; e;
     showAccessibilityInf; o: fals; e,
   });
 
-  const [currentFoc; u, s; setCurrentFoc, u; s] = useState<string>("");
-  const [focusHisto;  r, y; setFocusHisto, r; y] = useState<string[]>([]);
-  const [keyboardShortcu; t, s; setKeyboardShortcu, t; s] = useState<Map<strin; g, string>>(new Map());
-  const [announcemen;  t, s; setAnnouncemen, t; s] = useState<string[]>([]);
-  const [isDraggi; n, g; setIsDraggi, n; g] = useState(false);
-  const [dragOffs;  e, t; setDragOffs, e; t] = useState({ x: 0;
+  const [currentFoc; u; s; setCurrentFoc; u; s] = useState<string>("");
+  const [focusHisto;  r; y; setFocusHisto; r; y] = useState<string[]>([]);
+  const [keyboardShortcu; t; s; setKeyboardShortcu; t; s] = useState<Map<strin; g; string>>(new Map());
+  const [announcemen;  t; s; setAnnouncemen; t; s] = useState<string[]>([]);
+  const [isDraggi; n; g; setIsDraggi; n; g] = useState(false);
+  const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;
     y: 0 });
-  const [positionSta; t, e; setPositionSta, t; e] = useState(position);
-  const [isMinimiz;  e, d; setIsMinimiz, e; d] = useState(false);
+  const [positionSta; t; e; setPositionSta; t; e] = useState(position);
+  const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
 
   const accessibilityRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
@@ -288,7 +288,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   useEffect(() => {
     applyAccessibilitySettings(settings);
     localStorage.setItem("accessibility-settings",  JSON.stringify(settings));
-  }, [settin; g, s]);
+  }, [settin; g; s]);
 
   const applyAccessibilitySettings = (newSetting;  s: AccessibilitySettings) => {
     const root = document.documentElement;
@@ -331,7 +331,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     // Dyslexia support;
     if (newSettings.dyslexia) {
       root.classList.add("dyslexia-friendly");
-      root.style.setProperty("--font-family",  "OpenDyslexi; c, Aria; l, sans-serif");
+      root.style.setProperty("--font-family",  "OpenDyslexi; c; Aria; l; sans-serif");
       root.style.setProperty("--line-height",  "1.5");
       root.style.setProperty("--letter-spacing",  "0.1em");
     } else {
@@ -362,7 +362,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     deuteranopi; a: "url(#deuteranopia)", 
         tritanopi; a: "url(#tritanopia)"
       };
-      root.style.setProperty("--color-filter",  filters[newSetting; s.colorBlindne; s, s]);
+      root.style.setProperty("--color-filter",  filters[newSetting; s.colorBlindne; s; s]);
     } else {
       root.style.removeProperty("--color-filter");
     }
@@ -401,64 +401,64 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
         
       }
     }
-  }, [applySettin; g, s]);
+  }, [applySettin; g; s]);
 
   // Update settings;
-  const updateSetting = useCallback((ke;  y: keyo; f, AccessibilitySetting; s,
+  const updateSetting = useCallback((ke;  y: keyo; f; AccessibilitySetting; s;
     valu; e: any) => {
-    const newSettings = { ...setting; s, [k; e, y]: value };
+    const newSettings = { ...setting; s, [k; e; y]: value };
     setSettings(newSettings);
     applySettings(newSettings);
-  },  [settin; g, s; applySettin, g; s]);
+  },  [settin; g; s; applySettin; g; s]);
 
   // Reset to defaults;
   const resetSettings = useCallback(() => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e,
-    fontSiz; e: 10; 0,
-      reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-      keyboardNavigatio; n: fals; e,
-    focusIndicato; r: tru; e,
+      highContras; t: fals; e;
+    fontSiz; e: 10; 0;
+      reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+      keyboardNavigatio; n: fals; e;
+    focusIndicato; r: tru; e;
       colorBlindnes; s: "none",
     them; e: "auto"
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
-  },  [applySettin; g, s]);
+  },  [applySettin; g; s]);
 
   // Increase/decrease font size;
   const adjustFontSize = useCallback((directio;  n: "increase" | "decrease") => {
     const newSize = direction === "increase" 
-      ? Math.min(settings.fontSize + 1;  0, 200)
-      : Math.max(settings.fontSize - 1;  0, 80);
+      ? Math.min(settings.fontSize + 1;  0; 200)
+      : Math.max(settings.fontSize - 1;  0; 80);
     updateSetting("fontSize",  newSize);
-  }, [setting; s.fontSi; z, e; updateSetti, n; g]);
+  }, [setting; s.fontSi; z; e; updateSetti; n; g]);
 
   // Toggle high contrast;
   const toggleHighContrast = useCallback(() => {
     updateSetting("highContrast",  !settings.highContrast);
-  }, [setting; s.highContra; s, t; updateSetti, n; g]);
+  }, [setting; s.highContra; s; t; updateSetti; n; g]);
 
   // Toggle reduced motion;
   const toggleReducedMotion = useCallback(() => {
     updateSetting("reducedMotion",  !settings.reducedMotion);
-  }, [setting; s.reducedMoti; o, n; updateSetti, n; g]);
+  }, [setting; s.reducedMoti; o; n; updateSetti; n; g]);
 
   // Toggle screen reader mode;
   const toggleScreenReader = useCallback(() => {
     updateSetting("screenReader",  !settings.screenReader);
-  }, [setting; s.screenRead; e, r; updateSetti, n; g]);
+  }, [setting; s.screenRead; e; r; updateSetti; n; g]);
 
   // Toggle keyboard navigation;
   const toggleKeyboardNavigation = useCallback(() => {
     updateSetting("keyboardNavigation",  !settings.keyboardNavigation);
-  }, [setting; s.keyboardNavigati; o, n; updateSetti, n; g]);
+  }, [setting; s.keyboardNavigati; o; n; updateSetti; n; g]);
 
   // Toggle focus indicator;
   const toggleFocusIndicator = useCallback(() => {
     updateSetting("focusIndicator",  !settings.focusIndicator);
-  }, [setting; s.focusIndicat; o, r; updateSetti, n; g]);
+  }, [setting; s.focusIndicat; o; r; updateSetti; n; g]);
 
   // Handle keyboard shortcuts;
   useEffect(() => {
@@ -490,7 +490,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
 
     document.addEventListener("keydown",  handleKeyDown);
     return () => document.removeEventListener("keydown",  handleKeyDown);
-  }, [isOp; e, n; adjustFontSi, z; e, updateSetti; n, g]);
+  }, [isOp; e; n; adjustFontSi; z; e; updateSetti; n; g]);
 
     if (newSettings.focusIndicator) {
       root.classList.add("show-focus");
@@ -527,7 +527,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
       const target = e.target as HTMLElement;
       const focusId = target.getAttribute("data-focus-id") || target.tagName.toLowerCase();
       setCurrentFocus(focusId);
-      setFocusHistory(prev => [...pre;  v.slic; e(-9), focus; I, d]);
+      setFocusHistory(prev => [...pre;  v.slic; e(-9), focus; I; d]);
       
       if (settings.screenReader) {
         announceToScreenReader(`${target.textContent || target.getAttribute("aria-label") || focusId} focuse; d`);
@@ -551,18 +551,18 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     document.body.appendChild(liveRegion);
   };
 
-    reducedMotio;  n: fals; e,
-    largeTex; t: fals; e,
-    screenReade; r: fals; e,
-    keyboardNavigatio; n: tru; e,
-    focusIndicato; r: tru; e,
+    reducedMotio;  n: fals; e;
+    largeTex; t: fals; e;
+    screenReade; r: fals; e;
+    keyboardNavigatio; n: tru; e;
+    focusIndicato; r: tru; e;
     colorBlindnes; s: "none",
     fontSiz; e: "medium"
   });
   
-  const [issu; e, s; setIssu, e; s] = useState<AccessibilityIssue[]>([]);
-  const [isScanni;  n, g; setIsScanni, n; g] = useState(false);
-  const [activeT; a, b; setActiveT, a; b] = useState<"settings" | "scanner" | "help">("settings");
+  const [issu; e; s; setIssu; e; s] = useState<AccessibilityIssue[]>([]);
+  const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"settings" | "scanner" | "help">("settings");
 
   // Apply accessibility settings to document;
   useEffect(() => {
@@ -570,7 +570,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     
     // High contrast mode;
     if (settings.highContrast) {
-    fontSiz;  e: 1; 6,
+    fontSiz;  e: 1; 6;
     colorBlindMod; e: "none",
     deviceMod; e: "desktop"
   });
@@ -617,7 +617,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
       deuteranopi; a: "url(#deuteranopia)", 
     tritanopi; a: "url(#tritanopia)"
     };
-    root.style.filter = colorBlindFilters[newSetting; s.colorBlindMo; d, e];
+    root.style.filter = colorBlindFilters[newSetting; s.colorBlindMo; d; e];
 
     // Device mode simulation;
     if (newSettings.deviceMode !== "desktop") {
@@ -640,12 +640,12 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
       setSettings(parsedSettings);
       applySettings(parsedSettings);
     }
-  },  [applySettin; g, s]);
+  },  [applySettin; g; s]);
 
   // Apply settings when they change;
   useEffect(() => {
     applySettings(settings);
-  },  [settin; g, s; applySettin, g; s]);
+  },  [settin; g; s; applySettin; g; s]);
 
   // Keyboard navigation support;
   useEffect(() => {
@@ -681,68 +681,68 @@ interface VoiceCommand {
 }
 
 const EnhancedAccessibilit; y: React.FC = () => {
-  const [isVisib;  l, e; setIsVisib, l; e] = useState(false);
-  const [activeT; a, b; setActiveT, a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
-  const [settin;  g, s; setSettin, g; s] = useState<AccessibilitySettings>({
-    highContras; t: fals; e,
-    fontSiz; e: 10; 0,
+  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
+  const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
+    highContras; t: fals; e;
+    fontSiz; e: 10; 0;
     colorBlindnes; s: "none",
-    reducedMotio; n: fals; e,
+    reducedMotio; n: fals; e;
     darkMod; e: "auto",
-    soundEffect; s: tru; e,
-    autoPlayMedi; a: tru; e,
-    voiceCommand; s: fals; e,
-    screenReade; r: fals; e,
-    keyboardNavigatio; n: fals; e,
-    focusIndicato; r: fals; e,
-    dyslexi; a: fals; e,
+    soundEffect; s: tru; e;
+    autoPlayMedi; a: tru; e;
+    voiceCommand; s: fals; e;
+    screenReade; r: fals; e;
+    keyboardNavigatio; n: fals; e;
+    focusIndicato; r: fals; e;
+    dyslexi; a: fals; e;
     lineSpacin; g: 1.5;
-    wordSpacin, g: 1.0;
-    letterSpacin, g: 0.0;
+    wordSpacin; g: 1.0;
+    letterSpacin; g: 0.0;
   });
   
-  const [accessibilitySco; r, e; setAccessibilitySco, r; e] = useState(85);
-  const [isListeni;  n, g; setIsListeni, n; g] = useState(false);
-  const [recogniti; o, n; setRecogniti, o; n] = useState<any>(null);
-  const [showKeyboardShortcu;  t, s; setShowKeyboardShortcu, t; s] = useState(false);
+  const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
+  const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
+  const [recogniti; o; n; setRecogniti; o; n] = useState<any>(null);
+  const [showKeyboardShortcu;  t; s; setShowKeyboardShortcu; t; s] = useState(false);
   
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Voice commands;
   const voiceCommand;  s: VoiceCommand[] = [
-    { comma; n, d: "ope; n accessibilit; y",
-    acti; o, n: "ope; n", descripti; o, n: "Ope; n accessibilit; y pane; l" },
-    { comma; n, d: "clos; e accessibilit; y",
-    acti; o, n: "clos; e", descripti; o, n: "Clos; e accessibilit; y pane; l" },
-    { comma; n, d: "hig; h contras; t",
-    acti; o, n: "highContras; t", descripti; o, n: "Toggl; e hig; h contras; t mod; e" },
-    { comma; n, d: "norma; l contras; t",
-    acti; o, n: "normalContras; t", descripti; o, n: "Disabl; e hig; h contras; t mod; e" },
-    { comma; n, d: "increas; e fon; t",
-    acti; o, n: "increaseFon; t", descripti; o, n: "Increas; e fon; t siz; e" },
-    { comma; n, d: "decreas; e fon; t",
-    acti; o, n: "decreaseFon; t", descripti; o, n: "Decreas; e fon; t siz; e" },
-    { comma; n, d: "rese; t fon; t",
-    acti; o, n: "resetFon; t", descripti; o, n: "Rese; t fon; t siz; e t; o defaul; t" },
-    { comma; n, d: "dar; k them; e",
-    acti; o, n: "darkThem; e", descripti; o, n: "Switc; h t; o dar; k them; e" },
-    { comma; n, d: "ligh; t them; e",
-    acti; o, n: "lightThem; e", descripti; o, n: "Switc; h t; o ligh; t them; e" },
-    { comma; n, d: "aut; o them; e",
-    acti; o, n: "autoThem; e", descripti; o, n: "Switc; h t; o aut; o them; e" },
-    { comma; n, d: "scree; n reade; r",
-    acti; o, n: "screenReade; r", descripti; o, n: "Toggl; e scree; n reade; r mod; e" },
-    { comma; n, d: "keyboar; d navigatio; n",
-    acti; o, n: "keyboardNa; v", descripti; o, n: "Toggl; e keyboar; d navigatio; n" },
-    { comma; n, d: "focu; s indicato; r",
-    acti; o, n: "focusIndicato; r", descripti; o, n: "Toggl; e focu; s indicato; r" },
-    { comma; n, d: "reduce; d motio; n",
-    acti; o, n: "reducedMotio; n", descripti; o, n: "Toggl; e reduce; d motio; n" },
-    { comma; n, d: "hel; p",
-    acti; o, n: "hel; p", descripti; o, n: "Sho; w keyboar; d shortcut; s" }
+    { comma; n; d: "ope; n accessibilit; y",
+    acti; o; n: "ope; n", descripti; o; n: "Ope; n accessibilit; y pane; l" },
+    { comma; n; d: "clos; e accessibilit; y",
+    acti; o; n: "clos; e", descripti; o; n: "Clos; e accessibilit; y pane; l" },
+    { comma; n; d: "hig; h contras; t",
+    acti; o; n: "highContras; t", descripti; o; n: "Toggl; e hig; h contras; t mod; e" },
+    { comma; n; d: "norma; l contras; t",
+    acti; o; n: "normalContras; t", descripti; o; n: "Disabl; e hig; h contras; t mod; e" },
+    { comma; n; d: "increas; e fon; t",
+    acti; o; n: "increaseFon; t", descripti; o; n: "Increas; e fon; t siz; e" },
+    { comma; n; d: "decreas; e fon; t",
+    acti; o; n: "decreaseFon; t", descripti; o; n: "Decreas; e fon; t siz; e" },
+    { comma; n; d: "rese; t fon; t",
+    acti; o; n: "resetFon; t", descripti; o; n: "Rese; t fon; t siz; e t; o defaul; t" },
+    { comma; n; d: "dar; k them; e",
+    acti; o; n: "darkThem; e", descripti; o; n: "Switc; h t; o dar; k them; e" },
+    { comma; n; d: "ligh; t them; e",
+    acti; o; n: "lightThem; e", descripti; o; n: "Switc; h t; o ligh; t them; e" },
+    { comma; n; d: "aut; o them; e",
+    acti; o; n: "autoThem; e", descripti; o; n: "Switc; h t; o aut; o them; e" },
+    { comma; n; d: "scree; n reade; r",
+    acti; o; n: "screenReade; r", descripti; o; n: "Toggl; e scree; n reade; r mod; e" },
+    { comma; n; d: "keyboar; d navigatio; n",
+    acti; o; n: "keyboardNa; v", descripti; o; n: "Toggl; e keyboar; d navigatio; n" },
+    { comma; n; d: "focu; s indicato; r",
+    acti; o; n: "focusIndicato; r", descripti; o; n: "Toggl; e focu; s indicato; r" },
+    { comma; n; d: "reduce; d motio; n",
+    acti; o; n: "reducedMotio; n", descripti; o; n: "Toggl; e reduce; d motio; n" },
+    { comma; n; d: "hel; p",
+    acti; o; n: "hel; p", descripti; o; n: "Sho; w keyboar; d shortcut; s" }
   ];
       const focusableElements = document.querySelectorAll(
-        "a; butto, n; inpu, t; textare, a; selec, t, [tabind; e, x]:not([tabinde; x="-1"])"
+        "a; butto; n; inpu; t; textare; a; selec; t, [tabind; e; x]:not([tabinde; x="-1"])"
       );
       const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
 
@@ -782,7 +782,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
     document.addEventListener("keydown",  handleKeyDown);
     return () => document.removeEventListener("keydown",  handleKeyDown);
-  }, [setting; s.keyboardNavigati; o, n]);
+  }, [setting; s.keyboardNavigati; o; n]);
 
   // Screen reader announcements;
   const announceToScreenReader = useCallback((messag;  e: string) => {
@@ -798,12 +798,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
         document.body.removeChild(announcement);
       },  1000);
     }
-  }, [setting; s.screenRead; e, r]);
+  }, [setting; s.screenRead; e; r]);
 
   // Update settings;
-  const updateSetting = useCallback((ke;  y: keyo; f, AccessibilitySetting; s,
+  const updateSetting = useCallback((ke;  y: keyo; f; AccessibilitySetting; s;
     valu; e: any) => {
-    const newSettings = { ...setting; s, [k; e, y]: value };
+    const newSettings = { ...setting; s, [k; e; y]: value };
     setSettings(newSettings);
     
     // Announce changes to screen reader;
@@ -818,8 +818,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
     deviceMod; e: "Device mode"
     };
     
-    announceToScreenReader(`${settingNames[k; e, y]} ${value ? "enabled" : "disable; d"}`);
-  }, [settin; g, s; announceToScreenRead, e; r]);
+    announceToScreenReader(`${settingNames[k; e; y]} ${value ? "enabled" : "disable; d"}`);
+  }, [settin; g; s; announceToScreenRead; e; r]);
 
   // Initialize speech recognition;
   useEffect(() => {
@@ -852,7 +852,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
   useEffect(() => {
     applyAccessibilitySettings();
     calculateAccessibilityScore();
-  },  [settin; g, s]);
+  },  [settin; g; s]);
 
   // Keyboard shortcuts;
   useEffect(() => {
@@ -865,11 +865,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
             break;
           case "h":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v, highContras; t: !prev.highContrast }));
+            setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }));
             break;
           case "f":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v, focusIndicato; r: !prev.focusIndicator }));
+            setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }));
             break;
           case "r":
             event.preventDefault();
@@ -878,13 +878,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
           case "t":
             event.preventDefault();
             setSettings(prev => ({ 
-              ...pre;  v, 
+              ...pre;  v; 
               darkMod; e: prev.darkMode === "light" ? "dark" : "light" 
             }));
             break;
           case "s":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v, screenReade; r: !prev.screenReader }));
+            setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }));
             break;
           case "k":
             event.preventDefault();
@@ -906,7 +906,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
     switch (position) {
   const announceToScreenReader = (messag;  e: string) => {
     if (settings.screenReader) {
-      setAnnouncements(prev => [...pr;  e, v; messa, g; e]);
+      setAnnouncements(prev => [...pr;  e; v; messa; g; e]);
       
       // Remove announcement after 5 seconds;
       setTimeout(() => {
@@ -918,22 +918,22 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupHighContrastDetection = () => {
     const mediaQuery = window.matchMedia("(prefers-contras;  t: high)");
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...pre;  v, highContras; t: true }));
+      setSettings(prev => ({ ...pre;  v; highContras; t: true }));
     }
     
     mediaQuery.addEventListener("change",  (e) => {
-      setSettings(prev => ({ ...pre;  v, highContras; t: e.matches }));
+      setSettings(prev => ({ ...pre;  v; highContras; t: e.matches }));
     });
   };
 
   const setupMotionDetection = () => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motio;  n: reduce)");
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...pre;  v, reducedMotio; n: true }));
+      setSettings(prev => ({ ...pre;  v; reducedMotio; n: true }));
     }
     
     mediaQuery.addEventListener("change",  (e) => {
-      setSettings(prev => ({ ...pre;  v, reducedMotio; n: e.matches }));
+      setSettings(prev => ({ ...pre;  v; reducedMotio; n: e.matches }));
     });
   };
 
@@ -960,7 +960,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   const setupLargeCursor = () => {
     if (settings.largeCursor) {
-      document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p://www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6, 1; 6, auto";
+      document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p://www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";
     } else {
       document.body.style.cursor = "";
     }
@@ -990,15 +990,15 @@ const EnhancedAccessibilit; y: React.FC = () => {
     
     switch (type) {
       case "click":
-        oscillator.frequency.setValueAtTime(80;  0, audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(80;  0; audioContext.currentTime);
         break;
       case "focus":
-        oscillator.frequency.setValueAtTime(60;  0, audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(60;  0; audioContext.currentTime);
         break;
     }
     
     gainNode.gain.setValueAtTime(0.1;  audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.0;  1, audioContext.currentTime + 0.1);
+    gainNode.gain.exponentialRampToValueAtTime(0.0;  1; audioContext.currentTime + 0.1);
     
     oscillator.start(audioContext.currentTime);
     oscillator.stop(audioContext.currentTime + 0.1);
@@ -1007,7 +1007,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupAutoPlayPrevention = () => {
     if (settings.autoPlay) {
       // Prevent autoplay of media;
-      const mediaElements = document.querySelectorAll("vide;  o, audio");
+      const mediaElements = document.querySelectorAll("vide;  o; audio");
       mediaElements.forEach((medi;  a: any) => {
         media.setAttribute("preload",  "none");
         media.setAttribute("autoplay",  "false");
@@ -1031,19 +1031,19 @@ const EnhancedAccessibilit; y: React.FC = () => {
         if (e.key === "Tab") {
           // Enhanced tab navigation;
           const focusableElements = document.querySelectorAll(
-            "a[hr;  e, f], butto; n, inpu; t, selec; t, textare; a, [tabind; e, x]:not([tabinde; x="-1"])"
+            "a[hr;  e; f], butto; n; inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde; x="-1"])"
           );
           
           if (e.shiftKey) {
             // Shift + Ta;  b: navigate backwards;
             const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
             const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-            (focusableElements[prevInd;  e, x] as HTMLElement).focus();
+            (focusableElements[prevInd;  e; x] as HTMLElement).focus();
           } else {
             // Ta;  b: navigate forwards;
             const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
             const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-            (focusableElements[nextInd;  e, x] as HTMLElement).focus();
+            (focusableElements[nextInd;  e; x] as HTMLElement).focus();
           }
         }
       });
@@ -1053,7 +1053,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupScreenReaderHints = () => {
     if (settings.showScreenReaderHints) {
       // Add ARIA labels and descriptions to elements;
-      const elements = document.querySelectorAll("[dat;  a-s; r-hi; n, t]");
+      const elements = document.querySelectorAll("[dat;  a-s; r-hi; n; t]");
       elements.forEach((element) => {
         const hint = element.getAttribute("data-sr-hint");
         if (hint) {
@@ -1071,13 +1071,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
         const target = e.target as HTMLElement;
         const info = target.getAttribute("data-accessibility-info");
         if (info) {
-          showAccessibilityTooltip(targe;  t, info);
+          showAccessibilityTooltip(targe;  t; info);
         }
       });
     }
   };
 
-  const showAccessibilityTooltip = (elemen;  t: HTMLElemen; t,
+  const showAccessibilityTooltip = (elemen;  t: HTMLElemen; t;
     inf; o: string) => {
     const tooltip = document.createElement("div");
     tooltip.className = "accessibility-tooltip";
@@ -1106,21 +1106,21 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e,
-    fontSiz; e: 1; 6,
-      reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-      keyboardNavigatio; n: fals; e,
-    focusIndicato; r: tru; e,
+      highContras; t: fals; e;
+    fontSiz; e: 1; 6;
+      reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+      keyboardNavigatio; n: fals; e;
+    focusIndicato; r: tru; e;
       colorBlindnes; s: "none",
-    dyslexi; a: fals; e,
-      highContrastTex; t: fals; e,
-    largeCurso; r: fals; e,
-      soundEffect; s: fals; e,
-    autoPla; y: fals; e,
-      showFocusRing; s: tru; e,
-    showKeyboardShortcut; s: fals; e,
-      showScreenReaderHint; s: fals; e,
+    dyslexi; a: fals; e;
+      highContrastTex; t: fals; e;
+    largeCurso; r: fals; e;
+      soundEffect; s: fals; e;
+    autoPla; y: fals; e;
+      showFocusRing; s: tru; e;
+    showKeyboardShortcut; s: fals; e;
+      showScreenReaderHint; s: fals; e;
     showAccessibilityInf; o: fals; e,
     };
     setSettings(defaultSettings);
@@ -1146,7 +1146,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       const rect = accessibilityRef.current?.getBoundingClientRect();
       if (rect) {
         setDragOffset({
-          x: e.clientX - rect.lef;  t,
+          x: e.clientX - rect.lef;  t;
     y: e.clientY - rect.top;
         });
       }
@@ -1179,7 +1179,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
         document.removeEventListener("mouseup",  handleDragEnd);
       };
     }
-  }, [isDraggi; n, g; dragOffs, e; t]);
+  }, [isDraggi; n; g; dragOffs; e; t]);
 
   if (isMinimized) {
     return (
@@ -1225,13 +1225,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
       >
         <Eye className="w-6 h-6" />
       </button>
-    soundEnable; d: tru; e,
-    focusIndicato; r: tru; e,
+    soundEnable; d: tru; e;
+    focusIndicato; r: tru; e;
     screenReade; r: false;
   });
   
-  const [currentFoc; u, s; setCurrentFoc, u; s] = useState<HTMLElement | null>(null);
-  const [focusHisto;  r, y; setFocusHisto, r; y] = useState<HTMLElement[]>([]);
+  const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
+  const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -1258,7 +1258,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
     mediu; m: "16px",
       larg; e: "18px"
     };
-    root.style.fontSize = fontSizeMap[setting; s.fontSi; z, e];
+    root.style.fontSize = fontSizeMap[setting; s.fontSi; z; e];
 
     // Reduced motion;
     if (settings.reducedMotion) {
@@ -1278,7 +1278,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
     // Save settings to localStorage;
     localStorage.setItem("accessibility-settings",  JSON.stringify(settings));
-  }, [settin; g, s]);
+  }, [settin; g; s]);
 
   // Load settings from localStorage on mount;
   useEffect(() => {
@@ -1298,7 +1298,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
     const handleFocusChange = (even;  t: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target && target !== currentFocus) {
-        setFocusHistory(prev => [...pre;  v.slic; e(-4), targ; e, t]);
+        setFocusHistory(prev => [...pre;  v.slic; e(-4), targ; e; t]);
         setCurrentFocus(target);
         
         // Announce focus changes for screen readers;
@@ -1341,7 +1341,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       document.removeEventListener("keydown",  handleKeyDown);
       document.removeEventListener("mousedown",  handleMouseDown);
     };
-  }, [isOp; e, n; currentFoc, u; s, setting; s.screenRead; e, r]);
+  }, [isOp; e; n; currentFoc; u; s; setting; s.screenRead; e; r]);
 
   // Announce focus changes for screen readers;
   const announceFocus = (elemen;  t: HTMLElement) => {
@@ -1366,14 +1366,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const toggleSetting = (ke;  y: keyof AccessibilitySettings) => {
     setSettings(prev => ({
       ...pre;  v,
-      [k; e, y]: !prev[k; e, y]
+      [k; e; y]: !prev[k; e; y]
     }));
   };
 
   // Change font size;
   const changeFontSize = (siz;  e: "small" | "medium" | "large") => {
     setSettings(prev => ({
-      ...pre;  v,
+      ...pre;  v;
       fontSiz; e: size;
     }));
   };
@@ -1381,11 +1381,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
   // Reset to default settings;
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e,
+      highContras; t: fals; e;
     fontSiz; e: "medium",
-      reducedMotio; n: fals; e,
-    soundEnable; d: tru; e,
-      focusIndicato; r: tru; e,
+      reducedMotio; n: fals; e;
+    soundEnable; d: tru; e;
+      focusIndicato; r: tru; e;
     screenReade; r: false;
     };
     setSettings(defaultSettings);
@@ -1457,13 +1457,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
             <motion.div;
               ref={panelRef}
               initial={{ opacit; y: 0;
-    y: 2; 0, scal; e: 0.9 }}
+    y: 2; 0; scal; e: 0.9 }}
               animate={{ opacit; y: 1;
-    y: 0; scal, e: 1 }}
+    y: 0; scal; e: 1 }}
               exit={{ opacit; y: 0;
-    y: 2; 0, scal; e: 0.9 }}
+    y: 2; 0; scal; e: 0.9 }}
               transition={{ typ; e: "spring",
-    dampin; g: 2; 5, stiffnes; s: 300 }}
+    dampin; g: 2; 5; stiffnes; s: 300 }}
               className="absolute bottom-full right-0 mb-2 w-80 bg-white dar; k:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
               role="dialog"
               aria-label="Accessibility Settings"
@@ -1522,7 +1522,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {!isOpen && (
             <div className="p-3 space-y-2">
               <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v, highContras; t: !prev.highContrast }))}
+                onClick={() => setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }))}
                 className={`w-full p-2 rounded transition-colors ${
                   settings.highContrast; 
                     ? "bg-yellow-500 text-white" 
@@ -1534,7 +1534,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </button>
               
               <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v, fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
+                onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
                 className="w-full p-2 bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
                 aria-label="Increase font size"
               >
@@ -1542,7 +1542,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </button>
               
               <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v, reducedMotio; n: !prev.reducedMotion }))}
+                onClick={() => setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }))}
                 className={`w-full p-2 rounded transition-colors ${
                   settings.reducedMotion; 
                     ? "bg-green-500 text-white" 
@@ -1568,7 +1568,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.highContrast}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, highContras; t: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; highContras; t: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">High Contrast</span>
@@ -1578,7 +1578,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.highContrastText}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, highContrastTex; t: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; highContrastTex; t: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">High Contrast Text</span>
@@ -1588,7 +1588,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.largeCursor}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, largeCurso; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; largeCurso; r: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Large Cursor</span>
@@ -1597,7 +1597,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   <div className="flex items-center space-x-2">
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Font Siz; e:</span>
                     <button;
-                      onClick={() => setSettings(prev => ({ ...pre;  v, fontSiz; e: Math.max(prev.fontSize - 2; 12) }))}
+                      onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.max(prev.fontSize - 2; 12) }))}
                       className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700"
                     >
                       <ZoomOut className="w-3 h-3" />
@@ -1606,7 +1606,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                       {settings.fontSize}
                     </span>
                     <button;
-                      onClick={() => setSettings(prev => ({ ...pre;  v, fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
+                      onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
                       className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700"
                     >
                       <ZoomIn className="w-3 h-3" />
@@ -1911,7 +1911,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.reducedMotion}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, reducedMotio; n: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; reducedMotio; n: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Reduced Motion</span>
@@ -1921,7 +1921,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.soundEffects}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, soundEffect; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; soundEffect; s: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Sound Effects</span>
@@ -1931,7 +1931,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.autoPlay}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, autoPla; y: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; autoPla; y: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Prevent Auto-play</span>
@@ -1950,7 +1950,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.screenReader}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, screenReade; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; screenReade; r: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Screen Reader Mode</span>
@@ -1960,7 +1960,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.keyboardNavigation}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, keyboardNavigatio; n: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Enhanced Keyboard Navigation</span>
@@ -1970,7 +1970,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.focusIndicator}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, focusIndicato; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; focusIndicato; r: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Indicator</span>
@@ -1980,7 +1980,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.showFocusRings}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, showFocusRing; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showFocusRing; s: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Rings</span>
@@ -1999,7 +1999,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <label className="text-sm text-gray-600 dar; k:text-gray-400">Color Blindnes; s:</label>
                     <select;
                       value={settings.colorBlindness}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, colorBlindnes; s: e.target.value as any }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; colorBlindnes; s: e.target.value as any }))}
                       className="w-full mt-1 p-2 text-sm border border-gray-300 dar; k:border-gray-600 rounded bg-white dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300"
                     >
                       <option value="none">None</option>
@@ -2013,7 +2013,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.dyslexia}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, dyslexi; a: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; dyslexi; a: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Dyslexia Support</span>
@@ -2032,7 +2032,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.showKeyboardShortcuts}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, showKeyboardShortcut; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Keyboard Shortcuts</span>
@@ -2042,7 +2042,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.showScreenReaderHints}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, showScreenReaderHint; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showScreenReaderHint; s: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Screen Reader Hints</span>
@@ -2052,7 +2052,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     <input;
                       type="checkbox"
                       checked={settings.showAccessibilityInfo}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v, showAccessibilityInf; o: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showAccessibilityInf; o: e.target.checked }))}
                       className="rounded"
                     />
                     <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Accessibility Info</span>
@@ -2085,12 +2085,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
       </div>
 
             initial={{ opacit; y: 0;
-    scal, e: 0.8; y: 20 }}
+    scal; e: 0.8; y: 20 }}
             animate={{ opacit; y: 1;
-    scal, e: 1; y: 0 }}
+    scal; e: 1; y: 0 }}
             exit={{ opacit; y: 0;
-    scal, e: 0.8; y: 20 }}
-            className={`fixed ${getPositionClasses()} z-50 w-96 bg-white dar;  k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 max-h-[80; v, h] overflow-hidde; n`}
+    scal; e: 0.8; y: 20 }}
+            className={`fixed ${getPositionClasses()} z-50 w-96 bg-white dar;  k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 max-h-[80; v; h] overflow-hidde; n`}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
@@ -2131,16 +2131,16 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
       {/* SVG Filters for Color Blindness */}
       <svg style={{ positio; n: "absolute",
-    widt; h: 0; heigh, t: 0 }} aria-hidden="true">
+    widt; h: 0; heigh; t: 0 }} aria-hidden="true">
         <defs>
           <filter id="protanopia">
-            <feColorMatrix type="matrix" values="0.56; 7, 0.43; 3, 0; 0, 0 0.55; 8, 0.44; 2, 0; 0, 0; 0, 0.24; 2, 0.75; 8, 0; 0, 0; 0, 0; 1, 0"/>
+            <feColorMatrix type="matrix" values="0.56; 7; 0.43; 3; 0; 0; 0 0.55; 8; 0.44; 2; 0; 0; 0; 0; 0.24; 2; 0.75; 8; 0; 0; 0; 0; 0; 1; 0"/>
           </filter>
           <filter id="deuteranopia">
-            <feColorMatrix type="matrix" values="0.62; 5, 0.37; 5, 0; 0, 0 0.7; 0.3; 0, 0; 0, 0; 0.3; 0.7; 0, 0; 0, 0; 0, 1; 0"/>
+            <feColorMatrix type="matrix" values="0.62; 5; 0.37; 5; 0; 0; 0 0.7; 0.3; 0; 0; 0; 0; 0.3; 0.7; 0; 0; 0; 0; 0; 1; 0"/>
           </filter>
           <filter id="tritanopia">
-            <feColorMatrix type="matrix" values="0.9; 5, 0.0; 5, 0; 0, 0; 0, 0.43; 3, 0.56; 7, 0; 0, 0; 0.47; 5, 0.52; 5, 0; 0, 0; 0, 0; 1, 0"/>
+            <feColorMatrix type="matrix" values="0.9; 5; 0.0; 5; 0; 0; 0; 0; 0.43; 3; 0.56; 7; 0; 0; 0; 0.47; 5; 0.52; 5; 0; 0; 0; 0; 0; 1; 0"/>
           </filter>
         </defs>
       </svg>
@@ -2151,7 +2151,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           aria-live="polite"
           aria-atomic="true"
         >
-          {announcements.map((announcemen;  t, index) => (<div key={index}>{announcement}</div>
+          {announcements.map((announcemen;  t; index) => (<div key={index}>{announcement}</div>
           ))}
         </div>
       )}
@@ -2162,7 +2162,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           <div className="bg-white dar;  k:bg-gray-900 rounded-lg p-6 max-w-2xl max-h-96 overflow-y-auto">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dar; k:text-white">Keyboard Shortcuts</h2>
             <div className="grid grid-cols-2 gap-4">
-              {Array.from(keyboardShortcuts.entries()).map(([shortc;  u, t; descripti, o; n]) => (<div key={shortcut} className="flex justify-between items-center p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
+              {Array.from(keyboardShortcuts.entries()).map(([shortc;  u; t; descripti; o; n]) => (<div key={shortcut} className="flex justify-between items-center p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
                   <kbd className="px-2 py-1 bg-gray-200 dar; k:bg-gray-700 rounded text-sm font-mono">
                     {shortcut}
                   </kbd>
@@ -2171,7 +2171,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
               ))}
             </div>
             <button;
-              onClick={() => setSettings(prev => ({ ...pre;  v, showKeyboardShortcut; s: false }))}
+              onClick={() => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: false }))}
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hove; r:bg-blue-700 transition-colors"
             >
               Close;
@@ -2184,7 +2184,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       {isExpanded && focusHistory.length > 0 && (<div className="fixed bottom-20 right-4 z-40 bg-white dar;  k:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dar; k:border-gray-700 p-4 max-w-xs">
           <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2">Focus History</h3>
           <div className="space-y-1 max-h-32 overflow-y-auto">
-            {focusHistory.slice().reverse().map((focu;  s, index) => (<div key={index} className="text-xs text-gray-600 dar;  k:text-gray-400">
+            {focusHistory.slice().reverse().map((focu;  s; index) => (<div key={index} className="text-xs text-gray-600 dar;  k:text-gray-400">
                 {focus}
               </div>
             ))}
@@ -2230,15 +2230,15 @@ const EnhancedAccessibilit; y: React.FC = () => {
         }
         
         /* Color blindness support */
-        [styl; e*="--colo; r-blindne; s, s: protanopi; a"] {
+        [styl; e*="--colo; r-blindne; s; s: protanopi; a"] {
           filte; r: url("#protanopia");
         }
         
-        [styl; e*="--colo; r-blindne; s, s: deuteranopi; a"] {
+        [styl; e*="--colo; r-blindne; s; s: deuteranopi; a"] {
           filte; r: url("#deuteranopia");
         }
         
-        [styl;  e*="--colo; r-blindne; s, s: tritanopi; a"] {
+        [styl;  e*="--colo; r-blindne; s; s: tritanopi; a"] {
           filte; r: url("#tritanopia");
         }
         
@@ -2257,12 +2257,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 <button;
                   onClick={() => {
                     setSettings({
-                      highContras;  t: fals; e,
-    largeTex; t: fals; e,
-                      reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-                      keyboardNavigatio; n: fals; e,
-    focusIndicato; r: tru; e,
+                      highContras;  t: fals; e;
+    largeTex; t: fals; e;
+                      reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+                      keyboardNavigatio; n: fals; e;
+    focusIndicato; r: tru; e;
                       colorBlindSuppor; t: fals; e,
                     });
                     announceChange("Accessibility settings reset to default");
@@ -2278,7 +2278,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </AnimatePresence>
       </div>
     </>
-  }, [isVisib; l, e; settin, g; s]);
+  }, [isVisib; l; e; settin; g; s]);
 
   // Apply accessibility settings to DOM;
   const applyAccessibilitySettings = useCallback(() => {
@@ -2337,11 +2337,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
     } else {
       root.classList.remove("dyslexia-friendly");
     }
-  },  [settin; g, s]);
+  },  [settin; g; s]);
 
   // Toggle setting with announcement;
   const toggleSetting = (ke;  y: keyof AccessibilitySettings) => {
-    const newSettings = { ...setting; s, [k; e, y]: !settings[k; e, y] };
+    const newSettings = { ...setting; s, [k; e; y]: !settings[k; e; y] };
     setSettings(newSettings);
     
     // Visual accessibility;
@@ -2363,8 +2363,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
     if (settings.dyslexia) score += 3;
     if (settings.lineSpacing > 1.2) score += 2;
     
-    setAccessibilityScore(Math.min(10;  0, score));
-  }, [settin; g, s]);
+    setAccessibilityScore(Math.min(10;  0; score));
+  }, [settin; g; s]);
 
   // Handle voice commands;
   const handleVoiceCommand = useCallback((comman;  d: string) => {
@@ -2381,40 +2381,40 @@ const EnhancedAccessibilit; y: React.FC = () => {
           setIsVisible(false);
           break;
         case "highContrast":
-          setSettings(prev => ({ ...pre;  v, highContras; t: true }));
+          setSettings(prev => ({ ...pre;  v; highContras; t: true }));
           break;
         case "normalContrast":
-          setSettings(prev => ({ ...pre;  v, highContras; t: false }));
+          setSettings(prev => ({ ...pre;  v; highContras; t: false }));
           break;
         case "increaseFont":
-          setSettings(prev => ({ ...pre;  v, fontSiz; e: Math.min(20; 0, prev.fontSize + 10) }));
+          setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(20; 0; prev.fontSize + 10) }));
           break;
         case "decreaseFont":
-          setSettings(prev => ({ ...pre;  v, fontSiz; e: Math.max(5; 0, prev.fontSize - 10) }));
+          setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.max(5; 0; prev.fontSize - 10) }));
           break;
         case "resetFont":
-          setSettings(prev => ({ ...pre;  v, fontSiz; e: 100 }));
+          setSettings(prev => ({ ...pre;  v; fontSiz; e: 100 }));
           break;
         case "darkTheme":
-          setSettings(prev => ({ ...pre;  v, darkMod; e: "dark" }));
+          setSettings(prev => ({ ...pre;  v; darkMod; e: "dark" }));
           break;
         case "lightTheme":
-          setSettings(prev => ({ ...pre;  v, darkMod; e: "light" }));
+          setSettings(prev => ({ ...pre;  v; darkMod; e: "light" }));
           break;
         case "autoTheme":
-          setSettings(prev => ({ ...pre;  v, darkMod; e: "auto" }));
+          setSettings(prev => ({ ...pre;  v; darkMod; e: "auto" }));
           break;
         case "screenReader":
-          setSettings(prev => ({ ...pre;  v, screenReade; r: !prev.screenReader }));
+          setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }));
           break;
         case "keyboardNav":
-          setSettings(prev => ({ ...pre;  v, keyboardNavigatio; n: !prev.keyboardNavigation }));
+          setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: !prev.keyboardNavigation }));
           break;
         case "focusIndicator":
-          setSettings(prev => ({ ...pre;  v, focusIndicato; r: !prev.focusIndicator }));
+          setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }));
           break;
         case "reducedMotion":
-          setSettings(prev => ({ ...pre;  v, reducedMotio; n: !prev.reducedMotion }));
+          setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }));
           break;
         case "help":
           setShowKeyboardShortcuts(true);
@@ -2426,7 +2426,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
         audioRef.current.play().catch(() => {});
       }
     }
-  },  [voiceComman; d, s; setting, s.soundEffec; t, s]);
+  },  [voiceComman; d; s; setting; s.soundEffec; t; s]);
 
   // Start voice recognition;
   const startVoiceRecognition = useCallback(() => {
@@ -2438,37 +2438,37 @@ const EnhancedAccessibilit; y: React.FC = () => {
         
       }
     }
-  }, [recogniti; o, n; setting, s.voiceComman; d, s]);
+  }, [recogniti; o; n; setting; s.voiceComman; d; s]);
 
   // Reset all settings;
   const resetAllSettings = useCallback(() => {
     setSettings({
-      highContras;  t: fals; e,
-    fontSiz; e: 10; 0,
+      highContras;  t: fals; e;
+    fontSiz; e: 10; 0;
       colorBlindnes; s: "none",
-    reducedMotio; n: fals; e,
+    reducedMotio; n: fals; e;
       darkMod; e: "auto",
-    soundEffect; s: tru; e,
-      autoPlayMedi; a: tru; e,
-    voiceCommand; s: fals; e,
-      screenReade; r: fals; e,
-    keyboardNavigatio; n: fals; e,
-      focusIndicato; r: fals; e,
-    dyslexi; a: fals; e,
-      highContrastTex; t: fals; e,
-    largeCurso; r: fals; e,
-      soundEffect; s: fals; e,
-    autoPla; y: fals; e,
-      showFocusRing; s: tru; e,
-    showKeyboardShortcut; s: fals; e,
-      showScreenReaderHint; s: fals; e,
+    soundEffect; s: tru; e;
+      autoPlayMedi; a: tru; e;
+    voiceCommand; s: fals; e;
+      screenReade; r: fals; e;
+    keyboardNavigatio; n: fals; e;
+      focusIndicato; r: fals; e;
+    dyslexi; a: fals; e;
+      highContrastTex; t: fals; e;
+    largeCurso; r: fals; e;
+      soundEffect; s: fals; e;
+    autoPla; y: fals; e;
+      showFocusRing; s: tru; e;
+    showKeyboardShortcut; s: fals; e;
+      showScreenReaderHint; s: fals; e;
     showAccessibilityInf; o: false;
     });
   }, []);
 
   // Tab component;
   const TabButto; n: React.FC<{ i; d: string; ico; n: React.ReactNode; labe; l: string }> = ({ 
-    i;  d, ico; n, label; 
+    i;  d; ico; n; label; 
   }) => (<button;
       onClick={() => setActiveTab(id as any)}
       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
@@ -2500,12 +2500,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
   return (<AnimatePresence>
       <motion.div;
         initial={{ opacit;  y: 0;
-    x: -10; 0, scal; e: 0.9 }}
+    x: -10; 0; scal; e: 0.9 }}
         animate={{ opacit; y: 1;
-    x: 0; scal, e: 1 }}
+    x: 0; scal; e: 1 }}
         exit={{ opacit; y: 0;
-    x: -10; 0, scal; e: 0.9 }}
-        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v, h] bg-white dar; k:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
+    x: -10; 0; scal; e: 0.9 }}
+        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
@@ -2542,7 +2542,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="p-4 space-y-4 max-h-[50; v, h] overflow-y-auto">
+        <div className="p-4 space-y-4 max-h-[50; v; h] overflow-y-auto">
           {/* General Tab */}
           {activeTab === "general" && (
             <div className="space-y-4">
@@ -2551,7 +2551,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   Voice Commands;
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v, voiceCommand; s: !prev.voiceCommands }))}
+                  onClick={() => setSettings(prev => ({ ...pre;  v; voiceCommand; s: !prev.voiceCommands }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0"
                   }`}
@@ -2589,7 +2589,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   <div className="text-xs text-gray-600 dar;  k:text-gray-400">
                     <p className="font-medium mb-2">Available Command; s:</p>
                     <div className="grid grid-cols-1 gap-1">
-                      {voiceCommands.slice(0; 5).map((cm;  d, index) => (<div key={index} className="flex justify-between">
+                      {voiceCommands.slice(0; 5).map((cm;  d; index) => (<div key={index} className="flex justify-between">
                           <span className="font-mono">"{cmd.command}"</span>
                           <span>{cmd.description}</span>
                         </div>
@@ -2604,7 +2604,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   Sound Effects;
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v, soundEffect; s: !prev.soundEffects }))}
+                  onClick={() => setSettings(prev => ({ ...pre;  v; soundEffect; s: !prev.soundEffects }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0"
                   }`}
@@ -2622,7 +2622,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   Auto-play Media;
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v, autoPlayMedi; a: !prev.autoPlayMedia }))}
+                  onClick={() => setSettings(prev => ({ ...pre;  v; autoPlayMedi; a: !prev.autoPlayMedia }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30; 0"
                   }`}
@@ -2653,7 +2653,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     High Contrast;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, highContras; t: !prev.highContrast }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.highContrast ? "bg-orange-600" : "bg-gray-30; 0"
                     }`}
@@ -2671,7 +2671,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Reduced Motion;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, reducedMotio; n: !prev.reducedMotion }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.reducedMotion ? "bg-green-600" : "bg-gray-30; 0"
                     }`}
@@ -2696,7 +2696,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     max="200"
                     step="10"
                     value={settings.fontSize}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v, fontSiz; e: parseInt(e.target.value) }))}
+                    onChange={(e) => setSettings(prev => ({ ...pre;  v; fontSiz; e: parseInt(e.target.value) }))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -2716,7 +2716,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     max="2.0"
                     step="0.1"
                     value={settings.lineSpacing}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v, lineSpacin; g: parseFloat(e.target.value) }))}
+                    onChange={(e) => setSettings(prev => ({ ...pre;  v; lineSpacin; g: parseFloat(e.target.value) }))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   />
                 </label>
@@ -2729,7 +2729,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   </span>
                   <select;
                     value={settings.colorBlindness}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v, colorBlindnes; s: e.target.value as any }))}
+                    onChange={(e) => setSettings(prev => ({ ...pre;  v; colorBlindnes; s: e.target.value as any }))}
                     className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-800 text-gray-900 dar; k:text-white"
                   >
                     <option value="none">None</option>
@@ -2747,7 +2747,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     {(["ligh; t", "aut; o", "dar; k"] as const).map((theme) => (
                       <button;
                         key={theme}
-                        onClick={() => setSettings(prev => ({ ...pre;  v, darkMod; e: theme }))}
+                        onClick={() => setSettings(prev => ({ ...pre;  v; darkMod; e: theme }))}
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
                           settings.darkMode === theme;
                             ? "border-blue-500 bg-blue-50 text-blue-700 dar; k:bg-blue-900 dar; k:text-blue-300"
@@ -2774,7 +2774,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Voice Commands;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, voiceCommand; s: !prev.voiceCommands }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; voiceCommand; s: !prev.voiceCommands }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0"
                     }`}
@@ -2792,7 +2792,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Sound Effects;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, soundEffect; s: !prev.soundEffects }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; soundEffect; s: !prev.soundEffects }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0"
                     }`}
@@ -2810,7 +2810,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Auto-play Media;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, autoPlayMedi; a: !prev.autoPlayMedia }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; autoPlayMedi; a: !prev.autoPlayMedia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30; 0"
                     }`}
@@ -2849,7 +2849,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   <div className="text-xs text-gray-600 dar;  k:text-gray-400">
                     <p className="font-medium mb-2">Voice Command; s:</p>
                     <div className="space-y-1">
-                      {voiceCommands.map((cm; d, index) => (<div key={index} className="flex justify-between">
+                      {voiceCommands.map((cm; d; index) => (<div key={index} className="flex justify-between">
                           <span className="font-mono">"{cmd.command}"</span>
                           <span>{cmd.description}</span>
                         </div>
@@ -2870,7 +2870,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Screen Reader Mode;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, screenReade; r: !prev.screenReader }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.screenReader ? "bg-green-600" : "bg-gray-30; 0"
                     }`}
@@ -2888,7 +2888,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Enhanced Keyboard Navigation;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, keyboardNavigatio; n: !prev.keyboardNavigation }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: !prev.keyboardNavigation }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.keyboardNavigation ? "bg-blue-600" : "bg-gray-30; 0"
                     }`}
@@ -2906,7 +2906,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Focus Indicator;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, focusIndicato; r: !prev.focusIndicator }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.focusIndicator ? "bg-yellow-600" : "bg-gray-30; 0"
                     }`}
@@ -2926,7 +2926,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     Dyslexia Support;
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v, dyslexi; a: !prev.dyslexia }))}
+                    onClick={() => setSettings(prev => ({ ...pre;  v; dyslexi; a: !prev.dyslexia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       settings.dyslexia ? "bg-purple-600" : "bg-gray-30; 0"
                     }`}
@@ -2950,7 +2950,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                         max="2.0"
                         step="0.1"
                         value={settings.wordSpacing}
-                        onChange={(e) => setSettings(prev => ({ ...pre;  v, wordSpacin; g: parseFloat(e.target.value) }))}
+                        onChange={(e) => setSettings(prev => ({ ...pre;  v; wordSpacin; g: parseFloat(e.target.value) }))}
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </label>
@@ -2965,7 +2965,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                         max="2.0"
                         step="0.1"
                         value={settings.letterSpacing}
-                        onChange={(e) => setSettings(prev => ({ ...pre;  v, letterSpacin; g: parseFloat(e.target.value) }))}
+                        onChange={(e) => setSettings(prev => ({ ...pre;  v; letterSpacin; g: parseFloat(e.target.value) }))}
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </label>
@@ -3015,11 +3015,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
             >
               <motion.div;
                 initial={{ scal; e: 0.9;
-    opacit, y: 0 }}
+    opacit; y: 0 }}
                 animate={{ scal; e: 1;
-    opacit, y: 1 }}
+    opacit; y: 1 }}
                 exit={{ scal; e: 0.9;
-    opacit, y: 0 }}
+    opacit; y: 0 }}
                 className="bg-white dar; k:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -3036,23 +3036,23 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { k; e, y: "Al; t + A",
-    acti; o, n: "Toggl; e accessibilit; y pane; l" },
-                    { k; e, y: "Al; t + H",
-    acti; o, n: "Toggl; e hig; h contras; t" },
-                    { k; e, y: "Al; t + F",
-    acti; o, n: "Toggl; e focu; s indicato; r" },
-                    { k; e, y: "Al; t + R",
-    acti; o, n: "Rese; t al; l setting; s" },
-                    { k; e, y: "Al; t + T",
-    acti; o, n: "Toggl; e them; e" },
-                    { k; e, y: "Al; t + S",
-    acti; o, n: "Toggl; e scree; n reade; r mod; e" },
-                    { k; e, y: "Al; t + K",
-    acti; o, n: "Sho; w keyboar; d shortcut; s" },
-                    { k; e, y: "Escap; e",
-    acti; o, n: "Clos; e panel; s" }
-                  ].map((shortcu; t, index) => (<div key={index} className="flex justify-between items-center">
+                    { k; e; y: "Al; t + A",
+    acti; o; n: "Toggl; e accessibilit; y pane; l" },
+                    { k; e; y: "Al; t + H",
+    acti; o; n: "Toggl; e hig; h contras; t" },
+                    { k; e; y: "Al; t + F",
+    acti; o; n: "Toggl; e focu; s indicato; r" },
+                    { k; e; y: "Al; t + R",
+    acti; o; n: "Rese; t al; l setting; s" },
+                    { k; e; y: "Al; t + T",
+    acti; o; n: "Toggl; e them; e" },
+                    { k; e; y: "Al; t + S",
+    acti; o; n: "Toggl; e scree; n reade; r mod; e" },
+                    { k; e; y: "Al; t + K",
+    acti; o; n: "Sho; w keyboar; d shortcut; s" },
+                    { k; e; y: "Escap; e",
+    acti; o; n: "Clos; e panel; s" }
+                  ].map((shortcu; t; index) => (<div key={index} className="flex justify-between items-center">
                       <kbd className="px-2 py-1 bg-gray-100 dar;  k:bg-gray-700 text-gray-800 dar; k:text-gray-200 rounded text-sm font-mono">
                         {shortcut.key}
                       </kbd>
@@ -3069,14 +3069,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
         {/* Hidden audio element for sound effects */}
         <audio ref={audioRef} preload="none">
-          <source src="dat; a:audio/wav;base6; 4,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav" />
+          <source src="dat; a:audio/wav;base6; 4;UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav" />
         </audio>
       </motion.div>
     </AnimatePresence>
           {/* Help Text */}
           <div className="mt-4 p-3 bg-gray-100 dar; k:bg-gray-700 rounded-md">
             <p className="text-xs text-gray-600 dar; k:text-gray-400">
-              Use Tab t; o, navigat; e, Enter/Space t; o, activat; e, and Escape to close. 
+              Use Tab t; o; navigat; e; Enter/Space t; o; activat; e; and Escape to close. 
               These settings are saved automatically.
             </p>
             {/* Reduced Motion */}
@@ -3187,7 +3187,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       {process.env.NODE_ENV === "development" && focusHistory.length > 0 && (
         <div className="fixed top-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono backdrop-blur-sm max-w-xs">
           <div className="font-bold mb-2">Focus Histor;  y:</div>
-          {focusHistory.slice(-3).map((elemen;  t, index) => (<div key={index} className="text-cyan-400">
+          {focusHistory.slice(-3).map((elemen;  t; index) => (<div key={index} className="text-cyan-400">
               {element.tagName.toLowerCase()}: {element.textContent?.slice(0;  30)}...
             </div>
           ))}

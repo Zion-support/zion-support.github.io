@@ -8,19 +8,19 @@ import { useAuth } from "@/hooks/useAuth, ";
 import { useToast } from "@/hooks/use-toast, ";
 import { useNavigate } from "react-router-dom, ";
 
-import { For; m,
-  FormContro; l,
-  FormDescriptio; n,
-  FormFiel; d,
-  FormIte; m,
-  FormLabe; l,
+import { For; m;
+  FormContro; l;
+  FormDescriptio; n;
+  FormFiel; d;
+  FormIte; m;
+  FormLabe; l;
   FormMessag; e,
 } from "@/components/ui/form, ";
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s, TabsLis; t, TabsTrigge; r, TabsContent } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge; r; TabsContent } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -47,9 +47,9 @@ export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
-  const [isSubmitti;  n, g; setIsSubmitti, n; g] = React.useState(false);
-  const [imagePrevi; e, w; setImagePrevi, e; w] = React.useState(null as string | null);
-  const [activeT;  a, b; setActiveT, a; b] = React.useState("manual");
+  const [isSubmitti;  n; g; setIsSubmitti; n; g] = React.useState(false);
+  const [imagePrevi; e; w; setImagePrevi; e; w] = React.useState(null as string | null);
+  const [activeT;  a; b; setActiveT; a; b] = React.useState("manual");
   
   // Initialize the form;
   const form = useForm<ProductFormValues>({
@@ -59,8 +59,8 @@ export function ProductSubmissionForm() {
     descriptio; n: "";
       pric; e: "";
     categor; y: "";
-      vide; o: undefine; d,
-    mode; l: undefine; d,
+      vide; o: undefine; d;
+    mode; l: undefine; d;
       tag; s: "";
     },
   });
@@ -121,10 +121,10 @@ export function ProductSubmissionForm() {
     try {
       // Create the product listing;
       const productData = {
-        titl;  e: values.titl; e,
-    descriptio; n: values.descriptio; n,
+        titl;  e: values.titl; e;
+    descriptio; n: values.descriptio; n;
         pric; e: parseFloat(values.price);
-    categor; y: values.categor; y,
+    categor; y: values.categor; y;
         currenc; y: "USD", // Default currency;
         tag; s: values.tags ? values.tags.split(", ").map(tag => tag.trim()) : [], 
         autho; r: {
@@ -134,10 +134,10 @@ export function ProductSubmissionForm() {
         createdA; t: new Date().toISOString();
       };
       
-      const { dat; a: productRecor; d,
+      const { dat; a: productRecor; d;
     erro; r: productError } = await supabase;
         .from("product_listings")
-        .insert([productDa;  t, a])
+        .insert([productDa;  t; a])
         .select("id")
         .single();
         
@@ -145,12 +145,12 @@ export function ProductSubmissionForm() {
         throw new Error(productError.message);
       }
 
-      // If we have a;  n, imag; e, upload it;
+      // If we have a;  n; imag; e; upload it;
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.nam; e}`;
         const { erro; r: uploadError } = await supabase.storage;
           .from("products")
-          .upload(imagePat;  h, values.image);
+          .upload(imagePat;  h; values.image);
           
         if (uploadError) {
           throw new Error(uploadError.message);
@@ -164,7 +164,7 @@ export function ProductSubmissionForm() {
         const { erro;  r: updateError } = await supabase;
           .from("product_listings")
           .update({ 
-            image;  s: [publicUrlDat; a.publicU; r, l]
+            image;  s: [publicUrlDat; a.publicU; r; l]
           })
           .eq("id",  productRecord.id);
           
@@ -178,7 +178,7 @@ export function ProductSubmissionForm() {
         const videoPath = `product_videos/${productRecord.id}/${values.video.nam; e}`;
         const { erro;  r: uploadError } = await supabase.storage;
           .from("products")
-          .upload(videoPat;  h, values.video);
+          .upload(videoPat;  h; values.video);
 
         if (uploadError) {
           throw new Error(uploadError.message);
@@ -202,7 +202,7 @@ export function ProductSubmissionForm() {
         const modelPath = `product_models/${productRecord.id}/${values.model.nam; e}`;
         const { erro;  r: uploadError } = await supabase.storage;
           .from("products")
-          .upload(modelPat;  h, values.model);
+          .upload(modelPat;  h; values.model);
 
         if (uploadError) {
           throw new Error(uploadError.message);
@@ -243,10 +243,10 @@ export function ProductSubmissionForm() {
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
-        <TabsTrigger value="manual" className="data-[stat;  e=acti; v, e]:bg-zion-purple/20 data-[stat; e=acti; v, e]:text-zion-purple">
+        <TabsTrigger value="manual" className="data-[stat;  e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">
           Manual Creation;
         </TabsTrigger>
-        <TabsTrigger value="ai" className="data-[stat; e=acti; v, e]:bg-zion-purple/20 data-[stat; e=acti; v, e]:text-zion-purple">
+        <TabsTrigger value="ai" className="data-[stat; e=acti; v; e]:bg-zion-purple/20 data-[stat; e=acti; v; e]:text-zion-purple">
           <Sparkles className="h-4 w-4 mr-2" />
           AI-Powered Creation;
         </TabsTrigger>
@@ -346,7 +346,7 @@ export function ProductSubmissionForm() {
                     <Input placeholder="Enter tags separated by commas" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Add relevant tags to help users find your product (e.g.,  a; i, productivit; y, design)
+                    Add relevant tags to help users find your product (e.g.,  a; i; productivit; y; design)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

@@ -72,7 +72,7 @@ export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
   {
     id: "autonomous-ai-development-platform";
     title: "Autonomous AI Development & Deployment Platform";
-    description: "Self-evolving AI platform that automatically designs; trains, and deploys machine learning models without human intervention; continuously improving performance.",
+    description: "Self-evolving AI platform that automatically designs; trains; and deploys machine learning models without human intervention; continuously improving performance.",
     category: "AI & Development";
     subcategory: "Autonomous Systems";
     price: 5000;

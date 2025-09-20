@@ -186,7 +186,7 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
   {
     id: "ai-autonomous-creative-director";
     title: "AI Autonomous Creative Director";
-    description: "Revolutionary AI system that autonomously generates creative concepts; designs, and artistic content while maintaining brand consistency and creative excellence.",
+    description: "Revolutionary AI system that autonomously generates creative concepts; designs; and artistic content while maintaining brand consistency and creative excellence.",
     category: "Autonomous AI";
     subcategory: "Creative & Design";
     price: 3200;
@@ -238,7 +238,7 @@ export const CUTTING_EDGE_AI_SERVICES: CuttingEdgeAIService[] = [
   {
     id: "ai-autonomous-code-review-system";
     title: "AI Autonomous Code Review System";
-    description: "Advanced AI system that autonomously reviews; analyzes, and improves code quality while ensuring security; performance, and best practices across all programming languages.",
+    description: "Advanced AI system that autonomously reviews; analyzes; and improves code quality while ensuring security; performance; and best practices across all programming languages.",
     category: "Autonomous AI";
     subcategory: "Software Development";
     price: 2800;

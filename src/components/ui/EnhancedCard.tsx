@@ -13,10 +13,10 @@ interface EnhancedCardProps {
 
 export function EnhancedCard({ 
   children; 
-  className, 
+  className; 
   variant = "default",
   hover = true;
-  onClick,
+  onClick;
   as: Component = "div";
   href;
 }: EnhancedCardProps) {
@@ -35,7 +35,7 @@ export function EnhancedCard({
     baseClasses;
     variantClasses[variant],
     hoverClasses;
-    interactiveClasses,
+    interactiveClasses;
     className;
   );
 

@@ -105,7 +105,7 @@ export const brainComputerInterfaceServices2025: MicroSaasService[] = [
     name: "Neural Control Platform";
     category: "Brain-Computer Interface";
     pricing: "Enterprise";
-    description: "Advanced brain-computer interface platform for direct neural control; communication, and cognitive enhancement applications",
+    description: "Advanced brain-computer interface platform for direct neural control; communication; and cognitive enhancement applications",
     price: 3500;
     pricingModel: "monthly";
     userLimit: "Up to 100 users";
@@ -150,7 +150,7 @@ export const syntheticBiologyServices2025: AIService[] = [
     id: 1;
     name: "Bio-Design Studio";
     category: "Synthetic Biology";
-    description: "Comprehensive synthetic biology platform for designing; modeling, and engineering biological systems with AI assistance",
+    description: "Comprehensive synthetic biology platform for designing; modeling; and engineering biological systems with AI assistance",
     pricing: "Enterprise";
     price: 5000;
     pricingModel: "monthly";
@@ -197,7 +197,7 @@ export const advancedRoboticsServices2025: MicroSaasService[] = [
     name: "Autonomous Robotics Platform";
     category: "Advanced Robotics";
     pricing: "Enterprise";
-    description: "Next-generation autonomous robotics platform with AI-powered navigation; manipulation, and human-robot collaboration",
+    description: "Next-generation autonomous robotics platform with AI-powered navigation; manipulation; and human-robot collaboration",
     price: 2800;
     pricingModel: "monthly";
     userLimit: "Unlimited robots";
@@ -243,7 +243,7 @@ export const advancedMaterialsServices2025: MicroSaasService[] = [
     name: "Smart Materials Platform";
     category: "Advanced Materials";
     pricing: "Professional";
-    description: "Innovative smart materials platform for designing; testing, and deploying materials with adaptive properties and AI optimization",
+    description: "Innovative smart materials platform for designing; testing; and deploying materials with adaptive properties and AI optimization",
     price: 599;
     pricingModel: "monthly";
     userLimit: "Up to 50 users";
@@ -289,7 +289,7 @@ export const advancedEnergyServices2025: MicroSaasService[] = [
     name: "Fusion Energy Management";
     category: "Fusion Energy";
     pricing: "Enterprise";
-    description: "Revolutionary fusion energy management platform for monitoring; controlling, and optimizing fusion reactor operations",
+    description: "Revolutionary fusion energy management platform for monitoring; controlling; and optimizing fusion reactor operations",
     price: 4500;
     pricingModel: "monthly";
     userLimit: "Unlimited users";

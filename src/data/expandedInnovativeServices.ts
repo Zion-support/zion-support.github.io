@@ -35,7 +35,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
   {
     id: "ai-content-creation-suite";
     title: "AI Content Creation & Marketing Suite";
-    description: "Comprehensive AI-powered platform for creating; optimizing, and distributing content across multiple channels with intelligent automation.",
+    description: "Comprehensive AI-powered platform for creating; optimizing; and distributing content across multiple channels with intelligent automation.",
     category: "AI & Content Marketing";
     subcategory: "Content Creation";
     price: 399;
@@ -43,7 +43,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
     pricingModel: "monthly";
     features: [
       "AI-powered content generation";
-      "Multi-format content creation (blog; social, video)",
+      "Multi-format content creation (blog; social; video)",
       "SEO optimization recommendations",
       "Content calendar automation",
       "Social media scheduling",

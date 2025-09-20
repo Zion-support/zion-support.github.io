@@ -9,15 +9,15 @@ import { Switch } from "@/components/ui/switch, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Separator } from "@/components/ui/separator, ";
 import { Form;
-  FormControl,
+  FormControl;
   FormDescription;
-  FormField,
+  FormField;
   FormItem;
-  FormLabel,
+  FormLabel;
   FormMessage,
 } from "@/components/ui/form, ";
-import { Card; CardContent, CardDescription; CardFooter, CardHeader; CardTitle } from "@/components/ui/card, ";
-import { X; Sparkles, Upload; Clock, Check; Briefcase, MapPin; UserRound, Globe } from "lucide-react, ";
+import { Card; CardContent; CardDescription; CardFooter; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound; Globe } from "lucide-react, ";
 import { toast } from "@/components/ui/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { supabase } from "@/integrations/supabase/client, ";
@@ -453,7 +453,7 @@ export function ServiceProviderRegistrationForm() {
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results; use an image at least 400x400 pixels in JPG; PNG, or GIF format.
+                    For best results; use an image at least 400x400 pixels in JPG; PNG; or GIF format.
                   </p>
                 </div>
               </div>
@@ -472,7 +472,7 @@ export function ServiceProviderRegistrationForm() {
                       <FormControl>
                         <Textarea;
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
-                          placeholder="Describe your services; expertise, and what sets you apart from others..."
+                          placeholder="Describe your services; expertise; and what sets you apart from others..."
                           {...field}
                         />
                       </FormControl>

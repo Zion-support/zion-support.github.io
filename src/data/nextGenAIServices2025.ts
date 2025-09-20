@@ -140,7 +140,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: "neural-architecture-search";
     title: "Autonomous Neural Architecture Search Platform";
-    description: "Self-evolving AI system that automatically designs; tests, and optimizes neural network architectures for specific business problems without human intervention.",
+    description: "Self-evolving AI system that automatically designs; tests; and optimizes neural network architectures for specific business problems without human intervention.",
     category: "AutoML";
     subcategory: "Neural Architecture";
     price: 18000;
@@ -195,7 +195,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: "multimodal-ai-platform";
     title: "Unified Multimodal AI Intelligence Platform";
-    description: "Advanced AI platform that seamlessly processes text; images, audio; video, and sensor data simultaneously for comprehensive understanding and intelligent responses.",
+    description: "Advanced AI platform that seamlessly processes text; images; audio; video; and sensor data simultaneously for comprehensive understanding and intelligent responses.",
     category: "Multimodal AI";
     subcategory: "Unified Intelligence";
     price: 22000;
@@ -250,7 +250,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
   {
     id: "ai-digital-twin-creator";
     title: "AI-Powered Digital Twin Creation Platform";
-    description: "Revolutionary platform that creates intelligent digital twins of physical systems; processes, and organizations using AI for predictive maintenance; optimization, and simulation.",
+    description: "Revolutionary platform that creates intelligent digital twins of physical systems; processes; and organizations using AI for predictive maintenance; optimization; and simulation.",
     category: "Digital Twins";
     subcategory: "AI Simulation";
     price: 28000;

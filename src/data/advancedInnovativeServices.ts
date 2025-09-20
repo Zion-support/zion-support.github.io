@@ -161,7 +161,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-    description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection, surveillance; and data collection with real-time monitoring and optimization.",
+    description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection; surveillance; and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
     price: 799;
@@ -224,7 +224,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "ai-climate-intelligence-platform",
     title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
-    description: "Advanced AI platform that monitors; predicts, and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
+    description: "Advanced AI platform that monitors; predicts; and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
     category: "AI & Climate Technology",
     subcategory: "Environmental Intelligence",
     price: 1800;
@@ -286,7 +286,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "ai-cybersecurity-intelligence-platform",
     title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
-    description: "Next-generation cybersecurity platform that uses AI to detect; analyze, and respond to cyber threats in real-time with unprecedented accuracy and speed.",
+    description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to cyber threats in real-time with unprecedented accuracy and speed.",
     category: "AI & Cybersecurity",
     subcategory: "Threat Intelligence",
     price: 2200;
@@ -538,7 +538,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "blockchain-digital-identity-platform",
     title: "Blockchain Digital Identity Platform",
-    description: "Decentralized digital identity solution using blockchain technology for secure; verifiable, and privacy-preserving identity management across organizations.",
+    description: "Decentralized digital identity solution using blockchain technology for secure; verifiable; and privacy-preserving identity management across organizations.",
     category: "Blockchain & Identity",
     subcategory: "Digital Identity",
     price: 299;
@@ -727,7 +727,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "advanced-cybersecurity-threat-intelligence",
     title: "Advanced Cybersecurity Threat Intelligence Platform",
-    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze, and respond to cybersecurity threats in real-time.",
+    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze; and respond to cybersecurity threats in real-time.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
     price: 899;

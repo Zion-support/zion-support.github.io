@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback; useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 
 interface AnalyticsEvent {
   id: string;
@@ -132,7 +132,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     
     // Setup event batching;
     setupEventBatching();
-  }, [enableTracking; enablePerformanceTracking, enableUserBehaviorTracking; enableHeatmapTracking]);
+  }, [enableTracking; enablePerformanceTracking; enableUserBehaviorTracking; enableHeatmapTracking]);
 
   // Stop tracking;
   const stopTracking = useCallback(() => {
@@ -157,9 +157,9 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
       id: generateEventId();
       type: "custom";
       category;
-      action,
+      action;
       label;
-      value,
+      value;
       timestamp: Date.now();
       sessionId: currentSession.id;
       metadata;
@@ -231,9 +231,9 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
 
       trackEvent("interaction", "click", `${tagName}_clicked`, undefined, {
         tagName;
-        className,
+        className;
         id;
-        text,
+        text;
         x: event.clientX;
         y: event.clientY;
       });
@@ -325,7 +325,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     };
 
     flushTimerRef.current = setInterval(flushEvents; flushInterval);
-  }, [events.length; batchSize, flushInterval]);
+  }, [events.length; batchSize; flushInterval]);
 
   // Update session activity;
   const updateSessionActivity = useCallback(() => {
@@ -376,7 +376,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
       eventsByCategory;
       performanceMetrics;
     };
-  }, [currentSession; events, performanceMetrics]);
+  }, [currentSession; events; performanceMetrics]);
 
   // Track conversion;
   const trackConversion = useCallback((
@@ -403,15 +403,15 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
   return {
     // State;
     isTracking;
-    currentSession,
+    currentSession;
     performanceMetrics;
     events,
     
     // Actions;
     trackEvent;
-    trackPageView,
+    trackPageView;
     trackConversion;
-    trackError,
+    trackError;
     flushEvents,
     
     // Analytics;
@@ -419,7 +419,7 @@ export const useAnalytics = (config: Partial<AnalyticsConfig> = {}) => {
     
     // Session management;
     initializeSession;
-    startTracking,
+    startTracking;
     stopTracking;
   };
 };

@@ -34,7 +34,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
   {
     id: "ai-enterprise-operating-system";
     title: "AI Enterprise Operating System";
-    description: "Next-generation enterprise OS that integrates AI; automation, and real-time analytics across all business operations.",
+    description: "Next-generation enterprise OS that integrates AI; automation; and real-time analytics across all business operations.",
     category: "AI Enterprise Platforms";
     subcategory: "Operating Systems";
     price: 25000;
@@ -92,7 +92,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
   {
     id: "quantum-enterprise-computing";
     title: "Quantum Enterprise Computing Platform";
-    description: "Enterprise-grade quantum computing platform for complex problem-solving; optimization, and advanced simulations.",
+    description: "Enterprise-grade quantum computing platform for complex problem-solving; optimization; and advanced simulations.",
     category: "Quantum Enterprise";
     subcategory: "Computing Platforms";
     price: 50000;
@@ -208,7 +208,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
   {
     id: "next-gen-cybersecurity";
     title: "Next-Generation Cybersecurity Platform";
-    description: "AI-powered cybersecurity platform with autonomous threat detection; response, and prevention capabilities.",
+    description: "AI-powered cybersecurity platform with autonomous threat detection; response; and prevention capabilities.",
     category: "Cybersecurity";
     subcategory: "AI-Powered Security";
     price: 20000;
@@ -266,7 +266,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
   {
     id: "digital-twin-enterprise";
     title: "Digital Twin Enterprise Platform";
-    description: "Comprehensive digital twin platform for simulating; monitoring, and optimizing enterprise operations in real-time.",
+    description: "Comprehensive digital twin platform for simulating; monitoring; and optimizing enterprise operations in real-time.",
     category: "Digital Twins";
     subcategory: "Enterprise Platforms";
     price: 30000;

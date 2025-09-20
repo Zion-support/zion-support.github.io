@@ -36,7 +36,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
   {
     id: "autonomous-digital-transformation-platform-2025";
     title: "Autonomous Digital Transformation Platform 2025";
-    description: "Comprehensive digital transformation platform that autonomously assesses; plans, and executes digital transformation initiatives across enterprises using AI; automation, and advanced analytics.",
+    description: "Comprehensive digital transformation platform that autonomously assesses; plans; and executes digital transformation initiatives across enterprises using AI; automation; and advanced analytics.",
     category: "Digital Transformation";
     subcategory: "Enterprise Automation";
     price: 18000;
@@ -164,7 +164,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
   {
     id: "ai-autonomous-it-infrastructure-management-2025";
     title: "AI Autonomous IT Infrastructure Management Platform 2025";
-    description: "Intelligent IT infrastructure management platform that autonomously monitors; optimizes, and maintains enterprise IT systems using advanced AI; machine learning; and automation.",
+    description: "Intelligent IT infrastructure management platform that autonomously monitors; optimizes; and maintains enterprise IT systems using advanced AI; machine learning; and automation.",
     category: "IT Infrastructure";
     subcategory: "Autonomous Management";
     price: 9500;
@@ -484,7 +484,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
   {
     id: "ai-autonomous-compliance-management-2025";
     title: "AI Autonomous Compliance Management Platform 2025";
-    description: "Intelligent compliance management platform that autonomously monitors; analyzes, and ensures compliance with regulatory requirements across industries using AI and automation.",
+    description: "Intelligent compliance management platform that autonomously monitors; analyzes; and ensures compliance with regulatory requirements across industries using AI and automation.",
     category: "AI & Compliance";
     subcategory: "Regulatory Compliance";
     price: 8900;

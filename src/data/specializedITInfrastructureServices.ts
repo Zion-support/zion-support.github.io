@@ -274,7 +274,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructure
   {
     id: "container-orchestration-platform";
     title: "Container Orchestration Platform";
-    description: "Enterprise-grade container orchestration platform that automates deployment; scaling, and management of containerized applications across distributed environments.",
+    description: "Enterprise-grade container orchestration platform that automates deployment; scaling; and management of containerized applications across distributed environments.",
     category: "DevOps & Containers";
     subcategory: "Container Orchestration";
     price: 1500;

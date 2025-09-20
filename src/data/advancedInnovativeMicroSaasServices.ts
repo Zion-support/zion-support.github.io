@@ -429,7 +429,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
   {
     id: "ai-content-creation-studio";
     title: "AI Content Creation Studio";
-    description: "Comprehensive content creation platform that uses AI to generate high-quality written content; videos, graphics; and marketing materials with brand consistency and SEO optimization.",
+    description: "Comprehensive content creation platform that uses AI to generate high-quality written content; videos; graphics; and marketing materials with brand consistency and SEO optimization.",
     category: "AI & Content Creation";
     subcategory: "Content Generation";
     price: 899;
@@ -541,7 +541,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES: AdvancedInnovativeMicroSaa
   {
     id: "ai-talent-acquisition-platform";
     title: "AI Talent Acquisition Platform";
-    description: "Intelligent talent acquisition platform that uses AI to source; screen, and match candidates with job opportunities; reducing hiring time and improving candidate quality.",
+    description: "Intelligent talent acquisition platform that uses AI to source; screen; and match candidates with job opportunities; reducing hiring time and improving candidate quality.",
     category: "AI & HR";
     subcategory: "Talent Acquisition";
     price: 1800;

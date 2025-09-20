@@ -517,7 +517,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
   {
     id: "ai-lead-generation-platform";
     title: "AI Lead Generation Platform";
-    description: "Intelligent lead generation platform that uses AI to identify; qualify, and nurture prospects for improved sales conversion and business growth.",
+    description: "Intelligent lead generation platform that uses AI to identify; qualify; and nurture prospects for improved sales conversion and business growth.",
     category: "Sales & Marketing";
     subcategory: "Lead Generation";
     price: 449;
@@ -577,7 +577,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService20
   {
     id: "smart-document-management-system";
     title: "Smart Document Management System";
-    description: "AI-powered document management platform that automatically categorizes; searches, and organizes documents for improved workflow efficiency and collaboration.",
+    description: "AI-powered document management platform that automatically categorizes; searches; and organizes documents for improved workflow efficiency and collaboration.",
     category: "Document Management";
     subcategory: "AI Organization";
     price: 279;

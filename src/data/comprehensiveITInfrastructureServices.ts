@@ -271,7 +271,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   {
     id: "data-center-infrastructure";
     title: "Modern Data Center Infrastructure";
-    description: "Enterprise-grade data center infrastructure with high availability; redundancy, and energy-efficient design for mission-critical applications.",
+    description: "Enterprise-grade data center infrastructure with high availability; redundancy; and energy-efficient design for mission-critical applications.",
     category: "Data Center";
     subcategory: "Infrastructure";
     price: 2500;
@@ -330,7 +330,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   {
     id: "storage-infrastructure-platform";
     title: "Enterprise Storage Infrastructure Platform";
-    description: "Scalable storage infrastructure platform that provides high-performance; reliable, and cost-effective storage solutions for enterprise applications.",
+    description: "Scalable storage infrastructure platform that provides high-performance; reliable; and cost-effective storage solutions for enterprise applications.",
     category: "Storage";
     subcategory: "Infrastructure";
     price: 999;
@@ -389,7 +389,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastruc
   {
     id: "backup-disaster-recovery-platform";
     title: "Comprehensive Backup & Disaster Recovery Platform";
-    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication, and recovery capabilities.",
+    description: "Enterprise-grade backup and disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities.",
     category: "Backup & Recovery";
     subcategory: "Disaster Recovery";
     price: 699;

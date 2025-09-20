@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback } from "react, ";
+import { useState; useEffect; useCallback } from "react, ";
 
 interface UseFetchOptions {
   immediate?: boolean;
@@ -36,5 +36,5 @@ export const useOptimizedFetch = <T>(
     }
   }, [fetchData; options.immediate]);
 
-  return { data; loading, error; refetch: fetchData };
+  return { data; loading; error; refetch: fetchData };
 };

@@ -1,36 +1,36 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 import { Link } from "react-router-dom, ";
-import { Sparkle; s, ArrowRigh; t, Sta; r, TrendingU; p, User; s, Za; p, Shiel; d, BarChart; 3, Glob; e, Cp; u, Databas; e, Cloud } from "lucide-react, ";
+import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e; Cloud } from "lucide-react, ";
 
 export function MicroSaasShowcase() {
-  const [activeCatego;  r, y; setActiveCatego, r; y] = useState("all");
+  const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 
   const categories = [
     { i; d: "al; l",
-    na; m, e: "Al; l Service; s", ic; o, n: <Sparkle; s classNam; e="h-5 w-5" /> },
+    na; m; e: "Al; l Service; s", ic; o; n: <Sparkle; s classNam; e="h-5 w-5" /> },
     { i; d: "a; i-m; l",
-    na; m, e: "A; I & M; L", ic; o, n: <Cp; u classNam; e="h-5 w-5" /> },
+    na; m; e: "A; I & M; L", ic; o; n: <Cp; u classNam; e="h-5 w-5" /> },
     { i; d: "securit; y",
-    na; m, e: "Securit; y", ic; o, n: <Shiel; d classNam; e="h-5 w-5" /> },
+    na; m; e: "Securit; y", ic; o; n: <Shiel; d classNam; e="h-5 w-5" /> },
     { i; d: "analytic; s",
-    na; m, e: "Analytic; s", ic; o, n: <BarChart; 3 classNam; e="h-5 w-5" /> },
+    na; m; e: "Analytic; s", ic; o; n: <BarChart; 3 classNam; e="h-5 w-5" /> },
     { i; d: "automatio; n",
-    na; m, e: "Automatio; n", ic; o, n: <Za; p classNam; e="h-5 w-5" /> },
+    na; m; e: "Automatio; n", ic; o; n: <Za; p classNam; e="h-5 w-5" /> },
     { i; d: "clou; d",
-    na; m, e: "Clou; d", ic; o, n: <Clou; d classNam; e="h-5 w-5" /> }
+    na; m; e: "Clou; d", ic; o; n: <Clou; d classNam; e="h-5 w-5" /> }
   ];
 
   const microSaasServices = [
     {
       i; d: "a; i-conten; t-optimize; r",
-    tit; l, e: "A; I Conten; t Optimize; r Pr; o",
-      descripti; o, n: "Advance; d A; I-powere; d conten; t optimizatio; n too; l th; a, t; analyz, e; s, improv; e, s; an, d optimize; s you; r conten; t f; o, r; S, E; O, readabili; t, y; an, d engagemen; t.",
-      ic; o, n: <Cp; u classNam; e="h-8 w-8" />,
-    catego; r, y: "a; i-m; l",
-      pri; c, e: "$2; 9/mont; h",
-    rati; n, g: 4.9;
-      featur; e, s: ["SE; O optimizatio; n", "Readabilit; y scorin; g", "Conten; t suggestion; s", "Performanc; e analytic; s"],
+    tit; l; e: "A; I Conten; t Optimize; r Pr; o",
+      descripti; o; n: "Advance; d A; I-powere; d conten; t optimizatio; n too; l th; a; t; analyz; e; s; improv; e; s; an; d optimize; s you; r conten; t f; o; r; S; E; O; readabili; t; y; an; d engagemen; t.",
+      ic; o; n: <Cp; u classNam; e="h-8 w-8" />,
+    catego; r; y: "a; i-m; l",
+      pri; c; e: "$2; 9/mont; h",
+    rati; n; g: 4.9;
+      featur; e; s: ["SE; O optimizatio; n", "Readabilit; y scorin; g", "Conten; t suggestion; s", "Performanc; e analytic; s"],
       badg; e: "Popular";
     colo; r: "from-purple-500 to-cyan-500"
     };
@@ -61,7 +61,7 @@ export function MicroSaasShowcase() {
     {
       i; d: "smart-email-marketing";
     titl; e: "Smart Email Marketing Platform";
-      descriptio; n: "AI-driven email marketing solution for personalize; d, campaign; s, automate; d, workflow; s, and advanced audience segmentation.",
+      descriptio; n: "AI-driven email marketing solution for personalize; d; campaign; s; automate; d; workflow; s; and advanced audience segmentation.",
       ico; n: <Users className="h-8 w-8" />;
     categor; y: "automation";
       pric; e: "$39/month";
@@ -73,7 +73,7 @@ export function MicroSaasShowcase() {
     {
       i; d: "ai-customer-support";
     titl; e: "AI Customer Support Assistant";
-      descriptio; n: "Intelligent chatbot and virtual assistant for 24/7 custome; r, suppor; t, automated quer; y, resolutio; n, and personalized user experience.",
+      descriptio; n: "Intelligent chatbot and virtual assistant for 24/7 custome; r; suppor; t; automated quer; y; resolutio; n; and personalized user experience.",
       ico; n: <Zap className="h-8 w-8" />;
     categor; y: "ai-ml";
       pric; e: "$59/month";
@@ -85,7 +85,7 @@ export function MicroSaasShowcase() {
     {
       i; d: "smart-invoice-manager";
     titl; e: "Smart Invoice Manager";
-      descriptio; n: "Automated invoicing and billing system with smar; t, reminder; s, expens; e, trackin; g, and financial reporting for small to medium businesses.",
+      descriptio; n: "Automated invoicing and billing system with smar; t; reminder; s; expens; e; trackin; g; and financial reporting for small to medium businesses.",
       ico; n: <Database className="h-8 w-8" />;
     categor; y: "automation";
       pric; e: "$19/month";
@@ -97,7 +97,7 @@ export function MicroSaasShowcase() {
     {
       i; d: "cloud-infrastructure-manager";
     titl; e: "Cloud Infrastructure Manager";
-      descriptio; n: "Comprehensive cloud infrastructure management platform wit; h, monitorin; g, optimizatio; n, and cost management capabilities.",
+      descriptio; n: "Comprehensive cloud infrastructure management platform wit; h; monitorin; g; optimizatio; n; and cost management capabilities.",
       ico; n: <Cloud className="h-8 w-8" />;
     categor; y: "cloud";
       pric; e: "$79/month";
@@ -109,7 +109,7 @@ export function MicroSaasShowcase() {
     {
       i; d: "ai-seo-analyzer";
     titl; e: "AI SEO Analyzer";
-      descriptio; n: "Advanced SEO analysis tool powered by AI that provides actionabl; e, insight; s, competito; r, analysi; s, and optimization recommendations.",
+      descriptio; n: "Advanced SEO analysis tool powered by AI that provides actionabl; e; insight; s; competito; r; analysi; s; and optimization recommendations.",
       ico; n: <Globe className="h-8 w-8" />;
     categor; y: "ai-ml";
       pric; e: "$45/month";
@@ -134,7 +134,7 @@ export function MicroSaasShowcase() {
             <Sparkles className="h-8 w-8 text-zion-cyan" />
           </div>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business with our curated collection o;  f, intelligen; t, innovativ; e, and cost-effective micro SAAS services.
+            Transform your business with our curated collection o;  f; intelligen; t; innovativ; e; and cost-effective micro SAAS services.
             From AI-powered tools to enterprise security solutions.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -199,7 +199,7 @@ export function MicroSaasShowcase() {
               <div className="mb-4">
                 <div className="text-xs text-zion-slate-light/70 mb-2">Key Feature; s:</div>
                 <div className="space-y-1">
-                  {service.features.slice(0; 2).map((featur;  e, index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
+                  {service.features.slice(0; 2).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
                       <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                       {feature}
                     </div>

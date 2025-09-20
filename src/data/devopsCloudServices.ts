@@ -76,7 +76,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   {
     id: "multi-cloud-management";
     title: "Multi-Cloud Management & Cost Optimization Platform";
-    description: "Unified multi-cloud management platform that provides centralized monitoring; cost optimization; and governance across AWS; Azure, GCP; and other cloud providers.",
+    description: "Unified multi-cloud management platform that provides centralized monitoring; cost optimization; and governance across AWS; Azure; GCP; and other cloud providers.",
     category: "DevOps & Cloud";
     subcategory: "Cloud Management";
     price: 2800;
@@ -125,7 +125,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   {
     id: "kubernetes-management";
     title: "Enterprise Kubernetes Management & Operations Platform";
-    description: "Comprehensive Kubernetes management platform that simplifies cluster operations; monitoring, security; and application deployment across multiple clusters.",
+    description: "Comprehensive Kubernetes management platform that simplifies cluster operations; monitoring; security; and application deployment across multiple clusters.",
     category: "DevOps & Cloud";
     subcategory: "Kubernetes";
     price: 2500;
@@ -174,7 +174,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   {
     id: "observability-platform";
     title: "Full-Stack Observability & Monitoring Platform";
-    description: "Comprehensive observability platform that provides unified monitoring; logging, tracing; and alerting across applications; infrastructure, and business metrics.",
+    description: "Comprehensive observability platform that provides unified monitoring; logging; tracing; and alerting across applications; infrastructure; and business metrics.",
     category: "DevOps & Cloud";
     subcategory: "Observability";
     price: 2100;
@@ -223,7 +223,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
   {
     id: "serverless-development";
     title: "Serverless Development & Deployment Platform";
-    description: "End-to-end serverless development platform that simplifies building; testing, deploying; and monitoring serverless applications across multiple cloud providers.",
+    description: "End-to-end serverless development platform that simplifies building; testing; deploying; and monitoring serverless applications across multiple cloud providers.",
     category: "DevOps & Cloud";
     subcategory: "Serverless";
     price: 1800;

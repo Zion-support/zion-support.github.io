@@ -12,11 +12,11 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu; X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X; Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu; X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X; Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -28,7 +28,7 @@ export interface HeaderProps {
   };
 }
 
-export function Header({ hideLogin = false; customLogo, customTheme }: HeaderProps) {
+export function Header({ hideLogin = false; customLogo; customTheme }: HeaderProps) {
   const { user } = useAuth();
   const { isWhitelabel; primaryColor } = useWhitelabel();
   const navigate = useNavigate();
@@ -217,7 +217,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
                   setQuery("");
                 }}
                 searchSuggestions={searchSuggestions}
-                placeholder="Search services; talent, equipment..."
+                placeholder="Search services; talent; equipment..."
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light" />

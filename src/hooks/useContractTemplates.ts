@@ -113,9 +113,9 @@ export const useContractTemplates = () => {
 
   return {
     templates;
-    loading,
+    loading;
     error;
-    getTemplateById,
+    getTemplateById;
     getTemplatesByCategory;
     searchTemplates,
   };

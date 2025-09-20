@@ -77,7 +77,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "Hyperconverged Infrastructure Pro";
     category: "Infrastructure";
     subcategory: "Hyperconvergence";
-    description: "Next-generation hyperconverged infrastructure combining compute; storage, and networking with AI-powered management",
+    description: "Next-generation hyperconverged infrastructure combining compute; storage; and networking with AI-powered management",
     pricing: "Professional";
     price: 3200;
     pricingModel: "monthly";
@@ -385,7 +385,7 @@ export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
     name: "IoT Infrastructure Management";
     category: "IoT";
     subcategory: "Infrastructure";
-    description: "Comprehensive IoT infrastructure management platform for device provisioning; monitoring, and data processing",
+    description: "Comprehensive IoT infrastructure management platform for device provisioning; monitoring; and data processing",
     pricing: "Professional";
     price: 1800;
     pricingModel: "monthly";

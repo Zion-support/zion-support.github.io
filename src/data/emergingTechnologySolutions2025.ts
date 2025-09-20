@@ -365,7 +365,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = 
   {
     id: "robotics-automation-platform";
     title: "Robotics & Automation Platform - Intelligent Automation Solutions";
-    description: "Advanced robotics and automation platform that provides intelligent automation; robotic process automation (RPA), and autonomous systems for manufacturing; logistics, healthcare; and other industries.",
+    description: "Advanced robotics and automation platform that provides intelligent automation; robotic process automation (RPA), and autonomous systems for manufacturing; logistics; healthcare; and other industries.",
     category: "Robotics & Automation";
     subcategory: "Intelligent Automation";
     price: 1199;

@@ -74,7 +74,7 @@ const contactInfo = {
     technology: ["AI/ML", "Static Analysis", "Security Scanning", "Git Integration"],
     integrations: ["GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Teams"],
     useCases: ["Code quality improvement", "Security compliance", "Team productivity", "DevOps automation"],
-    targetAudience: "Development teams; DevOps engineers; CTOs, Engineering managers",
+    targetAudience: "Development teams; DevOps engineers; CTOs; Engineering managers",
     marketPosition: "Competes with SonarQube; CodeClimate; adds AI-powered insights and security focus",
     competitors: ["SonarQube", "CodeClimate", "Snyk", "DeepCode"],
     roi: "Reduce code review time by 40-60% and improve code quality by 25%";
@@ -181,7 +181,7 @@ const contactInfo = {
   {
     id: "ai-customer-success-automation";
     name: "AI Customer Success Automation";
-    tagline: "Intelligent customer onboarding; support, and retention automation",
+    tagline: "Intelligent customer onboarding; support; and retention automation",
     description: "AI-driven platform that automates customer success processes; predicts churn; and optimizes customer experience to improve retention and satisfaction.",
     category: "micro-saas";
     pricing: {
@@ -258,7 +258,7 @@ const contactInfo = {
     technology: ["AI/ML", "Real-time Analytics", "Data Visualization", "Cloud Computing"],
     integrations: ["Google Analytics", "Salesforce", "HubSpot", "Stripe", "Shopify", "Database APIs"],
     useCases: ["Business intelligence", "Performance monitoring", "Data analysis", "Reporting automation"],
-    targetAudience: "Business analysts; Data scientists; Executives, Marketing teams",
+    targetAudience: "Business analysts; Data scientists; Executives; Marketing teams",
     marketPosition: "Competes with Tableau; Power BI; adds AI-powered insights and real-time capabilities",
     competitors: ["Tableau", "Power BI", "Looker", "Metabase"],
     roi: "Improve decision making by 40% and reduce reporting time by 80%";
@@ -368,7 +368,7 @@ const contactInfo = {
     id: "it-asset-management-platform";
     name: "IT Asset Management Platform";
     tagline: "Comprehensive IT asset tracking and lifecycle management";
-    description: "Complete IT asset management solution that tracks hardware; software, licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
+    description: "Complete IT asset management solution that tracks hardware; software; licenses; and provides lifecycle management; cost optimization; and compliance reporting.",
     category: "it-services";
     pricing: {
       monthly: "$500/month";
@@ -491,7 +491,7 @@ const contactInfo = {
     technology: ["Machine Learning", "Statistical Analysis", "Data Processing", "Visualization"],
     integrations: ["Database Systems", "CRM", "ERP", "Business Intelligence", "Cloud Platforms"],
     useCases: ["Sales forecasting", "Demand planning", "Risk management", "Performance optimization"],
-    targetAudience: "Data scientists; Business analysts; Executives, Operations managers",
+    targetAudience: "Data scientists; Business analysts; Executives; Operations managers",
     marketPosition: "Competes with SAS; IBM SPSS; adds cloud-native and AI-powered automation",
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"],
     roi: "Improve decision making by 50% and increase revenue by 20%";

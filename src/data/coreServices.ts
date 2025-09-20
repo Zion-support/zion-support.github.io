@@ -35,7 +35,7 @@ export const CORE_SERVICES: CoreService[] = [
   {
     id: "ai-content-hub-pro";
     title: "AI Content Hub Pro - Intelligent Content Management";
-    description: "Advanced AI-powered content creation; management, and optimization platform that generates high-quality content across multiple formats and channels.",
+    description: "Advanced AI-powered content creation; management; and optimization platform that generates high-quality content across multiple formats and channels.",
     category: "AI & Content Management";
     subcategory: "Content Creation";
     price: 399;
@@ -92,7 +92,7 @@ export const CORE_SERVICES: CoreService[] = [
   {
     id: "cloud-infrastructure-pro";
     title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
-    description: "Enterprise-grade cloud infrastructure services including hosting; scaling, security; and monitoring for high-performance applications.",
+    description: "Enterprise-grade cloud infrastructure services including hosting; scaling; security; and monitoring for high-performance applications.",
     category: "Cloud & Infrastructure";
     subcategory: "Cloud Hosting";
     price: 599;

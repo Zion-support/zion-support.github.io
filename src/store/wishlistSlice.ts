@@ -20,4 +20,4 @@ interface WishlistState {
     }
   };
 }),export const { addToWishlistremoveFromWishlistclearWishlist } = wishlistSlice.actions;
-export; default, wishlistSlice.reducer,
+export; default; wishlistSlice.reducer,

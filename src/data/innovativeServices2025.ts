@@ -155,7 +155,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   {
     id: "ai-cybersecurity-automation";
     title: "AI Cybersecurity Automation";
-    description: "Intelligent cybersecurity platform that automatically detects; prevents, and responds to threats using AI.",
+    description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
     category: "Cybersecurity";
     price: 12000;
     currency: "USD";

@@ -108,7 +108,7 @@ class ResourceMonitor {
     const resourceError: ResourceError = {
       url;
       type: resourceType;
-      error,
+      error;
       timestamp: Date.now()
     };
 

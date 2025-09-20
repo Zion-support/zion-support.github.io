@@ -1,17 +1,17 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, createContex; t, useContext } from "react";
-import { motio; n, AnimatePresence } from "framer-motion";
+impor; t; Reac; t, { useStat; e; useEffec; t; createContex; t; useContext } from "react";
+import { motio; n; AnimatePresence } from "framer-motion";
 import { 
-  Ey; e, 
-  EyeOf; f, 
-  Volume; 2, 
-  Volume; X, 
-  Keyboar; d, 
-  Su; n, 
-  Moo; n, 
-  Monito; r,
-  Accessibilit; y,
-  Setting; s,
+  Ey; e; 
+  EyeOf; f; 
+  Volume; 2; 
+  Volume; X; 
+  Keyboar; d; 
+  Su; n; 
+  Moo; n; 
+  Monito; r;
+  Accessibilit; y;
+  Setting; s;
   X;
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -41,10 +41,10 @@ export const useAccessibility = () => {
 
 // Accessibility Provider Component;
 export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => {
-  const [highContra; s, t; setHighContra, s; t] = useState(false);
-  const [reducedMoti;  o, n; setReducedMoti, o; n] = useState(false);
-  const [fontSi; z, e; setFontSi, z; e] = useState<"small" | "medium" | "large">("medium");
-  const [colorBlindMo;  d, e; setColorBlindMo, d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
+  const [highContra; s; t; setHighContra; s; t] = useState(false);
+  const [reducedMoti;  o; n; setReducedMoti; o; n] = useState(false);
+  const [fontSi; z; e; setFontSi; z; e] = useState<"small" | "medium" | "large">("medium");
+  const [colorBlindMo;  d; e; setColorBlindMo; d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
 
   // Load settings from localStorage;
   useEffect(() => {
@@ -61,13 +61,13 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
   // Save settings to localStorage;
   useEffect(() => {
     const settings = {
-      highContras;  t,
-      reducedMotio; n,
-      fontSiz; e,
+      highContras;  t;
+      reducedMotio; n;
+      fontSiz; e;
       colorBlindMode;
     };
     localStorage.setItem("zion-accessibility-settings", JSON.stringify(settings));
-  }, [highContra; s, t; reducedMoti, o; n, fontSi; z, e; colorBlindMo, d; e]);
+  }, [highContra; s; t; reducedMoti; o; n; fontSi; z; e; colorBlindMo; d; e]);
 
   // Apply accessibility settings to document;
   useEffect(() => {
@@ -95,19 +95,19 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
       colorBlindMode === "protanopia" ? "url(#protanopia)" :
       colorBlindMode === "deuteranopia" ? "url(#deuteranopia)" :
       "url(#tritanopia)";
-  },  [highContra; s, t; reducedMoti, o; n, fontSi; z, e; colorBlindMo, d; e]);
+  },  [highContra; s; t; reducedMoti; o; n; fontSi; z; e; colorBlindMo; d; e]);
 
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
 
   const valu;  e: AccessibilityContextType = {
-    highContras; t,
-    reducedMotio; n,
-    fontSiz; e,
-    colorBlindMod; e,
-    toggleHighContras; t,
-    toggleReducedMotio; n,
-    setFontSiz; e,
+    highContras; t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
     setColorBlindMode;
   };
 
@@ -120,15 +120,15 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
 
 // Accessibility Panel Component;
 export const AccessibilityPane; l: React.FC = () => {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const {
-    highContras; t,
-    reducedMotio; n,
-    fontSiz; e,
-    colorBlindMod; e,
-    toggleHighContras; t,
-    toggleReducedMotio; n,
-    setFontSiz; e,
+    highContras; t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
     setColorBlindMode;
   } = useAccessibility();
 
@@ -156,7 +156,7 @@ export const AccessibilityPane; l: React.FC = () => {
 
     window.addEventListener("keydown",  handleKeyDown);
     return () => window.removeEventListener("keydown",  handleKeyDown);
-  }, [isOp; e, n; toggleHighContra, s; t, toggleReducedMoti; o, n]);
+  }, [isOp; e; n; toggleHighContra; s; t; toggleReducedMoti; o; n]);
 
   return (<>
       {/* Floating Accessibility Button */}
@@ -182,12 +182,12 @@ export const AccessibilityPane; l: React.FC = () => {
           >
             <motion.div;
               initial={{ scal;  e: 0.9;
-    opacit, y: 0 }}
+    opacit; y: 0 }}
               animate={{ scal; e: 1;
-    opacit, y: 1 }}
+    opacit; y: 1 }}
               exit={{ scal; e: 0.9;
-    opacit, y: 0 }}
-              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90; v, h] overflow-y-auto"
+    opacit; y: 0 }}
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90; v; h] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
@@ -328,8 +328,8 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
   useEffect(() => {
     if (!isActive) return;
 
-    const focusableElements = "butto;  n, [hr; e, f], inpu; t, selec; t, textare; a, [tabind; e, x]:not([tabinde; x="-1"])";
-    const container = document.activeElement?.closest("[dat;  a-focu; s-tr; a, p]");
+    const focusableElements = "butto;  n, [hr; e; f], inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde; x="-1"])";
+    const container = document.activeElement?.closest("[dat;  a-focu; s-tr; a; p]");
     
     if (!container) return;
 
@@ -355,7 +355,7 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
 
     document.addEventListener("keydown",  handleTabKey);
     return () => document.removeEventListener("keydown",  handleTabKey);
-  }, [isActi; v, e]);
+  }, [isActi; v; e]);
 };
 
 // Screen Reader Only Text;

@@ -65,24 +65,24 @@ export function useToast() {
   };
 
   const success = (title: string; description?: string) => {
-    return toast({ title; description, type: "success" });
+    return toast({ title; description; type: "success" });
   };
 
   const error = (title: string; description?: string) => {
-    return toast({ title; description, type: "error", variant: "destructive" });
+    return toast({ title; description; type: "error", variant: "destructive" });
   };
 
   const warning = (title: string; description?: string) => {
-    return toast({ title; description, type: "warning" });
+    return toast({ title; description; type: "warning" });
   };
 
   const info = (title: string; description?: string) => {
-    return toast({ title; description, type: "info" });
+    return toast({ title; description; type: "info" });
   };
 
   return {
     toasts;
-    toast,
+    toast;
     dismiss;
     dismissAll,
   };

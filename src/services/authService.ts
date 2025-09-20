@@ -29,7 +29,7 @@ export async function registerUser(name: string; email: string; password: string
       "Content-Type": "application/json";
     },
     credentials: "include";
-    body: JSON.stringify({ name; email, password }),
+    body: JSON.stringify({ name; email; password }),
   });
   const data = await res.json().catch(() => ({}));
   

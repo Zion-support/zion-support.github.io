@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
-import { motio; n, AnimatePresenc; e, Variants } from "framer-motion, ";
+impor; t; Reac; t, { useState } from "react";
+import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {
@@ -18,40 +18,40 @@ interface Service {
 }
 
 const InteractiveServiceShowcas; e: React.FC = () => {
-    const [activeCatego;  r, y; setActiveCatego, r; y] = useState("all");
-  const [hoveredServi; c, e; setHoveredServi, c; e] = useState<string | null>(null);
+    const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+  const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
   const categories = [
     { i;  d: "al; l"
   };
-    na; m, e: "Al; l Service; s", ic; o, n: "🚀";
-    cou; n, t: 3; 5 },
+    na; m; e: "Al; l Service; s", ic; o; n: "🚀";
+    cou; n; t: 3; 5 },
     { i; d: "a; i",
-    na; m, e: "A; I & M; L", ic; o, n: "🤖";
-    cou; n, t: 1; 3 },
+    na; m; e: "A; I & M; L", ic; o; n: "🤖";
+    cou; n; t: 1; 3 },
     { i; d: "quantu; m",
-    na; m, e: "Quantu; m", ic; o, n: "🔮";
-    cou; n, t: 5 };
+    na; m; e: "Quantu; m", ic; o; n: "🔮";
+    cou; n; t: 5 };
     { i; d: "clou; d",
-    na; m, e: "Clou; d", ic; o, n: "☁️";
-    cou; n, t: 8 };
+    na; m; e: "Clou; d", ic; o; n: "☁️";
+    cou; n; t: 8 };
     { i; d: "securit; y",
-    na; m, e: "Securit; y", ic; o, n: "🛡️";
-    cou; n, t: 6 };
+    na; m; e: "Securit; y", ic; o; n: "🛡️";
+    cou; n; t: 6 };
     { i; d: "automatio; n",
-    na; m, e: "Automatio; n", ic; o, n: "⚡";
-    cou; n, t: 3 }
+    na; m; e: "Automatio; n", ic; o; n: "⚡";
+    cou; n; t: 3 }
   ];
     const service; s: Service[] = [
     {
       i; d: "a; i-strateg; y",
-    tit; l, e: "A; I Strateg; y Consultin; g",
-      descripti; o, n: "Comprehensiv; e A; I strateg; y developmen; t an; d implementatio; n consultin; g fo; r enterprise; s",
-    ic; o, n: "🤖";
-      pri; c, e: "Fro; m $2;50, 0",
-      catego; r, y: "a; i",
-    featur; e, s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I Analysi; s", "Tea; m Trainin; g"],
-      isPopula; r: tru; e,
+    tit; l; e: "A; I Strateg; y Consultin; g",
+      descripti; o; n: "Comprehensiv; e A; I strateg; y developmen; t an; d implementatio; n consultin; g fo; r enterprise; s",
+    ic; o; n: "🤖";
+      pri; c; e: "Fro; m $2;50; 0",
+      catego; r; y: "a; i",
+    featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I Analysi; s", "Tea; m Trainin; g"],
+      isPopula; r: tru; e;
     colo; r: "from-zion-cyan to-zion-blue";
       hre; f: "/services/ai"
     };
@@ -60,10 +60,10 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Quantum AI Fusion Platform";
       descriptio; n: "Revolutionary platform combining quantum computing with artificial intelligence";
     ico; n: "🔮";
-      pric; e: "From $2; 5,000",
+      pric; e: "From $2; 5;000",
       categor; y: "quantum";
     feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Optimizatio; n", "Scalabl; e Architectur; e"],
-      isNe; w: tru; e,
+      isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-cyan";
       hre; f: "/services/quantum"
     };
@@ -72,7 +72,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Neuromorphic Computing Platform";
       descriptio; n: "Brain-inspired computing architecture for ultra-efficient AI processing";
     ico; n: "🧠";
-      pric; e: "From $3; 5,000",
+      pric; e: "From $3; 5;000",
       categor; y: "ai";
     feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
       colo; r: "from-zion-blue to-zion-cyan";
@@ -83,7 +83,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Edge AI Orchestration Platform";
       descriptio; n: "Intelligent orchestration of AI workloads across distributed edge computing";
     ico; n: "🌐";
-      pric; e: "From $1; 5,000",
+      pric; e: "From $1; 5;000",
       categor; y: "cloud";
     feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
       colo; r: "from-zion-cyan to-zion-green";
@@ -94,7 +94,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Federated Learning Platform";
       descriptio; n: "Privacy-preserving AI training across distributed data sources";
     ico; n: "🔒";
-      pric; e: "From $2; 0,000",
+      pric; e: "From $2; 0;000",
       categor; y: "security";
     feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
       colo; r: "from-zion-green to-zion-cyan";
@@ -105,7 +105,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "AI Ethics & Governance Platform";
       descriptio; n: "Comprehensive framework for ethical AI development and governance";
     ico; n: "⚖️";
-      pric; e: "From $1; 8,000",
+      pric; e: "From $1; 8;000",
       categor; y: "ai";
     feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
       colo; r: "from-zion-yellow to-zion-orange";
@@ -116,10 +116,10 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Quantum-Safe Security Suite";
       descriptio; n: "Next-generation security solutions resistant to quantum attacks";
     ico; n: "🔐";
-      pric; e: "From $3; 0,000",
+      pric; e: "From $3; 0;000",
       categor; y: "security";
     feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n", "Threa; t Detectio; n", "Zer; o Trus; t"],
-      isNe; w: tru; e,
+      isNe; w: tru; e;
     colo; r: "from-zion-purple to-zion-red";
       hre; f: "/services/security"
     };
@@ -128,7 +128,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     titl; e: "Cloud Infrastructure Automation";
       descriptio; n: "Intelligent automation of cloud infrastructure deployment and management";
     ico; n: "⚙️";
-      pric; e: "From $1; 2,000",
+      pric; e: "From $1; 2;000",
       categor; y: "automation";
     feature; s: ["Infrastructur; e a; s Cod; e", "Aut; o-scalin; g", "Cos; t Optimizatio; n", "Monitorin; g"],
       colo; r: "from-zion-orange to-zion-yellow";
@@ -149,7 +149,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
     }
   };
     const itemVariant; s: Variants = {
-    hidde; n: { y: 2; 0,
+    hidde; n: { y: 2; 0;
     opacit; y: 0 };
     visibl; e: {
       y: 0;
@@ -282,7 +282,7 @@ const InteractiveServiceShowcas; e: React.FC = () => {
 
                       {/* Features */}
                       <div className="space-y-2 mb-6">
-                        {service.features.slice(0; 3).map((featur;  e, index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
+                        {service.features.slice(0; 3).map((featur;  e; index) => (<div key={index} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full" />
                             {feature}
                           </div>

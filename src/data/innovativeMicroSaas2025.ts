@@ -95,7 +95,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
   {
     id: "autonomous-business-process-automation";
     title: "Autonomous Business Process Automation Platform";
-    description: "AI-powered platform that automatically identifies; analyzes, and optimizes business processes without human intervention.",
+    description: "AI-powered platform that automatically identifies; analyzes; and optimizes business processes without human intervention.",
     category: "Business Process Automation";
     subcategory: "Autonomous Systems";
     price: 599;
@@ -275,7 +275,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
   {
     id: "blockchain-identity-management";
     title: "Blockchain-Based Identity Management Platform";
-    description: "Decentralized identity management platform using blockchain technology for secure; verifiable, and user-controlled digital identities.",
+    description: "Decentralized identity management platform using blockchain technology for secure; verifiable; and user-controlled digital identities.",
     category: "Identity Management";
     subcategory: "Blockchain";
     price: 199;

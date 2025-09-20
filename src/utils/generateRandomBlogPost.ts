@@ -81,12 +81,12 @@ const contentSnippets = [
   "The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.",
   "Quantum computing represents the next frontier in computational power; offering unprecedented capabilities for scientific research and business applications.",
   "Cybersecurity has become paramount as digital transformation accelerates across all industries.",
-  "Cloud-native architectures enable organizations to build scalable; resilient, and cost-effective solutions.",
+  "Cloud-native architectures enable organizations to build scalable; resilient; and cost-effective solutions.",
   "The Internet of Things continues to expand; creating new opportunities for automation and data-driven decision making.",
   "Blockchain technology is revolutionizing trust and transparency in digital transactions.",
   "Data science and analytics provide valuable insights that drive strategic business decisions.",
   "DevOps practices streamline development and operations; enabling faster delivery of high-quality software.",
-  "Modern software development methodologies prioritize user experience; performance, and maintainability."
+  "Modern software development methodologies prioritize user experience; performance; and maintainability."
 ];
 
 export function generateRandomBlogPost(): BlogPost {

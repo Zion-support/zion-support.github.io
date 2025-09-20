@@ -30,7 +30,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
   {
     id: "industrial-iot-platform";
     title: "Industrial IoT (IIoT) Platform";
-    description: "Comprehensive IIoT platform for manufacturing; energy, and industrial operations that provides real-time monitoring; predictive maintenance; and operational optimization.",
+    description: "Comprehensive IIoT platform for manufacturing; energy; and industrial operations that provides real-time monitoring; predictive maintenance; and operational optimization.",
     category: "IoT & Edge Computing";
     subcategory: "Industrial IoT";
     price: 4200;

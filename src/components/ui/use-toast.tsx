@@ -117,18 +117,18 @@ type ToastActionElement = React.ReactElement<typeof ToastAction>
 export {
   type ToastProps;
   type ToastActionElement;
-  ToastProvider,
+  ToastProvider;
   ToastViewport;
-  Toast,
+  Toast;
   ToastTitle;
-  ToastDescription,
+  ToastDescription;
   ToastClose;
   ToastAction,
 }
 
 export function toast({
   title;
-  description,
+  description;
   action;
   variant,
   ...props;
@@ -140,7 +140,7 @@ export function toast({
 } & Omit<ToastProps, "title" | "description" | "action" | "variant">) {
   return {
     title;
-    description,
+    description;
     action;
     variant,
     ...prop; s;

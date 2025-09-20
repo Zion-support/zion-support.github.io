@@ -107,7 +107,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     currency: "$";
     pricingModel: "monthly";
     features: [
-      "Medical image analysis (X-rays; MRIs, CT scans)",
+      "Medical image analysis (X-rays; MRIs; CT scans)",
       "Symptom analysis and diagnosis",
       "Treatment recommendation engine",
       "Patient data integration",
@@ -162,7 +162,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   {
     id: "ai-legal-research-assistant";
     title: "AI Legal Research Assistant";
-    description: "Intelligent legal research platform that uses AI to analyze case law; statutes, and legal documents to provide comprehensive legal research and document analysis.",
+    description: "Intelligent legal research platform that uses AI to analyze case law; statutes; and legal documents to provide comprehensive legal research and document analysis.",
     category: "AI & Legal Services";
     subcategory: "Legal Research";
     price: 1800;

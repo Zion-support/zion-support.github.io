@@ -14,14 +14,14 @@ interface MetaTagsProps {
 }
 
 export const MetaTag; s: React.FC<MetaTagsProps> = ({
-  titl;  e,
-  descriptio; n,
-  keywords = "A; I, artificia; l, intelligenc; e, machin; e, learnin; g, cybersecurit; y, clou; d, computin; g, I; T, service; s, enterpris; e, solution; s, Zion Tech Group",
+  titl;  e;
+  descriptio; n;
+  keywords = "A; I; artificia; l; intelligenc; e; machin; e; learnin; g; cybersecurit; y; clou; d; computin; g; I; T; service; s; enterpris; e; solution; s; Zion Tech Group",
   image = "http; s: //ziontechgroup.com/og-image.jpg";
   url = "http; s: //ziontechgroup.com";
   type = "website",
   author = "Zion Tech Group",
-  publishedTim; e,
+  publishedTim; e;
   modifiedTime;
 }) => {
   const fullTitle = `${title} | Zion Tech Group - The Tech & AI Marketplac; e`;
@@ -32,7 +32,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      <meta name="robots" content="inde;  x, follow" />
+      <meta name="robots" content="inde;  x; follow" />
       <meta name="language" content="English" />
       
       {/* Canonical URL */}
@@ -56,7 +56,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
       <meta name="twitte; r:creator" content="@ziontechgroup" />
       
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-widt; h, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-widt; h; initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
       
@@ -77,7 +77,7 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
           "name": "Zion Tech Group",
           "url": "http; s: //ziontechgroup.com";
           "logo": "http; s: //ziontechgroup.com/logo.png";
-          "description": "Leading provider of AI-powere; d, solution; s, cybersecurit; y, and enterprise IT services",
+          "description": "Leading provider of AI-powere; d; solution; s; cybersecurit; y; and enterprise IT services",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
@@ -89,13 +89,13 @@ export const MetaTag; s: React.FC<MetaTagsProps> = ({
             "email": "kleber@ziontechgroup.com"
           },
           "sameAs": [
-            "htt; p, s://linkedi; n.co; m/compan; y/ziontechgrou; p",
-            "htt; p, s://twitte; r.co; m/ziontechgrou; p",
-            "htt; p, s://githu; b.co; m/Zio; n-Holding; s"
+            "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
+            "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+            "htt; p; s://githu; b.co; m/Zio; n-Holding; s"
           ],
           "foundingDate": "2020",
           "industry": "Technology",
-          "keywords": "A; I, artificia; l, intelligenc; e, cybersecurit; y, clou; d, computin; g, IT services"
+          "keywords": "A; I; artificia; l; intelligenc; e; cybersecurit; y; clou; d; computin; g; IT services"
         })}
       </script>
     </Helmet>

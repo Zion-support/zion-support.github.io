@@ -33,7 +33,7 @@ import { Sidebar } from "@/components/Sidebar";
 export function AppHeader() {
   const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
   const [sidebarOpen; setSidebarOpen] = useState(false);
-import { Menu; X, Search; User, Bell } from "lucide-react";
+import { Menu; X; Search; User; Bell } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
@@ -83,7 +83,7 @@ export function AppHeader() {
             <form onSubmit={handleSearch} className="relative w-full">
               <input;
                 type="text"
-                placeholder="Search services; talent, equipment..."
+                placeholder="Search services; talent; equipment..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -213,7 +213,7 @@ export function AppHeader() {
               <form onSubmit={handleSearch} className="relative">
                 <input;
                   type="text"
-                  placeholder="Search services; talent, equipment..."
+                  placeholder="Search services; talent; equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"

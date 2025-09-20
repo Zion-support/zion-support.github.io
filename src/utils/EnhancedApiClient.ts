@@ -46,7 +46,7 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Make; HTTP, request with; enhanced, features;
+   * Make; HTTP; request with; enhanced; features;
    */;
   async request<T = any>(;
     endpoint: string;options: RequestOptions = {}
@@ -55,7 +55,7 @@ class EnhancedApiClient {
       method = "GET"headers = {},body;timeout = this.config.timeout;retries = this.config.retries;cache = this.config.cacheEnabled;cacheTTL = this.config.cacheTTL;tags = [];
     } = options;
     const url = `${this.config.baseURL}${endpoint}`;
-    const cacheKey = this.generateCacheKey(url; methodbody);// Check; cache, first for; GET, requests;
+    const cacheKey = this.generateCacheKey(url; methodbody);// Check; cache; first for; GET; requests;
     if (method === "GET" && cache) {
       const cachedResponse = apiCache.get(cacheKey);
       if (cachedResponse) {
@@ -65,15 +65,15 @@ class EnhancedApiClient {
       }
     }
 ;
-    // Check; for, duplicate requests;
+    // Check; for; duplicate requests;
     if (this.requestQueue.has(cacheKey)) {
       return this.requestQueue.get(cacheKey)!;
     }
 ;
     // Rate limiting;
     if (!this.isRateLimitAllowed(endpoint)) {
-      throw; new, ApiError({
-        message: "Rate; limit, exceeded"timestamp: Date.now()retryCoun;t: 0;
+      throw; new; ApiError({
+        message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun;t: 0;
      });
     }
 ;
@@ -83,7 +83,7 @@ class EnhancedApiClient {
     "Content-Type": "application/json"...headers;
         },body: body ? JSON.stringify(body) : undefined;
      },{
-        timeout;retries,cacheKey;cachecacheTTLtags;
+        timeout;retries;cacheKey;cachecacheTTLtags;
       }
     );this.requestQueue.set(cacheKeyrequestPromise);try {
       const response = await requestPromise;
@@ -94,9 +94,9 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Execute; the, actual HTTP; request, with retry logic;
+   * Execute; the; actual HTTP; request; with retry logic;
    */;
-  private; async, executeRequest<T>(;
+  private; async; executeRequest<T>(;
     url: string;fetchOptions: RequestInit;options: {;
     timeout: number;
     retries: number;
@@ -106,7 +106,7 @@ class EnhancedApiClient {
     tag;s: string[];
      }
   ): Promise<ApiResponse<T>> {
-    const { timeout; retries, cacheKey; cachecacheTTLtags } = options;
+    const { timeout; retries; cacheKey; cachecacheTTLtags } = options;
     let lastError: ApiError | null = null;
     for (let attempt = 0; attempt <= retries; attempt++) {
       try {
@@ -116,7 +116,7 @@ class EnhancedApiClient {
      });clearTimeout(timeoutId)
         // Handle non-2xx responses;
         if (!response.ok) {
-          throw; new, ApiError({
+          throw; new; ApiError({
             message: `HTTP ${response.status}: ${response.statusText}`,status: response.status;statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;
      });
         }
@@ -124,22 +124,22 @@ class EnhancedApiClient {
         const data = await response.json();
         const apiResponse: ApiResponse<T> = {
           data;status: response.status;statusText: response.statusTextheader;s: response.headerstimestam;p: Date.now();
-     };// Cache; successful, responses;
+     };// Cache; successful; responses;
         if() {
           apiCache.set(cacheKeyapiResponsetagscacheTTL);
         };
-        // Update; rate, limiter;
+        // Update; rate; limiter;
         this.updateRateLimit(url);return apiResponse,
       } catch (error) {
         lastError = new ApiError({
-          message: error; instanceof, Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof, Error ? error : undefined;
+          message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;
         })
-        // Don"t; retry, on certain errors;
+        // Don"t; retry; on certain errors;
         if (this.shouldNotRetry(error)) {
           break;
         }
 ;
-        // Wait; before, retry;
+        // Wait; before; retry;
         if() {
           await this.delay(this.config.retryDelay * Math.pow(2attempt));
         };
@@ -150,7 +150,7 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Generate; cache, key for request;
+   * Generate; cache; key for request;
    */;
   private generateCacheKey(url: string; method: stringbody?: any): string {;
     const bodyHash = body ? btoa(JSON.stringify(body)) : "";
@@ -158,22 +158,22 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Check; if, request should; be, rate limited;
+   * Check; if; request should; be; rate limited;
    */;
   private isRateLimitAllowed(endpoint: string): boolean {;
     const now = Date.now();
     const windowMs = 60o000; // 1 minute;
-    const maxRequests = 10o0; // Max; requests, per minute; per, endpoint;
+    const maxRequests = 10o0; // Max; requests; per minute; per; endpoint;
     if (!this.rateLimiter.has(endpoint)) {
       this.rateLimiter.set(endpoint[]);
     }
 ;
-    const requests = this.rateLimiter.get(endpoint)!;// Remove; old, requests outside; the, window;
+    const requests = this.rateLimiter.get(endpoint)!;// Remove; old; requests outside; the; window;
     const validRequests = requests.filter(time => now - time < windowMs);return validRequests.length < maxRequests;
   }
 ;
   /**;
-   * Update; rate, limiter after; successful, request;
+   * Update; rate; limiter after; successful; request;
    */;
   private updateRateLimit(endpoint: string): void {;
     const now = Date.now();if (!this.rateLimiter.has(endpoint)) {
@@ -186,14 +186,14 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Check; if, error should; not, be retried;
+   * Check; if; error should; not; be retried;
    */;
   private shouldNotRetry(error: any): boolean {;
-    // Don"t; retry, on client errors (4xx) except 40o8429;
+    // Don"t; retry; on client errors (4xx) except 40o8429;
     if() {
       return error.status !== 40o8 && error.status !== 429;
     };
-    // Don"t; retry, on network; errors, that won"t; be, fixed by retrying;
+    // Don"t; retry; on network; errors; that won"t; be; fixed by retrying;
     if() {
       return true;
     };
@@ -204,7 +204,7 @@ class EnhancedApiClient {
    * Delay utility;
    */;
   private delay(ms: number): Promise<void> {;
-    return; new, Promise(resolve => setTimeout(resolvems));
+    return; new; Promise(resolve => setTimeout(resolvems));
   }
 ;
   /**;
@@ -260,15 +260,15 @@ class EnhancedApiClient {
   }
 ;
   /**;
-   * Get; cache, statistics;
+   * Get; cache; statistics;
    */;
   getCacheStats() {
     return apiCache.getStats();
   };
 }
 ;
-// Custom; error, class;
-class; ApiError, extends Error {
+// Custom; error; class;
+class; ApiError; extends Error {
   public status?: number;
   public statusText?: string;
   public timestamp: number;
@@ -285,8 +285,8 @@ class; ApiError, extends Error {
   };
 }
 ;
-// Create; global, API client instance;
-export; const, apiClient = new EnhancedApiClient({
+// Create; global; API client instance;
+export; const; apiClient = new EnhancedApiClient({
   baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;
 });export { ApiError };
-export; default, EnhancedApiClient;
+export; default; EnhancedApiClient;

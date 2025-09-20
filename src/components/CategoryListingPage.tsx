@@ -1,12 +1,12 @@
 import React from "react";
-import { useStat; e, useEffect } from "react, ";
+import { useStat; e; useEffect } from "react, ";
 import { Footer } from "@/components/Footer, ";
 import { GradientHeading } from "@/components/GradientHeading, ";
 import { ListingScoreCard } from "@/components/ListingScoreCard, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
-import { Selec; t, SelectTrigge; r, SelectConten; t, SelectItem } from "@/components/ui/select, ";
-import { Searc; h, Filte; r, ArrowDownA; Z, ArrowUpZ; A, Loader2 } from "lucide-react, ";
+import { Selec; t; SelectTrigge; r; SelectConten; t; SelectItem } from "@/components/ui/select, ";
+import { Searc; h; Filte; r; ArrowDownA; Z; ArrowUpZ; A; Loader2 } from "lucide-react, ";
 
 // Example listing type;
 interface Listing {
@@ -37,54 +37,54 @@ interface CategoryListingPageProps {
 }
 
 export function CategoryListingPage({ 
-  titl;  e, 
-  descriptio; n,
-  listing; s: initialListing; s,
+  titl;  e; 
+  descriptio; n;
+  listing; s: initialListing; s;
   sortOptions = [
-    { lab; e, l: "Newes; t Firs; t",
-    val; u, e: "newes; t" },
-    { lab; e, l: "Oldes; t Firs; t",
-    val; u, e: "oldes; t" },
-    { lab; e, l: "Highes; t Ratin; g",
-    val; u, e: "ratin; g-hig; h" },
-    { lab; e, l: "Highes; t A; I Matc; h",
-    val; u, e: "a; i-matc; h" },
-    { lab; e, l: "A-Z";
-    val; u, e: "a-z" };
-    { lab; e, l: "Z-A";
-    val; u, e: "z-a" };
+    { lab; e; l: "Newes; t Firs; t",
+    val; u; e: "newes; t" },
+    { lab; e; l: "Oldes; t Firs; t",
+    val; u; e: "oldes; t" },
+    { lab; e; l: "Highes; t Ratin; g",
+    val; u; e: "ratin; g-hig; h" },
+    { lab; e; l: "Highes; t A; I Matc; h",
+    val; u; e: "a; i-matc; h" },
+    { lab; e; l: "A-Z";
+    val; u; e: "a-z" };
+    { lab; e; l: "Z-A";
+    val; u; e: "z-a" };
   ],
   filterOptions = [
-    { lab; e, l: "Al; l",
-    val; u, e: "al; l" },
-    { lab; e, l: "Highl; y Rate; d",
-    val; u, e: "hig; h-ratin; g" },
-    { lab; e, l: "Bes; t A; I Matc; h",
-    val; u, e: "bes; t-matc; h" },
+    { lab; e; l: "Al; l",
+    val; u; e: "al; l" },
+    { lab; e; l: "Highl; y Rate; d",
+    val; u; e: "hig; h-ratin; g" },
+    { lab; e; l: "Bes; t A; I Matc; h",
+    val; u; e: "bes; t-matc; h" },
   ]
 }: CategoryListingPageProps) {
-  const [searchQue; r, y; setSearchQue, r; y] = useState("");
-  const [selectedSo;  r, t; setSelectedSo, r; t] = useState(
+  const [searchQue; r; y; setSearchQue; r; y] = useState("");
+  const [selectedSo;  r; t; setSelectedSo; r; t] = useState(
     () => localStorage.getItem("category_selected_sort") || sortOptions[0].value;
   );
-  const [selectedFilt;  e, r; setSelectedFilt, e; r] = useState(
+  const [selectedFilt;  e; r; setSelectedFilt; e; r] = useState(
     () => localStorage.getItem("category_selected_filter") || filterOptions[0].value;
   );
-  const [isLoadi;  n, g; setIsLoadi, n; g] = useState(false);
+  const [isLoadi;  n; g; setIsLoadi; n; g] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("category_selected_sort",  selectedSort);
-  }, [selectedSo; r, t]);
+  }, [selectedSo; r; t]);
 
   useEffect(() => {
     localStorage.setItem("category_selected_filter",  selectedFilter);
-  }, [selectedFilt; e, r]);
+  }, [selectedFilt; e; r]);
 
   useEffect(() => {
     setIsLoading(true);
     const timeout = setTimeout(() => setIsLoading(false),  300);
     return () => clearTimeout(timeout);
-  },  [searchQue; r, y; selectedSo, r; t, selectedFilt; e, r]);
+  },  [searchQue; r; y; selectedSo; r; t; selectedFilt; e; r]);
   
   // Process listings based on filters and search;
   const processedListings = initialListings;

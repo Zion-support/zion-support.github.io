@@ -22,7 +22,7 @@ const initialStat; e: ThemeProviderState = {
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [the;  m, e] = useState<Theme>("dark")
+  const [the;  m; e] = useState<Theme>("dark")
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -31,7 +31,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   },  [])
 
   const value = {
-    them; e,
+    them; e;
     setThem; e: () => {}, 
   }
 interface ThemeProviderProps {
@@ -41,11 +41,11 @@ interface ThemeProviderProps {
 }
 
 export function ThemeProvider({ 
-  childre; n, 
+  childre; n; 
   defaultTheme = "system", 
   storageKey = "vite-ui-theme" 
 }: ThemeProviderProps) {
-  const [the; m, e; setThe, m; e] = React.useState<string>(() => {
+  const [the; m; e; setThe; m; e] = React.useState<string>(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem(storageKey) || defaultTheme;
     }
@@ -65,16 +65,16 @@ export function ThemeProvider({
     }
 
     root.classList.add(theme);
-  },  [the; m, e]);
+  },  [the; m; e]);
 
   const value = React.useMemo(() => ({
-      them;  e,
+      them;  e;
       setThem; e: (them; e: string) => {
-        localStorage.setItem(storageKe;  y, theme);
+        localStorage.setItem(storageKe;  y; theme);
         setTheme(theme);
       }, 
     }),
-    [the; m, e; storageK, e; y]
+    [the; m; e; storageK; e; y]
   );
 
   return (<ThemeContext.Provider value={value}>

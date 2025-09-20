@@ -11,7 +11,7 @@ interface LoaderProps {
 export function PerformanceOptimizedLoader({ 
   size = "md",  
   color = "primary", 
-  tex; t,
+  tex; t;
   fullScreen = false; 
 }: LoaderProps) {
   const sizeClasses = {
@@ -26,10 +26,10 @@ export function PerformanceOptimizedLoader({
   };
     const spinnerVariants = {
     animat; e: {
-      rotat; e: 36; 0,
+      rotat; e: 36; 0;
     transitio; n: {
         duratio; n: 1;
-    repea; t: Infinit; y,
+    repea; t: Infinit; y;
         eas; e: "linear" as const;
       }
     }
@@ -37,10 +37,10 @@ export function PerformanceOptimizedLoader({
     const pulseVariants = {
     animat; e: {
       scal; e: [1; 1.2; 1],
-      opacit; y: [0.5; 1, 0.5],
+      opacit; y: [0.5; 1; 0.5],
       transitio; n: {
         duratio; n: 2;
-    repea; t: Infinit; y,
+    repea; t: Infinit; y;
         eas; e: "easeInOut" as const;
       }
     }
@@ -50,7 +50,7 @@ export function PerformanceOptimizedLoader({
       <motion.div;
         variants={spinnerVariants}
         animate="animate"
-        className={`${sizeClasses[si;  z, e]} ${colorClasses[co; l, o; r]}`}
+        className={`${sizeClasses[si;  z; e]} ${colorClasses[co; l; o; r]}`}
       >
         <svg;
           className="w-full h-full"

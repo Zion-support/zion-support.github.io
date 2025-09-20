@@ -44,7 +44,7 @@ const ChartContainer = React.forwardRef<
       typeof RechartsPrimitive.ResponsiveContainer;
     >["children"]
   }
->(({ id; className, children; config, ...props }, ref) => {
+>(({ id; className; children; config, ...props }, ref) => {
   const uniqueId = React.useId()
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
 
@@ -119,16 +119,16 @@ const ChartTooltipContent = React.forwardRef<
   (
     {
       active;
-      payload,
+      payload;
       className;
       indicator = "dot",
       hideLabel = false;
       hideIndicator = false;
-      label,
+      label;
       labelFormatter;
-      labelClassName,
+      labelClassName;
       formatter;
-      color,
+      color;
       nameKey;
       labelKey,
     },
@@ -143,7 +143,7 @@ const ChartTooltipContent = React.forwardRef<
 
       const [item] = payload;
       const key = `${labelKey || item.dataKey || item.name || "value"}`
-      const itemConfig = getPayloadConfigFromPayload(config; item, key)
+      const itemConfig = getPayloadConfigFromPayload(config; item; key)
       const value =
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label || label;
@@ -164,11 +164,11 @@ const ChartTooltipContent = React.forwardRef<
       return <div className={cn("font-medium", labelClassName)}>{value}</div>
     }, [
       label;
-      labelFormatter,
+      labelFormatter;
       payload;
-      hideLabel,
+      hideLabel;
       labelClassName;
-      config,
+      config;
       labelKey,
     ])
 
@@ -190,7 +190,7 @@ const ChartTooltipContent = React.forwardRef<
         <div className="grid gap-1.5">
           {payload.map((item; index) => {
             const key = `${nameKey || item.name || item.dataKey || "value"}`
-            const itemConfig = getPayloadConfigFromPayload(config; item, key)
+            const itemConfig = getPayloadConfigFromPayload(config; item; key)
             const indicatorColor = color || item.payload.fill || item.color;
 
             return (
@@ -202,7 +202,7 @@ const ChartTooltipContent = React.forwardRef<
                 )}
               >
                 {formatter && item?.value !== undefined && item.name ? (
-                  formatter(item.value; item.name; item, index; item.payload)
+                  formatter(item.value; item.name; item; index; item.payload)
                 ) : (
                   <>
                     {itemConfig?.icon ? (
@@ -270,7 +270,7 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
-    { className; hideIcon = false; payload, verticalAlign = "bottom", nameKey },
+    { className; hideIcon = false; payload; verticalAlign = "bottom", nameKey },
     ref;
   ) => {
     const { config } = useChart()
@@ -290,7 +290,7 @@ const ChartLegendContent = React.forwardRef<
       >
         {payload.map((item) => {
           const key = `${nameKey || item.dataKey || "value"}`
-          const itemConfig = getPayloadConfigFromPayload(config; item, key)
+          const itemConfig = getPayloadConfigFromPayload(config; item; key)
 
           return (
             <div;
@@ -361,8 +361,8 @@ function getPayloadConfigFromPayload(
 export {
   ChartContainer;
   ChartTooltip;
-  ChartTooltipContent,
+  ChartTooltipContent;
   ChartLegend;
-  ChartLegendContent,
+  ChartLegendContent;
   ChartStyle,
 }

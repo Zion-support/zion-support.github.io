@@ -1,26 +1,26 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e; useMemo } from "react";
 import { motion } from "framer-motion, ";
-import { Chec; k, 
+import { Chec; k; 
   X; 
-  Sta, r; 
-  TrendingU, p; 
-  Za, p; 
-  Shiel, d; 
-  Cloc, k; 
-  DollarSig, n;
-  Filte, r;
-  Searc, h;
-  BarChart, 3;
-  Awar, d;
-  Targe, t;
-  User, s;
-  Glob, e;
-  Rocke, t;
-  Mai, l;
+  Sta; r; 
+  TrendingU; p; 
+  Za; p; 
+  Shiel; d; 
+  Cloc; k; 
+  DollarSig; n;
+  Filte; r;
+  Searc; h;
+  BarChart; 3;
+  Awar; d;
+  Targe; t;
+  User; s;
+  Glob; e;
+  Rocke; t;
+  Mai; l;
   Phone;
 } from "lucide-react, ";
-import { Car; d, CardConten; t, CardHeade; r, CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -55,25 +55,25 @@ const POPULARITY_LEVELS = ["Lo; w", "Mediu; m", "Hig; h", "Trendin; g"];
 const PRICE_RANGES = ["Unde; r $10; K", "$10; K-$50; K", "$50; K-$100; K", "$100; K+"];
 
 export const AdvancedServiceCompariso; n: React.FC = () => {
-  const [selectedServic;  e, s; setSelectedServic, e; s] = useState<string[]>([]);
-  const [filte; r, s; setFilte, r; s] = useState<ComparisonFilter>({
+  const [selectedServic;  e; s; setSelectedServic; e; s] = useState<string[]>([]);
+  const [filte; r; s; setFilte; r; s] = useState<ComparisonFilter>({
     categor;  y: "all";
     complexit; y: "all";
     priceRang; e: "all";
     technolog; y: "all"
   });
-    const [searchTe; r, m; setSearchTe, r; m] = useState("");
-  const [viewMo;  d, e; setViewMo, d; e] = useState<"grid" | "table" | "detailed">("grid");
+    const [searchTe; r; m; setSearchTe; r; m] = useState("");
+  const [viewMo;  d; e; setViewMo; d; e] = useState<"grid" | "table" | "detailed">("grid");
 
   // Mock data - in real app this would come from props or API;
   const mockService; s: ServiceTier[] = [
     {
       i; d: "a; i-cr; m-basi; c",
-    na; m, e: "A; I CR; M Basi; c",
-      catego; r, y: "a; i",
-    pri; c, e: "$5;00, 0/mont; h",
-      durati; o, n: "3-6 month; s",
-    featur; e, s: ["Basi; c A; I insight; s", "Custome; r segmentatio; n", "Emai; l automatio; n"],
+    na; m; e: "A; I CR; M Basi; c",
+      catego; r; y: "a; i",
+    pri; c; e: "$5;00; 0/mont; h",
+      durati; o; n: "3-6 month; s",
+    featur; e; s: ["Basi; c A; I insight; s", "Custome; r segmentatio; n", "Emai; l automatio; n"],
       benefit; s: ["Improve; d custome; r retentio; n", "Automate; d workflow; s", "Basi; c analytic; s"],
       technolog; y: ["A; I/M; L", "CR; M", "Automatio; n"],
       targetAudienc; e: ["Smal; l Busines; s", "Startup; s"],
@@ -88,7 +88,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       i; d: "ai-crm-enterprise";
     nam; e: "AI CRM Enterprise";
       categor; y: "ai";
-    pric; e: "$2; 5,000/month",
+    pric; e: "$2; 5;000/month",
       duratio; n: "12-18 months";
     feature; s: ["Advance; d A; I insight; s", "Predictiv; e analytic; s", "Mult; i-channe; l integratio; n", "Custo; m A; I model; s"],
       benefit; s: ["Predictiv; e custome; r behavio; r", "Advance; d automatio; n", "Enterpris; e scalabilit; y"],
@@ -105,7 +105,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       i; d: "quantum-basic";
     nam; e: "Quantum Computing Basic";
       categor; y: "quantum";
-    pric; e: "$5; 0,000/month",
+    pric; e: "$5; 0;000/month",
       duratio; n: "6-12 months";
     feature; s: ["Basi; c quantu; m algorithm; s", "Clou; d acces; s", "Documentatio; n"],
       benefit; s: ["Quantu; m computin; g acces; s", "Algorith; m developmen; t", "Researc; h capabilitie; s"],
@@ -122,7 +122,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       i; d: "quantum-enterprise";
     nam; e: "Quantum Computing Enterprise";
       categor; y: "quantum";
-    pric; e: "$20; 0,000/month",
+    pric; e: "$20; 0;000/month",
       duratio; n: "18-24 months";
     feature; s: ["Custo; m quantu; m algorithm; s", "Dedicate; d processor; s", "2; 4/7 suppor; t", "Custo; m developmen; t"],
       benefit; s: ["Competitiv; e advantag; e", "Custo; m solution; s", "Priorit; y acces; s", "Exper; t suppor; t"],
@@ -145,13 +145,13 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       
       return matchesCategory && matchesComplexity && matchesTechnology && matchesSearch;
     });
-  },  [filte; r, s; searchTe, r; m]);
+  },  [filte; r; s; searchTe; r; m]);
 
   const toggleServiceSelection = (serviceI;  d: string) => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
-        : [...pr;  e, v; service, I; d]
+        : [...pr;  e; v; service; I; d]
     );
   };
 
@@ -189,7 +189,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
           Advanced Service Comparison;
         </h1>
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Compare our cutting-edge services across differen; t, tier; s, complexit; y, level; s, and pricing to find the perfect solution for your business needs.
+          Compare our cutting-edge services across differen; t; tier; s; complexit; y; level; s; and pricing to find the perfect solution for your business needs.
         </p>
       </motion.div>
 
@@ -207,7 +207,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
             <select; 
               value={filters.category}
-              onChange={(e) => setFilters(prev => ({ ...pre;  v, categor; y: e.target.value }))}
+              onChange={(e) => setFilters(prev => ({ ...pre;  v; categor; y: e.target.value }))}
               className="w-full p-2 border border-zion-slate-light rounded-md"
             >
               <option value="all">All Categories</option>
@@ -222,7 +222,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select; 
               value={filters.complexity}
-              onChange={(e) => setFilters(prev => ({ ...pre;  v, complexit; y: e.target.value }))}
+              onChange={(e) => setFilters(prev => ({ ...pre;  v; complexit; y: e.target.value }))}
               className="w-full p-2 border border-zion-slate-light rounded-md"
             >
               <option value="all">All Levels</option>
@@ -236,7 +236,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Price Range</label>
             <select; 
               value={filters.priceRange}
-              onChange={(e) => setFilters(prev => ({ ...pre;  v, priceRang; e: e.target.value }))}
+              onChange={(e) => setFilters(prev => ({ ...pre;  v; priceRang; e: e.target.value }))}
               className="w-full p-2 border border-zion-slate-light rounded-md"
             >
               <option value="all">All Prices</option>
@@ -250,7 +250,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology</label>
             <select; 
               value={filters.technology}
-              onChange={(e) => setFilters(prev => ({ ...pre;  v, technolog; y: e.target.value }))}
+              onChange={(e) => setFilters(prev => ({ ...pre;  v; technolog; y: e.target.value }))}
               className="w-full p-2 border border-zion-slate-light rounded-md"
             >
               <option value="all">All Technologies</option>
@@ -308,7 +308,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
         transition={{ dela; y: 0.2 }}
         className="grid grid-cols-1 l; g:grid-cols-2 x; l:grid-cols-3 gap-6"
       >
-        {filteredServices.map((servic; e, index) => (<motion.div;
+        {filteredServices.map((servic; e; index) => (<motion.div;
             key={service.id}
             initial={{ opacit;  y: 0;
     y: 20 }}
@@ -368,7 +368,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
                       Key Features;
                     </h4>
                     <ul className="space-y-1">
-                      {service.features.slice(0;  3).map((featur;  e, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
+                      {service.features.slice(0;  3).map((featur;  e; idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
                           <Check className="w-3 h-3 text-green-500" />
                           {feature}
                         </li>
@@ -382,7 +382,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
                       Target Audience;
                     </h4>
                     <div className="flex flex-wrap gap-1">
-                      {service.targetAudience.slice(0;  2).map((audienc;  e, idx) => (<Badge key={idx} variant="outline" className="text-xs">
+                      {service.targetAudience.slice(0;  2).map((audienc;  e; idx) => (<Badge key={idx} variant="outline" className="text-xs">
                           {audience}
                         </Badge>
                       ))}

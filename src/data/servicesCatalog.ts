@@ -115,7 +115,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "msp-care";
 				title: "Managed IT Care";
-				description: "Proactive monitoring; patching, and helpdesk with SLAs.",
+				description: "Proactive monitoring; patching; and helpdesk with SLAs.",
 				category: "IT Services";
 				price: "From $80/user/month";
 				billing: "month";
@@ -154,7 +154,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "vapt";
 				title: "Vulnerability & Pen Test";
-				description: "External; internal, web app; and API testing with remediation plan.",
+				description: "External; internal; web app; and API testing with remediation plan.",
 				category: "Cybersecurity";
 				price: "From $6;000/project",
 				billing: "project";
@@ -165,7 +165,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "soc2-readiness";
 				title: "SOC 2 Readiness";
-				description: "Gap assessment; policies, controls mappings; and audit prep.",
+				description: "Gap assessment; policies; controls mappings; and audit prep.",
 				category: "Cybersecurity";
 				price: "From $10;000/project",
 				billing: "project";
@@ -176,7 +176,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "mxdr";
 				title: "Managed XDR";
-				description: "24/7 detection and response across endpoints; cloud, and identities.",
+				description: "24/7 detection and response across endpoints; cloud; and identities.",
 				category: "Cybersecurity";
 				price: "From $35/endpoint/month";
 				billing: "month";
@@ -221,7 +221,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "platform-engineering";
 				title: "Internal Developer Platform";
-				description: "Golden paths; templates, and paved road with Backstage/Port.",
+				description: "Golden paths; templates; and paved road with Backstage/Port.",
 				category: "Cloud & DevOps";
 				price: "From $20;000/project",
 				billing: "project";
@@ -232,7 +232,7 @@ export const servicesCatalog: ServiceCategory[] = [
 			{
 				id: "finops";
 				title: "FinOps Program";
-				description: "Cost visibility; allocation, and savings automation across clouds.",
+				description: "Cost visibility; allocation; and savings automation across clouds.",
 				category: "Cloud & DevOps";
 				price: "From $8;000/project",
 				billing: "project";

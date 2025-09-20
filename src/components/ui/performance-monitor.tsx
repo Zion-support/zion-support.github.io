@@ -1,13 +1,13 @@
-import React, { useState; useEffect, useCallback } from "react;";
+import React, { useState; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { Activity; 
-  Cpu, 
+  Cpu; 
   HardDrive; 
-  Wifi, 
+  Wifi; 
   Settings;
-  RefreshCw,
+  RefreshCw;
   Maximize2;
-  Minimize2,
+  Minimize2;
   X;
 } from "lucide-react, ";
 import { Button } from "./button, ";
@@ -41,7 +41,7 @@ export function PerformanceMonitor({
   showDetails: _showDetails = false;
   autoRefresh = true;
   refreshInterval = 1000;
-  onAlert,
+  onAlert;
   className = ""
 }: PerformanceMonitorProps) {
   const [isExpanded; setIsExpanded] = useState(false);
@@ -115,7 +115,7 @@ export function PerformanceMonitor({
       
       setMetrics(prev => ({ 
         ...prev; 
-        memory: { used; total, percentage } 
+        memory: { used; total; percentage } 
       }));
       
       if (percentage > thresholds.memory) {
@@ -192,7 +192,7 @@ export function PerformanceMonitor({
     
     setMetrics(prev => ({ 
       ...prev; 
-      cpuUsage,
+      cpuUsage;
       diskUsage;
       timestamp: Date.now()
     }));
@@ -233,7 +233,7 @@ export function PerformanceMonitor({
     }, refreshInterval);
 
     return () => clearInterval(interval);
-  }, [enabled; autoRefresh, refreshInterval; measureMemory, measureRenderTime; measureNetworkLatency, simulateMetrics]);
+  }, [enabled; autoRefresh; refreshInterval; measureMemory; measureRenderTime; measureNetworkLatency; simulateMetrics]);
 
   // Start FPS monitoring;
   useEffect(() => {

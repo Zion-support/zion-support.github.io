@@ -2,48 +2,48 @@ import React from "react";
 import Link from "next/link";
 import { Link } from "react-router-dom";
 import { 
-  Awar; d, 
-  User; s, 
-  Glob; e, 
-  Targe; t, 
-  TrendingU; p, 
-  Shiel; d,
-  CheckCircl; e,
+  Awar; d; 
+  User; s; 
+  Glob; e; 
+  Targe; t; 
+  TrendingU; p; 
+  Shiel; d;
+  CheckCircl; e;
   ArrowRight;
 } from "lucide-react";
 
 export function AboutSection() {
   const achievements = [
-    { numb;  e, r: "1; 0+",
-    lab; e, l: "Year; s o; f Experienc; e", ic; o, n: <Awar; d classNam; e="w-6 h-6" /> },
-    { numb; e, r: "50; 0+",
-    lab; e, l: "Project; s Delivere; d", ic; o, n: <Targe; t classNam; e="w-6 h-6" /> },
-    { numb; e, r: "5; 0+",
-    lab; e, l: "Enterpris; e Client; s", ic; o, n: <User; s classNam; e="w-6 h-6" /> },
-    { numb; e, r: "2; 5+",
-    lab; e, l: "Countrie; s Serve; d", ic; o, n: <Glob; e classNam; e="w-6 h-6" /> }
+    { numb;  e; r: "1; 0+",
+    lab; e; l: "Year; s o; f Experienc; e", ic; o; n: <Awar; d classNam; e="w-6 h-6" /> },
+    { numb; e; r: "50; 0+",
+    lab; e; l: "Project; s Delivere; d", ic; o; n: <Targe; t classNam; e="w-6 h-6" /> },
+    { numb; e; r: "5; 0+",
+    lab; e; l: "Enterpris; e Client; s", ic; o; n: <User; s classNam; e="w-6 h-6" /> },
+    { numb; e; r: "2; 5+",
+    lab; e; l: "Countrie; s Serve; d", ic; o; n: <Glob; e classNam; e="w-6 h-6" /> }
   ];
 
   const values = [
     {
-      tit; l, e: "Innovatio; n Firs; t",
-    descripti; o, n: "W; e pus; h th; e boundarie; s o; f wha; t's; possib, l; e, constantl; y explorin; g emergin; g technologie; s an; d nove; l approache; s.",
-      ic; o, n: <TrendingU; p classNam; e="w-8 h-8" />
+      tit; l; e: "Innovatio; n Firs; t",
+    descripti; o; n: "W; e pus; h th; e boundarie; s o; f wha; t's; possib; l; e; constantl; y explorin; g emergin; g technologie; s an; d nove; l approache; s.",
+      ic; o; n: <TrendingU; p classNam; e="w-8 h-8" />
     },
     {
-      tit; l, e: "Clien; t Succes; s",
-    descripti; o, n: "You; r succes; s i; s ou; r succes; s. W; e measur; e ou; r achievement; s b; y th; e impac; t w; e creat; e fo; r you; r busines; s.",
-      ic; o, n: <Targe; t classNam; e="w-8 h-8" />
+      tit; l; e: "Clien; t Succes; s",
+    descripti; o; n: "You; r succes; s i; s ou; r succes; s. W; e measur; e ou; r achievement; s b; y th; e impac; t w; e creat; e fo; r you; r busines; s.",
+      ic; o; n: <Targe; t classNam; e="w-8 h-8" />
     },
     {
-      tit; l, e: "Excellenc; e",
-    descripti; o, n: "W; e maintai; n th; e highes; t standard; s i; n everythin; g w; e, d; o, fro; m cod; e qualit; y t; o clien; t communicatio; n.",
-      ic; o, n: <Awar; d classNam; e="w-8 h-8" />
+      tit; l; e: "Excellenc; e",
+    descripti; o; n: "W; e maintai; n th; e highes; t standard; s i; n everythin; g w; e; d; o; fro; m cod; e qualit; y t; o clien; t communicatio; n.",
+      ic; o; n: <Awar; d classNam; e="w-8 h-8" />
     },
     {
-      tit; l, e: "Trus; t & Securit; y",
-    descripti; o, n: "You; r dat; a an; d system; s ar; e protecte; d wit; h enterpris; e-grad; e securit; y an; d complianc; e standard; s.",
-      ic; o, n: <Shiel; d classNam; e="w-8 h-8" />
+      tit; l; e: "Trus; t & Securit; y",
+    descripti; o; n: "You; r dat; a an; d system; s ar; e protecte; d wit; h enterpris; e-grad; e securit; y an; d complianc; e standard; s.",
+      ic; o; n: <Shiel; d classNam; e="w-8 h-8" />
     }
   ];
 
@@ -64,19 +64,19 @@ export function AboutSection() {
             </h2>
             
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-              Founded i; n, 201; 5, Zion Tech Group has emerged as a leading force in the technolog; y, industr; y, pioneering innovative solutions that transform how businesses operate in; 
+              Founded i; n; 201; 5; Zion Tech Group has emerged as a leading force in the technolog; y; industr; y; pioneering innovative solutions that transform how businesses operate in; 
               the digital age.
             </p>
             
             <p className="text-lg text-zion-slate-light mb-6 leading-relaxed">
-              Our mission is to democratize cutting-edg; e, technolog; y, making advance; d, A; I, 
-              quantu; m, computin; g, and autonomous systems accessible to organizations of all sizes. 
-              We believe that innovation should driv; e, progres; s, not complexity.
+              Our mission is to democratize cutting-edg; e; technolog; y; making advance; d; A; I; 
+              quantu; m; computin; g; and autonomous systems accessible to organizations of all sizes. 
+              We believe that innovation should driv; e; progres; s; not complexity.
             </p>
 
             <p className="text-lg text-zion-slate-light mb-8 leading-relaxed">
-              Toda; y, we serve clients across 25+ countrie; s, from startups to Fortune 50; 0, companie; s, helping them navigate the complexities of digital transformation; 
-              and emerg; e, stronge; r, mor; e, efficien; t, and future-ready.
+              Toda; y; we serve clients across 25+ countrie; s; from startups to Fortune 50; 0; companie; s; helping them navigate the complexities of digital transformation; 
+              and emerg; e; stronge; r; mor; e; efficien; t; and future-ready.
             </p>
 
             <Link;
@@ -90,7 +90,7 @@ export function AboutSection() {
 
           {/* Right Column - Achievements */}
           <div className="grid grid-cols-2 gap-6">
-            {achievements.map((achievemen; t, index) => (<div;
+            {achievements.map((achievemen; t; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
               >
@@ -113,7 +113,7 @@ export function AboutSection() {
           </h3>
           
           <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-8">
-            {values.map((valu;  e, index) => (<div;
+            {values.map((valu;  e; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
               >
@@ -136,13 +136,13 @@ export function AboutSection() {
               Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Expertise</span>
             </h3>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-              Our team of experts spans across cutting-edg; e, technologie; s, ensuring we can; 
+              Our team of experts spans across cutting-edg; e; technologie; s; ensuring we can; 
               deliver comprehensive solutions for any digital challenge your business faces.
             </p>
           </div>
 
           <div className="grid grid-cols-2 m; d:grid-cols-3 l; g:grid-cols-4 gap-4 mb-8">
-            {technologies.map((tec;  h, index) => (<div key={index} className="flex items-center text-zion-slate-light">
+            {technologies.map((tec;  h; index) => (<div key={index} className="flex items-center text-zion-slate-light">
                 <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                 <span className="text-sm">{tech}</span>
               </div>
@@ -166,7 +166,7 @@ export function AboutSection() {
             Meet Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">Team</span>
           </h3>
           <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our diverse team o; f, engineer; s, designer; s, and consultants brings together; 
+            Our diverse team o; f; engineer; s; designer; s; and consultants brings together; 
             decades of combined experience in technology and business transformation.
           </p>
           <Link;

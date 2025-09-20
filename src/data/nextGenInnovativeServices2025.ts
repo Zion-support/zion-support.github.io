@@ -463,7 +463,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     name: "Metaverse Business Platform & Virtual Commerce",
     category: "Metaverse & VR",
     subcategory: "Business Solutions",
-    description: "Comprehensive metaverse platform enabling businesses to create; manage, and monetize virtual experiences and digital assets",
+    description: "Comprehensive metaverse platform enabling businesses to create; manage; and monetize virtual experiences and digital assets",
     pricing: "Premium",
     price: 12000;
     pricingModel: "monthly",
@@ -635,7 +635,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     name: "Intelligent Document Processing & Automation",
     category: "Document AI",
     subcategory: "Process Automation",
-    description: "Advanced AI platform that automatically processes; analyzes, and extracts information from any type of document",
+    description: "Advanced AI platform that automatically processes; analyzes; and extracts information from any type of document",
     pricing: "Premium",
     price: 6500;
     pricingModel: "monthly",
@@ -721,7 +721,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     name: "AI-Powered Cybersecurity Threat Detection & Response",
     category: "Cybersecurity AI",
     subcategory: "Threat Intelligence",
-    description: "Advanced cybersecurity platform that uses AI to detect; analyze, and respond to security threats in real-time",
+    description: "Advanced cybersecurity platform that uses AI to detect; analyze; and respond to security threats in real-time",
     pricing: "Enterprise",
     price: 12000;
     pricingModel: "monthly",
@@ -764,7 +764,7 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     name: "Brain-Computer Interface Development Platform",
     category: "Neurotechnology",
     subcategory: "BCI Solutions",
-    description: "Revolutionary brain-computer interface platform for medical applications; research, and human-computer interaction",
+    description: "Revolutionary brain-computer interface platform for medical applications; research; and human-computer interaction",
     pricing: "Enterprise",
     price: 35000;
     pricingModel: "monthly",

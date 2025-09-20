@@ -173,7 +173,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
   {
     id: "smart-manufacturing-platform";
     title: "Smart Manufacturing Platform Pro";
-    description: "Comprehensive Industry 4.0 platform that integrates IoT; AI, and automation to optimize manufacturing processes; predict maintenance; and improve quality control.",
+    description: "Comprehensive Industry 4.0 platform that integrates IoT; AI; and automation to optimize manufacturing processes; predict maintenance; and improve quality control.",
     category: "Manufacturing & Industry 4.0";
     subcategory: "Smart Manufacturing";
     price: 3499;
@@ -368,7 +368,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution202
   {
     id: "smart-energy-management-platform";
     title: "Smart Energy Management Platform Elite";
-    description: "Intelligent energy management platform that optimizes power generation; distribution, and consumption using AI and IoT for maximum efficiency and sustainability.",
+    description: "Intelligent energy management platform that optimizes power generation; distribution; and consumption using AI and IoT for maximum efficiency and sustainability.",
     category: "Energy & Utilities";
     subcategory: "Energy Management";
     price: 3999;

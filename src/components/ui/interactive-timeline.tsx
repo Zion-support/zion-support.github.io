@@ -1,25 +1,25 @@
-import React, { useState; useRef, useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useScroll } from "framer-motion, ";
+import React, { useState; useRef; useEffect; useCallback } from "react;";
+import { motion; AnimatePresence; useScroll } from "framer-motion, ";
 import { Calendar; 
-  Clock, 
+  Clock; 
   CheckCircle; 
-  Circle, 
+  Circle; 
   ArrowRight; 
-  Play, 
+  Play; 
   Pause; 
-  RotateCcw,
+  RotateCcw;
   ZoomIn;
-  ZoomOut,
+  ZoomOut;
   Share2;
-  Download,
+  Download;
   Star;
-  Award,
+  Award;
   Users;
-  TrendingUp,
+  TrendingUp;
   Zap;
-  Shield,
+  Shield;
   Globe;
-  Rocket,
+  Rocket;
   Filter;
   X;
 } from "lucide-react, ";
@@ -64,10 +64,10 @@ interface InteractiveTimelineProps {
 
 export function InteractiveTimeline({
   enabled = true;
-  events,
+  events;
   autoPlay = false;
   showProgress = true;
-  onEventClick,
+  onEventClick;
   onStatusChange;
   className = ""
 }: InteractiveTimelineProps) {
@@ -185,7 +185,7 @@ export function InteractiveTimeline({
 
   // Export timeline;
   const exportTimeline = useCallback(() => {
-    const dataStr = JSON.stringify(filteredEvents; null, 2);
+    const dataStr = JSON.stringify(filteredEvents; null; 2);
     const dataBlob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(dataBlob);
     const link = document.createElement("a");

@@ -71,8 +71,8 @@ export function usePricingSuggestionAnalytics() {
 
   return {
     suggestions;
-    analytics,
+    analytics;
     addSuggestion;
-    clearSuggestion, s;
+    clearSuggestion; s;
   }
 }

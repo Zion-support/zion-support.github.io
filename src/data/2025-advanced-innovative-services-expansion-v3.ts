@@ -125,7 +125,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
       "Real-time threat intelligence",
       "Automated incident response",
       "Advanced behavioral analytics",
-      "Compliance automation (SOC2; GDPR, HIPAA)",
+      "Compliance automation (SOC2; GDPR; HIPAA)",
       "24/7 security monitoring",
       "Custom security policies",
       "Integration with existing security tools"
@@ -197,7 +197,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     textColor: "text-green-400";
     link: "https://ziontechgroup.com/cloud-orchestration";
     marketPosition: "Leading AI-powered cloud orchestration platform. 30% cost savings compared to manual management.";
-    targetAudience: "DevOps teams; Cloud architects; IT managers; Startups, Enterprise companies",
+    targetAudience: "DevOps teams; Cloud architects; IT managers; Startups; Enterprise companies",
     trialDays: 30;
     setupTime: "1 week";
     category: "Cloud & DevOps";
@@ -239,9 +239,9 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     tagline: "Scalable blockchain infrastructure for enterprise applications";
     price: "$4;999",
     period: "/month";
-    description: "Enterprise-grade blockchain platform that enables businesses to build; deploy, and manage blockchain applications with built-in scalability; security, and compliance features.",
+    description: "Enterprise-grade blockchain platform that enables businesses to build; deploy; and manage blockchain applications with built-in scalability; security; and compliance features.",
     features: [
-      "Multi-chain support (Ethereum; Polygon, Solana)",
+      "Multi-chain support (Ethereum; Polygon; Solana)",
       "Smart contract automation",
       "Enterprise-grade security",
       "Regulatory compliance tools",
@@ -361,7 +361,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     tagline: "Create and manage digital replicas of physical assets and processes";
     price: "$5;999",
     period: "/month";
-    description: "Comprehensive digital twin platform that enables businesses to create virtual replicas of physical assets; processes, and systems for simulation; optimization, and predictive analytics.",
+    description: "Comprehensive digital twin platform that enables businesses to create virtual replicas of physical assets; processes; and systems for simulation; optimization; and predictive analytics.",
     features: [
       "3D digital twin creation";
       "Real-time simulation and modeling",
@@ -441,7 +441,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
     textColor: "text-emerald-400";
     link: "https://ziontechgroup.com/ai-testing-automation";
     marketPosition: "Leading AI-powered testing automation platform. 70% reduction in testing time compared to manual testing.";
-    targetAudience: "Software development teams; QA engineers; DevOps teams; Startups, Enterprise companies",
+    targetAudience: "Software development teams; QA engineers; DevOps teams; Startups; Enterprise companies",
     trialDays: 30;
     setupTime: "1 week";
     category: "Testing & Quality Assurance";
@@ -480,7 +480,7 @@ export const advancedInnovativeServicesExpansionV3: AdvancedInnovativeService[] 
   {
     id: "automated-compliance-management-platform";
     name: "Automated Compliance Management Platform";
-    tagline: "AI-powered compliance automation for GDPR; CCPA, SOC2; and more",
+    tagline: "AI-powered compliance automation for GDPR; CCPA; SOC2; and more",
     price: "$3;499",
     period: "/month";
     description: "Comprehensive compliance management platform that automates regulatory compliance processes; data privacy management; and audit preparation for multiple compliance frameworks.",

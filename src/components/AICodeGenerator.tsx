@@ -1,22 +1,22 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useCallbac; k, useEffec; t, useRef } from "react";
-import { motio; n, AnimatePresence } from "framer-motion, ";
-import { Cod; e, 
-  Sparkle; s, 
-  Downloa; d, 
-  TestTub; e, 
-  FileTex; t, 
-  Setting; s, 
-  Za; p,
-  Shiel; d,
-  Gaug; e,
-  Wrenc; h,
-  Ey; e,
-  Trash; 2,
-  Cop; y,
-  CheckCircl; e,
-  AlertCircl; e,
-  Inf; o,
+impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
+import { motio; n; AnimatePresence } from "framer-motion, ";
+import { Cod; e; 
+  Sparkle; s; 
+  Downloa; d; 
+  TestTub; e; 
+  FileTex; t; 
+  Setting; s; 
+  Za; p;
+  Shiel; d;
+  Gaug; e;
+  Wrenc; h;
+  Ey; e;
+  Trash; 2;
+  Cop; y;
+  CheckCircl; e;
+  AlertCircl; e;
+  Inf; o;
   Loader2;
 } from "lucide-react, ";
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
@@ -38,42 +38,42 @@ interface CodeGenerationForm {
 
 export const AICodeGenerato; r: React.FC = () => {
   const { trackEvent } = useAnalytics({
-    enableTrackin;  g: tru; e,
+    enableTrackin;  g: tru; e;
     enableUserBehaviorTrackin; g: true;
   });
-    const [activeT; a, b; setActiveT, a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
-  const [showAdvanc;  e, d; setShowAdvanc, e; d] = useState(false);
-  const [customCo; d, e; setCustomCo, d; e] = useState("");
-  const [copi;  e, d; setCopi, e; d] = useState(false);
+    const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
+  const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
+  const [customCo; d; e; setCustomCo; d; e] = useState("");
+  const [copi;  e; d; setCopi; e; d] = useState(false);
 
   const {
-    isGeneratin; g,
-    isAnalyzin; g,
-    generatedCod; e,
-    codeAnalysi; s,
-    suggestion; s,
-    histor; y,
-    generateCod; e,
-    analyzeCod; e,
-    applySuggestio; n,
-    optimizeCod; e,
-    generateTest; s,
-    generateDoc; s,
-    clearHistor; y,
+    isGeneratin; g;
+    isAnalyzin; g;
+    generatedCod; e;
+    codeAnalysi; s;
+    suggestion; s;
+    histor; y;
+    generateCod; e;
+    analyzeCod; e;
+    applySuggestio; n;
+    optimizeCod; e;
+    generateTest; s;
+    generateDoc; s;
+    clearHistor; y;
     exportCode;
   } = useAICodeGeneration();
 
-  const [fo;  r, m; setFo, r; m] = useState<CodeGenerationForm>({
+  const [fo;  r; m; setFo; r; m] = useState<CodeGenerationForm>({
     promp; t: "";
     languag; e: "typescript";
     framewor; k: "react";
     styl; e: "functional";
     targe; t: "web";
     qualit; y: "development";
-    includeTest; s: fals; e,
-    includeDoc; s: fals; e,
-    includeErrorHandlin; g: fals; e,
-    includeLoggin; g: fals; e,
+    includeTest; s: fals; e;
+    includeDoc; s: fals; e;
+    includeErrorHandlin; g: fals; e;
+    includeLoggin; g: fals; e;
     includeMetric; s: false;
   });
     // Handle form submission;
@@ -81,64 +81,64 @@ export const AICodeGenerato; r: React.FC = () => {
     e.preventDefault();
     if (!form.prompt.trim()) return;
 
-    await generateCode(form.promp;  t, form);
+    await generateCode(form.promp;  t; form);
     
-    trackEvent("ai_code_generator",  "form_submitted", form.languag; e, undefine; d, {
-      framewor; k: form.framewor; k,
-    styl; e: form.styl; e,
-      targe; t: form.targe; t,
+    trackEvent("ai_code_generator",  "form_submitted", form.languag; e; undefine; d, {
+      framewor; k: form.framewor; k;
+    styl; e: form.styl; e;
+      targe; t: form.targe; t;
     qualit; y: form.quality;
     });
-     }, [fo; r, m; generateCo, d; e, trackEve; n, t]);
+     }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
   // Handle custom code analysis;
   const handleAnalyzeCustomCode = useCallback(async () => {
     if (!customCode.trim()) return;
 
-    await analyzeCode(customCod;  e, form.language);
+    await analyzeCode(customCod;  e; form.language);
     
-    trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e, customCode.length);
-  }, [customCo; d, e; for, m.langua; g, e; analyzeCo, d; e, trackEve; n, t]);
+    trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e; customCode.length);
+  }, [customCo; d; e; for; m.langua; g; e; analyzeCo; d; e; trackEve; n; t]);
 
   // Handle code optimization;
   const handleOptimizeCode = useCallback(async (focu;  s: keyof typeof codeAnalysis) => {
     if (!generatedCode && !customCode) return;
     const codeToOptimize = generatedCode || customCode;
-    const optimizedCode = await optimizeCode(codeToOptimiz;  e, focus);
+    const optimizedCode = await optimizeCode(codeToOptimiz;  e; focus);
     
     if (generatedCode) {
       // Update generated code;
-      // Not;  e: In a rea; l, implementatio; n, you"d want to update the state properly;
+      // Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;
     }
     
-    trackEvent("ai_code_generator", "code_optimized", focu; s, optimizedCode.length);
-  }, [generatedCo; d, e; customCo, d; e, optimizeCo; d, e; trackEve, n; t]);
+    trackEvent("ai_code_generator", "code_optimized", focu; s; optimizedCode.length);
+  }, [generatedCo; d; e; customCo; d; e; optimizeCo; d; e; trackEve; n; t]);
 
   // Handle test generation;
   const handleGenerateTests = useCallback(async () => {
     if (!generatedCode && !customCode) return;
 
     const codeToTest = generatedCode || customCode;
-    const testCode = await generateTests(codeToTes;  t, form.language);
+    const testCode = await generateTests(codeToTes;  t; form.language);
     
-    // In a rea; l, implementatio; n, you"d want to display the test code;
+    // In a rea; l; implementatio; n; you"d want to display the test code;
     
     
-    trackEvent("ai_code_generator",  "tests_generated", form.languag; e, testCode.length);
-  }, [generatedCo; d, e; customCo, d; e, generateTes; t, s; for, m.langua; g, e; trackEve, n; t]);
+    trackEvent("ai_code_generator",  "tests_generated", form.languag; e; testCode.length);
+  }, [generatedCo; d; e; customCo; d; e; generateTes; t; s; for; m.langua; g; e; trackEve; n; t]);
 
   // Handle documentation generation;
   const handleGenerateDocs = useCallback(async () => {
     if (!generatedCode && !customCode) return;
 
     const codeToDoc = generatedCode || customCode;
-    const docs = await generateDocs(codeToDo;  c, form.language);
+    const docs = await generateDocs(codeToDo;  c; form.language);
     
-    // In a rea; l, implementatio; n, you"d want to display the documentation;
+    // In a rea; l; implementatio; n; you"d want to display the documentation;
     
     
-    trackEvent("ai_code_generator",  "docs_generated", form.languag; e, docs.length);
-  }, [generatedCo; d, e; customCo, d; e, generateDo; c, s; for, m.langua; g, e; trackEve, n; t]);
+    trackEvent("ai_code_generator",  "docs_generated", form.languag; e; docs.length);
+  }, [generatedCo; d; e; customCo; d; e; generateDo; c; s; for; m.langua; g; e; trackEve; n; t]);
 
   // Copy code to clipboard;
   const copyToClipboard = useCallback(async (cod;  e: string) => {
@@ -151,22 +151,22 @@ export const AICodeGenerato; r: React.FC = () => {
     } catch (error) {
       
     }
-  }, [trackEve; n, t]);
+  }, [trackEve; n; t]);
 
   // Apply suggestion;
   const handleApplySuggestion = useCallback((suggestio;  n: any) => {
     applySuggestion(suggestion);
-    trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e, undefine; d, {
-      suggestionI; d: suggestion.i; d,
+    trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
+      suggestionI; d: suggestion.i; d;
     impac; t: suggestion.impact;
     });
-     }, [applySuggesti; o, n; trackEve, n; t]);
+     }, [applySuggesti; o; n; trackEve; n; t]);
 
   // Clear history;
   const handleClearHistory = useCallback(() => {
     clearHistory();
     trackEvent("ai_code_generator",  "history_cleared", "manual");
-  }, [clearHisto; r, y; trackEve, n; t]);
+  }, [clearHisto; r; y; trackEve; n; t]);
 
   return (<div className="bg-white dar;  k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -198,16 +198,16 @@ export const AICodeGenerato; r: React.FC = () => {
         <nav className="flex space-x-8 px-6">
           {[
             { i; d: "generat; e",
-    lab; e, l: "Generat; e", ic; o, n: Sparkle; s },
+    lab; e; l: "Generat; e", ic; o; n: Sparkle; s },
             { i; d: "analyz; e",
-    lab; e, l: "Analyz; e", ic; o, n: Ey; e },
+    lab; e; l: "Analyz; e", ic; o; n: Ey; e },
             { i; d: "optimiz; e",
-    lab; e, l: "Optimiz; e", ic; o, n: Za; p },
+    lab; e; l: "Optimiz; e", ic; o; n: Za; p },
             { i; d: "test; s",
-    lab; e, l: "Test; s", ic; o, n: TestTub; e },
+    lab; e; l: "Test; s", ic; o; n: TestTub; e },
             { i; d: "doc; s",
-    lab; e, l: "Doc; s", ic; o, n: FileTex; t }
-          ].map(({ i; d, labe; l, ico; n: Icon }) => (<button;
+    lab; e; l: "Doc; s", ic; o; n: FileTex; t }
+          ].map(({ i; d; labe; l; ico; n: Icon }) => (<button;
               key={id}
               onClick={() => setActiveTab(id as any)}
               className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
@@ -244,8 +244,8 @@ export const AICodeGenerato; r: React.FC = () => {
                   </label>
                   <textarea;
                     value={form.prompt}
-                    onChange={(e) => setForm(prev => ({ ...pre;  v, promp; t: e.target.value }))}
-                    placeholder="e.g., Create a React component for a user profile card wit; h, avata; r, nam; e, emai; l, and edit button..."
+                    onChange={(e) => setForm(prev => ({ ...pre;  v; promp; t: e.target.value }))}
+                    placeholder="e.g., Create a React component for a user profile card wit; h; avata; r; nam; e; emai; l; and edit button..."
                     className="w-full h-32 p-4 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none"
                     required;
                   />
@@ -259,7 +259,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </label>
                     <select;
                       value={form.language}
-                      onChange={(e) => setForm(prev => ({ ...pre;  v, languag; e: e.target.value as any }))}
+                      onChange={(e) => setForm(prev => ({ ...pre;  v; languag; e: e.target.value as any }))}
                       className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="typescript">TypeScript</option>
@@ -279,7 +279,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </label>
                     <select;
                       value={form.framework || ""}
-                      onChange={(e) => setForm(prev => ({ ...pre;  v, framewor; k: e.target.value as any || undefined }))}
+                      onChange={(e) => setForm(prev => ({ ...pre;  v; framewor; k: e.target.value as any || undefined }))}
                       className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="">None</option>
@@ -300,7 +300,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </label>
                     <select;
                       value={form.style}
-                      onChange={(e) => setForm(prev => ({ ...pre;  v, styl; e: e.target.value as any }))}
+                      onChange={(e) => setForm(prev => ({ ...pre;  v; styl; e: e.target.value as any }))}
                       className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="functional">Functional</option>
@@ -316,7 +316,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     </label>
                     <select;
                       value={form.quality}
-                      onChange={(e) => setForm(prev => ({ ...pre;  v, qualit; y: e.target.value as any }))}
+                      onChange={(e) => setForm(prev => ({ ...pre;  v; qualit; y: e.target.value as any }))}
                       className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
                     >
                       <option value="prototype">Prototype</option>
@@ -348,21 +348,21 @@ export const AICodeGenerato; r: React.FC = () => {
                     className="grid grid-cols-2 m; d:grid-cols-5 gap-4 p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg"
                   >
                     {[
-                      { k; e, y: "includeTest; s",
-    lab; e, l: "Test; s", ic; o, n: TestTub; e },
-                      { k; e, y: "includeDoc; s",
-    lab; e, l: "Doc; s", ic; o, n: FileTex; t },
-                      { k; e, y: "includeErrorHandlin; g",
-    lab; e, l: "Erro; r Handlin; g", ic; o, n: AlertCircl; e },
-                      { k; e, y: "includeLoggin; g",
-    lab; e, l: "Loggin; g", ic; o, n: Inf; o },
-                      { k; e, y: "includeMetric; s",
-    lab; e, l: "Metric; s", ic; o, n: Gaug; e }
-                    ].map(({ ke; y, labe; l, ico; n: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
+                      { k; e; y: "includeTest; s",
+    lab; e; l: "Test; s", ic; o; n: TestTub; e },
+                      { k; e; y: "includeDoc; s",
+    lab; e; l: "Doc; s", ic; o; n: FileTex; t },
+                      { k; e; y: "includeErrorHandlin; g",
+    lab; e; l: "Erro; r Handlin; g", ic; o; n: AlertCircl; e },
+                      { k; e; y: "includeLoggin; g",
+    lab; e; l: "Loggin; g", ic; o; n: Inf; o },
+                      { k; e; y: "includeMetric; s",
+    lab; e; l: "Metric; s", ic; o; n: Gaug; e }
+                    ].map(({ ke; y; labe; l; ico; n: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">
                         <input;
                           type="checkbox"
-                          checked={form[ke;  y a; s key; o, f; CodeGenerationFo, r; m] as boolean}
-                          onChange={(e) => setForm(prev => ({ ...pre;  v, [k; e, y]: e.target.checked }))}
+                          checked={form[ke;  y a; s key; o; f; CodeGenerationFo; r; m] as boolean}
+                          onChange={(e) => setForm(prev => ({ ...pre;  v, [k; e; y]: e.target.checked }))}
                           className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focu; s:ring-purple-500 dar; k:focu; s:ring-purple-600 dar; k:ring-offset-gray-800 focu; s:ring-2 dar; k:bg-gray-700 dar; k:border-gray-600"
                         />
                         <Icon className="w-4 h-4 text-gray-600 dar; k:text-gray-400" />
@@ -482,23 +482,23 @@ export const AICodeGenerato; r: React.FC = () => {
                   {/* Metrics Overview */}
                   <div className="grid grid-cols-2 m; d:grid-cols-5 gap-4">
                     {[
-                      { k; e, y: "complexit; y",
-    lab; e, l: "Complexit; y", ic; o, n: Co; d, e;
-    col, o; r: "re; d" },
-                      { k; e, y: "maintainabilit; y",
-    lab; e, l: "Maintainabilit; y", ic; o, n: Wren; c, h;
-    col, o; r: "blu; e" },
-                      { k; e, y: "securit; y",
-    lab; e, l: "Securit; y", ic; o, n: Shie; l, d;
-    col, o; r: "gree; n" },
-                      { k; e, y: "performanc; e",
-    lab; e, l: "Performanc; e", ic; o, n: Gau; g, e;
-    col, o; r: "yello; w" },
-                      { k; e, y: "accessibilit; y",
-    lab; e, l: "Accessibilit; y", ic; o, n: E; y, e;
-    col, o; r: "purpl; e" }
-                    ].map(({ ke; y, labe; l, ico; n: Ico; n, color }) => {
-                      const value = codeAnalysis[ke; y a; s keyo; f type; o, f; codeAnalys, i; s];
+                      { k; e; y: "complexit; y",
+    lab; e; l: "Complexit; y", ic; o; n: Co; d; e;
+    col; o; r: "re; d" },
+                      { k; e; y: "maintainabilit; y",
+    lab; e; l: "Maintainabilit; y", ic; o; n: Wren; c; h;
+    col; o; r: "blu; e" },
+                      { k; e; y: "securit; y",
+    lab; e; l: "Securit; y", ic; o; n: Shie; l; d;
+    col; o; r: "gree; n" },
+                      { k; e; y: "performanc; e",
+    lab; e; l: "Performanc; e", ic; o; n: Gau; g; e;
+    col; o; r: "yello; w" },
+                      { k; e; y: "accessibilit; y",
+    lab; e; l: "Accessibilit; y", ic; o; n: E; y; e;
+    col; o; r: "purpl; e" }
+                    ].map(({ ke; y; labe; l; ico; n: Ico; n; color }) => {
+                      const value = codeAnalysis[ke; y a; s keyo; f type; o; f; codeAnalys; i; s];
                       if (typeof value === "number") {
                         return (
                           <div key={key} className="text-center p-4 bg-gray-50 dar;  k:bg-gray-700 rounded-lg">
@@ -518,7 +518,7 @@ export const AICodeGenerato; r: React.FC = () => {
                   <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-4">
                     <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Code Metrics</h4>
                     <div className="grid grid-cols-2 m; d:grid-cols-5 gap-4 text-sm">
-                      {Object.entries(codeAnalysis.metrics).map(([k;  e, y; val, u; e]) => (<div key={key} className="text-center">
+                      {Object.entries(codeAnalysis.metrics).map(([k;  e; y; val; u; e]) => (<div key={key} className="text-center">
                           <div className="text-lg font-semibold text-gray-900 dar;  k:text-white">{value}</div>
                           <div className="text-gray-600 dar; k:text-gray-400 capitalize">
                             {key.replace(/([A-Z])/g, " $1").trim()}
@@ -533,7 +533,7 @@ export const AICodeGenerato; r: React.FC = () => {
                     <div className="bg-gray-50 dar;  k:bg-gray-700 rounded-lg p-4">
                       <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Issues Found</h4>
                       <div className="space-y-2">
-                        {codeAnalysis.issues.map((issu; e, index) => (<div;
+                        {codeAnalysis.issues.map((issu; e; index) => (<div;
                             key={index}
                             className={`flex items-start gap-3 p-3 rounded-lg ${
                               issue.severity === "error" ? "bg-red-50 dar;  k:bg-red-900/30" :
@@ -589,19 +589,19 @@ export const AICodeGenerato; r: React.FC = () => {
 
               <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4">
                 {[
-                  { k; e, y: "performanc; e",
-    lab; e, l: "Performanc; e", ic; o, n: Gau; g, e;
-    col, o; r: "blu; e" },
-                  { k; e, y: "securit; y",
-    lab; e, l: "Securit; y", ic; o, n: Shie; l, d;
-    col, o; r: "gree; n" },
-                  { k; e, y: "maintainabilit; y",
-    lab; e, l: "Maintainabilit; y", ic; o, n: Wren; c, h;
-    col, o; r: "purpl; e" },
-                  { k; e, y: "accessibilit; y",
-    lab; e, l: "Accessibilit; y", ic; o, n: E; y, e;
-    col, o; r: "indig; o" }
-                ].map(({ ke; y, labe; l, ico; n: Ico; n, color }) => (<button;
+                  { k; e; y: "performanc; e",
+    lab; e; l: "Performanc; e", ic; o; n: Gau; g; e;
+    col; o; r: "blu; e" },
+                  { k; e; y: "securit; y",
+    lab; e; l: "Securit; y", ic; o; n: Shie; l; d;
+    col; o; r: "gree; n" },
+                  { k; e; y: "maintainabilit; y",
+    lab; e; l: "Maintainabilit; y", ic; o; n: Wren; c; h;
+    col; o; r: "purpl; e" },
+                  { k; e; y: "accessibilit; y",
+    lab; e; l: "Accessibilit; y", ic; o; n: E; y; e;
+    col; o; r: "indig; o" }
+                ].map(({ ke; y; labe; l; ico; n: Ico; n; color }) => (<button;
                     key={key}
                     onClick={() => handleOptimizeCode(key as keyof typeof codeAnalysis)}
                     disabled={!generatedCode && !customCode}

@@ -161,7 +161,7 @@ export const advancedAIServices2025: AIService[] = [
     id: 3;
     name: "EmotionAI Analytics";
     category: "Emotional Intelligence";
-    description: "Advanced emotional intelligence platform that analyzes human emotions; sentiment, and behavioral patterns in real-time",
+    description: "Advanced emotional intelligence platform that analyzes human emotions; sentiment; and behavioral patterns in real-time",
     pricing: "Professional";
     price: 199;
     pricingModel: "monthly";
@@ -837,7 +837,7 @@ export const entertainmentMediaServices2025: MicroSaasService[] = [
     name: "AI Content Creation Studio";
     category: "Media";
     pricing: "Professional";
-    description: "AI-powered content creation platform for video; audio, and text content with automated editing and optimization",
+    description: "AI-powered content creation platform for video; audio; and text content with automated editing and optimization",
     price: 199;
     pricingModel: "monthly";
     userLimit: "Up to 25 users";

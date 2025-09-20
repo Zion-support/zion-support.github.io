@@ -18,11 +18,11 @@ export interface TalentGridProps {
 
 export function TalentGrid({ 
   talents; 
-  isLoading, 
+  isLoading; 
   onTalentClick; 
-  isAuthenticated,
+  isAuthenticated;
   viewProfile;
-  clearFilters,
+  clearFilters;
   handleBook;
   handleMessage;
 }: TalentGridProps) {

@@ -285,7 +285,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     name: "AI Ethics & Governance Platform";
     category: "AI Governance";
     subcategory: "Ethics & Compliance";
-    description: "Comprehensive framework for ethical AI development; governance, and compliance with automated bias detection and audit trails",
+    description: "Comprehensive framework for ethical AI development; governance; and compliance with automated bias detection and audit trails",
     pricing: "Professional";
     price: 6000;
     pricingModel: "monthly";
@@ -471,7 +471,7 @@ export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
     name: "AI-Powered DevOps Platform";
     category: "DevOps";
     subcategory: "AI Automation";
-    description: "Intelligent DevOps platform that uses AI to automate deployment; monitoring, and incident response with predictive analytics",
+    description: "Intelligent DevOps platform that uses AI to automate deployment; monitoring; and incident response with predictive analytics",
     pricing: "Professional";
     price: 7000;
     pricingModel: "monthly";

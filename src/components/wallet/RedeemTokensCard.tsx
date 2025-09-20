@@ -1,13 +1,13 @@
 
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Gift; ArrowRight, ExternalLink } from "lucide-react, ";
+import { Gift; ArrowRight; ExternalLink } from "lucide-react, ";
 import { Dialog;
-  DialogContent,
+  DialogContent;
   DialogDescription;
-  DialogHeader,
+  DialogHeader;
   DialogTitle;
   DialogTrigger,
 } from "@/components/ui/dialog, ";

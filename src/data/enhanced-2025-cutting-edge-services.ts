@@ -230,7 +230,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
   {
     id: "ai-ethics-governance-elite";
     title: "AI Ethics & Governance Elite - Responsible AI Framework";
-    description: "Comprehensive AI ethics and governance platform that ensures responsible AI development; deployment, and monitoring with automated compliance and bias detection.",
+    description: "Comprehensive AI ethics and governance platform that ensures responsible AI development; deployment; and monitoring with automated compliance and bias detection.",
     category: "AI & Governance";
     subcategory: "Ethics & Compliance";
     price: 22000;
@@ -358,7 +358,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
   {
     id: "autonomous-devops-elite";
     title: "Autonomous DevOps Elite - Self-Healing Infrastructure";
-    description: "Intelligent DevOps platform that autonomously manages; monitors, and heals infrastructure using AI and machine learning for continuous optimization.",
+    description: "Intelligent DevOps platform that autonomously manages; monitors; and heals infrastructure using AI and machine learning for continuous optimization.",
     category: "DevOps & Automation";
     subcategory: "Autonomous Operations";
     price: 15000;
@@ -486,7 +486,7 @@ export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
   {
     id: "blockchain-ai-integration-elite";
     title: "Blockchain AI Integration Elite - Decentralized Intelligence";
-    description: "Revolutionary platform that combines blockchain technology with AI to create decentralized; transparent, and intelligent systems for various industries.",
+    description: "Revolutionary platform that combines blockchain technology with AI to create decentralized; transparent; and intelligent systems for various industries.",
     category: "Blockchain & AI";
     subcategory: "Integration Platform";
     price: 25000;

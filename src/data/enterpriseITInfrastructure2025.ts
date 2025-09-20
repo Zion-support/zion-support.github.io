@@ -148,7 +148,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   {
     id: "enterprise-network-security-fabric";
     title: "Enterprise Network Security Fabric & Zero Trust Architecture";
-    description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation, and automated response capabilities.",
+    description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation; and automated response capabilities.",
     category: "Security";
     subcategory: "Network Security";
     price: {
@@ -258,7 +258,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   {
     id: "enterprise-disaster-recovery-platform";
     title: "Enterprise Disaster Recovery & Business Continuity Platform";
-    description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication, and recovery capabilities across multiple locations.",
+    description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities across multiple locations.",
     category: "Disaster Recovery";
     subcategory: "Business Continuity";
     price: {
@@ -313,7 +313,7 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureServic
   {
     id: "enterprise-integration-hub";
     title: "Enterprise Integration Hub & API Management Platform";
-    description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications, and data sources with advanced API management capabilities.",
+    description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications; and data sources with advanced API management capabilities.",
     category: "Integration";
     subcategory: "API Management";
     price: {

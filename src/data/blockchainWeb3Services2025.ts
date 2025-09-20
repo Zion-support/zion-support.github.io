@@ -103,7 +103,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     id: 2;
     name: "NFT Studio Pro";
     category: "NFT & Digital Assets";
-    description: "Complete NFT creation; management, and marketplace platform with AI-powered generation and blockchain verification",
+    description: "Complete NFT creation; management; and marketplace platform with AI-powered generation and blockchain verification",
     pricing: "Professional";
     price: 800;
     pricingModel: "monthly";
@@ -159,7 +159,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     id: 3;
     name: "Smart Contract Factory";
     category: "Smart Contract Development";
-    description: "Advanced smart contract development platform with automated testing; deployment, and monitoring across multiple blockchains",
+    description: "Advanced smart contract development platform with automated testing; deployment; and monitoring across multiple blockchains",
     pricing: "Enterprise";
     price: 1500;
     pricingModel: "monthly";

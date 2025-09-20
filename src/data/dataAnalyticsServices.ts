@@ -27,7 +27,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
   {
     id: "real-time-data-streaming";
     title: "Real-Time Data Streaming & Analytics Platform";
-    description: "High-performance real-time data streaming platform that processes; analyzes, and visualizes data streams for instant business insights and decision-making.",
+    description: "High-performance real-time data streaming platform that processes; analyzes; and visualizes data streams for instant business insights and decision-making.",
     category: "Data Analytics";
     subcategory: "Real-Time Analytics";
     price: 3200;
@@ -125,7 +125,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
   {
     id: "data-governance-platform";
     title: "Enterprise Data Governance & Quality Management Platform";
-    description: "Comprehensive data governance platform that ensures data quality; compliance, and security while providing data lineage and cataloging capabilities.",
+    description: "Comprehensive data governance platform that ensures data quality; compliance; and security while providing data lineage and cataloging capabilities.",
     category: "Data Analytics";
     subcategory: "Data Governance";
     price: 2500;
@@ -174,7 +174,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
   {
     id: "customer-analytics-platform";
     title: "Customer Analytics & 360-Degree View Platform";
-    description: "Comprehensive customer analytics platform that provides a complete view of customer behavior; preferences, and lifetime value for personalized marketing and service.",
+    description: "Comprehensive customer analytics platform that provides a complete view of customer behavior; preferences; and lifetime value for personalized marketing and service.",
     category: "Data Analytics";
     subcategory: "Customer Analytics";
     price: 2100;
@@ -223,7 +223,7 @@ export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
   {
     id: "business-intelligence-dashboard";
     title: "Interactive Business Intelligence & Dashboard Platform";
-    description: "Powerful business intelligence platform that transforms raw data into interactive dashboards; reports, and visualizations for data-driven decision making.",
+    description: "Powerful business intelligence platform that transforms raw data into interactive dashboards; reports; and visualizations for data-driven decision making.",
     category: "Data Analytics";
     subcategory: "Business Intelligence";
     price: 1900;

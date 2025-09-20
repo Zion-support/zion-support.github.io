@@ -51,7 +51,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       currency: "$"
     };
     features: [
-      "Multi-format content generation (blogs; social media; emails, ads)",
+      "Multi-format content generation (blogs; social media; emails; ads)",
       "Advanced SEO optimization with real-time keyword analysis",
       "Brand voice customization and consistency",
       "Multi-language support (50+ languages)",
@@ -104,7 +104,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
   {
     id: "blockchain-supply-chain-management-2025";
     title: "Zion Blockchain Supply Chain Management 2025";
-    description: "Comprehensive blockchain-based supply chain management platform that provides end-to-end visibility; traceability, and compliance monitoring for global supply chains with smart contract automation.",
+    description: "Comprehensive blockchain-based supply chain management platform that provides end-to-end visibility; traceability; and compliance monitoring for global supply chains with smart contract automation.",
     category: "Blockchain";
     subcategory: "Supply Chain & Logistics";
     price: {
@@ -166,7 +166,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
   {
     id: "ai-cybersecurity-threat-detection-2025";
     title: "Zion AI Cybersecurity Threat Detection 2025";
-    description: "Advanced AI-powered cybersecurity platform that detects; analyzes, and responds to cyber threats in real-time using machine learning algorithms and behavioral analytics.",
+    description: "Advanced AI-powered cybersecurity platform that detects; analyzes; and responds to cyber threats in real-time using machine learning algorithms and behavioral analytics.",
     category: "Cybersecurity";
     subcategory: "Threat Detection & Response";
     price: {
@@ -427,7 +427,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       "Real-time trading signals and alerts",
       "Risk management and portfolio optimization",
       "Automated trading strategies and execution",
-      "Multi-asset class support (stocks; bonds, forex; crypto)",
+      "Multi-asset class support (stocks; bonds; forex; crypto)",
       "Advanced charting and technical analysis",
       "Portfolio performance tracking and analytics",
       "Compliance monitoring and reporting",
@@ -550,7 +550,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = 
       "AI-powered personalized learning paths";
       "Intelligent tutoring and adaptive content",
       "Real-time progress tracking and analytics",
-      "Multi-modal learning content (video; text, interactive)",
+      "Multi-modal learning content (video; text; interactive)",
       "Collaborative learning and peer interaction",
       "Assessment and evaluation automation",
       "Parent and teacher communication tools",

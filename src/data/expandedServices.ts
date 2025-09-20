@@ -6,7 +6,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "ai-chatbot-enterprise";
     title: "Enterprise AI Chatbot Development";
-    description: "Custom AI-powered chatbots for customer service; sales, and support with multi-language support; sentiment analysis; and seamless CRM integration. Includes training data preparation and ongoing optimization.",
+    description: "Custom AI-powered chatbots for customer service; sales; and support with multi-language support; sentiment analysis; and seamless CRM integration. Includes training data preparation and ongoing optimization.",
     category: "AI Development";
     subcategory: "Chatbots";
     price: 8999;
@@ -52,7 +52,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "ai-document-processing";
     title: "Intelligent Document Processing & OCR";
-    description: "AI-powered document processing system that automatically extracts; categorizes, and processes information from invoices; contracts, forms; and handwritten documents with 99.2% accuracy.",
+    description: "AI-powered document processing system that automatically extracts; categorizes; and processes information from invoices; contracts; forms; and handwritten documents with 99.2% accuracy.",
     category: "AI Development";
     subcategory: "Document Processing";
     price: 7499;
@@ -75,7 +75,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "cloud-migration-enterprise";
     title: "Enterprise Cloud Migration & Optimization";
-    description: "End-to-end cloud migration services including AWS; Azure, and Google Cloud. Includes cost optimization; security implementation; performance tuning; and 24/7 monitoring setup.",
+    description: "End-to-end cloud migration services including AWS; Azure; and Google Cloud. Includes cost optimization; security implementation; performance tuning; and 24/7 monitoring setup.",
     category: "Cloud Services";
     subcategory: "Migration";
     price: 15999;
@@ -98,7 +98,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "devops-automation-suite";
     title: "DevOps Automation & CI/CD Pipeline";
-    description: "Complete DevOps automation solution with automated testing; deployment pipelines; infrastructure as code; and monitoring. Supports Docker; Kubernetes, and major cloud platforms.",
+    description: "Complete DevOps automation solution with automated testing; deployment pipelines; infrastructure as code; and monitoring. Supports Docker; Kubernetes; and major cloud platforms.",
     category: "DevOps";
     subcategory: "Automation";
     price: 8999;
@@ -120,7 +120,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "kubernetes-management";
     title: "Kubernetes Cluster Management & Monitoring";
-    description: "Professional Kubernetes cluster setup; management, and monitoring services. Includes auto-scaling; load balancing; security hardening; and performance optimization.",
+    description: "Professional Kubernetes cluster setup; management; and monitoring services. Includes auto-scaling; load balancing; security hardening; and performance optimization.",
     category: "DevOps";
     subcategory: "Kubernetes";
     price: 6499;
@@ -256,7 +256,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "data-governance-compliance";
     title: "Data Governance & Compliance Framework";
-    description: "Implementation of data governance policies; data quality management; and compliance frameworks for GDPR; CCPA, HIPAA; and industry-specific regulations.",
+    description: "Implementation of data governance policies; data quality management; and compliance frameworks for GDPR; CCPA; HIPAA; and industry-specific regulations.",
     category: "Data Analytics";
     subcategory: "Governance";
     price: 15999;
@@ -301,7 +301,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "mobile-app-cross-platform";
     title: "Cross-Platform Mobile App Development";
-    description: "Native-quality mobile apps for iOS and Android using React Native or Flutter. Includes backend API development; testing, and app store deployment.",
+    description: "Native-quality mobile apps for iOS and Android using React Native or Flutter. Includes backend API development; testing; and app store deployment.",
     category: "Mobile Development";
     subcategory: "Cross-platform";
     price: 18999;
@@ -347,7 +347,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "smart-contract-development";
     title: "Smart Contract Development & Audit";
-    description: "Ethereum; Solana, and Polygon smart contract development with comprehensive security auditing. Includes DeFi protocols; NFT contracts; and DAO governance systems.",
+    description: "Ethereum; Solana; and Polygon smart contract development with comprehensive security auditing. Includes DeFi protocols; NFT contracts; and DAO governance systems.",
     category: "Blockchain";
     subcategory: "Smart Contracts";
     price: 15999;
@@ -369,7 +369,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "defi-protocol-development";
     title: "DeFi Protocol Development & Integration";
-    description: "Custom DeFi protocols including yield farming; liquidity pools; and lending platforms. Includes security audits; testing, and mainnet deployment.",
+    description: "Custom DeFi protocols including yield farming; liquidity pools; and lending platforms. Includes security audits; testing; and mainnet deployment.",
     category: "Blockchain";
     subcategory: "DeFi";
     price: 29999;
@@ -415,7 +415,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "hardware-prototyping";
     title: "Hardware Prototyping & PCB Design";
-    description: "Custom hardware prototyping services including PCB design; component selection; firmware development; and testing. Supports IoT; robotics, and embedded systems.",
+    description: "Custom hardware prototyping services including PCB design; component selection; firmware development; and testing. Supports IoT; robotics; and embedded systems.",
     category: "Hardware";
     subcategory: "Prototyping";
     price: 12999;
@@ -438,7 +438,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "business-process-automation";
     title: "Business Process Automation & RPA";
-    description: "End-to-end business process automation using RPA tools and custom software. Includes workflow analysis; implementation, and ongoing optimization.",
+    description: "End-to-end business process automation using RPA tools and custom software. Includes workflow analysis; implementation; and ongoing optimization.",
     category: "Business Automation";
     subcategory: "RPA";
     price: 17999;
@@ -460,7 +460,7 @@ export const EXPANDED_SERVICES: ProductListing[] = [
   {
     id: "erp-system-custom";
     title: "Custom ERP System Development";
-    description: "Tailored ERP system with modules for finance; HR, inventory; CRM, and project management. Includes mobile app; reporting, and integration capabilities.",
+    description: "Tailored ERP system with modules for finance; HR; inventory; CRM; and project management. Includes mobile app; reporting; and integration capabilities.",
     category: "Business Solutions";
     subcategory: "ERP";
     price: 39999;

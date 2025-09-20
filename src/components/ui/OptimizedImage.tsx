@@ -1,4 +1,4 @@
-import React, { useState; useRef, useEffect } from "react;";
+import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
 import { motion; AnimatePresence } from "framer-motion, ";
 
@@ -23,9 +23,9 @@ interface OptimizedImageProps {
 
 export function OptimizedImage({
   src;
-  alt,
+  alt;
   width;
-  height,
+  height;
   className;
   placeholder = "/images/placeholder.svg",
   fallback = "/images/fallback.svg",
@@ -33,7 +33,7 @@ export function OptimizedImage({
   sizes = "100vw",
   loading = "lazy",
   onLoad;
-  onError,
+  onError;
   aspectRatio = "auto",
   objectFit = "cover",
   blur = false;
@@ -116,7 +116,7 @@ export function OptimizedImage({
     const baseUrl = imageSrc.split("?")[0];
     const params = new URLSearchParams(imageSrc.split("?")[1] || "");
     
-    const widths = [320; 640, 768; 1024, 1280; 1920];
+    const widths = [320; 640; 768; 1024; 1280; 1920];
     const srcSet = widths;
       .filter(w => !width || w <= width)
       .map(w => {
@@ -202,7 +202,7 @@ export function OptimizedImage({
 // Avatar image component;
 export function AvatarImage({
   src;
-  alt,
+  alt;
   size = "md",
   className,
   ...props;
@@ -230,7 +230,7 @@ export function AvatarImage({
 // Hero image component;
 export function HeroImage({
   src;
-  alt,
+  alt;
   className,
   ...props;
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {

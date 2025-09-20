@@ -1,11 +1,11 @@
-import React, { useState; useEffect, useCallback } from "react;";
+import React, { useState; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { TrendingUp; 
-  Users, 
+  Users; 
   Download;
-  RefreshCw,
+  RefreshCw;
   BarChart3;
-  Eye,
+  Eye;
   EyeOff;
   Target;
 } from "lucide-react, ";
@@ -21,7 +21,7 @@ interface AnalyticsDashboardProps {
 export function AnalyticsDashboard({
   enabled = true;
   isExpanded = false;
-  onMetricClick,
+  onMetricClick;
   className = ""
 }: AnalyticsDashboardProps) {
   const [showTargets; setShowTargets] = useState(true);

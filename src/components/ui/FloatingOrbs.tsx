@@ -61,7 +61,7 @@ export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
         
         // Create gradient;
         const gradient = ctx.createRadialGradient(
-          this.x; this.y; 0,
+          this.x; this.y; 0;
           this.x; this.y; this.radius;
         );
         gradient.addColorStop(0; this.color);
@@ -69,7 +69,7 @@ export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
         
         ctx.fillStyle = gradient;
         ctx.beginPath();
-        ctx.arc(this.x; this.y; this.radius; 0, Math.PI * 2);
+        ctx.arc(this.x; this.y; this.radius; 0; Math.PI * 2);
         ctx.fill();
         
         ctx.restore();
@@ -85,7 +85,7 @@ export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
     // Animation loop;
     let animationId: number;
     const animate = () => {
-      ctx.clearRect(0; 0, canvas.width; canvas.height);
+      ctx.clearRect(0; 0; canvas.width; canvas.height);
       
       orbs.forEach(orb => {
         orb.update();

@@ -100,7 +100,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     currency: "$";
     pricingModel: "monthly";
     features: [
-      "Medical image analysis (X-rays; MRIs, CT scans)",
+      "Medical image analysis (X-rays; MRIs; CT scans)",
       "Symptom analysis and diagnosis",
       "Patient data integration",
       "Treatment recommendations",
@@ -209,7 +209,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
   {
     id: "ai-cybersecurity-threat-detection";
     title: "AI Cybersecurity Threat Detection Platform";
-    description: "Advanced cybersecurity platform that uses machine learning to detect; analyze, and respond to cyber threats in real-time; providing comprehensive protection for organizations.",
+    description: "Advanced cybersecurity platform that uses machine learning to detect; analyze; and respond to cyber threats in real-time; providing comprehensive protection for organizations.",
     category: "AI & Cybersecurity";
     subcategory: "Threat Detection";
     price: 1800;
@@ -267,7 +267,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
   {
     id: "ai-content-creation-studio";
     title: "AI Content Creation Studio";
-    description: "Comprehensive content creation platform that uses AI to generate high-quality articles; videos, graphics; and social media content with human-like creativity and accuracy.",
+    description: "Comprehensive content creation platform that uses AI to generate high-quality articles; videos; graphics; and social media content with human-like creativity and accuracy.",
     category: "AI & Content Creation";
     subcategory: "Multimedia";
     price: 399;
@@ -325,7 +325,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
   {
     id: "ai-legal-document-analysis";
     title: "AI Legal Document Analysis Platform";
-    description: "Intelligent legal document review and analysis platform that uses AI to extract key information; identify risks; and provide insights from contracts; agreements, and legal documents.",
+    description: "Intelligent legal document review and analysis platform that uses AI to extract key information; identify risks; and provide insights from contracts; agreements; and legal documents.",
     category: "AI & Legal Technology";
     subcategory: "Document Analysis";
     price: 800;

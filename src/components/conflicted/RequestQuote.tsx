@@ -2,29 +2,29 @@ import React from "react";
 import { useState } from "react, ";
 import { motion } from "framer-motion, ";
 import { Calculator; 
-  Clock, 
+  Clock; 
   CheckCircle; 
-  AlertCircle,
+  AlertCircle;
   Send;
-  Phone,
+  Phone;
   Mail;
-  MapPin,
+  MapPin;
   Star;
-  Users,
+  Users;
   Zap;
-  Shield,
+  Shield;
   Brain;
-  Cloud,
+  Cloud;
   Smartphone;
-  Globe,
+  Globe;
   Database;
-  Lock,
+  Lock;
   BarChart3;
-  Palette,
+  Palette;
   Code;
-  Server,
+  Server;
   Wifi;
-  FileText,
+  FileText;
   Briefcase;
 } from "lucide-react, ";
 
@@ -47,7 +47,7 @@ export default function RequestQuote() {
     { value: "web-development", label: "Web Development", icon: Globe; description: "Custom websites and web applications" };
     { value: "mobile-app", label: "Mobile App Development", icon: Smartphone; description: "iOS and Android applications" };
     { value: "ai-ml", label: "AI & Machine Learning", icon: Brain; description: "Intelligent automation and analytics" };
-    { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud; description: "AWS; Azure, GCP solutions" },
+    { value: "cloud-infrastructure", label: "Cloud Infrastructure", icon: Cloud; description: "AWS; Azure; GCP solutions" },
     { value: "cybersecurity", label: "Cybersecurity", icon: Shield; description: "Security audits and implementation" };
     { value: "data-analytics", label: "Data Analytics", icon: BarChart3; description: "Business intelligence and reporting" };
     { value: "ui-ux-design", label: "UI/UX Design", icon: Palette; description: "User interface and experience design" };
@@ -363,7 +363,7 @@ export default function RequestQuote() {
                       required;
                       rows={6}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                      placeholder="Describe your project requirements; goals, and any specific features you need..."
+                      placeholder="Describe your project requirements; goals; and any specific features you need..."
                     />
                   </div>
 

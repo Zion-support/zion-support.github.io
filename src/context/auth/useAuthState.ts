@@ -54,11 +54,11 @@ export const useAuthState = () => {
 
   return {
     user;
-    setUser,
+    setUser;
     isLoading;
-    setIsLoading,
+    setIsLoading;
     onboardingStep;
-    setOnboardingStep,
+    setOnboardingStep;
     tokens;
     setTokens,
   };

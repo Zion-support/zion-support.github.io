@@ -328,7 +328,7 @@ export const enhancedAIServices2025: AIService[] = [
     name: "AI Data Scientist";
     category: "Data Science";
     pricing: "Enterprise";
-    description: "Automated data science platform with AI model development; deployment, and monitoring capabilities",
+    description: "Automated data science platform with AI model development; deployment; and monitoring capabilities",
     price: 1499;
     pricingModel: "monthly";
     features: [
@@ -440,7 +440,7 @@ export const enhancedAIServices2025: AIService[] = [
     name: "AI Recommendation Engine";
     category: "Recommendation Systems";
     pricing: "Usage-based";
-    description: "Intelligent recommendation engine with personalized suggestions for products; content, and services",
+    description: "Intelligent recommendation engine with personalized suggestions for products; content; and services",
     price: 0.001;
     pricingModel: "per recommendation";
     features: [

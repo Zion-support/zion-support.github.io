@@ -1,33 +1,33 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { User; s, 
-  Vide; o, 
-  Mi; c, 
-  MicOf; f, 
-  VideoOf; f, 
-  Shar; e, 
-  MessageSquar; e, 
-  FileTex; t, 
-  Edit; 3, 
-  Monito; r, 
-  Setting; s, 
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
+import { User; s; 
+  Vide; o; 
+  Mi; c; 
+  MicOf; f; 
+  VideoOf; f; 
+  Shar; e; 
+  MessageSquar; e; 
+  FileTex; t; 
+  Edit; 3; 
+  Monito; r; 
+  Setting; s; 
   X; 
-  Maximize, 2; 
-  Minimize, 2;
-  Plu, s;
-  Searc, h;
-  MoreVertica, l;
-  Phon, e;
-  PhoneOf, f;
-  ScreenShar, e;
-  Squar, e;
-  Han, d;
-  Calenda, r;
-  Cloc, k;
-  CheckCircl, e;
-  AlertCircl, e;
-  UserPlu, s;
-  Loc, k;
+  Maximize; 2; 
+  Minimize; 2;
+  Plu; s;
+  Searc; h;
+  MoreVertica; l;
+  Phon; e;
+  PhoneOf; f;
+  ScreenShar; e;
+  Squar; e;
+  Han; d;
+  Calenda; r;
+  Cloc; k;
+  CheckCircl; e;
+  AlertCircl; e;
+  UserPlu; s;
+  Loc; k;
   Unlock;
 } from "lucide-react, ";
 
@@ -79,51 +79,51 @@ interface Meeting {
 const mockParticipant; s: Participant[] = [
   {
     i; d: "1";
-    na; m, e: "Sara; h Johnso; n",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: tr; u, e;
-    isMut, e; d: fal; s, e;
-    isVideoO, f; f: fal; s, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: fal; s, e;
-    stat, u; s: "onlin; e",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z"
+    na; m; e: "Sara; h Johnso; n",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: tr; u; e;
+    isMut; e; d: fal; s; e;
+    isVideoO; f; f: fal; s; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: fal; s; e;
+    stat; u; s: "onlin; e",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
   },
   {
     i; d: "2";
-    na; m, e: "Michae; l Che; n",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: fal; s, e;
-    isMut, e; d: tr; u, e;
-    isVideoO, f; f: fal; s, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: tr; u, e;
-    stat, u; s: "onlin; e",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 2:0; 0.000; Z"
+    na; m; e: "Michae; l Che; n",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: fal; s; e;
+    isMut; e; d: tr; u; e;
+    isVideoO; f; f: fal; s; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: tr; u; e;
+    stat; u; s: "onlin; e",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 2:0; 0.000; Z"
   },
   {
     i; d: "3";
-    na; m, e: "Emil; y Rodrigue; z",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: fal; s, e;
-    isMut, e; d: fal; s, e;
-    isVideoO, f; f: tr; u, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: fal; s, e;
-    stat, u; s: "awa; y",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 5:0; 0.000; Z"
+    na; m; e: "Emil; y Rodrigue; z",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: fal; s; e;
+    isMut; e; d: fal; s; e;
+    isVideoO; f; f: tr; u; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: fal; s; e;
+    stat; u; s: "awa; y",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 5:0; 0.000; Z"
   }
 ];
 
 const mockChatMessage; s: ChatMessage[] = [
   {
     i; d: "1";
-    sender; I, d: "1";
-    senderNa; m, e: "Sara; h Johnso; n",
-    messa; g, e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
-    timesta; m, p: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z",
-    ty; p, e: "tex; t",
-    reactio; n, s: []
+    sender; I; d: "1";
+    senderNa; m; e: "Sara; h Johnso; n",
+    messa; g; e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
+    timesta; m; p: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
+    ty; p; e: "tex; t",
+    reactio; n; s: []
   };
   {
     i; d: "2";
@@ -132,8 +132,8 @@ const mockChatMessage; s: ChatMessage[] = [
     messag; e: "Thanks Sarah! I have some questions about the Q4 metrics.";
     timestam; p: "2024-01-15T1; 0:0; 1: 00.000Z";
     typ; e: "text";
-    reaction; s: [{ emo; j, i: "👍";
-    cou; n, t: 2 }]
+    reaction; s: [{ emo; j; i: "👍";
+    cou; n; t: 2 }]
   };
   {
     i; d: "3";
@@ -148,74 +148,74 @@ const mockChatMessage; s: ChatMessage[] = [
     const mockDocument; s: Document[] = [
   {
     i; d: "1";
-    na; m, e: "Q4_2024_Revie; w.ppt; x",
-    ty; p, e: "presentatio; n",
-    si; z, e: "2.4 M; B",
-    lastModifi; e, d: "202; 4-0; 1-15T; 0, 9:3; 0:0; 0.000; Z",
-    shared; B, y: "Sara; h Johnso; n",
-    permissio; n, s: "edi; t"
+    na; m; e: "Q4_2024_Revie; w.ppt; x",
+    ty; p; e: "presentatio; n",
+    si; z; e: "2.4 M; B",
+    lastModifi; e; d: "202; 4-0; 1-15T; 0; 9:3; 0:0; 0.000; Z",
+    shared; B; y: "Sara; h Johnso; n",
+    permissio; n; s: "edi; t"
   },
   {
     i; d: "2";
-    na; m, e: "Financial_Report_Q; 4.xls; x",
-    ty; p, e: "spreadshee; t",
-    si; z, e: "1.8 M; B",
-    lastModifi; e, d: "202; 4-0; 1-15T; 0, 8:4; 5:0; 0.000; Z",
-    shared; B, y: "Michae; l Che; n",
-    permissio; n, s: "vie; w"
+    na; m; e: "Financial_Report_Q; 4.xls; x",
+    ty; p; e: "spreadshee; t",
+    si; z; e: "1.8 M; B",
+    lastModifi; e; d: "202; 4-0; 1-15T; 0; 8:4; 5:0; 0.000; Z",
+    shared; B; y: "Michae; l Che; n",
+    permissio; n; s: "vie; w"
   }
 ];
 
 const mockMeeting; s: Meeting[] = [
   {
     i; d: "1";
-    tit; l, e: "Q; 4 202; 4 Revie; w Meetin; g",
-    startTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z",
-    endTi; m, e: "202; 4-0; 1-15T; 1, 1: 3; 0:0; 0.000; Z",
-    participan; t, s: 3;
-    stat; u, s: "activ; e",
-    recordi; n, g: tr; u, e;
-    passwo, r; d: "Q4Review202; 4"
+    tit; l; e: "Q; 4 202; 4 Revie; w Meetin; g",
+    startTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
+    endTi; m; e: "202; 4-0; 1-15T; 1; 1: 3; 0:0; 0.000; Z",
+    participan; t; s: 3;
+    stat; u; s: "activ; e",
+    recordi; n; g: tr; u; e;
+    passwo; r; d: "Q4Review202; 4"
   }
 ];
 
 export function AdvancedCollaborationPlatform() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMinimiz; e, d; setIsMinimiz, e; d] = useState(false);
-  const [isFullscre;  e, n; setIsFullscre, e; n] = useState(false);
-  const [activeT; a, b; setActiveT, a; b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
-  const [isMut;  e, d; setIsMut, e; d] = useState(false);
-  const [isVideoO; f, f; setIsVideoO, f; f] = useState(false);
-  const [isScreenShari;  n, g; setIsScreenShari, n; g] = useState(false);
-  const [isRecordi; n, g; setIsRecordi, n; g] = useState(true);
-  const [chatMessa;  g, e; setChatMessa, g; e] = useState("");
-  const [showParticipan; t, s; setShowParticipan, t; s] = useState(true);
-  const [showCh;  a, t; setShowCh, a; t] = useState(true);
-  const [participan; t, s; setParticipan, t; s] = useState<Participant[]>(mockParticipants);
-  const [chatMessag;  e, s; setChatMessag, e; s] = useState<ChatMessage[]>(mockChatMessages);
-  const [documen; t, s; setDocumen, t; s] = useState<Document[]>(mockDocuments);
-  const [meetin;  g, s; setMeetin, g; s] = useState<Meeting[]>(mockMeetings);
-  const [searchQue; r, y; setSearchQue, r; y] = useState("");
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [activeT; a; b; setActiveT; a; b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
+  const [isMut;  e; d; setIsMut; e; d] = useState(false);
+  const [isVideoO; f; f; setIsVideoO; f; f] = useState(false);
+  const [isScreenShari;  n; g; setIsScreenShari; n; g] = useState(false);
+  const [isRecordi; n; g; setIsRecordi; n; g] = useState(true);
+  const [chatMessa;  g; e; setChatMessa; g; e] = useState("");
+  const [showParticipan; t; s; setShowParticipan; t; s] = useState(true);
+  const [showCh;  a; t; setShowCh; a; t] = useState(true);
+  const [participan; t; s; setParticipan; t; s] = useState<Participant[]>(mockParticipants);
+  const [chatMessag;  e; s; setChatMessag; e; s] = useState<ChatMessage[]>(mockChatMessages);
+  const [documen; t; s; setDocumen; t; s] = useState<Document[]>(mockDocuments);
+  const [meetin;  g; s; setMeetin; g; s] = useState<Meeting[]>(mockMeetings);
+  const [searchQue; r; y; setSearchQue; r; y] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isMute, d: !isMuted } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isMute; d: !isMuted } : p)
     );
      };
 
   const toggleVideo = () => {
     setIsVideoOff(!isVideoOff);
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isVideoOf, f: !isVideoOff } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isVideoOf; f: !isVideoOff } : p)
     );
      };
 
   const toggleScreenShare = () => {
     setIsScreenSharing(!isScreenSharing);
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  isScreenSharin, g: !isScreenSharing } : p)
+      prev.map(p => p.id === "1" ? { ...p;  isScreenSharin; g: !isScreenSharing } : p)
     );
      };
 
@@ -235,14 +235,14 @@ export function AdvancedCollaborationPlatform() {
     typ; e: "text";
         reaction; s: []
       };
-    setChatMessages(prev => [...pr; e, v; newMessa, g; e]);
+    setChatMessages(prev => [...pr; e; v; newMessa; g; e]);
       setChatMessage("");
     }
   };
 
   const raiseHand = () => {
     setParticipants(prev => 
-      prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan, d: !p.hasRaisedHand } : p)
+      prev.map(p => p.id === "1" ? { ...p;  hasRaisedHan; d: !p.hasRaisedHand } : p)
     );
      };
 
@@ -285,7 +285,7 @@ export function AdvancedCollaborationPlatform() {
 
   return (<div; 
       className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p, x] h-[90; 0, p; x]"
+        isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]"
       }`} 
       ref={containerRef}
     >
@@ -436,13 +436,13 @@ export function AdvancedCollaborationPlatform() {
               <div className="flex border-b border-zion-slate-light">
                 {[
                   { i;  d: "meetin; g",
-    lab; e, l: "Meetin; g", ic; o, n: Vide; o },
+    lab; e; l: "Meetin; g", ic; o; n: Vide; o },
                   { i; d: "cha; t",
-    lab; e, l: "Cha; t", ic; o, n: MessageSquar; e },
+    lab; e; l: "Cha; t", ic; o; n: MessageSquar; e },
                   { i; d: "document; s",
-    lab; e, l: "Document; s", ic; o, n: FileTex; t },
+    lab; e; l: "Document; s", ic; o; n: FileTex; t },
                   { i; d: "participant; s",
-    lab; e, l: "Participant; s", ic; o, n: User; s }
+    lab; e; l: "Participant; s", ic; o; n: User; s }
                 ].map(tab => {
                   const Icon = tab.icon;
                   return (
@@ -516,7 +516,7 @@ export function AdvancedCollaborationPlatform() {
                           <p className="text-sm text-zion-slate">{message.message}</p>
                           {message.reactions.length > 0 && (
                             <div className="flex gap-1 mt-2">
-                              {message.reactions.map((reactio;  n, index) => (<span key={index} className="px-2 py-1 bg-white dar;  k:bg-zion-slate rounded-full text-xs">
+                              {message.reactions.map((reactio;  n; index) => (<span key={index} className="px-2 py-1 bg-white dar;  k:bg-zion-slate rounded-full text-xs">
                                   {reaction.emoji} {reaction.count}
                                 </span>
                               ))}

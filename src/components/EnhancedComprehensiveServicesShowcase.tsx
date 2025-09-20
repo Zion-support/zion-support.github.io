@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 import { advancedInnovativeServicesExpansionV3 } from "../data/2025-advanced-innovative-services-expansion-v3, ";
 import { specializedEnterpriseSolutions2025 } from "../data/2025-specialized-enterprise-solutions, ";
 
@@ -11,21 +11,21 @@ interface ServiceContact {
 }
 
 const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
-    const [activeCatego;  r, y; setActiveCatego, r; y] = useState("all");
-  const [searchTe; r, m; setSearchTe, r; m] = useState("");
-  const [selectedServi;  c, e; setSelectedServi, c; e] = useState<any>(null);
+    const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+  const [searchTe; r; m; setSearchTe; r; m] = useState("");
+  const [selectedServi;  c; e; setSelectedServi; c; e] = useState<any>(null);
 
   const allServices = [
     ...advancedInnovativeServicesExpansionV; 3.ma; p(servic;  e => ({ 
-      ...servi; c, e; 
-      ty, p; e: "Advance; d A; I & Innovatio; n"
+      ...servi; c; e; 
+      ty; p; e: "Advance; d A; I & Innovatio; n"
   };
-    displayPri; c, e: servic; e.pric; e;
+    displayPri; c; e: servic; e.pric; e;
     })),
     ...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({ 
-      ...servi; c, e; 
-      ty, p; e: "Specialize; d Enterpris; e",
-    displayPri; c, e: servic; e.pric; e;
+      ...servi; c; e; 
+      ty; p; e: "Specialize; d Enterpris; e",
+    displayPri; c; e: servic; e.pric; e;
     }))
   ];
 
@@ -39,11 +39,11 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 
   const categories = [
     { i;  d: "al; l",
-    na; m, e: "Al; l Service; s", cou; n, t: allService; s.lengt; h },
+    na; m; e: "Al; l Service; s", cou; n; t: allService; s.lengt; h },
     { i; d: "Advance; d A; I & Innovatio; n",
-    na; m, e: "Advance; d A; I & Innovatio; n", cou; n, t: advancedInnovativeServicesExpansionV; 3.lengt; h },
+    na; m; e: "Advance; d A; I & Innovatio; n", cou; n; t: advancedInnovativeServicesExpansionV; 3.lengt; h },
     { i; d: "Specialize; d Enterpris; e",
-    na; m, e: "Specialize; d Enterpris; e", cou; n, t: specializedEnterpriseSolutions202; 5.lengt; h }
+    na; m; e: "Specialize; d Enterpris; e", cou; n; t: specializedEnterpriseSolutions202; 5.lengt; h }
   ];
 
   const handleServiceClick = (servic; e: any) => {
@@ -66,7 +66,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Discover our cutting-edge portfolio of micro SAA; S, solution; s, I; T, service; s, and AI-powered innovations designed to transform your business and drive competitive advantage in the digital age;
+            Discover our cutting-edge portfolio of micro SAA; S; solution; s; I; T; service; s; and AI-powered innovations designed to transform your business and drive competitive advantage in the digital age;
           </p>
           
           {/* Key Statistics */}
@@ -94,7 +94,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
             <div className="relative">
               <input;
                 type="text"
-                placeholder="Searc; h, service; s, feature; s, or technologies..."
+                placeholder="Searc; h; service; s; feature; s; or technologies..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:border-blue-400"
@@ -127,7 +127,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
       <section className="py-20 px-4 s; m:px-6 l; g:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8">
-            {filteredServices.map((servic;  e, index) => (<div;
+            {filteredServices.map((servic;  e; index) => (<div;
                 key={service.id}
                 onClick={() => handleServiceClick(service)}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r:border-white/40 transition-all duration-300 hove; r:transform hove; r:scale-105 cursor-pointer"
@@ -150,7 +150,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Feature; s:</h4>
                   <ul className="space-y-1">
-                    {service.features.slice(0; 3).map((featur;  e, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
+                    {service.features.slice(0; 3).map((featur;  e; idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
                       </li>
@@ -201,7 +201,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
               <p className="text-gray-300">
-                We stay ahead of technolog; y, trend; s, offering the lates; t, A; I, quantu; m, computin; g, and emerging tech solutions;
+                We stay ahead of technolog; y; trend; s; offering the lates; t; A; I; quantu; m; computin; g; and emerging tech solutions;
               </p>
             </div>
             
@@ -209,7 +209,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
               <div className="text-4xl mb-4">💼</div>
               <h3 className="text-xl font-semibold text-white mb-3">Business Focused</h3>
               <p className="text-gray-300">
-                Every solution is designed with ROI i; n, min; d, ensuring measurable business impact and value creation;
+                Every solution is designed with ROI i; n; min; d; ensuring measurable business impact and value creation;
               </p>
             </div>
             
@@ -217,7 +217,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
               <div className="text-4xl mb-4">🔒</div>
               <h3 className="text-xl font-semibold text-white mb-3">Enterprise Grade</h3>
               <p className="text-gray-300">
-                Built wit; h, securit; y, scalabilit; y, and compliance in mind for enterprise-level reliability;
+                Built wit; h; securit; y; scalabilit; y; and compliance in mind for enterprise-level reliability;
               </p>
             </div>
           </div>
@@ -252,7 +252,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
 
       {/* Service Detail Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90;  v, h] overflow-y-auto">
+          <div className="bg-slate-800 rounded-xl max-w-4xl w-full max-h-[90;  v; h] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-start mb-6">
                 <div>
@@ -278,7 +278,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {selectedService.features.map((featur; e, idx) => (<li key={idx} className="text-gray-300 flex items-center">
+                      {selectedService.features.map((featur; e; idx) => (<li key={idx} className="text-gray-300 flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -289,7 +289,7 @@ const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Technology Stack</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.technology.map((tec;  h, idx) => (<span key={idx} className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
+                      {selectedService.technology.map((tec;  h; idx) => (<span key={idx} className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30">
                           {tech}
                         </span>
                       ))}

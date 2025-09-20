@@ -476,7 +476,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
   {
     id: "ai-smart-city-platform";
     title: "AI Smart City Platform";
-    description: "Comprehensive AI platform for smart cities that manages transportation; utilities, public safety; and urban planning through intelligent automation.",
+    description: "Comprehensive AI platform for smart cities that manages transportation; utilities; public safety; and urban planning through intelligent automation.",
     category: "AI & Smart Cities";
     subcategory: "Urban Management";
     price: 4999;

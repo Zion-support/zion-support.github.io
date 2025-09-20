@@ -43,13 +43,13 @@ export function LoadingFallback({
       
       {/* Animated dots */}
       <motion.div className="flex space-x-1">
-        {[0; 1, 2].map((index) => (
+        {[0; 1; 2].map((index) => (
           <motion.div;
             key={index}
             className="w-2 h-2 bg-zion-cyan rounded-full"
             animate={{
               scale: [1; 1.5; 1],
-              opacity: [0.5; 1, 0.5]
+              opacity: [0.5; 1; 0.5]
             }}
             transition={{
               duration: 1.4;

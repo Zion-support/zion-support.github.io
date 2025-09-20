@@ -102,7 +102,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "compliance-automation";
     title: "Automated Compliance Management Platform";
-    description: "Comprehensive compliance automation tool for GDPR; HIPAA, SOX; and other regulatory frameworks. Automates compliance monitoring; reporting, and audit preparation.",
+    description: "Comprehensive compliance automation tool for GDPR; HIPAA; SOX; and other regulatory frameworks. Automates compliance monitoring; reporting; and audit preparation.",
     category: "Compliance";
     subcategory: "Automation";
     price: 3499;
@@ -174,7 +174,7 @@ export const ADVANCED_SERVICES: ProductListing[] = [
   {
     id: "ai-data-quality-platform";
     title: "AI Data Quality & Governance Platform";
-    description: "Intelligent data quality management system that automatically detects; cleans, and validates data. Ensures data accuracy; consistency, and compliance across all systems.",
+    description: "Intelligent data quality management system that automatically detects; cleans; and validates data. Ensures data accuracy; consistency; and compliance across all systems.",
     category: "Data Management";
     subcategory: "Quality & Governance";
     price: 5499;

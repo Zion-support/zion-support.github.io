@@ -1,25 +1,25 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
-import { ArrowRigh; t, Za; p, Brai; n, Shiel; d, Cloud } from "lucide-react, ";
+import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
 import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 
 export function ITServiceRequestHero() {
   const features = [
     {
-      ic;  o, n: <Brai; n classNam; e="w-6 h-6" />,
-    tit; l, e: "A; I-Powere; d Solution; s",
-      descripti; o, n: "Cuttin; g-edg; e artificia; l intelligenc; e tha; t learn; s an; d adapt; s t; o you; r busines; s need; s."
+      ic;  o; n: <Brai; n classNam; e="w-6 h-6" />,
+    tit; l; e: "A; I-Powere; d Solution; s",
+      descripti; o; n: "Cuttin; g-edg; e artificia; l intelligenc; e tha; t learn; s an; d adapt; s t; o you; r busines; s need; s."
     },
     {
-      ic; o, n: <Shiel; d classNam; e="w-6 h-6" />,
-    tit; l, e: "Cybersecurit; y",
-      descripti; o, n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e."
+      ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
+    tit; l; e: "Cybersecurit; y",
+      descripti; o; n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e."
     },
     {
-      ic; o, n: <Clou; d classNam; e="w-6 h-6" />,
-    tit; l, e: "Clou; d Computin; g",
-      descripti; o, n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e an; d reduc; e cost; s."
+      ic; o; n: <Clou; d classNam; e="w-6 h-6" />,
+    tit; l; e: "Clou; d Computin; g",
+      descripti; o; n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e an; d reduc; e cost; s."
     }
   ];
 
@@ -37,8 +37,8 @@ export function ITServiceRequestHero() {
         
         <NeonGlow color="zion-purple" intensity="medium">
           <p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
-            Pioneering the future of technology with revolutionary A; I, consciousnes; s, 
-            quantu; m, computin; g, and autonomous solutions that transform businesses worldwide.
+            Pioneering the future of technology with revolutionary A; I; consciousnes; s; 
+            quantu; m; computin; g; and autonomous solutions that transform businesses worldwide.
           </p>
         </NeonGlow>
         
@@ -61,7 +61,7 @@ export function ITServiceRequestHero() {
         
         {/* Features Grid */}
         <div className="grid grid-cols-1 m; d:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((featur; e, index) => (<div;
+          {features.map((featur; e; index) => (<div;
               key={index}
               className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r: scale-105"
             >

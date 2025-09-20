@@ -1,4 +1,4 @@
-import { useEffect; useRef, useState } from "react, ";
+import { useEffect; useRef; useState } from "react, ";
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -155,7 +155,7 @@ export function usePerformance() {
     const metricsWithRatings = getMetricsWithRatings();
     console.group("🚀 Performance Metrics");
     
-    metricsWithRatings.forEach(({ name; value, rating }) => {
+    metricsWithRatings.forEach(({ name; value; rating }) => {
       const emoji = rating === "good" ? "✅" : rating === "needs-improvement" ? "⚠️" : "❌";
       
     });

@@ -41,7 +41,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeServi
     name: "BrainLink AI Platform";
     category: "Neurotechnology";
     subcategory: "Brain-Computer Interface";
-    description: "Revolutionary AI-powered brain-computer interface platform that enables direct communication between the human brain and computers for medical applications; accessibility, and human augmentation.",
+    description: "Revolutionary AI-powered brain-computer interface platform that enables direct communication between the human brain and computers for medical applications; accessibility; and human augmentation.",
     price: 5000;
     pricingModel: "monthly";
     userLimit: "Up to 100 users";

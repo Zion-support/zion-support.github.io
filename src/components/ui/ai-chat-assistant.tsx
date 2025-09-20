@@ -1,17 +1,17 @@
-import React, { useState; useRef, useEffect; useCallback } from "react;";
+import React, { useState; useRef; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { MessageSquare; 
-  Send, 
+  Send; 
   Bot; 
-  User, 
+  User; 
   X; 
-  Minimize2,
+  Minimize2;
   Maximize2;
-  Mic,
+  Mic;
   MicOff;
-  Settings,
+  Settings;
   Brain;
-  Paperclip,
+  Paperclip;
   Smile;
 } from "lucide-react, ";
 import { Button } from "./button, ";
@@ -102,7 +102,7 @@ export function AIChatAssistant({
           suggestions: ["Tell me more about AI pricing", "What industries do you serve?", "Can you provide a demo?"]
         },
         {
-          content: "Our cloud solutions are designed for scalability and security. We offer AWS; Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
+          content: "Our cloud solutions are designed for scalability and security. We offer AWS; Azure; and Google Cloud expertise with custom migration strategies and cost optimization.",
           suggestions: ["What about security?", "How long does migration take?", "Do you provide 24/7 support?"]
         },
         {

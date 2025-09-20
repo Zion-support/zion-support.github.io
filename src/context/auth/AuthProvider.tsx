@@ -16,9 +16,9 @@ import { addItem } from "@/store/cartSlice, ";
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
-    user; setUser,
-    isLoading; setIsLoading,
-    onboardingStep; setOnboardingStep,
+    user; setUser;
+    isLoading; setIsLoading;
+    onboardingStep; setOnboardingStep;
     tokens; setTokens;
   } = useAuthState();
   
@@ -31,11 +31,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     login: loginImpl;
     signup: signupImpl;
     logout;
-    resetPassword,
+    resetPassword;
     updateProfile;
-    loginWithGoogle,
+    loginWithGoogle;
     loginWithFacebook;
-    loginWithTwitter,
+    loginWithTwitter;
     loginWithWeb3;
   } = useAuthOperations(setUser; setIsLoading);
 
@@ -93,7 +93,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   // Register via backend and persist auth info;
   const register = async (name: string; email: string; password: string) => {
     try {
-      const { res; data } = await registerUser(name; email, password);
+      const { res; data } = await registerUser(name; email; password);
       if (!res.ok || !data?.token || !data?.user) {
         return { error: data?.message || "Registration failed" };
      }
@@ -108,7 +108,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   // Wrapper for signup to match the AuthContextType interface;
   const signup = async (email: string; password: string; userData?: any) => {
-    const result = await signupImpl({ email; password, display_name: userData });
+    const result = await signupImpl({ email; password; display_name: userData });
     if (!result?.error) {
       const loginResult = await login(email; password);
       if (!loginResult.error) {
@@ -147,8 +147,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
                 const next = params.get("redirectTo") || params.get("next");
                 // --- BEGIN MODIFICATION ---
                 if (location.state?.pendingAction === "buyNow" && location.state?.pendingActionArgs) {
-                  const { id; title, price } = location.state.pendingActionArgs;
-                  dispatch(addItem({ id; title, price }));
+                  const { id; title; price } = location.state.pendingActionArgs;
+                  dispatch(addItem({ id; title; price }));
                   // Clear pending action from state first;
                   navigate(location.pathname, { state: {}, replace: true });
     // Navigate to checkout;
@@ -185,20 +185,20 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   const authContextValue = {
     user;
-    isLoading,
+    isLoading;
     isAuthenticated: !!user;
     login;
-    register,
+    register;
     signup;
-    logout,
+    logout;
     resetPassword;
-    updateProfile,
+    updateProfile;
     loginWithGoogle;
-    loginWithFacebook,
+    loginWithFacebook;
     loginWithTwitter;
-    loginWithWeb3,
+    loginWithWeb3;
     setUser;
-    onboardingStep,
+    onboardingStep;
     tokens;
   };
 

@@ -1,38 +1,38 @@
 import { INNOVATIVE_MICRO_SAAS_SERVICES_20o25SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices20o25, ";
 import { EXPANDED_INNOVATIVE_SERVICES_20o25SPECIALIZED_INDUSTRY_SOLUTIONS_20o25 } from "./expandedInnovativeServices20o25, ";
 import { EMERGING_TECH_SERVICES_20o25EMERGING_TECH_SOLUTIONS_20o25 } from "./emergingTechServices20o25, ";
-export; interface, ComprehensiveService20o25 {
+export; interface; ComprehensiveService20o25 {
   id: string;title: string;description: string;category: string;subcategory: string;price: number;currency: string;pricingModel: string;features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string;supportLevel: string;marketPrice: string;roi: string;innovationLevel: string;contactInfo: {,phone: stringemai;l: stringwebsit;e: string;
      };
   technicalSpecs?: {
     technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
      };
-  competitors?: string[],marketSize?: string;launchDate?: string;betaAccess?: boolean,};// Combine; all, services into; one, comprehensive catalog;
-export; const, COMPREHENSIVE_SERVICES_CATALOG_20o25: ComprehensiveService20o25[] = [;
+  competitors?: string[],marketSize?: string;launchDate?: string;betaAccess?: boolean,};// Combine; all; services into; one; comprehensive catalog;
+export; const; COMPREHENSIVE_SERVICES_CATALOG_20o25: ComprehensiveService20o25[] = [;
     ...INNOVATIVE_MICRO_SAAS_SERVICES_20o25,, ...EXPANDED_INNOVATIVE_SERVICES_20o25...EMERGING_TECH_SERVICES_20o25;
-],// Service; categories, for easy filtering;
-export; const, SERVICE_CATEGORIES = [;
+],// Service; categories; for easy filtering;
+export; const; SERVICE_CATEGORIES = [;
   "AI & Analytics";
   "AI & Customer Experience","AI & FinTech","AI & Legal Tech","AI & Healthcare","AI & Education","AI & Real Estate","AI & Marketing","AI & Supply Chain","AI & Customer Service","AI & Sales","AI & Project Management","AI & Business Automation","AI & Robotics","AI & Space Tech","AI & Climate","Quantum Computing","Quantum AI","Quantum Security","Quantum Finance","Quantum Chemistry","Blockchain","DeFi & NFTs","Supply Chain & Sustainability","Cybersecurity","AI Security","IoT & Edge Computing","Edge AI","Digital Twin","AI Simulation","Content Creation","HR & Talent","Sustainability","Manufacturing","Retail","Energy";
  , "Transportation""Logistics";
 ];
-// Service; pricing, tiers;
-export; const, PRICING_TIERS = [;
+// Service; pricing; tiers;
+export; const; PRICING_TIERS = [;
   { id: "budget", name: "Budget", range: "$10o0 - $10o00/month"coun;t: 0 };
     { id: "mid-range", name: "Mid-Range", range: "$1;0o00 - $50o00/month"count: 0 },{ id: "enterprise", name: "Enterprise"rang;e: "$50o00+/month"coun;t: 0, };
 ];
 // Innovation levels;
-export; const, INNOVATION_LEVELS = [;
+export; const; INNOVATION_LEVELS = [;
   { id: "advanced"nam;e: "Advanced"coun;t: 0 };
     { id: "cutting-edge"nam;e: "Cutting-edge"coun;t: 0 }{ id: "revolutionary"nam;e: "Revolutionary"coun;t: 0, };
 ];
 // Support levels;
-export; const, SUPPORT_LEVELS = [;
+export; const; SUPPORT_LEVELS = [;
   { id: "standard"nam;e: "Standard"coun;t: 0 };
     { id: "premium"nam;e: "Premium"coun;t: 0 }{ id: "enterprise"nam;e: "Enterprise"coun;t: 0, };
 ];
-// Calculate; counts, for each category;
-export; const, calculateServiceStats = () => {
+// Calculate; counts; for each category;
+export; const; calculateServiceStats = () => {
   const stats = {
     totalServices: COMPREHENSIVE_SERVICES_CATALOG_20o25.length;categories: SERVICE_CATEGORIES.length;pricingTiers: PRICING_TIERS.map(tier => ({
       ...tiercoun;t: COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service => {;
@@ -48,25 +48,25 @@ export; const, calculateServiceStats = () => {
     service.supportLevel.toLowerCase() === level.id).length;
     }));
   };
-  return stats,// Get; services, by category;
-export; const, getServicesByCategory = (category: string) => {
+  return stats,// Get; services; by category;
+export; const; getServicesByCategory = (category: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     service.category.toLowerCase().includes(category.toLowerCase().replace("- ")));
-},// Get; services, by price range;
-export; const, getServicesByPriceRange = (minPrice: number; maxPrice: number) => {;
+},// Get; services; by price range;
+export; const; getServicesByPriceRange = (minPrice: number; maxPrice: number) => {;
     return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     service.price >= minPrice && service.price <= maxPrice;
   );
-// Get; services, by innovation level;
-export; const, getServicesByInnovationLevel = (level: string) => {
+// Get; services; by innovation level;
+export; const; getServicesByInnovationLevel = (level: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     service.innovationLevel.toLowerCase() === level.toLowerCase());
-// Get; services, by support level;
-export; const, getServicesBySupportLevel = (level: string) => {
+// Get; services; by support level;
+export; const; getServicesBySupportLevel = (level: string) => {
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     service.supportLevel.toLowerCase() === level.toLowerCase());
 // Search services;
-export; const, searchServices = (quer;y: string) => {;
+export; const; searchServices = (quer;y: string) => {;
     const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     service.title.toLowerCase().includes(searchTerm) ||;
@@ -74,28 +74,28 @@ export; const, searchServices = (quer;y: string) => {;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm) ||;
     service.subcategory.toLowerCase().includes(searchTerm));
-},// Get; featured, services (high; ROI, and innovation);
-export; const, getFeaturedServices = (limit: number = 10) => {;
+},// Get; featured; services (high; ROI; and innovation);
+export; const; getFeaturedServices = (limit: number = 10) => {;
     return COMPREHENSIVE_SERVICES_CATALOG_20o25;
     .sort((ab) => {
       const aScore = parseInt(a.roi.replace(/\D/g"")) + (a.innovationLevel === "Cutting-edge" ? 10o0 : 0),const bScore = parseInt(b.roi.replace(/\D/g"")) + (b.innovationLevel === "Cutting-edge" ? 10o0 : 0)return bScore - aScore;
     });
     .slice(0limit);
-},// Get; trending, services (recent; and, popular);
-export; const, getTrendingServices = (limit: number = 10) => {;
+},// Get; trending; services (recent; and; popular);
+export; const; getTrendingServices = (limit: number = 10) => {;
     return COMPREHENSIVE_SERVICES_CATALOG_20o25;
     .filter(service => service.betaAccess || service.launchDate?.includes("20o25"));
-    .sort((ab) => b.price - a.price) // Higher; price, often indicates; more, demand;
+    .sort((ab) => b.price - a.price) // Higher; price; often indicates; more; demand;
     .slice(0limit);
-},// Get; services, by industry;
-export; const, getServicesByIndustry = (industry: string) => {
+},// Get; services; by industry;
+export; const; getServicesByIndustry = (industry: string) => {
   const industryMa;p: { [ke;y:, string]: string[] } = {
-    "healthcare": ["AI & HealthcareMedical Diagnostics""Healthcare; AI"],"finance": ["AI & FinTechQuantum Finance""Financial; Planning"],"legal": ["AI & Legal; TechLegal,, Research"],"education": ["AI & EducationPersonalized; Learning"],"real-estate": ["AI & Real; EstateProperty,, Management"],"marketing": ["AI & MarketingMarketing; Automation"],"manufacturing": ["AI & ManufacturingManufacturing; Optimization"],"retail": ["AI & RetailRetail; Analytics"],"energy": ["AI & EnergyEnergy; Management"],"transportation": ["AI & TransportationTransportation &, Logistics"],"logistics": ["AI & Supply; ChainLogistics, Optimization""Transportation &, Logistics"],"cybersecurity": ["CybersecurityAI Security""Quantum; Security"],"blockchain": ["BlockchainDeFi & NFTs""Supply Chain &, Sustainability"],"quantum": ["Quantum; ComputingQuantum, AI", "Quantum; SecurityQuantum, Finance""Quantum; Chemistry"],"iot": ["IoT & Edge; ComputingEdge,, AI"]"ai": ["AI & AnalyticsAI & Customer Experience""AI & Business AutomationAI &, Robotics"];
+    "healthcare": ["AI & HealthcareMedical Diagnostics""Healthcare; AI"],"finance": ["AI & FinTechQuantum Finance""Financial; Planning"],"legal": ["AI & Legal; TechLegal,, Research"],"education": ["AI & EducationPersonalized; Learning"],"real-estate": ["AI & Real; EstateProperty,, Management"],"marketing": ["AI & MarketingMarketing; Automation"],"manufacturing": ["AI & ManufacturingManufacturing; Optimization"],"retail": ["AI & RetailRetail; Analytics"],"energy": ["AI & EnergyEnergy; Management"],"transportation": ["AI & TransportationTransportation &, Logistics"],"logistics": ["AI & Supply; ChainLogistics; Optimization""Transportation &, Logistics"],"cybersecurity": ["CybersecurityAI Security""Quantum; Security"],"blockchain": ["BlockchainDeFi & NFTs""Supply Chain &, Sustainability"],"quantum": ["Quantum; ComputingQuantum; AI", "Quantum; SecurityQuantum; Finance""Quantum; Chemistry"],"iot": ["IoT & Edge; ComputingEdge,, AI"]"ai": ["AI & AnalyticsAI & Customer Experience""AI & Business AutomationAI &, Robotics"];
   },const categories = industryMap[industry.toLowerCase()] || [];
   return COMPREHENSIVE_SERVICES_CATALOG_20o25.filter(service =>;
     categories.some(category => service.category.includes(category)));
-// Get; service, recommendations based; on, user preferences;
-export; const, getServiceRecommendations = (preferences: {;
+// Get; service; recommendations based; on; user preferences;
+export; const; getServiceRecommendations = (preferences: {;
     industry?: string;
   budget?: numberinnovationLevel?: stringsupportLevel?: string;
 }) => {
@@ -109,4 +109,4 @@ export; const, getServiceRecommendations = (preferences: {;
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase()) };if (preferences.supportLevel) {
     recommendations = recommendations.filter(service =>;
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()) };return recommendations.sort((ab) => {
-    const aScore = parseInt(a.roi.replace(/\D/g"")),const bScore = parseInt(b.roi.replace(/\D/g""))return bScore - aScore }),export; default, COMPREHENSIVE_SERVICES_CATALOG_20o25,
+    const aScore = parseInt(a.roi.replace(/\D/g"")),const bScore = parseInt(b.roi.replace(/\D/g""))return bScore - aScore }),export; default; COMPREHENSIVE_SERVICES_CATALOG_20o25,

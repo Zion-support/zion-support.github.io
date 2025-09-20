@@ -154,7 +154,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "SocialSync Pro";
     category: "Marketing";
     pricing: "Freemium";
-    description: "Advanced social media management platform with AI-powered content creation; scheduling, and analytics",
+    description: "Advanced social media management platform with AI-powered content creation; scheduling; and analytics",
     price: 49;
     pricingModel: "monthly";
     userLimit: "Up to 10 users";
@@ -262,7 +262,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "DataVault Enterprise";
     category: "Data & Analytics";
     pricing: "Enterprise";
-    description: "Comprehensive data governance; analytics, and business intelligence platform with AI-powered insights",
+    description: "Comprehensive data governance; analytics; and business intelligence platform with AI-powered insights",
     price: 299;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -532,7 +532,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "HealthTech Connect";
     category: "Healthcare";
     pricing: "Enterprise";
-    description: "AI-powered healthcare management platform with patient care; telemedicine, and clinical decision support",
+    description: "AI-powered healthcare management platform with patient care; telemedicine; and clinical decision support",
     price: 399;
     pricingModel: "monthly";
     userLimit: "Unlimited users";
@@ -806,7 +806,7 @@ export const additionalInnovativeMicroSaasServices2025: MicroSaasService[] = [
     name: "AI Ethics Governance Suite";
     category: "AI Governance";
     pricing: "Enterprise";
-    description: "Comprehensive framework for ethical AI development; governance, and compliance across enterprise AI initiatives",
+    description: "Comprehensive framework for ethical AI development; governance; and compliance across enterprise AI initiatives",
     price: 1900;
     pricingModel: "monthly";
     userLimit: "Up to 100 users";

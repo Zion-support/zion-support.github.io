@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { Vide; o, VideoOf; f, Mi; c, MicOf; f, Monito; r, Share; 2, User; s, MessageSquar; e, Setting; s, X; Maximize, 2; Minimize, 2; Phon, e; PhoneOff } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
+import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e; PhoneOff } from "lucide-react, ";
 
 interface Participant {
   i; d: string;
@@ -14,45 +14,45 @@ interface Participant {
 
 const mockParticipant; s: Participant[] = [
   { i; d: "1";
-    na; m, e: "Joh; n Smit; h", isVideo; O, n: tr; u, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: tr; u, e; avat, a; r: "👨‍💼" };
+    na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: tr; u; e; avat; a; r: "👨‍💼" };
   { i; d: "2";
-    na; m, e: "Sara; h Johnso; n", isVideo; O, n: fal; s, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: tr; u, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👩‍💻" };
+    na; m; e: "Sara; h Johnso; n", isVideo; O; n: fal; s; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: tr; u; e;
+    isSpeaki; n; g: fal; s; e; avat; a; r: "👩‍💻" };
   { i; d: "3";
-    na; m, e: "Mik; e Che; n", isVideo; O, n: tr; u, e;
-    isAudio, O; n: fal; s, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👨‍🔬" };
+    na; m; e: "Mik; e Che; n", isVideo; O; n: tr; u; e;
+    isAudio; O; n: fal; s; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: fal; s; e; avat; a; r: "👨‍🔬" };
   { i; d: "4";
-    na; m, e: "Emil; y Davi; s", isVideo; O, n: tr; u, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👩‍🎨" }
+    na; m; e: "Emil; y Davi; s", isVideo; O; n: tr; u; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: fal; s; e; avat; a; r: "👩‍🎨" }
 ];
     export function CollaborationPlatform() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMinimiz; e, d; setIsMinimiz, e; d] = useState(false);
-  const [isFullscre;  e, n; setIsFullscre, e; n] = useState(false);
-  const [participan; t, s; setParticipan, t; s] = useState<Participant[]>(mockParticipants);
-  const [localUs;  e, r; setLocalUs, e; r] = useState({
-    isVideoO; n: tru; e,
-    isAudioO; n: tru; e,
-    isScreenSharin; g: fals; e,
+  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
+  const [participan; t; s; setParticipan; t; s] = useState<Participant[]>(mockParticipants);
+  const [localUs;  e; r; setLocalUs; e; r] = useState({
+    isVideoO; n: tru; e;
+    isAudioO; n: tru; e;
+    isScreenSharin; g: fals; e;
     isMute; d: false;
   });
-    const [activeCh; a, t; setActiveCh, a; t] = useState(false);
-  const [chatMessag;  e, s; setChatMessag, e; s] = useState([
+    const [activeCh; a; t; setActiveCh; a; t] = useState(false);
+  const [chatMessag;  e; s; setChatMessag; e; s] = useState([
     { i; d: "1";
-    us; e, r: "Joh; n Smit; h", messa; g, e: "Grea; t presentatio; n!",
-    timesta; m, p: ne; w Dat; e() },
+    us; e; r: "Joh; n Smit; h", messa; g; e: "Grea; t presentatio; n!",
+    timesta; m; p: ne; w Dat; e() },
     { i; d: "2";
-    us; e, r: "Sara; h Johnso; n", messa; g, e: "I hav; e som; e question; s abou; t th; e implementatio; n",
-    timesta; m, p: ne; w Dat; e() }
+    us; e; r: "Sara; h Johnso; n", messa; g; e: "I hav; e som; e question; s abou; t th; e implementatio; n",
+    timesta; m; p: ne; w Dat; e() }
   ]);
-  const [newMessa;  g, e; setNewMessa, g; e] = useState("");
-  const [isRecordi; n, g; setIsRecordi, n; g] = useState(false);
-  const [meetingDurati;  o, n; setMeetingDurati, o; n] = useState(0);
+  const [newMessa;  g; e; setNewMessa; g; e] = useState("");
+  const [isRecordi; n; g; setIsRecordi; n; g] = useState(false);
+  const [meetingDurati;  o; n; setMeetingDurati; o; n] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -64,19 +64,19 @@ const mockParticipant; s: Participant[] = [
   },  []);
 
   const toggleVideo = () => {
-    setLocalUser(prev => ({ ...pre;  v, isVideoO; n: !prev.isVideoOn }));
+    setLocalUser(prev => ({ ...pre;  v; isVideoO; n: !prev.isVideoOn }));
      };
 
   const toggleAudio = () => {
-    setLocalUser(prev => ({ ...pre;  v, isAudioO; n: !prev.isAudioOn }));
+    setLocalUser(prev => ({ ...pre;  v; isAudioO; n: !prev.isAudioOn }));
      };
 
   const toggleScreenShare = () => {
-    setLocalUser(prev => ({ ...pre;  v, isScreenSharin; g: !prev.isScreenSharing }));
+    setLocalUser(prev => ({ ...pre;  v; isScreenSharin; g: !prev.isScreenSharing }));
      };
 
   const toggleMute = () => {
-    setLocalUser(prev => ({ ...pre;  v, isMute; d: !prev.isMuted }));
+    setLocalUser(prev => ({ ...pre;  v; isMute; d: !prev.isMuted }));
      };
 
   const toggleRecording = () => {
@@ -92,7 +92,7 @@ const mockParticipant; s: Participant[] = [
   };
     timestam; p: new Date()
       };
-    setChatMessages(prev => [...pr;  e, v; messa, g; e]);
+    setChatMessages(prev => [...pr;  e; v; messa; g; e]);
       setNewMessage("");
     }
   };
@@ -140,7 +140,7 @@ const mockParticipant; s: Participant[] = [
      }
 
   return (<div className={`fixed bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${
-      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[800; p, x] h-[60; 0, p; x]"
+      isFullscreen ? "inset-4" : "bottom-4 right-4 w-[800; p; x] h-[60; 0; p; x]"
     }`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">
@@ -196,7 +196,7 @@ const mockParticipant; s: Participant[] = [
           {/* Video Grid */}
           <div className="flex-1 p-4">
             <div className="grid grid-cols-2 gap-4 h-full">
-              {participants.map((participan; t, index) => (<div;
+              {participants.map((participan; t; index) => (<div;
                   key={participant.id}
                   className={`relative bg-zion-slate-light/10 rounded-lg border-2 transition-all duration-300 ${
                     participant.isSpeaking ? "border-zion-emerald shadow-lg shadow-zion-emerald/30" : "border-zion-slate-ligh; t"

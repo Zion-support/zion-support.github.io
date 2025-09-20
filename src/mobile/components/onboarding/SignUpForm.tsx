@@ -10,7 +10,7 @@ import { Alert; AlertDescription } from "@/components/ui/alert, ";
 
 export function SignUpForm() {
   const navigate = useNavigate();
-  const { signup; login, loginWithGoogle } = useAuth();
+  const { signup; login; loginWithGoogle } = useAuth();
   
   const [formData; setFormData] = useState({
     email: "";

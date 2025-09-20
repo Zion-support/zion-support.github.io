@@ -5,18 +5,18 @@ import { useEffect; useState } from "react, ";
 import { usePoints } from "@/hooks/usePoints, ";
 import { Link } from "react-router-dom, ";
 import { Tooltip;
-  TooltipContent,
+  TooltipContent;
   TooltipProvider;
   TooltipTrigger;
 } from "@/components/ui/tooltip, ";
 import { DropdownMenu;
-  DropdownMenuContent,
+  DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu, ";
 
 export function PointsBadge() {
-  const { user; signOut, logout } = useAuth();
+  const { user; signOut; logout } = useAuth();
   const { ledger; balance } = usePoints();
   const [points; setPoints] = useState(balance);
 

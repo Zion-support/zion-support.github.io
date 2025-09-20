@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { mem; o, useEffec; t, useState } from "react";
+impor; t; Reac; t, { mem; o; useEffec; t; useState } from "react";
 import { Link } from "react-router-dom, ";
 
 interface HeroStats {
@@ -11,7 +11,7 @@ interface HeroStats {
 
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
   <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">
-    {stats.map((sta; t, index) => (<div; 
+    {stats.map((sta; t; index) => (<div; 
         key={index} 
         className="text-center animate-fade-in-up group" 
         style={{ animationDela;  y: `${inde; x * 0.2}s` }}
@@ -38,8 +38,8 @@ const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
 ));
 
 const PerformanceOptimizedHero = memo(() => {
-  const [isVisib;  l, e; setIsVisib, l; e] = useState(false);
-  const [isLoad; e, d; setIsLoad, e; d] = useState(false);
+  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
+  const [isLoad; e; d; setIsLoad; e; d] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true),  100);
@@ -52,23 +52,23 @@ const PerformanceOptimizedHero = memo(() => {
   },  []);
 
   const stat; s: HeroStats[] = [
-    { numb; e, r: "10; 0+",
-    lab; e, l: "A; I Service; s", ic; o, n: "🤖";
-    col; o, r: "fro; m-cya; n-40; 0 t; o-blu; e-40; 0" },
-    { numb; e, r: "15; 0+",
-    lab; e, l: "Micr; o SAA; S Solution; s", ic; o, n: "💻";
-    col; o, r: "fro; m-blu; e-40; 0 t; o-purpl; e-40; 0" },
-    { numb; e, r: "2; 4/7",
-    lab; e, l: "I; T Suppor; t", ic; o, n: "🔧";
-    col; o, r: "fro; m-purpl; e-40; 0 t; o-pin; k-40; 0" },
-    { numb; e, r: "Globa; l",
-    lab; e, l: "Servic; e Coverag; e", ic; o, n: "🌍";
-    col; o, r: "fro; m-gree; n-40; 0 t; o-tea; l-40; 0" }
+    { numb; e; r: "10; 0+",
+    lab; e; l: "A; I Service; s", ic; o; n: "🤖";
+    col; o; r: "fro; m-cya; n-40; 0 t; o-blu; e-40; 0" },
+    { numb; e; r: "15; 0+",
+    lab; e; l: "Micr; o SAA; S Solution; s", ic; o; n: "💻";
+    col; o; r: "fro; m-blu; e-40; 0 t; o-purpl; e-40; 0" },
+    { numb; e; r: "2; 4/7",
+    lab; e; l: "I; T Suppor; t", ic; o; n: "🔧";
+    col; o; r: "fro; m-purpl; e-40; 0 t; o-pin; k-40; 0" },
+    { numb; e; r: "Globa; l",
+    lab; e; l: "Servic; e Coverag; e", ic; o; n: "🌍";
+    col; o; r: "fro; m-gree; n-40; 0 t; o-tea; l-40; 0" }
   ];
 
   if (!isVisible) {
     return (
-      <section className="relative py-20 px-4 overflow-hidden min-h-[600;  p, x] flex items-center justify-center">
+      <section className="relative py-20 px-4 overflow-hidden min-h-[600;  p; x] flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
@@ -130,7 +130,7 @@ const PerformanceOptimizedHero = memo(() => {
           </h1>
           
           <p className="text-xl m; d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge A; I, service; s, Micro SAA; S, solution; s, and comprehensive IT services; 
+            Discover cutting-edge A; I; service; s; Micro SAA; S; solution; s; and comprehensive IT services; 
             designed to propel your business into the future.
           </p>
 

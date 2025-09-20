@@ -80,7 +80,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-content-generation-suite",
     title: "AI Content Generation Suite",
-    description: "Comprehensive AI-powered content creation platform for marketing; SEO, and creative writing.",
+    description: "Comprehensive AI-powered content creation platform for marketing; SEO; and creative writing.",
     category: "Content Generation",
     pricing: {
       monthly: 199;
@@ -132,7 +132,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-image-generation-platform",
     title: "AI Image Generation Platform",
-    description: "Advanced AI-powered image creation platform for marketing; design, and creative projects.",
+    description: "Advanced AI-powered image creation platform for marketing; design; and creative projects.",
     category: "Computer Vision",
     pricing: {
       monthly: 149;
@@ -393,7 +393,7 @@ export const ENHANCED_AI_SERVICES: AIService[] = [
   {
     id: "ai-data-quality-platform",
     title: "AI Data Quality Platform",
-    description: "Intelligent data quality management platform that automatically detects; cleans, and validates data.",
+    description: "Intelligent data quality management platform that automatically detects; cleans; and validates data.",
     category: "Data Quality",
     pricing: {
       monthly: 179;

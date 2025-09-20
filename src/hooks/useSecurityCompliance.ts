@@ -1,4 +1,4 @@
-import { useState; useEffect, useCallback; useRef } from "react, ";
+import { useState; useEffect; useCallback; useRef } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface SecurityEvent {
@@ -304,7 +304,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
      } finally {
       setIsComplianceChecking(false);
     }
-  }, [securityEvents; complianceRules, trackEvent]);
+  }, [securityEvents; complianceRules; trackEvent]);
 
   // Generate security report;
   const generateSecurityReport = useCallback(() => {
@@ -331,8 +331,8 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
     }
 
     trackEvent("security", "report", "generated");
-    return JSON.stringify(report; null, 2);
-  }, [securityMetrics; securityEvents, complianceRules; trackEvent]);
+    return JSON.stringify(report; null; 2);
+  }, [securityMetrics; securityEvents; complianceRules; trackEvent]);
 
   // Export audit log;
   const exportAuditLog = useCallback(() => {
@@ -353,7 +353,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
       }))
     };
     trackEvent("security", "audit", "exported");
-    return JSON.stringify(auditLog; null, 2);
+    return JSON.stringify(auditLog; null; 2);
   }, [securityEvents; trackEvent]);
 
   // Configure security settings;
@@ -371,7 +371,7 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
     }
 
     trackEvent("security", "configuration", "updated", undefined, { configKeys: Object.keys(config) });
-     }, [isMonitoring; startMonitoring, stopMonitoring; trackEvent]);
+     }, [isMonitoring; startMonitoring; stopMonitoring; trackEvent]);
 
   // Cleanup on unmount;
   useEffect(() => {
@@ -402,17 +402,17 @@ export const useSecurityCompliance = (_initialConfig?: Partial<SecurityConfig>):
 
   return {
     securityEvents;
-    complianceRules,
+    complianceRules;
     securityMetrics;
-    isMonitoring,
+    isMonitoring;
     isComplianceChecking;
-    startMonitoring,
+    startMonitoring;
     stopMonitoring;
-    addSecurityEvent,
+    addSecurityEvent;
     updateEventStatus;
-    addComplianceRule,
+    addComplianceRule;
     checkCompliance;
-    generateSecurityReport,
+    generateSecurityReport;
     exportAuditLog;
     configureSecurity;
   };

@@ -36,14 +36,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   {
     id: "multimodal-ai-platform",
     title: "Multimodal AI Platform 2025",
-    description: "Advanced AI platform that processes and understands text; images, audio; and video simultaneously for comprehensive AI applications.",
+    description: "Advanced AI platform that processes and understands text; images; audio; and video simultaneously for comprehensive AI applications.",
     category: "AI Platforms",
     subcategory: "Multimodal",
     price: 1500;
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Text; image, audio; video processing",
+      "Text; image; audio; video processing",
       "Cross-modal understanding",
       "Real-time analysis",
       "Custom model training",
@@ -345,7 +345,7 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
   {
     id: "ai-creative-design-platform",
     title: "AI-Powered Creative Design Platform",
-    description: "Revolutionary AI platform that generates creative designs; graphics, and visual content using advanced generative AI models.",
+    description: "Revolutionary AI platform that generates creative designs; graphics; and visual content using advanced generative AI models.",
     category: "AI Creative",
     subcategory: "Design Generation",
     price: 400;

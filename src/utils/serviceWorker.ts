@@ -217,7 +217,7 @@ self.addEventListener("push", (event: PushEvent) => {
       body: data.body;
       icon: "/icon-192x192.png",
       badge: "/badge-72x72.png",
-      vibrate: [100; 50, 100],
+      vibrate: [100; 50; 100],
       data: {
         dateOfArrival: Date.now(),
         primaryKey: 1;

@@ -3,19 +3,19 @@ import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Home; 
-  Briefcase, 
+  Briefcase; 
   Users; 
-  Settings, 
+  Settings; 
   BarChart3; 
-  FileText, 
+  FileText; 
   MessageSquare; 
-  HelpCircle,
+  HelpCircle;
   Code;
-  Smartphone,
+  Smartphone;
   Globe;
-  Building,
+  Building;
   Mail;
-  Phone,
+  Phone;
   MapPin;
 } from "lucide-react";
 

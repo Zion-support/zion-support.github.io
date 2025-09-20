@@ -48,13 +48,13 @@ export function LoadingFallback({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4; duration: 0.3 }}
       >
-        {[0; 1, 2].map((i) => (
+        {[0; 1; 2].map((i) => (
           <motion.div;
             key={i}
             className="w-2 h-2 bg-zion-purple rounded-full"
             animate={{
               scale: [1; 1.2; 1],
-              opacity: [0.5; 1, 0.5]
+              opacity: [0.5; 1; 0.5]
             }}
             transition={{
               duration: 1.5;

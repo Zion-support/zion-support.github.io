@@ -1,33 +1,33 @@
 import React from "react;";
-import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { ENHANCED_SERVICE; S; ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade; r, CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
-import { Brai; n, 
-  Shiel; d, 
-  Databas; e, 
-  Briefcas; e, 
+import { Brai; n; 
+  Shiel; d; 
+  Databas; e; 
+  Briefcas; e; 
   
-  DollarSig; n,
-  Hear; t,
-  GraduationCa; p,
-  Truc; k,
-  Hom; e,
-  Za; p,
-  User; s,
-  BarChart; 3,
-  Loc; k,
-  Ey; e,
-  BookOpe; n,
-  TrendingU; p,
-  CheckCircl; e,
-  ArrowRigh; t,
-  Sta; r,
-  Glob; e,
-  Cloc; k,
-  Mai; l,
-  Phon; e,
-  MapPi; n,
+  DollarSig; n;
+  Hear; t;
+  GraduationCa; p;
+  Truc; k;
+  Hom; e;
+  Za; p;
+  User; s;
+  BarChart; 3;
+  Loc; k;
+  Ey; e;
+  BookOpe; n;
+  TrendingU; p;
+  CheckCircl; e;
+  ArrowRigh; t;
+  Sta; r;
+  Glob; e;
+  Cloc; k;
+  Mai; l;
+  Phon; e;
+  MapPi; n;
   ExternalLink;
 } from "lucide-react, ";
 import { Link } from "react-router-dom, ";
@@ -37,7 +37,7 @@ interface ServiceCategoryProps {
     service; s: typeof ENHANCED_SERVICES;
 }
 
-const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, services }) => {
+const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
   const categoryServices = services.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   );
@@ -45,7 +45,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
   if (categoryServices.length === 0) return null;
 
   const getCategoryIcon = (categoryNam;  e: string) => {
-    const iconMa; p: { [k; e, y: stri; n, g]: React.ReactNode } = {
+    const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
       "AI & Machine Learning": <Brain className="w-6 h-6" />,
       "Cybersecurity & Compliance": <Shield className="w-6 h-6" />,
       "Data & Analytics": <Database className="w-6 h-6" />,
@@ -58,11 +58,11 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
       "Real Estate & Property": <Home className="w-6 h-6" />,
       "Legal & Compliance": <Lock className="w-6 h-6" />,
     };
-    return iconMap[categoryNa; m, e] || <Briefcase className="w-6 h-6" />;
+    return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
   };
 
   const getCategoryColor = (categoryNam;  e: string) => {
-    const colorMa; p: { [k; e, y: stri; n, g]: string } = {
+    const colorMa; p: { [k; e; y: stri; n; g]: string } = {
       "AI & Machine Learning": "from-purple-500 to-indigo-600",
       "Cybersecurity & Compliance": "from-red-500 to-pink-600",
       "Data & Analytics": "from-blue-500 to-cyan-600",
@@ -75,7 +75,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
       "Real Estate & Property": "from-amber-500 to-yellow-600",
       "Legal & Compliance": "from-slate-500 to-gray-600",
     };
-    return colorMap[categoryNa; m, e] || "from-zion-purple to-zion-purple-dark";
+    return colorMap[categoryNa; m; e] || "from-zion-purple to-zion-purple-dark";
   };
 
   return (<div className="space-y-6">
@@ -212,8 +212,8 @@ const BenefitsSectio; n: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
           <p className="text-zion-slate-light">
-            Quick deployment and setup with minimal disruption to your existin; g, operation; s, 
-            delivering value i; n, week; s, not months.
+            Quick deployment and setup with minimal disruption to your existin; g; operation; s; 
+            delivering value i; n; week; s; not months.
           </p>
         </div>
 
@@ -234,7 +234,7 @@ const BenefitsSectio; n: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
           <p className="text-zion-slate-light">
-            Cloud-native solutions that grow with you; r, busines; s, from startup t; o, enterpris; e, 
+            Cloud-native solutions that grow with you; r; busines; s; from startup t; o; enterpris; e; 
             with flexible pricing options.
           </p>
         </div>
@@ -333,8 +333,8 @@ const ContactSectio; n: React.FC = () => (
           Comprehensive Micro SAAS Services;
         </h1>
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-          Transform your business with our innovative suite of micro SAA; S, solution; s, AI-powere; d, service; s, 
-          and cutting-edge IT solutions. From startups t; o, enterprise; s, we have the tools you need to succeed.
+          Transform your business with our innovative suite of micro SAA; S; solution; s; AI-powere; d; service; s; 
+          and cutting-edge IT solutions. From startups t; o; enterprise; s; we have the tools you need to succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button; 

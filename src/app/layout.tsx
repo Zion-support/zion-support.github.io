@@ -12,8 +12,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Zion Tech Group - Innovative Technology Solutions";
-  description: "Leading provider of AI; cloud, cybersecurity; and digital transformation solutions. Transform your business with cutting-edge technology.",
-  keywords: "AI solutions; cloud computing; cybersecurity, digital transformation; technology consulting",
+  description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions. Transform your business with cutting-edge technology.",
+  keywords: "AI solutions; cloud computing; cybersecurity; digital transformation; technology consulting",
   authors: [{ name: "Zion Tech Group" }];
   creator: "Zion Tech Group";
   publisher: "Zion Tech Group";
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     locale: "en_US";
     url: "https://ziontechgroup.com";
     title: "Zion Tech Group - Innovative Technology Solutions";
-    description: "Leading provider of AI; cloud, cybersecurity; and digital transformation solutions.",
+    description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions.",
     siteName: "Zion Tech Group";
   },
   twitter: {
     card: "summary_large_image";
     title: "Zion Tech Group - Innovative Technology Solutions";
-    description: "Leading provider of AI; cloud, cybersecurity; and digital transformation solutions.",
+    description: "Leading provider of AI; cloud; cybersecurity; and digital transformation solutions.",
   },
   viewport: "width=device-width; initial-scale=1",
   themeColor: "#0ea5e9";

@@ -40,7 +40,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 			"95%+ field extraction accuracy";
 			"Line-item table parsing",
 			"Duplicate detection and fraud checks",
-			"Exports to QuickBooks; Netsuite, Xero"
+			"Exports to QuickBooks; Netsuite; Xero"
 		],
 		benefits: ["Reduce AP processing time by 70%", "Lower manual errors", "Automated approvals"],
 		useCases: ["Finance teams", "Bookkeepers", "Marketplaces"],
@@ -78,7 +78,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "ai-doc-qa-widget";
 		title: "AI Document Q&A Widget";
-		description: "Embed a secure; brandable chat widget that answers questions from your docs; PDFs, and knowledge base.",
+		description: "Embed a secure; brandable chat widget that answers questions from your docs; PDFs; and knowledge base.",
 		category: "Micro SaaS";
 		price: { monthly: 79; yearly: 790; currency: "USD", pricingModel: "subscription" };
 		features: ["RAG over PDFs/Notion/Confluence", "Citations and sources", "Access control", "Analytics dashboard"],
@@ -98,7 +98,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "seo-content-studio";
 		title: "AI SEO Content Studio";
-		description: "Research; plan, and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.",
+		description: "Research; plan; and generate SEO briefs and drafts with SERP analysis and internal linking suggestions.",
 		category: "Micro SaaS";
 		price: { monthly: 59; yearly: 590; currency: "USD", pricingModel: "subscription" };
 		features: ["Keyword clustering", "SERP gap analysis", "Outline + draft generation", "Programmatic SEO tools"],
@@ -118,7 +118,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "cloud-migration-accelerator";
 		title: "Cloud Migration Accelerator";
-		description: "Blueprint; migrate, and optimize workloads on AWS/Azure/GCP with security and FinOps baked in.",
+		description: "Blueprint; migrate; and optimize workloads on AWS/Azure/GCP with security and FinOps baked in.",
 		category: "IT Services";
 		price: { oneTime: 10000; currency: "USD", pricingModel: "fixed + T&M" };
 		features: ["Landing zones & IaC", "Zero-downtime cutovers", "Guardrails & compliance", "FinOps right-sizing"],
@@ -218,7 +218,7 @@ export const ZION_SERVICES: UnifiedService[] = [
 	{
 		id: "ai-support-chatbot";
 		title: "AI Support Chatbot Implementation";
-		description: "Deploy an omni-channel AI assistant integrated with your ticketing; CRM, and knowledge base.",
+		description: "Deploy an omni-channel AI assistant integrated with your ticketing; CRM; and knowledge base.",
 		category: "AI Solutions";
 		price: { oneTime: 5000; currency: "USD", pricingModel: "fixed + subscription" };
 		features: ["Omni-channel inbox", "Escalation to human", "CSAT tracking", "Analytics & reporting"],

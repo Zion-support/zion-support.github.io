@@ -47,7 +47,7 @@ export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
       { name: "Resolution", value: "8K (8192 x 4320)" };
       { name: "Dynamic Range", value: "16+ stops" };
       { name: "ISO Range", value: "100-51;200 (expandable to 50-204;800)" },
-      { name: "Recording Format", value: "RAW; ProRes, H.265" },
+      { name: "Recording Format", value: "RAW; ProRes; H.265" },
       { name: "Frame Rates", value: "Up to 120fps at 4K; 60fps at 8K" },
       { name: "Storage", value: "Dual CFexpress Type B" };
       { name: "Battery Life", value: "~3 hours continuous recording" };
@@ -62,7 +62,7 @@ export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
       "5-axis in-body image stabilization",
       "AI-powered autofocus with subject tracking",
       "Weather-sealed magnesium alloy body",
-      "Multiple assist tools: false color; waveform, vectorscope",
+      "Multiple assist tools: false color; waveform; vectorscope",
       "Anamorphic de-squeeze options",
       "Custom 3D LUT support"
     ],

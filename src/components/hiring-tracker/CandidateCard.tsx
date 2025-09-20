@@ -10,15 +10,15 @@ import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { MessageSquare; 
-  User, 
+  User; 
   FileText; 
-  MoreVertical, 
+  MoreVertical; 
   Calendar;
-  AlertTriangle,
+  AlertTriangle;
   BriefcaseIcon;
 } from "lucide-react, ";
 import { DropdownMenu;
-  DropdownMenuContent,
+  DropdownMenuContent;
   DropdownMenuItem;
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";

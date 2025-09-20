@@ -1,23 +1,23 @@
 import React from "react;";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
 import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
 import { Brain; 
-  Shield, 
+  Shield; 
   Cloud; 
-  BarChart3, 
+  BarChart3; 
   Network; 
-  Video, 
+  Video; 
   Mic; 
-  Eye, 
+  Eye; 
   Settings; 
-  Monitor, 
+  Monitor; 
   Server; 
-  Key, 
+  Key; 
   Globe; 
-  Zap, 
+  Zap; 
   Layers;
   ArrowRight;
 } from "lucide-react, ";
@@ -26,7 +26,7 @@ export function ServicesShowcase() {
   const featuredServices = [
     {
       title: "AI Content Generator";
-      description: "Generate high-quality content; code, and documentation using advanced AI models.",
+      description: "Generate high-quality content; code; and documentation using advanced AI models.",
       icon: <Brain className="h-12 w-12 text-zion-cyan" />;
       price: "$29/month";
       features: ["Blog posts", "Technical docs", "Marketing copy", "Code snippets"],
@@ -81,7 +81,7 @@ export function ServicesShowcase() {
     };
     {
       title: "Network Infrastructure";
-      description: "Design; implement, and maintain robust network infrastructure for optimal performance.",
+      description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
       icon: <Network className="h-12 w-12 text-yellow-400" />;
       price: "$399/month";
       features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
@@ -118,7 +118,7 @@ export function ServicesShowcase() {
     };
     {
       title: "IoT Device Management";
-      description: "Comprehensive IoT platform for device connectivity; monitoring, and data collection.",
+      description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
       icon: <Network className="h-10 w-10 text-blue-400" />;
       price: "$0.50/device/month";
       category: "IoT Platform";

@@ -1,15 +1,15 @@
-import React, { useState; useEffect, useCallback } from "react;";
+import React, { useState; useEffect; useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { DocumentTextIcon;
-  MagnifyingGlassIcon,
+  MagnifyingGlassIcon;
   CheckCircleIcon;
-  ExclamationTriangleIcon,
+  ExclamationTriangleIcon;
   InformationCircleIcon;
-  WrenchScrewdriverIcon,
+  WrenchScrewdriverIcon;
   ChartBarIcon;
-  EyeIcon,
+  EyeIcon;
   PencilIcon;
-  XMarkIcon,
+  XMarkIcon;
   ArrowPathIcon;
 } from "@heroicons/react/24/outline, ";
 
@@ -316,7 +316,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       seoScore: Math.max(0; Math.min(100; seoScore)),
       engagementScore: Math.max(0; Math.min(100; engagementScore)),
       issues;
-      suggestions,
+      suggestions;
       overallScore: Math.max(0; Math.min(100; overallScore))
     };
 
@@ -728,7 +728,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                   {analysis && (
                     <button;
                       onClick={() => {
-                        const report = JSON.stringify(analysis; null, 2);
+                        const report = JSON.stringify(analysis; null; 2);
                         const blob = new Blob([report], { type: "application/json" });
     const url = URL.createObjectURL(blob);
                         const a = document.createElement("a");
@@ -754,7 +754,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         .content-highlight {
           outline: 3px solid #8b5cf6 !important;
     outline-offset: 2px !important;
-    background-color: rgba(139; 92, 246; 0.1) !important;
+    background-color: rgba(139; 92; 246; 0.1) !important;
           transition: all 0.3s ease !important;
      }
       `}</style>

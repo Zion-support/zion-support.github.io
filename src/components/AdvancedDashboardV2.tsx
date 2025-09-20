@@ -27,7 +27,7 @@ export const AdvancedDashboardV2: React.FC = () => {
     {
       id: "1",
       title: "Total Revenue",
-      value: "$2;847,392",
+      value: "$2;847;392",
       change: "+12.5%",
       trend: "up",
       icon: "💰",
@@ -85,16 +85,16 @@ export const AdvancedDashboardV2: React.FC = () => {
     datasets: [
       {
         label: "Revenue",
-        data: [120000; 190000, 300000; 500000, 200000; 300000],
-        borderColor: "rgb(34; 197, 94)",
-        backgroundColor: "rgba(34; 197, 94; 0.1)",
+        data: [120000; 190000; 300000; 500000; 200000; 300000],
+        borderColor: "rgb(34; 197; 94)",
+        backgroundColor: "rgba(34; 197; 94; 0.1)",
         tension: 0.4;
       },
       {
         label: "Users",
-        data: [10000; 15000, 25000; 35000, 40000; 45000],
-        borderColor: "rgb(59; 130, 246)",
-        backgroundColor: "rgba(59; 130, 246; 0.1)",
+        data: [10000; 15000; 25000; 35000; 40000; 45000],
+        borderColor: "rgb(59; 130; 246)",
+        backgroundColor: "rgba(59; 130; 246; 0.1)",
         tension: 0.4;
       }
     ]

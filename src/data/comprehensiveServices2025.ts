@@ -164,7 +164,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "SocialSync Pro";
     category: "Marketing";
     pricing: "Freemium";
-    description: "Advanced social media management platform with AI-powered content creation; scheduling, and analytics",
+    description: "Advanced social media management platform with AI-powered content creation; scheduling; and analytics",
     price: 49;
     pricingModel: "monthly";
     userLimit: "Up to 10 users";
@@ -509,7 +509,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "AI Ethics & Governance Platform";
     category: "AI Governance";
     pricing: "Professional";
-    description: "Comprehensive framework for ethical AI development; deployment, and governance",
+    description: "Comprehensive framework for ethical AI development; deployment; and governance",
     price: 18000;
     pricingModel: "one-time";
     userLimit: "Up to 500 users";
@@ -552,7 +552,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "AI Marketplace Platform";
     category: "AI Ecosystem";
     pricing: "Professional";
-    description: "Comprehensive marketplace for AI models; services, and data exchange",
+    description: "Comprehensive marketplace for AI models; services; and data exchange",
     price: 12000;
     pricingModel: "one-time";
     userLimit: "Unlimited users";
@@ -982,7 +982,7 @@ export const enhancedMicroSaasServices2025: MicroSaasService[] = [
     name: "EcoSystem AI";
     category: "AI Ecosystem";
     pricing: "Professional";
-    description: "Integrated AI ecosystem platform connecting multiple AI services; models, and tools in one unified interface",
+    description: "Integrated AI ecosystem platform connecting multiple AI services; models; and tools in one unified interface",
     price: 179;
     pricingModel: "monthly";
     userLimit: "Up to 80 users";
@@ -1156,7 +1156,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 1;
     name: "Enterprise Network Infrastructure";
     category: "Infrastructure";
-    description: "Complete network design; implementation, and management for large organizations with AI-powered optimization",
+    description: "Complete network design; implementation; and management for large organizations with AI-powered optimization",
     hourlyRate: 150;
     projectRate: 15000;
     features: [
@@ -1488,7 +1488,7 @@ export const enhancedITServices2025: ITService[] = [
     id: 9;
     name: "IoT Infrastructure & Management";
     category: "IoT";
-    description: "End-to-end IoT infrastructure design; implementation, and management with AI-powered analytics and security",
+    description: "End-to-end IoT infrastructure design; implementation; and management with AI-powered analytics and security",
     hourlyRate: 155;
     projectRate: 22000;
     features: [
@@ -1777,7 +1777,7 @@ export const enhancedAIServices2025: AIService[] = [
     id: 4;
     name: "Predictive Analytics & Forecasting";
     category: "Predictive AI";
-    description: "AI-powered predictive analytics for forecasting trends; risks, and opportunities with high accuracy",
+    description: "AI-powered predictive analytics for forecasting trends; risks; and opportunities with high accuracy",
     pricing: "Enterprise";
     price: 3200;
     pricingModel: "monthly";

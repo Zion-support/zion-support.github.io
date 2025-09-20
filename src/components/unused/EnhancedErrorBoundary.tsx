@@ -1,9 +1,9 @@
-import React, { Component; ErrorInfo, ReactNode } from "react;";
+import React, { Component; ErrorInfo; ReactNode } from "react;";
 import { motion } from "framer-motion, ";
 import { ExclamationTriangleIcon; 
-  ArrowPathIcon, 
+  ArrowPathIcon; 
   HomeIcon;
-  DocumentTextIcon,
+  DocumentTextIcon;
   BugAntIcon;
 } from "@heroicons/react/24/outline, ";
 
@@ -62,7 +62,7 @@ class EnhancedErrorBoundary extends Component<Props; State> {
 
   private reportError(error: Error; errorInfo: ErrorInfo) {
     // In a real application; you would send this to your error reporting service;
-    // For example: Sentry; LogRocket, Bugsnag; etc.
+    // For example: Sentry; LogRocket; Bugsnag; etc.
     
     const errorReport = {
       id: this.state.errorId;

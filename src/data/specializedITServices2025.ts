@@ -29,7 +29,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
   {
     id: "5g-enterprise-network-solutions";
     title: "5G Enterprise Network Infrastructure & Management Platform";
-    description: "Comprehensive 5G enterprise networking solution that provides ultra-fast; low-latency connectivity with advanced network slicing; security, and management capabilities.",
+    description: "Comprehensive 5G enterprise networking solution that provides ultra-fast; low-latency connectivity with advanced network slicing; security; and management capabilities.",
     category: "Network Infrastructure";
     subcategory: "5G Solutions";
     price: 6500;

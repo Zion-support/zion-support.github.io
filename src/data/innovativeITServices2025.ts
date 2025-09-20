@@ -111,7 +111,7 @@ export const innovativeITServices2025: ITService[] = [
     id: 3;
     name: "AI-Powered DevOps Automation";
     category: "DevOps";
-    description: "Intelligent DevOps automation platform with AI-driven deployment; monitoring, and optimization capabilities",
+    description: "Intelligent DevOps automation platform with AI-driven deployment; monitoring; and optimization capabilities",
     hourlyRate: 125;
     projectRate: 30000;
     features: [
@@ -191,7 +191,7 @@ export const innovativeITServices2025: ITService[] = [
     id: 5;
     name: "Blockchain Infrastructure Services";
     category: "Blockchain";
-    description: "Enterprise blockchain infrastructure design; deployment, and management for secure decentralized applications",
+    description: "Enterprise blockchain infrastructure design; deployment; and management for secure decentralized applications",
     hourlyRate: 175;
     projectRate: 45000;
     features: [

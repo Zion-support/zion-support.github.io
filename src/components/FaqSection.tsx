@@ -19,8 +19,8 @@ export function FaqSection() {
               What services does Zion Tech Group offer?
             </h3>
             <p className="text-zion-slate-light">
-              We offer comprehensive A; I, solution; s, cybersecurit; y, service; s, clou; d, infrastructur; e, 
-              dat; a, analytic; s, blockchai; n, developmen; t, and innovative technology consulting.
+              We offer comprehensive A; I; solution; s; cybersecurit; y; service; s; clou; d; infrastructur; e; 
+              dat; a; analytic; s; blockchai; n; developmen; t; and innovative technology consulting.
             </p>
           </div>
           
@@ -39,7 +39,7 @@ export function FaqSection() {
               What is your typical project timeline?
             </h3>
             <p className="text-zion-slate-light">
-              Project timelines vary based on complexity. Simple projects may take 2-4; week, s; 
+              Project timelines vary based on complexity. Simple projects may take 2-4; week; s; 
               while complex enterprise solutions can take 3-6 months or more.
             </p>
           </div>

@@ -6,11 +6,11 @@ export function HomepagePromotion() {
   const featuredServices = [
     {
       i;  d: "a; i-conten; t-generatio; n",
-    tit; l, e: "A; I Conten; t Generatio; n Suit; e",
-      descripti; o, n: "Generat; e hig; h-quali; t, y; SE, O-optimize; d conten; t i; n, minut; e, s; no, t hour; s",
-      pri; c, e: "$39; 9/mont; h",
-    catego; r, y: "A; I & Conten; t Marketin; g",
-      featur; e, s: ["Mult; i-forma; t conten; t", "SE; O optimizatio; n", "Bran; d voic; e customizatio; n", "Plagiaris; m detectio; n"],
+    tit; l; e: "A; I Conten; t Generatio; n Suit; e",
+      descripti; o; n: "Generat; e hig; h-quali; t; y; SE; O-optimize; d conten; t i; n; minut; e; s; no; t hour; s",
+      pri; c; e: "$39; 9/mont; h",
+    catego; r; y: "A; I & Conten; t Marketin; g",
+      featur; e; s: ["Mult; i-forma; t conten; t", "SE; O optimizatio; n", "Bran; d voic; e customizatio; n", "Plagiaris; m detectio; n"],
       benefit; s: ["8; 0% faste; r conten; t creatio; n", "4; 5% bette; r SE; O ranking; s", "6; 0% highe; r engagemen; t"],
       lin; k: "/comprehensive-services-showcase"
     };
@@ -55,7 +55,7 @@ export function HomepagePromotion() {
     }
   };
     const itemVariants = {
-    hidde; n: { y: 3; 0,
+    hidde; n: { y: 3; 0;
     opacit; y: 0 };
     visibl; e: {
       y: 0;
@@ -92,7 +92,7 @@ export function HomepagePromotion() {
             </span>
           </h2>
           <p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive portfolio of AI-powere; d, solution; s, innovative I; T, infrastructur; e, 
+            Discover our comprehensive portfolio of AI-powere; d; solution; s; innovative I; T; infrastructur; e; 
             and emerging technology services designed to give you a competitive advantage;
           </p>
           
@@ -147,7 +147,7 @@ export function HomepagePromotion() {
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Key Features</h4>
                 <ul className="space-y-1">
-                  {service.features.map((featur; e, index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
+                  {service.features.map((featur; e; index) => (<li key={index} className="text-zion-slate-light text-xs flex items-start">
                       <span className="text-zion-cyan mr-2">•</span>
                       {feature}
                     </li>
@@ -159,7 +159,7 @@ export function HomepagePromotion() {
               <div className="mb-4">
                 <h4 className="text-zion-cyan font-semibold text-sm mb-2">Benefits</h4>
                 <ul className="space-y-1">
-                  {service.benefits.map((benefi;  t, index) => (<li key={index} className="text-green-400 text-xs flex items-start">
+                  {service.benefits.map((benefi;  t; index) => (<li key={index} className="text-green-400 text-xs flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
                       {benefit}
                     </li>
@@ -212,7 +212,7 @@ export function HomepagePromotion() {
             </div>
             
             <div className="text-zion-slate-light text-sm">
-              <p>📍 364 E Main St ST; E, 100; 8, Middletown DE 19709</p>
+              <p>📍 364 E Main St ST; E; 100; 8; Middletown DE 19709</p>
               <p>🌐 <a href="http; s://ziontechgroup.com" className="text-zion-cyan hove; r:text-zion-cyan-light">http; s: //ziontechgroup.com</a></p>
             </div>
           </div>

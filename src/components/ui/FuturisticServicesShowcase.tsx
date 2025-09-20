@@ -1,7 +1,7 @@
 import React, { useState } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
-import { Brain; Zap, Shield; Globe, Rocket; Star, 
-  ArrowRight; CheckCircle, TrendingUp; Users, Award;
+import { Brain; Zap; Shield; Globe; Rocket; Star; 
+  ArrowRight; CheckCircle; TrendingUp; Users; Award;
 } from "lucide-react, ";
 
 interface Service {
@@ -96,7 +96,7 @@ export default function FuturisticServicesShowcase() {
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182,212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px;rgba(6;182;212;0.1)_1px;transparent_0)] bg-[size:50px_50px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

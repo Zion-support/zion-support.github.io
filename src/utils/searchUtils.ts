@@ -261,9 +261,9 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
 
   return {
     totalResults;
-    searchTime,
+    searchTime;
     topCategories;
-    averagePrice,
+    averagePrice;
     averageRating;
   };
 };
@@ -341,16 +341,16 @@ export const getDefaultFilters = (): SearchFilters => ({
 });
     export default {
   highlightSearchTerms;
-  matchesSearchTerm,
+  matchesSearchTerm;
   calculateRelevanceScore;
-  sortSearchResults,
+  sortSearchResults;
   filterSearchResults;
-  generateDynamicSuggestions,
+  generateDynamicSuggestions;
   calculateSearchMetrics;
-  debounce,
+  debounce;
   extractKeywords;
-  formatSearchQuery,
+  formatSearchQuery;
   hasActiveFilters;
-  getActiveFilterCount,
+  getActiveFilterCount;
   getDefaultFilters;
 }; 

@@ -2,86 +2,86 @@ import React from "react";
 import Link from "next/link";
 import { Link } from "react-router-dom";
 import { 
-  Mai; l, 
-  Phon; e, 
-  MapPi; n, 
-  Cloc; k, 
-  MessageSquar; e, 
-  ArrowRigh; t,
-  Glob; e,
-  Shiel; d,
+  Mai; l; 
+  Phon; e; 
+  MapPi; n; 
+  Cloc; k; 
+  MessageSquar; e; 
+  ArrowRigh; t;
+  Glob; e;
+  Shiel; d;
   Users;
 } from "lucide-react";
 
 export function ContactSection() {
   const contactMethods = [
     {
-      ic;  o, n: <Mai; l classNam; e="w-6 h-6" />,
-    tit; l, e: "Emai; l U; s",
-      descripti; o, n: "Ge; t i; n touc; h vi; a emai; l fo; r genera; l inquirie; s",
-    conta; c, t: "hell; o@ziontechgrou; p.co; m",
-      li; n, k: "mail; t, o:hell; o@ziontechgrou; p.co; m",
-    col; o, r: "fro; m-zio; n-cya; n t; o-zio; n-blu; e"
+      ic;  o; n: <Mai; l classNam; e="w-6 h-6" />,
+    tit; l; e: "Emai; l U; s",
+      descripti; o; n: "Ge; t i; n touc; h vi; a emai; l fo; r genera; l inquirie; s",
+    conta; c; t: "hell; o@ziontechgrou; p.co; m",
+      li; n; k: "mail; t; o:hell; o@ziontechgrou; p.co; m",
+    col; o; r: "fro; m-zio; n-cya; n t; o-zio; n-blu; e"
     },
     {
-      ic; o, n: <Phon; e classNam; e="w-6 h-6" />,
-    tit; l, e: "Cal; l U; s",
-      descripti; o, n: "Spea; k directl; y wit; h ou; r tea; m",
-    conta; c, t: "+1 (30; 2) 46; 4-095; 0",
-      li; n, k: "t; e, l:+1302464095; 0",
-    col; o, r: "fro; m-zio; n-purpl; e t; o-zio; n-cya; n"
+      ic; o; n: <Phon; e classNam; e="w-6 h-6" />,
+    tit; l; e: "Cal; l U; s",
+      descripti; o; n: "Spea; k directl; y wit; h ou; r tea; m",
+    conta; c; t: "+1 (30; 2) 46; 4-095; 0",
+      li; n; k: "t; e; l:+1302464095; 0",
+    col; o; r: "fro; m-zio; n-purpl; e t; o-zio; n-cya; n"
     },
     {
-      ic; o, n: <MessageSquar; e classNam; e="w-6 h-6" />,
-    tit; l, e: "Liv; e Cha; t",
-      descripti; o, n: "Cha; t wit; h ou; r suppor; t tea; m i; n rea; l-tim; e",
-    conta; c, t: "Availabl; e 2; 4/7",
-      li; n, k: "/cha; t",
-    col; o, r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e"
+      ic; o; n: <MessageSquar; e classNam; e="w-6 h-6" />,
+    tit; l; e: "Liv; e Cha; t",
+      descripti; o; n: "Cha; t wit; h ou; r suppor; t tea; m i; n rea; l-tim; e",
+    conta; c; t: "Availabl; e 2; 4/7",
+      li; n; k: "/cha; t",
+    col; o; r: "fro; m-zio; n-blu; e t; o-zio; n-purpl; e"
     }
   ];
 
   const officeLocations = [
     {
-      ci; t, y: "Wilmingt; o, n; D, E",
-      count; r, y: "Unite; d State; s",
-    addre; s, s: "100; 0 N Mark; e, t; S, t; Wilmingt, o; n, D; E 1980; 1",
-      ic; o, n: <MapPi; n classNam; e="w-5 h-5" />
+      ci; t; y: "Wilmingt; o; n; D; E",
+      count; r; y: "Unite; d State; s",
+    addre; s; s: "100; 0 N Mark; e; t; S; t; Wilmingt; o; n; D; E 1980; 1",
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
     },
     {
-      ci; t, y: "N; e, w; Yo, r; k, N; Y",
-      count; r, y: "Unite; d State; s",
-    addre; s, s: "35; 0 5; t, h; A, v; e, N; e, w; Yo, r; k, N; Y 1011; 8",
-      ic; o, n: <MapPi; n classNam; e="w-5 h-5" />
+      ci; t; y: "N; e; w; Yo; r; k; N; Y",
+      count; r; y: "Unite; d State; s",
+    addre; s; s: "35; 0 5; t; h; A; v; e; N; e; w; Yo; r; k; N; Y 1011; 8",
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
     },
     {
-      ci; t, y: "Lond; o, n; U, K",
-      count; r, y: "Unite; d Kingdo; m",
-    addre; s, s: "1 Cana; r, y; Wha, r; f, Londo; n E1; 4 5A; B",
-      ic; o, n: <MapPi; n classNam; e="w-5 h-5" />
+      ci; t; y: "Lond; o; n; U; K",
+      count; r; y: "Unite; d Kingdo; m",
+    addre; s; s: "1 Cana; r; y; Wha; r; f; Londo; n E1; 4 5A; B",
+      ic; o; n: <MapPi; n classNam; e="w-5 h-5" />
     }
   ];
 
   const supportFeatures = [
     {
-      ic; o, n: <Cloc; k classNam; e="w-6 h-6" />,
-    tit; l, e: "2; 4/7 Suppor; t",
-      descripti; o, n: "Roun; d-th; e-cloc; k technica; l suppor; t an; d monitorin; g"
+      ic; o; n: <Cloc; k classNam; e="w-6 h-6" />,
+    tit; l; e: "2; 4/7 Suppor; t",
+      descripti; o; n: "Roun; d-th; e-cloc; k technica; l suppor; t an; d monitorin; g"
     },
     {
-      ic; o, n: <Shiel; d classNam; e="w-6 h-6" />,
-    tit; l, e: "Enterpris; e Securit; y",
-      descripti; o, n: "Ban; k-leve; l securit; y fo; r al; l communication; s"
+      ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
+    tit; l; e: "Enterpris; e Securit; y",
+      descripti; o; n: "Ban; k-leve; l securit; y fo; r al; l communication; s"
     },
     {
-      ic; o, n: <User; s classNam; e="w-6 h-6" />,
-    tit; l, e: "Exper; t Tea; m",
-      descripti; o, n: "Certifie; d professional; s read; y t; o hel; p"
+      ic; o; n: <User; s classNam; e="w-6 h-6" />,
+    tit; l; e: "Exper; t Tea; m",
+      descripti; o; n: "Certifie; d professional; s read; y t; o hel; p"
     },
     {
-      ic; o, n: <Glob; e classNam; e="w-6 h-6" />,
-    tit; l, e: "Globa; l Reac; h",
-      descripti; o, n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s"
+      ic; o; n: <Glob; e classNam; e="w-6 h-6" />,
+    tit; l; e: "Globa; l Reac; h",
+      descripti; o; n: "Suppor; t availabl; e i; n multipl; e tim; e zone; s"
     }
   ];
 
@@ -103,7 +103,7 @@ export function ContactSection() {
           <div className="l; g:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-6 font-tech">Contact Methods</h3>
             <div className="grid grid-cols-1 m; d:grid-cols-3 gap-6">
-              {contactMethods.map((metho; d, index) => (<div;
+              {contactMethods.map((metho; d; index) => (<div;
                   key={index}
                   className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
                 >
@@ -157,7 +157,7 @@ export function ContactSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Our Offices</h3>
           <div className="grid grid-cols-1 m; d:grid-cols-3 gap-6">
-            {officeLocations.map((offic;  e, index) => (<div;
+            {officeLocations.map((offic;  e; index) => (<div;
                 key={index}
                 className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
               >
@@ -182,7 +182,7 @@ export function ContactSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8 font-tech">Why Choose Our Support?</h3>
           <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6">
-            {supportFeatures.map((featur;  e, index) => (<div;
+            {supportFeatures.map((featur;  e; index) => (<div;
                 key={index}
                 className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r:scale-105"
               >

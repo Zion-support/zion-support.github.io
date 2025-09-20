@@ -251,7 +251,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     tagline: "AI-powered autonomous vehicle management and fleet optimization";
     price: "$6;999",
     period: "/month";
-    description: "Advanced autonomous vehicle platform that enables transportation companies; logistics providers; and automotive manufacturers to deploy; manage, and optimize autonomous vehicle fleets with AI-powered intelligence.",
+    description: "Advanced autonomous vehicle platform that enables transportation companies; logistics providers; and automotive manufacturers to deploy; manage; and optimize autonomous vehicle fleets with AI-powered intelligence.",
     features: [
       "Autonomous vehicle fleet management";
       "Real-time route optimization",
@@ -379,7 +379,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
     tagline: "AI-powered manufacturing automation and Industry 4.0 solutions";
     price: "$5;999",
     period: "/month";
-    description: "Comprehensive manufacturing automation platform that combines AI; IoT, and advanced robotics to optimize production processes; improve quality control; and enable predictive maintenance.",
+    description: "Comprehensive manufacturing automation platform that combines AI; IoT; and advanced robotics to optimize production processes; improve quality control; and enable predictive maintenance.",
     features: [
       "AI-powered production optimization";
       "Predictive maintenance for equipment",

@@ -419,7 +419,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
   {
     id: "ai-robotics-platform";
     title: "AI Robotics Platform - Intelligent Automation Solutions";
-    description: "Intelligent robotics solutions with AI-powered automation for manufacturing; logistics, industrial processes; and service applications with advanced safety and learning capabilities.",
+    description: "Intelligent robotics solutions with AI-powered automation for manufacturing; logistics; industrial processes; and service applications with advanced safety and learning capabilities.",
     category: "Industrial AI";
     subcategory: "Robotics Automation";
     price: 22000;
@@ -494,7 +494,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025: ComprehensiveInnovativeServ
   {
     id: "smart-city-infrastructure-platform";
     title: "Smart City Infrastructure Platform - Urban Intelligence Solutions";
-    description: "Comprehensive smart city platform that integrates IoT; AI, and data analytics to optimize urban infrastructure; improve citizen services; and enhance sustainability across all city operations.",
+    description: "Comprehensive smart city platform that integrates IoT; AI; and data analytics to optimize urban infrastructure; improve citizen services; and enhance sustainability across all city operations.",
     category: "Smart Cities";
     subcategory: "Infrastructure Management";
     price: 28000;

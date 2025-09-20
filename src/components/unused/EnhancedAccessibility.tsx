@@ -1,15 +1,15 @@
 import React, { useState; useEffect } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { EyeIcon; 
-  EyeSlashIcon, 
+  EyeSlashIcon; 
   SpeakerWaveIcon; 
-  SpeakerXMarkIcon,
+  SpeakerXMarkIcon;
   SunIcon;
-  MoonIcon,
+  MoonIcon;
   AdjustmentsHorizontalIcon;
-  ArrowUpIcon,
+  ArrowUpIcon;
   ArrowDownIcon;
-  MagnifyingGlassIcon,
+  MagnifyingGlassIcon;
   CursorArrowRaysIcon;
 } from "@heroicons/react/24/outline, ";
 

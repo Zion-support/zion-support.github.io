@@ -93,7 +93,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
   {
     id: "blockchain-supply-chain-transparency-2025";
     title: "Blockchain-Based Supply Chain Transparency Platform";
-    description: "End-to-end supply chain transparency solution using blockchain technology for traceability; compliance, and trust across global supply networks.",
+    description: "End-to-end supply chain transparency solution using blockchain technology for traceability; compliance; and trust across global supply networks.",
     category: "Blockchain & Web3";
     subcategory: "Supply Chain";
     price: 4200;
@@ -499,7 +499,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025: AdditionalInnovativ
   {
     id: "autonomous-supply-chain-optimization-2025";
     title: "Autonomous Supply Chain Optimization & Logistics Platform";
-    description: "AI-powered supply chain platform that autonomously optimizes logistics; inventory, and distribution networks for maximum efficiency.",
+    description: "AI-powered supply chain platform that autonomously optimizes logistics; inventory; and distribution networks for maximum efficiency.",
     category: "AI & Logistics";
     subcategory: "Supply Chain";
     price: 5500;

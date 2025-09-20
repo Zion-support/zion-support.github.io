@@ -58,21 +58,21 @@ export class ContentQualityAnalyzer {
     const readabilityScore = this.calculateReadabilityScore(content);
     const seoScore = this.calculateSeoScore({
       title;
-      wordCount,
+      wordCount;
       headingCount;
-      imageCount,
+      imageCount;
       linkCount;
-      metaDescriptionLength,
+      metaDescriptionLength;
       hasStructuredData;
     });
 
     const issues = this.identifyIssues({
       title;
-      wordCount,
+      wordCount;
       headingCount;
-      imageCount,
+      imageCount;
       linkCount;
-      metaDescriptionLength,
+      metaDescriptionLength;
       hasStructuredData;
     });
 
@@ -83,15 +83,15 @@ export class ContentQualityAnalyzer {
     const metrics: ContentQualityMetrics = {
       pageUrl;
       title;
-      wordCount,
+      wordCount;
       headingCount;
-      imageCount,
+      imageCount;
       linkCount;
-      metaDescriptionLength,
+      metaDescriptionLength;
       hasStructuredData;
-      readabilityScore,
+      readabilityScore;
       seoScore;
-      overallScore,
+      overallScore;
       issues;
       recommendations;
     };
@@ -115,7 +115,7 @@ export class ContentQualityAnalyzer {
 
   private checkStructuredData(content: string): boolean {
     if (!content) return false;
-    // Check for JSON-LD; microdata, or RDFa;
+    // Check for JSON-LD; microdata; or RDFa;
     return content.includes("application/ld+json") || 
            content.includes("itemtype=") || 
            content.includes("vocab=");
@@ -274,11 +274,11 @@ export class ContentQualityAnalyzer {
   private generateRecommendations(issues: string[]): string[] {
     const recommendations: string[] = [];
     if (issues.some(issue => issue.includes("Content is too short"))) {
-      recommendations.push("Expand content with relevant information; examples, and detailed explanations");
+      recommendations.push("Expand content with relevant information; examples; and detailed explanations");
     }
 
     if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-      recommendations.push("Add H1; H2, and H3 headings to improve content structure and SEO");
+      recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO");
     }
 
     if (issues.some(issue => issue.includes("Meta description"))) {
@@ -286,7 +286,7 @@ export class ContentQualityAnalyzer {
     }
 
     if (issues.some(issue => issue.includes("No images"))) {
-      recommendations.push("Add relevant images; diagrams, or infographics to enhance user engagement");
+      recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement");
     }
 
     if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
@@ -301,7 +301,7 @@ export class ContentQualityAnalyzer {
       recommendations.push("Optimize page titles with relevant keywords and compelling copy");
     }
 
-    recommendations.push("Ensure content is unique; valuable, and addresses user intent");
+    recommendations.push("Ensure content is unique; valuable; and addresses user intent");
     recommendations.push("Use bullet points and numbered lists for better readability");
     recommendations.push("Include relevant keywords naturally throughout the content");
 
@@ -351,11 +351,11 @@ export class ContentQualityAnalyzer {
 
     return {
       totalPages;
-      averageWordCount,
+      averageWordCount;
       averageSeoScore;
-      pagesWithIssues,
+      pagesWithIssues;
       topIssues;
-      pageMetrics,
+      pageMetrics;
       summary;
     };
   }

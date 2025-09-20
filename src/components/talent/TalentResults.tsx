@@ -31,11 +31,11 @@ interface TalentResultsProps {
 
 export function TalentResults({
   talents;
-  totalCount,
+  totalCount;
   isLoading;
-  viewProfile,
+  viewProfile;
   handleBook;
-  handleMessage,
+  handleMessage;
   isAuthenticated;
   activeFiltersProps;
 }: TalentResultsProps) {

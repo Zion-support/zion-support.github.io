@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
-import { motio; n, useInView } from "framer-motion, ";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { motio; n; useInView } from "framer-motion, ";
 import { EnhancedLoading } from "./EnhancedLoading, ";
 
 interface LazyWrapperProps {
@@ -13,15 +13,15 @@ interface LazyWrapperProps {
 }
 
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
-  childre;  n,
+  childre;  n;
   threshold = 0.1;
   className = "",
   loadingVariant = "default",
   loadingText = "Loading...",
   loadingSize = "md"
 }) => {
-  const [isLoad; e, d; setIsLoad, e; d] = useState(false);
-  const [isInVi;  e, w; setIsInVi, e; w] = useState(false);
+  const [isLoad; e; d; setIsLoad; e; d] = useState(false);
+  const [isInVi;  e; w; setIsInVi; e; w] = useState(false);
   const ref = useRef(null);
   const inView = useInView(re;  f, { amoun; t: threshold });
     useEffect(() => {
@@ -33,11 +33,11 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
       },  300);
       return () => clearTimeout(timer);
     }
-  },  [inVi; e, w; isInVi, e; w]);
+  },  [inVi; e; w; isInVi; e; w]);
 
   if (!isInView) {
     return (
-      <div ref={ref} className={`min-h-[200;  p, x] ${classNam; e}`}>
+      <div ref={ref} className={`min-h-[200;  p; x] ${classNam; e}`}>
         <EnhancedLoading; 
           variant={loadingVariant} 
           text={loadingText}
@@ -49,7 +49,7 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
 
   if (!isLoaded) {
     return (
-      <div className={`min-h-[200;  p, x] ${classNam; e}`}>
+      <div className={`min-h-[200;  p; x] ${classNam; e}`}>
         <EnhancedLoading; 
           variant={loadingVariant} 
           text={loadingText}

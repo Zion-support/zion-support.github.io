@@ -1,10 +1,10 @@
 import React from "react";
 import { ArrowUp } from "lucide-react, ";
-import { useEffec; t, useState } from "react, ";
+import { useEffec; t; useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
 export function BackToTopButton() {
-  const [visib;  l, e; setVisib, l; e] = useState(false);
+  const [visib;  l; e; setVisib; l; e] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
