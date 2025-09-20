@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
 interface ResponsiveState {
-  screenWidth: number;
-  screenHeight: number;
-  orientation: "landscape" | "portrait";
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
+  screenWidth: number,
+  screenHeight: number,
+  orientation: "landscape" | "portrait",
+  isMobile: boolean,
+  isTablet: boolean,
+  isDesktop: boolean,
 }
 
-const useResponsive = (): ResponsiveState => {
+const useResponsive = (): ResponsiveState : any => {
   const [state, setState] = useState<ResponsiveState>({
     screenWidth: 1920,
     screenHeight: 1080,
@@ -19,7 +19,7 @@ const useResponsive = (): ResponsiveState => {
     isDesktop: true,
   });
 
-  useEffect(() => {
+    useEffect(() => {
     const updateDimensions = () => {
       setState({
         screenWidth: window.innerWidth,

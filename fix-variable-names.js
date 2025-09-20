@@ -58,7 +58,7 @@ function fixFile(filePath) {
     
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`),
       return true;
     }
     
@@ -77,6 +77,9 @@ function findAndFixFiles(dir) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
+function fixedCount = 0,
+for (const filePath = path.join(dir, file)
+    const stat = fs.statSync(filePath)
     if (stat.isDirectory()) {
       fixedCount += findAndFixFiles(filePath);
     } else if (file.endsWith('.tsx') && file.includes('-')) {
@@ -93,3 +96,4 @@ function findAndFixFiles(dir) {
 console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');
 console.log(`Fixed ${fixedCount} files.`);
+}}

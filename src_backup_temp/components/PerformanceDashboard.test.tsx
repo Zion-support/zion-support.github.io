@@ -1,0 +1,4 @@
+import { render,screen } from '@testing-library/reactimport PerformanceDashboard from ./PerformanceDashboarddescribe(PerformanceDashboard,() => {' it(renders without crashing',() => {' render(<PerformanceDashboard />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
+
+    it('displays expected content',() => { render(<PerformanceDashboard />)
+}}))

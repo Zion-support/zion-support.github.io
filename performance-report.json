@@ -1,0 +1,12 @@
+{
+  "buildTime": 11444,
+  "bundleSize": 8126191,
+  "pageCount": 45,
+  "timestamp": "2025-09-20T16:23:48.634Z",
+  "performance": {
+    "buildTimeSeconds": 11,
+    "bundleSizeMB": 7.75,
+    "pagesPerSecond": 3.93
+  },
+  "recommendations": []
+}

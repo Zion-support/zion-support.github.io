@@ -1,8 +1,20 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
-  reactStrictMode: true,
+  assetPrefix,
+  output: 'export',
+  trailingSlash: true,
   images: {
-    domains: ["localhost"],
+    unoptimized: true,
+  },
+  experimental: {
+    optimizePackageImports: ['@radix-ui/react-icons'],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 

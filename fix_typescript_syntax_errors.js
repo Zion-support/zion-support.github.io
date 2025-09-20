@@ -12,13 +12,13 @@ async function fixTypeScriptSyntaxErrors() {
 
   for (const file of files) {
     try {
-      console.log(`Processing: ${file}`);
+      console.log(`Processing: ${file}`),
       let content = await fs.readFile(file, "utf8");
       let modified = false;
 
       // Fix variable names that start with numbers
       const lines = content.split("\n");
-      for (let i = 0; i < lines.length; i++) {
+      for (let i = 0, i < lines.length, i++) {
         const line = lines[i];
 
         // Fix const declarations that start with numbers
@@ -32,7 +32,7 @@ async function fixTypeScriptSyntaxErrors() {
             lines[i] = line.replace(oldName, newName);
             modified = true;
             console.log(`  Fixed variable name: ${oldName} -> ${newName}`);
-          }
+};
         }
 
         // Fix function names that start with numbers
@@ -46,14 +46,14 @@ async function fixTypeScriptSyntaxErrors() {
             lines[i] = line.replace(oldName, newName);
             modified = true;
             console.log(`  Fixed function name: ${oldName} -> ${newName}`);
-          }
+};
         }
       }
 
       if (modified) {
         await fs.writeFile(file, lines.join("\n"));
         console.log(`✅ Fixed syntax errors in: ${file}`);
-      }
+};
     } catch (error) {
       console.error(`❌ Error processing ${file}:`, error.message);
     }
