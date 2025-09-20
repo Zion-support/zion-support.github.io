@@ -1,5 +1,12 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  extends: [
+    "eslint:recommended"
+  ],
+  env: {
+    browser: true,
+    es2020: true,
+    node: true
+  },
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: "module",
@@ -7,23 +14,8 @@ module.exports = {
       jsx: true
     }
   },
-  env: {
-    browser: true,
-    es2020: true,
-    node: true
-  },
-  extends: [
-    "eslint:recommended"
-  ],
-  plugins: ["@typescript-eslint"],
   rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_" }
-    ],
-    "no-explicit-any": "warn"
+    "no-unused-vars": "warn",
+    "no-undef": "off"
   }
 };
