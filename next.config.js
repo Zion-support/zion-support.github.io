@@ -4,9 +4,6 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   
-  // Configure page directory
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
@@ -15,48 +12,13 @@ const nextConfig = {
   images: {
     unoptimized: true, // Required for static export
   },
-
-  // Ignore build errors to allow deployment with syntax issues
+  
+  // Ignore build errors to allow deployment
   typescript: {
     ignoreBuildErrors: true,
-    tsconfigPath: './tsconfig.json',
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  
-  // Force disable TypeScript checking
-  webpack: (config, { dev, isServer }) => {
-    // Configure webpack extensions
-    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
-    
-    // Add path alias resolution
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': require('path').resolve(__dirname, 'src'),
-    };
-    
-    if (!dev && !isServer) {
-      // Optimize bundle size
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\/]node_modules[\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-          common: {
-            name: 'common',
-            minChunks: 2,
-            chunks: 'all',
-            enforce: true,
-          },
-        },
-      };
-    }
-
-    return config;
   },
   
   // Force static export
