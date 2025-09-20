@@ -17,62 +17,63 @@ export default function AI2025Page() {
         keywords="AI 2025, artificial intelligence, neural networks, automation, machine learning"
         url="/ai-2025"
       />
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-20">
-        <div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            AI 2025 Revolution
-          </h1>
-          <p>
-            Experience the future of artificial intelligence with our comprehensive suite of
-            AI solutions, tools, and technologies designed for 2025 and beyond.
-          </p>
-          <div>
-            <Link
-              href="/ai-2025/neural-networks"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Explore Neural Networks
-            </Link>
-            <Link
-              href="/ai-2025/automation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              View Automation Solutions
-            </Link>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI 2025 Revolution
+            </h1>
+            <p className="text-xl mb-8">
+              Experience the future of artificial intelligence with our comprehensive suite of
+              AI solutions, tools, and technologies designed for 2025 and beyond.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/ai-2025/neural-networks"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Explore Neural Networks
+              </Link>
+              <Link
+                href="/ai-2025/automation"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                View Automation Solutions
+              </Link>
+            </div>
           </div>
         </div>
       </section>
       {/* Features Grid */}
       <section className="py-16">
-        <div>
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI 2025 Features</h2>
-          <div>
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Advanced Neural Networks</h3>
-              <p>
+              <p className="text-gray-600 mb-4">
                 Next-generation neural network architectures with unprecedented accuracy and efficiency.
               </p>
               <Link href="/ai-2025/neural-networks" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
               </Link>
             </div>
-            <div>
+            <div className="text-center">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Automation</h3>
-              <p>
+              <p className="text-gray-600 mb-4">
                 AI-powered automation solutions that learn, adapt, and optimize business processes.
               </p>
               <Link href="/ai-2025/automation" className="text-purple-600 font-semibold hover:text-purple-800">
                 Learn More →
               </Link>
             </div>
-            <div>
+            <div className="text-center">
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Analytics Revolution</h3>
-              <p>
+              <p className="text-gray-600 mb-4">
                 Real-time analytics and predictive intelligence for data-driven decision making.
               </p>
               <Link href="/ai-2025/analytics" className="text-purple-600 font-semibold hover:text-purple-800">
@@ -84,11 +85,11 @@ export default function AI2025Page() {
       </section>
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
-        <div>
+        <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Ready to Transform Your Business with AI?
           </h2>
-          <p>
+          <p className="text-xl mb-8">
             Join thousands of companies already using our AI solutions to drive innovation and growth.
           </p>
           <Link
@@ -99,12 +100,6 @@ export default function AI2025Page() {
           </Link>
         </div>
       </section>
-=======
-      <div>
-        <h1>AI 2025 - Revolutionary AI Technologies</h1>
-        <p>Coming soon...</p>
-      </div>
->>>>>>> eaaeaf6a16b7b5ed71cff049fdf1d07a51b6564b
     </div>
   )
 }
