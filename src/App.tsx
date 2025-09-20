@@ -4,6 +4,9 @@ import { ThemeProvider } from './components/ThemeProvider';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import SEOHead from './components/SEOHead';
 
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
@@ -14,6 +17,7 @@ const LazyContact = React.lazy(() => import('./components/Contact'));
 const App: React.FC = () => {
   return (
     <ThemeProvider>
+      <SEOHead />
       <AccessibilityEnhancer>
         <PerformanceMonitor />
         <React.Suspense fallback={
@@ -28,6 +32,8 @@ const App: React.FC = () => {
             <Route path="/contact" element={<LazyContact />} />
           </Routes>
           </React.Suspense>
+        <PerformanceOptimizer />
+        <EnhancedAccessibility />
       </AccessibilityEnhancer>
     </ThemeProvider>
   );
