@@ -8,16 +8,16 @@ const DeveloperProductivityCopilot: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Developer Productivity Copilot</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Speed up code reviews, raise test quality, and reduce cycle time with AI assistance across your toolchain.;
+          Speed up code reviews, raise test quality, and reduce cycle time with AI assistance across your toolchain.
         </p>
 
         <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
           {[
-  'Static diffs + architectural risk scoringPR review suggestions and security hints';
+            'Static diffs + architectural risk scoringPR review suggestions and security hints',
             'Unit/integration test generationFlaky test clustering and ownership';
             'CI insights: bottlenecks and failuresJira/GitHub/GitLab/Bitbucket integrations'
-].map((b) => (
-  <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
+          ].map((b) => (
+            <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
             </div>
@@ -26,7 +26,7 @@ const DeveloperProductivityCopilot: React.FC = () => {
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing;
+            <DollarSign className="h-4 w-4" /> Pricing
           </div>
           <ul className="mt-3 grid gap-3 sm: grid-cols-2 text-slate-300 text-sm">
             <li>Team: $6/dev/mo (min 10)</li>

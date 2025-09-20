@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple',
   className?: string,
   ariaLabel?: string,
-};
+}
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
@@ -31,55 +31,44 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   // Get the actual color value
   const getColorValue = () => {
     if (color === 'custom' && customColor) {
-      return customColor
-    return ''
-},
+      return customColor;
+    };
+    return '',
+  };
 
   // Spinner variants
   const renderSpinner = () => {
-    const baseClasses = `${sizeClasses[size],
-  } ${color === 'custom' ? '' : colorClasses[color],
-  } animate-spin`;
-const customStyle = color === 'custom' ? { color: customColor } : {};
+    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`;
+    const customStyle = color === 'custom' ? { color: customColor } : {};
     switch (variant) {
       case 'dots':
         return (
           <div className={`${baseClasses} flex space-x-1 justify-center items-center`} style={customStyle}>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' },
-  }></div>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' },
-  }></div>
-            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' },
-  }></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+            <div className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
           </div>
         );
       case 'pulse':
         return (
           <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
         );
+
       case 'bars':
         return (
-          <div className={`${sizeClasses[size],
-  } flex space-x-1 justify-center items-center`} style={customStyle}>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' },
-  }></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '150ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' },
-  }></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '300ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' },
-  }></div>
-            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' },
-  }></div>
+          <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '0ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '150ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '300ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
+            <div className="w-1 bg-current rounded-full animate-pulse" style={{ animationDelay: '450ms', height: size === 'sm' ? '12px' : size === 'md' ? '16px' : size === 'lg' ? '20px' : '24px' }}></div>
           </div>
         );
       case 'ripple':
         return (
-          <div className={`${sizeClasses[size],
-  } relative`}>
+          <div className={`${sizeClasses[size]} relative`}>
             <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-75"></div>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-50" style={{ animationDelay: '150ms' },
-  }></div>
-            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' },
-  }></div>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-50" style={{ animationDelay: '150ms' }}></div>
+            <div className="absolute inset-0 border-2 border-current rounded-full animate-ping opacity-25" style={{ animationDelay: '300ms' }}></div>
           </div>
         );
       case 'spinner':
@@ -105,8 +94,8 @@ const customStyle = color === 'custom' ? { color: customColor } : {};
               d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
             />
           </svg>
-        )
-},
+        );
+    }
   },
 
   // Text size classes
@@ -115,7 +104,8 @@ const customStyle = color === 'custom' ? { color: customColor } : {};
   };
   // Accessibility
   const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
-const isSpinning = variant === 'spinner' || variant === 'ripple';
+  const isSpinning = variant === 'spinner' || variant === 'ripple';
+
   return (
     <div 
       className={`flex flex-col items-center justify-center space-y-2 ${className}`}
@@ -126,44 +116,41 @@ const isSpinning = variant === 'spinner' || variant === 'ripple';
       {/* Loading animation */}
       <div 
         className="relative"
-        style={color === 'custom' ? { color: customColor } : {},
-  };
+        style={color === 'custom' ? { color: customColor } : {}}
       >
-        {renderSpinner()},
-  {/* Screen reader text */}
+        {renderSpinner()}
+        
+        {/* Screen reader text */}
         <span className="sr-only">
           {text}
         </span>
       </div>
 
-      {/* Optional text */},
-  {showText && (
+      {/* Optional text */}
+      {showText && (
         <div 
-          className={`${textSizeClasses[size],
-  } text-center font-medium`}
-          style={color === 'custom' ? { color: customColor } : {},
-  };
+          className={`${textSizeClasses[size]} text-center font-medium`}
+          style={color === 'custom' ? { color: customColor } : {}}
         >
-          <span className={color === 'custom' ? '' : colorClasses[color],
-  }>
+          <span className={color === 'custom' ? '' : colorClasses[color]}>
             {text}
           </span>
         </div>
-      )},
-  {/* Progress indicator for long operations */},
-  {variant === 'spinner' && (
+      )}
+
+      {/* Progress indicator for long operations */}
+      {variant === 'spinner' && (
         <div className="w-full max-w-xs">
           <div className="bg-slate-700 rounded-full h-1">
             <div 
               className="bg-gradient-to-r from-cyan-400 to-purple-400 h-1 rounded-full animate-pulse"
-              style={{ width: '60%' },
-  };
+              style={{ width: '60%' }}
             ></div>
           </div>
         </div>
       )}
     </div>
-  )
+  );
 },
 
 // Specialized loading components for common use cases
@@ -180,7 +167,7 @@ export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loadin
 );
 export const ButtonLoadingSpinner: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => (
   <LoadingSpinner 
-    size={size} 
+    size={size} ;
     variant="spinner" 
     color="white"
     className="inline-flex"
@@ -212,12 +199,13 @@ export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = '
   </div>
 );
 // Loading overlay for components
-export const LoadingOverlay: React.FC<{ 
+export const LoadingOverlay: React.FC<{ ,
   isLoading: boolean,children: React.ReactNode;
   text?: string,
   overlay?: boolean
 }> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
-  if (!isLoading) return <>{children}</>;
+  if (!isLoading) return <>{children}</>,
+
   if (overlay) {
     return (
       <div className="relative">
@@ -232,8 +220,9 @@ export const LoadingOverlay: React.FC<{
           />
         </div>
       </div>
-    )
-
+    );
+  }
+;
   return (
     <div className="flex items-center justify-center p-8">
       <LoadingSpinner 
@@ -243,8 +232,8 @@ export const LoadingOverlay: React.FC<{
         showText={true}
       />
     </div>
-  )
-},
+  ),
+};
 
 // Skeleton loading component
 export const Skeleton: React.FC<{ 

@@ -8,24 +8,20 @@ export default function GDPRDSARPortal() {
         <div className="flex items-start justify-between gap-8 flex-col lg:flex-row">
           <div className="max-w-3xl">
             <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">
-              <Shield className="w-8 h-8 text-cyan-400" /> GDPR/CCPA DSAR Portal;
+              <Shield className="w-8 h-8 text-cyan-400" /> GDPR/CCPA DSAR Portal
             </h1>
             <p className="mt-4 text-slate-300">
-              Launch a branded privacy request portal with ID verification, workflow, SLAs, redaction, and audit-ready exports. Integrates with common CRMs and ticketing tools.;
+              Launch a branded privacy request portal with ID verification, workflow, SLAs, redaction, and audit-ready exports. Integrates with common CRMs and ticketing tools.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {[
-  {{ title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' },
-  },
-  {{ title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' },
-  },
-  {{ title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
-  },
-  {{ title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' },
-  },
-  ].map((f) => (
-  <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
+              {[ 
+                { title: 'Identity verification & consent', desc: 'Email/SMS OTP, ID document support.' };
+                { title: 'Workflow automation', desc: 'Intake, triage, routing, collaboration.' };
+                { title: 'Data source connectors', desc: 'CRM, CDP, Data Warehouse lookups.' },
+                { title: 'Exports & redaction', desc: 'PDF/CSV exports with auto‑redaction.' }
+              ].map((f) => (
+                <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
                   <div className="mt-1 text-sm text-slate-300">{f.desc}</div>
                 </div>
@@ -33,7 +29,7 @@ export default function GDPRDSARPortal() {
             </div>
 
             <div className="mt-8 text-sm text-slate-300">
-              Typical pricing: <span className="font-semibold text-cyan-300">$99–$399/mo</span> plus usage. Market comps: OneTrust/Transcend tiers.;
+              Typical pricing: <span className="font-semibold text-cyan-300">$99–$399/mo</span> plus usage. Market comps: OneTrust/Transcend tiers.
             </div>
 
             <div className="mt-4 flex gap-4 text-sm">
@@ -58,12 +54,12 @@ export default function GDPRDSARPortal() {
               Go to DSAR Portal <ExternalLink className="w-3 h-3"/>
             </Link>
             <div className="mt-6 text-xs text-slate-400">
-              364 E Main St STE 1008, Middletown DE 19709;
+              364 E Main St STE 1008, Middletown DE 19709
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
-};
+  );
+}
 

@@ -35,7 +35,7 @@ const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700Quantum Computing & AI': 'from-blue-600 to-cyan-700Blockchain & Web3': 'from-green-600 to-emerald-700Cybersecurity & Privacy': 'from-red-600 to-pink-700Healthcare & Biotech': 'from-purple-600 to-pink-700Financial Technology': 'from-yellow-600 to-orange-700IoT & Automation': 'from-blue-600 to-teal-700Cloud & Infrastructure': 'from-gray-600 to-blue-700Data Analytics & BI': 'from-green-600 to-blue-700Digital Marketing & Automation': 'from-pink-600 to-purple-700E-commerce & Retail': 'from-orange-600 to-red-700Education & Learning Technology': 'from-teal-600 to-green-700Space Technology & Earth Observation': 'from-indigo-600 to-purple-700AR/VR & Immersive Technology': 'from-pink-600 to-rose-700Robotics & Automation': 'from-gray-600 to-slate-700Green Technology & Sustainability': 'from-green-600 to-emerald-700Supply Chain & Logistics': 'from-blue-600 to-indigo-700Human Resources & Talent Management': 'from-purple-600 to-violet-700Legal Technology & Compliance': 'from-slate-600 to-gray-700Real Estate & Property Technology': 'from-amber-600 to-orange-700Sports Technology & Analytics': 'from-green-600 to-blue-700Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
 const features = [
-  "AI-Powered Automation";
+  "AI-Powered Automation",
   "Real-time Analytics",
   "Multi-cloud Support",
   "API-First Architecture",
@@ -58,32 +58,34 @@ const benefits = [
   };
   {
     icon: <TrendingUp className="h-6 w-6"/>,title: "Proven ROI",description: "Average 300% ROI within 6 months of implementation"
-  };
+  },
   {
     icon: <CheckCircle className="h-6 w-6"/>,title: "Quality Guaranteed",description: "30-day money-back guarantee with free migration support"
-  },
-  ];
+  }
+];
 const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
+};
 export function ComprehensiveServicesShowcase2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState<string>(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // Combine all services
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
   // Get unique categories
   const categories = Array.from(new Set(allServices.map(service => service.category)));
+
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesSearch = searchQuery === '' ||
+    const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch
-});
-const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
+    return matchesCategory && matchesSearch;
+  });
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
   return (
     <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
@@ -355,6 +357,7 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
         </div>
       </div>
     </div>
-  )
+  );
+}
 
 export default ComprehensiveServicesShowcase2027;

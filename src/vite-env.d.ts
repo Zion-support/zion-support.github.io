@@ -4,10 +4,11 @@
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string;
   // add more env variables as needed
-};
+}
 
 interface ImportMeta {
   readonly env: ImportMetaEnv;
+}
 
 // Import React types properly
 import * as React from "react";
@@ -40,6 +41,7 @@ declare const process: {
     NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string;
   };
+};
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
@@ -128,6 +130,7 @@ declare module '@livekit/components-react' {
 
 declare module '@livekit/components-styles' {
   // Empty stub for the styles
+}
 
 // Stubs for optional UI libraries used by the project
 declare module 'cmdk';

@@ -6,8 +6,8 @@ interface SkeletonProps {
   width?: string,
   rounded?: boolean,
   animated?: boolean,
-};
-
+}
+;
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
   height = 'h-4', 
@@ -16,29 +16,30 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true 
 }) => {
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`;
-const classes = `${baseClasses} ${className}`;
-  if (!animated) {
-    return <div className={classes} />
+  const classes = `${baseClasses} ${className}`;
   
+  if (!animated) {
+    return <div className={classes} />;
+  }
+  ;
   return (
     <motion.div
       className={classes}
       animate={{
-        opacity: [0.5, 1, 0.5],
-  },
-  };
+        opacity: [0.5, 1, 0.5]
+      }}
       transition={{
         duration: 1.5,repeat: Infinity,ease: "easeInOut"
-      },
-  };
+      }}
     />
-  )
+  );
 },
 
 interface LoadingSkeletonProps {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form',
   count?: number,
   className?: string,
+}
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
   type = 'card';
@@ -59,6 +60,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             </div>
           </div>
         );
+        
       case 'card':
         return (
           <div className="space-y-4">
@@ -73,7 +75,8 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               </div>
             </div>
           </div>
-        );
+        ),
+        
       case 'list':
         return (
           <div className="space-y-4">
@@ -99,8 +102,8 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
                 <Skeleton key={index} height="h-4" width="w-24" />
               ))}
             </div>
-            {/* Rows */},
-  {Array.from({ length: count }).map((_, index) => (
+            {/* Rows */}
+            {Array.from({ length: count }).map((_, index) => (
               <div key={index} className="flex space-x-4 p-4 border-b">
                 {Array.from({ length: 4 }).map((_, cellIndex) => (
                   <Skeleton key={cellIndex} height="h-4" width="w-24" />
@@ -127,17 +130,17 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-10" width="w-24" />
             </div>
           </div>
-        ),
+        );
         
       default: return <Skeleton />
-    },
+    }
   };
   return (
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  )
-},
+  ),
+};
 
 // Specialized skeleton components
 export const HeroSkeleton: React.FC = () => (

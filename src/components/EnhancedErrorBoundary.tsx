@@ -7,9 +7,9 @@ interface Props {
 };
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean,
+  error: Error | null,
+  errorInfo: ErrorInfo | null,
   errorId: string | null;
 }
 
@@ -73,7 +73,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
+;
       return (
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -149,7 +149,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
+;
     return this.props.children;
   }
 }

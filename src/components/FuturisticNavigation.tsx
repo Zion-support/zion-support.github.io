@@ -181,24 +181,24 @@ import {
 } from "lucide-react";
 export const FuturisticNavigation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-const location = useLocation();
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-},
+      setScrolled(window.scrollY > 20);
+    },
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-}, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   useEffect(() => {
-    setActiveDropdown(null)
-}, [location.pathname]);
-const handleSearch = (e: React.FormEvent) => {
+    setActiveDropdown(null);
+  }, [location.pathname]);
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`,
-    },
+    }
   },
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
@@ -213,48 +213,48 @@ const handleSearch = (e: React.FormEvent) => {
         { name: 'AI Healthcare Diagnosis', href: '/ai-services/healthcare-diagnosis', icon: Heart, description: 'AI-powered medical diagnosis' };
         { name: 'AI Content Creation', href: '/ai-services/content-creation', icon: FileText, description: 'Autonomous content generation' };
         { name: 'AI Supply Chain', href: '/ai-services/supply-chain', icon: Truck, description: 'AI-powered supply chain optimization' };
-        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' };
-        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
-  ],
-  };
+        { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
+        { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
+      ]
+    };
     {
       name: "Micro SAAS Solutions",icon: Cloud,services: [
         { name: "Micro SAAS Services", href: "/micro-saas" };
         { name: "Business Tools", href: "/micro-saas/business-tools" };
         { name: "Productivity Apps", href: "/micro-saas/productivity" };
         { name: "Industry Solutions", href: "/micro-saas/industry" };
-        { name: "Custom Development", href: "/micro-saas/custom" };
-        { name: "Marketplace", href: "/marketplace" },
-  ],
-  };
+        { name: "Custom Development", href: "/micro-saas/custom" },
+        { name: "Marketplace", href: "/marketplace" }
+      ]
+    };
     {
       name: "IT Infrastructure",icon: Server,services: [
         { name: "IT Services", href: "/it-services" };
         { name: "Cloud Solutions", href: "/it-services/cloud" };
         { name: "Cybersecurity", href: "/it-services/cybersecurity" };
         { name: "DevOps & Automation", href: "/it-services/devops" };
-        { name: "Data Management", href: "/it-services/data" };
-        { name: "Network Security", href: "/it-services/network-security" },
-  ],
-  };
+        { name: "Data Management", href: "/it-services/data" },
+        { name: "Network Security", href: "/it-services/network-security" }
+      ]
+    };
     {
       name: "Emerging Technologies",icon: Rocket,services: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum" };
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" };
         { name: "Edge Computing", href: "/emerging-tech/edge" };
         { name: "IoT Solutions", href: "/emerging-tech/iot" };
-        { name: "Green Technology", href: "/green-it" };
-        { name: "Space Technology", href: "/emerging-tech/space" },
-  ],
-  };
+        { name: "Green Technology", href: "/green-it" },
+        { name: "Space Technology", href: "/emerging-tech/space" }
+      ]
+    };
     {
       name: '2028 Services',href: '/innovative-services-2028',icon: Crown,color: 'from-zion-cyan to-zion-purple',dropdown: [
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' };
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' };
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' };
-        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' },
-  ],
-  },
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
+        { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' }
+      ]
+    }
   ];
   return (
     <>
@@ -268,12 +268,9 @@ const handleSearch = (e: React.FormEvent) => {
             {/* Enhanced Logo */}
             <motion.div
               className="flex items-center"
-              initial={{ opacity: 0, x: -20 },
-  };
-              animate={{ opacity: 1, x: 0 },
-  };
-              transition={{ duration: 0.5 },
-  };
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
@@ -295,12 +292,9 @@ const handleSearch = (e: React.FormEvent) => {
             <nav className="hidden lg:flex items-center space-x-1">
               {/* Main Navigation Links */}
               <motion.div
-                initial={{ opacity: 0, y: -20 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.5, delay: 0.1 },
-  };
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <Link
                   to="/about"
@@ -311,12 +305,9 @@ const handleSearch = (e: React.FormEvent) => {
                 </Link>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: -20 },
-  };
-                animate={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.5, delay: 0.15 },
-  };
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
               >
                 <Link
                   to="/partners"
@@ -326,16 +317,13 @@ const handleSearch = (e: React.FormEvent) => {
                   <span className="font-medium">Partners</span>
                 </Link>
               </motion.div>
-              {/* Service Categories */},
-  {serviceCategories.map((category, index) => (
+              {/* Service Categories */}
+              {serviceCategories.map((category, index) => (
                 <div key={category.name} className="relative">
                   <motion.button
-                    initial={{ opacity: 0, y: -20 },
-  };
-                    animate={{ opacity: 1, y: 0 },
-  };
-                    transition={{ duration: 0.5, delay: (index + 2) * 0.1 },
-  };
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: (index + 2) * 0.1 }}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                       activeDropdown === category.name
@@ -353,14 +341,10 @@ const handleSearch = (e: React.FormEvent) => {
                   <AnimatePresence>
                     {activeDropdown === category.name && (
                       <motion.div
-                        initial={{ opacity: 0, y: -10, scale: 0.95 },
-  };
-                        animate={{ opacity: 1, y: 0, scale: 1 },
-  };
-                        exit={{ opacity: 0, y: -10, scale: 0.95 },
-  };
-                        transition={{ duration: 0.2 },
-  };
+                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                       >
                         <div className="p-4">
@@ -372,12 +356,9 @@ const handleSearch = (e: React.FormEvent) => {
                             {category.services.map((service, subIndex) => (
                               <motion.div
                                 key={service.name}
-                                initial={{ opacity: 0, x: -20 },
-  };
-                                animate={{ opacity: 1, x: 0 },
-  };
-                                transition={{ duration: 0.3, delay: subIndex * 0.05 },
-  };
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.3, delay: subIndex * 0.05 }}
                               >
                                 <Link
                                   to={service.href}
@@ -420,28 +401,22 @@ const handleSearch = (e: React.FormEvent) => {
               {/* User actions */}
               <div className="flex items-center space-x-2">
                 <motion.button
-                  whileHover={{ scale: 1.05 },
-  };
-                  whileTap={{ scale: 0.95 },
-  };
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 },
-  };
-                  whileTap={{ scale: 0.95 },
-  };
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 },
-  };
-                  whileTap={{ scale: 0.95 },
-  };
+                  whileHover={{ scale: 1.05 }};
+                  whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <ShoppingCart className="w-5 h-5" />
@@ -454,5 +429,5 @@ const handleSearch = (e: React.FormEvent) => {
         </div>
       </header>
     </>
-  )
+  );
 };

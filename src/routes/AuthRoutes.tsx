@@ -9,36 +9,35 @@ const AuthRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
-      {{/* Protected routes that require authentication */},
-  };
-      <Route;
-        path="/profile";
+      {/* Protected routes that require authentication */}
+      <Route
+        path="/profile"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
         }
       />
 
-      <Route;
-        path="/dashboard";
+      <Route
+        path="/dashboard"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
         }
       />
 
-      <Route;
-        path="/settings";
+      <Route
+        path="/settings"
         element={
-  <ProtectedRoute>
+          <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
         }
       />
     </Routes>
-  )
-};
+  );
+},
 
 export default AuthRoutes;

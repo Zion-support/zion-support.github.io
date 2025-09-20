@@ -26,56 +26,61 @@ import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovat
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 interface Service {
-  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {
+  id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {,
     mobile: string,email: string,address: string,website: string
-  };
+  },
   realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabilities: string[],marketDisruption: string
-};
-
+}
+;
 const contact = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
+};
 const categories = [
   {
     id: 'ai-services',name: 'AI & Autonomous Systems',description: 'Revolutionary AI solutions that transform business operations',icon: <Brain className="w-8 h-8" />,color: 'from-purple-600 to-pink-700',services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
   };
   {
     id: 'it-infrastructure',name: 'IT Infrastructure & Enterprise',description: 'Cutting-edge infrastructure solutions for modern businesses',icon: <Cloud className="w-8 h-8" />,color: 'from-blue-600 to-cyan-700',services: enterpriseITInfrastructureServices2025
-  };
+  },
   {
     id: 'micro-saas',name: 'Micro SAAS Solutions',description: 'Innovative software solutions for small businesses',icon: <Code className="w-8 h-8" />,color: 'from-green-600 to-emerald-700',services: innovativeMicroSaasSolutions2025
-  },
-  ];
+  }
+];
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
+};
+
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
+};
+
 export function UltimateServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-const [selectedService, setSelectedService] = useState<Service | null>(null),
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const allServices = [
     ...ultimateInnovativeServices2025;
-    ...enterpriseITInfrastructureServices2025;
+    ...enterpriseITInfrastructureServices2025,
     ...innovativeMicroSaasSolutions2025
   ];
-const filteredServices = selectedCategory === 'all'
+  const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
-const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {,
+      opacity: 1,transition: {,
         staggerChildren: 0.1,delayChildren: 0.2
-      },
-  },
+      }
+    }
   };
-const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {
-      opacity: 1,y: 0,transition: {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {,
+      opacity: 1,y: 0,transition: {,
         duration: 0.6,ease: "easeOut"
-      },
-  },
+      }
+    }
   };
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -83,12 +88,9 @@ const itemVariants = {
         {/* Header */}
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.8 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -122,12 +124,9 @@ const itemVariants = {
         {/* Category Navigation */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.8, delay: 0.2 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
           <button
             onClick={() => setSelectedCategory('all')}
@@ -163,7 +162,7 @@ const itemVariants = {
         >
           {filteredServices.map((service) => (
             <motion.div
-              key={service.id}
+              key={service.id};
               variants={itemVariants}
               className="group relative"
             >
@@ -203,12 +202,10 @@ const itemVariants = {
 
                 {/* Innovation Level & Patent Status */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel],
-  } text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  <span className={`bg-gradient-to-r ${innovationLevelColors[service.innovationLevel]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
                     {service.innovationLevel}
                   </span>
-                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus],
-  } text-white text-xs px-3 py-1 rounded-full font-semibold`}>
+                  <span className={`bg-gradient-to-r ${patentStatusColors[service.patentStatus]} text-white text-xs px-3 py-1 rounded-full font-semibold`}>
                     {service.patentStatus}
                   </span>
                 </div>
@@ -273,12 +270,9 @@ const itemVariants = {
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          transition={{ duration: 0.8, delay: 0.4 },
-  };
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -309,8 +303,8 @@ const itemVariants = {
         </motion.div>
       </div>
 
-      {/* Service Detail Modal */},
-  {selectedService && (
+      {/* Service Detail Modal */}
+      {selectedService && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-zion-slate-light rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
@@ -427,6 +421,7 @@ const itemVariants = {
         </div>
       )}
     </section>
-  )
+  );
+}
 
 export default UltimateServicesShowcase;

@@ -8,9 +8,10 @@ export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
   });
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [isSubmitted, setIsSubmitted] = useState(false);
-const handleChange = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleChange = (e) => {
     const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
@@ -28,12 +29,13 @@ const handleChange = (e) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000)),
     
     setIsSubmitting(false);
-    setIsSubmitted(true)
-},
+    setIsSubmitted(true);
+  },
 
   if (isSubmitted) {
     return (
@@ -46,9 +48,9 @@ const handleChange = (e) => {
           </p>
         </CardContent>
       </Card>
-    )
-};
-
+    );
+  }
+;
   return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
       <CardHeader>
@@ -215,4 +217,5 @@ const handleChange = (e) => {
         </form>
       </CardContent>
     </Card>
-  )
+  );
+};

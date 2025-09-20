@@ -10,7 +10,7 @@ interface EnhancedLayoutProps {
 };
 
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
-  children;
+  children,
   showSidebar = true
 }) => {
   return (

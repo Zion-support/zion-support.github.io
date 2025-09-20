@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Download, Wifi, WifiOff, CheckCircle, AlertCircle } from "lucide-react";
 interface ServiceWorkerState {
   isInstalled: boolean,isOnline: boolean,hasUpdate: boolean,isInstalling: boolean
-};
+}
 
 export function ServiceWorker() {
   const [swState, setSwState] = useState<ServiceWorkerState>({
@@ -28,52 +28,51 @@ export function ServiceWorker() {
                   setSwState(prev => ({ 
                     ...prev, 
                     isInstalling: false,hasUpdate: true 
-                  }))
-},
-  }),
-            },
-  }),
+                  }));
+                }
+              }),
+            }
+          }),
 
           // Handle updates
           navigator.serviceWorker.addEventListener('controllerchange', () => {
-            window.location.reload()
-}),
+            window.location.reload();
+          }),
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError)
-}),
+          console.log('SW registration failed: ', registrationError);
+        }),
     }
 
     // Online/offline detection
     const handleOnline = () => setSwState(prev => ({ ...prev, isOnline: true }));
-const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
+    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
+
     return () => {
       window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline)
-},
+      window.removeEventListener('offline', handleOffline);
+    },
   }, []),
 
   const handleUpdate = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' })
-}),
-    },
+        registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+      }),
+    }
   },
 
   if (!swState.isInstalled) return null;
+
   return (
     <AnimatePresence>
       {swState.hasUpdate && (
         <motion.div
-          initial={{ opacity: 0, y: -50 },
-  };
-          animate={{ opacity: 1, y: 0 },
-  };
-          exit={{ opacity: 0, y: -50 },
-  };
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
           className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
         >
           <div className="flex items-center space-x-3">
@@ -104,4 +103,5 @@ const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
+}

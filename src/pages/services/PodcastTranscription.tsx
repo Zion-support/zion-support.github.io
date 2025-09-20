@@ -3,15 +3,15 @@ import SEO from "@/components/SEO";
 function PodcastTranscription() {
   return (
     <div className="min-h-screen bg-futuristic text-white">
-      <SEO;
-        title="Podcast Transcription & Repurposing";
-        description="Accurate AI transcriptions, speaker diarization, show notes, and blog/social repurposing.";
+      <SEO
+        title="Podcast Transcription & Repurposing"
+        description="Accurate AI transcriptions, speaker diarization, show notes, and blog/social repurposing."
       />
       <section className="container-responsive section-padding">
         <h1 className="heading-responsive text-gradient">Podcast Transcription</h1>
         <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
           Make your episodes searchable and accessible with high‑accuracy transcription;
-          timestamps, speakers, and instant assets for SEO and social distribution.;
+          timestamps, speakers, and instant assets for SEO and social distribution.
         </p>
         <div className="grid-futuristic mt-10">
           <div className="card-futuristic">
@@ -39,6 +39,6 @@ function PodcastTranscription() {
       </section>
     </div>
   )
-};
+}
 
 export default PodcastTranscription;

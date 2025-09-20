@@ -20,49 +20,34 @@ export default function About() {
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '25+', label: 'Countries Served', icon: Globe },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
+    { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
-const values = [
+  const values = [
     {
-      icon: Brain,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
+      icon: Brain,title: 'Innovation First',description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
     },
     {
-      icon: Shield,
-      title: 'Trust & Security',
-      description: 'Your data and business operations are protected with enterprise-grade security measures.'
+      icon: Shield,title: 'Trust & Security',description: 'Your data and business operations are protected with enterprise-grade security measures.'
     },
     {
-      icon: Heart,
-      title: 'Client Success',
-      description: 'We measure our success by the success of our clients and their digital transformation journey.'
+      icon: Heart,title: 'Client Success',description: 'We measure our success by the success of our clients and their digital transformation journey.'
     },
     {
-      icon: Rocket,
-      title: 'Future-Ready',
-      description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
-    },
+      icon: Rocket,title: 'Future-Ready',description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
+    }
   ];
-const team = [
+  const team = [
     {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',
-      image: '/team/kleber-santos.jpg'
+      name: 'Kleber Santos',role: 'CEO & Founder',bio: 'Visionary leader with 15+ years in technology innovation and business transformation.',image: '/team/kleber-santos.jpg'
     },
     {
-      name: 'AI Research Team',
-      role: 'AI & ML Specialists',
-      bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
+      name: 'AI Research Team',role: 'AI & ML Specialists',bio: 'Experts in machine learning, neural networks, and autonomous systems development.',
       image: '/team/ai-team.jpg'
     },
     {
-      name: 'DevOps Engineers',
-      role: 'Infrastructure & Cloud',
-      bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
+      name: 'DevOps Engineers',role: 'Infrastructure & Cloud',bio: 'Specialists in cloud architecture, automation, and scalable infrastructure solutions.',
       image: '/team/devops-team.jpg'
-    },
+    }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -76,12 +61,9 @@ const team = [
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            animate={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -100,12 +82,9 @@ const team = [
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 },
-  };
-              whileInView={{ opacity: 1, x: 0 },
-  };
-              transition={{ duration: 0.8 },
-  };
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
               <div className="flex items-center mb-6">
                 <Target className="w-8 h-8 text-cyan-400 mr-3" />
@@ -123,12 +102,9 @@ const team = [
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 },
-  };
-              whileInView={{ opacity: 1, x: 0 },
-  };
-              transition={{ duration: 0.8 },
-  };
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
@@ -164,12 +140,9 @@ const team = [
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            whileInView={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
@@ -180,12 +153,9 @@ const team = [
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 },
-  };
-                whileInView={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.8, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
@@ -203,12 +173,9 @@ const team = [
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            whileInView={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
@@ -219,12 +186,9 @@ const team = [
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 20 },
-  };
-                whileInView={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.8, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <value.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -240,12 +204,9 @@ const team = [
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            whileInView={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
@@ -256,12 +217,9 @@ const team = [
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 20 },
-  };
-                whileInView={{ opacity: 1, y: 0 },
-  };
-                transition={{ duration: 0.8, delay: index * 0.1 },
-  };
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -282,12 +240,9 @@ const team = [
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            whileInView={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.8 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

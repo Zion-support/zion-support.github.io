@@ -15,21 +15,13 @@ import {
   Settings
 } from "lucide-react";
 interface AccessibilitySettings {
-  fontSize: number;
-  highContrast: boolean;
-  reducedMotion: boolean;
-  soundEnabled: boolean;
-  theme: 'light' | 'dark' | 'auto';
-};
+  fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
+}
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
-const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    reducedMotion: false,
-    soundEnabled: true,
-    theme: 'auto'
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
   });
   useEffect(() => {
     // Load settings from localStorage
@@ -56,42 +48,44 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
           case '0':
             e.preventDefault();
             resetSettings();
-            break
-        },
-  },
-  },
+            break;
+        }
+      }
+    };
 
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown)
-}, []),
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     // Apply font size
-    root.style.fontSize = `${newSettings.fontSize}px`,
+    root.style.fontSize = `${newSettings.fontSize}px`;
     
     // Apply high contrast
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast')
-} else {
-      root.classList.remove('high-contrast')
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
     
     // Apply reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion')
-} else {
-      root.classList.remove('reduced-motion')
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
     
     // Apply theme
     if (newSettings.theme === 'light') {
       root.classList.add('light-theme');
-      root.classList.remove('dark-theme')
-} else if (newSettings.theme === 'dark') {
+      root.classList.remove('dark-theme');
+    } else if (newSettings.theme === 'dark') {
       root.classList.add('dark-theme');
-      root.classList.remove('light-theme')
-} else {
-      root.classList.remove('light-themedark-theme')
-},
+      root.classList.remove('light-theme');
+    } else {
+      root.classList.remove('light-themedark-theme');
+    }
   },
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
@@ -103,24 +97,24 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
-      updateSetting('fontSize', settings.fontSize + 2)
-},
+      updateSetting('fontSize', settings.fontSize + 2);
+    }
   },
 
   const decreaseFontSize = () => {
     if (settings.fontSize > 12) {
-      updateSetting('fontSize', settings.fontSize - 2)
-},
+      updateSetting('fontSize', settings.fontSize - 2);
+    }
   },
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
+    const defaultSettings: AccessibilitySettings = {,
       fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
     };
     setSettings(defaultSettings);
     applySettings(defaultSettings);
-    localStorage.removeItem('accessibility-settings')
-},
+    localStorage.removeItem('accessibility-settings');
+  },
 
   return (
     <>
@@ -138,14 +132,10 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: -400 },
-  };
-            animate={{ opacity: 1, x: 0 },
-  };
-            exit={{ opacity: 0, x: -400 },
-  };
-            transition={{ duration: 0.3, ease: "easeOut" },
-  };
+            initial={{ opacity: 0, x: -400 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -400 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
           >
             <div className="p-6">
@@ -256,9 +246,9 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
                           : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                       }`}
                     >
-                      {theme === 'auto' && 'Auto'},
-  {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />},
-  {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
+                      {theme === 'auto' && 'Auto'}
+                      {theme === 'light' && <Sun className="w-4 h-4 mx-auto" />}
+                      {theme === 'dark' && <Moon className="w-4 h-4 mx-auto" />}
                     </button>
                   ))}
                 </div>
@@ -321,4 +311,5 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
         )}
       </AnimatePresence>
     </>
-  )
+  );
+}

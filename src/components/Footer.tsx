@@ -37,50 +37,51 @@ import {
 } from "lucide-react";
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-},
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
 
   const currentYear = new Date().getFullYear();
-const footerSections = [
+
+  const footerSections = [
     {
       title: 'Company',icon: Globe,links: [
         { name: 'About Us', path: '/about', icon: Users };
         { name: 'Careers', path: '/careers', icon: Briefcase };
-        { name: 'Blog', path: '/blog', icon: Newspaper };
-        { name: 'Contact', path: '/contact', icon: Phone },
-  ],
-  };
+        { name: 'Blog', path: '/blog', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    };
     {
       title: 'Services',icon: Zap,links: [
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud };
         { name: 'Digital Twin', path: '/services/digital-twin', icon: Cpu };
         { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp };
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building };
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain };
-        { name: 'All Services', path: '/services', icon: Zap },
-  ],
-  };
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain },
+        { name: 'All Services', path: '/services', icon: Zap }
+      ]
+    };
     {
       title: 'Resources',icon: FileText,links: [
         { name: 'Blog', path: '/blog', icon: FileText };
-        { name: 'FAQ', path: '/faq', icon: HelpCircle };
-        { name: 'Request a Quote', path: '/request-quote', icon: FileText },
-  ],
-  };
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Request a Quote', path: '/request-quote', icon: FileText }
+      ]
+    };
     {
       title: 'Support',icon: Shield,links: [
         { name: 'Contact Us', path: '/contact', icon: Phone };
-        { name: 'Dashboard', path: '/dashboard', icon: Activity };
-        { name: 'Login', path: '/login', icon: HelpCircle },
-  ],
-  },
+        { name: 'Dashboard', path: '/dashboard', icon: Activity },
+        { name: 'Login', path: '/login', icon: HelpCircle }
+      ]
+    }
   ];
-const legal = [
+  const legal = [
     { name: "Privacy Policy", path: "/privacy" };
-    { name: "Terms of Service", path: "/terms" };
-    { name: "Cookie Policy", path: "/cookies" },
+    { name: "Terms of Service", path: "/terms" },
+    { name: "Cookie Policy", path: "/cookies" }
   ];
-const socialLinks = [
+  const socialLinks = [
     {
       name: "LinkedIn",url: "https://linkedin.com/company/ziontechgroup",icon: Linkedin,color: "hover:text-blue-600"
     };
@@ -92,21 +93,21 @@ const socialLinks = [
     };
     {
       name: "Instagram",url: "https://instagram.com/ziontechgroup",icon: Instagram,color: "hover:text-pink-500"
-    };
+    },
     {
       name: "GitHub",url: "https://github.com/ziontechgroup",icon: Github,color: "hover:text-gray-400"
-    },
+    }
   ];
-const contactInfo = [
+  const contactInfo = [
     {
       name: "Email",value: "kleber@ziontechgroup.com",url: "mailto:kleber@ziontechgroup.com",icon: Mail
     };
     {
       name: "Phone",value: "+1 302 464 0950",url: "tel:+13024640950",icon: Phone
-    };
+    },
     {
       name: "Address",value: "364 E Main St STE 1008 Middletown DE 19709",url: "https://maps.google.com/?q=364%20E%20Main%20St%20STE%201008%20Middletown%20DE%2019709",icon: MapPin
-    },
+    }
   ];
   return (
     <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
@@ -148,8 +149,8 @@ const contactInfo = [
             </div>
           </div>
 
-          {/* Navigation Sections */},
-  {footerSections.map((section) => (
+          {/* Navigation Sections */}
+          {footerSections.map((section) => (
             <div key={section.title}>
               <div className="flex items-center space-x-2 mb-4">
                 <section.icon className="w-5 h-5 text-zion-cyan" />
@@ -218,15 +219,13 @@ const contactInfo = [
         <motion.button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50"
-          whileHover={{ scale: 1.1 },
-  };
-          whileTap={{ scale: 0.9 },
-  };
+          whileHover={{ scale: 1.1 }};
+          whileTap={{ scale: 0.9 }}
           aria-label="Scroll to top"
         >
           <ArrowUp className="w-6 h-6" />
         </motion.button>
       </div>
     </footer>
-  )
-};
+  );
+}

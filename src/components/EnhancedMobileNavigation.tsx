@@ -38,8 +38,8 @@ interface NavigationItem {
   label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
   description?: string,
-};
-
+}
+;
 const navigationItems: NavigationItem[] = [
   {
     label: 'Home',path: '/',icon: Home,description: 'Welcome to Zion Tech Group'
@@ -63,50 +63,50 @@ const navigationItems: NavigationItem[] = [
       };
       {
         label: 'Infrastructure',path: '/services/infrastructure',icon: Server,description: 'IT infrastructure solutions'
-      };
+      },
       {
         label: 'Consulting',path: '/services/consulting',icon: Users,description: 'Strategic IT consulting'
-      },
-  ],
+      }
+    ]
   };
   {
     label: 'Solutions',path: '/solutions',icon: Rocket,description: 'Industry-specific solutions'
   };
   {
     label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
-  },
-  ];
+  }
+];
 const quickActions = [
   {
     label: 'Get Quote',path: '/request-quote',icon: MessageCircle,color: 'bg-zion-cyan'
   };
   {
     label: 'Support',path: '/help',icon: HelpCircle,color: 'bg-zion-purple'
-  };
+  },
   {
     label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
-  },
-  ];
+  }
+];
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
-const location = useLocation();
-const menuRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+  const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    setActivePath(location.pathname)
-}, [location]);
+    setActivePath(location.pathname);
+  }, [location]);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false)
-      },
-  };
+      }
+    };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden',
     }
-
+;
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset',
@@ -119,10 +119,11 @@ const menuRef = useRef<HTMLDivElement>(null);
       if (newSet.has(label)) {
         newSet.delete(label)
       } else {
-        newSet.add(label)
-      return newSet
-}),
-  },
+        newSet.add(label);
+      };
+      return newSet,
+    }),
+  };
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
@@ -132,20 +133,20 @@ const menuRef = useRef<HTMLDivElement>(null);
   const isActive = (path: string) => {
     if (path === '/') {
       return activePath === '/'
-    }
-    return activePath.startsWith(path)
-},
+    };
+    return activePath.startsWith(path);
+  },
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
-const hasChildren = item.children && item.children.length > 0;
-const isItemActive = isActive(item.path);
+    const hasChildren = item.children && item.children.length > 0;
+    const isItemActive = isActive(item.path);
+
     return (
       <div key={item.label} className="w-full">
         <motion.div
           initial={false}
-          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' },
-  };
+          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
           <Link
@@ -199,14 +200,10 @@ const isItemActive = isActive(item.path);
           <AnimatePresence>
             {isExpanded && (
               <motion.div
-                initial={{ height: 0, opacity: 0 },
-  };
-                animate={{ height: 'auto', opacity: 1 },
-  };
-                exit={{ height: 0, opacity: 0 },
-  };
-                transition={{ duration: 0.3, ease: 'easeInOut' },
-  };
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
                 className="overflow-hidden"
               >
                 <div className="border-l border-zion-slate-light/20 ml-4">
@@ -218,7 +215,7 @@ const isItemActive = isActive(item.path);
         )}
       </div>
     ),
-  },
+  };
 
   return (
     <>
@@ -235,26 +232,18 @@ const isItemActive = isActive(item.path);
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 },
-  };
-            animate={{ opacity: 1 },
-  };
-            exit={{ opacity: 0 },
-  };
-            transition={{ duration: 0.2 },
-  };
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
           >
             <motion.div
               ref={menuRef}
-              initial={{ x: '100%' },
-  };
-              animate={{ x: 0 },
-  };
-              exit={{ x: '100%' },
-  };
-              transition={{ duration: 0.3, ease: 'easeOut' },
-  };
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
               {/* Header */}
@@ -354,4 +343,5 @@ const isItemActive = isActive(item.path);
         )}
       </AnimatePresence>
     </>
-  )
+  );
+};

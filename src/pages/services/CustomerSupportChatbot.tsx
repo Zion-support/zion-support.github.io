@@ -8,17 +8,17 @@ const CustomerSupportChatbot: React.FC = () => {
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Customer Support Chatbot</h1>
         <p className="mt-4 max-w-3xl text-slate-300">
-          Reduce average handle time with AI responses grounded in your knowledge base, product docs, and previous;
-          tickets. Escalation rules and CRM/Helpdesk logging included.;
+          Reduce average handle time with AI responses grounded in your knowledge base, product docs, and previous
+          tickets. Escalation rules and CRM/Helpdesk logging included.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[
-  'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations';
+            'RAG answers with vector search and citationsZendesk, Freshdesk, Intercom integrations',
             'Multilingual (50+ locales) and tone controlAuto-categorize, prioritize, and tag tickets';
             'Secure PII redaction and audit logsFallback to live agents with summaries'
-].map((b) => (
-  <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
+          ].map((b) => (
+            <div key={b} className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4">
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
               <div className="text-slate-200">{b}</div>
             </div>
@@ -27,7 +27,7 @@ const CustomerSupportChatbot: React.FC = () => {
 
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">
           <div className="flex items-center gap-2 text-slate-200 font-semibold">
-            <DollarSign className="h-4 w-4" /> Pricing;
+            <DollarSign className="h-4 w-4" /> Pricing
           </div>
           <ul className="mt-3 grid gap-3 sm: grid-cols-2 text-slate-300 text-sm">
             <li>Starter: $99/mo up to 2k conversations</li>

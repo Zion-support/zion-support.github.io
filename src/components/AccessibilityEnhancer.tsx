@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 interface AccessibilitySettings {
   highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-};
+}
 
 export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
   });
-const [isVisible, setIsVisible] = useState(false);
-const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [announcements, setAnnouncements] = useState<string[]>([]);
 
   useEffect(() => {
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
@@ -22,38 +22,42 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
     const root = document.documentElement;
     
     if (settings.highContrast) {
-      root.classList.add('high-contrast')
-} else {
-      root.classList.remove('high-contrast')
-
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+;
     if (settings.largeText) {
       root.classList.add('large-text');
-      root.style.fontSize = '1.2em'
-} else {
+      root.style.fontSize = '1.2em';
+    } else {
       root.classList.remove('large-text');
-      root.style.fontSize = ''
-
+      root.style.fontSize = '';
+    }
+;
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
       root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1')
-} else {
+      root.style.setProperty('--animation-iteration-count', '1');
+    } else {
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count')
+      root.style.removeProperty('--animation-iteration-count');
+    }
 
     // Show accessibility panel on Ctrl+Shift+A
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'A') {
         setIsVisible(!isVisible);
-        announce('Accessibility panel toggled')
-},
-  };
+        announce('Accessibility panel toggled');
+      }
+    };
 
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress)
-}, [settings, isVisible]);
-const announce = (message: string) => {
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [settings, isVisible]);
+
+  const announce = (message: string) => {
     setAnnouncements(prev => [...prev.slice(-2), message]);
     
     // Create live region for screen readers
@@ -65,12 +69,15 @@ const announce = (message: string) => {
     document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement)
-}, 1000)
-const toggleSetting = (setting: keyof AccessibilitySettings) => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
+
+  const toggleSetting = (setting: keyof AccessibilitySettings) => {
     const newValue = !settings[setting];
     setSettings(prev => ({ ...prev, [setting]: newValue }));
-const settingNames = {
+    
+    const settingNames = {
       highContrast: 'High contrast mode',
       largeText: 'Large text',
       reducedMotion: 'Reduced motion',
@@ -78,9 +85,10 @@ const settingNames = {
       screenReader: 'Screen reader mode',
       keyboardNavigation: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting],
-  } ${newValue ? 'enabled' : 'disabled'}`)
-const resetSettings = () => {
+    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+  };
+
+  const resetSettings = () => {
     setSettings({
       highContrast: false,
       largeText: false,
@@ -89,18 +97,18 @@ const resetSettings = () => {
       screenReader: false,
       keyboardNavigation: false
     });
-    announce('Accessibility settings reset')
+    announce('Accessibility settings reset');
+  };
 
   return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {announcements[announcements.length - 1],
-  };
+        {announcements[announcements.length - 1]}
       </div>
 
-      {/* Accessibility Panel */},
-  {isVisible && (
+      {/* Accessibility Panel */}
+      {isVisible && (
         <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-blue-400 font-bold text-lg">♿ Accessibility</h3>
@@ -205,7 +213,9 @@ const resetSettings = () => {
             <span className="text-gray-500 text-xs">Press Ctrl+Shift+A to toggle</span>
           </div>
         </div>
-      )},
-  {children}
+      )}
+
+      {children}
     </>
-  )
+  );
+}

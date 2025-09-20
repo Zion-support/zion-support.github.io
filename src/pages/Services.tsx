@@ -58,10 +58,10 @@ import { COMPREHENSIVE_SERVICES_2030 } from "../data/comprehensiveServices2030";
 import { COMPREHENSIVE_PRICING_GUIDE_2030 } from "../data/comprehensivePricingGuide2030";
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-const [sortBy, setSortBy] = useState('rating');
-const [currentPage, setCurrentPage] = useState(1);
-const [itemsPerPage] = useState(12);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(12);
   // Get unique categories from services
   const categories = [
     { id: 'all', name: 'All Services', count: COMPREHENSIVE_SERVICES_2030.length, icon: '🚀', color: 'from-cyan-500 to-blue-500' },
@@ -88,17 +88,18 @@ const [itemsPerPage] = useState(12);
     { id: 'AI & Operations', name: 'AI & Operations', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Operations').length, icon: '⚙️', color: 'from-gray-500 to-slate-500' },
     { id: 'AI & Development', name: 'AI & Development', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Development').length, icon: '💻', color: 'from-cyan-500 to-blue-500' },
     { id: 'AI & Education', name: 'AI & Education', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Education').length, icon: '🎓', color: 'from-blue-500 to-indigo-500' },
-    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' },
+    { id: 'AI & Entertainment', name: 'AI & Entertainment', count: COMPREHENSIVE_SERVICES_2030.filter(s => s.category === 'AI & Entertainment').length, icon: '🎮', color: 'from-purple-500 to-pink-500' }
   ];
-const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
+  const filteredServices = COMPREHENSIVE_SERVICES_2030.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch
-});
-const sortedServices = [...filteredServices].sort((a, b) => {
+    return matchesCategory && matchesSearch;
+  });
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'rating':
         return b.rating - a.rating;
@@ -108,20 +109,21 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         return b.reviewCount - a.reviewCount;
       case 'name':
         return a.title.localeCompare(b.title);
-      default: 
-        return 0
-},
+      default: return 0;
+    }
   });
   // Pagination logic
   const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-const startIndex = (currentPage - 1) * itemsPerPage;
-const endIndex = startIndex + itemsPerPage;
-const currentServices = sortedServices.slice(startIndex, endIndex);
-const handlePageChange = (page: number) => {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = sortedServices.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-};
-const getCategoryIcon = (category: string) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Business Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -172,8 +174,8 @@ const getCategoryIcon = (category: string) => {
       case 'AI & Entertainment':
         return <Play className="w-6 h-6" />;
       default:
-        return <Zap className="w-6 h-6" />
-},
+        return <Zap className="w-6 h-6" />;
+    }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -187,12 +189,9 @@ const getCategoryIcon = (category: string) => {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 },
-  };
-            animate={{ opacity: 1, y: 0 },
-  };
-            transition={{ duration: 0.6 },
-  };
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -294,37 +293,31 @@ const getCategoryIcon = (category: string) => {
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`${activeCategory}-${searchTerm}-${sortBy}-${currentPage}`}
-                  initial={{ opacity: 0, y: 20 },
-  };
-                  animate={{ opacity: 1, y: 0 },
-  };
-                  exit={{ opacity: 0, y: -20 },
-  };
-                  transition={{ duration: 0.3 },
-  };
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                   {currentServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 },
-  };
-                      animate={{ opacity: 1, y: 0 },
-  };
-                      transition={{ duration: 0.3, delay: index * 0.1 },
-  };
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="group relative bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
                     >
-                      {/* Featured Badge */},
-  {service.featured && (
+                      {/* Featured Badge */}
+                      {service.featured && (
                         <div className="absolute top-4 right-4 z-10">
                           <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
                             <Star className="w-3 h-3 mr-1" />
                             Featured
                           </div>
                         </div>
-                      )},
-  {/* Service Image */}
+                      )}
+
+                      {/* Service Image */}
                       <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800 overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -362,8 +355,8 @@ const getCategoryIcon = (category: string) => {
                             >
                               {tag}
                             </span>
-                          ))},
-  {service.tags.length > 3 && (
+                          ))}
+                          {service.tags.length > 3 && (
                             <span className="text-xs text-gray-500">+{service.tags.length - 3} more</span>
                           )}
                         </div>
@@ -372,8 +365,7 @@ const getCategoryIcon = (category: string) => {
                         <div className="flex items-center justify-between">
                           <div>
                             <div className="text-2xl font-bold text-white">
-                              {service.currency},
-  {service.price.toLocaleString()}
+                              {service.currency}{service.price.toLocaleString()}
                             </div>
                             <div className="text-sm text-gray-400">
                               {service.marketPrice}
@@ -396,8 +388,7 @@ const getCategoryIcon = (category: string) => {
                               <div className="w-16 h-2 bg-slate-700 rounded-full overflow-hidden">
                                 <div
                                   className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
-                                  style={{ width: `${service.aiScore}%` },
-  };
+                                  style={{ width: `${service.aiScore}%` }}
                                 ></div>
                               </div>
                               <span className="text-sm font-bold text-cyan-400">{service.aiScore}%</span>
@@ -410,8 +401,8 @@ const getCategoryIcon = (category: string) => {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Pagination */},
-  {totalPages > 1 && (
+              {/* Pagination */}
+              {totalPages > 1 && (
                 <div className="mt-16 flex justify-center">
                   <div className="flex items-center space-x-2">
                     <button
@@ -480,3 +471,4 @@ const getCategoryIcon = (category: string) => {
       </section>
     </div>
   )
+}

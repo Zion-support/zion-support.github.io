@@ -12,11 +12,11 @@ import PerformanceMonitor from "./components/PerformanceMonitor";
 import SEOHead from "./components/SEOHead";
 import LoadingSpinner from "./components/LoadingSpinner";
 // Lazy load components for better performance
-const Home = lazy(() => import('./pages/Home'))
-const About = lazy(() => import('./pages/About'))
-const Services = lazy(() => import('./pages/Services'))
-const Contact = lazy(() => import('./pages/Contact'))
-const Blog = lazy(() => import('./pages/Blog'))
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
 
 // Create a separate query client for better performance
 const queryClient = new QueryClient({
@@ -30,8 +30,8 @@ const queryClient = new QueryClient({
     mutations: {
       retry: 1
     }
-  };
-})
+  }
+});
 const AppOptimized: React.FC = () => {
   return (
     <ErrorBoundary>
@@ -63,7 +63,7 @@ const AppOptimized: React.FC = () => {
         </QueryClientProvider>
       </HelmetProvider>
     </ErrorBoundary>
-  )
-};
+  );
+},
 
 export default AppOptimized;

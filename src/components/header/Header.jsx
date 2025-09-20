@@ -15,42 +15,43 @@ import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();
-const { isWhitelabel, primaryColor } = useWhitelabel();
-const navigate = useNavigate();
-const [query, setQuery] = useState("");
-const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
-const searchSuggestions = generateSearchSuggestions();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const searchSuggestions = generateSearchSuggestions();
+
   // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor;
+    primaryColor,
     backgroundColor: '#000000', // Default dark background
     textColor: '#ffffff', // Default light text
   } : undefined);
-const headerStyle = effectiveTheme ? {
+  const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor,color: effectiveTheme.textColor,borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-},
+      setIsScrolled(window.scrollY > 20);
+    },
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
-}, []),
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []),
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`),
-      setQuery("")
-},
+      setQuery("");
+    }
   },
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-},
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  },
 
   return (
     <header 
@@ -84,9 +85,8 @@ const headerStyle = effectiveTheme ? {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("")
-},
-  } 
+                setQuery("");
+              }} 
               searchSuggestions={searchSuggestions}
             />
             <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
@@ -104,8 +104,9 @@ const headerStyle = effectiveTheme ? {
           </button>
 
           <LanguageSelector />
-          {!hideLogin && <UserMenu />},
-  {/* Mobile Menu Button */}
+          {!hideLogin && <UserMenu />}
+
+          {/* Mobile Menu Button */}
           <button 
             onClick={toggleMobileMenu} 
             className="lg:hidden p-2 rounded-lg border border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 transition-colors"
@@ -124,9 +125,8 @@ const headerStyle = effectiveTheme ? {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery("")
-},
-  } 
+                setQuery("");
+              }} 
               searchSuggestions={searchSuggestions} 
               placeholder="Search services, talent, equipment..."
             />
@@ -137,8 +137,8 @@ const headerStyle = effectiveTheme ? {
         </form>
       </div>
 
-      {/* Mobile Navigation Menu */},
-  {isMobileMenuOpen && (
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 z-40 bg-zion-blue-dark/95 backdrop-blur-xl">
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center p-4 border-b border-zion-purple/30">
@@ -223,9 +223,10 @@ const headerStyle = effectiveTheme ? {
             </div>
           </div>
         </div>
-      )},
-  {/* Neon glow effect */}
+      )}
+      
+      {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </header>
-  )
-};
+  );
+}
